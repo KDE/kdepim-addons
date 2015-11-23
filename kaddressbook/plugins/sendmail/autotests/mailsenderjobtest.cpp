@@ -40,9 +40,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenNoValidAddressItem()
 {
     Akonadi::Item::List lst;
     Akonadi::Item item;
-    KContacts::Addressee address;
-    address.setName(QStringLiteral("foo1"));
-    lst << item << item;
+    lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
@@ -56,7 +54,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenNoEmails()
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
     item.setPayload<KContacts::Addressee>(address);
-    lst << item << item;
+    lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
@@ -105,7 +103,7 @@ void MailSenderJobTest::shouldNotAddInvalidEmail()
     //Invalid email
     address.insertEmail(QStringLiteral("foo2"), true);
     item.setPayload<KContacts::Addressee>(address);
-    lst << item << item;
+    lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
