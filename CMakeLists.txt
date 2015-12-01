@@ -1,6 +1,8 @@
 project(kdepim-addons)
 
 cmake_minimum_required(VERSION 2.8.12)
+find_package(ECM 5.16.0 REQUIRED NO_MODULE)
+set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 # Do NOT add quote
 set(KDEPIMADDONS_DEV_VERSION pre)
@@ -18,6 +20,27 @@ set(KDEPIMADDONS_LIB_SOVERSION "5")
 
 set(QT_REQUIRED_VERSION "5.4.0")
 set(KF5_VERSION "5.16.0")
+include(ECMOptionalAddSubdirectory)
+include(ECMInstallIcons)
+include(ECMSetupVersion)
+include(ECMAddTests)
+include(ECMMarkNonGuiExecutable)
+include(GenerateExportHeader)
+include(ECMGenerateHeaders)
+include(CMakePackageConfigHelpers)
+include(FeatureSummary)
+include(CheckFunctionExists)
+include(ECMGeneratePriFile)
+
+include(KDEInstallDirs)
+include(KDECMakeSettings)
+include(KDECompilerSettings)
+include(ECMAddAppIcon)
+include(ECMQtDeclareLoggingCategory)
+
+option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim example applications." FALSE)
+
+
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 find_package(Qt5X11Extras NO_MODULE)
@@ -27,8 +50,38 @@ set_package_properties(Qt5Designer PROPERTIES
    TYPE OPTIONAL
 )
 
-option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim example applications." FALSE)
+find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KHtml ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
 
+set(KDEPIM_LIB_INSTALLED_VERSION "5.1.41")
+
+find_package(KF5MailCommon ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5KaddressbookGrantlee ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5MessageViewer ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5Libkleo ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5GrantleeTheme ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5PimCommon ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5Libkdepim ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5IncidenceEditorsng ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5MessageCore ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5MessageComposer ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5MessageList ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5TemplateParser ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5MailImporter ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5CalendarSupport ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5EventViews ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5KDGantt2 ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5FollowupReminder ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5SendLater ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5KDGantt2 ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5ComposerEditorNG ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5KdepimDBusInterfaces ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5LibKSieve ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(KF5Gravatar ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
+find_package(MailTransportDBusService CONFIG REQUIRED)
 if (KDEPIMADDONS_BUILD_EXAMPLES)
    add_subdirectory(examples)
 endif()
