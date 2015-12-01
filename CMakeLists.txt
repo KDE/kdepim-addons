@@ -38,7 +38,7 @@ include(KDECompilerSettings)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
-option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim example applications." FALSE)
+option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
 
 
