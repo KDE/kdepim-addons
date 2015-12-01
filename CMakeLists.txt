@@ -82,6 +82,10 @@ find_package(KF5KdepimDBusInterfaces ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQU
 find_package(KF5LibKSieve ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
 find_package(KF5Gravatar ${KDEPIM_LIB_INSTALLED_VERSION} CONFIG REQUIRED)
 find_package(MailTransportDBusService CONFIG REQUIRED)
+
+
 if (KDEPIMADDONS_BUILD_EXAMPLES)
    add_subdirectory(examples)
 endif()
+
+feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
