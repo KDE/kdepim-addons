@@ -27,4 +27,8 @@ set_package_properties(Qt5Designer PROPERTIES
    TYPE OPTIONAL
 )
 
-add_subdirectory(examples)
+option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim example applications." FALSE)
+
+if (KDEPIMADDONS_BUILD_EXAMPLES)
+   add_subdirectory(examples)
+endif()
