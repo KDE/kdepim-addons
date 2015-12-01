@@ -27,3 +27,4 @@ set_package_properties(Qt5Designer PROPERTIES
    TYPE OPTIONAL
 )
 
+add_subdirectory(examples)
