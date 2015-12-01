@@ -1,0 +1,9 @@
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()
+
+add_definitions(-DTRANSLATION_DOMAIN=\"messageviewerplugins\")
+add_subdirectory(translatorplugin)
+add_subdirectory(createnoteplugin)
+add_subdirectory(createtodoplugin)
+add_subdirectory(createeventplugin)
