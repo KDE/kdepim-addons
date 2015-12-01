@@ -91,4 +91,6 @@ if (KDEPIMADDONS_BUILD_EXAMPLES)
    add_subdirectory(examples)
 endif()
 
+add_subdirectory(plugins)
+
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
