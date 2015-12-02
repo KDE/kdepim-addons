@@ -99,5 +99,7 @@ endif()
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)
+add_subdirectory(kmail)
+add_subdirectory(kaddressbook)
 
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
