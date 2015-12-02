@@ -1,0 +1,2 @@
+add_subdirectory(shorturlplugin)
+add_subdirectory(translatorplugin)
