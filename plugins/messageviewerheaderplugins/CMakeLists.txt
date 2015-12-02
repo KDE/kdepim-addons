@@ -1,0 +1,14 @@
+
+add_subdirectory(allheaderstyleplugin)
+add_subdirectory(briefheaderstyleplugin)
+add_subdirectory(customheaderstyleplugin)
+add_subdirectory(enterpriseheaderstyleplugin)  
+add_subdirectory(fancyheaderstyleplugin)  
+add_subdirectory(grantleeheaderstyleplugin)  
+add_subdirectory(longheaderstyleplugin)  
+add_subdirectory(standardsheaderstyleplugin)  
+
+if(BUILD_TESTING)
+  add_subdirectory(autotests)
+  add_subdirectory(tests)
+endif()
