@@ -21,7 +21,6 @@
 
 #include "datenums.h"
 #include "configdialog.h"
-#include "koglobals.h"
 
 #include <KCalendarSystem>
 #include <KConfigGroup>
@@ -50,7 +49,7 @@ Element::List Datenums::createDayElements(const QDate &date)
 {
     Element::List result;
 
-    const KCalendarSystem *calsys = KOGlobals::self()->calendarSystem();
+    const KCalendarSystem *calsys = KLocale::global()->calendar();
     int dayOfYear = calsys->dayOfYear(date);
     int remainingDays = calsys->daysInYear(date) - dayOfYear;
 
@@ -87,7 +86,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
 {
     Element::List result;
 
-    const KCalendarSystem *calsys = KOGlobals::self()->calendarSystem();
+    const KCalendarSystem *calsys = KLocale::global()->calendar(); 
     int *yearOfTheWeek;
     yearOfTheWeek = Q_NULLPTR;
     int remainingWeeks;
