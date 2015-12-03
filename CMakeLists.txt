@@ -44,12 +44,6 @@ option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications
 
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
-find_package(Qt5X11Extras NO_MODULE)
-find_package(Qt5Designer NO_MODULE)
-set_package_properties(Qt5Designer PROPERTIES
-   PURPOSE "Required to build the Qt Designer plugins"
-   TYPE OPTIONAL
-)
 
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5KHtml ${KF5_VERSION} CONFIG REQUIRED)
