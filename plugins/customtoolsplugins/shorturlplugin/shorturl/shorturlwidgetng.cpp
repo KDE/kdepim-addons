@@ -40,7 +40,6 @@
 #include <QPointer>
 #include <KActionCollection>
 
-
 using namespace PimCommon;
 
 ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)

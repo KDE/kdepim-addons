@@ -22,7 +22,6 @@
 
 #include <QSslError>
 
-
 class QNetworkReply;
 namespace PimCommon
 {
