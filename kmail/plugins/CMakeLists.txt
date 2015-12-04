@@ -1,1 +1,1 @@
-#add_subdirectory(antispamplugin)
+add_subdirectory(antispamplugin)
