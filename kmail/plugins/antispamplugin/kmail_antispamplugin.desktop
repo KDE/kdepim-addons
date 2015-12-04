@@ -1,0 +1,5 @@
+[Desktop Entry]
+Type=Service
+ServiceTypes=KMail/MainViewPlugin
+X-KDE-Library=kmail_antispanplugin
+Name=Antispam

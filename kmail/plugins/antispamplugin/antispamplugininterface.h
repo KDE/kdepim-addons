@@ -16,23 +16,22 @@
 */
 
 
-#ifndef ANTISPAMPLUGIN_H
-#define ANTISPAMPLUGIN_H
-
-#include <pimcommon/genericplugin.h>
+#ifndef ANTISPAMPLUGININTERFACE_H
+#define ANTISPAMPLUGININTERFACE_H
 
 #include <pimcommon/genericplugininterface.h>
 
-#include <QVariant>
-
-class AntiSpamPlugin : public PimCommon::GenericPlugin
+class AntiSpamPluginInterface : public PimCommon::GenericPluginInterface
 {
-    Q_OBJECT
 public:
-    explicit AntiSpamPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
-    ~AntiSpamPlugin();
+    explicit AntiSpamPluginInterface(QObject *parent = Q_NULLPTR);
+    ~AntiSpamPluginInterface();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent);
+    void exec() Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
+
+private Q_SLOTS:
+    void slotAntiSpamWizard();
 };
 
-#endif // ANTISPAMPLUGIN_H
+#endif // ANTISPAMPLUGININTERFACE_H

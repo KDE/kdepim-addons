@@ -1,13 +1,15 @@
-set(kmail_antispamplugins_SRCS
+set(kmail_antispamplugin_SRCS
     antispamplugin.cpp
+    antispamplugininterface.cpp
+    antispamwizard.cpp
 )
 
-add_library(kmail_antispamplugins MODULE ${kmail_antispamplugins_SRCS})
+add_library(kmail_antispamplugin MODULE ${kmail_antispamplugin_SRCS})
 
-target_link_libraries(kmail_antispamplugins
-  KF5::PimCommon
+target_link_libraries(kmail_antispamplugin
+  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui
 )
 
-install(TARGETS kmail_antispamplugins DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
-#kcoreaddons_desktop_to_json(messageviewer_translatorplugin messageviewer_translatorplugin.desktop)
+install(TARGETS kmail_antispamplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
+kcoreaddons_desktop_to_json(kmail_antispamplugin kmail_antispamplugin.desktop)
 

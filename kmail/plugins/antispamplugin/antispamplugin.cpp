@@ -17,11 +17,14 @@
 
 
 #include "antispamplugin.h"
+#include "antispamplugininterface.h"
 #include <KLocalizedString>
 #include <KToggleAction>
 #include <kpluginfactory.h>
 
-AntiSpamPlugin::AntiSpamPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antispamplugin.json", registerPlugin<AntiSpamPlugin>();)
+
+AntiSpamPlugin::AntiSpamPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
 
@@ -35,5 +38,10 @@ AntiSpamPlugin::~AntiSpamPlugin()
 
 PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(KActionCollection *ac, QWidget *parent)
 {
-    return Q_NULLPTR;
+    AntiSpamPluginInterface *interface = new AntiSpamPluginInterface(this);
+    interface->setParentWidget(parent);
+    interface->createAction(ac);
+    return interface;
 }
+
+#include "antispamplugin.moc"
