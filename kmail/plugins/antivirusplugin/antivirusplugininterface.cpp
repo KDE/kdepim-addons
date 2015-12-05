@@ -40,7 +40,8 @@ void AntiVirusPluginInterface::createAction(KActionCollection *ac)
     action->setCheckable(false);
     ac->addAction(QStringLiteral("antiVirusWizard"), action);
     connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotAntiVirusWizard);
-    //TODO actionType
+    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    setActionType(type);
 }
 
 void AntiVirusPluginInterface::exec()
