@@ -17,12 +17,12 @@
 
 
 #include "antivirusplugin.h"
-#include "antispamplugininterface.h"
+#include "antivirusplugininterface.h"
 #include <KLocalizedString>
 #include <KToggleAction>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antispamplugin.json", registerPlugin<AntiVirusPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antivirusplugin.json", registerPlugin<AntiVirusPlugin>();)
 
 AntiVirusPlugin::AntiVirusPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
