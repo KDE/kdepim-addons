@@ -1,7 +1,7 @@
 set(kmail_antispamplugin_SRCS
     antispamplugin.cpp
     antispamplugininterface.cpp
-    antispamwizard.cpp
+    ../common/antispamwizard.cpp
 )
 
 add_library(kmail_antispamplugin MODULE ${kmail_antispamplugin_SRCS})

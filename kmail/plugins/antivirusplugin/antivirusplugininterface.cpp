@@ -17,7 +17,7 @@
 
 
 #include "antivirusplugininterface.h"
-#include "antispamwizard.h"
+#include "../common/antispamwizard.h"
 #include <KLocalizedString>
 #include <KToggleAction>
 #include <KActionCollection>
