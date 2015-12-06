@@ -19,7 +19,6 @@
 #include "antivirusplugininterface.h"
 #include "../common/antispamwizard.h"
 #include <KLocalizedString>
-#include <KToggleAction>
 #include <KActionCollection>
 #include <QAction>
 
@@ -36,8 +35,7 @@ AntiVirusPluginInterface::~AntiVirusPluginInterface()
 
 void AntiVirusPluginInterface::createAction(KActionCollection *ac)
 {
-    KToggleAction *action = new KToggleAction(i18n("&Anti-Virus Wizard..."), this);
-    action->setCheckable(false);
+    QAction *action = new QAction(i18n("&Anti-Virus Wizard..."), this);
     ac->addAction(QStringLiteral("antiVirusWizard"), action);
     connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotAntiVirusWizard);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);

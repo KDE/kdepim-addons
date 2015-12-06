@@ -19,7 +19,7 @@
 #include "antispamplugininterface.h"
 #include "../common/antispamwizard.h"
 #include <KLocalizedString>
-#include <KToggleAction>
+#include <QAction>
 #include <KActionCollection>
 #include <QAction>
 
@@ -36,8 +36,7 @@ AntiSpamPluginInterface::~AntiSpamPluginInterface()
 
 void AntiSpamPluginInterface::createAction(KActionCollection *ac)
 {
-    KToggleAction *action = new KToggleAction(i18n("&Anti-Spam Wizard..."), this);
-    action->setCheckable(false);
+    QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
     connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotAntiSpamWizard);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
