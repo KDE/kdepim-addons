@@ -56,9 +56,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     topLayout->addWidget(dayNumBox);
     QVBoxLayout *groupLayout = new QVBoxLayout(dayNumBox);
 
-    QRadioButton *btn;
     mDayNumGroup = new QButtonGroup(this);
-    btn = new QRadioButton(i18n("Show day number"), dayNumBox);
+    QRadioButton *btn = new QRadioButton(i18n("Show day number"), dayNumBox);
     mDayNumGroup->addButton(btn, int(Datenums::DayOfYear));
     groupLayout->addWidget(btn);
     btn = new QRadioButton(i18n("Show days to end of year"), dayNumBox);

@@ -55,9 +55,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     topLayout->addWidget(aspectRatioBox);
     QVBoxLayout *groupLayout = new QVBoxLayout(aspectRatioBox);
 
-    QRadioButton *btn;
     mAspectRatioGroup = new QButtonGroup(this);
-    btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
+    QRadioButton *btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
     btn->setWhatsThis(i18n("The thumbnail will be scaled freely. "
                            "The aspect ratio will not be preserved."));
     mAspectRatioGroup->addButton(btn, int(Qt::IgnoreAspectRatio));
