@@ -32,7 +32,7 @@ public:
     explicit AntiVirusPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AntiVirusPlugin();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent);
+    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ANTIVIRUSPLUGIN_H
