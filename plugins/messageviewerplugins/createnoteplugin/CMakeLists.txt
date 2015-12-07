@@ -11,5 +11,4 @@ target_link_libraries(messageviewer_createnoteplugin
 )
 
 install(TARGETS messageviewer_createnoteplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
-kcoreaddons_desktop_to_json(messageviewer_createnoteplugin messageviewer_createnoteplugin.desktop)
  

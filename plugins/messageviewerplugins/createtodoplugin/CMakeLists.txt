@@ -11,5 +11,4 @@ target_link_libraries(messageviewer_createtodoplugin
 )
 
 install(TARGETS messageviewer_createtodoplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
-kcoreaddons_desktop_to_json(messageviewer_createtodoplugin messageviewer_createtodoplugin.desktop)
  

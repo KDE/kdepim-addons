@@ -14,5 +14,4 @@ target_link_libraries(messageviewer_createeventplugin
 )
 
 install(TARGETS messageviewer_createeventplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
-kcoreaddons_desktop_to_json(messageviewer_createeventplugin messageviewer_createeventplugin.desktop)
  
