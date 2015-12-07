@@ -13,3 +13,6 @@ target_link_libraries(kmail_antivirusplugin
 install(TARGETS kmail_antivirusplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
 kcoreaddons_desktop_to_json(kmail_antivirusplugin kmail_antivirusplugin.desktop)
 
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()

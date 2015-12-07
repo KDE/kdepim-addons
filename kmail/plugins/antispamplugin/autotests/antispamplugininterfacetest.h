@@ -1,0 +1,35 @@
+/*
+  Copyright (c) 2015 Montel Laurent <montel@kde.org>
+
+  This program is free software; you can redistribute it and/or modify it
+  under the terms of the GNU General Public License, version 2, as
+  published by the Free Software Foundation.
+
+  This program is distributed in the hope that it will be useful, but
+  WITHOUT ANY WARRANTY; without even the implied warranty of
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
+  General Public License for more details.
+
+  You should have received a copy of the GNU General Public License along
+  with this program; if not, write to the Free Software Foundation, Inc.,
+  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
+*/
+
+#ifndef ANTISPAMPLUGININTERFACETEST_H
+#define ANTISPAMPLUGININTERFACETEST_H
+
+#include <QObject>
+
+class AntiSpamPluginInterfaceTest : public QObject
+{
+    Q_OBJECT
+public:
+    explicit AntiSpamPluginInterfaceTest(QObject *parent = Q_NULLPTR);
+    ~AntiSpamPluginInterfaceTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldCreateAction();
+    void shouldEmitActivatedSignal();
+};
+
+#endif // ANTISPAMPLUGININTERFACETEST_H
