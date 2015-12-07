@@ -38,17 +38,17 @@ void AntiSpamPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
-    connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotAntiSpamWizard);
+    connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
 }
 
-void AntiSpamPluginInterface::exec()
+void AntiSpamPluginInterface::slotActivated()
 {
-    slotAntiSpamWizard();
+    Q_EMIT emitPluginActivated(this);
 }
 
-void AntiSpamPluginInterface::slotAntiSpamWizard()
+void AntiSpamPluginInterface::exec()
 {
     KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
     wiz.exec();

@@ -31,7 +31,7 @@ public:
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotAntiVirusWizard();
+    void slotActivated();
 };
 
 #endif // ANTIVIRUSPLUGININTERFACE_H

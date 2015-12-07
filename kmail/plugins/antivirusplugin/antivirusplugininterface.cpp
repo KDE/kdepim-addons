@@ -37,17 +37,17 @@ void AntiVirusPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = new QAction(i18n("&Anti-Virus Wizard..."), this);
     ac->addAction(QStringLiteral("antiVirusWizard"), action);
-    connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotAntiVirusWizard);
+    connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
 }
 
-void AntiVirusPluginInterface::exec()
+void AntiVirusPluginInterface::slotActivated()
 {
-    slotAntiVirusWizard();
+    Q_EMIT emitPluginActivated(this);
 }
 
-void AntiVirusPluginInterface::slotAntiVirusWizard()
+void AntiVirusPluginInterface::exec()
 {
     KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiVirus, parentWidget());
     wiz.exec();
