@@ -3,6 +3,7 @@
         "Name": "Translator", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }

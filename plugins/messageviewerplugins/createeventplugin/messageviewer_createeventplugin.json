@@ -3,6 +3,7 @@
         "Name": "Create Event", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }

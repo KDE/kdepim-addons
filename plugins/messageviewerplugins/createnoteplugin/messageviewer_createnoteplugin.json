@@ -3,6 +3,7 @@
         "Name": "Create Note", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }
