@@ -1,5 +1,0 @@
-[Desktop Entry]
-Type=Service
-ServiceTypes=PimCommonCustomTools/Plugin
-X-KDE-Library=pimcommon_translatorplugin
-Name=Translator

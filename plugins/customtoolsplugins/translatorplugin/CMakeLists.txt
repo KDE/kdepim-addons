@@ -12,4 +12,3 @@ target_link_libraries(pimcommon_translatorplugin
 )
 
 install(TARGETS pimcommon_translatorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_translatorplugin pimcommon_translatorplugin.desktop)

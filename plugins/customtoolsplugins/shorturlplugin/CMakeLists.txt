@@ -19,6 +19,5 @@ target_link_libraries(pimcommon_shorturlplugin
 )
 
 install(TARGETS pimcommon_shorturlplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_shorturlplugin pimcommon_shorturlplugin.desktop)
 
 add_subdirectory(shorturl)
