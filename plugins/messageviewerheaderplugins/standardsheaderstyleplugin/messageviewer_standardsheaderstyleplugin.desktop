@@ -1,6 +1,0 @@
-[Desktop Entry]
-Type=Service
-ServiceTypes=MessageViewerHeaderStyle/Plugin
-X-KDE-Library=messageviewer_standardsheaderstyleplugin
-Name=Standards Header Style
-X-KDE-MessageViewer-Header-Order=4

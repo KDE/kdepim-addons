@@ -13,4 +13,3 @@ target_link_libraries(messageviewer_standardsheaderstyleplugin
 )
 
 install(TARGETS messageviewer_standardsheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
-kcoreaddons_desktop_to_json(messageviewer_standardsheaderstyleplugin messageviewer_standardsheaderstyleplugin.desktop)

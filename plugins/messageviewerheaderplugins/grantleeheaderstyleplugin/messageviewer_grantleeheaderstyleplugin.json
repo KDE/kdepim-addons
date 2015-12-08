@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Name": "Grantlee Header Style",
+        "Name[ca@valencia]": "Estil de capçalera «Grantlee»",
+        "Name[ca]": "Estil de capçalera «Grantlee»",
+        "Name[en_GB]": "Grantlee Header Style",
+        "Name[es]": "Estilo de encabezado Grantlee",
+        "Name[fi]": "Grantlee-otsaketyyli",
+        "Name[gl]": "Estilo de cabeceira de Grantlee",
+        "Name[it]": "Stile con intestazioni di Grantlee",
+        "Name[nl]": "Stijl met Grantlee headers",
+        "Name[pl]": "Nagłówki Grantlee",
+        "Name[pt]": "Estilo de Cabeçalho do Grantlee",
+        "Name[pt_BR]": "Estilo de cabeçalho Grantlee",
+        "Name[sk]": "Grantlee štýl hlavičiek",
+        "Name[sl]": "Slog z glavami grantlee",
+        "Name[sr@ijekavian]": "Грантлијев стил заглавља",
+        "Name[sr@ijekavianlatin]": "Grantleejev stil zaglavlja",
+        "Name[sr@latin]": "Grantleejev stil zaglavlja",
+        "Name[sr]": "Грантлијев стил заглавља",
+        "Name[sv]": "Grantlee rubrikstil",
+        "Name[tr]": "Büyük Başlık Biçemi",
+        "Name[uk]": "Стиль заголовків Grantlee",
+        "Name[x-test]": "xxGrantlee Header Stylexx",
+        "ServiceTypes": [
+            "MessageViewerHeaderStyle/Plugin"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-MessageViewer-Header-Order": "100"
+}

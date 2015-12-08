@@ -13,4 +13,3 @@ target_link_libraries(messageviewer_allheaderstyleplugin
 )
 
 install(TARGETS messageviewer_allheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
-kcoreaddons_desktop_to_json(messageviewer_allheaderstyleplugin messageviewer_allheaderstyleplugin.desktop)
