@@ -18,14 +18,13 @@
 #ifndef SHORTURLENGINEPLUGIN_H
 #define SHORTURLENGINEPLUGIN_H
 
-#include "pimcommon_export.h"
 #include <QObject>
 
 namespace PimCommon
 {
 class ShortUrlEnginePluginPrivate;
 class ShortUrlEngineInterface;
-class PIMCOMMON_EXPORT ShortUrlEnginePlugin : public QObject
+class ShortUrlEnginePlugin : public QObject
 {
     Q_OBJECT
 public:
