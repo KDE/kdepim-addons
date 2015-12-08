@@ -20,8 +20,6 @@
 
 #include <pimcommon/customtoolsviewinterface.h>
 class KActionCollection;
-namespace PimCommon
-{
 class ShortUrlWidgetNg;
 class ShorturlView : public PimCommon::CustomToolsViewInterface
 {
@@ -37,7 +35,6 @@ private Q_SLOTS:
 private:
     void createAction(KActionCollection *ac);
     KToggleAction *mAction;
-    PimCommon::ShortUrlWidgetNg *mShorturl;
+    ShortUrlWidgetNg *mShorturl;
 };
-}
 #endif // SHORTURLVIEW_H

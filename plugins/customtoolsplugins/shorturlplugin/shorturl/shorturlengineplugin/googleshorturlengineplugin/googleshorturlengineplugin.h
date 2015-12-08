@@ -22,9 +22,7 @@
 
 #include <QVariant>
 
-namespace PimCommon
-{
-class GoogleShortUrlEnginePlugin : public PimCommon::ShortUrlEnginePlugin
+class GoogleShortUrlEnginePlugin : public ShortUrlEnginePlugin
 {
     Q_OBJECT
 public:
@@ -33,6 +31,5 @@ public:
 
     ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 };
-}
 
 #endif // GOOGLeSHORTURLENGINEPLUGIN_H

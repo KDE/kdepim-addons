@@ -19,12 +19,10 @@
 #include "tinyurlengineinterface.h"
 #include <kpluginfactory.h>
 
-using namespace PimCommon;
-
 K_PLUGIN_FACTORY_WITH_JSON(TinyUrlEnginePluginFactory, "pimcommon_tinyurlengineplugin.json", registerPlugin<TinyUrlEnginePlugin>();)
 
 TinyUrlEnginePlugin::TinyUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
-    : PimCommon::ShortUrlEnginePlugin(parent)
+    : ShortUrlEnginePlugin(parent)
 {
 
 }
@@ -34,9 +32,9 @@ TinyUrlEnginePlugin::~TinyUrlEnginePlugin()
 
 }
 
-PimCommon::ShortUrlEngineInterface *TinyUrlEnginePlugin::createInterface(QObject *parent)
+ShortUrlEngineInterface *TinyUrlEnginePlugin::createInterface(QObject *parent)
 {
-    return new PimCommon::TinyUrlEngineInterface(this, parent);
+    return new TinyUrlEngineInterface(this, parent);
 }
 
 QString TinyUrlEnginePlugin::engineName() const

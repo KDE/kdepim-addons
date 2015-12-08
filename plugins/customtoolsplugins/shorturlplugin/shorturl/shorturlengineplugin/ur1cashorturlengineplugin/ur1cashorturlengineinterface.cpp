@@ -24,10 +24,8 @@
 #include <QNetworkRequest>
 #include <QUrlQuery>
 
-using namespace PimCommon;
-
 Ur1CaShortUrlEngineInterface::Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
-    : PimCommon::ShortUrlEngineInterface(plugin, parent)
+    : ShortUrlEngineInterface(plugin, parent)
 {
     connect(mNetworkAccessManager, &QNetworkAccessManager::sslErrors, this, &Ur1CaShortUrlEngineInterface::slotSslErrors);
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &Ur1CaShortUrlEngineInterface::slotShortUrlFinished);

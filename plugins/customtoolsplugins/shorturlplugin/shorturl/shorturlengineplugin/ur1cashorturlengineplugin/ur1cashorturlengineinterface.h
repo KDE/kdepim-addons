@@ -22,12 +22,12 @@
 
 #include <QSslError>
 class QNetworkReply;
-namespace PimCommon
+
+class Ur1CaShortUrlEngineInterface : public ShortUrlEngineInterface
 {
-class Ur1CaShortUrlEngineInterface : public PimCommon::ShortUrlEngineInterface
-{
+    Q_OBJECT
 public:
-    explicit Ur1CaShortUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
     ~Ur1CaShortUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;
@@ -37,6 +37,5 @@ private Q_SLOTS:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error);
 };
-}
 
 #endif

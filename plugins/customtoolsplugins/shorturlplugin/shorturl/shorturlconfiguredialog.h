@@ -21,8 +21,6 @@
 #include <QDialog>
 #include <KConfigGroup>
 
-namespace PimCommon
-{
 class ShortUrlConfigureWidget;
 class ShortUrlConfigureDialog : public QDialog
 {
@@ -38,6 +36,5 @@ private Q_SLOTS:
 private:
     ShortUrlConfigureWidget *mConfigureWidget;
 };
-}
 
 #endif // SHORTURLCONFIGUREDIALOG_H

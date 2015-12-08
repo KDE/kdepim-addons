@@ -21,10 +21,8 @@
 
 #include <QNetworkAccessManager>
 
-using namespace PimCommon;
-
-TinyUrlEngineInterface::TinyUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent)
-    : PimCommon::ShortUrlEngineInterface(plugin, parent)
+TinyUrlEngineInterface::TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
+    : ShortUrlEngineInterface(plugin, parent)
 {
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &TinyUrlEngineInterface::slotShortUrlFinished);
 }

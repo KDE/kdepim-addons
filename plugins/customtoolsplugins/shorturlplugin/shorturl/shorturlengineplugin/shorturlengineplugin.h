@@ -19,18 +19,16 @@
 #define SHORTURLENGINEPLUGIN_H
 
 #include <QObject>
-
-namespace PimCommon
-{
+#include "shorturl_export.h"
 class ShortUrlEnginePluginPrivate;
 class ShortUrlEngineInterface;
-class ShortUrlEnginePlugin : public QObject
+class SHORTURL_EXPORT ShortUrlEnginePlugin : public QObject
 {
     Q_OBJECT
 public:
     explicit ShortUrlEnginePlugin(QObject *parent = Q_NULLPTR);
     ~ShortUrlEnginePlugin();
-    virtual PimCommon::ShortUrlEngineInterface *createInterface(QObject *parent) = 0;
+    virtual ShortUrlEngineInterface *createInterface(QObject *parent) = 0;
     virtual QString engineName() const = 0;
     QString pluginName() const;
     void setPluginName(const QString &pluginname);
@@ -38,6 +36,5 @@ public:
 private:
     ShortUrlEnginePluginPrivate *const d;
 };
-}
 #endif // SHORTURLENGINEPLUGIN_H
 

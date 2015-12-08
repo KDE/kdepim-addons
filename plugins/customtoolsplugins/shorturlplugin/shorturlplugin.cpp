@@ -26,7 +26,7 @@ using namespace PimCommon;
 K_PLUGIN_FACTORY_WITH_JSON(PimCommonShorturlPluginFactory, "pimcommon_shorturlplugin.json", registerPlugin<ShorturlPlugin>();)
 
 ShorturlPlugin::ShorturlPlugin(QObject *parent, const QList<QVariant> &)
-    : PimCommon::CustomToolsPlugin(parent)
+    : CustomToolsPlugin(parent)
 {
 
 }
@@ -38,11 +38,11 @@ ShorturlPlugin::~ShorturlPlugin()
 
 CustomToolsViewInterface *ShorturlPlugin::createView(KActionCollection *ac, CustomToolsWidgetNg *parent)
 {
-    PimCommon::ShorturlView *view = new PimCommon::ShorturlView(ac, parent);
+    ShorturlView *view = new ShorturlView(ac, parent);
 
-    connect(view, &PimCommon::ShorturlView::toolsWasClosed, parent, &CustomToolsWidgetNg::slotToolsWasClosed);
-    connect(view, &PimCommon::ShorturlView::insertText, parent, &CustomToolsWidgetNg::insertText);
-    connect(view, &PimCommon::ShorturlView::activateView, parent, &CustomToolsWidgetNg::slotActivateView);
+    connect(view, &ShorturlView::toolsWasClosed, parent, &CustomToolsWidgetNg::slotToolsWasClosed);
+    connect(view, &ShorturlView::insertText, parent, &CustomToolsWidgetNg::insertText);
+    connect(view, &ShorturlView::activateView, parent, &CustomToolsWidgetNg::slotActivateView);
     return view;
 }
 

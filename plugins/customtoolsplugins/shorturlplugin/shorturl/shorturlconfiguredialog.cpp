@@ -25,7 +25,6 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-using namespace PimCommon;
 ShortUrlConfigureDialog::ShortUrlConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {

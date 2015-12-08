@@ -27,16 +27,16 @@ ShortUrlMainWidgetNg::ShortUrlMainWidgetNg(QWidget *parent)
 {
     QVBoxLayout *lay = new QVBoxLayout;
     setLayout(lay);
-    mConfigWidget = new PimCommon::ShortUrlConfigureWidget;
+    mConfigWidget = new ShortUrlConfigureWidget;
     lay->addWidget(mConfigWidget);
 
     QPushButton *saveConfig = new QPushButton(QStringLiteral("Save config"));
     connect(saveConfig, &QPushButton::clicked, this, &ShortUrlMainWidgetNg::slotSaveConfig);
     lay->addWidget(saveConfig);
 
-    mShortUrlWidget = new PimCommon::ShortUrlWidgetNg();
+    mShortUrlWidget = new ShortUrlWidgetNg();
     lay->addWidget(mShortUrlWidget);
-    connect(mConfigWidget, &PimCommon::ShortUrlConfigureWidget::settingsChanged, mShortUrlWidget, &PimCommon::ShortUrlWidgetNg::settingsUpdated);
+    connect(mConfigWidget, &ShortUrlConfigureWidget::settingsChanged, mShortUrlWidget, &ShortUrlWidgetNg::settingsUpdated);
 }
 
 void ShortUrlMainWidgetNg::slotSaveConfig()

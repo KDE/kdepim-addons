@@ -20,8 +20,7 @@
 
 #include <QWidget>
 
-namespace PimCommon
-{
+
 class ShortUrlConfigureWidgetPrivate;
 class ShortUrlConfigureWidget : public QWidget
 {
@@ -44,6 +43,5 @@ private:
     void init();
     ShortUrlConfigureWidgetPrivate *const d;
 };
-}
 
 #endif // SHORTURLCONFIGUREWIDGET_H

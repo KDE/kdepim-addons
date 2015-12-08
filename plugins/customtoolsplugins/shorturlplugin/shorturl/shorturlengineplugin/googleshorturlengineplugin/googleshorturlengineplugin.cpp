@@ -19,12 +19,11 @@
 #include "googleshorturlengineinterface.h"
 #include <kpluginfactory.h>
 
-using namespace PimCommon;
 
 K_PLUGIN_FACTORY_WITH_JSON(GoogleShortUrlEnginePluginFactory, "pimcommon_googleshorturlengineplugin.json", registerPlugin<GoogleShortUrlEnginePlugin>();)
 
 GoogleShortUrlEnginePlugin::GoogleShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
-    : PimCommon::ShortUrlEnginePlugin(parent)
+    : ShortUrlEnginePlugin(parent)
 {
 
 }
@@ -34,9 +33,9 @@ GoogleShortUrlEnginePlugin::~GoogleShortUrlEnginePlugin()
 
 }
 
-PimCommon::ShortUrlEngineInterface *GoogleShortUrlEnginePlugin::createInterface(QObject *parent)
+ShortUrlEngineInterface *GoogleShortUrlEnginePlugin::createInterface(QObject *parent)
 {
-    return new PimCommon::GoogleShortUrlEngineInterface(parent);
+    return new GoogleShortUrlEngineInterface(parent);
 }
 
 #include "googleshorturlengineplugin.moc"

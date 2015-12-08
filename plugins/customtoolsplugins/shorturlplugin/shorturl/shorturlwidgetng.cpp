@@ -40,8 +40,6 @@
 #include <QPointer>
 #include <KActionCollection>
 
-using namespace PimCommon;
-
 ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     : QWidget(parent),
       mShorturlServiceName(Q_NULLPTR),
@@ -125,9 +123,9 @@ ShortUrlWidgetNg::~ShortUrlWidgetNg()
 
 void ShortUrlWidgetNg::initializePlugins()
 {
-    const QVector<PimCommon::ShortUrlEnginePlugin *>  lstPlugin = PimCommon::ShortUrlEnginePluginManager::self()->pluginsList();
-    Q_FOREACH (PimCommon::ShortUrlEnginePlugin *plugin, lstPlugin) {
-        PimCommon::ShortUrlEngineInterface *interface = plugin->createInterface(this);
+    const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    Q_FOREACH (ShortUrlEnginePlugin *plugin, lstPlugin) {
+        ShortUrlEngineInterface *interface = plugin->createInterface(this);
         if (interface) {
             mLstInterface.insert(interface->engineName(), interface);
         }
@@ -166,12 +164,12 @@ void ShortUrlWidgetNg::loadEngine()
     KConfigGroup grp(KSharedConfig::openConfig(), "ShortUrl");
     const QString engineName = grp.readEntry("EngineName");
     mCurrentEngine = mLstInterface.value(engineName);
-    if (!mCurrentEngine) {
+    if (!mCurrentEngine && !mLstInterface.isEmpty()) {
         mCurrentEngine = mLstInterface.cbegin().value();
     }
-    mShorturlServiceName->setText(mCurrentEngine->pluginName());
 
     if (mCurrentEngine) {
+        mShorturlServiceName->setText(mCurrentEngine->pluginName());
         connect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlGenerated, this, &ShortUrlWidgetNg::slotShortUrlDone);
         connect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &ShortUrlWidgetNg::slotShortUrlFailed);
     }

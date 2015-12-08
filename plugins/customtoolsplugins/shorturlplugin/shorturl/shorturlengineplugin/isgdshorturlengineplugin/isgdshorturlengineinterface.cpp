@@ -24,10 +24,8 @@
 
 #include "../../../shorturl/shorturlengineplugin/shorturlengineplugin.h"
 
-using namespace PimCommon;
-
-IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent)
-    : PimCommon::ShortUrlEngineInterface(plugin, parent)
+IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
+    : ShortUrlEngineInterface(plugin, parent)
 {
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &IsgdShortUrlEngineInterface::slotShortUrlFinished);
 }

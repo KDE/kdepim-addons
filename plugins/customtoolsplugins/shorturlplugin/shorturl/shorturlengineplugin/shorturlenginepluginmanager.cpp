@@ -25,8 +25,6 @@
 #include <KPluginFactory>
 #include <QSet>
 
-using namespace PimCommon;
-
 class ShortUrlEnginePluginManagerInstancePrivate
 {
 public:
@@ -56,7 +54,7 @@ public:
     QString saveName() const;
 
     KPluginMetaData metaData;
-    PimCommon::ShortUrlEnginePlugin *plugin;
+    ShortUrlEnginePlugin *plugin;
 };
 
 QString ShortUrlEnginePluginInfo::saveName() const
@@ -64,7 +62,7 @@ QString ShortUrlEnginePluginInfo::saveName() const
     return QFileInfo(metaData.fileName()).baseName();
 }
 
-class PimCommon::ShortUrlEnginePluginManagerPrivate
+class ShortUrlEnginePluginManagerPrivate
 {
 public:
     ShortUrlEnginePluginManagerPrivate(ShortUrlEnginePluginManager *qq)
@@ -74,7 +72,7 @@ public:
     }
     void initializePlugins();
     void loadPlugin(ShortUrlEnginePluginInfo *item);
-    QVector<PimCommon::ShortUrlEnginePlugin *> pluginsList() const;
+    QVector<ShortUrlEnginePlugin *> pluginsList() const;
     QVector<ShortUrlEnginePluginInfo> mPluginList;
     ShortUrlEnginePluginManager *q;
 };
@@ -108,13 +106,13 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 
 void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *item)
 {
-    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<PimCommon::ShortUrlEnginePlugin>(q, QVariantList() << item->saveName());
+    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->saveName());
     item->plugin->setPluginName(item->metaData.name());
 }
 
 QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList() const
 {
-    QVector<PimCommon::ShortUrlEnginePlugin *> lst;
+    QVector<ShortUrlEnginePlugin *> lst;
     QVector<ShortUrlEnginePluginInfo>::ConstIterator end(mPluginList.constEnd());
     for (QVector<ShortUrlEnginePluginInfo>::ConstIterator it = mPluginList.constBegin(); it != end; ++it) {
         if ((*it).plugin) {
@@ -126,7 +124,7 @@ QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList(
 
 ShortUrlEnginePluginManager::ShortUrlEnginePluginManager(QObject *parent)
     : QObject(parent),
-      d(new PimCommon::ShortUrlEnginePluginManagerPrivate(this))
+      d(new ShortUrlEnginePluginManagerPrivate(this))
 {
     d->initializePlugins();
 }

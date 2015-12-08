@@ -22,9 +22,7 @@
 
 #include <QNetworkAccessManager>
 
-using namespace PimCommon;
-
-ShortUrlEngineInterface::ShortUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent)
+ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : QObject(parent),
       mErrorFound(false),
       mNetworkAccessManager(new QNetworkAccessManager(this)),

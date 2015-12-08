@@ -22,10 +22,8 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
-using namespace PimCommon;
-
 TripAbShortUrlEngineInterface::TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
-    : PimCommon::ShortUrlEngineInterface(plugin, parent)
+    : ShortUrlEngineInterface(plugin, parent)
 {
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &TripAbShortUrlEngineInterface::slotShortUrlFinished);
 }

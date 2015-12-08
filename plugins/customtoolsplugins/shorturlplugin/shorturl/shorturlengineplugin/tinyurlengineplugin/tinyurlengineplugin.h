@@ -22,18 +22,15 @@
 
 #include <QVariant>
 
-namespace PimCommon
-{
-class TinyUrlEnginePlugin : public PimCommon::ShortUrlEnginePlugin
+class TinyUrlEnginePlugin : public ShortUrlEnginePlugin
 {
     Q_OBJECT
 public:
     explicit TinyUrlEnginePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~TinyUrlEnginePlugin();
 
-    PimCommon::ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+    ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
     QString engineName() const Q_DECL_OVERRIDE;
 };
-}
 
 #endif // TINYURLENGINEPLUGIN_H

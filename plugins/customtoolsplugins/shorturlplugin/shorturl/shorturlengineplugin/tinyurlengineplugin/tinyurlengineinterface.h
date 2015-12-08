@@ -20,12 +20,11 @@
 
 #include <../shorturlengineinterface.h>
 #include <QNetworkReply>
-namespace PimCommon
+class TinyUrlEngineInterface : public ShortUrlEngineInterface
 {
-class TinyUrlEngineInterface : public PimCommon::ShortUrlEngineInterface
-{
+    Q_OBJECT
 public:
-    explicit TinyUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
     ~TinyUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;
@@ -35,6 +34,5 @@ private Q_SLOTS:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotErrorFound(QNetworkReply::NetworkError error);
 };
-}
 
 #endif // TINYURLENGINEINTERFACE_H

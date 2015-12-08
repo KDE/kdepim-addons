@@ -23,12 +23,11 @@
 #include <QSslError>
 
 class QNetworkReply;
-namespace PimCommon
+class TripAbShortUrlEngineInterface : public ShortUrlEngineInterface
 {
-class TripAbShortUrlEngineInterface : public PimCommon::ShortUrlEngineInterface
-{
+    Q_OBJECT
 public:
-    explicit TripAbShortUrlEngineInterface(PimCommon::ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
     ~TripAbShortUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;
@@ -37,6 +36,5 @@ public:
 private Q_SLOTS:
     void slotShortUrlFinished(QNetworkReply *reply);
 };
-}
 
 #endif

@@ -20,9 +20,7 @@
 
 #include <pimcommon/shorturlengineinterface.h>
 
-namespace PimCommon
-{
-class GoogleShortUrlEngineInterface : public PimCommon::ShortUrlEngineInterface
+class GoogleShortUrlEngineInterface : public ShortUrlEngineInterface
 {
 public:
     explicit GoogleShortUrlEngineInterface(QObject *parent = Q_NULLPTR);
@@ -31,6 +29,5 @@ public:
     void generateShortUrl() Q_DECL_OVERRIDE;
     QString engineName() const Q_DECL_OVERRIDE;
 };
-}
 
 #endif

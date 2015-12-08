@@ -28,9 +28,8 @@
 
 #include "shorturlengineplugin/shorturlengineplugin.h"
 
-using namespace PimCommon;
 
-class PimCommon::ShortUrlConfigureWidgetPrivate
+class ShortUrlConfigureWidgetPrivate
 {
 public:
     ShortUrlConfigureWidgetPrivate()
@@ -45,7 +44,7 @@ public:
 
 ShortUrlConfigureWidget::ShortUrlConfigureWidget(QWidget *parent)
     : QWidget(parent),
-      d(new PimCommon::ShortUrlConfigureWidgetPrivate)
+      d(new ShortUrlConfigureWidgetPrivate)
 {
     QHBoxLayout *lay = new QHBoxLayout;
     lay->setMargin(0);
@@ -73,8 +72,8 @@ void ShortUrlConfigureWidget::slotChanged()
 
 void ShortUrlConfigureWidget::init()
 {
-    const QVector<PimCommon::ShortUrlEnginePlugin *>  lstPlugin = PimCommon::ShortUrlEnginePluginManager::self()->pluginsList();
-    Q_FOREACH (PimCommon::ShortUrlEnginePlugin *plugin, lstPlugin) {
+    const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    Q_FOREACH (ShortUrlEnginePlugin *plugin, lstPlugin) {
         d->mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
     }
 }

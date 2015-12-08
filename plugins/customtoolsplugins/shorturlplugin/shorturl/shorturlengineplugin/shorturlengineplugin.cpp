@@ -17,9 +17,9 @@
 
 #include "shorturlengineplugin.h"
 
-using namespace PimCommon;
 
-class PimCommon::ShortUrlEnginePluginPrivate
+
+class ShortUrlEnginePluginPrivate
 {
 public:
     ShortUrlEnginePluginPrivate()
@@ -31,7 +31,7 @@ public:
 
 ShortUrlEnginePlugin::ShortUrlEnginePlugin(QObject *parent)
     : QObject(parent),
-      d(new PimCommon::ShortUrlEnginePluginPrivate)
+      d(new ShortUrlEnginePluginPrivate)
 {
 
 }
@@ -50,4 +50,3 @@ void ShortUrlEnginePlugin::setPluginName(const QString &pluginname)
 {
     d->name = pluginname;
 }
-

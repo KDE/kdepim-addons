@@ -19,8 +19,6 @@
 #define SHORTURLENGINEPLUGINMANAGER_H
 
 #include <QObject>
-namespace PimCommon
-{
 class ShortUrlEnginePlugin;
 class ShortUrlEnginePluginManagerPrivate;
 class ShortUrlEnginePluginManager : public QObject
@@ -30,12 +28,11 @@ public:
     explicit ShortUrlEnginePluginManager(QObject *parent = Q_NULLPTR);
     ~ShortUrlEnginePluginManager();
 
-    QVector<PimCommon::ShortUrlEnginePlugin *> pluginsList() const;
+    QVector<ShortUrlEnginePlugin *> pluginsList() const;
 
     static ShortUrlEnginePluginManager *self();
 private:
     ShortUrlEnginePluginManagerPrivate *const d;
 };
-}
 
 #endif // SHORTURLENGINEPLUGINMANAGER_H

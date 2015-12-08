@@ -25,16 +25,16 @@
 using namespace PimCommon;
 
 ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
-    : PimCommon::CustomToolsViewInterface(parent),
+    : CustomToolsViewInterface(parent),
       mAction(Q_NULLPTR),
       mShorturl(Q_NULLPTR)
 {
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setMargin(0);
     createAction(ac);
-    mShorturl = new PimCommon::ShortUrlWidgetNg(this);
-    connect(mShorturl, &PimCommon::ShortUrlWidgetNg::toolsWasClosed, this, &ShorturlView::toolsWasClosed);
-    connect(mShorturl, &PimCommon::ShortUrlWidgetNg::insertText, this, &ShorturlView::insertText);
+    mShorturl = new ShortUrlWidgetNg(this);
+    connect(mShorturl, &ShortUrlWidgetNg::toolsWasClosed, this, &ShorturlView::toolsWasClosed);
+    connect(mShorturl, &ShortUrlWidgetNg::insertText, this, &ShorturlView::insertText);
 
     layout->addWidget(mShorturl);
     setLayout(layout);

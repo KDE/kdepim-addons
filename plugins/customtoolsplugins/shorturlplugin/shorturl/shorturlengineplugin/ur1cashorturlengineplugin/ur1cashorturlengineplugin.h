@@ -22,9 +22,7 @@
 
 #include <QVariant>
 
-namespace PimCommon
-{
-class Ur1CaShortUrlEnginePlugin : public PimCommon::ShortUrlEnginePlugin
+class Ur1CaShortUrlEnginePlugin : public ShortUrlEnginePlugin
 {
     Q_OBJECT
 public:
@@ -34,6 +32,5 @@ public:
     ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
     QString engineName() const Q_DECL_OVERRIDE;
 };
-}
 
 #endif // UR1CASHORTURLENGINEPLUGIN_H

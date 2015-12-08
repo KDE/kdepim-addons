@@ -20,11 +20,10 @@
 
 #include <QObject>
 #include <QNetworkReply>
+#include "shorturl_export.h"
 class QNetworkAccessManager;
-namespace PimCommon
-{
 class ShortUrlEnginePlugin;
-class ShortUrlEngineInterface : public QObject
+class SHORTURL_EXPORT ShortUrlEngineInterface : public QObject
 {
     Q_OBJECT
 public:
@@ -47,7 +46,6 @@ protected:
     QString mOriginalUrl;
     bool mErrorFound;
     QNetworkAccessManager *mNetworkAccessManager;
-    PimCommon::ShortUrlEnginePlugin *mEnginePlugin;
+    ShortUrlEnginePlugin *mEnginePlugin;
 };
-}
 #endif // SHORTURLENGINEINTERFACE_H

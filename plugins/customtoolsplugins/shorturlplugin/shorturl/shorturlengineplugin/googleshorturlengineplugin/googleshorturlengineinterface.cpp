@@ -17,10 +17,8 @@
 
 #include "googleshorturlengineinterface.h"
 
-using namespace PimCommon;
-
 GoogleShortUrlEngineInterface::GoogleShortUrlEngineInterface(QObject *parent)
-    : PimCommon::ShortUrlEngineInterface(parent)
+    : ShortUrlEngineInterface(parent)
 {
 
 }

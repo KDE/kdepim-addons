@@ -20,12 +20,8 @@
 
 #include <QWidget>
 
-namespace PimCommon
-{
 class ShortUrlConfigureWidget;
 class ShortUrlWidgetNg;
-}
-
 class ShortUrlMainWidgetNg : public QWidget
 {
     Q_OBJECT
@@ -36,8 +32,8 @@ private Q_SLOTS:
     void slotSaveConfig();
 
 private:
-    PimCommon::ShortUrlConfigureWidget *mConfigWidget;
-    PimCommon::ShortUrlWidgetNg *mShortUrlWidget;
+    ShortUrlConfigureWidget *mConfigWidget;
+    ShortUrlWidgetNg *mShortUrlWidget;
 };
 
 #endif // SHORTURLMAINWIDGETNg_H
