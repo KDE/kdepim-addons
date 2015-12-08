@@ -19,13 +19,12 @@
 #define SHORTURLENGINEINTERFACE_H
 
 #include <QObject>
-#include "pimcommon_export.h"
 #include <QNetworkReply>
 class QNetworkAccessManager;
 namespace PimCommon
 {
 class ShortUrlEnginePlugin;
-class PIMCOMMON_EXPORT ShortUrlEngineInterface : public QObject
+class ShortUrlEngineInterface : public QObject
 {
     Q_OBJECT
 public:

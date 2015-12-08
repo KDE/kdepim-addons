@@ -8,6 +8,8 @@ set(pimcommon_shorturlplugin_shorturllib_SRCS
    shorturl/shorturlconfigurewidget.cpp
    shorturl/shorturlconfiguredialog.cpp
    shorturl/shorturlengineplugin/shorturlenginepluginmanager.cpp
+   shorturl/shorturlengineplugin/shorturlengineinterface.cpp
+   shorturl/shorturlengineplugin/shorturlengineplugin.cpp
 )
 
 add_library(pimcommon_shorturlplugin MODULE ${pimcommon_shorturlplugin_SRCS} ${pimcommon_shorturlplugin_shorturllib_SRCS})

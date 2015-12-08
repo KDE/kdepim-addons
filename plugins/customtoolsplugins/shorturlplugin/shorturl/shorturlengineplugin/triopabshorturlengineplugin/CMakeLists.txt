@@ -1,6 +1,7 @@
 set(pimcommon_triopabshorturlengineplugin_SRCS
     triopabshorturlengineplugin.cpp
     triopabshorturlengineinterface.cpp
+    ${common_engineplugin_SRCS}
 )
 
 add_library(pimcommon_triopabshorturlengineplugin MODULE ${pimcommon_triopabshorturlengineplugin_SRCS})

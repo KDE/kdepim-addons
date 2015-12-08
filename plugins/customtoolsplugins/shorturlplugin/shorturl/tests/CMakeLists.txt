@@ -7,6 +7,8 @@ set(shorturlengineswigets_SRCS
    ../shorturlconfigurewidget.cpp
    ../shorturlconfiguredialog.cpp
    ../shorturlengineplugin/shorturlenginepluginmanager.cpp
+   ../shorturlengineplugin/shorturlengineinterface.cpp
+   ../shorturlengineplugin/shorturlengineplugin.cpp
 )
 
 set(shorturlwidgetng_gui_SRCS shorturlwidgetng_gui.cpp shorturlmainwidgetng.cpp ${shorturlengineswigets_SRCS})
