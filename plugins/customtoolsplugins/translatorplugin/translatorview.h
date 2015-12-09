@@ -20,9 +20,9 @@
 
 #include <pimcommon/customtoolsviewinterface.h>
 class KActionCollection;
-namespace PimCommon
-{
+namespace PimCommon {
 class TranslatorWidget;
+}
 class TranslatorView : public PimCommon::CustomToolsViewInterface
 {
     Q_OBJECT
@@ -41,5 +41,4 @@ private:
     PimCommon::TranslatorWidget *mTranslatorWidget;
 
 };
-}
 #endif // TRANSLATORVIEW_H

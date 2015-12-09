@@ -23,7 +23,6 @@
 #include <KToggleAction>
 #include <KActionCollection>
 
-using namespace PimCommon;
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent),
       mAction(Q_NULLPTR)

@@ -20,8 +20,6 @@
 #include "pimcommon/customtoolsplugin.h"
 
 #include <QVariant>
-namespace PimCommon
-{
 class TranslatorPlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
@@ -29,9 +27,8 @@ public:
     explicit TranslatorPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~TranslatorPlugin();
 
-    CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
+    PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
     QString customToolName() const Q_DECL_OVERRIDE;
 
 };
-}
 #endif // TRANSLATORPLUGIN_H

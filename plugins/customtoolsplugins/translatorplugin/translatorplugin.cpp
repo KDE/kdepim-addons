@@ -21,7 +21,6 @@
 #include <kpluginfactory.h>
 #include <pimcommon/customtoolswidgetng.h>
 
-using namespace PimCommon;
 K_PLUGIN_FACTORY_WITH_JSON(PimCommonTranslatorPluginFactory, "pimcommon_translatorplugin.json", registerPlugin<TranslatorPlugin>();)
 
 TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)
@@ -35,13 +34,13 @@ TranslatorPlugin::~TranslatorPlugin()
 
 }
 
-CustomToolsViewInterface *TranslatorPlugin::createView(KActionCollection *ac, CustomToolsWidgetNg *parent)
+PimCommon::CustomToolsViewInterface *TranslatorPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    PimCommon::TranslatorView *view = new PimCommon::TranslatorView(ac, parent);
+    TranslatorView *view = new TranslatorView(ac, parent);
 
-    connect(view, &PimCommon::TranslatorView::toolsWasClosed, parent, &CustomToolsWidgetNg::slotToolsWasClosed);
-    connect(view, &PimCommon::TranslatorView::insertText, parent, &CustomToolsWidgetNg::insertText);
-    connect(view, &PimCommon::TranslatorView::activateView, parent, &CustomToolsWidgetNg::slotActivateView);
+    connect(view, &TranslatorView::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
+    connect(view, &TranslatorView::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
+    connect(view, &TranslatorView::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
     return view;
 
 }
