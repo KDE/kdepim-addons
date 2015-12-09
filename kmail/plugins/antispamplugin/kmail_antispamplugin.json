@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Name": "Antispam",
+        "ServiceTypes": [
+            "KMail/MainViewPlugin"
+        ]
+    }
+}
