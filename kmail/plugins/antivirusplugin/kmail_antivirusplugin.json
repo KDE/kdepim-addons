@@ -3,6 +3,7 @@
         "Name": "Antivirus",
         "ServiceTypes": [
             "KMail/MainViewPlugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }

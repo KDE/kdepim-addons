@@ -3,6 +3,7 @@
         "Name": "Antispam",
         "ServiceTypes": [
             "KMail/MainViewPlugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }
