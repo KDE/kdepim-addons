@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Name": "Ur1Ca",
+        "ServiceTypes": [
+            "PimCommonShortUrlEngine/Plugin"
+        ]
+    }
+}

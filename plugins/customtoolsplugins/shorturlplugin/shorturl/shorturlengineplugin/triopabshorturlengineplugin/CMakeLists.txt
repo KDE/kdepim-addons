@@ -10,5 +10,4 @@ target_link_libraries(pimcommon_triopabshorturlengineplugin
 )
 
 install(TARGETS pimcommon_triopabshorturlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_triopabshorturlengineplugin pimcommon_triopabshorturlengineplugin.desktop)
 

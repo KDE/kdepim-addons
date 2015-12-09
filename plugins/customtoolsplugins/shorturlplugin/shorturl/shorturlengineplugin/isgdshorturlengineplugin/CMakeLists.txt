@@ -11,5 +11,4 @@ target_link_libraries(pimcommon_isgdshorturlengineplugin
 )
 
 install(TARGETS pimcommon_isgdshorturlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_isgdshorturlengineplugin pimcommon_isgdshorturlengineplugin.desktop)
 

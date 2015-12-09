@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Name": "to.ly",
+        "ServiceTypes": [
+            "PimCommonShortUrlEngine/Plugin"
+        ]
+    }
+}

@@ -10,5 +10,4 @@ target_link_libraries(pimcommon_tinyurlengineplugin
 )
 
 install(TARGETS pimcommon_tinyurlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_tinyurlengineplugin pimcommon_tinyurlengineplugin.desktop)
 
