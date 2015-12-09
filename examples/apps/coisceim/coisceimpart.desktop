@@ -1,5 +1,13 @@
 [Desktop Entry]
 Name=CoisceimPart
+Name[ca]=CoisceimPart
+Name[ca@valencia]=CoisceimPart
+Name[gl]=CoisceimPart
+Name[nl]=CoisceimPart
+Name[pt]=CoisceimPart
+Name[pt_BR]=CoisceimPart
+Name[uk]=CoisceimPart
+Name[x-test]=xxCoisceimPartxx
 X-KDE-ServiceTypes=KParts/ReadOnlyPart
 X-KDE-Library=coisceimpart
 Type=Service

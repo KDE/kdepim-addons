@@ -1,8 +1,24 @@
 [Desktop Entry]
 X-KDE-Library=korg_picoftheday
 Name=Wikipedia Picture Of the Day Plugin for Calendars
+Name[ca]=Connector d'imatge del dia de la Viquipèdia pels calendaris
+Name[ca@valencia]=Connector d'imatge del dia de la Viquipèdia pels calendaris
+Name[gl]=Engadido para a Imaxe do Día da Wikipedia nos Calendarios
+Name[nl]=KOrganizer-plug-in voor de Wikipedia Afbeelding van de Dag
+Name[pt]=Imagem do Dia do Wikipédia para os Calendários
+Name[pt_BR]=Plugin de Imagem do Dia da Wikipédia para Calendários
+Name[uk]=Додаток дат для календарів (зображення дня з Вікіпедії)
+Name[x-test]=xxWikipedia Picture Of the Day Plugin for Calendarsxx
 Type=Service
 Comment=This plugin provides the Wikipedia Picture of the Day
+Comment[ca]=Aquest connector proporciona la imatge del dia de la Viquipèdia
+Comment[ca@valencia]=Este connector proporciona la imatge del dia de la Viquipèdia
+Comment[gl]=Este engadido fornece a Imaxe do Día da Wikipedia
+Comment[nl]=Deze plug-in geeft de Wikipedia-afbeelding van de dag
+Comment[pt]=Este 'plugin' oferece a Imagem do Dia do Wikipédia
+Comment[pt_BR]=Este plugin oferece a Imagem do Dia da Wikipédia
+Comment[uk]=Цей додаток працює з «Зображеннями дня» з Вікіпедії
+Comment[x-test]=xxThis plugin provides the Wikipedia Picture of the Dayxx
 X-KDE-ServiceTypes=Calendar/Plugin,Calendar/Decoration
 X-KDE-KOrganizer-HasSettings=true
 X-KDE-PluginInterfaceVersion=2

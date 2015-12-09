@@ -1,7 +1,23 @@
 [Desktop Entry]
 X-KDE-Library=korg_datenums
 Name=Date Numbers Plugin for Calendars
+Name[ca]=Connector de números de data pels calendaris
+Name[ca@valencia]=Connector de números de data pels calendaris
+Name[gl]=Engadido para os números dos días para os calendarios
+Name[nl]=Datumgetallenplug-in voor agenda's
+Name[pt]='Plugin' de Números de Datas para os Calendários
+Name[pt_BR]=Plugin de números de datas para calendários
+Name[uk]=Додаток дат для календарів
+Name[x-test]=xxDate Numbers Plugin for Calendarsxx
 Comment=For each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.
+Comment[ca]=Per a cada dia, aquest connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de Febrer serà el dia 32 de l'any.
+Comment[ca@valencia]=Per a cada dia, este connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de Febrer serà el dia 32 de l'any.
+Comment[gl]=Este engadido mostra o día do ano na vista superior da axenda. Por exemplo, o 1 de febreiro é o día 32 do ano.
+Comment[nl]=Deze plug-in zorgt ervoor dat het dagnummer boven de agendaweergave wordt geplaatst. Bijvoorbeeld, bij 1 februari hoort dagnummer 32.
+Comment[pt]=Para cada dia, este 'plugin' mostra o número respectivo do ano no topo da agenda. Por exemplo, o 1 de Fevereiro é o dia 32 do ano.
+Comment[pt_BR]=Para cada dia, esse plugin mostra o número do dia no topo da visualização da agenda. Por exemplo, 1º de fevereiro é o dia 32 do ano.
+Comment[uk]=Цей додаток показує зверху перегляду щоденника номер для кожного дня року. Наприклад, 1-го лютого — це 32 день року.
+Comment[x-test]=xxFor each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.xx
 Type=Service
 X-KDE-ServiceTypes=Calendar/Plugin,Calendar/Decoration
 X-KDE-KOrganizer-HasSettings=true

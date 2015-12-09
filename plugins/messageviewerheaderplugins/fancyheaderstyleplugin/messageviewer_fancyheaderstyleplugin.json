@@ -1,31 +1,10 @@
 {
     "KPlugin": {
-        "Name": "Fancy Header Style",
-        "Name[ca@valencia]": "Estil de capçalera sofisticada",
-        "Name[ca]": "Estil de capçalera sofisticada",
-        "Name[en_GB]": "Fancy Header Style",
-        "Name[es]": "Estilo adornado de encabezado",
-        "Name[fi]": "Tyylikäs otsaketyyli",
-        "Name[gl]": "Estilo de cabeceira moderno",
-        "Name[it]": "Stile con intestazioni eleganti",
-        "Name[nl]": "Stijl met elegante headers",
-        "Name[pl]": "Eleganckie nagłówki",
-        "Name[pt]": "Estilo de Cabeçalho Bonito",
-        "Name[pt_BR]": "Estilo de cabeçalho Bonito",
-        "Name[sk]": "Ozdobný štýl hlavičiek",
-        "Name[sl]": "Slog z razkošnimi glavami",
-        "Name[sr@ijekavian]": "помодни стил заглавља",
-        "Name[sr@ijekavianlatin]": "pomodni stil zaglavlja",
-        "Name[sr@latin]": "pomodni stil zaglavlja",
-        "Name[sr]": "помодни стил заглавља",
-        "Name[sv]": "Snygg rubrikstil",
-        "Name[tr]": "Eğlenceli Başlık Biçemi",
-        "Name[uk]": "Красивий стиль заголовків",
-        "Name[x-test]": "xxFancy Header Stylexx",
+        "Name": "Fancy Header Style", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ],
+        ], 
         "Version": "1.0"
-    },
+    }, 
     "X-KDE-MessageViewer-Header-Order": "2"
 }

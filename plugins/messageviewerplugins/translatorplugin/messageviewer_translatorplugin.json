@@ -1,9 +1,17 @@
 {
     "KPlugin": {
         "Name": "Translator", 
+        "Name[ca@valencia]": "Traductor", 
+        "Name[ca]": "Traductor", 
+        "Name[gl]": "Tradutor", 
+        "Name[nl]": "Vertaler", 
+        "Name[pt]": "Tradutor", 
+        "Name[pt_BR]": "Tradutor", 
+        "Name[uk]": "Перекладач", 
+        "Name[x-test]": "xxTranslatorxx", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ],
+        ], 
         "Version": "1.0"
     }
 }

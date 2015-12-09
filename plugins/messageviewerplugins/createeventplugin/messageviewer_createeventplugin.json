@@ -1,9 +1,17 @@
 {
     "KPlugin": {
         "Name": "Create Event", 
+        "Name[ca@valencia]": "Crea un esdeveniment", 
+        "Name[ca]": "Crea un esdeveniment", 
+        "Name[gl]": "Crear un acontecemento", 
+        "Name[nl]": "Gebeurtenis aanmaken", 
+        "Name[pt]": "Criar um Evento", 
+        "Name[pt_BR]": "Criar evento", 
+        "Name[uk]": "Створення запису події", 
+        "Name[x-test]": "xxCreate Eventxx", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ],
+        ], 
         "Version": "1.0"
     }
 }

@@ -1,9 +1,17 @@
 {
     "KPlugin": {
         "Name": "Create Todo", 
+        "Name[ca@valencia]": "Crea una pendent", 
+        "Name[ca]": "Crea una pendent", 
+        "Name[gl]": "Crear unha tarefa pendente", 
+        "Name[nl]": "Te-doen aanmaken", 
+        "Name[pt]": "Criar um Item Por-Fazer", 
+        "Name[pt_BR]": "Criar tarefa", 
+        "Name[uk]": "Створення запису завдання", 
+        "Name[x-test]": "xxCreate Todoxx", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
-        ],
+        ], 
         "Version": "1.0"
     }
 }

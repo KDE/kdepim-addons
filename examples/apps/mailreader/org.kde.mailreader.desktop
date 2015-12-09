@@ -1,9 +1,25 @@
 [Desktop Entry]
 Name=mailreader
+Name[ca]=mailreader
+Name[ca@valencia]=mailreader
+Name[gl]=lector de correo
+Name[nl]=e-maillezer
+Name[pt]=mailreader
+Name[pt_BR]=mailreader
+Name[uk]=mailreader
+Name[x-test]=xxmailreaderxx
 Exec=mailreader
 Icon=mailreader
 Type=Application
 X-DocPath=mailreader/index.html
 GenericName=A simple Akonadi-based Mail Application
+GenericName[ca]=Una senzilla aplicació de correu basada en Akonadi
+GenericName[ca@valencia]=Una senzilla aplicació de correu basada en Akonadi
+GenericName[gl]=Un programa de correo simple baseado en Akonadi.
+GenericName[nl]=Een eenvoudige op Akonadi gebaseerde e-mailtoepassing
+GenericName[pt]=Uma aplicação simples de E-mail baseada no Akonadi
+GenericName[pt_BR]=Um aplicativo de e-mail simples com base no Akonadi
+GenericName[uk]=Проста програма для роботи з електронною поштою на основі Akonadi
+GenericName[x-test]=xxA simple Akonadi-based Mail Applicationxx
 Terminal=false
 X-DBUS-ServiceName=org.kde.mailreader
