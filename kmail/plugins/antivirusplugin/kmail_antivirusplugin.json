@@ -1,9 +1,9 @@
 {
     "KPlugin": {
-        "Name": "Antivirus",
+        "Name": "Antivirus", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
-        ],
+        ], 
         "Version": "1.0"
     }
 }

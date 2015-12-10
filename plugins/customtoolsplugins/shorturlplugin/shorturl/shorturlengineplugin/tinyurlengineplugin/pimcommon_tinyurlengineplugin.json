@@ -1,9 +1,9 @@
 {
     "KPlugin": {
-        "Name": "TinyUrl",
+        "Name": "TinyUrl", 
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ],
+        ], 
         "Version": "1.0"
     }
 }

@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "All Header Style", 
+        "Name[nl]": "Stijl met alle headers", 
+        "Name[pt]": "Estilo de Cabeçalho Completo", 
+        "Name[pt_BR]": "Estilo com todos os cabeçalhos", 
+        "Name[sv]": "Stil med alla rubriker", 
+        "Name[uk]": "Стиль усіх заголовків", 
+        "Name[x-test]": "xxAll Header Stylexx", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

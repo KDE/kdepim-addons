@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Standards Header Style", 
+        "Name[nl]": "Stijl met standaard headers", 
+        "Name[pt]": "Estilo de Cabeçalho-Padrão", 
+        "Name[pt_BR]": "Estilo de cabeçalho Padrão", 
+        "Name[sv]": "Vanlig rubrikstil", 
+        "Name[uk]": "Стандартний стиль заголовків", 
+        "Name[x-test]": "xxStandards Header Stylexx", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

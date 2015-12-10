@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Long Header Style", 
+        "Name[nl]": "Stijl met lange headers", 
+        "Name[pt]": "Estilo de Cabeçalho Longo", 
+        "Name[pt_BR]": "Estilo de cabeçalho Extenso", 
+        "Name[sv]": "Lång rubrikstil", 
+        "Name[uk]": "Довгий стиль заголовків", 
+        "Name[x-test]": "xxLong Header Stylexx", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

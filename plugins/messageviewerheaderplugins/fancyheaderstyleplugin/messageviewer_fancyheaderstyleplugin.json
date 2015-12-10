@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Fancy Header Style", 
+        "Name[nl]": "Stijl met elegante headers", 
+        "Name[pt]": "Estilo de Cabeçalho Bonito", 
+        "Name[pt_BR]": "Estilo de cabeçalho Bonito", 
+        "Name[sv]": "Snygg rubrikstil", 
+        "Name[uk]": "Красивий стиль заголовків", 
+        "Name[x-test]": "xxFancy Header Stylexx", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

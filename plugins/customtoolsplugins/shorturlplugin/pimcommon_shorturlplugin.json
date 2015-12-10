@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Shorturl", 
+        "Name[nl]": "Shorturl", 
+        "Name[pt]": "URL Curto", 
+        "Name[pt_BR]": "URL curta", 
+        "Name[sv]": "Kort webbadress", 
+        "Name[uk]": "Скорочення адрес", 
+        "Name[x-test]": "xxShorturlxx", 
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"
         ], 
