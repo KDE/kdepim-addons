@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Merge Contacts", 
+        "ServiceTypes": [
+            "KAddressBook/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}

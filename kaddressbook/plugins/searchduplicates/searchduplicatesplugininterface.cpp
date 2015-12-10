@@ -15,40 +15,41 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#include "searchduplicatesplugininterface.h"
 
-#include "antispamplugininterface.h"
-#include "../common/antispamwizard.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
 
-AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
+SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
 
 }
 
-AntiSpamPluginInterface::~AntiSpamPluginInterface()
+SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface()
 {
 
 }
 
-void AntiSpamPluginInterface::createAction(KActionCollection *ac)
+void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
 {
+    //TODO
+    /*
     QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
-    connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
+    connect(action, &QAction::triggered, this, &SearchDuplicatesPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
+    */
 }
 
-void AntiSpamPluginInterface::slotActivated()
+void SearchDuplicatesPluginInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
 }
 
-void AntiSpamPluginInterface::exec()
+void SearchDuplicatesPluginInterface::exec()
 {
-    KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
-    wiz.exec();
+    //TODO
 }

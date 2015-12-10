@@ -1,0 +1,2 @@
+add_subdirectory(mergecontacts)
+add_subdirectory(searchduplicates)

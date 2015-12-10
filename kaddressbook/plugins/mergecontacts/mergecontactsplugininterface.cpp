@@ -15,40 +15,41 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#include "mergecontactsplugininterface.h"
 
-#include "antispamplugininterface.h"
-#include "../common/antispamwizard.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
 
-AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
+MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
 
 }
 
-AntiSpamPluginInterface::~AntiSpamPluginInterface()
+MergeContactsPluginInterface::~MergeContactsPluginInterface()
 {
 
 }
 
-void AntiSpamPluginInterface::createAction(KActionCollection *ac)
+void MergeContactsPluginInterface::createAction(KActionCollection *ac)
 {
+    //TODO
+    /*
     QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
-    connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
+    connect(action, &QAction::triggered, this, &MergeContactsPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
+    */
 }
 
-void AntiSpamPluginInterface::slotActivated()
+void MergeContactsPluginInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
 }
 
-void AntiSpamPluginInterface::exec()
+void MergeContactsPluginInterface::exec()
 {
-    KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
-    wiz.exec();
+    //TODO
 }

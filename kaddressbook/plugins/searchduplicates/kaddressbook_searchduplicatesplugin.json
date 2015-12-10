@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Search Duplicate Contacts", 
+        "ServiceTypes": [
+            "KAddressBook/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
