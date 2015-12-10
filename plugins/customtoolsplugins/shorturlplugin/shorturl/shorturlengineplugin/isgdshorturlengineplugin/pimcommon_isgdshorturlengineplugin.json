@@ -3,6 +3,7 @@
         "Name": "Is.gd",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }

@@ -3,6 +3,7 @@
         "Name": "Ur1Ca",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }

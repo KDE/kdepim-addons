@@ -3,6 +3,7 @@
         "Name": "to.ly",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ]
+        ],
+        "Version": "1.0"
     }
 }
