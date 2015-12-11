@@ -1,0 +1,9 @@
+add_subdirectory(boxplugin)
+add_subdirectory(dropboxplugin) 
+add_subdirectory(hubicplugin)  
+add_subdirectory(webdavplugin)  
+add_subdirectory(yousenditplugin)
+if( KF5GAPI_FOUND )
+    add_subdirectory(gdriveplugin)
+endif()
+
