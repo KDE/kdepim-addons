@@ -21,8 +21,9 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QPointer>
+#include <QDebug>
 
-#include "../mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.h"
+#include "manualmerge/mergecontactsdialog.h"
 
 MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -61,10 +62,8 @@ PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::re
 
 void MergeContactsPluginInterface::exec()
 {
-    if (mListItems.isEmpty())
-        return;
-    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg = new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
-    dlg->searchPotentialDuplicateContacts(mListItems);
+    QPointer<KABMergeContacts::MergeContactsDialog> dlg = new KABMergeContacts::MergeContactsDialog(parentWidget());
+    dlg->setContacts(mListItems);
     dlg->exec();
     delete dlg;
 }

@@ -22,6 +22,7 @@
 #include <AkonadiCore/Item>
 #include <KConfigGroup>
 #include "job/mergecontacts.h"
+#include "kaddressbookmergelib_export.h"
 class QDialogButtonBox;
 class QStackedWidget;
 
@@ -31,7 +32,7 @@ class MergeContactWidget;
 class MergeContactErrorLabel;
 class MergeContactSelectInformationScrollArea;
 class MergeContactInfoWidget;
-class MergeContactsDialog : public QDialog
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactsDialog : public QDialog
 {
     Q_OBJECT
 public:
