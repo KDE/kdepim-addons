@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Standards Header Style", 
+        "Name[gl]": "Estilo de cabeceira estándar", 
         "Name[nl]": "Stijl met standaard headers", 
         "Name[pt]": "Estilo de Cabeçalho-Padrão", 
         "Name[pt_BR]": "Estilo de cabeçalho Padrão", 

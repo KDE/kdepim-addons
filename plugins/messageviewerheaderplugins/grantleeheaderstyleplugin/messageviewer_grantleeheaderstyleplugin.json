@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Grantlee Header Style", 
+        "Name[gl]": "Estilo de cabeceira de Grantlee", 
         "Name[nl]": "Stijl met Grantlee headers", 
         "Name[pt]": "Estilo de Cabeçalho do Grantlee", 
         "Name[pt_BR]": "Estilo de cabeçalho Grantlee", 

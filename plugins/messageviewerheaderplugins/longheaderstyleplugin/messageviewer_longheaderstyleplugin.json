@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Long Header Style", 
+        "Name[gl]": "Estilo de cabeceira longa", 
         "Name[nl]": "Stijl met lange headers", 
         "Name[pt]": "Estilo de Cabeçalho Longo", 
         "Name[pt_BR]": "Estilo de cabeçalho Extenso", 

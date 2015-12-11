@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Ur1Ca", 
+        "Name[gl]": "Ur1Ca", 
+        "Name[nl]": "Ur1Ca", 
+        "Name[pt]": "Ur1Ca", 
+        "Name[sv]": "Ur1Ca", 
+        "Name[uk]": "Ur1Ca", 
+        "Name[x-test]": "xxUr1Caxx", 
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
         ], 

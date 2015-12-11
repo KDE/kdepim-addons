@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Custom Header Style", 
+        "Name[gl]": "Estilo de cabeceira personalizada", 
         "Name[nl]": "Stijl met aangepast aantal headers", 
         "Name[pt]": "Estilo de Cabeçalho Personalizado", 
         "Name[pt_BR]": "Estilo de cabeçalho Personalizado", 

@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Antivirus", 
+        "Name[gl]": "Antivirus", 
+        "Name[nl]": "Antivirus", 
+        "Name[pt]": "Anti-Vírus", 
+        "Name[sv]": "Antivirus", 
+        "Name[uk]": "Антивірус", 
+        "Name[x-test]": "xxAntivirusxx", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 

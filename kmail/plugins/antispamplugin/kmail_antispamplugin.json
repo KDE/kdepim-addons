@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Antispam", 
+        "Name[gl]": "Anti correo lixo", 
+        "Name[nl]": "Antispam", 
+        "Name[pt]": "Anti-Lixo Electrónico", 
+        "Name[sv]": "Antiskräppost", 
+        "Name[uk]": "Антиспам", 
+        "Name[x-test]": "xxAntispamxx", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 

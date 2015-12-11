@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Brief Header Style", 
+        "Name[gl]": "Estilo de cabeceira resumida", 
         "Name[nl]": "Stijl met gering aantal headers", 
         "Name[pt]": "Estilo de Cabeçalho Resumido", 
         "Name[pt_BR]": "Estilo de cabeçalho Reduzido", 

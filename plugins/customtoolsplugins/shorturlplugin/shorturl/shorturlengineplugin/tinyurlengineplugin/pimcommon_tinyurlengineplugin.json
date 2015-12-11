@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "TinyUrl", 
+        "Name[gl]": "TinyUrl", 
+        "Name[nl]": "TinyUrl", 
+        "Name[pt]": "TinyUrl", 
+        "Name[sv]": "TinyUrl", 
+        "Name[uk]": "TinyUrl", 
+        "Name[x-test]": "xxTinyUrlxx", 
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
         ], 

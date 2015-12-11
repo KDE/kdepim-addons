@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "to.ly", 
+        "Name[gl]": "to.ly", 
+        "Name[nl]": "to.ly", 
+        "Name[pt]": "to.ly", 
+        "Name[sv]": "to.ly", 
+        "Name[uk]": "to.ly", 
+        "Name[x-test]": "xxto.lyxx", 
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
         ], 

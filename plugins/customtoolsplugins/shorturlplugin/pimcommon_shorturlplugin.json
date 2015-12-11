@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Shorturl", 
+        "Name[gl]": "Shorturl", 
         "Name[nl]": "Shorturl", 
         "Name[pt]": "URL Curto", 
         "Name[pt_BR]": "URL curta", 
