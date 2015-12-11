@@ -35,6 +35,9 @@ public:
 
 private Q_SLOTS:
     void slotActivated();
+
+private:
+    Akonadi::Item::List mListItems;
 };
 
 #endif // SEARCHDUPLICATESPLUGININTERFACE_H

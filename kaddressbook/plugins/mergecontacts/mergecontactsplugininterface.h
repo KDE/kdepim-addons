@@ -34,7 +34,9 @@ public:
     PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotActivated();    
+    void slotActivated();
+private:
+    Akonadi::Item::List mListItems;
 };
 
 #endif // MERGECONTACTSPLUGININTERFACE_H

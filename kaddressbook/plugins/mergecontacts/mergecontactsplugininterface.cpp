@@ -20,6 +20,9 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPointer>
+
+#include "../mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.h"
 
 MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -34,14 +37,11 @@ MergeContactsPluginInterface::~MergeContactsPluginInterface()
 
 void MergeContactsPluginInterface::createAction(KActionCollection *ac)
 {
-    //TODO
-    /*
-    QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
-    ac->addAction(QStringLiteral("antiSpamWizard"), action);
+    QAction *action = ac->addAction(QStringLiteral("merge_contacts"));
+    action->setText(i18n("Merge Contacts..."));
     connect(action, &QAction::triggered, this, &MergeContactsPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
-    */
 }
 
 void MergeContactsPluginInterface::slotActivated()
@@ -51,7 +51,7 @@ void MergeContactsPluginInterface::slotActivated()
 
 void MergeContactsPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 {
-    //TODO
+    mListItems = items;
 }
 
 PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::requires() const
@@ -61,5 +61,10 @@ PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::re
 
 void MergeContactsPluginInterface::exec()
 {
-    //TODO
+    if (mListItems.isEmpty())
+        return;
+    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg = new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
+    dlg->searchPotentialDuplicateContacts(mListItems);
+    dlg->exec();
+    delete dlg;
 }

@@ -20,6 +20,9 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPointer>
+
+#include "../mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.h"
 
 SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -34,14 +37,11 @@ SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface()
 
 void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
 {
-    //TODO
-    /*
-    QAction *action = new QAction(i18n("&Anti-Spam Wizard..."), this);
-    ac->addAction(QStringLiteral("antiSpamWizard"), action);
+    QAction *action = ac->addAction(QStringLiteral("search_duplicate_contacts"));
+    action->setText(i18n("Search Duplicate Contacts..."));
     connect(action, &QAction::triggered, this, &SearchDuplicatesPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
-    */
 }
 
 void SearchDuplicatesPluginInterface::slotActivated()
@@ -51,12 +51,17 @@ void SearchDuplicatesPluginInterface::slotActivated()
 
 void SearchDuplicatesPluginInterface::exec()
 {
-    //TODO
+    if (mListItems.isEmpty())
+        return;
+    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg = new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
+    dlg->searchPotentialDuplicateContacts(mListItems);
+    dlg->exec();
+    delete dlg;
 }
 
 void SearchDuplicatesPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 {
-    //TODO
+    mListItems = items;
 }
 
 PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requires() const
