@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kmail_plugins\")
 add_subdirectory(antispamplugin)
 add_subdirectory(antivirusplugin)
 add_subdirectory(common/avscripts)
