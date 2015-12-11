@@ -20,9 +20,11 @@ set(kaddressbookmergelibprivate_SRCS
    widgets/mergecontactselectinformationscrollarea.cpp
    widgets/mergecontacterrorlabel.cpp
 )
+ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME log_kaddressbookmergelibprivate)
 
 add_library(kaddressbookmergelibprivate ${kaddressbookmergelibprivate_SRCS})
 generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergelib)
+
 
 target_link_libraries(kaddressbookmergelibprivate
 PRIVATE

@@ -22,7 +22,7 @@
 #include <KContacts/Address>
 #include <KContacts/Addressee>
 
-////#include "kaddressbook_debug.h"
+#include "kaddressbookmergelibprivate_debug.h"
 
 using namespace KABMergeContacts;
 
@@ -39,12 +39,12 @@ MergeContactsJob::~MergeContactsJob()
 bool MergeContactsJob::canStart()
 {
     if (!mCollection.isValid()) {
-        //qCDebug(KADDRESSBOOK_LOG) << " mCollection is not valid !";
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " mCollection is not valid !";
         return false;
     }
     if (mNewContact.isEmpty()) {
         if (mListItem.isEmpty()) {
-            //qCDebug(KADDRESSBOOK_LOG) << " list item is empty !";
+            qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " list item is empty !";
             return false;
         }
     }
@@ -106,7 +106,7 @@ void MergeContactsJob::createMergedContact(const KContacts::Addressee &addressee
 void MergeContactsJob::slotCreateMergedContactFinished(KJob *job)
 {
     if (job->error()) {
-        //qCDebug(KADDRESSBOOK_LOG) << job->errorString();
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << job->errorString();
         Q_EMIT finished(mCreatedContact);
         deleteLater();
         return;
@@ -118,14 +118,14 @@ void MergeContactsJob::slotCreateMergedContactFinished(KJob *job)
         Akonadi::ItemDeleteJob *deleteJob = new Akonadi::ItemDeleteJob(mListItem, this);
         connect(deleteJob, &Akonadi::ItemDeleteJob::result, this, &MergeContactsJob::slotDeleteContactsFinished);
     } else {
-        //qCDebug(KADDRESSBOOK_LOG) << " mListITem is empty. We can't delete it";
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " mListITem is empty. We can't delete it";
     }
 }
 
 void MergeContactsJob::slotDeleteContactsFinished(KJob *job)
 {
     if (job->error()) {
-        //qCDebug(KADDRESSBOOK_LOG) << job->errorString();
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << job->errorString();
     }
     Q_EMIT finished(mCreatedContact);
     deleteLater();

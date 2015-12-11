@@ -13,7 +13,7 @@ macro( kaddressbook_merge _source _additional _additionallib)
   target_link_libraries( ${_name} kaddressbookmergelibprivate Qt5::Test  KF5::AkonadiCore KF5::Contacts ${_additionallib})
 endmacro()
 
-kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp" "")
+kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
 
 set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)

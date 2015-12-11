@@ -16,6 +16,8 @@
 */
 
 #include "mergecontacts.h"
+#include "kaddressbookmergelibprivate_debug.h"
+
 using namespace KABMergeContacts;
 using namespace KContacts;
 MergeContacts::MergeContacts(const Akonadi::Item::List &items)
@@ -340,7 +342,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
             checkCustomValue(address, QStringLiteral("X-Anniversary"), newContact, result, Anniversary);
         }
     }
-    //qCDebug(KADDRESSBOOK_LOG) << " result " << result;
+    qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " result " << result;
     return result;
 }
 
