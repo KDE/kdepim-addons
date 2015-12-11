@@ -51,8 +51,6 @@ void SearchDuplicatesPluginInterface::slotActivated()
 
 void SearchDuplicatesPluginInterface::exec()
 {
-    if (mListItems.isEmpty())
-        return;
     QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg = new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
     dlg->searchPotentialDuplicateContacts(mListItems);
     dlg->exec();
