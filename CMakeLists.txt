@@ -96,4 +96,5 @@ add_subdirectory(kmail)
 add_subdirectory(kaddressbook)
 add_subdirectory(grantleefilters)
 
+install( FILES kdepim-addons.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
