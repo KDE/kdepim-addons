@@ -49,6 +49,16 @@ void MergeContactsPluginInterface::slotActivated()
     Q_EMIT emitPluginActivated(this);
 }
 
+void MergeContactsPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
+{
+    //TODO
+}
+
+PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::requires() const
+{
+    return PimCommon::GenericPluginInterface::CurrentItems;
+}
+
 void MergeContactsPluginInterface::exec()
 {
     //TODO

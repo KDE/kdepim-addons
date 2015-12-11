@@ -53,3 +53,13 @@ void SearchDuplicatesPluginInterface::exec()
 {
     //TODO
 }
+
+void SearchDuplicatesPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
+{
+    //TODO
+}
+
+PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requires() const
+{
+    return PimCommon::GenericPluginInterface::CurrentItems;
+}

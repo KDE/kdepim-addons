@@ -30,9 +30,11 @@ public:
 
     void exec() Q_DECL_OVERRIDE;
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
+    void setCurrentItems(const Akonadi::Item::List &items) Q_DECL_OVERRIDE;
+    PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotActivated();
+    void slotActivated();    
 };
 
 #endif // MERGECONTACTSPLUGININTERFACE_H
