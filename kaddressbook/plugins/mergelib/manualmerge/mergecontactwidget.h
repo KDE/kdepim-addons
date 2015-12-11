@@ -22,7 +22,7 @@
 #include <AkonadiCore/Item>
 #include <QListWidgetItem>
 #include "job/mergecontacts.h"
-#include "kaddressbook_export.h"
+#include "kaddressbookmergelib_export.h"
 
 class QPushButton;
 namespace Akonadi
@@ -34,7 +34,7 @@ namespace KABMergeContacts
 class MergeContactWidgetList;
 class MergeContactLoseInformationWarning;
 class MergeContactInfoWidget;
-class KADDRESSBOOK_EXPORT MergeContactWidget : public QWidget
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactWidget : public QWidget
 {
     Q_OBJECT
 public:

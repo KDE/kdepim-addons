@@ -16,8 +16,8 @@
 */
 
 #include "mergecontactselectlistwidgettest.h"
-#include "merge/job/mergecontacts.h"
-#include "merge/widgets/mergecontactselectlistwidget.h"
+#include "job/mergecontacts.h"
+#include "widgets/mergecontactselectlistwidget.h"
 #include <QListWidget>
 #include <qlabel.h>
 #include <qtest.h>

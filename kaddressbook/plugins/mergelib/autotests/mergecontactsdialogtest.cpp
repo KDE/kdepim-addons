@@ -16,7 +16,7 @@
 */
 
 #include "mergecontactsdialogtest.h"
-#include "merge/manualmerge/mergecontactsdialog.h"
+#include "manualmerge/mergecontactsdialog.h"
 
 #include <QStackedWidget>
 #include <qtest.h>

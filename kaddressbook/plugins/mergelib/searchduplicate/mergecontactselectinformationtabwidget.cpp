@@ -16,7 +16,7 @@
 */
 
 #include "mergecontactselectinformationtabwidget.h"
-#include "merge/widgets/mergecontactselectinformationscrollarea.h"
+#include "widgets/mergecontactselectinformationscrollarea.h"
 #include <QTabBar>
 #include <KLocalizedString>
 

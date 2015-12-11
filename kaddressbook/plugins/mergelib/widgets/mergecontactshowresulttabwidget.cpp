@@ -17,10 +17,10 @@
 
 #include "mergecontactshowresulttabwidget.h"
 #include <KContacts/Addressee>
-#include "merge/widgets/mergecontactinfowidget.h"
+#include "widgets/mergecontactinfowidget.h"
 
 #include <QTabBar>
-#include "kaddressbook_debug.h"
+//#include "kaddressbook_debug.h"
 
 using namespace KABMergeContacts;
 
@@ -64,7 +64,7 @@ void MergeContactShowResultTabWidget::addMergedContact(const Akonadi::Item &item
             updateTabWidget();
         }
     } else {
-        qCDebug(KADDRESSBOOK_LOG) << " don't have address";
+        //qCDebug(KADDRESSBOOK_LOG) << " don't have address";
     }
 }
 

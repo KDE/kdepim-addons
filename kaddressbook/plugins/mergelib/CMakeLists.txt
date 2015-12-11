@@ -26,7 +26,7 @@ generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergeli
 
 target_link_libraries(kaddressbookmergelibprivate
 PRIVATE
-    Qt5::Network KF5::I18n KF5::KaddressbookGrantlee KF5::Contacts KF5::AkonadiContact KF5::ConfigCore
+    Qt5::Network KF5::I18n KF5::KaddressbookGrantlee KF5::Contacts KF5::AkonadiContact KF5::ConfigCore KF5::WidgetsAddons KF5::AkonadiWidgets
 )
 
 set_target_properties(kaddressbookmergelibprivate

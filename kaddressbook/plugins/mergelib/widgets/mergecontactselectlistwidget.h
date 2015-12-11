@@ -19,8 +19,8 @@
 #define MERGECONTACTSELECTLISTWIDGET_H
 
 #include <AkonadiCore/Item>
-#include "kaddressbook_export.h"
-#include "merge/job/mergecontacts.h"
+#include "kaddressbookmergelib_export.h"
+#include "job/mergecontacts.h"
 #include <QWidget>
 #include <QIcon>
 class QLabel;
@@ -31,7 +31,7 @@ class Addressee;
 }
 namespace KABMergeContacts
 {
-class KADDRESSBOOK_EXPORT MergeContactSelectListWidget : public QWidget
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectListWidget : public QWidget
 {
     Q_OBJECT
 public:

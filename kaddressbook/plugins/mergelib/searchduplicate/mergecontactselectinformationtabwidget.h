@@ -20,12 +20,12 @@
 
 #include <QTabWidget>
 #include <AkonadiCore/Item>
-#include "kaddressbook_export.h"
+#include "kaddressbookmergelib_export.h"
 #include "searchduplicateresultwidget.h"
 
 namespace KABMergeContacts
 {
-class KADDRESSBOOK_EXPORT MergeContactSelectInformationTabWidget : public QTabWidget
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationTabWidget : public QTabWidget
 {
     Q_OBJECT
 public:

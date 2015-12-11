@@ -17,9 +17,9 @@
 
 #include "mergecontactselectinformationscrollarea.h"
 #include "mergecontactselectinformationwidget.h"
-#include "merge/job/mergecontactsjob.h"
-#include "merge/widgets/mergecontactinfowidget.h"
-#include "kaddressbook_debug.h"
+#include "job/mergecontactsjob.h"
+#include "widgets/mergecontactinfowidget.h"
+//#include "kaddressbook_debug.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QScrollArea>
@@ -87,11 +87,11 @@ void MergeContactSelectInformationScrollArea::setContacts(MergeContacts::Conflic
 void MergeContactSelectInformationScrollArea::slotMergeContacts()
 {
     if (!mCollection.isValid()) {
-        qCDebug(KADDRESSBOOK_LOG) << " Invalid colletion";
+        //qCDebug(KADDRESSBOOK_LOG) << " Invalid colletion";
         return;
     }
     if (mListItem.isEmpty()) {
-        qCDebug(KADDRESSBOOK_LOG) << " item list is empty";
+        //qCDebug(KADDRESSBOOK_LOG) << " item list is empty";
         return;
     }
     const bool result = mSelectInformationWidget->verifySelectedInfo();
@@ -117,7 +117,7 @@ void MergeContactSelectInformationScrollArea::mergeContact(const KContacts::Addr
         connect(job, &MergeContactsJob::finished, this, &MergeContactSelectInformationScrollArea::slotMergeDone);
         job->start();
     } else {
-        qCDebug(KADDRESSBOOK_LOG) << " Address is empty";
+        //qCDebug(KADDRESSBOOK_LOG) << " Address is empty";
     }
 }
 

@@ -22,7 +22,7 @@
 #include <AkonadiCore/Item>
 
 #include "searchduplicateresultwidget.h"
-#include "kaddressbook_export.h"
+#include "kaddressbookmergelib_export.h"
 class QStackedWidget;
 namespace KABMergeContacts
 {
@@ -31,7 +31,7 @@ class MergeContactShowResultTabWidget;
 class MergeContactSelectInformationTabWidget;
 class MergeContactErrorLabel;
 
-class KADDRESSBOOK_EXPORT SearchAndMergeContactDuplicateContactDialog : public QDialog
+class KADDRESSBOOKMERGELIB_EXPORT SearchAndMergeContactDuplicateContactDialog : public QDialog
 {
     Q_OBJECT
 public:

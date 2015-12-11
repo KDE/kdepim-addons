@@ -19,10 +19,10 @@
 #define MERGECONTACTLOSEINFORMATIONWARNING_H
 
 #include <KMessageWidget>
-#include "kaddressbook_export.h"
+#include "kaddressbookmergelib_export.h"
 namespace KABMergeContacts
 {
-class KADDRESSBOOK_EXPORT MergeContactLoseInformationWarning : public KMessageWidget
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactLoseInformationWarning : public KMessageWidget
 {
     Q_OBJECT
 public:

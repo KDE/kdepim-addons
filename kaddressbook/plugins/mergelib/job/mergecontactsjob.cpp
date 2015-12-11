@@ -22,7 +22,7 @@
 #include <KContacts/Address>
 #include <KContacts/Addressee>
 
-//#include "kaddressbook_debug.h"
+////#include "kaddressbook_debug.h"
 
 using namespace KABMergeContacts;
 

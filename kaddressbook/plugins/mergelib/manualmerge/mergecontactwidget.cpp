@@ -28,14 +28,14 @@
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLabel>
-#include <kaddressbook/merge/widgets/mergecontactinfowidget.h>
-#include <kaddressbook/merge/widgets/mergecontactloseinformationwarning.h>
-#include <kaddressbook/merge/job/mergecontacts.h>
-#include <kaddressbook/merge/job/mergecontactsjob.h>
+#include <widgets/mergecontactinfowidget.h>
+#include <widgets/mergecontactloseinformationwarning.h>
+#include <job/mergecontacts.h>
+#include <job/mergecontactsjob.h>
 
 namespace KABMergeContacts
 {
-KADDRESSBOOK_EXPORT QAbstractItemModel *_k_mergeStubModel = Q_NULLPTR;
+KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel = Q_NULLPTR;
 }
 
 using namespace KABMergeContacts;

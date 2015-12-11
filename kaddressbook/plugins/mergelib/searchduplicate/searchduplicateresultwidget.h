@@ -20,8 +20,8 @@
 
 #include <QWidget>
 #include <AkonadiCore/Item>
-#include "merge/job/mergecontacts.h"
-#include "kaddressbook_export.h"
+#include "job/mergecontacts.h"
+#include "kaddressbookmergelib_export.h"
 class QPushButton;
 namespace KAddressBookGrantlee
 {
@@ -41,7 +41,7 @@ struct MergeConflictResult {
     MergeContacts::ConflictInformations conflictInformation;
 };
 
-class KADDRESSBOOK_EXPORT SearchDuplicateResultWidget : public QWidget
+class KADDRESSBOOKMERGELIB_EXPORT SearchDuplicateResultWidget : public QWidget
 {
     Q_OBJECT
 public:

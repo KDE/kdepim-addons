@@ -20,7 +20,7 @@
 
 #include <QTreeWidget>
 #include <AkonadiCore/Item>
-#include "kaddressbook_export.h"
+#include "kaddressbookmergelib_export.h"
 namespace KContacts
 {
 class Addressee;
@@ -28,7 +28,7 @@ class Addressee;
 namespace KABMergeContacts
 {
 
-class KADDRESSBOOK_EXPORT ResultDuplicateTreeWidgetItem : public QTreeWidgetItem
+class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidgetItem : public QTreeWidgetItem
 {
 public:
     explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = Q_NULLPTR);
@@ -43,7 +43,7 @@ private:
     Akonadi::Item mItem;
 };
 
-class KADDRESSBOOK_EXPORT ResultDuplicateTreeWidget : public QTreeWidget
+class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidget : public QTreeWidget
 {
     Q_OBJECT
 public:

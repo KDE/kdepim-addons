@@ -16,9 +16,9 @@
 */
 
 #include "searchduplicateresultwidget.h"
-#include "merge/widgets/mergecontactloseinformationwarning.h"
-#include "merge/job/mergecontactsjob.h"
-#include "merge/job/mergecontacts.h"
+#include "widgets/mergecontactloseinformationwarning.h"
+#include "job/mergecontactsjob.h"
+#include "job/mergecontacts.h"
 #include "resultduplicatetreewidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -31,7 +31,7 @@
 
 namespace KABMergeContacts
 {
-KADDRESSBOOK_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = Q_NULLPTR;
+KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = Q_NULLPTR;
 }
 
 using namespace KABMergeContacts;

@@ -18,10 +18,10 @@
 #include "searchandmergecontactduplicatecontactdialog.h"
 
 #include "mergecontactselectinformationtabwidget.h"
-#include "merge/searchduplicate/searchduplicateresultwidget.h"
-#include "merge/widgets/mergecontactshowresulttabwidget.h"
-#include "merge/widgets/mergecontacterrorlabel.h"
-#include "merge/job/searchpotentialduplicatecontactjob.h"
+#include "searchduplicate/searchduplicateresultwidget.h"
+#include "widgets/mergecontactshowresulttabwidget.h"
+#include "widgets/mergecontacterrorlabel.h"
+#include "job/searchpotentialduplicatecontactjob.h"
 
 #include <KLocalizedString>
 #include <KSharedConfig>

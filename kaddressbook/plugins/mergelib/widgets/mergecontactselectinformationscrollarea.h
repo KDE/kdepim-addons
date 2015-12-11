@@ -19,14 +19,14 @@
 #define MERGECONTACTSELECTINFORMATIONSCROLLAREA_H
 
 #include <QWidget>
-#include "kaddressbook_export.h"
-#include "merge/job/mergecontacts.h"
+#include "kaddressbookmergelib_export.h"
+#include "job/mergecontacts.h"
 class QStackedWidget;
 namespace KABMergeContacts
 {
 class MergeContactSelectInformationWidget;
 class MergeContactInfoWidget;
-class KADDRESSBOOK_EXPORT MergeContactSelectInformationScrollArea : public QWidget
+class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationScrollArea : public QWidget
 {
     Q_OBJECT
 public:
