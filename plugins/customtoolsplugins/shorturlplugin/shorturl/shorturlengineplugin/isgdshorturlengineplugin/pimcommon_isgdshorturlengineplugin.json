@@ -1,9 +1,11 @@
 {
     "KPlugin": {
         "Name": "Is.gd", 
+        "Name[ca]": "Is.gd", 
         "Name[gl]": "Is.gd", 
         "Name[nl]": "Is.gd", 
         "Name[pt]": "Is.gd", 
+        "Name[sk]": "Is.gd", 
         "Name[sv]": "Is.gd", 
         "Name[uk]": "Is.gd", 
         "Name[x-test]": "xxIs.gdxx", 

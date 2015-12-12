@@ -1,10 +1,12 @@
 {
     "KPlugin": {
         "Name": "Enterprise Header Style", 
+        "Name[ca]": "Estil de capçalera corporativa", 
         "Name[gl]": "Estilo de cabeceira de empresa", 
         "Name[nl]": "Stijl met headers van de onderneming", 
         "Name[pt]": "Estilo de Cabeçalho Empresarial", 
         "Name[pt_BR]": "Estilo de cabeçalho Empresarial", 
+        "Name[sk]": "Podnikový štýl hlavičiek", 
         "Name[sv]": "Företagsrubrikstil", 
         "Name[uk]": "Корпоративний стиль заголовків", 
         "Name[x-test]": "xxEnterprise Header Stylexx", 

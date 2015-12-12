@@ -1,9 +1,11 @@
 {
     "KPlugin": {
         "Name": "TinyUrl", 
+        "Name[ca]": "TinyUrl", 
         "Name[gl]": "TinyUrl", 
         "Name[nl]": "TinyUrl", 
         "Name[pt]": "TinyUrl", 
+        "Name[sk]": "TinyUrl", 
         "Name[sv]": "TinyUrl", 
         "Name[uk]": "TinyUrl", 
         "Name[x-test]": "xxTinyUrlxx", 

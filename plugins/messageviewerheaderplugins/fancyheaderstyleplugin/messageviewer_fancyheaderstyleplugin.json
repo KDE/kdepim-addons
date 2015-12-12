@@ -1,10 +1,12 @@
 {
     "KPlugin": {
         "Name": "Fancy Header Style", 
+        "Name[ca]": "Estil de capçalera sofisticada", 
         "Name[gl]": "Estilo de cabeceira moderno", 
         "Name[nl]": "Stijl met elegante headers", 
         "Name[pt]": "Estilo de Cabeçalho Bonito", 
         "Name[pt_BR]": "Estilo de cabeçalho Bonito", 
+        "Name[sk]": "Ozdobný štýl hlavičiek", 
         "Name[sv]": "Snygg rubrikstil", 
         "Name[uk]": "Красивий стиль заголовків", 
         "Name[x-test]": "xxFancy Header Stylexx", 

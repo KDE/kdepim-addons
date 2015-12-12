@@ -1,6 +1,14 @@
 {
     "KPlugin": {
         "Name": "Merge Contacts", 
+        "Name[ca]": "Fusiona els contactes", 
+        "Name[gl]": "Fusionar os contactos", 
+        "Name[nl]": "Contactpersonen samenvoegen", 
+        "Name[pt]": "Reunião dos Contactos", 
+        "Name[sk]": "Zlúčiť kontakty", 
+        "Name[sv]": "Sammanfoga kontakter", 
+        "Name[uk]": "Об’єднання записів контактів", 
+        "Name[x-test]": "xxMerge Contactsxx", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

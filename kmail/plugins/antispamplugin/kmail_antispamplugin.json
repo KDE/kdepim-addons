@@ -1,9 +1,11 @@
 {
     "KPlugin": {
         "Name": "Antispam", 
+        "Name[ca]": "Contra el correu brossa", 
         "Name[gl]": "Anti correo lixo", 
         "Name[nl]": "Antispam", 
         "Name[pt]": "Anti-Lixo Electrónico", 
+        "Name[sk]": "Antispam", 
         "Name[sv]": "Antiskräppost", 
         "Name[uk]": "Антиспам", 
         "Name[x-test]": "xxAntispamxx", 

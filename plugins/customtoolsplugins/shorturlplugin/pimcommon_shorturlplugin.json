@@ -1,10 +1,12 @@
 {
     "KPlugin": {
         "Name": "Shorturl", 
+        "Name[ca]": "URL curt", 
         "Name[gl]": "Shorturl", 
         "Name[nl]": "Shorturl", 
         "Name[pt]": "URL Curto", 
         "Name[pt_BR]": "URL curta", 
+        "Name[sk]": "Shorturl", 
         "Name[sv]": "Kort webbadress", 
         "Name[uk]": "Скорочення адрес", 
         "Name[x-test]": "xxShorturlxx", 

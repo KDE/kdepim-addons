@@ -1,10 +1,12 @@
 {
     "KPlugin": {
         "Name": "All Header Style", 
+        "Name[ca]": "Tots els estils de capçalera", 
         "Name[gl]": "Estilo de cabeceira completa", 
         "Name[nl]": "Stijl met alle headers", 
         "Name[pt]": "Estilo de Cabeçalho Completo", 
         "Name[pt_BR]": "Estilo com todos os cabeçalhos", 
+        "Name[sk]": "Všetky štýly hlavičiek", 
         "Name[sv]": "Stil med alla rubriker", 
         "Name[uk]": "Стиль усіх заголовків", 
         "Name[x-test]": "xxAll Header Stylexx", 

@@ -1,10 +1,12 @@
 {
     "KPlugin": {
         "Name": "Brief Header Style", 
+        "Name[ca]": "Estil de capçalera breu", 
         "Name[gl]": "Estilo de cabeceira resumida", 
         "Name[nl]": "Stijl met gering aantal headers", 
         "Name[pt]": "Estilo de Cabeçalho Resumido", 
         "Name[pt_BR]": "Estilo de cabeçalho Reduzido", 
+        "Name[sk]": "Stručný štýl hlavičiek", 
         "Name[sv]": "Kortfattad rubrikstil", 
         "Name[uk]": "Короткий стиль заголовків", 
         "Name[x-test]": "xxBrief Header Stylexx", 

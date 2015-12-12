@@ -1,9 +1,11 @@
 {
     "KPlugin": {
         "Name": "Antivirus", 
+        "Name[ca]": "Contra els virus", 
         "Name[gl]": "Antivirus", 
         "Name[nl]": "Antivirus", 
         "Name[pt]": "Anti-Vírus", 
+        "Name[sk]": "Antivírus", 
         "Name[sv]": "Antivirus", 
         "Name[uk]": "Антивірус", 
         "Name[x-test]": "xxAntivirusxx", 
