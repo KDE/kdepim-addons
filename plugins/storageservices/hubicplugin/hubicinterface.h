@@ -18,7 +18,7 @@
 #ifndef HUBICINTERFACE_H
 #define HUBICINTERFACE_H
 
-#include <storageservice/storageserviceinterface.h>
+#include <pimcommon/storageserviceinterface.h>
 
 namespace PimCommon
 {

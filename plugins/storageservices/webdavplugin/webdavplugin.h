@@ -18,7 +18,7 @@
 #ifndef WEBDAVPLUGIN_H
 #define WEBDAVPLUGIN_H
 
-#include <storageservice/storageserviceplugin.h>
+#include <pimcommon/storageserviceplugin.h>
 
 #include <QVariant>
 

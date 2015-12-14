@@ -1,3 +1,4 @@
 add_subdirectory(customtoolsplugins)
 add_subdirectory(messageviewerplugins)
 add_subdirectory(messageviewerheaderplugins)
+add_subdirectory(storageservices)

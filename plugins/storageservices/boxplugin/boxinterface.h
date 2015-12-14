@@ -18,7 +18,7 @@
 #ifndef BOXINTERFACE_H
 #define BOXINTERFACE_H
 
-#include <storageservice/storageserviceinterface.h>
+#include <pimcommon/storageserviceinterface.h>
 
 namespace PimCommon
 {

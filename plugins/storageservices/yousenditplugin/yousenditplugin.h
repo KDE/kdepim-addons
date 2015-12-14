@@ -18,7 +18,7 @@
 #ifndef YOUSENDITPLUGIN_H
 #define YOUSENDITPLUGIN_H
 
-#include <storageservice/storageserviceplugin.h>
+#include <pimcommon/storageserviceplugin.h>
 
 #include <QVariant>
 

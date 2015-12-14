@@ -18,7 +18,7 @@
 #ifndef GDRIVEPLUGIN_H
 #define GDRIVEPLUGIN_H
 
-#include <storageservice/storageserviceplugin.h>
+#include <pimcommon/storageserviceplugin.h>
 
 #include <QVariant>
 

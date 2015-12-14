@@ -18,7 +18,7 @@
 #ifndef HUBICPLUGIN_H
 #define HUBICPLUGIN_H
 
-#include <storageservice/storageserviceplugin.h>
+#include <pimcommon/storageserviceplugin.h>
 
 #include <QVariant>
 

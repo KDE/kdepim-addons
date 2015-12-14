@@ -18,7 +18,7 @@
 #ifndef BOXPLUGIN_H
 #define BOXPLUGIN_H
 
-#include <storageservice/storageserviceplugin.h>
+#include <pimcommon/storageserviceplugin.h>
 
 #include <QVariant>
 

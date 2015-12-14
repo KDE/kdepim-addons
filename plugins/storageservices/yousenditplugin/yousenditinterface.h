@@ -18,7 +18,7 @@
 #ifndef YOUSENDITINTERFACE_H
 #define YOUSENDITINTERFACE_H
 
-#include <storageservice/storageserviceinterface.h>
+#include <pimcommon/storageserviceinterface.h>
 
 namespace PimCommon
 {

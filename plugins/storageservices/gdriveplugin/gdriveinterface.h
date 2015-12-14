@@ -18,7 +18,7 @@
 #ifndef GDRIVEINTERFACE_H
 #define GDRIVEINTERFACE_H
 
-#include <storageservice/storageserviceinterface.h>
+#include <pimcommon/storageserviceinterface.h>
 
 namespace PimCommon
 {

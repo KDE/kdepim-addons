@@ -18,7 +18,7 @@
 #ifndef DROPBOXINTERFACE_H
 #define DROPBOXINTERFACE_H
 
-#include <storageservice/storageserviceinterface.h>
+#include <pimcommon/storageserviceinterface.h>
 
 namespace PimCommon
 {
