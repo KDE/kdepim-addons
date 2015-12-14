@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Send Vcards", 
+        "ServiceTypes": [
+            "KAddressBook/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
