@@ -10,4 +10,3 @@ target_link_libraries(pimcommon_boxplugin
 )
 
 install(TARGETS pimcommon_boxplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_boxplugin pimcommon_boxplugin.desktop)

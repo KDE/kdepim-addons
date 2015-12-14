@@ -10,4 +10,3 @@ target_link_libraries(pimcommon_yousenditplugin
 )
 
 install(TARGETS pimcommon_yousenditplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_yousenditplugin pimcommon_yousenditplugin.desktop)

@@ -10,4 +10,3 @@ target_link_libraries(pimcommon_gdriveplugin
 )
 
 install(TARGETS pimcommon_gdriveplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_gdriveplugin pimcommon_gdriveplugin.desktop)

@@ -10,4 +10,3 @@ target_link_libraries(pimcommon_hubicplugin
 )
 
 install(TARGETS pimcommon_hubicplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_hubicplugin pimcommon_hubicplugin.desktop)

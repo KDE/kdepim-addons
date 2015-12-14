@@ -1,0 +1,15 @@
+{
+    "KPlugin": {
+        "Name": "Hubic",
+        "Name[ca]": "Hubic",
+        "Name[nl]": "Hubic",
+        "Name[pt]": "Hubic",
+        "Name[pt_BR]": "Hubic",
+        "Name[sv]": "Hubic",
+        "Name[uk]": "Hubic",
+        "Name[x-test]": "xxHubicxx",
+        "ServiceTypes": [
+            "PimCommonStorageService/Plugin"
+        ]
+    }
+}

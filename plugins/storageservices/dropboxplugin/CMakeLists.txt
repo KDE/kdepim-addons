@@ -10,4 +10,3 @@ target_link_libraries(pimcommon_dropboxplugin
 )
 
 install(TARGETS pimcommon_dropboxplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
-kcoreaddons_desktop_to_json(pimcommon_dropboxplugin pimcommon_dropboxplugin.desktop)
