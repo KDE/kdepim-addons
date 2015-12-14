@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Shorturl", 
+        "Name[ca@valencia]": "URL curt", 
         "Name[ca]": "URL curt", 
         "Name[gl]": "Shorturl", 
         "Name[nl]": "Shorturl", 

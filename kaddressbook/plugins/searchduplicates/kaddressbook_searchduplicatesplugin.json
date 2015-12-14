@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Search Duplicate Contacts", 
+        "Name[ca@valencia]": "Cerca els contactes duplicats", 
         "Name[ca]": "Cerca els contactes duplicats", 
         "Name[gl]": "Buscar contactos duplicados", 
         "Name[nl]": "Naar dubbele contactpersonen zoeken", 

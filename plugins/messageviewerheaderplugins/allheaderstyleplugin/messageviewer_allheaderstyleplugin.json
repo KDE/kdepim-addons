@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "All Header Style", 
+        "Name[ca@valencia]": "Tots els estils de capçalera", 
         "Name[ca]": "Tots els estils de capçalera", 
         "Name[gl]": "Estilo de cabeceira completa", 
         "Name[nl]": "Stijl met alle headers", 

@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Brief Header Style", 
+        "Name[ca@valencia]": "Estil de capçalera breu", 
         "Name[ca]": "Estil de capçalera breu", 
         "Name[gl]": "Estilo de cabeceira resumida", 
         "Name[nl]": "Stijl met gering aantal headers", 

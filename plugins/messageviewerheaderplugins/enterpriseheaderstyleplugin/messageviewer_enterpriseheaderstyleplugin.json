@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Enterprise Header Style", 
+        "Name[ca@valencia]": "Estil de capçalera corporativa", 
         "Name[ca]": "Estil de capçalera corporativa", 
         "Name[gl]": "Estilo de cabeceira de empresa", 
         "Name[nl]": "Stijl met headers van de onderneming", 

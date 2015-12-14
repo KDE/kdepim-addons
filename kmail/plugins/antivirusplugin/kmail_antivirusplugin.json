@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Antivirus", 
+        "Name[ca@valencia]": "Contra els virus", 
         "Name[ca]": "Contra els virus", 
         "Name[gl]": "Antivirus", 
         "Name[nl]": "Antivirus", 

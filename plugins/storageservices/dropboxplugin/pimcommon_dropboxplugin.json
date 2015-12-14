@@ -1,13 +1,6 @@
 {
     "KPlugin": {
-        "Name": "DropBox",
-        "Name[ca]": "DropBox",
-        "Name[nl]": "DropBox",
-        "Name[pt]": "DropBox",
-        "Name[pt_BR]": "DropBox",
-        "Name[sv]": "Dropbox",
-        "Name[uk]": "DropBox",
-        "Name[x-test]": "xxDropBoxxx",
+        "Name": "DropBox", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

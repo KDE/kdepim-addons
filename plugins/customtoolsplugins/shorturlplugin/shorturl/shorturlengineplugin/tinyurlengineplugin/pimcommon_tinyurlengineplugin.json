@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "TinyUrl", 
+        "Name[ca@valencia]": "TinyUrl", 
         "Name[ca]": "TinyUrl", 
         "Name[gl]": "TinyUrl", 
         "Name[nl]": "TinyUrl", 
