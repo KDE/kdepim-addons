@@ -85,6 +85,8 @@ find_package(KF5EventViews ${EVENTVIEW_LIB_VERSION} CONFIG REQUIRED)
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 
+# Extra package
+find_package(KF5GAPI "4.72.0" CONFIG)
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
    add_subdirectory(examples)
