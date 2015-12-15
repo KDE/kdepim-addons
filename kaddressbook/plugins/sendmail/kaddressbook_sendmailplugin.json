@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Send Mail", 
+        "ServiceTypes": [
+            "KAddressBook/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
