@@ -36,6 +36,7 @@ public:
 private Q_SLOTS:
     void slotActivated();
     void slotSendMailError(const QString &error);
+    void slotSendMails(const QStringList &emails);
 
 private:
     Akonadi::Item::List mListItems;

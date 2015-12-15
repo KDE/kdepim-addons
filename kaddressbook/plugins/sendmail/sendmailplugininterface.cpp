@@ -15,6 +15,7 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#include "mailsenderjob.h"
 #include "sendmailplugininterface.h"
 
 #include <KMessageBox>
@@ -23,6 +24,7 @@
 #include <KIconLoader>
 #include <QAction>
 #include <QDebug>
+#include <QDesktopServices>
 
 SendMailPluginInterface::SendMailPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -37,14 +39,12 @@ SendMailPluginInterface::~SendMailPluginInterface()
 
 void SendMailPluginInterface::createAction(KActionCollection *ac)
 {
-    /*
-    QAction *action = ac->addAction(QStringLiteral("send_vcards"));
-    action->setText(i18n("Send vCards..."));
+    QAction *action = ac->addAction(QStringLiteral("send_mail"));
+    action->setText(i18n("Send an email..."));
     action->setIcon(KIconLoader::global()->loadIcon(QStringLiteral("mail-message-new"), KIconLoader::Small));
     connect(action, &QAction::triggered, this, &SendMailPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Action);
     setActionType(type);
-    */
 }
 
 void SendMailPluginInterface::slotActivated()
@@ -64,11 +64,27 @@ PimCommon::GenericPluginInterface::RequireTypes SendMailPluginInterface::require
 
 void SendMailPluginInterface::exec()
 {
-    if (!mListItems.isEmpty()) {
+    if (mListItems.isEmpty()) {
+        KMessageBox::sorry(parentWidget(), i18n("You have not selected any contacts."));
+    } else {
+        KABMailSender::MailSenderJob *mailSender = new KABMailSender::MailSenderJob(mListItems, this);
+        connect(mailSender, &KABMailSender::MailSenderJob::sendMails, this, &SendMailPluginInterface::slotSendMails);
+        connect(mailSender, &KABMailSender::MailSenderJob::sendMailsError, this, &SendMailPluginInterface::slotSendMailError);
+        mailSender->start();
     }
 }
 
 void SendMailPluginInterface::slotSendMailError(const QString &error)
 {
     KMessageBox::error(parentWidget(), error);
+}
+
+void SendMailPluginInterface::slotSendMails(const QStringList &emails)
+{
+    if (!emails.isEmpty()) {
+        QUrl url;
+        url.setScheme(QStringLiteral("mailto"));
+        url.setPath(emails.join(QStringLiteral(";")));
+        QDesktopServices::openUrl(url);
+    }
 }
