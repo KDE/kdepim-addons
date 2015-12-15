@@ -36,6 +36,11 @@ SendVcardsPluginInterface::~SendVcardsPluginInterface()
 
 }
 
+bool SendVcardsPluginInterface::hasPopupMenuSupport() const
+{
+    return true;
+}
+
 void SendVcardsPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("send_vcards"));
