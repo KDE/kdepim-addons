@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "YouSendIt", 
+        "Name[ca]": "YouSendIt", 
+        "Name[nl]": "YouSendIt", 
+        "Name[pt]": "YouSendIt", 
+        "Name[sv]": "YouSendIt", 
+        "Name[uk]": "YouSendIt", 
+        "Name[x-test]": "xxYouSendItxx", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

@@ -2,6 +2,7 @@
 Name=mailreader
 Name[ca]=mailreader
 Name[ca@valencia]=mailreader
+Name[es]=mailreader
 Name[gl]=lector de correo
 Name[nl]=e-maillezer
 Name[pl]=czytnikpoczty
@@ -18,6 +19,7 @@ X-DocPath=mailreader/index.html
 GenericName=A simple Akonadi-based Mail Application
 GenericName[ca]=Una senzilla aplicació de correu basada en Akonadi
 GenericName[ca@valencia]=Una senzilla aplicació de correu basada en Akonadi
+GenericName[es]=Una aplicación de correo sencilla basada en Akonadi
 GenericName[gl]=Un programa de correo simple baseado en Akonadi.
 GenericName[nl]=Een eenvoudige op Akonadi gebaseerde e-mailtoepassing
 GenericName[pl]=Prosty program pocztowy oparty na Akonadi

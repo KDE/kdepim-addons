@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Webdav", 
+        "Name[ca]": "Webdav", 
+        "Name[nl]": "Webdav", 
+        "Name[pt]": "WebDAV", 
+        "Name[sv]": "WebDAV", 
+        "Name[uk]": "Webdav", 
+        "Name[x-test]": "xxWebdavxx", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]
