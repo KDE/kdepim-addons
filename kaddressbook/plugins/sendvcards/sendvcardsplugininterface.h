@@ -35,6 +35,8 @@ public:
 
 private Q_SLOTS:
     void slotActivated();
+    void slotSendVcardsError(const QString &error);
+
 private:
     Akonadi::Item::List mListItems;
 };

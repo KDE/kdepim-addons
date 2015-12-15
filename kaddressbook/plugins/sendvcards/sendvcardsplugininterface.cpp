@@ -15,8 +15,10 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
+#include "sendvcardsjob.h"
 #include "sendvcardsplugininterface.h"
 
+#include <KMessageBox>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <KIconLoader>
@@ -40,7 +42,7 @@ void SendVcardsPluginInterface::createAction(KActionCollection *ac)
     action->setText(i18n("Send vCards..."));
     action->setIcon(KIconLoader::global()->loadIcon(QStringLiteral("mail-message-new"), KIconLoader::Small));
     connect(action, &QAction::triggered, this, &SendVcardsPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    PimCommon::ActionType type(action, PimCommon::ActionType::Action);
     setActionType(type);
 }
 
@@ -61,5 +63,14 @@ PimCommon::GenericPluginInterface::RequireTypes SendVcardsPluginInterface::requi
 
 void SendVcardsPluginInterface::exec()
 {
-    //TODO
+    if (!mListItems.isEmpty()) {
+        KABSendVCards::SendVcardsJob *sendVcards = new KABSendVCards::SendVcardsJob(mListItems, this);
+        connect(sendVcards, &KABSendVCards::SendVcardsJob::sendVCardsError, this, &SendVcardsPluginInterface::slotSendVcardsError);
+        sendVcards->start();
+    }
+}
+
+void SendVcardsPluginInterface::slotSendVcardsError(const QString &error)
+{
+    KMessageBox::error(parentWidget(), error);
 }
