@@ -12,8 +12,7 @@ target_link_libraries(kaddressbook_sendvcardsplugin
 
 install(TARGETS kaddressbook_sendvcardsplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kaddressbook)
 
-MESSAGE(STATUS "reactivate autotests")
 if (BUILD_TESTING)
-   #add_subdirectory(autotests)
+   add_subdirectory(autotests)
 endif()
 
