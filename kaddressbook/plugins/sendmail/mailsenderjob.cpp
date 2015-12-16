@@ -20,6 +20,7 @@
 */
 
 #include "mailsenderjob.h"
+#include "kaddressbook_sendmailplugin_debug.h"
 #include <KEmailAddress>
 #include <KLocalizedString>
 #include <KJob>
@@ -110,7 +111,7 @@ void MailSenderJob::fetchItem(const Akonadi::Item &item)
 void MailSenderJob::fetchJobFinished(KJob *job)
 {
     if (job->error()) {
-        //qCDebug(KADDRESSBOOK_LOG) << " error during fetching " << job->errorString();
+        qCDebug(KADDRESSBOOK_SENDMAIL_LOG) << " error during fetching " << job->errorString();
         fetchNextItem();
         return;
     }

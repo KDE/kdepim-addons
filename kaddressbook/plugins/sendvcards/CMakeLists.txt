@@ -1,8 +1,13 @@
+include_directories(
+  ${CMAKE_CURRENT_BINARY_DIR}
+)
+
 set(kaddressbook_sendvcardsplugin_SRCS
     sendvcardsplugininterface.cpp
     sendvcardsplugin.cpp
     sendvcardsjob.cpp
 )
+ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddressbook_sendvcardsplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDVCARDS_LOG CATEGORY_NAME log_kaddressbook_sendvcards)
 
 add_library(kaddressbook_sendvcardsplugin MODULE ${kaddressbook_sendvcardsplugin_SRCS})
 

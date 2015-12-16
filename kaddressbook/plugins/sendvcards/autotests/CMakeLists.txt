@@ -5,4 +5,4 @@ include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/
 set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
-add_akonadi_isolated_test_advanced( sendvcardsjobtest.cpp "../sendvcardsjob.cpp" "KF5::Contacts;KF5::PimCommon")
+add_akonadi_isolated_test_advanced( sendvcardsjobtest.cpp "../sendvcardsjob.cpp;../kaddressbook_sendvcardsplugin_debug.cpp" "KF5::Contacts;KF5::PimCommon")
