@@ -2,8 +2,10 @@
     "KPlugin": {
         "Name": "GDrive", 
         "Name[ca]": "GDrive", 
+        "Name[es]": "GDrive", 
         "Name[nl]": "GDrive", 
         "Name[pt]": "GDrive", 
+        "Name[pt_BR]": "GDrive", 
         "Name[sv]": "GDrive", 
         "Name[uk]": "GDrive", 
         "Name[x-test]": "xxGDrivexx", 

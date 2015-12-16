@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Send Vcards", 
+        "Name[nl]": "vCards verzenden", 
+        "Name[pt]": "Enviar os vCard's", 
+        "Name[pt_BR]": "Enviar vCards", 
+        "Name[sv]": "Skicka visitkort", 
+        "Name[uk]": "Надсилання візитівок", 
+        "Name[x-test]": "xxSend Vcardsxx", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
