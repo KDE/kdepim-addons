@@ -38,5 +38,4 @@ private Q_SLOTS:
     void slotShortUrlFinished(QNetworkReply *reply);
 };
 
-
 #endif

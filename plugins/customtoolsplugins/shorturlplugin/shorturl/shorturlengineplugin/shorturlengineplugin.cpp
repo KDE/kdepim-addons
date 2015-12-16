@@ -17,8 +17,6 @@
 
 #include "shorturlengineplugin.h"
 
-
-
 class ShortUrlEnginePluginPrivate
 {
 public:

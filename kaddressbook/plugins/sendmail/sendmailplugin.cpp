@@ -29,7 +29,6 @@ SendMailPlugin::SendMailPlugin(QObject *parent, const QList<QVariant> &)
 
 }
 
-
 SendMailPlugin::~SendMailPlugin()
 {
 }

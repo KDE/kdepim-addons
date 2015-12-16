@@ -20,7 +20,6 @@
 
 #include <QWidget>
 
-
 class ShortUrlConfigureWidgetPrivate;
 class ShortUrlConfigureWidget : public QWidget
 {

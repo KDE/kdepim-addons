@@ -82,9 +82,9 @@ bool SearchPotentialDuplicateContactJob::isDuplicate(const Akonadi::Item &itemA,
     const KContacts::Addressee addressB = itemB.payload<KContacts::Addressee>();
     //
     if (!addressA.name().isEmpty() && !addressB.name().isEmpty()) {
-        qDebug()<<" addressB"<<addressB.name()<<" addressA.name()"<<addressA.name();
+        qDebug() << " addressB" << addressB.name() << " addressA.name()" << addressA.name();
         if (addressA.name() == addressB.name()) {
-            qDebug()<<" return true;";
+            qDebug() << " return true;";
             return true;
         }
     }

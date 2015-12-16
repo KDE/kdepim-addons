@@ -29,7 +29,6 @@ SendVcardsPlugin::SendVcardsPlugin(QObject *parent, const QList<QVariant> &)
 
 }
 
-
 SendVcardsPlugin::~SendVcardsPlugin()
 {
 }

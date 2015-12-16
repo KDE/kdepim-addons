@@ -142,13 +142,13 @@ void AntiSpamWizard::accept()
 {
     if (mSpamRulesPage) {
         qDebug() << "Folder name for messages classified as spam is"
-                           << mSpamRulesPage->selectedSpamCollectionId();
+                 << mSpamRulesPage->selectedSpamCollectionId();
         qDebug() << "Folder name for messages classified as unsure is"
-                           << mSpamRulesPage->selectedUnsureCollectionId();
+                 << mSpamRulesPage->selectedUnsureCollectionId();
     }
     if (mVirusRulesPage) {
         qDebug() << "Folder name for viruses is"
-                           << mVirusRulesPage->selectedFolderName();
+                 << mVirusRulesPage->selectedFolderName();
     }
 
     FilterActionDict dict;

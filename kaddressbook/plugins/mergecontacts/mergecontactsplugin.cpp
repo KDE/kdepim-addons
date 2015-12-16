@@ -29,7 +29,6 @@ MergeContactsPlugin::MergeContactsPlugin(QObject *parent, const QList<QVariant> 
 
 }
 
-
 MergeContactsPlugin::~MergeContactsPlugin()
 {
 }

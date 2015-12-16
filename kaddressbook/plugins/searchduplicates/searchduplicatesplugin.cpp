@@ -29,7 +29,6 @@ SearchDuplicatesPlugin::SearchDuplicatesPlugin(QObject *parent, const QList<QVar
 
 }
 
-
 SearchDuplicatesPlugin::~SearchDuplicatesPlugin()
 {
 }

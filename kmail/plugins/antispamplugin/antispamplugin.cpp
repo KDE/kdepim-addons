@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "antispamplugin.h"
 #include "antispamplugininterface.h"
 #include <KLocalizedString>
@@ -29,7 +28,6 @@ AntiSpamPlugin::AntiSpamPlugin(QObject *parent, const QList<QVariant> &)
 {
 
 }
-
 
 AntiSpamPlugin::~AntiSpamPlugin()
 {

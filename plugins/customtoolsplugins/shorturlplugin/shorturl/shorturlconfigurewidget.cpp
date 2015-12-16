@@ -28,7 +28,6 @@
 
 #include "shorturlengineplugin/shorturlengineplugin.h"
 
-
 class ShortUrlConfigureWidgetPrivate
 {
 public:

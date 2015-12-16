@@ -19,7 +19,6 @@
 #include "isgdshorturlengineinterface.h"
 #include <kpluginfactory.h>
 
-
 K_PLUGIN_FACTORY_WITH_JSON(IsgdShortUrlEnginePluginFactory, "pimcommon_isgdshorturlengineplugin.json", registerPlugin<IsgdShortUrlEnginePlugin>();)
 
 IsgdShortUrlEnginePlugin::IsgdShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)

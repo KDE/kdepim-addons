@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "antivirusplugin.h"
 #include "antivirusplugininterface.h"
 #include <KLocalizedString>
@@ -29,7 +28,6 @@ AntiVirusPlugin::AntiVirusPlugin(QObject *parent, const QList<QVariant> &)
 {
 
 }
-
 
 AntiVirusPlugin::~AntiVirusPlugin()
 {

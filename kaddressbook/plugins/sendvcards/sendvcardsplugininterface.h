@@ -15,10 +15,8 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #ifndef SENDVCARDSPLUGININTERFACE_H
 #define SENDVCARDSPLUGININTERFACE_H
-
 
 #include <pimcommon/genericplugininterface.h>
 
@@ -39,7 +37,7 @@ private Q_SLOTS:
     void slotSendVcardsError(const QString &error);
 
 private:
-    Akonadi::Item::List mListItems;    
+    Akonadi::Item::List mListItems;
 };
 
 #endif // SENDVCARDSPLUGININTERFACE_H

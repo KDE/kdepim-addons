@@ -15,10 +15,8 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #ifndef SENDMAILPLUGININTERFACE_H
 #define SENDMAILPLUGININTERFACE_H
-
 
 #include <pimcommon/genericplugininterface.h>
 

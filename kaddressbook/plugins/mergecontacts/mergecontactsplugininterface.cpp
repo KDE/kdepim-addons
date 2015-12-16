@@ -53,7 +53,7 @@ void MergeContactsPluginInterface::slotActivated()
 void MergeContactsPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 {
     Akonadi::Item::List onlyContactList;
-    Q_FOREACH(const Akonadi::Item &item, items) {
+    Q_FOREACH (const Akonadi::Item &item, items) {
         if (item.isValid() && item.hasPayload<KContacts::Addressee>()) {
             onlyContactList.append(item);
         }
