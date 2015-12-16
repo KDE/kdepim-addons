@@ -21,7 +21,6 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KActionCollection>
-#include <KIconLoader>
 #include <QAction>
 #include <QDebug>
 #include <QDesktopServices>
