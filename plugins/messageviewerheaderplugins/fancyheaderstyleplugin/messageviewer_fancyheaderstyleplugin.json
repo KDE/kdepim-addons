@@ -13,6 +13,7 @@
         "Name[sv]": "Snygg rubrikstil", 
         "Name[uk]": "Красивий стиль заголовків", 
         "Name[x-test]": "xxFancy Header Stylexx", 
+        "Name[zh_CN]": "亮丽信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

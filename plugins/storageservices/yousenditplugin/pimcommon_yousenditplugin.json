@@ -3,12 +3,15 @@
         "Name": "YouSendIt", 
         "Name[ca]": "YouSendIt", 
         "Name[es]": "YouSendIt", 
+        "Name[gl]": "YouSendIt", 
         "Name[nl]": "YouSendIt", 
         "Name[pt]": "YouSendIt", 
         "Name[pt_BR]": "YouSendIt", 
+        "Name[sk]": "YouSendIt", 
         "Name[sv]": "YouSendIt", 
         "Name[uk]": "YouSendIt", 
         "Name[x-test]": "xxYouSendItxx", 
+        "Name[zh_CN]": "YouSendIt", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

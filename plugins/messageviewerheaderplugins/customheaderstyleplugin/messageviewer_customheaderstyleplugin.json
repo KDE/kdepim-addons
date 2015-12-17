@@ -13,6 +13,7 @@
         "Name[sv]": "Egen rubrikstil", 
         "Name[uk]": "Нетиповий стиль заголовків", 
         "Name[x-test]": "xxCustom Header Stylexx", 
+        "Name[zh_CN]": "自定义信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

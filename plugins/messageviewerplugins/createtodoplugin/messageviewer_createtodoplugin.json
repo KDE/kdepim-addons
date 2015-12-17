@@ -13,6 +13,7 @@
         "Name[sv]": "Skapa uppgift", 
         "Name[uk]": "Створення запису завдання", 
         "Name[x-test]": "xxCreate Todoxx", 
+        "Name[zh_CN]": "创建待办事项", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 

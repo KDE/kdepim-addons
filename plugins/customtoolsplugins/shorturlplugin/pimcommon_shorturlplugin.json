@@ -13,6 +13,7 @@
         "Name[sv]": "Kort webbadress", 
         "Name[uk]": "Скорочення адрес", 
         "Name[x-test]": "xxShorturlxx", 
+        "Name[zh_CN]": "短链接", 
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"
         ], 

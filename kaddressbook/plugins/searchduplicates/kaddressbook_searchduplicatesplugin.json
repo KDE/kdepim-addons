@@ -13,6 +13,7 @@
         "Name[sv]": "Sök efter duplicerade kontakter", 
         "Name[uk]": "Пошук дублікатів записів контактів", 
         "Name[x-test]": "xxSearch Duplicate Contactsxx", 
+        "Name[zh_CN]": "搜索重复的联系人", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

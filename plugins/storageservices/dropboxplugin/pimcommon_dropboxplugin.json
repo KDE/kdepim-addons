@@ -3,12 +3,15 @@
         "Name": "DropBox", 
         "Name[ca]": "DropBox", 
         "Name[es]": "DropBox", 
+        "Name[gl]": "DropBox", 
         "Name[nl]": "DropBox", 
         "Name[pt]": "DropBox", 
         "Name[pt_BR]": "DropBox", 
+        "Name[sk]": "Dropbox", 
         "Name[sv]": "Dropbox", 
         "Name[uk]": "DropBox", 
         "Name[x-test]": "xxDropBoxxx", 
+        "Name[zh_CN]": "DropBox", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

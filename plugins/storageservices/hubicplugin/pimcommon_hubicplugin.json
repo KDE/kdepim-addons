@@ -3,12 +3,15 @@
         "Name": "Hubic", 
         "Name[ca]": "Hubic", 
         "Name[es]": "Hubic", 
+        "Name[gl]": "Hubic", 
         "Name[nl]": "Hubic", 
         "Name[pt]": "Hubic", 
         "Name[pt_BR]": "Hubic", 
+        "Name[sk]": "Hubic", 
         "Name[sv]": "Hubic", 
         "Name[uk]": "Hubic", 
         "Name[x-test]": "xxHubicxx", 
+        "Name[zh_CN]": "Hubic", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

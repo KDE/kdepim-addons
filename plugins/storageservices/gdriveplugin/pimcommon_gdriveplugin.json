@@ -3,12 +3,15 @@
         "Name": "GDrive", 
         "Name[ca]": "GDrive", 
         "Name[es]": "GDrive", 
+        "Name[gl]": "GDrive", 
         "Name[nl]": "GDrive", 
         "Name[pt]": "GDrive", 
         "Name[pt_BR]": "GDrive", 
+        "Name[sk]": "GDrive", 
         "Name[sv]": "GDrive", 
         "Name[uk]": "GDrive", 
         "Name[x-test]": "xxGDrivexx", 
+        "Name[zh_CN]": "GDrive", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

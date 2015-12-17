@@ -13,6 +13,7 @@
         "Name[sv]": "Skapa händelse", 
         "Name[uk]": "Створення запису події", 
         "Name[x-test]": "xxCreate Eventxx", 
+        "Name[zh_CN]": "创建事件", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 

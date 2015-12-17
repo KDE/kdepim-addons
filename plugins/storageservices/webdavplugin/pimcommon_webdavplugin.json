@@ -3,12 +3,15 @@
         "Name": "Webdav", 
         "Name[ca]": "Webdav", 
         "Name[es]": "Webdav", 
+        "Name[gl]": "Webdav", 
         "Name[nl]": "Webdav", 
         "Name[pt]": "WebDAV", 
         "Name[pt_BR]": "Webdav", 
+        "Name[sk]": "Webdav", 
         "Name[sv]": "WebDAV", 
         "Name[uk]": "Webdav", 
         "Name[x-test]": "xxWebdavxx", 
+        "Name[zh_CN]": "Webdav", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

@@ -13,6 +13,7 @@
         "Name[sv]": "Stil med alla rubriker", 
         "Name[uk]": "Стиль усіх заголовків", 
         "Name[x-test]": "xxAll Header Stylexx", 
+        "Name[zh_CN]": "所有信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 

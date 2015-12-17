@@ -13,6 +13,7 @@
         "Name[sv]": "Kortfattad rubrikstil", 
         "Name[uk]": "Короткий стиль заголовків", 
         "Name[x-test]": "xxBrief Header Stylexx", 
+        "Name[zh_CN]": "简要信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 
