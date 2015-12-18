@@ -114,6 +114,8 @@ void CheckGravatarPluginInterface::exec()
             } else {
                 KMessageBox::information(parentWidget(), i18n("A contact group was selected."));
             }
+        } else {
+            KMessageBox::information(parentWidget(), i18n("Too many contacts selected."));
         }
     }
 }
