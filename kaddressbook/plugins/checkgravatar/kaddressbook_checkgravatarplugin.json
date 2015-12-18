@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Check Gravatar", 
+        "ServiceTypes": [
+            "KAddressBook/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
