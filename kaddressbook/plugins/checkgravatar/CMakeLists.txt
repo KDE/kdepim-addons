@@ -14,7 +14,7 @@ set(kaddressbook_checkgravatarplugin_SRCS
     ${kaddressbook_gravatar_SRCS}
 )
 
-ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDMAIL_LOG CATEGORY_NAME log_kaddressbook_checkgravatar)
+ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME log_kaddressbook_checkgravatar)
 
 add_library(kaddressbook_checkgravatarplugin MODULE ${kaddressbook_checkgravatarplugin_SRCS})
 
