@@ -33,7 +33,7 @@ public:
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotActivated();    
+    void slotActivated();
     void slotModifyContactFinished(KJob *job);
 private:
     Akonadi::Item::List mListItems;
