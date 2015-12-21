@@ -53,7 +53,7 @@ target_link_libraries(coisceim_widget
 )
 
 set_target_properties(coisceim_widget
-    PROPERTIES VERSION ${KDEPIM_LIB_VERSION} SOVERSION ${KDEPIM_LIB_SOVERSION}
+    PROPERTIES VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
 )
 
 add_executable(coisceim ${coisceim_SRCS})
