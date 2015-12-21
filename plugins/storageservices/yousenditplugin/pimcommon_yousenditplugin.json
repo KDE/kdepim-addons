@@ -1,7 +1,10 @@
 {
     "KPlugin": {
         "Name": "YouSendIt", 
+        "Name[ca@valencia]": "YouSendIt", 
         "Name[ca]": "YouSendIt", 
+        "Name[de]": "YouSendIt", 
+        "Name[en_GB]": "YouSendIt", 
         "Name[es]": "YouSendIt", 
         "Name[fi]": "YouSendIt", 
         "Name[gl]": "YouSendIt", 

@@ -1,7 +1,10 @@
 {
     "KPlugin": {
         "Name": "Send Vcards", 
+        "Name[ca@valencia]": "Envia unes quantes vCard", 
         "Name[ca]": "Envia unes quantes vCard", 
+        "Name[de]": "vCards senden", 
+        "Name[en_GB]": "Send Vcards", 
         "Name[es]": "Enviar Vcards", 
         "Name[fi]": "Lähetä vCardeja", 
         "Name[gl]": "Enviar vCards", 

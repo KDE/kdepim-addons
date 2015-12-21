@@ -1,7 +1,16 @@
 {
     "KPlugin": {
         "Name": "Check Gravatar", 
+        "Name[ca@valencia]": "Comprova el «Gravatar»", 
+        "Name[ca]": "Comprova el «Gravatar»", 
+        "Name[de]": "Gravatar überprüfen", 
+        "Name[en_GB]": "Check Gravatar", 
+        "Name[fi]": "Tarkista Gravatar", 
         "Name[gl]": "Comprobar en Gravatar", 
+        "Name[nl]": "Gravatar controleren", 
+        "Name[pt]": "Verificar o Gravatar", 
+        "Name[pt_BR]": "Verificar o Gravatar", 
+        "Name[sk]": "Skontrolovať Gravatar", 
         "Name[sv]": "Kontrollera Gravatar", 
         "Name[uk]": "Перевірити gravatar", 
         "Name[x-test]": "xxCheck Gravatarxx", 

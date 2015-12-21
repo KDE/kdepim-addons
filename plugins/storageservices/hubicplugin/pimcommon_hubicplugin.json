@@ -1,7 +1,10 @@
 {
     "KPlugin": {
         "Name": "Hubic", 
+        "Name[ca@valencia]": "Hubic", 
         "Name[ca]": "Hubic", 
+        "Name[de]": "Hubic", 
+        "Name[en_GB]": "Hubic", 
         "Name[es]": "Hubic", 
         "Name[fi]": "Hubic", 
         "Name[gl]": "Hubic", 

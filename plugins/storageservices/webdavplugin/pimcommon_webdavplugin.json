@@ -1,7 +1,10 @@
 {
     "KPlugin": {
         "Name": "Webdav", 
+        "Name[ca@valencia]": "Webdav", 
         "Name[ca]": "Webdav", 
+        "Name[de]": "WebDAV", 
+        "Name[en_GB]": "Webdav", 
         "Name[es]": "Webdav", 
         "Name[fi]": "Webdav", 
         "Name[gl]": "Webdav", 

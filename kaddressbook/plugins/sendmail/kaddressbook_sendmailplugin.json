@@ -1,13 +1,17 @@
 {
     "KPlugin": {
         "Name": "Send Mail", 
+        "Name[ca@valencia]": "Envia el correu", 
         "Name[ca]": "Envia el correu", 
+        "Name[de]": "E-Mail versenden", 
+        "Name[en_GB]": "Send Mail", 
         "Name[es]": "Enviar correo", 
         "Name[fi]": "Lähetä sähköpostia", 
         "Name[gl]": "Enviar correo", 
         "Name[nl]": "E-mail verzenden", 
         "Name[pl]": "Wyślij wiadomość", 
         "Name[pt]": "Enviar um E-Mail", 
+        "Name[pt_BR]": "Enviar e-mail", 
         "Name[sk]": "Poslať e-mail", 
         "Name[sv]": "Skicka brev", 
         "Name[uk]": "Надіслати пошту", 

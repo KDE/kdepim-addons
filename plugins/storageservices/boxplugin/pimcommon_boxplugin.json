@@ -1,7 +1,9 @@
 {
     "KPlugin": {
         "Name": "box", 
+        "Name[ca@valencia]": "box", 
         "Name[ca]": "box", 
+        "Name[en_GB]": "box", 
         "Name[es]": "caja", 
         "Name[fi]": "box", 
         "Name[gl]": "box", 
