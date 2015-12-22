@@ -48,7 +48,7 @@ CustomToolsViewInterface *ShorturlPlugin::createView(KActionCollection *ac, Cust
 
 QString ShorturlPlugin::customToolName() const
 {
-    return i18n("Translator");
+    return i18n("Short url");
 }
 
 #include "shorturlplugin.moc"
