@@ -1,7 +1,7 @@
 project(kdepim-addons)
 
 cmake_minimum_required(VERSION 2.8.12)
-find_package(ECM 5.16.0 REQUIRED NO_MODULE)
+find_package(ECM 5.17.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 # Do NOT add quote
@@ -20,7 +20,7 @@ set(KDEPIMADDONS_LIB_SOVERSION "5")
 
 set(AKONADINOTES_LIB_VERSION "4.78.0")
 set(QT_REQUIRED_VERSION "5.4.0")
-set(KF5_VERSION "5.16.0")
+set(KF5_VERSION "5.17.0")
 include(ECMOptionalAddSubdirectory)
 include(ECMInstallIcons)
 include(ECMSetupVersion)
