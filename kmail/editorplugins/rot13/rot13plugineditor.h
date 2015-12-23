@@ -22,15 +22,16 @@
 #include <messagecomposer/plugineditor.h>
 
 #include <messagecomposer/plugineditorinterface.h>
+#include <QVariant>
 
 class Rot13PluginEditor : public MessageComposer::PluginEditor
 {
     Q_OBJECT
 public:
-    explicit Rot13PluginEditor(QObject *parent = Q_NULLPTR);
+    explicit Rot13PluginEditor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~Rot13PluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_OVERRIDE;
+    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
 };
 
 #endif // ROT13PLUGINEDITOR_H

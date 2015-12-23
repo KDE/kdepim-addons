@@ -17,8 +17,12 @@
 
 
 #include "rot13plugineditor.h"
+#include <KLocalizedString>
+#include <kpluginfactory.h>
 
-Rot13PluginEditor::Rot13PluginEditor(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(Rot13PluginEditorFactory, "kmail_rot13editorplugin.json", registerPlugin<Rot13PluginEditor>();)
+
+Rot13PluginEditor::Rot13PluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
 
@@ -34,3 +38,5 @@ MessageComposer::PluginEditorInterface *Rot13PluginEditor::createInterface(KActi
     //TODO
     return Q_NULLPTR;
 }
+
+#include "rot13plugineditor.moc"
