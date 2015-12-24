@@ -4,6 +4,7 @@ Name[ca]=Aplicació Octetstream
 Name[nl]=Applicatie octetstroom
 Name[pt]=Aplicação Sequência Binária
 Name[pt_BR]=Aplicativo Octetstream
+Name[sv]=Program Oktetström
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
 Comment=A bodypart formatter plugin for text/vcard
@@ -11,6 +12,7 @@ Comment[ca]=Un connector formatador del cos per a text/vcard
 Comment[nl]=Een opmaakplug-in voor text/vcard
 Comment[pt]=Um 'plugin' de formatação do conteúdo para o tipo 'text/vcard'
 Comment[pt_BR]=Um plugin formatador de componente para o tipo text/vcard
+Comment[sv]=Ett insticksprogram för formatering av innehåll i visitkort
 Comment[uk]=Додаток форматування для text/vcard
 Comment[x-test]=xxA bodypart formatter plugin for text/vcardxx
 

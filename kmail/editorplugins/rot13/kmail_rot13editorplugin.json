@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Name": "Rot13",
+        "Name": "Rot13", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
