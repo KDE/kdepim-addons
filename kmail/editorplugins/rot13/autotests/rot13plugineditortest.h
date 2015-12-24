@@ -15,26 +15,18 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "rot13plugineditorinterface.h"
-#include <KLocalizedString>
 
-Rot13PluginEditorInterface::Rot13PluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+#ifndef ROT13PLUGINEDITORTEST_H
+#define ROT13PLUGINEDITORTEST_H
+
+#include <QObject>
+
+class Rot13PluginEditorTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit Rot13PluginEditorTest(QObject *parent = Q_NULLPTR);
+    ~Rot13PluginEditorTest();
+};
 
-}
-
-Rot13PluginEditorInterface::~Rot13PluginEditorInterface()
-{
-
-}
-
-void Rot13PluginEditorInterface::createAction(KActionCollection *ac)
-{
-
-}
-
-void Rot13PluginEditorInterface::exec()
-{
-
-}
+#endif // ROT13PLUGINEDITORTEST_H
