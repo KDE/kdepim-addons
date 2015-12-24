@@ -17,6 +17,7 @@
 
 
 #include "rot13plugineditor.h"
+#include "rot13plugineditorinterface.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
@@ -35,8 +36,10 @@ Rot13PluginEditor::~Rot13PluginEditor()
 
 MessageComposer::PluginEditorInterface *Rot13PluginEditor::createInterface(KActionCollection *ac, QObject *parent)
 {
+    Rot13PluginEditorInterface *interface = new Rot13PluginEditorInterface(parent);
+    interface->createAction(ac);
     //TODO
-    return Q_NULLPTR;
+    return interface;
 }
 
 #include "rot13plugineditor.moc"
