@@ -8,4 +8,6 @@ macro(add_kmail_editorplugin_unittest _source _additional)
     target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer)
 endmacro ()
 
-add_kmail_editorplugin_unittest(rot13plugineditortest.cpp "")
+add_kmail_editorplugin_unittest(rot13plugineditortest.cpp "../rot13plugineditor.cpp;../rot13plugineditorinterface.cpp")
+
+add_kmail_editorplugin_unittest(rot13plugineditorinterfacetest.cpp "../rot13plugineditorinterface.cpp")
