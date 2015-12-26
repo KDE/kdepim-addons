@@ -1,6 +1,7 @@
 set(kmail_rot13editorplugin_SRCS
     rot13plugineditor.cpp
     rot13plugineditorinterface.cpp
+    rot13job.cpp
 )
 
 add_library(kmail_rot13editorplugin MODULE ${kmail_rot13editorplugin_SRCS})
