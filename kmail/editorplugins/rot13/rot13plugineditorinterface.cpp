@@ -17,6 +17,8 @@
 
 #include "rot13plugineditorinterface.h"
 #include <KLocalizedString>
+#include <KActionCollection>
+#include <QAction>
 
 Rot13PluginEditorInterface::Rot13PluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -31,7 +33,16 @@ Rot13PluginEditorInterface::~Rot13PluginEditorInterface()
 
 void Rot13PluginEditorInterface::createAction(KActionCollection *ac)
 {
+    QAction *action = new QAction(i18n("Rot13 converter"), this);
+    ac->addAction(QStringLiteral("rot13converter"), action);
+    connect(action, &QAction::triggered, this, &Rot13PluginEditorInterface::slotActivated);
+    MessageComposer::ActionType type(action, MessageComposer::ActionType::Tools);
+    setActionType(type);
+}
 
+void Rot13PluginEditorInterface::slotActivated()
+{
+    Q_EMIT emitPluginActivated(this);
 }
 
 void Rot13PluginEditorInterface::exec()

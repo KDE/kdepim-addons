@@ -16,6 +16,7 @@
 */
 
 #include "rot13plugineditorinterfacetest.h"
+#include "../rot13plugineditorinterface.h"
 #include <QTest>
 
 Rot13PluginEditorInterfaceTest::Rot13PluginEditorInterfaceTest(QObject *parent)

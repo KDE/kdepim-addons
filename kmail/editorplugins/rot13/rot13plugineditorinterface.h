@@ -29,6 +29,9 @@ public:
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
+
+private Q_SLOTS:
+    void slotActivated();
 };
 
 #endif // ROT13PLUGINEDITORINTERFACE_H
