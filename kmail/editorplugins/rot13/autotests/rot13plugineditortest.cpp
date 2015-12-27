@@ -17,6 +17,8 @@
 
 
 #include "rot13plugineditortest.h"
+#include "../rot13plugineditor.h"
+#include <KActionCollection>
 #include <QTest>
 
 Rot13PluginEditorTest::Rot13PluginEditorTest(QObject *parent)
@@ -28,6 +30,12 @@ Rot13PluginEditorTest::Rot13PluginEditorTest(QObject *parent)
 Rot13PluginEditorTest::~Rot13PluginEditorTest()
 {
 
+}
+
+void Rot13PluginEditorTest::shouldHaveDefaultValue()
+{
+    Rot13PluginEditor plugin;
+    QVERIFY(plugin.createInterface(new KActionCollection(this)));
 }
 
 QTEST_MAIN(Rot13PluginEditorTest)
