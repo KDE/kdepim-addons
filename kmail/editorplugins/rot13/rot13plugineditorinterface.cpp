@@ -16,6 +16,7 @@
 */
 
 #include "rot13plugineditorinterface.h"
+#include "rot13job.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
