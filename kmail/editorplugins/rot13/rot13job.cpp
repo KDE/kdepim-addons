@@ -27,3 +27,14 @@ Rot13Job::~Rot13Job()
 {
 
 }
+
+void Rot13Job::setText(const QString &text)
+{
+    mInitialText = text;
+}
+
+QString Rot13Job::rot13() const
+{
+    //TODO
+    return QString();
+}

@@ -25,6 +25,12 @@ class Rot13Job : public QObject
 public:
     explicit Rot13Job(QObject *parent = Q_NULLPTR);
     ~Rot13Job();
+
+    void setText(const QString &text);
+
+    QString rot13() const;
+private:
+    QString mInitialText;
 };
 
 #endif // ROT13JOB_H
