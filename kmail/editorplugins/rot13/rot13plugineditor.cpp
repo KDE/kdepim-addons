@@ -37,7 +37,6 @@ MessageComposer::PluginEditorInterface *Rot13PluginEditor::createInterface(KActi
 {
     Rot13PluginEditorInterface *interface = new Rot13PluginEditorInterface(parent);
     interface->createAction(ac);
-    //TODO
     return interface;
 }
 

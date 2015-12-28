@@ -17,6 +17,7 @@
 
 #include "rot13plugineditorinterface.h"
 #include "rot13job.h"
+#include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -48,5 +49,11 @@ void Rot13PluginEditorInterface::slotActivated()
 
 void Rot13PluginEditorInterface::exec()
 {
-
+    const QString text = richTextEditor()->toPlainText();
+    if (!text.isEmpty()) {
+        Rot13Job job;
+        job.setText(text);
+        const QString convertedText = job.rot13();
+        richTextEditor()->setPlainText(convertedText);
+    }
 }
