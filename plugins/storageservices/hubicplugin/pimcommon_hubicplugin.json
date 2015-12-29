@@ -1,26 +1,11 @@
 {
     "KPlugin": {
         "Name": "Hubic", 
-        "Name[ca@valencia]": "Hubic", 
-        "Name[ca]": "Hubic", 
-        "Name[de]": "Hubic", 
-        "Name[en_GB]": "Hubic", 
-        "Name[es]": "Hubic", 
-        "Name[fi]": "Hubic", 
-        "Name[gl]": "Hubic", 
-        "Name[nl]": "Hubic", 
-        "Name[pl]": "Hubic", 
-        "Name[pt]": "Hubic", 
-        "Name[pt_BR]": "Hubic", 
-        "Name[sk]": "Hubic", 
         "Name[sr@ijekavian]": "Хјубик", 
         "Name[sr@ijekavianlatin]": "hubiC", 
         "Name[sr@latin]": "hubiC", 
         "Name[sr]": "Хјубик", 
-        "Name[sv]": "Hubic", 
-        "Name[uk]": "Hubic", 
         "Name[x-test]": "xxHubicxx", 
-        "Name[zh_CN]": "Hubic", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]
