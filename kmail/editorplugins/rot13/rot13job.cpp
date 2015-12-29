@@ -35,6 +35,9 @@ void Rot13Job::setText(const QString &text)
 
 QString Rot13Job::rot13() const
 {
+    if (mInitialText.isEmpty())
+        return {};
+
     QString r(mInitialText);
 
     const int rLenght(r.length());
