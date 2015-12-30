@@ -61,7 +61,7 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
 
     grid->addWidget(closeBtn, 0, 0);
 
-    mIndicatorLabel = new KPIM::ProgressIndicatorLabel(i18n("In progress to generate short url..."));
+    mIndicatorLabel = new KPIM::ProgressIndicatorLabel(i18n("Generating short URL..."));
     grid->addWidget(mIndicatorLabel, 0, 1);
 
     QPushButton *configure = new QPushButton(i18n("Configure..."));
@@ -79,7 +79,7 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     connect(mInsertShortUrl, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotInsertShortUrl);
     grid->addWidget(mInsertShortUrl, 2, 2);
 
-    QLabel *lab = new QLabel(i18n("Original url:"));
+    QLabel *lab = new QLabel(i18n("Original URL:"));
     grid->addWidget(lab, 3, 0);
 
     mOriginalUrl = new KLineEdit;
@@ -93,7 +93,7 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     connect(mCopyToClipboard, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotPasteToClipboard);
     grid->addWidget(mCopyToClipboard, 3, 2);
 
-    lab = new QLabel(i18n("Short url:"));
+    lab = new QLabel(i18n("Short URL:"));
     grid->addWidget(lab, 4, 0);
 
     mShortUrl = new QLineEdit;
@@ -181,7 +181,7 @@ void ShortUrlWidgetNg::slotConvertUrl()
         return;
     }
     if (!mNetworkConfigurationManager->isOnline()) {
-        KMessageBox::information(this, i18n("No network connection detected, we cannot shorten url."), i18n("No network"));
+        KMessageBox::information(this, i18n("No network connection detected, we cannot shorten URL."), i18n("No network"));
         return;
     }
     if (mOriginalUrl->text().isEmpty()) {
