@@ -1,6 +1,10 @@
 {
     "KPlugin": {
         "Name": "ROT13", 
+        "Name[sr@ijekavian]": "Рот‑13", 
+        "Name[sr@ijekavianlatin]": "Rot‑13", 
+        "Name[sr@latin]": "Rot‑13", 
+        "Name[sr]": "Рот‑13", 
         "Name[x-test]": "xxROT13xx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"

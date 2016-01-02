@@ -1,4 +1,16 @@
 [Desktop Entry]
 Name=Example
+Name[ca]=Exemple
+Name[gl]=Exemplo
+Name[nl]=Voorbeeld
+Name[pt_BR]=Exemplo
+Name[uk]=Приклад
+Name[x-test]=xxExamplexx
 Description=Example theme for header.
+Description[ca]=Tema d'exemple per a la capçalera.
+Description[gl]=Tema de exemplo para a cabeceira.
+Description[nl]=Voorbeeld van thema voor kop.
+Description[pt_BR]=Exemplo de tema para o cabeçalho.
+Description[uk]=Приклад теми для заголовка.
+Description[x-test]=xxExample theme for header.xx
 FileName=header.html

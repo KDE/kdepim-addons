@@ -1,5 +1,17 @@
 [Desktop Entry]
 Name=Example fancy
+Name[ca]=Exemple sofisticat
+Name[gl]=Exemplo elegante
+Name[nl]=Voorbeeld van elegant
+Name[pt_BR]=Exemplo bonito
+Name[uk]=Приклад вишуканого
+Name[x-test]=xxExample fancyxx
 Description=Create fancy theme with grantlee.
+Description[ca]=Crea un tema sofisticat amb grantlee.
+Description[gl]=Crear un tema elegante con Grantlee.
+Description[nl]=Elegant thema maken met grantlee.
+Description[pt_BR]=Cria um tema bonito com o Grantlee.
+Description[uk]=Створити складну тему за допомогою grantlee.
+Description[x-test]=xxCreate fancy theme with grantlee.xx
 FileName=header.html
 DisplayExtraVariables=Sender,List-Id
