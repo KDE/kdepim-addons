@@ -18,8 +18,8 @@
 #include "noteedit.h"
 #include "globalsettings_messageviewer.h"
 #include "createnoteplugin_debug.h"
-#include <IncidenceEditorsng/IncidenceDialogFactory>
-#include <IncidenceEditorsng/IncidenceDialog>
+#include <IncidenceEditor/IncidenceDialogFactory>
+#include <IncidenceEditor/IncidenceDialog>
 
 #include <AkonadiWidgets/CollectionComboBox>
 

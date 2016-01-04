@@ -13,7 +13,7 @@ macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     add_test( ${_name} ${_name} )
 
     ecm_mark_as_test(messageviewer-viewerplugin-unittest-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditorsng)
+    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor)
 endmacro ()
 
 
@@ -36,7 +36,7 @@ macro(add_messageviewer_viewerplugin_widget_unittest _source _additional )
     add_test( ${_name} ${_name} )
 
     ecm_mark_as_test(messageviewer-viewerplugin-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditorsng)
+    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor)
 endmacro ()
 
 

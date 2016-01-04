@@ -31,8 +31,8 @@
 
 #include <AkonadiWidgets/CollectionComboBox>
 
-#include <IncidenceEditorsng/IncidenceDialog>
-#include <IncidenceEditorsng/IncidenceDialogFactory>
+#include <IncidenceEditor/IncidenceDialog>
+#include <IncidenceEditor/IncidenceDialogFactory>
 #include <KGuiItem>
 #include <KStandardGuiItem>
 

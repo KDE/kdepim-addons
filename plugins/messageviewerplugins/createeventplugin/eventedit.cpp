@@ -35,8 +35,8 @@
 #include <AkonadiWidgets/CollectionComboBox>
 #include <QPushButton>
 
-#include <IncidenceEditorsng/IncidenceDialogFactory>
-#include <IncidenceEditorsng/IncidenceDialog>
+#include <IncidenceEditor/IncidenceDialogFactory>
+#include <IncidenceEditor/IncidenceDialog>
 #include <KGuiItem>
 #include <KStandardGuiItem>
 
