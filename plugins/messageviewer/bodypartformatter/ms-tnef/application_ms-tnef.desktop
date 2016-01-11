@@ -2,6 +2,7 @@
 Name=TNEF
 Name[ca]=TNEF
 Name[ca@valencia]=TNEF
+Name[en_GB]=TNEF
 Name[es]=TNEF
 Name[fi]=TNEF
 Name[gl]=TNEF
@@ -25,6 +26,7 @@ Name[x-test]=xxTNEFxx
 Comment=A bodypart formatter plugin for TNEF attachments
 Comment[ca]=Un connector formatador del cos per adjunts TNEF
 Comment[ca@valencia]=Un connector formatador del cos per adjunts TNEF
+Comment[en_GB]=A bodypart formatter plugin for TNEF attachments
 Comment[es]=Un complemento de formato para el cuerpo de adjuntos TNEF
 Comment[fi]=TNEF-liitteiden muotoiluliitännäinen
 Comment[gl]=Un engadido para formatar o corpo dos engadidos TNEF

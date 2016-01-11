@@ -2,6 +2,7 @@
 Name=Application Octetstream
 Name[ca]=Aplicació Octetstream
 Name[ca@valencia]=Aplicació Octetstream
+Name[en_GB]=Application Octetstream
 Name[es]=Aplicación Octetstream
 Name[fi]=Octetstream-sovellus
 Name[gl]=Aplicación Octetstream
@@ -25,6 +26,7 @@ Name[x-test]=xxApplication Octetstreamxx
 Comment=A bodypart formatter plugin for text/x-patch
 Comment[ca]=Un connector formatador del cos per a text/x-patch
 Comment[ca@valencia]=Un connector formatador del cos per a text/x-patch
+Comment[en_GB]=A bodypart formatter plugin for text/x-patch
 Comment[es]=Un complemento de formato para el cuerpo de text/x-patch
 Comment[fi]=text/x-patch-muodon muotoiluliitännäinen
 Comment[gl]=Un engadido para formatar o corpo do texto/x-patch
