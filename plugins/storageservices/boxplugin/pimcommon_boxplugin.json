@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "box", 
+        "Name[de]": "Box", 
         "Name[es]": "caja", 
         "Name[pl]": "pudełko", 
         "Name[pt]": "Box", 
