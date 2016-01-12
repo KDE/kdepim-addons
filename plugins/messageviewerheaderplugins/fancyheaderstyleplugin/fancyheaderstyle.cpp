@@ -84,17 +84,17 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // considered left-to-right, they are ignored when determining its
     // direction.
 
-    const QString subjectDir = MessageViewer::HeaderStyleUtil::subjectDirectionString(message);
+    const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
     // Spam header display.
     // If the spamSpamStatus config value is true then we look for headers
     // from a few spam filters and try to create visually meaningful graphics
     // out of the spam scores.
 
-    const QString spamHTML =  MessageViewer::HeaderStyleUtil::spamStatus(message);
+    const QString spamHTML =  mHeaderStyleUtil.spamStatus(message);
 
     QString userHTML;
-    MessageViewer::HeaderStyleUtil::xfaceSettings xface = MessageViewer::HeaderStyleUtil::xface(this, message);
+    MessageViewer::HeaderStyleUtil::xfaceSettings xface = mHeaderStyleUtil.xface(this, message);
     if (!xface.photoURL.isEmpty()) {
         //qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
         userHTML = QStringLiteral("<img src=\"%1\" width=\"%2\" height=\"%3\">")
@@ -111,7 +111,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         headerStr += QStringLiteral("<div dir=\"%1\">%2</div>\n")
                      .arg(subjectDir)
-                     .arg(MessageViewer::HeaderStyleUtil::subjectString(message, flags));
+                     .arg(mHeaderStyleUtil.subjectString(message, flags));
     }
     headerStr += QLatin1String("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
     //headerStr += "<table>\n";
@@ -120,7 +120,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // QString::arg is not possible
     if (strategy->showHeader(QStringLiteral("from"))) {
 
-        const QVector<KMime::Types::Mailbox> resentFrom = MessageViewer::HeaderStyleUtil::resentFromList(message);
+        const QVector<KMime::Types::Mailbox> resentFrom = mHeaderStyleUtil.resentFromList(message);
         headerStr += QStringLiteral("<tr><th>%1</th>\n"
                                     "<td>")
                      .arg(i18n("From: "))
@@ -136,13 +136,13 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                      + (!message->organization(false)
                         ? QString()
                         : QLatin1String("&nbsp;&nbsp;(")
-                        + MessageViewer::HeaderStyleUtil::strToHtml(message->organization()->asUnicodeString())
+                        + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString())
                         + QLatin1Char(')'))
                      + QLatin1String("</td></tr>\n");
     }
     // to line
     if (strategy->showHeader(QStringLiteral("to"))) {
-        const QVector<KMime::Types::Mailbox> resentTo = MessageViewer::HeaderStyleUtil::resentToList(message);
+        const QVector<KMime::Types::Mailbox> resentTo = mHeaderStyleUtil.resentToList(message);
 
         QString to;
         if (message->headerByType("Resent-To")) {
@@ -181,15 +181,15 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td dir=\"%2\">%3</td></tr>\n")
                          .arg(i18n("Date: "))
-                         .arg(MessageViewer::HeaderStyleUtil::directionOf(MessageViewer::HeaderStyleUtil::dateStr(message->date()->dateTime())))
-                         .arg(MessageViewer::HeaderStyleUtil::strToHtml(MessageViewer::HeaderStyleUtil::dateString(message, isPrinting(), /* short = */ false))));
+                         .arg(mHeaderStyleUtil.directionOf(mHeaderStyleUtil.dateStr(message->date()->dateTime())))
+                         .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ false))));
     if (MessageViewer::MessageViewerSettings::self()->showUserAgent()) {
         if (strategy->showHeader(QStringLiteral("user-agent"))) {
             if (auto hdr = message->userAgent(false)) {
                 headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                                 "<td>%2</td></tr>\n")
                                  .arg(i18n("User-Agent: "))
-                                 .arg(MessageViewer::HeaderStyleUtil::strToHtml(hdr->asUnicodeString())));
+                                 .arg(mHeaderStyleUtil.strToHtml(hdr->asUnicodeString())));
             }
         }
 
@@ -198,7 +198,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                 headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                                 "<td>%2</td></tr>\n")
                                  .arg(i18n("X-Mailer: "))
-                                 .arg(MessageViewer::HeaderStyleUtil::strToHtml(message->headerByType("X-Mailer")->asUnicodeString())));
+                                 .arg(mHeaderStyleUtil.strToHtml(message->headerByType("X-Mailer")->asUnicodeString())));
             }
         }
     }
@@ -210,9 +210,9 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td>%2/%3, <strong>%4</strong></td></tr>\n")
                          .arg(i18n("Bugzilla: "))
-                         .arg(MessageViewer::HeaderStyleUtil::strToHtml(product))
-                         .arg(MessageViewer::HeaderStyleUtil::strToHtml(component))
-                         .arg(MessageViewer::HeaderStyleUtil::strToHtml(status)));
+                         .arg(mHeaderStyleUtil.strToHtml(product))
+                         .arg(mHeaderStyleUtil.strToHtml(component))
+                         .arg(mHeaderStyleUtil.strToHtml(status)));
     }
 
     if (strategy->showHeader(QStringLiteral("disposition-notification-to")) && message->headerByType("Disposition-Notification-To")) {

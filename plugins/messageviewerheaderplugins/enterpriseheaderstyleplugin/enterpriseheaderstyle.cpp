@@ -78,7 +78,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 
     headerStr +=
         QLatin1String("<div style=\"margin-left: 10px; top: 0px;\"><span style=\"font-size: 0.8em; font-weight: bold;\">")
-        + MessageViewer::HeaderStyleUtil::dateString(message, isPrinting(), /* shortDate */ false) + QLatin1String("</span></div>"
+        + mHeaderStyleUtil.dateString(message, isPrinting(), /* shortDate */ false) + QLatin1String("</span></div>"
                 // #0057ae
                 "<table style=\"background: ") + activeColorDark.name() + QLatin1String("; border-collapse:collapse; top: 14px; min-width: 200px; \" cellpadding=0> \n"
                         "  <tr> \n"
@@ -101,7 +101,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
             QLatin1String("     <tr> \n"
                           "      <td style=\"font-size: 0.5em; text-align: right; padding-left: 5px; padding-right: 24px; ") + borderSettings + QLatin1String("\"></td> \n"
                                   "      <td style=\"font-weight: bolder; font-size: 120%; padding-right: 91px; ") + borderSettings + QLatin1String("\">");
-        headerStr += MessageViewer::HeaderStyleUtil::subjectString(message) + QLatin1String("</td> \n"
+        headerStr += mHeaderStyleUtil.subjectString(message) + QLatin1String("</td> \n"
                      "     </tr> \n");
     }
 

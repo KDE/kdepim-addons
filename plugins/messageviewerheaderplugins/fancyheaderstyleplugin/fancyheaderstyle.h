@@ -19,9 +19,11 @@
 #define FANCYHEADERSTYLE_H
 
 #include "messageviewer/headerstyle.h"
+
+#include <headerstyle_util.h>
 namespace MessageViewer
 {
-
+class HeaderStyleUtil;
 class FancyHeaderStyle : public HeaderStyle
 {
 public:
@@ -34,6 +36,8 @@ public:
     QString format(KMime::Message *message) const Q_DECL_OVERRIDE;
 
     bool hasAttachmentQuickList() const Q_DECL_OVERRIDE;
+private:
+    MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 
 }

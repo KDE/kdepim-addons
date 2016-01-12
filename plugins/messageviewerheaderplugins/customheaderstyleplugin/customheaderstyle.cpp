@@ -58,7 +58,7 @@ QString CustomHeaderStyle::format(KMime::Message *message) const
     // considered left-to-right, they are ignored when determining its
     // direction.
 
-    const QString subjectDir = MessageViewer::HeaderStyleUtil::subjectDirectionString(message);
+    const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
     QString headerStr;
 
     const QStringList headersToDisplay = strategy->headersToDisplay();
@@ -78,9 +78,9 @@ QString CustomHeaderStyle::format(KMime::Message *message) const
     Q_FOREACH (const QString &headerToDisplay, headersToDisplay) {
         if (headerToDisplay.toLower() == QLatin1String("subject")) {
             headerStr += QStringLiteral("<div dir=\"%1\"><b style=\"font-size:130%\">").arg(subjectDir) +
-                         MessageViewer::HeaderStyleUtil::subjectString(message) + QLatin1String("</b></div>\n");
+                         mHeaderStyleUtil.subjectString(message) + QLatin1String("</b></div>\n");
         } else if (headerToDisplay.toLower() == QLatin1String("date")) {
-            headerStr.append(i18n("Date: ") + MessageViewer::HeaderStyleUtil::strToHtml(MessageViewer::HeaderStyleUtil::dateString(message, isPrinting(), /* short = */ false)) + QLatin1String("<br/>\n"));
+            headerStr.append(i18n("Date: ") + mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ false)) + QLatin1String("<br/>\n"));
         } else if (headerToDisplay.toLower() == QLatin1String("from")) {
             headerStr.append(i18n("From: ") +
                              StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress, QString(), StringUtil::ShowLink));
@@ -91,7 +91,7 @@ QString CustomHeaderStyle::format(KMime::Message *message) const
             if (strategy->showHeader(QStringLiteral("organization"))
                     && message->organization(false))
                 headerStr.append(QLatin1String("&nbsp;&nbsp;(") +
-                                 MessageViewer::HeaderStyleUtil::strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'));
+                                 mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString()) + QLatin1Char(')'));
             headerStr.append(QLatin1String("<br/>\n"));
         } else if (headerToDisplay.toLower() == QLatin1String("to")) {
             headerStr.append(i18nc("To-field of the mailheader.", "To: ") +
@@ -114,7 +114,7 @@ QString CustomHeaderStyle::format(KMime::Message *message) const
         } else {
             const QByteArray header = headerToDisplay.toLatin1();
             if (message->headerByType(header)) {
-                headerStr.append(MessageViewer::HeaderStyleUtil::strToHtml(i18n("%1: ", headerToDisplay) + message->headerByType(header)->asUnicodeString()) + QLatin1String("<br/>\n"));
+                headerStr.append(mHeaderStyleUtil.strToHtml(i18n("%1: ", headerToDisplay) + message->headerByType(header)->asUnicodeString()) + QLatin1String("<br/>\n"));
             }
         }
     }
@@ -130,7 +130,7 @@ QString CustomHeaderStyle::formatAllMessageHeaders(KMime::Message *message, cons
     while (header) {
         const QString headerType = QLatin1String(header->type());
         if (!headersToHide.contains(headerType) || !headersToHide.contains(headerType.toLower())) {
-            result += MessageViewer::HeaderStyleUtil::strToHtml(headerType) + QLatin1String(": ") + header->asUnicodeString();
+            result += mHeaderStyleUtil.strToHtml(headerType) + QLatin1String(": ") + header->asUnicodeString();
             result += QLatin1String("<br />\n");
         }
         delete header;
