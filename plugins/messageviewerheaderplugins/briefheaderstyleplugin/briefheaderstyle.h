@@ -35,6 +35,7 @@
 #define BRIEFHEADERSTYLE_H
 
 #include "messageviewer/headerstyle.h"
+#include "headerstyle_util.h"
 namespace MessageViewer
 {
 class BriefHeaderStyle : public HeaderStyle
@@ -50,6 +51,7 @@ public:
     }
 private:
     QString format(KMime::Message *message) const Q_DECL_OVERRIDE;
+    MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 }
 

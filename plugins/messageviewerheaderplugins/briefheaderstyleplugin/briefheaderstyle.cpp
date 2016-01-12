@@ -73,7 +73,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     // considered left-to-right, they are ignored when determining its
     // direction.
 
-    const QString subjectDir = MessageViewer::HeaderStyleUtil::subjectDirectionString(message);
+    const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
     QString headerStr = QLatin1String("<div class=\"header\" dir=\"") + dir + QLatin1String("\">\n");
 
@@ -81,7 +81,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n") +
                      QLatin1String("<b style=\"font-size:130%\">");
 
-        headerStr += MessageViewer::HeaderStyleUtil::subjectString(message) + QLatin1String("</b></div>\n");
+        headerStr += mHeaderStyleUtil.subjectString(message) + QLatin1String("</b></div>\n");
     }
     QStringList headerParts;
 
@@ -106,7 +106,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     if (strategy->showHeader(QStringLiteral("date"))) {
-        headerParts << MessageViewer::HeaderStyleUtil::strToHtml(MessageViewer::HeaderStyleUtil::dateString(message, isPrinting(), /* shortDate = */ true));
+        headerParts << mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* shortDate = */ true));
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
