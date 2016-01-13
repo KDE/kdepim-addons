@@ -61,7 +61,7 @@ namespace
 class Formatter : public MessageViewer::Interface::BodyPartFormatter
 {
 public:
-    Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    MessageViewer::Interface::BodyPartFormatter::Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::Interface::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
 
         if (!writer) {

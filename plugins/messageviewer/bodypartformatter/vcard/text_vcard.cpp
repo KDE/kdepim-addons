@@ -69,12 +69,12 @@ public:
     {
     }
 
-    Result format(BodyPart *part, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(BodyPart *part, MessageViewer::Interface::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
         return format(part, writer, 0);
     }
 
-    Result format(BodyPart *bodyPart, MessageViewer::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
+    Result format(BodyPart *bodyPart, MessageViewer::Interface::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
     {
         if (!writer) {
             return Ok;
