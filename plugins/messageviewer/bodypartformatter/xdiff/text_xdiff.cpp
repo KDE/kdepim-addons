@@ -32,7 +32,7 @@
 #include <messageviewer/bodypartformatter.h>
 #include <messageviewer/bodypart.h>
 #include <messageviewer/bodyparturlhandler.h>
-#include <messageviewer/webkitparthtmlwriter.h>
+#include <messageviewer/htmlwriter.h>
 
 #include <kstringhandler.h>
 #include <qdebug.h>
@@ -52,7 +52,7 @@ namespace
 class Formatter : public MessageViewer::Interface::BodyPartFormatter
 {
 public:
-    Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::Interface::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
 
         if (!writer) {
