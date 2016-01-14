@@ -1,7 +1,3 @@
-include_directories( 
-   ${CMAKE_SOURCE_DIR}/pimcommon/src/customtools/shorturlplugin/
-)
-
 set(shorturlengineswigets_SRCS
    ../shorturlwidgetng.cpp
    ../shorturlconfigurewidget.cpp

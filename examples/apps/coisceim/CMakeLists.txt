@@ -1,9 +1,5 @@
 project(coisceim)
 
-
-
-include_directories( ${CMAKE_SOURCE_DIR}/messageviewer )
-
 set (coisceim_widget_SRCS
   coisceimwidget.cpp
   note.cpp

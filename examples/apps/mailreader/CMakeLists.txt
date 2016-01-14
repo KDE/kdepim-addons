@@ -6,10 +6,6 @@ set(mailreader_SRCS
   mailreaderview.cpp
 )
 
-include_directories(
-  ${CMAKE_SOURCE_DIR}/libkdepim
-)
-
 ki18n_wrap_ui(mailreader_SRCS mailreaderview.ui prefs_base.ui prefs_messagelist.ui)
 
 kconfig_add_kcfg_files(mailreader_SRCS settings.kcfgc)
