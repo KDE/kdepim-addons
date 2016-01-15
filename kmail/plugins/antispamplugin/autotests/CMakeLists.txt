@@ -5,7 +5,7 @@ macro(add_kmail_antispamplugin_unittest _source _additional)
     add_test( ${_name} ${_name} )
 
     ecm_mark_as_test(kmail_antispamplugin-${_name})
-    target_link_libraries( ${_name} KF5::PimCommon Qt5::Test KF5::XmlGui KF5::Completion KF5::IconThemes KF5::MailCommon)
+    target_link_libraries( ${_name} KF5::PimCommon Qt5::Test KF5::XmlGui KF5::Completion KF5::IconThemes KF5::MailCommon KF5::Libkdepim)
 endmacro ()
 
 add_kmail_antispamplugin_unittest(antispamplugininterfacetest.cpp "../antispamplugininterface.cpp;../../common/antispamwizard.cpp")
