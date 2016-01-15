@@ -7,7 +7,7 @@ set(kmail_antivirusplugin_SRCS
 add_library(kmail_antivirusplugin MODULE ${kmail_antivirusplugin_SRCS})
 
 target_link_libraries(kmail_antivirusplugin
-  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui
+  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui KF5::Libkdepim
 )
 
 install(TARGETS kmail_antivirusplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
