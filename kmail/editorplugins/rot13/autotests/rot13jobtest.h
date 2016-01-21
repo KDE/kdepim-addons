@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #ifndef ROT13JOBTEST_H
 #define ROT13JOBTEST_H
 
