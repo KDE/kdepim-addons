@@ -1,0 +1,5 @@
+File=defaultgrantleeheaderstyleplugin.kcfg
+ClassName=DefaultGrantleeHeaderStylePluginSettings
+Mutators=true
+Singleton=true
+ItemAccessors=true

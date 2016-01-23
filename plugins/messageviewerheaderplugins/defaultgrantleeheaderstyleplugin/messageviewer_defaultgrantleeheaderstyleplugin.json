@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Name": "Default Grantlee Header Style", 
+        "ServiceTypes": [
+            "MessageViewerHeaderStyle/Plugin"
+        ], 
+        "Version": "1.0"
+    }, 
+    "X-KDE-MessageViewer-Header-Order": "100"
+}
