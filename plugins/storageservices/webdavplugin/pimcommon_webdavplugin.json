@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Webdav", 
+        "Name[cs]": "WebDav", 
         "Name[de]": "WebDAV", 
         "Name[pt]": "WebDAV", 
         "Name[sr@ijekavian]": "вебДАВ", 
