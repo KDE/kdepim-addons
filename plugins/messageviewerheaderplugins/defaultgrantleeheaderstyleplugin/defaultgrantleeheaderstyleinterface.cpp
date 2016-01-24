@@ -38,11 +38,13 @@ DefaultGrantleeHeaderStyleInterface::~DefaultGrantleeHeaderStyleInterface()
 
 void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
+
     const QStringList defaultThemePath = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewer/defaultthemes/"), QStandardPaths::LocateDirectory);
     if (!defaultThemePath.isEmpty()) {
+        const QString themeName = DefaultGrantleeHeaderStylePluginSettings::self()->themeName();
         mDefaultTheme = GrantleeTheme::ThemeManager::loadTheme(defaultThemePath.at(0),
-                                                               QStringLiteral("kmail"),
-                                                               QStringLiteral("kmail_theme"));
+                                                               themeName,
+                                                               QStringLiteral("kmail_default.desktop"));
     }
 
     KToggleAction *act  = new KToggleAction(mDefaultTheme.name(), this);
