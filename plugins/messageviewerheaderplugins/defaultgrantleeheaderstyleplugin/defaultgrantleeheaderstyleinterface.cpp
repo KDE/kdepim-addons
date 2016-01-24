@@ -21,11 +21,12 @@
 #include <grantleetheme/grantleethememanager.h>
 #include "globalsettings_base.h"
 #include <KToggleAction>
+#include <KActionCollection>
+#include <QStandardPaths>
 
 using namespace MessageViewer;
 DefaultGrantleeHeaderStyleInterface::DefaultGrantleeHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
-    : MessageViewer::HeaderStyleInterface(plugin, parent),
-      mThemeManager(Q_NULLPTR)
+    : MessageViewer::HeaderStyleInterface(plugin, parent)
 {
 
 }
@@ -37,31 +38,27 @@ DefaultGrantleeHeaderStyleInterface::~DefaultGrantleeHeaderStyleInterface()
 
 void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
-    mThemeManager = new GrantleeTheme::ThemeManager(QStringLiteral("mail"),
-            QStringLiteral("header.desktop"), ac,
-            QStringLiteral("messageviewer/themes/"));
-    mThemeManager->setDownloadNewStuffConfigFile(QStringLiteral("messageviewer_header_themes.knsrc"));
-    connect(mThemeManager, &GrantleeTheme::ThemeManager::grantleeThemeSelected, this, &DefaultGrantleeHeaderStyleInterface::slotDefaultGrantleeHeaders);
-    connect(mThemeManager, &GrantleeTheme::ThemeManager::updateThemes, this, &HeaderStyleInterface::styleUpdated);
+    const QStringList defaultThemePath = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewer/defaultthemes/"), QStandardPaths::LocateDirectory);
+    if (!defaultThemePath.isEmpty()) {
+        mDefaultTheme = GrantleeTheme::ThemeManager::loadTheme(defaultThemePath.at(0),
+                                                               QStringLiteral("kmail"),
+                                                               QStringLiteral("kmail_theme"));
+    }
 
-    mThemeManager->setActionGroup(actionGroup);
-    mThemeManager->setThemeMenu(menu);
-    const QString themeName = DefaultGrantleeHeaderStylePluginSettings::self()->themeName();
-    mHeaderStylePlugin->headerStyle()->setTheme(mThemeManager->theme(themeName));
+    KToggleAction *act  = new KToggleAction(mDefaultTheme.name(), this);
+    ac->addAction(QStringLiteral("default_grantlee_theme"), act);
+    connect(act, &KToggleAction::triggered, this, &DefaultGrantleeHeaderStyleInterface::slotStyleChanged);
+    mAction.append(act);
     addActionToMenu(menu, actionGroup);
 }
 
 void DefaultGrantleeHeaderStyleInterface::activateAction()
 {
-    KToggleAction *act = mThemeManager->actionForTheme();
-    if (act) {
-        act->setChecked(true);
-    }
+    mAction.at(0)->setChecked(true);
 }
 
 void DefaultGrantleeHeaderStyleInterface::slotDefaultGrantleeHeaders()
 {
-    const QString themeName = mThemeManager->configuredThemeName();
-    mHeaderStylePlugin->headerStyle()->setTheme(mThemeManager->theme(themeName));
+    mHeaderStylePlugin->headerStyle()->setTheme(mDefaultTheme);
     slotStyleChanged();
 }

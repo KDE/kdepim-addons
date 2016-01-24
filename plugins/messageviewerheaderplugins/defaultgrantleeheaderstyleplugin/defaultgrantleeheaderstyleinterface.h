@@ -19,11 +19,7 @@
 #define DEFAULTGRANTLEEHEADERSTYLEINTERFACE_H
 
 #include <messageviewer/headerstyleinterface.h>
-
-namespace GrantleeTheme
-{
-class ThemeManager;
-}
+#include <grantleetheme/grantleetheme.h>
 
 namespace MessageViewer
 {
@@ -40,7 +36,7 @@ public:
 private Q_SLOTS:
     void slotDefaultGrantleeHeaders();
 private:
-    GrantleeTheme::ThemeManager *mThemeManager;
+    GrantleeTheme::Theme mDefaultTheme;
 };
 
 }
