@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Name": "Default Grantlee Header Style", 
+        "Name[ca]": "Estil de capçalera «Grantlee» predeterminat", 
+        "Name[fi]": "Grantlee-oletusotsaketyyli", 
+        "Name[nl]": "Stijl met standaard Grantlee header", 
+        "Name[uk]": "Типовий стиль заголовків Grantlee", 
+        "Name[x-test]": "xxDefault Grantlee Header Stylexx", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 
