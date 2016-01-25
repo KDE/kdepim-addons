@@ -182,7 +182,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                                         "<td dir=\"%2\">%3</td></tr>\n")
                          .arg(i18n("Date: "))
                          .arg(mHeaderStyleUtil.directionOf(mHeaderStyleUtil.dateStr(message->date()->dateTime())))
-                         .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ false))));
+                         .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
     if (MessageViewer::MessageViewerSettings::self()->showUserAgent()) {
         if (strategy->showHeader(QStringLiteral("user-agent"))) {
             if (auto hdr = message->userAgent(false)) {
