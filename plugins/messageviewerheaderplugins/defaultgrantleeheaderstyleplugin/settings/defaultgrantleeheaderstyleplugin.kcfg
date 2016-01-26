@@ -5,7 +5,7 @@ xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/sta
 
   <group name="GrantleeDefaultTheme">
     <entry name="ThemeName" type="String">
-      <default></default>
+      <default>5.2</default>
     </entry>
   </group>
 
