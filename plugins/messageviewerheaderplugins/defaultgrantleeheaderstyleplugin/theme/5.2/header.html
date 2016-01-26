@@ -1,11 +1,11 @@
 <link href="{{ header.absoluteThemePath }}/style.css" rel="stylesheet" type="text/css" />
 <div class="fancy header" id="cont">
-<table class="outer"></table>
 </div>
 
 <div id="kmailPage">
 
 <div id="headerbox" dir="ltr">
+        {% if header.screenmode %}
         <div class="actiontable">
           <div class="actionrowtable">
               <div class="theactioncell"> {{ header.newmessageaction|safe }} </div>
@@ -19,6 +19,7 @@
               <div class="theactioncell"> {{ header.trashactionprintmessageaction|safe }} </div>
            </div>
         </div>
+        {% endif %}
 
         <div id="subject" dir="{{ header.subjectDir }}">{{ header.subject|safe }}</div>
 
