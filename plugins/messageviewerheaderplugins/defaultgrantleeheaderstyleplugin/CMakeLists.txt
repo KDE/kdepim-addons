@@ -18,3 +18,4 @@ target_link_libraries(messageviewer_defaultgrantleeheaderstyleplugin
 )
 
 install(TARGETS messageviewer_defaultgrantleeheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
+install(DIRECTORY theme/5.2 DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/themes/ )
