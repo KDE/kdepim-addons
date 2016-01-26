@@ -1,23 +1,25 @@
 <link href="{{ header.absoluteThemePath }}/style.css" rel="stylesheet" type="text/css" />
 <div class="fancy header" id="cont">
+<table class="outer"></table>
 </div>
 
 <div id="kmailPage">
 
 <div id="headerbox" dir="ltr">
+        <div class="actiontable">
+          <div class="actionrowtable">
+              <div class="theactioncell"> {{ header.newmessageaction|safe }} </div>
+              <div class="theactioncell"> {{ header.printpreviewmessageaction|safe }} </div>
+              <div class="theactioncell"> {{ header.printmessageaction|safe }} </div>
+              <div class="theactioncell theactionbigcell"></div>
+              <div class="theactioncell"> {{ header.replyaction|safe }} </div>
+              <div class="theactioncell"> {{ header.replyallaction|safe }} </div>
+              <div class="theactioncell"> {{ header.forwardaction|safe }} </div>
+              <div class="theactioncell"> {{ header.trashaction|safe }} </div>
+              <div class="theactioncell"> {{ header.trashactionprintmessageaction|safe }} </div>
+           </div>
+        </div>
 
-        <table class="actiontable">
-           <tr class="actionrowtable">
-              <td><div class="theactioncell"> {{ header.newmessageaction|safe }} </div></td>
-              <td><div class="theactioncell"> {{ header.printpreviewmessageaction|safe }} </div></td>
-              <td><div class="theactioncell"> {{ header.printmessageaction|safe }} </div></td>
-              <td><div class="theactioncell theactionbigcell"></div></td>
-              <td><div class="theactioncell"> {{ header.replyaction|safe }} </div></td>
-              <td><div class="theactioncell"> {{ header.replyallaction|safe }} </div></td>
-              <td><div class="theactioncell"> {{ header.forwardaction|safe }} </div></td>
-              <td><div class="theactioncell"> {{ header.trashaction|safe }} </div></td>
-           </tr>
-        </table>
         <div id="subject" dir="{{ header.subjectDir }}">{{ header.subject|safe }}</div>
 
 	<div id="photo">
