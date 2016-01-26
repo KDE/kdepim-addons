@@ -1,19 +1,21 @@
 <link href="{{ header.absoluteThemePath }}/style.css" rel="stylesheet" type="text/css" />
 <div class="fancy header" id="cont">
-<table class="outer"></table>
 </div>
 
 <div id="kmailPage">
 
 <div id="headerbox" dir="ltr">
-        <table>
-           <tr>
-              <td><div> {{ header.newmessageaction|safe }} </div></td>
-              <td><div> {{ header.printpreviewmessageaction|safe }} </div></td>
-              <td><div> {{ header.printmessageaction|safe }} </div></td>
+
+        <table class="actiontable">
+           <tr class="actionrowtable">
+              <td><div class="theactioncell"> {{ header.newmessageaction|safe }} </div></td>
+              <td><div class="theactioncell"> {{ header.printpreviewmessageaction|safe }} </div></td>
+              <td><div class="theactioncell"> {{ header.printmessageaction|safe }} </div></td>
+              <td><div class="theactioncell theactionbigcell"></div></td>
+              <td><div class="theactioncell"> {{ header.trashaction|safe }} </div></td>
            </tr>
         </table>
-	<div id="subject" dir="{{ header.subjectDir }}">{{ header.subject|safe }}</div>
+        <div id="subject" dir="{{ header.subjectDir }}">{{ header.subject|safe }}</div>
 
 	<div id="photo">
 		{% if header.photourl %}

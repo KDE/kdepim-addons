@@ -88,6 +88,23 @@ div.headerrightdate {
     font-weight: bold;
     padding: 0.1em;
 }
+.actiontable {
+   display: table;
+   width: 100%;
+}
+div.actionrowtable {
+   display:table-row;
+}
+div.theactioncell {
+    display: table-cell;
+    padding: 0px 2px; /* just some padding, if needed*/
+    white-space: pre; /* this will avoid line breaks*/
+}
+div.theactionbigcell{
+    display: table-cell;
+    width: 100%; /* this will shrink other cells */
+}
+
 #kmailContent {
     clear: both;
     margin-top: 10px;
