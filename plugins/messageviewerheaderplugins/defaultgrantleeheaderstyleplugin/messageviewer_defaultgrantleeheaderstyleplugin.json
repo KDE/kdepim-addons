@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Default Grantlee Header Style", 
+        "Name[ca@valencia]": "Estil de capçalera «Grantlee» predeterminat", 
         "Name[ca]": "Estil de capçalera «Grantlee» predeterminat", 
         "Name[es]": "Estilo de encabezado predeterminado Grantlee", 
         "Name[fi]": "Grantlee-oletusotsaketyyli", 
