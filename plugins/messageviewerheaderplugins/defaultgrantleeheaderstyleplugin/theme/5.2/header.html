@@ -15,8 +15,10 @@
               <div class="theactioncell"> {{ header.replyaction|safe }} </div>
               <div class="theactioncell"> {{ header.replyallaction|safe }} </div>
               <div class="theactioncell"> {{ header.forwardaction|safe }} </div>
+              {% if header.readOnlyMessage %}
+              {% else %}
               <div class="theactioncell"> {{ header.trashaction|safe }} </div>
-              <div class="theactioncell"> {{ header.trashactionprintmessageaction|safe }} </div>
+              {% endif %}
            </div>
         </div>
         {% endif %}
