@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Insert Special Character", 
+        "ServiceTypes": [
+            "KMailEditor/Plugin"
+        ], 
+        "Version": "1.0"
+    }
+}
