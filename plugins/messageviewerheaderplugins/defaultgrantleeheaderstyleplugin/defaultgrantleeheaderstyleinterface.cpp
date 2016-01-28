@@ -43,8 +43,8 @@ void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActio
     if (!defaultThemePath.isEmpty()) {
         const QString themeName = DefaultGrantleeHeaderStylePluginSettings::self()->themeName();
         mDefaultTheme = GrantleeTheme::ThemeManager::loadTheme(defaultThemePath.at(0),
-                                                               themeName,
-                                                               QStringLiteral("kmail_default.desktop"));
+                        themeName,
+                        QStringLiteral("kmail_default.desktop"));
     }
 
     KToggleAction *act  = new KToggleAction(mDefaultTheme.name(), this);
