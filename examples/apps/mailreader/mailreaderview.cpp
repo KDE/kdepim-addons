@@ -59,7 +59,7 @@ void mailreaderView::showItem(const Akonadi::Item &item)
     qDebug() << "Show item with ID: " << item.id();
     m_readerWin->enableMessageDisplay();
     m_readerWin->setDecryptMessageOverwrite(false);
-    m_readerWin->setMessageItem(item, MessageViewer::Viewer::Force);
+    m_readerWin->setMessageItem(item, MessageViewer::Force);
 }
 
 void mailreaderView::showAboutPage()

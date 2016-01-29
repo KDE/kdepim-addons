@@ -67,7 +67,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     // TODO: Factor our update and detach into base class
-    void update(MessageViewer::Viewer::UpdateMode);
+    void update(MessageViewer::UpdateMode);
 
 private:
     void checkEmail();
