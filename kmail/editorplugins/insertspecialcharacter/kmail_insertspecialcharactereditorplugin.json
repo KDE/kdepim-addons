@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Insert Special Character", 
+        "Name[ca]": "Inserció d'un caràcter especial", 
+        "Name[nl]": "Speciaal teken invoegen", 
+        "Name[pt]": "Inserir um Carácter Especial", 
+        "Name[pt_BR]": "Inserir caracteres especiais", 
+        "Name[uk]": "Вставлення спеціального символу", 
+        "Name[x-test]": "xxInsert Special Characterxx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
