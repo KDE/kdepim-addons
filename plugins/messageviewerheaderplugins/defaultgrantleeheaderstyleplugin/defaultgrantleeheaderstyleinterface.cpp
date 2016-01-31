@@ -46,10 +46,10 @@ void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActio
                         themeName,
                         QStringLiteral("kmail_default.desktop"));
     }
-
+    mHeaderStylePlugin->headerStyle()->setTheme(mDefaultTheme);
     KToggleAction *act  = new KToggleAction(mDefaultTheme.name(), this);
     ac->addAction(QStringLiteral("default_grantlee_theme"), act);
-    connect(act, &KToggleAction::triggered, this, &DefaultGrantleeHeaderStyleInterface::slotStyleChanged);
+    connect(act, &KToggleAction::triggered, this, &DefaultGrantleeHeaderStyleInterface::slotDefaultGrantleeHeaders);
     mAction.append(act);
     addActionToMenu(menu, actionGroup);
 }
