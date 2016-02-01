@@ -28,7 +28,8 @@
 #include <KContacts/Addressee>
 
 CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent)
+    : PimCommon::GenericPluginInterface(parent),
+      mAction(Q_NULLPTR)
 {
 
 }
@@ -38,12 +39,20 @@ CheckGravatarPluginInterface::~CheckGravatarPluginInterface()
 
 }
 
+void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+{
+    Q_UNUSED(numberOfSelectedCollections);
+    if (mAction) {
+        mAction->setEnabled(numberOfSelectedItems > 0);
+    }
+}
+
 void CheckGravatarPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("search_gravatar"));
-    action->setText(i18n("Check Gravatar..."));
-    connect(action, &QAction::triggered, this, &CheckGravatarPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    mAction = ac->addAction(QStringLiteral("search_gravatar"));
+    mAction->setText(i18n("Check Gravatar..."));
+    connect(mAction, &QAction::triggered, this, &CheckGravatarPluginInterface::slotActivated);
+    PimCommon::ActionType type(mAction, PimCommon::ActionType::Tools);
     setActionType(type);
 }
 

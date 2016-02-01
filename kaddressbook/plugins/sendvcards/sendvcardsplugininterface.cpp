@@ -25,7 +25,8 @@
 #include <QDebug>
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent)
+    : PimCommon::GenericPluginInterface(parent),
+      mAction(Q_NULLPTR)
 {
 
 }
@@ -40,13 +41,21 @@ bool SendVcardsPluginInterface::hasPopupMenuSupport() const
     return true;
 }
 
+void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+{
+    Q_UNUSED(numberOfSelectedCollections);
+    if (mAction) {
+        mAction->setEnabled(numberOfSelectedItems > 0);
+    }
+}
+
 void SendVcardsPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("send_vcards"));
-    action->setText(i18n("Send vCards..."));
-    action->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
-    connect(action, &QAction::triggered, this, &SendVcardsPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Action);
+    mAction = ac->addAction(QStringLiteral("send_vcards"));
+    mAction->setText(i18n("Send vCards..."));
+    mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
+    connect(mAction, &QAction::triggered, this, &SendVcardsPluginInterface::slotActivated);
+    PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);
     setActionType(type);
 }
 

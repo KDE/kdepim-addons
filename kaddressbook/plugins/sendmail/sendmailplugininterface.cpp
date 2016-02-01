@@ -26,7 +26,8 @@
 #include <QDesktopServices>
 
 SendMailPluginInterface::SendMailPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent)
+    : PimCommon::GenericPluginInterface(parent),
+      mAction(Q_NULLPTR)
 {
 
 }
@@ -38,11 +39,11 @@ SendMailPluginInterface::~SendMailPluginInterface()
 
 void SendMailPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("send_mail"));
-    action->setText(i18n("Send an email..."));
-    action->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
-    connect(action, &QAction::triggered, this, &SendMailPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Action);
+    mAction = ac->addAction(QStringLiteral("send_mail"));
+    mAction->setText(i18n("Send an email..."));
+    mAction->setIcon(QIcon::fromTheme(QStringLiteral("mail-message-new")));
+    connect(mAction, &QAction::triggered, this, &SendMailPluginInterface::slotActivated);
+    PimCommon::ActionType type(mAction, PimCommon::ActionType::Action);
     setActionType(type);
 }
 
@@ -59,6 +60,14 @@ void SendMailPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
 PimCommon::GenericPluginInterface::RequireTypes SendMailPluginInterface::requires() const
 {
     return PimCommon::GenericPluginInterface::CurrentItems;
+}
+
+void SendMailPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
+{
+    Q_UNUSED(numberOfSelectedCollections);
+    if (mAction) {
+        mAction->setEnabled(numberOfSelectedItems > 0);
+    }
 }
 
 void SendMailPluginInterface::exec()

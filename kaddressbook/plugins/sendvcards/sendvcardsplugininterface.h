@@ -32,12 +32,14 @@ public:
     PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
+    void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections) Q_DECL_OVERRIDE;
 private Q_SLOTS:
     void slotActivated();
     void slotSendVcardsError(const QString &error);
 
 private:
     Akonadi::Item::List mListItems;
+    QAction *mAction;
 };
 
 #endif // SENDVCARDSPLUGININTERFACE_H
