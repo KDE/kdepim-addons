@@ -2,6 +2,7 @@
     "KPlugin": {
         "Name": "Insert Special Character", 
         "Name[ca]": "Inserció d'un caràcter especial", 
+        "Name[fi]": "Lisää erikoismerkki", 
         "Name[gl]": "Inserir un carácter especial", 
         "Name[nl]": "Speciaal teken invoegen", 
         "Name[pl]": "Wstaw znak specjalny", 
