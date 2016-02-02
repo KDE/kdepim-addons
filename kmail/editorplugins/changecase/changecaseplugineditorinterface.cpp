@@ -20,9 +20,11 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <KActionMenuChangeCase>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+    : MessageComposer::PluginEditorInterface(parent),
+      mType(Unknown)
 {
 
 }
@@ -34,19 +36,53 @@ ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
 
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Insert Special Character..."), this);
-    ac->addAction(QStringLiteral("insert_special_character"), action);
-    connect(action, &QAction::triggered, this, &ChangeCasePluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
+    PimCommon::KActionMenuChangeCase *ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
+    ChangeCaseMenu->appendInActionCollection(ac);
+    ac->addAction(QStringLiteral("change_case_menu"), ChangeCaseMenu);
+    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &ChangeCasePluginEditorInterface::slotUpperCase);
+    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &ChangeCasePluginEditorInterface::slotLowerCase);
+    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &ChangeCasePluginEditorInterface::slotSentenceCase);
+    connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::reverseCase, this, &ChangeCasePluginEditorInterface::slotReverseCase);
+    MessageComposer::ActionType type(ChangeCaseMenu, MessageComposer::ActionType::Edit);
     setActionType(type);
-}
-
-void ChangeCasePluginEditorInterface::slotActivated()
-{
-    Q_EMIT emitPluginActivated(this);
 }
 
 void ChangeCasePluginEditorInterface::exec()
 {
+    switch(mType) {
+    case Unknown:
+        break;
+    case UpperCase:
+        break;
+    case LowerCase:
+        break;
+    case SentenseCase:
+        break;
+    case ReverseCase:
+        break;
+    }
 }
 
+void ChangeCasePluginEditorInterface::slotUpperCase()
+{
+    mType = UpperCase;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void ChangeCasePluginEditorInterface::slotLowerCase()
+{
+    mType = LowerCase;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void ChangeCasePluginEditorInterface::slotSentenceCase()
+{
+    mType = SentenseCase;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void ChangeCasePluginEditorInterface::slotReverseCase()
+{
+    mType = ReverseCase;
+    Q_EMIT emitPluginActivated(this);
+}

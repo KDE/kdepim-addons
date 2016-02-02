@@ -32,8 +32,20 @@ public:
     void exec() Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void slotActivated();
+    void slotUpperCase();
+    void slotLowerCase();
+    void slotSentenceCase();
+    void slotReverseCase();
+
 private:
+    enum ChangeCaseType {
+        Unknown = -1,
+        UpperCase = 0,
+        LowerCase,
+        SentenseCase,
+        ReverseCase
+    };
+    ChangeCaseType mType;
 };
 
 #endif
