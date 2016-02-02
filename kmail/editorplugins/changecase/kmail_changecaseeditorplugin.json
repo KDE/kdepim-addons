@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Change Case", 
+        "ServiceTypes": [
+            "KMailEditor/Plugin"
+        ], 
+        "Version": "1.0"
+    }
+}
