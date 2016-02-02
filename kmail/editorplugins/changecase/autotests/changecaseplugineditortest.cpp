@@ -15,26 +15,26 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "insertspecialcharacterplugineditortest.h"
-#include "../insertspecialcharacterplugineditor.h"
+#include "changecaseplugineditortest.h"
+#include "../changecaseplugineditor.h"
 #include <KActionCollection>
 #include <QTest>
 
-InsertSpecialCharacterPluginEditorTest::InsertSpecialCharacterPluginEditorTest(QObject *parent)
+changecasePluginEditorTest::changecasePluginEditorTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-InsertSpecialCharacterPluginEditorTest::~InsertSpecialCharacterPluginEditorTest()
+changecasePluginEditorTest::~changecasePluginEditorTest()
 {
 
 }
 
-void InsertSpecialCharacterPluginEditorTest::shouldHaveDefaultValue()
+void changecasePluginEditorTest::shouldHaveDefaultValue()
 {
-    InsertSpecialCharacterPluginEditor plugin;
+    changecasePluginEditor plugin;
     QVERIFY(plugin.createInterface(new KActionCollection(this)));
 }
 
-QTEST_MAIN(InsertSpecialCharacterPluginEditorTest)
+QTEST_MAIN(changecasePluginEditorTest)

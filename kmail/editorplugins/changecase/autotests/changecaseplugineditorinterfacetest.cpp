@@ -15,19 +15,19 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "insertspecialcharacterplugineditorinterfacetest.h"
-#include "../insertspecialcharacterplugineditorinterface.h"
+#include "changecaseplugineditorinterfacetest.h"
+#include "../changecaseplugineditorinterface.h"
 #include <QTest>
 
-InsertSpecialCharacterPluginEditorInterfaceTest::InsertSpecialCharacterPluginEditorInterfaceTest(QObject *parent)
+changecasePluginEditorInterfaceTest::changecasePluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEditorInterfaceTest()
+changecasePluginEditorInterfaceTest::~changecasePluginEditorInterfaceTest()
 {
 
 }
 
-QTEST_MAIN(InsertSpecialCharacterPluginEditorInterfaceTest)
+QTEST_MAIN(changecasePluginEditorInterfaceTest)
