@@ -19,15 +19,15 @@
 #include "../changecaseplugineditorinterface.h"
 #include <QTest>
 
-changecasePluginEditorInterfaceTest::changecasePluginEditorInterfaceTest(QObject *parent)
+ChangeCasePluginEditorInterfaceTest::ChangeCasePluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-changecasePluginEditorInterfaceTest::~changecasePluginEditorInterfaceTest()
+ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest()
 {
 
 }
 
-QTEST_MAIN(changecasePluginEditorInterfaceTest)
+QTEST_MAIN(ChangeCasePluginEditorInterfaceTest)

@@ -20,21 +20,21 @@
 #include <KActionCollection>
 #include <QTest>
 
-changecasePluginEditorTest::changecasePluginEditorTest(QObject *parent)
+ChangeCasePluginEditorTest::ChangeCasePluginEditorTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-changecasePluginEditorTest::~changecasePluginEditorTest()
+ChangeCasePluginEditorTest::~ChangeCasePluginEditorTest()
 {
 
 }
 
-void changecasePluginEditorTest::shouldHaveDefaultValue()
+void ChangeCasePluginEditorTest::shouldHaveDefaultValue()
 {
-    changecasePluginEditor plugin;
+    ChangeCasePluginEditor plugin;
     QVERIFY(plugin.createInterface(new KActionCollection(this)));
 }
 
-QTEST_MAIN(changecasePluginEditorTest)
+QTEST_MAIN(ChangeCasePluginEditorTest)

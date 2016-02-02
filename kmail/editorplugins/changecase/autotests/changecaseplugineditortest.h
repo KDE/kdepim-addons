@@ -15,17 +15,17 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef changecasePLUGINEDITORTEST_H
-#define changecasePLUGINEDITORTEST_H
+#ifndef ChangeCasePLUGINEDITORTEST_H
+#define ChangeCasePLUGINEDITORTEST_H
 
 #include <QObject>
 
-class changecasePluginEditorTest : public QObject
+class ChangeCasePluginEditorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit changecasePluginEditorTest(QObject *parent = Q_NULLPTR);
-    ~changecasePluginEditorTest();
+    explicit ChangeCasePluginEditorTest(QObject *parent = Q_NULLPTR);
+    ~ChangeCasePluginEditorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

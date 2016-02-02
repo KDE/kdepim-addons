@@ -20,22 +20,22 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(changecasePluginEditorFactory, "kmail_changecaseeditorplugin.json", registerPlugin<changecasePluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_changecaseeditorplugin.json", registerPlugin<ChangeCasePluginEditor>();)
 
-changecasePluginEditor::changecasePluginEditor(QObject *parent, const QList<QVariant> &)
+ChangeCasePluginEditor::ChangeCasePluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
 
 }
 
-changecasePluginEditor::~changecasePluginEditor()
+ChangeCasePluginEditor::~ChangeCasePluginEditor()
 {
 
 }
 
-MessageComposer::PluginEditorInterface *changecasePluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(KActionCollection *ac, QObject *parent)
 {
-    changecasePluginEditorInterface *interface = new changecasePluginEditorInterface(parent);
+    ChangeCasePluginEditorInterface *interface = new ChangeCasePluginEditorInterface(parent);
     interface->createAction(ac);
     return interface;
 }

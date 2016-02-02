@@ -21,32 +21,32 @@
 #include <KActionCollection>
 #include <QAction>
 
-changecasePluginEditorInterface::changecasePluginEditorInterface(QObject *parent)
+ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
 
 }
 
-changecasePluginEditorInterface::~changecasePluginEditorInterface()
+ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
 {
 
 }
 
-void changecasePluginEditorInterface::createAction(KActionCollection *ac)
+void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
     QAction *action = new QAction(i18n("Insert Special Character..."), this);
     ac->addAction(QStringLiteral("insert_special_character"), action);
-    connect(action, &QAction::triggered, this, &changecasePluginEditorInterface::slotActivated);
+    connect(action, &QAction::triggered, this, &ChangeCasePluginEditorInterface::slotActivated);
     MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
     setActionType(type);
 }
 
-void changecasePluginEditorInterface::slotActivated()
+void ChangeCasePluginEditorInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
 }
 
-void changecasePluginEditorInterface::exec()
+void ChangeCasePluginEditorInterface::exec()
 {
 }
 

@@ -15,18 +15,18 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef CHANGECASEPLUGINEDITORINTERFACE_H
-#define CHANGECASEPLUGINEDITORINTERFACE_H
+#ifndef ChangeCasePLUGINEDITORINTERFACE_H
+#define ChangeCasePLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
 #include <QPointer>
 
-class changecasePluginEditorInterface : public MessageComposer::PluginEditorInterface
+class ChangeCasePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
 public:
-    explicit changecasePluginEditorInterface(QObject *parent = Q_NULLPTR);
-    ~changecasePluginEditorInterface();
+    explicit ChangeCasePluginEditorInterface(QObject *parent = Q_NULLPTR);
+    ~ChangeCasePluginEditorInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
