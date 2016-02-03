@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Insert Special Character", 
+        "Name[ca@valencia]": "Inserció d'un caràcter especial", 
         "Name[ca]": "Inserció d'un caràcter especial", 
         "Name[es]": "Insertar carácter especial", 
         "Name[fi]": "Lisää erikoismerkki", 
@@ -17,6 +18,6 @@
             "KMailEditor/Plugin"
         ], 
         "Version": "1.0"
-    },
+    }, 
     "X-KDE-KMailEditor-Order": "2"
 }

@@ -1,10 +1,18 @@
 {
     "KPlugin": {
         "Name": "Change Case", 
+        "Name[ca@valencia]": "Canvia la caixa", 
+        "Name[ca]": "Canvia la caixa", 
+        "Name[nl]": "Hoofd-/kleine letters wijzigen", 
+        "Name[pt]": "Mudar a Capitalização", 
+        "Name[pt_BR]": "Alterar maiúsculas e minúsculas", 
+        "Name[sk]": "Zmeniť veľkosť písmen", 
+        "Name[uk]": "Змінити регістр", 
+        "Name[x-test]": "xxChange Casexx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
         "Version": "1.0"
-    },
+    }, 
     "X-KDE-KMailEditor-Order": "1"
 }
