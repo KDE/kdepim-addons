@@ -3,6 +3,7 @@
         "Name": "Default Grantlee Header Style", 
         "Name[ca@valencia]": "Estil de capçalera «Grantlee» predeterminat", 
         "Name[ca]": "Estil de capçalera «Grantlee» predeterminat", 
+        "Name[de]": "Vorspann-Design „Standard-Grantlee“", 
         "Name[es]": "Estilo de encabezado predeterminado Grantlee", 
         "Name[fi]": "Grantlee-oletusotsaketyyli", 
         "Name[gl]": "Estilo de cabeceira predeterminado de Grantlee", 
@@ -16,6 +17,7 @@
         "Name[sr@ijekavianlatin]": "Podrazumevani Grantleejev stil zaglavlja", 
         "Name[sr@latin]": "Podrazumevani Grantleejev stil zaglavlja", 
         "Name[sr]": "Подразумевани Грантлијев стил заглавља", 
+        "Name[sv]": "Grantlee-standardtema för huvudstil", 
         "Name[uk]": "Типовий стиль заголовків Grantlee", 
         "Name[x-test]": "xxDefault Grantlee Header Stylexx", 
         "ServiceTypes": [
