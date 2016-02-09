@@ -170,10 +170,10 @@ public:
             bodyPart->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
             const QString href = QStringLiteral("file:") + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att->name()));
 
-            const QString iconName = MessageViewer::Util::fileNameForMimetype(att->mimeTag(),
-                                     KIconLoader::Desktop, attFileName);
+            const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::fileNameForMimetype(att->mimeTag(),
+                                     KIconLoader::Desktop, attFileName)).url();
 
-            writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"file:///") +
+            writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"") +
                           iconName + QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") + label +
                           QStringLiteral("</a></div><br/>"));
         }
