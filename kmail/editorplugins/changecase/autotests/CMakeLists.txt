@@ -1,5 +1,8 @@
+set(changecaseplugineditor_common_SRCS)
+ecm_qt_declare_logging_category(changecaseplugineditor_common_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME log_kmail_changecaseeditorplugin)
+
 macro(add_kmail_editorplugin_unittest _source _additional)
-    set( _test ${_source} ${_additional})
+    set( _test ${_source} ${_additional} ${changecaseplugineditor_common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test( ${_name} ${_name} )

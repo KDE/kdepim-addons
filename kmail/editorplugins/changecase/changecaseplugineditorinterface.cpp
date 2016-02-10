@@ -16,6 +16,7 @@
 */
 
 #include "changecaseplugineditorinterface.h"
+#include "changecaseeditorplugin_debug.h"
 #include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
@@ -58,7 +59,7 @@ void ChangeCasePluginEditorInterface::exec()
 {
     switch(mType) {
     case Unknown:
-        qDebug() << " There is an error here. We can't call this plugin with unknown type";
+        qCDebug(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
         break;
     case UpperCase:
         upperCase();

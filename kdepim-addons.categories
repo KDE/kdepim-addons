@@ -8,3 +8,4 @@ log_korganizer_picoftheday_plugins kdepim-addons (korganizer picoftheday plugins
 log_kaddressbook_sendvcards kdepim-addons (kaddressbook sendvcards plugins)
 log_kaddressbook_sendmail kdepim-addons (kaddressbook sendmail plugins)
 log_kmail_zoomtexteditorplugin kdepim-addons (kmail zoomtext editor plugins)
+log_kmail_changecaseeditorplugin kdepim-addons (kmail changecase editor plugins)

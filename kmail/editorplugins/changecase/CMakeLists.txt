@@ -3,6 +3,9 @@ set(kmail_changecaseeditorplugin_SRCS
     changecaseplugineditorinterface.cpp
 )
 
+ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME log_kmail_changecaseeditorplugin)
+
+
 add_library(kmail_changecaseeditorplugin MODULE ${kmail_changecaseeditorplugin_SRCS})
 
 target_link_libraries(kmail_changecaseeditorplugin
