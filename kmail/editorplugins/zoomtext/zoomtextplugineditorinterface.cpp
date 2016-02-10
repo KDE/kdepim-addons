@@ -21,6 +21,7 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QDebug>
+#include <KActionMenu>
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent),
@@ -41,17 +42,48 @@ bool ZoomTextPluginEditorInterface::hasPopupMenuSupport() const
 
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
-#if 0
-    PimCommon::KActionMenuZoomText *ZoomTextMenu = new PimCommon::KActionMenuZoomText(this);
-    ZoomTextMenu->appendInActionCollection(ac);
-    ac->addAction(QStringLiteral("change_case_menu"), ZoomTextMenu);
-    connect(ZoomTextMenu, &PimCommon::KActionMenuZoomText::upperCase, this, &ZoomTextPluginEditorInterface::slotUpperCase);
-    connect(ZoomTextMenu, &PimCommon::KActionMenuZoomText::lowerCase, this, &ZoomTextPluginEditorInterface::slotLowerCase);
-    connect(ZoomTextMenu, &PimCommon::KActionMenuZoomText::sentenceCase, this, &ZoomTextPluginEditorInterface::slotSentenceCase);
-    connect(ZoomTextMenu, &PimCommon::KActionMenuZoomText::reverseCase, this, &ZoomTextPluginEditorInterface::slotReverseCase);
-    MessageComposer::ActionType type(ZoomTextMenu, MessageComposer::ActionType::Edit);
+    KActionMenu *zoomMenu = new KActionMenu(i18n("Zoom..."), this);
+    ac->addAction(QStringLiteral("zoom_menu"), zoomMenu);
+
+    QAction *zoomInAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-in")), i18n("&Zoom In"), this);
+    zoomMenu->addAction(zoomInAction);
+    ac->addAction(QStringLiteral("zoom_in"), zoomInAction);
+    connect(zoomInAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomIn);
+    ac->setDefaultShortcut(zoomInAction, QKeySequence(Qt::CTRL | Qt::Key_Plus));
+
+    QAction *zoomOutAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), i18n("Zoom &Out"), this);
+    zoomMenu->addAction(zoomOutAction);
+    ac->addAction(QStringLiteral("zoom_out"), zoomOutAction);
+    connect(zoomOutAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomOut);
+    ac->setDefaultShortcut(zoomOutAction, QKeySequence(Qt::CTRL | Qt::Key_Minus));
+
+    zoomMenu->addSeparator();
+    QAction *zoomResetAction = new QAction(i18n("Reset"), this);
+    zoomMenu->addAction(zoomResetAction);
+    ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
+    connect(zoomResetAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomReset);
+    ac->setDefaultShortcut(zoomResetAction, QKeySequence(Qt::CTRL | Qt::Key_0));
+
+    MessageComposer::ActionType type(zoomMenu, MessageComposer::ActionType::Edit);
     setActionType(type);
-#endif
+}
+
+void ZoomTextPluginEditorInterface::slotZoomOut()
+{
+    mType = ZoomOut;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void ZoomTextPluginEditorInterface::slotZoomIn()
+{
+    mType = ZoomIn;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void ZoomTextPluginEditorInterface::slotZoomReset()
+{
+    mType = ZoomReset;
+    Q_EMIT emitPluginActivated(this);
 }
 
 void ZoomTextPluginEditorInterface::exec()
@@ -76,12 +108,3 @@ void ZoomTextPluginEditorInterface::exec()
     }
 #endif
 }
-
-
-#if 0
-void ZoomTextPluginEditorInterface::slotReverseCase()
-{
-    mType = ReverseCase;
-    Q_EMIT emitPluginActivated(this);
-}
-#endif

@@ -33,10 +33,15 @@ public:
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
 
+private Q_SLOTS:
+    void slotZoomOut();
+
+    void slotZoomIn();
+    void slotZoomReset();
 private:
     enum ZoomTextType {
         Unknown = -1,
-        Reset = 0,
+        ZoomReset = 0,
         ZoomIn,
         ZoomOut
     };
