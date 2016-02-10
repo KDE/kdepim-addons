@@ -23,7 +23,6 @@
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
 #include <QAction>
-#include <QDebug>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent),

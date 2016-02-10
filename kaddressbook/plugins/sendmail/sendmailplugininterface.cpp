@@ -22,7 +22,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QDebug>
 #include <QDesktopServices>
 
 SendMailPluginInterface::SendMailPluginInterface(QObject *parent)

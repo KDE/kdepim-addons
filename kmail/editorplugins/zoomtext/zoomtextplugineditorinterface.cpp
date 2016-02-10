@@ -21,7 +21,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QDebug>
 #include <KActionMenu>
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)

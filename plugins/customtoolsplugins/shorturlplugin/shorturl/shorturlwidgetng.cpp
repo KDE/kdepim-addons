@@ -30,7 +30,6 @@
 #include <QIcon>
 #include <QNetworkConfigurationManager>
 
-#include <QDebug>
 #include <QLabel>
 #include <QGridLayout>
 #include <QPushButton>

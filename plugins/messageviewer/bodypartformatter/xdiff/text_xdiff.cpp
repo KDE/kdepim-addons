@@ -35,7 +35,6 @@
 #include <messageviewer/htmlwriter.h>
 
 #include <kstringhandler.h>
-#include <qdebug.h>
 #include <kmessagebox.h>
 
 #include <QUrl>

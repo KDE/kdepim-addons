@@ -33,7 +33,6 @@
 
 #include <kcontacts/addressee.h>
 #include <kcombobox.h>
-#include <qdebug.h>
 #include <QHBoxLayout>
 #include <kiconloader.h>
 #include <KLocalizedString>
