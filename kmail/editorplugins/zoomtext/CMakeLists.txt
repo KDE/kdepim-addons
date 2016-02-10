@@ -3,6 +3,8 @@ set(kmail_zoomtexteditorplugin_SRCS
     zoomtextplugineditorinterface.cpp
 )
 
+ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME log_kmail_zoomtexteditorplugin)
+
 add_library(kmail_zoomtexteditorplugin MODULE ${kmail_zoomtexteditorplugin_SRCS})
 
 target_link_libraries(kmail_zoomtexteditorplugin

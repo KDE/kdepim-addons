@@ -16,6 +16,7 @@
 */
 
 #include "zoomtextplugineditorinterface.h"
+#include "zoomtexteditorplugin_debug.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -90,7 +91,7 @@ void ZoomTextPluginEditorInterface::exec()
 {
     switch(mType) {
     case Unknown:
-        qDebug() << " There is an error here. We can't call this plugin with unknown type";
+        qCDebug(KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
         break;
     case ZoomReset:
         zoomReset();
