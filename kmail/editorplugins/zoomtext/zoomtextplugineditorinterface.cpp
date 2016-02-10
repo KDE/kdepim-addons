@@ -88,23 +88,34 @@ void ZoomTextPluginEditorInterface::slotZoomReset()
 
 void ZoomTextPluginEditorInterface::exec()
 {
-#if 0
     switch(mType) {
     case Unknown:
         qDebug() << " There is an error here. We can't call this plugin with unknown type";
         break;
-    case UpperCase:
-        upperCase();
+    case ZoomReset:
+        zoomReset();
         break;
-    case LowerCase:
-        lowerCase();
+    case ZoomIn:
+        zoomIn();
         break;
-    case SentenseCase:
-        sentenceCase();
-        break;
-    case ReverseCase:
-        reverseCase();
+    case ZoomOut:
+        zoomOut();
         break;
     }
-#endif
+    mType = Unknown;
+}
+
+void ZoomTextPluginEditorInterface::zoomReset()
+{
+    richTextEditor()->slotZoomReset();
+}
+
+void ZoomTextPluginEditorInterface::zoomIn()
+{
+    richTextEditor()->zoomIn();
+}
+
+void ZoomTextPluginEditorInterface::zoomOut()
+{
+    richTextEditor()->zoomOut();
 }

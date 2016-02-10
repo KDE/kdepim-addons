@@ -39,6 +39,9 @@ private Q_SLOTS:
     void slotZoomIn();
     void slotZoomReset();
 private:
+    void zoomReset();
+    void zoomIn();
+    void zoomOut();
     enum ZoomTextType {
         Unknown = -1,
         ZoomReset = 0,
