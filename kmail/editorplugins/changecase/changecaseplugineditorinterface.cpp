@@ -73,6 +73,7 @@ void ChangeCasePluginEditorInterface::exec()
         reverseCase();
         break;
     }
+    mType = Unknown;
 }
 
 void ChangeCasePluginEditorInterface::sentenceCase()
