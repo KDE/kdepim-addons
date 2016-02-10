@@ -25,7 +25,6 @@ endmacro ()
 add_messageviewer_header_unittest( briefheaderstyleplugintest.cpp "../briefheaderstyleplugin/briefheaderstrategy.cpp;../briefheaderstyleplugin/briefheaderstyle.cpp;../briefheaderstyleplugin/briefheaderstyleplugin.cpp;../briefheaderstyleplugin/briefheaderstyleinterface.cpp")
 
 add_messageviewer_header_unittest( allheaderstyleplugintest.cpp "../allheaderstyleplugin/allheaderstrategy.cpp;../allheaderstyleplugin/allheaderstyleplugin.cpp;../allheaderstyleplugin/allheaderstyleinterface.cpp")
-add_messageviewer_header_unittest( customheaderstyleplugintest.cpp "../customheaderstyleplugin/customheaderstrategy.cpp;../customheaderstyleplugin/customheaderstyle.cpp;../customheaderstyleplugin/customheaderstyleplugin.cpp;../customheaderstyleplugin/customheaderstyleinterface.cpp" )
 
 add_messageviewer_header_unittest( enterpriseheaderstyleplugintest.cpp "../enterpriseheaderstyleplugin/enterpriseheaderstyle.cpp;../enterpriseheaderstyleplugin/enterpriseheaderstyleplugin.cpp;../enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.cpp")
 
