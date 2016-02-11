@@ -1,6 +1,14 @@
 {
     "KPlugin": {
         "Name": "Zoom Text", 
+        "Name[ca]": "Amplia el text", 
+        "Name[de]": "Text vergrößern", 
+        "Name[nl]": "Tekst zoomen", 
+        "Name[pt]": "Ampliar o Texto", 
+        "Name[pt_BR]": "Ampliar o texto", 
+        "Name[sv]": "Zooma text", 
+        "Name[uk]": "Масштабування тексту", 
+        "Name[x-test]": "xxZoom Textxx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
