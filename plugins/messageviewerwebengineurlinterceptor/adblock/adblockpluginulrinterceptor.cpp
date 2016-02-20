@@ -16,7 +16,7 @@
 */
 
 #include "adblockpluginulrinterceptor.h"
-
+#include "adblockinterceptorinterface.h"
 #include <MessageViewer/MailNetworkPluginUlrInterceptorInterface>
 
 AdblockPluginUlrInterceptor::AdblockPluginUlrInterceptor(QObject *parent)
@@ -30,8 +30,8 @@ AdblockPluginUlrInterceptor::~AdblockPluginUlrInterceptor()
 
 }
 
-MessageViewer::MailNetworkPluginUlrInterceptorInterface *AdblockPluginUlrInterceptor::createInterface()
+MessageViewer::MailNetworkPluginUlrInterceptorInterface *AdblockPluginUlrInterceptor::createInterface(QObject *parent)
 {
     //TODO
-    return Q_NULLPTR;
+    return new AdblockInterceptorInterface(parent);
 }

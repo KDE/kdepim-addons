@@ -30,7 +30,7 @@ public:
     explicit AdblockPluginUlrInterceptor(QObject *parent = Q_NULLPTR);
     ~AdblockPluginUlrInterceptor();
 
-    MessageViewer::MailNetworkPluginUlrInterceptorInterface *createInterface() Q_DECL_OVERRIDE;
+    MessageViewer::MailNetworkPluginUlrInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINULRINTERCEPTOR_H
