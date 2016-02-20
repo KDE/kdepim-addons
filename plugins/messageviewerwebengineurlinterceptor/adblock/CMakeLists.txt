@@ -1,6 +1,6 @@
 set(messageviewer_webengineurlinterceptor_adblock_SRCS
     adblockinterceptorinterface.cpp
-    adblockpluginulrinterceptor.cpp
+    adblockpluginurlinterceptor.cpp
     )
 
 add_library(messageviewer_adblockplugin MODULE ${messageviewer_webengineurlinterceptor_adblock_SRCS})

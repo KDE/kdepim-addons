@@ -18,7 +18,7 @@
 #include "adblockinterceptorinterface.h"
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::MailNetworkPluginUlrInterceptorInterface(parent)
+    : MessageViewer::MailNetworkPluginUrlInterceptorInterface(parent)
 {
 
 }

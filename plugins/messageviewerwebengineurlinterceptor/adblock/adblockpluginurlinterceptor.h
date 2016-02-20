@@ -15,23 +15,23 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef ADBLOCKPLUGINULRINTERCEPTOR_H
-#define ADBLOCKPLUGINULRINTERCEPTOR_H
+#ifndef ADBLOCKPLUGINURLINTERCEPTOR_H
+#define ADBLOCKPLUGINURLINTERCEPTOR_H
 
-#include <MessageViewer/MailNetworkPluginUlrInterceptor>
+#include <MessageViewer/MailNetworkPluginUrlInterceptor>
 #include <QVariant>
 namespace MessageViewer
 {
-class MailNetworkPluginUlrInterceptorInterface;
+class MailNetworkPluginUrlInterceptorInterface;
 }
-class AdblockPluginUlrInterceptor : public MessageViewer::MailNetworkPluginUlrInterceptor
+class AdblockPluginUrlInterceptor : public MessageViewer::MailNetworkPluginUrlInterceptor
 {
     Q_OBJECT
 public:
-    explicit AdblockPluginUlrInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
-    ~AdblockPluginUlrInterceptor();
+    explicit AdblockPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    ~AdblockPluginUrlInterceptor();
 
-    MessageViewer::MailNetworkPluginUlrInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+    MessageViewer::MailNetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 };
 
-#endif // ADBLOCKPLUGINULRINTERCEPTOR_H
+#endif // ADBLOCKPLUGINURLINTERCEPTOR_H

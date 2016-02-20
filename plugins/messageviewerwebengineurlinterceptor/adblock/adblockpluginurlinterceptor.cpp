@@ -15,27 +15,27 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "adblockpluginulrinterceptor.h"
+#include "adblockpluginurlinterceptor.h"
 #include "adblockinterceptorinterface.h"
-#include <MessageViewer/MailNetworkPluginUlrInterceptorInterface>
+#include <MessageViewer/MailNetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
-K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUlrInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUlrInterceptor>();)
+K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();)
 
-AdblockPluginUlrInterceptor::AdblockPluginUlrInterceptor(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::MailNetworkPluginUlrInterceptor(parent)
+AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
+    : MessageViewer::MailNetworkPluginUrlInterceptor(parent)
 {
 
 }
 
-AdblockPluginUlrInterceptor::~AdblockPluginUlrInterceptor()
+AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 {
 
 }
 
-MessageViewer::MailNetworkPluginUlrInterceptorInterface *AdblockPluginUlrInterceptor::createInterface(QObject *parent)
+MessageViewer::MailNetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QObject *parent)
 {
     //TODO
     return new AdblockInterceptorInterface(parent);
 }
 
-#include "adblockpluginulrinterceptor.moc"
+#include "adblockpluginurlinterceptor.moc"

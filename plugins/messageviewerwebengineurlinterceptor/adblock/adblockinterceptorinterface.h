@@ -18,9 +18,9 @@
 #ifndef ADBLOCKINTERCEPTORINTERFACE_H
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
-#include <MessageViewer/MailNetworkPluginUlrInterceptorInterface>
+#include <MessageViewer/MailNetworkPluginUrlInterceptorInterface>
 
-class AdblockInterceptorInterface : public MessageViewer::MailNetworkPluginUlrInterceptorInterface
+class AdblockInterceptorInterface : public MessageViewer::MailNetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
 public:
