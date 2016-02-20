@@ -1,10 +1,9 @@
 {
     "KPlugin": {
-        "Name": "Adblock",
+        "Name": "Adblock", 
         "ServiceTypes": [
             "MessageViewer/UrlInterceptor"
-        ],
+        ], 
         "Version": "1.0"
     }
 }
-
