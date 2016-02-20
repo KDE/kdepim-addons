@@ -15,25 +15,19 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "adblockinterceptorinterface.h"
-#include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 
-AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::MailNetworkPluginUrlInterceptorInterface(parent)
+#include "adblockmanagertest.h"
+#include <QTest>
+
+AdblockManagerTest::AdblockManagerTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
 
-AdblockInterceptorInterface::~AdblockInterceptorInterface()
+AdblockManagerTest::~AdblockManagerTest()
 {
 
 }
 
-void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
-{
-    //TODO enable/disable
-    const QString urlString = info.requestUrl().toString().toLower();
-    const QString host = info.requestUrl().host().toLower();
-    const QString scheme = info.requestUrl().scheme().toLower();
-    //TODO
-}
+QTEST_MAIN(AdblockManagerTest)

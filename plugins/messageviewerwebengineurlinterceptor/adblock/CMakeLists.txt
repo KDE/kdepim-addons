@@ -7,6 +7,7 @@ add_library(messageviewer_adblockplugin MODULE ${messageviewer_webengineurlinter
 
 target_link_libraries(messageviewer_adblockplugin
     KF5::MessageViewer
+    Qt5::WebEngine Qt5::WebEngineWidgets
     )
 
 install(TARGETS messageviewer_adblockplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)

@@ -15,25 +15,35 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "adblockinterceptorinterface.h"
-#include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 
-AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::MailNetworkPluginUrlInterceptorInterface(parent)
+#include "adblockmanager.h"
+
+using namespace AdBlock;
+
+AdblockManager::AdblockManager(QObject *parent)
+    : QObject(parent),
+      mEnabled(false)
 {
 
 }
 
-AdblockInterceptorInterface::~AdblockInterceptorInterface()
+AdblockManager::~AdblockManager()
 {
 
 }
 
-void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
+void AdblockManager::reloadConfig()
 {
-    //TODO enable/disable
-    const QString urlString = info.requestUrl().toString().toLower();
-    const QString host = info.requestUrl().host().toLower();
-    const QString scheme = info.requestUrl().scheme().toLower();
     //TODO
+}
+
+bool AdblockManager::isEnabled() const
+{
+    return mEnabled;
+}
+
+bool AdblockManager::interceptRequest(const QString &urlEncoded, const QString &host, const&scheme)
+{
+    //TODO
+    return false;
 }
