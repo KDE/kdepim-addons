@@ -11,3 +11,4 @@ target_link_libraries(messageviewer_adblockplugin
 
 install(TARGETS messageviewer_adblockplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
 
+add_subdirectory(autotests)
