@@ -19,6 +19,7 @@
 #define ADBLOCKPLUGINULRINTERCEPTOR_H
 
 #include <MessageViewer/MailNetworkPluginUlrInterceptor>
+#include <QVariant>
 namespace MessageViewer
 {
 class MailNetworkPluginUlrInterceptorInterface;
@@ -27,7 +28,7 @@ class AdblockPluginUlrInterceptor : public MessageViewer::MailNetworkPluginUlrIn
 {
     Q_OBJECT
 public:
-    explicit AdblockPluginUlrInterceptor(QObject *parent = Q_NULLPTR);
+    explicit AdblockPluginUlrInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUlrInterceptor();
 
     MessageViewer::MailNetworkPluginUlrInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

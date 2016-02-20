@@ -18,8 +18,10 @@
 #include "adblockpluginulrinterceptor.h"
 #include "adblockinterceptorinterface.h"
 #include <MessageViewer/MailNetworkPluginUlrInterceptorInterface>
+#include <kpluginfactory.h>
+K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUlrInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUlrInterceptor>();)
 
-AdblockPluginUlrInterceptor::AdblockPluginUlrInterceptor(QObject *parent)
+AdblockPluginUlrInterceptor::AdblockPluginUlrInterceptor(QObject *parent, const QList<QVariant> &)
     : MessageViewer::MailNetworkPluginUlrInterceptor(parent)
 {
 
@@ -35,3 +37,5 @@ MessageViewer::MailNetworkPluginUlrInterceptorInterface *AdblockPluginUlrInterce
     //TODO
     return new AdblockInterceptorInterface(parent);
 }
+
+#include "adblockpluginulrinterceptor.moc"
