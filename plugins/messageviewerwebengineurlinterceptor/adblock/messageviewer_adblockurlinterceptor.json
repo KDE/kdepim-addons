@@ -1,6 +1,10 @@
 {
     "KPlugin": {
         "Name": "Adblock", 
+        "Name[pt_BR]": "AdBlock", 
+        "Name[sv]": "Reklamblockering", 
+        "Name[uk]": "Блокування реклами", 
+        "Name[x-test]": "xxAdblockxx", 
         "ServiceTypes": [
             "MessageViewer/UrlInterceptor"
         ], 
