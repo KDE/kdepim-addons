@@ -32,7 +32,7 @@ public:
     void reloadConfig();
     bool isEnabled() const;
 
-    bool interceptRequest(const QString &urlEncoded, const QString &host, const &scheme);
+    bool interceptRequest(const QUrl &url);
 private:
     bool mEnabled;
 };

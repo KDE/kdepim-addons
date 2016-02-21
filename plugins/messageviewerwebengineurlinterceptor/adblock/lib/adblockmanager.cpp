@@ -42,7 +42,7 @@ bool AdblockManager::isEnabled() const
     return mEnabled;
 }
 
-bool AdblockManager::interceptRequest(const QString &urlEncoded, const QString &host, const&scheme)
+bool AdblockManager::interceptRequest(const QUrl &url)
 {
     //TODO
     return false;
