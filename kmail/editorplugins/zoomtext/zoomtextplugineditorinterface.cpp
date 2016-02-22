@@ -88,7 +88,7 @@ void ZoomTextPluginEditorInterface::slotZoomReset()
 
 void ZoomTextPluginEditorInterface::exec()
 {
-    switch(mType) {
+    switch (mType) {
     case Unknown:
         qCDebug(KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
         break;

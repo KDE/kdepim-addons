@@ -288,7 +288,7 @@ QString Parsha::findParshaName(int dayNumber, int kvia, bool isLeapYear,
     if (!array) {   /* Something is terribly wrong! */
         buffer = QStringLiteral("??Parsha??");
         qCWarning(KORGANIZER_HEBREWPLUGIN_LOG) << "Hebrew Plugin: Was not able to determine the Parsha."
-                   << "Please report this as a bug.";
+                                               << "Please report this as a bug.";
         return buffer;
     }
 

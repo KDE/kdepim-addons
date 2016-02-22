@@ -37,13 +37,11 @@ public:
     {
     }
 
-    MessageViewer::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE
-    {
+    MessageViewer::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE {
         return mWriter;
     }
 
-    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE
-    {
+    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
         return mCSSHelper;
     }
 
@@ -75,32 +73,27 @@ public:
     {
         return false;
     }
-    void setHtmlMode(MessageViewer::Util::HtmlMode mode) Q_DECL_OVERRIDE
-    {
+    void setHtmlMode(MessageViewer::Util::HtmlMode mode) Q_DECL_OVERRIDE {
         Q_UNUSED(mode)
     }
     int levelQuote() const Q_DECL_OVERRIDE
     {
         return false;
     }
-    const QTextCodec *overrideCodec() Q_DECL_OVERRIDE
-    {
+    const QTextCodec *overrideCodec() Q_DECL_OVERRIDE {
         return 0;
     }
-    QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE
-    {
+    QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE {
         Q_UNUSED(message);
         return QString();
     }
-    const MessageViewer::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE
-    {
+    const MessageViewer::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE {
         return MessageViewer::AttachmentStrategy::smart();
     }
-    QObject *sourceObject() Q_DECL_OVERRIDE
-    {
+    QObject *sourceObject() Q_DECL_OVERRIDE {
         return 0;
     }
-    
+
     bool autoImportKeys() const Q_DECL_OVERRIDE
     {
         return false;
@@ -113,7 +106,7 @@ public:
     {
         return false;
     }
-    
+
 private:
     MessageViewer::HtmlWriter *mWriter;
     MessageViewer::CSSHelperBase *mCSSHelper;

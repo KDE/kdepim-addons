@@ -73,8 +73,8 @@ void RenderTest::testRender()
 
     fileWriter.begin(QString());
     fileWriter.queue(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                      "<html>\n"
-                      "<body>\n"));
+                                    "<html>\n"
+                                    "<body>\n"));
 
     otp.parseObjectTree(msg.data());
 
@@ -87,12 +87,12 @@ void RenderTest::testRender()
     // validate xml and pretty-print for comparisson
     // TODO add proper cmake check for xmllint and diff
     QStringList args = QStringList()
-                        << QStringLiteral("--format")
-                        << QStringLiteral("--encode")
-                        << QStringLiteral("UTF8")
-                        << QStringLiteral("--output")
-                        << htmlFileName
-                        << outFileName;
+                       << QStringLiteral("--format")
+                       << QStringLiteral("--encode")
+                       << QStringLiteral("UTF8")
+                       << QStringLiteral("--output")
+                       << htmlFileName
+                       << outFileName;
     QCOMPARE(QProcess::execute(QLatin1String("xmllint"), args),  0);
 
     // get rid of system dependent or random paths
@@ -109,9 +109,9 @@ void RenderTest::testRender()
 
     // compare to reference file
     args = QStringList()
-            << QStringLiteral("-u")
-            << referenceFileName
-            << htmlFileName;
+           << QStringLiteral("-u")
+           << referenceFileName
+           << htmlFileName;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);

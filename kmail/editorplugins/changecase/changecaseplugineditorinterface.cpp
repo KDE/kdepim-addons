@@ -56,7 +56,7 @@ void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 
 void ChangeCasePluginEditorInterface::exec()
 {
-    switch(mType) {
+    switch (mType) {
     case Unknown:
         qCDebug(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
         break;
@@ -103,7 +103,6 @@ void ChangeCasePluginEditorInterface::reverseCase()
     KPIMTextEdit::EditorUtil editorUtil;
     editorUtil.reverseCase(textCursor);
 }
-
 
 void ChangeCasePluginEditorInterface::slotUpperCase()
 {
