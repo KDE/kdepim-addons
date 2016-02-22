@@ -17,6 +17,7 @@
 
 
 #include "adblockmanagertest.h"
+#include "../lib/adblockmanager.h"
 #include <QTest>
 
 AdblockManagerTest::AdblockManagerTest(QObject *parent)
@@ -28,6 +29,12 @@ AdblockManagerTest::AdblockManagerTest(QObject *parent)
 AdblockManagerTest::~AdblockManagerTest()
 {
 
+}
+
+void AdblockManagerTest::shouldHaveDefaultValue()
+{
+    AdBlock::AdblockManager w;
+    QVERIFY(!w.isEnabled());
 }
 
 QTEST_MAIN(AdblockManagerTest)
