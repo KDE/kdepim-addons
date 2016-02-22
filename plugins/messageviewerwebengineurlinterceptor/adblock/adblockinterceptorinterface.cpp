@@ -20,7 +20,7 @@
 #include <lib/adblockmanager.h>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::MailNetworkPluginUrlInterceptorInterface(parent)
+    : MessageViewer::NetworkPluginUrlInterceptorInterface(parent)
 {
     mAdblockManager = new AdBlock::AdblockManager(this);
 }
@@ -38,6 +38,4 @@ void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     if (mAdblockManager->interceptRequest(info.requestUrl())) {
         info.block(true);
     }
-    //TODO enable/disable
-    //TODO
 }

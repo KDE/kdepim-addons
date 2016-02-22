@@ -18,12 +18,12 @@
 #ifndef ADBLOCKINTERCEPTORINTERFACE_H
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
-#include <MessageViewer/MailNetworkPluginUrlInterceptorInterface>
+#include <MessageViewer/NetworkPluginUrlInterceptorInterface>
 namespace AdBlock
 {
 class AdblockManager;
 }
-class AdblockInterceptorInterface : public MessageViewer::MailNetworkPluginUrlInterceptorInterface
+class AdblockInterceptorInterface : public MessageViewer::NetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
 public:

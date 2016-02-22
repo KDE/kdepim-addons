@@ -17,14 +17,15 @@
 
 #include "adblockpluginurlinterceptor.h"
 #include "adblockinterceptorinterface.h"
-#include <MessageViewer/MailNetworkPluginUrlInterceptorInterface>
+#include <MessageViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
+#include <QDebug>
 
 K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();)
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::MailNetworkPluginUrlInterceptor(parent)
+    : MessageViewer::NetworkPluginUrlInterceptor(parent)
 {
-
+    qDebug()<<" AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)"<<this;
 }
 
 AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
@@ -32,7 +33,7 @@ AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 
 }
 
-MessageViewer::MailNetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QObject *parent)
+MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QObject *parent)
 {
     return new AdblockInterceptorInterface(parent);
 }

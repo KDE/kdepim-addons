@@ -18,20 +18,20 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTOR_H
 #define ADBLOCKPLUGINURLINTERCEPTOR_H
 
-#include <MessageViewer/MailNetworkPluginUrlInterceptor>
+#include <MessageViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
 namespace MessageViewer
 {
-class MailNetworkPluginUrlInterceptorInterface;
+class NetworkPluginUrlInterceptorInterface;
 }
-class AdblockPluginUrlInterceptor : public MessageViewer::MailNetworkPluginUrlInterceptor
+class AdblockPluginUrlInterceptor : public MessageViewer::NetworkPluginUrlInterceptor
 {
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUrlInterceptor();
 
-    MessageViewer::MailNetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTOR_H
