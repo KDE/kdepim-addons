@@ -17,11 +17,12 @@
 
 #include "adblockinterceptorinterface.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
+#include <lib/adblockmanager.h>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::MailNetworkPluginUrlInterceptorInterface(parent)
 {
-
+    mAdblockManager = new AdBlock::AdblockManager(this);
 }
 
 AdblockInterceptorInterface::~AdblockInterceptorInterface()
@@ -31,9 +32,12 @@ AdblockInterceptorInterface::~AdblockInterceptorInterface()
 
 void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
+    if (!mAdblockManager->isEnabled()) {
+        return;
+    }
+    if (mAdblockManager->interceptRequest(info.requestUrl())) {
+        info.block(true);
+    }
     //TODO enable/disable
-    const QString urlString = info.requestUrl().toString().toLower();
-    const QString host = info.requestUrl().host().toLower();
-    const QString scheme = info.requestUrl().scheme().toLower();
     //TODO
 }

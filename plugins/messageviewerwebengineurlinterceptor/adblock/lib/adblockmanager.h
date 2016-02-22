@@ -19,10 +19,10 @@
 #define ADBLOCKMANAGER_H
 
 #include <QObject>
-
+#include "adblocklib_export.h"
 namespace AdBlock
 {
-class AdblockManager : public QObject
+class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
 public:

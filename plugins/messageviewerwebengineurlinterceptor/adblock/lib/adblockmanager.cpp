@@ -17,6 +17,7 @@
 
 
 #include "adblockmanager.h"
+#include <QUrl>
 
 using namespace AdBlock;
 
@@ -44,6 +45,10 @@ bool AdblockManager::isEnabled() const
 
 bool AdblockManager::interceptRequest(const QUrl &url)
 {
+    const QString urlString = url.toString().toLower();
+    const QString host = url.host().toLower();
+    const QString scheme = url.scheme().toLower();
+
     //TODO
     return false;
 }

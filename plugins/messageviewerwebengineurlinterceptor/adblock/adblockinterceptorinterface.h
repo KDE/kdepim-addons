@@ -19,7 +19,10 @@
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
 #include <MessageViewer/MailNetworkPluginUrlInterceptorInterface>
-
+namespace AdBlock
+{
+class AdblockManager;
+}
 class AdblockInterceptorInterface : public MessageViewer::MailNetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
@@ -28,6 +31,8 @@ public:
     ~AdblockInterceptorInterface();
 
     void interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
+private:
+    AdBlock::AdblockManager *mAdblockManager;
 };
 
 #endif // ADBLOCKINTERCEPTORINTERFACE_H
