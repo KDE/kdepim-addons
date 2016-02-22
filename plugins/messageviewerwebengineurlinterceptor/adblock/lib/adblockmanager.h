@@ -26,6 +26,7 @@ class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
 public:
+    static AdblockManager *self();
     explicit AdblockManager(QObject *parent = Q_NULLPTR);
     ~AdblockManager();
 

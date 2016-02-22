@@ -20,6 +20,29 @@
 
 using namespace AdBlock;
 
+class AdblockManagerInstancePrivate
+{
+public:
+    AdblockManagerInstancePrivate()
+        : ablockManager(new AdblockManager)
+    {
+    }
+
+    ~AdblockManagerInstancePrivate()
+    {
+        delete ablockManager;
+    }
+
+    AdblockManager *ablockManager;
+};
+
+Q_GLOBAL_STATIC(AdblockManagerInstancePrivate, sInstance)
+
+AdblockManager *AdblockManager::self()
+{
+    return sInstance->ablockManager;
+}
+
 AdblockManager::AdblockManager(QObject *parent)
     : QObject(parent),
       mEnabled(false)
