@@ -17,6 +17,7 @@
 
 #include "adblockpluginurlinterceptor.h"
 #include "adblockinterceptorinterface.h"
+#include "adblockpluginurlinterceptorconfigurewidget.h"
 #include <MessageViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
 #include <QDebug>
@@ -46,7 +47,7 @@ bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
 MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
 {
     //TODO
-    return Q_NULLPTR;
+    return new AdblockPluginUrlInterceptorConfigureWidget(parent);
 }
 
 #include "adblockpluginurlinterceptor.moc"

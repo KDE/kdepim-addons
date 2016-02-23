@@ -26,6 +26,10 @@ class AdblockPluginUrlInterceptorConfigureWidget : public MessageViewer::Network
 public:
     explicit AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent = Q_NULLPTR);
     ~AdblockPluginUrlInterceptorConfigureWidget();
+
+    void loadSettings() Q_DECL_OVERRIDE;
+    void saveSettings() Q_DECL_OVERRIDE;
+    void resetSettings() Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H

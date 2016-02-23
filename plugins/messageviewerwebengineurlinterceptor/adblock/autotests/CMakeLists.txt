@@ -6,7 +6,7 @@ ecm_add_test(adblockmanagertest.cpp
 )
 
 
-set( adblockpluginurlinterceptortest_SRCS adblockpluginurlinterceptortest.cpp ../adblockpluginurlinterceptor.cpp ../adblockinterceptorinterface.cpp)
+set( adblockpluginurlinterceptortest_SRCS adblockpluginurlinterceptortest.cpp ../adblockpluginurlinterceptor.cpp ../adblockinterceptorinterface.cpp ../adblockpluginurlinterceptorconfigurewidget.cpp)
 add_executable( adblockpluginurlinterceptortest ${adblockpluginurlinterceptortest_SRCS})
 add_test(adblockpluginurlinterceptortest adblockpluginurlinterceptortest)
 ecm_mark_as_test(adblockpluginurlinterceptortest)

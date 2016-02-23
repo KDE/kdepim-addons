@@ -27,3 +27,18 @@ AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigur
 {
 
 }
+
+void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
+{
+
+}
+
+void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
+{
+
+}
+
+void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
+{
+
+}
