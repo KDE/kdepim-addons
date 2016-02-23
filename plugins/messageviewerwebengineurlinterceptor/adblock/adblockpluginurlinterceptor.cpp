@@ -38,4 +38,15 @@ MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor
     return new AdblockInterceptorInterface(parent);
 }
 
+bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
+{
+    return true;
+}
+
+MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
+{
+    //TODO
+    return Q_NULLPTR;
+}
+
 #include "adblockpluginurlinterceptor.moc"

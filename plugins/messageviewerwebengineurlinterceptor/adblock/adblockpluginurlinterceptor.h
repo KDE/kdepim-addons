@@ -23,6 +23,7 @@
 namespace MessageViewer
 {
 class NetworkPluginUrlInterceptorInterface;
+class NetworkPluginUrlInterceptorConfigureWidget;
 }
 class AdblockPluginUrlInterceptor : public MessageViewer::NetworkPluginUrlInterceptor
 {
@@ -32,6 +33,9 @@ public:
     ~AdblockPluginUrlInterceptor();
 
     MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+
+    bool hasConfigureSupport() const Q_DECL_OVERRIDE;
+    MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTOR_H
