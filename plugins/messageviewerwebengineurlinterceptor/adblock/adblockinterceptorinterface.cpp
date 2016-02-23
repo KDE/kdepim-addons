@@ -17,7 +17,7 @@
 
 #include "adblockinterceptorinterface.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
-#include <lib/adblockmanager.h>
+#include "lib/adblockmanager.h"
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent)

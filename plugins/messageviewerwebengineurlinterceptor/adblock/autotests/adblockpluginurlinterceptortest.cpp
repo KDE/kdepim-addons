@@ -16,6 +16,7 @@
 */
 
 #include "adblockpluginurlinterceptortest.h"
+#include "../adblockpluginurlinterceptor.h"
 #include <QTest>
 
 AdblockPluginUrlInterceptorTest::AdblockPluginUrlInterceptorTest(QObject *parent)
@@ -26,6 +27,13 @@ AdblockPluginUrlInterceptorTest::AdblockPluginUrlInterceptorTest(QObject *parent
 
 AdblockPluginUrlInterceptorTest::~AdblockPluginUrlInterceptorTest()
 {
+
+}
+
+void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
+{
+    AdblockPluginUrlInterceptor w;
+    QVERIFY(w.createInterface(this));
 
 }
 QTEST_MAIN(AdblockPluginUrlInterceptorTest)
