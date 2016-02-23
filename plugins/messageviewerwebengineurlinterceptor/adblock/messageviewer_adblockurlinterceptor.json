@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Adblock", 
+        "Name[es]": "AdBlock", 
         "Name[pt_BR]": "AdBlock", 
         "Name[sv]": "Reklamblockering", 
         "Name[uk]": "Блокування реклами", 
