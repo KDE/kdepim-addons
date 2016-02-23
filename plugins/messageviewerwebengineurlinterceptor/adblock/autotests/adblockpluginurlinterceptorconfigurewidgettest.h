@@ -15,32 +15,19 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#include "adblockpluginurlinterceptorconfigurewidget.h"
-#include <KLocalizedString>
-#include <QHBoxLayout>
 
-AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
-    : MessageViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
+#ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGETTEST_H
+#define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGETTEST_H
+
+#include <QObject>
+
+class AdblockPluginUrlInterceptorConfigureWidgetTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit AdblockPluginUrlInterceptorConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    ~AdblockPluginUrlInterceptorConfigureWidgetTest();
 
-}
+};
 
-AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()
-{
-
-}
-
-void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
-{
-
-}
-
-void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
-{
-
-}
-
-void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
-{
-
-}
+#endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGETTEST_H
