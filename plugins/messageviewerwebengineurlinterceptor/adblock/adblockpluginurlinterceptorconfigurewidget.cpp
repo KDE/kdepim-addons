@@ -37,7 +37,7 @@ void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
 
 void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
 {
-
+    Q_EMIT configChanged();
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
