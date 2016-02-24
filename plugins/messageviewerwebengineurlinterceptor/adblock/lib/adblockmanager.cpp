@@ -47,7 +47,7 @@ AdblockManager::AdblockManager(QObject *parent)
     : QObject(parent),
       mEnabled(false)
 {
-
+    reloadConfig();
 }
 
 AdblockManager::~AdblockManager()

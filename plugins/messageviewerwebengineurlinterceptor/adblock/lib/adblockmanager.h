@@ -29,11 +29,13 @@ public:
     static AdblockManager *self();
     explicit AdblockManager(QObject *parent = Q_NULLPTR);
     ~AdblockManager();
-
-    void reloadConfig();
     bool isEnabled() const;
 
     bool interceptRequest(const QUrl &url);
+
+public Q_SLOTS:
+    void reloadConfig();
+
 private:
     bool mEnabled;
 };

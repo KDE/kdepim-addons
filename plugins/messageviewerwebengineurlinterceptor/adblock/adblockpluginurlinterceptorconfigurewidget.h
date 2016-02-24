@@ -30,6 +30,10 @@ public:
     void loadSettings() Q_DECL_OVERRIDE;
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
+
+Q_SIGNALS:
+    void configChanged();
+
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
