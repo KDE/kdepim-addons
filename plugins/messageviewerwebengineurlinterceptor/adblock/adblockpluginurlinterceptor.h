@@ -20,6 +20,7 @@
 
 #include <MessageViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
+class QAction;
 namespace MessageViewer
 {
 class NetworkPluginUrlInterceptorInterface;
@@ -34,6 +35,7 @@ public:
 
     MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 
+    QList<QAction *> actions() const Q_DECL_OVERRIDE;
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
     MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
 };
