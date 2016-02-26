@@ -21,11 +21,11 @@
 #ifndef MESSAGECORE_TESTS_UTIL_H
 #define MESSAGECORE_TESTS_UTIL_H
 
-#include <MessageViewer/ObjectTreeSourceIf>
+#include <MessageViewer/ObjectTreeEmptySource>
 #include <MessageViewer/CSSHelperBase>
 #include <MessageViewer/AttachmentStrategy>
 
-class TestObjectTreeSource : public MessageViewer::ObjectTreeSourceIf
+class TestObjectTreeSource : public MessageViewer::EmptySource
 {
 public:
     TestObjectTreeSource(MessageViewer::HtmlWriter *writer,
