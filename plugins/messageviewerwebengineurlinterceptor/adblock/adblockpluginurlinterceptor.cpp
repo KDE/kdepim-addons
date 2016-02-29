@@ -42,7 +42,6 @@ MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor
 
 QList<QAction *> AdblockPluginUrlInterceptor::actions() const
 {
-    //TODO
     return mActions;
 }
 
@@ -60,6 +59,9 @@ MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInter
 
 void AdblockPluginUrlInterceptor::createActions(KActionCollection *ac)
 {
+    if (ac) {
+
+    }
     //TODO
 }
 
