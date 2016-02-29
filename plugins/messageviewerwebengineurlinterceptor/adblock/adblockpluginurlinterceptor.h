@@ -39,6 +39,10 @@ public:
 
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
     MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
+
+    void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
+private:
+    QList<QAction *> mActions;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTOR_H
