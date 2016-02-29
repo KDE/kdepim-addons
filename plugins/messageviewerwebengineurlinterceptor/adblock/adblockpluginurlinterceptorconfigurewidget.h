@@ -19,7 +19,10 @@
 #define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
 
 #include <MessageViewer/NetworkPluginUrlInterceptorConfigureWidget>
-
+namespace MessageViewer
+{
+class AdBlockSettingWidget;
+}
 class AdblockPluginUrlInterceptorConfigureWidget : public MessageViewer::NetworkPluginUrlInterceptorConfigureWidget
 {
     Q_OBJECT
@@ -33,6 +36,8 @@ public:
 
 Q_SIGNALS:
     void configChanged();
+private:
+    MessageViewer::AdBlockSettingWidget *mConfigureWidget;
 
 };
 

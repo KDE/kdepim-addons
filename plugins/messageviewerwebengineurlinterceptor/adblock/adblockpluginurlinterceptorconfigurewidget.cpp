@@ -25,8 +25,9 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
     hbox->setMargin(0);
-    MessageViewer::AdBlockSettingWidget *w = new MessageViewer::AdBlockSettingWidget(this);
-    hbox->addWidget(w);
+    mConfigureWidget = new MessageViewer::AdBlockSettingWidget(this);
+    mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
+    hbox->addWidget(mConfigureWidget);
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()
@@ -36,15 +37,16 @@ AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigur
 
 void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
 {
-
+    mConfigureWidget->doLoadFromGlobalSettings();
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::saveSettings()
 {
+    mConfigureWidget->save();
     Q_EMIT configChanged();
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::resetSettings()
 {
-
+    mConfigureWidget->doResetToDefaultsOther();
 }
