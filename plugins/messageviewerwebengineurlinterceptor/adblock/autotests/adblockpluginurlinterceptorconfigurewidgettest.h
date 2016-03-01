@@ -26,7 +26,8 @@ class AdblockPluginUrlInterceptorConfigureWidgetTest : public QObject
 public:
     explicit AdblockPluginUrlInterceptorConfigureWidgetTest(QObject *parent = Q_NULLPTR);
     ~AdblockPluginUrlInterceptorConfigureWidgetTest();
-
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGETTEST_H

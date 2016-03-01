@@ -16,6 +16,8 @@
 */
 
 #include "adblockpluginurlinterceptorconfigurewidgettest.h"
+#include "../adblockpluginurlinterceptorconfigurewidget.h"
+#include <AdBlockSettingWidget>
 #include <QTest>
 
 AdblockPluginUrlInterceptorConfigureWidgetTest::AdblockPluginUrlInterceptorConfigureWidgetTest(QObject *parent)
@@ -27,6 +29,14 @@ AdblockPluginUrlInterceptorConfigureWidgetTest::AdblockPluginUrlInterceptorConfi
 AdblockPluginUrlInterceptorConfigureWidgetTest::~AdblockPluginUrlInterceptorConfigureWidgetTest()
 {
 
+}
+
+void AdblockPluginUrlInterceptorConfigureWidgetTest::shouldHaveDefaultValue()
+{
+    AdblockPluginUrlInterceptorConfigureWidget w;
+
+    MessageViewer::AdBlockSettingWidget *configurewidget = w.findChild<MessageViewer::AdBlockSettingWidget *>(QStringLiteral("configurewidget"));
+    QVERIFY(configurewidget);
 }
 
 QTEST_MAIN(AdblockPluginUrlInterceptorConfigureWidgetTest)
