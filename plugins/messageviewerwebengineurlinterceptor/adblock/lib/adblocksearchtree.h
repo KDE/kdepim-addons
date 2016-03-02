@@ -44,7 +44,7 @@ class AdBlockRule;
 class AdBlockSearchTree
 {
 public:
-    explicit AdBlockSearchTree();
+    AdBlockSearchTree();
     ~AdBlockSearchTree();
 
     void clear();

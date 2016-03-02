@@ -54,7 +54,6 @@ public:
 private:
     QStringList m_capturedTexts;
     int m_matchedLength;
-
 };
 }
 #endif // QZREGEXP_H
