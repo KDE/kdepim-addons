@@ -37,7 +37,8 @@
 #include <QRegularExpression>
 #include <QStringList>
 
-
+namespace AdBlock
+{
 class QzRegExp : public QRegularExpression
 {
 public:
@@ -55,5 +56,5 @@ private:
     int m_matchedLength;
 
 };
-
+}
 #endif // QZREGEXP_H

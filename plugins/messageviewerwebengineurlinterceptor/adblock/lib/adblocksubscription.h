@@ -71,7 +71,8 @@
 class QUrl;
 
 class FollowRedirectReply;
-
+namespace AdBlock
+{
 class AdBlockSubscription : public QObject
 {
     Q_OBJECT
@@ -147,6 +148,7 @@ public:
     bool removeRule(int offset);
     const AdBlockRule* replaceRule(AdBlockRule* rule, int offset);
 };
+}
 
 #endif // ADBLOCKSUBSCRIPTION_H
 

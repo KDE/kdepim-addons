@@ -42,8 +42,9 @@
 
 class QWebEngineUrlRequestInfo;
 
+namespace AdBlock
+{
 class AdBlockManager;
-
 class AdBlockMatcher : public QObject
 {
     Q_OBJECT
@@ -80,5 +81,6 @@ private:
     AdBlockSearchTree m_networkBlockTree;
     AdBlockSearchTree m_networkExceptionTree;
 };
+}
 
 #endif // ADBLOCKMATCHER_H

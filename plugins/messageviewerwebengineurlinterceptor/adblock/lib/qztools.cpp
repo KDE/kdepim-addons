@@ -33,7 +33,7 @@
 * ============================================================ */
 #include "qztools.h"
 
-
+using namespace AdBlock;
 // Matches domain (assumes both pattern and domain not starting with dot)
 //  pattern = domain to be matched
 //  domain = site domain

@@ -43,7 +43,8 @@ class QPixmap;
 class QIcon;
 class QWidget;
 class QUrl;
-
+namespace AdBlock
+{
 class QzTools
 {
 public:
@@ -54,5 +55,5 @@ public:
         return (index >= 0 && container.count() > index);
     }
 };
-
+}
 #endif // QZTOOLS_H

@@ -62,14 +62,15 @@
 
 #include "adblockrule.h"
 #include "adblocksubscription.h"
-//#include "qztools.h"
-//#include "qzregexp.h"
+#include "qztools.h"
+#include "qzregexp.h"
 
 #include <QUrl>
 #include <QString>
 #include <QStringList>
 #include <QWebEnginePage>
 #include <QWebEngineUrlRequestInfo>
+using namespace AdBlock;
 
 static QString toSecondLevelDomain(const QUrl &url)
 {

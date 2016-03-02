@@ -70,6 +70,7 @@
 #include <QFile>
 #include <QTimer>
 #include <QNetworkReply>
+using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject* parent)
     : QObject(parent)

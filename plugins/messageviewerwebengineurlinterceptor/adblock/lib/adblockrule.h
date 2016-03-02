@@ -69,6 +69,8 @@
 class QUrl;
 class QWebEngineUrlRequestInfo;
 
+namespace AdBlock
+{
 class AdBlockSubscription;
 
 class AdBlockRule
@@ -195,6 +197,6 @@ private:
     friend class AdBlockSearchTree;
     friend class AdBlockSubscription;
 };
-
+}
 #endif // ADBLOCKRULE_H
 

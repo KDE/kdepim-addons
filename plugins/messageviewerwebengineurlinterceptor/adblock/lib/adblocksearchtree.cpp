@@ -35,6 +35,7 @@
 #include "adblockrule.h"
 #include <QDebug>
 #include <QWebEngineUrlRequestInfo>
+using namespace AdBlock;
 
 AdBlockSearchTree::AdBlockSearchTree()
     : m_root(new Node)

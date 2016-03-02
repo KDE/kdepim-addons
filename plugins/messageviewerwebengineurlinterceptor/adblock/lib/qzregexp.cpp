@@ -33,6 +33,7 @@
 * ============================================================ */
 #include "qzregexp.h"
 #include "qztools.h"
+using namespace AdBlock;
 
 QzRegExp::QzRegExp()
     : QRegularExpression(QString(), QRegularExpression::DotMatchesEverythingOption)

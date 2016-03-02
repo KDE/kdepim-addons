@@ -38,6 +38,8 @@
 #include <QHash>
 
 class QWebEngineUrlRequestInfo;
+namespace AdBlock
+{
 class AdBlockRule;
 class AdBlockSearchTree
 {
@@ -66,5 +68,5 @@ private:
 
     Node* m_root;
 };
-
+}
 #endif // ADBLOCKSEARCHTREE_H

@@ -4,6 +4,8 @@ set(adblocklibprivate_SRCS
     adblockrule.cpp
     qzregexp.cpp
     qztools.cpp
+    #adblockmatcher.cpp
+    #adblocksubscription.cpp
 )
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
