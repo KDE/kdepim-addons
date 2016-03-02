@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Do Not Track", 
+        "ServiceTypes": [
+            "MessageViewer/UrlInterceptor"
+        ], 
+        "Version": "1.0"
+    }
+}
