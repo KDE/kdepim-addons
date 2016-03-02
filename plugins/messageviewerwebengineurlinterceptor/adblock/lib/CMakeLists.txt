@@ -1,5 +1,10 @@
 set(adblocklibprivate_SRCS
-    adblockmanager.cpp)
+    adblockmanager.cpp
+    adblocksearchtree.cpp
+    adblockrule.cpp
+    qzregexp.cpp
+    qztools.cpp
+)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
@@ -7,6 +12,8 @@ generate_export_header(adblocklibprivate BASE_NAME adblocklib)
 target_link_libraries(adblocklibprivate
 PRIVATE
     Qt5::Core
+    Qt5::WebEngine
+    Qt5::WebEngineWidgets
 )
 
 set_target_properties(adblocklibprivate
