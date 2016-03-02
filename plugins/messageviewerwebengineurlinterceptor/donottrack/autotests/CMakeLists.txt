@@ -1,0 +1,8 @@
+set( donottrackpluginurlinterceptortest_SRCS donottrackpluginurlinterceptortest.cpp ../donottrackpluginurlinterceptor.cpp ../donottrackinterceptorinterface.cpp)
+kconfig_add_kcfg_files(donottrackpluginurlinterceptortest_SRCS
+  ../settings/donottrack.kcfgc
+)
+add_executable( donottrackpluginurlinterceptortest ${donottrackpluginurlinterceptortest_SRCS})
+add_test(donottrackpluginurlinterceptortest donottrackpluginurlinterceptortest)
+ecm_mark_as_test(donottrackpluginurlinterceptortest)
+target_link_libraries( donottrackpluginurlinterceptortest Qt5::Test Qt5::Widgets KF5::MessageViewer Qt5::WebEngine Qt5::WebEngineWidgets)

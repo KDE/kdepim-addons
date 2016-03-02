@@ -18,4 +18,4 @@ target_link_libraries(messageviewer_donottrackplugin
 
 install(TARGETS messageviewer_donottrackplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
 
-#add_subdirectory(autotests)
+add_subdirectory(autotests)
