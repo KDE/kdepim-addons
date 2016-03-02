@@ -49,10 +49,10 @@ class AdBlockMatcher : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockMatcher(AdBlockManager* manager);
+    explicit AdBlockMatcher(AdBlockManager *manager);
     ~AdBlockMatcher();
 
-    const AdBlockRule* match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const;
+    const AdBlockRule *match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const;
 
     bool adBlockDisabledForUrl(const QUrl &url) const;
     bool elemHideDisabledForUrl(const QUrl &url) const;
@@ -68,14 +68,14 @@ private Q_SLOTS:
     void enabledChanged(bool enabled);
 
 private:
-    AdBlockManager* m_manager;
+    AdBlockManager *m_manager;
 
-    QVector<AdBlockRule*> m_createdRules;
-    QVector<const AdBlockRule*> m_networkExceptionRules;
-    QVector<const AdBlockRule*> m_networkBlockRules;
-    QVector<const AdBlockRule*> m_domainRestrictedCssRules;
-    QVector<const AdBlockRule*> m_documentRules;
-    QVector<const AdBlockRule*> m_elemhideRules;
+    QVector<AdBlockRule *> m_createdRules;
+    QVector<const AdBlockRule *> m_networkExceptionRules;
+    QVector<const AdBlockRule *> m_networkBlockRules;
+    QVector<const AdBlockRule *> m_domainRestrictedCssRules;
+    QVector<const AdBlockRule *> m_documentRules;
+    QVector<const AdBlockRule *> m_elemhideRules;
 
     QString m_elementHidingRules;
     AdBlockSearchTree m_networkBlockTree;

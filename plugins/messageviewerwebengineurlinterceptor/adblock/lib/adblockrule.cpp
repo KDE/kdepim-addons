@@ -94,7 +94,7 @@ static QString toSecondLevelDomain(const QUrl &url)
     return domain + topLevelDomain;
 }
 
-AdBlockRule::AdBlockRule(const QString &filter, AdBlockSubscription* subscription)
+AdBlockRule::AdBlockRule(const QString &filter, AdBlockSubscription *subscription)
     : m_subscription(subscription)
     , m_type(StringContainsMatchRule)
     , m_caseSensitivity(Qt::CaseInsensitive)
@@ -111,9 +111,9 @@ AdBlockRule::~AdBlockRule()
     delete m_regExp;
 }
 
-AdBlockRule* AdBlockRule::copy() const
+AdBlockRule *AdBlockRule::copy() const
 {
-    AdBlockRule* rule = new AdBlockRule();
+    AdBlockRule *rule = new AdBlockRule();
     rule->m_subscription = m_subscription;
     rule->m_type = m_type;
     rule->m_options = m_options;
@@ -136,12 +136,12 @@ AdBlockRule* AdBlockRule::copy() const
     return rule;
 }
 
-AdBlockSubscription* AdBlockRule::subscription() const
+AdBlockSubscription *AdBlockRule::subscription() const
 {
     return m_subscription;
 }
 
-void AdBlockRule::setSubscription(AdBlockSubscription* subscription)
+void AdBlockRule::setSubscription(AdBlockSubscription *subscription)
 {
     m_subscription = subscription;
 }
@@ -217,7 +217,6 @@ bool AdBlockRule::urlMatch(const QUrl &url) const
     if (!hasOption(DocumentOption) && !hasOption(ElementHideOption)) {
         return false;
     }
-
 
     const QString encodedUrl = QString::fromLatin1(url.toEncoded());
     const QString domain = url.host();
@@ -299,16 +298,14 @@ bool AdBlockRule::matchDomain(const QString &domain) const
                 return true;
             }
         }
-    }
-    else if (m_allowedDomains.isEmpty()) {
+    } else if (m_allowedDomains.isEmpty()) {
         foreach (const QString &d, m_blockedDomains) {
             if (isMatchingDomain(domain, d)) {
                 return false;
             }
         }
         return true;
-    }
-    else {
+    } else {
         foreach (const QString &d, m_blockedDomains) {
             if (isMatchingDomain(domain, d)) {
                 return false;
@@ -433,60 +430,48 @@ void AdBlockRule::parseFilter()
             if (option.startsWith(QLatin1String("domain="))) {
                 parseDomains(option.mid(7), QLatin1Char('|'));
                 ++handledOptions;
-            }
-            else if (option == QLatin1String("match-case")) {
+            } else if (option == QLatin1String("match-case")) {
                 m_caseSensitivity = Qt::CaseSensitive;
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("third-party"))) {
+            } else if (option.endsWith(QLatin1String("third-party"))) {
                 setOption(ThirdPartyOption);
                 setException(ThirdPartyOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("object"))) {
+            } else if (option.endsWith(QLatin1String("object"))) {
                 setOption(ObjectOption);
                 setException(ObjectOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("subdocument"))) {
+            } else if (option.endsWith(QLatin1String("subdocument"))) {
                 setOption(SubdocumentOption);
                 setException(SubdocumentOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("xmlhttprequest"))) {
+            } else if (option.endsWith(QLatin1String("xmlhttprequest"))) {
                 setOption(XMLHttpRequestOption);
                 setException(XMLHttpRequestOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("image"))) {
+            } else if (option.endsWith(QLatin1String("image"))) {
                 setOption(ImageOption);
                 setException(ImageOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("script"))) {
+            } else if (option.endsWith(QLatin1String("script"))) {
                 setOption(ScriptOption);
                 setException(ScriptOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("stylesheet"))) {
+            } else if (option.endsWith(QLatin1String("stylesheet"))) {
                 setOption(StyleSheetOption);
                 setException(StyleSheetOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option.endsWith(QLatin1String("object-subrequest"))) {
+            } else if (option.endsWith(QLatin1String("object-subrequest"))) {
                 setOption(ObjectSubrequestOption);
                 setException(ObjectSubrequestOption, option.startsWith(QLatin1Char('~')));
                 ++handledOptions;
-            }
-            else if (option == QLatin1String("document") && m_isException) {
+            } else if (option == QLatin1String("document") && m_isException) {
                 setOption(DocumentOption);
                 ++handledOptions;
-            }
-            else if (option == QLatin1String("elemhide") && m_isException) {
+            } else if (option == QLatin1String("elemhide") && m_isException) {
                 setOption(ElementHideOption);
                 ++handledOptions;
-            }
-            else if (option == QLatin1String("collapse")) {
+            } else if (option == QLatin1String("collapse")) {
                 // Hiding placeholders of blocked elements is enabled by default
                 ++handledOptions;
             }
@@ -545,8 +530,8 @@ void AdBlockRule::parseFilter()
     // If we still find a wildcard (*) or separator (^) or (|)
     // we must modify parsedLine to comply with QzRegExp
     if (parsedLine.contains(QLatin1Char('*')) ||
-        parsedLine.contains(QLatin1Char('^')) ||
-        parsedLine.contains(QLatin1Char('|'))
+            parsedLine.contains(QLatin1Char('^')) ||
+            parsedLine.contains(QLatin1Char('|'))
        ) {
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
@@ -570,8 +555,7 @@ void AdBlockRule::parseDomains(const QString &domains, const QChar &separator)
         }
         if (domain.startsWith(QLatin1Char('~'))) {
             m_blockedDomains.append(domain.mid(1));
-        }
-        else {
+        } else {
             m_allowedDomains.append(domain);
         }
     }
@@ -583,8 +567,9 @@ void AdBlockRule::parseDomains(const QString &domains, const QChar &separator)
 
 bool AdBlockRule::filterIsOnlyDomain(const QString &filter) const
 {
-    if (!filter.endsWith(QLatin1Char('^')) || !filter.startsWith(QLatin1String("||")))
+    if (!filter.endsWith(QLatin1Char('^')) || !filter.startsWith(QLatin1String("||"))) {
         return false;
+    }
 
     for (int i = 0; i < filter.size(); ++i) {
         switch (filter.at(i).toLatin1()) {
@@ -640,8 +625,9 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
             break;
 
         case '*':
-            if (!hadWildcard)
+            if (!hadWildcard) {
                 parsed.append(QLatin1String(".*"));
+            }
             break;
 
         case '|':
@@ -649,23 +635,22 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
                 if (filter.size() > 1 && filter.at(1) == QLatin1Char('|')) {
                     parsed.append(QLatin1String("^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?"));
                     i++;
-                }
-                else {
+                } else {
                     parsed.append(QLatin1Char('^'));
                 }
                 break;
-            }
-            else if (i == filter.size() - 1) {
+            } else if (i == filter.size() - 1) {
                 parsed.append(QLatin1Char('$'));
                 break;
             }
-            // fallthrough
+        // fallthrough
 
         default:
-            if (!wordCharacter(c))
+            if (!wordCharacter(c)) {
                 parsed.append(QLatin1Char('\\') + c);
-            else
+            } else {
                 parsed.append(c);
+            }
         }
 
         hadWildcard = c == QLatin1Char('*');
@@ -690,14 +675,11 @@ bool AdBlockRule::stringMatch(const QString &domain, const QString &encodedUrl) 
 {
     if (m_type == StringContainsMatchRule) {
         return encodedUrl.contains(m_matchString, m_caseSensitivity);
-    }
-    else if (m_type == DomainMatchRule) {
+    } else if (m_type == DomainMatchRule) {
         return isMatchingDomain(domain, m_matchString);
-    }
-    else if (m_type == StringEndsMatchRule) {
+    } else if (m_type == StringEndsMatchRule) {
         return encodedUrl.endsWith(m_matchString, m_caseSensitivity);
-    }
-    else if (m_type == RegExpMatchRule) {
+    } else if (m_type == RegExpMatchRule) {
         if (!isMatchingRegExpStrings(encodedUrl)) {
             return false;
         }
@@ -709,7 +691,7 @@ bool AdBlockRule::stringMatch(const QString &domain, const QString &encodedUrl) 
 
 bool AdBlockRule::isMatchingDomain(const QString &domain, const QString &filter) const
 {
-    return false;//FIXME QzTools::matchDomain(filter, domain);
+    return QzTools::matchDomain(filter, domain);
 }
 
 bool AdBlockRule::isMatchingRegExpStrings(const QString &url) const
@@ -717,8 +699,9 @@ bool AdBlockRule::isMatchingRegExpStrings(const QString &url) const
     Q_ASSERT(m_regExp);
 
     foreach (const QStringMatcher &matcher, m_regExp->matchers) {
-        if (matcher.indexIn(url) == -1)
+        if (matcher.indexIn(url) == -1) {
             return false;
+        }
     }
 
     return true;
@@ -736,15 +719,17 @@ QStringList AdBlockRule::parseRegExpFilter(const QString &filter) const
         // Meta characters in AdBlock rules are | * ^
         if (c == QLatin1Char('|') || c == QLatin1Char('*') || c == QLatin1Char('^')) {
             const QString sub = filter.mid(startPos, i - startPos);
-            if (sub.size() > 1)
+            if (sub.size() > 1) {
                 list.append(sub);
+            }
             startPos = i + 1;
         }
     }
 
     const QString sub = filter.mid(startPos);
-    if (sub.size() > 1)
+    if (sub.size() > 1) {
         list.append(sub);
+    }
 
     list.removeDuplicates();
 

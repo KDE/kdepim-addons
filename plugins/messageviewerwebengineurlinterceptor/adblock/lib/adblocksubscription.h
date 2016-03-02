@@ -77,7 +77,7 @@ class AdBlockSubscription : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockSubscription(const QString &title, QObject* parent = Q_NULLPTR);
+    explicit AdBlockSubscription(const QString &title, QObject *parent = Q_NULLPTR);
     ~AdBlockSubscription();
 
     QString title() const;
@@ -91,18 +91,18 @@ public:
     virtual void loadSubscription(const QStringList &disabledRules);
     virtual void saveSubscription();
 
-    const AdBlockRule* rule(int offset) const;
-    QVector<AdBlockRule*> allRules() const;
+    const AdBlockRule *rule(int offset) const;
+    QVector<AdBlockRule *> allRules() const;
 
-    const AdBlockRule* enableRule(int offset);
-    const AdBlockRule* disableRule(int offset);
+    const AdBlockRule *enableRule(int offset);
+    const AdBlockRule *disableRule(int offset);
 
     virtual bool canEditRules() const;
     virtual bool canBeRemoved() const;
 
-    virtual int addRule(AdBlockRule* rule);
+    virtual int addRule(AdBlockRule *rule);
     virtual bool removeRule(int offset);
-    virtual const AdBlockRule* replaceRule(AdBlockRule* rule, int offset);
+    virtual const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
 
 public slots:
     void updateSubscription();
@@ -118,8 +118,8 @@ protected slots:
 protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
-    FollowRedirectReply* m_reply;
-    QVector<AdBlockRule*> m_rules;
+    FollowRedirectReply *m_reply;
+    QVector<AdBlockRule *> m_rules;
 
 private:
     QString m_title;
@@ -133,7 +133,7 @@ class AdBlockCustomList : public AdBlockSubscription
 {
     Q_OBJECT
 public:
-    explicit AdBlockCustomList(QObject* parent = 0);
+    explicit AdBlockCustomList(QObject *parent = 0);
 
     void loadSubscription(const QStringList &disabledRules);
     void saveSubscription();
@@ -144,9 +144,9 @@ public:
     bool containsFilter(const QString &filter) const;
     bool removeFilter(const QString &filter);
 
-    int addRule(AdBlockRule* rule);
+    int addRule(AdBlockRule *rule);
     bool removeRule(int offset);
-    const AdBlockRule* replaceRule(AdBlockRule* rule, int offset);
+    const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
 };
 }
 

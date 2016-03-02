@@ -62,8 +62,7 @@ void QzRegExp::setMinimal(bool minimal)
 
     if (minimal) {
         opt = patternOptions() | QRegularExpression::InvertedGreedinessOption;
-    }
-    else {
+    } else {
         opt = patternOptions() & ~QRegularExpression::InvertedGreedinessOption;
     }
 
@@ -72,7 +71,7 @@ void QzRegExp::setMinimal(bool minimal)
 
 int QzRegExp::indexIn(const QString &str, int offset) const
 {
-    QzRegExp* that = const_cast<QzRegExp*>(this);
+    QzRegExp *that = const_cast<QzRegExp *>(this);
     QRegularExpressionMatch m = match(str, offset);
 
     if (!m.hasMatch()) {

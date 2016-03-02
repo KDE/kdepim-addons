@@ -78,13 +78,13 @@ class AdBlockRule
     Q_DISABLE_COPY(AdBlockRule)
 
 public:
-    AdBlockRule(const QString &filter = QString(), AdBlockSubscription* subscription = Q_NULLPTR);
+    AdBlockRule(const QString &filter = QString(), AdBlockSubscription *subscription = Q_NULLPTR);
     ~AdBlockRule();
 
-    AdBlockRule* copy() const;
+    AdBlockRule *copy() const;
 
-    AdBlockSubscription* subscription() const;
-    void setSubscription(AdBlockSubscription* subscription);
+    AdBlockSubscription *subscription() const;
+    void setSubscription(AdBlockSubscription *subscription);
 
     QString filter() const;
     void setFilter(const QString &filter);
@@ -165,7 +165,7 @@ private:
     QString createRegExpFromFilter(const QString &filter) const;
     QList<QStringMatcher> createStringMatchers(const QStringList &filters) const;
 
-    AdBlockSubscription* m_subscription;
+    AdBlockSubscription *m_subscription;
 
     RuleType m_type;
     RuleOptions m_options;
@@ -191,7 +191,7 @@ private:
     };
 
     // Use dynamic allocation to save memory
-    RegExp* m_regExp;
+    RegExp *m_regExp;
 
     friend class AdBlockMatcher;
     friend class AdBlockSearchTree;

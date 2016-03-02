@@ -36,7 +36,6 @@
 
 #include <QFileDialog>
 
-
 class QSslCertificate;
 class QFontMetrics;
 class QPixmap;

@@ -72,7 +72,7 @@
 #include <QNetworkReply>
 using namespace AdBlock;
 
-AdBlockSubscription::AdBlockSubscription(const QString &title, QObject* parent)
+AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
     : QObject(parent)
     , m_reply(0)
     , m_title(title)
@@ -136,7 +136,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     m_rules.clear();
 
     while (!textStream.atEnd()) {
-        AdBlockRule* rule = new AdBlockRule(textStream.readLine(), this);
+        AdBlockRule *rule = new AdBlockRule(textStream.readLine(), this);
 
         if (disabledRules.contains(rule->filter())) {
             rule->setEnabled(false);
@@ -168,7 +168,7 @@ void AdBlockSubscription::updateSubscription()
 
 void AdBlockSubscription::subscriptionDownloaded()
 {
-    if (m_reply != qobject_cast<FollowRedirectReply*>(sender())) {
+    if (m_reply != qobject_cast<FollowRedirectReply *>(sender())) {
         return;
     }
 
@@ -176,8 +176,8 @@ void AdBlockSubscription::subscriptionDownloaded()
     const QByteArray response = QString::fromUtf8(m_reply->readAll()).toUtf8();
 
     if (m_reply->error() != QNetworkReply::NoError ||
-        !response.startsWith(QByteArray("[Adblock")) ||
-        !saveDownloadedData(response)
+            !response.startsWith(QByteArray("[Adblock")) ||
+            !saveDownloadedData(response)
        ) {
         error = true;
     }
@@ -227,7 +227,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
     return true;
 }
 
-const AdBlockRule* AdBlockSubscription::rule(int offset) const
+const AdBlockRule *AdBlockSubscription::rule(int offset) const
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
         return 0;
@@ -236,43 +236,45 @@ const AdBlockRule* AdBlockSubscription::rule(int offset) const
     return m_rules[offset];
 }
 
-QVector<AdBlockRule*> AdBlockSubscription::allRules() const
+QVector<AdBlockRule *> AdBlockSubscription::allRules() const
 {
     return m_rules;
 }
 
-const AdBlockRule* AdBlockSubscription::enableRule(int offset)
+const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
         return 0;
     }
 
-    AdBlockRule* rule = m_rules[offset];
+    AdBlockRule *rule = m_rules[offset];
     rule->setEnabled(true);
     AdBlockManager::instance()->removeDisabledRule(rule->filter());
 
     emit subscriptionChanged();
 
-    if (rule->isCssRule())
+    if (rule->isCssRule()) {
         mApp->reloadUserStyleSheet();
+    }
 
     return rule;
 }
 
-const AdBlockRule* AdBlockSubscription::disableRule(int offset)
+const AdBlockRule *AdBlockSubscription::disableRule(int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
         return 0;
     }
 
-    AdBlockRule* rule = m_rules[offset];
+    AdBlockRule *rule = m_rules[offset];
     rule->setEnabled(false);
     AdBlockManager::instance()->addDisabledRule(rule->filter());
 
     emit subscriptionChanged();
 
-    if (rule->isCssRule())
+    if (rule->isCssRule()) {
         mApp->reloadUserStyleSheet();
+    }
 
     return rule;
 }
@@ -287,7 +289,7 @@ bool AdBlockSubscription::canBeRemoved() const
     return true;
 }
 
-int AdBlockSubscription::addRule(AdBlockRule* rule)
+int AdBlockSubscription::addRule(AdBlockRule *rule)
 {
     Q_UNUSED(rule)
     return -1;
@@ -299,7 +301,7 @@ bool AdBlockSubscription::removeRule(int offset)
     return false;
 }
 
-const AdBlockRule* AdBlockSubscription::replaceRule(AdBlockRule* rule, int offset)
+const AdBlockRule *AdBlockSubscription::replaceRule(AdBlockRule *rule, int offset)
 {
     Q_UNUSED(rule)
     Q_UNUSED(offset)
@@ -313,7 +315,7 @@ AdBlockSubscription::~AdBlockSubscription()
 
 // AdBlockCustomList
 
-AdBlockCustomList::AdBlockCustomList(QObject* parent)
+AdBlockCustomList::AdBlockCustomList(QObject *parent)
     : AdBlockSubscription(tr("Custom Rules"), parent)
 {
     setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/customlist.txt"));
@@ -335,11 +337,13 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
         QTextStream stream(&file);
         stream.setCodec("UTF-8");
 
-        if (!rules.contains(ddg1 + QL1S("\n")))
+        if (!rules.contains(ddg1 + QL1S("\n"))) {
             stream << ddg1 << endl;
+        }
 
-        if (!rules.contains(QL1S("\n") + ddg2))
+        if (!rules.contains(QL1S("\n") + ddg2)) {
             stream << ddg2 << endl;
+        }
     }
     file.close();
 
@@ -361,7 +365,7 @@ void AdBlockCustomList::saveSubscription()
     textStream << "Url: " << url().toString() << endl;
     textStream << "[Adblock Plus 1.1.1]" << endl;
 
-    foreach (const AdBlockRule* rule, m_rules) {
+    foreach (const AdBlockRule *rule, m_rules) {
         textStream << rule->filter() << endl;
     }
 
@@ -380,7 +384,7 @@ bool AdBlockCustomList::canBeRemoved() const
 
 bool AdBlockCustomList::containsFilter(const QString &filter) const
 {
-    foreach (const AdBlockRule* rule, m_rules) {
+    foreach (const AdBlockRule *rule, m_rules) {
         if (rule->filter() == filter) {
             return true;
         }
@@ -392,7 +396,7 @@ bool AdBlockCustomList::containsFilter(const QString &filter) const
 bool AdBlockCustomList::removeFilter(const QString &filter)
 {
     for (int i = 0; i < m_rules.count(); ++i) {
-        const AdBlockRule* rule = m_rules.at(i);
+        const AdBlockRule *rule = m_rules.at(i);
 
         if (rule->filter() == filter) {
             return removeRule(i);
@@ -402,14 +406,15 @@ bool AdBlockCustomList::removeFilter(const QString &filter)
     return false;
 }
 
-int AdBlockCustomList::addRule(AdBlockRule* rule)
+int AdBlockCustomList::addRule(AdBlockRule *rule)
 {
     m_rules.append(rule);
 
     emit subscriptionChanged();
 
-    if (rule->isCssRule())
+    if (rule->isCssRule()) {
         mApp->reloadUserStyleSheet();
+    }
 
     return m_rules.count() - 1;
 }
@@ -420,15 +425,16 @@ bool AdBlockCustomList::removeRule(int offset)
         return false;
     }
 
-    AdBlockRule* rule = m_rules.at(offset);
+    AdBlockRule *rule = m_rules.at(offset);
     const QString filter = rule->filter();
 
     m_rules.remove(offset);
 
     emit subscriptionChanged();
 
-    if (rule->isCssRule())
+    if (rule->isCssRule()) {
         mApp->reloadUserStyleSheet();
+    }
 
     AdBlockManager::instance()->removeDisabledRule(filter);
 
@@ -436,19 +442,20 @@ bool AdBlockCustomList::removeRule(int offset)
     return true;
 }
 
-const AdBlockRule* AdBlockCustomList::replaceRule(AdBlockRule* rule, int offset)
+const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
 {
     if (!QzTools::containsIndex(m_rules, offset)) {
         return 0;
     }
 
-    AdBlockRule* oldRule = m_rules.at(offset);
+    AdBlockRule *oldRule = m_rules.at(offset);
     m_rules[offset] = rule;
 
     emit subscriptionChanged();
 
-    if (rule->isCssRule() || oldRule->isCssRule())
+    if (rule->isCssRule() || oldRule->isCssRule()) {
         mApp->reloadUserStyleSheet();
+    }
 
     delete oldRule;
     return m_rules[offset];
