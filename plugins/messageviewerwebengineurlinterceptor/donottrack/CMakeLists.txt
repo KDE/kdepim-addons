@@ -3,6 +3,11 @@ set(messageviewer_webengineurlinterceptor_donottrack_SRCS
     donottrackpluginurlinterceptor.cpp
     )
 
+kconfig_add_kcfg_files(messageviewer_webengineurlinterceptor_donottrack_SRCS
+  settings/donottrack.kcfgc
+)
+
+
 add_library(messageviewer_donottrackplugin MODULE ${messageviewer_webengineurlinterceptor_donottrack_SRCS})
 
 target_link_libraries(messageviewer_donottrackplugin

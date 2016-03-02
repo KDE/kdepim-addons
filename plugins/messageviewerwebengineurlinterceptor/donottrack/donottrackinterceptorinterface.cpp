@@ -17,6 +17,7 @@
 
 #include "donottrackinterceptorinterface.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
+#include "donottrack.h"
 
 DoNotTrackInterceptorInterface::DoNotTrackInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent)
@@ -30,7 +31,6 @@ DoNotTrackInterceptorInterface::~DoNotTrackInterceptorInterface()
 
 void DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
-    //if (mDoNotTrackManager->interceptRequest(info.requestUrl())) {
-        //info.block(true);
-    //}
+    if (DoNotTrackSettings::doNotTrack())
+        info.setHttpHeader(QByteArrayLiteral("DNT"), QByteArrayLiteral("1"));
 }

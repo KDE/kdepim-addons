@@ -1,0 +1,6 @@
+File=donottrack.kcfg
+ClassName=DoNotTrackSettings
+Mutators=true
+Singleton=true
+ItemAccessors=true
+
