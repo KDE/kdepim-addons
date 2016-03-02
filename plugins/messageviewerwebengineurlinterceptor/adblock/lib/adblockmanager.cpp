@@ -71,6 +71,15 @@ bool AdblockManager::interceptRequest(const QUrl &url)
     const QString host = url.host().toLower();
     const QString scheme = url.scheme().toLower();
 
+    if (!canRunOnScheme(scheme)) {
+        return false;
+    }
+
     //TODO
     return false;
+}
+
+bool AdblockManager::canRunOnScheme(const QString &scheme) const
+{
+    return !(scheme == QLatin1String("file"));
 }

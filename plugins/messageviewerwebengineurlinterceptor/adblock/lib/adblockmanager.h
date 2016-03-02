@@ -37,6 +37,7 @@ public Q_SLOTS:
     void reloadConfig();
 
 private:
+    bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
 };
 }
