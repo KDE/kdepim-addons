@@ -61,11 +61,10 @@
 #include "adblocksubscription.h"
 #include "adblockmanager.h"
 #include "adblocksearchtree.h"
-#include "mainapplication.h"
-#include "networkmanager.h"
-#include "datapaths.h"
-#include "qztools.h"
-#include "followredirectreply.h"
+//#include "networkmanager.h"
+//#include "datapaths.h"
+#include "adblockutil.h"
+//#include "followredirectreply.h"
 
 #include <QFile>
 #include <QTimer>
@@ -157,6 +156,7 @@ void AdBlockSubscription::saveSubscription()
 
 void AdBlockSubscription::updateSubscription()
 {
+#if 0
     if (m_reply || !m_url.isValid()) {
         return;
     }
@@ -164,10 +164,12 @@ void AdBlockSubscription::updateSubscription()
     m_reply = new FollowRedirectReply(m_url, mApp->networkManager());
 
     connect(m_reply, SIGNAL(finished()), this, SLOT(subscriptionDownloaded()));
+#endif
 }
 
 void AdBlockSubscription::subscriptionDownloaded()
 {
+#if 0
     if (m_reply != qobject_cast<FollowRedirectReply *>(sender())) {
         return;
     }
@@ -194,10 +196,12 @@ void AdBlockSubscription::subscriptionDownloaded()
 
     emit subscriptionUpdated();
     emit subscriptionChanged();
+#endif
 }
 
 bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 {
+#if 0
     QFile file(m_filePath);
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
@@ -224,12 +228,13 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 
     file.write(data);
     file.close();
+#endif
     return true;
 }
 
 const AdBlockRule *AdBlockSubscription::rule(int offset) const
 {
-    if (!QzTools::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(m_rules, offset)) {
         return 0;
     }
 
@@ -243,18 +248,18 @@ QVector<AdBlockRule *> AdBlockSubscription::allRules() const
 
 const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 {
-    if (!QzTools::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(m_rules, offset)) {
         return 0;
     }
 
     AdBlockRule *rule = m_rules[offset];
     rule->setEnabled(true);
-    AdBlockManager::instance()->removeDisabledRule(rule->filter());
+    //FIXME AdBlockManager::instance()->removeDisabledRule(rule->filter());
 
     emit subscriptionChanged();
 
     if (rule->isCssRule()) {
-        mApp->reloadUserStyleSheet();
+        //FIXME mApp->reloadUserStyleSheet();
     }
 
     return rule;
@@ -262,18 +267,18 @@ const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 
 const AdBlockRule *AdBlockSubscription::disableRule(int offset)
 {
-    if (!QzTools::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(m_rules, offset)) {
         return 0;
     }
 
     AdBlockRule *rule = m_rules[offset];
     rule->setEnabled(false);
-    AdBlockManager::instance()->addDisabledRule(rule->filter());
+    //FIXME AdBlockManager::instance()->addDisabledRule(rule->filter());
 
     emit subscriptionChanged();
 
     if (rule->isCssRule()) {
-        mApp->reloadUserStyleSheet();
+        //FIXME mApp->reloadUserStyleSheet();
     }
 
     return rule;
@@ -318,11 +323,14 @@ AdBlockSubscription::~AdBlockSubscription()
 AdBlockCustomList::AdBlockCustomList(QObject *parent)
     : AdBlockSubscription(tr("Custom Rules"), parent)
 {
+#if 0
     setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/customlist.txt"));
+#endif
 }
 
 void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
 {
+    #if 0
     // DuckDuckGo ad whitelist rules
     // They cannot be removed, but can be disabled.
     // Please consider not disabling them. Thanks!
@@ -337,17 +345,18 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
         QTextStream stream(&file);
         stream.setCodec("UTF-8");
 
-        if (!rules.contains(ddg1 + QL1S("\n"))) {
+        if (!rules.contains(ddg1 + QLatin1String("\n"))) {
             stream << ddg1 << endl;
         }
 
-        if (!rules.contains(QL1S("\n") + ddg2)) {
+        if (!rules.contains(QLatin1String("\n") + ddg2)) {
             stream << ddg2 << endl;
         }
     }
     file.close();
 
     AdBlockSubscription::loadSubscription(disabledRules);
+#endif
 }
 
 void AdBlockCustomList::saveSubscription()
@@ -413,7 +422,7 @@ int AdBlockCustomList::addRule(AdBlockRule *rule)
     emit subscriptionChanged();
 
     if (rule->isCssRule()) {
-        mApp->reloadUserStyleSheet();
+        //FIXME mApp->reloadUserStyleSheet();
     }
 
     return m_rules.count() - 1;
@@ -421,7 +430,7 @@ int AdBlockCustomList::addRule(AdBlockRule *rule)
 
 bool AdBlockCustomList::removeRule(int offset)
 {
-    if (!QzTools::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(m_rules, offset)) {
         return false;
     }
 
@@ -433,10 +442,10 @@ bool AdBlockCustomList::removeRule(int offset)
     emit subscriptionChanged();
 
     if (rule->isCssRule()) {
-        mApp->reloadUserStyleSheet();
+        //FIXME mApp->reloadUserStyleSheet();
     }
 
-    AdBlockManager::instance()->removeDisabledRule(filter);
+    //FIXME AdBlockManager::instance()->removeDisabledRule(filter);
 
     delete rule;
     return true;
@@ -444,7 +453,7 @@ bool AdBlockCustomList::removeRule(int offset)
 
 const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
 {
-    if (!QzTools::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(m_rules, offset)) {
         return 0;
     }
 
@@ -454,7 +463,7 @@ const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
     emit subscriptionChanged();
 
     if (rule->isCssRule() || oldRule->isCssRule()) {
-        mApp->reloadUserStyleSheet();
+        //FIXME mApp->reloadUserStyleSheet();
     }
 
     delete oldRule;

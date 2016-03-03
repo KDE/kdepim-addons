@@ -104,15 +104,15 @@ public:
     virtual bool removeRule(int offset);
     virtual const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
 
-public slots:
+public Q_SLOTS:
     void updateSubscription();
 
-signals:
+Q_SIGNALS:
     void subscriptionChanged();
     void subscriptionUpdated();
     void subscriptionError(const QString &message);
 
-protected slots:
+protected Q_SLOTS:
     void subscriptionDownloaded();
 
 protected:
@@ -133,20 +133,20 @@ class AdBlockCustomList : public AdBlockSubscription
 {
     Q_OBJECT
 public:
-    explicit AdBlockCustomList(QObject *parent = 0);
+    explicit AdBlockCustomList(QObject *parent = Q_NULLPTR);
 
-    void loadSubscription(const QStringList &disabledRules);
-    void saveSubscription();
+    void loadSubscription(const QStringList &disabledRules) Q_DECL_OVERRIDE;
+    void saveSubscription() Q_DECL_OVERRIDE;
 
-    bool canEditRules() const;
-    bool canBeRemoved() const;
+    bool canEditRules() const Q_DECL_OVERRIDE;
+    bool canBeRemoved() const Q_DECL_OVERRIDE;
 
     bool containsFilter(const QString &filter) const;
     bool removeFilter(const QString &filter);
 
-    int addRule(AdBlockRule *rule);
-    bool removeRule(int offset);
-    const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
+    int addRule(AdBlockRule *rule) Q_DECL_OVERRIDE;
+    bool removeRule(int offset) Q_DECL_OVERRIDE;
+    const AdBlockRule *replaceRule(AdBlockRule *rule, int offset) Q_DECL_OVERRIDE;
 };
 }
 
