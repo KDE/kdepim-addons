@@ -2,7 +2,7 @@ set(adblocklibprivate_SRCS
     adblockmanager.cpp
     adblocksearchtree.cpp
     adblockrule.cpp
-    qzregexp.cpp
+    adblockregexp.cpp
     adblockutil.cpp
     adblockmatcher.cpp
     adblocksubscription.cpp

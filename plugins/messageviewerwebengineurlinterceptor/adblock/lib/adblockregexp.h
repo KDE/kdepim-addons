@@ -31,20 +31,20 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#ifndef QZREGEXP_H
-#define QZREGEXP_H
+#ifndef ADBLOCKREGEXP_H
+#define ADBLOCKREGEXP_H
 
 #include <QRegularExpression>
 #include <QStringList>
 
 namespace AdBlock
 {
-class QzRegExp : public QRegularExpression
+class AdblockRegExp : public QRegularExpression
 {
 public:
-    QzRegExp();
-    QzRegExp(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive);
-    QzRegExp(const QzRegExp &re);
+    AdblockRegExp();
+    AdblockRegExp(const QString &pattern, Qt::CaseSensitivity cs = Qt::CaseSensitive);
+    AdblockRegExp(const AdblockRegExp &re);
 
     void setMinimal(bool minimal);
     int indexIn(const QString &str, int offset = 0) const;
@@ -56,4 +56,4 @@ private:
     int m_matchedLength;
 };
 }
-#endif // QZREGEXP_H
+#endif

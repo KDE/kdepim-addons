@@ -63,7 +63,7 @@
 #include "adblockrule.h"
 #include "adblocksubscription.h"
 #include "adblockutil.h"
-#include "qzregexp.h"
+#include "adblockregexp.h"
 
 #include <QUrl>
 #include <QString>
@@ -494,7 +494,7 @@ void AdBlockRule::parseFilter()
 
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
-        m_regExp->regExp = QzRegExp(parsedLine, m_caseSensitivity);
+        m_regExp->regExp = AdblockRegExp(parsedLine, m_caseSensitivity);
         m_regExp->matchers = createStringMatchers(parseRegExpFilter(parsedLine));
         return;
     }
@@ -535,7 +535,7 @@ void AdBlockRule::parseFilter()
        ) {
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
-        m_regExp->regExp = QzRegExp(createRegExpFromFilter(parsedLine), m_caseSensitivity);
+        m_regExp->regExp = AdblockRegExp(createRegExpFromFilter(parsedLine), m_caseSensitivity);
         m_regExp->matchers = createStringMatchers(parseRegExpFilter(parsedLine));
         return;
     }

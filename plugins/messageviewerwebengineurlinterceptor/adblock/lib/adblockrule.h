@@ -65,7 +65,7 @@
 #include <QObject>
 #include <QStringList>
 #include <QStringMatcher>
-#include "qzregexp.h"
+#include "adblockregexp.h"
 class QUrl;
 class QWebEngineUrlRequestInfo;
 
@@ -186,7 +186,7 @@ private:
     QStringList m_blockedDomains;
 
     struct RegExp {
-        QzRegExp regExp;
+        AdblockRegExp regExp;
         QList<QStringMatcher> matchers;
     };
 

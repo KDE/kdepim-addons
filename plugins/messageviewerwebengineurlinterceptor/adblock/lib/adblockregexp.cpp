@@ -31,17 +31,17 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qzregexp.h"
+#include "adblockregexp.h"
 #include "adblockutil.h"
 using namespace AdBlock;
 
-QzRegExp::QzRegExp()
+AdblockRegExp::AdblockRegExp()
     : QRegularExpression(QString(), QRegularExpression::DotMatchesEverythingOption)
     , m_matchedLength(-1)
 {
 }
 
-QzRegExp::QzRegExp(const QString &pattern, Qt::CaseSensitivity cs)
+AdblockRegExp::AdblockRegExp(const QString &pattern, Qt::CaseSensitivity cs)
     : QRegularExpression(pattern, QRegularExpression::DotMatchesEverythingOption)
     , m_matchedLength(-1)
 {
@@ -50,13 +50,13 @@ QzRegExp::QzRegExp(const QString &pattern, Qt::CaseSensitivity cs)
     }
 }
 
-QzRegExp::QzRegExp(const QzRegExp &re)
+AdblockRegExp::AdblockRegExp(const AdblockRegExp &re)
     : QRegularExpression(re)
     , m_matchedLength(-1)
 {
 }
 
-void QzRegExp::setMinimal(bool minimal)
+void AdblockRegExp::setMinimal(bool minimal)
 {
     QRegularExpression::PatternOptions opt;
 
@@ -69,9 +69,9 @@ void QzRegExp::setMinimal(bool minimal)
     setPatternOptions(opt);
 }
 
-int QzRegExp::indexIn(const QString &str, int offset) const
+int AdblockRegExp::indexIn(const QString &str, int offset) const
 {
-    QzRegExp *that = const_cast<QzRegExp *>(this);
+    AdblockRegExp *that = const_cast<AdblockRegExp *>(this);
     QRegularExpressionMatch m = match(str, offset);
 
     if (!m.hasMatch()) {
@@ -85,12 +85,12 @@ int QzRegExp::indexIn(const QString &str, int offset) const
     return m.capturedStart();
 }
 
-int QzRegExp::matchedLength() const
+int AdblockRegExp::matchedLength() const
 {
     return m_matchedLength;
 }
 
-QString QzRegExp::cap(int nth) const
+QString AdblockRegExp::cap(int nth) const
 {
     if (!AdblockUtil::containsIndex(m_capturedTexts, nth)) {
         return QString();
