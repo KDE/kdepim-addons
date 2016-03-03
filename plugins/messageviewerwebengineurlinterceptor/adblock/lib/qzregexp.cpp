@@ -32,7 +32,7 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "qzregexp.h"
-#include "qztools.h"
+#include "adblockutil.h"
 using namespace AdBlock;
 
 QzRegExp::QzRegExp()
@@ -92,7 +92,7 @@ int QzRegExp::matchedLength() const
 
 QString QzRegExp::cap(int nth) const
 {
-    if (!QzTools::containsIndex(m_capturedTexts, nth)) {
+    if (!AdblockUtil::containsIndex(m_capturedTexts, nth)) {
         return QString();
     }
 

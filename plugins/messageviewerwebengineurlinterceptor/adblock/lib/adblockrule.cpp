@@ -62,7 +62,7 @@
 
 #include "adblockrule.h"
 #include "adblocksubscription.h"
-#include "qztools.h"
+#include "adblockutil.h"
 #include "qzregexp.h"
 
 #include <QUrl>
@@ -691,7 +691,7 @@ bool AdBlockRule::stringMatch(const QString &domain, const QString &encodedUrl) 
 
 bool AdBlockRule::isMatchingDomain(const QString &domain, const QString &filter) const
 {
-    return QzTools::matchDomain(filter, domain);
+    return AdblockUtil::matchDomain(filter, domain);
 }
 
 bool AdBlockRule::isMatchingRegExpStrings(const QString &url) const

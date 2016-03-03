@@ -31,23 +31,22 @@
 * You should have received a copy of the GNU General Public License
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 * ============================================================ */
-#include "qztools.h"
+#ifndef QZTOOLS_H
+#define QZTOOLS_H
 
-using namespace AdBlock;
-// Matches domain (assumes both pattern and domain not starting with dot)
-//  pattern = domain to be matched
-//  domain = site domain
-bool QzTools::matchDomain(const QString &pattern, const QString &domain)
+#include <QString>
+
+namespace AdBlock
 {
-    if (pattern == domain) {
-        return true;
+class AdblockUtil
+{
+public:
+    static bool matchDomain(const QString &pattern, const QString &domain);
+    template <typename T>
+    static bool containsIndex(const T &container, int index)
+    {
+        return (index >= 0 && container.count() > index);
     }
-
-    if (!domain.endsWith(pattern)) {
-        return false;
-    }
-
-    int index = domain.indexOf(pattern);
-
-    return index > 0 && domain[index - 1] == QLatin1Char('.');
+};
 }
+#endif // QZTOOLS_H
