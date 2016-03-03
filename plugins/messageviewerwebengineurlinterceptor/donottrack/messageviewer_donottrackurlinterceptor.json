@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Name": "Do Not Track", 
+        "Name[ca]": "No deixis rastre", 
+        "Name[nl]": "Niet volgen", 
+        "Name[pt]": "Não Seguir", 
+        "Name[pt_BR]": "Não rastrear", 
+        "Name[uk]": "Вимикання стеження", 
+        "Name[x-test]": "xxDo Not Trackxx", 
         "ServiceTypes": [
             "MessageViewer/UrlInterceptor"
         ], 
