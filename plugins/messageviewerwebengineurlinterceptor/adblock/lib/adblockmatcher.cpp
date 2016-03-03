@@ -37,11 +37,11 @@
 #include "adblocksubscription.h"
 
 using namespace AdBlock;
-AdBlockMatcher::AdBlockMatcher(AdBlockManager *manager)
+AdBlockMatcher::AdBlockMatcher(AdblockManager *manager)
     : QObject(manager)
     , m_manager(manager)
 {
-    connect(manager, SIGNAL(enabledChanged(bool)), this, SLOT(enabledChanged(bool)));
+    //FIXME connect(manager, SIGNAL(enabledChanged(bool)), this, SLOT(enabledChanged(bool)));
 }
 
 AdBlockMatcher::~AdBlockMatcher()
@@ -127,7 +127,7 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 
         if (Q_UNLIKELY(addedRulesCount == 1000)) {
             rules.append(rule->cssSelector());
-            rules.append(QL1S("{display:none !important;}\n"));
+            rules.append(QLatin1String("{display:none !important;}\n"));
             addedRulesCount = 0;
         } else {
             rules.append(rule->cssSelector() + QLatin1Char(','));
@@ -137,7 +137,7 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 
     if (addedRulesCount != 0) {
         rules = rules.left(rules.size() - 1);
-        rules.append(QL1S("{display:none !important;}\n"));
+        rules.append(QLatin1String("{display:none !important;}\n"));
     }
 
     return rules;
@@ -149,7 +149,7 @@ void AdBlockMatcher::update()
 
     QHash<QString, const AdBlockRule *> cssRulesHash;
     QVector<const AdBlockRule *> exceptionCssRules;
-
+#if 0 //FIXME
     foreach (AdBlockSubscription *subscription, m_manager->subscriptions()) {
         foreach (const AdBlockRule *rule, subscription->allRules()) {
             // Don't add internally disabled rules to cache
@@ -215,7 +215,7 @@ void AdBlockMatcher::update()
             m_domainRestrictedCssRules.append(rule);
         } else if (Q_UNLIKELY(hidingRulesCount == 1000)) {
             m_elementHidingRules.append(rule->cssSelector());
-            m_elementHidingRules.append(QL1S("{display:none !important;} "));
+            m_elementHidingRules.append(QLatin1String("{display:none !important;} "));
             hidingRulesCount = 0;
         } else {
             m_elementHidingRules.append(rule->cssSelector() + QLatin1Char(','));
@@ -225,8 +225,9 @@ void AdBlockMatcher::update()
 
     if (hidingRulesCount != 0) {
         m_elementHidingRules = m_elementHidingRules.left(m_elementHidingRules.size() - 1);
-        m_elementHidingRules.append(QL1S("{display:none !important;} "));
+        m_elementHidingRules.append(QLatin1String("{display:none !important;} "));
     }
+#endif
 }
 
 void AdBlockMatcher::clear()

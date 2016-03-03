@@ -37,19 +37,20 @@
 
 #include <QUrl>
 #include <QObject>
-
+#include <QVector>
+#include "adblockrule.h"
 #include "adblocksearchtree.h"
 
 class QWebEngineUrlRequestInfo;
 
 namespace AdBlock
 {
-class AdBlockManager;
+class AdblockManager;
 class AdBlockMatcher : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockMatcher(AdBlockManager *manager);
+    explicit AdBlockMatcher(AdblockManager *manager);
     ~AdBlockMatcher();
 
     const AdBlockRule *match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const;
@@ -68,7 +69,7 @@ private Q_SLOTS:
     void enabledChanged(bool enabled);
 
 private:
-    AdBlockManager *m_manager;
+    AdblockManager *m_manager;
 
     QVector<AdBlockRule *> m_createdRules;
     QVector<const AdBlockRule *> m_networkExceptionRules;
