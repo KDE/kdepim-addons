@@ -2,6 +2,7 @@
     "KPlugin": {
         "Name": "Do Not Track", 
         "Name[ca]": "No deixis rastre", 
+        "Name[es]": "No rastrear", 
         "Name[nl]": "Niet volgen", 
         "Name[pt]": "Não Seguir", 
         "Name[pt_BR]": "Não rastrear", 

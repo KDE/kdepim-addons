@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "GDrive", 
+        "Name[ru]": "Google Диск", 
         "Name[sr@ijekavian]": "Гугл‑драјв", 
         "Name[sr@ijekavianlatin]": "Google Drive", 
         "Name[sr@latin]": "Google Drive", 

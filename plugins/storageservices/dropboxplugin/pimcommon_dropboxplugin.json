@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "DropBox", 
+        "Name[ru]": "Dropbox", 
         "Name[sk]": "Dropbox", 
         "Name[sr@ijekavian]": "Дропбокс", 
         "Name[sr@ijekavianlatin]": "Dropbox", 

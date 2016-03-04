@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Hubic", 
+        "Name[ru]": "hubiC", 
         "Name[sr@ijekavian]": "Хјубик", 
         "Name[sr@ijekavianlatin]": "hubiC", 
         "Name[sr@latin]": "hubiC", 
