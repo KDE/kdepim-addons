@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Translator", 
+        "ServiceTypes": [
+            "Akregator/ViewerPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
