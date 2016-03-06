@@ -4,8 +4,13 @@
         "Name[ca]": "No deixis rastre", 
         "Name[es]": "No rastrear", 
         "Name[nl]": "Niet volgen", 
+        "Name[pl]": "Nie śledź", 
         "Name[pt]": "Não Seguir", 
         "Name[pt_BR]": "Não rastrear", 
+        "Name[sr@ijekavian]": "Не прати ме", 
+        "Name[sr@ijekavianlatin]": "Ne prati me", 
+        "Name[sr@latin]": "Ne prati me", 
+        "Name[sr]": "Не прати ме", 
         "Name[uk]": "Вимикання стеження", 
         "Name[x-test]": "xxDo Not Trackxx", 
         "ServiceTypes": [
