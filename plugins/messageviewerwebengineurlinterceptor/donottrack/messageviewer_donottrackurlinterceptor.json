@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Name": "Do Not Track", 
+        "Name[ca@valencia]": "No deixis rastre", 
         "Name[ca]": "No deixis rastre", 
         "Name[es]": "No rastrear", 
         "Name[nl]": "Niet volgen", 
