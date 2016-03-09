@@ -45,7 +45,7 @@ QAction *ViewerPluginExpandurlInterface::action() const
 
 void ViewerPluginExpandurlInterface::showWidget()
 {
-    //Nothing
+    //TODO expand url
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::featureTypes() const
@@ -56,12 +56,9 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::feat
 void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-#if 0
-        mAction = new QAction(i18n("Translate..."), this);
-        ac->setDefaultShortcut(mAction, QKeySequence(Qt::CTRL + Qt::ALT + Qt::Key_T));
-        mAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
-        ac->addAction(QStringLiteral("translate_text"), mAction);
+        mAction = new QAction(i18n("Expand Url"), this);
+        ac->addAction(QStringLiteral("expand_short_url"), mAction);
+        ac->setShortcutsConfigurable(mAction, false);
         connect(mAction, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
-#endif
     }
 }
