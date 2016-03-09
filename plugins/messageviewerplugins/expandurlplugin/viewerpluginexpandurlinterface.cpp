@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexpandurlinterface.h"
+#include <MessageViewer/ScamExpandUrlJob>
 
 #include <QHBoxLayout>
 #include <QIcon>
@@ -45,7 +46,10 @@ QAction *ViewerPluginExpandurlInterface::action() const
 
 void ViewerPluginExpandurlInterface::showWidget()
 {
-    //TODO expand url
+    if (mCurrentUrl.isValid()) {
+        MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
+        job->expandedUrl(mCurrentUrl);
+    }
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::featureTypes() const
@@ -61,4 +65,9 @@ void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
         ac->setShortcutsConfigurable(mAction, false);
         connect(mAction, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
     }
+}
+
+void ViewerPluginExpandurlInterface::setUrl(const QUrl &url)
+{
+    mCurrentUrl = url;
 }

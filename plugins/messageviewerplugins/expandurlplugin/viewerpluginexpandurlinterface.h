@@ -19,6 +19,7 @@
 #define VIEWERPLUGINEXPANDURLINTERFACE_H
 
 #include <messageviewer/viewerplugininterface.h>
+#include <QUrl>
 class KActionCollection;
 namespace MessageViewer
 {
@@ -33,8 +34,10 @@ public:
     void showWidget() Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
+    void setUrl(const QUrl &url) Q_DECL_OVERRIDE;
 private:
     void createAction(KActionCollection *ac);
+    QUrl mCurrentUrl;
     QAction *mAction;
 };
 }
