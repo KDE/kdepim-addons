@@ -54,7 +54,7 @@ void ViewerPluginExpandurlInterface::execute()
             MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
             job->expandedUrl(mCurrentUrl);
         } else {
-            KPIM::BroadcastStatus ::instance()->setStatusMsg(i18n("Current Url is not a shorten url."));
+            KPIM::BroadcastStatus ::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));
         }
     }
 }
@@ -67,7 +67,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::feat
 void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        mAction = new QAction(i18n("Expand Url"), this);
+        mAction = new QAction(i18n("Expand URL"), this);
         ac->addAction(QStringLiteral("expand_short_url"), mAction);
         ac->setShortcutsConfigurable(mAction, false);
         connect(mAction, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
