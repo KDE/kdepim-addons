@@ -17,6 +17,8 @@
 
 #include "viewerpluginexpandurlinterface.h"
 #include <MessageViewer/ScamExpandUrlJob>
+#include <MessageViewer/ScamCheckShortUrlManager>
+#include <MessageViewer/ScamCheckShortUrl>
 
 #include <QHBoxLayout>
 #include <QIcon>
@@ -47,8 +49,10 @@ QAction *ViewerPluginExpandurlInterface::action() const
 void ViewerPluginExpandurlInterface::showWidget()
 {
     if (mCurrentUrl.isValid()) {
-        MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
-        job->expandedUrl(mCurrentUrl);
+        if (MessageViewer::ScamCheckShortUrlManager::self()->scamCheckShortUrl()->isShortUrl(mCurrentUrl)) {
+            MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
+            job->expandedUrl(mCurrentUrl);
+        }
     }
 }
 
