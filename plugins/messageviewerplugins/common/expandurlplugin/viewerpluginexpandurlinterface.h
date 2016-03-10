@@ -31,7 +31,7 @@ public:
     ~ViewerPluginExpandurlInterface();
 
     QAction *action() const Q_DECL_OVERRIDE;
-    void showWidget() Q_DECL_OVERRIDE;
+    void execute() Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
     void setUrl(const QUrl &url) Q_DECL_OVERRIDE;
