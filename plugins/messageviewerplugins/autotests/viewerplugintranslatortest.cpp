@@ -16,7 +16,7 @@
 */
 
 #include "viewerplugintranslatortest.h"
-#include "../translatorplugin/viewerplugintranslator.h"
+#include "../common/translatorplugin/viewerplugintranslator.h"
 #include <QTest>
 #include <KActionCollection>
 #include <QHBoxLayout>

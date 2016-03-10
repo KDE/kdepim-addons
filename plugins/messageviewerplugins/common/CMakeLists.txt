@@ -1,0 +1,2 @@
+add_subdirectory(translatorplugin)
+add_subdirectory(expandurlplugin)

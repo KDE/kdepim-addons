@@ -51,4 +51,4 @@ add_messageviewer_viewerplugin_widget_unittest(eventdatetimewidgettest.cpp "../c
 add_messageviewer_viewerplugin_unittest(viewerplugincreateeventtest.cpp "../createeventplugin/eventdatetimewidget.cpp;../createeventplugin/eventedit.cpp;../createeventplugin/viewerplugincreateevent.cpp;../createeventplugin/viewerplugincreateeventinterface.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerplugincreatetodotest.cpp "../createtodoplugin/viewerplugincreatetodo.cpp;../createtodoplugin/viewerplugincreatetodointerface.cpp;../createtodoplugin/todoedit.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerplugincreatenotetest.cpp "../createnoteplugin/noteedit.cpp;../createnoteplugin/viewerplugincreatenote.cpp;../createnoteplugin/viewerplugincreatenoteinterface.cpp" "")
-add_messageviewer_viewerplugin_unittest(viewerplugintranslatortest.cpp "../translatorplugin/viewerplugintranslator.cpp;../translatorplugin/viewerplugintranslatorinterface.cpp" "")
+add_messageviewer_viewerplugin_unittest(viewerplugintranslatortest.cpp "../common/translatorplugin/viewerplugintranslator.cpp;../common/translatorplugin/viewerplugintranslatorinterface.cpp" "")

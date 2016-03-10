@@ -2,7 +2,7 @@
     "KPlugin": {
         "Name": "Expand Url", 
         "ServiceTypes": [
-            "MessageViewer/ViewerPlugin"
+            "MessageViewer/ViewerCommonPlugin"
         ], 
         "Version": "1.0"
     }
