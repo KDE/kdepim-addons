@@ -52,6 +52,8 @@ void ViewerPluginExpandurlInterface::showWidget()
         if (MessageViewer::ScamCheckShortUrlManager::self()->scamCheckShortUrl()->isShortUrl(mCurrentUrl)) {
             MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
             job->expandedUrl(mCurrentUrl);
+        } else {
+            //TODO message in statusbar.
         }
     }
 }
