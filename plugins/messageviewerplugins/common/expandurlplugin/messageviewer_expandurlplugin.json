@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Name": "Expand URL",
+        "Name": "Expand URL", 
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"
         ], 
