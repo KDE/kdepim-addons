@@ -25,7 +25,6 @@ K_PLUGIN_FACTORY_WITH_JSON(DoNotTrackPluginUrlInterceptorFactory, "messageviewer
 DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
     : MessageViewer::NetworkPluginUrlInterceptor(parent)
 {
-    qDebug() << " DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)" << this;
 }
 
 DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor()

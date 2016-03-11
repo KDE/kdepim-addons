@@ -3,6 +3,8 @@ set(messageviewer_webengineurlinterceptor_donottrack_SRCS
     donottrackpluginurlinterceptor.cpp
     )
 
+ecm_qt_declare_logging_category(messageviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME log_donottrackinterceptor)
+
 kconfig_add_kcfg_files(messageviewer_webengineurlinterceptor_donottrack_SRCS
   settings/donottrack.kcfgc
 )

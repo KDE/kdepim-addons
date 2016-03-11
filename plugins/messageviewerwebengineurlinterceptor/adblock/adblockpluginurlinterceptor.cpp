@@ -27,7 +27,6 @@ K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_ad
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
     : MessageViewer::NetworkPluginUrlInterceptor(parent)
 {
-    qDebug() << " AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)" << this;
 }
 
 AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
