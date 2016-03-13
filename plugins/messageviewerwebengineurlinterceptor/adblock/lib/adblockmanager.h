@@ -19,6 +19,7 @@
 #define ADBLOCKMANAGER_H
 
 #include <QObject>
+#include <QWebEngineUrlRequestInfo>
 #include "adblocklib_export.h"
 namespace AdBlock
 {
@@ -31,7 +32,7 @@ public:
     ~AdblockManager();
     bool isEnabled() const;
 
-    bool interceptRequest(const QUrl &url);
+    bool interceptRequest(const QWebEngineUrlRequestInfo &info);
 
 public Q_SLOTS:
     void reloadConfig();

@@ -2,7 +2,7 @@
 ecm_add_test(adblockmanagertest.cpp
     TEST_NAME adblockmanagertest
     NAME_PREFIX "messageviewer-urlinterceptor-"
-    LINK_LIBRARIES Qt5::Test Qt5::Widgets adblocklibprivate KF5::ItemViews
+    LINK_LIBRARIES Qt5::Test Qt5::Widgets adblocklibprivate KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets
 )
 
 
@@ -16,4 +16,4 @@ set( adblockpluginurlinterceptorconfigurewidgettest_SRCS adblockpluginurlinterce
 add_executable( adblockpluginurlinterceptorconfigurewidgettest ${adblockpluginurlinterceptorconfigurewidgettest_SRCS})
 add_test(adblockpluginurlinterceptorconfigurewidgettest adblockpluginurlinterceptorconfigurewidgettest)
 ecm_mark_as_test(adblockpluginurlinterceptorconfigurewidgettest)
-target_link_libraries( adblockpluginurlinterceptorconfigurewidgettest Qt5::Test Qt5::Widgets KF5::MessageViewer KF5::ItemViews)
+target_link_libraries( adblockpluginurlinterceptorconfigurewidgettest Qt5::Test Qt5::Widgets KF5::MessageViewer KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets)

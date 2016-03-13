@@ -65,8 +65,9 @@ bool AdblockManager::isEnabled() const
     return mEnabled;
 }
 
-bool AdblockManager::interceptRequest(const QUrl &url)
+bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
 {
+    QUrl url = info.requestUrl();
     const QString urlString = url.toString().toLower();
     const QString host = url.host().toLower();
     const QString scheme = url.scheme().toLower();

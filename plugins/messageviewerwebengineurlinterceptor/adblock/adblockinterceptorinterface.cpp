@@ -35,7 +35,7 @@ void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     if (!mAdblockManager->isEnabled()) {
         return;
     }
-    if (mAdblockManager->interceptRequest(info.requestUrl())) {
+    if (mAdblockManager->interceptRequest(info)) {
         info.block(true);
     }
 }
