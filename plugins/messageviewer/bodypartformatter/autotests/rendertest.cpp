@@ -22,9 +22,9 @@
 
 #include "testobjecttreesource.h"
 
-#include <MessageViewer/ObjectTreeParser>
-#include <MessageViewer/CSSHelperBase>
-#include <MessageViewer/FileHtmlWriter>
+#include <MimeTreeParser/ObjectTreeParser>
+#include <MimeTreeParser/CSSHelperBase>
+#include <MimeTreeParser/FileHtmlWriter>
 
 #include <KMime/Message>
 #include <QTest>

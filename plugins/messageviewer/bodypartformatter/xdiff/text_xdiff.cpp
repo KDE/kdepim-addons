@@ -29,10 +29,10 @@
     your version.
 */
 
-#include <messageviewer/bodypartformatter.h>
-#include <messageviewer/bodypart.h>
-#include <messageviewer/bodyparturlhandler.h>
-#include <messageviewer/htmlwriter.h>
+#include <MessageViewer/BodyPartURLHandler>
+#include <MimeTreeParser/BodyPartFormatter>
+#include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/HtmlWriter>
 
 #include <kstringhandler.h>
 #include <kmessagebox.h>

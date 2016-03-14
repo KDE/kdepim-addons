@@ -23,7 +23,7 @@
 #include "messageviewer/headerstrategy.h"
 #include <KTextToHTML>
 #include "messageviewer/messageviewersettings.h"
-#include "messageviewer/nodehelper.h"
+#include <MimeTreeParser/NodeHelper>
 
 #include <MessageCore/StringUtil>
 

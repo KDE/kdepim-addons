@@ -22,8 +22,8 @@
 #define MESSAGECORE_TESTS_UTIL_H
 
 #include <MessageViewer/ObjectTreeEmptySource>
-#include <MessageViewer/CSSHelperBase>
-#include <MessageViewer/AttachmentStrategy>
+#include <MimeTreeParser/CSSHelperBase>
+#include <MimeTreeParser/AttachmentStrategy>
 
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {

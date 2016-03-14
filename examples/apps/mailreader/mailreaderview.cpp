@@ -5,8 +5,8 @@
  */
 #include "mailreaderview.h"
 #include "settings.h"
-#include "messageviewer/viewer.h"
-#include "messageviewer/attachmentstrategy.h"
+#include <MessageViewer/Viewer>
+#include <MimeTreeParser/AttachmentStrategy>
 #include <messageviewersettings.h>
 #include <KXmlGuiWindow>
 #include <KConfigDialog>

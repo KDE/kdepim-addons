@@ -18,9 +18,9 @@
 #ifndef VCARDMEMENTO_H
 #define VCARDMEMENTO_H
 
-#include <messageviewer/bodypart.h>
+#include <MessageViewer/Viewer>
 
-#include <messageviewer/viewer.h>
+#include <MimeTreeParser/BodyPart>
 
 #include <QObject>
 #include <QMap>
