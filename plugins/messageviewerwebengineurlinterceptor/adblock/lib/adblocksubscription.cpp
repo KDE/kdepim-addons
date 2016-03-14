@@ -330,7 +330,7 @@ AdBlockCustomList::AdBlockCustomList(QObject *parent)
 
 void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
 {
-    #if 0
+#if 0
     // DuckDuckGo ad whitelist rules
     // They cannot be removed, but can be disabled.
     // Please consider not disabling them. Thanks!

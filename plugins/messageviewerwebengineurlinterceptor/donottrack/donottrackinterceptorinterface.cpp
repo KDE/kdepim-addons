@@ -31,6 +31,7 @@ DoNotTrackInterceptorInterface::~DoNotTrackInterceptorInterface()
 
 void DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
-    if (DoNotTrackSettings::doNotTrack())
+    if (DoNotTrackSettings::doNotTrack()) {
         info.setHttpHeader(QByteArrayLiteral("DNT"), QByteArrayLiteral("1"));
+    }
 }
