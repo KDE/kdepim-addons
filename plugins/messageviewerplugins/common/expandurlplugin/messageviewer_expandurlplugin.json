@@ -1,6 +1,18 @@
 {
     "KPlugin": {
         "Name": "Expand URL", 
+        "Name[ca@valencia]": "Expandeix l'URL", 
+        "Name[ca]": "Expandeix l'URL", 
+        "Name[de]": "Adresse erweitern", 
+        "Name[es]": "Expandir URL", 
+        "Name[nl]": "Expandeer URL", 
+        "Name[pl]": "Rozwiń adres URL", 
+        "Name[pt]": "Expandir o URL", 
+        "Name[pt_BR]": "Expandir URL", 
+        "Name[sk]": "Rozbaliť URL", 
+        "Name[sv]": "Expandera webbadress", 
+        "Name[uk]": "Розгортання адреси", 
+        "Name[x-test]": "xxExpand URLxx", 
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"
         ], 
