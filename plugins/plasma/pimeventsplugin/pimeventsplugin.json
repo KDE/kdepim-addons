@@ -1,0 +1,10 @@
+{
+    "Name": "PIM Events Plugin",
+    "Description": "Calendar plugin for displaying events from KDE PIM calendars",
+    "Icon": "view-calendar",
+    "ConfigUi": "pimevents/PimEventsConfig.qml",
+    "Authors": {
+        "Name": "Daniel Vrátil",
+        "Email": "dvratil@kde.org"
+    }
+}
