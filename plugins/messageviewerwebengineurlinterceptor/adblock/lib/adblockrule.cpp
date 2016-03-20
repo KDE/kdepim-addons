@@ -612,12 +612,13 @@ static bool wordCharacter(const QChar &c)
 
 QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
 {
+    const int filterSize = filter.size();
     QString parsed;
-    parsed.reserve(filter.size());
+    parsed.reserve(filterSize);
 
     bool hadWildcard = false; // Filter multiple wildcards
 
-    for (int i = 0; i < filter.size(); ++i) {
+    for (int i = 0; i < filterSize; ++i) {
         const QChar c = filter.at(i);
         switch (c.toLatin1()) {
         case '^':
@@ -632,14 +633,14 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
 
         case '|':
             if (i == 0) {
-                if (filter.size() > 1 && filter.at(1) == QLatin1Char('|')) {
+                if (filterSize > 1 && filter.at(1) == QLatin1Char('|')) {
                     parsed.append(QLatin1String("^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?"));
                     i++;
                 } else {
                     parsed.append(QLatin1Char('^'));
                 }
                 break;
-            } else if (i == filter.size() - 1) {
+            } else if (i == filterSize - 1) {
                 parsed.append(QLatin1Char('$'));
                 break;
             }

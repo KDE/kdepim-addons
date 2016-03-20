@@ -53,14 +53,14 @@ const AdBlockRule *AdBlockMatcher::match(const QWebEngineUrlRequestInfo &request
 {
     // Exception rules
     if (m_networkExceptionTree.find(request, urlDomain, urlString)) {
-        return 0;
+        return Q_NULLPTR;
     }
 
     int count = m_networkExceptionRules.count();
     for (int i = 0; i < count; ++i) {
         const AdBlockRule *rule = m_networkExceptionRules.at(i);
         if (rule->networkMatch(request, urlDomain, urlString)) {
-            return 0;
+            return Q_NULLPTR;
         }
     }
 
@@ -77,12 +77,12 @@ const AdBlockRule *AdBlockMatcher::match(const QWebEngineUrlRequestInfo &request
         }
     }
 
-    return 0;
+    return Q_NULLPTR;
 }
 
 bool AdBlockMatcher::adBlockDisabledForUrl(const QUrl &url) const
 {
-    int count = m_documentRules.count();
+    const int count = m_documentRules.count();
 
     for (int i = 0; i < count; ++i)
         if (m_documentRules.at(i)->urlMatch(url)) {
@@ -98,7 +98,7 @@ bool AdBlockMatcher::elemHideDisabledForUrl(const QUrl &url) const
         return true;
     }
 
-    int count = m_elemhideRules.count();
+    const int count = m_elemhideRules.count();
 
     for (int i = 0; i < count; ++i)
         if (m_elemhideRules.at(i)->urlMatch(url)) {
@@ -117,7 +117,7 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 {
     QString rules;
     int addedRulesCount = 0;
-    int count = m_domainRestrictedCssRules.count();
+    const int count = m_domainRestrictedCssRules.count();
 
     for (int i = 0; i < count; ++i) {
         const AdBlockRule *rule = m_domainRestrictedCssRules.at(i);
