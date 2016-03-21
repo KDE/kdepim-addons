@@ -24,7 +24,8 @@
 
 
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mWebEngineView(Q_NULLPTR)
 {
     QVBoxLayout *lay = new QVBoxLayout;
     lay->setMargin(0);
@@ -58,3 +59,7 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
     //groupHeader.sync();
 }
 
+void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
+{
+    mWebEngineView = view;
+}

@@ -23,6 +23,7 @@ namespace PimCommon
 {
 class CustomTreeView;
 }
+class QWebEngineView;
 class AdBlockBlockableItemsWidget : public QWidget
 {
     Q_OBJECT
@@ -30,8 +31,10 @@ public:
     explicit AdBlockBlockableItemsWidget(QWidget *parent = Q_NULLPTR);
     ~AdBlockBlockableItemsWidget();
 
+    void setWebEngineView(QWebEngineView *view);
 private:
     PimCommon::CustomTreeView *mListItems;
+    QWebEngineView *mWebEngineView;
 };
 
 #endif // ADBLOCKBLOCKABLEITEMSWIDGET_H

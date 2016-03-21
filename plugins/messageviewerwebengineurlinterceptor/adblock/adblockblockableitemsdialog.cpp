@@ -54,6 +54,12 @@ AdBlockBlockableItemsDialog::~AdBlockBlockableItemsDialog()
     writeConfig();
 }
 
+
+void AdBlockBlockableItemsDialog::setWebEngineView(QWebEngineView *view)
+{
+    mBlockableItems->setWebEngineView(view);
+}
+
 void AdBlockBlockableItemsDialog::saveFilters()
 {
     //FIXME mBlockableItems->saveFilters();
