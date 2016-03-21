@@ -33,7 +33,7 @@ AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 
 }
 
-MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QObject *parent)
+MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {
     return new AdblockInterceptorInterface(parent);
 }

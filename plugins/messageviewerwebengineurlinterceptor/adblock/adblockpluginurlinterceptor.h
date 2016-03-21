@@ -21,6 +21,7 @@
 #include <MessageViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
 class QAction;
+class QWebEngineView;
 namespace MessageViewer
 {
 class NetworkPluginUrlInterceptorInterface;
@@ -33,7 +34,7 @@ public:
     explicit AdblockPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUrlInterceptor();
 
-    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
 
 
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;

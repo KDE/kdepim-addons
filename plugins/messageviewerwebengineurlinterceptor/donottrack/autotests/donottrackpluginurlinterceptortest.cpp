@@ -18,6 +18,7 @@
 #include "donottrackpluginurlinterceptortest.h"
 #include "../donottrackpluginurlinterceptor.h"
 #include <QTest>
+#include <QWebEngineView>
 DoNotTrackPluginUrlInterceptorTest::DoNotTrackPluginUrlInterceptorTest(QObject *parent)
     : QObject(parent)
 {
@@ -32,7 +33,8 @@ DoNotTrackPluginUrlInterceptorTest::~DoNotTrackPluginUrlInterceptorTest()
 void DoNotTrackPluginUrlInterceptorTest::shouldHaveDefaultValue()
 {
     DoNotTrackPluginUrlInterceptor w;
-    QVERIFY(w.createInterface(this));
+
+    QVERIFY(w.createInterface(new QWebEngineView(), this));
 }
 
 QTEST_MAIN(DoNotTrackPluginUrlInterceptorTest)

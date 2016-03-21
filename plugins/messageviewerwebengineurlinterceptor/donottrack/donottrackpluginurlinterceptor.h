@@ -31,7 +31,7 @@ public:
     explicit DoNotTrackPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~DoNotTrackPluginUrlInterceptor();
 
-    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
+    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // DONOTTRACKPLUGINURLINTERCEPTOR_H
