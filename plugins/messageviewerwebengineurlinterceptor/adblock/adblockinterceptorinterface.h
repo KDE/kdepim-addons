@@ -19,6 +19,7 @@
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
 #include <MessageViewer/NetworkPluginUrlInterceptorInterface>
+class QWebEngineView;
 namespace AdBlock
 {
 class AdblockManager;
@@ -33,8 +34,13 @@ public:
     void interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
     QList<QAction *> actions() const Q_DECL_OVERRIDE;
     void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
+    QWebEngineView *webEngineView() const;
+
+    void setWebEngineView(QWebEngineView *webEngineView);
+
 private:
     AdBlock::AdblockManager *mAdblockManager;
+    QWebEngineView *mWebEngineView;
 };
 
 #endif // ADBLOCKINTERCEPTORINTERFACE_H

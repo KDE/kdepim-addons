@@ -20,7 +20,8 @@
 #include "lib/adblockmanager.h"
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::NetworkPluginUrlInterceptorInterface(parent)
+    : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
+      mWebEngineView(Q_NULLPTR)
 {
     mAdblockManager = new AdBlock::AdblockManager(this);
 }
@@ -42,7 +43,7 @@ void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
 
 QList<QAction *> AdblockInterceptorInterface::actions() const
 {
-    return {};
+    return mActionsList;
 }
 
 void AdblockInterceptorInterface::createActions(KActionCollection *ac)
@@ -51,4 +52,14 @@ void AdblockInterceptorInterface::createActions(KActionCollection *ac)
 
     }
     //TODO
+}
+
+QWebEngineView *AdblockInterceptorInterface::webEngineView() const
+{
+    return mWebEngineView;
+}
+
+void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView)
+{
+    mWebEngineView = webEngineView;
 }
