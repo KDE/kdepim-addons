@@ -39,6 +39,7 @@ public:
     void setWebEngineView(QWebEngineView *webEngineView);
 
 private:
+    QList<QAction *> mActionsList;
     AdBlock::AdblockManager *mAdblockManager;
     QWebEngineView *mWebEngineView;
 };
