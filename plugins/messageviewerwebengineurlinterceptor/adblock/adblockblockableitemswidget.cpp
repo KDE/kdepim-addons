@@ -24,6 +24,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QHeaderView>
+#include <QWebEngineView>
 
 template<typename Arg, typename R, typename C>
 struct InvokeWrapper {
@@ -94,7 +95,15 @@ void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
     mWebEngineView = view;
 }
 
-void AdBlockBlockableItemsWidget::searchBlockableItems()
+void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
 {
     //TODO
+}
+
+void AdBlockBlockableItemsWidget::searchBlockableItems()
+{
+    if (mWebEngineView) {
+        //TODO fix me
+        mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableItems));
+    }
 }

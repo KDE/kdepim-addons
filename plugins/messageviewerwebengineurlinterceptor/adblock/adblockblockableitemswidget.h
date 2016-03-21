@@ -32,6 +32,10 @@ public:
     ~AdBlockBlockableItemsWidget();
 
     void setWebEngineView(QWebEngineView *view);
+
+private Q_SLOTS:
+    void handleSearchBlockableItems(const QVariant &var);
+
 private:
     void writeConfig();
     void searchBlockableItems();
