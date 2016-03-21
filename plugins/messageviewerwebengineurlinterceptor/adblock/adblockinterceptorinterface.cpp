@@ -39,3 +39,16 @@ void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
         info.block(true);
     }
 }
+
+QList<QAction *> AdblockInterceptorInterface::actions() const
+{
+    return {};
+}
+
+void AdblockInterceptorInterface::createActions(KActionCollection *ac)
+{
+    if (ac) {
+
+    }
+    //TODO
+}

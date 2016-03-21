@@ -31,6 +31,8 @@ public:
     ~AdblockInterceptorInterface();
 
     void interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
+    QList<QAction *> actions() const Q_DECL_OVERRIDE;
+    void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
 private:
     AdBlock::AdblockManager *mAdblockManager;
 };

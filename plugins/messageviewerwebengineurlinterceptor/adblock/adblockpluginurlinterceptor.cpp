@@ -38,11 +38,6 @@ MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor
     return new AdblockInterceptorInterface(parent);
 }
 
-QList<QAction *> AdblockPluginUrlInterceptor::actions() const
-{
-    return mActions;
-}
-
 bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
 {
     return true;
@@ -55,12 +50,5 @@ MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInter
     return configureWidget;
 }
 
-void AdblockPluginUrlInterceptor::createActions(KActionCollection *ac)
-{
-    if (ac) {
-
-    }
-    //TODO
-}
 
 #include "adblockpluginurlinterceptor.moc"
