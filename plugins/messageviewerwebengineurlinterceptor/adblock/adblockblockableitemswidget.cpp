@@ -21,7 +21,27 @@
 #include <KLocalizedString>
 #include <CustomTreeView>
 #include <KTreeWidgetSearchLine>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QHeaderView>
 
+template<typename Arg, typename R, typename C>
+struct InvokeWrapper {
+    R *receiver;
+    void (C::*memberFunction)(Arg);
+    void operator()(Arg result)
+    {
+        (receiver->*memberFunction)(result);
+    }
+};
+
+template<typename Arg, typename R, typename C>
+
+InvokeWrapper<Arg, R, C> invoke(R *receiver, void (C::*memberFunction)(Arg))
+{
+    InvokeWrapper<Arg, R, C> wrapper = {receiver, memberFunction};
+    return wrapper;
+}
 
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     : QWidget(parent),
@@ -48,18 +68,33 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     lay->addWidget(searchLine);
     lay->addWidget(mListItems);
 
-    //KConfigGroup config(MessageViewer::MessageViewerSettings::self()->config(), "AdBlockHeaders");
-    //mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
+    readConfig();
 }
 
 AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
 {
-    //KConfigGroup groupHeader(MessageViewer::MessageViewerSettings::self()->config(), "AdBlockHeaders");
-    //groupHeader.writeEntry("HeaderState", mListItems->header()->saveState());
-    //groupHeader.sync();
+    writeConfig();
+}
+
+void AdBlockBlockableItemsWidget::writeConfig()
+{
+    KConfigGroup groupHeader(KSharedConfig::openConfig(), "AdBlockHeaders");
+    groupHeader.writeEntry("HeaderState", mListItems->header()->saveState());
+    groupHeader.sync();
+}
+
+void AdBlockBlockableItemsWidget::readConfig()
+{
+    KConfigGroup config(KSharedConfig::openConfig(), "AdBlockHeaders");
+    mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
 }
 
 void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
 {
     mWebEngineView = view;
+}
+
+void AdBlockBlockableItemsWidget::searchBlockableItems()
+{
+    //TODO
 }

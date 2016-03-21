@@ -33,6 +33,9 @@ public:
 
     void setWebEngineView(QWebEngineView *view);
 private:
+    void writeConfig();
+    void searchBlockableItems();
+    void readConfig();
     PimCommon::CustomTreeView *mListItems;
     QWebEngineView *mWebEngineView;
 };
