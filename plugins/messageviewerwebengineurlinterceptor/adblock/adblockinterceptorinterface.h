@@ -38,6 +38,9 @@ public:
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
+private Q_SLOTS:
+    void slotShowBlockableElement();
+
 private:
     QList<QAction *> mActionsList;
     AdBlock::AdblockManager *mAdblockManager;

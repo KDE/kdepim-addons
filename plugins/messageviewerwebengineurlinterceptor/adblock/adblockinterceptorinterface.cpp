@@ -63,3 +63,8 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 {
     mWebEngineView = webEngineView;
 }
+
+void AdblockInterceptorInterface::slotShowBlockableElement()
+{
+    //TODO
+}
