@@ -16,11 +16,14 @@
 */
 
 #include "adblockinterceptorinterface.h"
+#include "adblockblockableitemsdialog.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 #include "lib/adblockmanager.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPointer>
+#include <QWebEngineView>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
@@ -72,5 +75,10 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 
 void AdblockInterceptorInterface::slotShowBlockableElement()
 {
-    //TODO
+    if (mWebEngineView) {
+        QPointer<AdBlockBlockableItemsDialog> dlg = new AdBlockBlockableItemsDialog(mWebEngineView);
+        dlg->setWebEngineView(mWebEngineView);
+        dlg->exec();
+        delete dlg;
+    }
 }
