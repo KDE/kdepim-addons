@@ -23,4 +23,4 @@ set( adblockblockableitemsdialogtest_SRCS adblockblockableitemsdialogtest.cpp ..
 add_executable( adblockblockableitemsdialogtest ${adblockblockableitemsdialogtest_SRCS})
 add_test(adblockblockableitemsdialogtest adblockblockableitemsdialogtest)
 ecm_mark_as_test(adblockblockableitemsdialogtest)
-target_link_libraries( adblockblockableitemsdialogtest Qt5::Test Qt5::Widgets KF5::I18n KF5::PimCommon KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::ConfigCore KF5::KIOWidgets)
+target_link_libraries( adblockblockableitemsdialogtest Qt5::Test Qt5::Widgets KF5::I18n KF5::MessageViewer KF5::PimCommon KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::ConfigCore KF5::KIOWidgets)

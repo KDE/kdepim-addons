@@ -16,6 +16,7 @@
 */
 
 #include "adblockblockableitemswidget.h"
+#include <MessageViewer/WebEngineScript>
 
 #include <QVBoxLayout>
 #include <KLocalizedString>
@@ -124,19 +125,33 @@ void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
     searchBlockableItems();
 }
 
-void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &var)
+void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
 {
-
+    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
+    const QList<QVariant> lst = result.toList();
+    Q_FOREACH (const QVariant &var, lst) {
+        QMap<QString, QVariant> mapVariant = var.toMap();
+        //Create items
+    }
+    //TODO search script
+    mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
 }
 
-void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &var)
+void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &result)
 {
-
+    qDebug() << "void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &var)"<<result;
+    const QList<QVariant> lst = result.toList();
+    Q_FOREACH (const QVariant &var, lst) {
+        QMap<QString, QVariant> mapVariant = var.toMap();
+        //Create items
+    }
+    //TODO more check ?
 }
 
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
 {
+    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableItems " << var;
     //TODO
 }
 
@@ -146,7 +161,7 @@ void AdBlockBlockableItemsWidget::searchBlockableItems()
         mListItems->clear();
         //TODO fix me add script
         //TODO search img
-        mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
+        mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }
 
