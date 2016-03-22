@@ -126,14 +126,15 @@ void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
 {
-    mListItems->clear();
     //TODO
 }
 
 void AdBlockBlockableItemsWidget::searchBlockableItems()
 {
     if (mWebEngineView) {
+        mListItems->clear();
         //TODO fix me add script
+        //TODO search img
         mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableItems));
     }
 }
