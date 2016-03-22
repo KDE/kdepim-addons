@@ -40,6 +40,8 @@ private Q_SLOTS:
     void slotOpenItem();
     void slotBlockItem();
     void slotCopyItem();
+    void handleSearchBlockableImageItems(const QVariant &var);
+    void handleSearchBlockableScriptsItems(const QVariant &var);
 private:
     enum BlockType {
         FilterValue = 0,

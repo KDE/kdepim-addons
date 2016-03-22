@@ -124,6 +124,17 @@ void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
     searchBlockableItems();
 }
 
+void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &var)
+{
+
+}
+
+void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &var)
+{
+
+}
+
+
 void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
 {
     //TODO
@@ -135,7 +146,7 @@ void AdBlockBlockableItemsWidget::searchBlockableItems()
         mListItems->clear();
         //TODO fix me add script
         //TODO search img
-        mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableItems));
+        mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }
 
