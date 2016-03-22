@@ -19,13 +19,19 @@
 #define ADBLOCKBLOCKABLEELEMENTGUI_H
 
 #include <QWidget>
-
+class QWebEngineView;
 class AdblockBlockableElementGui : public QWidget
 {
     Q_OBJECT
 public:
     explicit AdblockBlockableElementGui(QWidget *parent = Q_NULLPTR);
     ~AdblockBlockableElementGui();
+
+public Q_SLOTS:
+    void slotSearchAdblock();
+
+private:
+    QWebEngineView *mWebEngineView;
 };
 
 #endif // ADBLOCKBLOCKABLEELEMENTGUI_H

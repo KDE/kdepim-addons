@@ -17,6 +17,7 @@
 
 
 #include "adblockblockableelementgui.h"
+#include "../adblockblockableitemsdialog.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QWebEngineView>
@@ -28,11 +29,25 @@ AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
+
+    mWebEngineView = new QWebEngineView(this);
+    mWebEngineView->load(QUrl(QStringLiteral("http://www.kde.org")));
+    vbox->addWidget(mWebEngineView);
+    QPushButton *button = new QPushButton(QStringLiteral("search adblock"), this);
+    connect(button, &QPushButton::clicked, this, &AdblockBlockableElementGui::slotSearchAdblock);
+    vbox->addWidget(button);
 }
 
 AdblockBlockableElementGui::~AdblockBlockableElementGui()
 {
 
+}
+
+void AdblockBlockableElementGui::slotSearchAdblock()
+{
+    AdBlockBlockableItemsDialog dlg(this);
+    dlg.setWebEngineView(mWebEngineView);
+    dlg.exec();
 }
 
 int main(int argc, char **argv)
