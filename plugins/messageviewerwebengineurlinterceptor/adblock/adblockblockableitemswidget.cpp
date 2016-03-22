@@ -25,6 +25,11 @@
 #include <KSharedConfig>
 #include <QHeaderView>
 #include <QWebEngineView>
+#include <QMenu>
+#include <QClipboard>
+#include <QApplication>
+
+#include <KIOWidgets/KRun>
 
 template<typename Arg, typename R, typename C>
 struct InvokeWrapper {
@@ -57,7 +62,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     mListItems->setContextMenuPolicy(Qt::CustomContextMenu);
     mListItems->setAlternatingRowColors(true);
     mListItems->setRootIsDecorated(false);
-    //connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::customContextMenuRequested);
+    connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::customContextMenuRequested);
 
     QStringList lst;
     lst << i18n("Filter") << i18n("Address") << i18n("Type");
@@ -77,6 +82,29 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
     writeConfig();
 }
 
+void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
+{
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+
+    QMenu menu;
+    menu.addAction(i18n("Copy url"), this, SLOT(slotCopyItem()));
+    if (!item->text(FilterValue).isEmpty()) {
+        menu.addAction(i18n("Copy filter"), this, SLOT(slotCopyFilterItem()));
+    }
+    menu.addAction(i18n("Block item..."), this, SLOT(slotBlockItem()));
+    menu.addSeparator();
+    menu.addAction(i18n("Open"), this, SLOT(slotOpenItem()));
+    if (!item->text(FilterValue).isEmpty()) {
+        menu.addSeparator();
+        menu.addAction(i18n("Remove filter"), this, SLOT(slotRemoveFilter()));
+    }
+    menu.exec(QCursor::pos());
+}
+
+
 void AdBlockBlockableItemsWidget::writeConfig()
 {
     KConfigGroup groupHeader(KSharedConfig::openConfig(), "AdBlockHeaders");
@@ -93,17 +121,68 @@ void AdBlockBlockableItemsWidget::readConfig()
 void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
 {
     mWebEngineView = view;
+    searchBlockableItems();
 }
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
 {
+    mListItems->clear();
     //TODO
 }
 
 void AdBlockBlockableItemsWidget::searchBlockableItems()
 {
     if (mWebEngineView) {
-        //TODO fix me
+        //TODO fix me add script
         mWebEngineView->page()->runJavaScript(QString(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableItems));
     }
+}
+
+
+void AdBlockBlockableItemsWidget::slotCopyFilterItem()
+{
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+    QClipboard *cb = QApplication::clipboard();
+    cb->setText(item->text(FilterValue), QClipboard::Clipboard);
+}
+
+void AdBlockBlockableItemsWidget::slotOpenItem()
+{
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+    const QUrl url(item->text(Url));
+    KRun *runner = new KRun(url, this);   // will delete itself
+    runner->setRunExecutables(false);
+}
+
+void AdBlockBlockableItemsWidget::slotBlockItem()
+{
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+#if 0
+    QPointer<AdBlockCreateFilterDialog> dlg = new AdBlockCreateFilterDialog(this);
+    dlg->setPattern(static_cast<TypeElement>(item->data(Type, Element).toInt()), item->text(Url));
+    if (dlg->exec()) {
+        const QString filter = dlg->filter();
+        item->setText(FilterValue, filter);
+    }
+    delete dlg;
+#endif
+}
+
+void AdBlockBlockableItemsWidget::slotCopyItem()
+{
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+    QClipboard *cb = QApplication::clipboard();
+    cb->setText(item->text(Url), QClipboard::Clipboard);
 }

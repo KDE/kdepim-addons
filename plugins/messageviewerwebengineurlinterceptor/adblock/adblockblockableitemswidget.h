@@ -35,8 +35,18 @@ public:
 
 private Q_SLOTS:
     void handleSearchBlockableItems(const QVariant &var);
-
+    void customContextMenuRequested(const QPoint &);
+    void slotCopyFilterItem();
+    void slotOpenItem();
+    void slotBlockItem();
+    void slotCopyItem();
 private:
+    enum BlockType {
+        FilterValue = 0,
+        Url,
+        Type
+    };
+
     void writeConfig();
     void searchBlockableItems();
     void readConfig();

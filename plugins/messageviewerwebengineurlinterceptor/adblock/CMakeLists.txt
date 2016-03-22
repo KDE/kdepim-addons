@@ -17,6 +17,7 @@ target_link_libraries(messageviewer_adblockplugin
     Qt5::WebEngineWidgets
     KF5::ItemViews
     adblocklibprivate
+    KF5::KIOWidgets
     )
 
 install(TARGETS messageviewer_adblockplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
