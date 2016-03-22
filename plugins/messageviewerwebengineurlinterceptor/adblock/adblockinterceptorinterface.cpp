@@ -18,6 +18,9 @@
 #include "adblockinterceptorinterface.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 #include "lib/adblockmanager.h"
+#include <KLocalizedString>
+#include <KActionCollection>
+#include <QAction>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
@@ -49,7 +52,10 @@ QList<QAction *> AdblockInterceptorInterface::actions() const
 void AdblockInterceptorInterface::createActions(KActionCollection *ac)
 {
     if (ac) {
-
+        QAction *showBlockableItems = new QAction(i18n("Open Blockable Items..."), this);
+        ac->addAction(QStringLiteral("adblock_blockable_items"), showBlockableItems);
+        connect(showBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
+        mActionsList.append(showBlockableItems);
     }
     //TODO
 }
