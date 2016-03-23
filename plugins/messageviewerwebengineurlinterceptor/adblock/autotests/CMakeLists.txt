@@ -14,7 +14,7 @@ add_test(adblockpluginurlinterceptortest adblockpluginurlinterceptortest)
 ecm_mark_as_test(adblockpluginurlinterceptortest)
 target_link_libraries( adblockpluginurlinterceptortest Qt5::Test Qt5::Widgets adblocklibprivate KF5::MessageViewer Qt5::WebEngine Qt5::WebEngineWidgets KF5::ItemViews KF5::KIOWidgets KF5::XmlGui)
 
-set( adblockpluginurlinterceptorconfigurewidgettest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptorconfigurewidgettest.cpp  )
+set( adblockpluginurlinterceptorconfigurewidgettest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptorconfigurewidgettest.cpp  ../adblockpluginurlinterceptorconfigurewidget.cpp)
 add_executable( adblockpluginurlinterceptorconfigurewidgettest ${adblockpluginurlinterceptorconfigurewidgettest_SRCS})
 add_test(adblockpluginurlinterceptorconfigurewidgettest adblockpluginurlinterceptorconfigurewidgettest)
 ecm_mark_as_test(adblockpluginurlinterceptorconfigurewidgettest)

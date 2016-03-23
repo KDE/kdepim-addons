@@ -1,3 +1,6 @@
+set(messageviewer_adblock_lib_common_SRCS)
+ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME log_adblockinterceptor)
+
 set(adblocklibprivate_widget_SRCS
     adblockblockableitemsdialog.cpp
     adblockblockableitemswidget.cpp
@@ -11,6 +14,7 @@ set(adblocklibprivate_SRCS
     adblockmatcher.cpp
     adblocksubscription.cpp
     ${adblocklibprivate_widget_SRCS}
+    ${messageviewer_adblock_lib_common_SRCS}
 )
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
@@ -23,6 +27,10 @@ PRIVATE
     Qt5::WebEngineWidgets
     KF5::I18n
     KF5::ItemViews
+    KF5::ConfigCore
+    KF5::PimCommon
+    KF5::MessageViewer
+    KF5::KIOWidgets
 )
 
 set_target_properties(adblocklibprivate

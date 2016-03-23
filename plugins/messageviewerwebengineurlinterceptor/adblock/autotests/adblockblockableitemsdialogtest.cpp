@@ -16,8 +16,8 @@
 */
 
 #include "adblockblockableitemsdialogtest.h"
-#include "../adblockblockableitemsdialog.h"
-#include "../adblockblockableitemswidget.h"
+#include "../lib/adblockblockableitemsdialog.h"
+#include "../lib/adblockblockableitemswidget.h"
 
 #include <QDialogButtonBox>
 #include <QTest>
