@@ -16,6 +16,7 @@
 */
 
 #include "adblockblockableitemswidget.h"
+#include "adblockinterceptor_debug.h"
 #include <MessageViewer/WebEngineScript>
 
 #include <QVBoxLayout>
@@ -212,4 +213,80 @@ void AdBlockBlockableItemsWidget::slotCopyItem()
     }
     QClipboard *cb = QApplication::clipboard();
     cb->setText(item->text(Url), QClipboard::Clipboard);
+}
+
+QString AdBlockBlockableItemsWidget::elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type)
+{
+    QString result;
+    switch (type) {
+    case AdBlockBlockableItemsWidget::Image:
+        result = i18n("Image");
+        break;
+    case AdBlockBlockableItemsWidget::Script:
+        result = i18n("Script");
+        break;
+    case AdBlockBlockableItemsWidget::StyleSheet:
+        result = i18n("Stylesheet");
+        break;
+    case AdBlockBlockableItemsWidget::Font:
+        result = i18n("Font");
+        break;
+    case AdBlockBlockableItemsWidget::Frame:
+        result = i18n("Frame");
+        break;
+    case AdBlockBlockableItemsWidget::XmlRequest:
+        result = i18n("XML Request");
+        break;
+    case AdBlockBlockableItemsWidget::Object:
+        result = i18n("Object");
+        break;
+    case AdBlockBlockableItemsWidget::Media:
+        result = i18n("Audio/Video");
+        break;
+    case AdBlockBlockableItemsWidget::Popup:
+        result = i18n("Popup window");
+        break;
+    case AdBlockBlockableItemsWidget::None:
+    default:
+        result = i18n("Unknown");
+    }
+    return result;
+}
+
+QString AdBlockBlockableItemsWidget::elementType(AdBlockBlockableItemsWidget::TypeElement type)
+{
+    QString result;
+    switch (type) {
+    case AdBlockBlockableItemsWidget::Image:
+        result = QStringLiteral("image");
+        break;
+    case AdBlockBlockableItemsWidget::Script:
+        result = QStringLiteral("script");
+        break;
+    case AdBlockBlockableItemsWidget::StyleSheet:
+        result = QStringLiteral("stylesheet");
+        break;
+    case AdBlockBlockableItemsWidget::Font:
+        result = QStringLiteral("font");
+        break;
+    case AdBlockBlockableItemsWidget::Frame:
+        result = QStringLiteral("frame");
+        break;
+    case AdBlockBlockableItemsWidget::XmlRequest:
+        result = QStringLiteral("xmlhttprequest");
+        break;
+    case AdBlockBlockableItemsWidget::Object:
+        result = QStringLiteral("other");
+        break;
+    case AdBlockBlockableItemsWidget::Media:
+        result = QStringLiteral("media");
+        break;
+    case AdBlockBlockableItemsWidget::Popup:
+        result = QStringLiteral("popup");
+        break;
+    case AdBlockBlockableItemsWidget::None:
+    default:
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << " unknown type " << type;
+    }
+    return result;
 }
