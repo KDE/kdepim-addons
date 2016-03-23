@@ -126,26 +126,66 @@ void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
     searchBlockableItems();
 }
 
+void AdBlockBlockableItemsWidget::adaptSrc(QString &src, const QString &hostName)
+{
+    if (src.startsWith(QStringLiteral("http://")) || src.startsWith(QStringLiteral("https://"))) {
+        //Nothing
+    } else if (src.startsWith(QStringLiteral("//"))) {
+        src = QLatin1String("https:") + src;
+    } else if (src.startsWith(QLatin1Char('/'))) {
+        src = QLatin1String("https://") + hostName + src;
+    } else {
+        src = QString();
+    }
+}
+
+
 void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
 {
-    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
+    //qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
     const QList<QVariant> lst = result.toList();
+    const QUrl url = mWebEngineView->url();
+    const QString host = url.host();
     Q_FOREACH (const QVariant &var, lst) {
         QMap<QString, QVariant> mapVariant = var.toMap();
-        //Create items
+        QString src = mapVariant.value(QStringLiteral("src")).toString();
+        if (!src.isEmpty()) {
+            adaptSrc(src, host);
+            if (src.isEmpty()) {
+                continue;
+            }
+            QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
+            item->setText(Url, src);
+            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Image));
+            item->setTextColor(FilterValue, Qt::red);
+            item->setData(Type, Element, Image);
+        }
     }
-    //TODO search script
+    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
     mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
 }
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &result)
 {
-    qDebug() << "void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &var)"<<result;
     const QList<QVariant> lst = result.toList();
+    const QUrl url = mWebEngineView->url();
+    const QString host = url.host();
     Q_FOREACH (const QVariant &var, lst) {
         QMap<QString, QVariant> mapVariant = var.toMap();
-        //Create items
+        QString src = mapVariant.value(QStringLiteral("src")).toString();
+        if (!src.isEmpty()) {
+            adaptSrc(src, host);
+            if (src.isEmpty()) {
+                continue;
+            }
+            QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
+            item->setText(Url, src);
+            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Script));
+            item->setTextColor(FilterValue, Qt::red);
+            item->setData(Type, Element, Script);
+        }
     }
+    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
     //TODO more check ?
 }
 

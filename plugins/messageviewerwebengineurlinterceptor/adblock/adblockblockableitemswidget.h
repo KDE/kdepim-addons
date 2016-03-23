@@ -65,10 +65,14 @@ private:
         Url,
         Type
     };
+    enum TypeItem {
+        Element = Qt::UserRole + 1
+    };
 
     void writeConfig();
     void searchBlockableItems();
     void readConfig();
+    void adaptSrc(QString &src, const QString &hostName);
     PimCommon::CustomTreeView *mListItems;
     QWebEngineView *mWebEngineView;
 };
