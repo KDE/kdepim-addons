@@ -51,8 +51,8 @@ public:
 
     void setWebEngineView(QWebEngineView *view);
 
-    QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
-    QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
+    static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
+    static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
 private Q_SLOTS:
     void customContextMenuRequested(const QPoint &);
     void slotCopyFilterItem();
