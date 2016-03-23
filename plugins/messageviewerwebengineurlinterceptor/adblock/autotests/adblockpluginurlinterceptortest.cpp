@@ -35,6 +35,7 @@ void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
 {
     AdblockPluginUrlInterceptor w;
     QVERIFY(w.createInterface(new QWebEngineView(), this));
+    QVERIFY(w.hasConfigureSupport());
 
 }
 QTEST_MAIN(AdblockPluginUrlInterceptorTest)
