@@ -189,19 +189,10 @@ void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVaria
     //TODO more check ?
 }
 
-
-void AdBlockBlockableItemsWidget::handleSearchBlockableItems(const QVariant &var)
-{
-    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableItems " << var;
-    //TODO
-}
-
 void AdBlockBlockableItemsWidget::searchBlockableItems()
 {
     if (mWebEngineView) {
         mListItems->clear();
-        //TODO fix me add script
-        //TODO search img
         mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }

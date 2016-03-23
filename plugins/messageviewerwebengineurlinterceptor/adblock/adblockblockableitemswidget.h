@@ -51,7 +51,6 @@ public:
     QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
 private Q_SLOTS:
-    void handleSearchBlockableItems(const QVariant &var);
     void customContextMenuRequested(const QPoint &);
     void slotCopyFilterItem();
     void slotOpenItem();
