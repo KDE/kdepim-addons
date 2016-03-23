@@ -20,6 +20,8 @@
 #include <KLocalizedString>
 #include <QHBoxLayout>
 
+using namespace AdBlock;
+
 AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
     : MessageViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
 {

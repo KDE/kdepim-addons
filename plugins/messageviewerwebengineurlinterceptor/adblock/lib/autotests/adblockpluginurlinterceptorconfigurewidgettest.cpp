@@ -33,7 +33,7 @@ AdblockPluginUrlInterceptorConfigureWidgetTest::~AdblockPluginUrlInterceptorConf
 
 void AdblockPluginUrlInterceptorConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    AdblockPluginUrlInterceptorConfigureWidget w;
+    AdBlock::AdblockPluginUrlInterceptorConfigureWidget w;
 
     MessageViewer::AdBlockSettingWidget *configurewidget = w.findChild<MessageViewer::AdBlockSettingWidget *>(QStringLiteral("configurewidget"));
     QVERIFY(configurewidget);

@@ -47,8 +47,8 @@ bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
 
 MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
 {
-    AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdblockPluginUrlInterceptorConfigureWidget(parent);
-    connect(configureWidget, &AdblockPluginUrlInterceptorConfigureWidget::configChanged, AdBlock::AdblockManager::self(), &AdBlock::AdblockManager::reloadConfig);
+    AdBlock::AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdBlock::AdblockPluginUrlInterceptorConfigureWidget(parent);
+    connect(configureWidget, &AdBlock::AdblockPluginUrlInterceptorConfigureWidget::configChanged, AdBlock::AdblockManager::self(), &AdBlock::AdblockManager::reloadConfig);
     return configureWidget;
 }
 

@@ -1,7 +1,6 @@
 set(messageviewer_webengineurlinterceptor_adblock_SRCS
     adblockinterceptorinterface.cpp
     adblockpluginurlinterceptor.cpp
-    adblockpluginurlinterceptorconfigurewidget.cpp
     )
 
 ecm_qt_declare_logging_category(messageviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME log_adblockinterceptor)
