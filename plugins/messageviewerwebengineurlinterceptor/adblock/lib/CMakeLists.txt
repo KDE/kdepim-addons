@@ -1,3 +1,7 @@
+set(adblocklibprivate_widget_SRCS
+    adblockblockableitemsdialog.cpp
+    adblockblockableitemswidget.cpp
+    )
 set(adblocklibprivate_SRCS
     adblockmanager.cpp
     adblocksearchtree.cpp
@@ -6,6 +10,7 @@ set(adblocklibprivate_SRCS
     adblockutil.cpp
     adblockmatcher.cpp
     adblocksubscription.cpp
+    ${adblocklibprivate_widget_SRCS}
 )
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
@@ -16,6 +21,8 @@ PRIVATE
     Qt5::Core
     Qt5::WebEngine
     Qt5::WebEngineWidgets
+    KF5::I18n
+    KF5::ItemViews
 )
 
 set_target_properties(adblocklibprivate

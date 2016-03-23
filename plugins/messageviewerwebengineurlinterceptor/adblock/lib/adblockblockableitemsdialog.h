@@ -19,10 +19,10 @@
 #define ADBLOCKBLOCKABLEITEMSDIALOG_H
 
 #include <QDialog>
-
+#include "adblocklib_export.h"
 class AdBlockBlockableItemsWidget;
 class QWebEngineView;
-class AdBlockBlockableItemsDialog : public QDialog
+class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog
 {
     Q_OBJECT
 public:

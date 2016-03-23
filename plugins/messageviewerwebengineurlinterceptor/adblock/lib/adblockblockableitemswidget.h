@@ -19,12 +19,13 @@
 #define ADBLOCKBLOCKABLEITEMSWIDGET_H
 
 #include <QWidget>
+#include "adblocklib_export.h"
 namespace PimCommon
 {
 class CustomTreeView;
 }
 class QWebEngineView;
-class AdBlockBlockableItemsWidget : public QWidget
+class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
 {
     Q_OBJECT
 public:
