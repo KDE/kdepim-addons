@@ -16,7 +16,7 @@
 */
 
 #include "adblockpluginurlinterceptorconfigurewidgettest.h"
-#include "../adblockpluginurlinterceptorconfigurewidget.h"
+#include "../widgets/adblockpluginurlinterceptorconfigurewidget.h"
 #include <AdBlockSettingWidget>
 #include <QTest>
 

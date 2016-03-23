@@ -16,7 +16,7 @@
 */
 
 #include "adblockinterceptorinterface.h"
-#include "adblockblockableitemsdialog.h"
+#include "../lib/widgets/adblockblockableitemsdialog.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 #include "lib/adblockmanager.h"
 #include <KLocalizedString>

@@ -17,7 +17,7 @@
 
 #include "adblockpluginurlinterceptor.h"
 #include "adblockinterceptorinterface.h"
-#include "adblockpluginurlinterceptorconfigurewidget.h"
+#include "../lib/widgets/adblockpluginurlinterceptorconfigurewidget.h"
 #include "lib/adblockmanager.h"
 #include <MessageViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>

@@ -2,10 +2,10 @@ set(messageviewer_adblock_lib_common_SRCS)
 ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME log_adblockinterceptor)
 
 set(adblocklibprivate_widget_SRCS
-    adblockblockableitemsdialog.cpp
-    adblockblockableitemswidget.cpp
-    adblockcreatefilterdialog.cpp
-    adblockpluginurlinterceptorconfigurewidget.cpp
+    widgets/adblockblockableitemsdialog.cpp
+    widgets/adblockblockableitemswidget.cpp
+    widgets/adblockcreatefilterdialog.cpp
+    widgets/adblockpluginurlinterceptorconfigurewidget.cpp
     )
 set(adblocklibprivate_SRCS
     adblockmanager.cpp
@@ -18,7 +18,7 @@ set(adblocklibprivate_SRCS
     ${adblocklibprivate_widget_SRCS}
     ${messageviewer_adblock_lib_common_SRCS}
 )
-ki18n_wrap_ui(adblocklibprivate_SRCS adblockcreatefilterwidget.ui)
+ki18n_wrap_ui(adblocklibprivate_SRCS widgets/adblockcreatefilterwidget.ui)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
