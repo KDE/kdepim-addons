@@ -21,7 +21,7 @@
 
 #include <QDialogButtonBox>
 #include <QTest>
-
+using namespace AdBlock;
 AdBlockBlockableItemsDialogTest::AdBlockBlockableItemsDialogTest(QObject *parent)
     : QObject(parent)
 {

@@ -25,7 +25,7 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-using namespace MessageViewer;
+using namespace AdBlock;
 AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
     : QDialog(parent),
       mCurrentType(AdBlockBlockableItemsWidget::None)

@@ -20,8 +20,10 @@
 
 #include <QDialog>
 #include "adblocklib_export.h"
-class AdBlockBlockableItemsWidget;
 class QWebEngineView;
+namespace AdBlock
+{
+class AdBlockBlockableItemsWidget;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog
 {
     Q_OBJECT
@@ -37,5 +39,5 @@ private:
     void readConfig();
     AdBlockBlockableItemsWidget *mBlockableItems;
 };
-
+}
 #endif // ADBLOCKBLOCKABLEITEMSDIALOG_H

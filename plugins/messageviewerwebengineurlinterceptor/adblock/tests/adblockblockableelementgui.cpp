@@ -24,7 +24,7 @@
 #include <QStandardPaths>
 #include <QCommandLineParser>
 #include <QApplication>
-
+using namespace AdBlock;
 AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     : QWidget(parent)
 {

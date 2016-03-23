@@ -76,7 +76,7 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 void AdblockInterceptorInterface::slotShowBlockableElement()
 {
     if (mWebEngineView) {
-        QPointer<AdBlockBlockableItemsDialog> dlg = new AdBlockBlockableItemsDialog(mWebEngineView);
+        QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
         dlg->setWebEngineView(mWebEngineView);
         dlg->exec();
         delete dlg;

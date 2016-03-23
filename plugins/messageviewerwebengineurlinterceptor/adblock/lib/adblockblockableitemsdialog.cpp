@@ -26,7 +26,7 @@
 #include <QDialogButtonBox>
 #include <KConfigGroup>
 #include <QPushButton>
-
+using namespace AdBlock;
 AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     : QDialog(parent)
 {

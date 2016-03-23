@@ -32,7 +32,7 @@
 #include <QApplication>
 
 #include <KIOWidgets/KRun>
-
+using namespace AdBlock;
 template<typename Arg, typename R, typename C>
 struct InvokeWrapper {
     R *receiver;

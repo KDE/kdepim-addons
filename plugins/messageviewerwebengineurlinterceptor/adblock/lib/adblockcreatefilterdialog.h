@@ -25,7 +25,7 @@ namespace Ui
 {
 class AdBlockCreateFilterWidget;
 }
-namespace MessageViewer
+namespace AdBlock
 {
 class AdBlockCreateFilterDialog : public QDialog
 {
