@@ -32,7 +32,7 @@ DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor()
 
 }
 
-MessageViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterceptor::createInterface(QWebEngineView *webEngine,QObject *parent)
+MessageViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {
     Q_UNUSED(webEngine);
     return new DoNotTrackInterceptorInterface(parent);

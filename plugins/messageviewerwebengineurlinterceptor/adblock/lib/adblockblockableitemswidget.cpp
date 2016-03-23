@@ -106,7 +106,6 @@ void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
     menu.exec(QCursor::pos());
 }
 
-
 void AdBlockBlockableItemsWidget::writeConfig()
 {
     KConfigGroup groupHeader(KSharedConfig::openConfig(), "AdBlockHeaders");
@@ -138,7 +137,6 @@ void AdBlockBlockableItemsWidget::adaptSrc(QString &src, const QString &hostName
         src = QString();
     }
 }
-
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
 {
@@ -196,7 +194,6 @@ void AdBlockBlockableItemsWidget::searchBlockableItems()
         mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }
-
 
 void AdBlockBlockableItemsWidget::slotCopyFilterItem()
 {

@@ -36,7 +36,6 @@ public:
 
     MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
 
-
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
     MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
 };

@@ -52,5 +52,4 @@ MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInter
     return configureWidget;
 }
 
-
 #include "adblockpluginurlinterceptor.moc"
