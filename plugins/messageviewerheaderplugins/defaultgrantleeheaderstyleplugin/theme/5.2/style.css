@@ -17,19 +17,6 @@ table.outer {
     border: none !important;
     table-collapse: collapse;
 }
-div#kmailPage {
-    display: inline;
-    position: fixed;
-    top: 1px;
-    left: 1px;
-    bottom: 1px;
-    right: 2px;
-    border-radius: 3px;
-    padding: 20px;
-    overflow: auto;
-    background-color: #fff;
-    box-shadow: rgba(0,0,0,0.3) 0px 1px 2px;
-}
 div#headerbox {
     border-radius: 3px;
     border-bottom: 1px solid rgb(190, 190, 190);
