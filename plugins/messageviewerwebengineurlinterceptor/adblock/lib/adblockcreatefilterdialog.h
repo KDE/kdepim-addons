@@ -18,7 +18,7 @@
 #ifndef ADBLOCKCREATEFILTERDIALOG_H
 #define ADBLOCKCREATEFILTERDIALOG_H
 
-#include "adblock/adblockblockableitemswidget.h"
+#include "adblockblockableitemswidget.h"
 
 #include <QDialog>
 namespace Ui

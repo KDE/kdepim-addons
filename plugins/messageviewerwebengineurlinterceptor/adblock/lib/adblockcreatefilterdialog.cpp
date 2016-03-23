@@ -94,6 +94,7 @@ void AdBlockCreateFilterDialog::setPattern(AdBlockBlockableItemsWidget::TypeElem
 
 void AdBlockCreateFilterDialog::initialize()
 {
+#if 0 //FIXME
     mUi->applyListElement->clear();
     for (int i = AdBlockBlockableItemsWidget::None + 1; i < AdBlockBlockableItemsWidget::MaxTypeElement; ++i) {
         QListWidgetItem *item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)), mUi->applyListElement);
@@ -104,7 +105,7 @@ void AdBlockCreateFilterDialog::initialize()
         }
 
     }
-
+#endif
     mUi->blockingFilter->setChecked(true);
     mUi->filtercustom->setText(mPattern);
     slotUpdateFilter();
@@ -117,6 +118,7 @@ QString AdBlockCreateFilterDialog::filter() const
 
 void AdBlockCreateFilterDialog::slotUpdateFilter()
 {
+#if 0 //FIXME
     QString pattern = mUi->filtercustom->text();
     if (mUi->atTheBeginning->isChecked()) {
         pattern = QLatin1String("|") + pattern;
@@ -155,5 +157,6 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
         pattern += QLatin1String(",~third-party");
     }
     mUi->filterName->setText(pattern);
+     #endif
 }
 

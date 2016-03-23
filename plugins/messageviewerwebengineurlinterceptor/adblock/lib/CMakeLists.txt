@@ -4,6 +4,7 @@ ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adb
 set(adblocklibprivate_widget_SRCS
     adblockblockableitemsdialog.cpp
     adblockblockableitemswidget.cpp
+    adblockcreatefilterdialog.cpp
     )
 set(adblocklibprivate_SRCS
     adblockmanager.cpp
@@ -16,6 +17,7 @@ set(adblocklibprivate_SRCS
     ${adblocklibprivate_widget_SRCS}
     ${messageviewer_adblock_lib_common_SRCS}
 )
+ki18n_wrap_ui(adblocklibprivate_SRCS adblockcreatefilterwidget.ui)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
