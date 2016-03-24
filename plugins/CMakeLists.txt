@@ -4,6 +4,6 @@ add_subdirectory(messageviewerheaderplugins)
 add_subdirectory(storageservices)
 add_subdirectory(messageviewer)
 
-if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+if (QTWEBENGINE_SUPPORT_OPTION)
     add_subdirectory(messageviewerwebengineurlinterceptor)
 endif()

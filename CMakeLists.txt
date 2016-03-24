@@ -41,9 +41,9 @@ include(ECMQtDeclareLoggingCategory)
 
 option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
-option(QTWEBENGINE_EXPERIMENTAL_OPTION "Enable support for qtwebengine. False by default." FALSE)
+option(QTWEBENGINE_SUPPORT_OPTION "Enable support for QtWebEngine. False by default." FALSE)
 
-if (QTWEBENGINE_EXPERIMENTAL_OPTION)
+if (QTWEBENGINE_SUPPORT_OPTION)
     set(QT_REQUIRED_MINIMUM_WEBENGINE_VERSION "5.6")
     find_package(Qt5 ${QT_REQUIRED_MINIMUM_WEBENGINE_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
 endif()
