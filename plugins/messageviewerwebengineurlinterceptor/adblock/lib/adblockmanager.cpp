@@ -16,6 +16,7 @@
 */
 
 #include "adblockmanager.h"
+#include "adblockmatcher.h"
 #include <QUrl>
 
 using namespace AdBlock;
@@ -47,6 +48,7 @@ AdblockManager::AdblockManager(QObject *parent)
     : QObject(parent),
       mEnabled(false)
 {
+    mAdBlockMatcher = new AdBlockMatcher(this);
     reloadConfig();
 }
 
@@ -67,17 +69,23 @@ bool AdblockManager::isEnabled() const
 
 bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
 {
+    bool result = false;
     QUrl url = info.requestUrl();
     const QString urlString = url.toString().toLower();
     const QString host = url.host().toLower();
     const QString scheme = url.scheme().toLower();
 
     if (!canRunOnScheme(scheme)) {
-        return false;
+        return result;
     }
 
+    const AdBlockRule* blockedRule = mAdBlockMatcher->match(info, host, urlString);
+    if (blockedRule) {
+        result = true;
+        //TODO
+    }
     //TODO
-    return false;
+    return result;
 }
 
 bool AdblockManager::canRunOnScheme(const QString &scheme) const

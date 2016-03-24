@@ -23,6 +23,7 @@
 #include "adblocklib_export.h"
 namespace AdBlock
 {
+class AdBlockMatcher;
 class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
@@ -40,6 +41,7 @@ public Q_SLOTS:
 private:
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
+    AdBlockMatcher *mAdBlockMatcher;
 };
 }
 #endif // ADBLOCKMANAGER_H

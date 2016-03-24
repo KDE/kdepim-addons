@@ -60,7 +60,7 @@ void AdblockInterceptorInterface::createActions(KActionCollection *ac)
         connect(showBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
         mActionsList.append(showBlockableItems);
     }
-    //TODO
+    //TODO more actions
 }
 
 QWebEngineView *AdblockInterceptorInterface::webEngineView() const
