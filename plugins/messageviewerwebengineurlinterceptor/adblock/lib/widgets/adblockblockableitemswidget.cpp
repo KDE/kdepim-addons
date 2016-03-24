@@ -16,6 +16,7 @@
 */
 
 #include "adblockblockableitemswidget.h"
+#include "adblockcreatefilterdialog.h"
 #include "adblockinterceptor_debug.h"
 #include <MessageViewer/WebEngineScript>
 
@@ -30,6 +31,7 @@
 #include <QMenu>
 #include <QClipboard>
 #include <QApplication>
+#include <QPointer>
 
 #include <KIOWidgets/KRun>
 using namespace AdBlock;
@@ -222,7 +224,6 @@ void AdBlockBlockableItemsWidget::slotBlockItem()
     if (!item) {
         return;
     }
-#if 0
     QPointer<AdBlockCreateFilterDialog> dlg = new AdBlockCreateFilterDialog(this);
     dlg->setPattern(static_cast<TypeElement>(item->data(Type, Element).toInt()), item->text(Url));
     if (dlg->exec()) {
@@ -230,7 +231,6 @@ void AdBlockBlockableItemsWidget::slotBlockItem()
         item->setText(FilterValue, filter);
     }
     delete dlg;
-#endif
 }
 
 void AdBlockBlockableItemsWidget::slotCopyItem()
