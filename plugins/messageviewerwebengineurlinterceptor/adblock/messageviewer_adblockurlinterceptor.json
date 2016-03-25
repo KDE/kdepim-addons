@@ -1,8 +1,18 @@
 {
     "KPlugin": {
         "Name": "Adblock", 
+        "Name[ca@valencia]": "Adblock", 
+        "Name[ca]": "Adblock", 
+        "Name[de]": "Adblock", 
+        "Name[en_GB]": "Adblock", 
         "Name[es]": "AdBlock", 
+        "Name[it]": "Adblock", 
+        "Name[nl]": "Adblock", 
+        "Name[pl]": "Adblock", 
+        "Name[pt]": "Adblock", 
         "Name[pt_BR]": "AdBlock", 
+        "Name[sk]": "Adblock", 
+        "Name[sl]": "Adblock", 
         "Name[sr@ijekavian]": "Адблок", 
         "Name[sr@ijekavianlatin]": "AdBlock", 
         "Name[sr@latin]": "AdBlock", 

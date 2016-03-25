@@ -1,12 +1,30 @@
 {
     "KPlugin": {
         "Name": "GDrive", 
+        "Name[ca@valencia]": "GDrive", 
+        "Name[ca]": "GDrive", 
+        "Name[cs]": "GDrive", 
+        "Name[de]": "GDrive", 
+        "Name[en_GB]": "GDrive", 
+        "Name[es]": "GDrive", 
+        "Name[fi]": "GDrive", 
+        "Name[gl]": "GDrive", 
+        "Name[it]": "GDrive", 
+        "Name[nl]": "GDrive", 
+        "Name[pl]": "GDrive", 
+        "Name[pt]": "GDrive", 
+        "Name[pt_BR]": "GDrive", 
         "Name[ru]": "Google Диск", 
+        "Name[sk]": "GDrive", 
+        "Name[sl]": "GDrive", 
         "Name[sr@ijekavian]": "Гугл‑драјв", 
         "Name[sr@ijekavianlatin]": "Google Drive", 
         "Name[sr@latin]": "Google Drive", 
         "Name[sr]": "Гугл‑драјв", 
+        "Name[sv]": "GDrive", 
+        "Name[uk]": "GDrive", 
         "Name[x-test]": "xxGDrivexx", 
+        "Name[zh_CN]": "GDrive", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

@@ -1,18 +1,29 @@
 {
     "KPlugin": {
         "Name": "box", 
+        "Name[ca@valencia]": "box", 
+        "Name[ca]": "box", 
         "Name[de]": "Box", 
+        "Name[en_GB]": "box", 
         "Name[es]": "caja", 
+        "Name[fi]": "box", 
+        "Name[gl]": "box", 
+        "Name[it]": "box", 
+        "Name[nl]": "box", 
         "Name[pl]": "pudełko", 
         "Name[pt]": "Box", 
         "Name[pt_BR]": "Box", 
         "Name[ru]": "Box", 
+        "Name[sk]": "box", 
+        "Name[sl]": "box", 
         "Name[sr@ijekavian]": "Бокс", 
         "Name[sr@ijekavianlatin]": "Box", 
         "Name[sr@latin]": "Box", 
         "Name[sr]": "Бокс", 
         "Name[sv]": "låda", 
+        "Name[uk]": "box", 
         "Name[x-test]": "xxboxxx", 
+        "Name[zh_CN]": "box", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]
