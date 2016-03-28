@@ -79,7 +79,7 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
         return result;
     }
 
-    const AdBlockRule* blockedRule = mAdBlockMatcher->match(info, host, urlString);
+    const AdBlockRule *blockedRule = mAdBlockMatcher->match(info, host, urlString);
     if (blockedRule) {
         result = true;
         //TODO
