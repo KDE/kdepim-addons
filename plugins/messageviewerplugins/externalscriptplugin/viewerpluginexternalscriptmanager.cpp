@@ -53,3 +53,5 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 }
 
 //TODO read list of external script.
+//TODO read desktop file.
+//TODO read specific directory.

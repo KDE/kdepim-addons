@@ -2,6 +2,7 @@ set(messageviewer_externalscriptplugin_SRCS
     viewerpluginexternalscript.cpp  
     viewerpluginexternalscriptinterface.cpp
     viewerpluginexternalscriptmanager.cpp
+    viewerpluginexternalscriptinfo.cpp
 )
 ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME log_externalscriptplugin)
 add_library(messageviewer_externalscriptplugin MODULE ${messageviewer_externalscriptplugin_SRCS})
