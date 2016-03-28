@@ -33,7 +33,7 @@ public:
     ~ViewerPluginCreateTodoInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;
-    QAction *action() const Q_DECL_OVERRIDE;
+    QList<QAction *> actions() const Q_DECL_OVERRIDE;
     void setMessage(const KMime::Message::Ptr &value) Q_DECL_OVERRIDE;
     void closePlugin() Q_DECL_OVERRIDE;
     void showWidget() Q_DECL_OVERRIDE;
@@ -46,7 +46,7 @@ private Q_SLOTS:
 private:
     void createAction(KActionCollection *ac);
     TodoEdit *mTodoEdit;
-    QAction *mAction;
+    QList<QAction *> mAction;
     Akonadi::Item mMessageItem;
 };
 }

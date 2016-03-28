@@ -32,8 +32,7 @@
 using namespace MessageViewer;
 
 ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mAction(Q_NULLPTR)
+    : ViewerPluginInterface(parent)
 {
     createAction(ac);
     mNoteEdit = new NoteEdit(parent);
@@ -54,7 +53,7 @@ void ViewerPluginCreatenoteInterface::setText(const QString &text)
     //Nothing
 }
 
-QAction *ViewerPluginCreatenoteInterface::action() const
+QList<QAction *> ViewerPluginCreatenoteInterface::actions() const
 {
     return mAction;
 }
@@ -132,7 +131,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreatenoteInterface::fea
 void ViewerPluginCreatenoteInterface::updateAction(const Akonadi::Item &item)
 {
     mMessageItem = item;
-    if (mAction) {
+    if (!mAction.isEmpty()) {
         QString createNoteText;
         if (relatedNoteRelation().isValid()) {
             createNoteText = i18nc("edit a note on this message", "Edit Note");
@@ -140,20 +139,21 @@ void ViewerPluginCreatenoteInterface::updateAction(const Akonadi::Item &item)
             createNoteText = i18nc("create a new note out of this message", "Create Note");
         }
 
-        mAction->setText(createNoteText);
-        mAction->setIconText(createNoteText);
+        mAction.at(0)->setText(createNoteText);
+        mAction.at(0)->setIconText(createNoteText);
     }
 }
 
 void ViewerPluginCreatenoteInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        mAction = new QAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18nc("create a new note out of this message", "Create Note"), this);
-        mAction->setIconText(i18nc("create a new note out of this message", "Create Note"));
-        addHelpTextAction(mAction, i18n("Allows you to create a note from this message"));
-        mAction->setWhatsThis(i18n("This option starts an editor to create a note. Then you can edit the note to your liking before saving it."));
-        ac->addAction(QStringLiteral("create_note"), mAction);
-        connect(mAction, &QAction::triggered, this, &ViewerPluginCreatenoteInterface::slotActivatePlugin);
+        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18nc("create a new note out of this message", "Create Note"), this);
+        act->setIconText(i18nc("create a new note out of this message", "Create Note"));
+        addHelpTextAction(act, i18n("Allows you to create a note from this message"));
+        act->setWhatsThis(i18n("This option starts an editor to create a note. Then you can edit the note to your liking before saving it."));
+        ac->addAction(QStringLiteral("create_note"), act);
+        connect(act, &QAction::triggered, this, &ViewerPluginCreatenoteInterface::slotActivatePlugin);
+        mAction.append(act);
     }
 }
 

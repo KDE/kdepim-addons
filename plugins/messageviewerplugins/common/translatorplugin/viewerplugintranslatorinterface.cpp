@@ -28,8 +28,7 @@
 using namespace MessageViewer;
 
 ViewerPluginTranslatorInterface::ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mAction(Q_NULLPTR)
+    : ViewerPluginInterface(parent)
 {
     mTranslatorWidget = new PimCommon::TranslatorWidget(parent);
     mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
@@ -47,7 +46,7 @@ void ViewerPluginTranslatorInterface::setText(const QString &text)
     mTranslatorWidget->setTextToTranslate(text);
 }
 
-QAction *ViewerPluginTranslatorInterface::action() const
+QList<QAction *> ViewerPluginTranslatorInterface::actions() const
 {
     return mAction;
 }
@@ -65,10 +64,11 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginTranslatorInterface::fea
 void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        mAction = new QAction(i18n("Translate..."), this);
-        ac->setDefaultShortcut(mAction, QKeySequence(Qt::CTRL + Qt::ALT + Qt::Key_T));
-        mAction->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
-        ac->addAction(QStringLiteral("translate_text"), mAction);
-        connect(mAction, &QAction::triggered, this, &ViewerPluginTranslatorInterface::slotActivatePlugin);
+        QAction *act = new QAction(i18n("Translate..."), this);
+        ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL + Qt::ALT + Qt::Key_T));
+        act->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
+        ac->addAction(QStringLiteral("translate_text"), act);
+        connect(act, &QAction::triggered, this, &ViewerPluginTranslatorInterface::slotActivatePlugin);
+        mAction.append(act);
     }
 }

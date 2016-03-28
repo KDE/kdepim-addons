@@ -52,7 +52,7 @@ void ViewerPluginTranslatorTest::shouldCreateAction()
     parent->setLayout(new QHBoxLayout);
 
     MessageViewer::ViewerPluginInterface *interface = translator->createView(parent, new KActionCollection(this));
-    QVERIFY(interface->action());
+    QVERIFY(!interface->actions().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginTranslatorTest)

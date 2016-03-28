@@ -49,7 +49,7 @@ void ViewerPluginCreateNoteTest::shouldCreateAction()
     QWidget *parent = new QWidget(0);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
-    QVERIFY(interface->action());
+    QVERIFY(!interface->actions().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginCreateNoteTest)

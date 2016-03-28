@@ -32,7 +32,7 @@ public:
     ~ViewerPluginCreatenoteInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;
-    QAction *action() const Q_DECL_OVERRIDE;
+    QList<QAction *> actions() const Q_DECL_OVERRIDE;
     void setMessage(const KMime::Message::Ptr &value) Q_DECL_OVERRIDE;
     void closePlugin() Q_DECL_OVERRIDE;
     void showWidget() Q_DECL_OVERRIDE;
@@ -50,7 +50,7 @@ private:
     void createAction(KActionCollection *ac);
     Akonadi::Item mMessageItem;
     NoteEdit *mNoteEdit;
-    QAction *mAction;
+    QList<QAction *> mAction;
 };
 }
 #endif // VIEWERPLUGINCREATENOTEINTERFACE_H

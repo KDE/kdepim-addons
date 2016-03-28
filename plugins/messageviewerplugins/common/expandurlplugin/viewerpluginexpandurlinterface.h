@@ -30,7 +30,7 @@ public:
     explicit ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExpandurlInterface();
 
-    QAction *action() const Q_DECL_OVERRIDE;
+    QList<QAction *> actions() const Q_DECL_OVERRIDE;
     void execute() Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
@@ -38,7 +38,7 @@ public:
 private:
     void createAction(KActionCollection *ac);
     QUrl mCurrentUrl;
-    QAction *mAction;
+    QList<QAction *> mAction;
 };
 }
 #endif // VIEWERPLUGINEXPANDURLINTERFACE_H

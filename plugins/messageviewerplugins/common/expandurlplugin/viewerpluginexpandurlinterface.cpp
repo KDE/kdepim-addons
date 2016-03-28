@@ -31,8 +31,7 @@
 using namespace MessageViewer;
 
 ViewerPluginExpandurlInterface::ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mAction(Q_NULLPTR)
+    : ViewerPluginInterface(parent)
 {
     createAction(ac);
 }
@@ -42,7 +41,7 @@ ViewerPluginExpandurlInterface::~ViewerPluginExpandurlInterface()
 
 }
 
-QAction *ViewerPluginExpandurlInterface::action() const
+QList<QAction *> ViewerPluginExpandurlInterface::actions() const
 {
     return mAction;
 }
@@ -67,10 +66,11 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExpandurlInterface::feat
 void ViewerPluginExpandurlInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        mAction = new QAction(i18n("Expand URL"), this);
-        ac->addAction(QStringLiteral("expand_short_url"), mAction);
-        ac->setShortcutsConfigurable(mAction, false);
-        connect(mAction, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
+        QAction *act = new QAction(i18n("Expand URL"), this);
+        ac->addAction(QStringLiteral("expand_short_url"), act);
+        ac->setShortcutsConfigurable(act, false);
+        connect(act, &QAction::triggered, this, &ViewerPluginExpandurlInterface::slotActivatePlugin);
+        mAction.append(act);
     }
 }
 

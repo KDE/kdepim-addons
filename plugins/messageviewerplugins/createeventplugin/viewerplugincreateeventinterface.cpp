@@ -29,8 +29,7 @@
 using namespace MessageViewer;
 
 ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mAction(Q_NULLPTR)
+    : ViewerPluginInterface(parent)
 {
     mEventEdit = new EventEdit(parent);
     connect(mEventEdit, &EventEdit::createEvent, this, &ViewerPluginCreateEventInterface::slotCreateEvent);
@@ -56,7 +55,7 @@ void ViewerPluginCreateEventInterface::setText(const QString &text)
     //Nothing
 }
 
-QAction *ViewerPluginCreateEventInterface::action() const
+QList<QAction *> ViewerPluginCreateEventInterface::actions() const
 {
     return mAction;
 }
@@ -84,12 +83,13 @@ void ViewerPluginCreateEventInterface::setMessageItem(const Akonadi::Item &item)
 void ViewerPluginCreateEventInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        mAction = new QAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Create Event..."), this);
-        mAction->setIconText(i18n("Create Event"));
-        addHelpTextAction(mAction, i18n("Allows you to create a calendar Event"));
-        ac->addAction(QStringLiteral("create_event"), mAction);
-        ac->setDefaultShortcut(mAction, QKeySequence(Qt::CTRL + Qt::Key_E));
-        connect(mAction, &QAction::triggered, this, &ViewerPluginCreateEventInterface::slotActivatePlugin);
+        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Create Event..."), this);
+        act->setIconText(i18n("Create Event"));
+        addHelpTextAction(act, i18n("Allows you to create a calendar Event"));
+        ac->addAction(QStringLiteral("create_event"), act);
+        ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL + Qt::Key_E));
+        connect(act, &QAction::triggered, this, &ViewerPluginCreateEventInterface::slotActivatePlugin);
+        mAction.append(act);
     }
 }
 
