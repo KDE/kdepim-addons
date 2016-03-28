@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "External Script", 
+        "ServiceTypes": [
+            "MessageViewer/ViewerPlugin"
+        ], 
+        "Version": "2.0"
+    }
+}
