@@ -51,3 +51,5 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 {
     return sInstance->externalScriptPluginManager;
 }
+
+//TODO read list of external script.
