@@ -39,7 +39,7 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/HtmlWriter>
-using MessageViewer::Interface::BodyPart;
+using MimeTreeParser::Interface::BodyPart;
 
 #include <Libkdepim/AddContactJob>
 
@@ -63,19 +63,19 @@ using MessageViewer::Interface::BodyPart;
 namespace
 {
 
-class Formatter : public MessageViewer::Interface::BodyPartFormatter
+class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
     Formatter()
     {
     }
 
-    Result format(MessageViewer::Interface::BodyPart *part, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
         return format(part, writer, 0);
     }
 
-    Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
     {
         if (!writer) {
             return Ok;
@@ -122,7 +122,7 @@ public:
             bodyPart->setBodyPartMemento(memento);
 
             if (asyncResultObserver) {
-                QObject::connect(memento, SIGNAL(update(MessageViewer::UpdateMode)), asyncResultObserver, SLOT(update(MessageViewer::UpdateMode)));
+                QObject::connect(memento, SIGNAL(update(MimeTreeParser::UpdateMode)), asyncResultObserver, SLOT(update(MimeTreeParser::UpdateMode)));
             }
         }
 
@@ -182,7 +182,7 @@ public:
     }
 };
 
-class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
+class UrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
 {
 public:
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart,
@@ -312,10 +312,10 @@ public:
     }
 };
 
-class Plugin : public MessageViewer::Interface::BodyPartFormatterPlugin
+class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MessageViewer::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
         return validIndex(idx) ? new Formatter() : 0;
     }
@@ -337,7 +337,7 @@ public:
         }
     }
 
-    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE
     {
         return validIndex(idx) ? new UrlHandler() : 0;
     }
@@ -352,7 +352,7 @@ private:
 }
 
 extern "C"
-Q_DECL_EXPORT MessageViewer::Interface::BodyPartFormatterPlugin *
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
 messageviewer_bodypartformatter_text_vcard_create_bodypart_formatter_plugin()
 {
     return new Plugin();

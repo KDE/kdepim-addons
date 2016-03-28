@@ -18,9 +18,8 @@
 #ifndef VCARDMEMENTO_H
 #define VCARDMEMENTO_H
 
-#include <MessageViewer/Viewer>
-
 #include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/Enums>
 
 #include <QObject>
 #include <QMap>
@@ -47,7 +46,7 @@ struct VCard {
     bool found;
 };
 
-class VcardMemento : public QObject, public Interface::BodyPartMemento
+class VcardMemento : public QObject, public MimeTreeParser::Interface::BodyPartMemento
 {
     Q_OBJECT
 public:
@@ -67,7 +66,7 @@ private Q_SLOTS:
 
 Q_SIGNALS:
     // TODO: Factor our update and detach into base class
-    void update(MessageViewer::UpdateMode);
+    void update(MimeTreeParser::UpdateMode);
 
 private:
     void checkEmail();

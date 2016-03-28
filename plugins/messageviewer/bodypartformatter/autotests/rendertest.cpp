@@ -64,12 +64,12 @@ void RenderTest::testRender()
     msg->parse();
 
     // render the mail
-    MessageViewer::FileHtmlWriter fileWriter(outFileName);
+    MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
     QImage paintDevice;
-    MessageViewer::CSSHelperBase cssHelper(&paintDevice);
-    MessageViewer::NodeHelper nodeHelper;
+    MimeTreeParser::CSSHelperBase cssHelper(&paintDevice);
+    MimeTreeParser::NodeHelper nodeHelper;
     TestObjectTreeSource testSource(&fileWriter, &cssHelper);
-    MessageViewer::ObjectTreeParser otp(&testSource, &nodeHelper);
+    MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
     fileWriter.begin(QString());
     fileWriter.queue(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"

@@ -26,7 +26,7 @@ mailreaderView::mailreaderView(QWidget *parent)
     ui_mailreaderview.setupUi(this);
     QHBoxLayout *layout = new QHBoxLayout;
     m_readerWin = new MessageViewer::Viewer(this, parent, dynamic_cast<KXmlGuiWindow *>(parent)->actionCollection());
-    m_readerWin->setAttachmentStrategy(MessageViewer::AttachmentStrategy::inlined());
+    m_readerWin->setAttachmentStrategy(MimeTreeParser::AttachmentStrategy::inlined());
     layout->addWidget(m_readerWin);
     setLayout(layout);
     setAutoFillBackground(true);
@@ -59,7 +59,7 @@ void mailreaderView::showItem(const Akonadi::Item &item)
     qDebug() << "Show item with ID: " << item.id();
     m_readerWin->enableMessageDisplay();
     m_readerWin->setDecryptMessageOverwrite(false);
-    m_readerWin->setMessageItem(item, MessageViewer::Force);
+    m_readerWin->setMessageItem(item, MimeTreeParser::Force);
 }
 
 void mailreaderView::showAboutPage()

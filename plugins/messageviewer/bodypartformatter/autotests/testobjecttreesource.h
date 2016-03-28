@@ -28,8 +28,8 @@
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {
 public:
-    TestObjectTreeSource(MessageViewer::HtmlWriter *writer,
-                         MessageViewer::CSSHelperBase *cssHelper)
+    TestObjectTreeSource(MimeTreeParser::HtmlWriter *writer,
+                         MimeTreeParser::CSSHelperBase *cssHelper)
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
@@ -37,11 +37,11 @@ public:
     {
     }
 
-    MessageViewer::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE {
+    MimeTreeParser::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE {
         return mWriter;
     }
 
-    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
+    MimeTreeParser::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
         return mCSSHelper;
     }
 
@@ -73,7 +73,7 @@ public:
     {
         return false;
     }
-    void setHtmlMode(MessageViewer::Util::HtmlMode mode) Q_DECL_OVERRIDE {
+    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode) Q_DECL_OVERRIDE {
         Q_UNUSED(mode)
     }
     int levelQuote() const Q_DECL_OVERRIDE
@@ -87,8 +87,8 @@ public:
         Q_UNUSED(message);
         return QString();
     }
-    const MessageViewer::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE {
-        return MessageViewer::AttachmentStrategy::smart();
+    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE {
+        return MimeTreeParser::AttachmentStrategy::smart();
     }
     QObject *sourceObject() Q_DECL_OVERRIDE {
         return 0;
@@ -108,8 +108,8 @@ public:
     }
 
 private:
-    MessageViewer::HtmlWriter *mWriter;
-    MessageViewer::CSSHelperBase *mCSSHelper;
+    MimeTreeParser::HtmlWriter *mWriter;
+    MimeTreeParser::CSSHelperBase *mCSSHelper;
     bool mHtmlLoadExternal;
     bool mHtmlMail;
 };

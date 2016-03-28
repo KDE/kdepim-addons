@@ -48,17 +48,17 @@ namespace
 // TODO: Show filename header to make it possible to save the patch.
 // FIXME: The box should only be as wide as necessary.
 
-class Formatter : public MessageViewer::Interface::BodyPartFormatter
+class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
 
         if (!writer) {
             return Ok;
         }
 
-        if (bodyPart->defaultDisplay() == MessageViewer::Interface::BodyPart::AsIcon) {
+        if (bodyPart->defaultDisplay() == MimeTreeParser::Interface::BodyPart::AsIcon) {
             return AsIcon;
         }
 
@@ -118,13 +118,13 @@ public:
     }
 
     // unhide the overload with three arguments
-    using MessageViewer::Interface::BodyPartFormatter::format;
+    using MimeTreeParser::Interface::BodyPartFormatter::format;
 };
 
-class Plugin : public MessageViewer::Interface::BodyPartFormatterPlugin
+class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MessageViewer::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
         return idx == 0 ? new Formatter() : 0;
     }
@@ -137,7 +137,7 @@ public:
         return idx == 0 ? "x-diff" : 0;
     }
 
-    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
     {
         return 0;
     }
@@ -146,7 +146,7 @@ public:
 }
 
 extern "C"
-Q_DECL_EXPORT MessageViewer::Interface::BodyPartFormatterPlugin *
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
 messageviewer_bodypartformatter_text_xdiff_create_bodypart_formatter_plugin()
 {
     return new Plugin();

@@ -72,7 +72,7 @@ void ItemViewerWidget::selectionChanged(const QItemSelection selected, const QIt
     Akonadi::Item item = selectedIndex.data(EntityTreeModel::ItemRole).value<Akonadi::Item>();
     if (mimeType == QLatin1String("message/rfc822")) {
         m_widgetStack->setCurrentIndex(1);
-        m_mailViewer->setMessageItem(item, MessageViewer::Force);
+        m_mailViewer->setMessageItem(item, MimeTreeParser::Force);
         return;
     }
     if (mimeType == QLatin1String("text/directory")) {

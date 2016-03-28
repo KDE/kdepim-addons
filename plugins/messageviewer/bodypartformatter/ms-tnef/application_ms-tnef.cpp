@@ -58,10 +58,10 @@
 namespace
 {
 
-class Formatter : public MessageViewer::Interface::BodyPartFormatter
+class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    MessageViewer::Interface::BodyPartFormatter::Result format(MessageViewer::Interface::BodyPart *bodyPart, MessageViewer::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
 
         if (!writer) {
@@ -108,7 +108,7 @@ public:
         if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
             qCDebug(MS_TNEF_LOG) << "No attachments or invitation found in" << fileName;
 
-            QString label = MessageViewer::NodeHelper::fileName(bodyPart->content());
+            QString label = MimeTreeParser::NodeHelper::fileName(bodyPart->content());
             label = MessageCore::StringUtil::quoteHtmlChars(label, true);
             const QString comment =
                 MessageCore::StringUtil::quoteHtmlChars(
@@ -127,7 +127,7 @@ public:
             return NeedContent;
         }
 
-        QString label = MessageViewer::NodeHelper::fileName(bodyPart->content());
+        QString label = MimeTreeParser::NodeHelper::fileName(bodyPart->content());
         label = MessageCore::StringUtil::quoteHtmlChars(label, true);
         const QString comment =
             MessageCore::StringUtil::quoteHtmlChars(
@@ -170,7 +170,7 @@ public:
             bodyPart->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
             const QString href = QStringLiteral("file:") + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att->name()));
 
-            const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::fileNameForMimetype(att->mimeTag(),
+            const QString iconName = QUrl::fromLocalFile(MimeTreeParser::Util::fileNameForMimetype(att->mimeTag(),
                                      KIconLoader::Desktop, attFileName)).url();
 
             writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"") +
@@ -187,13 +187,13 @@ public:
     }
 
     // unhide the overload with three arguments
-    using MessageViewer::Interface::BodyPartFormatter::format;
+    using MimeTreeParser::Interface::BodyPartFormatter::format;
 };
 
-class Plugin : public MessageViewer::Interface::BodyPartFormatterPlugin
+class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MessageViewer::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
         return idx == 0 ? new Formatter() : 0;
     }
@@ -212,7 +212,7 @@ public:
         }
     }
 
-    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
     {
         return 0;
     }
@@ -221,7 +221,7 @@ public:
 }
 
 extern "C"
-Q_DECL_EXPORT MessageViewer::Interface::BodyPartFormatterPlugin *
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
 messageviewer_bodypartformatter_application_mstnef_create_bodypart_formatter_plugin()
 {
     return new Plugin();
