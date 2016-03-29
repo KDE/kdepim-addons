@@ -30,7 +30,6 @@ using namespace MessageViewer;
 ViewerPluginExternalscriptInterface::ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent)
 {
-    //TODO
     createAction(ac);
 }
 
@@ -59,14 +58,14 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
     if (ac) {
         const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
         Q_FOREACH (ViewerPluginExternalScriptInfo info, infos) {
-            QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create Todo"), this);
+            QAction *act = new QAction(info.name(), this);
             act->setIconText(info.name());
             const QString &description = info.description();
             if (!description.isEmpty()) {
                 addHelpTextAction(act, description);
             }
-            //TODO create uniq value for kactioncollection
-            ac->addAction(QStringLiteral("create_todo"), act);
+            ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
+            //TODO add info.
             //connect(act, &QAction::triggered, this, &ViewerPluginCreateTodoInterface::slotActivatePlugin);
             mAction.append(act);
         }
