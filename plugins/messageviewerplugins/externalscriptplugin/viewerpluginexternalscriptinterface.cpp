@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexternalscriptinterface.h"
+#include "viewerpluginexternalscriptmanager.h"
 
 #include <QHBoxLayout>
 #include <QIcon>
@@ -48,9 +49,26 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExternalscriptInterface:
     return NeedMessage;
 }
 
+void ViewerPluginExternalscriptInterface::execute()
+{
+    //TODO
+}
+
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        //TODO
+        const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
+        Q_FOREACH (ViewerPluginExternalScriptInfo info, infos) {
+            QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create Todo"), this);
+            act->setIconText(info.name());
+            const QString &description = info.description();
+            if (!description.isEmpty()) {
+                addHelpTextAction(act, description);
+            }
+            //TODO create uniq value for kactioncollection
+            ac->addAction(QStringLiteral("create_todo"), act);
+            //connect(act, &QAction::triggered, this, &ViewerPluginCreateTodoInterface::slotActivatePlugin);
+            mAction.append(act);
+        }
     }
 }

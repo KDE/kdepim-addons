@@ -31,6 +31,7 @@ public:
 
     QList<QAction *> actions() const Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
+    void execute() Q_DECL_OVERRIDE;
 
 private:
     void createAction(KActionCollection *ac);
