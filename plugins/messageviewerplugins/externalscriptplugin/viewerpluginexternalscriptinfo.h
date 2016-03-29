@@ -33,10 +33,14 @@ public:
     QString executable() const;
     void setExecutable(const QString &executable);
 
+    QString description() const;
+    void setDescription(const QString &description);
+
 private:
     QString mCommandLine;
     QString mName;
     QString mExecutable;
+    QString mDescription;
 };
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
 

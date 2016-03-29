@@ -51,3 +51,13 @@ void ViewerPluginExternalScriptInfo::setExecutable(const QString &executable)
 {
     mExecutable = executable;
 }
+
+QString ViewerPluginExternalScriptInfo::description() const
+{
+    return mDescription;
+}
+
+void ViewerPluginExternalScriptInfo::setDescription(const QString &description)
+{
+    mDescription = description;
+}
