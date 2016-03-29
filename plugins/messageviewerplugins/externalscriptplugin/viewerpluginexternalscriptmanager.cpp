@@ -53,7 +53,7 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 
 void ViewerPluginExternalScriptManager::readExternalScriptInfo()
 {
-
+    //TODO
 }
 
 QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptInfos() const

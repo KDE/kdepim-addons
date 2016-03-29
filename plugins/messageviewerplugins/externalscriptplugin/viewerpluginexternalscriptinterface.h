@@ -22,6 +22,12 @@
 class KActionCollection;
 namespace MessageViewer
 {
+struct ViewerPluginExternalscriptActionInfo
+{
+    QString executable;
+    QString arguments;
+};
+
 class ViewerPluginExternalscriptInterface : public ViewerPluginInterface
 {
     Q_OBJECT
@@ -32,6 +38,9 @@ public:
     QList<QAction *> actions() const Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
     void execute() Q_DECL_OVERRIDE;
+
+private Q_SLOTS:
+    void slotScriptActivated(QAction *act);
 
 private:
     void createAction(KActionCollection *ac);

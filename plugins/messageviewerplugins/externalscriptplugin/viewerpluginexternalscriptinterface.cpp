@@ -57,17 +57,31 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
         const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
-        Q_FOREACH (ViewerPluginExternalScriptInfo info, infos) {
-            QAction *act = new QAction(info.name(), this);
-            act->setIconText(info.name());
-            const QString &description = info.description();
-            if (!description.isEmpty()) {
-                addHelpTextAction(act, description);
+        if (!infos.isEmpty()) {
+            QActionGroup *grp = new QActionGroup(this);
+            connect(grp, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);
+            Q_FOREACH (ViewerPluginExternalScriptInfo info, infos) {
+                QAction *act = new QAction(info.name(), this);
+                act->setIconText(info.name());
+                const QString &description = info.description();
+                if (!description.isEmpty()) {
+                    addHelpTextAction(act, description);
+                }
+                ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
+                ViewerPluginExternalscriptActionInfo actionInfo;
+                actionInfo.arguments = info.commandLine();
+                actionInfo.executable = info.executable();
+
+                //TODO add info.
+                mAction.append(act);
+                grp->addAction(act);
             }
-            ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
-            //TODO add info.
-            //connect(act, &QAction::triggered, this, &ViewerPluginCreateTodoInterface::slotActivatePlugin);
-            mAction.append(act);
         }
     }
+}
+
+void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
+{
+    //TODO
+    slotActivatePlugin();
 }
