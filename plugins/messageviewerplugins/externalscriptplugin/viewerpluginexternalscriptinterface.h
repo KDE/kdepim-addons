@@ -30,7 +30,6 @@ public:
     ~ViewerPluginExternalscriptInterface();
 
     QList<QAction *> actions() const Q_DECL_OVERRIDE;
-    void showWidget() Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
 private:

@@ -43,10 +43,6 @@ QList<QAction *> ViewerPluginExternalscriptInterface::actions() const
     return mAction;
 }
 
-void ViewerPluginExternalscriptInterface::showWidget()
-{
-}
-
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExternalscriptInterface::featureTypes() const
 {
     return NeedMessage;
