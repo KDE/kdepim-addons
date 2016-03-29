@@ -41,3 +41,13 @@ void ViewerPluginExternalScriptInfo::setCommandLine(const QString &commandLine)
 {
     mCommandLine = commandLine;
 }
+
+QString ViewerPluginExternalScriptInfo::executable() const
+{
+    return mExecutable;
+}
+
+void ViewerPluginExternalScriptInfo::setExecutable(const QString &executable)
+{
+    mExecutable = executable;
+}

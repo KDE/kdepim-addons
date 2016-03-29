@@ -18,7 +18,10 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPTMANAGER_H
 #define VIEWERPLUGINEXTERNALSCRIPTMANAGER_H
 
+#include "viewerpluginexternalscriptinfo.h"
+
 #include <QObject>
+#include <QVector>
 
 class ViewerPluginExternalScriptManager : public QObject
 {
@@ -27,6 +30,12 @@ public:
     explicit ViewerPluginExternalScriptManager(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalScriptManager();
     static ViewerPluginExternalScriptManager *self();
+
+    QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+
+private:
+    void readExternalScriptInfo();
+    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTMANAGER_H

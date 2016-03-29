@@ -36,6 +36,7 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
     ViewerPluginExternalScriptInfo info;
     QVERIFY(info.name().isEmpty());
     QVERIFY(info.commandLine().isEmpty());
+    QVERIFY(info.executable().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptInfoTest)

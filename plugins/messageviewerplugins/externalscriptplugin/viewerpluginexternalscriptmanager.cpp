@@ -38,7 +38,7 @@ Q_GLOBAL_STATIC(ViewerPluginExternalScriptManagerInstancePrivate, sInstance)
 ViewerPluginExternalScriptManager::ViewerPluginExternalScriptManager(QObject *parent)
     : QObject(parent)
 {
-
+    readExternalScriptInfo();
 }
 
 ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager()
@@ -49,6 +49,16 @@ ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager()
 ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 {
     return sInstance->externalScriptPluginManager;
+}
+
+void ViewerPluginExternalScriptManager::readExternalScriptInfo()
+{
+
+}
+
+QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptInfos() const
+{
+    return mScriptInfos;
 }
 
 //TODO read list of external script.

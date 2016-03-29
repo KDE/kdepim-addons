@@ -30,9 +30,14 @@ public:
     QString commandLine() const;
     void setCommandLine(const QString &commandLine);
 
+    QString executable() const;
+    void setExecutable(const QString &executable);
+
 private:
     QString mCommandLine;
     QString mName;
+    QString mExecutable;
 };
+Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTINFO_H
