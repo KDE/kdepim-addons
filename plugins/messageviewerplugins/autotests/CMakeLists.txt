@@ -53,3 +53,5 @@ add_messageviewer_viewerplugin_unittest(viewerplugincreatetodotest.cpp "../creat
 add_messageviewer_viewerplugin_unittest(viewerplugincreatenotetest.cpp "../createnoteplugin/noteedit.cpp;../createnoteplugin/viewerplugincreatenote.cpp;../createnoteplugin/viewerplugincreatenoteinterface.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerplugintranslatortest.cpp "../common/translatorplugin/viewerplugintranslator.cpp;../common/translatorplugin/viewerplugintranslatorinterface.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerpluginexternalscripttest.cpp "../externalscriptplugin/viewerpluginexternalscript.cpp;../externalscriptplugin/viewerpluginexternalscriptinterface.cpp" "")
+
+add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptinfotest.cpp "../externalscriptplugin/viewerpluginexternalscriptinfo.cpp" "")
