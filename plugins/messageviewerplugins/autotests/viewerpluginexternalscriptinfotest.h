@@ -27,6 +27,8 @@ public:
     explicit ViewerPluginExternalScriptInfoTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalScriptInfoTest();
 
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTINFOTEST_H

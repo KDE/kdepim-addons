@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexternalscriptinfotest.h"
+#include "../externalscriptplugin/viewerpluginexternalscriptinfo.h"
 
 #include <QTest>
 
@@ -28,6 +29,13 @@ ViewerPluginExternalScriptInfoTest::ViewerPluginExternalScriptInfoTest(QObject *
 ViewerPluginExternalScriptInfoTest::~ViewerPluginExternalScriptInfoTest()
 {
 
+}
+
+void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
+{
+    ViewerPluginExternalScriptInfo info;
+    QVERIFY(info.name().isEmpty());
+    QVERIFY(info.commandLine().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptInfoTest)
