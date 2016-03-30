@@ -1,6 +1,13 @@
 {
     "KPlugin": {
         "Name": "External Script", 
+        "Name[ca@valencia]": "Script extern", 
+        "Name[ca]": "Script extern", 
+        "Name[nl]": "Extern script", 
+        "Name[pt_BR]": "Script externo", 
+        "Name[sv]": "Externt skript", 
+        "Name[uk]": "Зовнішній скрипт", 
+        "Name[x-test]": "xxExternal Scriptxx", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 
