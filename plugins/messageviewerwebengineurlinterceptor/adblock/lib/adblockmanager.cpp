@@ -84,11 +84,10 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
         result = true;
         //TODO
     }
-    //TODO
     return result;
 }
 
 bool AdblockManager::canRunOnScheme(const QString &scheme) const
 {
-    return !(scheme == QLatin1String("file"));
+    return (scheme != QLatin1String("file"));
 }
