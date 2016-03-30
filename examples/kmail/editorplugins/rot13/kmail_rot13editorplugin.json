@@ -1,10 +1,26 @@
 {
     "KPlugin": {
         "Name": "ROT13", 
+        "Name[ca@valencia]": "ROT13", 
+        "Name[ca]": "ROT13", 
+        "Name[de]": "ROT13", 
+        "Name[en_GB]": "ROT13", 
+        "Name[es]": "ROT13", 
+        "Name[fi]": "ROT13", 
+        "Name[gl]": "ROT13", 
+        "Name[it]": "ROT13", 
+        "Name[nl]": "ROT13", 
+        "Name[pl]": "ROT13", 
+        "Name[pt]": "ROT13", 
+        "Name[pt_BR]": "ROT13", 
+        "Name[sk]": "ROT13", 
+        "Name[sl]": "ROT13", 
         "Name[sr@ijekavian]": "Рот‑13", 
         "Name[sr@ijekavianlatin]": "Rot‑13", 
         "Name[sr@latin]": "Rot‑13", 
         "Name[sr]": "Рот‑13", 
+        "Name[sv]": "ROT13", 
+        "Name[uk]": "ROT13", 
         "Name[x-test]": "xxROT13xx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"

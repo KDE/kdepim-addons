@@ -3,6 +3,8 @@
         "Name": "Do Not Track", 
         "Name[ca@valencia]": "No deixis rastre", 
         "Name[ca]": "No deixis rastre", 
+        "Name[de]": "Do Not Track", 
+        "Name[en_GB]": "Do Not Track", 
         "Name[es]": "No rastrear", 
         "Name[it]": "Non tenere traccia", 
         "Name[nl]": "Niet volgen", 
@@ -15,6 +17,7 @@
         "Name[sr@ijekavianlatin]": "Ne prati me", 
         "Name[sr@latin]": "Ne prati me", 
         "Name[sr]": "Не прати ме", 
+        "Name[sv]": "Do Not Track", 
         "Name[uk]": "Вимикання стеження", 
         "Name[x-test]": "xxDo Not Trackxx", 
         "ServiceTypes": [
