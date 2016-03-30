@@ -37,14 +37,15 @@ AdblockInterceptorInterface::~AdblockInterceptorInterface()
 
 }
 
-void AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
+bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     if (!mAdblockManager->isEnabled()) {
-        return;
+        return false;
     }
     if (mAdblockManager->interceptRequest(info)) {
-        info.block(true);
+        return true;
     }
+    return false;
 }
 
 QList<QAction *> AdblockInterceptorInterface::actions() const
