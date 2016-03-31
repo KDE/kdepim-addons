@@ -27,6 +27,7 @@
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
+      mShowBlockableItems(Q_NULLPTR),
       mWebEngineView(Q_NULLPTR)
 {
     mAdblockManager = new AdBlock::AdblockManager(this);
@@ -50,23 +51,26 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
 
 QList<QAction *> AdblockInterceptorInterface::actions() const
 {
-    return mActionsList;
+    QList<QAction *> lstAction;
+    if (mAdblockManager->isEnabled()) {
+        lstAction.append(mShowBlockableItems);
+        lstAction.append(mBlockImage);
+    }
+    return lstAction;
 }
 
 void AdblockInterceptorInterface::createActions(KActionCollection *ac)
 {
     if (ac) {
-        QAction *showBlockableItems = new QAction(i18n("Open Blockable Items..."), this);
-        ac->addAction(QStringLiteral("adblock_blockable_items"), showBlockableItems);
-        connect(showBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
-        mActionsList.append(showBlockableItems);
+        mShowBlockableItems = new QAction(i18n("Open Blockable Items..."), this);
+        ac->addAction(QStringLiteral("adblock_blockable_items"), mShowBlockableItems);
+        connect(mShowBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
 
-        QAction *blockImage = new QAction(i18n("Block image"), this);
-        ac->addAction(QStringLiteral("adblock_image"), blockImage);
-        ac->setShortcutsConfigurable(blockImage, false);
-        connect(blockImage, &QAction::triggered, this, &AdblockInterceptorInterface::slotBlockImage);
+        mBlockImage = new QAction(i18n("Block Image"), this);
+        ac->addAction(QStringLiteral("adblock_image"), mBlockImage);
+        ac->setShortcutsConfigurable(mBlockImage, false);
+        connect(mBlockImage, &QAction::triggered, this, &AdblockInterceptorInterface::slotBlockImage);
     }
-    //TODO more actions
 }
 
 QWebEngineView *AdblockInterceptorInterface::webEngineView() const

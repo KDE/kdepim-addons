@@ -43,7 +43,8 @@ private Q_SLOTS:
     void slotShowBlockableElement();
 
 private:
-    QList<QAction *> mActionsList;
+    QAction *mShowBlockableItems;
+    QAction *mBlockImage;
     AdBlock::AdblockManager *mAdblockManager;
     QWebEngineView *mWebEngineView;
 };
