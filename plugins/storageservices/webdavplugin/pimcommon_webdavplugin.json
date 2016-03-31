@@ -1,30 +1,16 @@
 {
     "KPlugin": {
         "Name": "Webdav", 
-        "Name[ca@valencia]": "Webdav", 
-        "Name[ca]": "Webdav", 
         "Name[cs]": "WebDav", 
         "Name[de]": "WebDAV", 
-        "Name[en_GB]": "Webdav", 
-        "Name[es]": "Webdav", 
-        "Name[fi]": "Webdav", 
-        "Name[gl]": "Webdav", 
-        "Name[it]": "Webdav", 
-        "Name[nl]": "Webdav", 
-        "Name[pl]": "Webdav", 
         "Name[pt]": "WebDAV", 
-        "Name[pt_BR]": "Webdav", 
         "Name[ru]": "WebDAV", 
-        "Name[sk]": "Webdav", 
-        "Name[sl]": "Webdav", 
         "Name[sr@ijekavian]": "вебДАВ", 
         "Name[sr@ijekavianlatin]": "WebDAV", 
         "Name[sr@latin]": "WebDAV", 
         "Name[sr]": "вебДАВ", 
         "Name[sv]": "WebDAV", 
-        "Name[uk]": "Webdav", 
         "Name[x-test]": "xxWebdavxx", 
-        "Name[zh_CN]": "Webdav", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]

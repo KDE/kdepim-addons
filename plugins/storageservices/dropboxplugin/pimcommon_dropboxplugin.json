@@ -1,30 +1,14 @@
 {
     "KPlugin": {
         "Name": "DropBox", 
-        "Name[ca@valencia]": "DropBox", 
-        "Name[ca]": "DropBox", 
-        "Name[cs]": "DropBox", 
-        "Name[de]": "DropBox", 
-        "Name[en_GB]": "DropBox", 
-        "Name[es]": "DropBox", 
-        "Name[fi]": "DropBox", 
-        "Name[gl]": "DropBox", 
-        "Name[it]": "DropBox", 
-        "Name[nl]": "DropBox", 
-        "Name[pl]": "DropBox", 
-        "Name[pt]": "DropBox", 
-        "Name[pt_BR]": "DropBox", 
         "Name[ru]": "Dropbox", 
         "Name[sk]": "Dropbox", 
-        "Name[sl]": "DropBox", 
         "Name[sr@ijekavian]": "Дропбокс", 
         "Name[sr@ijekavianlatin]": "Dropbox", 
         "Name[sr@latin]": "Dropbox", 
         "Name[sr]": "Дропбокс", 
         "Name[sv]": "Dropbox", 
-        "Name[uk]": "DropBox", 
         "Name[x-test]": "xxDropBoxxx", 
-        "Name[zh_CN]": "DropBox", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
         ]
