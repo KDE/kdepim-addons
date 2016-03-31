@@ -60,6 +60,11 @@ void AdblockInterceptorInterface::createActions(KActionCollection *ac)
         ac->addAction(QStringLiteral("adblock_blockable_items"), showBlockableItems);
         connect(showBlockableItems, &QAction::triggered, this, &AdblockInterceptorInterface::slotShowBlockableElement);
         mActionsList.append(showBlockableItems);
+
+        QAction *blockImage = new QAction(i18n("Block image"), this);
+        ac->addAction(QStringLiteral("adblock_image"), blockImage);
+        ac->setShortcutsConfigurable(blockImage, false);
+        connect(blockImage, &QAction::triggered, this, &AdblockInterceptorInterface::slotBlockImage);
     }
     //TODO more actions
 }
@@ -72,6 +77,11 @@ QWebEngineView *AdblockInterceptorInterface::webEngineView() const
 void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView)
 {
     mWebEngineView = webEngineView;
+}
+
+void AdblockInterceptorInterface::slotBlockImage()
+{
+    //TODO
 }
 
 void AdblockInterceptorInterface::slotShowBlockableElement()

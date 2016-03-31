@@ -39,6 +39,7 @@ public:
     void setWebEngineView(QWebEngineView *webEngineView);
 
 private Q_SLOTS:
+    void slotBlockImage();
     void slotShowBlockableElement();
 
 private:
