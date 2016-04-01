@@ -39,12 +39,15 @@ public:
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
     void execute() Q_DECL_OVERRIDE;
 
+    void setText(const QString &text) Q_DECL_OVERRIDE;
+    void setMessage(const KMime::Message::Ptr &value) Q_DECL_OVERRIDE;
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 
 private:
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
+    QString adaptArguments(const QString &scriptArguments);
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H

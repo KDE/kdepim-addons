@@ -38,6 +38,11 @@ ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
 
 }
 
+void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &value)
+{
+    //TODO
+}
+
 QList<QAction *> ViewerPluginExternalscriptInterface::actions() const
 {
     return mAction;
@@ -47,6 +52,12 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExternalscriptInterface:
 {
     return NeedMessage;
 }
+
+void ViewerPluginExternalscriptInterface::setText(const QString &text)
+{
+    //TODO
+}
+
 
 void ViewerPluginExternalscriptInterface::execute()
 {
@@ -84,4 +95,10 @@ void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
 {
     //TODO
     slotActivatePlugin();
+}
+
+QString ViewerPluginExternalscriptInterface::adaptArguments(const QString &scriptArguments)
+{
+    //TODO
+    return {};
 }
