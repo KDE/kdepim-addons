@@ -21,6 +21,7 @@
 #include "lib/adblockmanager.h"
 #include <MessageViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
+#include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();)
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
@@ -45,11 +46,15 @@ bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
     return true;
 }
 
-MessageViewer::NetworkPluginUrlInterceptorConfigureWidget *AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
+MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
 {
+    MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings;
+    settings.name = i18n("AdBlock");
+
     AdBlock::AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdBlock::AdblockPluginUrlInterceptorConfigureWidget(parent);
     connect(configureWidget, &AdBlock::AdblockPluginUrlInterceptorConfigureWidget::configChanged, AdBlock::AdblockManager::self(), &AdBlock::AdblockManager::reloadConfig);
-    return configureWidget;
+    settings.configureWidget = configureWidget;
+    return settings;
 }
 
 #include "adblockpluginurlinterceptor.moc"
