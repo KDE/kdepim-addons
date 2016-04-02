@@ -24,6 +24,7 @@
 #include <QAction>
 #include <QPointer>
 #include <QWebEngineView>
+#include <WebHitTestResult>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
@@ -49,12 +50,14 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     return false;
 }
 
-QList<QAction *> AdblockInterceptorInterface::actions() const
+QList<QAction *> AdblockInterceptorInterface::actions(const MessageViewer::WebHitTestResult &result) const
 {
     QList<QAction *> lstAction;
     if (mAdblockManager->isEnabled()) {
         lstAction.append(mShowBlockableItems);
-        lstAction.append(mBlockImage);
+        if (!result.imageUrl().isEmpty()) {
+            lstAction.append(mBlockImage);
+        }
     }
     return lstAction;
 }
