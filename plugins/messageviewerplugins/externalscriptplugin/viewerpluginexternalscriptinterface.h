@@ -41,9 +41,11 @@ private Q_SLOTS:
 
 private:
     void createAction(KActionCollection *ac);
+    void clear();
     QList<QAction *> mAction;
     QString adaptArguments(const QString &scriptArguments);
     QStringList mCurrentInfo;
+    QString mSelectedText;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
