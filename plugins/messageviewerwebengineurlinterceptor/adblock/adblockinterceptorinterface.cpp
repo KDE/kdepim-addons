@@ -50,7 +50,7 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     return false;
 }
 
-QList<QAction *> AdblockInterceptorInterface::actions(const MessageViewer::WebHitTestResult &result) const
+QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const MessageViewer::WebHitTestResult &result) const
 {
     QList<QAction *> lstAction;
     if (mAdblockManager->isEnabled()) {

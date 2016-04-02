@@ -32,7 +32,7 @@ public:
     ~AdblockInterceptorInterface();
 
     bool interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
-    QList<QAction *> actions(const MessageViewer::WebHitTestResult &result) const Q_DECL_OVERRIDE;
+    QList<QAction *> interceptorUrlActions(const MessageViewer::WebHitTestResult &result) const Q_DECL_OVERRIDE;
     void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
     QWebEngineView *webEngineView() const;
 
