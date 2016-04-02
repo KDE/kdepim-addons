@@ -22,11 +22,6 @@
 class KActionCollection;
 namespace MessageViewer
 {
-struct ViewerPluginExternalscriptActionInfo
-{
-    QString executable;
-    QString arguments;
-};
 
 class ViewerPluginExternalscriptInterface : public ViewerPluginInterface
 {
@@ -48,6 +43,7 @@ private:
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
     QString adaptArguments(const QString &scriptArguments);
+    QStringList mCurrentInfo;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H

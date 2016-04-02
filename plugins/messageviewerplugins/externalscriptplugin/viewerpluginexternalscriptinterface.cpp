@@ -21,6 +21,7 @@
 #include <QHBoxLayout>
 #include <QIcon>
 #include <QAction>
+#include <QDebug>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -61,7 +62,11 @@ void ViewerPluginExternalscriptInterface::setText(const QString &text)
 
 void ViewerPluginExternalscriptInterface::execute()
 {
-    //TODO
+    if (mCurrentInfo.count() == 2) {
+        //TODO
+    } else {
+        qDebug() << "Problem with arguments";
+    }
 }
 
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
@@ -79,10 +84,12 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                     addHelpTextAction(act, description);
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
-                ViewerPluginExternalscriptActionInfo actionInfo;
-                actionInfo.arguments = info.commandLine();
-                actionInfo.executable = info.executable();
+                QStringList actionInfo;
+                //TODO adapt command line
+                actionInfo.append(info.commandLine());
+                actionInfo.append(info.executable());
 
+                act->setData(actionInfo);
                 //TODO add info.
                 mAction.append(act);
                 grp->addAction(act);
@@ -93,7 +100,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 
 void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
 {
-    //TODO
+    mCurrentInfo = act->data().toStringList();
     slotActivatePlugin();
 }
 
