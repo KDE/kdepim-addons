@@ -49,9 +49,8 @@ Element::List Datenums::createDayElements(const QDate &date)
 {
     Element::List result;
 
-    const KCalendarSystem *calsys = KLocale::global()->calendar();
-    int dayOfYear = calsys->dayOfYear(date);
-    int remainingDays = calsys->daysInYear(date) - dayOfYear;
+    int dayOfYear = date.dayOfYear();
+    int remainingDays = date.daysInYear() - dayOfYear;
 
     StoredElement *e;
     switch (mDisplayedInfo) {
@@ -90,7 +89,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
     int *yearOfTheWeek;
     yearOfTheWeek = Q_NULLPTR;
     int remainingWeeks;
-    const int weekOfYear = calsys->week(date, yearOfTheWeek);
+    const int weekOfYear = date.weekNumber(yearOfTheWeek);
 
     QString weekOfYearShort;
     QString weekOfYearLong;
