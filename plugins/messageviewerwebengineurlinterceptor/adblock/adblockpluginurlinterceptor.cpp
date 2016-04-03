@@ -52,7 +52,7 @@ MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPluginUr
     settings.name = i18n("AdBlock");
 
     AdBlock::AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdBlock::AdblockPluginUrlInterceptorConfigureWidget(parent);
-    connect(configureWidget, &AdBlock::AdblockPluginUrlInterceptorConfigureWidget::configChanged, AdBlock::AdblockManager::self(), &AdBlock::AdblockManager::reloadConfig);
+    connect(configureWidget, &AdBlock::AdblockPluginUrlInterceptorConfigureWidget::configureChanged, AdBlock::AdblockManager::self(), &AdBlock::AdblockManager::reloadConfig);
     settings.configureWidget = configureWidget;
     return settings;
 }

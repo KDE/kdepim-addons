@@ -38,8 +38,6 @@ public:
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
 
-Q_SIGNALS:
-    void configChanged();
 private:
     MessageViewer::AdBlockSettingWidget *mConfigureWidget;
 
