@@ -57,7 +57,6 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExternalscriptInterface:
 void ViewerPluginExternalscriptInterface::setText(const QString &text)
 {
     mSelectedText = text;
-    //TODO
 }
 
 
@@ -74,6 +73,7 @@ void ViewerPluginExternalscriptInterface::execute()
 void ViewerPluginExternalscriptInterface::clear()
 {
     mSelectedText.clear();
+    mCurrentInfo.clear();
 }
 
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
