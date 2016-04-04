@@ -4,5 +4,6 @@ target_link_libraries(headerstylemenu_gui
   KF5::MessageViewer
   KF5::XmlGui
   KF5::GrantleeTheme
+  KF5::I18n
 )
 

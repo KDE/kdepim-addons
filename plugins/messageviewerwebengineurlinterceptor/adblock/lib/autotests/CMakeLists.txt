@@ -6,7 +6,7 @@ set( adblockpluginurlinterceptorconfigurewidgettest_SRCS ${messageviewer_adblock
 add_executable( adblockpluginurlinterceptorconfigurewidgettest ${adblockpluginurlinterceptorconfigurewidgettest_SRCS})
 add_test(adblockpluginurlinterceptorconfigurewidgettest adblockpluginurlinterceptorconfigurewidgettest)
 ecm_mark_as_test(adblockpluginurlinterceptorconfigurewidgettest)
-target_link_libraries( adblockpluginurlinterceptorconfigurewidgettest adblocklibprivate Qt5::Test Qt5::Widgets KF5::MessageViewer KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::KIOWidgets)
+target_link_libraries( adblockpluginurlinterceptorconfigurewidgettest adblocklibprivate Qt5::Test Qt5::Widgets KF5::MessageViewer KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::KIOWidgets KF5::I18n)
 
 
 set( adblockblockableitemsdialogtest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockblockableitemsdialogtest.cpp)

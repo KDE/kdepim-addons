@@ -7,6 +7,7 @@ add_library(pimcommon_dropboxplugin MODULE ${pimcommon_dropboxplugin_SRCS} )
 
 target_link_libraries(pimcommon_dropboxplugin
   KF5::PimCommon
+  KF5::I18n
 )
 
 install(TARGETS pimcommon_dropboxplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)

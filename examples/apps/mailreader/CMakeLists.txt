@@ -21,6 +21,7 @@ target_link_libraries(akonadimailreader
   KF5::Libkleo
   KF5::MessageList
   KF5::MessageViewer
+  KF5::I18n
 )
 
 install(TARGETS akonadimailreader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})

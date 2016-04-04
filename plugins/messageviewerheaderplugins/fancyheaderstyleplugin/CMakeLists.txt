@@ -11,6 +11,7 @@ target_link_libraries(messageviewer_fancyheaderstyleplugin
   KF5::GrantleeTheme
   KF5::XmlGui
   KF5::IconThemes
+  KF5::I18n
 )
 
 install(TARGETS messageviewer_fancyheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
