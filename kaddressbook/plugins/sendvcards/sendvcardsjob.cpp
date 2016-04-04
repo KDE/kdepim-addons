@@ -25,7 +25,7 @@
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include "PimCommon/AttachmentTemporaryFilesDirs"
+#include "MimeTreeParser/AttachmentTemporaryFilesDirs"
 #include "kaddressbook_sendvcardsplugin_debug.h"
 #include <QTemporaryDir>
 #include <QFile>
@@ -43,7 +43,7 @@ SendVcardsJob::SendVcardsJob(const Akonadi::Item::List &listItem, QObject *paren
       mExpandGroupJobCount(0)
 {
     //Don't delete it.
-    mAttachmentTemporary = new PimCommon::AttachmentTemporaryFilesDirs();
+    mAttachmentTemporary = new MimeTreeParser::AttachmentTemporaryFilesDirs();
 }
 
 SendVcardsJob::~SendVcardsJob()

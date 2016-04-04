@@ -26,7 +26,7 @@
 #include <KContacts/VCardConverter>
 
 class QTemporaryDir;
-namespace PimCommon
+namespace MimeTreeParser
 {
 class AttachmentTemporaryFilesDirs;
 }
@@ -55,7 +55,7 @@ private:
     void createTemporaryDir();
     void jobFinished();
     Akonadi::Item::List mListItem;
-    PimCommon::AttachmentTemporaryFilesDirs *mAttachmentTemporary;
+    MimeTreeParser::AttachmentTemporaryFilesDirs *mAttachmentTemporary;
     QTemporaryDir *mTempDir;
     KContacts::VCardConverter::Version mVersion;
     int mExpandGroupJobCount;

@@ -12,7 +12,7 @@ ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddre
 add_library(kaddressbook_sendvcardsplugin MODULE ${kaddressbook_sendvcardsplugin_SRCS})
 
 target_link_libraries(kaddressbook_sendvcardsplugin
-  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui
+  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui KF5::MimeTreeParser
 )
 
 install(TARGETS kaddressbook_sendvcardsplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kaddressbook)
