@@ -19,7 +19,7 @@ ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kad
 add_library(kaddressbook_checkgravatarplugin MODULE ${kaddressbook_checkgravatarplugin_SRCS})
 
 target_link_libraries(kaddressbook_checkgravatarplugin
-  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui KF5::Gravatar
+  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui KF5::Gravatar KF5::I18n
 )
 
 install(TARGETS kaddressbook_checkgravatarplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kaddressbook)

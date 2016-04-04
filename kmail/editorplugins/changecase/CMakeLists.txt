@@ -9,7 +9,7 @@ ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changec
 add_library(kmail_changecaseeditorplugin MODULE ${kmail_changecaseeditorplugin_SRCS})
 
 target_link_libraries(kmail_changecaseeditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui
+  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 install(TARGETS kmail_changecaseeditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)

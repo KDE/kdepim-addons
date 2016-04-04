@@ -6,7 +6,7 @@ set(kmail_insertspecialcharactereditorplugin_SRCS
 add_library(kmail_insertspecialcharactereditorplugin MODULE ${kmail_insertspecialcharactereditorplugin_SRCS})
 
 target_link_libraries(kmail_insertspecialcharactereditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui
+  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 install(TARGETS kmail_insertspecialcharactereditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)

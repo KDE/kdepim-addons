@@ -5,7 +5,7 @@ macro(add_kmail_editorplugin_unittest _source _additional)
     add_test( ${_name} ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer)
+    target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer KF5::I18n)
 endmacro ()
 
 add_kmail_editorplugin_unittest(rot13plugineditortest.cpp "../rot13plugineditor.cpp;../rot13plugineditorinterface.cpp;../rot13job.cpp")
