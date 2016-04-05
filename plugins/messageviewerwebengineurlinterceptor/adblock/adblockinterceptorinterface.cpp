@@ -100,3 +100,8 @@ void AdblockInterceptorInterface::slotShowBlockableElement()
         delete dlg;
     }
 }
+
+void AdblockInterceptorInterface::setCurrentWebHitTest(const MessageViewer::WebHitTestResult &currentWebHitTest)
+{
+    //mCurrentWebHitTest = currentWebHitTest;
+}

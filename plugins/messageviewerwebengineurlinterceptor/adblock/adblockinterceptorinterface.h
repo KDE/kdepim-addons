@@ -19,6 +19,7 @@
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
 #include <MessageViewer/NetworkPluginUrlInterceptorInterface>
+#include <MessageViewer/WebHitTestResult>
 class QWebEngineView;
 namespace AdBlock
 {
@@ -38,11 +39,15 @@ public:
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
+    //TODO make it virtual
+    void setCurrentWebHitTest(const MessageViewer::WebHitTestResult &currentWebHitTest);
+
 private Q_SLOTS:
     void slotBlockImage();
     void slotShowBlockableElement();
 
 private:
+    MessageViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems;
     QAction *mBlockImage;
     AdBlock::AdblockManager *mAdblockManager;
