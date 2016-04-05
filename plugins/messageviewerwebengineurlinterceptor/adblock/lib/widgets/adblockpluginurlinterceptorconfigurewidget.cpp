@@ -30,6 +30,7 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
     mConfigureWidget = new MessageViewer::AdBlockSettingWidget(this);
     mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
     hbox->addWidget(mConfigureWidget);
+    connect(mConfigureWidget, &MessageViewer::AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()
