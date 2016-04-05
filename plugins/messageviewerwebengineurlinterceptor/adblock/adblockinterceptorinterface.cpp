@@ -89,6 +89,9 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 
 void AdblockInterceptorInterface::slotBlockImage()
 {
+    if (mCurrentWebHitTest.imageUrl().isValid()) {
+        //TODO block it.
+    }
     //TODO
 }
 
