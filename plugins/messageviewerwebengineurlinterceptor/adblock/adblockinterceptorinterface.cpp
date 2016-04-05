@@ -58,6 +58,7 @@ QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const Messag
         if (!result.imageUrl().isEmpty()) {
             lstAction.append(mBlockImage);
         }
+        mCurrentWebHitTest = result;
     }
     return lstAction;
 }
@@ -99,9 +100,4 @@ void AdblockInterceptorInterface::slotShowBlockableElement()
         dlg->exec();
         delete dlg;
     }
-}
-
-void AdblockInterceptorInterface::setCurrentWebHitTest(const MessageViewer::WebHitTestResult &currentWebHitTest)
-{
-    //mCurrentWebHitTest = currentWebHitTest;
 }

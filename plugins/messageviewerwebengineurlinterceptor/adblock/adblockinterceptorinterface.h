@@ -39,15 +39,12 @@ public:
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
-    //TODO make it virtual
-    void setCurrentWebHitTest(const MessageViewer::WebHitTestResult &currentWebHitTest);
-
 private Q_SLOTS:
     void slotBlockImage();
     void slotShowBlockableElement();
 
 private:
-    MessageViewer::WebHitTestResult mCurrentWebHitTest;
+    mutable MessageViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems;
     QAction *mBlockImage;
     AdBlock::AdblockManager *mAdblockManager;
