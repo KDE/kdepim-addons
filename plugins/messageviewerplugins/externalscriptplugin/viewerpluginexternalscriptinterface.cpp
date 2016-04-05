@@ -59,7 +59,6 @@ void ViewerPluginExternalscriptInterface::setText(const QString &text)
     mSelectedText = text;
 }
 
-
 void ViewerPluginExternalscriptInterface::execute()
 {
     if (mCurrentInfo.count() == 2) {
