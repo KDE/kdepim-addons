@@ -22,7 +22,7 @@
 #include <QVariant>
 class QAction;
 class QWebEngineView;
-namespace MessageViewer
+namespace WebEngineViewer
 {
 class NetworkPluginUrlInterceptorInterface;
 class NetworkPluginUrlInterceptorConfigureWidget;

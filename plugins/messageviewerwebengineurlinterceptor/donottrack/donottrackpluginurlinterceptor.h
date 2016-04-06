@@ -20,7 +20,7 @@
 
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
-namespace MessageViewer
+namespace WebEngineViewer
 {
 class NetworkPluginUrlInterceptorInterface;
 }
