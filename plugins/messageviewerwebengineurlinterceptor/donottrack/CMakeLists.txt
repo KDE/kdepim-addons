@@ -13,10 +13,11 @@ kconfig_add_kcfg_files(messageviewer_webengineurlinterceptor_donottrack_SRCS
 add_library(messageviewer_donottrackplugin MODULE ${messageviewer_webengineurlinterceptor_donottrack_SRCS})
 
 target_link_libraries(messageviewer_donottrackplugin
-    KF5::MessageViewer
     Qt5::WebEngine
     Qt5::WebEngineWidgets
     KF5::WebEngineViewer
+    KF5::ConfigGui
+    KF5::CoreAddons
     )
 
 install(TARGETS messageviewer_donottrackplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
