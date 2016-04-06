@@ -23,7 +23,7 @@
 using namespace AdBlock;
 
 AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent)
-    : MessageViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
+    : WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
     hbox->setMargin(0);

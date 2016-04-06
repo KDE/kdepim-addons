@@ -20,7 +20,7 @@
 #include "donottrack.h"
 
 DoNotTrackInterceptorInterface::DoNotTrackInterceptorInterface(QObject *parent)
-    : MessageViewer::NetworkPluginUrlInterceptorInterface(parent)
+    : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
 {
 }
 

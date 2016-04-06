@@ -18,7 +18,7 @@
 #include "adblockblockableitemswidget.h"
 #include "adblockcreatefilterdialog.h"
 #include "adblockinterceptor_debug.h"
-#include <MessageViewer/WebEngineScript>
+#include <WebEngineViewer/WebEngineScript>
 
 #include <QVBoxLayout>
 #include <KLocalizedString>
@@ -162,7 +162,7 @@ void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant
         }
     }
     mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
-    mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
+    mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
 }
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &result)
@@ -193,7 +193,7 @@ void AdBlockBlockableItemsWidget::searchBlockableItems()
 {
     if (mWebEngineView) {
         mListItems->clear();
-        mWebEngineView->page()->runJavaScript(MessageViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
+        mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }
 

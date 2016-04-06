@@ -18,8 +18,8 @@
 #ifndef DONOTTRACKINTERCEPTORINTERFACE_H
 #define DONOTTRACKINTERCEPTORINTERFACE_H
 
-#include <MessageViewer/NetworkPluginUrlInterceptorInterface>
-class DoNotTrackInterceptorInterface : public MessageViewer::NetworkPluginUrlInterceptorInterface
+#include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
+class DoNotTrackInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
 public:

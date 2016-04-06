@@ -18,20 +18,20 @@
 #ifndef DONOTTRACKPLUGINURLINTERCEPTOR_H
 #define DONOTTRACKPLUGINURLINTERCEPTOR_H
 
-#include <MessageViewer/NetworkPluginUrlInterceptor>
+#include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
 namespace MessageViewer
 {
 class NetworkPluginUrlInterceptorInterface;
 }
-class DoNotTrackPluginUrlInterceptor : public MessageViewer::NetworkPluginUrlInterceptor
+class DoNotTrackPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor
 {
     Q_OBJECT
 public:
     explicit DoNotTrackPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~DoNotTrackPluginUrlInterceptor();
 
-    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
+    WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // DONOTTRACKPLUGINURLINTERCEPTOR_H

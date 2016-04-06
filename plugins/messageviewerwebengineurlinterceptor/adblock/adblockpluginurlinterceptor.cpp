@@ -19,13 +19,13 @@
 #include "adblockinterceptorinterface.h"
 #include "../lib/widgets/adblockpluginurlinterceptorconfigurewidget.h"
 #include "lib/adblockmanager.h"
-#include <MessageViewer/NetworkPluginUrlInterceptorInterface>
+#include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();)
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::NetworkPluginUrlInterceptor(parent)
+    : WebEngineViewer::NetworkPluginUrlInterceptor(parent)
 {
 }
 
@@ -34,7 +34,7 @@ AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 
 }
 
-MessageViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
+WebEngineViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {
     AdblockInterceptorInterface *adblockInterface = new AdblockInterceptorInterface(parent);
     adblockInterface->setWebEngineView(webEngine);
@@ -46,9 +46,9 @@ bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
     return true;
 }
 
-MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
+WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
 {
-    MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings;
+    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings;
     settings.name = i18n("AdBlock");
 
     AdBlock::AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdBlock::AdblockPluginUrlInterceptorConfigureWidget(parent);

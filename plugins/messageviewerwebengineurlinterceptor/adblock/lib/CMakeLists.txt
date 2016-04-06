@@ -34,6 +34,7 @@ PRIVATE
     KF5::PimCommon
     KF5::MessageViewer
     KF5::KIOWidgets
+    KF5::WebEngineViewer
 )
 
 set_target_properties(adblocklibprivate

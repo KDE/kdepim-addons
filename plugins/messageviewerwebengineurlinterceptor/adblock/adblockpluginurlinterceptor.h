@@ -18,7 +18,7 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTOR_H
 #define ADBLOCKPLUGINURLINTERCEPTOR_H
 
-#include <MessageViewer/NetworkPluginUrlInterceptor>
+#include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
 class QAction;
 class QWebEngineView;
@@ -27,17 +27,17 @@ namespace MessageViewer
 class NetworkPluginUrlInterceptorInterface;
 class NetworkPluginUrlInterceptorConfigureWidget;
 }
-class AdblockPluginUrlInterceptor : public MessageViewer::NetworkPluginUrlInterceptor
+class AdblockPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor
 {
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUrlInterceptor();
 
-    MessageViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
+    WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;
 
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
-    MessageViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
+    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTOR_H

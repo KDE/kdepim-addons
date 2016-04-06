@@ -5,4 +5,4 @@ kconfig_add_kcfg_files(donottrackpluginurlinterceptortest_SRCS
 add_executable( donottrackpluginurlinterceptortest ${donottrackpluginurlinterceptortest_SRCS})
 add_test(donottrackpluginurlinterceptortest donottrackpluginurlinterceptortest)
 ecm_mark_as_test(donottrackpluginurlinterceptortest)
-target_link_libraries( donottrackpluginurlinterceptortest Qt5::Test Qt5::Widgets KF5::MessageViewer Qt5::WebEngine Qt5::WebEngineWidgets)
+target_link_libraries( donottrackpluginurlinterceptortest Qt5::Test Qt5::Widgets KF5::MessageViewer Qt5::WebEngine Qt5::WebEngineWidgets KF5::WebEngineViewer)

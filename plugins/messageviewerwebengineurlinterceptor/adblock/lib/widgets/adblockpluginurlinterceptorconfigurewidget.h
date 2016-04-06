@@ -18,7 +18,7 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
 #define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
 
-#include <MessageViewer/NetworkPluginUrlInterceptorConfigureWidget>
+#include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 #include "adblocklib_export.h"
 
 namespace MessageViewer
@@ -27,7 +27,7 @@ class AdBlockSettingWidget;
 }
 namespace AdBlock
 {
-class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public MessageViewer::NetworkPluginUrlInterceptorConfigureWidget
+class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
 {
     Q_OBJECT
 public:

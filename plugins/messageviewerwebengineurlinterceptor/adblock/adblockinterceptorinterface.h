@@ -18,14 +18,14 @@
 #ifndef ADBLOCKINTERCEPTORINTERFACE_H
 #define ADBLOCKINTERCEPTORINTERFACE_H
 
-#include <MessageViewer/NetworkPluginUrlInterceptorInterface>
-#include <MessageViewer/WebHitTestResult>
+#include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
+#include <WebEngineViewer/WebHitTestResult>
 class QWebEngineView;
 namespace AdBlock
 {
 class AdblockManager;
 }
-class AdblockInterceptorInterface : public MessageViewer::NetworkPluginUrlInterceptorInterface
+class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {
     Q_OBJECT
 public:
@@ -33,7 +33,7 @@ public:
     ~AdblockInterceptorInterface();
 
     bool interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
-    QList<QAction *> interceptorUrlActions(const MessageViewer::WebHitTestResult &result) const Q_DECL_OVERRIDE;
+    QList<QAction *> interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const Q_DECL_OVERRIDE;
     void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
     QWebEngineView *webEngineView() const;
 
@@ -44,7 +44,7 @@ private Q_SLOTS:
     void slotShowBlockableElement();
 
 private:
-    mutable MessageViewer::WebHitTestResult mCurrentWebHitTest;
+    mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems;
     QAction *mBlockImage;
     AdBlock::AdblockManager *mAdblockManager;

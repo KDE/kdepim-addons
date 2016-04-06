@@ -24,10 +24,10 @@
 #include <QAction>
 #include <QPointer>
 #include <QWebEngineView>
-#include <WebHitTestResult>
+#include <WebEngineViewer/WebHitTestResult>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : MessageViewer::NetworkPluginUrlInterceptorInterface(parent),
+    : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent),
       mShowBlockableItems(Q_NULLPTR),
       mWebEngineView(Q_NULLPTR)
 {
@@ -50,7 +50,7 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     return false;
 }
 
-QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const MessageViewer::WebHitTestResult &result) const
+QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const
 {
     QList<QAction *> lstAction;
     if (mAdblockManager->isEnabled()) {
