@@ -16,7 +16,7 @@
 */
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
-#include <MessageViewer/AdBlockSettingWidget>
+#include "adblocksettingwidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
 
@@ -27,10 +27,10 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
     hbox->setMargin(0);
-    mConfigureWidget = new MessageViewer::AdBlockSettingWidget(this);
+    mConfigureWidget = new AdBlock::AdBlockSettingWidget(this);
     mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
     hbox->addWidget(mConfigureWidget);
-    connect(mConfigureWidget, &MessageViewer::AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
+    connect(mConfigureWidget, &AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
 }
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()

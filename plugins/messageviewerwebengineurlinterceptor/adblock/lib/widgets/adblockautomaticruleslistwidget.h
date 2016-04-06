@@ -15,29 +15,33 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
-#define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
+#ifndef ADBLOCKAUTOMATICRULESLISTWIDGET_H
+#define ADBLOCKAUTOMATICRULESLISTWIDGET_H
 
-#include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
+#include <QListWidget>
 #include "adblocklib_export.h"
-
 namespace AdBlock
 {
-class AdBlockSettingWidget;
-class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
+class ADBLOCKLIB_EXPORT AdBlockAutomaticRulesListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent = Q_NULLPTR);
-    ~AdblockPluginUrlInterceptorConfigureWidget();
+    explicit AdBlockAutomaticRulesListWidget(QWidget *parent = Q_NULLPTR);
+    ~AdBlockAutomaticRulesListWidget();
+    void setRules(const QString &rules);
 
-    void loadSettings() Q_DECL_OVERRIDE;
-    void saveSettings() Q_DECL_OVERRIDE;
-    void resetSettings() Q_DECL_OVERRIDE;
+    void setDisabledRules(const QStringList &disabledRules);
+    QStringList disabledRules() const;
+
+private Q_SLOTS:
+    void slotItemChanged(QListWidgetItem *item);
 
 private:
-    AdBlock::AdBlockSettingWidget *mConfigureWidget;
-
+    void updateItem(QListWidgetItem *item);
+    void createItem(const QString &rule);
+    QStringList mDisabledRules;
+    QColor defaultTextColor;
 };
 }
-#endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
+
+#endif // ADBLOCKAUTOMATICRULESLISTWIDGET_H

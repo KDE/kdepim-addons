@@ -6,7 +6,15 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblockblockableitemswidget.cpp
     widgets/adblockcreatefilterdialog.cpp
     widgets/adblockpluginurlinterceptorconfigurewidget.cpp
+    widgets/adblockaddsubscriptiondialog.cpp
+    widgets/adblockautomaticruleslistwidget.cpp
+    widgets/adblocklistwidget.cpp
+    widgets/adblocksettingwidget.cpp
+    widgets/adblockshowlistdialog.cpp
+    widgets/adblocksyntaxhighlighter.cpp
+    widgets/adblockutil.cpp
     )
+
 set(adblocklibprivate_SRCS
     adblockmanager.cpp
     adblocksearchtree.cpp
@@ -17,14 +25,14 @@ set(adblocklibprivate_SRCS
     adblocksubscription.cpp
     ${adblocklibprivate_widget_SRCS}
     ${messageviewer_adblock_lib_common_SRCS}
-)
-ki18n_wrap_ui(adblocklibprivate_SRCS widgets/adblockcreatefilterwidget.ui)
+    )
+ki18n_wrap_ui(adblocklibprivate_SRCS widgets/adblockcreatefilterwidget.ui widgets/settings_adblock.ui)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
 
 target_link_libraries(adblocklibprivate
-PRIVATE
+    PRIVATE
     Qt5::Core
     Qt5::WebEngine
     Qt5::WebEngineWidgets
@@ -32,15 +40,20 @@ PRIVATE
     KF5::ItemViews
     KF5::ConfigCore
     KF5::PimCommon
-    KF5::MessageViewer
     KF5::KIOWidgets
     KF5::WebEngineViewer
-)
+    KF5::TextWidgets
+    KF5::PimTextEdit
+    KF5::Libkdepim
+    )
 
 set_target_properties(adblocklibprivate
     PROPERTIES VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-)
+    )
 
 install(TARGETS adblocklibprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+    add_subdirectory(tests)
+endif()
