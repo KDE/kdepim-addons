@@ -40,8 +40,9 @@ ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
 
 }
 
-void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &value)
+void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
 {
+    mMessage = msg;
     //TODO
 }
 

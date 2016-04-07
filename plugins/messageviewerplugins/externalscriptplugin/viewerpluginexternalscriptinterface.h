@@ -35,7 +35,7 @@ public:
     void execute() Q_DECL_OVERRIDE;
 
     void setText(const QString &text) Q_DECL_OVERRIDE;
-    void setMessage(const KMime::Message::Ptr &value) Q_DECL_OVERRIDE;
+    void setMessage(const KMime::Message::Ptr &msg) Q_DECL_OVERRIDE;
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 
@@ -46,6 +46,7 @@ private:
     QString adaptArguments(const QString &scriptArguments);
     QStringList mCurrentInfo;
     QString mSelectedText;
+    KMime::Message::Ptr mMessage;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
