@@ -17,6 +17,7 @@
 
 #include "viewerpluginexternalscriptinterface.h"
 #include "viewerpluginexternalscriptmanager.h"
+#include "externalscriptplugin_debug.h"
 
 #include <QHBoxLayout>
 #include <QIcon>
@@ -64,9 +65,9 @@ void ViewerPluginExternalscriptInterface::execute()
     if (mCurrentInfo.count() == 2) {
         //TODO
     } else {
-        qDebug() << "Problem with arguments";
+        qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "Problem with number of arguments " << mCurrentInfo.count();
     }
-    //TODO clear();
+    clear();
 }
 
 void ViewerPluginExternalscriptInterface::clear()
