@@ -39,7 +39,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
-option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
+option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." FALSE)
 
 option(QTWEBENGINE_EXPERIMENTAL_OPTION "Enable support for qtwebengine. False by default." FALSE)
 
