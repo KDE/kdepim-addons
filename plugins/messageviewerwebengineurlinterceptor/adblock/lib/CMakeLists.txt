@@ -26,7 +26,8 @@ set(adblocklibprivate_SRCS
     ${adblocklibprivate_widget_SRCS}
     ${messageviewer_adblock_lib_common_SRCS}
     )
-ki18n_wrap_ui(adblocklibprivate_SRCS widgets/adblockcreatefilterwidget.ui widgets/settings_adblock.ui)
+
+ki18n_wrap_ui(adblocklibprivate_SRCS widgets/ui/adblockcreatefilterwidget.ui widgets/ui/settings_adblock.ui)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
