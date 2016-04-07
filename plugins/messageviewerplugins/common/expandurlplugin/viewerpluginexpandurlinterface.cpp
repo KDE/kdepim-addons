@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexpandurlinterface.h"
+#include "expandurlplugin_debug.h"
 #include <MessageViewer/ScamExpandUrlJob>
 #include <MessageViewer/ScamCheckShortUrlManager>
 #include <MessageViewer/ScamCheckShortUrl>
@@ -55,6 +56,8 @@ void ViewerPluginExpandurlInterface::execute()
         } else {
             KPIM::BroadcastStatus ::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));
         }
+    } else {
+        qWarning(EXPANDURLPLUGIN_LOG) << "Url is not valid";
     }
 }
 
