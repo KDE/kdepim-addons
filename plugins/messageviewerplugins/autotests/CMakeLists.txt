@@ -3,6 +3,8 @@ set(common_SRCS)
 ecm_qt_declare_logging_category(common_SRCS HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME log_createeventplugin)
 ecm_qt_declare_logging_category(common_SRCS HEADER createnoteplugin_debug.h IDENTIFIER CREATENOTEPLUGIN_LOG CATEGORY_NAME log_createnoteplugin)
 ecm_qt_declare_logging_category(common_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME log_createtodoplugin)
+ecm_qt_declare_logging_category(common_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME log_externalscriptplugin)
+
 macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     set( _test ${_source}  ${_additional} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
