@@ -43,7 +43,6 @@ ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
 void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
 {
     mMessage = msg;
-    //TODO
 }
 
 QList<QAction *> ViewerPluginExternalscriptInterface::actions() const
@@ -93,12 +92,11 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
                 QStringList actionInfo;
-                //TODO adapt command line
-                actionInfo.append(info.commandLine());
+                const QString newCommandLine = adaptArguments(info.commandLine());
+                actionInfo.append(newCommandLine);
                 actionInfo.append(info.executable());
 
                 act->setData(actionInfo);
-                //TODO add info.
                 mAction.append(act);
                 grp->addAction(act);
             }
@@ -114,6 +112,8 @@ void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
 
 QString ViewerPluginExternalscriptInterface::adaptArguments(const QString &scriptArguments)
 {
-    //TODO
+    //TODO %s => subject
+    // %cc => cc
+    // etc. Look at parsing in kmkernel.
     return {};
 }
