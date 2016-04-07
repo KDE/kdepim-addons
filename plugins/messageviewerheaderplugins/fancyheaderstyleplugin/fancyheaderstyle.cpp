@@ -220,7 +220,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td>%2</tr>\n")
                          .arg(i18n("MDN To: "))
-                         .arg(to));
+                         .arg(mHeaderStyleUtil.strToHtml(to)));
     }
 
     headerStr.append(QLatin1String("<tr><td colspan=\"2\"><div id=\"attachmentInjectionPoint\"></div></td></tr>"));
