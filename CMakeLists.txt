@@ -5,7 +5,7 @@ find_package(ECM 5.19.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 # Do NOT add quote
-set(KDEPIMADDONS_DEV_VERSION pre)
+set(KDEPIMADDONS_DEV_VERSION rc)
 
 # add an extra space
 if(DEFINED KDEPIMADDONS_DEV_VERSION)
@@ -39,7 +39,7 @@ include(KDECompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
 
-option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
+option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." FALSE)
 
 option(QTWEBENGINE_SUPPORT_OPTION "Enable support for QtWebEngine. False by default." FALSE)
 
