@@ -19,7 +19,7 @@
         "Name[uk]": "Вимикання стеження", 
         "Name[x-test]": "xxDo Not Trackxx", 
         "ServiceTypes": [
-            "MessageViewer/UrlInterceptor"
+            "WebEngineViewer/UrlInterceptor"
         ], 
         "Version": "1.0"
     }

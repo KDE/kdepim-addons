@@ -5,5 +5,5 @@ add_subdirectory(storageservices)
 add_subdirectory(messageviewer)
 
 if (QTWEBENGINE_SUPPORT_OPTION)
-    add_subdirectory(messageviewerwebengineurlinterceptor)
+    add_subdirectory(webengineurlinterceptor)
 endif()

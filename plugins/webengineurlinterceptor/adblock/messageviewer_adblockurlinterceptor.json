@@ -12,7 +12,7 @@
         "Name[uk]": "Блокування реклами", 
         "Name[x-test]": "xxAdblockxx", 
         "ServiceTypes": [
-            "MessageViewer/UrlInterceptor"
+            "WebEngineViewer/UrlInterceptor"
         ], 
         "Version": "1.0"
     }
