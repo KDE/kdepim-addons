@@ -914,7 +914,7 @@ AntiSpamWizard::SpamToolConfig AntiSpamWizard::ConfigReader::createDummyConfig()
                           QStringLiteral("sa-learn -L --spam --no-sync --single"),
                           QStringLiteral("sa-learn -L --ham --no-sync --single"),
                           QStringLiteral("spamassassin -d"),
-                          QStringLiteral("X-Spam-Flag"), QStringLiteral("yes"), QString(), QString(),
+                          QStringLiteral("X-Spam-Status"), QStringLiteral("yes"), QString(), QString(),
                           false, false, true, false, AntiSpam);
 }
 
