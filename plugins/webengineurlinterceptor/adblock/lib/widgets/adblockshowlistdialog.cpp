@@ -132,7 +132,7 @@ void AdBlockShowListDialog::slotFinished(KJob *job)
 {
     mProgress->stop();
     if (job->error()) {
-        mTextEdit->editor()->setPlainText(i18n("An error occurs during download list: \"%1\"", job->errorString()));
+        mTextEdit->editor()->setPlainText(i18n("An error occurred while downloading the list: \"%1\"", job->errorString()));
         if (mUser1Button) {
             mUser1Button->show();
             mUser1Button->setEnabled(true);

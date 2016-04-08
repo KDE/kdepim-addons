@@ -220,7 +220,7 @@ void ShortUrlWidgetNg::slotShortUrlDone(const QString &url)
 
 void ShortUrlWidgetNg::slotShortUrlFailed(const QString &errMsg)
 {
-    KMessageBox::error(this, i18n("An error occurs: \"%1\"", errMsg));
+    KMessageBox::error(this, i18n("An error occurred: \"%1\"", errMsg));
     mIndicatorLabel->stop();
 }
 

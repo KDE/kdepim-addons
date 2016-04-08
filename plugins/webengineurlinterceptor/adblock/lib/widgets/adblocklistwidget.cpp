@@ -63,7 +63,7 @@ void AdBlockListWidget::paintEvent(QPaintEvent *event)
         }
         p.setPen(mTextColor);
 
-        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Not subscription added..."));
+        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("No subscription added"));
     } else {
         QListWidget::paintEvent(event);
     }
