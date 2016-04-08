@@ -89,7 +89,7 @@ class ASWizSummaryPage;
     ExecCmdSpam=sa-learn --spam --no-sync --single
     ExecCmdHam=sa-learn --ham --no-sync --single
     PipeCmdNoSpam=spamassassin -d
-    DetectionHeader=X-Spam-Flag
+    DetectionHeader=X-Spam-Status
     DetectionPattern=yes
     DetectionPattern2=
     DetectionOnly=0
