@@ -53,7 +53,6 @@ endif()
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
 
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
-find_package(KF5KHtml ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5DBusAddons ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiNotes ${AKONADINOTES_LIB_VERSION} CONFIG REQUIRED)
