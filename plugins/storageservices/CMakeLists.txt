@@ -1,3 +1,4 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"storageservices\")
 add_subdirectory(boxplugin)
 add_subdirectory(dropboxplugin) 
 add_subdirectory(hubicplugin)  
