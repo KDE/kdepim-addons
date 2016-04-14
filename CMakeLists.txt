@@ -19,7 +19,7 @@ set(KDEPIMADDONS_LIB_VERSION "${KDEPIMADDONS_VERSION_NUMBER}")
 set(KDEPIMADDONS_LIB_SOVERSION "5")
 
 set(AKONADINOTES_LIB_VERSION "5.2.40")
-set(QT_REQUIRED_VERSION "5.5.0")
+set(QT_REQUIRED_VERSION "5.6.0")
 set(KF5_VERSION "5.20.0")
 include(ECMOptionalAddSubdirectory)
 include(ECMInstallIcons)
@@ -44,8 +44,7 @@ option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications
 option(QTWEBENGINE_SUPPORT_OPTION "Enable support for QtWebEngine. False by default." FALSE)
 
 if (QTWEBENGINE_SUPPORT_OPTION)
-    set(QT_REQUIRED_MINIMUM_WEBENGINE_VERSION "5.6")
-    find_package(Qt5 ${QT_REQUIRED_MINIMUM_WEBENGINE_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
+    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
     find_package(KF5WebEngineViewer ${KDEPIM_APPS_LIB_VERSION} CONFIG REQUIRED)
 endif()
 
