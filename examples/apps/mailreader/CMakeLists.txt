@@ -28,6 +28,6 @@ install(TARGETS akonadimailreader ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
 
 ########### install files ###############
 
-install(PROGRAMS org.kde.mailreader.desktop DESTINATION ${KDE_INSTALL_APPDIR})
+install(PROGRAMS org.kde.akonadimailreader.desktop DESTINATION ${KDE_INSTALL_APPDIR})
 install(FILES mailreader.kcfg DESTINATION ${KDE_INSTALL_KCFGDIR})
 install(FILES mailreaderui.rc DESTINATION ${KDE_INSTALL_KXMLGUI5DIR}/mailreader)
