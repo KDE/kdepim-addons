@@ -1,6 +1,10 @@
 project(kdepim-addons)
 
 cmake_minimum_required(VERSION 2.8.12)
+if (POLICY CMP0063)
+    cmake_policy(SET CMP0063 NEW)
+endif()
+
 find_package(ECM 5.20.0 REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
