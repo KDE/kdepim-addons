@@ -1,5 +1,12 @@
 [Desktop Entry]
 Name=akonadimailreader
+Name[ca]=akonadimailreader
+Name[nl]=akonadi-e-maillezer
+Name[pl]=akonadimailreader
+Name[pt]=akonadimailreader
+Name[sv]=Akonadi e-postläsare
+Name[uk]=akonadimailreader
+Name[x-test]=xxakonadimailreaderxx
 Exec=akonadimailreader
 Icon=mailreader
 Type=Application
