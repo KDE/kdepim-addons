@@ -45,12 +45,7 @@ include(ECMQtDeclareLoggingCategory)
 
 option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
-option(QTWEBENGINE_SUPPORT_OPTION "Enable support for QtWebEngine. False by default." FALSE)
-
-if (QTWEBENGINE_SUPPORT_OPTION)
-    find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
-    find_package(KF5WebEngineViewer ${KDEPIM_APPS_LIB_VERSION} CONFIG REQUIRED)
-endif()
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
 
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
@@ -77,8 +72,9 @@ set(KDEPIMLIBS_LIB_VERSION "5.2.40")
 set(GRAVATAR_LIB_VERSION "5.2.40")
 set(INCIDENCEEDITOR_LIB_VERSION "5.2.40")
 set(KTNEF_LIB_VERSION "5.2.40")
-set(MESSAGELIB_LIB_VERSION "5.2.56")
+set(MESSAGELIB_LIB_VERSION "5.2.57")
 
+find_package(KF5WebEngineViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5MailCommon ${MAILCOMMN_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5KaddressbookGrantlee ${KDEPIM_APPS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5MessageViewer ${KDEPIM_APPS_LIB_VERSION} CONFIG REQUIRED)
