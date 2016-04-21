@@ -25,6 +25,14 @@ Name[sv]=Program Oktetström
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
 Comment=A bodypart formatter plugin for text/calendar
+Comment[ca]=Un connector formatador del cos per a text/calendari
+Comment[de]=Ein Textinhalt-Formatierungsmodul für text/calender
+Comment[gl]=Un engadido para formatar o corpo do texto/calendario
+Comment[nl]=Een opmaakplug-in voor text/calendar
+Comment[pt]=Um 'plugin' de formatação do conteúdo para o tipo 'text/calendar'
+Comment[sv]=Ett insticksprogram för brevtextformatering av text/calendar
+Comment[uk]=Додаток форматування для text/calendar
+Comment[x-test]=xxA bodypart formatter plugin for text/calendarxx
 
 [Plugin]
 Type=text/calendar
