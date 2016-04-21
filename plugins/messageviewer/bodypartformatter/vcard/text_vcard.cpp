@@ -307,7 +307,7 @@ public:
         QByteArray data = vCard.toUtf8();
         tmpFile.write(data);
         tmpFile.flush();
-        auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), saveAsUrl);
+        auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), saveAsUrl, -1, KIO::Overwrite);
         return job->exec();
     }
 };
