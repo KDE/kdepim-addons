@@ -39,7 +39,7 @@
 #include <MessageViewer/BodyPartURLHandler>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/Viewer>
-#include <MessageViewer/WebKitPartHtmlWriter>
+#include <MimeTreeParser/HtmlWriter>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/BodyPartFormatter>
 using namespace MessageViewer;
