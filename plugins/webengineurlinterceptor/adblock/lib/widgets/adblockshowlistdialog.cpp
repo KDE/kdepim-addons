@@ -16,6 +16,7 @@
 */
 
 #include "adblockshowlistdialog.h"
+#include "adblockinterceptor_debug.h"
 #include "adblocksyntaxhighlighter.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
 #include "kpimtextedit/plaintexteditor.h"
@@ -106,7 +107,7 @@ void AdBlockShowListDialog::downLoadList(const QString &url)
     delete mTemporaryFile;
     mTemporaryFile = new QTemporaryFile;
     if (!mTemporaryFile->open()) {
-        //FIXME qCDebug(MESSAGEVIEWER_LOG) << "can not open temporary file";
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "can not open temporary file";
         delete mTemporaryFile;
         mTemporaryFile = 0;
         return;
