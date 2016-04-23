@@ -64,7 +64,7 @@ TodoEditTest::TodoEditTest()
     MessageViewer::_k_todoEditStubModel = model;
 
     // Fake a default-selected collection for shouldHaveDefaultValuesOnCreation test
-    MessageViewer::MessageViewerSettingsBase::self()->setLastEventSelectedFolder(43);
+    MessageViewer::MessageViewerSettingsBase::self()->setLastSelectedFolder(43);
 }
 
 void TodoEditTest::shouldHaveDefaultValuesOnCreation()

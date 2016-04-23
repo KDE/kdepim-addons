@@ -62,7 +62,7 @@ NoteEditTest::NoteEditTest()
     MessageViewer::_k_noteEditStubModel = model;
 
     // Fake a default-selected collection for shouldHaveDefaultValuesOnCreation test
-    MessageViewer::MessageViewerSettingsBase::self()->setLastEventSelectedFolder(43);
+    MessageViewer::MessageViewerSettingsBase::self()->setLastNoteSelectedFolder(43);
 }
 
 void NoteEditTest::shouldHaveDefaultValuesOnCreation()
@@ -404,6 +404,8 @@ void NoteEditTest::shouldHaveLineEditFocus()
 {
     MessageViewer::NoteEdit edit;
     edit.show();
+    // make sure the window is active so we can test for focus
+    qApp->setActiveWindow(&edit);
     QTest::qWaitForWindowExposed(&edit);
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
