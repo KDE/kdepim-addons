@@ -20,12 +20,20 @@
 #include <KActionCollection>
 #include <QBoxLayout>
 #include <QTest>
+#include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
+
+
+namespace MessageViewer
+{
+extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
+}
 
 ViewerPluginCreateeventTest::ViewerPluginCreateeventTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardItemModel *model = new QStandardItemModel;
+    MessageViewer::_k_eventEditStubModel = model;
 }
 
 ViewerPluginCreateeventTest::~ViewerPluginCreateeventTest()

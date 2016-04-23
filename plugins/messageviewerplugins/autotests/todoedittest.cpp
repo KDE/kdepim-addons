@@ -44,6 +44,7 @@ TodoEditTest::TodoEditTest()
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
     qRegisterMetaType<KCalCore::Todo::Ptr>();
+    QStandardPaths::setTestModeEnabled(true);
 
     QStandardItemModel *model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
@@ -61,13 +62,15 @@ TodoEditTest::TodoEditTest()
         model->appendRow(item);
     }
     MessageViewer::_k_todoEditStubModel = model;
+
+    // Fake a default-selected collection for shouldHaveDefaultValuesOnCreation test
+    MessageViewer::MessageViewerSettingsBase::self()->setLastEventSelectedFolder(43);
 }
 
 void TodoEditTest::shouldHaveDefaultValuesOnCreation()
 {
     MessageViewer::TodoEdit edit;
-    //We can't test if because it loads from settings and in Jenkins it doesn't exist but here it exists
-    //QVERIFY(edit.collection().isValid());
+    QVERIFY(edit.collection().isValid());
     QVERIFY(!edit.message());
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QPushButton *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
@@ -250,6 +253,7 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
+    qApp->setActiveWindow(&edit);
     QTest::qWaitForWindowExposed(&edit);
 
     KMime::Message::Ptr msg(new KMime::Message);
@@ -307,6 +311,8 @@ void TodoEditTest::shouldHideWidgetWhenPressEscape()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
+    // make sure the window is active so we can test for focus
+    qApp->setActiveWindow(&edit);
     QTest::qWaitForWindowExposed(&edit);
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setFocus();
@@ -364,6 +370,8 @@ void TodoEditTest::shouldSetFocusWhenWeCallTodoEdit()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
+    // make sure the window is active so we can test for focus
+    qApp->setActiveWindow(&edit);
     QTest::qWaitForWindowExposed(&edit);
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
@@ -404,6 +412,8 @@ void TodoEditTest::shouldHaveLineEditFocus()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
+    // make sure the window is active so we can test for focus
+    qApp->setActiveWindow(&edit);
     QTest::qWaitForWindowExposed(&edit);
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");

@@ -20,11 +20,19 @@
 #include <QTest>
 #include <KActionCollection>
 #include <QHBoxLayout>
+#include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
+
+namespace MessageViewer
+{
+extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
+}
+
 ViewerPluginCreateTodoTest::ViewerPluginCreateTodoTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardItemModel *model = new QStandardItemModel;
+    MessageViewer::_k_todoEditStubModel = model;
 }
 
 ViewerPluginCreateTodoTest::~ViewerPluginCreateTodoTest()

@@ -20,12 +20,19 @@
 #include <KActionCollection>
 #include <QHBoxLayout>
 #include <QTest>
+#include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
+
+namespace MessageViewer
+{
+extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_noteEditStubModel;
+}
 
 ViewerPluginCreateNoteTest::ViewerPluginCreateNoteTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardItemModel *model = new QStandardItemModel;
+    MessageViewer::_k_noteEditStubModel = model;
 }
 
 ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest()
