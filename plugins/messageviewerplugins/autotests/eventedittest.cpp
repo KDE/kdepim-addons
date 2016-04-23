@@ -47,6 +47,7 @@ EventEditTest::EventEditTest()
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
     qRegisterMetaType<KCalCore::Event::Ptr>();
+    QStandardPaths::setTestModeEnabled(true);
 
     QStandardItemModel *model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
@@ -64,12 +65,14 @@ EventEditTest::EventEditTest()
         model->appendRow(item);
     }
     MessageViewer::_k_eventEditStubModel = model;
+
+    // Fake a default-selected collection for shouldHaveDefaultValuesOnCreation test
+    MessageViewer::MessageViewerSettingsBase::self()->setLastEventSelectedFolder(43);
 }
 
 void EventEditTest::shouldHaveDefaultValuesOnCreation()
 {
     MessageViewer::EventEdit edit;
-    //We can't test it. Collection value is stored in settings here, and not in jenkins so disable it
     QVERIFY(edit.collection().isValid());
     QVERIFY(!edit.message());
     QLineEdit *eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));

@@ -42,6 +42,7 @@ NoteEditTest::NoteEditTest()
 {
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
+    QStandardPaths::setTestModeEnabled(true);
 
     QStandardItemModel *model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
@@ -59,13 +60,16 @@ NoteEditTest::NoteEditTest()
         model->appendRow(item);
     }
     MessageViewer::_k_noteEditStubModel = model;
+
+    // Fake a default-selected collection for shouldHaveDefaultValuesOnCreation test
+    MessageViewer::MessageViewerSettingsBase::self()->setLastEventSelectedFolder(43);
 }
 
 void NoteEditTest::shouldHaveDefaultValuesOnCreation()
 {
     MessageViewer::NoteEdit edit;
-    //We can't test if because it loads from settings and in Jenkins it doesn't exist but here it exists
-    //QVERIFY(edit.collection().isValid());
+
+    QVERIFY(edit.collection().isValid());
     QVERIFY(!edit.message());
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QPushButton *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
