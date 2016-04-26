@@ -57,7 +57,7 @@ void ViewerPluginExpandurlInterface::execute()
             KPIM::BroadcastStatus ::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));
         }
     } else {
-        qWarning(EXPANDURLPLUGIN_LOG) << "Url is not valid";
+        qCWarning(EXPANDURLPLUGIN_LOG) << "Url is not valid";
     }
 }
 
