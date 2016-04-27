@@ -28,8 +28,7 @@
 // Self Includes
 #include "adblocksettingwidget.h"
 #include "ui_settings_adblock.h"
-//#include "adblockl"
-//#include "settings/AdBlocksettings.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 #include "adblockaddsubscriptiondialog.h"
 
 //#include "adblock/adblockmanager.h"
@@ -201,28 +200,24 @@ void AdBlockSettingWidget::removeRule()
 
 void AdBlockSettingWidget::doResetToDefaultsOther()
 {
-#if 0 //FIXME
     const bool bUseDefaults = AdBlock::AdBlockSettings::self()->useDefaults(true);
     loadWidget(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
     mUi->tabWidget->setEnabled(AdBlock::AdBlockSettings::self()->adBlockEnabled());
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     loadWidget(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
     AdBlock::AdBlockSettings::self()->useDefaults(bUseDefaults);
-#endif
 }
 
 void AdBlockSettingWidget::doLoadFromGlobalSettings()
 {
     mUi->manualFiltersListWidget->clear();
     mUi->automaticFiltersListWidget->clear();
-#if 0 //FIXME
     loadWidget(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
 
     // update enabled status
     mUi->tabWidget->setEnabled(AdBlock::AdBlockSettings::self()->adBlockEnabled());
     loadWidget(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     loadWidget(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
-#endif
     // ------------------------------------------------------------------------------
 
     // automatic filters
@@ -283,11 +278,9 @@ void AdBlockSettingWidget::save()
     }
 
     // General settings
-#if 0 //FIXME
     saveCheckBox(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
-#endif
     // automatic filters
     KConfig config(QStringLiteral("AdBlockadblockrc"));
     const QStringList list = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));

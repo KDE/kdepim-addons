@@ -27,6 +27,11 @@ set(adblocklibprivate_SRCS
     ${messageviewer_adblock_lib_common_SRCS}
     )
 
+kconfig_add_kcfg_files(adblocklibprivate_SRCS
+    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
+    )
+
+
 ki18n_wrap_ui(adblocklibprivate_SRCS widgets/ui/adblockcreatefilterwidget.ui widgets/ui/settings_adblock.ui)
 
 add_library(adblocklibprivate ${adblocklibprivate_SRCS})
