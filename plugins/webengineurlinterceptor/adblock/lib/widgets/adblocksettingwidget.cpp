@@ -342,6 +342,7 @@ void AdBlockSettingWidget::save()
 #else
     //FIXME AdBlockManager::self()->reloadConfig();
 #endif
+    AdBlock::AdBlockSettings::self()->save();
 }
 
 void AdBlockSettingWidget::updateCheckBox()
