@@ -30,6 +30,7 @@
 #include "ui_settings_adblock.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include "adblockaddsubscriptiondialog.h"
+#include "adblockinterceptor_debug.h"
 
 //#include "adblock/adblockmanager.h"
 #include "adblockshowlistdialog.h"
@@ -256,7 +257,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
 
     QFile ruleFile(localRulesFilePath);
     if (!ruleFile.open(QFile::ReadOnly | QFile::Text)) {
-        //FIXME qCDebug(AdBlock_LOG) << "Unable to open rule file" << localRulesFilePath;
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
         return;
     }
 
@@ -311,7 +312,7 @@ void AdBlockSettingWidget::save()
 
     QFile ruleFile(localRulesFilePath);
     if (!ruleFile.open(QFile::WriteOnly | QFile::Text)) {
-        //FIXME qCDebug(AdBlock_LOG) << "Unable to open rule file" << localRulesFilePath;
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
         return;
     }
 
@@ -337,11 +338,7 @@ void AdBlockSettingWidget::save()
     // -------------------------------------------------------------------------------
     mChanged = false;
     Q_EMIT changed(false);
-#ifdef AdBlock_USE_QTWEBENGINE
-    //FIXME
-#else
-    //FIXME AdBlockManager::self()->reloadConfig();
-#endif
+    //TODO reload config ?.
     AdBlock::AdBlockSettings::self()->save();
 }
 
@@ -398,7 +395,7 @@ void AdBlockSettingWidget::slotRemoveSubscription()
             const QString path = item->data(PathList).toString();
             if (!path.isEmpty()) {
                 if (!QFile(path).remove()) {
-                    //FIXME qCDebug(AdBlock_LOG) << " we can not remove file:" << path;
+                    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " we can not remove file:" << path;
                 }
             }
             delete item;
@@ -431,7 +428,7 @@ void AdBlockSettingWidget::slotDeleteList(const QString &listName)
         const QString path = item->data(PathList).toString();
         if (!path.isEmpty()) {
             if (!QFile(path).remove()) {
-                //FIXME qCDebug(AdBlock_LOG) << " we can not remove file:" << path;
+                qCDebug(ADBLOCKINTERCEPTOR_LOG) << " we can not remove file:" << path;
             }
         }
         delete item;
