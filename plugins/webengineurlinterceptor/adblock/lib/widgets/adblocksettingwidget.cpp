@@ -32,7 +32,7 @@
 #include "adblockaddsubscriptiondialog.h"
 #include "adblockinterceptor_debug.h"
 
-//#include "adblock/adblockmanager.h"
+#include "adblockmanager.h"
 #include "adblockshowlistdialog.h"
 #include "adblockutil.h"
 #include "PimCommon/ConfigureImmutableWidgetUtils"
@@ -338,7 +338,7 @@ void AdBlockSettingWidget::save()
     // -------------------------------------------------------------------------------
     mChanged = false;
     Q_EMIT changed(false);
-    //TODO reload config ?.
+    AdBlock::AdblockManager::self()->reloadConfig();
     AdBlock::AdBlockSettings::self()->save();
 }
 
