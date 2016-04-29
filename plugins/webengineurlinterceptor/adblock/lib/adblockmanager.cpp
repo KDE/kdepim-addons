@@ -17,6 +17,7 @@
 
 #include "adblockmanager.h"
 #include "adblockmatcher.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QUrl>
 
 using namespace AdBlock;
@@ -59,11 +60,14 @@ AdblockManager::~AdblockManager()
 
 void AdblockManager::reloadConfig()
 {
+    mEnabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
+    qDebug()<<" void AdblockManager::reloadConfig()"<< mEnabled << "  "<<this;
     //TODO
 }
 
 bool AdblockManager::isEnabled() const
 {
+    qDebug()<<" bool AdblockManager::isEnabled() const"<<mEnabled << "  "<<this;
     return mEnabled;
 }
 

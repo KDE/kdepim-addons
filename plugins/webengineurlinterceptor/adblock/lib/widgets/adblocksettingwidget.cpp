@@ -338,8 +338,8 @@ void AdBlockSettingWidget::save()
     // -------------------------------------------------------------------------------
     mChanged = false;
     Q_EMIT changed(false);
-    AdBlock::AdblockManager::self()->reloadConfig();
     AdBlock::AdBlockSettings::self()->save();
+    AdBlock::AdblockManager::self()->reloadConfig();
 }
 
 void AdBlockSettingWidget::updateCheckBox()
