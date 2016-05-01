@@ -109,9 +109,9 @@ void Trip::layoutChanged()
 void Trip::modelReset()
 {
     m_eventDescription.clear();
-    emit eventDescriptionChanged();
+    Q_EMIT eventDescriptionChanged();
     m_eventName.clear();
-    emit eventNameChanged();
+    Q_EMIT eventNameChanged();
 }
 
 void Trip::rowsRemoved(const QModelIndex &parent, int start, int end)
@@ -152,15 +152,15 @@ void Trip::setCollection(int role, const Akonadi::Collection &collection)
     switch (role) {
     case MailCollectionRole:
         updateCollection(m_mailChangeRecorder, collection);
-        emit monitoredCollectionsChanged();
+        Q_EMIT monitoredCollectionsChanged();
         return;
     case TodoCollectionRole:
         updateCollection(m_todoChangeRecorder, collection);
-        emit monitoredCollectionsChanged();
+        Q_EMIT monitoredCollectionsChanged();
         return;
     case NotesCollectionRole:
         updateCollection(m_notesChangeRecorder, collection);
-        emit monitoredCollectionsChanged();
+        Q_EMIT monitoredCollectionsChanged();
         return;
     }
 }
@@ -226,7 +226,7 @@ void Trip::setEventName(const QString &name)
 {
     if (m_eventName != name) {
         m_eventName = name;
-        emit eventNameChanged();
+        Q_EMIT eventNameChanged();
     }
 }
 
@@ -234,7 +234,7 @@ void Trip::setEventDescription(const QString &description)
 {
     if (m_eventDescription != description) {
         m_eventDescription = description;
-        emit eventDescriptionChanged();
+        Q_EMIT eventDescriptionChanged();
     }
 }
 

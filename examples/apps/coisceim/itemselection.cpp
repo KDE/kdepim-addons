@@ -69,7 +69,7 @@ void ItemSelection::clear()
     m_selModel2->clearSelection();
     m_selModel3->clearSelection();
     m_id = -1;
-    emit idChanged();
+    Q_EMIT idChanged();
 }
 
 // Workaround bug in QItemSelectionModel::selectedRows
@@ -95,9 +95,9 @@ void ItemSelection::clearOrUpdate(QItemSelectionModel *selModel, QObject *sender
             return;
         }
         m_index = list.first();
-        emit selectionChanged(m_index);
+        Q_EMIT selectionChanged(m_index);
         m_id = m_index.data(Akonadi::EntityTreeModel::ItemIdRole).toLongLong();
-        emit idChanged();
+        Q_EMIT idChanged();
     }
 }
 

@@ -49,7 +49,7 @@ void FindingETW::connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *m
     QSortFilterProxyModel *proxy3 = new QSortFilterProxyModel(this);
     proxy3->setSourceModel(proxy2);
     tree->setModel(proxy3);
-    emit initialized();
+    Q_EMIT initialized();
 }
 
 EntityFindingWidget::EntityFindingWidget(QWidget *parent, Qt::WindowFlags f)

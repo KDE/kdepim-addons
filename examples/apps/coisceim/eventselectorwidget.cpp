@@ -102,7 +102,7 @@ void EventSelectorWidget::selectTrip()
     if (dlg.exec()) {
         Item item = dlg.selectedItem();
         if (item.isValid()) {
-            emit selected(item);
+            Q_EMIT selected(item);
             m_browser->setItem(item);
         }
     }

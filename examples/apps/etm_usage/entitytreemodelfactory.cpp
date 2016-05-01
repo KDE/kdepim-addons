@@ -65,7 +65,7 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
 
                 EntityTreeModel *etm = getModel(changeRecorder, parent());
 
-                emit modelCreated(etm);
+                Q_EMIT modelCreated(etm);
                 return;
             }
         }
