@@ -8,14 +8,14 @@ ecm_qt_declare_logging_category(common_SRCS HEADER externalscriptplugin_debug.h 
 macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     set( _test ${_source}  ${_additional} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
     if (${_jsonfile})
        kcoreaddons_desktop_to_json(${_name} ${_jsonfile})
     endif()
-    add_test( ${_name} ${_name} )
-
-    ecm_mark_as_test(messageviewer-viewerplugin-unittest-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor)
+    ecm_add_test(${_test}
+                 TEST_NAME ${_name}
+                 NAME_PREFIX "messageviewerplugins-"
+                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor
+                )
 endmacro ()
 
 
@@ -23,22 +23,22 @@ endmacro ()
 macro(add_messageviewer_viewerplugin_class_unittest _source )
     set( _test ${_source} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
-    add_test( ${_name} ${_name} )
 
-    ecm_mark_as_test(messageviewer-viewerplugin-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme)
+    ecm_add_test(${_test}
+                 TEST_NAME ${_name}
+                 NAME_PREFIX "messageviewerplugins-"
+                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme
+                )
 endmacro ()
 
 
 macro(add_messageviewer_viewerplugin_widget_unittest _source _additional )
     set( _test ${_source} ${_additional} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
-    add_test( ${_name} ${_name} )
-
-    ecm_mark_as_test(messageviewer-viewerplugin-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor)
+    ecm_add_test(${_test}
+                 TEST_NAME ${_name}
+                 NAME_PREFIX "messageviewerplugins-"
+                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test Qt5::WebKitWidgets KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor)
 endmacro ()
 
 
@@ -46,7 +46,7 @@ add_messageviewer_viewerplugin_class_unittest(viewerpluginmanagertest.cpp)
 add_messageviewer_viewerplugin_class_unittest(viewerplugintoolmanagertest.cpp)
 add_messageviewer_viewerplugin_widget_unittest(todoedittest.cpp "../createtodoplugin/todoedit.cpp")
 add_messageviewer_viewerplugin_widget_unittest(noteedittest.cpp "../createnoteplugin/noteedit.cpp")
-set_tests_properties(todoedittest PROPERTIES ENVIRONMENT "LC_ALL=C")
+set_tests_properties(messageviewerplugins-todoedittest PROPERTIES ENVIRONMENT "LC_ALL=C")
 
 add_messageviewer_viewerplugin_widget_unittest(eventedittest.cpp "../createeventplugin/eventedit.cpp;../createeventplugin/eventdatetimewidget.cpp")
 add_messageviewer_viewerplugin_widget_unittest(eventdatetimewidgettest.cpp "../createeventplugin/eventdatetimewidget.cpp")
