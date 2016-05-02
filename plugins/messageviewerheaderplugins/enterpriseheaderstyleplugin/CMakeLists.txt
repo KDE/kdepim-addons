@@ -8,7 +8,6 @@ add_library(messageviewer_enterpriseheaderstyleplugin MODULE ${messageviewer_ent
 
 target_link_libraries(messageviewer_enterpriseheaderstyleplugin
   KF5::MessageViewer 
-  KF5::GrantleeTheme
   KF5::XmlGui
   KF5::I18n
 )
