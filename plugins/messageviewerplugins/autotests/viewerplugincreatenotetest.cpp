@@ -57,6 +57,9 @@ void ViewerPluginCreateNoteTest::shouldCreateAction()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     QVERIFY(!interface->actions().isEmpty());
+    QWidget *createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
+    QVERIFY(createnotewidget);
+    QCOMPARE(createnotewidget->isVisible(), false);
 }
 
 QTEST_MAIN(ViewerPluginCreateNoteTest)

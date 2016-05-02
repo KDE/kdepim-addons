@@ -57,6 +57,9 @@ void ViewerPluginCreateTodoTest::shouldCreateAction()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     QVERIFY(!interface->actions().isEmpty());
+    QWidget *createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
+    QVERIFY(createtodowidget);
+    QCOMPARE(createtodowidget->isVisible(), false);
 }
 
 QTEST_MAIN(ViewerPluginCreateTodoTest)

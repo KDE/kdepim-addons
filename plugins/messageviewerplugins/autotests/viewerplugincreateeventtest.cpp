@@ -57,6 +57,9 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     QVERIFY(!interface->actions().isEmpty());
+    QWidget *createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
+    QVERIFY(createeventwidget);
+    QCOMPARE(createeventwidget->isVisible(), false);
 }
 
 QTEST_MAIN(ViewerPluginCreateeventTest)
