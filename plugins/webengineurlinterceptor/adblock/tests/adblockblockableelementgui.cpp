@@ -55,6 +55,7 @@ void AdblockBlockableElementGui::slotSearchAdblock()
     AdBlockBlockableItemsJob *job = new AdBlockBlockableItemsJob(this);
     job->setWebEngineView(mWebEngineView);
     connect(job, &AdBlockBlockableItemsJob::searchItemsDone, this, &AdblockBlockableElementGui::slotSearchItemsDone);
+    job->start();
 }
 
 int main(int argc, char **argv)
