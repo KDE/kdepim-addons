@@ -45,7 +45,7 @@ AdblockBlockableElementGui::~AdblockBlockableElementGui()
 void AdblockBlockableElementGui::slotSearchAdblock()
 {
     AdBlockBlockableItemsDialog dlg(this);
-    dlg.setWebEngineView(mWebEngineView);
+    //TODO adapt code dlg.setWebEngineView(mWebEngineView);
     dlg.exec();
 }
 

@@ -99,8 +99,9 @@ void AdblockInterceptorInterface::slotBlockImage()
 void AdblockInterceptorInterface::slotShowBlockableElement()
 {
     if (mWebEngineView) {
+        //TODO search items before to show in dialog
         QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
-        dlg->setWebEngineView(mWebEngineView);
+
         dlg->exec();
         delete dlg;
     }

@@ -32,32 +32,11 @@
 #include <QClipboard>
 #include <QApplication>
 #include <QPointer>
-
 #include <KIOWidgets/KRun>
 using namespace AdBlock;
-template<typename Arg, typename R, typename C>
-struct InvokeWrapper {
-    QPointer<R> receiver;
-    void (C::*memberFunction)(Arg);
-    void operator()(Arg result)
-    {
-        if (receiver) {
-            (receiver->*memberFunction)(result);
-        }
-    }
-};
-
-template<typename Arg, typename R, typename C>
-
-InvokeWrapper<Arg, R, C> invoke(R *receiver, void (C::*memberFunction)(Arg))
-{
-    InvokeWrapper<Arg, R, C> wrapper = {receiver, memberFunction};
-    return wrapper;
-}
 
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
-    : QWidget(parent),
-      mWebEngineView(Q_NULLPTR)
+    : QWidget(parent)
 {
     QVBoxLayout *lay = new QVBoxLayout;
     lay->setMargin(0);
@@ -123,25 +102,7 @@ void AdBlockBlockableItemsWidget::readConfig()
     mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
 }
 
-void AdBlockBlockableItemsWidget::setWebEngineView(QWebEngineView *view)
-{
-    mWebEngineView = view;
-    searchBlockableItems();
-}
-
-void AdBlockBlockableItemsWidget::adaptSrc(QString &src, const QString &hostName)
-{
-    if (src.startsWith(QStringLiteral("http://")) || src.startsWith(QStringLiteral("https://"))) {
-        //Nothing
-    } else if (src.startsWith(QStringLiteral("//"))) {
-        src = QLatin1String("https:") + src;
-    } else if (src.startsWith(QLatin1Char('/'))) {
-        src = QLatin1String("https://") + hostName + src;
-    } else {
-        src = QString();
-    }
-}
-
+#if 0
 void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
 {
     qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
@@ -166,39 +127,7 @@ void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant
     mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
     mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
 }
-
-void AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems(const QVariant &result)
-{
-    const QList<QVariant> lst = result.toList();
-    const QUrl url = mWebEngineView->url();
-    const QString host = url.host();
-    Q_FOREACH (const QVariant &var, lst) {
-        QMap<QString, QVariant> mapVariant = var.toMap();
-        QString src = mapVariant.value(QStringLiteral("src")).toString();
-        if (!src.isEmpty()) {
-            adaptSrc(src, host);
-            if (src.isEmpty()) {
-                continue;
-            }
-            QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
-            item->setText(Url, src);
-            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Script));
-            item->setTextColor(FilterValue, Qt::red);
-            item->setData(Type, Element, Script);
-        }
-    }
-    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
-    //TODO more check ?
-}
-
-void AdBlockBlockableItemsWidget::searchBlockableItems()
-{
-    if (mWebEngineView) {
-        mListItems->clear();
-        qDebug()<<" void AdBlockBlockableItemsWidget::searchBlockableItems()";
-        mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
-    }
-}
+#endif
 
 void AdBlockBlockableItemsWidget::slotCopyFilterItem()
 {

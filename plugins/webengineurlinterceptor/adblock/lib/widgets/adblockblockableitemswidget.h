@@ -24,7 +24,6 @@ namespace PimCommon
 {
 class CustomTreeView;
 }
-class QWebEngineView;
 namespace AdBlock
 {
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
@@ -49,8 +48,6 @@ public:
     explicit AdBlockBlockableItemsWidget(QWidget *parent = Q_NULLPTR);
     ~AdBlockBlockableItemsWidget();
 
-    void setWebEngineView(QWebEngineView *view);
-
     static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
 private Q_SLOTS:
@@ -59,8 +56,6 @@ private Q_SLOTS:
     void slotOpenItem();
     void slotBlockItem();
     void slotCopyItem();
-    void handleSearchBlockableImageItems(const QVariant &var);
-    void handleSearchBlockableScriptsItems(const QVariant &var);
 private:
     enum BlockType {
         FilterValue = 0,
@@ -74,9 +69,7 @@ private:
     void writeConfig();
     void searchBlockableItems();
     void readConfig();
-    void adaptSrc(QString &src, const QString &hostName);
     PimCommon::CustomTreeView *mListItems;
-    QWebEngineView *mWebEngineView;
 };
 }
 #endif // ADBLOCKBLOCKABLEITEMSWIDGET_H

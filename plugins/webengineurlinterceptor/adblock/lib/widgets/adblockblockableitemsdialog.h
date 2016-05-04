@@ -20,7 +20,6 @@
 
 #include <QDialog>
 #include "adblocklib_export.h"
-class QWebEngineView;
 namespace AdBlock
 {
 class AdBlockBlockableItemsWidget;
@@ -33,7 +32,6 @@ public:
 
     void saveFilters();
 
-    void setWebEngineView(QWebEngineView *view);
 private:
     void writeConfig();
     void readConfig();
