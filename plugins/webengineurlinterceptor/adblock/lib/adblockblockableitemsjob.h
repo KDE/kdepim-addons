@@ -17,6 +17,8 @@
 #ifndef ADBLOCKBLOCKABLEITEMSJOB_H
 #define ADBLOCKBLOCKABLEITEMSJOB_H
 
+#include "adblocklib_export.h"
+
 #include <QObject>
 #include <QVector>
 
@@ -25,7 +27,7 @@ class QWebEngineView;
 namespace AdBlock
 {
 struct AdBlockResult;
-class AdBlockBlockableItemsJob : public QObject
+class ADBLOCKLIB_EXPORT AdBlockBlockableItemsJob : public QObject
 {
     Q_OBJECT
 public:
@@ -59,7 +61,7 @@ private:
     QWebEngineView *mWebEngineView;
 };
 
-struct AdBlockResult
+struct ADBLOCKLIB_EXPORT AdBlockResult
 {
     AdBlockResult()
         : type(AdBlockBlockableItemsJob::UnKnown)

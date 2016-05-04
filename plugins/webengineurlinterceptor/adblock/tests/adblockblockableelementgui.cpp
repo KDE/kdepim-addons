@@ -17,6 +17,7 @@
 
 #include "adblockblockableelementgui.h"
 #include "../lib/widgets/adblockblockableitemsdialog.h"
+#include "../lib/adblockblockableitemsjob.h"
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QWebEngineView>
