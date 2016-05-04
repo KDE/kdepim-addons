@@ -59,6 +59,11 @@ void AdBlockBlockableItemsDialog::saveFilters()
     //FIXME mBlockableItems->saveFilters();
 }
 
+void AdBlockBlockableItemsDialog::setAdblockResult(const QVector<AdBlock::AdBlockResult> &result)
+{
+    mBlockableItems->setAdblockResult(result);
+}
+
 void AdBlockBlockableItemsDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "AdBlockBlockableItemsDialog");

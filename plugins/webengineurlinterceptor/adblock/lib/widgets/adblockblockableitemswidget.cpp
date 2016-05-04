@@ -67,6 +67,11 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
     writeConfig();
 }
 
+void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
+{
+    //TODO add list
+}
+
 void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
 {
     QTreeWidgetItem *item = mListItems->currentItem();

@@ -26,6 +26,7 @@ class CustomTreeView;
 }
 namespace AdBlock
 {
+class AdBlockResult;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
 {
     Q_OBJECT
@@ -47,6 +48,9 @@ public:
 
     explicit AdBlockBlockableItemsWidget(QWidget *parent = Q_NULLPTR);
     ~AdBlockBlockableItemsWidget();
+
+    void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
+
 
     static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);

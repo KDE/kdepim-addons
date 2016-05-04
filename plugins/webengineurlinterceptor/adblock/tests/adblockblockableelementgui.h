@@ -20,6 +20,11 @@
 
 #include <QWidget>
 class QWebEngineView;
+namespace AdBlock
+{
+class AdBlockResult;
+}
+
 class AdblockBlockableElementGui : public QWidget
 {
     Q_OBJECT
@@ -30,6 +35,8 @@ public:
 public Q_SLOTS:
     void slotSearchAdblock();
 
+private Q_SLOTS:
+    void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
 private:
     QWebEngineView *mWebEngineView;
 };

@@ -22,6 +22,7 @@
 #include "adblocklib_export.h"
 namespace AdBlock
 {
+class AdBlockResult;
 class AdBlockBlockableItemsWidget;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog
 {
@@ -31,6 +32,7 @@ public:
     ~AdBlockBlockableItemsDialog();
 
     void saveFilters();
+    void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
 
 private:
     void writeConfig();

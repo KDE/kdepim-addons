@@ -43,11 +43,18 @@ AdblockBlockableElementGui::~AdblockBlockableElementGui()
 
 }
 
-void AdblockBlockableElementGui::slotSearchAdblock()
+void AdblockBlockableElementGui::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
 {
     AdBlockBlockableItemsDialog dlg(this);
-    //TODO adapt code dlg.setWebEngineView(mWebEngineView);
+    dlg.setAdblockResult(result);
     dlg.exec();
+}
+
+void AdblockBlockableElementGui::slotSearchAdblock()
+{
+    AdBlockBlockableItemsJob *job = new AdBlockBlockableItemsJob(this);
+    job->setWebEngineView(mWebEngineView);
+    connect(job, &AdBlockBlockableItemsJob::searchItemsDone, this, &AdblockBlockableElementGui::slotSearchItemsDone);
 }
 
 int main(int argc, char **argv)
