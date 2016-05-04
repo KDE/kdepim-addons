@@ -68,6 +68,11 @@ struct ADBLOCKLIB_EXPORT AdBlockResult
     {
 
     }
+
+    bool isValid() const {
+        return (!src.isEmpty()) && (type != AdBlockBlockableItemsJob::UnKnown);
+    }
+
     bool operator==(const AdBlockResult &other) const {
         return (src == other.src) && (type == other.type);
     }
