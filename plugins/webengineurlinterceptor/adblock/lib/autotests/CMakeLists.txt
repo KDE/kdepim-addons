@@ -23,3 +23,10 @@ add_executable( adblockblockableitemsjobtest ${adblockblockableitemsjobtest_SRCS
 add_test(adblockblockableitemsjobtest adblockblockableitemsjobtest)
 ecm_mark_as_test(adblockblockableitemsjobtest)
 target_link_libraries( adblockblockableitemsjobtest adblocklibprivate Qt5::Test Qt5::WebEngine Qt5::WebEngineWidgets KF5::I18n KF5::WebEngineViewer)
+
+
+set( adblockresulttest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockresulttest.cpp  ../adblockblockableitemsjob.cpp)
+add_executable( adblockresulttest ${adblockresulttest_SRCS})
+add_test(adblockresulttest adblockresulttest)
+ecm_mark_as_test(adblockresulttest)
+target_link_libraries( adblockresulttest adblocklibprivate Qt5::Test Qt5::WebEngine Qt5::WebEngineWidgets KF5::WebEngineViewer)
