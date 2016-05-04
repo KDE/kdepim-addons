@@ -15,11 +15,36 @@
 */
 
 #include "adblockblockableitemsjob.h"
+#include <WebEngineViewer/WebEngineScript>
+#include <QDebug>
+#include <QWebEngineView>
+#include <QWebEnginePage>
+#include <QPointer>
 
 using namespace AdBlock;
+template<typename Arg, typename R, typename C>
+struct InvokeWrapper {
+    QPointer<R> receiver;
+    void (C::*memberFunction)(Arg);
+    void operator()(Arg result)
+    {
+        if (receiver) {
+            (receiver->*memberFunction)(result);
+        }
+    }
+};
+
+template<typename Arg, typename R, typename C>
+
+InvokeWrapper<Arg, R, C> invoke(R *receiver, void (C::*memberFunction)(Arg))
+{
+    InvokeWrapper<Arg, R, C> wrapper = {receiver, memberFunction};
+    return wrapper;
+}
 
 AdBlockBlockableItemsJob::AdBlockBlockableItemsJob(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mWebEngineView(Q_NULLPTR)
 {
 
 }
@@ -27,4 +52,94 @@ AdBlockBlockableItemsJob::AdBlockBlockableItemsJob(QObject *parent)
 AdBlockBlockableItemsJob::~AdBlockBlockableItemsJob()
 {
 
+}
+
+void AdBlockBlockableItemsJob::setWebEngineView(QWebEngineView *webEngineView)
+{
+    mWebEngineView = webEngineView;
+}
+
+void AdBlockBlockableItemsJob::searchBlockableItems()
+{
+    if (mWebEngineView) {
+        mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableImageItems));
+    } else {
+        Q_EMIT searchItemsDone(QVector<AdBlock::AdBlockResult>());
+        deleteLater();
+    }
+}
+
+void AdBlockBlockableItemsJob::handleSearchBlockableImageItems(const QVariant &result)
+{
+    const QList<QVariant> lst = result.toList();
+    const QUrl url = mWebEngineView->url();
+    const QString host = url.host();
+    Q_FOREACH (const QVariant &var, lst) {
+        QMap<QString, QVariant> mapVariant = var.toMap();
+        QString src = mapVariant.value(QStringLiteral("src")).toString();
+        if (!src.isEmpty()) {
+            adaptSource(src, host);
+            if (src.isEmpty()) {
+                continue;
+            }
+            AdBlock::AdBlockResult result;
+            result.src = src;
+            result.type = Image;
+            if (!mAdblockResultList.contains(result)) {
+                mAdblockResultList.append(result);
+            }
+        }
+    }
+    mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems));
+}
+
+QWebEngineView *AdBlockBlockableItemsJob::webEngineView() const
+{
+    return mWebEngineView;
+}
+
+void AdBlockBlockableItemsJob::start()
+{
+    mAdblockResultList.clear();
+    searchBlockableItems();
+}
+
+void AdBlockBlockableItemsJob::adaptSource(QString &src, const QString &hostName)
+{
+    if (src.startsWith(QStringLiteral("http://")) || src.startsWith(QStringLiteral("https://"))) {
+        //Nothing
+    } else if (src.startsWith(QStringLiteral("//"))) {
+        src = QLatin1String("https:") + src;
+    } else if (src.startsWith(QLatin1Char('/'))) {
+        src = QLatin1String("https://") + hostName + src;
+    } else {
+        src = QString();
+    }
+}
+
+
+void AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems(const QVariant &result)
+{
+    const QList<QVariant> lst = result.toList();
+    const QUrl url = mWebEngineView->url();
+    const QString host = url.host();
+    Q_FOREACH (const QVariant &var, lst) {
+        QMap<QString, QVariant> mapVariant = var.toMap();
+        QString src = mapVariant.value(QStringLiteral("src")).toString();
+        if (!src.isEmpty()) {
+            adaptSource(src, host);
+            if (src.isEmpty()) {
+                continue;
+            }
+            AdBlock::AdBlockResult result;
+            result.src = src;
+            result.type = Script;
+            if (!mAdblockResultList.contains(result)) {
+                mAdblockResultList.append(result);
+            }
+        }
+    }
+    //TODO more check ?
+    Q_EMIT searchItemsDone(mAdblockResultList);
+    deleteLater();
 }
