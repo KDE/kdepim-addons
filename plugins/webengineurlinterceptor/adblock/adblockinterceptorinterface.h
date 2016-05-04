@@ -24,6 +24,7 @@ class QWebEngineView;
 namespace AdBlock
 {
 class AdblockManager;
+class AdBlockResult;
 }
 class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {
@@ -42,7 +43,7 @@ public:
 private Q_SLOTS:
     void slotBlockImage();
     void slotShowBlockableElement();
-
+    void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
 private:
     mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems;

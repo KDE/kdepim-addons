@@ -17,6 +17,7 @@
 
 #include "adblockinterceptorinterface.h"
 #include "../lib/widgets/adblockblockableitemsdialog.h"
+#include "../lib/adblockblockableitemsjob.h"
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 #include "lib/adblockmanager.h"
 #include <KLocalizedString>
@@ -96,13 +97,20 @@ void AdblockInterceptorInterface::slotBlockImage()
     //TODO
 }
 
+void AdblockInterceptorInterface::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
+{
+    QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
+    dlg->setAdblockResult(result);
+    dlg->exec();
+    delete dlg;
+}
+
 void AdblockInterceptorInterface::slotShowBlockableElement()
 {
     if (mWebEngineView) {
-        //TODO search items before to show in dialog
-        QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
-
-        dlg->exec();
-        delete dlg;
+        AdBlock::AdBlockBlockableItemsJob *job = new AdBlock::AdBlockBlockableItemsJob(this);
+        job->setWebEngineView(mWebEngineView);
+        connect(job, &AdBlock::AdBlockBlockableItemsJob::searchItemsDone, this, &AdblockInterceptorInterface::slotSearchItemsDone);
+        job->start();
     }
 }
