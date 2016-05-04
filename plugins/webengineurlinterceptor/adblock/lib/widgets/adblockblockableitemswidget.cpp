@@ -32,6 +32,7 @@
 #include <QClipboard>
 #include <QApplication>
 #include <QPointer>
+#include <adblockblockableitemsjob.h>
 #include <KIOWidgets/KRun>
 using namespace AdBlock;
 
@@ -69,7 +70,25 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
 
 void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
 {
-    //TODO add list
+    Q_FOREACH(const AdBlockResult &res, result) {
+        QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
+        item->setText(Url, res.src);
+        switch (res.type) {
+        case AdBlock::AdBlockBlockableItemsJob::UnKnown:
+            //TODO ?
+            break;
+        case AdBlock::AdBlockBlockableItemsJob::Image:
+            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Image));
+            item->setData(Type, Element, Image);
+            break;
+        case AdBlock::AdBlockBlockableItemsJob::Script:
+            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Script));
+            item->setData(Type, Element, Script);
+            break;
+        }
+        item->setTextColor(FilterValue, Qt::red);
+    }
+    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
 }
 
 void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
@@ -106,33 +125,6 @@ void AdBlockBlockableItemsWidget::readConfig()
     KConfigGroup config(KSharedConfig::openConfig(), "AdBlockHeaders");
     mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
 }
-
-#if 0
-void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
-{
-    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
-    const QList<QVariant> lst = result.toList();
-    const QUrl url = mWebEngineView->url();
-    const QString host = url.host();
-    Q_FOREACH (const QVariant &var, lst) {
-        QMap<QString, QVariant> mapVariant = var.toMap();
-        QString src = mapVariant.value(QStringLiteral("src")).toString();
-        if (!src.isEmpty()) {
-            adaptSrc(src, host);
-            if (src.isEmpty()) {
-                continue;
-            }
-            QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
-            item->setText(Url, src);
-            item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Image));
-            item->setTextColor(FilterValue, Qt::red);
-            item->setData(Type, Element, Image);
-        }
-    }
-    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
-    mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableScriptsItems));
-}
-#endif
 
 void AdBlockBlockableItemsWidget::slotCopyFilterItem()
 {
