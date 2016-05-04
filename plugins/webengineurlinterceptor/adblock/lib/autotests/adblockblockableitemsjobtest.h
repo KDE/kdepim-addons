@@ -29,6 +29,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldReturnEmptyListWhenWebEngineIsNotSet();
+    void shouldReturnAddBlockItem();
 };
 
 #endif // ADBLOCKBLOCKABLEITEMSJOBTEST_H

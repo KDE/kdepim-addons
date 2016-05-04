@@ -48,4 +48,9 @@ void AdBlockBlockableItemsJobTest::shouldReturnEmptyListWhenWebEngineIsNotSet()
     QCOMPARE(resultLst.count(), 0);
 }
 
+void AdBlockBlockableItemsJobTest::shouldReturnAddBlockItem()
+{
+    //TODO
+}
+
 QTEST_MAIN(AdBlockBlockableItemsJobTest)
