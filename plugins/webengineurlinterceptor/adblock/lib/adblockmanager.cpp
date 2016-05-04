@@ -67,7 +67,6 @@ void AdblockManager::reloadConfig()
 
 bool AdblockManager::isEnabled() const
 {
-    qDebug()<<" bool AdblockManager::isEnabled() const"<<mEnabled << "  "<<this;
     return mEnabled;
 }
 
