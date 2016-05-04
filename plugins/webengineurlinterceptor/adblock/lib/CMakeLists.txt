@@ -15,6 +15,10 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblockutil.cpp
     )
 
+set(adblocklibprivate_job_SRCS
+    adblockblockableitemsjob.cpp
+    )
+
 set(adblocklibprivate_SRCS
     adblockmanager.cpp
     adblocksearchtree.cpp
@@ -25,6 +29,7 @@ set(adblocklibprivate_SRCS
     adblocksubscription.cpp
     ${adblocklibprivate_widget_SRCS}
     ${messageviewer_adblock_lib_common_SRCS}
+    ${adblocklibprivate_job_SRCS}
     )
 
 kconfig_add_kcfg_files(adblocklibprivate_SRCS

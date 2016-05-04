@@ -144,7 +144,7 @@ void AdBlockBlockableItemsWidget::adaptSrc(QString &src, const QString &hostName
 
 void AdBlockBlockableItemsWidget::handleSearchBlockableImageItems(const QVariant &result)
 {
-    //qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
+    qDebug() << " AdBlockBlockableItemsWidget::handleSearchBlockableImageItems " << result;
     const QList<QVariant> lst = result.toList();
     const QUrl url = mWebEngineView->url();
     const QString host = url.host();
@@ -195,6 +195,7 @@ void AdBlockBlockableItemsWidget::searchBlockableItems()
 {
     if (mWebEngineView) {
         mListItems->clear();
+        qDebug()<<" void AdBlockBlockableItemsWidget::searchBlockableItems()";
         mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(), invoke(this, &AdBlockBlockableItemsWidget::handleSearchBlockableImageItems));
     }
 }
