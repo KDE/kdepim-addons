@@ -75,7 +75,7 @@ void AdBlockBlockableItemsJob::handleSearchBlockableImageItems(const QVariant &r
     const QUrl url = mWebEngineView->url();
     const QString host = url.host();
     Q_FOREACH (const QVariant &var, lst) {
-        QMap<QString, QVariant> mapVariant = var.toMap();
+        const QMap<QString, QVariant> mapVariant = var.toMap();
         QString src = mapVariant.value(QStringLiteral("src")).toString();
         if (!src.isEmpty()) {
             adaptSource(src, host);
@@ -124,7 +124,7 @@ void AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems(const QVariant 
     const QUrl url = mWebEngineView->url();
     const QString host = url.host();
     Q_FOREACH (const QVariant &var, lst) {
-        QMap<QString, QVariant> mapVariant = var.toMap();
+        const QMap<QString, QVariant> mapVariant = var.toMap();
         QString src = mapVariant.value(QStringLiteral("src")).toString();
         if (!src.isEmpty()) {
             adaptSource(src, host);
