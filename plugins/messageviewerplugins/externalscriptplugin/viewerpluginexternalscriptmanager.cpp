@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexternalscriptmanager.h"
+#include "viewerpluginexternalscriptsloadjob.h"
 
 class ViewerPluginExternalScriptManagerInstancePrivate
 {
@@ -53,7 +54,11 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 
 void ViewerPluginExternalScriptManager::readExternalScriptInfo()
 {
+    ViewerPluginExternalScriptsLoadJob job;
     //TODO
+    job.setExternalScriptsDirectory(QString());
+    job.start();
+    mScriptInfos = job.scriptInfos();
 }
 
 QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptManager::scriptInfos() const

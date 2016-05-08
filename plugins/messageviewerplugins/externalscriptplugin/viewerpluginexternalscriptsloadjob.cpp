@@ -36,7 +36,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
     if (mDirectory.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
-        //TODO
+        //TODO read desktop file
     }
 }
 
