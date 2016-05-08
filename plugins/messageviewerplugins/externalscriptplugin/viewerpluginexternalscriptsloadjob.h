@@ -19,7 +19,10 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
 #define VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
 
+#include "viewerpluginexternalscriptinfo.h"
+
 #include <QObject>
+#include <QVector>
 
 class ViewerPluginExternalScriptsLoadJob : public QObject
 {
@@ -29,6 +32,11 @@ public:
     ~ViewerPluginExternalScriptsLoadJob();
 
     void start();
+
+    QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+
+private:
+    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H

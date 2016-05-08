@@ -27,6 +27,8 @@ public:
     explicit ViewerPluginExternalScriptsLoadJobTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalScriptsLoadJobTest();
 
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H

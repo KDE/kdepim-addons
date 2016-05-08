@@ -16,6 +16,7 @@
 */
 
 #include "viewerpluginexternalscriptsloadjobtest.h"
+#include "../externalscriptplugin/viewerpluginexternalscriptsloadjob.h"
 
 #include <QTest>
 
@@ -28,6 +29,12 @@ ViewerPluginExternalScriptsLoadJobTest::ViewerPluginExternalScriptsLoadJobTest(Q
 ViewerPluginExternalScriptsLoadJobTest::~ViewerPluginExternalScriptsLoadJobTest()
 {
 
+}
+
+void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    QVERIFY(job.scriptInfos().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)

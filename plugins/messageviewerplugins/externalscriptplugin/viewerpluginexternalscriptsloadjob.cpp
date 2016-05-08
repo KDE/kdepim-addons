@@ -31,5 +31,11 @@ ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob()
 
 void ViewerPluginExternalScriptsLoadJob::start()
 {
+    mScriptInfos.clear();
     //TODO
+}
+
+QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const
+{
+    return mScriptInfos;
 }
