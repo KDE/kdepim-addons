@@ -35,6 +35,7 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()
 {
     ViewerPluginExternalScriptsLoadJob job;
     QVERIFY(job.scriptInfos().isEmpty());
+    QVERIFY(job.externalScriptsDirectory().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)

@@ -45,6 +45,11 @@ void ViewerPluginExternalScriptsLoadJob::setExternalScriptsDirectory(const QStri
     mDirectory = dir;
 }
 
+QString ViewerPluginExternalScriptsLoadJob::externalScriptsDirectory() const
+{
+    return mDirectory;
+}
+
 QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const
 {
     return mScriptInfos;

@@ -33,7 +33,7 @@ public:
 
     void start();
     void setExternalScriptsDirectory(const QString &dir);
-
+    QString externalScriptsDirectory() const;
     QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
