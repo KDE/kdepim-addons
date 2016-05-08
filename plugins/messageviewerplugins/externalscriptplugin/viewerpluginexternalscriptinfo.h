@@ -43,6 +43,6 @@ private:
     QString mDescription;
 };
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
-Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo);
+Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo)
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTINFO_H
