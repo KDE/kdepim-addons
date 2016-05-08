@@ -57,4 +57,4 @@ add_messageviewer_viewerplugin_unittest(viewerplugintranslatortest.cpp "../commo
 add_messageviewer_viewerplugin_unittest(viewerpluginexternalscripttest.cpp "../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp;../externalscriptplugin/viewerpluginexternalscript.cpp;../externalscriptplugin/viewerpluginexternalscriptinterface.cpp;../externalscriptplugin/viewerpluginexternalscriptmanager.cpp;../externalscriptplugin/viewerpluginexternalscriptinfo.cpp" "")
 
 add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptinfotest.cpp "../externalscriptplugin/viewerpluginexternalscriptinfo.cpp;../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp" "")
-add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptsloadjobtest.cpp "../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp" "")
+add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptsloadjobtest.cpp "../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp;../externalscriptplugin/viewerpluginexternalscriptinfo.cpp" "")
