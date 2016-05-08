@@ -3,6 +3,7 @@ set(messageviewer_externalscriptplugin_SRCS
     viewerpluginexternalscriptinterface.cpp
     viewerpluginexternalscriptmanager.cpp
     viewerpluginexternalscriptinfo.cpp
+    viewerpluginexternalscriptsloadjob.cpp
 )
 
 ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME log_externalscriptplugin)
