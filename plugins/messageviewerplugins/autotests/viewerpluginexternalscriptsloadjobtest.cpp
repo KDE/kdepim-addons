@@ -38,4 +38,12 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()
     QVERIFY(job.externalScriptsDirectory().isEmpty());
 }
 
+void ViewerPluginExternalScriptsLoadJobTest::shouldAssignDirectory()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QString dir = QStringLiteral("test_dir");
+    job.setExternalScriptsDirectory(dir);
+    QCOMPARE(job.externalScriptsDirectory(), dir);
+}
+
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)
