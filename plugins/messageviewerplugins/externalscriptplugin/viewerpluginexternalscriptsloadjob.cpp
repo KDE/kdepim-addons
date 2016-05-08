@@ -17,6 +17,7 @@
 
 
 #include "viewerpluginexternalscriptsloadjob.h"
+#include "externalscriptplugin_debug.h"
 
 ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob(QObject *parent)
     : QObject(parent)
@@ -32,7 +33,16 @@ ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob()
 void ViewerPluginExternalScriptsLoadJob::start()
 {
     mScriptInfos.clear();
-    //TODO
+    if (mDirectory.isEmpty()) {
+        qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
+    } else {
+        //TODO
+    }
+}
+
+void ViewerPluginExternalScriptsLoadJob::setExternalScriptsDirectory(const QString &dir)
+{
+    mDirectory = dir;
 }
 
 QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const
