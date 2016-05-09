@@ -51,12 +51,15 @@ void ViewerPluginExternalScriptsLoadJob::start()
                 if (group.isValid()) {
                     ViewerPluginExternalScriptInfo info;
                     info.setName(group.readEntry("Name", QString()));
-                    //TODO is valid ?
-                    mScriptInfos.append(info);
+                    info.setExecutable(group.readEntry("Executable", QString()));
+                    info.setCommandLine(group.readEntry("CommandLine", QString()));
+                    info.setDescription(group.readEntry("Description", QString()));
+                    if (info.isValid()) {
+                        mScriptInfos.append(info);
+                    }
                 }
             }
         }
-        //TODO read desktop file
     }
 }
 
