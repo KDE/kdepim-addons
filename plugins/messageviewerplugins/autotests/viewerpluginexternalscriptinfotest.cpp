@@ -38,6 +38,22 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
     QVERIFY(info.commandLine().isEmpty());
     QVERIFY(info.executable().isEmpty());
     QVERIFY(info.description().isEmpty());
+    QVERIFY(!info.isValid());
+}
+
+void ViewerPluginExternalScriptInfoTest::shouldHaveValid()
+{
+    ViewerPluginExternalScriptInfo info;
+    info.setName(QString());
+    QVERIFY(!info.isValid());
+    info.setName(QStringLiteral("foo"));
+    info.setExecutable(QStringLiteral("bla"));
+    QVERIFY(info.isValid());
+    info.setName(QStringLiteral(" "));
+    QVERIFY(!info.isValid());
+    info.setName(QStringLiteral("foo"));
+    info.setExecutable(QStringLiteral(" "));
+    QVERIFY(!info.isValid());
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptInfoTest)

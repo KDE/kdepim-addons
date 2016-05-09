@@ -36,6 +36,7 @@ public:
     QString description() const;
     void setDescription(const QString &description);
 
+    bool isValid() const;
 private:
     QString mCommandLine;
     QString mName;
