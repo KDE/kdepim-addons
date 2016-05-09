@@ -47,6 +47,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
             const int listSize(list.size());
             for (int i = 0; i < listSize; ++i) {
                 KConfig config(list.at(i).filePath());
+                qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << list.at(i).filePath();
                 KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
                 if (group.isValid()) {
                     ViewerPluginExternalScriptInfo info;
@@ -59,6 +60,8 @@ void ViewerPluginExternalScriptsLoadJob::start()
                     }
                 }
             }
+        } else {
+            qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory doesn't exist " << mDirectory;
         }
     }
 }

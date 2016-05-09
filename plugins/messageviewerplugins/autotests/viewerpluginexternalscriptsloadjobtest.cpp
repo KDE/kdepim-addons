@@ -46,4 +46,14 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldAssignDirectory()
     QCOMPARE(job.externalScriptsDirectory(), dir);
 }
 
+void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QString dir = QLatin1String(TEST_DATA_DIR);
+    job.setExternalScriptsDirectory(dir);
+    QCOMPARE(job.externalScriptsDirectory(), dir);
+    job.start();
+    QCOMPARE(job.scriptInfos().count(), 1);
+}
+
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)

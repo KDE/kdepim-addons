@@ -30,6 +30,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValues();
     void shouldAssignDirectory();
+    void shouldLoadDataInfo();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H
