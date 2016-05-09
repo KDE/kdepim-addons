@@ -19,6 +19,8 @@
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
 
+#include <KConfig>
+#include <KConfigGroup>
 #include <QDir>
 
 ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob(QObject *parent)
@@ -44,9 +46,15 @@ void ViewerPluginExternalScriptsLoadJob::start()
             const QFileInfoList list = dir.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
             const int listSize(list.size());
             for (int i = 0; i < listSize; ++i) {
-
+                KConfig config(list.at(i).filePath());
+                KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
+                if (group.isValid()) {
+                    ViewerPluginExternalScriptInfo info;
+                    info.setName(group.readEntry("Name", QString()));
+                    //TODO is valid ?
+                    mScriptInfos.append(info);
+                }
             }
-
         }
         //TODO read desktop file
     }
