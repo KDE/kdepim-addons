@@ -43,7 +43,7 @@ private:
     void createAction(KActionCollection *ac);
     void clear();
     QList<QAction *> mAction;
-    QString adaptArguments(const QString &scriptArguments);
+    QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
     QString mSelectedText;
     KMime::Message::Ptr mMessage;

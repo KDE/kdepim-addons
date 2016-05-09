@@ -15,27 +15,22 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
-#define VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
+#ifndef VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H
+#define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H
 
-#include "viewerpluginexternalscriptinfo.h"
+#include <KMime/Message>
 
-#include <QVector>
-
-class ViewerPluginExternalScriptsLoadJob
+class ViewerPluginExternalScriptParseArgument
 {
 public:
-    ViewerPluginExternalScriptsLoadJob();
-    ~ViewerPluginExternalScriptsLoadJob();
+    ViewerPluginExternalScriptParseArgument();
 
-    void start();
-    void setExternalScriptsDirectories(const QStringList &dir);
-    QStringList externalScriptsDirectories() const;
-    QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    void setMessage(const KMime::Message::Ptr &msg);
+
+    QStringList parse(const QStringList &lst);
 
 private:
-    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
-    QStringList mDirectories;
+    KMime::Message::Ptr mMessage;
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
+#endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H

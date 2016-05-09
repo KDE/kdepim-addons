@@ -15,27 +15,20 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
-#define VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
+#ifndef VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
+#define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
 
-#include "viewerpluginexternalscriptinfo.h"
+#include <QObject>
 
-#include <QVector>
-
-class ViewerPluginExternalScriptsLoadJob
+class ViewerPluginExternalScriptParseArgumentTest : public QObject
 {
+    Q_OBJECT
 public:
-    ViewerPluginExternalScriptsLoadJob();
-    ~ViewerPluginExternalScriptsLoadJob();
+    explicit ViewerPluginExternalScriptParseArgumentTest(QObject *parent = Q_NULLPTR);
+    ~ViewerPluginExternalScriptParseArgumentTest();
 
-    void start();
-    void setExternalScriptsDirectories(const QStringList &dir);
-    QStringList externalScriptsDirectories() const;
-    QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
-
-private:
-    QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
-    QStringList mDirectories;
+private Q_SLOTS:
+    void shouldReturnOriginalStringListWhenMessageIsNotSetting();
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
+#endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H

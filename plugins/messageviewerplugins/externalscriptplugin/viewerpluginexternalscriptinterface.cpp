@@ -18,6 +18,7 @@
 #include "viewerpluginexternalscriptinterface.h"
 #include "viewerpluginexternalscriptmanager.h"
 #include "externalscriptplugin_debug.h"
+#include "viewerpluginexternalscriptparseargument.h"
 
 #include <QHBoxLayout>
 #include <QIcon>
@@ -66,15 +67,15 @@ void ViewerPluginExternalscriptInterface::setText(const QString &text)
 void ViewerPluginExternalscriptInterface::execute()
 {
     if (mCurrentInfo.count() == 2) {
-        const QString newCommandLine = adaptArguments(mCurrentInfo.at(0));
         const QString executable = mCurrentInfo.at(1);
         const QString executablePath = QStandardPaths::findExecutable(executable);
         if (executablePath.isEmpty()) {
             KMessageBox::error(0, i18n("\'%1\' not found", executable), i18n("Executable not found."));
         } else {
             QProcess proc;
+            const QStringList newCommandLine = mCurrentInfo.at(0).split(QLatin1Char(' '), QString::SkipEmptyParts);
             qDebug() << " executablePath" << executablePath << " newCommandLine" << newCommandLine;
-            const QStringList splitArguments = newCommandLine.split(QLatin1Char(' '), QString::SkipEmptyParts);
+            const QStringList splitArguments = adaptArguments(newCommandLine);
             qDebug() << " splitArguments" << splitArguments;
             if (!proc.startDetached(executablePath, splitArguments)) {
                 KMessageBox::error(0, i18n("Impossible to start executable"));
@@ -126,17 +127,9 @@ void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
     slotActivatePlugin();
 }
 
-QString ViewerPluginExternalscriptInterface::adaptArguments(const QString &scriptArguments)
+QStringList ViewerPluginExternalscriptInterface::adaptArguments(const QStringList &scriptArguments)
 {
-    QString newArguments = scriptArguments;
-    if (newArguments.contains(QStringLiteral("%s"))) {
-        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : Q_NULLPTR;
-        newArguments.replace(QStringLiteral("%s"), QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString()));
-    }
-
-
-    //TODO %s => subject
-    // %cc => cc
-    // etc. Look at parsing in kmkernel.
-    return newArguments;
+    ViewerPluginExternalScriptParseArgument parser;
+    parser.setMessage(mMessage);
+    return parser.parse(scriptArguments);
 }

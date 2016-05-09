@@ -22,8 +22,7 @@
 #include <KConfigGroup>
 #include <QDir>
 
-ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob(QObject *parent)
-    : QObject(parent)
+ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob()
 {
 
 }
