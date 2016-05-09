@@ -51,7 +51,6 @@ public:
 
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
 
-
     static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
 private Q_SLOTS:

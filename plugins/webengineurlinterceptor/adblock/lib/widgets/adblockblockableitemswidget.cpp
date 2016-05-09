@@ -70,7 +70,7 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
 
 void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
 {
-    Q_FOREACH(const AdBlockResult &res, result) {
+    Q_FOREACH (const AdBlockResult &res, result) {
         QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
         item->setText(Url, res.src);
         switch (res.type) {

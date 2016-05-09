@@ -74,7 +74,6 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadEmptyDesktop()
     const int listSize(list.size());
     QCOMPARE(listSize, 1);
 
-
     QCOMPARE(job.externalScriptsDirectories(), dirs);
     job.start();
     QCOMPARE(job.scriptInfos().count(), 0);

@@ -54,7 +54,7 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const
 {
     QList<QAction *> lstAction;
-    qDebug()<<" mAdblockManager->isEnabled()"<<mAdblockManager->isEnabled();
+    qDebug() << " mAdblockManager->isEnabled()" << mAdblockManager->isEnabled();
     if (mAdblockManager->isEnabled()) {
         lstAction.append(mShowBlockableItems);
         if (!result.imageUrl().isEmpty()) {

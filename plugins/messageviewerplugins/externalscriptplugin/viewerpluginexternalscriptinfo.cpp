@@ -65,5 +65,5 @@ void ViewerPluginExternalScriptInfo::setDescription(const QString &description)
 bool ViewerPluginExternalScriptInfo::isValid() const
 {
     return !mName.trimmed().isEmpty() &&
-            !mExecutable.trimmed().isEmpty();
+           !mExecutable.trimmed().isEmpty();
 }

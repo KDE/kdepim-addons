@@ -14,7 +14,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 #include "adblockresulttest.h"
 #include "../adblockblockableitemsjob.h"
 #include <QTest>

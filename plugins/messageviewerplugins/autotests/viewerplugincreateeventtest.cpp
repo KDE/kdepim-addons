@@ -23,7 +23,6 @@
 #include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
 
-
 namespace MessageViewer
 {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;

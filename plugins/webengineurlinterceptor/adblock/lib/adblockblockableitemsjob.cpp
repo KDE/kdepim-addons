@@ -117,7 +117,6 @@ void AdBlockBlockableItemsJob::adaptSource(QString &src, const QString &hostName
     }
 }
 
-
 void AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems(const QVariant &result)
 {
     const QList<QVariant> lst = result.toList();

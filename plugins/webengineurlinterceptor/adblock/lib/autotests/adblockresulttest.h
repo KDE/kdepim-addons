@@ -14,7 +14,6 @@
 * along with this program.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-
 #ifndef ADBLOCKRESULTTEST_H
 #define ADBLOCKRESULTTEST_H
 

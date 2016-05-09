@@ -61,7 +61,7 @@ AdblockManager::~AdblockManager()
 void AdblockManager::reloadConfig()
 {
     mEnabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
-    qDebug()<<" void AdblockManager::reloadConfig()"<< mEnabled << "  "<<this;
+    qDebug() << " void AdblockManager::reloadConfig()" << mEnabled << "  " << this;
     //TODO
 }
 

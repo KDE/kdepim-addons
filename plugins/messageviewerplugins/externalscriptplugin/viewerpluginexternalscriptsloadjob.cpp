@@ -15,7 +15,6 @@
   51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
 */
 
-
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
 
@@ -40,7 +39,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
     if (mDirectories.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
-        Q_FOREACH(const QString &directory, mDirectories) {
+        Q_FOREACH (const QString &directory, mDirectories) {
             QDir dir(directory);
             if (dir.exists()) {
                 const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;

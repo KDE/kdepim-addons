@@ -43,7 +43,6 @@ public:
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
-
     QWebEngineView *webEngineView() const;
     void start();
 
@@ -61,19 +60,20 @@ private:
     QWebEngineView *mWebEngineView;
 };
 
-struct ADBLOCKLIB_EXPORT AdBlockResult
-{
+struct ADBLOCKLIB_EXPORT AdBlockResult {
     AdBlockResult()
         : type(AdBlockBlockableItemsJob::UnKnown)
     {
 
     }
 
-    bool isValid() const {
+    bool isValid() const
+    {
         return (!src.isEmpty()) && (type != AdBlockBlockableItemsJob::UnKnown);
     }
 
-    bool operator==(const AdBlockResult &other) const {
+    bool operator==(const AdBlockResult &other) const
+    {
         return (src == other.src) && (type == other.type);
     }
     QString src;
