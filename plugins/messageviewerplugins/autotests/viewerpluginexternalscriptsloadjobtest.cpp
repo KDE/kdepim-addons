@@ -35,23 +35,23 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()
 {
     ViewerPluginExternalScriptsLoadJob job;
     QVERIFY(job.scriptInfos().isEmpty());
-    QVERIFY(job.externalScriptsDirectory().isEmpty());
+    QVERIFY(job.externalScriptsDirectories().isEmpty());
 }
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldAssignDirectory()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    const QString dir = QStringLiteral("test_dir");
-    job.setExternalScriptsDirectory(dir);
-    QCOMPARE(job.externalScriptsDirectory(), dir);
+    const QStringList dirs = QStringList() << QStringLiteral("test_dir");
+    job.setExternalScriptsDirectories(dirs);
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
 }
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    const QString dir = QLatin1String(TEST_DATA_DIR);
-    job.setExternalScriptsDirectory(dir);
-    QCOMPARE(job.externalScriptsDirectory(), dir);
+    const QStringList dirs = { QLatin1String(TEST_DATA_DIR) + QStringLiteral("/correctdesktop/")};
+    job.setExternalScriptsDirectories(dirs);
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
     job.start();
     QCOMPARE(job.scriptInfos().count(), 1);
     ViewerPluginExternalScriptInfo info = job.scriptInfos().first();
@@ -59,6 +59,55 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
     QCOMPARE(info.name(), QStringLiteral("foo"));
     QCOMPARE(info.description(), QStringLiteral("description"));
     QCOMPARE(info.executable(), QStringLiteral("bla"));
+}
+
+void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadEmptyDesktop()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QStringList dirs = { QLatin1String(TEST_DATA_DIR) + QStringLiteral("/emptydesktop/") };
+    job.setExternalScriptsDirectories(dirs);
+
+    QDir directory(dirs.at(0));
+    QVERIFY(directory.exists());
+    const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;
+    const QFileInfoList list = directory.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
+    const int listSize(list.size());
+    QCOMPARE(listSize, 1);
+
+
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
+    job.start();
+    QCOMPARE(job.scriptInfos().count(), 0);
+}
+
+void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadNoNameDesktop()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QStringList dirs = { QLatin1String(TEST_DATA_DIR) + QStringLiteral("/nonamedesktop/") };
+    job.setExternalScriptsDirectories(dirs);
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
+    job.start();
+    QCOMPARE(job.scriptInfos().count(), 0);
+}
+
+void ViewerPluginExternalScriptsLoadJobTest::shouldLoadTwoDifferentDesktopFile()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QStringList dirs = { QLatin1String(TEST_DATA_DIR) + QStringLiteral("/twodesktopfiles/") };
+    job.setExternalScriptsDirectories(dirs);
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
+    job.start();
+    QCOMPARE(job.scriptInfos().count(), 2);
+}
+
+void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadTwoSameNameDesktopFile()
+{
+    ViewerPluginExternalScriptsLoadJob job;
+    const QStringList dirs = { QLatin1String(TEST_DATA_DIR) + QStringLiteral("/twosamenamedesktopfiles/") };
+    job.setExternalScriptsDirectories(dirs);
+    QCOMPARE(job.externalScriptsDirectories(), dirs);
+    job.start();
+    QCOMPARE(job.scriptInfos().count(), 1);
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)

@@ -31,6 +31,10 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
     void shouldAssignDirectory();
     void shouldLoadDataInfo();
+    void shouldNotLoadEmptyDesktop();
+    void shouldNotLoadNoNameDesktop();
+    void shouldLoadTwoDifferentDesktopFile();
+    void shouldNotLoadTwoSameNameDesktopFile();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H
