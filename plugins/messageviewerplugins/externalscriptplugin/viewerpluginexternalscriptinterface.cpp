@@ -130,7 +130,7 @@ QString ViewerPluginExternalscriptInterface::adaptArguments(const QString &scrip
 {
     QString newArguments = scriptArguments;
     if (newArguments.contains(QStringLiteral("%s"))) {
-        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
+        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : Q_NULLPTR;
         newArguments.replace(QStringLiteral("%s"), QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString()));
     }
 
