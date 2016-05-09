@@ -74,6 +74,7 @@ void ViewerPluginExternalscriptInterface::clear()
 {
     mSelectedText.clear();
     mCurrentInfo.clear();
+    mMessage.clear();
 }
 
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
