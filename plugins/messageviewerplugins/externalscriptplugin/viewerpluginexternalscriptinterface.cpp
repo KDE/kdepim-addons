@@ -74,7 +74,7 @@ void ViewerPluginExternalscriptInterface::execute()
         } else {
             QProcess proc;
             qDebug() << " executablePath" << executablePath << " newCommandLine" << newCommandLine;
-            const QStringList splitArguments = newCommandLine.split(QLatin1Char(' '));
+            const QStringList splitArguments = newCommandLine.split(QLatin1Char(' '), QString::SkipEmptyParts);
             qDebug() << " splitArguments" << splitArguments;
             if (!proc.startDetached(executablePath, splitArguments)) {
                 KMessageBox::error(0, i18n("Impossible to start executable"));
