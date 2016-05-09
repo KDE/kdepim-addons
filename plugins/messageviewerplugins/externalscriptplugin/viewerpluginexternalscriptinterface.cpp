@@ -128,8 +128,15 @@ void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
 
 QString ViewerPluginExternalscriptInterface::adaptArguments(const QString &scriptArguments)
 {
+    QString newArguments = scriptArguments;
+    if (newArguments.contains(QStringLiteral("%s"))) {
+        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
+        newArguments.replace(QStringLiteral("%s"), QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString()));
+    }
+
+
     //TODO %s => subject
     // %cc => cc
     // etc. Look at parsing in kmkernel.
-    return {};
+    return newArguments;
 }
