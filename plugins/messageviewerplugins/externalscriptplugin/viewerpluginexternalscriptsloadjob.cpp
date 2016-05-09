@@ -37,43 +37,49 @@ ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob()
 void ViewerPluginExternalScriptsLoadJob::start()
 {
     mScriptInfos.clear();
-    if (mDirectory.isEmpty()) {
+    if (mDirectories.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
-        QDir dir(mDirectory);
-        if (dir.exists()) {
-            const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;
-            const QFileInfoList list = dir.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
-            const int listSize(list.size());
-            for (int i = 0; i < listSize; ++i) {
-                KConfig config(list.at(i).filePath());
-                qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << list.at(i).filePath();
-                KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
-                if (group.isValid()) {
-                    ViewerPluginExternalScriptInfo info;
-                    info.setName(group.readEntry("Name", QString()));
-                    info.setExecutable(group.readEntry("Executable", QString()));
-                    info.setCommandLine(group.readEntry("CommandLine", QString()));
-                    info.setDescription(group.readEntry("Description", QString()));
-                    if (info.isValid()) {
-                        mScriptInfos.append(info);
+        Q_FOREACH(const QString &directory, mDirectories) {
+            QDir dir(directory);
+            if (dir.exists()) {
+                const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;
+                const QFileInfoList list = dir.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
+                const int listSize(list.size());
+                QStringList scriptNames;
+                for (int i = 0; i < listSize; ++i) {
+                    KConfig config(list.at(i).filePath());
+                    qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << list.at(i).filePath();
+                    KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
+
+                    if (group.isValid()) {
+                        ViewerPluginExternalScriptInfo info;
+                        const QString name = group.readEntry("Name", QString());
+                        info.setName(name);
+                        info.setExecutable(group.readEntry("Executable", QString()));
+                        info.setCommandLine(group.readEntry("CommandLine", QString()));
+                        info.setDescription(group.readEntry("Description", QString()));
+                        if (info.isValid() && !scriptNames.contains(name)) {
+                            mScriptInfos.append(info);
+                            scriptNames.append(name);
+                        }
                     }
                 }
+            } else {
+                qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory doesn't exist " << mDirectories;
             }
-        } else {
-            qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory doesn't exist " << mDirectory;
         }
     }
 }
 
-void ViewerPluginExternalScriptsLoadJob::setExternalScriptsDirectory(const QString &dir)
+void ViewerPluginExternalScriptsLoadJob::setExternalScriptsDirectories(const QStringList &dir)
 {
-    mDirectory = dir;
+    mDirectories = dir;
 }
 
-QString ViewerPluginExternalScriptsLoadJob::externalScriptsDirectory() const
+QStringList ViewerPluginExternalScriptsLoadJob::externalScriptsDirectories() const
 {
-    return mDirectory;
+    return mDirectories;
 }
 
 QVector<ViewerPluginExternalScriptInfo> ViewerPluginExternalScriptsLoadJob::scriptInfos() const

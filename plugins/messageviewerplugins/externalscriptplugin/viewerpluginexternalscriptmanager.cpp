@@ -18,6 +18,8 @@
 #include "viewerpluginexternalscriptmanager.h"
 #include "viewerpluginexternalscriptsloadjob.h"
 
+#include <QStandardPaths>
+
 class ViewerPluginExternalScriptManagerInstancePrivate
 {
 public:
@@ -55,8 +57,8 @@ ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 void ViewerPluginExternalScriptManager::readExternalScriptInfo()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    //TODO
-    job.setExternalScriptsDirectory(QString());
+    const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
+    job.setExternalScriptsDirectories(lst);
     job.start();
     mScriptInfos = job.scriptInfos();
 }

@@ -43,7 +43,6 @@ endmacro ()
 
 
 add_messageviewer_viewerplugin_class_unittest(viewerpluginmanagertest.cpp)
-add_messageviewer_viewerplugin_class_unittest(viewerplugintoolmanagertest.cpp)
 add_messageviewer_viewerplugin_widget_unittest(todoedittest.cpp "../createtodoplugin/todoedit.cpp")
 add_messageviewer_viewerplugin_widget_unittest(noteedittest.cpp "../createnoteplugin/noteedit.cpp")
 set_tests_properties(messageviewerplugins-todoedittest PROPERTIES ENVIRONMENT "LC_ALL=C")

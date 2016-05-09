@@ -32,13 +32,13 @@ public:
     ~ViewerPluginExternalScriptsLoadJob();
 
     void start();
-    void setExternalScriptsDirectory(const QString &dir);
-    QString externalScriptsDirectory() const;
+    void setExternalScriptsDirectories(const QStringList &dir);
+    QStringList externalScriptsDirectories() const;
     QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
-    QString mDirectory;
+    QStringList mDirectories;
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H

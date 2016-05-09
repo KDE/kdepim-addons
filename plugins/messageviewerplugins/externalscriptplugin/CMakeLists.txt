@@ -14,4 +14,7 @@ target_link_libraries(messageviewer_externalscriptplugin
 )
 
 install(TARGETS messageviewer_externalscriptplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
- 
+
+if (KDEPIMADDONS_BUILD_EXAMPLES)
+   add_subdirectory(examples)
+endif() 

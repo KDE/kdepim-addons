@@ -23,9 +23,12 @@
 #include <QIcon>
 #include <QAction>
 #include <QDebug>
+#include <QStandardPaths>
+#include <QProcess>
 
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 using namespace MessageViewer;
 
@@ -63,7 +66,20 @@ void ViewerPluginExternalscriptInterface::setText(const QString &text)
 void ViewerPluginExternalscriptInterface::execute()
 {
     if (mCurrentInfo.count() == 2) {
-        //TODO
+        const QString newCommandLine = adaptArguments(mCurrentInfo.at(0));
+        const QString executable = mCurrentInfo.at(1);
+        const QString executablePath = QStandardPaths::findExecutable(executable);
+        if (executablePath.isEmpty()) {
+            KMessageBox::error(0, i18n("\'%1\' not found", executable), i18n("Executable not found."));
+        } else {
+            QProcess proc;
+            qDebug()<<" executablePath"<<executablePath<<" newCommandLine"<<newCommandLine;
+            const QStringList splitArguments = newCommandLine.split(QLatin1Char(' '));
+            qDebug()<<" splitArguments"<<splitArguments;
+            if (!proc.startDetached(executablePath, splitArguments)) {
+                KMessageBox::error(0, i18n("Impossible to start executable"));
+            }
+        }
     } else {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "Problem with number of arguments " << mCurrentInfo.count();
     }
@@ -93,8 +109,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
                 QStringList actionInfo;
-                const QString newCommandLine = adaptArguments(info.commandLine());
-                actionInfo.append(newCommandLine);
+                actionInfo.append(info.commandLine());
                 actionInfo.append(info.executable());
 
                 act->setData(actionInfo);
