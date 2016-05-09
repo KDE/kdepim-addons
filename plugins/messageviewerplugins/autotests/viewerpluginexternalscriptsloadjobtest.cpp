@@ -54,6 +54,11 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
     QCOMPARE(job.externalScriptsDirectory(), dir);
     job.start();
     QCOMPARE(job.scriptInfos().count(), 1);
+    ViewerPluginExternalScriptInfo info = job.scriptInfos().first();
+    QCOMPARE(info.commandLine(), QStringLiteral("foo-bla"));
+    QCOMPARE(info.name(), QStringLiteral("foo"));
+    QCOMPARE(info.description(), QStringLiteral("description"));
+    QCOMPARE(info.executable(), QStringLiteral("bla"));
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)
