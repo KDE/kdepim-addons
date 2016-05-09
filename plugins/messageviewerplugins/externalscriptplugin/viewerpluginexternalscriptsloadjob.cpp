@@ -19,6 +19,8 @@
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
 
+#include <QDir>
+
 ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob(QObject *parent)
     : QObject(parent)
 {
@@ -36,6 +38,16 @@ void ViewerPluginExternalScriptsLoadJob::start()
     if (mDirectory.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
+        QDir dir(mDirectory);
+        if (dir.exists()) {
+            const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;
+            const QFileInfoList list = dir.entryInfoList(QStringList() << QStringLiteral("*.desktop"), filters);
+            const int listSize(list.size());
+            for (int i = 0; i < listSize; ++i) {
+
+            }
+
+        }
         //TODO read desktop file
     }
 }
