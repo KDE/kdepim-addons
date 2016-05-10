@@ -19,13 +19,16 @@
 #define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
 
 #include <QObject>
-
+#include <KMime/Message>
 class ViewerPluginExternalScriptParseArgumentTest : public QObject
 {
     Q_OBJECT
 public:
     explicit ViewerPluginExternalScriptParseArgumentTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalScriptParseArgumentTest();
+
+private:
+    void initializeMessage(const KMime::Message::Ptr &msg);
 
 private Q_SLOTS:
     void shouldReturnOriginalStringListWhenMessageIsNotSetting();
