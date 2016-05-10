@@ -37,12 +37,21 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
     Q_FOREACH(const QString &arg, scriptArguments) {
         if (arg == QString::fromLatin1("%s")) {
             const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : Q_NULLPTR;
-            newArguments << QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString());
+            newArguments << QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString());  
+        } else if (arg == QString::fromLatin1("%from")) {
+            const KMime::Headers::From *const from = mMessage ? mMessage->from(false) : Q_NULLPTR;
+            newArguments << QStringLiteral("\"%1\"").arg(from ? from->asUnicodeString() : QString());
+        } else if (arg == QString::fromLatin1("%to")) {
+            const KMime::Headers::To *const to = mMessage ? mMessage->to(false) : Q_NULLPTR;
+            newArguments << QStringLiteral("\"%1\"").arg(to ? to->asUnicodeString() : QString());
+        } else if (arg == QString::fromLatin1("%cc")) {
+            const KMime::Headers::Cc *const cc = mMessage ? mMessage->cc(false) : Q_NULLPTR;
+            newArguments << QStringLiteral("\"%1\"").arg(cc ? cc->asUnicodeString() : QString());
         } else {
             newArguments << arg;
         }
     }
 
-    //TODO
+    //TODO add more arguments
     return newArguments;
 }

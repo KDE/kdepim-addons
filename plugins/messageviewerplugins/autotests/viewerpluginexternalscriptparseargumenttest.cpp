@@ -70,6 +70,28 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
     QCOMPARE(parser.parse(lst), result);
 }
 
+void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTo()
+{
+    ViewerPluginExternalScriptParseArgument parser;
+    KMime::Message::Ptr message(new KMime::Message);
+    initializeMessage(message);
+    parser.setMessage(message);
+    const QStringList lst = { QStringLiteral("%to") };
+    const QStringList result = { QStringLiteral("\"kde@example.com\"") };
+    QCOMPARE(parser.parse(lst), result);
+}
+
+void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgumentIsNotDefined()
+{
+    ViewerPluginExternalScriptParseArgument parser;
+    KMime::Message::Ptr message(new KMime::Message);
+    initializeMessage(message);
+    parser.setMessage(message);
+    const QStringList lst = { QStringLiteral("%cc") };
+    const QStringList result = { QStringLiteral("\"\"") };
+    QCOMPARE(parser.parse(lst), result);
+}
+
 void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
 {
     QByteArray mail = "From: dfaure@example.com\n"

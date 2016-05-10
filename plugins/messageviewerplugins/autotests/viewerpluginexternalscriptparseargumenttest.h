@@ -35,6 +35,8 @@ private Q_SLOTS:
     void shouldReturnSubject();
     void shouldReturnSameListIfNotTransform();
     void shouldReturnTwiceSubject();
+    void shouldReturnTo();
+    void shouldReturnEmptyStrWhenArgumentIsNotDefined();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
