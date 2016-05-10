@@ -33,6 +33,8 @@ private:
 private Q_SLOTS:
     void shouldReturnOriginalStringListWhenMessageIsNotSetting();
     void shouldReturnSubject();
+    void shouldReturnSameListIfNotTransform();
+    void shouldReturnTwiceSubject();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
