@@ -6,7 +6,7 @@ We need to create a desktop file for it.
 
 Arguments:
 - %s returns subject
-- %b returns body
+- %body returns body
 - %to returns "to"
 - %cc returns "cc"
 - %from returns "from"

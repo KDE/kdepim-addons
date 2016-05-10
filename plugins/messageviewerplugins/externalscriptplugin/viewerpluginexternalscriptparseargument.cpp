@@ -47,6 +47,9 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
         } else if (arg == QString::fromLatin1("%cc")) {
             const KMime::Headers::Cc *const cc = mMessage ? mMessage->cc(false) : Q_NULLPTR;
             newArguments << QStringLiteral("\"%1\"").arg(cc ? cc->asUnicodeString() : QString());
+        } else if (arg == QString::fromLatin1("%body")) {
+            const QByteArray body = mMessage ? mMessage->body() : Q_NULLPTR;
+            newArguments << QStringLiteral("\"%1\"").arg(QLatin1String(body));
         } else {
             newArguments << arg;
         }

@@ -92,6 +92,17 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgume
     QCOMPARE(parser.parse(lst), result);
 }
 
+void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
+{
+    ViewerPluginExternalScriptParseArgument parser;
+    KMime::Message::Ptr message(new KMime::Message);
+    initializeMessage(message);
+    parser.setMessage(message);
+    const QStringList lst = { QStringLiteral("%body") };
+    const QStringList result = { QStringLiteral("\"Hello this is a test mail\n\"") };
+    QCOMPARE(parser.parse(lst), result);
+}
+
 void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
 {
     QByteArray mail = "From: dfaure@example.com\n"
