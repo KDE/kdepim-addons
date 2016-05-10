@@ -38,6 +38,16 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringList
     QCOMPARE(parser.parse(lst), lst);
 }
 
+void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSubject()
+{
+    ViewerPluginExternalScriptParseArgument parser;
+    KMime::Message::Ptr message(new KMime::Message);
+    initializeMessage(message);
+    parser.setMessage(message);
+    const QStringList lst = { QStringLiteral("%s") };
+    const QStringList result = { QStringLiteral("\"Akademy\"") };
+    QCOMPARE(parser.parse(lst), result);
+}
 
 void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
 {
@@ -53,6 +63,7 @@ void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime:
                       "\n"
                       "Hello this is a test mail\n";
     msg->setContent(mail);
+    msg->parse();
 }
 
 
