@@ -103,10 +103,22 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
     QCOMPARE(parser.parse(lst), result);
 }
 
+void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBcc()
+{
+    ViewerPluginExternalScriptParseArgument parser;
+    KMime::Message::Ptr message(new KMime::Message);
+    initializeMessage(message);
+    parser.setMessage(message);
+    const QStringList lst = { QStringLiteral("%bcc") };
+    const QStringList result = { QStringLiteral("\"kde1@example.com\"") };
+    QCOMPARE(parser.parse(lst), result);
+}
+
 void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
 {
     QByteArray mail = "From: dfaure@example.com\n"
                       "To: kde@example.com\n"
+                      "Bcc: kde1@example.com\n"
                       "Sender: dfaure@example.com\n"
                       "MIME-Version: 1.0\n"
                       "Date: 02 Jul 2010 23:58:21 -0000\n"

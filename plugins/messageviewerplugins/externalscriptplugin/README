@@ -10,5 +10,5 @@ Arguments:
 - %to returns "to"
 - %cc returns "cc"
 - %from returns "from"
-
+- %bcc returns "bcc"
 

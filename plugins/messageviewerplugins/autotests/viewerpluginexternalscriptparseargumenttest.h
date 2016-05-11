@@ -38,6 +38,7 @@ private Q_SLOTS:
     void shouldReturnTo();
     void shouldReturnEmptyStrWhenArgumentIsNotDefined();
     void shouldReturnBody();
+    void shouldReturnBcc();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
