@@ -1,6 +1,6 @@
 [Desktop Entry]
 Name=Search Subject on Web
 Executable=firefox
-CommandLine=%s
+CommandLine=--search %s
 Description=Search subject on web
 
