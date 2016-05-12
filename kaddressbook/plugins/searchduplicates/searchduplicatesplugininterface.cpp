@@ -57,7 +57,7 @@ void SearchDuplicatesPluginInterface::exec()
     delete dlg;
 }
 
-void SearchDuplicatesPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
+void SearchDuplicatesPluginInterface::setItems(const Akonadi::Item::List &items)
 {
     Akonadi::Item::List onlyContactList;
     Q_FOREACH (const Akonadi::Item &item, items) {
@@ -71,5 +71,5 @@ void SearchDuplicatesPluginInterface::setCurrentItems(const Akonadi::Item::List 
 
 PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requires() const
 {
-    return PimCommon::GenericPluginInterface::CurrentItems;
+    return PimCommon::GenericPluginInterface::Items;
 }
