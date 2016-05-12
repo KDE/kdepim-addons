@@ -38,7 +38,7 @@ using namespace KABMergeContacts;
 SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateContactDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Select Contacts to merge"));
+    setWindowTitle(i18n("Search and Select Duplicate Contacts to merge"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
