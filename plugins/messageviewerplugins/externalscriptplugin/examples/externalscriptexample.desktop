@@ -1,6 +1,24 @@
 [Desktop Entry]
 Name=Search Subject on Web
+Name[ca]=Cerca l'assumpte al web
+Name[ca@valencia]=Cerca l'assumpte al web
+Name[gl]=Buscar o asunto en internet
+Name[nl]=Onderwerp op het Web zoeken
+Name[pt]=Pesquisar o Assunto na Web
+Name[pt_BR]=Pesquisar assunto na Web
+Name[sv]=Sök ämne på webben
+Name[uk]=Пошук теми у інтернеті
+Name[x-test]=xxSearch Subject on Webxx
 Executable=firefox
 CommandLine=--search %s
 Description=Search subject on web
+Description[ca]=Cerca l'assumpte al web
+Description[ca@valencia]=Cerca l'assumpte al web
+Description[gl]=Buscar o asunto en internet.
+Description[nl]=Onderwerp op het Web zoeken
+Description[pt]=Pesquisar o assunto na Web
+Description[pt_BR]=Pesquisa o assunto na Web
+Description[sv]=Sök ämne på webben
+Description[uk]=Пошук теми у інтернеті
+Description[x-test]=xxSearch subject on webxx
 
