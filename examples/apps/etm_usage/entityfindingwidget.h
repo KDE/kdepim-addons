@@ -36,7 +36,7 @@ class FindingETW : public EntityTreeWidget
 public:
     FindingETW(QWidget *parent = Q_NULLPTR);
 
-    virtual void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model);
+    void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE;
 
 Q_SIGNALS:
     void initialized();

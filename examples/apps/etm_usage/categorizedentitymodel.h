@@ -34,7 +34,7 @@ public:
 
     }
 
-    virtual QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (role == KCategorizedSortFilterProxyModel::CategorySortRole) {
             return index.data(MimeTypeRole);

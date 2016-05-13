@@ -48,7 +48,7 @@ public:
     {
     }
 
-    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model)
+    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE
     {
         m_collectionFilter = new Akonadi::EntityMimeTypeFilterModel(this);
         m_collectionFilter->addMimeTypeInclusionFilter(Akonadi::Collection::mimeType());
@@ -64,12 +64,12 @@ public:
         tree->setModel(m_checkableProxy);
     }
 
-    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx)
+    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE
     {
         return m_collectionFilter->mapToSource(idx);
     }
 
-    virtual Akonadi::EntityTreeModel *getETM()
+    Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE
     {
         MixedTreeModel *model = new MixedTreeModel(changeRecorder(), this);
         return model;

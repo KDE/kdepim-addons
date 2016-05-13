@@ -38,7 +38,7 @@ public:
     UnreadMailsTree(QObject *parent = Q_NULLPTR);
 
 protected:
-    /* reimp */ bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const;
+    /* reimp */ bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
 
 };
 
