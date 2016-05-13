@@ -2,6 +2,7 @@
 Name=Search Subject on Web
 Name[ca]=Cerca l'assumpte al web
 Name[ca@valencia]=Cerca l'assumpte al web
+Name[de]=Thema im Internet suchen
 Name[gl]=Buscar o asunto en internet
 Name[nl]=Onderwerp op het Web zoeken
 Name[pt]=Pesquisar o Assunto na Web
@@ -14,6 +15,7 @@ CommandLine=--search %s
 Description=Search subject on web
 Description[ca]=Cerca l'assumpte al web
 Description[ca@valencia]=Cerca l'assumpte al web
+Description[de]=Thema im Internet suchen
 Description[gl]=Buscar o asunto en internet.
 Description[nl]=Onderwerp op het Web zoeken
 Description[pt]=Pesquisar o assunto na Web
