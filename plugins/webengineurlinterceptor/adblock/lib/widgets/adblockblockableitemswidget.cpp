@@ -100,13 +100,14 @@ void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
 
     QMenu menu;
     menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy url"), this, SLOT(slotCopyItem()));
-    if (!item->text(FilterValue).isEmpty()) {
+    const bool filterValueIsNotEmpty = !item->text(FilterValue).isEmpty();
+    if (filterValueIsNotEmpty) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy filter"), this, SLOT(slotCopyFilterItem()));
     }
     menu.addAction(i18n("Block item..."), this, SLOT(slotBlockItem()));
     menu.addSeparator();
     menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, SLOT(slotOpenItem()));
-    if (!item->text(FilterValue).isEmpty()) {
+    if (filterValueIsNotEmpty) {
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove filter"), this, SLOT(slotRemoveFilter()));
     }
