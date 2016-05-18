@@ -47,10 +47,7 @@ include(ECMQtDeclareLoggingCategory)
 
 option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets)
-
-
-find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets Test)
+find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
 
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_VERSION} CONFIG REQUIRED)
