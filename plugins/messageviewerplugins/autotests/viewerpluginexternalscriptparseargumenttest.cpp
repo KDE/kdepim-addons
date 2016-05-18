@@ -19,7 +19,6 @@
 #include "../externalscriptplugin/viewerpluginexternalscriptparseargument.h"
 #include <QTest>
 
-
 ViewerPluginExternalScriptParseArgumentTest::ViewerPluginExternalScriptParseArgumentTest(QObject *parent)
     : QObject(parent)
 {
@@ -131,6 +130,5 @@ void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime:
     msg->setContent(mail);
     msg->parse();
 }
-
 
 QTEST_MAIN(ViewerPluginExternalScriptParseArgumentTest)

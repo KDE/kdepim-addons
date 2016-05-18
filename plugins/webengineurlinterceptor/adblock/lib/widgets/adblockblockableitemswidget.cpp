@@ -108,7 +108,7 @@ void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
     menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, SLOT(slotOpenItem()));
     if (!item->text(FilterValue).isEmpty()) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")),i18n("Remove filter"), this, SLOT(slotRemoveFilter()));
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove filter"), this, SLOT(slotRemoveFilter()));
     }
     menu.exec(QCursor::pos());
 }
