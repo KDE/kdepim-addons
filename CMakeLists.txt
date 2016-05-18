@@ -13,7 +13,7 @@ set(KDEPIMADDONS_DEV_VERSION pre)
 
 # add an extra space
 if(DEFINED KDEPIMADDONS_DEV_VERSION)
-  set(KDEPIMADDONS_DEV_VERSION " ${KDEPIMADDONS_DEV_VERSION}")
+    set(KDEPIMADDONS_DEV_VERSION " ${KDEPIMADDONS_DEV_VERSION}")
 endif()
 
 set(PIM_VERSION "5.2.41")
@@ -99,7 +99,7 @@ add_definitions( -DQT_NO_CAST_TO_ASCII )
 find_package(KF5GAPI "4.72.0" CONFIG)
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
-   add_subdirectory(examples)
+    add_subdirectory(examples)
 endif()
 
 add_subdirectory(plugins)
