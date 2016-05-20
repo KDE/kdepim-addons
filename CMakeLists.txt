@@ -5,7 +5,8 @@ if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
 
-find_package(ECM 5.20.0 REQUIRED NO_MODULE)
+set(KF5_VERSION "5.22.0")
+find_package(ECM ${KF5_VERSION} REQUIRED NO_MODULE)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
 
 # Do NOT add quote
@@ -16,7 +17,7 @@ if(DEFINED KDEPIMADDONS_DEV_VERSION)
     set(KDEPIMADDONS_DEV_VERSION " ${KDEPIMADDONS_DEV_VERSION}")
 endif()
 
-set(PIM_VERSION "5.2.41")
+set(PIM_VERSION "5.2.42")
 
 set(KDEPIMADDONS_VERSION_NUMBER ${PIM_VERSION})
 set(KDEPIMADDONS_VERSION "${KDEPIMADDONS_VERSION_NUMBER}${KDEPIMADDONS_DEV_VERSION}")
@@ -26,7 +27,6 @@ set(KDEPIMADDONS_LIB_SOVERSION "5")
 
 set(AKONADINOTES_LIB_VERSION "5.2.40")
 set(QT_REQUIRED_VERSION "5.6.0")
-set(KF5_VERSION "5.20.0")
 include(ECMOptionalAddSubdirectory)
 include(ECMInstallIcons)
 include(ECMSetupVersion)
@@ -93,7 +93,7 @@ add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 
 # Extra package
-find_package(KF5GAPI "4.72.0" CONFIG)
+find_package(KF5GAPI "5.1.40" CONFIG)
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
     add_subdirectory(examples)
