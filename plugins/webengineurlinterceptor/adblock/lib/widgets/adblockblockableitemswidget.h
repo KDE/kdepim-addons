@@ -59,6 +59,7 @@ private Q_SLOTS:
     void slotOpenItem();
     void slotBlockItem();
     void slotCopyItem();
+    void slotRemoveFilter();
 private:
     enum BlockType {
         FilterValue = 0,

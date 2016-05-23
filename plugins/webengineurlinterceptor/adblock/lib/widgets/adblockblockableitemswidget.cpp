@@ -248,3 +248,9 @@ QString AdBlockBlockableItemsWidget::elementType(AdBlockBlockableItemsWidget::Ty
     }
     return result;
 }
+
+void AdBlockBlockableItemsWidget::slotRemoveFilter()
+{
+    //TODO
+    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " AdBlockBlockableItemsWidget::slotRemoveFilter not implement yet";
+}
