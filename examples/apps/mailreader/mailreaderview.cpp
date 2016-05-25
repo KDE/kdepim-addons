@@ -89,6 +89,7 @@ void mailreaderView::urlClicked(const Akonadi::Item &item, const QUrl &url)
 
 void mailreaderView::slotConfigure()
 {
+#if 0
     if (KConfigDialog::showDialog(QLatin1String("mailviewersettings"))) {
         return;
     }
@@ -106,5 +107,6 @@ void mailreaderView::slotConfigure()
 
     dialog->setAttribute(Qt::WA_DeleteOnClose);
     dialog->show();
+#endif
 }
 
