@@ -53,4 +53,4 @@ void AdBlockResultTest::shouldBeValid()
     QVERIFY(!result.isValid());
 }
 
-QTEST_MAIN(AdBlockResultTest)
+QTEST_APPLESS_MAIN(AdBlockResultTest)
