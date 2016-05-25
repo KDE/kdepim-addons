@@ -12,5 +12,3 @@ add_kmail_editorplugin_unittest(rot13plugineditortest.cpp "../rot13plugineditor.
 
 add_kmail_editorplugin_unittest(rot13plugineditorinterfacetest.cpp "../rot13plugineditorinterface.cpp;../rot13job.cpp")
 
-add_kmail_editorplugin_unittest(rot13jobtest.cpp "../rot13job.cpp")
-
