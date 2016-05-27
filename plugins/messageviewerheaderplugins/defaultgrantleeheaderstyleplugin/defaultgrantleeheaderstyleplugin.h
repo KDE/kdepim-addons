@@ -24,6 +24,7 @@
 
 namespace MessageViewer
 {
+class GrantleeHeaderStyle;
 class DefaultGrantleeHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT
@@ -36,7 +37,7 @@ public:
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
 private:
-    HeaderStyle *mHeaderStyle;
+    GrantleeHeaderStyle *mHeaderStyle;
     HeaderStrategy *mHeaderStrategy;
 };
 }
