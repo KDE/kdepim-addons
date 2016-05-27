@@ -7,6 +7,9 @@ xsi:schemaLocation="http://www.kde.org/standards/kcfg/1.0 http://www.kde.org/sta
     <entry name="ThemeName" type="String">
       <default>5.2</default>
     </entry>
+    <entry name="ShowActionMail" type="bool">
+      <default>true</default>
+    </entry>
   </group>
 
 </kcfg>
