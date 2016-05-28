@@ -48,6 +48,5 @@ SettingsChangeNotifier::~SettingsChangeNotifier()
 
 void SettingsChangeNotifier::notifySettingsChanged()
 {
-    qCDebug(PIMEVENTSPLUGIN_LOG) << "====== NOTIFY SETTINGS CHANGED";
     Q_EMIT settingsChanged();
 }

@@ -69,6 +69,7 @@ PimEventsPlugin::PimEventsPlugin(QObject* parent)
 
 PimEventsPlugin::~PimEventsPlugin()
 {
+    qCDebug(PIMEVENTSPLUGIN_LOG) << "PIM Events Plugin deactivated";
 }
 
 
@@ -84,11 +85,6 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
         qCDebug(PIMEVENTSPLUGIN_LOG) << "\tFound" << events.count() << "events";
         if (visitor.act(events)) {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated" << visitor.results().count() << "EventData";
-#ifdef TRACE_RESULTS
-            Q_FOREACH (const auto &ed, visitor.results()) {
-                qCDebug(PIMEVENTSPLUGIN_LOG) << "\t" << ed;
-            }
-#endif
             Q_EMIT dataReady(visitor.results());
         } else {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated 0 EventData";
@@ -101,11 +97,6 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
         qCDebug(PIMEVENTSPLUGIN_LOG) << "\tFound" << todos.count() << "todos";
         if (visitor.act(todos)) {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated" << visitor.results().count() << "EventData";
-#ifdef TRACE_RESULTS
-            Q_FOREACH (const auto &ed, visitor.results()) {
-                qCDebug(PIMEVENTSPLUGIN_LOG) << "\t" << ed;
-            }
-#endif
             Q_EMIT dataReady(visitor.results());
         } else {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated 0 EventData";
@@ -121,7 +112,6 @@ void PimEventsPlugin::calendarIncidenceAdded(const KCalCore::Incidence::Ptr &inc
     }
     EventDataVisitor visitor(mCalendar, mStart, mEnd);
     if (visitor.act(incidence)) {
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "Incidence" << incidence->uid() << "added";
         Q_EMIT dataReady(visitor.results());
     }
 }
@@ -134,7 +124,6 @@ void PimEventsPlugin::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &i
     EventDataVisitor visitor(mCalendar, mStart, mEnd);
     if (visitor.act(incidence)) {
         Q_FOREACH (const auto &ed, visitor.results()) {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "EventData" << ed.uid() << "updated";
             Q_EMIT eventModified(ed);
         }
     }
@@ -148,7 +137,6 @@ void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalCore::Incidenc
     EventDataIdVisitor visitor(mCalendar, mStart, mEnd);
     if (visitor.act(incidence)) {
         Q_FOREACH (const QString &uid, visitor.results()) {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "EventData" << uid << "removed";
             Q_EMIT eventRemoved(uid);
         }
     }
@@ -172,11 +160,9 @@ void PimEventsPlugin::onSettingsChanged()
     qCDebug(PIMEVENTSPLUGIN_LOG) << configuredCols << currentCols;
     Q_FOREACH (const Akonadi::Collection &col, (currentCols - configuredCols)) {
         mMonitor->setCollectionMonitored(col, false);
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "Disabled calendar" << col.id();
     }
     Q_FOREACH (const Akonadi::Collection &col, (configuredCols - currentCols)) {
         mMonitor->setCollectionMonitored(col, true);
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "Enabled calendar" << col.id();
     }
 
     const bool hasSelectedCols = mMonitor->collectionsMonitored().isEmpty();
