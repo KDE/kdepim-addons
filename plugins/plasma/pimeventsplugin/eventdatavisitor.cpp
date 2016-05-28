@@ -135,7 +135,7 @@ EventDataVisitor::~EventDataVisitor()
 }
 
 
-QMultiHash<QDate, CalendarEvents::EventData> EventDataVisitor::results() const
+const QMultiHash<QDate, CalendarEvents::EventData> &EventDataVisitor::results() const
 {
     return mResults;
 }
@@ -204,7 +204,7 @@ EventDataIdVisitor::EventDataIdVisitor(Akonadi::ETMCalendar *calendar, const QDa
 {
 }
 
-QStringList EventDataIdVisitor::results() const
+const QStringList &EventDataIdVisitor::results() const
 {
     return mResults;
 }

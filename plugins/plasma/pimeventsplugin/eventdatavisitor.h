@@ -59,7 +59,7 @@ public:
     EventDataVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end);
     ~EventDataVisitor();
 
-    QMultiHash<QDate, CalendarEvents::EventData> results() const;
+    const QMultiHash<QDate, CalendarEvents::EventData> &results() const;
 
 protected:
     bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
@@ -79,7 +79,7 @@ class EventDataIdVisitor : public BaseEventDataVisitor
 public:
     explicit EventDataIdVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end);
 
-    QStringList results() const;
+    const QStringList &results() const;
 
 protected:
     bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
