@@ -93,6 +93,35 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     }
 }
 
+QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
+                                                                                    const KCalCore::Incidence::Ptr &incidence,
+                                                                                    bool &ok)
+{
+    Q_ASSERT(incidence->recurs());
+
+    const qint64 duration = ed.startDateTime().secsTo(ed.endDateTime());
+
+    KDateTime rec(mStart.addDays(-1), QTime(0, 0, 0));
+    rec = incidence->recurrence()->getNextDateTime(rec);
+    QVector<CalendarEvents::EventData> results;
+    while (rec.isValid() && rec.date() <= mEnd) {
+        CalendarEvents::EventData copy = ed;
+        const QDateTime dt = rec.dateTime();
+        copy.setStartDateTime(dt);
+        // TODO: Is there a better way to find when an instance ends without
+        // going through the expensive lookup in Incidence::instance(uid, recurrenceId)?
+        copy.setEndDateTime(dt.addSecs(duration));
+        copy.setUid(generateUid(incidence, rec));
+        results.push_back(copy);
+
+        rec = incidence->recurrence()->getNextDateTime(rec);
+    }
+
+    ok = true;
+    return results;
+}
+
+
 
 
 EventDataVisitor::EventDataVisitor(Akonadi::ETMCalendar *calendar,
@@ -117,7 +146,14 @@ bool EventDataVisitor::visit(const KCalCore::Event::Ptr &event)
     CalendarEvents::EventData data = incidenceData(event);
     data.setEventType(CalendarEvents::EventData::Event);
     if (event->recurs()) {
-        return explodeIncidenceOccurences(data, event);
+        bool ok = false;
+        const auto list = explodeIncidenceOccurences(data, event, ok);
+        if (ok) {
+            for (const auto &data : list) {
+                mResults.insert(data.startDateTime().date(), data);
+            }
+        }
+        return ok;
     } else if (isInRange(event->dtStart().date(), event->dtEnd().date())) {
         data.setStartDateTime(event->dtStart().dateTime());
         data.setEndDateTime(event->dtEnd().dateTime());
@@ -133,7 +169,14 @@ bool EventDataVisitor::visit(const KCalCore::Todo::Ptr &todo)
     CalendarEvents::EventData data = incidenceData(todo);
     data.setEventType(CalendarEvents::EventData::Todo);
     if (todo->recurs()) {
-        return explodeIncidenceOccurences(data, todo);
+        bool ok = false;
+        const auto list = explodeIncidenceOccurences(data, todo, ok);
+        if (ok) {
+            for (const auto &data : list) {
+                mResults.insert(data.startDateTime().date(), data);
+            }
+        }
+        return ok;
     } else if (isInRange(todo->dtStart().date(), todo->dtDue().date())) {
         data.setStartDateTime(todo->dtStart().dateTime());
         data.setEndDateTime(todo->dtDue().dateTime());
@@ -156,32 +199,6 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     return data;
 }
 
-bool EventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
-                                                  const KCalCore::Incidence::Ptr &incidence)
-{
-    Q_ASSERT(incidence->recurs());
-
-    const qint64 duration = ed.startDateTime().secsTo(ed.endDateTime());
-
-    KDateTime rec(mStart.addDays(-1), QTime(0, 0, 0));
-    rec = incidence->recurrence()->getNextDateTime(rec);
-    while (rec.isValid() && rec.date() <= mEnd) {
-        CalendarEvents::EventData copy = ed;
-        const QDateTime dt = rec.dateTime();
-        copy.setStartDateTime(dt);
-        // TODO: Is there a better way to find when an instance ends without
-        // going through the expensive lookup in Incidence::instance(uid, recurrenceId)?
-        copy.setEndDateTime(dt.addSecs(duration));
-        copy.setUid(generateUid(incidence, rec));
-        mResults.insert(dt.date(), copy);
-
-        rec = incidence->recurrence()->getNextDateTime(rec);
-    }
-
-    return true;
-}
-
-
 EventDataIdVisitor::EventDataIdVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end)
     : BaseEventDataVisitor(calendar, start, end)
 {
@@ -194,7 +211,19 @@ QStringList EventDataIdVisitor::results() const
 
 bool EventDataIdVisitor::visit(const KCalCore::Event::Ptr &event)
 {
-    mResults.push_back(generateUid(event, event->recurrenceId()));
+    if (event->recurs()) {
+        CalendarEvents::EventData ed;
+        bool ok = false;
+        const auto list = explodeIncidenceOccurences(ed, event, ok);
+        if (ok) {
+            for (const auto &data : list) {
+                mResults.push_back(data.uid());
+            }
+        }
+        return ok;
+    } else {
+        mResults.push_back(generateUid(event, event->recurrenceId()));
+    }
     return true;
 }
 

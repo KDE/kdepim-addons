@@ -44,6 +44,9 @@ protected:
     QString generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId = KDateTime()) const;
     bool isInRange(const QDate &start, const QDate &end) const;
 
+    QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
+                                                                  const KCalCore::Incidence::Ptr &incidence,
+                                                                  bool &ok);
 protected:
     Akonadi::ETMCalendar *mCalendar;
     QDate mStart;
@@ -63,9 +66,6 @@ protected:
     bool visit(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
     bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE { return false; }
     bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
-
-    bool explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
-                                    const KCalCore::Incidence::Ptr &incidence);
 private:
     CalendarEvents::EventData incidenceData(const KCalCore::Incidence::Ptr &incidence) const;
 
