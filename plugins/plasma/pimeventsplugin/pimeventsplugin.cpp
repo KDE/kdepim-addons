@@ -20,12 +20,22 @@
 #include "pimeventsplugin.h"
 #include "eventdatavisitor.h"
 #include "pimeventsplugin_debug.h"
+#include "settingschangenotifier.h"
 
+#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/EntityDisplayAttribute>
+#include <AkonadiCore/EntityTreeModel>
 #include <Akonadi/Calendar/ETMCalendar>
+
 #include <KCalCore/Visitor>
 
-#define TRACE_RESULTS
+#include <KSharedConfig>
+#include <KConfigGroup>
 
+#include <QSet>
+
+#define TRACE_RESULTS
 
 QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
 {
@@ -42,8 +52,16 @@ PimEventsPlugin::PimEventsPlugin(QObject* parent)
 {
     qCDebug(PIMEVENTSPLUGIN_LOG) << "PIM Events Plugin activated";
 
-    mCalendar = new Akonadi::ETMCalendar(this);
-    // TODO: Filter out disabled calendars
+    connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged,
+            this, &PimEventsPlugin::onSettingsChanged);
+
+    mMonitor = new Akonadi::ChangeRecorder(this);
+    mMonitor->setChangeRecordingEnabled(false);
+    mMonitor->itemFetchScope().fetchFullPayload(true);
+    mMonitor->itemFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
+    onSettingsChanged();
+
+    mCalendar = new Akonadi::ETMCalendar(mMonitor, this);
     // TOOD: Only retrieve PLD:HEAD once it's supported
     mCalendar->setCollectionFilteringEnabled(false);
     mCalendar->registerObserver(this);
@@ -134,4 +152,35 @@ void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalCore::Incidenc
             Q_EMIT eventRemoved(uid);
         }
     }
+}
+
+void PimEventsPlugin::onSettingsChanged()
+{
+    QSet<Akonadi::Collection> currentCols;
+    Q_FOREACH (const Akonadi::Collection &col, mMonitor->collectionsMonitored()) {
+        currentCols.insert(col);
+    }
+
+    auto config = KSharedConfig::openConfig();
+    auto group = config->group("PIMEventsPlugin");
+    const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
+    QSet<Akonadi::Collection> configuredCols;
+    Q_FOREACH (qint64 colId, calendars) {
+        configuredCols.insert(Akonadi::Collection(colId));
+    }
+
+    qCDebug(PIMEVENTSPLUGIN_LOG) << configuredCols << currentCols;
+    Q_FOREACH (const Akonadi::Collection &col, (currentCols - configuredCols)) {
+        mMonitor->setCollectionMonitored(col, false);
+        qCDebug(PIMEVENTSPLUGIN_LOG) << "Disabled calendar" << col.id();
+    }
+    Q_FOREACH (const Akonadi::Collection &col, (configuredCols - currentCols)) {
+        mMonitor->setCollectionMonitored(col, true);
+        qCDebug(PIMEVENTSPLUGIN_LOG) << "Enabled calendar" << col.id();
+    }
+
+    const bool hasSelectedCols = mMonitor->collectionsMonitored().isEmpty();
+    mMonitor->setMimeTypeMonitored(KCalCore::Event::eventMimeType(), hasSelectedCols);
+    mMonitor->setMimeTypeMonitored(KCalCore::Todo::todoMimeType(), hasSelectedCols);
+    mMonitor->setMimeTypeMonitored(KCalCore::Journal::journalMimeType(), hasSelectedCols);
 }

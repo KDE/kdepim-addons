@@ -1,17 +1,16 @@
 set(pimeventsplugin_SRCS
     pimeventsplugin.cpp
     eventdatavisitor.cpp
+    settingschangenotifier.cpp
 )
 
-ecm_qt_declare_logging_category(pimeventsplugin_SRCS
+ecm_qt_declare_logging_category(loggingcategory_SRCS
     HEADER pimeventsplugin_debug.h
     IDENTIFIER PIMEVENTSPLUGIN_LOG
     CATEGORY_NAME log_pimeventsplugin
 )
 
-
-
-add_library(pimevents MODULE ${pimeventsplugin_SRCS})
+add_library(pimevents MODULE ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
 target_link_libraries(pimevents
     Qt5::Core
     KF5::AkonadiCore
@@ -22,6 +21,30 @@ target_link_libraries(pimevents
 
 install(TARGETS pimevents
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins
+)
+
+
+######################### NEXT TARGET #######################33
+
+set(plasmapimcalendarsplugin_SRCS
+    pimcalendarsplugin.cpp
+    pimcalendarsmodel.cpp
+    settingschangenotifier.cpp
+)
+
+add_library(pimcalendarsplugin SHARED ${plasmapimcalendarsplugin_SRCS} ${loggingcategory_SRCS})
+target_link_libraries(pimcalendarsplugin
+    Qt5::Core
+    Qt5::Qml
+    KF5::AkonadiCore
+    KF5::CalendarCore
+)
+
+install(TARGETS pimcalendarsplugin
+        DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
+)
+install(FILES qmldir
+        DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
 )
 install(FILES PimEventsConfig.qml
         DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins/pimevents

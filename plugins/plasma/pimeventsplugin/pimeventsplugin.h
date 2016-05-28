@@ -25,6 +25,7 @@
 
 namespace Akonadi
 {
+class ChangeRecorder;
 class ETMCalendar;
 }
 
@@ -49,7 +50,11 @@ public:
     // to lookup corresponding Akonadi ID in ETMCalendar
     void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
 
+private Q_SLOTS:
+    void onSettingsChanged();
+
 private:
+    Akonadi::ChangeRecorder *mMonitor;
     Akonadi::ETMCalendar *mCalendar;
     QDate mStart;
     QDate mEnd;
