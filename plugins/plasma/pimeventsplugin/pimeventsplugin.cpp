@@ -35,8 +35,6 @@
 
 #include <QSet>
 
-#define TRACE_RESULTS
-
 QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
 {
     dbg.nospace() << data.title() << " (UID " << data.uid() << "), "
@@ -78,30 +76,32 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
     mStart = startDate;
     mEnd = endDate;
 
-    qCDebug(PIMEVENTSPLUGIN_LOG) << "Requested range" << startDate << endDate;
+    int eventsCount = 0, eventDataCount = 0;
     {
         EventDataVisitor visitor(mCalendar, startDate, endDate);
         const KCalCore::Event::List events = mCalendar->events(startDate, endDate);
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "\tFound" << events.count() << "events";
+        eventsCount = events.count();
         if (visitor.act(events)) {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated" << visitor.results().count() << "EventData";
+            eventDataCount = visitor.results().count();
             Q_EMIT dataReady(visitor.results());
-        } else {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated 0 EventData";
         }
     }
 
+    int todosCount = 0, todoDataCount = 0;
     {
         EventDataVisitor visitor(mCalendar, startDate, endDate);
         const KCalCore::Todo::List todos = mCalendar->todos(startDate, endDate);
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "\tFound" << todos.count() << "todos";
+        todosCount = todos.count();
         if (visitor.act(todos)) {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated" << visitor.results().count() << "EventData";
+            todoDataCount = visitor.results().count();
             Q_EMIT dataReady(visitor.results());
-        } else {
-            qCDebug(PIMEVENTSPLUGIN_LOG) << "\tGenerated 0 EventData";
         }
     }
+    qCDebug(PIMEVENTSPLUGIN_LOG) << "Range:" << startDate.toString(Qt::ISODate) << "-" << endDate.toString(Qt::ISODate)
+                                 << "Events:" << eventsCount
+                                 << "EventData:" << eventDataCount
+                                 << "Todos:" << todosCount
+                                 << "TodoData:" << todoDataCount;
 }
 
 void PimEventsPlugin::calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence)
