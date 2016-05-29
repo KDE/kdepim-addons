@@ -60,7 +60,5 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
             newArguments << arg;
         }
     }
-
-    //TODO add more arguments
     return newArguments;
 }
