@@ -167,5 +167,4 @@ void PimEventsPlugin::onSettingsChanged()
     const bool hasSelectedCols = mMonitor->collectionsMonitored().isEmpty();
     mMonitor->setMimeTypeMonitored(KCalCore::Event::eventMimeType(), hasSelectedCols);
     mMonitor->setMimeTypeMonitored(KCalCore::Todo::todoMimeType(), hasSelectedCols);
-    mMonitor->setMimeTypeMonitored(KCalCore::Journal::journalMimeType(), hasSelectedCols);
 }
