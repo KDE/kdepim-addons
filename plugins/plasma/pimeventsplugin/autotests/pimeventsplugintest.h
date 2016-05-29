@@ -17,36 +17,38 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#ifndef PIMEVENTSPLUGINTEST_H
+#define PIMEVENTSPLUGINTEST_H
 
 #include <QObject>
+#include <QMultiHash>
+#include <KCalCore/Event>
 
-namespace CalendarEvents
-{
+class QDate;
+namespace CalendarEvents {
 class EventData;
 }
+class FakePimDataSource;
 
-class EventDataVisitorTest : public QObject
+using DateEventDataHash = QMultiHash<QDate, CalendarEvents::EventData>;
+
+class PimEventsPluginTest : public QObject
 {
     Q_OBJECT
 
-
 private Q_SLOTS:
-    void testGenerateUID_data();
-    void testGenerateUID();
+    void initTestCase();
+    void testLoadEventsForDataRange();
+    void testEventAdded();
+    void testEventModified();
+    void testEventRemoved();
 
-    void testIsInRange_data();
-    void testIsInRange();
-
-    void testExplodeIncidenceOccurences_data();
-    void testExplodeIncidenceOccurences();
-
-    void testEventDataVisitor_data();
-    void testEventDataVisitor();
-
-    void testEventDataIdVisitor_data();
-    void testEventDataIdVisitor();
+private:
+    bool compareEventDataHashes(const DateEventDataHash &actual,
+                                const DateEventDataHash &expected);
+    DateEventDataHash populateCalendar(FakePimDataSource *source);
+    QVector<CalendarEvents::EventData> findEventData(const KCalCore::Event::Ptr &event,
+                                                     const DateEventDataHash &allData);
 };
 
 #endif

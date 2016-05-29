@@ -17,36 +17,32 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#include "fakepimdatasource.h"
 
-#include <QObject>
+#include <KCalCore/MemoryCalendar>
 
-namespace CalendarEvents
+FakePimDataSource::FakePimDataSource()
+    : PimDataSource()
+    , mCalendar(new KCalCore::MemoryCalendar(KDateTime::UTC))
 {
-class EventData;
 }
 
-class EventDataVisitorTest : public QObject
+FakePimDataSource::~FakePimDataSource()
 {
-    Q_OBJECT
+    delete mCalendar;
+}
 
+void FakePimDataSource::setAkonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence, qint64 akonadiId)
+{
+    mAkonadiIdMap.insert(incidence, akonadiId);
+}
 
-private Q_SLOTS:
-    void testGenerateUID_data();
-    void testGenerateUID();
+qint64 FakePimDataSource::akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+{
+    return mAkonadiIdMap.value(incidence, -1);
+}
 
-    void testIsInRange_data();
-    void testIsInRange();
-
-    void testExplodeIncidenceOccurences_data();
-    void testExplodeIncidenceOccurences();
-
-    void testEventDataVisitor_data();
-    void testEventDataVisitor();
-
-    void testEventDataIdVisitor_data();
-    void testEventDataIdVisitor();
-};
-
-#endif
+KCalCore::Calendar *FakePimDataSource::calendar() const
+{
+    return mCalendar;
+}

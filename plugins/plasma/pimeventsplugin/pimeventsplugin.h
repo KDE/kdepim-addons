@@ -29,6 +29,7 @@ class ChangeRecorder;
 class ETMCalendar;
 }
 
+class PimDataSource;
 class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
                       , public KCalCore::Calendar::CalendarObserver
 {
@@ -38,6 +39,7 @@ class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
 
 public:
     explicit PimEventsPlugin(QObject *parent = Q_NULLPTR);
+    explicit PimEventsPlugin(PimDataSource *factory, QObject *parent = Q_NULLPTR);
     ~PimEventsPlugin();
 
     // CalendarEvents::CalendarEventsPlugin
@@ -50,12 +52,8 @@ public:
     // to lookup corresponding Akonadi ID in ETMCalendar
     void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void onSettingsChanged();
-
 private:
-    Akonadi::ChangeRecorder *mMonitor;
-    Akonadi::ETMCalendar *mCalendar;
+    PimDataSource *mDataSource;
     QDate mStart;
     QDate mEnd;
 };

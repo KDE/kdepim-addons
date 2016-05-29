@@ -17,36 +17,36 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#ifndef AKONADIPIMDATASOURCE_H
+#define AKONADIPIMDATASOURCE_H
 
+#include "pimdatasource.h"
 #include <QObject>
 
-namespace CalendarEvents
-{
-class EventData;
+namespace Akonadi {
+class ChangeRecorder;
+class ETMCalendar;
 }
 
-class EventDataVisitorTest : public QObject
+class AkonadiPimDataSource : public QObject,
+                             public PimDataSource
 {
     Q_OBJECT
 
+public:
+    explicit AkonadiPimDataSource(QObject *parent = Q_NULLPTR);
+    ~AkonadiPimDataSource();
+
+    qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
+    KCalCore::Calendar *calendar() const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
-    void testGenerateUID_data();
-    void testGenerateUID();
+    void onSettingsChanged();
 
-    void testIsInRange_data();
-    void testIsInRange();
-
-    void testExplodeIncidenceOccurences_data();
-    void testExplodeIncidenceOccurences();
-
-    void testEventDataVisitor_data();
-    void testEventDataVisitor();
-
-    void testEventDataIdVisitor_data();
-    void testEventDataIdVisitor();
+private:
+    Akonadi::ChangeRecorder *mMonitor;
+    Akonadi::ETMCalendar *mCalendar;
 };
+
 
 #endif

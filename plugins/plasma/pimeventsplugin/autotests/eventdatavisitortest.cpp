@@ -19,6 +19,8 @@
 
 #include "eventdatavisitortest.h"
 #include "testdataparser.h"
+#include "fakepimdatasource.h"
+#include "testutils.h"
 #include "../eventdatavisitor.h"
 
 #include <QtTest/QTest>
@@ -36,14 +38,9 @@ template<typename Visitor>
 class TestableVisitor : public Visitor
 {
 public:
-    TestableVisitor(const QDate &start = QDate(), const QDate &end = QDate())
-        : Visitor(Q_NULLPTR, start, end)
+    TestableVisitor(PimDataSource *source, const QDate &start = QDate(), const QDate &end = QDate())
+        : Visitor(source, start, end)
     {
-    }
-
-    void setAkonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence, qint64 id)
-    {
-        mIdForIncidence.insert(incidence, id);
     }
 
     QString callGenerateUid(const KCalCore::Incidence::Ptr &incidence,
@@ -63,50 +60,12 @@ public:
     {
         return Visitor::explodeIncidenceOccurences(baseEd, incidence, ok);
     }
-
-protected:
-    qint64 itemIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE
-    {
-        return mIdForIncidence.value(incidence, -1);
-    }
-
-private:
-    QHash<KCalCore::Incidence::Ptr, qint64> mIdForIncidence;
 };
 
 using TestableEventDataVisitor = TestableVisitor<EventDataVisitor>;
 using TestableEventDataIdVisitor = TestableVisitor<EventDataIdVisitor>;
 
 using DateTimeRange = QPair<QDateTime, QDateTime>;
-
-
-bool EventDataVisitorTest::compareResults(const CalendarEvents::EventData &actual,
-                                          const CalendarEvents::EventData &expected)
-{
-    #define COMPARE(_actual, _expected) \
-    { \
-        bool ok = false; \
-        [actual, expected, &ok]() { \
-            QCOMPARE(_actual, _expected); \
-            ok = true; \
-        }(); \
-        if (!ok) { \
-            return false; \
-        } \
-    }
-
-    COMPARE(actual.title(), expected.title());
-    COMPARE(actual.description(), expected.description());
-    COMPARE(actual.isAllDay(), expected.isAllDay());
-    COMPARE(actual.isMinor(), expected.isMinor());
-    COMPARE(actual.type(), expected.type());
-    COMPARE(actual.eventColor(), expected.eventColor());
-    COMPARE(actual.uid(), expected.uid());
-    COMPARE(actual.startDateTime(), expected.startDateTime());
-    COMPARE(actual.endDateTime(), expected.endDateTime());
-
-    return true;
-}
 
 void EventDataVisitorTest::testGenerateUID_data()
 {
@@ -136,8 +95,9 @@ void EventDataVisitorTest::testGenerateUID()
     QFETCH(qint64, itemId);
     QFETCH(QString, expectedUID);
 
-    TestableEventDataVisitor visitor;
-    visitor.setAkonadiIdForIncidence(incidence, itemId);
+    FakePimDataSource source;
+    source.setAkonadiIdForIncidence(incidence, itemId);
+    TestableEventDataVisitor visitor(&source);
 
     const QString result = visitor.callGenerateUid(incidence, recurrenceId);
     QCOMPARE(result, expectedUID);
@@ -199,7 +159,8 @@ void EventDataVisitorTest::testIsInRange()
     QFETCH(QDate, eventEnd);
     QFETCH(bool, expectedResult);
 
-    TestableEventDataVisitor visitor(rangeStart, rangeEnd);
+    FakePimDataSource source;
+    TestableEventDataVisitor visitor(&source, rangeStart, rangeEnd);
     const bool result = visitor.callIsInRange(eventStart, eventEnd);
     QCOMPARE(result, expectedResult);
 }
@@ -241,15 +202,16 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences()
     QFETCH(qint64, akonadiItemId);
     QFETCH(QVector<CalendarEvents::EventData>, expectedEventData);
 
-    TestableEventDataVisitor visitor(rangeStart, rangeEnd);
-    visitor.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    FakePimDataSource source;
+    source.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    TestableEventDataVisitor visitor(&source, rangeStart, rangeEnd);
     bool ok = false;
     const auto results = visitor.callExplodeIncidenceOccurences(baseEventData, incidence, ok);
     QVERIFY(ok);
 
     QCOMPARE(results.size(), expectedEventData.size());
     for (int i = 0; i < results.size(); ++i) {
-        QVERIFY(compareResults(results[i], expectedEventData[i]));
+        QVERIFY(TestUtils::compareEventData(results[i], expectedEventData[i]));
     }
 }
 
@@ -283,23 +245,21 @@ void EventDataVisitorTest::testEventDataVisitor()
     QFETCH(qint64, akonadiItemId);
     QFETCH(QVector<CalendarEvents::EventData>, expectedResults);
 
-    TestableEventDataVisitor visitor(rangeStart, rangeEnd);
-    visitor.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    FakePimDataSource source;
+    source.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    TestableEventDataVisitor visitor(&source, rangeStart, rangeEnd);
     QVERIFY(visitor.act(incidence));
 
     const auto &results = visitor.results();
     QCOMPARE(results.size(), expectedResults.size());
 
     auto resultValues = results.values();
-    std::sort(resultValues.begin(), resultValues.end(),
-              [](const CalendarEvents::EventData &lhs, const CalendarEvents::EventData &rhs) -> bool {
-                  return lhs.startDateTime() < rhs.startDateTime();
-              });
+    std::sort(resultValues.begin(), resultValues.end(), std::less<CalendarEvents::EventData>());
     for (int i = 0; i < resultValues.size(); ++i) {
         const auto &result = resultValues[i];
         const auto &expectedResult = expectedResults[i];
 
-        QVERIFY(compareResults(result, expectedResult));
+        QVERIFY(TestUtils::compareEventData(result, expectedResult));
     }
 }
 
@@ -336,8 +296,9 @@ void EventDataVisitorTest::testEventDataIdVisitor()
     QFETCH(qint64, akonadiItemId);
     QFETCH(QStringList, expectedUids);
 
-    TestableEventDataIdVisitor visitor(rangeStart, rangeEnd);
-    visitor.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    FakePimDataSource source;
+    source.setAkonadiIdForIncidence(incidence, akonadiItemId);
+    TestableEventDataIdVisitor visitor(&source, rangeStart, rangeEnd);
     QVERIFY(visitor.act(incidence));
 
     auto results = visitor.results();

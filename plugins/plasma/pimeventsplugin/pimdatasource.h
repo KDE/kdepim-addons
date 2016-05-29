@@ -17,36 +17,22 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#ifndef PIMDATASOURCE_H
+#define PIMDATASOURCE_H
 
-#include <QObject>
+#include <KCalCore/Incidence>
 
-namespace CalendarEvents
-{
-class EventData;
+namespace KCalCore {
+class Calendar;
 }
 
-class EventDataVisitorTest : public QObject
+class PimDataSource
 {
-    Q_OBJECT
+public:
+    virtual ~PimDataSource() {}
 
-
-private Q_SLOTS:
-    void testGenerateUID_data();
-    void testGenerateUID();
-
-    void testIsInRange_data();
-    void testIsInRange();
-
-    void testExplodeIncidenceOccurences_data();
-    void testExplodeIncidenceOccurences();
-
-    void testEventDataVisitor_data();
-    void testEventDataVisitor();
-
-    void testEventDataIdVisitor_data();
-    void testEventDataIdVisitor();
+    virtual KCalCore::Calendar *calendar() const = 0;
+    virtual qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;
 };
 
 #endif

@@ -4,6 +4,7 @@ endif()
 
 set(pimeventsplugin_SRCS
     pimeventsplugin.cpp
+    akonadipimdatasource.cpp
     eventdatavisitor.cpp
     settingschangenotifier.cpp
 )

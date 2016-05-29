@@ -18,13 +18,12 @@
  */
 
 #include "eventdatavisitor.h"
+#include "pimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
-#include <Akonadi/Calendar/ETMCalendar>
-
-BaseEventDataVisitor::BaseEventDataVisitor(Akonadi::ETMCalendar *calendar,
+BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource,
                                            const QDate &start, const QDate &end)
-    : mCalendar(calendar)
+    : mDataSource(dataSource)
     , mStart(start)
     , mEnd(end)
 {
@@ -79,7 +78,7 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     // Get a corresponding Akonadi Item: Akonadi ID is the only reliably unique
     // and persistent identifier when dealing with incidences from multiple
     // calendars
-    const qint64 itemId = itemIdForIncidence(incidence);
+    const qint64 itemId = mDataSource->akonadiIdForIncidence(incidence);
     if (itemId <= 0) {
         // Can this happen? What do we do now?!
         return QString();
@@ -91,11 +90,6 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     } else {
         return QStringLiteral("Akonadi-%1").arg(itemId);
     }
-}
-
-qint64 BaseEventDataVisitor::itemIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const
-{
-    return mCalendar->item(incidence).id();
 }
 
 QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
@@ -129,9 +123,9 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
 
 
 
-EventDataVisitor::EventDataVisitor(Akonadi::ETMCalendar *calendar,
+EventDataVisitor::EventDataVisitor(PimDataSource *dataSource,
                                    const QDate &start, const QDate &end)
-    : BaseEventDataVisitor(calendar, start , end)
+    : BaseEventDataVisitor(dataSource, start , end)
 {
 }
 
@@ -191,8 +185,8 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     return data;
 }
 
-EventDataIdVisitor::EventDataIdVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end)
-    : BaseEventDataVisitor(calendar, start, end)
+EventDataIdVisitor::EventDataIdVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
+    : BaseEventDataVisitor(dataSource, start, end)
 {
 }
 

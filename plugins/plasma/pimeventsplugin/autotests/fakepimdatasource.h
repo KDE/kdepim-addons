@@ -17,36 +17,26 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#ifndef FAKEPIMDATASOURCE_H
+#define FAKEPIMDATASOURCE_H
 
-#include <QObject>
+#include "pimdatasource.h"
 
-namespace CalendarEvents
+class FakePimDataSource : public PimDataSource
 {
-class EventData;
-}
+public:
+    FakePimDataSource();
+    ~FakePimDataSource();
 
-class EventDataVisitorTest : public QObject
-{
-    Q_OBJECT
+    void setAkonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence, qint64 akonadiId);
+    qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
 
+    KCalCore::Calendar *calendar() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void testGenerateUID_data();
-    void testGenerateUID();
-
-    void testIsInRange_data();
-    void testIsInRange();
-
-    void testExplodeIncidenceOccurences_data();
-    void testExplodeIncidenceOccurences();
-
-    void testEventDataVisitor_data();
-    void testEventDataVisitor();
-
-    void testEventDataIdVisitor_data();
-    void testEventDataIdVisitor();
+private:
+    QMap<KCalCore::Incidence::Ptr, qint64> mAkonadiIdMap;
+    KCalCore::Calendar *mCalendar;
 };
+
 
 #endif

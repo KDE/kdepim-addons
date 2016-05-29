@@ -24,11 +24,7 @@
 #include <QMultiHash>
 #include <CalendarEvents/CalendarEventsPlugin>
 
-namespace Akonadi
-{
-class ETMCalendar;
-}
-
+class PimDataSource;
 class BaseEventDataVisitor : public KCalCore::Visitor
 {
 public:
@@ -39,7 +35,7 @@ public:
     bool act(const KCalCore::Todo::List &todos);
 
 protected:
-    BaseEventDataVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end);
+    BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
 
     QString generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId = KDateTime()) const;
     bool isInRange(const QDate &start, const QDate &end) const;
@@ -47,11 +43,8 @@ protected:
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
                                                                   const KCalCore::Incidence::Ptr &incidence,
                                                                   bool &ok);
-    // can be overridden by unit-tests
-    virtual qint64 itemIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const;
-
 protected:
-    Akonadi::ETMCalendar *mCalendar;
+    PimDataSource *mDataSource;
     QDate mStart;
     QDate mEnd;
 };
@@ -59,7 +52,7 @@ protected:
 class EventDataVisitor : public BaseEventDataVisitor
 {
 public:
-    EventDataVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end);
+    EventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
     ~EventDataVisitor();
 
     const QMultiHash<QDate, CalendarEvents::EventData> &results() const;
@@ -81,7 +74,7 @@ private:
 class EventDataIdVisitor : public BaseEventDataVisitor
 {
 public:
-    explicit EventDataIdVisitor(Akonadi::ETMCalendar *calendar, const QDate &start, const QDate &end);
+    explicit EventDataIdVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
 
     const QStringList &results() const;
 
