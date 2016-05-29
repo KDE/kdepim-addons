@@ -47,6 +47,9 @@ protected:
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
                                                                   const KCalCore::Incidence::Ptr &incidence,
                                                                   bool &ok);
+    // can be overridden by unit-tests
+    virtual qint64 itemIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const;
+
 protected:
     Akonadi::ETMCalendar *mCalendar;
     QDate mStart;

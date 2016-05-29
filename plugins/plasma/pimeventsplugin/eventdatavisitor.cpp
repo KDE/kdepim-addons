@@ -79,18 +79,23 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     // Get a corresponding Akonadi Item: Akonadi ID is the only reliably unique
     // and persistent identifier when dealing with incidences from multiple
     // calendars
-    const Akonadi::Item item = mCalendar->item(incidence);
-    if (!item.isValid()) {
+    const qint64 itemId = itemIdForIncidence(incidence);
+    if (itemId <= 0) {
         // Can this happen? What do we do now?!
         return QString();
     }
 
     if (recurrenceId.isValid()) {
-        return QStringLiteral("Akonadi-%1-%2").arg(item.id())
+        return QStringLiteral("Akonadi-%1-%2").arg(itemId)
                                               .arg(recurrenceId.toString(QStringLiteral("%Y%m%dT%H%M%S%Z")));
     } else {
-        return QStringLiteral("Akonadi-%1").arg(item.id());
+        return QStringLiteral("Akonadi-%1").arg(itemId);
     }
+}
+
+qint64 BaseEventDataVisitor::itemIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+{
+    return mCalendar->item(incidence).id();
 }
 
 QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
