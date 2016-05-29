@@ -1,0 +1,23 @@
+{
+    "rangeStart": "2016-05-01",
+    "rangeEnd": "2016-05-31",
+    "akonadiId": 2,
+    "eventData": [
+        {
+            "summary": "All day one day non-recurring event",
+            "description": "This is an all-day one day non-recurring event.",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-29",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-29",
+                "time": ""
+            },
+            "uid": "Akonadi-2"
+        }
+    ]
+}

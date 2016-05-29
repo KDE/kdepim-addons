@@ -1,3 +1,7 @@
+if (BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
+
 set(pimeventsplugin_SRCS
     pimeventsplugin.cpp
     eventdatavisitor.cpp

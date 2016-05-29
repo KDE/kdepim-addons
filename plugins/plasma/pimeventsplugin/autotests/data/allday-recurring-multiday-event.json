@@ -1,0 +1,74 @@
+{
+    "rangeStart": "2016-05-01",
+    "rangeEnd": "2016-05-31",
+    "akonadiId": 3,
+    "eventData": [
+        {
+            "summary": "All day multi-day recurring event",
+            "description": "This is an all-day multi-day recurring event",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-06",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-08",
+                "time": ""
+            },
+            "uid": "Akonadi-3-20160506T000000"
+        },
+
+        {
+            "summary": "All day multi-day recurring event",
+            "description": "This is an all-day multi-day recurring event",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-13",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-15",
+                "time": ""
+            },
+            "uid": "Akonadi-3-20160513T000000"
+        },
+
+        {
+            "summary": "All day multi-day recurring event",
+            "description": "This is an all-day multi-day recurring event",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-20",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-22",
+                "time": ""
+            },
+            "uid": "Akonadi-3-20160520T000000"
+        },
+
+        {
+            "summary": "All day multi-day recurring event",
+            "description": "This is an all-day multi-day recurring event",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-27",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-29",
+                "time": ""
+            },
+            "uid": "Akonadi-3-20160527T000000"
+        }
+    ]
+}
