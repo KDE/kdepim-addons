@@ -10,9 +10,17 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
     add_test(${_name} ${_name})
     ecm_mark_as_test(plasma-pimeventsplugin-${_name})
     add_definitions(-DQT_TESTCASE_BUILDDIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
-    target_link_libraries(${_name} Qt5::Core Qt5::Test KF5::AkonadiCore KF5::AkonadiCalendar KF5::CalendarCore KF5::CalendarEvents)
+    target_link_libraries(${_name} Qt5::Core
+                                   Qt5::Test
+                                   KF5::AkonadiCore
+                                   KF5::AkonadiCalendar
+                                   KF5::CalendarCore
+                                   KF5::CalendarEvents
+                                   KF5::EventViews
+    )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..
-                        ${CMAKE_CURRENT_BINARY_DIR}/..)
+                        ${CMAKE_CURRENT_BINARY_DIR}/..
+    )
 endmacro()
 
 add_plasma_pimeventsplugin_test(eventdatavisitortest.cpp ../eventdatavisitor.cpp)

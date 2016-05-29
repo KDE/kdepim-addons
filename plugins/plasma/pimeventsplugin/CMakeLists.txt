@@ -22,6 +22,7 @@ target_link_libraries(pimevents
     KF5::AkonadiCalendar
     KF5::CalendarCore
     KF5::CalendarEvents
+    KF5::EventViews # for reading KOrganizer calendar colors
 )
 
 install(TARGETS pimevents

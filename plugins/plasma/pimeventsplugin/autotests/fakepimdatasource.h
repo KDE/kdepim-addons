@@ -33,6 +33,8 @@ public:
 
     KCalCore::Calendar *calendar() const Q_DECL_OVERRIDE;
 
+    QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
+
 private:
     QMap<KCalCore::Incidence::Ptr, qint64> mAkonadiIdMap;
     KCalCore::Calendar *mCalendar;

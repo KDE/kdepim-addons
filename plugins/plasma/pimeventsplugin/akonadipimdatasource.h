@@ -22,6 +22,7 @@
 
 #include "pimdatasource.h"
 #include <QObject>
+#include <EventViews/Prefs>
 
 namespace Akonadi {
 class ChangeRecorder;
@@ -39,6 +40,7 @@ public:
 
     qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
     KCalCore::Calendar *calendar() const Q_DECL_OVERRIDE;
+    QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
 
 private Q_SLOTS:
     void onSettingsChanged();
@@ -46,6 +48,8 @@ private Q_SLOTS:
 private:
     Akonadi::ChangeRecorder *mMonitor;
     Akonadi::ETMCalendar *mCalendar;
+    EventViews::PrefsPtr mEventViewsPrefs;
+    mutable QHash<qint64, QString> mColorCache;
 };
 
 

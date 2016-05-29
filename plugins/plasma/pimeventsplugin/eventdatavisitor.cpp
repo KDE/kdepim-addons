@@ -107,8 +107,6 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
         CalendarEvents::EventData copy = ed;
         const QDateTime dt = rec.dateTime();
         copy.setStartDateTime(dt);
-        // TODO: Is there a better way to find when an instance ends without
-        // going through the expensive lookup in Incidence::instance(uid, recurrenceId)?
         copy.setEndDateTime(dt.addSecs(duration));
         copy.setUid(generateUid(incidence, rec));
         results.push_back(copy);
@@ -181,7 +179,7 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     data.setUid(generateUid(incidence));
     data.setStartDateTime(incidence->dtStart().dateTime());
     data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).dateTime());
-    // TODO: Set calendar color
+    data.setEventColor(mDataSource->calendarColorForIncidence(incidence));
     return data;
 }
 

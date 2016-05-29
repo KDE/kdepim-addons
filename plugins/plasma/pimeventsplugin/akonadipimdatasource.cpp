@@ -19,18 +19,26 @@
 
 #include "akonadipimdatasource.h"
 #include "settingschangenotifier.h"
+#include "pimeventsplugin_debug.h"
 
 #include <AkonadiCore/ChangeRecorder>
 #include <AkonadiCore/ItemFetchScope>
 #include <AkonadiCore/EntityDisplayAttribute>
+#include <AkonadiCore/CollectionColorAttribute>
+#include <AkonadiCore/AttributeFactory>
 #include <Akonadi/Calendar/ETMCalendar>
 
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <KCoreConfigSkeleton>
+
+#include <EventViews/Prefs>
 
 AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     : QObject(parent)
 {
+    Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
+
     connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged,
             this, &AkonadiPimDataSource::onSettingsChanged);
 
@@ -38,11 +46,18 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     mMonitor->setChangeRecordingEnabled(false);
     mMonitor->itemFetchScope().fetchFullPayload(true);
     mMonitor->itemFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
+    mMonitor->itemFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
     onSettingsChanged();
 
     mCalendar = new Akonadi::ETMCalendar(mMonitor, this);
     // TOOD: Only retrieve PLD:HEAD once it's supported
     mCalendar->setCollectionFilteringEnabled(false);
+
+    // Would be nice to have a proper API to read KOrganizer calendar colors...
+    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
+    KCoreConfigSkeleton *skel = new KCoreConfigSkeleton(config);
+    mEventViewsPrefs = EventViews::PrefsPtr(new EventViews::Prefs(skel));
+    mEventViewsPrefs->readConfig();
 }
 
 AkonadiPimDataSource::~AkonadiPimDataSource()
@@ -57,6 +72,36 @@ qint64 AkonadiPimDataSource::akonadiIdForIncidence(const KCalCore::Incidence::Pt
 KCalCore::Calendar *AkonadiPimDataSource::calendar() const
 {
     return mCalendar;
+}
+
+QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+{
+    const auto &item = mCalendar->item(incidence);
+    if (!item.isValid()) {
+        return QString();
+    }
+
+    const auto &col = mCalendar->collection(item.parentCollection().id());
+    if (!col.isValid()) {
+        return QString();
+    }
+
+    auto it = mColorCache.find(col.id());
+    if (it == mColorCache.end()) {
+        if (col.hasAttribute<Akonadi::CollectionColorAttribute>()) {
+            const auto attr = col.attribute<Akonadi::CollectionColorAttribute>();
+            it = mColorCache.insert(col.id(), attr->color().name());
+        } else {
+            QColor color = mEventViewsPrefs->resourceColorKnown(QString::number(col.id()));
+            if (color.isValid()) {
+                it = mColorCache.insert(col.id(), color.name());
+            } else {
+                it = mColorCache.insert(col.id(), QString());
+            }
+        }
+        qCDebug(PIMEVENTSPLUGIN_LOG) << "GOT" << (*it) << "for" << col.displayName();
+    }
+    return (*it);
 }
 
 void AkonadiPimDataSource::onSettingsChanged()

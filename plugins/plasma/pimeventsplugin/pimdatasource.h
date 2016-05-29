@@ -33,6 +33,7 @@ public:
 
     virtual KCalCore::Calendar *calendar() const = 0;
     virtual qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;
+    virtual QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;
 };
 
 #endif
