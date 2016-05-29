@@ -31,8 +31,9 @@
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
-TestDataParser::TestDataParser(const QString &testData)
+TestDataParser::TestDataParser(const QString &testData, bool uniqueEventData)
     : mTestData(testData)
+    , mUniqueEventData(uniqueEventData)
 {
     parse();
 }
@@ -125,7 +126,17 @@ void TestDataParser::parse()
         const QDateTime endDateTime = parseDateTime(obj[QStringLiteral("endDateTime")].toObject());
         eventData.setEndDateTime(endDateTime);
         eventData.setUid(obj[QStringLiteral("uid")].toString());
-        mEventData.push_back(eventData);
+
+        if (mUniqueEventData) {
+            mEventData.push_back(eventData);
+        } else {
+            QDate d = startDateTime.date();
+            const QDate dateEnd = endDateTime.date();
+            while (d <= dateEnd) {
+                mEventData.push_back(eventData);
+                d = d.addDays(1);
+            }
+        }
     }
     QVERIFY(!mEventData.isEmpty());
 }

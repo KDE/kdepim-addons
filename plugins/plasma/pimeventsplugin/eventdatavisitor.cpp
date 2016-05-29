@@ -147,12 +147,12 @@ bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence,
         const auto list = explodeIncidenceOccurences(data, incidence, ok);
         if (ok) {
             for (const auto &data : list) {
-                mResults.insert(data.startDateTime().date(), data);
+                insertResult(data);
             }
         }
         return ok;
     } else if (isInRange(data.startDateTime().date(), data.endDateTime().date())) {
-        mResults.insert(data.startDateTime().date(), data);
+        insertResult(data);
         return true;
     }
 
@@ -168,6 +168,17 @@ bool EventDataVisitor::visit(const KCalCore::Todo::Ptr &todo)
 {
     return visit(todo, CalendarEvents::EventData::Todo);
 }
+
+void EventDataVisitor::insertResult(const CalendarEvents::EventData &result)
+{
+    QDate d = result.startDateTime().date();
+    const QDate end = result.endDateTime().date();
+    while (d <= end) {
+        mResults.insert(d, result);
+        d = d.addDays(1);
+    }
+}
+
 
 CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incidence::Ptr &incidence) const
 {

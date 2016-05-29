@@ -30,7 +30,7 @@ class QJsonObject;
 class TestDataParser
 {
 public:
-    explicit TestDataParser(const QString &testData);
+    explicit TestDataParser(const QString &testData, bool uniqueEventData = false);
     ~TestDataParser();
 
     QDate rangeStart() const;
@@ -51,4 +51,5 @@ private:
     qint64 mAkonadiId;
     KCalCore::Incidence::Ptr mIncidence;
     QVector<CalendarEvents::EventData> mEventData;
+    bool mUniqueEventData;
 };

@@ -178,7 +178,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
-        TestDataParser parser(testData);
+        TestDataParser parser(testData, true);
         // skip non-recurring testcases
         if (!parser.incidence()->recurs()) {
             continue;
@@ -275,7 +275,7 @@ void EventDataVisitorTest::testEventDataIdVisitor_data()
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
-        TestDataParser parser(testData);
+        TestDataParser parser(testData, true);
         QStringList uids;
         Q_FOREACH (const auto &ed, parser.eventData()) {
             uids.push_back(ed.uid());

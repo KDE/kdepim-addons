@@ -63,6 +63,8 @@ protected:
     bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE { return false; }
     bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
 private:
+    void insertResult(const CalendarEvents::EventData &result);
+
     bool visit(const KCalCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
     CalendarEvents::EventData incidenceData(const KCalCore::Incidence::Ptr &incidence) const;
 

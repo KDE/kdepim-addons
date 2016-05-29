@@ -51,12 +51,12 @@ bool PimEventsPluginTest::compareEventDataHashes(const DateEventDataHash &actual
     return true;
 }
 
-DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *source)
+DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *source, bool uniqueEventData)
 {
     const QStringList allData = TestDataParser::allTestData();
     DateEventDataHash expectedData;
     Q_FOREACH (const QString &data, allData) {
-        TestDataParser parser(data);
+        TestDataParser parser(data, true);
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;
         }
@@ -65,7 +65,15 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
             source->setAkonadiIdForIncidence(event, parser.akonadiId());
             source->calendar()->addEvent(event);
             Q_FOREACH (const CalendarEvents::EventData &dt, parser.eventData()) {
-                expectedData.insert(dt.startDateTime().date(), dt);
+                if (uniqueEventData) {
+                    expectedData.insert(dt.startDateTime().date(), dt);
+                } else {
+                    QDate d = dt.startDateTime().date();
+                    while (d <= dt.endDateTime().date()) {
+                        expectedData.insert(d, dt);
+                        d = d.addDays(1);
+                    }
+                }
             }
         }
     }
@@ -95,7 +103,7 @@ QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCal
 void PimEventsPluginTest::testLoadEventsForDataRange()
 {
     FakePimDataSource source;
-    const DateEventDataHash expectedData = populateCalendar(&source);
+    const DateEventDataHash expectedData = populateCalendar(&source, false);
 
     PimEventsPlugin plugin(&source);
     QSignalSpy dataReadySpy(&plugin, &PimEventsPlugin::dataReady);
@@ -125,7 +133,7 @@ void PimEventsPluginTest::testEventAdded()
 
 
     Q_FOREACH (const QString &data, allData) {
-        TestDataParser parser(data);
+        TestDataParser parser(data, true);
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;
         }
@@ -135,7 +143,11 @@ void PimEventsPluginTest::testEventAdded()
             source.calendar()->addEvent(event);
             DateEventDataHash expectedData;
             Q_FOREACH (const CalendarEvents::EventData &dt, parser.eventData()) {
-                expectedData.insert(dt.startDateTime().date(), dt);
+                QDate d = dt.startDateTime().date();
+                while (d <= dt.endDateTime().date()) {
+                    expectedData.insert(d, dt);
+                    d = d.addDays(1);
+                }
             }
 
             QCOMPARE(dataReadySpy.size(), 1);
@@ -154,7 +166,7 @@ void PimEventsPluginTest::testEventModified()
     QVERIFY(eventModifiedSpy.isValid());
 
     // Populate model
-    const auto allData = populateCalendar(&source);
+    const auto allData = populateCalendar(&source, true);
 
     // We don't care about the result of this, we just need to have mStart and
     // mEnd set
@@ -211,7 +223,7 @@ void PimEventsPluginTest::testEventRemoved()
     QSignalSpy eventRemovedSpy(&plugin, &PimEventsPlugin::eventRemoved);
     QVERIFY(eventRemovedSpy.isValid());
 
-    const auto allData = populateCalendar(&source);
+    const auto allData = populateCalendar(&source, true);
 
     // We don't care about the result of this, we just need to have mStart and
     // mEnd set
