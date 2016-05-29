@@ -157,7 +157,6 @@ void PimEventsPlugin::onSettingsChanged()
         configuredCols.insert(Akonadi::Collection(colId));
     }
 
-    qCDebug(PIMEVENTSPLUGIN_LOG) << configuredCols << currentCols;
     Q_FOREACH (const Akonadi::Collection &col, (currentCols - configuredCols)) {
         mMonitor->setCollectionMonitored(col, false);
     }
