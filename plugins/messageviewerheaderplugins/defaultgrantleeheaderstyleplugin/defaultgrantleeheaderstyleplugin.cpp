@@ -17,6 +17,7 @@
 
 #include "defaultgrantleeheaderstyleinterface.h"
 #include "defaultgrantleeheaderstyleplugin.h"
+#include "globalsettings_base.h"
 #include <messageviewer/grantleeheaderstyle.h>
 #include "defaultgrantleeheaderstrategy.h"
 #include <kpluginfactory.h>
@@ -29,11 +30,17 @@ DefaultGrantleeHeaderStylePlugin::DefaultGrantleeHeaderStylePlugin(QObject *pare
       mHeaderStyle(new GrantleeHeaderStyle),
       mHeaderStrategy(new DefaultGrantleeHeaderStrategy)
 {
+    initializePlugin();
 }
 
 DefaultGrantleeHeaderStylePlugin::~DefaultGrantleeHeaderStylePlugin()
 {
 
+}
+
+void DefaultGrantleeHeaderStylePlugin::initializePlugin()
+{
+    mHeaderStyle->setShowMailAction(DefaultGrantleeHeaderStylePluginSettings::self()->showActionMail());
 }
 
 HeaderStyle *DefaultGrantleeHeaderStylePlugin::headerStyle() const
