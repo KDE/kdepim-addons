@@ -145,23 +145,21 @@ const QMultiHash<QDate, CalendarEvents::EventData> &EventDataVisitor::results() 
     return mResults;
 }
 
-
-bool EventDataVisitor::visit(const KCalCore::Event::Ptr &event)
+bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence,
+                             CalendarEvents::EventData::EventType type)
 {
-    CalendarEvents::EventData data = incidenceData(event);
-    data.setEventType(CalendarEvents::EventData::Event);
-    if (event->recurs()) {
+    CalendarEvents::EventData data = incidenceData(incidence);
+    data.setEventType(type);
+    if (incidence->recurs()) {
         bool ok = false;
-        const auto list = explodeIncidenceOccurences(data, event, ok);
+        const auto list = explodeIncidenceOccurences(data, incidence, ok);
         if (ok) {
             for (const auto &data : list) {
                 mResults.insert(data.startDateTime().date(), data);
             }
         }
         return ok;
-    } else if (isInRange(event->dtStart().date(), event->dtEnd().date())) {
-        data.setStartDateTime(event->dtStart().dateTime());
-        data.setEndDateTime(event->dtEnd().dateTime());
+    } else if (isInRange(data.startDateTime().date(), data.endDateTime().date())) {
         mResults.insert(data.startDateTime().date(), data);
         return true;
     }
@@ -169,27 +167,14 @@ bool EventDataVisitor::visit(const KCalCore::Event::Ptr &event)
     return false;
 }
 
+bool EventDataVisitor::visit(const KCalCore::Event::Ptr &event)
+{
+    return visit(event, CalendarEvents::EventData::Event);
+}
+
 bool EventDataVisitor::visit(const KCalCore::Todo::Ptr &todo)
 {
-    CalendarEvents::EventData data = incidenceData(todo);
-    data.setEventType(CalendarEvents::EventData::Todo);
-    if (todo->recurs()) {
-        bool ok = false;
-        const auto list = explodeIncidenceOccurences(data, todo, ok);
-        if (ok) {
-            for (const auto &data : list) {
-                mResults.insert(data.startDateTime().date(), data);
-            }
-        }
-        return ok;
-    } else if (isInRange(todo->dtStart().date(), todo->dtDue().date())) {
-        data.setStartDateTime(todo->dtStart().dateTime());
-        data.setEndDateTime(todo->dtDue().dateTime());
-        mResults.insert(data.startDateTime().date(), data);
-        return true;
-    }
-
-    return false;
+    return visit(todo, CalendarEvents::EventData::Todo);
 }
 
 CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incidence::Ptr &incidence) const
@@ -200,6 +185,8 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     data.setIsAllDay(incidence->allDay());
     data.setIsMinor(false);
     data.setUid(generateUid(incidence));
+    data.setStartDateTime(incidence->dtStart().dateTime());
+    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).dateTime());
     // TODO: Set calendar color
     return data;
 }
@@ -216,10 +203,20 @@ const QStringList &EventDataIdVisitor::results() const
 
 bool EventDataIdVisitor::visit(const KCalCore::Event::Ptr &event)
 {
-    if (event->recurs()) {
+    return visit(event.staticCast<KCalCore::Incidence>());
+}
+
+bool EventDataIdVisitor::visit(const KCalCore::Todo::Ptr &todo)
+{
+    return visit(todo.staticCast<KCalCore::Incidence>());
+}
+
+bool EventDataIdVisitor::visit(const KCalCore::Incidence::Ptr& incidence)
+{
+    if (incidence->recurs()) {
         CalendarEvents::EventData ed;
         bool ok = false;
-        const auto list = explodeIncidenceOccurences(ed, event, ok);
+        const auto list = explodeIncidenceOccurences(ed, incidence, ok);
         if (ok) {
             for (const auto &data : list) {
                 mResults.push_back(data.uid());
@@ -227,15 +224,7 @@ bool EventDataIdVisitor::visit(const KCalCore::Event::Ptr &event)
         }
         return ok;
     } else {
-        mResults.push_back(generateUid(event, event->recurrenceId()));
+        mResults.push_back(generateUid(incidence, incidence->recurrenceId()));
     }
     return true;
 }
-
-bool EventDataIdVisitor::visit(const KCalCore::Todo::Ptr &todo)
-{
-    mResults.push_back(generateUid(todo, todo->recurrenceId()));
-    return true;
-}
-
-

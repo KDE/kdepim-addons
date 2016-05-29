@@ -70,6 +70,7 @@ protected:
     bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE { return false; }
     bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
 private:
+    bool visit(const KCalCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
     CalendarEvents::EventData incidenceData(const KCalCore::Incidence::Ptr &incidence) const;
 
     QMultiHash<QDate, CalendarEvents::EventData> mResults;
@@ -91,6 +92,8 @@ protected:
     bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
 
 private:
+    bool visit(const KCalCore::Incidence::Ptr &incidence);
+
     QStringList mResults;
 };
 
