@@ -99,7 +99,6 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidenc
                 it = mColorCache.insert(col.id(), QString());
             }
         }
-        qCDebug(PIMEVENTSPLUGIN_LOG) << "GOT" << (*it) << "for" << col.displayName();
     }
     return (*it);
 }
