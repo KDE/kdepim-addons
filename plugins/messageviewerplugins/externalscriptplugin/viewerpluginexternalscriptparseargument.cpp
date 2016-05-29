@@ -53,6 +53,9 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
         } else if (arg == QString::fromLatin1("%body")) {
             const QByteArray body = mMessage ? mMessage->body() : Q_NULLPTR;
             newArguments << QStringLiteral("\"%1\"").arg(QLatin1String(body));
+        } else if (arg == QString::fromLatin1("%inreplyto")) {
+            KMime::Headers::InReplyTo *inReplyTo = mMessage ? mMessage->inReplyTo(false) : Q_NULLPTR;
+            newArguments << QStringLiteral("\"%1\"").arg(inReplyTo ? inReplyTo->asUnicodeString() : QString());
         } else {
             newArguments << arg;
         }
