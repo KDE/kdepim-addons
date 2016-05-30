@@ -3,3 +3,4 @@ Name=foo
 Executable=bla
 CommandLine=foo-bla
 Description=description
+Icon=blo
