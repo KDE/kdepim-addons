@@ -2,7 +2,7 @@ External Script:
 ----------------
 We can create scripts which will use some element of an email as subject body etc.
 
-We need to create a desktop file for it.
+We need to create a desktop file for it (see example directory)
 
 Arguments:
 - %s returns subject
