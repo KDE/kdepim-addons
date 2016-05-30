@@ -106,6 +106,10 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 if (!description.isEmpty()) {
                     addHelpTextAction(act, description);
                 }
+                const QString &icon = info.icon();
+                if (!icon.isEmpty()) {
+                    act->setIcon(QIcon::fromTheme(icon));
+                }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
                 QStringList actionInfo;
                 actionInfo.append(info.commandLine());

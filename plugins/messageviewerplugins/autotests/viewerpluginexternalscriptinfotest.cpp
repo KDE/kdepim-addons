@@ -38,6 +38,7 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
     QVERIFY(info.commandLine().isEmpty());
     QVERIFY(info.executable().isEmpty());
     QVERIFY(info.description().isEmpty());
+    QVERIFY(info.icon().isEmpty());
     QVERIFY(!info.isValid());
 }
 

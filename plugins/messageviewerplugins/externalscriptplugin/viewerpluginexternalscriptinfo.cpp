@@ -62,6 +62,16 @@ void ViewerPluginExternalScriptInfo::setDescription(const QString &description)
     mDescription = description;
 }
 
+QString ViewerPluginExternalScriptInfo::icon() const
+{
+    return mIcon;
+}
+
+void ViewerPluginExternalScriptInfo::setIcon(const QString &icon)
+{
+    mIcon = icon;
+}
+
 bool ViewerPluginExternalScriptInfo::isValid() const
 {
     return !mName.trimmed().isEmpty() &&

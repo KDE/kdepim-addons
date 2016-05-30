@@ -57,6 +57,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
                         info.setExecutable(group.readEntry("Executable", QString()));
                         info.setCommandLine(group.readEntry("CommandLine", QString()));
                         info.setDescription(group.readEntry("Description", QString()));
+                        info.setIcon(group.readEntry("Icon", QString()));
                         if (info.isValid() && !scriptNames.contains(name)) {
                             mScriptInfos.append(info);
                             scriptNames.append(name);

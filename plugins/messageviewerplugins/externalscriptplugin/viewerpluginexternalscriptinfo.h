@@ -36,12 +36,16 @@ public:
     QString description() const;
     void setDescription(const QString &description);
 
+    QString icon() const;
+    void setIcon(const QString &icon);
+
     bool isValid() const;
 private:
     QString mCommandLine;
     QString mName;
     QString mExecutable;
     QString mDescription;
+    QString mIcon;
 };
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo)
