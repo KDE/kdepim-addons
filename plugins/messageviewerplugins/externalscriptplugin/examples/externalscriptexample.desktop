@@ -20,6 +20,7 @@ Name[uk]=Пошук теми у інтернеті
 Name[x-test]=xxSearch Subject on Webxx
 Executable=firefox
 CommandLine=--search %s
+Icon=firefox
 Description=Search subject on web
 Description[ca]=Cerca l'assumpte al web
 Description[ca@valencia]=Cerca l'assumpte al web
