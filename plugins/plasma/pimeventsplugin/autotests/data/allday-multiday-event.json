@@ -1,0 +1,23 @@
+{
+    "rangeStart": "2016-05-01",
+    "rangeEnd": "2016-05-31",
+    "akonadiId": 1,
+    "eventData": [
+        {
+            "summary": "Multi day all day event",
+            "description": "This is an all-day multi-day event",
+            "type": "Event",
+            "allDay": true,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-28",
+                "time": ""
+            },
+            "endDateTime": {
+                "date": "2016-05-30",
+                "time": ""
+            },
+            "uid": "Akonadi-1"
+        }
+    ]
+}

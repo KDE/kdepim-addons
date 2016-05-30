@@ -1,0 +1,82 @@
+{
+    "rangeStart": "2016-05-01",
+    "rangeEnd": "2016-05-31",
+    "akonadiId": 7,
+    "eventData": [
+        {
+            "summary": "Simple multi-day recurring event",
+            "description": "This is a simple multi-day recurring event",
+            "type": "Event",
+            "allDay": false,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-06",
+                "time": "19:00:00",
+                "tz": "Europe/Prague"
+            },
+            "endDateTime": {
+                "date": "2016-05-08",
+                "time": "12:00:00",
+                "tz": "Europe/Prague"
+            },
+            "uid": "Akonadi-7-20160506T190000CEST"
+        },
+
+        {
+            "summary": "Simple multi-day recurring event",
+            "description": "This is a simple multi-day recurring event",
+            "type": "Event",
+            "allDay": false,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-13",
+                "time": "19:00:00",
+                "tz": "Europe/Prague"
+            },
+            "endDateTime": {
+                "date": "2016-05-15",
+                "time": "12:00:00",
+                "tz": "Europe/Prague"
+            },
+            "uid": "Akonadi-7-20160513T190000CEST"
+        },
+
+        {
+            "summary": "Simple multi-day recurring event",
+            "description": "This is a simple multi-day recurring event",
+            "type": "Event",
+            "allDay": false,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-20",
+                "time": "19:00:00",
+                "tz": "Europe/Prague"
+            },
+            "endDateTime": {
+                "date": "2016-05-22",
+                "time": "12:00:00",
+                "tz": "Europe/Prague"
+            },
+            "uid": "Akonadi-7-20160520T190000CEST"
+        },
+
+        {
+            "summary": "Simple multi-day recurring event",
+            "description": "This is a simple multi-day recurring event",
+            "type": "Event",
+            "allDay": false,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-27",
+                "time": "19:00:00",
+                "tz": "Europe/Prague"
+            },
+            "endDateTime": {
+                "date": "2016-05-29",
+                "time": "12:00:00",
+                "tz": "Europe/Prague"
+            },
+            "uid": "Akonadi-7-20160527T190000CEST"
+        }
+    ]
+}

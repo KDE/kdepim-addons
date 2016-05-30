@@ -1,0 +1,25 @@
+{
+    "rangeStart": "2016-05-01",
+    "rangeEnd": "2016-05-31",
+    "akonadiId": 5,
+    "eventData": [
+        {
+            "summary": "Simple multi day event",
+            "description": "This is a simple multi day event",
+            "type": "Event",
+            "allDay": false,
+            "isMinor": false,
+            "startDateTime": {
+                "date": "2016-05-28",
+                "time": "16:00:00",
+                "tz": "Europe/Prague"
+            },
+            "endDateTime": {
+                "date": "2016-05-30",
+                "time": "12:00:00",
+                "tz": "Europe/Prague"
+            },
+            "uid": "Akonadi-5"
+        }
+    ]
+}

@@ -16,3 +16,5 @@ log_externalscriptplugin kdepim-addons (External Script Plugin)
 log_text_calendar kdepim-addons (messageviewer calendar plugins)
 log_ms_tnef kdepim-addons (ms_tnef)
 log_vcard kdepim-addons (vcard)
+log_pimeventsplugin kdepim-addons (Plasma calendar plugin)
+
