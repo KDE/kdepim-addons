@@ -31,7 +31,6 @@ class EventDataVisitorTest : public QObject
 {
     Q_OBJECT
 
-
 private Q_SLOTS:
     void testGenerateUID_data();
     void testGenerateUID();

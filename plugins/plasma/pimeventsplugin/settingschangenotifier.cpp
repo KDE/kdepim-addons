@@ -28,7 +28,7 @@ SettingsChangeNotifier *SettingsChangeNotifier::self()
     // short code with long comments makes it look like I know what I'm doing.
     const QVariant v = qApp->property(APP_PROPERTY_NAME);
     if (v.isValid()) {
-        return reinterpret_cast<SettingsChangeNotifier*>(v.value<quintptr>());
+        return reinterpret_cast<SettingsChangeNotifier *>(v.value<quintptr>());
     }
 
     SettingsChangeNotifier *notifier = new SettingsChangeNotifier();

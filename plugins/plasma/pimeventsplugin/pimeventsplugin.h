@@ -31,7 +31,7 @@ class ETMCalendar;
 
 class PimDataSource;
 class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
-                      , public KCalCore::Calendar::CalendarObserver
+    , public KCalCore::Calendar::CalendarObserver
 {
     Q_OBJECT
     Q_INTERFACES(CalendarEvents::CalendarEventsPlugin)
@@ -47,7 +47,7 @@ public:
 
     // KCalCore::Calendar::CalendarObserver
     void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr & incidence) Q_DECL_OVERRIDE;
+    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
     // Handle removal before it really happens otherwise we would not be able
     // to lookup corresponding Akonadi ID in ETMCalendar
     void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;

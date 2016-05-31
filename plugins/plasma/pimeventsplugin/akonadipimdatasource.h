@@ -24,13 +24,14 @@
 #include <QObject>
 #include <EventViews/Prefs>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ChangeRecorder;
 class ETMCalendar;
 }
 
 class AkonadiPimDataSource : public QObject,
-                             public PimDataSource
+    public PimDataSource
 {
     Q_OBJECT
 
@@ -51,6 +52,5 @@ private:
     EventViews::PrefsPtr mEventViewsPrefs;
     mutable QHash<qint64, QString> mColorCache;
 };
-
 
 #endif

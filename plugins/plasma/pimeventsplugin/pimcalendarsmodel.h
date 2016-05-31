@@ -23,7 +23,8 @@
 #include <QSortFilterProxyModel>
 #include <QSet>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class EntityTreeModel;
 }
 
@@ -49,6 +50,5 @@ private:
     Akonadi::EntityTreeModel *mEtm;
     QSet<qint64> mEnabledCalendars;
 };
-
 
 #endif

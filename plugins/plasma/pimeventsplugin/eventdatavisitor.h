@@ -41,8 +41,8 @@ protected:
     bool isInRange(const QDate &start, const QDate &end) const;
 
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
-                                                                  const KCalCore::Incidence::Ptr &incidence,
-                                                                  bool &ok);
+            const KCalCore::Incidence::Ptr &incidence,
+            bool &ok);
 protected:
     PimDataSource *mDataSource;
     QDate mStart;
@@ -72,7 +72,6 @@ private:
 
 };
 
-
 class EventDataIdVisitor : public BaseEventDataVisitor
 {
 public:
@@ -91,6 +90,5 @@ private:
 
     QStringList mResults;
 };
-
 
 #endif

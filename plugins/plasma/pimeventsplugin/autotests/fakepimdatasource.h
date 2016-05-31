@@ -40,5 +40,4 @@ private:
     KCalCore::Calendar *mCalendar;
 };
 
-
 #endif

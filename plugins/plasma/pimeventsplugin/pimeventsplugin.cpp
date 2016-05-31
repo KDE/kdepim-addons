@@ -22,10 +22,10 @@
 #include "akonadipimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
-PimEventsPlugin::PimEventsPlugin(QObject* parent)
+PimEventsPlugin::PimEventsPlugin(QObject *parent)
     : PimEventsPlugin(new AkonadiPimDataSource(), parent)
 {
-    static_cast<AkonadiPimDataSource*>(mDataSource)->setParent(this);
+    static_cast<AkonadiPimDataSource *>(mDataSource)->setParent(this);
 }
 
 PimEventsPlugin::PimEventsPlugin(PimDataSource *dataSource, QObject *parent)
@@ -37,12 +37,10 @@ PimEventsPlugin::PimEventsPlugin(PimDataSource *dataSource, QObject *parent)
     dataSource->calendar()->registerObserver(this);
 }
 
-
 PimEventsPlugin::~PimEventsPlugin()
 {
     qCDebug(PIMEVENTSPLUGIN_LOG) << "PIM Events Plugin deactivated";
 }
-
 
 void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate &endDate)
 {

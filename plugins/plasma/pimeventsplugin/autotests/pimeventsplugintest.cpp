@@ -36,7 +36,7 @@ void PimEventsPluginTest::initTestCase()
 }
 
 bool PimEventsPluginTest::compareEventDataHashes(const DateEventDataHash &actual,
-                                                 const DateEventDataHash &expected)
+        const DateEventDataHash &expected)
 {
     COMPARE(actual.size(), expected.size());
     Q_FOREACH (const QDate &resultKey, actual.uniqueKeys()) {
@@ -82,23 +82,20 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
 }
 
 QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalCore::Event::Ptr &event,
-                                                                      const DateEventDataHash &allData)
+        const DateEventDataHash &allData)
 {
     QVector<CalendarEvents::EventData> data;
     for (auto it = allData.cbegin(), end = allData.cend(); it != end; ++it) {
         // This is a very naive check
         if (it->title() == event->summary()
-            && it->description() == event->description()
-            && it->isAllDay() == event->allDay()) {
+                && it->description() == event->description()
+                && it->isAllDay() == event->allDay()) {
             data.push_back((*it));
         }
     }
 
     return data;
 }
-
-
-
 
 void PimEventsPluginTest::testLoadEventsForDataRange()
 {
@@ -130,7 +127,6 @@ void PimEventsPluginTest::testEventAdded()
 
     plugin.loadEventsForDateRange(QDate(2016, 5, 1), QDate(2016, 5, 31));
     QCOMPARE(dataReadySpy.size(), 0);
-
 
     Q_FOREACH (const QString &data, allData) {
         TestDataParser parser(data, true);
@@ -204,9 +200,9 @@ void PimEventsPluginTest::testEventModified()
             const auto args = eventModifiedSpy.takeFirst();
             const auto &resultData = args[0].value<CalendarEvents::EventData>();
             const auto expected = std::find_if(expectedData.begin(), expectedData.end(),
-                                            [resultData](const CalendarEvents::EventData &e) {
-                                                return e.uid() == resultData.uid();
-                                            });
+            [resultData](const CalendarEvents::EventData & e) {
+                return e.uid() == resultData.uid();
+            });
             QVERIFY(expected != expectedData.end());
             expectedData.erase(expected);
             QCOMPARE(resultData.title(), QString::fromLatin1("TEST2"));
@@ -257,15 +253,14 @@ void PimEventsPluginTest::testEventRemoved()
         while (!eventRemovedSpy.isEmpty()) {
             const QString resultUid = eventRemovedSpy.takeFirst().first().toString();
             const auto expected = std::find_if(expectedData.begin(), expectedData.end(),
-                                            [resultUid](const CalendarEvents::EventData &e) {
-                                                return e.uid() == resultUid;
-                                            });
+            [resultUid](const CalendarEvents::EventData & e) {
+                return e.uid() == resultUid;
+            });
             QVERIFY(expected != expectedData.end());
             expectedData.erase(expected);
         }
         QVERIFY(expectedData.isEmpty());
     }
 }
-
 
 QTEST_MAIN(PimEventsPluginTest)

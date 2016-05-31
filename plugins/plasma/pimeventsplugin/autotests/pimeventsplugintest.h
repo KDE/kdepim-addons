@@ -25,7 +25,8 @@
 #include <KCalCore/Event>
 
 class QDate;
-namespace CalendarEvents {
+namespace CalendarEvents
+{
 class EventData;
 }
 class FakePimDataSource;
@@ -48,7 +49,7 @@ private:
                                 const DateEventDataHash &expected);
     DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
     QVector<CalendarEvents::EventData> findEventData(const KCalCore::Event::Ptr &event,
-                                                     const DateEventDataHash &allData);
+            const DateEventDataHash &allData);
 };
 
 #endif

@@ -49,7 +49,9 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     mEtm->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
     mEtm->setListFilter(Akonadi::CollectionFetchScope::Enabled);
     connect(mEtm, &Akonadi::EntityTreeModel::collectionTreeFetched,
-            this, [this]() { sort(0, Qt::AscendingOrder); });
+    this, [this]() {
+        sort(0, Qt::AscendingOrder);
+    });
 
     setSourceModel(mEtm);
 
@@ -86,10 +88,10 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
     auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
     const QString icon = attr ? attr->iconName() : QString::null;
     return QVariantMap{ { QStringLiteral("id"), col.id() },
-                        { QStringLiteral("name"), col.displayName() },
-                        { QStringLiteral("enabled"), enabled },
-                        { QStringLiteral("checked"), mEnabledCalendars.contains(col.id()) },
-                        { QStringLiteral("iconName"), icon } };
+        { QStringLiteral("name"), col.displayName() },
+        { QStringLiteral("enabled"), enabled },
+        { QStringLiteral("checked"), mEnabledCalendars.contains(col.id()) },
+        { QStringLiteral("iconName"), icon } };
 }
 
 void PimCalendarsModel::setChecked(qint64 collectionId, bool checked)

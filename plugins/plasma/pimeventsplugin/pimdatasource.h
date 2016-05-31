@@ -22,7 +22,8 @@
 
 #include <KCalCore/Incidence>
 
-namespace KCalCore {
+namespace KCalCore
+{
 class Calendar;
 }
 

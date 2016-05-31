@@ -36,14 +36,14 @@ QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
 bool operator==(const CalendarEvents::EventData &lhs, const CalendarEvents::EventData &rhs)
 {
     return lhs.uid() == rhs.uid()
-            && lhs.type() == rhs.type()
-            && lhs.isAllDay() == rhs.isAllDay()
-            && lhs.isMinor() == rhs.isMinor()
-            && lhs.title() == rhs.title()
-            && lhs.startDateTime() == rhs.startDateTime()
-            && lhs.endDateTime() == rhs.endDateTime()
-            && lhs.description() == rhs.description()
-            && lhs.eventColor() == rhs.eventColor();
+           && lhs.type() == rhs.type()
+           && lhs.isAllDay() == rhs.isAllDay()
+           && lhs.isMinor() == rhs.isMinor()
+           && lhs.title() == rhs.title()
+           && lhs.startDateTime() == rhs.startDateTime()
+           && lhs.endDateTime() == rhs.endDateTime()
+           && lhs.description() == rhs.description()
+           && lhs.eventColor() == rhs.eventColor();
 }
 
 namespace std
@@ -61,28 +61,28 @@ bool operator<(const CalendarEvents::EventData &lhs, const CalendarEvents::Event
 }
 
 #define COMPARE(_actual, _expected) \
-{ \
-    bool ok = false; \
-    [&]() { \
-        QCOMPARE(_actual, _expected); \
-        ok = true; \
-    }(); \
-    if (!ok) { \
-        return false; \
-    } \
-}
+    { \
+        bool ok = false; \
+        [&]() { \
+            QCOMPARE(_actual, _expected); \
+            ok = true; \
+        }(); \
+        if (!ok) { \
+            return false; \
+        } \
+    }
 
 #define VERIFY(_cond) \
-{ \
-    bool ok = false; \
-    [&]() { \
-        QVERIFY(_cond); \
-        ok = true; \
-    }(); \
-    if (!ok) { \
-        return false; \
-    } \
-}
+    { \
+        bool ok = false; \
+        [&]() { \
+            QVERIFY(_cond); \
+            ok = true; \
+        }(); \
+        if (!ok) { \
+            return false; \
+        } \
+    }
 
 namespace TestUtils
 {
@@ -104,6 +104,5 @@ bool compareEventData(const CalendarEvents::EventData &actual,
 }
 
 }
-
 
 #endif
