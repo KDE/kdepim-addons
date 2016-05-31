@@ -9,7 +9,7 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
     add_executable(${_name} ${_test})
     add_test(${_name} ${_name})
     ecm_mark_as_test(plasma-pimeventsplugin-${_name})
-    add_definitions(-DQT_TESTCASE_BUILDDIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
+    add_definitions(-DPIMEVENT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
     target_link_libraries(${_name} Qt5::Core
                                    Qt5::Test
                                    KF5::AkonadiCore

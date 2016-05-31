@@ -44,7 +44,7 @@ TestDataParser::~TestDataParser()
 
 QStringList TestDataParser::allTestData()
 {
-    QDir testdir(QStringLiteral(QT_TESTCASE_BUILDDIR "/data"));
+    QDir testdir(QStringLiteral(PIMEVENT_DATADIR "/data"));
     const auto data = testdir.entryInfoList({ QStringLiteral("*.json") }, QDir::Files);
     QStringList testcases;
     for (const auto &fi : data) {
@@ -87,7 +87,7 @@ QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
 
 void TestDataParser::parse()
 {
-    QFile icalFile(QStringLiteral(QT_TESTCASE_BUILDDIR "/data/%1.ics").arg(mTestData));
+    QFile icalFile(QStringLiteral(PIMEVENT_DATADIR "/data/%1.ics").arg(mTestData));
     QVERIFY(icalFile.exists());
     QVERIFY(icalFile.open(QIODevice::ReadOnly));
 
@@ -96,7 +96,7 @@ void TestDataParser::parse()
     mIncidence = format.readIncidence(data);
     QVERIFY(mIncidence);
 
-    QFile jsonFile(QStringLiteral(QT_TESTCASE_BUILDDIR "/data/%1.json").arg(mTestData));
+    QFile jsonFile(QStringLiteral(PIMEVENT_DATADIR "/data/%1.json").arg(mTestData));
     QVERIFY(jsonFile.exists());
     QVERIFY(jsonFile.open(QIODevice::ReadOnly));
 
