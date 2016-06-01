@@ -64,10 +64,10 @@ TodoEdit::TodoEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Todo:"));
+    QLabel *lab = new QLabel(i18n("Todo:"), this);
     hbox->addWidget(lab);
 
-    mNoteEdit = new QLineEdit;
+    mNoteEdit = new QLineEdit(this);
     mNoteEdit->setClearButtonEnabled(true);
     mNoteEdit->setObjectName(QStringLiteral("noteedit"));
     mNoteEdit->setFocus();
@@ -77,7 +77,7 @@ TodoEdit::TodoEdit(QWidget *parent)
 
     hbox->addSpacing(5);
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox(_k_todoEditStubModel);
+    mCollectionCombobox = new Akonadi::CollectionComboBox(_k_todoEditStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalCore::Todo::todoMimeType());
@@ -96,7 +96,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     vbox->addLayout(hbox);
 
     hbox->addStretch(1);
-    mSaveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"));
+    mSaveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"), this);
     mSaveButton->setObjectName(QStringLiteral("save-button"));
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
@@ -105,7 +105,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &TodoEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton = new QPushButton(i18n("Open &editor..."));
+    mOpenEditorButton = new QPushButton(i18n("Open &editor..."), this);
     mOpenEditorButton->setObjectName(QStringLiteral("open-editor-button"));
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open todo editor, where more details can be changed."));
@@ -114,7 +114,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mOpenEditorButton, &QPushButton::clicked, this, &TodoEdit::slotOpenEditor);
     hbox->addWidget(mOpenEditorButton);
 
-    QPushButton *btn = new QPushButton;
+    QPushButton *btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
     btn->setObjectName(QStringLiteral("close-button"));
 #ifndef QT_NO_ACCESSIBILITY
