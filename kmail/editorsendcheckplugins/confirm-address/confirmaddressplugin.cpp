@@ -37,10 +37,9 @@ ConfirmAddressPlugin::~ConfirmAddressPlugin()
 
 }
 
-MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QWidget *parent)
+MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QObject *parent)
 {
-    ConfirmAddressInterface *interface = new ConfirmAddressInterface(this);
-    interface->setParentWidget(parent);
+    ConfirmAddressInterface *interface = new ConfirmAddressInterface(parent);
     return interface;
 }
 

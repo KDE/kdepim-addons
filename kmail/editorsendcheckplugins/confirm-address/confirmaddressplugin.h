@@ -30,7 +30,7 @@ public:
     explicit ConfirmAddressPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
     ~ConfirmAddressPlugin();
 
-    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QWidget *parent) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // CONFIRMADDRESSPLUGIN_H
