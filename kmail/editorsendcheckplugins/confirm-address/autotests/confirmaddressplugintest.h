@@ -17,32 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef CONFIRMADDRESSPLUGINTEST_H
+#define CONFIRMADDRESSPLUGINTEST_H
 
-#include "confirmaddressinterface.h"
+#include <QObject>
 
-ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
+class ConfirmAddressPluginTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit ConfirmAddressPluginTest(QObject *parent = Q_NULLPTR);
+    ~ConfirmAddressPluginTest();
+};
 
-}
-
-ConfirmAddressInterface::~ConfirmAddressInterface()
-{
-
-}
-
-void ConfirmAddressInterface::exec()
-{
-    //TODO
-}
-
-QWidget *ConfirmAddressInterface::createConfigureWidget(QWidget *parent) const
-{
-    return {};
-}
-
-bool ConfirmAddressInterface::hasConfigureDialog() const
-{
-    return true;
-}
-
+#endif // CONFIRMADDRESSPLUGINTEST_H
