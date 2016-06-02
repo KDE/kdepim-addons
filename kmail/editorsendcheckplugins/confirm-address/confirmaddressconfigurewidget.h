@@ -22,13 +22,18 @@
 #define CONFIRMADDRESSCONFIGUREWIDGET_H
 
 #include <QWidget>
+#include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 
-class ConfirmAddressConfigureWidget : public QWidget
+class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
 public:
     explicit ConfirmAddressConfigureWidget(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureWidget();
+
+    void loadSettings() Q_DECL_OVERRIDE;
+    void saveSettings() Q_DECL_OVERRIDE;
+    void resetSettings() Q_DECL_OVERRIDE;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H

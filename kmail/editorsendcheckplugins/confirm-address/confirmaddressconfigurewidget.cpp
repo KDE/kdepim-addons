@@ -23,7 +23,7 @@
 #include <QVBoxLayout>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
-    : QWidget(parent)
+    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
     QVBoxLayout *vboxlayout = new QVBoxLayout;
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
@@ -34,3 +34,20 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 {
 
 }
+
+
+void ConfirmAddressConfigureWidget::loadSettings()
+{
+    //TODO
+}
+
+void ConfirmAddressConfigureWidget::saveSettings()
+{
+    //TODO
+}
+
+void ConfirmAddressConfigureWidget::resetSettings()
+{
+    //TODO
+}
+

@@ -31,7 +31,10 @@ public:
     bool exec() Q_DECL_OVERRIDE;
 
     bool hasConfigureDialog() const Q_DECL_OVERRIDE;
-    QWidget *createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
+
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidget *createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
 };
+
+
 
 #endif // CONFIRMADDRESSINTERFACE_H
