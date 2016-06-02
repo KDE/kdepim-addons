@@ -28,7 +28,7 @@ class ConfirmAddressInterface : public MessageComposer::PluginEditorCheckBeforeS
 public:
     explicit ConfirmAddressInterface(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressInterface();
-    void exec() Q_DECL_OVERRIDE;
+    bool exec() Q_DECL_OVERRIDE;
 
     bool hasConfigureDialog() const Q_DECL_OVERRIDE;
     QWidget *createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;

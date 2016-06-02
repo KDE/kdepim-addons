@@ -31,9 +31,10 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 }
 
-void ConfirmAddressInterface::exec()
+bool ConfirmAddressInterface::exec()
 {
     //TODO
+    return true;
 }
 
 QWidget *ConfirmAddressInterface::createConfigureWidget(QWidget *parent) const

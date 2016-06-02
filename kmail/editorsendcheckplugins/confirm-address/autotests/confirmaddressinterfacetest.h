@@ -28,6 +28,8 @@ class ConfirmAddressInterfaceTest : public QObject
 public:
     explicit ConfirmAddressInterfaceTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressInterfaceTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIRMADDRESSINTERFACETEST_H
