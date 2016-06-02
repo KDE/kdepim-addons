@@ -20,13 +20,14 @@
 #ifndef CONFIRMADDRESSPLUGIN_H
 #define CONFIRMADDRESSPLUGIN_H
 
+#include <QVariant>
 #include <MessageComposer/PluginEditorCheckBeforeSend>
 
 class ConfirmAddressPlugin : public MessageComposer::PluginEditorCheckBeforeSend
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressPlugin(QObject *parent = Q_NULLPTR);
+    explicit ConfirmAddressPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
     ~ConfirmAddressPlugin();
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QWidget *parent) Q_DECL_OVERRIDE;

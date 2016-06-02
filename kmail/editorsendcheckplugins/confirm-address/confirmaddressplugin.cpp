@@ -18,9 +18,16 @@
 */
 
 #include "confirmaddressplugin.h"
+#include "confirmaddressinterface.h"
 
-ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSend()
+#include <KLocalizedString>
+#include <kpluginfactory.h>
+
+K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();)
+
+
+ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent, const QList<QVariant> &)
+    : MessageComposer::PluginEditorCheckBeforeSend(parent)
 {
 
 }
@@ -32,5 +39,9 @@ ConfirmAddressPlugin::~ConfirmAddressPlugin()
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QWidget *parent)
 {
-    return {};
+    ConfirmAddressInterface *interface = new ConfirmAddressInterface(this);
+    interface->setParentWidget(parent);
+    return interface;
 }
+
+#include "confirmaddressplugin.moc"

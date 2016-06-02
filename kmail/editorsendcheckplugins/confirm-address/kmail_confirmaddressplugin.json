@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Confirm Address", 
+        "ServiceTypes": [
+            "KMailEditor/PluginCheckBeforeSend"
+        ], 
+        "Version": "1.0"
+    } 
+}
