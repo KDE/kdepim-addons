@@ -19,6 +19,7 @@
 
 
 #include "confirmaddressinterface.h"
+#include "confirmaddressconfigurewidget.h"
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -39,7 +40,7 @@ bool ConfirmAddressInterface::exec()
 
 QWidget *ConfirmAddressInterface::createConfigureWidget(QWidget *parent) const
 {
-    return {};
+    return new ConfirmAddressConfigureWidget(parent);
 }
 
 bool ConfirmAddressInterface::hasConfigureDialog() const
