@@ -29,10 +29,6 @@ public:
     explicit ConfirmAddressInterface(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressInterface();
     bool exec() Q_DECL_OVERRIDE;
-
-    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
-
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidget *createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
 };
 
 

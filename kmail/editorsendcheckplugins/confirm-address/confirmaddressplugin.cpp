@@ -19,6 +19,7 @@
 
 #include "confirmaddressplugin.h"
 #include "confirmaddressinterface.h"
+#include "confirmaddressconfigurewidget.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -41,6 +42,20 @@ MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::cre
 {
     ConfirmAddressInterface *interface = new ConfirmAddressInterface(parent);
     return interface;
+}
+
+bool ConfirmAddressPlugin::hasConfigureDialog() const
+{
+    return true;
+}
+
+MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting ConfirmAddressPlugin::createConfigureWidget(QWidget *parent) const
+{
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings;
+    ConfirmAddressConfigureWidget *w = new ConfirmAddressConfigureWidget(parent);
+    settings.configureWidget = w;
+    settings.name = i18n("Confirm Addresses");
+    return settings;
 }
 
 #include "confirmaddressplugin.moc"

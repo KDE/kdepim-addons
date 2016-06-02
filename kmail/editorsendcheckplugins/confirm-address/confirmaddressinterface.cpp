@@ -37,15 +37,3 @@ bool ConfirmAddressInterface::exec()
     //TODO
     return true;
 }
-
-
-bool ConfirmAddressInterface::hasConfigureDialog() const
-{
-    return true;
-}
-
-
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidget *ConfirmAddressInterface::createConfigureWidget(QWidget *parent) const
-{
-    return new ConfirmAddressConfigureWidget(parent);
-}

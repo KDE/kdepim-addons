@@ -28,6 +28,8 @@ class ConfirmAddressPluginTest : public QObject
 public:
     explicit ConfirmAddressPluginTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressPluginTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIRMADDRESSPLUGINTEST_H

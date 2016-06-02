@@ -18,6 +18,7 @@
 */
 
 #include "confirmaddressplugintest.h"
+#include "../confirmaddressplugin.h"
 #include <QTest>
 
 ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
@@ -29,6 +30,12 @@ ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
 ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
 {
 
+}
+
+void ConfirmAddressPluginTest::shouldHaveDefaultValue()
+{
+    ConfirmAddressPlugin plugin;
+    QVERIFY(plugin.hasConfigureDialog());
 }
 
 QTEST_MAIN(ConfirmAddressPluginTest)
