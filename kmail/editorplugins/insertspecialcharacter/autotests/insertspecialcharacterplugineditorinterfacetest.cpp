@@ -30,4 +30,12 @@ InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEd
 
 }
 
+void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()
+{
+    InsertSpecialCharacterPluginEditorInterface interface;
+    QVERIFY(!interface.hasConfigureDialog());
+    QVERIFY(!interface.hasPopupMenuSupport());
+    QVERIFY(!interface.hasToolBarSupport());
+}
+
 QTEST_MAIN(InsertSpecialCharacterPluginEditorInterfaceTest)

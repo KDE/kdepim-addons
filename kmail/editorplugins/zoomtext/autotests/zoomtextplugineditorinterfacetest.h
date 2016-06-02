@@ -26,6 +26,8 @@ class ZoomTextPluginEditorInterfaceTest : public QObject
 public:
     explicit ZoomTextPluginEditorInterfaceTest(QObject *parent = Q_NULLPTR);
     ~ZoomTextPluginEditorInterfaceTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif
