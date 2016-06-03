@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
+#include <QLabel>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
@@ -56,5 +57,6 @@ void ConfirmAddressConfigureWidget::resetSettings()
 
 void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)
 {
+    Q_EMIT configureChanged();
     //TODO
 }
