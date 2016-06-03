@@ -35,10 +35,17 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::slotAccepted);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
     mainLayout->addWidget(buttonBox);
 }
 
 ConfirmAddressDialog::~ConfirmAddressDialog()
+{
+
+}
+
+void ConfirmAddressDialog::slotAccepted()
 {
 
 }

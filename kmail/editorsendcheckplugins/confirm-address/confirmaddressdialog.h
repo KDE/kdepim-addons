@@ -28,6 +28,10 @@ class ConfirmAddressDialog : public QDialog
 public:
     explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressDialog();
+
+private Q_SLOTS:
+    void slotAccepted();
+
 private:
     ConfirmAddressWidget *mConfirmWidget;
 };
