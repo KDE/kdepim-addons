@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "confirmaddressdialogtest.h"
 #include "../confirmaddressdialog.h"
 #include "../confirmaddresswidget.h"

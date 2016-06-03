@@ -21,7 +21,6 @@
 #include "../confirmaddressinterface.h"
 #include <QTest>
 
-
 ConfirmAddressInterfaceTest::ConfirmAddressInterfaceTest(QObject *parent)
     : QObject(parent)
 {

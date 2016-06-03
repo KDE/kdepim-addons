@@ -33,7 +33,7 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     mConfirmWidget->setObjectName(QStringLiteral("confirmwidget"));
     mainLayout->addWidget(mConfirmWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
 }

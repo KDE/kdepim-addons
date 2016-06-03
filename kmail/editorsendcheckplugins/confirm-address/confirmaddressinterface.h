@@ -35,6 +35,4 @@ private:
     bool mEnabled;
 };
 
-
-
 #endif // CONFIRMADDRESSINTERFACE_H

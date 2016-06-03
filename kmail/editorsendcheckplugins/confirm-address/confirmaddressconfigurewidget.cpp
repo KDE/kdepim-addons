@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "confirmaddressconfigurewidget.h"
 #include <KLocalizedString>
 #include <QCheckBox>
@@ -39,7 +38,6 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 {
 
 }
-
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {

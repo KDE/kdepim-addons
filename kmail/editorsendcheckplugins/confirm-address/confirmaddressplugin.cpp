@@ -26,7 +26,6 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();)
 
-
 ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)
 {
