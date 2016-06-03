@@ -51,10 +51,8 @@ bool ConfirmAddressPlugin::hasConfigureSupport() const
 
 MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting ConfirmAddressPlugin::createConfigureWidget(QWidget *parent) const
 {
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings;
     ConfirmAddressConfigureWidget *w = new ConfirmAddressConfigureWidget(parent);
-    settings.configureWidget = w;
-    settings.name = i18n("Confirm Addresses");
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Confirm Addresses"));
     return settings;
 }
 

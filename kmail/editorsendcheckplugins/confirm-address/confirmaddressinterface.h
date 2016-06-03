@@ -29,6 +29,10 @@ public:
     explicit ConfirmAddressInterface(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressInterface();
     bool exec() Q_DECL_OVERRIDE;
+
+private:
+    void loadConfig();
+    bool mEnabled;
 };
 
 

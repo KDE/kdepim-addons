@@ -22,9 +22,10 @@
 #include "confirmaddressconfigurewidget.h"
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
+    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
+      mEnabled(false)
 {
-
+    loadConfig();
 }
 
 ConfirmAddressInterface::~ConfirmAddressInterface()
@@ -34,6 +35,15 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 bool ConfirmAddressInterface::exec()
 {
+    if (mEnabled) {
+        //TODO
+        return true;
+    } else {
+        return true;
+    }
+}
+
+void ConfirmAddressInterface::loadConfig()
+{
     //TODO
-    return true;
 }

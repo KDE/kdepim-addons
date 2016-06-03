@@ -20,6 +20,7 @@
 
 #include "confirmaddressconfigurewidget.h"
 #include <KLocalizedString>
+#include <QCheckBox>
 #include <QVBoxLayout>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
@@ -28,6 +29,10 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     QVBoxLayout *vboxlayout = new QVBoxLayout;
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
     setLayout(vboxlayout);
+    mEnable = new QCheckBox(i18n("Enable"), this);
+    mEnable->setObjectName(QStringLiteral("enable"));
+    vboxlayout->addWidget(mEnable);
+    connect(mEnable, &QCheckBox::clicked, this, &ConfirmAddressConfigureWidget::slotEnableChanged);
 }
 
 ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
@@ -51,3 +56,7 @@ void ConfirmAddressConfigureWidget::resetSettings()
     //TODO
 }
 
+void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)
+{
+    //TODO
+}

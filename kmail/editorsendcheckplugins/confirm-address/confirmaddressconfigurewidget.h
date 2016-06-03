@@ -23,7 +23,7 @@
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
-
+class QCheckBox;
 class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
@@ -34,6 +34,12 @@ public:
     void loadSettings() Q_DECL_OVERRIDE;
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
+
+private Q_SLOTS:
+    void slotEnableChanged(bool state);
+
+private:
+    QCheckBox *mEnable;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H
