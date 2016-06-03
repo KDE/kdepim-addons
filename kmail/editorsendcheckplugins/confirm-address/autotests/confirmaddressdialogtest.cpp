@@ -19,8 +19,11 @@
 
 
 #include "confirmaddressdialogtest.h"
-
+#include "../confirmaddressdialog.h"
+#include "../confirmaddresswidget.h"
 #include <QTest>
+#include <QVBoxLayout>
+#include <QDialogButtonBox>
 
 ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)
@@ -31,6 +34,19 @@ ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
 ConfirmAddressDialogTest::~ConfirmAddressDialogTest()
 {
 
+}
+
+void ConfirmAddressDialogTest::shouldHaveDefaultValue()
+{
+    ConfirmAddressDialog dlg;
+    QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
+
+    ConfirmAddressWidget *confirmAddressWidget = dlg.findChild<ConfirmAddressWidget *>(QStringLiteral("confirmwidget"));
+    QVERIFY(confirmAddressWidget);
 }
 
 QTEST_MAIN(ConfirmAddressDialogTest)

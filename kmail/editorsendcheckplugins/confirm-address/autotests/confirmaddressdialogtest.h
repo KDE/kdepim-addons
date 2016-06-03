@@ -29,6 +29,9 @@ class ConfirmAddressDialogTest : public QObject
 public:
     explicit ConfirmAddressDialogTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressDialogTest();
+
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIRMADDRESSDIALOGTEST_H

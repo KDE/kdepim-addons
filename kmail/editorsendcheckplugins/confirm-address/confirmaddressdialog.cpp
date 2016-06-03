@@ -18,14 +18,24 @@
 */
 
 #include "confirmaddressdialog.h"
+#include "confirmaddresswidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
-
+#include <QVBoxLayout>
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
+    mConfirmWidget = new ConfirmAddressWidget(this);
+    mConfirmWidget->setObjectName(QStringLiteral("confirmwidget"));
+    mainLayout->addWidget(mConfirmWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    mainLayout->addWidget(buttonBox);
 }
 
 ConfirmAddressDialog::~ConfirmAddressDialog()

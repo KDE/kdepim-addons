@@ -29,6 +29,8 @@ public:
     explicit ConfirmAddressWidgetTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressWidgetTest();
 
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIRMADDRESSWIDGETTEST_H

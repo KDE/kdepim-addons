@@ -21,13 +21,15 @@
 #define CONFIRMADDRESSDIALOG_H
 
 #include <QDialog>
-
+class ConfirmAddressWidget;
 class ConfirmAddressDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressDialog();
+private:
+    ConfirmAddressWidget *mConfirmWidget;
 };
 
 #endif // CONFIRMADDRESSDIALOG_H

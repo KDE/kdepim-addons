@@ -19,9 +19,15 @@
 
 #include "confirmaddresswidget.h"
 
+#include <KLocalizedString>
+#include <QVBoxLayout>
+
 ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setMargin(0);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
 }
 
