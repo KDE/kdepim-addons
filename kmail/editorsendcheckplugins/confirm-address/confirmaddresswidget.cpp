@@ -17,18 +17,15 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressdialog.h"
-#include <KLocalizedString>
-#include <QDialogButtonBox>
+#include "confirmaddresswidget.h"
 
-
-ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
-    : QDialog(parent)
+ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
+    : QWidget(parent)
 {
 
 }
 
-ConfirmAddressDialog::~ConfirmAddressDialog()
+ConfirmAddressWidget::~ConfirmAddressWidget()
 {
 
 }
