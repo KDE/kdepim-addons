@@ -35,7 +35,7 @@ ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
 void ConfirmAddressPluginTest::shouldHaveDefaultValue()
 {
     ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureDialog());
+    QVERIFY(plugin.hasConfigureSupport());
 }
 
 QTEST_MAIN(ConfirmAddressPluginTest)

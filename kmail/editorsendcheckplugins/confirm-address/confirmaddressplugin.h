@@ -31,7 +31,7 @@ public:
     ~ConfirmAddressPlugin();
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
-    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
+    bool hasConfigureSupport() const Q_DECL_OVERRIDE;
 
     MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
 
