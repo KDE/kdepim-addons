@@ -24,7 +24,7 @@ ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
       mEnabled(false)
 {
-    loadConfig();
+    reloadConfig();
 }
 
 ConfirmAddressInterface::~ConfirmAddressInterface()
@@ -42,7 +42,7 @@ bool ConfirmAddressInterface::exec()
     }
 }
 
-void ConfirmAddressInterface::loadConfig()
+void ConfirmAddressInterface::reloadConfig()
 {
     //TODO
 }

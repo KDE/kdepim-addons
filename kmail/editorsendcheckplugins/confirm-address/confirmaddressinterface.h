@@ -30,8 +30,10 @@ public:
     ~ConfirmAddressInterface();
     bool exec() Q_DECL_OVERRIDE;
 
+public Q_SLOTS:
+    void reloadConfig() Q_DECL_OVERRIDE;
+
 private:
-    void loadConfig();
     bool mEnabled;
 };
 

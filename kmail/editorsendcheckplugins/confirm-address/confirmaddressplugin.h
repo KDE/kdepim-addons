@@ -34,7 +34,6 @@ public:
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
 
     MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
-
 };
 
 #endif // CONFIRMADDRESSPLUGIN_H
