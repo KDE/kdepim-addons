@@ -17,33 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef CONFIRMADDRESSDIALOG_H
+#define CONFIRMADDRESSDIALOG_H
 
-#include "confirmaddressconfigurewidgettest.h"
-#include "../confirmaddressconfigurewidget.h"
+#include <QDialog>
 
-#include <QTest>
-#include <QVBoxLayout>
-#include <QCheckBox>
-
-ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
-    : QObject(parent)
+class ConfirmAddressDialog : public QDialog
 {
+    Q_OBJECT
+public:
+    explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
+    ~ConfirmAddressDialog();
+};
 
-}
-
-ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest()
-{
-
-}
-
-void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressConfigureWidget w;
-
-    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(vboxlayout);
-    QCheckBox *enable = w.findChild<QCheckBox *>(QStringLiteral("enable"));
-    QVERIFY(enable);
-}
-
-QTEST_MAIN(ConfirmAddressConfigureWidgetTest)
+#endif // CONFIRMADDRESSDIALOG_H

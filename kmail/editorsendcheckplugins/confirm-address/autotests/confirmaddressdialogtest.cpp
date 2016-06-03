@@ -18,32 +18,19 @@
 */
 
 
-#include "confirmaddressconfigurewidgettest.h"
-#include "../confirmaddressconfigurewidget.h"
+#include "confirmaddressdialogtest.h"
 
 #include <QTest>
-#include <QVBoxLayout>
-#include <QCheckBox>
 
-ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
+ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest()
+ConfirmAddressDialogTest::~ConfirmAddressDialogTest()
 {
 
 }
 
-void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressConfigureWidget w;
-
-    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(vboxlayout);
-    QCheckBox *enable = w.findChild<QCheckBox *>(QStringLiteral("enable"));
-    QVERIFY(enable);
-}
-
-QTEST_MAIN(ConfirmAddressConfigureWidgetTest)
+QTEST_MAIN(ConfirmAddressDialogTest)
