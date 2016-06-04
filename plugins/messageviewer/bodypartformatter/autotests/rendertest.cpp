@@ -29,6 +29,7 @@
 #include <KMime/Message>
 #include <QTest>
 #include <QDir>
+#include <QIcon>
 #include <QProcess>
 
 void RenderTest::testRender_data()
@@ -53,6 +54,8 @@ void RenderTest::testRender()
     QFETCH(QString, outFileName);
 
     const QString htmlFileName = outFileName + QLatin1String(".html");
+
+    QIcon::setThemeName(QStringLiteral("oxygen"));
 
     // load input mail
     QFile mailFile(mailFileName);

@@ -30,6 +30,7 @@
 #include <MessageCore/StringUtil>
 #include <MessageViewer/BodyPartURLHandler>
 #include <MessageViewer/MessageViewerUtil>
+#include <MessageViewer/MimeType>
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/HtmlWriter>
@@ -170,7 +171,7 @@ public:
             bodyPart->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
             const QString href = QStringLiteral("file:") + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att->name()));
 
-            const QString iconName = QUrl::fromLocalFile(MimeTreeParser::Util::fileNameForMimetype(att->mimeTag(),
+            const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
                                      KIconLoader::Desktop, attFileName)).url();
 
             writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"") +

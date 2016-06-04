@@ -50,6 +50,8 @@ using MimeTreeParser::Interface::BodyPart;
 #include <KContacts/Addressee>
 
 #include <KLocalizedString>
+#include <KIconLoader>
+
 #include <QFileDialog>
 #include <QIcon>
 #include <QMenu>
