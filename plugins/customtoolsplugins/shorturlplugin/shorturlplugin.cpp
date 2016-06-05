@@ -17,7 +17,6 @@
     02110-1301, USA.
 */
 
-
 #include "shorturlplugin.h"
 #include "shorturlview.h"
 #include <KLocalizedString>

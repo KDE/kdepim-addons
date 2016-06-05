@@ -17,7 +17,6 @@
     02110-1301, USA.
 */
 
-
 #include "boxinterface.h"
 
 using namespace PimCommon;

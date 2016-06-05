@@ -17,7 +17,6 @@
     02110-1301, USA.
 */
 
-
 #ifndef SHORTURLPLUGIN_H
 #define SHORTURLPLUGIN_H
 #include "pimcommon/customtoolsplugin.h"
