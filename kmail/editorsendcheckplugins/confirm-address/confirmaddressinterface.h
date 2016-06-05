@@ -28,7 +28,7 @@ class ConfirmAddressInterface : public MessageComposer::PluginEditorCheckBeforeS
 public:
     explicit ConfirmAddressInterface(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressInterface();
-    bool exec() Q_DECL_OVERRIDE;
+    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
 
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;

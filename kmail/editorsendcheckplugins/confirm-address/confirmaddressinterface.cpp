@@ -32,8 +32,9 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 }
 
-bool ConfirmAddressInterface::exec()
+bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
+    //TODO use params
     if (mEnabled) {
         //TODO
         return true;
