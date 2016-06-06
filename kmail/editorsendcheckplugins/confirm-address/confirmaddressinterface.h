@@ -35,6 +35,8 @@ public Q_SLOTS:
 
 private:
     bool mEnabled;
+    QStringList mDomains;
+    QStringList mWhiteLists;
 };
 
 #endif // CONFIRMADDRESSINTERFACE_H

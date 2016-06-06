@@ -22,6 +22,8 @@
 #include "confirmaddressdialog.h"
 
 #include <QPointer>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
@@ -52,5 +54,9 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 
 void ConfirmAddressInterface::reloadConfig()
 {
-    //TODO
+    //TODO use identity ?
+    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    mEnabled = grp.readEntry("Enabled", false);
+    mDomains = grp.readEntry("Domains", QStringList());
+    mWhiteLists = grp.readEntry("Emails", QStringList());
 }
