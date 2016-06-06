@@ -29,6 +29,7 @@ public:
     explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressDialog();
 
+    //TODO add list of emails
 private Q_SLOTS:
     void slotAccepted();
 

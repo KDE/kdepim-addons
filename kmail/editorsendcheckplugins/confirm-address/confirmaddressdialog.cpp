@@ -47,5 +47,6 @@ ConfirmAddressDialog::~ConfirmAddressDialog()
 
 void ConfirmAddressDialog::slotAccepted()
 {
-
+    //TODO
+    accept();
 }

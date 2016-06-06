@@ -19,6 +19,9 @@
 
 #include "confirmaddressinterface.h"
 #include "confirmaddressconfigurewidget.h"
+#include "confirmaddressdialog.h"
+
+#include <QPointer>
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
@@ -34,10 +37,14 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    //TODO use params
     if (mEnabled) {
-        //TODO
-        return true;
+        QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
+        //TODO use params
+        if (dlg->exec()) {
+            return true;
+        } else {
+            return false;
+        }
     } else {
         return true;
     }
