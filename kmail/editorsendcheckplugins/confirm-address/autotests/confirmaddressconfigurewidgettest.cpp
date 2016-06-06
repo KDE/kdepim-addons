@@ -52,6 +52,13 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(layoutDomainName);
     PimCommon::SimpleStringListEditor *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
     QVERIFY(mDomainNameListEditor);
+
+    QGroupBox *groupBoxWhiteList = w.findChild<QGroupBox *>(QStringLiteral("groupboxwhitelist"));
+    QVERIFY(groupBoxWhiteList);
+    QLayout *layoutWhiteList = w.findChild<QVBoxLayout *>(QStringLiteral("layoutwhitelist"));
+    QVERIFY(layoutWhiteList);
+    PimCommon::SimpleStringListEditor *mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("whitelisteditor"));
+    QVERIFY(mWhiteListEditor);
 }
 
 QTEST_MAIN(ConfirmAddressConfigureWidgetTest)

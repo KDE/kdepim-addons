@@ -45,6 +45,7 @@ private Q_SLOTS:
 private:
     QCheckBox *mEnable;
     PimCommon::SimpleStringListEditor *mDomainNameListEditor;
+    PimCommon::SimpleStringListEditor *mWhiteListEditor;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H
