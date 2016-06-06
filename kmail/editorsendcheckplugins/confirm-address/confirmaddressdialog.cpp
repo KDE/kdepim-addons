@@ -20,6 +20,8 @@
 #include "confirmaddressdialog.h"
 #include "confirmaddresswidget.h"
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
@@ -39,15 +41,32 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
     mainLayout->addWidget(buttonBox);
+    readConfig();
 }
 
 ConfirmAddressDialog::~ConfirmAddressDialog()
 {
-
+    writeConfig();
 }
 
 void ConfirmAddressDialog::slotAccepted()
 {
     //TODO
     accept();
+}
+
+
+void ConfirmAddressDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ConfirmAddressDialog");
+    group.writeEntry("Size", size());
+}
+
+void ConfirmAddressDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ConfirmAddressDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }

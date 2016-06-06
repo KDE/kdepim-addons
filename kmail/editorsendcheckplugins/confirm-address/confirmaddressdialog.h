@@ -34,6 +34,8 @@ private Q_SLOTS:
     void slotAccepted();
 
 private:
+    void writeConfig();
+    void readConfig();
     ConfirmAddressWidget *mConfirmWidget;
 };
 
