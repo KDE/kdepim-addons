@@ -21,13 +21,15 @@
 #define CONFIRMADDRESSWIDGET_H
 
 #include <QWidget>
-
+class QListWidget;
 class ConfirmAddressWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ConfirmAddressWidget(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressWidget();
+private:
+    QListWidget *listEmails;
 };
 
 #endif // CONFIRMADDRESSWIDGET_H

@@ -20,6 +20,7 @@
 #include "confirmaddresswidget.h"
 
 #include <KLocalizedString>
+#include <QListWidget>
 #include <QVBoxLayout>
 
 ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
@@ -29,6 +30,9 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
+    listEmails = new QListWidget(this);
+    listEmails->setObjectName(QStringLiteral("listemails"));
+    mainLayout->addWidget(listEmails);
 }
 
 ConfirmAddressWidget::~ConfirmAddressWidget()

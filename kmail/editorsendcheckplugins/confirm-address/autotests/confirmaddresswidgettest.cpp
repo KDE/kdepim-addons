@@ -21,6 +21,7 @@
 #include "../confirmaddresswidget.h"
 #include <QTest>
 #include <QVBoxLayout>
+#include <QListWidget>
 
 ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
     : QObject(parent)
@@ -39,6 +40,9 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
+
+    QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    QVERIFY(listEmails);
 }
 
 QTEST_MAIN(ConfirmAddressWidgetTest)
