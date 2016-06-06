@@ -23,6 +23,8 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QCheckBox>
+#include <QGroupBox>
+#include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -43,6 +45,13 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(vboxlayout);
     QCheckBox *enable = w.findChild<QCheckBox *>(QStringLiteral("enable"));
     QVERIFY(enable);
+
+    QGroupBox *groupBoxDomainName = w.findChild<QGroupBox *>(QStringLiteral("groupboxdomainname"));
+    QVERIFY(groupBoxDomainName);
+    QLayout *layoutDomainName = w.findChild<QVBoxLayout *>(QStringLiteral("layoutdomainname"));
+    QVERIFY(layoutDomainName);
+    PimCommon::SimpleStringListEditor *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
+    QVERIFY(mDomainNameListEditor);
 }
 
 QTEST_MAIN(ConfirmAddressConfigureWidgetTest)

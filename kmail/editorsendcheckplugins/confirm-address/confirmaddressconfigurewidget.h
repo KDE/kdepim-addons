@@ -23,6 +23,11 @@
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 class QCheckBox;
+namespace PimCommon
+{
+class SimpleStringListEditor;
+}
+
 class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
@@ -39,6 +44,7 @@ private Q_SLOTS:
 
 private:
     QCheckBox *mEnable;
+    PimCommon::SimpleStringListEditor *mDomainNameListEditor;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H

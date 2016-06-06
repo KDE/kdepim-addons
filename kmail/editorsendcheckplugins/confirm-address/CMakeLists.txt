@@ -11,7 +11,7 @@ ecm_qt_declare_logging_category(kmail_confirmaddresseditorplugin_SRCS HEADER con
 add_library(kmail_confirmaddresseditorplugin MODULE ${kmail_confirmaddresseditorplugin_SRCS})
 
 target_link_libraries(kmail_confirmaddresseditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon
     )
 
 install(TARGETS kmail_confirmaddresseditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)

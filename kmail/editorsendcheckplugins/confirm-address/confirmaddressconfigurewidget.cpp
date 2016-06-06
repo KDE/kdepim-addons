@@ -22,6 +22,8 @@
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <QLabel>
+#include <QGroupBox>
+#include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
@@ -33,6 +35,23 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     mEnable->setObjectName(QStringLiteral("enable"));
     vboxlayout->addWidget(mEnable);
     connect(mEnable, &QCheckBox::clicked, this, &ConfirmAddressConfigureWidget::slotEnableChanged);
+
+    QGroupBox *groupBoxDomainName = new QGroupBox(i18n("Accepted Domain Name"), this);
+    groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
+    vboxlayout->addWidget(groupBoxDomainName);
+    QLayout *layoutDomainName = new QVBoxLayout(groupBoxDomainName);
+    layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
+
+    PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
+        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
+    mDomainNameListEditor =
+        new PimCommon::SimpleStringListEditor(groupBoxDomainName, buttonCode,
+                i18n("A&dd..."), i18n("Re&move"),
+                i18n("Mod&ify..."),
+                i18n("Enter new domain name:"));
+    mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
+    connect(mDomainNameListEditor, &PimCommon::SimpleStringListEditor::changed,
+            this, &ConfirmAddressConfigureWidget::configureChanged);
 }
 
 ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
