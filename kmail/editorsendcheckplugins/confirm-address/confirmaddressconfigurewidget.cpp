@@ -23,6 +23,8 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include <QGroupBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
@@ -82,21 +84,29 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {
-    //TODO
+    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    mEnable->setChecked(grp.readEntry("Enabled", false));
+    mDomainNameListEditor->setStringList(grp.readEntry("Domains", QStringList()));
+    mWhiteListEditor->setStringList(grp.readEntry("Emails", QStringList()));
 }
 
 void ConfirmAddressConfigureWidget::saveSettings()
 {
-    //TODO
+    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    grp.writeEntry("Enabled", mEnable->isChecked());
+    grp.writeEntry("Domains", mDomainNameListEditor->stringList());
+    grp.writeEntry("Emails", mWhiteListEditor->stringList());
 }
 
 void ConfirmAddressConfigureWidget::resetSettings()
 {
-    //TODO
+    mDomainNameListEditor->setStringList({});
+    mWhiteListEditor->setStringList({});
+    mEnable->setChecked(false);
 }
 
 void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)
 {
+    Q_UNUSED(state);
     Q_EMIT configureChanged();
-    //TODO
 }
