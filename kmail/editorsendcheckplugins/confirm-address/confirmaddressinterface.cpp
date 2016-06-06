@@ -40,6 +40,7 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     if (mEnabled) {
+#ifdef USE_PLUGIN
         QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
         //TODO use params
         if (dlg->exec()) {
@@ -47,6 +48,9 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
         } else {
             return false;
         }
+#else
+        return true;
+#endif
     } else {
         return true;
     }

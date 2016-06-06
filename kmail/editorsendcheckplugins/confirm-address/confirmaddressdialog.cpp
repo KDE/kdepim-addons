@@ -55,7 +55,6 @@ void ConfirmAddressDialog::slotAccepted()
     accept();
 }
 
-
 void ConfirmAddressDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), "ConfirmAddressDialog");
