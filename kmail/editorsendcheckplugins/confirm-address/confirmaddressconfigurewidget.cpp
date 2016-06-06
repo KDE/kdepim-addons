@@ -52,6 +52,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
     connect(mDomainNameListEditor, &PimCommon::SimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureWidget::configureChanged);
+    layoutDomainName->addWidget(mDomainNameListEditor);
 
 
     QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("White List Address"), this);
@@ -68,6 +69,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
                 i18n("Mod&ify..."),
                 i18n("Enter new email name:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
+    layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &PimCommon::SimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureWidget::configureChanged);
 
