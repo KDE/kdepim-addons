@@ -34,8 +34,6 @@ ConfirmAddressInterfaceTest::~ConfirmAddressInterfaceTest()
 
 void ConfirmAddressInterfaceTest::shouldHaveDefaultValue()
 {
-    //ConfirmAddressInterface interface;
-    //QVERIFY(interface.hasConfigureDialog());
 }
 
 QTEST_MAIN(ConfirmAddressInterfaceTest)
