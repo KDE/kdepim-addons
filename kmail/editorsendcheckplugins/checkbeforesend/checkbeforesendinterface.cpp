@@ -19,8 +19,10 @@
 
 #include "checkbeforesendinterface.h"
 
+#include <KMessageBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KLocalizedString>
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
@@ -39,7 +41,11 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 {
     if (mSendPlainText) {
         if (params.isHtmlMail()) {
-            return false;
+            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send mail as HTML?"), i18n("Send Mail as PlainText"))) {
+                return false;
+            } else {
+                return true;
+            }
         }
     }
     return true;
