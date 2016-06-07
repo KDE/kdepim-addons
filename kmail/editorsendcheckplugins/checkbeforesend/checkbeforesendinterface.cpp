@@ -17,40 +17,27 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "checkbeforesendplugin.h"
+#include "checkbeforesendinterface.h"
 
-#include <KLocalizedString>
-#include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_checkbeforesendplugin.json", registerPlugin<CheckBeforeSendPlugin>();)
-
-CheckBeforeSendPlugin::CheckBeforeSendPlugin(QObject *parent, const QList<QVariant> &)
-    : MessageComposer::PluginEditorCheckBeforeSend(parent)
+CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
 {
 
 }
 
-CheckBeforeSendPlugin::~CheckBeforeSendPlugin()
+CheckBeforeSendInterface::~CheckBeforeSendInterface()
 {
 
 }
 
 
-MessageComposer::PluginEditorCheckBeforeSendInterface *CheckBeforeSendPlugin::createInterface(QObject *parent)
+bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     //TODO
-    return {};
-}
-
-bool CheckBeforeSendPlugin::hasConfigureSupport() const
-{
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting CheckBeforeSendPlugin::createConfigureWidget(QWidget *parent) const
+void CheckBeforeSendInterface::reloadConfig()
 {
     //TODO
-    return {};
 }
-
-#include "checkbeforesendplugin.moc"

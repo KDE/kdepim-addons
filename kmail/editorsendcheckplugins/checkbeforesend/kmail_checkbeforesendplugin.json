@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Check Before Send", 
+        "ServiceTypes": [
+            "KMailEditor/PluginCheckBeforeSend"
+        ], 
+        "Version": "1.0"
+    } 
+}
