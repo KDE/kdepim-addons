@@ -24,6 +24,8 @@
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
 }
 
