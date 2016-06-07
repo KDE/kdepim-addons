@@ -19,10 +19,14 @@
 
 #include "checkbeforesendinterface.h"
 
-CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
-{
+#include <KConfigGroup>
+#include <KSharedConfig>
 
+CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
+      mSendPlainText(false)
+{
+    reloadConfig();
 }
 
 CheckBeforeSendInterface::~CheckBeforeSendInterface()
@@ -33,11 +37,16 @@ CheckBeforeSendInterface::~CheckBeforeSendInterface()
 
 bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    //TODO
+    if (mSendPlainText) {
+        if (params.isHtmlMail()) {
+            return false;
+        }
+    }
     return true;
 }
 
 void CheckBeforeSendInterface::reloadConfig()
 {
-    //TODO
+    KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
+    mSendPlainText = grp.readEntry("SendPlainText", false);
 }

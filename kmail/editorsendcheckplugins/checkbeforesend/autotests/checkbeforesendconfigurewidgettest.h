@@ -29,9 +29,8 @@ public:
     explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = Q_NULLPTR);
     ~CheckBeforeSendConfigureWidgetTest();
 
-signals:
-
-public slots:
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CHECKBEFORESENDCONFIGUREWIDGETTEST_H

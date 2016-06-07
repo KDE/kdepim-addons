@@ -20,6 +20,9 @@
 #include "checkbeforesendconfigurewidget.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
+#include <QCheckBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
@@ -27,6 +30,9 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
+    mCheckPlainTextMail = new QCheckBox(i18n("Send as PlainText"), this);
+    mCheckPlainTextMail->setObjectName(QStringLiteral("checkplaintext"));
+    mainLayout->addWidget(mCheckPlainTextMail);
 }
 
 CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
@@ -37,12 +43,17 @@ CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
 
 void CheckBeforeSendConfigureWidget::loadSettings()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
+    mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
 }
 
 void CheckBeforeSendConfigureWidget::saveSettings()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
+    grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
 }
 
 void CheckBeforeSendConfigureWidget::resetSettings()
 {
+    mCheckPlainTextMail->setChecked(false);
 }

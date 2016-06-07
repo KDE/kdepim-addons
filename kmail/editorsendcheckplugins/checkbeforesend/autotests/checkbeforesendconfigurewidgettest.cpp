@@ -18,8 +18,10 @@
 */
 
 #include "checkbeforesendconfigurewidgettest.h"
-
+#include "../checkbeforesendconfigurewidget.h"
 #include <QTest>
+#include <QVBoxLayout>
+#include <QCheckBox>
 
 CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -30,6 +32,16 @@ CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *
 CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
 {
 
+}
+
+void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
+{
+    CheckBeforeSendConfigureWidget w;
+    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(vboxlayout);
+
+    QCheckBox *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
+    QVERIFY(mCheckPlainTextMail);
 }
 
 QTEST_MAIN(CheckBeforeSendConfigureWidgetTest)

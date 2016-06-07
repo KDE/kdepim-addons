@@ -33,6 +33,8 @@ public:
 
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
+private:
+    bool mSendPlainText;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H

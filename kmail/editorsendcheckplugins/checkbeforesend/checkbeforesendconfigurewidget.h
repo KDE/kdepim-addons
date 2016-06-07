@@ -23,6 +23,7 @@
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 
+class QCheckBox;
 class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
@@ -33,6 +34,9 @@ public:
     void loadSettings() Q_DECL_OVERRIDE;
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
+
+private:
+    QCheckBox *mCheckPlainTextMail;
 };
 
 #endif // CHECKBEFORESENDCONFIGUREWIDGET_H
