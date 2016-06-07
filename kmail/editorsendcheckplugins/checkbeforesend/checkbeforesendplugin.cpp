@@ -18,6 +18,7 @@
 */
 
 #include "checkbeforesendplugin.h"
+#include "checkbeforesendinterface.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -38,8 +39,9 @@ CheckBeforeSendPlugin::~CheckBeforeSendPlugin()
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *CheckBeforeSendPlugin::createInterface(QObject *parent)
 {
-    //TODO
-    return {};
+    CheckBeforeSendInterface *interface = new CheckBeforeSendInterface(parent);
+    connect(this, &CheckBeforeSendPlugin::configChanged, interface, &CheckBeforeSendInterface::reloadConfig);
+    return interface;
 }
 
 bool CheckBeforeSendPlugin::hasConfigureSupport() const

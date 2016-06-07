@@ -10,3 +10,7 @@ macro(add_kmail_checkbeforesend_unittest _source _additional)
     ecm_mark_as_test(kmail_editorplugin-${_name})
     target_link_libraries( ${_name} Qt5::Test KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon)
 endmacro ()
+
+
+add_kmail_checkbeforesend_unittest(checkbeforesendplugintest.cpp "../checkbeforesendplugin.cpp;../checkbeforesendinterface.cpp")
+add_kmail_checkbeforesend_unittest(checkbeforesendinterfacetest.cpp "../checkbeforesendinterface.cpp")
