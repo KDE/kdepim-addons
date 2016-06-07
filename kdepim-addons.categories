@@ -17,4 +17,5 @@ log_text_calendar kdepim-addons (messageviewer calendar plugins)
 log_ms_tnef kdepim-addons (ms_tnef)
 log_vcard kdepim-addons (vcard)
 log_pimeventsplugin kdepim-addons (Plasma calendar plugin)
-
+log_kmail_confirmaddressplugin kdepim-addons (Confirm Address plugin)
+log_kmail_checkbeforesend kdepim-addons (Check Before Send plugin)
