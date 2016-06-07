@@ -19,6 +19,7 @@
 
 #include "checkbeforesendplugin.h"
 #include "checkbeforesendinterface.h"
+#include "checkbeforesendconfigurewidget.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -51,8 +52,9 @@ bool CheckBeforeSendPlugin::hasConfigureSupport() const
 
 MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting CheckBeforeSendPlugin::createConfigureWidget(QWidget *parent) const
 {
-    //TODO
-    return {};
+    CheckBeforeSendConfigureWidget *w = new CheckBeforeSendConfigureWidget(parent);
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Check Before Send Email"));
+    return settings;
 }
 
 #include "checkbeforesendplugin.moc"

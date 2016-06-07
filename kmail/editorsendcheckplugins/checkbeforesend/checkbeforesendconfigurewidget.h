@@ -17,26 +17,22 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressplugintest.h"
-#include "../confirmaddressplugin.h"
-#include <QTest>
+#ifndef CHECKBEFORESENDCONFIGUREWIDGET_H
+#define CHECKBEFORESENDCONFIGUREWIDGET_H
 
-ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
-    : QObject(parent)
+#include <QWidget>
+#include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+
+class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
+    Q_OBJECT
+public:
+    explicit CheckBeforeSendConfigureWidget(QWidget *parent = Q_NULLPTR);
+    ~CheckBeforeSendConfigureWidget();
 
-}
+    void loadSettings() Q_DECL_OVERRIDE;
+    void saveSettings() Q_DECL_OVERRIDE;
+    void resetSettings() Q_DECL_OVERRIDE;
+};
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
-
-}
-
-void ConfirmAddressPluginTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
-}
-
-QTEST_MAIN(ConfirmAddressPluginTest)
+#endif // CHECKBEFORESENDCONFIGUREWIDGET_H

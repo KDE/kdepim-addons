@@ -36,7 +36,7 @@ void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
 {
     CheckBeforeSendPlugin plugin;
     QVERIFY(plugin.hasConfigureSupport());
-    //TODO more
+    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
 }
 
 

@@ -17,26 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressplugintest.h"
-#include "../confirmaddressplugin.h"
-#include <QTest>
+#ifndef CHECKBEFORESENDCONFIGUREWIDGETTEST_H
+#define CHECKBEFORESENDCONFIGUREWIDGETTEST_H
 
-ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
-    : QObject(parent)
+#include <QObject>
+
+class CheckBeforeSendConfigureWidgetTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    ~CheckBeforeSendConfigureWidgetTest();
 
-}
+signals:
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
+public slots:
+};
 
-}
-
-void ConfirmAddressPluginTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
-}
-
-QTEST_MAIN(ConfirmAddressPluginTest)
+#endif // CHECKBEFORESENDCONFIGUREWIDGETTEST_H

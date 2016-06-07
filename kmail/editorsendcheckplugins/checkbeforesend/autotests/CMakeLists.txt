@@ -12,5 +12,6 @@ macro(add_kmail_checkbeforesend_unittest _source _additional)
 endmacro ()
 
 
-add_kmail_checkbeforesend_unittest(checkbeforesendplugintest.cpp "../checkbeforesendplugin.cpp;../checkbeforesendinterface.cpp")
+add_kmail_checkbeforesend_unittest(checkbeforesendplugintest.cpp "../checkbeforesendplugin.cpp;../checkbeforesendinterface.cpp;../checkbeforesendconfigurewidget.cpp")
 add_kmail_checkbeforesend_unittest(checkbeforesendinterfacetest.cpp "../checkbeforesendinterface.cpp")
+add_kmail_checkbeforesend_unittest(checkbeforesendconfigurewidgettest.cpp "../checkbeforesendconfigurewidget.cpp")
