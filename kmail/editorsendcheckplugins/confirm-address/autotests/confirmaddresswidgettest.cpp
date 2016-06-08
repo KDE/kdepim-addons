@@ -43,6 +43,7 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
 
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
     QVERIFY(listEmails);
+    QCOMPARE(listEmails->count(), 0);
 }
 
 QTEST_MAIN(ConfirmAddressWidgetTest)

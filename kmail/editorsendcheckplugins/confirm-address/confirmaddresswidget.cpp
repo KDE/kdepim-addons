@@ -42,10 +42,15 @@ ConfirmAddressWidget::~ConfirmAddressWidget()
 
 void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
 {
-    //TODO
+    createAddressItems(addresses, true);
 }
 
 void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
+{
+    createAddressItems(addresses, false);
+}
+
+void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool valid)
 {
     //TODO
 }
