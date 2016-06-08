@@ -29,10 +29,8 @@ public:
     explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressDialog();
 
-    //TODO add list of emails
-private Q_SLOTS:
-    void slotAccepted();
-
+    void setValidAddresses(const QStringList &addresses);
+    void setInvalidAddresses(const QStringList &addresses);
 private:
     void writeConfig();
     void readConfig();

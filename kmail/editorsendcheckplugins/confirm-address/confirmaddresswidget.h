@@ -28,6 +28,9 @@ class ConfirmAddressWidget : public QWidget
 public:
     explicit ConfirmAddressWidget(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressWidget();
+
+    void setValidAddresses(const QStringList &addresses);
+    void setInvalidAddresses(const QStringList &addresses);
 private:
     QListWidget *listEmails;
 };

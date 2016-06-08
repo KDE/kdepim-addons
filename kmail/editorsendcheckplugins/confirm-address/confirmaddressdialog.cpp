@@ -38,7 +38,7 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::slotAccepted);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
@@ -47,12 +47,6 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
 ConfirmAddressDialog::~ConfirmAddressDialog()
 {
     writeConfig();
-}
-
-void ConfirmAddressDialog::slotAccepted()
-{
-    //TODO
-    accept();
 }
 
 void ConfirmAddressDialog::writeConfig()
@@ -68,4 +62,14 @@ void ConfirmAddressDialog::readConfig()
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
     }
+}
+
+void ConfirmAddressDialog::setValidAddresses(const QStringList &addresses)
+{
+    mConfirmWidget->setValidAddresses(addresses);
+}
+
+void ConfirmAddressDialog::setInvalidAddresses(const QStringList &addresses)
+{
+    mConfirmWidget->setInvalidAddresses(addresses);
 }

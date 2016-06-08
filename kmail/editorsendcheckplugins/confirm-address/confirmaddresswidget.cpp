@@ -39,3 +39,13 @@ ConfirmAddressWidget::~ConfirmAddressWidget()
 {
 
 }
+
+void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
+{
+    //TODO
+}
+
+void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
+{
+    //TODO
+}
