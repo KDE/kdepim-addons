@@ -20,6 +20,7 @@
 #include "confirmaddresswidget.h"
 
 #include <KLocalizedString>
+#include <QLabel>
 #include <QListWidget>
 #include <QVBoxLayout>
 
@@ -30,9 +31,13 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    listEmails = new QListWidget(this);
-    listEmails->setObjectName(QStringLiteral("listemails"));
-    mainLayout->addWidget(listEmails);
+    QLabel *lab = new QLabel(i18n("Potential emails errors are displayed in red:"), this);
+    lab->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(lab);
+
+    mListEmails = new QListWidget(this);
+    mListEmails->setObjectName(QStringLiteral("listemails"));
+    mainLayout->addWidget(mListEmails);
 }
 
 ConfirmAddressWidget::~ConfirmAddressWidget()
@@ -52,5 +57,10 @@ void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 
 void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool valid)
 {
-    //TODO
+    Q_FOREACH(const QString &email, address) {
+        QListWidgetItem *item = new QListWidgetItem(email, mListEmails);
+        if (!valid) {
+            item->setTextColor(Qt::red);
+        }
+    }
 }

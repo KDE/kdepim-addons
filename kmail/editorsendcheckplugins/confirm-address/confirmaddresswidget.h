@@ -33,7 +33,7 @@ public:
     void setInvalidAddresses(const QStringList &addresses);
 private:
     void createAddressItems(const QStringList &address, bool valid);
-    QListWidget *listEmails;
+    QListWidget *mListEmails;
 };
 
 #endif // CONFIRMADDRESSWIDGET_H

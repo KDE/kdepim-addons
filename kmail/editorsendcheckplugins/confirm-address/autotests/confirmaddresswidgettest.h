@@ -31,6 +31,8 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldAddAddress();
+    void shouldAddValidAndInvalidAddresses();
 };
 
 #endif // CONFIRMADDRESSWIDGETTEST_H

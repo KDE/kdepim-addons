@@ -22,6 +22,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QListWidget>
+#include <QLabel>
 
 ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
     : QObject(parent)
@@ -44,6 +45,29 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
     QVERIFY(listEmails);
     QCOMPARE(listEmails->count(), 0);
+
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(lab);
+    QVERIFY(!lab->text().isEmpty());
+}
+
+void ConfirmAddressWidgetTest::shouldAddAddress()
+{
+    ConfirmAddressWidget w;
+    QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("blo")};
+    w.setValidAddresses(lst);
+    QCOMPARE(listEmails->count(), lst.count());
+}
+
+void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
+{
+    ConfirmAddressWidget w;
+    QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    w.setValidAddresses(lst);
+    w.setInvalidAddresses(lst);
+    QCOMPARE(listEmails->count(), lst.count()*2);
 }
 
 QTEST_MAIN(ConfirmAddressWidgetTest)
