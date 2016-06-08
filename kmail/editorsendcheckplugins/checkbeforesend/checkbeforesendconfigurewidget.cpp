@@ -32,6 +32,7 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
 
     mCheckPlainTextMail = new QCheckBox(i18n("Send as PlainText"), this);
     mCheckPlainTextMail->setObjectName(QStringLiteral("checkplaintext"));
+    connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
     mainLayout->addStretch(1);
 }
