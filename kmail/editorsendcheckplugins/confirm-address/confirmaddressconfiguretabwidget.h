@@ -21,6 +21,10 @@
 #define CONFIRMADDRESSCONFIGURETABWIDGET_H
 
 #include <QWidget>
+namespace PimCommon
+{
+class SimpleStringListEditor;
+}
 class QTabWidget;
 class ConfirmAddressConfigureTabWidget : public QWidget
 {
@@ -31,6 +35,10 @@ public:
 
 Q_SIGNALS:
     void configureChanged();
+
+private:
+    PimCommon::SimpleStringListEditor *mDomainNameListEditor;
+    PimCommon::SimpleStringListEditor *mWhiteListEditor;
 };
 
 #endif // CONFIRMADDRESSCONFIGURETABWIDGET_H

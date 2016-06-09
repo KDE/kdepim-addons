@@ -21,7 +21,8 @@
 #include "../confirmaddressconfiguretabwidget.h"
 #include <QTest>
 #include <QVBoxLayout>
-#include <QTabWidget>
+#include <QGroupBox>
+#include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)
@@ -36,6 +37,20 @@ ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest()
 
 void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
 {
+    ConfirmAddressConfigureTabWidget w;
+    QGroupBox *groupBoxDomainName = w.findChild<QGroupBox *>(QStringLiteral("groupboxdomainname"));
+    QVERIFY(groupBoxDomainName);
+    QVBoxLayout *layoutDomainName = w.findChild<QVBoxLayout *>(QStringLiteral("layoutdomainname"));
+    QVERIFY(layoutDomainName);
+    PimCommon::SimpleStringListEditor *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
+    QVERIFY(mDomainNameListEditor);
+
+    QGroupBox *groupBoxWhiteList = w.findChild<QGroupBox *>(QStringLiteral("groupboxwhitelist"));
+    QVERIFY(groupBoxWhiteList);
+    QVBoxLayout *layoutWhiteList = w.findChild<QVBoxLayout *>(QStringLiteral("layoutwhitelist"));
+    QVERIFY(layoutWhiteList);
+    PimCommon::SimpleStringListEditor *mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("whitelisteditor"));
+    QVERIFY(mWhiteListEditor);
 }
 
 QTEST_MAIN(ConfirmAddressConfigureTabWidgetTest)
