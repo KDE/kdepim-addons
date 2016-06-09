@@ -17,20 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CONFIRMADDRESSCONFIGURETABWIDGET_H
-#define CONFIRMADDRESSCONFIGURETABWIDGET_H
 
-#include <QWidget>
-class QTabWidget;
-class ConfirmAddressConfigureTabWidget : public QWidget
+#include "confirmaddressconfiguretab.h"
+#include <QVBoxLayout>
+#include <QTabWidget>
+
+ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
+    : QWidget(parent)
 {
-    Q_OBJECT
-public:
-    explicit ConfirmAddressConfigureTabWidget(QWidget *parent = Q_NULLPTR);
-    ~ConfirmAddressConfigureTabWidget();
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
 
-Q_SIGNALS:
-    void configureChanged();
-};
+    mTabWidget = new QTabWidget(this);
+    mTabWidget->setObjectName(QStringLiteral("tabwidget"));
+    mainLayout->addWidget(mTabWidget);
+}
 
-#endif // CONFIRMADDRESSCONFIGURETABWIDGET_H
+ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
+{
+
+}

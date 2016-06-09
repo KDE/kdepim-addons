@@ -18,7 +18,10 @@
 */
 
 #include "confirmaddressconfiguretabwidgettest.h"
+#include "../confirmaddressconfiguretabwidget.h"
 #include <QTest>
+#include <QVBoxLayout>
+#include <QTabWidget>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)
@@ -29,6 +32,10 @@ ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObje
 ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest()
 {
 
+}
+
+void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
+{
 }
 
 QTEST_MAIN(ConfirmAddressConfigureTabWidgetTest)

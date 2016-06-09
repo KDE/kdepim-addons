@@ -28,6 +28,8 @@ class ConfirmAddressConfigureTabWidgetTest : public QObject
 public:
     explicit ConfirmAddressConfigureTabWidgetTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTabWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CONFIRMADDRESSCONFIGURETABWIDGETTEST_H

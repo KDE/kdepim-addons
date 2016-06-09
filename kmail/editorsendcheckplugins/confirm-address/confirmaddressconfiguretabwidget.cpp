@@ -18,17 +18,12 @@
 */
 
 #include "confirmaddressconfiguretabwidget.h"
-#include <QTabWidget>
 #include <KLocalizedString>
 #include <QVBoxLayout>
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
-
 }
 
 ConfirmAddressConfigureTabWidget::~ConfirmAddressConfigureTabWidget()
