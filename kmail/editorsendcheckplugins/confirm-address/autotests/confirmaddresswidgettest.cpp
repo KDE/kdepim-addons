@@ -67,7 +67,7 @@ void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
     const QStringList lst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
     w.setValidAddresses(lst);
     w.setInvalidAddresses(lst);
-    QCOMPARE(listEmails->count(), lst.count()*2);
+    QCOMPARE(listEmails->count(), lst.count() * 2);
 }
 
 QTEST_MAIN(ConfirmAddressWidgetTest)

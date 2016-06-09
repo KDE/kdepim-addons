@@ -36,7 +36,6 @@ CheckBeforeSendInterface::~CheckBeforeSendInterface()
 
 }
 
-
 bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     if (mSendPlainText) {

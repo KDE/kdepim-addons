@@ -39,5 +39,4 @@ void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
     QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
 }
 
-
 QTEST_MAIN(CheckBeforeSendPluginTest)

@@ -56,7 +56,6 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
             this, &ConfirmAddressConfigureWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
 
-
     QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("White List Address"), this);
     groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
     vboxlayout->addWidget(groupBoxWhiteList);

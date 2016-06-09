@@ -57,7 +57,7 @@ void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 
 void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool valid)
 {
-    Q_FOREACH(const QString &email, address) {
+    Q_FOREACH (const QString &email, address) {
         QListWidgetItem *item = new QListWidgetItem(email, mListEmails);
         if (!valid) {
             item->setTextColor(Qt::red);

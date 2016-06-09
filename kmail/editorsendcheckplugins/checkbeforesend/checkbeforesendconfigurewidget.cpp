@@ -42,7 +42,6 @@ CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
 
 }
 
-
 void CheckBeforeSendConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
