@@ -4,6 +4,7 @@ set(kmail_confirmaddresseditorplugin_SRCS
     confirmaddressconfigurewidget.cpp
     confirmaddressdialog.cpp
     confirmaddresswidget.cpp
+    confirmaddressconfiguretabwidget.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_confirmaddresseditorplugin_SRCS HEADER confirmaddressplugin_debug.h IDENTIFIER KMAIL_EDITOR_CONFIRMADDRESS_PLUGIN_LOG CATEGORY_NAME log_kmail_confirmaddressplugin)
