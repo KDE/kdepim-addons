@@ -111,7 +111,6 @@ public:
         }
 
         html += QLatin1String("</pre></div>");
-        //qDebug( "%s", html.toLatin1() );
         writer->queue(html);
 
         return Ok;
@@ -126,15 +125,27 @@ class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
-        return idx == 0 ? new Formatter() : 0;
+        if (idx == 0 || idx == 1) {
+            return new Formatter();
+        }
+        return 0;
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
-        return idx == 0 ? "text" : 0;
+        if (idx == 0 || idx == 1) {
+            return "text";
+        }
+        return 0;
     }
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
-        return idx == 0 ? "x-diff" : 0;
+        if (idx == 0) {
+            return "x-diff";
+        } else if (idx == 1) {
+            return "x-patch";
+        } else {
+            return 0;
+        }
     }
 
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
