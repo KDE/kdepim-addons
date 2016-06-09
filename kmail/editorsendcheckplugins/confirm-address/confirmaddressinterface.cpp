@@ -25,6 +25,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagement/Identity>
+
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
       mEnabled(false)
@@ -41,7 +44,11 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 {
     if (mEnabled) {
         // not configurated => validate it.
-        if (mDomains.isEmpty() && mWhiteLists.isEmpty()) {
+        if (!mHashSettings.contains(params.identity())) {
+            return true;
+        }
+        const ConfirmAddressSettings settings = mHashSettings.value(params.identity());
+        if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
             return true;
         }
 #ifdef USE_PLUGIN
@@ -62,9 +69,18 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 
 void ConfirmAddressInterface::reloadConfig()
 {
-    //TODO use identity ?
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
     mEnabled = grp.readEntry("Enabled", false);
-    mDomains = grp.readEntry("Domains", QStringList());
-    mWhiteLists = grp.readEntry("Emails", QStringList());
+    mHashSettings.clear();
+
+    KIdentityManagement::IdentityManager manager(true);
+    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+        const uint identity = (*it).uoid();
+        KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(identity));
+        ConfirmAddressSettings settings;
+        settings.mDomains = identityGroup.readEntry("Domains", QStringList());
+        settings.mWhiteLists = identityGroup.readEntry("Emails", QStringList());
+        mHashSettings.insert(identity, settings);
+    }
 }

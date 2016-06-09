@@ -18,6 +18,7 @@
 */
 
 #include "confirmaddressconfiguretabwidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <QGroupBox>
 #include <QVBoxLayout>
@@ -78,4 +79,23 @@ void ConfirmAddressConfigureTabWidget::resetSettings()
 {
     mDomainNameListEditor->setStringList({});
     mWhiteListEditor->setStringList({});
+}
+
+void ConfirmAddressConfigureTabWidget::loadSettings(const KConfigGroup &grp)
+{
+    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
+    mDomainNameListEditor->setStringList(identityGroup.readEntry("Domains", QStringList()));
+    mWhiteListEditor->setStringList(identityGroup.readEntry("Emails", QStringList()));
+}
+
+void ConfirmAddressConfigureTabWidget::saveSettings(KConfigGroup &grp)
+{
+    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
+    identityGroup.writeEntry("Domains", mDomainNameListEditor->stringList());
+    identityGroup.writeEntry("Emails", mWhiteListEditor->stringList());
+}
+
+void ConfirmAddressConfigureTabWidget::setIdentity(const uint &identity)
+{
+    mIdentity = identity;
 }

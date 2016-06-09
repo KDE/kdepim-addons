@@ -24,6 +24,7 @@
 #include <QVBoxLayout>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QRegularExpression>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
@@ -38,6 +39,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
 
     mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(this);
     mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));
+    connect(mConfirmAddressConfigureTab, &ConfirmAddressConfigureTab::configureChanged, this, &ConfirmAddressConfigureWidget::configureChanged);
     vboxlayout->addWidget(mConfirmAddressConfigureTab);
 }
 
@@ -48,27 +50,27 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {
-#if 0
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
     mEnable->setChecked(grp.readEntry("Enabled", false));
-    mDomainNameListEditor->setStringList(grp.readEntry("Domains", QStringList()));
-    mWhiteListEditor->setStringList(grp.readEntry("Emails", QStringList()));
-#endif
+    mConfirmAddressConfigureTab->loadSettings(grp);
 }
 
 void ConfirmAddressConfigureWidget::saveSettings()
 {
-#if 0
-    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    // first, delete all filter groups:
+    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QLatin1String("Confirm Address \\d+")));
+    Q_FOREACH (const QString &group, filterGroups) {
+        config->deleteGroup(group);
+    }
+    KConfigGroup grp(config, "Confirm Address");
     grp.writeEntry("Enabled", mEnable->isChecked());
-    grp.writeEntry("Domains", mDomainNameListEditor->stringList());
-    grp.writeEntry("Emails", mWhiteListEditor->stringList());
-#endif
+    mConfirmAddressConfigureTab->saveSettings(grp);
 }
 
 void ConfirmAddressConfigureWidget::resetSettings()
 {
-    //TODO
+    mConfirmAddressConfigureTab->resetSettings();
 }
 
 void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)

@@ -21,7 +21,7 @@
 #define CONFIRMADDRESSINTERFACE_H
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
-
+#include <QHash>
 class ConfirmAddressInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
     Q_OBJECT
@@ -35,8 +35,15 @@ public Q_SLOTS:
 
 private:
     bool mEnabled;
-    QStringList mDomains;
-    QStringList mWhiteLists;
+
+    struct ConfirmAddressSettings
+    {
+        QStringList mDomains;
+        QStringList mWhiteLists;
+    };
+
+    QHash<uint, ConfirmAddressSettings> mHashSettings;
+
 };
 
 #endif // CONFIRMADDRESSINTERFACE_H

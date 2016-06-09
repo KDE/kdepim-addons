@@ -23,7 +23,8 @@
 
 #include <QWidget>
 class QTabWidget;
-
+class KConfigGroup;
+class ConfirmAddressConfigureTabWidget;
 class ConfirmAddressConfigureTab : public QWidget
 {
     Q_OBJECT
@@ -31,8 +32,8 @@ public:
     explicit ConfirmAddressConfigureTab(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTab();
 
-    void loadSettings();
-    void saveSettings();
+    void loadSettings(const KConfigGroup &grp);
+    void saveSettings(KConfigGroup &grp);
     void resetSettings();
 
 Q_SIGNALS:
@@ -41,6 +42,7 @@ Q_SIGNALS:
 private:
     void initTab();
     QTabWidget *mTabWidget;
+    QList<ConfirmAddressConfigureTabWidget *> mListTabWidget;
 };
 
 #endif // CONFIRMADDRESSCONFIGURETAB_H

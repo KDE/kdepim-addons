@@ -19,9 +19,11 @@
 
 
 #include "confirmaddressconfiguretab.h"
+#include "confirmaddressconfiguretabwidget.h"
 #include <QVBoxLayout>
 #include <QTabWidget>
 #include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagement/Identity>
 
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)
@@ -42,24 +44,36 @@ ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
 
 }
 
-void ConfirmAddressConfigureTab::loadSettings()
+void ConfirmAddressConfigureTab::loadSettings(const KConfigGroup &grp)
 {
-
+    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+        w->loadSettings(grp);
+    }
 }
 
-void ConfirmAddressConfigureTab::saveSettings()
+void ConfirmAddressConfigureTab::saveSettings(KConfigGroup &grp)
 {
-
+    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+        w->saveSettings(grp);
+    }
 }
 
 void ConfirmAddressConfigureTab::resetSettings()
 {
-
+    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+        w->resetSettings();
+    }
 }
 
 void ConfirmAddressConfigureTab::initTab()
 {
-    //KIdentityManagement::IdentityManager manager(true);
-
-    //TODO
+    KIdentityManagement::IdentityManager manager(true);
+    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+        ConfirmAddressConfigureTabWidget *w = new ConfirmAddressConfigureTabWidget(this);
+        connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
+        mTabWidget->addTab(w, (*it).identityName());
+        w->setIdentity((*it).uoid());
+        mListTabWidget.append(w);
+    }
 }

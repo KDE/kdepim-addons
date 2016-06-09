@@ -26,6 +26,7 @@ namespace PimCommon
 class SimpleStringListEditor;
 }
 class QTabWidget;
+class KConfigGroup;
 class ConfirmAddressConfigureTabWidget : public QWidget
 {
     Q_OBJECT
@@ -34,6 +35,11 @@ public:
     ~ConfirmAddressConfigureTabWidget();
 
     void resetSettings();
+    void loadSettings(const KConfigGroup &grp);
+    void saveSettings(KConfigGroup &grp);
+
+
+    void setIdentity(const uint &identity);
 
 Q_SIGNALS:
     void configureChanged();
