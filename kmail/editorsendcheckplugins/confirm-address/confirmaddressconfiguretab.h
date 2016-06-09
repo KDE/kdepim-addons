@@ -30,10 +30,16 @@ class ConfirmAddressConfigureTab : public QWidget
 public:
     explicit ConfirmAddressConfigureTab(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTab();
+
+    void loadSettings();
+    void saveSettings();
+    void resetSettings();
+
 Q_SIGNALS:
     void configureChanged();
 
 private:
+    void initTab();
     QTabWidget *mTabWidget;
 };
 

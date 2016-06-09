@@ -72,3 +72,9 @@ ConfirmAddressConfigureTabWidget::~ConfirmAddressConfigureTabWidget()
 {
 
 }
+
+void ConfirmAddressConfigureTabWidget::resetSettings()
+{
+    mDomainNameListEditor->setStringList({});
+    mWhiteListEditor->setStringList({});
+}

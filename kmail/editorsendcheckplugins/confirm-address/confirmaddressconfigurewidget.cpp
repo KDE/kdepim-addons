@@ -17,15 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "confirmaddressconfiguretab.h"
 #include "confirmaddressconfigurewidget.h"
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
-#include <QLabel>
-#include <QGroupBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
@@ -38,42 +36,9 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     vboxlayout->addWidget(mEnable);
     connect(mEnable, &QCheckBox::clicked, this, &ConfirmAddressConfigureWidget::slotEnableChanged);
 
-    QGroupBox *groupBoxDomainName = new QGroupBox(i18n("Accepted Domain Name"), this);
-    groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
-    vboxlayout->addWidget(groupBoxDomainName);
-    QLayout *layoutDomainName = new QVBoxLayout(groupBoxDomainName);
-    layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
-
-    PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
-        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
-    mDomainNameListEditor =
-        new PimCommon::SimpleStringListEditor(groupBoxDomainName, buttonCode,
-                i18n("A&dd..."), i18n("Re&move"),
-                i18n("Mod&ify..."),
-                i18n("Enter new domain name:"));
-    mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
-    connect(mDomainNameListEditor, &PimCommon::SimpleStringListEditor::changed,
-            this, &ConfirmAddressConfigureWidget::configureChanged);
-    layoutDomainName->addWidget(mDomainNameListEditor);
-
-    QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("White List Address"), this);
-    groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
-    vboxlayout->addWidget(groupBoxWhiteList);
-    QLayout *layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
-    layoutWhiteList->setObjectName(QStringLiteral("layoutwhitelist"));
-
-    buttonCode =
-        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
-    mWhiteListEditor =
-        new PimCommon::SimpleStringListEditor(groupBoxWhiteList, buttonCode,
-                i18n("A&dd..."), i18n("Re&move"),
-                i18n("Mod&ify..."),
-                i18n("Enter new email name:"));
-    mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
-    layoutWhiteList->addWidget(mWhiteListEditor);
-    connect(mWhiteListEditor, &PimCommon::SimpleStringListEditor::changed,
-            this, &ConfirmAddressConfigureWidget::configureChanged);
-
+    mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(this);
+    mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));
+    vboxlayout->addWidget(mConfirmAddressConfigureTab);
 }
 
 ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
@@ -83,25 +48,27 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {
+#if 0
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
     mEnable->setChecked(grp.readEntry("Enabled", false));
     mDomainNameListEditor->setStringList(grp.readEntry("Domains", QStringList()));
     mWhiteListEditor->setStringList(grp.readEntry("Emails", QStringList()));
+#endif
 }
 
 void ConfirmAddressConfigureWidget::saveSettings()
 {
+#if 0
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
     grp.writeEntry("Enabled", mEnable->isChecked());
     grp.writeEntry("Domains", mDomainNameListEditor->stringList());
     grp.writeEntry("Emails", mWhiteListEditor->stringList());
+#endif
 }
 
 void ConfirmAddressConfigureWidget::resetSettings()
 {
-    mDomainNameListEditor->setStringList({});
-    mWhiteListEditor->setStringList({});
-    mEnable->setChecked(false);
+    //TODO
 }
 
 void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)

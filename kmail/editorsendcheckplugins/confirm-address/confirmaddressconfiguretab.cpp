@@ -32,9 +32,31 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
+
+    initTab();
 }
 
 ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
 {
 
+}
+
+void ConfirmAddressConfigureTab::loadSettings()
+{
+
+}
+
+void ConfirmAddressConfigureTab::saveSettings()
+{
+
+}
+
+void ConfirmAddressConfigureTab::resetSettings()
+{
+
+}
+
+void ConfirmAddressConfigureTab::initTab()
+{
+    //TODO
 }

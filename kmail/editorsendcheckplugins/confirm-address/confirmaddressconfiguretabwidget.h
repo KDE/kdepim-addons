@@ -33,6 +33,8 @@ public:
     explicit ConfirmAddressConfigureTabWidget(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTabWidget();
 
+    void resetSettings();
+
 Q_SIGNALS:
     void configureChanged();
 
