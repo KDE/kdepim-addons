@@ -24,7 +24,8 @@
 #include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mIdentity(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));

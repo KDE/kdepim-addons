@@ -39,6 +39,7 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
+    uint mIdentity;
     PimCommon::SimpleStringListEditor *mDomainNameListEditor;
     PimCommon::SimpleStringListEditor *mWhiteListEditor;
 };

@@ -21,6 +21,7 @@
 #include "confirmaddressconfiguretab.h"
 #include <QVBoxLayout>
 #include <QTabWidget>
+#include <KIdentityManagement/IdentityManager>
 
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)
@@ -58,5 +59,7 @@ void ConfirmAddressConfigureTab::resetSettings()
 
 void ConfirmAddressConfigureTab::initTab()
 {
+    //KIdentityManagement::IdentityManager manager(true);
+
     //TODO
 }
