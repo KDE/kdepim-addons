@@ -31,7 +31,7 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    QLabel *lab = new QLabel(i18n("Potential emails errors are displayed in red:"), this);
+    QLabel *lab = new QLabel(i18n("Potential email errors are displayed in red:"), this);
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 
