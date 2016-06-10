@@ -27,6 +27,7 @@
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <MessageComposer/AliasesExpandJob>
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
@@ -51,18 +52,56 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
         if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
             return true;
         }
-
-#ifdef USE_PLUGIN
-        QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
-        //TODO use params
-        if (dlg->exec()) {
-            return true;
-        } else {
-            return false;
+        qDebug() << " params.addresses() "<<params.addresses();
+        QStringList emails;
+#if 0
+        MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
+        if (job.exec()) {
+            emails = job.emailAddressOnly();
         }
-#else
-        return true;
 #endif
+        emails = params.addresses();
+
+        qDebug() << " emails "<<emails;
+        qDebug()<< "settings.mDomains :"<<settings.mDomains << " settings.mWhiteLists"<<settings.mWhiteLists;
+        QStringList invalidEmails;
+        QStringList validEmails;
+        bool foundValidEmail = false;
+        Q_FOREACH (const QString &email, emails) {
+            Q_FOREACH(const QString &domain, settings.mDomains) {
+                if (email.contains(domain)) {
+                    validEmails.append(email);
+                    foundValidEmail = true;
+                    break;
+                }
+            }
+            if (!foundValidEmail) {
+                Q_FOREACH(const QString &whiteEmail, settings.mWhiteLists) {
+                    if (email.contains(whiteEmail)) {
+                        validEmails.append(email);
+                        foundValidEmail = true;
+                        break;
+                    }
+                }
+            }
+            if (!foundValidEmail) {
+                invalidEmails.append(email);
+            }
+        }
+        if (!invalidEmails.isEmpty()) {
+            QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
+            dlg->setValidAddresses(validEmails);
+            dlg->setInvalidAddresses(invalidEmails);
+            if (dlg->exec()) {
+                delete dlg;
+                return true;
+            } else {
+                delete dlg;
+                return false;
+            }
+        } else {
+            return true;
+        }
     } else {
         return true;
     }

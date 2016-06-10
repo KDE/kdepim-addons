@@ -47,11 +47,13 @@ ConfirmAddressWidget::~ConfirmAddressWidget()
 
 void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
 {
+    qDebug()<<" void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)"<<addresses;
     createAddressItems(addresses, true);
 }
 
 void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 {
+    qDebug()<<" void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)"<<addresses;
     createAddressItems(addresses, false);
 }
 
@@ -62,5 +64,6 @@ void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool v
         if (!valid) {
             item->setTextColor(Qt::red);
         }
+        mListEmails->addItem(item);
     }
 }
