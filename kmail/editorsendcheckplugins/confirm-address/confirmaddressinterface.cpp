@@ -52,22 +52,22 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
         if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
             return true;
         }
-        qDebug() << " params.addresses() "<<params.addresses();
-        QStringList emails;
+        const QString str = params.addresses().join(QStringLiteral(", "));
+        QStringList emails = str.split(QStringLiteral(", "));
 #if 0
         MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
         if (job.exec()) {
             emails = job.emailAddressOnly();
         }
 #endif
-        emails = params.addresses();
-
-        qDebug() << " emails "<<emails;
-        qDebug()<< "settings.mDomains :"<<settings.mDomains << " settings.mWhiteLists"<<settings.mWhiteLists;
         QStringList invalidEmails;
         QStringList validEmails;
         bool foundValidEmail = false;
         Q_FOREACH (const QString &email, emails) {
+            if (email.isEmpty()) {
+                continue;
+            }
+            foundValidEmail = false;
             Q_FOREACH(const QString &domain, settings.mDomains) {
                 if (email.contains(domain)) {
                     validEmails.append(email);
