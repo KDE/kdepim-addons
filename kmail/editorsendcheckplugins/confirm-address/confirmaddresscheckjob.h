@@ -27,6 +27,24 @@ class ConfirmAddressCheckJob
 {
 public:
     ConfirmAddressCheckJob();
+    ~ConfirmAddressCheckJob();
+
+    void start();
+
+    void setCheckSettings(const QStringList &domains, const QStringList &whiteEmails);
+
+    void setAddressList(const QStringList &addressList);
+
+    QStringList validEmails() const;
+
+    QStringList invalidEmails() const;
+
+private:
+    QStringList mAddressList;
+    QStringList mValidEmails;
+    QStringList mInvalidEmails;
+    QStringList mDomains;
+    QStringList mWhiteEmails;
 };
 
 #endif // CONFIRMADDRESSCHECKJOB_H

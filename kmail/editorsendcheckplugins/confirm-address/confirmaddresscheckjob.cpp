@@ -23,3 +23,65 @@ ConfirmAddressCheckJob::ConfirmAddressCheckJob()
 {
 
 }
+
+ConfirmAddressCheckJob::~ConfirmAddressCheckJob()
+{
+
+}
+
+void ConfirmAddressCheckJob::start()
+{
+    bool foundValidEmail = false;
+    Q_FOREACH (const QString &email, mAddressList) {
+        if (email.isEmpty()) {
+            continue;
+        }
+        foundValidEmail = false;
+        Q_FOREACH(const QString &domain, mDomains) {
+            if (email.contains(domain)) {
+                if (!mValidEmails.contains(email)) {
+                    mValidEmails.append(email);
+                }
+                foundValidEmail = true;
+                break;
+            }
+        }
+        if (!foundValidEmail) {
+            Q_FOREACH(const QString &whiteEmail, mWhiteEmails) {
+                if (email.contains(whiteEmail)) {
+                    if (!mValidEmails.contains(email)) {
+                        mValidEmails.append(email);
+                    }
+                    foundValidEmail = true;
+                    break;
+                }
+            }
+        }
+        if (!foundValidEmail) {
+            if (!mInvalidEmails.contains(email)) {
+                mInvalidEmails.append(email);
+            }
+        }
+    }
+}
+
+void ConfirmAddressCheckJob::setCheckSettings(const QStringList &domains, const QStringList &whiteEmails)
+{
+    mDomains = domains;
+    mWhiteEmails = whiteEmails;
+}
+
+void ConfirmAddressCheckJob::setAddressList(const QStringList &addressList)
+{
+    mAddressList = addressList;
+}
+
+QStringList ConfirmAddressCheckJob::validEmails() const
+{
+    return mValidEmails;
+}
+
+QStringList ConfirmAddressCheckJob::invalidEmails() const
+{
+    return mInvalidEmails;
+}

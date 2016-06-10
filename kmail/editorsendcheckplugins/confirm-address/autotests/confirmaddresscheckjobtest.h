@@ -29,6 +29,13 @@ class ConfirmAddressCheckJobTest : public QObject
 public:
     explicit ConfirmAddressCheckJobTest(QObject *parent = Q_NULLPTR);
     ~ConfirmAddressCheckJobTest();
+private Q_SLOTS:
+    void shouldHaveEmptyResultByDefault();
+    void shouldReturnEmptyResultWhenNoAddress();
+    void shouldReturnAllValidEmailsDomain();
+    void shouldReturnAllInValidEmailsDomain();
+    void shouldReturnValidAndInvalid();
+    void shouldNotDuplicateValue();
 };
 
 #endif // CONFIRMADDRESSCHECKJOBTEST_H
