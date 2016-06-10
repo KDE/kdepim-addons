@@ -20,6 +20,7 @@
 #include "confirmaddressinterface.h"
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressdialog.h"
+#include "confirmaddresscheckjob.h"
 
 #include <QPointer>
 #include <KConfigGroup>
@@ -60,34 +61,14 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
             emails = job.emailAddressOnly();
         }
 #endif
-        QStringList invalidEmails;
-        QStringList validEmails;
-        bool foundValidEmail = false;
-        Q_FOREACH (const QString &email, emails) {
-            if (email.isEmpty()) {
-                continue;
-            }
-            foundValidEmail = false;
-            Q_FOREACH(const QString &domain, settings.mDomains) {
-                if (email.contains(domain)) {
-                    validEmails.append(email);
-                    foundValidEmail = true;
-                    break;
-                }
-            }
-            if (!foundValidEmail) {
-                Q_FOREACH(const QString &whiteEmail, settings.mWhiteLists) {
-                    if (email.contains(whiteEmail)) {
-                        validEmails.append(email);
-                        foundValidEmail = true;
-                        break;
-                    }
-                }
-            }
-            if (!foundValidEmail) {
-                invalidEmails.append(email);
-            }
-        }
+        ConfirmAddressCheckJob job;
+        job.setCheckSettings(settings.mDomains, settings.mWhiteLists);
+        job.setAddressList(emails);
+        job.start();
+
+        const QStringList invalidEmails = job.invalidEmails();
+        const QStringList validEmails = job.validEmails();
+
         if (!invalidEmails.isEmpty()) {
             QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
             dlg->setValidAddresses(validEmails);
