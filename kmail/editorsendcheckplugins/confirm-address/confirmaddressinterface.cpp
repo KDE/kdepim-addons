@@ -43,14 +43,15 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     if (mEnabled) {
-        // not configurated => validate it.
-        if (!mHashSettings.contains(params.identity())) {
+        if (params.addresses().isEmpty()) {
             return true;
         }
+        // not configurated => validate it.
         const ConfirmAddressSettings settings = mHashSettings.value(params.identity());
         if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
             return true;
         }
+
 #ifdef USE_PLUGIN
         QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
         //TODO use params
