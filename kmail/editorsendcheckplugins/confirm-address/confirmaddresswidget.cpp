@@ -47,13 +47,11 @@ ConfirmAddressWidget::~ConfirmAddressWidget()
 
 void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
 {
-    qDebug()<<" void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)"<<addresses;
     createAddressItems(addresses, true);
 }
 
 void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 {
-    qDebug()<<" void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)"<<addresses;
     createAddressItems(addresses, false);
 }
 
