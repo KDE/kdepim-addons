@@ -42,6 +42,11 @@ void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
 
     QCheckBox *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
     QVERIFY(mCheckPlainTextMail);
+    QVERIFY(!mCheckPlainTextMail->text().isEmpty());
+
+    QCheckBox *mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
+    QVERIFY(mCheckMailTransport);
+    QVERIFY(!mCheckMailTransport->text().isEmpty());
 }
 
 QTEST_MAIN(CheckBeforeSendConfigureWidgetTest)

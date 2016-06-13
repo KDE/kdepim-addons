@@ -23,10 +23,14 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KLocalizedString>
+#include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
-      mSendPlainText(false)
+      mIdentityManager(Q_NULLPTR),
+      mSendPlainText(false),
+      mCheckMailTransport(false)
 {
     reloadConfig();
 }
@@ -47,6 +51,19 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             }
         }
     }
+    if (mCheckMailTransport) {
+        if (!mIdentityManager) {
+            mIdentityManager = new KIdentityManagement::IdentityManager(true, this);
+        }
+        const KIdentityManagement::Identity identity = mIdentityManager->identityForUoid(params.identity());
+        if (identity.transport() != QString::number(params.transportId())) {
+            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send mail with a different SMTP that defined in current identity?"), i18n("Check SMTP server"))) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+    }
     return true;
 }
 
@@ -54,4 +71,5 @@ void CheckBeforeSendInterface::reloadConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     mSendPlainText = grp.readEntry("SendPlainText", false);
+    mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
 }

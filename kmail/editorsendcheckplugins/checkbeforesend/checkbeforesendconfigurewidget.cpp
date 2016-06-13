@@ -34,6 +34,13 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     mCheckPlainTextMail->setObjectName(QStringLiteral("checkplaintext"));
     connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
+
+    mCheckMailTransport = new QCheckBox(i18n("Use SMTP defined in identity"), this);
+    mCheckMailTransport->setObjectName(QStringLiteral("smtpdefinedinidentity"));
+    connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
+    mainLayout->addWidget(mCheckMailTransport);
+
+
     mainLayout->addStretch(1);
 }
 
@@ -46,15 +53,18 @@ void CheckBeforeSendConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
+    mCheckMailTransport->setChecked(grp.readEntry("SmtpDefinedInIdentity", false));
 }
 
 void CheckBeforeSendConfigureWidget::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
+    grp.writeEntry("SmtpDefinedInIdentity", mCheckMailTransport->isChecked());
 }
 
 void CheckBeforeSendConfigureWidget::resetSettings()
 {
     mCheckPlainTextMail->setChecked(false);
+    mCheckMailTransport->setChecked(false);
 }
