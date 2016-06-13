@@ -40,7 +40,6 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);
 
-
     mainLayout->addStretch(1);
 }
 

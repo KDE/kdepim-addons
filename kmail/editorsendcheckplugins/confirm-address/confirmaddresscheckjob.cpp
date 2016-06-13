@@ -37,7 +37,7 @@ void ConfirmAddressCheckJob::start()
             continue;
         }
         foundValidEmail = false;
-        Q_FOREACH(const QString &domain, mDomains) {
+        Q_FOREACH (const QString &domain, mDomains) {
             if (email.contains(domain)) {
                 if (!mValidEmails.contains(email)) {
                     mValidEmails.append(email);
@@ -47,7 +47,7 @@ void ConfirmAddressCheckJob::start()
             }
         }
         if (!foundValidEmail) {
-            Q_FOREACH(const QString &whiteEmail, mWhiteEmails) {
+            Q_FOREACH (const QString &whiteEmail, mWhiteEmails) {
                 if (email.contains(whiteEmail)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);

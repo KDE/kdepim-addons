@@ -32,7 +32,6 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
 
-
     QGroupBox *groupBoxDomainName = new QGroupBox(i18n("Accepted Domain Name"), this);
     groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
     mainLayout->addWidget(groupBoxDomainName);

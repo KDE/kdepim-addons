@@ -36,8 +36,7 @@ public Q_SLOTS:
 private:
     bool mEnabled;
 
-    struct ConfirmAddressSettings
-    {
+    struct ConfirmAddressSettings {
         QStringList mDomains;
         QStringList mWhiteLists;
     };
