@@ -17,6 +17,7 @@
 
 #include "viewerplugincreateeventinterface.h"
 #include "eventedit.h"
+#include "createeventjob.h"
 #include <KLocalizedString>
 
 #include <KActionCollection>
@@ -24,7 +25,6 @@
 #include <QIcon>
 #include <QAction>
 
-#include <messageviewer/createeventjob.h>
 
 using namespace MessageViewer;
 

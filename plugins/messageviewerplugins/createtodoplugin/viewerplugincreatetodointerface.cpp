@@ -17,6 +17,7 @@
 
 #include "viewerplugincreatetodointerface.h"
 #include "todoedit.h"
+#include "createtodojob.h"
 
 #include <KLocalizedString>
 
@@ -24,7 +25,6 @@
 #include <QHBoxLayout>
 #include <QAction>
 
-#include <messageviewer/createtodojob.h>
 
 using namespace MessageViewer;
 

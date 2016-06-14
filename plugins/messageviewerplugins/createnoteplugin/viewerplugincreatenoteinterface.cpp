@@ -17,6 +17,7 @@
 
 #include "viewerplugincreatenoteinterface.h"
 #include "noteedit.h"
+#include "createnotejob.h"
 #include "createnoteplugin_debug.h"
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -27,7 +28,6 @@
 #include <ItemFetchJob>
 #include <ItemFetchScope>
 
-#include <messageviewer/createnotejob.h>
 
 using namespace MessageViewer;
 
