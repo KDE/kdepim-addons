@@ -223,8 +223,7 @@ public:
                 MemoryCalendar::Ptr cl(new MemoryCalendar(KSystemTimeZones::local()));
                 const QString html =
                     KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
-                        source, cl, &helper, message->sender()->asUnicodeString(),
-                        MessageViewer::MessageViewerSettings::self()->outlookCompatibleInvitationComparisons());
+                        source, cl, &helper, message->sender()->asUnicodeString());
 
                 if (html.isEmpty()) {
                     return AsIcon;
