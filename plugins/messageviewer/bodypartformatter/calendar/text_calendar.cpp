@@ -893,11 +893,7 @@ public:
                     i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
             } else {
-                if (MessageViewer::MessageViewerSettings::self()->outlookCompatibleInvitationReplyComments()) {
-                    incidence->setDescription(comment);
-                } else {
-                    incidence->addComment(comment);
-                }
+                incidence->addComment(comment);
             }
         }
 
@@ -1223,11 +1219,7 @@ public:
                 return true;
 
             } else {
-                if (MessageViewer::MessageViewerSettings::self()->outlookCompatibleInvitationReplyComments()) {
-                    incidence->setDescription(comment);
-                } else {
-                    incidence->addComment(comment);
-                }
+                incidence->addComment(comment);
             }
         }
         return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalCore::iTIPDeclineCounter,
