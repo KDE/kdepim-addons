@@ -25,7 +25,6 @@
 #include <QIcon>
 #include <QAction>
 
-
 using namespace MessageViewer;
 
 ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent)

@@ -25,7 +25,6 @@
 #include <QHBoxLayout>
 #include <QAction>
 
-
 using namespace MessageViewer;
 
 ViewerPluginCreateTodoInterface::ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent)

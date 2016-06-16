@@ -28,7 +28,6 @@
 #include <ItemFetchJob>
 #include <ItemFetchScope>
 
-
 using namespace MessageViewer;
 
 ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent)
