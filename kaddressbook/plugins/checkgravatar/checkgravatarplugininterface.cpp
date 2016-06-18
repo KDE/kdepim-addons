@@ -18,6 +18,7 @@
 */
 
 #include "checkgravatarplugininterface.h"
+#include "kaddressbook_checkgravatarplugin_debug.h"
 #include "gravatar/widgets/gravatarupdatedialog.h"
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -134,7 +135,7 @@ void CheckGravatarPluginInterface::exec()
 void CheckGravatarPluginInterface::slotModifyContactFinished(KJob *job)
 {
     if (job->error()) {
-        qDebug() << "Error while modifying items. " << job->error() << job->errorString();
+        qCDebug(KADDRESSBOOK_CHECKGRAVATAR_LOG) << "Error while modifying items. " << job->error() << job->errorString();
     }
 }
 

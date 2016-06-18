@@ -23,7 +23,6 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QPointer>
-#include <QDebug>
 
 #include "manualmerge/mergecontactsdialog.h"
 
