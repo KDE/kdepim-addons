@@ -105,10 +105,16 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
     QVector<CalendarEvents::EventData> results;
     while (rec.isValid() && rec.date() <= mEnd) {
         CalendarEvents::EventData copy = ed;
-        const QDateTime dt = rec.dateTime();
+        QDateTime dt;
+        if (incidence->allDay()) {
+            dt = QDateTime(rec.date(), QTime(0, 0, 0), Qt::LocalTime);
+        } else {
+            dt = rec.toLocalZone().dateTime();
+        }
         copy.setStartDateTime(dt);
         copy.setEndDateTime(dt.addSecs(duration));
         copy.setUid(generateUid(incidence, rec));
+
         results.push_back(copy);
 
         rec = incidence->recurrence()->getNextDateTime(rec);
