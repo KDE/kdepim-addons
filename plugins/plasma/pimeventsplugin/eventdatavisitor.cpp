@@ -189,8 +189,8 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     data.setIsAllDay(incidence->allDay());
     data.setIsMinor(false);
     data.setUid(generateUid(incidence));
-    data.setStartDateTime(incidence->dtStart().dateTime());
-    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).dateTime());
+    data.setStartDateTime(incidence->dtStart().toLocalZone().dateTime());
+    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().dateTime());
     data.setEventColor(mDataSource->calendarColorForIncidence(incidence));
     return data;
 }
