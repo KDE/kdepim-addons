@@ -28,6 +28,7 @@
 #include <QtTest/QTest>
 
 #include <KCalCore/ICalFormat>
+#include <KCalCore/MemoryCalendar>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
@@ -82,7 +83,7 @@ QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
 {
     return QDateTime(QDate::fromString(dateTime[QStringLiteral("date")].toString(), Qt::ISODate),
                      QTime::fromString(dateTime[QStringLiteral("time")].toString(), Qt::ISODate),
-                     QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1()));
+                     QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1())).toLocalTime();
 }
 
 void TestDataParser::parse()
@@ -91,9 +92,11 @@ void TestDataParser::parse()
     QVERIFY(icalFile.exists());
     QVERIFY(icalFile.open(QIODevice::ReadOnly));
 
-    const QByteArray data = icalFile.readAll();
+    auto calendar = KCalCore::MemoryCalendar::Ptr::create(KDateTime::LocalZone);
     KCalCore::ICalFormat format;
-    mIncidence = format.readIncidence(data);
+    QVERIFY(format.load(calendar, icalFile.fileName()));
+    QVERIFY(!calendar->incidences().isEmpty());
+    mIncidence = calendar->incidences().at(0);
     QVERIFY(mIncidence);
 
     QFile jsonFile(QStringLiteral(PIMEVENT_DATADIR "/data/%1.json").arg(mTestData));
@@ -121,9 +124,15 @@ void TestDataParser::parse()
         }
         eventData.setIsAllDay(obj[QStringLiteral("allDay")].toBool());
         eventData.setIsMinor(obj[QStringLiteral("isMinor")].toBool());
-        const QDateTime startDateTime = parseDateTime(obj[QStringLiteral("startDateTime")].toObject());
+        QDateTime startDateTime = parseDateTime(obj[QStringLiteral("startDateTime")].toObject());
+        if (eventData.isAllDay()) {
+            startDateTime.setTime(QTime(0, 0, 0, Qt::LocalTime));
+        }
         eventData.setStartDateTime(startDateTime);
-        const QDateTime endDateTime = parseDateTime(obj[QStringLiteral("endDateTime")].toObject());
+        QDateTime endDateTime = parseDateTime(obj[QStringLiteral("endDateTime")].toObject());
+        if (eventData.isAllDay()) {
+            endDateTime.setTime(QTime(0, 0, 0, Qt::LocalTime));
+        }
         eventData.setEndDateTime(endDateTime);
         eventData.setUid(obj[QStringLiteral("uid")].toString());
 

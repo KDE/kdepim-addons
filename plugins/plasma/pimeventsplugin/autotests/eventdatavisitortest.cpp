@@ -27,7 +27,6 @@
 
 #include <KCalCore/Event>
 #include <KCalCore/Todo>
-#include <KCalCore/ICalFormat>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 

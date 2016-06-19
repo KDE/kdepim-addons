@@ -23,7 +23,7 @@
 
 FakePimDataSource::FakePimDataSource()
     : PimDataSource()
-    , mCalendar(new KCalCore::MemoryCalendar(KDateTime::UTC))
+    , mCalendar(new KCalCore::MemoryCalendar(KDateTime::LocalZone))
 {
 }
 
