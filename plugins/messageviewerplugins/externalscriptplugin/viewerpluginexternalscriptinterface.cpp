@@ -24,7 +24,6 @@
 #include <QHBoxLayout>
 #include <QIcon>
 #include <QAction>
-#include <QDebug>
 #include <QStandardPaths>
 #include <QProcess>
 
