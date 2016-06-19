@@ -18,7 +18,7 @@
 */
 
 #include "searchpotentialduplicatecontactjob.h"
-#include <QDebug>
+#include "kaddressbookmergelibprivate_debug.h"
 #include <KContacts/Addressee>
 
 using namespace KABMergeContacts;
@@ -69,7 +69,7 @@ Akonadi::Item::List SearchPotentialDuplicateContactJob::checkList(const Akonadi:
             lst.append(firstItem);
             mListDuplicate.append(lst);
         }
-        qDebug() << " duplicate number " << lst.count();
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " duplicate number " << lst.count();
     }
     return notDuplicate;
 }
@@ -84,9 +84,9 @@ bool SearchPotentialDuplicateContactJob::isDuplicate(const Akonadi::Item &itemA,
     const KContacts::Addressee addressB = itemB.payload<KContacts::Addressee>();
     //
     if (!addressA.name().isEmpty() && !addressB.name().isEmpty()) {
-        qDebug() << " addressB" << addressB.name() << " addressA.name()" << addressA.name();
+        qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " addressB" << addressB.name() << " addressA.name()" << addressA.name();
         if (addressA.name() == addressB.name()) {
-            qDebug() << " return true;";
+            qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " return true;";
             return true;
         }
     }

@@ -24,7 +24,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QDebug>
 #include <QPointer>
 #include <ItemModifyJob>
 
