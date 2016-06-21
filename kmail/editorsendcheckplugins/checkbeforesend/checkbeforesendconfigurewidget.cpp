@@ -30,7 +30,7 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mCheckPlainTextMail = new QCheckBox(i18n("Send as PlainText"), this);
+    mCheckPlainTextMail = new QCheckBox(i18n("Send as plain text"), this);
     mCheckPlainTextMail->setObjectName(QStringLiteral("checkplaintext"));
     connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
