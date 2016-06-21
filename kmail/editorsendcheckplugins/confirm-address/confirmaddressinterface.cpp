@@ -45,7 +45,8 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     if (mEnabled) {
-        if (params.addresses().isEmpty()) {
+        const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+        if (lst.isEmpty()) {
             return true;
         }
         // not configurated => validate it.
@@ -53,7 +54,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
         if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
             return true;
         }
-        const QString str = params.addresses().join(QStringLiteral(", "));
+        const QString str = lst.join(QStringLiteral(", "));
         const QStringList emails = str.split(QStringLiteral(", "));
 #if 0
         MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
