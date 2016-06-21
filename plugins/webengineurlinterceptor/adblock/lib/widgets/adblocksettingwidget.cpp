@@ -439,7 +439,7 @@ void AdBlockSettingWidget::slotDeleteList(const QString &listName)
 void AdBlockSettingWidget::slotImportFilters()
 {
     const QString filter = i18n("All Files (*)");
-    const QString result = PimCommon::Util::loadToFile(filter, this, i18n("Import Filters"));
+    const QString result = PimCommon::Util::loadToFile(filter, this, QUrl(), i18n("Import Filters"));
     if (result.isEmpty()) {
         return;
     }
