@@ -40,6 +40,11 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);
 
+    mCheckDuplicateEmails = new QCheckBox(i18n("Check duplicated emails"), this);
+    mCheckDuplicateEmails->setObjectName(QStringLiteral("checkduplicatedemails"));
+    connect(mCheckDuplicateEmails, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
+    mainLayout->addWidget(mCheckDuplicateEmails);
+
     mainLayout->addStretch(1);
 }
 
@@ -53,6 +58,7 @@ void CheckBeforeSendConfigureWidget::loadSettings()
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
     mCheckMailTransport->setChecked(grp.readEntry("SmtpDefinedInIdentity", false));
+    mCheckDuplicateEmails->setChecked(grp.readEntry("CheckDuplicatedEmails", false));
 }
 
 void CheckBeforeSendConfigureWidget::saveSettings()
@@ -60,6 +66,7 @@ void CheckBeforeSendConfigureWidget::saveSettings()
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
     grp.writeEntry("SmtpDefinedInIdentity", mCheckMailTransport->isChecked());
+    grp.writeEntry("CheckDuplicatedEmails", mCheckDuplicateEmails->isChecked());
 }
 
 void CheckBeforeSendConfigureWidget::resetSettings()

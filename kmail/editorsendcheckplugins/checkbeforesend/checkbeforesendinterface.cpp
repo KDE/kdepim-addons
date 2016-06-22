@@ -30,7 +30,8 @@ CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
       mIdentityManager(Q_NULLPTR),
       mSendPlainText(false),
-      mCheckMailTransport(false)
+      mCheckMailTransport(false),
+      mCheckDuplicateEmails(false)
 {
     reloadConfig();
 }
@@ -64,6 +65,9 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             }
         }
     }
+    if (mCheckDuplicateEmails) {
+        //TODO
+    }
     return true;
 }
 
@@ -72,4 +76,5 @@ void CheckBeforeSendInterface::reloadConfig()
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     mSendPlainText = grp.readEntry("SendPlainText", false);
     mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
+    mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);
 }

@@ -17,30 +17,23 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CHECKBEFORESENDINTERFACE_H
-#define CHECKBEFORESENDINTERFACE_H
+#ifndef CHECKDUPLICATEEMAILSDIALOG_H
+#define CHECKDUPLICATEEMAILSDIALOG_H
 
-#include <MessageComposer/PluginEditorCheckBeforeSendInterface>
-namespace KIdentityManagement
-{
-class IdentityManager;
-}
-class CheckBeforeSendInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
+#include <QDialog>
+
+class QListWidget;
+class CheckDuplicateEmailsDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendInterface(QObject *parent = Q_NULLPTR);
-    ~CheckBeforeSendInterface();
+    explicit CheckDuplicateEmailsDialog(QWidget *parent = Q_NULLPTR);
+    ~CheckDuplicateEmailsDialog();
 
-    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
-
-public Q_SLOTS:
-    void reloadConfig() Q_DECL_OVERRIDE;
 private:
-    KIdentityManagement::IdentityManager *mIdentityManager;
-    bool mSendPlainText;
-    bool mCheckMailTransport;
-    bool mCheckDuplicateEmails;
+    void readConfig();
+    void writeConfig();
+    QListWidget *mListWidget;
 };
 
-#endif // CHECKBEFORESENDINTERFACE_H
+#endif // CHECKDUPLICATEEMAILSDIALOG_H

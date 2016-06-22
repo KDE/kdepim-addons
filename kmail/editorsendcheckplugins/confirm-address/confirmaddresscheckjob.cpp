@@ -31,6 +31,8 @@ ConfirmAddressCheckJob::~ConfirmAddressCheckJob()
 
 void ConfirmAddressCheckJob::start()
 {
+    mValidEmails.clear();
+    mInvalidEmails.clear();
     bool foundValidEmail = false;
     Q_FOREACH (const QString &email, mAddressList) {
         if (email.isEmpty()) {

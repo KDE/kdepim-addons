@@ -38,6 +38,7 @@ public:
 private:
     QCheckBox *mCheckPlainTextMail;
     QCheckBox *mCheckMailTransport;
+    QCheckBox *mCheckDuplicateEmails;
 };
 
 #endif // CHECKBEFORESENDCONFIGUREWIDGET_H
