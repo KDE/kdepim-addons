@@ -22,14 +22,14 @@
 #define MESSAGECORE_TESTS_UTIL_H
 
 #include <MessageViewer/ObjectTreeEmptySource>
-#include <MimeTreeParser/CSSHelperBase>
+#include <MessageViewer/CSSHelperBase>
 #include <MimeTreeParser/AttachmentStrategy>
 
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {
 public:
     TestObjectTreeSource(MimeTreeParser::HtmlWriter *writer,
-                         MimeTreeParser::CSSHelperBase *cssHelper)
+                         MessageViewer::CSSHelperBase *cssHelper)
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
@@ -41,7 +41,7 @@ public:
         return mWriter;
     }
 
-    MimeTreeParser::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
+    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
         return mCSSHelper;
     }
 
@@ -109,7 +109,7 @@ public:
 
 private:
     MimeTreeParser::HtmlWriter *mWriter;
-    MimeTreeParser::CSSHelperBase *mCSSHelper;
+    MessageViewer::CSSHelperBase *mCSSHelper;
     bool mHtmlLoadExternal;
     bool mHtmlMail;
 };

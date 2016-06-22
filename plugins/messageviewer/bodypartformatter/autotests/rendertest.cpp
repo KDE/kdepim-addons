@@ -23,7 +23,7 @@
 #include "testobjecttreesource.h"
 
 #include <MimeTreeParser/ObjectTreeParser>
-#include <MimeTreeParser/CSSHelperBase>
+#include <MessageViewer/CSSHelperBase>
 #include <MimeTreeParser/FileHtmlWriter>
 
 #include <KMime/Message>
@@ -69,7 +69,7 @@ void RenderTest::testRender()
     // render the mail
     MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
     QImage paintDevice;
-    MimeTreeParser::CSSHelperBase cssHelper(&paintDevice);
+    MessageViewer::CSSHelperBase cssHelper(&paintDevice);
     MimeTreeParser::NodeHelper nodeHelper;
     TestObjectTreeSource testSource(&fileWriter, &cssHelper);
     MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
