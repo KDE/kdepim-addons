@@ -17,6 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 #include "checkduplicateemailsjob.h"
+#include <KEmailAddress>
+#include <QDebug>
 
 CheckDuplicateEmailsJob::CheckDuplicateEmailsJob()
 {
@@ -36,11 +38,14 @@ void CheckDuplicateEmailsJob::start()
     }
     QMap<QString, int> results;
     Q_FOREACH(const QString &email, mEmails) {
-        int val = results.value(email, 0);
+        QString tname, temail;
+        KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
+
+        int val = results.value(temail, 0);
         if (val == 0) {
-            results.insert(email, val+1);
+            results.insert(temail, val+1);
         } else {
-            results[email] = val+1;
+            results[temail] = val+1;
         }
     }
     QMapIterator<QString, int> i(results);
