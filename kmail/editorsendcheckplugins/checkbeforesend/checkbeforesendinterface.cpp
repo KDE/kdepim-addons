@@ -18,6 +18,8 @@
 */
 
 #include "checkbeforesendinterface.h"
+#include "checkduplicateemailsjob.h"
+#include "checkduplicateemailsdialog.h"
 
 #include <KMessageBox>
 #include <KConfigGroup>
@@ -25,6 +27,8 @@
 #include <KLocalizedString>
 #include <KIdentityManagement/Identity>
 #include <KIdentityManagement/IdentityManager>
+
+#include <QPointer>
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
@@ -66,7 +70,23 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckDuplicateEmails) {
-        //TODO
+        const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+        if (!lst.isEmpty()) {
+            CheckDuplicateEmailsJob job;
+            job.setEmails(lst);
+            job.start();
+            const QMap<QString, int> results = job.result();
+            if (!results.isEmpty()) {
+                QPointer<CheckDuplicateEmailsDialog> dlg = new CheckDuplicateEmailsDialog(parentWidget());
+                if (dlg->exec()) {
+                    delete dlg;
+                    return true;
+                } else {
+                    delete dlg;
+                    return false;
+                }
+            }
+        }
     }
     return true;
 }
