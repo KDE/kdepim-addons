@@ -60,6 +60,35 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     lst.append(QStringLiteral("blo"));
     QTest::newRow("emptyresultbutnotemptylist") << lst << QMap<QString, int>();
 
+    lst.clear();
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("blo"));
+    QMap<QString, int> result;
+    result.insert(QStringLiteral("foo"), 2);
+    QTest::newRow("oneduplicateemails") << lst << result;
+
+    lst.clear();
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("blo"));
+    lst.append(QStringLiteral("blo"));
+    result.clear();
+    result.insert(QStringLiteral("foo"), 2);
+    result.insert(QStringLiteral("blo"), 2);
+    QTest::newRow("twoduplicateemails") << lst << result;
+
+    lst.clear();
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("blo"));
+    lst.append(QStringLiteral("blo"));
+    result.clear();
+    result.insert(QStringLiteral("foo"), 3);
+    result.insert(QStringLiteral("blo"), 2);
+    QTest::newRow("twoduplicateemailswithdifferentvalue") << lst << result;
+
 }
 
 void CheckDuplicateEmailsJobTest::shouldReturnEmails()
