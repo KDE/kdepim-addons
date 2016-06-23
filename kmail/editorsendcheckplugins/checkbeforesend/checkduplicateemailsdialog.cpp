@@ -40,11 +40,12 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckDuplicateEmailsDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckDuplicateEmailsDialog::reject);
     mainLayout->addWidget(buttonBox);
+    readConfig();
 }
 
 CheckDuplicateEmailsDialog::~CheckDuplicateEmailsDialog()
 {
-
+    writeConfig();
 }
 
 void CheckDuplicateEmailsDialog::writeConfig()

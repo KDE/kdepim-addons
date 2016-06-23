@@ -29,6 +29,8 @@ public:
     explicit CheckDuplicateEmailsDialogTest(QObject *parent = Q_NULLPTR);
     ~CheckDuplicateEmailsDialogTest();
 
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CHECKDUPLICATEEMAILSDIALOGTEST_H

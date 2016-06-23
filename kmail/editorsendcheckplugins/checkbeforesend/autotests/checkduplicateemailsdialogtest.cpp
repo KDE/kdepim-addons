@@ -18,6 +18,9 @@
 */
 
 #include "checkduplicateemailsdialogtest.h"
+#include "../checkduplicateemailsdialog.h"
+#include <QDialogButtonBox>
+#include <QListWidget>
 #include <QTest>
 
 CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
@@ -29,6 +32,17 @@ CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
 CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest()
 {
 
+}
+
+void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
+{
+    CheckDuplicateEmailsDialog dlg;
+    QListWidget *mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    QVERIFY(mListWidget);
+    QCOMPARE(mListWidget->count(), 0);
+
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
 }
 
 QTEST_MAIN(CheckDuplicateEmailsDialogTest)
