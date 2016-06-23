@@ -34,6 +34,23 @@ void CheckDuplicateEmailsJob::start()
     if (mEmails.isEmpty()) {
         return;
     }
+    QMap<QString, int> results;
+    Q_FOREACH(const QString &email, mEmails) {
+        int val = results.value(email, 0);
+        if (val == 0) {
+            results.insert(email, val+1);
+        } else {
+            results[email] = val+1;
+        }
+    }
+    QMapIterator<QString, int> i(results);
+    while (i.hasNext()) {
+        i.next();
+        if (i.value() > 1) {
+            mResult.insert(i.key(), i.value());
+        }
+    }
+
 }
 
 void CheckDuplicateEmailsJob::setEmails(const QStringList &list)

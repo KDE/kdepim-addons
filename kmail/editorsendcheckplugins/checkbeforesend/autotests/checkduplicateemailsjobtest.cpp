@@ -53,6 +53,13 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     QTest::addColumn<QStringList>("emails");
     QTest::addColumn<QMap<QString, int> >("result");
     QTest::newRow("empty") << QStringList() << QMap<QString, int>();
+
+    QStringList lst;
+    lst.append(QStringLiteral("foo"));
+    lst.append(QStringLiteral("bla"));
+    lst.append(QStringLiteral("blo"));
+    QTest::newRow("emptyresultbutnotemptylist") << lst << QMap<QString, int>();
+
 }
 
 void CheckDuplicateEmailsJobTest::shouldReturnEmails()
