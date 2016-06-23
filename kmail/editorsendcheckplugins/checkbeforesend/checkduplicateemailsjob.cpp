@@ -41,11 +41,13 @@ void CheckDuplicateEmailsJob::start()
         QString tname, temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
 
-        int val = results.value(temail, 0);
-        if (val == 0) {
-            results.insert(temail, val+1);
-        } else {
-            results[temail] = val+1;
+        if (!temail.isEmpty()) {
+            const int val = results.value(temail, 0);
+            if (val == 0) {
+                results.insert(temail, val+1);
+            } else {
+                results[temail] = val+1;
+            }
         }
     }
     QMapIterator<QString, int> i(results);
