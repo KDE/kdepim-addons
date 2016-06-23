@@ -78,6 +78,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             const QMap<QString, int> results = job.result();
             if (!results.isEmpty()) {
                 QPointer<CheckDuplicateEmailsDialog> dlg = new CheckDuplicateEmailsDialog(parentWidget());
+                dlg->setDuplicatedEmails(results);
                 if (dlg->exec()) {
                     delete dlg;
                     return true;
