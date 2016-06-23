@@ -30,6 +30,7 @@ public:
     explicit CheckDuplicateEmailsDialog(QWidget *parent = Q_NULLPTR);
     ~CheckDuplicateEmailsDialog();
 
+    void setDuplicatedEmails(const QMap<QString, int> &emails);
 private:
     void readConfig();
     void writeConfig();

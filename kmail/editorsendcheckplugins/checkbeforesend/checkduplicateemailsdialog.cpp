@@ -23,13 +23,18 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QListWidget>
+#include <QLabel>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
 CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Duplicated Emails"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QLabel *lab = new QLabel(i18n("Theses emails are duplicated:"), this);
+    lab->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(lab);
 
     mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("listwidget"));
@@ -46,6 +51,15 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
 CheckDuplicateEmailsDialog::~CheckDuplicateEmailsDialog()
 {
     writeConfig();
+}
+
+void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &emails)
+{
+    QMapIterator<QString, int> i(emails);
+    while (i.hasNext()) {
+        i.next();
+        mListWidget->addItem(i18nc("emails (number of emails)", "%1 (%2)", i.key(), i.value()));
+    }
 }
 
 void CheckDuplicateEmailsDialog::writeConfig()

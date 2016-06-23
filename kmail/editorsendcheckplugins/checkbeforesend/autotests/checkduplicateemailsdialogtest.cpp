@@ -20,6 +20,7 @@
 #include "checkduplicateemailsdialogtest.h"
 #include "../checkduplicateemailsdialog.h"
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QListWidget>
 #include <QTest>
 
@@ -43,6 +44,26 @@ void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 
     QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+
+
+    QLabel *lab = dlg.findChild<QLabel* >(QStringLiteral("label"));
+    QVERIFY(lab);
+    QVERIFY(!lab->text().isEmpty());
+}
+
+void CheckDuplicateEmailsDialogTest::shouldAddEmails()
+{
+    CheckDuplicateEmailsDialog dlg;
+    QListWidget *mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+
+    QMap<QString, int> map;
+    map.insert(QStringLiteral("foo"), 5);
+    map.insert(QStringLiteral("bla"), 5);
+    map.insert(QStringLiteral("kde.org"), 7);
+    map.insert(QStringLiteral("linux.fr"), 2);
+    dlg.setDuplicatedEmails(map);
+
+    QCOMPARE(mListWidget->count(), map.count());
 }
 
 QTEST_MAIN(CheckDuplicateEmailsDialogTest)
