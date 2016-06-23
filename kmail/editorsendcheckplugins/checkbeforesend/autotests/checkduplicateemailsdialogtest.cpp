@@ -45,8 +45,7 @@ void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
     QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-
-    QLabel *lab = dlg.findChild<QLabel* >(QStringLiteral("label"));
+    QLabel *lab = dlg.findChild<QLabel * >(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 }

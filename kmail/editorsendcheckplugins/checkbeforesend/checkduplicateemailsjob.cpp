@@ -37,16 +37,16 @@ void CheckDuplicateEmailsJob::start()
         return;
     }
     QMap<QString, int> results;
-    Q_FOREACH(const QString &email, mEmails) {
+    Q_FOREACH (const QString &email, mEmails) {
         QString tname, temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
 
         if (!temail.isEmpty()) {
             const int val = results.value(temail, 0);
             if (val == 0) {
-                results.insert(temail, val+1);
+                results.insert(temail, val + 1);
             } else {
-                results[temail] = val+1;
+                results[temail] = val + 1;
             }
         }
     }

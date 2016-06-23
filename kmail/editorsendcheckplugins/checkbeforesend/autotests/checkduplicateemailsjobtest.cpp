@@ -89,7 +89,6 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     result.insert(QStringLiteral("blo@kde.org"), 2);
     QTest::newRow("twoduplicateemailswithdifferentvalue") << lst << result;
 
-
     lst.clear();
     lst.append(QStringLiteral("foo <foo@kde.org>"));
     lst.append(QStringLiteral("foo@kde.org"));

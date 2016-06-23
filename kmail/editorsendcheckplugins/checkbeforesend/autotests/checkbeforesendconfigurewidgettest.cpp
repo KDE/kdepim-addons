@@ -50,7 +50,6 @@ void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(!mCheckMailTransport->text().isEmpty());
     QVERIFY(!mCheckMailTransport->isChecked());
 
-
     QCheckBox *mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemails"));
     QVERIFY(mCheckDuplicateEmails);
     QVERIFY(!mCheckDuplicateEmails->text().isEmpty());
