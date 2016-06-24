@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "tinyurlengineplugin.h"
 #include "tinyurlengineinterface.h"
 #include <kpluginfactory.h>
