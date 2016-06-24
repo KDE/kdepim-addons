@@ -21,7 +21,6 @@
 #define SHORTURLCONFIGUREDIALOG_H
 
 #include <QDialog>
-#include <KConfigGroup>
 
 class ShortUrlConfigureWidget;
 class ShortUrlConfigureDialog : public QDialog

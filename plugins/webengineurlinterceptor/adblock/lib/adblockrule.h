@@ -61,7 +61,6 @@
 #ifndef ADBLOCKRULE_H
 #define ADBLOCKRULE_H
 
-#include <QObject>
 #include <QStringList>
 #include <QStringMatcher>
 #include "adblockregexp.h"

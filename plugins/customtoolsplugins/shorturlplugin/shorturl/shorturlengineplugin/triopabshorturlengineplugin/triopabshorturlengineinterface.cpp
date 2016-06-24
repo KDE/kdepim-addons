@@ -20,7 +20,6 @@
 #include "triopabshorturlengineinterface.h"
 #include "../shorturlengineplugin.h"
 
-#include <QJsonDocument>
 #include <QNetworkReply>
 #include <QNetworkRequest>
 

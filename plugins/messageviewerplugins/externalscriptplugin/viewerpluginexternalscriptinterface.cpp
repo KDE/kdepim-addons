@@ -21,7 +21,6 @@
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternalscriptparseargument.h"
 
-#include <QHBoxLayout>
 #include <QIcon>
 #include <QAction>
 #include <QStandardPaths>

@@ -18,7 +18,6 @@
 #include "viewerplugincreatenote.h"
 #include "viewerplugincreatenoteinterface.h"
 #include <KActionCollection>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;

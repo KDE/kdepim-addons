@@ -18,7 +18,6 @@
 #include "viewerplugincreatetodo.h"
 #include "viewerplugincreatetodointerface.h"
 #include <KActionCollection>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;

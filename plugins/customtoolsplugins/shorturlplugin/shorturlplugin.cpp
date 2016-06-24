@@ -20,7 +20,6 @@
 #include "shorturlplugin.h"
 #include "shorturlview.h"
 #include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 #include <pimcommon/customtoolswidgetng.h>
 

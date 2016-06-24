@@ -35,9 +35,7 @@
 
 #include <QSignalSpy>
 #include <QLineEdit>
-#include <QHBoxLayout>
 #include <QShortcut>
-#include <QAction>
 
 namespace MessageViewer
 {

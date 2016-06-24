@@ -21,7 +21,6 @@
 #include "../shorturlengineplugin.h"
 #include "ur1cashorturlengineplugin_debug.h"
 
-#include <QJsonDocument>
 #include <QNetworkReply>
 #include <QNetworkRequest>
 #include <QUrlQuery>

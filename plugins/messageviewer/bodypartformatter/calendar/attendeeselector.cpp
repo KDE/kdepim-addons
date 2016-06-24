@@ -26,7 +26,6 @@
 #include <QPushButton>
 #include <KGuiItem>
 #include <KStandardGuiItem>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 

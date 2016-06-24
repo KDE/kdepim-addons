@@ -19,7 +19,6 @@
 
 #include "testdataparser.h"
 #include <QDir>
-#include <QFileInfo>
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QJsonObject>

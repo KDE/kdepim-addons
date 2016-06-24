@@ -22,7 +22,6 @@
 
 #include "../../shorturlengineplugin/shorturlengineinterface.h"
 
-#include <QSslError>
 
 class QNetworkReply;
 class TripAbShortUrlEngineInterface : public ShortUrlEngineInterface

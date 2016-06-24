@@ -40,6 +40,7 @@
 #include <QToolButton>
 #include <QPointer>
 #include <KActionCollection>
+#include <KConfigGroup>
 
 ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     : QWidget(parent),

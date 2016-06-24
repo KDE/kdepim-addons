@@ -20,7 +20,6 @@
 #include "viewerplugintranslator.h"
 #include "viewerplugintranslatorinterface.h"
 #include <KActionCollection>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;

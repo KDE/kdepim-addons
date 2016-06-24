@@ -37,10 +37,6 @@
 #include <kstringhandler.h>
 #include <kmessagebox.h>
 
-#include <QUrl>
-#include <QFile>
-#include <QDir>
-#include <QTextDocument>
 
 namespace
 {

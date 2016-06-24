@@ -32,11 +32,7 @@
 #include <kcodecs.h>
 #include <KColorScheme>
 
-#include <QBuffer>
-#include <QBitmap>
-#include <QImage>
 #include <QApplication>
-#include <QFontMetrics>
 
 #include <kmime/kmime_message.h>
 #include <kmime/kmime_dateformatter.h>

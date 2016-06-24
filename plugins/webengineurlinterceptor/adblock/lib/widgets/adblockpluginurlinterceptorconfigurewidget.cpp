@@ -17,7 +17,6 @@
 
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 #include "adblocksettingwidget.h"
-#include <KLocalizedString>
 #include <QHBoxLayout>
 
 using namespace AdBlock;

@@ -22,10 +22,7 @@
 #include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
 #include <KMime/KMimeMessage>
-#include <KMessageWidget>
 
-#include <QAction>
-#include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QShortcut>

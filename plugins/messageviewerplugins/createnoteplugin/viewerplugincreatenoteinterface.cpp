@@ -22,7 +22,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 
-#include <QHBoxLayout>
+#include <QLayout>
 #include <QIcon>
 #include <QAction>
 #include <ItemFetchJob>

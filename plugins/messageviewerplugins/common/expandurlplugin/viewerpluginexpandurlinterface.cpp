@@ -23,8 +23,6 @@
 #include <MessageViewer/ScamCheckShortUrlManager>
 #include <MessageViewer/ScamCheckShortUrl>
 
-#include <QHBoxLayout>
-#include <QIcon>
 #include <QAction>
 
 #include <BroadcastStatus>

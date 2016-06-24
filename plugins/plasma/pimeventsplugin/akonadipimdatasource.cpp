@@ -29,7 +29,6 @@
 #include <Akonadi/Calendar/ETMCalendar>
 
 #include <KSharedConfig>
-#include <KConfigGroup>
 #include <KCoreConfigSkeleton>
 
 #include <EventViews/Prefs>

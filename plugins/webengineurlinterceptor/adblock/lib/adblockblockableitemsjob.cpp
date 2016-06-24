@@ -19,9 +19,7 @@
 
 #include "adblockblockableitemsjob.h"
 #include <WebEngineViewer/WebEngineScript>
-#include <QDebug>
 #include <QWebEngineView>
-#include <QWebEnginePage>
 #include <QPointer>
 
 using namespace AdBlock;

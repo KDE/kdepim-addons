@@ -23,14 +23,12 @@
 #include <KLocalizedString>
 #include <QLineEdit>
 #include <QIcon>
-#include <KDateTimeEdit>
 #include <QDateTime>
 
 #include <QHBoxLayout>
 #include <QEvent>
 #include <QKeyEvent>
 #include <QLabel>
-#include <KDateComboBox>
 
 #include <AkonadiWidgets/CollectionComboBox>
 #include <QPushButton>

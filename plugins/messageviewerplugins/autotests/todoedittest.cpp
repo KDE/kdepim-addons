@@ -31,9 +31,7 @@
 #include <qtestmouse.h>
 
 #include <QLineEdit>
-#include <QHBoxLayout>
 #include <QShortcut>
-#include <QAction>
 #include <QSignalSpy>
 
 namespace MessageViewer

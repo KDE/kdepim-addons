@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 #include <KSeparator>
 #include <QVBoxLayout>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QPushButton>
 

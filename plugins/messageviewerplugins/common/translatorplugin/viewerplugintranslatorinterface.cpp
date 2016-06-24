@@ -20,10 +20,9 @@
 #include "viewerplugintranslatorinterface.h"
 #include "pimcommon/translatorwidget.h"
 
-#include <QHBoxLayout>
 #include <QIcon>
 #include <QAction>
-
+#include <QLayout>
 #include <KActionCollection>
 #include <KLocalizedString>
 

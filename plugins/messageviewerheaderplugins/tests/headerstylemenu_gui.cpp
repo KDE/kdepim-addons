@@ -24,14 +24,12 @@
 #include <KAboutData>
 #include <QCommandLineParser>
 #include <QMenu>
-#include <QToolBar>
 #include <QMenuBar>
 #include <QVBoxLayout>
 
 #include <kactioncollection.h>
-#include <KActionMenu>
 #include <QTextEdit>
-
+#include <KActionMenu>
 #include <messageviewer/headerstrategy.h>
 #include <messageviewer/headerstyle.h>
 #include <messageviewer/headerstyleplugin.h>

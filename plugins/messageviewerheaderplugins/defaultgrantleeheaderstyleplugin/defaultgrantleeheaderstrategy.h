@@ -21,7 +21,6 @@
 #define DEFAULTGRANTLEEHEADERSTRATEGY_H
 
 #include <messageviewer/headerstrategy.h>
-#include <QStringList>
 
 namespace MessageViewer
 {

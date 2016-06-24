@@ -20,7 +20,6 @@
 #include "viewerpluginexpandurl.h"
 #include "viewerpluginexpandurlinterface.h"
 #include <KActionCollection>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
