@@ -21,7 +21,6 @@
 #define ChangeCasePLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-#include <QPointer>
 
 class ChangeCasePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

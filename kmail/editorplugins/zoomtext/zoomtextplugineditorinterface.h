@@ -21,7 +21,6 @@
 #define ZOOMTEXTPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-#include <QPointer>
 
 class ZoomTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

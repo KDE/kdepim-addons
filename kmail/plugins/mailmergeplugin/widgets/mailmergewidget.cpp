@@ -23,7 +23,6 @@
 
 #include <KLocalizedString>
 #include <KComboBox>
-#include <KUrlRequester>
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>

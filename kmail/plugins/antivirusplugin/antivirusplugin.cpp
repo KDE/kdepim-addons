@@ -19,8 +19,6 @@
 
 #include "antivirusplugin.h"
 #include "antivirusplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antivirusplugin.json", registerPlugin<AntiVirusPlugin>();)

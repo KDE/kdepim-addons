@@ -21,7 +21,6 @@
 #include "../antispamplugininterface.h"
 #include <KActionCollection>
 #include <QTest>
-#include <QAction>
 #include <QSignalSpy>
 
 AntiSpamPluginInterfaceTest::AntiSpamPluginInterfaceTest(QObject *parent)

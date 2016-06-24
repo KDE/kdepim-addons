@@ -19,7 +19,6 @@
 
 #include "zoomtextplugineditor.h"
 #include "zoomtextplugineditorinterface.h"
-#include <KLocalizedString>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(ZoomTextPluginEditorFactory, "kmail_zoomtexteditorplugin.json", registerPlugin<ZoomTextPluginEditor>();)

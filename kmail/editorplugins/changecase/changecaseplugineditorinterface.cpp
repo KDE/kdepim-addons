@@ -21,7 +21,6 @@
 #include "changecaseeditorplugin_debug.h"
 #include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
 #include <QAction>

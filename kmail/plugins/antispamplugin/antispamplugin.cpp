@@ -18,8 +18,6 @@
 */
 #include "antispamplugin.h"
 #include "antispamplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antispamplugin.json", registerPlugin<AntiSpamPlugin>();)

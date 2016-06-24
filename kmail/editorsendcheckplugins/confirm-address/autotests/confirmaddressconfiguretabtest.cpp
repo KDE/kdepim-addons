@@ -20,9 +20,9 @@
 #include "confirmaddressconfiguretabtest.h"
 #include "../confirmaddressconfiguretab.h"
 
-#include <QBoxLayout>
 #include <QTabWidget>
 #include <QTest>
+#include <QVBoxLayout>
 
 ConfirmAddressConfigureTabTest::ConfirmAddressConfigureTabTest(QObject *parent)
     : QObject(parent)

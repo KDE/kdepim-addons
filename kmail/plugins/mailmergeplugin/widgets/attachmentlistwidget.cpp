@@ -18,14 +18,8 @@
 #include "attachmentlistwidget.h"
 #include "selectattachmentdialog.h"
 
-#include <KLocalizedString>
-#include <KUrlRequester>
 
-#include <QLabel>
 #include <QPointer>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QPushButton>
 
 using namespace MailMerge;

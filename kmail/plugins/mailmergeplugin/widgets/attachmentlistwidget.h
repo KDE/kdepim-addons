@@ -19,7 +19,6 @@
 #define ATTACHMENTLISTWIDGET_H
 
 #include "PimCommon/SimpleStringlistEditor"
-#include <QDialog>
 
 namespace MailMerge
 {

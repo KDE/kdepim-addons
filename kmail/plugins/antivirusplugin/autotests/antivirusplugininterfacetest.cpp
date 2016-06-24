@@ -21,7 +21,6 @@
 #include "../antivirusplugininterface.h"
 #include <KActionCollection>
 #include <QTest>
-#include <QAction>
 #include <QSignalSpy>
 
 AntiVirusPluginInterfaceTest::AntiVirusPluginInterfaceTest(QObject *parent)

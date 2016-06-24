@@ -19,7 +19,6 @@
 
 #include "insertspecialcharacterplugineditor.h"
 #include "insertspecialcharacterplugineditorinterface.h"
-#include <KLocalizedString>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(InsertSpecialCharacterPluginEditorFactory, "kmail_insertspecialcharactereditorplugin.json", registerPlugin<InsertSpecialCharacterPluginEditor>();)
