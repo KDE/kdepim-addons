@@ -25,7 +25,6 @@ namespace PimCommon
 {
 class SimpleStringListEditor;
 }
-class QTabWidget;
 class KConfigGroup;
 class ConfirmAddressConfigureTabWidget : public QWidget
 {
