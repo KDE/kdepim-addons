@@ -106,8 +106,11 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 
 void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *item)
 {
-    item->plugin = KPluginLoader(item->metaData.fileName()).factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->saveName());
-    item->plugin->setPluginName(item->metaData.name());
+    KPluginLoader pluginLoader(item->metaData.fileName());
+    if (pluginLoader.factory()) {
+        item->plugin = pluginLoader.factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->saveName());
+        item->plugin->setPluginName(item->metaData.name());
+    }
 }
 
 QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList() const
