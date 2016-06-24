@@ -19,7 +19,6 @@
 
 #include "mergecontactselectlistwidget.h"
 #include "kaddressbookmergelibprivate_debug.h"
-#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <QLocale>
 #include <QLabel>

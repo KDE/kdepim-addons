@@ -20,7 +20,6 @@
 
 #include <AkonadiCore/item.h>
 #include <kcontacts/addressee.h>
-#include <QList>
 #include <qtest.h>
 #include <QSignalSpy>
 

@@ -19,10 +19,7 @@
 
 #include "mergecontactselectinformationwidget.h"
 #include "widgets/mergecontactselectlistwidget.h"
-#include <KLocalizedString>
 #include <QVBoxLayout>
-#include <QLabel>
-#include <QTreeWidget>
 
 using namespace KABMergeContacts;
 MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget *parent)

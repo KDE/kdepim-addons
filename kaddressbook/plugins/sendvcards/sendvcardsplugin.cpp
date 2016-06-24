@@ -19,8 +19,6 @@
 
 #include "sendvcardsplugin.h"
 #include "sendvcardsplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(SendVcardsPluginFactory, "kaddressbook_sendvcardsplugin.json", registerPlugin<SendVcardsPlugin>();)

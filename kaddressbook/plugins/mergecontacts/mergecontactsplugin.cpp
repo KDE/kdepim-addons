@@ -19,8 +19,6 @@
 
 #include "mergecontactsplugin.h"
 #include "mergecontactsplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(MergeContactsPluginFactory, "kaddressbook_mergecontactsplugin.json", registerPlugin<MergeContactsPlugin>();)

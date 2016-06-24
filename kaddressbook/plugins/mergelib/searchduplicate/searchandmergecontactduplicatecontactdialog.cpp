@@ -30,7 +30,6 @@
 #include <KConfigGroup>
 
 #include <QStackedWidget>
-#include <QLabel>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

@@ -19,8 +19,6 @@
 
 #include "checkgravatarplugin.h"
 #include "checkgravatarplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(CheckGravatarPluginFactory, "kaddressbook_checkgravatarplugin.json", registerPlugin<CheckGravatarPlugin>();)

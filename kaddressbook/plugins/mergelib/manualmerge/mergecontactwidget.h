@@ -22,7 +22,6 @@
 
 #include <QWidget>
 #include <AkonadiCore/Item>
-#include <QListWidgetItem>
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
 

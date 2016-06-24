@@ -19,8 +19,6 @@
 
 #include "searchduplicatesplugin.h"
 #include "searchduplicatesplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(MergeContactsPluginFactory, "kaddressbook_searchduplicatesplugin.json", registerPlugin<SearchDuplicatesPlugin>();)

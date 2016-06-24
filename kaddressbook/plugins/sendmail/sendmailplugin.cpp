@@ -19,8 +19,6 @@
 
 #include "sendmailplugin.h"
 #include "sendmailplugininterface.h"
-#include <KLocalizedString>
-#include <KToggleAction>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(SendMailPluginFactory, "kaddressbook_sendmailplugin.json", registerPlugin<SendMailPlugin>();)

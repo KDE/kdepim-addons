@@ -30,11 +30,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KLocalizedString>
-#include <KMessageBox>
 
-#include <QLabel>
-#include <QSplitter>
-#include <QPointer>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>

@@ -23,10 +23,8 @@
 #include <KLocalizedString>
 #include <QSplitter>
 
-#include <KContacts/Addressee>
 
 #include <AkonadiWidgets/CollectionComboBox>
-#include <QListWidget>
 #include <QVBoxLayout>
 #include <QPushButton>
 #include <QLabel>

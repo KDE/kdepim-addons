@@ -22,7 +22,6 @@
 
 #include <QDialog>
 #include <AkonadiCore/Item>
-#include <KConfigGroup>
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
 class QDialogButtonBox;
