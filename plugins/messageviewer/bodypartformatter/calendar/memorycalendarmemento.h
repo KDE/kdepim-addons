@@ -26,7 +26,6 @@
 #include <KCalCore/MemoryCalendar>
 #include <QObject>
 
-class KJob;
 
 namespace MessageViewer
 {

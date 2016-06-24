@@ -12,8 +12,6 @@
 #include <AkonadiCore/item.h>
 
 class mailreaderView;
-class KToggleAction;
-class KComboBox;
 class QAction;
 class KJob;
 

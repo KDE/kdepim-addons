@@ -26,7 +26,6 @@
 
 #include <QWidget>
 
-class QModelIndex;
 class QTreeView;
 
 class Checkable2 : public QWidget

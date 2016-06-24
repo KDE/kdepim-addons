@@ -30,7 +30,6 @@
 
 class QSortFilterProxyModel;
 class TripComponentFactory;
-class TripModel;
 
 namespace Akonadi
 {

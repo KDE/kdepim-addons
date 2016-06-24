@@ -26,7 +26,6 @@
 
 class QLabel;
 class QTextBrowser;
-class QModelIndex;
 
 class Trip;
 class FolderContentsWidget;

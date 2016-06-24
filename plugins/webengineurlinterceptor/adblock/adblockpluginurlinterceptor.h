@@ -22,7 +22,6 @@
 
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
-class QAction;
 class QWebEngineView;
 namespace WebEngineViewer
 {

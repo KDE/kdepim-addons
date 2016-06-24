@@ -25,7 +25,6 @@
 
 namespace Akonadi
 {
-class ChangeRecorder;
 class ETMCalendar;
 }
 
