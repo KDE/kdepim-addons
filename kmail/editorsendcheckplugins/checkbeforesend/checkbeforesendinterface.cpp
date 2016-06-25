@@ -49,7 +49,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 {
     if (mSendPlainText) {
         if (params.isHtmlMail()) {
-            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send mail as HTML?"), i18n("Send Mail as PlainText"))) {
+            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email as HTML?"), i18n("Send email as plain text"))) {
                 return false;
             } else {
                 return true;
@@ -62,7 +62,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
         const KIdentityManagement::Identity identity = mIdentityManager->identityForUoid(params.identity());
         if (identity.transport() != QString::number(params.transportId())) {
-            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send mail with a different SMTP that defined in current identity?"), i18n("Check SMTP server"))) {
+            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
                 return false;
             } else {
                 return true;

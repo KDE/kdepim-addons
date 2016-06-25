@@ -35,7 +35,7 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
 
-    mCheckMailTransport = new QCheckBox(i18n("Use SMTP defined in identity"), this);
+    mCheckMailTransport = new QCheckBox(i18n("Use SMTP server defined in identity"), this);
     mCheckMailTransport->setObjectName(QStringLiteral("smtpdefinedinidentity"));
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);

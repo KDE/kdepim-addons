@@ -50,7 +50,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
 
-    QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("White List Address"), this);
+    QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("Whitelist of Addresses"), this);
     groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
     mainLayout->addWidget(groupBoxWhiteList);
     QVBoxLayout *layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
@@ -62,7 +62,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
         new PimCommon::SimpleStringListEditor(groupBoxWhiteList, buttonCode,
                 i18n("A&dd..."), i18n("Re&move"),
                 i18n("Mod&ify..."),
-                i18n("Enter new email name:"));
+                i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
     layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &PimCommon::SimpleStringListEditor::changed,
