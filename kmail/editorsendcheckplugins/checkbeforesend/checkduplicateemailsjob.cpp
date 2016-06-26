@@ -61,7 +61,10 @@ void CheckDuplicateEmailsJob::start()
 
 void CheckDuplicateEmailsJob::setEmails(const QStringList &list)
 {
-    mEmails = list;
+    const QString str = list.join(QStringLiteral(", "));
+    const QStringList emails = str.split(QStringLiteral(", "));
+
+    mEmails = emails;
 }
 
 QMap<QString, int> CheckDuplicateEmailsJob::result() const

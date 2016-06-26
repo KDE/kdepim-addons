@@ -100,6 +100,15 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
     result.insert(QStringLiteral("foo@kde.org"), 3);
     result.insert(QStringLiteral("blo@kde.org"), 2);
     QTest::newRow("twoduplicateemailswithemailname") << lst << result;
+
+
+    lst.clear();
+    lst.append(QStringLiteral("foo <foo@kde.org>, foo@kde.org, foo@kde.org"));
+    lst.append(QStringLiteral("foo@kde.org"));
+
+    result.clear();
+    result.insert(QStringLiteral("foo@kde.org"), 4);
+    QTest::newRow("emailseparatedbycommat") << lst << result;
 }
 
 void CheckDuplicateEmailsJobTest::shouldReturnEmails()

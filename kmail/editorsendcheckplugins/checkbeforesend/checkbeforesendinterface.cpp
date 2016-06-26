@@ -71,12 +71,10 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
     }
     if (mCheckDuplicateEmails) {
         const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
-        const QString str = lst.join(QStringLiteral(", "));
-        const QStringList emails = str.split(QStringLiteral(", "));
 
-        if (!emails.isEmpty()) {
+        if (!lst.isEmpty()) {
             CheckDuplicateEmailsJob job;
-            job.setEmails(emails);
+            job.setEmails(lst);
             job.start();
             const QMap<QString, int> results = job.result();
             if (!results.isEmpty()) {
