@@ -33,6 +33,7 @@ void AdBlockSyntaxHighlighter::init()
 {
     QTextCharFormat commentFormat;
     commentFormat.setForeground(Qt::darkYellow);
+    m_rules.reserve(4);
     QRegularExpression commentRegex(QStringLiteral("^!.*"));
     m_rules.append(KPIMTextEdit::Rule(commentRegex, commentFormat));
 
