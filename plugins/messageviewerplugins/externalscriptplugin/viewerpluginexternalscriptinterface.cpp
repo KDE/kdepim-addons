@@ -110,9 +110,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                     act->setIcon(QIcon::fromTheme(icon));
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
-                QStringList actionInfo;
-                actionInfo.append(info.commandLine());
-                actionInfo.append(info.executable());
+                const QStringList actionInfo {info.commandLine(), info.executable()};
 
                 act->setData(actionInfo);
                 mAction.append(act);
