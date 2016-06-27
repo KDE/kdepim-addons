@@ -1,4 +1,4 @@
-File=donottrack.kcfg
+File=donottracksettings.kcfg
 ClassName=DoNotTrackSettings
 Mutators=true
 Singleton=true

@@ -6,7 +6,7 @@ set(webengineviewer_webengineurlinterceptor_donottrack_SRCS
 ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME log_donottrackinterceptor)
 
 kconfig_add_kcfg_files(webengineviewer_webengineurlinterceptor_donottrack_SRCS
-  settings/donottrack.kcfgc
+  settings/donottracksettings.kcfgc
 )
 
 

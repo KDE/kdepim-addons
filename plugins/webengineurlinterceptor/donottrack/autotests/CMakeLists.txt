@@ -1,6 +1,6 @@
 set( donottrackpluginurlinterceptortest_SRCS donottrackpluginurlinterceptortest.cpp ../donottrackpluginurlinterceptor.cpp ../donottrackinterceptorinterface.cpp)
 kconfig_add_kcfg_files(donottrackpluginurlinterceptortest_SRCS
-  ../settings/donottrack.kcfgc
+  ../settings/donottracksettings.kcfgc
 )
 add_executable( donottrackpluginurlinterceptortest ${donottrackpluginurlinterceptortest_SRCS})
 add_test(donottrackpluginurlinterceptortest donottrackpluginurlinterceptortest)
