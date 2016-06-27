@@ -13,7 +13,6 @@ endmacro ()
 
 add_kmail_confirmaddress_unittest(confirmaddressplugintest.cpp "../confirmaddressplugin.cpp;../confirmaddressinterface.cpp;../confirmaddressconfigurewidget.cpp;../confirmaddressdialog.cpp;../confirmaddresswidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp;../confirmaddresscheckjob.cpp")
 
-add_kmail_confirmaddress_unittest(confirmaddressinterfacetest.cpp "../confirmaddressinterface.cpp;../confirmaddressconfigurewidget.cpp;../confirmaddressdialog.cpp;../confirmaddresswidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp;../confirmaddresscheckjob.cpp")
 
 add_kmail_confirmaddress_unittest(confirmaddressconfigurewidgettest.cpp "../confirmaddressconfigurewidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp")
 
