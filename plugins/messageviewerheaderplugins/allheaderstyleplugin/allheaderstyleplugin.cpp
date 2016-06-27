@@ -35,7 +35,8 @@ AllHeaderStylePlugin::AllHeaderStylePlugin(QObject *parent, const QList<QVariant
 
 AllHeaderStylePlugin::~AllHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *AllHeaderStylePlugin::headerStyle() const

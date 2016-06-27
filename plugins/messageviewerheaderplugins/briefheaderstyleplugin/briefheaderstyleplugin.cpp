@@ -35,7 +35,8 @@ BriefHeaderStylePlugin::BriefHeaderStylePlugin(QObject *parent, const QList<QVar
 
 BriefHeaderStylePlugin::~BriefHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *BriefHeaderStylePlugin::headerStyle() const

@@ -36,7 +36,8 @@ LongHeaderStylePlugin::LongHeaderStylePlugin(QObject *parent, const QList<QVaria
 
 LongHeaderStylePlugin::~LongHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *LongHeaderStylePlugin::headerStyle() const

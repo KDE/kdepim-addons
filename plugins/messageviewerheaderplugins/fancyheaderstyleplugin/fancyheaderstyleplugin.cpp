@@ -35,7 +35,8 @@ FancyHeaderStylePlugin::FancyHeaderStylePlugin(QObject *parent, const QList<QVar
 
 FancyHeaderStylePlugin::~FancyHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *FancyHeaderStylePlugin::headerStyle() const

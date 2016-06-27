@@ -36,7 +36,8 @@ EnterpriseHeaderStylePlugin::EnterpriseHeaderStylePlugin(QObject *parent, const 
 
 EnterpriseHeaderStylePlugin::~EnterpriseHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *EnterpriseHeaderStylePlugin::headerStyle() const
