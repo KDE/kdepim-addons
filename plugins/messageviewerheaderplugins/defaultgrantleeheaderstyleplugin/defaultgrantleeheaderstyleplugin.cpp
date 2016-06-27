@@ -37,7 +37,8 @@ DefaultGrantleeHeaderStylePlugin::DefaultGrantleeHeaderStylePlugin(QObject *pare
 
 DefaultGrantleeHeaderStylePlugin::~DefaultGrantleeHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 void DefaultGrantleeHeaderStylePlugin::initializePlugin()

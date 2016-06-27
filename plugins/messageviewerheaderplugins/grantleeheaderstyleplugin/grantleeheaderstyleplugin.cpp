@@ -35,7 +35,8 @@ GrantleeHeaderStylePlugin::GrantleeHeaderStylePlugin(QObject *parent, const QLis
 
 GrantleeHeaderStylePlugin::~GrantleeHeaderStylePlugin()
 {
-
+    delete mHeaderStyle;
+    delete mHeaderStrategy;
 }
 
 HeaderStyle *GrantleeHeaderStylePlugin::headerStyle() const
