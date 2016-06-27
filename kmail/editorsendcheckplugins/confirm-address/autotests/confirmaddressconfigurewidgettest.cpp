@@ -44,6 +44,7 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(vboxlayout);
     QCheckBox *enable = w.findChild<QCheckBox *>(QStringLiteral("enable"));
     QVERIFY(enable);
+    QVERIFY(!enable->isChecked());
 
     ConfirmAddressConfigureTab *mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(QStringLiteral("confirmaddresstab"));
     QVERIFY(mConfirmAddressConfigureTab);

@@ -37,6 +37,7 @@ void ConfirmAddressPluginTest::shouldHaveDefaultValue()
     ConfirmAddressPlugin plugin;
     QVERIFY(plugin.hasConfigureSupport());
     QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
+    QVERIFY(plugin.createInterface(this));
 }
 
 QTEST_MAIN(ConfirmAddressPluginTest)

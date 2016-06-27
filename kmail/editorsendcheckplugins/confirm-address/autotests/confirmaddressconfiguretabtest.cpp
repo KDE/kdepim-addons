@@ -44,7 +44,6 @@ void ConfirmAddressConfigureTabTest::shouldHaveDefaultValue()
 
     QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
-
 }
 
 QTEST_MAIN(ConfirmAddressConfigureTabTest)
