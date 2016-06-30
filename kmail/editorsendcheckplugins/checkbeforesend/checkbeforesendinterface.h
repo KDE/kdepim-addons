@@ -41,6 +41,7 @@ private:
     bool mSendPlainText;
     bool mCheckMailTransport;
     bool mCheckDuplicateEmails;
+    bool mCheckSendAttachments;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H

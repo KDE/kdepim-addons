@@ -39,6 +39,7 @@ private:
     QCheckBox *mCheckPlainTextMail;
     QCheckBox *mCheckMailTransport;
     QCheckBox *mCheckDuplicateEmails;
+    QCheckBox *mCheckSendAttachments;
 };
 
 #endif // CHECKBEFORESENDCONFIGUREWIDGET_H

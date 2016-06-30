@@ -18,7 +18,7 @@
 */
 
 #include "checkduplicateemailsdialogtest.h"
-#include "../checkduplicateemailsdialog.h"
+#include "../duplicateemails/checkduplicateemailsdialog.h"
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QListWidget>

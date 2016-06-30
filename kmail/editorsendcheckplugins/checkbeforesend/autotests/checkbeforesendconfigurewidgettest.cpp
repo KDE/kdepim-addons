@@ -54,6 +54,54 @@ void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mCheckDuplicateEmails);
     QVERIFY(!mCheckDuplicateEmails->text().isEmpty());
     QVERIFY(!mCheckDuplicateEmails->isChecked());
+
+    QCheckBox *mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
+    QVERIFY(mCheckSendAttachments);
+    QVERIFY(!mCheckSendAttachments->text().isEmpty());
+    QVERIFY(!mCheckSendAttachments->isChecked());
+}
+
+void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
+{
+    CheckBeforeSendConfigureWidget w;
+
+    QCheckBox *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
+    QCheckBox *mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
+    QCheckBox *mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemails"));
+    QCheckBox *mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
+
+
+    mCheckMailTransport->setChecked(true);
+    mCheckDuplicateEmails->setChecked(true);
+    mCheckSendAttachments->setChecked(true);
+    mCheckPlainTextMail->setChecked(true);
+
+    QVERIFY(mCheckPlainTextMail->isChecked());
+    QVERIFY(mCheckMailTransport->isChecked());
+    QVERIFY(mCheckDuplicateEmails->isChecked());
+    QVERIFY(mCheckSendAttachments->isChecked());
+
+    mCheckMailTransport->setChecked(false);
+    mCheckDuplicateEmails->setChecked(false);
+    mCheckSendAttachments->setChecked(false);
+    mCheckPlainTextMail->setChecked(false);
+
+    QVERIFY(!mCheckPlainTextMail->isChecked());
+    QVERIFY(!mCheckMailTransport->isChecked());
+    QVERIFY(!mCheckDuplicateEmails->isChecked());
+    QVERIFY(!mCheckSendAttachments->isChecked());
+
+
+    mCheckMailTransport->setChecked(true);
+    mCheckDuplicateEmails->setChecked(true);
+    mCheckSendAttachments->setChecked(true);
+    mCheckPlainTextMail->setChecked(true);
+
+    w.resetSettings();
+    QVERIFY(!mCheckPlainTextMail->isChecked());
+    QVERIFY(!mCheckMailTransport->isChecked());
+    QVERIFY(!mCheckDuplicateEmails->isChecked());
+    QVERIFY(!mCheckSendAttachments->isChecked());
 }
 
 QTEST_MAIN(CheckBeforeSendConfigureWidgetTest)

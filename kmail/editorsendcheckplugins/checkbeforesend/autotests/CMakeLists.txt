@@ -12,7 +12,9 @@ macro(add_kmail_checkbeforesend_unittest _source _additional)
 endmacro ()
 
 
-add_kmail_checkbeforesend_unittest(checkbeforesendplugintest.cpp "../checkduplicateemailsjob.cpp;../checkduplicateemailsdialog.cpp;../checkbeforesendplugin.cpp;../checkbeforesendinterface.cpp;../checkbeforesendconfigurewidget.cpp")
+add_kmail_checkbeforesend_unittest(checkbeforesendplugintest.cpp "../sendattachments/checkattachmentdialog.cpp;../duplicateemails/checkduplicateemailsjob.cpp;../duplicateemails/checkduplicateemailsdialog.cpp;../checkbeforesendplugin.cpp;../checkbeforesendinterface.cpp;../checkbeforesendconfigurewidget.cpp")
 add_kmail_checkbeforesend_unittest(checkbeforesendconfigurewidgettest.cpp "../checkbeforesendconfigurewidget.cpp")
-add_kmail_checkbeforesend_unittest(checkduplicateemailsdialogtest.cpp "../checkduplicateemailsdialog.cpp")
-add_kmail_checkbeforesend_unittest(checkduplicateemailsjobtest.cpp "../checkduplicateemailsjob.cpp")
+add_kmail_checkbeforesend_unittest(checkduplicateemailsdialogtest.cpp "../duplicateemails/checkduplicateemailsdialog.cpp")
+add_kmail_checkbeforesend_unittest(checkduplicateemailsjobtest.cpp "../duplicateemails/checkduplicateemailsjob.cpp")
+
+add_kmail_checkbeforesend_unittest(checkattachmentdialogtest.cpp "../sendattachments/checkattachmentdialog.cpp")

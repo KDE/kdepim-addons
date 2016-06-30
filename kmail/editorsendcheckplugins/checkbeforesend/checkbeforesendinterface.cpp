@@ -18,8 +18,9 @@
 */
 
 #include "checkbeforesendinterface.h"
-#include "checkduplicateemailsjob.h"
-#include "checkduplicateemailsdialog.h"
+#include "duplicateemails/checkduplicateemailsjob.h"
+#include "duplicateemails/checkduplicateemailsdialog.h"
+#include "sendattachments/checkattachmentdialog.h"
 
 #include <KMessageBox>
 #include <KConfigGroup>
@@ -35,7 +36,8 @@ CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
       mIdentityManager(Q_NULLPTR),
       mSendPlainText(false),
       mCheckMailTransport(false),
-      mCheckDuplicateEmails(false)
+      mCheckDuplicateEmails(false),
+      mCheckSendAttachments(false)
 {
     reloadConfig();
 }
@@ -90,6 +92,9 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             }
         }
     }
+    if (mCheckSendAttachments) {
+        //TODO
+    }
     return true;
 }
 
@@ -99,4 +104,5 @@ void CheckBeforeSendInterface::reloadConfig()
     mSendPlainText = grp.readEntry("SendPlainText", false);
     mCheckMailTransport = grp.readEntry("SmtpDefinedInIdentity", false);
     mCheckDuplicateEmails = grp.readEntry("CheckDuplicatedEmails", false);
+    mCheckSendAttachments = grp.readEntry("CheckSendAttachment", false);
 }

@@ -18,7 +18,7 @@
 */
 
 #include "checkduplicateemailsjobtest.h"
-#include "../checkduplicateemailsjob.h"
+#include "../duplicateemails/checkduplicateemailsjob.h"
 #include <QTest>
 #include <QStringList>
 

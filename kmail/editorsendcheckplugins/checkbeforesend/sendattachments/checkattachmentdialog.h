@@ -17,21 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CHECKBEFORESENDCONFIGUREWIDGETTEST_H
-#define CHECKBEFORESENDCONFIGUREWIDGETTEST_H
+#ifndef CHECKATTACHMENTDIALOG_H
+#define CHECKATTACHMENTDIALOG_H
 
-#include <QObject>
-
-class CheckBeforeSendConfigureWidgetTest : public QObject
+#include <QDialog>
+class QListWidget;
+class CheckAttachmentDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = Q_NULLPTR);
-    ~CheckBeforeSendConfigureWidgetTest();
-
-private Q_SLOTS:
-    void shouldHaveDefaultValue();
-    void shouldResetValue();
+    explicit CheckAttachmentDialog(QWidget *parent = Q_NULLPTR);
+    ~CheckAttachmentDialog();
+private:
+    void writeConfig();
+    void readConfig();
+    QListWidget *mListWidget;
 };
 
-#endif // CHECKBEFORESENDCONFIGUREWIDGETTEST_H
+#endif // CHECKATTACHMENTDIALOG_H
