@@ -18,7 +18,6 @@
 #include "attachmentlistwidget.h"
 #include "selectattachmentdialog.h"
 
-
 #include <QPointer>
 #include <QPushButton>
 

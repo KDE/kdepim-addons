@@ -37,7 +37,6 @@
 #include <kstringhandler.h>
 #include <kmessagebox.h>
 
-
 namespace
 {
 

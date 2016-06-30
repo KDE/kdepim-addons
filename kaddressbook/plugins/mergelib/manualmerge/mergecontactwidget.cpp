@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 #include <QSplitter>
 
-
 #include <AkonadiWidgets/CollectionComboBox>
 #include <QVBoxLayout>
 #include <QPushButton>

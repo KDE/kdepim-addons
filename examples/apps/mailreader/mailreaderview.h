@@ -10,7 +10,6 @@
 
 #include "ui_mailreaderview.h"
 
-
 namespace MessageViewer
 {
 class Viewer;
