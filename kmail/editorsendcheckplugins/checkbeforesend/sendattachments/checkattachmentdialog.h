@@ -28,6 +28,8 @@ class CheckAttachmentDialog : public QDialog
 public:
     explicit CheckAttachmentDialog(QWidget *parent = Q_NULLPTR);
     ~CheckAttachmentDialog();
+
+    void setEmails(const QStringList &emails);
 private:
     void writeConfig();
     void readConfig();

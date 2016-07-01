@@ -49,6 +49,11 @@ CheckAttachmentDialog::~CheckAttachmentDialog()
     writeConfig();
 }
 
+void CheckAttachmentDialog::setEmails(const QStringList &emails)
+{
+    mListWidget->clear();
+    mListWidget->addItems(emails);
+}
 
 void CheckAttachmentDialog::writeConfig()
 {

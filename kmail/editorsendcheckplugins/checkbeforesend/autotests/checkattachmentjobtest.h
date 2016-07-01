@@ -31,6 +31,8 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldAssignEmails();
+    void shouldRemoveDuplicatedEmails();
+    void shouldRemoveDuplicatedEmails_data();
 };
 
 #endif // CHECKATTACHMENTJOBTEST_H

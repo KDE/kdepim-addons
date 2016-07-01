@@ -21,6 +21,7 @@
 #include "duplicateemails/checkduplicateemailsjob.h"
 #include "duplicateemails/checkduplicateemailsdialog.h"
 #include "sendattachments/checkattachmentdialog.h"
+#include "sendattachments/checkattachmentjob.h"
 
 #include <KMessageBox>
 #include <KConfigGroup>
@@ -96,8 +97,10 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         if (params.hasAttachment()) {
             QPointer<CheckAttachmentDialog> dlg = new CheckAttachmentDialog(parentWidget());
             const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
-            //dlg->setListOfEmails();
-            //TODO
+            CheckAttachmentJob job;
+            job.setOriginalEmails(lst);
+            job.start();
+            dlg->setEmails(job.resultList());
             if (dlg->exec()) {
                 delete dlg;
                 return true;

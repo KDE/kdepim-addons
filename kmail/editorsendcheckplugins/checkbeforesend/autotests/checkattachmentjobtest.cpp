@@ -52,4 +52,29 @@ void CheckAttachmentJobTest::shouldAssignEmails()
     QCOMPARE(job.originalEmails(), lst);
 }
 
+void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails()
+{
+    QFETCH(QStringList, originalEmails);
+    QFETCH(QStringList, result);
+    CheckAttachmentJob job;
+    job.setOriginalEmails(originalEmails);
+    job.start();
+    QCOMPARE(job.resultList(), result);
+}
+
+void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
+{
+    QTest::addColumn<QStringList>("originalEmails");
+    QTest::addColumn<QStringList>("result");
+    QTest::newRow("empty") << QStringList() << QStringList();
+
+    QStringList lst{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QTest::newRow("samelist") << lst << lst;
+
+    QStringList original{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList result{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QTest::newRow("oneduplicate") << original << result;
+
+}
+
 QTEST_MAIN(CheckAttachmentJobTest)
