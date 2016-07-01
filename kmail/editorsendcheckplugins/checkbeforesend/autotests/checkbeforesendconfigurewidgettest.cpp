@@ -70,7 +70,6 @@ void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
     QCheckBox *mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemails"));
     QCheckBox *mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
 
-
     mCheckMailTransport->setChecked(true);
     mCheckDuplicateEmails->setChecked(true);
     mCheckSendAttachments->setChecked(true);
@@ -90,7 +89,6 @@ void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
     QVERIFY(!mCheckMailTransport->isChecked());
     QVERIFY(!mCheckDuplicateEmails->isChecked());
     QVERIFY(!mCheckSendAttachments->isChecked());
-
 
     mCheckMailTransport->setChecked(true);
     mCheckDuplicateEmails->setChecked(true);

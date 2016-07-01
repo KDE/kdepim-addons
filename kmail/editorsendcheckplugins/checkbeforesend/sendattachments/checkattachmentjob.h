@@ -30,7 +30,6 @@ public:
 
     void start();
 
-
     QStringList originalEmails() const;
     void setOriginalEmails(const QStringList &originalEmails);
 
