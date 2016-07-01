@@ -93,7 +93,19 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckSendAttachments) {
-        //TODO
+        if (params.hasAttachment()) {
+            QPointer<CheckAttachmentDialog> dlg = new CheckAttachmentDialog(parentWidget());
+            const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+            //dlg->setListOfEmails();
+            //TODO
+            if (dlg->exec()) {
+                delete dlg;
+                return true;
+            } else {
+                delete dlg;
+                return false;
+            }
+        }
     }
     return true;
 }

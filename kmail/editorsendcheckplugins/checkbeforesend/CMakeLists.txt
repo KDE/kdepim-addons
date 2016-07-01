@@ -5,6 +5,7 @@ set(kmail_checkbeforesendeditorplugin_SRCS
     duplicateemails/checkduplicateemailsdialog.cpp
     duplicateemails/checkduplicateemailsjob.cpp
     sendattachments/checkattachmentdialog.cpp
+    sendattachments/checkattachmentjob.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME log_kmail_checkbeforesendplugin)
