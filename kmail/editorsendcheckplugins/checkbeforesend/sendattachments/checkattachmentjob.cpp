@@ -28,3 +28,31 @@ CheckAttachmentJob::~CheckAttachmentJob()
 {
 
 }
+
+void CheckAttachmentJob::start()
+{
+    mResultList.clear();
+    Q_FOREACH(const QString &email, mOriginalEmails) {
+
+    }
+}
+
+QStringList CheckAttachmentJob::originalEmails() const
+{
+    return mOriginalEmails;
+}
+
+void CheckAttachmentJob::setOriginalEmails(const QStringList &originalEmails)
+{
+    mOriginalEmails = originalEmails;
+}
+
+QStringList CheckAttachmentJob::resultList() const
+{
+    return mResultList;
+}
+
+void CheckAttachmentJob::setResultList(const QStringList &resultList)
+{
+    mResultList = resultList;
+}

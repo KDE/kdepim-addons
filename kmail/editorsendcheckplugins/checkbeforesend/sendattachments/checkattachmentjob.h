@@ -20,12 +20,26 @@
 #ifndef CHECKATTACHMENTJOB_H
 #define CHECKATTACHMENTJOB_H
 
+#include <QStringList>
 
 class CheckAttachmentJob
 {
 public:
     CheckAttachmentJob();
     ~CheckAttachmentJob();
+
+    void start();
+
+
+    QStringList originalEmails() const;
+    void setOriginalEmails(const QStringList &originalEmails);
+
+    QStringList resultList() const;
+    void setResultList(const QStringList &resultList);
+
+private:
+    QStringList mOriginalEmails;
+    QStringList mResultList;
 };
 
 #endif // CHECKATTACHMENTJOB_H

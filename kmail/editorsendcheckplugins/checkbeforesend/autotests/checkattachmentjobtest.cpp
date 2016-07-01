@@ -18,6 +18,7 @@
 */
 
 #include "checkattachmentjobtest.h"
+#include "../sendattachments/checkattachmentjob.h"
 
 #include <QTest>
 
@@ -30,6 +31,25 @@ CheckAttachmentJobTest::CheckAttachmentJobTest(QObject *parent)
 CheckAttachmentJobTest::~CheckAttachmentJobTest()
 {
 
+}
+
+void CheckAttachmentJobTest::shouldHaveDefaultValue()
+{
+    CheckAttachmentJob job;
+    QVERIFY(job.resultList().isEmpty());
+    QVERIFY(job.originalEmails().isEmpty());
+
+    job.start();
+    QVERIFY(job.resultList().isEmpty());
+    QVERIFY(job.originalEmails().isEmpty());
+}
+
+void CheckAttachmentJobTest::shouldAssignEmails()
+{
+    CheckAttachmentJob job;
+    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("bla") };
+    job.setOriginalEmails(lst);
+    QCOMPARE(job.originalEmails(), lst);
 }
 
 QTEST_MAIN(CheckAttachmentJobTest)

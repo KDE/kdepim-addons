@@ -28,7 +28,9 @@ class CheckAttachmentJobTest : public QObject
 public:
     explicit CheckAttachmentJobTest(QObject *parent = Q_NULLPTR);
     ~CheckAttachmentJobTest();
-
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldAssignEmails();
 };
 
 #endif // CHECKATTACHMENTJOBTEST_H
