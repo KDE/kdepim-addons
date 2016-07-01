@@ -31,6 +31,7 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldAddEmails();
 };
 
 #endif // CHECKATTACHMENTDIALOGTEST_H
