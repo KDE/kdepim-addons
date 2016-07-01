@@ -79,6 +79,8 @@ void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
     original = QStringList() << QStringLiteral("lolo <foo@kde.org>") << QStringLiteral("lulu <bla@kde.org>") << QStringLiteral("bla <bla@kde.org>");
     QTest::newRow("oneduplicatewithname") << original << result;
 
+    original = QStringList() << QStringLiteral("lolo <foo@kde.org>") << QStringLiteral("lulu <bla@kde.org>") << QStringLiteral("bla <bla@kde.org>") << QStringLiteral("bla");
+    QTest::newRow("withinvalidemail") << original << result;
 }
 
 QTEST_MAIN(CheckAttachmentJobTest)
