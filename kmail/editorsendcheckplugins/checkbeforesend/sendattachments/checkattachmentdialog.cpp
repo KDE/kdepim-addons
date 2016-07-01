@@ -40,6 +40,8 @@ CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
 
     QDialogButtonBox * buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckAttachmentDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckAttachmentDialog::reject);
     mainLayout->addWidget(buttonBox);
     readConfig();
 }
