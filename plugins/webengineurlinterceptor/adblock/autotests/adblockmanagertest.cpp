@@ -20,11 +20,12 @@
 #include "adblockmanagertest.h"
 #include "../lib/adblockmanager.h"
 #include <QTest>
+#include <QStandardPaths>
 
 AdblockManagerTest::AdblockManagerTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AdblockManagerTest::~AdblockManagerTest()

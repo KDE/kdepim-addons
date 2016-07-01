@@ -17,30 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "adblockpluginurlinterceptortest.h"
-#include "../adblockpluginurlinterceptor.h"
-#include <QTest>
-#include <QWebEngineView>
+#ifndef ADBLOCKINTERCEPTORINTERFACETEST_H
+#define ADBLOCKINTERCEPTORINTERFACETEST_H
 
-AdblockPluginUrlInterceptorTest::AdblockPluginUrlInterceptorTest(QObject *parent)
-    : QObject(parent)
+#include <QObject>
+
+class AdblockInterceptorInterfaceTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit AdblockInterceptorInterfaceTest(QObject *parent = Q_NULLPTR);
+    ~AdblockInterceptorInterfaceTest();
 
-}
+};
 
-AdblockPluginUrlInterceptorTest::~AdblockPluginUrlInterceptorTest()
-{
-
-}
-
-void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
-{
-    AdblockPluginUrlInterceptor w;
-    QVERIFY(w.createInterface(new QWebEngineView(), this));
-    QVERIFY(w.hasConfigureSupport());
-
-    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings = w.createConfigureWidget(new QWidget());
-    QVERIFY(settings.configureWidget);
-    QVERIFY(!settings.name.isEmpty());
-}
-QTEST_MAIN(AdblockPluginUrlInterceptorTest)
+#endif // ADBLOCKINTERCEPTORINTERFACETEST_H

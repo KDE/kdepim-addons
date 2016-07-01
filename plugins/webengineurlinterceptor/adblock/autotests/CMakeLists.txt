@@ -7,6 +7,11 @@ ecm_add_test(adblockmanagertest.cpp ${messageviewer_adblock_test_common_SRCS}
     LINK_LIBRARIES Qt5::Test Qt5::Widgets adblocklibprivate KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer
 )
 
+ecm_add_test(adblockinterceptorinterfacetest.cpp ${messageviewer_adblock_test_common_SRCS} ../adblockinterceptorinterface.cpp
+    TEST_NAME adblockinterceptorinterface
+    NAME_PREFIX "messageviewer-urlinterceptor-"
+    LINK_LIBRARIES Qt5::Test Qt5::Widgets adblocklibprivate KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer KF5::XmlGui
+)
 
 set( adblockpluginurlinterceptortest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptortest.cpp ../adblockpluginurlinterceptor.cpp ../adblockinterceptorinterface.cpp )
 add_executable( adblockpluginurlinterceptortest ${adblockpluginurlinterceptortest_SRCS})
