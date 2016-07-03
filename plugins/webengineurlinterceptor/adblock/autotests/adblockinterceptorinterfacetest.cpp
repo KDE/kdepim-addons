@@ -18,6 +18,7 @@
 */
 
 #include "adblockinterceptorinterfacetest.h"
+#include "../adblockinterceptorinterface.h"
 #include <QTest>
 
 AdblockInterceptorInterfaceTest::AdblockInterceptorInterfaceTest(QObject *parent)
@@ -29,6 +30,12 @@ AdblockInterceptorInterfaceTest::AdblockInterceptorInterfaceTest(QObject *parent
 AdblockInterceptorInterfaceTest::~AdblockInterceptorInterfaceTest()
 {
 
+}
+
+void AdblockInterceptorInterfaceTest::shouldHaveDefaultValue()
+{
+    AdblockInterceptorInterface w;
+    QVERIFY(!w.webEngineView());
 }
 
 QTEST_MAIN(AdblockInterceptorInterfaceTest)
