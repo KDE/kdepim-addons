@@ -48,12 +48,12 @@
 		</div>
 		<div class="row">
 			<div class="headerleft">{{ header.toi18n }}</div>
-			<div class="headerright">{{ header.to|safe }}</div>
+			<div class="headerright">{{ header.toExpandable|safe }}</div>
 		</div>
 		{% if header.cc %}
 		<div class="row">
 			<div class="headerleft">{{ header.cci18n }}</div>
-			<div class="headerright">{{ header.cc|safe }}</div>
+			<div class="headerright">{{ header.ccExpandable|safe }}</div>
 		</div>
 		{% endif %}
 		{% if header.bcc %}
