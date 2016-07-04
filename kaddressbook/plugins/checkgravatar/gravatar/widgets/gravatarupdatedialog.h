@@ -36,7 +36,7 @@ public:
     QPixmap pixmap() const;
     void setOriginalPixmap(const QPixmap &pix);
 
-    void setOriginalUrl(const QString &url);
+    void setOriginalUrl(const QUrl &url);
 
     QUrl resolvedUrl() const;
 

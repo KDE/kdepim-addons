@@ -94,7 +94,7 @@ void CheckGravatarPluginInterface::exec()
                         const QPixmap pix = QPixmap::fromImage(address.photo().data());
                         dlg->setOriginalPixmap(pix);
                     } else {
-                        dlg->setOriginalUrl(address.photo().url());
+                        dlg->setOriginalUrl(QUrl(address.photo().url()));
                     }
                 }
                 if (dlg->exec()) {

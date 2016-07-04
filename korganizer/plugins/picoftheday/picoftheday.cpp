@@ -106,8 +106,8 @@ void POTDElement::step1Result(KJob *job)
     if (job->error()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": could not get POTD file name:" << job->errorString();
         qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": file name:" << mFileName;
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl.url();
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl.url();
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl;
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl;
         mFirstStepCompleted = false;
         return;
     }
@@ -176,8 +176,8 @@ void POTDElement::step2Result(KJob *job)
     if (job->error()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": could not get POTD image page:" << job->errorString();
         qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": file name:" << mFileName;
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl.url();
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl.url();
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl;
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl;
         mSecondStepCompleted = false;
         return;
     }
@@ -200,7 +200,7 @@ void POTDElement::step2Result(KJob *job)
         QString href = links.item(i).attributes().namedItem(QStringLiteral("href")).nodeValue();
         if (href.startsWith(
                     QStringLiteral("//upload.wikimedia.org/wikipedia/commons/"))) {
-            mFullSizeImageUrl = href;
+            mFullSizeImageUrl = QUrl(href);
             break;
         }
     }
@@ -268,15 +268,11 @@ void POTDElement::step3GetThumbnail()
     }
     mDlThumbSize = QSize(thumbWidth, thumbHeight);
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": will download thumbnail of size" << mDlThumbSize;
-    QString thumbUrl =
-        QUrl::fromPercentEncoding(
-            thumbnailUrl(mFullSizeImageUrl, thumbWidth).url().toLatin1());
+    mThumbUrl = thumbnailUrl(mFullSizeImageUrl, thumbWidth);
 
-    qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": got POTD thumbnail URL:" << thumbUrl;
-    mThumbUrl = thumbUrl;
+    qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": got POTD thumbnail URL:" << mThumbUrl;
 
-    mThirdStepJob = KIO::storedGet(thumbUrl, KIO::NoReload, KIO::HideProgressInfo);
-    qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": get" << thumbUrl;//FIXME
+    mThirdStepJob = KIO::storedGet(mThumbUrl, KIO::NoReload, KIO::HideProgressInfo);
     KIO::Scheduler::setJobPriority(mThirdStepJob, 1);
 
     connect(mThirdStepJob, &KIO::SimpleJob::result, this, &POTDElement::step3Result);
@@ -296,8 +292,8 @@ void POTDElement::step3Result(KJob *job)
     if (job->error()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": could not get POTD:" << job->errorString();
         qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": file name:" << mFileName;
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl.url();
-        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl.url();
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": full-size image:" << mFullSizeImageUrl;
+        qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": thumbnail:" << mThumbUrl;
         return;
     }
 

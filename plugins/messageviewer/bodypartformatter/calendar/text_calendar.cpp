@@ -376,20 +376,21 @@ public:
 
         if (attachment->isUri()) {
             bool fileExists = false;
-            if (QUrl(attachment->uri()).isLocalFile()) {
-                fileExists = QFile::exists(attachment->uri());
+            QUrl attachmentUrl(attachment->uri());
+            if (attachmentUrl.isLocalFile()) {
+                fileExists = QFile::exists(attachmentUrl.toLocalFile());
             } else {
-                auto job = KIO::stat(attachment->uri(), KIO::StatJob::SourceSide, 0);
+                auto job = KIO::stat(attachmentUrl, KIO::StatJob::SourceSide, 0);
                 fileExists = job->exec();
             }
-            if (fileExists) {
+            if (!fileExists) {
                 KMessageBox::information(
                     0,
                     i18n("The invitation attachment \"%1\" is a web link that "
                          "is inaccessible from this computer. Please ask the event "
                          "organizer to resend the invitation with this attachment "
                          "stored inline instead of a link.",
-                         QUrl::fromPercentEncoding(attachment->uri().toLatin1())));
+                         attachmentUrl.toDisplayString()));
                 return Attachment::Ptr();
             }
         }
@@ -1022,7 +1023,7 @@ public:
         }
 
         if (attachment->isUri()) {
-            QDesktopServices::openUrl(attachment->uri());
+            QDesktopServices::openUrl(QUrl(attachment->uri()));
         } else {
             // put the attachment in a temporary file and launch it
             QTemporaryFile *file;
@@ -1070,7 +1071,7 @@ public:
         bool stat = false;
         if (a->isUri()) {
             // save the attachment url
-            auto job = KIO::file_copy(a->uri(), QUrl::fromLocalFile(saveAsFile));
+            auto job = KIO::file_copy(QUrl(a->uri()), QUrl::fromLocalFile(saveAsFile));
             stat = job->exec();
         } else {
             // put the attachment in a temporary file and save it

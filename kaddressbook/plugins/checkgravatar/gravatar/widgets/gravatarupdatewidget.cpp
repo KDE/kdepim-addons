@@ -93,7 +93,7 @@ QPixmap GravatarUpdateWidget::pixmap() const
     return mPixmap;
 }
 
-void GravatarUpdateWidget::setOriginalUrl(const QString &url)
+void GravatarUpdateWidget::setOriginalUrl(const QUrl &url)
 {
     QImage image;
     QByteArray imageData;

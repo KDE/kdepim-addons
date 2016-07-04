@@ -96,6 +96,7 @@ find_package(KF5Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
 
 add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # Extra package
 find_package(KF5GAPI "5.1.40" CONFIG)

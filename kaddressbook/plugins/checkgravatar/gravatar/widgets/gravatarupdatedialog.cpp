@@ -94,7 +94,7 @@ QPixmap GravatarUpdateDialog::pixmap() const
     return mGravatarUpdateWidget->pixmap();
 }
 
-void GravatarUpdateDialog::setOriginalUrl(const QString &url)
+void GravatarUpdateDialog::setOriginalUrl(const QUrl &url)
 {
     mGravatarUpdateWidget->setOriginalUrl(url);
 }
