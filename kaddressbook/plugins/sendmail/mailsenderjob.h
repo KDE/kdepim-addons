@@ -43,10 +43,8 @@ Q_SIGNALS:
     void sendMails(const QStringList &emails);
     void sendMailsError(const QString &error);
 
-private Q_SLOTS:
-    void fetchJobFinished(KJob *job);
-
 private:
+    void slotFetchJobFinished(KJob *job);
     void finishJob();
     void fetchItem(const Akonadi::Item &item);
     void fetchNextItem();

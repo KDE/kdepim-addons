@@ -49,11 +49,9 @@ Q_SIGNALS:
     void resolvedUrl(const QUrl &url);
     void gravatarPixmap(const QPixmap &pix);
 
-private Q_SLOTS:
-    void slotGravatarResolvUrlFinished(Gravatar::GravatarResolvUrlJob *job);
-
-    void slotUpdateGravatarDone(KJob *job);
 private:
+    void slotGravatarResolvUrlFinished(Gravatar::GravatarResolvUrlJob *job);
+    void slotUpdateGravatarDone(KJob *job);
     void updatePixmap(const QPixmap &pix);
     QString mEmail;
     Akonadi::Item mItem;

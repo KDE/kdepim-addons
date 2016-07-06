@@ -105,10 +105,10 @@ void MailSenderJob::fetchItem(const Akonadi::Item &item)
     Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(item, this);
     job->fetchScope().fetchFullPayload();
 
-    connect(job, &Akonadi::ItemFetchJob::result, this, &MailSenderJob::fetchJobFinished);
+    connect(job, &Akonadi::ItemFetchJob::result, this, &MailSenderJob::slotFetchJobFinished);
 }
 
-void MailSenderJob::fetchJobFinished(KJob *job)
+void MailSenderJob::slotFetchJobFinished(KJob *job)
 {
     if (job->error()) {
         qCDebug(KADDRESSBOOK_SENDMAIL_LOG) << " error during fetching " << job->errorString();

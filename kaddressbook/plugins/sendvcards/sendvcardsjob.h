@@ -46,10 +46,8 @@ public:
 Q_SIGNALS:
     void sendVCardsError(const QString &error);
 
-private Q_SLOTS:
-    void slotExpandGroupResult(KJob *job);
-
 private:
+    void slotExpandGroupResult(KJob *job);
     void createTemporaryFile(const QByteArray &data, const QString &filename);
     void createTemporaryDir();
     void jobFinished();

@@ -33,13 +33,12 @@ public:
     void exec() Q_DECL_OVERRIDE;
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void slotUpperCase();
     void slotLowerCase();
     void slotSentenceCase();
     void slotReverseCase();
 
-private:
     void sentenceCase();
     void upperCase();
     void lowerCase();

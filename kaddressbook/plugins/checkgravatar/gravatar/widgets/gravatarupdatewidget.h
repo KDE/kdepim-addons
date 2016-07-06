@@ -45,16 +45,15 @@ public:
     QUrl resolvedUrl() const;
 
     void setOriginalUrl(const QUrl &url);
-private Q_SLOTS:
-    void slotSearchGravatar();
-
-    void slotSearchGravatarFinished(Gravatar::GravatarResolvUrlJob *job);
-    void slotResolvUrl(const QUrl &url);
 
 Q_SIGNALS:
     void activateDialogButton(bool state);
 
 private:
+    void slotSearchGravatar();
+    void slotSearchGravatarFinished(Gravatar::GravatarResolvUrlJob *job);
+    void slotResolvUrl(const QUrl &url);
+
     QString mEmail;
     QPixmap mPixmap;
     QUrl mCurrentUrl;
