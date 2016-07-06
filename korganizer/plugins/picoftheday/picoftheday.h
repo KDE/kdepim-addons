@@ -88,6 +88,9 @@ protected Q_SLOTS:
     void step3GetThumbnail();
 
 private:
+    void step1Result(KJob *job);
+    void step2Result(KJob *job);
+    void step3Result(KJob *job);
     QDate mDate;
     QString mDescription;
     QSize mDlThumbSize;
@@ -103,10 +106,6 @@ private:
     KIO::SimpleJob *mThirdStepJob;
     QTimer *mTimer;
 
-private Q_SLOTS:
-    void step1Result(KJob *job);
-    void step2Result(KJob *job);
-    void step3Result(KJob *job);
 };
 
 #endif

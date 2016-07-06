@@ -316,13 +316,11 @@ public:
     void addAvailableTool(const QString &visibleName);
     bool isProgramSelected(const QString &visibleName) const;
 
-private Q_SLOTS:
-    void processSelectionChange();
-
 Q_SIGNALS:
     void selectionChanged();
 
 private:
+    void processSelectionChange();
     QLabel *mScanProgressText;
     QLabel *mSelectionHint;
     QListWidget *mToolsList;
@@ -353,13 +351,12 @@ protected:
     Akonadi::Collection selectedSpamCollection() const;
     Akonadi::Collection selectedUnsureCollection() const;
 
-private Q_SLOTS:
-    void processSelectionChange();
 
 Q_SIGNALS:
     void selectionChanged();
 
 private:
+    void processSelectionChange();
     QCheckBox *mMarkRules;
     QCheckBox *mMoveSpamRules;
     QCheckBox *mMoveUnsureRules;
@@ -381,12 +378,11 @@ public:
 
     QString selectedFolderName() const;
 
-private Q_SLOTS:
-    void processSelectionChange();
 Q_SIGNALS:
     void selectionChanged();
 
 private:
+    void processSelectionChange();
     QCheckBox *mPipeRules;
     QCheckBox *mMoveRules;
     MailCommon::FolderTreeWidget *mFolderTree;

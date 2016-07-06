@@ -52,11 +52,6 @@ public:
 public Q_SLOTS:
     void slotCloseWidget();
 
-private Q_SLOTS:
-    void slotReturnPressed();
-    void slotCollectionChanged(int);
-    void slotUpdateButtons(const QString &subject);
-
 Q_SIGNALS:
     void createNote(const KMime::Message::Ptr &note, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
@@ -65,6 +60,9 @@ Q_SIGNALS:
 protected:
     bool eventFilter(QObject *object, QEvent *e) Q_DECL_OVERRIDE;
 private:
+    void slotReturnPressed();
+    void slotCollectionChanged(int);
+    void slotUpdateButtons(const QString &subject);
     void readConfig();
     Akonadi::Collection mCollection;
     KMime::Message::Ptr mMessage;

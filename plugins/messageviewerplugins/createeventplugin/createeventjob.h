@@ -36,12 +36,10 @@ public:
 
     void start() Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotFetchDone(KJob *job);
-    void eventCreated(KJob *job);
-    void relationCreated(KJob *job);
-
 private:
+    void slotFetchDone(KJob *job);
+    void slotEventCreated(KJob *job);
+    void slotRelationCreated(KJob *job);
     void createEvent();
     Akonadi::Item mItem;
     Akonadi::Collection mCollection;

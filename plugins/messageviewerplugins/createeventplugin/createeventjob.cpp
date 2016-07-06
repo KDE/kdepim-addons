@@ -78,10 +78,10 @@ void CreateEventJob::createEvent()
     newEventItem.setPayload<KCalCore::Event::Ptr>(mEventPtr);
 
     Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(newEventItem, mCollection);
-    connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateEventJob::eventCreated);
+    connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateEventJob::slotEventCreated);
 }
 
-void CreateEventJob::eventCreated(KJob *job)
+void CreateEventJob::slotEventCreated(KJob *job)
 {
     if (job->error()) {
         qCDebug(CREATEEVENTPLUGIN_LOG) << "Error during create new Event " << job->errorString();
@@ -92,11 +92,11 @@ void CreateEventJob::eventCreated(KJob *job)
         Akonadi::ItemCreateJob *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
         Akonadi::RelationCreateJob *rJob = new Akonadi::RelationCreateJob(relation);
-        connect(rJob, &Akonadi::RelationCreateJob::result, this, &CreateEventJob::relationCreated);
+        connect(rJob, &Akonadi::RelationCreateJob::result, this, &CreateEventJob::slotRelationCreated);
     }
 }
 
-void CreateEventJob::relationCreated(KJob *job)
+void CreateEventJob::slotRelationCreated(KJob *job)
 {
     if (job->error()) {
         qCDebug(CREATEEVENTPLUGIN_LOG) << "Error during create new Event " << job->errorString();

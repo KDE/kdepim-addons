@@ -35,13 +35,11 @@ public:
 
     QStringList attendees() const;
 
-private Q_SLOTS:
+private:
     void addClicked();
     void removeClicked();
     void textChanged(const QString &text);
     void selectionChanged();
-
-private:
     Ui::AttendeeSelectorWidget ui;
     QPushButton *mOkButton;
 };

@@ -47,14 +47,12 @@ public:
     void setAdBlockListPath(const QString &localPath, const QString &url);
 
     void setListName(const QString &listName);
-private Q_SLOTS:
-    void slotFinished(KJob *job);
-    void slotDeleteBrokenList();
-
 Q_SIGNALS:
     void deleteList(const QString &name);
 
 private:
+    void slotFinished(KJob *job);
+    void slotDeleteBrokenList();
     void readConfig();
     void writeConfig();
     void downLoadList(const QString &url);

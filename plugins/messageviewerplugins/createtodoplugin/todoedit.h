@@ -54,12 +54,6 @@ public:
 public Q_SLOTS:
     void slotCloseWidget();
 
-private Q_SLOTS:
-    void slotReturnPressed();
-    void slotCollectionChanged(int);
-    void slotOpenEditor();
-    void slotTextEdited(const QString &subject);
-
 Q_SIGNALS:
     void createTodo(const KCalCore::Todo::Ptr &todo, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
@@ -68,6 +62,10 @@ Q_SIGNALS:
 protected:
     bool eventFilter(QObject *object, QEvent *e) Q_DECL_OVERRIDE;
 private:
+    void slotReturnPressed();
+    void slotCollectionChanged(int);
+    void slotOpenEditor();
+    void slotTextEdited(const QString &subject);
     void updateButtons(const QString &subject);
     void readConfig();
     Akonadi::Collection mCollection;

@@ -42,10 +42,8 @@ public:
     void setMessageItem(const Akonadi::Item &item) Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
-
 private:
+    void slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
     void createAction(KActionCollection *ac);
     TodoEdit *mTodoEdit;
     QList<QAction *> mAction;
