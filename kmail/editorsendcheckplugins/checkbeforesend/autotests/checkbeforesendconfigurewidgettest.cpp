@@ -18,7 +18,7 @@
 */
 
 #include "checkbeforesendconfigurewidgettest.h"
-#include "../checkbeforesendconfigurewidget.h"
+#include "../configurewidget/checkbeforesendconfigurewidget.h"
 #include <QTest>
 #include <QVBoxLayout>
 #include <QCheckBox>

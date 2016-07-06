@@ -1,7 +1,7 @@
 set(kmail_checkbeforesendeditorplugin_SRCS
     checkbeforesendplugin.cpp
     checkbeforesendinterface.cpp
-    checkbeforesendconfigurewidget.cpp
+    configurewidget/checkbeforesendconfigurewidget.cpp
     duplicateemails/checkduplicateemailsdialog.cpp
     duplicateemails/checkduplicateemailsjob.cpp
     sendattachments/checkattachmentdialog.cpp

@@ -19,7 +19,7 @@
 
 #include "checkbeforesendplugin.h"
 #include "checkbeforesendinterface.h"
-#include "checkbeforesendconfigurewidget.h"
+#include "configurewidget/checkbeforesendconfigurewidget.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
