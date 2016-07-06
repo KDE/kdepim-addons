@@ -44,7 +44,11 @@ public:
 public Q_SLOTS:
     void settingsUpdated();
 
-private Q_SLOTS:
+Q_SIGNALS:
+    void toolsWasClosed();
+    void insertText(const QString &Url);
+
+private:
     void slotConvertUrl();
     void slotPasteToClipboard();
     void slotOriginalUrlChanged(const QString &text);
@@ -55,12 +59,6 @@ private Q_SLOTS:
     void slotConfigure();
     void slotInsertShortUrl();
     void slotOpenShortUrl();
-
-Q_SIGNALS:
-    void toolsWasClosed();
-    void insertText(const QString &Url);
-
-private:
     void initializePlugins();
     void loadEngine();
     QLabel *mShorturlServiceName;

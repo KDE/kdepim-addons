@@ -33,9 +33,8 @@ public:
     void setCurrentItems(const Akonadi::Item::List &items) Q_DECL_OVERRIDE;
     PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotActivated();
 private:
+    void slotActivated();
     Akonadi::Item::List mListItems;
 };
 

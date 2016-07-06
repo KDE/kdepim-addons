@@ -34,13 +34,11 @@ public:
     void writeConfig();
     void resetToDefault();
 
-private Q_SLOTS:
-    void slotChanged();
-
 Q_SIGNALS:
     void settingsChanged();
 
 private:
+    void slotChanged();
     void init();
     ShortUrlConfigureWidgetPrivate *const d;
 };

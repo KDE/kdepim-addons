@@ -32,7 +32,7 @@ public:
     void generateShortUrl() Q_DECL_OVERRIDE;
 
     QString engineName() const Q_DECL_OVERRIDE;
-private Q_SLOTS:
+private:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotErrorFound(QNetworkReply::NetworkError error);
 };

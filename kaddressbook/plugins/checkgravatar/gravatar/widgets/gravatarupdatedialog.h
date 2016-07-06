@@ -41,12 +41,11 @@ public:
     QUrl resolvedUrl() const;
 
     bool saveUrl() const;
-private Q_SLOTS:
+private:
     void slotSaveImage();
     void slotSaveUrl();
 
     void slotActivateButton(bool state);
-private:
     void readConfig();
     void writeConfig();
     GravatarUpdateWidget *mGravatarUpdateWidget;

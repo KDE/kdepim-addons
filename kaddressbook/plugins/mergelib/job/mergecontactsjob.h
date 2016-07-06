@@ -46,11 +46,9 @@ public:
 Q_SIGNALS:
     void finished(const Akonadi::Item &item);
 
-private Q_SLOTS:
+private:
     void slotCreateMergedContactFinished(KJob *job);
     void slotDeleteContactsFinished(KJob *job);
-
-private:
     void generateMergedContact();
     void createMergedContact(const KContacts::Addressee &addressee);
 

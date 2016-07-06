@@ -35,11 +35,9 @@ public:
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
     void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections) Q_DECL_OVERRIDE;
-private Q_SLOTS:
+private:
     void slotActivated();
     void slotSendVcardsError(const QString &error);
-
-private:
     Akonadi::Item::List mListItems;
     QAction *mAction;
 };

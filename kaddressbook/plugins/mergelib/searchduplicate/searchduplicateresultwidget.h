@@ -56,14 +56,13 @@ Q_SIGNALS:
     void mergeDone();
     void customizeMergeContact(const QVector<KABMergeContacts::MergeConflictResult> &, const Akonadi::Collection &col);
 
-private Q_SLOTS:
+private:
     void slotMergeContact();
     void slotMergeDone(const Akonadi::Item &item);
     void slotUpdateMergeButton();
 
     void slotAutomaticMerging();
     void slotCustomizeMergingContacts();
-private:
     void mergeContact();
     QVector<MergeConflictResult> mResultConflictList;
     QVector<Akonadi::Item::List> mListContactToMerge;

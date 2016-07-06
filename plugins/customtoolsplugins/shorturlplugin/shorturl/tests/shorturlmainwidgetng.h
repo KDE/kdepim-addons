@@ -30,10 +30,8 @@ class ShortUrlMainWidgetNg : public QWidget
 public:
     explicit ShortUrlMainWidgetNg(QWidget *parent = Q_NULLPTR);
 
-private Q_SLOTS:
-    void slotSaveConfig();
-
 private:
+    void slotSaveConfig();
     ShortUrlConfigureWidget *mConfigWidget;
     ShortUrlWidgetNg *mShortUrlWidget;
 };

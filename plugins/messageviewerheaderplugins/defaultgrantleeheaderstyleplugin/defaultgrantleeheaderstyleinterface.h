@@ -35,9 +35,8 @@ public:
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;
     void activateAction() Q_DECL_OVERRIDE;
-private Q_SLOTS:
-    void slotDefaultGrantleeHeaders();
 private:
+    void slotDefaultGrantleeHeaders();
     GrantleeTheme::Theme mDefaultTheme;
 };
 

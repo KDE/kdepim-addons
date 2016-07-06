@@ -35,10 +35,8 @@ public:
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotEnableChanged(bool state);
-
 private:
+    void slotEnableChanged(bool state);
     QCheckBox *mEnable;
     ConfirmAddressConfigureTab *mConfirmAddressConfigureTab;
 };

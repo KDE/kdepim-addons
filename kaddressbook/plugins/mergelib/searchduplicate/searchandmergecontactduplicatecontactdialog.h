@@ -42,12 +42,11 @@ public:
 
     void searchPotentialDuplicateContacts(const Akonadi::Item::List &list);
 
-private Q_SLOTS:
+private:
     void slotDuplicateFound(const QVector<Akonadi::Item::List> &duplicate);
     void slotMergeDone();
     void slotContactMerged(const Akonadi::Item &item);
     void slotCustomizeMergeContacts(const QVector<KABMergeContacts::MergeConflictResult> &lst, const Akonadi::Collection &col);
-private:
     void readConfig();
     void writeConfig();
     SearchDuplicateResultWidget *mSearchResult;

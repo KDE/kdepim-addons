@@ -30,11 +30,9 @@ public:
     explicit ShortUrlConfigureDialog(QWidget *parent = Q_NULLPTR);
     ~ShortUrlConfigureDialog();
 
-private Q_SLOTS:
+private:
     void slotOkClicked();
     void slotDefaultClicked();
-
-private:
     ShortUrlConfigureWidget *mConfigureWidget;
 };
 

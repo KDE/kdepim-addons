@@ -48,13 +48,12 @@ Q_SIGNALS:
     void customizeMergeContact(const Akonadi::Item::List &lst, MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col);
     void contactMerged(const Akonadi::Item &item);
 
-private Q_SLOTS:
+private:
     void slotUpdateMergeButton();
     void slotMergeContacts();
     void slotAutomaticMerging();
     void slotCustomizeMergingContacts();
     void slotMergeDone(const Akonadi::Item &item);
-private:
     Akonadi::Item::List listSelectedContacts() const;
     Akonadi::Item currentItem() const;
     void fillListContact();

@@ -35,7 +35,7 @@ public:
     void generateShortUrl() Q_DECL_OVERRIDE;
     QString engineName() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error);
     void slotShortUrlFinished(QNetworkReply *reply);
 };

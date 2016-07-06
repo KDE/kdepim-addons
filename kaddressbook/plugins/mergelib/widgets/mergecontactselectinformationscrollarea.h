@@ -35,10 +35,9 @@ public:
     explicit MergeContactSelectInformationScrollArea(QWidget *parent = Q_NULLPTR);
     ~MergeContactSelectInformationScrollArea();
     void setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem, const Akonadi::Collection &col);
-private Q_SLOTS:
+private:
     void slotMergeContacts();
     void slotMergeDone(const Akonadi::Item &item);
-private:
     void mergeContact(const KContacts::Addressee &addr);
     Akonadi::Collection mCollection;
     Akonadi::Item::List mListItem;

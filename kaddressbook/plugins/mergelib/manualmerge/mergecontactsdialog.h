@@ -41,10 +41,9 @@ public:
     ~MergeContactsDialog();
 
     void setContacts(const Akonadi::Item::List &list);
-private Q_SLOTS:
+private:
     void slotCustomizeMergeContact(const Akonadi::Item::List &lst, MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col);
     void slotContactMerged(const Akonadi::Item &item);
-private:
     void readConfig();
     void writeConfig();
     QDialogButtonBox *mButtonBox;

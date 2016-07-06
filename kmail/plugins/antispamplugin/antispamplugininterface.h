@@ -31,7 +31,7 @@ public:
     void exec() Q_DECL_OVERRIDE;
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void slotActivated();
 };
 

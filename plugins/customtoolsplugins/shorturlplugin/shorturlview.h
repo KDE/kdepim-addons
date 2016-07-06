@@ -31,10 +31,8 @@ public:
     ~ShorturlView();
     KToggleAction *action() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotActivateShorturl(bool state);
-
 private:
+    void slotActivateShorturl(bool state);
     void createAction(KActionCollection *ac);
     KToggleAction *mAction;
     ShortUrlWidgetNg *mShorturl;

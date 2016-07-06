@@ -42,11 +42,10 @@ public:
     void updateAction(const Akonadi::Item &item) Q_DECL_OVERRIDE;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
+private:
     void slotCreateNote(const KMime::Message::Ptr &notePtr, const Akonadi::Collection &collection);
 
     void slotNoteItemFetched(KJob *job);
-private:
     Akonadi::Relation relatedNoteRelation() const;
     void showCreateNewNoteWidget();
     void createAction(KActionCollection *ac);

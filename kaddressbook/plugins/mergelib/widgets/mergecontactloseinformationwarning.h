@@ -35,7 +35,7 @@ Q_SIGNALS:
     void continueMerging();
     void customizeMergingContacts();
 
-private Q_SLOTS:
+private:
     void slotCustomizeMerge();
     void slotAutomaticMerging();
 };
