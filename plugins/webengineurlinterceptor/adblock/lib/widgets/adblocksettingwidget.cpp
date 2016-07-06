@@ -114,7 +114,7 @@ AdBlockSettingWidget::~AdBlockSettingWidget()
 
 void AdBlockSettingWidget::slotManualFilterLineEditTextChanged(const QString &text)
 {
-    mUi->insertButton->setEnabled(!text.isEmpty());
+    mUi->insertButton->setEnabled(!text.trimmed().isEmpty());
 }
 
 void AdBlockSettingWidget::slotEditFilter()
