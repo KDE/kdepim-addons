@@ -157,7 +157,6 @@ void AdBlockMatcher::update()
 
     QHash<QString, const AdBlockRule *> cssRulesHash;
     QVector<const AdBlockRule *> exceptionCssRules;
-#if 0 //FIXME
     Q_FOREACH (AdBlockSubscription *subscription, m_manager->subscriptions()) {
         Q_FOREACH (const AdBlockRule *rule, subscription->allRules()) {
             // Don't add internally disabled rules to cache
@@ -235,7 +234,6 @@ void AdBlockMatcher::update()
         m_elementHidingRules = m_elementHidingRules.left(m_elementHidingRules.size() - 1);
         m_elementHidingRules.append(QLatin1String("{display:none !important;} "));
     }
-#endif
 }
 
 void AdBlockMatcher::clear()
