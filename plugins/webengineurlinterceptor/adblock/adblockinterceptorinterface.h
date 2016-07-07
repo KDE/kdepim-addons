@@ -42,11 +42,10 @@ public:
 
     void setWebEngineView(QWebEngineView *webEngineView);
 
-private Q_SLOTS:
+private:
     void slotBlockImage();
     void slotShowBlockableElement();
     void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
-private:
     mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems;
     QAction *mBlockImage;
