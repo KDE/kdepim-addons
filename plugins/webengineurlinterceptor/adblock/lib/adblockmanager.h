@@ -26,6 +26,7 @@
 namespace AdBlock
 {
 class AdBlockMatcher;
+class AdBlockSubscription;
 class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
@@ -37,6 +38,8 @@ public:
 
     bool interceptRequest(const QWebEngineUrlRequestInfo &info);
 
+    QList<AdBlockSubscription *> subscriptions() const;
+
 Q_SIGNALS:
     void enabledChanged(bool);
 
@@ -47,6 +50,7 @@ private:
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
     AdBlockMatcher *mAdBlockMatcher;
+    QList<AdBlockSubscription *> mSubscriptions;
 };
 }
 #endif // ADBLOCKMANAGER_H

@@ -95,3 +95,8 @@ bool AdblockManager::canRunOnScheme(const QString &scheme) const
 {
     return (scheme != QLatin1String("file"));
 }
+
+QList<AdBlockSubscription *> AdblockManager::subscriptions() const
+{
+    return mSubscriptions;
+}

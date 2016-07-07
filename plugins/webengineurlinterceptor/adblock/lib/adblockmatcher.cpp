@@ -158,8 +158,8 @@ void AdBlockMatcher::update()
     QHash<QString, const AdBlockRule *> cssRulesHash;
     QVector<const AdBlockRule *> exceptionCssRules;
 #if 0 //FIXME
-    foreach (AdBlockSubscription *subscription, m_manager->subscriptions()) {
-        foreach (const AdBlockRule *rule, subscription->allRules()) {
+    Q_FOREACH (AdBlockSubscription *subscription, m_manager->subscriptions()) {
+        Q_FOREACH (const AdBlockRule *rule, subscription->allRules()) {
             // Don't add internally disabled rules to cache
             if (rule->isInternalDisabled()) {
                 continue;
