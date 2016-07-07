@@ -62,9 +62,8 @@ AdblockManager::~AdblockManager()
 void AdblockManager::reloadConfig()
 {
     bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
-    enabledChanged(enabled);
+    Q_EMIT enabledChanged(enabled);
     qDebug() << " void AdblockManager::reloadConfig()" << enabled << "  " << this;
-    //TODO
 }
 
 bool AdblockManager::isEnabled() const
