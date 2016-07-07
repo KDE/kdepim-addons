@@ -222,7 +222,7 @@ void AdBlockMatcher::update()
             m_domainRestrictedCssRules.append(rule);
         } else if (Q_UNLIKELY(hidingRulesCount == 1000)) {
             m_elementHidingRules.append(rule->cssSelector());
-            m_elementHidingRules.append(QLatin1String("{display:none !important;} "));
+            m_elementHidingRules.append(QStringLiteral("{display:none !important;} "));
             hidingRulesCount = 0;
         } else {
             m_elementHidingRules.append(rule->cssSelector() + QLatin1Char(','));

@@ -47,6 +47,7 @@ public Q_SLOTS:
     void reloadConfig();
 
 private:
+    void loadSubscriptions();
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
     AdBlockMatcher *mAdBlockMatcher;
