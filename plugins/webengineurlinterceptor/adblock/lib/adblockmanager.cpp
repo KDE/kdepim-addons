@@ -48,8 +48,7 @@ AdblockManager *AdblockManager::self()
 }
 
 AdblockManager::AdblockManager(QObject *parent)
-    : QObject(parent),
-      mEnabled(false)
+    : QObject(parent)
 {
     mAdBlockMatcher = new AdBlockMatcher(this);
     reloadConfig();
@@ -62,14 +61,15 @@ AdblockManager::~AdblockManager()
 
 void AdblockManager::reloadConfig()
 {
-    mEnabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
-    qDebug() << " void AdblockManager::reloadConfig()" << mEnabled << "  " << this;
+    bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
+    enabledChanged(enabled);
+    qDebug() << " void AdblockManager::reloadConfig()" << enabled << "  " << this;
     //TODO
 }
 
 bool AdblockManager::isEnabled() const
 {
-    return mEnabled;
+    return mAdBlockMatcher->isEnabled();
 }
 
 bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)

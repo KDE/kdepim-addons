@@ -41,9 +41,10 @@
 using namespace AdBlock;
 AdBlockMatcher::AdBlockMatcher(AdblockManager *manager)
     : QObject(manager)
-    , m_manager(manager)
+    , m_manager(manager),
+      m_enabled(false)
 {
-    //FIXME connect(manager, SIGNAL(enabledChanged(bool)), this, SLOT(enabledChanged(bool)));
+    connect(manager, &AdblockManager::enabledChanged, this, &AdBlockMatcher::enabledChanged);
 }
 
 AdBlockMatcher::~AdBlockMatcher()
@@ -143,6 +144,11 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
     }
 
     return rules;
+}
+
+bool AdBlockMatcher::isEnabled() const
+{
+    return m_enabled;
 }
 
 void AdBlockMatcher::update()
@@ -248,7 +254,8 @@ void AdBlockMatcher::clear()
 
 void AdBlockMatcher::enabledChanged(bool enabled)
 {
-    if (enabled) {
+    m_enabled = enabled;
+    if (m_enabled) {
         update();
     } else {
         clear();

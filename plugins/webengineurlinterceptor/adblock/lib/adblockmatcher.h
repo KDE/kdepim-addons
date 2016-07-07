@@ -63,6 +63,8 @@ public:
     QString elementHidingRules() const;
     QString elementHidingRulesForDomain(const QString &domain) const;
 
+    bool isEnabled() const;
+
 public Q_SLOTS:
     void update();
     void clear();
@@ -83,6 +85,7 @@ private:
     QString m_elementHidingRules;
     AdBlockSearchTree m_networkBlockTree;
     AdBlockSearchTree m_networkExceptionTree;
+    bool m_enabled;
 };
 }
 

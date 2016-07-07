@@ -37,6 +37,9 @@ public:
 
     bool interceptRequest(const QWebEngineUrlRequestInfo &info);
 
+Q_SIGNALS:
+    void enabledChanged(bool);
+
 public Q_SLOTS:
     void reloadConfig();
 
