@@ -64,13 +64,13 @@
 		{% endif %}
 		{% if header.Sender %}
 		<div class="row">
-			<div class="headerleft">Sender:</div>
+			<div class="headerleft">{{ header.Senderi18n }}</div>
 			<div class="headerright">{{ header.Sender|safe }}</div>
 		</div>
 		{% endif %}
 		{% if header.ListId %}
 		<div class="row">
-			<div class="headerleft">List-Id:</div>
+			<div class="headerleft">{{ header.List-Idi18n }}</div>
 			<div class="headerright">{{ header.ListId }}</div>
 		</div>
 		{% endif %}
