@@ -41,6 +41,7 @@ MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::cre
 {
     ConfirmAddressInterface *interface = new ConfirmAddressInterface(parent);
     connect(this, &ConfirmAddressPlugin::configChanged, interface, &ConfirmAddressInterface::reloadConfig);
+    connect(interface, &ConfirmAddressInterface::forceReloadConfig, this, &ConfirmAddressPlugin::configChanged);
     return interface;
 }
 

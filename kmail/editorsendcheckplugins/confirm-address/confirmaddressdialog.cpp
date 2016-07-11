@@ -24,9 +24,11 @@
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QPushButton>
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
-    : QDialog(parent)
+    : QDialog(parent),
+      mCurrentIdentity(0)
 {
     setWindowTitle(i18n("Confirm Addresses"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -40,6 +42,12 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
+
+    QPushButton *whiteListEmailsButton = new QPushButton(i18n("Add Selected Emails to WhiteList"));
+    whiteListEmailsButton->setObjectName(QStringLiteral("whiteListEmailsButton"));
+    buttonBox->addButton(whiteListEmailsButton, QDialogButtonBox::ActionRole);
+    connect(whiteListEmailsButton, &QPushButton::clicked, this, &ConfirmAddressDialog::slotWhiteListSelectedEmails);
+
     mainLayout->addWidget(buttonBox);
     readConfig();
 }
@@ -72,4 +80,15 @@ void ConfirmAddressDialog::setValidAddresses(const QStringList &addresses)
 void ConfirmAddressDialog::setInvalidAddresses(const QStringList &addresses)
 {
     mConfirmWidget->setInvalidAddresses(addresses);
+}
+
+void ConfirmAddressDialog::setCurrentIdentity(uint identity)
+{
+    mCurrentIdentity = identity;
+}
+
+void ConfirmAddressDialog::slotWhiteListSelectedEmails()
+{
+    const QStringList whiteListEmails = mConfirmWidget->whiteListSelectedEmails();
+    Q_EMIT addWhileListEmails(whiteListEmails, mCurrentIdentity);
 }

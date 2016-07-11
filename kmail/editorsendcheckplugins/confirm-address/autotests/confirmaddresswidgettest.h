@@ -33,6 +33,8 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldAddAddress();
     void shouldAddValidAndInvalidAddresses();
+    void shouldHaveCheckableItem();
+    void shouldGetWhileListEmails();
 };
 
 #endif // CONFIRMADDRESSWIDGETTEST_H

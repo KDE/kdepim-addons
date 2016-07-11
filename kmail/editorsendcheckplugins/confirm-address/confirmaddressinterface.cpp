@@ -72,6 +72,8 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 
         if (!invalidEmails.isEmpty()) {
             QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
+            connect(dlg.data(), &ConfirmAddressDialog::addWhileListEmails, this, &ConfirmAddressInterface::slotAddWhiteListEmails);
+            dlg->setCurrentIdentity(params.identity());
             dlg->setValidAddresses(validEmails);
             dlg->setInvalidAddresses(invalidEmails);
             if (dlg->exec()) {
@@ -87,6 +89,21 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     } else {
         return true;
     }
+}
+
+void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity)
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(currentIdentity));
+    QStringList oldWhiteList = identityGroup.readEntry("Emails", QStringList());
+    Q_FOREACH(const QString &email, lst) {
+        if (!oldWhiteList.contains(email)) {
+            oldWhiteList.append(email);
+        }
+    }
+    identityGroup.writeEntry("Emails", oldWhiteList);
+    identityGroup.sync();
+    Q_EMIT forceReloadConfig();
 }
 
 void ConfirmAddressInterface::reloadConfig()

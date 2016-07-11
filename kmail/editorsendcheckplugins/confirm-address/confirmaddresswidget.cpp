@@ -59,9 +59,27 @@ void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool v
 {
     Q_FOREACH (const QString &email, address) {
         QListWidgetItem *item = new QListWidgetItem(email, mListEmails);
+        item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if (!valid) {
+            item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
+            item->setCheckState(Qt::Unchecked);
             item->setTextColor(Qt::red);
+        } else {
+            item->setFlags(item->flags() &~ Qt::ItemIsUserCheckable);
         }
         mListEmails->addItem(item);
     }
+}
+
+QStringList ConfirmAddressWidget::whiteListSelectedEmails() const
+{
+    QStringList lst;
+    const int nbItems(mListEmails->count());
+    for (int i = 0; i < nbItems; ++i) {
+        QListWidgetItem *item = mListEmails->item(i);
+        if (item->checkState() == Qt::Checked) {
+            lst << item->text();
+        }
+    }
+    return lst;
 }

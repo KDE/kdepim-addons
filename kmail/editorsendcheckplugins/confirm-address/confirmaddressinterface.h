@@ -30,10 +30,14 @@ public:
     ~ConfirmAddressInterface();
     bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
 
+Q_SIGNALS:
+    void forceReloadConfig();
+
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
 
 private:
+    void slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity);
     bool mEnabled;
 
     struct ConfirmAddressSettings {

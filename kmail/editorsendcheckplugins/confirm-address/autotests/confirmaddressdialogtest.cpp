@@ -23,6 +23,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QPushButton>
 
 ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)
@@ -46,6 +47,10 @@ void ConfirmAddressDialogTest::shouldHaveDefaultValue()
 
     ConfirmAddressWidget *confirmAddressWidget = dlg.findChild<ConfirmAddressWidget *>(QStringLiteral("confirmwidget"));
     QVERIFY(confirmAddressWidget);
+
+    QPushButton *whiteListEmailsButton = dlg.findChild<QPushButton *>(QStringLiteral("whiteListEmailsButton"));
+    QVERIFY(whiteListEmailsButton);
+
 }
 
 QTEST_MAIN(ConfirmAddressDialogTest)

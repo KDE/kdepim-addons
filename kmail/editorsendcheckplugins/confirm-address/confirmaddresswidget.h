@@ -31,6 +31,7 @@ public:
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);
+    QStringList whiteListSelectedEmails() const;
 private:
     void createAddressItems(const QStringList &address, bool valid);
     QListWidget *mListEmails;

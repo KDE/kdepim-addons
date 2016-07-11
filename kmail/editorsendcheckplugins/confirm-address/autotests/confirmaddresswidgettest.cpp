@@ -71,4 +71,39 @@ void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
     QCOMPARE(listEmails->count(), lst.count() * 2);
 }
 
+void ConfirmAddressWidgetTest::shouldHaveCheckableItem()
+{
+    ConfirmAddressWidget w;
+    QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    w.setValidAddresses(lst);
+    for(int i = 0; i < listEmails->count(); ++i) {
+        QListWidgetItem *item = listEmails->item(i);
+        QCOMPARE(static_cast<bool>(item->flags() & Qt::ItemIsUserCheckable), false);
+    }
+    listEmails->clear();
+    w.setInvalidAddresses(lst);
+    for(int i = 0; i < listEmails->count(); ++i) {
+        QListWidgetItem *item = listEmails->item(i);
+        QCOMPARE(static_cast<bool>(item->flags() & Qt::ItemIsUserCheckable), true);
+    }
+}
+
+void ConfirmAddressWidgetTest::shouldGetWhileListEmails()
+{
+    ConfirmAddressWidget w;
+    QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
+    const QStringList validLst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    const QStringList invalidLst{ QStringLiteral("boo"), QStringLiteral("boo2"), QStringLiteral("boo3")};
+    w.setValidAddresses(validLst);
+    w.setInvalidAddresses(invalidLst);
+    for(int i = 0; i < listEmails->count(); ++i) {
+        QListWidgetItem *item = listEmails->item(i);
+        if (item->flags() & Qt::ItemIsUserCheckable) {
+            item->setCheckState(Qt::Checked);
+        }
+    }
+    QCOMPARE(w.whiteListSelectedEmails(), invalidLst);
+}
+
 QTEST_MAIN(ConfirmAddressWidgetTest)

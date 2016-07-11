@@ -31,9 +31,16 @@ public:
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);
+    void setCurrentIdentity(uint identity);
+
+Q_SIGNALS:
+    void addWhileListEmails(const QStringList &, uint currentIdentity);
+
 private:
+    void slotWhiteListSelectedEmails();
     void writeConfig();
     void readConfig();
+    uint mCurrentIdentity;
     ConfirmAddressWidget *mConfirmWidget;
 };
 
