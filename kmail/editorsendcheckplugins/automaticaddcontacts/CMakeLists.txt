@@ -2,6 +2,7 @@ set(kmail_automaticaddcontactseditorplugin_SRCS
     automaticaddcontactsinterface.cpp
     automaticaddcontactsplugin.cpp
     automaticaddcontactsconfigurewidget.cpp
+    automaticaddcontactsjob.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_automaticaddcontactseditorplugin_SRCS HEADER automaticaddcontactsplugin_debug.h IDENTIFIER KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG CATEGORY_NAME log_kmail_automaticaddcontactsplugin)
