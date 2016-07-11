@@ -17,27 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "checkbeforesendplugintest.h"
-#include "../checkbeforesendplugin.h"
-#include <QTest>
+#ifndef CHECKBEFORESENDINTERFACE_H
+#define CHECKBEFORESENDINTERFACE_H
 
-CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
-    : QObject(parent)
+#include <MessageComposer/PluginEditorCheckBeforeSendInterface>
+class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
+    Q_OBJECT
+public:
+    explicit AutomaticAddContactsInterface(QObject *parent = Q_NULLPTR);
+    ~AutomaticAddContactsInterface();
 
-}
+    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
 
-CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
-{
+public Q_SLOTS:
+    void reloadConfig() Q_DECL_OVERRIDE;
+};
 
-}
-
-void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
-{
-    CheckBeforeSendPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
-    QVERIFY(plugin.createInterface(this));
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
-}
-
-QTEST_MAIN(CheckBeforeSendPluginTest)
+#endif // CHECKBEFORESENDINTERFACE_H

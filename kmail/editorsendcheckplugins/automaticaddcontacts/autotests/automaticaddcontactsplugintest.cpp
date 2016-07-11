@@ -16,28 +16,28 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+#include "automaticaddcontactsplugintest.h"
+#include "../automaticaddcontactsplugin.h"
 
-#include "checkbeforesendplugintest.h"
-#include "../checkbeforesendplugin.h"
 #include <QTest>
 
-CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
+AutomaticAddContactsPluginTest::AutomaticAddContactsPluginTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
+AutomaticAddContactsPluginTest::~AutomaticAddContactsPluginTest()
 {
 
 }
 
-void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
+void AutomaticAddContactsPluginTest::shouldHaveDefaultValue()
 {
-    CheckBeforeSendPlugin plugin;
+    AutomaticAddContactsPlugin plugin;
     QVERIFY(plugin.hasConfigureSupport());
     QVERIFY(plugin.createInterface(this));
     QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
 }
 
-QTEST_MAIN(CheckBeforeSendPluginTest)
+QTEST_MAIN(AutomaticAddContactsPluginTest)

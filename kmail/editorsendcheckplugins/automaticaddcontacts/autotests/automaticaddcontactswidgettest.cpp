@@ -17,27 +17,25 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "checkbeforesendplugintest.h"
-#include "../checkbeforesendplugin.h"
+#include "automaticaddcontactswidgettest.h"
+#include "../automaticaddcontactsconfigurewidget.h"
+
 #include <QTest>
 
-CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
+AutomaticAddContactsWidgetTest::AutomaticAddContactsWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
+AutomaticAddContactsWidgetTest::~AutomaticAddContactsWidgetTest()
 {
 
 }
 
-void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
+void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
 {
-    CheckBeforeSendPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
-    QVERIFY(plugin.createInterface(this));
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
+
 }
 
-QTEST_MAIN(CheckBeforeSendPluginTest)
+QTEST_MAIN(AutomaticAddContactsWidgetTest)

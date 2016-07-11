@@ -17,27 +17,31 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "checkbeforesendplugintest.h"
-#include "../checkbeforesendplugin.h"
-#include <QTest>
+#include "automaticaddcontactsconfigurewidget.h"
+#include <KLocalizedString>
+#include <QCheckBox>
+#include <QVBoxLayout>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
-CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
-    : QObject(parent)
+AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+{
+}
+
+AutomaticAddContactsWidget::~AutomaticAddContactsWidget()
 {
 
 }
 
-CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
+void AutomaticAddContactsWidget::loadSettings()
 {
-
 }
 
-void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
+void AutomaticAddContactsWidget::saveSettings()
 {
-    CheckBeforeSendPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
-    QVERIFY(plugin.createInterface(this));
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
 }
 
-QTEST_MAIN(CheckBeforeSendPluginTest)
+void AutomaticAddContactsWidget::resetSettings()
+{
+}

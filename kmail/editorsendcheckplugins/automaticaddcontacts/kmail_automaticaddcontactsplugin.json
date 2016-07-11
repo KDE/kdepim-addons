@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Name": "Automatic Add Contacts", 
+        "ServiceTypes": [
+            "KMailEditor/PluginCheckBeforeSend"
+        ], 
+        "Version": "1.0"
+    } 
+}
