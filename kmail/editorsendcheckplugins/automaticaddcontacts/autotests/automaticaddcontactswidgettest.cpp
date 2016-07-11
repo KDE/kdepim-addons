@@ -20,12 +20,15 @@
 #include "automaticaddcontactswidgettest.h"
 #include "../automaticaddcontactsconfigurewidget.h"
 
+#include <QCheckBox>
 #include <QTest>
+#include <QVBoxLayout>
+#include <QStandardPaths>
 
 AutomaticAddContactsWidgetTest::AutomaticAddContactsWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AutomaticAddContactsWidgetTest::~AutomaticAddContactsWidgetTest()
@@ -35,6 +38,14 @@ AutomaticAddContactsWidgetTest::~AutomaticAddContactsWidgetTest()
 
 void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
 {
+    AutomaticAddContactsWidget w;
+    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(vboxlayout);
+
+    QCheckBox *mEnabled = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
+    QVERIFY(mEnabled);
+    QVERIFY(!mEnabled->text().isEmpty());
+    QVERIFY(!mEnabled->isChecked());
 
 }
 

@@ -33,6 +33,8 @@ public:
     void loadSettings() Q_DECL_OVERRIDE;
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
+private:
+    QCheckBox *mEnabled;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H

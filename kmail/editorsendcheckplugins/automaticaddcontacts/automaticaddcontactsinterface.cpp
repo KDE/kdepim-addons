@@ -18,6 +18,8 @@
 */
 
 #include "automaticaddcontactsinterface.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -32,9 +34,14 @@ AutomaticAddContactsInterface::~AutomaticAddContactsInterface()
 
 bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
+    if (mEnabled) {
+        //TODO
+    }
     return true;
 }
 
 void AutomaticAddContactsInterface::reloadConfig()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
+    mEnabled = grp.readEntry("Enabled", false);
 }

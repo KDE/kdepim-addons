@@ -27,6 +27,11 @@
 AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
+    mEnabled->setObjectName(QStringLiteral("enabled"));
+    mainLayout->addWidget(mEnabled);
 }
 
 AutomaticAddContactsWidget::~AutomaticAddContactsWidget()

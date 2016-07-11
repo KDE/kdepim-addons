@@ -32,6 +32,8 @@ public:
 
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
+private:
+    bool mEnabled;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H
