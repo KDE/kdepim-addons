@@ -52,7 +52,7 @@ bool AutomaticAddContactsPlugin::hasConfigureSupport() const
 MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting AutomaticAddContactsPlugin::createConfigureWidget(QWidget *parent) const
 {
     AutomaticAddContactsWidget *w = new AutomaticAddContactsWidget(parent);
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Check Before Send Email"));
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Add Automatically Contacts"));
     return settings;
 }
 

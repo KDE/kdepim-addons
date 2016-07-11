@@ -28,6 +28,12 @@ class AutomaticAddContactsJob : public QObject
 public:
     explicit AutomaticAddContactsJob(QObject *parent = Q_NULLPTR);
     ~AutomaticAddContactsJob();
+
+    void start();
+
+    void setEmails(const QStringList &emails);
+private:
+    QStringList mEmails;
 };
 
 #endif // AUTOMATICADDCONTACTSJOB_H

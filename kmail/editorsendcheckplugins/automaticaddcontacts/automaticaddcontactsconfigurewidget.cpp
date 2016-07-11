@@ -32,6 +32,7 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
     mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
     mEnabled->setObjectName(QStringLiteral("enabled"));
     mainLayout->addWidget(mEnabled);
+    mainLayout->addStretch(1);
 }
 
 AutomaticAddContactsWidget::~AutomaticAddContactsWidget()

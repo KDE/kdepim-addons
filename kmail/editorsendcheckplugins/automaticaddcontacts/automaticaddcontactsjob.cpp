@@ -29,3 +29,18 @@ AutomaticAddContactsJob::~AutomaticAddContactsJob()
 {
 
 }
+
+void AutomaticAddContactsJob::start()
+{
+    if (mEmails.isEmpty()) {
+        deleteLater();
+    } else {
+
+    }
+    //TODO
+}
+
+void AutomaticAddContactsJob::setEmails(const QStringList &emails)
+{
+    mEmails = emails;
+}
