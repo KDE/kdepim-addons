@@ -23,11 +23,12 @@
 #include <QVBoxLayout>
 #include <QListWidget>
 #include <QLabel>
+#include <QStandardPaths>
 
 ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressWidgetTest::~ConfirmAddressWidgetTest()

@@ -22,11 +22,12 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QCheckBox>
+#include <QStandardPaths>
 
 CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
