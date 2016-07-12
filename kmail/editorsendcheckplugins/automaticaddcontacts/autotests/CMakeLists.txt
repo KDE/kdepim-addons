@@ -8,7 +8,7 @@ macro(add_kmail_automaticaddscontacts_unittest _source _additional)
     add_test( ${_name} ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
-    target_link_libraries( ${_name} Qt5::Test KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon)
+    target_link_libraries( ${_name} Qt5::Test KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::AkonadiWidgets)
 endmacro ()
 
 add_kmail_automaticaddscontacts_unittest(automaticaddcontactsplugintest.cpp "../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp")

@@ -23,6 +23,11 @@
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 class QCheckBox;
+
+namespace Akonadi {
+class CollectionComboBox;
+}
+
 class AutomaticAddContactsWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
@@ -35,6 +40,7 @@ public:
     void resetSettings() Q_DECL_OVERRIDE;
 private:
     QCheckBox *mEnabled;
+    Akonadi::CollectionComboBox *mCollectionCombobox;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H
