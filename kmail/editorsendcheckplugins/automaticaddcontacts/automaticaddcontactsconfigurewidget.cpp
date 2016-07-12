@@ -28,7 +28,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
+AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent, QAbstractItemModel *model)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -45,14 +45,15 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
 
     QLabel *lab = new QLabel(i18n("Select the addressbook to store contacts:"), this);
     lab->setObjectName(QStringLiteral("labelfolder"));
-    mainLayout->addWidget(lab);
+    hlay->addWidget(lab);
 
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox;
+    mCollectionCombobox = new Akonadi::CollectionComboBox(model);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+    hlay->addWidget(mCollectionCombobox);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::currentIndexChanged),
             this, &AutomaticAddContactsWidget::configureChanged);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::activated),

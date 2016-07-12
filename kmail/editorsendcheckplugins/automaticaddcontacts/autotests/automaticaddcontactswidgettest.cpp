@@ -24,6 +24,8 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QLabel>
+#include <AkonadiWidgets/CollectionComboBox>
 
 AutomaticAddContactsWidgetTest::AutomaticAddContactsWidgetTest(QObject *parent)
     : QObject(parent)
@@ -51,6 +53,13 @@ void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
     QVERIFY(hlay);
     QCOMPARE(hlay->margin(), 0);
 
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("labelfolder"));
+    QVERIFY(lab);
+    QVERIFY(!lab->text().isEmpty());
+
+
+    Akonadi::CollectionComboBox *mCollectionCombobox = w.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    QVERIFY(mCollectionCombobox);
 }
 
 void AutomaticAddContactsWidgetTest::shouldResetValue()

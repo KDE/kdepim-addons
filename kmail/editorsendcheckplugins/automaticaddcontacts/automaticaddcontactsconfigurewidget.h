@@ -27,12 +27,12 @@ class QCheckBox;
 namespace Akonadi {
 class CollectionComboBox;
 }
-
+class QAbstractItemModel;
 class AutomaticAddContactsWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsWidget(QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsWidget(QWidget *parent = Q_NULLPTR, QAbstractItemModel *model = Q_NULLPTR);
     ~AutomaticAddContactsWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;
