@@ -18,6 +18,7 @@
 */
 
 #include "automaticaddcontactsinterface.h"
+#include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -35,7 +36,15 @@ AutomaticAddContactsInterface::~AutomaticAddContactsInterface()
 bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
     if (mEnabled) {
-        //TODO
+        if (mContactCollection.isValid()) {
+            const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+            if (!lst.isEmpty()) {
+                //Don't delete it, it's autodelete
+                AutomaticAddContactsJob *job = new AutomaticAddContactsJob;
+                job->setCollection(mContactCollection);
+                job->start();
+            }
+        }
     }
     return true;
 }
@@ -44,4 +53,5 @@ void AutomaticAddContactsInterface::reloadConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
     mEnabled = grp.readEntry("Enabled", false);
+    mContactCollection = Akonadi::Collection(grp.readEntry("Collection", -1));
 }

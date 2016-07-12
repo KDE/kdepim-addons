@@ -33,6 +33,8 @@ public:
     void start();
 
     void setEmails(const QStringList &emails);
+    void setCollection(const Akonadi::Collection &collection);
+
 private:
     QStringList mEmails;
     Akonadi::Collection mCollection;

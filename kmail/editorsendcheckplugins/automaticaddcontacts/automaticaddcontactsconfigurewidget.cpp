@@ -77,6 +77,7 @@ void AutomaticAddContactsWidget::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
     grp.writeEntry("Enabled", mEnabled->isChecked());
+    grp.writeEntry("Collection", mCollectionCombobox->currentCollection().id());
 }
 
 void AutomaticAddContactsWidget::resetSettings()

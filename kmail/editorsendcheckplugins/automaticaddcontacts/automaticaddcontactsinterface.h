@@ -21,6 +21,8 @@
 #define CHECKBEFORESENDINTERFACE_H
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
+#include <AkonadiCore/Collection>
+
 class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
     Q_OBJECT
@@ -34,6 +36,7 @@ public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
 private:
     bool mEnabled;
+    Akonadi::Collection mContactCollection;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H

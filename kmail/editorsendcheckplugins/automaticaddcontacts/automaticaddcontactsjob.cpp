@@ -50,3 +50,8 @@ void AutomaticAddContactsJob::setEmails(const QStringList &emails)
 {
     mEmails = emails;
 }
+
+void AutomaticAddContactsJob::setCollection(const Akonadi::Collection &collection)
+{
+    mCollection = collection;
+}
