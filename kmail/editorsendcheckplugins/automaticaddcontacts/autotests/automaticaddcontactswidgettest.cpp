@@ -47,6 +47,10 @@ void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
     QVERIFY(!mEnabled->text().isEmpty());
     QVERIFY(!mEnabled->isChecked());
 
+    QHBoxLayout *hlay = w.findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
+    QVERIFY(hlay);
+    QCOMPARE(hlay->margin(), 0);
+
 }
 
 void AutomaticAddContactsWidgetTest::shouldResetValue()
