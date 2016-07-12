@@ -44,6 +44,9 @@ void AutomaticAddContactsJob::start()
         }
     }
     //TODO
+    //Remove it when implemented
+    deleteLater();
+
 }
 
 void AutomaticAddContactsJob::setEmails(const QStringList &emails)
