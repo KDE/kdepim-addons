@@ -22,7 +22,7 @@
 
 #include <QObject>
 #include <AkonadiCore/Collection>
-
+class KJob;
 class AutomaticAddContactsJob : public QObject
 {
     Q_OBJECT
@@ -36,9 +36,13 @@ public:
     void setCollection(const Akonadi::Collection &collection);
 
 private:
+    void fetchCollection();
+    void verifyContactExist();
+    void addNextContact();
     QStringList mEmails;
     QStringList mProcessedEmails;
     Akonadi::Collection mCollection;
+    int mCurrentIndex;
+    void slotCollectionsFetched(KJob *job);
 };
-
 #endif // AUTOMATICADDCONTACTSJOB_H
