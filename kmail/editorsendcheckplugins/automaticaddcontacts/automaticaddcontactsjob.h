@@ -37,6 +37,7 @@ public:
 
 private:
     QStringList mEmails;
+    QStringList mProcessedEmails;
     Akonadi::Collection mCollection;
 };
 

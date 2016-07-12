@@ -19,6 +19,7 @@
 
 #include "automaticaddcontactsjob.h"
 #include "automaticaddcontactsplugin_debug.h"
+#include <Libkdepim/AddEmailAddressJob>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
@@ -43,6 +44,7 @@ void AutomaticAddContactsJob::start()
             return;
         }
     }
+
     //TODO
     //Remove it when implemented
     deleteLater();
