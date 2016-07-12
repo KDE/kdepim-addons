@@ -33,7 +33,8 @@ QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
     return dbg;
 }
 
-bool operator==(const CalendarEvents::EventData &lhs, const CalendarEvents::EventData &rhs)
+namespace CalendarEvents {
+bool operator==(const EventData &lhs, const EventData &rhs)
 {
     return lhs.uid() == rhs.uid()
            && lhs.type() == rhs.type()
@@ -46,9 +47,7 @@ bool operator==(const CalendarEvents::EventData &lhs, const CalendarEvents::Even
            && lhs.eventColor() == rhs.eventColor();
 }
 
-namespace std
-{
-bool operator<(const CalendarEvents::EventData &lhs, const CalendarEvents::EventData &rhs)
+bool operator<(const EventData &lhs, const EventData &rhs)
 {
     if (lhs.startDateTime() != rhs.startDateTime()) {
         return lhs.startDateTime() < rhs.startDateTime();
