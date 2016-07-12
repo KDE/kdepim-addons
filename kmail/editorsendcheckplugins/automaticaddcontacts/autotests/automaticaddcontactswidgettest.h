@@ -21,7 +21,8 @@
 #define AUTOMATICADDCONTACTSWIDGETTEST_H
 
 #include <QObject>
-
+class QStandardItemModel;
+class AutomaticAddContactsWidget;
 class AutomaticAddContactsWidgetTest : public QObject
 {
     Q_OBJECT
@@ -31,6 +32,9 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldResetValue();
+private:
+    AutomaticAddContactsWidget *createContactWidget();
+    QStandardItemModel *mComboboxModel;
 };
 
 #endif // AUTOMATICADDCONTACTSWIDGETTEST_H

@@ -11,7 +11,11 @@ macro(add_kmail_automaticaddscontacts_unittest _source _additional)
     target_link_libraries( ${_name} Qt5::Test KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::AkonadiWidgets)
 endmacro ()
 
-add_kmail_automaticaddscontacts_unittest(automaticaddcontactsplugintest.cpp "../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp")
-add_kmail_automaticaddscontacts_unittest(automaticaddcontactsinterfacetest.cpp "../automaticaddcontactsinterface.cpp")
-add_kmail_automaticaddscontacts_unittest(automaticaddcontactswidgettest.cpp "../automaticaddcontactsconfigurewidget.cpp")
-add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp")
+set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
+set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
+
+
+add_akonadi_isolated_test_advanced(automaticaddcontactsplugintest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets")
+add_akonadi_isolated_test_advanced(automaticaddcontactsinterfacetest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsinterface.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets")
+add_akonadi_isolated_test_advanced(automaticaddcontactswidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfigurewidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets")
+add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets")
