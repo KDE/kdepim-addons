@@ -50,4 +50,5 @@ void AutomaticAddContactsWidget::saveSettings()
 
 void AutomaticAddContactsWidget::resetSettings()
 {
+    mEnabled->setChecked(false);
 }

@@ -49,4 +49,16 @@ void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
 
 }
 
+void AutomaticAddContactsWidgetTest::shouldResetValue()
+{
+    AutomaticAddContactsWidget w;
+    QCheckBox *mEnabled = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
+    QVERIFY(!mEnabled->isChecked());
+    mEnabled->setChecked(true);
+    QVERIFY(mEnabled->isChecked());
+
+    w.resetSettings();
+    QVERIFY(!mEnabled->isChecked());
+}
+
 QTEST_MAIN(AutomaticAddContactsWidgetTest)

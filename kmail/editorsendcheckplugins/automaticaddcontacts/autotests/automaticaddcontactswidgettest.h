@@ -30,6 +30,7 @@ public:
     ~AutomaticAddContactsWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldResetValue();
 };
 
 #endif // AUTOMATICADDCONTACTSWIDGETTEST_H
