@@ -96,7 +96,7 @@ void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uin
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
     KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(currentIdentity));
     QStringList oldWhiteList = identityGroup.readEntry("Emails", QStringList());
-    Q_FOREACH(const QString &email, lst) {
+    Q_FOREACH (const QString &email, lst) {
         if (!oldWhiteList.contains(email)) {
             oldWhiteList.append(email);
         }

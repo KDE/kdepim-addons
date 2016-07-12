@@ -65,7 +65,7 @@ void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool v
             item->setCheckState(Qt::Unchecked);
             item->setTextColor(Qt::red);
         } else {
-            item->setFlags(item->flags() &~ Qt::ItemIsUserCheckable);
+            item->setFlags(item->flags() & ~ Qt::ItemIsUserCheckable);
         }
         mListEmails->addItem(item);
     }

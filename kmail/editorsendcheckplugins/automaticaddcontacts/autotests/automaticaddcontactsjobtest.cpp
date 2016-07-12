@@ -31,5 +31,4 @@ AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest()
 
 }
 
-
 QTEST_MAIN(AutomaticAddContactsJobTest)

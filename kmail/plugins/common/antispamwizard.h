@@ -351,7 +351,6 @@ protected:
     Akonadi::Collection selectedSpamCollection() const;
     Akonadi::Collection selectedUnsureCollection() const;
 
-
 Q_SIGNALS:
     void selectionChanged();
 
