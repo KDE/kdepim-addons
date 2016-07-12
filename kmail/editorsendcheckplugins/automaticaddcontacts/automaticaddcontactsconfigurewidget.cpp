@@ -37,7 +37,8 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent)
 
 AutomaticAddContactsWidget::~AutomaticAddContactsWidget()
 {
-
+    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
+    mEnabled->setChecked(grp.readEntry("Enabled", false));
 }
 
 void AutomaticAddContactsWidget::loadSettings()
@@ -46,6 +47,8 @@ void AutomaticAddContactsWidget::loadSettings()
 
 void AutomaticAddContactsWidget::saveSettings()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
+    grp.writeEntry("Enabled", mEnabled->isChecked());
 }
 
 void AutomaticAddContactsWidget::resetSettings()

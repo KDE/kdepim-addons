@@ -18,6 +18,7 @@
 */
 
 #include "automaticaddcontactsjob.h"
+#include "automaticaddcontactsplugin_debug.h"
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
@@ -34,8 +35,13 @@ void AutomaticAddContactsJob::start()
 {
     if (mEmails.isEmpty()) {
         deleteLater();
+        return;
     } else {
-
+        if (!mCollection.isValid()) {
+            qCDebug(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Invalid collection";
+            deleteLater();
+            return;
+        }
     }
     //TODO
 }

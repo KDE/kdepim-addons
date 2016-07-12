@@ -21,6 +21,7 @@
 #define AUTOMATICADDCONTACTSJOB_H
 
 #include <QObject>
+#include <AkonadiCore/Collection>
 
 class AutomaticAddContactsJob : public QObject
 {
@@ -34,6 +35,7 @@ public:
     void setEmails(const QStringList &emails);
 private:
     QStringList mEmails;
+    Akonadi::Collection mCollection;
 };
 
 #endif // AUTOMATICADDCONTACTSJOB_H
