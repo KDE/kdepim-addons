@@ -54,6 +54,7 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent, QAbstrac
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
     hlay->addWidget(mCollectionCombobox);
+    hlay->addStretch(1);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::currentIndexChanged),
             this, &AutomaticAddContactsWidget::configureChanged);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::activated),

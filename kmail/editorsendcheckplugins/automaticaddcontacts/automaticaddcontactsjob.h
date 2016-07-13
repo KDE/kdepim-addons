@@ -39,10 +39,13 @@ private:
     void fetchCollection();
     void verifyContactExist();
     void addNextContact();
+    void slotSelectedCollectionFetched(KJob *job);
+    void slotFetchAllCollections(KJob *);
+    void slotSearchDone(KJob *job);
     QStringList mEmails;
     QStringList mProcessedEmails;
+    QString mProcessEmail;
     Akonadi::Collection mCollection;
     int mCurrentIndex;
-    void slotCollectionsFetched(KJob *job);
 };
 #endif // AUTOMATICADDCONTACTSJOB_H

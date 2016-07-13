@@ -42,6 +42,7 @@ bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorChec
                 //Don't delete it, it's autodelete
                 AutomaticAddContactsJob *job = new AutomaticAddContactsJob;
                 job->setCollection(mContactCollection);
+                job->setEmails(lst);
                 job->start();
             }
         }

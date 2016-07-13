@@ -55,7 +55,6 @@ void AutomaticAddContactsJob::start()
     mCurrentIndex = 0;
     //1) fetch collection to be sure that it's ok
     fetchCollection();
-    addNextContact();
     //TODO
     //Remove it when implemented
     deleteLater();
@@ -68,21 +67,64 @@ void AutomaticAddContactsJob::fetchCollection()
 
     const QStringList mimeTypes(KContacts::Addressee::mimeType());
     addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
-    connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotCollectionsFetched);
+    connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotSelectedCollectionFetched);
 }
 
-void AutomaticAddContactsJob::slotCollectionsFetched(KJob *job)
+void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
+{
+    if (job->error()) {
+        //Collection not found.
+        //fetch all collection
+        const QStringList mimeTypes(KContacts::Addressee::mimeType());
+
+        Akonadi::CollectionFetchJob *const addressBookJob =
+            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
+                                            Akonadi::CollectionFetchJob::Recursive);
+
+        addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
+        connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotFetchAllCollections);
+        return;
+    }
+    const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
+    mCollection = addressBookJob->collections().at(0);
+    addNextContact();
+}
+
+
+void AutomaticAddContactsJob::slotFetchAllCollections(KJob*)
 {
 #if 0
     if (job->error()) {
+        q->setError(job->error());
+        q->setErrorText(job->errorText());
+        q->emitResult();
+        return;
+    }
+
+    const Akonadi::CollectionFetchJob *addressBookJob =
+        qobject_cast<Akonadi::CollectionFetchJob *>(job);
+
+    Akonadi::Collection::List canCreateItemCollections;
+
+    foreach (const Akonadi::Collection &collection, addressBookJob->collections()) {
+        if (Akonadi::Collection::CanCreateItem & collection.rights()) {
+            canCreateItemCollections.append(collection);
+        }
+    }
+
+    Akonadi::Collection addressBook;
+
+    const int nbItemCollection(canCreateItemCollections.size());
+    if (nbItemCollection == 0) {
         if (KMessageBox::questionYesNo(
-                    0,
+                    mParentWidget,
                     i18nc("@info",
                           "You must create an address book before adding a contact. Do you want to create an address book?"),
                     i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
             Akonadi::AgentTypeDialog dlg(mParentWidget);
             dlg.setWindowTitle(i18n("Add Address Book"));
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
+            dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
             dlg.agentFilterProxyModel()->addCapabilityFilter(QStringLiteral("Resource"));
 
             if (dlg.exec()) {
@@ -90,20 +132,23 @@ void AutomaticAddContactsJob::slotCollectionsFetched(KJob *job)
 
                 if (agentType.isValid()) {
                     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
-                    connect(job, SIGNAL(result(KJob*)), SLOT(slotResourceCreationDone(KJob*)));
+                    q->connect(job, SIGNAL(result(KJob*)), SLOT(slotResourceCreationDone(KJob*)));
                     job->configure(mParentWidget);
                     job->start();
                     return;
-                } else {
-                    deleteLater();
+                } else { //if agent is not valid => return error and finish job
+                    q->setError(UserDefinedError);
+                    q->emitResult();
                     return;
                 }
             } else { //Canceled create agent => return error and finish job
-                deleteLater();
+                q->setError(UserDefinedError);
+                q->emitResult();
                 return;
             }
         } else {
-            deleteLater();
+            q->setError(UserDefinedError);
+            q->emitResult();
             return;
         }
     } else if (nbItemCollection == 1) {
@@ -131,6 +176,18 @@ void AutomaticAddContactsJob::slotCollectionsFetched(KJob *job)
         q->emitResult();
         return;
     }
+    KContacts::Addressee contact;
+    contact.setNameFromString(mName);
+    contact.insertEmail(mEmail, true);
+
+    // create the new item
+    Akonadi::Item item;
+    item.setMimeType(KContacts::Addressee::mimeType());
+    item.setPayload<KContacts::Addressee>(contact);
+
+    // save the new item in akonadi storage
+    Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
+    q->connect(createJob, SIGNAL(result(KJob*)), SLOT(slotAddContactDone(KJob*)));
 #endif
 }
 
@@ -143,7 +200,11 @@ void AutomaticAddContactsJob::verifyContactExist()
                         Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, SIGNAL(result(KJob*)), SLOT(slotSearchDone(KJob*)));
 #endif
+}
 
+void AutomaticAddContactsJob::slotSearchDone(KJob *job)
+{
+    //TODO
 }
 
 void AutomaticAddContactsJob::addNextContact()
