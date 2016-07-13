@@ -40,7 +40,7 @@ private:
     void verifyContactExist();
     void addNextContact();
     void slotSelectedCollectionFetched(KJob *job);
-    void slotFetchAllCollections(KJob *);
+    void slotFetchAllCollections(KJob *job);
     void slotSearchDone(KJob *job);
     QStringList mEmails;
     QStringList mProcessedEmails;

@@ -91,18 +91,15 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
 }
 
 
-void AutomaticAddContactsJob::slotFetchAllCollections(KJob*)
+void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 {
 #if 0
     if (job->error()) {
-        q->setError(job->error());
-        q->setErrorText(job->errorText());
-        q->emitResult();
+        deleteLater();
         return;
     }
 
-    const Akonadi::CollectionFetchJob *addressBookJob =
-        qobject_cast<Akonadi::CollectionFetchJob *>(job);
+    const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
     Akonadi::Collection::List canCreateItemCollections;
 
@@ -117,7 +114,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob*)
     const int nbItemCollection(canCreateItemCollections.size());
     if (nbItemCollection == 0) {
         if (KMessageBox::questionYesNo(
-                    mParentWidget,
+                    0,
                     i18nc("@info",
                           "You must create an address book before adding a contact. Do you want to create an address book?"),
                     i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
@@ -131,31 +128,28 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob*)
                 const Akonadi::AgentType agentType = dlg.agentType();
 
                 if (agentType.isValid()) {
-                    Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, q);
+                    Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, this);
                     q->connect(job, SIGNAL(result(KJob*)), SLOT(slotResourceCreationDone(KJob*)));
                     job->configure(mParentWidget);
                     job->start();
                     return;
                 } else { //if agent is not valid => return error and finish job
-                    q->setError(UserDefinedError);
-                    q->emitResult();
+                    deleteLater();
                     return;
                 }
             } else { //Canceled create agent => return error and finish job
-                q->setError(UserDefinedError);
-                q->emitResult();
+                deleteLater();
                 return;
             }
         } else {
-            q->setError(UserDefinedError);
-            q->emitResult();
+            deleteLater();
             return;
         }
     } else if (nbItemCollection == 1) {
         addressBook = canCreateItemCollections[0];
     } else {
         // ask user in which address book the new contact shall be stored
-        QPointer<Akonadi::SelectAddressBookDialog> dlg = new Akonadi::SelectAddressBookDialog(mParentWidget);
+        QPointer<Akonadi::SelectAddressBookDialog> dlg = new Akonadi::SelectAddressBookDialog(0);
 
         bool gotIt = true;
         if (dlg->exec()) {
@@ -172,8 +166,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob*)
     }
 
     if (!addressBook.isValid()) {
-        q->setError(UserDefinedError);
-        q->emitResult();
+        deleteLater();
         return;
     }
     KContacts::Addressee contact;
@@ -204,13 +197,16 @@ void AutomaticAddContactsJob::verifyContactExist()
 
 void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 {
+    //if empty => create new one
     //TODO
+    mCurrentIndex++;
+    addNextContact();
 }
 
 void AutomaticAddContactsJob::addNextContact()
 {
     if (mCurrentIndex < mEmails.count()) {
-
+        verifyContactExist();
     } else {
         deleteLater();
     }
