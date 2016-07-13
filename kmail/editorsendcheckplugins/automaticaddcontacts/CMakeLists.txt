@@ -10,7 +10,7 @@ ecm_qt_declare_logging_category(kmail_automaticaddcontactseditorplugin_SRCS HEAD
 add_library(kmail_automaticaddcontactseditorplugin MODULE ${kmail_automaticaddcontactseditorplugin_SRCS})
 
 target_link_libraries(kmail_automaticaddcontactseditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::Libkdepim
     )
 
 install(TARGETS kmail_automaticaddcontactseditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
