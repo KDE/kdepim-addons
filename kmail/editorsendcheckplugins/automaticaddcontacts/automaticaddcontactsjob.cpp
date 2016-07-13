@@ -27,6 +27,10 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <AkonadiWidgets/AgentTypeDialog>
+#include <KEmailAddress>
+
+//#define IMPLEMENTATION_DONE 1
+
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent),
@@ -53,12 +57,11 @@ void AutomaticAddContactsJob::start()
         }
     }
     mCurrentIndex = 0;
-    //1) fetch collection to be sure that it's ok
+#ifdef IMPLEMENTATION_DONE
     fetchCollection();
-    //TODO
-    //Remove it when implemented
+#else
     deleteLater();
-
+#endif
 }
 
 void AutomaticAddContactsJob::fetchCollection()
@@ -186,6 +189,17 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 
 void AutomaticAddContactsJob::verifyContactExist()
 {
+    QString email = mEmails.at(mCurrentIndex);
+    QString tname, temail;
+    KEmailAddress::extractEmailAddressAndName(email, temail, tname);
+    if (temail.isEmpty()) {
+        addNextContact();
+    } else {
+        if (mProcessedEmails.contains(email)) {
+            addNextContact();
+        } else {
+            mProcessEmail = email;
+            mProcessedEmails.append(email);
 #if 0
     Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
@@ -193,18 +207,22 @@ void AutomaticAddContactsJob::verifyContactExist()
                         Akonadi::ContactSearchJob::ExactMatch);
     connect(searchJob, SIGNAL(result(KJob*)), SLOT(slotSearchDone(KJob*)));
 #endif
+            //TODO
+        }
+    }
+
 }
 
 void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 {
     //if empty => create new one
     //TODO
-    mCurrentIndex++;
     addNextContact();
 }
 
 void AutomaticAddContactsJob::addNextContact()
 {
+    mCurrentIndex++;
     if (mCurrentIndex < mEmails.count()) {
         verifyContactExist();
     } else {
