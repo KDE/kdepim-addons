@@ -30,8 +30,8 @@ public:
     ~ViewerPluginCreateeventTest();
 
 private Q_SLOTS:
-    void shouldHaveDefaultValue();
     void shouldCreateAction();
+    void shouldShowWidget();
 };
 
 #endif // VIEWERPLUGINCREATEEVENTTEST_H

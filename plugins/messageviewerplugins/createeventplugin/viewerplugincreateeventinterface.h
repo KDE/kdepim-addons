@@ -46,6 +46,8 @@ private Q_SLOTS:
 
 private:
     void createAction(KActionCollection *ac);
+    EventEdit *widget();
+
     Akonadi::Item mMessageItem;
     EventEdit *mEventEdit;
     QList<QAction *> mAction;

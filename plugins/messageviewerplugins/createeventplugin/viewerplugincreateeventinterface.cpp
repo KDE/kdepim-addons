@@ -30,13 +30,9 @@
 using namespace MessageViewer;
 
 ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent)
+    : ViewerPluginInterface(parent),
+      mEventEdit(Q_NULLPTR)
 {
-    mEventEdit = new EventEdit(parent);
-    connect(mEventEdit, &EventEdit::createEvent, this, &ViewerPluginCreateEventInterface::slotCreateEvent);
-    mEventEdit->setObjectName(QStringLiteral("eventedit"));
-    parent->layout()->addWidget(mEventEdit);
-    mEventEdit->hide();
     createAction(ac);
 }
 
@@ -63,17 +59,17 @@ QList<QAction *> ViewerPluginCreateEventInterface::actions() const
 
 void ViewerPluginCreateEventInterface::setMessage(const KMime::Message::Ptr &value)
 {
-    mEventEdit->setMessage(value);
+    widget()->setMessage(value);
 }
 
 void ViewerPluginCreateEventInterface::closePlugin()
 {
-    mEventEdit->slotCloseWidget();
+    widget()->slotCloseWidget();
 }
 
 void ViewerPluginCreateEventInterface::showWidget()
 {
-    mEventEdit->showEventEdit();
+    widget()->showEventEdit();
 }
 
 void ViewerPluginCreateEventInterface::setMessageItem(const Akonadi::Item &item)
@@ -92,6 +88,19 @@ void ViewerPluginCreateEventInterface::createAction(KActionCollection *ac)
         connect(act, &QAction::triggered, this, &ViewerPluginCreateEventInterface::slotActivatePlugin);
         mAction.append(act);
     }
+}
+
+EventEdit *ViewerPluginCreateEventInterface::widget()
+{
+    if (!mEventEdit) {
+        QWidget *parentWidget = static_cast<QWidget *>(parent());
+        mEventEdit = new EventEdit(parentWidget);
+        connect(mEventEdit, &EventEdit::createEvent, this, &ViewerPluginCreateEventInterface::slotCreateEvent);
+        mEventEdit->setObjectName(QStringLiteral("eventedit"));
+        parentWidget->layout()->addWidget(mEventEdit);
+        mEventEdit->hide();
+    }
+    return mEventEdit;
 }
 
 void ViewerPluginCreateEventInterface::slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection)
