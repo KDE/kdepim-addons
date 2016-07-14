@@ -42,26 +42,27 @@ ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest()
 
 }
 
-void ViewerPluginCreateNoteTest::shouldHaveDefaultValue()
+void ViewerPluginCreateNoteTest::shouldCreateAction()
 {
     MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
     QVERIFY(!note->viewerPluginName().isEmpty());
     QWidget *parent = new QWidget(0);
     parent->setLayout(new QHBoxLayout);
-
-    QVERIFY(note->createView(parent, new KActionCollection(this)));
+    MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
+    QVERIFY(interface);
+    QVERIFY(!interface->actions().isEmpty());
 }
 
-void ViewerPluginCreateNoteTest::shouldCreateAction()
+void ViewerPluginCreateNoteTest::shouldShowWidget()
 {
-    MessageViewer::ViewerPluginCreatenote *event = new MessageViewer::ViewerPluginCreatenote(this);
+    MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
     QWidget *parent = new QWidget(0);
     parent->setLayout(new QHBoxLayout);
-    MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
-    QVERIFY(!interface->actions().isEmpty());
+    MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
+    interface->execute();
     QWidget *createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
     QVERIFY(createnotewidget);
-    QCOMPARE(createnotewidget->isVisible(), false);
+    QCOMPARE(createnotewidget->isHidden(), false);
 }
 
 QTEST_MAIN(ViewerPluginCreateNoteTest)

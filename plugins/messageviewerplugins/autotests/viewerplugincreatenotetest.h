@@ -30,8 +30,8 @@ public:
     ~ViewerPluginCreateNoteTest();
 
 private Q_SLOTS:
-    void shouldHaveDefaultValue();
     void shouldCreateAction();
+    void shouldShowWidget();
 };
 
 #endif // VIEWERPLUGINCREATENOTETEST_H

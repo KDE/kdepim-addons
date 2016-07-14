@@ -49,6 +49,8 @@ private:
     Akonadi::Relation relatedNoteRelation() const;
     void showCreateNewNoteWidget();
     void createAction(KActionCollection *ac);
+    NoteEdit *widget();
+
     Akonadi::Item mMessageItem;
     NoteEdit *mNoteEdit;
     QList<QAction *> mAction;

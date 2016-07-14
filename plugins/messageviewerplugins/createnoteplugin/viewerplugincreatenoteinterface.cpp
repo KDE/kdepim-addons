@@ -33,14 +33,10 @@
 using namespace MessageViewer;
 
 ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent)
+    : ViewerPluginInterface(parent),
+      mNoteEdit(Q_NULLPTR)
 {
     createAction(ac);
-    mNoteEdit = new NoteEdit(parent);
-    mNoteEdit->setObjectName(QStringLiteral("noteedit"));
-    mNoteEdit->hide();
-    connect(mNoteEdit, &NoteEdit::createNote, this, &ViewerPluginCreatenoteInterface::slotCreateNote);
-    parent->layout()->addWidget(mNoteEdit);
 }
 
 ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface()
@@ -61,12 +57,12 @@ QList<QAction *> ViewerPluginCreatenoteInterface::actions() const
 
 void ViewerPluginCreatenoteInterface::setMessage(const KMime::Message::Ptr &value)
 {
-    mNoteEdit->setMessage(value);
+    widget()->setMessage(value);
 }
 
 void ViewerPluginCreatenoteInterface::closePlugin()
 {
-    mNoteEdit->slotCloseWidget();
+    widget()->slotCloseWidget();
 }
 
 Akonadi::Relation ViewerPluginCreatenoteInterface::relatedNoteRelation() const
@@ -98,7 +94,7 @@ void ViewerPluginCreatenoteInterface::showWidget()
 
 void ViewerPluginCreatenoteInterface::showCreateNewNoteWidget()
 {
-    mNoteEdit->showNoteEdit();
+    widget()->showNoteEdit();
 }
 
 void ViewerPluginCreatenoteInterface::slotNoteItemFetched(KJob *job)
@@ -113,7 +109,7 @@ void ViewerPluginCreatenoteInterface::slotNoteItemFetched(KJob *job)
             showCreateNewNoteWidget();
         } else {
             Akonadi::NoteUtils::NoteMessageWrapper note(fetch->items().first().payload<KMime::Message::Ptr>());
-            mNoteEdit->setMessage(note.message());
+            widget()->setMessage(note.message());
             showCreateNewNoteWidget();
         }
     }
@@ -162,4 +158,17 @@ void ViewerPluginCreatenoteInterface::slotCreateNote(const KMime::Message::Ptr &
 {
     CreateNoteJob *createJob = new CreateNoteJob(notePtr, collection, mMessageItem, this);
     createJob->start();
+}
+
+NoteEdit *ViewerPluginCreatenoteInterface::widget()
+{
+    if (!mNoteEdit) {
+        QWidget *parentWidget = static_cast<QWidget *>(parent());
+        mNoteEdit = new NoteEdit(parentWidget);
+        connect(mNoteEdit, &NoteEdit::createNote, this, &ViewerPluginCreatenoteInterface::slotCreateNote);
+        mNoteEdit->setObjectName(QStringLiteral("noteedit"));
+        parentWidget->layout()->addWidget(mNoteEdit);
+        mNoteEdit->hide();
+    }
+    return mNoteEdit;
 }
