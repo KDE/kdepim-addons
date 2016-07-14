@@ -45,6 +45,8 @@ public:
 private:
     void slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
     void createAction(KActionCollection *ac);
+    TodoEdit *widget();
+
     TodoEdit *mTodoEdit;
     QList<QAction *> mAction;
     Akonadi::Item mMessageItem;

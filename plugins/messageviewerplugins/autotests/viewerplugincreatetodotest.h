@@ -30,8 +30,8 @@ public:
     ~ViewerPluginCreateTodoTest();
 
 private Q_SLOTS:
-    void shouldHaveDefaultValue();
     void shouldCreateAction();
+    void shouldShowWidget();
 };
 
 #endif // VIEWERPLUGINCREATETODOTEST_H
