@@ -42,9 +42,11 @@ private:
     void slotSelectedCollectionFetched(KJob *job);
     void slotFetchAllCollections(KJob *job);
     void slotSearchDone(KJob *job);
+    void slotAddContactDone(KJob *job);
     QStringList mEmails;
     QStringList mProcessedEmails;
     QString mProcessEmail;
+    QString mName;
     Akonadi::Collection mCollection;
     int mCurrentIndex;
 };

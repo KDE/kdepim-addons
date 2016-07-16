@@ -27,6 +27,8 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <AkonadiWidgets/AgentTypeDialog>
+#include <Akonadi/Contact/ContactSearchJob>
+#include <AkonadiCore/ItemCreateJob>
 #include <KEmailAddress>
 
 //#define IMPLEMENTATION_DONE 1
@@ -199,6 +201,7 @@ void AutomaticAddContactsJob::verifyContactExist()
             addNextContact();
         } else {
             mProcessEmail = email;
+            mName = tname;
             mProcessedEmails.append(email);
 #if 0
     Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
@@ -215,9 +218,30 @@ void AutomaticAddContactsJob::verifyContactExist()
 
 void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 {
-    //if empty => create new one
-    //TODO
+    Akonadi::ContactSearchJob *searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
+    if (searchJob->error()) {
+        //qCWarning(VCARD_LOG) << "Unable to fetch contact:" << searchJob->errorText();
+        //TODO
+    } else if (searchJob->contacts().isEmpty()) {
+        KContacts::Addressee contact;
+        contact.setNameFromString(mName);
+        contact.insertEmail(mProcessEmail, true);
+
+        // create the new item
+        Akonadi::Item item;
+        item.setMimeType(KContacts::Addressee::mimeType());
+        item.setPayload<KContacts::Addressee>(contact);
+
+        // save the new item in akonadi storage
+        Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(item, mCollection, this);
+        connect(createJob, &KJob::result, this, &AutomaticAddContactsJob::slotAddContactDone);
+    }
     addNextContact();
+}
+
+void AutomaticAddContactsJob::slotAddContactDone(KJob *job)
+{
+    //TODO
 }
 
 void AutomaticAddContactsJob::addNextContact()
