@@ -29,11 +29,9 @@
 using namespace MessageViewer;
 
 ViewerPluginTranslatorInterface::ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent)
+    : ViewerPluginInterface(parent),
+      mTranslatorWidget(Q_NULLPTR)
 {
-    mTranslatorWidget = new PimCommon::TranslatorWidget(parent);
-    mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
-    parent->layout()->addWidget(mTranslatorWidget);
     createAction(ac);
 }
 
@@ -44,7 +42,7 @@ ViewerPluginTranslatorInterface::~ViewerPluginTranslatorInterface()
 
 void ViewerPluginTranslatorInterface::setText(const QString &text)
 {
-    mTranslatorWidget->setTextToTranslate(text);
+    widget()->setTextToTranslate(text);
 }
 
 QList<QAction *> ViewerPluginTranslatorInterface::actions() const
@@ -54,7 +52,7 @@ QList<QAction *> ViewerPluginTranslatorInterface::actions() const
 
 void ViewerPluginTranslatorInterface::showWidget()
 {
-    mTranslatorWidget->show();
+    widget()->show();
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginTranslatorInterface::featureTypes() const
@@ -72,4 +70,16 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
         connect(act, &QAction::triggered, this, &ViewerPluginTranslatorInterface::slotActivatePlugin);
         mAction.append(act);
     }
+}
+
+PimCommon::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
+{
+    if (!mTranslatorWidget) {
+        QWidget *parentWidget = static_cast<QWidget *>(parent());
+        mTranslatorWidget = new PimCommon::TranslatorWidget(parentWidget);
+        mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
+        parentWidget->layout()->addWidget(mTranslatorWidget);
+        mTranslatorWidget->hide();
+    }
+    return mTranslatorWidget;
 }

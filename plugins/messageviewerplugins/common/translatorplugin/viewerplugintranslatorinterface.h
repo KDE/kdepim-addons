@@ -41,10 +41,10 @@ public:
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
 
 private:
+    PimCommon::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
     PimCommon::TranslatorWidget *mTranslatorWidget;
-
 };
 }
 #endif // VIEWERPLUGINTRANSLATORINTERFACE_H
