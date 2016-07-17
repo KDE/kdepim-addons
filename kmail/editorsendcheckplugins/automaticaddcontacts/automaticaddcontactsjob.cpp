@@ -30,13 +30,14 @@
 #include <Akonadi/Contact/ContactSearchJob>
 #include <AkonadiCore/ItemCreateJob>
 #include <KEmailAddress>
+#include <QPointer>
 
 //#define IMPLEMENTATION_DONE 1
 
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent),
-      mCurrentIndex(0)
+      mCurrentIndex(-1)
 {
 
 }
@@ -58,7 +59,7 @@ void AutomaticAddContactsJob::start()
             return;
         }
     }
-    mCurrentIndex = 0;
+    mCurrentIndex = -1;
 #ifdef IMPLEMENTATION_DONE
     fetchCollection();
 #else
@@ -98,7 +99,6 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
 
 void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 {
-#if 0
     if (job->error()) {
         deleteLater();
         return;
@@ -113,6 +113,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
             canCreateItemCollections.append(collection);
         }
     }
+#if 0
 
     Akonadi::Collection addressBook;
 
@@ -135,7 +136,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                 if (agentType.isValid()) {
                     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, this);
                     q->connect(job, SIGNAL(result(KJob*)), SLOT(slotResourceCreationDone(KJob*)));
-                    job->configure(mParentWidget);
+                    //job->configure(mParentWidget);
                     job->start();
                     return;
                 } else { //if agent is not valid => return error and finish job
@@ -166,6 +167,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         }
         delete dlg;
         if (!gotIt) {
+            deleteLater();
             return;
         }
     }
@@ -174,19 +176,8 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         deleteLater();
         return;
     }
-    KContacts::Addressee contact;
-    contact.setNameFromString(mName);
-    contact.insertEmail(mEmail, true);
-
-    // create the new item
-    Akonadi::Item item;
-    item.setMimeType(KContacts::Addressee::mimeType());
-    item.setPayload<KContacts::Addressee>(contact);
-
-    // save the new item in akonadi storage
-    Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(item, addressBook, q);
-    q->connect(createJob, SIGNAL(result(KJob*)), SLOT(slotAddContactDone(KJob*)));
 #endif
+    addNextContact();
 }
 
 void AutomaticAddContactsJob::verifyContactExist()
