@@ -116,8 +116,6 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
             canCreateItemCollections.append(collection);
         }
     }
-#if 1
-
     Akonadi::Collection addressBook;
 
     const int nbItemCollection(canCreateItemCollections.size());
@@ -179,7 +177,6 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         deleteLater();
         return;
     }
-#endif
     addNextContact();
 }
 
