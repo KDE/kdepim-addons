@@ -24,6 +24,7 @@
 #include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/AgentInstanceCreateJob>
 #include <KContacts/Addressee>
+#include <KContacts/ContactGroup>
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <AkonadiWidgets/AgentTypeDialog>
@@ -31,6 +32,8 @@
 #include <AkonadiCore/ItemCreateJob>
 #include <KEmailAddress>
 #include <QPointer>
+#include <akonadi/contact/selectaddressbookdialog.h>
+#include <AkonadiCore/AgentFilterProxyModel>
 
 //#define IMPLEMENTATION_DONE 1
 
@@ -113,7 +116,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
             canCreateItemCollections.append(collection);
         }
     }
-#if 0
+#if 1
 
     Akonadi::Collection addressBook;
 
@@ -124,7 +127,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                     i18nc("@info",
                           "You must create an address book before adding a contact. Do you want to create an address book?"),
                     i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
-            Akonadi::AgentTypeDialog dlg(mParentWidget);
+            Akonadi::AgentTypeDialog dlg(0);
             dlg.setWindowTitle(i18n("Add Address Book"));
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
@@ -135,8 +138,8 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 
                 if (agentType.isValid()) {
                     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, this);
-                    q->connect(job, SIGNAL(result(KJob*)), SLOT(slotResourceCreationDone(KJob*)));
-                    //job->configure(mParentWidget);
+                    connect(job, &KJob::result, this, &AutomaticAddContactsJob::slotResourceCreationDone);
+                    job->configure();
                     job->start();
                     return;
                 } else { //if agent is not valid => return error and finish job
@@ -161,22 +164,33 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         if (dlg->exec()) {
             addressBook = dlg->selectedCollection();
         } else {
-            q->setError(UserDefinedError);
-            q->emitResult();
             gotIt = false;
         }
         delete dlg;
         if (!gotIt) {
+            qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to selected Addressbook selected not valid";
             deleteLater();
             return;
         }
     }
 
     if (!addressBook.isValid()) {
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Addressbook selected not valid";
         deleteLater();
         return;
     }
 #endif
+    addNextContact();
+}
+
+
+void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
+{
+    if (job->error()) {
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to create resource:" << job->errorText();
+        deleteLater();
+        return;
+    }
     addNextContact();
 }
 

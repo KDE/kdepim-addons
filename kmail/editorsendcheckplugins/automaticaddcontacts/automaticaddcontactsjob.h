@@ -43,6 +43,7 @@ private:
     void slotFetchAllCollections(KJob *job);
     void slotSearchDone(KJob *job);
     void slotAddContactDone(KJob *job);
+    void slotResourceCreationDone(KJob *);
     QStringList mEmails;
     QStringList mProcessedEmails;
     QString mProcessEmail;
