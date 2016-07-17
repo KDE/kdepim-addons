@@ -203,14 +203,11 @@ void AutomaticAddContactsJob::verifyContactExist()
             mProcessEmail = email;
             mName = tname;
             mProcessedEmails.append(email);
-#if 0
-    Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
-    searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
-                        Akonadi::ContactSearchJob::ExactMatch);
-    connect(searchJob, SIGNAL(result(KJob*)), SLOT(slotSearchDone(KJob*)));
-#endif
-            //TODO
+            Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
+            searchJob->setLimit(1);
+            searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(),
+                                Akonadi::ContactSearchJob::ExactMatch);
+            connect(searchJob, &KJob::result, this, &AutomaticAddContactsJob::slotSearchDone);
         }
     }
 
@@ -220,8 +217,7 @@ void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 {
     Akonadi::ContactSearchJob *searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->error()) {
-        //qCWarning(VCARD_LOG) << "Unable to fetch contact:" << searchJob->errorText();
-        //TODO
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to fetch contact:" << searchJob->errorText();
     } else if (searchJob->contacts().isEmpty()) {
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
@@ -235,13 +231,17 @@ void AutomaticAddContactsJob::slotSearchDone(KJob *job)
         // save the new item in akonadi storage
         Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(item, mCollection, this);
         connect(createJob, &KJob::result, this, &AutomaticAddContactsJob::slotAddContactDone);
+        return;
     }
     addNextContact();
 }
 
 void AutomaticAddContactsJob::slotAddContactDone(KJob *job)
 {
-    //TODO
+    if (job->error()) {
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Errorwhen add contact to addressbook:" << job->errorText();
+    }
+    addNextContact();
 }
 
 void AutomaticAddContactsJob::addNextContact()
