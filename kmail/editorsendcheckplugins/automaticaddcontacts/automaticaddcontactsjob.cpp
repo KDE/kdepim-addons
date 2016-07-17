@@ -35,8 +35,6 @@
 #include <akonadi/contact/selectaddressbookdialog.h>
 #include <AkonadiCore/AgentFilterProxyModel>
 
-//#define IMPLEMENTATION_DONE 1
-
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent),
       mCurrentIndex(-1)
@@ -62,11 +60,7 @@ void AutomaticAddContactsJob::start()
         }
     }
     mCurrentIndex = -1;
-#ifdef IMPLEMENTATION_DONE
     fetchCollection();
-#else
-    deleteLater();
-#endif
 }
 
 void AutomaticAddContactsJob::fetchCollection()
