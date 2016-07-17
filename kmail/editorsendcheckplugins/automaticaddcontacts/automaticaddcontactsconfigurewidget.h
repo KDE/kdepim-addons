@@ -24,7 +24,8 @@
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 class QCheckBox;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
 class QAbstractItemModel;

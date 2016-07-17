@@ -47,7 +47,6 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent, QAbstrac
     lab->setObjectName(QStringLiteral("labelfolder"));
     hlay->addWidget(lab);
 
-
     mCollectionCombobox = new Akonadi::CollectionComboBox(model);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
@@ -59,7 +58,6 @@ AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent, QAbstrac
             this, &AutomaticAddContactsWidget::configureChanged);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::activated),
             this, &AutomaticAddContactsWidget::configureChanged);
-
 
     mainLayout->addStretch(1);
 }

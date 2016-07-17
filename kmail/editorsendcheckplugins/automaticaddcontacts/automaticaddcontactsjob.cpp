@@ -37,7 +37,6 @@
 
 //#define IMPLEMENTATION_DONE 1
 
-
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent),
       mCurrentIndex(-1)
@@ -98,7 +97,6 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
     mCollection = addressBookJob->collections().at(0);
     addNextContact();
 }
-
 
 void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 {
@@ -179,7 +177,6 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     }
     addNextContact();
 }
-
 
 void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
 {

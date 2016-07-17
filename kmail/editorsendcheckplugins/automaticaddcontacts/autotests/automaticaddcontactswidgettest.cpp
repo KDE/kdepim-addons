@@ -82,7 +82,6 @@ void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-
     Akonadi::CollectionComboBox *mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     QVERIFY(mCollectionCombobox);
     delete w;
