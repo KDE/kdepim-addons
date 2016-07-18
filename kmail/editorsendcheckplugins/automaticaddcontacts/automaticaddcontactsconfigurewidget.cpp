@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactsconfigurewidget.h"
 #include <AkonadiCore/Collection>
 #include <AkonadiWidgets/CollectionComboBox>
@@ -28,58 +29,33 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-AutomaticAddContactsWidget::AutomaticAddContactsWidget(QWidget *parent, QAbstractItemModel *model)
+AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
-    mEnabled->setObjectName(QStringLiteral("enabled"));
-    connect(mEnabled, &QCheckBox::clicked, this, &AutomaticAddContactsWidget::configureChanged);
-    mainLayout->addWidget(mEnabled);
 
-    QHBoxLayout *hlay = new QHBoxLayout;
-    hlay->setMargin(0);
-    hlay->setObjectName(QStringLiteral("folderlayout"));
-    mainLayout->addLayout(hlay);
-
-    QLabel *lab = new QLabel(i18n("Select the addressbook in which to store contacts:"), this);
-    lab->setObjectName(QStringLiteral("labelfolder"));
-    hlay->addWidget(lab);
-
-    mCollectionCombobox = new Akonadi::CollectionComboBox(model);
-    mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
-    mCollectionCombobox->setMinimumWidth(250);
-    mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
-    mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
-    hlay->addWidget(mCollectionCombobox);
-    hlay->addStretch(1);
-    connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::currentIndexChanged),
-            this, &AutomaticAddContactsWidget::configureChanged);
-    connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::activated),
-            this, &AutomaticAddContactsWidget::configureChanged);
-
-    mainLayout->addStretch(1);
+    mConfigureTab = new AutomaticAddContactsConfigureTab(this);
+    mConfigureTab->setObjectName(QStringLiteral("configuretab"));
+    mainLayout->addWidget(mConfigureTab);
+    connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);
 }
 
-AutomaticAddContactsWidget::~AutomaticAddContactsWidget()
-{
-    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
-    mEnabled->setChecked(grp.readEntry("Enabled", false));
-}
-
-void AutomaticAddContactsWidget::loadSettings()
+AutomaticAddContactsConfigureWidget::~AutomaticAddContactsConfigureWidget()
 {
 }
 
-void AutomaticAddContactsWidget::saveSettings()
+void AutomaticAddContactsConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
-    grp.writeEntry("Enabled", mEnabled->isChecked());
-    grp.writeEntry("Collection", mCollectionCombobox->currentCollection().id());
+    mConfigureTab->loadSettings();
 }
 
-void AutomaticAddContactsWidget::resetSettings()
+void AutomaticAddContactsConfigureWidget::saveSettings()
 {
-    mEnabled->setChecked(false);
+    mConfigureTab->saveSettings();
+}
+
+void AutomaticAddContactsConfigureWidget::resetSettings()
+{
+    mConfigureTab->resetSettings();
 }

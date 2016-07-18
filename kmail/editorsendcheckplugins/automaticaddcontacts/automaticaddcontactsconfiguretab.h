@@ -17,21 +17,34 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef AUTOMATICADDCONTACTSWIDGETTEST_H
-#define AUTOMATICADDCONTACTSWIDGETTEST_H
 
-#include <QObject>
-class QStandardItemModel;
-class AutomaticAddContactsConfigureWidget;
-class AutomaticAddContactsWidgetTest : public QObject
+#ifndef AUTOMATICADDCONTACTSCONFIGURETAB_H
+#define AUTOMATICADDCONTACTSCONFIGURETAB_H
+
+#include <QWidget>
+class QTabWidget;
+class QTabWidget;
+class KConfigGroup;
+class AutomaticAddContactsTabWidget;
+class AutomaticAddContactsConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsWidgetTest(QObject *parent = Q_NULLPTR);
-    ~AutomaticAddContactsWidgetTest();
-private Q_SLOTS:
-    void shouldHaveDefaultValue();
-    void shouldResetValue();
+    explicit AutomaticAddContactsConfigureTab(QWidget *parent = Q_NULLPTR);
+    ~AutomaticAddContactsConfigureTab();
+
+    void loadSettings();
+    void saveSettings();
+    void resetSettings();
+
+Q_SIGNALS:
+    void configureChanged();
+
+private:
+    void initTab();
+    QTabWidget *mTabWidget;
+    QList<AutomaticAddContactsTabWidget *> mListTabWidget;
+
 };
 
-#endif // AUTOMATICADDCONTACTSWIDGETTEST_H
+#endif // AUTOMATICADDCONTACTSCONFIGURETAB_H

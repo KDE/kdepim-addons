@@ -17,21 +17,35 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef AUTOMATICADDCONTACTSWIDGETTEST_H
-#define AUTOMATICADDCONTACTSWIDGETTEST_H
+#ifndef AUTOMATICADDCONTACTSTABWIDGET_H
+#define AUTOMATICADDCONTACTSTABWIDGET_H
 
-#include <QObject>
-class QStandardItemModel;
-class AutomaticAddContactsConfigureWidget;
-class AutomaticAddContactsWidgetTest : public QObject
+#include <QWidget>
+class QCheckBox;
+
+namespace Akonadi
+{
+class CollectionComboBox;
+}
+class QAbstractItemModel;
+class KConfigGroup;
+class AutomaticAddContactsTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsWidgetTest(QObject *parent = Q_NULLPTR);
-    ~AutomaticAddContactsWidgetTest();
-private Q_SLOTS:
-    void shouldHaveDefaultValue();
-    void shouldResetValue();
+    explicit AutomaticAddContactsTabWidget(QWidget *parent = Q_NULLPTR, QAbstractItemModel *model = Q_NULLPTR);
+    ~AutomaticAddContactsTabWidget();
+
+    void resetSettings();
+    void saveSettings();
+    void loadSettings();
+    void setIdentity(uint identity);
+Q_SIGNALS:
+    void configureChanged();
+private:
+    QCheckBox *mEnabled;
+    Akonadi::CollectionComboBox *mCollectionCombobox;
+    uint mIdentity;
 };
 
-#endif // AUTOMATICADDCONTACTSWIDGETTEST_H
+#endif // AUTOMATICADDCONTACTSTABWIDGET_H
