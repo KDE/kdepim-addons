@@ -19,7 +19,6 @@
 
 #include "automaticaddcontactsjob.h"
 #include "automaticaddcontactsplugin_debug.h"
-#include <Libkdepim/AddEmailAddressJob>
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/AgentInstanceCreateJob>

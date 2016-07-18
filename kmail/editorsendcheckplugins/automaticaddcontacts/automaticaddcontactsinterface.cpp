@@ -21,6 +21,8 @@
 #include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagement/Identity>
 
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -35,13 +37,14 @@ AutomaticAddContactsInterface::~AutomaticAddContactsInterface()
 
 bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    if (mEnabled) {
-        if (mContactCollection.isValid()) {
+    AutomaticAddContactsSettings setting = mHashSettings.value(params.identity());
+    if (setting.mEnabled) {
+        if (setting.mContactCollection.isValid()) {
             const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
             if (!lst.isEmpty()) {
                 //Don't delete it, it's autodelete
                 AutomaticAddContactsJob *job = new AutomaticAddContactsJob;
-                job->setCollection(mContactCollection);
+                job->setCollection(setting.mContactCollection);
                 job->setEmails(lst);
                 job->start();
             }
@@ -52,7 +55,17 @@ bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorChec
 
 void AutomaticAddContactsInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Automatic Add Contacts");
-    mEnabled = grp.readEntry("Enabled", false);
-    mContactCollection = Akonadi::Collection(grp.readEntry("Collection", -1));
+    mHashSettings.clear();
+
+    KIdentityManagement::IdentityManager manager(true);
+    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+        const uint identity = (*it).uoid();
+        KConfigGroup identityGroup = config->group(QStringLiteral("Automatic Add Contacts %1").arg(identity));
+        AutomaticAddContactsSettings settings;
+        settings.mEnabled = identityGroup.readEntry("Enabled", false);
+        settings.mContactCollection = Akonadi::Collection(identityGroup.readEntry("Collection", -1));
+        mHashSettings.insert(identity, settings);
+    }
 }

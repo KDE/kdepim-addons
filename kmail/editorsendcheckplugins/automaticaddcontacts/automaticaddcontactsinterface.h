@@ -35,8 +35,19 @@ public:
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
 private:
-    bool mEnabled;
-    Akonadi::Collection mContactCollection;
+    struct AutomaticAddContactsSettings
+    {
+        AutomaticAddContactsSettings()
+            : mEnabled(false),
+              mContactCollection(Akonadi::Collection(-1))
+        {
+
+        }
+
+        bool mEnabled;
+        Akonadi::Collection mContactCollection;
+    };
+    QHash<uint, AutomaticAddContactsSettings> mHashSettings;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H

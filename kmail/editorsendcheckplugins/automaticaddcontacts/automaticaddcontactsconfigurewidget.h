@@ -22,26 +22,19 @@
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
-class QCheckBox;
-
-namespace Akonadi
-{
-class CollectionComboBox;
-}
-class QAbstractItemModel;
-class AutomaticAddContactsWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
+class AutomaticAddContactsConfigureTab;
+class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsWidget(QWidget *parent = Q_NULLPTR, QAbstractItemModel *model = Q_NULLPTR);
-    ~AutomaticAddContactsWidget();
+    explicit AutomaticAddContactsConfigureWidget(QWidget *parent = Q_NULLPTR);
+    ~AutomaticAddContactsConfigureWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;
     void saveSettings() Q_DECL_OVERRIDE;
     void resetSettings() Q_DECL_OVERRIDE;
 private:
-    QCheckBox *mEnabled;
-    Akonadi::CollectionComboBox *mCollectionCombobox;
+    AutomaticAddContactsConfigureTab *mConfigureTab;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H
