@@ -33,7 +33,6 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
       mIdentity(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
     mEnabled->setObjectName(QStringLiteral("enabled"));
