@@ -162,7 +162,7 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
 
     const QStringList protocolPref = Kleo::cryptoMessageFormatsToStringList(cryptoFormats);
     if (!protocolPref.isEmpty()) {
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF"), protocolPref.join(QStringLiteral(",")));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF"), protocolPref.join(QLatin1Char(',')));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF"));
     }
@@ -185,13 +185,13 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
     const QStringList sfp = mSmimeCert->fingerprints();
 
     if (!pfp.isEmpty()) {
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("OPENPGPFP"), pfp.join(QStringLiteral(",")));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("OPENPGPFP"), pfp.join(QLatin1Char(',')));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("OPENPGPFP"));
     }
 
     if (!sfp.isEmpty()) {
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("SMIMEFP"), sfp.join(QStringLiteral(",")));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("SMIMEFP"), sfp.join(QLatin1Char(',')));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("SMIMEFP"));
     }
