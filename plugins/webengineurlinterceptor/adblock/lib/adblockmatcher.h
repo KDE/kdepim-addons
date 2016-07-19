@@ -69,10 +69,8 @@ public Q_SLOTS:
     void update();
     void clear();
 
-private Q_SLOTS:
-    void enabledChanged(bool enabled);
-
 private:
+    void enabledChanged(bool enabled);
     AdblockManager *m_manager;
 
     QVector<AdBlockRule *> m_createdRules;

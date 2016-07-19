@@ -61,7 +61,7 @@ Q_SIGNALS:
 
 protected:
     bool event(QEvent *event) Q_DECL_OVERRIDE;
-private Q_SLOTS:
+private:
     void hasChanged();
     void slotInfoLinkActivated(const QString &);
     void insertRule();
@@ -77,7 +77,6 @@ private Q_SLOTS:
     void slotManualFilterLineEditTextChanged(const QString &);
     void slotAutomaticFilterDouble(QListWidgetItem *item);
     void slotDeleteList(const QString &listName);
-private:
     void updateCheckBox();
     void addManualFilter(const QString &text, const QStringList &excludeRules = QStringList());
     void showAutomaticFilterList(QListWidgetItem *item);

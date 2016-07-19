@@ -65,6 +65,7 @@
 #include "adblockutil.h"
 //#include "followredirectreply.h"
 
+#include <KLocalizedString>
 #include <QFile>
 #include <QTimer>
 #include <QNetworkReply>
@@ -187,7 +188,7 @@ void AdBlockSubscription::subscriptionDownloaded()
     m_reply = 0;
 
     if (error) {
-        Q_EMIT subscriptionError(tr("Cannot load subscription!"));
+        Q_EMIT subscriptionError(i18n("Cannot load subscription!"));
         return;
     }
 
@@ -320,7 +321,7 @@ AdBlockSubscription::~AdBlockSubscription()
 // AdBlockCustomList
 
 AdBlockCustomList::AdBlockCustomList(QObject *parent)
-    : AdBlockSubscription(tr("Custom Rules"), parent)
+    : AdBlockSubscription(i18n("Custom Rules"), parent)
 {
 #if 0
     setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/customlist.txt"));
@@ -403,7 +404,8 @@ bool AdBlockCustomList::containsFilter(const QString &filter) const
 
 bool AdBlockCustomList::removeFilter(const QString &filter)
 {
-    for (int i = 0; i < m_rules.count(); ++i) {
+    const int numberRules(m_rules.count());
+    for (int i = 0; i < numberRules; ++i) {
         const AdBlockRule *rule = m_rules.at(i);
 
         if (rule->filter() == filter) {
