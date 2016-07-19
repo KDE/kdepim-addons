@@ -19,16 +19,12 @@
 
 #include "automaticaddcontactsconfigurewidgettest.h"
 #include "../automaticaddcontactsconfigurewidget.h"
+#include "../automaticaddcontactsconfiguretab.h"
 
-#include <QCheckBox>
 #include <QTest>
 #include <QVBoxLayout>
 #include <QStandardPaths>
-#include <QLabel>
-#include <QStandardItemModel>
-#include <AkonadiWidgets/CollectionComboBox>
-#include <AkonadiCore/EntityTreeModel>
-#include <KContacts/Addressee>
+
 
 AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -43,10 +39,13 @@ AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTes
 
 void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
-}
+    AutomaticAddContactsConfigureWidget w;
 
-void AutomaticAddContactsConfigureWidgetTest::shouldResetValue()
-{
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    AutomaticAddContactsConfigureTab *mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(QStringLiteral("configuretab"));
+    QVERIFY(mConfigureTab);
 }
 
 QTEST_MAIN(AutomaticAddContactsConfigureWidgetTest)
