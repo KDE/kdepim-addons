@@ -33,14 +33,12 @@ public:
     explicit AdBlockListWidget(QWidget *parent = Q_NULLPTR);
     ~AdBlockListWidget();
 
-private:
-    void generalPaletteChanged();
-
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 
     void changeEvent(QEvent *event) Q_DECL_OVERRIDE;
 private:
+    void generalPaletteChanged();
     QColor mTextColor;
 };
 }
