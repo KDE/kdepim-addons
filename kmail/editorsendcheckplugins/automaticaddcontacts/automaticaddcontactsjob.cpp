@@ -183,7 +183,7 @@ void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
 
 void AutomaticAddContactsJob::verifyContactExist()
 {
-    QString email = mEmails.at(mCurrentIndex);
+    const QString email = mEmails.at(mCurrentIndex);
     QString tname, temail;
     KEmailAddress::extractEmailAddressAndName(email, temail, tname);
     if (temail.isEmpty()) {
@@ -202,7 +202,6 @@ void AutomaticAddContactsJob::verifyContactExist()
             connect(searchJob, &KJob::result, this, &AutomaticAddContactsJob::slotSearchDone);
         }
     }
-
 }
 
 void AutomaticAddContactsJob::slotSearchDone(KJob *job)
