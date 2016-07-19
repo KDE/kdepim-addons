@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "automaticaddcontactswidgettest.h"
+#include "automaticaddcontactsconfigurewidgettest.h"
 #include "../automaticaddcontactsconfigurewidget.h"
 
 #include <QCheckBox>
@@ -30,23 +30,23 @@
 #include <AkonadiCore/EntityTreeModel>
 #include <KContacts/Addressee>
 
-AutomaticAddContactsWidgetTest::AutomaticAddContactsWidgetTest(QObject *parent)
+AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AutomaticAddContactsWidgetTest::~AutomaticAddContactsWidgetTest()
+AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTest()
 {
 
 }
 
-void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
+void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
 }
 
-void AutomaticAddContactsWidgetTest::shouldResetValue()
+void AutomaticAddContactsConfigureWidgetTest::shouldResetValue()
 {
 }
 
-QTEST_MAIN(AutomaticAddContactsWidgetTest)
+QTEST_MAIN(AutomaticAddContactsConfigureWidgetTest)

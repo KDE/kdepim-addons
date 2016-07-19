@@ -20,16 +20,29 @@
 #include "automaticaddcontactsconfiguretabtest.h"
 #include "../automaticaddcontactsconfiguretab.h"
 #include <QTest>
+#include <QStandardPaths>
+#include <QHBoxLayout>
+#include <QTabWidget>
 
 AutomaticAddContactsConfigureTabTest::AutomaticAddContactsConfigureTabTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest()
 {
 
+}
+
+void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
+{
+    AutomaticAddContactsConfigureTab w;
+    QHBoxLayout *vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(vboxlayout);
+    QCOMPARE(vboxlayout->margin(), 0);
+    QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    QVERIFY(mTabWidget);
 }
 
 QTEST_MAIN(AutomaticAddContactsConfigureTabTest)
