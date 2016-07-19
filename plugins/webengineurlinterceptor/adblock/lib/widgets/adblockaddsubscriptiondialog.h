@@ -35,10 +35,8 @@ public:
 
     void selectedList(QString &name, QString &url);
 
-private Q_SLOTS:
-    void slotShowList();
-
 private:
+    void slotShowList();
     void initializeList(const QStringList &excludeList);
     QComboBox *mListSubscription;
     QToolButton *mShowList;

@@ -42,20 +42,20 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
       mUser1Button(Q_NULLPTR)
 {
     setWindowTitle(i18n("Show adblock list"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdBlockShowListDialog::reject);
     if (showDeleteBrokenList) {
-        mUser1Button = new QPushButton;
+        mUser1Button = new QPushButton(this);
         buttonBox->addButton(mUser1Button, QDialogButtonBox::ActionRole);
         mUser1Button->setText(i18n("Delete List"));
         mUser1Button->setEnabled(false);
         mUser1Button->hide();
         connect(mUser1Button, &QPushButton::clicked, this, &AdBlockShowListDialog::slotDeleteBrokenList);
     }
-    QWidget *w = new QWidget;
     QVBoxLayout *lay = new QVBoxLayout;
+    mainLayout->addLayout(lay);
+
     mTextEdit = new KPIMTextEdit::PlainTextEditorWidget;
     (void)new AdBlock::AdBlockSyntaxHighlighter(mTextEdit->editor()->document());
     mTextEdit->setReadOnly(true);
@@ -63,8 +63,7 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
 
     mProgress = new KPIM::ProgressIndicatorLabel(i18n("Download..."));
     lay->addWidget(mProgress);
-    w->setLayout(lay);
-    mainLayout->addWidget(w);
+
     mainLayout->addWidget(buttonBox);
     readConfig();
 }

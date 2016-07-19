@@ -28,6 +28,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+namespace {
+QString configGroupName() { return QStringLiteral("Automatic Add Contacts %1"); }
+}
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent),
       mIdentity(0)
@@ -76,7 +79,7 @@ void AutomaticAddContactsTabWidget::resetSettings()
 void AutomaticAddContactsTabWidget::loadSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup grp = config->group(QStringLiteral("Automatic Add Contacts %1").arg(mIdentity));
+    KConfigGroup grp = config->group(configGroupName().arg(mIdentity));
     mEnabled->setChecked(grp.readEntry("Enabled", false));
     mCollectionCombobox->setDefaultCollection(Akonadi::Collection(grp.readEntry("Collection", -1)));
 }
@@ -89,7 +92,7 @@ void AutomaticAddContactsTabWidget::setIdentity(uint identity)
 void AutomaticAddContactsTabWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    KConfigGroup grp = config->group(QStringLiteral("Automatic Add Contacts %1").arg(mIdentity));
+    KConfigGroup grp = config->group(configGroupName().arg(mIdentity));
     grp.writeEntry("Enabled", mEnabled->isChecked());
     grp.writeEntry("Collection", mCollectionCombobox->currentCollection().id());
 }

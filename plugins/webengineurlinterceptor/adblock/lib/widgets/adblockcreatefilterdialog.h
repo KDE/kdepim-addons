@@ -40,10 +40,8 @@ public:
 
     QString filter() const;
 
-private Q_SLOTS:
-    void slotUpdateFilter();
-
 private:
+    void slotUpdateFilter();
     enum ElementType {
         ElementValue = Qt::UserRole + 1
     };
