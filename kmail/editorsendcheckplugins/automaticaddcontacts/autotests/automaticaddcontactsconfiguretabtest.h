@@ -28,6 +28,8 @@ class AutomaticAddContactsConfigureTabTest : public QObject
 public:
     explicit AutomaticAddContactsConfigureTabTest(QObject *parent = Q_NULLPTR);
     ~AutomaticAddContactsConfigureTabTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // AUTOMATICADDCONTACTSCONFIGURETABTEST_H

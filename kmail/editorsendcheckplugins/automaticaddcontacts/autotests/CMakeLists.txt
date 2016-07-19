@@ -1,3 +1,5 @@
+set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
+
 set(automaticaddcontacts_common_SRCS)
 ecm_qt_declare_logging_category(automaticaddcontacts_common_SRCS HEADER automaticaddcontactsplugin_debug.h IDENTIFIER KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG CATEGORY_NAME log_kmail_automaticaddcontactsplugin)
 
@@ -17,7 +19,7 @@ set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
 add_akonadi_isolated_test_advanced(automaticaddcontactsplugintest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfigurewidget.cpp;../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsjob.cpp;../automaticaddcontactsplugin.cpp;../automaticaddcontactsinterface.cpp;../automaticaddcontactsconfigurewidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
 add_akonadi_isolated_test_advanced(automaticaddcontactsinterfacetest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsjob.cpp;../automaticaddcontactsinterface.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
-add_akonadi_isolated_test_advanced(automaticaddcontactswidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfigurewidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
+add_akonadi_isolated_test_advanced(automaticaddcontactsconfigurewidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactsconfiguretab.cpp;../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfigurewidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
 add_akonadi_isolated_test_advanced(automaticaddcontactstabwidgettest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
 add_akonadi_isolated_test_advanced(automaticaddcontactsconfiguretabtest.cpp "${automaticaddcontacts_common_SRCS};../automaticaddcontactstabwidget.cpp;../automaticaddcontactsconfiguretab.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")
 add_kmail_automaticaddscontacts_unittest(automaticaddcontactsjobtest.cpp "../automaticaddcontactsjob.cpp" "KF5::IconThemes;KF5::MessageComposer;KF5::I18n;KF5::PimCommon;KF5::AkonadiWidgets;KF5::Contacts")

@@ -17,36 +17,35 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "automaticaddcontactswidgettest.h"
+#include "automaticaddcontactsconfigurewidgettest.h"
 #include "../automaticaddcontactsconfigurewidget.h"
+#include "../automaticaddcontactsconfiguretab.h"
 
-#include <QCheckBox>
 #include <QTest>
 #include <QVBoxLayout>
 #include <QStandardPaths>
-#include <QLabel>
-#include <QStandardItemModel>
-#include <AkonadiWidgets/CollectionComboBox>
-#include <AkonadiCore/EntityTreeModel>
-#include <KContacts/Addressee>
 
-AutomaticAddContactsWidgetTest::AutomaticAddContactsWidgetTest(QObject *parent)
+
+AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AutomaticAddContactsWidgetTest::~AutomaticAddContactsWidgetTest()
+AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTest()
 {
 
 }
 
-void AutomaticAddContactsWidgetTest::shouldHaveDefaultValue()
+void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
+    AutomaticAddContactsConfigureWidget w;
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    AutomaticAddContactsConfigureTab *mConfigureTab = w.findChild<AutomaticAddContactsConfigureTab *>(QStringLiteral("configuretab"));
+    QVERIFY(mConfigureTab);
 }
 
-void AutomaticAddContactsWidgetTest::shouldResetValue()
-{
-}
-
-QTEST_MAIN(AutomaticAddContactsWidgetTest)
+QTEST_MAIN(AutomaticAddContactsConfigureWidgetTest)

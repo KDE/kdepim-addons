@@ -17,21 +17,20 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef AUTOMATICADDCONTACTSWIDGETTEST_H
-#define AUTOMATICADDCONTACTSWIDGETTEST_H
+#ifndef AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
+#define AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
 
 #include <QObject>
 class QStandardItemModel;
 class AutomaticAddContactsConfigureWidget;
-class AutomaticAddContactsWidgetTest : public QObject
+class AutomaticAddContactsConfigureWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsWidgetTest(QObject *parent = Q_NULLPTR);
-    ~AutomaticAddContactsWidgetTest();
+    explicit AutomaticAddContactsConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    ~AutomaticAddContactsConfigureWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-    void shouldResetValue();
 };
 
-#endif // AUTOMATICADDCONTACTSWIDGETTEST_H
+#endif // AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
