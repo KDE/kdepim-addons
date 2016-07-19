@@ -55,14 +55,14 @@ public:
 
     static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
-private Q_SLOTS:
+
+private:
     void customContextMenuRequested(const QPoint &);
     void slotCopyFilterItem();
     void slotOpenItem();
     void slotBlockItem();
     void slotCopyItem();
     void slotRemoveFilter();
-private:
     enum BlockType {
         FilterValue = 0,
         Url,
