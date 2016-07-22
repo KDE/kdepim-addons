@@ -2,6 +2,7 @@
 Name=Search Subject on Web
 Name[ca]=Cerca l'assumpte al web
 Name[ca@valencia]=Cerca l'assumpte al web
+Name[cs]=Hledat předmět na webu
 Name[de]=Thema im Internet suchen
 Name[es]=Buscar asunto en la web
 Name[fi]=Hae aiheesta verkosta
@@ -26,6 +27,7 @@ Icon=firefox
 Description=Search subject on web
 Description[ca]=Cerca l'assumpte al web
 Description[ca@valencia]=Cerca l'assumpte al web
+Description[cs]=Hledat předmět na webu
 Description[de]=Thema im Internet suchen
 Description[es]=Buscar asunto en la web
 Description[fi]=Hae aiheesta verkosta
