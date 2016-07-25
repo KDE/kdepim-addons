@@ -2,11 +2,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
-div#cont {
-    padding: -5px;
-    margin: 0px;
-}
 table.outer {
     display: inline;
     position: fixed !important;
