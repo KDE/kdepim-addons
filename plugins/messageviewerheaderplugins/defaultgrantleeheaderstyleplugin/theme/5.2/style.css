@@ -2,12 +2,14 @@ body {
     margin: 0;
     padding: 0;
 }
-
-div#cont {
-    padding: -5px;
-    margin: 0px;
+div#headerbox {
+    border-radius: 3px;
+    border-bottom: 1px solid rgb(190, 190, 190);
+    color: rgb(100, 100, 100) !important;
+    overflow: auto;
+    padding: 5px 20px;
 }
-table.outer {
+div#headerbox table.outer {
     display: inline;
     position: fixed !important;
     top: -1px;
@@ -17,14 +19,7 @@ table.outer {
     border: none !important;
     table-collapse: collapse;
 }
-div#headerbox {
-    border-radius: 3px;
-    border-bottom: 1px solid rgb(190, 190, 190);
-    color: rgb(100, 100, 100) !important;
-    overflow: auto;
-    padding: 5px 20px;
-}
-div#subject {
+div#headerbox div#subject {
     color: rgb(100, 100, 100) !important;
     font-size: 22px;
     font-weight: normal;
@@ -32,51 +27,51 @@ div#subject {
     padding-bottom: 5px;
     padding-top: 5px;
 }
-div#photo {
+div#headerbox div#photo {
     float: left;
     margin: 5px;
 }
-div.table {
+div#headerbox div.table {
     display: table;
     padding-right: 12px;
     padding-top: 6px;
 }
-div.row {
+div#headerbox div.row {
     display: table-row;
 }
-div.headerleft {
+div#headerbox div.headerleft {
     display: table-cell;
     padding: 0.1em 1em;
 }
-div.headerright {
+div#headerbox div.headerright {
     display: table-cell;
     font-weight: bold;
     padding: 0.1em;
 }
-div.headerrightdate {
+div#headerbox div.headerrightdate {
     color: rgb(120, 125, 129) !important;
     display: table-cell;
     font-weight: bold;
     padding: 0.1em;
 }
-.actiontable {
+div#headerbox .actiontable {
    display: table;
    width: 100%;
 }
-div.actionrowtable {
+div#headerbox div.actionrowtable {
    display:table-row;
 }
-div.theactioncell {
+div#headerbox div.theactioncell {
     display: table-cell;
     padding: 0px 2px; /* just some padding, if needed*/
     white-space: pre; /* this will avoid line breaks*/
 }
-div.theactionbigcell{
+div#headerbox div.theactionbigcell{
     display: table-cell;
     width: 100%; /* this will shrink other cells */
 }
 
-#kmailContent {
+div#headerbox #kmailContent {
     clear: both;
     margin-top: 10px;
     padding: 20px;
