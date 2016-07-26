@@ -33,7 +33,6 @@ public:
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
-        , mHtmlMail(true)
     {
     }
 
@@ -55,16 +54,6 @@ public:
         mHtmlLoadExternal = loadExternal;
     }
 
-    bool htmlMail() const Q_DECL_OVERRIDE
-    {
-        return mHtmlMail;
-    }
-
-    void setHtmlMail(bool htmlMail)
-    {
-        mHtmlMail = htmlMail;
-    }
-
     bool decryptMessage() const Q_DECL_OVERRIDE
     {
         return false;
@@ -73,8 +62,9 @@ public:
     {
         return false;
     }
-    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode) Q_DECL_OVERRIDE {
+    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) Q_DECL_OVERRIDE {
         Q_UNUSED(mode)
+        Q_UNUSED(availableModes)
     }
     int levelQuote() const Q_DECL_OVERRIDE
     {
@@ -107,11 +97,13 @@ public:
         return false;
     }
 
+    MimeTreeParser::Util::HtmlMode preferredMode() const Q_DECL_OVERRIDE {
+        return MimeTreeParser::Util::Html;
+    }
 private:
     MimeTreeParser::HtmlWriter *mWriter;
     MessageViewer::CSSHelperBase *mCSSHelper;
     bool mHtmlLoadExternal;
-    bool mHtmlMail;
 };
 
 #endif
