@@ -25,7 +25,6 @@
 #include <QVBoxLayout>
 #include <QStandardPaths>
 
-
 AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
