@@ -46,8 +46,8 @@ Element::List ThisDayInHistory::createDayElements(const QDate &date)
 
     element->setUrl(
         QUrl(i18nc("Localized Wikipedia website", "http://en.wikipedia.org/wiki/") +
-                date.toString(i18nc("Qt date format used by the localized Wikipedia",
-                                    "MMMM_d"))));
+             date.toString(i18nc("Qt date format used by the localized Wikipedia",
+                                 "MMMM_d"))));
 
     elements.append(element);
 
@@ -63,8 +63,8 @@ Element::List ThisDayInHistory::createMonthElements(const QDate &date)
 
     element->setUrl(
         QUrl(i18nc("Localized Wikipedia website", "http://en.wikipedia.org/wiki/") +
-                date.toString(i18nc("Qt date format used by the localized Wikipedia",
-                                    "MMMM_yyyy"))));
+             date.toString(i18nc("Qt date format used by the localized Wikipedia",
+                                 "MMMM_yyyy"))));
 
     elements.append(element);
 

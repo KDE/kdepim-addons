@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactstabwidget.h"
 #include <KConfigGroup>
@@ -27,7 +26,6 @@
 #include <QRegularExpression>
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
-
 
 AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *parent)
     : QWidget(parent)

@@ -33,7 +33,8 @@ QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
     return dbg;
 }
 
-namespace CalendarEvents {
+namespace CalendarEvents
+{
 bool operator==(const EventData &lhs, const EventData &rhs)
 {
     return lhs.uid() == rhs.uid()

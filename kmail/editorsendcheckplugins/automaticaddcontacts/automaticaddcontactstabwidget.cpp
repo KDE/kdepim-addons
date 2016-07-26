@@ -28,8 +28,12 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace {
-QString configGroupName() { return QStringLiteral("Automatic Add Contacts %1"); }
+namespace
+{
+QString configGroupName()
+{
+    return QStringLiteral("Automatic Add Contacts %1");
+}
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent),

@@ -35,8 +35,7 @@ public:
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
 private:
-    struct AutomaticAddContactsSettings
-    {
+    struct AutomaticAddContactsSettings {
         AutomaticAddContactsSettings()
             : mEnabled(false),
               mContactCollection(Akonadi::Collection(-1))
