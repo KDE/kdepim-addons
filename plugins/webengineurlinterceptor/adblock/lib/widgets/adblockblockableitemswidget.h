@@ -52,6 +52,7 @@ public:
     ~AdBlockBlockableItemsWidget();
 
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
+    void saveFilters();
 
     static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
     static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
