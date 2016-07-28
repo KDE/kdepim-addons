@@ -33,18 +33,19 @@ AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Blockable Items"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+
+    mBlockableItems = new AdBlockBlockableItemsWidget(this);
+    mBlockableItems->setObjectName(QStringLiteral("blockableitemswidget"));
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdBlockBlockableItemsDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdBlockBlockableItemsDialog::reject);
-
-    mBlockableItems = new AdBlockBlockableItemsWidget;
-    mBlockableItems->setObjectName(QStringLiteral("blockableitemswidget"));
 
     mainLayout->addWidget(mBlockableItems);
     mainLayout->addWidget(buttonBox);
@@ -58,7 +59,7 @@ AdBlockBlockableItemsDialog::~AdBlockBlockableItemsDialog()
 
 void AdBlockBlockableItemsDialog::saveFilters()
 {
-    //FIXME mBlockableItems->saveFilters();
+    mBlockableItems->saveFilters();
 }
 
 void AdBlockBlockableItemsDialog::setAdblockResult(const QVector<AdBlock::AdBlockResult> &result)

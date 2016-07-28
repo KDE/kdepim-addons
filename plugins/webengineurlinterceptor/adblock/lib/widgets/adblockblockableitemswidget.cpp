@@ -93,6 +93,11 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
     mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
 }
 
+void AdBlockBlockableItemsWidget::saveFilters()
+{
+    //TODO
+}
+
 void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
 {
     QTreeWidgetItem *item = mListItems->currentItem();
