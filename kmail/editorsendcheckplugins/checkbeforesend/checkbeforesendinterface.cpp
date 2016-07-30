@@ -34,13 +34,11 @@
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
-      mIdentityManager(Q_NULLPTR),
       mSendPlainText(false),
       mCheckMailTransport(false),
       mCheckDuplicateEmails(false),
       mCheckSendAttachments(false)
 {
-    reloadConfig();
 }
 
 CheckBeforeSendInterface::~CheckBeforeSendInterface()
@@ -60,10 +58,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckMailTransport) {
-        if (!mIdentityManager) {
-            mIdentityManager = new KIdentityManagement::IdentityManager(true, this);
-        }
-        const KIdentityManagement::Identity identity = mIdentityManager->identityForUoid(params.identity());
+        const KIdentityManagement::Identity identity = identityManagement()->identityForUoid(params.identity());
         if (identity.transport() != QString::number(params.transportId())) {
             if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
                 return false;

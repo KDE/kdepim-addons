@@ -21,10 +21,6 @@
 #define CHECKBEFORESENDINTERFACE_H
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
-namespace KIdentityManagement
-{
-class IdentityManager;
-}
 class CheckBeforeSendInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
     Q_OBJECT
@@ -37,7 +33,6 @@ public:
 public Q_SLOTS:
     void reloadConfig() Q_DECL_OVERRIDE;
 private:
-    KIdentityManagement::IdentityManager *mIdentityManager;
     bool mSendPlainText;
     bool mCheckMailTransport;
     bool mCheckDuplicateEmails;
