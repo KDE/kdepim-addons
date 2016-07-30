@@ -34,7 +34,6 @@ ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
       mEnabled(false)
 {
-    reloadConfig();
 }
 
 ConfirmAddressInterface::~ConfirmAddressInterface()
@@ -112,9 +111,9 @@ void ConfirmAddressInterface::reloadConfig()
     mEnabled = grp.readEntry("Enabled", false);
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager manager(true);
-    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+    KIdentityManagement::IdentityManager *im = identityManagement();
+    KIdentityManagement::IdentityManager::ConstIterator end = im->end();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
         KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(identity));
         ConfirmAddressSettings settings;

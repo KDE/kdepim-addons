@@ -27,7 +27,6 @@
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
 {
-    reloadConfig();
 }
 
 AutomaticAddContactsInterface::~AutomaticAddContactsInterface()
@@ -57,10 +56,11 @@ void AutomaticAddContactsInterface::reloadConfig()
 {
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager manager(true);
-    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
+
+    KIdentityManagement::IdentityManager *im = identityManagement();
+    KIdentityManagement::IdentityManager::ConstIterator end = im->end();
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+    for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();
         KConfigGroup identityGroup = config->group(QStringLiteral("Automatic Add Contacts %1").arg(identity));
         AutomaticAddContactsSettings settings;
