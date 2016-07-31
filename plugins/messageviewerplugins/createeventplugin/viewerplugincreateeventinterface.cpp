@@ -64,7 +64,9 @@ void ViewerPluginCreateEventInterface::setMessage(const KMime::Message::Ptr &val
 
 void ViewerPluginCreateEventInterface::closePlugin()
 {
-    widget()->slotCloseWidget();
+    if (mEventEdit) {
+        mEventEdit->slotCloseWidget();
+    }
 }
 
 void ViewerPluginCreateEventInterface::showWidget()

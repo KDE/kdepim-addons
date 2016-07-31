@@ -62,7 +62,9 @@ void ViewerPluginCreatenoteInterface::setMessage(const KMime::Message::Ptr &valu
 
 void ViewerPluginCreatenoteInterface::closePlugin()
 {
-    widget()->slotCloseWidget();
+    if (mNoteEdit) {
+        mNoteEdit->slotCloseWidget();
+    }
 }
 
 Akonadi::Relation ViewerPluginCreatenoteInterface::relatedNoteRelation() const
