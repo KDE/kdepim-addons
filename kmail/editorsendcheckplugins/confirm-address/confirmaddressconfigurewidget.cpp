@@ -59,7 +59,7 @@ void ConfirmAddressConfigureWidget::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QLatin1String("Confirm Address \\d+")));
+    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("Confirm Address \\d+")));
     Q_FOREACH (const QString &group, filterGroups) {
         config->deleteGroup(group);
     }
