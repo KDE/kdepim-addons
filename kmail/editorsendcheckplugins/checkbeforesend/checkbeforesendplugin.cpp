@@ -49,9 +49,9 @@ bool CheckBeforeSendPlugin::hasConfigureSupport() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting CheckBeforeSendPlugin::createConfigureWidget(QWidget *parent) const
+MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting CheckBeforeSendPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
 {
-    CheckBeforeSendConfigureWidget *w = new CheckBeforeSendConfigureWidget(parent);
+    CheckBeforeSendConfigureWidget *w = new CheckBeforeSendConfigureWidget(identityManager, parent);
     MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Check Before Send Email"));
     return settings;
 }

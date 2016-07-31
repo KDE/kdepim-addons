@@ -49,9 +49,9 @@ bool AutomaticAddContactsPlugin::hasConfigureSupport() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting AutomaticAddContactsPlugin::createConfigureWidget(QWidget *parent) const
+MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting AutomaticAddContactsPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
 {
-    AutomaticAddContactsConfigureWidget *w = new AutomaticAddContactsConfigureWidget(parent);
+    AutomaticAddContactsConfigureWidget *w = new AutomaticAddContactsConfigureWidget(identityManager, parent);
     MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Add Automatically Contacts"));
     return settings;
 }

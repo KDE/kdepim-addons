@@ -24,8 +24,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(identityManager, parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));

@@ -24,11 +24,16 @@
 class QTabWidget;
 class KConfigGroup;
 class ConfirmAddressConfigureTabWidget;
+namespace KIdentityManagement
+{
+class IdentityManager;
+}
+
 class ConfirmAddressConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressConfigureTab(QWidget *parent = Q_NULLPTR);
+    explicit ConfirmAddressConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTab();
 
     void loadSettings(const KConfigGroup &grp);
@@ -39,7 +44,7 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
-    void initTab();
+    void initTab(KIdentityManagement::IdentityManager *identityManager);
     QTabWidget *mTabWidget;
     QList<ConfirmAddressConfigureTabWidget *> mListTabWidget;
 };

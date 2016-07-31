@@ -38,7 +38,7 @@ ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest()
 
 void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    ConfirmAddressConfigureWidget w;
+    ConfirmAddressConfigureWidget w(Q_NULLPTR);
 
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);

@@ -27,7 +27,7 @@
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
 
-AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *parent)
+AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent)
     : QWidget(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
@@ -36,7 +36,7 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *pare
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
-    initTab();
+    initTab(identityManagement);
 }
 
 AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab()
@@ -44,16 +44,24 @@ AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab()
 
 }
 
-void AutomaticAddContactsConfigureTab::initTab()
+void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
 {
-    KIdentityManagement::IdentityManager manager(true);
-    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+    bool needToDeleteIdentity = false;
+    if (!identityManager) {
+        needToDeleteIdentity = true;
+        identityManager = new KIdentityManagement::IdentityManager(true);
+    }
+    KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(this);
         connect(w, &AutomaticAddContactsTabWidget::configureChanged, this, &AutomaticAddContactsConfigureTab::configureChanged);
         mTabWidget->addTab(w, (*it).identityName());
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
+    }
+    if (needToDeleteIdentity) {
+        delete identityManager;
+        identityManager = Q_NULLPTR;
     }
 }
 

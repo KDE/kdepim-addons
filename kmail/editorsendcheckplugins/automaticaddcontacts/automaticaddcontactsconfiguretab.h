@@ -22,14 +22,19 @@
 
 #include <QWidget>
 class QTabWidget;
-class QTabWidget;
 class KConfigGroup;
 class AutomaticAddContactsTabWidget;
+
+namespace KIdentityManagement
+{
+class IdentityManager;
+}
+
 class AutomaticAddContactsConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsConfigureTab(QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent = Q_NULLPTR);
     ~AutomaticAddContactsConfigureTab();
 
     void loadSettings();
@@ -40,10 +45,9 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
-    void initTab();
+    void initTab(KIdentityManagement::IdentityManager *identityManager);
     QTabWidget *mTabWidget;
     QList<AutomaticAddContactsTabWidget *> mListTabWidget;
-
 };
 
 #endif // AUTOMATICADDCONTACTSCONFIGURETAB_H
