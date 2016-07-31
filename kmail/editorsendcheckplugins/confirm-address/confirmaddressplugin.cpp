@@ -50,9 +50,9 @@ bool ConfirmAddressPlugin::hasConfigureSupport() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting ConfirmAddressPlugin::createConfigureWidget(QWidget *parent) const
+MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting ConfirmAddressPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
 {
-    ConfirmAddressConfigureWidget *w = new ConfirmAddressConfigureWidget(parent);
+    ConfirmAddressConfigureWidget *w = new ConfirmAddressConfigureWidget(identityManager, parent);
     MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Confirm Addresses"));
     return settings;
 }

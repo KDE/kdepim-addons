@@ -26,8 +26,8 @@
 #include <KSharedConfig>
 #include <QRegularExpression>
 
-ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(identityManager, parent)
 {
     QVBoxLayout *vboxlayout = new QVBoxLayout;
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
@@ -37,7 +37,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     vboxlayout->addWidget(mEnable);
     connect(mEnable, &QCheckBox::clicked, this, &ConfirmAddressConfigureWidget::slotEnableChanged);
 
-    mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(this);
+    mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(identityManagement(), this);
     mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));
     connect(mConfirmAddressConfigureTab, &ConfirmAddressConfigureTab::configureChanged, this, &ConfirmAddressConfigureWidget::configureChanged);
     vboxlayout->addWidget(mConfirmAddressConfigureTab);

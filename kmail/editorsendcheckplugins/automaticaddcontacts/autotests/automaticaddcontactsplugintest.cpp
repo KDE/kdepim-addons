@@ -37,7 +37,7 @@ void AutomaticAddContactsPluginTest::shouldHaveDefaultValue()
     AutomaticAddContactsPlugin plugin;
     QVERIFY(plugin.hasConfigureSupport());
     QVERIFY(plugin.createInterface(this));
-    QVERIFY(plugin.createConfigureWidget(new QWidget()).configureWidget);
+    QVERIFY(plugin.createConfigureWidget(Q_NULLPTR, new QWidget()).configureWidget);
 }
 
 QTEST_MAIN(AutomaticAddContactsPluginTest)

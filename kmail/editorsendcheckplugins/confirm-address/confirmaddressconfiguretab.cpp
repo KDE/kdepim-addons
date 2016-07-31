@@ -24,7 +24,7 @@
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
 
-ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
+ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -35,7 +35,7 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
-    initTab();
+    initTab(identityManagement);
 }
 
 ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
@@ -64,15 +64,24 @@ void ConfirmAddressConfigureTab::resetSettings()
     }
 }
 
-void ConfirmAddressConfigureTab::initTab()
+void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
 {
-    KIdentityManagement::IdentityManager manager(true);
-    KIdentityManagement::IdentityManager::ConstIterator end = manager.end();
-    for (KIdentityManagement::IdentityManager::ConstIterator it = manager.begin(); it != end; ++it) {
+    bool needToDeleteIdentity = false;
+    if (!identityManager) {
+        needToDeleteIdentity = true;
+        identityManager = new KIdentityManagement::IdentityManager(true);
+    }
+    KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
+    for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         ConfirmAddressConfigureTabWidget *w = new ConfirmAddressConfigureTabWidget(this);
         connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
         mTabWidget->addTab(w, (*it).identityName());
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
     }
+    if (needToDeleteIdentity) {
+        delete identityManager;
+        identityManager = Q_NULLPTR;
+    }
 }
+

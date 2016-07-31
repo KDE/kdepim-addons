@@ -33,7 +33,7 @@ public:
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
     bool hasConfigureSupport() const Q_DECL_OVERRIDE;
 
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting createConfigureWidget(QWidget *parent) const Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const Q_DECL_OVERRIDE;
 };
 
 #endif // CONFIRMADDRESSPLUGIN_H
