@@ -68,7 +68,7 @@ void AutomaticAddContactsConfigureTab::saveSettings()
 {
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QLatin1String("Automatic Add Contacts \\d+")));
+    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("Automatic Add Contacts \\d+")));
     Q_FOREACH (const QString &group, filterGroups) {
         config->deleteGroup(group);
     }
