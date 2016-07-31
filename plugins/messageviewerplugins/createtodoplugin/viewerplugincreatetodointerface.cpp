@@ -59,7 +59,9 @@ void ViewerPluginCreateTodoInterface::setMessage(const KMime::Message::Ptr &valu
 
 void ViewerPluginCreateTodoInterface::closePlugin()
 {
-    widget()->slotCloseWidget();
+    if (mTodoEdit) {
+        mTodoEdit->slotCloseWidget();
+    }
 }
 
 void ViewerPluginCreateTodoInterface::showWidget()
