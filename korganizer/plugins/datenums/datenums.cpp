@@ -31,7 +31,7 @@ Datenums::Datenums()
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");
     mDisplayedInfo = (DayNumbers)config.readEntry(
-                         "DayNumbers", int(DayOfYear | DaysRemaining));
+                         "ShowDayNumbers", int(DayOfYear | DaysRemaining));
 }
 
 void Datenums::configure(QWidget *parent)
