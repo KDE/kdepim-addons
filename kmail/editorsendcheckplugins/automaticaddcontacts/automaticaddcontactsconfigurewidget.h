@@ -27,7 +27,7 @@ class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditor
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsConfigureWidget(KIdentityManagement::IdentityManager *im, QWidget *parent = Q_NULLPTR);
     ~AutomaticAddContactsConfigureWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;
