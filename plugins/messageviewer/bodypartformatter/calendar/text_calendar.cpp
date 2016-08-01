@@ -404,7 +404,7 @@ public:
         }
 
         QString receiver;
-        KIdentityManagement::IdentityManager *im = new KIdentityManagement::IdentityManager(true);
+        KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
 
         KMime::Types::Mailbox::List addrs;
         if (node->topLevel()->header<KMime::Headers::To>()) {
@@ -467,7 +467,6 @@ public:
                 receiver.clear();
             }
         }
-        delete im;
         return receiver;
     }
 
