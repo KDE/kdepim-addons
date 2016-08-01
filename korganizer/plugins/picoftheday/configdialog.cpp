@@ -76,8 +76,8 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     groupLayout->addWidget(btn);
 
     connect(okButton, &QPushButton::clicked, this, &ConfigDialog::slotOk);
+    mainLayout->addStretch(1);
     mainLayout->addWidget(buttonBox);
-
     load();
 }
 

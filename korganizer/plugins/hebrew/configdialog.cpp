@@ -67,6 +67,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     mCholBox = new QCheckBox(topFrame);
     mCholBox->setText(i18n("Show Chol HaMoed"));
     topLayout->addWidget(mCholBox);
+    topLayout->addStretch(1);
     connect(okButton, &QPushButton::clicked, this, &ConfigDialog::slotOk);
     load();
 }

@@ -48,6 +48,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     setModal(true);
     QFrame *topFrame = new QFrame(this);
     mainLayout->addWidget(topFrame);
+    mainLayout->addStretch(1);
     mainLayout->addWidget(buttonBox);
     QVBoxLayout *topLayout = new QVBoxLayout(topFrame);
     topLayout->setMargin(0);
