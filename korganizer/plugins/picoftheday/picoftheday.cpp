@@ -201,6 +201,7 @@ void POTDElement::step2Result(KJob *job)
         if (href.startsWith(
                     QStringLiteral("//upload.wikimedia.org/wikipedia/commons/"))) {
             mFullSizeImageUrl = QUrl(href);
+            mFullSizeImageUrl.setScheme(QStringLiteral("https"));
             break;
         }
     }
