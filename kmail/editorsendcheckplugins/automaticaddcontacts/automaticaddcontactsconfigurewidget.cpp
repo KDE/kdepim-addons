@@ -29,13 +29,13 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(identityManager, parent)
+AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(KIdentityManagement::IdentityManager *im, QWidget *parent)
+    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(im, parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfigureTab = new AutomaticAddContactsConfigureTab(identityManagement(), this);
+    mConfigureTab = new AutomaticAddContactsConfigureTab(identityManager(), this);
     mConfigureTab->setObjectName(QStringLiteral("configuretab"));
     mainLayout->addWidget(mConfigureTab);
     connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);
