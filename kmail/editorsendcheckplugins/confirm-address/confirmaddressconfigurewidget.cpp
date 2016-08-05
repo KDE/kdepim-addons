@@ -29,9 +29,8 @@
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(KIdentityManagement::IdentityManager *im, QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(im, parent)
 {
-    QVBoxLayout *vboxlayout = new QVBoxLayout;
+    QVBoxLayout *vboxlayout = new QVBoxLayout(this);
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
-    setLayout(vboxlayout);
     mEnable = new QCheckBox(i18n("Enable"), this);
     mEnable->setObjectName(QStringLiteral("enable"));
     vboxlayout->addWidget(mEnable);
@@ -70,6 +69,7 @@ void ConfirmAddressConfigureWidget::saveSettings()
 
 void ConfirmAddressConfigureWidget::resetSettings()
 {
+    mEnable->setChecked(false);
     mConfirmAddressConfigureTab->resetSettings();
 }
 
