@@ -543,21 +543,51 @@ public:
         msg->from()->fromUnicodeString(receiver, "utf-8");
         msg->date()->setDateTime(QDateTime::currentDateTime());
 
-        if (!MessageViewer::MessageViewerSettings::self()->legacyBodyInvites()) {
-            msg->contentType()->from7BitString("text/calendar; method=reply; charset=\"utf-8\"");
+        if (MessageViewer::MessageViewerSettings::self()->legacyBodyInvites()) {
+            msg->contentType()->setMimeType("text/calendar");
+            msg->contentType()->setCharset("utf-8");
+            msg->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
+            msg->contentType()->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
+
+            KMime::Headers::ContentDisposition *disposition = new KMime::Headers::ContentDisposition;
+            disposition->setDisposition(KMime::Headers::CDinline);
+            msg->setHeader(disposition);
             msg->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             msg->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
         } else {
-            KMime::Content *text = new KMime::Content;
-            text->contentType()->from7BitString("text/plain; charset=\"us-ascii\"");
-            text->contentTransferEncoding()->setEncoding(KMime::Headers::CE7Bit);
-            text->setBody("");
-            msg->addContent(text);
-            KMime::Content *body = new KMime::Content;
-            body->contentType()->from7BitString("text/calendar; name=\"cal.ics\"; method=\"reply\"; charset=\"utf-8\"");
-            body->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
-            body->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
-            msg->addContent(body);
+            // We need to set following 4 lines by hand else KMime::Content::addContent
+            // will create a new Content instance for us to attach the main message
+            // what we don't need cause we already have the main message instance where
+            // 2 additional messages are attached.
+            KMime::Headers::ContentType *ct = msg->contentType();
+            ct->setMimeType("multipart/mixed");
+            ct->setBoundary(KMime::multiPartBoundary());
+            ct->setCategory(KMime::Headers::CCcontainer);
+
+            // Set the first multipart, the body message.
+            KMime::Content *bodyMessage = new KMime::Content;
+            KMime::Headers::ContentDisposition *bodyDisposition = new KMime::Headers::ContentDisposition;
+            bodyDisposition->setDisposition(KMime::Headers::CDinline);
+            bodyMessage->contentType()->setMimeType("text/plain");
+            bodyMessage->contentType()->setCharset("utf-8");
+            bodyMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
+            bodyMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
+            bodyMessage->setHeader(bodyDisposition);
+            msg->addContent(bodyMessage);
+
+            // Set the second multipart, the attachment.
+            KMime::Content *attachMessage = new KMime::Content;
+            KMime::Headers::ContentDisposition *attachDisposition = new KMime::Headers::ContentDisposition;
+            attachDisposition->setDisposition(KMime::Headers::CDattachment);
+            attachMessage->contentType()->setMimeType("text/calendar");
+            attachMessage->contentType()->setCharset("utf-8");
+            attachMessage->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
+            attachMessage->contentType()->setParameter(QStringLiteral("method"),
+                                                       QStringLiteral("reply"));
+            attachMessage->setHeader(attachDisposition);
+            attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
+            attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
+            msg->addContent(attachMessage);
         }
 
         // Try and match the receiver with an identity.
