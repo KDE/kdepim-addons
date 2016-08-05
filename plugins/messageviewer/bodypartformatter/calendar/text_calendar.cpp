@@ -35,6 +35,7 @@
 #include "delegateselector.h"
 #include "memorycalendarmemento.h"
 #include "syncitiphandler.h"
+#include "reactiontoinvitationdialog.h"
 
 #include <MessageViewer/BodyPartURLHandler>
 #include <MessageViewer/MessageViewerSettings>
@@ -81,6 +82,7 @@ using namespace KCalCore;
 #include <QDesktopServices>
 #include <QInputDialog>
 #include <QMenu>
+#include <QPointer>
 
 using namespace MailTransport;
 
@@ -881,12 +883,16 @@ public:
 
         // get comment for tentative acceptance
         if (askForComment(status)) {
-            bool ok = false;
-            const QString comment = QInputDialog::getMultiLineText(0,
-                                    i18n("Reaction to Invitation"), i18n("Comment:"), QString(), &ok);
-            if (!ok) {
+            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(0);
+            dlg->setWindowTitle(i18n("Reaction to Invitation"));
+            QString comment;
+            if (dlg->exec()) {
+                comment = dlg->comment();
+            } else {
+                delete dlg;
                 return true;
             }
+
             if (comment.isEmpty()) {
                 KMessageBox::error(
                     0,
@@ -1205,13 +1211,16 @@ public:
         }
         Incidence::Ptr incidence(stringToIncidence(iCal));
         if (askForComment(Attendee::Declined)) {
-            bool ok = false;
-            const QString comment(
-                QInputDialog::getMultiLineText(0,
-                                               i18n("Decline Counter Proposal"), i18n("Comment:"), QString(), &ok));
-            if (!ok) {
+            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(0);
+            dlg->setWindowTitle(i18n("Decline Counter Proposal"));
+            QString comment;
+            if (dlg->exec()) {
+                comment = dlg->comment();
+            } else {
+                delete dlg;
                 return true;
             }
+
             if (comment.isEmpty()) {
                 KMessageBox::error(
                     0,
