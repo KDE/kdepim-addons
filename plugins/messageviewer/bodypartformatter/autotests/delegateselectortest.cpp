@@ -65,7 +65,7 @@ void DelegateSelectorTest::shouldChangeOkButtonState()
 {
     DelegateSelector w;
     KPIM::AddresseeLineEdit *mDelegate = w.findChild<KPIM::AddresseeLineEdit *>(QStringLiteral("delegate"));
-    mDelegate->setEnableAkonadiSearch(false);
+    //mDelegate->setEnableAkonadiSearch(false);
     mDelegate->setEnableBalooSearch(false);
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
