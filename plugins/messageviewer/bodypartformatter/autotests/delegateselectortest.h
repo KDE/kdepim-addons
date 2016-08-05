@@ -30,6 +30,7 @@ public:
     ~DelegateSelectorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldChangeOkButtonState();
 };
 
 #endif // DELEGATESELECTORTEST_H

@@ -22,6 +22,7 @@
 #include <QTest>
 #include <QLabel>
 #include <QCheckBox>
+#include <QPushButton>
 #include <QDialogButtonBox>
 #include <Libkdepim/AddresseeLineEdit>
 
@@ -45,6 +46,7 @@ void DelegateSelectorTest::shouldHaveDefaultValue()
 
     KPIM::AddresseeLineEdit *mDelegate = w.findChild<KPIM::AddresseeLineEdit *>(QStringLiteral("delegate"));
     QVERIFY(mDelegate);
+    QVERIFY(mDelegate->text().isEmpty());
 
     QCheckBox *mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
     QVERIFY(mRsvp);
@@ -53,6 +55,31 @@ void DelegateSelectorTest::shouldHaveDefaultValue()
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+
+    QPushButton *mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    QVERIFY(mOkButton);
+    QVERIFY(!mOkButton->isEnabled());
+}
+
+void DelegateSelectorTest::shouldChangeOkButtonState()
+{
+    DelegateSelector w;
+    KPIM::AddresseeLineEdit *mDelegate = w.findChild<KPIM::AddresseeLineEdit *>(QStringLiteral("delegate"));
+    mDelegate->setEnableAkonadiSearch(false);
+    mDelegate->setEnableBalooSearch(false);
+
+    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QPushButton *mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    QVERIFY(!mOkButton->isEnabled());
+
+
+    mDelegate->setText(QStringLiteral("foo"));
+    QVERIFY(mOkButton->isEnabled());
+
+    mDelegate->clear();
+    QVERIFY(!mOkButton->isEnabled());
+    mDelegate->setText(QStringLiteral(" "));
+    QVERIFY(!mOkButton->isEnabled());
 }
 
 QTEST_MAIN(DelegateSelectorTest)

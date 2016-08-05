@@ -57,6 +57,7 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setObjectName(QStringLiteral("okbutton"));
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DelegateSelector::accept);
@@ -69,7 +70,7 @@ DelegateSelector::DelegateSelector(QWidget *parent)
 
 void DelegateSelector::slotTextChanged(const QString &text)
 {
-    mOkButton->setEnabled(!text.isEmpty());
+    mOkButton->setEnabled(!text.trimmed().isEmpty());
 }
 
 QString DelegateSelector::delegate() const
