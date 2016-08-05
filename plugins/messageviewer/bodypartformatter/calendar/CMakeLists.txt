@@ -35,3 +35,5 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
 install(TARGETS messageviewer_bodypartformatter_text_calendar  DESTINATION ${KDE_INSTALL_PLUGINDIR})
 
 install(FILES text_calendar.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+
+add_subdirectory(tests)
