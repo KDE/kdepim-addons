@@ -15,3 +15,15 @@ macro(add_kdepimaddons_unittest _source)
 endmacro ()
 
 add_kdepimaddons_unittest(rendertest.cpp)
+
+macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
+    set( _test ${_source} ${common_SRCS} ${_additional})
+    get_filename_component(_name ${_source} NAME_WE)
+
+    ecm_add_test(${_test}
+                 TEST_NAME ${_name}
+                 NAME_PREFIX "messageviewerplugins-"
+                 LINK_LIBRARIES KF5::MessageViewer Qt5::Test KF5::PimTextEdit KF5::I18n
+                )
+endmacro ()
+add_messageviewer_bodyformatter_class_unittest(reactiontoinvitationdialogtest.cpp "../calendar/reactiontoinvitationdialog.cpp")
