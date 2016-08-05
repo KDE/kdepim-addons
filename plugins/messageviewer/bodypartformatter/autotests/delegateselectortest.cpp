@@ -82,4 +82,16 @@ void DelegateSelectorTest::shouldChangeOkButtonState()
     QVERIFY(!mOkButton->isEnabled());
 }
 
+void DelegateSelectorTest::shouldReturnCheckBoxState()
+{
+    DelegateSelector w;
+    QCheckBox *mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
+    QVERIFY(mRsvp->isChecked());
+    mRsvp->setChecked(true);
+    QVERIFY(w.rsvp());
+
+    mRsvp->setChecked(false);
+    QVERIFY(!w.rsvp());
+}
+
 QTEST_MAIN(DelegateSelectorTest)

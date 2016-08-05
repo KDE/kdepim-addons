@@ -31,6 +31,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldChangeOkButtonState();
+    void shouldReturnCheckBoxState();
 };
 
 #endif // DELEGATESELECTORTEST_H
