@@ -72,7 +72,6 @@ void DelegateSelectorTest::shouldChangeOkButtonState()
     QPushButton *mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     QVERIFY(!mOkButton->isEnabled());
 
-
     mDelegate->setText(QStringLiteral("foo"));
     QVERIFY(mOkButton->isEnabled());
 
