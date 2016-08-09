@@ -97,7 +97,8 @@ public:
         return false;
     }
 
-    MimeTreeParser::Util::HtmlMode preferredMode() const Q_DECL_OVERRIDE {
+    MimeTreeParser::Util::HtmlMode preferredMode() const Q_DECL_OVERRIDE
+    {
         return MimeTreeParser::Util::Html;
     }
 private:

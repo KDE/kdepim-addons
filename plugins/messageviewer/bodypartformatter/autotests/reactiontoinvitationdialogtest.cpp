@@ -39,7 +39,6 @@ void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
 {
     ReactionToInvitationDialog w;
 
-
     QLabel *label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
 

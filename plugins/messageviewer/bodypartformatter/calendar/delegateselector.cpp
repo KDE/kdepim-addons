@@ -53,7 +53,6 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     mRsvp->setChecked(true);
     mainLayout->addWidget(mRsvp);
 
-
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);

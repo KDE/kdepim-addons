@@ -40,7 +40,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     mPlainTextEditor->setObjectName(QStringLiteral("plaintexteditor"));
     layout->addWidget(mPlainTextEditor);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok|QDialogButtonBox::Cancel, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     layout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ReactionToInvitationDialog::accept);
