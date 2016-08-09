@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Name": "Insert Non Braking Space", 
+        "Name": "Insert Non Breaking Space", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
