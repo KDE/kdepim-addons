@@ -43,10 +43,12 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
 
-    QPushButton *whiteListEmailsButton = new QPushButton(i18n("Add Selected Emails to WhiteList"));
-    whiteListEmailsButton->setObjectName(QStringLiteral("whiteListEmailsButton"));
-    buttonBox->addButton(whiteListEmailsButton, QDialogButtonBox::ActionRole);
-    connect(whiteListEmailsButton, &QPushButton::clicked, this, &ConfirmAddressDialog::slotWhiteListSelectedEmails);
+    mWhiteListEmailsButton = new QPushButton(i18n("Add Selected Emails to WhiteList"));
+    mWhiteListEmailsButton->setObjectName(QStringLiteral("whiteListEmailsButton"));
+    mWhiteListEmailsButton->setEnabled(false);
+    buttonBox->addButton(mWhiteListEmailsButton, QDialogButtonBox::ActionRole);
+    connect(mWhiteListEmailsButton, &QPushButton::clicked, this, &ConfirmAddressDialog::slotWhiteListSelectedEmails);
+    connect(mConfirmWidget, &ConfirmAddressWidget::updateButtonStatus, mWhiteListEmailsButton, &QPushButton::setEnabled);
 
     mainLayout->addWidget(buttonBox);
     readConfig();
@@ -90,5 +92,7 @@ void ConfirmAddressDialog::setCurrentIdentity(uint identity)
 void ConfirmAddressDialog::slotWhiteListSelectedEmails()
 {
     const QStringList whiteListEmails = mConfirmWidget->whiteListSelectedEmails();
-    Q_EMIT addWhileListEmails(whiteListEmails, mCurrentIdentity);
+    if (!whiteListEmails.isEmpty()) {
+        Q_EMIT addWhileListEmails(whiteListEmails, mCurrentIdentity);
+    }
 }

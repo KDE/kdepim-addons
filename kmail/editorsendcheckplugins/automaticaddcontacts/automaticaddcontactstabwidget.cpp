@@ -55,7 +55,7 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     lab->setObjectName(QStringLiteral("labelfolder"));
     hlay->addWidget(lab);
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox(model);
+    mCollectionCombobox = new Akonadi::CollectionComboBox(model, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
