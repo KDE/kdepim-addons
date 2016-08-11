@@ -22,6 +22,7 @@
 
 #include <QWidget>
 class QListWidget;
+class QListWidgetItem;
 class ConfirmAddressWidget : public QWidget
 {
     Q_OBJECT
@@ -32,8 +33,13 @@ public:
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);
     QStringList whiteListSelectedEmails() const;
+
+Q_SIGNALS:
+    void updateButtonStatus(bool hasElementChecked);
+
 private:
     void createAddressItems(const QStringList &address, bool valid);
+    void slotItemChanged(QListWidgetItem *item);
     QListWidget *mListEmails;
 };
 

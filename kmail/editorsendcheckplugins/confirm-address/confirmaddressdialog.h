@@ -42,6 +42,7 @@ private:
     void readConfig();
     uint mCurrentIdentity;
     ConfirmAddressWidget *mConfirmWidget;
+    QPushButton *mWhiteListEmailsButton;
 };
 
 #endif // CONFIRMADDRESSDIALOG_H

@@ -50,7 +50,7 @@ void ConfirmAddressDialogTest::shouldHaveDefaultValue()
 
     QPushButton *whiteListEmailsButton = dlg.findChild<QPushButton *>(QStringLiteral("whiteListEmailsButton"));
     QVERIFY(whiteListEmailsButton);
-
+    QVERIFY(!whiteListEmailsButton->isEnabled());
 }
 
 QTEST_MAIN(ConfirmAddressDialogTest)

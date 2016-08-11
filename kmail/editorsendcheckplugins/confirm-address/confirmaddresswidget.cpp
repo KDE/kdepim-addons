@@ -37,6 +37,7 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
 
     mListEmails = new QListWidget(this);
     mListEmails->setObjectName(QStringLiteral("listemails"));
+    connect(mListEmails, &QListWidget::itemChanged, this, &ConfirmAddressWidget::slotItemChanged);
     mainLayout->addWidget(mListEmails);
 }
 
@@ -82,4 +83,18 @@ QStringList ConfirmAddressWidget::whiteListSelectedEmails() const
         }
     }
     return lst;
+}
+
+void ConfirmAddressWidget::slotItemChanged(QListWidgetItem *)
+{
+    bool hasElementChecked = false;
+    const int nbItems(mListEmails->count());
+    for (int i = 0; i < nbItems; ++i) {
+        QListWidgetItem *item = mListEmails->item(i);
+        if (item->checkState() == Qt::Checked) {
+            hasElementChecked = true;
+            break;
+        }
+    }
+    Q_EMIT updateButtonStatus(hasElementChecked);
 }
