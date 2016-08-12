@@ -25,6 +25,7 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <KMessageBox>
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent),
@@ -94,5 +95,6 @@ void ConfirmAddressDialog::slotWhiteListSelectedEmails()
     const QStringList whiteListEmails = mConfirmWidget->whiteListSelectedEmails();
     if (!whiteListEmails.isEmpty()) {
         Q_EMIT addWhileListEmails(whiteListEmails, mCurrentIdentity);
+        KMessageBox::information(this, i18n("All selected emails are added to white list"), i18n("Emails added to white list"));
     }
 }
