@@ -2,6 +2,7 @@
 Name=Example fancy
 Name[ca]=Exemple sofisticat
 Name[ca@valencia]=Exemple sofisticat
+Name[da]=Eksempel på flot
 Name[de]=Dekoratives Beispiel
 Name[en_GB]=Example fancy
 Name[es]=Ejemplo adornado
@@ -26,6 +27,7 @@ Name[x-test]=xxExample fancyxx
 Description=Create fancy theme with grantlee.
 Description[ca]=Crea un tema sofisticat amb grantlee.
 Description[ca@valencia]=Crea un tema sofisticat amb grantlee.
+Description[da]=Opret flot tema med grantlee.
 Description[de]=Dekoratives mit Grantlee erstelltes Design
 Description[en_GB]=Create fancy theme with grantlee.
 Description[es]=Crear tema adornado con grantlee.
