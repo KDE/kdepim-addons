@@ -17,38 +17,40 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "nonbreakingspaceplugineditorinterface.h"
+#include "autocorrectionplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
 
-NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QObject *parent)
+AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
 }
 
-NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface()
+AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface()
 {
 
 }
 
-void NonBreakingSpacePluginEditorInterface::createAction(KActionCollection *ac)
+void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Insert Non Breaking Space"), this);
-    ac->addAction(QStringLiteral("insert_non_breaking_space"), action);
-    ac->setDefaultShortcut(action, Qt::CTRL + Qt::Key_Space);
-    connect(action, &QAction::triggered, this, &NonBreakingSpacePluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
+    QAction *action = new QAction(i18n("Autocorrect Text"), this);
+    ac->addAction(QStringLiteral("autocorrect_tool"), action);
+    connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotActivated);
+    MessageComposer::ActionType type(action, MessageComposer::ActionType::Tools);
     setActionType(type);
 }
 
-void NonBreakingSpacePluginEditorInterface::slotActivated()
+void AutoCorrectionPluginEditorInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
 }
 
-void NonBreakingSpacePluginEditorInterface::exec()
+void AutoCorrectionPluginEditorInterface::exec()
 {
+    //TODO
+#if 0
     richTextEditor()->insertPlainText(QChar(0x000A0));
+#endif
 }
