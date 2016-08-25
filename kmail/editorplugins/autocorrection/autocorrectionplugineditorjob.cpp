@@ -20,7 +20,8 @@
 #include "autocorrectionplugineditorjob.h"
 
 AutoCorrectionPluginEditorJob::AutoCorrectionPluginEditorJob(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mAutoCorrection(Q_NULLPTR)
 {
 
 }
@@ -30,7 +31,16 @@ AutoCorrectionPluginEditorJob::~AutoCorrectionPluginEditorJob()
 
 }
 
-void AutoCorrectionPluginEditorJob::start()
+bool AutoCorrectionPluginEditorJob::start()
 {
-    //TODOO
+    if (!mAutoCorrection) {
+        return false;
+    }
+    //TODO
+    return true;
+}
+
+void AutoCorrectionPluginEditorJob::setAutoCorrection(PimCommon::AutoCorrection *autoCorrection)
+{
+    mAutoCorrection = autoCorrection;
 }

@@ -21,6 +21,11 @@
 #define AUTOCORRECTIONPLUGINEDITORJOB_H
 
 #include <QObject>
+#include <QTextDocument>
+namespace PimCommon
+{
+class AutoCorrection;
+}
 
 class AutoCorrectionPluginEditorJob : public QObject
 {
@@ -29,7 +34,13 @@ public:
     explicit AutoCorrectionPluginEditorJob(QObject *parent = Q_NULLPTR);
     ~AutoCorrectionPluginEditorJob();
 
-    void start();
+    bool start();
+
+    void setAutoCorrection(PimCommon::AutoCorrection *autoCorrection);
+
+private:
+    QTextDocument mTextDocument;
+    PimCommon::AutoCorrection *mAutoCorrection;
 };
 
 #endif // AUTOCORRECTIONPLUGINEDITORJOB_H
