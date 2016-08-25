@@ -11,3 +11,5 @@ endmacro ()
 add_kmail_editorplugin_unittest(autocorrectionplugineditortest.cpp "../autocorrectionplugineditor.cpp;../autocorrectionplugineditorinterface.cpp")
 
 add_kmail_editorplugin_unittest(autocorrectionplugineditorinterfacetest.cpp "../autocorrectionplugineditorinterface.cpp")
+
+add_kmail_editorplugin_unittest(autocorrectionplugineditorjobtest.cpp "../autocorrectionplugineditorjob.cpp")
