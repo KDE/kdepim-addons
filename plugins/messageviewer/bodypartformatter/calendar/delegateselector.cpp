@@ -57,7 +57,6 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setObjectName(QStringLiteral("okbutton"));
-    mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DelegateSelector::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &DelegateSelector::reject);
