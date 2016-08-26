@@ -49,8 +49,5 @@ void AutoCorrectionPluginEditorInterface::slotActivated()
 
 void AutoCorrectionPluginEditorInterface::exec()
 {
-    //TODO
-#if 0
-    richTextEditor()->insertPlainText(QChar(0x000A0));
-#endif
+    richTextEditor()->forceAutoCorrection();
 }
