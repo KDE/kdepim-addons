@@ -1,7 +1,6 @@
 set(kmail_autocorrectioneditorplugin_SRCS
     autocorrectionplugineditor.cpp
     autocorrectionplugineditorinterface.cpp
-    autocorrectionplugineditorjob.cpp
     )
 
 add_library(kmail_autocorrectioneditorplugin MODULE ${kmail_autocorrectioneditorplugin_SRCS})
