@@ -33,8 +33,10 @@ public:
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
 
-private Q_SLOTS:
-    void slotActivated();
+private:
+    void slotAutoCorrectAllText();
+    void slotAutoCorrectSelectedText();
+    bool mSelectedText;
 };
 
 #endif

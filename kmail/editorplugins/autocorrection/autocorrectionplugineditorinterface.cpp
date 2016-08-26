@@ -22,9 +22,11 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <KActionMenu>
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+    : MessageComposer::PluginEditorInterface(parent),
+      mSelectedText(false)
 {
 }
 
@@ -35,19 +37,33 @@ AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface()
 
 void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Autocorrect Text"), this);
-    ac->addAction(QStringLiteral("autocorrect_tool"), action);
-    connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Tools);
+    KActionMenu *menu = new KActionMenu(i18n("Autocorrect Text"), this);
+    ac->addAction(QStringLiteral("autocorrect_tool"), menu);
+    MessageComposer::ActionType type(menu, MessageComposer::ActionType::Tools);
     setActionType(type);
+
+    QAction *action = new QAction(i18n("Autocorrect Text"), this);
+    menu->addAction(action);
+    connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectAllText);
+
+    action = new QAction(i18n("Autocorrect Selected Text"), this);
+    menu->addAction(action);
+    connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectSelectedText);
 }
 
-void AutoCorrectionPluginEditorInterface::slotActivated()
+void AutoCorrectionPluginEditorInterface::slotAutoCorrectSelectedText()
 {
+    mSelectedText = true;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void AutoCorrectionPluginEditorInterface::slotAutoCorrectAllText()
+{
+    mSelectedText = false;
     Q_EMIT emitPluginActivated(this);
 }
 
 void AutoCorrectionPluginEditorInterface::exec()
 {
-    richTextEditor()->forceAutoCorrection();
+    richTextEditor()->forceAutoCorrection(mSelectedText);
 }
