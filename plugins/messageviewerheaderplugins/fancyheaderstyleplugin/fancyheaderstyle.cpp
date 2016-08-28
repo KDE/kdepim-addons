@@ -221,13 +221,16 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                          .arg(mHeaderStyleUtil.strToHtml(to)));
     }
 
+    if (!spamHTML.isEmpty())
+        headerStr.append(QStringLiteral("<tr><td colspan=\"2\"><div class=\"spamheader\" dir=\"%1\"><b>%2</b>&nbsp;<span style=\"padding-left: 20px;\">%3</span></div></td></tr>\n")
+                         .arg(subjectDir, i18n("Spam Status:"), spamHTML));
+
     headerStr.append(QLatin1String("<tr><td colspan=\"2\"><div id=\"attachmentInjectionPoint\"></div></td></tr>"));
+
+
     headerStr.append(
         QStringLiteral("</table></td><td align=\"center\">%1</td></tr></table>\n").arg(userHTML));
 
-    if (!spamHTML.isEmpty())
-        headerStr.append(QStringLiteral("<div class=\"spamheader\" dir=\"%1\"><b>%2</b>&nbsp;<span style=\"padding-left: 20px;\">%3</span></div>\n")
-                         .arg(subjectDir, i18n("Spam Status:"), spamHTML));
 
     headerStr += QLatin1String("</div>\n\n");
     return headerStr;
