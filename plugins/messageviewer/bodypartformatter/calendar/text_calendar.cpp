@@ -632,37 +632,6 @@ public:
             msg->removeHeader<KMime::Headers::Bcc>();
         }
 
-#if 0 // For now assume automatic sending
-        KMail::Composer *cWin = KMail::makeComposer();
-        cWin->ignoreStickyFields();
-        cWin->setMsg(msg, false /* mayAutoSign */);
-        // cWin->setCharset( "", true );
-        cWin->disableWordWrap();
-        cWin->setSigningAndEncryptionDisabled(true);
-        if (MessageViewer::MessageViewerSettings::self()->exchangeCompatibleInvitations()) {
-            // For Exchange, send ical as attachment, with proper parameters
-            msg->setSubject(status);
-            msg->setCharset("utf-8");
-            KMMessagePart *msgPart = new KMMessagePart;
-            msgPart->setName("cal.ics");
-            // msgPart->setCteStr( attachCte ); // "base64" ?
-            msgPart->setBodyEncoded(iCal.toUtf8());
-            msgPart->setTypeStr("text");
-            msgPart->setSubtypeStr("calendar");
-            msgPart->setParameter("method", "reply");
-            cWin->addAttach(msgPart);
-        }
-
-        cWin->forceDisableHtml();
-        cWin->disableRecipientNumberCheck();
-        cWin->disableForgottenAttachmentsCheck();
-        if (MessageViewer::MessageViewerSettings::self()->automaticSending()) {
-            cWin->setAttribute(Qt::WA_DeleteOnClose);
-            cWin->slotSendNow();
-        } else {
-            cWin->show();
-        }
-#else
         msg->assemble();
         MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(transportId);
 
@@ -693,8 +662,6 @@ public:
                 MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
             viewerInstance->deleteMessage();
         }
-#endif
-
         return true;
     }
 
