@@ -42,7 +42,7 @@ void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
     MessageComposer::ActionType type(menu, MessageComposer::ActionType::Tools);
     setActionType(type);
 
-    QAction *action = new QAction(i18n("Autocorrect Text"), this);
+    QAction *action = new QAction(i18n("Autocorrect Full Text"), this);
     menu->addAction(action);
     connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectAllText);
 
