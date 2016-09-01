@@ -45,10 +45,9 @@ using namespace MessageViewer;
 NoteEdit::NoteEdit(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(5);
     vbox->setSpacing(2);
-    setLayout(vbox);
 
     QHBoxLayout *hbox = new QHBoxLayout;
     hbox->setMargin(0);

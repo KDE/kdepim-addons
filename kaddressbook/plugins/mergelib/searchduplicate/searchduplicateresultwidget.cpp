@@ -41,9 +41,8 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     : QWidget(parent),
       mIndexListContact(0)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setMargin(0);
-    setLayout(mainLayout);
 
     QSplitter *splitter = new QSplitter;
     splitter->setObjectName(QStringLiteral("splitter"));

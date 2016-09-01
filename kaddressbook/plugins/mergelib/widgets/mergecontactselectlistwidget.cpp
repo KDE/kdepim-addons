@@ -31,12 +31,11 @@ MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     : QWidget(parent),
       mConflictType(MergeContacts::None)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
-    setLayout(vbox);
-    mTitle = new QLabel;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
+    mTitle = new QLabel(this);
     mTitle->setObjectName(QStringLiteral("title"));
     vbox->addWidget(mTitle);
-    mSelectListWidget = new QListWidget;
+    mSelectListWidget = new QListWidget(this);
     mSelectListWidget->setObjectName(QStringLiteral("listwidget"));
     vbox->addWidget(mSelectListWidget);
 }

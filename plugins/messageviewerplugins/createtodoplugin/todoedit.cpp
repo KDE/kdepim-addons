@@ -48,10 +48,9 @@ using namespace MessageViewer;
 TodoEdit::TodoEdit(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(5);
     vbox->setSpacing(2);
-    setLayout(vbox);
 
     mMsgWidget = new KMessageWidget(this);
     mMsgWidget->setCloseButtonVisible(true);

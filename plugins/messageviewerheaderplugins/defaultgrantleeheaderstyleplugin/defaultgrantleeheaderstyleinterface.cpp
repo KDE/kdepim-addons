@@ -30,7 +30,7 @@ using namespace MessageViewer;
 DefaultGrantleeHeaderStyleInterface::DefaultGrantleeHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent)
 {
-
+    qDebug()<<" DefaultGrantleeHeaderStyleInterface"<<this;
 }
 
 DefaultGrantleeHeaderStyleInterface::~DefaultGrantleeHeaderStyleInterface()
@@ -40,7 +40,7 @@ DefaultGrantleeHeaderStyleInterface::~DefaultGrantleeHeaderStyleInterface()
 
 void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
-
+    qDebug()<<" void DefaultGrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)";
     const QStringList defaultThemePath = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewer/defaultthemes/"), QStandardPaths::LocateDirectory);
     if (!defaultThemePath.isEmpty()) {
         const QString themeName = DefaultGrantleeHeaderStylePluginSettings::self()->themeName();
@@ -63,6 +63,7 @@ void DefaultGrantleeHeaderStyleInterface::activateAction()
 
 void DefaultGrantleeHeaderStyleInterface::slotDefaultGrantleeHeaders()
 {
+    qDebug()<<" void DefaultGrantleeHeaderStyleInterface::slotDefaultGrantleeHeaders()************";
     mHeaderStylePlugin->headerStyle()->setTheme(mDefaultTheme);
     slotStyleChanged();
 }

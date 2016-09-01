@@ -25,9 +25,8 @@ using namespace KABMergeContacts;
 MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setMargin(0);
-    setLayout(mainLayout);
 }
 
 MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget()
