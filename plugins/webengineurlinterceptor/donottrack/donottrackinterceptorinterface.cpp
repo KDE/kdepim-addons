@@ -36,9 +36,9 @@ DoNotTrackInterceptorInterface::~DoNotTrackInterceptorInterface()
 bool DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     if (DoNotTrackSettings::doNotTrack()) {
-        //Laurent Comment it for the moment workaround a bug for QtWebEngine
 #ifdef BUG_FIXED
-        //info.setHttpHeader(QByteArrayLiteral("DNT"), QByteArrayLiteral("1"));
+        //Laurent Comment it for the moment workaround a bug for QtWebEngine
+        info.setHttpHeader(QByteArrayLiteral("DNT"), QByteArrayLiteral("1"));
 #else
         Q_UNUSED(info);
 #endif
