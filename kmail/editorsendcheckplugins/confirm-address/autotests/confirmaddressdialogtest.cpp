@@ -24,11 +24,12 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStandardPaths>
 
 ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressDialogTest::~ConfirmAddressDialogTest()

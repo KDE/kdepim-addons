@@ -23,11 +23,12 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QTest>
+#include <QStandardPaths>
 
 CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest()

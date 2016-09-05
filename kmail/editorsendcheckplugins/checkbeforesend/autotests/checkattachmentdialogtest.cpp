@@ -23,11 +23,12 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QTest>
+#include <QStandardPaths>
 
 CheckAttachmentDialogTest::CheckAttachmentDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 CheckAttachmentDialogTest::~CheckAttachmentDialogTest()

@@ -20,11 +20,12 @@
 #include "confirmaddressplugintest.h"
 #include "../confirmaddressplugin.h"
 #include <QTest>
+#include <QStandardPaths>
 
 ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
