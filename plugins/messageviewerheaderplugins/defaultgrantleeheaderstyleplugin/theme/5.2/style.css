@@ -71,7 +71,7 @@ div#headerbox div.theactionbigcell{
     width: 100%; /* this will shrink other cells */
 }
 
-div#headerbox #kmailContent {
+#kmailContent {
     clear: both;
     margin-top: 10px;
     padding: 20px;
