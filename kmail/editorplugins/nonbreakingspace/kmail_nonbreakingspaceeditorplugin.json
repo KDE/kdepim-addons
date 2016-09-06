@@ -4,7 +4,8 @@
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
-        "Version": "1.0"
+        "Version": "1.0",
+        "EnabledByDefault": "true"
     }, 
     "X-KDE-KMailEditor-Order": "2"
 }

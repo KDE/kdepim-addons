@@ -27,6 +27,7 @@
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 
-        "Version": "2.0"
+        "Version": "2.0",
+        "EnabledByDefault": "true"
     }
 }
