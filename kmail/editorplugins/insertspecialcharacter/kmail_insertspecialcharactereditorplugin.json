@@ -21,7 +21,8 @@
         "Name[sr]": "Уметни посебан знак", 
         "Name[sv]": "Infoga specialtecken", 
         "Name[uk]": "Вставлення спеціального символу", 
-        "Name[x-test]": "xxInsert Special Characterxx", 
+        "Name[x-test]": "xxInsert Special Characterxx",
+        "Description": "This plugin allows to insert special character in composer.", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 

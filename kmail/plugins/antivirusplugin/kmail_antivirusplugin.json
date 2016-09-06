@@ -15,7 +15,8 @@
         "Name[sr@latin]": "Protivvirusni", 
         "Name[sr]": "Противвирусни", 
         "Name[uk]": "Антивірус", 
-        "Name[x-test]": "xxAntivirusxx", 
+        "Name[x-test]": "xxAntivirusxx",
+        "Description": "This plugin allows to configure Anti Virus in KMail.", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
