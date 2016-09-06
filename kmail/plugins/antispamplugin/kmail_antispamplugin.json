@@ -20,6 +20,7 @@
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
+        "EnabledByDefault": "true",
         "Version": "1.0"
     }
 }
