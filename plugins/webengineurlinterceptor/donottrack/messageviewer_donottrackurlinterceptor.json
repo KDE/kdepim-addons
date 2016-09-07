@@ -23,6 +23,7 @@
             "WebEngineViewer/UrlInterceptor"
         ], 
         "Version": "1.0",
+        "Description": "This plugin add support for \"do not trask\".",
         "EnabledByDefault": "true",
         "Id": "messageviewerdonottrackplugin"        
     }

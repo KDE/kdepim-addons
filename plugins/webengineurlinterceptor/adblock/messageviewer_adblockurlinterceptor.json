@@ -16,6 +16,7 @@
         ], 
         "Version": "1.0",
         "EnabledByDefault": "true",
+        "Description": "This plugins allows to block advertising.",
         "Id": "messagevieweradblockplugin"
     }
 }

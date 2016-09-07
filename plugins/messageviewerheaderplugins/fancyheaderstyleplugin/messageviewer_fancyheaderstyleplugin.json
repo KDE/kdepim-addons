@@ -26,6 +26,7 @@
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 
+        "EnabledByDefault": "true",
         "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "2"
