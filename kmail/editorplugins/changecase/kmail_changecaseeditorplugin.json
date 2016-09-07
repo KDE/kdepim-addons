@@ -24,6 +24,7 @@
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
+        "Id": "kmailchangecase",
         "Version": "1.0",
         "EnabledByDefault": "true"
     }, 

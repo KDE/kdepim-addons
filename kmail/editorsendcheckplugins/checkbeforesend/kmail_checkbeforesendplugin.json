@@ -5,6 +5,8 @@
             "KMailEditor/PluginCheckBeforeSend"
         ], 
         "Version": "1.0",
-        "EnabledByDefault": "true"
+        "EnabledByDefault": "true",
+        "Id": "kmailcheckbeforesend"
+  
     } 
 }

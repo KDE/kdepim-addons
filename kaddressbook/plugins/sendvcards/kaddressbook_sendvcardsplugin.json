@@ -26,6 +26,7 @@
             "KAddressBook/MainViewPlugin"
         ], 
         "Version": "1.0",
+        "Id": "kaddressbooksendvcards",
         "EnabledByDefault": "true"
     }
 }

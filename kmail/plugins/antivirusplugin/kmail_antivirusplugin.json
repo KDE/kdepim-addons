@@ -20,6 +20,7 @@
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
+        "Id": "kmailantivirus",
         "Version": "1.0",
         "EnabledByDefault": "true"
     }

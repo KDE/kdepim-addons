@@ -25,6 +25,7 @@
             "KAddressBook/MainViewPlugin"
         ], 
         "Version": "1.0",
+        "Id": "kaddressbookcheckgravatar",
         "EnabledByDefault": "true"
     }
 }

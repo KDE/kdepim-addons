@@ -25,6 +25,7 @@
             "KMailEditor/Plugin"
         ], 
         "Version": "1.0",
+        "Id": "kmailzoomtexteditor",
         "Description": "This plugin allows to change zoom factor in composer.",
         "EnabledByDefault": "true"
     }, 

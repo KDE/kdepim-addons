@@ -28,6 +28,7 @@
             "PimCommonCustomTools/Plugin"
         ], 
         "Version": "1.0",
-        "EnabledByDefault": "true"
+        "EnabledByDefault": "true",
+        "Id": "customtoolstranslator"
     }
 }

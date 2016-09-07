@@ -9,7 +9,8 @@
         "Description": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
-        ], 
+        ],
+        "Id": "rot13", 
         "Version": "1.0",
         "EnabledByDefault": "true"
     }, 

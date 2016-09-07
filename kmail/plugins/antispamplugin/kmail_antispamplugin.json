@@ -22,6 +22,7 @@
             "KMail/MainViewPlugin"
         ], 
         "EnabledByDefault": "true",
+        "Id": "kmailantispam",
         "Version": "1.0"
     }
 }

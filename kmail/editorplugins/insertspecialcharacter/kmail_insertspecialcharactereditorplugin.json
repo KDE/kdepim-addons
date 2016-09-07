@@ -25,7 +25,8 @@
         "Description": "This plugin allows to insert special character in composer.", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
-        ], 
+        ],
+        "Id": "kmailinsertspecialcharacter", 
         "Version": "1.0",
         "EnabledByDefault": "true"
     }, 
