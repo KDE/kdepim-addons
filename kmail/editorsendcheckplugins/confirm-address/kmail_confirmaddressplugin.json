@@ -5,6 +5,7 @@
             "KMailEditor/PluginCheckBeforeSend"
         ], 
         "Version": "1.0",
+        "Description": "This plugin allows to check mail before to send it",
         "EnabledByDefault": "true"
     } 
 }

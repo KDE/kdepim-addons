@@ -6,6 +6,7 @@
         ], 
         "Version": "1.0",
         "EnabledByDefault": "true"
+        "Description": "This plugin allows to autocorrect all text in composer or selected text."
     }, 
     "X-KDE-KMailEditor-Order": "2"
 }
