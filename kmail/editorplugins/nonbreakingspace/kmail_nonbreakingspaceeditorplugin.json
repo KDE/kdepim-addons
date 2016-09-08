@@ -5,7 +5,7 @@
             "KMailEditor/Plugin"
         ], 
         "Version": "1.0",
-        "Description": "This plugin allows to add non breaking space. It's useful in french language.",
+        "Description": "This plugin allows you to add non breaking space. It's useful in french language.",
         "EnabledByDefault": "true",
         "Id": "kmailinsertnonbreakingspace"
     }, 

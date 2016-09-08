@@ -26,7 +26,7 @@
         ], 
         "Version": "1.0",
         "Id": "kmailzoomtexteditor",
-        "Description": "This plugin allows to change zoom factor in composer.",
+        "Description": "This plugin allows you to change zoom factor in composer.",
         "EnabledByDefault": "true"
     }, 
     "X-KDE-KMailEditor-Order": "2"

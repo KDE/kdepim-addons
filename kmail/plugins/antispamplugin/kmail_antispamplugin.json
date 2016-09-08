@@ -17,7 +17,7 @@
         "Name[sv]": "Antiskräppost", 
         "Name[uk]": "Антиспам", 
         "Name[x-test]": "xxAntispamxx", 
-        "Description": "This plugin allows to configure Anti Spam in KMail.",
+        "Description": "This plugin allows you to configure Anti Spam in KMail.",
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
