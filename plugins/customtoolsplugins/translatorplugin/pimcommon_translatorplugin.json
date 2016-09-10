@@ -23,7 +23,8 @@
         "Name[sv]": "Översättning", 
         "Name[uk]": "Перекладач", 
         "Name[x-test]": "xxTranslatorxx", 
-        "Name[zh_CN]": "翻译者", 
+        "Name[zh_CN]": "翻译者",
+        "Description": "This plugin allows you to translate text.",  
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"
         ], 
