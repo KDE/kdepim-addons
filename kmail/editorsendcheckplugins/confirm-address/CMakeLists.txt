@@ -11,13 +11,12 @@ set(kmail_confirmaddresseditorplugin_SRCS
 
 ecm_qt_declare_logging_category(kmail_confirmaddresseditorplugin_SRCS HEADER confirmaddressplugin_debug.h IDENTIFIER KMAIL_EDITOR_CONFIRMADDRESS_PLUGIN_LOG CATEGORY_NAME log_kmail_confirmaddressplugin)
 
-add_library(kmail_confirmaddresseditorplugin MODULE ${kmail_confirmaddresseditorplugin_SRCS})
+kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin JSON kmail_confirmaddressplugin.json SOURCES
+    ${kmail_confirmaddresseditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_confirmaddresseditorplugin
     KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon
     )
-
-install(TARGETS kmail_confirmaddresseditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
