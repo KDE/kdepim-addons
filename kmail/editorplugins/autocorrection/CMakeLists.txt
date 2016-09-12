@@ -3,13 +3,11 @@ set(kmail_autocorrectioneditorplugin_SRCS
     autocorrectionplugineditorinterface.cpp
     )
 
-add_library(kmail_autocorrectioneditorplugin MODULE ${kmail_autocorrectioneditorplugin_SRCS})
+kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin JSON kmail_autocorrectioneditorplugin.json SOURCES ${kmail_autocorrectioneditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_autocorrectioneditorplugin
     KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
     )
-
-install(TARGETS kmail_autocorrectioneditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)

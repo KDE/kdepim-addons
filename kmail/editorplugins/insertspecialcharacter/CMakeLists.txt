@@ -3,13 +3,12 @@ set(kmail_insertspecialcharactereditorplugin_SRCS
     insertspecialcharacterplugineditorinterface.cpp
 )
 
-add_library(kmail_insertspecialcharactereditorplugin MODULE ${kmail_insertspecialcharactereditorplugin_SRCS})
+kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin JSON kmail_insertspecialcharactereditorplugin.json SOURCES
+    ${kmail_insertspecialcharactereditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_insertspecialcharactereditorplugin
   KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
-
-install(TARGETS kmail_insertspecialcharactereditorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)
