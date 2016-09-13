@@ -25,7 +25,8 @@
         "Name[zh_CN]": "企业信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ], 
+        ],
+        "Description": "This plugin defines a mail header style for enterprise.", 
         "Version": "1.0",
         "EnabledByDefault": "true"
     }, 

@@ -25,7 +25,8 @@
         "Name[zh_CN]": "所有信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ], 
+        ],
+        "Description": "This plugin shows you all mail header.", 
         "EnabledByDefault": "true",
         "Version": "1.0"
     }, 

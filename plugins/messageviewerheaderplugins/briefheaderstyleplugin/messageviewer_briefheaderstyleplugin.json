@@ -25,7 +25,8 @@
         "Name[zh_CN]": "简要信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ], 
+        ],
+        "Description": "This plugin reduces mail header to strict minimum.", 
         "Version": "1.0",
         "EnabledByDefault": "true"
     }, 

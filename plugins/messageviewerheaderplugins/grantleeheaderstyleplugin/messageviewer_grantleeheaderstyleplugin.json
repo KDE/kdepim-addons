@@ -25,7 +25,8 @@
         "Name[zh_CN]": "Grantlee 信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ], 
+        ],
+        "Description": "This plugin allows you to support grantlee mail header style.", 
         "EnabledByDefault": "true",
         "Version": "1.0"
     }, 
