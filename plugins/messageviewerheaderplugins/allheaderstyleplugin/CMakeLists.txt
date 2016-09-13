@@ -4,12 +4,12 @@ set(messageviewer_allheaderstyleplugin_SRCS
    allheaderstrategy.cpp
 )
 
-add_library(messageviewer_allheaderstyleplugin MODULE ${messageviewer_allheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_allheaderstyleplugin JSON messageviewer_allheaderstyleplugin.json SOURCES
+    ${messageviewer_allheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+
 
 target_link_libraries(messageviewer_allheaderstyleplugin
   KF5::MessageViewer
   KF5::XmlGui
   KF5::I18n
 )
-
-install(TARGETS messageviewer_allheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)

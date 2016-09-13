@@ -5,12 +5,11 @@ set(messageviewer_briefheaderstyleplugin_SRCS
    briefheaderstrategy.cpp
 )
 
-add_library(messageviewer_briefheaderstyleplugin MODULE ${messageviewer_briefheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin JSON messageviewer_briefheaderstyleplugin.json SOURCES
+    ${messageviewer_briefheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_briefheaderstyleplugin
   KF5::MessageViewer
   KF5::XmlGui
   KF5::I18n
 )
-
-install(TARGETS messageviewer_briefheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
