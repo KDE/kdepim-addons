@@ -3,12 +3,11 @@ set(messageviewer_longheaderstyleplugin_SRCS
    longheaderstyleinterface.cpp
 )
 
-add_library(messageviewer_longheaderstyleplugin MODULE ${messageviewer_longheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_longheaderstyleplugin JSON messageviewer_longheaderstyleplugin.json SOURCES
+    ${messageviewer_longheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_longheaderstyleplugin
   KF5::MessageViewer
   KF5::XmlGui
   KF5::I18n
 )
-
-install(TARGETS messageviewer_longheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)

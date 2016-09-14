@@ -8,8 +8,8 @@ kconfig_add_kcfg_files(messageviewer_defaultgrantleeheaderstyleplugin_SRCS
   settings/globalsettings_base.kcfgc
 )
 
-
-add_library(messageviewer_defaultgrantleeheaderstyleplugin MODULE ${messageviewer_defaultgrantleeheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_defaultgrantleeheaderstyleplugin JSON messageviewer_defaultgrantleeheaderstyleplugin.json SOURCES
+    ${messageviewer_defaultgrantleeheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_defaultgrantleeheaderstyleplugin
   KF5::MessageViewer
@@ -17,5 +17,4 @@ target_link_libraries(messageviewer_defaultgrantleeheaderstyleplugin
   KF5::XmlGui
 )
 
-install(TARGETS messageviewer_defaultgrantleeheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
 install(DIRECTORY theme/5.2 DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/defaultthemes/ )

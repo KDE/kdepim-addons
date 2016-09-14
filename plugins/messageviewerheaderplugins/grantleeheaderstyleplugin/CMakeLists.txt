@@ -3,13 +3,11 @@ set(messageviewer_grantleeheaderstyleplugin_SRCS
    grantleeheaderstyleinterface.cpp
    grantleeheaderstrategy.cpp
 )
-
-add_library(messageviewer_grantleeheaderstyleplugin MODULE ${messageviewer_grantleeheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_grantleeheaderstyleplugin JSON messageviewer_grantleeheaderstyleplugin.json SOURCES
+    ${messageviewer_grantleeheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_grantleeheaderstyleplugin
   KF5::MessageViewer
   KF5::GrantleeTheme
   KF5::XmlGui
 )
-
-install(TARGETS messageviewer_grantleeheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)

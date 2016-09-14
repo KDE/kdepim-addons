@@ -4,12 +4,11 @@ set(messageviewer_enterpriseheaderstyleplugin_SRCS
    enterpriseheaderstyle.cpp
 )
 
-add_library(messageviewer_enterpriseheaderstyleplugin MODULE ${messageviewer_enterpriseheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_enterpriseheaderstyleplugin JSON messageviewer_enterpriseheaderstyleplugin.json SOURCES
+    ${messageviewer_enterpriseheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_enterpriseheaderstyleplugin
   KF5::MessageViewer 
   KF5::XmlGui
   KF5::I18n
 )
-
-install(TARGETS messageviewer_enterpriseheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)

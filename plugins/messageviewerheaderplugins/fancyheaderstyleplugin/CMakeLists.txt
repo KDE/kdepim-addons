@@ -4,7 +4,8 @@ set(messageviewer_fancyheaderstyleplugin_SRCS
    fancyheaderstyle.cpp
 )
 
-add_library(messageviewer_fancyheaderstyleplugin MODULE ${messageviewer_fancyheaderstyleplugin_SRCS})
+kcoreaddons_add_plugin(messageviewer_fancyheaderstyleplugin JSON messageviewer_fancyheaderstyleplugin.json SOURCES
+    ${messageviewer_fancyheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
 
 target_link_libraries(messageviewer_fancyheaderstyleplugin
   KF5::MessageViewer
@@ -12,5 +13,3 @@ target_link_libraries(messageviewer_fancyheaderstyleplugin
   KF5::IconThemes
   KF5::I18n
 )
-
-install(TARGETS messageviewer_fancyheaderstyleplugin DESTINATION ${PLUGIN_INSTALL_DIR}/messageviewer)
