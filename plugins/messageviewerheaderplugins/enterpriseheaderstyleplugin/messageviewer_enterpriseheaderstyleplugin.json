@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "Description": "This plugin defines a mail header style for enterprise.", 
+        "EnabledByDefault": "true", 
         "Name": "Enterprise Header Style", 
         "Name[ca@valencia]": "Estil de capçalera corporativa", 
         "Name[ca]": "Estil de capçalera corporativa", 
         "Name[de]": "Vorspann-Design „Grafisch“", 
         "Name[es]": "Estilo de encabezado empresarial", 
+        "Name[et]": "Ettevõtte päisestiil", 
         "Name[fi]": "Yritysotsakkeiden tyyli", 
         "Name[gl]": "Estilo de cabeceira de empresa", 
         "Name[it]": "Stile con intestazioni aziendali", 
@@ -25,10 +28,8 @@
         "Name[zh_CN]": "企业信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ],
-        "Description": "This plugin defines a mail header style for enterprise.", 
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        ], 
+        "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "1"
 }

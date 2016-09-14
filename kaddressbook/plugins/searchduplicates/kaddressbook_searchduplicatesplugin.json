@@ -1,11 +1,15 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbooksearchduplicatecontacts", 
         "Name": "Search Duplicate Contacts", 
         "Name[ca@valencia]": "Cerca els contactes duplicats", 
         "Name[ca]": "Cerca els contactes duplicats", 
         "Name[cs]": "Hledat duplicitní kontakty", 
+        "Name[da]": "Søg efter dobbeltgængere", 
         "Name[de]": "Doppelte Kontakte suchen", 
         "Name[es]": "Buscar contactos duplicados", 
+        "Name[et]": "Topeltkontaktide otsimine", 
         "Name[fi]": "Etsi monisteisia yhteystietoja", 
         "Name[gl]": "Buscar contactos duplicados", 
         "Name[it]": "Cerca contatti duplicati", 
@@ -26,8 +30,6 @@
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
-        "Version": "1.0",
-        "Id": "kaddressbooksearchduplicatecontacts",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }
 }

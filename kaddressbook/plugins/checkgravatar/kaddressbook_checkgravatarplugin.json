@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookcheckgravatar", 
         "Name": "Check Gravatar", 
         "Name[ca@valencia]": "Comprova el «Gravatar»", 
         "Name[ca]": "Comprova el «Gravatar»", 
         "Name[de]": "Gravatar überprüfen", 
         "Name[es]": "Comprobar Gravatar", 
+        "Name[et]": "Gravatari kontroll", 
         "Name[fi]": "Tarkista Gravatar", 
         "Name[gl]": "Comprobar en Gravatar", 
         "Name[it]": "Controlla il Gravatar", 
@@ -24,8 +27,6 @@
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
-        "Version": "1.0",
-        "Id": "kaddressbookcheckgravatar",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }
 }

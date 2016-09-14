@@ -1,18 +1,29 @@
 {
     "KPlugin": {
+        "Description": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet", 
+        "Description[ca@valencia]": "ROT13 (gira per 13 llocs) és un xifrat de substitució per a lletres senzill que substitueix a una lletra amb la lletra 13 lletres després en l'alfabet", 
+        "Description[ca]": "ROT13 (gira per 13 llocs) és un xifrat de substitució per a lletres senzill que substitueix a una lletra amb la lletra 13 lletres després en l'alfabet", 
+        "Description[es]": "ROT13 (rotar 13 lugares) es un cifrado sencillo de sustitución de letras que remplaza una letra con la que está trece lugares después en el alfabeto", 
+        "Description[et]": "ROT13 (rpteerimine 13 koha võrra) on väga lihtne tähtede asendamsie šiffer, mis asendab tähe teise tähega, mis asub esimesest 13 tähte tähestikus tagapool.", 
+        "Description[it]": "ROT13 (ruota di 13 posizioni) è un semplice cifrario a sostituzione per lettere che sostituisce una lettera con quella che la segue 13 posizioni dopo nell'alfabeto", 
+        "Description[nl]": "ROT13 (roteer 13 plaatsen) is een eenvoudige lettersubstitutie vercijfering die een letter vervangt door de letter 13 letters erna in het alfabet", 
+        "Description[pl]": "ROT13 (obróć o 13 miejsc) jest prostym szyfrem podmiany liter, króty podmienia literę, literą przesuniętą o 13 liter w alfabecie", 
+        "Description[pt]": "ROT13 (rodar em 13 posições) é uma cifra de substituição de letra simples que substitui uma letra pela letra 13 posições à frente no alfabeto", 
+        "Description[sv]": "ROT13 (rotera 13 steg) är ett enkelt bokstavsersättningskrypto som ersätter en bokstav med den bokstav som är 13 bokstäver senare i alfabetet", 
+        "Description[uk]": "ROT13 (обертання на 13 позицій) — просте шифрування заміною літер із циклічним зсувом на 13 позицій за абеткою", 
+        "Description[x-test]": "xxROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabetxx", 
+        "EnabledByDefault": "true", 
+        "Id": "rot13", 
         "Name": "ROT13", 
         "Name[sr@ijekavian]": "Рот‑13", 
         "Name[sr@ijekavianlatin]": "Rot‑13", 
         "Name[sr@latin]": "Rot‑13", 
         "Name[sr]": "Рот‑13", 
-        "Name[x-test]": "xxROT13xx",
-        "Description": "ROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabet", 
+        "Name[x-test]": "xxROT13xx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
-        ],
-        "Id": "rot13", 
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        ], 
+        "Version": "1.0"
     }, 
     "X-KDE-KMailEditor-Order": "1"
 }

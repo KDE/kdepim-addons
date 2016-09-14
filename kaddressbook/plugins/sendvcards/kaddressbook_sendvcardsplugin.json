@@ -1,11 +1,14 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbooksendvcards", 
         "Name": "Send vCards", 
         "Name[ca@valencia]": "Envia unes quantes vCard", 
         "Name[ca]": "Envia unes quantes vCard", 
         "Name[cs]": "Poslat vizitky", 
         "Name[de]": "vCards versenden", 
         "Name[es]": "Enviar vCards", 
+        "Name[et]": "vCardi saatmine", 
         "Name[fi]": "Lähetä vCardeja", 
         "Name[gl]": "Enviar vCards", 
         "Name[it]": "Invia vCard", 
@@ -25,8 +28,6 @@
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
-        "Version": "1.0",
-        "Id": "kaddressbooksendvcards",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }
 }

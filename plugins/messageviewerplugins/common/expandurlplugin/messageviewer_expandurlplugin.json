@@ -1,10 +1,25 @@
 {
     "KPlugin": {
+        "Description": "This plugin expands URL.", 
+        "Description[ca@valencia]": "Este connector expandeix els URL.", 
+        "Description[ca]": "Aquest connector expandeix els URL.", 
+        "Description[es]": "Este complemento expande una URL.", 
+        "Description[it]": "Questa estensione espande URL.", 
+        "Description[nl]": "Deze plug-in expandeert een URL.", 
+        "Description[pt]": "Este 'plugin' expande o URL.", 
+        "Description[sv]": "Insticksprogrammet expanderar webbadresser.", 
+        "Description[uk]": "Цей додаток розгортає адресу.", 
+        "Description[x-test]": "xxThis plugin expands URL.xx", 
+        "EnabledByDefault": "true", 
+        "Id": "messageviewerexpandurl", 
         "Name": "Expand URL", 
         "Name[ca@valencia]": "Expandeix l'URL", 
         "Name[ca]": "Expandeix l'URL", 
+        "Name[cs]": "Rozbalit URL", 
+        "Name[da]": "Udfold URL", 
         "Name[de]": "Adresse erweitern", 
         "Name[es]": "Expandir URL", 
+        "Name[et]": "URL-i laiendamine", 
         "Name[fi]": "Laajenna osoite", 
         "Name[gl]": "Expandir o URL", 
         "Name[it]": "Espandi URL", 
@@ -24,9 +39,6 @@
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"
         ], 
-        "Version": "2.0",
-        "EnabledByDefault": "true",
-        "Description": "This plugin expands URL.",
-        "Id": "messageviewerexpandurl"
+        "Version": "2.0"
     }
 }

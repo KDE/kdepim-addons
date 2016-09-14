@@ -1,11 +1,15 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "messageviewercreateeventplugin", 
         "Name": "Create Event", 
         "Name[ca@valencia]": "Crea un esdeveniment", 
         "Name[ca]": "Crea un esdeveniment", 
         "Name[cs]": "Vytvořit událost", 
+        "Name[da]": "Opret begivenhed", 
         "Name[de]": "Ereignis erstellen", 
         "Name[es]": "Crear evento", 
+        "Name[et]": "Sündmuse loomine", 
         "Name[fi]": "Luo tapahtuma", 
         "Name[gl]": "Crear un acontecemento", 
         "Name[it]": "Crea evento", 
@@ -27,8 +31,6 @@
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 
-        "Version": "2.0",
-        "EnabledByDefault": "true",
-        "Id": "messageviewercreateeventplugin"
+        "Version": "2.0"
     }
 }

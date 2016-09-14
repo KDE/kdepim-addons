@@ -1,10 +1,27 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to change zoom factor in composer.", 
+        "Description[ca@valencia]": "Este connector permet canviar el factor de zoom a l'editor.", 
+        "Description[ca]": "Aquest connector permet canviar el factor de zoom a l'editor.", 
+        "Description[es]": "Este complemento le permite cambiar el factor de zum en el editor.", 
+        "Description[et]": "See plugin võimaldab muuta suurendust kirja koostamise aknas.", 
+        "Description[it]": "Questa estensione permette di cambiare il fattore di ingrandimento nel compositore.", 
+        "Description[nl]": "Deze plug-in stelt u in staat om de zoomfactor in de opsteller te wijzigen.", 
+        "Description[pl]": "Ta wtyczka umożliwia zmianę współczynnika powiększenia w edytorze", 
+        "Description[pt]": "Este 'plugin' permite alterar o factor de ampliação no compositor.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att ändra zoomfaktor i brevfönstret.", 
+        "Description[uk]": "За допомогою цього додатка можна змінювати масштаб у редакторі повідомлень.", 
+        "Description[x-test]": "xxThis plugin allows you to change zoom factor in composer.xx", 
+        "EnabledByDefault": "true", 
+        "Id": "kmailzoomtexteditor", 
         "Name": "Zoom Text", 
         "Name[ca@valencia]": "Amplia el text", 
         "Name[ca]": "Amplia el text", 
+        "Name[cs]": "Přibližovat text", 
+        "Name[da]": "Zoom tekst", 
         "Name[de]": "Text vergrößern", 
         "Name[es]": "Ampliar texto", 
+        "Name[et]": "Teksti suurendamine", 
         "Name[fi]": "Zoomaa tekstiä", 
         "Name[gl]": "Achegar o texto", 
         "Name[it]": "Ingrandisci testo", 
@@ -24,10 +41,7 @@
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 
-        "Version": "1.0",
-        "Id": "kmailzoomtexteditor",
-        "Description": "This plugin allows you to change zoom factor in composer.",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }, 
     "X-KDE-KMailEditor-Order": "2"
 }

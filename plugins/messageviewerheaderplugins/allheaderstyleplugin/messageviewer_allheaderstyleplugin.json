@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "Description": "This plugin shows you all mail header.", 
+        "EnabledByDefault": "true", 
         "Name": "All Header Style", 
         "Name[ca@valencia]": "Tots els estils de capçalera", 
         "Name[ca]": "Tots els estils de capçalera", 
         "Name[de]": "Vorspann-Design „Alles“", 
         "Name[es]": "Todos los estilos de encabezado", 
+        "Name[et]": "Üldine päisestiil", 
         "Name[fi]": "Kaikki otsakkeet -tyyli", 
         "Name[gl]": "Estilo de cabeceira completa", 
         "Name[it]": "Stile con tutte le intestazioni", 
@@ -25,9 +28,7 @@
         "Name[zh_CN]": "所有信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ],
-        "Description": "This plugin shows you all mail header.", 
-        "EnabledByDefault": "true",
+        ], 
         "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "6"

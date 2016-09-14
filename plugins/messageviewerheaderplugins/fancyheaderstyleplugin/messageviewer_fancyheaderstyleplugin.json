@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "Description": "This plugin provides you a fancy mail header style.", 
+        "EnabledByDefault": "true", 
         "Name": "Fancy Header Style", 
         "Name[ca@valencia]": "Estil de capçalera sofisticada", 
         "Name[ca]": "Estil de capçalera sofisticada", 
         "Name[de]": "Vorspann-Design „Dekorativ“", 
         "Name[es]": "Estilo de encabezado elegante", 
+        "Name[et]": "Ilus päisestiil", 
         "Name[fi]": "Tyylikäs otsaketyyli", 
         "Name[gl]": "Estilo de cabeceira moderno", 
         "Name[it]": "Stile con intestazioni eleganti", 
@@ -26,8 +29,6 @@
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
         ], 
-        "Description": "This plugin provides you a fancy mail header style.",
-        "EnabledByDefault": "true",
         "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "2"

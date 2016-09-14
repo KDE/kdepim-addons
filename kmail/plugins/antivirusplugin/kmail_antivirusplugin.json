@@ -1,9 +1,24 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to configure Anti Virus in KMail.", 
+        "Description[ca@valencia]": "Este connector permet configurar l'antivirus en el KMail.", 
+        "Description[ca]": "Aquest connector permet configurar l'antivirus en el KMail.", 
+        "Description[es]": "Este complemento le permite configurar un antivirus en KMail.", 
+        "Description[et]": "See plugin võimaldab seadistada KMaili viirusevastast filtrit.", 
+        "Description[it]": "Questa estensione permette di configurare il servizio antivirus in KMail.", 
+        "Description[nl]": "Deze plugin stelt u in staat om Anti-virus in KMail in te stellen.", 
+        "Description[pl]": "Ta wtyczka umożliwia ustawienie programu antywirusowego w KMail.", 
+        "Description[pt]": "Este 'plugin' permite configurar o módulo Anti-Vírus no KMail.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa virushantering i Kmail.", 
+        "Description[uk]": "За допомогою цього додатка можна налаштувати антивірус у KMail.", 
+        "Description[x-test]": "xxThis plugin allows you to configure Anti Virus in KMail.xx", 
+        "EnabledByDefault": "true", 
+        "Id": "kmailantivirus", 
         "Name": "Antivirus", 
         "Name[ca@valencia]": "Contra els virus", 
         "Name[ca]": "Contra els virus", 
         "Name[de]": "Anti-Virus", 
+        "Name[et]": "Võitlus viirustega", 
         "Name[fi]": "Virusten suodatus", 
         "Name[pl]": "Antywirus", 
         "Name[pt]": "Anti-Vírus", 
@@ -15,13 +30,10 @@
         "Name[sr@latin]": "Protivvirusni", 
         "Name[sr]": "Противвирусни", 
         "Name[uk]": "Антивірус", 
-        "Name[x-test]": "xxAntivirusxx",
-        "Description": "This plugin allows you to configure Anti Virus in KMail.", 
+        "Name[x-test]": "xxAntivirusxx", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
-        "Id": "kmailantivirus",
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }
 }

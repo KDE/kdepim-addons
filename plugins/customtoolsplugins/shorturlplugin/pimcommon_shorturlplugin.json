@@ -1,8 +1,21 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to expand URL.", 
+        "Description[ca@valencia]": "Este connector permet expandir els URL.", 
+        "Description[ca]": "Aquest connector permet expandir els URL.", 
+        "Description[es]": "Este complemento le permite expandir una URL.", 
+        "Description[it]": "Questa estensione permette di espandere URL.", 
+        "Description[nl]": "Deze plug-in stelt u in staat een URL te expanderen.", 
+        "Description[pt]": "Este 'plugin' permite-lhe expandir o URL.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att expandera webbadresser.", 
+        "Description[uk]": "За допомогою цього додатка можна розгортати скорочені адреси.", 
+        "Description[x-test]": "xxThis plugin allows you to expand URL.xx", 
+        "EnabledByDefault": "true", 
+        "Id": "customtoolsshorturl", 
         "Name": "Shorturl", 
         "Name[ca@valencia]": "URL curt", 
         "Name[ca]": "URL curt", 
+        "Name[et]": "Lühi-URL", 
         "Name[fi]": "Lyhytosoite", 
         "Name[it]": "URL breve", 
         "Name[pl]": "Krótki adres URL", 
@@ -18,12 +31,9 @@
         "Name[uk]": "Скорочення адрес", 
         "Name[x-test]": "xxShorturlxx", 
         "Name[zh_CN]": "短链接", 
-        "Description": "This plugin allows you to expand URL.", 
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"
         ], 
-        "Version": "1.0",
-        "EnabledByDefault": "true",
-        "Id": "customtoolsshorturl"
+        "Version": "1.0"
     }
 }

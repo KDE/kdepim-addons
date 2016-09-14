@@ -1,11 +1,15 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "messageviewercreatetodoplugin", 
         "Name": "Create Todo", 
         "Name[ca@valencia]": "Crea una pendent", 
         "Name[ca]": "Crea una pendent", 
         "Name[cs]": "Vytvořit úkol", 
+        "Name[da]": "Opret gøremål", 
         "Name[de]": "Aufgabe erstellen", 
         "Name[es]": "Crear tarea pendiente", 
+        "Name[et]": "Ülesande loomine", 
         "Name[fi]": "Luo tehtävä", 
         "Name[gl]": "Crear unha tarefa pendente", 
         "Name[it]": "Crea cosa da fare", 
@@ -27,8 +31,6 @@
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 
-        "Version": "2.0",
-        "EnabledByDefault": "true",
-        "Id": "messageviewercreatetodoplugin"
+        "Version": "2.0"
     }
 }

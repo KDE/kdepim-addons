@@ -1,11 +1,15 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookmergecontact", 
         "Name": "Merge Contacts", 
         "Name[ca@valencia]": "Fusiona els contactes", 
         "Name[ca]": "Fusiona els contactes", 
         "Name[cs]": "Sloučit kontakty", 
+        "Name[da]": "Flet kontakter", 
         "Name[de]": "Kontakte zusammenführen", 
         "Name[es]": "Mezclar contactos", 
+        "Name[et]": "Kontaktide ühendamine", 
         "Name[fi]": "Yhdistä yhteystiedot", 
         "Name[gl]": "Fusionar os contactos", 
         "Name[it]": "Unisci contatti", 
@@ -26,8 +30,6 @@
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
-        "Id": "kaddressbookmergecontact",
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        "Version": "1.0"
     }
 }

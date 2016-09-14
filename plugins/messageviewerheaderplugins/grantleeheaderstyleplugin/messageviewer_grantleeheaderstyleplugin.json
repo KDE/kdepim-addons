@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to support grantlee mail header style.", 
+        "EnabledByDefault": "true", 
         "Name": "Grantlee Header Style", 
         "Name[ca@valencia]": "Estil de capçalera «Grantlee»", 
         "Name[ca]": "Estil de capçalera «Grantlee»", 
         "Name[de]": "Vorspann-Design „Grantlee“", 
         "Name[es]": "Estilo de encabezado Grantlee", 
+        "Name[et]": "Grantlee päisestiil", 
         "Name[fi]": "Grantlee-otsaketyyli", 
         "Name[gl]": "Estilo de cabeceira de Grantlee", 
         "Name[it]": "Stile con intestazioni di Grantlee", 
@@ -25,9 +28,7 @@
         "Name[zh_CN]": "Grantlee 信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ],
-        "Description": "This plugin allows you to support grantlee mail header style.", 
-        "EnabledByDefault": "true",
+        ], 
         "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "100"

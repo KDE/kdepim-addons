@@ -1,10 +1,26 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to insert special character in composer.", 
+        "Description[ca@valencia]": "Este connector permet inserir caràcters especials a l'editor.", 
+        "Description[ca]": "Aquest connector permet inserir caràcters especials a l'editor.", 
+        "Description[es]": "Este complemento le permite insertar caracteres especiales en el editor.", 
+        "Description[et]": "See plugin võimaldab sisestada kirja koostamise aknas erimärke.", 
+        "Description[it]": "Questa estensione permette di inserire dei caratteri speciali nel compositore.", 
+        "Description[nl]": "Deze plug-in stelt u in staat speciale tekens in de opsteller in te voegen.", 
+        "Description[pl]": "Ta wtyczka umożliwia wstawienie znaku specjalnego w edytorze", 
+        "Description[pt]": "Este 'plugin' permite inserir um carácter especial no compositor.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att infoga specialtecken i brevfönstret.", 
+        "Description[uk]": "За допомогою цього додатка можна вставити спеціальний символ до вікна редактора повідомлень.", 
+        "Description[x-test]": "xxThis plugin allows you to insert special character in composer.xx", 
+        "EnabledByDefault": "true", 
+        "Id": "kmailinsertspecialcharacter", 
         "Name": "Insert Special Character", 
         "Name[ca@valencia]": "Inserció d'un caràcter especial", 
         "Name[ca]": "Inserció d'un caràcter especial", 
+        "Name[da]": "Indsæt specialtegn", 
         "Name[de]": "Sonderzeichen einfügen", 
         "Name[es]": "Insertar carácter especial", 
+        "Name[et]": "Erisümboli lisamine", 
         "Name[fi]": "Lisää erikoismerkki", 
         "Name[gl]": "Inserir un carácter especial", 
         "Name[it]": "Inserisci carattere speciale", 
@@ -21,14 +37,11 @@
         "Name[sr]": "Уметни посебан знак", 
         "Name[sv]": "Infoga specialtecken", 
         "Name[uk]": "Вставлення спеціального символу", 
-        "Name[x-test]": "xxInsert Special Characterxx",
-        "Description": "This plugin allows you to insert special character in composer.", 
+        "Name[x-test]": "xxInsert Special Characterxx", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
-        ],
-        "Id": "kmailinsertspecialcharacter", 
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        ], 
+        "Version": "1.0"
     }, 
     "X-KDE-KMailEditor-Order": "2"
 }

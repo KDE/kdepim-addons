@@ -1,12 +1,31 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "kmailcheckbeforesend", 
         "Name": "Check Before Send", 
+        "Name[ca@valencia]": "Comprova abans d'enviar", 
+        "Name[ca]": "Comprova abans d'enviar", 
+        "Name[cs]": "Zkontrolovat před odesláním", 
+        "Name[de]": "Vor dem Versenden prüfen", 
+        "Name[es]": "Comprobar antes de enviar", 
+        "Name[et]": "Kontroll enne saatmist", 
+        "Name[fi]": "Tarkista ennen lähetystä", 
+        "Name[it]": "Verifica prima di inviare", 
+        "Name[nl]": "Controle voor verzenden", 
+        "Name[pl]": "Sprawdź przed wysłaniem", 
+        "Name[pt]": "Verificar Antes de Enviar", 
+        "Name[sk]": "Skontrolovať pred odoslaním", 
+        "Name[sl]": "Preveri pred pošiljanjem", 
+        "Name[sr@ijekavian]": "Провери пре слања", 
+        "Name[sr@ijekavianlatin]": "Proveri pre slanja", 
+        "Name[sr@latin]": "Proveri pre slanja", 
+        "Name[sr]": "Провери пре слања", 
+        "Name[sv]": "Kontrollera innan sändning", 
+        "Name[uk]": "Перевірка перед надсиланням", 
+        "Name[x-test]": "xxCheck Before Sendxx", 
         "ServiceTypes": [
             "KMailEditor/PluginCheckBeforeSend"
         ], 
-        "Version": "1.0",
-        "EnabledByDefault": "true",
-        "Id": "kmailcheckbeforesend"
-  
-    } 
+        "Version": "1.0"
+    }
 }

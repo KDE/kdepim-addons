@@ -1,10 +1,13 @@
 {
     "KPlugin": {
+        "Description": "This plugin reduces mail header to strict minimum.", 
+        "EnabledByDefault": "true", 
         "Name": "Brief Header Style", 
         "Name[ca@valencia]": "Estil de capçalera breu", 
         "Name[ca]": "Estil de capçalera breu", 
         "Name[de]": "Vorspann-Design „Kurz“", 
         "Name[es]": "Estilo de encabezado breve", 
+        "Name[et]": "Lühike päisestiil", 
         "Name[fi]": "Lyhyt otsaketyyli", 
         "Name[gl]": "Estilo de cabeceira resumida", 
         "Name[it]": "Stile con intestazioni compatte", 
@@ -25,10 +28,8 @@
         "Name[zh_CN]": "简要信头风格", 
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"
-        ],
-        "Description": "This plugin reduces mail header to strict minimum.", 
-        "Version": "1.0",
-        "EnabledByDefault": "true"
+        ], 
+        "Version": "1.0"
     }, 
     "X-KDE-MessageViewer-Header-Order": "5"
 }

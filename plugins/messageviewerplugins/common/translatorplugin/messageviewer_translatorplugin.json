@@ -1,11 +1,15 @@
 {
     "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Id": "messageviewertranslatorplugin", 
         "Name": "Translator", 
         "Name[ca@valencia]": "Traductor", 
         "Name[ca]": "Traductor", 
         "Name[cs]": "Překladatel", 
+        "Name[da]": "Oversætter", 
         "Name[de]": "Übersetzer", 
         "Name[es]": "Traductor", 
+        "Name[et]": "Tõlketeenus", 
         "Name[fi]": "Käännösohjelma", 
         "Name[gl]": "Tradutor", 
         "Name[it]": "Traduttore", 
@@ -27,8 +31,6 @@
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"
         ], 
-        "Version": "2.0",
-        "EnabledByDefault": "true",
-        "Id": "messageviewertranslatorplugin"
+        "Version": "2.0"
     }
 }
