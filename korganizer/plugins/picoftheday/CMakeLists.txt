@@ -1,8 +1,3 @@
-
-include_directories(
-  ${CMAKE_SOURCE_DIR}/korganizer
-)
-
 ########### next target ###############
 
 set(korg_picoftheday_PART_SRCS

@@ -1,8 +1,4 @@
 
-include_directories(
-  ${CMAKE_SOURCE_DIR}/korganizer
-)
-
 ########### next target ###############
 
 set(korg_hebrew_PART_SRCS
