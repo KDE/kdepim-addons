@@ -23,6 +23,7 @@
 
 #include <AkonadiCore/ChangeRecorder>
 #include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/EntityDisplayAttribute>
 #include <AkonadiCore/CollectionColorAttribute>
 #include <AkonadiCore/AttributeFactory>
@@ -45,7 +46,7 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     mMonitor->setChangeRecordingEnabled(false);
     mMonitor->itemFetchScope().fetchFullPayload(true);
     mMonitor->itemFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
-    mMonitor->itemFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
+    mMonitor->collectionFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
     onSettingsChanged();
 
     mCalendar = new Akonadi::ETMCalendar(mMonitor, this);
