@@ -32,7 +32,7 @@ class EntityTreeWidget;
 
 namespace Akonadi
 {
-class ChangeRecorder;
+class Monitor;
 class EntityTreeView;
 }
 
@@ -47,7 +47,7 @@ private Q_SLOTS:
 
 private:
     EntityTreeWidget *m_etw;
-    Akonadi::ChangeRecorder *m_oneCollectionChangeRecorder;
+    Akonadi::Monitor *m_oneCollectionChangeRecorder;
     Akonadi::EntityTreeView *m_oneCollectionView;
 
 };

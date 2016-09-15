@@ -30,7 +30,7 @@
 
 #include <AkonadiWidgets/EntityTreeView>
 #include <AkonadiCore/EntityTreeModel>
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <AkonadiCore/CollectionFetchScope>
 
 CollectionMonitoredWidget::CollectionMonitoredWidget(QWidget *parent, Qt::WindowFlags f)
@@ -44,7 +44,7 @@ CollectionMonitoredWidget::CollectionMonitoredWidget(QWidget *parent, Qt::Window
     m_etw->init();
     connect(m_etw->view()->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(selectionChanged(QItemSelection,QItemSelection)));
 
-    m_oneCollectionChangeRecorder = new Akonadi::ChangeRecorder(this);
+    m_oneCollectionChangeRecorder = new Akonadi::Monitor(this);
 
     Akonadi::EntityTreeModel *oneCollectionEtm = new Akonadi::EntityTreeModel(m_oneCollectionChangeRecorder, this);
 
