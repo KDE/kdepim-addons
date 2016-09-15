@@ -29,7 +29,7 @@
 #include "note.h"
 #include <KContacts/Addressee>
 
-MixedTreeModel::MixedTreeModel(Akonadi::ChangeRecorder *monitor, QObject *parent)
+MixedTreeModel::MixedTreeModel(Akonadi::Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
 {
 
