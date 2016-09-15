@@ -35,7 +35,7 @@ class MixedTreeModel : public Akonadi::EntityTreeModel
 {
     Q_OBJECT
 public:
-    MixedTreeModel(Akonadi::ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
+    MixedTreeModel(Akonadi::Monitor *monitor, QObject *parent = Q_NULLPTR);
 
     /* reimp */ int entityColumnCount(HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
     /* reimp */ QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
