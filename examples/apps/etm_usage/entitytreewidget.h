@@ -32,7 +32,7 @@ class QComboBox;
 namespace Akonadi
 {
 class EntityTreeModel;
-class ChangeRecorder;
+class Monitor;
 }
 
 class EntityTreeWidget : public QWidget
@@ -45,7 +45,7 @@ public:
     QTreeView *view() const;
     Akonadi::EntityTreeModel *model() const;
 
-    Akonadi::ChangeRecorder *changeRecorder() const;
+    Akonadi::Monitor *monitor() const;
 
     virtual void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model);
     virtual QModelIndex mapToSource(const QModelIndex &index)
@@ -69,7 +69,7 @@ private:
     QLineEdit *m_typeLineEdit;
 
     Akonadi::EntityTreeModel *m_etm;
-    Akonadi::ChangeRecorder *m_changeRecorder;
+    Akonadi::Monitor *m_monitor;
 };
 
 #endif

@@ -46,7 +46,7 @@ public:
 
 };
 
-MailModel::MailModel(ChangeRecorder *monitor, QObject *parent)
+MailModel::MailModel(Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent), d_ptr(new MailModelPrivate(this))
 {
 

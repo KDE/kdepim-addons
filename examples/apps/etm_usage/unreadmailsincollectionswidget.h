@@ -35,6 +35,7 @@ namespace Akonadi
 {
 class ChangeRecorder;
 class EntityTreeModel;
+class Monitor;
 }
 
 class UnreadMailsInCollectionsProxy : public QSortFilterProxyModel
@@ -59,7 +60,7 @@ private Q_SLOTS:
     void restoreCheckState();
 
 private:
-    Akonadi::ChangeRecorder *m_changeRecorder;
+    Akonadi::Monitor *m_changeRecorder;
     Akonadi::EntityTreeModel *m_etm;
     QItemSelectionModel *m_checkedItemModel;
     KCheckableProxyModel *m_checkableProxy;

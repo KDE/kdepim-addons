@@ -50,8 +50,8 @@ public:
 
     }
 
-    Akonadi::EntityTreeModel *getModel(Akonadi::ChangeRecorder *changeRecorder, QObject *parent) Q_DECL_OVERRIDE {
-        return new CategorisedEntityModel(changeRecorder, parent);
+    Akonadi::EntityTreeModel *getModel(Akonadi::Monitor *monitor, QObject *parent) Q_DECL_OVERRIDE {
+        return new CategorisedEntityModel(monitor, parent);
     }
 
 };

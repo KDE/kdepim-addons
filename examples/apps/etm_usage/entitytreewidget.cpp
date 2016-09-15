@@ -27,7 +27,7 @@
 #include <QVBoxLayout>
 #include <QTimer>
 
-#include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/monitor.h>
 #include <AkonadiCore/entitytreemodel.h>
 #include <AkonadiCore/itemfetchscope.h>
 
@@ -54,7 +54,7 @@ EntityTreeWidget::EntityTreeWidget(QWidget *parent)
       m_treeView(new QTreeView),
       m_typeComboBox(new QComboBox),
       m_typeLineEdit(new QLineEdit),
-      m_changeRecorder(new ChangeRecorder(this))
+      m_monitor(new Monitor(this))
 {
     for (uint i = 0; i < sizeof predefinedMimeTypes / sizeof * predefinedMimeTypes; ++i) {
         m_typeComboBox->addItem(predefinedUserVisibleMimeTypes[i], predefinedMimeTypes[i]);
@@ -92,13 +92,13 @@ void EntityTreeWidget::mimeTypesChanged(const QString &mimetypeList)
 {
     QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QLatin1String(","));
 
-    foreach (const QString mimetype, m_changeRecorder->mimeTypesMonitored())
+    foreach (const QString mimetype, m_monitor->mimeTypesMonitored())
         if (!list.contains(mimetype)) {
-            m_changeRecorder->setMimeTypeMonitored(mimetype, false);
+            m_monitor->setMimeTypeMonitored(mimetype, false);
         }
 
     foreach (const QString mimetype, list) {
-        m_changeRecorder->setMimeTypeMonitored(mimetype, true);
+        m_monitor->setMimeTypeMonitored(mimetype, true);
     }
 }
 
@@ -124,14 +124,14 @@ void EntityTreeWidget::init()
     connect(m_typeLineEdit, SIGNAL(textChanged(QString)), SLOT(mimeTypesChanged(QString)));
 }
 
-Akonadi::ChangeRecorder *EntityTreeWidget::changeRecorder() const
+Akonadi::ChangeRecorder *EntityTreeWidget::monitor() const
 {
-    return m_changeRecorder;
+    return m_monitor;
 }
 
 EntityTreeModel *EntityTreeWidget::getETM()
 {
-    return new EntityTreeModel(m_changeRecorder, this);
+    return new EntityTreeModel(m_monitor, this);
 }
 
 static int num;

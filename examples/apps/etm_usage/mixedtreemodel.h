@@ -28,7 +28,7 @@
 
 namespace Akonadi
 {
-class ChangeRecorder;
+class Monitor;
 }
 
 class MixedTreeModel : public Akonadi::EntityTreeModel

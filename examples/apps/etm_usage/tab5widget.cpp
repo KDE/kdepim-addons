@@ -61,7 +61,7 @@ public:
     }
 
     Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE {
-        return new CategorisedEntityModel(changeRecorder(), this);
+        return new CategorisedEntityModel(monitor(), this);
     }
 
 private:

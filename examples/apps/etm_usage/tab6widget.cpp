@@ -68,7 +68,7 @@ public:
     }
 
     Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE {
-        MixedTreeModel *model = new MixedTreeModel(changeRecorder(), this);
+        MixedTreeModel *model = new MixedTreeModel(monitor(), this);
         return model;
     }
 

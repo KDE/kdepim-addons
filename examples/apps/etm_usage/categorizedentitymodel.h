@@ -28,7 +28,7 @@
 class CategorisedEntityModel : public MixedTreeModel
 {
 public:
-    CategorisedEntityModel(Akonadi::ChangeRecorder *monitor, QObject *parent = Q_NULLPTR)
+    CategorisedEntityModel(Akonadi::Monitor *monitor, QObject *parent = Q_NULLPTR)
         : MixedTreeModel(monitor, parent)
     {
 

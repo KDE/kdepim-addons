@@ -40,6 +40,7 @@
 #include "mailmodel.h"
 
 #include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <AkonadiCore/ItemFetchScope>
 #include <AkonadiCore/entitymimetypefiltermodel.h>
 #include <AkonadiCore/selectionproxymodel.h>
@@ -89,7 +90,7 @@ UnreadMailsInCollectionsWidget::UnreadMailsInCollectionsWidget(QWidget *parent, 
     QSplitter *splitter = new QSplitter;
     layout->addWidget(splitter);
 
-    m_changeRecorder = new Akonadi::ChangeRecorder(this);
+    m_changeRecorder = new Akonadi::Monitor(this);
     m_changeRecorder->itemFetchScope().fetchFullPayload(true);
     m_changeRecorder->setCollectionMonitored(Akonadi::Collection::root());
     m_changeRecorder->setMimeTypeMonitored(KMime::Message::mimeType());
