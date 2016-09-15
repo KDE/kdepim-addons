@@ -25,7 +25,7 @@
 
 #include <AkonadiCore/collectionfetchjob.h>
 #include <AkonadiCore/entitytreemodel.h>
-#include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/monitor.h>
 #include <AkonadiCore/session.h>
 
 #define WANTED_REMOTE_ID "WANTED_REMOTE_ID"
@@ -57,7 +57,7 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
     if (!wantedRemoteId.isEmpty()) {
         foreach (const Collection &col, list) {
             if (col.remoteId() == wantedRemoteId) {
-                ChangeRecorder *changeRecorder = new ChangeRecorder(this);
+                Monitor *changeRecorder = new Monitor(this);
                 changeRecorder->setCollectionMonitored(col, true);
                 changeRecorder->fetchCollection(true);
                 changeRecorder->setAllMonitored(true);
@@ -73,7 +73,7 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
     }
 }
 
-EntityTreeModel *EntityTreeModelFactory::getModel(ChangeRecorder *changeRecorder, QObject *parent)
+EntityTreeModel *EntityTreeModelFactory::getModel(Monitor *changeRecorder, QObject *parent)
 {
     return new EntityTreeModel(changeRecorder, parent);
 }

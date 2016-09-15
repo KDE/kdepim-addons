@@ -28,7 +28,7 @@
 
 #include <AkonadiCore/entitytreemodel.h>
 #include <AkonadiCore/entitymimetypefiltermodel.h>
-#include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/monitor.h>
 
 #include <Akonadi/Contact/ContactsTreeModel>
 #include <AkonadiWidgets/entitylistview.h>
@@ -40,11 +40,11 @@ RecursiveItemListWidget::RecursiveItemListWidget(QWidget *parent, Qt::WindowFlag
     : QWidget(parent, f)
 {
 
-    Akonadi::ChangeRecorder *changeRecorder = new Akonadi::ChangeRecorder(this);
-    changeRecorder->setAllMonitored(true);
-    changeRecorder->setMimeTypeMonitored(KContacts::Addressee::mimeType());
-    changeRecorder->itemFetchScope().fetchFullPayload(true);
-    m_etm = new Akonadi::ContactsTreeModel(changeRecorder, this);
+    Akonadi::Monitor *monitor = new Akonadi::Monitor(this);
+    monitor->setAllMonitored(true);
+    monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType());
+    monitor->itemFetchScope().fetchFullPayload(true);
+    m_etm = new Akonadi::ContactsTreeModel(monitor, this);
 
     m_etm->setCollectionFetchStrategy(Akonadi::EntityTreeModel::InvisibleCollectionFetch);
 

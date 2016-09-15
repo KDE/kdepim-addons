@@ -65,11 +65,11 @@ EntityTreeWidget::EntityTreeWidget(QWidget *parent)
     layout->addWidget(m_typeLineEdit);
     layout->addWidget(m_treeView);
 
-    m_changeRecorder->setCollectionMonitored(Collection::root());
-    m_changeRecorder->fetchCollection(true);
-    m_changeRecorder->setAllMonitored(true);
-    m_changeRecorder->itemFetchScope().fetchFullPayload(true);
-    m_changeRecorder->itemFetchScope().fetchAllAttributes(true);
+    m_monitor->setCollectionMonitored(Collection::root());
+    m_monitor->fetchCollection(true);
+    m_monitor->setAllMonitored(true);
+    m_monitor->itemFetchScope().fetchFullPayload(true);
+    m_monitor->itemFetchScope().fetchAllAttributes(true);
     m_treeView->setSelectionMode(QAbstractItemView::ExtendedSelection);
 }
 
@@ -124,7 +124,7 @@ void EntityTreeWidget::init()
     connect(m_typeLineEdit, SIGNAL(textChanged(QString)), SLOT(mimeTypesChanged(QString)));
 }
 
-Akonadi::ChangeRecorder *EntityTreeWidget::monitor() const
+Akonadi::Monitor *EntityTreeWidget::monitor() const
 {
     return m_monitor;
 }

@@ -38,13 +38,13 @@ Q_SIGNALS:
     void modelCreated(Akonadi::EntityTreeModel *model);
 
 protected:
-    virtual Akonadi::EntityTreeModel *getModel(Akonadi::ChangeRecorder *changeRecorder, QObject *parent);
+    Akonadi::EntityTreeModel* getModel(Akonadi::Monitor* changeRecorder, QObject* parent);
 
 private Q_SLOTS:
     void collectionsFetched(const Akonadi::Collection::List &list);
 
 private:
-    Akonadi::ChangeRecorder *m_changeRecorder;
+    Akonadi::Monitor *m_changeRecorder;
 
 };
 

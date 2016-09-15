@@ -33,7 +33,7 @@
 #include <kcheckableproxymodel.h>
 
 #include <AkonadiCore/entitytreemodel.h>
-#include <AkonadiCore/changerecorder.h>
+#include <AkonadiCore/monitor.h>
 #include <AkonadiCore/itemfetchscope.h>
 #include <AkonadiCore/entitymimetypefiltermodel.h>
 
@@ -46,7 +46,7 @@ Checkable2::Checkable2(QWidget *parent, Qt::WindowFlags f)
     QSplitter *splitter = new QSplitter(this);
     layout->addWidget(splitter);
 
-    ChangeRecorder *changeRecorder = new ChangeRecorder(this);
+    Monitor *changeRecorder = new Monitor(this);
 
     changeRecorder->setCollectionMonitored(Collection::root());
     changeRecorder->fetchCollection(true);
