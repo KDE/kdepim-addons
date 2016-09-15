@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Description": "This plugin shows you all mail header.", 
+        "Description[nl]": "Deze plug-in toont de gehele e-mailheader.", 
+        "Description[pt]": "Este 'plugin' mostra-lhe todos os cabeçalhos de e-mails.", 
+        "Description[sv]": "Insticksprogrammet visar alla brevhuvud.", 
+        "Description[uk]": "Цей додаток покаже вам усі заголовки повідомлення.", 
+        "Description[x-test]": "xxThis plugin shows you all mail header.xx", 
         "EnabledByDefault": "true", 
         "Name": "All Header Style", 
         "Name[ca@valencia]": "Tots els estils de capçalera", 

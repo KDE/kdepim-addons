@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you a default grantlee mail header.", 
+        "Description[nl]": "Deze plug-in stelt u in staat een standaard Grantlee e-mailheader te gebruiken.", 
+        "Description[pt]": "Este 'plugin' permite-lhe atribuir um cabeçalho de e-mail predefinido do Grantlee.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att använda ett Grantlee-standardbrevhuvud.", 
+        "Description[uk]": "Цей додаток визначає типовий заголовок повідомлення grantlee.", 
+        "Description[x-test]": "xxThis plugin allows you a default grantlee mail header.xx", 
         "EnabledByDefault": "true", 
         "Name": "Default Grantlee Header Style", 
         "Name[ca@valencia]": "Estil de capçalera «Grantlee» predeterminat", 
