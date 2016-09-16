@@ -23,7 +23,7 @@
 
 #include <QSortFilterProxyModel>
 
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 
 #include <KCalCore/Incidence>
 
@@ -36,8 +36,8 @@
 
 using namespace Akonadi;
 
-Trip::Trip(const QPersistentModelIndex &index, Akonadi::ChangeRecorder *changeRecorder, TripComponentFactory *factory, QObject *parent)
-    : QObject(parent), m_index(index), m_changeRecorder(changeRecorder)
+Trip::Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripComponentFactory *factory, QObject *parent)
+    : QObject(parent), m_index(index), m_monitor(monitor)
 {
     QAbstractItemModel *model = const_cast<QAbstractItemModel *>(m_index.model());
     connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), SLOT(dataChanged(QModelIndex,QModelIndex)));
@@ -45,13 +45,13 @@ Trip::Trip(const QPersistentModelIndex &index, Akonadi::ChangeRecorder *changeRe
     connect(model, &QAbstractItemModel::layoutChanged, this, &Trip::layoutChanged);
     connect(model, &QAbstractItemModel::rowsRemoved, this, &Trip::rowsRemoved);
 
-    m_mailChangeRecorder = factory->createMailChangeRecorder(this);
-    m_todoChangeRecorder = factory->createTodoChangeRecorder(this);
-    m_notesChangeRecorder = factory->createNotesChangeRecorder(this);
+    m_mailMonitor = factory->createMailMonitor(this);
+    m_todoMonitor = factory->createTodoMonitor(this);
+    m_notesMonitor = factory->createNotesMonitor(this);
 
-    m_mailChangeRecorder->setSession(m_changeRecorder->session());
-    m_todoChangeRecorder->setSession(m_changeRecorder->session());
-    m_notesChangeRecorder->setSession(m_changeRecorder->session());
+    m_mailMonitor->setSession(m_monitor->session());
+    m_todoMonitor->setSession(m_monitor->session());
+    m_notesMonitor->setSession(m_monitor->session());
 
     m_mailModel = new QSortFilterProxyModel(this);
     m_mailModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
@@ -60,9 +60,9 @@ Trip::Trip(const QPersistentModelIndex &index, Akonadi::ChangeRecorder *changeRe
     m_notesModel = new QSortFilterProxyModel(this);
     m_notesModel->setFilterCaseSensitivity(Qt::CaseInsensitive);
 
-    m_mailModel->setSourceModel(factory->createMailModel(m_mailChangeRecorder));
-    m_todoModel->setSourceModel(factory->createTodoModel(m_todoChangeRecorder));
-    m_notesModel->setSourceModel(factory->createNotesModel(m_notesChangeRecorder));
+    m_mailModel->setSourceModel(factory->createMailModel(m_mailMonitor));
+    m_todoModel->setSourceModel(factory->createTodoModel(m_todoMonitor));
+    m_notesModel->setSourceModel(factory->createNotesModel(m_notesMonitor));
 
     QItemSelectionModel *mailItemSelection = new QItemSelectionModel(m_mailModel, this);
     QItemSelectionModel *todoItemSelection = new QItemSelectionModel(m_todoModel, this);
@@ -132,18 +132,18 @@ void Trip::updateEvent()
     setEventName(incidence->summary());
 }
 
-static void updateCollection(Akonadi::ChangeRecorder *cr, const Collection &collection)
+static void updateCollection(Akonadi::Monitor *mon, const Collection &collection)
 {
-    foreach (const Collection &existingCollection, cr->collectionsMonitored()) {
-        cr->setCollectionMonitored(existingCollection, false);
+    foreach (const Collection &existingCollection, mon->collectionsMonitored()) {
+        mon->setCollectionMonitored(existingCollection, false);
     }
 
-    foreach (const QString &mimeType, cr->mimeTypesMonitored()) {
-        cr->setMimeTypeMonitored(mimeType, false);
+    foreach (const QString &mimeType, mon->mimeTypesMonitored()) {
+        mon->setMimeTypeMonitored(mimeType, false);
     }
 
     if (collection.isValid()) {
-        cr->setCollectionMonitored(collection, true);
+        mon->setCollectionMonitored(collection, true);
     }
 }
 
@@ -151,23 +151,23 @@ void Trip::setCollection(int role, const Akonadi::Collection &collection)
 {
     switch (role) {
     case MailCollectionRole:
-        updateCollection(m_mailChangeRecorder, collection);
+        updateCollection(m_mailMonitor, collection);
         Q_EMIT monitoredCollectionsChanged();
         return;
     case TodoCollectionRole:
-        updateCollection(m_todoChangeRecorder, collection);
+        updateCollection(m_todoMonitor, collection);
         Q_EMIT monitoredCollectionsChanged();
         return;
     case NotesCollectionRole:
-        updateCollection(m_notesChangeRecorder, collection);
+        updateCollection(m_notesMonitor, collection);
         Q_EMIT monitoredCollectionsChanged();
         return;
     }
 }
 
-static Akonadi::Collection monitoredCollection(Akonadi::ChangeRecorder *cr)
+static Akonadi::Collection monitoredCollection(Akonadi::Monitor *monitor)
 {
-    Akonadi::Collection::List list = cr->collectionsMonitored();
+    Akonadi::Collection::List list = monitor->collectionsMonitored();
     if (list.isEmpty()) {
         return Akonadi::Collection(-1);
     }
@@ -178,11 +178,11 @@ Akonadi::Collection Trip::collection(int role)
 {
     switch (role) {
     case MailCollectionRole:
-        return monitoredCollection(m_mailChangeRecorder);
+        return monitoredCollection(m_mailMonitor);
     case TodoCollectionRole:
-        return monitoredCollection(m_todoChangeRecorder);
+        return monitoredCollection(m_todoMonitor);
     case NotesCollectionRole:
-        return monitoredCollection(m_notesChangeRecorder);
+        return monitoredCollection(m_notesMonitor);
     }
     return Akonadi::Collection();
 }

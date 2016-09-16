@@ -33,7 +33,7 @@ class TripComponentFactory;
 
 namespace Akonadi
 {
-class ChangeRecorder;
+class Monitor;
 }
 
 class Trip : public QObject
@@ -56,7 +56,7 @@ public:
         TodoCollectionRole,
         NotesCollectionRole
     };
-    Trip(const QPersistentModelIndex &index, Akonadi::ChangeRecorder *changeRecorder, TripComponentFactory *factory, QObject *parent = Q_NULLPTR);
+    Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripComponentFactory *factory, QObject *parent = Q_NULLPTR);
 
     QString eventName() const;
     QString eventDescription() const;
@@ -100,11 +100,11 @@ private:
 
 private:
     const QPersistentModelIndex m_index;
-    Akonadi::ChangeRecorder *m_changeRecorder;
+    Akonadi::Monitor *m_monitor;
 
-    Akonadi::ChangeRecorder *m_mailChangeRecorder;
-    Akonadi::ChangeRecorder *m_todoChangeRecorder;
-    Akonadi::ChangeRecorder *m_notesChangeRecorder;
+    Akonadi::Monitor *m_mailMonitor;
+    Akonadi::Monitor *m_todoMonitor;
+    Akonadi::Monitor *m_notesMonitor;
     QSortFilterProxyModel *m_mailModel;
     QSortFilterProxyModel *m_todoModel;
     QSortFilterProxyModel *m_notesModel;

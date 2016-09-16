@@ -22,7 +22,7 @@
 #include "tripcomponentfactory.h"
 
 #include <AkonadiCore/EntityTreeModel>
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <AkonadiCore/ItemFetchScope>
 #include <AkonadiCore/EntityMimeTypeFilterModel>
 
@@ -34,50 +34,50 @@
 #include "todocheckableproxymodel.h"
 #include "mixedtreemodel.h"
 
-Akonadi::ChangeRecorder *TripComponentFactory::createMailChangeRecorder(QObject *parent)
+Akonadi::Monitor *TripComponentFactory::createMailMonitor(QObject *parent)
 {
-    Akonadi::ChangeRecorder *chRec = new Akonadi::ChangeRecorder(parent);
-    chRec->setMimeTypeMonitored(KMime::Message::mimeType());
-    chRec->itemFetchScope().fetchFullPayload(true);
-    return chRec;
+    Akonadi::Monitor *chMon = new Akonadi::Monitor(parent);
+    chMon->setMimeTypeMonitored(KMime::Message::mimeType());
+    chMon->itemFetchScope().fetchFullPayload(true);
+    return chMon;
 }
 
-Akonadi::ChangeRecorder *TripComponentFactory::createNotesChangeRecorder(QObject *parent)
+Akonadi::Monitor *TripComponentFactory::createNotesMonitor(QObject *parent)
 {
-    Akonadi::ChangeRecorder *chRec = new Akonadi::ChangeRecorder(parent);
-    chRec->setMimeTypeMonitored(Akonotes::Note::mimeType());
-    chRec->itemFetchScope().fetchFullPayload(true);
-    return chRec;
+    Akonadi::Monitor *chMon = new Akonadi::Monitor(parent);
+    chMon->setMimeTypeMonitored(Akonotes::Note::mimeType());
+    chMon->itemFetchScope().fetchFullPayload(true);
+    return chMon;
 }
 
-Akonadi::ChangeRecorder *TripComponentFactory::createTodoChangeRecorder(QObject *parent)
+Akonadi::Monitor *TripComponentFactory::createTodoMonitor(QObject *parent)
 {
-    Akonadi::ChangeRecorder *chRec = new Akonadi::ChangeRecorder(parent);
-    chRec->setMimeTypeMonitored(KCalCore::Todo::todoMimeType());
-    chRec->itemFetchScope().fetchFullPayload(true);
-    return chRec;
+    Akonadi::Monitor *chMon = new Akonadi::Monitor(parent);
+    chMon->setMimeTypeMonitored(KCalCore::Todo::todoMimeType());
+    chMon->itemFetchScope().fetchFullPayload(true);
+    return chMon;
 }
 
-QAbstractItemModel *TripComponentFactory::createMailModel(Akonadi::ChangeRecorder *changeRecorder)
+QAbstractItemModel *TripComponentFactory::createMailModel(Akonadi::Monitor *monitor)
 {
-    MixedTreeModel *model = new MixedTreeModel(changeRecorder);
+    MixedTreeModel *model = new MixedTreeModel(monitor);
     model->setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
     return model;
 }
 
-QAbstractItemModel *TripComponentFactory::createNotesModel(Akonadi::ChangeRecorder *changeRecorder)
+QAbstractItemModel *TripComponentFactory::createNotesModel(Akonadi::Monitor *monitor)
 {
-    MixedTreeModel *model = new MixedTreeModel(changeRecorder);
+    MixedTreeModel *model = new MixedTreeModel(monitor);
     model->setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
     return model;
 }
 
-QAbstractItemModel *TripComponentFactory::createTodoModel(Akonadi::ChangeRecorder *changeRecorder)
+QAbstractItemModel *TripComponentFactory::createTodoModel(Akonadi::Monitor *monitor)
 {
-    MixedTreeModel *model = new MixedTreeModel(changeRecorder);
+    MixedTreeModel *model = new MixedTreeModel(monitor);
     model->setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
 
-    Akonadi::EntityMimeTypeFilterModel *filterModel = new Akonadi::EntityMimeTypeFilterModel(changeRecorder);
+    Akonadi::EntityMimeTypeFilterModel *filterModel = new Akonadi::EntityMimeTypeFilterModel(monitor);
     filterModel->addMimeTypeInclusionFilter(KCalCore::Todo::todoMimeType());
     filterModel->setHeaderGroup(MixedTreeModel::ItemListHeaders);
     filterModel->setSourceModel(model);

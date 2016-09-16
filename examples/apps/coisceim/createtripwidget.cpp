@@ -31,7 +31,7 @@
 #include <KConfig>
 #include <KSharedConfigPtr>
 
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <KSharedConfig>
 
 #include "createfoldercontentswidget.h"
@@ -40,7 +40,7 @@
 
 using namespace Akonadi;
 
-CreateTripWidget::CreateTripWidget(Trip *trip, Akonadi::ChangeRecorder *monitor, QWidget *parent, Qt::WindowFlags f)
+CreateTripWidget::CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidget *parent, Qt::WindowFlags f)
     : QWidget(parent, f), m_trip(trip), m_monitor(monitor)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);

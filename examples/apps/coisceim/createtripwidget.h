@@ -28,7 +28,7 @@
 
 namespace Akonadi
 {
-class ChangeRecorder;
+class Monitor;
 }
 
 class CreateFolderContentsWidget;
@@ -39,7 +39,7 @@ class CreateTripWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CreateTripWidget(Trip *trip, Akonadi::ChangeRecorder *monitor, QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    explicit CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
 
 private Q_SLOTS:
     void tripSelected(const Akonadi::Item &item);
@@ -49,7 +49,7 @@ private:
     CreateFolderContentsWidget *createView(const QString &type, int role);
 
     Trip *m_trip;
-    Akonadi::ChangeRecorder *m_monitor;
+    Akonadi::Monitor *m_monitor;
     Akonadi::Item m_tripItem;
     CreateFolderContentsWidget *m_mailWidget;
     CreateFolderContentsWidget *m_todoWidget;

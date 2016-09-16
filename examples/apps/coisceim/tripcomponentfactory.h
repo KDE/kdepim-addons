@@ -27,20 +27,20 @@ class QAbstractItemModel;
 
 namespace Akonadi
 {
-class ChangeRecorder;
+class Monitor;
 }
 
 class TripComponentFactory
 {
 public:
 
-    Akonadi::ChangeRecorder *createMailChangeRecorder(QObject *parent);
-    Akonadi::ChangeRecorder *createTodoChangeRecorder(QObject *parent);
-    Akonadi::ChangeRecorder *createNotesChangeRecorder(QObject *parent);
+    Akonadi::Monitor *createMailMonitor(QObject *parent);
+    Akonadi::Monitor *createTodoMonitor(QObject *parent);
+    Akonadi::Monitor *createNotesMonitor(QObject *parent);
 
-    QAbstractItemModel *createMailModel(Akonadi::ChangeRecorder *changeRecorder);
-    QAbstractItemModel *createTodoModel(Akonadi::ChangeRecorder *changeRecorder);
-    QAbstractItemModel *createNotesModel(Akonadi::ChangeRecorder *changeRecorder);
+    QAbstractItemModel *createMailModel(Akonadi::Monitor *monitor);
+    QAbstractItemModel *createTodoModel(Akonadi::Monitor *monitor);
+    QAbstractItemModel *createNotesModel(Akonadi::Monitor *monitor);
 
 };
 

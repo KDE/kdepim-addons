@@ -38,7 +38,7 @@ public:
         TripRole = MixedTreeModel::UserRole + 1,
         WidgetRole
     };
-    explicit TripModel(Akonadi::ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
+    explicit TripModel(Akonadi::Monitor *monitor, QObject *parent = Q_NULLPTR);
 
     bool removeRows(int, int, const QModelIndex & = QModelIndex()) Q_DECL_OVERRIDE;
     int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
@@ -63,7 +63,7 @@ private:
     mutable QHash<Akonadi::Item::Id, Trip *> m_trips;
     mutable QHash<Akonadi::Item::Id, TripWidget *> m_tripWidgets;
     CreateTripWidget *m_createWidget;
-    Akonadi::ChangeRecorder *m_monitor;
+    Akonadi::Monitor *m_monitor;
 };
 
 #endif

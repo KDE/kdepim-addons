@@ -28,7 +28,7 @@
 #include <KConfig>
 
 #include <AkonadiCore/Item>
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <KSharedConfig>
 
 #include "trip.h"
@@ -38,7 +38,7 @@
 
 using namespace Akonadi;
 
-TripModel::TripModel(Akonadi::ChangeRecorder *monitor, QObject *parent)
+TripModel::TripModel(Akonadi::Monitor *monitor, QObject *parent)
     : MixedTreeModel(monitor, parent), m_monitor(monitor)
 {
     setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
