@@ -15,7 +15,10 @@ ecm_qt_declare_logging_category(loggingcategory_SRCS
     CATEGORY_NAME log_pimeventsplugin
 )
 
-add_library(pimevents MODULE ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
+set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
+kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json SOURCES
+    ${pimeventsplugins_full_SRCS} INSTALL_NAMESPACE plasmacalendarplugins)
+
 target_link_libraries(pimevents
     Qt5::Core
     KF5::AkonadiCore
@@ -25,9 +28,6 @@ target_link_libraries(pimevents
     KF5::EventViews # for reading KOrganizer calendar colors
 )
 
-install(TARGETS pimevents
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins
-)
 
 
 ######################### NEXT TARGET #######################33
