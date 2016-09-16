@@ -10,7 +10,8 @@ kconfig_add_kcfg_files(webengineviewer_webengineurlinterceptor_donottrack_SRCS
 )
 
 
-add_library(webengineviewer_donottrackplugin MODULE ${webengineviewer_webengineurlinterceptor_donottrack_SRCS})
+kcoreaddons_add_plugin(webengineviewer_donottrackplugin JSON messageviewer_donottrackurlinterceptor.json SOURCES
+    ${webengineviewer_webengineurlinterceptor_donottrack_SRCS} INSTALL_NAMESPACE webengineviewer)
 
 target_link_libraries(webengineviewer_donottrackplugin
     Qt5::WebEngine
@@ -19,7 +20,6 @@ target_link_libraries(webengineviewer_donottrackplugin
     KF5::ConfigGui
     KF5::CoreAddons
     )
-
-install(TARGETS webengineviewer_donottrackplugin DESTINATION ${PLUGIN_INSTALL_DIR}/webengineviewer)
-
-add_subdirectory(autotests)
+if(BUILD_TESTING)
+   add_subdirectory(autotests)
+endif()

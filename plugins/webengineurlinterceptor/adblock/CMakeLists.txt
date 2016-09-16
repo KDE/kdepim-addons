@@ -6,7 +6,8 @@ set(webengineviewer_webengineurlinterceptor_adblock_SRCS
 ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME log_adblockinterceptor)
 
 
-add_library(webengineviewer_adblockplugin MODULE ${webengineviewer_webengineurlinterceptor_adblock_SRCS})
+kcoreaddons_add_plugin(webengineviewer_adblockplugin JSON messageviewer_adblockurlinterceptor.json SOURCES
+    ${webengineviewer_webengineurlinterceptor_adblock_SRCS} INSTALL_NAMESPACE webengineviewer)
 
 target_link_libraries(webengineviewer_adblockplugin
     KF5::MessageViewer
@@ -19,8 +20,6 @@ target_link_libraries(webengineviewer_adblockplugin
     KF5::I18n
     KF5::WebEngineViewer
     )
-
-install(TARGETS webengineviewer_adblockplugin DESTINATION ${PLUGIN_INSTALL_DIR}/webengineviewer)
 
 if(BUILD_TESTING)
    add_subdirectory(tests)
