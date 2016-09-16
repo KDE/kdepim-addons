@@ -57,13 +57,13 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
     if (!wantedRemoteId.isEmpty()) {
         foreach (const Collection &col, list) {
             if (col.remoteId() == wantedRemoteId) {
-                Monitor *changeRecorder = new Monitor(this);
-                changeRecorder->setCollectionMonitored(col, true);
-                changeRecorder->fetchCollection(true);
-                changeRecorder->setAllMonitored(true);
-                changeRecorder->itemFetchScope().fetchFullPayload();
+                Monitor *monitor = new Monitor(this);
+                monitor->setCollectionMonitored(col, true);
+                monitor->fetchCollection(true);
+                monitor->setAllMonitored(true);
+                monitor->itemFetchScope().fetchFullPayload();
 
-                EntityTreeModel *etm = getModel(changeRecorder, parent());
+                EntityTreeModel *etm = getModel(monitor, parent());
 
                 Q_EMIT modelCreated(etm);
                 return;
@@ -73,8 +73,8 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
     }
 }
 
-EntityTreeModel *EntityTreeModelFactory::getModel(Monitor *changeRecorder, QObject *parent)
+EntityTreeModel *EntityTreeModelFactory::getModel(Monitor *monitor, QObject *parent)
 {
-    return new EntityTreeModel(changeRecorder, parent);
+    return new EntityTreeModel(monitor, parent);
 }
 
