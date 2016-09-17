@@ -1,6 +1,8 @@
 {
     "KPlugin": {
         "Description": "This plugin shows you all mail header.", 
+        "Description[ca@valencia]": "Este connector mostra totes les capçaleres del correu.", 
+        "Description[ca]": "Aquest connector mostra totes les capçaleres del correu.", 
         "Description[nl]": "Deze plug-in toont de gehele e-mailheader.", 
         "Description[pt]": "Este 'plugin' mostra-lhe todos os cabeçalhos de e-mails.", 
         "Description[sv]": "Insticksprogrammet visar alla brevhuvud.", 

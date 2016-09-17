@@ -1,6 +1,8 @@
 {
     "KPlugin": {
         "Description": "This plugin reduces mail header to strict minimum.", 
+        "Description[ca@valencia]": "Este connector redueix la capçalera del correu al mínim estricte.", 
+        "Description[ca]": "Aquest connector redueix la capçalera del correu al mínim estricte.", 
         "Description[nl]": "Deze plug-in reduceert de e-mailheader tot het strikte minimum.", 
         "Description[pt]": "Este 'plugin' reduz o cabeçalho do e-mail ao mínimo necessário.", 
         "Description[sv]": "Insticksprogrammet reducerar brevhuvuden till absolut minimum.", 
