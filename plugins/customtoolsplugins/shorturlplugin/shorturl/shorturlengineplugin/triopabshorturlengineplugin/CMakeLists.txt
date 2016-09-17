@@ -3,11 +3,10 @@ set(pimcommon_triopabshorturlengineplugin_SRCS
     triopabshorturlengineinterface.cpp
 )
 
-add_library(pimcommon_triopabshorturlengineplugin MODULE ${pimcommon_triopabshorturlengineplugin_SRCS})
+kcoreaddons_add_plugin(pimcommon_triopabshorturlengineplugin JSON pimcommon_triopabshorturlengineplugin.json SOURCES
+    ${pimcommon_triopabshorturlengineplugin_SRCS} INSTALL_NAMESPACE pimcommon)
 
 target_link_libraries(pimcommon_triopabshorturlengineplugin
     KF5::Service KF5::I18n Qt5::Network KF5::CoreAddons shorturlpluginprivate
 )
-
-install(TARGETS pimcommon_triopabshorturlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
 

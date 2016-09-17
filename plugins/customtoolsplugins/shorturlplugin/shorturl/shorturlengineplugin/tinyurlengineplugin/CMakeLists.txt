@@ -3,11 +3,11 @@ set(pimcommon_tinyplugin_SRCS
     tinyurlengineinterface.cpp
 )
 
-add_library(pimcommon_tinyurlengineplugin MODULE ${pimcommon_tinyplugin_SRCS})
+kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin JSON pimcommon_tinyurlengineplugin.json SOURCES
+    ${pimcommon_tinyplugin_SRCS} INSTALL_NAMESPACE pimcommon)
+
 
 target_link_libraries(pimcommon_tinyurlengineplugin
     KF5::Service KF5::I18n Qt5::Network KF5::CoreAddons shorturlpluginprivate
 )
-
-install(TARGETS pimcommon_tinyurlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
 

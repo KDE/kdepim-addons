@@ -4,11 +4,10 @@ set(pimcommon_isgdshorturlengineplugin_SRCS
 )
 ecm_qt_declare_logging_category(pimcommon_isgdshorturlengineplugin_SRCS HEADER isgdshorturlengineplugin_debug.h IDENTIFIER ISGDSHORTURLENGINEPLUGIN_LOG CATEGORY_NAME log_isgdshorturlengineplugin)
 
-add_library(pimcommon_isgdshorturlengineplugin MODULE ${pimcommon_isgdshorturlengineplugin_SRCS})
+kcoreaddons_add_plugin(pimcommon_isgdshorturlengineplugin JSON pimcommon_isgdshorturlengineplugin.json SOURCES
+    ${pimcommon_isgdshorturlengineplugin_SRCS} INSTALL_NAMESPACE pimcommon)
 
 target_link_libraries(pimcommon_isgdshorturlengineplugin
     KF5::Service KF5::I18n Qt5::Network KF5::CoreAddons shorturlpluginprivate
 )
-
-install(TARGETS pimcommon_isgdshorturlengineplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
 
