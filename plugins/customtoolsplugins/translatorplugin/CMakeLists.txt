@@ -3,7 +3,8 @@ set(pimcommon_translatorplugin_SRCS
    translatorview.cpp
 )
 
-add_library(pimcommon_translatorplugin MODULE ${pimcommon_translatorplugin_SRCS})
+kcoreaddons_add_plugin(pimcommon_translatorplugin JSON pimcommon_translatorplugin.json SOURCES
+    ${pimcommon_translatorplugin_SRCS} INSTALL_NAMESPACE pimcommon)
 
 target_link_libraries(pimcommon_translatorplugin
   KF5::PimCommon
@@ -11,5 +12,3 @@ target_link_libraries(pimcommon_translatorplugin
   KF5::XmlGui
   KF5::I18n
 )
-
-install(TARGETS pimcommon_translatorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/pimcommon)
