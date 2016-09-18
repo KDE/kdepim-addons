@@ -23,7 +23,8 @@
         "Name[sr]": "Промени величину слова", 
         "Name[sv]": "Ändra skiftläge", 
         "Name[uk]": "Змінити регістр", 
-        "Name[x-test]": "xxChange Casexx", 
+        "Name[x-test]": "xxChange Casexx",
+        "Description": "This plugins allows you to change selected text case.", 
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ], 

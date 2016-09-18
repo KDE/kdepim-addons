@@ -24,7 +24,8 @@
         "Name[sr]": "Спољашња скрипта", 
         "Name[sv]": "Externt skript", 
         "Name[uk]": "Зовнішній скрипт", 
-        "Name[x-test]": "xxExternal Scriptxx", 
+        "Name[x-test]": "xxExternal Scriptxx",
+        "Description": "This plugin allows you to use external script against message viewer.", 
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"
         ], 
