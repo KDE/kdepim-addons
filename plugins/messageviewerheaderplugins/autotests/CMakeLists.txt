@@ -34,4 +34,7 @@ add_messageviewer_header_unittest( grantleeheaderstyleplugintest.cpp "../grantle
 
 add_messageviewer_header_unittest( longheaderstyleplugintest.cpp "../longheaderstyleplugin/longheaderstyleplugin.cpp;../longheaderstyleplugin/longheaderstyleinterface.cpp")
 
+add_messageviewer_header_unittest( standardsheaderstyleplugintest.cpp "../standardsheaderstyleplugin/standardheaderstrategy.cpp;../standardsheaderstyleplugin/standardsheaderstyleplugin.cpp;../standardsheaderstyleplugin/standardsheaderstyleinterface.cpp")
+
+
 add_messageviewer_header_class_unittest( headerstylepluginmanagertest.cpp)

@@ -1,0 +1,35 @@
+{
+    "KPlugin": {
+        "EnabledByDefault": "true", 
+        "Name": "Standards Header Style", 
+        "Name[ca@valencia]": "Estil de capçalera estàndard", 
+        "Name[ca]": "Estil de capçalera estàndard", 
+        "Name[cs]": "Standardní styl hlavičky", 
+        "Name[da]": "Standard header-stil", 
+        "Name[de]": "Vorspann-Design „Standard“", 
+        "Name[es]": "Estilo de encabezado estándar", 
+        "Name[et]": "Standardne päisestiil", 
+        "Name[fi]": "Vakio-otsaketyyli", 
+        "Name[gl]": "Estilo de cabeceira estándar", 
+        "Name[it]": "Stile con intestazioni standard", 
+        "Name[nl]": "Standaarden van header-stijl", 
+        "Name[pl]": "Standardowe nagłówki", 
+        "Name[pt]": "Estilo de Cabeçalhos Padrão", 
+        "Name[pt_BR]": "Estilo de cabeçalho Padrão", 
+        "Name[ru]": "Стандартный стиль заголовков", 
+        "Name[sk]": "Štandardný štýl hlavičiek", 
+        "Name[sl]": "Slog z običajnimi glavami", 
+        "Name[sr@ijekavian]": "стандардни стил заглавља", 
+        "Name[sr@ijekavianlatin]": "standardni stil zaglavlja", 
+        "Name[sr@latin]": "standardni stil zaglavlja", 
+        "Name[sr]": "стандардни стил заглавља", 
+        "Name[sv]": "Normal huvudstil", 
+        "Name[uk]": "Стандартний стиль заголовків", 
+        "Name[x-test]": "xxStandards Header Stylexx", 
+        "ServiceTypes": [
+            "MessageViewerHeaderStyle/Plugin"
+        ], 
+        "Version": "1.0"
+    }, 
+    "X-KDE-MessageViewer-Header-Order": "4"
+}
