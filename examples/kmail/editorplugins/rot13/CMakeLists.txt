@@ -4,13 +4,12 @@ set(kmail_rot13editorplugin_SRCS
     rot13job.cpp
 )
 
-add_library(kmail_rot13editorplugin MODULE ${kmail_rot13editorplugin_SRCS})
+kcoreaddons_add_plugin(kmail_rot13editorplugin JSON kmail_rot13editorplugin.json SOURCES
+    ${kmail_rot13editorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_rot13editorplugin
   KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
-
-install(TARGETS kmail_rot13editorplugin DESTINATION ${PLUGIN_INSTALL_DIR}/kmail)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)
