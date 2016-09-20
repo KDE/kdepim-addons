@@ -6,7 +6,7 @@ set(messageviewer_createeventplugin_SRCS
     createeventjob.cpp
 )
 
-ecm_qt_declare_logging_category(messageviewer_createeventplugin_SRCS HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME log_createeventplugin)
+ecm_qt_declare_logging_category(messageviewer_createeventplugin_SRCS HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin)
 
 kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_createeventplugin.json SOURCES
     ${messageviewer_createeventplugin_SRCS} INSTALL_NAMESPACE messageviewer)

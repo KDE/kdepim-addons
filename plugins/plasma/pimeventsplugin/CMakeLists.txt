@@ -12,7 +12,7 @@ set(pimeventsplugin_SRCS
 ecm_qt_declare_logging_category(loggingcategory_SRCS
     HEADER pimeventsplugin_debug.h
     IDENTIFIER PIMEVENTSPLUGIN_LOG
-    CATEGORY_NAME log_pimeventsplugin
+    CATEGORY_NAME org.kde.pim.pimeventsplugin
 )
 
 set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})

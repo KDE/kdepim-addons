@@ -1,5 +1,5 @@
 set(checkbeforesend_common_SRCS)
-ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesend_debug.h IDENTIFIER KMAIL_EDITOR_CHECKBEFORESEND_PLUGIN_LOG CATEGORY_NAME log_kmail_checkbeforesend)
+ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesend_debug.h IDENTIFIER KMAIL_EDITOR_CHECKBEFORESEND_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesend)
 
 macro(add_kmail_checkbeforesend_unittest _source _additional)
     set( _test ${_source} ${_additional} ${checkbeforesend_common_SRCS})

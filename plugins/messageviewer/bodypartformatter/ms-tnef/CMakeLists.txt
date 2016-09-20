@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_application_mstnef_plugin\")
 
 set(messageviewer_bodypartformatter_application_mstnef_SRCS application_ms-tnef.cpp)
-ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstnef_SRCS HEADER ms_tnef_debug.h IDENTIFIER MS_TNEF_LOG CATEGORY_NAME log_ms_tnef)
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstnef_SRCS HEADER ms_tnef_debug.h IDENTIFIER MS_TNEF_LOG CATEGORY_NAME org.kde.pim.ms_tnef)
 
 add_library(messageviewer_bodypartformatter_application_mstnef MODULE ${messageviewer_bodypartformatter_application_mstnef_SRCS})
 

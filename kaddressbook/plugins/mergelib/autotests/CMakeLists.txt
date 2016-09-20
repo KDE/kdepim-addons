@@ -1,7 +1,7 @@
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(kaddressbookmergelibprivate_common_SRCS)
-ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME log_kaddressbookmergelibprivate)
+ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/../.. )
 include_directories(${CMAKE_BINARY_DIR}/kaddressbook/)

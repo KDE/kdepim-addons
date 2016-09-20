@@ -1,5 +1,5 @@
 set(confirmaddressplugin_common_SRCS)
-ecm_qt_declare_logging_category(confirmaddressplugin_common_SRCS HEADER confirmaddressplugin_debug.h IDENTIFIER KMAIL_EDITOR_CONFIRMADDRESS_PLUGIN_LOG CATEGORY_NAME log_kmail_confirmaddressplugin)
+ecm_qt_declare_logging_category(confirmaddressplugin_common_SRCS HEADER confirmaddressplugin_debug.h IDENTIFIER KMAIL_EDITOR_CONFIRMADDRESS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmaddressplugin)
 
 macro(add_kmail_confirmaddress_unittest _source _additional)
     set( _test ${_source} ${_additional} ${confirmaddressplugin_common_SRCS})

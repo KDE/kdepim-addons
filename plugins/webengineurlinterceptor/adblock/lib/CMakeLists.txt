@@ -1,5 +1,5 @@
 set(messageviewer_adblock_lib_common_SRCS)
-ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME log_adblockinterceptor)
+ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
 
 set(adblocklibprivate_widget_SRCS
     widgets/adblockblockableitemsdialog.cpp

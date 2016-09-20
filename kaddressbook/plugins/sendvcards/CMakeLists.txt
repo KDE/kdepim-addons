@@ -7,7 +7,7 @@ set(kaddressbook_sendvcardsplugin_SRCS
     sendvcardsplugin.cpp
     sendvcardsjob.cpp
 )
-ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddressbook_sendvcardsplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDVCARDS_LOG CATEGORY_NAME log_kaddressbook_sendvcards)
+ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddressbook_sendvcardsplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDVCARDS_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendvcards)
 
 
 kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcardsplugin.json SOURCES

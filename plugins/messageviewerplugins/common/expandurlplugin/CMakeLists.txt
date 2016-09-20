@@ -3,7 +3,7 @@ set(messageviewer_expandurlplugin_SRCS
     viewerpluginexpandurlinterface.cpp
 )
 
-ecm_qt_declare_logging_category(messageviewer_expandurlplugin_SRCS HEADER expandurlplugin_debug.h IDENTIFIER EXPANDURLPLUGIN_LOG CATEGORY_NAME log_expandurlplugin)
+ecm_qt_declare_logging_category(messageviewer_expandurlplugin_SRCS HEADER expandurlplugin_debug.h IDENTIFIER EXPANDURLPLUGIN_LOG CATEGORY_NAME org.kde.pim.expandurlplugin)
 
 kcoreaddons_add_plugin(messageviewer_expandurlplugin JSON messageviewer_expandurlplugin.json SOURCES
     ${messageviewer_expandurlplugin_SRCS} INSTALL_NAMESPACE messageviewer)

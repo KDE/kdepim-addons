@@ -4,7 +4,7 @@ set(messageviewer_createtodoplugin_SRCS
     todoedit.cpp
     createtodojob.cpp
 )
-ecm_qt_declare_logging_category(messageviewer_createtodoplugin_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME log_createtodoplugin)
+ecm_qt_declare_logging_category(messageviewer_createtodoplugin_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin)
 
 kcoreaddons_add_plugin(messageviewer_createtodoplugin JSON messageviewer_createtodoplugin.json SOURCES
     ${messageviewer_createtodoplugin_SRCS} INSTALL_NAMESPACE messageviewer)

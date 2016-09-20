@@ -114,5 +114,5 @@ add_subdirectory(kaddressbook)
 add_subdirectory(akregator)
 add_subdirectory(sieveeditor)
 
-install( FILES kdepim-addons.categories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install( FILES kdepim-addons.categories kdepim-addons.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)

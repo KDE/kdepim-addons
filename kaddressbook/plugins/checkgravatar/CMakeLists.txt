@@ -14,7 +14,7 @@ set(kaddressbook_checkgravatarplugin_SRCS
     ${kaddressbook_gravatar_SRCS}
 )
 
-ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME log_kaddressbook_checkgravatar)
+ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar)
 
 kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkgravatarplugin.json SOURCES
     ${kaddressbook_checkgravatarplugin_SRCS} INSTALL_NAMESPACE kaddressbook)

@@ -2,7 +2,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_vcard_plugin\")
 
 set(messageviewer_bodypartformatter_text_vcard_PART_SRCS text_vcard.cpp vcardmemento.cpp updatecontactjob.cpp)
-ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_SRCS HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME log_vcard)
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_SRCS HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME org.kde.pim.vcard)
 
 add_library(messageviewer_bodypartformatter_text_vcard MODULE ${messageviewer_bodypartformatter_text_vcard_PART_SRCS})
 target_link_libraries(messageviewer_bodypartformatter_text_vcard  KF5::Contacts KF5::Libkdepim KF5::MessageViewer KF5::IconThemes KF5::JobWidgets KF5::I18n)

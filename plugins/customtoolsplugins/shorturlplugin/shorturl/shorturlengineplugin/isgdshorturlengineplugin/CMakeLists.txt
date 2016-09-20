@@ -2,7 +2,7 @@ set(pimcommon_isgdshorturlengineplugin_SRCS
     isgdshorturlengineplugin.cpp
     isgdshorturlengineinterface.cpp
 )
-ecm_qt_declare_logging_category(pimcommon_isgdshorturlengineplugin_SRCS HEADER isgdshorturlengineplugin_debug.h IDENTIFIER ISGDSHORTURLENGINEPLUGIN_LOG CATEGORY_NAME log_isgdshorturlengineplugin)
+ecm_qt_declare_logging_category(pimcommon_isgdshorturlengineplugin_SRCS HEADER isgdshorturlengineplugin_debug.h IDENTIFIER ISGDSHORTURLENGINEPLUGIN_LOG CATEGORY_NAME org.kde.pim.isgdshorturlengineplugin)
 
 kcoreaddons_add_plugin(pimcommon_isgdshorturlengineplugin JSON pimcommon_isgdshorturlengineplugin.json SOURCES
     ${pimcommon_isgdshorturlengineplugin_SRCS} INSTALL_NAMESPACE pimcommon)
