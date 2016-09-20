@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin adds support for \"do not track\".", 
+        "Description[ca]": "Aquest connector afegeix suport per a «no vull ser seguit».", 
+        "Description[nl]": "Deze plug-in voegt ondersteuning toe voor \"do not track\".", 
+        "Description[pt]": "Este 'plugin' adiciona o suporte para \"não registar\".", 
+        "Description[sv]": "Insticksprogrammet lägger till stöd för \"följ inte\".", 
+        "Description[uk]": "Цей додаток реалізує підтримку режиму «не стежити».", 
+        "Description[x-test]": "xxThis plugin adds support for \"do not track\".xx", 
         "EnabledByDefault": "true", 
         "Id": "messageviewerdonottrackplugin", 
         "Name": "Do Not Track", 

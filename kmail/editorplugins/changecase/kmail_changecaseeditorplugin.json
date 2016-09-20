@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugins allows you to change selected text case.", 
+        "Description[ca]": "Aquest connector permet canviar majúscules/minúscules en el text seleccionat.", 
+        "Description[nl]": "Deze plug-in stelt u in staat de geselecteerde tastcase te wijzigen.", 
+        "Description[pt]": "Este 'plugin' permite-lhe mudar a capitalização do texto seleccionado.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att ändra skiftläge på markerad text.", 
+        "Description[uk]": "За допомогою цього додатка можна змінювати регістр символів позначеного фрагмента тексту.", 
+        "Description[x-test]": "xxThis plugins allows you to change selected text case.xx", 
         "EnabledByDefault": "true", 
         "Id": "kmailchangecase", 
         "Name": "Change Case", 
