@@ -7,7 +7,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att använda externa skript i brevfönstret.", 
         "Description[uk]": "За допомогою цього додатка можна скористатися зовнішнім скриптом для вмісту панелі перегляду повідомлень.", 
         "Description[x-test]": "xxThis plugin allows you to use external script against message viewer.xx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Id": "messageviewerexternalscriptplugin", 
         "Name": "External Script", 
         "Name[ca@valencia]": "Script extern", 

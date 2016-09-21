@@ -10,7 +10,7 @@
         "Description[sv]": "Insticksprogrammet visar alla brevhuvud.", 
         "Description[uk]": "Цей додаток покаже вам усі заголовки повідомлення.", 
         "Description[x-test]": "xxThis plugin shows you all mail header.xx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Name": "All Header Style", 
         "Name[ca@valencia]": "Tots els estils de capçalera", 
         "Name[ca]": "Tots els estils de capçalera", 

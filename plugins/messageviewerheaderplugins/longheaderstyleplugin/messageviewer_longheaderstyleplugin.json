@@ -10,7 +10,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att visa alla huvuden från brev.", 
         "Description[uk]": "За допомогою цього додатка можна переглянути усі заголовки повідомлення.", 
         "Description[x-test]": "xxThis plugin allows you to show all headers from mail.xx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Name": "Long Header Style", 
         "Name[ca@valencia]": "Estil de capçalera llarga", 
         "Name[ca]": "Estil de capçalera llarga", 
