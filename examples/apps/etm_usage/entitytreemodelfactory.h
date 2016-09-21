@@ -38,7 +38,7 @@ Q_SIGNALS:
     void modelCreated(Akonadi::EntityTreeModel *model);
 
 protected:
-    virtual Akonadi::EntityTreeModel* getModel(Akonadi::Monitor *monitor, QObject* parent);
+    virtual Akonadi::EntityTreeModel *getModel(Akonadi::Monitor *monitor, QObject *parent);
 
 private Q_SLOTS:
     void collectionsFetched(const Akonadi::Collection::List &list);
