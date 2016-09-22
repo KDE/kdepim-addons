@@ -41,4 +41,9 @@ PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(KActionCollec
     return interface;
 }
 
+bool SendMailPlugin::hasPopupMenuSupport() const
+{
+    return true;
+}
+
 #include "sendmailplugin.moc"

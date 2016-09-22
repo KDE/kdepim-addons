@@ -41,4 +41,9 @@ PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(KActionC
     return interface;
 }
 
+bool CheckGravatarPlugin::hasPopupMenuSupport() const
+{
+    return true;
+}
+
 #include "checkgravatarplugin.moc"

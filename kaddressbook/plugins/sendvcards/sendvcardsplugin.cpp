@@ -41,4 +41,9 @@ PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(KActionColl
     return interface;
 }
 
+bool SendVcardsPlugin::hasPopupMenuSupport() const
+{
+    return true;
+}
+
 #include "sendvcardsplugin.moc"

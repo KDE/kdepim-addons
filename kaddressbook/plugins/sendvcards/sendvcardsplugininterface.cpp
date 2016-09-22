@@ -37,11 +37,6 @@ SendVcardsPluginInterface::~SendVcardsPluginInterface()
 
 }
 
-bool SendVcardsPluginInterface::hasPopupMenuSupport() const
-{
-    return true;
-}
-
 void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
     Q_UNUSED(numberOfSelectedCollections);

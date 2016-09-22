@@ -97,8 +97,3 @@ void SendMailPluginInterface::slotSendMails(const QStringList &emails)
         QDesktopServices::openUrl(url);
     }
 }
-
-bool SendMailPluginInterface::hasPopupMenuSupport() const
-{
-    return true;
-}

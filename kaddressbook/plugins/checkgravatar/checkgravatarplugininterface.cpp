@@ -138,7 +138,3 @@ void CheckGravatarPluginInterface::slotModifyContactFinished(KJob *job)
     }
 }
 
-bool CheckGravatarPluginInterface::hasPopupMenuSupport() const
-{
-    return true;
-}
