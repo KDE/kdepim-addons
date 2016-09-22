@@ -45,7 +45,7 @@ MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::cre
     return interface;
 }
 
-bool ConfirmAddressPlugin::hasConfigureSupport() const
+bool ConfirmAddressPlugin::hasConfigureDialog() const
 {
     return true;
 }

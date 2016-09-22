@@ -44,7 +44,7 @@ MessageComposer::PluginEditorCheckBeforeSendInterface *CheckBeforeSendPlugin::cr
     return interface;
 }
 
-bool CheckBeforeSendPlugin::hasConfigureSupport() const
+bool CheckBeforeSendPlugin::hasConfigureDialog() const
 {
     return true;
 }

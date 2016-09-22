@@ -43,7 +43,7 @@ WebEngineViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlIntercept
     return adblockInterface;
 }
 
-bool AdblockPluginUrlInterceptor::hasConfigureSupport() const
+bool AdblockPluginUrlInterceptor::hasConfigureDialog() const
 {
     return true;
 }

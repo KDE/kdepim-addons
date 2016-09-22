@@ -35,7 +35,7 @@ CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
 void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
 {
     CheckBeforeSendPlugin plugin;
-    QVERIFY(plugin.hasConfigureSupport());
+    QVERIFY(plugin.hasConfigureDialog());
     QVERIFY(plugin.createInterface(this));
     QVERIFY(plugin.createConfigureWidget(Q_NULLPTR, new QWidget()).configureWidget);
 }

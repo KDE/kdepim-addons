@@ -44,7 +44,7 @@ MessageComposer::PluginEditorCheckBeforeSendInterface *AutomaticAddContactsPlugi
     return interface;
 }
 
-bool AutomaticAddContactsPlugin::hasConfigureSupport() const
+bool AutomaticAddContactsPlugin::hasConfigureDialog() const
 {
     return true;
 }
