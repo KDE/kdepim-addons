@@ -33,10 +33,9 @@ CheckGravatarPlugin::~CheckGravatarPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(KActionCollection *ac, QWidget *parent)
+PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {
-    CheckGravatarPluginInterface *interface = new CheckGravatarPluginInterface(this);
-    interface->setParentWidget(parent);
+    CheckGravatarPluginInterface *interface = new CheckGravatarPluginInterface(parent);
     interface->createAction(ac);
     return interface;
 }

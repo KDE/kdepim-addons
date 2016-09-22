@@ -34,10 +34,9 @@ AntiVirusPlugin::~AntiVirusPlugin()
 
 }
 
-PimCommon::GenericPluginInterface *AntiVirusPlugin::createInterface(KActionCollection *ac, QWidget *parent)
+PimCommon::GenericPluginInterface *AntiVirusPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {
-    AntiVirusPluginInterface *interface = new AntiVirusPluginInterface(this);
-    interface->setParentWidget(parent);
+    AntiVirusPluginInterface *interface = new AntiVirusPluginInterface(parent);
     interface->createAction(ac);
     return interface;
 }

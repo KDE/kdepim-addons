@@ -33,10 +33,9 @@ MergeContactsPlugin::~MergeContactsPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *MergeContactsPlugin::createInterface(KActionCollection *ac, QWidget *parent)
+PimCommon::GenericPluginInterface *MergeContactsPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {
-    MergeContactsPluginInterface *interface = new MergeContactsPluginInterface(this);
-    interface->setParentWidget(parent);
+    MergeContactsPluginInterface *interface = new MergeContactsPluginInterface(parent);
     interface->createAction(ac);
     return interface;
 }

@@ -33,7 +33,7 @@ public:
     explicit AntiSpamPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
     ~AntiSpamPlugin();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QWidget *parent) Q_DECL_OVERRIDE;
+    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
 };
 
 #endif // ANTISPAMPLUGIN_H
