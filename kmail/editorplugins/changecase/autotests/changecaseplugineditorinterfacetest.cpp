@@ -34,10 +34,6 @@ ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest()
 
 void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()
 {
-    ChangeCasePluginEditorInterface interface;
-    QVERIFY(interface.hasPopupMenuSupport());
-    QVERIFY(!interface.hasConfigureDialog());
-    QVERIFY(!interface.hasToolBarSupport());
 }
 
 QTEST_MAIN(ChangeCasePluginEditorInterfaceTest)

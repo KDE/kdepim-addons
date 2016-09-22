@@ -34,10 +34,6 @@ NonBreakingSpacePluginEditorInterfaceTest::~NonBreakingSpacePluginEditorInterfac
 
 void NonBreakingSpacePluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
-    NonBreakingSpacePluginEditorInterface interface;
-    QVERIFY(!interface.hasConfigureDialog());
-    QVERIFY(!interface.hasPopupMenuSupport());
-    QVERIFY(!interface.hasToolBarSupport());
 }
 
 QTEST_MAIN(NonBreakingSpacePluginEditorInterfaceTest)

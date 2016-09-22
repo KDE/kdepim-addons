@@ -41,4 +41,10 @@ MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(KA
     return interface;
 }
 
+bool ZoomTextPluginEditor::hasPopupMenuSupport() const
+{
+    return false;
+}
+
+
 #include "zoomtextplugineditor.moc"

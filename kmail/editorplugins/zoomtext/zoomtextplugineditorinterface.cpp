@@ -37,11 +37,6 @@ ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface()
 
 }
 
-bool ZoomTextPluginEditorInterface::hasPopupMenuSupport() const
-{
-    return false;
-}
-
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     KActionMenu *zoomMenu = new KActionMenu(i18n("Zoom..."), this);

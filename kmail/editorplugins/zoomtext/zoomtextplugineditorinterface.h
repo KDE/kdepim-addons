@@ -31,7 +31,6 @@ public:
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
-    bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 
 private:
     void slotZoomOut();

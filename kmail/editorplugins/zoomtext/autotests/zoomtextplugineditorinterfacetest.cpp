@@ -34,10 +34,6 @@ ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest()
 
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
-    ZoomTextPluginEditorInterface interface;
-    QVERIFY(!interface.hasConfigureDialog());
-    QVERIFY(!interface.hasPopupMenuSupport());
-    QVERIFY(!interface.hasToolBarSupport());
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)

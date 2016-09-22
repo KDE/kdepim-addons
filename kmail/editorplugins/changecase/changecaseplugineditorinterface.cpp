@@ -37,11 +37,6 @@ ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
 
 }
 
-bool ChangeCasePluginEditorInterface::hasPopupMenuSupport() const
-{
-    return true;
-}
-
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
     PimCommon::KActionMenuChangeCase *ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);

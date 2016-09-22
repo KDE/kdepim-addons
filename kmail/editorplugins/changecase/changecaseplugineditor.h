@@ -33,6 +33,7 @@ public:
     ~ChangeCasePluginEditor();
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 };
 
 #endif

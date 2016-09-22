@@ -37,6 +37,9 @@ void ChangeCasePluginEditorTest::shouldHaveDefaultValue()
 {
     ChangeCasePluginEditor plugin;
     QVERIFY(plugin.createInterface(new KActionCollection(this)));
+    QVERIFY(plugin.hasPopupMenuSupport());
+    QVERIFY(!plugin.hasConfigureDialog());
+    QVERIFY(!plugin.hasToolBarSupport());
 }
 
 QTEST_MAIN(ChangeCasePluginEditorTest)

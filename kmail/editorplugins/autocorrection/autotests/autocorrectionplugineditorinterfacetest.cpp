@@ -34,10 +34,6 @@ AutoCorrectionPluginEditorInterfaceTest::~AutoCorrectionPluginEditorInterfaceTes
 
 void AutoCorrectionPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
-    AutoCorrectionPluginEditorInterface interface;
-    QVERIFY(!interface.hasConfigureDialog());
-    QVERIFY(!interface.hasPopupMenuSupport());
-    QVERIFY(!interface.hasToolBarSupport());
 }
 
 QTEST_MAIN(AutoCorrectionPluginEditorInterfaceTest)

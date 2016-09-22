@@ -34,6 +34,11 @@ ChangeCasePluginEditor::~ChangeCasePluginEditor()
 
 }
 
+bool ChangeCasePluginEditor::hasPopupMenuSupport() const
+{
+    return true;
+}
+
 MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(KActionCollection *ac, QObject *parent)
 {
     ChangeCasePluginEditorInterface *interface = new ChangeCasePluginEditorInterface(parent);

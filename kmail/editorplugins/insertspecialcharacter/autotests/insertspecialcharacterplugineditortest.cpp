@@ -37,6 +37,9 @@ void InsertSpecialCharacterPluginEditorTest::shouldHaveDefaultValue()
 {
     InsertSpecialCharacterPluginEditor plugin;
     QVERIFY(plugin.createInterface(new KActionCollection(this)));
+    QVERIFY(!plugin.hasConfigureDialog());
+    QVERIFY(!plugin.hasPopupMenuSupport());
+    QVERIFY(!plugin.hasToolBarSupport());
 }
 
 QTEST_MAIN(InsertSpecialCharacterPluginEditorTest)
