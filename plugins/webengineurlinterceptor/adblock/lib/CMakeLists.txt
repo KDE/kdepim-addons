@@ -6,6 +6,7 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblockblockableitemswidget.cpp
     widgets/adblockcreatefilterdialog.cpp
     widgets/adblockpluginurlinterceptorconfigurewidget.cpp
+    widgets/adblockpluginurlinterceptorconfiguredialog.cpp
     widgets/adblockaddsubscriptiondialog.cpp
     widgets/adblockautomaticruleslistwidget.cpp
     widgets/adblocklistwidget.cpp

@@ -57,5 +57,11 @@ WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPlugin
     settings.configureWidget = configureWidget;
     return settings;
 }
+void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
+{
+    //TODO
+}
 
 #include "adblockpluginurlinterceptor.moc"
+
+
