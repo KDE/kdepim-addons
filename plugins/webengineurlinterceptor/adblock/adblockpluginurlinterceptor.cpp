@@ -21,6 +21,7 @@
 #include "adblockinterceptorinterface.h"
 #include "../lib/widgets/adblockpluginurlinterceptorconfigurewidget.h"
 #include "lib/adblockmanager.h"
+#include "../lib/widgets/adblockpluginurlinterceptorconfiguredialog.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
 #include <KLocalizedString>
@@ -57,8 +58,11 @@ WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPlugin
     settings.configureWidget = configureWidget;
     return settings;
 }
+
 void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 {
+    AdBlock::AdblockPluginUrlInterceptorConfigureDialog *dlg = new AdBlock::AdblockPluginUrlInterceptorConfigureDialog(parent);
+    dlg->exec();
     //TODO
 }
 
