@@ -3,6 +3,7 @@
         "Description": "This plugin reduces mail header to strict minimum.", 
         "Description[ca@valencia]": "Este connector redueix la capçalera del correu al mínim estricte.", 
         "Description[ca]": "Aquest connector redueix la capçalera del correu al mínim estricte.", 
+        "Description[it]": "Questa estensione riduce le intestazioni dei messaggi di posta al minimo indispensabile.", 
         "Description[nl]": "Deze plug-in reduceert de e-mailheader tot het strikte minimum.", 
         "Description[pl]": "Ta wtyczka ogranicza nagłówek pocztowy do niezbędnego minimum.", 
         "Description[pt]": "Este 'plugin' reduz o cabeçalho do e-mail ao mínimo necessário.", 
