@@ -49,21 +49,10 @@ bool AdblockPluginUrlInterceptor::hasConfigureDialog() const
     return true;
 }
 
-WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting AdblockPluginUrlInterceptor::createConfigureWidget(QWidget *parent)
-{
-    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings;
-    settings.name = i18n("AdBlock");
-
-    AdBlock::AdblockPluginUrlInterceptorConfigureWidget *configureWidget = new AdBlock::AdblockPluginUrlInterceptorConfigureWidget(parent);
-    settings.configureWidget = configureWidget;
-    return settings;
-}
-
 void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 {
-    AdBlock::AdblockPluginUrlInterceptorConfigureDialog *dlg = new AdBlock::AdblockPluginUrlInterceptorConfigureDialog(parent);
-    dlg->exec();
-    //TODO
+    AdBlock::AdblockPluginUrlInterceptorConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "adblockpluginurlinterceptor.moc"

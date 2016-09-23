@@ -11,6 +11,18 @@
    </rect>
   </property>
   <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
    <item>
     <widget class="QCheckBox" name="checkEnableAdblock">
      <property name="text">
@@ -235,20 +247,20 @@
  </widget>
  <customwidgets>
   <customwidget>
+   <class>KListWidgetSearchLine</class>
+   <extends>QLineEdit</extends>
+   <header>klistwidgetsearchline.h</header>
+  </customwidget>
+  <customwidget>
    <class>KPluralHandlingSpinBox</class>
    <extends>QSpinBox</extends>
-   <header>KPluralHandlingSpinBox</header>
+   <header>kpluralhandlingspinbox.h</header>
   </customwidget>
   <customwidget>
    <class>AdBlock::AdBlockListWidget</class>
    <extends>QListWidget</extends>
    <header>widgets/adblocklistwidget.h</header>
    <container>1</container>
-  </customwidget>
-  <customwidget>
-   <class>KListWidgetSearchLine</class>
-   <extends>KLineEdit</extends>
-   <header>klistwidgetsearchline.h</header>
   </customwidget>
  </customwidgets>
  <resources/>

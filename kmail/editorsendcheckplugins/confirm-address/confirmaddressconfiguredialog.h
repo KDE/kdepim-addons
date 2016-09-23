@@ -17,27 +17,26 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressplugintest.h"
-#include "../confirmaddressplugin.h"
-#include <QTest>
-#include <QStandardPaths>
+#ifndef CONFIRMADDRESSCONFIGUREDIALOG_H
+#define CONFIRMADDRESSCONFIGUREDIALOG_H
 
-ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
-    : QObject(parent)
+#include <PimCommon/ConfigurePluginDialog>
+class ConfirmAddressConfigureWidget;
+class ConfirmAddressConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
-    QStandardPaths::setTestModeEnabled(true);
-}
+    Q_OBJECT
+public:
+    explicit ConfirmAddressConfigureDialog(QWidget *parent = Q_NULLPTR);
+    ~ConfirmAddressConfigureDialog();
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
+protected:
+    QWidget *createLayout() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void load() Q_DECL_OVERRIDE;
+    void reset() Q_DECL_OVERRIDE;
+    QString helpAnchor() const Q_DECL_OVERRIDE;
+private:
+    ConfirmAddressConfigureWidget *mConfigureWidget;
+};
 
-}
-
-void ConfirmAddressPluginTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureDialog());
-    QVERIFY(plugin.createInterface(this));
-}
-
-QTEST_MAIN(ConfirmAddressPluginTest)
+#endif // CONFIRMADDRESSCONFIGUREDIALOG_H

@@ -33,6 +33,7 @@ AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(KIdenti
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(im, parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mConfigureTab = new AutomaticAddContactsConfigureTab(identityManager(), this);

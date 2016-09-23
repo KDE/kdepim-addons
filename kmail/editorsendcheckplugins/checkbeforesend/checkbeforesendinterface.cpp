@@ -58,7 +58,7 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckMailTransport) {
-        const KIdentityManagement::Identity identity = identityManagement()->identityForUoid(params.identity());
+        const KIdentityManagement::Identity identity = KIdentityManagement::IdentityManager::self()->identityForUoid(params.identity());
         if (identity.transport() != QString::number(params.transportId())) {
             if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
                 return false;

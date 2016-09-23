@@ -11,7 +11,7 @@ macro(add_kmail_confirmaddress_unittest _source _additional)
     target_link_libraries( ${_name} Qt5::Test KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon)
 endmacro ()
 
-add_kmail_confirmaddress_unittest(confirmaddressplugintest.cpp "../confirmaddressplugin.cpp;../confirmaddressinterface.cpp;../confirmaddressconfigurewidget.cpp;../confirmaddressdialog.cpp;../confirmaddresswidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp;../confirmaddresscheckjob.cpp")
+add_kmail_confirmaddress_unittest(confirmaddressplugintest.cpp "../confirmaddressconfiguredialog.cpp;../confirmaddressplugin.cpp;../confirmaddressinterface.cpp;../confirmaddressconfigurewidget.cpp;../confirmaddressdialog.cpp;../confirmaddresswidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp;../confirmaddresscheckjob.cpp")
 
 
 add_kmail_confirmaddress_unittest(confirmaddressconfigurewidgettest.cpp "../confirmaddressconfigurewidget.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp")

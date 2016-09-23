@@ -56,7 +56,7 @@ void AutomaticAddContactsInterface::reloadConfig()
 {
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager *im = identityManagement();
+    KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
     KIdentityManagement::IdentityManager::ConstIterator end = im->end();
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {

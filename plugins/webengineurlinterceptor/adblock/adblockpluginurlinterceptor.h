@@ -39,7 +39,6 @@ public:
 
     void showConfigureDialog(QWidget *parent) Q_DECL_OVERRIDE;
     bool hasConfigureDialog() const Q_DECL_OVERRIDE;
-    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting createConfigureWidget(QWidget *parent) Q_DECL_OVERRIDE;
 };
 
 #endif // ADBLOCKPLUGINURLINTERCEPTOR_H

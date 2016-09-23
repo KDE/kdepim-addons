@@ -28,6 +28,7 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(KIdentityManageme
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(identityManager, parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mCheckPlainTextMail = new QCheckBox(i18n("Send as plain text"), this);

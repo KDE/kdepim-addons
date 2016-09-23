@@ -20,6 +20,7 @@
 #include "automaticaddcontactsplugin.h"
 #include "automaticaddcontactsinterface.h"
 #include "automaticaddcontactsconfigurewidget.h"
+#include "automaticaddcontactsconfiguredialog.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -49,11 +50,12 @@ bool AutomaticAddContactsPlugin::hasConfigureDialog() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting AutomaticAddContactsPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
+void AutomaticAddContactsPlugin::showConfigureDialog(QWidget *parent)
 {
-    AutomaticAddContactsConfigureWidget *w = new AutomaticAddContactsConfigureWidget(identityManager, parent);
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Add Automatically Contacts"));
-    return settings;
+    AutomaticAddContactsConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "automaticaddcontactsplugin.moc"
+
+

@@ -17,27 +17,28 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressplugintest.h"
-#include "../confirmaddressplugin.h"
-#include <QTest>
-#include <QStandardPaths>
+#ifndef AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
+#define AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
 
-ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
-    : QObject(parent)
+#include <PimCommon/ConfigurePluginDialog>
+
+class AutomaticAddContactsConfigureWidget;
+class AutomaticAddContactsConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
-    QStandardPaths::setTestModeEnabled(true);
-}
+    Q_OBJECT
+public:
+    explicit AutomaticAddContactsConfigureDialog(QWidget *parent = Q_NULLPTR);
+    ~AutomaticAddContactsConfigureDialog();
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
+protected:
+    QWidget *createLayout() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void load() Q_DECL_OVERRIDE;
+    void reset() Q_DECL_OVERRIDE;
+    QString helpAnchor() const Q_DECL_OVERRIDE;
 
-}
+private:
+    AutomaticAddContactsConfigureWidget *mConfigureWidget;
+};
 
-void ConfirmAddressPluginTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureDialog());
-    QVERIFY(plugin.createInterface(this));
-}
-
-QTEST_MAIN(ConfirmAddressPluginTest)
+#endif // AUTOMATICADDCONTACTSCONFIGUREDIALOG_H

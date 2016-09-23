@@ -111,7 +111,7 @@ void ConfirmAddressInterface::reloadConfig()
     mEnabled = grp.readEntry("Enabled", false);
     mHashSettings.clear();
 
-    KIdentityManagement::IdentityManager *im = identityManagement();
+    KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
     KIdentityManagement::IdentityManager::ConstIterator end = im->end();
     for (KIdentityManagement::IdentityManager::ConstIterator it = im->begin(); it != end; ++it) {
         const uint identity = (*it).uoid();

@@ -20,9 +20,11 @@
 #include "checkbeforesendplugin.h"
 #include "checkbeforesendinterface.h"
 #include "configurewidget/checkbeforesendconfigurewidget.h"
+#include "configurewidget/checkbeforesendconfiguredialog.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
+
 
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_checkbeforesendplugin.json", registerPlugin<CheckBeforeSendPlugin>();)
 
@@ -49,11 +51,12 @@ bool CheckBeforeSendPlugin::hasConfigureDialog() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting CheckBeforeSendPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
+void CheckBeforeSendPlugin::showConfigureDialog(QWidget *parent)
 {
-    CheckBeforeSendConfigureWidget *w = new CheckBeforeSendConfigureWidget(identityManager, parent);
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Check Before Send Email"));
-    return settings;
+    CheckBeforeSendConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "checkbeforesendplugin.moc"
+
+

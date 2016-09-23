@@ -38,9 +38,5 @@ void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
     AdblockPluginUrlInterceptor w;
     QVERIFY(w.createInterface(new QWebEngineView(), this));
     QVERIFY(w.hasConfigureDialog());
-
-    WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidgetSetting settings = w.createConfigureWidget(new QWidget());
-    QVERIFY(settings.configureWidget);
-    QVERIFY(!settings.name.isEmpty());
 }
 QTEST_MAIN(AdblockPluginUrlInterceptorTest)

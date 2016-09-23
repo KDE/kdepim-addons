@@ -17,27 +17,26 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "confirmaddressplugintest.h"
-#include "../confirmaddressplugin.h"
-#include <QTest>
-#include <QStandardPaths>
+#ifndef CHECKBEFORESENDCONFIGUREDIALOG_H
+#define CHECKBEFORESENDCONFIGUREDIALOG_H
 
-ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
-    : QObject(parent)
+#include <PimCommon/ConfigurePluginDialog>
+class CheckBeforeSendConfigureWidget;
+class CheckBeforeSendConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
-    QStandardPaths::setTestModeEnabled(true);
-}
+    Q_OBJECT
+public:
+    explicit CheckBeforeSendConfigureDialog(QWidget *parent = Q_NULLPTR);
+    ~CheckBeforeSendConfigureDialog();
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
+protected:
+    QWidget *createLayout() Q_DECL_OVERRIDE;
+    void save() Q_DECL_OVERRIDE;
+    void load() Q_DECL_OVERRIDE;
+    void reset() Q_DECL_OVERRIDE;
+    QString helpAnchor() const Q_DECL_OVERRIDE;
+private:
+    CheckBeforeSendConfigureWidget *mConfigureWidget;
+};
 
-}
-
-void ConfirmAddressPluginTest::shouldHaveDefaultValue()
-{
-    ConfirmAddressPlugin plugin;
-    QVERIFY(plugin.hasConfigureDialog());
-    QVERIFY(plugin.createInterface(this));
-}
-
-QTEST_MAIN(ConfirmAddressPluginTest)
+#endif // CHECKBEFORESENDCONFIGUREDIALOG_H

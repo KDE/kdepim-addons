@@ -20,6 +20,7 @@
 #include "confirmaddressplugin.h"
 #include "confirmaddressinterface.h"
 #include "confirmaddressconfigurewidget.h"
+#include "confirmaddressconfiguredialog.h"
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -50,11 +51,12 @@ bool ConfirmAddressPlugin::hasConfigureDialog() const
     return true;
 }
 
-MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting ConfirmAddressPlugin::createConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent) const
+void ConfirmAddressPlugin::showConfigureDialog(QWidget *parent)
 {
-    ConfirmAddressConfigureWidget *w = new ConfirmAddressConfigureWidget(identityManager, parent);
-    MessageComposer::PluginEditorCheckBeforeSendConfigureWidgetSetting settings(w, i18n("Confirm Addresses"));
-    return settings;
+    ConfirmAddressConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "confirmaddressplugin.moc"
+
+

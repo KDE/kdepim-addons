@@ -30,6 +30,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(KIdentityManagement
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(im, parent)
 {
     QVBoxLayout *vboxlayout = new QVBoxLayout(this);
+    vboxlayout->setMargin(0);
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
     mEnable = new QCheckBox(i18n("Enable"), this);
     mEnable->setObjectName(QStringLiteral("enable"));
