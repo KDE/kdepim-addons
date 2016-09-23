@@ -53,16 +53,12 @@ public:
     {
 
     }
-    QString saveName() const;
 
-    KPluginMetaData metaData;
+    QString metaDataFileNameBaseName;
+    QString metaDataFileName;
+    QString pluginName;
     ShortUrlEnginePlugin *plugin;
 };
-
-QString ShortUrlEnginePluginInfo::saveName() const
-{
-    return QFileInfo(metaData.fileName()).baseName();
-}
 
 class ShortUrlEnginePluginManagerPrivate
 {
@@ -90,15 +86,18 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
     QSet<QString> unique;
     while (i.hasPrevious()) {
         ShortUrlEnginePluginInfo info;
-        info.metaData = i.previous();
+        const KPluginMetaData data = i.previous();
+        info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
+        info.metaDataFileName = data.fileName();
+        info.pluginName = data.name();
 
         // only load plugins once, even if found multiple times!
-        if (unique.contains(info.saveName())) {
+        if (unique.contains(info.metaDataFileNameBaseName)) {
             continue;
         }
         info.plugin = Q_NULLPTR;
         mPluginList.push_back(info);
-        unique.insert(info.saveName());
+        unique.insert(info.metaDataFileNameBaseName);
     }
     QVector<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
     for (QVector<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
@@ -108,10 +107,10 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 
 void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *item)
 {
-    KPluginLoader pluginLoader(item->metaData.fileName());
+    KPluginLoader pluginLoader(item->metaDataFileName);
     if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->saveName());
-        item->plugin->setPluginName(item->metaData.name());
+        item->plugin = pluginLoader.factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
+        item->plugin->setPluginName(item->pluginName);
     }
 }
 
