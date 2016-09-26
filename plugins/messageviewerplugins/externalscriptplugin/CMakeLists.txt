@@ -5,6 +5,7 @@ set(messageviewer_externalscriptplugin_SRCS
     viewerpluginexternalscriptinfo.cpp
     viewerpluginexternalscriptsloadjob.cpp
     viewerpluginexternalscriptparseargument.cpp
+    configuredialog/viewerpluginexternalconfiguredialog.cpp
 )
 
 ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
