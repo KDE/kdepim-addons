@@ -54,8 +54,7 @@ void CheckBeforeSendConfigureDialog::reset()
     mConfigureWidget->resetSettings();
 }
 
-QString CheckBeforeSendConfigureDialog::helpAnchor() const
+void CheckBeforeSendConfigureDialog::help()
 {
     //TODO
-    return {};
 }

@@ -55,8 +55,6 @@ void AutomaticAddContactsConfigureDialog::reset()
     mConfigureWidget->resetSettings();
 }
 
-QString AutomaticAddContactsConfigureDialog::helpAnchor() const
+void AutomaticAddContactsConfigureDialog::help()
 {
-    //TODO
-    return {};
 }

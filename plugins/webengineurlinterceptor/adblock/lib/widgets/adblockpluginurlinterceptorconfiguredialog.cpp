@@ -58,8 +58,6 @@ void AdBlock::AdblockPluginUrlInterceptorConfigureDialog::reset()
     mAdblockConfigureWidget->resetSettings();
 }
 
-QString AdBlock::AdblockPluginUrlInterceptorConfigureDialog::helpAnchor() const
+void AdBlock::AdblockPluginUrlInterceptorConfigureDialog::help()
 {
-    //TODO
-    return {};
 }

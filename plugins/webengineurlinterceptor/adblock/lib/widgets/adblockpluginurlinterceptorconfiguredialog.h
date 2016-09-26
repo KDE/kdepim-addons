@@ -40,7 +40,7 @@ protected:
     void save() Q_DECL_OVERRIDE;
     void load() Q_DECL_OVERRIDE;
     void reset() Q_DECL_OVERRIDE;
-    QString helpAnchor() const Q_DECL_OVERRIDE;
+    void help() Q_DECL_OVERRIDE;
 private:
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget;
 

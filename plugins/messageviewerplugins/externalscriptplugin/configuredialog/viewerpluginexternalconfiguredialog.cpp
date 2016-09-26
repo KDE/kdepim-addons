@@ -49,7 +49,6 @@ void ViewerPluginExternalConfigureDialog::reset()
 {
 }
 
-QString ViewerPluginExternalConfigureDialog::helpAnchor() const
+void ViewerPluginExternalConfigureDialog::help()
 {
-    return {};
 }

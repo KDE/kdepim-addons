@@ -55,8 +55,6 @@ void ConfirmAddressConfigureDialog::reset()
     mConfigureWidget->resetSettings();
 }
 
-QString ConfirmAddressConfigureDialog::helpAnchor() const
+void ConfirmAddressConfigureDialog::help()
 {
-    //TODO
-    return {};
 }
