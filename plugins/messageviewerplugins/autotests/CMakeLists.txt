@@ -1,9 +1,7 @@
-add_definitions (-DTEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/externaldatas")
 set(common_SRCS)
 ecm_qt_declare_logging_category(common_SRCS HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin)
 ecm_qt_declare_logging_category(common_SRCS HEADER createnoteplugin_debug.h IDENTIFIER CREATENOTEPLUGIN_LOG CATEGORY_NAME org.kde.pim.createnoteplugin)
 ecm_qt_declare_logging_category(common_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin)
-ecm_qt_declare_logging_category(common_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
 
 macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     set( _test ${_source}  ${_additional} ${common_SRCS})
@@ -53,7 +51,3 @@ add_messageviewer_viewerplugin_unittest(viewerplugincreateeventtest.cpp "../crea
 add_messageviewer_viewerplugin_unittest(viewerplugincreatetodotest.cpp "../createtodoplugin/viewerplugincreatetodo.cpp;../createtodoplugin/viewerplugincreatetodointerface.cpp;../createtodoplugin/todoedit.cpp;../createtodoplugin/createtodojob.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerplugincreatenotetest.cpp "../createnoteplugin/noteedit.cpp;../createnoteplugin/viewerplugincreatenote.cpp;../createnoteplugin/viewerplugincreatenoteinterface.cpp;../createnoteplugin/createnotejob.cpp" "")
 add_messageviewer_viewerplugin_unittest(viewerplugintranslatortest.cpp "../common/translatorplugin/viewerplugintranslator.cpp;../common/translatorplugin/viewerplugintranslatorinterface.cpp" "")
-
-add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptinfotest.cpp "../externalscriptplugin/viewerpluginexternalscriptparseargument.cpp;../externalscriptplugin/viewerpluginexternalscriptinfo.cpp;../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp" "")
-add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptsloadjobtest.cpp "../externalscriptplugin/viewerpluginexternalscriptsloadjob.cpp;../externalscriptplugin/viewerpluginexternalscriptinfo.cpp" "")
-add_messageviewer_viewerplugin_unittest(viewerpluginexternalscriptparseargumenttest.cpp "../externalscriptplugin/viewerpluginexternalscriptparseargument.cpp" "")

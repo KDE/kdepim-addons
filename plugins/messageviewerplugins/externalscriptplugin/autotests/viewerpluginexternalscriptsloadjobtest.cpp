@@ -18,7 +18,7 @@
 */
 
 #include "viewerpluginexternalscriptsloadjobtest.h"
-#include "../externalscriptplugin/viewerpluginexternalscriptsloadjob.h"
+#include "../viewerpluginexternalscriptsloadjob.h"
 
 #include <QTest>
 

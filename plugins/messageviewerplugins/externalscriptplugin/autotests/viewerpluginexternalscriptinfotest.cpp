@@ -18,7 +18,7 @@
 */
 
 #include "viewerpluginexternalscriptinfotest.h"
-#include "../externalscriptplugin/viewerpluginexternalscriptinfo.h"
+#include "../viewerpluginexternalscriptinfo.h"
 
 #include <QTest>
 

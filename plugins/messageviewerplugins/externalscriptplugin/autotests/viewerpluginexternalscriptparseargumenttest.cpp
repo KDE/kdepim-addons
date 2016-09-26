@@ -18,7 +18,7 @@
 */
 
 #include "viewerpluginexternalscriptparseargumenttest.h"
-#include "../externalscriptplugin/viewerpluginexternalscriptparseargument.h"
+#include "../viewerpluginexternalscriptparseargument.h"
 #include <QTest>
 
 ViewerPluginExternalScriptParseArgumentTest::ViewerPluginExternalScriptParseArgumentTest(QObject *parent)
