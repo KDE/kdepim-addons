@@ -28,6 +28,8 @@ class ViewerPluginExternalConfigureDialogTest : public QObject
 public:
     explicit ViewerPluginExternalConfigureDialogTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalConfigureDialogTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREDIALOGTEST_H

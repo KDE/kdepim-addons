@@ -21,7 +21,7 @@
 #define VIEWERPLUGINEXTERNALCONFIGUREDIALOG_H
 
 #include <PimCommon/ConfigurePluginDialog>
-
+class ViewerPluginExternalConfigureWidget;
 class ViewerPluginExternalConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
     Q_OBJECT
@@ -35,6 +35,8 @@ protected:
     void load() Q_DECL_OVERRIDE;
     void reset() Q_DECL_OVERRIDE;
     void help() Q_DECL_OVERRIDE;
+private:
+    ViewerPluginExternalConfigureWidget *mConfigWidget;
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREDIALOG_H

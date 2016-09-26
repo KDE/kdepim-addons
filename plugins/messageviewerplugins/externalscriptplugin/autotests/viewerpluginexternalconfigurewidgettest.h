@@ -28,6 +28,8 @@ class ViewerPluginExternalConfigureWidgetTest : public QObject
 public:
     explicit ViewerPluginExternalConfigureWidgetTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalConfigureWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGETTEST_H

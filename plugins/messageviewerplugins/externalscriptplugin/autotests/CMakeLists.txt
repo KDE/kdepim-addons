@@ -10,7 +10,7 @@ macro(add_messageviewer_viewerplugin_external_plugin_unittest _source _additiona
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo KF5::QGpgme Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor
+                 LINK_LIBRARIES KF5::MessageViewer Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::I18n
                 )
 endmacro ()
 
@@ -18,5 +18,5 @@ endmacro ()
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalscriptinfotest.cpp "../viewerpluginexternalscriptparseargument.cpp;../viewerpluginexternalscriptinfo.cpp;../viewerpluginexternalscriptsloadjob.cpp" "")
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalscriptsloadjobtest.cpp "../viewerpluginexternalscriptsloadjob.cpp;../viewerpluginexternalscriptinfo.cpp" "")
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalscriptparseargumenttest.cpp "../viewerpluginexternalscriptparseargument.cpp" "")
-add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconfigurewidgettest.cpp "../configuredialog/viewerpluginexternalconfigurewidget.cpp" "")
-add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconfiguredialogtest.cpp "../configuredialog/viewerpluginexternalconfiguredialog.cpp" "")
+add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconfigurewidgettest.cpp "../configuredialog/viewerpluginexternalconfigurewidget.cpp;../viewerpluginexternalscriptsloadjob.cpp;../viewerpluginexternalscriptinfo.cpp" "")
+add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconfiguredialogtest.cpp "../configuredialog/viewerpluginexternalconfiguredialog.cpp;../configuredialog/viewerpluginexternalconfigurewidget.cpp;../viewerpluginexternalscriptsloadjob.cpp;../viewerpluginexternalscriptinfo.cpp" "")

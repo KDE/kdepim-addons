@@ -18,14 +18,42 @@
 */
 
 #include "viewerpluginexternalconfigurewidget.h"
+#include <QVBoxLayout>
+#include <QStandardPaths>
+#include <KLocalizedString>
+#include "../viewerpluginexternalscriptsloadjob.h"
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("layout"));
+    mainLayout->setMargin(0);
 
 }
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
+{
+
+}
+
+void ViewerPluginExternalConfigureWidget::load()
+{
+
+    ViewerPluginExternalScriptsLoadJob job;
+    const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
+    job.setExternalScriptsDirectories(lst);
+    job.start();
+    const QVector<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();
+
+}
+
+void ViewerPluginExternalConfigureWidget::save()
+{
+
+}
+
+void ViewerPluginExternalConfigureWidget::reset()
 {
 
 }

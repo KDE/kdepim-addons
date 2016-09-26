@@ -19,6 +19,7 @@
 
 
 #include "viewerpluginexternalconfigurewidgettest.h"
+#include "../configuredialog/viewerpluginexternalconfigurewidget.h"
 #include <QTest>
 
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
@@ -28,6 +29,11 @@ ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest
 }
 
 ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTest()
+{
+
+}
+
+void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
 {
 
 }

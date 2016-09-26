@@ -18,11 +18,12 @@
 */
 
 #include "viewerpluginexternalconfiguredialog.h"
+#include "viewerpluginexternalconfigurewidget.h"
 
 ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
-
+    initLayout();
 }
 
 ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog()
@@ -33,22 +34,27 @@ ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog()
 
 QWidget *ViewerPluginExternalConfigureDialog::createLayout()
 {
-    //TODO
-    return {};
+    mConfigWidget = new ViewerPluginExternalConfigureWidget(this);
+    mConfigWidget->setObjectName(QStringLiteral("externalconfigwidget"));
+    return mConfigWidget;
 }
 
 void ViewerPluginExternalConfigureDialog::save()
 {
+    mConfigWidget->save();
 }
 
 void ViewerPluginExternalConfigureDialog::load()
 {
+    mConfigWidget->load();
 }
 
 void ViewerPluginExternalConfigureDialog::reset()
 {
+    mConfigWidget->reset();
 }
 
 void ViewerPluginExternalConfigureDialog::help()
 {
+    //TODO
 }

@@ -28,6 +28,9 @@ class ViewerPluginExternalConfigureWidget : public QWidget
 public:
     explicit ViewerPluginExternalConfigureWidget(QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExternalConfigureWidget();
+    void load();
+    void save();
+    void reset();
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
