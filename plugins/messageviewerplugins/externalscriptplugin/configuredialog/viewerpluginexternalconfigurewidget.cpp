@@ -97,19 +97,12 @@ void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPlu
 {
     Q_FOREACH (const ViewerPluginExternalScriptInfo &script, scriptInfos) {
         QListWidgetItem *item = new QListWidgetItem(mListExternal);
-/*
-        FileName = Qt::UserRole + 1,
-        ReadOnly = Qt::UserRole + 2,
-        CommandName = Qt::UserRole + 3,
-        Executable = Qt::UserRole + 4,
-        IconName = Qt::UserRole + 5,
-  */
         item->setData(ReadOnly, script.isReadOnly());
-
-        //item->setData(FileName, script.);
+        item->setData(FileName, script.fileName());
+        item->setData(CommandName, script.commandLine());
+        item->setData(Executable, script.executable());
+        item->setData(IconName, script.icon());
     }
-
-    //TODO
 }
 
 void ViewerPluginExternalConfigureWidget::save()
