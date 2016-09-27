@@ -62,6 +62,7 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
     QCOMPARE(info.description(), QStringLiteral("description"));
     QCOMPARE(info.executable(), QStringLiteral("bla"));
     QCOMPARE(info.icon(), QStringLiteral("blo"));
+    QVERIFY(!info.isReadOnly());
 }
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadEmptyDesktop()

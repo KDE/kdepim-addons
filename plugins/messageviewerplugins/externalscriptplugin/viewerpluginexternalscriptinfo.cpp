@@ -20,6 +20,7 @@
 #include "viewerpluginexternalscriptinfo.h"
 
 ViewerPluginExternalScriptInfo::ViewerPluginExternalScriptInfo()
+    : mIsReadOnly(false)
 {
 
 }
@@ -78,4 +79,14 @@ bool ViewerPluginExternalScriptInfo::isValid() const
 {
     return !mName.trimmed().isEmpty() &&
            !mExecutable.trimmed().isEmpty();
+}
+
+bool ViewerPluginExternalScriptInfo::isReadOnly() const
+{
+    return mIsReadOnly;
+}
+
+void ViewerPluginExternalScriptInfo::setIsReadOnly(bool isReadOnly)
+{
+    mIsReadOnly = isReadOnly;
 }

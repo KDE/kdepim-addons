@@ -48,8 +48,10 @@ void ViewerPluginExternalScriptsLoadJob::start()
                 const int listSize(list.size());
                 QStringList scriptNames;
                 for (int i = 0; i < listSize; ++i) {
-                    KConfig config(list.at(i).filePath());
-                    qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << list.at(i).filePath();
+                    const QString filePath = list.at(i).filePath();
+
+                    KConfig config(filePath);
+                    qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "load file " << filePath;
                     KConfigGroup group(&config, QStringLiteral("Desktop Entry"));
 
                     if (group.isValid()) {
@@ -60,6 +62,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
                         info.setCommandLine(group.readEntry("CommandLine", QString()));
                         info.setDescription(group.readEntry("Description", QString()));
                         info.setIcon(group.readEntry("Icon", QString()));
+                        info.setIsReadOnly(!list.at(i).isWritable());
                         if (info.isValid() && !scriptNames.contains(name)) {
                             mScriptInfos.append(info);
                             scriptNames.append(name);

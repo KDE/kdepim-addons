@@ -42,12 +42,17 @@ public:
     void setIcon(const QString &icon);
 
     bool isValid() const;
+
+    bool isReadOnly() const;
+    void setIsReadOnly(bool isReadOnly);
+
 private:
     QString mCommandLine;
     QString mName;
     QString mExecutable;
     QString mDescription;
     QString mIcon;
+    bool mIsReadOnly;
 };
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo)

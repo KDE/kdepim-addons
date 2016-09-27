@@ -42,6 +42,7 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
     QVERIFY(info.description().isEmpty());
     QVERIFY(info.icon().isEmpty());
     QVERIFY(!info.isValid());
+    QVERIFY(!info.isReadOnly());
 }
 
 void ViewerPluginExternalScriptInfoTest::shouldHaveValid()

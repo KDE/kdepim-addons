@@ -21,10 +21,10 @@
 #include <QVBoxLayout>
 #include <QStandardPaths>
 #include <KLocalizedString>
-#include "../viewerpluginexternalscriptsloadjob.h"
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
+#include <KMessageBox>
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
@@ -41,6 +41,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
 
     mListExternal = new QListWidget(this);
     mListExternal->setObjectName(QStringLiteral("listexternal"));
+    mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     listLayout->addWidget(mListExternal);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
@@ -84,13 +85,21 @@ void ViewerPluginExternalConfigureWidget::slotAddScript()
 
 void ViewerPluginExternalConfigureWidget::load()
 {
-
     ViewerPluginExternalScriptsLoadJob job;
     const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
     job.setExternalScriptsDirectories(lst);
     job.start();
     const QVector<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();
+    fillScriptInfo(scriptInfos);
+}
 
+void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos)
+{
+    Q_FOREACH (const ViewerPluginExternalScriptInfo &script, scriptInfos) {
+
+    }
+
+    //TODO
 }
 
 void ViewerPluginExternalConfigureWidget::save()
@@ -99,6 +108,11 @@ void ViewerPluginExternalConfigureWidget::save()
 }
 
 void ViewerPluginExternalConfigureWidget::reset()
+{
+
+}
+
+void ViewerPluginExternalConfigureWidget::updateButtons()
 {
 
 }
