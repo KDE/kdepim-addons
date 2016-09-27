@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin adds support for \"do not track\".", 
+        "Description[ca@valencia]": "Este connector afig suport per a «no vull ser seguit».", 
         "Description[ca]": "Aquest connector afegeix suport per a «no vull ser seguit».", 
         "Description[nl]": "Deze plug-in voegt ondersteuning toe voor \"do not track\".", 
         "Description[pl]": "Ta wtyczka wprowadza obsługę \"nie śledź\".", 
