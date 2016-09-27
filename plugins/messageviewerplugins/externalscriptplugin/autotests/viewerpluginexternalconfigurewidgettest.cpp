@@ -21,6 +21,8 @@
 #include "viewerpluginexternalconfigurewidgettest.h"
 #include "../configuredialog/viewerpluginexternalconfigurewidget.h"
 #include <QTest>
+#include <QLabel>
+#include <QVBoxLayout>
 
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -35,7 +37,12 @@ ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTes
 
 void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
 {
-
+    ViewerPluginExternalConfigureWidget w;
+    QLabel *label = w.findChild<QLabel *>(QStringLiteral("lab"));
+    QVERIFY(label);
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }
 
 QTEST_MAIN(ViewerPluginExternalConfigureWidgetTest)

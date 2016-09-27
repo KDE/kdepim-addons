@@ -22,6 +22,7 @@
 #include <QStandardPaths>
 #include <KLocalizedString>
 #include "../viewerpluginexternalscriptsloadjob.h"
+#include <QLabel>
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
@@ -29,7 +30,9 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("layout"));
     mainLayout->setMargin(0);
-
+    QLabel *lab = new QLabel(i18n("External Script:"), this);
+    lab->setObjectName(QStringLiteral("lab"));
+    mainLayout->addWidget(lab);
 }
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()

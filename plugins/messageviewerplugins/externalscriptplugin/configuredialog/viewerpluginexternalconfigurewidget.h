@@ -21,7 +21,7 @@
 #define VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
 
 #include <QWidget>
-
+class QListWidget;
 class ViewerPluginExternalConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -31,6 +31,8 @@ public:
     void load();
     void save();
     void reset();
+private:
+    QListWidget *mListExternal;
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
