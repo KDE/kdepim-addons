@@ -21,6 +21,7 @@
 #include "adblockautomaticruleslistwidget.h"
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 
+#include <KLocalizedString>
 #include <QWidget>
 
 using namespace AdBlock;
@@ -28,6 +29,7 @@ using namespace AdBlock;
 AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
+    setWindowTitle(i18n("Configure AdBlock Plugin"));
     initLayout();
 }
 

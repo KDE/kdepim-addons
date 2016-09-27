@@ -19,10 +19,12 @@
 
 #include "viewerpluginexternalconfiguredialog.h"
 #include "viewerpluginexternalconfigurewidget.h"
+#include <KLocalizedString>
 
 ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
+    setWindowTitle(i18n("Configure \"External Script\" Plugin"));
     initLayout();
 }
 

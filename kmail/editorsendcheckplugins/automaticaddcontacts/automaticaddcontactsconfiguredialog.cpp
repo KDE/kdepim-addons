@@ -20,11 +20,13 @@
 #include "automaticaddcontactsconfiguredialog.h"
 #include "automaticaddcontactsconfigurewidget.h"
 #include <KIdentityManagement/IdentityManager>
+#include <KLocalizedString>
 
 AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent),
       mConfigureWidget(Q_NULLPTR)
 {
+    setWindowTitle(i18n("Configure \"Automatic Add Contacts\" Plugin"));
     initLayout();
 }
 

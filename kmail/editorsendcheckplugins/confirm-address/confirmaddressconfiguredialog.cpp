@@ -20,11 +20,13 @@
 #include "confirmaddressconfiguredialog.h"
 #include "confirmaddressconfigurewidget.h"
 #include <KIdentityManagement/IdentityManager>
+#include <KLocalizedString>
 
 ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent),
       mConfigureWidget(Q_NULLPTR)
 {
+    setWindowTitle(i18n("Configure \"Confirm Email Address\" Before Send Plugin"));
     initLayout();
 }
 

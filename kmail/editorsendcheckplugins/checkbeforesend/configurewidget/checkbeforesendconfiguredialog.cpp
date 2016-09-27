@@ -20,10 +20,12 @@
 #include "checkbeforesendconfiguredialog.h"
 #include "checkbeforesendconfigurewidget.h"
 #include <KIdentityManagement/IdentityManager>
+#include <KLocalizedString>
 
 CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
+    setWindowTitle(i18n("Configure \"Check Before Send Mail\" Plugin"));
     initLayout();
 }
 
