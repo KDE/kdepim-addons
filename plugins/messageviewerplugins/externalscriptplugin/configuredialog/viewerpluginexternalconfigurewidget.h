@@ -33,6 +33,9 @@ public:
     void save();
     void reset();
 private:
+    void slotAddScript();
+    void slotModifyScript();
+    void slotRemoveScript();
     QListWidget *mListExternal;
     QPushButton *mAddScript;
     QPushButton *mRemoveScript;

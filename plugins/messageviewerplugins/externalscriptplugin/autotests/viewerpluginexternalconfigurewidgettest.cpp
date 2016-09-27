@@ -23,6 +23,8 @@
 #include <QTest>
 #include <QLabel>
 #include <QVBoxLayout>
+#include <QListWidget>
+#include <QPushButton>
 
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -43,6 +45,22 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
+
+
+    QListWidget *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
+    QVERIFY(mListExternal);
+
+    QPushButton *mAddScript = w.findChild<QPushButton *>(QStringLiteral("addscript"));
+    QVERIFY(mAddScript);
+    QVERIFY(!mAddScript->text().isEmpty());
+
+    QPushButton *mModifyScript = w.findChild<QPushButton *>(QStringLiteral("modifyscript"));
+    QVERIFY(mModifyScript);
+    QVERIFY(!mModifyScript->text().isEmpty());
+
+    QPushButton *mRemoveScript = w.findChild<QPushButton *>(QStringLiteral("removescript"));
+    QVERIFY(mRemoveScript);
+    QVERIFY(!mRemoveScript->text().isEmpty());
 }
 
 QTEST_MAIN(ViewerPluginExternalConfigureWidgetTest)
