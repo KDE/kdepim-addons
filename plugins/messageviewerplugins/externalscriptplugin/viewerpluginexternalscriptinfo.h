@@ -46,12 +46,16 @@ public:
     bool isReadOnly() const;
     void setIsReadOnly(bool isReadOnly);
 
+    QString fileName() const;
+    void setFileName(const QString &fileName);
+
 private:
     QString mCommandLine;
     QString mName;
     QString mExecutable;
     QString mDescription;
     QString mIcon;
+    QString mFileName;
     bool mIsReadOnly;
 };
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);

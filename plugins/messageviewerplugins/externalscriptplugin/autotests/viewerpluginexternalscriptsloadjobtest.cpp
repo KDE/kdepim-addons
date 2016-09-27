@@ -63,6 +63,8 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldLoadDataInfo()
     QCOMPARE(info.executable(), QStringLiteral("bla"));
     QCOMPARE(info.icon(), QStringLiteral("blo"));
     QVERIFY(!info.isReadOnly());
+    const QString filenamepath = QLatin1String(TEST_DATA_DIR) + QStringLiteral("/correctdesktop/first.desktop");
+    QCOMPARE(info.fileName(), filenamepath);
 }
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadEmptyDesktop()

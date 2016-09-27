@@ -90,3 +90,13 @@ void ViewerPluginExternalScriptInfo::setIsReadOnly(bool isReadOnly)
 {
     mIsReadOnly = isReadOnly;
 }
+
+QString ViewerPluginExternalScriptInfo::fileName() const
+{
+    return mFileName;
+}
+
+void ViewerPluginExternalScriptInfo::setFileName(const QString &fileName)
+{
+    mFileName = fileName;
+}
