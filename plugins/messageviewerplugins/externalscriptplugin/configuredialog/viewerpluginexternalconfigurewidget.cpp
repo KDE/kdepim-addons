@@ -18,6 +18,7 @@
 */
 
 #include "viewerpluginexternalconfigurewidget.h"
+#include "viewerpluginexternaleditdialog.h"
 #include <QVBoxLayout>
 #include <QStandardPaths>
 #include <KLocalizedString>
@@ -25,6 +26,7 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <KMessageBox>
+#include <QPointer>
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
@@ -71,17 +73,26 @@ ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
 
 void ViewerPluginExternalConfigureWidget::slotRemoveScript()
 {
+    QListWidgetItem *item = mListExternal->currentItem();
+    if (item) {
 
+    }
 }
 
 void ViewerPluginExternalConfigureWidget::slotModifyScript()
 {
+    QListWidgetItem *item = mListExternal->currentItem();
+    if (item) {
 
+    }
 }
 
 void ViewerPluginExternalConfigureWidget::slotAddScript()
 {
+    QListWidgetItem *item = mListExternal->currentItem();
+    if (item) {
 
+    }
 }
 
 void ViewerPluginExternalConfigureWidget::load()
@@ -113,10 +124,18 @@ void ViewerPluginExternalConfigureWidget::save()
 
 void ViewerPluginExternalConfigureWidget::reset()
 {
-
+    //No implemented.
 }
 
 void ViewerPluginExternalConfigureWidget::updateButtons()
 {
-
+    QListWidgetItem *item = mListExternal->currentItem();
+    if (item) {
+        const bool isReadOnly = item->data(ReadOnly).toBool();
+        mRemoveScript->setEnabled(!isReadOnly);
+        mModifyScript->setEnabled(!isReadOnly);
+    } else {
+        mRemoveScript->setEnabled(false);
+        mModifyScript->setEnabled(false);
+    }
 }
