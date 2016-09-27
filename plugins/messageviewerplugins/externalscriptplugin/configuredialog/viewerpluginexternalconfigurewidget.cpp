@@ -43,6 +43,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     mListExternal->setObjectName(QStringLiteral("listexternal"));
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     listLayout->addWidget(mListExternal);
+    connect(mListExternal, &QListWidget::itemSelectionChanged, this, &ViewerPluginExternalConfigureWidget::updateButtons);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
     mainLayout->addLayout(buttonLayout);

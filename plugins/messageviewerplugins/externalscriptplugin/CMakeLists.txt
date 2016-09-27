@@ -7,7 +7,10 @@ set(messageviewer_externalscriptplugin_SRCS
     viewerpluginexternalscriptparseargument.cpp
     configuredialog/viewerpluginexternalconfiguredialog.cpp
     configuredialog/viewerpluginexternalconfigurewidget.cpp
+    configuredialog/viewerpluginexternaleditdialog.cpp
+    configuredialog/viewerpluginexternaleditwidget.cpp
 )
+
 
 ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
 kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json SOURCES ${messageviewer_externalscriptplugin_SRCS} INSTALL_NAMESPACE messageviewer)
