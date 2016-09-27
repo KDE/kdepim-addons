@@ -23,16 +23,40 @@
 #include <KLocalizedString>
 #include "../viewerpluginexternalscriptsloadjob.h"
 #include <QLabel>
+#include <QListWidget>
+#include <QPushButton>
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("layout"));
     mainLayout->setMargin(0);
+
+    QVBoxLayout *listLayout = new QVBoxLayout;
+    mainLayout->addLayout(listLayout);
     QLabel *lab = new QLabel(i18n("External Script:"), this);
     lab->setObjectName(QStringLiteral("lab"));
-    mainLayout->addWidget(lab);
+    listLayout->addWidget(lab);
+
+    mListExternal = new QListWidget(this);
+    mListExternal->setObjectName(QStringLiteral("listexternal"));
+    listLayout->addWidget(mListExternal);
+
+    QVBoxLayout *buttonLayout = new QVBoxLayout;
+    mainLayout->addLayout(buttonLayout);
+
+    mAddScript = new QPushButton(i18n("Add Script..."), this);
+    mAddScript->setObjectName(QStringLiteral("addscript"));
+    buttonLayout->addWidget(mAddScript);
+
+    mModifyScript = new QPushButton(i18n("Modify Script..."), this);
+    mModifyScript->setObjectName(QStringLiteral("modifyscript"));
+    buttonLayout->addWidget(mModifyScript);
+
+    mRemoveScript = new QPushButton(i18n("Remove Script"), this);
+    mRemoveScript->setObjectName(QStringLiteral("removescript"));
+    buttonLayout->addWidget(mRemoveScript);
 }
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()

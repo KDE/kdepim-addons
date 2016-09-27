@@ -22,6 +22,7 @@
 
 #include <QWidget>
 class QListWidget;
+class QPushButton;
 class ViewerPluginExternalConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -33,6 +34,9 @@ public:
     void reset();
 private:
     QListWidget *mListExternal;
+    QPushButton *mAddScript;
+    QPushButton *mRemoveScript;
+    QPushButton *mModifyScript;
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
