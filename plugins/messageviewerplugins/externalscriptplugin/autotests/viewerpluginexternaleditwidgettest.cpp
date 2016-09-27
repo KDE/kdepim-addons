@@ -18,25 +18,19 @@
 */
 
 
-#include "viewerpluginexternaleditdialog.h"
-#include "viewerpluginexternaleditwidget.h"
-#include <KLocalizedString>
-#include <QDialogButtonBox>
-#include <QVBoxLayout>
+#include "viewerpluginexternaleditwidgettest.h"
 
-ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
-    : QDialog(parent)
-{
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+#include <QTest>
 
-    mEditWidget = new ViewerPluginExternalEditWidget(this);
-    mEditWidget->setObjectName(QStringLiteral("editwidget"));
-    mainLayout->addWidget(mEditWidget);
-
-
-}
-
-ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
+ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
+
+ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest()
+{
+
+}
+
+QTEST_MAIN(ViewerPluginExternalEditWidgetTest)

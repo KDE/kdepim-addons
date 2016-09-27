@@ -19,11 +19,16 @@
 
 
 #include "viewerpluginexternaleditwidget.h"
+#include <QVBoxLayout>
+#include <KLocalizedString>
+#include <QLabel>
+#include <QLineEdit>
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setMargin(0);
 }
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()

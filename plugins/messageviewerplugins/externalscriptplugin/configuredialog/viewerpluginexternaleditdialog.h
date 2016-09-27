@@ -23,12 +23,15 @@
 
 #include <QDialog>
 
+class ViewerPluginExternalEditWidget;
 class ViewerPluginExternalEditDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ViewerPluginExternalEditDialog(QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExternalEditDialog();
+private:
+    ViewerPluginExternalEditWidget *mEditWidget;
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITDIALOG_H
