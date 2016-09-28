@@ -47,6 +47,7 @@ ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 void ViewerPluginExternalEditDialog::slotAccepted()
 {
     mEditWidget->save();
+    accept();
 }
 
 void ViewerPluginExternalEditDialog::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
