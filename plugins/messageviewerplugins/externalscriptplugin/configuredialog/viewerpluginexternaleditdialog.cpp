@@ -36,6 +36,7 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ViewerPluginExternalEditDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ViewerPluginExternalEditDialog::reject);
+    mainLayout->addWidget(buttonBox);
 }
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()

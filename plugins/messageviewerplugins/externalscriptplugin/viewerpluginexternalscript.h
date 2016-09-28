@@ -32,6 +32,9 @@ public:
 
     ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) Q_DECL_OVERRIDE;
     QString viewerPluginName() const Q_DECL_OVERRIDE;
+
+    void showConfigureDialog(QWidget *parent) Q_DECL_OVERRIDE;
+    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPT_H

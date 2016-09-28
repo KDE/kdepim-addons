@@ -19,6 +19,7 @@
 
 #include "viewerpluginexternalscript.h"
 #include "viewerpluginexternalscriptinterface.h"
+#include "configuredialog/viewerpluginexternalconfiguredialog.h"
 #include <KActionCollection>
 #include <kpluginfactory.h>
 
@@ -42,4 +43,17 @@ QString ViewerPluginExternalscript::viewerPluginName() const
     return QStringLiteral("external script");
 }
 
+void MessageViewer::ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)
+{
+    ViewerPluginExternalConfigureDialog dlg(parent);
+    dlg.exec();
+}
+
+bool MessageViewer::ViewerPluginExternalscript::hasConfigureDialog() const
+{
+    return true;
+}
+
 #include "viewerpluginexternalscript.moc"
+
+
