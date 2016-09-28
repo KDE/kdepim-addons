@@ -34,7 +34,9 @@ public:
     ~ViewerPluginExternalEditDialog();
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
+
 private:
+    void slotAccepted();
     ViewerPluginExternalEditWidget *mEditWidget;
 };
 

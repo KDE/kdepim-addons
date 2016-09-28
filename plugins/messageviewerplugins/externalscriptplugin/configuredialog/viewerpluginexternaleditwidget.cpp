@@ -40,3 +40,8 @@ void ViewerPluginExternalEditWidget::setScriptInfo(const ViewerPluginExternalScr
 {
     //TODO
 }
+
+void ViewerPluginExternalEditWidget::save()
+{
+    //TODO
+}

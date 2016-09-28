@@ -17,21 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "viewerpluginexternaleditdialogtest.h"
 
-#ifndef VIEWERPLUGINEXTERNALEDITWIDGET_H
-#define VIEWERPLUGINEXTERNALEDITWIDGET_H
+#include <QTest>
 
-#include <QWidget>
-#include "../viewerpluginexternalscriptinfo.h"
-
-class ViewerPluginExternalEditWidget : public QWidget
+ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit ViewerPluginExternalEditWidget(QWidget *parent = Q_NULLPTR);
-    ~ViewerPluginExternalEditWidget();
-    void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
-    void save();
-};
 
-#endif // VIEWERPLUGINEXTERNALEDITWIDGET_H
+}
+
+ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest()
+{
+
+}
+
+QTEST_MAIN(ViewerPluginExternalEditDialogTest)

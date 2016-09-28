@@ -33,12 +33,20 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     mEditWidget->setObjectName(QStringLiteral("editwidget"));
     mainLayout->addWidget(mEditWidget);
 
-
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ViewerPluginExternalEditDialog::slotAccepted);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ViewerPluginExternalEditDialog::reject);
 }
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 {
 
+}
+
+void ViewerPluginExternalEditDialog::slotAccepted()
+{
+    mEditWidget->save();
 }
 
 void ViewerPluginExternalEditDialog::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
