@@ -10,7 +10,7 @@ macro(add_messageviewer_viewerplugin_external_plugin_unittest _source _additiona
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KF5::MessageViewer Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::I18n
+                 LINK_LIBRARIES KF5::MessageViewer Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::I18n KF5::XmlGui
                 )
 endmacro ()
 
@@ -22,3 +22,4 @@ add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconf
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalconfiguredialogtest.cpp "../configuredialog/viewerpluginexternaleditwidget.cpp;../configuredialog/viewerpluginexternaleditdialog.cpp;../configuredialog/viewerpluginexternalconfiguredialog.cpp;../configuredialog/viewerpluginexternalconfigurewidget.cpp;../viewerpluginexternalscriptsloadjob.cpp;../viewerpluginexternalscriptinfo.cpp" "")
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternaleditwidgettest.cpp "../viewerpluginexternalscriptinfo.cpp;../configuredialog/viewerpluginexternaleditwidget.cpp" "")
 add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternaleditdialogtest.cpp "../viewerpluginexternalscriptinfo.cpp;../configuredialog/viewerpluginexternaleditdialog.cpp;../configuredialog/viewerpluginexternaleditwidget.cpp" "")
+#add_messageviewer_viewerplugin_external_plugin_unittest(viewerpluginexternalscripttest.cpp "../viewerpluginexternalscriptparseargument.cpp;../viewerpluginexternalscript.cpp;../viewerpluginexternalscriptinterface.cpp;../viewerpluginexternalscriptinfo.cpp;../configuredialog/viewerpluginexternaleditdialog.cpp;../configuredialog/viewerpluginexternaleditwidget.cpp;../configuredialog/viewerpluginexternaleditwidget.cpp;../configuredialog/viewerpluginexternaleditdialog.cpp;../configuredialog/viewerpluginexternalconfigurewidget.cpp;../viewerpluginexternalscriptsloadjob.cpp;../viewerpluginexternalscriptinfo.cpp" "")
