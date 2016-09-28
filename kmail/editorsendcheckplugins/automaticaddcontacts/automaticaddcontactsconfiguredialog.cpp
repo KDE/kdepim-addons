@@ -51,7 +51,6 @@ void AutomaticAddContactsConfigureDialog::load()
     mConfigureWidget->loadSettings();
 }
 
-
 void AutomaticAddContactsConfigureDialog::reset()
 {
     mConfigureWidget->resetSettings();

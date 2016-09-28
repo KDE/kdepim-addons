@@ -59,4 +59,3 @@ void ConfirmAddressPlugin::showConfigureDialog(QWidget *parent)
 
 #include "confirmaddressplugin.moc"
 
-

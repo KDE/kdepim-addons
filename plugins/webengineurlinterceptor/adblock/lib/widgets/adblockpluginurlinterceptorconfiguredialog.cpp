@@ -54,7 +54,6 @@ void AdblockPluginUrlInterceptorConfigureDialog::load()
     mAdblockConfigureWidget->loadSettings();
 }
 
-
 void AdBlock::AdblockPluginUrlInterceptorConfigureDialog::reset()
 {
     mAdblockConfigureWidget->resetSettings();

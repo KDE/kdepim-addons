@@ -50,7 +50,6 @@ void CheckBeforeSendConfigureDialog::load()
     mConfigureWidget->loadSettings();
 }
 
-
 void CheckBeforeSendConfigureDialog::reset()
 {
     mConfigureWidget->resetSettings();

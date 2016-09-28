@@ -51,7 +51,6 @@ void ConfirmAddressConfigureDialog::load()
     mConfigureWidget->loadSettings();
 }
 
-
 void ConfirmAddressConfigureDialog::reset()
 {
     mConfigureWidget->resetSettings();

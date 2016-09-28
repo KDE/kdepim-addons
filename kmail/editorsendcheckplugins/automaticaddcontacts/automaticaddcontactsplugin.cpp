@@ -58,4 +58,3 @@ void AutomaticAddContactsPlugin::showConfigureDialog(QWidget *parent)
 
 #include "automaticaddcontactsplugin.moc"
 
-

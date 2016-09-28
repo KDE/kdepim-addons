@@ -46,5 +46,4 @@ bool ZoomTextPluginEditor::hasPopupMenuSupport() const
     return false;
 }
 
-
 #include "zoomtextplugineditor.moc"

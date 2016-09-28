@@ -25,7 +25,6 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
-
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_checkbeforesendplugin.json", registerPlugin<CheckBeforeSendPlugin>();)
 
 CheckBeforeSendPlugin::CheckBeforeSendPlugin(QObject *parent, const QList<QVariant> &)
@@ -58,5 +57,4 @@ void CheckBeforeSendPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "checkbeforesendplugin.moc"
-
 
