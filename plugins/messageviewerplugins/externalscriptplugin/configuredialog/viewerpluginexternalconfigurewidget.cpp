@@ -27,6 +27,9 @@
 #include <QPushButton>
 #include <KMessageBox>
 #include <QPointer>
+#include <QFile>
+#include <QDebug>
+#include <KDesktopFile>
 
 class ViewerPluginExternalScriptItem : public QListWidgetItem
 {
@@ -93,6 +96,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     connect(mRemoveScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotRemoveScript);
     mRemoveScript->setObjectName(QStringLiteral("removescript"));
     buttonLayout->addWidget(mRemoveScript);
+    buttonLayout->addStretch(1);
 }
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
@@ -107,6 +111,7 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
         ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
         if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script?"), i18n("Remove External Script"))) {
             mFilesToRemove.append(scriptItem->scriptInfo().fileName());
+            delete mListExternal->takeItem(mListExternal->currentRow());
         }
     }
 }
@@ -155,7 +160,19 @@ void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPlu
 
 void ViewerPluginExternalConfigureWidget::save()
 {
+    //TODO delete filename first
+    Q_FOREACH (const QString &path, mFilesToRemove) {
+        QFile f(path);
+        if (!f.remove()) {
+            qWarning() << " Impossible to delete " << path;
+        }
+    }
 
+    //TODO create or adapt desktop file.
+    for (int i = 0; i < mListExternal->count(); ++i) {
+        ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
+        //TODO
+    }
 }
 
 void ViewerPluginExternalConfigureWidget::reset()
