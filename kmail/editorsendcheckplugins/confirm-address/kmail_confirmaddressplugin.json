@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to check mail before to send it", 
         "Description[ca@valencia]": "Este connector permet comprovar el correu abans d'enviar-lo", 
         "Description[ca]": "Aquest connector permet comprovar el correu abans d'enviar-lo", 
+        "Description[de]": "Mit diesem Modul können Sie E-Mails vor dem Senden überprüfen", 
         "Description[es]": "Este complemento le permite comprobar el correo antes de enviarlo", 
         "Description[et]": "See plugin võimaldab kontrollida kirja enne selle saatmist.", 
         "Description[it]": "Questa estensione permette di controllare un messaggio di posta prima di inviarlo", 
