@@ -35,3 +35,8 @@ ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
 {
 
 }
+
+void ViewerPluginExternalEditWidget::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
+{
+    //TODO
+}

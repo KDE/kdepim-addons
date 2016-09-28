@@ -23,6 +23,8 @@
 
 #include <QDialog>
 
+#include "../viewerpluginexternalscriptinfo.h"
+
 class ViewerPluginExternalEditWidget;
 class ViewerPluginExternalEditDialog : public QDialog
 {
@@ -30,6 +32,8 @@ class ViewerPluginExternalEditDialog : public QDialog
 public:
     explicit ViewerPluginExternalEditDialog(QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExternalEditDialog();
+
+    void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
 private:
     ViewerPluginExternalEditWidget *mEditWidget;
 };

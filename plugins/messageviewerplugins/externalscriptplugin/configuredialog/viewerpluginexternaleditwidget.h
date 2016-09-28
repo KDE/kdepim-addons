@@ -22,6 +22,7 @@
 #define VIEWERPLUGINEXTERNALEDITWIDGET_H
 
 #include <QWidget>
+#include "../viewerpluginexternalscriptinfo.h"
 
 class ViewerPluginExternalEditWidget : public QWidget
 {
@@ -29,6 +30,7 @@ class ViewerPluginExternalEditWidget : public QWidget
 public:
     explicit ViewerPluginExternalEditWidget(QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExternalEditWidget();
+    void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGET_H

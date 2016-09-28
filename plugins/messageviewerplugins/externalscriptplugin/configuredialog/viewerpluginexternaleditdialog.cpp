@@ -40,3 +40,8 @@ ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 {
 
 }
+
+void ViewerPluginExternalEditDialog::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
+{
+    mEditWidget->setScriptInfo(info);
+}
