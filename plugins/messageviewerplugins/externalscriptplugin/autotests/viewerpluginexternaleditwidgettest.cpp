@@ -17,9 +17,11 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "viewerpluginexternaleditwidgettest.h"
+#include "../configuredialog/viewerpluginexternaleditwidget.h"
 
+#include <QFormLayout>
+#include <QLineEdit>
 #include <QTest>
 
 ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *parent)
@@ -31,6 +33,26 @@ ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *
 ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest()
 {
 
+}
+
+void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
+{
+    ViewerPluginExternalEditWidget w;
+    QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+
+    QLineEdit *mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
+    QVERIFY(mName);
+
+    QLineEdit *mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
+    QVERIFY(mDescription);
+
+    QLineEdit *mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
+    QVERIFY(mCommandLine);
+
+    QLineEdit *mExecutable = w.findChild<QLineEdit *>(QStringLiteral("executable"));
+    QVERIFY(mExecutable);
 }
 
 QTEST_MAIN(ViewerPluginExternalEditWidgetTest)

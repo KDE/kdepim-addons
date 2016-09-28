@@ -39,6 +39,8 @@ private:
     void slotModifyScript();
     void updateButtons();
     void slotRemoveScript();
+    QStringList mFilesToRemove;
+
     QListWidget *mListExternal;
     QPushButton *mAddScript;
     QPushButton *mRemoveScript;

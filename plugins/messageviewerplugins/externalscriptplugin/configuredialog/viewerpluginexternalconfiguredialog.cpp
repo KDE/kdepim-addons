@@ -33,7 +33,6 @@ ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog()
 
 }
 
-
 QWidget *ViewerPluginExternalConfigureDialog::createLayout()
 {
     mConfigWidget = new ViewerPluginExternalConfigureWidget(this);

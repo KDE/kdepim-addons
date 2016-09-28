@@ -17,21 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef VIEWERPLUGINEXTERNALEDITWIDGET_H
 #define VIEWERPLUGINEXTERNALEDITWIDGET_H
 
 #include <QWidget>
 #include "../viewerpluginexternalscriptinfo.h"
-
+class QLineEdit;
 class ViewerPluginExternalEditWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ViewerPluginExternalEditWidget(QWidget *parent = Q_NULLPTR);
     ~ViewerPluginExternalEditWidget();
+
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
+    ViewerPluginExternalScriptInfo scriptInfo() const;
+
     void save();
+private:
+    ViewerPluginExternalScriptInfo mScriptInfo;
+    QLineEdit *mName;
+    QLineEdit *mDescription;
+    QLineEdit *mCommandLine;
+    QLineEdit *mExecutable;
+    //TODO add icon ?
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGET_H

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef VIEWERPLUGINEXTERNALEDITDIALOG_H
 #define VIEWERPLUGINEXTERNALEDITDIALOG_H
 
@@ -34,6 +33,7 @@ public:
     ~ViewerPluginExternalEditDialog();
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
+    ViewerPluginExternalScriptInfo scriptInfo() const;
 
 private:
     void slotAccepted();

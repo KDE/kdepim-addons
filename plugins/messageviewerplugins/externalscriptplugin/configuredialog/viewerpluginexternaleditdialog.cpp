@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "viewerpluginexternaleditdialog.h"
 #include "viewerpluginexternaleditwidget.h"
 #include <KLocalizedString>
@@ -52,4 +51,9 @@ void ViewerPluginExternalEditDialog::slotAccepted()
 void ViewerPluginExternalEditDialog::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
 {
     mEditWidget->setScriptInfo(info);
+}
+
+ViewerPluginExternalScriptInfo ViewerPluginExternalEditDialog::scriptInfo() const
+{
+    return mEditWidget->scriptInfo();
 }

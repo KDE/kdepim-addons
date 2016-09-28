@@ -48,6 +48,8 @@ ViewerPluginExternalScriptItem::ViewerPluginExternalScriptItem(QListWidget *pare
 void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo)
 {
     mScriptInfo = scriptInfo;
+    setText(mScriptInfo.name());
+    setToolTip(mScriptInfo.description());
 }
 
 ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() const
@@ -103,6 +105,9 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
         ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
+        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script?"), i18n("Remove External Script"))) {
+            mFilesToRemove.append(scriptItem->scriptInfo().fileName());
+        }
     }
 }
 
@@ -111,15 +116,23 @@ void ViewerPluginExternalConfigureWidget::slotModifyScript()
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
         ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
+        QPointer<ViewerPluginExternalEditDialog> dlg = new ViewerPluginExternalEditDialog(this);
+        dlg->setScriptInfo(scriptItem->scriptInfo());
+        if (dlg->exec()) {
+            scriptItem->setScriptInfo(dlg->scriptInfo());
+        }
+        delete dlg;
     }
 }
 
 void ViewerPluginExternalConfigureWidget::slotAddScript()
 {
-    QListWidgetItem *item = mListExternal->currentItem();
-    if (item) {
-        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
+    QPointer<ViewerPluginExternalEditDialog> dlg = new ViewerPluginExternalEditDialog(this);
+    if (dlg->exec()) {
+        ViewerPluginExternalScriptItem *item = new ViewerPluginExternalScriptItem(mListExternal);
+        item->setScriptInfo(dlg->scriptInfo());
     }
+    delete dlg;
 }
 
 void ViewerPluginExternalConfigureWidget::load()

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "viewerpluginexternalconfigurewidgettest.h"
 #include "../configuredialog/viewerpluginexternalconfigurewidget.h"
 #include <QTest>
@@ -45,7 +44,6 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
-
 
     QListWidget *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);

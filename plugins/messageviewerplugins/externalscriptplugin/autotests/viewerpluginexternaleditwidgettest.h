@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef VIEWERPLUGINEXTERNALEDITWIDGETTEST_H
 #define VIEWERPLUGINEXTERNALEDITWIDGETTEST_H
 
@@ -29,6 +28,8 @@ class ViewerPluginExternalEditWidgetTest : public QObject
 public:
     explicit ViewerPluginExternalEditWidgetTest(QObject *parent = Q_NULLPTR);
     ~ViewerPluginExternalEditWidgetTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGETTEST_H

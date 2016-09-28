@@ -17,18 +17,36 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "viewerpluginexternaleditwidget.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QLabel>
 #include <QLineEdit>
+#include <QFormLayout>
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QFormLayout *mainLayout = new QFormLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+
+
+    mName = new QLineEdit(this);
+    mName->setObjectName(QStringLiteral("name"));
+    mainLayout->addRow(i18n("Name:"), mName);
+
+    mDescription = new QLineEdit(this);
+    mDescription->setObjectName(QStringLiteral("description"));
+    mainLayout->addRow(i18n("Description:"), mDescription);
+
+    mCommandLine = new QLineEdit(this);
+    mCommandLine->setObjectName(QStringLiteral("commandline"));
+    mainLayout->addRow(i18n("CommandLine:"), mCommandLine);
+
+    mExecutable = new QLineEdit(this);
+    mExecutable->setObjectName(QStringLiteral("executable"));
+    mainLayout->addRow(i18n("Executable:"), mExecutable);
 }
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
@@ -38,10 +56,22 @@ ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
 
 void ViewerPluginExternalEditWidget::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
 {
-    //TODO
+    mScriptInfo = info;
+    mName->setText(mScriptInfo.name());
+    mDescription->setText(mScriptInfo.description());
+    mCommandLine->setText(mScriptInfo.commandLine());
+    mExecutable->setText(mScriptInfo.executable());
 }
 
 void ViewerPluginExternalEditWidget::save()
 {
-    //TODO
+    mScriptInfo.setName(mName->text());
+    mScriptInfo.setDescription(mDescription->text());
+    mScriptInfo.setCommandLine(mCommandLine->text());
+    mScriptInfo.setExecutable(mExecutable->text());
+}
+
+ViewerPluginExternalScriptInfo ViewerPluginExternalEditWidget::scriptInfo() const
+{
+    return mScriptInfo;
 }
