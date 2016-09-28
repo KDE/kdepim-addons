@@ -34,14 +34,6 @@ public:
     void save();
     void reset();
 private:
-    enum ItemScriptInfo {
-        FileName = Qt::UserRole + 1,
-        ReadOnly = Qt::UserRole + 2,
-        CommandName = Qt::UserRole + 3,
-        Executable = Qt::UserRole + 4,
-        IconName = Qt::UserRole + 5,
-    };
-
     void fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos);
     void slotAddScript();
     void slotModifyScript();

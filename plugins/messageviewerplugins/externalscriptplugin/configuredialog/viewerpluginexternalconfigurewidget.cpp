@@ -28,6 +28,33 @@
 #include <KMessageBox>
 #include <QPointer>
 
+class ViewerPluginExternalScriptItem : public QListWidgetItem
+{
+public:
+    ViewerPluginExternalScriptItem(QListWidget *parent);
+
+    void setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo);
+    ViewerPluginExternalScriptInfo scriptInfo() const;
+private:
+    ViewerPluginExternalScriptInfo mScriptInfo;
+};
+
+ViewerPluginExternalScriptItem::ViewerPluginExternalScriptItem(QListWidget *parent)
+    : QListWidgetItem(parent)
+{
+
+}
+
+void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo)
+{
+    mScriptInfo = scriptInfo;
+}
+
+ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() const
+{
+    return mScriptInfo;
+}
+
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -75,7 +102,7 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
-
+        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
     }
 }
 
@@ -83,7 +110,7 @@ void ViewerPluginExternalConfigureWidget::slotModifyScript()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
-
+        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
     }
 }
 
@@ -91,7 +118,7 @@ void ViewerPluginExternalConfigureWidget::slotAddScript()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
-
+        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
     }
 }
 
@@ -108,12 +135,8 @@ void ViewerPluginExternalConfigureWidget::load()
 void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos)
 {
     Q_FOREACH (const ViewerPluginExternalScriptInfo &script, scriptInfos) {
-        QListWidgetItem *item = new QListWidgetItem(mListExternal);
-        item->setData(ReadOnly, script.isReadOnly());
-        item->setData(FileName, script.fileName());
-        item->setData(CommandName, script.commandLine());
-        item->setData(Executable, script.executable());
-        item->setData(IconName, script.icon());
+        ViewerPluginExternalScriptItem *item = new ViewerPluginExternalScriptItem(mListExternal);
+        item->setScriptInfo(script);
     }
 }
 
@@ -131,7 +154,8 @@ void ViewerPluginExternalConfigureWidget::updateButtons()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
-        const bool isReadOnly = item->data(ReadOnly).toBool();
+        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
+        const bool isReadOnly = scriptItem->scriptInfo().isReadOnly();
         mRemoveScript->setEnabled(!isReadOnly);
         mModifyScript->setEnabled(!isReadOnly);
     } else {
@@ -139,3 +163,4 @@ void ViewerPluginExternalConfigureWidget::updateButtons()
         mModifyScript->setEnabled(false);
     }
 }
+
