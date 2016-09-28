@@ -19,6 +19,10 @@
 
 #include "viewerpluginexternaleditdialogtest.h"
 
+#include "../configuredialog/viewerpluginexternaleditdialog.h"
+#include "../configuredialog/viewerpluginexternaleditwidget.h"
+
+#include <QDialogButtonBox>
 #include <QTest>
 
 ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
@@ -30,6 +34,17 @@ ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *
 ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest()
 {
 
+}
+
+void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()
+{
+    ViewerPluginExternalEditDialog dlg;
+
+    ViewerPluginExternalEditWidget *mEditWidget = dlg.findChild<ViewerPluginExternalEditWidget *>(QStringLiteral("editwidget"));
+    QVERIFY(mEditWidget);
+
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
 }
 
 QTEST_MAIN(ViewerPluginExternalEditDialogTest)
