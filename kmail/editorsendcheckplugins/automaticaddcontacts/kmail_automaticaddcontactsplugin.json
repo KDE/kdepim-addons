@@ -1,9 +1,28 @@
 {
     "KPlugin": {
         "Name": "Automatic Add Contacts", 
+        "Name[ca@valencia]": "Afig automàticament als contactes", 
+        "Name[ca]": "Afegeix automàticament als contactes", 
+        "Name[cs]": "Automaticky přidat kontakty", 
+        "Name[de]": "Kontakte automatisch hinzufügen", 
+        "Name[es]": "Añadir contactos automáticamente", 
+        "Name[et]": "Kontaktide automaatne lisamine", 
+        "Name[it]": "Aggiunge automaticamente i contatti", 
+        "Name[nl]": "Contactpersonen automatisch toevoegen", 
+        "Name[pl]": "Samoczynnie dodaj kontakty", 
+        "Name[pt]": "Adicionar Automaticamente os Contactos", 
+        "Name[sk]": "Automaticky pridať kontakty", 
+        "Name[sl]": "Samodejno dodaj stike", 
+        "Name[sr@ijekavian]": "Аутоматски додај контакте", 
+        "Name[sr@ijekavianlatin]": "Automatski dodaj kontakte", 
+        "Name[sr@latin]": "Automatski dodaj kontakte", 
+        "Name[sr]": "Аутоматски додај контакте", 
+        "Name[sv]": "Lägg automatiskt till kontakter", 
+        "Name[uk]": "Автоматичне додавання контактів", 
+        "Name[x-test]": "xxAutomatic Add Contactsxx", 
         "ServiceTypes": [
             "KMailEditor/PluginCheckBeforeSend"
         ], 
         "Version": "1.0"
-    } 
+    }
 }
