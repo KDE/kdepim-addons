@@ -65,6 +65,11 @@ void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo_data()
     info.setName(QStringLiteral("bla"));
     QTest::newRow("test1") << info;
 
+    info.setIsReadOnly(true);
+    QTest::newRow("test2") << info;
+
+    info.setFileName(QStringLiteral("lili"));
+    QTest::newRow("test3") << info;
 }
 
 void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
