@@ -47,6 +47,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mExecutable = new QLineEdit(this);
     mExecutable->setObjectName(QStringLiteral("executable"));
     mainLayout->addRow(i18n("Executable:"), mExecutable);
+    connect(mName, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::nameChanged);
 }
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()

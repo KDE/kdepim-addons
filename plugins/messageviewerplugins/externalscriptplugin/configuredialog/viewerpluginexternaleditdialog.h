@@ -25,6 +25,7 @@
 #include "../viewerpluginexternalscriptinfo.h"
 
 class ViewerPluginExternalEditWidget;
+class QPushButton;
 class ViewerPluginExternalEditDialog : public QDialog
 {
     Q_OBJECT
@@ -36,8 +37,10 @@ public:
     ViewerPluginExternalScriptInfo scriptInfo() const;
 
 private:
+    void slotNameChanged(const QString &name);
     void slotAccepted();
     ViewerPluginExternalEditWidget *mEditWidget;
+    QPushButton *mOkButton;
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITDIALOG_H

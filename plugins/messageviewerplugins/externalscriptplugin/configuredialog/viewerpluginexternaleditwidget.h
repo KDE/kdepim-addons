@@ -34,6 +34,8 @@ public:
     ViewerPluginExternalScriptInfo scriptInfo() const;
 
     void save();
+Q_SIGNALS:
+    void nameChanged(const QString &name);
 private:
     ViewerPluginExternalScriptInfo mScriptInfo;
     QLineEdit *mName;

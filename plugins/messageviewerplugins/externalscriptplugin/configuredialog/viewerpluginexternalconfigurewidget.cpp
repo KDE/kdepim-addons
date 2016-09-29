@@ -174,6 +174,7 @@ void ViewerPluginExternalConfigureWidget::save()
         const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
         QString filenamepath = scriptInfo.fileName();
         if (filenamepath.isEmpty()) {
+
             //TODO add correct filenamepath
         }
         KDesktopFile desktopFile(filenamepath);

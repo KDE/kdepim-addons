@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QPushButton>
 
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)
@@ -31,17 +32,25 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     mEditWidget = new ViewerPluginExternalEditWidget(this);
     mEditWidget->setObjectName(QStringLiteral("editwidget"));
     mainLayout->addWidget(mEditWidget);
+    connect(mEditWidget, &ViewerPluginExternalEditWidget::nameChanged, this, &ViewerPluginExternalEditDialog::slotNameChanged);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ViewerPluginExternalEditDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ViewerPluginExternalEditDialog::reject);
     mainLayout->addWidget(buttonBox);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setEnabled(false);
 }
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 {
 
+}
+
+void ViewerPluginExternalEditDialog::slotNameChanged(const QString &name)
+{
+    mOkButton->setEnabled(!name.trimmed().isEmpty());
 }
 
 void ViewerPluginExternalEditDialog::slotAccepted()
