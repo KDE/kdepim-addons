@@ -60,4 +60,28 @@ void ViewerPluginExternalScriptInfoTest::shouldHaveValid()
     QVERIFY(!info.isValid());
 }
 
+void ViewerPluginExternalScriptInfoTest::shouldBeEqual_data()
+{
+    QTest::addColumn<ViewerPluginExternalScriptInfo>("scriptinfo");
+    QTest::newRow("empty") << ViewerPluginExternalScriptInfo();
+
+    ViewerPluginExternalScriptInfo f;
+    f.setCommandLine(QStringLiteral("dd"));
+    f.setDescription(QStringLiteral("bla"));
+    f.setIsReadOnly(true);
+    QTest::newRow("not-empty-1") << f;
+    f.setExecutable(QStringLiteral("ssss"));
+    QTest::newRow("not-empty-2") << f;
+    f.setIcon(QStringLiteral("bloblo"));
+    QTest::newRow("not-empty-3") << f;
+}
+
+void ViewerPluginExternalScriptInfoTest::shouldBeEqual()
+{
+    QFETCH(ViewerPluginExternalScriptInfo, scriptinfo);
+    ViewerPluginExternalScriptInfo f;
+    f = scriptinfo;
+    QCOMPARE(f, scriptinfo);
+}
+
 QTEST_MAIN(ViewerPluginExternalScriptInfoTest)

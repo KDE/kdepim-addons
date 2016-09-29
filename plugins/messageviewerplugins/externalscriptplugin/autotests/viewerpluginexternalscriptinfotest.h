@@ -32,6 +32,8 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldHaveValid();
+    void shouldBeEqual_data();
+    void shouldBeEqual();
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTINFOTEST_H
