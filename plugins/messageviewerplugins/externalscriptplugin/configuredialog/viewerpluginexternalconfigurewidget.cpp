@@ -30,6 +30,7 @@
 #include <QFile>
 #include <QDebug>
 #include <KDesktopFile>
+#include <KConfigGroup>
 
 class ViewerPluginExternalScriptItem : public QListWidgetItem
 {
@@ -160,7 +161,6 @@ void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPlu
 
 void ViewerPluginExternalConfigureWidget::save()
 {
-    //TODO delete filename first
     Q_FOREACH (const QString &path, mFilesToRemove) {
         QFile f(path);
         if (!f.remove()) {
@@ -171,7 +171,17 @@ void ViewerPluginExternalConfigureWidget::save()
     //TODO create or adapt desktop file.
     for (int i = 0; i < mListExternal->count(); ++i) {
         ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
-        //TODO
+        const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
+        QString filenamepath = scriptInfo.fileName();
+        if (filenamepath.isEmpty()) {
+            //TODO add correct filenamepath
+        }
+        KDesktopFile desktopFile(filenamepath);
+        desktopFile.desktopGroup().writeEntry(QStringLiteral("Name"), scriptInfo.name());
+        desktopFile.desktopGroup().writeEntry(QStringLiteral("Description"), scriptInfo.description());
+        desktopFile.desktopGroup().writeEntry(QStringLiteral("Executable"), scriptInfo.executable());
+        desktopFile.desktopGroup().writeEntry(QStringLiteral("CommandLine"), scriptInfo.commandLine());
+        desktopFile.desktopGroup().sync();
     }
 }
 
