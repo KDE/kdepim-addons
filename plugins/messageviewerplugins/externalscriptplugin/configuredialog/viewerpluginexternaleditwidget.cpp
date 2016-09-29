@@ -42,7 +42,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mCommandLine = new QLineEdit(this);
     mCommandLine->setObjectName(QStringLiteral("commandline"));
-    mainLayout->addRow(i18n("CommandLine:"), mCommandLine);
+    mainLayout->addRow(i18n("Command Line:"), mCommandLine);
 
     mExecutable = new QLineEdit(this);
     mExecutable->setObjectName(QStringLiteral("executable"));
