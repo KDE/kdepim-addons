@@ -13,7 +13,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att blockera reklam.", 
         "Description[uk]": "За допомогою цього додатка можна блокувати рекламу.", 
         "Description[x-test]": "xxThis plugins allows you to block advertising.xx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Id": "messagevieweradblockplugin", 
         "Name": "Adblock", 
         "Name[es]": "AdBlock", 
