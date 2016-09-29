@@ -167,15 +167,12 @@ void ViewerPluginExternalConfigureWidget::save()
             qWarning() << " Impossible to delete " << path;
         }
     }
-
-    //TODO create or adapt desktop file.
     for (int i = 0; i < mListExternal->count(); ++i) {
         ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
         const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
         QString filenamepath = scriptInfo.fileName();
         if (filenamepath.isEmpty()) {
-
-            //TODO add correct filenamepath
+            filenamepath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/messageviewerplugins/%1.desktop").arg(scriptInfo.name());
         }
         KDesktopFile desktopFile(filenamepath);
         desktopFile.desktopGroup().writeEntry(QStringLiteral("Name"), scriptInfo.name());
