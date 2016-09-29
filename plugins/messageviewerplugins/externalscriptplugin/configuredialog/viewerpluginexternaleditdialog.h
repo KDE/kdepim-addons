@@ -37,7 +37,7 @@ public:
     ViewerPluginExternalScriptInfo scriptInfo() const;
 
 private:
-    void slotNameChanged(const QString &name);
+    void slotScriptIsValid(bool valid);
     void slotAccepted();
     ViewerPluginExternalEditWidget *mEditWidget;
     QPushButton *mOkButton;

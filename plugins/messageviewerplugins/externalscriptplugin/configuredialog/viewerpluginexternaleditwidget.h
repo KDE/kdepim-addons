@@ -35,8 +35,10 @@ public:
 
     void save();
 Q_SIGNALS:
-    void nameChanged(const QString &name);
+    void scriptIsValid(bool valid);
+
 private:
+    void slotInfoChanged();
     ViewerPluginExternalScriptInfo mScriptInfo;
     QLineEdit *mName;
     QLineEdit *mDescription;

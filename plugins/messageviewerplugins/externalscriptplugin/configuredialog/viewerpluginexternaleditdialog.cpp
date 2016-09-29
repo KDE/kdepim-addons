@@ -32,7 +32,7 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     mEditWidget = new ViewerPluginExternalEditWidget(this);
     mEditWidget->setObjectName(QStringLiteral("editwidget"));
     mainLayout->addWidget(mEditWidget);
-    connect(mEditWidget, &ViewerPluginExternalEditWidget::nameChanged, this, &ViewerPluginExternalEditDialog::slotNameChanged);
+    connect(mEditWidget, &ViewerPluginExternalEditWidget::scriptIsValid, this, &ViewerPluginExternalEditDialog::slotScriptIsValid);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
@@ -48,9 +48,9 @@ ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 
 }
 
-void ViewerPluginExternalEditDialog::slotNameChanged(const QString &name)
+void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)
 {
-    mOkButton->setEnabled(!name.trimmed().isEmpty());
+    mOkButton->setEnabled(valid);
 }
 
 void ViewerPluginExternalEditDialog::slotAccepted()
