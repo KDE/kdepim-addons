@@ -55,4 +55,16 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mExecutable);
 }
 
+void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
+{
+    ViewerPluginExternalEditWidget w;
+    ViewerPluginExternalScriptInfo info;
+    info.setCommandLine(QStringLiteral("foo"));
+    info.setDescription(QStringLiteral("blo"));
+    info.setExecutable(QStringLiteral("voo"));
+    info.setName(QStringLiteral("bla"));
+    w.setScriptInfo(info);
+    QCOMPARE(info, w.scriptInfo());
+}
+
 QTEST_MAIN(ViewerPluginExternalEditWidgetTest)

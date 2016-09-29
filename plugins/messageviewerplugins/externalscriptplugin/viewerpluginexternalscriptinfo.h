@@ -49,6 +49,7 @@ public:
     QString fileName() const;
     void setFileName(const QString &fileName);
 
+    bool operator==(const ViewerPluginExternalScriptInfo &other) const;
 private:
     QString mCommandLine;
     QString mName;

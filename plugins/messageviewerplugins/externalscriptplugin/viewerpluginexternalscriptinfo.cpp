@@ -100,3 +100,15 @@ void ViewerPluginExternalScriptInfo::setFileName(const QString &fileName)
 {
     mFileName = fileName;
 }
+
+bool ViewerPluginExternalScriptInfo::operator==(const ViewerPluginExternalScriptInfo &other) const
+{
+    return (name() == other.name()) &&
+            (commandLine() == other.commandLine()) &&
+            (executable() == other.executable()) &&
+            (description() == other.description()) &&
+            (icon() == other.icon()) &&
+            (isReadOnly() == other.isReadOnly()) &&
+            (fileName() == other.fileName());
+
+}

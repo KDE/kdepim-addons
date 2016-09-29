@@ -30,6 +30,7 @@ public:
     ~ViewerPluginExternalEditWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldGetSaveInfo();
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGETTEST_H
