@@ -55,16 +55,24 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mExecutable);
 }
 
-void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
+void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo_data()
 {
-    ViewerPluginExternalEditWidget w;
+    QTest::addColumn<ViewerPluginExternalScriptInfo>("scriptinfo");
     ViewerPluginExternalScriptInfo info;
     info.setCommandLine(QStringLiteral("foo"));
     info.setDescription(QStringLiteral("blo"));
     info.setExecutable(QStringLiteral("voo"));
     info.setName(QStringLiteral("bla"));
-    w.setScriptInfo(info);
-    QCOMPARE(info, w.scriptInfo());
+    QTest::newRow("test1") << info;
+
+}
+
+void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
+{
+    QFETCH (ViewerPluginExternalScriptInfo, scriptinfo);
+    ViewerPluginExternalEditWidget w;
+    w.setScriptInfo(scriptinfo);
+    QCOMPARE(scriptinfo, w.scriptInfo());
 }
 
 QTEST_MAIN(ViewerPluginExternalEditWidgetTest)

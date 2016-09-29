@@ -31,6 +31,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGetSaveInfo();
+    void shouldGetSaveInfo_data();
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGETTEST_H
