@@ -27,6 +27,7 @@
         "Name[uk]": "Надіслати пошту", 
         "Name[x-test]": "xxSend Mailxx", 
         "Name[zh_CN]": "发送邮件", 
+        "Description": "This plugin allows you to send directly email to selected contacts.", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

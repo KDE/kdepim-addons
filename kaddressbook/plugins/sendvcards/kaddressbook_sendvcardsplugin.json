@@ -24,7 +24,8 @@
         "Name[sr]": "Пошаљи в‑кардове", 
         "Name[sv]": "Skicka visitkort", 
         "Name[uk]": "Надсилання візитівок", 
-        "Name[x-test]": "xxSend vCardsxx", 
+        "Name[x-test]": "xxSend vCardsxx",
+        "Description": "This plugin allows you to send VCard from selected contacts.", 	
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

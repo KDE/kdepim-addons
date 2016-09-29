@@ -26,7 +26,8 @@
         "Name[sv]": "Sammanfoga kontakter", 
         "Name[uk]": "Об’єднання записів контактів", 
         "Name[x-test]": "xxMerge Contactsxx", 
-        "Name[zh_CN]": "合并联系人", 
+        "Name[zh_CN]": "合并联系人",
+        "Description": "This plugin allows you to merge contacts.", 	
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

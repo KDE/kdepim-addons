@@ -25,6 +25,7 @@
         "Name[sv]": "Kontrollera Gravatar", 
         "Name[uk]": "Перевірити gravatar", 
         "Name[x-test]": "xxCheck Gravatarxx", 
+	"Description": "This plugin allows you to check gravatar.", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
