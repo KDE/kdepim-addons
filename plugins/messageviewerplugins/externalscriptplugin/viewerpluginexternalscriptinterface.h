@@ -47,7 +47,7 @@ private:
     QList<QAction *> mAction;
     QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
-    QString mSelectedText;
+    QString mText;
     KMime::Message::Ptr mMessage;
 };
 }

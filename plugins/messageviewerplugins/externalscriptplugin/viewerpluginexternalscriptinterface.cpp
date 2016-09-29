@@ -60,7 +60,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginExternalscriptInterface:
 
 void ViewerPluginExternalscriptInterface::setText(const QString &text)
 {
-    mSelectedText = text;
+    mText = text;
 }
 
 void ViewerPluginExternalscriptInterface::execute()
@@ -86,7 +86,7 @@ void ViewerPluginExternalscriptInterface::execute()
 
 void ViewerPluginExternalscriptInterface::clear()
 {
-    mSelectedText.clear();
+    mText.clear();
     mCurrentInfo.clear();
     mMessage.clear();
 }
