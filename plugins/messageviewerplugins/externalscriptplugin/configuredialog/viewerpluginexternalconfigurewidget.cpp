@@ -79,6 +79,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     listLayout->addWidget(mListExternal);
     connect(mListExternal, &QListWidget::itemSelectionChanged, this, &ViewerPluginExternalConfigureWidget::updateButtons);
+    connect(mListExternal, &QListWidget::itemDoubleClicked, this, &ViewerPluginExternalConfigureWidget::slotDoubleClicked);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
     mainLayout->addLayout(buttonLayout);
@@ -121,13 +122,7 @@ void ViewerPluginExternalConfigureWidget::slotModifyScript()
 {
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
-        ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
-        QPointer<ViewerPluginExternalEditDialog> dlg = new ViewerPluginExternalEditDialog(this);
-        dlg->setScriptInfo(scriptItem->scriptInfo());
-        if (dlg->exec()) {
-            scriptItem->setScriptInfo(dlg->scriptInfo());
-        }
-        delete dlg;
+        modifyScript(item);
     }
 }
 
@@ -204,3 +199,22 @@ void ViewerPluginExternalConfigureWidget::updateButtons()
     }
 }
 
+void ViewerPluginExternalConfigureWidget::slotDoubleClicked(QListWidgetItem * item)
+{
+    if (item) {
+        modifyScript(item);
+    }
+}
+
+void ViewerPluginExternalConfigureWidget::modifyScript(QListWidgetItem *item)
+{
+    ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
+    if (!scriptItem->scriptInfo().isReadOnly()) {
+        QPointer<ViewerPluginExternalEditDialog> dlg = new ViewerPluginExternalEditDialog(this);
+        dlg->setScriptInfo(scriptItem->scriptInfo());
+        if (dlg->exec()) {
+            scriptItem->setScriptInfo(dlg->scriptInfo());
+        }
+        delete dlg;
+    }
+}

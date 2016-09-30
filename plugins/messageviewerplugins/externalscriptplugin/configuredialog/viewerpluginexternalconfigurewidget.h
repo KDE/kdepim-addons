@@ -24,6 +24,7 @@
 #include "../viewerpluginexternalscriptsloadjob.h"
 class QListWidget;
 class QPushButton;
+class QListWidgetItem;
 class ViewerPluginExternalConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -34,11 +35,13 @@ public:
     void save();
     void reset();
 private:
+    void modifyScript(QListWidgetItem *item);
     void fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos);
     void slotAddScript();
     void slotModifyScript();
     void updateButtons();
     void slotRemoveScript();
+    void slotDoubleClicked(QListWidgetItem *item);
     QStringList mFilesToRemove;
 
     QListWidget *mListExternal;
