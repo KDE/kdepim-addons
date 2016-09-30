@@ -37,7 +37,7 @@ AutomaticAddContactsConfigureDialog::~AutomaticAddContactsConfigureDialog()
 
 QWidget *AutomaticAddContactsConfigureDialog::createLayout()
 {
-    mConfigureWidget = new AutomaticAddContactsConfigureWidget(KIdentityManagement::IdentityManager::self(), this);
+    mConfigureWidget = new AutomaticAddContactsConfigureWidget(this);
     return mConfigureWidget;
 }
 

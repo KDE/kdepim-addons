@@ -34,7 +34,7 @@ class AutomaticAddContactsConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsConfigureTab(QWidget *parent = Q_NULLPTR);
     ~AutomaticAddContactsConfigureTab();
 
     void loadSettings();

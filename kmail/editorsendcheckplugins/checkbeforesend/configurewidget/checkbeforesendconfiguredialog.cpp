@@ -19,7 +19,6 @@
 
 #include "checkbeforesendconfiguredialog.h"
 #include "checkbeforesendconfigurewidget.h"
-#include <KIdentityManagement/IdentityManager>
 #include <KLocalizedString>
 
 CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
@@ -36,7 +35,7 @@ CheckBeforeSendConfigureDialog::~CheckBeforeSendConfigureDialog()
 
 QWidget *CheckBeforeSendConfigureDialog::createLayout()
 {
-    mConfigureWidget = new CheckBeforeSendConfigureWidget(KIdentityManagement::IdentityManager::self(), this);
+    mConfigureWidget = new CheckBeforeSendConfigureWidget(this);
     return mConfigureWidget;
 }
 

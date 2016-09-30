@@ -24,7 +24,7 @@
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
 
-ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent)
+ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -35,7 +35,7 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(KIdentityManagement::Iden
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
-    initTab(identityManagement);
+    initTab(KIdentityManagement::IdentityManager::self());
 }
 
 ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()

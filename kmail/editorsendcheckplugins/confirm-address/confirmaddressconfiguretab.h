@@ -33,7 +33,7 @@ class ConfirmAddressConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent = Q_NULLPTR);
+    explicit ConfirmAddressConfigureTab(QWidget *parent = Q_NULLPTR);
     ~ConfirmAddressConfigureTab();
 
     void loadSettings(const KConfigGroup &grp);

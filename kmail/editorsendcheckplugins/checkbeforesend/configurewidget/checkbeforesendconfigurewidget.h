@@ -28,7 +28,7 @@ class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheck
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendConfigureWidget(KIdentityManagement::IdentityManager *identityManager, QWidget *parent = Q_NULLPTR);
+    explicit CheckBeforeSendConfigureWidget(QWidget *parent = Q_NULLPTR);
     ~CheckBeforeSendConfigureWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;

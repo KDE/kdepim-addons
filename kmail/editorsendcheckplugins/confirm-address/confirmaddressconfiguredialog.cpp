@@ -37,7 +37,7 @@ ConfirmAddressConfigureDialog::~ConfirmAddressConfigureDialog()
 
 QWidget *ConfirmAddressConfigureDialog::createLayout()
 {
-    mConfigureWidget = new ConfirmAddressConfigureWidget(KIdentityManagement::IdentityManager::self(), this);
+    mConfigureWidget = new ConfirmAddressConfigureWidget(this);
     return mConfigureWidget;
 }
 

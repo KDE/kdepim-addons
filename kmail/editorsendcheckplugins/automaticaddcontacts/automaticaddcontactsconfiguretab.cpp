@@ -27,7 +27,7 @@
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
 
-AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(KIdentityManagement::IdentityManager *identityManagement, QWidget *parent)
+AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *parent)
     : QWidget(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
@@ -36,7 +36,7 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(KIdentityMana
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
-    initTab(identityManagement);
+    initTab(KIdentityManagement::IdentityManager::self());
 }
 
 AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab()
@@ -46,11 +46,6 @@ AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab()
 
 void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
 {
-    bool needToDeleteIdentity = false;
-    if (!identityManager) {
-        needToDeleteIdentity = true;
-        identityManager = new KIdentityManagement::IdentityManager(true);
-    }
     KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(this);
@@ -58,10 +53,6 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityMana
         mTabWidget->addTab(w, (*it).identityName());
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
-    }
-    if (needToDeleteIdentity) {
-        delete identityManager;
-        identityManager = Q_NULLPTR;
     }
 }
 
