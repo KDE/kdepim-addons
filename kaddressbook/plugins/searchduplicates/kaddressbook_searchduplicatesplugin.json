@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to seach duplicate contacts.", 
+        "Description": "This plugin allows you to search duplicate contacts.", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbooksearchduplicatecontacts", 
         "Name": "Search Duplicate Contacts", 
