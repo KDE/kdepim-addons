@@ -61,4 +61,6 @@ void AdBlock::AdblockPluginUrlInterceptorConfigureDialog::reset()
 
 void AdBlock::AdblockPluginUrlInterceptorConfigureDialog::help()
 {
+    //TODO we can use in akregator too. We need a specific doc.
+    showHelp(QStringLiteral("kmail"), QString());
 }

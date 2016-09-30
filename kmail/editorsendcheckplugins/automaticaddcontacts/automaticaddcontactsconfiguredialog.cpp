@@ -58,4 +58,5 @@ void AutomaticAddContactsConfigureDialog::reset()
 
 void AutomaticAddContactsConfigureDialog::help()
 {
+    showHelp(QStringLiteral("kmail"), QString());
 }

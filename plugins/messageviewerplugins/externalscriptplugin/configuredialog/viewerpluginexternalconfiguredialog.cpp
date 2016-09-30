@@ -57,5 +57,5 @@ void ViewerPluginExternalConfigureDialog::reset()
 
 void ViewerPluginExternalConfigureDialog::help()
 {
-    //TODO
+    showHelp(QStringLiteral("kmail"), QString());
 }

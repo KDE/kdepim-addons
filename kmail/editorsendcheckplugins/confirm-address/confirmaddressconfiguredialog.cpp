@@ -58,4 +58,5 @@ void ConfirmAddressConfigureDialog::reset()
 
 void ConfirmAddressConfigureDialog::help()
 {
+    showHelp(QStringLiteral("kmail"), QString());
 }
