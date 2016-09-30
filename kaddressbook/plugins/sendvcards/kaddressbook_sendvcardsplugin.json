@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to send VCard from selected contacts.", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbooksendvcards", 
         "Name": "Send vCards", 
@@ -24,8 +25,7 @@
         "Name[sr]": "Пошаљи в‑кардове", 
         "Name[sv]": "Skicka visitkort", 
         "Name[uk]": "Надсилання візитівок", 
-        "Name[x-test]": "xxSend vCardsxx",
-        "Description": "This plugin allows you to send VCard from selected contacts.", 	
+        "Name[x-test]": "xxSend vCardsxx", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 

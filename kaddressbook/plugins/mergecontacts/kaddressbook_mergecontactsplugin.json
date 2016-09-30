@@ -1,5 +1,6 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to merge contacts.", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookmergecontact", 
         "Name": "Merge Contacts", 
@@ -26,8 +27,7 @@
         "Name[sv]": "Sammanfoga kontakter", 
         "Name[uk]": "Об’єднання записів контактів", 
         "Name[x-test]": "xxMerge Contactsxx", 
-        "Name[zh_CN]": "合并联系人",
-        "Description": "This plugin allows you to merge contacts.", 	
+        "Name[zh_CN]": "合并联系人", 
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ], 
