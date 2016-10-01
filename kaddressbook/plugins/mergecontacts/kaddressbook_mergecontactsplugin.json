@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to merge contacts.", 
+        "Description[nl]": "Deze plug-in stelt u in staat contactpersonen te mengen.", 
+        "Description[pl]": "Ta wtyczka umożliwia scalenie kontaktów.", 
+        "Description[pt]": "Este 'plugin' permite-lhe reunir os contactos.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att sammanfoga kontakter.", 
+        "Description[uk]": "За допомогою цього додатка можна об’єднувати записи контактів.", 
+        "Description[x-test]": "xxThis plugin allows you to merge contacts.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookmergecontact", 
         "Name": "Merge Contacts", 

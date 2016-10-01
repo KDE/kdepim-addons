@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check gravatar.", 
+        "Description[nl]": "Deze plug-in stelt u in staat gravatar te controleren.", 
+        "Description[pl]": "Ta wtyczka umożliwia sprawdzenie gravataru.", 
+        "Description[pt]": "Este 'plugin' permite-lhe verificar o 'gravatar'.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt kontrollera Gravatar.", 
+        "Description[uk]": "За допомогою цього додатка можна визначати gravatar.", 
+        "Description[x-test]": "xxThis plugin allows you to check gravatar.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookcheckgravatar", 
         "Name": "Check Gravatar", 
