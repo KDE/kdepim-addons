@@ -99,6 +99,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     mRemoveScript->setObjectName(QStringLiteral("removescript"));
     buttonLayout->addWidget(mRemoveScript);
     buttonLayout->addStretch(1);
+    updateButtons();
 }
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
