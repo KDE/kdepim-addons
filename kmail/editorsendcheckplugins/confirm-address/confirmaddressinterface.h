@@ -38,7 +38,6 @@ public Q_SLOTS:
 
 private:
     void slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity);
-    bool mEnabled;
 
     struct ConfirmAddressSettings {
         QStringList mDomains;

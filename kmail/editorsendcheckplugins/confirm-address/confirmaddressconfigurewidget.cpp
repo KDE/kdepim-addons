@@ -32,11 +32,6 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     QVBoxLayout *vboxlayout = new QVBoxLayout(this);
     vboxlayout->setMargin(0);
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
-    mEnable = new QCheckBox(i18n("Enable"), this);
-    mEnable->setObjectName(QStringLiteral("enable"));
-    vboxlayout->addWidget(mEnable);
-    connect(mEnable, &QCheckBox::clicked, this, &ConfirmAddressConfigureWidget::slotEnableChanged);
-
     mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(this);
     mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));
     connect(mConfirmAddressConfigureTab, &ConfirmAddressConfigureTab::configureChanged, this, &ConfirmAddressConfigureWidget::configureChanged);
@@ -51,7 +46,6 @@ ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 void ConfirmAddressConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
-    mEnable->setChecked(grp.readEntry("Enabled", false));
     mConfirmAddressConfigureTab->loadSettings(grp);
 }
 
@@ -64,7 +58,6 @@ void ConfirmAddressConfigureWidget::saveSettings()
         config->deleteGroup(group);
     }
     KConfigGroup grp(config, "Confirm Address");
-    grp.writeEntry("Enabled", mEnable->isChecked());
     mConfirmAddressConfigureTab->saveSettings(grp);
 }
 

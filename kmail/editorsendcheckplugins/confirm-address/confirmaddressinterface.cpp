@@ -31,8 +31,7 @@
 #include <MessageComposer/AliasesExpandJob>
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
-      mEnabled(false)
+    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
 {
 }
 
@@ -43,47 +42,43 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    if (mEnabled) {
-        const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
-        if (lst.isEmpty()) {
-            return true;
-        }
-        // not configurated => validate it.
-        const ConfirmAddressSettings settings = mHashSettings.value(params.identity());
-        if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
-            return true;
-        }
-        const QString str = lst.join(QStringLiteral(", "));
-        const QStringList emails = str.split(QStringLiteral(", "));
+    const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+    if (lst.isEmpty()) {
+        return true;
+    }
+    // not configurated => validate it.
+    const ConfirmAddressSettings settings = mHashSettings.value(params.identity());
+    if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
+        return true;
+    }
+    const QString str = lst.join(QStringLiteral(", "));
+    const QStringList emails = str.split(QStringLiteral(", "));
 #if 0
-        MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
-        if (job.exec()) {
-            emails = job.emailAddressOnly();
-        }
+    MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
+    if (job.exec()) {
+        emails = job.emailAddressOnly();
+    }
 #endif
-        ConfirmAddressCheckJob job;
-        job.setCheckSettings(settings.mDomains, settings.mWhiteLists);
-        job.setAddressList(emails);
-        job.start();
+    ConfirmAddressCheckJob job;
+    job.setCheckSettings(settings.mDomains, settings.mWhiteLists);
+    job.setAddressList(emails);
+    job.start();
 
-        const QStringList invalidEmails = job.invalidEmails();
-        const QStringList validEmails = job.validEmails();
+    const QStringList invalidEmails = job.invalidEmails();
+    const QStringList validEmails = job.validEmails();
 
-        if (!invalidEmails.isEmpty()) {
-            QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
-            connect(dlg.data(), &ConfirmAddressDialog::addWhileListEmails, this, &ConfirmAddressInterface::slotAddWhiteListEmails);
-            dlg->setCurrentIdentity(params.identity());
-            dlg->setValidAddresses(validEmails);
-            dlg->setInvalidAddresses(invalidEmails);
-            if (dlg->exec()) {
-                delete dlg;
-                return true;
-            } else {
-                delete dlg;
-                return false;
-            }
-        } else {
+    if (!invalidEmails.isEmpty()) {
+        QPointer<ConfirmAddressDialog> dlg = new ConfirmAddressDialog(parentWidget());
+        connect(dlg.data(), &ConfirmAddressDialog::addWhileListEmails, this, &ConfirmAddressInterface::slotAddWhiteListEmails);
+        dlg->setCurrentIdentity(params.identity());
+        dlg->setValidAddresses(validEmails);
+        dlg->setInvalidAddresses(invalidEmails);
+        if (dlg->exec()) {
+            delete dlg;
             return true;
+        } else {
+            delete dlg;
+            return false;
         }
     } else {
         return true;
@@ -108,7 +103,6 @@ void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uin
 void ConfirmAddressInterface::reloadConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
-    mEnabled = grp.readEntry("Enabled", false);
     mHashSettings.clear();
 
     KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
