@@ -20,12 +20,15 @@
 #include "viewerpluginexternalconfiguredialog.h"
 #include "viewerpluginexternalconfigurewidget.h"
 #include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QPushButton>
 
 ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
     setWindowTitle(i18n("Configure \"External Script\" Plugin"));
     initLayout();
+    buttonBox()->button(QDialogButtonBox::RestoreDefaults)->hide();
 }
 
 ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog()
