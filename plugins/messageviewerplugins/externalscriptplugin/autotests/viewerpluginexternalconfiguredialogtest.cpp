@@ -19,6 +19,8 @@
 
 #include "viewerpluginexternalconfiguredialogtest.h"
 #include "../configuredialog/viewerpluginexternalconfiguredialog.h"
+#include <QDialogButtonBox>
+#include <QPushButton>
 #include <QTest>
 
 ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest(QObject *parent)
@@ -34,7 +36,11 @@ ViewerPluginExternalConfigureDialogTest::~ViewerPluginExternalConfigureDialogTes
 
 void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()
 {
-
+    ViewerPluginExternalConfigureDialog dlg;
+    QVERIFY(!dlg.windowTitle().isEmpty());
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
+    QVERIFY(buttonBox->button(QDialogButtonBox::RestoreDefaults)->isHidden());
 }
 
 QTEST_MAIN(ViewerPluginExternalConfigureDialogTest)

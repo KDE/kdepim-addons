@@ -23,6 +23,7 @@
 #include "../configuredialog/viewerpluginexternaleditwidget.h"
 
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QTest>
 
 ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
