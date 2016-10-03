@@ -64,15 +64,16 @@ ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() cons
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("layout"));
     mainLayout->setMargin(0);
 
-    QVBoxLayout *listLayout = new QVBoxLayout;
-    mainLayout->addLayout(listLayout);
     QLabel *lab = new QLabel(i18n("External Script:"), this);
     lab->setObjectName(QStringLiteral("lab"));
-    listLayout->addWidget(lab);
+    mainLayout->addWidget(lab);
+
+    QHBoxLayout *listLayout = new QHBoxLayout;
+    mainLayout->addLayout(listLayout);
 
     mListExternal = new QListWidget(this);
     mListExternal->setObjectName(QStringLiteral("listexternal"));
@@ -82,7 +83,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     connect(mListExternal, &QListWidget::itemDoubleClicked, this, &ViewerPluginExternalConfigureWidget::slotDoubleClicked);
 
     QVBoxLayout *buttonLayout = new QVBoxLayout;
-    mainLayout->addLayout(buttonLayout);
+    listLayout->addLayout(buttonLayout);
 
     mAddScript = new QPushButton(i18n("Add Script..."), this);
     connect(mAddScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotAddScript);
