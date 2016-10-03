@@ -34,7 +34,7 @@
 #include "briefheaderstyle.h"
 #include "messageviewer/headerstyle.h"
 #include "messageviewer/headerstyle_util.h"
-
+#include "messageviewer/messageviewersettings.h"
 #include "messageviewer/headerstrategy.h"
 
 #include <MessageCore/StringUtil>
@@ -78,10 +78,15 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     QString headerStr = QLatin1String("<div class=\"header\" dir=\"") + dir + QLatin1String("\">\n");
 
     if (strategy->showHeader(QStringLiteral("subject"))) {
+        KTextToHTML::Options flags = KTextToHTML::PreserveSpaces;
+        if (MessageViewer::MessageViewerSettings::self()->showEmoticons()) {
+            flags |= KTextToHTML::ReplaceSmileys;
+        }
+
         headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n") +
                      QLatin1String("<b style=\"font-size:130%\">");
 
-        headerStr += mHeaderStyleUtil.subjectString(message) + QLatin1String("</b></div>\n");
+        headerStr += mHeaderStyleUtil.subjectString(message, flags) + QLatin1String("</b></div>\n");
     }
     QStringList headerParts;
 

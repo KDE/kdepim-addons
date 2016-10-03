@@ -19,6 +19,7 @@
 
 #include "enterpriseheaderstyle.h"
 #include "messageviewer/headerstyle_util.h"
+#include "messageviewer/messageviewersettings.h"
 
 #include "messageviewer/headerstrategy.h"
 
@@ -99,11 +100,16 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
+        KTextToHTML::Options flags = KTextToHTML::PreserveSpaces;
+        if (MessageViewer::MessageViewerSettings::self()->showEmoticons()) {
+            flags |= KTextToHTML::ReplaceSmileys;
+        }
+
         headerStr +=
             QLatin1String("     <tr> \n"
                           "      <td style=\"font-size: 0.5em; text-align: right; padding-left: 5px; padding-right: 24px; ") + borderSettings + QLatin1String("\"></td> \n"
                                   "      <td style=\"font-weight: bolder; font-size: 120%; padding-right: 91px; ") + borderSettings + QLatin1String("\">");
-        headerStr += mHeaderStyleUtil.subjectString(message) + QLatin1String("</td> \n"
+        headerStr += mHeaderStyleUtil.subjectString(message, flags) + QLatin1String("</td> \n"
                      "     </tr> \n");
     }
 
