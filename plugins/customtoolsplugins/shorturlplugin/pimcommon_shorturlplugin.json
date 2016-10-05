@@ -12,7 +12,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att expandera webbadresser.", 
         "Description[uk]": "За допомогою цього додатка можна розгортати скорочені адреси.", 
         "Description[x-test]": "xxThis plugin allows you to expand URL.xx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Id": "customtoolsshorturl", 
         "Name": "Shorturl", 
         "Name[ca@valencia]": "URL curt", 
