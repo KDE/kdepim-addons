@@ -13,7 +13,7 @@
         "Description[sv]": "ROT13 (rotera 13 steg) är ett enkelt bokstavsersättningskrypto som ersätter en bokstav med den bokstav som är 13 bokstäver senare i alfabetet", 
         "Description[uk]": "ROT13 (обертання на 13 позицій) — просте шифрування заміною літер із циклічним зсувом на 13 позицій за абеткою", 
         "Description[x-test]": "xxROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabetxx", 
-        "EnabledByDefault": "true", 
+        "EnabledByDefault": "false", 
         "Id": "rot13", 
         "Name": "ROT13", 
         "Name[sr@ijekavian]": "Рот‑13", 
