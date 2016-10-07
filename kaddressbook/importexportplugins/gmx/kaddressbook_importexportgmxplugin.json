@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to import export gmx.", 
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookimportexportgmx", 
+        "Name": "Import Export Gmx", 
+        "ServiceTypes": [
+            "KAddressBook/ImportExportPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}

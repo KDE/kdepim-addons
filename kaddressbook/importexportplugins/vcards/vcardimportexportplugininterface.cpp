@@ -36,9 +36,33 @@ VCardImportExportPluginInterface::~VCardImportExportPluginInterface()
 
 void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = ac->addAction(QStringLiteral("import_action_vcard"));
-    action->setText(i18n("Merge Contacts..."));
-    //TODO
+    QAction *action = ac->addAction(QStringLiteral("file_import_vcard"));
+    action->setText(i18n("Import vCard..."));
+    action->setWhatsThis(i18n("Import contacts from a vCard file."));
+    setImportActions(QList<QAction *>() << action);
+
+    QList<QAction *> exportActionList;
+
+    action = ac->addAction(QStringLiteral("file_import_vcard"));
+    action->setText(i18n("Import vCard..."));
+    action->setWhatsThis(i18n("Import contacts from a vCard file."));
+    exportActionList << action;
+
+    action = ac->addAction(QStringLiteral("file_export_vcard40"));
+    action->setWhatsThis(i18n("Export contacts to a vCard 4.0 file."));
+    action->setText(i18n("Export vCard 4.0..."));
+    exportActionList << action;
+
+    action = ac->addAction(QStringLiteral("file_export_vcard30"));
+    action->setText(i18n("Export vCard 3.0..."));
+    action->setWhatsThis(i18n("Export contacts to a vCard 3.0 file."));
+    exportActionList << action;
+
+    action = ac->addAction(QStringLiteral("file_export_vcard21"));
+    action->setText(i18n("Export vCard 2.1..."));
+    action->setWhatsThis(i18n("Export contacts to a vCard 2.1 file."));
+    exportActionList << action;
+    setExportActions(exportActionList);
 }
 
 void VCardImportExportPluginInterface::exec()

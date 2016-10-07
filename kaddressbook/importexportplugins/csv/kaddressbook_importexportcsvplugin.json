@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to import export csv.", 
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookimportexportcsv", 
+        "Name": "Import Export CSV", 
+        "ServiceTypes": [
+            "KAddressBook/ImportExportPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}

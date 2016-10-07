@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to import export ldif.", 
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookimportexportldif", 
+        "Name": "Import Export Ldif", 
+        "ServiceTypes": [
+            "KAddressBook/ImportExportPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
