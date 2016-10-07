@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to import export vcards.", 
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookimportexportvcard", 
+        "Name": "Import Export VCard", 
+        "ServiceTypes": [
+            "KAddressBook/ImportExportPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}
