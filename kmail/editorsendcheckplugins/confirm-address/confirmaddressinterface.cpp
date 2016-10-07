@@ -60,7 +60,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     }
 #endif
     ConfirmAddressCheckJob job;
-    job.setCheckSettings(settings.mDomains, settings.mWhiteLists);
+    job.setCheckSettings(settings.mDomains, settings.mWhiteLists, settings.mRejectedDomain);
     job.setAddressList(emails);
     job.start();
 
@@ -113,6 +113,8 @@ void ConfirmAddressInterface::reloadConfig()
         ConfirmAddressSettings settings;
         settings.mDomains = identityGroup.readEntry("Domains", QStringList());
         settings.mWhiteLists = identityGroup.readEntry("Emails", QStringList());
+        settings.mRejectedDomain = identityGroup.readEntry("RejectDomain", false);
+
         mHashSettings.insert(identity, settings);
     }
 }

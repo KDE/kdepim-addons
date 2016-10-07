@@ -31,7 +31,7 @@ public:
 
     void start();
 
-    void setCheckSettings(const QStringList &domains, const QStringList &whiteEmails);
+    void setCheckSettings(const QStringList &domains, const QStringList &whiteEmails, bool rejectedDomain);
 
     void setAddressList(const QStringList &addressList);
 
@@ -45,6 +45,7 @@ private:
     QStringList mInvalidEmails;
     QStringList mDomains;
     QStringList mWhiteEmails;
+    bool mRejectedDomain;
 };
 
 #endif // CONFIRMADDRESSCHECKJOB_H

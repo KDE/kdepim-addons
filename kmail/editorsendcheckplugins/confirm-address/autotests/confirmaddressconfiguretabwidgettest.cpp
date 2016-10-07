@@ -22,6 +22,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QGroupBox>
+#include <QRadioButton>
 #include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
@@ -42,6 +43,15 @@ void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
     QVERIFY(groupBoxDomainName);
     QVBoxLayout *layoutDomainName = w.findChild<QVBoxLayout *>(QStringLiteral("layoutdomainname"));
     QVERIFY(layoutDomainName);
+
+    QRadioButton *mAcceptedDomain = w.findChild<QRadioButton *>(QStringLiteral("acceptdomainname"));
+    QVERIFY(mAcceptedDomain);
+    QVERIFY(!mAcceptedDomain->text().isEmpty());
+
+    QRadioButton *mRejectedDomain = w.findChild<QRadioButton *>(QStringLiteral("rejectdomainname"));
+    QVERIFY(mRejectedDomain);
+    QVERIFY(!mRejectedDomain->text().isEmpty());
+
     PimCommon::SimpleStringListEditor *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
     QVERIFY(mDomainNameListEditor);
 

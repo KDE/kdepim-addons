@@ -26,6 +26,7 @@ namespace PimCommon
 class SimpleStringListEditor;
 }
 class KConfigGroup;
+class QRadioButton;
 class ConfirmAddressConfigureTabWidget : public QWidget
 {
     Q_OBJECT
@@ -46,6 +47,8 @@ private:
     uint mIdentity;
     PimCommon::SimpleStringListEditor *mDomainNameListEditor;
     PimCommon::SimpleStringListEditor *mWhiteListEditor;
+    QRadioButton *mAcceptedDomain;
+    QRadioButton *mRejectedDomain;
 };
 
 #endif // CONFIRMADDRESSCONFIGURETABWIDGET_H

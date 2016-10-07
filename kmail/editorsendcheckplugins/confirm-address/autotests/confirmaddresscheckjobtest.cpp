@@ -45,7 +45,12 @@ void ConfirmAddressCheckJobTest::shouldReturnEmptyResultWhenNoAddress()
     ConfirmAddressCheckJob job;
     const QStringList domains{QStringLiteral("foo.com"), QStringLiteral("bla.com")};
     const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
-    job.setCheckSettings(domains, whiteList);
+    job.setCheckSettings(domains, whiteList, false);
+    job.start();
+    QVERIFY(job.invalidEmails().isEmpty());
+    QVERIFY(job.validEmails().isEmpty());
+
+    job.setCheckSettings(domains, whiteList, true);
     job.start();
     QVERIFY(job.invalidEmails().isEmpty());
     QVERIFY(job.validEmails().isEmpty());
@@ -57,12 +62,26 @@ void ConfirmAddressCheckJobTest::shouldReturnAllValidEmailsDomain()
     const QStringList domains{QStringLiteral("foo.com"), QStringLiteral("bla.com")};
     const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
     const QStringList emails{QStringLiteral("toto@foo.com"), QStringLiteral("blabla@foo.com")};
-    job.setCheckSettings(domains, whiteList);
+    job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(emails);
     job.start();
     QVERIFY(job.invalidEmails().isEmpty());
     QVERIFY(!job.validEmails().isEmpty());
     QCOMPARE(job.validEmails(), emails);
+}
+
+void ConfirmAddressCheckJobTest::shouldReturnAllValidEmailsDomainRejectedDomain()
+{
+    ConfirmAddressCheckJob job;
+    const QStringList domains{QStringLiteral("foo.com"), QStringLiteral("bla.com")};
+    const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    const QStringList emails{QStringLiteral("toto@foo.com"), QStringLiteral("blabla@foo.com")};
+    job.setCheckSettings(domains, whiteList, true);
+    job.setAddressList(emails);
+    job.start();
+    QVERIFY(!job.invalidEmails().isEmpty());
+    QCOMPARE(job.invalidEmails(), emails);
+    QVERIFY(job.validEmails().isEmpty());
 }
 
 void ConfirmAddressCheckJobTest::shouldReturnAllInValidEmailsDomain()
@@ -71,12 +90,26 @@ void ConfirmAddressCheckJobTest::shouldReturnAllInValidEmailsDomain()
     const QStringList domains{QStringLiteral("foo.fr"), QStringLiteral("bla.com")};
     const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
     const QStringList emails{QStringLiteral("toto@foo.com"), QStringLiteral("blabla@foo.com")};
-    job.setCheckSettings(domains, whiteList);
+    job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(emails);
     job.start();
     QVERIFY(!job.invalidEmails().isEmpty());
     QVERIFY(job.validEmails().isEmpty());
     QCOMPARE(job.invalidEmails(), emails);
+}
+
+void ConfirmAddressCheckJobTest::shouldReturnAllInValidEmailsDomainReject()
+{
+    ConfirmAddressCheckJob job;
+    const QStringList domains{QStringLiteral("foo.fr"), QStringLiteral("bla.com")};
+    const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    const QStringList emails{QStringLiteral("toto@foo.com"), QStringLiteral("blabla@foo.com")};
+    job.setCheckSettings(domains, whiteList, true);
+    job.setAddressList(emails);
+    job.start();
+    QVERIFY(job.invalidEmails().isEmpty());
+    QVERIFY(!job.validEmails().isEmpty());
+    QCOMPARE(job.validEmails(), emails);
 }
 
 void ConfirmAddressCheckJobTest::shouldReturnValidAndInvalid()
@@ -85,7 +118,7 @@ void ConfirmAddressCheckJobTest::shouldReturnValidAndInvalid()
     const QStringList domains{QStringLiteral("foo.fr"), QStringLiteral("bla.com")};
     const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
     const QStringList emails{QStringLiteral("toto@bla.com"), QStringLiteral("blabla@foo.com")};
-    job.setCheckSettings(domains, whiteList);
+    job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(emails);
     job.start();
     QVERIFY(!job.invalidEmails().isEmpty());
@@ -100,13 +133,20 @@ void ConfirmAddressCheckJobTest::shouldNotDuplicateValue()
     const QStringList domains{QStringLiteral("foo.com"), QStringLiteral("bla.com")};
     const QStringList whiteList{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
     const QStringList emails{QStringLiteral("toto@foo.com"), QStringLiteral("blabla@foo.com")};
-    job.setCheckSettings(domains, whiteList);
+    job.setCheckSettings(domains, whiteList, false);
     job.setAddressList(QStringList() << emails << emails);
     job.start();
     QVERIFY(job.invalidEmails().isEmpty());
     QVERIFY(!job.validEmails().isEmpty());
     QCOMPARE(job.validEmails(), emails);
 
+
+    job.setCheckSettings(domains, whiteList, true);
+    job.setAddressList(QStringList() << emails << emails);
+    job.start();
+    QVERIFY(!job.invalidEmails().isEmpty());
+    QVERIFY(job.validEmails().isEmpty());
+    QCOMPARE(job.invalidEmails(), emails);
 }
 
 QTEST_MAIN(ConfirmAddressCheckJobTest)

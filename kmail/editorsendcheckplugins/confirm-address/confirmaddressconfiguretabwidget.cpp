@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QGroupBox>
 #include <QVBoxLayout>
+#include <QRadioButton>
 #include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
@@ -32,11 +33,26 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
 
-    QGroupBox *groupBoxDomainName = new QGroupBox(i18n("Accepted Domain Name"), this);
+    QGroupBox *groupBoxDomainName = new QGroupBox(this);
     groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
     mainLayout->addWidget(groupBoxDomainName);
     QVBoxLayout *layoutDomainName = new QVBoxLayout(groupBoxDomainName);
     layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
+
+
+    QHBoxLayout *radioButtonLayout = new QHBoxLayout;
+    layoutDomainName->addLayout(radioButtonLayout);
+    radioButtonLayout->setAlignment(Qt::AlignHCenter);
+
+    mAcceptedDomain = new QRadioButton(i18n("Accepted Domain Name"), this);
+    mAcceptedDomain->setObjectName(QStringLiteral("acceptdomainname"));
+    radioButtonLayout->addWidget(mAcceptedDomain);
+    mAcceptedDomain->setChecked(true);
+
+    mRejectedDomain = new QRadioButton(i18n("Rejected Domain Name"), this);
+    mRejectedDomain->setObjectName(QStringLiteral("rejectdomainname"));
+    radioButtonLayout->addWidget(mRejectedDomain);
+
 
     PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
         static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
@@ -85,6 +101,12 @@ void ConfirmAddressConfigureTabWidget::loadSettings(const KConfigGroup &grp)
     KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
     mDomainNameListEditor->setStringList(identityGroup.readEntry("Domains", QStringList()));
     mWhiteListEditor->setStringList(identityGroup.readEntry("Emails", QStringList()));
+    const bool rejectedDomain = identityGroup.readEntry("RejectDomain", false);
+    if (rejectedDomain) {
+        mRejectedDomain->setChecked(true);
+    } else {
+        mAcceptedDomain->setChecked(true);
+    }
 }
 
 void ConfirmAddressConfigureTabWidget::saveSettings(KConfigGroup &grp)
@@ -92,6 +114,7 @@ void ConfirmAddressConfigureTabWidget::saveSettings(KConfigGroup &grp)
     KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(mIdentity));
     identityGroup.writeEntry("Domains", mDomainNameListEditor->stringList());
     identityGroup.writeEntry("Emails", mWhiteListEditor->stringList());
+    identityGroup.writeEntry("RejectDomain", mRejectedDomain->isChecked());
 }
 
 void ConfirmAddressConfigureTabWidget::setIdentity(const uint &identity)

@@ -20,6 +20,7 @@
 #include "confirmaddresscheckjob.h"
 
 ConfirmAddressCheckJob::ConfirmAddressCheckJob()
+    : mRejectedDomain(false)
 {
 
 }
@@ -39,16 +40,7 @@ void ConfirmAddressCheckJob::start()
             continue;
         }
         foundValidEmail = false;
-        Q_FOREACH (const QString &domain, mDomains) {
-            if (email.contains(domain)) {
-                if (!mValidEmails.contains(email)) {
-                    mValidEmails.append(email);
-                }
-                foundValidEmail = true;
-                break;
-            }
-        }
-        if (!foundValidEmail) {
+        if (mRejectedDomain) {
             Q_FOREACH (const QString &whiteEmail, mWhiteEmails) {
                 if (email.contains(whiteEmail)) {
                     if (!mValidEmails.contains(email)) {
@@ -58,19 +50,58 @@ void ConfirmAddressCheckJob::start()
                     break;
                 }
             }
-        }
-        if (!foundValidEmail) {
-            if (!mInvalidEmails.contains(email)) {
-                mInvalidEmails.append(email);
+            if (!foundValidEmail) {
+                bool foundRejectedDomain = false;
+                Q_FOREACH (const QString &domain, mDomains) {
+                    if (email.contains(domain)) {
+                        if (!mInvalidEmails.contains(email)) {
+                            mInvalidEmails.append(email);
+                        }
+                        foundRejectedDomain = true;
+                        break;
+                    }
+                }
+                if (!foundRejectedDomain) {
+                    if (!mValidEmails.contains(email)) {
+                        mValidEmails.append(email);
+                    }
+                }
+            }
+        } else {
+            Q_FOREACH (const QString &domain, mDomains) {
+                if (email.contains(domain)) {
+                    if (!mValidEmails.contains(email)) {
+                        mValidEmails.append(email);
+                    }
+                    foundValidEmail = true;
+                    break;
+                }
+            }
+            if (!foundValidEmail) {
+                Q_FOREACH (const QString &whiteEmail, mWhiteEmails) {
+                    if (email.contains(whiteEmail)) {
+                        if (!mValidEmails.contains(email)) {
+                            mValidEmails.append(email);
+                        }
+                        foundValidEmail = true;
+                        break;
+                    }
+                }
+            }
+            if (!foundValidEmail) {
+                if (!mInvalidEmails.contains(email)) {
+                    mInvalidEmails.append(email);
+                }
             }
         }
     }
 }
 
-void ConfirmAddressCheckJob::setCheckSettings(const QStringList &domains, const QStringList &whiteEmails)
+void ConfirmAddressCheckJob::setCheckSettings(const QStringList &domains, const QStringList &whiteEmails, bool rejectedDomain)
 {
     mDomains = domains;
     mWhiteEmails = whiteEmails;
+    mRejectedDomain = rejectedDomain;
 }
 
 void ConfirmAddressCheckJob::setAddressList(const QStringList &addressList)

@@ -35,6 +35,8 @@ private Q_SLOTS:
     void shouldReturnAllInValidEmailsDomain();
     void shouldReturnValidAndInvalid();
     void shouldNotDuplicateValue();
+    void shouldReturnAllValidEmailsDomainRejectedDomain();
+    void shouldReturnAllInValidEmailsDomainReject();
 };
 
 #endif // CONFIRMADDRESSCHECKJOBTEST_H

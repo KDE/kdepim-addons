@@ -40,8 +40,15 @@ private:
     void slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity);
 
     struct ConfirmAddressSettings {
+        ConfirmAddressSettings()
+            : mRejectedDomain(false)
+        {
+
+        }
+
         QStringList mDomains;
         QStringList mWhiteLists;
+        bool mRejectedDomain;
     };
 
     QHash<uint, ConfirmAddressSettings> mHashSettings;
