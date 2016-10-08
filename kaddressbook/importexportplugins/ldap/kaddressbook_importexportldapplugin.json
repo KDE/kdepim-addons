@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to import export ldap contact.", 
+        "EnabledByDefault": "true", 
+        "Id": "kaddressbookimportexportldap", 
+        "Name": "Import Export Ldap Contact", 
+        "ServiceTypes": [
+            "KAddressBook/ImportExportPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}

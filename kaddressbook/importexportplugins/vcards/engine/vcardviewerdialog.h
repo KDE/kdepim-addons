@@ -32,7 +32,7 @@ class VCardViewerDialog : public QDialog
     Q_OBJECT
 public:
     VCardViewerDialog(const KContacts::Addressee::List &list,
-                      QWidget *parent);
+                      QWidget *parent = Q_NULLPTR);
     ~VCardViewerDialog();
 
     KContacts::Addressee::List contacts() const;
