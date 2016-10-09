@@ -1,9 +1,19 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import export vcards.", 
+        "Description[ca]": "Aquest connector permet importar o exportar les vCard.", 
+        "Description[nl]": "Deze plug-in stelt u in staat vcards te importeren exporteren.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera vCard.", 
+        "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі візитівок.", 
+        "Description[x-test]": "xxThis plugin allows you to import export vcards.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportvcard", 
         "Name": "Import Export VCard", 
+        "Name[ca]": "Importa / exporta la VCard", 
+        "Name[nl]": "Importeren exporteren VCard", 
+        "Name[sv]": "Importera och exportera vCard", 
+        "Name[uk]": "Імпортування та експортування VCard", 
+        "Name[x-test]": "xxImport Export VCardxx", 
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"
         ], 
