@@ -36,35 +36,15 @@ CSVImportExportPluginInterface::~CSVImportExportPluginInterface()
 
 void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-#if 0
-    QAction *action = ac->addAction(QStringLiteral("file_import_csv"));
-    action->setText(i18n("Import CSV..."));
-    action->setWhatsThis(i18n("Import contacts from a CSV file."));
-    setImportActions(QList<QAction *>() << action);
-
-    QList<QAction *> exportActionList;
+    QAction *action = ac->addAction(QStringLiteral("file_export_csv"));
+    action->setText(i18n("Export CSV file..."));
+    action->setWhatsThis(i18n("Export contacts to a file in comma separated value format."));
+    setExportActions(QList<QAction *>() << action);
 
     action = ac->addAction(QStringLiteral("file_import_csv"));
-    action->setText(i18n("Import CSV..."));
-    action->setWhatsThis(i18n("Import contacts from a CSV file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_csv40"));
-    action->setWhatsThis(i18n("Export contacts to a CSV 4.0 file."));
-    action->setText(i18n("Export CSV 4.0..."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_csv30"));
-    action->setText(i18n("Export CSV 3.0..."));
-    action->setWhatsThis(i18n("Export contacts to a CSV 3.0 file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_csv21"));
-    action->setText(i18n("Export CSV 2.1..."));
-    action->setWhatsThis(i18n("Export contacts to a CSV 2.1 file."));
-    exportActionList << action;
-    setExportActions(exportActionList);
-#endif
+    action->setText(i18n("Import CSV file..."));
+    action->setWhatsThis(i18n("Import contacts from a file in comma separated value format."));
+    setImportActions(QList<QAction *>() << action);
 }
 
 void CSVImportExportPluginInterface::exec()

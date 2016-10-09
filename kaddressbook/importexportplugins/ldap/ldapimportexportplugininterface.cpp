@@ -36,37 +36,13 @@ LDapImportExportPluginInterface::~LDapImportExportPluginInterface()
 
 void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-#if 0
     QAction *action = ac->addAction(QStringLiteral("file_import_ldap"));
-    action->setText(i18n("Import LDap..."));
-    action->setWhatsThis(i18n("Import contacts from a LDap file."));
+    action->setText(i18n("Import From LDAP server..."));
+    action->setWhatsThis(i18n("Import contacts from an LDAP server."));
     setImportActions(QList<QAction *>() << action);
-
-    QList<QAction *> exportActionList;
-
-    action = ac->addAction(QStringLiteral("file_import_ldap"));
-    action->setText(i18n("Import LDap..."));
-    action->setWhatsThis(i18n("Import contacts from a LDap file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldap40"));
-    action->setWhatsThis(i18n("Export contacts to a LDap 4.0 file."));
-    action->setText(i18n("Export LDap 4.0..."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldap30"));
-    action->setText(i18n("Export LDap 3.0..."));
-    action->setWhatsThis(i18n("Export contacts to a LDap 3.0 file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldap21"));
-    action->setText(i18n("Export LDap 2.1..."));
-    action->setWhatsThis(i18n("Export contacts to a LDap 2.1 file."));
-    exportActionList << action;
-    setExportActions(exportActionList);
-#endif
 }
 
 void LDapImportExportPluginInterface::exec()
 {
+    //TODO
 }

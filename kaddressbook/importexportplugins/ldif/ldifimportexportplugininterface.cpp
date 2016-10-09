@@ -36,35 +36,15 @@ LDifImportExportPluginInterface::~LDifImportExportPluginInterface()
 
 void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-#if 0
     QAction *action = ac->addAction(QStringLiteral("file_import_ldif"));
-    action->setText(i18n("Import LDif..."));
-    action->setWhatsThis(i18n("Import contacts from a LDif file."));
+    action->setText(i18n("Import LDIF file..."));
+    action->setWhatsThis(i18n("Import contacts from an LDIF file."));
     setImportActions(QList<QAction *>() << action);
 
-    QList<QAction *> exportActionList;
-
-    action = ac->addAction(QStringLiteral("file_import_ldif"));
-    action->setText(i18n("Import LDif..."));
-    action->setWhatsThis(i18n("Import contacts from a LDif file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldif40"));
-    action->setWhatsThis(i18n("Export contacts to a LDif 4.0 file."));
-    action->setText(i18n("Export LDif 4.0..."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldif30"));
-    action->setText(i18n("Export LDif 3.0..."));
-    action->setWhatsThis(i18n("Export contacts to a LDif 3.0 file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_ldif21"));
-    action->setText(i18n("Export LDif 2.1..."));
-    action->setWhatsThis(i18n("Export contacts to a LDif 2.1 file."));
-    exportActionList << action;
-    setExportActions(exportActionList);
-#endif
+    action = ac->addAction(QStringLiteral("file_export_ldif"));
+    action->setText(i18n("Export LDIF file..."));
+    action->setWhatsThis(i18n("Export contacts to an LDIF file."));
+    setExportActions(QList<QAction *>() << action);
 }
 
 void LDifImportExportPluginInterface::exec()
