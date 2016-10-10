@@ -1,4 +1,3 @@
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}/../)
 set(kaddressbookimportexportprivatelib_SRCS
     importexportengine.cpp
 )

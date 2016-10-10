@@ -80,7 +80,7 @@ void LDapImportExportPluginInterface::importLdap()
         mEngine = new ImportExportEngine(this);
     }
     mEngine->setContactList(contactList);
-    //TODO mEngine->setDefaultAddressBook();
+    mEngine->setDefaultAddressBook(defaultCollection());
     connect(mEngine, &ImportExportEngine::finished, this, &LDapImportExportPluginInterface::slotFinished);
     mEngine->importContacts();
 }
