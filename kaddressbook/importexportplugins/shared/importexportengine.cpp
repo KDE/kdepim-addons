@@ -69,6 +69,7 @@ void ImportExportEngine::setDefaultAddressBook(const Akonadi::Collection &defaul
 void ImportExportEngine::importContacts()
 {
     if (mContactsList.isEmpty()) {   // nothing to import
+        Q_EMIT finished();
         return;
     }
 
@@ -119,6 +120,7 @@ void ImportExportEngine::importContacts()
         Akonadi::Job *createJob = new Akonadi::ItemCreateJob(groupItem, collection);
         connect(createJob, &KJob::result, this, &ImportExportEngine::slotImportJobDone);
     }
+    Q_EMIT finished();
 }
 
 void ImportExportEngine::slotImportJobDone(KJob *)

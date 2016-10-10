@@ -21,9 +21,14 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPointer>
+#include <KAddressBookImportExport/KAddressBookImportExportContactList>
+#include <Libkdepim/LdapSearchDialog>
+#include "../shared/importexportengine.h"
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
+      mEngine(Q_NULLPTR)
 {
 
 }
@@ -47,6 +52,7 @@ void LDapImportExportPluginInterface::exec()
 {
     switch(mImportExportAction) {
     case Import:
+        importLdap();
         break;
     case Export:
         break;
@@ -58,4 +64,29 @@ void LDapImportExportPluginInterface::slotImportLdap()
 {
     mImportExportAction = Import;
     Q_EMIT emitPluginActivated(this);
+}
+
+void LDapImportExportPluginInterface::importLdap()
+{
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    QPointer<KLDAP::LdapSearchDialog> dlg = new KLDAP::LdapSearchDialog(parentWidget());
+
+    if (dlg->exec() && dlg) {
+        contactList.setAddressList(dlg->selectedContacts());
+    }
+
+    delete dlg;
+    if (!mEngine) {
+        mEngine = new ImportExportEngine(this);
+    }
+    mEngine->setContactList(contactList);
+    //TODO mEngine->setDefaultAddressBook();
+    connect(mEngine, &ImportExportEngine::finished, this, &LDapImportExportPluginInterface::slotFinished);
+    mEngine->importContacts();
+}
+
+void LDapImportExportPluginInterface::slotFinished()
+{
+    mEngine->deleteLater();
+    mEngine = Q_NULLPTR;
 }

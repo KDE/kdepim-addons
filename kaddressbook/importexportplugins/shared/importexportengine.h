@@ -21,11 +21,12 @@
 #define IMPORTEXPORTENGINE_H
 
 #include <QObject>
+#include "kaddressbookimportexportlibprivate_export.h"
 #include <KAddressBookImportExport/KAddressBookImportExportContactList>
 #include <AkonadiCore/Collection>
 class QProgressDialog;
 class KJob;
-class ImportExportEngine : public QObject
+class KADDRESSBOOKIMPORTEXPORTLIBPRIVATE_EXPORT ImportExportEngine : public QObject
 {
     Q_OBJECT
 public:
@@ -38,6 +39,10 @@ public:
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
     void setDefaultAddressBook(const Akonadi::Collection &defaultAddressBook);
+
+
+Q_SIGNALS:
+    void finished();
 
 private:
     KAddressBookImportExport::KAddressBookImportExportContactList mContactsList;

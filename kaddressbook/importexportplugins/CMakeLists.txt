@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kaddressbook_importexportplugins\")
 
+INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}/shared)
+
 add_subdirectory(shared)
 
 add_subdirectory(vcards)
