@@ -57,7 +57,6 @@ void LDapImportExportPluginInterface::exec()
     case Export:
         break;
     }
-    //TODO
 }
 
 void LDapImportExportPluginInterface::slotImportLdap()

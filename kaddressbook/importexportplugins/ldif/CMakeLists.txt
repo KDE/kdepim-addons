@@ -12,4 +12,5 @@ target_link_libraries(kaddressbook_importexportldifplugin KF5::KaddressbookImpor
         KF5::I18n
         KF5::XmlGui
         KF5::Contacts
+        kaddressbookimportexportlibprivate
     )

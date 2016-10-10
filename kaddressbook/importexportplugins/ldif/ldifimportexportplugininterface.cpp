@@ -18,12 +18,20 @@
 */
 
 #include "ldifimportexportplugininterface.h"
+#include "../shared/importexportengine.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QFileDialog>
+#include <QFile>
+#include <QTextStream>
+#include <KMessageBox>
+#include <KContacts/LDIFConverter>
+#include <KAddressBookImportExport/KAddressBookImportExportContactList>
 
 LDifImportExportPluginInterface::LDifImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
+      mEngine(Q_NULLPTR)
 {
 
 }
@@ -53,6 +61,7 @@ void LDifImportExportPluginInterface::exec()
 {
     switch(mImportExportAction) {
     case Import:
+        import();
         break;
     case Export:
         break;
@@ -70,4 +79,47 @@ void LDifImportExportPluginInterface::slotExportLdif()
 {
     mImportExportAction = Export;
     Q_EMIT emitPluginActivated(this);
+}
+
+
+void LDifImportExportPluginInterface::import()
+{
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(),  QDir::homePath(), i18n("LDif Files (*.ldif)"));
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly | QIODevice::Text)) {
+        const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
+        KMessageBox::error(parentWidget(), msg);
+        return;
+    }
+
+    QTextStream stream(&file);
+    stream.setCodec("ISO 8859-1");
+
+    const QString wholeFile = stream.readAll();
+    const QDateTime dtDefault = QFileInfo(file).lastModified();
+    file.close();
+    KContacts::ContactGroup::List lstGroup;
+    KContacts::Addressee::List lstAddresses;
+    KContacts::LDIFConverter::LDIFToAddressee(wholeFile, lstAddresses, lstGroup, dtDefault);
+    contactList.setAddressList(lstAddresses);
+    contactList.setContactGroupList(lstGroup);
+
+    if (!mEngine) {
+        mEngine = new ImportExportEngine(this);
+    }
+    mEngine->setContactList(contactList);
+    mEngine->setDefaultAddressBook(defaultCollection());
+    connect(mEngine, &ImportExportEngine::finished, this, &LDifImportExportPluginInterface::slotFinished);
+    mEngine->importContacts();
+}
+
+void LDifImportExportPluginInterface::slotFinished()
+{
+    mEngine->deleteLater();
+    mEngine = Q_NULLPTR;
 }

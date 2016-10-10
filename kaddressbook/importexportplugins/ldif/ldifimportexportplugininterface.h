@@ -21,7 +21,7 @@
 #define LDIFIMPORTEXPORTPLUGININTERFACE_H
 
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
-
+class ImportExportEngine;
 class LDifImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
     Q_OBJECT
@@ -34,6 +34,9 @@ public:
 private:
     void slotImportLdif();
     void slotExportLdif();
+    void import();
+    void slotFinished();
+    ImportExportEngine *mEngine;
 };
 
 #endif // LDIFIMPORTEXPORTPLUGININTERFACE_H
