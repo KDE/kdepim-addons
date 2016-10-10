@@ -35,6 +35,7 @@ private:
     void slotImportLdif();
     void slotExportLdif();
     void import();
+    void exportLdif();
     void slotFinished();
     ImportExportEngine *mEngine;
 };

@@ -15,4 +15,5 @@ target_link_libraries(kaddressbook_importexportvcardplugin KF5::KaddressbookImpo
         KF5::XmlGui
         KF5::Contacts
         KF5::KaddressbookGrantlee
+        kaddressbookimportexportlibprivate
     )
