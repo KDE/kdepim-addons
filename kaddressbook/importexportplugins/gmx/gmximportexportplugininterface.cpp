@@ -36,37 +36,38 @@ GMXImportExportPluginInterface::~GMXImportExportPluginInterface()
 
 void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-#if 0
     QAction *action = ac->addAction(QStringLiteral("file_import_gmx"));
-    action->setText(i18n("Import GMX..."));
-    action->setWhatsThis(i18n("Import contacts from a GMX file."));
+    action->setText(i18n("Import GMX file..."));
+    action->setWhatsThis(i18n("Import contacts from a GMX address book file."));
     setImportActions(QList<QAction *>() << action);
+    connect(action, &QAction::triggered, this, &GMXImportExportPluginInterface::slotImportGmx);
 
-    QList<QAction *> exportActionList;
-
-    action = ac->addAction(QStringLiteral("file_import_gmx"));
-    action->setText(i18n("Import GMX..."));
-    action->setWhatsThis(i18n("Import contacts from a GMX file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_gmx40"));
-    action->setWhatsThis(i18n("Export contacts to a GMX 4.0 file."));
-    action->setText(i18n("Export GMX 4.0..."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_gmx30"));
-    action->setText(i18n("Export GMX 3.0..."));
-    action->setWhatsThis(i18n("Export contacts to a GMX 3.0 file."));
-    exportActionList << action;
-
-    action = ac->addAction(QStringLiteral("file_export_gmx21"));
-    action->setText(i18n("Export GMX 2.1..."));
-    action->setWhatsThis(i18n("Export contacts to a GMX 2.1 file."));
-    exportActionList << action;
-    setExportActions(exportActionList);
-#endif
+    action = ac->addAction(QStringLiteral("file_export_gmx"));
+    action->setText(i18n("Export GMX file..."));
+    action->setWhatsThis(i18n("Export contacts to a GMX address book file."));
+    setExportActions(QList<QAction *>() << action);
+    connect(action, &QAction::triggered, this, &GMXImportExportPluginInterface::slotExportGmx);
 }
 
 void GMXImportExportPluginInterface::exec()
 {
+    switch(mImportExportAction) {
+    case Import:
+        break;
+    case Export:
+        break;
+    }
+    //TODO
+}
+
+void GMXImportExportPluginInterface::slotImportGmx()
+{
+    mImportExportAction = Import;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void GMXImportExportPluginInterface::slotExportGmx()
+{
+    mImportExportAction = Export;
+    Q_EMIT emitPluginActivated(this);
 }

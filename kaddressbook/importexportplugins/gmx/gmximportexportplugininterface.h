@@ -31,6 +31,9 @@ public:
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
+private:
+    void slotImportGmx();
+    void slotExportGmx();
 };
 
 #endif // GMXIMPORTEXPORTPLUGININTERFACE_H
