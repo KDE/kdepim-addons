@@ -8,7 +8,7 @@ generate_export_header(kaddressbookimportexportlibprivate BASE_NAME kaddressbook
 
 target_link_libraries(kaddressbookimportexportlibprivate
 PRIVATE
-    KF5::I18n KF5::Contacts KF5::AkonadiContact KF5::Contacts KF5::KaddressbookImportExport
+    KF5::I18n KF5::Contacts KF5::AkonadiContact KF5::Contacts KF5::AkonadiWidgets KF5::KaddressbookImportExport
 )
 
 set_target_properties(kaddressbookimportexportlibprivate

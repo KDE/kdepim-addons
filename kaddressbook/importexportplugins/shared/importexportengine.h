@@ -22,7 +22,9 @@
 
 #include <QObject>
 #include <KAddressBookImportExport/KAddressBookImportExportContactList>
-
+#include <AkonadiCore/Collection>
+class QProgressDialog;
+class KJob;
 class ImportExportEngine : public QObject
 {
     Q_OBJECT
@@ -33,8 +35,16 @@ public:
 
     void importContacts();
     void exportContacts();
+    void setParentWidget(QWidget *parent);
+    QWidget *parentWidget() const;
+    void setDefaultAddressBook(const Akonadi::Collection &defaultAddressBook);
+
 private:
     KAddressBookImportExport::KAddressBookImportExportContactList mContactsList;
+    Akonadi::Collection mDefaultAddressBook;
+    QWidget *mParentWidget;
+    QProgressDialog *mImportProgressDialog;
+    void slotImportJobDone(KJob *);
 };
 
 #endif // IMPORTEXPORTENGINE_H
