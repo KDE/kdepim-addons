@@ -1,5 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kaddressbook_importexportplugins\")
 
+add_subdirectory(shared)
+
 add_subdirectory(vcards)
 add_subdirectory(csv)
 add_subdirectory(gmx)
