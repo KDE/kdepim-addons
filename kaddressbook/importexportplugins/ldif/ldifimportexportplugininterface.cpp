@@ -39,14 +39,35 @@ void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
     QAction *action = ac->addAction(QStringLiteral("file_import_ldif"));
     action->setText(i18n("Import LDIF file..."));
     action->setWhatsThis(i18n("Import contacts from an LDIF file."));
+    connect(action, &QAction::triggered, this, &LDifImportExportPluginInterface::slotImportLdif);
     setImportActions(QList<QAction *>() << action);
 
     action = ac->addAction(QStringLiteral("file_export_ldif"));
     action->setText(i18n("Export LDIF file..."));
     action->setWhatsThis(i18n("Export contacts to an LDIF file."));
+    connect(action, &QAction::triggered, this, &LDifImportExportPluginInterface::slotExportLdif);
     setExportActions(QList<QAction *>() << action);
 }
 
 void LDifImportExportPluginInterface::exec()
 {
+    switch(mImportExportAction) {
+    case Import:
+        break;
+    case Export:
+        break;
+    }
+    //TODO
+}
+
+void LDifImportExportPluginInterface::slotImportLdif()
+{
+    mImportExportAction = Import;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void LDifImportExportPluginInterface::slotExportLdif()
+{
+    mImportExportAction = Export;
+    Q_EMIT emitPluginActivated(this);
 }

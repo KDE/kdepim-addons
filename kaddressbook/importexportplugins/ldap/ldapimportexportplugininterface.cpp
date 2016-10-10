@@ -40,9 +40,22 @@ void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
     action->setText(i18n("Import From LDAP server..."));
     action->setWhatsThis(i18n("Import contacts from an LDAP server."));
     setImportActions(QList<QAction *>() << action);
+    connect(action, &QAction::triggered, this, &LDapImportExportPluginInterface::slotImportLdap);
 }
 
 void LDapImportExportPluginInterface::exec()
 {
+    switch(mImportExportAction) {
+    case Import:
+        break;
+    case Export:
+        break;
+    }
     //TODO
+}
+
+void LDapImportExportPluginInterface::slotImportLdap()
+{
+    mImportExportAction = Import;
+    Q_EMIT emitPluginActivated(this);
 }
