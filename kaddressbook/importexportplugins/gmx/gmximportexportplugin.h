@@ -21,12 +21,12 @@
 #ifndef GMXIMPORTEXPORTPLUGIN_H
 #define GMXIMPORTEXPORTPLUGIN_H
 #include <KAddressBookImportExport/KAddressBookImportExportPlugin>
-
+#include <QVariant>
 class GMXImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
 {
     Q_OBJECT
 public:
-    explicit GMXImportExportPlugin(QObject *parent = Q_NULLPTR);
+    explicit GMXImportExportPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
     ~GMXImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

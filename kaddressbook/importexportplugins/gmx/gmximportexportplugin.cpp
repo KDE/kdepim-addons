@@ -20,8 +20,11 @@
 
 #include "gmximportexportplugin.h"
 #include "gmximportexportplugininterface.h"
+#include <kpluginfactory.h>
 
-GMXImportExportPlugin::GMXImportExportPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(GMXImportExportPluginFactory, "kaddressbook_importexportgmxplugin.json", registerPlugin<GMXImportExportPlugin>();)
+
+GMXImportExportPlugin::GMXImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
 
@@ -44,3 +47,5 @@ bool GMXImportExportPlugin::hasPopupMenuSupport() const
 {
     return true;
 }
+
+#include "gmximportexportplugin.moc"

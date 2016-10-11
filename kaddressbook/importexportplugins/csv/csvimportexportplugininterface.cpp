@@ -35,8 +35,7 @@
 #include <KIO/Job>
 
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
-      mEngine(Q_NULLPTR)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
 {
 
 }
@@ -84,21 +83,11 @@ void CSVImportExportPluginInterface::importCSV()
     }
 
     delete dlg;
-    if (!mEngine) {
-        mEngine = new ImportExportEngine(this);
-    }
-    mEngine->setContactList(contactList);
-    mEngine->setDefaultAddressBook(defaultCollection());
-    connect(mEngine, &ImportExportEngine::finished, this, &CSVImportExportPluginInterface::slotFinished);
-    mEngine->importContacts();
+    ImportExportEngine *engine = new ImportExportEngine(this);
+    engine->setContactList(contactList);
+    engine->setDefaultAddressBook(defaultCollection());
+    engine->importContacts();
 }
-
-void CSVImportExportPluginInterface::slotFinished()
-{
-    mEngine->deleteLater();
-    mEngine = Q_NULLPTR;
-}
-
 
 void CSVImportExportPluginInterface::slotImportCVS()
 {
@@ -114,12 +103,11 @@ void CSVImportExportPluginInterface::slotExportCVS()
 
 void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const
 {
-#if 0 //FIXME
     QTextStream stream(file);
     stream.setCodec(QTextCodec::codecForLocale());
 
-    ContactFields::Fields fields = ContactFields::allFields();
-    fields.remove(ContactFields::Undefined);
+    KAddressBookImportExport::KAddressBookImportExportContactFields::Fields fields = KAddressBookImportExport::KAddressBookImportExportContactFields::allFields();
+    fields.remove(KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined);
 
     bool first = true;
 
@@ -130,7 +118,7 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
         }
 
         // add quoting as defined in RFC 4180
-        QString label = ContactFields::label(fields.at(i));
+        QString label = KAddressBookImportExport::KAddressBookImportExportContactFields::label(fields.at(i));
         label.replace(QLatin1Char('"'), QStringLiteral("\"\""));
 
         stream << "\"" << label << "\"";
@@ -150,15 +138,15 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
             }
 
             QString content;
-            if (fields.at(j) == ContactFields::Birthday ||
-                    fields.at(j) == ContactFields::Anniversary) {
+            if (fields.at(j) == KAddressBookImportExport::KAddressBookImportExportContactFields::Birthday ||
+                    fields.at(j) == KAddressBookImportExport::KAddressBookImportExportContactFields::Anniversary) {
                 const QDateTime dateTime =
-                    QDateTime::fromString(ContactFields::value(fields.at(j), contact), Qt::ISODate);
+                    QDateTime::fromString(KAddressBookImportExport::KAddressBookImportExportContactFields::value(fields.at(j), contact), Qt::ISODate);
                 if (dateTime.isValid()) {
                     content = dateTime.date().toString(Qt::ISODate);
                 }
             } else {
-                content = ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
+                content = KAddressBookImportExport::KAddressBookImportExportContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
             }
 
             // add quoting as defined in RFC 4180
@@ -170,7 +158,6 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
         stream << "\n";
     }
-#endif
 }
 
 void CSVImportExportPluginInterface::exportCSV()
@@ -202,13 +189,11 @@ void CSVImportExportPluginInterface::exportCSV()
             KMessageBox::error(parentWidget(), msg);
             return;
         }
-#if 0 //FIXME
-        exportToFile(&tmpFile, contacts.addressList());
+        exportToFile(&tmpFile, addressBookImportExportList().addressList());
         tmpFile.flush();
         auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(job, parentWidget());
         job->exec();
-#endif
     } else {
         QFile file(url.toLocalFile());
         if (!file.open(QIODevice::WriteOnly)) {
@@ -217,7 +202,7 @@ void CSVImportExportPluginInterface::exportCSV()
             return;
         }
 
-        //FIXME exportToFile(&file, contacts.addressList());
+        exportToFile(&file, addressBookImportExportList().addressList());
         file.close();
 
     }

@@ -21,7 +21,6 @@
 #define LDAPIMPORTEXPORTPLUGININTERFACE_H
 
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
-class ImportExportEngine;
 class LDapImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
     Q_OBJECT
@@ -33,9 +32,7 @@ public:
     void exec() Q_DECL_OVERRIDE;
 private:
     void slotImportLdap();
-    void slotFinished();
     void importLdap();
-    ImportExportEngine *mEngine;
 };
 
 #endif // LDAPIMPORTEXPORTPLUGININTERFACE_H

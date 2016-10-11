@@ -26,14 +26,15 @@
 #include <QFile>
 #include <QTextStream>
 #include <KMessageBox>
+#include <QTemporaryFile>
 #include <KJobWidgets>
+#include <KIOCore/kio/filecopyjob.h>
 #include <PimCommon/RenameFileDialog>
 #include <KContacts/LDIFConverter>
 #include <KAddressBookImportExport/KAddressBookImportExportContactList>
 
 LDifImportExportPluginInterface::LDifImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
-      mEngine(Q_NULLPTR)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
 {
 
 }
@@ -111,18 +112,24 @@ void LDifImportExportPluginInterface::import()
     contactList.setAddressList(lstAddresses);
     contactList.setContactGroupList(lstGroup);
 
-    if (!mEngine) {
-        mEngine = new ImportExportEngine(this);
-    }
-    mEngine->setContactList(contactList);
-    mEngine->setDefaultAddressBook(defaultCollection());
-    connect(mEngine, &ImportExportEngine::finished, this, &LDifImportExportPluginInterface::slotFinished);
-    mEngine->importContacts();
+    ImportExportEngine *engine = new ImportExportEngine(this);
+    engine->setContactList(contactList);
+    engine->setDefaultAddressBook(defaultCollection());
+    engine->importContacts();
+}
+
+void doExport(QFile *file, const KAddressBookImportExport::KAddressBookImportExportContactList &list)
+{
+    QString data;
+    KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(list.addressList(), list.contactGroupList(), data);
+
+    QTextStream stream(file);
+    stream.setCodec("UTF-8");
+    stream << data;
 }
 
 void LDifImportExportPluginInterface::exportLdif()
 {
-#if 0 //FIXME
     const QUrl url =
         QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.ldif")), i18n("LDif Files (*.ldif)"));
     if (url.isEmpty()) {
@@ -137,7 +144,7 @@ void LDifImportExportPluginInterface::exportLdif()
             return;
         }
 
-        doExport(&tmpFile, list);
+        doExport(&tmpFile, addressBookImportExportList());
         tmpFile.flush();
         auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(job, parentWidget());
@@ -169,18 +176,11 @@ void LDifImportExportPluginInterface::exportLdif()
             return;
         }
         QString data;
-        KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(list.addressList(), list.contactGroupList(), data);
+        KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(addressBookImportExportList().addressList(), addressBookImportExportList().contactGroupList(), data);
 
-        QTextStream stream(file);
+        QTextStream stream(&file);
         stream.setCodec("UTF-8");
         stream << data;
         file.close();
     }
-#endif
-}
-
-void LDifImportExportPluginInterface::slotFinished()
-{
-    mEngine->deleteLater();
-    mEngine = Q_NULLPTR;
 }

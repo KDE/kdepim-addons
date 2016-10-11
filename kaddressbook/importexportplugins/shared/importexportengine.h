@@ -35,11 +35,9 @@ public:
     void setContactList(const KAddressBookImportExport::KAddressBookImportExportContactList &contacts);
 
     void importContacts();
-    void exportContacts();
     void setParentWidget(QWidget *parent);
     QWidget *parentWidget() const;
     void setDefaultAddressBook(const Akonadi::Collection &defaultAddressBook);
-
 
 Q_SIGNALS:
     void finished();

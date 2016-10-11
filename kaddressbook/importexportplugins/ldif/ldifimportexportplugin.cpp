@@ -20,8 +20,11 @@
 
 #include "ldifimportexportplugin.h"
 #include "ldifimportexportplugininterface.h"
+#include <kpluginfactory.h>
 
-LDifImportExportPlugin::LDifImportExportPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(LDifImportExportPluginFactory, "kaddressbook_importexportldifplugin.json", registerPlugin<LDifImportExportPlugin>();)
+
+LDifImportExportPlugin::LDifImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
 
@@ -44,3 +47,5 @@ bool LDifImportExportPlugin::hasPopupMenuSupport() const
 {
     return true;
 }
+
+#include "ldifimportexportplugin.moc"

@@ -46,11 +46,6 @@ void ImportExportEngine::setContactList(const KAddressBookImportExport::KAddress
     mContactsList = contacts;
 }
 
-void ImportExportEngine::exportContacts()
-{
-
-}
-
 void ImportExportEngine::setParentWidget(QWidget *parent)
 {
     mParentWidget = parent;
@@ -70,6 +65,7 @@ void ImportExportEngine::importContacts()
 {
     if (mContactsList.isEmpty()) {   // nothing to import
         Q_EMIT finished();
+        deleteLater();
         return;
     }
 
@@ -85,6 +81,7 @@ void ImportExportEngine::importContacts()
 
     if (!dlg->exec() || !dlg) {
         delete dlg;
+        deleteLater();
         return;
     }
 
@@ -121,6 +118,7 @@ void ImportExportEngine::importContacts()
         connect(createJob, &KJob::result, this, &ImportExportEngine::slotImportJobDone);
     }
     Q_EMIT finished();
+    deleteLater();
 }
 
 void ImportExportEngine::slotImportJobDone(KJob *)

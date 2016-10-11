@@ -27,8 +27,7 @@
 #include "../shared/importexportengine.h"
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
-      mEngine(Q_NULLPTR)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
 {
 
 }
@@ -75,17 +74,8 @@ void LDapImportExportPluginInterface::importLdap()
     }
 
     delete dlg;
-    if (!mEngine) {
-        mEngine = new ImportExportEngine(this);
-    }
-    mEngine->setContactList(contactList);
-    mEngine->setDefaultAddressBook(defaultCollection());
-    connect(mEngine, &ImportExportEngine::finished, this, &LDapImportExportPluginInterface::slotFinished);
-    mEngine->importContacts();
-}
-
-void LDapImportExportPluginInterface::slotFinished()
-{
-    mEngine->deleteLater();
-    mEngine = Q_NULLPTR;
+    ImportExportEngine *engine = new ImportExportEngine(this);
+    engine->setContactList(contactList);
+    engine->setDefaultAddressBook(defaultCollection());
+    engine->importContacts();
 }

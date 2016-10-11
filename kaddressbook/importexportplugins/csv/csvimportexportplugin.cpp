@@ -20,8 +20,11 @@
 
 #include "csvimportexportplugin.h"
 #include "csvimportexportplugininterface.h"
+#include <kpluginfactory.h>
 
-CSVImportExportPlugin::CSVImportExportPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(CSVImportExportPluginFactory, "kaddressbook_importexportcsvplugin.json", registerPlugin<CSVImportExportPlugin>();)
+
+CSVImportExportPlugin::CSVImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
 
@@ -44,3 +47,5 @@ bool CSVImportExportPlugin::hasPopupMenuSupport() const
 {
     return true;
 }
+
+#include "csvimportexportplugin.moc"

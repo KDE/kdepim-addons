@@ -23,7 +23,6 @@
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
 #include <KContacts/Addressee>
 class QFile;
-class ImportExportEngine;
 class CSVImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
     Q_OBJECT
@@ -40,7 +39,6 @@ private:
     void slotExportCVS();
     void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
     void importCSV();
-    ImportExportEngine *mEngine;
 };
 
 #endif // CSVIMPORTEXPORTPLUGININTERFACE_H

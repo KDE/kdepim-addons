@@ -21,12 +21,12 @@
 #ifndef LDAPIMPORTEXPORTPLUGIN_H
 #define LDAPIMPORTEXPORTPLUGIN_H
 #include <KAddressBookImportExport/KAddressBookImportExportPlugin>
-
+#include <QVariant>
 class LDapImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
 {
     Q_OBJECT
 public:
-    explicit LDapImportExportPlugin(QObject *parent = Q_NULLPTR);
+    explicit LDapImportExportPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
     ~LDapImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

@@ -20,8 +20,10 @@
 
 #include "vcardimportexportplugin.h"
 #include "vcardimportexportplugininterface.h"
+#include <kpluginfactory.h>
 
-VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent)
+K_PLUGIN_FACTORY_WITH_JSON(VCardImportExportPluginFactory, "kaddressbook_importexportvcardplugin.json", registerPlugin<VCardImportExportPlugin>();)
+VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
 
@@ -44,3 +46,5 @@ bool VCardImportExportPlugin::hasPopupMenuSupport() const
 {
     return true;
 }
+
+#include "vcardimportexportplugin.moc"
