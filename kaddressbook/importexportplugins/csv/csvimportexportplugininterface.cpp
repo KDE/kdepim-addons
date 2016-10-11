@@ -18,6 +18,7 @@
 */
 
 #include "csvimportexportplugininterface.h"
+#include "../shared/importexportengine.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -29,10 +30,12 @@
 #include <QTextStream>
 #include <QFileDialog>
 #include <QTextCodec>
+#include <QPointer>
 #include <KIO/Job>
 
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
+      mEngine(Q_NULLPTR)
 {
 
 }
@@ -63,13 +66,40 @@ void CSVImportExportPluginInterface::exec()
 {
     switch(mImportExportAction) {
     case Import:
+        importCSV();
         break;
     case Export:
         exportCSV();
         break;
     }
-    //TODO
 }
+
+void CSVImportExportPluginInterface::importCSV()
+{
+#if 0
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    QPointer<CSVImportDialog> dlg = new CSVImportDialog(parentWidget());
+    if (dlg->exec() && dlg) {
+        contactList.setAddressList(dlg->contacts());
+    }
+
+    delete dlg;
+    if (!mEngine) {
+        mEngine = new ImportExportEngine(this);
+    }
+    mEngine->setContactList(contactList);
+    mEngine->setDefaultAddressBook(defaultCollection());
+    connect(mEngine, &ImportExportEngine::finished, this, &CSVImportExportPluginInterface::slotFinished);
+    mEngine->importContacts();
+#endif
+}
+
+void CSVImportExportPluginInterface::slotFinished()
+{
+    mEngine->deleteLater();
+    mEngine = Q_NULLPTR;
+}
+
 
 void CSVImportExportPluginInterface::slotImportCVS()
 {

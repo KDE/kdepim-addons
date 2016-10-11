@@ -23,7 +23,7 @@
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
 #include <KContacts/Addressee>
 class QFile;
-
+class ImportExportEngine;
 class CSVImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
     Q_OBJECT
@@ -34,10 +34,13 @@ public:
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
 private:
+    void slotFinished();
     void exportCSV();
     void slotImportCVS();
     void slotExportCVS();
     void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
+    void importCSV();
+    ImportExportEngine *mEngine;
 };
 
 #endif // CSVIMPORTEXPORTPLUGININTERFACE_H
