@@ -1,7 +1,7 @@
 set(kaddressbook_importexport_csv_SRCS
     csvimportexportplugin.cpp
     csvimportexportplugininterface.cpp
-    #import/csvimportdialog.cpp
+    import/csvimportdialog.cpp
     import/dateparser.cpp
     import/qcsvmodel.cpp
     import/qcsvreader.cpp
@@ -18,5 +18,7 @@ target_link_libraries(kaddressbook_importexportcsvplugin KF5::KaddressbookImport
         KF5::XmlGui
         KF5::Contacts
         KF5::JobWidgets
+        KF5::Completion
+        KF5::KIOWidgets
         kaddressbookimportexportlibprivate
     )

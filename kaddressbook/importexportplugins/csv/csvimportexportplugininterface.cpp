@@ -19,6 +19,7 @@
 
 #include "csvimportexportplugininterface.h"
 #include "../shared/importexportengine.h"
+#include "import/csvimportdialog.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -76,7 +77,6 @@ void CSVImportExportPluginInterface::exec()
 
 void CSVImportExportPluginInterface::importCSV()
 {
-#if 0
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     QPointer<CSVImportDialog> dlg = new CSVImportDialog(parentWidget());
     if (dlg->exec() && dlg) {
@@ -91,7 +91,6 @@ void CSVImportExportPluginInterface::importCSV()
     mEngine->setDefaultAddressBook(defaultCollection());
     connect(mEngine, &ImportExportEngine::finished, this, &CSVImportExportPluginInterface::slotFinished);
     mEngine->importContacts();
-#endif
 }
 
 void CSVImportExportPluginInterface::slotFinished()
