@@ -31,6 +31,7 @@ public:
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
+    bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
 private:
     void slotImportGmx();
     void slotExportGmx();

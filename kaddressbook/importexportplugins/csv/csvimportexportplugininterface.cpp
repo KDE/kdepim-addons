@@ -32,6 +32,7 @@
 #include <QFileDialog>
 #include <QTextCodec>
 #include <QPointer>
+#include <KAddressBookContactSelectionDialog>
 #include <KIO/Job>
 
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
@@ -162,6 +163,24 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
 void CSVImportExportPluginInterface::exportCSV()
 {
+    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg =
+        new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    dlg->setMessageText(i18n("Which contact do you want to export?"));
+    dlg->setDefaultAddressBook(defaultCollection());
+    if (!dlg->exec() || !dlg) {
+        delete dlg;
+        return;
+    }
+    const KContacts::AddresseeList contacts = dlg->selectedContacts().addressList();
+    delete dlg;
+
+    if (contacts.isEmpty()) {
+        KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
+        return;
+    }
+
+    KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
+    contactLists.setAddressList(contacts);
     QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")));
     if (url.isEmpty()) {
         return;
@@ -189,7 +208,7 @@ void CSVImportExportPluginInterface::exportCSV()
             KMessageBox::error(parentWidget(), msg);
             return;
         }
-        exportToFile(&tmpFile, addressBookImportExportList().addressList());
+        exportToFile(&tmpFile, contactLists.addressList());
         tmpFile.flush();
         auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), url, -1, KIO::Overwrite);
         KJobWidgets::setWindow(job, parentWidget());
@@ -202,8 +221,13 @@ void CSVImportExportPluginInterface::exportCSV()
             return;
         }
 
-        exportToFile(&file, addressBookImportExportList().addressList());
+        exportToFile(&file, contactLists.addressList());
         file.close();
-
     }
+}
+
+
+bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
+{
+    return url.path().endsWith(QStringLiteral(".csv"));
 }

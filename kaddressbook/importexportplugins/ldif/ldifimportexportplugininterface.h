@@ -30,11 +30,12 @@ public:
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
+    bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
 private:
     void slotImportLdif();
     void slotExportLdif();
     void import();
-    void exportLdif();
+    void exportLdif();    
 };
 
 #endif // LDIFIMPORTEXPORTPLUGININTERFACE_H

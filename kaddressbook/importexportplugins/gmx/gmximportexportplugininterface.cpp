@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QUrl>
 
 GMXImportExportPluginInterface::GMXImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
@@ -81,4 +82,10 @@ void GMXImportExportPluginInterface::exportGMX()
 void GMXImportExportPluginInterface::importGMX()
 {
 
+}
+
+
+bool GMXImportExportPluginInterface::canImportFileType(const QUrl &url)
+{
+    return url.path().endsWith(QStringLiteral(".gmx"));
 }

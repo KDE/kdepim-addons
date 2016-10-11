@@ -1,6 +1,10 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kaddressbook_importexportplugins\")
 
-INCLUDE_DIRECTORIES(${CMAKE_CURRENT_BINARY_DIR}/shared)
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/shared)
+
+if(KF5Gpgmepp_FOUND)
+    add_definitions(-DQGPGME_FOUND)
+endif()
 
 add_subdirectory(shared)
 
