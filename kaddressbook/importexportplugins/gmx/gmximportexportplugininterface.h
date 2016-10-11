@@ -34,6 +34,8 @@ public:
 private:
     void slotImportGmx();
     void slotExportGmx();
+    void importGMX();
+    void exportGMX();
 };
 
 #endif // GMXIMPORTEXPORTPLUGININTERFACE_H

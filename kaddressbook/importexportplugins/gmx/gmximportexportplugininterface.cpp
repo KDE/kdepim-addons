@@ -53,11 +53,12 @@ void GMXImportExportPluginInterface::exec()
 {
     switch(mImportExportAction) {
     case Import:
+        importGMX();
         break;
     case Export:
+        exportGMX();
         break;
     }
-    //TODO
 }
 
 void GMXImportExportPluginInterface::slotImportGmx()
@@ -70,4 +71,14 @@ void GMXImportExportPluginInterface::slotExportGmx()
 {
     mImportExportAction = Export;
     Q_EMIT emitPluginActivated(this);
+}
+
+void GMXImportExportPluginInterface::exportGMX()
+{
+
+}
+
+void GMXImportExportPluginInterface::importGMX()
+{
+
 }

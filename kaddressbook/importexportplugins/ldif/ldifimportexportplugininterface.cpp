@@ -69,7 +69,6 @@ void LDifImportExportPluginInterface::exec()
         exportLdif();
         break;
     }
-    //TODO
 }
 
 void LDifImportExportPluginInterface::slotImportLdif()
@@ -123,7 +122,7 @@ void LDifImportExportPluginInterface::import()
 
 void LDifImportExportPluginInterface::exportLdif()
 {
-#if 0
+#if 0 //FIXME
     const QUrl url =
         QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.ldif")), i18n("LDif Files (*.ldif)"));
     if (url.isEmpty()) {
