@@ -1,6 +1,11 @@
 set(kaddressbook_importexport_csv_SRCS
     csvimportexportplugin.cpp
     csvimportexportplugininterface.cpp
+    #import/csvimportdialog.cpp
+    import/dateparser.cpp
+    import/qcsvmodel.cpp
+    import/qcsvreader.cpp
+    import/templateselectiondialog.cpp
     )
 
 
