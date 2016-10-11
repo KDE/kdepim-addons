@@ -21,6 +21,8 @@
 #define CSVIMPORTEXPORTPLUGININTERFACE_H
 
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
+#include <KContacts/Addressee>
+class QFile;
 
 class CSVImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
@@ -32,8 +34,10 @@ public:
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
     void exec() Q_DECL_OVERRIDE;
 private:
+    void exportCSV();
     void slotImportCVS();
     void slotExportCVS();
+    void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
 };
 
 #endif // CSVIMPORTEXPORTPLUGININTERFACE_H

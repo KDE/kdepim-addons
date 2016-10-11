@@ -21,6 +21,15 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QFileInfo>
+#include <QTemporaryFile>
+#include <PimCommon/RenameFileDialog>
+#include <KMessageBox>
+#include <KJobWidgets>
+#include <QTextStream>
+#include <QFileDialog>
+#include <QTextCodec>
+#include <KIO/Job>
 
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
@@ -56,6 +65,7 @@ void CSVImportExportPluginInterface::exec()
     case Import:
         break;
     case Export:
+        exportCSV();
         break;
     }
     //TODO
@@ -71,4 +81,115 @@ void CSVImportExportPluginInterface::slotExportCVS()
 {
     mImportExportAction = Export;
     Q_EMIT emitPluginActivated(this);
+}
+
+void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const
+{
+#if 0 //FIXME
+    QTextStream stream(file);
+    stream.setCodec(QTextCodec::codecForLocale());
+
+    ContactFields::Fields fields = ContactFields::allFields();
+    fields.remove(ContactFields::Undefined);
+
+    bool first = true;
+
+    // First output the column headings
+    for (int i = 0; i < fields.count(); ++i) {
+        if (!first) {
+            stream << ",";
+        }
+
+        // add quoting as defined in RFC 4180
+        QString label = ContactFields::label(fields.at(i));
+        label.replace(QLatin1Char('"'), QStringLiteral("\"\""));
+
+        stream << "\"" << label << "\"";
+        first = false;
+    }
+    stream << "\n";
+
+    // Then all the contacts
+    for (int i = 0; i < contacts.count(); ++i) {
+
+        const KContacts::Addressee contact = contacts.at(i);
+        first = true;
+
+        for (int j = 0; j < fields.count(); ++j) {
+            if (!first) {
+                stream << ",";
+            }
+
+            QString content;
+            if (fields.at(j) == ContactFields::Birthday ||
+                    fields.at(j) == ContactFields::Anniversary) {
+                const QDateTime dateTime =
+                    QDateTime::fromString(ContactFields::value(fields.at(j), contact), Qt::ISODate);
+                if (dateTime.isValid()) {
+                    content = dateTime.date().toString(Qt::ISODate);
+                }
+            } else {
+                content = ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
+            }
+
+            // add quoting as defined in RFC 4180
+            content.replace(QLatin1Char('"'), QStringLiteral("\"\""));
+
+            stream << '\"' << content << '\"';
+            first = false;
+        }
+
+        stream << "\n";
+    }
+#endif
+}
+
+void CSVImportExportPluginInterface::exportCSV()
+{
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")));
+    if (url.isEmpty()) {
+        return;
+    }
+
+    if (QFileInfo(url.isLocalFile() ? url.toLocalFile() : url.path()).exists()) {
+        if (url.isLocalFile() && QFileInfo(url.toLocalFile()).exists()) {
+            PimCommon::RenameFileDialog::RenameFileDialogResult result = PimCommon::RenameFileDialog::RENAMEFILE_IGNORE;
+            PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+            if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
+                url = dialog->newName();
+            } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {
+                delete dialog;
+                return;
+            }
+            delete dialog;
+        }
+    }
+
+    if (!url.isLocalFile()) {
+        QTemporaryFile tmpFile;
+        if (!tmpFile.open()) {
+            const QString msg = i18n("<qt>Unable to open file <b>%1</b></qt>", url.url());
+            KMessageBox::error(parentWidget(), msg);
+            return;
+        }
+#if 0 //FIXME
+        exportToFile(&tmpFile, contacts.addressList());
+        tmpFile.flush();
+        auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), url, -1, KIO::Overwrite);
+        KJobWidgets::setWindow(job, parentWidget());
+        job->exec();
+#endif
+    } else {
+        QFile file(url.toLocalFile());
+        if (!file.open(QIODevice::WriteOnly)) {
+            const QString msg = i18n("<qt>Unable to open file <b>%1</b>.</qt>", url.toLocalFile());
+            KMessageBox::error(parentWidget(), msg);
+            return;
+        }
+
+        //FIXME exportToFile(&file, contacts.addressList());
+        file.close();
+
+    }
 }
