@@ -211,3 +211,8 @@ bool LDifImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QStringLiteral(".ldif"));
 }
+
+void LDifImportExportPluginInterface::importFile(const QUrl &url)
+{
+    //TODO
+}

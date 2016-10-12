@@ -231,3 +231,9 @@ bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QStringLiteral(".csv"));
 }
+
+
+void CSVImportExportPluginInterface::importFile(const QUrl &url)
+{
+    //TODO
+}

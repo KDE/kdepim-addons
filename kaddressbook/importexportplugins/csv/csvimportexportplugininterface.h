@@ -34,6 +34,7 @@ public:
     void exec() Q_DECL_OVERRIDE;
 
     bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
+    void importFile(const QUrl &url) Q_DECL_OVERRIDE;
 
 private:
     void slotFinished();
@@ -42,6 +43,7 @@ private:
     void slotExportCVS();
     void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
     void importCSV();
+
 
 };
 
