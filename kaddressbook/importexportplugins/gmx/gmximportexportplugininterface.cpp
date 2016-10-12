@@ -240,10 +240,11 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
         // Assign categories as bitfield
         const QStringList categories = addressee->categories();
         long int category = 0;
-        if (categories.count() > 0) {
+        if (!categories.isEmpty()) {
             for (int i = 0; i < categories.count(); ++i) {
-                if (categoryMap.contains(categories[i])) {
-                    category |= 1 << categoryMap.indexOf(categories[i], 0);
+                const QString cat = categories[i];
+                if (categoryMap.contains(cat)) {
+                    category |= 1 << categoryMap.indexOf(cat, 0);
                 }
             }
         }

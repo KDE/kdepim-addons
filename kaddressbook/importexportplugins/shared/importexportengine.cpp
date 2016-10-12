@@ -102,7 +102,7 @@ void ImportExportEngine::importContacts()
     }
 
     mImportProgressDialog->show();
-
+    mImportDone = 0;
     mNumberElementToImport = mContactsList.count();
 
     for (int i = 0; i < mContactsList.addressList().count(); ++i) {
