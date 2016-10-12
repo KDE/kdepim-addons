@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "gmximportexportplugin.h"
 #include "gmximportexportplugininterface.h"
 #include <kpluginfactory.h>
@@ -34,7 +33,6 @@ GMXImportExportPlugin::~GMXImportExportPlugin()
 {
 
 }
-
 
 PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {

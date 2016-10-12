@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef VCARDIMPORTEXPORTPLUGIN_H
 #define VCARDIMPORTEXPORTPLUGIN_H
 #include <KAddressBookImportExport/KAddressBookImportExportPlugin>

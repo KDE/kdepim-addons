@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "csvimportexportplugin.h"
 #include "csvimportexportplugininterface.h"
 #include <kpluginfactory.h>
@@ -34,7 +33,6 @@ CSVImportExportPlugin::~CSVImportExportPlugin()
 {
 
 }
-
 
 PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {

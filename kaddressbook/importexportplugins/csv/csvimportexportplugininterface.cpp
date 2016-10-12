@@ -46,7 +46,6 @@ CSVImportExportPluginInterface::~CSVImportExportPluginInterface()
 
 }
 
-
 void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_export_csv"));
@@ -62,10 +61,9 @@ void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
     connect(action, &QAction::triggered, this, &CSVImportExportPluginInterface::slotImportCVS);
 }
 
-
 void CSVImportExportPluginInterface::exec()
 {
-    switch(mImportExportAction) {
+    switch (mImportExportAction) {
     case Import:
         importCSV();
         break;
@@ -226,12 +224,10 @@ void CSVImportExportPluginInterface::exportCSV()
     }
 }
 
-
 bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QStringLiteral(".csv"));
 }
-
 
 void CSVImportExportPluginInterface::importFile(const QUrl &url)
 {

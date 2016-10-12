@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "vcardimportexportplugin.h"
 #include "vcardimportexportplugininterface.h"
 #include <kpluginfactory.h>
@@ -33,7 +32,6 @@ VCardImportExportPlugin::~VCardImportExportPlugin()
 {
 
 }
-
 
 PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {

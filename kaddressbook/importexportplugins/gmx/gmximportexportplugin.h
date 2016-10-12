@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef GMXIMPORTEXPORTPLUGIN_H
 #define GMXIMPORTEXPORTPLUGIN_H
 #include <KAddressBookImportExport/KAddressBookImportExportPlugin>

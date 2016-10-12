@@ -46,7 +46,6 @@ LDifImportExportPluginInterface::~LDifImportExportPluginInterface()
 
 }
 
-
 void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_ldif"));
@@ -64,7 +63,7 @@ void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 
 void LDifImportExportPluginInterface::exec()
 {
-    switch(mImportExportAction) {
+    switch (mImportExportAction) {
     case Import:
         importLdif();
         break;
@@ -85,7 +84,6 @@ void LDifImportExportPluginInterface::slotExportLdif()
     mImportExportAction = Export;
     Q_EMIT emitPluginActivated(this);
 }
-
 
 void LDifImportExportPluginInterface::importLdif()
 {
@@ -205,7 +203,6 @@ void LDifImportExportPluginInterface::exportLdif()
         file.close();
     }
 }
-
 
 bool LDifImportExportPluginInterface::canImportFileType(const QUrl &url)
 {

@@ -37,7 +37,6 @@ LDapImportExportPluginInterface::~LDapImportExportPluginInterface()
 
 }
 
-
 void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_ldap"));
@@ -49,7 +48,7 @@ void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 
 void LDapImportExportPluginInterface::exec()
 {
-    switch(mImportExportAction) {
+    switch (mImportExportAction) {
     case Import:
         importLdap();
         break;

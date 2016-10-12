@@ -36,7 +36,7 @@ private:
     void slotImportLdif();
     void slotExportLdif();
     void importLdif();
-    void exportLdif();    
+    void exportLdif();
 
 };
 

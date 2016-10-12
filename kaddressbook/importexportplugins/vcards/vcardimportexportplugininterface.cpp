@@ -51,7 +51,6 @@ VCardImportExportPluginInterface::~VCardImportExportPluginInterface()
 
 }
 
-
 void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_vcard"));
@@ -105,7 +104,7 @@ void VCardImportExportPluginInterface::slotExportVCard2()
 
 void VCardImportExportPluginInterface::exec()
 {
-    switch(mImportExportAction) {
+    switch (mImportExportAction) {
     case Import:
         importVCard();
         break;
@@ -408,7 +407,6 @@ bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArra
     return job->exec();
 }
 
-
 void VCardImportExportPluginInterface::exportVCard()
 {
     QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg =
@@ -429,7 +427,6 @@ void VCardImportExportPluginInterface::exportVCard()
         return;
     }
 
-
     KContacts::VCardConverter converter;
     QUrl url;
 
@@ -449,8 +446,7 @@ void VCardImportExportPluginInterface::exportVCard()
             return;
         }
 
-        switch(mExportVCardType)
-        {
+        switch (mExportVCardType) {
         case VCard2_1:
             ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
             break;
@@ -486,8 +482,7 @@ void VCardImportExportPluginInterface::exportVCard()
 
                 bool tmpOk = false;
 
-                switch(mExportVCardType)
-                {
+                switch (mExportVCardType) {
                 case VCard2_1:
                     tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
                     break;
@@ -508,8 +503,7 @@ void VCardImportExportPluginInterface::exportVCard()
                 return; // user canceled export
             }
 
-            switch(mExportVCardType)
-            {
+            switch (mExportVCardType) {
             case VCard2_1:
                 ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
                 break;
@@ -528,7 +522,6 @@ void VCardImportExportPluginInterface::exportVCard()
         }
     }
 }
-
 
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {

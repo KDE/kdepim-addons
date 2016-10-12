@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "ldifimportexportplugin.h"
 #include "ldifimportexportplugininterface.h"
 #include <kpluginfactory.h>
@@ -34,7 +33,6 @@ LDifImportExportPlugin::~LDifImportExportPlugin()
 {
 
 }
-
 
 PimCommon::AbstractGenericPluginInterface *LDifImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {

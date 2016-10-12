@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "ldapimportexportplugin.h"
 #include "ldapimportexportplugininterface.h"
 #include <kpluginfactory.h>
@@ -34,7 +33,6 @@ LDapImportExportPlugin::~LDapImportExportPlugin()
 {
 
 }
-
 
 PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {

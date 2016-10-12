@@ -49,7 +49,6 @@ GMXImportExportPluginInterface::~GMXImportExportPluginInterface()
 
 }
 
-
 void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->addAction(QStringLiteral("file_import_gmx"));
@@ -67,7 +66,7 @@ void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 
 void GMXImportExportPluginInterface::exec()
 {
-    switch(mImportExportAction) {
+    switch (mImportExportAction) {
     case Import:
         importGMX();
         break;
@@ -445,7 +444,6 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
     t << "####" << endl;
 }
 
-
 void GMXImportExportPluginInterface::importGMX()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
@@ -671,7 +669,6 @@ void GMXImportExportPluginInterface::importGMX()
     engine->importContacts();
 
 }
-
 
 bool GMXImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
