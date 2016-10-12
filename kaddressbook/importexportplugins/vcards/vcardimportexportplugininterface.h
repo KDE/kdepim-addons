@@ -33,9 +33,20 @@ public:
     void exec() Q_DECL_OVERRIDE;
     bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
 private:
+    enum ExportVCardType {
+        VCard2_1 = 0,
+        VCard3,
+        VCard4
+    };
+
     void exportVCard();
     void importVCard();
+    void slotImportVCard();
+    void slotExportVCard4();
+    void slotExportVCard3();
+    void slotExportVCard2();
 
+    ExportVCardType mExportVCardType;
 };
 
 #endif // VCARDIMPORTEXPORTPLUGININTERFACE_H

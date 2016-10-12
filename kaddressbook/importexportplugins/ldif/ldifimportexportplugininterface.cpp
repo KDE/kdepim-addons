@@ -66,7 +66,7 @@ void LDifImportExportPluginInterface::exec()
 {
     switch(mImportExportAction) {
     case Import:
-        import();
+        importLdif();
         break;
     case Export:
         exportLdif();
@@ -87,7 +87,7 @@ void LDifImportExportPluginInterface::slotExportLdif()
 }
 
 
-void LDifImportExportPluginInterface::import()
+void LDifImportExportPluginInterface::importLdif()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(),  QDir::homePath(), i18n("LDif Files (*.ldif)"));

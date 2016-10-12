@@ -27,7 +27,8 @@
 #include <QUrl>
 
 VCardImportExportPluginInterface::VCardImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
+      mExportVCardType(VCard3)
 {
 
 }
@@ -43,6 +44,7 @@ void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
     QAction *action = ac->addAction(QStringLiteral("file_import_vcard"));
     action->setText(i18n("Import vCard..."));
     action->setWhatsThis(i18n("Import contacts from a vCard file."));
+    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotImportVCard);
     setImportActions(QList<QAction *>() << action);
 
     QList<QAction *> exportActionList;
@@ -50,18 +52,42 @@ void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
     action = ac->addAction(QStringLiteral("file_export_vcard40"));
     action->setWhatsThis(i18n("Export contacts to a vCard 4.0 file."));
     action->setText(i18n("Export vCard 4.0..."));
+    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard4);
     exportActionList << action;
 
     action = ac->addAction(QStringLiteral("file_export_vcard30"));
     action->setText(i18n("Export vCard 3.0..."));
     action->setWhatsThis(i18n("Export contacts to a vCard 3.0 file."));
+    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard3);
     exportActionList << action;
 
     action = ac->addAction(QStringLiteral("file_export_vcard21"));
     action->setText(i18n("Export vCard 2.1..."));
     action->setWhatsThis(i18n("Export contacts to a vCard 2.1 file."));
+    connect(action, &QAction::triggered, this, &VCardImportExportPluginInterface::slotExportVCard2);
     exportActionList << action;
     setExportActions(exportActionList);
+}
+
+void VCardImportExportPluginInterface::slotExportVCard4()
+{
+    mImportExportAction = Export;
+    mExportVCardType = VCard4;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void VCardImportExportPluginInterface::slotExportVCard3()
+{
+    mImportExportAction = Export;
+    mExportVCardType = VCard3;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void VCardImportExportPluginInterface::slotExportVCard2()
+{
+    mImportExportAction = Export;
+    mExportVCardType = VCard2_1;
+    Q_EMIT emitPluginActivated(this);
 }
 
 void VCardImportExportPluginInterface::exec()
@@ -74,6 +100,12 @@ void VCardImportExportPluginInterface::exec()
         exportVCard();
         break;
     }
+}
+
+void VCardImportExportPluginInterface::slotImportVCard()
+{
+    mImportExportAction = Import;
+    Q_EMIT emitPluginActivated(this);
 }
 
 void VCardImportExportPluginInterface::importVCard()
