@@ -22,6 +22,20 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QUrl>
+#include <QFileDialog>
+#include <PimCommon/RenameFileDialog>
+#include <KMessageBox>
+#include <QTemporaryFile>
+#include <KJobWidgets>
+#include <QTextStream>
+#include <KAddressBookContactSelectionDialog>
+#include <QPointer>
+#include <KIOCore/kio/filecopyjob.h>
+
+#define GMX_FILESELECTION_STRING i18n( "GMX address book file (*.gmxa)" )
+const int typeHome  = 0;
+const int typeWork  = 1;
+const int typeOther = 2;
 
 GMXImportExportPluginInterface::GMXImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
@@ -76,8 +90,345 @@ void GMXImportExportPluginInterface::slotExportGmx()
 
 void GMXImportExportPluginInterface::exportGMX()
 {
+    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg =
+        new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    dlg->setMessageText(i18n("Which contact do you want to export?"));
+    dlg->setDefaultAddressBook(defaultCollection());
+    if (!dlg->exec() || !dlg) {
+        delete dlg;
+        return;
+    }
+    const KContacts::AddresseeList contacts = dlg->selectedContacts().addressList();
+    delete dlg;
 
+    if (contacts.isEmpty()) {
+        KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
+        return;
+    }
+
+    KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
+    contactLists.setAddressList(contacts);
+
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING);
+    if (url.isEmpty()) {
+        return;
+    }
+
+    if (QFileInfo(url.isLocalFile() ?
+                  url.toLocalFile() : url.path()).exists()) {
+        if (url.isLocalFile() && QFileInfo(url.toLocalFile()).exists()) {
+            PimCommon::RenameFileDialog::RenameFileDialogResult result = PimCommon::RenameFileDialog::RENAMEFILE_IGNORE;
+            PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+            if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
+                url = dialog->newName();
+            } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {
+                delete dialog;
+                return;
+            }
+            delete dialog;
+        }
+    }
+
+    if (!url.isLocalFile()) {
+        QTemporaryFile tmpFile;
+        if (!tmpFile.open()) {
+            const QString txt = i18n("<qt>Unable to open file <b>%1</b></qt>", url.url());
+            KMessageBox::error(parentWidget(), txt);
+            return;
+        }
+
+        doExport(&tmpFile, contactLists.addressList());
+        tmpFile.flush();
+        auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), url, -1, KIO::Overwrite);
+        KJobWidgets::setWindow(job, parentWidget());
+        job->exec();
+    } else {
+        QString fileName = url.toLocalFile();
+        QFile file(fileName);
+
+        if (!file.open(QIODevice::WriteOnly)) {
+            const QString txt = i18n("<qt>Unable to open file <b>%1</b>.</qt>", fileName);
+            KMessageBox::error(parentWidget(), txt);
+            return;
+        }
+
+        doExport(&file, contactLists.addressList());
+        file.close();
+    }
 }
+
+static const QString dateString(const QDateTime &dt)
+{
+    if (!dt.isValid()) {
+        return QStringLiteral("1000-01-01 00:00:00");
+    }
+    QString d(dt.toString(Qt::ISODate));
+    d[10] = ' '; // remove the "T" in the middle of the string
+    return d;
+}
+
+static const QStringList assignedCategoriesSorted(const KContacts::AddresseeList &list)
+{
+    // Walk through the addressees and return a unique list of up to 31
+    // categories, alphabetically sorted
+    QStringList categoryList;
+    const KContacts::Addressee *addressee;
+    for (KContacts::AddresseeList::ConstIterator addresseeIt = list.begin();
+            addresseeIt != list.end() && categoryList.count() < 32; ++addresseeIt) {
+        addressee = &(*addresseeIt);
+        if (addressee->isEmpty()) {
+            continue;
+        }
+        const QStringList categories = addressee->categories();
+        for (int i = 0; i < categories.count() && categoryList.count() < 32; ++i) {
+            if (!categoryList.contains(categories[i])) {
+                categoryList.append(categories[i]);
+            }
+        }
+    }
+    categoryList.sort();
+    return categoryList;
+}
+
+void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::AddresseeList &list) const
+{
+    if (!fp || !list.count()) {
+        return;
+    }
+
+    QTextStream t(fp);
+    t.setCodec("ISO 8859-1");
+
+    typedef QMap<int, const KContacts::Addressee *> AddresseeMap;
+    AddresseeMap addresseeMap;
+    const KContacts::Addressee *addressee;
+
+    t << "AB_ADDRESSES:\n";
+    t << "Address_id,Nickname,Firstname,Lastname,Title,Birthday,Comments,"
+      "Change_date,Status,Address_link_id,Categories\n";
+
+    QList<QString> categoryMap;
+    categoryMap.append(assignedCategoriesSorted(list));
+
+    int addresseeId = 0;
+    const QChar DELIM(QLatin1Char('#'));
+    for (KContacts::AddresseeList::ConstIterator it = list.begin();
+            it != list.end(); ++it) {
+        addressee = &(*it);
+        if (addressee->isEmpty()) {
+            continue;
+        }
+        addresseeMap[ ++addresseeId ] = addressee;
+
+        // Assign categories as bitfield
+        const QStringList categories = addressee->categories();
+        long int category = 0;
+        if (categories.count() > 0) {
+            for (int i = 0; i < categories.count(); ++i) {
+                if (categoryMap.contains(categories[i])) {
+                    category |= 1 << categoryMap.indexOf(categories[i], 0);
+                }
+            }
+        }
+
+        // GMX sorts by nickname by default - don't leave empty
+        QString nickName = addressee->nickName();
+        if (nickName.isEmpty()) {
+            nickName = addressee->formattedName();
+        }
+
+        t << addresseeId << DELIM             // Address_id
+          << nickName << DELIM                // Nickname
+          << addressee->givenName() << DELIM  // Firstname
+          << addressee->familyName() << DELIM // Lastname
+          << addressee->prefix() << DELIM     // Title - Note: ->title()
+          // refers to the professional title
+          << dateString(addressee->birthday()) << DELIM     // Birthday
+          << addressee->note() /*.replace('\n',"\r\n")*/ << DELIM // Comments
+          << dateString(addressee->revision()) << DELIM     // Change_date
+          << "1" << DELIM                     // Status
+          << DELIM                            // Address_link_id
+          << category << endl;                // Categories
+    }
+
+    t << "####\n";
+    t << "AB_ADDRESS_RECORDS:\n";
+    t << "Address_id,Record_id,Street,Country,Zipcode,City,Phone,Fax,Mobile,"
+      "Mobile_type,Email,Homepage,Position,Comments,Record_type_id,Record_type,"
+      "Company,Department,Change_date,Preferred,Status\n";
+
+    addresseeId = 1;
+    while ((addressee = addresseeMap[ addresseeId ]) != Q_NULLPTR) {
+
+        const KContacts::PhoneNumber::List cellPhones =
+            addressee->phoneNumbers(KContacts::PhoneNumber::Cell);
+
+        const QStringList emails = addressee->emails();
+
+        for (int recId = 0; recId < 3; ++recId) {
+            KContacts::Address address;
+            KContacts::PhoneNumber phone, fax, cell;
+
+            // address preference flag:
+            // & 1: preferred email address
+            // & 4: preferred cell phone
+            int prefFlag = 0;
+
+            switch (recId) {
+            // Assign address, phone and cellphone, fax if applicable
+            case typeHome:
+                address = addressee->address(KContacts::Address::Home);
+                phone   = addressee->phoneNumber(KContacts::PhoneNumber::Home);
+                if (cellPhones.count() > 0) {
+                    cell  = cellPhones.at(0);
+                    if (!cell.isEmpty()) {
+                        prefFlag |= 4;
+                    }
+                }
+                break;
+            case typeWork:
+                address = addressee->address(KContacts::Address::Work);
+                phone   = addressee->phoneNumber(KContacts::PhoneNumber::Work);
+                if (cellPhones.count() >= 2) {
+                    cell  = cellPhones.at(1);
+                }
+                fax = addressee->phoneNumber(KContacts::PhoneNumber::Fax);
+                break;
+            case typeOther:
+            default:
+                if (addressee->addresses(KContacts::Address::Home).count() > 1) {
+                    address = addressee->addresses(KContacts::Address::Home).at(1);
+                }
+                if ((address.isEmpty()) &&
+                        (addressee->addresses(KContacts::Address::Work).count() > 1)) {
+                    address = addressee->addresses(KContacts::Address::Work).at(1);
+                }
+                if (address.isEmpty()) {
+                    address = addressee->address(KContacts::Address::Dom);
+                }
+                if (address.isEmpty()) {
+                    address = addressee->address(KContacts::Address::Intl);
+                }
+                if (address.isEmpty()) {
+                    address = addressee->address(KContacts::Address::Postal);
+                }
+                if (address.isEmpty()) {
+                    address = addressee->address(KContacts::Address::Parcel);
+                }
+
+                if (addressee->phoneNumbers(KContacts::PhoneNumber::Home).count() > 1) {
+                    phone = addressee->phoneNumbers(KContacts::PhoneNumber::Home).at(1);
+                }
+                if ((phone.isEmpty()) && (addressee->phoneNumbers(
+                                              KContacts::PhoneNumber::Work).count() > 1)) {
+                    phone = addressee->phoneNumbers(KContacts::PhoneNumber::Work).at(1);
+                }
+                if (phone.isEmpty()) {
+                    phone = addressee->phoneNumber(KContacts::PhoneNumber::Voice);
+                }
+                if (phone.isEmpty()) {
+                    phone = addressee->phoneNumber(KContacts::PhoneNumber::Msg);
+                }
+                if (phone.isEmpty()) {
+                    phone = addressee->phoneNumber(KContacts::PhoneNumber::Isdn);
+                }
+                if (phone.isEmpty()) {
+                    phone = addressee->phoneNumber(KContacts::PhoneNumber::Car);
+                }
+                if (phone.isEmpty()) {
+                    phone = addressee->phoneNumber(KContacts::PhoneNumber::Pager);
+                }
+
+                switch (cellPhones.count()) {
+                case 0:
+                    break;
+                case 1:
+                case 2:
+                    if (!address.isEmpty()) {
+                        cell = cellPhones.at(0);
+                    }
+                    break;
+                default:
+                    cell = cellPhones.at(2);
+                    break;
+                }
+                break;
+            }
+
+            QString email;
+            if (emails.count() > recId) {
+                email = emails[ recId ];
+                if (email == addressee->preferredEmail()) {
+                    prefFlag |= 1;
+                }
+            }
+
+            if (!address.isEmpty() || !phone.isEmpty() ||
+                    !cell.isEmpty()    || !email.isEmpty()) {
+                t << addresseeId << DELIM             // Address_id
+                  << recId << DELIM                   // Record_id
+                  << address.street() << DELIM        // Street
+                  << address.country() << DELIM       // Country
+                  << address.postalCode() << DELIM    // Zipcode
+                  << address.locality() << DELIM      // City
+                  << phone.number() << DELIM          // Phone
+                  << fax.number() << DELIM            // Fax
+                  << cell.number() << DELIM           // Mobile
+
+                  << ((recId == typeWork) ? 0 : 1) << DELIM     // Mobile_type
+
+                  << email << DELIM                   // Email
+
+                  << ((recId == typeWork) ?
+                      addressee->url().url().url() :
+                      QString()) << DELIM  // Homepage
+
+                  << ((recId == typeWork) ?
+                      addressee->role() :
+                      QString()) << DELIM  // Position
+
+                  << ((recId == typeHome) ?
+                      addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName")) :
+                      QString()) << DELIM  // Comments
+
+                  << recId << DELIM                   // Record_type_id (0,1,2)
+
+                  << DELIM                            // Record_type
+
+                  << ((recId == typeWork) ?
+                      addressee->organization() :
+                      QString()) << DELIM  // Company
+
+                  << ((recId == typeWork) ?
+                      addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department")) :
+                      QString()) << DELIM  // Department
+
+                  << dateString(addressee->revision()) << DELIM   // Change_date
+
+                  << prefFlag << DELIM                // Preferred:
+                  // ( & 1: preferred email,
+                  //   & 4: preferred cell phone )
+                  << 1 << endl;                       // Status (should always be "1")
+            }
+        }
+
+        ++addresseeId;
+    };
+
+    t << "####" << endl;
+    t << "AB_CATEGORIES:" << endl;
+    t << "Category_id,Name,Icon_id" << endl;
+
+    //  Write Category List (beware: Category_ID 0 is reserved for none
+    //  Interestingly: The index here is an int sequence and does not
+    //  correspond to the bit reference used above.
+    for (int i = 0; i < categoryMap.size(); ++i) {
+        t << (i + 1) << DELIM << categoryMap.at(i) << DELIM << 0 << endl;
+    }
+    t << "####" << endl;
+}
+
 
 void GMXImportExportPluginInterface::importGMX()
 {

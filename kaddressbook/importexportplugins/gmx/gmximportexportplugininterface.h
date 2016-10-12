@@ -21,6 +21,8 @@
 #define GMXIMPORTEXPORTPLUGININTERFACE_H
 
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
+#include <QFile>
+#include <KContacts/Addressee>
 
 class GMXImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
@@ -33,6 +35,7 @@ public:
     void exec() Q_DECL_OVERRIDE;
     bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
 private:
+    void doExport(QFile *fp, const KContacts::AddresseeList &list) const;
     void slotImportGmx();
     void slotExportGmx();
     void importGMX();
