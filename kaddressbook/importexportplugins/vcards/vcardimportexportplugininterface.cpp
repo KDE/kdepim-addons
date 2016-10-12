@@ -25,6 +25,14 @@
 #include <QPointer>
 #include <KMessageBox>
 #include <QUrl>
+#include <KContacts/VCardConverter>
+
+#ifdef QGPGME_FOUND
+#include <gpgme++/context.h>
+#include <gpgme++/data.h>
+#include <gpgme++/key.h>
+#include <qgpgme/dataprovider.h>
+#endif // QGPGME_FOUND
 
 VCardImportExportPluginInterface::VCardImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent),
@@ -182,6 +190,194 @@ void VCardImportExportPluginInterface::importVCard()
     contactList.setAddressList(addrList);
 #endif
 }
+
+KContacts::Addressee::List VCardImportExportPluginInterface::parseVCard(const QByteArray &data) const
+{
+    KContacts::VCardConverter converter;
+    return converter.parseVCards(data);
+}
+
+KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFieldType) const
+{
+    KContacts::Addressee::List list;
+
+    if (addrList.isEmpty()) {
+        return addrList;
+    }
+
+    KContacts::Addressee::List::ConstIterator it;
+    KContacts::Addressee::List::ConstIterator end(addrList.end());
+    for (it = addrList.begin(); it != end; ++it) {
+        KContacts::Addressee addr;
+
+        addr.setUid((*it).uid());
+        addr.setFormattedName((*it).formattedName());
+
+        bool addrDone = false;
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::DiplayName) {                  // output display name as N field
+            QString fmtName = (*it).formattedName();
+            QStringList splitNames = fmtName.split(QLatin1Char(' '), QString::SkipEmptyParts);
+            if (splitNames.count() >= 2) {
+                addr.setPrefix(QString());
+                addr.setGivenName(splitNames.takeFirst());
+                addr.setFamilyName(splitNames.takeLast());
+                addr.setAdditionalName(splitNames.join(QLatin1Char(' ')));
+                addr.setSuffix(QString());
+                addrDone = true;
+            }
+        }
+
+        if (!addrDone) {                                  // not wanted, or could not be split
+            addr.setPrefix((*it).prefix());
+            addr.setGivenName((*it).givenName());
+            addr.setAdditionalName((*it).additionalName());
+            addr.setFamilyName((*it).familyName());
+            addr.setSuffix((*it).suffix());
+        }
+
+        addr.setExtraNickNameList((*it).extraNickNameList());
+        addr.setMailer((*it).mailer());
+        addr.setTimeZone((*it).timeZone());
+        addr.setGeo((*it).geo());
+        addr.setProductId((*it).productId());
+        addr.setSortString((*it).sortString());
+        addr.setUrl((*it).url());
+        addr.setExtraUrlList((*it).extraUrlList());
+        addr.setSecrecy((*it).secrecy());
+        addr.setSound((*it).sound());
+        addr.setEmailList((*it).emailList());
+        addr.setCategories((*it).categories());
+        addr.setExtraSoundList((*it).extraSoundList());
+        addr.setGender((*it).gender());
+        addr.setLangs((*it).langs());
+        addr.setKind((*it).kind());
+        addr.setMembers((*it).members());
+        addr.setRelationShips((*it).relationShips());
+        addr.setSourcesUrlList((*it).sourcesUrlList());
+        addr.setImppList((*it).imppList());
+        addr.setFieldGroupList((*it).fieldGroupList());
+
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+            addr.setBirthday((*it).birthday());
+            addr.setNote((*it).note());
+        }
+
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Picture) {
+            if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+                addr.setPhoto((*it).photo());
+                addr.setExtraPhotoList((*it).extraPhotoList());
+            }
+
+            if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business) {
+                addr.setLogo((*it).logo());
+                addr.setExtraLogoList((*it).extraLogoList());
+            }
+        }
+
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business) {
+            addr.setExtraTitleList((*it).extraTitleList());
+            addr.setExtraRoleList((*it).extraRoleList());
+            addr.setExtraOrganizationList((*it).extraOrganizationList());
+            addr.setDepartment((*it).department());
+
+            KContacts::PhoneNumber::List phones = (*it).phoneNumbers(KContacts::PhoneNumber::Work);
+            KContacts::PhoneNumber::List::Iterator phoneIt;
+            KContacts::PhoneNumber::List::Iterator phoneEnd(phones.end());
+            for (phoneIt = phones.begin(); phoneIt != phoneEnd; ++phoneIt) {
+                addr.insertPhoneNumber(*phoneIt);
+            }
+
+            KContacts::Address::List addresses = (*it).addresses(KContacts::Address::Work);
+            KContacts::Address::List::Iterator addrIt;
+            KContacts::Address::List::Iterator addrEnd(addresses.end());
+            for (addrIt = addresses.begin(); addrIt != addrEnd; ++addrIt) {
+                addr.insertAddress(*addrIt);
+            }
+        }
+
+        KContacts::PhoneNumber::List phones = (*it).phoneNumbers();
+        KContacts::PhoneNumber::List::Iterator phoneIt;
+        KContacts::PhoneNumber::List::Iterator phoneEnd(phones.end());
+        for (phoneIt = phones.begin(); phoneIt != phoneEnd; ++phoneIt) {
+            int phoneType = (*phoneIt).type();
+
+            if ((phoneType & KContacts::PhoneNumber::Home) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private)) {
+                addr.insertPhoneNumber(*phoneIt);
+            } else if ((phoneType & KContacts::PhoneNumber::Work) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business)) {
+                addr.insertPhoneNumber(*phoneIt);
+            } else if ((exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other)) {
+                addr.insertPhoneNumber(*phoneIt);
+            }
+        }
+
+        KContacts::Address::List addresses = (*it).addresses();
+        KContacts::Address::List::Iterator addrIt;
+        KContacts::Address::List::Iterator addrEnd(addresses.end());
+        for (addrIt = addresses.begin(); addrIt != addrEnd; ++addrIt) {
+            int addressType = (*addrIt).type();
+
+            if ((addressType & KContacts::Address::Home) && exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+                addr.insertAddress(*addrIt);
+            } else if ((addressType & KContacts::Address::Work) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business)) {
+                addr.insertAddress(*addrIt);
+            } else if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
+                addr.insertAddress(*addrIt);
+            }
+        }
+
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
+            addr.setCustoms((*it).customs());
+        }
+
+        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Encryption) {
+            addKey(addr, KContacts::Key::PGP);
+            addKey(addr, KContacts::Key::X509);
+        }
+
+        list.append(addr);
+    }
+
+    return list;
+}
+
+void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KContacts::Key::Type type) const
+{
+#ifdef QGPGME_FOUND
+    const QString fingerprint = addr.custom(QStringLiteral("KADDRESSBOOK"),
+                                            (type == KContacts::Key::PGP ? QStringLiteral("OPENPGPFP") : QStringLiteral("SMIMEFP")));
+    if (fingerprint.isEmpty()) {
+        return;
+    }
+
+    GpgME::Context *context = GpgME::Context::createForProtocol(GpgME::OpenPGP);
+    if (!context) {
+        qCritical() << "No context available";
+        return;
+    }
+
+    context->setArmor(false);
+    context->setTextMode(false);
+
+    QGpgME::QByteArrayDataProvider dataProvider;
+    GpgME::Data dataObj(&dataProvider);
+    GpgME::Error error = context->exportPublicKeys(fingerprint.toLatin1(), dataObj);
+    delete context;
+
+    if (error) {
+        qCritical() << error.asString();
+        return;
+    }
+
+    KContacts::Key key;
+    key.setType(type);
+    key.setBinaryData(dataProvider.data());
+
+    addr.insertKey(key);
+#else
+    return;
+#endif
+}
+
 
 void VCardImportExportPluginInterface::exportVCard()
 {
