@@ -72,7 +72,6 @@ set(MESSAGELIB_LIB_VERSION "5.3.64")
 set(AKONADICALENDAR_LIB_VERSION "5.3.40")
 set(CALENDAR_UTILS_VERSION "5.3.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.3.42")
-set(GPGMEPP_LIB_VERSION "5.3.40")
 
 find_package(KF5CalendarUtils ${CALENDAR_UTILS_VERSION} CONFIG REQUIRED)
 find_package(KF5WebEngineViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
@@ -94,7 +93,6 @@ find_package(KF5Akonadi ${AKONADI_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5AkonadiCalendar ${AKONADICALENDAR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5Gravatar ${GRAVATAR_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5PimTextEdit ${KPIMTEXTEDIT_LIB_VERSION} CONFIG REQUIRED)
-find_package(KF5Gpgmepp ${GPGMEPP_LIB_VERSION} CONFIG REQUIRED)
 
 find_package(KF5Tnef ${KTNEF_LIB_VERSION} CONFIG REQUIRED)
 
@@ -104,6 +102,10 @@ add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # Extra package
 find_package(KF5GAPI "5.1.40" CONFIG)
+
+find_package(Gpgmepp 1.7.1 CONFIG)
+set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "http://www.gnupg.org" TYPE REQUIRED)
+
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
     add_subdirectory(examples)

@@ -18,13 +18,7 @@ target_link_libraries(kaddressbook_importexportvcardplugin
         KF5::KaddressbookGrantlee
         KF5::JobWidgets
         kaddressbookimportexportlibprivate
+        Gpgmepp
+        QGpgme
     )
-if (WIN32)
-    target_link_libraries(kaddressbook_importexportvcardplugin KF5::Gpgmepp)
-else()
-    target_link_libraries(kaddressbook_importexportvcardplugin KF5::Gpgmepp-pthread)
-endif()
-if(KF5Gpgmepp_FOUND)
-    target_link_libraries(kaddressbook_importexportvcardplugin KF5::QGpgme)
-endif()
 
