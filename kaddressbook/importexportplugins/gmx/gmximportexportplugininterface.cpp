@@ -30,6 +30,7 @@
 #include <QTextStream>
 #include <KAddressBookContactSelectionDialog>
 #include <QPointer>
+#include <importexportengine.h>
 #include <KIOCore/kio/filecopyjob.h>
 
 #define GMX_FILESELECTION_STRING i18n( "GMX address book file (*.gmxa)" )
@@ -156,6 +157,21 @@ void GMXImportExportPluginInterface::exportGMX()
         doExport(&file, contactLists.addressList());
         file.close();
     }
+}
+
+static bool checkDateTime(const QString &dateStr, QDateTime &dt)
+{
+    if (dateStr.isEmpty()) {
+        return false;
+    }
+
+    dt = QDateTime::fromString(dateStr, Qt::ISODate);
+    if (dt.isValid() && dt.date().year() > 1901) {
+        return true;
+    }
+    dt.setDate(QDate());
+
+    return false;
 }
 
 static const QString dateString(const QDateTime &dt)
@@ -432,6 +448,227 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
 void GMXImportExportPluginInterface::importGMX()
 {
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    QString fileName =
+        QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), GMX_FILESELECTION_STRING);
+
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly)) {
+        QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
+        KMessageBox::error(parentWidget(), msg);
+        return;
+    }
+
+    QDateTime dt;
+    QTextStream gmxStream(&file);
+    gmxStream.setCodec("ISO 8859-1");
+    QString line, line2;
+    line  = gmxStream.readLine();
+    line2 = gmxStream.readLine();
+    if (!line.startsWith(QStringLiteral("AB_ADDRESSES:")) ||
+            !line2.startsWith(QStringLiteral("Address_id"))) {
+        KMessageBox::error(
+            parentWidget(),
+            i18n("%1 is not a GMX address book file.", fileName));
+        return;
+    }
+
+    QStringList itemList;
+    QMap<QString, QString>  categoriesOfAddressee;
+    typedef QMap<QString, KContacts::Addressee *> AddresseeMap;
+    AddresseeMap addresseeMap;
+
+    // "Address_id,Nickname,Firstname,Lastname,Title,Birthday,Comments,
+    // Change_date,Status,Address_link_id,Categories"
+    line = gmxStream.readLine();
+    while ((line != QLatin1String("####")) && !gmxStream.atEnd()) {
+        // an addressee entry may spread over several lines in the file
+        while (1) {
+            itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
+            if (itemList.count() >= 11) {
+                break;
+            }
+            line.append(QLatin1Char('\n'));
+            line.append(gmxStream.readLine());
+        };
+
+        // populate the addressee
+        KContacts::Addressee *addressee = new KContacts::Addressee;
+        addressee->setNickName(itemList.at(1));
+        addressee->setGivenName(itemList.at(2));
+        addressee->setFamilyName(itemList.at(3));
+        addressee->setFormattedName(itemList.at(3) + QLatin1String(", ") + itemList.at(2));
+        addressee->setPrefix(itemList.at(4));
+        if (checkDateTime(itemList.at(5), dt)) {
+            addressee->setBirthday(dt);
+        }
+        addressee->setNote(itemList.at(6));
+        if (checkDateTime(itemList.at(7), dt)) {
+            addressee->setRevision(dt);
+        }
+        // addressee->setStatus( itemList[8] ); Status
+        // addressee->xxx( itemList[9] ); Address_link_id
+        categoriesOfAddressee[ itemList[0] ] = itemList[10];
+        addresseeMap[ itemList[0] ] = addressee;
+
+        line = gmxStream.readLine();
+    }
+
+    // now read the address records
+    line  = gmxStream.readLine();
+    if (!line.startsWith(QStringLiteral("AB_ADDRESS_RECORDS:"))) {
+        //qCWarning(KADDRESSBOOK_LOG) << "Could not find address records!";
+        return;
+    }
+    // Address_id,Record_id,Street,Country,Zipcode,City,Phone,Fax,Mobile,
+    // Mobile_type,Email,Homepage,Position,Comments,Record_type_id,Record_type,
+    // Company,Department,Change_date,Preferred,Status
+    line = gmxStream.readLine();
+    line = gmxStream.readLine();
+
+    while (!line.startsWith(QStringLiteral("####")) && !gmxStream.atEnd()) {
+        // an address entry may spread over several lines in the file
+        while (1) {
+            itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
+            if (itemList.count() >= 21) {
+                break;
+            }
+            line.append(QLatin1Char('\n'));
+            line.append(gmxStream.readLine());
+        };
+
+        KContacts::Addressee *addressee = addresseeMap[ itemList[0] ];
+        if (addressee) {
+            // itemList[1] = Record_id (numbered item, ignore here)
+            int recordTypeId = itemList[14].toInt();
+            KContacts::Address::Type addressType;
+            KContacts::PhoneNumber::Type phoneType;
+            switch (recordTypeId) {
+            case typeHome:
+                addressType = KContacts::Address::Home;
+                phoneType = KContacts::PhoneNumber::Home;
+                break;
+            case typeWork:
+                addressType = KContacts::Address::Work;
+                phoneType = KContacts::PhoneNumber::Work;
+                break;
+            case typeOther:
+            default:
+                addressType = KContacts::Address::Intl;
+                phoneType = KContacts::PhoneNumber::Voice;
+                break;
+            }
+            KContacts::Address address = addressee->address(addressType);
+            address.setStreet(itemList[2]);
+            address.setCountry(itemList[3]);
+            address.setPostalCode(itemList[4]);
+            address.setLocality(itemList[5]);
+            if (!itemList[6].isEmpty()) {
+                addressee->insertPhoneNumber(
+                    KContacts::PhoneNumber(itemList[6], phoneType));
+            }
+            if (!itemList[7].isEmpty()) {
+                addressee->insertPhoneNumber(
+                    KContacts::PhoneNumber(itemList[7], KContacts::PhoneNumber::Fax));
+            }
+            KContacts::PhoneNumber::Type cellType = KContacts::PhoneNumber::Cell;
+            // itemList[9]=Mobile_type // always 0 or -1(default phone).
+            // if ( itemList[19].toInt() & 4 ) cellType |= KContacts::PhoneNumber::Pref;
+            // don't do the above to avoid duplicate mobile numbers
+            if (!itemList[8].isEmpty()) {
+                addressee->insertPhoneNumber(KContacts::PhoneNumber(itemList[8], cellType));
+            }
+            bool preferred = false;
+            if (itemList[19].toInt() & 1) {
+                preferred = true;
+            }
+            addressee->insertEmail(itemList[10], preferred);
+            if (!itemList[11].isEmpty()) {
+                KContacts::ResourceLocatorUrl url;
+                url.setUrl(QUrl(itemList[11]));
+                addressee->setUrl(url);
+            }
+            if (!itemList[12].isEmpty()) {
+                addressee->setRole(itemList[12]);
+            }
+            // itemList[13]=Comments
+            // itemList[14]=Record_type_id (0,1,2) - see above
+            // itemList[15]=Record_type (name of this additional record entry)
+            if (!itemList[16].isEmpty()) {
+                addressee->setOrganization(itemList[16]);   // Company
+            }
+            if (!itemList[17].isEmpty()) {
+                addressee->insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department"), itemList[17]);   // Department
+            }
+            if (checkDateTime(itemList[18], dt)) {
+                addressee->setRevision(dt);   // Change_date
+            }
+            // itemList[19]=Preferred (see above)
+            // itemList[20]=Status (should always be "1")
+            addressee->insertAddress(address);
+        } else {
+            //qCWarning(KADDRESSBOOK_LOG) << "unresolved line:" << line;
+        }
+        line = gmxStream.readLine();
+    }
+
+    // extract the categories from the list of addressees of the file to import
+    QStringList usedCategoryList;
+    line = gmxStream.readLine();
+    line2 = gmxStream.readLine();
+    if (!line.startsWith(QStringLiteral("AB_CATEGORIES:")) ||
+            !line2.startsWith(QStringLiteral("Category_id"))) {
+        //qCWarning(KADDRESSBOOK_LOG) << "Could not find category records!";
+    } else {
+        while (!line.startsWith(QStringLiteral("####")) &&
+                !gmxStream.atEnd()) {
+            // a category should not spread over multiple lines, but just in case
+            while (1) {
+                itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
+                if (itemList.count() >= 3) {
+                    break;
+                }
+                line.append(QLatin1Char('\n'));
+                line.append(gmxStream.readLine());
+            };
+            usedCategoryList.append(itemList[1]);
+            line = gmxStream.readLine();
+        };
+    }
+    KContacts::Addressee::List addresseeList;
+
+    // now add the addresses to addresseeList
+    for (AddresseeMap::Iterator addresseeIt = addresseeMap.begin();
+            addresseeIt != addresseeMap.end(); ++addresseeIt) {
+        KContacts::Addressee *addressee = addresseeIt.value();
+        // Add categories
+        // catgories is a bitfield with max 31 defined categories
+        int categories = categoriesOfAddressee[ addresseeIt.key() ].toInt();
+        for (int i = 32; i >= 0; --i) {
+            // convert category index to bitfield value for comparison
+            int catBit = 1 << i;
+            if (catBit > categories) {
+                continue; // current index unassigned
+            }
+            if (catBit & categories  && usedCategoryList.count() > i) {
+                addressee->insertCategory(usedCategoryList[i]);
+            }
+        }
+        addresseeList.append(*addressee);
+        delete addressee;
+    }
+
+    file.close();
+    contactList.setAddressList(addresseeList);
+
+    ImportExportEngine *engine = new ImportExportEngine(this);
+    engine->setContactList(contactList);
+    engine->setDefaultAddressBook(defaultCollection());
+    engine->importContacts();
 
 }
 
