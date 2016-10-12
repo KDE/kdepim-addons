@@ -37,7 +37,7 @@ private:
     void slotExportLdif();
     void importLdif();
     void exportLdif();
-
+    void importLdifFile(const QString &fileName);
 };
 
 #endif // LDIFIMPORTEXPORTPLUGININTERFACE_H

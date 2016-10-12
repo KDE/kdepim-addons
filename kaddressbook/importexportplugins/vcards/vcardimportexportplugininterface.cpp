@@ -29,10 +29,12 @@
 #include <KContacts/VCardConverter>
 #include <PimCommon/RenameFileDialog>
 #include <KIOCore/kio/filecopyjob.h>
+#include <KIOCore/kio/storedtransferjob.h>
 #include <KJobWidgets>
 
 #ifdef QGPGME_FOUND
 #include <QTemporaryFile>
+#include <importexportengine.h>
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
 #include <gpgme++/key.h>
@@ -122,6 +124,49 @@ void VCardImportExportPluginInterface::slotImportVCard()
 
 void VCardImportExportPluginInterface::importVCard()
 {
+    KContacts::Addressee::List addrList;
+    QList<QUrl> urls;
+
+    const QString filter = i18n("*.vcf|vCard (*.vcf)\n*|all files (*)");
+    urls =
+            QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"),
+                                         QUrl(),
+                                         filter);
+
+    if (urls.isEmpty()) {
+        return;
+    }
+
+    const QString caption(i18nc("@title:window", "vCard Import Failed"));
+    bool anyFailures = false;
+
+    const int numberOfUrl(urls.count());
+    for (int i = 0; i < numberOfUrl; ++i) {
+        const QUrl url = urls.at(i);
+
+        auto job = KIO::storedGet(url);
+        KJobWidgets::setWindow(job, parentWidget());
+        if (job->exec()) {
+
+            const QByteArray data = job->data();
+            if (!data.isEmpty()) {
+                addrList += parseVCard(data);
+            }
+        } else {
+            const QString msg = xi18nc(
+                        "@info",
+                        "<para>Unable to access vCard:</para><para>%1</para>",
+                        job->errorString());
+            KMessageBox::error(parentWidget(), msg, caption);
+            anyFailures = true;
+        }
+    }
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    contactList.setAddressList(addrList);
+    ImportExportEngine *engine = new ImportExportEngine(this);
+    engine->setContactList(contactList);
+    engine->setDefaultAddressBook(defaultCollection());
+    engine->importContacts();
 #if 0
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     KContacts::Addressee::List addrList;

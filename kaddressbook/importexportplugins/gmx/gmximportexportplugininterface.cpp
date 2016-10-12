@@ -18,6 +18,7 @@
 */
 
 #include "gmximportexportplugininterface.h"
+#include "kaddressbook_importexport_gmx_debug.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -519,7 +520,7 @@ void GMXImportExportPluginInterface::importGMX()
     // now read the address records
     line  = gmxStream.readLine();
     if (!line.startsWith(QStringLiteral("AB_ADDRESS_RECORDS:"))) {
-        //qCWarning(KADDRESSBOOK_LOG) << "Could not find address records!";
+        qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find address records!";
         return;
     }
     // Address_id,Record_id,Street,Country,Zipcode,City,Phone,Fax,Mobile,
@@ -609,7 +610,7 @@ void GMXImportExportPluginInterface::importGMX()
             // itemList[20]=Status (should always be "1")
             addressee->insertAddress(address);
         } else {
-            //qCWarning(KADDRESSBOOK_LOG) << "unresolved line:" << line;
+            qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "unresolved line:" << line;
         }
         line = gmxStream.readLine();
     }
@@ -620,7 +621,7 @@ void GMXImportExportPluginInterface::importGMX()
     line2 = gmxStream.readLine();
     if (!line.startsWith(QStringLiteral("AB_CATEGORIES:")) ||
             !line2.startsWith(QStringLiteral("Category_id"))) {
-        //qCWarning(KADDRESSBOOK_LOG) << "Could not find category records!";
+        qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find category records!";
     } else {
         while (!line.startsWith(QStringLiteral("####")) &&
                 !gmxStream.atEnd()) {

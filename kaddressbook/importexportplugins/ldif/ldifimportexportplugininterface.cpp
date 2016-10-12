@@ -85,10 +85,8 @@ void LDifImportExportPluginInterface::slotExportLdif()
     Q_EMIT emitPluginActivated(this);
 }
 
-void LDifImportExportPluginInterface::importLdif()
+void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
 {
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
-    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(),  QDir::homePath(), i18n("LDif Files (*.ldif)"));
     if (fileName.isEmpty()) {
         return;
     }
@@ -109,6 +107,7 @@ void LDifImportExportPluginInterface::importLdif()
     KContacts::ContactGroup::List lstGroup;
     KContacts::Addressee::List lstAddresses;
     KContacts::LDIFConverter::LDIFToAddressee(wholeFile, lstAddresses, lstGroup, dtDefault);
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     contactList.setAddressList(lstAddresses);
     contactList.setContactGroupList(lstGroup);
 
@@ -116,6 +115,12 @@ void LDifImportExportPluginInterface::importLdif()
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
+}
+
+void LDifImportExportPluginInterface::importLdif()
+{
+    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(),  QDir::homePath(), i18n("LDif Files (*.ldif)"));
+    importLdifFile(fileName);
 }
 
 void doExport(QFile *file, const KAddressBookImportExport::KAddressBookImportExportContactList &list)
@@ -211,5 +216,7 @@ bool LDifImportExportPluginInterface::canImportFileType(const QUrl &url)
 
 void LDifImportExportPluginInterface::importFile(const QUrl &url)
 {
-    //TODO
+    if (url.isLocalFile()) {
+        importLdifFile(url.path());
+    }
 }
