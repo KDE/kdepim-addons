@@ -48,7 +48,9 @@ private:
     void slotImportVCard();
     void slotExportVCard4();
     void slotExportVCard3();
+    QString contactFileName(const KContacts::Addressee &contact) const;
     void slotExportVCard2();
+    bool doExport(const QUrl &url, const QByteArray &data) const;
 
     ExportVCardType mExportVCardType;
 };

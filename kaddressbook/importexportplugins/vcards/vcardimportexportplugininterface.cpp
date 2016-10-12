@@ -25,9 +25,14 @@
 #include <QPointer>
 #include <KMessageBox>
 #include <QUrl>
+#include <QFileDialog>
 #include <KContacts/VCardConverter>
+#include <PimCommon/RenameFileDialog>
+#include <KIOCore/kio/filecopyjob.h>
+#include <KJobWidgets>
 
 #ifdef QGPGME_FOUND
+#include <QTemporaryFile>
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
 #include <gpgme++/key.h>
@@ -378,6 +383,31 @@ void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KConta
 #endif
 }
 
+bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArray &data) const
+{
+    QUrl newUrl(url);
+    if (newUrl.isLocalFile() && QFileInfo(newUrl.toLocalFile()).exists()) {
+        PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(newUrl, false, parentWidget());
+        PimCommon::RenameFileDialog::RenameFileDialogResult result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+        if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
+            newUrl = dialog->newName();
+        } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {
+            delete dialog;
+            return true;
+        }
+        delete dialog;
+    }
+
+    QTemporaryFile tmpFile;
+    tmpFile.open();
+
+    tmpFile.write(data);
+    tmpFile.flush();
+    auto job = KIO::file_copy(QUrl::fromLocalFile(tmpFile.fileName()), newUrl, -1, KIO::Overwrite);
+    KJobWidgets::setWindow(job, parentWidget());
+    return job->exec();
+}
+
 
 void VCardImportExportPluginInterface::exportVCard()
 {
@@ -398,10 +428,130 @@ void VCardImportExportPluginInterface::exportVCard()
         KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
         return;
     }
+
+
+    KContacts::VCardConverter converter;
+    QUrl url;
+
+    const KContacts::Addressee::List list = filterContacts(contacts, exportFields);
+    if (list.isEmpty()) {   // no contact selected
+        return;
+    }
+
+    bool ok = true;
+    if (list.count() == 1) {
+        url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(
+                                              QString(list[ 0 ].givenName() +
+                                                      QLatin1Char(QLatin1Char('_')) +
+                                                      list[ 0 ].familyName() +
+                                                      QLatin1String(".vcf"))));
+        if (url.isEmpty()) {   // user canceled export
+            return;
+        }
+
+        switch(mExportVCardType)
+        {
+        case VCard2_1:
+            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
+            break;
+        case VCard3:
+            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
+            break;
+        case VCard4:
+            ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
+            break;
+        }
+    } else {
+        const int answer =
+            KMessageBox::questionYesNoCancel(
+                parentWidget(),
+                i18nc("@info",
+                      "You have selected a list of contacts, "
+                      "shall they be exported to several files?"),
+                QString(),
+                KGuiItem(i18nc("@action:button", "Export to One File")),
+                KGuiItem(i18nc("@action:button", "Export to Several Files")));
+
+        switch (answer) {
+        case KMessageBox::No: {
+            const QUrl baseUrl = QFileDialog::getExistingDirectoryUrl();
+            if (baseUrl.isEmpty()) {
+                return; // user canceled export
+            }
+
+            for (int i = 0; i < list.count(); ++i) {
+                const KContacts::Addressee contact = list.at(i);
+
+                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + QLatin1String(".vcf"));
+
+                bool tmpOk = false;
+
+                switch(mExportVCardType)
+                {
+                case VCard2_1:
+                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
+                    break;
+                case VCard3:
+                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
+                    break;
+                case VCard4:
+                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
+                    break;
+                }
+                ok = ok && tmpOk;
+            }
+            break;
+        }
+        case KMessageBox::Yes: {
+            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")));
+            if (url.isEmpty()) {
+                return; // user canceled export
+            }
+
+            switch(mExportVCardType)
+            {
+            case VCard2_1:
+                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
+                break;
+            case VCard3:
+                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
+                break;
+            case VCard4:
+                ok = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
+                break;
+            }
+            break;
+        }
+        case KMessageBox::Cancel:
+        default:
+            return; // user canceled export
+        }
+    }
 }
 
 
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
     return url.path().endsWith(QStringLiteral(".vcf"));
+}
+
+QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const
+{
+    if (!contact.givenName().isEmpty() && !contact.familyName().isEmpty()) {
+        return QStringLiteral("%1_%2").arg(contact.givenName()).arg(contact.familyName());
+    }
+
+    if (!contact.familyName().isEmpty()) {
+        return contact.familyName();
+    }
+
+    if (!contact.givenName().isEmpty()) {
+        return contact.givenName();
+    }
+
+    if (!contact.organization().isEmpty()) {
+        return contact.organization();
+    }
+
+    return contact.uid();
 }

@@ -16,6 +16,7 @@ target_link_libraries(kaddressbook_importexportvcardplugin
         KF5::XmlGui
         KF5::Contacts
         KF5::KaddressbookGrantlee
+        KF5::JobWidgets
         kaddressbookimportexportlibprivate
     )
 if (WIN32)
