@@ -529,13 +529,13 @@ void VCardImportExportPluginInterface::exportVCard()
 
                 switch (mExportVCardType) {
                 case VCard2_1:
-                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v2_1));
+                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v2_1));
                     break;
                 case VCard3:
-                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v3_0));
+                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v3_0));
                     break;
                 case VCard4:
-                    tmpOk = doExport(url, converter.exportVCards(list, KContacts::VCardConverter::v4_0));
+                    tmpOk = doExport(url, converter.exportVCard(contact, KContacts::VCardConverter::v4_0));
                     break;
                 }
                 ok = ok && tmpOk;
