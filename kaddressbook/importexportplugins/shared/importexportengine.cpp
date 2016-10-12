@@ -31,7 +31,9 @@
 ImportExportEngine::ImportExportEngine(QObject *parent)
     : QObject(parent),
       mParentWidget(Q_NULLPTR),
-      mImportProgressDialog(Q_NULLPTR)
+      mImportProgressDialog(Q_NULLPTR),
+      mNumberElementToImport(-1),
+      mImportDone(0)
 {
 
 }
@@ -101,6 +103,8 @@ void ImportExportEngine::importContacts()
 
     mImportProgressDialog->show();
 
+    mNumberElementToImport = mContactsList.count();
+
     for (int i = 0; i < mContactsList.addressList().count(); ++i) {
         Akonadi::Item item;
         item.setPayload<KContacts::Addressee>(mContactsList.addressList().at(i));
@@ -118,21 +122,23 @@ void ImportExportEngine::importContacts()
         connect(createJob, &KJob::result, this, &ImportExportEngine::slotImportJobDone);
     }
     Q_EMIT finished();
-    deleteLater();
 }
 
 void ImportExportEngine::slotImportJobDone(KJob *)
 {
-    if (!mImportProgressDialog) {
-        return;
+    mImportDone++;
+    if (mImportProgressDialog) {
+
+        mImportProgressDialog->setValue(mImportProgressDialog->value() + 1);
+
+        // cleanup on last step
+        if (mImportProgressDialog->value() == mImportProgressDialog->maximum()) {
+            mImportProgressDialog->deleteLater();
+            mImportProgressDialog = Q_NULLPTR;
+        }
     }
-
-    mImportProgressDialog->setValue(mImportProgressDialog->value() + 1);
-
-    // cleanup on last step
-    if (mImportProgressDialog->value() == mImportProgressDialog->maximum()) {
-        mImportProgressDialog->deleteLater();
-        mImportProgressDialog = Q_NULLPTR;
+    if (mImportDone >= mNumberElementToImport) {
+        deleteLater();
     }
 }
 

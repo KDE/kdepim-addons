@@ -43,11 +43,13 @@ Q_SIGNALS:
     void finished();
 
 private:
+    void slotImportJobDone(KJob *);
     KAddressBookImportExport::KAddressBookImportExportContactList mContactsList;
     Akonadi::Collection mDefaultAddressBook;
     QWidget *mParentWidget;
     QProgressDialog *mImportProgressDialog;
-    void slotImportJobDone(KJob *);
+    int mNumberElementToImport;
+    int mImportDone;
 };
 
 #endif // IMPORTEXPORTENGINE_H
