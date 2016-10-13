@@ -241,7 +241,8 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
         const QStringList categories = addressee->categories();
         long int category = 0;
         if (!categories.isEmpty()) {
-            for (int i = 0; i < categories.count(); ++i) {
+            const int categoriesCount(categories.count());
+            for (int i = 0; i < categoriesCount; ++i) {
                 const QString cat = categories[i];
                 if (categoryMap.contains(cat)) {
                     category |= 1 << categoryMap.indexOf(cat, 0);

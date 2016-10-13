@@ -90,20 +90,20 @@ void ImportExportEngine::importContacts()
     const Akonadi::Collection collection = dlg->selectedCollection();
     delete dlg;
 
+    mNumberElementToImport = mContactsList.count();
     if (!mImportProgressDialog) {
         mImportProgressDialog = new QProgressDialog(mParentWidget);
         mImportProgressDialog->setWindowTitle(i18n("Import Contacts"));
         mImportProgressDialog->setLabelText(
             i18np("Importing one contact to %2", "Importing %1 contacts to %2",
-                  mContactsList.count(), collection.name()));
+                  mNumberElementToImport, collection.name()));
         mImportProgressDialog->setCancelButton(Q_NULLPTR);
         mImportProgressDialog->setAutoClose(true);
-        mImportProgressDialog->setRange(1, mContactsList.count());
+        mImportProgressDialog->setRange(1, mNumberElementToImport);
     }
 
     mImportProgressDialog->show();
     mImportDone = 0;
-    mNumberElementToImport = mContactsList.count();
 
     for (int i = 0; i < mContactsList.addressList().count(); ++i) {
         Akonadi::Item item;
