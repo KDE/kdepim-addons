@@ -41,7 +41,7 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     ViewerPluginExternalConfigureWidget w;
     QLabel *label = w.findChild<QLabel *>(QStringLiteral("lab"));
     QVERIFY(label);
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("layout"));
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
 
