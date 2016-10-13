@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to send VCard from selected contacts.", 
         "Description[ca@valencia]": "Este connector permet enviar vCard des dels contactes seleccionats.", 
         "Description[ca]": "Aquest connector permet enviar vCard des dels contactes seleccionats.", 
+        "Description[es]": "Este complemento le permite enviar vCard desde contactos seleccionados.", 
         "Description[nl]": "Deze plug-in stelt u in staat VCards van geselecteerde contactpersonen te verzenden.", 
         "Description[pl]": "Ta wtyczka umożliwia wysłanie wizytówki wybranego kontaktu.", 
         "Description[pt]": "Este 'plugin' permite-lhe enviar um vCard com os contactos seleccionados.", 
