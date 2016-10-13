@@ -33,7 +33,6 @@ public:
     ~ViewerPluginExternalConfigureWidget();
     void load();
     void save();
-    void reset();
 private:
     void modifyScript(QListWidgetItem *item);
     void fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos);

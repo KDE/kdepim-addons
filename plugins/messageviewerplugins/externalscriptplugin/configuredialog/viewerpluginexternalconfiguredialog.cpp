@@ -53,11 +53,6 @@ void ViewerPluginExternalConfigureDialog::load()
     mConfigWidget->load();
 }
 
-void ViewerPluginExternalConfigureDialog::reset()
-{
-    mConfigWidget->reset();
-}
-
 void ViewerPluginExternalConfigureDialog::help()
 {
     showHelp(QStringLiteral("kmail"), QString());

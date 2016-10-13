@@ -181,11 +181,6 @@ void ViewerPluginExternalConfigureWidget::save()
     }
 }
 
-void ViewerPluginExternalConfigureWidget::reset()
-{
-    //No implemented.
-}
-
 void ViewerPluginExternalConfigureWidget::updateButtons()
 {
     QListWidgetItem *item = mListExternal->currentItem();
