@@ -18,6 +18,7 @@
 */
 
 #include "viewerpluginexternalconfigurewidget.h"
+#include "externalscriptplugin_debug.h"
 #include "viewerpluginexternaleditdialog.h"
 #include <QVBoxLayout>
 #include <QStandardPaths>
@@ -161,10 +162,9 @@ void ViewerPluginExternalConfigureWidget::save()
     Q_FOREACH (const QString &path, mFilesToRemove) {
         QFile f(path);
         if (!f.remove()) {
-            qWarning() << " Impossible to delete " << path;
+            qCWarning(EXTERNALSCRIPTPLUGIN_LOG) << " Impossible to delete " << path;
         }
     }
-    qDebug()<<" void ViewerPluginExternalConfigureWidget::save()" <<  mListExternal->count();
     for (int i = 0; i < mListExternal->count(); ++i) {
         ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
         const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
@@ -178,7 +178,6 @@ void ViewerPluginExternalConfigureWidget::save()
         desktopFile.desktopGroup().writeEntry(QStringLiteral("Executable"), scriptInfo.executable());
         desktopFile.desktopGroup().writeEntry(QStringLiteral("CommandLine"), scriptInfo.commandLine());
         desktopFile.desktopGroup().sync();
-        qDebug()<<" filenamepath"<<filenamepath;
     }
 }
 
