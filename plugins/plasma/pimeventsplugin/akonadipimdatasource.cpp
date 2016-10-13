@@ -20,19 +20,20 @@
 #include "akonadipimdatasource.h"
 #include "settingschangenotifier.h"
 #include "pimeventsplugin_debug.h"
+#include "eventmodel.h"
 
-#include <AkonadiCore/ChangeRecorder>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/EntityDisplayAttribute>
+#include <AkonadiCore/Collection>
 #include <AkonadiCore/CollectionColorAttribute>
 #include <AkonadiCore/AttributeFactory>
-#include <Akonadi/Calendar/ETMCalendar>
+
+#include <QSet>
 
 #include <KSharedConfig>
 #include <KCoreConfigSkeleton>
 
 #include <EventViews/Prefs>
+
+using namespace std::placeholders;
 
 AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     : QObject(parent)
@@ -42,20 +43,16 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged,
             this, &AkonadiPimDataSource::onSettingsChanged);
 
-    mMonitor = new Akonadi::ChangeRecorder(this);
-    mMonitor->setChangeRecordingEnabled(false);
-    mMonitor->itemFetchScope().fetchFullPayload(true);
-    mMonitor->itemFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
-    mMonitor->collectionFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
+    mCalendar = new EventModel(this);
+
+    const auto config = KSharedConfig::openConfig();
+    const auto group = config->group("PIMEventsPlugin");
+    const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
     onSettingsChanged();
 
-    mCalendar = new Akonadi::ETMCalendar(mMonitor, this);
-    // TOOD: Only retrieve PLD:HEAD once it's supported
-    mCalendar->setCollectionFilteringEnabled(false);
-
     // Would be nice to have a proper API to read KOrganizer calendar colors...
-    KSharedConfig::Ptr config = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
-    KCoreConfigSkeleton *skel = new KCoreConfigSkeleton(config);
+    const auto korganizerrc = KSharedConfig::openConfig(QStringLiteral("korganizerrc"));
+    const auto skel = new KCoreConfigSkeleton(korganizerrc);
     mEventViewsPrefs = EventViews::PrefsPtr(new EventViews::Prefs(skel));
     mEventViewsPrefs->readConfig();
 }
@@ -105,27 +102,23 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidenc
 
 void AkonadiPimDataSource::onSettingsChanged()
 {
-    QSet<Akonadi::Collection> currentCols;
-    Q_FOREACH (const Akonadi::Collection &col, mMonitor->collectionsMonitored()) {
-        currentCols.insert(col);
+    QSet<Akonadi::Collection> monitored;
+    Q_FOREACH (const Akonadi::Collection &col, mCalendar->collections()) {
+        monitored.insert(col);
     }
 
-    auto config = KSharedConfig::openConfig();
-    auto group = config->group("PIMEventsPlugin");
+    const auto config = KSharedConfig::openConfig();
+    const auto group = config->group("PIMEventsPlugin");
     const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
-    QSet<Akonadi::Collection> configuredCols;
-    Q_FOREACH (qint64 colId, calendars) {
-        configuredCols.insert(Akonadi::Collection(colId));
+    QSet<Akonadi::Collection> configured;
+    for (const auto colId : calendars) {
+        configured.insert(Akonadi::Collection(colId));
     }
 
-    Q_FOREACH (const Akonadi::Collection &col, (currentCols - configuredCols)) {
-        mMonitor->setCollectionMonitored(col, false);
-    }
-    Q_FOREACH (const Akonadi::Collection &col, (configuredCols - currentCols)) {
-        mMonitor->setCollectionMonitored(col, true);
-    }
-
-    const bool hasSelectedCols = mMonitor->collectionsMonitored().isEmpty();
-    mMonitor->setMimeTypeMonitored(KCalCore::Event::eventMimeType(), hasSelectedCols);
-    mMonitor->setMimeTypeMonitored(KCalCore::Todo::todoMimeType(), hasSelectedCols);
+    const auto toEnable = configured - monitored;
+    std::for_each(toEnable.cbegin(), toEnable.cend(),
+                  std::bind(&EventModel::addCalendar, mCalendar, _1));
+    const auto toDisable = monitored - configured;
+    std::for_each(toDisable.cbegin(), toDisable.cend(),
+                  std::bind(&EventModel::removeCalendar, mCalendar, _1));
 }

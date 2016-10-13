@@ -24,4 +24,4 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
 endmacro()
 
 add_plasma_pimeventsplugin_test(eventdatavisitortest.cpp ../eventdatavisitor.cpp)
-add_plasma_pimeventsplugin_test(pimeventsplugintest.cpp "../eventdatavisitor.cpp;../pimeventsplugin.cpp;../akonadipimdatasource.cpp;../settingschangenotifier.cpp")
+add_plasma_pimeventsplugin_test(pimeventsplugintest.cpp "../eventmodel.cpp;../eventdatavisitor.cpp;../pimeventsplugin.cpp;../akonadipimdatasource.cpp;../settingschangenotifier.cpp")

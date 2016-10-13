@@ -17,35 +17,49 @@
  *
  */
 
-#ifndef AKONADIPIMDATASOURCE_H
-#define AKONADIPIMDATASOURCE_H
+#ifndef EVENTMODEL_H
+#define EVENTMODEL_H
 
-#include "pimdatasource.h"
-#include <QObject>
-#include <EventViews/Prefs>
+#include <Akonadi/Calendar/CalendarBase>
+#include <QVector>
 
-class EventModel;
+namespace Akonadi
+{
+class Monitor;
+}
 
-class AkonadiPimDataSource : public QObject,
-    public PimDataSource
+class EventModel : public Akonadi::CalendarBase
 {
     Q_OBJECT
-
 public:
-    explicit AkonadiPimDataSource(QObject *parent = Q_NULLPTR);
-    ~AkonadiPimDataSource();
 
-    qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
-    KCalCore::Calendar *calendar() const Q_DECL_OVERRIDE;
-    QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;
+    explicit EventModel(QObject *parent = Q_NULLPTR);
+    ~EventModel();
+
+    QVector<Akonadi::Collection> collections() const;
+
+    Akonadi::Collection collection(qint64 id) const;
+
+public Q_SLOTS:
+    void addCalendar(const Akonadi::Collection &col);
+    void removeCalendar(const Akonadi::Collection &col);
 
 private Q_SLOTS:
-    void onSettingsChanged();
+    void onItemsReceived(const Akonadi::Item::List &items);
 
 private:
-    EventModel *mCalendar;
-    EventViews::PrefsPtr mEventViewsPrefs;
-    mutable QHash<qint64, QString> mColorCache;
+    void createMonitor();
+    void populateCollection(const Akonadi::Collection &col);
+    void removeCollection(const Akonadi::Collection &col);
+
+    QVector<Akonadi::Collection> mCols;
+    Akonadi::Monitor *mMonitor;
+    QMap<Akonadi::Collection::Id, KJob *> mFetchJobs;
 };
 
 #endif
+
+
+
+
+
