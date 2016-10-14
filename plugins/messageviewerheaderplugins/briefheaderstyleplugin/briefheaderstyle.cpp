@@ -103,11 +103,17 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
-        headerParts << i18n("CC: ") + StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayNameOnly);
+        const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayNameOnly);
+        if (!str.isEmpty()) {
+            headerParts << i18n("CC: ") + str;
+        }
     }
 
     if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
-        headerParts << i18n("BCC: ") + StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayNameOnly);
+        const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayNameOnly);
+        if (!str.isEmpty()) {
+            headerParts << i18n("BCC: ") + str;
+        }
     }
 
     if (strategy->showHeader(QStringLiteral("date"))) {
