@@ -102,10 +102,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
     // the subject line and box below for details
     if (strategy->showHeader(QStringLiteral("subject"))) {
-        KTextToHTML::Options flags = KTextToHTML::PreserveSpaces;
-        if (MessageViewer::MessageViewerSettings::self()->showEmoticons()) {
-            flags |= KTextToHTML::ReplaceSmileys;
-        }
+        const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
         headerStr += QStringLiteral("<div dir=\"%1\">%2</div>\n")
                      .arg(subjectDir)
@@ -160,20 +157,28 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     }
 
     // cc line, if an
-    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false))
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td>%2</td></tr>\n")
-                         .arg(i18n("CC: "))
-                         .arg(StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress,
-                                 QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
-                                 QStringLiteral("FullCcAddressList"))));
+    if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
+        const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress,
+                                                          QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
+                                                          QStringLiteral("FullCcAddressList"));
+        if (!str.isEmpty()) {
+            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
+                                            "<td>%2</td></tr>\n")
+                             .arg(i18n("CC: "))
+                             .arg(str));
+        }
+    }
 
     // Bcc line, if any
-    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false))
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td>%2</td></tr>\n")
-                         .arg(i18n("BCC: "))
-                         .arg(StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress)));
+    if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
+        const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
+        if (!str.isEmpty()) {
+            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
+                                            "<td>%2</td></tr>\n")
+                             .arg(i18n("BCC: "))
+                             .arg(str));
+        }
+    }
 
     if (strategy->showHeader(QStringLiteral("date")))
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"

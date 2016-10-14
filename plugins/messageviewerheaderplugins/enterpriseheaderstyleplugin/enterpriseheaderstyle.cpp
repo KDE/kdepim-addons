@@ -100,10 +100,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
-        KTextToHTML::Options flags = KTextToHTML::PreserveSpaces;
-        if (MessageViewer::MessageViewerSettings::self()->showEmoticons()) {
-            flags |= KTextToHTML::ReplaceSmileys;
-        }
+        const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
         headerStr +=
             QLatin1String("     <tr> \n"

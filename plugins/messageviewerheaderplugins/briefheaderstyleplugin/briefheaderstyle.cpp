@@ -78,10 +78,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     QString headerStr = QLatin1String("<div class=\"header\" dir=\"") + dir + QLatin1String("\">\n");
 
     if (strategy->showHeader(QStringLiteral("subject"))) {
-        KTextToHTML::Options flags = KTextToHTML::PreserveSpaces;
-        if (MessageViewer::MessageViewerSettings::self()->showEmoticons()) {
-            flags |= KTextToHTML::ReplaceSmileys;
-        }
+        const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
         headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n") +
                      QLatin1String("<b style=\"font-size:130%\">");
