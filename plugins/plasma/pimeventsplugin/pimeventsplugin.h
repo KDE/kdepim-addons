@@ -30,7 +30,7 @@ class ETMCalendar;
 
 class PimDataSource;
 class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
-    , public KCalCore::Calendar::CalendarObserver
+                      , public KCalCore::Calendar::CalendarObserver
 {
     Q_OBJECT
     Q_INTERFACES(CalendarEvents::CalendarEventsPlugin)

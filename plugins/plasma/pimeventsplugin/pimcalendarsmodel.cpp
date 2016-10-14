@@ -49,9 +49,9 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     mEtm->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
     mEtm->setListFilter(Akonadi::CollectionFetchScope::Enabled);
     connect(mEtm, &Akonadi::EntityTreeModel::collectionTreeFetched,
-    this, [this]() {
-        sort(0, Qt::AscendingOrder);
-    });
+            this, [this]() {
+                sort(0, Qt::AscendingOrder);
+            });
 
     setSourceModel(mEtm);
 

@@ -7,6 +7,7 @@ set(pimeventsplugin_SRCS
     akonadipimdatasource.cpp
     eventdatavisitor.cpp
     settingschangenotifier.cpp
+    eventmodel.cpp
 )
 
 ecm_qt_declare_logging_category(loggingcategory_SRCS
