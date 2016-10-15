@@ -121,7 +121,6 @@ void ImportExportEngine::importContacts()
         Akonadi::Job *createJob = new Akonadi::ItemCreateJob(groupItem, collection);
         connect(createJob, &KJob::result, this, &ImportExportEngine::slotImportJobDone);
     }
-    Q_EMIT finished();
 }
 
 void ImportExportEngine::slotImportJobDone(KJob *)
@@ -138,6 +137,7 @@ void ImportExportEngine::slotImportJobDone(KJob *)
         }
     }
     if (mImportDone >= mNumberElementToImport) {
+        Q_EMIT finished();
         deleteLater();
     }
 }
