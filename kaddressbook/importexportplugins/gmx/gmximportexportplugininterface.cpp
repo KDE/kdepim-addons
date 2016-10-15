@@ -441,7 +441,8 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
     //  Write Category List (beware: Category_ID 0 is reserved for none
     //  Interestingly: The index here is an int sequence and does not
     //  correspond to the bit reference used above.
-    for (int i = 0; i < categoryMap.size(); ++i) {
+    const int categoryCount(categoryMap.size());
+    for (int i = 0; i < categoryCount; ++i) {
         t << (i + 1) << DELIM << categoryMap.at(i) << DELIM << 0 << endl;
     }
     t << "####" << endl;
@@ -459,7 +460,7 @@ void GMXImportExportPluginInterface::importGMX()
 
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
+        const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
         KMessageBox::error(parentWidget(), msg);
         return;
     }

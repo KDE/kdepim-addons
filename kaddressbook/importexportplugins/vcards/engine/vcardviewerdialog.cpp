@@ -33,13 +33,14 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
       mContacts(list)
 {
     setWindowTitle(i18nc("@title:window", "Import vCard"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Apply);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
-    QPushButton *user1Button = new QPushButton;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Apply, this);
+
+    QPushButton *user1Button = new QPushButton(this);
     buttonBox->addButton(user1Button, QDialogButtonBox::ActionRole);
-    QPushButton *user2Button = new QPushButton;
+    QPushButton *user2Button = new QPushButton(this);
     buttonBox->addButton(user2Button, QDialogButtonBox::ActionRole);
+
     connect(buttonBox, &QDialogButtonBox::accepted, this, &VCardViewerDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &VCardViewerDialog::reject);
     KGuiItem::assign(user1Button, KStandardGuiItem::no());

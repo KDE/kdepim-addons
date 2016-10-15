@@ -111,7 +111,8 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
     bool first = true;
 
     // First output the column headings
-    for (int i = 0; i < fields.count(); ++i) {
+    const int fieldsCount(fields.count());
+    for (int i = 0; i < fieldsCount; ++i) {
         if (!first) {
             stream << ",";
         }
