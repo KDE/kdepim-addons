@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to check gravatar.", 
+        "Description": "This plugin allows you to check the Gravatar images.", 
         "Description[ca@valencia]": "Este connector permet comprovar el «gravatar».", 
         "Description[ca]": "Aquest connector permet comprovar el «gravatar».", 
         "Description[es]": "Este complemento le permite comprobar gravatar.", 

@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugins allows you to change selected text case.", 
+        "Description": "This plugin allows you to change the case of the selected text.", 
         "Description[ca@valencia]": "Este connector permet canviar majúscules/minúscules en el text seleccionat.", 
         "Description[ca]": "Aquest connector permet canviar majúscules/minúscules en el text seleccionat.", 
         "Description[es]": "Este complemento le permite cambiar el modo del texto seleccionado.", 

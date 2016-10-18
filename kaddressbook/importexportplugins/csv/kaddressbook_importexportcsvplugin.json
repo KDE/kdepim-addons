@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to import export csv.", 
+        "Description": "This plugin allows you to import/export CSV.", 
         "Description[ca@valencia]": "Este connector permet importar o exportar els CSV.", 
         "Description[ca]": "Aquest connector permet importar o exportar els CSV.", 
         "Description[en_GB]": "This plugin allows you to import export CSV.", 
@@ -14,7 +14,7 @@
         "Description[x-test]": "xxThis plugin allows you to import export csv.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportcsv", 
-        "Name": "Import Export CSV", 
+        "Name": "Import/Export CSV", 
         "Name[ca@valencia]": "Importa / exporta el CSV", 
         "Name[ca]": "Importa / exporta el CSV", 
         "Name[es]": "Importar/Exportar CSV", 

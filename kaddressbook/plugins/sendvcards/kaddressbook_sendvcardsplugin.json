@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to send VCard from selected contacts.", 
+        "Description": "This plugin allows you to send vCard from selected contacts.", 
         "Description[ca@valencia]": "Este connector permet enviar vCard des dels contactes seleccionats.", 
         "Description[ca]": "Aquest connector permet enviar vCard des dels contactes seleccionats.", 
         "Description[es]": "Este complemento le permite enviar vCard desde contactos seleccionados.", 

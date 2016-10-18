@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to support grantlee mail header style.", 
+        "Description": "This plugin allows you to use a Gantlee-based mail header style.", 
         "Description[ca@valencia]": "Este connector permet implementar l'estil de capçalera «Grantlee» al correu.", 
         "Description[ca]": "Aquest connector permet implementar l'estil de capçalera «Grantlee» al correu.", 
         "Description[en_GB]": "This plugin allows you to support Grantlee mail header style.", 
