@@ -1,9 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import/export GMX.", 
+        "Description[ca]": "Aquest connector permet importar o exportar els GMX.", 
+        "Description[nl]": "Deze plug-in stelt u in staat GMX te importeren/exporteren.", 
+        "Description[pt]": "Este 'plugin' permite-lhe importar/exportar dados em GMX.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera GMX.", 
+        "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі GMX.", 
+        "Description[x-test]": "xxThis plugin allows you to import/export GMX.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportgmx", 
         "Name": "Import Export GMX", 
+        "Name[ca]": "Importa/exporta el GMX", 
+        "Name[nl]": "GMX importeren/exporteren", 
+        "Name[pt]": "Importação/Exportação de GMX", 
+        "Name[sv]": "Importera och exportera GMX", 
+        "Name[uk]": "Імпортування та експортування GMX", 
+        "Name[x-test]": "xxImport Export GMXxx", 
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"
         ], 

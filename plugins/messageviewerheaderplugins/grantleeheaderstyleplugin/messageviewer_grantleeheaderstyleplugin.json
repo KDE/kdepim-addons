@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to use a Grantlee-based mail header style.", 
+        "Description[uk]": "За допомогою цього додатка реалізовано підтримку стилів заголовка повідомлення на основі Grantlee.", 
         "EnabledByDefault": "true", 
         "Name": "Grantlee Header Style", 
         "Name[ca@valencia]": "Estil de capçalera «Grantlee»", 

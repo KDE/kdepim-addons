@@ -1,9 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import/export LDIF.", 
+        "Description[ca]": "Aquest connector permet importar o exportar els LDIF.", 
+        "Description[nl]": "Deze plug-in stelt u in staat LDIF te importeren/exporteren.", 
+        "Description[pt]": "Este 'plugin' permite-lhe importar/exportar dados em LDIF.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera LDIF.", 
+        "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі LDIF.", 
+        "Description[x-test]": "xxThis plugin allows you to import/export LDIF.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportldif", 
         "Name": "Import/Export LDIF", 
+        "Name[ca]": "Importa/exporta el LDIF", 
+        "Name[nl]": "LDIF importeren/exporteren", 
+        "Name[pt]": "Importação/Exportação de LDIF", 
+        "Name[sv]": "Importera och exportera LDIF", 
+        "Name[uk]": "Імпортування та експортування LDIF", 
+        "Name[x-test]": "xxImport/Export LDIFxx", 
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"
         ], 

@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to send email directly to selected contacts.", 
+        "Description[ca]": "Aquest connector permet enviar correus electrònics directament als contactes seleccionats.", 
+        "Description[nl]": "Deze plug-in stelt u in staat direct e-mail naar geselecteerde contactpersonen te verzenden.", 
+        "Description[pt]": "Este 'plugin' permite-lhe enviar directamente um e-mail para os contactos seleccionados.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att skicka e-post direkt till markerade kontakter.", 
+        "Description[uk]": "За допомогою цього додатка можна безпосередньо надсилати повідомлення вибраним контактам.", 
+        "Description[x-test]": "xxThis plugin allows you to send email directly to selected contacts.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbooksendmail", 
         "Name": "Send Mail", 

@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to send vCard from selected contacts.", 
+        "Description[ca]": "Aquest connector permet enviar les vCard dels contactes seleccionats.", 
+        "Description[nl]": "Deze plug-in stelt u in staat vCards van geselecteerde contactpersonen te verzenden.", 
+        "Description[pt]": "Este 'plugin' permite-lhe enviar um vCard com os contactos seleccionados.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att skicka visitkort från markerade kontakter.", 
+        "Description[uk]": "За допомогою цього додатка можна надсилати ваші візитівки вибраним контактам.", 
+        "Description[x-test]": "xxThis plugin allows you to send vCard from selected contacts.xx", 
         "EnabledByDefault": "true", 
         "Id": "kaddressbooksendvcards", 
         "Name": "Send vCards", 
