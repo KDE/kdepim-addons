@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import/export LDAP contacts.", 
+        "Description[ca@valencia]": "Este connector permet importar o exportar els contactes LDAP.", 
         "Description[ca]": "Aquest connector permet importar o exportar els contactes LDAP.", 
         "Description[nl]": "Deze plug-in stelt u in staat LDAP contactpersonen te importeren/exporteren.", 
         "Description[pt]": "Este 'plugin' permite-lhe importar/exportar contactos da LDAP.", 
@@ -10,6 +11,7 @@
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportldap", 
         "Name": "Import/Export LDAP Contacts", 
+        "Name[ca@valencia]": "Importa/exporta els contactes LDAP", 
         "Name[ca]": "Importa/exporta els contactes LDAP", 
         "Name[nl]": "LDAP contactpersonen importeren/exporteren", 
         "Name[pt]": "Importação/Exportação de Contactos LDAP", 
