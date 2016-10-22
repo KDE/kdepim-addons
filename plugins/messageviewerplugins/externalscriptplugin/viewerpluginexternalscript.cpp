@@ -56,4 +56,3 @@ bool MessageViewer::ViewerPluginExternalscript::hasConfigureDialog() const
 
 #include "viewerpluginexternalscript.moc"
 
-

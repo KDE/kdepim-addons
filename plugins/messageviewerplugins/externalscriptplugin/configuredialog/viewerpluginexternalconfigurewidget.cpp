@@ -195,7 +195,7 @@ void ViewerPluginExternalConfigureWidget::updateButtons()
     }
 }
 
-void ViewerPluginExternalConfigureWidget::slotDoubleClicked(QListWidgetItem * item)
+void ViewerPluginExternalConfigureWidget::slotDoubleClicked(QListWidgetItem *item)
 {
     if (item) {
         modifyScript(item);

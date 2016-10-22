@@ -159,8 +159,8 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // cc line, if an
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress,
-                                                          QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
-                                                          QStringLiteral("FullCcAddressList"));
+                            QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
+                            QStringLiteral("FullCcAddressList"));
         if (!str.isEmpty()) {
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2</td></tr>\n")

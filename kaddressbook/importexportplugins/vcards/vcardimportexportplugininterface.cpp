@@ -129,9 +129,9 @@ void VCardImportExportPluginInterface::importVCard()
 
     const QString filter = i18n("*.vcf|vCard (*.vcf)\n*|all files (*)");
     urls =
-            QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"),
-                                         QUrl(),
-                                         filter);
+        QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"),
+                                     QUrl(),
+                                     filter);
 
     if (urls.isEmpty()) {
         return;
@@ -154,9 +154,9 @@ void VCardImportExportPluginInterface::importVCard()
             }
         } else {
             const QString msg = xi18nc(
-                        "@info",
-                        "<para>Unable to access vCard:</para><para>%1</para>",
-                        job->errorString());
+                                    "@info",
+                                    "<para>Unable to access vCard:</para><para>%1</para>",
+                                    job->errorString());
             KMessageBox::error(parentWidget(), msg, caption);
             anyFailures = true;
         }

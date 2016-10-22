@@ -74,7 +74,7 @@ void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo_data()
 
 void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo()
 {
-    QFETCH (ViewerPluginExternalScriptInfo, scriptinfo);
+    QFETCH(ViewerPluginExternalScriptInfo, scriptinfo);
     ViewerPluginExternalEditWidget w;
     w.setScriptInfo(scriptinfo);
     QCOMPARE(scriptinfo, w.scriptInfo());

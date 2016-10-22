@@ -39,7 +39,6 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     QVBoxLayout *layoutDomainName = new QVBoxLayout(groupBoxDomainName);
     layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
 
-
     QHBoxLayout *radioButtonLayout = new QHBoxLayout;
     layoutDomainName->addLayout(radioButtonLayout);
     radioButtonLayout->setAlignment(Qt::AlignHCenter);
@@ -52,7 +51,6 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     mRejectedDomain = new QRadioButton(i18n("Rejected Domain Name"), this);
     mRejectedDomain->setObjectName(QStringLiteral("rejectdomainname"));
     radioButtonLayout->addWidget(mRejectedDomain);
-
 
     PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
         static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);

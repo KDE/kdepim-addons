@@ -42,7 +42,7 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setEnabled(false);
-    resize(350,200);
+    resize(350, 200);
 }
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()

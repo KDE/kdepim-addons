@@ -31,7 +31,6 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
 
-
     mName = new QLineEdit(this);
     mName->setObjectName(QStringLiteral("name"));
     mainLayout->addRow(i18n("Name:"), mName);

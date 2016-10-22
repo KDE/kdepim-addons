@@ -140,7 +140,6 @@ void ConfirmAddressCheckJobTest::shouldNotDuplicateValue()
     QVERIFY(!job.validEmails().isEmpty());
     QCOMPARE(job.validEmails(), emails);
 
-
     job.setCheckSettings(domains, whiteList, true);
     job.setAddressList(QStringList() << emails << emails);
     job.start();
