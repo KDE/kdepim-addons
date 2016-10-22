@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to use a Grantlee-based mail header style.", 
+        "Description[ca@valencia]": "Este connector permet usar un estil de capçalera de correu basat en el «Grantlee».", 
         "Description[ca]": "Aquest connector permet usar un estil de capçalera de correu basat en el «Grantlee».", 
         "Description[nl]": "Deze plug-in stelt u in staat een op Grantlee gebaseerde e-mailheaderstijl te gebruiken.", 
+        "Description[pl]": "Ta wtyczka dostarcza obsługi nagłówków pocztowych Grantlee.", 
         "Description[pt]": "Este 'plugin' permite-lhe usar um estilo de cabeçalhos de e-mail baseado no Grantlee.", 
         "Description[sv]": "Insticksprogrammet gör det möjligt att använda en Grantlee-baserad brevhuvudstil.", 
         "Description[uk]": "За допомогою цього додатка реалізовано підтримку стилів заголовка повідомлення на основі Grantlee.", 
