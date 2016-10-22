@@ -21,7 +21,6 @@
 #define AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
 
 #include <QObject>
-class QStandardItemModel;
 class AutomaticAddContactsConfigureWidget;
 class AutomaticAddContactsConfigureWidgetTest : public QObject
 {

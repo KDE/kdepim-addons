@@ -28,7 +28,6 @@ namespace Akonadi
 class CollectionComboBox;
 }
 class QAbstractItemModel;
-class KConfigGroup;
 class AutomaticAddContactsTabWidget : public QWidget
 {
     Q_OBJECT

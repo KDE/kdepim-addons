@@ -22,7 +22,6 @@
 
 #include <QWidget>
 class QTabWidget;
-class KConfigGroup;
 class AutomaticAddContactsTabWidget;
 
 namespace KIdentityManagement

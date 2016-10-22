@@ -33,7 +33,6 @@ class KCheckableProxyModel;
 
 namespace Akonadi
 {
-class ChangeRecorder;
 class EntityTreeModel;
 class Monitor;
 }

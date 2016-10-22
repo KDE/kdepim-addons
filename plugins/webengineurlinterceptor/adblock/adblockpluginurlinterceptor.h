@@ -26,7 +26,6 @@ class QWebEngineView;
 namespace WebEngineViewer
 {
 class NetworkPluginUrlInterceptorInterface;
-class NetworkPluginUrlInterceptorConfigureWidget;
 }
 class AdblockPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor
 {
