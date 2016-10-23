@@ -47,9 +47,8 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
       mShorturlServiceName(Q_NULLPTR),
       mCurrentEngine(Q_NULLPTR)
 {
-    QGridLayout *grid = new QGridLayout;
+    QGridLayout *grid = new QGridLayout(this);
     grid->setMargin(2);
-    setLayout(grid);
 
     QToolButton *closeBtn = new QToolButton(this);
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
@@ -63,14 +62,14 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
 
     grid->addWidget(closeBtn, 0, 0);
 
-    mIndicatorLabel = new KPIM::ProgressIndicatorLabel(i18n("Generating short URL..."));
+    mIndicatorLabel = new KPIM::ProgressIndicatorLabel(i18n("Generating short URL..."), this);
     grid->addWidget(mIndicatorLabel, 0, 1);
 
-    QPushButton *configure = new QPushButton(i18n("Configure..."));
+    QPushButton *configure = new QPushButton(i18n("Configure..."), this);
     connect(configure, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotConfigure);
     grid->addWidget(configure, 0, 2);
 
-    mShorturlServiceName = new QLabel(/*mEngine->shortUrlName()*/);
+    mShorturlServiceName = new QLabel(/*mEngine->shortUrlName()*/this);
     grid->addWidget(mShorturlServiceName, 1, 1);
 
     mConvertButton = new QPushButton(i18n("Convert"));
@@ -81,29 +80,29 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     connect(mInsertShortUrl, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotInsertShortUrl);
     grid->addWidget(mInsertShortUrl, 2, 2);
 
-    QLabel *lab = new QLabel(i18n("Original URL:"));
+    QLabel *lab = new QLabel(i18n("Original URL:"), this);
     grid->addWidget(lab, 3, 0);
 
-    mOriginalUrl = new KLineEdit;
+    mOriginalUrl = new KLineEdit(this);
     mOriginalUrl->setClearButtonEnabled(true);
     mOriginalUrl->setTrapReturnKey(true);
     connect(mOriginalUrl, &KLineEdit::textChanged, this, &ShortUrlWidgetNg::slotOriginalUrlChanged);
     connect(mOriginalUrl, &KLineEdit::returnPressed, this, &ShortUrlWidgetNg::slotConvertUrl);
     grid->addWidget(mOriginalUrl, 3, 1);
 
-    mCopyToClipboard = new QPushButton(i18n("Copy to clipboard"));
+    mCopyToClipboard = new QPushButton(i18n("Copy to clipboard"), this);
     connect(mCopyToClipboard, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotPasteToClipboard);
     grid->addWidget(mCopyToClipboard, 3, 2);
 
-    lab = new QLabel(i18n("Short URL:"));
+    lab = new QLabel(i18n("Short URL:"), this);
     grid->addWidget(lab, 4, 0);
 
-    mShortUrl = new QLineEdit;
+    mShortUrl = new QLineEdit(this);
     connect(mShortUrl, &QLineEdit::textChanged, this, &ShortUrlWidgetNg::slotShortUrlChanged);
     mShortUrl->setReadOnly(true);
     grid->addWidget(mShortUrl, 4, 1);
 
-    mOpenShortUrl = new QPushButton(i18n("Open Short URL"));
+    mOpenShortUrl = new QPushButton(i18n("Open Short URL"), this);
     connect(mOpenShortUrl, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotOpenShortUrl);
     grid->addWidget(mOpenShortUrl, 4, 2);
 

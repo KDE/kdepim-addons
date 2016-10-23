@@ -47,16 +47,15 @@ ShortUrlConfigureWidget::ShortUrlConfigureWidget(QWidget *parent)
     : QWidget(parent),
       d(new ShortUrlConfigureWidgetPrivate)
 {
-    QHBoxLayout *lay = new QHBoxLayout;
+    QHBoxLayout *lay = new QHBoxLayout(this);
     lay->setMargin(0);
 
-    QLabel *lab = new QLabel(i18n("Select Short URL server:"));
+    QLabel *lab = new QLabel(i18n("Select Short URL server:"), this);
     lay->addWidget(lab);
 
-    d->mShortUrlServer = new QComboBox;
+    d->mShortUrlServer = new QComboBox(this);
     connect(d->mShortUrlServer, static_cast<void (QComboBox::*)(int)>(&QComboBox::activated), this, &ShortUrlConfigureWidget::slotChanged);
     lay->addWidget(d->mShortUrlServer);
-    setLayout(lay);
     init();
     loadConfig();
 }
