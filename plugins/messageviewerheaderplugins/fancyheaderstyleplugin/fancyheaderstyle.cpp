@@ -197,33 +197,46 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         }
 
         if (strategy->showHeader(QStringLiteral("x-mailer"))) {
-            if (message->headerByType("X-Mailer")) {
+            if (auto hrd = message->headerByType("X-Mailer")) {
                 headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                                 "<td>%2</td></tr>\n")
                                  .arg(i18n("X-Mailer: "))
-                                 .arg(mHeaderStyleUtil.strToHtml(message->headerByType("X-Mailer")->asUnicodeString())));
+                                 .arg(mHeaderStyleUtil.strToHtml(hrd->asUnicodeString())));
             }
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("x-bugzilla-url")) && message->headerByType("X-Bugzilla-URL")) {
-        const QString product   = message->headerByType("X-Bugzilla-Product")   ? message->headerByType("X-Bugzilla-Product")->asUnicodeString() : QString();
-        const QString component = message->headerByType("X-Bugzilla-Component") ? message->headerByType("X-Bugzilla-Component")->asUnicodeString() : QString();
-        const QString status    = message->headerByType("X-Bugzilla-Status")    ? message->headerByType("X-Bugzilla-Status")->asUnicodeString() : QString();
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td>%2/%3, <strong>%4</strong></td></tr>\n")
-                         .arg(i18n("Bugzilla: "))
-                         .arg(mHeaderStyleUtil.strToHtml(product))
-                         .arg(mHeaderStyleUtil.strToHtml(component))
-                         .arg(mHeaderStyleUtil.strToHtml(status)));
+    if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
+        if (message->headerByType("X-Bugzilla-URL")) {
+            QString product;
+            if (auto hrd = message->headerByType("X-Bugzilla-Product")) {
+                product = hrd->asUnicodeString();
+            }
+            QString component;
+            if (auto hrd = message->headerByType("X-Bugzilla-Component")) {
+                component = hrd->asUnicodeString();
+            }
+            QString status;
+            if (auto hrd = message->headerByType("X-Bugzilla-Status")) {
+                status = hrd->asUnicodeString();
+            }
+            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
+                                            "<td>%2/%3, <strong>%4</strong></td></tr>\n")
+                             .arg(i18n("Bugzilla: "))
+                             .arg(mHeaderStyleUtil.strToHtml(product))
+                             .arg(mHeaderStyleUtil.strToHtml(component))
+                             .arg(mHeaderStyleUtil.strToHtml(status)));
+        }
     }
 
-    if (strategy->showHeader(QStringLiteral("disposition-notification-to")) && message->headerByType("Disposition-Notification-To")) {
-        const QString to = message->headerByType("Disposition-Notification-To") ? message->headerByType("Disposition-Notification-To")->asUnicodeString() : QString();
-        headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                        "<td>%2</tr>\n")
-                         .arg(i18n("MDN To: "))
-                         .arg(mHeaderStyleUtil.strToHtml(to)));
+    if (strategy->showHeader(QStringLiteral("disposition-notification-to"))){
+        if (auto hrd = message->headerByType("Disposition-Notification-To")) {
+            const QString to = hrd->asUnicodeString();
+            headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
+                                            "<td>%2</tr>\n")
+                             .arg(i18n("MDN To: "))
+                             .arg(mHeaderStyleUtil.strToHtml(to)));
+        }
     }
 
     if (!spamHTML.isEmpty())
