@@ -207,7 +207,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     }
 
     if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
-        if (message->headerByType("X-Bugzilla-URL")) {
+        if (message->hasHeader("X-Bugzilla-URL")) {
             QString product;
             if (auto hrd = message->headerByType("X-Bugzilla-Product")) {
                 product = hrd->asUnicodeString();
