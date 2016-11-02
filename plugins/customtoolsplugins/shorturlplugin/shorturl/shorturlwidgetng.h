@@ -26,7 +26,6 @@ class KLineEdit;
 class QPushButton;
 class QLabel;
 class QLineEdit;
-class QNetworkConfigurationManager;
 namespace KPIM
 {
 class ProgressIndicatorLabel;
@@ -69,7 +68,6 @@ private:
     QPushButton *mInsertShortUrl;
     QPushButton *mOpenShortUrl;
     KPIM::ProgressIndicatorLabel *mIndicatorLabel;
-    QNetworkConfigurationManager *mNetworkConfigurationManager;
     QHash<QString, ShortUrlEngineInterface *> mLstInterface;
     ShortUrlEngineInterface *mCurrentEngine;
 };

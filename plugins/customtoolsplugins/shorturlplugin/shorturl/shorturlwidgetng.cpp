@@ -23,6 +23,7 @@
 #include "shorturlconfiguredialog.h"
 #include "Libkdepim/ProgressIndicatorLabel"
 #include "shorturlengineplugin/shorturlenginepluginmanager.h"
+#include <PimCommon/NetworkManager>
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -112,14 +113,12 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     mInsertShortUrl->setEnabled(false);
     mOpenShortUrl->setEnabled(false);
 
-    mNetworkConfigurationManager = new QNetworkConfigurationManager();
     initializePlugins();
     loadEngine();
 }
 
 ShortUrlWidgetNg::~ShortUrlWidgetNg()
 {
-    delete mNetworkConfigurationManager;
 }
 
 void ShortUrlWidgetNg::initializePlugins()
@@ -181,7 +180,7 @@ void ShortUrlWidgetNg::slotConvertUrl()
     if (!mCurrentEngine) {
         return;
     }
-    if (!mNetworkConfigurationManager->isOnline()) {
+    if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
         KMessageBox::information(this, i18n("No network connection detected, we cannot shorten URL."), i18n("No network"));
         return;
     }
