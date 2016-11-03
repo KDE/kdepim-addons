@@ -1,0 +1,190 @@
+/*
+  Copyright (c) 2016 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
+
+   This library is free software; you can redistribute it and/or modify it
+   under the terms of the GNU Library General Public License as published by
+   the Free Software Foundation; either version 2 of the License, or (at your
+   option) any later version.
+
+   This library is distributed in the hope that it will be useful, but WITHOUT
+   ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or
+   FITNESS FOR A PARTICULAR PURPOSE.  See the GNU Library General Public
+   License for more details.
+
+   You should have received a copy of the GNU Library General Public License
+   along with this library; see the file COPYING.LIB.  If not, write to the
+   Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA
+   02110-1301, USA.
+*/
+
+#include "gnupgwksurlhandler.h"
+#include "gnupgwksmessagepart.h"
+#include "gnupgwks_debug.h"
+
+#include <QString>
+#include <QUrlQuery>
+#include <QProcess>
+
+#include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/NodeHelper>
+#include <MessageViewer/Viewer>
+
+#include <QGpgME/Protocol>
+#include <QGpgME/WKSPublishJob>
+
+#include <MailTransport/Transport>
+#include <MailTransport/TransportManager>
+#include <MailTransport/MessageQueueJob>
+
+#include <KIdentityManagement/IdentityManager>
+#include <KIdentityManagement/Identity>
+
+#include <KMime/Message>
+#include <KMime/Util>
+
+#include <AkonadiCore/ItemDeleteJob>
+
+#include <KLocalizedString>
+
+using namespace MimeTreeParser::Interface;
+
+bool ApplicationGnuPGWKSUrlHandler::handleContextMenuRequest(BodyPart *,
+                                                             const QString &,
+                                                             const QPoint &) const
+{
+    return false;
+}
+
+bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance,
+                                                BodyPart *part, const QString &path) const
+{
+    Q_UNUSED(viewerInstance);
+
+    if (!path.startsWith(QLatin1String("gnupgwks?"))) {
+        return false;
+    }
+
+    const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
+    if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
+        QProcess::startDetached(QStringLiteral("kleopatra"),
+                                { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
+        return true;
+    } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
+        GnuPGWKSMessagePart mp(part);
+        if (!sendConfirmation(viewerInstance, mp)) {
+            part->nodeHelper()->setProperty("__GnuPGWKS" + mp.fingerprint().toLatin1(), QStringLiteral("error"));
+        }
+        return true;
+    }
+
+    return false;
+}
+
+QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart* part, const QString &path) const
+{
+    Q_UNUSED(part);
+
+    if (!path.startsWith(QLatin1String("gnupgwks?"))) {
+        return QString();
+    }
+
+    const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
+    if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
+        return i18n("Display key details");
+    } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
+        return i18n("Publish the key");
+    }
+    return QString();
+}
+
+
+QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Message::Ptr &msg) const
+{
+    auto job = QGpgME::openpgp()->wksPublishJob();
+    QEventLoop el;
+    QByteArray result;
+    QObject::connect(job, &QGpgME::WKSPublishJob::result,
+                     [&el, &result](const GpgME::Error &, const QByteArray &returnedData,
+                           const QByteArray &returnedError)
+                     {
+                         if (returnedData.isEmpty()) {
+                             qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
+                         }
+                         result = returnedData;
+                         el.quit();
+                     });
+    job->startReceive(msg->encodedContent());
+    el.exec();
+
+    return result;
+}
+
+
+bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *viewerInstance,
+                                                     const GnuPGWKSMessagePart &mp) const
+{
+
+
+    const QByteArray data = createConfirmation(viewerInstance->message());
+    if (data.isEmpty()) {
+        return false;
+    }
+
+    auto msg = KMime::Message::Ptr::create();
+    msg->setContent(KMime::CRLFtoLF(data));
+    msg->parse();
+
+    // Find identity
+    const auto identity = KIdentityManagement::IdentityManager::self()->identityForAddress(mp.address());
+    const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
+    if (!nullIdentity) {
+        KMime::Headers::Generic *x_header = new KMime::Headers::Generic("X-KMail-Identity");
+        x_header->from7BitString(QByteArray::number(identity.uoid()));
+        msg->setHeader(x_header);
+    }
+
+    // Find transport set in the identity, fallback to default transport
+    auto transportMgr = MailTransport::TransportManager::self();
+    const bool identityHasTransport = !identity.transport().isEmpty();
+    int transportId = -1;
+    if (!nullIdentity && identityHasTransport) {
+        transportId = identity.transport().toInt();
+    } else {
+        transportId = transportMgr->defaultTransportId();
+    }
+    // No transport exists, ask user to create one
+    if (transportId == -1) {
+        if (!transportMgr->showTransportCreationDialog(0,  MailTransport::TransportManager::IfNoTransportExists)) {
+            return false;
+        }
+        transportId = transportMgr->defaultTransportId();
+    }
+    auto header = new KMime::Headers::Generic("X-KMail-Transport");
+    header->fromUnicodeString(QString::number(transportId), "utf-8");
+    msg->setHeader(header);
+
+    // Build the message
+    msg->assemble();
+
+    // Move to outbox
+    auto transport = transportMgr->transportById(transportId);
+    auto job = new MailTransport::MessageQueueJob;
+    job->addressAttribute().setTo({ msg->to(false)->asUnicodeString() });
+    job->transportAttribute().setTransportId(transport->id());
+    job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
+    job->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);
+    job->sentBehaviourAttribute().setSendSilently(true);
+    job->setMessage(msg);
+
+    // Send
+    if (!job->exec()) {
+        qCWarning(GNUPGWKS_LOG) << "Error queuing message in output:" << job->errorText();
+        return false;
+    }
+
+    // Delete the original request
+    // Don't use viewerInstance->deleteMessage(), which triggers Move To Trash,
+    // we want to get rid of the message for good.
+    new Akonadi::ItemDeleteJob(viewerInstance->messageItem());
+    return true;
+}

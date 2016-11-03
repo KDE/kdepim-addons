@@ -1,0 +1,54 @@
+<style type="text/css">
+table.key {
+  width: 100%;
+  border: 1px solid {{ style.borderColor }};
+}
+table .keyH {
+  background-color: {{ style.borderColor }};
+  color: {{ style.frameTextColor }};
+}
+table .keyB {
+}
+</style>
+<table cellspacing="0" cellpadding="2" class="key">
+<tr class="keyH"><td>{% i18n "OpenPGP Key" %}</td></tr>
+<tr class="keyb"><td>
+  <div style="padding: 10pt;">
+  <p>
+  {% i18n "This is an OpenPGP key, which can be used to sign or encrypt emails." %}
+  </p>
+
+  {% if block.showKeyDetails %}
+    {% if block.hasKey %}
+    <table border="0" cellspacing="1" cellpadding="1">
+      <tr>
+        <td><b>{% i18n "Owner:" %}&nbsp;</b></td><td>{{ block.uid }}</td>
+      </tr>
+      {% if block.created %}
+      <tr>
+        <td><b>{% i18n "Created:" %}&nbsp;</td><td>{{ block.created }}</td>
+      </tr>
+      {% endif %}
+      {% if block.fingerprint %}
+      <tr>
+        <td><b>{% i18n "Fingerprint:" %}&nbsp;</td><td>{{ block.fingerprint }}</td>
+      </tr>
+      {% endif %}
+    </table>
+    <a href="kmail:hideSignatureDetails">{% i18n "Hide key details" %}</a>
+    {% if block.keyUrl %}
+      | <a href="{{ block.keyUrl }}">{% i18n "Open in Kleopatra" %}</a>
+    {% endif %}
+    {% elif block.error %}
+      <p class="error">{% i18n "Error while loading key: %1" key.error %}</p>
+    {% else %}
+      <p>{% i18n "Loading key details..." %}</p>
+    {% endif %}
+  {% else %}
+    <a href="kmail:showSignatureDetails">{% i18n "Show key details ..." %}</a>
+    {% endif %}
+    | <a href="{{ block.importUrl }}">{% i18n "Import key" %}</a>
+    </div>
+</td></tr>
+<tr class="keyH"><td>&nbsp;</td></tr>
+</table>

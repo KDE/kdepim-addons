@@ -1,0 +1,8 @@
+[Misc]
+Name=PGP and GnuPG WKS formatter
+Comment=A bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messages
+
+[Plugin]
+Type=application/vnd.gnupg.wks
+X-KDE-Library=messageviewer_bodypartformatter_application_gnupgwks
+

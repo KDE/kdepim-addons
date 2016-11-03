@@ -1,0 +1,52 @@
+<style type="text/css">
+.gnupgwksbutton {
+    display: inline-block !important;
+    font-weight: bold !important;
+    padding: 4px 8px !important;
+    margin-bottom: 4px !important;
+    border: 1px solid {{ style.buttonBorder }} !important;
+    border-radius: 3px !important;
+    background: {{ style.buttonBg }} !important;
+    vertical-align: middle !important;
+}
+.gnupgwksbutton:hover{
+    border-color: {{ style.buttonBorderHl }} !important;
+}
+.gnupgwksbutton a.button {
+    color: {{ style.buttonFg }} !important;
+}
+.gnupgwkserror {
+    color: {{ style.errorFg }};
+}
+</style>
+
+<div style="padding: 5pt">
+{% if block.isRequest %}
+  <div style="font-size: large; text-align: center; padding-bottom: 20pt;">
+    {% i18n "Register your OpenPGP key with your email provider. " %}
+  </div>
+  <p>{% i18n "When you register your key with your email provider other people will then be able to retrieve the key and send you encrypted emails and verify authenticity of emails you send them." %}</p>
+  <div style="text-align: center; padding-bottom: 20pt;">
+    {% if block.hasError %}
+    <p style="gnupgwkserror">{% i18n "An error occured while publishing the key. Please try again later." %}</p>
+    {% else %}
+    <a class="gnupgwksbutton" href="{{ block.confirmUrl }}">{% i18n "Register the key" %}</a>
+    <br><br>
+    <p>{% i18n "The email will be automatically deleted once you confirm the registration." %}</p>
+    {% endif %}
+    <br></br>
+    <a href="{{ block.keyUrl }}">{% i18n "Show key details" %}</a>
+  </div>
+{% elif block.isResponse %}
+  <div style="font-size: large; text-align: center; padding-bottom: 20pt;">
+    {% i18n "This is an automatically generated email. The purpose of this email is to regisdter your OpenPGP key with your email provider." %}
+  </div>
+  <div styl="text-align: center; padding-bottom: 20pt;">
+    <p>{% i18n "Your OpenPGP key will be published on your email provider's key server. Other users will be able to retrieve the key and send you encrypted emails and verify authenticity of emails you send them." %}</p>
+    <br/>
+    <br/>
+    <a href="{{ block.keyUrl }}">{% i18n "Show key details" %}</a>
+  </div>
+{% endif %}
+</div>
+
