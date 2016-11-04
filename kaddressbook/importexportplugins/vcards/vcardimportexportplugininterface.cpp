@@ -482,11 +482,13 @@ void VCardImportExportPluginInterface::exportVCard()
 
     bool ok = true;
     if (list.count() == 1) {
+        QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
         url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(
                                               QString(list[ 0 ].givenName() +
                                                       QLatin1Char(QLatin1Char('_')) +
                                                       list[ 0 ].familyName() +
-                                                      QLatin1String(".vcf"))));
+                                                      QLatin1String(".vcf")))
+                , QString(), Q_NULLPTR, options);
         if (url.isEmpty()) {   // user canceled export
             return;
         }
@@ -543,7 +545,8 @@ void VCardImportExportPluginInterface::exportVCard()
             break;
         }
         case KMessageBox::Yes: {
-            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")));
+            QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
+            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), Q_NULLPTR, options);
             if (url.isEmpty()) {
                 return; // user canceled export
             }

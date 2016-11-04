@@ -109,8 +109,8 @@ void GMXImportExportPluginInterface::exportGMX()
 
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
-
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING);
+    QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING, Q_NULLPTR, options);
     if (url.isEmpty()) {
         return;
     }

@@ -180,7 +180,8 @@ void CSVImportExportPluginInterface::exportCSV()
 
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")));
+    QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")), QString(), Q_NULLPTR, options);
     if (url.isEmpty()) {
         return;
     }

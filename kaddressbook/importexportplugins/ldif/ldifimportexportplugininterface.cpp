@@ -154,8 +154,10 @@ void LDifImportExportPluginInterface::exportLdif()
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
 
+    QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     const QUrl url =
-        QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.ldif")), i18n("LDif Files (*.ldif)"));
+        QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.ldif")),
+                                    i18n("LDif Files (*.ldif)"), Q_NULLPTR, options);
     if (url.isEmpty()) {
         return;
     }
