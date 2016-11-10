@@ -28,7 +28,7 @@
   <p>{% i18n "When you register your key with your email provider other people will then be able to retrieve the key and send you encrypted emails and verify authenticity of emails you send them." %}</p>
   <div style="text-align: center; padding-bottom: 20pt;">
     {% if block.hasError %}
-    <p style="gnupgwkserror">{% i18n "An error occured while publishing the key. Please try again later." %}</p>
+    <p style="gnupgwkserror">{% i18n "An error occurred while publishing the key. Please try again later." %}</p>
     {% else %}
     <a class="gnupgwksbutton" href="{{ block.confirmUrl }}">{% i18n "Register the key" %}</a>
     <br><br>
@@ -39,7 +39,7 @@
   </div>
 {% elif block.isResponse %}
   <div style="font-size: large; text-align: center; padding-bottom: 20pt;">
-    {% i18n "This is an automatically generated email. The purpose of this email is to regisdter your OpenPGP key with your email provider." %}
+    {% i18n "This is an automatically generated email. The purpose of this email is to register your OpenPGP key with your email provider." %}
   </div>
   <div styl="text-align: center; padding-bottom: 20pt;">
     <p>{% i18n "Your OpenPGP key will be published on your email provider's key server. Other users will be able to retrieve the key and send you encrypted emails and verify authenticity of emails you send them." %}</p>
