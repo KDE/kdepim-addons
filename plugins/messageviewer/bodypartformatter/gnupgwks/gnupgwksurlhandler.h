@@ -48,5 +48,4 @@ private:
     QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
 };
 
-
 #endif

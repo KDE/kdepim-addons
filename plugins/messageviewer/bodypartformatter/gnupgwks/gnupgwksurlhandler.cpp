@@ -49,14 +49,14 @@
 using namespace MimeTreeParser::Interface;
 
 bool ApplicationGnuPGWKSUrlHandler::handleContextMenuRequest(BodyPart *,
-                                                             const QString &,
-                                                             const QPoint &) const
+        const QString &,
+        const QPoint &) const
 {
     return false;
 }
 
 bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance,
-                                                BodyPart *part, const QString &path) const
+        BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
 
@@ -67,7 +67,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
         QProcess::startDetached(QStringLiteral("kleopatra"),
-                                { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
+        { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
         return true;
     } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
         GnuPGWKSMessagePart mp(part);
@@ -80,7 +80,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
     return false;
 }
 
-QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart* part, const QString &path) const
+QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QString &path) const
 {
     Q_UNUSED(part);
 
@@ -97,33 +97,29 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart* part, const QS
     return QString();
 }
 
-
 QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Message::Ptr &msg) const
 {
     auto job = QGpgME::openpgp()->wksPublishJob();
     QEventLoop el;
     QByteArray result;
     QObject::connect(job, &QGpgME::WKSPublishJob::result,
-                     [&el, &result](const GpgME::Error &, const QByteArray &returnedData,
-                           const QByteArray &returnedError)
-                     {
-                         if (returnedData.isEmpty()) {
-                             qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
-                         }
-                         result = returnedData;
-                         el.quit();
-                     });
+                     [&el, &result](const GpgME::Error &, const QByteArray & returnedData,
+    const QByteArray & returnedError) {
+        if (returnedData.isEmpty()) {
+            qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
+        }
+        result = returnedData;
+        el.quit();
+    });
     job->startReceive(msg->encodedContent());
     el.exec();
 
     return result;
 }
 
-
 bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *viewerInstance,
-                                                     const GnuPGWKSMessagePart &mp) const
+        const GnuPGWKSMessagePart &mp) const
 {
-
 
     const QByteArray data = createConfirmation(viewerInstance->message());
     if (data.isEmpty()) {

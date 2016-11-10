@@ -22,7 +22,6 @@
 #include <MimeTreeParser/BodyPart>
 #include <KMime/Content>
 
-
 GnuPGWKSMessagePart::GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : mPart(part)
     , mType(UnknownType)

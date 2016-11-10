@@ -47,8 +47,6 @@ QUrlQuery ApplicationPgpKeyUrlHandler::decodePath(const QString &path) const
     return QUrlQuery(path.mid(sizeof("pgpkey?") - 1));
 }
 
-
-
 bool ApplicationPgpKeyUrlHandler::handleContextMenuRequest(BodyPart *, const QString &, const QPoint &) const
 {
     return false;
@@ -65,7 +63,7 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
 }
 
 bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v,
-                                              BodyPart *part, const QString &path) const
+        BodyPart *part, const QString &path) const
 {
     const QUrlQuery q = decodePath(path);
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("import")) {

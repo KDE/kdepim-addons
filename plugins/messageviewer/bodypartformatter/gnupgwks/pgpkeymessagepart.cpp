@@ -85,13 +85,13 @@ MimeTreeParser::Interface::BodyPart *PgpKeyMessagePart::part() const
     return mPart;
 }
 
-
 void PgpKeyMessagePart::parseContent(KMime::Content *node)
 {
     QProcess p;
     p.start(QStringLiteral("gpg"), { QStringLiteral("--with-colons"),
                                      QStringLiteral("--fixed-list-mode"),
-                                     QStringLiteral("--with-fingerprint") });
+                                     QStringLiteral("--with-fingerprint")
+                                   });
     p.waitForStarted();
     p.write(node->decodedContent());
     p.closeWriteChannel();
@@ -121,7 +121,7 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
             if (size > 6) {
                 mKeyDate = QDateTime::fromTime_t(cols[5].toUInt());
             }
-        // gpg2: UID is on a separate line
+            // gpg2: UID is on a separate line
         } else if (cols[0] == "uid" && size > 9 && mUserID.isEmpty()) {
             mUserID = QString::fromUtf8(cols[9]);
         } else if (cols[0] == "fpr" && size > 9 && mFingerprint.isEmpty()) {

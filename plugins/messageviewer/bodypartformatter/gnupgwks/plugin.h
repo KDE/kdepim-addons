@@ -33,5 +33,4 @@ public:
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE;
 };
 
-
 #endif

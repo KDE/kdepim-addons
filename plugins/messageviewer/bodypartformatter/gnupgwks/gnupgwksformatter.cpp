@@ -39,13 +39,13 @@
 
 using namespace MimeTreeParser::Interface;
 
-BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart* part, MimeTreeParser::HtmlWriter *writer) const
+BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
     return format(part, writer, Q_NULLPTR);
 }
 
-BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart* part, MimeTreeParser::HtmlWriter *writer,
-                                                               QObject *) const
+BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer,
+        QObject *) const
 {
     if (!writer) {
         return Ok;

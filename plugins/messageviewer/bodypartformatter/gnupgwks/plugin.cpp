@@ -24,7 +24,8 @@
 #include "pgpkeyformatter.h"
 #include "pgpkeyurlhandler.h"
 
-namespace {
+namespace
+{
 enum Index {
     application_vnd_gnupg_keys,
     application_pgp_keys
@@ -54,7 +55,6 @@ const char *ApplicationGnuPGWKSPlugin::subtype(int idx) const
     }
 }
 
-
 const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const
 {
     switch (idx) {
@@ -78,7 +78,6 @@ const MimeTreeParser::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::
         return Q_NULLPTR;
     }
 }
-
 
 extern "C"
 Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *

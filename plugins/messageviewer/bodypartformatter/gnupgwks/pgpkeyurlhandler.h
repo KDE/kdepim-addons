@@ -43,6 +43,5 @@ private:
     QUrlQuery decodePath(const QString &path) const;
 };
 
-
 #endif
 
