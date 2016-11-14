@@ -579,7 +579,7 @@ bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const
 {
     if (!contact.givenName().isEmpty() && !contact.familyName().isEmpty()) {
-        return QStringLiteral("%1_%2").arg(contact.givenName()).arg(contact.familyName());
+        return QStringLiteral("%1_%2").arg(contact.givenName(), contact.familyName());
     }
 
     if (!contact.familyName().isEmpty()) {

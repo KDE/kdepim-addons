@@ -117,7 +117,7 @@ KContacts::VCardConverter::Version SendVcardsJob::version() const
     return mVersion;
 }
 
-void SendVcardsJob::setVersion(const KContacts::VCardConverter::Version &version)
+void SendVcardsJob::setVersion(KContacts::VCardConverter::Version version)
 {
     mVersion = version;
 }

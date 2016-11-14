@@ -63,6 +63,7 @@ QStringList AttendeeSelector::attendees() const
 {
     QStringList rv;
     const int numberOfAttendee(ui.attendeeList->count());
+    rv.reserve(numberOfAttendee);
     for (int i = 0; i < numberOfAttendee; ++i) {
         const QString addr = ui.attendeeList->item(i)->text();
 

@@ -264,7 +264,7 @@ bool QCsvReader::read(QIODevice *device)
     return true;
 }
 
-void QCsvReader::setTextQuote(const QChar &textQuote)
+void QCsvReader::setTextQuote(QChar textQuote)
 {
     d->mTextQuote = textQuote;
 }
@@ -274,7 +274,7 @@ QChar QCsvReader::textQuote() const
     return d->mTextQuote;
 }
 
-void QCsvReader::setDelimiter(const QChar &delimiter)
+void QCsvReader::setDelimiter(QChar delimiter)
 {
     d->mDelimiter = delimiter;
 }

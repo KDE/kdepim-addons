@@ -38,7 +38,7 @@ public:
     void loadSettings(const KConfigGroup &grp);
     void saveSettings(KConfigGroup &grp);
 
-    void setIdentity(const uint &identity);
+    void setIdentity(uint identity);
 
 Q_SIGNALS:
     void configureChanged();

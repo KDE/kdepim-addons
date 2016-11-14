@@ -64,6 +64,7 @@ enum {
 
 class ContactFieldComboBox : public KComboBox
 {
+    Q_OBJECT
 public:
 
     ContactFieldComboBox(QWidget *parent = Q_NULLPTR)
@@ -795,4 +796,6 @@ void CSVImportDialog::modelFinishedLoading()
     }
     mFieldSelection.clear();
 }
+
+#include "csvimportdialog.moc"
 

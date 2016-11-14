@@ -24,6 +24,7 @@
 
 class SendVcardsPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit SendVcardsPluginInterface(QObject *parent = Q_NULLPTR);
     ~SendVcardsPluginInterface();

@@ -296,6 +296,7 @@ private:
 //---------------------------------------------------------------------------
 class ASWizPage : public QWidget
 {
+    Q_OBJECT
 public:
     ASWizPage(QWidget *parent, const QString &name);
 

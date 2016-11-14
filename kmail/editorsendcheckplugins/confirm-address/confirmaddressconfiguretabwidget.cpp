@@ -115,7 +115,7 @@ void ConfirmAddressConfigureTabWidget::saveSettings(KConfigGroup &grp)
     identityGroup.writeEntry("RejectDomain", mRejectedDomain->isChecked());
 }
 
-void ConfirmAddressConfigureTabWidget::setIdentity(const uint &identity)
+void ConfirmAddressConfigureTabWidget::setIdentity(uint identity)
 {
     mIdentity = identity;
 }

@@ -41,7 +41,7 @@ public:
     bool start();
 
     KContacts::VCardConverter::Version version() const;
-    void setVersion(const KContacts::VCardConverter::Version &version);
+    void setVersion(KContacts::VCardConverter::Version version);
 
 Q_SIGNALS:
     void sendVCardsError(const QString &error);

@@ -46,6 +46,7 @@ typedef struct {
 
 class TemplatesModel : public QAbstractTableModel
 {
+    Q_OBJECT
 public:
     TemplatesModel(QObject *parent = Q_NULLPTR)
         : QAbstractTableModel(parent)
@@ -251,3 +252,4 @@ void TemplateSelectionDialog::updateButtons()
     mOkButton->setEnabled(mView->currentIndex().isValid());
 }
 
+#include "templateselectiondialog.moc"
