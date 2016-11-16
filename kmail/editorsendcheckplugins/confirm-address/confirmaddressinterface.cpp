@@ -44,7 +44,16 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+    QStringList lst;
+    if (!params.ccAddresses().trimmed().isEmpty()) {
+        lst << params.ccAddresses();
+    }
+    if (!params.bccAddresses().trimmed().isEmpty()) {
+        lst << params.bccAddresses();
+    }
+    if (!params.toAddresses().trimmed().isEmpty()) {
+        lst << params.toAddresses();
+    }
     if (lst.isEmpty()) {
         return true;
     }
