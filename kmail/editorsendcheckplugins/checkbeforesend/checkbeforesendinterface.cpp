@@ -68,8 +68,16 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckDuplicateEmails) {
-        const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
-
+        QStringList lst;
+        if (!params.ccAddresses().trimmed().isEmpty()) {
+            lst << params.ccAddresses();
+        }
+        if (!params.bccAddresses().trimmed().isEmpty()) {
+            lst << params.bccAddresses();
+        }
+        if (!params.toAddresses().trimmed().isEmpty()) {
+            lst << params.toAddresses();
+        }
         if (!lst.isEmpty()) {
             CheckDuplicateEmailsJob job;
             job.setEmails(lst);
@@ -91,7 +99,16 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
     if (mCheckSendAttachments) {
         if (params.hasAttachment()) {
             QPointer<CheckAttachmentDialog> dlg = new CheckAttachmentDialog(parentWidget());
-            const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+            QStringList lst;
+            if (!params.ccAddresses().trimmed().isEmpty()) {
+                lst << params.ccAddresses();
+            }
+            if (!params.bccAddresses().trimmed().isEmpty()) {
+                lst << params.bccAddresses();
+            }
+            if (!params.toAddresses().trimmed().isEmpty()) {
+                lst << params.toAddresses();
+            }
             CheckAttachmentJob job;
             job.setOriginalEmails(lst);
             job.start();

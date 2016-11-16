@@ -39,7 +39,16 @@ bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorChec
     AutomaticAddContactsSettings setting = mHashSettings.value(params.identity());
     if (setting.mEnabled) {
         if (setting.mContactCollection.isValid()) {
-            const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+            QStringList lst;
+            if (!params.ccAddresses().trimmed().isEmpty()) {
+                lst << params.ccAddresses();
+            }
+            if (!params.bccAddresses().trimmed().isEmpty()) {
+                lst << params.bccAddresses();
+            }
+            if (!params.toAddresses().trimmed().isEmpty()) {
+                lst << params.toAddresses();
+            }
             if (!lst.isEmpty()) {
                 //Don't delete it, it's autodelete
                 AutomaticAddContactsJob *job = new AutomaticAddContactsJob;

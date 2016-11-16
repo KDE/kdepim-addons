@@ -488,7 +488,7 @@ void VCardImportExportPluginInterface::exportVCard()
                                                       QLatin1Char(QLatin1Char('_')) +
                                                       list[ 0 ].familyName() +
                                                       QLatin1String(".vcf")))
-                , QString(), Q_NULLPTR, options);
+                                          , QString(), Q_NULLPTR, options);
         if (url.isEmpty()) {   // user canceled export
             return;
         }

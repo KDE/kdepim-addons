@@ -23,8 +23,10 @@
 #include "confirmaddresscheckjob.h"
 
 #include <QPointer>
+#include <QDebug>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KEmailAddress>
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
@@ -42,7 +44,16 @@ ConfirmAddressInterface::~ConfirmAddressInterface()
 
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {
-    const QStringList lst{ params.bccAddresses(), params.toAddresses(), params.ccAddresses() };
+    QStringList lst;
+    if (!params.ccAddresses().trimmed().isEmpty()) {
+        lst << params.ccAddresses();
+    }
+    if (!params.bccAddresses().trimmed().isEmpty()) {
+        lst << params.bccAddresses();
+    }
+    if (!params.toAddresses().trimmed().isEmpty()) {
+        lst << params.toAddresses();
+    }
     if (lst.isEmpty()) {
         return true;
     }
@@ -52,7 +63,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
         return true;
     }
     const QString str = lst.join(QStringLiteral(", "));
-    const QStringList emails = str.split(QStringLiteral(", "));
+    const QStringList emails = KEmailAddress::splitAddressList(str);
 #if 0
     MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
     if (job.exec()) {

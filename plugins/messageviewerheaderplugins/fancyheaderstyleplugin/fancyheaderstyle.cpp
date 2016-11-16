@@ -229,7 +229,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("disposition-notification-to"))){
+    if (strategy->showHeader(QStringLiteral("disposition-notification-to"))) {
         if (auto hrd = message->headerByType("Disposition-Notification-To")) {
             const QString to = hrd->asUnicodeString();
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
