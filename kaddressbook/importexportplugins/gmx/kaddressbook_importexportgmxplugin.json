@@ -17,18 +17,6 @@
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportgmx", 
         "Name": "Import/Export GMX", 
-        "Name[ca@valencia]": "Importa/exporta el GMX", 
-        "Name[ca]": "Importa/exporta el GMX", 
-        "Name[cs]": "Importovat/Exportovat GMX", 
-        "Name[de]": "GMX importieren/exportieren", 
-        "Name[es]": "Importar/Exportar GMX", 
-        "Name[nl]": "GMX importeren/exporteren", 
-        "Name[pl]": "Importuj/Eksportuj GMX", 
-        "Name[pt]": "Importação/Exportação de GMX", 
-        "Name[sl]": "Uvozi/izvozi GMX", 
-        "Name[sv]": "Importera och exportera GMX", 
-        "Name[uk]": "Імпортування та експортування GMX", 
-        "Name[x-test]": "xxImport Export GMXxx", 
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"
         ], 
