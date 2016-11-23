@@ -19,6 +19,7 @@
         "EnabledByDefault": "true", 
         "Id": "kaddressbookimportexportgmx", 
         "Name": "Import/Export GMX", 
+        "Name[ca@valencia]": "Importa/exporta el GMX", 
         "Name[ca]": "Importa/exporta el GMX", 
         "Name[fr]": "Import / export GMX", 
         "Name[nl]": "GMX importeren/exporteren", 
