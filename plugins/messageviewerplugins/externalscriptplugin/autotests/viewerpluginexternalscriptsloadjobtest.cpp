@@ -112,7 +112,7 @@ void ViewerPluginExternalScriptsLoadJobTest::shouldNotLoadTwoSameNameDesktopFile
     job.setExternalScriptsDirectories(dirs);
     QCOMPARE(job.externalScriptsDirectories(), dirs);
     job.start();
-    QCOMPARE(job.scriptInfos().count(), 1);
+    QCOMPARE(job.scriptInfos().count(), 2);
 }
 
 QTEST_MAIN(ViewerPluginExternalScriptsLoadJobTest)

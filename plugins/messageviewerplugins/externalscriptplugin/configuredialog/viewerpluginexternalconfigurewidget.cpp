@@ -29,6 +29,7 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QFile>
+#include <QFileInfo>
 #include <QDebug>
 #include <KDesktopFile>
 #include <KConfigGroup>
@@ -131,7 +132,14 @@ void ViewerPluginExternalConfigureWidget::slotModifyScript()
 
 void ViewerPluginExternalConfigureWidget::slotAddScript()
 {
+    QStringList existingNames;
+    const int numberOfElement(mListExternal->count());
+    for (int i = 0; i < numberOfElement; ++i) {
+        ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
+        existingNames << item->text();
+    }
     QPointer<ViewerPluginExternalEditDialog> dlg = new ViewerPluginExternalEditDialog(this);
+    dlg->setExistingsNames(existingNames);
     if (dlg->exec()) {
         ViewerPluginExternalScriptItem *item = new ViewerPluginExternalScriptItem(mListExternal);
         item->setScriptInfo(dlg->scriptInfo());
@@ -165,12 +173,19 @@ void ViewerPluginExternalConfigureWidget::save()
             qCWarning(EXTERNALSCRIPTPLUGIN_LOG) << " Impossible to delete " << path;
         }
     }
-    for (int i = 0; i < mListExternal->count(); ++i) {
+    const QString writablePath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/messageviewerplugins/");
+    const int numberOfElement(mListExternal->count());
+    for (int i = 0; i < numberOfElement; ++i) {
         ViewerPluginExternalScriptItem *item = static_cast<ViewerPluginExternalScriptItem *>(mListExternal->item(i));
         const ViewerPluginExternalScriptInfo &scriptInfo = item->scriptInfo();
         QString filenamepath = scriptInfo.fileName();
         if (filenamepath.isEmpty()) {
-            filenamepath = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/messageviewerplugins/%1.desktop").arg(scriptInfo.name());
+            filenamepath = writablePath + QStringLiteral("%1.desktop").arg(scriptInfo.name());
+            int fileIndex = 1;
+            while(QFileInfo(filenamepath).exists()) {
+                filenamepath = writablePath + QStringLiteral("%1-%2.desktop").arg(scriptInfo.name()).arg(fileIndex);
+                fileIndex++;
+            }
         }
         KDesktopFile desktopFile(filenamepath);
         desktopFile.desktopGroup().writeEntry(QStringLiteral("Name"), scriptInfo.name());

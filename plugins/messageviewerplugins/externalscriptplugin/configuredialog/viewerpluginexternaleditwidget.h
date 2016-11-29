@@ -34,17 +34,19 @@ public:
     ViewerPluginExternalScriptInfo scriptInfo() const;
 
     void save();
+    void setExistingsNames(const QStringList &existingsNames);
+
 Q_SIGNALS:
     void scriptIsValid(bool valid);
 
 private:
     void slotInfoChanged();
     ViewerPluginExternalScriptInfo mScriptInfo;
+    QStringList mExistingsNames;
     QLineEdit *mName;
     QLineEdit *mDescription;
     QLineEdit *mCommandLine;
     QLineEdit *mExecutable;
-    //TODO add icon ?
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGET_H
