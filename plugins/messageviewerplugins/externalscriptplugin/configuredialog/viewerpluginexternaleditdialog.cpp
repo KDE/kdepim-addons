@@ -61,6 +61,11 @@ void ViewerPluginExternalEditDialog::slotAccepted()
     accept();
 }
 
+void ViewerPluginExternalEditDialog::setExistingsNames(const QStringList &existingsNames)
+{
+    mEditWidget->setExistingsNames(existingsNames);
+}
+
 void ViewerPluginExternalEditDialog::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
 {
     mEditWidget->setScriptInfo(info);

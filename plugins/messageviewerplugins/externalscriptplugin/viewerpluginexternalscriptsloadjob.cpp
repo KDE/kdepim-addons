@@ -63,9 +63,11 @@ void ViewerPluginExternalScriptsLoadJob::start()
                         info.setIcon(group.readEntry("Icon", QString()));
                         info.setIsReadOnly(!list.at(i).isWritable());
                         info.setFileName(filePath);
-                        if (info.isValid() && !scriptNames.contains(name)) {
+                        if (info.isValid()) {
                             mScriptInfos.append(info);
-                            scriptNames.append(name);
+                            if (!scriptNames.contains(name)) {
+                                scriptNames.append(name);
+                            }
                         }
                     }
                 }

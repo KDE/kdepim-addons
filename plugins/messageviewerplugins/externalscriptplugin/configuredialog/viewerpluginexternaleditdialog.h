@@ -36,6 +36,8 @@ public:
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
     ViewerPluginExternalScriptInfo scriptInfo() const;
 
+    void setExistingsNames(const QStringList &existingsNames);
+
 private:
     void slotScriptIsValid(bool valid);
     void slotAccepted();

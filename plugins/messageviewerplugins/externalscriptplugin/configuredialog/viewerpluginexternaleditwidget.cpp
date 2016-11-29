@@ -57,7 +57,12 @@ ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
 
 void ViewerPluginExternalEditWidget::slotInfoChanged()
 {
-    Q_EMIT scriptIsValid(!mExecutable->text().trimmed().isEmpty() && !mName->text().trimmed().isEmpty());
+    Q_EMIT scriptIsValid(!mExecutable->text().trimmed().isEmpty() && !mName->text().trimmed().isEmpty() && !mExistingsNames.contains(mName->text()));
+}
+
+void ViewerPluginExternalEditWidget::setExistingsNames(const QStringList &existingsNames)
+{
+    mExistingsNames = existingsNames;
 }
 
 void ViewerPluginExternalEditWidget::setScriptInfo(const ViewerPluginExternalScriptInfo &info)
