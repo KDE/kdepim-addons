@@ -115,7 +115,7 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
         ViewerPluginExternalScriptItem *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
-        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script?"), i18n("Remove External Script"))) {
+        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script \"%1\"?", item->text()), i18n("Remove External Script"))) {
             mFilesToRemove.append(scriptItem->scriptInfo().fileName());
             delete mListExternal->takeItem(mListExternal->currentRow());
         }
