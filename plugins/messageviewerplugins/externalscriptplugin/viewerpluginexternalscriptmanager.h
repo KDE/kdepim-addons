@@ -33,10 +33,10 @@ public:
     ~ViewerPluginExternalScriptManager();
     static ViewerPluginExternalScriptManager *self();
 
+    void readExternalScriptInfo();
     QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
-    void readExternalScriptInfo();
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
 };
 
