@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "EnabledByDefault": "true", 
+        "Description": "This plugin defines ths standard mail header style.", 
         "Name": "Standards Header Style", 
         "Name[ca@valencia]": "Estil de capçalera estàndard", 
         "Name[ca]": "Estil de capçalera estàndard", 

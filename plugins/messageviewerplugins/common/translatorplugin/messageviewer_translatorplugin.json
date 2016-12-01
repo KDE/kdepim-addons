@@ -2,6 +2,7 @@
     "KPlugin": {
         "EnabledByDefault": "true", 
         "Id": "messageviewertranslatorplugin", 
+        "Description": "This plugin allows you to translate selected text.",
         "Name": "Translator", 
         "Name[ca@valencia]": "Traductor", 
         "Name[ca]": "Traductor", 

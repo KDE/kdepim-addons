@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "EnabledByDefault": "true", 
+        "Description": "This plugin allows you to create a todo from a message.",
         "Id": "messageviewercreatetodoplugin", 
         "Name": "Create Todo", 
         "Name[ca@valencia]": "Crea una pendent", 
