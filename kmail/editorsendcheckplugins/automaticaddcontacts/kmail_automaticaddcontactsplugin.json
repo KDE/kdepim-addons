@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "EnabledByDefault": "true", 
+        "Description": "This plugin allows you to add automatically email address to addressbook.",
         "Id": "kmailautomaticaddcontacts", 
         "Name": "Automatic Add Contacts", 
         "Name[ca@valencia]": "Afig automàticament als contactes", 
