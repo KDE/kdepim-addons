@@ -1,8 +1,8 @@
 {
     "KPlugin": {
+        "Description": "This plugin allows you to create a note from a message.", 
         "EnabledByDefault": "true", 
         "Id": "messageviewercreatenoteplugin", 
-        "Description": "This plugin allows you to create a note from a message.",
         "Name": "Create Note", 
         "Name[ca@valencia]": "Crea una nota", 
         "Name[ca]": "Crea una nota", 
