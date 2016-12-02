@@ -35,12 +35,25 @@ using namespace MessageViewer;
 ViewerPluginExternalscriptInterface::ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent)
 {
+    mActionGroup = new QActionGroup(this);
     createAction(ac);
 }
 
 ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
 {
 
+}
+
+void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *ac)
+{
+    ViewerPluginExternalScriptManager::self()->readExternalScriptInfo();
+    delete mActionGroup;
+    Q_FOREACH (QAction *act, mAction) {
+        ac->removeAction(act);
+    }
+    mAction.clear();
+    mActionGroup = new QActionGroup(this);
+    createAction(ac);
 }
 
 void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
@@ -96,8 +109,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
     if (ac) {
         const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
         if (!infos.isEmpty()) {
-            QActionGroup *grp = new QActionGroup(this);
-            connect(grp, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);
+            connect(mActionGroup, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);
             Q_FOREACH (ViewerPluginExternalScriptInfo info, infos) {
                 QAction *act = new QAction(info.name(), this);
                 act->setIconText(info.name());
@@ -114,7 +126,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 
                 act->setData(actionInfo);
                 mAction.append(act);
-                grp->addAction(act);
+                mActionGroup->addAction(act);
             }
         }
     }

@@ -22,6 +22,7 @@
 
 #include <messageviewer/viewerplugininterface.h>
 class KActionCollection;
+class QActionGroup;
 namespace MessageViewer
 {
 
@@ -38,6 +39,7 @@ public:
 
     void setText(const QString &text) Q_DECL_OVERRIDE;
     void setMessage(const KMime::Message::Ptr &msg) Q_DECL_OVERRIDE;
+    void refreshActionList(KActionCollection *ac) Q_DECL_OVERRIDE;
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 
@@ -49,6 +51,7 @@ private:
     QStringList mCurrentInfo;
     QString mText;
     KMime::Message::Ptr mMessage;
+    QActionGroup *mActionGroup;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H

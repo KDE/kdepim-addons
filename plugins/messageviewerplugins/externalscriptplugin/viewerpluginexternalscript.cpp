@@ -46,7 +46,9 @@ QString ViewerPluginExternalscript::viewerPluginName() const
 void MessageViewer::ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)
 {
     ViewerPluginExternalConfigureDialog dlg(parent);
-    dlg.exec();
+    if (dlg.exec()) {
+        Q_EMIT configChanged();
+    }
 }
 
 bool MessageViewer::ViewerPluginExternalscript::hasConfigureDialog() const
