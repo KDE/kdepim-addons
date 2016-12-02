@@ -62,7 +62,12 @@ void EventModel::createMonitor()
             });
     connect(mMonitor, &Akonadi::Monitor::itemChanged,
             this, [this](const Akonadi::Item & item) {
-                const KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+                KCalCore::Incidence::Ptr incidence;
+                try {
+                    incidence = item.payload<KCalCore::Incidence::Ptr>();
+                } catch (const Akonadi::PayloadException &e) {
+                    qCWarning(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload:" << e.what();
+                }
                 if (!incidence) {
                     return; // HUH?!
                 }
