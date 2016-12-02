@@ -1,7 +1,7 @@
 {
     "KPlugin": {
-        "EnabledByDefault": "true",
-        "Description": "This plugin allows you to create an event from a message.",
+        "Description": "This plugin allows you to create an event from a message.", 
+        "EnabledByDefault": "true", 
         "Id": "messageviewercreateeventplugin", 
         "Name": "Create Event", 
         "Name[ca@valencia]": "Crea un esdeveniment", 
