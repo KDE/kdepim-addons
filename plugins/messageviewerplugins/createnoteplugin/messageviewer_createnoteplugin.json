@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to create a note from a message.", 
+        "Description[ca]": "Aquest connector permet crear una nota a partir d'un missatge.", 
+        "Description[nl]": "Deze plug-in stelt u in staat een notitie te maken uit een bericht.", 
+        "Description[sl]": "Ta vstavek vam omogoča iz sporočila ustvariti sporočilce.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att skapa en anteckning av ett brev.", 
+        "Description[x-test]": "xxThis plugin allows you to create a note from a message.xx", 
         "EnabledByDefault": "true", 
         "Id": "messageviewercreatenoteplugin", 
         "Name": "Create Note", 

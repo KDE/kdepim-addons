@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check message settings before sending.", 
+        "Description[ca]": "Aquest connector permet comprovar els paràmetres del missatge abans d'enviar-lo.", 
+        "Description[nl]": "Deze plugin stelt u in staat de instellingen van het bericht te controleren alvorens deze te verzenden", 
+        "Description[sl]": "Ta vstavek omogoča preverjanje nastavitev sporočil pred pošiljanjem.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera inställningarna för brev innan de skickas.", 
+        "Description[x-test]": "xxThis plugin allows you to check message settings before sending.xx", 
         "EnabledByDefault": "true", 
         "Id": "kmailcheckbeforesend", 
         "Name": "Check Before Send", 

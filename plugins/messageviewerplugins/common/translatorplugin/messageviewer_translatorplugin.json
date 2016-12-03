@@ -1,6 +1,11 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to translate selected text.", 
+        "Description[ca]": "Aquest connector permet traduir el text seleccionat.", 
+        "Description[nl]": "Deze plug-in stelt u in staat geselecteerde tekst te vertalen.", 
+        "Description[sl]": "Ta vstavek omogoča prevod izbranega besedila.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att översätta markerad text.", 
+        "Description[x-test]": "xxThis plugin allows you to translate selected text.xx", 
         "EnabledByDefault": "true", 
         "Id": "messageviewertranslatorplugin", 
         "Name": "Translator", 
