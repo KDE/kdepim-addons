@@ -5,6 +5,7 @@
         "Description[nl]": "Deze plug-in stelt u in staat automatisch het e-mailadres toe te voegen aan het adresboek.", 
         "Description[sl]": "Ta vstavek omogoča samodejno dodajanje e-poštnih naslovov v imenik.", 
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt lägga till e-postadresser i adressboken.", 
+        "Description[uk]": "Цей додаток надає вам змогу автоматично додавати адресу електронної пошти до адресної книги.", 
         "Description[x-test]": "xxThis plugin allows you to add automatically email address to addressbook.xx", 
         "EnabledByDefault": "true", 
         "Id": "kmailautomaticaddcontacts", 

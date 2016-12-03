@@ -5,6 +5,7 @@
         "Description[nl]": "Deze plug-in definieert de standaard stijl van de e-mailheader.", 
         "Description[sl]": "Ta vstavek določa običajni slog glav sporočila.", 
         "Description[sv]": "Insticksprogrammet definierar en standardstil för brevhuvud.", 
+        "Description[uk]": "Цим додатком визначається стандартний стиль заголовка повідомлення.", 
         "Description[x-test]": "xxThis plugin defines ths standard mail header style.xx", 
         "EnabledByDefault": "true", 
         "Name": "Standards Header Style", 

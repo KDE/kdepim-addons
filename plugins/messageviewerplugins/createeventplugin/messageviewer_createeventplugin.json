@@ -5,6 +5,7 @@
         "Description[nl]": "Deze plug-in stelt u in staat een gebeurtenis aan te maken uit een bericht.", 
         "Description[sl]": "Ta vstavek vam omogoča iz sporočila ustvariti dogodek.", 
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa en händelse från ett brev.", 
+        "Description[uk]": "За допомогою цього додатка можна створювати записи подій на основі повідомлення.", 
         "Description[x-test]": "xxThis plugin allows you to create an event from a message.xx", 
         "EnabledByDefault": "true", 
         "Id": "messageviewercreateeventplugin", 
