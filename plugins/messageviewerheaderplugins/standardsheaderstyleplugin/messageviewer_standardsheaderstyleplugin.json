@@ -1,7 +1,10 @@
 {
     "KPlugin": {
         "Description": "This plugin defines the standard mail header style.", 
+        "Description[ca@valencia]": "Este connector defineix l'estil de capçalera de correu estàndard.", 
+        "Description[ca]": "Aquest connector defineix l'estil de capçalera de correu estàndard.", 
         "Description[uk]": "Цим додатком визначається стандартний стиль заголовка повідомлення.", 
+        "Description[x-test]": "xxThis plugin defines the standard mail header style.xx", 
         "EnabledByDefault": "true", 
         "Name": "Standards Header Style", 
         "Name[ca@valencia]": "Estil de capçalera estàndard", 

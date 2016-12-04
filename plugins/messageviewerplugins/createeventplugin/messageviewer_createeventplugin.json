@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to create an event from a message.", 
+        "Description[ca@valencia]": "Este connector permet crear un esdeveniment a partir d'un missatge.", 
         "Description[ca]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.", 
         "Description[nl]": "Deze plug-in stelt u in staat een gebeurtenis aan te maken uit een bericht.", 
+        "Description[pt]": "Este 'plugin' permite-lhe criar um evento a partir de uma mensagem.", 
         "Description[sl]": "Ta vstavek vam omogoča iz sporočila ustvariti dogodek.", 
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa en händelse från ett brev.", 
         "Description[uk]": "За допомогою цього додатка можна створювати записи подій на основі повідомлення.", 

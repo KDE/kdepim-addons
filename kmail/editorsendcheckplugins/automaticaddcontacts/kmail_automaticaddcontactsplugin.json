@@ -1,8 +1,10 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to add automatically email address to addressbook.", 
+        "Description[ca@valencia]": "Este connector permet afegir automàticament adreces de correu a la llibreta d'adreces.", 
         "Description[ca]": "Aquest connector permet afegir automàticament adreces de correu a la llibreta d'adreces.", 
         "Description[nl]": "Deze plug-in stelt u in staat automatisch het e-mailadres toe te voegen aan het adresboek.", 
+        "Description[pt]": "Este 'plugin' permite-lhe adicionar automaticamente o endereço de e-mail ao livro de endereços.", 
         "Description[sl]": "Ta vstavek omogoča samodejno dodajanje e-poštnih naslovov v imenik.", 
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt lägga till e-postadresser i adressboken.", 
         "Description[uk]": "Цей додаток надає вам змогу автоматично додавати адресу електронної пошти до адресної книги.", 
