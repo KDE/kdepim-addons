@@ -38,6 +38,8 @@ include(CMakePackageConfigHelpers)
 include(FeatureSummary)
 include(CheckFunctionExists)
 include(ECMGeneratePriFile)
+include(ECMCoverageOption)
+
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
