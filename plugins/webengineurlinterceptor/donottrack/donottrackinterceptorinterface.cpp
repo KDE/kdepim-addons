@@ -21,8 +21,6 @@
 #include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 #include "donottracksettings.h"
 
-//#define BUG_FIXED 1
-
 DoNotTrackInterceptorInterface::DoNotTrackInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
 {
@@ -36,11 +34,9 @@ DoNotTrackInterceptorInterface::~DoNotTrackInterceptorInterface()
 bool DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {
     if (DoNotTrackSettings::doNotTrack()) {
-#ifdef BUG_FIXED
+#if QT_VERSION >= QT_VERSION_CHECK(5, 8, 0)
         //Laurent Comment it for the moment workaround a bug for QtWebEngine
         info.setHttpHeader(QByteArrayLiteral("DNT"), QByteArrayLiteral("1"));
-#else
-        Q_UNUSED(info);
 #endif
     }
     return false;
