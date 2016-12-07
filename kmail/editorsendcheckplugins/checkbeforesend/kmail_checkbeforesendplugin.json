@@ -4,6 +4,7 @@
         "Description[ca@valencia]": "Este connector permet comprovar els paràmetres del missatge abans d'enviar-lo.", 
         "Description[ca]": "Aquest connector permet comprovar els paràmetres del missatge abans d'enviar-lo.", 
         "Description[es]": "Este complemento le permite comprobar las preferencias del mensaje antes de enviarlo", 
+        "Description[it]": "Questa estensione permette di controllare le impostazioni di un messaggio di posta prima di inviarlo.", 
         "Description[nl]": "Deze plugin stelt u in staat de instellingen van het bericht te controleren alvorens deze te verzenden", 
         "Description[pl]": "Ta wtyczka umożliwia sprawdzenie ustawień wiadomości przed jej wysłaniem", 
         "Description[pt]": "Este 'plugin' permite verificar as definições do correio antes de o enviar.", 
