@@ -5,6 +5,7 @@
         "Description[ca]": "Aquest connector permet enviar correus electrònics directament als contactes seleccionats.", 
         "Description[cs]": "Tento modul umožňuje odeslat e-mail přímo vybraným kontaktům.", 
         "Description[es]": "Este complemento le permite enviar correo directamente a los contactos seleccionados.", 
+        "Description[et]": "See plugin võimaldab saata kirja otse valitud kontaktidele.", 
         "Description[fi]": "Tällä liitännäisellä voit lähettää sähköpostia suoraan valituille yhteystiedoille.", 
         "Description[fr]": "Ce module vous permet d'envoyer directement un courriel aux contacts sélectionnés.", 
         "Description[it]": "Questa estensione permette di inviare messaggi di posta direttamente ai contatti selezionati.", 
