@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "imapcompletionfolder", 
+        "Name": "ImapCompletionFolder", 
+        "ServiceTypes": [
+            "LibKSieve/ImapFolderCompletion"
+        ], 
+        "Version": "1.0"
+    }
+}
