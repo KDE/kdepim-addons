@@ -27,6 +27,7 @@ namespace KIMAP {
 class Session;
 }
 class QTreeView;
+class QStandardItemModel;
 class KJob;
 class SelectImapFolderWidget : public QWidget
 {
@@ -34,6 +35,10 @@ class SelectImapFolderWidget : public QWidget
 public:
     explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
+
+Q_SIGNALS:
+    void enableOkButton(bool enabled);
+
 private:
     void onLoginDone(KJob *job);
     void loadImapFolders();
@@ -44,7 +49,8 @@ private:
     void onFullListingDone(KJob *job);
 
     QTreeView *mTreeView;
-    KIMAP::Session *m_session;
+    KIMAP::Session *mSession;
+    QStandardItemModel *mModel;
 };
 
 #endif // SELECTIMAPFOLDERWIDGET_H
