@@ -1,14 +1,24 @@
+set(sieveeditor_plugin_categories_SRCS)
+ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER
+    IMAPFOLDERCOMPLETIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.imapfoldercompletion)
+
 if(BUILD_TESTING)
     add_subdirectory(tests)
     add_subdirectory(autotests)
 endif()
 
+
 set(imapfoldercompletionplugin_SRCS
     imapfoldercompletion.cpp
-)
+    selectimapfolderdialog.cpp
+    selectimapfolderwidget.cpp
+    selectimapwidget.cpp
+    ${sieveeditor_plugin_categories_SRCS}
+    )
 
 kcoreaddons_add_plugin(imapfoldercompletionplugin JSON imapfoldercompletion.json SOURCES
     ${imapfoldercompletionplugin_SRCS} INSTALL_NAMESPACE libksieve)
+
 target_link_libraries(imapfoldercompletionplugin
-  KF5::PimCommon KF5::Completion
-)
+    KF5::PimCommon KF5::Completion KF5::I18n
+    )

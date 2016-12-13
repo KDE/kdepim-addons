@@ -1,5 +1,5 @@
 macro(add_sieveeditorplugin_unittest _source _additional)
-    set( _test ${_source} ${_additional})
+    set( _test ${_source} ${_additional} ${sieveeditor_plugin_categories_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test})
     add_test( ${_name} ${_name} )

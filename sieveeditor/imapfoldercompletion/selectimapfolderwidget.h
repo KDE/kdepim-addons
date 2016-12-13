@@ -21,10 +21,13 @@
 #define SELECTIMAPFOLDERWIDGET_H
 
 #include <QWidget>
+
+#include <kimap/listjob.h>
 namespace KIMAP {
 class Session;
 }
 class QTreeView;
+class KJob;
 class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
@@ -32,7 +35,14 @@ public:
     explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
 private:
+    void onLoginDone(KJob *job);
     void loadImapFolders();
+    void onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
+    void onSubscribedMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
+    void onReloadRequested();
+    void onReloadDone(KJob *job);
+    void onFullListingDone(KJob *job);
+
     QTreeView *mTreeView;
     KIMAP::Session *m_session;
 };
