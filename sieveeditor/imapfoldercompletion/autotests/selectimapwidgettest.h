@@ -30,6 +30,8 @@ public:
     ~SelectImapWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldAssignText();
+
 };
 
 #endif // SELECTIMAPWIDGETTEST_H

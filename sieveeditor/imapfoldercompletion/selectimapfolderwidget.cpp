@@ -19,6 +19,7 @@
 */
 
 #include "selectimapfolderwidget.h"
+#include "sessionuiproxy.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <QHBoxLayout>
 #include <QTreeView>
@@ -26,6 +27,7 @@
 
 #include <KIMAP/Session>
 #include <KIMAP/LoginJob>
+#include <KSieveUi/SieveAccount>
 
 SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     : QWidget(parent),
@@ -45,22 +47,21 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 }
 
-void SelectImapFolderWidget::loadImapFolders()
+void SelectImapFolderWidget::setAccount(const KSieveUi::SieveAccount &account)
 {
-#if 0
     mSession = new KIMAP::Session(account.server(), account.port(), this);
     mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
     KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
     login->setUserName(account.userName());
-    login->setPassword(password);
+    login->setPassword(account.password());
+#if 0
     login->setEncryptionMode(account.encryptionMode());
     login->setAuthenticationMode(account.authenticationMode());
-
-    connect(login, &KIMAP::LoginJob::result, this, &SubscriptionDialog::onLoginDone);
-    login->start();
 #endif
-    //TODO
+
+    connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
+    login->start();
 }
 
 void SelectImapFolderWidget::onLoginDone(KJob *job)
@@ -74,6 +75,7 @@ void SelectImapFolderWidget::onReloadRequested()
 {
 #if 0
     m_itemsMap.clear();
+#endif
     mModel->clear();
 
     // we need a connection
@@ -86,10 +88,9 @@ void SelectImapFolderWidget::onReloadRequested()
 
     KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
     list->setIncludeUnsubscribed(true);
-    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SubscriptionDialog::onMailBoxesReceived);
-    connect(list, &KIMAP::ListJob::result, this, &SubscriptionDialog::onFullListingDone);
+    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapFolderWidget::onMailBoxesReceived);
+    connect(list, &KIMAP::ListJob::result, this, &SelectImapFolderWidget::onFullListingDone);
     list->start();
-#endif
 }
 
 void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
@@ -149,41 +150,8 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
 
 void SelectImapFolderWidget::onFullListingDone(KJob *job)
 {
-#if 0
     if (job->error()) {
-        Q_EMIT enableOkButton(true);
-        return;
+        //TODO show error
     }
-
-    KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
-    list->setIncludeUnsubscribed(false);
-    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SubscriptionDialog::onSubscribedMailBoxesReceived);
-    connect(list, &KIMAP::ListJob::result, this, &SubscriptionDialog::onReloadDone);
-    list->start();
-#endif
-}
-
-void SelectImapFolderWidget::onSubscribedMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
-        const QList< QList<QByteArray> > &flags)
-{
-#if 0
-    Q_UNUSED(flags);
-    const int numberOfMailBoxes(mailBoxes.size());
-    for (int i = 0; i < numberOfMailBoxes; ++i) {
-        KIMAP::MailBoxDescriptor mailBox = mailBoxes.at(i);
-        QString descriptor = mailBox.separator + mailBox.name;
-
-        if (m_itemsMap.contains(descriptor)) {
-            QStandardItem *item = m_itemsMap[mailBox.separator + mailBox.name];
-            item->setCheckState(Qt::Checked);
-            item->setData(Qt::Checked, InitialStateRole);
-        }
-    }
-#endif
-}
-
-void SelectImapFolderWidget::onReloadDone(KJob *job)
-{
-    Q_UNUSED(job);
     Q_EMIT enableOkButton(true);
 }

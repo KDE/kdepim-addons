@@ -35,10 +35,32 @@ SelectImapWidget::SelectImapWidget(QWidget *parent)
     mToolButton = new QToolButton(this);
     mToolButton->setText(QStringLiteral("..."));
     mToolButton->setObjectName(QStringLiteral("toolbutton"));
+    mToolButton->setToolTip(i18n("Select IMAP folder"));
     layout->addWidget(mToolButton);
+    connect(mToolButton, &QToolButton::clicked, this, &SelectImapWidget::slotOpenSelectImapFolder);
 }
 
 SelectImapWidget::~SelectImapWidget()
 {
 
+}
+
+void SelectImapWidget::setText(const QString &str)
+{
+    mLineEdit->setText(str);
+}
+
+QString SelectImapWidget::text() const
+{
+    return mLineEdit->text();
+}
+
+void SelectImapWidget::setAccount(const KSieveUi::SieveAccount &account)
+{
+    mAccount = account;
+}
+
+void SelectImapWidget::slotOpenSelectImapFolder()
+{
+    //TODO
 }

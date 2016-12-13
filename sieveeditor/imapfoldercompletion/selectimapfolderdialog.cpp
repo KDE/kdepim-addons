@@ -53,3 +53,8 @@ void SelectImapFolderDialog::slotEnableOkButton(bool enabled)
 {
     mOkButton->setEnabled(enabled);
 }
+
+void SelectImapFolderDialog::setAccount(const KSieveUi::SieveAccount &account)
+{
+    mSelectImapFolderWidget->setAccount(account);
+}

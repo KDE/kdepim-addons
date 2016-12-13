@@ -22,6 +22,9 @@
 #define SELECTIMAPFOLDERDIALOG_H
 
 #include <QDialog>
+namespace KSieveUi {
+class SieveAccount;
+}
 class SelectImapFolderWidget;
 class SelectImapFolderDialog : public QDialog
 {
@@ -29,6 +32,7 @@ class SelectImapFolderDialog : public QDialog
 public:
     explicit SelectImapFolderDialog(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderDialog();
+    void setAccount(const KSieveUi::SieveAccount &account);
 private:
     void slotEnableOkButton(bool enabled);
     SelectImapFolderWidget *mSelectImapFolderWidget;

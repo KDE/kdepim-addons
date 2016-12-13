@@ -48,4 +48,16 @@ void SelectImapWidgetTest::shouldHaveDefaultValue()
     QVERIFY(!mToolButton->text().isEmpty());
 }
 
+void SelectImapWidgetTest::shouldAssignText()
+{
+    SelectImapWidget w;
+    KLineEdit *mLineEdit = w.findChild<KLineEdit *>(QStringLiteral("lineedit"));
+    QString text = QStringLiteral("foo");
+    w.setText(text);
+    QCOMPARE(w.text(), text);
+    QCOMPARE(mLineEdit->text(), text);
+    w.setText(QString());
+    QVERIFY(w.text().isEmpty());
+}
+
 QTEST_MAIN(SelectImapWidgetTest)

@@ -26,6 +26,9 @@
 namespace KIMAP {
 class Session;
 }
+namespace KSieveUi {
+class SieveAccount;
+}
 class QTreeView;
 class QStandardItemModel;
 class KJob;
@@ -36,16 +39,14 @@ public:
     explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
 
+    void setAccount(const KSieveUi::SieveAccount &account);
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 
 private:
     void onLoginDone(KJob *job);
-    void loadImapFolders();
     void onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
-    void onSubscribedMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
     void onReloadRequested();
-    void onReloadDone(KJob *job);
     void onFullListingDone(KJob *job);
 
     QTreeView *mTreeView;

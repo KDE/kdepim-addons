@@ -21,6 +21,7 @@
 #define SELECTIMAPWIDGET_H
 
 #include <QWidget>
+#include <KSieveUi/SieveAccount>
 class QToolButton;
 class KLineEdit;
 class SelectImapWidget : public QWidget
@@ -29,7 +30,15 @@ class SelectImapWidget : public QWidget
 public:
     explicit SelectImapWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapWidget();
+
+    void setText(const QString &str);
+    QString text() const;
+
+    void setAccount(const KSieveUi::SieveAccount &account);
+
 private:
+    void slotOpenSelectImapFolder();
+    KSieveUi::SieveAccount mAccount;
     QToolButton *mToolButton;
     KLineEdit *mLineEdit;
 };
