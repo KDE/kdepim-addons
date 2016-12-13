@@ -23,6 +23,7 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QPushButton>
 
 SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     : QDialog(parent)
@@ -32,10 +33,23 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     mSelectImapFolderWidget = new SelectImapFolderWidget(this);
     mSelectImapFolderWidget->setObjectName(QStringLiteral("selectimapfolderwidget"));
     layout->addWidget(mSelectImapFolderWidget);
+    connect(mSelectImapFolderWidget, &SelectImapFolderWidget::enableOkButton, this, &SelectImapFolderDialog::slotEnableOkButton);
 
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    layout->addWidget(buttonBox);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    // Set the button actions
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectImapFolderDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectImapFolderDialog::reject);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
 }
 
 SelectImapFolderDialog::~SelectImapFolderDialog()
 {
 
+}
+
+void SelectImapFolderDialog::slotEnableOkButton(bool enabled)
+{
+    mOkButton->setEnabled(enabled);
 }

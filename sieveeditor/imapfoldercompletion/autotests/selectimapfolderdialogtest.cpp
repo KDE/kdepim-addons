@@ -33,4 +33,10 @@ SelectImapFolderDialogTest::~SelectImapFolderDialogTest()
 
 }
 
+void SelectImapFolderDialogTest::shouldHaveDefaultValue()
+{
+    SelectImapFolderDialog w;
+
+}
+
 QTEST_MAIN(SelectImapFolderDialogTest)

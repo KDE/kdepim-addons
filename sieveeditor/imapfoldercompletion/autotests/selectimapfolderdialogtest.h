@@ -28,6 +28,8 @@ class SelectImapFolderDialogTest : public QObject
 public:
     explicit SelectImapFolderDialogTest(QObject *parent = Q_NULLPTR);
     ~SelectImapFolderDialogTest();
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // SELECTIMAPFOLDERDIALOGTEST_H

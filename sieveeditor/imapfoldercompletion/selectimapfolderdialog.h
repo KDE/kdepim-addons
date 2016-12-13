@@ -30,7 +30,9 @@ public:
     explicit SelectImapFolderDialog(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderDialog();
 private:
+    void slotEnableOkButton(bool enabled);
     SelectImapFolderWidget *mSelectImapFolderWidget;
+    QPushButton *mOkButton;
 };
 
 #endif // SELECTIMAPFOLDERDIALOG_H
