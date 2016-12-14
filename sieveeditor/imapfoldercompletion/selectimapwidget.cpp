@@ -30,6 +30,8 @@ SelectImapWidget::SelectImapWidget(QWidget *parent)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
+    layout->setObjectName(QStringLiteral("mainlayout"));
+    layout->setMargin(0);
     mLineEdit = new KLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     layout->addWidget(mLineEdit);
