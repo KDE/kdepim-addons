@@ -22,19 +22,20 @@
 
 #include <QWidget>
 #include <KSieveUi/SieveAccount>
+#include <KSieveUi/AbstractMoveImapFolderWidget>
 class QToolButton;
 class KLineEdit;
-class SelectImapWidget : public QWidget
+class SelectImapWidget : public KSieveUi::AbstractMoveImapFolderWidget
 {
     Q_OBJECT
 public:
     explicit SelectImapWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapWidget();
 
-    void setText(const QString &str);
-    QString text() const;
+    void setText(const QString &str) Q_DECL_OVERRIDE;
+    QString text() const Q_DECL_OVERRIDE;
 
-    void setSieveAccount(const KSieveUi::SieveAccount &account);
+    void setSieveAccount(const KSieveUi::SieveAccount &account) Q_DECL_OVERRIDE;
 
 private:
     void slotOpenSelectImapFolder();
