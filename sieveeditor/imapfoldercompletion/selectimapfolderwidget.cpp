@@ -155,7 +155,7 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
 void SelectImapFolderWidget::onFullListingDone(KJob *job)
 {
     if (job->error()) {
-        //TODO show error
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
     }
     Q_EMIT enableOkButton(true);
 }
