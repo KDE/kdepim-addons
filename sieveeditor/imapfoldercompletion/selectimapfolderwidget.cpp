@@ -49,19 +49,21 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 void SelectImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
 {
-    mSession = new KIMAP::Session(account.serverName(), account.port(), this);
-    mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
+    if (account.isValid()) {
+        mSession = new KIMAP::Session(account.serverName(), account.port(), this);
+        mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
-    KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
-    login->setUserName(account.userName());
-    login->setPassword(account.password());
+        KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
+        login->setUserName(account.userName());
+        login->setPassword(account.password());
 #if 0
-    login->setEncryptionMode(account.encryptionMode());
-    login->setAuthenticationMode(account.authenticationMode());
+        login->setEncryptionMode(account.encryptionMode());
+        login->setAuthenticationMode(account.authenticationMode());
 #endif
 
-    connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
-    login->start();
+        connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
+        login->start();
+    }
 }
 
 void SelectImapFolderWidget::onLoginDone(KJob *job)
@@ -73,9 +75,7 @@ void SelectImapFolderWidget::onLoginDone(KJob *job)
 
 void SelectImapFolderWidget::onReloadRequested()
 {
-#if 0
-    m_itemsMap.clear();
-#endif
+    mItemsMap.clear();
     mModel->clear();
 
     // we need a connection
@@ -96,7 +96,6 @@ void SelectImapFolderWidget::onReloadRequested()
 void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
         const QList< QList<QByteArray> > &flags)
 {
-#if 0
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
@@ -115,37 +114,36 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
             const QString pathPart = pathParts.at(j);
             currentPath += separator + pathPart;
 
-            if (m_itemsMap.contains(currentPath)) {
+            if (mItemsMap.contains(currentPath)) {
                 if (!isDummy) {
-                    QStandardItem *item = m_itemsMap[currentPath];
-                    item->setCheckable(isCheckable);
+                    QStandardItem *item = mItemsMap[currentPath];
+                    //item->setCheckable(isCheckable);
                 }
 
             } else if (!parentPath.isEmpty()) {
-                Q_ASSERT(m_itemsMap.contains(parentPath));
+                Q_ASSERT(mItemsMap.contains(parentPath));
 
-                QStandardItem *parentItem = m_itemsMap[parentPath];
+                QStandardItem *parentItem = mItemsMap[parentPath];
 
                 QStandardItem *item = new QStandardItem(pathPart);
                 item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                item->setCheckable(isCheckable);
+                //item->setCheckable(isCheckable);
                 item->setData(currentPath.mid(1), PathRole);
                 parentItem->appendRow(item);
-                m_itemsMap[currentPath] = item;
+                mItemsMap[currentPath] = item;
 
             } else {
                 QStandardItem *item = new QStandardItem(pathPart);
                 item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                item->setCheckable(isCheckable);
+                //item->setCheckable(isCheckable);
                 item->setData(currentPath.mid(1), PathRole);
                 mModel->appendRow(item);
-                m_itemsMap[currentPath] = item;
+                mItemsMap[currentPath] = item;
             }
 
             parentPath = currentPath;
         }
     }
-#endif
 }
 
 void SelectImapFolderWidget::onFullListingDone(KJob *job)

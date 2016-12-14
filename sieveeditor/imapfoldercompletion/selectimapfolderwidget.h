@@ -31,6 +31,7 @@ class SieveAccount;
 }
 class QTreeView;
 class QStandardItemModel;
+class QStandardItem;
 class KJob;
 class SelectImapFolderWidget : public QWidget
 {
@@ -44,11 +45,15 @@ Q_SIGNALS:
     void enableOkButton(bool enabled);
 
 private:
+    enum Roles {
+        PathRole = Qt::UserRole + 1
+    };
     void onLoginDone(KJob *job);
     void onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
     void onReloadRequested();
     void onFullListingDone(KJob *job);
 
+    QMap<QString, QStandardItem *> mItemsMap;
     QTreeView *mTreeView;
     KIMAP::Session *mSession;
     QStandardItemModel *mModel;
