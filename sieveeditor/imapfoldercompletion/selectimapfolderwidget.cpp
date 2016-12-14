@@ -66,6 +66,12 @@ void SelectImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &accou
     }
 }
 
+QString SelectImapFolderWidget::selectedFolderName() const
+{
+    //TODO
+    return {};
+}
+
 void SelectImapFolderWidget::onLoginDone(KJob *job)
 {
     if (!job->error()) {

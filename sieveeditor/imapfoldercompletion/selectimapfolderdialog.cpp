@@ -58,3 +58,8 @@ void SelectImapFolderDialog::setSieveAccount(const KSieveUi::SieveAccount &accou
 {
     mSelectImapFolderWidget->setSieveAccount(account);
 }
+
+QString SelectImapFolderDialog::selectedFolderName() const
+{
+    return mSelectImapFolderWidget->selectedFolderName();
+}

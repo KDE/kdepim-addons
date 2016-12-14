@@ -41,6 +41,7 @@ public:
     ~SelectImapFolderWidget();
 
     void setSieveAccount(const KSieveUi::SieveAccount &account);
+    QString selectedFolderName() const;
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 
