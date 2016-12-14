@@ -10,4 +10,4 @@ endmacro ()
 
 add_sieveeditorplugin_unittest(selectimapfolderdialogtest.cpp "../selectimapfolderdialog.cpp;../selectimapfolderwidget.cpp")
 add_sieveeditorplugin_unittest(selectimapfolderwidgettest.cpp "../selectimapfolderwidget.cpp")
-add_sieveeditorplugin_unittest(selectimapwidgettest.cpp "../selectimapwidget.cpp")
+add_sieveeditorplugin_unittest(selectimapwidgettest.cpp "../selectimapwidget.cpp;../selectimapfolderdialog.cpp;../selectimapfolderwidget.cpp")

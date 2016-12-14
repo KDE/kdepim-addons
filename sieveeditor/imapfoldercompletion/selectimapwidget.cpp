@@ -18,10 +18,12 @@
 */
 
 #include "selectimapwidget.h"
+#include "selectimapfolderdialog.h"
 #include <KLineEdit>
 #include <KLocalizedString>
 #include <QToolButton>
 #include <QHBoxLayout>
+#include <QPointer>
 
 
 SelectImapWidget::SelectImapWidget(QWidget *parent)
@@ -55,12 +57,17 @@ QString SelectImapWidget::text() const
     return mLineEdit->text();
 }
 
-void SelectImapWidget::setAccount(const KSieveUi::SieveAccount &account)
+void SelectImapWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
 {
     mAccount = account;
 }
 
 void SelectImapWidget::slotOpenSelectImapFolder()
 {
-    //TODO
+    QPointer<SelectImapFolderDialog> dlg = new SelectImapFolderDialog(this);
+    dlg->setSieveAccount(mAccount);
+    if (dlg->exec()) {
+        //TODO get folder name
+    }
+    delete dlg;
 }

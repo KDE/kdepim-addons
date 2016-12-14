@@ -32,7 +32,7 @@ class SelectImapFolderDialog : public QDialog
 public:
     explicit SelectImapFolderDialog(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderDialog();
-    void setAccount(const KSieveUi::SieveAccount &account);
+    void setSieveAccount(const KSieveUi::SieveAccount &account);
 private:
     void slotEnableOkButton(bool enabled);
     SelectImapFolderWidget *mSelectImapFolderWidget;

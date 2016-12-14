@@ -39,7 +39,7 @@ public:
     explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
 
-    void setAccount(const KSieveUi::SieveAccount &account);
+    void setSieveAccount(const KSieveUi::SieveAccount &account);
 Q_SIGNALS:
     void enableOkButton(bool enabled);
 

@@ -47,7 +47,7 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 }
 
-void SelectImapFolderWidget::setAccount(const KSieveUi::SieveAccount &account)
+void SelectImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
 {
     mSession = new KIMAP::Session(account.serverName(), account.port(), this);
     mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));

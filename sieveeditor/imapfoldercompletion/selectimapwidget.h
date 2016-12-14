@@ -34,7 +34,7 @@ public:
     void setText(const QString &str);
     QString text() const;
 
-    void setAccount(const KSieveUi::SieveAccount &account);
+    void setSieveAccount(const KSieveUi::SieveAccount &account);
 
 private:
     void slotOpenSelectImapFolder();
