@@ -67,7 +67,7 @@ void SelectImapWidget::slotOpenSelectImapFolder()
     QPointer<SelectImapFolderDialog> dlg = new SelectImapFolderDialog(this);
     dlg->setSieveAccount(mAccount);
     if (dlg->exec()) {
-        //TODO get folder name
+        mLineEdit->setText(dlg->selectedFolderName());
     }
     delete dlg;
 }
