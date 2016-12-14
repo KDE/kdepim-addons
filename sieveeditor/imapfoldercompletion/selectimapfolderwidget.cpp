@@ -49,7 +49,7 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 void SelectImapFolderWidget::setAccount(const KSieveUi::SieveAccount &account)
 {
-    mSession = new KIMAP::Session(account.server(), account.port(), this);
+    mSession = new KIMAP::Session(account.serverName(), account.port(), this);
     mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
     KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
