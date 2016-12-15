@@ -23,7 +23,7 @@
 #include <QDialog>
 namespace KSieveUi
 {
-class SieveAccount;
+class SieveImapAccountSettings;
 }
 class SelectImapFolderWidget;
 class SelectImapFolderDialog : public QDialog
@@ -32,7 +32,7 @@ class SelectImapFolderDialog : public QDialog
 public:
     explicit SelectImapFolderDialog(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderDialog();
-    void setSieveAccount(const KSieveUi::SieveAccount &account);
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 
     QString selectedFolderName() const;
 private:

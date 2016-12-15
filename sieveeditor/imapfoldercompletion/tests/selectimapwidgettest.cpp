@@ -66,7 +66,7 @@ QString DefaultMoveImapFolderWidget::text() const
     return {};
 }
 
-void DefaultMoveImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
+void DefaultMoveImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
     Q_UNUSED(account);
 }

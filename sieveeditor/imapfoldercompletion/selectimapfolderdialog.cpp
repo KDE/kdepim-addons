@@ -54,9 +54,9 @@ void SelectImapFolderDialog::slotEnableOkButton(bool enabled)
     mOkButton->setEnabled(enabled);
 }
 
-void SelectImapFolderDialog::setSieveAccount(const KSieveUi::SieveAccount &account)
+void SelectImapFolderDialog::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
-    mSelectImapFolderWidget->setSieveAccount(account);
+    mSelectImapFolderWidget->setSieveImapAccountSettings(account);
 }
 
 QString SelectImapFolderDialog::selectedFolderName() const

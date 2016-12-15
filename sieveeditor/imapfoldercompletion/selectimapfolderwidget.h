@@ -29,7 +29,7 @@ class Session;
 }
 namespace KSieveUi
 {
-class SieveAccount;
+class SieveImapAccountSettings;
 }
 class QTreeView;
 class QStandardItemModel;
@@ -42,7 +42,7 @@ public:
     explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
 
-    void setSieveAccount(const KSieveUi::SieveAccount &account);
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
     QString selectedFolderName() const;
 Q_SIGNALS:
     void enableOkButton(bool enabled);

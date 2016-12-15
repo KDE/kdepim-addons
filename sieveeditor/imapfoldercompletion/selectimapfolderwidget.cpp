@@ -27,11 +27,12 @@
 
 #include <KIMAP/Session>
 #include <KIMAP/LoginJob>
-#include <KSieveUi/SieveAccount>
+#include <KSieveUi/SieveImapAccountSettings>
 
 SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     : QWidget(parent),
-      mSession(Q_NULLPTR)
+      mSession(Q_NULLPTR),
+      mModel(new QStandardItemModel(this))
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -39,7 +40,6 @@ SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     mTreeView = new QTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mainLayout->addWidget(mTreeView);
-
 }
 
 SelectImapFolderWidget::~SelectImapFolderWidget()
@@ -47,18 +47,52 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 }
 
-void SelectImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
+void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
+    qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName() << account.port() << account.password() << account.authenticationType();
     if (account.isValid()) {
-        mSession = new KIMAP::Session(account.serverName(), account.port(), this);
+        qDebug() << " Start session ";
+        mSession = new KIMAP::Session(account.serverName(), 143, this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
         KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
         login->setUserName(account.userName());
         login->setPassword(account.password());
+        switch(account.authenticationType()) {
+        case MailTransport::Transport::EnumAuthenticationType::LOGIN:
+            login->setAuthenticationMode(KIMAP::LoginJob::Login);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::PLAIN:
+            login->setAuthenticationMode(KIMAP::LoginJob::Plain);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::CRAM_MD5:
+            login->setAuthenticationMode(KIMAP::LoginJob::CramMD5);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5:
+            login->setAuthenticationMode(KIMAP::LoginJob::DigestMD5);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::GSSAPI:
+            login->setAuthenticationMode(KIMAP::LoginJob::GSSAPI);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::NTLM:
+            login->setAuthenticationMode(KIMAP::LoginJob::NTLM);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::APOP:
+            //login->setAuthenticationMode(KIMAP::LoginJob::);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::CLEAR:
+            login->setAuthenticationMode(KIMAP::LoginJob::ClearText);
+            break;
+        case MailTransport::Transport::EnumAuthenticationType::ANONYMOUS:
+            login->setAuthenticationMode(KIMAP::LoginJob::Anonymous);
+            break;
+        default:
+            qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << " undefined authentication mode " << account.authenticationType();
+            break;
+        }
+        login->setEncryptionMode(KIMAP::LoginJob::TlsV1);
 #if 0
         login->setEncryptionMode(account.encryptionMode());
-        login->setAuthenticationMode(account.authenticationMode());
 #endif
 
         connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
@@ -81,6 +115,7 @@ void SelectImapFolderWidget::onLoginDone(KJob *job)
 
 void SelectImapFolderWidget::onReloadRequested()
 {
+    qDebug()<<" void SelectImapFolderWidget::onReloadRequested()";
     mItemsMap.clear();
     mModel->clear();
 
@@ -102,6 +137,7 @@ void SelectImapFolderWidget::onReloadRequested()
 void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
         const QList< QList<QByteArray> > &flags)
 {
+    qDebug() <<" void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes," << mailBoxes.size();
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];

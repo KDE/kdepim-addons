@@ -30,7 +30,7 @@ public:
 
     void setText(const QString &str) Q_DECL_OVERRIDE;
     QString text() const Q_DECL_OVERRIDE;
-    void setSieveAccount(const KSieveUi::SieveAccount &account) Q_DECL_OVERRIDE;
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) Q_DECL_OVERRIDE;
 };
 
 class SelectImapWidgetTest : public QWidget
