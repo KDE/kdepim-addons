@@ -18,14 +18,37 @@
 */
 
 #include "selectimapwidgettest.h"
+#include <QHBoxLayout>
+#include <KSieveUi/AbstractMoveImapFolderWidget>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     : QWidget(parent)
 {
-
+    setWindowTitle(QStringLiteral("Test AbstractMoveImapFolderWidget plugin"));
 }
 
 SelectImapWidgetTest::~SelectImapWidgetTest()
 {
 
+}
+
+DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
+    : KSieveUi::AbstractMoveImapFolderWidget(parent)
+{
+
+}
+
+void DefaultMoveImapFolderWidget::setText(const QString &str)
+{
+    Q_UNUSED(str);
+}
+
+QString DefaultMoveImapFolderWidget::text() const
+{
+    return {};
+}
+
+void DefaultMoveImapFolderWidget::setSieveAccount(const KSieveUi::SieveAccount &account)
+{
+    Q_UNUSED(account);
 }

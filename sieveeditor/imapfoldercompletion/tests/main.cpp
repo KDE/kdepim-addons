@@ -20,6 +20,7 @@
 #include <QStandardPaths>
 #include <QCommandLineParser>
 #include <QApplication>
+#include "selectimapwidgettest.h"
 
 int main(int argc, char **argv)
 {
@@ -30,11 +31,11 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    //AttendeeSelector *dialog = new AttendeeSelector;
-    //dialog->resize(800, 600);
-    //dialog->show();
+    SelectImapWidgetTest *w = new SelectImapWidgetTest;
+    w->resize(800, 600);
+    w->show();
     app.exec();
-    //delete dialog;
+    delete w;
     return 0;
 }
 
