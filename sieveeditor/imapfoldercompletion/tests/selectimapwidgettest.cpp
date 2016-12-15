@@ -18,13 +18,30 @@
 */
 
 #include "selectimapwidgettest.h"
+#include <KPluginLoader>
 #include <QHBoxLayout>
+#include <kpluginfactory.h>
 #include <KSieveUi/AbstractMoveImapFolderWidget>
+#include <QDebug>
+#include <QLabel>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     : QWidget(parent)
 {
     setWindowTitle(QStringLiteral("Test AbstractMoveImapFolderWidget plugin"));
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+
+    KSieveUi::AbstractMoveImapFolderWidget *lineEdit = Q_NULLPTR;
+    KPluginLoader loader(QStringLiteral("plugins/libksieve/imapfoldercompletionplugin"));
+    KPluginFactory* factory = loader.factory();
+    qDebug() << " factory :::::::::" << factory;
+    if (!factory) {
+        lineEdit = new DefaultMoveImapFolderWidget(this);
+    } else {
+        lineEdit = factory->create<KSieveUi::AbstractMoveImapFolderWidget>();
+    }
+    mainLayout->addWidget(lineEdit);
+
 }
 
 SelectImapWidgetTest::~SelectImapWidgetTest()
@@ -35,7 +52,9 @@ SelectImapWidgetTest::~SelectImapWidgetTest()
 DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
-
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QLabel *label = new QLabel(QStringLiteral("Problem during loading plugin! Please verify your installation."));
+    mainLayout->addWidget(label);
 }
 
 void DefaultMoveImapFolderWidget::setText(const QString &str)
