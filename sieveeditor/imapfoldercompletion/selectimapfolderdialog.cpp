@@ -28,6 +28,7 @@
 SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Select IMAP folder"));
     QVBoxLayout *layout = new QVBoxLayout(this);
 
     mSelectImapFolderWidget = new SelectImapFolderWidget(this);

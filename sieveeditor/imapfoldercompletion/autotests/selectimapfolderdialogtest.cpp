@@ -21,6 +21,7 @@
 #include "../selectimapfolderdialog.h"
 #include "../selectimapfolderwidget.h"
 #include <QTest>
+#include <QDialogButtonBox>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)
@@ -37,6 +38,13 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 {
     SelectImapFolderDialog w;
 
+    SelectImapFolderWidget *mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));
+    QVERIFY(mSelectImapFolderWidget);
+
+    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
+
+    QVERIFY(!w.windowTitle().isEmpty());
 }
 
 QTEST_MAIN(SelectImapFolderDialogTest)
