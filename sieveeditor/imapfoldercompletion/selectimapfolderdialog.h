@@ -17,12 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef SELECTIMAPFOLDERDIALOG_H
 #define SELECTIMAPFOLDERDIALOG_H
 
 #include <QDialog>
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveAccount;
 }
 class SelectImapFolderWidget;

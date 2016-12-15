@@ -23,10 +23,12 @@
 #include <QWidget>
 
 #include <kimap/listjob.h>
-namespace KIMAP {
+namespace KIMAP
+{
 class Session;
 }
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveAccount;
 }
 class QTreeView;
