@@ -25,8 +25,10 @@
 #include <QHBoxLayout>
 #include <QPointer>
 
+#include <kpluginfactory.h>
+K_PLUGIN_FACTORY_WITH_JSON(ImapFolderCompletionFactory, "imapfoldercompletion.json", registerPlugin<SelectImapWidget>();)
 
-SelectImapWidget::SelectImapWidget(QWidget *parent)
+SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
@@ -73,3 +75,5 @@ void SelectImapWidget::slotOpenSelectImapFolder()
     }
     delete dlg;
 }
+
+#include "selectimapwidget.moc"

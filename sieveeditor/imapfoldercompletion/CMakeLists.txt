@@ -11,7 +11,6 @@ endif()
 
 
 set(imapfoldercompletionplugin_SRCS
-    imapfoldercompletion.cpp
     selectimapfolderdialog.cpp
     selectimapfolderwidget.cpp
     selectimapwidget.cpp
