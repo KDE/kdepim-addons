@@ -32,9 +32,8 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
 
     KSieveUi::AbstractMoveImapFolderWidget *lineEdit = Q_NULLPTR;
-    KPluginLoader loader(QStringLiteral("plugins/libksieve/imapfoldercompletionplugin"));
+    KPluginLoader loader(QStringLiteral("libksieve/imapfoldercompletionplugin"));
     KPluginFactory* factory = loader.factory();
-    qDebug() << " factory :::::::::" << factory;
     if (!factory) {
         lineEdit = new DefaultMoveImapFolderWidget(this);
     } else {
