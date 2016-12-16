@@ -37,6 +37,9 @@ public:
     QString selectedFolderName() const;
 private:
     void slotEnableOkButton(bool enabled);
+    void writeConfig();
+    void readConfig();
+
     SelectImapFolderWidget *mSelectImapFolderWidget;
     QPushButton *mOkButton;
 };

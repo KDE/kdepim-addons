@@ -19,7 +19,11 @@
 
 #include "selectimapfolderdialog.h"
 #include "selectimapfolderwidget.h"
+
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
+
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -42,11 +46,12 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectImapFolderDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectImapFolderDialog::reject);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    readConfig();
 }
 
 SelectImapFolderDialog::~SelectImapFolderDialog()
 {
-
+    writeConfig();
 }
 
 void SelectImapFolderDialog::slotEnableOkButton(bool enabled)
@@ -62,4 +67,19 @@ void SelectImapFolderDialog::setSieveImapAccountSettings(const KSieveUi::SieveIm
 QString SelectImapFolderDialog::selectedFolderName() const
 {
     return mSelectImapFolderWidget->selectedFolderName();
+}
+
+void SelectImapFolderDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "SelectImapFolderDialog");
+    group.writeEntry("Size", size());
+}
+
+void SelectImapFolderDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "SelectImapFolderDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }
