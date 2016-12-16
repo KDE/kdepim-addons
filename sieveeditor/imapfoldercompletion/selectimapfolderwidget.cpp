@@ -58,43 +58,8 @@ void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveIm
         KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
         login->setUserName(account.userName());
         login->setPassword(account.password());
-        switch(account.authenticationType()) {
-        case MailTransport::Transport::EnumAuthenticationType::LOGIN:
-            login->setAuthenticationMode(KIMAP::LoginJob::Login);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::PLAIN:
-            login->setAuthenticationMode(KIMAP::LoginJob::Plain);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::CRAM_MD5:
-            login->setAuthenticationMode(KIMAP::LoginJob::CramMD5);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::DIGEST_MD5:
-            login->setAuthenticationMode(KIMAP::LoginJob::DigestMD5);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::GSSAPI:
-            login->setAuthenticationMode(KIMAP::LoginJob::GSSAPI);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::NTLM:
-            login->setAuthenticationMode(KIMAP::LoginJob::NTLM);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::APOP:
-            //login->setAuthenticationMode(KIMAP::LoginJob::);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::CLEAR:
-            login->setAuthenticationMode(KIMAP::LoginJob::ClearText);
-            break;
-        case MailTransport::Transport::EnumAuthenticationType::ANONYMOUS:
-            login->setAuthenticationMode(KIMAP::LoginJob::Anonymous);
-            break;
-        default:
-            qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << " undefined authentication mode " << account.authenticationType();
-            break;
-        }
-        login->setEncryptionMode(KIMAP::LoginJob::TlsV1);
-#if 0
-        login->setEncryptionMode(account.encryptionMode());
-#endif
-
+        login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(account.authenticationType()));
+        login->setEncryptionMode(static_cast<KIMAP::LoginJob::EncryptionMode>(account.encryptionMode()));
         connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
         login->start();
     }
