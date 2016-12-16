@@ -75,8 +75,12 @@ void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveIm
 
 QString SelectImapFolderWidget::selectedFolderName() const
 {
-    //TODO
-    return {};
+    QString currentPath;
+    const QModelIndex index = mTreeView->currentIndex();
+    if (index.isValid()) {
+        currentPath = index.data(PathRole).toString();
+    }
+    return currentPath;
 }
 
 void SelectImapFolderWidget::onLoginDone(KJob *job)
