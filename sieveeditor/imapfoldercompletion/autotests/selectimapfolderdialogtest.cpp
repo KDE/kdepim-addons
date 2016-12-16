@@ -22,11 +22,12 @@
 #include "../selectimapfolderwidget.h"
 #include <QTest>
 #include <QDialogButtonBox>
+#include <QStandardPaths>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 SelectImapFolderDialogTest::~SelectImapFolderDialogTest()
