@@ -24,6 +24,7 @@
 #include <QHBoxLayout>
 #include <QTreeView>
 #include <QStandardItemModel>
+#include <QHeaderView>
 
 #include <KIMAP/Session>
 #include <KIMAP/LoginJob>
@@ -39,6 +40,8 @@ SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mTreeView = new QTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
+    mTreeView->header()->hide();
+    mTreeView->setModel(mModel);
     mainLayout->addWidget(mTreeView);
 }
 
@@ -49,9 +52,14 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
-    qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName() << account.port() << account.password() << account.authenticationType();
+#if 0
+    qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName()
+             << " port : " << account.port()
+             << " password :" << account.password()
+             << "authentication :" << account.authenticationType()
+             << "encryption : " << account.encryptionMode();
+#endif
     if (account.isValid()) {
-        qDebug() << " Start session ";
         mSession = new KIMAP::Session(account.serverName(), 143, this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
@@ -80,7 +88,6 @@ void SelectImapFolderWidget::onLoginDone(KJob *job)
 
 void SelectImapFolderWidget::onReloadRequested()
 {
-    qDebug()<<" void SelectImapFolderWidget::onReloadRequested()";
     mItemsMap.clear();
     mModel->clear();
 
@@ -102,7 +109,6 @@ void SelectImapFolderWidget::onReloadRequested()
 void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
         const QList< QList<QByteArray> > &flags)
 {
-    qDebug() <<" void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes," << mailBoxes.size();
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
