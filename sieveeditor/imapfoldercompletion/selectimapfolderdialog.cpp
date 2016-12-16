@@ -38,7 +38,7 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     mSelectImapFolderWidget->setObjectName(QStringLiteral("selectimapfolderwidget"));
     layout->addWidget(mSelectImapFolderWidget);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::enableOkButton, this, &SelectImapFolderDialog::slotEnableOkButton);
-
+    connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderSelected, this, &SelectImapFolderDialog::accept);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     layout->addWidget(buttonBox);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));

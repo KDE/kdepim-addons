@@ -29,25 +29,79 @@
 #include <KIMAP/Session>
 #include <KIMAP/LoginJob>
 #include <KSieveUi/SieveImapAccountSettings>
+#include <QLineEdit>
+
+SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
+    : KRecursiveFilterProxyModel(parent)
+{
+
+}
+
+void SearchFilterProxyModel::setSearchPattern(const QString &pattern)
+{
+    if (m_pattern != pattern) {
+        m_pattern = pattern;
+        invalidate();
+    }
+}
+
+bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
+{
+    QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0, sourceParent);
+    if (!m_pattern.isEmpty()) {
+        const QString text = sourceIndex.data(Qt::DisplayRole).toString();
+        return text.contains(m_pattern, Qt::CaseInsensitive);
+    } else {
+        return true;
+    }
+}
+
 
 SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     : QWidget(parent),
       mSession(Q_NULLPTR),
       mModel(new QStandardItemModel(this))
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+
+    mSearchLineEdit = new QLineEdit(this);
+    mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
+    mSearchLineEdit->setClearButtonEnabled(true);
+    mainLayout->addWidget(mSearchLineEdit);
+
     mTreeView = new QTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mTreeView->header()->hide();
-    mTreeView->setModel(mModel);
+
+    mFilter = new SearchFilterProxyModel(this);
+    mFilter->setSourceModel(mModel);
+
+    mTreeView->setModel(mFilter);
+    connect(mTreeView, &QTreeView::doubleClicked, this, &SelectImapFolderWidget::slotDoubleClicked);
     mainLayout->addWidget(mTreeView);
+
+    connect(mSearchLineEdit, &QLineEdit::textChanged, this, &SelectImapFolderWidget::slotSearchPattern);
 }
 
 SelectImapFolderWidget::~SelectImapFolderWidget()
 {
 
+}
+
+void SelectImapFolderWidget::slotSearchPattern(const QString &pattern)
+{
+    mTreeView->expandAll();
+    mFilter->setSearchPattern(pattern);
+}
+
+
+void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)
+{
+    if (index.isValid()) {
+        Q_EMIT folderSelected();
+    }
 }
 
 void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
@@ -68,7 +122,7 @@ void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveIm
         login->setPassword(account.password());
         login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(account.authenticationType()));
         login->setEncryptionMode(static_cast<KIMAP::LoginJob::EncryptionMode>(account.encryptionMode()));
-        connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::onLoginDone);
+        connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::slotLoginDone);
         login->start();
     }
 }
@@ -83,14 +137,14 @@ QString SelectImapFolderWidget::selectedFolderName() const
     return currentPath;
 }
 
-void SelectImapFolderWidget::onLoginDone(KJob *job)
+void SelectImapFolderWidget::slotLoginDone(KJob *job)
 {
     if (!job->error()) {
-        onReloadRequested();
+        slotReloadRequested();
     }
 }
 
-void SelectImapFolderWidget::onReloadRequested()
+void SelectImapFolderWidget::slotReloadRequested()
 {
     mItemsMap.clear();
     mModel->clear();
@@ -104,13 +158,14 @@ void SelectImapFolderWidget::onReloadRequested()
 
     KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
     list->setIncludeUnsubscribed(true);
-    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapFolderWidget::onMailBoxesReceived);
-    connect(list, &KIMAP::ListJob::result, this, &SelectImapFolderWidget::onFullListingDone);
+    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapFolderWidget::slotMailBoxesReceived);
+    connect(list, &KIMAP::ListJob::result, this, &SelectImapFolderWidget::slotFullListingDone);
     list->start();
 }
 
-void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
+void SelectImapFolderWidget::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
 {
+    Q_UNUSED(flags);
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
@@ -121,12 +176,12 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
 
         QString parentPath;
         QString currentPath;
-        const int numberOfPath(pathParts.size());
         for (int j = 0; j < pathParts.size(); ++j) {
             const QString pathPart = pathParts.at(j);
             currentPath += separator + pathPart;
-
-            if (!parentPath.isEmpty()) {
+            if (mItemsMap.contains(currentPath)) {
+                //nothing
+            } else if (!parentPath.isEmpty()) {
                 Q_ASSERT(mItemsMap.contains(parentPath));
 
                 QStandardItem *parentItem = mItemsMap[parentPath];
@@ -150,7 +205,7 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
     }
 }
 
-void SelectImapFolderWidget::onFullListingDone(KJob *job)
+void SelectImapFolderWidget::slotFullListingDone(KJob *job)
 {
     if (job->error()) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();

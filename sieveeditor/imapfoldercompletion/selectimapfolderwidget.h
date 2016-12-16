@@ -23,6 +23,7 @@
 #include <QWidget>
 
 #include <kimap/listjob.h>
+#include <KRecursiveFilterProxyModel>
 namespace KIMAP
 {
 class Session;
@@ -35,6 +36,25 @@ class QTreeView;
 class QStandardItemModel;
 class QStandardItem;
 class KJob;
+class QLineEdit;
+
+class SearchFilterProxyModel : public KRecursiveFilterProxyModel
+{
+    Q_OBJECT
+public:
+    explicit SearchFilterProxyModel(QObject *parent = Q_NULLPTR);
+
+public Q_SLOTS:
+    void setSearchPattern(const QString &pattern);
+
+protected:
+    bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+
+private:
+    QString m_pattern;
+};
+
+
 class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
@@ -44,22 +64,28 @@ public:
 
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
     QString selectedFolderName() const;
+
 Q_SIGNALS:
     void enableOkButton(bool enabled);
+    void folderSelected();
 
 private:
     enum Roles {
         PathRole = Qt::UserRole + 1
     };
-    void onLoginDone(KJob *job);
-    void onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
-    void onReloadRequested();
-    void onFullListingDone(KJob *job);
+    void slotLoginDone(KJob *job);
+    void slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
+    void slotReloadRequested();
+    void slotFullListingDone(KJob *job);
+    void slotDoubleClicked(const QModelIndex &index);
+    void slotSearchPattern(const QString &pattern);
 
     QMap<QString, QStandardItem *> mItemsMap;
+    QLineEdit *mSearchLineEdit;
     QTreeView *mTreeView;
     KIMAP::Session *mSession;
     QStandardItemModel *mModel;
+    SearchFilterProxyModel *mFilter;
 };
 
 #endif // SELECTIMAPFOLDERWIDGET_H

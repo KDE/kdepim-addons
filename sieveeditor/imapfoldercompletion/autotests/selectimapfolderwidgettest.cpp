@@ -21,6 +21,7 @@
 #include "../selectimapfolderwidget.h"
 #include <QHBoxLayout>
 #include <QTreeView>
+#include <QLineEdit>
 
 #include <QTest>
 
@@ -38,10 +39,17 @@ SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest()
 void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {
     SelectImapFolderWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
     QTreeView *mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
     QVERIFY(mTreeView);
+
+
+    QLineEdit *mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
+    QVERIFY(mSearchLineEdit);
+    QVERIFY(mSearchLineEdit->isClearButtonEnabled());
+    QVERIFY(mSearchLineEdit->text().isEmpty());
 }
 
 QTEST_MAIN(SelectImapFolderWidgetTest)
