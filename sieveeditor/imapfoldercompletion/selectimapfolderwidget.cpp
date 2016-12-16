@@ -95,7 +95,6 @@ void SelectImapFolderWidget::onReloadRequested()
     mItemsMap.clear();
     mModel->clear();
 
-    // we need a connection
     if (!mSession
             || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SubscriptionDialog - got no connection";
@@ -110,8 +109,7 @@ void SelectImapFolderWidget::onReloadRequested()
     list->start();
 }
 
-void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes,
-        const QList< QList<QByteArray> > &flags)
+void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
 {
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
@@ -125,26 +123,16 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
         QString currentPath;
         const int numberOfPath(pathParts.size());
         for (int j = 0; j < pathParts.size(); ++j) {
-            const bool isDummy = (j != (numberOfPath - 1));
-            const bool isCheckable = !isDummy && !flags[i].contains("\\noselect");
-
             const QString pathPart = pathParts.at(j);
             currentPath += separator + pathPart;
 
-            if (mItemsMap.contains(currentPath)) {
-                if (!isDummy) {
-                    QStandardItem *item = mItemsMap[currentPath];
-                    //item->setCheckable(isCheckable);
-                }
-
-            } else if (!parentPath.isEmpty()) {
+            if (!parentPath.isEmpty()) {
                 Q_ASSERT(mItemsMap.contains(parentPath));
 
                 QStandardItem *parentItem = mItemsMap[parentPath];
 
                 QStandardItem *item = new QStandardItem(pathPart);
                 item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                //item->setCheckable(isCheckable);
                 item->setData(currentPath.mid(1), PathRole);
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
@@ -152,7 +140,6 @@ void SelectImapFolderWidget::onMailBoxesReceived(const QList<KIMAP::MailBoxDescr
             } else {
                 QStandardItem *item = new QStandardItem(pathPart);
                 item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                //item->setCheckable(isCheckable);
                 item->setData(currentPath.mid(1), PathRole);
                 mModel->appendRow(item);
                 mItemsMap[currentPath] = item;
