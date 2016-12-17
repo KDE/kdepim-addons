@@ -152,7 +152,6 @@ void SelectImapFolderWidget::slotReloadRequested()
     if (!mSession
             || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SubscriptionDialog - got no connection";
-        Q_EMIT enableOkButton(true);
         return;
     }
 
@@ -210,5 +209,4 @@ void SelectImapFolderWidget::slotFullListingDone(KJob *job)
     if (job->error()) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
     }
-    Q_EMIT enableOkButton(true);
 }

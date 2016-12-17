@@ -37,7 +37,6 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     mSelectImapFolderWidget = new SelectImapFolderWidget(this);
     mSelectImapFolderWidget->setObjectName(QStringLiteral("selectimapfolderwidget"));
     layout->addWidget(mSelectImapFolderWidget);
-    connect(mSelectImapFolderWidget, &SelectImapFolderWidget::enableOkButton, this, &SelectImapFolderDialog::slotEnableOkButton);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderSelected, this, &SelectImapFolderDialog::accept);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     layout->addWidget(buttonBox);
@@ -45,18 +44,12 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
     // Set the button actions
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectImapFolderDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectImapFolderDialog::reject);
-    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     readConfig();
 }
 
 SelectImapFolderDialog::~SelectImapFolderDialog()
 {
     writeConfig();
-}
-
-void SelectImapFolderDialog::slotEnableOkButton(bool enabled)
-{
-    mOkButton->setEnabled(enabled);
 }
 
 void SelectImapFolderDialog::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)

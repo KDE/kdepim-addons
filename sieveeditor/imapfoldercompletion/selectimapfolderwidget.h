@@ -66,7 +66,6 @@ public:
     QString selectedFolderName() const;
 
 Q_SIGNALS:
-    void enableOkButton(bool enabled);
     void folderSelected();
 
 private:
