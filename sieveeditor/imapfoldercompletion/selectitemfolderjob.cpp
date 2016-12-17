@@ -39,7 +39,7 @@ SelectItemFolderJob::~SelectItemFolderJob()
 
 void SelectItemFolderJob::start()
 {
-    if (mSieveImapAccount.isValid()) {
+    if (mModel && mSieveImapAccount.isValid()) {
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
