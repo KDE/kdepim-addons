@@ -114,7 +114,7 @@ void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveIm
              << "encryption : " << account.encryptionMode();
 #endif
     if (account.isValid()) {
-        mSession = new KIMAP::Session(account.serverName(), 143, this);
+        mSession = new KIMAP::Session(account.serverName(), account.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
         KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
