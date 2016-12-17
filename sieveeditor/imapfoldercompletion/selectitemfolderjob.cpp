@@ -24,10 +24,10 @@
 #include <KIMAP/Session>
 #include <QStandardItemModel>
 
-SelectItemFolderJob::SelectItemFolderJob(QObject *parent)
+SelectItemFolderJob::SelectItemFolderJob(QStandardItemModel *model, QObject *parent)
     : QObject(parent),
       mSession(Q_NULLPTR),
-      mModel(new QStandardItemModel(this))
+      mModel(model)
 {
 
 }

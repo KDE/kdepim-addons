@@ -22,20 +22,13 @@
 
 #include <QWidget>
 
-#include <kimap/listjob.h>
 #include <KRecursiveFilterProxyModel>
-namespace KIMAP
-{
-class Session;
-}
 namespace KSieveUi
 {
 class SieveImapAccountSettings;
 }
 class QTreeView;
 class QStandardItemModel;
-class QStandardItem;
-class KJob;
 class QLineEdit;
 
 class SearchFilterProxyModel : public KRecursiveFilterProxyModel
@@ -69,20 +62,11 @@ Q_SIGNALS:
     void folderSelected();
 
 private:
-    enum Roles {
-        PathRole = Qt::UserRole + 1
-    };
-    void slotLoginDone(KJob *job);
-    void slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
-    void slotReloadRequested();
-    void slotFullListingDone(KJob *job);
     void slotDoubleClicked(const QModelIndex &index);
     void slotSearchPattern(const QString &pattern);
 
-    QMap<QString, QStandardItem *> mItemsMap;
     QLineEdit *mSearchLineEdit;
     QTreeView *mTreeView;
-    KIMAP::Session *mSession;
     QStandardItemModel *mModel;
     SearchFilterProxyModel *mFilter;
 };

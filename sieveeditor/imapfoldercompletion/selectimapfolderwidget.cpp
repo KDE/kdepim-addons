@@ -19,15 +19,13 @@
 */
 
 #include "selectimapfolderwidget.h"
-#include "sessionuiproxy.h"
+#include "selectitemfolderjob.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <QHBoxLayout>
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QHeaderView>
 
-#include <KIMAP/Session>
-#include <KIMAP/LoginJob>
 #include <KSieveUi/SieveImapAccountSettings>
 #include <QLineEdit>
 
@@ -59,7 +57,6 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
 
 SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     : QWidget(parent),
-      mSession(Q_NULLPTR),
       mModel(new QStandardItemModel(this))
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -106,24 +103,10 @@ void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)
 
 void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
-#if 0
-    qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName()
-             << " port : " << account.port()
-             << " password :" << account.password()
-             << "authentication :" << account.authenticationType()
-             << "encryption : " << account.encryptionMode();
-#endif
     if (account.isValid()) {
-        mSession = new KIMAP::Session(account.serverName(), account.port(), this);
-        mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
-
-        KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
-        login->setUserName(account.userName());
-        login->setPassword(account.password());
-        login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(account.authenticationType()));
-        login->setEncryptionMode(static_cast<KIMAP::LoginJob::EncryptionMode>(account.encryptionMode()));
-        connect(login, &KIMAP::LoginJob::result, this, &SelectImapFolderWidget::slotLoginDone);
-        login->start();
+        SelectItemFolderJob *job = new SelectItemFolderJob(mModel, this);
+        job->setSieveImapAccountSettings(account);
+        job->start();
     }
 }
 
@@ -132,81 +115,7 @@ QString SelectImapFolderWidget::selectedFolderName() const
     QString currentPath;
     const QModelIndex index = mTreeView->currentIndex();
     if (index.isValid()) {
-        currentPath = index.data(PathRole).toString();
+        currentPath = index.data(SelectItemFolderJob::PathRole).toString();
     }
     return currentPath;
-}
-
-void SelectImapFolderWidget::slotLoginDone(KJob *job)
-{
-    if (!job->error()) {
-        slotReloadRequested();
-    }
-}
-
-void SelectImapFolderWidget::slotReloadRequested()
-{
-    mItemsMap.clear();
-    mModel->clear();
-
-    if (!mSession
-            || mSession->state() != KIMAP::Session::Authenticated) {
-        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SubscriptionDialog - got no connection";
-        return;
-    }
-
-    KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
-    list->setIncludeUnsubscribed(true);
-    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapFolderWidget::slotMailBoxesReceived);
-    connect(list, &KIMAP::ListJob::result, this, &SelectImapFolderWidget::slotFullListingDone);
-    list->start();
-}
-
-void SelectImapFolderWidget::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
-{
-    Q_UNUSED(flags);
-    const int numberOfMailBoxes(mailBoxes.size());
-    for (int i = 0; i < numberOfMailBoxes; i++) {
-        KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
-
-        const QStringList pathParts = mailBox.name.split(mailBox.separator);
-        const QString separator = mailBox.separator;
-        Q_ASSERT(separator.size() == 1);   // that's what the spec says
-
-        QString parentPath;
-        QString currentPath;
-        for (int j = 0; j < pathParts.size(); ++j) {
-            const QString pathPart = pathParts.at(j);
-            currentPath += separator + pathPart;
-            if (mItemsMap.contains(currentPath)) {
-                //nothing
-            } else if (!parentPath.isEmpty()) {
-                Q_ASSERT(mItemsMap.contains(parentPath));
-
-                QStandardItem *parentItem = mItemsMap[parentPath];
-
-                QStandardItem *item = new QStandardItem(pathPart);
-                item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                item->setData(currentPath.mid(1), PathRole);
-                parentItem->appendRow(item);
-                mItemsMap[currentPath] = item;
-
-            } else {
-                QStandardItem *item = new QStandardItem(pathPart);
-                item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
-                item->setData(currentPath.mid(1), PathRole);
-                mModel->appendRow(item);
-                mItemsMap[currentPath] = item;
-            }
-
-            parentPath = currentPath;
-        }
-    }
-}
-
-void SelectImapFolderWidget::slotFullListingDone(KJob *job)
-{
-    if (job->error()) {
-        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
-    }
 }

@@ -39,7 +39,7 @@ public:
         PathRole = Qt::UserRole + 1
     };
 
-    explicit SelectItemFolderJob(QObject *parent = Q_NULLPTR);
+    explicit SelectItemFolderJob(QStandardItemModel *model, QObject *parent = Q_NULLPTR);
     ~SelectItemFolderJob();
 
     void start();
