@@ -26,7 +26,8 @@
 
 SelectItemFolderJob::SelectItemFolderJob(QObject *parent)
     : QObject(parent),
-      mSession(Q_NULLPTR)
+      mSession(Q_NULLPTR),
+      mModel(new QStandardItemModel(this))
 {
 
 }
