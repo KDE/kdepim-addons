@@ -49,7 +49,6 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
 
 SelectImapWidget::~SelectImapWidget()
 {
-
 }
 
 void SelectImapWidget::setText(const QString &str)

@@ -39,8 +39,8 @@ SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
 
 void SearchFilterProxyModel::setSearchPattern(const QString &pattern)
 {
-    if (m_pattern != pattern) {
-        m_pattern = pattern;
+    if (mPattern != pattern) {
+        mPattern = pattern;
         invalidate();
     }
 }
@@ -48,9 +48,9 @@ void SearchFilterProxyModel::setSearchPattern(const QString &pattern)
 bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
 {
     QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0, sourceParent);
-    if (!m_pattern.isEmpty()) {
+    if (!mPattern.isEmpty()) {
         const QString text = sourceIndex.data(Qt::DisplayRole).toString();
-        return text.contains(m_pattern, Qt::CaseInsensitive);
+        return text.contains(mPattern, Qt::CaseInsensitive);
     } else {
         return true;
     }

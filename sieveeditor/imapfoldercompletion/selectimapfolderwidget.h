@@ -51,7 +51,7 @@ protected:
     bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
 
 private:
-    QString m_pattern;
+    QString mPattern;
 };
 
 
