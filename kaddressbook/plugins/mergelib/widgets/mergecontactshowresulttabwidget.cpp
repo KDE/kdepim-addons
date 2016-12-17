@@ -49,7 +49,7 @@ bool MergeContactShowResultTabWidget::tabBarVisible() const
 void MergeContactShowResultTabWidget::showMergedContacts(const Akonadi::Item::List &lstItem)
 {
     clear();
-    Q_FOREACH (const Akonadi::Item &item, lstItem) {
+    for (const Akonadi::Item &item : lstItem) {
         addMergedContact(item, false);
     }
     updateTabWidget();

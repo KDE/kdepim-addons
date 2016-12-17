@@ -74,7 +74,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     const QStringList emails = fromContact.emails();
     if (!emails.isEmpty()) {
         QStringList newContactsEmail = newContact.emails();
-        Q_FOREACH (const QString &email, emails) {
+        for (const QString &email : emails) {
             if (!newContactsEmail.contains(email)) {
                 newContactsEmail.append(email);
             }
@@ -85,7 +85,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     const QStringList categories = fromContact.categories();
     if (!categories.isEmpty()) {
         QStringList newContactsCategories = newContact.categories();
-        Q_FOREACH (const QString &category, categories) {
+        for (const QString &category : categories) {
             if (!newContactsCategories.contains(category)) {
                 newContactsCategories.append(category);
             }
@@ -97,7 +97,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     const PhoneNumber::List listPhone = fromContact.phoneNumbers();
     if (!listPhone.isEmpty()) {
         PhoneNumber::List newContactsPhone = newContact.phoneNumbers();
-        Q_FOREACH (const PhoneNumber &phone, listPhone) {
+        for (const PhoneNumber &phone : listPhone) {
             if (!newContactsPhone.contains(phone)) {
                 newContact.insertPhoneNumber(phone);
             }
@@ -119,7 +119,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     const Impp::List listImpp = fromContact.imppList();
     if (!listImpp.isEmpty()) {
         Impp::List newContactsImpp = newContact.imppList();
-        Q_FOREACH (const Impp &impp, listImpp) {
+        for (const Impp &impp : listImpp) {
             if (!newContactsImpp.contains(impp)) {
                 newContact.insertImpp(impp);
             }

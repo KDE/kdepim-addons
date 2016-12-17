@@ -73,7 +73,7 @@ void ShortUrlConfigureWidget::slotChanged()
 void ShortUrlConfigureWidget::init()
 {
     const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
-    Q_FOREACH (ShortUrlEnginePlugin *plugin, lstPlugin) {
+    for (ShortUrlEnginePlugin *plugin : lstPlugin) {
         d->mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
     }
 }

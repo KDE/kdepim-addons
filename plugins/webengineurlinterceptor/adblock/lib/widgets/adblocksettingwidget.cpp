@@ -188,11 +188,11 @@ void AdBlockSettingWidget::insertRule()
 
 void AdBlockSettingWidget::removeRule()
 {
-    QList<QListWidgetItem *> select = mUi->manualFiltersListWidget->selectedItems();
+    const QList<QListWidgetItem *> select = mUi->manualFiltersListWidget->selectedItems();
     if (select.isEmpty()) {
         return;
     }
-    Q_FOREACH (QListWidgetItem *item, select) {
+    for (QListWidgetItem *item : select) {
         delete item;
     }
     mUi->exportFilters->setEnabled(mUi->manualFiltersListWidget->count() > 0);
@@ -225,7 +225,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     KConfig config(QStringLiteral("AdBlockadblockrc"));
 
     const QStringList itemList = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
-    Q_FOREACH (const QString &item, itemList) {
+    for (const QString &item : itemList) {
         KConfigGroup filtersGroup(&config, item);
         const bool isFilterEnabled = filtersGroup.readEntry(QStringLiteral("FilterEnabled"), false);
         const QString url = filtersGroup.readEntry(QStringLiteral("url"));
@@ -452,7 +452,7 @@ void AdBlockSettingWidget::slotImportFilters()
         excludeFilter.append(subItem->text());
     }
 
-    Q_FOREACH (const QString &element, listFilter) {
+    for (const QString &element : listFilter) {
         if (element == QLatin1String("\n")) {
             continue;
         }

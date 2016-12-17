@@ -58,7 +58,7 @@ void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 
 void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool valid)
 {
-    Q_FOREACH (const QString &email, address) {
+    for (const QString &email : address) {
         QListWidgetItem *item = new QListWidgetItem(email, mListEmails);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if (valid) {

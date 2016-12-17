@@ -124,7 +124,7 @@ ShortUrlWidgetNg::~ShortUrlWidgetNg()
 void ShortUrlWidgetNg::initializePlugins()
 {
     const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
-    Q_FOREACH (ShortUrlEnginePlugin *plugin, lstPlugin) {
+    for (ShortUrlEnginePlugin *plugin : lstPlugin) {
         ShortUrlEngineInterface *interface = plugin->createInterface(this);
         if (interface) {
             mLstInterface.insert(interface->engineName(), interface);

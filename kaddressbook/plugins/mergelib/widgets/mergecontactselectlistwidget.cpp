@@ -150,7 +150,7 @@ void MergeContactSelectListWidget::addItem(const QString &str, const QIcon &icon
 void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &lst)
 {
     mSelectListWidget->clear();
-    Q_FOREACH (const Addressee &addr, lst) {
+    for (const Addressee &addr : lst) {
         switch (mConflictType) {
         case MergeContacts::None:
             break;

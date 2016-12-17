@@ -36,7 +36,7 @@ MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget()
 
 void MergeContactSelectInformationWidget::setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem)
 {
-    Q_FOREACH (const Akonadi::Item &item, listItem) {
+    for (const Akonadi::Item &item : listItem) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee address = item.payload<KContacts::Addressee>();
             mAddressList.append(address);

@@ -159,7 +159,7 @@ void ViewerPluginExternalConfigureWidget::load()
 
 void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos)
 {
-    Q_FOREACH (const ViewerPluginExternalScriptInfo &script, scriptInfos) {
+    for (const ViewerPluginExternalScriptInfo &script : scriptInfos) {
         ViewerPluginExternalScriptItem *item = new ViewerPluginExternalScriptItem(mListExternal);
         item->setScriptInfo(script);
     }

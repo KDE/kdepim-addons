@@ -36,7 +36,7 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
     }
 
     QStringList newArguments;
-    Q_FOREACH (const QString &arg, scriptArguments) {
+    for (const QString &arg : scriptArguments) {
         if (arg == QString::fromLatin1("%s")) {
             const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : Q_NULLPTR;
             newArguments << QStringLiteral("\"%1\"").arg(subject ? subject->asUnicodeString() : QString());

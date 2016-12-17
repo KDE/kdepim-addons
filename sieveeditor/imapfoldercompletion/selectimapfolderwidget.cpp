@@ -54,7 +54,6 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
     }
 }
 
-
 SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     : QWidget(parent),
       mModel(new QStandardItemModel(this))

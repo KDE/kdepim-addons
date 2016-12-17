@@ -74,7 +74,7 @@ void AdBlockAutomaticRulesListWidget::setRules(const QString &rules)
 {
     clear();
     const QStringList lst = rules.split(QLatin1Char('\n'), QString::SkipEmptyParts);
-    Q_FOREACH (const QString &rule, lst) {
+    for (const QString &rule : lst) {
         createItem(rule);
     }
 }
