@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "imapcompletionfolder", 
         "Name": "ImapCompletionFolder", 
+        "Name[ca@valencia]": "CarpetaComplecióImap", 
         "Name[ca]": "CarpetaComplecióImap", 
         "Name[pt]": "Pasta de Completação de IMAP", 
         "Name[sv]": "IMAP-kompletteringskatalog", 
