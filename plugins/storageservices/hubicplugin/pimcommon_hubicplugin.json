@@ -6,6 +6,7 @@
         "Name[sr@ijekavianlatin]": "hubiC", 
         "Name[sr@latin]": "hubiC", 
         "Name[sr]": "Хјубик", 
+        "Name[uk]": "hubiC", 
         "Name[x-test]": "xxHubicxx", 
         "ServiceTypes": [
             "PimCommonStorageService/Plugin"
