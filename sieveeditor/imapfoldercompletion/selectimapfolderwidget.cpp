@@ -65,6 +65,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
     mSearchLineEdit = new QLineEdit(this);
     mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
+    mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
 
     mTreeView = new QTreeView(this);
