@@ -96,7 +96,7 @@ public:
 
         // Pre-count the number of non-empty addressees
         int count = 0;
-        foreach (const KContacts::Addressee &a, al) {
+        for (const KContacts::Addressee &a : al) {
             if (a.isEmpty()) {
                 continue;
             }
@@ -128,7 +128,7 @@ public:
             }
         }
 
-        foreach (const KContacts::Addressee &a, al) {
+        for (const KContacts::Addressee &a : al) {
             if (a.isEmpty()) {
                 continue;
             }

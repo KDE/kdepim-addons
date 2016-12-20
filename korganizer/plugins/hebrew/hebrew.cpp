@@ -59,14 +59,14 @@ Element::List Hebrew::createDayElements(const QDate &date)
 
     HebrewDate hd = HebrewDate::fromSecular(date.year(), date.month(), date.day());
 
-    QStringList holidays = Holiday::findHoliday(hd, areWeInIsrael, showParsha,
+    const QStringList holidays = Holiday::findHoliday(hd, areWeInIsrael, showParsha,
                            showChol, showOmer);
 
     KCalendarSystem *cal = KCalendarSystem::create(KLocale::HebrewCalendar);
 
     text = cal->formatDate(date, KLocale::Day, KLocale::LongNumber) + QLatin1Char(' ') + cal->monthName(date);
 
-    foreach (const QString &holiday, holidays) {
+    for (const QString &holiday : holidays) {
         text += QLatin1String("<br/>\n") + holiday;
     }
 

@@ -523,7 +523,7 @@ void AntiSpamWizard::checkToolAvailability()
             const QString pattern = (*it).getServerPattern();
             qDebug() << "Testing for server pattern:" << pattern;
             const Akonadi::AgentInstance::List lst = MailCommon::Util::agentInstances();
-            foreach (const Akonadi::AgentInstance &type, lst) {
+            for (const Akonadi::AgentInstance &type : lst) {
                 if (type.status() == Akonadi::AgentInstance::Broken) {
                     continue;
                 }
