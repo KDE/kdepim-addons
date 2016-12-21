@@ -49,6 +49,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
 
 SelectImapWidget::~SelectImapWidget()
 {
+    delete mSelectImapFolderDialog;
 }
 
 void SelectImapWidget::setText(const QString &str)
@@ -69,14 +70,22 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAcco
     }
 }
 
+SelectImapFolderDialog *SelectImapWidget::selectFolderDialog()
+{
+    if (!mSelectImapFolderDialog) {
+        mSelectImapFolderDialog = new SelectImapFolderDialog(this);
+        mSelectImapFolderDialog->setSieveImapAccountSettings(mAccount);
+        mSelectImapFolderDialog->setModal(true);
+    }
+    return mSelectImapFolderDialog;
+}
+
 void SelectImapWidget::slotOpenSelectImapFolder()
 {
-    QPointer<SelectImapFolderDialog> dlg = new SelectImapFolderDialog(this);
-    dlg->setSieveImapAccountSettings(mAccount);
+    QPointer<SelectImapFolderDialog> dlg(selectFolderDialog());
     if (dlg->exec()) {
         mLineEdit->setText(dlg->selectedFolderName());
     }
-    delete dlg;
 }
 
 #include "selectimapwidget.moc"
