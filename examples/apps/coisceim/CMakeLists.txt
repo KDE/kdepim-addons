@@ -1,4 +1,3 @@
-project(coisceim)
 
 set (coisceim_widget_SRCS
   coisceimwidget.cpp
