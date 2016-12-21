@@ -93,7 +93,7 @@ void SelectItemFolderJob::slotReloadRequested()
     }
 
     KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
-    list->setIncludeUnsubscribed(true);
+    list->setOption(KIMAP::ListJob::IncludeUnsubscribed);
     connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectItemFolderJob::slotMailBoxesReceived);
     connect(list, &KIMAP::ListJob::result, this, &SelectItemFolderJob::slotFullListingDone);
     list->start();
