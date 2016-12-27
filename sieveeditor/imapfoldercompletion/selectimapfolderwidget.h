@@ -52,10 +52,9 @@ class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderWidget(QWidget *parent = Q_NULLPTR);
+    explicit SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = Q_NULLPTR);
     ~SelectImapFolderWidget();
 
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
     QString selectedFolderName() const;
 
 Q_SIGNALS:

@@ -19,6 +19,7 @@
 
 #include "selectimapfolderwidgettest.h"
 #include "../selectimapfolderwidget.h"
+#include <KSieveUi/SieveImapAccountSettings>
 #include <QHBoxLayout>
 #include <QTreeView>
 #include <QLineEdit>
@@ -38,7 +39,8 @@ SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest()
 
 void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {
-    SelectImapFolderWidget w;
+    KSieveUi::SieveImapAccountSettings account;
+    SelectImapFolderWidget w(account);
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);

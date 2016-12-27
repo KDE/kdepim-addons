@@ -73,8 +73,7 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAcco
 SelectImapFolderDialog *SelectImapWidget::selectFolderDialog()
 {
     if (!mSelectImapFolderDialog) {
-        mSelectImapFolderDialog = new SelectImapFolderDialog(this);
-        mSelectImapFolderDialog->setSieveImapAccountSettings(mAccount);
+        mSelectImapFolderDialog = new SelectImapFolderDialog(mAccount, this);
         mSelectImapFolderDialog->setModal(true);
     }
     return mSelectImapFolderDialog;

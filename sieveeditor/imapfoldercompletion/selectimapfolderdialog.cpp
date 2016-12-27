@@ -28,13 +28,13 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 
-SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
+SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Select IMAP folder"));
     QVBoxLayout *layout = new QVBoxLayout(this);
 
-    mSelectImapFolderWidget = new SelectImapFolderWidget(this);
+    mSelectImapFolderWidget = new SelectImapFolderWidget(account, this);
     mSelectImapFolderWidget->setObjectName(QStringLiteral("selectimapfolderwidget"));
     layout->addWidget(mSelectImapFolderWidget);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderSelected, this, &SelectImapFolderDialog::accept);
@@ -50,11 +50,6 @@ SelectImapFolderDialog::SelectImapFolderDialog(QWidget *parent)
 SelectImapFolderDialog::~SelectImapFolderDialog()
 {
     writeConfig();
-}
-
-void SelectImapFolderDialog::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
-{
-    mSelectImapFolderWidget->setSieveImapAccountSettings(account);
 }
 
 QString SelectImapFolderDialog::selectedFolderName() const

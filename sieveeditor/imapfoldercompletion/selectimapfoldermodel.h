@@ -17,28 +17,29 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SELECTIMAPFOLDERDIALOG_H
-#define SELECTIMAPFOLDERDIALOG_H
+#ifndef SELECTIMAPFOLDERMODEL_H
+#define SELECTIMAPFOLDERMODEL_H
 
-#include <QDialog>
+#include <QObject>
+#include <QHash>
+class QStandardItemModel;
 namespace KSieveUi
 {
 class SieveImapAccountSettings;
 }
-class SelectImapFolderWidget;
-class SelectImapFolderDialog : public QDialog
+class SelectImapFolderModel : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = Q_NULLPTR);
-    ~SelectImapFolderDialog();
+    explicit SelectImapFolderModel(QObject *parent = Q_NULLPTR);
+    ~SelectImapFolderModel();
 
-    QString selectedFolderName() const;
+    static SelectImapFolderModel *self();
+
+    QStandardItemModel *folderModel(const KSieveUi::SieveImapAccountSettings &account);
+
 private:
-    void writeConfig();
-    void readConfig();
-
-    SelectImapFolderWidget *mSelectImapFolderWidget;
+    QHash<QString, QStandardItemModel *> mHashFolderModel;
 };
 
-#endif // SELECTIMAPFOLDERDIALOG_H
+#endif // SELECTIMAPFOLDERMODEL_H

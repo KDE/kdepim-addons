@@ -20,6 +20,7 @@
 
 #include "selectimapfolderwidget.h"
 #include "selectitemfolderjob.h"
+#include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <QHBoxLayout>
 #include <QTreeView>
@@ -54,10 +55,10 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
     }
 }
 
-SelectImapFolderWidget::SelectImapFolderWidget(QWidget *parent)
-    : QWidget(parent),
-      mModel(new QStandardItemModel(this))
+SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
+    : QWidget(parent)
 {
+    mModel = SelectImapFolderModel::self()->folderModel(account);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
@@ -100,7 +101,7 @@ void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)
         Q_EMIT folderSelected();
     }
 }
-
+#if 0
 void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
     if (account.isValid()) {
@@ -109,6 +110,7 @@ void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveIm
         job->start();
     }
 }
+#endif
 
 QString SelectImapFolderWidget::selectedFolderName() const
 {

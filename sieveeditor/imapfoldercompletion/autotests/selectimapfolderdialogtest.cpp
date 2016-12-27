@@ -23,6 +23,7 @@
 #include <QTest>
 #include <QDialogButtonBox>
 #include <QStandardPaths>
+#include <KSieveUi/SieveImapAccountSettings>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)
@@ -37,7 +38,8 @@ SelectImapFolderDialogTest::~SelectImapFolderDialogTest()
 
 void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 {
-    SelectImapFolderDialog w;
+    KSieveUi::SieveImapAccountSettings account;
+    SelectImapFolderDialog w(account);
 
     SelectImapFolderWidget *mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));
     QVERIFY(mSelectImapFolderWidget);
