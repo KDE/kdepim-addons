@@ -37,17 +37,32 @@ SelectImapFolderModel *SelectImapFolderModel::self()
     return s_selectImapFolderModel;
 }
 
+void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
+{
+    if (account.isValid()) {
+        SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
+        job->setSieveImapAccountSettings(account);
+        job->start();
+    }
+}
+
+void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account)
+{
+    const QString identifier = account.identifier();
+    QStandardItemModel *model = mHashFolderModel.value(identifier);
+    if (model) {
+        fillModel(account, model);
+        mHashFolderModel.insert(identifier, model);
+    }
+}
+
 QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account)
 {
     const QString identifier = account.identifier();
     QStandardItemModel *model = mHashFolderModel.value(identifier);
     if (!model) {
         model = new QStandardItemModel(this);
-        if (account.isValid()) {
-            SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
-            job->setSieveImapAccountSettings(account);
-            job->start();
-        }
+        fillModel(account, model);
         mHashFolderModel.insert(identifier, model);
     }
     return model;
