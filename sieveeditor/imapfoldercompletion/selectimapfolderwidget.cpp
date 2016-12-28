@@ -94,7 +94,6 @@ void SelectImapFolderWidget::slotSearchPattern(const QString &pattern)
     mFilter->setSearchPattern(pattern);
 }
 
-
 void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)
 {
     if (index.isValid()) {

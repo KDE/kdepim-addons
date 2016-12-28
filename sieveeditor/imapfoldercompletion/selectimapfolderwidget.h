@@ -47,7 +47,6 @@ private:
     QString mPattern;
 };
 
-
 class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT

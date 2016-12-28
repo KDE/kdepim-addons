@@ -47,7 +47,6 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
     QTreeView *mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
     QVERIFY(mTreeView);
 
-
     QLineEdit *mSearchLineEdit = w.findChild<QLineEdit *>(QStringLiteral("searchline"));
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
