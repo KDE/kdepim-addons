@@ -101,7 +101,6 @@ void SelectItemFolderJob::slotReloadRequested()
 
 void SelectItemFolderJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
 {
-    Q_UNUSED(flags);
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
         KIMAP::MailBoxDescriptor mailBox = mailBoxes[i];
@@ -115,6 +114,7 @@ void SelectItemFolderJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescri
         for (int j = 0; j < pathParts.size(); ++j) {
             const QString pathPart = pathParts.at(j);
             currentPath += separator + pathPart;
+            const bool isSelectable = !flags[i].contains("\\noselect");
             if (mItemsMap.contains(currentPath)) {
                 //nothing
             } else if (!parentPath.isEmpty()) {
@@ -123,14 +123,22 @@ void SelectItemFolderJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescri
                 QStandardItem *parentItem = mItemsMap[parentPath];
 
                 QStandardItem *item = new QStandardItem(pathPart);
-                item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+                Qt::ItemFlags flags = Qt::ItemIsEnabled;
+                if (isSelectable) {
+                    flags |= Qt::ItemIsSelectable;
+                }
+                item->setFlags(flags);
                 item->setData(currentPath.mid(1), PathRole);
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
 
             } else {
                 QStandardItem *item = new QStandardItem(pathPart);
-                item->setFlags(Qt::ItemIsSelectable | Qt::ItemIsEnabled);
+                Qt::ItemFlags flags = Qt::ItemIsEnabled;
+                if (isSelectable) {
+                    flags |= Qt::ItemIsSelectable;
+                }
+                item->setFlags(flags);
                 item->setData(currentPath.mid(1), PathRole);
                 mModel->appendRow(item);
                 mItemsMap[currentPath] = item;
