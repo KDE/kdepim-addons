@@ -18,6 +18,7 @@
 */
 
 #include "selectimapfoldermodel.h"
+#include "imapfoldercompletionplugin_debug.h"
 #include "selectitemfolderjob.h"
 #include <QStandardItemModel>
 
@@ -39,31 +40,40 @@ SelectImapFolderModel *SelectImapFolderModel::self()
 
 void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
 {
-    if (account.isValid()) {
-        SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
-        job->setSieveImapAccountSettings(account);
-        job->start();
-    }
+    SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
+    job->setSieveImapAccountSettings(account);
+    job->start();
 }
 
 void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account)
 {
-    const QString identifier = account.identifier();
-    QStandardItemModel *model = mHashFolderModel.value(identifier);
-    if (model) {
-        fillModel(account, model);
-        mHashFolderModel.insert(identifier, model);
+    if (account.isValid()) {
+        const QString identifier = account.identifier();
+        QStandardItemModel *model = mHashFolderModel.value(identifier);
+        if (model) {
+            fillModel(account, model);
+            mHashFolderModel.insert(identifier, model);
+        } else {
+            qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Not model defined for account : " << identifier;
+        }
+    } else {
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "account is invalid";
     }
 }
 
 QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account)
 {
-    const QString identifier = account.identifier();
-    QStandardItemModel *model = mHashFolderModel.value(identifier);
-    if (!model) {
-        model = new QStandardItemModel(this);
-        fillModel(account, model);
-        mHashFolderModel.insert(identifier, model);
+    QStandardItemModel *model = Q_NULLPTR;
+    if (account.isValid()) {
+        const QString identifier = account.identifier();
+        model = mHashFolderModel.value(identifier);
+        if (!model) {
+            model = new QStandardItemModel(this);
+            fillModel(account, model);
+            mHashFolderModel.insert(identifier, model);
+        }
+    } else {
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "account is invalid";
     }
     return model;
 }
