@@ -18,6 +18,8 @@
 */
 
 #include "selectimapfoldermodeltest.h"
+#include "../selectimapfoldermodel.h"
+#include <KSieveUi/SieveImapAccountSettings>
 #include <QTest>
 
 SelectImapFolderModelTest::SelectImapFolderModelTest(QObject *parent)
@@ -29,6 +31,14 @@ SelectImapFolderModelTest::SelectImapFolderModelTest(QObject *parent)
 SelectImapFolderModelTest::~SelectImapFolderModelTest()
 {
 
+}
+
+void SelectImapFolderModelTest::shouldNotCreateModelIfAccountIsNotValid()
+{
+    SelectImapFolderModel model;
+    KSieveUi::SieveImapAccountSettings account;
+    QVERIFY(!account.isValid());
+    QVERIFY(!model.folderModel(account));
 }
 
 QTEST_MAIN(SelectImapFolderModelTest)

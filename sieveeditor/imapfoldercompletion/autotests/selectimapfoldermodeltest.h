@@ -28,6 +28,10 @@ class SelectImapFolderModelTest : public QObject
 public:
     explicit SelectImapFolderModelTest(QObject *parent = Q_NULLPTR);
     ~SelectImapFolderModelTest();
+
+private Q_SLOTS:
+    void shouldNotCreateModelIfAccountIsNotValid();
+
 };
 
 #endif // SELECTIMAPFOLDERMODELTEST_H
