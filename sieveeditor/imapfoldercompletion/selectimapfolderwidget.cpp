@@ -26,9 +26,12 @@
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QHeaderView>
+#include <QLineEdit>
+#include <QPainter>
+
+#include <KLocalizedString>
 
 #include <KSieveUi/SieveImapAccountSettings>
-#include <QLineEdit>
 
 SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
     : KRecursiveFilterProxyModel(parent)
@@ -69,7 +72,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     mainLayout->addWidget(mSearchLineEdit);
 
-    mTreeView = new QTreeView(this);
+    mTreeView = new SelectImapFolderTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mTreeView->header()->hide();
 
@@ -100,16 +103,6 @@ void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)
         Q_EMIT folderSelected();
     }
 }
-#if 0
-void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
-{
-    if (account.isValid()) {
-        SelectItemFolderJob *job = new SelectItemFolderJob(mModel, this);
-        job->setSieveImapAccountSettings(account);
-        job->start();
-    }
-}
-#endif
 
 QString SelectImapFolderWidget::selectedFolderName() const
 {
@@ -120,3 +113,43 @@ QString SelectImapFolderWidget::selectedFolderName() const
     }
     return currentPath;
 }
+
+SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
+    : QTreeView(parent)
+{
+
+}
+
+SelectImapFolderTreeView::~SelectImapFolderTreeView()
+{
+
+}
+
+void SelectImapFolderTreeView::generalPaletteChanged()
+{
+    const QPalette palette = viewport()->palette();
+    QColor color = palette.text().color();
+    color.setAlpha(128);
+    mTextColor = color;
+}
+
+void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
+{
+    if (!model() || model()->rowCount() == 0) {
+        QPainter p(viewport());
+
+        QFont font = p.font();
+        font.setItalic(true);
+        p.setFont(font);
+
+        if (!mTextColor.isValid()) {
+            generalPaletteChanged();
+        }
+        p.setPen(mTextColor);
+
+        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Unable to load folder list"));
+    } else {
+        QTreeView::paintEvent(event);
+    }
+}
+

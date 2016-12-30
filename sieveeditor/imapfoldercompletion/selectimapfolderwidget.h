@@ -21,6 +21,7 @@
 #define SELECTIMAPFOLDERWIDGET_H
 
 #include <QWidget>
+#include <QTreeView>
 
 #include <KRecursiveFilterProxyModel>
 namespace KSieveUi
@@ -47,6 +48,19 @@ private:
     QString mPattern;
 };
 
+class SelectImapFolderTreeView : public QTreeView
+{
+    Q_OBJECT
+public:
+    explicit SelectImapFolderTreeView(QWidget *parent);
+    ~SelectImapFolderTreeView();
+protected:
+    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+private:
+    void generalPaletteChanged();
+    QColor mTextColor;
+};
+
 class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
@@ -64,7 +78,7 @@ private:
     void slotSearchPattern(const QString &pattern);
 
     QLineEdit *mSearchLineEdit;
-    QTreeView *mTreeView;
+    SelectImapFolderTreeView *mTreeView;
     QStandardItemModel *mModel;
     SearchFilterProxyModel *mFilter;
 };
