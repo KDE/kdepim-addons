@@ -39,6 +39,10 @@ public:
     QStandardItemModel *folderModel(const KSieveUi::SieveImapAccountSettings &account);
 
     void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
+
+private Q_SLOTS:
+    void slotLoaded(bool success);
+
 private:
     void fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model);
     QHash<QString, QStandardItemModel *> mHashFolderModel;

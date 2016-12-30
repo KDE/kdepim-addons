@@ -42,7 +42,15 @@ void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &
 {
     SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
     job->setSieveImapAccountSettings(account);
+    connect(job, &SelectItemFolderJob::finished, this, &SelectImapFolderModel::slotLoaded);
     job->start();
+}
+
+void SelectImapFolderModel::slotLoaded(bool success)
+{
+    if (!success) {
+        qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Unable to load list of folder";
+    }
 }
 
 void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account)
