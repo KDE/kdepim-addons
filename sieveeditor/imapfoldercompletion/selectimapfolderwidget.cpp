@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2016 Montel Laurent <montel@kde.org>
+   Copyright (C) 2016-2017 Montel Laurent <montel@kde.org>
    based on subscriptiondialog from kdepim-runtime
 
    This program is free software; you can redistribute it and/or
