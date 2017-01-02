@@ -73,10 +73,10 @@ using namespace MailCommon;
 AntiSpamWizard::AntiSpamWizard(WizardMode mode,
                                QWidget *parent)
     : KAssistantDialog(parent),
-      mInfoPage(Q_NULLPTR),
-      mSpamRulesPage(Q_NULLPTR),
-      mVirusRulesPage(Q_NULLPTR),
-      mSummaryPage(Q_NULLPTR),
+      mInfoPage(nullptr),
+      mSpamRulesPage(nullptr),
+      mVirusRulesPage(nullptr),
+      mSummaryPage(nullptr),
       mMode(mode)
 {
     // read the configuration for the anti-spam tools
@@ -113,7 +113,7 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode,
     const bool isAntiSpam = (mMode == AntiSpam);
     setWindowTitle(isAntiSpam  ? i18n("Anti-Spam Wizard")
                    : i18n("Anti-Virus Wizard"));
-    mInfoPage = new ASWizInfoPage(mMode, Q_NULLPTR, QString());
+    mInfoPage = new ASWizInfoPage(mMode, nullptr, QString());
     mInfoPageItem = addPage(mInfoPage,
                             isAntiSpam
                             ? i18n("Welcome to the KMail Anti-Spam Wizard")
@@ -121,14 +121,14 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode,
     connect(mInfoPage, &ASWizInfoPage::selectionChanged, this, &AntiSpamWizard::checkProgramsSelections);
 
     if (isAntiSpam) {
-        mSpamRulesPage = new ASWizSpamRulesPage(Q_NULLPTR, QString());
+        mSpamRulesPage = new ASWizSpamRulesPage(nullptr, QString());
         mSpamRulesPageItem = addPage(mSpamRulesPage, i18n("Options to fine-tune the handling of spam messages"));
         connect(mSpamRulesPage, &ASWizSpamRulesPage::selectionChanged, this, &AntiSpamWizard::slotBuildSummary);
 
-        mSummaryPage = new ASWizSummaryPage(Q_NULLPTR, QString());
+        mSummaryPage = new ASWizSummaryPage(nullptr, QString());
         mSummaryPageItem = addPage(mSummaryPage, i18n("Summary of changes to be made by this wizard"));
     } else {
-        mVirusRulesPage = new ASWizVirusRulesPage(Q_NULLPTR, QString());
+        mVirusRulesPage = new ASWizVirusRulesPage(nullptr, QString());
         mVirusRulesPageItem = addPage(mVirusRulesPage, i18n("Options to fine-tune the handling of virus messages"));
         connect(mVirusRulesPage, &ASWizVirusRulesPage::selectionChanged, this, &AntiSpamWizard::checkVirusRulesSelections);
     }
@@ -1253,7 +1253,7 @@ ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
     optReadableProxy |= FolderTreeWidgetProxyModel::HideVirtualFolder;
     optReadableProxy |= FolderTreeWidgetProxyModel::HideOutboxFolder;
 
-    mFolderTree = new FolderTreeWidget(this, Q_NULLPTR, opt, optReadableProxy);
+    mFolderTree = new FolderTreeWidget(this, nullptr, opt, optReadableProxy);
     mFolderTree->readConfig();
     mFolderTree->folderTreeView()->expandAll();
     mFolderTree->folderTreeWidgetProxyModel()->setAccessRights(Akonadi::Collection::CanCreateCollection);

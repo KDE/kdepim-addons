@@ -26,7 +26,7 @@ class SelectImapFolderModelTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderModelTest(QObject *parent = Q_NULLPTR);
+    explicit SelectImapFolderModelTest(QObject *parent = nullptr);
     ~SelectImapFolderModelTest();
 
 private Q_SLOTS:

@@ -27,7 +27,7 @@ class AutomaticAddContactsJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsJob(QObject *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsJob(QObject *parent = nullptr);
     ~AutomaticAddContactsJob();
 
     void start();

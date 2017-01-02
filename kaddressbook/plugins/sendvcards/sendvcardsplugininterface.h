@@ -26,7 +26,7 @@ class SendVcardsPluginInterface : public PimCommon::GenericPluginInterface
 {
     Q_OBJECT
 public:
-    explicit SendVcardsPluginInterface(QObject *parent = Q_NULLPTR);
+    explicit SendVcardsPluginInterface(QObject *parent = nullptr);
     ~SendVcardsPluginInterface();
 
     void exec() Q_DECL_OVERRIDE;

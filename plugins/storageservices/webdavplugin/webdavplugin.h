@@ -30,7 +30,7 @@ class WebDavPlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit WebDavPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit WebDavPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~WebDavPlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

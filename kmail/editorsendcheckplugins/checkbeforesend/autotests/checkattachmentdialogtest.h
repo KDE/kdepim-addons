@@ -26,7 +26,7 @@ class CheckAttachmentDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CheckAttachmentDialogTest(QObject *parent = Q_NULLPTR);
+    explicit CheckAttachmentDialogTest(QObject *parent = nullptr);
     ~CheckAttachmentDialogTest();
 
 private Q_SLOTS:

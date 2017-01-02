@@ -27,7 +27,7 @@ class AutomaticAddContactsConfigureDialog : public PimCommon::ConfigurePluginDia
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsConfigureDialog(QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsConfigureDialog(QWidget *parent = nullptr);
     ~AutomaticAddContactsConfigureDialog();
 
 protected:

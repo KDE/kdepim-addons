@@ -26,7 +26,7 @@ class SearchAndMergeContactDuplicateContactDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    SearchAndMergeContactDuplicateContactDialogTest(QObject *parent = Q_NULLPTR);
+    SearchAndMergeContactDuplicateContactDialogTest(QObject *parent = nullptr);
 
 private Q_SLOTS:
     void shouldHaveDefaultValueOnCreation();

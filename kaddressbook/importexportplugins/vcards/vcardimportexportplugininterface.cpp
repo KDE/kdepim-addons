@@ -468,7 +468,7 @@ void VCardImportExportPluginInterface::exportVCard()
     delete dlg;
 
     if (contacts.isEmpty()) {
-        KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
+        KMessageBox::sorry(nullptr, i18n("You have not selected any contacts to export."));
         return;
     }
 
@@ -488,7 +488,7 @@ void VCardImportExportPluginInterface::exportVCard()
                                                       QLatin1Char(QLatin1Char('_')) +
                                                       list[ 0 ].familyName() +
                                                       QLatin1String(".vcf")))
-                                          , QString(), Q_NULLPTR, options);
+                                          , QString(), nullptr, options);
         if (url.isEmpty()) {   // user canceled export
             return;
         }
@@ -546,7 +546,7 @@ void VCardImportExportPluginInterface::exportVCard()
         }
         case KMessageBox::Yes: {
             QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), Q_NULLPTR, options);
+            url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), nullptr, options);
             if (url.isEmpty()) {
                 return; // user canceled export
             }

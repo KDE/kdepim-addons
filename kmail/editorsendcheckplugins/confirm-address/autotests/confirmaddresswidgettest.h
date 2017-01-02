@@ -26,7 +26,7 @@ class ConfirmAddressWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ConfirmAddressWidgetTest(QObject *parent = nullptr);
     ~ConfirmAddressWidgetTest();
 
 private Q_SLOTS:

@@ -30,7 +30,7 @@ class EventDateTimeWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit EventDateTimeWidget(QWidget *parent = Q_NULLPTR);
+    explicit EventDateTimeWidget(QWidget *parent = nullptr);
     ~EventDateTimeWidget();
 
     void setMinimumDateTime(const QDateTime &dateTime);

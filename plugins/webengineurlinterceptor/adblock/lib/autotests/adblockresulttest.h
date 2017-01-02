@@ -25,7 +25,7 @@ class AdBlockResultTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockResultTest(QObject *parent = Q_NULLPTR);
+    explicit AdBlockResultTest(QObject *parent = nullptr);
     ~AdBlockResultTest();
 
 private Q_SLOTS:

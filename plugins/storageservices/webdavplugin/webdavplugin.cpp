@@ -81,7 +81,7 @@ QIcon WebDavPlugin::icon() const
 PimCommon::StorageServiceInterface *WebDavPlugin::createStorageService(const QString &identifier)
 {
     //TODO
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 #include "webdavplugin.moc"

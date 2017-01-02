@@ -26,7 +26,7 @@ class CheckBeforeSendPlugin : public MessageComposer::PluginEditorCheckBeforeSen
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
+    explicit CheckBeforeSendPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~CheckBeforeSendPlugin();
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

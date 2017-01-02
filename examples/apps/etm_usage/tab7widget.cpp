@@ -59,7 +59,7 @@ public:
 class Tab7TreeWidget : public EntityTreeWidget
 {
 public:
-    Tab7TreeWidget(QWidget *parent = Q_NULLPTR)
+    Tab7TreeWidget(QWidget *parent = nullptr)
         : EntityTreeWidget(parent), m_model(0)
     {
     }

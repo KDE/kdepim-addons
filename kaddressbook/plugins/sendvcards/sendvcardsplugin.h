@@ -30,10 +30,10 @@ class SendVcardsPlugin : public PimCommon::GenericPlugin
 {
     Q_OBJECT
 public:
-    explicit SendVcardsPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit SendVcardsPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SendVcardsPlugin();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
 };
 

@@ -30,7 +30,7 @@ class KADDRESSBOOKIMPORTEXPORTLIBPRIVATE_EXPORT ImportExportEngine : public QObj
 {
     Q_OBJECT
 public:
-    explicit ImportExportEngine(QObject *parent = Q_NULLPTR);
+    explicit ImportExportEngine(QObject *parent = nullptr);
     ~ImportExportEngine();
     void setContactList(const KAddressBookImportExport::KAddressBookImportExportContactList &contacts);
 

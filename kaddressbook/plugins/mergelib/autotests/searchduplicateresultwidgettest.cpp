@@ -36,7 +36,7 @@
 using namespace KContacts;
 namespace KABMergeContacts
 {
-KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = Q_NULLPTR;
+KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = nullptr;
 }
 
 SearchDuplicateResultWidgetTest::SearchDuplicateResultWidgetTest(QObject *parent)

@@ -26,7 +26,7 @@ class AntiSpamPluginInterfaceTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AntiSpamPluginInterfaceTest(QObject *parent = Q_NULLPTR);
+    explicit AntiSpamPluginInterfaceTest(QObject *parent = nullptr);
     ~AntiSpamPluginInterfaceTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

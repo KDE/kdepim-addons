@@ -26,7 +26,7 @@ class MergeContactLoseInformationWarningTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MergeContactLoseInformationWarningTest(QObject *parent = Q_NULLPTR);
+    explicit MergeContactLoseInformationWarningTest(QObject *parent = nullptr);
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldEmitSignals();

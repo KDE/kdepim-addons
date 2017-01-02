@@ -30,7 +30,7 @@ using namespace MessageViewer;
 
 ViewerPluginTranslatorInterface::ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent),
-      mTranslatorWidget(Q_NULLPTR)
+      mTranslatorWidget(nullptr)
 {
     createAction(ac);
 }

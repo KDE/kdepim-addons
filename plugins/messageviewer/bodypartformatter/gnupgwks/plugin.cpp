@@ -39,7 +39,7 @@ const char *ApplicationGnuPGWKSPlugin::type(int idx) const
     case application_pgp_keys:
         return "application";
     default:
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 
@@ -51,7 +51,7 @@ const char *ApplicationGnuPGWKSPlugin::subtype(int idx) const
     case application_pgp_keys:
         return "pgp-keys";
     default:
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 
@@ -63,7 +63,7 @@ const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::b
     case application_pgp_keys:
         return new ApplicationPGPKeyFormatter();
     default:
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 
@@ -75,7 +75,7 @@ const MimeTreeParser::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::
     case application_pgp_keys:
         return new ApplicationPgpKeyUrlHandler();
     default:
-        return Q_NULLPTR;
+        return nullptr;
     }
 }
 

@@ -38,8 +38,8 @@
 using namespace AdBlock;
 AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget *parent)
     : QDialog(parent),
-      mTemporaryFile(Q_NULLPTR),
-      mUser1Button(Q_NULLPTR)
+      mTemporaryFile(nullptr),
+      mUser1Button(nullptr)
 {
     setWindowTitle(i18n("Show adblock list"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

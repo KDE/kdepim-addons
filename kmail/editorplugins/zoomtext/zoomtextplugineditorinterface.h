@@ -26,7 +26,7 @@ class ZoomTextPluginEditorInterface : public MessageComposer::PluginEditorInterf
 {
     Q_OBJECT
 public:
-    explicit ZoomTextPluginEditorInterface(QObject *parent = Q_NULLPTR);
+    explicit ZoomTextPluginEditorInterface(QObject *parent = nullptr);
     ~ZoomTextPluginEditorInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;

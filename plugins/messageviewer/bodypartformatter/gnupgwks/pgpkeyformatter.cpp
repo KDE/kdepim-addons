@@ -39,7 +39,7 @@ using namespace MimeTreeParser::Interface;
 BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part,
         MimeTreeParser::HtmlWriter *writer) const
 {
-    return format(part, writer, Q_NULLPTR);
+    return format(part, writer, nullptr);
 }
 
 BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part,
@@ -65,7 +65,7 @@ BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part,
         }
         part->setBodyPartMemento(memento);
     } else if (m->isRunning()) {
-        m = Q_NULLPTR;
+        m = nullptr;
     }
 
     if (m) {

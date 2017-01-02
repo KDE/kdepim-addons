@@ -57,7 +57,7 @@ QString BoxPlugin::oauth2RedirectUrl() const
 PimCommon::StorageServiceInterface *BoxPlugin::createStorageService(const QString &identifier)
 {
     //TODO
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 QString BoxPlugin::storageServiceName() const

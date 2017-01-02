@@ -37,7 +37,7 @@ CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
 
 void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    CheckBeforeSendConfigureWidget w(Q_NULLPTR);
+    CheckBeforeSendConfigureWidget w(nullptr);
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
 
@@ -64,7 +64,7 @@ void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
 
 void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
 {
-    CheckBeforeSendConfigureWidget w(Q_NULLPTR);
+    CheckBeforeSendConfigureWidget w(nullptr);
 
     QCheckBox *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
     QCheckBox *mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));

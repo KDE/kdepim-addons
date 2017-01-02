@@ -29,7 +29,7 @@ class GDriveInterface : public PimCommon::StorageServiceInterface
 {
     Q_OBJECT
 public:
-    explicit GDriveInterface(GDrivePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit GDriveInterface(GDrivePlugin *plugin, QObject *parent = nullptr);
     ~GDriveInterface();
     void shutdownService() Q_DECL_OVERRIDE;
     bool isConfigurated() const Q_DECL_OVERRIDE;

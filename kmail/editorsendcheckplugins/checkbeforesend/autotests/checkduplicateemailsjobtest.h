@@ -26,7 +26,7 @@ class CheckDuplicateEmailsJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CheckDuplicateEmailsJobTest(QObject *parent = Q_NULLPTR);
+    explicit CheckDuplicateEmailsJobTest(QObject *parent = nullptr);
     ~CheckDuplicateEmailsJobTest();
 
 private Q_SLOTS:

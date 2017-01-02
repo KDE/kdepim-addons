@@ -24,7 +24,7 @@ class Rot13PluginEditorInterfaceTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit Rot13PluginEditorInterfaceTest(QObject *parent = Q_NULLPTR);
+    explicit Rot13PluginEditorInterfaceTest(QObject *parent = nullptr);
     ~Rot13PluginEditorInterfaceTest();
 };
 

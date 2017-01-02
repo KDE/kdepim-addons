@@ -81,7 +81,7 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *i
     }
     if (needToDeleteIdentity) {
         delete identityManager;
-        identityManager = Q_NULLPTR;
+        identityManager = nullptr;
     }
 }
 

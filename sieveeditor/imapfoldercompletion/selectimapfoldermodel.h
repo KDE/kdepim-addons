@@ -31,7 +31,7 @@ class SelectImapFolderModel : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderModel(QObject *parent = Q_NULLPTR);
+    explicit SelectImapFolderModel(QObject *parent = nullptr);
     ~SelectImapFolderModel();
 
     static SelectImapFolderModel *self();

@@ -29,7 +29,7 @@ class BoxInterface : public PimCommon::StorageServiceInterface
 {
     Q_OBJECT
 public:
-    explicit BoxInterface(BoxPlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit BoxInterface(BoxPlugin *plugin, QObject *parent = nullptr);
     ~BoxInterface();
     void shutdownService() Q_DECL_OVERRIDE;
     bool isConfigurated() const Q_DECL_OVERRIDE;

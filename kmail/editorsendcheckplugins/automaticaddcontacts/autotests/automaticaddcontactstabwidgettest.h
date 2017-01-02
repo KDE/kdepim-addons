@@ -27,7 +27,7 @@ class AutomaticAddContactsTabWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsTabWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsTabWidgetTest(QObject *parent = nullptr);
     ~AutomaticAddContactsTabWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

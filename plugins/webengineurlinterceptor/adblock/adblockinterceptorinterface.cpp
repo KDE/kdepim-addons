@@ -31,8 +31,8 @@
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent),
-      mShowBlockableItems(Q_NULLPTR),
-      mWebEngineView(Q_NULLPTR)
+      mShowBlockableItems(nullptr),
+      mWebEngineView(nullptr)
 {
     mAdblockManager = new AdBlock::AdblockManager(this);
 }

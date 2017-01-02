@@ -37,7 +37,7 @@ class FolderContentsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FolderContentsWidget(Trip *trip, int role, const QString &type, QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    explicit FolderContentsWidget(Trip *trip, int role, const QString &type, QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
     QItemSelectionModel *selectionModel() const;
 

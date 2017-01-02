@@ -26,7 +26,7 @@ class CheckBeforeSendConfigureWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = nullptr);
     ~CheckBeforeSendConfigureWidgetTest();
 
 private Q_SLOTS:

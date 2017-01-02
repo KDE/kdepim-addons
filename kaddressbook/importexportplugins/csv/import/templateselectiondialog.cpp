@@ -48,7 +48,7 @@ class TemplatesModel : public QAbstractTableModel
 {
     Q_OBJECT
 public:
-    TemplatesModel(QObject *parent = Q_NULLPTR)
+    TemplatesModel(QObject *parent = nullptr)
         : QAbstractTableModel(parent)
     {
         update();
@@ -154,7 +154,7 @@ private:
 class TemplateSelectionDelegate : public QStyledItemDelegate
 {
 public:
-    explicit TemplateSelectionDelegate(QObject *parent = Q_NULLPTR)
+    explicit TemplateSelectionDelegate(QObject *parent = nullptr)
         : QStyledItemDelegate(parent), mIcon(QIcon::fromTheme(QStringLiteral("list-remove")))
     {
     }
@@ -191,7 +191,7 @@ public:
             if (buttonRect.contains(mouseEvent->pos())) {
                 const QString templateName = index.data(Qt::DisplayRole).toString();
                 if (KMessageBox::questionYesNo(
-                    Q_NULLPTR,
+                    nullptr,
                     i18nc("@label", "Do you really want to delete template '%1'?",
                 templateName)) == KMessageBox::Yes) {
                     model->removeRows(index.row(), 1);

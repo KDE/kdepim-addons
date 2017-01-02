@@ -76,7 +76,7 @@ class AdBlockSubscription : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockSubscription(const QString &title, QObject *parent = Q_NULLPTR);
+    explicit AdBlockSubscription(const QString &title, QObject *parent = nullptr);
     ~AdBlockSubscription();
 
     QString title() const;
@@ -132,7 +132,7 @@ class AdBlockCustomList : public AdBlockSubscription
 {
     Q_OBJECT
 public:
-    explicit AdBlockCustomList(QObject *parent = Q_NULLPTR);
+    explicit AdBlockCustomList(QObject *parent = nullptr);
 
     void loadSubscription(const QStringList &disabledRules) Q_DECL_OVERRIDE;
     void saveSubscription() Q_DECL_OVERRIDE;

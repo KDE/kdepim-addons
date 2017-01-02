@@ -34,7 +34,7 @@ class Tab5Widget : public QWidget
 {
     Q_OBJECT
 public:
-    Tab5Widget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    Tab5Widget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private:
     KCategorizedView *m_itemView;

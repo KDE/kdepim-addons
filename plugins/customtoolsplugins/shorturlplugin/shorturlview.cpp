@@ -28,8 +28,8 @@ using namespace PimCommon;
 
 ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
     : CustomToolsViewInterface(parent),
-      mAction(Q_NULLPTR),
-      mShorturl(Q_NULLPTR)
+      mAction(nullptr),
+      mShorturl(nullptr)
 {
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setMargin(0);
@@ -69,6 +69,6 @@ void ShorturlView::slotActivateShorturl(bool state)
         Q_EMIT activateView(this);
     } else {
         mShorturl->hide();
-        Q_EMIT activateView(Q_NULLPTR);
+        Q_EMIT activateView(nullptr);
     }
 }

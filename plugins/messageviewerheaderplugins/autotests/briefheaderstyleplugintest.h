@@ -26,7 +26,7 @@ class BriefHeaderStylePluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit BriefHeaderStylePluginTest(QObject *parent = Q_NULLPTR);
+    explicit BriefHeaderStylePluginTest(QObject *parent = nullptr);
     ~BriefHeaderStylePluginTest();
 
 private Q_SLOTS:

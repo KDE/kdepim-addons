@@ -33,7 +33,7 @@
 
 namespace KABMergeContacts
 {
-KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = Q_NULLPTR;
+KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = nullptr;
 }
 
 using namespace KABMergeContacts;

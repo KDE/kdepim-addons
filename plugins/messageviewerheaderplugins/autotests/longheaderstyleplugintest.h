@@ -26,7 +26,7 @@ class LongHeaderStylePluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LongHeaderStylePluginTest(QObject *parent = Q_NULLPTR);
+    explicit LongHeaderStylePluginTest(QObject *parent = nullptr);
     ~LongHeaderStylePluginTest();
 
 private Q_SLOTS:

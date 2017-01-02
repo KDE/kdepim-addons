@@ -26,7 +26,7 @@ class AutomaticAddContactsPlugin : public MessageComposer::PluginEditorCheckBefo
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
+    explicit AutomaticAddContactsPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~AutomaticAddContactsPlugin();
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

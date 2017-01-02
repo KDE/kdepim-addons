@@ -37,7 +37,7 @@ ConfirmAddressConfigureTabTest::~ConfirmAddressConfigureTabTest()
 
 void ConfirmAddressConfigureTabTest::shouldHaveDefaultValue()
 {
-    ConfirmAddressConfigureTab w(Q_NULLPTR);
+    ConfirmAddressConfigureTab w(nullptr);
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->margin(), 0);

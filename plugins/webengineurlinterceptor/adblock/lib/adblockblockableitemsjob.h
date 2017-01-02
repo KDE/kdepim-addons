@@ -41,7 +41,7 @@ public:
         Script
     };
 
-    explicit AdBlockBlockableItemsJob(QObject *parent = Q_NULLPTR);
+    explicit AdBlockBlockableItemsJob(QObject *parent = nullptr);
     ~AdBlockBlockableItemsJob();
 
     void setWebEngineView(QWebEngineView *webEngineView);

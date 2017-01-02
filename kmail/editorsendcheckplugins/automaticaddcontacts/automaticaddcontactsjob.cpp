@@ -112,11 +112,11 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     const int nbItemCollection(canCreateItemCollections.size());
     if (nbItemCollection == 0) {
         if (KMessageBox::questionYesNo(
-                    Q_NULLPTR,
+                    nullptr,
                     i18nc("@info",
                           "You must create an address book before adding a contact. Do you want to create an address book?"),
                     i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
-            Akonadi::AgentTypeDialog dlg(Q_NULLPTR);
+            Akonadi::AgentTypeDialog dlg(nullptr);
             dlg.setWindowTitle(i18n("Add Address Book"));
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());

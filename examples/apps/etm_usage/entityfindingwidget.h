@@ -34,7 +34,7 @@ class FindingETW : public EntityTreeWidget
 {
     Q_OBJECT
 public:
-    FindingETW(QWidget *parent = Q_NULLPTR);
+    FindingETW(QWidget *parent = nullptr);
 
     void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE;
 
@@ -47,7 +47,7 @@ class EntityFindingWidget : public QWidget
 {
     Q_OBJECT
 public:
-    EntityFindingWidget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    EntityFindingWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private Q_SLOTS:
 

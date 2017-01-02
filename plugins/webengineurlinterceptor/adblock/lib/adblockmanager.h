@@ -32,7 +32,7 @@ class ADBLOCKLIB_EXPORT AdblockManager : public QObject
     Q_OBJECT
 public:
     static AdblockManager *self();
-    explicit AdblockManager(QObject *parent = Q_NULLPTR);
+    explicit AdblockManager(QObject *parent = nullptr);
     ~AdblockManager();
     bool isEnabled() const;
 

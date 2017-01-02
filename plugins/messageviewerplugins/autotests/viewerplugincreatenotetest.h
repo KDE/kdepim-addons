@@ -26,7 +26,7 @@ class ViewerPluginCreateNoteTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginCreateNoteTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginCreateNoteTest(QObject *parent = nullptr);
     ~ViewerPluginCreateNoteTest();
 
 private Q_SLOTS:

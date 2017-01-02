@@ -31,7 +31,7 @@ class ConfirmAddressConfigureTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressConfigureTabWidget(QWidget *parent = Q_NULLPTR);
+    explicit ConfirmAddressConfigureTabWidget(QWidget *parent = nullptr);
     ~ConfirmAddressConfigureTabWidget();
 
     void resetSettings();

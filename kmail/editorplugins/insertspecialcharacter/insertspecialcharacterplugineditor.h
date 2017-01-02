@@ -29,10 +29,10 @@ class InsertSpecialCharacterPluginEditor : public MessageComposer::PluginEditor
 {
     Q_OBJECT
 public:
-    explicit InsertSpecialCharacterPluginEditor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit InsertSpecialCharacterPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~InsertSpecialCharacterPluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
 };
 
 #endif

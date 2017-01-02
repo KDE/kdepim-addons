@@ -29,7 +29,7 @@ class Ur1CaShortUrlEngineInterface : public ShortUrlEngineInterface
 {
     Q_OBJECT
 public:
-    explicit Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~Ur1CaShortUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;

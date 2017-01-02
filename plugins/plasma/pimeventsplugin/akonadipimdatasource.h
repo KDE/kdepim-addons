@@ -32,7 +32,7 @@ class AkonadiPimDataSource : public QObject,
     Q_OBJECT
 
 public:
-    explicit AkonadiPimDataSource(QObject *parent = Q_NULLPTR);
+    explicit AkonadiPimDataSource(QObject *parent = nullptr);
     ~AkonadiPimDataSource();
 
     qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const Q_DECL_OVERRIDE;

@@ -33,7 +33,7 @@ class AutomaticAddContactsConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsConfigureTab(QWidget *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsConfigureTab(QWidget *parent = nullptr);
     ~AutomaticAddContactsConfigureTab();
 
     void loadSettings();

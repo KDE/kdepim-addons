@@ -40,7 +40,7 @@ class EventEdit : public QWidget
 {
     Q_OBJECT
 public:
-    explicit EventEdit(QWidget *parent = Q_NULLPTR);
+    explicit EventEdit(QWidget *parent = nullptr);
     ~EventEdit();
 
     Akonadi::Collection collection() const;

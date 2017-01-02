@@ -26,7 +26,7 @@
 using namespace MessageViewer;
 GrantleeHeaderStyleInterface::GrantleeHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent),
-      mThemeManager(Q_NULLPTR)
+      mThemeManager(nullptr)
 {
 
 }

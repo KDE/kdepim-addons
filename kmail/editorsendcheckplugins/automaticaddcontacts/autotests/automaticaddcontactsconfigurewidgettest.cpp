@@ -38,7 +38,7 @@ AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTes
 
 void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    AutomaticAddContactsConfigureWidget w(Q_NULLPTR);
+    AutomaticAddContactsConfigureWidget w(nullptr);
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);

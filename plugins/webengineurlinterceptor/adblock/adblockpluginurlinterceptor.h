@@ -31,7 +31,7 @@ class AdblockPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInte
 {
     Q_OBJECT
 public:
-    explicit AdblockPluginUrlInterceptor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit AdblockPluginUrlInterceptor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AdblockPluginUrlInterceptor();
 
     WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) Q_DECL_OVERRIDE;

@@ -29,7 +29,7 @@ class ViewerPluginExpandurlInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginExpandurlInterface();
 
     QList<QAction *> actions() const Q_DECL_OVERRIDE;

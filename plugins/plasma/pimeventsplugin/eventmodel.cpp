@@ -32,7 +32,7 @@
 
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)
-    , mMonitor(Q_NULLPTR)
+    , mMonitor(nullptr)
 {
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
@@ -162,7 +162,7 @@ void EventModel::onItemsReceived(const Akonadi::Item::List &items)
 void EventModel::removeCollection(const Akonadi::Collection &col)
 {
     if (KJob *job = mFetchJobs.take(col.id())) {
-        disconnect(job, Q_NULLPTR, this, Q_NULLPTR);
+        disconnect(job, nullptr, this, nullptr);
         job->kill();
     }
 

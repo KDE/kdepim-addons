@@ -26,7 +26,7 @@ class ReactionToInvitationDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ReactionToInvitationDialogTest(QObject *parent = Q_NULLPTR);
+    explicit ReactionToInvitationDialogTest(QObject *parent = nullptr);
     ~ReactionToInvitationDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

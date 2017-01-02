@@ -26,7 +26,7 @@ class SelectImapWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit SelectImapWidgetTest(QObject *parent = nullptr);
     ~SelectImapWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

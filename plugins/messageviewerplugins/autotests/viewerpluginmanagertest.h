@@ -26,7 +26,7 @@ class ViewerPluginManagerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginManagerTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginManagerTest(QObject *parent = nullptr);
     ~ViewerPluginManagerTest();
 
 private Q_SLOTS:

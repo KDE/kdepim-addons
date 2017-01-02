@@ -26,7 +26,7 @@ class AutomaticAddContactsPluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsPluginTest(QObject *parent = Q_NULLPTR);
+    explicit AutomaticAddContactsPluginTest(QObject *parent = nullptr);
     ~AutomaticAddContactsPluginTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -26,7 +26,7 @@ class InsertSpecialCharacterPluginEditorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit InsertSpecialCharacterPluginEditorTest(QObject *parent = Q_NULLPTR);
+    explicit InsertSpecialCharacterPluginEditorTest(QObject *parent = nullptr);
     ~InsertSpecialCharacterPluginEditorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -26,7 +26,7 @@ class MergeContactSelectInformationWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MergeContactSelectInformationWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit MergeContactSelectInformationWidgetTest(QObject *parent = nullptr);
     ~MergeContactSelectInformationWidgetTest();
 
 private Q_SLOTS:

@@ -31,7 +31,7 @@ using namespace MessageViewer;
 
 ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent),
-      mEventEdit(Q_NULLPTR)
+      mEventEdit(nullptr)
 {
     createAction(ac);
 }

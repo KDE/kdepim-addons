@@ -37,8 +37,8 @@ class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
     Q_PLUGIN_METADATA(IID "org.kde.CalendarEventsPlugin" FILE "pimeventsplugin.json")
 
 public:
-    explicit PimEventsPlugin(QObject *parent = Q_NULLPTR);
-    explicit PimEventsPlugin(PimDataSource *factory, QObject *parent = Q_NULLPTR);
+    explicit PimEventsPlugin(QObject *parent = nullptr);
+    explicit PimEventsPlugin(PimDataSource *factory, QObject *parent = nullptr);
     ~PimEventsPlugin();
 
     // CalendarEvents::CalendarEventsPlugin

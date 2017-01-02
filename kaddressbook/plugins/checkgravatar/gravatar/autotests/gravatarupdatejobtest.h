@@ -26,7 +26,7 @@ class GravatarUpdateJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GravatarUpdateJobTest(QObject *parent = Q_NULLPTR);
+    explicit GravatarUpdateJobTest(QObject *parent = nullptr);
     ~GravatarUpdateJobTest();
 
 private Q_SLOTS:

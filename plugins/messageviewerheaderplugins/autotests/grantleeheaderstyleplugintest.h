@@ -26,7 +26,7 @@ class GrantleeHeaderStylePluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GrantleeHeaderStylePluginTest(QObject *parent = Q_NULLPTR);
+    explicit GrantleeHeaderStylePluginTest(QObject *parent = nullptr);
     ~GrantleeHeaderStylePluginTest();
 
 private Q_SLOTS:

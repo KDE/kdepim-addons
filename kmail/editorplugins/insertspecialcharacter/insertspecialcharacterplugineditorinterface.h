@@ -28,7 +28,7 @@ class InsertSpecialCharacterPluginEditorInterface : public MessageComposer::Plug
 {
     Q_OBJECT
 public:
-    explicit InsertSpecialCharacterPluginEditorInterface(QObject *parent = Q_NULLPTR);
+    explicit InsertSpecialCharacterPluginEditorInterface(QObject *parent = nullptr);
     ~InsertSpecialCharacterPluginEditorInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;

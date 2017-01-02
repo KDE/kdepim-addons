@@ -71,7 +71,7 @@ void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSe
 
 QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account)
 {
-    QStandardItemModel *model = Q_NULLPTR;
+    QStandardItemModel *model = nullptr;
     if (account.isValid()) {
         const QString identifier = account.identifier();
         model = mHashFolderModel.value(identifier);

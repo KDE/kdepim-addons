@@ -56,7 +56,7 @@ public:
         TodoCollectionRole,
         NotesCollectionRole
     };
-    Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripComponentFactory *factory, QObject *parent = Q_NULLPTR);
+    Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripComponentFactory *factory, QObject *parent = nullptr);
 
     QString eventName() const;
     QString eventDescription() const;

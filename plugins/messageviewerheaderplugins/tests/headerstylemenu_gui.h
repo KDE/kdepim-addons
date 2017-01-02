@@ -31,7 +31,7 @@ class HeaderStyleMenuTest : public QWidget
 {
     Q_OBJECT
 public:
-    explicit HeaderStyleMenuTest(QWidget *parent = Q_NULLPTR);
+    explicit HeaderStyleMenuTest(QWidget *parent = nullptr);
     ~HeaderStyleMenuTest();
 private Q_SLOTS:
     void styleChanged(MessageViewer::HeaderStylePlugin *plugin);

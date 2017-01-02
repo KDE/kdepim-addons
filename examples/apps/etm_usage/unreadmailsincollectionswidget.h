@@ -41,7 +41,7 @@ class UnreadMailsInCollectionsProxy : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    UnreadMailsInCollectionsProxy(QObject *parent = Q_NULLPTR);
+    UnreadMailsInCollectionsProxy(QObject *parent = nullptr);
 protected:
     bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
 };
@@ -50,7 +50,7 @@ class UnreadMailsInCollectionsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    UnreadMailsInCollectionsWidget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    UnreadMailsInCollectionsWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
     virtual ~UnreadMailsInCollectionsWidget();
 
 private Q_SLOTS:

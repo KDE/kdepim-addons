@@ -41,7 +41,7 @@ using namespace MimeTreeParser::Interface;
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
-    return format(part, writer, Q_NULLPTR);
+    return format(part, writer, nullptr);
 }
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer,

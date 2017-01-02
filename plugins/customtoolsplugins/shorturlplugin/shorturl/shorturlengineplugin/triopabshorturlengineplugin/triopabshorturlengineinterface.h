@@ -27,7 +27,7 @@ class TripAbShortUrlEngineInterface : public ShortUrlEngineInterface
 {
     Q_OBJECT
 public:
-    explicit TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~TripAbShortUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;

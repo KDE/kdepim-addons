@@ -28,7 +28,7 @@ class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckB
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressConfigureWidget(QWidget *parent = Q_NULLPTR);
+    explicit ConfirmAddressConfigureWidget(QWidget *parent = nullptr);
     ~ConfirmAddressConfigureWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;

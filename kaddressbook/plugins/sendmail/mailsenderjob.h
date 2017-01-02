@@ -34,7 +34,7 @@ class MailSenderJob : public QObject
     Q_OBJECT
 
 public:
-    explicit MailSenderJob(const Akonadi::Item::List &listItem, QObject *parent = Q_NULLPTR);
+    explicit MailSenderJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
     ~MailSenderJob();
 
     void start();

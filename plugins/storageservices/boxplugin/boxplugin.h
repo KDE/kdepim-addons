@@ -30,7 +30,7 @@ class BoxPlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit BoxPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit BoxPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~BoxPlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

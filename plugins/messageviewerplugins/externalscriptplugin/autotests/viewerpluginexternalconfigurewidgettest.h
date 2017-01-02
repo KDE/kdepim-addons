@@ -26,7 +26,7 @@ class ViewerPluginExternalConfigureWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalConfigureWidgetTest(QObject *parent = nullptr);
     ~ViewerPluginExternalConfigureWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

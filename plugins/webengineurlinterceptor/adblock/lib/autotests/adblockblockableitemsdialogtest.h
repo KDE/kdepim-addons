@@ -26,7 +26,7 @@ class AdBlockBlockableItemsDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockBlockableItemsDialogTest(QObject *parent = Q_NULLPTR);
+    explicit AdBlockBlockableItemsDialogTest(QObject *parent = nullptr);
     ~AdBlockBlockableItemsDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

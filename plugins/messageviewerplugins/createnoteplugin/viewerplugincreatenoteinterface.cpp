@@ -34,7 +34,7 @@ using namespace MessageViewer;
 
 ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent),
-      mNoteEdit(Q_NULLPTR)
+      mNoteEdit(nullptr)
 {
     createAction(ac);
 }

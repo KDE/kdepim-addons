@@ -26,7 +26,7 @@ class AntiVirusPluginInterfaceTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AntiVirusPluginInterfaceTest(QObject *parent = Q_NULLPTR);
+    explicit AntiVirusPluginInterfaceTest(QObject *parent = nullptr);
     ~AntiVirusPluginInterfaceTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

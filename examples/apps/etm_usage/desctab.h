@@ -33,7 +33,7 @@ class DescTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    DescTabWidget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    DescTabWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 public Q_SLOTS:
     void connectProxy();

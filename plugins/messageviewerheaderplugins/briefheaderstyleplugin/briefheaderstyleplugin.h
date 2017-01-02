@@ -31,12 +31,12 @@ class BriefHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT
 public:
-    explicit BriefHeaderStylePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit BriefHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~BriefHeaderStylePlugin();
 
     HeaderStyle *headerStyle() const Q_DECL_OVERRIDE;
     HeaderStrategy *headerStrategy() const Q_DECL_OVERRIDE;
-    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
 private:
     HeaderStyle *mHeaderStyle;

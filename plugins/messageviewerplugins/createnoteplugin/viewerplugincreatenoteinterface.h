@@ -30,7 +30,7 @@ class ViewerPluginCreatenoteInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginCreatenoteInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;

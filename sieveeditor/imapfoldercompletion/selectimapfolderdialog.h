@@ -30,7 +30,7 @@ class SelectImapFolderDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = Q_NULLPTR);
+    explicit SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
     ~SelectImapFolderDialog();
 
     QString selectedFolderName() const;

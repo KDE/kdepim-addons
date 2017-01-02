@@ -29,8 +29,8 @@ class MessageViewer::EventDateTimeWidgetPrivate
 {
 public:
     EventDateTimeWidgetPrivate()
-        : mDateEdit(Q_NULLPTR),
-          mTimeEdit(Q_NULLPTR)
+        : mDateEdit(nullptr),
+          mTimeEdit(nullptr)
     {
 
     }

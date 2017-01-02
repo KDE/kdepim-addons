@@ -36,7 +36,7 @@ public:
         DataRole = Qt::UserRole + 1
     };
 
-    explicit PimCalendarsModel(QObject *parent = Q_NULLPTR);
+    explicit PimCalendarsModel(QObject *parent = nullptr);
     ~PimCalendarsModel();
 
     QHash<int, QByteArray> roleNames() const Q_DECL_OVERRIDE;

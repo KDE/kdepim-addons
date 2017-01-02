@@ -26,7 +26,7 @@ class TranslatorPlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
 public:
-    explicit TranslatorPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit TranslatorPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TranslatorPlugin();
 
     PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;

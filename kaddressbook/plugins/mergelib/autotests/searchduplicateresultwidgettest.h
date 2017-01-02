@@ -26,7 +26,7 @@ class SearchDuplicateResultWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SearchDuplicateResultWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit SearchDuplicateResultWidgetTest(QObject *parent = nullptr);
     ~SearchDuplicateResultWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

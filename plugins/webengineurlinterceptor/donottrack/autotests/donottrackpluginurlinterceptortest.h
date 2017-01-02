@@ -26,7 +26,7 @@ class DoNotTrackPluginUrlInterceptorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit DoNotTrackPluginUrlInterceptorTest(QObject *parent = Q_NULLPTR);
+    explicit DoNotTrackPluginUrlInterceptorTest(QObject *parent = nullptr);
     ~DoNotTrackPluginUrlInterceptorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

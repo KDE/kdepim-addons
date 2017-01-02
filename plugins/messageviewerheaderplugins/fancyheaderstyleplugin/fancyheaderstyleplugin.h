@@ -30,12 +30,12 @@ class FancyHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT
 public:
-    explicit FancyHeaderStylePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit FancyHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~FancyHeaderStylePlugin();
 
     HeaderStyle *headerStyle() const Q_DECL_OVERRIDE;
     HeaderStrategy *headerStrategy() const Q_DECL_OVERRIDE;
-    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
     QString name() const Q_DECL_OVERRIDE;
     int elidedTextSize() const Q_DECL_OVERRIDE;
 private:

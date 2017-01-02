@@ -30,7 +30,7 @@ class DropBoxPlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit DropBoxPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit DropBoxPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~DropBoxPlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

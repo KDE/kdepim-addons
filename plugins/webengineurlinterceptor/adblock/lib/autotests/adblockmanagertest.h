@@ -26,7 +26,7 @@ class AdblockManagerTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdblockManagerTest(QObject *parent = Q_NULLPTR);
+    explicit AdblockManagerTest(QObject *parent = nullptr);
     ~AdblockManagerTest();
 };
 

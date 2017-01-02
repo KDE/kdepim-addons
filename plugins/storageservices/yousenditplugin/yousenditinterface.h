@@ -29,7 +29,7 @@ class YouSendItInterface : public PimCommon::StorageServiceInterface
 {
     Q_OBJECT
 public:
-    explicit YouSendItInterface(YouSendItPlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit YouSendItInterface(YouSendItPlugin *plugin, QObject *parent = nullptr);
     ~YouSendItInterface();
     void shutdownService() Q_DECL_OVERRIDE;
     bool isConfigurated() const Q_DECL_OVERRIDE;

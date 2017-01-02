@@ -45,8 +45,8 @@
 
 ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     : QWidget(parent),
-      mShorturlServiceName(Q_NULLPTR),
-      mCurrentEngine(Q_NULLPTR)
+      mShorturlServiceName(nullptr),
+      mCurrentEngine(nullptr)
 {
     QGridLayout *grid = new QGridLayout(this);
     grid->setMargin(2);

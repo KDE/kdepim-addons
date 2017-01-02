@@ -32,7 +32,7 @@ class AutomaticAddContactsTabWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AutomaticAddContactsTabWidget(QWidget *parent = Q_NULLPTR, QAbstractItemModel *model = Q_NULLPTR);
+    explicit AutomaticAddContactsTabWidget(QWidget *parent = nullptr, QAbstractItemModel *model = nullptr);
     ~AutomaticAddContactsTabWidget();
 
     void resetSettings();

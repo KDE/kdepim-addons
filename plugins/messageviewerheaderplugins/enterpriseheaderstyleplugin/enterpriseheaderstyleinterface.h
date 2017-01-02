@@ -29,7 +29,7 @@ class EnterpriseHeaderStyleInterface : public MessageViewer::HeaderStyleInterfac
 {
     Q_OBJECT
 public:
-    explicit EnterpriseHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit EnterpriseHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = nullptr);
     ~EnterpriseHeaderStyleInterface();
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;

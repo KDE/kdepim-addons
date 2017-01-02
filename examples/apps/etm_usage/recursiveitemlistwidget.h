@@ -37,7 +37,7 @@ class RecursiveItemListWidget : public QWidget
 {
     Q_OBJECT
 public:
-    RecursiveItemListWidget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    RecursiveItemListWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private:
     QAbstractItemView *m_listView;

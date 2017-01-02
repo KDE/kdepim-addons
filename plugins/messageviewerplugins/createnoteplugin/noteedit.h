@@ -37,7 +37,7 @@ class NoteEdit : public QWidget
 {
     Q_OBJECT
 public:
-    explicit NoteEdit(QWidget *parent = Q_NULLPTR);
+    explicit NoteEdit(QWidget *parent = nullptr);
     ~NoteEdit();
 
     Akonadi::Collection collection() const;

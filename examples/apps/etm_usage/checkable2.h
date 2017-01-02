@@ -32,7 +32,7 @@ class Checkable2 : public QWidget
 {
     Q_OBJECT
 public:
-    Checkable2(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    Checkable2(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private:
     QTreeView *m_itemView;

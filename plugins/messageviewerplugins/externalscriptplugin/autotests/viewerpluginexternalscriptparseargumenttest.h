@@ -26,7 +26,7 @@ class ViewerPluginExternalScriptParseArgumentTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalScriptParseArgumentTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalScriptParseArgumentTest(QObject *parent = nullptr);
     ~ViewerPluginExternalScriptParseArgumentTest();
 
 private:

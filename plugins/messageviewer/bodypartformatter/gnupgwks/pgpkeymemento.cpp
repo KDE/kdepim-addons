@@ -24,7 +24,7 @@
 #include <gpgme++/keylistresult.h>
 
 PgpKeyMemento::PgpKeyMemento()
-    : QObject(Q_NULLPTR)
+    : QObject(nullptr)
     , MimeTreeParser::Interface::BodyPartMemento()
     , mIsRunning(false)
 {

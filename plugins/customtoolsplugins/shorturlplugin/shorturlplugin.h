@@ -28,7 +28,7 @@ class ShorturlPlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
 public:
-    explicit ShorturlPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit ShorturlPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ShorturlPlugin();
 
     CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;

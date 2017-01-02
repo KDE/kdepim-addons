@@ -30,7 +30,7 @@ class Tab1Widget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit Tab1Widget(QWidget *parent = Q_NULLPTR);
+    explicit Tab1Widget(QWidget *parent = nullptr);
 
 };
 

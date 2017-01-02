@@ -26,7 +26,7 @@ class EnterpriseHeaderStylePluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit EnterpriseHeaderStylePluginTest(QObject *parent = Q_NULLPTR);
+    explicit EnterpriseHeaderStylePluginTest(QObject *parent = nullptr);
     ~EnterpriseHeaderStylePluginTest();
 
 private Q_SLOTS:

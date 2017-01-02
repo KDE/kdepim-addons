@@ -76,7 +76,7 @@ class AdBlockRule
     Q_DISABLE_COPY(AdBlockRule)
 
 public:
-    AdBlockRule(const QString &filter = QString(), AdBlockSubscription *subscription = Q_NULLPTR);
+    AdBlockRule(const QString &filter = QString(), AdBlockSubscription *subscription = nullptr);
     ~AdBlockRule();
 
     AdBlockRule *copy() const;

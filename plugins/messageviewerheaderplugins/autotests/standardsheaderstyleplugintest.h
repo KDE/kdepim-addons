@@ -26,7 +26,7 @@ class StandardsHeaderStylePluginTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit StandardsHeaderStylePluginTest(QObject *parent = Q_NULLPTR);
+    explicit StandardsHeaderStylePluginTest(QObject *parent = nullptr);
     ~StandardsHeaderStylePluginTest();
 
 private Q_SLOTS:

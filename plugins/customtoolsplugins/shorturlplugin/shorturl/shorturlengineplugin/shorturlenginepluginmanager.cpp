@@ -49,7 +49,7 @@ class ShortUrlEnginePluginInfo
 {
 public:
     ShortUrlEnginePluginInfo()
-        : plugin(Q_NULLPTR)
+        : plugin(nullptr)
     {
 
     }
@@ -95,7 +95,7 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         if (unique.contains(info.metaDataFileNameBaseName)) {
             continue;
         }
-        info.plugin = Q_NULLPTR;
+        info.plugin = nullptr;
         mPluginList.push_back(info);
         unique.insert(info.metaDataFileNameBaseName);
     }

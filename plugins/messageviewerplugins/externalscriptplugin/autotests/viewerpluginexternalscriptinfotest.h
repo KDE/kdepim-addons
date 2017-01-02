@@ -26,7 +26,7 @@ class ViewerPluginExternalScriptInfoTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalScriptInfoTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalScriptInfoTest(QObject *parent = nullptr);
     ~ViewerPluginExternalScriptInfoTest();
 
 private Q_SLOTS:

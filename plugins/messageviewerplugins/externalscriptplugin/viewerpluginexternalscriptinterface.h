@@ -30,7 +30,7 @@ class ViewerPluginExternalscriptInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginExternalscriptInterface();
 
     QList<QAction *> actions() const Q_DECL_OVERRIDE;

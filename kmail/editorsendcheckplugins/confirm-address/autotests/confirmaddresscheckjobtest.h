@@ -26,7 +26,7 @@ class ConfirmAddressCheckJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressCheckJobTest(QObject *parent = Q_NULLPTR);
+    explicit ConfirmAddressCheckJobTest(QObject *parent = nullptr);
     ~ConfirmAddressCheckJobTest();
 private Q_SLOTS:
     void shouldHaveEmptyResultByDefault();

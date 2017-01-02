@@ -39,7 +39,7 @@ class TodoEdit : public QWidget
 {
     Q_OBJECT
 public:
-    explicit TodoEdit(QWidget *parent = Q_NULLPTR);
+    explicit TodoEdit(QWidget *parent = nullptr);
     ~TodoEdit();
 
     Akonadi::Collection collection() const;

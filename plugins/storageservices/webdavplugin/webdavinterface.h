@@ -29,7 +29,7 @@ class WebDavInterface : public PimCommon::StorageServiceInterface
 {
     Q_OBJECT
 public:
-    explicit WebDavInterface(WebDavPlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit WebDavInterface(WebDavPlugin *plugin, QObject *parent = nullptr);
     ~WebDavInterface();
     void shutdownService() Q_DECL_OVERRIDE;
     bool isConfigurated() const Q_DECL_OVERRIDE;

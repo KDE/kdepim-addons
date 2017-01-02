@@ -30,7 +30,7 @@ class ReactionToInvitationDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ReactionToInvitationDialog(QWidget *parent = Q_NULLPTR);
+    explicit ReactionToInvitationDialog(QWidget *parent = nullptr);
     ~ReactionToInvitationDialog();
 
     QString comment() const;

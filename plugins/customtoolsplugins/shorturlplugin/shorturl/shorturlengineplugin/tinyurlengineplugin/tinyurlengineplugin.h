@@ -28,7 +28,7 @@ class TinyUrlEnginePlugin : public ShortUrlEnginePlugin
 {
     Q_OBJECT
 public:
-    explicit TinyUrlEnginePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit TinyUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TinyUrlEnginePlugin();
 
     ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

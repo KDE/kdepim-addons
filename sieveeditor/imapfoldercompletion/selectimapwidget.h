@@ -31,7 +31,7 @@ class SelectImapWidget : public KSieveUi::AbstractMoveImapFolderWidget
 {
     Q_OBJECT
 public:
-    explicit SelectImapWidget(QWidget *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit SelectImapWidget(QWidget *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SelectImapWidget();
 
     void setText(const QString &str) Q_DECL_OVERRIDE;

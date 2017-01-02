@@ -28,7 +28,7 @@ class TodoCheckableProxyModel : public KCheckableProxyModel
 {
     Q_OBJECT
 public:
-    TodoCheckableProxyModel(QObject *parent = Q_NULLPTR);
+    TodoCheckableProxyModel(QObject *parent = nullptr);
 
     void setSourceModel(QAbstractItemModel *sourceModel) Q_DECL_OVERRIDE;
 

@@ -37,7 +37,7 @@
 
 namespace MessageViewer
 {
-QAbstractItemModel *_k_noteEditStubModel = Q_NULLPTR;
+QAbstractItemModel *_k_noteEditStubModel = nullptr;
 }
 
 using namespace MessageViewer;

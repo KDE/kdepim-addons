@@ -36,7 +36,7 @@ class NoteViewer : public QWidget
 {
     Q_OBJECT
 public:
-    NoteViewer(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    NoteViewer(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
     void setIndex(const QPersistentModelIndex &index);
 

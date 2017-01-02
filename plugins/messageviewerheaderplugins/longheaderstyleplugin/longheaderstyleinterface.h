@@ -29,7 +29,7 @@ class LongHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT
 public:
-    explicit LongHeaderStyleInterface(HeaderStylePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit LongHeaderStyleInterface(HeaderStylePlugin *plugin, QObject *parent = nullptr);
     ~LongHeaderStyleInterface();
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;

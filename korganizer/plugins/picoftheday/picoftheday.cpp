@@ -69,7 +69,7 @@ POTDElement::POTDElement(const QString &id, const QDate &date,
     : StoredElement(id), mDate(date), mThumbSize(initialThumbSize),
       mFirstStepCompleted(false),
       mSecondStepCompleted(false),
-      mFirstStepJob(Q_NULLPTR), mSecondStepJob(Q_NULLPTR), mThirdStepJob(Q_NULLPTR)
+      mFirstStepJob(nullptr), mSecondStepJob(nullptr), mThirdStepJob(nullptr)
 {
     setShortText(i18n("Loading..."));
     setLongText(i18n("<qt>Loading <i>Picture of the Day</i>...</qt>"));
@@ -144,7 +144,7 @@ void POTDElement::step1Result(KJob *job)
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "DESCRIPTION=" << mDescription;
 
     mFirstStepCompleted = true;
-    mFirstStepJob = Q_NULLPTR;
+    mFirstStepJob = nullptr;
     Q_EMIT step1Success();
 }
 
@@ -228,7 +228,7 @@ void POTDElement::step2Result(KJob *job)
 
     if (!mFullSizeImageUrl.isEmpty()) {
         mSecondStepCompleted = true;
-        mSecondStepJob = Q_NULLPTR;
+        mSecondStepJob = nullptr;
         Q_EMIT step2Success();
     }
 }
@@ -255,7 +255,7 @@ void POTDElement::step3GetThumbnail()
     if (mThirdStepJob) {
         mThirdStepJob->kill();
     }
-    mThirdStepJob = Q_NULLPTR;
+    mThirdStepJob = nullptr;
 
     int thumbWidth = mThumbSize.width();
     int thumbHeight = static_cast<int>(thumbWidth * mHWRatio);
@@ -288,7 +288,7 @@ void POTDElement::step3Result(KJob *job)
     if (job != mThirdStepJob) {
         return;
     }
-    mThirdStepJob = Q_NULLPTR;
+    mThirdStepJob = nullptr;
 
     if (job->error()) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": could not get POTD:" << job->errorString();

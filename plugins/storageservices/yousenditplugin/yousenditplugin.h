@@ -30,7 +30,7 @@ class YouSendItPlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit YouSendItPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit YouSendItPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~YouSendItPlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

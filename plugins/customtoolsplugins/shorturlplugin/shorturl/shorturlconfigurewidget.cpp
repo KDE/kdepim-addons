@@ -34,7 +34,7 @@ class ShortUrlConfigureWidgetPrivate
 {
 public:
     ShortUrlConfigureWidgetPrivate()
-        : mShortUrlServer(Q_NULLPTR),
+        : mShortUrlServer(nullptr),
           mChanged(false)
     {
 

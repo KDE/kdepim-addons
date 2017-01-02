@@ -95,7 +95,7 @@ QUrl HubicPlugin::serviceUrl() const
 PimCommon::StorageServiceInterface *HubicPlugin::createStorageService(const QString &identifier)
 {
     //TODO
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 #include "hubicplugin.moc"

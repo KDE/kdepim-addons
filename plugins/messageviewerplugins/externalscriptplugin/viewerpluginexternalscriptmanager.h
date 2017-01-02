@@ -29,7 +29,7 @@ class ViewerPluginExternalScriptManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalScriptManager(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalScriptManager(QObject *parent = nullptr);
     ~ViewerPluginExternalScriptManager();
     static ViewerPluginExternalScriptManager *self();
 

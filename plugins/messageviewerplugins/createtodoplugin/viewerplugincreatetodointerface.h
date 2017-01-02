@@ -31,7 +31,7 @@ class ViewerPluginCreateTodoInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginCreateTodoInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;

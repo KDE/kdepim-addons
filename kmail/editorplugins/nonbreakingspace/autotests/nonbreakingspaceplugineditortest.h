@@ -26,7 +26,7 @@ class NonBreakingSpacePluginEditorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit NonBreakingSpacePluginEditorTest(QObject *parent = Q_NULLPTR);
+    explicit NonBreakingSpacePluginEditorTest(QObject *parent = nullptr);
     ~NonBreakingSpacePluginEditorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -27,8 +27,8 @@
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent),
-      mAction(Q_NULLPTR),
-      mTranslatorWidget(Q_NULLPTR)
+      mAction(nullptr),
+      mTranslatorWidget(nullptr)
 {
     QHBoxLayout *layout = new QHBoxLayout;
     layout->setMargin(0);
@@ -62,7 +62,7 @@ void TranslatorView::slotActivateTranslator(bool state)
         Q_EMIT activateView(this);
     } else {
         mTranslatorWidget->hide();
-        Q_EMIT activateView(Q_NULLPTR);
+        Q_EMIT activateView(nullptr);
     }
 }
 

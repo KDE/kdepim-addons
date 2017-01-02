@@ -30,7 +30,7 @@ class GDrivePlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit GDrivePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit GDrivePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~GDrivePlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

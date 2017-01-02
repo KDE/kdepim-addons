@@ -24,7 +24,7 @@ class Rot13PluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
 public:
-    explicit Rot13PluginEditorInterface(QObject *parent = Q_NULLPTR);
+    explicit Rot13PluginEditorInterface(QObject *parent = nullptr);
     ~Rot13PluginEditorInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;

@@ -26,7 +26,7 @@ class AdBlockBlockableItemsJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdBlockBlockableItemsJobTest(QObject *parent = Q_NULLPTR);
+    explicit AdBlockBlockableItemsJobTest(QObject *parent = nullptr);
     ~AdBlockBlockableItemsJobTest();
 
 private Q_SLOTS:

@@ -26,7 +26,7 @@ class ConfirmAddressConfigureWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressConfigureWidgetTest(QObject *parent = Q_NULLPTR);
+    explicit ConfirmAddressConfigureWidgetTest(QObject *parent = nullptr);
     ~ConfirmAddressConfigureWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

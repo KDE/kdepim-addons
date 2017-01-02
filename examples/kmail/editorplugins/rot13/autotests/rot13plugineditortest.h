@@ -24,7 +24,7 @@ class Rot13PluginEditorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit Rot13PluginEditorTest(QObject *parent = Q_NULLPTR);
+    explicit Rot13PluginEditorTest(QObject *parent = nullptr);
     ~Rot13PluginEditorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

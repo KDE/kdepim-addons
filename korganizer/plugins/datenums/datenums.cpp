@@ -87,7 +87,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
 
     const KCalendarSystem *calsys = KLocale::global()->calendar();
     int *yearOfTheWeek;
-    yearOfTheWeek = Q_NULLPTR;
+    yearOfTheWeek = nullptr;
     int remainingWeeks;
     const int weekOfYear = date.weekNumber(yearOfTheWeek);
 

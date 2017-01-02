@@ -25,7 +25,7 @@ class LDifImportExportPlugin : public KAddressBookImportExport::KAddressBookImpo
 {
     Q_OBJECT
 public:
-    explicit LDifImportExportPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = {});
+    explicit LDifImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~LDifImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

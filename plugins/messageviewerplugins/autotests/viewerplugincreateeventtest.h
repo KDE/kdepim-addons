@@ -26,7 +26,7 @@ class ViewerPluginCreateeventTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginCreateeventTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginCreateeventTest(QObject *parent = nullptr);
     ~ViewerPluginCreateeventTest();
 
 private Q_SLOTS:

@@ -37,7 +37,7 @@ Q_SIGNALS:
     void settingsChanged();
 
 private:
-    explicit SettingsChangeNotifier(QObject *parent = Q_NULLPTR);
+    explicit SettingsChangeNotifier(QObject *parent = nullptr);
 };
 
 #endif

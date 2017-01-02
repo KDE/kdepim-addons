@@ -27,7 +27,7 @@ class NonBreakingSpacePluginEditorInterface : public MessageComposer::PluginEdit
 {
     Q_OBJECT
 public:
-    explicit NonBreakingSpacePluginEditorInterface(QObject *parent = Q_NULLPTR);
+    explicit NonBreakingSpacePluginEditorInterface(QObject *parent = nullptr);
     ~NonBreakingSpacePluginEditorInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;

@@ -34,7 +34,7 @@ class TripWidget : public QWidget
 {
     Q_OBJECT
 public:
-    TripWidget(Trip *trip, QWidget *parent = Q_NULLPTR);
+    TripWidget(Trip *trip, QWidget *parent = nullptr);
 
     QString eventName() const;
 

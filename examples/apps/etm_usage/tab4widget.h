@@ -34,7 +34,7 @@ class Tab4Widget : public QWidget
 {
     Q_OBJECT
 public:
-    Tab4Widget(QWidget *parent = Q_NULLPTR, Qt::WindowFlags f = 0);
+    Tab4Widget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private:
     QTreeView *m_itemView;

@@ -33,7 +33,7 @@ class EventModel : public Akonadi::CalendarBase
     Q_OBJECT
 public:
 
-    explicit EventModel(QObject *parent = Q_NULLPTR);
+    explicit EventModel(QObject *parent = nullptr);
     ~EventModel();
 
     QVector<Akonadi::Collection> collections() const;

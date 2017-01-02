@@ -25,7 +25,7 @@ class ChangeCasePluginEditorInterfaceTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ChangeCasePluginEditorInterfaceTest(QObject *parent = Q_NULLPTR);
+    explicit ChangeCasePluginEditorInterfaceTest(QObject *parent = nullptr);
     ~ChangeCasePluginEditorInterfaceTest();
 private Q_SLOTS:
     void shouldHaveDefaultValues();

@@ -26,7 +26,7 @@ class DelegateSelectorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit DelegateSelectorTest(QObject *parent = Q_NULLPTR);
+    explicit DelegateSelectorTest(QObject *parent = nullptr);
     ~DelegateSelectorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

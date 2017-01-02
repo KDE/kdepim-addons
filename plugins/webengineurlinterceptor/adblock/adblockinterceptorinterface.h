@@ -32,7 +32,7 @@ class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInte
 {
     Q_OBJECT
 public:
-    explicit AdblockInterceptorInterface(QObject *parent = Q_NULLPTR);
+    explicit AdblockInterceptorInterface(QObject *parent = nullptr);
     ~AdblockInterceptorInterface();
 
     bool interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;

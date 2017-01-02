@@ -27,7 +27,7 @@
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent),
-      mAction(Q_NULLPTR)
+      mAction(nullptr)
 {
 
 }

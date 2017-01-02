@@ -32,7 +32,7 @@ class ViewerPluginTranslatorInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginTranslatorInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;

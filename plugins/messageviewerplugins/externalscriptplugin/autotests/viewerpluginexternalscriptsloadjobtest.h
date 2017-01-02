@@ -26,7 +26,7 @@ class ViewerPluginExternalScriptsLoadJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalScriptsLoadJobTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalScriptsLoadJobTest(QObject *parent = nullptr);
     ~ViewerPluginExternalScriptsLoadJobTest();
 
 private Q_SLOTS:

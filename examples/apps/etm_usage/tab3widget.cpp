@@ -39,7 +39,7 @@
 class Tab3TreeWidget : public EntityTreeWidget
 {
 public:
-    Tab3TreeWidget(QWidget *parent = Q_NULLPTR)
+    Tab3TreeWidget(QWidget *parent = nullptr)
         : EntityTreeWidget(parent)
     {
     }

@@ -26,7 +26,7 @@ class ViewerPluginTranslatorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginTranslatorTest(QObject *parent = Q_NULLPTR);
+    explicit ViewerPluginTranslatorTest(QObject *parent = nullptr);
     ~ViewerPluginTranslatorTest();
 
 private Q_SLOTS:

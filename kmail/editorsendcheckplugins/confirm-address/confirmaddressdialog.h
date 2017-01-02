@@ -26,7 +26,7 @@ class ConfirmAddressDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressDialog(QWidget *parent = Q_NULLPTR);
+    explicit ConfirmAddressDialog(QWidget *parent = nullptr);
     ~ConfirmAddressDialog();
 
     void setValidAddresses(const QStringList &addresses);

@@ -218,7 +218,7 @@ QString Parsha::findParshaName(int dayNumber, int kvia, bool isLeapYear,
 
     /* Make the calculations */
     int week = dayNumber / 7; // week of the year
-    const quint8 *array = Q_NULLPTR;
+    const quint8 *array = nullptr;
     int index;
 
     /* Get the appropriate array by exhaustive search into the 14 year types.

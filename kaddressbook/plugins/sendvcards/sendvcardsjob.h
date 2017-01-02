@@ -35,7 +35,7 @@ class SendVcardsJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent = Q_NULLPTR);
+    explicit SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
     ~SendVcardsJob();
 
     bool start();

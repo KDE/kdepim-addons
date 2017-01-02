@@ -24,7 +24,7 @@
 
 AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent),
-      mConfigureWidget(Q_NULLPTR)
+      mConfigureWidget(nullptr)
 {
     setWindowTitle(i18n("Configure \"Automatic Add Contacts\" Plugin"));
     initLayout();

@@ -36,7 +36,7 @@ class SearchFilterProxyModel : public KRecursiveFilterProxyModel
 {
     Q_OBJECT
 public:
-    explicit SearchFilterProxyModel(QObject *parent = Q_NULLPTR);
+    explicit SearchFilterProxyModel(QObject *parent = nullptr);
 
 public Q_SLOTS:
     void setSearchPattern(const QString &pattern);
@@ -65,7 +65,7 @@ class SelectImapFolderWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = Q_NULLPTR);
+    explicit SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
     ~SelectImapFolderWidget();
 
     QString selectedFolderName() const;

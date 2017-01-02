@@ -31,7 +31,7 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     setWindowTitle(QStringLiteral("Test AbstractMoveImapFolderWidget plugin"));
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
 
-    KSieveUi::AbstractMoveImapFolderWidget *lineEdit = Q_NULLPTR;
+    KSieveUi::AbstractMoveImapFolderWidget *lineEdit = nullptr;
     KPluginLoader loader(QStringLiteral("libksieve/imapfoldercompletionplugin"));
     KPluginFactory *factory = loader.factory();
     if (!factory) {

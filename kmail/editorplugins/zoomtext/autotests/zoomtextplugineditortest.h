@@ -26,7 +26,7 @@ class ZoomTextPluginEditorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ZoomTextPluginEditorTest(QObject *parent = Q_NULLPTR);
+    explicit ZoomTextPluginEditorTest(QObject *parent = nullptr);
     ~ZoomTextPluginEditorTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

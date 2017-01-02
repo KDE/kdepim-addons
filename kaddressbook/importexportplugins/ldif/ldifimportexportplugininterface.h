@@ -25,7 +25,7 @@ class LDifImportExportPluginInterface : public KAddressBookImportExport::KAddres
 {
     Q_OBJECT
 public:
-    explicit LDifImportExportPluginInterface(QObject *parent = Q_NULLPTR);
+    explicit LDifImportExportPluginInterface(QObject *parent = nullptr);
     ~LDifImportExportPluginInterface();
 
     void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;

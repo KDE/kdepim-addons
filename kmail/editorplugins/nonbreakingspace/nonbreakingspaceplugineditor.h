@@ -29,10 +29,10 @@ class NonBreakingSpacePluginEditor : public MessageComposer::PluginEditor
 {
     Q_OBJECT
 public:
-    explicit NonBreakingSpacePluginEditor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit NonBreakingSpacePluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~NonBreakingSpacePluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
 };
 
 #endif

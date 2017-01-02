@@ -36,7 +36,7 @@
 class Tab2TreeWidget : public EntityTreeWidget
 {
 public:
-    Tab2TreeWidget(QWidget *parent = Q_NULLPTR)
+    Tab2TreeWidget(QWidget *parent = nullptr)
         : EntityTreeWidget(parent)
     {
     }

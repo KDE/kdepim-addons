@@ -29,7 +29,7 @@ class HubicInterface : public PimCommon::StorageServiceInterface
 {
     Q_OBJECT
 public:
-    explicit HubicInterface(HubicPlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit HubicInterface(HubicPlugin *plugin, QObject *parent = nullptr);
     ~HubicInterface();
     void shutdownService() Q_DECL_OVERRIDE;
     bool isConfigurated() const Q_DECL_OVERRIDE;

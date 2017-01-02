@@ -26,7 +26,7 @@ class MergeContactsDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit MergeContactsDialogTest(QObject *parent = Q_NULLPTR);
+    explicit MergeContactsDialogTest(QObject *parent = nullptr);
     ~MergeContactsDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

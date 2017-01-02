@@ -28,7 +28,7 @@ class IsgdShortUrlEnginePlugin : public ShortUrlEnginePlugin
 {
     Q_OBJECT
 public:
-    explicit IsgdShortUrlEnginePlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit IsgdShortUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~IsgdShortUrlEnginePlugin();
 
     ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

@@ -25,7 +25,7 @@
 class MergeContactsPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
-    explicit MergeContactsPluginInterface(QObject *parent = Q_NULLPTR);
+    explicit MergeContactsPluginInterface(QObject *parent = nullptr);
     ~MergeContactsPluginInterface();
 
     void exec() Q_DECL_OVERRIDE;

@@ -29,10 +29,10 @@ class AutoCorrectionPluginEditor : public MessageComposer::PluginEditor
 {
     Q_OBJECT
 public:
-    explicit AutoCorrectionPluginEditor(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit AutoCorrectionPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~AutoCorrectionPluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = Q_NULLPTR) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
 };
 
 #endif

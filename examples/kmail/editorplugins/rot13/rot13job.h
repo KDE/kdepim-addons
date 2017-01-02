@@ -23,7 +23,7 @@ class Rot13Job : public QObject
 {
     Q_OBJECT
 public:
-    explicit Rot13Job(QObject *parent = Q_NULLPTR);
+    explicit Rot13Job(QObject *parent = nullptr);
     ~Rot13Job();
 
     void setText(const QString &text);

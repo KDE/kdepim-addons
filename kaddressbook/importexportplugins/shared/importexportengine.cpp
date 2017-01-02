@@ -30,8 +30,8 @@
 
 ImportExportEngine::ImportExportEngine(QObject *parent)
     : QObject(parent),
-      mParentWidget(Q_NULLPTR),
-      mImportProgressDialog(Q_NULLPTR),
+      mParentWidget(nullptr),
+      mImportProgressDialog(nullptr),
       mNumberElementToImport(-1),
       mImportDone(0)
 {
@@ -97,7 +97,7 @@ void ImportExportEngine::importContacts()
         mImportProgressDialog->setLabelText(
             i18np("Importing one contact to %2", "Importing %1 contacts to %2",
                   mNumberElementToImport, collection.name()));
-        mImportProgressDialog->setCancelButton(Q_NULLPTR);
+        mImportProgressDialog->setCancelButton(nullptr);
         mImportProgressDialog->setAutoClose(true);
         mImportProgressDialog->setRange(1, mNumberElementToImport);
     }
@@ -133,7 +133,7 @@ void ImportExportEngine::slotImportJobDone(KJob *)
         // cleanup on last step
         if (mImportProgressDialog->value() == mImportProgressDialog->maximum()) {
             mImportProgressDialog->deleteLater();
-            mImportProgressDialog = Q_NULLPTR;
+            mImportProgressDialog = nullptr;
         }
     }
     if (mImportDone >= mNumberElementToImport) {

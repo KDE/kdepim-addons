@@ -30,7 +30,7 @@ class HubicPlugin : public PimCommon::StorageServicePlugin
 {
     Q_OBJECT
 public:
-    explicit HubicPlugin(QObject *parent = Q_NULLPTR, const QList<QVariant> & = QList<QVariant>());
+    explicit HubicPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~HubicPlugin();
 
     QString storageServiceName() const Q_DECL_OVERRIDE;

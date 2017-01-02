@@ -26,7 +26,7 @@ class AdblockInterceptorInterfaceTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit AdblockInterceptorInterfaceTest(QObject *parent = Q_NULLPTR);
+    explicit AdblockInterceptorInterfaceTest(QObject *parent = nullptr);
     ~AdblockInterceptorInterfaceTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

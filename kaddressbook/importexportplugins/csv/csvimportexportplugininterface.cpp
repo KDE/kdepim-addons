@@ -174,14 +174,14 @@ void CSVImportExportPluginInterface::exportCSV()
     delete dlg;
 
     if (contacts.isEmpty()) {
-        KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
+        KMessageBox::sorry(nullptr, i18n("You have not selected any contacts to export."));
         return;
     }
 
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")), QString(), Q_NULLPTR, options);
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")), QString(), nullptr, options);
     if (url.isEmpty()) {
         return;
     }

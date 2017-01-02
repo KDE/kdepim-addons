@@ -31,7 +31,7 @@ class AdblockBlockableElementGui : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AdblockBlockableElementGui(QWidget *parent = Q_NULLPTR);
+    explicit AdblockBlockableElementGui(QWidget *parent = nullptr);
     ~AdblockBlockableElementGui();
 
 public Q_SLOTS:

@@ -114,7 +114,7 @@ QIcon DropBoxPlugin::icon() const
 PimCommon::StorageServiceInterface *DropBoxPlugin::createStorageService(const QString &identifier)
 {
     //TODO
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 #include "dropboxplugin.moc"

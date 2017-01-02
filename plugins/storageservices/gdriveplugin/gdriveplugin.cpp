@@ -80,7 +80,7 @@ QUrl GDrivePlugin::serviceUrl() const
 PimCommon::StorageServiceInterface *GDrivePlugin::createStorageService(const QString &identifier)
 {
     //TODO
-    return Q_NULLPTR;
+    return nullptr;
 }
 
 #include "gdriveplugin.moc"

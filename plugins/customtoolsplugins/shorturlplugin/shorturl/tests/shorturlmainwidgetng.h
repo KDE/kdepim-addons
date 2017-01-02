@@ -28,7 +28,7 @@ class ShortUrlMainWidgetNg : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ShortUrlMainWidgetNg(QWidget *parent = Q_NULLPTR);
+    explicit ShortUrlMainWidgetNg(QWidget *parent = nullptr);
 
 private:
     void slotSaveConfig();

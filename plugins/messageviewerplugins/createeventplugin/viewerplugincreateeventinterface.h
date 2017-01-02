@@ -30,7 +30,7 @@ class ViewerPluginCreateEventInterface : public ViewerPluginInterface
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginCreateEventInterface();
 
     void setText(const QString &text) Q_DECL_OVERRIDE;

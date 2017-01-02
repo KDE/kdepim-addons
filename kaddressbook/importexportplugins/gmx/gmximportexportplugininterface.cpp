@@ -103,14 +103,14 @@ void GMXImportExportPluginInterface::exportGMX()
     delete dlg;
 
     if (contacts.isEmpty()) {
-        KMessageBox::sorry(Q_NULLPTR, i18n("You have not selected any contacts to export."));
+        KMessageBox::sorry(nullptr, i18n("You have not selected any contacts to export."));
         return;
     }
 
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING, Q_NULLPTR, options);
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING, nullptr, options);
     if (url.isEmpty()) {
         return;
     }
@@ -277,7 +277,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
       "Company,Department,Change_date,Preferred,Status\n";
 
     addresseeId = 1;
-    while ((addressee = addresseeMap[ addresseeId ]) != Q_NULLPTR) {
+    while ((addressee = addresseeMap[ addresseeId ]) != nullptr) {
 
         const KContacts::PhoneNumber::List cellPhones =
             addressee->phoneNumbers(KContacts::PhoneNumber::Cell);

@@ -67,7 +67,7 @@ class ContactFieldComboBox : public KComboBox
     Q_OBJECT
 public:
 
-    ContactFieldComboBox(QWidget *parent = Q_NULLPTR)
+    ContactFieldComboBox(QWidget *parent = nullptr)
         : KComboBox(parent)
     {
         fillFieldMap();
@@ -124,7 +124,7 @@ QMap<QString, KAddressBookImportExport::KAddressBookImportExportContactFields::F
 class ContactFieldDelegate : public QStyledItemDelegate
 {
 public:
-    ContactFieldDelegate(QObject *parent = Q_NULLPTR)
+    ContactFieldDelegate(QObject *parent = nullptr)
         : QStyledItemDelegate(parent)
     {
     }
@@ -178,7 +178,7 @@ public:
 };
 
 CSVImportDialog::CSVImportDialog(QWidget *parent)
-    : QDialog(parent), mDevice(Q_NULLPTR)
+    : QDialog(parent), mDevice(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "CSV Import Dialog"));
     setModal(true);
