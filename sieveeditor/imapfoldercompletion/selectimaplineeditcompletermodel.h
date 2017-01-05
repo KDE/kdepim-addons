@@ -17,16 +17,26 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "selectimaplineedit.h"
-#include <QCompleter>
+#ifndef SELECTIMAPLINEEDITCOMPLETERMODEL_H
+#define SELECTIMAPLINEEDITCOMPLETERMODEL_H
 
-SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
-    : QLineEdit(parent)
+#include <QObject>
+class KDescendantsProxyModel;
+class QAbstractProxyModel;
+namespace KSieveUi
 {
-    mCompleter = new QCompleter(this);
+class SieveImapAccountSettings;
 }
-
-SelectImapLineEdit::~SelectImapLineEdit()
+class SelectImapLineEditCompleterModel : public QObject
 {
+    Q_OBJECT
+public:
+    explicit SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent = nullptr);
+    ~SelectImapLineEditCompleterModel();
 
-}
+    QAbstractProxyModel *completerModel() const;
+private:
+    KDescendantsProxyModel *mFlatProxy;
+};
+
+#endif // SELECTIMAPLINEEDITCOMPLETERMODEL_H

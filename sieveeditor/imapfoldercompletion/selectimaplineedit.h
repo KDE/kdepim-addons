@@ -28,6 +28,8 @@ class SelectImapLineEdit : public QLineEdit
 public:
     explicit SelectImapLineEdit(QWidget *parent = nullptr);
     ~SelectImapLineEdit();
+private:
+    QCompleter *mCompleter;
 };
 
 #endif // SELECTIMAPLINEEDIT_H

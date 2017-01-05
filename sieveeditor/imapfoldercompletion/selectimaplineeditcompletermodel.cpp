@@ -17,16 +17,27 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "selectimaplineedit.h"
-#include <QCompleter>
+#include "selectimaplineeditcompletermodel.h"
+#include "selectimapfoldermodel.h"
 
-SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
-    : QLineEdit(parent)
+#include <QStandardItemModel>
+#include <KDescendantsProxyModel>
+
+SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent)
+    : QObject(parent)
 {
-    mCompleter = new QCompleter(this);
+    mFlatProxy = new KDescendantsProxyModel(this);
+    mFlatProxy->setDisplayAncestorData(true);
+    mFlatProxy->setAncestorSeparator(QStringLiteral("/"));
+    mFlatProxy->setSourceModel(SelectImapFolderModel::self()->folderModel(account));
 }
 
-SelectImapLineEdit::~SelectImapLineEdit()
+SelectImapLineEditCompleterModel::~SelectImapLineEditCompleterModel()
 {
 
+}
+
+QAbstractProxyModel *SelectImapLineEditCompleterModel::completerModel() const
+{
+    return mFlatProxy;
 }
