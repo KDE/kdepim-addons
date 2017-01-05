@@ -25,7 +25,7 @@
 #include <KSieveUi/AbstractMoveImapFolderWidget>
 #include <QPointer>
 class QToolButton;
-class KLineEdit;
+class QLineEdit;
 class SelectImapFolderDialog;
 class SelectImapWidget : public KSieveUi::AbstractMoveImapFolderWidget
 {
@@ -45,7 +45,7 @@ private:
     KSieveUi::SieveImapAccountSettings mAccount;
     QPointer<SelectImapFolderDialog> mSelectImapFolderDialog;
     QToolButton *mToolButton;
-    KLineEdit *mLineEdit;
+    QLineEdit *mLineEdit;
 };
 
 #endif // SELECTIMAPWIDGET_H
