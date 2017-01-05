@@ -19,7 +19,7 @@
 
 #include "selectimapwidget.h"
 #include "selectimapfolderdialog.h"
-#include <QLineEdit>
+#include "selectimaplineedit.h"
 #include <KLocalizedString>
 #include <QToolButton>
 #include <QHBoxLayout>
@@ -34,7 +34,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
     layout->setMargin(0);
-    mLineEdit = new QLineEdit(this);
+    mLineEdit = new SelectImapLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     layout->addWidget(mLineEdit);
 
@@ -67,6 +67,7 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAcco
     mAccount = account;
     if (mAccount.isValid()) {
         mToolButton->show();
+        mLineEdit->setSieveImapAccountSettings(account);
     }
 }
 
