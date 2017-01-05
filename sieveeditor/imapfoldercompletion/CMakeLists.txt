@@ -16,6 +16,7 @@ set(imapfoldercompletionplugin_SRCS
     selectimapwidget.cpp
     selectitemfolderjob.cpp
     selectimapfoldermodel.cpp
+    selectimaplineedit.cpp
     ${sieveeditor_plugin_categories_SRCS}
     )
 
