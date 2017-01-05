@@ -21,6 +21,10 @@
 #define SELECTIMAPLINEEDIT_H
 
 #include <QLineEdit>
+namespace KSieveUi
+{
+class SieveImapAccountSettings;
+}
 
 class SelectImapLineEdit : public QLineEdit
 {
@@ -28,6 +32,8 @@ class SelectImapLineEdit : public QLineEdit
 public:
     explicit SelectImapLineEdit(QWidget *parent = nullptr);
     ~SelectImapLineEdit();
+
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 private:
     QCompleter *mCompleter;
 };
