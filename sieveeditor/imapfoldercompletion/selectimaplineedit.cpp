@@ -38,6 +38,7 @@ void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAc
     delete mCompleter;
     mCompleter = new QCompleter(this);
     SelectImapLineEditCompleterModel *model = new SelectImapLineEditCompleterModel(account, this);
+    mCompleter->setCaseSensitivity(Qt::CaseInsensitive);
     mCompleter->setModel(model->completerModel());
     setCompleter(mCompleter);
 }
