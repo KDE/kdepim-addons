@@ -29,7 +29,7 @@ class SHORTURL_EXPORT ShortUrlEngineInterface : public QObject
 {
     Q_OBJECT
 public:
-    explicit ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = Q_NULLPTR);
+    explicit ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~ShortUrlEngineInterface();
 
     void setShortUrl(const QString &url);

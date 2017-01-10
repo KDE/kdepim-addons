@@ -27,7 +27,7 @@ class ShortUrlConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ShortUrlConfigureWidget(QWidget *parent = Q_NULLPTR);
+    explicit ShortUrlConfigureWidget(QWidget *parent = nullptr);
     ~ShortUrlConfigureWidget();
 
     void loadConfig();

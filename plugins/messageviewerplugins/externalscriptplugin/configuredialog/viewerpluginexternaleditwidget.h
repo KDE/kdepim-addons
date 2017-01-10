@@ -27,7 +27,7 @@ class ViewerPluginExternalEditWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalEditWidget(QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalEditWidget(QWidget *parent = nullptr);
     ~ViewerPluginExternalEditWidget();
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);

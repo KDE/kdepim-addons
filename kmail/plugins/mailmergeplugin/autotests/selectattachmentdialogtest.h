@@ -24,7 +24,7 @@ class SelectAttachmentDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectAttachmentDialogTest(QObject *parent = Q_NULLPTR);
+    explicit SelectAttachmentDialogTest(QObject *parent = nullptr);
     ~SelectAttachmentDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();

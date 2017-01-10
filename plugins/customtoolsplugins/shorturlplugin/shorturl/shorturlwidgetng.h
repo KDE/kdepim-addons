@@ -36,7 +36,7 @@ class ShortUrlWidgetNg : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ShortUrlWidgetNg(QWidget *parent = Q_NULLPTR);
+    explicit ShortUrlWidgetNg(QWidget *parent = nullptr);
     ~ShortUrlWidgetNg();
 
     void setStandalone(bool b);

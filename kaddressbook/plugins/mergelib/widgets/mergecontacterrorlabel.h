@@ -33,7 +33,7 @@ public:
         NoContactDuplicatesFound,
         NoContactSelected
     };
-    explicit MergeContactErrorLabel(MergeContactErrorLabel::ErrorType type, QWidget *parent = Q_NULLPTR);
+    explicit MergeContactErrorLabel(MergeContactErrorLabel::ErrorType type, QWidget *parent = nullptr);
     ~MergeContactErrorLabel();
 };
 }

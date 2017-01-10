@@ -25,7 +25,7 @@
 class GoogleShortUrlEngineInterface : public ShortUrlEngineInterface
 {
 public:
-    explicit GoogleShortUrlEngineInterface(QObject *parent = Q_NULLPTR);
+    explicit GoogleShortUrlEngineInterface(QObject *parent = nullptr);
     ~GoogleShortUrlEngineInterface();
 
     void generateShortUrl() Q_DECL_OVERRIDE;

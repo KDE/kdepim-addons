@@ -25,7 +25,7 @@ class MailMergeJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit MailMergeJob(QObject *parent = Q_NULLPTR);
+    explicit MailMergeJob(QObject *parent = nullptr);
     ~MailMergeJob();
     void start();
 };

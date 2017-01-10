@@ -39,7 +39,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MergeContactWidget(QWidget *parent = Q_NULLPTR);
+    explicit MergeContactWidget(QWidget *parent = nullptr);
     ~MergeContactWidget();
 
     void setContacts(const Akonadi::Item::List &items);

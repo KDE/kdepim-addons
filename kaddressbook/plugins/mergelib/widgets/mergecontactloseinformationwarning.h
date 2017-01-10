@@ -28,7 +28,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactLoseInformationWarning : public KM
 {
     Q_OBJECT
 public:
-    explicit MergeContactLoseInformationWarning(QWidget *parent = Q_NULLPTR);
+    explicit MergeContactLoseInformationWarning(QWidget *parent = nullptr);
     ~MergeContactLoseInformationWarning();
 
 Q_SIGNALS:

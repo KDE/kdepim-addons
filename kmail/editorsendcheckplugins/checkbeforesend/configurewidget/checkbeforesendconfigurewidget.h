@@ -28,7 +28,7 @@ class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheck
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendConfigureWidget(QWidget *parent = Q_NULLPTR);
+    explicit CheckBeforeSendConfigureWidget(QWidget *parent = nullptr);
     ~CheckBeforeSendConfigureWidget();
 
     void loadSettings() Q_DECL_OVERRIDE;

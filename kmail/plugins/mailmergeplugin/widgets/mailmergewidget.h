@@ -37,7 +37,7 @@ public:
         CSV = 1
     };
 
-    explicit MailMergeWidget(QWidget *parent = Q_NULLPTR);
+    explicit MailMergeWidget(QWidget *parent = nullptr);
     ~MailMergeWidget();
 
 Q_SIGNALS:

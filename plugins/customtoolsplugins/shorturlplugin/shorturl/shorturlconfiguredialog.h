@@ -27,7 +27,7 @@ class ShortUrlConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ShortUrlConfigureDialog(QWidget *parent = Q_NULLPTR);
+    explicit ShortUrlConfigureDialog(QWidget *parent = nullptr);
     ~ShortUrlConfigureDialog();
 
 private:

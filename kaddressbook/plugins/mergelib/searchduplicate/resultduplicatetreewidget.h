@@ -33,7 +33,7 @@ namespace KABMergeContacts
 class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidgetItem : public QTreeWidgetItem
 {
 public:
-    explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = Q_NULLPTR);
+    explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = nullptr);
     ~ResultDuplicateTreeWidgetItem();
 
     Akonadi::Item item() const;
@@ -49,7 +49,7 @@ class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidget : public QTreeWidget
 {
     Q_OBJECT
 public:
-    explicit ResultDuplicateTreeWidget(QWidget *parent = Q_NULLPTR);
+    explicit ResultDuplicateTreeWidget(QWidget *parent = nullptr);
     ~ResultDuplicateTreeWidget();
     void setContacts(const QVector<Akonadi::Item::List> &lstItem);
 

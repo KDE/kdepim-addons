@@ -30,7 +30,7 @@ class ViewerPluginExternalEditDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalEditDialog(QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalEditDialog(QWidget *parent = nullptr);
     ~ViewerPluginExternalEditDialog();
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);

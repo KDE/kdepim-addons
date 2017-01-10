@@ -29,7 +29,7 @@ class ViewerPluginExternalConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ViewerPluginExternalConfigureWidget(QWidget *parent = Q_NULLPTR);
+    explicit ViewerPluginExternalConfigureWidget(QWidget *parent = nullptr);
     ~ViewerPluginExternalConfigureWidget();
     void load();
     void save();

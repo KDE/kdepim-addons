@@ -36,7 +36,7 @@ class MergeContactInfoWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MergeContactInfoWidget(QWidget *parent = Q_NULLPTR);
+    explicit MergeContactInfoWidget(QWidget *parent = nullptr);
     ~MergeContactInfoWidget();
 
 public Q_SLOTS:

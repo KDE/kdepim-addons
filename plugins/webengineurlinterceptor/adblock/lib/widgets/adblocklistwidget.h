@@ -30,7 +30,7 @@ class AdBlockListWidget : public QListWidget
 {
     Q_OBJECT
 public:
-    explicit AdBlockListWidget(QWidget *parent = Q_NULLPTR);
+    explicit AdBlockListWidget(QWidget *parent = nullptr);
     ~AdBlockListWidget();
 
 protected:

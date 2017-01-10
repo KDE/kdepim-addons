@@ -29,7 +29,7 @@ class SearchPotentialDuplicateContactJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit SearchPotentialDuplicateContactJob(const Akonadi::Item::List &list, QObject *parent = Q_NULLPTR);
+    explicit SearchPotentialDuplicateContactJob(const Akonadi::Item::List &list, QObject *parent = nullptr);
     ~SearchPotentialDuplicateContactJob();
 
     void start();

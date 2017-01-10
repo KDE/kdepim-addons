@@ -27,7 +27,7 @@ class MailMergeDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit MailMergeDialog(QWidget *parent = Q_NULLPTR);
+    explicit MailMergeDialog(QWidget *parent = nullptr);
     ~MailMergeDialog();
 private:
     MailMergeWidget *mMailMergeWidget;

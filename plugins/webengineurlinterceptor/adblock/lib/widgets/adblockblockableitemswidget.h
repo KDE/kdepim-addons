@@ -48,7 +48,7 @@ public:
         MaxTypeElement
     };
 
-    explicit AdBlockBlockableItemsWidget(QWidget *parent = Q_NULLPTR);
+    explicit AdBlockBlockableItemsWidget(QWidget *parent = nullptr);
     ~AdBlockBlockableItemsWidget();
 
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);

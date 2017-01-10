@@ -30,7 +30,7 @@ class MergeContactsJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit MergeContactsJob(QObject *parent = Q_NULLPTR);
+    explicit MergeContactsJob(QObject *parent = nullptr);
     ~MergeContactsJob();
 
     void start();

@@ -25,7 +25,7 @@ class AddressBookWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit AddressBookWidget(QWidget *parent = Q_NULLPTR);
+    explicit AddressBookWidget(QWidget *parent = nullptr);
     ~AddressBookWidget();
 };
 }

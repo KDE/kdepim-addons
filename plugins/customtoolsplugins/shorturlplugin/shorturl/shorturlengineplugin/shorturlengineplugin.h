@@ -28,7 +28,7 @@ class SHORTURL_EXPORT ShortUrlEnginePlugin : public QObject
 {
     Q_OBJECT
 public:
-    explicit ShortUrlEnginePlugin(QObject *parent = Q_NULLPTR);
+    explicit ShortUrlEnginePlugin(QObject *parent = nullptr);
     ~ShortUrlEnginePlugin();
     virtual ShortUrlEngineInterface *createInterface(QObject *parent) = 0;
     virtual QString engineName() const = 0;

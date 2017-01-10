@@ -30,7 +30,7 @@ class AdBlockAddSubscriptionDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit AdBlockAddSubscriptionDialog(const QStringList &excludeList, QWidget *parent = Q_NULLPTR);
+    explicit AdBlockAddSubscriptionDialog(const QStringList &excludeList, QWidget *parent = nullptr);
     ~AdBlockAddSubscriptionDialog();
 
     void selectedList(QString &name, QString &url);

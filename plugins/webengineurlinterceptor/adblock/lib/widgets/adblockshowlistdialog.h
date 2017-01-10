@@ -41,7 +41,7 @@ class AdBlockShowListDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit AdBlockShowListDialog(bool showDeleteBrokenList, QWidget *parent = Q_NULLPTR);
+    explicit AdBlockShowListDialog(bool showDeleteBrokenList, QWidget *parent = nullptr);
     ~AdBlockShowListDialog();
 
     void setAdBlockListPath(const QString &localPath, const QString &url);

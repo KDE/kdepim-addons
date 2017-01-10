@@ -27,7 +27,7 @@ class ShortUrlEnginePluginManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit ShortUrlEnginePluginManager(QObject *parent = Q_NULLPTR);
+    explicit ShortUrlEnginePluginManager(QObject *parent = nullptr);
     ~ShortUrlEnginePluginManager();
 
     QVector<ShortUrlEnginePlugin *> pluginsList() const;
