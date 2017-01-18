@@ -77,7 +77,8 @@ void IsgdShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     }
     const QMap<QString, QVariant> map = json.toVariant().toMap();
 
-    if (map.contains(QStringLiteral("shorturl"))) {
-        Q_EMIT shortUrlGenerated(map.value(QStringLiteral("shorturl")).toString());
+    QVariant var = map.value(QStringLiteral("shorturl"));
+    if (var.isValid()) {
+        Q_EMIT shortUrlGenerated(var.toString());
     }
 }
