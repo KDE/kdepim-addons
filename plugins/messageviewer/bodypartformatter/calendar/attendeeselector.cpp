@@ -34,7 +34,7 @@ AttendeeSelector::AttendeeSelector(QWidget *parent)
 {
     setWindowTitle(i18n("Select Attendees"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QWidget *mainWidget = new QWidget(this);
     mainLayout->addWidget(mainWidget);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);

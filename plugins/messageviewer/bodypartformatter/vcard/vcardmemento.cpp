@@ -23,7 +23,7 @@
 using namespace MessageViewer;
 
 VcardMemento::VcardMemento(const QStringList &emails)
-    : QObject(0),
+    : QObject(nullptr),
       mIndex(0),
       mFinished(false)
 {

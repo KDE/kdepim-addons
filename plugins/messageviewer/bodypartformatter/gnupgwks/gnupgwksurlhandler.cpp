@@ -89,9 +89,10 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QS
     }
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
-    if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
+    const QString actionStr = q.queryItemValue(QStringLiteral("action"));
+    if (actionStr == QLatin1String("show")) {
         return i18n("Display key details");
-    } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
+    } else if (actionStr == QLatin1String("confirm")) {
         return i18n("Publish the key");
     }
     return QString();

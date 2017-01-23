@@ -89,13 +89,13 @@ public:
         }
 
         KContacts::VCardConverter vcc;
-        const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
 
         MessageViewer::VcardMemento *memento = dynamic_cast<MessageViewer::VcardMemento *>(bodyPart->memento());
         QStringList lst;
 
         // Pre-count the number of non-empty addressees
         int count = 0;
+        const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
         for (const KContacts::Addressee &a : al) {
             if (a.isEmpty()) {
                 continue;

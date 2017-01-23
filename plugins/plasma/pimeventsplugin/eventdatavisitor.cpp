@@ -41,7 +41,7 @@ bool BaseEventDataVisitor::act(const KCalCore::Incidence::Ptr &incidence)
 bool BaseEventDataVisitor::act(const KCalCore::Event::List &events)
 {
     bool ok = false;
-    Q_FOREACH (const KCalCore::Event::Ptr &event, events) {
+    for (const KCalCore::Event::Ptr &event : events) {
         ok = event.staticCast<KCalCore::IncidenceBase>()->accept(*this, event) || ok;
     }
     return ok;
@@ -49,7 +49,7 @@ bool BaseEventDataVisitor::act(const KCalCore::Event::List &events)
 bool BaseEventDataVisitor::act(const KCalCore::Todo::List &todos)
 {
     bool ok = false;
-    Q_FOREACH (const KCalCore::Todo::Ptr &todo, todos) {
+    for (const KCalCore::Todo::Ptr &todo : todos) {
         ok = todo.staticCast<KCalCore::IncidenceBase>()->accept(*this, todo) || ok;
     }
     return ok;

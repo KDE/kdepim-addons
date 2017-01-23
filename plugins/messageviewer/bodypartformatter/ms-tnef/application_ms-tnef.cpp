@@ -69,10 +69,6 @@ public:
             return Ok;
         }
 
-        const QString dir = QApplication::isRightToLeft() ? QStringLiteral("rtl") : QStringLiteral("ltr");
-        QString htmlStr = QStringLiteral("<table cellspacing=\"1\" class=\"textAtm\">");
-        QString startRow = QStringLiteral("<tr class=\"textAtmH\"><td dir=\"") + dir + QStringLiteral("\">");
-        QString endRow = QStringLiteral("</td></tr>");
 
         const QString fileName = bodyPart->nodeHelper()->writeNodeToTempFile(bodyPart->content());
         KTnef::KTNEFParser parser;
@@ -80,6 +76,11 @@ public:
             qCDebug(MS_TNEF_LOG) << "Could not parse" << fileName;
             return Failed;
         }
+
+        const QString dir = QApplication::isRightToLeft() ? QStringLiteral("rtl") : QStringLiteral("ltr");
+        QString htmlStr = QStringLiteral("<table cellspacing=\"1\" class=\"textAtm\">");
+        QString startRow = QStringLiteral("<tr class=\"textAtmH\"><td dir=\"") + dir + QStringLiteral("\">");
+        QString endRow = QStringLiteral("</td></tr>");
 
         // Look for an invitation
         QString inviteStr;
