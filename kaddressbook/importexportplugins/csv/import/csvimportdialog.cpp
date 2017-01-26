@@ -490,7 +490,8 @@ void CSVImportDialog::reloadCodecs()
 
     mCodecs.clear();
 
-    Q_FOREACH (const QByteArray &name, QTextCodec::availableCodecs()) {
+    const QList<QByteArray> lstCodec = QTextCodec::availableCodecs();
+    for (const QByteArray &name : lstCodec) {
         mCodecs.append(QTextCodec::codecForName(name));
     }
 

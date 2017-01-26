@@ -31,7 +31,7 @@ ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
       mAction(nullptr),
       mShorturl(nullptr)
 {
-    QHBoxLayout *layout = new QHBoxLayout;
+    QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
     createAction(ac);
     mShorturl = new ShortUrlWidgetNg(this);
@@ -39,7 +39,6 @@ ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
     connect(mShorturl, &ShortUrlWidgetNg::insertText, this, &ShorturlView::insertText);
 
     layout->addWidget(mShorturl);
-    setLayout(layout);
 }
 
 ShorturlView::~ShorturlView()

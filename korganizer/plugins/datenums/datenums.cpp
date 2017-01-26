@@ -52,7 +52,7 @@ Element::List Datenums::createDayElements(const QDate &date)
     int dayOfYear = date.dayOfYear();
     int remainingDays = date.daysInYear() - dayOfYear;
 
-    StoredElement *e;
+    StoredElement *e = nullptr;
     switch (mDisplayedInfo) {
     case DayOfYear: // only day of year
         e = new StoredElement(QStringLiteral("main element"), QString::number(dayOfYear));
@@ -86,7 +86,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
     Element::List result;
 
     const KCalendarSystem *calsys = KLocale::global()->calendar();
-    int *yearOfTheWeek;
+    int *yearOfTheWeek = nullptr;
     yearOfTheWeek = nullptr;
     int remainingWeeks;
     const int weekOfYear = date.weekNumber(yearOfTheWeek);
@@ -144,7 +144,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
                                        "%1 / %2", weekOfYear,
                                        remainingWeeks);
 
-    StoredElement *e;
+    StoredElement *e = nullptr;
     switch (mDisplayedInfo) {
     case DayOfYear: // only week of year
         e = new StoredElement(QStringLiteral("main element"), weekOfYearShort, weekOfYearLong,

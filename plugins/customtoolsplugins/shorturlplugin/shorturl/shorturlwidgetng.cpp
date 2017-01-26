@@ -208,9 +208,10 @@ void ShortUrlWidgetNg::slotOriginalUrlChanged(const QString &text)
 
 void ShortUrlWidgetNg::slotShortUrlChanged(const QString &text)
 {
-    mCopyToClipboard->setEnabled(!text.isEmpty());
-    mInsertShortUrl->setEnabled(!text.isEmpty());
-    mOpenShortUrl->setEnabled(!text.isEmpty());
+    const bool textIsEmpty = {!text.isEmpty()};
+    mCopyToClipboard->setEnabled(textIsEmpty);
+    mInsertShortUrl->setEnabled(textIsEmpty);
+    mOpenShortUrl->setEnabled(textIsEmpty);
 }
 
 void ShortUrlWidgetNg::slotShortUrlDone(const QString &url)
