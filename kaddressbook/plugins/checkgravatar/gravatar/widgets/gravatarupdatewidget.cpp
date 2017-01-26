@@ -33,9 +33,8 @@ using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QGridLayout *mainLayout = new QGridLayout;
+    QGridLayout *mainLayout = new QGridLayout(this);
     mainLayout->setMargin(0);
-    setLayout(mainLayout);
 
     QHBoxLayout *hboxEmail = new QHBoxLayout;
 
@@ -154,14 +153,12 @@ void GravatarUpdateWidget::slotResolvUrl(const QUrl &url)
 void GravatarUpdateWidget::slotSearchGravatarFinished(Gravatar::GravatarResolvUrlJob *job)
 {
     bool foundGravatar = false;
-    if (job) {
-        if (job->hasGravatar()) {
-            mPixmap = job->pixmap();
-            mResultGravatar->setPixmap(mPixmap);
-            foundGravatar = true;
-        } else {
-            mResultGravatar->setText(i18n("No Gravatar Found."));
-        }
+    if (job && job->hasGravatar()) {
+        mPixmap = job->pixmap();
+        mResultGravatar->setPixmap(mPixmap);
+        foundGravatar = true;
+    } else {
+        mResultGravatar->setText(i18n("No Gravatar Found."));
     }
     Q_EMIT activateDialogButton(foundGravatar);
     mSearchGravatar->setEnabled(true);

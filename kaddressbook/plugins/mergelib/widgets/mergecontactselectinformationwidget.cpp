@@ -19,6 +19,7 @@
 
 #include "mergecontactselectinformationwidget.h"
 #include "widgets/mergecontactselectlistwidget.h"
+#include "helper_p.h"
 #include <QVBoxLayout>
 
 using namespace KABMergeContacts;
@@ -115,7 +116,7 @@ void MergeContactSelectInformationWidget::addInformationWidget(MergeContacts::Co
 bool MergeContactSelectInformationWidget::verifySelectedInfo() const
 {
     bool result = true;
-    Q_FOREACH (MergeContactSelectListWidget *listWidget, mListMergeSelectInformation) {
+    for (MergeContactSelectListWidget *listWidget : qAsConst(mListMergeSelectInformation)) {
         result = listWidget->verifySelectedInfo();
         if (!result) {
             break;
@@ -126,7 +127,7 @@ bool MergeContactSelectInformationWidget::verifySelectedInfo() const
 
 void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &addr)
 {
-    Q_FOREACH (MergeContactSelectListWidget *listWidget, mListMergeSelectInformation) {
+    for (MergeContactSelectListWidget *listWidget : qAsConst(mListMergeSelectInformation)) {
         const int selectedContactIndex = listWidget->selectedContact();
         const MergeContacts::ConflictInformation conflictType = listWidget->conflictType();
         if (selectedContactIndex != -1) {

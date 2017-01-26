@@ -19,6 +19,7 @@
 
 #include "mergecontacts.h"
 #include "kaddressbookmergelibprivate_debug.h"
+#include "helper_p.h"
 
 using namespace KABMergeContacts;
 using namespace KContacts;
@@ -44,7 +45,7 @@ KContacts::Addressee MergeContacts::mergedContact(bool excludeConflictPart)
         return newContact;
     }
     bool firstAddress = true;
-    Q_FOREACH (const Akonadi::Item &item, mListItem) {
+    for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             KContacts::Addressee address = item.payload<KContacts::Addressee>();
             if (firstAddress) {

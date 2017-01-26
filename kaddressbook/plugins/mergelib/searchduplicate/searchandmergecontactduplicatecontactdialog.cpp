@@ -40,9 +40,8 @@ SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateConta
     : QDialog(parent)
 {
     setWindowTitle(i18n("Search and Select Duplicate Contacts to merge"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SearchAndMergeContactDuplicateContactDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SearchAndMergeContactDuplicateContactDialog::reject);
     mStackedWidget = new QStackedWidget(this);
@@ -89,9 +88,10 @@ SearchAndMergeContactDuplicateContactDialog::~SearchAndMergeContactDuplicateCont
 
 void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContacts(const Akonadi::Item::List &list)
 {
-    if (list.isEmpty()) {
+    const int listCount{list.count()};
+    if (listCount == 0) {
         mStackedWidget->setCurrentWidget(mNoContactSelected);
-    } else if (list.count() < 2) {
+    } else if (listCount < 2) {
         mStackedWidget->setCurrentWidget(mNoEnoughContactSelected);
     } else {
         SearchPotentialDuplicateContactJob *job = new SearchPotentialDuplicateContactJob(list, this);

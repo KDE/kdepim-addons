@@ -41,9 +41,8 @@ using namespace AdBlock;
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
-    setLayout(lay);
     mListItems = new PimCommon::CustomTreeView;
     mListItems->setDefaultText(i18n("No blockable element found."));
 
@@ -52,8 +51,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     mListItems->setRootIsDecorated(false);
     connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::customContextMenuRequested);
 
-    QStringList lst;
-    lst << i18n("Filter") << i18n("Address") << i18n("Type");
+    const QStringList lst = {i18n("Filter"), i18n("Address"), i18n("Type")};
     mListItems->setHeaderLabels(lst);
 
     KTreeWidgetSearchLine *searchLine = new KTreeWidgetSearchLine(this, mListItems);

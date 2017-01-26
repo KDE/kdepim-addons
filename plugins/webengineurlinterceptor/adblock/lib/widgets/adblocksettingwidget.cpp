@@ -285,7 +285,7 @@ void AdBlockSettingWidget::save()
     // automatic filters
     KConfig config(QStringLiteral("AdBlockadblockrc"));
     const QStringList list = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
-    foreach (const QString &group, list) {
+    for (const QString &group : list) {
         config.deleteGroup(group);
     }
 

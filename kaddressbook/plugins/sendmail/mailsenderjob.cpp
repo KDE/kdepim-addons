@@ -20,6 +20,7 @@
 */
 
 #include "mailsenderjob.h"
+#include "helper_p.h"
 #include "kaddressbook_sendmailplugin_debug.h"
 #include <KEmailAddress>
 #include <KLocalizedString>
@@ -47,7 +48,7 @@ MailSenderJob::~MailSenderJob()
 
 void MailSenderJob::start()
 {
-    Q_FOREACH (const Akonadi::Item &item, mListItem) {
+    for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
             const QString preferredEmail = contact.preferredEmail();

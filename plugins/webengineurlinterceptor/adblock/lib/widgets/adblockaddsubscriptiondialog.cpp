@@ -37,8 +37,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     : QDialog(parent)
 {
     setWindowTitle(i18n("Add subscription"));
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QWidget *w = new QWidget;
     QHBoxLayout *lay = new QHBoxLayout;

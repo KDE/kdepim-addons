@@ -42,10 +42,9 @@ EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     : QWidget(parent),
       d(new MessageViewer::EventDateTimeWidgetPrivate)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout;
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setMargin(0);
-    setLayout(mainLayout);
     d->mDateEdit = new KDateComboBox;
     d->mDateEdit->setObjectName(QStringLiteral("eventdatecombobox"));
     mainLayout->addWidget(d->mDateEdit);

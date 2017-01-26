@@ -33,9 +33,8 @@ using namespace KABMergeContacts;
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
+    QVBoxLayout *vbox = new QVBoxLayout(this);
     vbox->setMargin(0);
-    setLayout(vbox);
     mStackWidget = new QStackedWidget;
     mStackWidget->setObjectName(QStringLiteral("stackwidget"));
     vbox->addWidget(mStackWidget);

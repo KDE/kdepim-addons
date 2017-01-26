@@ -101,8 +101,8 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     const Akonadi::CollectionFetchJob *addressBookJob = qobject_cast<Akonadi::CollectionFetchJob *>(job);
 
     Akonadi::Collection::List canCreateItemCollections;
-
-    foreach (const Akonadi::Collection &collection, addressBookJob->collections()) {
+    const Akonadi::Collection::List addressBookCollections = addressBookJob->collections();
+    for (const Akonadi::Collection &collection : addressBookCollections) {
         if (Akonadi::Collection::CanCreateItem & collection.rights()) {
             canCreateItemCollections.append(collection);
         }

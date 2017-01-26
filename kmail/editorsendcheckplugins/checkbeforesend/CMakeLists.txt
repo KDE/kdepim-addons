@@ -1,3 +1,7 @@
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/
+)
+
 set(kmail_checkbeforesendeditorplugin_SRCS
     checkbeforesendplugin.cpp
     checkbeforesendinterface.cpp

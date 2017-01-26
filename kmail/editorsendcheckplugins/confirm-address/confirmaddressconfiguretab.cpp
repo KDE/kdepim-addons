@@ -18,6 +18,7 @@
 */
 
 #include "confirmaddressconfiguretab.h"
+#include "helper_p.h"
 #include "confirmaddressconfiguretabwidget.h"
 #include <QVBoxLayout>
 #include <QTabWidget>
@@ -45,21 +46,21 @@ ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
 
 void ConfirmAddressConfigureTab::loadSettings(const KConfigGroup &grp)
 {
-    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
         w->loadSettings(grp);
     }
 }
 
 void ConfirmAddressConfigureTab::saveSettings(KConfigGroup &grp)
 {
-    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
         w->saveSettings(grp);
     }
 }
 
 void ConfirmAddressConfigureTab::resetSettings()
 {
-    Q_FOREACH (ConfirmAddressConfigureTabWidget *w, mListTabWidget) {
+    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
         w->resetSettings();
     }
 }

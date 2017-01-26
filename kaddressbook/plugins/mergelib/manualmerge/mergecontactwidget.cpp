@@ -42,7 +42,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     : QWidget(parent),
       mConflictTypes(MergeContacts::None)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
 
     QSplitter *splitter = new QSplitter;
@@ -101,8 +101,6 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     lay->addLayout(hbox);
 
     connect(mMergeButton, &QPushButton::clicked, this, &MergeContactWidget::slotMergeContacts);
-
-    setLayout(lay);
 }
 
 MergeContactWidget::~MergeContactWidget()

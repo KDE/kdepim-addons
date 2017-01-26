@@ -21,6 +21,7 @@
 #include "widgets/mergecontactloseinformationwarning.h"
 #include "job/mergecontactsjob.h"
 #include "job/mergecontacts.h"
+#include "helper_p.h"
 #include "resultduplicatetreewidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -105,7 +106,7 @@ void SearchDuplicateResultWidget::slotMergeContact()
         KABMergeContacts::MergeContacts mergeContacts;
         bool conflictFound = false;
         mResultConflictList.clear();
-        Q_FOREACH (const Akonadi::Item::List &lst, mListContactToMerge) {
+        for (const Akonadi::Item::List &lst : qAsConst(mListContactToMerge)) {
             mergeContacts.setItems(lst);
             const MergeContacts::ConflictInformations conflicts = mergeContacts.requiresManualSelectionOfInformation();
             if (conflicts != MergeContacts::None) {

@@ -33,7 +33,7 @@ AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
       mCurrentType(AdBlockBlockableItemsWidget::None)
 {
     setWindowTitle(i18n("Create Filter"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -43,8 +43,7 @@ AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
     QWidget *w = new QWidget;
     mUi = new Ui::AdBlockCreateFilterWidget;
     mUi->setupUi(w);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
     mainLayout->addWidget(buttonBox);
     connect(mUi->filtercustom, &QLineEdit::textChanged, this, &AdBlockCreateFilterDialog::slotUpdateFilter);
@@ -68,7 +67,7 @@ AdBlockCreateFilterDialog::~AdBlockCreateFilterDialog()
 {
     writeConfig();
     delete mUi;
-    mUi = 0;
+    mUi = nullptr;
 }
 
 void AdBlockCreateFilterDialog::writeConfig()

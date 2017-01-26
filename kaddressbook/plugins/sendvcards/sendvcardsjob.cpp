@@ -18,6 +18,7 @@
 */
 
 #include "sendvcardsjob.h"
+#include "helper_p.h"
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 #include <AkonadiCore/Item>
@@ -63,7 +64,7 @@ bool SendVcardsJob::start()
         return false;
     }
 
-    Q_FOREACH (const Akonadi::Item &item, mListItem) {
+    for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
             QByteArray data = item.payloadData();

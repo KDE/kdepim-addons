@@ -19,6 +19,7 @@
 
 #include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactstabwidget.h"
+#include "helper_p.h"
 #include <KConfigGroup>
 #include <QHBoxLayout>
 #include <QTabWidget>
@@ -58,7 +59,7 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityMana
 
 void AutomaticAddContactsConfigureTab::loadSettings()
 {
-    Q_FOREACH (AutomaticAddContactsTabWidget *w, mListTabWidget) {
+    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
         w->loadSettings();
     }
 }
@@ -68,17 +69,17 @@ void AutomaticAddContactsConfigureTab::saveSettings()
     KSharedConfig::Ptr config = KSharedConfig::openConfig();
     // first, delete all filter groups:
     const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("Automatic Add Contacts \\d+")));
-    Q_FOREACH (const QString &group, filterGroups) {
+    for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }
-    Q_FOREACH (AutomaticAddContactsTabWidget *w, mListTabWidget) {
+    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
         w->saveSettings();
     }
 }
 
 void AutomaticAddContactsConfigureTab::resetSettings()
 {
-    Q_FOREACH (AutomaticAddContactsTabWidget *w, mListTabWidget) {
+    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
         w->resetSettings();
     }
 }

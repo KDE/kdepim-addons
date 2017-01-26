@@ -18,6 +18,7 @@
 */
 
 #include "confirmaddresscheckjob.h"
+#include "helper_p.h"
 
 ConfirmAddressCheckJob::ConfirmAddressCheckJob()
     : mRejectedDomain(false)
@@ -35,13 +36,13 @@ void ConfirmAddressCheckJob::start()
     mValidEmails.clear();
     mInvalidEmails.clear();
     bool foundValidEmail = false;
-    Q_FOREACH (const QString &email, mAddressList) {
+    for (const QString &email : qAsConst(mAddressList)) {
         if (email.isEmpty()) {
             continue;
         }
         foundValidEmail = false;
         if (mRejectedDomain) {
-            Q_FOREACH (const QString &whiteEmail, mWhiteEmails) {
+            for (const QString &whiteEmail : qAsConst(mWhiteEmails)) {
                 if (email.contains(whiteEmail)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
@@ -52,7 +53,7 @@ void ConfirmAddressCheckJob::start()
             }
             if (!foundValidEmail) {
                 bool foundRejectedDomain = false;
-                Q_FOREACH (const QString &domain, mDomains) {
+                for (const QString &domain : qAsConst(mDomains)) {
                     if (email.contains(domain)) {
                         if (!mInvalidEmails.contains(email)) {
                             mInvalidEmails.append(email);
@@ -68,7 +69,7 @@ void ConfirmAddressCheckJob::start()
                 }
             }
         } else {
-            Q_FOREACH (const QString &domain, mDomains) {
+            for (const QString &domain : qAsConst(mDomains)) {
                 if (email.contains(domain)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
@@ -78,7 +79,7 @@ void ConfirmAddressCheckJob::start()
                 }
             }
             if (!foundValidEmail) {
-                Q_FOREACH (const QString &whiteEmail, mWhiteEmails) {
+                for (const QString &whiteEmail : qAsConst(mWhiteEmails)) {
                     if (email.contains(whiteEmail)) {
                         if (!mValidEmails.contains(email)) {
                             mValidEmails.append(email);

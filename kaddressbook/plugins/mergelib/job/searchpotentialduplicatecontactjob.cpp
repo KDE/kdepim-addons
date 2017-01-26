@@ -19,6 +19,7 @@
 
 #include "searchpotentialduplicatecontactjob.h"
 #include "kaddressbookmergelibprivate_debug.h"
+#include "helper_p.h"
 #include <KContacts/Addressee>
 
 using namespace KABMergeContacts;
@@ -96,7 +97,8 @@ bool SearchPotentialDuplicateContactJob::isDuplicate(const Akonadi::Item &itemA,
         }
     }
     if (!addressA.emails().isEmpty() && !addressB.emails().isEmpty()) {
-        Q_FOREACH (const QString &email, addressA.emails()) {
+        const QStringList lstEmails = addressA.emails();
+        for (const QString &email : lstEmails) {
             if (addressB.emails().contains(email)) {
                 return true;
             }

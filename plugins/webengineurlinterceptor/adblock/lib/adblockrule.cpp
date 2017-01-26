@@ -424,7 +424,7 @@ void AdBlockRule::parseFilter()
         const QStringList options = parsedLine.mid(optionsIndex + 1).split(QLatin1Char(','), QString::SkipEmptyParts);
 
         int handledOptions = 0;
-        foreach (const QString &option, options) {
+        for (const QString &option : options) {
             if (option.startsWith(QLatin1String("domain="))) {
                 parseDomains(option.mid(7), QLatin1Char('|'));
                 ++handledOptions;

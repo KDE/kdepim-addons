@@ -31,7 +31,7 @@ using namespace KABMergeContacts;
 MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *lay = new QHBoxLayout;
+    QHBoxLayout *lay = new QHBoxLayout(this);
     mStackWidget = new QStackedWidget;
     mStackWidget->setObjectName(QStringLiteral("stackedwidget"));
 
@@ -46,7 +46,6 @@ MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     mStackWidget->addWidget(mNoContactSelected);
 
     lay->addWidget(mStackWidget);
-    setLayout(lay);
     mStackWidget->setCurrentWidget(mNoContactSelected);
 }
 

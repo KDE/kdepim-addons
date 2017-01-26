@@ -18,6 +18,7 @@
 */
 
 #include "checkattachmentjob.h"
+#include "helper_p.h"
 #include <KEmailAddress>
 
 CheckAttachmentJob::CheckAttachmentJob()
@@ -34,7 +35,7 @@ void CheckAttachmentJob::start()
 {
     mResultList.clear();
 
-    Q_FOREACH (const QString &email, mOriginalEmails) {
+    for (const QString &email : qAsConst(mOriginalEmails)) {
         QString tname, temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
         if (!temail.isEmpty()) {
