@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <PimCommon/LogActivitiesManager>
 
 LogActivitiesPluginInterface::LogActivitiesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -35,13 +36,11 @@ LogActivitiesPluginInterface::~LogActivitiesPluginInterface()
 
 void LogActivitiesPluginInterface::createAction(KActionCollection *ac)
 {
-#if 0
-    QAction *action = new QAction(i18n("&Anti-Virus Wizard..."), this);
-    ac->addAction(QStringLiteral("antiVirusWizard"), action);
+    QAction *action = new QAction(i18n("&Log Activities..."), this);
+    ac->addAction(QStringLiteral("logactivities"), action);
     connect(action, &QAction::triggered, this, &LogActivitiesPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     setActionType(type);
-#endif
 }
 
 void LogActivitiesPluginInterface::slotActivated()
@@ -51,4 +50,5 @@ void LogActivitiesPluginInterface::slotActivated()
 
 void LogActivitiesPluginInterface::exec()
 {
+    PimCommon::LogActivitiesManager::self()->showLogActivitiesDialog();
 }
