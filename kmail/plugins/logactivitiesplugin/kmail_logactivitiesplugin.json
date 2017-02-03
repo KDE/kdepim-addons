@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to log KMail activities.", 
+        "EnabledByDefault": "false", 
+        "Id": "kmaillogactivities", 
+        "Name": "Log Activities", 
+        "ServiceTypes": [
+            "KMail/MainViewPlugin"
+        ], 
+        "Version": "1.0"
+    }
+}

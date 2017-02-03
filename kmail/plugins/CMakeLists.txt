@@ -2,6 +2,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"kmail_plugins\")
 add_subdirectory(antispamplugin)
 add_subdirectory(antivirusplugin)
 add_subdirectory(common/avscripts)
+add_subdirectory(logactivitiesplugin)
 #Laurent disable for the moment
 #add_subdirectory(mailmergeplugin)
 install(FILES common/kmail.antispamrc common/kmail.antivirusrc  DESTINATION ${KDE_INSTALL_CONFDIR})
