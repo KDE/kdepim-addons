@@ -1,9 +1,23 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to log KMail activities.", 
+        "Description[ca]": "Aquest connector permet enregistrar les activitats del KMail.", 
+        "Description[nl]": "Deze plug-in stelt u in staat KMail-activiteiten vast te leggen.", 
+        "Description[pt]": "Este 'plugin' permite-lhe registar as actividades do KMail.", 
+        "Description[sk]": "Tento plugin vám umožní zaznamenať aktivity KMail.", 
+        "Description[sv]": "Insticksprogrammet gör det möjligt att logga aktiviteter i Kmail.", 
+        "Description[uk]": "За допомогою цього додатка ви можете записувати журнал дій у KMail.", 
+        "Description[x-test]": "xxThis plugin allows you to log KMail activities.xx", 
         "EnabledByDefault": "false", 
         "Id": "kmaillogactivities", 
         "Name": "Log Activities", 
+        "Name[ca]": "Registra les activitats", 
+        "Name[nl]": "Activiteiten vastleggen", 
+        "Name[pt]": "Registar as Actividades", 
+        "Name[sk]": "Záznam aktivít", 
+        "Name[sv]": "Logga aktiviteter", 
+        "Name[uk]": "Записувати журнал дій", 
+        "Name[x-test]": "xxLog Activitiesxx", 
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ], 
