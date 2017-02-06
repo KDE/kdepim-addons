@@ -154,7 +154,8 @@ void SelectItemFolderJob::slotFullListingDone(KJob *job)
     if (job->error()) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
         Q_EMIT finished(false);
+    } else {
+        Q_EMIT finished(true);
     }
-    Q_EMIT finished(true);
     deleteLater();
 }
