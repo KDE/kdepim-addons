@@ -133,7 +133,6 @@ Element::List Datenums::createWeekElements(const QDate &date)
         }
     }
 
-    remainingWeeksShort = QString::number(remainingWeeks);
     remainingWeeksShort = i18np("1 week remaining",
                                 "%1 weeks remaining",
                                 remainingWeeks);

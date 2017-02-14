@@ -67,11 +67,6 @@ void ConfirmAddressConfigureTab::resetSettings()
 
 void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
 {
-    bool needToDeleteIdentity = false;
-    if (!identityManager) {
-        needToDeleteIdentity = true;
-        identityManager = new KIdentityManagement::IdentityManager(true);
-    }
     KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         ConfirmAddressConfigureTabWidget *w = new ConfirmAddressConfigureTabWidget(this);
@@ -79,10 +74,6 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *i
         mTabWidget->addTab(w, (*it).identityName());
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
-    }
-    if (needToDeleteIdentity) {
-        delete identityManager;
-        identityManager = nullptr;
     }
 }
 
