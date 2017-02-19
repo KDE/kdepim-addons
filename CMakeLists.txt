@@ -109,7 +109,7 @@ add_definitions( -DQT_NO_CAST_TO_ASCII )
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 # Extra package
-find_package(KF5GAPI "5.3.1" CONFIG)
+find_package(KPimGAPI "5.4.40" CONFIG)
 
 find_package(Gpgmepp 1.8.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "http://www.gnupg.org" TYPE REQUIRED)
