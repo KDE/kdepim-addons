@@ -228,6 +228,8 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 
     file.write(data);
     file.close();
+#else
+    Q_UNUSED(data);
 #endif
     return true;
 }
@@ -356,6 +358,8 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
     file.close();
 
     AdBlockSubscription::loadSubscription(disabledRules);
+#else
+    Q_UNUSED(disabledRules);
 #endif
 }
 
