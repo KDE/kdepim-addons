@@ -27,7 +27,7 @@
 #include <QSignalSpy>
 
 Q_DECLARE_METATYPE(DateEventDataHash)
-Q_DECLARE_METATYPE(CalendarEvents::EventData);
+Q_DECLARE_METATYPE(CalendarEvents::EventData)
 
 void PimEventsPluginTest::initTestCase()
 {
