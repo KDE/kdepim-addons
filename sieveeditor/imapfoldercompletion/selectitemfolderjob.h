@@ -26,7 +26,7 @@
 namespace KIMAP
 {
 class Session;
-};
+}
 
 class QStandardItemModel;
 class KJob;
