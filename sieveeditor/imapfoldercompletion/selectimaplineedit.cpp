@@ -21,7 +21,7 @@
 #include "selectimaplineeditcompletermodel.h"
 #include <QCompleter>
 #include <QAbstractProxyModel>
-
+//#define COMPLETION_LINE_EDIT 1
 SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
     : QLineEdit(parent),
       mCompleter(nullptr)
@@ -36,7 +36,7 @@ SelectImapLineEdit::~SelectImapLineEdit()
 void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
     //TODO FIXME
-#if 0
+#ifdef COMPLETION_LINE_EDIT
     delete mCompleter;
     mCompleter = new QCompleter(this);
     SelectImapLineEditCompleterModel *model = new SelectImapLineEditCompleterModel(account, this);
