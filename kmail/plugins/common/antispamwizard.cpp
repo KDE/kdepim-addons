@@ -575,7 +575,7 @@ void AntiSpamWizard::checkToolAvailability()
 
 void AntiSpamWizard::slotHelpClicked()
 {
-    PimCommon::Util::invokeHelp((mMode == AntiSpam) ? QStringLiteral("kmail/the-anti-spam-wizard.html") : QStringLiteral("kmail/the-anti-virus-wizard.html"));
+    PimCommon::Util::invokeHelp((mMode == AntiSpam) ? QStringLiteral("kmail2/the-anti-spam-wizard.html") : QStringLiteral("kmail2/the-anti-virus-wizard.html"));
 }
 
 void AntiSpamWizard::slotBuildSummary()
