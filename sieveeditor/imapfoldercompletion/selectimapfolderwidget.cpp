@@ -110,7 +110,7 @@ QString SelectImapFolderWidget::selectedFolderName() const
     QString currentPath;
     const QModelIndex index = mTreeView->currentIndex();
     if (index.isValid()) {
-        currentPath = index.data(SelectItemFolderJob::PathRole).toString();
+        currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
     }
     return currentPath;
 }

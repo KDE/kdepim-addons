@@ -24,7 +24,7 @@
 #include <KIMAP/Session>
 #include <QStandardItemModel>
 
-SelectItemFolderJob::SelectItemFolderJob(QStandardItemModel *model, QObject *parent)
+SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent)
     : QObject(parent),
       mSession(nullptr),
       mModel(model)
@@ -32,12 +32,12 @@ SelectItemFolderJob::SelectItemFolderJob(QStandardItemModel *model, QObject *par
 
 }
 
-SelectItemFolderJob::~SelectItemFolderJob()
+SelectImapLoadFoldersJob::~SelectImapLoadFoldersJob()
 {
 
 }
 
-void SelectItemFolderJob::start()
+void SelectImapLoadFoldersJob::start()
 {
     if (mModel && mSieveImapAccount.isValid()) {
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
@@ -48,7 +48,7 @@ void SelectItemFolderJob::start()
         login->setPassword(mSieveImapAccount.password());
         login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(mSieveImapAccount.authenticationType()));
         login->setEncryptionMode(static_cast<KIMAP::LoginJob::EncryptionMode>(mSieveImapAccount.encryptionMode()));
-        connect(login, &KIMAP::LoginJob::result, this, &SelectItemFolderJob::slotLoginDone);
+        connect(login, &KIMAP::LoginJob::result, this, &SelectImapLoadFoldersJob::slotLoginDone);
         login->start();
     } else {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SieveImapAccountSettings invalid";
@@ -57,7 +57,7 @@ void SelectItemFolderJob::start()
     }
 }
 
-void SelectItemFolderJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapLoadFoldersJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
 #if 0
     qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName()
@@ -69,7 +69,7 @@ void SelectItemFolderJob::setSieveImapAccountSettings(const KSieveUi::SieveImapA
     mSieveImapAccount = account;
 }
 
-void SelectItemFolderJob::slotLoginDone(KJob *job)
+void SelectImapLoadFoldersJob::slotLoginDone(KJob *job)
 {
     if (!job->error()) {
         slotReloadRequested();
@@ -79,7 +79,7 @@ void SelectItemFolderJob::slotLoginDone(KJob *job)
     }
 }
 
-void SelectItemFolderJob::slotReloadRequested()
+void SelectImapLoadFoldersJob::slotReloadRequested()
 {
     mItemsMap.clear();
     mModel->clear();
@@ -94,12 +94,12 @@ void SelectItemFolderJob::slotReloadRequested()
 
     KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
     list->setOption(KIMAP::ListJob::IncludeUnsubscribed);
-    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectItemFolderJob::slotMailBoxesReceived);
-    connect(list, &KIMAP::ListJob::result, this, &SelectItemFolderJob::slotFullListingDone);
+    connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapLoadFoldersJob::slotMailBoxesReceived);
+    connect(list, &KIMAP::ListJob::result, this, &SelectImapLoadFoldersJob::slotFullListingDone);
     list->start();
 }
 
-void SelectItemFolderJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
+void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
 {
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
@@ -149,7 +149,7 @@ void SelectItemFolderJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescri
     }
 }
 
-void SelectItemFolderJob::slotFullListingDone(KJob *job)
+void SelectImapLoadFoldersJob::slotFullListingDone(KJob *job)
 {
     if (job->error()) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();

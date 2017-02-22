@@ -31,7 +31,7 @@ class Session;
 class QStandardItemModel;
 class KJob;
 class QStandardItem;
-class SelectItemFolderJob : public QObject
+class SelectImapLoadFoldersJob : public QObject
 {
     Q_OBJECT
 public:
@@ -39,8 +39,8 @@ public:
         PathRole = Qt::UserRole + 1
     };
 
-    explicit SelectItemFolderJob(QStandardItemModel *model, QObject *parent = nullptr);
-    ~SelectItemFolderJob();
+    explicit SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent = nullptr);
+    ~SelectImapLoadFoldersJob();
 
     void start();
 
