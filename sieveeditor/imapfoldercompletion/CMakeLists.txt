@@ -14,7 +14,7 @@ set(imapfoldercompletionplugin_SRCS
     selectimapfolderdialog.cpp
     selectimapfolderwidget.cpp
     selectimapwidget.cpp
-    selectitemfolderjob.cpp
+    selectimaploadfoldersjob.cpp
     selectimapfoldermodel.cpp
     selectimaplineedit.cpp
     selectimaplineeditcompletermodel.cpp

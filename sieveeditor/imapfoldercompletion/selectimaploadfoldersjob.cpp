@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "selectitemfolderjob.h"
+#include "selectimaploadfoldersjob.h"
 #include "sessionuiproxy.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <KIMAP/LoginJob>

@@ -19,7 +19,7 @@
 
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
-#include "selectitemfolderjob.h"
+#include "selectimaploadfoldersjob.h"
 #include <QStandardItemModel>
 
 Q_GLOBAL_STATIC(SelectImapFolderModel, s_selectImapFolderModel)

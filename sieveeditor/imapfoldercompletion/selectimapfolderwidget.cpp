@@ -19,7 +19,7 @@
 */
 
 #include "selectimapfolderwidget.h"
-#include "selectitemfolderjob.h"
+#include "selectimaploadfoldersjob.h"
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <QHBoxLayout>
