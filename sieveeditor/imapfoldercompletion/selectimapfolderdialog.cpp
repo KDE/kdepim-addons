@@ -41,6 +41,11 @@ SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountS
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     layout->addWidget(buttonBox);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
+
+    QPushButton *newFolder = new QPushButton(i18n("Create Folder..."));
+    newFolder->setObjectName(QStringLiteral("createfolder"));
+    buttonBox->addButton(newFolder, QDialogButtonBox::ActionRole);
+
     // Set the button actions
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectImapFolderDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectImapFolderDialog::reject);

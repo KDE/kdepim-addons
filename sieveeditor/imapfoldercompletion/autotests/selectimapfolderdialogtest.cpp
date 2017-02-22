@@ -23,6 +23,7 @@
 #include <QTest>
 #include <QDialogButtonBox>
 #include <QStandardPaths>
+#include <QAbstractButton>
 #include <KSieveUi/SieveImapAccountSettings>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
@@ -46,6 +47,16 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+
+    const QList<QAbstractButton *> lst = buttonBox->buttons();
+    bool foundCreateFolderButton = false;
+    for (QAbstractButton *b : lst) {
+        if (b->objectName() == QLatin1String("createfolder")) {
+            foundCreateFolderButton = true;
+            break;
+        }
+    }
+    QVERIFY(foundCreateFolderButton);
 
     QVERIFY(!w.windowTitle().isEmpty());
 }
