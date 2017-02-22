@@ -69,6 +69,7 @@ public:
     ~SelectImapFolderWidget();
 
     QString selectedFolderName() const;
+    void createFolder();
 
 Q_SIGNALS:
     void folderSelected();

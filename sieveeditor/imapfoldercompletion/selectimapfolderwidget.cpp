@@ -114,6 +114,11 @@ QString SelectImapFolderWidget::selectedFolderName() const
     return currentPath;
 }
 
+void SelectImapFolderWidget::createFolder()
+{
+    //TODO
+}
+
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
     : QTreeView(parent)
 {

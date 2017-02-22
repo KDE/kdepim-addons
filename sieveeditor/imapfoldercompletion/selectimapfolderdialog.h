@@ -37,6 +37,7 @@ public:
 private:
     void writeConfig();
     void readConfig();
+    void slotCreateFolder();
 
     SelectImapFolderWidget *mSelectImapFolderWidget;
 };
