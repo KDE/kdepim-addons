@@ -28,6 +28,7 @@
 #include <QHeaderView>
 #include <QLineEdit>
 #include <QPainter>
+#include <QInputDialog>
 
 #include <KLocalizedString>
 
@@ -116,7 +117,14 @@ QString SelectImapFolderWidget::selectedFolderName() const
 
 void SelectImapFolderWidget::createFolder()
 {
-    //TODO
+    const QModelIndex index = mTreeView->currentIndex();
+    if (index.isValid()) {
+        const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"));
+        if (!name.trimmed().isEmpty()) {
+            //TODO more check for folder name ?
+            //TODO create it
+        }
+    }
 }
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
