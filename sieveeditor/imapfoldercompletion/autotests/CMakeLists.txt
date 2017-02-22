@@ -12,3 +12,4 @@ add_sieveeditorplugin_unittest(selectimapfolderdialogtest.cpp "../selectimapline
 add_sieveeditorplugin_unittest(selectimapfolderwidgettest.cpp "../selectimaplineedit.cpp;../selectimaplineeditcompletermodel.cpp;../selectimapfolderwidget.cpp;../selectitemfolderjob.cpp;../selectimapfoldermodel.cpp")
 add_sieveeditorplugin_unittest(selectimapwidgettest.cpp "../selectimaplineedit.cpp;../selectimaplineeditcompletermodel.cpp;../selectimapwidget.cpp;../selectimapfolderdialog.cpp;../selectimapfolderwidget.cpp;../selectitemfolderjob.cpp;../selectimapfoldermodel.cpp")
 add_sieveeditorplugin_unittest(selectimapfoldermodeltest.cpp "../selectimapfoldermodel.cpp;../selectitemfolderjob.cpp")
+add_sieveeditorplugin_unittest(selectimapcreatejobtest.cpp "../selectimapcreatejob.cpp")

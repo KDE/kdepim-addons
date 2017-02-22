@@ -123,6 +123,7 @@ void SelectImapFolderWidget::createFolder()
         if (!name.trimmed().isEmpty()) {
             //TODO more check for folder name ?
             //TODO create it
+            SelectImapFolderModel::self()->createNewFolder(name);
         }
     }
 }
