@@ -41,6 +41,9 @@ public:
     void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
 
     void createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName);
+Q_SIGNALS:
+    void reloadFolders();
+
 private Q_SLOTS:
     void slotLoaded(bool success);
     void slotCreateFolderDone(bool success);
