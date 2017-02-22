@@ -32,7 +32,7 @@
 
 #include <KLocalizedString>
 
-#include <KSieveUi/SieveImapAccountSettings>
+
 
 SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
     : KRecursiveFilterProxyModel(parent)
@@ -60,9 +60,10 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
 }
 
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
-    : QWidget(parent)
+    : QWidget(parent),
+      mAccount(account)
 {
-    mModel = SelectImapFolderModel::self()->folderModel(account);
+    mModel = SelectImapFolderModel::self()->folderModel(mAccount);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
@@ -122,8 +123,7 @@ void SelectImapFolderWidget::createFolder()
         const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"));
         if (!name.trimmed().isEmpty()) {
             //TODO more check for folder name ?
-            //TODO create it
-            SelectImapFolderModel::self()->createNewFolder(name);
+            SelectImapFolderModel::self()->createNewFolder(mAccount, name);
         }
     }
 }

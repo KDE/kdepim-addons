@@ -21,7 +21,7 @@
 #define SELECTIMAPCREATEJOB_H
 
 #include <QObject>
-
+#include <KSieveUi/SieveImapAccountSettings>
 class SelectImapCreateJob : public QObject
 {
     Q_OBJECT
@@ -29,6 +29,16 @@ public:
     explicit SelectImapCreateJob(QObject *parent = nullptr);
     ~SelectImapCreateJob();
     void start();
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
+
+    void setNewFolderName(const QString &newFolderName);
+
+Q_SIGNALS:
+    void finished(bool success);
+
+private:
+    KSieveUi::SieveImapAccountSettings mSieveImapAccount;
+    QString mNewFolderName;
 };
 
 #endif // SELECTIMAPCREATEJOB_H

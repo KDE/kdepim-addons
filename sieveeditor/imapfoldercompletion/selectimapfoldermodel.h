@@ -40,9 +40,10 @@ public:
 
     void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
 
-    void createNewFolder(const QString &folder);
+    void createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName);
 private Q_SLOTS:
     void slotLoaded(bool success);
+    void slotCreateFolderDone(bool success);
 
 private:
     void fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model);

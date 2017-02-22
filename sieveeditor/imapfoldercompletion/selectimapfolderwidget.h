@@ -24,11 +24,8 @@
 #include <QTreeView>
 
 #include <KRecursiveFilterProxyModel>
-namespace KSieveUi
-{
-class SieveImapAccountSettings;
-}
-class QTreeView;
+#include <KSieveUi/SieveImapAccountSettings>
+
 class QStandardItemModel;
 class QLineEdit;
 
@@ -78,6 +75,7 @@ private:
     void slotDoubleClicked(const QModelIndex &index);
     void slotSearchPattern(const QString &pattern);
 
+    KSieveUi::SieveImapAccountSettings mAccount;
     QLineEdit *mSearchLineEdit;
     SelectImapFolderTreeView *mTreeView;
     QStandardItemModel *mModel;

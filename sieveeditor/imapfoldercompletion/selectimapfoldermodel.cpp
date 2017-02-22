@@ -20,6 +20,7 @@
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include "selectimaploadfoldersjob.h"
+#include "selectimapcreatejob.h"
 #include <QStandardItemModel>
 
 Q_GLOBAL_STATIC(SelectImapFolderModel, s_selectImapFolderModel)
@@ -38,9 +39,22 @@ SelectImapFolderModel *SelectImapFolderModel::self()
     return s_selectImapFolderModel;
 }
 
-void SelectImapFolderModel::createNewFolder(const QString &folder)
+void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
 {
-    //TODO
+    SelectImapCreateJob *job = new SelectImapCreateJob(this);
+    job->setSieveImapAccountSettings(account);
+    job->setNewFolderName(folderName);
+    connect(job, &SelectImapCreateJob::finished, this, &SelectImapFolderModel::slotCreateFolderDone);
+    job->start();
+}
+
+void SelectImapFolderModel::slotCreateFolderDone(bool success)
+{
+    if (success) {
+        //TODO
+    } else {
+        qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Unable to create folder";
+    }
 }
 
 void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
