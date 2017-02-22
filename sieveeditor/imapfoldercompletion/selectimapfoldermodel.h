@@ -40,6 +40,7 @@ public:
 
     void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
 
+    void createNewFolder(const QString &folder);
 private Q_SLOTS:
     void slotLoaded(bool success);
 

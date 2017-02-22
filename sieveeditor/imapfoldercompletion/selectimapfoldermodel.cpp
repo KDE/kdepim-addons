@@ -38,6 +38,11 @@ SelectImapFolderModel *SelectImapFolderModel::self()
     return s_selectImapFolderModel;
 }
 
+void SelectImapFolderModel::createNewFolder(const QString &folder)
+{
+    //TODO
+}
+
 void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
 {
     SelectItemFolderJob *job = new SelectItemFolderJob(model, this);
