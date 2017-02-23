@@ -134,11 +134,11 @@ void Trip::updateEvent()
 
 static void updateCollection(Akonadi::Monitor *mon, const Collection &collection)
 {
-    foreach (const Collection &existingCollection, mon->collectionsMonitored()) {
+    for (const Collection &existingCollection : mon->collectionsMonitored()) {
         mon->setCollectionMonitored(existingCollection, false);
     }
 
-    foreach (const QString &mimeType, mon->mimeTypesMonitored()) {
+    for (const QString &mimeType : mon->mimeTypesMonitored()) {
         mon->setMimeTypeMonitored(mimeType, false);
     }
 

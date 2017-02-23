@@ -55,7 +55,7 @@ void EntityTreeModelFactory::collectionsFetched(const Akonadi::Collection::List 
     }
     QString wantedRemoteId = job->property(WANTED_REMOTE_ID).toString();
     if (!wantedRemoteId.isEmpty()) {
-        foreach (const Collection &col, list) {
+        for (const Collection &col : list) {
             if (col.remoteId() == wantedRemoteId) {
                 Monitor *monitor = new Monitor(this);
                 monitor->setCollectionMonitored(col, true);

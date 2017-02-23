@@ -55,7 +55,7 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
 {
     const QStringList allData = TestDataParser::allTestData();
     DateEventDataHash expectedData;
-    Q_FOREACH (const QString &data, allData) {
+    for (const QString &data : allData) {
         TestDataParser parser(data, true);
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;

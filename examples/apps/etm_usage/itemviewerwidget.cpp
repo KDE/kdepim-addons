@@ -53,11 +53,11 @@ ItemViewerWidget::ItemViewerWidget(QItemSelectionModel *itemSelectionModel, QWid
     connect(itemSelectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(selectionChanged(QItemSelection,QItemSelection)));
 }
 
-void ItemViewerWidget::selectionChanged(const QItemSelection selected, const QItemSelection &deselected)
+void ItemViewerWidget::selectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
 {
     Q_UNUSED(deselected);
     QModelIndex selectedIndex;
-    foreach (const QItemSelectionRange &range, selected) {
+    for (const QItemSelectionRange &range : selected) {
         selectedIndex = range.topLeft();
         if (range.bottom() > selectedIndex.row()) {
             return;    // Somehow more than one selected row in the list.

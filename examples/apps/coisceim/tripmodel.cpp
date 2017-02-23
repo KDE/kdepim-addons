@@ -225,7 +225,7 @@ void TripModel::repopulate()
 
     const QVariantList trips = generalGroup.readEntry<QVariantList>("trips", QVariantList());
 
-    foreach (const QVariant &trip, trips) {
+    for (const QVariant &trip : trips) {
         const Item::Id eventId = trip.toLongLong();
         if (eventId > 0) {
             m_monitor->setItemMonitored(Item(eventId), true);

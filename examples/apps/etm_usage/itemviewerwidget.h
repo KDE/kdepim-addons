@@ -48,7 +48,7 @@ public:
     ItemViewerWidget(QItemSelectionModel *selectionModel, QWidget *parent = nullptr, Qt::WindowFlags f = 0);
 
 private Q_SLOTS:
-    void selectionChanged(const QItemSelection selected, const QItemSelection &deselected);
+    void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
 
 private:
     QItemSelectionModel *m_itemSelectionModel;

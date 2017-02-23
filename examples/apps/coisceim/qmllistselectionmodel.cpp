@@ -45,7 +45,8 @@ QList< int > QMLListSelectionModel::selection() const
 {
     QList< int > list;
     const QModelIndexList indexes = m_selectionModel->selectedRows();
-    foreach (const QModelIndex &index, indexes) {
+    list.reserve(indexes.count());
+    for (const QModelIndex &index : indexes) {
         list << index.row();
     }
     return list;

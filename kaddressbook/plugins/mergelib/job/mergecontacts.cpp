@@ -109,7 +109,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     const Address::List listAddress = fromContact.addresses();
     if (!listAddress.isEmpty()) {
         Address::List newContactsAddress = newContact.addresses();
-        Q_FOREACH (const Address &addr, listAddress) {
+        for (const Address &addr : listAddress) {
             if (!newContactsAddress.contains(addr)) {
                 newContact.insertAddress(addr);
             }
