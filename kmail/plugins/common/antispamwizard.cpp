@@ -77,6 +77,8 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode,
       mSpamRulesPage(nullptr),
       mVirusRulesPage(nullptr),
       mSummaryPage(nullptr),
+      mSpamToolsUsed(false),
+      mVirusToolsUsed(false),
       mMode(mode)
 {
     // read the configuration for the anti-spam tools
