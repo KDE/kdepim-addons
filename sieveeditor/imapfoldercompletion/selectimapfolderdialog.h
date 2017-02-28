@@ -34,12 +34,17 @@ public:
     ~SelectImapFolderDialog();
 
     QString selectedFolderName() const;
+
+private Q_SLOTS:
+    void slotEnabledNewFolder(bool enabled);
+
 private:
     void writeConfig();
     void readConfig();
     void slotCreateFolder();
 
     SelectImapFolderWidget *mSelectImapFolderWidget;
+    QPushButton *mNewFolder;
 };
 
 #endif // SELECTIMAPFOLDERDIALOG_H
