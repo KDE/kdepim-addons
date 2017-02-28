@@ -18,7 +18,7 @@
 */
 
 
-#include "selectimapcreatejob.h"
+#include "selectimapcreatefolderjob.h"
 #include <KIMAP/CreateJob>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
@@ -35,6 +35,10 @@ SelectImapCreateFolderJob::~SelectImapCreateFolderJob()
 void SelectImapCreateFolderJob::start()
 {
     if (mSieveImapAccount.isValid() && !mNewFolderName.isEmpty()) {
+#if 0
+#else
+        deleteLater();	    
+#endif	    
         //TODO
     } else {
         Q_EMIT finished(false);

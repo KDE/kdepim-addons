@@ -17,28 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SELECTIMAPCREATEJOB_H
-#define SELECTIMAPCREATEJOB_H
+#ifndef SELECTIMAPCREATEFOLDERJOBTEST_H
+#define SELECTIMAPCREATEFOLDERJOBTEST_H
 
 #include <QObject>
-#include <KSieveUi/SieveImapAccountSettings>
-class SelectImapCreateFolderJob : public QObject
+
+class SelectImapCreateJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapCreateFolderJob(QObject *parent = nullptr);
-    ~SelectImapCreateFolderJob();
-    void start();
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
-
-    void setNewFolderName(const QString &newFolderName);
-
-Q_SIGNALS:
-    void finished(bool success);
-
-private:
-    KSieveUi::SieveImapAccountSettings mSieveImapAccount;
-    QString mNewFolderName;
+    explicit SelectImapCreateJobTest(QObject *parent = nullptr);
+    ~SelectImapCreateJobTest();
 };
 
-#endif // SELECTIMAPCREATEJOB_H
+#endif // SELECTIMAPCREATEJOBTEST_H
