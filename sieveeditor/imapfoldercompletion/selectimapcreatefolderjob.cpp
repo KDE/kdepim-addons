@@ -20,10 +20,13 @@
 
 #include "selectimapcreatefolderjob.h"
 #include "imapfoldercompletionplugin_debug.h"
+#include "sessionuiproxy.h"
 #include <KIMAP/CreateJob>
+#include <KIMAP/Session>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
-    : QObject(parent)
+    : QObject(parent),
+      mSession(nullptr)
 {
 
 }
@@ -36,8 +39,11 @@ SelectImapCreateFolderJob::~SelectImapCreateFolderJob()
 void SelectImapCreateFolderJob::start()
 {
     if (mSieveImapAccount.isValid() && !mNewFolderName.isEmpty()) {
+        mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
+        mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
+
 #if 0
-        KIMAP::CreateJob *job = new KIMAP::CreateJob(session);
+        KIMAP::CreateJob *job = new KIMAP::CreateJob(mSession);
         job->setMailBox(mNewFolderName);
 
         connect(job, &KIMAP::CreateJob::result, this, &SelectImapCreateFolderJob::slotCreateFolderDone);
