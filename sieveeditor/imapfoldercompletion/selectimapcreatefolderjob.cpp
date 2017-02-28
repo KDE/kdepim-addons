@@ -42,7 +42,7 @@ void SelectImapCreateFolderJob::start()
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
-#if 0
+#if 1
         KIMAP::CreateJob *job = new KIMAP::CreateJob(mSession);
         job->setMailBox(mNewFolderName);
 
