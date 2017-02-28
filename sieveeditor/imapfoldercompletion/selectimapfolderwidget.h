@@ -70,10 +70,12 @@ public:
 
 Q_SIGNALS:
     void folderSelected();
+    void folderIsSelected(bool selected);
 
 private:
     void slotDoubleClicked(const QModelIndex &index);
     void slotSearchPattern(const QString &pattern);
+    void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
 
     KSieveUi::SieveImapAccountSettings mAccount;
     QLineEdit *mSearchLineEdit;

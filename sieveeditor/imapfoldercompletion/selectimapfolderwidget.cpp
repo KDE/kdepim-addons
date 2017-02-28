@@ -86,6 +86,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     mainLayout->addWidget(mTreeView);
 
     connect(mSearchLineEdit, &QLineEdit::textChanged, this, &SelectImapFolderWidget::slotSearchPattern);
+    connect(mTreeView->selectionModel(), &QItemSelectionModel::currentChanged, this, &SelectImapFolderWidget::slotCurrentChanged);
 }
 
 SelectImapFolderWidget::~SelectImapFolderWidget()
@@ -126,6 +127,12 @@ void SelectImapFolderWidget::createFolder()
             SelectImapFolderModel::self()->createNewFolder(mAccount, name);
         }
     }
+}
+
+void SelectImapFolderWidget::slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous)
+{
+    Q_UNUSED(previous);
+    Q_EMIT folderIsSelected(current.isValid());
 }
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)

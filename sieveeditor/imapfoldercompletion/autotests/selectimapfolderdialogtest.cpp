@@ -53,6 +53,7 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
     for (QAbstractButton *b : lst) {
         if (b->objectName() == QLatin1String("createfolder")) {
             foundCreateFolderButton = true;
+            QVERIFY(!b->isEnabled());
             break;
         }
     }
