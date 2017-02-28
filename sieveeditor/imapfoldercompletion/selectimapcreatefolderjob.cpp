@@ -23,6 +23,7 @@
 #include "sessionuiproxy.h"
 #include <KIMAP/CreateJob>
 #include <KIMAP/Session>
+#include <KIMAP/LoginJob>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
     : QObject(parent),
@@ -42,21 +43,43 @@ void SelectImapCreateFolderJob::start()
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
-#if 1
-        KIMAP::CreateJob *job = new KIMAP::CreateJob(mSession);
-        job->setMailBox(mNewFolderName);
-
-        connect(job, &KIMAP::CreateJob::result, this, &SelectImapCreateFolderJob::slotCreateFolderDone);
-
-        job->start();
-#else
-        deleteLater();	    
-#endif	    
-        //TODO
+        KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
+        login->setUserName(mSieveImapAccount.userName());
+        login->setPassword(mSieveImapAccount.password());
+        login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(mSieveImapAccount.authenticationType()));
+        login->setEncryptionMode(static_cast<KIMAP::LoginJob::EncryptionMode>(mSieveImapAccount.encryptionMode()));
+        connect(login, &KIMAP::LoginJob::result, this, &SelectImapCreateFolderJob::slotLoginDone);
+        login->start();
     } else {
-        Q_EMIT finished(false);
+        Q_EMIT finished(mSieveImapAccount, false);
         deleteLater();
     }
+}
+
+void SelectImapCreateFolderJob::slotLoginDone(KJob *job)
+{
+    if (!job->error()) {
+        createFolderRequested();
+    } else {
+        Q_EMIT finished(mSieveImapAccount, false);
+        deleteLater();
+    }
+}
+
+void SelectImapCreateFolderJob::createFolderRequested()
+{
+    if (!mSession
+            || mSession->state() != KIMAP::Session::Authenticated) {
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapCreateFolderJob - got no connection";
+        Q_EMIT finished(mSieveImapAccount, false);
+        deleteLater();
+        return;
+    }
+
+    KIMAP::CreateJob *job = new KIMAP::CreateJob(mSession);
+    job->setMailBox(mNewFolderName);
+    connect(job, &KIMAP::CreateJob::result, this, &SelectImapCreateFolderJob::slotCreateFolderDone);
+    job->start();
 }
 
 void SelectImapCreateFolderJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
@@ -80,6 +103,9 @@ void SelectImapCreateFolderJob::slotCreateFolderDone(KJob *job)
 {
     if (job->error()) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Failed to create folder on server: " << job->errorString();
+        Q_EMIT finished(mSieveImapAccount, false);
+    } else {
+        Q_EMIT finished(mSieveImapAccount, true);
     }
     deleteLater();
 }

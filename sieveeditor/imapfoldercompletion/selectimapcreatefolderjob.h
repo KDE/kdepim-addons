@@ -39,10 +39,12 @@ public:
     void setNewFolderName(const QString &newFolderName);
 
 Q_SIGNALS:
-    void finished(bool success);
+    void finished(const KSieveUi::SieveImapAccountSettings &account, bool success);
 
 private:
+    void createFolderRequested();
     void slotCreateFolderDone(KJob *job);
+    void slotLoginDone(KJob *job);
     KIMAP::Session *mSession;
     KSieveUi::SieveImapAccountSettings mSieveImapAccount;
     QString mNewFolderName;

@@ -49,10 +49,10 @@ void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSett
     job->start();
 }
 
-void SelectImapFolderModel::slotCreateFolderDone(bool success)
+void SelectImapFolderModel::slotCreateFolderDone(const KSieveUi::SieveImapAccountSettings &account, bool success)
 {
     if (success) {
-        Q_EMIT reloadFolders();
+        reloadFolderModel(account);
     } else {
         qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Unable to create folder";
     }
