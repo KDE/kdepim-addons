@@ -41,10 +41,10 @@ SelectImapFolderModel *SelectImapFolderModel::self()
 
 void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
 {
-    SelectImapCreateJob *job = new SelectImapCreateJob(this);
+    SelectImapCreateFolderJob *job = new SelectImapCreateFolderJob(this);
     job->setSieveImapAccountSettings(account);
     job->setNewFolderName(folderName);
-    connect(job, &SelectImapCreateJob::finished, this, &SelectImapFolderModel::slotCreateFolderDone);
+    connect(job, &SelectImapCreateFolderJob::finished, this, &SelectImapFolderModel::slotCreateFolderDone);
     job->start();
 }
 

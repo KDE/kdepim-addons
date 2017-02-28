@@ -22,12 +22,12 @@
 
 #include <QObject>
 #include <KSieveUi/SieveImapAccountSettings>
-class SelectImapCreateJob : public QObject
+class SelectImapCreateFolderJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit SelectImapCreateJob(QObject *parent = nullptr);
-    ~SelectImapCreateJob();
+    explicit SelectImapCreateFolderJob(QObject *parent = nullptr);
+    ~SelectImapCreateFolderJob();
     void start();
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 

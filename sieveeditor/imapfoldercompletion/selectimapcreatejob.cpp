@@ -21,18 +21,18 @@
 #include "selectimapcreatejob.h"
 #include <KIMAP/CreateJob>
 
-SelectImapCreateJob::SelectImapCreateJob(QObject *parent)
+SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-SelectImapCreateJob::~SelectImapCreateJob()
+SelectImapCreateFolderJob::~SelectImapCreateFolderJob()
 {
 
 }
 
-void SelectImapCreateJob::start()
+void SelectImapCreateFolderJob::start()
 {
     if (mSieveImapAccount.isValid() && !mNewFolderName.isEmpty()) {
         //TODO
@@ -42,7 +42,7 @@ void SelectImapCreateJob::start()
     }
 }
 
-void SelectImapCreateJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
+void SelectImapCreateFolderJob::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
 #if 0
     qDebug() << " void SelectImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)" << account.serverName()
@@ -54,7 +54,7 @@ void SelectImapCreateJob::setSieveImapAccountSettings(const KSieveUi::SieveImapA
     mSieveImapAccount = account;
 }
 
-void SelectImapCreateJob::setNewFolderName(const QString &newFolderName)
+void SelectImapCreateFolderJob::setNewFolderName(const QString &newFolderName)
 {
     mNewFolderName = newFolderName;
 }
