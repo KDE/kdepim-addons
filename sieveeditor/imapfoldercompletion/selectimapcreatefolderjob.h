@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <KSieveUi/SieveImapAccountSettings>
+class KJob;
 class SelectImapCreateFolderJob : public QObject
 {
     Q_OBJECT
@@ -37,6 +38,7 @@ Q_SIGNALS:
     void finished(bool success);
 
 private:
+    void slotCreateFolderDone(KJob *job);
     KSieveUi::SieveImapAccountSettings mSieveImapAccount;
     QString mNewFolderName;
 };

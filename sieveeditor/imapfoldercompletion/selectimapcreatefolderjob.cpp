@@ -19,6 +19,7 @@
 
 
 #include "selectimapcreatefolderjob.h"
+#include "imapfoldercompletionplugin_debug.h"
 #include <KIMAP/CreateJob>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
@@ -36,6 +37,12 @@ void SelectImapCreateFolderJob::start()
 {
     if (mSieveImapAccount.isValid() && !mNewFolderName.isEmpty()) {
 #if 0
+        KIMAP::CreateJob *job = new KIMAP::CreateJob(session);
+        job->setMailBox(mNewFolderName);
+
+        connect(job, &KIMAP::CreateJob::result, this, &SelectImapCreateFolderJob::slotCreateFolderDone);
+
+        job->start();
 #else
         deleteLater();	    
 #endif	    
@@ -61,4 +68,12 @@ void SelectImapCreateFolderJob::setSieveImapAccountSettings(const KSieveUi::Siev
 void SelectImapCreateFolderJob::setNewFolderName(const QString &newFolderName)
 {
     mNewFolderName = newFolderName;
+}
+
+void SelectImapCreateFolderJob::slotCreateFolderDone(KJob *job)
+{
+    if (job->error()) {
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Failed to create folder on server: " << job->errorString();
+    }
+    deleteLater();
 }
