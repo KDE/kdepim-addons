@@ -41,7 +41,7 @@ SelectImapFolderModel *SelectImapFolderModel::self()
 
 void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
 {
-    qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
+    //qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
     SelectImapCreateFolderJob *job = new SelectImapCreateFolderJob(this);
     job->setSieveImapAccountSettings(account);
     job->setNewFolderName(folderName);

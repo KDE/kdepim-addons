@@ -23,6 +23,8 @@
 #include <KIMAP/LoginJob>
 #include <KIMAP/Session>
 #include <QStandardItemModel>
+#include <KMessageBox>
+#include <KLocalizedString>
 
 SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent)
     : QObject(parent),
@@ -86,7 +88,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
 
     if (!mSession
             || mSession->state() != KIMAP::Session::Authenticated) {
-        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SubscriptionDialog - got no connection";
+        qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapLoadFoldersJob - got no connection";
         Q_EMIT finished(false);
         deleteLater();
         return;
@@ -152,6 +154,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
 void SelectImapLoadFoldersJob::slotFullListingDone(KJob *job)
 {
     if (job->error()) {
+        KMessageBox::error(nullptr, i18n("Error during loading folders: %1", job->errorString()), i18n("Load Folders"));
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
         Q_EMIT finished(false);
     } else {

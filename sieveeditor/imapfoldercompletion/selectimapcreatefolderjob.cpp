@@ -24,6 +24,8 @@
 #include <KIMAP/CreateJob>
 #include <KIMAP/Session>
 #include <KIMAP/LoginJob>
+#include <KLocalizedString>
+#include <KMessageBox>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
     : QObject(parent),
@@ -102,6 +104,7 @@ void SelectImapCreateFolderJob::setNewFolderName(const QString &newFolderName)
 void SelectImapCreateFolderJob::slotCreateFolderDone(KJob *job)
 {
     if (job->error()) {
+        KMessageBox::error(nullptr, i18n("Error during creating folder: %1", job->errorString()), i18n("Create Folder"));
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Failed to create folder on server: " << job->errorString();
         Q_EMIT finished(mSieveImapAccount, false);
     } else {
