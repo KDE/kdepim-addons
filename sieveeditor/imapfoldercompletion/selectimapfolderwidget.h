@@ -28,7 +28,7 @@
 
 class QStandardItemModel;
 class QLineEdit;
-
+class SelectImapFolderTreeView;
 class SearchFilterProxyModel : public KRecursiveFilterProxyModel
 {
     Q_OBJECT
@@ -43,19 +43,6 @@ protected:
 
 private:
     QString mPattern;
-};
-
-class SelectImapFolderTreeView : public QTreeView
-{
-    Q_OBJECT
-public:
-    explicit SelectImapFolderTreeView(QWidget *parent);
-    ~SelectImapFolderTreeView();
-protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
-private:
-    void generalPaletteChanged();
-    QColor mTextColor;
 };
 
 class SelectImapFolderWidget : public QWidget

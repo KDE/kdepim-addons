@@ -20,6 +20,7 @@
 
 #include "selectimapfolderwidget.h"
 #include "selectimaploadfoldersjob.h"
+#include "selectimapfoldertreeview.h"
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <QHBoxLayout>
@@ -123,7 +124,7 @@ void SelectImapFolderWidget::createFolder()
     if (index.isValid()) {
         const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"));
         if (!name.trimmed().isEmpty()) {
-            QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
+            const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
             //TODO more check for folder name ?
             SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
         }
@@ -135,43 +136,3 @@ void SelectImapFolderWidget::slotCurrentChanged(const QModelIndex &current, cons
     Q_UNUSED(previous);
     Q_EMIT folderIsSelected(current.isValid());
 }
-
-SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
-    : QTreeView(parent)
-{
-
-}
-
-SelectImapFolderTreeView::~SelectImapFolderTreeView()
-{
-
-}
-
-void SelectImapFolderTreeView::generalPaletteChanged()
-{
-    const QPalette palette = viewport()->palette();
-    QColor color = palette.text().color();
-    color.setAlpha(128);
-    mTextColor = color;
-}
-
-void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
-{
-    if (!model() || model()->rowCount() == 0) {
-        QPainter p(viewport());
-
-        QFont font = p.font();
-        font.setItalic(true);
-        p.setFont(font);
-
-        if (!mTextColor.isValid()) {
-            generalPaletteChanged();
-        }
-        p.setPen(mTextColor);
-
-        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Unable to load folder list"));
-    } else {
-        QTreeView::paintEvent(event);
-    }
-}
-
