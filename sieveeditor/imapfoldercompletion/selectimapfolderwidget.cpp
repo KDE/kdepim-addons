@@ -23,6 +23,7 @@
 #include "selectimapfoldertreeview.h"
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
+#include <KMessageBox>
 #include <QHBoxLayout>
 #include <QTreeView>
 #include <QStandardItemModel>
@@ -125,6 +126,10 @@ void SelectImapFolderWidget::createFolder()
         const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"));
         if (!name.trimmed().isEmpty()) {
             const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
+            if (currentPath.contains(QLatin1Char('/'))) {
+                KMessageBox::error(this, i18n("Folder name can't have a \'/\'."), i18n("Create Folder"));
+                return;
+            }
             //TODO more check for folder name ?
             SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
         }
