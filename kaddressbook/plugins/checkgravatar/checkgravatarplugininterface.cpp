@@ -25,7 +25,7 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QPointer>
-#include <ItemModifyJob>
+#include <AkonadiCore/ItemModifyJob>
 
 #include <KContacts/Addressee>
 

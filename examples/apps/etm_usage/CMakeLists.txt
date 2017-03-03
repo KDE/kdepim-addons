@@ -41,7 +41,7 @@ target_link_libraries(etm_usage
   KF5::AkonadiCore
   KF5::Contacts
   KF5::Mime
-  
+  KF5::AkonadiWidgets  
   KF5::Libkdepim
   KF5::Libkleo
   KF5::MessageCore

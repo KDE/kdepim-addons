@@ -44,7 +44,7 @@ target_link_libraries(coisceim_widget
   KF5::AkonadiCore
   KF5::AkonadiContact
   KF5::CalendarCore
-  KF5::MessageViewer KF5::CalendarSupport
+  KF5::MessageViewer KF5::CalendarSupport KF5::AkonadiWidgets
 )
 
 set_target_properties(coisceim_widget

@@ -13,6 +13,6 @@ kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_create
 
 
 target_link_libraries(messageviewer_createeventplugin
-  KF5::MessageViewer KF5::XmlGui KF5::CalendarCore KF5::IncidenceEditor
+	KF5::MessageViewer KF5::XmlGui KF5::CalendarCore KF5::IncidenceEditor KF5::AkonadiWidgets
 )
 
