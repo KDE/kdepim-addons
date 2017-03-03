@@ -20,7 +20,7 @@
 #ifndef SENDVCARDSPLUGININTERFACE_H
 #define SENDVCARDSPLUGININTERFACE_H
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 class SendVcardsPluginInterface : public PimCommon::GenericPluginInterface
 {

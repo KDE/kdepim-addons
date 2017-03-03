@@ -20,7 +20,7 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H
 #define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
+#include <PimCommonAkonadi/ConfigurePluginDialog>
 #include <QWidget>
 #include "adblocklib_export.h"
 

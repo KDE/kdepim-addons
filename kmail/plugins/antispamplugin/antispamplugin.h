@@ -20,9 +20,9 @@
 #ifndef ANTISPAMPLUGIN_H
 #define ANTISPAMPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommonAkonadi/GenericPlugin>
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 #include <QVariant>
 

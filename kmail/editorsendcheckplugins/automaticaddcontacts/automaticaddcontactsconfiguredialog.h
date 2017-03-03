@@ -20,7 +20,7 @@
 #ifndef AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
 #define AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
+#include <PimCommonAkonadi/ConfigurePluginDialog>
 
 class AutomaticAddContactsConfigureWidget;
 class AutomaticAddContactsConfigureDialog : public PimCommon::ConfigurePluginDialog

@@ -20,7 +20,7 @@
 #ifndef ANTISPAMPLUGININTERFACE_H
 #define ANTISPAMPLUGININTERFACE_H
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 class AntiSpamPluginInterface : public PimCommon::GenericPluginInterface
 {

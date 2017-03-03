@@ -20,7 +20,7 @@
 #ifndef LOGACTIVITIESPLUGININTERFACE_H
 #define LOGACTIVITIESPLUGININTERFACE_H
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 class LogActivitiesPluginInterface : public PimCommon::GenericPluginInterface
 {

@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINEXTERNALCONFIGUREDIALOG_H
 #define VIEWERPLUGINEXTERNALCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
+#include <PimCommonAkonadi/ConfigurePluginDialog>
 class ViewerPluginExternalConfigureWidget;
 class ViewerPluginExternalConfigureDialog : public PimCommon::ConfigurePluginDialog
 {

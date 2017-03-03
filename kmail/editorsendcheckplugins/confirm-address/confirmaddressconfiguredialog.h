@@ -20,7 +20,7 @@
 #ifndef CONFIRMADDRESSCONFIGUREDIALOG_H
 #define CONFIRMADDRESSCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
+#include <PimCommonAkonadi/ConfigurePluginDialog>
 class ConfirmAddressConfigureWidget;
 class ConfirmAddressConfigureDialog : public PimCommon::ConfigurePluginDialog
 {

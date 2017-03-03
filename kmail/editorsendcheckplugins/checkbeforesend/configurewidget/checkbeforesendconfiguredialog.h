@@ -20,7 +20,7 @@
 #ifndef CHECKBEFORESENDCONFIGUREDIALOG_H
 #define CHECKBEFORESENDCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
+#include <PimCommonAkonadi/ConfigurePluginDialog>
 class CheckBeforeSendConfigureWidget;
 class CheckBeforeSendConfigureDialog : public PimCommon::ConfigurePluginDialog
 {

@@ -20,7 +20,7 @@
 #ifndef SENDMAILPLUGININTERFACE_H
 #define SENDMAILPLUGININTERFACE_H
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 class SendMailPluginInterface : public PimCommon::GenericPluginInterface
 {

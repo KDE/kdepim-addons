@@ -11,7 +11,7 @@ kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_im
 
 target_link_libraries(kaddressbook_importexportvcardplugin
     KF5::KaddressbookImportExport
-        KF5::PimCommon
+    KF5::PimCommonAkonadi
         KF5::I18n
         KF5::XmlGui
         KF5::Contacts

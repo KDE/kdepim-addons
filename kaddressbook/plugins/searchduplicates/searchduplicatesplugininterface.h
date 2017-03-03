@@ -20,7 +20,7 @@
 #ifndef SEARCHDUPLICATESPLUGININTERFACE_H
 #define SEARCHDUPLICATESPLUGININTERFACE_H
 
-#include <pimcommon/genericplugininterface.h>
+#include <PimCommonAkonadi/GenericPluginInterface>
 
 class SearchDuplicatesPluginInterface : public PimCommon::GenericPluginInterface
 {
