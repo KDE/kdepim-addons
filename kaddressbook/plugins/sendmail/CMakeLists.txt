@@ -16,7 +16,7 @@ kcoreaddons_add_plugin(kaddressbook_sendmailplugin JSON kaddressbook_sendmailplu
 
 
 target_link_libraries(kaddressbook_sendmailplugin
-  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::MailCommon KF5::XmlGui KF5::I18n
+  KF5::PimCommon KF5::Completion KF5::IconThemes KF5::PimCommonAkonadi KF5::XmlGui KF5::I18n
 )
 
 if (BUILD_TESTING)
