@@ -41,7 +41,7 @@
 #include <MimeTreeParser/HtmlWriter>
 using MimeTreeParser::Interface::BodyPart;
 
-#include <Libkdepim/AddContactJob>
+#include <LibkdepimAkonadi/AddContactJob>
 
 #include <Akonadi/Contact/ContactViewer>
 #include <Akonadi/Contact/StandardContactFormatter>
