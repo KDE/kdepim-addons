@@ -20,7 +20,7 @@
 
 #include "delegateselector.h"
 
-#include <Libkdepim/AddresseeLineEdit>
+#include <LibkdepimAkonadi/AddresseeLineEdit>
 
 #include <QHBoxLayout>
 #include <KLocalizedString>

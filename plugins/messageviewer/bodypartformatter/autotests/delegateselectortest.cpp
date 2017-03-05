@@ -24,7 +24,7 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QDialogButtonBox>
-#include <Libkdepim/AddresseeLineEdit>
+#include <LibkdepimAkonadi/AddresseeLineEdit>
 
 DelegateSelectorTest::DelegateSelectorTest(QObject *parent)
     : QObject(parent)

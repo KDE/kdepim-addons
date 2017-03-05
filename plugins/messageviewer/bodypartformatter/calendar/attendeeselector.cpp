@@ -19,7 +19,7 @@
 
 #include "attendeeselector.h"
 
-#include <Libkdepim/AddresseeLineEdit>
+#include <LibkdepimAkonadi/AddresseeLineEdit>
 #include <KEmailAddress>
 
 #include <KLocalizedString>
