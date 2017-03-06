@@ -11,5 +11,6 @@ target_link_libraries(gravatarupdatedialog_gui
   KF5::Gravatar
   KF5::I18n
   KF5::AkonadiCore
+  KF5::Contacts
 )
 

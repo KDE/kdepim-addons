@@ -531,7 +531,7 @@ void AntiSpamWizard::checkToolAvailability()
                 }
                 const QString typeIdentifier(type.identifier());
                 if (PimCommon::Util::isImapResource(typeIdentifier)) {
-                    PimCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
+                    MailCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
                     const KConfigGroup grp = resourceFile.group(QStringLiteral("network"));
                     if (grp.isValid()) {
                         const QString host = grp.readEntry(QStringLiteral("ImapServer"));
@@ -541,7 +541,7 @@ void AntiSpamWizard::checkToolAvailability()
                         }
                     }
                 } else if (type.identifier().contains(POP3_RESOURCE_IDENTIFIER)) {
-                    PimCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
+                    MailCommon::ResourceReadConfigFile resourceFile(typeIdentifier);
                     const KConfigGroup grp = resourceFile.group(QStringLiteral("General"));
                     if (grp.isValid()) {
                         const QString host = grp.readEntry(QStringLiteral("host"));
