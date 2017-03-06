@@ -34,7 +34,7 @@
 
 #include <MailTransport/Transport>
 #include <MailTransport/TransportManager>
-#include <MailTransport/MessageQueueJob>
+#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>

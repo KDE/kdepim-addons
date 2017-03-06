@@ -57,7 +57,7 @@ using namespace KCalCore;
 
 #include <KEmailAddress>
 
-#include <MailTransport/MessageQueueJob>
+#include <MailTransportAkonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
 
 #include "text_calendar_debug.h"
