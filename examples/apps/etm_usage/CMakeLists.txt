@@ -47,6 +47,7 @@ target_link_libraries(etm_usage
   KF5::MessageCore
   KF5::MessageList
   KF5::MessageViewer
+  KF5::AkonadiContact
 )
 
 install(TARGETS etm_usage ${KDE_INSTALL_TARGETS_DEFAULT_ARGS})
