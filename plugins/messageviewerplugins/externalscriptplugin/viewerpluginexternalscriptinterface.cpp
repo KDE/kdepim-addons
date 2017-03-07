@@ -20,6 +20,7 @@
 #include "viewerpluginexternalscriptmanager.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternalscriptparseargument.h"
+#include "helper_p.h"
 
 #include <QIcon>
 #include <QAction>
@@ -48,7 +49,7 @@ void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *a
 {
     ViewerPluginExternalScriptManager::self()->readExternalScriptInfo();
     delete mActionGroup;
-    Q_FOREACH (QAction *act, mAction) {
+    for (QAction *act : qAsConst(mAction)) {
         ac->removeAction(act);
     }
     mAction.clear();

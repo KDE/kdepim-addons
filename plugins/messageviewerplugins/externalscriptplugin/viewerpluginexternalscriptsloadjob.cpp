@@ -19,6 +19,7 @@
 
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
+#include "helper_p.h"
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -40,7 +41,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
     if (mDirectories.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
-        Q_FOREACH (const QString &directory, mDirectories) {
+        for (const QString &directory : qAsConst(mDirectories)) {
             QDir dir(directory);
             if (dir.exists()) {
                 const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;

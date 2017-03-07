@@ -20,6 +20,7 @@
 #include "viewerpluginexternalconfigurewidget.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternaleditdialog.h"
+#include "../helper_p.h"
 #include <QVBoxLayout>
 #include <QStandardPaths>
 #include <KLocalizedString>
@@ -167,7 +168,7 @@ void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPlu
 
 void ViewerPluginExternalConfigureWidget::save()
 {
-    Q_FOREACH (const QString &path, mFilesToRemove) {
+    for (const QString &path : qAsConst(mFilesToRemove)) {
         QFile f(path);
         if (!f.remove()) {
             qCWarning(EXTERNALSCRIPTPLUGIN_LOG) << " Impossible to delete " << path;

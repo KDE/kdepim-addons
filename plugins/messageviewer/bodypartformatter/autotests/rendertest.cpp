@@ -39,7 +39,8 @@ void RenderTest::testRender_data()
     QTest::addColumn<QString>("outFileName");
 
     QDir dir(QStringLiteral(MAIL_DATA_DIR));
-    foreach (const QString &file, dir.entryList(QStringList(QLatin1String("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks)) {
+    const QStringList lst = dir.entryList(QStringList(QLatin1String("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    for (const QString &file : lst) {
         if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QLatin1String(".html"))) {
             continue;
         }

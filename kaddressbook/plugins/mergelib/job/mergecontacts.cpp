@@ -205,7 +205,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
         return result;
     }
     KContacts::Addressee newContact;
-    Q_FOREACH (const Akonadi::Item &item, mListItem) {
+    for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee address = item.payload<KContacts::Addressee>();
             //Test Birthday
