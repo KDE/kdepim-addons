@@ -40,10 +40,12 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mainLayout->addRow(i18n("Description:"), mDescription);
 
     mCommandLine = new QLineEdit(this);
+    mCommandLine->setClearButtonEnabled(true);
     mCommandLine->setObjectName(QStringLiteral("commandline"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
 
     mExecutable = new QLineEdit(this);
+    mExecutable->setClearButtonEnabled(true);
     mExecutable->setObjectName(QStringLiteral("executable"));
     mainLayout->addRow(i18n("Executable:"), mExecutable);
     connect(mName, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
