@@ -20,7 +20,7 @@
 #ifndef MERGECONTACTSPLUGIN_H
 #define MERGECONTACTSPLUGIN_H
 
-#include <pimcommonakonadi/genericplugin.h>
+#include <pimcommon/genericplugin.h>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 

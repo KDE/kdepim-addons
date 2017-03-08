@@ -20,7 +20,7 @@
 #ifndef ANTISPAMPLUGIN_H
 #define ANTISPAMPLUGIN_H
 
-#include <PimCommonAkonadi/GenericPlugin>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
