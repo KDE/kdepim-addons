@@ -14,7 +14,7 @@ kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin JSON kmail_automat
     ${kmail_automaticaddcontactseditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_automaticaddcontactseditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::AkonadiContact
     )
 
 if(BUILD_TESTING)
