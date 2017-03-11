@@ -86,7 +86,7 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
     const bool enabled = mts.contains(KCalCore::Event::eventMimeType()) || mts.contains(KCalCore::Todo::todoMimeType());
 
     auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
-    const QString icon = attr ? attr->iconName() : QString::null;
+    const QString icon = attr ? attr->iconName() : QString();
     return QVariantMap{ { QStringLiteral("id"), col.id() },
         { QStringLiteral("name"), col.displayName() },
         { QStringLiteral("enabled"), enabled },
