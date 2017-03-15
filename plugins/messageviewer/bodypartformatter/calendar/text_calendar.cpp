@@ -1504,7 +1504,7 @@ public:
         if (idx == 0 || idx == 1) {
             return "text";
         } else {
-            return 0;
+            return nullptr;
         }
     }
 
@@ -1515,7 +1515,7 @@ public:
         } else if (idx == 1) {
             return "x-vcalendar";
         } else {
-            return 0;
+            return nullptr;
         }
     }
 
@@ -1524,7 +1524,7 @@ public:
         if (idx == 0) {
             return new UrlHandler();
         } else {
-            return 0;
+            return nullptr;
         }
     }
 };

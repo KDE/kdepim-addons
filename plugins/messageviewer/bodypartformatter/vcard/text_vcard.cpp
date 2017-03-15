@@ -335,7 +335,7 @@ public:
         case 2:
             return "directory";
         default:
-            return 0;
+            return nullptr;
         }
     }
 

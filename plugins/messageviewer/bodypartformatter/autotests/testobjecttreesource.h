@@ -71,7 +71,7 @@ public:
         return false;
     }
     const QTextCodec *overrideCodec() Q_DECL_OVERRIDE {
-        return 0;
+        return nullptr;
     }
     QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE {
         Q_UNUSED(message);
@@ -81,7 +81,7 @@ public:
         return MimeTreeParser::AttachmentStrategy::smart();
     }
     QObject *sourceObject() Q_DECL_OVERRIDE {
-        return 0;
+        return nullptr;
     }
 
     bool autoImportKeys() const Q_DECL_OVERRIDE

@@ -210,13 +210,13 @@ public:
         } else if (idx == 1) {
             return "vnd.ms-tnef";
         } else {
-            return 0;
+            return nullptr;
         }
     }
 
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
     {
-        return 0;
+        return nullptr;
     }
 };
 

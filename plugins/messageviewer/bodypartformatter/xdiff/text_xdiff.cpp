@@ -130,7 +130,7 @@ public:
         if (idx == 0 || idx == 1) {
             return "text";
         }
-        return 0;
+        return nullptr;
     }
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
@@ -139,13 +139,13 @@ public:
         } else if (idx == 1) {
             return "x-patch";
         } else {
-            return 0;
+            return nullptr;
         }
     }
 
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
     {
-        return 0;
+        return nullptr;
     }
 };
 
