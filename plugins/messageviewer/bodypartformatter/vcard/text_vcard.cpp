@@ -74,7 +74,7 @@ public:
 
     Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
-        return format(part, writer, 0);
+        return format(part, writer, nullptr);
     }
 
     Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
@@ -209,10 +209,10 @@ public:
 
         if (path.startsWith(QStringLiteral("addToAddressBook"))) {
 
-            KPIM::AddContactJob *job = new KPIM::AddContactJob(a, 0);
+            KPIM::AddContactJob *job = new KPIM::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QStringLiteral("updateToAddressBook"))) {
-            UpdateContactJob *job = new UpdateContactJob(a.emails().first(), a, 0);
+            UpdateContactJob *job = new UpdateContactJob(a.emails().first(), a, nullptr);
             job->start();
         }
 
@@ -250,7 +250,7 @@ public:
         QAction *saveas =
             menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As..."));
 
-        QAction *action = menu->exec(point, 0);
+        QAction *action = menu->exec(point, nullptr);
         if (action == open) {
             openVCard(a, vCard);
         } else if (action == saveas) {
@@ -319,7 +319,7 @@ class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
-        return validIndex(idx) ? new Formatter() : 0;
+        return validIndex(idx) ? new Formatter() : nullptr;
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
@@ -341,7 +341,7 @@ public:
 
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE
     {
-        return validIndex(idx) ? new UrlHandler() : 0;
+        return validIndex(idx) ? new UrlHandler() : nullptr;
     }
 
 private:

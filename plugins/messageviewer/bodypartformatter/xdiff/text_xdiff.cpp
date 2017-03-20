@@ -35,7 +35,6 @@
 #include <MimeTreeParser/HtmlWriter>
 
 #include <kstringhandler.h>
-#include <kmessagebox.h>
 
 namespace
 {
@@ -123,7 +122,7 @@ public:
         if (idx == 0 || idx == 1) {
             return new Formatter();
         }
-        return 0;
+        return nullptr;
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {

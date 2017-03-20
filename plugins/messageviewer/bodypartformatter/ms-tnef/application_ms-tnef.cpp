@@ -197,7 +197,7 @@ class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
     {
-        return idx == 0 ? new Formatter() : 0;
+        return idx == 0 ? new Formatter() : nullptr;
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
