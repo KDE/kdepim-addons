@@ -593,8 +593,9 @@ public:
         // Try and match the receiver with an identity.
         // Setting the identity here is important, as that is used to select the correct
         // transport later
+        KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
         const KIdentityManagement::Identity identity =
-            KIdentityManagement::IdentityManager().identityForAddress(
+            im->identityForAddress(
                 findReceiver(viewerInstance->message().data()));
 
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
