@@ -4,6 +4,7 @@
         "Description[ca@valencia]": "Este connector permet importar o exportar els LDIF.", 
         "Description[ca]": "Aquest connector permet importar o exportar els LDIF.", 
         "Description[cs]": "Tento modul umožňuje import/export LDIF.", 
+        "Description[de]": "Mit diesem Modul können Sie LDIF importieren oder exportieren.", 
         "Description[es]": "Este complemento le permite importar/exportar LDIF.", 
         "Description[et]": "See plugin võimaldab importida ja eksportida LDIF.", 
         "Description[fi]": "Tällä liitännäisellä voit tuoda ja viedä LDIF-tiedostoja.", 
