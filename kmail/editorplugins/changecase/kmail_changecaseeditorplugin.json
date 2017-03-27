@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to change the case of the selected text.", 
         "Description[ca@valencia]": "Este connector permet canviar majúscules/minúscules en el text seleccionat.", 
         "Description[ca]": "Aquest connector permet canviar majúscules/minúscules en el text seleccionat.", 
+        "Description[de]": "Mit diesem Modul können Sie Groß-/Kleinschreibung von ausgewähltem Text ändern.", 
         "Description[es]": "Este complemento le permite cambiar el modo del texto seleccionado.", 
         "Description[et]": "See plugin võimaldab muuta valitud teksti tõstu ehk tähesuurust.", 
         "Description[fi]": "Tällä liitännäisellä voit vaihtaa valitun tekstin pien- tai suuraakkosiin.", 
