@@ -2,6 +2,7 @@
 Name=PGP and GnuPG WKS formatter
 Name[ca]=Formatador WKS PGP i GnuPG
 Name[ca@valencia]=Formatador WKS PGP i GnuPG
+Name[de]=Ein Formatierungsmodul für PGP und GnuPG WKS
 Name[en_GB]=PGP and GnuPG WKS formatter
 Name[es]=Formateador WKS para PGP y GnuPG
 Name[et]=PGP ja BnuPG WKS-vormindaja
@@ -23,6 +24,7 @@ Name[x-test]=xxPGP and GnuPG WKS formatterxx
 Comment=A bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messages
 Comment[ca]=Un connector formatador del cos per a claus OpenPGP i missatges WKS GnuPG
 Comment[ca@valencia]=Un connector formatador del cos per a claus OpenPGP i missatges WKS GnuPG
+Comment[de]=Ein Formatierungsmodul für den Textinhalt von OpenPGP-Schlüsseln und GnuPG WKS E-Mails
 Comment[en_GB]=A bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messages
 Comment[es]=Un complemento para formatear el cuerpo para claves OpenPGP y mensajes WKS de GnuPG
 Comment[et]=OpenPGP võtmete ja GnuPG WKS-sõnumite põhiosa vormindaja
