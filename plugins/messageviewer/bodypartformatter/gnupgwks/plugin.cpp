@@ -27,6 +27,7 @@
 namespace
 {
 enum Index {
+    multipart_mixed,
     application_vnd_gnupg_keys,
     application_pgp_keys
 };
@@ -35,6 +36,8 @@ enum Index {
 const char *ApplicationGnuPGWKSPlugin::type(int idx) const
 {
     switch (idx) {
+    case multipart_mixed:
+        return "multipart";
     case application_vnd_gnupg_keys:
     case application_pgp_keys:
         return "application";
@@ -46,6 +49,8 @@ const char *ApplicationGnuPGWKSPlugin::type(int idx) const
 const char *ApplicationGnuPGWKSPlugin::subtype(int idx) const
 {
     switch (idx) {
+    case multipart_mixed:
+        return "mixed";
     case application_vnd_gnupg_keys:
         return "vnd.gnupg.wks";
     case application_pgp_keys:
@@ -58,6 +63,7 @@ const char *ApplicationGnuPGWKSPlugin::subtype(int idx) const
 const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const
 {
     switch (idx) {
+    case multipart_mixed:
     case application_vnd_gnupg_keys:
         return new ApplicationGnuPGWKSFormatter();
     case application_pgp_keys:
@@ -70,6 +76,7 @@ const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::b
 const MimeTreeParser::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::urlHandler(int idx) const
 {
     switch (idx) {
+    case multipart_mixed:
     case application_vnd_gnupg_keys:
         return new ApplicationGnuPGWKSUrlHandler();
     case application_pgp_keys:

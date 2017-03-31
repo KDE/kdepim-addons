@@ -28,6 +28,8 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/HtmlWriter>
 #include <MimeTreeParser/NodeHelper>
+#include <MimeTreeParser/MessagePart>
+#include <MimeTreeParser/BodyPartFormatterBaseFactory>
 #include <MessageCore/MessageCoreUtil>
 #include <MessageViewer/Viewer>
 
@@ -37,7 +39,39 @@
 #include <grantlee/context.h>
 #include <grantlee/template.h>
 
+#include <QGpgME/Protocol>
+#include <QGpgME/DecryptJob>
+
+using namespace MimeTreeParser;
 using namespace MimeTreeParser::Interface;
+
+namespace {
+
+bool partHasMimeType(KMime::Content *part, const char *mt)
+{
+    const auto ct = part->contentType(false);
+    return ct && ct->isMimeType(mt);
+}
+
+}
+
+Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
+{
+    const auto ct = part.content()->contentType(false);
+    if (ct && ct->isMimeType("multipart/mixed")) {
+        const auto subParts = part.content()->contents();
+        if (subParts.size() == 2
+            && partHasMimeType(subParts[0], "text/plain")
+            && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
+            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), part.content()->contents().at(1), false));
+        } else {
+            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), part.content()->contents().at(0), false));
+        }
+    }
+
+    return BodyPartFormatter::process(part);
+}
+
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
@@ -45,10 +79,30 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
 }
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer,
-        QObject *) const
+        QObject *obj) const
 {
     if (!writer) {
         return Ok;
+    }
+
+    if (part->content()->contentType(false) && part->content()->contentType()->isMimeType("multipart/mixed")) {
+        const auto registry = part->source()->bodyPartFormatterFactory()->subtypeRegistry("multipart");
+        const auto mixed = registry.find("mixed");
+        Q_ASSERT(mixed != registry.end()); // there *must* be a multipart/mixed handler
+
+        return mixed->second->format(part, writer, obj);
+    }
+
+    const auto content = part->content()->decodedContent();
+    if (content.startsWith("-----BEGIN PGP MESSAGE")) {
+        auto decrypt = QGpgME::openpgp()->decryptJob();
+        QByteArray plainText;
+        auto result = decrypt->exec(part->content()->decodedContent(), plainText);
+        if (result.error()) {
+            qWarning() << "Decryption failed!" << result.error().asString();
+            return Failed;
+        }
+        part->content()->setBody(plainText);
     }
 
     GnuPGWKSMessagePart mp(part);
