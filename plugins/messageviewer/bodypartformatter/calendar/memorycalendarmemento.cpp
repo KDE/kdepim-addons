@@ -64,7 +64,7 @@ bool MemoryCalendarMemento::finished() const
     return mFinished;
 }
 
-KCalCore::MemoryCalendar::Ptr MemoryCalendarMemento::calendar() const
+Akonadi::CalendarBase::Ptr MemoryCalendarMemento::calendar() const
 {
     Q_ASSERT(mFinished);
     return mCalendar;

@@ -23,7 +23,7 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
 
-#include <KCalCore/MemoryCalendar>
+#include <Akonadi/Calendar/CalendarBase>
 #include <QObject>
 
 namespace MessageViewer
@@ -36,7 +36,7 @@ public:
     MemoryCalendarMemento();
 
     bool finished() const;
-    KCalCore::MemoryCalendar::Ptr calendar() const;
+    Akonadi::CalendarBase::Ptr calendar() const;
 
     void detach() Q_DECL_OVERRIDE;
 
@@ -50,7 +50,7 @@ private Q_SLOTS:
 
 private:
     bool mFinished;
-    KCalCore::MemoryCalendar::Ptr mCalendar;
+    Akonadi::CalendarBase::Ptr mCalendar;
 };
 
 }

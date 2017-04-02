@@ -714,10 +714,12 @@ public:
         return mailICal(receiver, recv, msg, subject, status, type != Forward, viewerInstance);
     }
 
-    bool saveFile(const QString &receiver, const QString &iCal, const QString &type) const
+    bool saveFile(const QString &receiver, const QString &iCal, const QString &type, MimeTreeParser::Interface::BodyPart *bodyPart) const
     {
+        MemoryCalendarMemento *memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
         // This will block. There's no way to make it async without refactoring the memento mechanism
-        SyncItipHandler *itipHandler = new SyncItipHandler(receiver, iCal, type);
+
+        SyncItipHandler *itipHandler = new SyncItipHandler(receiver, iCal, type, memento->calendar());
 
         // If result is ResultCancelled, then we don't show the message box and return false so kmail
         // doesn't delete the e-mail.
@@ -908,7 +910,7 @@ public:
         }
         if (status != Attendee::Delegated) {
             // we do that below for delegated incidences
-            if (!saveFile(receiver, iCal, dir)) {
+            if (!saveFile(receiver, iCal, dir, part)) {
                 return false;
             }
         }
@@ -1009,7 +1011,7 @@ public:
             ICalFormat format;
             format.setTimeSpec(KSystemTimeZones::local());
             const QString iCal = format.createScheduleMessage(incidence, iTIPRequest);
-            if (!saveFile(receiver, iCal, dir)) {
+            if (!saveFile(receiver, iCal, dir, part)) {
                 return false;
             }
 
@@ -1105,6 +1107,8 @@ public:
     {
         // FIXME: this function should be inside a QObject, and async,
         //         and Q_EMIT a signal when korg registered itself successfuly
+
+        // Or better, use DBus activation in all cases.
 
         QString error;
         bool result = true;
@@ -1242,7 +1246,7 @@ public:
 
         // Don't delete the invitation here in any case, if the counter proposal
         // is declined you might need it again.
-        return saveFile(receiver, iCal, QStringLiteral("counter"));
+        return saveFile(receiver, iCal, QStringLiteral("counter"), part);
     }
 
     bool handleClick(Viewer *viewerInstance,
@@ -1324,7 +1328,7 @@ public:
         } else if (path == QLatin1String("reply") || path == QLatin1String("cancel") || path == QLatin1String("accept_counter")) {
             // These should just be saved with their type as the dir
             const QString p = (path == QLatin1String("accept_counter") ? QStringLiteral("reply") : path);
-            if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, p)) {
+            if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, p, part)) {
                 if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                     viewerInstance->deleteMessage();
                 }
@@ -1364,7 +1368,7 @@ public:
             }
             //fall through
             case KMessageBox::Yes: // means "do not send"
-                if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"))) {
+                if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"), part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
                         viewerInstance->deleteMessage();
                         result = true;

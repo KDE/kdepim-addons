@@ -34,6 +34,7 @@
 
 #include <IncidenceEditor/GroupwareUiDelegate>
 #include <Akonadi/Calendar/ITIPHandler>
+#include <Akonadi/Calendar/CalendarBase>
 
 #include <QObject>
 #include <QEventLoop>
@@ -43,7 +44,8 @@ class SyncItipHandler : public QObject
     Q_OBJECT
 public:
     SyncItipHandler(const QString &receiver, const QString &iCal,
-                    const QString &type, QObject *parent = nullptr);
+                    const QString &type, const Akonadi::CalendarBase::Ptr &calendar,
+                    QObject *parent = nullptr);
 
 public Q_SLOTS:
     void onITipMessageProcessed(Akonadi::ITIPHandler::Result, const QString &errorMessage);
