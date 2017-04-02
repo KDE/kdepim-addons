@@ -1383,16 +1383,15 @@ public:
             result = openAttachment(name, iCal);
         }
 
-#if 0 // TODO port to Akonadi
         if (result) {
             // do not close the secondary window if an attachment was opened (kolab/issue4317)
-            if (!path.startsWith("ATTACH:")) {
+            if (!path.startsWith(QLatin1String("ATTACH:"))) {
+                qCDebug(TEXT_CALENDAR_LOG) << "AKONADI PORT: Disabled code in " << Q_FUNC_INFO << "about closing if in a secondary window";
+#if 0 // TODO port to Akonadi
                 c.closeIfSecondaryWindow();
+#endif
             }
         }
-#else
-        qCDebug(TEXT_CALENDAR_LOG) << "AKONADI PORT: Disabled code in  " << Q_FUNC_INFO;
-#endif
         return result;
     }
 
