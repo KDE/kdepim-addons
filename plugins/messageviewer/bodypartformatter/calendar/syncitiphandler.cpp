@@ -36,22 +36,17 @@
 using namespace Akonadi;
 
 SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal,
-                                 const QString &type, QObject *parent) : QObject(parent)
+                                 const QString &type, const Akonadi::CalendarBase::Ptr &calendar,
+                                 QObject *parent) : QObject(parent)
     , m_result(Akonadi::ITIPHandler::ResultSuccess)
 {
+    Q_ASSERT(calendar);
     Akonadi::ITIPHandler *handler = new Akonadi::ITIPHandler(this);
     QObject::connect(handler, &Akonadi::ITIPHandler::iTipMessageProcessed, this, &SyncItipHandler::onITipMessageProcessed);
 
     m_counterProposalEditorDelegate = new IncidenceEditorNG::GroupwareUiDelegate();
     handler->setGroupwareUiDelegate(m_counterProposalEditorDelegate);
-
-    Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
-    if (etmCalendar && etmCalendar->isLoaded()) {
-        qCDebug(TEXT_CALENDAR_LOG) << "Reusing exising ETM";
-        handler->setCalendar(etmCalendar);
-    } else {
-        qCDebug(TEXT_CALENDAR_LOG) << "Not reusing any ETM";
-    }
+    handler->setCalendar(calendar);
 
     handler->processiTIPMessage(receiver, iCal, type);
 
