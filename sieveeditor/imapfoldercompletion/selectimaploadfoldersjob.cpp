@@ -54,7 +54,7 @@ void SelectImapLoadFoldersJob::start()
         login->start();
     } else {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SieveImapAccountSettings invalid";
-        Q_EMIT finished(false);
+        Q_EMIT finished(false, mModel);
         deleteLater();
     }
 }
@@ -76,7 +76,7 @@ void SelectImapLoadFoldersJob::slotLoginDone(KJob *job)
     if (!job->error()) {
         slotReloadRequested();
     } else {
-        Q_EMIT finished(false);
+        Q_EMIT finished(false, mModel);
         deleteLater();
     }
 }
@@ -89,7 +89,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
     if (!mSession
             || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapLoadFoldersJob - got no connection";
-        Q_EMIT finished(false);
+        Q_EMIT finished(false, mModel);
         deleteLater();
         return;
     }
@@ -156,9 +156,9 @@ void SelectImapLoadFoldersJob::slotFullListingDone(KJob *job)
     if (job->error()) {
         KMessageBox::error(nullptr, i18n("Error during loading folders: %1", job->errorString()), i18n("Load Folders"));
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Error during full listing : " << job->errorString();
-        Q_EMIT finished(false);
+        Q_EMIT finished(false, mModel);
     } else {
-        Q_EMIT finished(true);
+        Q_EMIT finished(true, mModel);
     }
     deleteLater();
 }

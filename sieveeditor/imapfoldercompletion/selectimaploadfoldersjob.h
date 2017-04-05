@@ -47,7 +47,7 @@ public:
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 
 Q_SIGNALS:
-    void finished(bool success);
+    void finished(bool success, QStandardItemModel *model);
 
 private:
     void slotLoginDone(KJob *job);

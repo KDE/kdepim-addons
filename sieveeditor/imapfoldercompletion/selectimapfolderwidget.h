@@ -59,6 +59,9 @@ Q_SIGNALS:
     void folderSelected();
     void folderIsSelected(bool selected);
 
+private Q_SLOTS:
+    void slotModelLoaded(QStandardItemModel *model);
+
 private:
     void slotDoubleClicked(const QModelIndex &index);
     void slotSearchPattern(const QString &pattern);

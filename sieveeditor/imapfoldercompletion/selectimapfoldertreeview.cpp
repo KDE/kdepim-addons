@@ -24,7 +24,8 @@
 #include <QPainter>
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
-    : QTreeView(parent)
+    : QTreeView(parent),
+      mFolderListLoaded(false)
 {
 
 }
@@ -42,9 +43,14 @@ void SelectImapFolderTreeView::generalPaletteChanged()
     mTextColor = color;
 }
 
+void SelectImapFolderTreeView::setFolderListLoaded(bool folderListLoaded)
+{
+    mFolderListLoaded = folderListLoaded;
+}
+
 void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
 {
-    if (!model() || model()->rowCount() == 0) {
+    if (/*!mFolderListLoaded ||*/ !model() || model()->rowCount() == 0) {
         QPainter p(viewport());
 
         QFont font = p.font();
