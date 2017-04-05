@@ -29,11 +29,14 @@ class SelectImapFolderTreeView : public QTreeView
 public:
     explicit SelectImapFolderTreeView(QWidget *parent);
     ~SelectImapFolderTreeView();
+    void setFolderListLoaded(bool folderListLoaded);
+
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
 private:
     void generalPaletteChanged();
     QColor mTextColor;
+    bool mFolderListLoaded;
 };
 
 #endif // SELECTIMAPFOLDERTREEVIEW_H

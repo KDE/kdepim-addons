@@ -66,6 +66,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
       mAccount(account)
 {
     mModel = SelectImapFolderModel::self()->folderModel(mAccount);
+    connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
@@ -94,6 +95,13 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
 SelectImapFolderWidget::~SelectImapFolderWidget()
 {
 
+}
+
+void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model)
+{
+    if (mModel == model) {
+        mTreeView->setFolderListLoaded(true);
+    }
 }
 
 void SelectImapFolderWidget::slotSearchPattern(const QString &pattern)
