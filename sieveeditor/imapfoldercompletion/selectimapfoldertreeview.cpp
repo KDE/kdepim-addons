@@ -50,21 +50,25 @@ void SelectImapFolderTreeView::setFolderListLoaded(bool folderListLoaded)
 
 void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
 {
-    if (/*!mFolderListLoaded ||*/ !model() || model()->rowCount() == 0) {
-        QPainter p(viewport());
-
-        QFont font = p.font();
-        font.setItalic(true);
-        p.setFont(font);
-
-        if (!mTextColor.isValid()) {
-            generalPaletteChanged();
-        }
-        p.setPen(mTextColor);
-
-        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Unable to load folder list"));
-    } else {
+    if (mFolderListLoaded) {
         QTreeView::paintEvent(event);
+    } else {
+        if (!model() || model()->rowCount() == 0) {
+            QPainter p(viewport());
+
+            QFont font = p.font();
+            font.setItalic(true);
+            p.setFont(font);
+
+            if (!mTextColor.isValid()) {
+                generalPaletteChanged();
+            }
+            p.setPen(mTextColor);
+
+            p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Unable to load folder list"));
+        } else {
+            QTreeView::paintEvent(event);
+        }
     }
 }
 
