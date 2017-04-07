@@ -22,8 +22,9 @@
 #include "datenums.h"
 #include "configdialog.h"
 
-#include <KCalendarSystem>
+#include <KConfig>
 #include <KConfigGroup>
+#include <KLocalizedString>
 
 Datenums::Datenums()
     : mDisplayedInfo(DayOfYear | DaysRemaining)
@@ -81,11 +82,21 @@ Element::List Datenums::createDayElements(const QDate &date)
     return result;
 }
 
+static int weeksInYear(int year)
+{
+    QDate date(year, 12, 31);
+    for (int i = 0; i < 6; ++i) {
+        if (date.weekNumber() > 1)
+            break;
+	date = date.addDays(-1);
+    }
+    return date.weekNumber();
+}
+
 Element::List Datenums::createWeekElements(const QDate &date)
 {
     Element::List result;
 
-    const KCalendarSystem *calsys = KLocale::global()->calendar();
     int *yearOfTheWeek = nullptr;
     yearOfTheWeek = nullptr;
     int remainingWeeks;
@@ -100,7 +111,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
     QString weekOfYearAndRemainingWeeksShort;
 
     // Usual case: the week belongs to this year
-    remainingWeeks = calsys->weeksInYear(date.year()) - weekOfYear;
+    remainingWeeks = weeksInYear(date.year()) - weekOfYear;
 
     weekOfYearShort = QString::number(weekOfYear);
     weekOfYearLong = i18nc("Week weekOfYear", "Week %1", weekOfYear);
@@ -125,7 +136,7 @@ Element::List Datenums::createWeekElements(const QDate &date)
 
         } else {
             // The week belongs to last year
-            remainingWeeks = calsys->weeksInYear(date.year());
+            remainingWeeks = weeksInYear(date.year());
 
             weekOfYearExtensive = i18np("1 week since the beginning of the year",
                                         "%1 weeks since the beginning of the year",
