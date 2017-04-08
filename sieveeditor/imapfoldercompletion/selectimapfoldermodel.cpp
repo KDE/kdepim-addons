@@ -68,9 +68,8 @@ void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &
 
 void SelectImapFolderModel::slotLoaded(bool success, QStandardItemModel *model)
 {
-    if (success) {
-        Q_EMIT modelLoaded(model);
-    } else {
+    Q_EMIT modelLoaded(model, success);
+    if (!success) {
         qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Unable to load list of folder";
     }
 }

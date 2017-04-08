@@ -25,7 +25,7 @@
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
     : QTreeView(parent),
-      mFolderListLoaded(false)
+      mStatus(InProgress)
 {
 
 }
@@ -43,32 +43,37 @@ void SelectImapFolderTreeView::generalPaletteChanged()
     mTextColor = color;
 }
 
-void SelectImapFolderTreeView::setFolderListLoaded(bool folderListLoaded)
+void SelectImapFolderTreeView::setStatus(const LoadingStatus &status)
 {
-    mFolderListLoaded = folderListLoaded;
+    mStatus = status;
 }
 
 void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
 {
-    if (mFolderListLoaded) {
+    QString label;
+    switch (mStatus) {
+    case Failed:
+        label = i18n("Unable to load folder list");
+        break;
+    case InProgress:
+        label = i18n("Loading in progress...");
+        break;
+    case Success:
         QTreeView::paintEvent(event);
-    } else {
-        if (!model() || model()->rowCount() == 0) {
-            QPainter p(viewport());
-
-            QFont font = p.font();
-            font.setItalic(true);
-            p.setFont(font);
-
-            if (!mTextColor.isValid()) {
-                generalPaletteChanged();
-            }
-            p.setPen(mTextColor);
-
-            p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, i18n("Unable to load folder list"));
-        } else {
-            QTreeView::paintEvent(event);
-        }
+        return;
     }
+
+    QPainter p(viewport());
+
+    QFont font = p.font();
+    font.setItalic(true);
+    p.setFont(font);
+
+    if (!mTextColor.isValid()) {
+        generalPaletteChanged();
+    }
+    p.setPen(mTextColor);
+
+    p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, label);
 }
 

@@ -97,10 +97,10 @@ SelectImapFolderWidget::~SelectImapFolderWidget()
 
 }
 
-void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model)
+void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model, bool success)
 {
     if (mModel == model) {
-        mTreeView->setFolderListLoaded(true);
+        mTreeView->setStatus(success ? SelectImapFolderTreeView::Success : SelectImapFolderTreeView::Failed);
     }
 }
 
