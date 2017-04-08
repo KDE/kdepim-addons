@@ -201,7 +201,7 @@ public:
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
-        return idx == 0 ? "application" : 0;
+        return idx == 0 ? "application" : nullptr;
     }
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {

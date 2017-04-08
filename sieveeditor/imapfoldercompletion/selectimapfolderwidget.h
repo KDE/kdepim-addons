@@ -60,7 +60,7 @@ Q_SIGNALS:
     void folderIsSelected(bool selected);
 
 private Q_SLOTS:
-    void slotModelLoaded(QStandardItemModel *model);
+    void slotModelLoaded(QStandardItemModel *model, bool success);
 
 private:
     void slotDoubleClicked(const QModelIndex &index);
