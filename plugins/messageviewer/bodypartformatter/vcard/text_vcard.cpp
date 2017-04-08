@@ -292,11 +292,11 @@ public:
         }
         // get the saveas file name
         QUrl saveAsUrl =
-            QFileDialog::getSaveFileUrl(0, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
+            QFileDialog::getSaveFileUrl(nullptr, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
         if (saveAsUrl.isEmpty() ||
                 (QFileInfo(saveAsUrl.path()).exists() &&
                  (KMessageBox::warningYesNo(
-                      0,
+                      nullptr,
                       i18n("%1 already exists. Do you want to overwrite it?",
                            saveAsUrl.path())) == KMessageBox::No))) {
             return false;
@@ -323,7 +323,7 @@ public:
     }
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
-        return validIndex(idx) ? "text" : 0;
+        return validIndex(idx) ? "text" : nullptr;
     }
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
