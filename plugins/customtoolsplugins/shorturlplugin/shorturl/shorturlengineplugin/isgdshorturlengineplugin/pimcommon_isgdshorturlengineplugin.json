@@ -1,15 +1,15 @@
 {
     "KPlugin": {
-        "Name": "Is.gd", 
-        "Name[ru]": "is.gd", 
-        "Name[sr@ijekavian]": "ИзГд", 
-        "Name[sr@ijekavianlatin]": "IsGd", 
-        "Name[sr@latin]": "IsGd", 
-        "Name[sr]": "ИзГд", 
-        "Name[x-test]": "xxIs.gdxx", 
+        "Name": "Is.gd",
+        "Name[ru]": "is.gd",
+        "Name[sr@ijekavian]": "ИзГд",
+        "Name[sr@ijekavianlatin]": "IsGd",
+        "Name[sr@latin]": "IsGd",
+        "Name[sr]": "ИзГд",
+        "Name[x-test]": "xxIs.gdxx",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ], 
+        ],
         "Version": "1.0"
     }
 }

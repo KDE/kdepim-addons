@@ -1,12 +1,12 @@
 {
     "KPlugin": {
-        "Name": "to.ly", 
-        "Name[sr@ijekavian]": "То.ли", 
-        "Name[sr]": "То.ли", 
-        "Name[x-test]": "xxto.lyxx", 
+        "Name": "to.ly",
+        "Name[sr@ijekavian]": "То.ли",
+        "Name[sr]": "То.ли",
+        "Name[x-test]": "xxto.lyxx",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ], 
+        ],
         "Version": "1.0"
     }
 }
