@@ -1,14 +1,14 @@
 {
     "KPlugin": {
-        "Name": "TinyUrl", 
-        "Name[sr@ijekavian]": "ТајниУРЛ", 
-        "Name[sr@ijekavianlatin]": "TinyURL", 
-        "Name[sr@latin]": "TinyURL", 
-        "Name[sr]": "ТајниУРЛ", 
-        "Name[x-test]": "xxTinyUrlxx", 
+        "Name": "TinyUrl",
+        "Name[sr@ijekavian]": "ТајниУРЛ",
+        "Name[sr@ijekavianlatin]": "TinyURL",
+        "Name[sr@latin]": "TinyURL",
+        "Name[sr]": "ТајниУРЛ",
+        "Name[x-test]": "xxTinyUrlxx",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
-        ], 
+        ],
         "Version": "1.0"
     }
 }
