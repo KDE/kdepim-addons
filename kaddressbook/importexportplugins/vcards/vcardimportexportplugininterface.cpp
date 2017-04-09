@@ -429,7 +429,7 @@ void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KConta
 bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArray &data) const
 {
     QUrl newUrl(url);
-    if (newUrl.isLocalFile() && QFileInfo(newUrl.toLocalFile()).exists()) {
+    if (newUrl.isLocalFile() && QFileInfo::exists(newUrl.toLocalFile())) {
         PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(newUrl, false, parentWidget());
         PimCommon::RenameFileDialog::RenameFileDialogResult result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
         if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {

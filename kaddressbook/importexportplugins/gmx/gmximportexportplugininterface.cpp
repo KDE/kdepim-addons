@@ -115,9 +115,9 @@ void GMXImportExportPluginInterface::exportGMX()
         return;
     }
 
-    if (QFileInfo(url.isLocalFile() ?
-                  url.toLocalFile() : url.path()).exists()) {
-        if (url.isLocalFile() && QFileInfo(url.toLocalFile()).exists()) {
+    if (QFileInfo::exists(url.isLocalFile() ?
+                  url.toLocalFile() : url.path())) {
+        if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
             PimCommon::RenameFileDialog::RenameFileDialogResult result = PimCommon::RenameFileDialog::RENAMEFILE_IGNORE;
             PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
             result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
