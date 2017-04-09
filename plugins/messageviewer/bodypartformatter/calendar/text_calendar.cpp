@@ -371,7 +371,7 @@ public:
 
         if (!attachment) {
             KMessageBox::error(
-                0,
+                nullptr,
                 i18n("No attachment named \"%1\" found in the invitation.", name));
             return Attachment::Ptr();
         }
@@ -387,7 +387,7 @@ public:
             }
             if (!fileExists) {
                 KMessageBox::information(
-                    0,
+                    nullptr,
                     i18n("The invitation attachment \"%1\" is a web link that "
                          "is inaccessible from this computer. Please ask the event "
                          "organizer to resend the invitation with this attachment "
@@ -728,7 +728,7 @@ public:
             const QString errorMessage = itipHandler->errorMessage();
             if (!errorMessage.isEmpty()) {
                 qCCritical(TEXT_CALENDAR_LOG) << "Error while processing invitation: " << errorMessage;
-                KMessageBox::error(0, errorMessage);
+                KMessageBox::error(nullptr, errorMessage);
             }
         }
 
@@ -895,7 +895,7 @@ public:
 
             if (comment.isEmpty()) {
                 KMessageBox::error(
-                    0,
+                    nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
             } else {
@@ -1225,7 +1225,7 @@ public:
 
             if (comment.isEmpty()) {
                 KMessageBox::error(
-                    0,
+                    nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
 
@@ -1261,7 +1261,7 @@ public:
 
         if (!hasMyWritableEventsFolders(QStringLiteral("calendar"))) {
             KMessageBox::error(
-                0,
+                nullptr,
                 i18n("You have no writable calendar folders for invitations, "
                      "so storing or saving a response will not be possible.\n"
                      "Please create at least 1 writable events calendar and re-sync."));
