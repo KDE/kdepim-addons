@@ -126,6 +126,7 @@ add_subdirectory(kmail)
 add_subdirectory(kaddressbook)
 add_subdirectory(akregator)
 add_subdirectory(sieveeditor)
+add_subdirectory(akonadi-import-wizard)
 
 install( FILES kdepim-addons.categories kdepim-addons.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
