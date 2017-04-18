@@ -18,7 +18,7 @@
 */
 
 #include "sendvcardsjob.h"
-#include "helper_p.h"
+
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 #include <AkonadiCore/Item>

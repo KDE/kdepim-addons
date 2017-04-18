@@ -19,7 +19,7 @@
 
 #include "searchpotentialduplicatecontactjob.h"
 #include "kaddressbookmergelibprivate_debug.h"
-#include "helper_p.h"
+
 #include <KContacts/Addressee>
 
 using namespace KABMergeContacts;

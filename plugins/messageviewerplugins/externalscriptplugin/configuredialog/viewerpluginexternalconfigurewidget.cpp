@@ -20,7 +20,6 @@
 #include "viewerpluginexternalconfigurewidget.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternaleditdialog.h"
-#include "../helper_p.h"
 #include <QVBoxLayout>
 #include <QStandardPaths>
 #include <KLocalizedString>

@@ -18,7 +18,7 @@
 */
 
 #include "checkattachmentjob.h"
-#include "helper_p.h"
+
 #include <KEmailAddress>
 
 CheckAttachmentJob::CheckAttachmentJob()

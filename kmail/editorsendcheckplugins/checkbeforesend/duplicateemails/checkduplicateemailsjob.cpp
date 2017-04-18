@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 #include "checkduplicateemailsjob.h"
-#include "helper_p.h"
+
 #include <KEmailAddress>
 
 CheckDuplicateEmailsJob::CheckDuplicateEmailsJob()

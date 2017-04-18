@@ -18,7 +18,7 @@
 */
 
 #include "confirmaddresscheckjob.h"
-#include "helper_p.h"
+
 
 ConfirmAddressCheckJob::ConfirmAddressCheckJob()
     : mRejectedDomain(false)

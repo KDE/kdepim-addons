@@ -18,7 +18,7 @@
 */
 
 #include "confirmaddressconfiguretab.h"
-#include "helper_p.h"
+
 #include "confirmaddressconfiguretabwidget.h"
 #include <QVBoxLayout>
 #include <QTabWidget>

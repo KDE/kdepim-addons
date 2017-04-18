@@ -19,7 +19,7 @@
 
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
-#include "helper_p.h"
+
 
 #include <KConfig>
 #include <KConfigGroup>

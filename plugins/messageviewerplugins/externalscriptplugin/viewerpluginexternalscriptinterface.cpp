@@ -20,7 +20,7 @@
 #include "viewerpluginexternalscriptmanager.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternalscriptparseargument.h"
-#include "helper_p.h"
+
 
 #include <QIcon>
 #include <QAction>

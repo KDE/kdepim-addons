@@ -20,7 +20,7 @@
 */
 
 #include "mailsenderjob.h"
-#include "helper_p.h"
+
 #include "kaddressbook_sendmailplugin_debug.h"
 #include <KEmailAddress>
 #include <KLocalizedString>

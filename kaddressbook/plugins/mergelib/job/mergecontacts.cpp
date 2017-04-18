@@ -19,7 +19,7 @@
 
 #include "mergecontacts.h"
 #include "kaddressbookmergelibprivate_debug.h"
-#include "helper_p.h"
+
 
 using namespace KABMergeContacts;
 using namespace KContacts;

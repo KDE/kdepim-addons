@@ -64,14 +64,9 @@ void AdBlockBlockableItemsJob::setWebEngineView(QWebEngineView *webEngineView)
 void AdBlockBlockableItemsJob::searchBlockableItems()
 {
     if (mWebEngineView) {
-#if QT_VERSION >= 0x050700
         mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(),
                                               WebEngineViewer::WebEngineManageScript::scriptWordId(),
                                               invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableImageItems));
-#else
-        mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllImages(),
-                                              invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableImageItems));
-#endif
     } else {
         Q_EMIT searchItemsDone(QVector<AdBlock::AdBlockResult>());
         deleteLater();

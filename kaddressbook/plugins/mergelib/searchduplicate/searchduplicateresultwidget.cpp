@@ -21,7 +21,7 @@
 #include "widgets/mergecontactloseinformationwarning.h"
 #include "job/mergecontactsjob.h"
 #include "job/mergecontacts.h"
-#include "helper_p.h"
+
 #include "resultduplicatetreewidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>

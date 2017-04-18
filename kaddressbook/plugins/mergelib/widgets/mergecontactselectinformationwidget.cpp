@@ -19,7 +19,7 @@
 
 #include "mergecontactselectinformationwidget.h"
 #include "widgets/mergecontactselectlistwidget.h"
-#include "helper_p.h"
+
 #include <QVBoxLayout>
 
 using namespace KABMergeContacts;
