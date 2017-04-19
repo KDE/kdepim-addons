@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Id": "oeimporter",
+        "Name": "OE Importer",
+        "Name[ca@valencia]": "Importador de l'OE",
+        "Name[ca]": "Importador de l'OE",
+        "Name[es]": "Importador OE",
+        "Name[it]": "Importatore da OE",
+        "Name[nl]": "OE-importeur",
+        "Name[pt]": "Importador do OE",
+        "Name[sk]": "Importér OE",
+        "Name[sv]": "OE-importverktyg",
+        "Name[uk]": "Засіб імпортування з Outlook Express",
+        "Name[x-test]": "xxOE Importerxx",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
