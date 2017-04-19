@@ -94,13 +94,9 @@ void AdBlockBlockableItemsJob::handleSearchBlockableImageItems(const QVariant &r
             }
         }
     }
-#if QT_VERSION >= 0x050700
     mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(),
                                           WebEngineViewer::WebEngineManageScript::scriptWordId(),
                                           invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems));
-#else
-    mWebEngineView->page()->runJavaScript(WebEngineViewer::WebEngineScript::findAllScripts(), invoke(this, &AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems));
-#endif
 }
 
 QWebEngineView *AdBlockBlockableItemsJob::webEngineView() const
