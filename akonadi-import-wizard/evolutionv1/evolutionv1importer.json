@@ -1,0 +1,20 @@
+{
+    "KPlugin": {
+        "Id": "evolution1importer",
+        "Name": "Evolution1 Importer",
+        "Name[ca@valencia]": "Importador de l'Evolution1",
+        "Name[ca]": "Importador de l'Evolution1",
+        "Name[es]": "Importador Evolution1",
+        "Name[it]": "Importatore da Evolution1",
+        "Name[nl]": "Evolution1-importeur",
+        "Name[pt]": "Importador do Evolution1",
+        "Name[sk]": "Importér Evolution1",
+        "Name[sv]": "Evolution1-importverktyg",
+        "Name[uk]": "Засіб імпортування з Evolution1",
+        "Name[x-test]": "xxEvolution1 Importerxx",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
