@@ -2,16 +2,6 @@
     "KPlugin": {
         "Id": "thebatimporter",
         "Name": "TheBat Importer",
-        "Name[ca@valencia]": "Importador del TheBat",
-        "Name[ca]": "Importador del TheBat",
-        "Name[es]": "Importador TheBat",
-        "Name[it]": "Importatore da TheBat",
-        "Name[nl]": "TheBat-importeur",
-        "Name[pt]": "Importador do TheBat",
-        "Name[sk]": "Importér TheBat",
-        "Name[sv]": "TheBat-importverktyg",
-        "Name[uk]": "Засіб імпортування з The Bat!",
-        "Name[x-test]": "xxTheBat Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

@@ -2,16 +2,6 @@
     "KPlugin": {
         "Id": "operaimporter",
         "Name": "Opera Importer",
-        "Name[ca@valencia]": "Importador de l'Opera",
-        "Name[ca]": "Importador de l'Opera",
-        "Name[es]": "Importador Opera",
-        "Name[it]": "Importatore da Opera",
-        "Name[nl]": "Opera-importeur",
-        "Name[pt]": "Importador do Opera",
-        "Name[sk]": "Importér Opera",
-        "Name[sv]": "Opera-importverktyg",
-        "Name[uk]": "Засіб імпортування з Opera",
-        "Name[x-test]": "xxOpera Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

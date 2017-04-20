@@ -2,16 +2,6 @@
     "KPlugin": {
         "Id": "pmailimporter",
         "Name": "PMail Importer",
-        "Name[ca@valencia]": "Importador del PMail",
-        "Name[ca]": "Importador del PMail",
-        "Name[es]": "Importador PMail",
-        "Name[it]": "Importatore da PMail",
-        "Name[nl]": "PMail-importeur",
-        "Name[pt]": "Importador do PMail",
-        "Name[sk]": "Importér PMail",
-        "Name[sv]": "PMail-importverktyg",
-        "Name[uk]": "Засіб імпортування з PMail",
-        "Name[x-test]": "xxPMail Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
