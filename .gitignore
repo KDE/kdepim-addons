@@ -1,3 +1,4 @@
 # Ignore the following files
 /build/
 CMakeLists.txt.user*
+*.unc-backup*
