@@ -35,6 +35,9 @@ public:
     void setEmails(const QStringList &list);
     void setCollection(const Akonadi::Collection &collection);
 
+Q_SIGNALS:
+    void finished();
+
 private:
     void fetchCollection();
     void verifyContactExist();
@@ -44,6 +47,8 @@ private:
     void slotSearchDone(KJob *job);
     void slotAddContactDone(KJob *job);
     void slotResourceCreationDone(KJob *);
+    void deleteLaterAndEmitSignal();
+
     QStringList mEmails;
     QStringList mProcessedEmails;
     QString mProcessEmail;

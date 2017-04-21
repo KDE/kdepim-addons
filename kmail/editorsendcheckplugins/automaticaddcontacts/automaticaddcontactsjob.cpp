@@ -47,12 +47,12 @@ AutomaticAddContactsJob::~AutomaticAddContactsJob()
 void AutomaticAddContactsJob::start()
 {
     if (mEmails.isEmpty()) {
-        deleteLater();
+        deleteLaterAndEmitSignal();
         return;
     } else {
         if (!mCollection.isValid()) {
             qCDebug(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Invalid collection";
-            deleteLater();
+            deleteLaterAndEmitSignal();
             return;
         }
     }
@@ -93,7 +93,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 {
     if (job->error()) {
         qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Error during AutomaticAddContactsJob::slotFetchAllCollections : " << job->errorString();
-        deleteLater();
+        deleteLaterAndEmitSignal();
         return;
     }
 
@@ -131,15 +131,15 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                     job->start();
                     return;
                 } else { //if agent is not valid => return error and finish job
-                    deleteLater();
+                    deleteLaterAndEmitSignal();
                     return;
                 }
             } else { //Canceled create agent => return error and finish job
-                deleteLater();
+                deleteLaterAndEmitSignal();
                 return;
             }
         } else {
-            deleteLater();
+            deleteLaterAndEmitSignal();
             return;
         }
     } else if (nbItemCollection == 1) {
@@ -157,14 +157,14 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
         delete dlg;
         if (!gotIt) {
             qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to selected Addressbook selected not valid";
-            deleteLater();
+            deleteLaterAndEmitSignal();
             return;
         }
     }
 
     if (!addressBook.isValid()) {
         qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Addressbook selected not valid";
-        deleteLater();
+        deleteLaterAndEmitSignal();
         return;
     }
     addNextContact();
@@ -174,7 +174,7 @@ void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
 {
     if (job->error()) {
         qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to create resource:" << job->errorText();
-        deleteLater();
+        deleteLaterAndEmitSignal();
         return;
     }
     addNextContact();
@@ -240,7 +240,7 @@ void AutomaticAddContactsJob::addNextContact()
     if (mCurrentIndex < mEmails.count()) {
         verifyContactExist();
     } else {
-        deleteLater();
+        deleteLaterAndEmitSignal();
     }
 }
 
@@ -254,4 +254,10 @@ void AutomaticAddContactsJob::setEmails(const QStringList &list)
 void AutomaticAddContactsJob::setCollection(const Akonadi::Collection &collection)
 {
     mCollection = collection;
+}
+
+void AutomaticAddContactsJob::deleteLaterAndEmitSignal()
+{
+    Q_EMIT finished();
+    deleteLater();
 }

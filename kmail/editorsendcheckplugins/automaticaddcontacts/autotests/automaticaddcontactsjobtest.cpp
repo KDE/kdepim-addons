@@ -19,11 +19,12 @@
 
 #include "automaticaddcontactsjobtest.h"
 #include <QTest>
+#include <QStandardPaths>
 
 AutomaticAddContactsJobTest::AutomaticAddContactsJobTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest()
