@@ -94,6 +94,7 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
 void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 {
     if (job->error()) {
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Error during AutomaticAddContactsJob::slotFetchAllCollections : " << job->errorString();
         deleteLater();
         return;
     }
