@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "gearyimporter",
         "Name": "Geary Importer",
+        "Name[ca]": "Importador del Geary",
+        "Name[nl]": "Geary-importeur",
+        "Name[pt]": "Importador do Geary",
+        "Name[sv]": "Geary-importverktyg",
+        "Name[uk]": "Засіб імпортування з Geary",
+        "Name[x-test]": "xxGeary Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "mailappimporter",
         "Name": "MailApp Importer",
+        "Name[ca]": "Importador del MailApp",
+        "Name[nl]": "MailApp-importeur",
+        "Name[pt]": "Importador do MailApp",
+        "Name[sv]": "MailApp-importverktyg",
+        "Name[uk]": "Засіб імпортування з MailApp",
+        "Name[x-test]": "xxMailApp Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

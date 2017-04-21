@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "evolution2importer",
         "Name": "Evolution2 Importer",
+        "Name[ca]": "Importador de l'Evolution2",
+        "Name[nl]": "Evolution2-importeur",
+        "Name[pt]": "Importador do Evolution2",
+        "Name[sv]": "Evolution2-importverktyg",
+        "Name[uk]": "Засіб імпортування з Evolution2",
+        "Name[x-test]": "xxEvolution2 Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
