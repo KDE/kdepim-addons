@@ -38,12 +38,10 @@ AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent),
       mCurrentIndex(-1)
 {
-
 }
 
 AutomaticAddContactsJob::~AutomaticAddContactsJob()
 {
-
 }
 
 void AutomaticAddContactsJob::start()
@@ -231,7 +229,7 @@ void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 void AutomaticAddContactsJob::slotAddContactDone(KJob *job)
 {
     if (job->error()) {
-        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Errorwhen add contact to addressbook:" << job->errorText();
+        qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Error when add contact to addressbook:" << job->errorText();
     }
     addNextContact();
 }
@@ -246,8 +244,10 @@ void AutomaticAddContactsJob::addNextContact()
     }
 }
 
-void AutomaticAddContactsJob::setEmails(const QStringList &emails)
+void AutomaticAddContactsJob::setEmails(const QStringList &list)
 {
+    const QString str = list.join(QStringLiteral(", "));
+    const QStringList emails = str.split(QStringLiteral(", "));
     mEmails = emails;
 }
 
