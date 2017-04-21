@@ -247,7 +247,7 @@ void AutomaticAddContactsJob::addNextContact()
 void AutomaticAddContactsJob::setEmails(const QStringList &list)
 {
     const QString str = list.join(QStringLiteral(", "));
-    const QStringList emails = str.split(QStringLiteral(", "));
+    const QStringList emails = KEmailAddress::splitAddressList(str);
     mEmails = emails;
 }
 
