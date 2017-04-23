@@ -2,8 +2,10 @@
     "KPlugin": {
         "Id": "gearyimporter",
         "Name": "Geary Importer",
+        "Name[ca@valencia]": "Importador del Geary",
         "Name[ca]": "Importador del Geary",
         "Name[nl]": "Geary-importeur",
+        "Name[pl]": "Importer Geary",
         "Name[pt]": "Importador do Geary",
         "Name[sv]": "Geary-importverktyg",
         "Name[uk]": "Засіб імпортування з Geary",

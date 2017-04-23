@@ -2,8 +2,10 @@
     "KPlugin": {
         "Id": "evolution2importer",
         "Name": "Evolution2 Importer",
+        "Name[ca@valencia]": "Importador de l'Evolution2",
         "Name[ca]": "Importador de l'Evolution2",
         "Name[nl]": "Evolution2-importeur",
+        "Name[pl]": "Importer Evolution2",
         "Name[pt]": "Importador do Evolution2",
         "Name[sv]": "Evolution2-importverktyg",
         "Name[uk]": "Засіб імпортування з Evolution2",

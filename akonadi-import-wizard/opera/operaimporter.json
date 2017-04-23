@@ -2,8 +2,10 @@
     "KPlugin": {
         "Id": "operaimporter",
         "Name": "Opera Importer",
+        "Name[ca@valencia]": "Importador de l'Opera",
         "Name[ca]": "Importador de l'Opera",
         "Name[nl]": "Opera-importeur",
+        "Name[pl]": "Importer Opery",
         "Name[pt]": "Importador do Opera",
         "Name[sv]": "Opera-importverktyg",
         "Name[uk]": "Засіб імпортування з Opera",
