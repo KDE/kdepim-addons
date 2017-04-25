@@ -62,7 +62,6 @@
 UnreadMailsInCollectionsProxy::UnreadMailsInCollectionsProxy(QObject *parent)
     : QSortFilterProxyModel(parent)
 {
-
 }
 
 bool UnreadMailsInCollectionsProxy::filterAcceptsRow(int source_row, const QModelIndex &source_parent) const
@@ -148,7 +147,6 @@ UnreadMailsInCollectionsWidget::~UnreadMailsInCollectionsWidget()
 
 void UnreadMailsInCollectionsWidget::saveCheckState()
 {
-
     ETMViewStateSaver saver;
     saver.setSelectionModel(m_checkedItemModel);
 

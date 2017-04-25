@@ -24,12 +24,10 @@
 CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
 {
-
 }
 
 void CheckBeforeSendPluginTest::shouldHaveDefaultValue()

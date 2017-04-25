@@ -27,9 +27,9 @@
 using namespace PimCommon;
 
 ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
-    : CustomToolsViewInterface(parent),
-      mAction(nullptr),
-      mShorturl(nullptr)
+    : CustomToolsViewInterface(parent)
+    , mAction(nullptr)
+    , mShorturl(nullptr)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
@@ -43,7 +43,6 @@ ShorturlView::ShorturlView(KActionCollection *ac, QWidget *parent)
 
 ShorturlView::~ShorturlView()
 {
-
 }
 
 KToggleAction *ShorturlView::action() const

@@ -24,12 +24,10 @@
 AdblockInterceptorInterfaceTest::AdblockInterceptorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AdblockInterceptorInterfaceTest::~AdblockInterceptorInterfaceTest()
 {
-
 }
 
 void AdblockInterceptorInterfaceTest::shouldHaveDefaultValue()

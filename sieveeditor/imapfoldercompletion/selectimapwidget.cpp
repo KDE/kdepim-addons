@@ -26,7 +26,8 @@
 #include <QPointer>
 
 #include <kpluginfactory.h>
-K_PLUGIN_FACTORY_WITH_JSON(ImapFolderCompletionFactory, "imapfoldercompletion.json", registerPlugin<SelectImapWidget>();)
+K_PLUGIN_FACTORY_WITH_JSON(ImapFolderCompletionFactory, "imapfoldercompletion.json", registerPlugin<SelectImapWidget>();
+                           )
 
 SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)

@@ -889,7 +889,6 @@ void MergeContactsTest::shouldMergeNotes()
 
     const Addressee result = contacts.mergedContact();
     QCOMPARE(result.note(), note);
-
 }
 
 void MergeContactsTest::shouldMergeEmails_data()
@@ -1066,9 +1065,12 @@ void MergeContactsTest::shouldMergeHomePage_data()
     QTest::newRow("noWithOneNameConflict") <<  QUrl() << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org"));
     QTest::newRow("noWithOneNameConflict1") <<  QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false << QUrl(QStringLiteral("http://www.kde.org"));
     QTest::newRow("noWithOneNameConflict2") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << QUrl() << false << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noConflictWithSameName") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("noConflictWithSameName2") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org"));
-    QTest::newRow("conflictUrl") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org1")) << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org"));
+    QTest::newRow("noConflictWithSameName") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false
+                                            << QUrl(QStringLiteral("http://www.kde.org"));
+    QTest::newRow("noConflictWithSameName2") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org")) << false
+                                             << QUrl(QStringLiteral("http://www.kde.org"));
+    QTest::newRow("conflictUrl") <<  QUrl(QStringLiteral("http://www.kde.org")) << QUrl(QStringLiteral("http://www.kde.org1")) << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral(
+                                                                                                                                                                                                  "http://www.kde.org"));
     QTest::newRow("conflict1") <<  QUrl() << QUrl(QStringLiteral("http://www.kde.org1")) << QUrl(QStringLiteral("http://www.kde.org")) << false << QUrl(QStringLiteral("http://www.kde.org1"));
 }
 

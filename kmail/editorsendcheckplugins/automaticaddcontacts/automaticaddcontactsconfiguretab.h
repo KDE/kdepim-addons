@@ -24,8 +24,7 @@
 class QTabWidget;
 class AutomaticAddContactsTabWidget;
 
-namespace KIdentityManagement
-{
+namespace KIdentityManagement {
 class IdentityManager;
 }
 

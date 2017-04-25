@@ -34,7 +34,6 @@ ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
 
 ConfirmAddressDialogTest::~ConfirmAddressDialogTest()
 {
-
 }
 
 void ConfirmAddressDialogTest::shouldHaveDefaultValue()

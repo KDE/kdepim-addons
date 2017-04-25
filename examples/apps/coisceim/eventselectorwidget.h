@@ -27,8 +27,7 @@
 
 class QTreeView;
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class IncidenceViewer;
 }
 

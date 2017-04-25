@@ -24,12 +24,10 @@
 InsertSpecialCharacterPluginEditorInterfaceTest::InsertSpecialCharacterPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEditorInterfaceTest()
 {
-
 }
 
 void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()

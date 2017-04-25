@@ -26,8 +26,7 @@
 #include "searchduplicateresultwidget.h"
 #include "kaddressbookmergelib_export.h"
 class QStackedWidget;
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class SearchDuplicateResultWidget;
 class MergeContactShowResultTabWidget;
 class MergeContactSelectInformationTabWidget;

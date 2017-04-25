@@ -32,15 +32,14 @@
 #include <job/mergecontacts.h>
 #include <job/mergecontactsjob.h>
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel = nullptr;
 }
 
 using namespace KABMergeContacts;
 MergeContactWidget::MergeContactWidget(QWidget *parent)
-    : QWidget(parent),
-      mConflictTypes(MergeContacts::None)
+    : QWidget(parent)
+    , mConflictTypes(MergeContacts::None)
 {
     QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
@@ -105,7 +104,6 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
 
 MergeContactWidget::~MergeContactWidget()
 {
-
 }
 
 void MergeContactWidget::setContacts(const Akonadi::Item::List &items)

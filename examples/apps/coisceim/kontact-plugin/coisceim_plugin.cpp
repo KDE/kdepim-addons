@@ -33,13 +33,14 @@
 EXPORT_KONTACT_PLUGIN(CoisceimPlugin, coisceim)
 
 CoisceimPlugin::CoisceimPlugin(KontactInterface::Core *core, const QVariantList &)
-    : KontactInterface::Plugin(core, core, "coisceim"), m_interface(0)
+    : KontactInterface::Plugin(core, core, "coisceim")
+    , m_interface(0)
 {
     setComponentData(KontactPluginFactory::componentData());
 
-    QAction *action =
-        new QAction(QIcon::fromTheme("byobu"),
-                    i18nc("@action:inmenu", "New Trip"), this);
+    QAction *action
+        = new QAction(QIcon::fromTheme("byobu"),
+                      i18nc("@action:inmenu", "New Trip"), this);
     actionCollection()->addAction("new_trip", action);
     //action->setHelpText(
     //  i18nc( "@info:status", "Create a new trip" ) );
@@ -102,4 +103,3 @@ int CoisceimUniqueAppHandler::newInstance()
     (void)plugin()->part();
     return KontactInterface::UniqueAppHandler::newInstance();
 }
-

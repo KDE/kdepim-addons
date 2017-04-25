@@ -36,8 +36,6 @@ public:
 
 private:
     QTreeView *m_itemView;
-
 };
 
 #endif
-

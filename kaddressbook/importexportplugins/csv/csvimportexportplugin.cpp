@@ -21,17 +21,16 @@
 #include "csvimportexportplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(CSVImportExportPluginFactory, "kaddressbook_importexportcsvplugin.json", registerPlugin<CSVImportExportPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(CSVImportExportPluginFactory, "kaddressbook_importexportcsvplugin.json", registerPlugin<CSVImportExportPlugin>();
+                           )
 
 CSVImportExportPlugin::CSVImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
-
 }
 
 CSVImportExportPlugin::~CSVImportExportPlugin()
 {
-
 }
 
 PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)

@@ -23,12 +23,12 @@
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginTranslatorFactory, "messageviewer_translatorplugin.json", registerPlugin<ViewerPluginTranslator>();)
+K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginTranslatorFactory, "messageviewer_translatorplugin.json", registerPlugin<ViewerPluginTranslator>();
+                           )
 
 ViewerPluginTranslator::ViewerPluginTranslator(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)
 {
-
 }
 
 ViewerPluginInterface *ViewerPluginTranslator::createView(QWidget *parent, KActionCollection *ac)

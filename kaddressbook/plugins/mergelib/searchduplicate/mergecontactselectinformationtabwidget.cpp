@@ -27,12 +27,10 @@ using namespace KABMergeContacts;
 MergeContactSelectInformationTabWidget::MergeContactSelectInformationTabWidget(QWidget *parent)
     : QTabWidget(parent)
 {
-
 }
 
 MergeContactSelectInformationTabWidget::~MergeContactSelectInformationTabWidget()
 {
-
 }
 
 void MergeContactSelectInformationTabWidget::updateTabWidget()

@@ -26,8 +26,7 @@
 
 class QLineEdit;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ContactEditor;
 }
 

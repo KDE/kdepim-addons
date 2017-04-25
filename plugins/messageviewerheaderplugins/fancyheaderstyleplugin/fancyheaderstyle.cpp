@@ -50,12 +50,10 @@ using namespace MessageViewer;
 FancyHeaderStyle::FancyHeaderStyle()
     : HeaderStyle()
 {
-
 }
 
 FancyHeaderStyle::~FancyHeaderStyle()
 {
-
 }
 
 const char *FancyHeaderStyle::name() const
@@ -89,7 +87,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // from a few spam filters and try to create visually meaningful graphics
     // out of the spam scores.
 
-    const QString spamHTML =  mHeaderStyleUtil.spamStatus(message);
+    const QString spamHTML = mHeaderStyleUtil.spamStatus(message);
 
     QString userHTML;
     MessageViewer::HeaderStyleUtil::xfaceSettings xface = mHeaderStyleUtil.xface(this, message);
@@ -114,7 +112,6 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // the mailto: URLs can contain %3 etc., therefore usage of multiple
     // QString::arg is not possible
     if (strategy->showHeader(QStringLiteral("from"))) {
-
         const QVector<KMime::Types::Mailbox> resentFrom = mHeaderStyleUtil.resentFromList(message);
         headerStr += QStringLiteral("<tr><th>%1</th>\n"
                                     "<td>")
@@ -141,9 +138,14 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         QString to;
         if (message->headerByType("Resent-To")) {
-            to = StringUtil::emailAddrAsAnchor(resentTo, StringUtil::DisplayFullAddress) + QLatin1Char(' ') + i18n("(receiver was %1)", StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress,
-                    QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
-                    QStringLiteral("FullToAddressList")));
+            to
+                = StringUtil::emailAddrAsAnchor(resentTo,
+                                                StringUtil::DisplayFullAddress) + QLatin1Char(' ')
+                  + i18n("(receiver was %1)", StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress,
+                                                                            QString(), StringUtil::ShowLink,
+                                                                            StringUtil::ExpandableAddresses,
+                                                                            QStringLiteral(
+                                                                                "FullToAddressList")));
         } else {
             to = StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress,
                                                QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
@@ -159,8 +161,8 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // cc line, if an
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
         const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress,
-                            QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
-                            QStringLiteral("FullCcAddressList"));
+                                                          QString(), StringUtil::ShowLink, StringUtil::ExpandableAddresses,
+                                                          QStringLiteral("FullCcAddressList"));
         if (!str.isEmpty()) {
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2</td></tr>\n")
@@ -180,12 +182,13 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         }
     }
 
-    if (strategy->showHeader(QStringLiteral("date")))
+    if (strategy->showHeader(QStringLiteral("date"))) {
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td dir=\"%2\">%3</td></tr>\n")
                          .arg(i18n("Date: "))
                          .arg(mHeaderStyleUtil.directionOf(mHeaderStyleUtil.dateStr(message->date()->dateTime())))
                          .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
+    }
     if (MessageViewer::MessageViewerSettings::self()->showUserAgent()) {
         if (strategy->showHeader(QStringLiteral("user-agent"))) {
             if (auto hdr = message->userAgent(false)) {
@@ -239,9 +242,10 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         }
     }
 
-    if (!spamHTML.isEmpty())
+    if (!spamHTML.isEmpty()) {
         headerStr.append(QStringLiteral("<tr><td colspan=\"2\"><div class=\"spamheader\" dir=\"%1\"><b>%2</b>&nbsp;<span style=\"padding-left: 20px;\">%3</span></div></td></tr>\n")
                          .arg(subjectDir, i18n("Spam Status:"), spamHTML));
+    }
 
     headerStr.append(QLatin1String("<tr><td colspan=\"2\"><div id=\"attachmentInjectionPoint\"></div></td></tr>"));
 

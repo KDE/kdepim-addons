@@ -26,12 +26,10 @@ class QLabel;
 class QPushButton;
 class QCheckBox;
 
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarResolvUrlJob;
 }
-namespace KABGravatar
-{
+namespace KABGravatar {
 class GravatarUpdateWidget : public QWidget
 {
     Q_OBJECT

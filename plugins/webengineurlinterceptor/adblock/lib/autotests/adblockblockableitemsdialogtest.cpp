@@ -27,12 +27,10 @@ using namespace AdBlock;
 AdBlockBlockableItemsDialogTest::AdBlockBlockableItemsDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AdBlockBlockableItemsDialogTest::~AdBlockBlockableItemsDialogTest()
 {
-
 }
 
 void AdBlockBlockableItemsDialogTest::shouldHaveDefaultValue()
@@ -43,7 +41,6 @@ void AdBlockBlockableItemsDialogTest::shouldHaveDefaultValue()
 
     AdBlockBlockableItemsWidget *mBlockableItems = w.findChild<AdBlockBlockableItemsWidget *>(QStringLiteral("blockableitemswidget"));
     QVERIFY(mBlockableItems);
-
 }
 
 QTEST_MAIN(AdBlockBlockableItemsDialogTest)

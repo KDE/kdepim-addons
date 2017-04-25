@@ -26,12 +26,10 @@
 GrantleeHeaderStylePluginTest::GrantleeHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GrantleeHeaderStylePluginTest::~GrantleeHeaderStylePluginTest()
 {
-
 }
 
 void GrantleeHeaderStylePluginTest::shouldHaveDefaultValue()

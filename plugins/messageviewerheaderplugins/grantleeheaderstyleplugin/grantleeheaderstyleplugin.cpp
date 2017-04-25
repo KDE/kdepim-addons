@@ -24,12 +24,13 @@
 #include <kpluginfactory.h>
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerGrantleeHeaderStylePluginFactory, "messageviewer_grantleeheaderstyleplugin.json", registerPlugin<GrantleeHeaderStylePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(MessageViewerGrantleeHeaderStylePluginFactory, "messageviewer_grantleeheaderstyleplugin.json", registerPlugin<GrantleeHeaderStylePlugin>();
+                           )
 
 GrantleeHeaderStylePlugin::GrantleeHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::HeaderStylePlugin(parent),
-      mHeaderStyle(new GrantleeHeaderStyle),
-      mHeaderStrategy(new GrantleeHeaderStrategy)
+    : MessageViewer::HeaderStylePlugin(parent)
+    , mHeaderStyle(new GrantleeHeaderStyle)
+    , mHeaderStrategy(new GrantleeHeaderStrategy)
 {
 }
 

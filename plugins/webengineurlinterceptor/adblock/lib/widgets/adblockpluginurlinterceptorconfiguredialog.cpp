@@ -35,7 +35,6 @@ AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigure
 
 AdblockPluginUrlInterceptorConfigureDialog::~AdblockPluginUrlInterceptorConfigureDialog()
 {
-
 }
 
 QWidget *AdblockPluginUrlInterceptorConfigureDialog::createLayout()

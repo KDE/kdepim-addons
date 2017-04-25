@@ -22,12 +22,10 @@
 
 CheckDuplicateEmailsJob::CheckDuplicateEmailsJob()
 {
-
 }
 
 CheckDuplicateEmailsJob::~CheckDuplicateEmailsJob()
 {
-
 }
 
 void CheckDuplicateEmailsJob::start()
@@ -57,7 +55,6 @@ void CheckDuplicateEmailsJob::start()
             mResult.insert(i.key(), i.value());
         }
     }
-
 }
 
 void CheckDuplicateEmailsJob::setEmails(const QStringList &list)

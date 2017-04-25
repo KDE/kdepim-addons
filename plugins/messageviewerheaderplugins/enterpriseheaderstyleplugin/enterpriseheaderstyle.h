@@ -22,14 +22,17 @@
 #include "messageviewer/headerstyle.h"
 
 #include <headerstyle_util.h>
-namespace MessageViewer
-{
-
+namespace MessageViewer {
 class EnterpriseHeaderStyle : public HeaderStyle
 {
 public:
-    EnterpriseHeaderStyle() : HeaderStyle() {}
-    ~EnterpriseHeaderStyle() {}
+    EnterpriseHeaderStyle() : HeaderStyle()
+    {
+    }
+
+    ~EnterpriseHeaderStyle()
+    {
+    }
 
 public:
     const char *name() const Q_DECL_OVERRIDE;
@@ -40,7 +43,6 @@ public:
 private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
-
 }
 
 #endif // ENTREPRISEHEADERSTYLE_H

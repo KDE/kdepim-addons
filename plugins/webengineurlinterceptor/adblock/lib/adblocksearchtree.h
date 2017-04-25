@@ -37,8 +37,7 @@
 #include <QHash>
 
 class QWebEngineUrlRequestInfo;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockRule;
 class AdBlockSearchTree
 {
@@ -57,11 +56,13 @@ private:
         const AdBlockRule *rule;
         QHash<QChar, Node *> children;
 
-        Node() : c(0), rule(0) { }
+        Node() : c(0)
+            , rule(0)
+        {
+        }
     };
 
-    const AdBlockRule *prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain,
-                                    const QString &urlString, const QChar *string, int len) const;
+    const AdBlockRule *prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar *string, int len) const;
 
     void deleteNode(Node *node);
 

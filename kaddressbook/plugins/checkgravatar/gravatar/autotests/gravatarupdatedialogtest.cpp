@@ -26,12 +26,10 @@
 GravatarUpdateDialogTest::GravatarUpdateDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarUpdateDialogTest::~GravatarUpdateDialogTest()
 {
-
 }
 
 void GravatarUpdateDialogTest::shouldHaveDefaultValue()

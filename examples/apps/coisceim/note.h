@@ -22,9 +22,7 @@
 
 #include <QtCore/QString>
 
-namespace Akonotes
-{
-
+namespace Akonotes {
 /**
   This is to become a convenience wrapper around KMime::Message::Ptr.
 */
@@ -33,9 +31,7 @@ class Note
 public:
 
     static QString mimeType();
-
 };
-
 }
 
 #endif

@@ -21,17 +21,16 @@
 #include "tinyurlengineinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(TinyUrlEnginePluginFactory, "pimcommon_tinyurlengineplugin.json", registerPlugin<TinyUrlEnginePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(TinyUrlEnginePluginFactory, "pimcommon_tinyurlengineplugin.json", registerPlugin<TinyUrlEnginePlugin>();
+                           )
 
 TinyUrlEnginePlugin::TinyUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
     : ShortUrlEnginePlugin(parent)
 {
-
 }
 
 TinyUrlEnginePlugin::~TinyUrlEnginePlugin()
 {
-
 }
 
 ShortUrlEngineInterface *TinyUrlEnginePlugin::createInterface(QObject *parent)

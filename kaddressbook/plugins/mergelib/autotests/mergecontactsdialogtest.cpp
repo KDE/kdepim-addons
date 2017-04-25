@@ -29,12 +29,10 @@
 MergeContactsDialogTest::MergeContactsDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactsDialogTest::~MergeContactsDialogTest()
 {
-
 }
 
 void MergeContactsDialogTest::initTestCase()
@@ -57,14 +55,13 @@ void MergeContactsDialogTest::shouldHaveDefaultValue()
     for (int i = 0; i < stackedWidget->count(); ++i) {
         QWidget *w = stackedWidget->widget(i);
         const QString objName = w->objectName();
-        const bool hasGoodNamePage = (objName == QLatin1String("notenoughcontactselected") ||
-                                      objName == QLatin1String("nocontactselected") ||
-                                      objName == QLatin1String("manualmergeresultwidget") ||
-                                      objName == QLatin1String("selectioninformation") ||
-                                      objName == QLatin1String("mergecontactinfowidget"));
+        const bool hasGoodNamePage = (objName == QLatin1String("notenoughcontactselected")
+                                      || objName == QLatin1String("nocontactselected")
+                                      || objName == QLatin1String("manualmergeresultwidget")
+                                      || objName == QLatin1String("selectioninformation")
+                                      || objName == QLatin1String("mergecontactinfowidget"));
         QVERIFY(hasGoodNamePage);
     }
-
 }
 
 void MergeContactsDialogTest::shouldSwithStackedWidget()

@@ -21,17 +21,16 @@
 #include "ur1cashorturlengineinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(Ur1CaShortUrlEnginePluginFactory, "pimcommon_ur1cashorturlengineplugin.json", registerPlugin<Ur1CaShortUrlEnginePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(Ur1CaShortUrlEnginePluginFactory, "pimcommon_ur1cashorturlengineplugin.json", registerPlugin<Ur1CaShortUrlEnginePlugin>();
+                           )
 
 Ur1CaShortUrlEnginePlugin::Ur1CaShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
     : ShortUrlEnginePlugin(parent)
 {
-
 }
 
 Ur1CaShortUrlEnginePlugin::~Ur1CaShortUrlEnginePlugin()
 {
-
 }
 
 ShortUrlEngineInterface *Ur1CaShortUrlEnginePlugin::createInterface(QObject *parent)

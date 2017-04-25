@@ -23,8 +23,7 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 #include "adblocklib_export.h"
 
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockSettingWidget;
 class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
 {
@@ -39,7 +38,6 @@ public:
 
 private:
     AdBlock::AdBlockSettingWidget *mConfigureWidget;
-
 };
 }
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H

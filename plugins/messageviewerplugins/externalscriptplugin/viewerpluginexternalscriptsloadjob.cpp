@@ -20,19 +20,16 @@
 #include "viewerpluginexternalscriptsloadjob.h"
 #include "externalscriptplugin_debug.h"
 
-
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDir>
 
 ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob()
 {
-
 }
 
 ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob()
 {
-
 }
 
 void ViewerPluginExternalScriptsLoadJob::start()

@@ -52,7 +52,6 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
 
 SelectAttachmentDialog::~SelectAttachmentDialog()
 {
-
 }
 
 void SelectAttachmentDialog::setAttachmentPath(const QString &path)
@@ -64,4 +63,3 @@ QString SelectAttachmentDialog::attachmentPath() const
 {
     return mUrlRequester->url().path();
 }
-

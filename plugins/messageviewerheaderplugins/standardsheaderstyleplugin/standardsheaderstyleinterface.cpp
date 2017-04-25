@@ -26,12 +26,10 @@ using namespace MessageViewer;
 StandardsHeaderStyleInterface::StandardsHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent)
 {
-
 }
 
 StandardsHeaderStyleInterface::~StandardsHeaderStyleInterface()
 {
-
 }
 
 void StandardsHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
@@ -48,4 +46,3 @@ void StandardsHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
-

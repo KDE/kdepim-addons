@@ -34,7 +34,6 @@ IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *p
 
 IsgdShortUrlEngineInterface::~IsgdShortUrlEngineInterface()
 {
-
 }
 
 QString IsgdShortUrlEngineInterface::engineName() const

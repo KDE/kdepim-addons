@@ -23,13 +23,14 @@
 #include <messageviewer/headerstrategy.h>
 #include <QStringList>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class BriefHeaderStrategy : public HeaderStrategy
 {
 public:
     BriefHeaderStrategy();
-    ~BriefHeaderStrategy() {}
+    ~BriefHeaderStrategy()
+    {
+    }
 
 public:
     const char *name() const Q_DECL_OVERRIDE
@@ -41,6 +42,7 @@ public:
     {
         return mHeadersToDisplay;
     }
+
     DefaultPolicy defaultPolicy() const Q_DECL_OVERRIDE
     {
         return Hide;

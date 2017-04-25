@@ -36,7 +36,6 @@ public:
     PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
 
     bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
-
 };
 
 #endif // CHECKGRAVATARPLUGIN_H

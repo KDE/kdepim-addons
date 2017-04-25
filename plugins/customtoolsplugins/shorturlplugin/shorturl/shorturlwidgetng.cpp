@@ -44,9 +44,9 @@
 #include <KConfigGroup>
 
 ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
-    : QWidget(parent),
-      mShorturlServiceName(nullptr),
-      mCurrentEngine(nullptr)
+    : QWidget(parent)
+    , mShorturlServiceName(nullptr)
+    , mCurrentEngine(nullptr)
 {
     QGridLayout *grid = new QGridLayout(this);
     grid->setMargin(2);
@@ -70,7 +70,7 @@ ShortUrlWidgetNg::ShortUrlWidgetNg(QWidget *parent)
     connect(configure, &QPushButton::clicked, this, &ShortUrlWidgetNg::slotConfigure);
     grid->addWidget(configure, 0, 2);
 
-    mShorturlServiceName = new QLabel(/*mEngine->shortUrlName()*/this);
+    mShorturlServiceName = new QLabel(/*mEngine->shortUrlName()*/ this);
     grid->addWidget(mShorturlServiceName, 1, 1);
 
     mConvertButton = new QPushButton(i18n("Convert"));
@@ -123,7 +123,7 @@ ShortUrlWidgetNg::~ShortUrlWidgetNg()
 
 void ShortUrlWidgetNg::initializePlugins()
 {
-    const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
     for (ShortUrlEnginePlugin *plugin : lstPlugin) {
         ShortUrlEngineInterface *interface = plugin->createInterface(this);
         if (interface) {

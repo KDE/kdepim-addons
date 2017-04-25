@@ -38,7 +38,8 @@
 using namespace Akonadi;
 
 TripWidget::TripWidget(Trip *trip, QWidget *parent)
-    : QWidget(parent), m_trip(trip)
+    : QWidget(parent)
+    , m_trip(trip)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
 
@@ -71,8 +72,8 @@ TripWidget::TripWidget(Trip *trip, QWidget *parent)
     FolderContentsWidget *notesWidget = createView(QLatin1String("Notes"), Trip::NotesCollectionRole);
 
     ItemSelection *itemSelection = new ItemSelection(mailWidget->selectionModel(),
-            todoWidget->selectionModel(),
-            notesWidget->selectionModel(), this);
+                                                     todoWidget->selectionModel(),
+                                                     notesWidget->selectionModel(), this);
 
     splitter->addWidget(mailWidget);
     splitter->addWidget(todoWidget);

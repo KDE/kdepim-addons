@@ -17,22 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "selectimapfoldertreeview.h"
 
 #include <KLocalizedString>
 #include <QPainter>
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
-    : QTreeView(parent),
-      mStatus(InProgress)
+    : QTreeView(parent)
+    , mStatus(InProgress)
 {
-
 }
 
 SelectImapFolderTreeView::~SelectImapFolderTreeView()
 {
-
 }
 
 void SelectImapFolderTreeView::generalPaletteChanged()
@@ -76,4 +73,3 @@ void SelectImapFolderTreeView::paintEvent(QPaintEvent *event)
 
     p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, label);
 }
-

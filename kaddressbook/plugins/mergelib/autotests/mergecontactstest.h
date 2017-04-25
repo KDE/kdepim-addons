@@ -96,7 +96,6 @@ private Q_SLOTS:
 
     void checkNeedManualSelectionWithBirthday_data();
     void checkNeedManualSelectionWithBirthday();
-
 };
 
 #endif // MERGECONTACTTEST_H

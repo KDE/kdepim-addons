@@ -33,8 +33,7 @@ QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
     return dbg;
 }
 
-namespace CalendarEvents
-{
+namespace CalendarEvents {
 bool operator==(const EventData &lhs, const EventData &rhs)
 {
     return lhs.uid() == rhs.uid()
@@ -66,7 +65,7 @@ bool operator<(const EventData &lhs, const EventData &rhs)
         [&]() { \
             QCOMPARE(_actual, _expected); \
             ok = true; \
-        }(); \
+        } (); \
         if (!ok) { \
             return false; \
         } \
@@ -78,17 +77,14 @@ bool operator<(const EventData &lhs, const EventData &rhs)
         [&]() { \
             QVERIFY(_cond); \
             ok = true; \
-        }(); \
+        } (); \
         if (!ok) { \
             return false; \
         } \
     }
 
-namespace TestUtils
-{
-
-bool compareEventData(const CalendarEvents::EventData &actual,
-                      const CalendarEvents::EventData &expected)
+namespace TestUtils {
+bool compareEventData(const CalendarEvents::EventData &actual, const CalendarEvents::EventData &expected)
 {
     COMPARE(actual.title(), expected.title());
     COMPARE(actual.description(), expected.description());
@@ -102,7 +98,6 @@ bool compareEventData(const CalendarEvents::EventData &actual,
 
     return true;
 }
-
 }
 
 #endif

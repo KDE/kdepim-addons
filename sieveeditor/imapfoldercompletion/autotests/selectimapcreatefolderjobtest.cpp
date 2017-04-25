@@ -23,12 +23,10 @@
 
 SelectImapCreateJobTest::SelectImapCreateJobTest(QObject *parent) : QObject(parent)
 {
-
 }
 
 SelectImapCreateJobTest::~SelectImapCreateJobTest()
 {
-
 }
 
 QTEST_MAIN(SelectImapCreateJobTest)

@@ -35,8 +35,7 @@ void PimEventsPluginTest::initTestCase()
     qRegisterMetaType<CalendarEvents::EventData>("CalendarEvents::EventData");
 }
 
-bool PimEventsPluginTest::compareEventDataHashes(const DateEventDataHash &actual,
-        const DateEventDataHash &expected)
+bool PimEventsPluginTest::compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected)
 {
     COMPARE(actual.size(), expected.size());
     Q_FOREACH (const QDate &resultKey, actual.uniqueKeys()) {
@@ -81,15 +80,14 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
     return expectedData;
 }
 
-QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalCore::Event::Ptr &event,
-        const DateEventDataHash &allData)
+QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalCore::Event::Ptr &event, const DateEventDataHash &allData)
 {
     QVector<CalendarEvents::EventData> data;
     for (auto it = allData.cbegin(), end = allData.cend(); it != end; ++it) {
         // This is a very naive check
         if (it->title() == event->summary()
-                && it->description() == event->description()
-                && it->isAllDay() == event->allDay()) {
+            && it->description() == event->description()
+            && it->isAllDay() == event->allDay()) {
             data.push_back((*it));
         }
     }
@@ -200,7 +198,7 @@ void PimEventsPluginTest::testEventModified()
             const auto args = eventModifiedSpy.takeFirst();
             const auto &resultData = args[0].value<CalendarEvents::EventData>();
             const auto expected = std::find_if(expectedData.begin(), expectedData.end(),
-            [resultData](const CalendarEvents::EventData & e) {
+                                               [resultData](const CalendarEvents::EventData &e) {
                 return e.uid() == resultData.uid();
             });
             QVERIFY(expected != expectedData.end());
@@ -253,7 +251,7 @@ void PimEventsPluginTest::testEventRemoved()
         while (!eventRemovedSpy.isEmpty()) {
             const QString resultUid = eventRemovedSpy.takeFirst().first().toString();
             const auto expected = std::find_if(expectedData.begin(), expectedData.end(),
-            [resultUid](const CalendarEvents::EventData & e) {
+                                               [resultUid](const CalendarEvents::EventData &e) {
                 return e.uid() == resultUid;
             });
             QVERIFY(expected != expectedData.end());

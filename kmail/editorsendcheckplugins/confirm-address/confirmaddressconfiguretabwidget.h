@@ -21,8 +21,7 @@
 #define CONFIRMADDRESSCONFIGURETABWIDGET_H
 
 #include <QWidget>
-namespace PimCommon
-{
+namespace PimCommon {
 class SimpleStringListEditor;
 }
 class KConfigGroup;

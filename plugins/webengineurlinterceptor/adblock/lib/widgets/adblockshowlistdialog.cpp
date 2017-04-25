@@ -37,9 +37,9 @@
 
 using namespace AdBlock;
 AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget *parent)
-    : QDialog(parent),
-      mTemporaryFile(nullptr),
-      mUser1Button(nullptr)
+    : QDialog(parent)
+    , mTemporaryFile(nullptr)
+    , mUser1Button(nullptr)
 {
     setWindowTitle(i18n("Show adblock list"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

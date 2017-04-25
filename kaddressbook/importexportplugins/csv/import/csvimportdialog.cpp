@@ -72,7 +72,8 @@ public:
     {
         fillFieldMap();
 
-        addItem(KAddressBookImportExport::KAddressBookImportExportContactFields::label(KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined), KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined);
+        addItem(KAddressBookImportExport::KAddressBookImportExportContactFields::label(
+                    KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined), KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined);
 
         QMapIterator<QString, KAddressBookImportExport::KAddressBookImportExportContactFields::Field> it(mFieldMap);
         while (it.hasNext()) {
@@ -134,8 +135,7 @@ public:
         return KAddressBookImportExport::KAddressBookImportExportContactFields::label((KAddressBookImportExport::KAddressBookImportExportContactFields::Field)value.toUInt());
     }
 
-    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &,
-                          const QModelIndex &) const Q_DECL_OVERRIDE
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &) const Q_DECL_OVERRIDE
     {
         ContactFieldComboBox *editor = new ContactFieldComboBox(parent);
 
@@ -157,14 +157,12 @@ public:
         model->setData(index, fieldCombo->currentField(), Qt::EditRole);
     }
 
-    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option,
-                              const QModelIndex &) const Q_DECL_OVERRIDE
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &) const Q_DECL_OVERRIDE
     {
         editor->setGeometry(option.rect);
     }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option,
-               const QModelIndex &index) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
     {
         if (index.row() == 0) {
             QStyleOptionViewItem headerOption(option);
@@ -178,7 +176,8 @@ public:
 };
 
 CSVImportDialog::CSVImportDialog(QWidget *parent)
-    : QDialog(parent), mDevice(nullptr)
+    : QDialog(parent)
+    , mDevice(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "CSV Import Dialog"));
     setModal(true);
@@ -194,9 +193,9 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mUrlRequester->lineEdit(), &QLineEdit::textChanged, this, &CSVImportDialog::urlChanged);
     connect(mDelimiterGroup, SIGNAL(buttonClicked(int)), this, SLOT(delimiterClicked(int)));
     connect(mDelimiterEdit, SIGNAL(returnPressed()), this, SLOT(customDelimiterChanged()));
-    connect(mDelimiterEdit, SIGNAL(textChanged(QString)),  this, SLOT(customDelimiterChanged(QString)));
-    connect(mComboQuote, SIGNAL(activated(QString)),  this, SLOT(textQuoteChanged(QString)));
-    connect(mCodecCombo, SIGNAL(activated(QString)),  this, SLOT(codecChanged()));
+    connect(mDelimiterEdit, SIGNAL(textChanged(QString)), this, SLOT(customDelimiterChanged(QString)));
+    connect(mComboQuote, SIGNAL(activated(QString)), this, SLOT(textQuoteChanged(QString)));
+    connect(mCodecCombo, SIGNAL(activated(QString)), this, SLOT(codecChanged()));
     connect(mSkipFirstRow, SIGNAL(toggled(bool)), this, SLOT(skipFirstRowChanged(bool)));
 
     connect(mModel, &QCsvModel::finishedLoading, this, &CSVImportDialog::modelFinishedLoading);
@@ -234,8 +233,8 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
             if (!value.isEmpty()) {
                 emptyRow = false;
 
-                const KAddressBookImportExport::KAddressBookImportExportContactFields::Field field =
-                    (KAddressBookImportExport::KAddressBookImportExportContactFields::Field)mModel->data(mModel->index(0, column)).toUInt();
+                const KAddressBookImportExport::KAddressBookImportExportContactFields::Field field
+                    = (KAddressBookImportExport::KAddressBookImportExportContactFields::Field)mModel->data(mModel->index(0, column)).toUInt();
 
                 // convert the custom date format to ISO format
                 if (field == KAddressBookImportExport::KAddressBookImportExportContactFields::Birthday || field == KAddressBookImportExport::KAddressBookImportExportContactFields::Anniversary) {
@@ -266,7 +265,6 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
 
 void CSVImportDialog::initGUI()
 {
-
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QWidget *page = new QWidget(this);
 
@@ -682,9 +680,9 @@ void CSVImportDialog::finalizeApplyTemplate()
 
 void CSVImportDialog::saveTemplate()
 {
-    const QString name =
-        QInputDialog::getText(this, i18nc("@title:window", "Template Name"),
-                              i18nc("@info", "Please enter a name for the template:"));
+    const QString name
+        = QInputDialog::getText(this, i18nc("@title:window", "Template Name"),
+                                i18nc("@info", "Please enter a name for the template:"));
 
     if (name.isEmpty()) {
         return;
@@ -695,10 +693,10 @@ void CSVImportDialog::saveTemplate()
         return;
     }
 
-    const QString fileName =
-        QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kaddressbook/csv-templates/") +
-        QUuid::createUuid().toString() +
-        QLatin1String(".desktop");
+    const QString fileName
+        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kaddressbook/csv-templates/")
+          +QUuid::createUuid().toString()
+          +QLatin1String(".desktop");
 
     QFileInfo fileInfo(fileName);
     QDir().mkpath(fileInfo.absolutePath());
@@ -799,4 +797,3 @@ void CSVImportDialog::modelFinishedLoading()
 }
 
 #include "csvimportdialog.moc"
-

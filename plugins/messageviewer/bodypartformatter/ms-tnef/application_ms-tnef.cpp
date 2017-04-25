@@ -56,19 +56,15 @@
 #include <QApplication>
 #include <QDir>
 
-namespace
-{
-
+namespace {
 class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
     MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
-
         if (!writer) {
             return Ok;
         }
-
 
         const QString fileName = bodyPart->nodeHelper()->writeNodeToTempFile(bodyPart->content());
         KTnef::KTNEFParser parser;
@@ -112,9 +108,9 @@ public:
 
             QString label = MimeTreeParser::NodeHelper::fileName(bodyPart->content());
             label = MessageCore::StringUtil::quoteHtmlChars(label, true);
-            const QString comment =
-                MessageCore::StringUtil::quoteHtmlChars(
-                    bodyPart->content()->contentDescription()->asUnicodeString(), true);
+            const QString comment
+                = MessageCore::StringUtil::quoteHtmlChars(
+                bodyPart->content()->contentDescription()->asUnicodeString(), true);
 
             htmlStr += startRow;
             htmlStr += label;
@@ -131,9 +127,9 @@ public:
 
         QString label = MimeTreeParser::NodeHelper::fileName(bodyPart->content());
         label = MessageCore::StringUtil::quoteHtmlChars(label, true);
-        const QString comment =
-            MessageCore::StringUtil::quoteHtmlChars(
-                bodyPart->content()->contentDescription()->asUnicodeString(), true);
+        const QString comment
+            = MessageCore::StringUtil::quoteHtmlChars(
+            bodyPart->content()->contentDescription()->asUnicodeString(), true);
 
         htmlStr += startRow;
         htmlStr += label;
@@ -173,11 +169,11 @@ public:
             const QString href = QStringLiteral("file:") + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att->name()));
 
             const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
-                                     KIconLoader::Desktop, attFileName)).url();
+                                                                                                  KIconLoader::Desktop, attFileName)).url();
 
-            writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"") +
-                          iconName + QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") + label +
-                          QStringLiteral("</a></div><br/>"));
+            writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"")
+                          +iconName + QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") + label
+                          +QStringLiteral("</a></div><br/>"));
         }
 
         if (!tnefatts.isEmpty()) {
@@ -199,10 +195,12 @@ public:
     {
         return idx == 0 ? new Formatter() : nullptr;
     }
+
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
         return idx == 0 ? "application" : nullptr;
     }
+
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
         if (idx == 0) {
@@ -219,12 +217,11 @@ public:
         return nullptr;
     }
 };
-
 }
 
 extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
-messageviewer_bodypartformatter_application_mstnef_create_bodypart_formatter_plugin()
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
+*messageviewer_bodypartformatter_application_mstnef_create_bodypart_formatter_plugin()
 {
     return new Plugin();
 }

@@ -27,7 +27,9 @@ class ConfirmAddressPlugin : public MessageComposer::PluginEditorCheckBeforeSend
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit ConfirmAddressPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~ConfirmAddressPlugin();
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;

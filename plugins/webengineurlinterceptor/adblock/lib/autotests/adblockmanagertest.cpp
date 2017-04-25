@@ -21,11 +21,10 @@
 
 AdblockManagerTest::AdblockManagerTest(QObject *parent) : QObject(parent)
 {
-
 }
 
 AdblockManagerTest::~AdblockManagerTest()
 {
-
 }
+
 QTEST_MAIN(AdblockManagerTest)

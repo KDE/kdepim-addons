@@ -24,12 +24,10 @@
 ViewerPluginExternalscriptTest::ViewerPluginExternalscriptTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalscriptTest::~ViewerPluginExternalscriptTest()
 {
-
 }
 
 QTEST_MAIN(ViewerPluginExternalscriptTest)

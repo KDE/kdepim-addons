@@ -20,17 +20,16 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(Rot13PluginEditorFactory, "kmail_rot13editorplugin.json", registerPlugin<Rot13PluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(Rot13PluginEditorFactory, "kmail_rot13editorplugin.json", registerPlugin<Rot13PluginEditor>();
+                           )
 
 Rot13PluginEditor::Rot13PluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
-
 }
 
 Rot13PluginEditor::~Rot13PluginEditor()
 {
-
 }
 
 MessageComposer::PluginEditorInterface *Rot13PluginEditor::createInterface(KActionCollection *ac, QObject *parent)

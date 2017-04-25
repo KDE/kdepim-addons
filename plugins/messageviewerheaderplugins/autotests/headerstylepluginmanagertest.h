@@ -31,7 +31,6 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-
 };
 
 #endif // HEADERSTYLEPLUGINMANAGERTEST_H

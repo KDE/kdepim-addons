@@ -28,12 +28,10 @@
 LongHeaderStylePluginTest::LongHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LongHeaderStylePluginTest::~LongHeaderStylePluginTest()
 {
-
 }
 
 void LongHeaderStylePluginTest::shouldHaveDefaultValue()

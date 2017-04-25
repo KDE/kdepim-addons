@@ -22,8 +22,7 @@
 
 #include <QDialog>
 #include "adblocklib_export.h"
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockResult;
 class AdBlockBlockableItemsWidget;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog

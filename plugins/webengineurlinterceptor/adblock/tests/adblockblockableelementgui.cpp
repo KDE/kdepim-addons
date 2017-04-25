@@ -42,7 +42,6 @@ AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
 
 AdblockBlockableElementGui::~AdblockBlockableElementGui()
 {
-
 }
 
 void AdblockBlockableElementGui::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
@@ -76,4 +75,3 @@ int main(int argc, char **argv)
     delete dialog;
     return 0;
 }
-

@@ -21,7 +21,8 @@
 #include "autocorrectionplugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(AutoCorrectionPluginEditorFactory, "kmail_autocorrectioneditorplugin.json", registerPlugin<AutoCorrectionPluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(AutoCorrectionPluginEditorFactory, "kmail_autocorrectioneditorplugin.json", registerPlugin<AutoCorrectionPluginEditor>();
+                           )
 
 AutoCorrectionPluginEditor::AutoCorrectionPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
@@ -30,7 +31,6 @@ AutoCorrectionPluginEditor::AutoCorrectionPluginEditor(QObject *parent, const QL
 
 AutoCorrectionPluginEditor::~AutoCorrectionPluginEditor()
 {
-
 }
 
 MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterface(KActionCollection *ac, QObject *parent)

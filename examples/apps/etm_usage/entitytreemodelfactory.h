@@ -45,7 +45,6 @@ private Q_SLOTS:
 
 private:
     Akonadi::Monitor *m_monitor;
-
 };
 
 #endif

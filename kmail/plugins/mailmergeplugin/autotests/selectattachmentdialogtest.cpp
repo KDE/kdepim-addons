@@ -23,12 +23,10 @@
 SelectAttachmentDialogTest::SelectAttachmentDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SelectAttachmentDialogTest::~SelectAttachmentDialogTest()
 {
-
 }
 
 void SelectAttachmentDialogTest::shouldHaveDefaultValue()

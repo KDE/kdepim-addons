@@ -36,15 +36,12 @@
 
 using namespace MimeTreeParser::Interface;
 
-BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part,
-        MimeTreeParser::HtmlWriter *writer) const
+BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
     return format(part, writer, nullptr);
 }
 
-BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part,
-        MimeTreeParser::HtmlWriter *writer,
-        QObject *asyncResultObserver) const
+BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const
 {
     if (!writer) {
         return Ok;
@@ -104,7 +101,7 @@ QString ApplicationPGPKeyFormatter::render(const PgpKeyMessagePart &mp) const
         block.setProperty("hasKey", true);
         if (uid.email() && *uid.email() && uid.name() && *uid.name()) {
             block.setProperty("uid", QStringLiteral("%1 <%2>").arg(QString::fromUtf8(uid.name()),
-                              QString::fromUtf8(uid.email())));
+                                                                   QString::fromUtf8(uid.email())));
         } else if (uid.name() && *uid.name()) {
             block.setProperty("uid", QString::fromUtf8(uid.name()));
         } else if (uid.email() && *uid.email()) {

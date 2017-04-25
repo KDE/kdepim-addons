@@ -26,12 +26,10 @@
 #include "kaddressbookmergelib_export.h"
 
 class QPushButton;
-namespace Akonadi
-{
+namespace Akonadi {
 class CollectionComboBox;
 }
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactWidgetList;
 class MergeContactLoseInformationWarning;
 class MergeContactInfoWidget;

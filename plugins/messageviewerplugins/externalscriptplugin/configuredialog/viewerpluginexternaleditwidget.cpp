@@ -54,7 +54,6 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
 {
-
 }
 
 void ViewerPluginExternalEditWidget::slotInfoChanged()

@@ -47,7 +47,6 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 {
-
 }
 
 void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)

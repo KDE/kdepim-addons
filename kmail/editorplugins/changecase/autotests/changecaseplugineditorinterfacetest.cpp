@@ -24,12 +24,10 @@
 ChangeCasePluginEditorInterfaceTest::ChangeCasePluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest()
 {
-
 }
 
 void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()

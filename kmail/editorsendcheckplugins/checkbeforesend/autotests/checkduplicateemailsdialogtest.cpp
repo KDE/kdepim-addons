@@ -33,7 +33,6 @@ CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
 
 CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest()
 {
-
 }
 
 void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()

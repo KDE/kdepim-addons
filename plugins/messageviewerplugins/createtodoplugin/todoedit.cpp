@@ -38,8 +38,7 @@
 #include <KGuiItem>
 #include <KStandardGuiItem>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 QAbstractItemModel *_k_todoEditStubModel = 0;
 }
 
@@ -256,9 +255,9 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
             e->accept();
             slotCloseWidget();
             return true;
-        } else if (kev->key() == Qt::Key_Enter ||
-                   kev->key() == Qt::Key_Return ||
-                   kev->key() == Qt::Key_Space) {
+        } else if (kev->key() == Qt::Key_Enter
+                   || kev->key() == Qt::Key_Return
+                   || kev->key() == Qt::Key_Space) {
             e->accept();
             if (shortCutOverride) {
                 return true;
@@ -276,12 +275,12 @@ void TodoEdit::slotOpenEditor()
 {
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::createTodoEditor(
-                mNoteEdit->text(), QString(),
-                QStringList() << QString::fromLatin1(mMessage->encodedContent().toBase64()),
-                QStringList(),  // attendees
-                QStringList() << KMime::Message::mimeType(),
-                QStringList() << (subject ? subject->asUnicodeString() : QString()),
-                false, mCollection, false, this);
+        mNoteEdit->text(), QString(),
+        QStringList() << QString::fromLatin1(mMessage->encodedContent().toBase64()),
+            QStringList(),      // attendees
+            QStringList() << KMime::Message::mimeType(),
+            QStringList() << (subject ? subject->asUnicodeString() : QString()),
+            false, mCollection, false, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
     dlg->open();
 }

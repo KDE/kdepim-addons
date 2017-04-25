@@ -23,12 +23,10 @@
 #include "adblockblockableitemswidget.h"
 
 #include <QDialog>
-namespace Ui
-{
+namespace Ui {
 class AdBlockCreateFilterWidget;
 }
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockCreateFilterDialog : public QDialog
 {
     Q_OBJECT

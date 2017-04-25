@@ -93,7 +93,6 @@ private:
     QPushButton *mUser1Button;
     QPushButton *mUser2Button;
     QPushButton *mOkButton;
-
 };
 
 #endif

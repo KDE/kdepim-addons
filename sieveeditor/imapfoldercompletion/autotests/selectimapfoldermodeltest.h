@@ -31,7 +31,6 @@ public:
 
 private Q_SLOTS:
     void shouldNotCreateModelIfAccountIsNotValid();
-
 };
 
 #endif // SELECTIMAPFOLDERMODELTEST_H

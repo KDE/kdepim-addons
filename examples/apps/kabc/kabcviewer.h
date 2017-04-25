@@ -26,8 +26,7 @@
 
 #include <QDialog>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ContactViewer;
 }
 

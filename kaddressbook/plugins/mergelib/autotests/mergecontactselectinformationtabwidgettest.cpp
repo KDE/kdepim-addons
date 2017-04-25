@@ -24,12 +24,10 @@
 MergeContactSelectInformationTabWidgetTest::MergeContactSelectInformationTabWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactSelectInformationTabWidgetTest::~MergeContactSelectInformationTabWidgetTest()
 {
-
 }
 
 void MergeContactSelectInformationTabWidgetTest::shouldHaveDefaultValue()

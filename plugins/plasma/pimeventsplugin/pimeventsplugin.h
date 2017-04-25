@@ -23,14 +23,12 @@
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <KCalCore/Calendar>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ETMCalendar;
 }
 
 class PimDataSource;
-class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin
-    , public KCalCore::Calendar::CalendarObserver
+class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin, public KCalCore::Calendar::CalendarObserver
 {
     Q_OBJECT
     Q_INTERFACES(CalendarEvents::CalendarEventsPlugin)

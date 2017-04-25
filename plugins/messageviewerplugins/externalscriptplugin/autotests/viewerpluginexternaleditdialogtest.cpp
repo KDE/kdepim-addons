@@ -29,12 +29,10 @@
 ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest()
 {
-
 }
 
 void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()

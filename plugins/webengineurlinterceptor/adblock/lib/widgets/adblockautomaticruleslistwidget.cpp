@@ -29,7 +29,6 @@ AdBlockAutomaticRulesListWidget::AdBlockAutomaticRulesListWidget(QWidget *parent
 
 AdBlockAutomaticRulesListWidget::~AdBlockAutomaticRulesListWidget()
 {
-
 }
 
 void AdBlockAutomaticRulesListWidget::slotItemChanged(QListWidgetItem *item)
@@ -108,4 +107,3 @@ QStringList AdBlockAutomaticRulesListWidget::disabledRules() const
     }
     return currentDisabledRules;
 }
-

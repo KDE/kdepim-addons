@@ -25,9 +25,11 @@
 #include <QItemSelectionModel>
 
 StackedWidgetView::StackedWidgetView(int widgetRole, QWidget *parent)
-    : QStackedWidget(parent), m_model(0), m_selectionModel(0), m_widgetRole(widgetRole)
+    : QStackedWidget(parent)
+    , m_model(0)
+    , m_selectionModel(0)
+    , m_widgetRole(widgetRole)
 {
-
 }
 
 void StackedWidgetView::setModel(QAbstractItemModel *model)
@@ -57,6 +59,7 @@ void StackedWidgetView::refill()
         }
     }
 }
+
 void StackedWidgetView::insertRows(const QModelIndex &parent, int start, int end)
 {
     for (int i = start; i <= end; ++i) {

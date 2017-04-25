@@ -22,8 +22,7 @@
 
 #include <QWidget>
 class QWebEngineView;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockResult;
 }
 

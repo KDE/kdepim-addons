@@ -26,12 +26,10 @@ using namespace KContacts;
 MergeContactWidgetListTest::MergeContactWidgetListTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactWidgetListTest::~MergeContactWidgetListTest()
 {
-
 }
 
 void MergeContactWidgetListTest::shouldHaveDefaultValue()

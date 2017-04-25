@@ -25,12 +25,10 @@
 ChangeCasePluginEditorTest::ChangeCasePluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ChangeCasePluginEditorTest::~ChangeCasePluginEditorTest()
 {
-
 }
 
 void ChangeCasePluginEditorTest::shouldHaveDefaultValue()

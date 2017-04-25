@@ -26,12 +26,10 @@
 LogActivitiesPluginInterface::LogActivitiesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
-
 }
 
 LogActivitiesPluginInterface::~LogActivitiesPluginInterface()
 {
-
 }
 
 void LogActivitiesPluginInterface::createAction(KActionCollection *ac)

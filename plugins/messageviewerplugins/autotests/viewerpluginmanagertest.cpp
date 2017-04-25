@@ -24,12 +24,10 @@
 ViewerPluginManagerTest::ViewerPluginManagerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginManagerTest::~ViewerPluginManagerTest()
 {
-
 }
 
 void ViewerPluginManagerTest::shouldHaveDefaultValue()

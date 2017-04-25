@@ -63,8 +63,6 @@ private Q_SLOTS:
     void shouldHideMessageWidgetWhenCloseWidget();
     void shouldEnabledSaveOpenEditorButton();
     void shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty();
-
 };
 
 #endif // TODOEDITTEST_H
-

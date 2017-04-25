@@ -42,7 +42,6 @@ using namespace Akonadi;
 UnreadMailsTree::UnreadMailsTree(QObject *parent)
     : KRecursiveFilterProxyModel(parent)
 {
-
 }
 
 bool UnreadMailsTree::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
@@ -61,7 +60,8 @@ public:
     {
     }
 
-    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE {
+    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE
+    {
         m_collectionFilter = new Akonadi::EntityMimeTypeFilterModel(this);
         m_collectionFilter->addMimeTypeInclusionFilter(Akonadi::Collection::mimeType());
         m_collectionFilter->setSourceModel(model);
@@ -73,20 +73,19 @@ public:
         tree->setModel(m_unreadFilter);
     }
 
-    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE {
+    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE
+    {
         return m_collectionFilter->mapToSource(m_unreadFilter->mapToSource(idx));
     }
 
 private:
     Akonadi::EntityMimeTypeFilterModel *m_collectionFilter;
     UnreadMailsTree *m_unreadFilter;
-
 };
 
 UnreadMailsWidget::UnreadMailsWidget(QWidget *parent, Qt::WindowFlags f)
     : QWidget(parent, f)
 {
-
     QHBoxLayout *layout = new QHBoxLayout(this);
     QSplitter *splitter = new QSplitter(this);
     layout->addWidget(splitter);
@@ -110,5 +109,4 @@ UnreadMailsWidget::UnreadMailsWidget(QWidget *parent, Qt::WindowFlags f)
     m_itemView->setModel(itemFilter);
 
     ItemViewerWidget *viewerWidget = new ItemViewerWidget(m_itemView->selectionModel(), rhsContainer);
-
 }

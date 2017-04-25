@@ -69,14 +69,13 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
 
 MergeContactSelectInformationScrollArea::~MergeContactSelectInformationScrollArea()
 {
-
 }
 
 void MergeContactSelectInformationScrollArea::setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem, const Akonadi::Collection &col)
 {
     mCollection = col;
     mListItem = listItem;
-    if (conflictTypes == MergeContacts::None)  {
+    if (conflictTypes == MergeContacts::None) {
         MergeContacts contact(mListItem);
         KContacts::Addressee addr = contact.mergedContact();
         mergeContact(addr);
@@ -98,7 +97,7 @@ void MergeContactSelectInformationScrollArea::slotMergeContacts()
     const bool result = mSelectInformationWidget->verifySelectedInfo();
     if (!result) {
         if (KMessageBox::No == KMessageBox::warningYesNo(this, i18n("Some information was not selected. You can lose this information. Do you want to continue merging?"),
-                i18n("Missing Selected Information"))) {
+                                                         i18n("Missing Selected Information"))) {
             return;
         }
     }

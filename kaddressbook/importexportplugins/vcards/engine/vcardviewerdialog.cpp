@@ -29,8 +29,8 @@
 #include <QDialogButtonBox>
 
 VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent)
-    : QDialog(parent),
-      mContacts(list)
+    : QDialog(parent)
+    , mContacts(list)
 {
     setWindowTitle(i18nc("@title:window", "Import vCard"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -55,8 +55,8 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
 
     QVBoxLayout *layout = new QVBoxLayout(page);
 
-    QLabel *label =
-        new QLabel(
+    QLabel *label
+        = new QLabel(
         i18nc("@info", "Do you want to import this contact into your address book?"), page);
     QFont font = label->font();
     font.setBold(true);

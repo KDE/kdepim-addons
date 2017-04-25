@@ -39,8 +39,6 @@ public:
 private:
     QTreeView *m_itemView;
     EntityTreeWidget *m_etw;
-
 };
 
 #endif
-

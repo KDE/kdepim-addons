@@ -23,8 +23,7 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
 class QWebEngineView;
-namespace WebEngineViewer
-{
+namespace WebEngineViewer {
 class NetworkPluginUrlInterceptorInterface;
 }
 class AdblockPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor

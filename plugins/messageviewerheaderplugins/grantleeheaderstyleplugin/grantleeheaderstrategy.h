@@ -22,8 +22,7 @@
 
 #include <messageviewer/headerstrategy.h>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class GrantleeHeaderStrategy : public HeaderStrategy
 {
 public:
@@ -35,6 +34,7 @@ public:
     {
         return "grantlee";
     }
+
     DefaultPolicy defaultPolicy() const Q_DECL_OVERRIDE
     {
         return Hide;

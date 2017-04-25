@@ -25,7 +25,9 @@ class VCardImportExportPlugin : public KAddressBookImportExport::KAddressBookImp
 {
     Q_OBJECT
 public:
-    explicit VCardImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit VCardImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~VCardImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

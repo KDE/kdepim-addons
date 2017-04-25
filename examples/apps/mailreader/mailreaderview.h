@@ -10,13 +10,11 @@
 
 #include "ui_mailreaderview.h"
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class Viewer;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Item;
 }
 

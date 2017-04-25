@@ -27,8 +27,7 @@
 
 #include <QObject>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class CreateNoteJob : public KJob
 {
     Q_OBJECT

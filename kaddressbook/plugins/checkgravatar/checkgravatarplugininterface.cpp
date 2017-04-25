@@ -30,15 +30,13 @@
 #include <KContacts/Addressee>
 
 CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent),
-      mAction(nullptr)
+    : PimCommon::GenericPluginInterface(parent)
+    , mAction(nullptr)
 {
-
 }
 
 CheckGravatarPluginInterface::~CheckGravatarPluginInterface()
 {
-
 }
 
 void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
@@ -137,4 +135,3 @@ void CheckGravatarPluginInterface::slotModifyContactFinished(KJob *job)
         qCDebug(KADDRESSBOOK_CHECKGRAVATAR_LOG) << "Error while modifying items. " << job->error() << job->errorString();
     }
 }
-

@@ -44,5 +44,4 @@ MergeContactErrorLabel::MergeContactErrorLabel(ErrorType type, QWidget *parent)
 
 MergeContactErrorLabel::~MergeContactErrorLabel()
 {
-
 }

@@ -38,18 +38,18 @@ public:
         m_collectionHeaders << QLatin1String("Folder") << QLatin1String("Count");
         m_itemHeaders << QLatin1String("Subject") << QLatin1String("From") << QLatin1String("Date");
     }
+
     Q_DECLARE_PUBLIC(MailModel)
     MailModel *q_ptr;
 
     QStringList m_itemHeaders;
     QStringList m_collectionHeaders;
-
 };
 
 MailModel::MailModel(Monitor *monitor, QObject *parent)
-    : EntityTreeModel(monitor, parent), d_ptr(new MailModelPrivate(this))
+    : EntityTreeModel(monitor, parent)
+    , d_ptr(new MailModelPrivate(this))
 {
-
 }
 
 MailModel::~MailModel()
@@ -89,7 +89,8 @@ QVariant MailModel::entityData(const Collection &collection, int column, int rol
         switch (column) {
         case 0:
             return EntityTreeModel::entityData(collection, column, role);
-        case 1: {
+        case 1:
+        {
             const QModelIndex index = EntityTreeModel::modelIndexForCollection(this, collection);
             Q_ASSERT(index.isValid());
             return rowCount(index);

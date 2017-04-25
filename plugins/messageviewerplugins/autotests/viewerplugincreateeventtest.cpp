@@ -25,8 +25,7 @@
 #include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 }
 
@@ -39,7 +38,6 @@ ViewerPluginCreateeventTest::ViewerPluginCreateeventTest(QObject *parent)
 
 ViewerPluginCreateeventTest::~ViewerPluginCreateeventTest()
 {
-
 }
 
 void ViewerPluginCreateeventTest::shouldCreateAction()

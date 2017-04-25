@@ -29,8 +29,7 @@ class QTreeView;
 class QLineEdit;
 class QComboBox;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 class Monitor;
 }
@@ -52,6 +51,7 @@ public:
     {
         return index;
     }
+
     virtual Akonadi::EntityTreeModel *getETM();
 
 public:

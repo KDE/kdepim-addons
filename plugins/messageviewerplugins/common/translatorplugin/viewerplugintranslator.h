@@ -22,8 +22,7 @@
 
 #include <messageviewer/viewerplugin.h>
 #include <QVariant>
-namespace MessageViewer
-{
+namespace MessageViewer {
 class ViewerPluginTranslator : public MessageViewer::ViewerPlugin
 {
     Q_OBJECT

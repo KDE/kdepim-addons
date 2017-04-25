@@ -26,13 +26,11 @@
 
 #include <gpgme++/key.h>
 
-namespace GpgME
-{
+namespace GpgME {
 class KeyListResult;
 }
 
-class PgpKeyMemento : public QObject
-    , public MimeTreeParser::Interface::BodyPartMemento
+class PgpKeyMemento : public QObject, public MimeTreeParser::Interface::BodyPartMemento
 {
     Q_OBJECT
 public:

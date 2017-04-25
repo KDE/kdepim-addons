@@ -21,17 +21,16 @@
 #include "triopabshorturlengineinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(TriopAbShortUrlEnginePluginFactory, "pimcommon_triopabshorturlengineplugin.json", registerPlugin<TriopAbShortUrlEnginePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(TriopAbShortUrlEnginePluginFactory, "pimcommon_triopabshorturlengineplugin.json", registerPlugin<TriopAbShortUrlEnginePlugin>();
+                           )
 
 TriopAbShortUrlEnginePlugin::TriopAbShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
     : ShortUrlEnginePlugin(parent)
 {
-
 }
 
 TriopAbShortUrlEnginePlugin::~TriopAbShortUrlEnginePlugin()
 {
-
 }
 
 ShortUrlEngineInterface *TriopAbShortUrlEnginePlugin::createInterface(QObject *parent)

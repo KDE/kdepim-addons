@@ -25,12 +25,10 @@
 ViewerPluginExternalScriptInfoTest::ViewerPluginExternalScriptInfoTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalScriptInfoTest::~ViewerPluginExternalScriptInfoTest()
 {
-
 }
 
 void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()

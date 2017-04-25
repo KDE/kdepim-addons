@@ -490,4 +490,3 @@ void AdBlockSettingWidget::slotAutomaticFilterDouble(QListWidgetItem *item)
 {
     showAutomaticFilterList(item);
 }
-

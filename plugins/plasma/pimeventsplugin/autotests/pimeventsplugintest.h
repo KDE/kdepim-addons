@@ -25,8 +25,7 @@
 #include <KCalCore/Event>
 
 class QDate;
-namespace CalendarEvents
-{
+namespace CalendarEvents {
 class EventData;
 }
 class FakePimDataSource;
@@ -45,11 +44,9 @@ private Q_SLOTS:
     void testEventRemoved();
 
 private:
-    bool compareEventDataHashes(const DateEventDataHash &actual,
-                                const DateEventDataHash &expected);
+    bool compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected);
     DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
-    QVector<CalendarEvents::EventData> findEventData(const KCalCore::Event::Ptr &event,
-            const DateEventDataHash &allData);
+    QVector<CalendarEvents::EventData> findEventData(const KCalCore::Event::Ptr &event, const DateEventDataHash &allData);
 };
 
 #endif

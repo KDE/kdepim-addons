@@ -33,7 +33,6 @@ ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
 
 ConfirmAddressWidgetTest::~ConfirmAddressWidgetTest()
 {
-
 }
 
 void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
@@ -56,7 +55,9 @@ void ConfirmAddressWidgetTest::shouldAddAddress()
 {
     ConfirmAddressWidget w;
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("blo")};
+    const QStringList lst {
+        QStringLiteral("foo"), QStringLiteral("bla"), QStringLiteral("blo")
+    };
     w.setValidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count());
 }
@@ -65,7 +66,9 @@ void ConfirmAddressWidgetTest::shouldAddValidAndInvalidAddresses()
 {
     ConfirmAddressWidget w;
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    const QStringList lst {
+        QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")
+    };
     w.setValidAddresses(lst);
     w.setInvalidAddresses(lst);
     QCOMPARE(listEmails->count(), lst.count() * 2);
@@ -75,7 +78,9 @@ void ConfirmAddressWidgetTest::shouldHaveCheckableItem()
 {
     ConfirmAddressWidget w;
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
+    const QStringList lst {
+        QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")
+    };
     w.setValidAddresses(lst);
     for (int i = 0; i < listEmails->count(); ++i) {
         QListWidgetItem *item = listEmails->item(i);
@@ -93,8 +98,12 @@ void ConfirmAddressWidgetTest::shouldGetWhileListEmails()
 {
     ConfirmAddressWidget w;
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
-    const QStringList validLst{ QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")};
-    const QStringList invalidLst{ QStringLiteral("boo"), QStringLiteral("boo2"), QStringLiteral("boo3")};
+    const QStringList validLst {
+        QStringLiteral("foo"), QStringLiteral("foo"), QStringLiteral("foo")
+    };
+    const QStringList invalidLst {
+        QStringLiteral("boo"), QStringLiteral("boo2"), QStringLiteral("boo3")
+    };
     w.setValidAddresses(validLst);
     w.setInvalidAddresses(invalidLst);
     for (int i = 0; i < listEmails->count(); ++i) {

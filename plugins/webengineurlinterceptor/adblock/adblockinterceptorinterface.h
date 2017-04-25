@@ -23,8 +23,7 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <WebEngineViewer/WebHitTestResult>
 class QWebEngineView;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdblockManager;
 class AdBlockResult;
 }

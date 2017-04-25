@@ -98,7 +98,7 @@ void GravatarUpdateWidget::setOriginalUrl(const QUrl &url)
     QByteArray imageData;
     KIO::TransferJob *job = KIO::get(url, KIO::NoReload);
     QObject::connect(job, &KIO::TransferJob::data,
-    [&imageData](KIO::Job *, const QByteArray & data) {
+                     [&imageData](KIO::Job *, const QByteArray &data) {
         imageData.append(data);
     });
     if (job->exec()) {
@@ -163,4 +163,3 @@ void GravatarUpdateWidget::slotSearchGravatarFinished(Gravatar::GravatarResolvUr
     Q_EMIT activateDialogButton(foundGravatar);
     mSearchGravatar->setEnabled(true);
 }
-

@@ -21,16 +21,15 @@
 #include "vcardimportexportplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(VCardImportExportPluginFactory, "kaddressbook_importexportvcardplugin.json", registerPlugin<VCardImportExportPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(VCardImportExportPluginFactory, "kaddressbook_importexportvcardplugin.json", registerPlugin<VCardImportExportPlugin>();
+                           )
 VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
-
 }
 
 VCardImportExportPlugin::~VCardImportExportPlugin()
 {
-
 }
 
 PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)

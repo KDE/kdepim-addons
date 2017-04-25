@@ -32,7 +32,6 @@ MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget
 
 MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget()
 {
-
 }
 
 void MergeContactSelectInformationWidget::setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem)
@@ -155,7 +154,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
             case MergeContacts::NickName:
                 addr.setNickName(mAddressList.at(selectedContactIndex).nickName());
                 break;
-            case MergeContacts::Blog: {
+            case MergeContacts::Blog:
+            {
                 const QString newBlog = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"), newBlog);
                 break;
@@ -166,7 +166,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
             case MergeContacts::Organization:
                 addr.setOrganization(mAddressList.at(selectedContactIndex).organization());
                 break;
-            case MergeContacts::Profession: {
+            case MergeContacts::Profession:
+            {
                 const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"), newValue);
                 break;
@@ -177,17 +178,20 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
             case MergeContacts::Departement:
                 addr.setDepartment(mAddressList.at(selectedContactIndex).department());
                 break;
-            case MergeContacts::Office: {
+            case MergeContacts::Office:
+            {
                 const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"), newValue);
                 break;
             }
-            case MergeContacts::ManagerName: {
+            case MergeContacts::ManagerName:
+            {
                 const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"), newValue);
                 break;
             }
-            case MergeContacts::Assistant: {
+            case MergeContacts::Assistant:
+            {
                 const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"), newValue);
                 break;
@@ -198,7 +202,8 @@ void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &ad
             case MergeContacts::FamilyName:
                 addr.setFamilyName(mAddressList.at(selectedContactIndex).familyName());
                 break;
-            case MergeContacts::PartnerName: {
+            case MergeContacts::PartnerName:
+            {
                 const QString newValue = mAddressList.at(selectedContactIndex).custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"));
                 addr.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"), newValue);
                 break;

@@ -37,7 +37,9 @@
 using namespace Akonadi;
 
 Trip::Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripComponentFactory *factory, QObject *parent)
-    : QObject(parent), m_index(index), m_monitor(monitor)
+    : QObject(parent)
+    , m_index(index)
+    , m_monitor(monitor)
 {
     QAbstractItemModel *model = const_cast<QAbstractItemModel *>(m_index.model());
     connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), SLOT(dataChanged(QModelIndex,QModelIndex)));

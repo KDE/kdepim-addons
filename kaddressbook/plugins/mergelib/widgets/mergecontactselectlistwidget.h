@@ -27,12 +27,10 @@
 #include <QIcon>
 class QLabel;
 class QListWidget;
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectListWidget : public QWidget
 {
     Q_OBJECT

@@ -27,12 +27,10 @@
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ReactionToInvitationDialogTest::~ReactionToInvitationDialogTest()
 {
-
 }
 
 void ReactionToInvitationDialogTest::shouldHaveDefaultValue()

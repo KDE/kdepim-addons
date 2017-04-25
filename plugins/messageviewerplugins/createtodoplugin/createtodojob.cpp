@@ -30,10 +30,10 @@
 using namespace MessageViewer;
 
 CreateTodoJob::CreateTodoJob(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
-    : KJob(parent),
-      mItem(item),
-      mCollection(collection),
-      mTodoPtr(todoPtr)
+    : KJob(parent)
+    , mItem(item)
+    , mCollection(collection)
+    , mTodoPtr(todoPtr)
 {
 }
 

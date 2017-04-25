@@ -21,17 +21,16 @@
 #include "zoomtextplugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ZoomTextPluginEditorFactory, "kmail_zoomtexteditorplugin.json", registerPlugin<ZoomTextPluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(ZoomTextPluginEditorFactory, "kmail_zoomtexteditorplugin.json", registerPlugin<ZoomTextPluginEditor>();
+                           )
 
 ZoomTextPluginEditor::ZoomTextPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
-
 }
 
 ZoomTextPluginEditor::~ZoomTextPluginEditor()
 {
-
 }
 
 MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(KActionCollection *ac, QObject *parent)

@@ -29,8 +29,8 @@
 
 using namespace AdBlock;
 AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
-    : QDialog(parent),
-      mCurrentType(AdBlockBlockableItemsWidget::None)
+    : QDialog(parent)
+    , mCurrentType(AdBlockBlockableItemsWidget::None)
 {
     setWindowTitle(i18n("Create Filter"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -104,7 +104,6 @@ void AdBlockCreateFilterDialog::initialize()
         if (i == (int)mCurrentType) {
             item->setFlags(item->flags() & ~Qt::ItemIsEnabled);
         }
-
     }
     mUi->blockingFilter->setChecked(true);
     mUi->filtercustom->setText(mPattern);
@@ -157,4 +156,3 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
     }
     mUi->filterName->setText(pattern);
 }
-

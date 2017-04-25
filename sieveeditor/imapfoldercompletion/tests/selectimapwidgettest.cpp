@@ -40,12 +40,10 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
         lineEdit = factory->create<KSieveUi::AbstractMoveImapFolderWidget>();
     }
     mainLayout->addWidget(lineEdit);
-
 }
 
 SelectImapWidgetTest::~SelectImapWidgetTest()
 {
-
 }
 
 DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)

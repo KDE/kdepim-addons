@@ -22,8 +22,7 @@
 
 class KUrlRequester;
 class QUrl;
-namespace MailMerge
-{
+namespace MailMerge {
 class CsvWidget : public QWidget
 {
     Q_OBJECT

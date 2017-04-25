@@ -28,16 +28,15 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-namespace
-{
+namespace {
 QString configGroupName()
 {
     return QStringLiteral("Automatic Add Contacts %1");
 }
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
-    : QWidget(parent),
-      mIdentity(0)
+    : QWidget(parent)
+    , mIdentity(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -72,7 +71,6 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
 
 AutomaticAddContactsTabWidget::~AutomaticAddContactsTabWidget()
 {
-
 }
 
 void AutomaticAddContactsTabWidget::resetSettings()

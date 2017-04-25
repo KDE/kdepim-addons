@@ -24,17 +24,16 @@
 #include <pimcommon/customtoolswidgetng.h>
 
 using namespace PimCommon;
-K_PLUGIN_FACTORY_WITH_JSON(PimCommonShorturlPluginFactory, "pimcommon_shorturlplugin.json", registerPlugin<ShorturlPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(PimCommonShorturlPluginFactory, "pimcommon_shorturlplugin.json", registerPlugin<ShorturlPlugin>();
+                           )
 
 ShorturlPlugin::ShorturlPlugin(QObject *parent, const QList<QVariant> &)
     : CustomToolsPlugin(parent)
 {
-
 }
 
 ShorturlPlugin::~ShorturlPlugin()
 {
-
 }
 
 CustomToolsViewInterface *ShorturlPlugin::createView(KActionCollection *ac, CustomToolsWidgetNg *parent)

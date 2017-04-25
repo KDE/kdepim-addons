@@ -39,7 +39,6 @@ ViewerPluginExpandurlInterface::ViewerPluginExpandurlInterface(KActionCollection
 
 ViewerPluginExpandurlInterface::~ViewerPluginExpandurlInterface()
 {
-
 }
 
 QList<QAction *> ViewerPluginExpandurlInterface::actions() const

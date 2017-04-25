@@ -26,12 +26,10 @@ using namespace MessageViewer;
 BriefHeaderStyleInterface::BriefHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent)
 {
-
 }
 
 BriefHeaderStyleInterface::~BriefHeaderStyleInterface()
 {
-
 }
 
 void BriefHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
@@ -48,4 +46,3 @@ void BriefHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
-

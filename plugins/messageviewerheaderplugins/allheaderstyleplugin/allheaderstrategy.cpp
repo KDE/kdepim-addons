@@ -24,10 +24,8 @@ using namespace MessageViewer;
 AllHeaderStrategy::AllHeaderStrategy()
     : HeaderStrategy()
 {
-
 }
 
 AllHeaderStrategy::~AllHeaderStrategy()
 {
-
 }

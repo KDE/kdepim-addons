@@ -43,7 +43,6 @@ private:
         ConfirmAddressSettings()
             : mRejectedDomain(false)
         {
-
         }
 
         QStringList mDomains;
@@ -52,7 +51,6 @@ private:
     };
 
     QHash<uint, ConfirmAddressSettings> mHashSettings;
-
 };
 
 #endif // CONFIRMADDRESSINTERFACE_H

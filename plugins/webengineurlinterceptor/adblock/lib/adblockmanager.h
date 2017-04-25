@@ -23,8 +23,7 @@
 #include <QObject>
 #include <QWebEngineUrlRequestInfo>
 #include "adblocklib_export.h"
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockMatcher;
 class AdBlockSubscription;
 class ADBLOCKLIB_EXPORT AdblockManager : public QObject

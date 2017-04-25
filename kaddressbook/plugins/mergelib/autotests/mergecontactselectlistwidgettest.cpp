@@ -27,12 +27,10 @@
 MergeContactSelectListWidgetTest::MergeContactSelectListWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactSelectListWidgetTest::~MergeContactSelectListWidgetTest()
 {
-
 }
 
 void MergeContactSelectListWidgetTest::shouldHaveDefaultValue()

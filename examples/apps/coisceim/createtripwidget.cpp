@@ -41,7 +41,9 @@
 using namespace Akonadi;
 
 CreateTripWidget::CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidget *parent, Qt::WindowFlags f)
-    : QWidget(parent, f), m_trip(trip), m_monitor(monitor)
+    : QWidget(parent, f)
+    , m_trip(trip)
+    , m_monitor(monitor)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
 

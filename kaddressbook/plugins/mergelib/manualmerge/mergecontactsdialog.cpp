@@ -75,7 +75,6 @@ MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     mStackedWidget->addWidget(mMergeContactInfo);
 
     mStackedWidget->setCurrentWidget(mNoContactSelected);
-
 }
 
 MergeContactsDialog::~MergeContactsDialog()

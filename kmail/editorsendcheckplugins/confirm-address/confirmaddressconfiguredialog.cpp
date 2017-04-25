@@ -23,8 +23,8 @@
 #include <KLocalizedString>
 
 ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
-    : PimCommon::ConfigurePluginDialog(parent),
-      mConfigureWidget(nullptr)
+    : PimCommon::ConfigurePluginDialog(parent)
+    , mConfigureWidget(nullptr)
 {
     setWindowTitle(i18n("Configure \"Confirm Email Address\" Before Send Plugin"));
     initLayout();
@@ -32,7 +32,6 @@ ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
 
 ConfirmAddressConfigureDialog::~ConfirmAddressConfigureDialog()
 {
-
 }
 
 QWidget *ConfirmAddressConfigureDialog::createLayout()

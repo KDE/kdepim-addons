@@ -33,7 +33,8 @@
 #include <QTextEdit>
 #include <QLabel>
 
-K_PLUGIN_FACTORY(CoisceimPartFactory, registerPlugin<CoisceimPart>();)
+K_PLUGIN_FACTORY(CoisceimPartFactory, registerPlugin<CoisceimPart>();
+                 )
 
 CoisceimPart::CoisceimPart(QWidget *parentWidget, QObject *parent, const QVariantList & /*args*/)
     : KParts::ReadOnlyPart(parent)
@@ -47,4 +48,5 @@ CoisceimPart::CoisceimPart(QWidget *parentWidget, QObject *parent, const QVarian
 CoisceimPart::~CoisceimPart()
 {
 }
+
 #include "coisceimpart.moc"

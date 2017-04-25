@@ -26,12 +26,10 @@
 InsertSpecialCharacterPluginEditorInterface::InsertSpecialCharacterPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
-
 }
 
 InsertSpecialCharacterPluginEditorInterface::~InsertSpecialCharacterPluginEditorInterface()
 {
-
 }
 
 void InsertSpecialCharacterPluginEditorInterface::createAction(KActionCollection *ac)

@@ -15,8 +15,7 @@ class mailreaderView;
 class QAction;
 class KJob;
 
-namespace MessageList
-{
+namespace MessageList {
 class Pane;
 }
 

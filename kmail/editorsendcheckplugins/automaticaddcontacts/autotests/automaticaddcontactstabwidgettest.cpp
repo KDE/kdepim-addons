@@ -49,12 +49,10 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
 
         mComboboxModel->appendRow(item);
     }
-
 }
 
 AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest()
 {
-
 }
 
 AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactWidget()

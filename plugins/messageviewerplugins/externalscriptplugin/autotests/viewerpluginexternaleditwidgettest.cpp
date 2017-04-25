@@ -27,12 +27,10 @@
 ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest()
 {
-
 }
 
 void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()

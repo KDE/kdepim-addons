@@ -32,7 +32,6 @@ AutomaticAddContactsConfigureTabTest::AutomaticAddContactsConfigureTabTest(QObje
 
 AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest()
 {
-
 }
 
 void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()

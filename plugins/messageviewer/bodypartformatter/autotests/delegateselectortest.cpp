@@ -29,12 +29,10 @@
 DelegateSelectorTest::DelegateSelectorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 DelegateSelectorTest::~DelegateSelectorTest()
 {
-
 }
 
 void DelegateSelectorTest::shouldHaveDefaultValue()

@@ -23,8 +23,7 @@
 #include <Akonadi/Calendar/CalendarBase>
 #include <QVector>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 
@@ -58,4 +57,3 @@ private:
 };
 
 #endif
-

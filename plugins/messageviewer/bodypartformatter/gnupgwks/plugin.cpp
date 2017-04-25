@@ -24,8 +24,7 @@
 #include "pgpkeyformatter.h"
 #include "pgpkeyurlhandler.h"
 
-namespace
-{
+namespace {
 enum Index {
     multipart_mixed,
     application_vnd_gnupg_keys,
@@ -87,8 +86,8 @@ const MimeTreeParser::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::
 }
 
 extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
-messageviewer_bodypartformatter_application_gnupgwks_create_bodypart_formatter_plugin()
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
+*messageviewer_bodypartformatter_application_gnupgwks_create_bodypart_formatter_plugin()
 {
     return new ApplicationGnuPGWKSPlugin();
 }

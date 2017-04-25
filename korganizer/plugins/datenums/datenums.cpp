@@ -32,7 +32,7 @@ Datenums::Datenums()
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");
     mDisplayedInfo = (DayNumbers)config.readEntry(
-                         "ShowDayNumbers", int(DayOfYear | DaysRemaining));
+        "ShowDayNumbers", int(DayOfYear | DaysRemaining));
 }
 
 void Datenums::configure(QWidget *parent)
@@ -71,10 +71,10 @@ Element::List Datenums::createDayElements(const QDate &date)
                                     dayOfYear, remainingDays),
                               i18np("1 day since the beginning of the year,\n",
                                     "%1 days since the beginning of the year,\n",
-                                    dayOfYear) +
-                              i18np("1 day until the end of the year",
-                                    "%1 days until the end of the year",
-                                    remainingDays));
+                                    dayOfYear)
+                              +i18np("1 day until the end of the year",
+                                     "%1 days until the end of the year",
+                                     remainingDays));
         break;
     }
     result.append(e);
@@ -86,9 +86,10 @@ static int weeksInYear(int year)
 {
     QDate date(year, 12, 31);
     for (int i = 0; i < 6; ++i) {
-        if (date.weekNumber() > 1)
+        if (date.weekNumber() > 1) {
             break;
-	date = date.addDays(-1);
+        }
+        date = date.addDays(-1);
     }
     return date.weekNumber();
 }
@@ -120,7 +121,6 @@ Element::List Datenums::createWeekElements(const QDate &date)
                                 weekOfYear);
 
     if (yearOfTheWeek) {    // The week does not belong to this year
-
         weekOfYearShort = i18nc("weekOfYear (year)",
                                 "%1 (%2)", weekOfYear, *yearOfTheWeek);
         weekOfYearLong = i18nc("Week weekOfYear (year)",
@@ -133,7 +133,6 @@ Element::List Datenums::createWeekElements(const QDate &date)
             weekOfYearExtensive = i18np("1 week since the beginning of the year",
                                         "%1 weeks since the beginning of the year",
                                         weekOfYear);
-
         } else {
             // The week belongs to last year
             remainingWeeks = weeksInYear(date.year());
@@ -151,8 +150,8 @@ Element::List Datenums::createWeekElements(const QDate &date)
                                     "%1 weeks until the end of the year",
                                     remainingWeeks);
     weekOfYearAndRemainingWeeksShort = i18nc("weekOfYear / weeksTillEndOfYear",
-                                       "%1 / %2", weekOfYear,
-                                       remainingWeeks);
+                                             "%1 / %2", weekOfYear,
+                                             remainingWeeks);
 
     StoredElement *e = nullptr;
     switch (mDisplayedInfo) {
@@ -178,4 +177,3 @@ Element::List Datenums::createWeekElements(const QDate &date)
 
     return result;
 }
-

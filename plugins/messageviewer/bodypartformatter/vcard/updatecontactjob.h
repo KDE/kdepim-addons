@@ -22,8 +22,7 @@
 
 #include <kjob.h>
 
-namespace KContacts
-{
+namespace KContacts {
 class Addressee;
 }
 

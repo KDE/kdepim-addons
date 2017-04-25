@@ -21,12 +21,12 @@
 #include "checkgravatarplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(CheckGravatarPluginFactory, "kaddressbook_checkgravatarplugin.json", registerPlugin<CheckGravatarPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(CheckGravatarPluginFactory, "kaddressbook_checkgravatarplugin.json", registerPlugin<CheckGravatarPlugin>();
+                           )
 
 CheckGravatarPlugin::CheckGravatarPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 CheckGravatarPlugin::~CheckGravatarPlugin()

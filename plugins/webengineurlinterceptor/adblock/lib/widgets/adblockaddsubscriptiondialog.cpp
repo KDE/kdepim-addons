@@ -73,7 +73,6 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
 
 AdBlockAddSubscriptionDialog::~AdBlockAddSubscriptionDialog()
 {
-
 }
 
 void AdBlockAddSubscriptionDialog::initializeList(const QStringList &excludeList)

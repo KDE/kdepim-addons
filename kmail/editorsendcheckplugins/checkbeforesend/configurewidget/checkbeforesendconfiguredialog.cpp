@@ -22,8 +22,8 @@
 #include <KLocalizedString>
 
 CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
-    : PimCommon::ConfigurePluginDialog(parent),
-      mConfigureWidget(nullptr)
+    : PimCommon::ConfigurePluginDialog(parent)
+    , mConfigureWidget(nullptr)
 {
     setWindowTitle(i18n("Configure \"Check Before Send Mail\" Plugin"));
     initLayout();
@@ -31,7 +31,6 @@ CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
 
 CheckBeforeSendConfigureDialog::~CheckBeforeSendConfigureDialog()
 {
-
 }
 
 QWidget *CheckBeforeSendConfigureDialog::createLayout()

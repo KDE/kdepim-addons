@@ -22,8 +22,7 @@
 
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
-namespace WebEngineViewer
-{
+namespace WebEngineViewer {
 class NetworkPluginUrlInterceptorInterface;
 }
 class DoNotTrackPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor

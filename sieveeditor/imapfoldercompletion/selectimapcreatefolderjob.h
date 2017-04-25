@@ -23,8 +23,7 @@
 #include <QObject>
 #include <KSieveUi/SieveImapAccountSettings>
 class KJob;
-namespace KIMAP
-{
+namespace KIMAP {
 class Session;
 }
 class SelectImapCreateFolderJob : public QObject

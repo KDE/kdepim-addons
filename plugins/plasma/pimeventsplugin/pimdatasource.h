@@ -22,15 +22,16 @@
 
 #include <KCalCore/Incidence>
 
-namespace KCalCore
-{
+namespace KCalCore {
 class Calendar;
 }
 
 class PimDataSource
 {
 public:
-    virtual ~PimDataSource() {}
+    virtual ~PimDataSource()
+    {
+    }
 
     virtual KCalCore::Calendar *calendar() const = 0;
     virtual qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;

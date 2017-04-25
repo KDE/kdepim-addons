@@ -41,8 +41,8 @@
 using namespace AdBlock;
 AdBlockMatcher::AdBlockMatcher(AdblockManager *manager)
     : QObject(manager)
-    , m_manager(manager),
-      m_enabled(false)
+    , m_manager(manager)
+    , m_enabled(false)
 {
     connect(manager, &AdblockManager::enabledChanged, this, &AdBlockMatcher::enabledChanged);
 }
@@ -87,10 +87,11 @@ bool AdBlockMatcher::adBlockDisabledForUrl(const QUrl &url) const
 {
     const int count = m_documentRules.count();
 
-    for (int i = 0; i < count; ++i)
+    for (int i = 0; i < count; ++i) {
         if (m_documentRules.at(i)->urlMatch(url)) {
             return true;
         }
+    }
 
     return false;
 }
@@ -103,10 +104,11 @@ bool AdBlockMatcher::elemHideDisabledForUrl(const QUrl &url) const
 
     const int count = m_elemhideRules.count();
 
-    for (int i = 0; i < count; ++i)
+    for (int i = 0; i < count; ++i) {
         if (m_elemhideRules.at(i)->urlMatch(url)) {
             return true;
         }
+    }
 
     return false;
 }

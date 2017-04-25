@@ -35,7 +35,6 @@ MergeContactsJob::MergeContactsJob(QObject *parent)
 
 MergeContactsJob::~MergeContactsJob()
 {
-
 }
 
 bool MergeContactsJob::canStart()
@@ -51,7 +50,6 @@ bool MergeContactsJob::canStart()
         }
     }
     return true;
-
 }
 
 void MergeContactsJob::start()

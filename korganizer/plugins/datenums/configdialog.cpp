@@ -80,7 +80,7 @@ void ConfigDialog::load()
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");
     int datenum = config.readEntry(
-                      "ShowDayNumbers", int(Datenums::DayOfYear | Datenums::DaysRemaining));
+        "ShowDayNumbers", int(Datenums::DayOfYear | Datenums::DaysRemaining));
     QAbstractButton *btn = mDayNumGroup->button(datenum);
     if (!btn) {
         btn = mDayNumGroup->button(int(Datenums::DayOfYear | Datenums::DaysRemaining));
@@ -101,4 +101,3 @@ void ConfigDialog::slotOk()
     save();
     accept();
 }
-

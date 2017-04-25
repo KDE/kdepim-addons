@@ -68,8 +68,8 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     lab = new QLabel(i18n("Attachment:"));
     vbox->addWidget(lab);
 
-    PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
-        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
+    PimCommon::SimpleStringListEditor::ButtonCode buttonCode
+        = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mAttachment = new AttachmentListWidget(this, buttonCode,
                                            i18n("A&dd..."), i18n("Re&move"),
                                            i18n("Mod&ify..."));
@@ -81,7 +81,6 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
 MailMergeWidget::~MailMergeWidget()
 {
-
 }
 
 void MailMergeWidget::slotSourceChanged(int index)

@@ -28,12 +28,10 @@
 BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 BriefHeaderStylePluginTest::~BriefHeaderStylePluginTest()
 {
-
 }
 
 void BriefHeaderStylePluginTest::shouldHaveDefaultValue()

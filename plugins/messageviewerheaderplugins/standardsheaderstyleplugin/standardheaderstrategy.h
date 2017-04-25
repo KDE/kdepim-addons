@@ -23,8 +23,7 @@
 #include <messageviewer/headerstrategy.h>
 #include <QStringList>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 //
 // StandardHeaderStrategy:
 //   BCC, CC, Date, From, Subject, To
@@ -46,6 +45,7 @@ public:
     {
         return mHeadersToDisplay;
     }
+
     DefaultPolicy defaultPolicy() const Q_DECL_OVERRIDE
     {
         return Hide;
@@ -54,6 +54,5 @@ public:
 private:
     const QStringList mHeadersToDisplay;
 };
-
 }
 #endif // STANDARDHEADERSTRATEGY_H

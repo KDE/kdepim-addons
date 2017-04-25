@@ -39,7 +39,6 @@ public:
 
 protected:
     /* reimp */ bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
-
 };
 
 class UnreadMailsWidget : public QWidget

@@ -53,8 +53,6 @@ private:
     QPersistentModelIndex m_persistentIndex;
     QLineEdit *m_titleEdit;
     QTextEdit *m_contentEdit;
-
 };
 
 #endif
-

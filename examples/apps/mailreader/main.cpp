@@ -6,8 +6,8 @@
 #include <QCommandLineParser>
 #include <QCommandLineOption>
 
-static const char description[] =
-    I18N_NOOP("A KDE 4 Application");
+static const char description[]
+    = I18N_NOOP("A KDE 4 Application");
 
 int main(int argc, char **argv)
 {
@@ -42,7 +42,6 @@ int main(int argc, char **argv)
                 widget->show();
             }
         }
-
     }
 
     return app.exec();

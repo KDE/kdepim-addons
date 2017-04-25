@@ -67,7 +67,6 @@ EventSelectorDialog::EventSelectorDialog(QWidget *parent, Qt::WindowFlags f)
     model->setCollectionFetchStrategy(MixedTreeModel::InvisibleCollectionFetch);
 
     m_view->setModel(model);
-
 }
 
 Item EventSelectorDialog::selectedItem()
@@ -112,4 +111,3 @@ void EventSelectorWidget::clear()
 {
     m_browser->setItem(Item());
 }
-

@@ -30,8 +30,7 @@ class KCategorizedView;
 
 class EntityTreeWidget;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 }
 
@@ -47,8 +46,6 @@ private Q_SLOTS:
 private:
     KCategorizedView *m_itemView;
     EntityTreeWidget *m_etw;
-
 };
 
 #endif
-

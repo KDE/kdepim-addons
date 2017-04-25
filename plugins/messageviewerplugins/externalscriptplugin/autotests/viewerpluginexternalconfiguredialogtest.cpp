@@ -26,12 +26,10 @@
 ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalConfigureDialogTest::~ViewerPluginExternalConfigureDialogTest()
 {
-
 }
 
 void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()

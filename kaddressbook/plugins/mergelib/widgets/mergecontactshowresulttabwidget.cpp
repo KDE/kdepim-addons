@@ -69,4 +69,3 @@ void MergeContactShowResultTabWidget::addMergedContact(const Akonadi::Item &item
         qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " don't have address";
     }
 }
-

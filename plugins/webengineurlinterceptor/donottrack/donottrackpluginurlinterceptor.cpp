@@ -22,7 +22,8 @@
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(DoNotTrackPluginUrlInterceptorFactory, "messageviewer_donottrackurlinterceptor.json", registerPlugin<DoNotTrackPluginUrlInterceptor>();)
+K_PLUGIN_FACTORY_WITH_JSON(DoNotTrackPluginUrlInterceptorFactory, "messageviewer_donottrackurlinterceptor.json", registerPlugin<DoNotTrackPluginUrlInterceptor>();
+                           )
 DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
     : WebEngineViewer::NetworkPluginUrlInterceptor(parent)
 {
@@ -30,7 +31,6 @@ DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, 
 
 DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor()
 {
-
 }
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)

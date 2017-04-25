@@ -25,12 +25,10 @@
 MergeContactSelectInformationWidgetTest::MergeContactSelectInformationWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactSelectInformationWidgetTest::~MergeContactSelectInformationWidgetTest()
 {
-
 }
 
 void MergeContactSelectInformationWidgetTest::shouldHaveDefaultValue()

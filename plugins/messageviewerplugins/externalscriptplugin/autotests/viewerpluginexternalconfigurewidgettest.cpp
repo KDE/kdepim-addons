@@ -28,12 +28,10 @@
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTest()
 {
-
 }
 
 void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()

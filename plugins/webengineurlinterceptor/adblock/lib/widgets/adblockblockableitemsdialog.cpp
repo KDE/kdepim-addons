@@ -81,4 +81,3 @@ void AdBlockBlockableItemsDialog::readConfig()
         resize(sizeDialog);
     }
 }
-

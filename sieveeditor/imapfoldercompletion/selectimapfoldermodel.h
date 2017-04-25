@@ -23,8 +23,7 @@
 #include <QObject>
 #include <QHash>
 class QStandardItemModel;
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveImapAccountSettings;
 }
 class SelectImapFolderModel : public QObject

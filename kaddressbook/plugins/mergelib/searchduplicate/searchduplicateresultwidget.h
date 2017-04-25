@@ -25,16 +25,13 @@
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
 class QPushButton;
-namespace KAddressBookGrantlee
-{
+namespace KAddressBookGrantlee {
 class GrantleeContactViewer;
 }
-namespace Akonadi
-{
+namespace Akonadi {
 class CollectionComboBox;
 }
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class ResultDuplicateTreeWidget;
 class MergeContactLoseInformationWarning;
 

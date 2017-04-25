@@ -22,8 +22,7 @@
 #include "pimcommon/customtoolsplugin.h"
 
 #include <QVariant>
-namespace PimCommon
-{
+namespace PimCommon {
 class ShorturlPlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
@@ -33,7 +32,6 @@ public:
 
     CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
     QString customToolName() const Q_DECL_OVERRIDE;
-
 };
 }
 #endif // SHORTURLPLUGIN_H

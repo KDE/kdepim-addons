@@ -40,15 +40,12 @@ class QCheckBox;
 class QBoxLayout;
 class QListWidget;
 
-namespace MailCommon
-{
+namespace MailCommon {
 class FolderTreeWidget;
 class FolderRequester;
 }
 
-namespace KMail
-{
-
+namespace KMail {
 class ASWizInfoPage;
 class ASWizSpamRulesPage;
 class ASWizVirusRulesPage;
@@ -111,7 +108,9 @@ public:
     /** The wizard can be used for setting up anti-spam tools and for
           setting up anti-virus tools.
       */
-    enum WizardMode { AntiSpam, AntiVirus };
+    enum WizardMode {
+        AntiSpam, AntiVirus
+    };
 
     /** Constructor that needs to initialize from the main folder tree
         of KMail.
@@ -121,8 +120,7 @@ public:
           are copied to allow the selection of a spam folder in a tree
           within one of the wizard pages.
       */
-    AntiSpamWizard(WizardMode mode,
-                   QWidget *parent);
+    AntiSpamWizard(WizardMode mode, QWidget *parent);
 
 protected:
     /**
@@ -133,16 +131,13 @@ protected:
     class SpamToolConfig
     {
     public:
-        SpamToolConfig() {}
-        SpamToolConfig(const QString &toolId, int configVersion, int prio,
-                       const QString &name, const QString &exec,
-                       const QString &url, const QString &filter,
-                       const QString &detection, const QString &spam,
-                       const QString &ham, const QString &noSpam,
-                       const QString &header, const QString &pattern,
-                       const QString &pattern2, const QString &serverPattern,
-                       bool detectionOnly, bool regExp, bool bayesFilter,
-                       bool tristateDetection, WizardMode type);
+        SpamToolConfig()
+        {
+        }
+
+        SpamToolConfig(const QString &toolId, int configVersion, int prio, const QString &name, const QString &exec, const QString &url, const QString &filter, const QString &detection,
+                       const QString &spam, const QString &ham, const QString &noSpam, const QString &header, const QString &pattern, const QString &pattern2, const QString &serverPattern,
+                       bool detectionOnly, bool regExp, bool bayesFilter, bool tristateDetection, WizardMode type);
 
         int getVersion() const;
         int getPrio() const;
@@ -221,8 +216,7 @@ protected:
     class ConfigReader
     {
     public:
-        ConfigReader(WizardMode mode,
-                     QList<SpamToolConfig> &configList);
+        ConfigReader(WizardMode mode, QList<SpamToolConfig> &configList);
         ~ConfigReader();
 
         QList<SpamToolConfig> &getToolList()
@@ -267,9 +261,7 @@ private:
     /* convenience method calling the appropriate filter manager method */
     const QString uniqueNameFor(const QString &name);
     /* convenience method to sort out new and existing filters */
-    void sortFilterOnExistance(const QString &intendedFilterName,
-                               QString &newFilters,
-                               QString &replaceFilters);
+    void sortFilterOnExistance(const QString &intendedFilterName, QString &newFilters, QString &replaceFilters);
 
     /* The pages in the wizard */
     ASWizInfoPage *mInfoPage;
@@ -310,8 +302,7 @@ class ASWizInfoPage : public ASWizPage
     Q_OBJECT
 
 public:
-    ASWizInfoPage(AntiSpamWizard::WizardMode mode,
-                  QWidget *parent, const QString &name);
+    ASWizInfoPage(AntiSpamWizard::WizardMode mode, QWidget *parent, const QString &name);
 
     void setScanProgressText(const QString &toolName);
     void addAvailableTool(const QString &visibleName);
@@ -402,7 +393,6 @@ public:
 private:
     QLabel *mSummaryText;
 };
-
 } // namespace KMail
 
 #endif // KMAIL_ANTISPAMWIZARD_H

@@ -24,8 +24,7 @@
 
 #include <QVariant>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class GrantleeHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT

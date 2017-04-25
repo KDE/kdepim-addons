@@ -36,7 +36,7 @@ Hebrew::Hebrew()
 
     KConfigGroup group(&config, "Hebrew Calendar Plugin");
     areWeInIsrael = group.readEntry(
-                        "UseIsraelSettings", (KLocale::global()->country() == QLatin1String(".il")));
+        "UseIsraelSettings", (KLocale::global()->country() == QLatin1String(".il")));
     showParsha = group.readEntry("ShowParsha", true);
     showChol = group.readEntry("ShowChol_HaMoed", true);
     showOmer = group.readEntry("ShowOmer", true);
@@ -60,7 +60,7 @@ Element::List Hebrew::createDayElements(const QDate &date)
     HebrewDate hd = HebrewDate::fromSecular(date.year(), date.month(), date.day());
 
     const QStringList holidays = Holiday::findHoliday(hd, areWeInIsrael, showParsha,
-                           showChol, showOmer);
+                                                      showChol, showOmer);
 
     KCalendarSystem *cal = KCalendarSystem::create(KLocale::HebrewCalendar);
 

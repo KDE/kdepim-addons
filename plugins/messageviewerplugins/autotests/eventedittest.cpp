@@ -37,8 +37,7 @@
 #include <QLineEdit>
 #include <QShortcut>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 }
 
@@ -425,7 +424,6 @@ void EventEditTest::shouldUpdateStartEndDateWhenReopenIt()
     QCOMPARE(endDateTime->dateTime().date(), endTime.date());
     QCOMPARE(endDateTime->dateTime().time().hour(), endTime.time().hour());
     QCOMPARE(endDateTime->dateTime().time().minute(), endTime.time().minute());
-
 }
 
 void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty()

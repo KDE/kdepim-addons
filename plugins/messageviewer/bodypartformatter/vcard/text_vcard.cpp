@@ -62,9 +62,7 @@ using MimeTreeParser::Interface::BodyPart;
 #include <KIO/FileCopyJob>
 #include "vcard_debug.h"
 
-namespace
-{
-
+namespace {
 class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
@@ -111,9 +109,9 @@ public:
             return AsIcon;
         }
 
-        writer->queue(QLatin1String("<div align=\"center\"><h2>") +
-                      i18np("Attached business card", "Attached business cards", count) +
-                      QLatin1String("</h2></div>"));
+        writer->queue(QLatin1String("<div align=\"center\"><h2>")
+                      +i18np("Attached business card", "Attached business cards", count)
+                      +QLatin1String("</h2></div>"));
 
         count = 0;
         static QString defaultPixmapPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop)).url();
@@ -151,30 +149,30 @@ public:
             }
             writer->queue(htmlStr);
 
-            if (!memento ||
-                    (memento && !memento->finished()) ||
-                    (memento && memento->finished() && !memento->vcardExist(count))) {
+            if (!memento
+                || (memento && !memento->finished())
+                || (memento && memento->finished() && !memento->vcardExist(count))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
                 QString op = QStringLiteral("addToAddressBook:%1").arg(count);
-                writer->queue(QLatin1String("<div align=\"center\"><a href=\"") +
-                              bodyPart->makeLink(op) +
-                              QLatin1String("\">") +
-                              addToLinkText +
-                              QLatin1String("</a></div><br><br>"));
+                writer->queue(QLatin1String("<div align=\"center\"><a href=\"")
+                              +bodyPart->makeLink(op)
+                              +QLatin1String("\">")
+                              +addToLinkText
+                              +QLatin1String("</a></div><br><br>"));
             } else {
                 if (memento->address(count) != a) {
                     const QString addToLinkText = i18n("[Update this contact to the address book]");
                     const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
-                    writer->queue(QLatin1String("<div align=\"center\"><a href=\"") +
-                                  bodyPart->makeLink(op) +
-                                  QLatin1String("\">") +
-                                  addToLinkText +
-                                  QLatin1String("</a></div><br><br>"));
+                    writer->queue(QLatin1String("<div align=\"center\"><a href=\"")
+                                  +bodyPart->makeLink(op)
+                                  +QLatin1String("\">")
+                                  +addToLinkText
+                                  +QLatin1String("</a></div><br><br>"));
                 } else {
                     const QString addToLinkText = i18n("[This contact is already in addressbook]");
-                    writer->queue(QLatin1String("<div align=\"center\">") +
-                                  addToLinkText +
-                                  QLatin1String("</a></div><br><br>"));
+                    writer->queue(QLatin1String("<div align=\"center\">")
+                                  +addToLinkText
+                                  +QLatin1String("</a></div><br><br>"));
                 }
             }
             count++;
@@ -187,10 +185,8 @@ public:
 class UrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
 {
 public:
-    bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart,
-                     const QString &path) const Q_DECL_OVERRIDE
+    bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const Q_DECL_OVERRIDE
     {
-
         Q_UNUSED(viewerInstance);
         const QString vCard = bodyPart->asText();
         if (vCard.isEmpty()) {
@@ -208,7 +204,6 @@ public:
         }
 
         if (path.startsWith(QStringLiteral("addToAddressBook"))) {
-
             KPIM::AddContactJob *job = new KPIM::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QStringLiteral("updateToAddressBook"))) {
@@ -245,10 +240,10 @@ public:
         }
 
         QMenu *menu = new QMenu();
-        QAction *open =
-            menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("View Business Card"));
-        QAction *saveas =
-            menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As..."));
+        QAction *open
+            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("View Business Card"));
+        QAction *saveas
+            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Business Card As..."));
 
         QAction *action = menu->exec(point, nullptr);
         if (action == open) {
@@ -291,14 +286,14 @@ public:
             fileName = givenName + QLatin1Char('_') + a.familyName() + QLatin1String(".vcf");
         }
         // get the saveas file name
-        QUrl saveAsUrl =
-            QFileDialog::getSaveFileUrl(nullptr, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
-        if (saveAsUrl.isEmpty() ||
-                (QFileInfo::exists(saveAsUrl.path()) &&
-                 (KMessageBox::warningYesNo(
-                      nullptr,
-                      i18n("%1 already exists. Do you want to overwrite it?",
-                           saveAsUrl.path())) == KMessageBox::No))) {
+        QUrl saveAsUrl
+            = QFileDialog::getSaveFileUrl(nullptr, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
+        if (saveAsUrl.isEmpty()
+            || (QFileInfo::exists(saveAsUrl.path())
+                && (KMessageBox::warningYesNo(
+                        nullptr,
+                        i18n("%1 already exists. Do you want to overwrite it?",
+                             saveAsUrl.path())) == KMessageBox::No))) {
             return false;
         }
 
@@ -321,10 +316,12 @@ public:
     {
         return validIndex(idx) ? new Formatter() : nullptr;
     }
+
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
         return validIndex(idx) ? "text" : nullptr;
     }
+
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
         switch (idx) {
@@ -347,16 +344,14 @@ public:
 private:
     bool validIndex(int idx) const
     {
-        return (idx >= 0 && idx <= 2);
+        return idx >= 0 && idx <= 2;
     }
 };
-
 }
 
 extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
-messageviewer_bodypartformatter_text_vcard_create_bodypart_formatter_plugin()
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
+*messageviewer_bodypartformatter_text_vcard_create_bodypart_formatter_plugin()
 {
     return new Plugin();
 }
-

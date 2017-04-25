@@ -21,12 +21,12 @@
 #include "sendvcardsplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(SendVcardsPluginFactory, "kaddressbook_sendvcardsplugin.json", registerPlugin<SendVcardsPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(SendVcardsPluginFactory, "kaddressbook_sendvcardsplugin.json", registerPlugin<SendVcardsPlugin>();
+                           )
 
 SendVcardsPlugin::SendVcardsPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 SendVcardsPlugin::~SendVcardsPlugin()

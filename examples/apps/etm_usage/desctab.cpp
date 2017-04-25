@@ -48,12 +48,10 @@ DescTabWidget::DescTabWidget(QWidget *parent, Qt::WindowFlags f)
     m_descView = new QTreeView(splitter);
 
     QTimer::singleShot(5000, this, SLOT(connectProxy()));
-
 }
 
 void DescTabWidget::connectProxy()
 {
-
     m_etw->dumpTree();
 
     KDescendantsProxyModel *descProxy = new KDescendantsProxyModel(this);

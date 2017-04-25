@@ -22,7 +22,6 @@
 ViewerPluginExternalScriptInfo::ViewerPluginExternalScriptInfo()
     : mIsReadOnly(false)
 {
-
 }
 
 QString ViewerPluginExternalScriptInfo::name() const
@@ -77,8 +76,8 @@ void ViewerPluginExternalScriptInfo::setIcon(const QString &icon)
 
 bool ViewerPluginExternalScriptInfo::isValid() const
 {
-    return !mName.trimmed().isEmpty() &&
-           !mExecutable.trimmed().isEmpty();
+    return !mName.trimmed().isEmpty()
+           && !mExecutable.trimmed().isEmpty();
 }
 
 bool ViewerPluginExternalScriptInfo::isReadOnly() const
@@ -103,12 +102,11 @@ void ViewerPluginExternalScriptInfo::setFileName(const QString &fileName)
 
 bool ViewerPluginExternalScriptInfo::operator==(const ViewerPluginExternalScriptInfo &other) const
 {
-    return (name() == other.name()) &&
-           (commandLine() == other.commandLine()) &&
-           (executable() == other.executable()) &&
-           (description() == other.description()) &&
-           (icon() == other.icon()) &&
-           (isReadOnly() == other.isReadOnly()) &&
-           (fileName() == other.fileName());
-
+    return (name() == other.name())
+           && (commandLine() == other.commandLine())
+           && (executable() == other.executable())
+           && (description() == other.description())
+           && (icon() == other.icon())
+           && (isReadOnly() == other.isReadOnly())
+           && (fileName() == other.fileName());
 }

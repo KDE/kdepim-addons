@@ -28,13 +28,11 @@
 
 class QLineEdit;
 class QPushButton;
-namespace Akonadi
-{
+namespace Akonadi {
 class CollectionComboBox;
 }
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class EventDateTimeWidget;
 class EventEdit : public QWidget
 {

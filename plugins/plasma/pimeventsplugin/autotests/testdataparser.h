@@ -20,8 +20,7 @@
 #include <KCalCore/Incidence>
 #include <QDate>
 
-namespace CalendarEvents
-{
+namespace CalendarEvents {
 class EventData;
 }
 class QDateTime;

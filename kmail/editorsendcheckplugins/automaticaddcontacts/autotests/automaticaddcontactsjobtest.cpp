@@ -29,7 +29,6 @@ AutomaticAddContactsJobTest::AutomaticAddContactsJobTest(QObject *parent)
 
 AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest()
 {
-
 }
 
 QTEST_MAIN(AutomaticAddContactsJobTest)

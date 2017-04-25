@@ -24,8 +24,7 @@
 
 #include <QVariant>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class StandardsHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT

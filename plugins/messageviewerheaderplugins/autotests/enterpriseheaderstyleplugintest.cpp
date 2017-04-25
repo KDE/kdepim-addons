@@ -28,12 +28,10 @@
 EnterpriseHeaderStylePluginTest::EnterpriseHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 EnterpriseHeaderStylePluginTest::~EnterpriseHeaderStylePluginTest()
 {
-
 }
 
 void EnterpriseHeaderStylePluginTest::shouldHaveDefaultValue()

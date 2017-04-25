@@ -28,8 +28,7 @@
 
 class QAbstractItemView;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 }
 
@@ -42,7 +41,6 @@ public:
 private:
     QAbstractItemView *m_listView;
     Akonadi::EntityTreeModel *m_etm;
-
 };
 
 #endif

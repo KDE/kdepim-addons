@@ -32,7 +32,6 @@ AdBlockListWidget::AdBlockListWidget(QWidget *parent)
 
 AdBlockListWidget::~AdBlockListWidget()
 {
-
 }
 
 void AdBlockListWidget::changeEvent(QEvent *event)
@@ -70,4 +69,3 @@ void AdBlockListWidget::paintEvent(QPaintEvent *event)
         QListWidget::paintEvent(event);
     }
 }
-

@@ -22,8 +22,7 @@
 
 #include <QListWidget>
 #include "adblocklib_export.h"
-namespace AdBlock
-{
+namespace AdBlock {
 class ADBLOCKLIB_EXPORT AdBlockAutomaticRulesListWidget : public QListWidget
 {
     Q_OBJECT

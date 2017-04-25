@@ -40,7 +40,6 @@ public:
 
 Q_SIGNALS:
     void initialized();
-
 };
 
 class EntityFindingWidget : public QWidget
@@ -61,7 +60,6 @@ private:
     QListView *m_selectionView;
     QLineEdit *m_collectionIdInput;
     QLineEdit *m_itemIdInput;
-
 };
 
 #endif

@@ -20,17 +20,13 @@
 
 #include "PimCommon/SimpleStringlistEditor"
 
-namespace MailMerge
-{
+namespace MailMerge {
 class AttachmentListWidget : public PimCommon::SimpleStringListEditor
 {
     Q_OBJECT
 public:
-    explicit AttachmentListWidget(QWidget *parent = nullptr,
-                                  ButtonCode buttons = Unsorted,
-                                  const QString &addLabel = QString(),
-                                  const QString &removeLabel = QString(),
-                                  const QString &modifyLabel = QString());
+    explicit AttachmentListWidget(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
+                                  const QString &removeLabel = QString(), const QString &modifyLabel = QString());
     ~AttachmentListWidget();
 
     void addNewEntry() Q_DECL_OVERRIDE;

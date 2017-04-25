@@ -25,7 +25,9 @@ class CSVImportExportPlugin : public KAddressBookImportExport::KAddressBookImpor
 {
     Q_OBJECT
 public:
-    explicit CSVImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit CSVImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~CSVImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

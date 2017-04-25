@@ -36,8 +36,7 @@
 #include <QRegularExpression>
 #include <QStringList>
 
-namespace AdBlock
-{
+namespace AdBlock {
 class AdblockRegExp : public QRegularExpression
 {
 public:

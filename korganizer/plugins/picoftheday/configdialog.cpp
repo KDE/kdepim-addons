@@ -109,4 +109,3 @@ void ConfigDialog::slotOk()
     save();
     accept();
 }
-

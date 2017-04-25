@@ -36,7 +36,6 @@ using namespace Akonadi;
 EntityTreeModelFactory::EntityTreeModelFactory(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void EntityTreeModelFactory::createFromRemoteId(const QString &remoteId)
@@ -77,4 +76,3 @@ EntityTreeModel *EntityTreeModelFactory::getModel(Monitor *monitor, QObject *par
 {
     return new EntityTreeModel(monitor, parent);
 }
-

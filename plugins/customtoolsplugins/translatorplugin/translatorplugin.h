@@ -31,6 +31,5 @@ public:
 
     PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
     QString customToolName() const Q_DECL_OVERRIDE;
-
 };
 #endif // TRANSLATORPLUGIN_H

@@ -23,12 +23,10 @@
 
 CheckAttachmentJob::CheckAttachmentJob()
 {
-
 }
 
 CheckAttachmentJob::~CheckAttachmentJob()
 {
-
 }
 
 void CheckAttachmentJob::start()

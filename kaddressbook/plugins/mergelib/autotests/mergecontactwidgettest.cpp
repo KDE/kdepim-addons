@@ -34,8 +34,7 @@
 #include <widgets/mergecontactloseinformationwarning.h>
 using namespace KABMergeContacts;
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 extern KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel;
 }
 

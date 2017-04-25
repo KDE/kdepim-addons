@@ -25,12 +25,10 @@
 CheckDuplicateEmailsJobTest::CheckDuplicateEmailsJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CheckDuplicateEmailsJobTest::~CheckDuplicateEmailsJobTest()
 {
-
 }
 
 void CheckDuplicateEmailsJobTest::shouldHaveDefaultValue()

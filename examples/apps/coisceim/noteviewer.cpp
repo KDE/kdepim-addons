@@ -73,7 +73,6 @@ NoteViewer::NoteViewer(QWidget *parent, Qt::WindowFlags f)
 //
 //   Akonadi::ItemCreateJob *job = new Akonadi::ItemCreateJob( newItem, noteResource, this );
 //   connect( job, SIGNAL(result(KJob*)), SLOT(newPageResult(KJob*)) );
-
 }
 
 void NoteViewer::setIndex(const QPersistentModelIndex &index)
@@ -119,8 +118,8 @@ void NoteViewer::populateWidget(const QModelIndex &index)
 bool NoteViewer::eventFilter(QObject *watched, QEvent *event)
 {
     if ((event->type() == QEvent::FocusOut)
-            && (m_contentEdit->document()->isModified() || m_titleEdit->isModified())
-            && (watched == m_contentEdit || watched == m_titleEdit)) {
+        && (m_contentEdit->document()->isModified() || m_titleEdit->isModified())
+        && (watched == m_contentEdit || watched == m_titleEdit)) {
         Item item = m_persistentIndex.data(EntityTreeModel::ItemRole).value<Item>();
         if (!item.hasPayload<KMime::Message::Ptr>()) {
             return false;
@@ -152,4 +151,3 @@ void NoteViewer::modifyDone(KJob *job)
         qDebug() << job->errorString();
     }
 }
-

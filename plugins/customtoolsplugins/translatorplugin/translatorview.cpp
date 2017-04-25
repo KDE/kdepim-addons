@@ -26,9 +26,9 @@
 #include <KActionCollection>
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
-    : PimCommon::CustomToolsViewInterface(parent),
-      mAction(nullptr),
-      mTranslatorWidget(nullptr)
+    : PimCommon::CustomToolsViewInterface(parent)
+    , mAction(nullptr)
+    , mTranslatorWidget(nullptr)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
@@ -41,7 +41,6 @@ TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
 
 TranslatorView::~TranslatorView()
 {
-
 }
 
 void TranslatorView::setText(const QString &text)

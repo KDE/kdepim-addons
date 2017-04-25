@@ -26,8 +26,7 @@ class KLineEdit;
 class QPushButton;
 class QLabel;
 class QLineEdit;
-namespace KPIM
-{
+namespace KPIM {
 class ProgressIndicatorLabel;
 }
 

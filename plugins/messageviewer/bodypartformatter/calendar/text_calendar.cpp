@@ -86,9 +86,7 @@ using namespace KCalCore;
 
 using namespace MailTransport;
 
-namespace
-{
-
+namespace {
 static bool hasMyWritableEventsFolders(const QString &family)
 {
     QString myfamily = family;
@@ -118,9 +116,9 @@ static bool hasMyWritableEventsFolders(const QString &family)
                 continue;
             }
             if ((*it)->type() == "imap" || (*it)->type() == "kolab") {
-                if ((*it)->subresourceType((*subIt)) == "todo" ||
-                        (*it)->subresourceType((*subIt)) == "journal" ||
-                        !(*subIt).contains("/.INBOX.directory/")) {
+                if ((*it)->subresourceType((*subIt)) == "todo"
+                    || (*it)->subresourceType((*subIt)) == "journal"
+                    || !(*subIt).contains("/.INBOX.directory/")) {
                     continue;
                 }
             }
@@ -158,10 +156,14 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
 class KMInvitationFormatterHelper : public KCalUtils::InvitationFormatterHelper
 {
 public:
-    KMInvitationFormatterHelper(MimeTreeParser::Interface::BodyPart *bodyPart,
-                                const KCalCore::MemoryCalendar::Ptr &calendar)
-        : mBodyPart(bodyPart), mCalendar(calendar) {}
-    QString generateLinkURL(const QString &id) Q_DECL_OVERRIDE {
+    KMInvitationFormatterHelper(MimeTreeParser::Interface::BodyPart *bodyPart, const KCalCore::MemoryCalendar::Ptr &calendar)
+        : mBodyPart(bodyPart)
+        , mCalendar(calendar)
+    {
+    }
+
+    QString generateLinkURL(const QString &id) Q_DECL_OVERRIDE
+    {
         return mBodyPart->makeLink(id);
     }
 
@@ -169,6 +171,7 @@ public:
     {
         return mCalendar;
     }
+
 private:
     MimeTreeParser::Interface::BodyPart *mBodyPart;
     KCalCore::MemoryCalendar::Ptr mCalendar;
@@ -223,9 +226,9 @@ public:
                 }
 
                 MemoryCalendar::Ptr cl(new MemoryCalendar(KSystemTimeZones::local()));
-                const QString html =
-                    KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
-                        source, cl, &helper, message->sender()->asUnicodeString());
+                const QString html
+                    = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
+                    source, cl, &helper, message->sender()->asUnicodeString());
 
                 if (html.isEmpty()) {
                     return AsIcon;
@@ -347,7 +350,6 @@ public:
             }
         }
         return role;
-
     }
 
     static Attachment::Ptr findAttachment(const QString &name, const QString &iCal)
@@ -415,7 +417,7 @@ public:
         int found = 0;
         QVector< KMime::Types::Mailbox >::const_iterator end = addrs.constEnd();
         for (QVector< KMime::Types::Mailbox >::const_iterator it = addrs.constBegin();
-                it != end; ++it) {
+             it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;
@@ -429,7 +431,7 @@ public:
         }
         end = ccaddrs.constEnd();
         for (QVector<KMime::Types::Mailbox >::const_iterator it = ccaddrs.constBegin();
-                it != end; ++it) {
+             it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;
@@ -441,15 +443,15 @@ public:
             bool ok;
             QString selectMessage;
             if (found == 0) {
-                selectMessage =
-                    i18n("<qt>None of your identities match the receiver of this message,<br/>"
-                         "please choose which of the following addresses is yours, if any, "
-                         "or select one of your identities to use in the reply:</qt>");
+                selectMessage
+                    = i18n("<qt>None of your identities match the receiver of this message,<br/>"
+                           "please choose which of the following addresses is yours, if any, "
+                           "or select one of your identities to use in the reply:</qt>");
                 possibleAddrs += im->allEmails();
             } else {
-                selectMessage =
-                    i18n("<qt>Several of your identities match the receiver of this message,<br/>"
-                         "please choose which of the following addresses is yours:</qt>");
+                selectMessage
+                    = i18n("<qt>Several of your identities match the receiver of this message,<br/>"
+                           "please choose which of the following addresses is yours:</qt>");
                 foreach (const KMime::Types::Mailbox &mbx, addrs) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }
@@ -472,10 +474,7 @@ public:
         return receiver;
     }
 
-    Attendee::Ptr setStatusOnMyself(const Incidence::Ptr &incidence,
-                                    const Attendee::Ptr &myself,
-                                    Attendee::PartStat status,
-                                    const QString &receiver) const
+    Attendee::Ptr setStatusOnMyself(const Incidence::Ptr &incidence, const Attendee::Ptr &myself, Attendee::PartStat status, const QString &receiver) const
     {
         QString name;
         QString email;
@@ -513,9 +512,7 @@ public:
         DeclineCounter
     };
 
-    bool mailICal(const QString &receiver, const QString &to, const QString &iCal,
-                  const QString &subject, const QString &status,
-                  bool delMessage, Viewer *viewerInstance) const
+    bool mailICal(const QString &receiver, const QString &to, const QString &iCal, const QString &subject, const QString &status, bool delMessage, Viewer *viewerInstance) const
     {
         qCDebug(TEXT_CALENDAR_LOG) << "Mailing message:" << iCal;
 
@@ -583,7 +580,7 @@ public:
             attachMessage->contentType()->setCharset("utf-8");
             attachMessage->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
             attachMessage->contentType()->setParameter(QStringLiteral("method"),
-                    QStringLiteral("reply"));
+                                                       QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
@@ -594,9 +591,9 @@ public:
         // Setting the identity here is important, as that is used to select the correct
         // transport later
         KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
-        const KIdentityManagement::Identity identity =
-            im->identityForAddress(
-                findReceiver(viewerInstance->message().data()));
+        const KIdentityManagement::Identity identity
+            = im->identityForAddress(
+            findReceiver(viewerInstance->message().data()));
 
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
 
@@ -654,25 +651,20 @@ public:
 
         job->setMessage(msg);
 
-        if (! job->exec()) {
+        if (!job->exec()) {
             qCWarning(TEXT_CALENDAR_LOG) << "Error queuing message in outbox:" << job->errorText();
             return false;
         }
         // We are not notified when mail was sent, so assume it was sent when queued.
-        if (delMessage &&
-                MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
+        if (delMessage
+            && MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
             viewerInstance->deleteMessage();
         }
         return true;
     }
 
-    bool mail(Viewer *viewerInstance,
-              const Incidence::Ptr &incidence,
-              const QString &status,
-              iTIPMethod method = iTIPReply,
-              const QString &receiver = QString(),
-              const QString &to = QString(),
-              MailType type = Answer) const
+    bool mail(Viewer *viewerInstance, const Incidence::Ptr &incidence, const QString &status, iTIPMethod method = iTIPReply, const QString &receiver = QString(),
+              const QString &to = QString(), MailType type = Answer) const
     {
         //status is accepted/tentative/declined
         ICalFormat format;
@@ -703,7 +695,7 @@ public:
             QString tname, temail;
             KMime::Message::Ptr message = viewerInstance->message();
             KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(),
-                    temail, tname);
+                                                      temail, tname);
             incidence->setOrganizer(Person::Ptr(new Person(tname, temail)));
         }
 
@@ -778,8 +770,8 @@ public:
                 if (todo->hasDueDate()) {
                     if (todo->dtDue().date() < today) {
                         warnStr = i18n("\"%1\" is past due.", todo->summary());
-                    } else if (todo->hasStartDate() &&
-                               todo->dtStart().date() <= today && today <= todo->dtDue().date()) {
+                    } else if (todo->hasStartDate()
+                               && todo->dtStart().date() <= today && today <= todo->dtDue().date()) {
                         warnStr = i18n("\"%1\", happening all-day today, is currently in-progress.",
                                        todo->summary());
                     }
@@ -801,8 +793,8 @@ public:
                 }
             } else if (path == QLatin1String("accept_conditionally")) {
                 if (type == Incidence::TypeTodo) {
-                    queryStr =
-                        i18n("Do you still want to send conditional acceptance of the invitation?");
+                    queryStr
+                        = i18n("Do you still want to send conditional acceptance of the invitation?");
                 } else {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
                 }
@@ -855,17 +847,15 @@ public:
             }
 
             if (KMessageBox::warningYesNo(
-                        0,
-                        i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
+                    0,
+                    i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
                 return true;
             }
         }
         return false;
     }
 
-    bool handleInvitation(const QString &iCal, Attendee::PartStat status,
-                          MimeTreeParser::Interface::BodyPart *part,
-                          Viewer *viewerInstance) const
+    bool handleInvitation(const QString &iCal, Attendee::PartStat status, MimeTreeParser::Interface::BodyPart *part, Viewer *viewerInstance) const
     {
         bool ok = true;
         const QString receiver = findReceiver(part->content());
@@ -941,13 +931,13 @@ public:
 
         // find our delegator, we need to inform him as well
         QString delegator;
-        if (status !=  Attendee::NeedsAction && myself && !myself->delegator().isEmpty()) {
+        if (status != Attendee::NeedsAction && myself && !myself->delegator().isEmpty()) {
             Attendee::List attendees = incidence->attendees();
             Attendee::List::ConstIterator end = attendees.constEnd();
             for (Attendee::List::ConstIterator it = attendees.constBegin();
-                    it != end; ++it) {
-                if (KEmailAddress::compareEmail((*it)->fullName(), myself->delegator(), false) &&
-                        (*it)->status() == Attendee::Delegated) {
+                 it != end; ++it) {
+                if (KEmailAddress::compareEmail((*it)->fullName(), myself->delegator(), false)
+                    && (*it)->status() == Attendee::Delegated) {
                     delegator = (*it)->fullName();
                     delegatorRSVP = (*it)->RSVP();
                     break;
@@ -955,23 +945,23 @@ public:
             }
         }
 
-        if (status !=  Attendee::NeedsAction && ((myself && (myself->RSVP() || myself->status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
+        if (status != Attendee::NeedsAction && ((myself && (myself->RSVP() || myself->status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
             Attendee::Ptr newMyself = setStatusOnMyself(incidence, myself, status, receiver);
             if (newMyself && status == Attendee::Delegated) {
                 newMyself->setDelegate(delegateString);
                 newMyself->setRSVP(delegatorRSVP);
             }
-            ok =  mail(viewerInstance, incidence, dir, iTIPReply, receiver);
+            ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver);
 
             // check if we need to inform our delegator about this as well
-            if (newMyself &&
-                    (status == Attendee::Accepted || status == Attendee::Declined) &&
-                    !delegator.isEmpty()) {
+            if (newMyself
+                && (status == Attendee::Accepted || status == Attendee::Declined)
+                && !delegator.isEmpty()) {
                 if (delegatorRSVP || status == Attendee::Declined) {
                     ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver, delegator);
                 }
             }
-        } else if (!myself && (status != Attendee::Declined && status !=  Attendee::NeedsAction)) {
+        } else if (!myself && (status != Attendee::Declined && status != Attendee::NeedsAction)) {
             // forwarded invitation
             QString name;
             QString email;
@@ -1063,13 +1053,13 @@ public:
         // get the saveas file name
         const QString saveAsFile = QFileDialog::getSaveFileName(0, i18n("Save Invitation Attachment"), name, QString());
 
-        if (saveAsFile.isEmpty() ||
-                (QFileInfo::exists(saveAsFile) &&
-                 (KMessageBox::warningContinueCancel(
-                      0,
-                      xi18nc("@info",
-                             "File <filename>%1</filename> exists.<nl/> Do you want to replace it?",
-                             saveAsFile)) != KMessageBox::Continue))) {
+        if (saveAsFile.isEmpty()
+            || (QFileInfo::exists(saveAsFile)
+                && (KMessageBox::warningContinueCancel(
+                        0,
+                        xi18nc("@info",
+                               "File <filename>%1</filename> exists.<nl/> Do you want to replace it?",
+                               saveAsFile)) != KMessageBox::Continue))) {
             return false;
         }
 
@@ -1120,9 +1110,9 @@ public:
         if (!interface->isValid()) {
             qCDebug(TEXT_CALENDAR_LOG) << "Starting korganizer...";
 
-            QDBusServiceWatcher *watcher =
-                new QDBusServiceWatcher(QLatin1String("org.kde.korganizer"), QDBusConnection::sessionBus(),
-                                        QDBusServiceWatcher::WatchForRegistration);
+            QDBusServiceWatcher *watcher
+                = new QDBusServiceWatcher(QLatin1String("org.kde.korganizer"), QDBusConnection::sessionBus(),
+                                          QDBusServiceWatcher::WatchForRegistration);
             QEventLoop loop;
             watcher->connect(watcher, &QDBusServiceWatcher::serviceRegistered, &loop, &QEventLoop::quit);
             result = QProcess::startDetached(QLatin1String("korganizer"));
@@ -1141,8 +1131,8 @@ public:
         QString constraint;
 
         result = KDBusServiceStarter::self()->findServiceFor(QStringLiteral("DBUS/Organizer"),
-                 constraint,
-                 &error, &dbusService) == 0;
+                                                             constraint,
+                                                             &error, &dbusService) == 0;
 #endif
         if (result) {
             // OK, so korganizer (or kontact) is running. Now ensure the object we want is loaded.
@@ -1175,17 +1165,17 @@ public:
     void showCalendar(const QDate &date) const
     {
         if (ensureKorganizerRunning(true)) {
-            QDBusInterface *kontact =
-                new QDBusInterface(QStringLiteral("org.kde.kontact"), QStringLiteral("/KontactInterface"),
-                                   QStringLiteral("org.kde.kontact.KontactInterface"), QDBusConnection::sessionBus());
+            QDBusInterface *kontact
+                = new QDBusInterface(QStringLiteral("org.kde.kontact"), QStringLiteral("/KontactInterface"),
+                                     QStringLiteral("org.kde.kontact.KontactInterface"), QDBusConnection::sessionBus());
             if (kontact->isValid()) {
                 kontact->call(QStringLiteral("selectPlugin"), QStringLiteral("kontact_korganizerplugin"));
             }
             delete kontact;
 
-            OrgKdeKorganizerCalendarInterface *iface =
-                new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                        QDBusConnection::sessionBus(), 0);
+            OrgKdeKorganizerCalendarInterface *iface
+                = new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                                                        QDBusConnection::sessionBus(), 0);
             if (!iface->isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface->lastError().message();
                 delete iface;
@@ -1204,8 +1194,7 @@ public:
         return true;
     }
 
-    bool handleDeclineCounter(const QString &iCal, MimeTreeParser::Interface::BodyPart *part,
-                              Viewer *viewerInstance) const
+    bool handleDeclineCounter(const QString &iCal, MimeTreeParser::Interface::BodyPart *part, Viewer *viewerInstance) const
     {
         const QString receiver(findReceiver(part->content()));
         if (receiver.isEmpty()) {
@@ -1228,7 +1217,6 @@ public:
                     nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
-
             } else {
                 incidence->addComment(comment);
             }
@@ -1249,9 +1237,7 @@ public:
         return saveFile(receiver, iCal, QStringLiteral("counter"), part);
     }
 
-    bool handleClick(Viewer *viewerInstance,
-                     MimeTreeParser::Interface::BodyPart *part,
-                     const QString &path) const Q_DECL_OVERRIDE
+    bool handleClick(Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE
     {
         // filter out known paths that don't belong to this type of urlmanager.
         // kolab/issue4054 msg27201
@@ -1308,9 +1294,7 @@ public:
             result = handleInvitation(iCal, Attendee::NeedsAction, part, viewerInstance);
         } else if (path == QLatin1String("delegate")) {
             result = handleInvitation(iCal, Attendee::Delegated, part, viewerInstance);
-        }
-
-        else if (path == QLatin1String("forward")) {
+        } else if (path == QLatin1String("forward")) {
             AttendeeSelector dlg;
             if (dlg.exec() == QDialog::Rejected) {
                 return true;
@@ -1337,22 +1321,23 @@ public:
         } else if (path == QLatin1String("record")) {
             incidence = stringToIncidence(iCal);
             QString summary;
-            int response =
-                KMessageBox::questionYesNoCancel(
-                    0,
-                    i18nc("@info",
-                          "The organizer is not expecting a reply to this invitation "
-                          "but you can send them an email message if you desire.\n\n"
-                          "Would you like to send the organizer a message regarding this invitation?\n"
-                          "Press the [Cancel] button to cancel the recording operation."),
-                    i18nc("@title:window", "Send Email to Organizer"),
-                    KGuiItem(i18n("Do Not Send")),
-                    KGuiItem(i18n("Send EMail")));
+            int response
+                = KMessageBox::questionYesNoCancel(
+                0,
+                i18nc("@info",
+                      "The organizer is not expecting a reply to this invitation "
+                      "but you can send them an email message if you desire.\n\n"
+                      "Would you like to send the organizer a message regarding this invitation?\n"
+                      "Press the [Cancel] button to cancel the recording operation."),
+                i18nc("@title:window", "Send Email to Organizer"),
+                KGuiItem(i18n("Do Not Send")),
+                KGuiItem(i18n("Send EMail")));
 
             switch (response) {
             case KMessageBox::Cancel:
                 break;
-            case KMessageBox::No: { // means "send email"
+            case KMessageBox::No:
+            {                       // means "send email"
                 summary = incidence->summary();
                 if (!summary.isEmpty()) {
                     summary = i18n("Re: %1", summary);
@@ -1399,9 +1384,7 @@ public:
         return result;
     }
 
-    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part,
-                                  const QString &path,
-                                  const QPoint &point) const Q_DECL_OVERRIDE
+    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &point) const Q_DECL_OVERRIDE
     {
         QString name = path;
         if (path.startsWith(QStringLiteral("ATTACH:"))) {
@@ -1419,10 +1402,10 @@ public:
         }
 
         QMenu *menu = new QMenu();
-        QAction *open =
-            menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
-        QAction *saveas =
-            menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
+        QAction *open
+            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
+        QAction *saveas
+            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
 
         QAction *a = menu->exec(point, 0);
         if (a == open) {
@@ -1434,8 +1417,7 @@ public:
         return true;
     }
 
-    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *,
-                             const QString &path) const Q_DECL_OVERRIDE
+    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *, const QString &path) const Q_DECL_OVERRIDE
     {
         if (!path.isEmpty()) {
             if (path == QLatin1String("accept")) {
@@ -1479,16 +1461,15 @@ public:
 
     bool askForComment(Attendee::PartStat status) const
     {
-        if (status != Attendee::NeedsAction && ((status != Attendee::Accepted &&
-                                                MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation() ==
-                                                MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AskForAllButAcceptance) ||
-                                                (MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation() ==
-                                                        MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AlwaysAsk))) {
+        if (status != Attendee::NeedsAction && ((status != Attendee::Accepted
+                                                 && MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
+                                                 == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AskForAllButAcceptance)
+                                                || (MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
+                                                    == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AlwaysAsk))) {
             return true;
         }
         return false;
     }
-
 };
 
 class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
@@ -1532,12 +1513,11 @@ public:
         }
     }
 };
-
 }
 
 extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
-messageviewer_bodypartformatter_text_calendar_create_bodypart_formatter_plugin()
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
+*messageviewer_bodypartformatter_text_calendar_create_bodypart_formatter_plugin()
 {
     return new Plugin();
 }

@@ -45,8 +45,7 @@
 
 class QWebEngineUrlRequestInfo;
 
-namespace AdBlock
-{
+namespace AdBlock {
 class AdblockManager;
 class AdBlockMatcher : public QObject
 {

@@ -24,12 +24,10 @@
 AutomaticAddContactsPluginTest::AutomaticAddContactsPluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AutomaticAddContactsPluginTest::~AutomaticAddContactsPluginTest()
 {
-
 }
 
 void AutomaticAddContactsPluginTest::shouldHaveDefaultValue()

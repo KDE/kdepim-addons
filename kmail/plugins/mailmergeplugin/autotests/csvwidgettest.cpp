@@ -23,12 +23,10 @@
 CsvWidgetTest::CsvWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CsvWidgetTest::~CsvWidgetTest()
 {
-
 }
 
 void CsvWidgetTest::shouldHaveDefaultValue()

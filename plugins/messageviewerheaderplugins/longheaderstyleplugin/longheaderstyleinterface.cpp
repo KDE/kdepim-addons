@@ -26,12 +26,10 @@ using namespace MessageViewer;
 LongHeaderStyleInterface::LongHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent)
 {
-
 }
 
 LongHeaderStyleInterface::~LongHeaderStyleInterface()
 {
-
 }
 
 void LongHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
@@ -42,11 +40,9 @@ void LongHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *act
     addHelpTextAction(act, i18n("Show long list of message headers"));
     mAction.append(act);
     addActionToMenu(menu, actionGroup);
-
 }
 
 void LongHeaderStyleInterface::activateAction()
 {
     mAction.at(0)->setChecked(true);
 }
-

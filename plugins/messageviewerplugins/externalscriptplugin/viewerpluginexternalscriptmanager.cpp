@@ -48,7 +48,6 @@ ViewerPluginExternalScriptManager::ViewerPluginExternalScriptManager(QObject *pa
 
 ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager()
 {
-
 }
 
 ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()

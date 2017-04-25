@@ -29,7 +29,6 @@
 MixedTreeModel::MixedTreeModel(Akonadi::Monitor *monitor, QObject *parent)
     : EntityTreeModel(monitor, parent)
 {
-
 }
 
 int MixedTreeModel::entityColumnCount(Akonadi::EntityTreeModel::HeaderGroup headerGroup) const
@@ -68,13 +67,12 @@ QVariant MixedTreeModel::entityData(const Akonadi::Item &item, int column, int r
             switch (column) {
             case 0:
                 return message->subject()->asUnicodeString();
-            case 1: {
+            case 1:
                 if (item.mimeType() == KMime::Message::mimeType()) {
                     return message->from()->asUnicodeString();
                 } else {
                     return QString(message->mainBodyPart()->decodedText().mid(0, 30) + QLatin1String("..."));
                 }
-            }
             default:
                 return QVariant();
             }
@@ -99,4 +97,3 @@ QVariant MixedTreeModel::entityData(const Akonadi::Collection &collection, int c
 {
     return Akonadi::EntityTreeModel::entityData(collection, column, role);
 }
-

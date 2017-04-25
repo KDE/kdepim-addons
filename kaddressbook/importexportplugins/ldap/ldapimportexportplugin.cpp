@@ -21,17 +21,16 @@
 #include "ldapimportexportplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(LDapImportExportPluginFactory, "kaddressbook_importexportldapplugin.json", registerPlugin<LDapImportExportPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(LDapImportExportPluginFactory, "kaddressbook_importexportldapplugin.json", registerPlugin<LDapImportExportPlugin>();
+                           )
 
 LDapImportExportPlugin::LDapImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
-
 }
 
 LDapImportExportPlugin::~LDapImportExportPlugin()
 {
-
 }
 
 PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)

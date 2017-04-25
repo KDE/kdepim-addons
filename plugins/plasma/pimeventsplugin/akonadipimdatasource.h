@@ -26,8 +26,7 @@
 
 class EventModel;
 
-class AkonadiPimDataSource : public QObject,
-    public PimDataSource
+class AkonadiPimDataSource : public QObject, public PimDataSource
 {
     Q_OBJECT
 

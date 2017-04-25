@@ -22,8 +22,7 @@
 
 #include <KPIMTextEdit/SyntaxHighlighterBase>
 
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockSyntaxHighlighter : public KPIMTextEdit::SyntaxHighlighterBase
 {
     Q_OBJECT

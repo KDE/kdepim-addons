@@ -23,8 +23,7 @@
 #include <messageviewer/viewerplugininterface.h>
 #include <KCalCore/Event>
 class KActionCollection;
-namespace MessageViewer
-{
+namespace MessageViewer {
 class EventEdit;
 class ViewerPluginCreateEventInterface : public ViewerPluginInterface
 {
@@ -51,7 +50,6 @@ private:
     Akonadi::Item mMessageItem;
     EventEdit *mEventEdit;
     QList<QAction *> mAction;
-
 };
 }
 #endif // VIEWERPLUGINCREATEEVENTINTERFACE_H

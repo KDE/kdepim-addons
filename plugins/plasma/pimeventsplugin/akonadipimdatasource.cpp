@@ -97,7 +97,7 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidenc
             }
         }
     }
-    return (*it);
+    return *it;
 }
 
 void AkonadiPimDataSource::onSettingsChanged()

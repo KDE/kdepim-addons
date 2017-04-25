@@ -32,7 +32,6 @@ AdBlockBlockableItemsJobTest::AdBlockBlockableItemsJobTest(QObject *parent)
 
 AdBlockBlockableItemsJobTest::~AdBlockBlockableItemsJobTest()
 {
-
 }
 
 void AdBlockBlockableItemsJobTest::shouldHaveDefaultValue()

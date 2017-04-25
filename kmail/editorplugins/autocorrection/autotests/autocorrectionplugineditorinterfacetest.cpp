@@ -24,12 +24,10 @@
 AutoCorrectionPluginEditorInterfaceTest::AutoCorrectionPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AutoCorrectionPluginEditorInterfaceTest::~AutoCorrectionPluginEditorInterfaceTest()
 {
-
 }
 
 void AutoCorrectionPluginEditorInterfaceTest::shouldHaveDefaultValue()

@@ -64,12 +64,15 @@ Element::List Picoftheday::createDayElements(const QDate &date)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-POTDElement::POTDElement(const QString &id, const QDate &date,
-                         const QSize &initialThumbSize)
-    : StoredElement(id), mDate(date), mThumbSize(initialThumbSize),
-      mFirstStepCompleted(false),
-      mSecondStepCompleted(false),
-      mFirstStepJob(nullptr), mSecondStepJob(nullptr), mThirdStepJob(nullptr)
+POTDElement::POTDElement(const QString &id, const QDate &date, const QSize &initialThumbSize)
+    : StoredElement(id)
+    , mDate(date)
+    , mThumbSize(initialThumbSize)
+    , mFirstStepCompleted(false)
+    , mSecondStepCompleted(false)
+    , mFirstStepJob(nullptr)
+    , mSecondStepJob(nullptr)
+    , mThirdStepJob(nullptr)
 {
     setShortText(i18n("Loading..."));
     setLongText(i18n("<qt>Loading <i>Picture of the Day</i>...</qt>"));
@@ -85,8 +88,8 @@ void POTDElement::step1StartDownload()
 {
     // Start downloading the picture
     if (!mFirstStepCompleted && !mFirstStepJob) {
-        QUrl url = QUrl(QLatin1String("http://en.wikipedia.org/w/index.php?title=Template:POTD/") +
-                        mDate.toString(Qt::ISODate) + QStringLiteral("&action=raw"));
+        QUrl url = QUrl(QLatin1String("http://en.wikipedia.org/w/index.php?title=Template:POTD/")
+                        +mDate.toString(Qt::ISODate) + QStringLiteral("&action=raw"));
         // The file at that URL contains the file name for the POTD
 
         mFirstStepJob = KIO::storedGet(url, KIO::NoReload, KIO::HideProgressInfo);
@@ -114,8 +117,8 @@ void POTDElement::step1Result(KJob *job)
 
     // First step completed: we now know the POTD's file name
     KIO::StoredTransferJob *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
-    const QStringList lines =
-        QString::fromUtf8(transferJob->data().data(), transferJob->data().size()).split(QLatin1Char('\n'));
+    const QStringList lines
+        = QString::fromUtf8(transferJob->data().data(), transferJob->data().size()).split(QLatin1Char('\n'));
 
     for (const QString &line : lines) {
         if (line.startsWith(QStringLiteral("|image="))) {
@@ -188,9 +191,9 @@ void POTDElement::step2Result(KJob *job)
 
     QDomDocument imgPage;
     if (!imgPage.setContent(QString::fromUtf8(transferJob->data().data(),
-                            transferJob->data().size()))) {
+                                              transferJob->data().size()))) {
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": Wikipedia returned an invalid XML page for image"
-                << mFileName;
+                                                   << mFileName;
         return;
     }
 
@@ -199,7 +202,7 @@ void POTDElement::step2Result(KJob *job)
     for (int i = 0; i < links.length(); ++i) {
         QString href = links.item(i).attributes().namedItem(QStringLiteral("href")).nodeValue();
         if (href.startsWith(
-                    QStringLiteral("//upload.wikimedia.org/wikipedia/commons/"))) {
+                QStringLiteral("//upload.wikimedia.org/wikipedia/commons/"))) {
             mFullSizeImageUrl = QUrl(href);
             mFullSizeImageUrl.setScheme(QStringLiteral("https"));
             break;
@@ -214,14 +217,13 @@ void POTDElement::step2Result(KJob *job)
         QString src = attr.namedItem(QStringLiteral("src")).nodeValue();
 
         if (src.startsWith(thumbnailUrl(mFullSizeImageUrl).url())) {
-            if ((attr.namedItem(QStringLiteral("height")).nodeValue().toInt() != 0) &&
-                    (attr.namedItem(QStringLiteral("width")).nodeValue().toInt() != 0)) {
-                mHWRatio = attr.namedItem(QStringLiteral("height")).nodeValue().toFloat() /
-                           attr.namedItem(QStringLiteral("width")).nodeValue().toFloat();
+            if ((attr.namedItem(QStringLiteral("height")).nodeValue().toInt() != 0)
+                && (attr.namedItem(QStringLiteral("width")).nodeValue().toInt() != 0)) {
+                mHWRatio = attr.namedItem(QStringLiteral("height")).nodeValue().toFloat()
+                           /attr.namedItem(QStringLiteral("width")).nodeValue().toFloat();
             }
             break;
         }
-
     }
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": h/w ratio:" << mHWRatio;
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": got POTD image page source:" << mFullSizeImageUrl;
@@ -238,8 +240,8 @@ QUrl POTDElement::thumbnailUrl(const QUrl &fullSizeUrl, const int width) const
     QString thumbUrl = fullSizeUrl.url();
     if (width != 0) {
         thumbUrl.replace(QRegExp(QLatin1String("//upload.wikimedia.org/wikipedia/commons/(.*)/([^/]*)")),
-                         QStringLiteral("//upload.wikimedia.org/wikipedia/commons/thumb/\\1/\\2/") +
-                         QString::number(width) + QStringLiteral("px-\\2"));
+                         QStringLiteral("//upload.wikimedia.org/wikipedia/commons/thumb/\\1/\\2/")
+                         +QString::number(width) + QStringLiteral("px-\\2"));
     } else {  // This will not return a valid thumbnail URL, but will at least
         // give some info (the beginning of the URL)
         thumbUrl.replace(QRegExp(QLatin1String("//upload.wikimedia.org/wikipedia/commons/(.*)/([^/]*)")),
@@ -311,14 +313,14 @@ QPixmap POTDElement::newPixmap(const QSize &size)
 {
     if ((mThumbSize.width() < size.width()) || (mThumbSize.height() < size.height())) {
         qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": called for a new pixmap size ("
-                << size << "instead of" << mThumbSize << ", stored pixmap:"
-                << mPixmap.size() << ")";
+                                                 << size << "instead of" << mThumbSize << ", stored pixmap:"
+                                                 << mPixmap.size() << ")";
         setThumbnailSize(size);
 
         if (!mFirstStepCompleted) {
             step1StartDownload();  // First run, start from the beginning
-        } else if ((mDlThumbSize.width() < size.width()) &&
-                   (mDlThumbSize.height() < size.height())) {
+        } else if ((mDlThumbSize.width() < size.width())
+                   && (mDlThumbSize.height() < size.height())) {
             if (mThirdStepJob) {
                 // Another download (for the old size) is already running;
                 // we'll run after that
@@ -352,4 +354,3 @@ void POTDElement::setThumbnailSize(const QSize &size)
 {
     mThumbSize = size;
 }
-

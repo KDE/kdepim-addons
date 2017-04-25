@@ -171,7 +171,6 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList_data()
     lst.clear();
     lst << itemB << itemC << itemA;
     QTest::newRow("threeDifferent") <<  lst << 0;
-
 }
 
 void SearchPotentialDuplicateContactJobTest::shouldReturnList()
@@ -185,7 +184,6 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList()
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
     QCOMPARE(lstResult.count(), numberOfList);
-
 }
 
 QTEST_MAIN(SearchPotentialDuplicateContactJobTest)

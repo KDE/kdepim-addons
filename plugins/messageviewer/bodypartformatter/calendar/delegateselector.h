@@ -23,8 +23,7 @@
 
 #include <QDialog>
 class QPushButton;
-namespace KPIM
-{
+namespace KPIM {
 class AddresseeLineEdit;
 }
 

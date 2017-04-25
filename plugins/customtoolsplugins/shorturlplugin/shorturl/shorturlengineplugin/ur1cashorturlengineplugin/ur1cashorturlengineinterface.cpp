@@ -34,7 +34,6 @@ Ur1CaShortUrlEngineInterface::Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin 
 
 Ur1CaShortUrlEngineInterface::~Ur1CaShortUrlEngineInterface()
 {
-
 }
 
 QString Ur1CaShortUrlEngineInterface::engineName() const

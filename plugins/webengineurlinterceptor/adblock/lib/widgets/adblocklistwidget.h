@@ -24,8 +24,7 @@
 
 class QPaintEvent;
 class QEvent;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockListWidget : public QListWidget
 {
     Q_OBJECT

@@ -48,15 +48,12 @@
 
 using namespace MimeTreeParser::Interface;
 
-bool ApplicationGnuPGWKSUrlHandler::handleContextMenuRequest(BodyPart *,
-        const QString &,
-        const QPoint &) const
+bool ApplicationGnuPGWKSUrlHandler::handleContextMenuRequest(BodyPart *, const QString &, const QPoint &) const
 {
     return false;
 }
 
-bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance,
-        BodyPart *part, const QString &path) const
+bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
 
@@ -67,7 +64,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
         QProcess::startDetached(QStringLiteral("kleopatra"),
-        { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
+                                { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
         return true;
     } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
         GnuPGWKSMessagePart mp(part);
@@ -104,8 +101,8 @@ QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Messag
     QEventLoop el;
     QByteArray result;
     QObject::connect(job, &QGpgME::WKSPublishJob::result,
-                     [&el, &result](const GpgME::Error &, const QByteArray & returnedData,
-    const QByteArray & returnedError) {
+                     [&el, &result](const GpgME::Error &, const QByteArray &returnedData,
+                                    const QByteArray &returnedError) {
         if (returnedData.isEmpty()) {
             qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
         }
@@ -118,10 +115,8 @@ QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Messag
     return result;
 }
 
-bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *viewerInstance,
-        const GnuPGWKSMessagePart &mp) const
+bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *viewerInstance, const GnuPGWKSMessagePart &mp) const
 {
-
     const QByteArray data = createConfirmation(viewerInstance->message());
     if (data.isEmpty()) {
         return false;
@@ -151,7 +146,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     }
     // No transport exists, ask user to create one
     if (transportId == -1) {
-        if (!transportMgr->showTransportCreationDialog(0,  MailTransport::TransportManager::IfNoTransportExists)) {
+        if (!transportMgr->showTransportCreationDialog(0, MailTransport::TransportManager::IfNoTransportExists)) {
             return false;
         }
         transportId = transportMgr->defaultTransportId();

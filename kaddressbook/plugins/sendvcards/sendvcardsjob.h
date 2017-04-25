@@ -25,12 +25,10 @@
 #include <KContacts/VCardConverter>
 
 class QTemporaryDir;
-namespace MimeTreeParser
-{
+namespace MimeTreeParser {
 class AttachmentTemporaryFilesDirs;
 }
-namespace KABSendVCards
-{
+namespace KABSendVCards {
 class SendVcardsJob : public QObject
 {
     Q_OBJECT

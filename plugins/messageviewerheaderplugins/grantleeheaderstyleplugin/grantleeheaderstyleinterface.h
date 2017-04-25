@@ -22,14 +22,11 @@
 
 #include <messageviewer/headerstyleinterface.h>
 
-namespace GrantleeTheme
-{
+namespace GrantleeTheme {
 class ThemeManager;
 }
 
-namespace MessageViewer
-{
-
+namespace MessageViewer {
 class GrantleeHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT
@@ -43,7 +40,6 @@ private:
     void slotGrantleeHeaders();
     GrantleeTheme::ThemeManager *mThemeManager;
 };
-
 }
 
 #endif // GRANTLEEHEADERSTYLEINTERFACE_H

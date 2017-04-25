@@ -24,12 +24,10 @@
 GravatarUpdateJobTest::GravatarUpdateJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarUpdateJobTest::~GravatarUpdateJobTest()
 {
-
 }
 
 void GravatarUpdateJobTest::shouldHaveDefaultValue()

@@ -70,8 +70,7 @@
 class QUrl;
 
 class FollowRedirectReply;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockSubscription : public QObject
 {
     Q_OBJECT
@@ -150,4 +149,3 @@ public:
 }
 
 #endif // ADBLOCKSUBSCRIPTION_H
-

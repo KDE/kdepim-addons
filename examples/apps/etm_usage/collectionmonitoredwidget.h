@@ -30,8 +30,7 @@ class QItemSelection;
 
 class EntityTreeWidget;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 class EntityTreeView;
 }
@@ -49,7 +48,6 @@ private:
     EntityTreeWidget *m_etw;
     Akonadi::Monitor *m_oneCollectionChangeRecorder;
     Akonadi::EntityTreeView *m_oneCollectionView;
-
 };
 
 #endif

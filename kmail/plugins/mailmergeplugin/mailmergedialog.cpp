@@ -49,5 +49,4 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
 
 MailMergeDialog::~MailMergeDialog()
 {
-
 }

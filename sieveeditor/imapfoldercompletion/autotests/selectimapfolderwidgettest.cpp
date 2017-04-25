@@ -29,12 +29,10 @@
 SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest()
 {
-
 }
 
 void SelectImapFolderWidgetTest::shouldHaveDefaultValue()

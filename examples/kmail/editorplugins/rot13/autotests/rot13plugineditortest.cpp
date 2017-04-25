@@ -23,12 +23,10 @@
 Rot13PluginEditorTest::Rot13PluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 Rot13PluginEditorTest::~Rot13PluginEditorTest()
 {
-
 }
 
 void Rot13PluginEditorTest::shouldHaveDefaultValue()

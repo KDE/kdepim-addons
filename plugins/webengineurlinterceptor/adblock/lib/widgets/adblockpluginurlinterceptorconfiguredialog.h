@@ -24,8 +24,7 @@
 #include <QWidget>
 #include "adblocklib_export.h"
 
-namespace AdBlock
-{
+namespace AdBlock {
 class AdblockPluginUrlInterceptorConfigureWidget;
 class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
@@ -42,7 +41,6 @@ protected:
     void help() Q_DECL_OVERRIDE;
 private:
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget;
-
 };
 }
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H

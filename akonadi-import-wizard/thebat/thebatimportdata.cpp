@@ -21,8 +21,6 @@
 #include "mailimporter/filterthebat.h"
 #include "mailimporter/filterinfo.h"
 
-
-
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 

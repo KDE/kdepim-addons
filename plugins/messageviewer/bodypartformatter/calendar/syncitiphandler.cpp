@@ -35,9 +35,7 @@
 
 using namespace Akonadi;
 
-SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal,
-                                 const QString &type, const Akonadi::CalendarBase::Ptr &calendar,
-                                 QObject *parent) : QObject(parent)
+SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal, const QString &type, const Akonadi::CalendarBase::Ptr &calendar, QObject *parent) : QObject(parent)
     , m_result(Akonadi::ITIPHandler::ResultSuccess)
 {
     Q_ASSERT(calendar);

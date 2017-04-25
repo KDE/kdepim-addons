@@ -23,12 +23,10 @@
 
 MailMergeDialogTest::MailMergeDialogTest(QObject *parent) : QObject(parent)
 {
-
 }
 
 MailMergeDialogTest::~MailMergeDialogTest()
 {
-
 }
 
 void MailMergeDialogTest::shouldHaveDefaultValue()

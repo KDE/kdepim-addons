@@ -30,10 +30,10 @@
 using namespace MessageViewer;
 
 CreateEventJob::CreateEventJob(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
-    : KJob(parent),
-      mItem(item),
-      mCollection(collection),
-      mEventPtr(eventPtr)
+    : KJob(parent)
+    , mItem(item)
+    , mCollection(collection)
+    , mEventPtr(eventPtr)
 {
 }
 

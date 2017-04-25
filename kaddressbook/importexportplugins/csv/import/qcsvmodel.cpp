@@ -27,7 +27,11 @@
 #include <QVector>
 
 CsvParser::CsvParser(QObject *parent)
-    : QThread(parent), mDevice(nullptr), mRowCount(0), mColumnCount(0), mCacheCounter(0)
+    : QThread(parent)
+    , mDevice(nullptr)
+    , mRowCount(0)
+    , mColumnCount(0)
+    , mCacheCounter(0)
 {
     mReader = new QCsvReader(this);
 }
@@ -100,8 +104,11 @@ class QCsvModel::Private
 {
 public:
     Private(QCsvModel *model)
-        : mParent(model), mParser(nullptr),
-          mDevice(nullptr), mRowCount(0), mColumnCount(0)
+        : mParent(model)
+        , mParser(nullptr)
+        , mDevice(nullptr)
+        , mRowCount(0)
+        , mColumnCount(0)
     {
     }
 
@@ -145,7 +152,8 @@ void QCsvModel::Private::finishedLoading()
 }
 
 QCsvModel::QCsvModel(QObject *parent)
-    : QAbstractTableModel(parent), d(new Private(this))
+    : QAbstractTableModel(parent)
+    , d(new Private(this))
 {
     d->mParser = new CsvParser(this);
 
@@ -312,8 +320,8 @@ QVariant QCsvModel::data(const QModelIndex &index, int role) const
 
 bool QCsvModel::setData(const QModelIndex &index, const QVariant &data, int role)
 {
-    if (role == Qt::EditRole && index.row() == 0 &&
-            index.column() <= d->mFieldIdentifiers.count()) {
+    if (role == Qt::EditRole && index.row() == 0
+        && index.column() <= d->mFieldIdentifiers.count()) {
         d->mFieldIdentifiers[ index.column() ] = data.toString();
 
         Q_EMIT dataChanged(index, index);

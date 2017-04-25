@@ -51,7 +51,6 @@ MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
 
 MergeContactInfoWidget::~MergeContactInfoWidget()
 {
-
 }
 
 void MergeContactInfoWidget::setContact(const Akonadi::Item &item)

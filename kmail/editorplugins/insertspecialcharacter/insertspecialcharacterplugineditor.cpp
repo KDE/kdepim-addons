@@ -21,17 +21,16 @@
 #include "insertspecialcharacterplugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(InsertSpecialCharacterPluginEditorFactory, "kmail_insertspecialcharactereditorplugin.json", registerPlugin<InsertSpecialCharacterPluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(InsertSpecialCharacterPluginEditorFactory, "kmail_insertspecialcharactereditorplugin.json", registerPlugin<InsertSpecialCharacterPluginEditor>();
+                           )
 
 InsertSpecialCharacterPluginEditor::InsertSpecialCharacterPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
-
 }
 
 InsertSpecialCharacterPluginEditor::~InsertSpecialCharacterPluginEditor()
 {
-
 }
 
 MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::createInterface(KActionCollection *ac, QObject *parent)

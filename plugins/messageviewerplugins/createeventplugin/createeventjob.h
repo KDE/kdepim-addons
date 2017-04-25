@@ -25,8 +25,7 @@
 #include <KCalCore/Event>
 
 #include <QObject>
-namespace MessageViewer
-{
+namespace MessageViewer {
 class CreateEventJob : public KJob
 {
     Q_OBJECT

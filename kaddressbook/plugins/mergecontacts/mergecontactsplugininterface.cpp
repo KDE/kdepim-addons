@@ -29,12 +29,10 @@
 MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
-
 }
 
 MergeContactsPluginInterface::~MergeContactsPluginInterface()
 {
-
 }
 
 void MergeContactsPluginInterface::createAction(KActionCollection *ac)

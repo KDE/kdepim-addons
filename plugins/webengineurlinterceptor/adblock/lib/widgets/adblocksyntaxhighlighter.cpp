@@ -54,4 +54,3 @@ void AdBlockSyntaxHighlighter::init()
     QRegularExpression elementRegex(QStringLiteral(".*##.*"));
     m_rules.append(KPIMTextEdit::Rule(elementRegex, elementFormat));
 }
-

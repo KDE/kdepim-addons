@@ -49,9 +49,7 @@ public:
       whether we will use the settings corresponding to Israel or to the
       diaspora.
     */
-    static QStringList findHoliday(const HebrewDate &hd, bool useIsraelSettings,
-                                   bool showParsha, bool showChol,
-                                   bool showOmer);
+    static QStringList findHoliday(const HebrewDate &hd, bool useIsraelSettings, bool showParsha, bool showChol, bool showOmer);
 
 private:
     /**
@@ -77,11 +75,7 @@ private:
         AdarI = 12
     };
 
-    static QStringList findHoliday(int month, int day, int weekday,
-                                   int kvia, bool leap_year_p,
-                                   bool useIsraelSettings, int day_number,
-                                   int year, bool showParsha, bool showChol,
-                                   bool showOmer);
+    static QStringList findHoliday(int month, int day, int weekday, int kvia, bool leap_year_p, bool useIsraelSettings, int day_number, int year, bool showParsha, bool showChol, bool showOmer);
 };
 
 #endif

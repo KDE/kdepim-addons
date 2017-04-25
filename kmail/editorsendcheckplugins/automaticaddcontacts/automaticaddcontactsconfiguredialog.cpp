@@ -23,8 +23,8 @@
 #include <KLocalizedString>
 
 AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget *parent)
-    : PimCommon::ConfigurePluginDialog(parent),
-      mConfigureWidget(nullptr)
+    : PimCommon::ConfigurePluginDialog(parent)
+    , mConfigureWidget(nullptr)
 {
     setWindowTitle(i18n("Configure \"Automatic Add Contacts\" Plugin"));
     initLayout();
@@ -32,7 +32,6 @@ AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget
 
 AutomaticAddContactsConfigureDialog::~AutomaticAddContactsConfigureDialog()
 {
-
 }
 
 QWidget *AutomaticAddContactsConfigureDialog::createLayout()

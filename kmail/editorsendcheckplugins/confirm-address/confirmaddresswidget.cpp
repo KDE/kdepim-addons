@@ -43,7 +43,6 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
 
 ConfirmAddressWidget::~ConfirmAddressWidget()
 {
-
 }
 
 void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
@@ -62,7 +61,7 @@ void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool v
         QListWidgetItem *item = new QListWidgetItem(email, mListEmails);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if (valid) {
-            item->setFlags(item->flags() & ~ Qt::ItemIsUserCheckable);
+            item->setFlags(item->flags() & ~Qt::ItemIsUserCheckable);
         } else {
             item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
             item->setCheckState(Qt::Unchecked);

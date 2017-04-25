@@ -30,15 +30,14 @@
 using namespace MessageViewer;
 
 ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mEventEdit(nullptr)
+    : ViewerPluginInterface(parent)
+    , mEventEdit(nullptr)
 {
     createAction(ac);
 }
 
 ViewerPluginCreateEventInterface::~ViewerPluginCreateEventInterface()
 {
-
 }
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateEventInterface::featureTypes() const

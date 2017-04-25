@@ -33,17 +33,16 @@
 #include <QPointer>
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent),
-      mSendPlainText(false),
-      mCheckMailTransport(false),
-      mCheckDuplicateEmails(false),
-      mCheckSendAttachments(false)
+    : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
+    , mSendPlainText(false)
+    , mCheckMailTransport(false)
+    , mCheckDuplicateEmails(false)
+    , mCheckSendAttachments(false)
 {
 }
 
 CheckBeforeSendInterface::~CheckBeforeSendInterface()
 {
-
 }
 
 bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
@@ -60,7 +59,8 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
     if (mCheckMailTransport) {
         const KIdentityManagement::Identity identity = KIdentityManagement::IdentityManager::self()->identityForUoid(params.identity());
         if (identity.transport() != QString::number(params.transportId())) {
-            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
+            if (KMessageBox::No
+                == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
                 return false;
             } else {
                 return true;

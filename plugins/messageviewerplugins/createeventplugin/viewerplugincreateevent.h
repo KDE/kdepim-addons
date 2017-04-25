@@ -21,8 +21,7 @@
 #define VIEWERPLUGINCREATEEVENT_H
 #include <messageviewer/viewerplugin.h>
 #include <QVariant>
-namespace MessageViewer
-{
+namespace MessageViewer {
 class ViewerPluginCreateevent : public MessageViewer::ViewerPlugin
 {
     Q_OBJECT

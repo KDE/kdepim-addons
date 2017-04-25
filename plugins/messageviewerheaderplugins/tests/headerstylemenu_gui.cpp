@@ -53,7 +53,6 @@ HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
 
 HeaderStyleMenuTest::~HeaderStyleMenuTest()
 {
-
 }
 
 void HeaderStyleMenuTest::styleChanged(MessageViewer::HeaderStylePlugin *plugin)
@@ -83,4 +82,3 @@ int main(int argc, char **argv)
     delete w;
     return 0;
 }
-

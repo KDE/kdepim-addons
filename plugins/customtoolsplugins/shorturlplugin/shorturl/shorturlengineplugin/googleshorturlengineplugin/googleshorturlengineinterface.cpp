@@ -22,21 +22,17 @@
 GoogleShortUrlEngineInterface::GoogleShortUrlEngineInterface(QObject *parent)
     : ShortUrlEngineInterface(parent)
 {
-
 }
 
 GoogleShortUrlEngineInterface::~GoogleShortUrlEngineInterface()
 {
-
 }
 
 void GoogleShortUrlEngineInterface::generateShortUrl()
 {
-
 }
 
 QString GoogleShortUrlEngineInterface::engineName() const
 {
     return QStringLiteral("googleshorturl");
 }
-

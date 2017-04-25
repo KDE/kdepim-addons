@@ -26,12 +26,10 @@
 AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
-
 }
 
 AntiSpamPluginInterface::~AntiSpamPluginInterface()
 {
-
 }
 
 void AntiSpamPluginInterface::createAction(KActionCollection *ac)

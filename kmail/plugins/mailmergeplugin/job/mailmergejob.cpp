@@ -22,15 +22,12 @@ using namespace MailMerge;
 MailMergeJob::MailMergeJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MailMergeJob::~MailMergeJob()
 {
-
 }
 
 void MailMergeJob::start()
 {
-
 }

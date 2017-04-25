@@ -29,20 +29,19 @@
 
 class KJob;
 
-namespace MessageViewer
-{
-
+namespace MessageViewer {
 struct VCard {
     VCard()
         : found(false)
     {
-
     }
 
     VCard(const QString &str, bool b)
-        : email(str), found(b)
+        : email(str)
+        , found(b)
     {
     }
+
     KContacts::Addressee address;
     QString email;
     bool found;

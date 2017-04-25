@@ -25,12 +25,10 @@
 HeaderStylePluginManagerTest::HeaderStylePluginManagerTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 HeaderStylePluginManagerTest::~HeaderStylePluginManagerTest()
 {
-
 }
 
 void HeaderStylePluginManagerTest::shouldHaveDefaultValue()

@@ -25,17 +25,16 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_automaticaddcontactsplugin.json", registerPlugin<AutomaticAddContactsPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_automaticaddcontactsplugin.json", registerPlugin<AutomaticAddContactsPlugin>();
+                           )
 
 AutomaticAddContactsPlugin::AutomaticAddContactsPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)
 {
-
 }
 
 AutomaticAddContactsPlugin::~AutomaticAddContactsPlugin()
 {
-
 }
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *AutomaticAddContactsPlugin::createInterface(QObject *parent)
@@ -57,4 +56,3 @@ void AutomaticAddContactsPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "automaticaddcontactsplugin.moc"
-

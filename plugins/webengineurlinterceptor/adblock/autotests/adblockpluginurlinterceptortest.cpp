@@ -25,12 +25,10 @@
 AdblockPluginUrlInterceptorTest::AdblockPluginUrlInterceptorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AdblockPluginUrlInterceptorTest::~AdblockPluginUrlInterceptorTest()
 {
-
 }
 
 void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
@@ -39,4 +37,5 @@ void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
     QVERIFY(w.createInterface(new QWebEngineView(), this));
     QVERIFY(w.hasConfigureDialog());
 }
+
 QTEST_MAIN(AdblockPluginUrlInterceptorTest)

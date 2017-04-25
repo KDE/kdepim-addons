@@ -34,13 +34,11 @@
 
 class QListWidgetItem;
 
-namespace Ui
-{
+namespace Ui {
 class adblock;
 }
 
-namespace AdBlock
-{
+namespace AdBlock {
 class ADBLOCKLIB_EXPORT AdBlockSettingWidget : public QWidget
 {
     Q_OBJECT

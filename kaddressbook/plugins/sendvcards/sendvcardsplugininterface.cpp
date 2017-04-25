@@ -26,15 +26,13 @@
 #include <QAction>
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent),
-      mAction(nullptr)
+    : PimCommon::GenericPluginInterface(parent)
+    , mAction(nullptr)
 {
-
 }
 
 SendVcardsPluginInterface::~SendVcardsPluginInterface()
 {
-
 }
 
 void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)

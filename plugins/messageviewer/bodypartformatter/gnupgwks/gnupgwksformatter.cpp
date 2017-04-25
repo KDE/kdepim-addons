@@ -46,13 +46,11 @@ using namespace MimeTreeParser;
 using namespace MimeTreeParser::Interface;
 
 namespace {
-
 bool partHasMimeType(KMime::Content *part, const char *mt)
 {
     const auto ct = part->contentType(false);
     return ct && ct->isMimeType(mt);
 }
-
 }
 
 Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
@@ -72,14 +70,12 @@ Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part
     return BodyPartFormatter::process(part);
 }
 
-
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
     return format(part, writer, nullptr);
 }
 
-BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer,
-        QObject *obj) const
+BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer, QObject *obj) const
 {
     if (!writer) {
         return Ok;

@@ -56,7 +56,6 @@ AdblockManager::AdblockManager(QObject *parent)
 
 AdblockManager::~AdblockManager()
 {
-
 }
 
 void AdblockManager::reloadConfig()
@@ -72,7 +71,6 @@ void AdblockManager::loadSubscriptions()
     //Clear subscription
     mSubscriptions.clear();
     //TODO
-
 }
 
 bool AdblockManager::isEnabled() const
@@ -102,7 +100,7 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
 
 bool AdblockManager::canRunOnScheme(const QString &scheme) const
 {
-    return (scheme != QLatin1String("file"));
+    return scheme != QLatin1String("file");
 }
 
 QList<AdBlockSubscription *> AdblockManager::subscriptions() const

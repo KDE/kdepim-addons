@@ -22,8 +22,7 @@
 
 #include <QObject>
 
-namespace CalendarEvents
-{
+namespace CalendarEvents {
 class EventData;
 }
 

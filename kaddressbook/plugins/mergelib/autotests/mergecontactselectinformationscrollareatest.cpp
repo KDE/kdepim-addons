@@ -29,12 +29,10 @@
 MergeContactSelectInformationScrollAreaTest::MergeContactSelectInformationScrollAreaTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MergeContactSelectInformationScrollAreaTest::~MergeContactSelectInformationScrollAreaTest()
 {
-
 }
 
 void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()

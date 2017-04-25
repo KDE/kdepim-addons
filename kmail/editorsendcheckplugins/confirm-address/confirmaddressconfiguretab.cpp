@@ -41,7 +41,6 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
 
 ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
 {
-
 }
 
 void ConfirmAddressConfigureTab::loadSettings(const KConfigGroup &grp)
@@ -76,4 +75,3 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *i
         mListTabWidget.append(w);
     }
 }
-

@@ -47,24 +47,25 @@ public:
     CategorisedEntityModelFactory(QObject *parent = 0)
         : EntityTreeModelFactory(parent)
     {
-
     }
 
-    Akonadi::EntityTreeModel *getModel(Akonadi::Monitor *monitor, QObject *parent) Q_DECL_OVERRIDE {
+    Akonadi::EntityTreeModel *getModel(Akonadi::Monitor *monitor, QObject *parent) Q_DECL_OVERRIDE
+    {
         return new CategorisedEntityModel(monitor, parent);
     }
-
 };
 
 class Tab7TreeWidget : public EntityTreeWidget
 {
 public:
     Tab7TreeWidget(QWidget *parent = nullptr)
-        : EntityTreeWidget(parent), m_model(0)
+        : EntityTreeWidget(parent)
+        , m_model(0)
     {
     }
 
-    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE {
+    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE
+    {
         m_collectionFilter = new Akonadi::EntityMimeTypeFilterModel(this);
         m_collectionFilter->addMimeTypeInclusionFilter(Akonadi::Collection::mimeType());
         m_collectionFilter->setSourceModel(model);
@@ -72,11 +73,13 @@ public:
         tree->setModel(m_collectionFilter);
     }
 
-    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE {
+    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE
+    {
         return m_collectionFilter->mapToSource(idx);
     }
 
-    Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE {
+    Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE
+    {
         return m_model;
     }
 
@@ -88,7 +91,6 @@ public:
 private:
     Akonadi::EntityMimeTypeFilterModel *m_collectionFilter;
     Akonadi::EntityTreeModel *m_model;
-
 };
 
 Tab7Widget::Tab7Widget(QWidget *parent, Qt::WindowFlags f)
@@ -132,4 +134,3 @@ void Tab7Widget::initModel(Akonadi::EntityTreeModel *model)
 
     ItemViewerWidget *viewerWidget = new ItemViewerWidget(m_itemView->selectionModel(), rhsContainer);
 }
-

@@ -31,13 +31,11 @@ class NoteViewer;
 class QItemSelectionModel;
 class QStackedWidget;
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class Viewer;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ContactViewer;
 }
 
@@ -59,4 +57,3 @@ private:
 };
 
 #endif
-

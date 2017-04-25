@@ -30,15 +30,14 @@
 using namespace MessageViewer;
 
 ViewerPluginCreateTodoInterface::ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mTodoEdit(nullptr)
+    : ViewerPluginInterface(parent)
+    , mTodoEdit(nullptr)
 {
     createAction(ac);
 }
 
 ViewerPluginCreateTodoInterface::~ViewerPluginCreateTodoInterface()
 {
-
 }
 
 void ViewerPluginCreateTodoInterface::setText(const QString &text)
@@ -85,7 +84,8 @@ void ViewerPluginCreateTodoInterface::createAction(KActionCollection *ac)
         QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create Todo"), this);
         act->setIconText(i18n("Create To-do"));
         addHelpTextAction(act, i18n("Allows you to create a calendar to-do or reminder from this message"));
-        act->setWhatsThis(i18n("This option starts the KOrganizer to-do editor with initial values taken from the currently selected message. Then you can edit the to-do to your liking before saving it to your calendar."));
+        act->setWhatsThis(i18n(
+                              "This option starts the KOrganizer to-do editor with initial values taken from the currently selected message. Then you can edit the to-do to your liking before saving it to your calendar."));
         ac->addAction(QStringLiteral("create_todo"), act);
         ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL + Qt::Key_T));
         connect(act, &QAction::triggered, this, &ViewerPluginCreateTodoInterface::slotActivatePlugin);

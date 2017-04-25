@@ -26,8 +26,7 @@
 
 #include <AkonadiCore/Item>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 

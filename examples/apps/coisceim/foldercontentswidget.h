@@ -26,8 +26,7 @@
 
 class QItemSelectionModel;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeView;
 }
 

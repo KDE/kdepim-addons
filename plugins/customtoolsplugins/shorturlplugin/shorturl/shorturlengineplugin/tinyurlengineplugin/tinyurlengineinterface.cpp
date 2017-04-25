@@ -31,7 +31,6 @@ TinyUrlEngineInterface::TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QOb
 
 TinyUrlEngineInterface::~TinyUrlEngineInterface()
 {
-
 }
 
 QString TinyUrlEngineInterface::engineName() const

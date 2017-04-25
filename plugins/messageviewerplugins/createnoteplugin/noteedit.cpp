@@ -35,8 +35,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 QAbstractItemModel *_k_noteEditStubModel = nullptr;
 }
 
@@ -233,9 +232,9 @@ bool NoteEdit::eventFilter(QObject *object, QEvent *e)
             e->accept();
             slotCloseWidget();
             return true;
-        } else if (kev->key() == Qt::Key_Enter ||
-                   kev->key() == Qt::Key_Return ||
-                   kev->key() == Qt::Key_Space) {
+        } else if (kev->key() == Qt::Key_Enter
+                   || kev->key() == Qt::Key_Return
+                   || kev->key() == Qt::Key_Space) {
             e->accept();
             if (object == mCollectionCombobox) {
                 mCollectionCombobox->showPopup();

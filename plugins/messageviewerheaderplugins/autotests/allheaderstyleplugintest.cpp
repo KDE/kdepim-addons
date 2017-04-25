@@ -27,12 +27,10 @@
 AllHeaderStylePluginTest::AllHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AllHeaderStylePluginTest::~AllHeaderStylePluginTest()
 {
-
 }
 
 void AllHeaderStylePluginTest::shouldHaveDefaultValue()

@@ -21,7 +21,8 @@
 #include "nonbreakingspaceplugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(NonBreakingSpacePluginEditorFactory, "kmail_nonbreakingspaceeditorplugin.json", registerPlugin<NonBreakingSpacePluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(NonBreakingSpacePluginEditorFactory, "kmail_nonbreakingspaceeditorplugin.json", registerPlugin<NonBreakingSpacePluginEditor>();
+                           )
 
 NonBreakingSpacePluginEditor::NonBreakingSpacePluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
@@ -30,7 +31,6 @@ NonBreakingSpacePluginEditor::NonBreakingSpacePluginEditor(QObject *parent, cons
 
 NonBreakingSpacePluginEditor::~NonBreakingSpacePluginEditor()
 {
-
 }
 
 MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInterface(KActionCollection *ac, QObject *parent)

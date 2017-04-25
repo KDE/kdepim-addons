@@ -20,7 +20,6 @@
 #include "mergecontacts.h"
 #include "kaddressbookmergelibprivate_debug.h"
 
-
 using namespace KABMergeContacts;
 using namespace KContacts;
 MergeContacts::MergeContacts(const Akonadi::Item::List &items)
@@ -30,7 +29,6 @@ MergeContacts::MergeContacts(const Akonadi::Item::List &items)
 
 MergeContacts::~MergeContacts()
 {
-
 }
 
 void MergeContacts::setItems(const Akonadi::Item::List &items)
@@ -349,7 +347,8 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
     return result;
 }
 
-void MergeContacts::checkCustomValue(const KContacts::Addressee &address, const QString &variable, KContacts::Addressee &newContact, MergeContacts::ConflictInformations &result, MergeContacts::ConflictInformation conflict)
+void MergeContacts::checkCustomValue(const KContacts::Addressee &address, const QString &variable, KContacts::Addressee &newContact, MergeContacts::ConflictInformations &result,
+                                     MergeContacts::ConflictInformation conflict)
 {
     const QString value = address.custom(QStringLiteral("KADDRESSBOOK"), variable);
     if (!value.isEmpty()) {

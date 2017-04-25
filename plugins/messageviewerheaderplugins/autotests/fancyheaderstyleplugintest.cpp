@@ -28,12 +28,10 @@
 FancyHeaderStylePluginTest::FancyHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 FancyHeaderStylePluginTest::~FancyHeaderStylePluginTest()
 {
-
 }
 
 void FancyHeaderStylePluginTest::shouldHaveDefaultValue()

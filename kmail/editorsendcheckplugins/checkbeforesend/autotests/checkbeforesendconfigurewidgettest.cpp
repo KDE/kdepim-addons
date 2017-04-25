@@ -32,7 +32,6 @@ CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *
 
 CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
 {
-
 }
 
 void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()

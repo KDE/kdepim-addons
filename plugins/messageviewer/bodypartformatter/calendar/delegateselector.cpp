@@ -80,4 +80,3 @@ bool DelegateSelector::rsvp() const
 {
     return mRsvp->isChecked();
 }
-

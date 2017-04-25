@@ -23,8 +23,7 @@
 #include <messageviewer/viewerplugininterface.h>
 class KActionCollection;
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class NoteEdit;
 class ViewerPluginCreatenoteInterface : public ViewerPluginInterface
 {

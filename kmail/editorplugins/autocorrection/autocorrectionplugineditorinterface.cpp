@@ -25,14 +25,13 @@
 #include <KActionMenu>
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent),
-      mSelectedText(false)
+    : MessageComposer::PluginEditorInterface(parent)
+    , mSelectedText(false)
 {
 }
 
 AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface()
 {
-
 }
 
 void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)

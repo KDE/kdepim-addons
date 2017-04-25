@@ -34,7 +34,6 @@ SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveU
 
 SelectImapLineEditCompleterModel::~SelectImapLineEditCompleterModel()
 {
-
 }
 
 QAbstractProxyModel *SelectImapLineEditCompleterModel::completerModel() const

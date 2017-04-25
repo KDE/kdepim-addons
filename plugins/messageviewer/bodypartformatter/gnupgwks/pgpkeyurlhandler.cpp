@@ -63,8 +63,7 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
     return QString();
 }
 
-bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v,
-        BodyPart *part, const QString &path) const
+bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart *part, const QString &path) const
 {
     const QUrlQuery q = decodePath(path);
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("import")) {
@@ -86,4 +85,3 @@ bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v,
 
     return false;
 }
-

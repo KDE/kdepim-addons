@@ -29,18 +29,16 @@
 #include <AkonadiCore/Item>
 
 ImportExportEngine::ImportExportEngine(QObject *parent)
-    : QObject(parent),
-      mParentWidget(nullptr),
-      mImportProgressDialog(nullptr),
-      mNumberElementToImport(-1),
-      mImportDone(0)
+    : QObject(parent)
+    , mParentWidget(nullptr)
+    , mImportProgressDialog(nullptr)
+    , mNumberElementToImport(-1)
+    , mImportDone(0)
 {
-
 }
 
 ImportExportEngine::~ImportExportEngine()
 {
-
 }
 
 void ImportExportEngine::setContactList(const KAddressBookImportExport::KAddressBookImportExportContactList &contacts)
@@ -127,7 +125,6 @@ void ImportExportEngine::slotImportJobDone(KJob *)
 {
     mImportDone++;
     if (mImportProgressDialog) {
-
         mImportProgressDialog->setValue(mImportProgressDialog->value() + 1);
 
         // cleanup on last step
@@ -141,4 +138,3 @@ void ImportExportEngine::slotImportJobDone(KJob *)
         deleteLater();
     }
 }
-

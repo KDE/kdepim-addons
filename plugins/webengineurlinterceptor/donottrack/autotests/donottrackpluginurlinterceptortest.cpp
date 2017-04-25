@@ -24,12 +24,10 @@
 DoNotTrackPluginUrlInterceptorTest::DoNotTrackPluginUrlInterceptorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 DoNotTrackPluginUrlInterceptorTest::~DoNotTrackPluginUrlInterceptorTest()
 {
-
 }
 
 void DoNotTrackPluginUrlInterceptorTest::shouldHaveDefaultValue()

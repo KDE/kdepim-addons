@@ -23,12 +23,10 @@
 #include <QObject>
 #include <AkonadiCore/Item>
 #include <QUrl>
-namespace Gravatar
-{
+namespace Gravatar {
 class GravatarResolvUrlJob;
 }
-namespace KABGravatar
-{
+namespace KABGravatar {
 class GravatarUpdateJob : public QObject
 {
     Q_OBJECT

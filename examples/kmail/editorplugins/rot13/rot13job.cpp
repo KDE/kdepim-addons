@@ -20,12 +20,10 @@
 Rot13Job::Rot13Job(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 Rot13Job::~Rot13Job()
 {
-
 }
 
 void Rot13Job::setText(const QString &text)
@@ -35,20 +33,21 @@ void Rot13Job::setText(const QString &text)
 
 QString Rot13Job::rot13() const
 {
-    if (mInitialText.isEmpty())
+    if (mInitialText.isEmpty()) {
         return {};
+    }
 
     QString r(mInitialText);
 
     const int rLenght(r.length());
     for (int i = 0; i < rLenght; ++i) {
         const QChar rChar(r.at(i));
-        if ((rChar >= QLatin1Char('A') && rChar <= QLatin1Char('M')) ||
-                (rChar >= QLatin1Char('a') && rChar <= QLatin1Char('m'))) {
+        if ((rChar >= QLatin1Char('A') && rChar <= QLatin1Char('M'))
+            || (rChar >= QLatin1Char('a') && rChar <= QLatin1Char('m'))) {
             r[i] = (char)((int)QChar(r[i]).toLatin1() + 13);
         } else {
-            if ((rChar >= QLatin1Char('N') && rChar <= QLatin1Char('Z')) ||
-                    (rChar >= QLatin1Char('n') && rChar <= QLatin1Char('z'))) {
+            if ((rChar >= QLatin1Char('N') && rChar <= QLatin1Char('Z'))
+                || (rChar >= QLatin1Char('n') && rChar <= QLatin1Char('z'))) {
                 r[i] = (char)((int)QChar(r[i]).toLatin1() - 13);
             }
         }

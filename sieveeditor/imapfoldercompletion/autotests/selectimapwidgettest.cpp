@@ -28,12 +28,10 @@
 SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SelectImapWidgetTest::~SelectImapWidgetTest()
 {
-
 }
 
 void SelectImapWidgetTest::shouldHaveDefaultValue()

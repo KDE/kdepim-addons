@@ -21,8 +21,6 @@
 #include "mailimporter/filteroe.h"
 #include "mailimporter/filterinfo.h"
 
-
-
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 

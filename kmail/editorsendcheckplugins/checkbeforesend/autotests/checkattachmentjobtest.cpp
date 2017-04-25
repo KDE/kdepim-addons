@@ -25,12 +25,10 @@
 CheckAttachmentJobTest::CheckAttachmentJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 CheckAttachmentJobTest::~CheckAttachmentJobTest()
 {
-
 }
 
 void CheckAttachmentJobTest::shouldHaveDefaultValue()
@@ -47,7 +45,9 @@ void CheckAttachmentJobTest::shouldHaveDefaultValue()
 void CheckAttachmentJobTest::shouldAssignEmails()
 {
     CheckAttachmentJob job;
-    const QStringList lst{ QStringLiteral("foo"), QStringLiteral("bla") };
+    const QStringList lst {
+        QStringLiteral("foo"), QStringLiteral("bla")
+    };
     job.setOriginalEmails(lst);
     QCOMPARE(job.originalEmails(), lst);
 }
@@ -68,11 +68,17 @@ void CheckAttachmentJobTest::shouldRemoveDuplicatedEmails_data()
     QTest::addColumn<QStringList>("result");
     QTest::newRow("empty") << QStringList() << QStringList();
 
-    QStringList lst{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList lst {
+        QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")
+    };
     QTest::newRow("samelist") << lst << lst;
 
-    QStringList original{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org"), QStringLiteral("bla@kde.org")};
-    QStringList result{QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")};
+    QStringList original {
+        QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org"), QStringLiteral("bla@kde.org")
+    };
+    QStringList result {
+        QStringLiteral("foo@kde.org"), QStringLiteral("bla@kde.org")
+    };
     QTest::newRow("oneduplicate") << original << result;
 
     original = QStringList() << QStringLiteral("lolo <foo@kde.org>") << QStringLiteral("lulu <bla@kde.org>") << QStringLiteral("bla <bla@kde.org>");

@@ -44,7 +44,8 @@ void RenderTest::testRender_data()
         if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QLatin1String(".html"))) {
             continue;
         }
-        QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QLatin1String(".html")) << QString(file + QLatin1String(".out"));
+        QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QLatin1String(".html"))
+                                       << QString(file + QLatin1String(".out"));
     }
 }
 
@@ -97,7 +98,7 @@ void RenderTest::testRender()
                        << QStringLiteral("--output")
                        << htmlFileName
                        << outFileName;
-    QCOMPARE(QProcess::execute(QLatin1String("xmllint"), args),  0);
+    QCOMPARE(QProcess::execute(QLatin1String("xmllint"), args), 0);
 
     // get rid of system dependent or random paths
     {

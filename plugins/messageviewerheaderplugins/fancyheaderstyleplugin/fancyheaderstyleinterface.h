@@ -22,9 +22,7 @@
 
 #include <messageviewer/headerstyleinterface.h>
 
-namespace MessageViewer
-{
-
+namespace MessageViewer {
 class FancyHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT
@@ -35,7 +33,6 @@ public:
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;
     void activateAction() Q_DECL_OVERRIDE;
 };
-
 }
 
 #endif // FANCYHEADERSTYLEINTERFACE_H

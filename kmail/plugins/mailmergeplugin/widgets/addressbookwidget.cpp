@@ -28,6 +28,4 @@ AddressBookWidget::AddressBookWidget(QWidget *parent)
 
 AddressBookWidget::~AddressBookWidget()
 {
-
 }
-

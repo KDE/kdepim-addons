@@ -22,16 +22,13 @@
 
 #include <QString>
 
-namespace MimeTreeParser
-{
-namespace Interface
-{
+namespace MimeTreeParser {
+namespace Interface {
 class BodyPart;
 }
 }
 
-namespace KMime
-{
+namespace KMime {
 class Content;
 }
 

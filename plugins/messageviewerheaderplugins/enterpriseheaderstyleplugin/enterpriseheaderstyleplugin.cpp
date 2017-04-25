@@ -25,12 +25,13 @@
 #include <kpluginfactory.h>
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerEnterpriseHeaderStylePluginFactory, "messageviewer_enterpriseheaderstyleplugin.json", registerPlugin<EnterpriseHeaderStylePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(MessageViewerEnterpriseHeaderStylePluginFactory, "messageviewer_enterpriseheaderstyleplugin.json", registerPlugin<EnterpriseHeaderStylePlugin>();
+                           )
 
 EnterpriseHeaderStylePlugin::EnterpriseHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::HeaderStylePlugin(parent),
-      mHeaderStyle(new EnterpriseHeaderStyle),
-      mHeaderStrategy(new RichHeaderStrategy)
+    : MessageViewer::HeaderStylePlugin(parent)
+    , mHeaderStyle(new EnterpriseHeaderStyle)
+    , mHeaderStrategy(new RichHeaderStrategy)
 {
 }
 

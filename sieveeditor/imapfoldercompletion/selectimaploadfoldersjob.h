@@ -23,8 +23,7 @@
 #include <QObject>
 #include <kimap/listjob.h>
 #include <KSieveUi/SieveImapAccountSettings>
-namespace KIMAP
-{
+namespace KIMAP {
 class Session;
 }
 
@@ -59,7 +58,6 @@ private:
     QMap<QString, QStandardItem *> mItemsMap;
     KIMAP::Session *mSession;
     QStandardItemModel *mModel;
-
 };
 
 #endif // SELECTITEMFOLDERJOB_H

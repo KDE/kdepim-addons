@@ -24,8 +24,7 @@
 #include <KCalCore/Todo>
 #include <AkonadiCore/Collection>
 class KActionCollection;
-namespace MessageViewer
-{
+namespace MessageViewer {
 class TodoEdit;
 class ViewerPluginCreateTodoInterface : public ViewerPluginInterface
 {

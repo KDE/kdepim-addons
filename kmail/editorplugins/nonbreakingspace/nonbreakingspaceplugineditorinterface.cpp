@@ -30,7 +30,6 @@ NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QOb
 
 NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface()
 {
-
 }
 
 void NonBreakingSpacePluginEditorInterface::createAction(KActionCollection *ac)

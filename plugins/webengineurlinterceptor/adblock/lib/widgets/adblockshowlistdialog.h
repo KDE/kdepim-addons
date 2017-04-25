@@ -25,18 +25,15 @@
 class KJob;
 class QTemporaryFile;
 
-namespace KPIM
-{
+namespace KPIM {
 class ProgressIndicatorLabel;
 }
 
-namespace KPIMTextEdit
-{
+namespace KPIMTextEdit {
 class PlainTextEditorWidget;
 }
 class QPushButton;
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockShowListDialog : public QDialog
 {
     Q_OBJECT

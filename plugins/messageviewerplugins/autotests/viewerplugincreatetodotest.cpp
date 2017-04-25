@@ -25,8 +25,7 @@
 #include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
 }
 
@@ -39,7 +38,6 @@ ViewerPluginCreateTodoTest::ViewerPluginCreateTodoTest(QObject *parent)
 
 ViewerPluginCreateTodoTest::~ViewerPluginCreateTodoTest()
 {
-
 }
 
 void ViewerPluginCreateTodoTest::shouldCreateAction()

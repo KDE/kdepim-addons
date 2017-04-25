@@ -30,7 +30,6 @@ ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
 
 ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
 {
-
 }
 
 void ConfirmAddressPluginTest::shouldHaveDefaultValue()

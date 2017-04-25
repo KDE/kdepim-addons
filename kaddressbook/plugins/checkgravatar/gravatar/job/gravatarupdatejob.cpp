@@ -29,12 +29,10 @@ using namespace KABGravatar;
 GravatarUpdateJob::GravatarUpdateJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarUpdateJob::~GravatarUpdateJob()
 {
-
 }
 
 void GravatarUpdateJob::start()
@@ -52,7 +50,6 @@ void GravatarUpdateJob::start()
     } else {
         deleteLater();
     }
-
 }
 
 bool GravatarUpdateJob::canStart() const

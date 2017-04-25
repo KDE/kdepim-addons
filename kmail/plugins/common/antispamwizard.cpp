@@ -70,16 +70,15 @@
 using namespace KMail;
 using namespace MailCommon;
 
-AntiSpamWizard::AntiSpamWizard(WizardMode mode,
-                               QWidget *parent)
-    : KAssistantDialog(parent),
-      mInfoPage(nullptr),
-      mSpamRulesPage(nullptr),
-      mVirusRulesPage(nullptr),
-      mSummaryPage(nullptr),
-      mSpamToolsUsed(false),
-      mVirusToolsUsed(false),
-      mMode(mode)
+AntiSpamWizard::AntiSpamWizard(WizardMode mode, QWidget *parent)
+    : KAssistantDialog(parent)
+    , mInfoPage(nullptr)
+    , mSpamRulesPage(nullptr)
+    , mVirusRulesPage(nullptr)
+    , mSummaryPage(nullptr)
+    , mSpamToolsUsed(false)
+    , mVirusToolsUsed(false)
+    , mMode(mode)
 {
     // read the configuration for the anti-spam tools
     ConfigReader reader(mMode, mToolList);
@@ -93,7 +92,7 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode,
     }
     QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
     for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-            it != end; ++it) {
+         it != end; ++it) {
         qDebug() << "Predefined tool:" << (*it).getId();
         qDebug() << "Config version:" << (*it).getVersion();
         qDebug() << "Selection priority:" << (*it).getPrio();
@@ -113,7 +112,7 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode,
 #endif
 
     const bool isAntiSpam = (mMode == AntiSpam);
-    setWindowTitle(isAntiSpam  ? i18n("Anti-Spam Wizard")
+    setWindowTitle(isAntiSpam ? i18n("Anti-Spam Wizard")
                    : i18n("Anti-Virus Wizard"));
     mInfoPage = new ASWizInfoPage(mMode, nullptr, QString());
     mInfoPageItem = addPage(mInfoPage,
@@ -166,9 +165,9 @@ void AntiSpamWizard::accept()
         }
         QList<SpamToolConfig>::const_iterator end(mToolList.constEnd());
         for (QList<SpamToolConfig>::const_iterator it = mToolList.constBegin();
-                it != end; ++it) {
-            if (mInfoPage->isProgramSelected((*it).getVisibleName()) &&
-                    (mVirusRulesPage->pipeRulesSelected() && (*it).isVirusTool())) {
+             it != end; ++it) {
+            if (mInfoPage->isProgramSelected((*it).getVisibleName())
+                && (mVirusRulesPage->pipeRulesSelected() && (*it).isVirusTool())) {
                 // pipe messages through the anti-virus tools,
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
@@ -180,7 +179,7 @@ void AntiSpamWizard::accept()
                 SearchPattern *pipeFilterPattern = pipeFilter->pattern();
                 pipeFilterPattern->setName(uniqueNameFor((*it).getFilterName()));
                 pipeFilterPattern->append(SearchRule::createInstance("<size>",
-                                          SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+                                                                     SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
                 pipeFilter->setApplyOnOutbound(false);
                 pipeFilter->setApplyOnInbound();
                 pipeFilter->setApplyOnExplicit();
@@ -208,19 +207,20 @@ void AntiSpamWizard::accept()
             virusFilterPattern->setOp(SearchPattern::OpOr);
             QList<SpamToolConfig>::ConstIterator endSpamTool(mToolList.constEnd());
             for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                    it != endSpamTool; ++it) {
+                 it != endSpamTool; ++it) {
                 if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
                     if ((*it).isVirusTool()) {
                         const QByteArray header = (*it).getDetectionHeader().toLatin1();
                         const QString &pattern = (*it).getDetectionPattern();
-                        if ((*it).isUseRegExp())
+                        if ((*it).isUseRegExp()) {
                             virusFilterPattern->append(
                                 SearchRule::createInstance(header,
                                                            SearchRule::FuncRegExp, pattern));
-                        else
+                        } else {
                             virusFilterPattern->append(
                                 SearchRule::createInstance(header,
                                                            SearchRule::FuncContains, pattern));
+                        }
                     }
                 }
             }
@@ -243,9 +243,9 @@ void AntiSpamWizard::accept()
         replaceExistingFilters = true;
         QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != end; ++it) {
-            if (mInfoPage->isProgramSelected((*it).getVisibleName()) &&
-                    (*it).isSpamTool() && !(*it).isDetectionOnly()) {
+             it != end; ++it) {
+            if (mInfoPage->isProgramSelected((*it).getVisibleName())
+                && (*it).isSpamTool() && !(*it).isDetectionOnly()) {
                 // pipe messages through the anti-spam tools,
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
@@ -261,7 +261,7 @@ void AntiSpamWizard::accept()
                     pipeFilterPattern->setName(uniqueNameFor((*it).getFilterName()));
                 }
                 pipeFilterPattern->append(SearchRule::createInstance("<size>",
-                                          SearchRule::FuncIsLessOrEqual, QStringLiteral("256000")));
+                                                                     SearchRule::FuncIsLessOrEqual, QStringLiteral("256000")));
                 pipeFilter->setApplyOnOutbound(false);
                 pipeFilter->setApplyOnInbound();
                 pipeFilter->setApplyOnExplicit();
@@ -297,19 +297,20 @@ void AntiSpamWizard::accept()
         spamFilterPattern->setOp(SearchPattern::OpOr);
         QList<SpamToolConfig>::ConstIterator endToolList(mToolList.constEnd());
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != endToolList; ++it) {
+             it != endToolList; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
                 if ((*it).isSpamTool()) {
                     const QByteArray header = (*it).getDetectionHeader().toLatin1();
                     const QString &pattern = (*it).getDetectionPattern();
-                    if ((*it).isUseRegExp())
+                    if ((*it).isUseRegExp()) {
                         spamFilterPattern->append(
                             SearchRule::createInstance(header,
                                                        SearchRule::FuncRegExp, pattern));
-                    else
+                    } else {
                         spamFilterPattern->append(
                             SearchRule::createInstance(header,
                                                        SearchRule::FuncContains, pattern));
+                    }
                 }
             }
         }
@@ -337,20 +338,21 @@ void AntiSpamWizard::accept()
             unsureFilterPattern->setOp(SearchPattern::OpOr);
             QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
             for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                    it != end; ++it) {
+                 it != end; ++it) {
                 if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
                     if ((*it).isSpamTool() && (*it).hasTristateDetection()) {
                         atLeastOneUnsurePattern = true;
                         const QByteArray header = (*it).getDetectionHeader().toLatin1();
                         const QString &pattern = (*it).getDetectionPattern2();
-                        if ((*it).isUseRegExp())
+                        if ((*it).isUseRegExp()) {
                             unsureFilterPattern->append(
                                 SearchRule::createInstance(header,
                                                            SearchRule::FuncRegExp, pattern));
-                        else
+                        } else {
                             unsureFilterPattern->append(
                                 SearchRule::createInstance(header,
                                                            SearchRule::FuncContains, pattern));
+                        }
                     }
                 }
             }
@@ -376,9 +378,9 @@ void AntiSpamWizard::accept()
         classSpamFilterActions->append(classSpamFilterActionFirst);
         QList<SpamToolConfig>::ConstIterator endToolList2(mToolList.constEnd());
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != endToolList2; ++it) {
+             it != endToolList2; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName())
-                    && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
+                && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
                 FilterAction *classSpamFilterAction = dict.value(QStringLiteral("execute"))->create();
                 classSpamFilterAction->argsFromString((*it).getSpamCmd());
                 classSpamFilterActions->append(classSpamFilterAction);
@@ -397,7 +399,7 @@ void AntiSpamWizard::accept()
             classSpamFilterPattern->setName(uniqueNameFor(i18n("Classify as Spam")));
         }
         classSpamFilterPattern->append(SearchRule::createInstance("<size>",
-                                       SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+                                                                  SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
         classSpamFilter->setApplyOnOutbound(false);
         classSpamFilter->setApplyOnInbound(false);
         classSpamFilter->setApplyOnExplicit(false);
@@ -416,9 +418,9 @@ void AntiSpamWizard::accept()
         classHamFilterActions->append(classHamFilterActionFirst);
         end = mToolList.constEnd();
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != end; ++it) {
+             it != end; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName())
-                    && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
+                && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
                 FilterAction *classHamFilterAction = dict.value(QStringLiteral("execute"))->create();
                 classHamFilterAction->argsFromString((*it).getHamCmd());
                 classHamFilterActions->append(classHamFilterAction);
@@ -426,9 +428,9 @@ void AntiSpamWizard::accept()
         }
         end = mToolList.constEnd();
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != end; ++it) {
+             it != end; ++it) {
             if (mInfoPage->isProgramSelected((*it).getVisibleName())
-                    && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
+                && (*it).useBayesFilter() && !(*it).isDetectionOnly()) {
                 FilterAction *classHamFilterAction = dict.value(QStringLiteral("filter app"))->create();
                 classHamFilterAction->argsFromString((*it).getNoSpamCmd());
                 classHamFilterActions->append(classHamFilterAction);
@@ -441,7 +443,7 @@ void AntiSpamWizard::accept()
             classHamFilterPattern->setName(uniqueNameFor(i18n("Classify as NOT Spam")));
         }
         classHamFilterPattern->append(SearchRule::createInstance("<size>",
-                                      SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
+                                                                 SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
         classHamFilter->setApplyOnOutbound(false);
         classHamFilter->setApplyOnInbound(false);
         classHamFilter->setApplyOnExplicit(false);
@@ -471,7 +473,7 @@ void AntiSpamWizard::checkProgramsSelections()
     mVirusToolsUsed = false;
     QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
     for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-            it != end; ++it) {
+         it != end; ++it) {
         if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
             if ((*it).isSpamTool()) {
                 mSpamToolsUsed = true;
@@ -517,7 +519,7 @@ void AntiSpamWizard::checkToolAvailability()
     bool found = false;
     QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
     for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-            it != end; ++it) {
+         it != end; ++it) {
         const QString text(i18n("Scanning for %1...", (*it).getId()));
         mInfoPage->setScanProgressText(text);
         if ((*it).isSpamTool() && (*it).isServerBased()) {
@@ -561,11 +563,11 @@ void AntiSpamWizard::checkToolAvailability()
             }
         }
     }
-    if (found)
+    if (found) {
         mInfoPage->setScanProgressText((mMode == AntiSpam)
                                        ? i18n("Scanning for anti-spam tools finished.")
                                        : i18n("Scanning for anti-virus tools finished."));
-    else {
+    } else {
         mInfoPage->setScanProgressText((mMode == AntiSpam)
                                        ? i18n("<p>Sorry, no spam detection tools have been found. "
                                               "Install your spam detection software and "
@@ -590,27 +592,29 @@ void AntiSpamWizard::slotBuildSummary()
         text.clear(); // TODO add summary for the virus part
     } else { // AntiSpam mode
         if (mSpamRulesPage->markAsReadSelected()) {
-            if (mSpamRulesPage->moveSpamSelected())
+            if (mSpamRulesPage->moveSpamSelected()) {
                 text = i18n("<p>Messages classified as spam are marked as read."
-                            "<br />Spam messages are moved into the folder named <i>%1</i>.</p>"
-                            , mSpamRulesPage->selectedSpamCollectionName());
-            else
+                            "<br />Spam messages are moved into the folder named <i>%1</i>.</p>",
+                            mSpamRulesPage->selectedSpamCollectionName());
+            } else {
                 text = i18n("<p>Messages classified as spam are marked as read."
                             "<br />Spam messages are not moved into a certain folder.</p>");
+            }
         } else {
-            if (mSpamRulesPage->moveSpamSelected())
+            if (mSpamRulesPage->moveSpamSelected()) {
                 text = i18n("<p>Messages classified as spam are not marked as read."
-                            "<br />Spam messages are moved into the folder named <i>%1</i>.</p>"
-                            , mSpamRulesPage->selectedSpamCollectionName());
-            else
+                            "<br />Spam messages are moved into the folder named <i>%1</i>.</p>",
+                            mSpamRulesPage->selectedSpamCollectionName());
+            } else {
                 text = i18n("<p>Messages classified as spam are not marked as read."
                             "<br />Spam messages are not moved into a certain folder.</p>");
+            }
         }
         QList<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
         for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                it != end; ++it) {
-            if (mInfoPage->isProgramSelected((*it).getVisibleName()) &&
-                    (*it).isSpamTool() && !(*it).isDetectionOnly()) {
+             it != end; ++it) {
+            if (mInfoPage->isProgramSelected((*it).getVisibleName())
+                && (*it).isSpamTool() && !(*it).isDetectionOnly()) {
                 sortFilterOnExistance((*it).getFilterName(), newFilters, replaceFilters);
             }
         }
@@ -619,9 +623,9 @@ void AntiSpamWizard::slotBuildSummary()
         // The need for a andling of status "probably spam" depends on the tools chosen
         if (mSpamRulesPage->moveUnsureSelected()) {
             bool atLeastOneUnsurePattern = false;
-            end =  mToolList.constEnd();
+            end = mToolList.constEnd();
             for (QList<SpamToolConfig>::ConstIterator it = mToolList.constBegin();
-                    it != end; ++it) {
+                 it != end; ++it) {
                 if (mInfoPage->isProgramSelected((*it).getVisibleName())) {
                     if ((*it).isSpamTool() && (*it).hasTristateDetection()) {
                         atLeastOneUnsurePattern = true;
@@ -632,8 +636,8 @@ void AntiSpamWizard::slotBuildSummary()
             if (atLeastOneUnsurePattern) {
                 sortFilterOnExistance(i18n("Semi spam (unsure) handling"),
                                       newFilters, replaceFilters);
-                text += i18n("<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>.</p>"
-                             , mSpamRulesPage->selectedUnsureCollectionName());
+                text += i18n("<p>The folder for messages classified as unsure (probably spam) is <i>%1</i>.</p>",
+                             mSpamRulesPage->selectedUnsureCollectionName());
             }
         }
 
@@ -644,12 +648,14 @@ void AntiSpamWizard::slotBuildSummary()
                               newFilters, replaceFilters);
 
         // Show the filters in the summary
-        if (!newFilters.isEmpty())
-            text += i18n("<p>The wizard will create the following filters:<ul>%1</ul></p>"
-                         , newFilters);
-        if (!replaceFilters.isEmpty())
-            text += i18n("<p>The wizard will replace the following filters:<ul>%1</ul></p>"
-                         , replaceFilters);
+        if (!newFilters.isEmpty()) {
+            text += i18n("<p>The wizard will create the following filters:<ul>%1</ul></p>",
+                         newFilters);
+        }
+        if (!replaceFilters.isEmpty()) {
+            text += i18n("<p>The wizard will replace the following filters:<ul>%1</ul></p>",
+                         replaceFilters);
+        }
     }
 
     mSummaryPage->setSummaryText(text);
@@ -665,8 +671,8 @@ int AntiSpamWizard::checkForProgram(const QString &executable) const
 
 bool AntiSpamWizard::anyVirusOptionChecked() const
 {
-    return (mVirusRulesPage->moveRulesSelected()
-            || mVirusRulesPage->pipeRulesSelected());
+    return mVirusRulesPage->moveRulesSelected()
+           || mVirusRulesPage->pipeRulesSelected();
 }
 
 const QString AntiSpamWizard::uniqueNameFor(const QString &name)
@@ -675,8 +681,7 @@ const QString AntiSpamWizard::uniqueNameFor(const QString &name)
 }
 
 void AntiSpamWizard::sortFilterOnExistance(
-    const QString &intendedFilterName,
-    QString &newFilters, QString &replaceFilters)
+    const QString &intendedFilterName, QString &newFilters, QString &replaceFilters)
 {
     if (uniqueNameFor(intendedFilterName) == intendedFilterName) {
         newFilters += QLatin1String("<li>") + intendedFilterName + QLatin1String("</li>");
@@ -686,21 +691,29 @@ void AntiSpamWizard::sortFilterOnExistance(
 }
 
 //---------------------------------------------------------------------------
-AntiSpamWizard::SpamToolConfig::SpamToolConfig(const QString &toolId,
-        int configVersion, int prio, const QString &name, const QString &exec,
-        const QString &url, const QString &filter, const QString &detection,
-        const QString &spam, const QString &ham, const QString &noSpam,
-        const QString &header, const QString &pattern, const QString &pattern2,
-        const QString &serverPattern, bool detectionOnly, bool regExp,
-        bool bayesFilter, bool tristateDetection, WizardMode type)
-    : mId(toolId), mVersion(configVersion), mPrio(prio),
-      mVisibleName(name), mExecutable(exec), mWhatsThisText(url),
-      mFilterName(filter), mDetectCmd(detection), mSpamCmd(spam),
-      mHamCmd(ham), mNoSpamCmd(noSpam), mDetectionHeader(header),
-      mDetectionPattern(pattern), mDetectionPattern2(pattern2),
-      mServerPattern(serverPattern), mDetectionOnly(detectionOnly),
-      mUseRegExp(regExp), mSupportsBayesFilter(bayesFilter),
-      mSupportsUnsure(tristateDetection), mType(type)
+AntiSpamWizard::SpamToolConfig::SpamToolConfig(const QString &toolId, int configVersion, int prio, const QString &name, const QString &exec, const QString &url, const QString &filter,
+                                               const QString &detection, const QString &spam, const QString &ham, const QString &noSpam, const QString &header, const QString &pattern,
+                                               const QString &pattern2, const QString &serverPattern, bool detectionOnly, bool regExp, bool bayesFilter, bool tristateDetection, WizardMode type)
+    : mId(toolId)
+    , mVersion(configVersion)
+    , mPrio(prio)
+    , mVisibleName(name)
+    , mExecutable(exec)
+    , mWhatsThisText(url)
+    , mFilterName(filter)
+    , mDetectCmd(detection)
+    , mSpamCmd(spam)
+    , mHamCmd(ham)
+    , mNoSpamCmd(noSpam)
+    , mDetectionHeader(header)
+    , mDetectionPattern(pattern)
+    , mDetectionPattern2(pattern2)
+    , mServerPattern(serverPattern)
+    , mDetectionOnly(detectionOnly)
+    , mUseRegExp(regExp)
+    , mSupportsBayesFilter(bayesFilter)
+    , mSupportsUnsure(tristateDetection)
+    , mType(type)
 {
 }
 
@@ -811,19 +824,18 @@ AntiSpamWizard::WizardMode AntiSpamWizard::SpamToolConfig::getType() const
 
 bool AntiSpamWizard::SpamToolConfig::isSpamTool() const
 {
-    return (mType == AntiSpam);
+    return mType == AntiSpam;
 }
 
 bool AntiSpamWizard::SpamToolConfig::isVirusTool() const
 {
-    return (mType == AntiVirus);
+    return mType == AntiVirus;
 }
 
 //---------------------------------------------------------------------------
-AntiSpamWizard::ConfigReader::ConfigReader(WizardMode mode,
-        QList<SpamToolConfig> &configList)
-    : mToolList(configList),
-      mMode(mode)
+AntiSpamWizard::ConfigReader::ConfigReader(WizardMode mode, QList<SpamToolConfig> &configList)
+    : mToolList(configList)
+    , mMode(mode)
 {
     if (mMode == AntiSpam) {
         mConfig = KSharedConfig::openConfig(QStringLiteral("kmail.antispamrc"));
@@ -925,7 +937,7 @@ void AntiSpamWizard::ConfigReader::mergeToolConfig(const AntiSpamWizard::SpamToo
     bool found = false;
     QList<SpamToolConfig>::Iterator end(mToolList.end());
     for (QList<SpamToolConfig>::Iterator it = mToolList.begin();
-            it != end; ++it) {
+         it != end; ++it) {
 #ifndef NDEBUG
         qDebug() << "Check against tool:" << (*it).getId();
         qDebug() << "Against version   :" << (*it).getVersion();
@@ -957,7 +969,7 @@ void AntiSpamWizard::ConfigReader::sortToolList()
         int priority = 0; // ascending
         QList<SpamToolConfig>::Iterator end(mToolList.end());
         for (QList<SpamToolConfig>::Iterator it = mToolList.begin();
-                it != end; ++it) {
+             it != end; ++it) {
             if ((*it).getPrio() > priority) {
                 priority = (*it).getPrio();
                 highest = it;
@@ -969,7 +981,7 @@ void AntiSpamWizard::ConfigReader::sortToolList()
     }
     QList<SpamToolConfig>::ConstIterator end(tmpList.constEnd());
     for (QList<SpamToolConfig>::ConstIterator it = tmpList.constBegin();
-            it != end; ++it) {
+         it != end; ++it) {
         mToolList.append((*it));
     }
 }
@@ -998,8 +1010,7 @@ ASWizPage::ASWizPage(QWidget *parent, const QString &name)
 }
 
 //---------------------------------------------------------------------------
-ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode,
-                             QWidget *parent, const QString &name)
+ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode, QWidget *parent, const QString &name)
     : ASWizPage(parent, name)
 {
     QBoxLayout *layout = new QVBoxLayout();
@@ -1011,7 +1022,7 @@ ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode,
         ? i18n(
             "The wizard will search for any tools to do spam detection\n"
             "and setup KMail to work with them."
-        )
+            )
         : i18n(
             "<p>Here you can get some assistance in setting up KMail's filter "
             "rules to use some commonly-known anti-virus tools.</p>"
@@ -1026,9 +1037,9 @@ ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode,
             "operations are usually time consuming; please consider "
             "deleting the filter rules created by the wizard to get "
             "back to the former behavior.</p>"
-        ));
+            ));
     introText->setReadOnly(true);
-    introText->setSizePolicy(QSizePolicy(QSizePolicy::Expanding,  QSizePolicy::Expanding));
+    introText->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Expanding));
     layout->addWidget(introText);
 
     mScanProgressText = new QLabel(this);
@@ -1041,7 +1052,7 @@ ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode,
     mToolsList->setSelectionMode(QAbstractItemView::MultiSelection);
     mToolsList->setLayoutMode(QListView::Batched);
     mToolsList->setBatchSize(10);
-    mToolsList->setSizePolicy(QSizePolicy(QSizePolicy::Expanding,  QSizePolicy::Maximum));
+    mToolsList->setSizePolicy(QSizePolicy(QSizePolicy::Expanding, QSizePolicy::Maximum));
     layout->addWidget(mToolsList);
     connect(mToolsList->selectionModel(), &QItemSelectionModel::selectionChanged,
             this, &ASWizInfoPage::processSelectionChange);
@@ -1073,7 +1084,7 @@ void ASWizInfoPage::addAvailableTool(const QString &visibleName)
 bool ASWizInfoPage::isProgramSelected(const QString &visibleName) const
 {
     const QList<QListWidgetItem *> foundItems = mToolsList->findItems(visibleName, Qt::MatchFixedString);
-    return (!foundItems.isEmpty() && foundItems[0]->isSelected());
+    return !foundItems.isEmpty() && foundItems[0]->isSelected();
 }
 
 void ASWizInfoPage::processSelectionChange()
@@ -1270,7 +1281,6 @@ ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
     connect(mMoveRules, &QCheckBox::clicked, this, &ASWizVirusRulesPage::processSelectionChange);
     connect(mMarkRules, &QCheckBox::clicked, this, &ASWizVirusRulesPage::processSelectionChange);
     connect(mMoveRules, &QCheckBox::toggled, mMarkRules, &QCheckBox::setEnabled);
-
 }
 
 bool ASWizVirusRulesPage::pipeRulesSelected() const
@@ -1318,4 +1328,3 @@ void ASWizSummaryPage::setSummaryText(const QString &text)
 {
     mSummaryText->setText(text);
 }
-

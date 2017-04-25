@@ -31,7 +31,6 @@ public:
     CategorisedEntityModel(Akonadi::Monitor *monitor, QObject *parent = nullptr)
         : MixedTreeModel(monitor, parent)
     {
-
     }
 
     QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
@@ -50,7 +49,6 @@ public:
             if (mimetype == QLatin1String("text/x-vnd.akonadi.note")) {
                 return QLatin1String("Note");
             }
-
         }
         return Akonadi::EntityTreeModel::data(index, role);
     }

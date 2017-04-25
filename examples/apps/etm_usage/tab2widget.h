@@ -43,8 +43,6 @@ private Q_SLOTS:
 private:
     QTreeView *m_itemView;
     EntityTreeWidget *m_etw;
-
 };
 
 #endif
-

@@ -22,12 +22,10 @@
 Rot13PluginEditorInterfaceTest::Rot13PluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 Rot13PluginEditorInterfaceTest::~Rot13PluginEditorInterfaceTest()
 {
-
 }
 
 QTEST_MAIN(Rot13PluginEditorInterfaceTest)

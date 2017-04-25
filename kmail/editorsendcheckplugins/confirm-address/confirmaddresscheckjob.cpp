@@ -19,16 +19,13 @@
 
 #include "confirmaddresscheckjob.h"
 
-
 ConfirmAddressCheckJob::ConfirmAddressCheckJob()
     : mRejectedDomain(false)
 {
-
 }
 
 ConfirmAddressCheckJob::~ConfirmAddressCheckJob()
 {
-
 }
 
 void ConfirmAddressCheckJob::start()

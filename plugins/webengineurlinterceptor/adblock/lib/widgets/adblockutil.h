@@ -23,14 +23,11 @@
 #include <QString>
 #include <QMap>
 
-namespace AdBlock
-{
-namespace AdBlockUtil
-{
+namespace AdBlock {
+namespace AdBlockUtil {
 QMap<QString, QString> listSubscriptions();
 
 QString localFilterPath();
-
 }
 }
 

@@ -25,12 +25,10 @@
 SendVcardsJobTest::SendVcardsJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 SendVcardsJobTest::~SendVcardsJobTest()
 {
-
 }
 
 void SendVcardsJobTest::shouldNotStartWhenListAddressIsEmpty()

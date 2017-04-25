@@ -23,9 +23,7 @@
 #include <messageviewer/headerstyleinterface.h>
 
 class KActionCollection;
-namespace MessageViewer
-{
-
+namespace MessageViewer {
 class BriefHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT
@@ -36,7 +34,6 @@ public:
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;
     void activateAction() Q_DECL_OVERRIDE;
 };
-
 }
 
 #endif // BRIEFHEADERSTYLEINTERFACE_H

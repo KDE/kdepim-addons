@@ -40,9 +40,7 @@ protected:
     QString generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId = KDateTime()) const;
     bool isInRange(const QDate &start, const QDate &end) const;
 
-    QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
-            const KCalCore::Incidence::Ptr &incidence,
-            bool &ok);
+    QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalCore::Incidence::Ptr &incidence, bool &ok);
 protected:
     PimDataSource *mDataSource;
     QDate mStart;
@@ -60,8 +58,16 @@ public:
 protected:
     bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
     bool visit(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE { return false; }
-    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
+    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE
+    {
+        return false;
+    }
+
+    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE
+    {
+        return false;
+    }
+
 private:
     void insertResult(const CalendarEvents::EventData &result);
 
@@ -69,7 +75,6 @@ private:
     CalendarEvents::EventData incidenceData(const KCalCore::Incidence::Ptr &incidence) const;
 
     QMultiHash<QDate, CalendarEvents::EventData> mResults;
-
 };
 
 class EventDataIdVisitor : public BaseEventDataVisitor
@@ -82,8 +87,15 @@ public:
 protected:
     bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
     bool visit(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE { return false; }
-    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE { return false; }
+    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE
+    {
+        return false;
+    }
+
+    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE
+    {
+        return false;
+    }
 
 private:
     bool visit(const KCalCore::Incidence::Ptr &incidence);

@@ -22,8 +22,7 @@
 
 #include <KMessageWidget>
 #include "kaddressbookmergelib_export.h"
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactLoseInformationWarning : public KMessageWidget
 {
     Q_OBJECT

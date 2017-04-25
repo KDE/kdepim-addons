@@ -21,12 +21,12 @@
 #include "searchduplicatesplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(MergeContactsPluginFactory, "kaddressbook_searchduplicatesplugin.json", registerPlugin<SearchDuplicatesPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(MergeContactsPluginFactory, "kaddressbook_searchduplicatesplugin.json", registerPlugin<SearchDuplicatesPlugin>();
+                           )
 
 SearchDuplicatesPlugin::SearchDuplicatesPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 SearchDuplicatesPlugin::~SearchDuplicatesPlugin()

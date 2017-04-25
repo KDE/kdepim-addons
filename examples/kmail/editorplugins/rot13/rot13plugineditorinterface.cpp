@@ -25,12 +25,10 @@
 Rot13PluginEditorInterface::Rot13PluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
-
 }
 
 Rot13PluginEditorInterface::~Rot13PluginEditorInterface()
 {
-
 }
 
 void Rot13PluginEditorInterface::createAction(KActionCollection *ac)

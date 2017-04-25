@@ -22,12 +22,10 @@
 
 #include <QWidget>
 #include "adblocklib_export.h"
-namespace PimCommon
-{
+namespace PimCommon {
 class CustomTreeView;
 }
-namespace AdBlock
-{
+namespace AdBlock {
 class AdBlockResult;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
 {

@@ -27,7 +27,6 @@ MergeContactWidgetList::MergeContactWidgetList(QWidget *parent)
 
 MergeContactWidgetList::~MergeContactWidgetList()
 {
-
 }
 
 QString MergeContactWidgetList::itemName(const KContacts::Addressee &address) const
@@ -78,8 +77,8 @@ Akonadi::Item MergeContactWidgetList::currentAkonadiItem() const
 }
 
 MergeContactWidgetListItem::MergeContactWidgetListItem(const Akonadi::Item &item, QListWidget *parent)
-    : QListWidgetItem(parent),
-      mItem(item)
+    : QListWidgetItem(parent)
+    , mItem(item)
 {
     setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsUserCheckable);
     setCheckState(Qt::Unchecked);
@@ -89,4 +88,3 @@ Akonadi::Item MergeContactWidgetListItem::item() const
 {
     return mItem;
 }
-

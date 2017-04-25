@@ -54,7 +54,6 @@ ShortUrlConfigureDialog::ShortUrlConfigureDialog(QWidget *parent)
 
 ShortUrlConfigureDialog::~ShortUrlConfigureDialog()
 {
-
 }
 
 void ShortUrlConfigureDialog::slotOkClicked()

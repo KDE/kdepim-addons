@@ -23,14 +23,13 @@
 #include <QAbstractProxyModel>
 //#define COMPLETION_LINE_EDIT 1
 SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
-    : QLineEdit(parent),
-      mCompleter(nullptr)
+    : QLineEdit(parent)
+    , mCompleter(nullptr)
 {
 }
 
 SelectImapLineEdit::~SelectImapLineEdit()
 {
-
 }
 
 void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)

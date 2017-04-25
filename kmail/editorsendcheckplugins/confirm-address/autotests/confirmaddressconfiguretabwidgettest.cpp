@@ -28,12 +28,10 @@
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest()
 {
-
 }
 
 void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()

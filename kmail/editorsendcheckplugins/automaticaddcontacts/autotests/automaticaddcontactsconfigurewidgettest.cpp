@@ -33,7 +33,6 @@ AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest
 
 AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTest()
 {
-
 }
 
 void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()

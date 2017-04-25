@@ -93,4 +93,3 @@ Checkable2::Checkable2(QWidget *parent, Qt::WindowFlags f)
 
     ItemViewerWidget *viewerWidget = new ItemViewerWidget(m_itemView->selectionModel(), rhsContainer);
 }
-

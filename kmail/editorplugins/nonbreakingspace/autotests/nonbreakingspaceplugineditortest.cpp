@@ -25,12 +25,10 @@
 NonBreakingSpacePluginEditorTest::NonBreakingSpacePluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 NonBreakingSpacePluginEditorTest::~NonBreakingSpacePluginEditorTest()
 {
-
 }
 
 void NonBreakingSpacePluginEditorTest::shouldHaveDefaultValue()
@@ -40,7 +38,6 @@ void NonBreakingSpacePluginEditorTest::shouldHaveDefaultValue()
     QVERIFY(!plugin.hasConfigureDialog());
     QVERIFY(!plugin.hasPopupMenuSupport());
     QVERIFY(!plugin.hasToolBarSupport());
-
 }
 
 QTEST_MAIN(NonBreakingSpacePluginEditorTest)

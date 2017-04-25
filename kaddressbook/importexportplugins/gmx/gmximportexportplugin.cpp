@@ -21,17 +21,16 @@
 #include "gmximportexportplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(GMXImportExportPluginFactory, "kaddressbook_importexportgmxplugin.json", registerPlugin<GMXImportExportPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(GMXImportExportPluginFactory, "kaddressbook_importexportgmxplugin.json", registerPlugin<GMXImportExportPlugin>();
+                           )
 
 GMXImportExportPlugin::GMXImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {
-
 }
 
 GMXImportExportPlugin::~GMXImportExportPlugin()
 {
-
 }
 
 PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)

@@ -20,17 +20,16 @@
 #include "antispamplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antispamplugin.json", registerPlugin<AntiSpamPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_antispamplugin.json", registerPlugin<AntiSpamPlugin>();
+                           )
 
 AntiSpamPlugin::AntiSpamPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 AntiSpamPlugin::~AntiSpamPlugin()
 {
-
 }
 
 PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(KActionCollection *ac, QObject *parent)

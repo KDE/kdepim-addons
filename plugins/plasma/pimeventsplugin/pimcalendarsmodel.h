@@ -23,8 +23,7 @@
 #include <QSortFilterProxyModel>
 #include <QSet>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 }
 

@@ -21,7 +21,6 @@
 
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument()
 {
-
 }
 
 void ViewerPluginExternalScriptParseArgument::setMessage(const KMime::Message::Ptr &msg)

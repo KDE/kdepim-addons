@@ -24,12 +24,10 @@
 ZoomTextPluginEditorInterfaceTest::ZoomTextPluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest()
 {
-
 }
 
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()

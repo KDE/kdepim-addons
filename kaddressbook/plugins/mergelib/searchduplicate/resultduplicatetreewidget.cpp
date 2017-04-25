@@ -34,7 +34,6 @@ ResultDuplicateTreeWidget::ResultDuplicateTreeWidget(QWidget *parent)
 
 ResultDuplicateTreeWidget::~ResultDuplicateTreeWidget()
 {
-
 }
 
 void ResultDuplicateTreeWidget::slotItemChanged(QTreeWidgetItem *item, int column)
@@ -133,7 +132,6 @@ ResultDuplicateTreeWidgetItem::ResultDuplicateTreeWidgetItem(QTreeWidget *parent
 
 ResultDuplicateTreeWidgetItem::~ResultDuplicateTreeWidgetItem()
 {
-
 }
 
 Akonadi::Item ResultDuplicateTreeWidgetItem::item() const

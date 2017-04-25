@@ -42,7 +42,10 @@
 using namespace Akonadi;
 
 FolderContentsWidget::FolderContentsWidget(Trip *trip, int role, const QString &type, QWidget *parent, Qt::WindowFlags f)
-    : QWidget(parent, f), m_type(type), m_trip(trip), m_role(role)
+    : QWidget(parent, f)
+    , m_type(type)
+    , m_trip(trip)
+    , m_role(role)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
 
@@ -74,9 +77,12 @@ QItemSelectionModel *FolderContentsWidget::selectionModel() const
 static QString getMimeType(int role)
 {
     switch (role) {
-    case Trip::MailCollectionRole: return KMime::Message::mimeType();
-    case Trip::TodoCollectionRole: return KCalCore::Todo::todoMimeType();
-    case Trip::NotesCollectionRole: return Akonotes::Note::mimeType();
+    case Trip::MailCollectionRole:
+        return KMime::Message::mimeType();
+    case Trip::TodoCollectionRole:
+        return KCalCore::Todo::todoMimeType();
+    case Trip::NotesCollectionRole:
+        return Akonotes::Note::mimeType();
     }
     return QString();
 }
@@ -96,4 +102,3 @@ Trip *FolderContentsWidget::trip() const
 {
     return m_trip;
 }
-

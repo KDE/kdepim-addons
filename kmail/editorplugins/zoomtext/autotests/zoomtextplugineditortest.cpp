@@ -25,12 +25,10 @@
 ZoomTextPluginEditorTest::ZoomTextPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ZoomTextPluginEditorTest::~ZoomTextPluginEditorTest()
 {
-
 }
 
 void ZoomTextPluginEditorTest::shouldHaveDefaultValue()

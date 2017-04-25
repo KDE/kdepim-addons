@@ -25,8 +25,7 @@
 #include <KCalCore/Todo>
 
 #include <QObject>
-namespace MessageViewer
-{
+namespace MessageViewer {
 class CreateTodoJob : public KJob
 {
     Q_OBJECT

@@ -24,8 +24,7 @@
 #include "kaddressbookmergelib_export.h"
 #include "job/mergecontacts.h"
 class QStackedWidget;
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactSelectInformationWidget;
 class MergeContactInfoWidget;
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationScrollArea : public QWidget

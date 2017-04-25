@@ -29,7 +29,11 @@
 #include "note.h"
 
 ItemSelection::ItemSelection(QItemSelectionModel *selModel1, QItemSelectionModel *selModel2, QItemSelectionModel *selModel3, QObject *parent)
-    : QObject(parent), m_selModel1(selModel1), m_selModel2(selModel2), m_selModel3(selModel3), m_id(-1)
+    : QObject(parent)
+    , m_selModel1(selModel1)
+    , m_selModel2(selModel2)
+    , m_selModel3(selModel3)
+    , m_id(-1)
 {
     connectSignals();
 }
@@ -77,10 +81,11 @@ static QModelIndexList selectedRows(const QItemSelection &selection, int column 
 {
     QModelIndexList list;
 
-    foreach (const QModelIndex &idx, selection.indexes())
+    foreach (const QModelIndex &idx, selection.indexes()) {
         if (idx.column() == column) {
             list << idx;
         }
+    }
 
     return list;
 }
@@ -142,4 +147,3 @@ QString ItemSelection::noteTitle() const
 {
     return m_index.data().toString();
 }
-

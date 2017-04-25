@@ -25,8 +25,7 @@
 #include "kaddressbookmergelib_export.h"
 #include "searchduplicateresultwidget.h"
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationTabWidget : public QTabWidget
 {
     Q_OBJECT

@@ -27,7 +27,9 @@
 #include <QIcon>
 
 CreateFolderContentsWidget::CreateFolderContentsWidget(Trip *trip, int role, const QString &type, QWidget *parent)
-    : QStackedWidget(parent), m_trip(trip), m_role(role)
+    : QStackedWidget(parent)
+    , m_trip(trip)
+    , m_role(role)
 {
     QPushButton *button = new QPushButton(QLatin1String("Select ") + type);
 

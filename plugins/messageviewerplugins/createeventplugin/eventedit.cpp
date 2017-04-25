@@ -40,8 +40,7 @@
 #include <KGuiItem>
 #include <KStandardGuiItem>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 QAbstractItemModel *_k_eventEditStubModel = 0;
 }
 
@@ -292,9 +291,9 @@ bool EventEdit::eventFilter(QObject *object, QEvent *e)
             e->accept();
             slotCloseWidget();
             return true;
-        } else if (kev->key() == Qt::Key_Enter ||
-                   kev->key() == Qt::Key_Return ||
-                   kev->key() == Qt::Key_Space) {
+        } else if (kev->key() == Qt::Key_Enter
+                   || kev->key() == Qt::Key_Return
+                   || kev->key() == Qt::Key_Space) {
             e->accept();
             if (object == mCollectionCombobox) {
                 mCollectionCombobox->showPopup();

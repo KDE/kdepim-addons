@@ -36,19 +36,24 @@
 
 #include "messageviewer/headerstyle.h"
 #include "headerstyle_util.h"
-namespace MessageViewer
-{
+namespace MessageViewer {
 class BriefHeaderStyle : public HeaderStyle
 {
 public:
-    BriefHeaderStyle() : HeaderStyle() {}
-    ~BriefHeaderStyle() {}
+    BriefHeaderStyle() : HeaderStyle()
+    {
+    }
+
+    ~BriefHeaderStyle()
+    {
+    }
 
 public:
     const char *name() const Q_DECL_OVERRIDE
     {
         return "brief";
     }
+
 private:
     QString format(KMime::Message *message) const Q_DECL_OVERRIDE;
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;

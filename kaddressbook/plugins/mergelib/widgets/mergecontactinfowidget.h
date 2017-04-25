@@ -24,14 +24,12 @@
 
 #include <AkonadiCore/Item>
 class QLabel;
-namespace KAddressBookGrantlee
-{
+namespace KAddressBookGrantlee {
 class GrantleeContactViewer;
 }
 
 class QStackedWidget;
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactInfoWidget : public QWidget
 {
     Q_OBJECT

@@ -32,18 +32,15 @@ class NoteViewer;
 class ItemSelection;
 class QStackedWidget;
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class Viewer;
 }
 
-namespace Akonadi
-{
+namespace Akonadi {
 class ContactViewer;
 }
 
-namespace CalendarSupport
-{
+namespace CalendarSupport {
 class IncidenceViewer;
 }
 
@@ -66,4 +63,3 @@ private:
 };
 
 #endif
-

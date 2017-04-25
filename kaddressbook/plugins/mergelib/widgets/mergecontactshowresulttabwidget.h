@@ -23,9 +23,7 @@
 #include <QTabWidget>
 #include <AkonadiCore/item.h>
 
-namespace KABMergeContacts
-{
-
+namespace KABMergeContacts {
 class MergeContactShowResultTabWidget : public QTabWidget
 {
     Q_OBJECT

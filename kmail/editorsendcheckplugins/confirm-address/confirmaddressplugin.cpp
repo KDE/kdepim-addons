@@ -25,17 +25,16 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();
+                           )
 
 ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)
 {
-
 }
 
 ConfirmAddressPlugin::~ConfirmAddressPlugin()
 {
-
 }
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QObject *parent)
@@ -58,4 +57,3 @@ void ConfirmAddressPlugin::showConfigureDialog(QWidget *parent)
 }
 
 #include "confirmaddressplugin.moc"
-

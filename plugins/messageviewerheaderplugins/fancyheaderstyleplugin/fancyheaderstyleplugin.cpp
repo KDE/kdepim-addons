@@ -24,12 +24,13 @@
 #include <kpluginfactory.h>
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerFancyHeaderStylePluginFactory, "messageviewer_fancyheaderstyleplugin.json", registerPlugin<FancyHeaderStylePlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(MessageViewerFancyHeaderStylePluginFactory, "messageviewer_fancyheaderstyleplugin.json", registerPlugin<FancyHeaderStylePlugin>();
+                           )
 
 FancyHeaderStylePlugin::FancyHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::HeaderStylePlugin(parent),
-      mHeaderStyle(new FancyHeaderStyle),
-      mHeaderStrategy(new RichHeaderStrategy)
+    : MessageViewer::HeaderStylePlugin(parent)
+    , mHeaderStyle(new FancyHeaderStyle)
+    , mHeaderStrategy(new RichHeaderStrategy)
 {
 }
 

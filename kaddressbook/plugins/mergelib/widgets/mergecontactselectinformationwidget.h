@@ -24,8 +24,7 @@
 #include "kaddressbookmergelib_export.h"
 #include "job/mergecontacts.h"
 #include <AkonadiCore/Item>
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactSelectListWidget;
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationWidget : public QWidget
 {

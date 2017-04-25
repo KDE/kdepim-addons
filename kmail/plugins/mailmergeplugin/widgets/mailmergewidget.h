@@ -23,8 +23,7 @@
 class KComboBox;
 class QStackedWidget;
 
-namespace MailMerge
-{
+namespace MailMerge {
 class CsvWidget;
 class AttachmentListWidget;
 class AddressBookWidget;

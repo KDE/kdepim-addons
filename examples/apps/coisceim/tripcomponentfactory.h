@@ -25,8 +25,7 @@
 class QObject;
 class QAbstractItemModel;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 
@@ -41,7 +40,6 @@ public:
     QAbstractItemModel *createMailModel(Akonadi::Monitor *monitor);
     QAbstractItemModel *createTodoModel(Akonadi::Monitor *monitor);
     QAbstractItemModel *createNotesModel(Akonadi::Monitor *monitor);
-
 };
 
 #endif

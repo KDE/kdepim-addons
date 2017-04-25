@@ -48,7 +48,6 @@ private:
 ViewerPluginExternalScriptItem::ViewerPluginExternalScriptItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
-
 }
 
 void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo)
@@ -107,7 +106,6 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
 
 ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
 {
-
 }
 
 void ViewerPluginExternalConfigureWidget::slotRemoveScript()
@@ -182,7 +180,7 @@ void ViewerPluginExternalConfigureWidget::save()
         if (filenamepath.isEmpty()) {
             filenamepath = writablePath + QStringLiteral("%1.desktop").arg(scriptInfo.name());
             int fileIndex = 1;
-            while(QFileInfo::exists(filenamepath)) {
+            while (QFileInfo::exists(filenamepath)) {
                 filenamepath = writablePath + QStringLiteral("%1-%2.desktop").arg(scriptInfo.name()).arg(fileIndex);
                 fileIndex++;
             }

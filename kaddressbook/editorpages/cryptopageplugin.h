@@ -26,8 +26,7 @@
 
 #include <Akonadi/Contact/ContactEditorPagePlugin>
 
-namespace Kleo
-{
+namespace Kleo {
 class KeyRequester;
 }
 
@@ -50,7 +49,9 @@ public:
     void setReadOnly(bool readOnly) Q_DECL_OVERRIDE;
 
 private:
-    enum { NumberOfProtocols = 4 };
+    enum {
+        NumberOfProtocols = 4
+    };
     QCheckBox *mProtocolCB[NumberOfProtocols];
     KComboBox *mSignPref;
     KComboBox *mCryptPref;

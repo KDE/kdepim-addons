@@ -29,18 +29,18 @@ class MessageViewer::EventDateTimeWidgetPrivate
 {
 public:
     EventDateTimeWidgetPrivate()
-        : mDateEdit(nullptr),
-          mTimeEdit(nullptr)
+        : mDateEdit(nullptr)
+        , mTimeEdit(nullptr)
     {
-
     }
+
     KDateComboBox *mDateEdit;
     KTimeComboBox *mTimeEdit;
 };
 
 EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new MessageViewer::EventDateTimeWidgetPrivate)
+    : QWidget(parent)
+    , d(new MessageViewer::EventDateTimeWidgetPrivate)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);

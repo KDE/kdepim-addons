@@ -35,7 +35,6 @@ private Q_SLOTS:
     void shouldEmitSignalWhenJustTimeChanged();
     void shouldEmitSignalWhenJustDateChanged();
     void shouldNotEmitSignalWhenDateTimeWasNotChanged();
-
 };
 
 #endif // EVENTDATETIMEWIDGETTEST_H

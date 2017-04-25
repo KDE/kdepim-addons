@@ -25,12 +25,10 @@
 AdblockPluginUrlInterceptorConfigureWidgetTest::AdblockPluginUrlInterceptorConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AdblockPluginUrlInterceptorConfigureWidgetTest::~AdblockPluginUrlInterceptorConfigureWidgetTest()
 {
-
 }
 
 void AdblockPluginUrlInterceptorConfigureWidgetTest::shouldHaveDefaultValue()

@@ -31,7 +31,6 @@ TripAbShortUrlEngineInterface::TripAbShortUrlEngineInterface(ShortUrlEnginePlugi
 
 TripAbShortUrlEngineInterface::~TripAbShortUrlEngineInterface()
 {
-
 }
 
 QString TripAbShortUrlEngineInterface::engineName() const

@@ -24,9 +24,7 @@
 #include <AkonadiCore/Item>
 #include <KContacts/Addressee>
 
-namespace KABMergeContacts
-{
-
+namespace KABMergeContacts {
 class MergeContactWidgetListItem : public QListWidgetItem
 {
 public:
@@ -37,7 +35,7 @@ private:
     Akonadi::Item mItem;
 };
 
-class MergeContactWidgetList :  public QListWidget
+class MergeContactWidgetList : public QListWidget
 {
     Q_OBJECT
 public:

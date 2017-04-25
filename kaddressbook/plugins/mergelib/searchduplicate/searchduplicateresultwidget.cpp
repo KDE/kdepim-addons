@@ -32,15 +32,14 @@
 #include "KaddressbookGrantlee/GrantleeContactViewer"
 #include <AkonadiWidgets/CollectionComboBox>
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = nullptr;
 }
 
 using namespace KABMergeContacts;
 SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
-    : QWidget(parent),
-      mIndexListContact(0)
+    : QWidget(parent)
+    , mIndexListContact(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setMargin(0);
@@ -90,7 +89,6 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
 
 SearchDuplicateResultWidget::~SearchDuplicateResultWidget()
 {
-
 }
 
 void SearchDuplicateResultWidget::setContacts(const QVector<Akonadi::Item::List> &lstItem)

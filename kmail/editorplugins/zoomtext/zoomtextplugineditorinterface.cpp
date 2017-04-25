@@ -26,15 +26,13 @@
 #include <KActionMenu>
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent),
-      mType(Unknown)
+    : MessageComposer::PluginEditorInterface(parent)
+    , mType(Unknown)
 {
-
 }
 
 ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface()
 {
-
 }
 
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)

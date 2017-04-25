@@ -33,15 +33,14 @@
 using namespace MessageViewer;
 
 ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollection *ac, QWidget *parent)
-    : ViewerPluginInterface(parent),
-      mNoteEdit(nullptr)
+    : ViewerPluginInterface(parent)
+    , mNoteEdit(nullptr)
 {
     createAction(ac);
 }
 
 ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface()
 {
-
 }
 
 void ViewerPluginCreatenoteInterface::setText(const QString &text)
@@ -82,7 +81,7 @@ Akonadi::Relation ViewerPluginCreatenoteInterface::relatedNoteRelation() const
 
 void ViewerPluginCreatenoteInterface::showWidget()
 {
-    if (!mMessageItem.relations().isEmpty())  {
+    if (!mMessageItem.relations().isEmpty()) {
         Akonadi::Relation relation = relatedNoteRelation();
         if (relation.isValid()) {
             Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(relation.right());

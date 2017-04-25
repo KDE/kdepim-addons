@@ -27,12 +27,10 @@
 ViewerPluginTranslatorTest::ViewerPluginTranslatorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginTranslatorTest::~ViewerPluginTranslatorTest()
 {
-
 }
 
 void ViewerPluginTranslatorTest::shouldHaveDefaultValue()
@@ -43,7 +41,6 @@ void ViewerPluginTranslatorTest::shouldHaveDefaultValue()
     parent->setLayout(new QHBoxLayout);
 
     QVERIFY(translator->createView(parent, new KActionCollection(this)));
-
 }
 
 void ViewerPluginTranslatorTest::shouldCreateAction()

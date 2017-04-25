@@ -37,10 +37,9 @@ public Q_SLOTS:
 private:
     struct AutomaticAddContactsSettings {
         AutomaticAddContactsSettings()
-            : mEnabled(false),
-              mContactCollection(Akonadi::Collection(-1))
+            : mEnabled(false)
+            , mContactCollection(Akonadi::Collection(-1))
         {
-
         }
 
         bool mEnabled;

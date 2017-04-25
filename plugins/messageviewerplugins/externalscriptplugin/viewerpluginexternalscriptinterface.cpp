@@ -21,7 +21,6 @@
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternalscriptparseargument.h"
 
-
 #include <QIcon>
 #include <QAction>
 #include <QStandardPaths>
@@ -42,7 +41,6 @@ ViewerPluginExternalscriptInterface::ViewerPluginExternalscriptInterface(KAction
 
 ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
 {
-
 }
 
 void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *ac)
@@ -123,7 +121,9 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                     act->setIcon(QIcon::fromTheme(icon));
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
-                const QStringList actionInfo {info.commandLine(), info.executable()};
+                const QStringList actionInfo {
+                    info.commandLine(), info.executable()
+                };
 
                 act->setData(actionInfo);
                 mAction.append(act);

@@ -25,7 +25,9 @@ class GMXImportExportPlugin : public KAddressBookImportExport::KAddressBookImpor
 {
     Q_OBJECT
 public:
-    explicit GMXImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit GMXImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~GMXImportExportPlugin();
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;

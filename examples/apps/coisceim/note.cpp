@@ -25,4 +25,3 @@ QString Note::mimeType()
 {
     return QString::fromLatin1("text/x-vnd.akonadi.note");
 }
-

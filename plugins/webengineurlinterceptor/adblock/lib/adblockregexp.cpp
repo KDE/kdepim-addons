@@ -98,4 +98,3 @@ QString AdblockRegExp::cap(int nth) const
 
     return m_capturedTexts.at(nth);
 }
-

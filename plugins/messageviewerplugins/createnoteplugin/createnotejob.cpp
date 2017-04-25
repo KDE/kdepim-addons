@@ -29,10 +29,10 @@
 using namespace MessageViewer;
 
 CreateNoteJob::CreateNoteJob(const KMime::Message::Ptr &notePtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
-    : KJob(parent),
-      mItem(item),
-      mCollection(collection),
-      mNote(notePtr)
+    : KJob(parent)
+    , mItem(item)
+    , mCollection(collection)
+    , mNote(notePtr)
 {
 }
 
@@ -44,7 +44,7 @@ void CreateNoteJob::start()
 {
     mNote.setFrom(QCoreApplication::applicationName() + QLatin1Char(' ') + QCoreApplication::applicationVersion());
     mNote.setLastModifiedDate(QDateTime::currentDateTimeUtc());
-    if (!mItem.relations().isEmpty())  {
+    if (!mItem.relations().isEmpty()) {
         Akonadi::Relation relation;
         for (const Akonadi::Relation &r : mItem.relations()) {
             // assuming that GENERIC relations to emails are notes is a pretty horirific hack imo - aseigo

@@ -27,10 +27,10 @@ using namespace MessageViewer;
 using namespace Akonadi;
 
 MemoryCalendarMemento::MemoryCalendarMemento()
-    : QObject(0), mFinished(false)
+    : QObject(0)
+    , mFinished(false)
 {
-
-    Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
+    Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/ false);
     if (etmCalendar && etmCalendar->isLoaded()) {
         // Good, either korganizer or kontact summary view are already running, so reuse ETM to save memory
         mCalendar = etmCalendar;
@@ -74,4 +74,3 @@ void MemoryCalendarMemento::detach()
 {
     disconnect(this, &MemoryCalendarMemento::update, 0, 0);
 }
-

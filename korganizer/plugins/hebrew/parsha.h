@@ -41,8 +41,7 @@ public:
       @p dayNumber is the day of the year.
       @p kvia and @p isLeapYear refer to the year type.
     */
-    static QString findParshaName(int dayNumber, int kvia, bool isLeapYear,
-                                  bool useIsraelSettings);
+    static QString findParshaName(int dayNumber, int kvia, bool isLeapYear, bool useIsraelSettings);
 };
 
 #endif

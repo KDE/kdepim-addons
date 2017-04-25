@@ -27,8 +27,7 @@
 class QDialogButtonBox;
 class QStackedWidget;
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactWidget;
 class MergeContactErrorLabel;
 class MergeContactSelectInformationScrollArea;

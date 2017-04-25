@@ -36,9 +36,7 @@
 
 #include <kstringhandler.h>
 
-namespace
-{
-
+namespace {
 // TODO: Show filename header to make it possible to save the patch.
 // FIXME: The box should only be as wide as necessary.
 
@@ -47,7 +45,6 @@ class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 public:
     Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
-
         if (!writer) {
             return Ok;
         }
@@ -66,7 +63,7 @@ public:
 
         static const QLatin1String removedLineStyle("style=\"" "color: red;\"");
         static const QLatin1String fileRemoveStyle("style=\"font-weight: bold; "
-                "color: red ;\"");
+                                                   "color: red ;\"");
 
         static const QLatin1String tableStyle(
             "style=\""
@@ -124,6 +121,7 @@ public:
         }
         return nullptr;
     }
+
     const char *type(int idx) const Q_DECL_OVERRIDE
     {
         if (idx == 0 || idx == 1) {
@@ -131,6 +129,7 @@ public:
         }
         return nullptr;
     }
+
     const char *subtype(int idx) const Q_DECL_OVERRIDE
     {
         if (idx == 0) {
@@ -147,12 +146,11 @@ public:
         return nullptr;
     }
 };
-
 }
 
 extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin *
-messageviewer_bodypartformatter_text_xdiff_create_bodypart_formatter_plugin()
+Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
+*messageviewer_bodypartformatter_text_xdiff_create_bodypart_formatter_plugin()
 {
     return new Plugin();
 }

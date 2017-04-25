@@ -28,8 +28,8 @@ using namespace KABMergeContacts;
 using namespace KContacts;
 
 MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
-    : QWidget(parent),
-      mConflictType(MergeContacts::None)
+    : QWidget(parent)
+    , mConflictType(MergeContacts::None)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
     mTitle = new QLabel(this);
@@ -42,7 +42,6 @@ MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
 
 MergeContactSelectListWidget::~MergeContactSelectListWidget()
 {
-
 }
 
 void MergeContactSelectListWidget::setContacts(MergeContacts::ConflictInformation conflictType, const KContacts::Addressee::List &lst)
@@ -154,7 +153,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         switch (mConflictType) {
         case MergeContacts::None:
             break;
-        case MergeContacts::Birthday: {
+        case MergeContacts::Birthday:
+        {
             const QDate birdthDt = addr.birthday().date();
             QString birdth;
             if (birdthDt.isValid()) {
@@ -163,7 +163,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(birdth);
             break;
         }
-        case MergeContacts::Geo: {
+        case MergeContacts::Geo:
+        {
             const Geo geo = addr.geo();
             const QString str = QStringLiteral("%1-%2").arg(geo.latitude()).arg(geo.longitude());
             addItem(str);
@@ -177,7 +178,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             //TODO fix when it's an url
             addItem(QString(), QIcon(QPixmap::fromImage(addr.logo().data())));
             break;
-        case MergeContacts::Anniversary: {
+        case MergeContacts::Anniversary:
+        {
             QString anniversary;
             const QDate anniversaryDt = QDate::fromString(addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary")), Qt::ISODate);
             if (anniversaryDt.isValid()) {
@@ -192,7 +194,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::NickName:
             addItem(addr.nickName());
             break;
-        case MergeContacts::Blog: {
+        case MergeContacts::Blog:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
             addItem(newBlog);
             break;
@@ -203,7 +206,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::Organization:
             addItem(addr.organization());
             break;
-        case MergeContacts::Profession: {
+        case MergeContacts::Profession:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
             addItem(newBlog);
             break;
@@ -214,17 +218,20 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::Departement:
             addItem(addr.department());
             break;
-        case MergeContacts::Office: {
+        case MergeContacts::Office:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"));
             addItem(newBlog);
             break;
         }
-        case MergeContacts::ManagerName: {
+        case MergeContacts::ManagerName:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"));
             addItem(newBlog);
             break;
         }
-        case MergeContacts::Assistant: {
+        case MergeContacts::Assistant:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"));
             addItem(newBlog);
             break;
@@ -235,7 +242,8 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::FamilyName:
             addItem(addr.familyName());
             break;
-        case MergeContacts::PartnerName: {
+        case MergeContacts::PartnerName:
+        {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"));
             addItem(newBlog);
             break;
@@ -259,5 +267,5 @@ MergeContacts::ConflictInformation MergeContactSelectListWidget::conflictType() 
 
 bool MergeContactSelectListWidget::verifySelectedInfo() const
 {
-    return (selectedContact() != -1);
+    return selectedContact() != -1;
 }

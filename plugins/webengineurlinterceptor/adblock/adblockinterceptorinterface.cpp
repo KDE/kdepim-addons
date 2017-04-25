@@ -30,17 +30,16 @@
 #include <WebEngineViewer/WebHitTestResult>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
-    : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent),
-      mShowBlockableItems(nullptr),
-      mBlockImage(nullptr),
-      mWebEngineView(nullptr)
+    : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
+    , mShowBlockableItems(nullptr)
+    , mBlockImage(nullptr)
+    , mWebEngineView(nullptr)
 {
     mAdblockManager = new AdBlock::AdblockManager(this);
 }
 
 AdblockInterceptorInterface::~AdblockInterceptorInterface()
 {
-
 }
 
 bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)

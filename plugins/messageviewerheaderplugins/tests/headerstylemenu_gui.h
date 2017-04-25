@@ -22,8 +22,7 @@
 
 #include <QWidget>
 class QTextEdit;
-namespace MessageViewer
-{
+namespace MessageViewer {
 class HeaderStylePlugin;
 }
 

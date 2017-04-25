@@ -50,13 +50,13 @@ static const QString predefinedUserVisibleMimeTypes[] = {
 };
 
 EntityTreeWidget::EntityTreeWidget(QWidget *parent)
-    : QWidget(parent),
-      m_treeView(new QTreeView),
-      m_typeComboBox(new QComboBox),
-      m_typeLineEdit(new QLineEdit),
-      m_monitor(new Monitor(this))
+    : QWidget(parent)
+    , m_treeView(new QTreeView)
+    , m_typeComboBox(new QComboBox)
+    , m_typeLineEdit(new QLineEdit)
+    , m_monitor(new Monitor(this))
 {
-    for (uint i = 0; i < sizeof predefinedMimeTypes / sizeof * predefinedMimeTypes; ++i) {
+    for (uint i = 0; i < sizeof predefinedMimeTypes / sizeof *predefinedMimeTypes; ++i) {
         m_typeComboBox->addItem(predefinedUserVisibleMimeTypes[i], predefinedMimeTypes[i]);
     }
 
@@ -75,7 +75,6 @@ EntityTreeWidget::EntityTreeWidget(QWidget *parent)
 
 EntityTreeWidget::~EntityTreeWidget()
 {
-
 }
 
 void EntityTreeWidget::connectTreeToModel(QTreeView *tree, EntityTreeModel *model)
@@ -92,10 +91,11 @@ void EntityTreeWidget::mimeTypesChanged(const QString &mimetypeList)
 {
     const QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QLatin1String(","));
 
-    foreach (const QString mimetype, m_monitor->mimeTypesMonitored())
+    foreach (const QString mimetype, m_monitor->mimeTypesMonitored()) {
         if (!list.contains(mimetype)) {
             m_monitor->setMimeTypeMonitored(mimetype, false);
         }
+    }
 
     for (const QString &mimetype : list) {
         m_monitor->setMimeTypeMonitored(mimetype, true);
@@ -165,4 +165,3 @@ QString EntityTreeWidget::dumpLevel(const QModelIndex &parent, int level)
     }
     return lines;
 }
-

@@ -28,7 +28,6 @@ DoNotTrackInterceptorInterface::DoNotTrackInterceptorInterface(QObject *parent)
 
 DoNotTrackInterceptorInterface::~DoNotTrackInterceptorInterface()
 {
-
 }
 
 bool DoNotTrackInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)

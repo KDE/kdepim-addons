@@ -39,7 +39,6 @@
 RecursiveItemListWidget::RecursiveItemListWidget(QWidget *parent, Qt::WindowFlags f)
     : QWidget(parent, f)
 {
-
     Akonadi::Monitor *monitor = new Akonadi::Monitor(this);
     monitor->setAllMonitored(true);
     monitor->setMimeTypeMonitored(KContacts::Addressee::mimeType());
@@ -56,5 +55,4 @@ RecursiveItemListWidget::RecursiveItemListWidget(QWidget *parent, Qt::WindowFlag
     m_listView->setModel(list);
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->addWidget(m_listView);
-
 }

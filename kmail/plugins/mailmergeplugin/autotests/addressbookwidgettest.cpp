@@ -20,12 +20,10 @@
 AddressBookWidgetTest::AddressBookWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AddressBookWidgetTest::~AddressBookWidgetTest()
 {
-
 }
 
 QTEST_MAIN(AddressBookWidgetTest)

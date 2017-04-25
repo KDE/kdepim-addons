@@ -68,4 +68,3 @@ void CoisceimWidget::createTrip()
 {
     qDebug() << "CREATE";
 }
-

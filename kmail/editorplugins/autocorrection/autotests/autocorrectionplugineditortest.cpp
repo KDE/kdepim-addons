@@ -25,12 +25,10 @@
 AutoCorrectionPluginEditorTest::AutoCorrectionPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 AutoCorrectionPluginEditorTest::~AutoCorrectionPluginEditorTest()
 {
-
 }
 
 void AutoCorrectionPluginEditorTest::shouldHaveDefaultValue()

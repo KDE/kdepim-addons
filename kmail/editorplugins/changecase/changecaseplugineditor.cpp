@@ -21,17 +21,16 @@
 #include "changecaseplugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_changecaseeditorplugin.json", registerPlugin<ChangeCasePluginEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_changecaseeditorplugin.json", registerPlugin<ChangeCasePluginEditor>();
+                           )
 
 ChangeCasePluginEditor::ChangeCasePluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
-
 }
 
 ChangeCasePluginEditor::~ChangeCasePluginEditor()
 {
-
 }
 
 bool ChangeCasePluginEditor::hasPopupMenuSupport() const

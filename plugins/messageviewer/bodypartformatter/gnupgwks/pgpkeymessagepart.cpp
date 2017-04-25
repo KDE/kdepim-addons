@@ -90,8 +90,7 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
     QProcess p;
     p.start(QStringLiteral("gpg"), { QStringLiteral("--with-colons"),
                                      QStringLiteral("--fixed-list-mode"),
-                                     QStringLiteral("--with-fingerprint")
-                                   });
+                                     QStringLiteral("--with-fingerprint")});
     p.waitForStarted();
     p.write(node->decodedContent());
     p.closeWriteChannel();
@@ -129,4 +128,3 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
         }
     }
 }
-

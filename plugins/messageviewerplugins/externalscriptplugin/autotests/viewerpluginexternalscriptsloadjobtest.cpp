@@ -25,12 +25,10 @@
 ViewerPluginExternalScriptsLoadJobTest::ViewerPluginExternalScriptsLoadJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalScriptsLoadJobTest::~ViewerPluginExternalScriptsLoadJobTest()
 {
-
 }
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()

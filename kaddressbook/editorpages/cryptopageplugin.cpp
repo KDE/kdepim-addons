@@ -97,9 +97,10 @@ CryptoPagePlugin::CryptoPagePlugin()
     hboxHBoxLayout->addWidget(mSignPref);
     l->setBuddy(mSignPref);
     mSignPref->setEditable(false);
-    for (unsigned int i = Kleo::UnknownSigningPreference; i < Kleo::MaxSigningPreference; ++i)
+    for (unsigned int i = Kleo::UnknownSigningPreference; i < Kleo::MaxSigningPreference; ++i) {
         mSignPref->addItem(Kleo::signingPreferenceToLabel(
                                static_cast<Kleo::SigningPreference>(i)));
+    }
     boxLayout->addWidget(hbox);
 
     // Send preferences/encrypt (see kleo/kleo/enum.h)
@@ -114,9 +115,10 @@ CryptoPagePlugin::CryptoPagePlugin()
     hboxHBoxLayout->addWidget(mCryptPref);
     l->setBuddy(mCryptPref);
     mCryptPref->setEditable(false);
-    for (unsigned int i = Kleo::UnknownPreference; i < Kleo::MaxEncryptionPreference; ++i)
+    for (unsigned int i = Kleo::UnknownPreference; i < Kleo::MaxEncryptionPreference; ++i) {
         mCryptPref->addItem(Kleo::encryptionPreferenceToLabel(
                                 static_cast<Kleo::EncryptionPreference>(i)));
+    }
     boxLayout->addWidget(hbox);
     box->setLayout(boxLayout);
 }
@@ -209,4 +211,3 @@ void CryptoPagePlugin::setReadOnly(bool readOnly)
     mPgpKey->setEnabled(!readOnly);
     mSmimeCert->setEnabled(!readOnly);
 }
-

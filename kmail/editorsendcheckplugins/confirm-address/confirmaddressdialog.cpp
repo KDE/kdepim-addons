@@ -28,8 +28,8 @@
 #include <KMessageBox>
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
-    : QDialog(parent),
-      mCurrentIdentity(0)
+    : QDialog(parent)
+    , mCurrentIdentity(0)
 {
     setWindowTitle(i18n("Confirm Addresses"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

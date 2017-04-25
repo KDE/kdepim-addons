@@ -25,14 +25,13 @@
 using namespace KABMergeContacts;
 
 SearchPotentialDuplicateContactJob::SearchPotentialDuplicateContactJob(const Akonadi::Item::List &list, QObject *parent)
-    : QObject(parent),
-      mListItem(list)
+    : QObject(parent)
+    , mListItem(list)
 {
 }
 
 SearchPotentialDuplicateContactJob::~SearchPotentialDuplicateContactJob()
 {
-
 }
 
 void SearchPotentialDuplicateContactJob::start()

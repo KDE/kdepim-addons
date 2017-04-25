@@ -26,7 +26,8 @@
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 
-K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();)
+K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();
+                           )
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
     : WebEngineViewer::NetworkPluginUrlInterceptor(parent)
 {
@@ -34,7 +35,6 @@ AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const 
 
 AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 {
-
 }
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
@@ -56,4 +56,3 @@ void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 }
 
 #include "adblockpluginurlinterceptor.moc"
-

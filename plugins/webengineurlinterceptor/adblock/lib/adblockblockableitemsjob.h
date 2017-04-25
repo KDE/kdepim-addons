@@ -27,8 +27,7 @@
 
 class QWebEngineView;
 
-namespace AdBlock
-{
+namespace AdBlock {
 struct AdBlockResult;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsJob : public QObject
 {
@@ -67,7 +66,6 @@ struct ADBLOCKLIB_EXPORT AdBlockResult {
     AdBlockResult()
         : type(AdBlockBlockableItemsJob::UnKnown)
     {
-
     }
 
     bool isValid() const
@@ -79,6 +77,7 @@ struct ADBLOCKLIB_EXPORT AdBlockResult {
     {
         return (src == other.src) && (type == other.type);
     }
+
     QString src;
     AdBlockBlockableItemsJob::TypeElement type;
 };

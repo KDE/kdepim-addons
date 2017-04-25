@@ -25,17 +25,15 @@
 #include <QNetworkAccessManager>
 
 ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
-    : QObject(parent),
-      mErrorFound(false),
-      mNetworkAccessManager(new QNetworkAccessManager(this)),
-      mEnginePlugin(plugin)
+    : QObject(parent)
+    , mErrorFound(false)
+    , mNetworkAccessManager(new QNetworkAccessManager(this))
+    , mEnginePlugin(plugin)
 {
-
 }
 
 ShortUrlEngineInterface::~ShortUrlEngineInterface()
 {
-
 }
 
 void ShortUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
@@ -48,10 +46,10 @@ void ShortUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
 void ShortUrlEngineInterface::setShortUrl(const QString &url)
 {
     mErrorFound = false;
-    if (!url.trimmed().startsWith(QStringLiteral("http://")) &&
-            !url.trimmed().startsWith(QStringLiteral("https://")) &&
-            !url.trimmed().startsWith(QStringLiteral("ftp://")) &&
-            !url.trimmed().startsWith(QStringLiteral("ftps://"))) {
+    if (!url.trimmed().startsWith(QStringLiteral("http://"))
+        && !url.trimmed().startsWith(QStringLiteral("https://"))
+        && !url.trimmed().startsWith(QStringLiteral("ftp://"))
+        && !url.trimmed().startsWith(QStringLiteral("ftps://"))) {
         mOriginalUrl = QLatin1String("http://") + url;
     } else {
         mOriginalUrl = url;

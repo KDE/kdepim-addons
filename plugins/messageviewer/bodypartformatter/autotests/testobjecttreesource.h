@@ -28,19 +28,20 @@
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {
 public:
-    TestObjectTreeSource(MimeTreeParser::HtmlWriter *writer,
-                         MessageViewer::CSSHelperBase *cssHelper)
+    TestObjectTreeSource(MimeTreeParser::HtmlWriter *writer, MessageViewer::CSSHelperBase *cssHelper)
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
     {
     }
 
-    MimeTreeParser::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE {
+    MimeTreeParser::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE
+    {
         return mWriter;
     }
 
-    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE {
+    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE
+    {
         return mCSSHelper;
     }
 
@@ -58,29 +59,41 @@ public:
     {
         return false;
     }
+
     bool showSignatureDetails() const Q_DECL_OVERRIDE
     {
         return false;
     }
-    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) Q_DECL_OVERRIDE {
+
+    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) Q_DECL_OVERRIDE
+    {
         Q_UNUSED(mode)
         Q_UNUSED(availableModes)
     }
+
     int levelQuote() const Q_DECL_OVERRIDE
     {
         return false;
     }
-    const QTextCodec *overrideCodec() Q_DECL_OVERRIDE {
+
+    const QTextCodec *overrideCodec() Q_DECL_OVERRIDE
+    {
         return nullptr;
     }
-    QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE {
+
+    QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE
+    {
         Q_UNUSED(message);
         return QString();
     }
-    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE {
+
+    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE
+    {
         return MimeTreeParser::AttachmentStrategy::smart();
     }
-    QObject *sourceObject() Q_DECL_OVERRIDE {
+
+    QObject *sourceObject() Q_DECL_OVERRIDE
+    {
         return nullptr;
     }
 
@@ -88,10 +101,12 @@ public:
     {
         return false;
     }
+
     bool showEmoticons() const Q_DECL_OVERRIDE
     {
         return false;
     }
+
     bool showExpandQuotesMark() const Q_DECL_OVERRIDE
     {
         return false;
@@ -101,6 +116,7 @@ public:
     {
         return MimeTreeParser::Util::Html;
     }
+
 private:
     MimeTreeParser::HtmlWriter *mWriter;
     MessageViewer::CSSHelperBase *mCSSHelper;

@@ -26,15 +26,13 @@
 #include <QAction>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent),
-      mType(Unknown)
+    : MessageComposer::PluginEditorInterface(parent)
+    , mType(Unknown)
 {
-
 }
 
 ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
 {
-
 }
 
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)

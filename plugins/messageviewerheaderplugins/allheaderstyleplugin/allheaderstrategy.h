@@ -22,8 +22,7 @@
 
 #include <messageviewer/headerstrategy.h>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class AllHeaderStrategy : public HeaderStrategy
 {
 public:

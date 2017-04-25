@@ -37,7 +37,9 @@
 using namespace Akonadi;
 
 ItemViewerWidget::ItemViewerWidget(QItemSelectionModel *itemSelectionModel, QWidget *parent, Qt::WindowFlags f)
-    : QWidget(parent, f), m_itemSelectionModel(itemSelectionModel), m_widgetStack(new QStackedWidget(this))
+    : QWidget(parent, f)
+    , m_itemSelectionModel(itemSelectionModel)
+    , m_widgetStack(new QStackedWidget(this))
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
     layout->addWidget(m_widgetStack);
@@ -88,4 +90,3 @@ void ItemViewerWidget::selectionChanged(const QItemSelection &selected, const QI
 
     m_widgetStack->setCurrentIndex(0);
 }
-

@@ -24,8 +24,7 @@
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/Item>
 #include <KContacts/Addressee>
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactsJob : public QObject
 {
     Q_OBJECT

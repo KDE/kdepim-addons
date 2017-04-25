@@ -22,8 +22,7 @@
 #include <QDialog>
 #include <KContacts/Addressee>
 
-namespace KAddressBookGrantlee
-{
+namespace KAddressBookGrantlee {
 class GrantleeContactViewer;
 }
 class QPushButton;
@@ -31,8 +30,7 @@ class VCardViewerDialog : public QDialog
 {
     Q_OBJECT
 public:
-    VCardViewerDialog(const KContacts::Addressee::List &list,
-                      QWidget *parent = nullptr);
+    VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent = nullptr);
     ~VCardViewerDialog();
 
     KContacts::Addressee::List contacts() const;

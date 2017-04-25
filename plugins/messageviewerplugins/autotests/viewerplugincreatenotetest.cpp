@@ -25,8 +25,7 @@
 #include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_noteEditStubModel;
 }
 
@@ -39,7 +38,6 @@ ViewerPluginCreateNoteTest::ViewerPluginCreateNoteTest(QObject *parent)
 
 ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest()
 {
-
 }
 
 void ViewerPluginCreateNoteTest::shouldCreateAction()

@@ -26,8 +26,8 @@
 #include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
-    : QWidget(parent),
-      mIdentity(0)
+    : QWidget(parent)
+    , mIdentity(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -52,13 +52,13 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     mRejectedDomain->setObjectName(QStringLiteral("rejectdomainname"));
     radioButtonLayout->addWidget(mRejectedDomain);
 
-    PimCommon::SimpleStringListEditor::ButtonCode buttonCode =
-        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
-    mDomainNameListEditor =
-        new PimCommon::SimpleStringListEditor(groupBoxDomainName, buttonCode,
-                i18n("A&dd..."), i18n("Re&move"),
-                i18n("Mod&ify..."),
-                i18n("Enter new domain name:"));
+    PimCommon::SimpleStringListEditor::ButtonCode buttonCode
+        = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
+    mDomainNameListEditor
+        = new PimCommon::SimpleStringListEditor(groupBoxDomainName, buttonCode,
+                                                i18n("A&dd..."), i18n("Re&move"),
+                                                i18n("Mod&ify..."),
+                                                i18n("Enter new domain name:"));
     mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
     connect(mDomainNameListEditor, &PimCommon::SimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
@@ -70,13 +70,13 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     QVBoxLayout *layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
     layoutWhiteList->setObjectName(QStringLiteral("layoutwhitelist"));
 
-    buttonCode =
-        static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
-    mWhiteListEditor =
-        new PimCommon::SimpleStringListEditor(groupBoxWhiteList, buttonCode,
-                i18n("A&dd..."), i18n("Re&move"),
-                i18n("Mod&ify..."),
-                i18n("Enter new email address:"));
+    buttonCode
+        = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
+    mWhiteListEditor
+        = new PimCommon::SimpleStringListEditor(groupBoxWhiteList, buttonCode,
+                                                i18n("A&dd..."), i18n("Re&move"),
+                                                i18n("Mod&ify..."),
+                                                i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
     layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &PimCommon::SimpleStringListEditor::changed,
@@ -85,7 +85,6 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
 
 ConfirmAddressConfigureTabWidget::~ConfirmAddressConfigureTabWidget()
 {
-
 }
 
 void ConfirmAddressConfigureTabWidget::resetSettings()

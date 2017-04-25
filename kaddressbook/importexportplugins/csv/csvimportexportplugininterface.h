@@ -43,7 +43,6 @@ private:
     void slotExportCVS();
     void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
     void importCSV();
-
 };
 
 #endif // CSVIMPORTEXPORTPLUGININTERFACE_H

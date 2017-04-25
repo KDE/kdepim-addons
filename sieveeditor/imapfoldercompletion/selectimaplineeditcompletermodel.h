@@ -23,8 +23,7 @@
 #include <QObject>
 class KDescendantsProxyModel;
 class QAbstractProxyModel;
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveImapAccountSettings;
 }
 class SelectImapLineEditCompleterModel : public QObject

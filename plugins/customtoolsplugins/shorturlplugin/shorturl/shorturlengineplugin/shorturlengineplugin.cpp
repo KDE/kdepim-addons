@@ -24,16 +24,15 @@ class ShortUrlEnginePluginPrivate
 public:
     ShortUrlEnginePluginPrivate()
     {
-
     }
+
     QString name;
 };
 
 ShortUrlEnginePlugin::ShortUrlEnginePlugin(QObject *parent)
-    : QObject(parent),
-      d(new ShortUrlEnginePluginPrivate)
+    : QObject(parent)
+    , d(new ShortUrlEnginePluginPrivate)
 {
-
 }
 
 ShortUrlEnginePlugin::~ShortUrlEnginePlugin()

@@ -23,12 +23,12 @@
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreateeventFactory, "messageviewer_createeventplugin.json", registerPlugin<ViewerPluginCreateevent>();)
+K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreateeventFactory, "messageviewer_createeventplugin.json", registerPlugin<ViewerPluginCreateevent>();
+                           )
 
 ViewerPluginCreateevent::ViewerPluginCreateevent(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)
 {
-
 }
 
 ViewerPluginInterface *ViewerPluginCreateevent::createView(QWidget *parent, KActionCollection *ac)

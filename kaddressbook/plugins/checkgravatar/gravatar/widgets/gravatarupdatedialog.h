@@ -21,8 +21,7 @@
 #define GRAVATARUPDATEDIALOG_H
 
 #include <QDialog>
-namespace KABGravatar
-{
+namespace KABGravatar {
 class GravatarUpdateWidget;
 class GravatarUpdateDialog : public QDialog
 {

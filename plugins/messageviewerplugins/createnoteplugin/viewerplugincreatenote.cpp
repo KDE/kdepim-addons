@@ -23,12 +23,12 @@
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreatenoteFactory, "messageviewer_createnoteplugin.json", registerPlugin<ViewerPluginCreatenote>();)
+K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreatenoteFactory, "messageviewer_createnoteplugin.json", registerPlugin<ViewerPluginCreatenote>();
+                           )
 
 ViewerPluginCreatenote::ViewerPluginCreatenote(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)
 {
-
 }
 
 ViewerPluginInterface *ViewerPluginCreatenote::createView(QWidget *parent, KActionCollection *ac)

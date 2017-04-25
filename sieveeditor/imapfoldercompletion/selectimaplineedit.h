@@ -21,8 +21,7 @@
 #define SELECTIMAPLINEEDIT_H
 
 #include <QLineEdit>
-namespace KSieveUi
-{
+namespace KSieveUi {
 class SieveImapAccountSettings;
 }
 

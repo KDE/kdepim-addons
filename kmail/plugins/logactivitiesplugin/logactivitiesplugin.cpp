@@ -21,17 +21,16 @@
 #include "logactivitiesplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_logactivitiesplugin.json", registerPlugin<LogActivitiesPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_logactivitiesplugin.json", registerPlugin<LogActivitiesPlugin>();
+                           )
 
 LogActivitiesPlugin::LogActivitiesPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 LogActivitiesPlugin::~LogActivitiesPlugin()
 {
-
 }
 
 PimCommon::GenericPluginInterface *LogActivitiesPlugin::createInterface(KActionCollection *ac, QObject *parent)

@@ -33,7 +33,6 @@ CheckAttachmentDialogTest::CheckAttachmentDialogTest(QObject *parent)
 
 CheckAttachmentDialogTest::~CheckAttachmentDialogTest()
 {
-
 }
 
 void CheckAttachmentDialogTest::shouldHaveDefaultValue()
@@ -42,7 +41,7 @@ void CheckAttachmentDialogTest::shouldHaveDefaultValue()
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    QLabel *lab =  w.findChild<QLabel *>(QStringLiteral("lab"));
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("lab"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 

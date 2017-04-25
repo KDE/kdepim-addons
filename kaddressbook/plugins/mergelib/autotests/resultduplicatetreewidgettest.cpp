@@ -27,12 +27,10 @@ using namespace KContacts;
 ResultDuplicateTreeWidgetTest::ResultDuplicateTreeWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ResultDuplicateTreeWidgetTest::~ResultDuplicateTreeWidgetTest()
 {
-
 }
 
 void ResultDuplicateTreeWidgetTest::shouldHaveDefaultValue()
@@ -160,7 +158,6 @@ void ResultDuplicateTreeWidgetTest::shouldNotReturnListWhenJustOneChildSelected(
         }
     }
     QCOMPARE(w.selectedContactsToMerge().count(), 0);
-
 }
 
 void ResultDuplicateTreeWidgetTest::shouldReturnTwoLists()
@@ -225,4 +222,3 @@ void ResultDuplicateTreeWidgetTest::shouldReturnJustOnList()
 }
 
 QTEST_MAIN(ResultDuplicateTreeWidgetTest)
-

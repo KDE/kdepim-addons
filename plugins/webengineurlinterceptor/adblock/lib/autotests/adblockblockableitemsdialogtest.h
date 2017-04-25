@@ -30,7 +30,6 @@ public:
     ~AdBlockBlockableItemsDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-
 };
 
 #endif // ADBLOCKBLOCKABLEITEMSDIALOGTEST_H

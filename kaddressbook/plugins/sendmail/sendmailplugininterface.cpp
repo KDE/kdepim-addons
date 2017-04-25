@@ -27,15 +27,13 @@
 #include <QDesktopServices>
 
 SendMailPluginInterface::SendMailPluginInterface(QObject *parent)
-    : PimCommon::GenericPluginInterface(parent),
-      mAction(nullptr)
+    : PimCommon::GenericPluginInterface(parent)
+    , mAction(nullptr)
 {
-
 }
 
 SendMailPluginInterface::~SendMailPluginInterface()
 {
-
 }
 
 void SendMailPluginInterface::createAction(KActionCollection *ac)

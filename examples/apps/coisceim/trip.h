@@ -31,8 +31,7 @@
 class QSortFilterProxyModel;
 class TripComponentFactory;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 

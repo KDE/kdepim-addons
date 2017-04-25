@@ -22,8 +22,6 @@
 #include "mailimporter/filterpmail.h"
 #include "mailimporter/filterinfo.h"
 
-
-
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>

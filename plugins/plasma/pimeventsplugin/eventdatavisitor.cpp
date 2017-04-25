@@ -21,8 +21,7 @@
 #include "pimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
-BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource,
-        const QDate &start, const QDate &end)
+BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
     : mDataSource(dataSource)
     , mStart(start)
     , mEnd(end)
@@ -46,6 +45,7 @@ bool BaseEventDataVisitor::act(const KCalCore::Event::List &events)
     }
     return ok;
 }
+
 bool BaseEventDataVisitor::act(const KCalCore::Todo::List &todos)
 {
     bool ok = false;
@@ -72,8 +72,7 @@ bool BaseEventDataVisitor::isInRange(const QDate &start, const QDate &end) const
     }
 }
 
-QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incidence,
-        const KDateTime &recurrenceId) const
+QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId) const
 {
     // Get a corresponding Akonadi Item: Akonadi ID is the only reliably unique
     // and persistent identifier when dealing with incidences from multiple
@@ -92,9 +91,7 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     }
 }
 
-QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed,
-        const KCalCore::Incidence::Ptr &incidence,
-        bool &ok)
+QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalCore::Incidence::Ptr &incidence, bool &ok)
 {
     Q_ASSERT(incidence->recurs());
 
@@ -124,8 +121,7 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
     return results;
 }
 
-EventDataVisitor::EventDataVisitor(PimDataSource *dataSource,
-                                   const QDate &start, const QDate &end)
+EventDataVisitor::EventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
     : BaseEventDataVisitor(dataSource, start, end)
 {
 }
@@ -139,8 +135,7 @@ const QMultiHash<QDate, CalendarEvents::EventData> &EventDataVisitor::results() 
     return mResults;
 }
 
-bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence,
-                             CalendarEvents::EventData::EventType type)
+bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType type)
 {
     CalendarEvents::EventData data = incidenceData(incidence);
     data.setEventType(type);

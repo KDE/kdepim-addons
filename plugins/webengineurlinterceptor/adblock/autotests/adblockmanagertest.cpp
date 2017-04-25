@@ -30,7 +30,6 @@ AdblockManagerTest::AdblockManagerTest(QObject *parent)
 
 AdblockManagerTest::~AdblockManagerTest()
 {
-
 }
 
 void AdblockManagerTest::shouldHaveDefaultValue()

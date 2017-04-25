@@ -24,12 +24,10 @@
 NonBreakingSpacePluginEditorInterfaceTest::NonBreakingSpacePluginEditorInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 NonBreakingSpacePluginEditorInterfaceTest::~NonBreakingSpacePluginEditorInterfaceTest()
 {
-
 }
 
 void NonBreakingSpacePluginEditorInterfaceTest::shouldHaveDefaultValue()

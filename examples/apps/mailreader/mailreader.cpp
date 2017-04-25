@@ -32,8 +32,8 @@
 #include "settings.h"
 
 mailreader::mailreader()
-    : KXmlGuiWindow(),
-      m_view(new mailreaderView(this))
+    : KXmlGuiWindow()
+    , m_view(new mailreaderView(this))
 {
     // accept dnd
     setAcceptDrops(true);
@@ -55,7 +55,6 @@ mailreader::mailreader()
     // mainwindow to automatically save settings if changed: window size,
     // toolbar position, icon size, etc.
     setupGUI();
-
 }
 
 mailreader::~mailreader()
@@ -185,8 +184,8 @@ void mailreader::itemFetchDone(KJob *job)
 void mailreader::slotPreviousMessage()
 {
     m_messagePane->selectPreviousMessageItem(MessageList::Core::MessageTypeAny,
-            MessageList::Core::ClearExistingSelection,
-            true, true);
+                                             MessageList::Core::ClearExistingSelection,
+                                             true, true);
 }
 
 void mailreader::slotNextMessage()
@@ -195,4 +194,3 @@ void mailreader::slotNextMessage()
                                          MessageList::Core::ClearExistingSelection,
                                          true, true);
 }
-

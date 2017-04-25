@@ -59,4 +59,3 @@ private Q_SLOTS:
 };
 
 #endif // NOTEEDITTEST_H
-

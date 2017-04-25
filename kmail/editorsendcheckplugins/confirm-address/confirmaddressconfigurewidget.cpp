@@ -40,7 +40,6 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
 
 ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
 {
-
 }
 
 void ConfirmAddressConfigureWidget::loadSettings()

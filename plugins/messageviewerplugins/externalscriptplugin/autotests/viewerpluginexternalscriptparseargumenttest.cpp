@@ -24,12 +24,10 @@
 ViewerPluginExternalScriptParseArgumentTest::ViewerPluginExternalScriptParseArgumentTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 ViewerPluginExternalScriptParseArgumentTest::~ViewerPluginExternalScriptParseArgumentTest()
 {
-
 }
 
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringListWhenMessageIsNotSetting()
@@ -56,7 +54,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSameListIfNotTrans
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("cc"),  QStringLiteral("vv"), QStringLiteral("ff")};
+    const QStringList lst = { QStringLiteral("cc"), QStringLiteral("vv"), QStringLiteral("ff")};
     QCOMPARE(parser.parse(lst), lst);
 }
 
@@ -66,8 +64,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%s"),  QStringLiteral("vv"), QStringLiteral("%s")};
-    const QStringList result = { QStringLiteral("\"Akademy\""),  QStringLiteral("vv"), QStringLiteral("\"Akademy\"") };
+    const QStringList lst = { QStringLiteral("%s"), QStringLiteral("vv"), QStringLiteral("%s")};
+    const QStringList result = { QStringLiteral("\"Akademy\""), QStringLiteral("vv"), QStringLiteral("\"Akademy\"") };
     QCOMPARE(parser.parse(lst), result);
 }
 

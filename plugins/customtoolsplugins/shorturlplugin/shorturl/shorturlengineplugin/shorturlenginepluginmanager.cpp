@@ -51,7 +51,6 @@ public:
     ShortUrlEnginePluginInfo()
         : plugin(nullptr)
     {
-
     }
 
     QString metaDataFileNameBaseName;
@@ -66,8 +65,8 @@ public:
     ShortUrlEnginePluginManagerPrivate(ShortUrlEnginePluginManager *qq)
         : q(qq)
     {
-
     }
+
     void initializePlugins();
     void loadPlugin(ShortUrlEnginePluginInfo *item);
     QVector<ShortUrlEnginePlugin *> pluginsList() const;
@@ -77,7 +76,7 @@ public:
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData & md) {
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData &md) {
         return md.serviceTypes().contains(QStringLiteral("PimCommonShortUrlEngine/Plugin"));
     });
 
@@ -127,8 +126,8 @@ QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList(
 }
 
 ShortUrlEnginePluginManager::ShortUrlEnginePluginManager(QObject *parent)
-    : QObject(parent),
-      d(new ShortUrlEnginePluginManagerPrivate(this))
+    : QObject(parent)
+    , d(new ShortUrlEnginePluginManagerPrivate(this))
 {
     d->initializePlugins();
 }
@@ -147,4 +146,3 @@ QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManager::pluginsList() const
 {
     return d->pluginsList();
 }
-

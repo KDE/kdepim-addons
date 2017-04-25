@@ -26,8 +26,7 @@
 
 #include <AkonadiCore/entitytreemodel.h>
 
-namespace Akonadi
-{
+namespace Akonadi {
 class Monitor;
 }
 
@@ -42,7 +41,6 @@ public:
 
     /* reimp */ QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
     /* reimp */ QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-
 };
 
 #endif

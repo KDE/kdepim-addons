@@ -23,12 +23,12 @@
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginExpandurlFactory, "messageviewer_expandurlplugin.json", registerPlugin<ViewerPluginExpandurl>();)
+K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginExpandurlFactory, "messageviewer_expandurlplugin.json", registerPlugin<ViewerPluginExpandurl>();
+                           )
 
 ViewerPluginExpandurl::ViewerPluginExpandurl(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)
 {
-
 }
 
 ViewerPluginInterface *ViewerPluginExpandurl::createView(QWidget *parent, KActionCollection *ac)

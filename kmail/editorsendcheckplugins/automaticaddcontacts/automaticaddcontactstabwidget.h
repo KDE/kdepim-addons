@@ -23,8 +23,7 @@
 #include <QWidget>
 class QCheckBox;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class CollectionComboBox;
 }
 class QAbstractItemModel;

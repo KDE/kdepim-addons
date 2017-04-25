@@ -35,8 +35,8 @@
 #include <AkonadiCore/AgentFilterProxyModel>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
-    : QObject(parent),
-      mCurrentIndex(-1)
+    : QObject(parent)
+    , mCurrentIndex(-1)
 {
 }
 
@@ -76,9 +76,9 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
         //fetch all collection
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob =
-            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                            Akonadi::CollectionFetchJob::Recursive);
+        Akonadi::CollectionFetchJob *const addressBookJob
+            = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
+                                              Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotFetchAllCollections);
@@ -111,10 +111,10 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     const int nbItemCollection(canCreateItemCollections.size());
     if (nbItemCollection == 0) {
         if (KMessageBox::questionYesNo(
-                    nullptr,
-                    i18nc("@info",
-                          "You must create an address book before adding a contact. Do you want to create an address book?"),
-                    i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
+                nullptr,
+                i18nc("@info",
+                      "You must create an address book before adding a contact. Do you want to create an address book?"),
+                i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
             Akonadi::AgentTypeDialog dlg(nullptr);
             dlg.setWindowTitle(i18n("Add Address Book"));
             dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());

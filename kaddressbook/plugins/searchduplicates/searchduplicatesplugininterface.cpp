@@ -29,12 +29,10 @@
 SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
-
 }
 
 SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface()
 {
-
 }
 
 void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)

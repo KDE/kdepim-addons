@@ -28,12 +28,10 @@
 StandardsHeaderStylePluginTest::StandardsHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 StandardsHeaderStylePluginTest::~StandardsHeaderStylePluginTest()
 {
-
 }
 
 void StandardsHeaderStylePluginTest::shouldHaveDefaultValue()

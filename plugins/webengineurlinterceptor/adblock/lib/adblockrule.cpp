@@ -527,10 +527,10 @@ void AdBlockRule::parseFilter()
 
     // If we still find a wildcard (*) or separator (^) or (|)
     // we must modify parsedLine to comply with QzRegExp
-    if (parsedLine.contains(QLatin1Char('*')) ||
-            parsedLine.contains(QLatin1Char('^')) ||
-            parsedLine.contains(QLatin1Char('|'))
-       ) {
+    if (parsedLine.contains(QLatin1Char('*'))
+        || parsedLine.contains(QLatin1Char('^'))
+        || parsedLine.contains(QLatin1Char('|'))
+        ) {
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
         m_regExp->regExp = AdblockRegExp(createRegExpFromFilter(parsedLine), m_caseSensitivity);
@@ -682,7 +682,7 @@ bool AdBlockRule::stringMatch(const QString &domain, const QString &encodedUrl) 
         if (!isMatchingRegExpStrings(encodedUrl)) {
             return false;
         }
-        return (m_regExp->regExp.indexIn(encodedUrl) != -1);
+        return m_regExp->regExp.indexIn(encodedUrl) != -1;
     }
 
     return false;
@@ -737,12 +737,12 @@ QStringList AdBlockRule::parseRegExpFilter(const QString &filter) const
 
 bool AdBlockRule::hasOption(const AdBlockRule::RuleOption &opt) const
 {
-    return (m_options & opt);
+    return m_options & opt;
 }
 
 bool AdBlockRule::hasException(const AdBlockRule::RuleOption &opt) const
 {
-    return (m_exceptions & opt);
+    return m_exceptions & opt;
 }
 
 void AdBlockRule::setOption(const AdBlockRule::RuleOption &opt)

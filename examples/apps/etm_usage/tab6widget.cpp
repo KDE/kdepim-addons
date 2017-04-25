@@ -48,7 +48,8 @@ public:
     {
     }
 
-    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE {
+    /* reimp */ void connectTreeToModel(QTreeView *tree, Akonadi::EntityTreeModel *model) Q_DECL_OVERRIDE
+    {
         m_collectionFilter = new Akonadi::EntityMimeTypeFilterModel(this);
         m_collectionFilter->addMimeTypeInclusionFilter(Akonadi::Collection::mimeType());
         m_collectionFilter->setSourceModel(model);
@@ -63,11 +64,13 @@ public:
         tree->setModel(m_checkableProxy);
     }
 
-    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE {
+    /* reimp */ QModelIndex mapToSource(const QModelIndex &idx) Q_DECL_OVERRIDE
+    {
         return m_collectionFilter->mapToSource(idx);
     }
 
-    Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE {
+    Akonadi::EntityTreeModel *getETM() Q_DECL_OVERRIDE
+    {
         MixedTreeModel *model = new MixedTreeModel(monitor(), this);
         return model;
     }
@@ -81,7 +84,6 @@ private:
     Akonadi::EntityMimeTypeFilterModel *m_collectionFilter;
     KCheckableProxyModel *m_checkableProxy;
     QItemSelectionModel *m_itemSelectionModel;
-
 };
 
 Tab6Widget::Tab6Widget(QWidget *parent, Qt::WindowFlags f)
@@ -113,4 +115,3 @@ Tab6Widget::Tab6Widget(QWidget *parent, Qt::WindowFlags f)
 
     ItemViewerWidget *viewerWidget = new ItemViewerWidget(m_itemView->selectionModel(), rhsContainer);
 }
-

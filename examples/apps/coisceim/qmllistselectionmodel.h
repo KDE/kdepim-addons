@@ -33,16 +33,16 @@ class QMLListSelectionModel : public QObject
     Q_PROPERTY(qint64 currentItemIdHack READ currentItemId WRITE setCurrentItemId NOTIFY selectionChanged)
 public:
     enum SelectionFlag {
-        NoUpdate       = 0x0000,
-        Clear          = 0x0001,
-        Select         = 0x0002,
-        Deselect       = 0x0004,
-        Toggle         = 0x0008,
-        Current        = 0x0010,
-        Rows           = 0x0020,
-        Columns        = 0x0040,
-        SelectCurrent  = Select | Current,
-        ToggleCurrent  = Toggle | Current,
+        NoUpdate = 0x0000,
+        Clear = 0x0001,
+        Select = 0x0002,
+        Deselect = 0x0004,
+        Toggle = 0x0008,
+        Current = 0x0010,
+        Rows = 0x0020,
+        Columns = 0x0040,
+        SelectCurrent = Select | Current,
+        ToggleCurrent = Toggle | Current,
         ClearAndSelect = Clear | Select
     };
     //Q_DECLARE_FLAGS(SelectionFlags, SelectionFlag)
@@ -76,4 +76,3 @@ private:
 };
 
 #endif
-

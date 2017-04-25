@@ -22,8 +22,7 @@
 
 #include <QLabel>
 
-namespace KABMergeContacts
-{
+namespace KABMergeContacts {
 class MergeContactErrorLabel : public QLabel
 {
     Q_OBJECT

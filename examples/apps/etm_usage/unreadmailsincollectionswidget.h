@@ -31,8 +31,7 @@ class QItemSelectionModel;
 
 class KCheckableProxyModel;
 
-namespace Akonadi
-{
+namespace Akonadi {
 class EntityTreeModel;
 class Monitor;
 }
@@ -63,7 +62,6 @@ private:
     Akonadi::EntityTreeModel *m_etm;
     QItemSelectionModel *m_checkedItemModel;
     KCheckableProxyModel *m_checkableProxy;
-
 };
 
 #endif

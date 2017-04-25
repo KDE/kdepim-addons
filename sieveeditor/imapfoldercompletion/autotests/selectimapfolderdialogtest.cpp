@@ -34,7 +34,6 @@ SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
 
 SelectImapFolderDialogTest::~SelectImapFolderDialogTest()
 {
-
 }
 
 void SelectImapFolderDialogTest::shouldHaveDefaultValue()

@@ -23,8 +23,7 @@
 #include <messageviewer/viewerplugininterface.h>
 #include <QUrl>
 class KActionCollection;
-namespace MessageViewer
-{
+namespace MessageViewer {
 class ViewerPluginExpandurlInterface : public ViewerPluginInterface
 {
     Q_OBJECT

@@ -56,7 +56,6 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
 
 CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
 {
-
 }
 
 void CheckBeforeSendConfigureWidget::loadSettings()

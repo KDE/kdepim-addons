@@ -39,4 +39,3 @@ private:
     ShortUrlEnginePluginPrivate *const d;
 };
 #endif // SHORTURLENGINEPLUGIN_H
-

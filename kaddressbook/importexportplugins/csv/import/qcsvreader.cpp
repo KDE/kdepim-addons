@@ -33,7 +33,8 @@ class QCsvReader::Private
 {
 public:
     Private(QCsvBuilderInterface *builder)
-        : mBuilder(builder), mNotTerminated(true)
+        : mBuilder(builder)
+        , mNotTerminated(true)
     {
         mTextQuote = QLatin1Char('"');
         mDelimiter = QLatin1Char(' ');
@@ -404,4 +405,3 @@ void QCsvStandardBuilder::error(const QString &errorMsg)
 {
     d->mLastErrorString = errorMsg;
 }
-

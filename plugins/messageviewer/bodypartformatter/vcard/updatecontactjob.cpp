@@ -28,7 +28,10 @@ class Q_DECL_HIDDEN UpdateContactJob::Private
 {
 public:
     Private(UpdateContactJob *qq, const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget)
-        : q(qq), mEmail(email), mContact(contact), mParentWidget(parentWidget)
+        : q(qq)
+        , mEmail(email)
+        , mContact(contact)
+        , mParentWidget(parentWidget)
     {
     }
 
@@ -61,7 +64,7 @@ public:
         Akonadi::Item item = searchJob->items().at(0);
         item.setPayload<KContacts::Addressee>(mContact);
         Akonadi::ItemModifyJob *modifyJob = new Akonadi::ItemModifyJob(item);
-        q->connect(modifyJob, SIGNAL(result(KJob*)), SLOT(slotUpdateContactDone(KJob*)));
+        q->connect(modifyJob, SIGNAL(result(KJob *)), SLOT(slotUpdateContactDone(KJob *)));
     }
 
     void slotUpdateContactDone(KJob *job)
@@ -88,7 +91,8 @@ public:
 };
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
-    : KJob(parent), d(new Private(this, email, contact, parentWidget))
+    : KJob(parent)
+    , d(new Private(this, email, contact, parentWidget))
 {
 }
 
@@ -112,7 +116,7 @@ void UpdateContactJob::start()
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
                         Akonadi::ContactSearchJob::ExactMatch);
 
-    connect(searchJob, SIGNAL(result(KJob*)), SLOT(slotSearchDone(KJob*)));
+    connect(searchJob, SIGNAL(result(KJob *)), SLOT(slotSearchDone(KJob *)));
 }
 
 #include "moc_updatecontactjob.cpp"

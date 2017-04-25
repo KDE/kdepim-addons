@@ -23,9 +23,9 @@
 using namespace MessageViewer;
 
 VcardMemento::VcardMemento(const QStringList &emails)
-    : QObject(nullptr),
-      mIndex(0),
-      mFinished(false)
+    : QObject(nullptr)
+    , mIndex(0)
+    , mFinished(false)
 {
     mVCardList.reserve(emails.count());
     for (const QString &str : emails) {
@@ -37,7 +37,6 @@ VcardMemento::VcardMemento(const QStringList &emails)
 
 VcardMemento::~VcardMemento()
 {
-
 }
 
 void VcardMemento::checkEmail()
@@ -101,4 +100,3 @@ KContacts::Addressee VcardMemento::address(int index) const
 {
     return mVCardList.at(index).address;
 }
-

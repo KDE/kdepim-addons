@@ -34,12 +34,9 @@
 
 #include <KLocalizedString>
 
-
-
 SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
     : KRecursiveFilterProxyModel(parent)
 {
-
 }
 
 void SearchFilterProxyModel::setSearchPattern(const QString &pattern)
@@ -62,8 +59,8 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
 }
 
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
-    : QWidget(parent),
-      mAccount(account)
+    : QWidget(parent)
+    , mAccount(account)
 {
     mModel = SelectImapFolderModel::self()->folderModel(mAccount);
     connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
@@ -94,7 +91,6 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
 
 SelectImapFolderWidget::~SelectImapFolderWidget()
 {
-
 }
 
 void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model, bool success)

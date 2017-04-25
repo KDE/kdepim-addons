@@ -41,7 +41,6 @@ CsvWidget::CsvWidget(QWidget *parent)
 
 CsvWidget::~CsvWidget()
 {
-
 }
 
 void CsvWidget::setPath(const QUrl &path)
@@ -53,4 +52,3 @@ QUrl CsvWidget::path() const
 {
     return mCvsUrlRequester->url();
 }
-

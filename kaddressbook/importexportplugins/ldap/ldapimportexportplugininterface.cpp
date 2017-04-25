@@ -29,12 +29,10 @@
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
 {
-
 }
 
 LDapImportExportPluginInterface::~LDapImportExportPluginInterface()
 {
-
 }
 
 void LDapImportExportPluginInterface::createAction(KActionCollection *ac)

@@ -45,7 +45,6 @@ MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *
 
 MergeContactLoseInformationWarning::~MergeContactLoseInformationWarning()
 {
-
 }
 
 void MergeContactLoseInformationWarning::slotCustomizeMerge()

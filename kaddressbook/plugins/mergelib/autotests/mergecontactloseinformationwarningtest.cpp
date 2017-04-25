@@ -27,7 +27,6 @@
 MergeContactLoseInformationWarningTest::MergeContactLoseInformationWarningTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MergeContactLoseInformationWarningTest::shouldHaveDefaultValue()

@@ -30,7 +30,6 @@ public:
     ~ReactionToInvitationDialogTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
-
 };
 
 #endif // REACTIONTOINVITATIONDIALOGTEST_H

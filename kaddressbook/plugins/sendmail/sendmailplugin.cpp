@@ -21,12 +21,12 @@
 #include "sendmailplugininterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(SendMailPluginFactory, "kaddressbook_sendmailplugin.json", registerPlugin<SendMailPlugin>();)
+K_PLUGIN_FACTORY_WITH_JSON(SendMailPluginFactory, "kaddressbook_sendmailplugin.json", registerPlugin<SendMailPlugin>();
+                           )
 
 SendMailPlugin::SendMailPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)
 {
-
 }
 
 SendMailPlugin::~SendMailPlugin()

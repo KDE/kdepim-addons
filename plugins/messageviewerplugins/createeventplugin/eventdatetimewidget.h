@@ -23,8 +23,7 @@
 #include <QWidget>
 #include <QDateTime>
 
-namespace MessageViewer
-{
+namespace MessageViewer {
 class EventDateTimeWidgetPrivate;
 class EventDateTimeWidget : public QWidget
 {

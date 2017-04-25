@@ -23,8 +23,7 @@
 #include "messageviewer/headerstyle.h"
 
 #include <headerstyle_util.h>
-namespace MessageViewer
-{
+namespace MessageViewer {
 class HeaderStyleUtil;
 class FancyHeaderStyle : public HeaderStyle
 {
@@ -41,6 +40,5 @@ public:
 private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
-
 }
 #endif // FANCYHEADERSTYLE_H

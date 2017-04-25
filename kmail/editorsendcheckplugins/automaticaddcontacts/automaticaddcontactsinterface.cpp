@@ -31,7 +31,6 @@ AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
 
 AutomaticAddContactsInterface::~AutomaticAddContactsInterface()
 {
-
 }
 
 bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)

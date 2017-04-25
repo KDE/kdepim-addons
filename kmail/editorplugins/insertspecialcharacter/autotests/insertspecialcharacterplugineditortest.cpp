@@ -25,12 +25,10 @@
 InsertSpecialCharacterPluginEditorTest::InsertSpecialCharacterPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 InsertSpecialCharacterPluginEditorTest::~InsertSpecialCharacterPluginEditorTest()
 {
-
 }
 
 void InsertSpecialCharacterPluginEditorTest::shouldHaveDefaultValue()

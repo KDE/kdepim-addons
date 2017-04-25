@@ -39,7 +39,8 @@
 using namespace Akonadi;
 
 TripModel::TripModel(Akonadi::Monitor *monitor, QObject *parent)
-    : MixedTreeModel(monitor, parent), m_monitor(monitor)
+    : MixedTreeModel(monitor, parent)
+    , m_monitor(monitor)
 {
     setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
 
@@ -231,7 +232,6 @@ void TripModel::repopulate()
             m_monitor->setItemMonitored(Item(eventId), true);
         }
     }
-
 }
 
 void TripModel::thisModelReset()

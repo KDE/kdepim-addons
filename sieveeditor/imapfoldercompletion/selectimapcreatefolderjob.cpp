@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "selectimapcreatefolderjob.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include "sessionuiproxy.h"
@@ -28,15 +27,13 @@
 #include <KMessageBox>
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
-    : QObject(parent),
-      mSession(nullptr)
+    : QObject(parent)
+    , mSession(nullptr)
 {
-
 }
 
 SelectImapCreateFolderJob::~SelectImapCreateFolderJob()
 {
-
 }
 
 void SelectImapCreateFolderJob::start()
@@ -71,7 +68,7 @@ void SelectImapCreateFolderJob::slotLoginDone(KJob *job)
 void SelectImapCreateFolderJob::createFolderRequested()
 {
     if (!mSession
-            || mSession->state() != KIMAP::Session::Authenticated) {
+        || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapCreateFolderJob - got no connection";
         Q_EMIT finished(mSieveImapAccount, false);
         deleteLater();

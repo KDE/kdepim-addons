@@ -49,7 +49,7 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     mEtm->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
     mEtm->setListFilter(Akonadi::CollectionFetchScope::Enabled);
     connect(mEtm, &Akonadi::EntityTreeModel::collectionTreeFetched,
-    this, [this]() {
+            this, [this]() {
         sort(0, Qt::AscendingOrder);
     });
 
@@ -63,9 +63,12 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
 PimCalendarsModel::~PimCalendarsModel()
 {
 }
+
 QHash<int, QByteArray> PimCalendarsModel::roleNames() const
 {
-    return { { DataRole, "data" } };
+    return { {
+                 DataRole, "data"
+             } };
 }
 
 QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
@@ -87,11 +90,21 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
 
     auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
     const QString icon = attr ? attr->iconName() : QString();
-    return QVariantMap{ { QStringLiteral("id"), col.id() },
-        { QStringLiteral("name"), col.displayName() },
-        { QStringLiteral("enabled"), enabled },
-        { QStringLiteral("checked"), mEnabledCalendars.contains(col.id()) },
-        { QStringLiteral("iconName"), icon } };
+    return QVariantMap { {
+                             QStringLiteral("id"), col.id()
+                         },
+                         {
+                             QStringLiteral("name"), col.displayName()
+                         },
+                         {
+                             QStringLiteral("enabled"), enabled
+                         },
+                         {
+                             QStringLiteral("checked"), mEnabledCalendars.contains(col.id())
+                         },
+                         {
+                             QStringLiteral("iconName"), icon
+                         } };
 }
 
 void PimCalendarsModel::setChecked(qint64 collectionId, bool checked)
@@ -123,4 +136,3 @@ void PimCalendarsModel::saveConfig()
         SettingsChangeNotifier::self()->notifySettingsChanged();
     }
 }
-

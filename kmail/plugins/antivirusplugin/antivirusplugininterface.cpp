@@ -26,12 +26,10 @@
 AntiVirusPluginInterface::AntiVirusPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
 {
-
 }
 
 AntiVirusPluginInterface::~AntiVirusPluginInterface()
 {
-
 }
 
 void AntiVirusPluginInterface::createAction(KActionCollection *ac)

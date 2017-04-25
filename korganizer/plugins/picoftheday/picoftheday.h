@@ -28,7 +28,6 @@ using namespace EventViews::CalendarDecoration;
 #include <QUrl>
 class Picoftheday : public Decoration
 {
-
 public:
     Picoftheday();
     ~Picoftheday();
@@ -48,7 +47,8 @@ class PicofthedayFactory : public DecorationFactory
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.korganizer.Picoftheday")
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE {
+    Decoration *createPluginFactory() Q_DECL_OVERRIDE
+    {
         return new Picoftheday;
     }
 };
@@ -58,9 +58,10 @@ class POTDElement : public StoredElement
     Q_OBJECT
 
 public:
-    POTDElement(const QString &id, const QDate &date,
-                const QSize &initialThumbSize);
-    ~POTDElement() {}
+    POTDElement(const QString &id, const QDate &date, const QSize &initialThumbSize);
+    ~POTDElement()
+    {
+    }
 
     void setDate(const QDate &date);
     void setThumbnailSize(const QSize &size);
@@ -105,7 +106,6 @@ private:
     KIO::SimpleJob *mSecondStepJob;
     KIO::SimpleJob *mThirdStepJob;
     QTimer *mTimer;
-
 };
 
 #endif

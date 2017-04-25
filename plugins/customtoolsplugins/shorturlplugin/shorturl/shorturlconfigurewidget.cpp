@@ -34,18 +34,18 @@ class ShortUrlConfigureWidgetPrivate
 {
 public:
     ShortUrlConfigureWidgetPrivate()
-        : mShortUrlServer(nullptr),
-          mChanged(false)
+        : mShortUrlServer(nullptr)
+        , mChanged(false)
     {
-
     }
+
     QComboBox *mShortUrlServer;
     bool mChanged;
 };
 
 ShortUrlConfigureWidget::ShortUrlConfigureWidget(QWidget *parent)
-    : QWidget(parent),
-      d(new ShortUrlConfigureWidgetPrivate)
+    : QWidget(parent)
+    , d(new ShortUrlConfigureWidgetPrivate)
 {
     QHBoxLayout *lay = new QHBoxLayout(this);
     lay->setMargin(0);
@@ -72,7 +72,7 @@ void ShortUrlConfigureWidget::slotChanged()
 
 void ShortUrlConfigureWidget::init()
 {
-    const QVector<ShortUrlEnginePlugin *>  lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
     for (ShortUrlEnginePlugin *plugin : lstPlugin) {
         d->mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
     }
@@ -107,4 +107,3 @@ void ShortUrlConfigureWidget::resetToDefault()
     d->mShortUrlServer->setCurrentIndex(0);
     d->mChanged = false;
 }
-

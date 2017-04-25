@@ -36,7 +36,6 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
 
 AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()
 {
-
 }
 
 void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()

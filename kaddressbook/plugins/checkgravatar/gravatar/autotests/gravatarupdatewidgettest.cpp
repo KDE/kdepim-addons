@@ -26,12 +26,10 @@
 GravatarUpdateWidgetTest::GravatarUpdateWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GravatarUpdateWidgetTest::~GravatarUpdateWidgetTest()
 {
-
 }
 
 void GravatarUpdateWidgetTest::shouldHaveDefaultValue()

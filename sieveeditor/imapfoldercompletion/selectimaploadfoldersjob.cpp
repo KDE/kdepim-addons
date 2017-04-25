@@ -27,16 +27,14 @@
 #include <KLocalizedString>
 
 SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent)
-    : QObject(parent),
-      mSession(nullptr),
-      mModel(model)
+    : QObject(parent)
+    , mSession(nullptr)
+    , mModel(model)
 {
-
 }
 
 SelectImapLoadFoldersJob::~SelectImapLoadFoldersJob()
 {
-
 }
 
 void SelectImapLoadFoldersJob::start()
@@ -87,7 +85,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
     mModel->clear();
 
     if (!mSession
-            || mSession->state() != KIMAP::Session::Authenticated) {
+        || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapLoadFoldersJob - got no connection";
         Q_EMIT finished(false, mModel);
         deleteLater();
@@ -133,7 +131,6 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
                 item->setData(currentPath.mid(1), PathRole);
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
-
             } else {
                 QStandardItem *item = new QStandardItem(pathPart);
                 Qt::ItemFlags flags = Qt::ItemIsEnabled;

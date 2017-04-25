@@ -39,8 +39,6 @@ public:
 private:
     KCategorizedView *m_itemView;
     EntityTreeWidget *m_etw;
-
 };
 
 #endif
-

@@ -20,12 +20,10 @@
 MailMergeJobTest::MailMergeJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MailMergeJobTest::~MailMergeJobTest()
 {
-
 }
 
 QTEST_MAIN(MailMergeJobTest)

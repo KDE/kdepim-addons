@@ -26,8 +26,7 @@
 
 #include <KontactInterface/UniqueAppHandler>
 
-namespace KontactInterface
-{
+namespace KontactInterface {
 class Plugin;
 }
 
@@ -35,7 +34,10 @@ class CoisceimUniqueAppHandler : public KontactInterface::UniqueAppHandler
 {
 public:
     CoisceimUniqueAppHandler(KontactInterface::Plugin *plugin)
-        : KontactInterface::UniqueAppHandler(plugin) {}
+        : KontactInterface::UniqueAppHandler(plugin)
+    {
+    }
+
     virtual void loadCommandLineOptions();
     virtual int newInstance();
 };
@@ -51,6 +53,7 @@ public:
     {
         return 600;
     }
+
     virtual bool isRunningStandalone() const;
 
 private Q_SLOTS:
@@ -64,4 +67,3 @@ protected:
 };
 
 #endif
-
