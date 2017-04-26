@@ -20,7 +20,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt korrigera all text, eller markerad text, i brevfönstret.",
         "Description[uk]": "За допомогою цього додатка можна автоматично виправляти текст у редакторі повідомлень або позначений фрагмент тексту.",
         "Description[x-test]": "xxThis plugin allows you to autocorrect all text in composer or selected text.xx",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kmailautocorrection",
         "Name": "Autocorrection",
         "Name[ca@valencia]": "Correcció automàtica",

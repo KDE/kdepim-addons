@@ -19,7 +19,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att lägga till mellanslag utan radbrytning. Det är användbart för franska språket.",
         "Description[uk]": "За допомогою цього додатка можна вставити нерозривний пробіл. Корисний для повідомлень французькою мовою.",
         "Description[x-test]": "xxThis plugin allows you to add non breaking space. It's useful in french language.xx",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kmailinsertnonbreakingspace",
         "Name": "Insert Non Breaking Space",
         "Name[ca@valencia]": "Insereix un espai no divisible",
