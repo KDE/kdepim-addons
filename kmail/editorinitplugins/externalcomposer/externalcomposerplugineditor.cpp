@@ -25,7 +25,7 @@ K_PLUGIN_FACTORY_WITH_JSON(ExternalComposerPluginEditorFactory, "kmail_externalc
                            )
 
 ExternalComposerPluginEditor::ExternalComposerPluginEditor(QObject *parent, const QList<QVariant> &)
-    : MessageComposer::PluginEditor(parent)
+    : MessageComposer::PluginEditorInit(parent)
 {
 }
 
@@ -33,10 +33,9 @@ ExternalComposerPluginEditor::~ExternalComposerPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *ExternalComposerPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInitInterface *ExternalComposerPluginEditor::createInterface(QObject *parent)
 {
     ExternalComposerPluginEditorInterface *interface = new ExternalComposerPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

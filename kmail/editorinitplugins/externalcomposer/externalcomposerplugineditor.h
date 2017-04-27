@@ -17,22 +17,22 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef INSERTSPECIALCHARACTERPLUGINEDITOR_H
-#define INSERTSPECIALCHARACTERPLUGINEDITOR_H
+#ifndef EXTERNALCOMPOSERPLUGINEDITOR_H
+#define EXTERNALCOMPOSERPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <messagecomposer/plugineditorinit.h>
 
 #include <messagecomposer/plugineditorinterface.h>
 #include <QVariant>
 
-class InsertSpecialCharacterPluginEditor : public MessageComposer::PluginEditor
+class ExternalComposerPluginEditor : public MessageComposer::PluginEditorInit
 {
     Q_OBJECT
 public:
-    explicit InsertSpecialCharacterPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~InsertSpecialCharacterPluginEditor();
+    explicit ExternalComposerPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
+    ~ExternalComposerPluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) Q_DECL_OVERRIDE;
 };
 
 #endif

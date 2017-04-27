@@ -24,7 +24,7 @@
 #include <QAction>
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+    : MessageComposer::PluginEditorInitInterface(parent)
 {
 }
 
@@ -32,19 +32,7 @@ ExternalComposerPluginEditorInterface::~ExternalComposerPluginEditorInterface()
 {
 }
 
-void ExternalComposerPluginEditorInterface::createAction(KActionCollection *ac)
+bool ExternalComposerPluginEditorInterface::exec()
 {
-}
-
-void ExternalComposerPluginEditorInterface::slotActivated()
-{
-    Q_EMIT emitPluginActivated(this);
-}
-
-void ExternalComposerPluginEditorInterface::exec()
-{
-}
-
-void ExternalComposerPluginEditorInterface::charSelected(QChar c)
-{
+    return true;
 }

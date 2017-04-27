@@ -20,18 +20,16 @@
 #ifndef EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
 #define EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <messagecomposer/plugineditorinitinterface.h>
 #include <QPointer>
 
-class ExternalComposerPluginEditorInterface : public MessageComposer::PluginEditorInterface
+class ExternalComposerPluginEditorInterface : public MessageComposer::PluginEditorInitInterface
 {
     Q_OBJECT
 public:
     explicit ExternalComposerPluginEditorInterface(QObject *parent = nullptr);
     ~ExternalComposerPluginEditorInterface();
-
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
+    bool exec() Q_DECL_OVERRIDE;
 };
 
 #endif
