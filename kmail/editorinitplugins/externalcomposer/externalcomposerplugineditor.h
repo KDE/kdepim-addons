@@ -33,6 +33,9 @@ public:
     ~ExternalComposerPluginEditor();
 
     MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) Q_DECL_OVERRIDE;
+
+    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
+    void showConfigureDialog(QWidget *parent) Q_DECL_OVERRIDE;
 };
 
 #endif

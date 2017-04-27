@@ -19,6 +19,7 @@
 
 #include "externalcomposerplugineditor.h"
 #include "externalcomposerplugineditorinterface.h"
+#include "externalcomposerconfiguredialog.h"
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(ExternalComposerPluginEditorFactory, "kmail_externalcomposereditorplugin.json", registerPlugin<ExternalComposerPluginEditor>();
@@ -37,6 +38,17 @@ MessageComposer::PluginEditorInitInterface *ExternalComposerPluginEditor::create
 {
     ExternalComposerPluginEditorInterface *interface = new ExternalComposerPluginEditorInterface(parent);
     return interface;
+}
+
+bool ExternalComposerPluginEditor::hasConfigureDialog() const
+{
+    return true;
+}
+
+void ExternalComposerPluginEditor::showConfigureDialog(QWidget *parent)
+{
+    ExternalComposerConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "externalcomposerplugineditor.moc"
