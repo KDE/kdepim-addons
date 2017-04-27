@@ -5,7 +5,7 @@
         "Id": "kmailexternalcomposer",
         "Name": "Open external composer",
         "ServiceTypes": [
-            "KMailEditor/Plugin"
+            "KMailEditor/PluginEditorInit"
         ],
         "Version": "1.0"
     },
