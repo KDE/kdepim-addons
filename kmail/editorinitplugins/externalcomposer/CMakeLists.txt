@@ -1,6 +1,8 @@
 set(kmail_externalcomposereditorplugin_SRCS
     externalcomposerplugineditor.cpp
     externalcomposerplugineditorinterface.cpp
+    externalcomposerconfiguredialog.cpp
+    externalcomposerconfigurewidget.cpp
 )
 
 kcoreaddons_add_plugin(kmail_externalcomposereditorplugin JSON kmail_externalcomposereditorplugin.json SOURCES
