@@ -30,6 +30,11 @@ public:
     explicit ExternalComposerPluginEditorInterface(QObject *parent = nullptr);
     ~ExternalComposerPluginEditorInterface();
     bool exec() Q_DECL_OVERRIDE;
+
+    void reloadConfig() Q_DECL_OVERRIDE;
+private:
+    QString mExternalComposerPath;
+    bool mEnabled;
 };
 
 #endif

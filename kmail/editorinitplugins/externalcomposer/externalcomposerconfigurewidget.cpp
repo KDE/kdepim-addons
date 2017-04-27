@@ -22,6 +22,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QVBoxLayout>
+#include <QCheckBox>
+#include <KUrlRequester>
+#include <QLabel>
 
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorInitConfigureWidget(parent)
@@ -29,6 +32,44 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setMargin(0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
+
+    mExternalEditorCheck = new QCheckBox(i18n("Use external editor instead of composer"), this);
+    mExternalEditorCheck->setObjectName(QStringLiteral("enabled"));
+    mExternalEditorCheck->setChecked(false);
+    mainLayout->addWidget(mExternalEditorCheck);
+
+    QHBoxLayout *hbox = new QHBoxLayout;
+    QLabel *label = new QLabel(QStringLiteral("Specify editor:"), this);
+    hbox->addWidget(label);
+
+
+    mEditorRequester = new KUrlRequester(this);
+    mEditorRequester->setObjectName(QStringLiteral("mEditorRequester"));
+    hbox->addWidget(mEditorRequester);
+
+    mEditorRequester->setFilter(QStringLiteral("application/x-executable "
+                                               "application/x-shellscript "
+                                               "application/x-desktop"));
+
+    mEditorRequester->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
+    mEditorRequester->setEnabled(false);   // !mExternalEditorCheck->isChecked()
+
+    mainLayout->addLayout(hbox);
+
+    label = new QLabel(i18n("<b>%f</b> will be replaced with the "
+                            "filename to edit.<br />"
+                            "<b>%w</b> will be replaced with the window id.<br />"
+                            "<b>%l</b> will be replaced with the line number."), this);
+    label->setObjectName(QStringLiteral("label"));
+    label->setEnabled(false);   // see above
+    mainLayout->addWidget(label);
+
+    mainLayout->addStretch(1);
+
+    connect(mExternalEditorCheck, &QAbstractButton::toggled,
+            label, &QWidget::setEnabled);
+    connect(mExternalEditorCheck, &QAbstractButton::toggled,
+            mEditorRequester, &QWidget::setEnabled);
 }
 
 ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget()
@@ -45,4 +86,6 @@ void ExternalComposerConfigureWidget::saveSettings()
 
 void ExternalComposerConfigureWidget::resetSettings()
 {
+    mExternalEditorCheck->setChecked(false);
+    //kwrite %f
 }

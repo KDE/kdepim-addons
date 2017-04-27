@@ -18,13 +18,16 @@
 */
 
 #include "externalcomposerplugineditorinterface.h"
-#include <KPIMTextEdit/RichTextEditor>
+#include <KPIMTextEdit/RichTextComposer>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <KSharedConfig>
+#include <KConfigGroup>
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInitInterface(parent)
+    : MessageComposer::PluginEditorInitInterface(parent),
+      mEnabled(false)
 {
 }
 
@@ -34,5 +37,16 @@ ExternalComposerPluginEditorInterface::~ExternalComposerPluginEditorInterface()
 
 bool ExternalComposerPluginEditorInterface::exec()
 {
+    richTextEditor()->setUseExternalEditor(mEnabled);
+    richTextEditor()->setExternalEditorPath(mExternalComposerPath);
     return true;
+}
+
+
+void ExternalComposerPluginEditorInterface::reloadConfig()
+{
+    KSharedConfig::Ptr config = KSharedConfig::openConfig();
+    KConfigGroup group = config->group(QStringLiteral("External Composer"));
+    mEnabled = group.readEntry("Enabled", false);
+    mExternalComposerPath = group.readEntry("ComposerPath", QString());
 }

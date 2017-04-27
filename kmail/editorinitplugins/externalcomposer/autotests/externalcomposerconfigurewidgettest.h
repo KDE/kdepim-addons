@@ -17,27 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CONFIRMADDRESSCONFIGUREWIDGET_H
-#define CONFIRMADDRESSCONFIGUREWIDGET_H
 
-#include <QWidget>
-#include <MessageComposer/PluginEditorInitConfigureWidget>
-class ExternalComposerConfigureTab;
-class QCheckBox;
-class KUrlRequester;
-class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInitConfigureWidget
+#ifndef EXTERNALCOMPOSERCONFIGUREWIDGETTEST_H
+#define EXTERNALCOMPOSERCONFIGUREWIDGETTEST_H
+
+#include <QObject>
+
+class ExternalComposerConfigureWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ExternalComposerConfigureWidget(QWidget *parent = nullptr);
-    ~ExternalComposerConfigureWidget();
+    explicit ExternalComposerConfigureWidgetTest(QObject *parent = nullptr);
+    ~ExternalComposerConfigureWidgetTest() = default;
 
-    void loadSettings() Q_DECL_OVERRIDE;
-    void saveSettings() Q_DECL_OVERRIDE;
-    void resetSettings() Q_DECL_OVERRIDE;
-private:
-    QCheckBox *mExternalEditorCheck;
-    KUrlRequester *mEditorRequester;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
-#endif // CONFIRMADDRESSCONFIGUREWIDGET_H
+#endif // EXTERNALCOMPOSERCONFIGUREWIDGETTEST_H
