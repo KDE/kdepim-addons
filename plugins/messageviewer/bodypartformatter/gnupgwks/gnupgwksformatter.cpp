@@ -61,9 +61,9 @@ Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part
         if (subParts.size() == 2
             && partHasMimeType(subParts[0], "text/plain")
             && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
-            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), part.content()->contents().at(1), false));
+            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(1), false));
         } else {
-            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), part.content()->contents().at(0), false));
+            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(0), false));
         }
     }
 
