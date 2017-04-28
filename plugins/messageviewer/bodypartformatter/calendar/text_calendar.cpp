@@ -4,6 +4,7 @@
   Copyright (c) 2004 Cornelius Schumacher <schumacher@kde.org>
   Copyright (c) 2007 Volker Krause <vkrause@kde.org>
   Copyright (c) 2010 Klarälvdalens Datakonsult AB, a KDAB Group company <info@kdab.net>
+  Copyright (c) 2017 Laurent Montel <montel@kde.org>
 
   This program is free software; you can redistribute it and/or modify it
   under the terms of the GNU General Public License as published by
@@ -411,8 +412,8 @@ public:
         KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
 
         KMime::Types::Mailbox::List addrs;
-        if (node->topLevel()->header<KMime::Headers::To>()) {
-            addrs = node->topLevel()->header<KMime::Headers::To>()->mailboxes();
+        if (auto header = node->topLevel()->header<KMime::Headers::To>()) {
+            addrs = header->mailboxes();
         }
         int found = 0;
         QVector< KMime::Types::Mailbox >::const_iterator end = addrs.constEnd();
@@ -426,8 +427,8 @@ public:
         }
 
         KMime::Types::Mailbox::List ccaddrs;
-        if (node->topLevel()->header<KMime::Headers::Cc>()) {
-            ccaddrs = node->topLevel()->header<KMime::Headers::Cc>()->mailboxes();
+        if (auto header = node->topLevel()->header<KMime::Headers::Cc>()) {
+            ccaddrs = header->mailboxes();
         }
         end = ccaddrs.constEnd();
         for (QVector<KMime::Types::Mailbox >::const_iterator it = ccaddrs.constBegin();
@@ -878,6 +879,7 @@ public:
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();
+                delete dlg;
             } else {
                 delete dlg;
                 return true;
@@ -1208,6 +1210,7 @@ public:
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();
+                delete dlg;
             } else {
                 delete dlg;
                 return true;
