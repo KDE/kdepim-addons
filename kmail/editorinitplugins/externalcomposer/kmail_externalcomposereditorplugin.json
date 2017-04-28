@@ -1,9 +1,19 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to use an external composer.",
+        "Description[nl]": "Deze plug-in stelt u in staat een externe opsteller te gebruiken.",
+        "Description[pt]": "Este 'plugin' permite-lhe usar um compositor externo.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att använda ett externt brevfönster.",
+        "Description[uk]": "За допомогою цього додатка можна використовувати зовнішні редактори повідомлень.",
+        "Description[x-test]": "xxThis plugin allows you to use an external composer.xx",
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
         "Name": "Open external composer",
+        "Name[nl]": "Extern opsteller openen",
+        "Name[pt]": "Abrir o compositor externo",
+        "Name[sv]": "Öppna externt brevfönster",
+        "Name[uk]": "Відкрити зовнішній редактор",
+        "Name[x-test]": "xxOpen external composerxx",
         "ServiceTypes": [
             "KMailEditor/PluginEditorInit"
         ],
