@@ -357,7 +357,7 @@ public:
         // get the attachment by name from the incidence
         Attachment::List attachments = incidence->attachments();
         Attachment::Ptr attachment;
-        if (attachments.count() > 0) {
+        if (!attachments.isEmpty()) {
             Attachment::List::ConstIterator it;
             Attachment::List::ConstIterator end = attachments.constEnd();
 
