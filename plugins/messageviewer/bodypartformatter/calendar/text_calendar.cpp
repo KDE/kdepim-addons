@@ -893,7 +893,7 @@ public:
                 return true;
             }
 
-            if (comment.isEmpty()) {
+            if (comment.trimmed().isEmpty()) {
                 KMessageBox::error(
                     nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
@@ -906,6 +906,7 @@ public:
         // First, save it for KOrganizer to handle
         const QString dir = directoryForStatus(status);
         if (dir.isEmpty()) {
+            qCWarning(TEXT_CALENDAR_LOG) << "Impossible to understand status: " << status;
             return true; // unknown status
         }
         if (status != Attendee::Delegated) {
