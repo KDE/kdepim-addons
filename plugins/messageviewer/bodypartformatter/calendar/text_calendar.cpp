@@ -453,10 +453,10 @@ public:
                 selectMessage
                     = i18n("<qt>Several of your identities match the receiver of this message,<br/>"
                            "please choose which of the following addresses is yours:</qt>");
-                foreach (const KMime::Types::Mailbox &mbx, addrs) {
+                for (const KMime::Types::Mailbox &mbx : qAsConst(addrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }
-                foreach (const KMime::Types::Mailbox &mbx, ccaddrs) {
+                for (const KMime::Types::Mailbox &mbx : qAsConst(ccaddrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }
             }
