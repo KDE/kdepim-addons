@@ -26,8 +26,8 @@
 #include <KConfigGroup>
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInitInterface(parent),
-      mEnabled(false)
+    : MessageComposer::PluginEditorInitInterface(parent)
+    , mEnabled(false)
 {
 }
 
@@ -41,7 +41,6 @@ bool ExternalComposerPluginEditorInterface::exec()
     richTextEditor()->setExternalEditorPath(mExternalComposerPath);
     return true;
 }
-
 
 void ExternalComposerPluginEditorInterface::reloadConfig()
 {

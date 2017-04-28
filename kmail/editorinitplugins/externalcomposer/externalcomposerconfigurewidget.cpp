@@ -42,7 +42,6 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     QLabel *label = new QLabel(QStringLiteral("Specify editor:"), this);
     hbox->addWidget(label);
 
-
     mEditorRequester = new KUrlRequester(this);
     mEditorRequester->setObjectName(QStringLiteral("mEditorRequester"));
     hbox->addWidget(mEditorRequester);
