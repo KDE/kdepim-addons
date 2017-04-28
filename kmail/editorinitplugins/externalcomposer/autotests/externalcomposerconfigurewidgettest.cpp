@@ -19,7 +19,10 @@
 
 #include "externalcomposerconfigurewidgettest.h"
 #include "../externalcomposerconfigurewidget.h"
+#include <QCheckBox>
+#include <QVBoxLayout>
 #include <QTest>
+#include <KUrlRequester>
 
 ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject *parent)
     : QObject(parent)
@@ -29,7 +32,19 @@ ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject
 
 void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
 {
+    ExternalComposerConfigureWidget w(nullptr);
+    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(vboxlayout);
+    QCOMPARE(vboxlayout->margin(), 0);
 
+    QCheckBox *mExternalEditorCheck = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
+    QVERIFY(mExternalEditorCheck);
+    QVERIFY(!mExternalEditorCheck->text().isEmpty());
+    QVERIFY(!mExternalEditorCheck->isChecked());
+
+    KUrlRequester *mEditorRequester = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    QVERIFY(mEditorRequester);
+    QVERIFY(!mEditorRequester->isEnabled());
 }
 
 QTEST_MAIN(ExternalComposerConfigureWidgetTest)

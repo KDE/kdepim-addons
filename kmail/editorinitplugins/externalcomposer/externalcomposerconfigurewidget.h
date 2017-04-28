@@ -22,7 +22,6 @@
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorInitConfigureWidget>
-class ExternalComposerConfigureTab;
 class QCheckBox;
 class KUrlRequester;
 class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInitConfigureWidget
