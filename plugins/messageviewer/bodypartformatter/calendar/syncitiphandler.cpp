@@ -60,7 +60,7 @@ void SyncItipHandler::onITipMessageProcessed(Akonadi::ITIPHandler::Result result
     m_eventLoop.exit();
     deleteLater();
     delete m_counterProposalEditorDelegate;
-    m_counterProposalEditorDelegate = 0;
+    m_counterProposalEditorDelegate = nullptr;
 }
 
 QString SyncItipHandler::errorMessage() const
