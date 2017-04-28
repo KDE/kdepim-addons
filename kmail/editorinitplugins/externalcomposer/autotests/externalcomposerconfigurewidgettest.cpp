@@ -23,11 +23,12 @@
 #include <QVBoxLayout>
 #include <QTest>
 #include <KUrlRequester>
+#include <QStandardPaths>
 
 ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
