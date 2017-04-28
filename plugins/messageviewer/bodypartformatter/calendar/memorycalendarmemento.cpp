@@ -27,7 +27,7 @@ using namespace MessageViewer;
 using namespace Akonadi;
 
 MemoryCalendarMemento::MemoryCalendarMemento()
-    : QObject(0), mFinished(false)
+    : QObject(nullptr), mFinished(false)
 {
 
     Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
@@ -45,7 +45,7 @@ MemoryCalendarMemento::MemoryCalendarMemento()
 
 void MemoryCalendarMemento::slotCalendarLoaded(bool success, const QString &errorMessage)
 {
-    qCDebug(TEXT_CALENDAR_LOG);
+    qCDebug(TEXT_CALENDAR_LOG) << "MemoryCalendarMemento::slotCalendarLoaded: " << success;
     if (!success) {
         qCWarning(TEXT_CALENDAR_LOG) << "Unable to fetch incidences:" << errorMessage;
     }

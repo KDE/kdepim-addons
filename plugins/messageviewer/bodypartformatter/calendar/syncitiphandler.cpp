@@ -41,6 +41,7 @@ SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal,
     , m_result(Akonadi::ITIPHandler::ResultSuccess)
 {
     Q_ASSERT(calendar);
+    qCDebug(TEXT_CALENDAR_LOG) << "SyncItipHandler::SyncItipHandler: " << this;
     Akonadi::ITIPHandler *handler = new Akonadi::ITIPHandler(this);
     QObject::connect(handler, &Akonadi::ITIPHandler::iTipMessageProcessed, this, &SyncItipHandler::onITipMessageProcessed, Qt::QueuedConnection);
 
@@ -51,6 +52,11 @@ SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal,
     handler->processiTIPMessage(receiver, iCal, type);
 
     m_eventLoop.exec();
+}
+
+SyncItipHandler::~SyncItipHandler()
+{
+    qCDebug(TEXT_CALENDAR_LOG) << "SyncItipHandler::~SyncItipHandler: " << this;
 }
 
 void SyncItipHandler::onITipMessageProcessed(Akonadi::ITIPHandler::Result result, const QString &errorMessage)
