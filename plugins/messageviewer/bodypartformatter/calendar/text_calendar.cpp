@@ -888,6 +888,7 @@ public:
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();
+                delete dlg;
             } else {
                 delete dlg;
                 return true;
@@ -1219,6 +1220,7 @@ public:
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();
+                delete dlg;
             } else {
                 delete dlg;
                 return true;
