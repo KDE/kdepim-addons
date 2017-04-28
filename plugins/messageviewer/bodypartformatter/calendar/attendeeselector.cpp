@@ -78,8 +78,9 @@ QStringList AttendeeSelector::attendees() const
 
 void AttendeeSelector::addClicked()
 {
-    if (!ui.attendeeEdit->text().isEmpty()) {
-        ui.attendeeList->addItem(ui.attendeeEdit->text());
+    const QString str = ui.attendeeEdit->text();
+    if (!str.isEmpty()) {
+        ui.attendeeList->addItem(str);
     }
     ui.attendeeEdit->clear();
     mOkButton->setEnabled(true);
