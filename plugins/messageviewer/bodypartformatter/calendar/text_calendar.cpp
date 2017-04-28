@@ -182,7 +182,7 @@ class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 public:
     Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
-        return format(part, writer, 0);
+        return format(part, writer, nullptr);
     }
 
     Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
@@ -359,7 +359,7 @@ public:
         // get the attachment by name from the incidence
         Attachment::List attachments = incidence->attachments();
         Attachment::Ptr attachment;
-        if (attachments.count() > 0) {
+        if (!attachments.isEmpty()) {
             Attachment::List::ConstIterator it;
             Attachment::List::ConstIterator end = attachments.constEnd();
 
@@ -464,7 +464,7 @@ public:
             const QString defaultAddr = im->defaultIdentity().primaryEmailAddress();
             const int defaultIndex = qMax(0, possibleAddrs.indexOf(defaultAddr));
 
-            receiver = QInputDialog::getItem(0,
+            receiver = QInputDialog::getItem(nullptr,
                                              i18n("Select Address"), selectMessage, possibleAddrs, defaultIndex, false, &ok);
 
             if (!ok) {
@@ -611,7 +611,7 @@ public:
             transportId = TransportManager::self()->defaultTransportId();
         }
         if (transportId == -1) {
-            if (!TransportManager::self()->showTransportCreationDialog(0, TransportManager::IfNoTransportExists)) {
+            if (!TransportManager::self()->showTransportCreationDialog(nullptr, TransportManager::IfNoTransportExists)) {
                 return false;
             }
             transportId = TransportManager::self()->defaultTransportId();
@@ -847,8 +847,8 @@ public:
             }
 
             if (KMessageBox::warningYesNo(
-                    0,
-                    i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
+                        nullptr,
+                        i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
                 return true;
             }
         }
@@ -873,7 +873,7 @@ public:
 
         // get comment for tentative acceptance
         if (askForComment(status)) {
-            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(0);
+            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
             dlg->setWindowTitle(i18n("Reaction to Invitation"));
             QString comment;
             if (dlg->exec()) {
@@ -883,7 +883,7 @@ public:
                 return true;
             }
 
-            if (comment.isEmpty()) {
+            if (comment.trimmed().isEmpty()) {
                 KMessageBox::error(
                     nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
@@ -896,6 +896,7 @@ public:
         // First, save it for KOrganizer to handle
         const QString dir = directoryForStatus(status);
         if (dir.isEmpty()) {
+            qCWarning(TEXT_CALENDAR_LOG) << "Impossible to understand status: " << status;
             return true; // unknown status
         }
         if (status != Attendee::Delegated) {
@@ -918,7 +919,7 @@ public:
                 return true;
             }
             if (KEmailAddress::compareEmail(delegateString, incidence->organizer()->email(), false)) {
-                KMessageBox::sorry(0, i18n("Delegation to organizer is not possible."));
+                KMessageBox::sorry(nullptr, i18n("Delegation to organizer is not possible."));
                 return true;
             }
         }
@@ -1173,9 +1174,9 @@ public:
             }
             delete kontact;
 
-            OrgKdeKorganizerCalendarInterface *iface
-                = new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                                                        QDBusConnection::sessionBus(), 0);
+            OrgKdeKorganizerCalendarInterface *iface =
+                new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                        QDBusConnection::sessionBus(), nullptr);
             if (!iface->isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface->lastError().message();
                 delete iface;
@@ -1202,7 +1203,7 @@ public:
         }
         Incidence::Ptr incidence(stringToIncidence(iCal));
         if (askForComment(Attendee::Declined)) {
-            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(0);
+            QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
             dlg->setWindowTitle(i18n("Decline Counter Proposal"));
             QString comment;
             if (dlg->exec()) {
@@ -1267,7 +1268,7 @@ public:
         Incidence::Ptr incidence = stringToIncidence(iCal);
         if (!incidence) {
             KMessageBox::sorry(
-                0,
+                nullptr,
                 i18n("The calendar invitation stored in this email message is broken in some way. "
                      "Unable to continue."));
             return false;
@@ -1407,7 +1408,7 @@ public:
         QAction *saveas
             = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
 
-        QAction *a = menu->exec(point, 0);
+        QAction *a = menu->exec(point, nullptr);
         if (a == open) {
             openAttachment(name, iCal);
         } else if (a == saveas) {
