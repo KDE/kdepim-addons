@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to use an external composer.",
+        "Description[ca@valencia]": "Este connector permet usar un editor extern.",
         "Description[ca]": "Aquest connector permet usar un editor extern.",
         "Description[es]": "Este complemento le permite usar un editor externo.",
         "Description[nl]": "Deze plug-in stelt u in staat een externe opsteller te gebruiken.",
@@ -12,6 +13,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
         "Name": "Open external composer",
+        "Name[ca@valencia]": "Obri un editor extern",
         "Name[ca]": "Obre un editor extern",
         "Name[es]": "Abrir editor externo",
         "Name[nl]": "Extern opsteller openen",
