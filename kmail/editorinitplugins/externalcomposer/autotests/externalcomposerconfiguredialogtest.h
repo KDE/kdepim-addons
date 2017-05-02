@@ -29,6 +29,8 @@ class ExternalComposerConfigureDialogTest : public QObject
 public:
     explicit ExternalComposerConfigureDialogTest(QObject *parent = nullptr);
     ~ExternalComposerConfigureDialogTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // EXTERNALCOMPOSERCONFIGUREDIALOGTEST_H

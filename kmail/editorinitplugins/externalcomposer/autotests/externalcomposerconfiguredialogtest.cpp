@@ -18,12 +18,21 @@
 */
 
 #include "externalcomposerconfiguredialogtest.h"
+#include "../externalcomposerconfiguredialog.h"
+#include "../externalcomposerconfigurewidget.h"
 #include <QTest>
 
 ExternalComposerConfigureDialogTest::ExternalComposerConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void ExternalComposerConfigureDialogTest::shouldHaveDefaultValues()
+{
+    ExternalComposerConfigureDialog dlg;
+    ExternalComposerConfigureWidget *w = dlg.findChild<ExternalComposerConfigureWidget *>(QStringLiteral("configurewidget"));
+    QVERIFY(w);
 }
 
 QTEST_MAIN(ExternalComposerConfigureDialogTest)
