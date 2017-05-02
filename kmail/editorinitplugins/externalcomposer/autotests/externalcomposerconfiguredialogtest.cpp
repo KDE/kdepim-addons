@@ -25,7 +25,6 @@
 ExternalComposerConfigureDialogTest::ExternalComposerConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ExternalComposerConfigureDialogTest::shouldHaveDefaultValues()
