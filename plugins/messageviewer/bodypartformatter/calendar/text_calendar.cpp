@@ -361,10 +361,8 @@ public:
         Attachment::List attachments = incidence->attachments();
         Attachment::Ptr attachment;
         if (!attachments.isEmpty()) {
-            Attachment::List::ConstIterator it;
-            Attachment::List::ConstIterator end = attachments.constEnd();
-
-            for (it = attachments.constBegin(); it != end; ++it) {
+            const Attachment::List::ConstIterator end = attachments.constEnd();
+            for (Attachment::List::ConstIterator it = attachments.constBegin(); it != end; ++it) {
                 if ((*it)->label() == name) {
                     attachment = *it;
                     break;
