@@ -19,7 +19,6 @@
 
 #include "externalcomposerconfiguredialog.h"
 #include "externalcomposerconfigurewidget.h"
-#include <KIdentityManagement/IdentityManager>
 #include <KLocalizedString>
 
 ExternalComposerConfigureDialog::ExternalComposerConfigureDialog(QWidget *parent)
