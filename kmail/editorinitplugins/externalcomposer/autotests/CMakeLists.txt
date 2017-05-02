@@ -9,3 +9,4 @@ macro(add_kmail_externalcomposer_unittest _source _additional)
 endmacro ()
 
 add_kmail_externalcomposer_unittest(externalcomposerconfigurewidgettest.cpp "../externalcomposerconfigurewidget.cpp")
+add_kmail_externalcomposer_unittest(externalcomposerconfiguredialogtest.cpp "../externalcomposerconfiguredialog.cpp;../externalcomposerconfigurewidget.cpp")
