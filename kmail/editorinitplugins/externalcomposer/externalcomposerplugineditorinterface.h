@@ -21,7 +21,6 @@
 #define EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinitinterface.h>
-#include <QPointer>
 
 class ExternalComposerPluginEditorInterface : public MessageComposer::PluginEditorInitInterface
 {

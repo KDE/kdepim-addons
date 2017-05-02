@@ -19,9 +19,6 @@
 
 #include "externalcomposerplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextComposer>
-#include <KLocalizedString>
-#include <KActionCollection>
-#include <QAction>
 #include <KSharedConfig>
 #include <KConfigGroup>
 
