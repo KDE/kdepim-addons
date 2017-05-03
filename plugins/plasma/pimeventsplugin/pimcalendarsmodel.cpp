@@ -128,8 +128,8 @@ void PimCalendarsModel::saveConfig()
     auto group = config->group("PIMEventsPlugin");
     auto savedList = group.readEntry("calendars", QList<qint64>());
     auto currentList = mEnabledCalendars.toList();
-    qSort(savedList);
-    qSort(currentList);
+    std::sort(savedList.begin(), savedList.end());
+    std::sort(currentList.begin(), currentList.end());
 
     if (currentList != savedList) {
         group.writeEntry("calendars", currentList);
