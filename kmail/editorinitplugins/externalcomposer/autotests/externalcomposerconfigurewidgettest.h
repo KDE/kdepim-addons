@@ -31,6 +31,7 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();
+    void shouldEnableDisbleElements();
 };
 
 #endif // EXTERNALCOMPOSERCONFIGUREWIDGETTEST_H

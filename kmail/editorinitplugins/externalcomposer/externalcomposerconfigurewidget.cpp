@@ -40,6 +40,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
 
     QHBoxLayout *hbox = new QHBoxLayout;
     QLabel *label = new QLabel(QStringLiteral("Specify editor:"), this);
+    label->setObjectName(QStringLiteral("urlrequesterlabel"));
     hbox->addWidget(label);
 
     mEditorRequester = new KUrlRequester(this);
@@ -59,7 +60,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
                             "filename to edit.<br />"
                             "<b>%w</b> will be replaced with the window id.<br />"
                             "<b>%l</b> will be replaced with the line number."), this);
-    label->setObjectName(QStringLiteral("label"));
+    label->setObjectName(QStringLiteral("explanationlabel"));
     label->setEnabled(false);   // see above
     mainLayout->addWidget(label);
 

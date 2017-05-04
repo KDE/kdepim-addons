@@ -21,6 +21,7 @@
 #include "../externalcomposerconfigurewidget.h"
 #include <QCheckBox>
 #include <QVBoxLayout>
+#include <QLabel>
 #include <QTest>
 #include <KUrlRequester>
 #include <QStandardPaths>
@@ -32,6 +33,32 @@ ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject
 }
 
 void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
+{
+    ExternalComposerConfigureWidget w(nullptr);
+    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(vboxlayout);
+    QCOMPARE(vboxlayout->margin(), 0);
+
+    QCheckBox *mExternalEditorCheck = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
+    QVERIFY(mExternalEditorCheck);
+    QVERIFY(!mExternalEditorCheck->text().isEmpty());
+    QVERIFY(!mExternalEditorCheck->isChecked());
+
+    QLabel *urlrequesterlabel = w.findChild<QLabel *>(QStringLiteral("urlrequesterlabel"));
+    QVERIFY(urlrequesterlabel);
+    QVERIFY(!urlrequesterlabel->text().isEmpty());
+
+    QLabel *explanationlabel = w.findChild<QLabel *>(QStringLiteral("explanationlabel"));
+    QVERIFY(explanationlabel);
+    QVERIFY(!explanationlabel->text().isEmpty());
+    QVERIFY(!explanationlabel->isEnabled());
+
+    KUrlRequester *mEditorRequester = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    QVERIFY(mEditorRequester);
+    QVERIFY(!mEditorRequester->isEnabled());
+}
+
+void ExternalComposerConfigureWidgetTest::shouldEnableDisbleElements()
 {
     ExternalComposerConfigureWidget w(nullptr);
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
