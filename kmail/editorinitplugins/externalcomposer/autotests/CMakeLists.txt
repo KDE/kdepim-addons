@@ -10,3 +10,4 @@ endmacro ()
 
 add_kmail_externalcomposer_unittest(externalcomposerconfigurewidgettest.cpp "../externalcomposerconfigurewidget.cpp")
 add_kmail_externalcomposer_unittest(externalcomposerconfiguredialogtest.cpp "../externalcomposerconfiguredialog.cpp;../externalcomposerconfigurewidget.cpp")
+add_kmail_externalcomposer_unittest(externalcomposerplugineditortest.cpp "../externalcomposerplugineditor.cpp;../externalcomposerplugineditorinterface.cpp;../externalcomposerconfiguredialog.cpp;../externalcomposerconfigurewidget.cpp")
