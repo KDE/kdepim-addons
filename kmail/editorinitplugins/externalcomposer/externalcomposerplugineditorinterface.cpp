@@ -34,8 +34,10 @@ ExternalComposerPluginEditorInterface::~ExternalComposerPluginEditorInterface()
 
 bool ExternalComposerPluginEditorInterface::exec()
 {
-    richTextEditor()->setUseExternalEditor(mEnabled);
-    richTextEditor()->setExternalEditorPath(mExternalComposerPath);
+    if (mEnabled) {
+        richTextEditor()->setUseExternalEditor(mEnabled);
+        richTextEditor()->setExternalEditorPath(mExternalComposerPath);
+    }
     return true;
 }
 
