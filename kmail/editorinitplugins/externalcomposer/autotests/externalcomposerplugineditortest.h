@@ -28,6 +28,10 @@ class ExternalComposerPluginEditorTest : public QObject
 public:
     explicit ExternalComposerPluginEditorTest(QObject *parent = nullptr);
     ~ExternalComposerPluginEditorTest() = default;
+
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+
 };
 
 #endif // EXTERNALCOMPOSERPLUGINEDITORTEST_H

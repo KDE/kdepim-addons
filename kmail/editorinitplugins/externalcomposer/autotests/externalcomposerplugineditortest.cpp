@@ -18,12 +18,20 @@
 */
 
 #include "externalcomposerplugineditortest.h"
+#include "../externalcomposerplugineditor.h"
 #include <QTest>
 
 ExternalComposerPluginEditorTest::ExternalComposerPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void ExternalComposerPluginEditorTest::shouldHaveDefaultValue()
+{
+    ExternalComposerPluginEditor plugin;
+    QVERIFY(plugin.hasConfigureDialog());
+    QVERIFY(plugin.createInterface(nullptr));
 }
 
 QTEST_MAIN(ExternalComposerPluginEditorTest)
