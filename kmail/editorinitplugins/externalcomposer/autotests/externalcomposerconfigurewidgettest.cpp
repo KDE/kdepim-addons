@@ -58,21 +58,37 @@ void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mEditorRequester->isEnabled());
 }
 
-void ExternalComposerConfigureWidgetTest::shouldEnableDisbleElements()
+void ExternalComposerConfigureWidgetTest::shouldEnableDisableElements()
 {
     ExternalComposerConfigureWidget w(nullptr);
-    QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(vboxlayout);
-    QCOMPARE(vboxlayout->margin(), 0);
 
     QCheckBox *mExternalEditorCheck = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
     QVERIFY(mExternalEditorCheck);
-    QVERIFY(!mExternalEditorCheck->text().isEmpty());
     QVERIFY(!mExternalEditorCheck->isChecked());
 
     KUrlRequester *mEditorRequester = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mEditorRequester);
     QVERIFY(!mEditorRequester->isEnabled());
+
+    QLabel *urlrequesterlabel = w.findChild<QLabel *>(QStringLiteral("urlrequesterlabel"));
+    QVERIFY(urlrequesterlabel);
+    QVERIFY(urlrequesterlabel->isEnabled());
+
+    QLabel *explanationlabel = w.findChild<QLabel *>(QStringLiteral("explanationlabel"));
+    QVERIFY(!explanationlabel->isEnabled());
+
+    mExternalEditorCheck->toggle();
+    QVERIFY(mExternalEditorCheck->isChecked());
+    QVERIFY(mEditorRequester->isEnabled());
+    QVERIFY(urlrequesterlabel->isEnabled());
+    QVERIFY(explanationlabel->isEnabled());
+
+
+    mExternalEditorCheck->toggle();
+    QVERIFY(!mExternalEditorCheck->isChecked());
+    QVERIFY(!mEditorRequester->isEnabled());
+    QVERIFY(urlrequesterlabel->isEnabled());
+    QVERIFY(!explanationlabel->isEnabled());
 }
 
 QTEST_MAIN(ExternalComposerConfigureWidgetTest)
