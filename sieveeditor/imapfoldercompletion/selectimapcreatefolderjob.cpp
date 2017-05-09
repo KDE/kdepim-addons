@@ -50,9 +50,14 @@ void SelectImapCreateFolderJob::start()
         connect(login, &KIMAP::LoginJob::result, this, &SelectImapCreateFolderJob::slotLoginDone);
         login->start();
     } else {
-        Q_EMIT finished(mSieveImapAccount, false);
-        deleteLater();
+        failed();
     }
+}
+
+void SelectImapCreateFolderJob::failed()
+{
+    Q_EMIT finished(mSieveImapAccount, false);
+    deleteLater();
 }
 
 void SelectImapCreateFolderJob::slotLoginDone(KJob *job)
@@ -60,8 +65,7 @@ void SelectImapCreateFolderJob::slotLoginDone(KJob *job)
     if (!job->error()) {
         createFolderRequested();
     } else {
-        Q_EMIT finished(mSieveImapAccount, false);
-        deleteLater();
+        failed();
     }
 }
 
@@ -70,8 +74,7 @@ void SelectImapCreateFolderJob::createFolderRequested()
     if (!mSession
         || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapCreateFolderJob - got no connection";
-        Q_EMIT finished(mSieveImapAccount, false);
-        deleteLater();
+        failed();
         return;
     }
 
