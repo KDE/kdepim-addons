@@ -12,3 +12,5 @@ add_akonadi_isolated_test_advanced( gravatarupdatejobtest.cpp "../job/gravatarup
 
 add_akonadi_isolated_test_advanced( gravatarupdatedialogtest.cpp "../widgets/gravatarupdatedialog.cpp;../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KF5::Gravatar;KF5::I18n")
 add_akonadi_isolated_test_advanced( gravatarupdatewidgettest.cpp "../widgets/gravatarupdatewidget.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KF5::Gravatar;KF5::I18n")
+
+#add_akonadi_isolated_test_advanced( checkgravatarplugintest.cpp "../../checkgravatarplugin.cpp;../../checkgravatarplugininterface.cpp" "KF5::PimCommon;KF5::I18n;KF5::XmlGui;KF5::Contacts;KF5::Gravatar;${kaddressbook_checkgravatarplugin_SRCS};${kaddressbook_checkgravatarplugin_test_SRCS}")
