@@ -1,5 +1,4 @@
 add_subdirectory(plugins)
 add_subdirectory(editorplugins)
 add_subdirectory(editorsendcheckplugins)
-add_subdirectory(checkbeforeclosingplugins)
 add_subdirectory(editorinitplugins)
