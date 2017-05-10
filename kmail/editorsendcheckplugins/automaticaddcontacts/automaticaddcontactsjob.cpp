@@ -246,7 +246,16 @@ void AutomaticAddContactsJob::addNextContact()
 
 void AutomaticAddContactsJob::setEmails(const QStringList &list)
 {
-    const QString str = list.join(QStringLiteral(", "));
+    QString str;
+    for (int i = 0; i < list.count(); i++) {
+        QString tmpStr = list.at(i);
+        if (!tmpStr.trimmed().isEmpty()) {
+            if (!str.isEmpty()) {
+                str.append(QStringLiteral(", "));
+            }
+            str.append(tmpStr);
+        }
+    }
     const QStringList emails = KEmailAddress::splitAddressList(str);
     mEmails = emails;
 }
