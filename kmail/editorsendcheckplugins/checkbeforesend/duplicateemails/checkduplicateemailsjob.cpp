@@ -19,6 +19,7 @@
 #include "checkduplicateemailsjob.h"
 
 #include <KEmailAddress>
+#include <PimCommon/PimUtil>
 
 CheckDuplicateEmailsJob::CheckDuplicateEmailsJob()
 {
@@ -59,10 +60,7 @@ void CheckDuplicateEmailsJob::start()
 
 void CheckDuplicateEmailsJob::setEmails(const QStringList &list)
 {
-    const QString str = list.join(QStringLiteral(", "));
-    const QStringList emails = str.split(QStringLiteral(", "));
-
-    mEmails = emails;
+    mEmails = PimCommon::Util::generateEmailList(list);
 }
 
 QMap<QString, int> CheckDuplicateEmailsJob::result() const

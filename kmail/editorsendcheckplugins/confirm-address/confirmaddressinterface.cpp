@@ -31,6 +31,7 @@
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
 #include <MessageComposer/AliasesExpandJob>
+#include <PimCommon/PimUtil>
 
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -61,8 +62,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
     if (settings.mDomains.isEmpty() && settings.mWhiteLists.isEmpty()) {
         return true;
     }
-    const QString str = lst.join(QStringLiteral(", "));
-    const QStringList emails = KEmailAddress::splitAddressList(str);
+    const QStringList emails = PimCommon::Util::generateEmailList(lst);
 #if 0
     MessageComposer::AliasesExpandJob job(params.addresses().join(QStringLiteral(", ")), params.defaultDomain(), this);
     if (job.exec()) {
