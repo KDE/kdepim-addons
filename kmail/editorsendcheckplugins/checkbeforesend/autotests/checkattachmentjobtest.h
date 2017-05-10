@@ -30,6 +30,7 @@ public:
     ~CheckAttachmentJobTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldAssignEmails_data();
     void shouldAssignEmails();
     void shouldRemoveDuplicatedEmails();
     void shouldRemoveDuplicatedEmails_data();
