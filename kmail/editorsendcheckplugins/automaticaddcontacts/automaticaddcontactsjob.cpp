@@ -30,6 +30,7 @@
 #include <Akonadi/Contact/ContactSearchJob>
 #include <AkonadiCore/ItemCreateJob>
 #include <KEmailAddress>
+#include <PimCommon/PimUtil>
 #include <QPointer>
 #include <akonadi/contact/selectaddressbookdialog.h>
 #include <AkonadiCore/AgentFilterProxyModel>
@@ -246,18 +247,7 @@ void AutomaticAddContactsJob::addNextContact()
 
 void AutomaticAddContactsJob::setEmails(const QStringList &list)
 {
-    QString str;
-    for (int i = 0; i < list.count(); i++) {
-        QString tmpStr = list.at(i);
-        if (!tmpStr.trimmed().isEmpty()) {
-            if (!str.isEmpty()) {
-                str.append(QStringLiteral(", "));
-            }
-            str.append(tmpStr);
-        }
-    }
-    const QStringList emails = KEmailAddress::splitAddressList(str);
-    mEmails = emails;
+    mEmails = PimCommon::Util::generateEmailList(list);
 }
 
 void AutomaticAddContactsJob::setCollection(const Akonadi::Collection &collection)

@@ -20,6 +20,7 @@
 #include "checkattachmentjob.h"
 
 #include <KEmailAddress>
+#include <PimCommon/PimUtil>
 
 CheckAttachmentJob::CheckAttachmentJob()
 {
@@ -51,18 +52,7 @@ QStringList CheckAttachmentJob::originalEmails() const
 
 void CheckAttachmentJob::setOriginalEmails(const QStringList &list)
 {
-    QString str;
-    for (int i = 0; i < list.count(); i++) {
-        QString tmpStr = list.at(i);
-        if (!tmpStr.trimmed().isEmpty()) {
-            if (!str.isEmpty()) {
-                str.append(QStringLiteral(", "));
-            }
-            str.append(tmpStr);
-        }
-    }
-    const QStringList emails = KEmailAddress::splitAddressList(str);
-    mOriginalEmails = emails;
+    mOriginalEmails = PimCommon::Util::generateEmailList(list);
 }
 
 QStringList CheckAttachmentJob::resultList() const
