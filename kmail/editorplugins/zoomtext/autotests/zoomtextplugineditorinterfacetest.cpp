@@ -19,6 +19,7 @@
 
 #include "zoomtextplugineditorinterfacetest.h"
 #include "../zoomtextplugineditorinterface.h"
+#include <KActionCollection>
 #include <QTest>
 
 ZoomTextPluginEditorInterfaceTest::ZoomTextPluginEditorInterfaceTest(QObject *parent)
@@ -32,6 +33,11 @@ ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest()
 
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
+    ZoomTextPluginEditorInterface interface(nullptr);
+    interface.createAction(new KActionCollection(this));
+    MessageComposer::ActionType type = interface.actionType();
+    QVERIFY(type.action());
+    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)
