@@ -19,6 +19,7 @@
 
 #include "nonbreakingspaceplugineditorinterfacetest.h"
 #include "../nonbreakingspaceplugineditorinterface.h"
+#include <KActionCollection>
 #include <QTest>
 
 NonBreakingSpacePluginEditorInterfaceTest::NonBreakingSpacePluginEditorInterfaceTest(QObject *parent)
@@ -32,6 +33,11 @@ NonBreakingSpacePluginEditorInterfaceTest::~NonBreakingSpacePluginEditorInterfac
 
 void NonBreakingSpacePluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
+    NonBreakingSpacePluginEditorInterface interface(nullptr);
+    interface.createAction(new KActionCollection(this));
+    MessageComposer::ActionType type = interface.actionType();
+    QVERIFY(type.action());
+    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
 }
 
 QTEST_MAIN(NonBreakingSpacePluginEditorInterfaceTest)
