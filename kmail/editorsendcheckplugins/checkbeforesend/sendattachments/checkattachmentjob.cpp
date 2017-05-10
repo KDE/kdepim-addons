@@ -49,9 +49,20 @@ QStringList CheckAttachmentJob::originalEmails() const
     return mOriginalEmails;
 }
 
-void CheckAttachmentJob::setOriginalEmails(const QStringList &originalEmails)
+void CheckAttachmentJob::setOriginalEmails(const QStringList &list)
 {
-    mOriginalEmails = originalEmails;
+    QString str;
+    for (int i = 0; i < list.count(); i++) {
+        QString tmpStr = list.at(i);
+        if (!tmpStr.trimmed().isEmpty()) {
+            if (!str.isEmpty()) {
+                str.append(QStringLiteral(", "));
+            }
+            str.append(tmpStr);
+        }
+    }
+    const QStringList emails = KEmailAddress::splitAddressList(str);
+    mOriginalEmails = emails;
 }
 
 QStringList CheckAttachmentJob::resultList() const
