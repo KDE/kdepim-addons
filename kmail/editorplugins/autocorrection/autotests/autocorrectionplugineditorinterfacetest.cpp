@@ -19,6 +19,7 @@
 
 #include "autocorrectionplugineditorinterfacetest.h"
 #include "../autocorrectionplugineditorinterface.h"
+#include <KActionCollection>
 #include <QTest>
 
 AutoCorrectionPluginEditorInterfaceTest::AutoCorrectionPluginEditorInterfaceTest(QObject *parent)
@@ -32,6 +33,11 @@ AutoCorrectionPluginEditorInterfaceTest::~AutoCorrectionPluginEditorInterfaceTes
 
 void AutoCorrectionPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
+    AutoCorrectionPluginEditorInterface interface(nullptr);
+    interface.createAction(new KActionCollection(this));
+    MessageComposer::ActionType type = interface.actionType();
+    QVERIFY(type.action());
+    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
 }
 
 QTEST_MAIN(AutoCorrectionPluginEditorInterfaceTest)

@@ -19,6 +19,7 @@
 
 #include "insertspecialcharacterplugineditorinterfacetest.h"
 #include "../insertspecialcharacterplugineditorinterface.h"
+#include <KActionCollection>
 #include <QTest>
 
 InsertSpecialCharacterPluginEditorInterfaceTest::InsertSpecialCharacterPluginEditorInterfaceTest(QObject *parent)
@@ -32,6 +33,11 @@ InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEd
 
 void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
+    InsertSpecialCharacterPluginEditorInterface interface(nullptr);
+    interface.createAction(new KActionCollection(this));
+    MessageComposer::ActionType type = interface.actionType();
+    QVERIFY(type.action());
+    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
 }
 
 QTEST_MAIN(InsertSpecialCharacterPluginEditorInterfaceTest)

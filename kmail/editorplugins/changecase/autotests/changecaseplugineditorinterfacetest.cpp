@@ -19,6 +19,7 @@
 
 #include "changecaseplugineditorinterfacetest.h"
 #include "../changecaseplugineditorinterface.h"
+#include <KActionCollection>
 #include <QTest>
 
 ChangeCasePluginEditorInterfaceTest::ChangeCasePluginEditorInterfaceTest(QObject *parent)
@@ -32,6 +33,11 @@ ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest()
 
 void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()
 {
+    ChangeCasePluginEditorInterface interface(nullptr);
+    interface.createAction(new KActionCollection(this));
+    MessageComposer::ActionType type = interface.actionType();
+    QVERIFY(type.action());
+    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
 }
 
 QTEST_MAIN(ChangeCasePluginEditorInterfaceTest)
