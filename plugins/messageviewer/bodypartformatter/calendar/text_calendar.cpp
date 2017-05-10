@@ -1037,7 +1037,9 @@ public:
             file->write(QByteArray::fromBase64(attachment->data()));
             file->close();
 
-            bool stat = KRun::runUrl(QUrl::fromLocalFile(file->fileName()), attachment->mimeType(), 0, true);
+            KRun::RunFlags flags;
+            flags |= KRun::DeleteTemporaryFiles;
+            bool stat = KRun::runUrl(QUrl::fromLocalFile(file->fileName()), attachment->mimeType(), nullptr, flags);
             delete file;
             return stat;
         }
