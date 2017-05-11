@@ -59,7 +59,7 @@ bool SendVcardsJob::start()
     if (mListItem.isEmpty()) {
         qCDebug(KADDRESSBOOK_SENDVCARDS_LOG) << " No Item found";
         mAttachmentTemporary->deleteLater();
-        mAttachmentTemporary = 0;
+        mAttachmentTemporary = nullptr;
         deleteLater();
         return false;
     }

@@ -39,7 +39,7 @@
 #include <KStandardGuiItem>
 
 namespace MessageViewer {
-QAbstractItemModel *_k_todoEditStubModel = 0;
+QAbstractItemModel *_k_todoEditStubModel = nullptr;
 }
 
 using namespace MessageViewer;

@@ -41,7 +41,7 @@
 #include <KStandardGuiItem>
 
 namespace MessageViewer {
-QAbstractItemModel *_k_eventEditStubModel = 0;
+QAbstractItemModel *_k_eventEditStubModel = nullptr;
 }
 
 using namespace MessageViewer;

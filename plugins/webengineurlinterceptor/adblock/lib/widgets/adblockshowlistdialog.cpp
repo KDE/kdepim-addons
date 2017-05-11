@@ -110,7 +110,7 @@ void AdBlockShowListDialog::downLoadList(const QString &url)
     if (!mTemporaryFile->open()) {
         qCDebug(ADBLOCKINTERCEPTOR_LOG) << "can not open temporary file";
         delete mTemporaryFile;
-        mTemporaryFile = 0;
+        mTemporaryFile = nullptr;
         return;
     }
     QUrl subUrl(url);
@@ -147,7 +147,7 @@ void AdBlockShowListDialog::slotFinished(KJob *job)
     }
     mTemporaryFile->close();
     delete mTemporaryFile;
-    mTemporaryFile = 0;
+    mTemporaryFile = nullptr;
 }
 
 void AdBlockShowListDialog::slotDeleteBrokenList()
