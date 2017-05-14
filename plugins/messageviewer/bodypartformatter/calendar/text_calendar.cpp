@@ -1216,7 +1216,7 @@ public:
                 return true;
             }
 
-            if (comment.isEmpty()) {
+            if (comment.trimmed().isEmpty()) {
                 KMessageBox::error(
                     nullptr,
                     i18n("You forgot to add proposal. Please add it. Thanks"));
