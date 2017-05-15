@@ -72,5 +72,5 @@ Akonadi::CalendarBase::Ptr MemoryCalendarMemento::calendar() const
 
 void MemoryCalendarMemento::detach()
 {
-    disconnect(this, &MemoryCalendarMemento::update, 0, 0);
+    disconnect(this, &MemoryCalendarMemento::update, nullptr, nullptr);
 }

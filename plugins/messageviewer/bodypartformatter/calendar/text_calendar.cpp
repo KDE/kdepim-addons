@@ -296,7 +296,7 @@ public:
 
     Attendee::Ptr findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
     {
-        Attendee::List attendees = incidence->attendees();
+        const Attendee::List attendees = incidence->attendees();
         Attendee::List::ConstIterator it;
         Attendee::Ptr myself;
         // Find myself. There will always be all attendees listed, even if
@@ -317,7 +317,7 @@ public:
     static bool heuristicalRSVP(const Incidence::Ptr &incidence)
     {
         bool rsvp = true; // better send superfluously than not at all
-        Attendee::List attendees = incidence->attendees();
+        const Attendee::List attendees = incidence->attendees();
         Attendee::List::ConstIterator it;
         Attendee::List::ConstIterator end(attendees.constEnd());
         for (it = attendees.constBegin(); it != end; ++it) {
@@ -336,7 +336,7 @@ public:
     static Attendee::Role heuristicalRole(const Incidence::Ptr &incidence)
     {
         Attendee::Role role = Attendee::OptParticipant;
-        Attendee::List attendees = incidence->attendees();
+        const Attendee::List attendees = incidence->attendees();
         Attendee::List::ConstIterator it;
         Attendee::List::ConstIterator end = attendees.constEnd();
 
@@ -715,15 +715,17 @@ public:
         // If result is ResultCancelled, then we don't show the message box and return false so kmail
         // doesn't delete the e-mail.
         qCDebug(TEXT_CALENDAR_LOG) << "ITIPHandler result was " << itipHandler->result();
-        if (itipHandler->result() == Akonadi::ITIPHandler::ResultError) {
+        const Akonadi::ITIPHandler::Result res = itipHandler->result();
+        if (res == Akonadi::ITIPHandler::ResultError) {
             const QString errorMessage = itipHandler->errorMessage();
             if (!errorMessage.isEmpty()) {
                 qCCritical(TEXT_CALENDAR_LOG) << "Error while processing invitation: " << errorMessage;
                 KMessageBox::error(nullptr, errorMessage);
             }
+            return false;
         }
 
-        return itipHandler->result() == Akonadi::ITIPHandler::ResultSuccess;
+        return res;
     }
 
     bool cancelPastInvites(const Incidence::Ptr incidence, const QString &path) const
@@ -933,7 +935,7 @@ public:
         // find our delegator, we need to inform him as well
         QString delegator;
         if (status != Attendee::NeedsAction && myself && !myself->delegator().isEmpty()) {
-            Attendee::List attendees = incidence->attendees();
+            const Attendee::List attendees = incidence->attendees();
             Attendee::List::ConstIterator end = attendees.constEnd();
             for (Attendee::List::ConstIterator it = attendees.constBegin();
                  it != end; ++it) {
@@ -1022,7 +1024,7 @@ public:
             QDesktopServices::openUrl(QUrl(attachment->uri()));
         } else {
             // put the attachment in a temporary file and launch it
-            QTemporaryFile *file;
+            QTemporaryFile *file{nullptr};
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
             if (!patterns.empty()) {
@@ -1059,7 +1061,7 @@ public:
         if (saveAsFile.isEmpty()
             || (QFileInfo::exists(saveAsFile)
                 && (KMessageBox::warningContinueCancel(
-                        0,
+                        nullptr,
                         xi18nc("@info",
                                "File <filename>%1</filename> exists.<nl/> Do you want to replace it?",
                                saveAsFile)) != KMessageBox::Continue))) {
@@ -1073,7 +1075,7 @@ public:
             stat = job->exec();
         } else {
             // put the attachment in a temporary file and save it
-            QTemporaryFile *file;
+            QTemporaryFile *file{nullptr};
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(a->mimeType()).globPatterns();
             if (!patterns.empty()) {
@@ -1327,7 +1329,7 @@ public:
             QString summary;
             int response
                 = KMessageBox::questionYesNoCancel(
-                0,
+                nullptr,
                 i18nc("@info",
                       "The organizer is not expecting a reply to this invitation "
                       "but you can send them an email message if you desire.\n\n"
