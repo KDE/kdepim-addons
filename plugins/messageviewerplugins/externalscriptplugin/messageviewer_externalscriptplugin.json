@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to use an external script against the message viewer.",
         "Description[ca@valencia]": "Este connector permet usar un script extern contra el visor de missatges.",
         "Description[ca]": "Aquest connector permet usar un script extern contra el visor de missatges.",
+        "Description[de]": "Mit diesem Modul können Sie ein externes Skript für die Anzeige von E-Mails verwenden.",
         "Description[es]": "Este complemento le permite usar un guion externo contra el visor de mensajes.",
         "Description[et]": "See plugin võimaldab kasutada kirjanäitajas väliseid skripte.",
         "Description[it]": "Questa estensione permette di usare uno script esterno nel visualizzatore di messaggi.",
