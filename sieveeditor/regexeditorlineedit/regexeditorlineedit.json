@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "regexpeditorlineedit",
+        "Name": "RegexpEditorLineEdit",
+        "ServiceTypes": [
+            "LibKSieve/RegexpEditorLineEdit"
+        ],
+        "Version": "1.0"
+    }
+}
