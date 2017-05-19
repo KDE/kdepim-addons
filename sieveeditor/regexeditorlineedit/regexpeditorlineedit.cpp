@@ -17,23 +17,20 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "regexpeditorlineedit.h"
 
 #include <kpluginfactory.h>
-K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();)
-
+K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
+                           )
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
-    : KSieveUi::AbstractRegexpEditorLineEdit(parent),
-      mIsRegExpMode(false)
+    : KSieveUi::AbstractRegexpEditorLineEdit(parent)
+    , mIsRegExpMode(false)
 {
-
 }
 
 RegexpEditorLineEdit::~RegexpEditorLineEdit()
 {
-
 }
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit()
