@@ -170,7 +170,7 @@ public:
                 attFileName = att->name();
             }
             bodyPart->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
-            const QString href = QStringLiteral("file:") + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att->name()));
+            const QString href = QStringLiteral("file:") + dir + QDir::separator() + attFileName;
 
             const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
                                      KIconLoader::Desktop, attFileName)).url();
