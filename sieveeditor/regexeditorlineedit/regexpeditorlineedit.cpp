@@ -21,11 +21,11 @@
 #include "regexpeditorlineedit.h"
 
 #include <kpluginfactory.h>
-K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexpeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();)
+K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();)
 
 
-RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent)
-    : QWidget(parent)
+RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
+    : KSieveUi::AbstractRegexpEditorLineEdit(parent)
 {
 
 }
@@ -33,6 +33,21 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent)
 RegexpEditorLineEdit::~RegexpEditorLineEdit()
 {
 
+}
+
+void RegexpEditorLineEdit::switchToRegexpEditorLineEdit()
+{
+}
+
+void RegexpEditorLineEdit::setCode(const QString &str)
+{
+    //TODO
+}
+
+QString RegexpEditorLineEdit::code() const
+{
+    //TODO
+    return {};
 }
 
 #include "regexpeditorlineedit.moc"
