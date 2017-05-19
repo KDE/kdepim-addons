@@ -25,7 +25,8 @@ K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.j
 
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
-    : KSieveUi::AbstractRegexpEditorLineEdit(parent)
+    : KSieveUi::AbstractRegexpEditorLineEdit(parent),
+      mIsRegExpMode(false)
 {
 
 }
@@ -37,6 +38,8 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit()
 {
+    mIsRegExpMode = !mIsRegExpMode;
+    //TODO update
 }
 
 void RegexpEditorLineEdit::setCode(const QString &str)
