@@ -90,7 +90,7 @@ QString ApplicationPGPKeyFormatter::render(const PgpKeyMessagePart &mp) const
 
     block.setProperty("showKeyDetails", mp.source()->showSignatureDetails());
     block.setProperty("error", mp.error());
-    block.setProperty("importUrl", mp.part()->makeLink(QStringLiteral("pgpkey?action=import")));
+    block.setProperty("importUrl", mp.part()->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
     const auto key = mp.key();
     if (key.isNull()) {
         block.setProperty("uid", mp.userID());
