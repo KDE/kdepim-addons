@@ -181,19 +181,16 @@ private:
 class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
-    {
-        return format(part, writer, nullptr);
-    }
-
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
         if (!writer) {
             // Guard against crashes in createReply()
             return Ok;
         }
 
-        if (!asyncResultObserver) {
+        auto nodeHelper = bodyPart->nodeHelper();
+
+        if (!nodeHelper) {
             return Ok;
         }
 
@@ -239,8 +236,8 @@ public:
         } else {
             MemoryCalendarMemento *memento = new MemoryCalendarMemento();
             bodyPart->setBodyPartMemento(memento);
-            QObject::connect(memento, SIGNAL(update(MimeTreeParser::UpdateMode)),
-                             asyncResultObserver, SLOT(update(MimeTreeParser::UpdateMode)));
+            QObject::connect(memento, &MemoryCalendarMemento::update,
+                             nodeHelper, &MimeTreeParser::NodeHelper::update);
         }
 
         return Ok;

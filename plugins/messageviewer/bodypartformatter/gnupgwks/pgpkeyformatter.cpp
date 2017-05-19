@@ -38,11 +38,6 @@ using namespace MimeTreeParser::Interface;
 
 BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
-    return format(part, writer, nullptr);
-}
-
-BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const
-{
     if (!writer) {
         return Ok;
     }
@@ -52,9 +47,10 @@ BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, Mim
 
     if (!m) {
         auto memento = new PgpKeyMemento();
-        if (asyncResultObserver) {
-            QObject::connect(memento, SIGNAL(update(MimeTreeParser::UpdateMode)),
-                             asyncResultObserver, SLOT(update(MimeTreeParser::UpdateMode)));
+        auto nodeHelper = part->nodeHelper();
+        if (nodeHelper) {
+            QObject::connect(memento, &PgpKeyMemento::update,
+                             nodeHelper, &MimeTreeParser::NodeHelper::update);
             memento->start(mp.fingerprint());
         } else {
             memento->exec(mp.fingerprint());

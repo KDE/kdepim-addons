@@ -70,12 +70,7 @@ public:
     {
     }
 
-    Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
-    {
-        return format(part, writer, nullptr);
-    }
-
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer, QObject *asyncResultObserver) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
     {
         if (!writer) {
             return Ok;
@@ -121,8 +116,10 @@ public:
             MessageViewer::VcardMemento *memento = new MessageViewer::VcardMemento(lst);
             bodyPart->setBodyPartMemento(memento);
 
-            if (asyncResultObserver) {
-                QObject::connect(memento, SIGNAL(update(MimeTreeParser::UpdateMode)), asyncResultObserver, SLOT(update(MimeTreeParser::UpdateMode)));
+            auto nodeHelper = bodyPart->nodeHelper();
+            if (nodeHelper) {
+                QObject::connect(memento, &MessageViewer::VcardMemento::update,
+                                 nodeHelper, &MimeTreeParser::NodeHelper::update);
             }
         }
 

@@ -72,11 +72,6 @@ Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
 {
-    return format(part, writer, nullptr);
-}
-
-BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer, QObject *obj) const
-{
     if (!writer) {
         return Ok;
     }
@@ -86,7 +81,7 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
         const auto mixed = registry.find("mixed");
         Q_ASSERT(mixed != registry.end()); // there *must* be a multipart/mixed handler
 
-        return mixed->second->format(part, writer, obj);
+        return mixed->second->format(part, writer);
     }
 
     const auto content = part->content()->decodedContent();

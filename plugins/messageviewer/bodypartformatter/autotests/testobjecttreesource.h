@@ -92,11 +92,6 @@ public:
         return MimeTreeParser::AttachmentStrategy::smart();
     }
 
-    QObject *sourceObject() Q_DECL_OVERRIDE
-    {
-        return nullptr;
-    }
-
     bool autoImportKeys() const Q_DECL_OVERRIDE
     {
         return false;
