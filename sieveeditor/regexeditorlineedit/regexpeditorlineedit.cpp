@@ -24,6 +24,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
+#include <KLocalizedString>
 
 
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
@@ -42,6 +43,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
 
     mRegExpEditorButton = new QPushButton(i18n("..."), this);
     mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
+    mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
 
     //hide button ?
@@ -59,13 +61,12 @@ void RegexpEditorLineEdit::switchToRegexpEditorLineEdit()
 
 void RegexpEditorLineEdit::setCode(const QString &str)
 {
-    //TODO
+    mLineEdit->setText(str);
 }
 
 QString RegexpEditorLineEdit::code() const
 {
-    //TODO
-    return {};
+    return mLineEdit->text();
 }
 
 #include "regexpeditorlineedit.moc"
