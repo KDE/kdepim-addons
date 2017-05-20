@@ -2,6 +2,11 @@
     "KPlugin": {
         "Id": "regexpeditorlineedit",
         "Name": "RegexpEditorLineEdit",
+        "Name[ca@valencia]": "EditaLíniaEditorExpReg",
+        "Name[ca]": "EditaLíniaEditorExpReg",
+        "Name[sv]": "Radeditor för reguljära uttryck",
+        "Name[uk]": "Редактор формальних виразів",
+        "Name[x-test]": "xxRegexpEditorLineEditxx",
         "ServiceTypes": [
             "LibKSieve/RegexpEditorLineEdit"
         ],
