@@ -17,25 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef REGEXPEDITORLINEEDIT_H
-#define REGEXPEDITORLINEEDIT_H
+#include "regexpeditorlineedittest.h"
+#include <QTest>
 
-#include <QWidget>
-#include <KSieveUi/AbstractRegexpEditorLineEdit>
-class QStackedWidget;
-class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
+RegexpEditorLineEditTest::RegexpEditorLineEditTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {});
-    ~RegexpEditorLineEdit();
 
-    void switchToRegexpEditorLineEdit() Q_DECL_OVERRIDE;
-    void setCode(const QString &str) Q_DECL_OVERRIDE;
-    QString code() const Q_DECL_OVERRIDE;
-private:
-    QStackedWidget *mStackedWidget;
-    bool mIsRegExpMode;
-};
+}
 
-#endif // REGEXPEDITORLINEEDIT_H
+QTEST_MAIN(RegexpEditorLineEditTest)

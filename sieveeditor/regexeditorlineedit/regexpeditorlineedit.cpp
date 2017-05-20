@@ -18,8 +18,12 @@
 */
 
 #include "regexpeditorlineedit.h"
-
 #include <kpluginfactory.h>
+
+#include <QStackedWidget>
+#include <QHBoxLayout>
+
+
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
                            )
 
@@ -27,6 +31,13 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     : KSieveUi::AbstractRegexpEditorLineEdit(parent)
     , mIsRegExpMode(false)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
+
+    mStackedWidget = new QStackedWidget(this);
+    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mainLayout->addWidget(mStackedWidget);
 }
 
 RegexpEditorLineEdit::~RegexpEditorLineEdit()

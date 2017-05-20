@@ -1,9 +1,9 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
-#if(BUILD_TESTING)
-#    add_subdirectory(tests)
-#    add_subdirectory(autotests)
-#endif()
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+    add_subdirectory(autotests)
+endif()
 
 
 set(regexpeditorlineeditplugin_SRCS
