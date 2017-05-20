@@ -22,7 +22,8 @@
 
 #include <QWidget>
 #include <KSieveUi/AbstractRegexpEditorLineEdit>
-class QStackedWidget;
+class QLineEdit;
+class QPushButton;
 class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
 {
     Q_OBJECT
@@ -34,7 +35,8 @@ public:
     void setCode(const QString &str) Q_DECL_OVERRIDE;
     QString code() const Q_DECL_OVERRIDE;
 private:
-    QStackedWidget *mStackedWidget;
+    QLineEdit *mLineEdit;
+    QPushButton *mRegExpEditorButton;
     bool mIsRegExpMode;
 };
 

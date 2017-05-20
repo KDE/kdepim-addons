@@ -22,6 +22,8 @@
 
 #include <QStackedWidget>
 #include <QHBoxLayout>
+#include <QLineEdit>
+#include <QPushButton>
 
 
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
@@ -33,11 +35,16 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
 
-    mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
-    mainLayout->addWidget(mStackedWidget);
+    mLineEdit = new QLineEdit(this);
+    mLineEdit->setObjectName(QStringLiteral("lineedit"));
+    mainLayout->addWidget(mLineEdit);
+
+    mRegExpEditorButton = new QPushButton(i18n("..."), this);
+    mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
+    mainLayout->addWidget(mRegExpEditorButton);
+
+    //hide button ?
 }
 
 RegexpEditorLineEdit::~RegexpEditorLineEdit()
