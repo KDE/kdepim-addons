@@ -29,12 +29,19 @@
     your version.
 */
 
+#define USING_DIFF_HIGHLIGHTER 1
+
+#ifdef USING_DIFF_HIGHLIGHTER
+#include "diffhighlighter.h"
+#endif
+
 #include <MessageViewer/BodyPartURLHandler>
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/HtmlWriter>
 
 #include <kstringhandler.h>
+
 
 namespace {
 // TODO: Show filename header to make it possible to save the patch.
@@ -58,6 +65,20 @@ public:
             return AsIcon;
         }
 
+        static const QLatin1String tableStyle(
+            "style=\""
+            "text-align: left; "
+            "border: solid black 1px; "
+            "padding: 0.5em; "
+            "margin: 0em;\"");
+#ifdef USING_DIFF_HIGHLIGHTER
+        DiffHighlighter highLighter;
+        highLighter.highlightDiff(diff);
+        QString html = QStringLiteral("<br><div align=\"center\">");
+        html += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
+        html += highLighter.outputDiff();
+        html += QLatin1String("</pre></div>");
+#else
         static const QLatin1String addedLineStyle("style=\"" "color: green;\"");
         static const QLatin1String fileAddStyle("style=\"font-weight: bold; " "color: green; \"");
 
@@ -65,12 +86,6 @@ public:
         static const QLatin1String fileRemoveStyle("style=\"font-weight: bold; "
                                                    "color: red ;\"");
 
-        static const QLatin1String tableStyle(
-            "style=\""
-            "text-align: left; "
-            "border: solid black 1px; "
-            "padding: 0.5em; "
-            "margin: 0em;\"");
 
         static const QLatin1String sepStyle("style=\"color: black; font-weight: bold;\"");
         static const QLatin1String chunkStyle("style=\"color: blue;\"");
@@ -101,7 +116,8 @@ public:
             html += QLatin1String("<span ") + style + QLatin1Char('>') + line + QLatin1String("</span><br/>");
         }
 
-        html += QLatin1String("</pre></div>");
+        html += QLatin1String("</pre></div>");  
+#endif
         writer->queue(html);
 
         return Ok;

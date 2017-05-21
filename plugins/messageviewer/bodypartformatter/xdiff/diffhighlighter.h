@@ -32,6 +32,8 @@ public:
 
     void highlightDiff(const QString &str);
 
+    QString outputDiff() const;
+
 protected:
     void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) Q_DECL_OVERRIDE;
 private:

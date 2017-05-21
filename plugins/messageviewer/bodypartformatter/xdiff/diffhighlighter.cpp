@@ -76,3 +76,8 @@ void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlight
         mOutputDiff += QStringLiteral("</span>");
     }
 }
+
+QString DiffHighlighter::outputDiff() const
+{
+    return mOutputDiff;
+}
