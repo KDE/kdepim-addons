@@ -28,6 +28,9 @@ class DiffHighlighterTest : public QObject
 public:
     explicit DiffHighlighterTest(QObject *parent = nullptr);
     ~DiffHighlighterTest() = default;
+private Q_SLOTS:
+    void shouldGenerateDiff_data();
+    void shouldGenerateDiff();
 };
 
 #endif // DIFFHIGHLIGHTERTEST_H

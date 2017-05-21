@@ -18,7 +18,9 @@
 */
 
 #include "diffhighlightertest.h"
+#include "../xdiff/diffhighlighter.h"
 
+#include <QProcess>
 #include <QTest>
 
 DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
@@ -27,7 +29,6 @@ DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
 
 }
 
-
 QString readDiffFile(const QString &diffFile)
 {
     QFile file(diffFile);
@@ -35,6 +36,45 @@ QString readDiffFile(const QString &diffFile)
     Q_ASSERT(file.isOpen());
     const QString data = QString::fromUtf8(file.readAll());
     return data;
+}
+
+void DiffHighlighterTest::shouldGenerateDiff_data()
+{
+    QTest::addColumn<QString>("input");
+    QTest::newRow("test1") << QStringLiteral("test1");
+}
+
+void DiffHighlighterTest::shouldGenerateDiff()
+{
+    QFETCH(QString, input);
+
+    const QString originalFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral(".diff");
+    const QString refFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-ref.diff");
+    const QString generatedFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
+    QString diff = readDiffFile(originalFile);
+
+    DiffHighlighter highLighter;
+    highLighter.highlightDiff(diff);
+    const QString html = highLighter.outputDiff();
+
+    //Create generated file
+    QFile f(generatedFile);
+    QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
+    f.write(html.toUtf8());
+    f.close();
+
+    // compare to reference file
+    QStringList args = QStringList()
+            << QStringLiteral("-u")
+            << refFile
+            << generatedFile;
+    QProcess proc;
+    proc.setProcessChannelMode(QProcess::ForwardedChannels);
+    proc.start(QStringLiteral("diff"), args);
+    QVERIFY(proc.waitForFinished());
+
+
+    QCOMPARE(proc.exitCode(), 0);
 }
 
 

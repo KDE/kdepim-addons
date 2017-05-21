@@ -41,4 +41,4 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
                 )
 endmacro ()
 
-add_diff_bodyformatter_class_unittest(diffhighlightertest.cpp "")
+add_diff_bodyformatter_class_unittest(diffhighlightertest.cpp "../xdiff/diffhighlighter.cpp")
