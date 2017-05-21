@@ -53,14 +53,16 @@ void DiffHighlighter::highlightDiff(const QString &str)
     mOutputDiff += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
 
     KSyntaxHighlighting::State state;
-    const QStringList lines = str.split(QLatin1Char('\n'));
-    QStringList::ConstIterator end(lines.end());
-    for (QStringList::ConstIterator it = lines.begin(); it != end; ++it) {
-        mCurrentLine = (*it);
-        state = highlightLine((*it), state);
+
+    int lineStart = 0;
+    int lineEnd = str.indexOf(QLatin1Char('\n'));
+
+    for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(QLatin1Char('\n'), lineStart)) {
+        mCurrentLine = str.mid(lineStart, lineEnd - lineStart);
+        state = highlightLine(mCurrentLine, state);
         mOutputDiff += QLatin1Char('\n');
     }
-
+    mOutputDiff += QLatin1Char('\n');
     mOutputDiff += QLatin1String("</pre></div>");
 }
 
