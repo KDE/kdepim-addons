@@ -38,6 +38,7 @@ private:
     QLineEdit *mLineEdit;
     QPushButton *mRegExpEditorButton;
     bool mIsRegExpMode;
+    bool mRegexEditorInstalled;
 };
 
 #endif // REGEXPEDITORLINEEDIT_H

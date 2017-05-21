@@ -25,6 +25,7 @@
 #include <QLineEdit>
 #include <QPushButton>
 #include <KLocalizedString>
+#include <KServiceTypeTrader>
 
 
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
@@ -33,6 +34,7 @@ K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.j
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractRegexpEditorLineEdit(parent)
     , mIsRegExpMode(false)
+    , mRegexEditorInstalled(false)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -45,8 +47,9 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
     mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
-
-    //hide button ?
+    mRegexEditorInstalled = !KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty();
+    //Hidden by default
+    mRegExpEditorButton->setVisible(false);
 }
 
 RegexpEditorLineEdit::~RegexpEditorLineEdit()
@@ -56,7 +59,9 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
 {
     mIsRegExpMode = regexpEditor;
-    //TODO update
+    if (mRegexEditorInstalled) {
+        mRegExpEditorButton->setVisible(mIsRegExpMode);
+    }
 }
 
 void RegexpEditorLineEdit::setCode(const QString &str)
