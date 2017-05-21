@@ -43,6 +43,7 @@ void DiffHighlighterTest::shouldGenerateDiff_data()
     QTest::addColumn<QString>("input");
     QTest::newRow("test1") << QStringLiteral("test1");
     QTest::newRow("kcontact1") << QStringLiteral("kcontact1");
+    QTest::newRow("diff-akonadiconsole-16.12-master") << QStringLiteral("diff-akonadiconsole-16.12-master");
 }
 
 void DiffHighlighterTest::shouldGenerateDiff()

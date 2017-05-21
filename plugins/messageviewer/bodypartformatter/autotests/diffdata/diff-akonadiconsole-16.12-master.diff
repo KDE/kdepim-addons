@@ -1,0 +1,1098 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index b4ef75c..258dcc1 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -22,10 +22,10 @@ include(KDECMakeSettings)
+ include(KDECompilerSettings NO_POLICY_SCOPE)
+ include(ECMAddAppIcon)
+ include(ECMQtDeclareLoggingCategory)
+-
++include(ECMCoverageOption)
+ 
+ # Do NOT add quote
+-set(KDEPIM_DEV_VERSION )
++set(KDEPIM_DEV_VERSION alpha1)
+ 
+ # add an extra space
+ if(DEFINED KDEPIM_DEV_VERSION)
+@@ -33,15 +33,15 @@ if(DEFINED KDEPIM_DEV_VERSION)
+ endif()
+ 
+ 
+-set(KDEPIM_VERSION_NUMBER "5.4.2")
++set(KDEPIM_VERSION_NUMBER "5.4.40")
+ set(KDEPIM_VERSION "${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}")
+ 
+ 
+-set(AKONADI_MIMELIB_VERSION "5.4.2")
+-set(AKONADI_CONTACT_VERSION "5.4.2")
+-set(CALENDARSUPPORT_LIB_VERSION_LIB "5.4.2")
+-set(KPIMTEXTEDIT_LIB_VERSION "5.4.2")
+-set(AKONADI_VERSION "5.4.2")
++set(AKONADI_MIMELIB_VERSION "5.4.40")
++set(AKONADI_CONTACT_VERSION "5.4.40")
++set(CALENDARSUPPORT_LIB_VERSION_LIB "5.4.40")
++set(KPIMTEXTEDIT_LIB_VERSION "5.4.40")
++set(AKONADI_VERSION "5.4.40")
+ 
+ set(KDEPIM_LIB_VERSION "${KDEPIM_VERSION_NUMBER}")
+ set(KDEPIM_LIB_SOVERSION "5")
+@@ -49,12 +49,12 @@ set(KDEPIM_LIB_SOVERSION "5")
+ 
+ set(QT_REQUIRED_VERSION "5.6.0")
+ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql)
+-set(MESSAGELIB_LIB_VERSION_LIB "5.4.2")
+-set(LIBKLEO_LIB_VERSION_LIB "5.4.2")
+-set(LIBKDEPIM_LIB_VERSION_LIB "5.4.2")
+-set(KCALENDARCORE_LIB_VERSION "5.4.2")
+-set(KCONTACTS_LIB_VERSION "5.4.2")
+-set(KMIME_LIB_VERSION "5.4.2")
++set(MESSAGELIB_LIB_VERSION_LIB "5.4.40")
++set(LIBKLEO_LIB_VERSION_LIB "5.4.40")
++set(LIBKDEPIM_LIB_VERSION_LIB "5.4.40")
++set(KCALENDARCORE_LIB_VERSION "5.4.40")
++set(KCONTACTS_LIB_VERSION "5.4.40")
++set(KMIME_LIB_VERSION "5.4.40")
+ 
+ # Find KF5 package
+ find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt
+index 4986439..9f3e884 100644
+--- a/src/CMakeLists.txt
++++ b/src/CMakeLists.txt
+@@ -39,6 +39,7 @@ set(akonadiconsole_bin_SRCS
+     jobtracker.cpp
+     jobtrackerwidget.cpp
+     jobtrackermodel.cpp
++    jobtrackerfilterproxymodel.cpp
+     tagpropertiesdialog.cpp
+     )
+ 
+@@ -89,6 +90,7 @@ target_link_libraries(akonadiconsole_bin
+     KF5::AkonadiCore
+     KF5::AkonadiPrivate
+     KF5::AkonadiContact
++    KF5::AkonadiXml
+     KF5::CalendarSupport
+     KF5::CalendarCore
+     KF5::Libkdepim
+diff --git a/src/agentconfigdialog.h b/src/agentconfigdialog.h
+index ff27c29..2ff0c62 100644
+--- a/src/agentconfigdialog.h
++++ b/src/agentconfigdialog.h
+@@ -31,7 +31,7 @@ class AgentConfigDialog : public QDialog
+ {
+     Q_OBJECT
+ public:
+-    explicit AgentConfigDialog(QWidget *parent = Q_NULLPTR);
++    explicit AgentConfigDialog(QWidget *parent = nullptr);
+     void setAgentInstance(const Akonadi::AgentInstance &instance);
+ 
+ private Q_SLOTS:
+diff --git a/src/agentconfigmodel.cpp b/src/agentconfigmodel.cpp
+index e50da4a..f0b9f69 100644
+--- a/src/agentconfigmodel.cpp
++++ b/src/agentconfigmodel.cpp
+@@ -24,7 +24,7 @@
+ #include <KLocalizedString>
+ #include "akonadiconsole_debug.h"
+ 
+-AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(Q_NULLPTR)
++AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)
+ {
+ }
+ 
+diff --git a/src/agentconfigmodel.h b/src/agentconfigmodel.h
+index 9d4bbc1..2496bc1 100644
+--- a/src/agentconfigmodel.h
++++ b/src/agentconfigmodel.h
+@@ -31,7 +31,7 @@ class AgentConfigModel : public QAbstractTableModel
+ {
+     Q_OBJECT
+ public:
+-    explicit AgentConfigModel(QObject *parent = Q_NULLPTR);
++    explicit AgentConfigModel(QObject *parent = nullptr);
+     ~AgentConfigModel();
+     void setAgentInstance(const Akonadi::AgentInstance &instance);
+ 
+diff --git a/src/agentwidget.cpp b/src/agentwidget.cpp
+index 1c8d1fd..73f8a8a 100644
+--- a/src/agentwidget.cpp
++++ b/src/agentwidget.cpp
+@@ -54,7 +54,7 @@
+ class TextDialog : public QDialog
+ {
+ public:
+-    TextDialog(QWidget *parent = Q_NULLPTR)
++    TextDialog(QWidget *parent = nullptr)
+         : QDialog(parent)
+     {
+         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+diff --git a/src/agentwidget.h b/src/agentwidget.h
+index 3ab14ff..22d72d0 100644
+--- a/src/agentwidget.h
++++ b/src/agentwidget.h
+@@ -37,7 +37,7 @@ class AgentWidget : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit AgentWidget(QWidget *parent = Q_NULLPTR);
++    explicit AgentWidget(QWidget *parent = nullptr);
+     Akonadi::AgentInstanceWidget *widget() const
+     {
+         return ui.instanceWidget;
+diff --git a/src/akonadibrowsermodel.cpp b/src/akonadibrowsermodel.cpp
+index c5c6545..97eaec6 100644
+--- a/src/akonadibrowsermodel.cpp
++++ b/src/akonadibrowsermodel.cpp
+@@ -293,7 +293,7 @@ void AkonadiBrowserModel::setItemDisplayMode(AkonadiBrowserModel::ItemDisplayMod
+ {
+     const int oldColumnCount = columnCount();
+     m_itemDisplayMode = itemDisplayMode;
+-    AkonadiBrowserModel::State *newState = Q_NULLPTR;
++    AkonadiBrowserModel::State *newState = nullptr;
+     switch (itemDisplayMode) {
+     case MailMode:
+         newState = m_mailState;
+diff --git a/src/akonadibrowsermodel.h b/src/akonadibrowsermodel.h
+index 30b44a1..4205346 100644
+--- a/src/akonadibrowsermodel.h
++++ b/src/akonadibrowsermodel.h
+@@ -31,7 +31,7 @@ class AkonadiBrowserModel : public EntityTreeModel
+ {
+     Q_OBJECT
+ public:
+-    explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);
++    explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = nullptr);
+     ~AkonadiBrowserModel();
+ 
+     enum ItemDisplayMode {
+@@ -70,7 +70,7 @@ class AkonadiBrowserSortModel : public QSortFilterProxyModel
+ {
+     Q_OBJECT
+ public:
+-    explicit AkonadiBrowserSortModel(AkonadiBrowserModel *browserModel, QObject *parent = Q_NULLPTR);
++    explicit AkonadiBrowserSortModel(AkonadiBrowserModel *browserModel, QObject *parent = nullptr);
+     ~AkonadiBrowserSortModel();
+ 
+ protected:
+diff --git a/src/browserwidget.cpp b/src/browserwidget.cpp
+index c12a9b3..1180c3e 100644
+--- a/src/browserwidget.cpp
++++ b/src/browserwidget.cpp
+@@ -48,6 +48,7 @@
+ #include <AkonadiCore/tagmodel.h>
+ #include <AkonadiCore/statisticsproxymodel.h>
+ #include <AkonadiCore/tagdeletejob.h>
++#include <AkonadiXml/XmlWriteJob>
+ #include <kviewstatemaintainer.h>
+ 
+ #include <kcontacts/addressee.h>
+@@ -86,10 +87,10 @@ Q_DECLARE_METATYPE(QSet<QByteArray>)
+ 
+ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
+     QWidget(parent),
+-    mAttrModel(Q_NULLPTR),
+-    mStdActionManager(Q_NULLPTR),
+-    mMonitor(Q_NULLPTR),
+-    mCacheOnlyAction(Q_NULLPTR)
++    mAttrModel(nullptr),
++    mStdActionManager(nullptr),
++    mMonitor(nullptr),
++    mCacheOnlyAction(nullptr)
+ {
+     Q_ASSERT(xmlGuiWindow);
+     QVBoxLayout *layout = new QVBoxLayout(this);
+@@ -256,7 +257,7 @@ void BrowserWidget::clear()
+     contentUi.modificationtime->clear();
+     contentUi.flags->clear();
+     contentUi.tags->clear();
+-    contentUi.attrView->setModel(Q_NULLPTR);
++    contentUi.attrView->setModel(nullptr);
+ }
+ 
+ void BrowserWidget::itemActivated(const QModelIndex &index)
+@@ -472,10 +473,9 @@ void BrowserWidget::dumpToXml()
+     if (fileName.isEmpty()) {
+         return;
+     }
+-#if 0 // TODO: port me, can't use XmlWriteJob here, it's in runtime, call the akonadi2xml cli tool instead
++
+     XmlWriteJob *job = new XmlWriteJob(root, fileName, this);
+     connect(job, &XmlWriteJob::result, this, &BrowserWidget::dumpToXmlResult);
+-#endif
+ }
+ 
+ void BrowserWidget::dumpToXmlResult(KJob *job)
+diff --git a/src/browserwidget.h b/src/browserwidget.h
+index b78038f..e161533 100644
+--- a/src/browserwidget.h
++++ b/src/browserwidget.h
+@@ -56,7 +56,7 @@ class BrowserWidget: public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = Q_NULLPTR);
++    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = nullptr);
+     ~BrowserWidget();
+ 
+ public Q_SLOTS:
+diff --git a/src/browserwidget_contentview.ui b/src/browserwidget_contentview.ui
+index 27b4bbd..d5e679a 100644
+--- a/src/browserwidget_contentview.ui
++++ b/src/browserwidget_contentview.ui
+@@ -7,7 +7,7 @@
+     <x>0</x>
+     <y>0</y>
+     <width>622</width>
+-    <height>496</height>
++    <height>604</height>
+    </rect>
+   </property>
+   <layout class="QGridLayout">
+@@ -34,14 +34,23 @@
+    <item row="0" column="0" colspan="2">
+     <widget class="QTabWidget" name="mainTabWidget">
+      <property name="currentIndex">
+-      <number>3</number>
++      <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab">
+       <attribute name="title">
+        <string>Payload</string>
+       </attribute>
+       <layout class="QVBoxLayout">
+-       <property name="margin">
++       <property name="leftMargin">
++        <number>0</number>
++       </property>
++       <property name="topMargin">
++        <number>0</number>
++       </property>
++       <property name="rightMargin">
++        <number>0</number>
++       </property>
++       <property name="bottomMargin">
+         <number>0</number>
+        </property>
+        <item>
+@@ -54,7 +63,16 @@
+          </property>
+          <widget class="QWidget" name="unsupportedTypePage">
+           <layout class="QVBoxLayout">
+-           <property name="margin">
++           <property name="leftMargin">
++            <number>0</number>
++           </property>
++           <property name="topMargin">
++            <number>0</number>
++           </property>
++           <property name="rightMargin">
++            <number>0</number>
++           </property>
++           <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+@@ -92,7 +110,16 @@
+          </widget>
+          <widget class="QWidget" name="incidenceViewPage">
+           <layout class="QVBoxLayout">
+-           <property name="margin">
++           <property name="leftMargin">
++            <number>0</number>
++           </property>
++           <property name="topMargin">
++            <number>0</number>
++           </property>
++           <property name="rightMargin">
++            <number>0</number>
++           </property>
++           <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item>
+@@ -102,7 +129,16 @@
+          </widget>
+          <widget class="QWidget" name="mailViewPage">
+           <layout class="QGridLayout" name="gridLayout1">
+-           <property name="margin">
++           <property name="leftMargin">
++            <number>0</number>
++           </property>
++           <property name="topMargin">
++            <number>0</number>
++           </property>
++           <property name="rightMargin">
++            <number>0</number>
++           </property>
++           <property name="bottomMargin">
+             <number>0</number>
+            </property>
+            <item row="0" column="0">
+@@ -154,9 +190,6 @@
+        <string>Raw Payload</string>
+       </attribute>
+       <layout class="QGridLayout">
+-       <property name="margin">
+-        <number>0</number>
+-       </property>
+        <item row="0" column="0" colspan="2">
+         <widget class="KTextEdit" name="dataView">
+          <property name="lineWrapMode">
+@@ -369,17 +402,17 @@
+  </widget>
+  <customwidgets>
+   <customwidget>
++   <class>KTextEdit</class>
++   <extends>QTextEdit</extends>
++   <header>ktextedit.h</header>
++  </customwidget>
++  <customwidget>
+    <class>KEditListWidget</class>
+    <extends>QWidget</extends>
+    <header>keditlistwidget.h</header>
+    <container>1</container>
+   </customwidget>
+   <customwidget>
+-   <class>KTextEdit</class>
+-   <extends>QTextEdit</extends>
+-   <header>ktextedit.h</header>
+-  </customwidget>
+-  <customwidget>
+    <class>CalendarSupport::IncidenceViewer</class>
+    <extends>QWidget</extends>
+    <header location="global">CalendarSupport/IncidenceViewer</header>
+diff --git a/src/collectionaclpage.h b/src/collectionaclpage.h
+index a29e324..fc9e6a9 100644
+--- a/src/collectionaclpage.h
++++ b/src/collectionaclpage.h
+@@ -28,7 +28,7 @@ class CollectionAclPage : public Akonadi::CollectionPropertiesPage
+ {
+     Q_OBJECT
+ public:
+-    explicit CollectionAclPage(QWidget *parent = Q_NULLPTR);
++    explicit CollectionAclPage(QWidget *parent = nullptr);
+ 
+     void load(const Akonadi::Collection &col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &col) Q_DECL_OVERRIDE;
+diff --git a/src/collectionattributespage.cpp b/src/collectionattributespage.cpp
+index 2bc9fa2..5d6291e 100644
+--- a/src/collectionattributespage.cpp
++++ b/src/collectionattributespage.cpp
+@@ -30,7 +30,7 @@ using namespace Akonadi;
+ 
+ CollectionAttributePage::CollectionAttributePage(QWidget *parent) :
+     CollectionPropertiesPage(parent),
+-    mModel(Q_NULLPTR)
++    mModel(nullptr)
+ {
+     setPageTitle(QStringLiteral("Attributes"));
+     ui.setupUi(this);
+diff --git a/src/collectionattributespage.h b/src/collectionattributespage.h
+index 7f4876c..d20d970 100644
+--- a/src/collectionattributespage.h
++++ b/src/collectionattributespage.h
+@@ -31,7 +31,7 @@ class CollectionAttributePage : public Akonadi::CollectionPropertiesPage
+ {
+     Q_OBJECT
+ public:
+-    explicit CollectionAttributePage(QWidget *parent = Q_NULLPTR);
++    explicit CollectionAttributePage(QWidget *parent = nullptr);
+ 
+     void load(const Akonadi::Collection &col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &col) Q_DECL_OVERRIDE;
+diff --git a/src/collectioninternalspage.h b/src/collectioninternalspage.h
+index e2fb5b7..c56b755 100644
+--- a/src/collectioninternalspage.h
++++ b/src/collectioninternalspage.h
+@@ -28,7 +28,7 @@ class CollectionInternalsPage : public Akonadi::CollectionPropertiesPage
+ {
+     Q_OBJECT
+ public:
+-    explicit CollectionInternalsPage(QWidget *parent = Q_NULLPTR);
++    explicit CollectionInternalsPage(QWidget *parent = nullptr);
+ 
+     void load(const Akonadi::Collection &col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &col) Q_DECL_OVERRIDE;
+diff --git a/src/connectionpage.h b/src/connectionpage.h
+index bcf4501..dc4d242 100644
+--- a/src/connectionpage.h
++++ b/src/connectionpage.h
+@@ -31,7 +31,7 @@ class ConnectionPage : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit ConnectionPage(const QString &identifier, QWidget *parent = Q_NULLPTR);
++    explicit ConnectionPage(const QString &identifier, QWidget *parent = nullptr);
+ 
+     void showAllConnections(bool);
+ 
+diff --git a/src/dbaccess.cpp b/src/dbaccess.cpp
+index c4b11be..b20ab8e 100644
+--- a/src/dbaccess.cpp
++++ b/src/dbaccess.cpp
+@@ -55,7 +55,7 @@ public:
+         database.setPassword(settings.value(QStringLiteral("Password"), QString()).toString());
+         database.setConnectOptions(settings.value(QStringLiteral("Options"), QString()).toString());
+         if (!database.open()) {
+-            KMessageBox::error(Q_NULLPTR, QStringLiteral("Failed to connect to database: %1").arg(database.lastError().text()));
++            KMessageBox::error(nullptr, QStringLiteral("Failed to connect to database: %1").arg(database.lastError().text()));
+         }
+     }
+ 
+diff --git a/src/dbbrowser.cpp b/src/dbbrowser.cpp
+index a734663..b264d9f 100644
+--- a/src/dbbrowser.cpp
++++ b/src/dbbrowser.cpp
+@@ -26,7 +26,7 @@
+ 
+ DbBrowser::DbBrowser(QWidget *parent) :
+     QWidget(parent),
+-    mTableModel(Q_NULLPTR)
++    mTableModel(nullptr)
+ {
+     ui.setupUi(this);
+ 
+diff --git a/src/dbbrowser.h b/src/dbbrowser.h
+index 5fce3f0..c4ac80d 100644
+--- a/src/dbbrowser.h
++++ b/src/dbbrowser.h
+@@ -28,7 +28,7 @@ class DbBrowser : public QWidget
+ {
+     Q_OBJECT
+ public:
+-    explicit DbBrowser(QWidget *parent = Q_NULLPTR);
++    explicit DbBrowser(QWidget *parent = nullptr);
+ 
+ private Q_SLOTS:
+     void refreshClicked();
+diff --git a/src/dbconsole.cpp b/src/dbconsole.cpp
+index 1a4dd6d..c88743e 100644
+--- a/src/dbconsole.cpp
++++ b/src/dbconsole.cpp
+@@ -35,7 +35,7 @@
+ 
+ DbConsole::DbConsole(QWidget *parent) :
+     QWidget(parent),
+-    mQueryModel(Q_NULLPTR)
++    mQueryModel(nullptr)
+ {
+     ui.setupUi(this);
+ 
+diff --git a/src/dbconsole.h b/src/dbconsole.h
+index 9bd485a..399fde1 100644
+--- a/src/dbconsole.h
++++ b/src/dbconsole.h
+@@ -28,7 +28,7 @@ class DbConsole : public QWidget
+ {
+     Q_OBJECT
+ public:
+-    explicit DbConsole(QWidget *parent = Q_NULLPTR);
++    explicit DbConsole(QWidget *parent = nullptr);
+ 
+ private Q_SLOTS:
+     void execClicked();
+diff --git a/src/debugwidget.h b/src/debugwidget.h
+index bedf5a5..0e38af3 100644
+--- a/src/debugwidget.h
++++ b/src/debugwidget.h
+@@ -37,7 +37,7 @@ class DebugWidget : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit DebugWidget(QWidget *parent = Q_NULLPTR);
++    explicit DebugWidget(QWidget *parent = nullptr);
+ 
+ private Q_SLOTS:
+     void connectionStarted(const QString &, const QString &);
+diff --git a/src/instanceselector.cpp b/src/instanceselector.cpp
+index d10b601..a902bf7 100644
+--- a/src/instanceselector.cpp
++++ b/src/instanceselector.cpp
+@@ -43,7 +43,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
+     : QDialog(parent, flags),
+       ui(new Ui::InstanceSelector),
+       m_remoteHost(remoteHost),
+-      mWindow(Q_NULLPTR)
++      mWindow(nullptr)
+ {
+     QWidget *mainWidget = new QWidget(this);
+     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+@@ -76,7 +76,7 @@ InstanceSelector::InstanceSelector(const QString &remoteHost, QWidget *parent, Q
+             item->setData(inst, Qt::UserRole);
+             model->appendRow(item);
+         }
+-        connect(ui->listView, &QAbstractItemView::doubleClicked, this, &QDialog::accept);
++        connect(ui->listView, &QAbstractItemView::doubleClicked, this, &InstanceSelector::slotAccept);
+         ui->listView->setModel(model);
+         show();
+     }
+diff --git a/src/instanceselector.h b/src/instanceselector.h
+index 99fdd4d..565dc74 100644
+--- a/src/instanceselector.h
++++ b/src/instanceselector.h
+@@ -39,7 +39,7 @@ class InstanceSelector : public QDialog
+ {
+     Q_OBJECT
+ public:
+-    explicit InstanceSelector(const QString &remoteHost, QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = Q_NULLPTR);
++    explicit InstanceSelector(const QString &remoteHost, QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);
+     virtual ~InstanceSelector();
+ 
+ private Q_SLOTS:
+diff --git a/src/jobtracker.cpp b/src/jobtracker.cpp
+index 5a6280f..ede37c9 100644
+--- a/src/jobtracker.cpp
++++ b/src/jobtracker.cpp
+@@ -22,6 +22,7 @@
+ 
+ #include "jobtracker.h"
+ #include "jobtrackeradaptor.h"
++#include <akonadi/private/instance_p.h>
+ #include "akonadiconsole_debug.h"
+ #include <QString>
+ #include <QStringList>
+@@ -87,7 +88,8 @@ JobTracker::JobTracker(const char *name, QObject *parent)
+     : QObject(parent), d(new Private(this))
+ {
+     new JobTrackerAdaptor(this);
+-    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole"));
++    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();
++    QDBusConnection::sessionBus().registerService(QStringLiteral("org.kde.akonadiconsole") + suffix);
+     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
+             this, QDBusConnection::ExportAdaptors);
+ 
+@@ -243,7 +245,8 @@ QList<JobInfo> JobTracker::jobs(const QString &parent) const
+     assert(d->jobs.contains(parent));
+     const QStringList jobs = d->jobs.value(parent);
+     QList<JobInfo> infoList;
+-    Q_FOREACH (const QString &job, jobs) {
++    infoList.reserve(jobs.count());
++    for (const QString &job : jobs) {
+         infoList << d->infoList.value(job);
+     }
+     return infoList;
+diff --git a/src/jobtracker.h b/src/jobtracker.h
+index 25e36b2..028c404 100644
+--- a/src/jobtracker.h
++++ b/src/jobtracker.h
+@@ -66,7 +66,7 @@ class JobTracker : public QObject
+     Q_CLASSINFO("D-Bus Interface", "org.freedesktop.Akonadi.JobTracker")
+ 
+ public:
+-    explicit JobTracker(const char *name, QObject *parent = Q_NULLPTR);
++    explicit JobTracker(const char *name, QObject *parent = nullptr);
+     ~JobTracker();
+     QStringList sessions() const;
+ 
+diff --git a/src/jobtrackerfilterproxymodel.cpp b/src/jobtrackerfilterproxymodel.cpp
+new file mode 100644
+index 0000000..3841e3c
+--- /dev/null
++++ b/src/jobtrackerfilterproxymodel.cpp
+@@ -0,0 +1,63 @@
++/*
++  Copyright (c) 2017 Montel Laurent <montel@kde.org>
++
++  This program is free software; you can redistribute it and/or modify it
++  under the terms of the GNU General Public License, version 2, as
++  published by the Free Software Foundation.
++
++  This program is distributed in the hope that it will be useful, but
++  WITHOUT ANY WARRANTY; without even the implied warranty of
++  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++  General Public License for more details.
++
++  You should have received a copy of the GNU General Public License along
++  with this program; if not, write to the Free Software Foundation, Inc.,
++  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++*/
++
++
++#include "jobtrackerfilterproxymodel.h"
++//#include <QDebug>
++
++JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)
++    : QSortFilterProxyModel(parent),
++      mSearchColumn(0)
++{
++
++}
++
++JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()
++{
++
++}
++
++bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &sourceParent) const
++{
++    if (filterRegExp().isEmpty()) {
++        return true;
++    }
++    QRegExp reg = filterRegExp();
++    reg.setCaseSensitivity(Qt::CaseInsensitive);
++    if (mSearchColumn == -1) {//Search on All Column
++        for (int i = 0; i < 7; i++) {
++            QModelIndex index = sourceModel()->index(sourceRow, i, sourceParent);
++            if (index.isValid()) {
++                //qDebug() << " sourceModel()->data(index).toString( "<<sourceModel()->data(index).toString() << " column " <<i << "reg" << reg
++                if (sourceModel()->data(index).toString().contains(reg)) {
++                    return true;
++                }
++            } else {
++                return true;
++            }
++        }
++        return false;
++    } else {
++        QModelIndex index = sourceModel()->index(sourceRow, mSearchColumn, sourceParent);
++        return sourceModel()->data(index).toString().contains(reg);
++    }
++}
++
++void JobTrackerFilterProxyModel::setSearchColumn(int column)
++{
++    mSearchColumn = column;
++}
+diff --git a/src/jobtrackerfilterproxymodel.h b/src/jobtrackerfilterproxymodel.h
+new file mode 100644
+index 0000000..b2f9326
+--- /dev/null
++++ b/src/jobtrackerfilterproxymodel.h
+@@ -0,0 +1,39 @@
++/*
++  Copyright (c) 2017 Montel Laurent <montel@kde.org>
++
++  This program is free software; you can redistribute it and/or modify it
++  under the terms of the GNU General Public License, version 2, as
++  published by the Free Software Foundation.
++
++  This program is distributed in the hope that it will be useful, but
++  WITHOUT ANY WARRANTY; without even the implied warranty of
++  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU
++  General Public License for more details.
++
++  You should have received a copy of the GNU General Public License along
++  with this program; if not, write to the Free Software Foundation, Inc.,
++  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA
++*/
++
++#ifndef JOBTRACKERFILTERPROXYMODEL_H
++#define JOBTRACKERFILTERPROXYMODEL_H
++
++#include <QSortFilterProxyModel>
++
++class JobTrackerFilterProxyModel : public QSortFilterProxyModel
++{
++    Q_OBJECT
++public:
++    explicit JobTrackerFilterProxyModel(QObject *parent = nullptr);
++    ~JobTrackerFilterProxyModel();
++
++    void setSearchColumn(int column);
++
++protected:
++    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
++
++private:
++    int mSearchColumn;
++};
++
++#endif // JOBTRACKERFILTERPROXYMODEL_H
+diff --git a/src/jobtrackermodel.cpp b/src/jobtrackermodel.cpp
+index 2264d3b..31017f7 100644
+--- a/src/jobtrackermodel.cpp
++++ b/src/jobtrackermodel.cpp
+@@ -89,7 +89,7 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &paren
+     }
+     // non-toplevel job
+     const QStringList jobs = d->tracker.jobNames(parent.internalId());
+-    if (row >= jobs.size()) {
++    if (row < 0 || row >= jobs.size()) {
+         return QModelIndex();
+     }
+     return createIndex(row, column, d->tracker.idForJob(jobs.at(row)));
+diff --git a/src/jobtrackerwidget.cpp b/src/jobtrackerwidget.cpp
+index e344735..e08b630 100644
+--- a/src/jobtrackerwidget.cpp
++++ b/src/jobtrackerwidget.cpp
+@@ -23,6 +23,7 @@
+ #include <QCheckBox>
+ 
+ #include "jobtrackermodel.h"
++#include "jobtrackerfilterproxymodel.h"
+ 
+ #include <AkonadiWidgets/controlgui.h>
+ 
+@@ -36,11 +37,17 @@
+ #include <QPushButton>
+ #include <QFile>
+ #include <QFileDialog>
++#include <QApplication>
++#include <QClipboard>
++#include <QLineEdit>
+ 
+ class JobTrackerWidget::Private
+ {
+ public:
+     JobTrackerModel *model;
++    QTreeView *tv;
++    QLineEdit *searchLineEdit;
++    JobTrackerFilterProxyModel *filterProxyModel;
+ };
+ 
+ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &checkboxText)
+@@ -56,16 +63,25 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr
+     connect(enableCB, &QAbstractButton::toggled, d->model, &JobTrackerModel::setEnabled);
+     layout->addWidget(enableCB);
+ 
+-    QTreeView *tv = new QTreeView(this);
+-    tv->setModel(d->model);
+-    tv->expandAll();
+-    tv->setAlternatingRowColors(true);
+-    tv->setContextMenuPolicy(Qt::CustomContextMenu);
++    d->searchLineEdit = new QLineEdit(this);
++    d->searchLineEdit->setClearButtonEnabled(true);
++    d->searchLineEdit->setPlaceholderText(QStringLiteral("Search..."));
++    layout->addWidget(d->searchLineEdit);
++    connect(d->searchLineEdit, &QLineEdit::textChanged, this, &JobTrackerWidget::textFilterChanged);
++
++    d->filterProxyModel = new JobTrackerFilterProxyModel(this);
++    d->filterProxyModel->setSourceModel(d->model);
++
++    d->tv = new QTreeView(this);
++    d->tv->setModel(d->filterProxyModel);
++    d->tv->expandAll();
++    d->tv->setAlternatingRowColors(true);
++    d->tv->setContextMenuPolicy(Qt::CustomContextMenu);
+     // too slow with many jobs:
+     // tv->header()->setResizeMode( QHeaderView::ResizeToContents );
+-    connect(d->model, &JobTrackerModel::modelReset, tv, &QTreeView::expandAll);
+-    connect(tv, &QTreeView::customContextMenuRequested, this, &JobTrackerWidget::contextMenu);
+-    layout->addWidget(tv);
++    connect(d->model, &JobTrackerModel::modelReset, d->tv, &QTreeView::expandAll);
++    connect(d->tv, &QTreeView::customContextMenuRequested, this, &JobTrackerWidget::contextMenu);
++    layout->addWidget(d->tv);
+     d->model->setEnabled(false);   // since it can be slow, default to off
+ 
+     QHBoxLayout *layout2 = new QHBoxLayout;
+@@ -84,13 +100,45 @@ JobTrackerWidget::~JobTrackerWidget()
+     delete d;
+ }
+ 
++void JobTrackerWidget::textFilterChanged()
++{
++    d->filterProxyModel->setFilterFixedString(d->searchLineEdit->text());
++    d->tv->expandAll();
++}
++
+ void JobTrackerWidget::contextMenu(const QPoint &/*pos*/)
+ {
+     QMenu menu;
+     menu.addAction(QStringLiteral("Clear View"), d->model, &JobTrackerModel::resetTracker);
++    menu.addSeparator();
++    menu.addAction(QStringLiteral("Copy Info"), this, &JobTrackerWidget::copyJobInfo);
++    menu.addSeparator();
++    menu.addAction(QStringLiteral("Collapse All"), this, &JobTrackerWidget::collapseAll);
++    menu.addAction(QStringLiteral("Expand All"), this, &JobTrackerWidget::expandAll);
++
+     menu.exec(QCursor::pos());
+ }
+ 
++void JobTrackerWidget::expandAll()
++{
++    d->tv->expandAll();
++}
++
++void JobTrackerWidget::collapseAll()
++{
++    d->tv->collapseAll();
++}
++
++void JobTrackerWidget::copyJobInfo()
++{
++    QModelIndex index = d->tv->currentIndex();
++    if (index.isValid()) {
++        const QModelIndex newIndex = d->model->index(index.row(), 6, index.parent());
++        QClipboard *cb = QApplication::clipboard();
++        cb->setText(newIndex.data().toString(), QClipboard::Clipboard);
++    }
++}
++
+ void JobTrackerWidget::slotSaveToFile()
+ {
+     const QString fileName = QFileDialog::getSaveFileName(this, QString(), QString(), QString());
+diff --git a/src/jobtrackerwidget.h b/src/jobtrackerwidget.h
+index 94166bd..ca06215 100644
+--- a/src/jobtrackerwidget.h
++++ b/src/jobtrackerwidget.h
+@@ -38,6 +38,10 @@ private Q_SLOTS:
+     void slotSaveToFile();
+ 
+ private:
++    void expandAll();
++    void copyJobInfo();
++    void collapseAll();
++    void textFilterChanged();
+     void writeRows(const QModelIndex &parent, QFile &file, int indentLevel);
+ 
+     class Private;
+diff --git a/src/mainwidget.h b/src/mainwidget.h
+index 27d6f58..6870dea 100644
+--- a/src/mainwidget.h
++++ b/src/mainwidget.h
+@@ -33,7 +33,7 @@ class MainWidget : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit MainWidget(KXmlGuiWindow *parent = Q_NULLPTR);
++    explicit MainWidget(KXmlGuiWindow *parent = nullptr);
+     ~MainWidget();
+ 
+ private Q_SLOTS:
+diff --git a/src/mainwindow.h b/src/mainwindow.h
+index 8d993b4..6bc824d 100644
+--- a/src/mainwindow.h
++++ b/src/mainwindow.h
+@@ -31,7 +31,7 @@ class MainWindow : public KXmlGuiWindow
+     Q_OBJECT
+ 
+ public:
+-    explicit MainWindow(QWidget *parent = Q_NULLPTR);
++    explicit MainWindow(QWidget *parent = nullptr);
+     ~MainWindow();
+ 
+ protected:
+diff --git a/src/monitorsmodel.cpp b/src/monitorsmodel.cpp
+index ce4767d..138dfc6 100644
+--- a/src/monitorsmodel.cpp
++++ b/src/monitorsmodel.cpp
+@@ -27,7 +27,7 @@
+ 
+ MonitorsModel::MonitorsModel(QObject *parent):
+     QAbstractItemModel(parent),
+-    mMonitor(Q_NULLPTR)
++    mMonitor(nullptr)
+ {
+     QTimer::singleShot(0, this, &MonitorsModel::init);
+ }
+diff --git a/src/monitorsmodel.h b/src/monitorsmodel.h
+index c0b0ad1..0ed6bb3 100644
+--- a/src/monitorsmodel.h
++++ b/src/monitorsmodel.h
+@@ -51,7 +51,7 @@ public:
+         ColumnsCount
+     };
+ 
+-    explicit MonitorsModel(QObject *parent = Q_NULLPTR);
++    explicit MonitorsModel(QObject *parent = nullptr);
+     virtual ~MonitorsModel();
+ 
+     void setEnabled(bool enabled);
+diff --git a/src/monitorswidget.cpp b/src/monitorswidget.cpp
+index f5e5cb7..2db947a 100644
+--- a/src/monitorswidget.cpp
++++ b/src/monitorswidget.cpp
+@@ -38,6 +38,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent):
+     mTreeView = new QTreeView(this);
+     mTreeView->setModel(mModel);
+     mTreeView->setAlternatingRowColors(true);
++    mTreeView->setRootIsDecorated(false);
+     layout->addWidget(mTreeView);
+ 
+     Akonadi::ControlGui::widgetNeedsAkonadi(this);
+diff --git a/src/monitorswidget.h b/src/monitorswidget.h
+index 8289836..f59d0fe 100644
+--- a/src/monitorswidget.h
++++ b/src/monitorswidget.h
+@@ -30,7 +30,7 @@ class MonitorsWidget : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit MonitorsWidget(QWidget *parent = Q_NULLPTR);
++    explicit MonitorsWidget(QWidget *parent = nullptr);
+     virtual ~MonitorsWidget();
+ 
+ private:
+diff --git a/src/notificationmodel.cpp b/src/notificationmodel.cpp
+index c8b367e..0f8d8b2 100644
+--- a/src/notificationmodel.cpp
++++ b/src/notificationmodel.cpp
+@@ -305,24 +305,24 @@ public:
+     QVariant data(int column) const Q_DECL_OVERRIDE
+     {
+         switch (column) {
+-            case 0: {
+-                switch (msg.operation()) {
+-                case Protocol::SubscriptionChangeNotification::Add:
+-                    return QStringLiteral("Add");
+-                case Protocol::SubscriptionChangeNotification::Modify:
+-                    return QStringLiteral("Modify");
+-                case Protocol::SubscriptionChangeNotification::Remove:
+-                    return QStringLiteral("Remove");
+-                default:
+-                    return QStringLiteral("Invalid");
+-                }
+-            }
+-            case 1:
+-                return QStringLiteral("Subscription");
+-            case 2:
+-                return msg.subscriber();
++        case 0: {
++            switch (msg.operation()) {
++            case Protocol::SubscriptionChangeNotification::Add:
++                return QStringLiteral("Add");
++            case Protocol::SubscriptionChangeNotification::Modify:
++                return QStringLiteral("Modify");
++            case Protocol::SubscriptionChangeNotification::Remove:
++                return QStringLiteral("Remove");
+             default:
+-                return QString();
++                return QStringLiteral("Invalid");
++            }
++        }
++        case 1:
++            return QStringLiteral("Subscription");
++        case 2:
++            return msg.subscriber();
++        default:
++            return QString();
+         }
+     }
+ 
+@@ -333,7 +333,7 @@ class NotificationModel::NotificationBlock: public NotificationModel::Item
+ {
+ public:
+     NotificationBlock(const Akonadi::ChangeNotification &msg)
+-        : NotificationModel::Item(-2, Q_NULLPTR)
++        : NotificationModel::Item(-2, nullptr)
+     {
+         timestamp = msg.timestamp();
+         QStringList list;
+@@ -388,7 +388,7 @@ public:
+ 
+ NotificationModel::NotificationModel(QObject *parent) :
+     QAbstractItemModel(parent),
+-    m_monitor(Q_NULLPTR)
++    m_monitor(nullptr)
+ {
+ }
+ 
+@@ -513,19 +513,19 @@ void NotificationModel::clear()
+ 
+ Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &index) const
+ {
+-    Item *item = static_cast<Item*>(index.internalPointer());
++    Item *item = static_cast<Item *>(index.internalPointer());
+     Q_ASSERT(item);
+     switch (item->type) {
+     case Protocol::Command::ItemChangeNotification:
+-        return static_cast<ItemNotificationNode*>(item)->msg;
++        return static_cast<ItemNotificationNode *>(item)->msg;
+     case Protocol::Command::CollectionChangeNotification:
+-        return static_cast<CollectionNotificationNode*>(item)->msg;
++        return static_cast<CollectionNotificationNode *>(item)->msg;
+     case Protocol::Command::TagChangeNotification:
+-        return static_cast<TagNotificationNode*>(item)->msg;
++        return static_cast<TagNotificationNode *>(item)->msg;
+     case Protocol::Command::RelationChangeNotification:
+-        return static_cast<RelationNotificationNode*>(item)->msg;
++        return static_cast<RelationNotificationNode *>(item)->msg;
+     case Protocol::Command::SubscriptionChangeNotification:
+-        return static_cast<SubscriptionNotificationNode*>(item)->msg;
++        return static_cast<SubscriptionNotificationNode *>(item)->msg;
+     default:
+         return Protocol::ChangeNotification();
+     }
+@@ -541,7 +541,7 @@ void NotificationModel::setEnabled(bool enable)
+                 this, &NotificationModel::slotNotify);
+     } else if (m_monitor) {
+         m_monitor->deleteLater();
+-        m_monitor = Q_NULLPTR;
++        m_monitor = nullptr;
+     }
+ }
+ 
+diff --git a/src/notificationmodel.h b/src/notificationmodel.h
+index 9b6c8af..a45304b 100644
+--- a/src/notificationmodel.h
++++ b/src/notificationmodel.h
+@@ -27,8 +27,10 @@
+ #include <AkonadiCore/Monitor>
+ #include <AkonadiCore/ChangeNotification>
+ 
+-namespace Akonadi {
+-namespace Protocol {
++namespace Akonadi
++{
++namespace Protocol
++{
+ class ChangeNotification;
+ }
+ }
+diff --git a/src/org.kde.akonadiconsole.desktop b/src/org.kde.akonadiconsole.desktop
+index 9abdeee..716e0cd 100755
+--- a/src/org.kde.akonadiconsole.desktop
++++ b/src/org.kde.akonadiconsole.desktop
+@@ -1,5 +1,6 @@
+ [Desktop Entry]
+ Name=Akonadi Console
++Name[ast]=Consola d'Akonadi
+ Name[ca]=Consola de l'Akonadi
+ Name[ca@valencia]=Consola de l'Akonadi
+ Name[cs]=Konzole Akonadi
+diff --git a/src/querydebugger.h b/src/querydebugger.h
+index c1a43bf..1d7a60c 100644
+--- a/src/querydebugger.h
++++ b/src/querydebugger.h
+@@ -38,7 +38,7 @@ class QueryDebugger : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit QueryDebugger(QWidget *parent = Q_NULLPTR);
++    explicit QueryDebugger(QWidget *parent = nullptr);
+     virtual ~QueryDebugger();
+ 
+ private Q_SLOTS:
+diff --git a/src/searchdialog.h b/src/searchdialog.h
+index 8cb5357..64063ea 100644
+--- a/src/searchdialog.h
++++ b/src/searchdialog.h
+@@ -29,7 +29,7 @@ class KTextEdit;
+ class SearchDialog : public QDialog
+ {
+ public:
+-    explicit SearchDialog(QWidget *parent = Q_NULLPTR);
++    explicit SearchDialog(QWidget *parent = nullptr);
+     ~SearchDialog();
+ 
+     QString searchName() const;
+diff --git a/src/searchwidget.h b/src/searchwidget.h
+index 2589355..842c3cd 100644
+--- a/src/searchwidget.h
++++ b/src/searchwidget.h
+@@ -41,7 +41,7 @@ class SearchWidget : public QWidget
+     Q_OBJECT
+ 
+ public:
+-    explicit SearchWidget(QWidget *parent = Q_NULLPTR);
++    explicit SearchWidget(QWidget *parent = nullptr);
+     ~SearchWidget();
+ 
+ private Q_SLOTS:
+diff --git a/src/tagpropertiesdialog.h b/src/tagpropertiesdialog.h
+index 389683b..d17dffe 100644
+--- a/src/tagpropertiesdialog.h
++++ b/src/tagpropertiesdialog.h
+@@ -33,8 +33,8 @@ class TagPropertiesDialog : public QDialog
+     Q_OBJECT
+ 
+ public:
+-    explicit TagPropertiesDialog(QWidget *parent = Q_NULLPTR);
+-    explicit TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *parent = Q_NULLPTR);
++    explicit TagPropertiesDialog(QWidget *parent = nullptr);
++    explicit TagPropertiesDialog(const Akonadi::Tag &tag, QWidget *parent = nullptr);
+     virtual ~TagPropertiesDialog();
+ 
+     Akonadi::Tag tag() const;

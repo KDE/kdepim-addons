@@ -1,0 +1,1100 @@
+<br><div align="center"><pre style="text-align: left; border: solid black 1px; padding: 0.5em; margin: 0em;"><span style="font-weight:bold;">diff --git a/CMakeLists.txt b/CMakeLists.txt</span>
+index b4ef75c..258dcc1 100644
+<span style="color:#0057ae;">--- a/CMakeLists.txt</span>
+<span style="color:#0057ae;">+++ b/CMakeLists.txt</span>
+<span style="color:#0057ae;">@@ -22,10 +22,10 @@ include(KDECMakeSettings)</span>
+ include(KDECompilerSettings NO_POLICY_SCOPE)
+ include(ECMAddAppIcon)
+ include(ECMQtDeclareLoggingCategory)
+<span style="color:#bf0303;">-</span>
+<span style="color:#0057ae;">+include(ECMCoverageOption)</span>
+ 
+ # Do NOT add quote
+<span style="color:#bf0303;">-set(KDEPIM_DEV_VERSION )</span>
+<span style="color:#0057ae;">+set(KDEPIM_DEV_VERSION alpha1)</span>
+ 
+ # add an extra space
+ if(DEFINED KDEPIM_DEV_VERSION)
+<span style="color:#0057ae;">@@ -33,15 +33,15 @@ if(DEFINED KDEPIM_DEV_VERSION)</span>
+ endif()
+ 
+ 
+<span style="color:#bf0303;">-set(KDEPIM_VERSION_NUMBER &quot;5.4.2&quot;)</span>
+<span style="color:#0057ae;">+set(KDEPIM_VERSION_NUMBER &quot;5.4.40&quot;)</span>
+ set(KDEPIM_VERSION &quot;${KDEPIM_VERSION_NUMBER}${KDEPIM_DEV_VERSION}&quot;)
+ 
+ 
+<span style="color:#bf0303;">-set(AKONADI_MIMELIB_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(AKONADI_CONTACT_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(CALENDARSUPPORT_LIB_VERSION_LIB &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(KPIMTEXTEDIT_LIB_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(AKONADI_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#0057ae;">+set(AKONADI_MIMELIB_VERSION &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(AKONADI_CONTACT_VERSION &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(CALENDARSUPPORT_LIB_VERSION_LIB &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(KPIMTEXTEDIT_LIB_VERSION &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(AKONADI_VERSION &quot;5.4.40&quot;)</span>
+ 
+ set(KDEPIM_LIB_VERSION &quot;${KDEPIM_VERSION_NUMBER}&quot;)
+ set(KDEPIM_LIB_SOVERSION &quot;5&quot;)
+<span style="color:#0057ae;">@@ -49,12 +49,12 @@ set(KDEPIM_LIB_SOVERSION &quot;5&quot;)</span>
+ 
+ set(QT_REQUIRED_VERSION &quot;5.6.0&quot;)
+ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED Widgets DBus Sql)
+<span style="color:#bf0303;">-set(MESSAGELIB_LIB_VERSION_LIB &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(LIBKLEO_LIB_VERSION_LIB &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(LIBKDEPIM_LIB_VERSION_LIB &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(KCALENDARCORE_LIB_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(KCONTACTS_LIB_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#bf0303;">-set(KMIME_LIB_VERSION &quot;5.4.2&quot;)</span>
+<span style="color:#0057ae;">+set(MESSAGELIB_LIB_VERSION_LIB &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(LIBKLEO_LIB_VERSION_LIB &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(LIBKDEPIM_LIB_VERSION_LIB &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(KCALENDARCORE_LIB_VERSION &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(KCONTACTS_LIB_VERSION &quot;5.4.40&quot;)</span>
+<span style="color:#0057ae;">+set(KMIME_LIB_VERSION &quot;5.4.40&quot;)</span>
+ 
+ # Find KF5 package
+ find_package(KF5Completion ${KF5_VERSION} CONFIG REQUIRED)
+<span style="font-weight:bold;">diff --git a/src/CMakeLists.txt b/src/CMakeLists.txt</span>
+index 4986439..9f3e884 100644
+<span style="color:#0057ae;">--- a/src/CMakeLists.txt</span>
+<span style="color:#0057ae;">+++ b/src/CMakeLists.txt</span>
+<span style="color:#0057ae;">@@ -39,6 +39,7 @@ set(akonadiconsole_bin_SRCS</span>
+     jobtracker.cpp
+     jobtrackerwidget.cpp
+     jobtrackermodel.cpp
+<span style="color:#0057ae;">+    jobtrackerfilterproxymodel.cpp</span>
+     tagpropertiesdialog.cpp
+     )
+ 
+<span style="color:#0057ae;">@@ -89,6 +90,7 @@ target_link_libraries(akonadiconsole_bin</span>
+     KF5::AkonadiCore
+     KF5::AkonadiPrivate
+     KF5::AkonadiContact
+<span style="color:#0057ae;">+    KF5::AkonadiXml</span>
+     KF5::CalendarSupport
+     KF5::CalendarCore
+     KF5::Libkdepim
+<span style="font-weight:bold;">diff --git a/src/agentconfigdialog.h b/src/agentconfigdialog.h</span>
+index ff27c29..2ff0c62 100644
+<span style="color:#0057ae;">--- a/src/agentconfigdialog.h</span>
+<span style="color:#0057ae;">+++ b/src/agentconfigdialog.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class AgentConfigDialog : public QDialog</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit AgentConfigDialog(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit AgentConfigDialog(QWidget *parent = nullptr);</span>
+     void setAgentInstance(const Akonadi::AgentInstance &amp;instance);
+ 
+ private Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/agentconfigmodel.cpp b/src/agentconfigmodel.cpp</span>
+index e50da4a..f0b9f69 100644
+<span style="color:#0057ae;">--- a/src/agentconfigmodel.cpp</span>
+<span style="color:#0057ae;">+++ b/src/agentconfigmodel.cpp</span>
+<span style="color:#0057ae;">@@ -24,7 +24,7 @@</span>
+ #include &lt;KLocalizedString&gt;
+ #include &quot;akonadiconsole_debug.h&quot;
+ 
+<span style="color:#bf0303;">-AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)</span>
+ {
+ }
+ 
+<span style="font-weight:bold;">diff --git a/src/agentconfigmodel.h b/src/agentconfigmodel.h</span>
+index 9d4bbc1..2496bc1 100644
+<span style="color:#0057ae;">--- a/src/agentconfigmodel.h</span>
+<span style="color:#0057ae;">+++ b/src/agentconfigmodel.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class AgentConfigModel : public QAbstractTableModel</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit AgentConfigModel(QObject *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit AgentConfigModel(QObject *parent = nullptr);</span>
+     ~AgentConfigModel();
+     void setAgentInstance(const Akonadi::AgentInstance &amp;instance);
+ 
+<span style="font-weight:bold;">diff --git a/src/agentwidget.cpp b/src/agentwidget.cpp</span>
+index 1c8d1fd..73f8a8a 100644
+<span style="color:#0057ae;">--- a/src/agentwidget.cpp</span>
+<span style="color:#0057ae;">+++ b/src/agentwidget.cpp</span>
+<span style="color:#0057ae;">@@ -54,7 +54,7 @@</span>
+ class TextDialog : public QDialog
+ {
+ public:
+<span style="color:#bf0303;">-    TextDialog(QWidget *parent = Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    TextDialog(QWidget *parent = nullptr)</span>
+         : QDialog(parent)
+     {
+         QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok);
+<span style="font-weight:bold;">diff --git a/src/agentwidget.h b/src/agentwidget.h</span>
+index 3ab14ff..22d72d0 100644
+<span style="color:#0057ae;">--- a/src/agentwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/agentwidget.h</span>
+<span style="color:#0057ae;">@@ -37,7 +37,7 @@ class AgentWidget : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit AgentWidget(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit AgentWidget(QWidget *parent = nullptr);</span>
+     Akonadi::AgentInstanceWidget *widget() const
+     {
+         return ui.instanceWidget;
+<span style="font-weight:bold;">diff --git a/src/akonadibrowsermodel.cpp b/src/akonadibrowsermodel.cpp</span>
+index c5c6545..97eaec6 100644
+<span style="color:#0057ae;">--- a/src/akonadibrowsermodel.cpp</span>
+<span style="color:#0057ae;">+++ b/src/akonadibrowsermodel.cpp</span>
+<span style="color:#0057ae;">@@ -293,7 +293,7 @@ void AkonadiBrowserModel::setItemDisplayMode(AkonadiBrowserModel::ItemDisplayMod</span>
+ {
+     const int oldColumnCount = columnCount();
+     m_itemDisplayMode = itemDisplayMode;
+<span style="color:#bf0303;">-    AkonadiBrowserModel::State *newState = Q_NULLPTR;</span>
+<span style="color:#0057ae;">+    AkonadiBrowserModel::State *newState = nullptr;</span>
+     switch (itemDisplayMode) {
+     case MailMode:
+         newState = m_mailState;
+<span style="font-weight:bold;">diff --git a/src/akonadibrowsermodel.h b/src/akonadibrowsermodel.h</span>
+index 30b44a1..4205346 100644
+<span style="color:#0057ae;">--- a/src/akonadibrowsermodel.h</span>
+<span style="color:#0057ae;">+++ b/src/akonadibrowsermodel.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class AkonadiBrowserModel : public EntityTreeModel</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit AkonadiBrowserModel(ChangeRecorder *monitor, QObject *parent = nullptr);</span>
+     ~AkonadiBrowserModel();
+ 
+     enum ItemDisplayMode {
+<span style="color:#0057ae;">@@ -70,7 +70,7 @@ class AkonadiBrowserSortModel : public QSortFilterProxyModel</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit AkonadiBrowserSortModel(AkonadiBrowserModel *browserModel, QObject *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit AkonadiBrowserSortModel(AkonadiBrowserModel *browserModel, QObject *parent = nullptr);</span>
+     ~AkonadiBrowserSortModel();
+ 
+ protected:
+<span style="font-weight:bold;">diff --git a/src/browserwidget.cpp b/src/browserwidget.cpp</span>
+index c12a9b3..1180c3e 100644
+<span style="color:#0057ae;">--- a/src/browserwidget.cpp</span>
+<span style="color:#0057ae;">+++ b/src/browserwidget.cpp</span>
+<span style="color:#0057ae;">@@ -48,6 +48,7 @@</span>
+ #include &lt;AkonadiCore/tagmodel.h&gt;
+ #include &lt;AkonadiCore/statisticsproxymodel.h&gt;
+ #include &lt;AkonadiCore/tagdeletejob.h&gt;
+<span style="color:#0057ae;">+#include &lt;AkonadiXml/XmlWriteJob&gt;</span>
+ #include &lt;kviewstatemaintainer.h&gt;
+ 
+ #include &lt;kcontacts/addressee.h&gt;
+<span style="color:#0057ae;">@@ -86,10 +87,10 @@ Q_DECLARE_METATYPE(QSet&lt;QByteArray&gt;)</span>
+ 
+ BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
+     QWidget(parent),
+<span style="color:#bf0303;">-    mAttrModel(Q_NULLPTR),</span>
+<span style="color:#bf0303;">-    mStdActionManager(Q_NULLPTR),</span>
+<span style="color:#bf0303;">-    mMonitor(Q_NULLPTR),</span>
+<span style="color:#bf0303;">-    mCacheOnlyAction(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    mAttrModel(nullptr),</span>
+<span style="color:#0057ae;">+    mStdActionManager(nullptr),</span>
+<span style="color:#0057ae;">+    mMonitor(nullptr),</span>
+<span style="color:#0057ae;">+    mCacheOnlyAction(nullptr)</span>
+ {
+     Q_ASSERT(xmlGuiWindow);
+     QVBoxLayout *layout = new QVBoxLayout(this);
+<span style="color:#0057ae;">@@ -256,7 +257,7 @@ void BrowserWidget::clear()</span>
+     contentUi.modificationtime-&gt;clear();
+     contentUi.flags-&gt;clear();
+     contentUi.tags-&gt;clear();
+<span style="color:#bf0303;">-    contentUi.attrView-&gt;setModel(Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    contentUi.attrView-&gt;setModel(nullptr);</span>
+ }
+ 
+ void BrowserWidget::itemActivated(const QModelIndex &amp;index)
+<span style="color:#0057ae;">@@ -472,10 +473,9 @@ void BrowserWidget::dumpToXml()</span>
+     if (fileName.isEmpty()) {
+         return;
+     }
+<span style="color:#bf0303;">-#if 0 // TODO: port me, can't use XmlWriteJob here, it's in runtime, call the akonadi2xml cli tool instead</span>
+<span style="color:#0057ae;">+</span>
+     XmlWriteJob *job = new XmlWriteJob(root, fileName, this);
+     connect(job, &amp;XmlWriteJob::result, this, &amp;BrowserWidget::dumpToXmlResult);
+<span style="color:#bf0303;">-#endif</span>
+ }
+ 
+ void BrowserWidget::dumpToXmlResult(KJob *job)
+<span style="font-weight:bold;">diff --git a/src/browserwidget.h b/src/browserwidget.h</span>
+index b78038f..e161533 100644
+<span style="color:#0057ae;">--- a/src/browserwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/browserwidget.h</span>
+<span style="color:#0057ae;">@@ -56,7 +56,7 @@ class BrowserWidget: public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent = nullptr);</span>
+     ~BrowserWidget();
+ 
+ public Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/browserwidget_contentview.ui b/src/browserwidget_contentview.ui</span>
+index 27b4bbd..d5e679a 100644
+<span style="color:#0057ae;">--- a/src/browserwidget_contentview.ui</span>
+<span style="color:#0057ae;">+++ b/src/browserwidget_contentview.ui</span>
+<span style="color:#0057ae;">@@ -7,7 +7,7 @@</span>
+     &lt;x&gt;0&lt;/x&gt;
+     &lt;y&gt;0&lt;/y&gt;
+     &lt;width&gt;622&lt;/width&gt;
+<span style="color:#bf0303;">-    &lt;height&gt;496&lt;/height&gt;</span>
+<span style="color:#0057ae;">+    &lt;height&gt;604&lt;/height&gt;</span>
+    &lt;/rect&gt;
+   &lt;/property&gt;
+   &lt;layout class=&quot;QGridLayout&quot;&gt;
+<span style="color:#0057ae;">@@ -34,14 +34,23 @@</span>
+    &lt;item row=&quot;0&quot; column=&quot;0&quot; colspan=&quot;2&quot;&gt;
+     &lt;widget class=&quot;QTabWidget&quot; name=&quot;mainTabWidget&quot;&gt;
+      &lt;property name=&quot;currentIndex&quot;&gt;
+<span style="color:#bf0303;">-      &lt;number&gt;3&lt;/number&gt;</span>
+<span style="color:#0057ae;">+      &lt;number&gt;0&lt;/number&gt;</span>
+      &lt;/property&gt;
+      &lt;widget class=&quot;QWidget&quot; name=&quot;tab&quot;&gt;
+       &lt;attribute name=&quot;title&quot;&gt;
+        &lt;string&gt;Payload&lt;/string&gt;
+       &lt;/attribute&gt;
+       &lt;layout class=&quot;QVBoxLayout&quot;&gt;
+<span style="color:#bf0303;">-       &lt;property name=&quot;margin&quot;&gt;</span>
+<span style="color:#0057ae;">+       &lt;property name=&quot;leftMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+        &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+       &lt;/property&gt;</span>
+<span style="color:#0057ae;">+       &lt;property name=&quot;topMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+        &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+       &lt;/property&gt;</span>
+<span style="color:#0057ae;">+       &lt;property name=&quot;rightMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+        &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+       &lt;/property&gt;</span>
+<span style="color:#0057ae;">+       &lt;property name=&quot;bottomMargin&quot;&gt;</span>
+         &lt;number&gt;0&lt;/number&gt;
+        &lt;/property&gt;
+        &lt;item&gt;
+<span style="color:#0057ae;">@@ -54,7 +63,16 @@</span>
+          &lt;/property&gt;
+          &lt;widget class=&quot;QWidget&quot; name=&quot;unsupportedTypePage&quot;&gt;
+           &lt;layout class=&quot;QVBoxLayout&quot;&gt;
+<span style="color:#bf0303;">-           &lt;property name=&quot;margin&quot;&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;leftMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;topMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;rightMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;bottomMargin&quot;&gt;</span>
+             &lt;number&gt;0&lt;/number&gt;
+            &lt;/property&gt;
+            &lt;item&gt;
+<span style="color:#0057ae;">@@ -92,7 +110,16 @@</span>
+          &lt;/widget&gt;
+          &lt;widget class=&quot;QWidget&quot; name=&quot;incidenceViewPage&quot;&gt;
+           &lt;layout class=&quot;QVBoxLayout&quot;&gt;
+<span style="color:#bf0303;">-           &lt;property name=&quot;margin&quot;&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;leftMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;topMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;rightMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;bottomMargin&quot;&gt;</span>
+             &lt;number&gt;0&lt;/number&gt;
+            &lt;/property&gt;
+            &lt;item&gt;
+<span style="color:#0057ae;">@@ -102,7 +129,16 @@</span>
+          &lt;/widget&gt;
+          &lt;widget class=&quot;QWidget&quot; name=&quot;mailViewPage&quot;&gt;
+           &lt;layout class=&quot;QGridLayout&quot; name=&quot;gridLayout1&quot;&gt;
+<span style="color:#bf0303;">-           &lt;property name=&quot;margin&quot;&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;leftMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;topMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;rightMargin&quot;&gt;</span>
+<span style="color:#0057ae;">+            &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#0057ae;">+           &lt;/property&gt;</span>
+<span style="color:#0057ae;">+           &lt;property name=&quot;bottomMargin&quot;&gt;</span>
+             &lt;number&gt;0&lt;/number&gt;
+            &lt;/property&gt;
+            &lt;item row=&quot;0&quot; column=&quot;0&quot;&gt;
+<span style="color:#0057ae;">@@ -154,9 +190,6 @@</span>
+        &lt;string&gt;Raw Payload&lt;/string&gt;
+       &lt;/attribute&gt;
+       &lt;layout class=&quot;QGridLayout&quot;&gt;
+<span style="color:#bf0303;">-       &lt;property name=&quot;margin&quot;&gt;</span>
+<span style="color:#bf0303;">-        &lt;number&gt;0&lt;/number&gt;</span>
+<span style="color:#bf0303;">-       &lt;/property&gt;</span>
+        &lt;item row=&quot;0&quot; column=&quot;0&quot; colspan=&quot;2&quot;&gt;
+         &lt;widget class=&quot;KTextEdit&quot; name=&quot;dataView&quot;&gt;
+          &lt;property name=&quot;lineWrapMode&quot;&gt;
+<span style="color:#0057ae;">@@ -369,17 +402,17 @@</span>
+  &lt;/widget&gt;
+  &lt;customwidgets&gt;
+   &lt;customwidget&gt;
+<span style="color:#0057ae;">+   &lt;class&gt;KTextEdit&lt;/class&gt;</span>
+<span style="color:#0057ae;">+   &lt;extends&gt;QTextEdit&lt;/extends&gt;</span>
+<span style="color:#0057ae;">+   &lt;header&gt;ktextedit.h&lt;/header&gt;</span>
+<span style="color:#0057ae;">+  &lt;/customwidget&gt;</span>
+<span style="color:#0057ae;">+  &lt;customwidget&gt;</span>
+    &lt;class&gt;KEditListWidget&lt;/class&gt;
+    &lt;extends&gt;QWidget&lt;/extends&gt;
+    &lt;header&gt;keditlistwidget.h&lt;/header&gt;
+    &lt;container&gt;1&lt;/container&gt;
+   &lt;/customwidget&gt;
+   &lt;customwidget&gt;
+<span style="color:#bf0303;">-   &lt;class&gt;KTextEdit&lt;/class&gt;</span>
+<span style="color:#bf0303;">-   &lt;extends&gt;QTextEdit&lt;/extends&gt;</span>
+<span style="color:#bf0303;">-   &lt;header&gt;ktextedit.h&lt;/header&gt;</span>
+<span style="color:#bf0303;">-  &lt;/customwidget&gt;</span>
+<span style="color:#bf0303;">-  &lt;customwidget&gt;</span>
+    &lt;class&gt;CalendarSupport::IncidenceViewer&lt;/class&gt;
+    &lt;extends&gt;QWidget&lt;/extends&gt;
+    &lt;header location=&quot;global&quot;&gt;CalendarSupport/IncidenceViewer&lt;/header&gt;
+<span style="font-weight:bold;">diff --git a/src/collectionaclpage.h b/src/collectionaclpage.h</span>
+index a29e324..fc9e6a9 100644
+<span style="color:#0057ae;">--- a/src/collectionaclpage.h</span>
+<span style="color:#0057ae;">+++ b/src/collectionaclpage.h</span>
+<span style="color:#0057ae;">@@ -28,7 +28,7 @@ class CollectionAclPage : public Akonadi::CollectionPropertiesPage</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit CollectionAclPage(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit CollectionAclPage(QWidget *parent = nullptr);</span>
+ 
+     void load(const Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+<span style="font-weight:bold;">diff --git a/src/collectionattributespage.cpp b/src/collectionattributespage.cpp</span>
+index 2bc9fa2..5d6291e 100644
+<span style="color:#0057ae;">--- a/src/collectionattributespage.cpp</span>
+<span style="color:#0057ae;">+++ b/src/collectionattributespage.cpp</span>
+<span style="color:#0057ae;">@@ -30,7 +30,7 @@ using namespace Akonadi;</span>
+ 
+ CollectionAttributePage::CollectionAttributePage(QWidget *parent) :
+     CollectionPropertiesPage(parent),
+<span style="color:#bf0303;">-    mModel(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    mModel(nullptr)</span>
+ {
+     setPageTitle(QStringLiteral(&quot;Attributes&quot;));
+     ui.setupUi(this);
+<span style="font-weight:bold;">diff --git a/src/collectionattributespage.h b/src/collectionattributespage.h</span>
+index 7f4876c..d20d970 100644
+<span style="color:#0057ae;">--- a/src/collectionattributespage.h</span>
+<span style="color:#0057ae;">+++ b/src/collectionattributespage.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class CollectionAttributePage : public Akonadi::CollectionPropertiesPage</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit CollectionAttributePage(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit CollectionAttributePage(QWidget *parent = nullptr);</span>
+ 
+     void load(const Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+<span style="font-weight:bold;">diff --git a/src/collectioninternalspage.h b/src/collectioninternalspage.h</span>
+index e2fb5b7..c56b755 100644
+<span style="color:#0057ae;">--- a/src/collectioninternalspage.h</span>
+<span style="color:#0057ae;">+++ b/src/collectioninternalspage.h</span>
+<span style="color:#0057ae;">@@ -28,7 +28,7 @@ class CollectionInternalsPage : public Akonadi::CollectionPropertiesPage</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit CollectionInternalsPage(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit CollectionInternalsPage(QWidget *parent = nullptr);</span>
+ 
+     void load(const Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+     void save(Akonadi::Collection &amp;col) Q_DECL_OVERRIDE;
+<span style="font-weight:bold;">diff --git a/src/connectionpage.h b/src/connectionpage.h</span>
+index bcf4501..dc4d242 100644
+<span style="color:#0057ae;">--- a/src/connectionpage.h</span>
+<span style="color:#0057ae;">+++ b/src/connectionpage.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class ConnectionPage : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit ConnectionPage(const QString &amp;identifier, QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit ConnectionPage(const QString &amp;identifier, QWidget *parent = nullptr);</span>
+ 
+     void showAllConnections(bool);
+ 
+<span style="font-weight:bold;">diff --git a/src/dbaccess.cpp b/src/dbaccess.cpp</span>
+index c4b11be..b20ab8e 100644
+<span style="color:#0057ae;">--- a/src/dbaccess.cpp</span>
+<span style="color:#0057ae;">+++ b/src/dbaccess.cpp</span>
+<span style="color:#0057ae;">@@ -55,7 +55,7 @@ public:</span>
+         database.setPassword(settings.value(QStringLiteral(&quot;Password&quot;), QString()).toString());
+         database.setConnectOptions(settings.value(QStringLiteral(&quot;Options&quot;), QString()).toString());
+         if (!database.open()) {
+<span style="color:#bf0303;">-            KMessageBox::error(Q_NULLPTR, QStringLiteral(&quot;Failed to connect to database: %1&quot;).arg(database.lastError().text()));</span>
+<span style="color:#0057ae;">+            KMessageBox::error(nullptr, QStringLiteral(&quot;Failed to connect to database: %1&quot;).arg(database.lastError().text()));</span>
+         }
+     }
+ 
+<span style="font-weight:bold;">diff --git a/src/dbbrowser.cpp b/src/dbbrowser.cpp</span>
+index a734663..b264d9f 100644
+<span style="color:#0057ae;">--- a/src/dbbrowser.cpp</span>
+<span style="color:#0057ae;">+++ b/src/dbbrowser.cpp</span>
+<span style="color:#0057ae;">@@ -26,7 +26,7 @@</span>
+ 
+ DbBrowser::DbBrowser(QWidget *parent) :
+     QWidget(parent),
+<span style="color:#bf0303;">-    mTableModel(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    mTableModel(nullptr)</span>
+ {
+     ui.setupUi(this);
+ 
+<span style="font-weight:bold;">diff --git a/src/dbbrowser.h b/src/dbbrowser.h</span>
+index 5fce3f0..c4ac80d 100644
+<span style="color:#0057ae;">--- a/src/dbbrowser.h</span>
+<span style="color:#0057ae;">+++ b/src/dbbrowser.h</span>
+<span style="color:#0057ae;">@@ -28,7 +28,7 @@ class DbBrowser : public QWidget</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit DbBrowser(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit DbBrowser(QWidget *parent = nullptr);</span>
+ 
+ private Q_SLOTS:
+     void refreshClicked();
+<span style="font-weight:bold;">diff --git a/src/dbconsole.cpp b/src/dbconsole.cpp</span>
+index 1a4dd6d..c88743e 100644
+<span style="color:#0057ae;">--- a/src/dbconsole.cpp</span>
+<span style="color:#0057ae;">+++ b/src/dbconsole.cpp</span>
+<span style="color:#0057ae;">@@ -35,7 +35,7 @@</span>
+ 
+ DbConsole::DbConsole(QWidget *parent) :
+     QWidget(parent),
+<span style="color:#bf0303;">-    mQueryModel(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    mQueryModel(nullptr)</span>
+ {
+     ui.setupUi(this);
+ 
+<span style="font-weight:bold;">diff --git a/src/dbconsole.h b/src/dbconsole.h</span>
+index 9bd485a..399fde1 100644
+<span style="color:#0057ae;">--- a/src/dbconsole.h</span>
+<span style="color:#0057ae;">+++ b/src/dbconsole.h</span>
+<span style="color:#0057ae;">@@ -28,7 +28,7 @@ class DbConsole : public QWidget</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit DbConsole(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit DbConsole(QWidget *parent = nullptr);</span>
+ 
+ private Q_SLOTS:
+     void execClicked();
+<span style="font-weight:bold;">diff --git a/src/debugwidget.h b/src/debugwidget.h</span>
+index bedf5a5..0e38af3 100644
+<span style="color:#0057ae;">--- a/src/debugwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/debugwidget.h</span>
+<span style="color:#0057ae;">@@ -37,7 +37,7 @@ class DebugWidget : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit DebugWidget(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit DebugWidget(QWidget *parent = nullptr);</span>
+ 
+ private Q_SLOTS:
+     void connectionStarted(const QString &amp;, const QString &amp;);
+<span style="font-weight:bold;">diff --git a/src/instanceselector.cpp b/src/instanceselector.cpp</span>
+index d10b601..a902bf7 100644
+<span style="color:#0057ae;">--- a/src/instanceselector.cpp</span>
+<span style="color:#0057ae;">+++ b/src/instanceselector.cpp</span>
+<span style="color:#0057ae;">@@ -43,7 +43,7 @@ InstanceSelector::InstanceSelector(const QString &amp;remoteHost, QWidget *parent, Q</span>
+     : QDialog(parent, flags),
+       ui(new Ui::InstanceSelector),
+       m_remoteHost(remoteHost),
+<span style="color:#bf0303;">-      mWindow(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+      mWindow(nullptr)</span>
+ {
+     QWidget *mainWidget = new QWidget(this);
+     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+<span style="color:#0057ae;">@@ -76,7 +76,7 @@ InstanceSelector::InstanceSelector(const QString &amp;remoteHost, QWidget *parent, Q</span>
+             item-&gt;setData(inst, Qt::UserRole);
+             model-&gt;appendRow(item);
+         }
+<span style="color:#bf0303;">-        connect(ui-&gt;listView, &amp;QAbstractItemView::doubleClicked, this, &amp;QDialog::accept);</span>
+<span style="color:#0057ae;">+        connect(ui-&gt;listView, &amp;QAbstractItemView::doubleClicked, this, &amp;InstanceSelector::slotAccept);</span>
+         ui-&gt;listView-&gt;setModel(model);
+         show();
+     }
+<span style="font-weight:bold;">diff --git a/src/instanceselector.h b/src/instanceselector.h</span>
+index 99fdd4d..565dc74 100644
+<span style="color:#0057ae;">--- a/src/instanceselector.h</span>
+<span style="color:#0057ae;">+++ b/src/instanceselector.h</span>
+<span style="color:#0057ae;">@@ -39,7 +39,7 @@ class InstanceSelector : public QDialog</span>
+ {
+     Q_OBJECT
+ public:
+<span style="color:#bf0303;">-    explicit InstanceSelector(const QString &amp;remoteHost, QWidget *parent = Q_NULLPTR, Qt::WindowFlags flags = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit InstanceSelector(const QString &amp;remoteHost, QWidget *parent = nullptr, Qt::WindowFlags flags = nullptr);</span>
+     virtual ~InstanceSelector();
+ 
+ private Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/jobtracker.cpp b/src/jobtracker.cpp</span>
+index 5a6280f..ede37c9 100644
+<span style="color:#0057ae;">--- a/src/jobtracker.cpp</span>
+<span style="color:#0057ae;">+++ b/src/jobtracker.cpp</span>
+<span style="color:#0057ae;">@@ -22,6 +22,7 @@</span>
+ 
+ #include &quot;jobtracker.h&quot;
+ #include &quot;jobtrackeradaptor.h&quot;
+<span style="color:#0057ae;">+#include &lt;akonadi/private/instance_p.h&gt;</span>
+ #include &quot;akonadiconsole_debug.h&quot;
+ #include &lt;QString&gt;
+ #include &lt;QStringList&gt;
+<span style="color:#0057ae;">@@ -87,7 +88,8 @@ JobTracker::JobTracker(const char *name, QObject *parent)</span>
+     : QObject(parent), d(new Private(this))
+ {
+     new JobTrackerAdaptor(this);
+<span style="color:#bf0303;">-    QDBusConnection::sessionBus().registerService(QStringLiteral(&quot;org.kde.akonadiconsole&quot;));</span>
+<span style="color:#0057ae;">+    const QString suffix = Akonadi::Instance::identifier().isEmpty() ? QString() : QLatin1Char('-') + Akonadi::Instance::identifier();</span>
+<span style="color:#0057ae;">+    QDBusConnection::sessionBus().registerService(QStringLiteral(&quot;org.kde.akonadiconsole&quot;) + suffix);</span>
+     QDBusConnection::sessionBus().registerObject(QLatin1Char('/') + QLatin1String(name),
+             this, QDBusConnection::ExportAdaptors);
+ 
+<span style="color:#0057ae;">@@ -243,7 +245,8 @@ QList&lt;JobInfo&gt; JobTracker::jobs(const QString &amp;parent) const</span>
+     assert(d-&gt;jobs.contains(parent));
+     const QStringList jobs = d-&gt;jobs.value(parent);
+     QList&lt;JobInfo&gt; infoList;
+<span style="color:#bf0303;">-    Q_FOREACH (const QString &amp;job, jobs) {</span>
+<span style="color:#0057ae;">+    infoList.reserve(jobs.count());</span>
+<span style="color:#0057ae;">+    for (const QString &amp;job : jobs) {</span>
+         infoList &lt;&lt; d-&gt;infoList.value(job);
+     }
+     return infoList;
+<span style="font-weight:bold;">diff --git a/src/jobtracker.h b/src/jobtracker.h</span>
+index 25e36b2..028c404 100644
+<span style="color:#0057ae;">--- a/src/jobtracker.h</span>
+<span style="color:#0057ae;">+++ b/src/jobtracker.h</span>
+<span style="color:#0057ae;">@@ -66,7 +66,7 @@ class JobTracker : public QObject</span>
+     Q_CLASSINFO(&quot;D-Bus Interface&quot;, &quot;org.freedesktop.Akonadi.JobTracker&quot;)
+ 
+ public:
+<span style="color:#bf0303;">-    explicit JobTracker(const char *name, QObject *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit JobTracker(const char *name, QObject *parent = nullptr);</span>
+     ~JobTracker();
+     QStringList sessions() const;
+ 
+<span style="font-weight:bold;">diff --git a/src/jobtrackerfilterproxymodel.cpp b/src/jobtrackerfilterproxymodel.cpp</span>
+new file mode 100644
+index 0000000..3841e3c
+<span style="color:#0057ae;">--- /dev/null</span>
+<span style="color:#0057ae;">+++ b/src/jobtrackerfilterproxymodel.cpp</span>
+<span style="color:#0057ae;">@@ -0,0 +1,63 @@</span>
+<span style="color:#0057ae;">+/*</span>
+<span style="color:#0057ae;">+  Copyright (c) 2017 Montel Laurent &lt;montel@kde.org&gt;</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  This program is free software; you can redistribute it and/or modify it</span>
+<span style="color:#0057ae;">+  under the terms of the GNU General Public License, version 2, as</span>
+<span style="color:#0057ae;">+  published by the Free Software Foundation.</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  This program is distributed in the hope that it will be useful, but</span>
+<span style="color:#0057ae;">+  WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span style="color:#0057ae;">+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<span style="color:#0057ae;">+  General Public License for more details.</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  You should have received a copy of the GNU General Public License along</span>
+<span style="color:#0057ae;">+  with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span style="color:#0057ae;">+  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</span>
+<span style="color:#0057ae;">+*/</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+#include &quot;jobtrackerfilterproxymodel.h&quot;</span>
+<span style="color:#0057ae;">+//#include &lt;QDebug&gt;</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+JobTrackerFilterProxyModel::JobTrackerFilterProxyModel(QObject *parent)</span>
+<span style="color:#0057ae;">+    : QSortFilterProxyModel(parent),</span>
+<span style="color:#0057ae;">+      mSearchColumn(0)</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+JobTrackerFilterProxyModel::~JobTrackerFilterProxyModel()</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+bool JobTrackerFilterProxyModel::filterAcceptsRow(int sourceRow, const QModelIndex &amp;sourceParent) const</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    if (filterRegExp().isEmpty()) {</span>
+<span style="color:#0057ae;">+        return true;</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+    QRegExp reg = filterRegExp();</span>
+<span style="color:#0057ae;">+    reg.setCaseSensitivity(Qt::CaseInsensitive);</span>
+<span style="color:#0057ae;">+    if (mSearchColumn == -1) {//Search on All Column</span>
+<span style="color:#0057ae;">+        for (int i = 0; i &lt; 7; i++) {</span>
+<span style="color:#0057ae;">+            QModelIndex index = sourceModel()-&gt;index(sourceRow, i, sourceParent);</span>
+<span style="color:#0057ae;">+            if (index.isValid()) {</span>
+<span style="color:#0057ae;">+                //qDebug() &lt;&lt; &quot; sourceModel()-&gt;data(index).toString( &quot;&lt;&lt;sourceModel()-&gt;data(index).toString() &lt;&lt; &quot; column &quot; &lt;&lt;i &lt;&lt; &quot;reg&quot; &lt;&lt; reg</span>
+<span style="color:#0057ae;">+                if (sourceModel()-&gt;data(index).toString().contains(reg)) {</span>
+<span style="color:#0057ae;">+                    return true;</span>
+<span style="color:#0057ae;">+                }</span>
+<span style="color:#0057ae;">+            } else {</span>
+<span style="color:#0057ae;">+                return true;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+        }</span>
+<span style="color:#0057ae;">+        return false;</span>
+<span style="color:#0057ae;">+    } else {</span>
+<span style="color:#0057ae;">+        QModelIndex index = sourceModel()-&gt;index(sourceRow, mSearchColumn, sourceParent);</span>
+<span style="color:#0057ae;">+        return sourceModel()-&gt;data(index).toString().contains(reg);</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+void JobTrackerFilterProxyModel::setSearchColumn(int column)</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    mSearchColumn = column;</span>
+<span style="color:#0057ae;">+}</span>
+<span style="font-weight:bold;">diff --git a/src/jobtrackerfilterproxymodel.h b/src/jobtrackerfilterproxymodel.h</span>
+new file mode 100644
+index 0000000..b2f9326
+<span style="color:#0057ae;">--- /dev/null</span>
+<span style="color:#0057ae;">+++ b/src/jobtrackerfilterproxymodel.h</span>
+<span style="color:#0057ae;">@@ -0,0 +1,39 @@</span>
+<span style="color:#0057ae;">+/*</span>
+<span style="color:#0057ae;">+  Copyright (c) 2017 Montel Laurent &lt;montel@kde.org&gt;</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  This program is free software; you can redistribute it and/or modify it</span>
+<span style="color:#0057ae;">+  under the terms of the GNU General Public License, version 2, as</span>
+<span style="color:#0057ae;">+  published by the Free Software Foundation.</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  This program is distributed in the hope that it will be useful, but</span>
+<span style="color:#0057ae;">+  WITHOUT ANY WARRANTY; without even the implied warranty of</span>
+<span style="color:#0057ae;">+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the GNU</span>
+<span style="color:#0057ae;">+  General Public License for more details.</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+  You should have received a copy of the GNU General Public License along</span>
+<span style="color:#0057ae;">+  with this program; if not, write to the Free Software Foundation, Inc.,</span>
+<span style="color:#0057ae;">+  51 Franklin Street, Fifth Floor, Boston, MA  02110-1301  USA</span>
+<span style="color:#0057ae;">+*/</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+#ifndef JOBTRACKERFILTERPROXYMODEL_H</span>
+<span style="color:#0057ae;">+#define JOBTRACKERFILTERPROXYMODEL_H</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+#include &lt;QSortFilterProxyModel&gt;</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+class JobTrackerFilterProxyModel : public QSortFilterProxyModel</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    Q_OBJECT</span>
+<span style="color:#0057ae;">+public:</span>
+<span style="color:#0057ae;">+    explicit JobTrackerFilterProxyModel(QObject *parent = nullptr);</span>
+<span style="color:#0057ae;">+    ~JobTrackerFilterProxyModel();</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+    void setSearchColumn(int column);</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+protected:</span>
+<span style="color:#0057ae;">+    bool filterAcceptsRow(int source_row, const QModelIndex &amp;source_parent) const Q_DECL_OVERRIDE;</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+private:</span>
+<span style="color:#0057ae;">+    int mSearchColumn;</span>
+<span style="color:#0057ae;">+};</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+#endif // JOBTRACKERFILTERPROXYMODEL_H</span>
+<span style="font-weight:bold;">diff --git a/src/jobtrackermodel.cpp b/src/jobtrackermodel.cpp</span>
+index 2264d3b..31017f7 100644
+<span style="color:#0057ae;">--- a/src/jobtrackermodel.cpp</span>
+<span style="color:#0057ae;">+++ b/src/jobtrackermodel.cpp</span>
+<span style="color:#0057ae;">@@ -89,7 +89,7 @@ QModelIndex JobTrackerModel::index(int row, int column, const QModelIndex &amp;paren</span>
+     }
+     // non-toplevel job
+     const QStringList jobs = d-&gt;tracker.jobNames(parent.internalId());
+<span style="color:#bf0303;">-    if (row &gt;= jobs.size()) {</span>
+<span style="color:#0057ae;">+    if (row &lt; 0 || row &gt;= jobs.size()) {</span>
+         return QModelIndex();
+     }
+     return createIndex(row, column, d-&gt;tracker.idForJob(jobs.at(row)));
+<span style="font-weight:bold;">diff --git a/src/jobtrackerwidget.cpp b/src/jobtrackerwidget.cpp</span>
+index e344735..e08b630 100644
+<span style="color:#0057ae;">--- a/src/jobtrackerwidget.cpp</span>
+<span style="color:#0057ae;">+++ b/src/jobtrackerwidget.cpp</span>
+<span style="color:#0057ae;">@@ -23,6 +23,7 @@</span>
+ #include &lt;QCheckBox&gt;
+ 
+ #include &quot;jobtrackermodel.h&quot;
+<span style="color:#0057ae;">+#include &quot;jobtrackerfilterproxymodel.h&quot;</span>
+ 
+ #include &lt;AkonadiWidgets/controlgui.h&gt;
+ 
+<span style="color:#0057ae;">@@ -36,11 +37,17 @@</span>
+ #include &lt;QPushButton&gt;
+ #include &lt;QFile&gt;
+ #include &lt;QFileDialog&gt;
+<span style="color:#0057ae;">+#include &lt;QApplication&gt;</span>
+<span style="color:#0057ae;">+#include &lt;QClipboard&gt;</span>
+<span style="color:#0057ae;">+#include &lt;QLineEdit&gt;</span>
+ 
+ class JobTrackerWidget::Private
+ {
+ public:
+     JobTrackerModel *model;
+<span style="color:#0057ae;">+    QTreeView *tv;</span>
+<span style="color:#0057ae;">+    QLineEdit *searchLineEdit;</span>
+<span style="color:#0057ae;">+    JobTrackerFilterProxyModel *filterProxyModel;</span>
+ };
+ 
+ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QString &amp;checkboxText)
+<span style="color:#0057ae;">@@ -56,16 +63,25 @@ JobTrackerWidget::JobTrackerWidget(const char *name, QWidget *parent, const QStr</span>
+     connect(enableCB, &amp;QAbstractButton::toggled, d-&gt;model, &amp;JobTrackerModel::setEnabled);
+     layout-&gt;addWidget(enableCB);
+ 
+<span style="color:#bf0303;">-    QTreeView *tv = new QTreeView(this);</span>
+<span style="color:#bf0303;">-    tv-&gt;setModel(d-&gt;model);</span>
+<span style="color:#bf0303;">-    tv-&gt;expandAll();</span>
+<span style="color:#bf0303;">-    tv-&gt;setAlternatingRowColors(true);</span>
+<span style="color:#bf0303;">-    tv-&gt;setContextMenuPolicy(Qt::CustomContextMenu);</span>
+<span style="color:#0057ae;">+    d-&gt;searchLineEdit = new QLineEdit(this);</span>
+<span style="color:#0057ae;">+    d-&gt;searchLineEdit-&gt;setClearButtonEnabled(true);</span>
+<span style="color:#0057ae;">+    d-&gt;searchLineEdit-&gt;setPlaceholderText(QStringLiteral(&quot;Search...&quot;));</span>
+<span style="color:#0057ae;">+    layout-&gt;addWidget(d-&gt;searchLineEdit);</span>
+<span style="color:#0057ae;">+    connect(d-&gt;searchLineEdit, &amp;QLineEdit::textChanged, this, &amp;JobTrackerWidget::textFilterChanged);</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+    d-&gt;filterProxyModel = new JobTrackerFilterProxyModel(this);</span>
+<span style="color:#0057ae;">+    d-&gt;filterProxyModel-&gt;setSourceModel(d-&gt;model);</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+    d-&gt;tv = new QTreeView(this);</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;setModel(d-&gt;filterProxyModel);</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;expandAll();</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;setAlternatingRowColors(true);</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;setContextMenuPolicy(Qt::CustomContextMenu);</span>
+     // too slow with many jobs:
+     // tv-&gt;header()-&gt;setResizeMode( QHeaderView::ResizeToContents );
+<span style="color:#bf0303;">-    connect(d-&gt;model, &amp;JobTrackerModel::modelReset, tv, &amp;QTreeView::expandAll);</span>
+<span style="color:#bf0303;">-    connect(tv, &amp;QTreeView::customContextMenuRequested, this, &amp;JobTrackerWidget::contextMenu);</span>
+<span style="color:#bf0303;">-    layout-&gt;addWidget(tv);</span>
+<span style="color:#0057ae;">+    connect(d-&gt;model, &amp;JobTrackerModel::modelReset, d-&gt;tv, &amp;QTreeView::expandAll);</span>
+<span style="color:#0057ae;">+    connect(d-&gt;tv, &amp;QTreeView::customContextMenuRequested, this, &amp;JobTrackerWidget::contextMenu);</span>
+<span style="color:#0057ae;">+    layout-&gt;addWidget(d-&gt;tv);</span>
+     d-&gt;model-&gt;setEnabled(false);   // since it can be slow, default to off
+ 
+     QHBoxLayout *layout2 = new QHBoxLayout;
+<span style="color:#0057ae;">@@ -84,13 +100,45 @@ JobTrackerWidget::~JobTrackerWidget()</span>
+     delete d;
+ }
+ 
+<span style="color:#0057ae;">+void JobTrackerWidget::textFilterChanged()</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    d-&gt;filterProxyModel-&gt;setFilterFixedString(d-&gt;searchLineEdit-&gt;text());</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;expandAll();</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+ void JobTrackerWidget::contextMenu(const QPoint &amp;/*pos*/)
+ {
+     QMenu menu;
+     menu.addAction(QStringLiteral(&quot;Clear View&quot;), d-&gt;model, &amp;JobTrackerModel::resetTracker);
+<span style="color:#0057ae;">+    menu.addSeparator();</span>
+<span style="color:#0057ae;">+    menu.addAction(QStringLiteral(&quot;Copy Info&quot;), this, &amp;JobTrackerWidget::copyJobInfo);</span>
+<span style="color:#0057ae;">+    menu.addSeparator();</span>
+<span style="color:#0057ae;">+    menu.addAction(QStringLiteral(&quot;Collapse All&quot;), this, &amp;JobTrackerWidget::collapseAll);</span>
+<span style="color:#0057ae;">+    menu.addAction(QStringLiteral(&quot;Expand All&quot;), this, &amp;JobTrackerWidget::expandAll);</span>
+<span style="color:#0057ae;">+</span>
+     menu.exec(QCursor::pos());
+ }
+ 
+<span style="color:#0057ae;">+void JobTrackerWidget::expandAll()</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;expandAll();</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+void JobTrackerWidget::collapseAll()</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    d-&gt;tv-&gt;collapseAll();</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+void JobTrackerWidget::copyJobInfo()</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    QModelIndex index = d-&gt;tv-&gt;currentIndex();</span>
+<span style="color:#0057ae;">+    if (index.isValid()) {</span>
+<span style="color:#0057ae;">+        const QModelIndex newIndex = d-&gt;model-&gt;index(index.row(), 6, index.parent());</span>
+<span style="color:#0057ae;">+        QClipboard *cb = QApplication::clipboard();</span>
+<span style="color:#0057ae;">+        cb-&gt;setText(newIndex.data().toString(), QClipboard::Clipboard);</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+ void JobTrackerWidget::slotSaveToFile()
+ {
+     const QString fileName = QFileDialog::getSaveFileName(this, QString(), QString(), QString());
+<span style="font-weight:bold;">diff --git a/src/jobtrackerwidget.h b/src/jobtrackerwidget.h</span>
+index 94166bd..ca06215 100644
+<span style="color:#0057ae;">--- a/src/jobtrackerwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/jobtrackerwidget.h</span>
+<span style="color:#0057ae;">@@ -38,6 +38,10 @@ private Q_SLOTS:</span>
+     void slotSaveToFile();
+ 
+ private:
+<span style="color:#0057ae;">+    void expandAll();</span>
+<span style="color:#0057ae;">+    void copyJobInfo();</span>
+<span style="color:#0057ae;">+    void collapseAll();</span>
+<span style="color:#0057ae;">+    void textFilterChanged();</span>
+     void writeRows(const QModelIndex &amp;parent, QFile &amp;file, int indentLevel);
+ 
+     class Private;
+<span style="font-weight:bold;">diff --git a/src/mainwidget.h b/src/mainwidget.h</span>
+index 27d6f58..6870dea 100644
+<span style="color:#0057ae;">--- a/src/mainwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/mainwidget.h</span>
+<span style="color:#0057ae;">@@ -33,7 +33,7 @@ class MainWidget : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit MainWidget(KXmlGuiWindow *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit MainWidget(KXmlGuiWindow *parent = nullptr);</span>
+     ~MainWidget();
+ 
+ private Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/mainwindow.h b/src/mainwindow.h</span>
+index 8d993b4..6bc824d 100644
+<span style="color:#0057ae;">--- a/src/mainwindow.h</span>
+<span style="color:#0057ae;">+++ b/src/mainwindow.h</span>
+<span style="color:#0057ae;">@@ -31,7 +31,7 @@ class MainWindow : public KXmlGuiWindow</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit MainWindow(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit MainWindow(QWidget *parent = nullptr);</span>
+     ~MainWindow();
+ 
+ protected:
+<span style="font-weight:bold;">diff --git a/src/monitorsmodel.cpp b/src/monitorsmodel.cpp</span>
+index ce4767d..138dfc6 100644
+<span style="color:#0057ae;">--- a/src/monitorsmodel.cpp</span>
+<span style="color:#0057ae;">+++ b/src/monitorsmodel.cpp</span>
+<span style="color:#0057ae;">@@ -27,7 +27,7 @@</span>
+ 
+ MonitorsModel::MonitorsModel(QObject *parent):
+     QAbstractItemModel(parent),
+<span style="color:#bf0303;">-    mMonitor(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    mMonitor(nullptr)</span>
+ {
+     QTimer::singleShot(0, this, &amp;MonitorsModel::init);
+ }
+<span style="font-weight:bold;">diff --git a/src/monitorsmodel.h b/src/monitorsmodel.h</span>
+index c0b0ad1..0ed6bb3 100644
+<span style="color:#0057ae;">--- a/src/monitorsmodel.h</span>
+<span style="color:#0057ae;">+++ b/src/monitorsmodel.h</span>
+<span style="color:#0057ae;">@@ -51,7 +51,7 @@ public:</span>
+         ColumnsCount
+     };
+ 
+<span style="color:#bf0303;">-    explicit MonitorsModel(QObject *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit MonitorsModel(QObject *parent = nullptr);</span>
+     virtual ~MonitorsModel();
+ 
+     void setEnabled(bool enabled);
+<span style="font-weight:bold;">diff --git a/src/monitorswidget.cpp b/src/monitorswidget.cpp</span>
+index f5e5cb7..2db947a 100644
+<span style="color:#0057ae;">--- a/src/monitorswidget.cpp</span>
+<span style="color:#0057ae;">+++ b/src/monitorswidget.cpp</span>
+<span style="color:#0057ae;">@@ -38,6 +38,7 @@ MonitorsWidget::MonitorsWidget(QWidget *parent):</span>
+     mTreeView = new QTreeView(this);
+     mTreeView-&gt;setModel(mModel);
+     mTreeView-&gt;setAlternatingRowColors(true);
+<span style="color:#0057ae;">+    mTreeView-&gt;setRootIsDecorated(false);</span>
+     layout-&gt;addWidget(mTreeView);
+ 
+     Akonadi::ControlGui::widgetNeedsAkonadi(this);
+<span style="font-weight:bold;">diff --git a/src/monitorswidget.h b/src/monitorswidget.h</span>
+index 8289836..f59d0fe 100644
+<span style="color:#0057ae;">--- a/src/monitorswidget.h</span>
+<span style="color:#0057ae;">+++ b/src/monitorswidget.h</span>
+<span style="color:#0057ae;">@@ -30,7 +30,7 @@ class MonitorsWidget : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit MonitorsWidget(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit MonitorsWidget(QWidget *parent = nullptr);</span>
+     virtual ~MonitorsWidget();
+ 
+ private:
+<span style="font-weight:bold;">diff --git a/src/notificationmodel.cpp b/src/notificationmodel.cpp</span>
+index c8b367e..0f8d8b2 100644
+<span style="color:#0057ae;">--- a/src/notificationmodel.cpp</span>
+<span style="color:#0057ae;">+++ b/src/notificationmodel.cpp</span>
+<span style="color:#0057ae;">@@ -305,24 +305,24 @@ public:</span>
+     QVariant data(int column) const Q_DECL_OVERRIDE
+     {
+         switch (column) {
+<span style="color:#bf0303;">-            case 0: {</span>
+<span style="color:#bf0303;">-                switch (msg.operation()) {</span>
+<span style="color:#bf0303;">-                case Protocol::SubscriptionChangeNotification::Add:</span>
+<span style="color:#bf0303;">-                    return QStringLiteral(&quot;Add&quot;);</span>
+<span style="color:#bf0303;">-                case Protocol::SubscriptionChangeNotification::Modify:</span>
+<span style="color:#bf0303;">-                    return QStringLiteral(&quot;Modify&quot;);</span>
+<span style="color:#bf0303;">-                case Protocol::SubscriptionChangeNotification::Remove:</span>
+<span style="color:#bf0303;">-                    return QStringLiteral(&quot;Remove&quot;);</span>
+<span style="color:#bf0303;">-                default:</span>
+<span style="color:#bf0303;">-                    return QStringLiteral(&quot;Invalid&quot;);</span>
+<span style="color:#bf0303;">-                }</span>
+<span style="color:#bf0303;">-            }</span>
+<span style="color:#bf0303;">-            case 1:</span>
+<span style="color:#bf0303;">-                return QStringLiteral(&quot;Subscription&quot;);</span>
+<span style="color:#bf0303;">-            case 2:</span>
+<span style="color:#bf0303;">-                return msg.subscriber();</span>
+<span style="color:#0057ae;">+        case 0: {</span>
+<span style="color:#0057ae;">+            switch (msg.operation()) {</span>
+<span style="color:#0057ae;">+            case Protocol::SubscriptionChangeNotification::Add:</span>
+<span style="color:#0057ae;">+                return QStringLiteral(&quot;Add&quot;);</span>
+<span style="color:#0057ae;">+            case Protocol::SubscriptionChangeNotification::Modify:</span>
+<span style="color:#0057ae;">+                return QStringLiteral(&quot;Modify&quot;);</span>
+<span style="color:#0057ae;">+            case Protocol::SubscriptionChangeNotification::Remove:</span>
+<span style="color:#0057ae;">+                return QStringLiteral(&quot;Remove&quot;);</span>
+             default:
+<span style="color:#bf0303;">-                return QString();</span>
+<span style="color:#0057ae;">+                return QStringLiteral(&quot;Invalid&quot;);</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+        }</span>
+<span style="color:#0057ae;">+        case 1:</span>
+<span style="color:#0057ae;">+            return QStringLiteral(&quot;Subscription&quot;);</span>
+<span style="color:#0057ae;">+        case 2:</span>
+<span style="color:#0057ae;">+            return msg.subscriber();</span>
+<span style="color:#0057ae;">+        default:</span>
+<span style="color:#0057ae;">+            return QString();</span>
+         }
+     }
+ 
+<span style="color:#0057ae;">@@ -333,7 +333,7 @@ class NotificationModel::NotificationBlock: public NotificationModel::Item</span>
+ {
+ public:
+     NotificationBlock(const Akonadi::ChangeNotification &amp;msg)
+<span style="color:#bf0303;">-        : NotificationModel::Item(-2, Q_NULLPTR)</span>
+<span style="color:#0057ae;">+        : NotificationModel::Item(-2, nullptr)</span>
+     {
+         timestamp = msg.timestamp();
+         QStringList list;
+<span style="color:#0057ae;">@@ -388,7 +388,7 @@ public:</span>
+ 
+ NotificationModel::NotificationModel(QObject *parent) :
+     QAbstractItemModel(parent),
+<span style="color:#bf0303;">-    m_monitor(Q_NULLPTR)</span>
+<span style="color:#0057ae;">+    m_monitor(nullptr)</span>
+ {
+ }
+ 
+<span style="color:#0057ae;">@@ -513,19 +513,19 @@ void NotificationModel::clear()</span>
+ 
+ Protocol::ChangeNotification NotificationModel::notification(const QModelIndex &amp;index) const
+ {
+<span style="color:#bf0303;">-    Item *item = static_cast&lt;Item*&gt;(index.internalPointer());</span>
+<span style="color:#0057ae;">+    Item *item = static_cast&lt;Item *&gt;(index.internalPointer());</span>
+     Q_ASSERT(item);
+     switch (item-&gt;type) {
+     case Protocol::Command::ItemChangeNotification:
+<span style="color:#bf0303;">-        return static_cast&lt;ItemNotificationNode*&gt;(item)-&gt;msg;</span>
+<span style="color:#0057ae;">+        return static_cast&lt;ItemNotificationNode *&gt;(item)-&gt;msg;</span>
+     case Protocol::Command::CollectionChangeNotification:
+<span style="color:#bf0303;">-        return static_cast&lt;CollectionNotificationNode*&gt;(item)-&gt;msg;</span>
+<span style="color:#0057ae;">+        return static_cast&lt;CollectionNotificationNode *&gt;(item)-&gt;msg;</span>
+     case Protocol::Command::TagChangeNotification:
+<span style="color:#bf0303;">-        return static_cast&lt;TagNotificationNode*&gt;(item)-&gt;msg;</span>
+<span style="color:#0057ae;">+        return static_cast&lt;TagNotificationNode *&gt;(item)-&gt;msg;</span>
+     case Protocol::Command::RelationChangeNotification:
+<span style="color:#bf0303;">-        return static_cast&lt;RelationNotificationNode*&gt;(item)-&gt;msg;</span>
+<span style="color:#0057ae;">+        return static_cast&lt;RelationNotificationNode *&gt;(item)-&gt;msg;</span>
+     case Protocol::Command::SubscriptionChangeNotification:
+<span style="color:#bf0303;">-        return static_cast&lt;SubscriptionNotificationNode*&gt;(item)-&gt;msg;</span>
+<span style="color:#0057ae;">+        return static_cast&lt;SubscriptionNotificationNode *&gt;(item)-&gt;msg;</span>
+     default:
+         return Protocol::ChangeNotification();
+     }
+<span style="color:#0057ae;">@@ -541,7 +541,7 @@ void NotificationModel::setEnabled(bool enable)</span>
+                 this, &amp;NotificationModel::slotNotify);
+     } else if (m_monitor) {
+         m_monitor-&gt;deleteLater();
+<span style="color:#bf0303;">-        m_monitor = Q_NULLPTR;</span>
+<span style="color:#0057ae;">+        m_monitor = nullptr;</span>
+     }
+ }
+ 
+<span style="font-weight:bold;">diff --git a/src/notificationmodel.h b/src/notificationmodel.h</span>
+index 9b6c8af..a45304b 100644
+<span style="color:#0057ae;">--- a/src/notificationmodel.h</span>
+<span style="color:#0057ae;">+++ b/src/notificationmodel.h</span>
+<span style="color:#0057ae;">@@ -27,8 +27,10 @@</span>
+ #include &lt;AkonadiCore/Monitor&gt;
+ #include &lt;AkonadiCore/ChangeNotification&gt;
+ 
+<span style="color:#bf0303;">-namespace Akonadi {</span>
+<span style="color:#bf0303;">-namespace Protocol {</span>
+<span style="color:#0057ae;">+namespace Akonadi</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+namespace Protocol</span>
+<span style="color:#0057ae;">+{</span>
+ class ChangeNotification;
+ }
+ }
+<span style="font-weight:bold;">diff --git a/src/org.kde.akonadiconsole.desktop b/src/org.kde.akonadiconsole.desktop</span>
+index 9abdeee..716e0cd 100755
+<span style="color:#0057ae;">--- a/src/org.kde.akonadiconsole.desktop</span>
+<span style="color:#0057ae;">+++ b/src/org.kde.akonadiconsole.desktop</span>
+<span style="color:#0057ae;">@@ -1,5 +1,6 @@</span>
+ [Desktop Entry]
+ Name=Akonadi Console
+<span style="color:#0057ae;">+Name[ast]=Consola d'Akonadi</span>
+ Name[ca]=Consola de l'Akonadi
+ Name[ca@valencia]=Consola de l'Akonadi
+ Name[cs]=Konzole Akonadi
+<span style="font-weight:bold;">diff --git a/src/querydebugger.h b/src/querydebugger.h</span>
+index c1a43bf..1d7a60c 100644
+<span style="color:#0057ae;">--- a/src/querydebugger.h</span>
+<span style="color:#0057ae;">+++ b/src/querydebugger.h</span>
+<span style="color:#0057ae;">@@ -38,7 +38,7 @@ class QueryDebugger : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit QueryDebugger(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit QueryDebugger(QWidget *parent = nullptr);</span>
+     virtual ~QueryDebugger();
+ 
+ private Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/searchdialog.h b/src/searchdialog.h</span>
+index 8cb5357..64063ea 100644
+<span style="color:#0057ae;">--- a/src/searchdialog.h</span>
+<span style="color:#0057ae;">+++ b/src/searchdialog.h</span>
+<span style="color:#0057ae;">@@ -29,7 +29,7 @@ class KTextEdit;</span>
+ class SearchDialog : public QDialog
+ {
+ public:
+<span style="color:#bf0303;">-    explicit SearchDialog(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit SearchDialog(QWidget *parent = nullptr);</span>
+     ~SearchDialog();
+ 
+     QString searchName() const;
+<span style="font-weight:bold;">diff --git a/src/searchwidget.h b/src/searchwidget.h</span>
+index 2589355..842c3cd 100644
+<span style="color:#0057ae;">--- a/src/searchwidget.h</span>
+<span style="color:#0057ae;">+++ b/src/searchwidget.h</span>
+<span style="color:#0057ae;">@@ -41,7 +41,7 @@ class SearchWidget : public QWidget</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit SearchWidget(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit SearchWidget(QWidget *parent = nullptr);</span>
+     ~SearchWidget();
+ 
+ private Q_SLOTS:
+<span style="font-weight:bold;">diff --git a/src/tagpropertiesdialog.h b/src/tagpropertiesdialog.h</span>
+index 389683b..d17dffe 100644
+<span style="color:#0057ae;">--- a/src/tagpropertiesdialog.h</span>
+<span style="color:#0057ae;">+++ b/src/tagpropertiesdialog.h</span>
+<span style="color:#0057ae;">@@ -33,8 +33,8 @@ class TagPropertiesDialog : public QDialog</span>
+     Q_OBJECT
+ 
+ public:
+<span style="color:#bf0303;">-    explicit TagPropertiesDialog(QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#bf0303;">-    explicit TagPropertiesDialog(const Akonadi::Tag &amp;tag, QWidget *parent = Q_NULLPTR);</span>
+<span style="color:#0057ae;">+    explicit TagPropertiesDialog(QWidget *parent = nullptr);</span>
+<span style="color:#0057ae;">+    explicit TagPropertiesDialog(const Akonadi::Tag &amp;tag, QWidget *parent = nullptr);</span>
+     virtual ~TagPropertiesDialog();
+ 
+     Akonadi::Tag tag() const;
+
+</pre></div>
