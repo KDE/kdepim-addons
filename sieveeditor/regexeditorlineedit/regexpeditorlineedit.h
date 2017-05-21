@@ -34,7 +34,9 @@ public:
     void switchToRegexpEditorLineEdit(bool regexpEditor) Q_DECL_OVERRIDE;
     void setCode(const QString &str) Q_DECL_OVERRIDE;
     QString code() const Q_DECL_OVERRIDE;
+
 private:
+    void slotOpenRegexpEditor();
     QLineEdit *mLineEdit;
     QPushButton *mRegExpEditorButton;
     bool mIsRegExpMode;

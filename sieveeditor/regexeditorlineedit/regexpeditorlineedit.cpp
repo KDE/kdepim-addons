@@ -48,12 +48,20 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
     mRegexEditorInstalled = !KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty();
+    if (mRegexEditorInstalled) {
+        connect(mRegExpEditorButton, &QPushButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
+    }
     //Hidden by default
     mRegExpEditorButton->setVisible(false);
 }
 
 RegexpEditorLineEdit::~RegexpEditorLineEdit()
 {
+}
+
+void RegexpEditorLineEdit::slotOpenRegexpEditor()
+{
+    //TODO
 }
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
