@@ -53,9 +53,9 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 {
 }
 
-void RegexpEditorLineEdit::switchToRegexpEditorLineEdit()
+void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
 {
-    mIsRegExpMode = !mIsRegExpMode;
+    mIsRegExpMode = regexpEditor;
     //TODO update
 }
 
