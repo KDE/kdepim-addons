@@ -21,6 +21,8 @@
 #define DIFFHIGHLIGHTER_H
 
 #include <KSyntaxHighlighting/AbstractHighlighter>
+#include <KSyntaxHighlighting/Repository>
+#include <KSyntaxHighlighting/Definition>
 
 class DiffHighlighter : public KSyntaxHighlighting::AbstractHighlighter
 {
@@ -28,8 +30,15 @@ public:
     DiffHighlighter();
     ~DiffHighlighter();
 
+    void highlightDiff(const QString &str);
+
 protected:
     void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) Q_DECL_OVERRIDE;
+private:
+    KSyntaxHighlighting::Repository mRepo;
+    KSyntaxHighlighting::Definition mDef;
+    QString mCurrentLine;
+    QString mOutputDiff;
 };
 
 #endif // DIFFHIGHLIGHTER_H

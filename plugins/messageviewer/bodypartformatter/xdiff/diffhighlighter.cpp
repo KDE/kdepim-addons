@@ -18,10 +18,19 @@
 */
 
 #include "diffhighlighter.h"
+#include <KSyntaxHighlighting/Format>
+#include <KSyntaxHighlighting/Theme>
+#include <KSyntaxHighlighting/State>
+#include <QPalette>
 
 DiffHighlighter::DiffHighlighter()
 {
+    mDef = mRepo.definitionForName(QStringLiteral("Diff"));
+    setDefinition(mDef);
 
+    setTheme(/*(palette().color(QPalette::Base).lightness() < 128)
+                 ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)*/
+                 /*:*/ mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
 }
 
 DiffHighlighter::~DiffHighlighter()
@@ -29,7 +38,41 @@ DiffHighlighter::~DiffHighlighter()
 
 }
 
+void DiffHighlighter::highlightDiff(const QString &str)
+{
+    mOutputDiff.clear();
+    KSyntaxHighlighting::State state;
+    const QStringList lines = str.split(QLatin1Char('\n'));
+    QStringList::ConstIterator end(lines.end());
+    for (QStringList::ConstIterator it = lines.begin(); it != end; ++it) {
+        mCurrentLine = (*it);
+        state = highlightLine((*it), state);
+        mOutputDiff += QLatin1Char('\n');
+    }
+}
+
 void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
 {
-    //TODO
+    if (!format.isDefaultTextStyle(theme())) {
+        mOutputDiff += QStringLiteral("<span style=\"");
+        if (format.hasTextColor(theme()))
+            mOutputDiff += QStringLiteral("color:") + format.textColor(theme()).name() + QStringLiteral(";");
+        if (format.hasBackgroundColor(theme()))
+            mOutputDiff += QStringLiteral("background-color:") + format.backgroundColor(theme()).name() + QStringLiteral(";");
+        if (format.isBold(theme()))
+            mOutputDiff += QStringLiteral("font-weight:bold;");
+        if (format.isItalic(theme()))
+            mOutputDiff += QStringLiteral("font-style:italic;");
+        if (format.isUnderline(theme()))
+            mOutputDiff += QStringLiteral("text-decoration:underline;");
+        if (format.isStrikeThrough(theme()))
+            mOutputDiff += QStringLiteral("text-decoration:line-through;");
+        mOutputDiff += QStringLiteral("\">");
+    }
+
+    mOutputDiff += mCurrentLine.mid(offset, length).toHtmlEscaped();
+
+    if (!format.isDefaultTextStyle(theme())) {
+        mOutputDiff += QStringLiteral("</span>");
+    }
 }
