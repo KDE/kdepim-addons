@@ -1,0 +1,15 @@
+<br><div align="center"><pre style="text-align: left; border: solid black 1px; padding: 0.5em; margin: 0em;"><span style="font-weight:bold;">diff --git a/plugins/messageviewer/bodypartformatter/ms-tnef/application_ms-tnef.cpp b/plugins/messageviewer/bodypartformatter/ms-tnef/application_ms-tnef.cpp</span>
+index b69f56c0..2cc4ab92 100644
+<span style="color:#0057ae;">--- a/plugins/messageviewer/bodypartformatter/ms-tnef/application_ms-tnef.cpp</span>
+<span style="color:#0057ae;">+++ b/plugins/messageviewer/bodypartformatter/ms-tnef/application_ms-tnef.cpp</span>
+<span style="color:#0057ae;">@@ -166,7 +166,7 @@ public:</span>
+                 attFileName = att-&gt;name();
+             }
+             bodyPart-&gt;nodeHelper()-&gt;addTempFile(dir + QDir::separator() + attFileName);
+<span style="color:#bf0303;">-            const QString href = QStringLiteral(&quot;file:&quot;) + QString::fromLatin1(QUrl::toPercentEncoding(dir + QDir::separator() + att-&gt;name()));</span>
+<span style="color:#0057ae;">+            const QString href = QStringLiteral(&quot;file:&quot;) + dir + QDir::separator() + attFileName;</span>
+ 
+             const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att-&gt;mimeTag(),
+                                                                                                   KIconLoader::Desktop, attFileName)).url();
+
+</pre></div>

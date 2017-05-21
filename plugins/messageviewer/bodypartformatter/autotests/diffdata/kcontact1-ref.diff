@@ -1,0 +1,479 @@
+<br><div align="center"><pre style="text-align: left; border: solid black 1px; padding: 0.5em; margin: 0em;">commit 93f6aaf446133e05826a4d8e50e2da8ffac7c28f
+Author: David Faure &lt;faure@kde.org&gt;
+Date:   Mon Apr 17 20:41:55 2017 +0200
+
+    VCardParser: rewrite parser to use a state machine instead of split()
+    
+    This is both faster and more correct: the parser now handles correctly
+    double-quoted values (not splitting at ':' inside the double quotes
+    or comma -- well except for type, where it's apparently needed).
+    
+    The speed gain is 10% according to vcardtool_benchmark with -O2.
+
+<span style="font-weight:bold;">diff --git a/autotests/importexportvcardtest.cpp b/autotests/importexportvcardtest.cpp</span>
+index 5cb2ef24..331b194d 100644
+<span style="color:#0057ae;">--- a/autotests/importexportvcardtest.cpp</span>
+<span style="color:#0057ae;">+++ b/autotests/importexportvcardtest.cpp</span>
+<span style="color:#0057ae;">@@ -21,6 +21,7 @@</span>
+ #include &quot;importexportvcardtest.h&quot;
+ #include &lt;QTest&gt;
+ #include &quot;vcardtool.h&quot;
+<span style="color:#0057ae;">+#include &lt;QDebug&gt;</span>
+ 
+ ImportExportVCardTest::ImportExportVCardTest(QObject *parent)
+     : QObject(parent)
+<span style="color:#0057ae;">@@ -33,6 +34,27 @@ ImportExportVCardTest::~ImportExportVCardTest()</span>
+ 
+ }
+ 
+<span style="color:#0057ae;">+static void compareBuffers(const QByteArray &amp;outputData, const QByteArray &amp;expected)</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    if (outputData != expected) {</span>
+<span style="color:#0057ae;">+        qDebug() &lt;&lt; &quot; outputData &quot; &lt;&lt; outputData;</span>
+<span style="color:#0057ae;">+        qDebug() &lt;&lt; &quot; expected &quot; &lt;&lt; expected;</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+    const QList&lt;QByteArray&gt; outputLines = outputData.split('\n');</span>
+<span style="color:#0057ae;">+    const QList&lt;QByteArray&gt; outputRefLines = expected.split('\n');</span>
+<span style="color:#0057ae;">+    for (int i = 0; i &lt; qMin(outputLines.count(), outputRefLines.count()); ++i) {</span>
+<span style="color:#0057ae;">+        const QByteArray actual = outputLines.at(i);</span>
+<span style="color:#0057ae;">+        const QByteArray expect = outputRefLines.at(i);</span>
+<span style="color:#0057ae;">+        if (actual != expect) {</span>
+<span style="color:#0057ae;">+            qCritical() &lt;&lt; &quot;Mismatch at output line&quot; &lt;&lt; (i + 1);</span>
+<span style="color:#0057ae;">+            QCOMPARE(actual, expect);</span>
+<span style="color:#0057ae;">+            QCOMPARE(actual.count(), expect.count());</span>
+<span style="color:#0057ae;">+        }</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+    QCOMPARE(outputLines.count(), outputRefLines.count());</span>
+<span style="color:#0057ae;">+    QCOMPARE(outputData.size(), expected.size());</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+ void ImportExportVCardTest::shouldExportFullTestVcard4()
+ {
+     QByteArray vcarddata(&quot;BEGIN:VCARD\r\n&quot;
+<span style="color:#0057ae;">@@ -71,8 +93,9 @@ void ImportExportVCardTest::shouldExportFullTestVcard4()</span>
+                          &quot;END:VCARD\r\n\r\n&quot;);
+     QByteArray vcardexpected(&quot;BEGIN:VCARD\r\n&quot;
+                              &quot;VERSION:4.0\r\n&quot;
+<span style="color:#bf0303;">-                             &quot;ADR;GEO=\&quot;geo:51.523701,0.158500\&quot;;LABEL=\&quot;Mr Sherlock Holmes\&quot;;TYPE:;;221B Bak\r\n&quot;</span>
+<span style="color:#bf0303;">-                             &quot; er Street;London;;NW1;United Kingdom\r\n&quot;</span>
+<span style="color:#0057ae;">+                             &quot;ADR;GEO=\&quot;geo:51.523701,0.158500\&quot;;LABEL=\&quot;Mr Sherlock Holmes, 221B Baker Stre\r\n&quot;</span>
+<span style="color:#0057ae;">+                             &quot; et, London NW1, England, United Kingdom\&quot;;TYPE:;;221B Baker Street;London;;\r\n&quot;</span>
+<span style="color:#0057ae;">+                             &quot; NW1;United Kingdom\r\n&quot;</span>
+                              &quot;ANNIVERSARY:19960415\r\n&quot;
+                              &quot;BDAY:19531015T231000Z\r\n&quot;
+                              &quot;CALADRURI;PREF=1:mailto:detective@sherlockholmes.com\r\n&quot;
+<span style="color:#0057ae;">@@ -93,7 +116,7 @@ void ImportExportVCardTest::shouldExportFullTestVcard4()</span>
+                              &quot;PRODID:-//KADDRESSBOOK//NONSGML Version 1//EN\r\n&quot;
+                              &quot;REV:20140722T222710Z\r\n&quot;
+                              &quot;ROLE:Detective\r\n&quot;
+<span style="color:#bf0303;">-                             &quot;TEL;PREF=1;VALUE=uri:ext=5555\r\n&quot;</span>
+<span style="color:#0057ae;">+                             &quot;TEL;TYPE=\&quot;home,voice\&quot;;PREF=1;VALUE=uri:tel:+44-555-555-5555;ext=5555\r\n&quot;</span>
+                              &quot;TEL;TYPE=\&quot;cell,voice\&quot;;VALUE=uri:tel:+44-555-555-6666\r\n&quot;
+                              &quot;TEL;TYPE=\&quot;voice,work\&quot;;VALUE=uri:tel:+44-555-555-7777\r\n&quot;
+                              &quot;TITLE;ALTID=1;LANGUAGE=fr:Patron\r\n&quot;
+<span style="color:#0057ae;">@@ -107,8 +130,7 @@ void ImportExportVCardTest::shouldExportFullTestVcard4()</span>
+     const KContacts::AddresseeList lst = vcard.parseVCards(vcarddata);
+ 
+     const QByteArray result = vcard.exportVCards(lst, KContacts::VCard::v4_0);
+<span style="color:#bf0303;">-    //qDebug() &lt;&lt; &quot; result &quot; &lt;&lt; result;</span>
+<span style="color:#bf0303;">-    QCOMPARE(result, vcardexpected);</span>
+<span style="color:#0057ae;">+    compareBuffers(result, vcardexpected);</span>
+ }
+ 
+ void ImportExportVCardTest::shouldExportMiscElementVcard4()
+<span style="color:#0057ae;">@@ -140,9 +162,7 @@ void ImportExportVCardTest::shouldExportMiscElementVcard4()</span>
+     const KContacts::AddresseeList lst = vcard.parseVCards(vcarddata);
+ 
+     const QByteArray result = vcard.exportVCards(lst, KContacts::VCard::v4_0);
+<span style="color:#bf0303;">-    //qDebug() &lt;&lt; &quot; result &quot; &lt;&lt; result;</span>
+<span style="color:#bf0303;">-    QCOMPARE(result, vcardexpected);</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#0057ae;">+    compareBuffers(result, vcardexpected);</span>
+ }
+ 
+ void ImportExportVCardTest::shouldExportMemberElementVcard4()
+<span style="color:#0057ae;">@@ -174,8 +194,9 @@ void ImportExportVCardTest::shouldExportMemberElementVcard4()</span>
+     const KContacts::AddresseeList lst = vcard.parseVCards(vcarddata);
+ 
+     const QByteArray result = vcard.exportVCards(lst, KContacts::VCard::v4_0);
+<span style="color:#bf0303;">-    //qDebug() &lt;&lt; &quot; result &quot; &lt;&lt; result;</span>
+<span style="color:#bf0303;">-    QCOMPARE(result, vcardexpected);</span>
+<span style="color:#0057ae;">+    compareBuffers(result, vcardexpected);</span>
+ }
+ 
+<span style="color:#0057ae;">+// TODO please make this data driven before copy/pasting more methods here...</span>
+<span style="color:#0057ae;">+</span>
+ QTEST_MAIN(ImportExportVCardTest)
+<span style="font-weight:bold;">diff --git a/autotests/testroundtrip.cpp b/autotests/testroundtrip.cpp</span>
+index 77a9aca6..cc3a4aca 100644
+<span style="color:#0057ae;">--- a/autotests/testroundtrip.cpp</span>
+<span style="color:#0057ae;">+++ b/autotests/testroundtrip.cpp</span>
+<span style="color:#0057ae;">@@ -99,6 +99,27 @@ void RoundtripTest::testVCardRoundtrip_data()</span>
+     }
+ }
+ 
+<span style="color:#0057ae;">+static void compareBuffers(const char *version, const QByteArray &amp;outputData, const QByteArray &amp;outputRefData)</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    if (outputData != outputRefData) {</span>
+<span style="color:#0057ae;">+        qDebug() &lt;&lt; &quot; outputData &quot; &lt;&lt; outputData;</span>
+<span style="color:#0057ae;">+        qDebug() &lt;&lt; &quot; outputRefData &quot; &lt;&lt; outputRefData;</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+    const QList&lt;QByteArray&gt; outputLines = outputData.split('\n');</span>
+<span style="color:#0057ae;">+    const QList&lt;QByteArray&gt; outputRefLines = outputRefData.split('\n');</span>
+<span style="color:#0057ae;">+    for (int i = 0; i &lt; qMin(outputLines.count(), outputRefLines.count()); ++i) {</span>
+<span style="color:#0057ae;">+        const QByteArray actual = outputLines.at(i);</span>
+<span style="color:#0057ae;">+        const QByteArray expect = outputRefLines.at(i);</span>
+<span style="color:#0057ae;">+        if (actual != expect) {</span>
+<span style="color:#0057ae;">+            qCritical() &lt;&lt; &quot;Mismatch in&quot; &lt;&lt; version &lt;&lt; &quot;output line&quot; &lt;&lt; (i + 1);</span>
+<span style="color:#0057ae;">+            QCOMPARE(actual, expect);</span>
+<span style="color:#0057ae;">+            QCOMPARE(actual.count(), expect.count());</span>
+<span style="color:#0057ae;">+        }</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+    QCOMPARE(outputLines.count(), outputRefLines.count());</span>
+<span style="color:#0057ae;">+    QCOMPARE(outputData.size(), outputRefData.size());</span>
+<span style="color:#0057ae;">+}</span>
+<span style="color:#0057ae;">+</span>
+ void RoundtripTest::testVCardRoundtrip()
+ {
+     QFETCH(QString, inputFile);
+<span style="color:#0057ae;">@@ -128,23 +149,7 @@ void RoundtripTest::testVCardRoundtrip()</span>
+         QVERIFY(outputFile.open(QIODevice::ReadOnly));
+ 
+         const QByteArray outputRefData = outputFile.readAll();
+<span style="color:#bf0303;">-        QCOMPARE(outputData.size(), outputRefData.size());</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputLines = outputData.split('\n');</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputRefLines = outputRefData.split('\n');</span>
+<span style="color:#bf0303;">-        QCOMPARE(outputLines.count(), outputRefLines.count());</span>
+<span style="color:#bf0303;">-        for (int i = 0; i &lt; outputLines.count(); ++i) {</span>
+<span style="color:#bf0303;">-            const QByteArray actual = outputLines[i];</span>
+<span style="color:#bf0303;">-            const QByteArray expect = outputRefLines[i];</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-            if (actual != expect) {</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;Mismatch in v2.1 output line&quot; &lt;&lt; (i + 1);</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual.count(), expect.count());</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;\nActual:&quot; &lt;&lt; actual &lt;&lt; &quot;\nExpect:&quot; &lt;&lt; expect;</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual, expect);</span>
+<span style="color:#bf0303;">-            }</span>
+<span style="color:#bf0303;">-        }</span>
+<span style="color:#0057ae;">+        compareBuffers(&quot;v2.1&quot;, outputData, outputRefData);</span>
+     }
+ 
+     if (!output3_0File.isEmpty()) {
+<span style="color:#0057ae;">@@ -154,26 +159,7 @@ void RoundtripTest::testVCardRoundtrip()</span>
+         QVERIFY(outputFile.open(QIODevice::ReadOnly));
+ 
+         const QByteArray outputRefData = outputFile.readAll();
+<span style="color:#bf0303;">-        if (outputData.size() != outputRefData.size()) {</span>
+<span style="color:#bf0303;">-            qDebug() &lt;&lt; &quot; outputRefData &quot; &lt;&lt; outputRefData &lt;&lt; endl;</span>
+<span style="color:#bf0303;">-            qDebug() &lt;&lt; &quot; outputData &quot; &lt;&lt; outputData;</span>
+<span style="color:#bf0303;">-        }</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputLines = outputData.split('\n');</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputRefLines = outputRefData.split('\n');</span>
+<span style="color:#bf0303;">-        for (int i = 0; i &lt; qMin(outputLines.count(), outputRefLines.count()); ++i) {</span>
+<span style="color:#bf0303;">-            const QByteArray actual = outputLines[i];</span>
+<span style="color:#bf0303;">-            const QByteArray expect = outputRefLines[i];</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-            if (actual != expect) {</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;Mismatch in v3.0 output line&quot; &lt;&lt; (i + 1);</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;\nActual:&quot; &lt;&lt; actual &lt;&lt; &quot;\nExpect:&quot; &lt;&lt; expect;</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual.count(), expect.count());</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual, expect);</span>
+<span style="color:#bf0303;">-            }</span>
+<span style="color:#bf0303;">-        }</span>
+<span style="color:#bf0303;">-        QCOMPARE(outputLines.count(), outputRefLines.count());</span>
+<span style="color:#bf0303;">-        QCOMPARE(outputData.size(), outputRefData.size());</span>
+<span style="color:#0057ae;">+        compareBuffers(&quot;v3.0&quot;, outputData, outputRefData);</span>
+     }
+ #if 0
+     if (!output4_0File.isEmpty()) {
+<span style="color:#0057ae;">@@ -183,28 +169,7 @@ void RoundtripTest::testVCardRoundtrip()</span>
+         QVERIFY(outputFile.open(QIODevice::ReadOnly));
+ 
+         const QByteArray outputRefData = outputFile.readAll();
+<span style="color:#bf0303;">-        if (outputData.size() != outputRefData.size()) {</span>
+<span style="color:#bf0303;">-            qDebug() &lt;&lt; &quot; outputRefData &quot; &lt;&lt; outputRefData &lt;&lt; endl;</span>
+<span style="color:#bf0303;">-            qDebug() &lt;&lt; &quot; outputData &quot; &lt;&lt; outputData;</span>
+<span style="color:#bf0303;">-        }</span>
+<span style="color:#bf0303;">-        //QCOMPARE( outputData.size(), outputRefData.size() );</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputLines = outputData.split('\n');</span>
+<span style="color:#bf0303;">-        const QList&lt;QByteArray&gt; outputRefLines = outputRefData.split('\n');</span>
+<span style="color:#bf0303;">-        //QCOMPARE(outputLines.count(), outputRefLines.count());</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-        for (int i = 0; i &lt; outputLines.count(); ++i) {</span>
+<span style="color:#bf0303;">-            const QByteArray actual = outputLines[i];</span>
+<span style="color:#bf0303;">-            const QByteArray expect = outputRefLines[i];</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-            if (actual != expect) {</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;Mismatch in v4.0 output line&quot; &lt;&lt; (i + 1);</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#bf0303;">-                qCritical() &lt;&lt; &quot;\nActual:&quot; &lt;&lt; actual &lt;&lt; &quot;\nExpect:&quot; &lt;&lt; expect;</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual.count(), expect.count());</span>
+<span style="color:#bf0303;">-                QCOMPARE(actual, expect);</span>
+<span style="color:#bf0303;">-            }</span>
+<span style="color:#bf0303;">-        }</span>
+<span style="color:#0057ae;">+        compareBuffers(&quot;v4.0&quot;, outputData, outputRefData);</span>
+     }
+ #endif
+ }
+<span style="font-weight:bold;">diff --git a/src/vcardparser/vcardparser.cpp b/src/vcardparser/vcardparser.cpp</span>
+index a16f320f..bc91299c 100644
+<span style="color:#0057ae;">--- a/src/vcardparser/vcardparser.cpp</span>
+<span style="color:#0057ae;">+++ b/src/vcardparser/vcardparser.cpp</span>
+<span style="color:#0057ae;">@@ -80,96 +80,152 @@ public:</span>
+     {
+     }
+ 
+<span style="color:#bf0303;">-    void parseLine(const QByteArray &amp;currentLine, VCardLine &amp;vCardLine);</span>
+<span style="color:#0057ae;">+    void parseLine(const QByteArray &amp;currentLine, VCardLine *vCardLine);</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+private:</span>
+<span style="color:#0057ae;">+    void addParameter(const QByteArray &amp;paramKey, const QByteArray &amp;paramValue);</span>
+ 
+ private:
+     StringCache &amp;m_cache;
+     std::function&lt;QByteArray()&gt; m_fetchAnotherLine;
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+    VCardLine *m_vCardLine;</span>
+<span style="color:#0057ae;">+    QByteArray m_encoding;</span>
+<span style="color:#0057ae;">+    QByteArray m_charset;</span>
+ };
+ 
+<span style="color:#bf0303;">-void VCardLineParser::parseLine(const QByteArray&amp; currentLine, KContacts::VCardLine&amp; vCardLine)</span>
+<span style="color:#0057ae;">+void VCardLineParser::addParameter(const QByteArray&amp; paramKey, const QByteArray&amp; paramValue)</span>
+ {
+<span style="color:#bf0303;">-    // ### The syntax is key:value, but the key can contain semicolon-separated parameters, which can contain a ':', so indexOf(':') is wrong.</span>
+<span style="color:#bf0303;">-    // EXAMPLE: &quot;ADR;GEO=\&quot;geo:22.500000,45.099998\&quot;;LABEL=\&quot;My Label\&quot;;TYPE=home:P.O. Box 101;;;Any Town;CA;91921-1234;</span>
+<span style="color:#bf0303;">-    const int colon = currentLine.indexOf(':');</span>
+<span style="color:#bf0303;">-    if (colon == -1) {   // invalid line</span>
+<span style="color:#bf0303;">-        return;</span>
+<span style="color:#bf0303;">-    }</span>
+<span style="color:#bf0303;">-    const QByteArray key = currentLine.left(colon).trimmed();</span>
+<span style="color:#bf0303;">-    QByteArray value = currentLine.mid(colon + 1);</span>
+<span style="color:#bf0303;">-    const QList&lt;QByteArray&gt; params = key.split(';');</span>
+<span style="color:#bf0303;">-    //qDebug() &lt;&lt; &quot;key=&quot; &lt;&lt; QString::fromLatin1(key) &lt;&lt; &quot;params=&quot; &lt;&lt; params;</span>
+<span style="color:#bf0303;">-    // check for group</span>
+<span style="color:#bf0303;">-    const QByteArray firstParam = params.at(0);</span>
+<span style="color:#bf0303;">-    const int groupPos = firstParam.indexOf('.');</span>
+<span style="color:#bf0303;">-    if (groupPos != -1) {</span>
+<span style="color:#bf0303;">-        vCardLine.setGroup(m_cache.fromLatin1(firstParam.left(groupPos)));</span>
+<span style="color:#bf0303;">-        vCardLine.setIdentifier(m_cache.fromLatin1(firstParam.mid(groupPos + 1)));</span>
+<span style="color:#bf0303;">-        //qDebug() &lt;&lt; &quot;group&quot; &lt;&lt; vCardLine.group() &lt;&lt; &quot;identifier&quot; &lt;&lt; vCardLine.identifier();</span>
+<span style="color:#bf0303;">-    } else {</span>
+<span style="color:#bf0303;">-        vCardLine.setIdentifier(m_cache.fromLatin1(firstParam));</span>
+<span style="color:#bf0303;">-        //qDebug() &lt;&lt; &quot;identifier&quot; &lt;&lt; vCardLine.identifier();</span>
+<span style="color:#0057ae;">+    if (paramKey == &quot;encoding&quot;) {</span>
+<span style="color:#0057ae;">+        m_encoding = paramValue.toLower();</span>
+<span style="color:#0057ae;">+    } else if (paramKey == &quot;charset&quot;) {</span>
+<span style="color:#0057ae;">+        m_charset = paramValue.toLower();</span>
+     }
+<span style="color:#0057ae;">+    //qDebug() &lt;&lt; &quot;  add parameter&quot; &lt;&lt; paramKey &lt;&lt; &quot;    =    &quot; &lt;&lt; paramValue;</span>
+<span style="color:#0057ae;">+    m_vCardLine-&gt;addParameter(m_cache.fromLatin1(paramKey), m_cache.fromLatin1(paramValue));</span>
+<span style="color:#0057ae;">+}</span>
+ 
+<span style="color:#bf0303;">-    if (params.count() &gt; 1) {   // find all parameters</span>
+<span style="color:#bf0303;">-        QList&lt;QByteArray&gt;::ConstIterator paramIt(params.constBegin());</span>
+<span style="color:#bf0303;">-        for (++paramIt; paramIt != params.constEnd(); ++paramIt) {</span>
+<span style="color:#bf0303;">-            //qDebug() &lt;&lt; &quot;param&quot; &lt;&lt; QString::fromLatin1(*paramIt);</span>
+<span style="color:#bf0303;">-            QList&lt;QByteArray&gt; pair = (*paramIt).split('=');</span>
+<span style="color:#bf0303;">-            QByteArray first = pair.at(0).toLower();</span>
+<span style="color:#bf0303;">-            if (pair.count() == 1) {</span>
+<span style="color:#bf0303;">-                // correct the fucking 2.1 'standard'</span>
+<span style="color:#bf0303;">-                if (first == &quot;quoted-printable&quot;) {</span>
+<span style="color:#bf0303;">-                    pair[ 0 ] = &quot;encoding&quot;;</span>
+<span style="color:#bf0303;">-                    pair.append(&quot;quoted-printable&quot;);</span>
+<span style="color:#bf0303;">-                } else if (first == &quot;base64&quot;) {</span>
+<span style="color:#bf0303;">-                    pair[ 0 ] = &quot;encoding&quot;;</span>
+<span style="color:#bf0303;">-                    pair.append(&quot;base64&quot;);</span>
+<span style="color:#0057ae;">+void VCardLineParser::parseLine(const QByteArray&amp; currentLine, KContacts::VCardLine* vCardLine)</span>
+<span style="color:#0057ae;">+{</span>
+<span style="color:#0057ae;">+    //qDebug() &lt;&lt; currentLine;</span>
+<span style="color:#0057ae;">+    m_vCardLine = vCardLine;</span>
+<span style="color:#0057ae;">+    // The syntax is key:value, but the key can contain semicolon-separated parameters, which can contain a ':', so indexOf(':') is wrong.</span>
+<span style="color:#0057ae;">+    // EXAMPLE: ADR;GEO=&quot;geo:22.500000,45.099998&quot;;LABEL=&quot;My Label&quot;;TYPE=home:P.O. Box 101;;;Any Town;CA;91921-1234;</span>
+<span style="color:#0057ae;">+    // Therefore we need a small state machine, just the way I like it.</span>
+<span style="color:#0057ae;">+    enum State { StateInitial, StateParamKey, StateParamValue, StateQuotedValue, StateAfterParamValue, StateValue };</span>
+<span style="color:#0057ae;">+    State state = StateInitial;</span>
+<span style="color:#0057ae;">+    const int lineLength = currentLine.length();</span>
+<span style="color:#0057ae;">+    const char *lineData = currentLine.constData(); // to skip length checks from at() in debug mode</span>
+<span style="color:#0057ae;">+    QByteArray paramKey;</span>
+<span style="color:#0057ae;">+    QByteArray paramValue;</span>
+<span style="color:#0057ae;">+    int start = 0;</span>
+<span style="color:#0057ae;">+    int pos = 0;</span>
+<span style="color:#0057ae;">+    for (; pos &lt; lineLength; ++pos) {</span>
+<span style="color:#0057ae;">+        const char ch = lineData[pos];</span>
+<span style="color:#0057ae;">+        const bool colonOrSemicolon = (ch == ';' || ch == ':');</span>
+<span style="color:#0057ae;">+        switch (state) {</span>
+<span style="color:#0057ae;">+        case StateInitial:</span>
+<span style="color:#0057ae;">+            if (colonOrSemicolon) {</span>
+<span style="color:#0057ae;">+                const QByteArray identifier = currentLine.mid(start, pos - start);</span>
+<span style="color:#0057ae;">+                //qDebug() &lt;&lt; &quot; identifier&quot; &lt;&lt; identifier;</span>
+<span style="color:#0057ae;">+                vCardLine-&gt;setIdentifier(m_cache.fromLatin1(identifier));</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            if (ch == ';') {</span>
+<span style="color:#0057ae;">+                state = StateParamKey;</span>
+<span style="color:#0057ae;">+            } else if (ch == ':') {</span>
+<span style="color:#0057ae;">+                state = StateValue;</span>
+<span style="color:#0057ae;">+            } else if (ch == '.') {</span>
+<span style="color:#0057ae;">+                vCardLine-&gt;setGroup(m_cache.fromLatin1(currentLine.mid(start, pos - start)));</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            break;</span>
+<span style="color:#0057ae;">+        case StateParamKey:</span>
+<span style="color:#0057ae;">+            if (colonOrSemicolon || ch == '=') {</span>
+<span style="color:#0057ae;">+                paramKey = currentLine.mid(start, pos - start);</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            if (colonOrSemicolon) {</span>
+<span style="color:#0057ae;">+                // correct the so-called 2.1 'standard'</span>
+<span style="color:#0057ae;">+                paramValue = paramKey;</span>
+<span style="color:#0057ae;">+                const QByteArray lowerKey = paramKey.toLower();</span>
+<span style="color:#0057ae;">+                if (lowerKey == &quot;quoted-printable&quot; || lowerKey == &quot;base64&quot;) {</span>
+<span style="color:#0057ae;">+                    paramKey = &quot;encoding&quot;;</span>
+                 } else {
+<span style="color:#bf0303;">-                    pair.prepend(&quot;type&quot;);</span>
+<span style="color:#0057ae;">+                    paramKey = &quot;type&quot;;</span>
+                 }
+<span style="color:#bf0303;">-                first = pair.at(0);</span>
+<span style="color:#0057ae;">+                addParameter(paramKey, paramValue);</span>
+             }
+<span style="color:#bf0303;">-            const QByteArray second = pair.at(1);</span>
+<span style="color:#bf0303;">-            if (second.contains(',')) {     // parameter in type=x,y,z format</span>
+<span style="color:#bf0303;">-                const QList&lt;QByteArray&gt; args = second.split(',');</span>
+<span style="color:#bf0303;">-                for (QByteArray tmpArg : args) {</span>
+<span style="color:#bf0303;">-                    if (tmpArg.startsWith('&quot;')) {</span>
+<span style="color:#bf0303;">-                        tmpArg = tmpArg.mid(1);</span>
+<span style="color:#bf0303;">-                    }</span>
+<span style="color:#bf0303;">-                    if (tmpArg.endsWith('&quot;')) {</span>
+<span style="color:#bf0303;">-                        tmpArg.chop(1);</span>
+<span style="color:#bf0303;">-                    }</span>
+<span style="color:#bf0303;">-                    vCardLine.addParameter(m_cache.fromLatin1(first),</span>
+<span style="color:#bf0303;">-                                           m_cache.fromLatin1(tmpArg));</span>
+<span style="color:#0057ae;">+            if (ch == ';') {</span>
+<span style="color:#0057ae;">+                state = StateParamKey;</span>
+<span style="color:#0057ae;">+            } else if (ch == ':') {</span>
+<span style="color:#0057ae;">+                state = StateValue;</span>
+<span style="color:#0057ae;">+            } else if (ch == '=') {</span>
+<span style="color:#0057ae;">+                state = StateParamValue;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            break;</span>
+<span style="color:#0057ae;">+        case StateQuotedValue:</span>
+<span style="color:#0057ae;">+            if (ch == '&quot;' || (ch == ',' &amp;&amp; paramKey.toLower() == &quot;type&quot;)) {</span>
+<span style="color:#0057ae;">+                // TODO the hack above is for TEL;TYPE=\&quot;voice,home\&quot;:... without breaking GEO.... TODO: check spec</span>
+<span style="color:#0057ae;">+                paramValue = currentLine.mid(start, pos - start);</span>
+<span style="color:#0057ae;">+                addParameter(paramKey.toLower(), paramValue);</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+                if (ch == '&quot;') {</span>
+<span style="color:#0057ae;">+                    state = StateAfterParamValue; // to avoid duplicating code with StateParamValue, we use this intermediate state for one char</span>
+                 }
+<span style="color:#bf0303;">-            } else {</span>
+<span style="color:#bf0303;">-                vCardLine.addParameter(m_cache.fromLatin1(first),</span>
+<span style="color:#bf0303;">-                                       m_cache.fromLatin1(second));</span>
+             }
+<span style="color:#0057ae;">+            break;</span>
+<span style="color:#0057ae;">+        case StateParamValue:</span>
+<span style="color:#0057ae;">+            if (colonOrSemicolon || ch == ',') {</span>
+<span style="color:#0057ae;">+                paramValue = currentLine.mid(start, pos - start);</span>
+<span style="color:#0057ae;">+                addParameter(paramKey.toLower(), paramValue);</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            // fall-through intended</span>
+<span style="color:#0057ae;">+        case StateAfterParamValue:</span>
+<span style="color:#0057ae;">+            if (ch == ';') {</span>
+<span style="color:#0057ae;">+                state = StateParamKey;</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            } else if (ch == ':') {</span>
+<span style="color:#0057ae;">+                state = StateValue;</span>
+<span style="color:#0057ae;">+            } else if (pos == start &amp;&amp; ch == '&quot;') { // don't treat foo&quot;bar&quot; as quoted - TODO check the vCard 3.0 spec.</span>
+<span style="color:#0057ae;">+                state = StateQuotedValue;</span>
+<span style="color:#0057ae;">+                start = pos + 1;</span>
+<span style="color:#0057ae;">+            }</span>
+<span style="color:#0057ae;">+            break;</span>
+<span style="color:#0057ae;">+        case StateValue:</span>
+<span style="color:#0057ae;">+            Q_UNREACHABLE();</span>
+<span style="color:#0057ae;">+            break;</span>
+<span style="color:#0057ae;">+        }</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+        if (state == StateValue) {</span>
+<span style="color:#0057ae;">+            break;</span>
+         }
+     }
+ 
+<span style="color:#0057ae;">+    if (state != StateValue) {   // invalid line, no ':'</span>
+<span style="color:#0057ae;">+        return;</span>
+<span style="color:#0057ae;">+    }</span>
+<span style="color:#0057ae;">+</span>
+<span style="color:#0057ae;">+    QByteArray value = currentLine.mid(pos + 1);</span>
+     removeEscapes(value);
+ 
+     QByteArray output;
+     bool wasBase64Encoded = false;
+ 
+<span style="color:#bf0303;">-    const QString encoding = vCardLine.parameter(QStringLiteral(&quot;encoding&quot;)).toLower();</span>
+<span style="color:#bf0303;">-    if (!encoding.isEmpty()) {</span>
+<span style="color:#bf0303;">-</span>
+<span style="color:#0057ae;">+    if (!m_encoding.isEmpty()) {</span>
+         // have to decode the data
+<span style="color:#bf0303;">-        if (encoding == QLatin1String(&quot;b&quot;) || encoding == QLatin1String(&quot;base64&quot;)) {</span>
+<span style="color:#0057ae;">+        if (m_encoding == &quot;b&quot; || m_encoding == &quot;base64&quot;) {</span>
+             output = QByteArray::fromBase64(value);
+             wasBase64Encoded = true;
+<span style="color:#bf0303;">-        } else if (encoding == QLatin1String(&quot;quoted-printable&quot;)) {</span>
+<span style="color:#0057ae;">+        } else if (m_encoding == &quot;quoted-printable&quot;) {</span>
+             // join any qp-folded lines
+             while (value.endsWith('=')) {
+                 value.chop(1);   // remove the '='
+                 value.append(m_fetchAnotherLine());
+             }
+             KCodecs::quotedPrintableDecode(value, output);
+<span style="color:#bf0303;">-        } else if (encoding == QLatin1String(&quot;8bit&quot;)) {</span>
+<span style="color:#0057ae;">+        } else if (m_encoding == &quot;8bit&quot;) {</span>
+             output = value;
+         } else {
+             qDebug(&quot;Unknown vcard encoding type!&quot;);
+<span style="color:#0057ae;">@@ -178,22 +234,23 @@ void VCardLineParser::parseLine(const QByteArray&amp; currentLine, KContacts::VCardL</span>
+         output = value;
+     }
+ 
+<span style="color:#bf0303;">-    const QString charset = vCardLine.parameter(QStringLiteral(&quot;charset&quot;));</span>
+<span style="color:#bf0303;">-    if (!charset.isEmpty()) {</span>
+<span style="color:#0057ae;">+    if (!m_charset.isEmpty()) {</span>
+         // have to convert the data
+<span style="color:#bf0303;">-        QTextCodec *codec = QTextCodec::codecForName(charset.toLatin1());</span>
+<span style="color:#0057ae;">+        QTextCodec *codec = QTextCodec::codecForName(m_charset);</span>
+         if (codec) {
+<span style="color:#bf0303;">-            vCardLine.setValue(codec-&gt;toUnicode(output));</span>
+<span style="color:#0057ae;">+            vCardLine-&gt;setValue(codec-&gt;toUnicode(output));</span>
+         } else {
+<span style="color:#bf0303;">-            vCardLine.setValue(QString::fromUtf8(output));</span>
+<span style="color:#0057ae;">+            vCardLine-&gt;setValue(QString::fromUtf8(output));</span>
+         }
+     } else if (wasBase64Encoded) {
+<span style="color:#bf0303;">-        vCardLine.setValue(output);</span>
+<span style="color:#0057ae;">+        vCardLine-&gt;setValue(output);</span>
+     } else {
+<span style="color:#bf0303;">-        vCardLine.setValue(QString::fromUtf8(output));</span>
+<span style="color:#0057ae;">+        vCardLine-&gt;setValue(QString::fromUtf8(output));</span>
+     }
+ }
+ 
+<span style="color:#0057ae;">+////</span>
+<span style="color:#0057ae;">+</span>
+ VCardParser::VCardParser()
+     : d(nullptr)
+ {
+<span style="color:#0057ae;">@@ -248,7 +305,7 @@ VCard::List VCardParser::parseVCards(const QByteArray &amp;text)</span>
+ 
+                 VCardLineParser lineParser(cache, fetchAnotherLine);
+ 
+<span style="color:#bf0303;">-                lineParser.parseLine(currentLine, vCardLine);</span>
+<span style="color:#0057ae;">+                lineParser.parseLine(currentLine, &amp;vCardLine);</span>
+ 
+                 currentVCard.addLine(vCardLine);
+             }
+
+</pre></div>
