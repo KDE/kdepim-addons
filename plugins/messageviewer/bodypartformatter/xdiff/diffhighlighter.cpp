@@ -41,6 +41,17 @@ DiffHighlighter::~DiffHighlighter()
 void DiffHighlighter::highlightDiff(const QString &str)
 {
     mOutputDiff.clear();
+
+    static const QLatin1String tableStyle(
+        "style=\""
+        "text-align: left; "
+        "border: solid black 1px; "
+        "padding: 0.5em; "
+        "margin: 0em;\"");
+
+    mOutputDiff = QStringLiteral("<br><div align=\"center\">");
+    mOutputDiff += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
+
     KSyntaxHighlighting::State state;
     const QStringList lines = str.split(QLatin1Char('\n'));
     QStringList::ConstIterator end(lines.end());
@@ -49,6 +60,8 @@ void DiffHighlighter::highlightDiff(const QString &str)
         state = highlightLine((*it), state);
         mOutputDiff += QLatin1Char('\n');
     }
+
+    mOutputDiff += QLatin1String("</pre></div>");
 }
 
 void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)

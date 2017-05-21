@@ -29,11 +29,7 @@
     your version.
 */
 
-#define USING_DIFF_HIGHLIGHTER 1
-
-#ifdef USING_DIFF_HIGHLIGHTER
 #include "diffhighlighter.h"
-#endif
 
 #include <MessageViewer/BodyPartURLHandler>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -65,59 +61,9 @@ public:
             return AsIcon;
         }
 
-        static const QLatin1String tableStyle(
-            "style=\""
-            "text-align: left; "
-            "border: solid black 1px; "
-            "padding: 0.5em; "
-            "margin: 0em;\"");
-#ifdef USING_DIFF_HIGHLIGHTER
         DiffHighlighter highLighter;
         highLighter.highlightDiff(diff);
-        QString html = QStringLiteral("<br><div align=\"center\">");
-        html += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
-        html += highLighter.outputDiff();
-        html += QLatin1String("</pre></div>");
-#else
-        static const QLatin1String addedLineStyle("style=\"" "color: green;\"");
-        static const QLatin1String fileAddStyle("style=\"font-weight: bold; " "color: green; \"");
-
-        static const QLatin1String removedLineStyle("style=\"" "color: red;\"");
-        static const QLatin1String fileRemoveStyle("style=\"font-weight: bold; "
-                                                   "color: red ;\"");
-
-
-        static const QLatin1String sepStyle("style=\"color: black; font-weight: bold;\"");
-        static const QLatin1String chunkStyle("style=\"color: blue;\"");
-
-        QString html = QStringLiteral("<br><div align=\"center\">");
-        html += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
-
-        const QStringList lines = diff.split(QLatin1Char('\n'));
-        QStringList::ConstIterator end(lines.end());
-        for (QStringList::ConstIterator it = lines.begin(); it != end; ++it) {
-            const QString line((*it).toHtmlEscaped());
-            QString style;
-            if (!line.isEmpty()) {
-                if (line.startsWith(QStringLiteral("+++"))) {
-                    style = fileAddStyle;
-                } else if (line.startsWith(QStringLiteral("---"))) {
-                    style = fileRemoveStyle;
-                } else if (line.startsWith(QLatin1Char('+')) || line.startsWith(QLatin1Char('>'))) {
-                    style = addedLineStyle;
-                } else if (line.startsWith(QLatin1Char('-')) || line.startsWith(QLatin1Char('<'))) {
-                    style = removedLineStyle;
-                } else if (line.startsWith(QStringLiteral("=="))) {
-                    style = sepStyle;
-                } else if (line.startsWith(QStringLiteral("@@"))) {
-                    style = chunkStyle;
-                }
-            }
-            html += QLatin1String("<span ") + style + QLatin1Char('>') + line + QLatin1String("</span><br/>");
-        }
-
-        html += QLatin1String("</pre></div>");  
-#endif
+        const QString html = highLighter.outputDiff();
         writer->queue(html);
 
         return Ok;
