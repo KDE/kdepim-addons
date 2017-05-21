@@ -28,6 +28,9 @@ class RegexpEditorLineEditTest : public QObject
 public:
     explicit RegexpEditorLineEditTest(QObject *parent = nullptr);
     ~RegexpEditorLineEditTest() = default;
+
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // REGEXPEDITORLINEEDITTEST_H

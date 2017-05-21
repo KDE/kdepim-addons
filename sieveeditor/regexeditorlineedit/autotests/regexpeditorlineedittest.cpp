@@ -18,12 +18,28 @@
 */
 
 #include "regexpeditorlineedittest.h"
+#include "../regexpeditorlineedit.h"
+#include <QLineEdit>
+#include <QPushButton>
 #include <QTest>
 
 RegexpEditorLineEditTest::RegexpEditorLineEditTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void RegexpEditorLineEditTest::shouldHaveDefaultValue()
+{
+    RegexpEditorLineEdit w;
+    QLineEdit *mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
+    QVERIFY(mLineEdit);
+    QVERIFY(mLineEdit->text().isEmpty());
+
+    QPushButton *mRegExpEditorButton = w.findChild<QPushButton *>(QStringLiteral("regexpbutton"));
+    QVERIFY(mRegExpEditorButton);
+    QVERIFY(!mRegExpEditorButton->text().isEmpty());
+    QVERIFY(!mRegExpEditorButton->toolTip().isEmpty());
 }
 
 QTEST_MAIN(RegexpEditorLineEditTest)
