@@ -17,24 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <QStandardPaths>
-#include <QCommandLineParser>
-#include <QApplication>
 #include "regexpeditorwidget.h"
+#include <QHBoxLayout>
 
-int main(int argc, char **argv)
+
+RegExpEditorWidget::RegExpEditorWidget(QWidget *parent)
+    : QWidget(parent)
 {
-    QApplication app(argc, argv);
-    QStandardPaths::setTestModeEnabled(true);
-    QCommandLineParser parser;
-    parser.addVersionOption();
-    parser.addHelpOption();
-    parser.process(app);
 
-    RegExpEditorWidget *w = new RegExpEditorWidget;
-    w->resize(800, 600);
-    w->show();
-    app.exec();
-    delete w;
-    return 0;
 }
