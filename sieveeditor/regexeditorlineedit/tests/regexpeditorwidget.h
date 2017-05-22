@@ -21,14 +21,15 @@
 #define REGEXPEDITORWIDGET_H
 
 #include <QWidget>
-
+class RegexpEditorLineEdit;
 class RegExpEditorWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit RegExpEditorWidget(QWidget *parent = nullptr);
     ~RegExpEditorWidget() = default;
-
+private:
+    RegexpEditorLineEdit *mLineEdit;
 };
 
 #endif // REGEXPEDITORWIDGET_H

@@ -1,6 +1,7 @@
 set(sieveeditor_regexpeditor_SRCS
    main.cpp
    regexpeditorwidget.cpp
+   ../regexpeditorlineedit.cpp
 )
 
 add_executable(sieveeditorregexpeditor_gui ${sieveeditor_regexpeditor_SRCS})

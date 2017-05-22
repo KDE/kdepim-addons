@@ -18,11 +18,19 @@
 */
 
 #include "regexpeditorwidget.h"
-#include <QHBoxLayout>
-
+#include "../regexpeditorlineedit.h"
+#include <QVBoxLayout>
+#include <QVariant>
+#include <QCheckBox>
 
 RegExpEditorWidget::RegExpEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QVBoxLayout *layout = new QVBoxLayout(this);
+    QCheckBox *switchToRegexp = new QCheckBox(QStringLiteral("Switch to regexp line edit"), this);
+    layout->addWidget(switchToRegexp);
+    mLineEdit = new RegexpEditorLineEdit(this);
 
+    connect(switchToRegexp, &QCheckBox::toggled, mLineEdit, &RegexpEditorLineEdit::switchToRegexpEditorLineEdit);
+    layout->addWidget(mLineEdit);
 }
