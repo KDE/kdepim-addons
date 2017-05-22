@@ -26,6 +26,11 @@
 #include <QPushButton>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
+#include <QDialog>
+#include <QDebug>
+#include <KPluginTrader>
+
+#include <KTextWidgets/kregexpeditorinterface.h>
 
 
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
@@ -61,7 +66,20 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 
 void RegexpEditorLineEdit::slotOpenRegexpEditor()
 {
-    //TODO
+    QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QLatin1String("KRegExpEditor/KRegExpEditor"),
+                                                                               QString(), this);
+    qDebug() << " editorDialog"<<editorDialog;
+    if ( editorDialog ) {
+        KRegExpEditorInterface* iface = qobject_cast<KRegExpEditorInterface*>(editorDialog);
+        Q_ASSERT( iface ); // This should not fail!
+
+        // now use the editor.
+        iface->setRegExp(mLineEdit->text());
+
+        if(editorDialog->exec() == QDialog::Accepted) {
+            mLineEdit->setText(iface->regExp());
+        }
+    }
 }
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
