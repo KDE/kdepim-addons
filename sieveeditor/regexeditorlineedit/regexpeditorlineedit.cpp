@@ -45,6 +45,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mLineEdit = new QLineEdit(this);
+    connect(mLineEdit, &QLineEdit::textChanged, this, &RegexpEditorLineEdit::textChanged);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
@@ -55,6 +56,8 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mRegexEditorInstalled = !KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty();
     if (mRegexEditorInstalled) {
         connect(mRegExpEditorButton, &QPushButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
+    } else {
+        qWarning() << "KRegExpEditor is not installed on system.";
     }
     //Hidden by default
     mRegExpEditorButton->setVisible(false);
