@@ -71,7 +71,6 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
 {
     QString error;
     QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
-    qDebug() << "error " << error;
     qDebug() << " editorDialog"<<editorDialog;
     if ( editorDialog ) {
         KRegExpEditorInterface* iface = qobject_cast<KRegExpEditorInterface*>(editorDialog);
