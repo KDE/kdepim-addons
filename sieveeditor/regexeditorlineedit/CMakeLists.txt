@@ -14,5 +14,5 @@ kcoreaddons_add_plugin(regexpeditorlineeditplugin JSON regexepeditorlineedit.jso
     ${regexpeditorlineeditplugin_SRCS} INSTALL_NAMESPACE libksieve)
 
 target_link_libraries(regexpeditorlineeditplugin
-    KF5::I18n KF5::KSieveUi
+    KF5::I18n KF5::KSieveUi KF5::TextWidgets
     )
