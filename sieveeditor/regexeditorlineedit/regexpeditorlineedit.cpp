@@ -24,7 +24,7 @@
 #include <QStackedWidget>
 #include <QHBoxLayout>
 #include <QLineEdit>
-#include <QPushButton>
+#include <QToolButton>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 #include <QDialog>
@@ -36,27 +36,52 @@
 
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
                            )
+struct InfoRegExp
+{
+    InfoRegExp()
+        : status(Unknown)
+    {
+
+    }
+
+    enum RegexpEditorStatus {
+        Unknown = 0,
+        Installed,
+        NotInstalled
+    };
+    RegexpEditorStatus status;
+};
+
+Q_GLOBAL_STATIC(InfoRegExp, s_regexpeditorinstalled)
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractRegexpEditorLineEdit(parent)
+    , mEditorDialog(nullptr)
     , mIsRegExpMode(false)
-    , mRegexEditorInstalled(false)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
 
     mLineEdit = new QLineEdit(this);
     connect(mLineEdit, &QLineEdit::textChanged, this, &RegexpEditorLineEdit::textChanged);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
-    mRegExpEditorButton = new QPushButton(i18n("..."), this);
+    mRegExpEditorButton = new QToolButton(this);
+    mRegExpEditorButton->setText(i18n("..."));
     mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
     mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
-    mRegexEditorInstalled = !KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty();
-    if (mRegexEditorInstalled) {
-        connect(mRegExpEditorButton, &QPushButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
+    if (s_regexpeditorinstalled->status == InfoRegExp::Unknown) {
+        if (KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty()) {
+            s_regexpeditorinstalled->status = InfoRegExp::NotInstalled;
+        } else {
+            s_regexpeditorinstalled->status = InfoRegExp::Installed;
+        }
+    }
+    if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
+        connect(mRegExpEditorButton, &QToolButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
     } else {
         qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
     }
@@ -70,29 +95,30 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 
 void RegexpEditorLineEdit::slotOpenRegexpEditor()
 {
-    QString error;
+    if (!mEditorDialog) {
+        QString error;
 
-    QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
-    qDebug() << " editorDialog"<<editorDialog;
-    if ( editorDialog ) {
-        KRegExpEditorInterface* iface = qobject_cast<KRegExpEditorInterface*>(editorDialog);
-        Q_ASSERT( iface ); // This should not fail!
-
-        // now use the editor.
-        iface->setRegExp(mLineEdit->text());
-
-        if(editorDialog->exec() == QDialog::Accepted) {
-            mLineEdit->setText(iface->regExp());
+        mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
+        if ( !mEditorDialog ) {
+            qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
+            return;
         }
-    } else {
-        qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
+    }
+    KRegExpEditorInterface* iface = qobject_cast<KRegExpEditorInterface*>(mEditorDialog);
+    Q_ASSERT( iface ); // This should not fail!
+
+    // now use the editor.
+    iface->setRegExp(mLineEdit->text());
+
+    if(mEditorDialog->exec() == QDialog::Accepted) {
+        mLineEdit->setText(iface->regExp());
     }
 }
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
 {
     mIsRegExpMode = regexpEditor;
-    if (mRegexEditorInstalled) {
+    if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
         mRegExpEditorButton->setVisible(mIsRegExpMode);
     }
 }

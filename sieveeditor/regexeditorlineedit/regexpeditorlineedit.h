@@ -23,7 +23,7 @@
 #include <QWidget>
 #include <KSieveUi/AbstractRegexpEditorLineEdit>
 class QLineEdit;
-class QPushButton;
+class QToolButton;
 class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
 {
     Q_OBJECT
@@ -38,9 +38,9 @@ public:
 private:
     void slotOpenRegexpEditor();
     QLineEdit *mLineEdit;
-    QPushButton *mRegExpEditorButton;
+    QToolButton *mRegExpEditorButton;
+    QDialog *mEditorDialog;
     bool mIsRegExpMode;
-    bool mRegexEditorInstalled;
 };
 
 #endif // REGEXPEDITORLINEEDIT_H

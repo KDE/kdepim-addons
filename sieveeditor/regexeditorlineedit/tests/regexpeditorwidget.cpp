@@ -27,13 +27,13 @@ RegExpEditorWidget::RegExpEditorWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
-    QCheckBox *switchToRegexp = new QCheckBox(QStringLiteral("Switch to regexp line edit"), this);
-    layout->addWidget(switchToRegexp);
-    mLineEdit = new RegexpEditorLineEdit(this);
-    layout->addWidget(mLineEdit);
+    for (int i = 0; i < 4; ++i) {
+        QCheckBox *switchToRegexp = new QCheckBox(QStringLiteral("Switch to regexp line edit"), this);
+        layout->addWidget(switchToRegexp);
+        RegexpEditorLineEdit *lineEdit = new RegexpEditorLineEdit(this);
+        layout->addWidget(lineEdit);
+        connect(switchToRegexp, &QCheckBox::toggled, lineEdit, &RegexpEditorLineEdit::switchToRegexpEditorLineEdit);
+    }
 
     layout->addStretch(1);
-
-    connect(switchToRegexp, &QCheckBox::toggled, mLineEdit, &RegexpEditorLineEdit::switchToRegexpEditorLineEdit);
-
 }
