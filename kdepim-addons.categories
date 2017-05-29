@@ -23,3 +23,4 @@ org.kde.pim.kmail_automaticaddcontactsplugin kdepim-addons (Automatic add contac
 org.kde.pim.kaddressbook_importexportgmx kdepim-addons (KAddressbook import export gmx plugin)
 org.kde.pim.gnupgwks kdepim-addons (OpenPGP and GnuPG WKS body part formatter plugin)
 org.kde.pim.imapfoldercompletion kdepim-addons (SieveEditor imap completion folder)
+org.kde.pim.regexpeditorlineedit kdepim-addons (SieveEditor Regexp Editor plugin)

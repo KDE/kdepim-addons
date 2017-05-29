@@ -18,6 +18,7 @@
 */
 
 #include "regexpeditorlineedit.h"
+#include "regexpeditorlineeditplugin_debug.h"
 #include <kpluginfactory.h>
 
 #include <QStackedWidget>
@@ -57,7 +58,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     if (mRegexEditorInstalled) {
         connect(mRegExpEditorButton, &QPushButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
     } else {
-        qWarning() << "KRegExpEditor is not installed on system.";
+        qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
     }
     //Hidden by default
     mRegExpEditorButton->setVisible(false);
@@ -70,6 +71,7 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 void RegexpEditorLineEdit::slotOpenRegexpEditor()
 {
     QString error;
+
     QDialog *editorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
     qDebug() << " editorDialog"<<editorDialog;
     if ( editorDialog ) {
@@ -83,7 +85,7 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
             mLineEdit->setText(iface->regExp());
         }
     } else {
-        qDebug() << " Impossible to create regexpeditor " << error;
+        qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
     }
 }
 
