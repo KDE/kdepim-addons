@@ -50,7 +50,7 @@ void DiffHighlighter::highlightDiff(const QString &str)
         "margin: 0em;\"");
 
     mOutputDiff = QStringLiteral("<br><div align=\"center\">");
-    mOutputDiff += QLatin1String("<pre ") + tableStyle + QLatin1Char('>');
+    mOutputDiff += QStringLiteral("<pre ") + tableStyle + QLatin1Char('>');
 
     KSyntaxHighlighting::State state;
 

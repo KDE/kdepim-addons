@@ -23,7 +23,7 @@ int main(int argc, char **argv)
     about.setupCommandLine(&parser);
     parser.process(app);
     about.processCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("+[URL]"), i18n("Document to open")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("+[URL]"), i18n("Document to open")));
 
     mailreader *widget = new mailreader;
 

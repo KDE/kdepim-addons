@@ -70,7 +70,7 @@ void mailreader::setupDocks()
     monitor->setSession(session);
     monitor->setCollectionMonitored(Akonadi::Collection::root());
     monitor->fetchCollection(true);
-    monitor->setMimeTypeMonitored(QLatin1String("message/rfc822"), true);
+    monitor->setMimeTypeMonitored(QStringLiteral("message/rfc822"), true);
     monitor->itemFetchScope().fetchPayloadPart(Akonadi::MessagePart::Header);
 
     Akonadi::EntityTreeModel *entityModel = new Akonadi::EntityTreeModel(monitor, this);
@@ -107,14 +107,14 @@ void mailreader::setupDocks()
 
     // Dock the message list view
     QDockWidget *messageListDock = new QDockWidget(i18n("Messages"), this);
-    messageListDock->setObjectName(QLatin1String("Messages"));
+    messageListDock->setObjectName(QStringLiteral("Messages"));
     messageListDock->setWidget(m_messagePane);
     messageListDock->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable);
     addDockWidget(Qt::TopDockWidgetArea, messageListDock);
 
     // Dock the folder tree view
     QDockWidget *folderDock = new QDockWidget(i18n("Folders"), this);
-    folderDock->setObjectName(QLatin1String("Folders"));
+    folderDock->setObjectName(QStringLiteral("Folders"));
     folderDock->setWidget(collectionView);
     folderDock->setFeatures(QDockWidget::DockWidgetMovable | QDockWidget::DockWidgetFloatable);
     addDockWidget(Qt::LeftDockWidgetArea, folderDock);
@@ -132,17 +132,17 @@ void mailreader::setupActions()
     KStandardAction::quit(qApp, SLOT(closeAllWindows()), actionCollection());
     KStandardAction::preferences(m_view, SLOT(slotConfigure()), actionCollection());
 
-    QAction *createTab = new QAction(QIcon::fromTheme(QLatin1String("tab-new")),
+    QAction *createTab = new QAction(QIcon::fromTheme(QStringLiteral("tab-new")),
                                      i18n("Open a new tab"),
                                      this);
-    actionCollection()->addAction(QLatin1String("new_tab"), createTab);
+    actionCollection()->addAction(QStringLiteral("new_tab"), createTab);
     connect(createTab, &QAction::triggered, m_messagePane, &MessageList::Pane::createNewTab);
 
     m_previousMessage = new QAction(i18n("Previous Message"), this);
-    actionCollection()->addAction(QLatin1String("previous_message"), m_previousMessage);
+    actionCollection()->addAction(QStringLiteral("previous_message"), m_previousMessage);
     connect(m_previousMessage, &QAction::triggered, this, &mailreader::slotPreviousMessage);
     m_nextMessage = new QAction(i18n("Next Message"), this);
-    actionCollection()->addAction(QLatin1String("next_message"), m_nextMessage);
+    actionCollection()->addAction(QStringLiteral("next_message"), m_nextMessage);
     connect(m_nextMessage, &QAction::triggered, this, &mailreader::slotNextMessage);
 }
 

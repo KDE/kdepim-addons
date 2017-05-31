@@ -108,7 +108,7 @@ void GMXImportExportPluginInterface::exportGMX()
     KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.gmx")), GMX_FILESELECTION_STRING, nullptr, options);
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.gmx")), GMX_FILESELECTION_STRING, nullptr, options);
     if (url.isEmpty()) {
         return;
     }
@@ -500,7 +500,7 @@ void GMXImportExportPluginInterface::importGMX()
         addressee->setNickName(itemList.at(1));
         addressee->setGivenName(itemList.at(2));
         addressee->setFamilyName(itemList.at(3));
-        addressee->setFormattedName(itemList.at(3) + QLatin1String(", ") + itemList.at(2));
+        addressee->setFormattedName(itemList.at(3) + QStringLiteral(", ") + itemList.at(2));
         addressee->setPrefix(itemList.at(4));
         if (checkDateTime(itemList.at(5), dt)) {
             addressee->setBirthday(dt);

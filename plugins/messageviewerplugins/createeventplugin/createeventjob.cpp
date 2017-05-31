@@ -59,7 +59,7 @@ void CreateEventJob::slotFetchDone(KJob *job)
     if (fetchJob->items().count() == 1) {
         mItem = fetchJob->items().at(0);
     } else {
-        Q_EMIT emitResult();
+        emitResult();
         return;
     }
     createEvent();
@@ -69,7 +69,7 @@ void CreateEventJob::createEvent()
 {
     if (!mItem.hasPayload<KMime::Message::Ptr>()) {
         qCDebug(CREATEEVENTPLUGIN_LOG) << " item has not payload";
-        Q_EMIT emitResult();
+        emitResult();
         return;
     }
 
@@ -87,7 +87,7 @@ void CreateEventJob::slotEventCreated(KJob *job)
         qCDebug(CREATEEVENTPLUGIN_LOG) << "Error during create new Event " << job->errorString();
         setError(job->error());
         setErrorText(job->errorText());
-        Q_EMIT emitResult();
+        emitResult();
     } else {
         Akonadi::ItemCreateJob *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
@@ -101,5 +101,5 @@ void CreateEventJob::slotRelationCreated(KJob *job)
     if (job->error()) {
         qCDebug(CREATEEVENTPLUGIN_LOG) << "Error during create new Event " << job->errorString();
     }
-    Q_EMIT emitResult();
+    emitResult();
 }

@@ -109,7 +109,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
         const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
         if (!infos.isEmpty()) {
             connect(mActionGroup, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);
-            for (ViewerPluginExternalScriptInfo info : infos) {
+            for (const ViewerPluginExternalScriptInfo &info : infos) {
                 QAction *act = new QAction(info.name(), this);
                 act->setIconText(info.name());
                 const QString &description = info.description();

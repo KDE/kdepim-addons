@@ -694,9 +694,9 @@ void CSVImportDialog::saveTemplate()
     }
 
     const QString fileName
-        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/kaddressbook/csv-templates/")
+        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kaddressbook/csv-templates/")
           +QUuid::createUuid().toString()
-          +QLatin1String(".desktop");
+          +QStringLiteral(".desktop");
 
     QFileInfo fileInfo(fileName);
     QDir().mkpath(fileInfo.absolutePath());

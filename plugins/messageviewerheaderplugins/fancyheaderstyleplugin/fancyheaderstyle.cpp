@@ -95,7 +95,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         //qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
         userHTML = QStringLiteral("<img src=\"%1\" width=\"%2\" height=\"%3\">")
                    .arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
-        userHTML = QLatin1String("<div class=\"senderpic\">") + userHTML + QLatin1String("</div>");
+        userHTML = QStringLiteral("<div class=\"senderpic\">") + userHTML + QStringLiteral("</div>");
     }
 
     // the subject line and box below for details
@@ -117,20 +117,20 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                                     "<td>")
                      .arg(i18n("From: "))
                      + StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress)
-                     + (message->headerByType("Resent-From") ? QLatin1String("&nbsp;")
+                     + (message->headerByType("Resent-From") ? QStringLiteral("&nbsp;")
                         + i18n("(resent from %1)",
                                StringUtil::emailAddrAsAnchor(
                                    resentFrom, StringUtil::DisplayFullAddress))
                         : QString())
-                     + (!vCardName().isEmpty() ? QLatin1String("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\">")
-                        + i18n("[vCard]") + QLatin1String("</a>")
+                     + (!vCardName().isEmpty() ? QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">")
+                        + i18n("[vCard]") + QStringLiteral("</a>")
                         : QString())
                      + (!message->organization(false)
                         ? QString()
-                        : QLatin1String("&nbsp;&nbsp;(")
+                        : QStringLiteral("&nbsp;&nbsp;(")
                         + mHeaderStyleUtil.strToHtml(message->organization()->asUnicodeString())
                         + QLatin1Char(')'))
-                     + QLatin1String("</td></tr>\n");
+                     + QStringLiteral("</td></tr>\n");
     }
     // to line
     if (strategy->showHeader(QStringLiteral("to"))) {

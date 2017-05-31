@@ -29,7 +29,7 @@
 
 int main(int argc, char **argv)
 {
-    const QString ba(QLatin1String("coisceim"));
+    const QString ba(QStringLiteral("coisceim"));
     const QString name = i18n("Coisceim application");
     KAboutData aboutData(ba, name, name);
     QApplication app(argc, argv);

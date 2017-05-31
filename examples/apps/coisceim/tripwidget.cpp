@@ -67,9 +67,9 @@ TripWidget::TripWidget(Trip *trip, QWidget *parent)
 
     vSplitter->addWidget(splitter);
 
-    FolderContentsWidget *mailWidget = createView(QLatin1String("Mail"), Trip::MailCollectionRole);
-    FolderContentsWidget *todoWidget = createView(QLatin1String("Todos"), Trip::TodoCollectionRole);
-    FolderContentsWidget *notesWidget = createView(QLatin1String("Notes"), Trip::NotesCollectionRole);
+    FolderContentsWidget *mailWidget = createView(QStringLiteral("Mail"), Trip::MailCollectionRole);
+    FolderContentsWidget *todoWidget = createView(QStringLiteral("Todos"), Trip::TodoCollectionRole);
+    FolderContentsWidget *notesWidget = createView(QStringLiteral("Notes"), Trip::NotesCollectionRole);
 
     ItemSelection *itemSelection = new ItemSelection(mailWidget->selectionModel(),
                                                      todoWidget->selectionModel(),

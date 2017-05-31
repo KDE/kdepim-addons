@@ -481,7 +481,7 @@ void VCardImportExportPluginInterface::exportVCard()
                                               QString(list[ 0 ].givenName()
                                                       +QLatin1Char(QLatin1Char('_'))
                                                       +list[ 0 ].familyName()
-                                                      +QLatin1String(".vcf"))),
+                                                      +QStringLiteral(".vcf"))),
                                           QString(), nullptr, options);
         if (url.isEmpty()) {   // user canceled export
             return;
@@ -520,7 +520,7 @@ void VCardImportExportPluginInterface::exportVCard()
             for (int i = 0; i < list.count(); ++i) {
                 const KContacts::Addressee contact = list.at(i);
 
-                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + QLatin1String(".vcf"));
+                url = QUrl::fromLocalFile(baseUrl.path() + QLatin1Char('/') + contactFileName(contact) + QStringLiteral(".vcf"));
 
                 bool tmpOk = false;
 

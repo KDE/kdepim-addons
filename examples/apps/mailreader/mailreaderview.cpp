@@ -74,7 +74,7 @@ void mailreaderView::displayAboutPage()
                  "<h2 style='margin-top: 0px;'>Welcome to Mailreader %1</h2>"
                  "<p>Mailread is a proof of concept reader for the Akonadi/KMime framework.</p>\n"
                  "<p style='margin-bottom: 0px'>&nbsp; &nbsp; <a href='http://pim.kde.org/akonadi'>The Akonadi Team</a></p>")
-          .subs(QLatin1String("0.1")); // Akonadi Mail Reader version
+          .subs(QStringLiteral("0.1")); // Akonadi Mail Reader version
 
     //TODO PORT MEm_readerWin->displaySplashPage(info.toString());
 }

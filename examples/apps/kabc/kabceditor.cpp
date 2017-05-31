@@ -89,7 +89,7 @@ void Dialog::save()
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData(QLatin1String("kabceditor"), i18n("KABC Editor"), QLatin1String("1.0"));
+    KAboutData aboutData(QStringLiteral("kabceditor"), i18n("KABC Editor"), QStringLiteral("1.0"));
     aboutData.setShortDescription(i18n("A contact editor for Akonadi"));
     QApplication app(argc, argv);
     QCommandLineParser parser;

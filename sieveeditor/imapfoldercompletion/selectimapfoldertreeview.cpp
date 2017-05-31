@@ -40,7 +40,7 @@ void SelectImapFolderTreeView::generalPaletteChanged()
     mTextColor = color;
 }
 
-void SelectImapFolderTreeView::setStatus(const LoadingStatus &status)
+void SelectImapFolderTreeView::setStatus(LoadingStatus status)
 {
     mStatus = status;
 }

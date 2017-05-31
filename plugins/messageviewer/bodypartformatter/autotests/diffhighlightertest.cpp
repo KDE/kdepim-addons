@@ -50,9 +50,9 @@ void DiffHighlighterTest::shouldGenerateDiff()
 {
     QFETCH(QString, input);
 
-    const QString originalFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral(".diff");
-    const QString refFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-ref.diff");
-    const QString generatedFile = QLatin1String(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
+    const QString originalFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral(".diff");
+    const QString refFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-ref.diff");
+    const QString generatedFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
     QString diff = readDiffFile(originalFile);
 
     DiffHighlighter highLighter;

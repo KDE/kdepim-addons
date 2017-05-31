@@ -35,8 +35,8 @@ public:
     MailModelPrivate(MailModel *model)
         : q_ptr(model)
     {
-        m_collectionHeaders << QLatin1String("Folder") << QLatin1String("Count");
-        m_itemHeaders << QLatin1String("Subject") << QLatin1String("From") << QLatin1String("Date");
+        m_collectionHeaders << QStringLiteral("Folder") << QStringLiteral("Count");
+        m_itemHeaders << QStringLiteral("Subject") << QStringLiteral("From") << QStringLiteral("Date");
     }
 
     Q_DECLARE_PUBLIC(MailModel)

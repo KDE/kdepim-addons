@@ -29,14 +29,14 @@
 
 int main(int argc, char *argv[])
 {
-    KAboutData aboutData(QLatin1String("etm_usage"),
+    KAboutData aboutData(QStringLiteral("etm_usage"),
                          i18n("ETM Test application"),
-                         QLatin1String("0.99"),
+                         QStringLiteral("0.99"),
                          i18n("Test app for EntityTreeModel"),
                          KAboutLicense::GPL,
-                         QLatin1String("http://pim.kde.org/akonadi/"));
-    QApplication::setWindowIcon(QIcon::fromTheme(QLatin1String("akonadi")));
-    aboutData.addAuthor(i18n("Stephen Kelly"), i18n("Author"), QLatin1String("steveire@gmail.com"));
+                         QStringLiteral("http://pim.kde.org/akonadi/"));
+    QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
+    aboutData.addAuthor(i18n("Stephen Kelly"), i18n("Author"), QStringLiteral("steveire@gmail.com"));
 
     QApplication app(argc, argv);
     QCommandLineParser parser;

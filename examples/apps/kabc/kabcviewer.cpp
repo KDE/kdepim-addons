@@ -61,7 +61,7 @@ void Dialog::loadUid(Akonadi::Item::Id uid)
 
 int main(int argc, char **argv)
 {
-    KAboutData aboutData(QLatin1String("kabcviewer"), i18n("KABC Viewer"), QLatin1String("1.0"));
+    KAboutData aboutData(QStringLiteral("kabcviewer"), i18n("KABC Viewer"), QStringLiteral("1.0"));
     aboutData.setShortDescription(i18n("A contact viewer for Akonadi"));
     QApplication app(argc, argv);
     QCommandLineParser parser;
@@ -72,15 +72,15 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    parser.addOption(QCommandLineOption(QStringList() << QLatin1String("uid"), i18n("Uid of the Akonadi contact"), QLatin1String("uid")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("uid"), i18n("Uid of the Akonadi contact"), QStringLiteral("uid")));
 
     Dialog dlg;
-    if (!parser.isSet(QLatin1String("uid"))) {
+    if (!parser.isSet(QStringLiteral("uid"))) {
         parser.showHelp();
         return 1;
     }
 
-    dlg.loadUid(parser.value(QLatin1String("uid")).toLongLong());
+    dlg.loadUid(parser.value(QStringLiteral("uid")).toLongLong());
     dlg.exec();
 
     return 0;

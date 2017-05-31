@@ -119,7 +119,7 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
 {
     QString pattern = mUi->filtercustom->text();
     if (mUi->atTheBeginning->isChecked()) {
-        pattern = QLatin1String("|") + pattern;
+        pattern = QStringLiteral("|") + pattern;
     }
     if (mUi->atTheEnd->isChecked()) {
         pattern += QLatin1String("|");
@@ -130,10 +130,10 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
         pattern += QLatin1Char('$') + collapseValue;
     }
 
-    pattern += (collapseValue.isEmpty() ? QLatin1String("$") : QLatin1String(",")) + AdBlockBlockableItemsWidget::elementType(mCurrentType);
+    pattern += (collapseValue.isEmpty() ? QStringLiteral("$") : QStringLiteral(",")) + AdBlockBlockableItemsWidget::elementType(mCurrentType);
 
     if (mUi->exceptionFilter->isChecked()) {
-        pattern = QLatin1String("@@") + pattern;
+        pattern = QStringLiteral("@@") + pattern;
     }
     const int numberOfElement(mUi->applyListElement->count());
     for (int i = 0; i < numberOfElement; ++i) {
@@ -145,7 +145,7 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
 
     if (mUi->restrictToDomain->isChecked()) {
         if (!mUi->restrictToDomainStr->text().isEmpty()) {
-            pattern += QLatin1String(",domain=") + mUi->restrictToDomainStr->text();
+            pattern += QStringLiteral(",domain=") + mUi->restrictToDomainStr->text();
         }
     }
     if (mUi->matchCase->isChecked()) {

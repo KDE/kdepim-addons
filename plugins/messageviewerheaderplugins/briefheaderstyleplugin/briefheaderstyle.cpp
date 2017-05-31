@@ -75,15 +75,15 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
 
     const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
-    QString headerStr = QLatin1String("<div class=\"header\" dir=\"") + dir + QLatin1String("\">\n");
+    QString headerStr = QStringLiteral("<div class=\"header\" dir=\"") + dir + QStringLiteral("\">\n");
 
     if (strategy->showHeader(QStringLiteral("subject"))) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n")
-                     +QLatin1String("<b style=\"font-size:130%\">");
+        headerStr += QStringLiteral("<div dir=\"") + subjectDir + QStringLiteral("\">\n")
+                     +QStringLiteral("<b style=\"font-size:130%\">");
 
-        headerStr += mHeaderStyleUtil.subjectString(message, flags) + QLatin1String("</b></div>\n");
+        headerStr += mHeaderStyleUtil.subjectString(message, flags) + QStringLiteral("</b></div>\n");
     }
     QStringList headerParts;
 
@@ -94,7 +94,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         */
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayNameOnly);
         if (!vCardName().isEmpty()) {
-            fromPart += QLatin1String("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\">") + i18n("[vCard]") + QLatin1String("</a>");
+            fromPart += QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">") + i18n("[vCard]") + QStringLiteral("</a>");
         }
         headerParts << fromPart;
     }
@@ -118,7 +118,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QLatin1String(" (") + headerParts.filter(QRegExp(QLatin1String("\\S"))).join(QStringLiteral(",\n")) + QLatin1Char(')');
+    headerStr += QStringLiteral(" (") + headerParts.filter(QRegExp(QLatin1String("\\S"))).join(QStringLiteral(",\n")) + QLatin1Char(')');
 
     headerStr += QLatin1String("</div>\n");
 

@@ -56,9 +56,9 @@ CreateTripWidget::CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidge
 
     layout->addLayout(configureLayout);
 
-    m_mailWidget = createView(QLatin1String("Mail"), Trip::MailCollectionRole);
-    m_todoWidget = createView(QLatin1String("Todos"), Trip::TodoCollectionRole);
-    m_notesWidget = createView(QLatin1String("Notes"), Trip::NotesCollectionRole);
+    m_mailWidget = createView(QStringLiteral("Mail"), Trip::MailCollectionRole);
+    m_todoWidget = createView(QStringLiteral("Todos"), Trip::TodoCollectionRole);
+    m_notesWidget = createView(QStringLiteral("Notes"), Trip::NotesCollectionRole);
 
     configureLayout->addWidget(m_mailWidget);
     configureLayout->addWidget(m_todoWidget);

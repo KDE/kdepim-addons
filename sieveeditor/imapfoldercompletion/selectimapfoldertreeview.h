@@ -35,7 +35,7 @@ public:
         Failed
     };
 
-    void setStatus(const LoadingStatus &status);
+    void setStatus(LoadingStatus status);
 
 protected:
     void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;

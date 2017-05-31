@@ -95,7 +95,7 @@ QVariant TripModel::data(const QModelIndex &index, int role) const
             return QVariant::fromValue<QWidget *>(m_createWidget);
         }
         if (role == Qt::DecorationRole) {
-            return QIcon::fromTheme(QLatin1String("list-add-new"));
+            return QIcon::fromTheme(QStringLiteral("list-add-new"));
         }
         return QVariant();
     }

@@ -48,13 +48,13 @@ void RenderTest::testRender_data()
     QTest::addColumn<QString>("outFileName");
 
     QDir dir(QStringLiteral(MAIL_DATA_DIR));
-    const QStringList lst = dir.entryList(QStringList(QLatin1String("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    const QStringList lst = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
     for (const QString &file : lst) {
-        if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QLatin1String(".html"))) {
+        if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))) {
             continue;
         }
-        QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QLatin1String(".html"))
-                                       << QString(file + QLatin1String(".out"));
+        QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
+                                       << QString(file + QStringLiteral(".out"));
     }
 }
 
@@ -64,7 +64,7 @@ void RenderTest::testRender()
     QFETCH(QString, referenceFileName);
     QFETCH(QString, outFileName);
 
-    const QString htmlFileName = outFileName + QLatin1String(".html");
+    const QString htmlFileName = outFileName + QStringLiteral(".html");
 
     QIcon::setThemeName(QStringLiteral("oxygen"));
 

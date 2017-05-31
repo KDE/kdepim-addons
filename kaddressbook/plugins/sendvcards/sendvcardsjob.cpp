@@ -72,13 +72,13 @@ bool SendVcardsJob::start()
             KContacts::adaptIMAttributes(data);
             createTemporaryDir();
             const QString contactRealName(contact.realName());
-            const QString attachmentName = (contactRealName.isEmpty() ? QStringLiteral("vcard") : contactRealName) + QLatin1String(".vcf");
+            const QString attachmentName = (contactRealName.isEmpty() ? QStringLiteral("vcard") : contactRealName) + QStringLiteral(".vcf");
             createTemporaryFile(data, attachmentName);
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
             ++mExpandGroupJobCount;
             const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
             const QString groupName(group.name());
-            const QString attachmentName = (groupName.isEmpty() ? QStringLiteral("vcard") : groupName) + QLatin1String(".vcf");
+            const QString attachmentName = (groupName.isEmpty() ? QStringLiteral("vcard") : groupName) + QStringLiteral(".vcf");
             Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(group, this);
             expandJob->setProperty("groupName", attachmentName);
             connect(expandJob, &KJob::result, this, &SendVcardsJob::slotExpandGroupResult);
@@ -95,7 +95,7 @@ bool SendVcardsJob::start()
 void SendVcardsJob::createTemporaryDir()
 {
     if (!mTempDir) {
-        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') +  QLatin1String("sendvcards"));
+        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') +  QStringLiteral("sendvcards"));
         mTempDir->setAutoRemove(false);
         mAttachmentTemporary->addTempDir(mTempDir->path());
     }
@@ -107,7 +107,7 @@ void SendVcardsJob::jobFinished()
     if (!lstAttachment.isEmpty()) {
         KToolInvocation::invokeMailer(QString(), QString(), QString(), QString(), QString(), QString(), lstAttachment);
     } else {
-        sendVCardsError(i18n("No vCard created."));
+        Q_EMIT sendVCardsError(i18n("No vCard created."));
     }
     mAttachmentTemporary->removeTempFiles();
     deleteLater();
@@ -145,7 +145,7 @@ void SendVcardsJob::createTemporaryFile(const QByteArray &data, const QString &f
     QFile file(mTempDir->path() + QLatin1Char('/') + filename);
     if (!file.open(QIODevice::WriteOnly | QIODevice::Text)) {
         qCDebug(KADDRESSBOOK_SENDVCARDS_LOG) << "Cannot write vcard filename :" << filename;
-        sendVCardsError(i18n("Temporary file \'%1\' cannot be created", filename));
+        Q_EMIT sendVCardsError(i18n("Temporary file \'%1\' cannot be created", filename));
         return;
     }
 

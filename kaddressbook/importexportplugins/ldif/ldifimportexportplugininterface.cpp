@@ -154,7 +154,7 @@ void LDifImportExportPluginInterface::exportLdif()
 
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     const QUrl url
-        = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QLatin1String("/addressbook.ldif")),
+        = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.ldif")),
                                       i18n("LDif Files (*.ldif)"), nullptr, options);
     if (url.isEmpty()) {
         return;

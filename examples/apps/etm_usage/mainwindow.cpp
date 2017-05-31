@@ -48,21 +48,21 @@ MainWindow::MainWindow(QWidget *parent, Qt::WindowFlags flags)
 
     Akonadi::Control::start();
 
-    tabWidget->addTab(new Checkable2(tabWidget), QLatin1String("Checkable2"));
-    tabWidget->addTab(new DescTabWidget(tabWidget), QLatin1String("Desc"));
-    tabWidget->addTab(new Tab1Widget(tabWidget), QLatin1String("EntityTreeModel"));
-    tabWidget->addTab(new Tab2Widget(tabWidget), QLatin1String("setRootIndex"));
-    tabWidget->addTab(new Tab2_5Widget(tabWidget), QLatin1String("Type specific data"));
-    tabWidget->addTab(new Tab3Widget(tabWidget), QLatin1String("KSelectionProxyModel"));
-    tabWidget->addTab(new Tab4Widget(tabWidget), QLatin1String("KSelectionProxyModel Filtered"));
-    tabWidget->addTab(new Tab6Widget(tabWidget), QLatin1String("Checkable Collections"));
-    tabWidget->addTab(new Tab5Widget(tabWidget), QLatin1String("Categorized Items"));
-    tabWidget->addTab(new Tab7Widget(tabWidget), QLatin1String("Tagged Items"));
-    tabWidget->addTab(new UnreadMailsWidget(tabWidget), QLatin1String("Unread Mails"));
-    tabWidget->addTab(new RecursiveItemListWidget(tabWidget), QLatin1String("Items only"));
-    tabWidget->addTab(new EntityFindingWidget(tabWidget), QLatin1String("Find entities"));
-    tabWidget->addTab(new CollectionMonitoredWidget(tabWidget), QLatin1String("SetCollectionMonitored"));
-    tabWidget->addTab(new UnreadMailsInCollectionsWidget(tabWidget), QLatin1String("UnreadMails"));
+    tabWidget->addTab(new Checkable2(tabWidget), QStringLiteral("Checkable2"));
+    tabWidget->addTab(new DescTabWidget(tabWidget), QStringLiteral("Desc"));
+    tabWidget->addTab(new Tab1Widget(tabWidget), QStringLiteral("EntityTreeModel"));
+    tabWidget->addTab(new Tab2Widget(tabWidget), QStringLiteral("setRootIndex"));
+    tabWidget->addTab(new Tab2_5Widget(tabWidget), QStringLiteral("Type specific data"));
+    tabWidget->addTab(new Tab3Widget(tabWidget), QStringLiteral("KSelectionProxyModel"));
+    tabWidget->addTab(new Tab4Widget(tabWidget), QStringLiteral("KSelectionProxyModel Filtered"));
+    tabWidget->addTab(new Tab6Widget(tabWidget), QStringLiteral("Checkable Collections"));
+    tabWidget->addTab(new Tab5Widget(tabWidget), QStringLiteral("Categorized Items"));
+    tabWidget->addTab(new Tab7Widget(tabWidget), QStringLiteral("Tagged Items"));
+    tabWidget->addTab(new UnreadMailsWidget(tabWidget), QStringLiteral("Unread Mails"));
+    tabWidget->addTab(new RecursiveItemListWidget(tabWidget), QStringLiteral("Items only"));
+    tabWidget->addTab(new EntityFindingWidget(tabWidget), QStringLiteral("Find entities"));
+    tabWidget->addTab(new CollectionMonitoredWidget(tabWidget), QStringLiteral("SetCollectionMonitored"));
+    tabWidget->addTab(new UnreadMailsInCollectionsWidget(tabWidget), QStringLiteral("UnreadMails"));
 
     setCentralWidget(tabWidget);
 }

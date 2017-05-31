@@ -106,7 +106,7 @@ Tab6Widget::Tab6Widget(QWidget *parent, Qt::WindowFlags f)
     selectionProxy->setSourceModel(m_etw->model());
 
     Akonadi::EntityMimeTypeFilterModel *itemFilter = new Akonadi::EntityMimeTypeFilterModel(this);
-    itemFilter->setObjectName(QLatin1String("itemFilter"));
+    itemFilter->setObjectName(QStringLiteral("itemFilter"));
     itemFilter->addMimeTypeExclusionFilter(Akonadi::Collection::mimeType());
     itemFilter->setHeaderGroup(Akonadi::EntityTreeModel::ItemListHeaders);
     itemFilter->setSourceModel(selectionProxy);

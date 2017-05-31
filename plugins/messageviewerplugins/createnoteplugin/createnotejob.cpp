@@ -77,7 +77,7 @@ void CreateNoteJob::noteCreated(KJob *job)
         qCWarning(CREATENOTEPLUGIN_LOG) << "Error during create new Note " << job->errorString();
         setError(job->error());
         setErrorText(job->errorText());
-        Q_EMIT emitResult();
+        emitResult();
     } else {
         Akonadi::ItemCreateJob *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
@@ -93,7 +93,7 @@ void CreateNoteJob::noteUpdated(KJob *job)
         setErrorText(job->errorText());
     }
 
-    Q_EMIT emitResult();
+    emitResult();
 }
 
 void CreateNoteJob::relationCreated(KJob *job)
@@ -101,5 +101,5 @@ void CreateNoteJob::relationCreated(KJob *job)
     if (job->error()) {
         qCDebug(CREATENOTEPLUGIN_LOG) << "Error during create new Note " << job->errorString();
     }
-    Q_EMIT emitResult();
+    emitResult();
 }

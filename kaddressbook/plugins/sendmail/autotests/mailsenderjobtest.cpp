@@ -76,7 +76,7 @@ void MailSenderJobTest::shouldSendSignalWhenOneEmail()
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
     QCOMPARE(spy.count(), 1);
-    const QStringList resultLst = spy.at(0).at(0).value<QStringList>();
+    const QStringList resultLst = spy.at(0).at(0).toStringList();
     QCOMPARE(resultLst.count(), 1);
 }
 
@@ -92,7 +92,7 @@ void MailSenderJobTest::shouldNotSendTwiceEmails()
     KABMailSender::MailSenderJob mailsender(lst);
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
-    const QStringList resultLst = spy.at(0).at(0).value<QStringList>();
+    const QStringList resultLst = spy.at(0).at(0).toStringList();
     QCOMPARE(resultLst.count(), 1);
 }
 
@@ -148,7 +148,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
     mailsender.start();
     QCOMPARE(spy.count(), 1);
-    const QStringList resultLst = spy.at(0).at(0).value<QStringList>();
+    const QStringList resultLst = spy.at(0).at(0).toStringList();
     QCOMPARE(resultLst.count(), 2);
 }
 

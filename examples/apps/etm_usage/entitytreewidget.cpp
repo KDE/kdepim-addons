@@ -89,7 +89,7 @@ void EntityTreeWidget::mimeTypesChoiceChanged(int index)
 
 void EntityTreeWidget::mimeTypesChanged(const QString &mimetypeList)
 {
-    const QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QLatin1String(","));
+    const QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QStringLiteral(","));
 
     foreach (const QString mimetype, m_monitor->mimeTypesMonitored()) {
         if (!list.contains(mimetype)) {

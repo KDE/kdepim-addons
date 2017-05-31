@@ -31,19 +31,19 @@ CreateFolderContentsWidget::CreateFolderContentsWidget(Trip *trip, int role, con
     , m_trip(trip)
     , m_role(role)
 {
-    QPushButton *button = new QPushButton(QLatin1String("Select ") + type);
+    QPushButton *button = new QPushButton(QStringLiteral("Select ") + type);
 
     QString iconName;
 
     switch (role) {
     case Trip::MailCollectionRole:
-        iconName = QLatin1String("kmail");
+        iconName = QStringLiteral("kmail");
         break;
     case Trip::NotesCollectionRole:
-        iconName = QLatin1String("knotes");
+        iconName = QStringLiteral("knotes");
         break;
     case Trip::TodoCollectionRole:
-        iconName = QLatin1String("korg-todo");
+        iconName = QStringLiteral("korg-todo");
         break;
     }
     QIcon icon = QIcon::fromTheme(iconName);

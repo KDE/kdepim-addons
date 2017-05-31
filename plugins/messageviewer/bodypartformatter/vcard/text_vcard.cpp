@@ -104,9 +104,9 @@ public:
             return AsIcon;
         }
 
-        writer->queue(QLatin1String("<div align=\"center\"><h2>")
+        writer->queue(QStringLiteral("<div align=\"center\"><h2>")
                       +i18np("Attached business card", "Attached business cards", count)
-                      +QLatin1String("</h2></div>"));
+                      +QStringLiteral("</h2></div>"));
 
         count = 0;
         static QString defaultPixmapPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("user-identity"), KIconLoader::Desktop)).url();
@@ -137,11 +137,11 @@ public:
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
             } else {
                 QImage img = a.photo().data();
-                const QString dir = bodyPart->nodeHelper()->createTempDir(QLatin1String("vcard-") + a.uid());
+                const QString dir = bodyPart->nodeHelper()->createTempDir(QStringLiteral("vcard-") + a.uid());
                 const QString filename = dir + QDir::separator() + a.uid();
                 img.save(filename, "PNG");
                 bodyPart->nodeHelper()->addTempFile(filename);
-                const QString href = QLatin1String("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
+                const QString href = QStringLiteral("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
                 htmlStr.replace(QLatin1String("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
             }
             writer->queue(htmlStr);
@@ -151,25 +151,25 @@ public:
                 || (memento && memento->finished() && !memento->vcardExist(count))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
                 QString op = QStringLiteral("addToAddressBook:%1").arg(count);
-                writer->queue(QLatin1String("<div align=\"center\"><a href=\"")
+                writer->queue(QStringLiteral("<div align=\"center\"><a href=\"")
                               +bodyPart->makeLink(op)
-                              +QLatin1String("\">")
+                              +QStringLiteral("\">")
                               +addToLinkText
-                              +QLatin1String("</a></div><br><br>"));
+                              +QStringLiteral("</a></div><br><br>"));
             } else {
                 if (memento->address(count) != a) {
                     const QString addToLinkText = i18n("[Update this contact to the address book]");
                     const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
-                    writer->queue(QLatin1String("<div align=\"center\"><a href=\"")
+                    writer->queue(QStringLiteral("<div align=\"center\"><a href=\"")
                                   +bodyPart->makeLink(op)
-                                  +QLatin1String("\">")
+                                  +QStringLiteral("\">")
                                   +addToLinkText
-                                  +QLatin1String("</a></div><br><br>"));
+                                  +QStringLiteral("</a></div><br><br>"));
                 } else {
                     const QString addToLinkText = i18n("[This contact is already in addressbook]");
-                    writer->queue(QLatin1String("<div align=\"center\">")
+                    writer->queue(QStringLiteral("<div align=\"center\">")
                                   +addToLinkText
-                                  +QLatin1String("</a></div><br><br>"));
+                                  +QStringLiteral("</a></div><br><br>"));
                 }
             }
             count++;
@@ -278,9 +278,9 @@ public:
         QString fileName;
         const QString givenName(a.givenName());
         if (givenName.isEmpty()) {
-            fileName = a.familyName() + QLatin1String(".vcf");
+            fileName = a.familyName() + QStringLiteral(".vcf");
         } else {
-            fileName = givenName + QLatin1Char('_') + a.familyName() + QLatin1String(".vcf");
+            fileName = givenName + QLatin1Char('_') + a.familyName() + QStringLiteral(".vcf");
         }
         // get the saveas file name
         QUrl saveAsUrl

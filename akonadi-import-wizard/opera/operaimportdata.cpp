@@ -59,7 +59,7 @@ bool OperaImportData::importMails()
     MailImporter::FilterOpera opera;
     initializeFilter(opera);
     opera.filterInfo()->setStatusMessage(i18n("Import in progress"));
-    const QString mailPath(mPath + QLatin1String("mail/store/"));
+    const QString mailPath(mPath + QStringLiteral("mail/store/"));
     QDir directory(mailPath);
     if (directory.exists()) {
         opera.importMails(mailPath);
@@ -72,7 +72,7 @@ bool OperaImportData::importMails()
 
 bool OperaImportData::importAddressBook()
 {
-    const QString addressbookFile(mPath + QLatin1String("bookmarks.adr"));
+    const QString addressbookFile(mPath + QStringLiteral("bookmarks.adr"));
     OperaAddressBook addressbook(addressbookFile);
     addressbook.setAbstractDisplayInfo(mAbstractDisplayInfo);
     addressbook.importAddressBook();
@@ -81,7 +81,7 @@ bool OperaImportData::importAddressBook()
 
 bool OperaImportData::importSettings()
 {
-    const QString settingFile(mPath + QLatin1String("mail/accounts.ini"));
+    const QString settingFile(mPath + QStringLiteral("mail/accounts.ini"));
     OperaSettings settings(settingFile);
     settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
     settings.importSettings();

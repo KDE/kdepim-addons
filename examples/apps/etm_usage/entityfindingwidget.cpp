@@ -56,8 +56,8 @@ EntityFindingWidget::EntityFindingWidget(QWidget *parent, Qt::WindowFlags f)
 {
     QGridLayout *gridLayout = new QGridLayout(this);
 
-    QLabel *collectionIdLabel = new QLabel(QLatin1String("Collection Id :"));
-    QLabel *itemIdLabel = new QLabel(QLatin1String("Item Id :"));
+    QLabel *collectionIdLabel = new QLabel(QStringLiteral("Collection Id :"));
+    QLabel *itemIdLabel = new QLabel(QStringLiteral("Item Id :"));
 
     m_collectionIdInput = new QLineEdit;
     m_itemIdInput = new QLineEdit;
