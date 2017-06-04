@@ -29,7 +29,7 @@ class ShorturlView : public PimCommon::CustomToolsViewInterface
 public:
     explicit ShorturlView(KActionCollection *ac, QWidget *parent = nullptr);
     ~ShorturlView();
-    KToggleAction *action() const Q_DECL_OVERRIDE;
+    KToggleAction *action() const override;
 
 private:
     void slotActivateShorturl(bool state);

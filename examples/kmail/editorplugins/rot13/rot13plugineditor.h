@@ -30,7 +30,7 @@ public:
     explicit Rot13PluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~Rot13PluginEditor();
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 };
 
 #endif // ROT13PLUGINEDITOR_H

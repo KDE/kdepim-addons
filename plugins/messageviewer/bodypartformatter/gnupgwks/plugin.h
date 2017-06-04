@@ -27,10 +27,10 @@ class ApplicationGnuPGWKSPlugin : public MimeTreeParser::Interface::BodyPartForm
 public:
     ApplicationGnuPGWKSPlugin() = default;
 
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE;
-    const char *subtype(int idx) const Q_DECL_OVERRIDE;
-    const char *type(int idx) const Q_DECL_OVERRIDE;
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE;
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override;
+    const char *subtype(int idx) const override;
+    const char *type(int idx) const override;
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override;
 };
 
 #endif

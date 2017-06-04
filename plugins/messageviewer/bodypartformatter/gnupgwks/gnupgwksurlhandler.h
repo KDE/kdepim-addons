@@ -32,9 +32,9 @@ class ApplicationGnuPGWKSUrlHandler : public MimeTreeParser::Interface::BodyPart
 public:
     ApplicationGnuPGWKSUrlHandler() = default;
 
-    bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE;
-    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const Q_DECL_OVERRIDE;
-    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE;
+    bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
+    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
+    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
     bool sendConfirmation(MessageViewer::Viewer *viewerInstance, const GnuPGWKSMessagePart &mp) const;

@@ -30,8 +30,8 @@ public:
     explicit ShorturlPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ShorturlPlugin();
 
-    CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
-    QString customToolName() const Q_DECL_OVERRIDE;
+    CustomToolsViewInterface *createView(KActionCollection *ac, CustomToolsWidgetNg *parent) override;
+    QString customToolName() const override;
 };
 }
 #endif // SHORTURLPLUGIN_H

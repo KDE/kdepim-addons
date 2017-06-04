@@ -42,7 +42,7 @@ class UnreadMailsInCollectionsProxy : public QSortFilterProxyModel
 public:
     UnreadMailsInCollectionsProxy(QObject *parent = nullptr);
 protected:
-    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const Q_DECL_OVERRIDE;
+    bool filterAcceptsRow(int source_row, const QModelIndex &source_parent) const override;
 };
 
 class UnreadMailsInCollectionsWidget : public QWidget

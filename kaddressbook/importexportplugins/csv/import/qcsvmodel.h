@@ -95,27 +95,27 @@ public:
     /**
      * Inherited from QAbstractTableModel.
      */
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Inherited from QAbstractTableModel.
      */
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE;
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override;
 
     /**
      * Inherited from QAbstractTableModel.
      */
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override;
 
     /**
      * Inherited from QAbstractTableModel.
      */
-    bool setData(const QModelIndex &index, const QVariant &data, int role = Qt::EditRole) Q_DECL_OVERRIDE;
+    bool setData(const QModelIndex &index, const QVariant &data, int role = Qt::EditRole) override;
 
     /**
      * Inherited from QAbstractTableModel.
      */
-    Qt::ItemFlags flags(const QModelIndex &index) const Q_DECL_OVERRIDE;
+    Qt::ItemFlags flags(const QModelIndex &index) const override;
 
 Q_SIGNALS:
     /**

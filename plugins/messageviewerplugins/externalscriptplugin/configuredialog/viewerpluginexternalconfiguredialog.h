@@ -30,10 +30,10 @@ public:
     ~ViewerPluginExternalConfigureDialog();
 
 protected:
-    QWidget *createLayout() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void load() Q_DECL_OVERRIDE;
-    void help() Q_DECL_OVERRIDE;
+    QWidget *createLayout() override;
+    void save() override;
+    void load() override;
+    void help() override;
 private:
     ViewerPluginExternalConfigureWidget *mConfigWidget;
 };

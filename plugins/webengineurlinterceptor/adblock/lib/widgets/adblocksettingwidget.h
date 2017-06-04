@@ -58,7 +58,7 @@ Q_SIGNALS:
     void settingsChanged();
 
 protected:
-    bool event(QEvent *event) Q_DECL_OVERRIDE;
+    bool event(QEvent *event) override;
 private:
     void hasChanged();
     void slotInfoLinkActivated(const QString &);

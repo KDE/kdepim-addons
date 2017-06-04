@@ -39,7 +39,7 @@ public Q_SLOTS:
     void setSearchPattern(const QString &pattern);
 
 protected:
-    bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+    bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const override;
 
 private:
     QString mPattern;

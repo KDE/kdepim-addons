@@ -38,7 +38,7 @@ public:
     void setStatus(LoadingStatus status);
 
 protected:
-    void paintEvent(QPaintEvent *event) Q_DECL_OVERRIDE;
+    void paintEvent(QPaintEvent *event) override;
 private:
     void generalPaletteChanged();
     QColor mTextColor;

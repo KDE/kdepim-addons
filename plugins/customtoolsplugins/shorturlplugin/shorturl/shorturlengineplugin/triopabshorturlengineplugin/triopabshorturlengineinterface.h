@@ -30,8 +30,8 @@ public:
     explicit TripAbShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~TripAbShortUrlEngineInterface();
 
-    void generateShortUrl() Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    void generateShortUrl() override;
+    QString engineName() const override;
 
 private:
     void slotShortUrlFinished(QNetworkReply *reply);

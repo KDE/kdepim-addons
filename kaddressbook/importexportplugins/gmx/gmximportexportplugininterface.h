@@ -31,9 +31,9 @@ public:
     explicit GMXImportExportPluginInterface(QObject *parent = nullptr);
     ~GMXImportExportPluginInterface();
 
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
-    bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) override;
+    void exec() override;
+    bool canImportFileType(const QUrl &url) override;
 private:
     void doExport(QFile *fp, const KContacts::AddresseeList &list) const;
     void slotImportGmx();

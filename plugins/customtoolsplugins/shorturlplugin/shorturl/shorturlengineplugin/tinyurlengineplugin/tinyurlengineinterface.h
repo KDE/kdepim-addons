@@ -29,9 +29,9 @@ public:
     explicit TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~TinyUrlEngineInterface();
 
-    void generateShortUrl() Q_DECL_OVERRIDE;
+    void generateShortUrl() override;
 
-    QString engineName() const Q_DECL_OVERRIDE;
+    QString engineName() const override;
 private:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotErrorFound(QNetworkReply::NetworkError error);

@@ -29,11 +29,11 @@ class ViewerPluginExternalscript : public MessageViewer::ViewerPlugin
 public:
     explicit ViewerPluginExternalscript(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
-    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) Q_DECL_OVERRIDE;
-    QString viewerPluginName() const Q_DECL_OVERRIDE;
+    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
+    QString viewerPluginName() const override;
 
-    void showConfigureDialog(QWidget *parent) Q_DECL_OVERRIDE;
-    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
+    void showConfigureDialog(QWidget *parent) override;
+    bool hasConfigureDialog() const override;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPT_H

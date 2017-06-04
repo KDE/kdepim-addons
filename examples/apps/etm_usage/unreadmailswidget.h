@@ -38,7 +38,7 @@ public:
     UnreadMailsTree(QObject *parent = nullptr);
 
 protected:
-    /* reimp */ bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const Q_DECL_OVERRIDE;
+    /* reimp */ bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const override;
 };
 
 class UnreadMailsWidget : public QWidget

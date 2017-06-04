@@ -30,9 +30,9 @@ class ApplicationPgpKeyUrlHandler : public MimeTreeParser::Interface::BodyPartUR
 public:
     ApplicationPgpKeyUrlHandler() = default;
 
-    bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE;
-    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const Q_DECL_OVERRIDE;
-    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE;
+    bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
+    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
+    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
     QUrlQuery decodePath(const QString &path) const;

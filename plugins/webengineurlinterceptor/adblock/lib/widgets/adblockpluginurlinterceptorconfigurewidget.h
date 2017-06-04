@@ -32,9 +32,9 @@ public:
     explicit AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent = nullptr);
     ~AdblockPluginUrlInterceptorConfigureWidget();
 
-    void loadSettings() Q_DECL_OVERRIDE;
-    void saveSettings() Q_DECL_OVERRIDE;
-    void resetSettings() Q_DECL_OVERRIDE;
+    void loadSettings() override;
+    void saveSettings() override;
+    void resetSettings() override;
 
 private:
     AdBlock::AdBlockSettingWidget *mConfigureWidget;

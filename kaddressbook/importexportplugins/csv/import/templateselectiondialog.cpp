@@ -54,7 +54,7 @@ public:
         update();
     }
 
-    int rowCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    int rowCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return mTemplates.count();
@@ -63,7 +63,7 @@ public:
         }
     }
 
-    int columnCount(const QModelIndex &parent = QModelIndex()) const Q_DECL_OVERRIDE
+    int columnCount(const QModelIndex &parent = QModelIndex()) const override
     {
         if (!parent.isValid()) {
             return 2;
@@ -72,7 +72,7 @@ public:
         }
     }
 
-    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE
+    QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid() || index.row() >= mTemplates.count() || index.column() >= 2) {
             return QVariant();
@@ -93,7 +93,7 @@ public:
         return QVariant();
     }
 
-    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) Q_DECL_OVERRIDE
+    bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override
     {
         if (parent.isValid() || row < 0 || row >= mTemplates.count()) {
             return false;
@@ -159,7 +159,7 @@ public:
     {
     }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         QStyledItemDelegate::paint(painter, option, index);
 
@@ -168,7 +168,7 @@ public:
         }
     }
 
-    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         QSize hint = QStyledItemDelegate::sizeHint(option, index);
 
@@ -179,7 +179,7 @@ public:
         return hint;
     }
 
-    bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) Q_DECL_OVERRIDE
+    bool editorEvent(QEvent *event, QAbstractItemModel *model, const QStyleOptionViewItem &option, const QModelIndex &index) override
     {
         if (event->type() == QEvent::MouseButtonRelease && index.data(Qt::UserRole).toBool()) {
             const QMouseEvent *mouseEvent = static_cast<QMouseEvent *>(event);

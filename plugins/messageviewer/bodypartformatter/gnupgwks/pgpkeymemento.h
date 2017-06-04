@@ -46,7 +46,7 @@ public:
     bool start(const QString &fingerprint);
     void exec(const QString &fingerprint);
 
-    void detach() Q_DECL_OVERRIDE;
+    void detach() override;
 
 Q_SIGNALS:
     void update(MimeTreeParser::UpdateMode update);

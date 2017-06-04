@@ -36,11 +36,11 @@ class MixedTreeModel : public Akonadi::EntityTreeModel
 public:
     MixedTreeModel(Akonadi::Monitor *monitor, QObject *parent = nullptr);
 
-    /* reimp */ int entityColumnCount(HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
-    /* reimp */ QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const Q_DECL_OVERRIDE;
+    /* reimp */ int entityColumnCount(HeaderGroup headerGroup) const override;
+    /* reimp */ QVariant entityHeaderData(int section, Qt::Orientation orientation, int role, HeaderGroup headerGroup) const override;
 
-    /* reimp */ QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
-    /* reimp */ QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const Q_DECL_OVERRIDE;
+    /* reimp */ QVariant entityData(const Akonadi::Item &item, int column, int role = Qt::DisplayRole) const override;
+    /* reimp */ QVariant entityData(const Akonadi::Collection &collection, int column, int role = Qt::DisplayRole) const override;
 };
 
 #endif

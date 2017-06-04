@@ -30,7 +30,7 @@ class TodoCheckableProxyModel : public KCheckableProxyModel
 public:
     TodoCheckableProxyModel(QObject *parent = nullptr);
 
-    void setSourceModel(QAbstractItemModel *sourceModel) Q_DECL_OVERRIDE;
+    void setSourceModel(QAbstractItemModel *sourceModel) override;
 
 private Q_SLOTS:
     void selectionChanged(const QItemSelection &selected, const QItemSelection &deselected);

@@ -32,10 +32,10 @@ public:
     });
     ~ConfirmAddressPlugin();
 
-    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
-    bool hasConfigureDialog() const Q_DECL_OVERRIDE;
+    MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
+    bool hasConfigureDialog() const override;
 
-    void showConfigureDialog(QWidget *parent) Q_DECL_OVERRIDE;
+    void showConfigureDialog(QWidget *parent) override;
 };
 
 #endif // CONFIRMADDRESSPLUGIN_H

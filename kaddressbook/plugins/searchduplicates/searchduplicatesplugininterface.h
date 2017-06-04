@@ -28,10 +28,10 @@ public:
     explicit SearchDuplicatesPluginInterface(QObject *parent = nullptr);
     ~SearchDuplicatesPluginInterface();
 
-    void exec() Q_DECL_OVERRIDE;
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
-    void setItems(const Akonadi::Item::List &items) Q_DECL_OVERRIDE;
+    void exec() override;
+    void createAction(KActionCollection *ac) override;
+    PimCommon::GenericPluginInterface::RequireTypes requires() const override;
+    void setItems(const Akonadi::Item::List &items) override;
 
 private:
     void slotActivated();

@@ -31,8 +31,8 @@ public:
     explicit TriopAbShortUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TriopAbShortUrlEnginePlugin();
 
-    ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    ShortUrlEngineInterface *createInterface(QObject *parent) override;
+    QString engineName() const override;
 };
 
 #endif // ISGDSHORTURLENGINEPLUGIN_H

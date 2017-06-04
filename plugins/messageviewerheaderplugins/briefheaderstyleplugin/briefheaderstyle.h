@@ -49,13 +49,13 @@ public:
     }
 
 public:
-    const char *name() const Q_DECL_OVERRIDE
+    const char *name() const override
     {
         return "brief";
     }
 
 private:
-    QString format(KMime::Message *message) const Q_DECL_OVERRIDE;
+    QString format(KMime::Message *message) const override;
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 }

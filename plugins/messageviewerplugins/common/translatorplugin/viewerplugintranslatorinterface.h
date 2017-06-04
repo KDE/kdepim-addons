@@ -33,10 +33,10 @@ public:
     explicit ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginTranslatorInterface();
 
-    void setText(const QString &text) Q_DECL_OVERRIDE;
-    QList<QAction *> actions() const Q_DECL_OVERRIDE;
-    void showWidget() Q_DECL_OVERRIDE;
-    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
+    void setText(const QString &text) override;
+    QList<QAction *> actions() const override;
+    void showWidget() override;
+    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
     PimCommon::TranslatorWidget *widget();

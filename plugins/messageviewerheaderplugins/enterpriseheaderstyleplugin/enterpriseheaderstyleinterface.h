@@ -30,8 +30,8 @@ public:
     explicit EnterpriseHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = nullptr);
     ~EnterpriseHeaderStyleInterface();
 
-    void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) Q_DECL_OVERRIDE;
-    void activateAction() Q_DECL_OVERRIDE;
+    void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
+    void activateAction() override;
 };
 }
 

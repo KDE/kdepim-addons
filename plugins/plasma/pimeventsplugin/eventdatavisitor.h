@@ -56,14 +56,14 @@ public:
     const QMultiHash<QDate, CalendarEvents::EventData> &results() const;
 
 protected:
-    bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE
+    bool visit(const KCalCore::Event::Ptr &event) override;
+    bool visit(const KCalCore::Todo::Ptr &todo) override;
+    bool visit(const KCalCore::Journal::Ptr &) override
     {
         return false;
     }
 
-    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE
+    bool visit(const KCalCore::FreeBusy::Ptr &) override
     {
         return false;
     }
@@ -85,14 +85,14 @@ public:
     const QStringList &results() const;
 
 protected:
-    bool visit(const KCalCore::Event::Ptr &event) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Todo::Ptr &todo) Q_DECL_OVERRIDE;
-    bool visit(const KCalCore::Journal::Ptr &) Q_DECL_OVERRIDE
+    bool visit(const KCalCore::Event::Ptr &event) override;
+    bool visit(const KCalCore::Todo::Ptr &todo) override;
+    bool visit(const KCalCore::Journal::Ptr &) override
     {
         return false;
     }
 
-    bool visit(const KCalCore::FreeBusy::Ptr &) Q_DECL_OVERRIDE
+    bool visit(const KCalCore::FreeBusy::Ptr &) override
     {
         return false;
     }

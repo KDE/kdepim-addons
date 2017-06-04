@@ -29,8 +29,8 @@ class ViewerPluginExpandurl : public MessageViewer::ViewerPlugin
 public:
     explicit ViewerPluginExpandurl(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
-    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) Q_DECL_OVERRIDE;
-    QString viewerPluginName() const Q_DECL_OVERRIDE;
+    ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
+    QString viewerPluginName() const override;
 };
 }
 #endif // VIEWERPLUGINEXPANDURL_H

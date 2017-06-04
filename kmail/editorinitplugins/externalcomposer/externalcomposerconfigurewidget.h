@@ -31,9 +31,9 @@ public:
     explicit ExternalComposerConfigureWidget(QWidget *parent = nullptr);
     ~ExternalComposerConfigureWidget();
 
-    void loadSettings() Q_DECL_OVERRIDE;
-    void saveSettings() Q_DECL_OVERRIDE;
-    void resetSettings() Q_DECL_OVERRIDE;
+    void loadSettings() override;
+    void saveSettings() override;
+    void resetSettings() override;
 private:
     QCheckBox *mExternalEditorCheck;
     KUrlRequester *mEditorRequester;

@@ -32,13 +32,13 @@ public:
     explicit EnterpriseHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~EnterpriseHeaderStylePlugin();
 
-    HeaderStyle *headerStyle() const Q_DECL_OVERRIDE;
-    HeaderStrategy *headerStrategy() const Q_DECL_OVERRIDE;
-    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
-    QString name() const Q_DECL_OVERRIDE;
-    bool hasMargin() const Q_DECL_OVERRIDE;
-    QString alignment() const Q_DECL_OVERRIDE;
-    int elidedTextSize() const Q_DECL_OVERRIDE;
+    HeaderStyle *headerStyle() const override;
+    HeaderStrategy *headerStrategy() const override;
+    HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
+    QString name() const override;
+    bool hasMargin() const override;
+    QString alignment() const override;
+    int elidedTextSize() const override;
 private:
     HeaderStyle *mHeaderStyle;
     HeaderStrategy *mHeaderStrategy;

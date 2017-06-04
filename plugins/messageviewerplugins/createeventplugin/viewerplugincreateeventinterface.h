@@ -32,13 +32,13 @@ public:
     explicit ViewerPluginCreateEventInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginCreateEventInterface();
 
-    void setText(const QString &text) Q_DECL_OVERRIDE;
-    QList<QAction *> actions() const Q_DECL_OVERRIDE;
-    void setMessage(const KMime::Message::Ptr &value) Q_DECL_OVERRIDE;
-    void closePlugin() Q_DECL_OVERRIDE;
-    void showWidget() Q_DECL_OVERRIDE;
-    void setMessageItem(const Akonadi::Item &item) Q_DECL_OVERRIDE;
-    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
+    void setText(const QString &text) override;
+    QList<QAction *> actions() const override;
+    void setMessage(const KMime::Message::Ptr &value) override;
+    void closePlugin() override;
+    void showWidget() override;
+    void setMessageItem(const Akonadi::Item &item) override;
+    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private Q_SLOTS:
     void slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection);

@@ -33,8 +33,8 @@ public:
     explicit SendMailPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SendMailPlugin();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
-    bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
+    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
+    bool hasPopupMenuSupport() const override;
 };
 
 #endif // SENDMAILPLUGIN_H

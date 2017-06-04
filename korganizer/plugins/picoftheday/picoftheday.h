@@ -32,11 +32,11 @@ public:
     Picoftheday();
     ~Picoftheday();
 
-    Element::List createDayElements(const QDate &) Q_DECL_OVERRIDE;
+    Element::List createDayElements(const QDate &) override;
 
-    void configure(QWidget *parent) Q_DECL_OVERRIDE;
+    void configure(QWidget *parent) override;
 
-    QString info() const Q_DECL_OVERRIDE;
+    QString info() const override;
 
 private:
     QSize mThumbSize;
@@ -47,7 +47,7 @@ class PicofthedayFactory : public DecorationFactory
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.korganizer.Picoftheday")
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE
+    Decoration *createPluginFactory() override
     {
         return new Picoftheday;
     }
@@ -66,7 +66,7 @@ public:
     void setDate(const QDate &date);
     void setThumbnailSize(const QSize &size);
     /** @reimp from Element */
-    QPixmap newPixmap(const QSize &size) Q_DECL_OVERRIDE;
+    QPixmap newPixmap(const QSize &size) override;
 
     /**
       Returns the thumbnail URL for a given width corresponding to a full-size image URL. */

@@ -35,7 +35,7 @@ public:
     explicit CreateNoteJob(const KMime::Message::Ptr &notePtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
     ~CreateNoteJob();
 
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
 private Q_SLOTS:
     void noteCreated(KJob *job);

@@ -70,7 +70,7 @@ public:
     {
     }
 
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
     {
         if (!writer) {
             return Ok;
@@ -182,7 +182,7 @@ public:
 class UrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
 {
 public:
-    bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const Q_DECL_OVERRIDE
+    bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
     {
         Q_UNUSED(viewerInstance);
         const QString vCard = bodyPart->asText();
@@ -225,7 +225,7 @@ public:
         return KContacts::Addressee();
     }
 
-    bool handleContextMenuRequest(BodyPart *part, const QString &path, const QPoint &point) const Q_DECL_OVERRIDE
+    bool handleContextMenuRequest(BodyPart *part, const QString &path, const QPoint &point) const override
     {
         const QString vCard = part->asText();
         if (vCard.isEmpty()) {
@@ -252,7 +252,7 @@ public:
         return true;
     }
 
-    QString statusBarMessage(BodyPart *part, const QString &path) const Q_DECL_OVERRIDE
+    QString statusBarMessage(BodyPart *part, const QString &path) const override
     {
         KContacts::Addressee a = findAddressee(part, path);
         const bool addToAddressBook = path.startsWith(QStringLiteral("addToAddressBook"));
@@ -309,17 +309,17 @@ public:
 class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         return validIndex(idx) ? new Formatter() : nullptr;
     }
 
-    const char *type(int idx) const Q_DECL_OVERRIDE
+    const char *type(int idx) const override
     {
         return validIndex(idx) ? "text" : nullptr;
     }
 
-    const char *subtype(int idx) const Q_DECL_OVERRIDE
+    const char *subtype(int idx) const override
     {
         switch (idx) {
         case 0:
@@ -333,7 +333,7 @@ public:
         }
     }
 
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         return validIndex(idx) ? new UrlHandler() : nullptr;
     }

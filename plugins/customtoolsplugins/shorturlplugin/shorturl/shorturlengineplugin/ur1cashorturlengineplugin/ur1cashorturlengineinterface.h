@@ -32,8 +32,8 @@ public:
     explicit Ur1CaShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~Ur1CaShortUrlEngineInterface();
 
-    void generateShortUrl() Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    void generateShortUrl() override;
+    QString engineName() const override;
 
 private:
     void slotShortUrlFinished(QNetworkReply *reply);

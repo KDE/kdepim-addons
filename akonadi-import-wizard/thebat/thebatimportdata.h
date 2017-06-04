@@ -27,11 +27,11 @@ public:
     explicit TheBatImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~TheBatImportData();
 
-    TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;
-    bool foundMailer() const Q_DECL_OVERRIDE;
+    TypeSupportedOptions supportedOption() override;
+    bool foundMailer() const override;
 
-    bool importMails() Q_DECL_OVERRIDE;
-    QString name() const Q_DECL_OVERRIDE;
+    bool importMails() override;
+    QString name() const override;
 };
 
 #endif /* TheBatImportData_H */

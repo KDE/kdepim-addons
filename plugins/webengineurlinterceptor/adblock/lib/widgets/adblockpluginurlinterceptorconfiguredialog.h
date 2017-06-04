@@ -34,11 +34,11 @@ public:
     ~AdblockPluginUrlInterceptorConfigureDialog();
 
 protected:
-    QWidget *createLayout() Q_DECL_OVERRIDE;
-    void save() Q_DECL_OVERRIDE;
-    void load() Q_DECL_OVERRIDE;
-    void reset() Q_DECL_OVERRIDE;
-    void help() Q_DECL_OVERRIDE;
+    QWidget *createLayout() override;
+    void save() override;
+    void load() override;
+    void reset() override;
+    void help() override;
 private:
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget;
 };

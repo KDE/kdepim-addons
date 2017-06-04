@@ -130,19 +130,19 @@ public:
     {
     }
 
-    QString displayText(const QVariant &value, const QLocale &) const Q_DECL_OVERRIDE
+    QString displayText(const QVariant &value, const QLocale &) const override
     {
         return KAddressBookImportExport::KAddressBookImportExportContactFields::label((KAddressBookImportExport::KAddressBookImportExportContactFields::Field)value.toUInt());
     }
 
-    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &) const Q_DECL_OVERRIDE
+    QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &) const override
     {
         ContactFieldComboBox *editor = new ContactFieldComboBox(parent);
 
         return editor;
     }
 
-    void setEditorData(QWidget *editor, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void setEditorData(QWidget *editor, const QModelIndex &index) const override
     {
         const unsigned int value = index.model()->data(index, Qt::EditRole).toUInt();
 
@@ -150,19 +150,19 @@ public:
         fieldCombo->setCurrentField((KAddressBookImportExport::KAddressBookImportExportContactFields::Field)value);
     }
 
-    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override
     {
         ContactFieldComboBox *fieldCombo = static_cast<ContactFieldComboBox *>(editor);
 
         model->setData(index, fieldCombo->currentField(), Qt::EditRole);
     }
 
-    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &) const Q_DECL_OVERRIDE
+    void updateEditorGeometry(QWidget *editor, const QStyleOptionViewItem &option, const QModelIndex &) const override
     {
         editor->setGeometry(option.rect);
     }
 
-    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const Q_DECL_OVERRIDE
+    void paint(QPainter *painter, const QStyleOptionViewItem &option, const QModelIndex &index) const override
     {
         if (index.row() == 0) {
             QStyleOptionViewItem headerOption(option);

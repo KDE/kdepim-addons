@@ -28,10 +28,10 @@ public:
     explicit CheckBeforeSendInterface(QObject *parent = nullptr);
     ~CheckBeforeSendInterface();
 
-    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
+    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 
 public Q_SLOTS:
-    void reloadConfig() Q_DECL_OVERRIDE;
+    void reloadConfig() override;
 private:
     bool mSendPlainText;
     bool mCheckMailTransport;

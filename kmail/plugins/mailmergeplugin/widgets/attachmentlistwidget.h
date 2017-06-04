@@ -29,8 +29,8 @@ public:
                                   const QString &removeLabel = QString(), const QString &modifyLabel = QString());
     ~AttachmentListWidget();
 
-    void addNewEntry() Q_DECL_OVERRIDE;
-    QString modifyEntry(const QString &text) Q_DECL_OVERRIDE;
+    void addNewEntry() override;
+    QString modifyEntry(const QString &text) override;
 };
 }
 #endif // ATTACHMENTLISTWIDGET_H

@@ -28,8 +28,8 @@ public:
     explicit AntiSpamPluginInterface(QObject *parent = nullptr);
     ~AntiSpamPluginInterface();
 
-    void exec() Q_DECL_OVERRIDE;
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
+    void exec() override;
+    void createAction(KActionCollection *ac) override;
 
 private:
     void slotActivated();

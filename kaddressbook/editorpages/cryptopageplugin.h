@@ -43,10 +43,10 @@ class CryptoPagePlugin : public Akonadi::ContactEditorPagePlugin
 public:
     CryptoPagePlugin();
     ~CryptoPagePlugin();
-    QString title() const Q_DECL_OVERRIDE;
-    void loadContact(const KContacts::Addressee &contact) Q_DECL_OVERRIDE;
-    void storeContact(KContacts::Addressee &contact) const Q_DECL_OVERRIDE;
-    void setReadOnly(bool readOnly) Q_DECL_OVERRIDE;
+    QString title() const override;
+    void loadContact(const KContacts::Addressee &contact) override;
+    void storeContact(KContacts::Addressee &contact) const override;
+    void setReadOnly(bool readOnly) override;
 
 private:
     enum {

@@ -32,11 +32,11 @@ public:
     Hebrew();
     ~Hebrew();
 
-    void configure(QWidget *parent) Q_DECL_OVERRIDE;
+    void configure(QWidget *parent) override;
 
-    Element::List createDayElements(const QDate &) Q_DECL_OVERRIDE;
+    Element::List createDayElements(const QDate &) override;
 
-    QString info() const Q_DECL_OVERRIDE;
+    QString info() const override;
 
 private:
     bool showParsha, showChol, showOmer;
@@ -48,7 +48,7 @@ class HebrewFactory : public DecorationFactory
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.korganizer.Hebrew")
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE
+    Decoration *createPluginFactory() override
     {
         return new Hebrew;
     }

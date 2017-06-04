@@ -33,7 +33,7 @@ public:
     explicit CreateEventJob(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
     ~CreateEventJob();
 
-    void start() Q_DECL_OVERRIDE;
+    void start() override;
 
 private:
     void slotFetchDone(KJob *job);

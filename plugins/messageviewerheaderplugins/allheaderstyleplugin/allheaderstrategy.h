@@ -29,17 +29,17 @@ public:
     AllHeaderStrategy();
     ~AllHeaderStrategy();
 
-    const char *name() const Q_DECL_OVERRIDE
+    const char *name() const override
     {
         return "all";
     }
 
-    DefaultPolicy defaultPolicy() const Q_DECL_OVERRIDE
+    DefaultPolicy defaultPolicy() const override
     {
         return Display;
     }
 
-    bool showHeader(const QString &) const Q_DECL_OVERRIDE
+    bool showHeader(const QString &) const override
     {
         return true; // more efficient than default impl
     }

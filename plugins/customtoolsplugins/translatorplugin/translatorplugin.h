@@ -29,7 +29,7 @@ public:
     explicit TranslatorPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~TranslatorPlugin();
 
-    PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) Q_DECL_OVERRIDE;
-    QString customToolName() const Q_DECL_OVERRIDE;
+    PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
+    QString customToolName() const override;
 };
 #endif // TRANSLATORPLUGIN_H

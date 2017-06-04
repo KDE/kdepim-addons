@@ -60,7 +60,7 @@ namespace {
 class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
     {
         if (!writer) {
             return Ok;
@@ -191,17 +191,17 @@ public:
 class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         return idx == 0 ? new Formatter() : nullptr;
     }
 
-    const char *type(int idx) const Q_DECL_OVERRIDE
+    const char *type(int idx) const override
     {
         return idx == 0 ? "application" : nullptr;
     }
 
-    const char *subtype(int idx) const Q_DECL_OVERRIDE
+    const char *subtype(int idx) const override
     {
         if (idx == 0) {
             return "ms-tnef";
@@ -212,7 +212,7 @@ public:
         }
     }
 
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const override
     {
         return nullptr;
     }

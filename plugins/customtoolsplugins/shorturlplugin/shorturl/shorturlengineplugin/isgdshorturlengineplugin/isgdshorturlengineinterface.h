@@ -32,8 +32,8 @@ public:
     explicit IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
     ~IsgdShortUrlEngineInterface();
 
-    void generateShortUrl() Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    void generateShortUrl() override;
+    QString engineName() const override;
 
 private:
     void slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error);

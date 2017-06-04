@@ -31,8 +31,8 @@ public:
     explicit InsertSpecialCharacterPluginEditorInterface(QObject *parent = nullptr);
     ~InsertSpecialCharacterPluginEditorInterface();
 
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) override;
+    void exec() override;
 
 private Q_SLOTS:
     void slotActivated();

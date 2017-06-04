@@ -31,8 +31,8 @@ public:
     explicit Ur1CaShortUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~Ur1CaShortUrlEnginePlugin();
 
-    ShortUrlEngineInterface *createInterface(QObject *parent) Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    ShortUrlEngineInterface *createInterface(QObject *parent) override;
+    QString engineName() const override;
 };
 
 #endif // UR1CASHORTURLENGINEPLUGIN_H

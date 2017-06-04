@@ -163,12 +163,12 @@ public:
     {
     }
 
-    QString generateLinkURL(const QString &id) Q_DECL_OVERRIDE
+    QString generateLinkURL(const QString &id) override
     {
         return mBodyPart->makeLink(id);
     }
 
-    KCalCore::Calendar::Ptr calendar() const Q_DECL_OVERRIDE
+    KCalCore::Calendar::Ptr calendar() const override
     {
         return mCalendar;
     }
@@ -181,7 +181,7 @@ private:
 class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const Q_DECL_OVERRIDE
+    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
     {
         if (!writer) {
             // Guard against crashes in createReply()
@@ -1240,7 +1240,7 @@ public:
         return saveFile(receiver, iCal, QStringLiteral("counter"), part);
     }
 
-    bool handleClick(Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const Q_DECL_OVERRIDE
+    bool handleClick(Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override
     {
         // filter out known paths that don't belong to this type of urlmanager.
         // kolab/issue4054 msg27201
@@ -1387,7 +1387,7 @@ public:
         return result;
     }
 
-    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &point) const Q_DECL_OVERRIDE
+    bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &point) const override
     {
         QString name = path;
         if (path.startsWith(QStringLiteral("ATTACH:"))) {
@@ -1420,7 +1420,7 @@ public:
         return true;
     }
 
-    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *, const QString &path) const Q_DECL_OVERRIDE
+    QString statusBarMessage(MimeTreeParser::Interface::BodyPart *, const QString &path) const override
     {
         if (!path.isEmpty()) {
             if (path == QLatin1String("accept")) {
@@ -1478,7 +1478,7 @@ public:
 class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         if (idx == 0 || idx == 1) {
             return new Formatter();
@@ -1487,7 +1487,7 @@ public:
         }
     }
 
-    const char *type(int idx) const Q_DECL_OVERRIDE
+    const char *type(int idx) const override
     {
         if (idx == 0 || idx == 1) {
             return "text";
@@ -1496,7 +1496,7 @@ public:
         }
     }
 
-    const char *subtype(int idx) const Q_DECL_OVERRIDE
+    const char *subtype(int idx) const override
     {
         if (idx == 0) {
             return "calendar";
@@ -1507,7 +1507,7 @@ public:
         }
     }
 
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const Q_DECL_OVERRIDE
+    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
             return new UrlHandler();

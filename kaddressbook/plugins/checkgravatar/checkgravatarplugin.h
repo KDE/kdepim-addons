@@ -33,9 +33,9 @@ public:
     explicit CheckGravatarPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~CheckGravatarPlugin();
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) Q_DECL_OVERRIDE;
+    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 
-    bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
+    bool hasPopupMenuSupport() const override;
 };
 
 #endif // CHECKGRAVATARPLUGIN_H

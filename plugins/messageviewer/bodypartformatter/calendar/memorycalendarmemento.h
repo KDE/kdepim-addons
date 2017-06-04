@@ -36,7 +36,7 @@ public:
     bool finished() const;
     Akonadi::CalendarBase::Ptr calendar() const;
 
-    void detach() Q_DECL_OVERRIDE;
+    void detach() override;
 
 Q_SIGNALS:
     // TODO: Factor our update and detach into base class

@@ -34,12 +34,12 @@ public:
 
     void load(QIODevice *device);
 
-    void begin() Q_DECL_OVERRIDE;
-    void beginLine() Q_DECL_OVERRIDE;
-    void field(const QString &data, uint row, uint column) Q_DECL_OVERRIDE;
-    void endLine() Q_DECL_OVERRIDE;
-    void end() Q_DECL_OVERRIDE;
-    void error(const QString &errorMsg) Q_DECL_OVERRIDE;
+    void begin() override;
+    void beginLine() override;
+    void field(const QString &data, uint row, uint column) override;
+    void endLine() override;
+    void end() override;
+    void error(const QString &errorMsg) override;
 
     QCsvReader *reader()
     {
@@ -53,7 +53,7 @@ Q_SIGNALS:
     void ended();
 
 protected:
-    void run() Q_DECL_OVERRIDE;
+    void run() override;
 
 private:
     QCsvReader *mReader;

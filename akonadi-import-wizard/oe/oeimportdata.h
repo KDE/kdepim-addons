@@ -27,11 +27,11 @@ public:
     explicit OeImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~OeImportData();
 
-    TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;
-    bool foundMailer() const Q_DECL_OVERRIDE;
+    TypeSupportedOptions supportedOption() override;
+    bool foundMailer() const override;
 
-    bool importMails() Q_DECL_OVERRIDE;
-    QString name() const Q_DECL_OVERRIDE;
+    bool importMails() override;
+    QString name() const override;
 };
 
 #endif /* Oe ImportData_H */

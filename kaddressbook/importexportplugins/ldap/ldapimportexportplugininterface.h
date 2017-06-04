@@ -28,8 +28,8 @@ public:
     explicit LDapImportExportPluginInterface(QObject *parent = nullptr);
     ~LDapImportExportPluginInterface();
 
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) override;
+    void exec() override;
 private:
     void slotImportLdap();
     void importLdap();

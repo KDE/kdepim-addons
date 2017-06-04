@@ -28,13 +28,13 @@ class ConfirmAddressInterface : public MessageComposer::PluginEditorCheckBeforeS
 public:
     explicit ConfirmAddressInterface(QObject *parent = nullptr);
     ~ConfirmAddressInterface();
-    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) Q_DECL_OVERRIDE;
+    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 
 Q_SIGNALS:
     void forceReloadConfig();
 
 public Q_SLOTS:
-    void reloadConfig() Q_DECL_OVERRIDE;
+    void reloadConfig() override;
 
 private:
     void slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity);

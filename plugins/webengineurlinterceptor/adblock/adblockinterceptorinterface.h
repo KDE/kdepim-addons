@@ -34,9 +34,9 @@ public:
     explicit AdblockInterceptorInterface(QObject *parent = nullptr);
     ~AdblockInterceptorInterface();
 
-    bool interceptRequest(QWebEngineUrlRequestInfo &info) Q_DECL_OVERRIDE;
-    QList<QAction *> interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const Q_DECL_OVERRIDE;
-    void createActions(KActionCollection *ac) Q_DECL_OVERRIDE;
+    bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
+    QList<QAction *> interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const override;
+    void createActions(KActionCollection *ac) override;
     QWebEngineView *webEngineView() const;
 
     void setWebEngineView(QWebEngineView *webEngineView);

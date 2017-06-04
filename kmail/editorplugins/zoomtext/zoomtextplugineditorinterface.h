@@ -29,8 +29,8 @@ public:
     explicit ZoomTextPluginEditorInterface(QObject *parent = nullptr);
     ~ZoomTextPluginEditorInterface();
 
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) override;
+    void exec() override;
 
 private:
     void slotZoomOut();

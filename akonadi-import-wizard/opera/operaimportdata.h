@@ -28,14 +28,14 @@ public:
     explicit OperaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~OperaImportData();
 
-    TypeSupportedOptions supportedOption() Q_DECL_OVERRIDE;
-    bool foundMailer() const Q_DECL_OVERRIDE;
+    TypeSupportedOptions supportedOption() override;
+    bool foundMailer() const override;
 
-    bool importMails() Q_DECL_OVERRIDE;
-    bool importAddressBook() Q_DECL_OVERRIDE;
-    bool importSettings() Q_DECL_OVERRIDE;
+    bool importMails() override;
+    bool importAddressBook() override;
+    bool importSettings() override;
 
-    QString name() const Q_DECL_OVERRIDE;
+    QString name() const override;
 };
 
 #endif /* OperaImportData_H */

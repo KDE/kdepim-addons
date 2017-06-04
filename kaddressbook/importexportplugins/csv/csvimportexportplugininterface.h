@@ -30,11 +30,11 @@ public:
     explicit CSVImportExportPluginInterface(QObject *parent = nullptr);
     ~CSVImportExportPluginInterface();
 
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void exec() Q_DECL_OVERRIDE;
+    void createAction(KActionCollection *ac) override;
+    void exec() override;
 
-    bool canImportFileType(const QUrl &url) Q_DECL_OVERRIDE;
-    void importFile(const QUrl &url) Q_DECL_OVERRIDE;
+    bool canImportFileType(const QUrl &url) override;
+    void importFile(const QUrl &url) override;
 
 private:
     void slotFinished();

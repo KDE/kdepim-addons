@@ -28,8 +28,8 @@ public:
     explicit GoogleShortUrlEngineInterface(QObject *parent = nullptr);
     ~GoogleShortUrlEngineInterface();
 
-    void generateShortUrl() Q_DECL_OVERRIDE;
-    QString engineName() const Q_DECL_OVERRIDE;
+    void generateShortUrl() override;
+    QString engineName() const override;
 };
 
 #endif

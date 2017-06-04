@@ -29,12 +29,12 @@ public:
     explicit SendVcardsPluginInterface(QObject *parent = nullptr);
     ~SendVcardsPluginInterface();
 
-    void exec() Q_DECL_OVERRIDE;
-    void createAction(KActionCollection *ac) Q_DECL_OVERRIDE;
-    void setCurrentItems(const Akonadi::Item::List &items) Q_DECL_OVERRIDE;
-    PimCommon::GenericPluginInterface::RequireTypes requires() const Q_DECL_OVERRIDE;
+    void exec() override;
+    void createAction(KActionCollection *ac) override;
+    void setCurrentItems(const Akonadi::Item::List &items) override;
+    PimCommon::GenericPluginInterface::RequireTypes requires() const override;
 
-    void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections) Q_DECL_OVERRIDE;
+    void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections) override;
 private:
     void slotActivated();
     void slotSendVcardsError(const QString &error);

@@ -30,8 +30,8 @@ public:
     });
     ~CSVImportExportPlugin();
 
-    PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) Q_DECL_OVERRIDE;
-    bool hasPopupMenuSupport() const Q_DECL_OVERRIDE;
+    PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) override;
+    bool hasPopupMenuSupport() const override;
 };
 
 #endif // CSVIMPORTEXPORTPLUGIN_H

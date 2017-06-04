@@ -35,17 +35,17 @@ public:
     {
     }
 
-    MimeTreeParser::HtmlWriter *htmlWriter() Q_DECL_OVERRIDE
+    MimeTreeParser::HtmlWriter *htmlWriter() override
     {
         return mWriter;
     }
 
-    MessageViewer::CSSHelperBase *cssHelper() Q_DECL_OVERRIDE
+    MessageViewer::CSSHelperBase *cssHelper() override
     {
         return mCSSHelper;
     }
 
-    bool htmlLoadExternal() const Q_DECL_OVERRIDE
+    bool htmlLoadExternal() const override
     {
         return mHtmlLoadExternal;
     }
@@ -55,59 +55,59 @@ public:
         mHtmlLoadExternal = loadExternal;
     }
 
-    bool decryptMessage() const Q_DECL_OVERRIDE
+    bool decryptMessage() const override
     {
         return false;
     }
 
-    bool showSignatureDetails() const Q_DECL_OVERRIDE
+    bool showSignatureDetails() const override
     {
         return false;
     }
 
-    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) Q_DECL_OVERRIDE
+    void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) override
     {
         Q_UNUSED(mode)
         Q_UNUSED(availableModes)
     }
 
-    int levelQuote() const Q_DECL_OVERRIDE
+    int levelQuote() const override
     {
         return false;
     }
 
-    const QTextCodec *overrideCodec() Q_DECL_OVERRIDE
+    const QTextCodec *overrideCodec() override
     {
         return nullptr;
     }
 
-    QString createMessageHeader(KMime::Message *message) Q_DECL_OVERRIDE
+    QString createMessageHeader(KMime::Message *message) override
     {
         Q_UNUSED(message);
         return QString();
     }
 
-    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() Q_DECL_OVERRIDE
+    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() override
     {
         return MimeTreeParser::AttachmentStrategy::smart();
     }
 
-    bool autoImportKeys() const Q_DECL_OVERRIDE
+    bool autoImportKeys() const override
     {
         return false;
     }
 
-    bool showEmoticons() const Q_DECL_OVERRIDE
+    bool showEmoticons() const override
     {
         return false;
     }
 
-    bool showExpandQuotesMark() const Q_DECL_OVERRIDE
+    bool showExpandQuotesMark() const override
     {
         return false;
     }
 
-    MimeTreeParser::Util::HtmlMode preferredMode() const Q_DECL_OVERRIDE
+    MimeTreeParser::Util::HtmlMode preferredMode() const override
     {
         return MimeTreeParser::Util::Html;
     }

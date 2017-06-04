@@ -33,12 +33,12 @@ public:
     {
     }
 
-    Element::List createDayElements(const QDate &) Q_DECL_OVERRIDE;
-    Element::List createMonthElements(const QDate &) Q_DECL_OVERRIDE;
+    Element::List createDayElements(const QDate &) override;
+    Element::List createMonthElements(const QDate &) override;
 
 //    void configure( QWidget *parent );
 
-    QString info() const Q_DECL_OVERRIDE;
+    QString info() const override;
 };
 
 class ThisDayInHistoryFactory : public DecorationFactory
@@ -46,7 +46,7 @@ class ThisDayInHistoryFactory : public DecorationFactory
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.korganizer.ThisDayInHistory")
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE
+    Decoration *createPluginFactory() override
     {
         return new ThisDayInHistory;
     }

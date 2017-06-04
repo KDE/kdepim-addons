@@ -34,10 +34,10 @@ public:
     explicit SelectImapWidget(QWidget *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SelectImapWidget();
 
-    void setText(const QString &str) Q_DECL_OVERRIDE;
-    QString text() const Q_DECL_OVERRIDE;
+    void setText(const QString &str) override;
+    QString text() const override;
 
-    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) Q_DECL_OVERRIDE;
+    void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) override;
 
 private:
     void slotOpenSelectImapFolder();

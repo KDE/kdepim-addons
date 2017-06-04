@@ -239,7 +239,7 @@ protected:
     };
 
     /** Evaluate the settings made and create the appropriate filter rules. */
-    void accept() Q_DECL_OVERRIDE;
+    void accept() override;
 
 protected Q_SLOTS:
     /** Modify the status of the wizard to reflect the selection of spam tools. */

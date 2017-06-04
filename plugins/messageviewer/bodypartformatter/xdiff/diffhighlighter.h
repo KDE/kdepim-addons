@@ -35,7 +35,7 @@ public:
     QString outputDiff() const;
 
 protected:
-    void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) Q_DECL_OVERRIDE;
+    void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) override;
 private:
     KSyntaxHighlighting::Repository mRepo;
     KSyntaxHighlighting::Definition mDef;

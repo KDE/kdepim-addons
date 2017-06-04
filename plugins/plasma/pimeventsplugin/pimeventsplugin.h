@@ -40,14 +40,14 @@ public:
     ~PimEventsPlugin();
 
     // CalendarEvents::CalendarEventsPlugin
-    void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) Q_DECL_OVERRIDE;
+    void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;
 
     // KCalCore::Calendar::CalendarObserver
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
     // Handle removal before it really happens otherwise we would not be able
     // to lookup corresponding Akonadi ID in ETMCalendar
-    void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) Q_DECL_OVERRIDE;
+    void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) override;
 
 private:
     PimDataSource *mDataSource;

@@ -31,13 +31,13 @@ public:
     explicit ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~ViewerPluginExternalscriptInterface();
 
-    QList<QAction *> actions() const Q_DECL_OVERRIDE;
-    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const Q_DECL_OVERRIDE;
-    void execute() Q_DECL_OVERRIDE;
+    QList<QAction *> actions() const override;
+    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    void execute() override;
 
-    void setText(const QString &text) Q_DECL_OVERRIDE;
-    void setMessage(const KMime::Message::Ptr &msg) Q_DECL_OVERRIDE;
-    void refreshActionList(KActionCollection *ac) Q_DECL_OVERRIDE;
+    void setText(const QString &text) override;
+    void setMessage(const KMime::Message::Ptr &msg) override;
+    void refreshActionList(KActionCollection *ac) override;
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 

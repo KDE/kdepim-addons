@@ -33,10 +33,10 @@ public:
     {
     }
 
-    void configure(QWidget *parent) Q_DECL_OVERRIDE;
+    void configure(QWidget *parent) override;
 
-    Element::List createDayElements(const QDate &) Q_DECL_OVERRIDE;
-    Element::List createWeekElements(const QDate &) Q_DECL_OVERRIDE;
+    Element::List createDayElements(const QDate &) override;
+    Element::List createWeekElements(const QDate &) override;
 
     enum DayNumber {
         DayOfYear = 1,
@@ -44,7 +44,7 @@ public:
     };
     Q_DECLARE_FLAGS(DayNumbers, DayNumber)
 
-    QString info() const Q_DECL_OVERRIDE;
+    QString info() const override;
 
 private:
     DayNumbers mDisplayedInfo;
@@ -55,7 +55,7 @@ class DatenumsFactory : public DecorationFactory
     Q_OBJECT
     Q_PLUGIN_METADATA(IID "org.kde.korganizer.Datenums")
 public:
-    Decoration *createPluginFactory() Q_DECL_OVERRIDE
+    Decoration *createPluginFactory() override
     {
         return new Datenums;
     }
