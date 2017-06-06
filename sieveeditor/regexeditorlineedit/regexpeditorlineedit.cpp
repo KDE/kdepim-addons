@@ -133,4 +133,15 @@ QString RegexpEditorLineEdit::code() const
     return mLineEdit->text();
 }
 
+void RegexpEditorLineEdit::setClearButtonEnabled(bool b)
+{
+    mLineEdit->setClearButtonEnabled(b);
+}
+
+void RegexpEditorLineEdit::setPlaceholderText(const QString &str)
+{
+    mLineEdit->setPlaceholderText(str);
+}
+
+
 #include "regexpeditorlineedit.moc"
