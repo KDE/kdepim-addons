@@ -643,6 +643,9 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
                 break;
             }
         // fallthrough
+#if QT_VERSION >= QT_VERSION_CHECK(5,8,0)
+        Q_FALLTHROUGH();
+#endif
 
         default:
             if (!wordCharacter(c)) {
