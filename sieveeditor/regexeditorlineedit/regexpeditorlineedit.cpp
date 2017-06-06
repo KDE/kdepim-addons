@@ -33,7 +33,6 @@
 
 #include <KTextWidgets/kregexpeditorinterface.h>
 
-
 K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
                            )
 struct InfoRegExp
@@ -41,7 +40,6 @@ struct InfoRegExp
     InfoRegExp()
         : status(Unknown)
     {
-
     }
 
     enum RegexpEditorStatus {
@@ -99,18 +97,18 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
         QString error;
 
         mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
-        if ( !mEditorDialog ) {
+        if (!mEditorDialog) {
             qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
             return;
         }
     }
-    KRegExpEditorInterface* iface = qobject_cast<KRegExpEditorInterface*>(mEditorDialog);
-    Q_ASSERT( iface ); // This should not fail!
+    KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(mEditorDialog);
+    Q_ASSERT(iface);   // This should not fail!
 
     // now use the editor.
     iface->setRegExp(mLineEdit->text());
 
-    if(mEditorDialog->exec() == QDialog::Accepted) {
+    if (mEditorDialog->exec() == QDialog::Accepted) {
         mLineEdit->setText(iface->regExp());
     }
 }
@@ -142,6 +140,5 @@ void RegexpEditorLineEdit::setPlaceholderText(const QString &str)
 {
     mLineEdit->setPlaceholderText(str);
 }
-
 
 #include "regexpeditorlineedit.moc"

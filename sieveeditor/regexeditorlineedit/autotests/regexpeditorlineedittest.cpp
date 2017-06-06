@@ -27,7 +27,6 @@
 RegexpEditorLineEditTest::RegexpEditorLineEditTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void RegexpEditorLineEditTest::shouldHaveDefaultValue()
