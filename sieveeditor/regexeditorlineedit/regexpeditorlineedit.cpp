@@ -38,7 +38,8 @@ K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.j
 struct InfoRegExp
 {
     InfoRegExp()
-        : status(Unknown)
+        : status(Unknown),
+          mEditorDialog(nullptr)
     {
     }
 
@@ -48,13 +49,13 @@ struct InfoRegExp
         NotInstalled
     };
     RegexpEditorStatus status;
+    QDialog *mEditorDialog;
 };
 
 Q_GLOBAL_STATIC(InfoRegExp, s_regexpeditorinstalled)
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractRegexpEditorLineEdit(parent)
-    , mEditorDialog(nullptr)
     , mIsRegExpMode(false)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
@@ -93,22 +94,22 @@ RegexpEditorLineEdit::~RegexpEditorLineEdit()
 
 void RegexpEditorLineEdit::slotOpenRegexpEditor()
 {
-    if (!mEditorDialog) {
+    if (!s_regexpeditorinstalled->mEditorDialog) {
         QString error;
 
-        mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
-        if (!mEditorDialog) {
+        s_regexpeditorinstalled->mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
+        if (!s_regexpeditorinstalled->mEditorDialog) {
             qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
             return;
         }
     }
-    KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(mEditorDialog);
+    KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(s_regexpeditorinstalled->mEditorDialog);
     Q_ASSERT(iface);   // This should not fail!
 
     // now use the editor.
     iface->setRegExp(mLineEdit->text());
 
-    if (mEditorDialog->exec() == QDialog::Accepted) {
+    if (s_regexpeditorinstalled->mEditorDialog->exec() == QDialog::Accepted) {
         mLineEdit->setText(iface->regExp());
     }
 }

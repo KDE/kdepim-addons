@@ -43,7 +43,6 @@ private:
     void slotOpenRegexpEditor();
     QLineEdit *mLineEdit;
     QToolButton *mRegExpEditorButton;
-    QDialog *mEditorDialog;
     bool mIsRegExpMode;
 };
 
