@@ -22,7 +22,7 @@
 
 #include "qcsvreader.h"
 
-#include <QtCore/QThread>
+#include <QThread>
 
 class CsvParser : public QThread, public QCsvBuilderInterface
 {

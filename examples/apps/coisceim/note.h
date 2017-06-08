@@ -20,7 +20,7 @@
 #ifndef KJOTS_NOTE_H
 #define KJOTS_NOTE_H
 
-#include <QtCore/QString>
+#include <QString>
 
 namespace Akonotes {
 /**
