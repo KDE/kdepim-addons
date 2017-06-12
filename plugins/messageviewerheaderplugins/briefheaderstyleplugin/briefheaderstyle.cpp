@@ -41,9 +41,8 @@
 
 #include <KLocalizedString>
 
-#include <QRegExp>
-
 #include <QApplication>
+#include <QRegularExpression>
 
 #include <kmime/kmime_message.h>
 #include <kmime/kmime_dateformatter.h>
@@ -118,7 +117,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QStringLiteral(" (") + headerParts.filter(QRegExp(QLatin1String("\\S"))).join(QStringLiteral(",\n")) + QLatin1Char(')');
+    headerStr += QStringLiteral(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QStringLiteral(",\n")) + QLatin1Char(')');
 
     headerStr += QLatin1String("</div>\n");
 
