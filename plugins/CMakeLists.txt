@@ -5,3 +5,4 @@ add_subdirectory(messageviewer)
 add_subdirectory(plasma)
 
 add_subdirectory(webengineurlinterceptor)
+add_subdirectory(templateparser)
