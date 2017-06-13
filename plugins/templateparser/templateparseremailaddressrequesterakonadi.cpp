@@ -19,16 +19,28 @@
 
 #include "templateparseremailaddressrequesterakonadi.h"
 #include <QHBoxLayout>
+#include <Akonadi/Contact/EmailAddressRequester>
+#include <kpluginfactory.h>
+
+K_PLUGIN_FACTORY_WITH_JSON(TemplateParserEmailAddressRequesterAkonadiFactory,
+                           "templateparseremailaddressrequesterakonadi.json", registerPlugin<TemplateParserEmailAddressRequesterAkonadi>();)
 
 
-TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent)
+TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent, const QList<QVariant> &)
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setMargin(0);
+    mEmailAddressRequester = new Akonadi::EmailAddressRequester(this);
+    mEmailAddressRequester->setObjectName(QStringLiteral("EmailAddressRequester"));
+    mainLayout->addWidget(mEmailAddressRequester);
+    connect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
 }
 
 TemplateParserEmailAddressRequesterAkonadi::~TemplateParserEmailAddressRequesterAkonadi()
 {
-
+    disconnect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
 }
+
+#include "templateparseremailaddressrequesterakonadi.moc"

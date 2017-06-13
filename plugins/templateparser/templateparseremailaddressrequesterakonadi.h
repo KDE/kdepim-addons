@@ -21,13 +21,19 @@
 #define TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
 
 #include <TemplateParser/TemplateParserEmailAddressRequesterBase>
+#include <QVariant>
+namespace Akonadi {
+class EmailAddressRequester;
+}
 
 class TemplateParserEmailAddressRequesterAkonadi : public TemplateParser::TemplateParserEmailAddressRequesterBase
 {
     Q_OBJECT
 public:
-    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr);
+    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~TemplateParserEmailAddressRequesterAkonadi();
+private:
+    Akonadi::EmailAddressRequester *mEmailAddressRequester;
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
