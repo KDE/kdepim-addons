@@ -14,5 +14,5 @@ kcoreaddons_add_plugin(templateparseraddressrequesterplugin JSON templateparsere
     ${templateparserplugin_SRCS} INSTALL_NAMESPACE templateparser)
 
 target_link_libraries(templateparseraddressrequesterplugin
-    KF5::TemplateParser KF5::Completion KF5::I18n KF5::AkonadiContact
+    KF5::TemplateParser KF5::AkonadiContact
     )
