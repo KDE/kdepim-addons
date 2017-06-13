@@ -18,12 +18,18 @@
 */
 
 #include "templateparseremailaddressrequesterakonaditest.h"
+#include "../templateparseremailaddressrequesterakonadi.h"
 #include <QTest>
 
 TemplateParserEmailAddressRequesterAkonadiTest::TemplateParserEmailAddressRequesterAkonadiTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
+{
+    TemplateParserEmailAddressRequesterAkonadi w;
 }
 
 
