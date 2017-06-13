@@ -32,8 +32,14 @@ class TemplateParserEmailAddressRequesterAkonadi : public TemplateParser::Templa
 public:
     explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~TemplateParserEmailAddressRequesterAkonadi();
+
+    QString text() const override;
+    void setText(const QString &str) override;
+    void clear() override;
+
 private:
     Akonadi::EmailAddressRequester *mEmailAddressRequester;
+
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H

@@ -43,4 +43,21 @@ TemplateParserEmailAddressRequesterAkonadi::~TemplateParserEmailAddressRequester
     disconnect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
 }
 
+
+
+QString TemplateParserEmailAddressRequesterAkonadi::text() const
+{
+    return mEmailAddressRequester->text();
+}
+
+void TemplateParserEmailAddressRequesterAkonadi::setText(const QString &str)
+{
+    mEmailAddressRequester->setText(str);
+}
+
+void TemplateParserEmailAddressRequesterAkonadi::clear()
+{
+    mEmailAddressRequester->clear();
+}
+
 #include "templateparseremailaddressrequesterakonadi.moc"
