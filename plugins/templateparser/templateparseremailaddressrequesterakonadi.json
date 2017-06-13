@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "templateparseremailaddressrequesterakonadi",
+        "Name": "Email Address Requester for Templateparser",
+        "ServiceTypes": [
+            "TemplateParser/TemplateParserEmailAddressRequester"
+        ],
+        "Version": "1.0"
+    }
+}
