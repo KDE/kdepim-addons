@@ -31,6 +31,9 @@ public:
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();
+    void shouldEmitSignal();
+    void shouldClearValue();
+    void shouldAssignValue();
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADITEST_H
