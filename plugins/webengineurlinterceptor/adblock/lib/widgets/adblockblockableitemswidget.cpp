@@ -103,7 +103,7 @@ void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
         return;
     }
 
-    QMenu menu;
+    QMenu menu(this);
     menu.addAction(QIcon::fromTheme(QStringLiteral("edit-copy")), i18n("Copy URL"), this, &AdBlockBlockableItemsWidget::slotCopyItem);
     const bool filterValueIsNotEmpty = !item->text(FilterValue).isEmpty();
     if (filterValueIsNotEmpty) {
