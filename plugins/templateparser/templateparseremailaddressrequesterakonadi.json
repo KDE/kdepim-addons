@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "templateparseremailaddressrequesterakonadi",
         "Name": "Email Address Requester for Templateparser",
+        "Name[ca]": "Adreça de correu electrònic requerida per «Templateparser»",
+        "Name[nl]": "Verzoeker om e-mailadres voor ontleden van sjabloon",
+        "Name[pt]": "Pedido de Endereço de E-Mail para o Processador de Modelos",
+        "Name[sv]": "E-postadressbegäran för malltolk",
+        "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти для обробника шаблонів",
+        "Name[x-test]": "xxEmail Address Requester for Templateparserxx",
         "ServiceTypes": [
             "TemplateParser/TemplateParserEmailAddressRequester"
         ],
