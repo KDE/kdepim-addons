@@ -59,14 +59,14 @@ Item {
 
         TableViewColumn {
             role: "data"
-            title: "Select Calendars";
+            title: qsTr("Select Calendars");
             delegate: Item {
                 CheckBox {
                     id: checkbox
                     visible: styleData.value["enabled"]
                     checked: styleData.value["checked"]
                     onCheckedChanged: {
-                        if (checked == styleData.value["checked"]) {
+                        if (checked === styleData.value["checked"]) {
                             return;
                         }
                         calendarModel.setChecked(styleData.value["id"], checked);

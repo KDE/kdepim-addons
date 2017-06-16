@@ -1,3 +1,4 @@
+add_definitions (-DTRANSLATION_DOMAIN=\"pimeventsplugin\")
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
