@@ -59,7 +59,7 @@ Item {
 
         TableViewColumn {
             role: "data"
-            title: qsTr("Select Calendars");
+            title: i18n("Select Calendars");
             delegate: Item {
                 CheckBox {
                     id: checkbox
