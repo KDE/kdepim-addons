@@ -27,7 +27,7 @@
 class QLineEdit;
 
 namespace Akonadi {
-class ContactEditor;
+class AkonadiContactEditor;
 }
 
 class Dialog : public QDialog
@@ -43,7 +43,7 @@ private Q_SLOTS:
     void save();
 
 private:
-    Akonadi::ContactEditor *mEditor;
+    Akonadi::AkonadiContactEditor *mEditor;
     QLineEdit *mId;
 };
 

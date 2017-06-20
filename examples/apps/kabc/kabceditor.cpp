@@ -53,7 +53,7 @@ Dialog::Dialog(QWidget *parent)
 
     QGridLayout *layout = new QGridLayout(wdg);
 
-    mEditor = new Akonadi::ContactEditor(Akonadi::ContactEditor::EditMode, wdg);
+    mEditor = new Akonadi::AkonadiContactEditor(Akonadi::AkonadiContactEditor::EditMode, wdg);
     layout->addWidget(mEditor, 0, 0, 1, 3);
 
     QLabel *label = new QLabel(i18n("Item Id:"), wdg);
