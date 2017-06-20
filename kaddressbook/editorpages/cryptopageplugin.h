@@ -24,7 +24,7 @@
 #ifndef CRYPTOPAGEPLUGIN_H
 #define CRYPTOPAGEPLUGIN_H
 
-#include <Akonadi/Contact/ContactEditorPagePlugin>
+#include <ContactEditor/ContactEditorPagePlugin>
 
 namespace Kleo {
 class KeyRequester;
@@ -33,12 +33,10 @@ class KeyRequester;
 class KComboBox;
 class QCheckBox;
 
-using namespace Akonadi;
-
-class CryptoPagePlugin : public Akonadi::ContactEditorPagePlugin
+class CryptoPagePlugin : public ContactEditor::ContactEditorPagePlugin
 {
     Q_OBJECT
-    Q_INTERFACES(Akonadi::ContactEditorPagePlugin)
+    Q_INTERFACES(ContactEditor::ContactEditorPagePlugin)
     Q_PLUGIN_METADATA(IID "org.kde.kaddressbook.CryptoPagePlugin")
 public:
     CryptoPagePlugin();

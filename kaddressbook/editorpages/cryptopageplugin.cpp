@@ -43,8 +43,6 @@
 #include "Libkleo/KeyRequester"
 #include "Libkleo/Enum"
 
-using namespace Akonadi;
-
 CryptoPagePlugin::CryptoPagePlugin()
     : mReadOnly(false)
 {
