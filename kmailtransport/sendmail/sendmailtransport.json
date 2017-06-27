@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "sendmailtransport",
+        "Name": "SendMail Mail Transport",
+        "ServiceTypes": [
+            "MailTransport/Plugin"
+        ],
+        "Version": "1.0"
+    }
+}
