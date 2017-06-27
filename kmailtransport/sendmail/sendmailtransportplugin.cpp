@@ -19,6 +19,7 @@
 
 #include "sendmailtransportplugin.h"
 #include <kpluginfactory.h>
+#include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(SendMailTransportPluginFactory, "sendmailtransport.json", registerPlugin<SendMailTransportPlugin>();
                            )
@@ -36,8 +37,7 @@ SendMailTransportPlugin::~SendMailTransportPlugin()
 
 QString SendMailTransportPlugin::name() const
 {
-    //TODO FIXME
-    return {};
+    return i18n("SendMail");
 }
 
 bool SendMailTransportPlugin::configureTransport(MailTransport::Transport *transport, QWidget *parent)
