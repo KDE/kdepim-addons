@@ -30,9 +30,9 @@ public:
     explicit SendMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~SendMailTransportPlugin();
 
-    QString name() const override;
-    bool configureTransport(MailTransport::Transport *transport, QWidget *parent) override;
     void cleanUp(const QString &identifier) override;
+    QVector<MailTransport::TransportAbstractPluginInfo> names() const override;
+    bool configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent) override;
 };
 
 #endif // SendMAILTRANSPORTPLUGIN_H

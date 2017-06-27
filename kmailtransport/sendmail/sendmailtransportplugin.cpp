@@ -35,14 +35,17 @@ SendMailTransportPlugin::~SendMailTransportPlugin()
 
 }
 
-QString SendMailTransportPlugin::name() const
+QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
 {
-    return i18n("SendMail");
+    MailTransport::TransportAbstractPluginInfo info;
+    info.name = i18n("SendMail");
+    info.identifier = QStringLiteral("sendmail");
+    return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
-bool SendMailTransportPlugin::configureTransport(MailTransport::Transport *transport, QWidget *parent)
+bool SendMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-    //TODO FIXME
+    //TODO
     return false;
 }
 
@@ -53,3 +56,5 @@ void SendMailTransportPlugin::cleanUp(const QString &identifier)
 }
 
 #include "sendmailtransportplugin.moc"
+
+
