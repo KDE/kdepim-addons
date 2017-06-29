@@ -2,6 +2,7 @@ set(mailtransport_sendplugin_SRCS
     sendmailtransportplugin.cpp
     sendmailjob.cpp
     sendmailconfigwidget.cpp
+    sendmailconfigdialog.cpp
     )
 
 ki18n_wrap_ui(mailtransport_sendplugin_SRCS
