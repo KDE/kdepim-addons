@@ -18,8 +18,10 @@
 */
 
 #include "sendmailtransportplugin.h"
+#include "sendmailconfigdialog.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
+#include <QPointer>
 
 K_PLUGIN_FACTORY_WITH_JSON(SendMailTransportPluginFactory, "sendmailtransport.json", registerPlugin<SendMailTransportPlugin>();
                            )
@@ -44,8 +46,13 @@ QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::nam
 
 bool SendMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
-    //TODO
-    return false;
+    Q_UNUSED(identifier);
+    QPointer<MailTransport::SendMailConfigDialog> transportConfigDialog
+        = new MailTransport::SendMailConfigDialog(transport, parent);
+    transportConfigDialog->setWindowTitle(i18n("Configure account"));
+    bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
+    delete transportConfigDialog;
+    return okClicked;
 }
 
 void SendMailTransportPlugin::cleanUp(const QString &identifier)
