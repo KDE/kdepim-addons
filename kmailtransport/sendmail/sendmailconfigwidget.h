@@ -45,7 +45,7 @@ class SendmailConfigWidget : public TransportConfigWidget
     Q_OBJECT
 
 public:
-    explicit SendmailConfigWidget(Transport *transport, QWidget *parent = 0);
+    explicit SendmailConfigWidget(Transport *transport, QWidget *parent = nullptr);
     bool pathIsEmpty() const;
 Q_SIGNALS:
     void enableButtonOk(bool);
