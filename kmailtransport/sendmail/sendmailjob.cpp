@@ -26,8 +26,8 @@
 
 #include <KLocalizedString>
 
-#include <QtCore/QProcess>
-#include <QtCore/QBuffer>
+#include <QProcess>
+#include <QBuffer>
 
 using namespace MailTransport;
 
@@ -38,7 +38,7 @@ using namespace MailTransport;
 class SendMailJobPrivate
 {
 public:
-    QProcess *process;
+    QProcess *process = nullptr;
     QString lastError;
 };
 
@@ -63,9 +63,7 @@ SendmailJob::~SendmailJob()
 
 void SendmailJob::doStart()
 {
-    QStringList arguments;
-    arguments << QLatin1String("-i") << QLatin1String("-f")
-              << sender() << to() << cc() << bcc();
+    const QStringList arguments = QStringList() << QLatin1String("-i") << QLatin1String("-f") << sender() << to() << cc() << bcc();
     d->process->start(transport()->host(), arguments);
 
     if (!d->process->waitForStarted()) {
@@ -104,6 +102,6 @@ void SendmailJob::receivedStdErr()
 bool SendmailJob::doKill()
 {
     delete d->process;
-    d->process = 0;
+    d->process = nullptr;
     return true;
 }
