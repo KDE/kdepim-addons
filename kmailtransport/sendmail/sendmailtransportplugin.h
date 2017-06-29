@@ -27,7 +27,9 @@ class SendMailTransportPlugin : public MailTransport::TransportAbstractPlugin
 {
     Q_OBJECT
 public:
-    explicit SendMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
+    explicit SendMailTransportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~SendMailTransportPlugin();
 
     void cleanUp(const QString &identifier) override;

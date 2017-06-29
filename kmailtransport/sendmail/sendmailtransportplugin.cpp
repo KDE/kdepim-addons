@@ -27,20 +27,18 @@ K_PLUGIN_FACTORY_WITH_JSON(SendMailTransportPluginFactory, "sendmailtransport.js
 SendMailTransportPlugin::SendMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)
 {
-
 }
 
 SendMailTransportPlugin::~SendMailTransportPlugin()
 {
-
 }
 
 QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
 {
     MailTransport::TransportAbstractPluginInfo info;
-    info.name = i18nc( "@option sendmail transport", "Sendmail" );
+    info.name = i18nc("@option sendmail transport", "Sendmail");
     info.identifier = QStringLiteral("sendmail");
-    info.description = i18n( "A local sendmail installation" );
+    info.description = i18n("A local sendmail installation");
     return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
@@ -57,5 +55,3 @@ void SendMailTransportPlugin::cleanUp(const QString &identifier)
 }
 
 #include "sendmailtransportplugin.moc"
-
-
