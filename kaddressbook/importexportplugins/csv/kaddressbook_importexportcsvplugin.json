@@ -20,6 +20,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava uvoz i izvoz CSV‑a",
         "Description[sr]": "Овај прикључак омогућава увоз и извоз ЦСВ‑а",
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera CSV.",
+        "Description[tr]": "Bu eklenti, CSV içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі CSV.",
         "Description[x-test]": "xxThis plugin allows you to import/export CSV.xx",
         "EnabledByDefault": "true",
@@ -43,6 +44,7 @@
         "Name[sr@latin]": "Uvoz/izvoz CSV‑a",
         "Name[sr]": "Увоз/извоз ЦСВ‑а",
         "Name[sv]": "Importera och exportera CSV",
+        "Name[tr]": "CSV İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування CSV",
         "Name[x-test]": "xxImport/Export CSVxx",
         "ServiceTypes": [

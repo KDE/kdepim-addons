@@ -28,6 +28,7 @@ Name[sr@ijekavian]=Октетни ток програма
 Name[sr@ijekavianlatin]=Oktetni tok programa
 Name[sr@latin]=Oktetni tok programa
 Name[sv]=Program Oktetström
+Name[tr]=Octetstream Uygulaması
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
 Comment=A bodypart formatter plugin for text/calendar
@@ -58,6 +59,7 @@ Comment[sr@ijekavian]=Прикључак форматирања дела тел�
 Comment[sr@ijekavianlatin]=Priključak formatiranja dela tela za text/calendar
 Comment[sr@latin]=Priključak formatiranja dela tela za text/calendar
 Comment[sv]=Ett insticksprogram för brevtextformatering av text/calendar
+Comment[tr]=text/calendar için bir gövde biçimlendirici eklentisi
 Comment[uk]=Додаток форматування для text/calendar
 Comment[x-test]=xxA bodypart formatter plugin for text/calendarxx
 

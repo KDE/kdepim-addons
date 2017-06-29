@@ -20,6 +20,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava uvoz i izvoz LDIF‑a",
         "Description[sr]": "Овај прикључак омогућава увоз и извоз ЛДИФ‑а",
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera LDIF.",
+        "Description[tr]": "Bu eklenti, LDIF içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі LDIF.",
         "Description[x-test]": "xxThis plugin allows you to import/export LDIF.xx",
         "EnabledByDefault": "true",
@@ -43,6 +44,7 @@
         "Name[sr@latin]": "Uvoz/izvoz LDIF‑a",
         "Name[sr]": "Увоз/извоз ЛДИФ‑а",
         "Name[sv]": "Importera och exportera LDIF",
+        "Name[tr]": "LDIF İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування LDIF",
         "Name[x-test]": "xxImport/Export LDIFxx",
         "ServiceTypes": [

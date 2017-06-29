@@ -13,6 +13,7 @@
         "Name[sr@latin]": "Upitnik adresa e‑pošte za raščlanjivač šablona",
         "Name[sr]": "Упитник адреса е‑поште за рашчлањивач шаблона",
         "Name[sv]": "E-postadressbegäran för malltolk",
+        "Name[tr]": "Templateparser için Posta Adresi İsteği",
         "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти для обробника шаблонів",
         "Name[x-test]": "xxEmail Address Requester for Templateparserxx",
         "ServiceTypes": [

@@ -17,6 +17,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava beleženje aktivnosti u K‑pošti",
         "Description[sr]": "Овај прикључак омогућава бележење активности у К‑пошти",
         "Description[sv]": "Insticksprogrammet gör det möjligt att logga aktiviteter i Kmail.",
+        "Description[tr]": "Bu eklenti, KMail etkinliklerini günlüklemenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка ви можете записувати журнал дій у KMail.",
         "Description[x-test]": "xxThis plugin allows you to log KMail activities.xx",
         "EnabledByDefault": "false",
@@ -40,6 +41,7 @@
         "Name[sr@latin]": "Beleženje aktivnosti",
         "Name[sr]": "Бележење активности",
         "Name[sv]": "Logga aktiviteter",
+        "Name[tr]": "Günlük Etkinlikleri",
         "Name[uk]": "Записувати журнал дій",
         "Name[x-test]": "xxLog Activitiesxx",
         "ServiceTypes": [

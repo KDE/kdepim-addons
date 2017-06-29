@@ -22,6 +22,7 @@ Name[sr@ijekavian]=Потражи тему на Вебу
 Name[sr@ijekavianlatin]=Potraži temu na Webu
 Name[sr@latin]=Potraži temu na Webu
 Name[sv]=Sök ämne på webben
+Name[tr]=Web üzerinde Arama Başlığı
 Name[uk]=Пошук теми у інтернеті
 Name[x-test]=xxSearch Subject on Webxx
 Executable=firefox
@@ -50,6 +51,7 @@ Description[sr@ijekavian]=Потражи тему на Вебу
 Description[sr@ijekavianlatin]=Potraži temu na Webu
 Description[sr@latin]=Potraži temu na Webu
 Description[sv]=Sök ämne på webben
+Description[tr]=Web üzerinde arama başlığı
 Description[uk]=Пошук теми у інтернеті
 Description[x-test]=xxSearch subject on webxx
 

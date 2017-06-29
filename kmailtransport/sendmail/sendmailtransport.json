@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "sendmailtransport",
         "Name": "SendMail Mail Transport",
+        "Name[ca]": "Transport de correu SendMail",
+        "Name[nl]": "E-mailtransport SendMail",
+        "Name[pt]": "Transporte de E-Mail do SendMail",
+        "Name[sv]": "SendMail e-postöverföring",
+        "Name[uk]": "Надсилання пошти SendMail",
+        "Name[x-test]": "xxSendMail Mail Transportxx",
         "ServiceTypes": [
             "MailTransport/Plugin"
         ],

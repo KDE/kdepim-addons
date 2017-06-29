@@ -18,6 +18,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava korišćenje spoljašnje skripte mesto prikazivača poruka",
         "Description[sr]": "Овај прикључак омогућава коришћење спољашње скрипте место приказивача порука",
         "Description[sv]": "Insticksprogrammet gör det möjligt att använda ett externt skript i brevfönstret.",
+        "Description[tr]": "Bu eklenti, ileti görüntüleyicide harici bir betik kullanmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна скористатися зовнішнім скриптом для вмісту панелі перегляду повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to use an external script against the message viewer.xx",
         "EnabledByDefault": "false",
@@ -44,6 +45,7 @@
         "Name[sr@latin]": "Spoljašnja skripta",
         "Name[sr]": "Спољашња скрипта",
         "Name[sv]": "Externt skript",
+        "Name[tr]": "Harici Betik",
         "Name[uk]": "Зовнішній скрипт",
         "Name[x-test]": "xxExternal Scriptxx",
         "ServiceTypes": [

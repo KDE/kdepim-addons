@@ -20,6 +20,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava uvoz i izvoz vCarda",
         "Description[sr]": "Овај прикључак омогућава увоз и извоз в‑карда",
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera visitkort.",
+        "Description[tr]": "Bu eklenti, vCard içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі візитівок.",
         "Description[x-test]": "xxThis plugin allows you to import/export vCards.xx",
         "EnabledByDefault": "true",
@@ -43,6 +44,7 @@
         "Name[sr@latin]": "Uvoz/izvoz vCarda",
         "Name[sr]": "Увоз/извоз в‑карда",
         "Name[sv]": "Importera och exportera vCard",
+        "Name[tr]": "vCard İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування vCard",
         "Name[x-test]": "xxImport/Export vCardxx",
         "ServiceTypes": [
