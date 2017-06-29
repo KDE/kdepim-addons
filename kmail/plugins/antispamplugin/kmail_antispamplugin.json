@@ -19,6 +19,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava podešavanje zaštite od spama u K‑pošti",
         "Description[sr]": "Овај прикључак омогућава подешавање заштите од спама у К‑пошти",
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa skräpposthantering i Kmail.",
+        "Description[tr]": "Bu eklenti, KMail içinde Anti Spam yapılandırmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати засіб боротьби зі спамом у KMail.",
         "Description[x-test]": "xxThis plugin allows you to configure Anti Spam in KMail.xx",
         "EnabledByDefault": "true",

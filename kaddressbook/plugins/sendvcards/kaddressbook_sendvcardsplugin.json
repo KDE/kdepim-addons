@@ -19,6 +19,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava slanje vCardova izabranih kontakata",
         "Description[sr]": "Овај прикључак омогућава слање в‑кардова изабраних контаката",
         "Description[sv]": "Insticksprogrammet gör det möjligt att skicka visitkort från markerade kontakter.",
+        "Description[tr]": "Bu eklenti, seçili kişilerden vCard yollamanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна надсилати ваші візитівки вибраним контактам.",
         "Description[x-test]": "xxThis plugin allows you to send vCard from selected contacts.xx",
         "EnabledByDefault": "true",
@@ -45,6 +46,7 @@
         "Name[sr@latin]": "Pošalji vCardove",
         "Name[sr]": "Пошаљи в‑кардове",
         "Name[sv]": "Skicka visitkort",
+        "Name[tr]": "VCard Gönder",
         "Name[uk]": "Надсилання візитівок",
         "Name[x-test]": "xxSend vCardsxx",
         "ServiceTypes": [

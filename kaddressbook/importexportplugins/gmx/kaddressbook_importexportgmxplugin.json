@@ -20,6 +20,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava uvoz i izvoz sa GMX‑a",
         "Description[sr]": "Овај прикључак омогућава увоз и извоз са ГМИкс‑а",
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera GMX.",
+        "Description[tr]": "Bu eklenti, GMX içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі GMX.",
         "Description[x-test]": "xxThis plugin allows you to import/export GMX.xx",
         "EnabledByDefault": "true",
@@ -42,6 +43,7 @@
         "Name[sr@latin]": "Uvoz/izvoz sa GMX‑a",
         "Name[sr]": "Увоз/извоз са ГМИкс‑а",
         "Name[sv]": "Importera och exportera GMX",
+        "Name[tr]": "GMX İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування GMX",
         "Name[x-test]": "xxImport Export GMXxx",
         "ServiceTypes": [

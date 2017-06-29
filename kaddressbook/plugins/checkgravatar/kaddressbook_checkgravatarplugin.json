@@ -20,6 +20,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava proveravanje gravatarskih slika",
         "Description[sr]": "Овај прикључак омогућава проверавање граватарских слика",
         "Description[sv]": "Insticksprogrammet gör det möjligt kontrollera Gravatar-bilder.",
+        "Description[tr]": "Bu eklenti, Gravatar resimlerini kontrol etmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна визначати зображення gravatar.",
         "Description[x-test]": "xxThis plugin allows you to check the Gravatar images.xx",
         "EnabledByDefault": "true",
@@ -46,6 +47,7 @@
         "Name[sr@latin]": "Proveri gravatar",
         "Name[sr]": "Провери граватар",
         "Name[sv]": "Kontrollera Gravatar",
+        "Name[tr]": "Gravatar Kontrol Et",
         "Name[uk]": "Перевірити gravatar",
         "Name[x-test]": "xxCheck Gravatarxx",
         "ServiceTypes": [

@@ -20,6 +20,7 @@ Name[sr@ijekavian]=Форматирање ПГП‑а и гнуПГ ВКС‑а
 Name[sr@ijekavianlatin]=Formatiranje PGP‑a i gnuPG WKS‑a
 Name[sr@latin]=Formatiranje PGP‑a i gnuPG WKS‑a
 Name[sv]=PGP- och GnuPG WKS-formatering
+Name[tr]=PGP ve GnuPG WKS biçimlendirici
 Name[uk]=Засіб форматування PGP та WKS GnuPG
 Name[x-test]=xxPGP and GnuPG WKS formatterxx
 Comment=A bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messages
@@ -42,6 +43,7 @@ Comment[sr@ijekavian]=Прикључак форматирања дела тел�
 Comment[sr@ijekavianlatin]=Priključak formatiranja dela tela za OpenPGP ključeve i gnuPG WKS poruke
 Comment[sr@latin]=Priključak formatiranja dela tela za OpenPGP ključeve i gnuPG WKS poruke
 Comment[sv]=Ett insticksprogram för brevtextformatering av OpenPGP-nycklar och GnuPG WKS-meddelanden
+Comment[tr]=OpenPGP Anahtarları ve GnuPG WKS iletileri için gövde biçimlendirme eklentisi
 Comment[uk]=Додаток форматування вмісту для ключів OpenPGP та повідомлень WKS GnuPG
 Comment[x-test]=xxA bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messagesxx
 

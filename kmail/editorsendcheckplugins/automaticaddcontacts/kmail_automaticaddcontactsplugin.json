@@ -18,6 +18,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava automatsko dodavanje adresa e‑pošte u adresar",
         "Description[sr]": "Овај прикључак омогућава аутоматско додавање адреса е‑поште у адресар",
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt lägga till e-postadresser i adressboken.",
+        "Description[tr]": "Bu eklenti, eposta adreslerini otomatik olarak adres defterine eklemenize imkan verir.",
         "Description[uk]": "Цей додаток надає вам змогу автоматично додавати адресу електронної пошти до адресної книги.",
         "Description[x-test]": "xxThis plugin allows you to add automatically email address to addressbook.xx",
         "EnabledByDefault": "true",
@@ -42,6 +43,7 @@
         "Name[sr@latin]": "Automatski dodaj kontakte",
         "Name[sr]": "Аутоматски додај контакте",
         "Name[sv]": "Lägg automatiskt till kontakter",
+        "Name[tr]": "Kişileri Otomatik Ekle",
         "Name[uk]": "Автоматичне додавання контактів",
         "Name[x-test]": "xxAutomatic Add Contactsxx",
         "ServiceTypes": [

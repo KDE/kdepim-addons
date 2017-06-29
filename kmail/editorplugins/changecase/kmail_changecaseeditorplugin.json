@@ -19,6 +19,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava promenu veličine slova u izabranom tekstu",
         "Description[sr]": "Овај прикључак омогућава промену величине слова у изабраном тексту",
         "Description[sv]": "Insticksprogrammet gör det möjligt att ändra skiftläge på markerad text.",
+        "Description[tr]": "Bu eklenti, seçili metnin büyük/küçük harf türünü değiştirmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна змінити регістр символів позначеного фрагмента тексту.",
         "Description[x-test]": "xxThis plugin allows you to change the case of the selected text.xx",
         "EnabledByDefault": "false",
@@ -46,6 +47,7 @@
         "Name[sr@latin]": "Promeni veličinu slova",
         "Name[sr]": "Промени величину слова",
         "Name[sv]": "Ändra skiftläge",
+        "Name[tr]": "Büyük Küçük Harf Değiştir",
         "Name[uk]": "Змінити регістр",
         "Name[x-test]": "xxChange Casexx",
         "ServiceTypes": [

@@ -28,6 +28,7 @@ Name[sr@ijekavian]=ТНЕФ
 Name[sr@ijekavianlatin]=TNEF
 Name[sr@latin]=TNEF
 Name[sv]=TNEF
+Name[tr]=TNEF
 Name[uk]=TNEF
 Name[x-test]=xxTNEFxx
 Comment=A bodypart formatter plugin for TNEF attachments
@@ -57,6 +58,7 @@ Comment[sr@ijekavian]=Прикључак форматирања дела тел�
 Comment[sr@ijekavianlatin]=Priključak formatiranja dela tela za TNEF priloge
 Comment[sr@latin]=Priključak formatiranja dela tela za TNEF priloge
 Comment[sv]=Ett insticksprogram för formatering av innehåll i TNEF-bilagor
+Comment[tr]=TNEF ekleri için gövde biçimlendirme eklentisi
 Comment[uk]=Додаток форматування текстової частини для долучень TNEF
 Comment[x-test]=xxA bodypart formatter plugin for TNEF attachmentsxx
 

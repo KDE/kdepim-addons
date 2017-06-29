@@ -19,6 +19,7 @@
         "Description[sr@latin]": "Ovaj priključak omogućava podešavanje zaštite od virusa u K‑pošti",
         "Description[sr]": "Овај прикључак омогућава подешавање заштите од вируса у К‑пошти",
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa virushantering i Kmail.",
+        "Description[tr]": "Bu eklenti, KMail içinde Anti Virüs yapılandırmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати антивірус у KMail.",
         "Description[x-test]": "xxThis plugin allows you to configure Anti Virus in KMail.xx",
         "EnabledByDefault": "true",
@@ -38,6 +39,7 @@
         "Name[sr@ijekavianlatin]": "Protivvirusni",
         "Name[sr@latin]": "Protivvirusni",
         "Name[sr]": "Противвирусни",
+        "Name[tr]": "Antivirüs",
         "Name[uk]": "Антивірус",
         "Name[x-test]": "xxAntivirusxx",
         "ServiceTypes": [
