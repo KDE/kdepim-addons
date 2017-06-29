@@ -38,8 +38,9 @@ SendMailTransportPlugin::~SendMailTransportPlugin()
 QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
 {
     MailTransport::TransportAbstractPluginInfo info;
-    info.name = i18n("SendMail");
+    info.name = i18nc( "@option sendmail transport", "Sendmail" );
     info.identifier = QStringLiteral("sendmail");
+    info.description = i18n( "A local sendmail installation" );
     return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
