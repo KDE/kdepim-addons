@@ -74,8 +74,10 @@ SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     d->configWidget = new MailTransport::SendmailConfigWidget(transport, this);
+    d->configWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
     mainLayout->addWidget(d->configWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
     d->okButton = buttonBox->button(QDialogButtonBox::Ok);
     d->okButton->setEnabled(false);
     d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -85,6 +87,7 @@ SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SendMailConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SendMailConfigDialog::reject);
     connect(d->configWidget, SIGNAL(enableButtonOk(bool)), this, SLOT(slotEnabledOkButton(bool)));
+    d->slotEnabledOkButton(!d->configWidget->pathIsEmpty());
 }
 
 SendMailConfigDialog::~SendMailConfigDialog()

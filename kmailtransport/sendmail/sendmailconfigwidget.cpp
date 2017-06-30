@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2013 Laurent Montel <montel@kde.org>
+  Copyright (c) 2013-2017 Laurent Montel <montel@kde.org>
   Copyright (c) 2009 Constantin Berzan <exit3219@gmail.com>
 
   Based on MailTransport code by:
@@ -75,11 +75,11 @@ void SendmailConfigWidget::init()
 
 void SendmailConfigWidget::slotTextChanged(const QString &text)
 {
-    Q_EMIT enableButtonOk(!text.isEmpty());
+    Q_EMIT enableButtonOk(!text.trimmed().isEmpty());
 }
 
 bool SendmailConfigWidget::pathIsEmpty() const
 {
     Q_D(const SendmailConfigWidget);
-    return d->ui.kcfg_host->text().isEmpty();
+    return d->ui.kcfg_host->text().trimmed().isEmpty();
 }

@@ -57,11 +57,6 @@ bool SendMailTransportPlugin::configureTransport(const QString &identifier, Mail
     return okClicked;
 }
 
-void SendMailTransportPlugin::cleanUp(const QString &identifier)
-{
-    Q_UNUSED(identifier);
-}
-
 MailTransport::TransportJob *SendMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
 {
     Q_UNUSED(identifier);
