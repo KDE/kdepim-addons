@@ -19,6 +19,7 @@
 
 #include "sendmailtransportplugin.h"
 #include "sendmailconfigdialog.h"
+#include "sendmailjob.h"
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 #include <QPointer>
@@ -41,6 +42,7 @@ QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::nam
     info.name = i18nc("@option sendmail transport", "Sendmail");
     info.identifier = QStringLiteral("sendmail");
     info.description = i18n("A local sendmail installation");
+    info.isAkonadi = false;
     return QVector<MailTransport::TransportAbstractPluginInfo>() << info;
 }
 
@@ -58,7 +60,14 @@ bool SendMailTransportPlugin::configureTransport(const QString &identifier, Mail
 void SendMailTransportPlugin::cleanUp(const QString &identifier)
 {
     Q_UNUSED(identifier);
-    //TODO FIXME
+}
+
+MailTransport::TransportJob *SendMailTransportPlugin::createTransportJob(MailTransport::Transport *t, const QString &identifier)
+{
+    Q_UNUSED(identifier);
+    return new MailTransport::SendmailJob(t, this);
 }
 
 #include "sendmailtransportplugin.moc"
+
+

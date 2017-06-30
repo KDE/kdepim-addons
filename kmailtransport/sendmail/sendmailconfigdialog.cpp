@@ -70,7 +70,6 @@ SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent
     : QDialog(parent)
     , d(new Private(this))
 {
-    qDebug() << " SendMailConfigDialog::SendMailConfigDialog()" << this;
     Q_ASSERT(transport);
     d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -85,11 +84,11 @@ SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent
     connect(d->okButton, SIGNAL(clicked()), this, SLOT(okClicked()));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SendMailConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SendMailConfigDialog::reject);
+    connect(d->configWidget, SIGNAL(enableButtonOk(bool)), this, SLOT(slotEnabledOkButton(bool)));
 }
 
 SendMailConfigDialog::~SendMailConfigDialog()
 {
-    qDebug() << " SendMailConfigDialog::~SendMailConfigDialog()" << this;
     delete d;
 }
 
