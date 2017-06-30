@@ -85,7 +85,7 @@ void GearySettings::readTransport()
     const QString host = settings->value(QStringLiteral("smtp_host")).toString();
     if (!host.isEmpty()) {
         MailTransport::Transport *mt = createTransport();
-        mt->setType(MailTransport::Transport::EnumType::SMTP);
+        mt->setIdentifier(QStringLiteral("SMTP"));
         mt->setHost(host);
         const int port = settings->value(QStringLiteral("msa.smtp.port"), -1).toInt();
         if (port != -1) {
