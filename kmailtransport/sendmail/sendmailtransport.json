@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "sendmailtransport",
         "Name": "SendMail Mail Transport",
+        "Name[ca@valencia]": "Transport de correu SendMail",
         "Name[ca]": "Transport de correu SendMail",
         "Name[nl]": "E-mailtransport SendMail",
         "Name[pt]": "Transporte de E-Mail do SendMail",
