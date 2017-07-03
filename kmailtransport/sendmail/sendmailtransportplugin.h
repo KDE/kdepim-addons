@@ -17,8 +17,8 @@
     02110-1301, USA.
 */
 
-#ifndef SendMAILTRANSPORTPLUGIN_H
-#define SendMAILTRANSPORTPLUGIN_H
+#ifndef SENDMAILTRANSPORTPLUGIN_H
+#define SENDMAILTRANSPORTPLUGIN_H
 
 #include <MailTransport/TransportAbstractPlugin>
 #include <QVariant>
@@ -37,4 +37,4 @@ public:
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };
 
-#endif // SendMAILTRANSPORTPLUGIN_H
+#endif
