@@ -21,9 +21,9 @@
 #define MAILTRANSPORT_SENDMAILTRANSPORTCONFIGDIALOG_H
 
 #include <QDialog>
-
 namespace MailTransport {
 class Transport;
+class SendmailConfigWidget;
 
 class SendMailConfigDialog : public QDialog
 {
@@ -33,12 +33,13 @@ public:
     virtual ~SendMailConfigDialog();
 
 private:
-    class Private;
-    Private *const d;
+    void okClicked();
+    void slotTextChanged(const QString &text);
+    void slotEnabledOkButton(bool);
 
-    Q_PRIVATE_SLOT(d, void okClicked())
-    Q_PRIVATE_SLOT(d, void slotTextChanged(const QString &))
-    Q_PRIVATE_SLOT(d, void slotEnabledOkButton(bool))
+    Transport *mTransport;
+    MailTransport::SendmailConfigWidget *mConfigWidget;
+    QPushButton *mOkButton;
 };
 } // namespace MailTransport
 

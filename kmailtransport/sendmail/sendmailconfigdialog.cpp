@@ -29,70 +29,49 @@
 
 using namespace MailTransport;
 
-class MailTransport::SendMailConfigDialog::Private
-{
-public:
-    Private(SendMailConfigDialog *qq)
-        : transport(nullptr)
-        , configWidget(nullptr)
-        , q(qq)
-        , okButton(nullptr)
-    {
-    }
-
-    Transport *transport;
-    SendmailConfigWidget *configWidget;
-    SendMailConfigDialog *q;
-    QPushButton *okButton;
-
-    void okClicked();
-    void slotTextChanged(const QString &text);
-    void slotEnabledOkButton(bool);
-};
-
-void SendMailConfigDialog::Private::slotEnabledOkButton(bool b)
-{
-    okButton->setEnabled(b);
-}
-
-void SendMailConfigDialog::Private::okClicked()
-{
-    configWidget->apply();
-    transport->save();
-}
-
-void SendMailConfigDialog::Private::slotTextChanged(const QString &text)
-{
-    okButton->setEnabled(!text.isEmpty());
-}
-
 SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent)
     : QDialog(parent)
-    , d(new Private(this))
+    , mTransport(transport)
+    , mConfigWidget(nullptr)
+    , mOkButton(nullptr)
 {
     Q_ASSERT(transport);
-    d->transport = transport;
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    d->configWidget = new MailTransport::SendmailConfigWidget(transport, this);
-    d->configWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
-    mainLayout->addWidget(d->configWidget);
+    mConfigWidget = new MailTransport::SendmailConfigWidget(transport, this);
+    mConfigWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
+    mainLayout->addWidget(mConfigWidget);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    d->okButton = buttonBox->button(QDialogButtonBox::Ok);
-    d->okButton->setEnabled(false);
-    d->okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
+    mOkButton->setEnabled(false);
+    mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     mainLayout->addWidget(buttonBox);
 
-    connect(d->okButton, SIGNAL(clicked()), this, SLOT(okClicked()));
+    connect(mOkButton, &QAbstractButton::clicked, this, &SendMailConfigDialog::okClicked);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SendMailConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SendMailConfigDialog::reject);
-    connect(d->configWidget, SIGNAL(enableButtonOk(bool)), this, SLOT(slotEnabledOkButton(bool)));
-    d->slotEnabledOkButton(!d->configWidget->pathIsEmpty());
+    connect(mConfigWidget, &SendmailConfigWidget::enableButtonOk, this, &SendMailConfigDialog::slotEnabledOkButton);
+    slotEnabledOkButton(!mConfigWidget->pathIsEmpty());
 }
 
 SendMailConfigDialog::~SendMailConfigDialog()
 {
-    delete d;
+}
+
+void SendMailConfigDialog::slotEnabledOkButton(bool b)
+{
+    mOkButton->setEnabled(b);
+}
+
+void SendMailConfigDialog::okClicked()
+{
+    mConfigWidget->apply();
+    mTransport->save();
+}
+
+void SendMailConfigDialog::slotTextChanged(const QString &text)
+{
+    mOkButton->setEnabled(!text.isEmpty());
 }
 
 #include "moc_sendmailconfigdialog.cpp"
