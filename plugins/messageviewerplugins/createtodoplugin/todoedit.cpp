@@ -35,6 +35,7 @@
 
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>
+#include <akonadi/kmime/specialmailcollections.h>
 #include <KGuiItem>
 #include <KStandardGuiItem>
 
@@ -144,8 +145,25 @@ void TodoEdit::updateButtons(const QString &subject)
 
 void TodoEdit::showToDoWidget()
 {
+    const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
+    if (subject) {
+        bool isSentFolder = false;
+        if (mCurrentCollection.isValid()) {
+            isSentFolder = (Akonadi::SpecialMailCollections::self()->defaultCollection(Akonadi::SpecialMailCollections::SentMail) == mCurrentCollection);
+        }
+        mNoteEdit->setText(isSentFolder ? i18n("Check I received a reply about \"%1\"", subject->asUnicodeString()) : i18n("Reply to \"%1\"", subject->asUnicodeString()));
+        mNoteEdit->selectAll();
+        mNoteEdit->setFocus();
+    } else {
+        mNoteEdit->clear();
+    }
     mNoteEdit->setFocus();
     show();
+}
+
+void TodoEdit::setCurrentCollection(const Akonadi::Collection &col)
+{
+    mCurrentCollection = col;
 }
 
 void TodoEdit::writeConfig()
@@ -193,14 +211,6 @@ void TodoEdit::setMessage(const KMime::Message::Ptr &value)
 {
     if (mMessage != value) {
         mMessage = value;
-        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
-        if (subject) {
-            mNoteEdit->setText(i18n("Reply to \"%1\"", subject->asUnicodeString()));
-            mNoteEdit->selectAll();
-            mNoteEdit->setFocus();
-        } else {
-            mNoteEdit->clear();
-        }
         Q_EMIT messageChanged(mMessage);
     }
 }

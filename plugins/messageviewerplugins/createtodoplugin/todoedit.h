@@ -49,6 +49,7 @@ public:
     void writeConfig();
 
     void showToDoWidget();
+    void setCurrentCollection(const Akonadi::Collection &col);
 public Q_SLOTS:
     void slotCloseWidget();
 
@@ -67,12 +68,14 @@ private:
     void updateButtons(const QString &subject);
     void readConfig();
     Akonadi::Collection mCollection;
+    Akonadi::Collection mCurrentCollection;
     KMime::Message::Ptr mMessage;
     QLineEdit *mNoteEdit;
     Akonadi::CollectionComboBox *mCollectionCombobox;
     KMessageWidget *mMsgWidget;
     QPushButton *mSaveButton;
     QPushButton *mOpenEditorButton;
+
 };
 }
 #endif // TODOEDIT_H

@@ -40,6 +40,7 @@ public:
     void showWidget() override;
     void setMessageItem(const Akonadi::Item &item) override;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    void setCurrentCollection(const Akonadi::Collection &col) override;
 
 private:
     void slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
