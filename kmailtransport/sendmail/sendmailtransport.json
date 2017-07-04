@@ -7,6 +7,7 @@
         "Name[nl]": "E-mailtransport SendMail",
         "Name[pt]": "Transporte de E-Mail do SendMail",
         "Name[sv]": "SendMail e-postöverföring",
+        "Name[tr]": "SenMail Posta İletimi",
         "Name[uk]": "Надсилання пошти SendMail",
         "Name[x-test]": "xxSendMail Mail Transportxx",
         "ServiceTypes": [
