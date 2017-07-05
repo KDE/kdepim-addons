@@ -96,11 +96,11 @@ void GearySettings::readTransport()
     }
 #if 0
     smtp_host = smtp.bla.bla
-                smtp_port = 465
-                            smtp_ssl = true
-                                       smtp_starttls = false
-                                                       smtp_use_imap_credentials = false
-                                                                                   smtp_noauth = true
+            smtp_port = 465
+            smtp_ssl = true
+            smtp_starttls = false
+            smtp_use_imap_credentials = false
+            smtp_noauth = true
 #endif
 #if 0
     const QString smtpMethod = settings->value(QStringLiteral("msa.method")).toString();
