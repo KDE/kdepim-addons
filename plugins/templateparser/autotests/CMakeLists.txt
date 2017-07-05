@@ -5,10 +5,10 @@ macro(add_templateparserplugin_unittest _source _extrasources)
   add_test(${_name} ${_name})
   ecm_mark_as_test(templateparserplugin-${_name})
   target_link_libraries(${_name}
-    KF5::MessageViewer
     KF5::TemplateParser
     KF5::AkonadiContact
     Qt5::Test
+    KF5::Service
   )
 endmacro()
 
