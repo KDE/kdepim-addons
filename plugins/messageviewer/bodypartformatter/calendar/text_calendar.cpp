@@ -441,7 +441,7 @@ public:
             if (found == 0) {
                 selectMessage
                     = i18n("<qt>None of your identities match the receiver of this message,<br/>"
-                           "please choose which of the following addresses is yours, if any, "
+                           "please choose which of the following addresses is yours,<br/> if any, "
                            "or select one of your identities to use in the reply:</qt>");
                 possibleAddrs += im->allEmails();
             } else {
