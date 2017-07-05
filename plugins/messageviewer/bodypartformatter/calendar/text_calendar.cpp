@@ -546,7 +546,8 @@ public:
             disposition->setDisposition(KMime::Headers::CDinline);
             msg->setHeader(disposition);
             msg->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
-            msg->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
+            const QString answer = i18n("Invitation answer attached.");
+            msg->setBody(answer.toUtf8());
         } else {
             // We need to set following 4 lines by hand else KMime::Content::addContent
             // will create a new Content instance for us to attach the main message
@@ -564,7 +565,8 @@ public:
             bodyMessage->contentType()->setMimeType("text/plain");
             bodyMessage->contentType()->setCharset("utf-8");
             bodyMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
-            bodyMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
+            const QString answer = i18n("Invitation answer attached.");
+            bodyMessage->setBody(answer.toUtf8());
             bodyMessage->setHeader(bodyDisposition);
             msg->addContent(bodyMessage);
 
