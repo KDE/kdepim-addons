@@ -251,7 +251,7 @@ QVector<AdBlockRule *> AdBlockSubscription::allRules() const
 const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 {
     if (!AdblockUtil::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule *rule = m_rules[offset];
@@ -270,7 +270,7 @@ const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 const AdBlockRule *AdBlockSubscription::disableRule(int offset)
 {
     if (!AdblockUtil::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule *rule = m_rules[offset];
@@ -312,7 +312,7 @@ const AdBlockRule *AdBlockSubscription::replaceRule(AdBlockRule *rule, int offse
 {
     Q_UNUSED(rule)
     Q_UNUSED(offset)
-    return 0;
+    return nullptr;
 }
 
 AdBlockSubscription::~AdBlockSubscription()
@@ -459,7 +459,7 @@ bool AdBlockCustomList::removeRule(int offset)
 const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
 {
     if (!AdblockUtil::containsIndex(m_rules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     AdBlockRule *oldRule = m_rules.at(offset);

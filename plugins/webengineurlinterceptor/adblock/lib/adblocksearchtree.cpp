@@ -108,13 +108,13 @@ const AdBlockRule *AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
 const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar *string, int len) const
 {
     if (len <= 0) {
-        return 0;
+        return nullptr;
     }
 
     QChar c = string[0];
 
     if (!m_root->children.contains(c)) {
-        return 0;
+        return nullptr;
     }
 
     Node *node = m_root->children[c];
@@ -127,7 +127,7 @@ const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInf
         }
 
         if (!node->children.contains(c)) {
-            return 0;
+            return nullptr;
         }
 
         node = node->children[c];
@@ -137,7 +137,7 @@ const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInf
         return node->rule;
     }
 
-    return 0;
+    return nullptr;
 }
 
 void AdBlockSearchTree::deleteNode(AdBlockSearchTree::Node *node)
