@@ -49,8 +49,8 @@ QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::nam
 bool SendMailTransportPlugin::configureTransport(const QString &identifier, MailTransport::Transport *transport, QWidget *parent)
 {
     Q_UNUSED(identifier);
-    QPointer<MailTransport::SendMailConfigDialog> transportConfigDialog
-        = new MailTransport::SendMailConfigDialog(transport, parent);
+    QPointer<SendMailConfigDialog> transportConfigDialog
+        = new SendMailConfigDialog(transport, parent);
     transportConfigDialog->setWindowTitle(i18n("Configure account"));
     bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
     delete transportConfigDialog;

@@ -25,11 +25,10 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QPushButton>
-#include <QDebug>
 
 using namespace MailTransport;
 
-SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent)
+SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, QWidget *parent)
     : QDialog(parent)
     , mTransport(transport)
     , mConfigWidget(nullptr)
@@ -50,7 +49,7 @@ SendMailConfigDialog::SendMailConfigDialog(Transport *transport, QWidget *parent
     connect(mOkButton, &QAbstractButton::clicked, this, &SendMailConfigDialog::okClicked);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SendMailConfigDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SendMailConfigDialog::reject);
-    connect(mConfigWidget, &SendmailConfigWidget::enableButtonOk, this, &SendMailConfigDialog::slotEnabledOkButton);
+    connect(mConfigWidget, &MailTransport::SendmailConfigWidget::enableButtonOk, this, &SendMailConfigDialog::slotEnabledOkButton);
     slotEnabledOkButton(!mConfigWidget->pathIsEmpty());
 }
 
@@ -73,5 +72,3 @@ void SendMailConfigDialog::slotTextChanged(const QString &text)
 {
     mOkButton->setEnabled(!text.isEmpty());
 }
-
-#include "moc_sendmailconfigdialog.cpp"
