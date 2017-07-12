@@ -1055,7 +1055,7 @@ public:
         }
 
         // get the saveas file name
-        const QString saveAsFile = QFileDialog::getSaveFileName(0, i18n("Save Invitation Attachment"), name, QString());
+        const QString saveAsFile = QFileDialog::getSaveFileName(nullptr, i18n("Save Invitation Attachment"), name, QString());
 
         if (saveAsFile.isEmpty()
             || (QFileInfo::exists(saveAsFile)
