@@ -24,6 +24,8 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QPushButton>
+#include <KPIMTextEdit/PlainTextEditor>
 #include "kpimtextedit/plaintexteditorwidget.h"
 
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
@@ -39,10 +41,12 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     mPlainTextEditor = new KPIMTextEdit::PlainTextEditorWidget(this);
     mPlainTextEditor->setObjectName(QStringLiteral("plaintexteditor"));
     layout->addWidget(mPlainTextEditor);
+    connect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     layout->addWidget(buttonBox);
+    mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ReactionToInvitationDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ReactionToInvitationDialog::reject);
     readConfig();
@@ -50,7 +54,13 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
 
 ReactionToInvitationDialog::~ReactionToInvitationDialog()
 {
+    disconnect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
     writeConfig();
+}
+
+void ReactionToInvitationDialog::slotTextChanged()
+{
+    mOkButton->setEnabled(!mPlainTextEditor->editor()->document()->isEmpty());
 }
 
 QString ReactionToInvitationDialog::comment() const

@@ -35,9 +35,11 @@ public:
     QString comment() const;
 
 private:
+    void slotTextChanged();
     void writeConfig();
     void readConfig();
     KPIMTextEdit::PlainTextEditorWidget *mPlainTextEditor;
+    QPushButton *mOkButton;
 };
 
 #endif // REACTIONTOINVITATIONDIALOG_H
