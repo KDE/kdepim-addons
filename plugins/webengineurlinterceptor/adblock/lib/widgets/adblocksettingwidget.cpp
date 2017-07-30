@@ -57,6 +57,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QTextStream>
 #include <QStandardPaths>
 #include <QRegularExpression>
+#include <QDir>
 #include <KRun>
 
 using namespace AdBlock;
@@ -288,6 +289,9 @@ void AdBlockSettingWidget::save()
     for (const QString &group : list) {
         config.deleteGroup(group);
     }
+
+    // make sure the directory exists, otherwise saving the filters will fail
+    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock"));
 
     const int numberItem(mUi->automaticFiltersListWidget->count());
     for (int i = 0; i < numberItem; ++i) {
