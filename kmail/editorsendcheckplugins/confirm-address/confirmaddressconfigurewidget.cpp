@@ -62,7 +62,6 @@ void ConfirmAddressConfigureWidget::saveSettings()
 
 void ConfirmAddressConfigureWidget::resetSettings()
 {
-    mEnable->setChecked(false);
     mConfirmAddressConfigureTab->resetSettings();
 }
 
