@@ -37,7 +37,6 @@ public:
 
 private:
     void slotEnableChanged(bool state);
-    QCheckBox *mEnable;
     ConfirmAddressConfigureTab *mConfirmAddressConfigureTab;
 };
 
