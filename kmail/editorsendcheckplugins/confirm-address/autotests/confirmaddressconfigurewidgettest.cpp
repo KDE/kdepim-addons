@@ -24,10 +24,12 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QCheckBox>
+#include <QStandardPaths>
 
 ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest()
@@ -36,13 +38,21 @@ ConfirmAddressConfigureWidgetTest::~ConfirmAddressConfigureWidgetTest()
 
 void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    ConfirmAddressConfigureWidget w(nullptr);
+    ConfirmAddressConfigureWidget w;
 
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
 
     ConfirmAddressConfigureTab *mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(QStringLiteral("confirmaddresstab"));
     QVERIFY(mConfirmAddressConfigureTab);
+}
+
+void ConfirmAddressConfigureWidgetTest::shouldLoadSaveResetValue()
+{
+    ConfirmAddressConfigureWidget w;
+    w.loadSettings();
+    w.saveSettings();
+    w.resetSettings();
 }
 
 QTEST_MAIN(ConfirmAddressConfigureWidgetTest)

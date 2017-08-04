@@ -30,6 +30,7 @@ public:
     ~ConfirmAddressConfigureWidgetTest();
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldLoadSaveResetValue();
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGETTEST_H
