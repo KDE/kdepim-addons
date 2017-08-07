@@ -181,8 +181,8 @@ void AntiSpamWizard::accept()
                 pipeFilterPattern->append(SearchRule::createInstance("<size>",
                                                                      SearchRule::FuncIsGreaterOrEqual, QStringLiteral("0")));
                 pipeFilter->setApplyOnOutbound(false);
-                pipeFilter->setApplyOnInbound();
-                pipeFilter->setApplyOnExplicit();
+                pipeFilter->setApplyOnInbound(true);
+                pipeFilter->setApplyOnExplicit(true);
                 pipeFilter->setStopProcessingHere(false);
                 pipeFilter->setConfigureShortcut(false);
 
@@ -225,8 +225,8 @@ void AntiSpamWizard::accept()
                 }
             }
             virusFilter->setApplyOnOutbound(false);
-            virusFilter->setApplyOnInbound();
-            virusFilter->setApplyOnExplicit();
+            virusFilter->setApplyOnInbound(true);
+            virusFilter->setApplyOnExplicit(true);
             virusFilter->setStopProcessingHere(true);
             virusFilter->setConfigureShortcut(false);
 
@@ -263,8 +263,8 @@ void AntiSpamWizard::accept()
                 pipeFilterPattern->append(SearchRule::createInstance("<size>",
                                                                      SearchRule::FuncIsLessOrEqual, QStringLiteral("256000")));
                 pipeFilter->setApplyOnOutbound(false);
-                pipeFilter->setApplyOnInbound();
-                pipeFilter->setApplyOnExplicit();
+                pipeFilter->setApplyOnInbound(true);
+                pipeFilter->setApplyOnExplicit(true);
                 pipeFilter->setStopProcessingHere(false);
                 pipeFilter->setConfigureShortcut(false);
 
@@ -315,8 +315,8 @@ void AntiSpamWizard::accept()
             }
         }
         spamFilter->setApplyOnOutbound(false);
-        spamFilter->setApplyOnInbound();
-        spamFilter->setApplyOnExplicit();
+        spamFilter->setApplyOnInbound(true);
+        spamFilter->setApplyOnExplicit(true);
         spamFilter->setStopProcessingHere(true);
         spamFilter->setConfigureShortcut(false);
         filterList.append(spamFilter);
@@ -357,8 +357,8 @@ void AntiSpamWizard::accept()
                 }
             }
             unsureFilter->setApplyOnOutbound(false);
-            unsureFilter->setApplyOnInbound();
-            unsureFilter->setApplyOnExplicit();
+            unsureFilter->setApplyOnInbound(true);
+            unsureFilter->setApplyOnExplicit(true);
             unsureFilter->setStopProcessingHere(true);
             unsureFilter->setConfigureShortcut(false);
 
