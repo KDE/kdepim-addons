@@ -56,7 +56,6 @@ Q_GLOBAL_STATIC(InfoRegExp, s_regexpeditorinstalled)
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractRegexpEditorLineEdit(parent)
-    , mIsRegExpMode(false)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -116,9 +115,8 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
 {
-    mIsRegExpMode = regexpEditor;
     if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
-        mRegExpEditorButton->setVisible(mIsRegExpMode);
+        mRegExpEditorButton->setVisible(regexpEditor);
     }
 }
 
