@@ -27,24 +27,6 @@
 #include <KPluginFactory>
 #include <QSet>
 
-class ShortUrlEnginePluginManagerInstancePrivate
-{
-public:
-    ShortUrlEnginePluginManagerInstancePrivate()
-        : shortUrlEnginePluginManager(new ShortUrlEnginePluginManager)
-    {
-    }
-
-    ~ShortUrlEnginePluginManagerInstancePrivate()
-    {
-        delete shortUrlEnginePluginManager;
-    }
-
-    ShortUrlEnginePluginManager *shortUrlEnginePluginManager;
-};
-
-Q_GLOBAL_STATIC(ShortUrlEnginePluginManagerInstancePrivate, sInstance)
-
 class ShortUrlEnginePluginInfo
 {
 public:
@@ -139,7 +121,8 @@ ShortUrlEnginePluginManager::~ShortUrlEnginePluginManager()
 
 ShortUrlEnginePluginManager *ShortUrlEnginePluginManager::self()
 {
-    return sInstance->shortUrlEnginePluginManager;
+    static ShortUrlEnginePluginManager s_self;
+    return &s_self;
 }
 
 QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManager::pluginsList() const

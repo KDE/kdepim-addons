@@ -23,8 +23,6 @@
 #include "selectimapcreatefolderjob.h"
 #include <QStandardItemModel>
 
-Q_GLOBAL_STATIC(SelectImapFolderModel, s_selectImapFolderModel)
-
 SelectImapFolderModel::SelectImapFolderModel(QObject *parent)
     : QObject(parent)
 {
@@ -36,7 +34,8 @@ SelectImapFolderModel::~SelectImapFolderModel()
 
 SelectImapFolderModel *SelectImapFolderModel::self()
 {
-    return s_selectImapFolderModel;
+    static SelectImapFolderModel s_self;
+    return &s_self;
 }
 
 void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)

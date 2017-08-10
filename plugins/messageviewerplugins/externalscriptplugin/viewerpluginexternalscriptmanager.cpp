@@ -22,24 +22,6 @@
 
 #include <QStandardPaths>
 
-class ViewerPluginExternalScriptManagerInstancePrivate
-{
-public:
-    ViewerPluginExternalScriptManagerInstancePrivate()
-        : externalScriptPluginManager(new ViewerPluginExternalScriptManager)
-    {
-    }
-
-    ~ViewerPluginExternalScriptManagerInstancePrivate()
-    {
-        delete externalScriptPluginManager;
-    }
-
-    ViewerPluginExternalScriptManager *externalScriptPluginManager;
-};
-
-Q_GLOBAL_STATIC(ViewerPluginExternalScriptManagerInstancePrivate, sInstance)
-
 ViewerPluginExternalScriptManager::ViewerPluginExternalScriptManager(QObject *parent)
     : QObject(parent)
 {
@@ -52,7 +34,8 @@ ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager()
 
 ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 {
-    return sInstance->externalScriptPluginManager;
+    static ViewerPluginExternalScriptManager s_self;
+    return &s_self;
 }
 
 void ViewerPluginExternalScriptManager::readExternalScriptInfo()

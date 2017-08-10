@@ -24,27 +24,11 @@
 
 using namespace AdBlock;
 
-class AdblockManagerInstancePrivate
-{
-public:
-    AdblockManagerInstancePrivate()
-        : ablockManager(new AdblockManager)
-    {
-    }
-
-    ~AdblockManagerInstancePrivate()
-    {
-        delete ablockManager;
-    }
-
-    AdblockManager *ablockManager;
-};
-
-Q_GLOBAL_STATIC(AdblockManagerInstancePrivate, sInstance)
 
 AdblockManager *AdblockManager::self()
 {
-    return sInstance->ablockManager;
+    static AdblockManager s_self;
+    return &s_self;
 }
 
 AdblockManager::AdblockManager(QObject *parent)
