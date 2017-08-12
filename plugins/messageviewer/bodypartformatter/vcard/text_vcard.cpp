@@ -285,12 +285,7 @@ public:
         // get the saveas file name
         QUrl saveAsUrl
             = QFileDialog::getSaveFileUrl(nullptr, i18n("Save Business Card"), QUrl::fromUserInput(fileName));
-        if (saveAsUrl.isEmpty()
-            || (QFileInfo::exists(saveAsUrl.path())
-                && (KMessageBox::warningYesNo(
-                        nullptr,
-                        i18n("%1 already exists. Do you want to overwrite it?",
-                             saveAsUrl.path())) == KMessageBox::No))) {
+        if (saveAsUrl.isEmpty()) {
             return false;
         }
 
