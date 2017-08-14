@@ -83,6 +83,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalCore::Todo::todoMimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+    connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &TodoEdit::comboboxRowInserted);
 #ifndef QT_NO_ACCESSIBILITY
     mCollectionCombobox->setAccessibleDescription(i18n("Todo list where the new task will be stored."));
 #endif
@@ -133,6 +134,11 @@ TodoEdit::TodoEdit(QWidget *parent)
 TodoEdit::~TodoEdit()
 {
     writeConfig();
+}
+
+void TodoEdit::comboboxRowInserted()
+{
+    updateButtons(mNoteEdit->text());
 }
 
 void TodoEdit::updateButtons(const QString &subject)
