@@ -83,6 +83,7 @@ EventEdit::EventEdit(QWidget *parent)
 
     connect(mCollectionCombobox, QOverload<int>::of(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
     connect(mCollectionCombobox, QOverload<int>::of(&Akonadi::CollectionComboBox::activated), this, &EventEdit::slotCollectionChanged);
+    connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &EventEdit::comboboxRowInserted);
     hbox->addWidget(mCollectionCombobox);
 
     hbox = new QHBoxLayout;
@@ -162,6 +163,11 @@ EventEdit::EventEdit(QWidget *parent)
 EventEdit::~EventEdit()
 {
     writeConfig();
+}
+
+void EventEdit::comboboxRowInserted()
+{
+    slotUpdateButtons(mEventEdit->text());
 }
 
 void EventEdit::writeConfig()
