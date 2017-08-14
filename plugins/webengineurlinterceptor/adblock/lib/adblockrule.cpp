@@ -642,10 +642,8 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
                 parsed.append(QLatin1Char('$'));
                 break;
             }
-        // fallthrough
-#if QT_VERSION >= QT_VERSION_CHECK(5,8,0)
-        Q_FALLTHROUGH();
-#endif
+            // fallthrough
+            Q_FALLTHROUGH();
 
         default:
             if (!wordCharacter(c)) {
