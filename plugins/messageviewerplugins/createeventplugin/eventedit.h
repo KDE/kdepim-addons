@@ -70,6 +70,7 @@ protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 private:
     void readConfig();
+    void comboboxRowInserted();
     Akonadi::Collection mCollection;
     KMime::Message::Ptr mMessage;
     QLineEdit *mEventEdit;

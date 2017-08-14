@@ -81,6 +81,7 @@ EventEdit::EventEdit(QWidget *parent)
 #endif
     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
 
+    connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &EventEdit::comboboxRowInserted);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
     connect(mCollectionCombobox, static_cast<void (Akonadi::CollectionComboBox::*)(int)>(&Akonadi::CollectionComboBox::activated), this, &EventEdit::slotCollectionChanged);
     hbox->addWidget(mCollectionCombobox);
@@ -162,6 +163,11 @@ EventEdit::EventEdit(QWidget *parent)
 EventEdit::~EventEdit()
 {
     writeConfig();
+}
+
+void EventEdit::comboboxRowInserted()
+{
+    slotUpdateButtons(mEventEdit->text());
 }
 
 void EventEdit::writeConfig()
