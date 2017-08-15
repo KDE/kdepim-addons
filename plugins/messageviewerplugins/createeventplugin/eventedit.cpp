@@ -232,7 +232,7 @@ void EventEdit::setMessage(const KMime::Message::Ptr &value)
 {
     if (mMessage != value) {
         mMessage = value;
-        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
+        const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : nullptr;
         if (subject) {
             mEventEdit->setText(subject->asUnicodeString());
             mEventEdit->selectAll();

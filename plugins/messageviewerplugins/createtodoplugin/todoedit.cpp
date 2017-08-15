@@ -151,7 +151,7 @@ void TodoEdit::updateButtons(const QString &subject)
 
 void TodoEdit::showToDoWidget()
 {
-    const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : 0;
+    const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : nullptr;
     if (subject) {
         bool isSentFolder = false;
         if (mCurrentCollection.isValid()) {
