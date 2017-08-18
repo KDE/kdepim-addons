@@ -69,6 +69,7 @@ Q_SIGNALS:
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 private:
+    KCalCore::Event::Ptr createEventItem();
     void readConfig();
     void comboboxRowInserted();
     Akonadi::Collection mCollection;
