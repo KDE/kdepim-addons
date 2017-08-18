@@ -248,8 +248,7 @@ void TodoEdit::slotReturnPressed()
     if (!mNoteEdit->text().trimmed().isEmpty()) {
         mMsgWidget->setText(i18nc("%1 is summary of the todo, %2 is name of the folder in which it is stored",
                                   "New todo '%1' was added to task list '%2'", mNoteEdit->text(), collection.displayName()));
-        KCalCore::Todo::Ptr todo(new KCalCore::Todo);
-        todo->setSummary(mNoteEdit->text());
+        KCalCore::Todo::Ptr todo = createTodoItem();
         mNoteEdit->clear();
 
         // We don't hide the widget here, so that multiple todo's can be added
@@ -257,6 +256,20 @@ void TodoEdit::slotReturnPressed()
 
         mMsgWidget->animatedShow();
     }
+}
+
+KCalCore::Todo::Ptr TodoEdit::createTodoItem()
+{
+    KCalCore::Todo::Ptr todo(new KCalCore::Todo);
+    todo->setSummary(mNoteEdit->text());
+    KCalCore::Attachment::Ptr attachment(new KCalCore::Attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType()));
+    const KMime::Headers::Subject *const subject = mMessage->subject(false);
+    if (subject) {
+        attachment->setLabel(subject->asUnicodeString());
+    }
+
+    todo->addAttachment(attachment);
+    return todo;
 }
 
 bool TodoEdit::eventFilter(QObject *object, QEvent *e)
@@ -290,21 +303,15 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
 
 void TodoEdit::slotOpenEditor()
 {
-    QTemporaryFile tf;
-    tf.setAutoRemove(false);
-    tf.open();
-    tf.write(mMessage->encodedContent());
-    tf.close();
+    KCalCore::Todo::Ptr event = createTodoItem();
 
-    const KMime::Headers::Subject *const subject = mMessage->subject(false);
-    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::createTodoEditor(
-        mNoteEdit->text(), QString(),
-        QStringList() << tf.fileName(),
-            QStringList(),      // attendees
-            QStringList() << KMime::Message::mimeType(),
-            QStringList() << (subject ? subject->asUnicodeString() : QString()),
-            true, mCollection, true, this);
+    Akonadi::Item item;
+    item.setPayload<KCalCore::Todo::Ptr>(event);
+    item.setMimeType(KCalCore::Todo::todoMimeType());
+
+    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalCore::IncidenceBase::TypeTodo, nullptr, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
+    dlg->load(item);
     dlg->open();
 }
 
