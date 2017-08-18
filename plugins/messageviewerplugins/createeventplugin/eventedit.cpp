@@ -356,7 +356,7 @@ void EventEdit::slotOpenEditor()
     item.setPayload<KCalCore::Event::Ptr>(event);
     item.setMimeType(KCalCore::Event::eventMimeType());
 
-    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalCore::IncidenceBase::TypeEvent, 0, this);
+    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalCore::IncidenceBase::TypeEvent, nullptr, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &EventEdit::slotCloseWidget);
     dlg->load(item);
     dlg->open();
