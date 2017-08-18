@@ -30,6 +30,7 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QLabel>
+#include <QTemporaryFile>
 
 #include <AkonadiWidgets/CollectionComboBox>
 
@@ -289,14 +290,20 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
 
 void TodoEdit::slotOpenEditor()
 {
+    QTemporaryFile tf;
+    tf.setAutoRemove(false);
+    tf.open();
+    tf.write(mMessage->encodedContent());
+    tf.close();
+
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::createTodoEditor(
         mNoteEdit->text(), QString(),
-        QStringList() << QString::fromLatin1(mMessage->encodedContent().toBase64()),
+        QStringList() << tf.fileName(),
             QStringList(),      // attendees
             QStringList() << KMime::Message::mimeType(),
             QStringList() << (subject ? subject->asUnicodeString() : QString()),
-            false, mCollection, false, this);
+            true, mCollection, true, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
     dlg->open();
 }
