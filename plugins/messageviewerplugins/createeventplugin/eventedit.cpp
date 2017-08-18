@@ -274,10 +274,7 @@ void EventEdit::slotReturnPressed()
     }
 
     if (!mEventEdit->text().trimmed().isEmpty()) {
-        KCalCore::Event::Ptr event(new KCalCore::Event);
-        event->setDtStart(KDateTime(dtstart));
-        event->setDtEnd(KDateTime(dtend));
-        event->setSummary(mEventEdit->text());
+        KCalCore::Event::Ptr event = createEventItem();
         Q_EMIT createEvent(event, collection);
         mEventEdit->clear();
         hide();
@@ -339,7 +336,7 @@ void EventEdit::slotStartDateTimeChanged(const QDateTime &newDateTime)
     mEndDateTimeEdit->setMinimumDateTime(newDateTime);
 }
 
-void EventEdit::slotOpenEditor()
+KCalCore::Event::Ptr EventEdit::createEventItem()
 {
     KCalCore::Attachment::Ptr attachment(new KCalCore::Attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType()));
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
@@ -351,6 +348,12 @@ void EventEdit::slotOpenEditor()
     event->setDtStart(KDateTime(mStartDateTimeEdit->dateTime()));
     event->setDtEnd(KDateTime(mEndDateTimeEdit->dateTime()));
     event->addAttachment(attachment);
+    return event;
+}
+
+void EventEdit::slotOpenEditor()
+{
+    KCalCore::Event::Ptr event = createEventItem();
 
     Akonadi::Item item;
     item.setPayload<KCalCore::Event::Ptr>(event);
