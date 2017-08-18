@@ -61,6 +61,7 @@ Q_SIGNALS:
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 private:
+    KCalCore::Todo::Ptr createTodoItem();
     void comboboxRowInserted();
     void slotReturnPressed();
     void slotCollectionChanged(int);
