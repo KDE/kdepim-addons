@@ -42,11 +42,6 @@ void GravatarUpdateWidgetTest::shouldHaveDefaultValue()
     QLabel *emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
     QVERIFY(emaillabel);
 
-    QCheckBox *useHttps = widget.findChild<QCheckBox *>(QStringLiteral("usehttps"));
-    QVERIFY(useHttps);
-    QVERIFY(!useHttps->isChecked());
-    QVERIFY(useHttps->isEnabled());
-
     QCheckBox *useLibravatar = widget.findChild<QCheckBox *>(QStringLiteral("uselibravatar"));
     QVERIFY(useLibravatar);
     QVERIFY(!useLibravatar->isChecked());

@@ -47,10 +47,6 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     hboxEmail->addWidget(mEmailLab);
     mainLayout->addLayout(hboxEmail, 0, 0);
 
-    mUseHttps = new QCheckBox(i18n("Use HTTPS Protocol"));
-    mUseHttps->setObjectName(QStringLiteral("usehttps"));
-    mainLayout->addWidget(mUseHttps, 1, 0);
-
     mUseLibravatar = new QCheckBox(i18n("Use Libravatar"));
     mUseLibravatar->setObjectName(QStringLiteral("uselibravatar"));
     mainLayout->addWidget(mUseLibravatar, 2, 0);
@@ -128,7 +124,6 @@ void GravatarUpdateWidget::slotSearchGravatar()
         job->setEmail(mEmail);
         if (job->canStart()) {
             job->setUseDefaultPixmap(false);
-            job->setUseHttps(mUseHttps->isChecked());
             job->setUseLibravatar(mUseLibravatar->isChecked());
             job->setFallbackGravatar(mFallbackGravatar->isChecked());
             connect(job, &Gravatar::GravatarResolvUrlJob::finished, this, &GravatarUpdateWidget::slotSearchGravatarFinished);
