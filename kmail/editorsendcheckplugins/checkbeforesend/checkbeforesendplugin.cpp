@@ -23,6 +23,7 @@
 #include "configurewidget/checkbeforesendconfiguredialog.h"
 
 #include <KLocalizedString>
+#include <QPointer>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_checkbeforesendplugin.json", registerPlugin<CheckBeforeSendPlugin>();
@@ -51,8 +52,9 @@ bool CheckBeforeSendPlugin::hasConfigureDialog() const
 
 void CheckBeforeSendPlugin::showConfigureDialog(QWidget *parent)
 {
-    CheckBeforeSendConfigureDialog dlg(parent);
-    dlg.exec();
+    QPointer<CheckBeforeSendConfigureDialog> dlg = new CheckBeforeSendConfigureDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 #include "checkbeforesendplugin.moc"

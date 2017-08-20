@@ -23,6 +23,7 @@
 #include "confirmaddressconfiguredialog.h"
 
 #include <KLocalizedString>
+#include <QPointer>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();
@@ -52,8 +53,9 @@ bool ConfirmAddressPlugin::hasConfigureDialog() const
 
 void ConfirmAddressPlugin::showConfigureDialog(QWidget *parent)
 {
-    ConfirmAddressConfigureDialog dlg(parent);
-    dlg.exec();
+    QPointer<ConfirmAddressConfigureDialog> dlg = new ConfirmAddressConfigureDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 #include "confirmaddressplugin.moc"

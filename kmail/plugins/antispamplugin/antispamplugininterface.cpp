@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPointer>
 
 AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -48,6 +49,7 @@ void AntiSpamPluginInterface::slotActivated()
 
 void AntiSpamPluginInterface::exec()
 {
-    KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
-    wiz.exec();
+    QPointer<KMail::AntiSpamWizard> wiz = new KMail::AntiSpamWizard(KMail::AntiSpamWizard::AntiSpam, parentWidget());
+    wiz->exec();
+    delete wiz;
 }

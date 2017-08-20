@@ -23,6 +23,7 @@
 #include "automaticaddcontactsconfiguredialog.h"
 
 #include <KLocalizedString>
+#include <QPointer>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_automaticaddcontactsplugin.json", registerPlugin<AutomaticAddContactsPlugin>();
@@ -51,8 +52,9 @@ bool AutomaticAddContactsPlugin::hasConfigureDialog() const
 
 void AutomaticAddContactsPlugin::showConfigureDialog(QWidget *parent)
 {
-    AutomaticAddContactsConfigureDialog dlg(parent);
-    dlg.exec();
+    QPointer<AutomaticAddContactsConfigureDialog> dlg = new AutomaticAddContactsConfigureDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 #include "automaticaddcontactsplugin.moc"
