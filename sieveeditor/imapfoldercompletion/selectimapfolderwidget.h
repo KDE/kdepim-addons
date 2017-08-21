@@ -23,12 +23,13 @@
 #include <QWidget>
 #include <QTreeView>
 
-#include <KRecursiveFilterProxyModel>
 #include <KSieveUi/SieveImapAccountSettings>
 
 class QStandardItemModel;
 class QLineEdit;
 class SelectImapFolderTreeView;
+#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
+#include <KRecursiveFilterProxyModel>
 class SearchFilterProxyModel : public KRecursiveFilterProxyModel
 {
     Q_OBJECT
@@ -44,6 +45,7 @@ protected:
 private:
     QString mPattern;
 };
+#endif
 
 class SelectImapFolderWidget : public QWidget
 {
@@ -71,7 +73,11 @@ private:
     QLineEdit *mSearchLineEdit;
     SelectImapFolderTreeView *mTreeView;
     QStandardItemModel *mModel;
+#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
     SearchFilterProxyModel *mFilter;
+#else
+    QSortFilterProxyModel *mFilter;
+#endif
 };
 
 #endif // SELECTIMAPFOLDERWIDGET_H
