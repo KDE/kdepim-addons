@@ -28,6 +28,7 @@
 #include <KConfigGroup>
 
 #include <QDomDocument>
+#include <QPointer>
 
 Picoftheday::Picoftheday()
 {
@@ -42,8 +43,9 @@ Picoftheday::~Picoftheday()
 
 void Picoftheday::configure(QWidget *parent)
 {
-    ConfigDialog dlg(parent);
-    dlg.exec();
+    QPointer<ConfigDialog> dlg = new ConfigDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 QString Picoftheday::info() const

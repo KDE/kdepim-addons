@@ -116,27 +116,30 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                 i18nc("@info",
                       "You must create an address book before adding a contact. Do you want to create an address book?"),
                 i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
-            Akonadi::AgentTypeDialog dlg(nullptr);
-            dlg.setWindowTitle(i18n("Add Address Book"));
-            dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
-            dlg.agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
-            dlg.agentFilterProxyModel()->addCapabilityFilter(QStringLiteral("Resource"));
+            QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
+            dlg->setWindowTitle(i18n("Add Address Book"));
+            dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
+            dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
+            dlg->agentFilterProxyModel()->addCapabilityFilter(QStringLiteral("Resource"));
 
-            if (dlg.exec()) {
-                const Akonadi::AgentType agentType = dlg.agentType();
+            if (dlg->exec()) {
+                const Akonadi::AgentType agentType = dlg->agentType();
 
                 if (agentType.isValid()) {
                     Akonadi::AgentInstanceCreateJob *job = new Akonadi::AgentInstanceCreateJob(agentType, this);
                     connect(job, &KJob::result, this, &AutomaticAddContactsJob::slotResourceCreationDone);
                     job->configure();
                     job->start();
+                    delete dlg;
                     return;
                 } else { //if agent is not valid => return error and finish job
                     deleteLaterAndEmitSignal();
+                    delete dlg;
                     return;
                 }
             } else { //Canceled create agent => return error and finish job
                 deleteLaterAndEmitSignal();
+                delete dlg;
                 return;
             }
         } else {

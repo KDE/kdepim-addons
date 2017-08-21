@@ -21,6 +21,7 @@
 #include "viewerpluginexternalscriptinterface.h"
 #include "configuredialog/viewerpluginexternalconfiguredialog.h"
 #include <KActionCollection>
+#include <QPointer>
 #include <kpluginfactory.h>
 
 using namespace MessageViewer;
@@ -45,10 +46,11 @@ QString ViewerPluginExternalscript::viewerPluginName() const
 
 void MessageViewer::ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)
 {
-    ViewerPluginExternalConfigureDialog dlg(parent);
-    if (dlg.exec()) {
+    QPointer<ViewerPluginExternalConfigureDialog> dlg = new ViewerPluginExternalConfigureDialog(parent);
+    if (dlg->exec()) {
         Q_EMIT configChanged();
     }
+    delete dlg;
 }
 
 bool MessageViewer::ViewerPluginExternalscript::hasConfigureDialog() const
