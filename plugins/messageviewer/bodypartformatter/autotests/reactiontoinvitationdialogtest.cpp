@@ -23,10 +23,12 @@
 #include <QTest>
 #include <QLabel>
 #include <kpimtextedit/plaintexteditorwidget.h>
+#include <QStandardPaths>
 
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ReactionToInvitationDialogTest::~ReactionToInvitationDialogTest()
