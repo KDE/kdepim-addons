@@ -21,8 +21,9 @@
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QLabel>
-#include <QLineEdit>
+#include <KLineEdit>
 #include <QFormLayout>
+#include <KUrlRequester>
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
@@ -44,12 +45,18 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mCommandLine->setObjectName(QStringLiteral("commandline"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
 
-    mExecutable = new QLineEdit(this);
-    mExecutable->setClearButtonEnabled(true);
-    mExecutable->setObjectName(QStringLiteral("executable"));
+    mExecutable = new KUrlRequester(this);
+    mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
+
+    mExecutable->setMimeTypeFilters({QStringLiteral("application/x-executable"),
+                                               QStringLiteral("application/x-shellscript"),
+                                               QStringLiteral("application/x-desktop")});
+
+    mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
+    mExecutable->lineEdit()->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Executable:"), mExecutable);
     connect(mName, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
-    connect(mExecutable, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
+    connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
 }
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()

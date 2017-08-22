@@ -23,6 +23,7 @@
 #include <QWidget>
 #include "../viewerpluginexternalscriptinfo.h"
 class QLineEdit;
+class KUrlRequester;
 class ViewerPluginExternalEditWidget : public QWidget
 {
     Q_OBJECT
@@ -46,7 +47,7 @@ private:
     QLineEdit *mName;
     QLineEdit *mDescription;
     QLineEdit *mCommandLine;
-    QLineEdit *mExecutable;
+    KUrlRequester *mExecutable;
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGET_H
