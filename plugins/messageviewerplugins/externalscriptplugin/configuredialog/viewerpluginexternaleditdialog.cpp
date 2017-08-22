@@ -23,6 +23,8 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QPushButton>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)
@@ -42,17 +44,35 @@ ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setEnabled(false);
-    resize(350, 200);
+    readConfig();
 }
 
 ViewerPluginExternalEditDialog::~ViewerPluginExternalEditDialog()
 {
+    saveConfig();
 }
 
 void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)
 {
     mOkButton->setEnabled(valid);
 }
+
+void ViewerPluginExternalEditDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ViewerPluginExternalEditDialog");
+    const QSize size = group.readEntry("Size", QSize(350, 200));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void ViewerPluginExternalEditDialog::saveConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "ViewerPluginExternalEditDialog");
+    group.writeEntry("Size", size());
+    group.sync();
+}
+
 
 void ViewerPluginExternalEditDialog::slotAccepted()
 {

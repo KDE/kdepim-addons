@@ -39,6 +39,8 @@ public:
     void setExistingsNames(const QStringList &existingsNames);
 
 private:
+    void readConfig();
+    void saveConfig();
     void slotScriptIsValid(bool valid);
     void slotAccepted();
     ViewerPluginExternalEditWidget *mEditWidget;
