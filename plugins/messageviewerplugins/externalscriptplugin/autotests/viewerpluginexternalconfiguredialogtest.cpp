@@ -22,10 +22,12 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QTest>
+#include <QStandardPaths>
 
 ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 ViewerPluginExternalConfigureDialogTest::~ViewerPluginExternalConfigureDialogTest()
