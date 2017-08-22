@@ -41,9 +41,8 @@ public:
 
     QString delegate() const;
     bool rsvp() const;
-public Q_SLOTS:
-    void slotTextChanged(const QString &text);
 private:
+    void slotTextChanged(const QString &text);
     KPIM::AddresseeLineEdit *mDelegate;
     QCheckBox *mRsvp;
     QPushButton *mOkButton;
