@@ -117,7 +117,7 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
 
 void LDifImportExportPluginInterface::importLdif()
 {
-    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), i18n("LDif Files (*.ldif)"));
+    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), QStringLiteral("%1 (*.ldif)").arg(i18n("LDif Files")));
     importLdifFile(fileName);
 }
 
