@@ -46,10 +46,10 @@ private:
     void slotImportJobDone(KJob *);
     KAddressBookImportExport::KAddressBookImportExportContactList mContactsList;
     Akonadi::Collection mDefaultAddressBook;
-    QWidget *mParentWidget;
-    QProgressDialog *mImportProgressDialog;
-    int mNumberElementToImport;
-    int mImportDone;
+    QWidget *mParentWidget = nullptr;
+    QProgressDialog *mImportProgressDialog = nullptr;
+    int mNumberElementToImport = -1;
+    int mImportDone = 0;
 };
 
 #endif // IMPORTEXPORTENGINE_H

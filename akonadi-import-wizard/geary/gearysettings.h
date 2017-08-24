@@ -35,7 +35,7 @@ private:
     void readIdentity();
     void readGlobalSettings();
     void readTransport();
-    QSettings *settings;
+    QSettings *settings = nullptr;
 };
 
 #endif // ClawsMailSettings_H

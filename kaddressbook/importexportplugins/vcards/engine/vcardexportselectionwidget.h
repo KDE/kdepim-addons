@@ -45,12 +45,12 @@ public:
 private:
     void readSettings();
     void writeSettings();
-    QCheckBox *mPrivateBox;
-    QCheckBox *mBusinessBox;
-    QCheckBox *mOtherBox;
-    QCheckBox *mEncryptionKeys;
-    QCheckBox *mPictureBox;
-    QCheckBox *mDisplayNameBox;
+    QCheckBox *mPrivateBox = nullptr;
+    QCheckBox *mBusinessBox = nullptr;
+    QCheckBox *mOtherBox = nullptr;
+    QCheckBox *mEncryptionKeys = nullptr;
+    QCheckBox *mPictureBox = nullptr;
+    QCheckBox *mDisplayNameBox = nullptr;
 };
 
 #endif // VCARDEXPORTSELECTIONWIDGET_H

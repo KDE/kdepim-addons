@@ -69,15 +69,15 @@ private:
     void applyTemplate();
     void saveTemplate();
 
-    QTableView *mTable;
-    QButtonGroup *mDelimiterGroup;
-    QLineEdit *mDelimiterEdit;
-    QLineEdit *mDatePatternEdit;
-    KComboBox *mComboQuote;
-    KComboBox *mCodecCombo;
-    QCheckBox *mSkipFirstRow;
-    KUrlRequester *mUrlRequester;
-    QCsvModel *mModel;
+    QTableView *mTable = nullptr;
+    QButtonGroup *mDelimiterGroup = nullptr;
+    QLineEdit *mDelimiterEdit = nullptr;
+    QLineEdit *mDatePatternEdit = nullptr;
+    KComboBox *mComboQuote = nullptr;
+    KComboBox *mCodecCombo = nullptr;
+    QCheckBox *mSkipFirstRow = nullptr;
+    KUrlRequester *mUrlRequester = nullptr;
+    QCsvModel *mModel = nullptr;
 
     void initGUI();
 
@@ -88,11 +88,11 @@ private:
     QChar mTextQuote;
     QString mDelimiter;
     QMap<QString, uint> mTypeMap;
-    QIODevice *mDevice;
+    QIODevice *mDevice = nullptr;
     KAddressBookImportExport::KAddressBookImportExportContactFields::Fields mFieldSelection;
-    QPushButton *mUser1Button;
-    QPushButton *mUser2Button;
-    QPushButton *mOkButton;
+    QPushButton *mUser1Button = nullptr;
+    QPushButton *mUser2Button = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif

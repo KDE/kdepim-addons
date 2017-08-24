@@ -47,10 +47,10 @@ private:
     void slotActivateButton(bool state);
     void readConfig();
     void writeConfig();
-    GravatarUpdateWidget *mGravatarUpdateWidget;
-    QPushButton *mSaveImageButton;
-    QPushButton *mSaveUrlButton;
-    bool mSaveUrl;
+    GravatarUpdateWidget *mGravatarUpdateWidget = nullptr;
+    QPushButton *mSaveImageButton = nullptr;
+    QPushButton *mSaveUrlButton = nullptr;
+    bool mSaveUrl = false;
 };
 }
 #endif // GRAVATARUPDATEDIALOG_H

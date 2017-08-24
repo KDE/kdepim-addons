@@ -55,11 +55,11 @@ private:
     QString mEmail;
     QPixmap mPixmap;
     QUrl mCurrentUrl;
-    QLabel *mEmailLab;
-    QPushButton *mSearchGravatar;
-    QLabel *mResultGravatar;
-    QCheckBox *mUseLibravatar;
-    QCheckBox *mFallbackGravatar;
+    QLabel *mEmailLab = nullptr;
+    QPushButton *mSearchGravatar = nullptr;
+    QLabel *mResultGravatar = nullptr;
+    QCheckBox *mUseLibravatar = nullptr;
+    QCheckBox *mFallbackGravatar = nullptr;
 };
 }
 

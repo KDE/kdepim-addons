@@ -39,8 +39,8 @@ private Q_SLOTS:
     void updateButtons();
 
 private:
-    QListView *mView;
-    QPushButton *mOkButton;
+    QListView *mView = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif

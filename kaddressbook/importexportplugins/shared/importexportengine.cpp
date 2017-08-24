@@ -30,10 +30,6 @@
 
 ImportExportEngine::ImportExportEngine(QObject *parent)
     : QObject(parent)
-    , mParentWidget(nullptr)
-    , mImportProgressDialog(nullptr)
-    , mNumberElementToImport(-1)
-    , mImportDone(0)
 {
 }
 

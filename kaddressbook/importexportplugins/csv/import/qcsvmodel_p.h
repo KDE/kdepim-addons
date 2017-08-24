@@ -56,11 +56,11 @@ protected:
     void run() override;
 
 private:
-    QCsvReader *mReader;
-    QIODevice *mDevice;
-    int mRowCount;
-    int mColumnCount;
-    int mCacheCounter;
+    QCsvReader *mReader = nullptr;
+    QIODevice *mDevice = nullptr;
+    int mRowCount = 0;
+    int mColumnCount = 0;
+    int mCacheCounter = 0;
 };
 
 #endif

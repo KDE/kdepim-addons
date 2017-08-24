@@ -51,11 +51,11 @@ private:
         NumberOfProtocols = 4
     };
     QCheckBox *mProtocolCB[NumberOfProtocols];
-    KComboBox *mSignPref;
-    KComboBox *mCryptPref;
-    Kleo::KeyRequester *mPgpKey;
-    Kleo::KeyRequester *mSmimeCert;
-    bool mReadOnly;
+    KComboBox *mSignPref = nullptr;
+    KComboBox *mCryptPref = nullptr;
+    Kleo::KeyRequester *mPgpKey = nullptr;
+    Kleo::KeyRequester *mSmimeCert = nullptr;
+    bool mReadOnly = false;
 };
 
 #endif

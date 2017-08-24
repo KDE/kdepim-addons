@@ -30,7 +30,6 @@ using namespace KABGravatar;
 
 GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     : QDialog(parent)
-    , mSaveUrl(false)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18n("Check and update Gravatar"));

@@ -28,10 +28,6 @@
 
 CsvParser::CsvParser(QObject *parent)
     : QThread(parent)
-    , mDevice(nullptr)
-    , mRowCount(0)
-    , mColumnCount(0)
-    , mCacheCounter(0)
 {
     mReader = new QCsvReader(this);
 }

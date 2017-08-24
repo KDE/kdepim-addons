@@ -46,11 +46,11 @@ private:
     void writeConfig();
     void updateView();
 
-    KAddressBookGrantlee::GrantleeContactViewer *mView;
 
     KContacts::Addressee::List mContacts;
     KContacts::Addressee::List::Iterator mIt;
-    QPushButton *mApplyButton;
+    QPushButton *mApplyButton = nullptr;
+    KAddressBookGrantlee::GrantleeContactViewer *mView = nullptr;
 };
 
 #endif // VCARDVIEWERDIALOG_H
