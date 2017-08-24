@@ -28,6 +28,7 @@
 class QStandardItemModel;
 class QLineEdit;
 class SelectImapFolderTreeView;
+class QSortFilterProxyModel;
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
 #include <KRecursiveFilterProxyModel>
 class SearchFilterProxyModel : public KRecursiveFilterProxyModel

@@ -31,6 +31,7 @@
 #include <QLineEdit>
 #include <QPainter>
 #include <QInputDialog>
+#include <QSortFilterProxyModel>
 
 #include <KLocalizedString>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
