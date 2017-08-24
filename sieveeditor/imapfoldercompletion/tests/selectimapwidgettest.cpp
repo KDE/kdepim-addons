@@ -36,6 +36,7 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     KPluginFactory *factory = loader.factory();
     if (!factory) {
         lineEdit = new DefaultMoveImapFolderWidget(this);
+        qDebug() << " error during load : " << loader.errorString();
     } else {
         lineEdit = factory->create<KSieveUi::AbstractMoveImapFolderWidget>();
     }
