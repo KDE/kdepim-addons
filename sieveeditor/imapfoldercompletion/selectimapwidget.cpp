@@ -20,6 +20,7 @@
 #include "selectimapwidget.h"
 #include "selectimapfolderdialog.h"
 #include "selectimaplineedit.h"
+#include "imapfoldercompletionplugin_debug.h"
 #include <KLocalizedString>
 #include <QToolButton>
 #include <QHBoxLayout>
@@ -69,6 +70,8 @@ void SelectImapWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAcco
     if (mAccount.isValid()) {
         mToolButton->show();
         mLineEdit->setSieveImapAccountSettings(account);
+    } else {
+        qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "Account is not defined";
     }
 }
 
