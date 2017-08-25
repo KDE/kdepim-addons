@@ -62,12 +62,12 @@ void EventModel::createMonitor()
     });
     connect(mMonitor, &Akonadi::Monitor::itemChanged,
             this, [this](const Akonadi::Item &item) {
-        KCalCore::Incidence::Ptr incidence;
-        try {
-            incidence = item.payload<KCalCore::Incidence::Ptr>();
-        } catch (const Akonadi::PayloadException &e) {
-            qCWarning(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload:" << e.what();
+        if (!item.hasPayload<KCalCore::Incidence::Ptr>()) {
+            qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload!";
+            return;
         }
+
+        auto incidence = item.payload<KCalCore::Incidence::Ptr>();
         if (!incidence) {
             return;         // HUH?!
         }
@@ -154,8 +154,11 @@ void EventModel::onItemsReceived(const Akonadi::Item::List &items)
 {
     qCDebug(PIMEVENTSPLUGIN_LOG) << "Batch: received" << items.count() << "items";
     for (const auto &item : items) {
-        incidenceChanger()->createFinished(0, item,
-                                           Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+            incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        } else {
+            qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload";
+        }
     }
 }
 
