@@ -41,10 +41,10 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);
 
-    mCheckDuplicateEmails = new QCheckBox(i18n("Check duplicated emails"), this);
-    mCheckDuplicateEmails->setObjectName(QStringLiteral("checkduplicatedemails"));
-    connect(mCheckDuplicateEmails, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
-    mainLayout->addWidget(mCheckDuplicateEmails);
+    mCheckDuplicateEmailsAddresses = new QCheckBox(i18n("Check duplicated emails addresses"), this);
+    mCheckDuplicateEmailsAddresses->setObjectName(QStringLiteral("checkduplicatedemailsaddresses"));
+    connect(mCheckDuplicateEmailsAddresses, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
+    mainLayout->addWidget(mCheckDuplicateEmailsAddresses);
 
     mCheckSendAttachments = new QCheckBox(i18n("Check send attachment"), this);
     mCheckSendAttachments->setObjectName(QStringLiteral("checksendattachment"));
@@ -63,7 +63,7 @@ void CheckBeforeSendConfigureWidget::loadSettings()
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
     mCheckMailTransport->setChecked(grp.readEntry("SmtpDefinedInIdentity", false));
-    mCheckDuplicateEmails->setChecked(grp.readEntry("CheckDuplicatedEmails", false));
+    mCheckDuplicateEmailsAddresses->setChecked(grp.readEntry("CheckDuplicatedEmails", false));
     mCheckSendAttachments->setChecked(grp.readEntry("CheckSendAttachment", false));
 }
 
@@ -72,7 +72,7 @@ void CheckBeforeSendConfigureWidget::saveSettings()
     KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
     grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
     grp.writeEntry("SmtpDefinedInIdentity", mCheckMailTransport->isChecked());
-    grp.writeEntry("CheckDuplicatedEmails", mCheckDuplicateEmails->isChecked());
+    grp.writeEntry("CheckDuplicatedEmails", mCheckDuplicateEmailsAddresses->isChecked());
     grp.writeEntry("CheckSendAttachment", mCheckSendAttachments->isChecked());
 }
 
@@ -81,5 +81,5 @@ void CheckBeforeSendConfigureWidget::resetSettings()
     mCheckPlainTextMail->setChecked(false);
     mCheckMailTransport->setChecked(false);
     mCheckSendAttachments->setChecked(false);
-    mCheckDuplicateEmails->setChecked(false);
+    mCheckDuplicateEmailsAddresses->setChecked(false);
 }

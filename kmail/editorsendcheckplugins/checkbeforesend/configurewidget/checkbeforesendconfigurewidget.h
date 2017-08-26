@@ -38,7 +38,7 @@ public:
 private:
     QCheckBox *mCheckPlainTextMail;
     QCheckBox *mCheckMailTransport;
-    QCheckBox *mCheckDuplicateEmails;
+    QCheckBox *mCheckDuplicateEmailsAddresses;
     QCheckBox *mCheckSendAttachments;
 };
 
