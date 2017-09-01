@@ -1082,11 +1082,12 @@ public:
             file->setPermissions(QFile::ReadUser);
             file->write(QByteArray::fromBase64(a->data()));
             file->close();
+            const QString filename = file->fileName();
+            delete file;
 
-            auto job = KIO::file_copy(QUrl::fromLocalFile(file->fileName()), QUrl::fromLocalFile(saveAsFile));
+            auto job = KIO::file_copy(QUrl::fromLocalFile(filename), QUrl::fromLocalFile(saveAsFile));
             stat = job->exec();
 
-            delete file;
         }
         return stat;
     }
