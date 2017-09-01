@@ -63,10 +63,10 @@ int main(int argc, char **argv)
     aboutData.processCommandLine(&parser);
 
     QString fileName;
-    if (parser.positionalArguments().count()) {
+    if (!parser.positionalArguments().isEmpty()) {
         fileName = parser.positionalArguments().at(0);
     } else {
-        fileName = QFileDialog::getOpenFileName(0, QString(), QString(), i18n("Adblock File (*)"));
+        fileName = QFileDialog::getOpenFileName(nullptr, QString(), QString(), i18n("Adblock File (*)"));
     }
     if (fileName.isEmpty()) {
         return 0;
