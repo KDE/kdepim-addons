@@ -19,19 +19,21 @@
 
 #include "adblockshowlistdialog.h"
 #include "adblockinterceptor_debug.h"
-#include "adblocksyntaxhighlighter.h"
 #include "kpimtextedit/plaintexteditorwidget.h"
 #include "kpimtextedit/plaintexteditor.h"
 #include "Libkdepim/ProgressIndicatorLabel"
 
 #include <KLocalizedString>
 #include <KIO/Job>
-#include <QTemporaryFile>
 #include <KSharedConfig>
-#include <QUrl>
-
-#include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <KSyntaxHighlighting/Definition>
+#include <KSyntaxHighlighting/SyntaxHighlighter>
+#include <KSyntaxHighlighting/Theme>
+
+#include <QTemporaryFile>
+#include <QUrl>
+#include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -57,7 +59,12 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
     mainLayout->addLayout(lay);
 
     mTextEdit = new KPIMTextEdit::PlainTextEditorWidget;
-    (void)new AdBlock::AdBlockSyntaxHighlighter(mTextEdit->editor()->document());
+
+    auto highlighter = new KSyntaxHighlighting::SyntaxHighlighter(mTextEdit->editor()->document());
+    highlighter->setDefinition(mSyntaxRepo.definitionForName(QStringLiteral("Adblock Plus")));
+    highlighter->setTheme((palette().color(QPalette::Base).lightness() < 128)
+        ? mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+        : mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     mTextEdit->setReadOnly(true);
     lay->addWidget(mTextEdit);
 

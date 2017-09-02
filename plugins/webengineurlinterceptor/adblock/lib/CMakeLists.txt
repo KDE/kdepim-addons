@@ -12,7 +12,6 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblocklistwidget.cpp
     widgets/adblocksettingwidget.cpp
     widgets/adblockshowlistdialog.cpp
-    widgets/adblocksyntaxhighlighter.cpp
     widgets/adblockutil.cpp
     )
 
@@ -57,6 +56,7 @@ target_link_libraries(adblocklibprivate
     KF5::TextWidgets
     KF5::PimTextEdit
     KF5::Libkdepim
+    KF5::SyntaxHighlighting
     )
 
 set_target_properties(adblocklibprivate

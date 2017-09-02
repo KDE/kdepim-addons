@@ -21,6 +21,7 @@
 #define ADBLOCKSHOWLISTDIALOG_H
 
 #include <QDialog>
+#include <KSyntaxHighlighting/Repository>
 
 class KJob;
 class QTemporaryFile;
@@ -59,6 +60,7 @@ private:
     QTemporaryFile *mTemporaryFile;
     KPIM::ProgressIndicatorLabel *mProgress;
     QPushButton *mUser1Button;
+    KSyntaxHighlighting::Repository mSyntaxRepo;
 };
 }
 
