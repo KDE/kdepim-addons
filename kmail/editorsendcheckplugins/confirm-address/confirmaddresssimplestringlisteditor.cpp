@@ -19,10 +19,23 @@
 
 
 #include "confirmaddresssimplestringlisteditor.h"
+#include "confirmaddressemailentrydialog.h"
+
+#include <QPointer>
 
 ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel,
                                                                            const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
     : PimCommon::SimpleStringListEditor(parent, buttons, addLabel, removeLabel, modifyLabel, addDialogLabel)
 {
 
+}
+
+
+void ConfirmAddressSimpleStringListEditor::addNewEntry()
+{
+    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
+    if (dlg->exec()) {
+        insertNewEntry(dlg->emails());
+    }
+    delete dlg;
 }

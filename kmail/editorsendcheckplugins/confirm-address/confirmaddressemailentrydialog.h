@@ -17,18 +17,25 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
-#define CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
-#include <PimCommon/SimpleStringlistEditor>
 
-class ConfirmAddressSimpleStringListEditor : public PimCommon::SimpleStringListEditor
+#ifndef CONFIRMADDRESSEMAILENTRYDIALOG_H
+#define CONFIRMADDRESSEMAILENTRYDIALOG_H
+
+#include <QDialog>
+class QDialogButtonBox;
+class QLineEdit;
+
+class ConfirmAddressEmailEntryDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressSimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
-                                                  const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
+    explicit ConfirmAddressEmailEntryDialog(QWidget *parent = nullptr);
+    ~ConfirmAddressEmailEntryDialog() = default;
 
-    void addNewEntry() override;
+    QString emails() const;
+private:
+    QDialogButtonBox *mButtons;
+    QLineEdit *mLineEdit;
 };
 
-#endif // CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
+#endif // CONFIRMADDRESSEMAILENTRYDIALOG_H
