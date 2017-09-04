@@ -48,6 +48,7 @@ void EventModel::createMonitor()
     }
 
     mMonitor = new Akonadi::Monitor(this);
+    mMonitor->setObjectName(QStringLiteral("PlasmaEventModelMonitor"));
     mMonitor->itemFetchScope().fetchFullPayload(true);
     mMonitor->collectionFetchScope().fetchAttribute<Akonadi::EntityDisplayAttribute>();
     mMonitor->collectionFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
