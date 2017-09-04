@@ -23,7 +23,7 @@
 #include <QVBoxLayout>
 #include <QGroupBox>
 #include <QRadioButton>
-#include <PimCommon/SimpleStringlistEditor>
+#include <PimCommon/SimpleStringListEditor>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)

@@ -19,7 +19,7 @@
 
 #ifndef CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
 #define CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
-#include <PimCommon/SimpleStringlistEditor>
+#include <PimCommon/SimpleStringListEditor>
 
 class ConfirmAddressSimpleStringListEditor : public PimCommon::SimpleStringListEditor
 {

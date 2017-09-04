@@ -18,7 +18,7 @@
 #ifndef ATTACHMENTLISTWIDGET_H
 #define ATTACHMENTLISTWIDGET_H
 
-#include "PimCommon/SimpleStringlistEditor"
+#include "PimCommon/SimpleStringListEditor"
 
 namespace MailMerge {
 class AttachmentListWidget : public PimCommon::SimpleStringListEditor
