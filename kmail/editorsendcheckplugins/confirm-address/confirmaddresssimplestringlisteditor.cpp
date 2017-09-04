@@ -20,6 +20,7 @@
 
 #include "confirmaddresssimplestringlisteditor.h"
 #include "confirmaddressemailentrydialog.h"
+#include <KLocalizedString>
 
 #include <QPointer>
 
@@ -34,8 +35,28 @@ ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidg
 void ConfirmAddressSimpleStringListEditor::addNewEntry()
 {
     QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
+    dlg->setWindowTitle(i18n("Add Value"));
     if (dlg->exec()) {
         insertNewEntry(dlg->emails());
     }
     delete dlg;
+}
+
+
+QString ConfirmAddressSimpleStringListEditor::modifyEntry(const QString &text)
+{
+    QString newText;
+    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
+    dlg->setWindowTitle(i18n("Change Value"));
+    if (dlg->exec()) {
+        newText = dlg->emails();
+        Q_EMIT aboutToAdd(newText);
+        if (newText == text) {
+            newText = QString();
+        }
+    } else {
+        newText = QString();
+    }
+    delete dlg;
+    return newText;
 }

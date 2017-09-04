@@ -29,6 +29,7 @@ public:
                                                   const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
 
     void addNewEntry() override;
+    QString modifyEntry(const QString &text) override;
 };
 
 #endif // CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
