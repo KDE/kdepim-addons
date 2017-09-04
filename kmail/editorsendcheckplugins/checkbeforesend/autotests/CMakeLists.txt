@@ -19,3 +19,4 @@ add_kmail_checkbeforesend_unittest(checkduplicateemailsjobtest.cpp "../duplicate
 
 add_kmail_checkbeforesend_unittest(checkattachmentdialogtest.cpp "../sendattachments/checkattachmentdialog.cpp")
 add_kmail_checkbeforesend_unittest(checkattachmentjobtest.cpp "../sendattachments/checkattachmentjob.cpp")
+add_kmail_checkbeforesend_unittest(checkbeforesendupdatesmtpdialogtest.cpp "../checkbeforesendupdatesmtpdialog.cpp")

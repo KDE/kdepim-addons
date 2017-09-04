@@ -5,6 +5,7 @@ include_directories(
 set(kmail_checkbeforesendeditorplugin_SRCS
     checkbeforesendplugin.cpp
     checkbeforesendinterface.cpp
+    checkbeforesendupdatesmtpdialog.cpp
     configurewidget/checkbeforesendconfigurewidget.cpp
     configurewidget/checkbeforesendconfiguredialog.cpp
     duplicateemails/checkduplicateemailsdialog.cpp

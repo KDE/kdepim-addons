@@ -46,8 +46,9 @@ void ConfirmAddressSimpleStringListEditor::addNewEntry()
 QString ConfirmAddressSimpleStringListEditor::modifyEntry(const QString &text)
 {
     QString newText;
-    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
+    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);    
     dlg->setWindowTitle(i18n("Change Value"));
+    dlg->setValue(text);
     if (dlg->exec()) {
         newText = dlg->emails();
         Q_EMIT aboutToAdd(newText);
