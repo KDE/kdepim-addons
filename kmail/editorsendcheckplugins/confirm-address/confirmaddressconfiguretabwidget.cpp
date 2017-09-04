@@ -18,12 +18,12 @@
 */
 
 #include "confirmaddressconfiguretabwidget.h"
+#include "confirmaddresssimplestringlisteditor.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QGroupBox>
 #include <QVBoxLayout>
 #include <QRadioButton>
-#include <PimCommon/SimpleStringlistEditor>
 
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
     : QWidget(parent)
@@ -55,12 +55,12 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     PimCommon::SimpleStringListEditor::ButtonCode buttonCode
         = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mDomainNameListEditor
-        = new PimCommon::SimpleStringListEditor(groupBoxDomainName, buttonCode,
+        = new ConfirmAddressSimpleStringListEditor(groupBoxDomainName, buttonCode,
                                                 i18n("A&dd..."), i18n("Re&move"),
                                                 i18n("Mod&ify..."),
                                                 i18n("Enter new domain name:"));
     mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
-    connect(mDomainNameListEditor, &PimCommon::SimpleStringListEditor::changed,
+    connect(mDomainNameListEditor, &ConfirmAddressSimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
 
@@ -73,13 +73,13 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     buttonCode
         = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mWhiteListEditor
-        = new PimCommon::SimpleStringListEditor(groupBoxWhiteList, buttonCode,
+        = new ConfirmAddressSimpleStringListEditor(groupBoxWhiteList, buttonCode,
                                                 i18n("A&dd..."), i18n("Re&move"),
                                                 i18n("Mod&ify..."),
                                                 i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
     layoutWhiteList->addWidget(mWhiteListEditor);
-    connect(mWhiteListEditor, &PimCommon::SimpleStringListEditor::changed,
+    connect(mWhiteListEditor, &ConfirmAddressSimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
 }
 

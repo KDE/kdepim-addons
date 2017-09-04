@@ -21,9 +21,7 @@
 #define CONFIRMADDRESSCONFIGURETABWIDGET_H
 
 #include <QWidget>
-namespace PimCommon {
-class SimpleStringListEditor;
-}
+class ConfirmAddressSimpleStringListEditor;
 class KConfigGroup;
 class QRadioButton;
 class ConfirmAddressConfigureTabWidget : public QWidget
@@ -44,8 +42,8 @@ Q_SIGNALS:
 
 private:
     uint mIdentity;
-    PimCommon::SimpleStringListEditor *mDomainNameListEditor;
-    PimCommon::SimpleStringListEditor *mWhiteListEditor;
+    ConfirmAddressSimpleStringListEditor *mDomainNameListEditor;
+    ConfirmAddressSimpleStringListEditor *mWhiteListEditor;
     QRadioButton *mAcceptedDomain;
     QRadioButton *mRejectedDomain;
 };
