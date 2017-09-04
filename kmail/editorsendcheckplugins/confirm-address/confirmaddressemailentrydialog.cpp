@@ -24,6 +24,7 @@
 #include <QDialogButtonBox>
 #include <QLineEdit>
 #include <QLabel>
+#include <Libkdepim/EmailValidator>
 
 ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     : QDialog(parent)
@@ -38,9 +39,15 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
+    KPIM::EmailValidator *emailValidator = new KPIM::EmailValidator(this);
+    mLineEdit->setValidator(emailValidator);
+
+
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttons->setObjectName(QStringLiteral("buttons"));
     mainLayout->addWidget(buttons);
+    connect(buttons, &QDialogButtonBox::accepted, this, &ConfirmAddressEmailEntryDialog::accept);
+    connect(buttons, &QDialogButtonBox::rejected, this, &ConfirmAddressEmailEntryDialog::reject);
 }
 
 QString ConfirmAddressEmailEntryDialog::emails() const
