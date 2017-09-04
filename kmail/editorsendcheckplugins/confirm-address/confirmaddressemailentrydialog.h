@@ -33,6 +33,7 @@ public:
     ~ConfirmAddressEmailEntryDialog() = default;
 
     QString emails() const;
+    void setValue(const QString &val);
 private:
     QDialogButtonBox *mButtons;
     QLineEdit *mLineEdit;

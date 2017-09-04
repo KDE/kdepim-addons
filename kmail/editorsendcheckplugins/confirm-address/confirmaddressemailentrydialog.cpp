@@ -54,3 +54,8 @@ QString ConfirmAddressEmailEntryDialog::emails() const
 {
     return mLineEdit->text();
 }
+
+void ConfirmAddressEmailEntryDialog::setValue(const QString &val)
+{
+    mLineEdit->setText(val);
+}
