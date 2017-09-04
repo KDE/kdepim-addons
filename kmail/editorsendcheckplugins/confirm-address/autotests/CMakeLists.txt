@@ -25,3 +25,5 @@ add_kmail_confirmaddress_unittest(confirmaddressconfiguretabwidgettest.cpp "../c
 add_kmail_confirmaddress_unittest(confirmaddressconfiguretabtest.cpp "../confirmaddressemailentrydialog.cpp;../confirmaddresssimplestringlisteditor.cpp;../confirmaddressconfiguretab.cpp;../confirmaddressconfiguretabwidget.cpp")
 
 add_kmail_confirmaddress_unittest(confirmaddresscheckjobtest.cpp "../confirmaddresscheckjob.cpp")
+
+add_kmail_confirmaddress_unittest(confirmaddressemailentrydialogtest.cpp "../confirmaddressemailentrydialog.cpp")
