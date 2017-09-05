@@ -28,14 +28,16 @@
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Check SMTP server"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    QLabel *lab = new QLabel(i18n(""), this);
+    QLabel *lab = new QLabel(i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), this);
     lab->setObjectName(QStringLiteral("label"));
+    lab->setWordWrap(true);
     mainLayout->addWidget(lab);
 
-    QCheckBox *mChangeSmtp = new QCheckBox(i18n("..."), this);
+    QCheckBox *mChangeSmtp = new QCheckBox(i18n("Update SMTP server"), this);
     mChangeSmtp->setObjectName(QStringLiteral("changesmtp"));
     mChangeSmtp->setChecked(false);
     mainLayout->addWidget(mChangeSmtp);
@@ -51,3 +53,7 @@ CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog()
 
 }
 
+bool CheckBeforeSendUpdateSmtpDialog::changeSmtp() const
+{
+    return mChangeSmtp->isChecked();
+}

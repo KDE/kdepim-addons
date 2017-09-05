@@ -48,4 +48,6 @@ void CheckBeforeSendUpdateSmtpDialogTest::shouldHaveDefaultValue()
 
     QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
+
+    QVERIFY(!w.windowTitle().isEmpty());
 }

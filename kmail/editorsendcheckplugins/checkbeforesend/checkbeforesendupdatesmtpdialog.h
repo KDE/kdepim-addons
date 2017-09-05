@@ -28,6 +28,8 @@ class CheckBeforeSendUpdateSmtpDialog : public QDialog
 public:
     explicit CheckBeforeSendUpdateSmtpDialog(QWidget *parent = nullptr);
     ~CheckBeforeSendUpdateSmtpDialog();
+
+    bool changeSmtp() const;
 private:
     QCheckBox *mChangeSmtp;
 };
