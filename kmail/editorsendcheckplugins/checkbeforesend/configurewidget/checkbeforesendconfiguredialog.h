@@ -36,7 +36,7 @@ protected:
     void reset() override;
     void help() override;
 private:
-    CheckBeforeSendConfigureWidget *mConfigureWidget;
+    CheckBeforeSendConfigureWidget *mConfigureWidget = nullptr;
 };
 
 #endif // CHECKBEFORESENDCONFIGUREDIALOG_H

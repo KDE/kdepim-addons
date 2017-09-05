@@ -44,7 +44,7 @@ Q_SIGNALS:
 
 private:
     void initTab(KIdentityManagement::IdentityManager *identityManager);
-    QTabWidget *mTabWidget;
+    QTabWidget *mTabWidget = nullptr;
     QList<AutomaticAddContactsTabWidget *> mListTabWidget;
 };
 

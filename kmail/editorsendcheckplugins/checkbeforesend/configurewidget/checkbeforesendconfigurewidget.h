@@ -36,10 +36,10 @@ public:
     void resetSettings() override;
 
 private:
-    QCheckBox *mCheckPlainTextMail;
-    QCheckBox *mCheckMailTransport;
-    QCheckBox *mCheckDuplicateEmailsAddresses;
-    QCheckBox *mCheckSendAttachments;
+    QCheckBox *mCheckPlainTextMail = nullptr;
+    QCheckBox *mCheckMailTransport = nullptr;
+    QCheckBox *mCheckDuplicateEmailsAddresses = nullptr;
+    QCheckBox *mCheckSendAttachments = nullptr;
 };
 
 #endif // CHECKBEFORESENDCONFIGUREWIDGET_H

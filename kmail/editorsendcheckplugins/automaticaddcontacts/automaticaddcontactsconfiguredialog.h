@@ -38,7 +38,7 @@ protected:
     void help() override;
 
 private:
-    AutomaticAddContactsConfigureWidget *mConfigureWidget;
+    AutomaticAddContactsConfigureWidget *mConfigureWidget = nullptr;
 };
 
 #endif // AUTOMATICADDCONTACTSCONFIGUREDIALOG_H

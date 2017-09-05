@@ -31,7 +31,7 @@ public:
 
     bool changeSmtp() const;
 private:
-    QCheckBox *mChangeSmtp;
+    QCheckBox *mChangeSmtp = nullptr;
 };
 
 #endif // CHECKBEFORESENDUPDATESMTPDIALOG_H

@@ -33,7 +33,7 @@ public:
 private:
     void writeConfig();
     void readConfig();
-    QListWidget *mListWidget;
+    QListWidget *mListWidget = nullptr;
 };
 
 #endif // CHECKATTACHMENTDIALOG_H

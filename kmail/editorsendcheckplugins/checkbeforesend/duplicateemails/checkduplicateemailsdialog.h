@@ -34,7 +34,7 @@ public:
 private:
     void readConfig();
     void writeConfig();
-    QListWidget *mListWidget;
+    QListWidget *mListWidget = nullptr;
 };
 
 #endif // CHECKDUPLICATEEMAILSDIALOG_H

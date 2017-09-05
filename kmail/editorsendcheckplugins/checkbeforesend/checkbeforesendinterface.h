@@ -33,10 +33,10 @@ public:
 public Q_SLOTS:
     void reloadConfig() override;
 private:
-    bool mSendPlainText;
-    bool mCheckMailTransport;
-    bool mCheckDuplicateEmails;
-    bool mCheckSendAttachments;
+    bool mSendPlainText = false;
+    bool mCheckMailTransport = false;
+    bool mCheckDuplicateEmails = false;
+    bool mCheckSendAttachments = false;
 };
 
 #endif // CHECKBEFORESENDINTERFACE_H

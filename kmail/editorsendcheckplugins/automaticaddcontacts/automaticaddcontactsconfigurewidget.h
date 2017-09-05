@@ -34,7 +34,7 @@ public:
     void saveSettings() override;
     void resetSettings() override;
 private:
-    AutomaticAddContactsConfigureTab *mConfigureTab;
+    AutomaticAddContactsConfigureTab *mConfigureTab = nullptr;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H
