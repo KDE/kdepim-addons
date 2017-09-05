@@ -56,21 +56,18 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         }
     }
     if (mCheckMailTransport) {
-        const KIdentityManagement::Identity identity = KIdentityManagement::IdentityManager::self()->identityForUoid(params.identity());
-        if (identity.transport() != QString::number(params.transportId())) {
+        KIdentityManagement::Identity *identity = &KIdentityManagement::IdentityManager::self()->modifyIdentityForUoid(params.identity());
+        if (identity->transport() != QString::number(params.transportId())) {
             QPointer<CheckBeforeSendUpdateSmtpDialog> dlg = new CheckBeforeSendUpdateSmtpDialog(parentWidget());
             if (!dlg->exec()) {
                 delete dlg;
                 return false;
             }
             if (dlg->changeSmtp()) {
-                /*
-            identity.setTransport(QString::number(params.transportId()));
-            identity.writeConfig(...)
-            */
-                //TODO
+                identity->setTransport(QString::number(params.transportId()));
+                KIdentityManagement::IdentityManager::self()->commit();
             }
-                delete dlg;
+            delete dlg;
         }
     }
     if (mCheckDuplicateEmails) {
