@@ -45,7 +45,8 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
-
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckBeforeSendUpdateSmtpDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckBeforeSendUpdateSmtpDialog::reject);
 }
 
 CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog()

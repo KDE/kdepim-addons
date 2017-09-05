@@ -22,6 +22,7 @@
 #include "duplicateemails/checkduplicateemailsdialog.h"
 #include "sendattachments/checkattachmentdialog.h"
 #include "sendattachments/checkattachmentjob.h"
+#include "checkbeforesendupdatesmtpdialog.h"
 
 #include <KMessageBox>
 #include <KConfigGroup>
@@ -59,12 +60,14 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
     if (mCheckMailTransport) {
         const KIdentityManagement::Identity identity = KIdentityManagement::IdentityManager::self()->identityForUoid(params.identity());
         if (identity.transport() != QString::number(params.transportId())) {
-            if (KMessageBox::No
-                == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), i18n("Check SMTP server"))) {
+            QPointer<CheckBeforeSendUpdateSmtpDialog> dlg = new CheckBeforeSendUpdateSmtpDialog(parentWidget());
+            if (!dlg->exec()) {
+                delete dlg;
                 return false;
-            } else {
-                return true;
             }
+            bool updateSmtp = dlg->changeSmtp();
+            //TODO
+            delete dlg;
         }
     }
     if (mCheckDuplicateEmails) {
