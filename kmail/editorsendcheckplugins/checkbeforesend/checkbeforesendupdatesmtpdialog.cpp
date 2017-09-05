@@ -37,7 +37,7 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     lab->setWordWrap(true);
     mainLayout->addWidget(lab);
 
-    QCheckBox *mChangeSmtp = new QCheckBox(i18n("Update SMTP server"), this);
+    mChangeSmtp = new QCheckBox(i18n("Update SMTP server"), this);
     mChangeSmtp->setObjectName(QStringLiteral("changesmtp"));
     mChangeSmtp->setChecked(false);
     mainLayout->addWidget(mChangeSmtp);
