@@ -52,8 +52,6 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
         if (params.isHtmlMail()) {
             if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email as HTML?"), i18n("Send email as plain text"))) {
                 return false;
-            } else {
-                return true;
             }
         }
     }
@@ -89,12 +87,15 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
             if (!results.isEmpty()) {
                 QPointer<CheckDuplicateEmailsDialog> dlg = new CheckDuplicateEmailsDialog(parentWidget());
                 dlg->setDuplicatedEmails(results);
+                bool result = false;
                 if (dlg->exec()) {
-                    delete dlg;
-                    return true;
+                    result = true;
                 } else {
-                    delete dlg;
-                    return false;
+                    result = false;
+                }
+                delete dlg;
+                if (!result) {
+                    return result;
                 }
             }
         }
