@@ -63,9 +63,14 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
                 delete dlg;
                 return false;
             }
-            bool updateSmtp = dlg->changeSmtp();
-            //TODO
-            delete dlg;
+            if (dlg->changeSmtp()) {
+                /*
+            identity.setTransport(QString::number(params.transportId()));
+            identity.writeConfig(...)
+            */
+                //TODO
+            }
+                delete dlg;
         }
     }
     if (mCheckDuplicateEmails) {
