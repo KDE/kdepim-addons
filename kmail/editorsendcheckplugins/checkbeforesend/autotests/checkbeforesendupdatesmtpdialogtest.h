@@ -28,6 +28,8 @@ class CheckBeforeSendUpdateSmtpDialogTest : public QObject
 public:
     explicit CheckBeforeSendUpdateSmtpDialogTest(QObject *parent = nullptr);
     ~CheckBeforeSendUpdateSmtpDialogTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // CHECKBEFORESENDUPDATESMTPDIALOGTEST_H

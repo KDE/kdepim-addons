@@ -21,13 +21,15 @@
 #define CHECKBEFORESENDUPDATESMTPDIALOG_H
 
 #include <QDialog>
-
+class QCheckBox;
 class CheckBeforeSendUpdateSmtpDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit CheckBeforeSendUpdateSmtpDialog(QWidget *parent = nullptr);
     ~CheckBeforeSendUpdateSmtpDialog();
+private:
+    QCheckBox *mChangeSmtp;
 };
 
 #endif // CHECKBEFORESENDUPDATESMTPDIALOG_H

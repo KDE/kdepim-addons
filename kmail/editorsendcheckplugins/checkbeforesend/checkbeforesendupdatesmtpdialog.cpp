@@ -22,10 +22,27 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QLabel>
+#include <QCheckBox>
 
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+
+    QLabel *lab = new QLabel(i18n(""), this);
+    lab->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(lab);
+
+    QCheckBox *mChangeSmtp = new QCheckBox(i18n("..."), this);
+    mChangeSmtp->setObjectName(QStringLiteral("changesmtp"));
+    mChangeSmtp->setChecked(false);
+    mainLayout->addWidget(mChangeSmtp);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::No, this);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    mainLayout->addWidget(buttonBox);
 
 }
 
@@ -33,3 +50,4 @@ CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog()
 {
 
 }
+
