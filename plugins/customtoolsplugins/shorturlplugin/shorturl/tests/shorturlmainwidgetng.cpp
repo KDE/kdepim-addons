@@ -27,8 +27,7 @@
 ShortUrlMainWidgetNg::ShortUrlMainWidgetNg(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout;
-    setLayout(lay);
+    QVBoxLayout *lay = new QVBoxLayout(this);
     mConfigWidget = new ShortUrlConfigureWidget;
     lay->addWidget(mConfigWidget);
 
