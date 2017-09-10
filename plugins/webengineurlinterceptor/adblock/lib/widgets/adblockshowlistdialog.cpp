@@ -63,8 +63,8 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
     auto highlighter = new KSyntaxHighlighting::SyntaxHighlighter(mTextEdit->editor()->document());
     highlighter->setDefinition(mSyntaxRepo.definitionForName(QStringLiteral("Adblock Plus")));
     highlighter->setTheme((palette().color(QPalette::Base).lightness() < 128)
-        ? mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-        : mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+                          ? mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                          : mSyntaxRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     mTextEdit->setReadOnly(true);
     lay->addWidget(mTextEdit);
 

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <KLocalizedString>
 #include <QVBoxLayout>
@@ -51,7 +50,6 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
 
 CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog()
 {
-
 }
 
 bool CheckBeforeSendUpdateSmtpDialog::changeSmtp() const

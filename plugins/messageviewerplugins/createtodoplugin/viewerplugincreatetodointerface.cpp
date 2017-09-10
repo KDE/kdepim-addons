@@ -112,7 +112,6 @@ TodoEdit *ViewerPluginCreateTodoInterface::widget()
     return mTodoEdit;
 }
 
-
 void MessageViewer::ViewerPluginCreateTodoInterface::setCurrentCollection(const Akonadi::Collection &col)
 {
     widget()->setCurrentCollection(col);

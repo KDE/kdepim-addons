@@ -77,7 +77,6 @@ private:
     KMessageWidget *mMsgWidget;
     QPushButton *mSaveButton;
     QPushButton *mOpenEditorButton;
-
 };
 }
 #endif // TODOEDIT_H

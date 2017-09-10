@@ -23,7 +23,6 @@
 CheckGravatarPluginTest::CheckGravatarPluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 QTEST_MAIN(CheckGravatarPluginTest)

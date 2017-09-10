@@ -83,7 +83,6 @@ void ExternalComposerConfigureWidgetTest::shouldEnableDisableElements()
     QVERIFY(urlrequesterlabel->isEnabled());
     QVERIFY(explanationlabel->isEnabled());
 
-
     mExternalEditorCheck->toggle();
     QVERIFY(!mExternalEditorCheck->isChecked());
     QVERIFY(!mEditorRequester->isEnabled());

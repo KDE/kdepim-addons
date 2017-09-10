@@ -30,12 +30,11 @@ DiffHighlighter::DiffHighlighter()
 
     setTheme(/*(palette().color(QPalette::Base).lightness() < 128)
                  ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)*/
-                 /*:*/ mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+        /*:*/ mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
 }
 
 DiffHighlighter::~DiffHighlighter()
 {
-
 }
 
 void DiffHighlighter::highlightDiff(const QString &str)
@@ -70,18 +69,24 @@ void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlight
 {
     if (!format.isDefaultTextStyle(theme())) {
         mOutputDiff += QStringLiteral("<span style=\"");
-        if (format.hasTextColor(theme()))
+        if (format.hasTextColor(theme())) {
             mOutputDiff += QStringLiteral("color:") + format.textColor(theme()).name() + QStringLiteral(";");
-        if (format.hasBackgroundColor(theme()))
+        }
+        if (format.hasBackgroundColor(theme())) {
             mOutputDiff += QStringLiteral("background-color:") + format.backgroundColor(theme()).name() + QStringLiteral(";");
-        if (format.isBold(theme()))
+        }
+        if (format.isBold(theme())) {
             mOutputDiff += QStringLiteral("font-weight:bold;");
-        if (format.isItalic(theme()))
+        }
+        if (format.isItalic(theme())) {
             mOutputDiff += QStringLiteral("font-style:italic;");
-        if (format.isUnderline(theme()))
+        }
+        if (format.isUnderline(theme())) {
             mOutputDiff += QStringLiteral("text-decoration:underline;");
-        if (format.isStrikeThrough(theme()))
+        }
+        if (format.isStrikeThrough(theme())) {
             mOutputDiff += QStringLiteral("text-decoration:line-through;");
+        }
         mOutputDiff += QStringLiteral("\">");
     }
 

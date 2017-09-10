@@ -38,8 +38,8 @@ K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.j
 struct InfoRegExp
 {
     InfoRegExp()
-        : status(Unknown),
-          mEditorDialog(nullptr)
+        : status(Unknown)
+        , mEditorDialog(nullptr)
     {
     }
 

@@ -49,8 +49,8 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
 
     mExecutable->setMimeTypeFilters({QStringLiteral("application/x-executable"),
-                                               QStringLiteral("application/x-shellscript"),
-                                               QStringLiteral("application/x-desktop")});
+                                     QStringLiteral("application/x-shellscript"),
+                                     QStringLiteral("application/x-desktop")});
 
     mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mExecutable->lineEdit()->setClearButtonEnabled(true);

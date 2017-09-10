@@ -26,7 +26,6 @@
 DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 QString readDiffFile(const QString &diffFile)
@@ -67,17 +66,15 @@ void DiffHighlighterTest::shouldGenerateDiff()
 
     // compare to reference file
     QStringList args = QStringList()
-            << QStringLiteral("-u")
-            << refFile
-            << generatedFile;
+                       << QStringLiteral("-u")
+                       << refFile
+                       << generatedFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);
     QVERIFY(proc.waitForFinished());
 
-
     QCOMPARE(proc.exitCode(), 0);
 }
-
 
 QTEST_MAIN(DiffHighlighterTest)

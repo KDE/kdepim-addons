@@ -56,9 +56,9 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
         = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mDomainNameListEditor
         = new ConfirmAddressSimpleStringListEditor(groupBoxDomainName, buttonCode,
-                                                i18n("A&dd..."), i18n("Re&move"),
-                                                i18n("Mod&ify..."),
-                                                i18n("Enter new domain name:"));
+                                                   i18n("A&dd..."), i18n("Re&move"),
+                                                   i18n("Mod&ify..."),
+                                                   i18n("Enter new domain name:"));
     mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
     connect(mDomainNameListEditor, &ConfirmAddressSimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
@@ -74,9 +74,9 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
         = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mWhiteListEditor
         = new ConfirmAddressSimpleStringListEditor(groupBoxWhiteList, buttonCode,
-                                                i18n("A&dd..."), i18n("Re&move"),
-                                                i18n("Mod&ify..."),
-                                                i18n("Enter new email address:"));
+                                                   i18n("A&dd..."), i18n("Re&move"),
+                                                   i18n("Mod&ify..."),
+                                                   i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
     layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &ConfirmAddressSimpleStringListEditor::changed,

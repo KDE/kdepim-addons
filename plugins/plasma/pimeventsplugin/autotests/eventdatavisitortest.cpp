@@ -289,7 +289,6 @@ void EventDataVisitorTest::testEventDataIdVisitor()
 
     auto results = visitor.results();
 
-
     std::sort(results.begin(), results.end());
     std::sort(expectedUids.begin(), expectedUids.end());
     QCOMPARE(results, expectedUids);

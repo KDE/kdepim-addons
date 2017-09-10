@@ -48,8 +48,8 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     hbox->addWidget(mEditorRequester);
 
     mEditorRequester->setMimeTypeFilters({QStringLiteral("application/x-executable"),
-                                               QStringLiteral("application/x-shellscript"),
-                                               QStringLiteral("application/x-desktop")});
+                                          QStringLiteral("application/x-shellscript"),
+                                          QStringLiteral("application/x-desktop")});
 
     mEditorRequester->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mEditorRequester->setEnabled(false);   // !mExternalEditorCheck->isChecked()

@@ -31,7 +31,6 @@ QTEST_MAIN(ConfirmAddressEmailEntryDialogTest)
 ConfirmAddressEmailEntryDialogTest::ConfirmAddressEmailEntryDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ConfirmAddressEmailEntryDialogTest::shouldHaveDefaultValue()
@@ -43,7 +42,6 @@ void ConfirmAddressEmailEntryDialogTest::shouldHaveDefaultValue()
     QLabel *label = dlg.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
-
 
     QLineEdit *mLineEdit = dlg.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);

@@ -29,7 +29,6 @@
 TemplateParserEmailAddressRequesterAkonadiTest::TemplateParserEmailAddressRequesterAkonadiTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
@@ -49,7 +48,9 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldAssignValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
     Akonadi::EmailAddressRequester *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
-    const QString str{QStringLiteral("foo")};
+    const QString str{
+        QStringLiteral("foo")
+    };
     w.setText(str);
     QCOMPARE(w.text(), str);
     QCOMPARE(mLineEdit->text(), str);
@@ -59,7 +60,9 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldClearValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
     Akonadi::EmailAddressRequester *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
-    const QString str{QStringLiteral("foo")};
+    const QString str{
+        QStringLiteral("foo")
+    };
     w.setText(str);
     QCOMPARE(w.text(), str);
     w.clear();
@@ -78,6 +81,5 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldEmitSignal()
     w.setText(QStringLiteral("foo"));
     QCOMPARE(spy.at(2).count(), 1);
 }
-
 
 QTEST_MAIN(TemplateParserEmailAddressRequesterAkonadiTest)

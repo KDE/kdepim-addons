@@ -17,20 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "confirmaddresssimplestringlisteditor.h"
 #include "confirmaddressemailentrydialog.h"
 #include <KLocalizedString>
 
 #include <QPointer>
 
-ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel,
-                                                                           const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
+ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel,
+                                                                           const QString &addDialogLabel)
     : PimCommon::SimpleStringListEditor(parent, buttons, addLabel, removeLabel, modifyLabel, addDialogLabel)
 {
-
 }
-
 
 void ConfirmAddressSimpleStringListEditor::addNewEntry()
 {
@@ -42,11 +39,10 @@ void ConfirmAddressSimpleStringListEditor::addNewEntry()
     delete dlg;
 }
 
-
 QString ConfirmAddressSimpleStringListEditor::modifyEntry(const QString &text)
 {
     QString newText;
-    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);    
+    QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
     dlg->setWindowTitle(i18n("Change Value"));
     dlg->setValue(text);
     if (dlg->exec()) {

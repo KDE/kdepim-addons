@@ -58,6 +58,7 @@ bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceP
         return true;
     }
 }
+
 #endif
 
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)

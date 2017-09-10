@@ -51,7 +51,7 @@ bool AdblockPluginUrlInterceptor::hasConfigureDialog() const
 
 void AdblockPluginUrlInterceptor::showConfigureDialog(QWidget *parent)
 {
-    QPointer<AdBlock::AdblockPluginUrlInterceptorConfigureDialog> dlg = new AdBlock::AdblockPluginUrlInterceptorConfigureDialog (parent);
+    QPointer<AdBlock::AdblockPluginUrlInterceptorConfigureDialog> dlg = new AdBlock::AdblockPluginUrlInterceptorConfigureDialog(parent);
     dlg->exec();
     delete dlg;
 }

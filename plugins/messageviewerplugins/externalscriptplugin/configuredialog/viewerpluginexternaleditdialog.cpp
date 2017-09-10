@@ -73,7 +73,6 @@ void ViewerPluginExternalEditDialog::saveConfig()
     group.sync();
 }
 
-
 void ViewerPluginExternalEditDialog::slotAccepted()
 {
     mEditWidget->save();

@@ -27,7 +27,7 @@ class TemplateParserEmailAddressRequesterAkonadiTest : public QObject
     Q_OBJECT
 public:
     explicit TemplateParserEmailAddressRequesterAkonadiTest(QObject *parent = nullptr);
-     ~TemplateParserEmailAddressRequesterAkonadiTest() = default;
+    ~TemplateParserEmailAddressRequesterAkonadiTest() = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();

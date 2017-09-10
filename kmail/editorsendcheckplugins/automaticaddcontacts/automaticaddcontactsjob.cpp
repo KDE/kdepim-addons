@@ -103,7 +103,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     Akonadi::Collection::List canCreateItemCollections;
     const Akonadi::Collection::List addressBookCollections = addressBookJob->collections();
     for (const Akonadi::Collection &collection : addressBookCollections) {
-        if (Akonadi::Collection::CanCreateItem & collection.rights()) {
+        if (Akonadi::Collection::CanCreateItem &collection.rights()) {
             canCreateItemCollections.append(collection);
         }
     }

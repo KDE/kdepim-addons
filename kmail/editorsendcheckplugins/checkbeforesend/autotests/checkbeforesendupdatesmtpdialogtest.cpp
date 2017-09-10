@@ -29,7 +29,6 @@ QTEST_MAIN(CheckBeforeSendUpdateSmtpDialogTest)
 CheckBeforeSendUpdateSmtpDialogTest::CheckBeforeSendUpdateSmtpDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void CheckBeforeSendUpdateSmtpDialogTest::shouldHaveDefaultValue()

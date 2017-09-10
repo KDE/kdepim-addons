@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "confirmaddressemailentrydialog.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -41,7 +40,6 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
 
     KPIM::EmailValidator *emailValidator = new KPIM::EmailValidator(this);
     mLineEdit->setValidator(emailValidator);
-
 
     QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttons->setObjectName(QStringLiteral("buttons"));

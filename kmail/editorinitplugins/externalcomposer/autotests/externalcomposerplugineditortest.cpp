@@ -24,7 +24,6 @@
 ExternalComposerPluginEditorTest::ExternalComposerPluginEditorTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ExternalComposerPluginEditorTest::shouldHaveDefaultValue()

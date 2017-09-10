@@ -81,24 +81,24 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     headerStr
         += QStringLiteral("<div style=\"margin-left: 10px; top: 0px;\"><span style=\"font-size: 0.8em; font-weight: bold;\">")
            + mHeaderStyleUtil.dateString(message, isPrinting(), /* shortDate */ MessageViewer::HeaderStyleUtil::CustomDate) + QStringLiteral("</span></div>"
-                                                                                                                                            // #0057ae
-                                                                                                                                            "<table style=\"background: ") + activeColorDark.name()
+                                                                                                                                             // #0057ae
+                                                                                                                                             "<table style=\"background: ") + activeColorDark.name()
            + QStringLiteral("; border-collapse:collapse; top: 14px; min-width: 200px; \" cellpadding=0> \n"
-                           "  <tr> \n"
-                           "   <td style=\"min-width: 6px; background-image: url(")
+                            "  <tr> \n"
+                            "   <td style=\"min-width: 6px; background-image: url(")
            + imgpath + QStringLiteral("top_left.png); \"></td> \n"
-                                     "   <td style=\"height: 6px; width: 100%; background: url(")
+                                      "   <td style=\"height: 6px; width: 100%; background: url(")
            + imgpath + QStringLiteral("top.png); \"></td> \n"
-                                     "   <td style=\"min-width: 6px; background: url(")
+                                      "   <td style=\"min-width: 6px; background: url(")
            + imgpath + QStringLiteral("top_right.png); \"></td> </tr> \n"
-                                     "   <tr> \n"
-                                     "   <td style=\"min-width: 6px; max-width: 6px; background: url(")
+                                      "   <tr> \n"
+                                      "   <td style=\"min-width: 6px; max-width: 6px; background: url(")
            + imgpath + QStringLiteral("left.png); \"></td> \n"
-                                     "   <td style=\"\"> \n");
+                                      "   <td style=\"\"> \n");
     headerStr
         += QStringLiteral("<div class=\"noprint\" style=\"z-index: 1; float:right; position: relative; top: -35px; right: 20px ; max-height: 65px\">\n"
-                         "<img src=\"") + imgpath + QStringLiteral("icon.png\">\n"
-                                                                  "</div>\n");
+                          "<img src=\"") + imgpath + QStringLiteral("icon.png\">\n"
+                                                                    "</div>\n");
     headerStr
         += QStringLiteral("    <table style=\"color: ") + fontColor.name() + QStringLiteral(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding=0> \n");
 
@@ -108,11 +108,11 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 
         headerStr
             += QStringLiteral("     <tr> \n"
-                             "      <td style=\"font-size: 0.5em; text-align: right; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\"></td> \n"
-                                                                                                                                                                 "      <td style=\"font-weight: bolder; font-size: 120%; padding-right: 91px; ")
+                              "      <td style=\"font-size: 0.5em; text-align: right; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\"></td> \n"
+                                                                                                                                                                   "      <td style=\"font-weight: bolder; font-size: 120%; padding-right: 91px; ")
                + borderSettings + QStringLiteral("\">");
         headerStr += mHeaderStyleUtil.subjectString(message, flags) + QStringLiteral("</td> \n"
-                                                                                    "     </tr> \n");
+                                                                                     "     </tr> \n");
     }
 
     // from
@@ -127,50 +127,50 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         //if ( strategy->showHeader( "date" ) )
         headerStr
             += QStringLiteral("     <tr> \n"
-                             "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ") + borderSettings + QStringLiteral("\">") + i18n(
             "From: ") + QStringLiteral("</td> \n"
-                                      "      <td style=\"")
+                                       "      <td style=\"")
                + borderSettings + QStringLiteral("\">") + fromPart + QStringLiteral("</td> "
-                                                                                  "     </tr> ");
+                                                                                    "     </tr> ");
     }
 
     // to line
     if (strategy->showHeader(QStringLiteral("to"))) {
         headerStr
             += QStringLiteral("     <tr> "
-                             "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
             "To: ") + QStringLiteral("</td> "
-                                    "      <td style=\"")
+                                     "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
-                              "     </tr>\n");
+                               "     </tr>\n");
     }
 
     // cc line, if any
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
         headerStr
             += QStringLiteral("     <tr> "
-                             "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
             "CC: ") + QStringLiteral("</td> "
-                                    "      <td style=\"")
+                                     "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
-                              "     </tr>\n");
+                               "     </tr>\n");
     }
 
     // bcc line, if any
     if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
         headerStr
             += QStringLiteral("     <tr> "
-                             "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
             "BCC: ") + QStringLiteral("</td> "
-                                     "      <td style=\"")
+                                      "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
-                              "     </tr>\n");
+                               "     </tr>\n");
     }
 
     // attachments
@@ -178,34 +178,34 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (isTopLevel()) {
         attachment
             = QStringLiteral("<tr>"
-                            "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath + QStringLiteral("left.png);'</td>"
-                                                                                                                     "<td style='padding-right:20px;'>"
-                                                                                                                     "<div class=\"noprint\" >"
-                                                                                                                     "<div id=\"attachmentInjectionPoint\"></div>"
-                                                                                                                     "</div>"
-                                                                                                                     "</td>"
-                                                                                                                     "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath
+                             "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath + QStringLiteral("left.png);'</td>"
+                                                                                                                       "<td style='padding-right:20px;'>"
+                                                                                                                       "<div class=\"noprint\" >"
+                                                                                                                       "<div id=\"attachmentInjectionPoint\"></div>"
+                                                                                                                       "</div>"
+                                                                                                                       "</td>"
+                                                                                                                       "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath
               + QStringLiteral("right.png);'</td>"
-                              "</tr>");
+                               "</tr>");
     }
 
     // header-bottom
     headerStr
         += QStringLiteral("    </table> \n"
-                         "   </td> \n"
-                         "   <td style=\"min-width: 6px; max-height: 15px; background: url(") + imgpath + QStringLiteral("right.png); \"></td> \n"
-                                                                                                                        "  </tr> \n") + attachment
+                          "   </td> \n"
+                          "   <td style=\"min-width: 6px; max-height: 15px; background: url(") + imgpath + QStringLiteral("right.png); \"></td> \n"
+                                                                                                                          "  </tr> \n") + attachment
            +QStringLiteral("  <tr> \n"
-                          "   <td style=\"min-width: 6px; background: url(") + imgpath + QStringLiteral("s_left.png); \"></td> \n"
-                                                                                                       "   <td style=\"height: 35px; width: 80%; background: url(") + imgpath + QStringLiteral("sbar.png);\"> \n"
-                                                                                                                                                                                              "    <img src=\"")
+                           "   <td style=\"min-width: 6px; background: url(") + imgpath + QStringLiteral("s_left.png); \"></td> \n"
+                                                                                                         "   <td style=\"height: 35px; width: 80%; background: url(") + imgpath + QStringLiteral("sbar.png);\"> \n"
+                                                                                                                                                                                                 "    <img src=\"")
            + imgpath + QStringLiteral("sw.png\" style=\"margin: 0px; height: 30px; overflow:hidden; \"> \n"
-                                     "    <img src=\"")
+                                      "    <img src=\"")
            + imgpath + QStringLiteral("sp_right.png\" style=\"float: right; \"> </td> \n"
-                                     "   <td style=\"min-width: 6px; background: url(")
+                                      "   <td style=\"min-width: 6px; background: url(")
            + imgpath + QStringLiteral("s_right.png); \"></td> \n"
-                                     "  </tr> \n"
-                                     " </table> \n");
+                                      "  </tr> \n"
+                                      " </table> \n");
 
     if (isPrinting()) {
         //provide a bit more left padding when printing

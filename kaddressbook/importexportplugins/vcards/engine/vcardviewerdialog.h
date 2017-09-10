@@ -46,7 +46,6 @@ private:
     void writeConfig();
     void updateView();
 
-
     KContacts::Addressee::List mContacts;
     KContacts::Addressee::List::Iterator mIt;
     QPushButton *mApplyButton = nullptr;

@@ -847,8 +847,8 @@ public:
             }
 
             if (KMessageBox::warningYesNo(
-                        nullptr,
-                        i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
+                    nullptr,
+                    i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
                 return true;
             }
         }
@@ -1023,7 +1023,9 @@ public:
             QDesktopServices::openUrl(QUrl(attachment->uri()));
         } else {
             // put the attachment in a temporary file and launch it
-            QTemporaryFile *file{nullptr};
+            QTemporaryFile *file{
+                nullptr
+            };
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
             if (!patterns.empty()) {
@@ -1068,7 +1070,9 @@ public:
             stat = job->exec();
         } else {
             // put the attachment in a temporary file and save it
-            QTemporaryFile *file{nullptr};
+            QTemporaryFile *file{
+                nullptr
+            };
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(a->mimeType()).globPatterns();
             if (!patterns.empty()) {
@@ -1087,7 +1091,6 @@ public:
 
             auto job = KIO::file_copy(QUrl::fromLocalFile(filename), QUrl::fromLocalFile(saveAsFile));
             stat = job->exec();
-
         }
         return stat;
     }
@@ -1172,9 +1175,9 @@ public:
             }
             delete kontact;
 
-            OrgKdeKorganizerCalendarInterface *iface =
-                new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                        QDBusConnection::sessionBus(), nullptr);
+            OrgKdeKorganizerCalendarInterface *iface
+                = new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                                                        QDBusConnection::sessionBus(), nullptr);
             if (!iface->isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface->lastError().message();
                 delete iface;

@@ -24,7 +24,6 @@
 
 using namespace AdBlock;
 
-
 AdblockManager *AdblockManager::self()
 {
     static AdblockManager s_self;

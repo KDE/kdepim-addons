@@ -38,7 +38,6 @@
 
 #include <kstringhandler.h>
 
-
 namespace {
 // TODO: Show filename header to make it possible to save the patch.
 // FIXME: The box should only be as wide as necessary.

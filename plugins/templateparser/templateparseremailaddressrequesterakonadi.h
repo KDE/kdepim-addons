@@ -30,7 +30,9 @@ class TemplateParserEmailAddressRequesterAkonadi : public TemplateParser::Templa
 {
     Q_OBJECT
 public:
-    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {});
+    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & =
+    {
+    });
     ~TemplateParserEmailAddressRequesterAkonadi();
 
     QString text() const override;
@@ -39,7 +41,6 @@ public:
 
 private:
     Akonadi::EmailAddressRequester *mEmailAddressRequester;
-
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
