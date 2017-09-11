@@ -21,6 +21,8 @@
 #include "pimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
+#include <KCalCore/Utils>
+
 BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
     : mDataSource(dataSource)
     , mStart(start)
@@ -110,7 +112,7 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
         }
         copy.setStartDateTime(dt);
         copy.setEndDateTime(dt.addSecs(duration));
-        copy.setUid(generateUid(incidence, rec.dateTime()));
+        copy.setUid(generateUid(incidence, KCalCore::k2q(rec)));
 
         results.push_back(copy);
 
