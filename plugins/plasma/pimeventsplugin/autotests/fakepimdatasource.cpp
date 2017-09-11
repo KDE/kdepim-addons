@@ -20,10 +20,11 @@
 #include "fakepimdatasource.h"
 
 #include <KCalCore/MemoryCalendar>
+#include <QTimeZone>
 
 FakePimDataSource::FakePimDataSource()
     : PimDataSource()
-    , mCalendar(new KCalCore::MemoryCalendar(KDateTime::LocalZone))
+    , mCalendar(new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()))
 {
 }
 

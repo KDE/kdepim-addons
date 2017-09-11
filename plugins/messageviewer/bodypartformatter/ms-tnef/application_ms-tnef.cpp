@@ -51,7 +51,7 @@
 #include "ms_tnef_debug.h"
 #include <KIconLoader>
 #include <KLocalizedString>
-#include <KSystemTimeZones>
+#include <QTimeZone>
 
 #include <QApplication>
 #include <QDir>
@@ -90,7 +90,7 @@ public:
         }
         if (!buf.isEmpty()) {
             KCalCore::MemoryCalendar::Ptr cl(
-                new KCalCore::MemoryCalendar(KSystemTimeZones::local()));
+                new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
             KCalUtils::InvitationFormatterHelper helper;
             const QString invite = KTnef::formatTNEFInvitation(buf, cl, &helper);
             KCalCore::ICalFormat format;

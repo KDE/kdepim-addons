@@ -95,7 +95,7 @@ void TestDataParser::parse()
     QVERIFY(icalFile.exists());
     QVERIFY(icalFile.open(QIODevice::ReadOnly));
 
-    auto calendar = KCalCore::MemoryCalendar::Ptr::create(KDateTime::LocalZone);
+    auto calendar = KCalCore::MemoryCalendar::Ptr::create(QTimeZone::systemTimeZone());
     KCalCore::ICalFormat format;
     QVERIFY(format.load(calendar, icalFile.fileName()));
     QVERIFY(!calendar->incidences().isEmpty());

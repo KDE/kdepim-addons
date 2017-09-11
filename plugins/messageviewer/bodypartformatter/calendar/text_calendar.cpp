@@ -223,7 +223,7 @@ public:
                     source = bodyPart->asText();
                 }
 
-                MemoryCalendar::Ptr cl(new MemoryCalendar(KSystemTimeZones::local()));
+                MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
                 const QString html
                     = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
                     source, cl, &helper, message->sender()->asUnicodeString());
@@ -271,7 +271,7 @@ static QString directoryForStatus(Attendee::PartStat status)
 
 static Incidence::Ptr stringToIncidence(const QString &iCal)
 {
-    MemoryCalendar::Ptr calendar(new MemoryCalendar(KSystemTimeZones::local()));
+    MemoryCalendar::Ptr calendar(new MemoryCalendar(QTimeZone::systemTimeZone()));
     ICalFormat format;
     ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
     if (!message) {
@@ -666,7 +666,7 @@ public:
     {
         //status is accepted/tentative/declined
         ICalFormat format;
-        format.setTimeSpec(KSystemTimeZones::local());
+        format.setTimeZone(QTimeZone::systemTimeZone());
         QString msg = format.createScheduleMessage(incidence, method);
         QString summary = incidence->summary();
         if (summary.isEmpty()) {
@@ -1001,7 +1001,7 @@ public:
             incidence->addAttendee(delegate);
 
             ICalFormat format;
-            format.setTimeSpec(KSystemTimeZones::local());
+            format.setTimeZone(QTimeZone::systemTimeZone());
             const QString iCal = format.createScheduleMessage(incidence, iTIPRequest);
             if (!saveFile(receiver, iCal, dir, part)) {
                 return false;
