@@ -21,6 +21,7 @@
         "Description[tr]": "Bu eklenti, reklamları bloklamaya imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна блокувати рекламу.",
         "Description[x-test]": "xxThis plugins allows you to block advertising.xx",
+        "Description[zh_CN]": "此插件允许您屏蔽广告。",
         "EnabledByDefault": "false",
         "Id": "messagevieweradblockplugin",
         "Name": "Adblock",
@@ -37,6 +38,7 @@
         "Name[sv]": "Reklamblockering",
         "Name[uk]": "Блокування реклами",
         "Name[x-test]": "xxAdblockxx",
+        "Name[zh_CN]": "广告屏蔽",
         "ServiceTypes": [
             "WebEngineViewer/UrlInterceptor"
         ],

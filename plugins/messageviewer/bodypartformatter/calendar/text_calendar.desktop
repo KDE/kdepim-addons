@@ -31,6 +31,7 @@ Name[sv]=Program Oktetström
 Name[tr]=Octetstream Uygulaması
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
+Name[zh_CN]=应用字节流
 Comment=A bodypart formatter plugin for text/calendar
 Comment[ca]=Un connector formatador del cos per a text/calendari
 Comment[ca@valencia]=Un connector formatador del cos per a text/calendari
@@ -62,6 +63,7 @@ Comment[sv]=Ett insticksprogram för brevtextformatering av text/calendar
 Comment[tr]=text/calendar için bir gövde biçimlendirici eklentisi
 Comment[uk]=Додаток форматування для text/calendar
 Comment[x-test]=xxA bodypart formatter plugin for text/calendarxx
+Comment[zh_CN]=text/calendar 的正文格式化插件
 
 [Plugin]
 Type=text/calendar

@@ -21,6 +21,7 @@
         "Description[tr]": "ROT13 (13 sıra döndür), bir harfi alfabedeki 13 harf sonrakiyle değiştiren basit bir harf değiştirme şifrelemesidir.",
         "Description[uk]": "ROT13 (обертання на 13 позицій) — просте шифрування заміною літер із циклічним зсувом на 13 позицій за абеткою",
         "Description[x-test]": "xxROT13 (rotate by 13 places) is a simple letter substitution cipher that replaces a letter with the letter 13 letters after it in the alphabetxx",
+        "Description[zh_CN]": "ROT13 (旋转 13 位) 是一个简单的字母替换表，它将字母替换成字母表中往后数第 13 字母。",
         "EnabledByDefault": "false",
         "Id": "rot13",
         "Name": "ROT13",

@@ -23,6 +23,7 @@
         "Description[tr]": "Bu eklenti, Gravatar resimlerini kontrol etmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна визначати зображення gravatar.",
         "Description[x-test]": "xxThis plugin allows you to check the Gravatar images.xx",
+        "Description[zh_CN]": "此插件允许您检查 Gravatar 头像。",
         "EnabledByDefault": "true",
         "Id": "kaddressbookcheckgravatar",
         "Name": "Check Gravatar",
@@ -50,6 +51,7 @@
         "Name[tr]": "Gravatar Kontrol Et",
         "Name[uk]": "Перевірити gravatar",
         "Name[x-test]": "xxCheck Gravatarxx",
+        "Name[zh_CN]": "检查 Gravatar 头像",
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"
         ],

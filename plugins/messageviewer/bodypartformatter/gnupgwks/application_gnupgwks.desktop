@@ -23,6 +23,7 @@ Name[sv]=PGP- och GnuPG WKS-formatering
 Name[tr]=PGP ve GnuPG WKS biçimlendirici
 Name[uk]=Засіб форматування PGP та WKS GnuPG
 Name[x-test]=xxPGP and GnuPG WKS formatterxx
+Name[zh_CN]=PGP 和 GnuPG WKS 格式化程序
 Comment=A bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messages
 Comment[ca]=Un connector formatador del cos per a claus OpenPGP i missatges WKS GnuPG
 Comment[ca@valencia]=Un connector formatador del cos per a claus OpenPGP i missatges WKS GnuPG
@@ -46,6 +47,7 @@ Comment[sv]=Ett insticksprogram för brevtextformatering av OpenPGP-nycklar och 
 Comment[tr]=OpenPGP Anahtarları ve GnuPG WKS iletileri için gövde biçimlendirme eklentisi
 Comment[uk]=Додаток форматування вмісту для ключів OpenPGP та повідомлень WKS GnuPG
 Comment[x-test]=xxA bodypart formatter plugin for OpenPGP Keys and GnuPG WKS messagesxx
+Comment[zh_CN]=OpenPGP 密钥 and GnuPG WKS 信件的正文格式化插件
 
 [Plugin]
 Type=application/vnd.gnupg.wks

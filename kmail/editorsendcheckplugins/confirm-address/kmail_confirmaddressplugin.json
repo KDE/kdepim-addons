@@ -22,6 +22,7 @@
         "Description[tr]": "Bu eklenti, gönderimden önce postanızı kontrol etmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти повідомлення перед надсиланням.",
         "Description[x-test]": "xxThis plugin allows you to check mail before to send itxx",
+        "Description[zh_CN]": "此插件允许您在发送前检查邮件",
         "EnabledByDefault": "true",
         "Id": "kmailconfirmaddress",
         "Name": "Confirm Address",
@@ -47,6 +48,7 @@
         "Name[tr]": "Adresi Onayla",
         "Name[uk]": "Підтвердження адреси",
         "Name[x-test]": "xxConfirm Addressxx",
+        "Name[zh_CN]": "确认地址",
         "ServiceTypes": [
             "KMailEditor/PluginCheckBeforeSend"
         ],

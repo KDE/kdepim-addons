@@ -22,6 +22,7 @@
         "Description[tr]": "Bu eklenti URL'yi genişletmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна розгортати скорочені адреси.",
         "Description[x-test]": "xxThis plugin allows you to expand URL.xx",
+        "Description[zh_CN]": "此插件允许您展开 URL。",
         "EnabledByDefault": "false",
         "Id": "customtoolsshorturl",
         "Name": "Shorturl",

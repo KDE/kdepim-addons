@@ -22,6 +22,7 @@
         "Description[tr]": "Bu eklenti, Grantlee tabanlı posta başlığı biçimi kullanımına imkan verir.",
         "Description[uk]": "За допомогою цього додатка реалізовано підтримку стилів заголовка повідомлення на основі Grantlee.",
         "Description[x-test]": "xxThis plugin allows you to use a Grantlee-based mail header style.xx",
+        "Description[zh_CN]": "此插件允许您使用基于 Grantlee 的邮件头部样式。",
         "EnabledByDefault": "true",
         "Name": "Grantlee Header Style",
         "Name[ca@valencia]": "Estil de capçalera «Grantlee»",
