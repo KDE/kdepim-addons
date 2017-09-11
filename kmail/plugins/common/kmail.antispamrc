@@ -1,5 +1,5 @@
 [General]
-tools=11
+tools=12
 
 [Spamtool #1]
 Ident=spamassassin
@@ -245,3 +245,16 @@ ScoreType=Bool
 ScoreValueRegexp=SPAM
 ScoreThresholdRegexp=
 
+[Spamtool #12]
+Ident=Rspamd
+Version=1
+Priority=70
+VisibleName=Rspamd
+URL=https://rspamd.com
+HeadersOnly=yes
+DetectionOnly=1
+ScoreName=Rspamd
+ScoreHeader=X-Spamd-Result
+ScoreType=Adjusted
+ScoreValueRegexp=\\[([\\d\\.-]+)[^\\d\\.]
+ScoreThresholdRegexp= \\/ ([\\d\\.-]+)[^\\d\\.]
