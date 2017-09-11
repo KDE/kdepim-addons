@@ -31,6 +31,7 @@ Name[sv]=Program Oktetström
 Name[tr]=Octetstream Uygulaması
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
+Name[zh_CN]=应用字节流
 Comment=A bodypart formatter plugin for text/x-patch
 Comment[ca]=Un connector formatador del cos per a text/x-patch
 Comment[ca@valencia]=Un connector formatador del cos per a text/x-patch
@@ -63,6 +64,7 @@ Comment[sv]=Ett insticksprogram för formatering av innehåll i programfixar
 Comment[tr]=text/x-patch için bir gövde biçimlendirme eklentisi
 Comment[uk]=Додаток форматування текстової частини для text/x-patch
 Comment[x-test]=xxA bodypart formatter plugin for text/x-patchxx
+Comment[zh_CN]=text/x-patch 的正文格式化插件
 [Plugin]
 Type=text/x-patch
 X-KDE-Library=messageviewer_bodypartformatter_text_xdiff

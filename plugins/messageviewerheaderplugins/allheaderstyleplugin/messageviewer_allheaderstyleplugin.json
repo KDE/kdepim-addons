@@ -22,6 +22,7 @@
         "Description[tr]": "Bu eklenti, tüm posta başlıklarını gösterir.",
         "Description[uk]": "Цей додаток покаже вам усі заголовки повідомлення.",
         "Description[x-test]": "xxThis plugin shows you all mail header.xx",
+        "Description[zh_CN]": "此插件为您呈现所有邮件头部。",
         "EnabledByDefault": "false",
         "Name": "All Header Style",
         "Name[ca@valencia]": "Tots els estils de capçalera",

@@ -25,6 +25,7 @@ Name[sv]=Sök ämne på webben
 Name[tr]=Web üzerinde Arama Başlığı
 Name[uk]=Пошук теми у інтернеті
 Name[x-test]=xxSearch Subject on Webxx
+Name[zh_CN]=在网上搜索主题
 Executable=firefox
 CommandLine=--search %s
 Icon=firefox
@@ -54,4 +55,5 @@ Description[sv]=Sök ämne på webben
 Description[tr]=Web üzerinde arama başlığı
 Description[uk]=Пошук теми у інтернеті
 Description[x-test]=xxSearch subject on webxx
+Description[zh_CN]=在网上搜索主题
 

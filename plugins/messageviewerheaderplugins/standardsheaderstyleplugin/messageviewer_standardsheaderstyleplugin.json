@@ -19,6 +19,7 @@
         "Description[tr]": "Bu eklenti, standart posta başlığı biçimi tanımlar.",
         "Description[uk]": "Цим додатком визначається стандартний стиль заголовка повідомлення.",
         "Description[x-test]": "xxThis plugin defines the standard mail header style.xx",
+        "Description[zh_CN]": "此插件定义了标注邮件头部样式。",
         "EnabledByDefault": "true",
         "Name": "Standards Header Style",
         "Name[ca@valencia]": "Estil de capçalera estàndard",

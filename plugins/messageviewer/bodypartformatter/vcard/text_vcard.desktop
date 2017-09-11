@@ -31,6 +31,7 @@ Name[sv]=Program Oktetström
 Name[tr]=Octetstream Uygulaması
 Name[uk]=Потік вісімкових даних
 Name[x-test]=xxApplication Octetstreamxx
+Name[zh_CN]=应用字节流
 Comment=A bodypart formatter plugin for text/vcard
 Comment[ca]=Un connector formatador del cos per a text/vcard
 Comment[ca@valencia]=Un connector formatador del cos per a text/vcard
@@ -63,6 +64,7 @@ Comment[sv]=Ett insticksprogram för formatering av innehåll i visitkort
 Comment[tr]=text/vcard için bir gövde biçimlendirme eklentisi
 Comment[uk]=Додаток форматування для text/vcard
 Comment[x-test]=xxA bodypart formatter plugin for text/vcardxx
+Comment[zh_CN]=text/vcard 的正文格式化插件
 
 [Plugin]
 Type=text/directory
