@@ -38,7 +38,7 @@ public:
 private:
     void writeConfig();
     void readConfig();
-    AdBlockBlockableItemsWidget *mBlockableItems;
+    AdBlockBlockableItemsWidget *mBlockableItems = nullptr;
 };
 }
 #endif // ADBLOCKBLOCKABLEITEMSDIALOG_H

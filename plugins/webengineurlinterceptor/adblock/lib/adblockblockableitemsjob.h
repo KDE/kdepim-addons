@@ -59,7 +59,7 @@ private:
     void searchBlockableItems();
     void adaptSource(QString &src, const QString &hostName);
     QVector<AdBlock::AdBlockResult> mAdblockResultList;
-    QWebEngineView *mWebEngineView;
+    QWebEngineView *mWebEngineView = nullptr;
 };
 
 struct ADBLOCKLIB_EXPORT AdBlockResult {

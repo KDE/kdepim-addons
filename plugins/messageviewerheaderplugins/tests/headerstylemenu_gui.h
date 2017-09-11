@@ -35,7 +35,7 @@ public:
 private Q_SLOTS:
     void styleChanged(MessageViewer::HeaderStylePlugin *plugin);
 private:
-    QTextEdit *mTextEdit;
+    QTextEdit *mTextEdit = nullptr;
 };
 
 #endif

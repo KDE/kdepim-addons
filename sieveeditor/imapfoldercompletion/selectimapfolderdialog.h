@@ -42,8 +42,8 @@ private:
     void readConfig();
     void slotCreateFolder();
 
-    SelectImapFolderWidget *mSelectImapFolderWidget;
-    QPushButton *mNewFolder;
+    SelectImapFolderWidget *mSelectImapFolderWidget = nullptr;
+    QPushButton *mNewFolder = nullptr;
 };
 
 #endif // SELECTIMAPFOLDERDIALOG_H

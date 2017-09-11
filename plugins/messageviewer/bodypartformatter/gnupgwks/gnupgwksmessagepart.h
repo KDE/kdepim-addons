@@ -57,7 +57,7 @@ protected:
     void parseContent(KMime::Content *node);
     ConfirmationType stringToType(const QStringRef &str);
 
-    MimeTreeParser::Interface::BodyPart *mPart;
+    MimeTreeParser::Interface::BodyPart *mPart = nullptr;
     QString mSender;
     QString mAddress;
     QString mFingerprint;

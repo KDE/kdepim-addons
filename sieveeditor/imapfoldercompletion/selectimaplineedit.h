@@ -34,7 +34,7 @@ public:
 
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 private:
-    QCompleter *mCompleter;
+    QCompleter *mCompleter = nullptr;
 };
 
 #endif // SELECTIMAPLINEEDIT_H

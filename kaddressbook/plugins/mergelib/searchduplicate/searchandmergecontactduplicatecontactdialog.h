@@ -48,13 +48,13 @@ private:
     void slotCustomizeMergeContacts(const QVector<KABMergeContacts::MergeConflictResult> &lst, const Akonadi::Collection &col);
     void readConfig();
     void writeConfig();
-    SearchDuplicateResultWidget *mSearchResult;
-    MergeContactShowResultTabWidget *mMergeContactResult;
-    KABMergeContacts::MergeContactErrorLabel *mNoContactSelected;
-    KABMergeContacts::MergeContactErrorLabel *mNoDuplicateContactFound;
-    KABMergeContacts::MergeContactErrorLabel *mNoEnoughContactSelected;
-    KABMergeContacts::MergeContactSelectInformationTabWidget *mSelectInformation;
-    QStackedWidget *mStackedWidget;
+    SearchDuplicateResultWidget *mSearchResult = nullptr;
+    MergeContactShowResultTabWidget *mMergeContactResult = nullptr;
+    KABMergeContacts::MergeContactErrorLabel *mNoContactSelected = nullptr;
+    KABMergeContacts::MergeContactErrorLabel *mNoDuplicateContactFound = nullptr;
+    KABMergeContacts::MergeContactErrorLabel *mNoEnoughContactSelected = nullptr;
+    KABMergeContacts::MergeContactSelectInformationTabWidget *mSelectInformation = nullptr;
+    QStackedWidget *mStackedWidget = nullptr;
 };
 }
 

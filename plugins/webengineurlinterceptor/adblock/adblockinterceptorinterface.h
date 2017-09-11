@@ -46,10 +46,10 @@ private:
     void slotShowBlockableElement();
     void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
     mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
-    QAction *mShowBlockableItems;
-    QAction *mBlockImage;
-    AdBlock::AdblockManager *mAdblockManager;
-    QWebEngineView *mWebEngineView;
+    QAction *mShowBlockableItems = nullptr;
+    QAction *mBlockImage = nullptr;
+    AdBlock::AdblockManager *mAdblockManager = nullptr;
+    QWebEngineView *mWebEngineView = nullptr;
 };
 
 #endif // ADBLOCKINTERCEPTORINTERFACE_H

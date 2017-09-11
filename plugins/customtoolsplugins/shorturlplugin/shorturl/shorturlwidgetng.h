@@ -59,16 +59,16 @@ private:
     void slotOpenShortUrl();
     void initializePlugins();
     void loadEngine();
-    QLabel *mShorturlServiceName;
-    KLineEdit *mOriginalUrl;
-    QLineEdit *mShortUrl;
-    QPushButton *mConvertButton;
-    QPushButton *mCopyToClipboard;
-    QPushButton *mInsertShortUrl;
-    QPushButton *mOpenShortUrl;
-    KPIM::ProgressIndicatorLabel *mIndicatorLabel;
+    QLabel *mShorturlServiceName = nullptr;
+    KLineEdit *mOriginalUrl = nullptr;
+    QLineEdit *mShortUrl = nullptr;
+    QPushButton *mConvertButton = nullptr;
+    QPushButton *mCopyToClipboard = nullptr;
+    QPushButton *mInsertShortUrl = nullptr;
+    QPushButton *mOpenShortUrl = nullptr;
+    KPIM::ProgressIndicatorLabel *mIndicatorLabel = nullptr;
     QHash<QString, ShortUrlEngineInterface *> mLstInterface;
-    ShortUrlEngineInterface *mCurrentEngine;
+    ShortUrlEngineInterface *mCurrentEngine = nullptr;
 };
 
 #endif // ShortUrlWidgetNg_H

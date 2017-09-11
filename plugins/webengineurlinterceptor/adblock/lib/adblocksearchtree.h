@@ -53,11 +53,10 @@ public:
 private:
     struct Node {
         QChar c;
-        const AdBlockRule *rule;
+        const AdBlockRule *rule = nullptr;
         QHash<QChar, Node *> children;
 
         Node() : c(0)
-            , rule(0)
         {
         }
     };
@@ -66,7 +65,7 @@ private:
 
     void deleteNode(Node *node);
 
-    Node *m_root;
+    Node *m_root = nullptr;
 };
 }
 #endif // ADBLOCKSEARCHTREE_H

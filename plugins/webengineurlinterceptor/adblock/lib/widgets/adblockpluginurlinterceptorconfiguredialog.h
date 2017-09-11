@@ -40,7 +40,7 @@ protected:
     void reset() override;
     void help() override;
 private:
-    AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget;
+    AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget = nullptr;
 };
 }
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H

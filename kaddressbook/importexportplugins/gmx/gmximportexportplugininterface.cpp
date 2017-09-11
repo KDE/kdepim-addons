@@ -187,7 +187,7 @@ static const QStringList assignedCategoriesSorted(const KContacts::AddresseeList
     // Walk through the addressees and return a unique list of up to 31
     // categories, alphabetically sorted
     QStringList categoryList;
-    const KContacts::Addressee *addressee;
+    const KContacts::Addressee *addressee = nullptr;
     for (KContacts::AddresseeList::ConstIterator addresseeIt = list.begin();
          addresseeIt != list.end() && categoryList.count() < 32; ++addresseeIt) {
         addressee = &(*addresseeIt);
@@ -216,7 +216,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
     typedef QMap<int, const KContacts::Addressee *> AddresseeMap;
     AddresseeMap addresseeMap;
-    const KContacts::Addressee *addressee;
+    const KContacts::Addressee *addressee = nullptr;
 
     t << "AB_ADDRESSES:\n";
     t << "Address_id,Nickname,Firstname,Lastname,Title,Birthday,Comments,"

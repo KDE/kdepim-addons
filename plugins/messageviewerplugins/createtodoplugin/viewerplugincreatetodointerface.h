@@ -47,7 +47,7 @@ private:
     void createAction(KActionCollection *ac);
     TodoEdit *widget();
 
-    TodoEdit *mTodoEdit;
+    TodoEdit *mTodoEdit = nullptr;
     QList<QAction *> mAction;
     Akonadi::Item mMessageItem;
 };

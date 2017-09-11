@@ -38,7 +38,7 @@ private:
     void slotActivated();
     void slotModifyContactFinished(KJob *job);
     Akonadi::Item::List mListItems;
-    QAction *mAction;
+    QAction *mAction = nullptr;
 };
 
 #endif // CHECKGRAVATARPLUGININTERFACE_H

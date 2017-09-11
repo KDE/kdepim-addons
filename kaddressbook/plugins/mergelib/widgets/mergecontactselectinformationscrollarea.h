@@ -40,9 +40,9 @@ private:
     void mergeContact(const KContacts::Addressee &addr);
     Akonadi::Collection mCollection;
     Akonadi::Item::List mListItem;
-    MergeContactSelectInformationWidget *mSelectInformationWidget;
-    QStackedWidget *mStackWidget;
-    MergeContactInfoWidget *mMergedContactWidget;
+    MergeContactSelectInformationWidget *mSelectInformationWidget = nullptr;
+    QStackedWidget *mStackWidget = nullptr;
+    MergeContactInfoWidget *mMergedContactWidget = nullptr;
 };
 }
 

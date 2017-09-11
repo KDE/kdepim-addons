@@ -44,8 +44,8 @@ private:
     SelectImapFolderDialog *selectFolderDialog();
     KSieveUi::SieveImapAccountSettings mAccount;
     QPointer<SelectImapFolderDialog> mSelectImapFolderDialog;
-    QToolButton *mToolButton;
-    SelectImapLineEdit *mLineEdit;
+    QToolButton *mToolButton = nullptr;
+    SelectImapLineEdit *mLineEdit = nullptr;
 };
 
 #endif // SELECTIMAPWIDGET_H

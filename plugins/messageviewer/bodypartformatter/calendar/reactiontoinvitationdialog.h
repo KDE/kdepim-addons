@@ -38,8 +38,8 @@ private:
     void slotTextChanged();
     void writeConfig();
     void readConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mPlainTextEditor;
-    QPushButton *mOkButton;
+    KPIMTextEdit::PlainTextEditorWidget *mPlainTextEditor = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif // REACTIONTOINVITATIONDIALOG_H

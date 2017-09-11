@@ -42,7 +42,7 @@ protected:
 
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalCore::Incidence::Ptr &incidence, bool &ok);
 protected:
-    PimDataSource *mDataSource;
+    PimDataSource *mDataSource = nullptr;
     QDate mStart;
     QDate mEnd;
 };

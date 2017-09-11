@@ -41,7 +41,7 @@ protected Q_SLOTS:
     void slotOk();
 
 private:
-    QButtonGroup *mDayNumGroup;
+    QButtonGroup *mDayNumGroup = nullptr;
 };
 
 #endif

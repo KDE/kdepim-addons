@@ -40,7 +40,7 @@ Q_SIGNALS:
 private:
     void createAddressItems(const QStringList &address, bool valid);
     void slotItemChanged(QListWidgetItem *item);
-    QListWidget *mListEmails;
+    QListWidget *mListEmails = nullptr;
 };
 
 #endif // CONFIRMADDRESSWIDGET_H

@@ -41,8 +41,8 @@ public:
 
 private:
     void slotOpenRegexpEditor();
-    QLineEdit *mLineEdit;
-    QToolButton *mRegExpEditorButton;
+    QLineEdit *mLineEdit = nullptr;
+    QToolButton *mRegExpEditorButton = nullptr;
 };
 
 #endif // REGEXPEDITORLINEEDIT_H

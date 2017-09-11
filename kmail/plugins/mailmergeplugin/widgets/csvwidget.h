@@ -34,7 +34,7 @@ public:
     QUrl path() const;
 
 private:
-    KUrlRequester *mCvsUrlRequester;
+    KUrlRequester *mCvsUrlRequester = nullptr;
 };
 }
 

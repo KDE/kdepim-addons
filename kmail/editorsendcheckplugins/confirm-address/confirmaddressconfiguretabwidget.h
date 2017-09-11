@@ -41,11 +41,11 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
-    uint mIdentity;
-    ConfirmAddressSimpleStringListEditor *mDomainNameListEditor;
-    ConfirmAddressSimpleStringListEditor *mWhiteListEditor;
-    QRadioButton *mAcceptedDomain;
-    QRadioButton *mRejectedDomain;
+    uint mIdentity = 0;
+    ConfirmAddressSimpleStringListEditor *mDomainNameListEditor = nullptr;
+    ConfirmAddressSimpleStringListEditor *mWhiteListEditor = nullptr;
+    QRadioButton *mAcceptedDomain = nullptr;
+    QRadioButton *mRejectedDomain = nullptr;
 };
 
 #endif // CONFIRMADDRESSCONFIGURETABWIDGET_H

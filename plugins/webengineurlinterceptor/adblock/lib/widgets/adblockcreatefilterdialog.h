@@ -49,7 +49,7 @@ private:
     void initialize();
     QString mPattern;
     AdBlockBlockableItemsWidget::TypeElement mCurrentType;
-    Ui::AdBlockCreateFilterWidget *mUi;
+    Ui::AdBlockCreateFilterWidget *mUi = nullptr;
 };
 }
 

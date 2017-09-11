@@ -29,7 +29,7 @@ public:
     explicit MailMergeDialog(QWidget *parent = nullptr);
     ~MailMergeDialog();
 private:
-    MailMergeWidget *mMailMergeWidget;
+    MailMergeWidget *mMailMergeWidget = nullptr;
 };
 }
 

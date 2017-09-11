@@ -57,7 +57,7 @@ private:
     QString m_errorMessage;
     Akonadi::ITIPHandler::Result m_result;
     QEventLoop m_eventLoop;
-    IncidenceEditorNG::GroupwareUiDelegate *m_counterProposalEditorDelegate;
+    IncidenceEditorNG::GroupwareUiDelegate *m_counterProposalEditorDelegate = nullptr;
 };
 
 #endif // SYNCITIPHANDLER_H

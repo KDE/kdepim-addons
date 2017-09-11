@@ -37,7 +37,7 @@ public:
 
 private:
     QMap<KCalCore::Incidence::Ptr, qint64> mAkonadiIdMap;
-    KCalCore::Calendar *mCalendar;
+    KCalCore::Calendar *mCalendar = nullptr;
 };
 
 #endif

@@ -39,7 +39,7 @@ private:
     void slotSendMailError(const QString &error);
     void slotSendMails(const QStringList &emails);
     Akonadi::Item::List mListItems;
-    QAction *mAction;
+    QAction *mAction = nullptr;
 };
 
 #endif // SENDMAILPLUGININTERFACE_H

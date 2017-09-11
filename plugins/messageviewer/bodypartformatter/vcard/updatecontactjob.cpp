@@ -87,7 +87,7 @@ public:
     UpdateContactJob *q;
     QString mEmail;
     KContacts::Addressee mContact;
-    QWidget *mParentWidget;
+    QWidget *mParentWidget = nullptr;
 };
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)

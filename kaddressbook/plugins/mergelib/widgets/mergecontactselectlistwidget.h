@@ -46,8 +46,8 @@ private:
     void fillList(const KContacts::Addressee::List &lst);
     void updateTitle();
     void addItem(const QString &str, const QIcon &icon = QIcon());
-    QLabel *mTitle;
-    QListWidget *mSelectListWidget;
+    QLabel *mTitle = nullptr;
+    QListWidget *mSelectListWidget = nullptr;
     MergeContacts::ConflictInformation mConflictType;
 };
 }

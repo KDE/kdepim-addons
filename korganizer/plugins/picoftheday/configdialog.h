@@ -40,7 +40,7 @@ protected Q_SLOTS:
     void slotOk();
 
 private:
-    QButtonGroup *mAspectRatioGroup;
+    QButtonGroup *mAspectRatioGroup = nullptr;
 };
 
 #endif

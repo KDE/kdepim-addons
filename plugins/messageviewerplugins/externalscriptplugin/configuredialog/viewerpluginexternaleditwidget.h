@@ -44,10 +44,10 @@ private:
     void slotInfoChanged();
     ViewerPluginExternalScriptInfo mScriptInfo;
     QStringList mExistingsNames;
-    QLineEdit *mName;
-    QLineEdit *mDescription;
-    QLineEdit *mCommandLine;
-    KUrlRequester *mExecutable;
+    QLineEdit *mName = nullptr;
+    QLineEdit *mDescription = nullptr;
+    QLineEdit *mCommandLine = nullptr;
+    KUrlRequester *mExecutable = nullptr;
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITWIDGET_H

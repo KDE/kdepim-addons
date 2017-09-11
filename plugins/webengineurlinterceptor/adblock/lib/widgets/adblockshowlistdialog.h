@@ -56,10 +56,10 @@ private:
     void downLoadList(const QString &url);
 
     QString mListName;
-    KPIMTextEdit::PlainTextEditorWidget *mTextEdit;
-    QTemporaryFile *mTemporaryFile;
-    KPIM::ProgressIndicatorLabel *mProgress;
-    QPushButton *mUser1Button;
+    KPIMTextEdit::PlainTextEditorWidget *mTextEdit = nullptr;
+    QTemporaryFile *mTemporaryFile = nullptr;
+    KPIM::ProgressIndicatorLabel *mProgress = nullptr;
+    QPushButton *mUser1Button = nullptr;
     KSyntaxHighlighting::Repository mSyntaxRepo;
 };
 }

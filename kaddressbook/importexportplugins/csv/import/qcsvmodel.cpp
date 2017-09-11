@@ -113,14 +113,14 @@ public:
     void fieldChanged(const QString &data, int row, int column);
     void finishedLoading();
 
-    QCsvModel *mParent;
-    CsvParser *mParser;
+    QCsvModel *mParent = nullptr;
+    CsvParser *mParser = nullptr;
     QVector<QString> mFieldIdentifiers;
     QMap< QPair<int, int>, QString> mFields;
-    QIODevice *mDevice;
+    QIODevice *mDevice = nullptr;
 
-    int mRowCount;
-    int mColumnCount;
+    int mRowCount = 0;
+    int mColumnCount = 0;
 };
 
 void QCsvModel::Private::columnCountChanged(int columns)

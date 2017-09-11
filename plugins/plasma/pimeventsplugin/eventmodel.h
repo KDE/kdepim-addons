@@ -52,7 +52,7 @@ private:
     void removeCollection(const Akonadi::Collection &col);
 
     QVector<Akonadi::Collection> mCols;
-    Akonadi::Monitor *mMonitor;
+    Akonadi::Monitor *mMonitor = nullptr;
     QMap<Akonadi::Collection::Id, KJob *> mFetchJobs;
 };
 

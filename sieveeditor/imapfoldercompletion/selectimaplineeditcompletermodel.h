@@ -35,7 +35,7 @@ public:
 
     QAbstractProxyModel *completerModel() const;
 private:
-    KDescendantsProxyModel *mFlatProxy;
+    KDescendantsProxyModel *mFlatProxy = nullptr;
 };
 
 #endif // SELECTIMAPLINEEDITCOMPLETERMODEL_H

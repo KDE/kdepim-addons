@@ -38,7 +38,7 @@ public Q_SLOTS:
 
 private:
     void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
-    QWebEngineView *mWebEngineView;
+    QWebEngineView *mWebEngineView = nullptr;
 };
 
 #endif // ADBLOCKBLOCKABLEELEMENTGUI_H

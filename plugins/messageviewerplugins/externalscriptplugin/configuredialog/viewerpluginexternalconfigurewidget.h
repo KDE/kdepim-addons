@@ -43,10 +43,10 @@ private:
     void slotDoubleClicked(QListWidgetItem *item);
     QStringList mFilesToRemove;
 
-    QListWidget *mListExternal;
-    QPushButton *mAddScript;
-    QPushButton *mRemoveScript;
-    QPushButton *mModifyScript;
+    QListWidget *mListExternal = nullptr;
+    QPushButton *mAddScript = nullptr;
+    QPushButton *mRemoveScript = nullptr;
+    QPushButton *mModifyScript = nullptr;
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H

@@ -32,8 +32,8 @@ public:
 
 private:
     void slotSaveConfig();
-    ShortUrlConfigureWidget *mConfigWidget;
-    ShortUrlWidgetNg *mShortUrlWidget;
+    ShortUrlConfigureWidget *mConfigWidget = nullptr;
+    ShortUrlWidgetNg *mShortUrlWidget = nullptr;
 };
 
 #endif // SHORTURLMAINWIDGETNg_H

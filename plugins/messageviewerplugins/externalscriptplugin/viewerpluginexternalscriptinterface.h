@@ -49,7 +49,7 @@ private:
     QStringList mCurrentInfo;
     QString mText;
     KMime::Message::Ptr mMessage;
-    QActionGroup *mActionGroup;
+    QActionGroup *mActionGroup = nullptr;
 };
 }
 #endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H

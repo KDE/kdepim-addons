@@ -37,7 +37,7 @@ public:
 
 private:
     void slotEnableChanged(bool state);
-    ConfirmAddressConfigureTab *mConfirmAddressConfigureTab;
+    ConfirmAddressConfigureTab *mConfirmAddressConfigureTab = nullptr;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H

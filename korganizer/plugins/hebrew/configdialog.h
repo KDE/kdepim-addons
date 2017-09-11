@@ -45,10 +45,10 @@ protected Q_SLOTS:
     void slotOk();
 
 private:
-    QCheckBox *mOmerBox;
-    QCheckBox *mParshaBox;
-    QCheckBox *mIsraelBox;
-    QCheckBox *mCholBox;
+    QCheckBox *mOmerBox = nullptr;
+    QCheckBox *mParshaBox = nullptr;
+    QCheckBox *mIsraelBox = nullptr;
+    QCheckBox *mCholBox = nullptr;
 };
 
 #endif

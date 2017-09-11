@@ -39,7 +39,7 @@ private:
     void slotActivated();
     void slotSendVcardsError(const QString &error);
     Akonadi::Item::List mListItems;
-    QAction *mAction;
+    QAction *mAction = nullptr;
 };
 
 #endif // SENDVCARDSPLUGININTERFACE_H

@@ -37,8 +37,8 @@ public:
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
     QString name() const override;
 private:
-    HeaderStyle *mHeaderStyle;
-    HeaderStrategy *mHeaderStrategy;
+    HeaderStyle *mHeaderStyle = nullptr;
+    HeaderStrategy *mHeaderStrategy = nullptr;
 };
 }
 #endif // GRANTLEEHEADERSTYLEPLUGIN_H

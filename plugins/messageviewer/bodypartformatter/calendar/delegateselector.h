@@ -43,9 +43,9 @@ public:
     bool rsvp() const;
 private:
     void slotTextChanged(const QString &text);
-    KPIM::AddresseeLineEdit *mDelegate;
-    QCheckBox *mRsvp;
-    QPushButton *mOkButton;
+    KPIM::AddresseeLineEdit *mDelegate = nullptr;
+    QCheckBox *mRsvp = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif

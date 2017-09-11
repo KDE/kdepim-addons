@@ -38,7 +38,7 @@ public:
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     QString pluginName;
-    ShortUrlEnginePlugin *plugin;
+    ShortUrlEnginePlugin *plugin = nullptr;
 };
 
 class ShortUrlEnginePluginManagerPrivate

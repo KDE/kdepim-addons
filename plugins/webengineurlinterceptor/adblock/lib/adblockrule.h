@@ -162,7 +162,7 @@ private:
     QString createRegExpFromFilter(const QString &filter) const;
     QList<QStringMatcher> createStringMatchers(const QStringList &filters) const;
 
-    AdBlockSubscription *m_subscription;
+    AdBlockSubscription *m_subscription = nullptr;
 
     RuleType m_type;
     RuleOptions m_options;
@@ -188,7 +188,7 @@ private:
     };
 
     // Use dynamic allocation to save memory
-    RegExp *m_regExp;
+    RegExp *m_regExp = nullptr;
 
     friend class AdBlockMatcher;
     friend class AdBlockSearchTree;

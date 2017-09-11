@@ -83,8 +83,8 @@ private:
         PathList = Qt::UserRole + 2,
         LastUpdateList = Qt::UserRole + 3
     };
-    Ui::adblock *mUi;
-    bool mChanged;
+    Ui::adblock *mUi = nullptr;
+    bool mChanged = false;
 };
 }
 

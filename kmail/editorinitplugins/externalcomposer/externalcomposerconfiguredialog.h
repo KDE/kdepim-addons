@@ -38,7 +38,7 @@ protected:
     void help() override;
 
 private:
-    ExternalComposerConfigureWidget *mConfigureWidget;
+    ExternalComposerConfigureWidget *mConfigureWidget = nullptr;
 };
 
 #endif // EXTERNALCOMPOSERCONFIGUREDIALOG_H

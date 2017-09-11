@@ -116,7 +116,7 @@ protected Q_SLOTS:
 protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
-    FollowRedirectReply *m_reply;
+    FollowRedirectReply *m_reply = nullptr;
     QVector<AdBlockRule *> m_rules;
 
 private:
@@ -124,7 +124,7 @@ private:
     QString m_filePath;
 
     QUrl m_url;
-    bool m_updated;
+    bool m_updated = false;
 };
 
 class AdBlockCustomList : public AdBlockSubscription

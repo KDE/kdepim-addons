@@ -48,7 +48,7 @@ private:
     EventEdit *widget();
 
     Akonadi::Item mMessageItem;
-    EventEdit *mEventEdit;
+    EventEdit *mEventEdit = nullptr;
     QList<QAction *> mAction;
 };
 }

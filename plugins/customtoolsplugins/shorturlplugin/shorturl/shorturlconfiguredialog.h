@@ -33,7 +33,7 @@ public:
 private:
     void slotOkClicked();
     void slotDefaultClicked();
-    ShortUrlConfigureWidget *mConfigureWidget;
+    ShortUrlConfigureWidget *mConfigureWidget = nullptr;
 };
 
 #endif // SHORTURLCONFIGUREDIALOG_H

@@ -72,11 +72,11 @@ private:
     Akonadi::Collection mCollection;
     Akonadi::Collection mCurrentCollection;
     KMime::Message::Ptr mMessage;
-    QLineEdit *mNoteEdit;
-    Akonadi::CollectionComboBox *mCollectionCombobox;
-    KMessageWidget *mMsgWidget;
-    QPushButton *mSaveButton;
-    QPushButton *mOpenEditorButton;
+    QLineEdit *mNoteEdit = nullptr;
+    Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
+    KMessageWidget *mMsgWidget = nullptr;
+    QPushButton *mSaveButton = nullptr;
+    QPushButton *mOpenEditorButton = nullptr;
 };
 }
 #endif // TODOEDIT_H

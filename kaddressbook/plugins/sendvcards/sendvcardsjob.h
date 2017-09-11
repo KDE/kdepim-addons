@@ -50,10 +50,10 @@ private:
     void createTemporaryDir();
     void jobFinished();
     Akonadi::Item::List mListItem;
-    MimeTreeParser::AttachmentTemporaryFilesDirs *mAttachmentTemporary;
-    QTemporaryDir *mTempDir;
+    MimeTreeParser::AttachmentTemporaryFilesDirs *mAttachmentTemporary = nullptr;
+    QTemporaryDir *mTempDir = nullptr;
     KContacts::VCardConverter::Version mVersion;
-    int mExpandGroupJobCount;
+    int mExpandGroupJobCount = 0;
 };
 }
 

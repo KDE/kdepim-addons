@@ -37,7 +37,7 @@ public:
     void resetSettings() override;
 
 private:
-    AdBlock::AdBlockSettingWidget *mConfigureWidget;
+    AdBlock::AdBlockSettingWidget *mConfigureWidget = nullptr;
 };
 }
 #endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H

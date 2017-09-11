@@ -46,13 +46,13 @@ public:
     void emitEndLine(uint row);
     void emitField(const QString &data, int row, int column);
 
-    QCsvBuilderInterface *mBuilder;
-    QTextCodec *mCodec;
+    QCsvBuilderInterface *mBuilder = nullptr;
+    QTextCodec *mCodec = nullptr;
     QChar mTextQuote;
     QChar mDelimiter;
 
-    uint mStartRow;
-    bool mNotTerminated;
+    uint mStartRow = 0;
+    bool mNotTerminated = true;
 };
 
 void QCsvReader::Private::emitBeginLine(uint row)

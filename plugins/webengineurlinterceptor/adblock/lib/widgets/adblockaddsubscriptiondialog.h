@@ -37,8 +37,8 @@ public:
 private:
     void slotShowList();
     void initializeList(const QStringList &excludeList);
-    QComboBox *mListSubscription;
-    QToolButton *mShowList;
+    QComboBox *mListSubscription = nullptr;
+    QToolButton *mShowList = nullptr;
 };
 }
 

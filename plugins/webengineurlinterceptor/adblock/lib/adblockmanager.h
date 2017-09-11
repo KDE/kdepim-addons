@@ -49,7 +49,7 @@ private:
     void loadSubscriptions();
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
-    AdBlockMatcher *mAdBlockMatcher;
+    AdBlockMatcher *mAdBlockMatcher = nullptr;
     QList<AdBlockSubscription *> mSubscriptions;
 };
 }

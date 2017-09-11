@@ -37,9 +37,9 @@ private:
     void slotTextChanged(const QString &text);
     void slotEnabledOkButton(bool);
 
-    MailTransport::Transport *mTransport;
-    MailTransport::SendmailConfigWidget *mConfigWidget;
-    QPushButton *mOkButton;
+    MailTransport::Transport *mTransport = nullptr;
+    MailTransport::SendmailConfigWidget *mConfigWidget = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif

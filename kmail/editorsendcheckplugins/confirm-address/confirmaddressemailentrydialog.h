@@ -34,8 +34,8 @@ public:
     QString emails() const;
     void setValue(const QString &val);
 private:
-    QDialogButtonBox *mButtons;
-    QLineEdit *mLineEdit;
+    QDialogButtonBox *mButtons = nullptr;
+    QLineEdit *mLineEdit = nullptr;
 };
 
 #endif // CONFIRMADDRESSEMAILENTRYDIALOG_H

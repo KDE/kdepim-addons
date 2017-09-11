@@ -35,7 +35,7 @@ protected:
     void load() override;
     void help() override;
 private:
-    ViewerPluginExternalConfigureWidget *mConfigWidget;
+    ViewerPluginExternalConfigureWidget *mConfigWidget = nullptr;
 };
 
 #endif // VIEWERPLUGINEXTERNALCONFIGUREDIALOG_H

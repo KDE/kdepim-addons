@@ -43,8 +43,8 @@ private:
     void saveConfig();
     void slotScriptIsValid(bool valid);
     void slotAccepted();
-    ViewerPluginExternalEditWidget *mEditWidget;
-    QPushButton *mOkButton;
+    ViewerPluginExternalEditWidget *mEditWidget = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif // VIEWERPLUGINEXTERNALEDITDIALOG_H

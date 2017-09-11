@@ -74,12 +74,12 @@ private:
     void comboboxRowInserted();
     Akonadi::Collection mCollection;
     KMime::Message::Ptr mMessage;
-    QLineEdit *mEventEdit;
-    Akonadi::CollectionComboBox *mCollectionCombobox;
-    EventDateTimeWidget *mStartDateTimeEdit;
-    EventDateTimeWidget *mEndDateTimeEdit;
-    QPushButton *mSaveButton;
-    QPushButton *mOpenEditorButton;
+    QLineEdit *mEventEdit = nullptr;
+    Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
+    EventDateTimeWidget *mStartDateTimeEdit = nullptr;
+    EventDateTimeWidget *mEndDateTimeEdit = nullptr;
+    QPushButton *mSaveButton = nullptr;
+    QPushButton *mOpenEditorButton = nullptr;
 };
 }
 

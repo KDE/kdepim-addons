@@ -36,7 +36,7 @@ protected:
     void reset() override;
     void help() override;
 private:
-    ConfirmAddressConfigureWidget *mConfigureWidget;
+    ConfirmAddressConfigureWidget *mConfigureWidget = nullptr;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREDIALOG_H

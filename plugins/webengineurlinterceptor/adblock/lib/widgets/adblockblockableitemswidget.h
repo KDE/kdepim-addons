@@ -74,7 +74,7 @@ private:
     void writeConfig();
     void searchBlockableItems();
     void readConfig();
-    PimCommon::CustomTreeView *mListItems;
+    PimCommon::CustomTreeView *mListItems = nullptr;
 };
 }
 #endif // ADBLOCKBLOCKABLEITEMSWIDGET_H

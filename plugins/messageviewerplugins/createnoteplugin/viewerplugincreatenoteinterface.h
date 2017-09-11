@@ -51,7 +51,7 @@ private:
     NoteEdit *widget();
 
     Akonadi::Item mMessageItem;
-    NoteEdit *mNoteEdit;
+    NoteEdit *mNoteEdit = nullptr;
     QList<QAction *> mAction;
 };
 }

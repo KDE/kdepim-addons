@@ -71,13 +71,13 @@ private:
     void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
 
     KSieveUi::SieveImapAccountSettings mAccount;
-    QLineEdit *mSearchLineEdit;
-    SelectImapFolderTreeView *mTreeView;
-    QStandardItemModel *mModel;
+    QLineEdit *mSearchLineEdit = nullptr;
+    SelectImapFolderTreeView *mTreeView = nullptr;
+    QStandardItemModel *mModel = nullptr;
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-    SearchFilterProxyModel *mFilter;
+    SearchFilterProxyModel *mFilter = nullptr;
 #else
-    QSortFilterProxyModel *mFilter;
+    QSortFilterProxyModel *mFilter = nullptr;
 #endif
 };
 

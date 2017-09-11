@@ -40,7 +40,7 @@ public:
     void clear() override;
 
 private:
-    Akonadi::EmailAddressRequester *mEmailAddressRequester;
+    Akonadi::EmailAddressRequester *mEmailAddressRequester = nullptr;
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H

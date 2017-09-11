@@ -34,7 +34,7 @@ private Q_SLOTS:
     void shouldResetValue();
 private:
     AutomaticAddContactsTabWidget *createContactWidget();
-    QStandardItemModel *mComboboxModel;
+    QStandardItemModel *mComboboxModel = nullptr;
 };
 
 #endif // AUTOMATICADDCONTACTSTabWIDGETTEST_H

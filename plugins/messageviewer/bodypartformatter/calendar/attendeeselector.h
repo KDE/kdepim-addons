@@ -41,7 +41,7 @@ private:
     void textChanged(const QString &text);
     void selectionChanged();
     Ui::AttendeeSelectorWidget ui;
-    QPushButton *mOkButton;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif

@@ -34,13 +34,11 @@ class ShortUrlConfigureWidgetPrivate
 {
 public:
     ShortUrlConfigureWidgetPrivate()
-        : mShortUrlServer(nullptr)
-        , mChanged(false)
     {
     }
 
-    QComboBox *mShortUrlServer;
-    bool mChanged;
+    QComboBox *mShortUrlServer = nullptr;
+    bool mChanged = false;
 };
 
 ShortUrlConfigureWidget::ShortUrlConfigureWidget(QWidget *parent)

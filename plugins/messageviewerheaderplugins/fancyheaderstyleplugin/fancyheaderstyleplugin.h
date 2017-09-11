@@ -38,8 +38,8 @@ public:
     QString name() const override;
     int elidedTextSize() const override;
 private:
-    HeaderStyle *mHeaderStyle;
-    HeaderStrategy *mHeaderStrategy;
+    HeaderStyle *mHeaderStyle = nullptr;
+    HeaderStrategy *mHeaderStrategy = nullptr;
 };
 }
 #endif // FANCYHEADERSTYLEPLUGIN_H

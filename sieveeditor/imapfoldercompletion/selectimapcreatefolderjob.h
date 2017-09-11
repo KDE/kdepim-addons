@@ -45,7 +45,7 @@ private:
     void slotCreateFolderDone(KJob *job);
     void slotLoginDone(KJob *job);
     void failed();
-    KIMAP::Session *mSession;
+    KIMAP::Session *mSession = nullptr;
     KSieveUi::SieveImapAccountSettings mSieveImapAccount;
     QString mNewFolderName;
 };

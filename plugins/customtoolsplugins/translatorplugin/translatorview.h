@@ -37,7 +37,7 @@ public:
 private:
     void slotActivateTranslator(bool state);
     void createAction(KActionCollection *ac);
-    KToggleAction *mAction;
-    PimCommon::TranslatorWidget *mTranslatorWidget;
+    KToggleAction *mAction = nullptr;
+    PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
 };
 #endif // TRANSLATORVIEW_H

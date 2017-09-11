@@ -102,10 +102,10 @@ private:
     QUrl mThumbUrl;
     bool mFirstStepCompleted;
     bool mSecondStepCompleted;
-    KIO::SimpleJob *mFirstStepJob;
-    KIO::SimpleJob *mSecondStepJob;
-    KIO::SimpleJob *mThirdStepJob;
-    QTimer *mTimer;
+    KIO::SimpleJob *mFirstStepJob = nullptr;
+    KIO::SimpleJob *mSecondStepJob = nullptr;
+    KIO::SimpleJob *mThirdStepJob = nullptr;
+    QTimer *mTimer = nullptr;
 };
 
 #endif

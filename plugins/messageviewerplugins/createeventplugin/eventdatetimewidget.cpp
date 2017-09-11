@@ -29,13 +29,11 @@ class MessageViewer::EventDateTimeWidgetPrivate
 {
 public:
     EventDateTimeWidgetPrivate()
-        : mDateEdit(nullptr)
-        , mTimeEdit(nullptr)
     {
     }
 
-    KDateComboBox *mDateEdit;
-    KTimeComboBox *mTimeEdit;
+    KDateComboBox *mDateEdit = nullptr;
+    KTimeComboBox *mTimeEdit = nullptr;
 };
 
 EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)

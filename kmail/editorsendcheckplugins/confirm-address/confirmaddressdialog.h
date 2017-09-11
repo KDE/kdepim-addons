@@ -40,9 +40,9 @@ private:
     void slotWhiteListSelectedEmails();
     void writeConfig();
     void readConfig();
-    uint mCurrentIdentity;
-    ConfirmAddressWidget *mConfirmWidget;
-    QPushButton *mWhiteListEmailsButton;
+    uint mCurrentIdentity = 0;
+    ConfirmAddressWidget *mConfirmWidget = nullptr;
+    QPushButton *mWhiteListEmailsButton = nullptr;
 };
 
 #endif // CONFIRMADDRESSDIALOG_H

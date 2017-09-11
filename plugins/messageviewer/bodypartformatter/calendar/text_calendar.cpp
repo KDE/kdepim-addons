@@ -174,7 +174,7 @@ public:
     }
 
 private:
-    MimeTreeParser::Interface::BodyPart *mBodyPart;
+    MimeTreeParser::Interface::BodyPart *mBodyPart = nullptr;
     KCalCore::MemoryCalendar::Ptr mCalendar;
 };
 

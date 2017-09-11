@@ -34,7 +34,7 @@ public:
 private:
     void slotActivateShorturl(bool state);
     void createAction(KActionCollection *ac);
-    KToggleAction *mAction;
-    ShortUrlWidgetNg *mShorturl;
+    KToggleAction *mAction = nullptr;
+    ShortUrlWidgetNg *mShorturl = nullptr;
 };
 #endif // SHORTURLVIEW_H

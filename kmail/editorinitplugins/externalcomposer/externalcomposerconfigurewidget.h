@@ -35,8 +35,8 @@ public:
     void saveSettings() override;
     void resetSettings() override;
 private:
-    QCheckBox *mExternalEditorCheck;
-    KUrlRequester *mEditorRequester;
+    QCheckBox *mExternalEditorCheck = nullptr;
+    KUrlRequester *mEditorRequester = nullptr;
 };
 
 #endif // CONFIRMADDRESSCONFIGUREWIDGET_H

@@ -33,7 +33,7 @@ public:
     QString attachmentPath() const;
 
 private:
-    KUrlRequester *mUrlRequester;
+    KUrlRequester *mUrlRequester = nullptr;
 };
 }
 

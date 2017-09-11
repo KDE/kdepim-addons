@@ -41,9 +41,9 @@ public Q_SLOTS:
     void setContact(const Akonadi::Item &item);
 
 private:
-    QStackedWidget *mStackWidget;
-    QLabel *mNoContactSelected;
-    KAddressBookGrantlee::GrantleeContactViewer *mContactViewer;
+    QStackedWidget *mStackWidget = nullptr;
+    QLabel *mNoContactSelected = nullptr;
+    KAddressBookGrantlee::GrantleeContactViewer *mContactViewer = nullptr;
 };
 }
 

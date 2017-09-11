@@ -49,7 +49,7 @@ struct InfoRegExp
         NotInstalled
     };
     RegexpEditorStatus status;
-    QDialog *mEditorDialog;
+    QDialog *mEditorDialog = nullptr;
 };
 
 Q_GLOBAL_STATIC(InfoRegExp, s_regexpeditorinstalled)

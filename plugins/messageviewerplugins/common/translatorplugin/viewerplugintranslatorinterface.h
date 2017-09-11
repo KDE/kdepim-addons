@@ -42,7 +42,7 @@ private:
     PimCommon::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
-    PimCommon::TranslatorWidget *mTranslatorWidget;
+    PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
 };
 }
 #endif // VIEWERPLUGINTRANSLATORINTERFACE_H

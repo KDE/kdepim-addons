@@ -38,7 +38,7 @@ public:
     void activateAction() override;
 private:
     void slotGrantleeHeaders();
-    GrantleeTheme::ThemeManager *mThemeManager;
+    GrantleeTheme::ThemeManager *mThemeManager = nullptr;
 };
 }
 

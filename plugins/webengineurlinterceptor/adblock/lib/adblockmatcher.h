@@ -70,7 +70,7 @@ public Q_SLOTS:
 
 private:
     void enabledChanged(bool enabled);
-    AdblockManager *m_manager;
+    AdblockManager *m_manager = nullptr;
 
     QVector<AdBlockRule *> m_createdRules;
     QVector<const AdBlockRule *> m_networkExceptionRules;

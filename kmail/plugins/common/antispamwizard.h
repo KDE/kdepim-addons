@@ -264,15 +264,15 @@ private:
     void sortFilterOnExistance(const QString &intendedFilterName, QString &newFilters, QString &replaceFilters);
 
     /* The pages in the wizard */
-    ASWizInfoPage *mInfoPage;
-    ASWizSpamRulesPage *mSpamRulesPage;
-    ASWizVirusRulesPage *mVirusRulesPage;
-    ASWizSummaryPage *mSummaryPage;
+    ASWizInfoPage *mInfoPage = nullptr;
+    ASWizSpamRulesPage *mSpamRulesPage = nullptr;
+    ASWizVirusRulesPage *mVirusRulesPage = nullptr;
+    ASWizSummaryPage *mSummaryPage = nullptr;
 
-    KPageWidgetItem *mInfoPageItem;
-    KPageWidgetItem *mSpamRulesPageItem;
-    KPageWidgetItem *mVirusRulesPageItem;
-    KPageWidgetItem *mSummaryPageItem;
+    KPageWidgetItem *mInfoPageItem = nullptr;
+    KPageWidgetItem *mSpamRulesPageItem = nullptr;
+    KPageWidgetItem *mVirusRulesPageItem = nullptr;
+    KPageWidgetItem *mSummaryPageItem = nullptr;
 
     /* The configured tools and it's settings to be used in the wizard. */
     QList<SpamToolConfig> mToolList;
@@ -293,7 +293,7 @@ public:
     ASWizPage(QWidget *parent, const QString &name);
 
 protected:
-    QBoxLayout *mLayout;
+    QBoxLayout *mLayout = nullptr;
 };
 
 //---------------------------------------------------------------------------
@@ -313,9 +313,9 @@ Q_SIGNALS:
 
 private:
     void processSelectionChange();
-    QLabel *mScanProgressText;
-    QLabel *mSelectionHint;
-    QListWidget *mToolsList;
+    QLabel *mScanProgressText = nullptr;
+    QLabel *mSelectionHint = nullptr;
+    QListWidget *mToolsList = nullptr;
 };
 
 //---------------------------------------------------------------------------
@@ -348,11 +348,11 @@ Q_SIGNALS:
 
 private:
     void processSelectionChange();
-    QCheckBox *mMarkRules;
-    QCheckBox *mMoveSpamRules;
-    QCheckBox *mMoveUnsureRules;
-    MailCommon::FolderRequester *mFolderReqForSpamFolder;
-    MailCommon::FolderRequester *mFolderReqForUnsureFolder;
+    QCheckBox *mMarkRules = nullptr;
+    QCheckBox *mMoveSpamRules = nullptr;
+    QCheckBox *mMoveUnsureRules = nullptr;
+    MailCommon::FolderRequester *mFolderReqForSpamFolder = nullptr;
+    MailCommon::FolderRequester *mFolderReqForUnsureFolder = nullptr;
 };
 
 //-------------------------------------------------------------------------
@@ -374,10 +374,10 @@ Q_SIGNALS:
 
 private:
     void processSelectionChange();
-    QCheckBox *mPipeRules;
-    QCheckBox *mMoveRules;
-    MailCommon::FolderTreeWidget *mFolderTree;
-    QCheckBox *mMarkRules;
+    QCheckBox *mPipeRules = nullptr;
+    QCheckBox *mMoveRules = nullptr;
+    MailCommon::FolderTreeWidget *mFolderTree = nullptr;
+    QCheckBox *mMarkRules = nullptr;
 };
 
 //---------------------------------------------------------------------------
@@ -391,7 +391,7 @@ public:
     void setSummaryText(const QString &text);
 
 private:
-    QLabel *mSummaryText;
+    QLabel *mSummaryText = nullptr;
 };
 } // namespace KMail
 

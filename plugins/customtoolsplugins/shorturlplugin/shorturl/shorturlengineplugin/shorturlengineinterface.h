@@ -46,8 +46,8 @@ Q_SIGNALS:
 
 protected:
     QString mOriginalUrl;
-    bool mErrorFound;
-    QNetworkAccessManager *mNetworkAccessManager;
-    ShortUrlEnginePlugin *mEnginePlugin;
+    bool mErrorFound = false;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    ShortUrlEnginePlugin *mEnginePlugin = nullptr;
 };
 #endif // SHORTURLENGINEINTERFACE_H

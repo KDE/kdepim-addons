@@ -61,7 +61,7 @@ public:
 protected:
     void parseContent(KMime::Content *node);
 
-    MimeTreeParser::Interface::BodyPart *mPart;
+    MimeTreeParser::Interface::BodyPart *mPart = nullptr;
     QDateTime mKeyDate;
     QString mUserID;
     QString mKeyID;

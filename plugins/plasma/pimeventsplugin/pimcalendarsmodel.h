@@ -46,7 +46,7 @@ public Q_SLOTS:
     void saveConfig();
 
 private:
-    Akonadi::EntityTreeModel *mEtm;
+    Akonadi::EntityTreeModel *mEtm = nullptr;
     QSet<qint64> mEnabledCalendars;
 };
 
