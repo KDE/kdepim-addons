@@ -42,7 +42,7 @@ public:
     {
     }
 
-    QString callGenerateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId) const
+    QString callGenerateUid(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
     {
         return Visitor::generateUid(incidence, recurrenceId);
     }
@@ -66,27 +66,27 @@ using DateTimeRange = QPair<QDateTime, QDateTime>;
 void EventDataVisitorTest::testGenerateUID_data()
 {
     QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
-    QTest::addColumn<KDateTime>("recurrenceId");
+    QTest::addColumn<QDateTime>("recurrenceId");
     QTest::addColumn<qint64>("itemId");
     QTest::addColumn<QString>("expectedUID");
 
     auto incidence = KCalCore::Event::Ptr::create().staticCast<KCalCore::Incidence>();
-    QTest::newRow("simple event") << incidence << KDateTime()
+    QTest::newRow("simple event") << incidence << QDateTime()
                                   << 1ll << QStringLiteral("Akonadi-1");
-    QTest::newRow("recurring event") << incidence << KDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), KDateTime::UTC)
+    QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), Qt::UTC)
                                      << 1ll << QStringLiteral("Akonadi-1-20160529T154700UTC");
 
     incidence = KCalCore::Todo::Ptr::create().staticCast<KCalCore::Incidence>();
-    QTest::newRow("simple todo") << incidence << KDateTime()
+    QTest::newRow("simple todo") << incidence << QDateTime()
                                  << 42ll << QStringLiteral("Akonadi-42");
-    QTest::newRow("recurring todo") << incidence << KDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), KDateTime::UTC)
+    QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), Qt::UTC)
                                     << 42ll << QStringLiteral("Akonadi-42-20160529T154905UTC");
 }
 
 void EventDataVisitorTest::testGenerateUID()
 {
     QFETCH(KCalCore::Incidence::Ptr, incidence);
-    QFETCH(KDateTime, recurrenceId);
+    QFETCH(QDateTime, recurrenceId);
     QFETCH(qint64, itemId);
     QFETCH(QString, expectedUID);
 

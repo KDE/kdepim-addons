@@ -72,7 +72,7 @@ bool BaseEventDataVisitor::isInRange(const QDate &start, const QDate &end) const
     }
 }
 
-QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId) const
+QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
 {
     // Get a corresponding Akonadi Item: Akonadi ID is the only reliably unique
     // and persistent identifier when dealing with incidences from multiple
@@ -85,7 +85,7 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
 
     if (recurrenceId.isValid()) {
         return QStringLiteral("Akonadi-%1-%2").arg(itemId)
-               .arg(recurrenceId.toString(QStringLiteral("%Y%m%dT%H%M%S%Z")));
+               .arg(recurrenceId.toString(QStringLiteral("yyyyMMddThhmmsst")));
     } else {
         return QStringLiteral("Akonadi-%1").arg(itemId);
     }
@@ -110,7 +110,7 @@ QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccuren
         }
         copy.setStartDateTime(dt);
         copy.setEndDateTime(dt.addSecs(duration));
-        copy.setUid(generateUid(incidence, rec));
+        copy.setUid(generateUid(incidence, rec.dateTime()));
 
         results.push_back(copy);
 

@@ -80,9 +80,13 @@ KCalCore::Incidence::Ptr TestDataParser::incidence() const
 
 QDateTime TestDataParser::parseDateTime(const QJsonObject &dateTime)
 {
-    return QDateTime(QDate::fromString(dateTime[QStringLiteral("date")].toString(), Qt::ISODate),
-                     QTime::fromString(dateTime[QStringLiteral("time")].toString(), Qt::ISODate),
-                     QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1())).toLocalTime();
+    const auto date = QDate::fromString(dateTime[QStringLiteral("date")].toString(), Qt::ISODate);
+    const auto time = QTime::fromString(dateTime[QStringLiteral("time")].toString(), Qt::ISODate); 
+    if (dateTime.contains(QLatin1String("tz"))) {
+        return QDateTime(date, time, QTimeZone(dateTime[QStringLiteral("tz")].toString().toLatin1())).toLocalTime();
+    } else {
+        return QDateTime(date, time, Qt::LocalTime);
+    }
 }
 
 void TestDataParser::parse()

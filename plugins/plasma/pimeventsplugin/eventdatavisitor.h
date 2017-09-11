@@ -37,7 +37,7 @@ public:
 protected:
     BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
 
-    QString generateUid(const KCalCore::Incidence::Ptr &incidence, const KDateTime &recurrenceId = KDateTime()) const;
+    QString generateUid(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
     bool isInRange(const QDate &start, const QDate &end) const;
 
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalCore::Incidence::Ptr &incidence, bool &ok);
