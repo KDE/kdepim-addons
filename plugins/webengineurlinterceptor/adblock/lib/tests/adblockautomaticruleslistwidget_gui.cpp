@@ -20,8 +20,6 @@
 #include "adblockautomaticruleslistwidget_gui.h"
 #include "../widgets/adblockautomaticruleslistwidget.h"
 
-#include <KAboutData>
-#include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QHBoxLayout>
 #include <QApplication>
@@ -50,23 +48,18 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("AdBlockAutomaticRulesListWidget_gui"), i18n("AdBlockAutomaticRulesListWidget_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for AdBlockAutomaticRulesListWidget"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("+[url]"), i18n("URL of adblock file list")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("+[url]"), QStringLiteral("URL of adblock file list")));
 
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     QString fileName;
     if (!parser.positionalArguments().isEmpty()) {
         fileName = parser.positionalArguments().at(0);
     } else {
-        fileName = QFileDialog::getOpenFileName(nullptr, QString(), QString(), i18n("Adblock File (*)"));
+        fileName = QFileDialog::getOpenFileName(nullptr, QString(), QString(), QStringLiteral("Adblock File (*)"));
     }
     if (fileName.isEmpty()) {
         return 0;

@@ -20,10 +20,8 @@
 #include "headerstylemenu_gui.h"
 #include "messageviewer/headerstylemenumanager.h"
 #include <QStandardPaths>
-#include <KLocalizedString>
 
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QMenu>
 #include <QMenuBar>
@@ -65,15 +63,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("headerstylemenu_gui"), i18n("headerstylemenu_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for headerstylemenu"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     HeaderStyleMenuTest *w = new HeaderStyleMenuTest();
     w->resize(800, 200);

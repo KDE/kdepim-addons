@@ -21,9 +21,7 @@
 
 #include "pimcommon_debug.h"
 
-#include <KLocalizedString>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
@@ -31,15 +29,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("shorturlng_gui"), i18n("ShortUrlNgTest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for short url widgetng"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
 
     ShortUrlMainWidgetNg *w = new ShortUrlMainWidgetNg;
 

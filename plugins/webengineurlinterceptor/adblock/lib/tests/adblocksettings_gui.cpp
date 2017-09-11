@@ -18,8 +18,6 @@
 */
 
 #include <QApplication>
-#include <KAboutData>
-#include <KLocalizedString>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 
@@ -29,15 +27,10 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("adblocksettings_gui"), i18n("adblocksettingstest_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for adblocksettings"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
     parser.process(app);
-    aboutData.processCommandLine(&parser);
     AdBlock::AdBlockSettingWidget *w = new AdBlock::AdBlockSettingWidget;
     w->show();
     return app.exec();

@@ -19,7 +19,6 @@
 
 #include <KLocalizedString>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 #include "../widgets/gravatarupdatedialog.h"
@@ -28,17 +27,12 @@ int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
-    KAboutData aboutData(QStringLiteral("gravatarupdatedialog_gui"), i18n("Gravatarupdatedialog_Gui"), QStringLiteral("1.0"));
-    aboutData.setShortDescription(i18n("Test for Gravatar update dialog"));
     QCommandLineParser parser;
-    KAboutData::setApplicationData(aboutData);
     parser.addVersionOption();
     parser.addHelpOption();
-    aboutData.setupCommandLine(&parser);
-    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"), i18n("Email address"), QStringLiteral("emailaddress")));
+    parser.addOption(QCommandLineOption(QStringList() << QStringLiteral("email"), QStringLiteral("Email address"), QStringLiteral("emailaddress")));
 
     parser.process(app);
-    aboutData.processCommandLine(&parser);
     QString email;
     if (!parser.value(QStringLiteral("email")).isEmpty()) {
         email = parser.value(QStringLiteral("email"));
