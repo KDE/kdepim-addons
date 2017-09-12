@@ -137,17 +137,17 @@ static bool hasMyWritableEventsFolders(const QString &family)
 static bool occurredAlready(const Incidence::Ptr &incidence)
 {
     Q_ASSERT(incidence);
-    const KDateTime now = KDateTime::currentLocalDateTime();
+    const QDateTime now = QDateTime::currentDateTime();
     const QDate today = now.date();
 
     if (incidence->recurs()) {
-        const KDateTime nextDate = incidence->recurrence()->getNextDateTime(now);
+        const QDateTime nextDate = incidence->recurrence()->getNextDateTime(now);
 
         return !nextDate.isValid();
     } else {
         const KDateTime incidenceDate = incidence->dateTime(Incidence::RoleDisplayEnd);
         if (incidenceDate.isValid()) {
-            return incidence->allDay() ? (incidenceDate.date() < today) : (incidenceDate < now);
+            return incidence->allDay() ? (incidenceDate.date() < today) : (incidenceDate < KDateTime::currentLocalDateTime());
         }
     }
 
