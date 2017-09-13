@@ -19,8 +19,6 @@
 
 #include "sendvcardsjob.h"
 
-#include <KContacts/Addressee>
-#include <KContacts/ContactGroup>
 #include <AkonadiCore/Item>
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
@@ -30,7 +28,6 @@
 #include <QTemporaryDir>
 #include <QFile>
 #include <KLocalizedString>
-#include <QDesktopServices>
 #include <KToolInvocation>
 
 using namespace KABSendVCards;

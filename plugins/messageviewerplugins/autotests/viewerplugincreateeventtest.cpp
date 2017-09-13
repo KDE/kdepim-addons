@@ -20,10 +20,10 @@
 #include "viewerplugincreateeventtest.h"
 #include "../createeventplugin/viewerplugincreateevent.h"
 #include <KActionCollection>
-#include <QBoxLayout>
 #include <QTest>
 #include <QStandardItemModel>
 #include <messageviewer/viewerplugininterface.h>
+#include <QHBoxLayout>
 
 namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;

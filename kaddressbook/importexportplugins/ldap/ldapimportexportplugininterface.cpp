@@ -22,7 +22,6 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QPointer>
-#include <KAddressBookImportExport/KAddressBookImportExportContactList>
 #include <Libkdepim/LdapSearchDialog>
 #include "../shared/importexportengine.h"
 

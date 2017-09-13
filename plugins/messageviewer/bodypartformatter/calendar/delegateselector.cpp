@@ -22,7 +22,6 @@
 
 #include <LibkdepimAkonadi/AddresseeLineEdit>
 
-#include <QHBoxLayout>
 #include <KLocalizedString>
 
 #include <qcheckbox.h>

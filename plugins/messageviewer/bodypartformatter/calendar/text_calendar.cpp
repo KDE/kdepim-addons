@@ -38,6 +38,8 @@
 #include "syncitiphandler.h"
 #include "reactiontoinvitationdialog.h"
 
+#include <KIdentityManagement/IdentityManager>
+
 #include <MessageViewer/BodyPartURLHandler>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/Viewer>
@@ -54,7 +56,6 @@ using namespace KCalCore;
 #include <KMime/Message>
 
 #include <KIdentityManagement/Identity>
-#include <KIdentityManagement/IdentityManager>
 
 #include <KEmailAddress>
 
@@ -66,7 +67,6 @@ using namespace KCalCore;
 #include <KDBusServiceStarter>
 #include <KMessageBox>
 #include <KRun>
-#include <KSystemTimeZone>
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>
 #include <KLocalizedString>
@@ -79,7 +79,6 @@ using namespace KCalCore;
 #include <QIcon>
 #include <QFileDialog>
 #include <QMimeDatabase>
-#include <QMimeType>
 #include <QDesktopServices>
 #include <QInputDialog>
 #include <QMenu>

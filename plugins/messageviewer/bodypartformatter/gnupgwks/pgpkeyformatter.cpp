@@ -21,7 +21,6 @@
 #include "pgpkeymessagepart.h"
 #include "pgpkeymemento.h"
 
-#include <QUrl>
 #include <QApplication>
 #include <QPalette>
 

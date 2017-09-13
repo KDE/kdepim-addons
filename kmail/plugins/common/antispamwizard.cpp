@@ -62,7 +62,6 @@
 #include <QVBoxLayout>
 #include <QCheckBox>
 #include <QListWidget>
-#include <KHelpClient>
 #include <QPushButton>
 #include <KConfigGroup>
 

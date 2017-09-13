@@ -24,7 +24,6 @@
 #include "../lib/widgets/adblockpluginurlinterceptorconfiguredialog.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
-#include <KLocalizedString>
 
 K_PLUGIN_FACTORY_WITH_JSON(AdblockPluginUrlInterceptorFactory, "messageviewer_adblockurlinterceptor.json", registerPlugin<AdblockPluginUrlInterceptor>();
                            )

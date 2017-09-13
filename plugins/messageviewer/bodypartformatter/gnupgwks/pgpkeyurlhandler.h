@@ -20,7 +20,6 @@
 #ifndef PGPKEYURLHANDLER_H
 #define PGPKEYURLHANDLER_H
 
-#include <QtGlobal>
 #include <MessageViewer/BodyPartURLHandler>
 
 class QUrlQuery;

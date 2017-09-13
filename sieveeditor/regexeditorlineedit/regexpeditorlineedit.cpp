@@ -21,15 +21,12 @@
 #include "regexpeditorlineeditplugin_debug.h"
 #include <kpluginfactory.h>
 
-#include <QStackedWidget>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QToolButton>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 #include <QDialog>
-#include <QDebug>
-#include <KPluginTrader>
 
 #include <KTextWidgets/kregexpeditorinterface.h>
 

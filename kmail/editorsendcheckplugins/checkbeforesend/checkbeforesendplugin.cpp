@@ -22,7 +22,6 @@
 #include "configurewidget/checkbeforesendconfigurewidget.h"
 #include "configurewidget/checkbeforesendconfiguredialog.h"
 
-#include <KLocalizedString>
 #include <QPointer>
 #include <kpluginfactory.h>
 

@@ -19,11 +19,9 @@
 
 #include "selectimapfolderwidgettest.h"
 #include "../selectimapfolderwidget.h"
-#include <KSieveUi/SieveImapAccountSettings>
-#include <QHBoxLayout>
 #include <QTreeView>
 #include <QLineEdit>
-
+#include <QVBoxLayout>
 #include <QTest>
 
 SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)

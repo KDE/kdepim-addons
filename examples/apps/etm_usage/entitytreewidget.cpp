@@ -25,7 +25,6 @@
 #include <QLineEdit>
 #include <QComboBox>
 #include <QVBoxLayout>
-#include <QTimer>
 
 #include <AkonadiCore/monitor.h>
 #include <AkonadiCore/entitytreemodel.h>

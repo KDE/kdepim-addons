@@ -23,7 +23,6 @@
 
 #include <QHBoxLayout>
 #include <QPushButton>
-#include <QTextBrowser>
 #include <QTreeView>
 #include <KLocalizedString>
 
@@ -33,7 +32,6 @@
 #include <AkonadiCore/ItemFetchScope>
 
 #include <KCalCore/Event>
-#include <KConfigGroup>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 

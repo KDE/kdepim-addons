@@ -24,7 +24,6 @@
 #include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QAbstractButton>
-#include <KSieveUi/SieveImapAccountSettings>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)

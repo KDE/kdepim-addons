@@ -24,14 +24,13 @@
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <KMessageBox>
-#include <QHBoxLayout>
 #include <QTreeView>
 #include <QStandardItemModel>
 #include <QHeaderView>
 #include <QLineEdit>
-#include <QPainter>
 #include <QInputDialog>
 #include <QSortFilterProxyModel>
+#include <QVBoxLayout>
 
 #include <KLocalizedString>
 #if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))

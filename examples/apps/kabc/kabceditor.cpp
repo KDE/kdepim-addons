@@ -33,7 +33,6 @@
 #include <KAboutData>
 #include <KLocalizedString>
 #include <QCommandLineParser>
-#include <KConfigGroup>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 

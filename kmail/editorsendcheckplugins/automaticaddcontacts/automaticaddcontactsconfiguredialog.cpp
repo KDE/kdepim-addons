@@ -19,7 +19,6 @@
 
 #include "automaticaddcontactsconfiguredialog.h"
 #include "automaticaddcontactsconfigurewidget.h"
-#include <KIdentityManagement/IdentityManager>
 #include <KLocalizedString>
 
 AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget *parent)

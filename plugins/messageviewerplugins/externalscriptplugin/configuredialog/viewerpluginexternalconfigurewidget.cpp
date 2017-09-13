@@ -30,7 +30,6 @@
 #include <QPointer>
 #include <QFile>
 #include <QFileInfo>
-#include <QDebug>
 #include <KDesktopFile>
 #include <KConfigGroup>
 

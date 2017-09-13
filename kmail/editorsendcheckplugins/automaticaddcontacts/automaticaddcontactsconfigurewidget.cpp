@@ -21,12 +21,8 @@
 #include "automaticaddcontactsconfigurewidget.h"
 #include <AkonadiCore/Collection>
 #include <AkonadiWidgets/CollectionComboBox>
-#include <KContacts/Addressee>
-#include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
-#include <QLabel>
-#include <KConfigGroup>
 #include <KSharedConfig>
 
 AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)

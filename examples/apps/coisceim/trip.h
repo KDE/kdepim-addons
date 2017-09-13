@@ -26,7 +26,6 @@
 
 #include <AkonadiCore/collection.h>
 #include "itemselection.h"
-#include <QItemSelectionModel>
 
 class QSortFilterProxyModel;
 class TripComponentFactory;

@@ -23,7 +23,6 @@
 
 #include <QMap>
 #include <QPair>
-#include <QStringList>
 #include <QVector>
 
 CsvParser::CsvParser(QObject *parent)

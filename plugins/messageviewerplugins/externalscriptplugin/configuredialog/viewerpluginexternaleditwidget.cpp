@@ -18,9 +18,7 @@
 */
 
 #include "viewerpluginexternaleditwidget.h"
-#include <QVBoxLayout>
 #include <KLocalizedString>
-#include <QLabel>
 #include <KLineEdit>
 #include <QFormLayout>
 #include <KUrlRequester>

@@ -21,7 +21,6 @@
 #define NONBREAKINGSPACEPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-#include <QPointer>
 
 class NonBreakingSpacePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

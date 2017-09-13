@@ -20,7 +20,6 @@
 #ifndef GNUPGWKSURLHANDLER_H_
 #define GNUPGWKSURLHANDLER_H_
 
-#include <QtGlobal>
 #include <MessageViewer/BodyPartURLHandler>
 
 #include <KMime/Message>

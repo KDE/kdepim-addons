@@ -18,11 +18,8 @@
 */
 
 #include "gearyaddressbook.h"
-#include <KContacts/Addressee>
 
-#include <QUrl>
 
-#include <QSettings>
 
 GearyAddressBook::GearyAddressBook(const QString &filename)
 {

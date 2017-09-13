@@ -94,8 +94,7 @@ index e50da4a..f0b9f69 100644
 --- a/src/agentconfigmodel.cpp
 +++ b/src/agentconfigmodel.cpp
 @@ -24,7 +24,7 @@
- #include <KLocalizedString>
- #include "akonadiconsole_debug.h"
+  #include "akonadiconsole_debug.h"
  
 -AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(Q_NULLPTR)
 +AgentConfigModel::AgentConfigModel(QObject *parent): QAbstractTableModel(parent), m_interface(nullptr)

@@ -34,6 +34,10 @@
 #include "updatecontactjob.h"
 #include "vcardmemento.h"
 
+#include <KContacts/VCardConverter>
+#include <KContacts/Addressee>
+
+
 #include <MessageViewer/BodyPartURLHandler>
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/BodyPart>
@@ -46,8 +50,6 @@ using MimeTreeParser::Interface::BodyPart;
 #include <Akonadi/Contact/ContactViewer>
 #include <Akonadi/Contact/StandardContactFormatter>
 
-#include <KContacts/VCardConverter>
-#include <KContacts/Addressee>
 
 #include <KLocalizedString>
 #include <KIconLoader>
@@ -55,9 +57,7 @@ using MimeTreeParser::Interface::BodyPart;
 #include <QFileDialog>
 #include <QIcon>
 #include <QMenu>
-#include <KMessageBox>
 #include <QTemporaryFile>
-#include <KJobWidgets>
 #include <KIO/StatJob>
 #include <KIO/FileCopyJob>
 #include "vcard_debug.h"

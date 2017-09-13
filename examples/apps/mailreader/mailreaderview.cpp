@@ -12,7 +12,6 @@
 #include <KConfigDialog>
 
 #include <KLocalizedString>
-#include <QLabel>
 #include <QHBoxLayout>
 #include <QDebug>
 #include <QUrl>

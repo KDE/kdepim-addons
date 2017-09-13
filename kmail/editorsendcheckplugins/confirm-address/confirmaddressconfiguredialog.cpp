@@ -19,7 +19,6 @@
 
 #include "confirmaddressconfiguredialog.h"
 #include "confirmaddressconfigurewidget.h"
-#include <KIdentityManagement/IdentityManager>
 #include <KLocalizedString>
 
 ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)

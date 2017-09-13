@@ -22,7 +22,6 @@
 
 #include <kaddressbookimportexport/kaddressbookimportexportcontactfields.h>
 
-#include <KContacts/Addressee>
 
 #include <QDialog>
 

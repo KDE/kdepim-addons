@@ -27,7 +27,6 @@
 
 #include <Akonadi/Contact/ContactViewer>
 #include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QPushButton>
 #include <QApplication>
 #include <KAboutData>

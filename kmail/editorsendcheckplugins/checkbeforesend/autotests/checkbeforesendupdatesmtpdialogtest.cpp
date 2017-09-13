@@ -20,8 +20,8 @@
 #include "checkbeforesendupdatesmtpdialogtest.h"
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <QCheckBox>
+#include <QVBoxLayout>
 #include <QDialogButtonBox>
-#include <QHBoxLayout>
 #include <QLabel>
 #include <QTest>
 QTEST_MAIN(CheckBeforeSendUpdateSmtpDialogTest)

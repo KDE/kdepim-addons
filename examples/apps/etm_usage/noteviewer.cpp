@@ -23,10 +23,10 @@
 
 #include "noteviewer.h"
 
-#include <QHBoxLayout>
 #include <QLineEdit>
 #include <QTextEdit>
 #include <QEvent>
+#include <QVBoxLayout>
 
 #include <AkonadiCore/entitytreemodel.h>
 #include <AkonadiCore/item.h>

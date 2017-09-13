@@ -17,7 +17,6 @@
 
 #include "rot13plugineditor.h"
 #include "rot13plugineditorinterface.h"
-#include <KLocalizedString>
 #include <kpluginfactory.h>
 
 K_PLUGIN_FACTORY_WITH_JSON(Rot13PluginEditorFactory, "kmail_rot13editorplugin.json", registerPlugin<Rot13PluginEditor>();

@@ -21,7 +21,6 @@
 #include <KPluginLoader>
 #include <QHBoxLayout>
 #include <kpluginfactory.h>
-#include <KSieveUi/AbstractMoveImapFolderWidget>
 #include <QDebug>
 #include <QLabel>
 

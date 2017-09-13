@@ -22,7 +22,6 @@
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressconfiguredialog.h"
 
-#include <KLocalizedString>
 #include <QPointer>
 #include <kpluginfactory.h>
 

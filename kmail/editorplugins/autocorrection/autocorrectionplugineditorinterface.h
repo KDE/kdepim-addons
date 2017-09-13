@@ -21,7 +21,6 @@
 #define AUTOCORRECTIONPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-#include <QPointer>
 
 class AutoCorrectionPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

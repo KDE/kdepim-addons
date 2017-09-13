@@ -29,7 +29,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QHeaderView>
-#include <QWebEngineView>
 #include <QMenu>
 #include <QClipboard>
 #include <QApplication>

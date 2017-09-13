@@ -20,10 +20,8 @@
 #include "templateparseremailaddressrequesterakonaditest.h"
 #include "../templateparseremailaddressrequesterakonadi.h"
 #include <QHBoxLayout>
-#include <QLineEdit>
 #include <QSignalSpy>
 #include <QTest>
-#include <QDebug>
 #include <Akonadi/Contact/EmailAddressRequester>
 
 TemplateParserEmailAddressRequesterAkonadiTest::TemplateParserEmailAddressRequesterAkonadiTest(QObject *parent)

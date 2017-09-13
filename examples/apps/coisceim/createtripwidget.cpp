@@ -22,7 +22,6 @@
 #include "createtripwidget.h"
 
 #include <QVBoxLayout>
-#include <QLabel>
 #include <QPushButton>
 
 #include <kconfig.h>

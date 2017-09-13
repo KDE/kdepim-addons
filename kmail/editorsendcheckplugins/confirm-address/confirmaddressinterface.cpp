@@ -23,10 +23,8 @@
 #include "confirmaddresscheckjob.h"
 
 #include <QPointer>
-#include <QDebug>
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <KEmailAddress>
 
 #include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>

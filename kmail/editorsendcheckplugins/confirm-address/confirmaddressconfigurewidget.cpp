@@ -19,7 +19,6 @@
 
 #include "confirmaddressconfiguretab.h"
 #include "confirmaddressconfigurewidget.h"
-#include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <KConfigGroup>

@@ -21,7 +21,6 @@
 
 #include "foldercontentswidget.h"
 
-#include <QAbstractItemModel>
 #include <QItemSelectionModel>
 #include <QVBoxLayout>
 #include <QPushButton>

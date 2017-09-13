@@ -24,7 +24,7 @@
 #include <AkonadiCore/Relation>
 
 #include <KMime/Message>
-#include <QApplication>
+#include <QCoreApplication>
 
 using namespace MessageViewer;
 

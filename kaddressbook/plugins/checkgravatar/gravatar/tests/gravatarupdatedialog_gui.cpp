@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <KLocalizedString>
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>

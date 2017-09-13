@@ -20,8 +20,6 @@
 #include "importexportengine.h"
 
 #include <AkonadiWidgets/CollectionDialog>
-#include <KContacts/Addressee>
-#include <KContacts/ContactGroup>
 #include <AkonadiCore/ItemCreateJob>
 #include <KLocalizedString>
 #include <QProgressDialog>

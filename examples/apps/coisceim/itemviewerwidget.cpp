@@ -23,8 +23,6 @@
 
 #include "itemviewerwidget.h"
 
-#include <QItemSelectionModel>
-#include <QItemSelectionRange>
 #include <QStackedWidget>
 #include <QVBoxLayout>
 

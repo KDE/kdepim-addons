@@ -22,7 +22,6 @@
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
-class QCheckBox;
 class ConfirmAddressConfigureTab;
 class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {

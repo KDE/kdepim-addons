@@ -22,7 +22,6 @@
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguredialog.h"
 
-#include <KLocalizedString>
 #include <QPointer>
 #include <kpluginfactory.h>
 

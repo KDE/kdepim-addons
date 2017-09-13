@@ -21,7 +21,6 @@
 
 #include "coisceimpart.h"
 
-#include <QAction>
 #include <kactioncollection.h>
 #include <kstandardaction.h>
 
@@ -29,9 +28,6 @@
 
 #include <QtCore/QFile>
 #include <QtCore/QTextStream>
-#include <QTimer>
-#include <QTextEdit>
-#include <QLabel>
 
 K_PLUGIN_FACTORY(CoisceimPartFactory, registerPlugin<CoisceimPart>();
                  )

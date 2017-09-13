@@ -22,12 +22,11 @@
 #include "coisceimwidget.h"
 // #include "coisceimwidgetadaptor.h"
 
-#include <QVBoxLayout>
 #include <QSplitter>
 
 #include <QListView>
 #include <QTreeView>
-
+#include <QHBoxLayout>
 #include <AkonadiCore/ChangeRecorder>
 #include <AkonadiCore/ItemFetchScope>
 

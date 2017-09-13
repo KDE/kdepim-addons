@@ -18,7 +18,6 @@
 */
 
 #include "checkgravatarplugintest.h"
-#include <QTest>
 
 CheckGravatarPluginTest::CheckGravatarPluginTest(QObject *parent)
     : QObject(parent)

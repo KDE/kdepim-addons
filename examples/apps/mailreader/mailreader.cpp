@@ -16,7 +16,6 @@
 #include <Akonadi/KMime/MessageParts>
 
 #include <QAction>
-#include <KConfigDialog>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KStandardAction>

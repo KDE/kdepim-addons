@@ -30,7 +30,6 @@
 #include <QEvent>
 #include <QKeyEvent>
 #include <QLabel>
-#include <QTemporaryFile>
 
 #include <AkonadiWidgets/CollectionComboBox>
 
