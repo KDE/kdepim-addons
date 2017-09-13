@@ -21,8 +21,6 @@
 #include "pimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
-#include <KCalCore/Utils>
-
 BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
     : mDataSource(dataSource)
     , mStart(start)
@@ -186,8 +184,8 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     data.setIsAllDay(incidence->allDay());
     data.setIsMinor(false);
     data.setUid(generateUid(incidence));
-    data.setStartDateTime(incidence->dtStart().toLocalZone().dateTime());
-    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalZone().dateTime());
+    data.setStartDateTime(incidence->dtStart().toLocalTime());
+    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime());
     data.setEventColor(mDataSource->calendarColorForIncidence(incidence));
     return data;
 }

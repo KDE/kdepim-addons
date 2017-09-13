@@ -28,6 +28,8 @@ target_link_libraries(pimevents
     KF5::CalendarCore
     KF5::CalendarEvents
     KF5::EventViews # for reading KOrganizer calendar colors
+    KF5::ConfigCore
+    KF5::KIOCore
 )
 
 
@@ -46,6 +48,7 @@ target_link_libraries(pimcalendarsplugin
     Qt5::Qml
     KF5::AkonadiCore
     KF5::CalendarCore
+    KF5::ConfigCore
 )
 
 install(TARGETS pimcalendarsplugin

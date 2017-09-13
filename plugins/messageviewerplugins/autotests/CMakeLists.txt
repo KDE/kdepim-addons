@@ -12,7 +12,7 @@ macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets
+		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets KF5::XmlGui
                 )
 endmacro ()
 

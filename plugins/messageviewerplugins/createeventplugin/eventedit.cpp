@@ -345,8 +345,8 @@ KCalCore::Event::Ptr EventEdit::createEventItem()
     }
     KCalCore::Event::Ptr event(new KCalCore::Event);
     event->setSummary(mEventEdit->text());
-    event->setDtStart(KDateTime(mStartDateTimeEdit->dateTime()));
-    event->setDtEnd(KDateTime(mEndDateTimeEdit->dateTime()));
+    event->setDtStart(mStartDateTimeEdit->dateTime());
+    event->setDtEnd(mEndDateTimeEdit->dateTime());
     event->addAttachment(attachment);
     return event;
 }

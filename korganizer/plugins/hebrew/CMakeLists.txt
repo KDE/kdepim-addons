@@ -14,6 +14,7 @@ add_library(korg_hebrew MODULE ${korg_hebrew_PART_SRCS})
 
 target_link_libraries(korg_hebrew
   KF5::EventViews
+  KF5::KDELibs4Support
 )
 
 install(TARGETS

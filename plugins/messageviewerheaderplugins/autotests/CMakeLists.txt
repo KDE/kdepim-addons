@@ -7,7 +7,7 @@ macro(add_messageviewer_header_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
     
     ecm_mark_as_test(messageviewer-header-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme)
+    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::XmlGui KF5::I18n)
 endmacro ()
 
 
@@ -18,7 +18,7 @@ macro(add_messageviewer_header_class_unittest _source )
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(messageviewer-header-${_name})
-    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme)
+    target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::XmlGui)
 endmacro ()
 
 

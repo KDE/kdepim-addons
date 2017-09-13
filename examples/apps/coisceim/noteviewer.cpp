@@ -35,8 +35,6 @@
 
 #include <KMime/Message>
 
-#include "klocale.h"
-
 using namespace Akonadi;
 
 NoteViewer::NoteViewer(QWidget *parent, Qt::WindowFlags f)

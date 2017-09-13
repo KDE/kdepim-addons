@@ -17,6 +17,7 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
                                    KF5::CalendarCore
                                    KF5::CalendarEvents
                                    KF5::EventViews
+                                   KF5::ConfigCore
     )
     include_directories(${CMAKE_CURRENT_SOURCE_DIR}/..
                         ${CMAKE_CURRENT_BINARY_DIR}/..

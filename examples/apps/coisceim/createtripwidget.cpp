@@ -28,7 +28,8 @@
 #include <KMessageBox>
 #include <KLocalizedString>
 #include <KConfig>
-#include <KSharedConfigPtr>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 #include <AkonadiCore/Monitor>
 #include <KSharedConfig>

@@ -144,9 +144,9 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
 
         return !nextDate.isValid();
     } else {
-        const KDateTime incidenceDate = incidence->dateTime(Incidence::RoleDisplayEnd);
+        const QDateTime incidenceDate = incidence->dateTime(Incidence::RoleDisplayEnd);
         if (incidenceDate.isValid()) {
-            return incidence->allDay() ? (incidenceDate.date() < today) : (incidenceDate < KDateTime::currentLocalDateTime());
+            return incidence->allDay() ? (incidenceDate.date() < today) : (incidenceDate < QDateTime::currentDateTime());
         }
     }
 
@@ -729,7 +729,7 @@ public:
     bool cancelPastInvites(const Incidence::Ptr incidence, const QString &path) const
     {
         QString warnStr;
-        KDateTime now = KDateTime::currentLocalDateTime();
+        QDateTime now = QDateTime::currentDateTime();
         QDate today = now.date();
         Incidence::IncidenceType type = Incidence::TypeUnknown;
         const bool occurred = occurredAlready(incidence);
