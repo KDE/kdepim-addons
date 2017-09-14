@@ -23,7 +23,7 @@
 
 #include <KConfig>
 #include <KLocalizedString>
-#include <KLocale>
+#include <QLocale>
 
 #include <QCheckBox>
 #include <QFrame>
@@ -80,8 +80,7 @@ void ConfigDialog::load()
 
     KConfigGroup group(&config, "Hebrew Calendar Plugin");
     mIsraelBox->setChecked(
-        group.readEntry("UseIsraelSettings",
-                        (KLocale::global()->country() == QLatin1String(".il"))));
+        group.readEntry("UseIsraelSettings", QLocale::countryToString(QLocale().country()) == QLatin1String(".il")));
     mParshaBox->setChecked(group.readEntry("ShowParsha", true));
     mCholBox->setChecked(group.readEntry("ShowChol_HaMoed", true));
     mOmerBox->setChecked(group.readEntry("ShowOmer", true));

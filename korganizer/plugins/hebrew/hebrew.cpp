@@ -27,6 +27,8 @@
 #include <KCalendarSystem>
 #include <KLocalizedString>
 #include <KConfigGroup>
+#include <KConfig>
+#include <QLocale>
 
 using namespace EventViews::CalendarDecoration;
 
@@ -36,7 +38,7 @@ Hebrew::Hebrew()
 
     KConfigGroup group(&config, "Hebrew Calendar Plugin");
     areWeInIsrael = group.readEntry(
-        "UseIsraelSettings", (KLocale::global()->country() == QLatin1String(".il")));
+        "UseIsraelSettings", QLocale::countryToString(QLocale().country()) == QLatin1String(".il"));
     showParsha = group.readEntry("ShowParsha", true);
     showChol = group.readEntry("ShowChol_HaMoed", true);
     showOmer = group.readEntry("ShowOmer", true);
@@ -56,7 +58,6 @@ Element::List Hebrew::createDayElements(const QDate &date)
 {
     Element::List el;
     QString text;
-
     HebrewDate hd = HebrewDate::fromSecular(date.year(), date.month(), date.day());
 
     const QStringList holidays = Holiday::findHoliday(hd, areWeInIsrael, showParsha,
@@ -73,7 +74,6 @@ Element::List Hebrew::createDayElements(const QDate &date)
     text = i18nc("Change the next two strings if emphasis is done differently in your language.",
                  "<qt><p align=\"center\"><i>\n%1\n</i></p></qt>", text);
     el.append(new StoredElement(QStringLiteral("main element"), text));
-
     return el;
 }
 
