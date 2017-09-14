@@ -48,6 +48,7 @@ public:
     QModelIndex parent(const QModelIndex &index) const override;
     Qt::ItemFlags flags(const QModelIndex &index) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role = Qt::EditRole) override;
+    QHash<int, QByteArray> roleNames() const override;
 
 private:
     Trip *createTrip(const QModelIndex &index, Akonadi::Item::Id id) const;

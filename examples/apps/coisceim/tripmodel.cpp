@@ -52,9 +52,6 @@ TripModel::TripModel(Akonadi::Monitor *monitor, QObject *parent)
 
     connect(this, SIGNAL(modelReset()), SLOT(thisModelReset()));
 
-    QHash<int, QByteArray> roleNames_ = roleNames();
-    roleNames_.insert(TripRole, "trip");
-    setRoleNames(roleNames_);
 }
 
 QModelIndex TripModel::index(int row, int column, const QModelIndex &parent) const
@@ -251,4 +248,12 @@ void TripModel::thisRowsRemoved(const QModelIndex &index, int start, int end)
     qDeleteAll(m_tripWidgets);
     m_trips.clear();
     m_tripWidgets.clear();
+}
+
+
+QHash<int, QByteArray> TripModel::roleNames() const
+{
+    QHash<int, QByteArray> roleNames_ = MixedTreeModel::roleNames();
+    roleNames_.insert(TripRole, "trip");
+    return roleNames_;
 }

@@ -24,6 +24,7 @@
 #include <QVariant>
 #include <QPalette>
 #include <QUrl>
+#include <QUrlQuery>
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/HtmlWriter>
