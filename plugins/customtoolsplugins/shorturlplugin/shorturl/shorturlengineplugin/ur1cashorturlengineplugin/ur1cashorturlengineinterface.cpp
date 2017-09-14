@@ -49,7 +49,8 @@ void Ur1CaShortUrlEngineInterface::generateShortUrl()
 
     url.setQuery(query);
     QByteArray postData;
-    postData = url.encodedQuery();
+
+    postData = query.query().toLatin1();
     QNetworkRequest request(url);
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("text/plain"));
 
