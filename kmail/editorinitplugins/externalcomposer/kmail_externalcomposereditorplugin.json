@@ -20,6 +20,7 @@
         "Description[tr]": "Bu eklenti, harici bir düzenleyici kullanmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна використовувати зовнішні редактори повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to use an external composer.xx",
+        "Description[zh_CN]": "此插件允许您使用外部编辑器。",
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
         "Name": "Open external composer",
@@ -42,6 +43,7 @@
         "Name[tr]": "Harici düzenleyiciyi aç",
         "Name[uk]": "Відкрити зовнішній редактор",
         "Name[x-test]": "xxOpen external composerxx",
+        "Name[zh_CN]": "打开外部编辑器",
         "ServiceTypes": [
             "KMailEditor/PluginEditorInit"
         ],

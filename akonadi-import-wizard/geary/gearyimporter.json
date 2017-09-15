@@ -22,6 +22,7 @@
         "Name[tr]": "Geary İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з Geary",
         "Name[x-test]": "xxGeary Importerxx",
+        "Name[zh_CN]": "Geary 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
