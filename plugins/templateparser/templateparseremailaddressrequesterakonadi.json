@@ -19,6 +19,7 @@
         "Name[tr]": "Templateparser için Posta Adresi İsteği",
         "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти для обробника шаблонів",
         "Name[x-test]": "xxEmail Address Requester for Templateparserxx",
+        "Name[zh_CN]": "模板解析器的电子邮件地址请求器",
         "ServiceTypes": [
             "TemplateParser/TemplateParserEmailAddressRequester"
         ],

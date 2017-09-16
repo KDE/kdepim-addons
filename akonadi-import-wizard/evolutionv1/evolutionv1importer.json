@@ -22,6 +22,7 @@
         "Name[tr]": "Evolution1 İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з Evolution1",
         "Name[x-test]": "xxEvolution1 Importerxx",
+        "Name[zh_CN]": "Evolution1 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],

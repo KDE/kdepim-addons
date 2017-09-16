@@ -22,6 +22,7 @@
         "Name[tr]": "TheBat İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з The Bat!",
         "Name[x-test]": "xxTheBat Importerxx",
+        "Name[zh_CN]": "TheBat 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
