@@ -31,6 +31,7 @@ Q_DECLARE_METATYPE(CalendarEvents::EventData)
 
 void PimEventsPluginTest::initTestCase()
 {
+    setenv("TZ", "Europe/Berlin", 1);
     qRegisterMetaType<DateEventDataHash>("QMultiHash<QDate, CalendarEvents::EventData>");
     qRegisterMetaType<CalendarEvents::EventData>("CalendarEvents::EventData");
 }

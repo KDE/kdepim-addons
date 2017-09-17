@@ -63,6 +63,11 @@ using TestableEventDataIdVisitor = TestableVisitor<EventDataIdVisitor>;
 
 using DateTimeRange = QPair<QDateTime, QDateTime>;
 
+void EventDataVisitorTest::initTestCase()
+{
+    setenv("TZ", "Europe/Berlin", 1);
+}
+
 void EventDataVisitorTest::testGenerateUID_data()
 {
     QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
