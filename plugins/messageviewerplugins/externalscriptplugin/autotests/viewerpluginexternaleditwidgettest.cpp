@@ -20,6 +20,7 @@
 #include "viewerpluginexternaleditwidgettest.h"
 #include "../configuredialog/viewerpluginexternaleditwidget.h"
 
+#include <KUrlRequester>
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QTest>
@@ -49,7 +50,7 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
     QLineEdit *mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
     QVERIFY(mCommandLine);
 
-    QLineEdit *mExecutable = w.findChild<QLineEdit *>(QStringLiteral("executable"));
+    auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
 }
 
