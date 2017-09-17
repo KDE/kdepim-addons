@@ -31,11 +31,13 @@
 #include <QDir>
 #include <QIcon>
 #include <QProcess>
+#include <QStandardPaths>
 
 #ifndef Q_OS_WIN
 void initLocale()
 {
     setenv("LC_ALL", "en_US.utf-8", 1);
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)
