@@ -73,11 +73,11 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldEmitSignal()
     TemplateParserEmailAddressRequesterAkonadi w;
     QSignalSpy spy(&w, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
     w.setText(QStringLiteral("foo"));
-    QCOMPARE(spy.at(0).count(), 1);
+    QCOMPARE(spy.size(), 1);
     w.clear();
-    QCOMPARE(spy.at(1).count(), 1);
+    QCOMPARE(spy.size(), 2);
     w.setText(QStringLiteral("foo"));
-    QCOMPARE(spy.at(2).count(), 1);
+    QCOMPARE(spy.size(), 3);
 }
 
 QTEST_MAIN(TemplateParserEmailAddressRequesterAkonadiTest)
