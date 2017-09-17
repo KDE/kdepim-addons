@@ -22,8 +22,11 @@
 
 #include <MimeTreeParser/BodyPartFormatter>
 
-class ApplicationGnuPGWKSPlugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class ApplicationGnuPGWKSPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
+    Q_OBJECT
+    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
 public:
     ApplicationGnuPGWKSPlugin() = default;
 

@@ -188,8 +188,11 @@ public:
     using MimeTreeParser::Interface::BodyPartFormatter::format;
 };
 
-class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
+    Q_OBJECT
+    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
@@ -211,17 +214,7 @@ public:
             return nullptr;
         }
     }
-
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int) const override
-    {
-        return nullptr;
-    }
 };
 }
 
-extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
-*messageviewer_bodypartformatter_application_mstnef_create_bodypart_formatter_plugin()
-{
-    return new Plugin();
-}
+#include "application_ms-tnef.moc"

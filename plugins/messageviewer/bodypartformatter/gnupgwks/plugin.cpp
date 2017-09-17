@@ -84,10 +84,3 @@ const MimeTreeParser::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::
         return nullptr;
     }
 }
-
-extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
-*messageviewer_bodypartformatter_application_gnupgwks_create_bodypart_formatter_plugin()
-{
-    return new ApplicationGnuPGWKSPlugin();
-}

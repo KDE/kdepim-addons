@@ -1474,8 +1474,11 @@ public:
     }
 };
 
-class Plugin : public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
 {
+    Q_OBJECT
+    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
@@ -1517,9 +1520,4 @@ public:
 };
 }
 
-extern "C"
-Q_DECL_EXPORT MimeTreeParser::Interface::BodyPartFormatterPlugin
-*messageviewer_bodypartformatter_text_calendar_create_bodypart_formatter_plugin()
-{
-    return new Plugin();
-}
+#include "text_calendar.moc"

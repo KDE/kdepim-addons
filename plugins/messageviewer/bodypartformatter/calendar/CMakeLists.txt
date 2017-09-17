@@ -34,8 +34,6 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     Qt5::DBus
     )
 
-install(TARGETS messageviewer_bodypartformatter_text_calendar  DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install(FILES text_calendar.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_text_calendar  DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
 
 add_subdirectory(tests)

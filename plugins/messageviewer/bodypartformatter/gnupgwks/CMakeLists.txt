@@ -32,6 +32,4 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
   Grantlee5::Templates
   Gpgmepp
 )
-install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install(FILES application_gnupgwks.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

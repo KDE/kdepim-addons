@@ -6,6 +6,4 @@ add_library(messageviewer_bodypartformatter_text_xdiff MODULE ${messageviewer_bo
 
 target_link_libraries(messageviewer_bodypartformatter_text_xdiff  Qt5::Core KF5::I18n KF5::CoreAddons KF5::IconThemes KF5::WidgetsAddons KF5::MessageViewer KF5::SyntaxHighlighting)
 
-install(TARGETS messageviewer_bodypartformatter_text_xdiff  DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install(FILES text_xdiff.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_text_xdiff  DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

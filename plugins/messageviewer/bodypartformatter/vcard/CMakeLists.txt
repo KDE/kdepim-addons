@@ -6,6 +6,4 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_
 
 add_library(messageviewer_bodypartformatter_text_vcard MODULE ${messageviewer_bodypartformatter_text_vcard_PART_SRCS})
 target_link_libraries(messageviewer_bodypartformatter_text_vcard  KF5::Contacts KF5::LibkdepimAkonadi KF5::MessageViewer KF5::IconThemes KF5::JobWidgets KF5::I18n)
-install(TARGETS messageviewer_bodypartformatter_text_vcard DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install(FILES text_vcard.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_text_vcard DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

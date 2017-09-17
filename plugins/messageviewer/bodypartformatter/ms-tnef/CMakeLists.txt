@@ -17,6 +17,4 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
   KF5::IconThemes
   KF5::I18n
 )
-install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR})
-
-install(FILES application_ms-tnef.desktop DESTINATION ${KDE_INSTALL_DATADIR}/messageviewer/plugins/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
