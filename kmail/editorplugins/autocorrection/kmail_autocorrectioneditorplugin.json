@@ -48,7 +48,6 @@
         "Name[tr]": "Otomatik Düzeltme",
         "Name[uk]": "Автовиправлення",
         "Name[x-test]": "xxAutocorrectionxx",
-        "Name[zh_CN]": "自动更正",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
