@@ -22,9 +22,7 @@
 
 #include <kjob.h>
 
-namespace KContacts {
-class Addressee;
-}
+#include <KContacts/Addressee>
 
 class UpdateContactJob : public KJob
 {
@@ -36,12 +34,13 @@ public:
     void start() override;
 
 private:
-    //@cond PRIVATE
-    class Private;
-    Private *const d;
+    void slotSearchDone(KJob *);
+    void slotUpdateContactDone(KJob *);
 
-    Q_PRIVATE_SLOT(d, void slotSearchDone(KJob *))
-    Q_PRIVATE_SLOT(d, void slotUpdateContactDone(KJob *))
+    QString mEmail;
+    KContacts::Addressee mContact;
+    QWidget *mParentWidget = nullptr;
+
 };
 
 #endif // UPDATECONTACTJOB_H

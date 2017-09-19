@@ -24,88 +24,73 @@
 #include <KLocalizedString>
 #include <kmessagebox.h>
 
-class Q_DECL_HIDDEN UpdateContactJob::Private
-{
-public:
-    Private(UpdateContactJob *qq, const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget)
-        : q(qq)
-        , mEmail(email)
-        , mContact(contact)
-        , mParentWidget(parentWidget)
-    {
-    }
-
-    void slotSearchDone(KJob *job)
-    {
-        if (job->error()) {
-            q->setError(job->error());
-            q->setErrorText(job->errorText());
-            q->emitResult();
-            return;
-        }
-
-        const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
-
-        const KContacts::Addressee::List contacts = searchJob->contacts();
-
-        if (contacts.isEmpty()) {
-            const QString text = i18n("The vCard's primary email address is not in addressbook.");
-            KMessageBox::information(mParentWidget, text);
-            q->setError(UserDefinedError);
-            q->emitResult();
-            return;
-        } else if (contacts.count() > 1) {
-            const QString text = i18n("There are two or more contacts with same email stored in addressbook.");
-            KMessageBox::information(mParentWidget, text);
-            q->setError(UserDefinedError);
-            q->emitResult();
-            return;
-        }
-        Akonadi::Item item = searchJob->items().at(0);
-        item.setPayload<KContacts::Addressee>(mContact);
-        Akonadi::ItemModifyJob *modifyJob = new Akonadi::ItemModifyJob(item);
-        q->connect(modifyJob, SIGNAL(result(KJob *)), SLOT(slotUpdateContactDone(KJob *)));
-    }
-
-    void slotUpdateContactDone(KJob *job)
-    {
-        if (job->error()) {
-            q->setError(job->error());
-            q->setErrorText(job->errorText());
-            q->emitResult();
-            return;
-        }
-
-        const QString text = i18n("The vCard was updated to your address book; "
-                                  "you can add more information to this "
-                                  "entry by opening the address book.");
-        KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("updatedtokabc"));
-
-        q->emitResult();
-    }
-
-    UpdateContactJob *q;
-    QString mEmail;
-    KContacts::Addressee mContact;
-    QWidget *mParentWidget = nullptr;
-};
-
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
-    , d(new Private(this, email, contact, parentWidget))
+    , mEmail(email)
+    , mContact(contact)
+    , mParentWidget(parentWidget)
 {
 }
 
 UpdateContactJob::~UpdateContactJob()
 {
-    delete d;
 }
+
+void UpdateContactJob::slotSearchDone(KJob *job)
+{
+    if (job->error()) {
+        setError(job->error());
+        setErrorText(job->errorText());
+        emitResult();
+        return;
+    }
+
+    const Akonadi::ContactSearchJob *searchJob = qobject_cast<Akonadi::ContactSearchJob *>(job);
+
+    const KContacts::Addressee::List contacts = searchJob->contacts();
+
+    if (contacts.isEmpty()) {
+        const QString text = i18n("The vCard's primary email address is not in addressbook.");
+        KMessageBox::information(mParentWidget, text);
+        setError(UserDefinedError);
+        emitResult();
+        return;
+    } else if (contacts.count() > 1) {
+        const QString text = i18n("There are two or more contacts with same email stored in addressbook.");
+        KMessageBox::information(mParentWidget, text);
+        setError(UserDefinedError);
+        emitResult();
+        return;
+    }
+    Akonadi::Item item = searchJob->items().at(0);
+    item.setPayload<KContacts::Addressee>(mContact);
+    Akonadi::ItemModifyJob *modifyJob = new Akonadi::ItemModifyJob(item);
+    connect(modifyJob, &Akonadi::ItemModifyJob::result, this, &UpdateContactJob::slotUpdateContactDone);
+}
+
+void UpdateContactJob::slotUpdateContactDone(KJob *job)
+{
+    if (job->error()) {
+        setError(job->error());
+        setErrorText(job->errorText());
+        emitResult();
+        return;
+    }
+
+    const QString text = i18n("The vCard was updated to your address book; "
+                              "you can add more information to this "
+                              "entry by opening the address book.");
+    KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("updatedtokabc"));
+
+    emitResult();
+}
+
 
 void UpdateContactJob::start()
 {
-    if (d->mEmail.isEmpty()) {
+    if (mEmail.isEmpty()) {
         const QString text = i18n("Email not specified");
-        KMessageBox::information(d->mParentWidget, text);
+        KMessageBox::information(mParentWidget, text);
         setError(UserDefinedError);
         emitResult();
         return;
@@ -113,10 +98,10 @@ void UpdateContactJob::start()
     // first check whether a contact with the same email exists already
     Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, d->mEmail.toLower(),
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(),
                         Akonadi::ContactSearchJob::ExactMatch);
 
-    connect(searchJob, SIGNAL(result(KJob *)), SLOT(slotSearchDone(KJob *)));
+    connect(searchJob, &Akonadi::ContactSearchJob::result, this, &UpdateContactJob::slotSearchDone);
 }
 
 #include "moc_updatecontactjob.cpp"
