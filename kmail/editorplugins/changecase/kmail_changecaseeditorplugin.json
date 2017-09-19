@@ -51,6 +51,7 @@
         "Name[tr]": "Büyük Küçük Harf Değiştir",
         "Name[uk]": "Змінити регістр",
         "Name[x-test]": "xxChange Casexx",
+        "Name[zh_CN]": "更改大小写",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],

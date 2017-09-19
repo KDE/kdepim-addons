@@ -51,6 +51,7 @@
         "Name[tr]": "URL Genişlet",
         "Name[uk]": "Розгортання адреси",
         "Name[x-test]": "xxExpand URLxx",
+        "Name[zh_CN]": "展开 URL",
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"
         ],
