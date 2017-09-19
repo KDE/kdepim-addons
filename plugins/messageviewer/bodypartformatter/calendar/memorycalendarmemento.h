@@ -47,7 +47,7 @@ private Q_SLOTS:
     void finalize();
 
 private:
-    bool mFinished;
+    bool mFinished = false;
     Akonadi::CalendarBase::Ptr mCalendar;
 };
 }

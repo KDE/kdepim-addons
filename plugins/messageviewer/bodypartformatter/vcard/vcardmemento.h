@@ -32,7 +32,6 @@ class KJob;
 namespace MessageViewer {
 struct VCard {
     VCard()
-        : found(false)
     {
     }
 
@@ -44,7 +43,7 @@ struct VCard {
 
     KContacts::Addressee address;
     QString email;
-    bool found;
+    bool found = false;
 };
 
 class VcardMemento : public QObject, public MimeTreeParser::Interface::BodyPartMemento
@@ -62,14 +61,13 @@ public:
 
     KContacts::Addressee address(int index) const;
 
-private Q_SLOTS:
-    void slotSearchJobFinished(KJob *job);
 
 Q_SIGNALS:
     // TODO: Factor our update and detach into base class
     void update(MimeTreeParser::UpdateMode);
 
 private:
+    void slotSearchJobFinished(KJob *job);
     void checkEmail();
     void continueToCheckEmail();
     QVector<VCard> mVCardList;
