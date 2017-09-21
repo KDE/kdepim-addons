@@ -26,7 +26,6 @@
 PgpKeyMemento::PgpKeyMemento()
     : QObject(nullptr)
     , MimeTreeParser::Interface::BodyPartMemento()
-    , mIsRunning(false)
 {
 }
 

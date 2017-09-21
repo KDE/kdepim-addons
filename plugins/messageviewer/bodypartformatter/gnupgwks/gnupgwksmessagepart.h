@@ -62,7 +62,7 @@ protected:
     QString mAddress;
     QString mFingerprint;
     QString mNonce;
-    ConfirmationType mType;
+    ConfirmationType mType = UnknownType;
 };
 
 #endif

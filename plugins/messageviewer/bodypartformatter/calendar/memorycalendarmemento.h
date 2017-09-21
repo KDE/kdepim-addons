@@ -42,11 +42,10 @@ Q_SIGNALS:
     // TODO: Factor our update and detach into base class
     void update(MimeTreeParser::UpdateMode);
 
-private Q_SLOTS:
-    void slotCalendarLoaded(bool success, const QString &errorMessage);
-    void finalize();
 
 private:
+    void slotCalendarLoaded(bool success, const QString &errorMessage);
+    void finalize();
     bool mFinished = false;
     Akonadi::CalendarBase::Ptr mCalendar;
 };

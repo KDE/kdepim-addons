@@ -24,9 +24,8 @@
 
 GnuPGWKSMessagePart::GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : mPart(part)
-    , mType(UnknownType)
 {
-    parseContent(part->content());
+    parseContent(mPart->content());
 }
 
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::confirmationType() const

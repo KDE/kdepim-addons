@@ -54,14 +54,13 @@ Q_SIGNALS:
 private:
     void notify();
 
-private Q_SLOTS:
+private:
     void onKeyReceived(const GpgME::Key &key);
     void onListJobFinished(const GpgME::KeyListResult &result);
 
-private:
     GpgME::Key mKey;
     QString mError;
-    bool mIsRunning;
+    bool mIsRunning = false;
 };
 
 #endif
