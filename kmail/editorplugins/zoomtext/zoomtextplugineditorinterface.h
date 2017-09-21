@@ -46,7 +46,7 @@ private:
         ZoomIn,
         ZoomOut
     };
-    ZoomTextType mType;
+    ZoomTextType mType = Unknown;
 };
 
 #endif

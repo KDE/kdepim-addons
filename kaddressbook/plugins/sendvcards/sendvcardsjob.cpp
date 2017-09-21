@@ -35,9 +35,6 @@ using namespace KABSendVCards;
 SendVcardsJob::SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent)
     : QObject(parent)
     , mListItem(listItem)
-    , mTempDir(nullptr)
-    , mVersion(KContacts::VCardConverter::v3_0)
-    , mExpandGroupJobCount(0)
 {
     //Don't delete it.
     mAttachmentTemporary = new MimeTreeParser::AttachmentTemporaryFilesDirs();

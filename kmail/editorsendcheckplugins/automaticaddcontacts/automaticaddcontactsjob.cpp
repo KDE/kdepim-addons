@@ -37,7 +37,6 @@
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
-    , mCurrentIndex(-1)
 {
 }
 

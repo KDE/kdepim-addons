@@ -54,6 +54,6 @@ private:
     QString mProcessEmail;
     QString mName;
     Akonadi::Collection mCollection;
-    int mCurrentIndex;
+    int mCurrentIndex = -1;
 };
 #endif // AUTOMATICADDCONTACTSJOB_H

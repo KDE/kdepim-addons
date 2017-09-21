@@ -26,7 +26,6 @@
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
-    , mSelectedText(false)
 {
 }
 

@@ -37,7 +37,6 @@ using namespace KABMailSender;
 MailSenderJob::MailSenderJob(const Akonadi::Item::List &listItem, QObject *parent)
     : QObject(parent)
     , mListItem(listItem)
-    , mFetchJobCount(0)
 {
 }
 

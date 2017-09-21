@@ -49,7 +49,7 @@ private:
         SentenseCase,
         ReverseCase
     };
-    ChangeCaseType mType;
+    ChangeCaseType mType = Unknown;
 };
 
 #endif

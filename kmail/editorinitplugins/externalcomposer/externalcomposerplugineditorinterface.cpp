@@ -24,7 +24,6 @@
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInitInterface(parent)
-    , mEnabled(false)
 {
 }
 

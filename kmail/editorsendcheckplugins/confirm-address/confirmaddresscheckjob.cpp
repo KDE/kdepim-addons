@@ -20,7 +20,6 @@
 #include "confirmaddresscheckjob.h"
 
 ConfirmAddressCheckJob::ConfirmAddressCheckJob()
-    : mRejectedDomain(false)
 {
 }
 

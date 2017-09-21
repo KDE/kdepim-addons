@@ -45,7 +45,7 @@ private:
     QStringList mInvalidEmails;
     QStringList mDomains;
     QStringList mWhiteEmails;
-    bool mRejectedDomain;
+    bool mRejectedDomain = false;
 };
 
 #endif // CONFIRMADDRESSCHECKJOB_H

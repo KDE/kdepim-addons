@@ -37,12 +37,11 @@ public Q_SLOTS:
 private:
     struct AutomaticAddContactsSettings {
         AutomaticAddContactsSettings()
-            : mEnabled(false)
-            , mContactCollection(Akonadi::Collection(-1))
+            : mContactCollection(Akonadi::Collection(-1))
         {
         }
 
-        bool mEnabled;
+        bool mEnabled = false;
         Akonadi::Collection mContactCollection;
     };
     QHash<uint, AutomaticAddContactsSettings> mHashSettings;

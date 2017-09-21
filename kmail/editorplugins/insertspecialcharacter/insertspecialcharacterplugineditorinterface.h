@@ -34,10 +34,9 @@ public:
     void createAction(KActionCollection *ac) override;
     void exec() override;
 
-private Q_SLOTS:
-    void slotActivated();
-    void charSelected(QChar c);
 private:
+    void charSelected(QChar c);
+    void slotActivated();
     QPointer<KPIMTextEdit::SelectSpecialCharDialog> mSelectSpecialChar;
 };
 

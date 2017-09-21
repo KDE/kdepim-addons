@@ -43,7 +43,7 @@ Q_SIGNALS:
 private:
     QCheckBox *mEnabled = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
-    uint mIdentity;
+    uint mIdentity = 0;
 };
 
 #endif // AUTOMATICADDCONTACTSTABWIDGET_H

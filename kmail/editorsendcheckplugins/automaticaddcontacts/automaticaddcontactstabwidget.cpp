@@ -36,7 +36,6 @@ QString configGroupName()
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent)
-    , mIdentity(0)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));

@@ -27,7 +27,6 @@
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
-    , mType(Unknown)
 {
 }
 

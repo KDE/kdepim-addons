@@ -33,7 +33,7 @@ public:
     void reloadConfig() override;
 private:
     QString mExternalComposerPath;
-    bool mEnabled;
+    bool mEnabled = false;
 };
 
 #endif

@@ -35,7 +35,7 @@ public:
 private:
     void slotAutoCorrectAllText();
     void slotAutoCorrectSelectedText();
-    bool mSelectedText;
+    bool mSelectedText = false;
 };
 
 #endif

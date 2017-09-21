@@ -28,7 +28,6 @@
 
 SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
     : QObject(parent)
-    , mSession(nullptr)
 {
 }
 

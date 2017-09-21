@@ -34,10 +34,8 @@ public:
 
     QString selectedFolderName() const;
 
-private Q_SLOTS:
-    void slotEnabledNewFolder(bool enabled);
-
 private:
+    void slotEnabledNewFolder(bool enabled);
     void writeConfig();
     void readConfig();
     void slotCreateFolder();

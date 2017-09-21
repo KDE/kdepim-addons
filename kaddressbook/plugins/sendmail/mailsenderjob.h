@@ -50,7 +50,7 @@ private:
     Akonadi::Item::List mListItem;
     Akonadi::Item::List mItemToFetch;
     QStringList mEmailAddresses;
-    int mFetchJobCount;
+    int mFetchJobCount = 0;
 };
 }
 

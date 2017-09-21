@@ -27,7 +27,6 @@
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
-    , mType(Unknown)
 {
 }
 

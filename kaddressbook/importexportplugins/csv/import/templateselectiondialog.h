@@ -35,10 +35,8 @@ public:
 
     QString selectedTemplate() const;
 
-private Q_SLOTS:
-    void updateButtons();
-
 private:
+    void updateButtons();
     QListView *mView = nullptr;
     QPushButton *mOkButton = nullptr;
 };

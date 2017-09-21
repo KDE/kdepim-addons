@@ -44,11 +44,9 @@ public:
 Q_SIGNALS:
     void modelLoaded(QStandardItemModel *model, bool success);
 
-private Q_SLOTS:
+private:
     void slotLoaded(bool success, QStandardItemModel *model);
     void slotCreateFolderDone(const KSieveUi::SieveImapAccountSettings &account, bool success);
-
-private:
     void fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model);
     QHash<QString, QStandardItemModel *> mHashFolderModel;
 };
