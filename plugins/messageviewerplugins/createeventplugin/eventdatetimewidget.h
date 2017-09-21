@@ -22,7 +22,8 @@
 
 #include <QWidget>
 #include <QDateTime>
-
+class KTimeComboBox;
+class KDateComboBox;
 namespace MessageViewer {
 class EventDateTimeWidgetPrivate;
 class EventDateTimeWidget : public QWidget
@@ -44,10 +45,10 @@ public:
 Q_SIGNALS:
     void dateTimeChanged(const QDateTime &dateTime);
 
-private Q_SLOTS:
-    void slotDateTimeChanged();
 private:
-    EventDateTimeWidgetPrivate *const d;
+    void slotDateTimeChanged();
+    KDateComboBox *mDateEdit = nullptr;
+    KTimeComboBox *mTimeEdit = nullptr;
 };
 }
 

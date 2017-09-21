@@ -40,10 +40,8 @@ public:
     void setMessageItem(const Akonadi::Item &item) override;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
-private Q_SLOTS:
-    void slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection);
-
 private:
+    void slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection);
     void createAction(KActionCollection *ac);
     EventEdit *widget();
 
