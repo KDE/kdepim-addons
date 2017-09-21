@@ -1,0 +1,6 @@
+{ "formatter":
+    [
+        { "type": "text", "subtype": "calendar" },
+        { "type": "text", "subtype": "x-vcalendar" }
+    ]
+}

@@ -192,27 +192,11 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "application_ms-tnef.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         return idx == 0 ? new Formatter() : nullptr;
-    }
-
-    const char *type(int idx) const override
-    {
-        return idx == 0 ? "application" : nullptr;
-    }
-
-    const char *subtype(int idx) const override
-    {
-        if (idx == 0) {
-            return "ms-tnef";
-        } else if (idx == 1) {
-            return "vnd.ms-tnef";
-        } else {
-            return nullptr;
-        }
     }
 };
 }

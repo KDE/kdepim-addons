@@ -305,30 +305,11 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_vcard.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         return validIndex(idx) ? new Formatter() : nullptr;
-    }
-
-    const char *type(int idx) const override
-    {
-        return validIndex(idx) ? "text" : nullptr;
-    }
-
-    const char *subtype(int idx) const override
-    {
-        switch (idx) {
-        case 0:
-            return "x-vcard";
-        case 1:
-            return "vcard";
-        case 2:
-            return "directory";
-        default:
-            return nullptr;
-        }
     }
 
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override

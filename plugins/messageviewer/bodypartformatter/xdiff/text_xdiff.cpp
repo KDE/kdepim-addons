@@ -76,7 +76,7 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_xdiff.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
@@ -85,26 +85,6 @@ public:
         }
         return nullptr;
     }
-
-    const char *type(int idx) const override
-    {
-        if (idx == 0 || idx == 1) {
-            return "text";
-        }
-        return nullptr;
-    }
-
-    const char *subtype(int idx) const override
-    {
-        if (idx == 0) {
-            return "x-diff";
-        } else if (idx == 1) {
-            return "x-patch";
-        } else {
-            return nullptr;
-        }
-    }
-
 };
 }
 

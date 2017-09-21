@@ -32,33 +32,6 @@ enum Index {
 };
 }
 
-const char *ApplicationGnuPGWKSPlugin::type(int idx) const
-{
-    switch (idx) {
-    case multipart_mixed:
-        return "multipart";
-    case application_vnd_gnupg_keys:
-    case application_pgp_keys:
-        return "application";
-    default:
-        return nullptr;
-    }
-}
-
-const char *ApplicationGnuPGWKSPlugin::subtype(int idx) const
-{
-    switch (idx) {
-    case multipart_mixed:
-        return "mixed";
-    case application_vnd_gnupg_keys:
-        return "vnd.gnupg.wks";
-    case application_pgp_keys:
-        return "pgp-keys";
-    default:
-        return nullptr;
-    }
-}
-
 const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const
 {
     switch (idx) {

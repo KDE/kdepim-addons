@@ -26,13 +26,11 @@ class ApplicationGnuPGWKSPlugin : public QObject, public MimeTreeParser::Interfa
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "gnupgwks.json")
 public:
     ApplicationGnuPGWKSPlugin() = default;
 
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override;
-    const char *subtype(int idx) const override;
-    const char *type(int idx) const override;
     const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override;
 };
 

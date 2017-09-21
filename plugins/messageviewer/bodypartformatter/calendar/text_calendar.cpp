@@ -1478,7 +1478,7 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_calendar.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
@@ -1486,26 +1486,6 @@ public:
             return new Formatter();
         } else {
             return 0;
-        }
-    }
-
-    const char *type(int idx) const override
-    {
-        if (idx == 0 || idx == 1) {
-            return "text";
-        } else {
-            return nullptr;
-        }
-    }
-
-    const char *subtype(int idx) const override
-    {
-        if (idx == 0) {
-            return "calendar";
-        } else if (idx == 1) {
-            return "x-vcalendar";
-        } else {
-            return nullptr;
         }
     }
 

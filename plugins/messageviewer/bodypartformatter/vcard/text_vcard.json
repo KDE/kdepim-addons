@@ -1,0 +1,7 @@
+{ "formatter":
+    [
+        { "type": "text", "subtype": "x-vcard" },
+        { "type": "text", "subtype": "vcard" },
+        { "type": "text", "subtype": "directory" }
+    ]
+}
