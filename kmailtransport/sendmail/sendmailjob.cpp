@@ -31,48 +31,35 @@
 
 using namespace MailTransport;
 
-/**
- * Private class that helps to provide binary compatibility between releases.
- * @internal
- */
-class SendMailJobPrivate
-{
-public:
-    QProcess *process = nullptr;
-    QString lastError;
-};
-
 SendmailJob::SendmailJob(Transport *transport, QObject *parent)
     : TransportJob(transport, parent)
-    , d(new SendMailJobPrivate)
 {
-    d->process = new QProcess(this);
-    connect(d->process,
+    mProcess = new QProcess(this);
+    connect(mProcess,
             SIGNAL(finished(int,QProcess::ExitStatus)),
             SLOT(sendmailExited(int,QProcess::ExitStatus)));
-    connect(d->process, SIGNAL(error(QProcess::ProcessError)),
+    connect(mProcess, SIGNAL(error(QProcess::ProcessError)),
             SLOT(receivedError()));
-    connect(d->process, SIGNAL(readyReadStandardError()),
+    connect(mProcess, SIGNAL(readyReadStandardError()),
             SLOT(receivedStdErr()));
 }
 
 SendmailJob::~SendmailJob()
 {
-    delete d;
 }
 
 void SendmailJob::doStart()
 {
     const QStringList arguments = QStringList() << QLatin1String("-i") << QLatin1String("-f") << sender() << to() << cc() << bcc();
-    d->process->start(transport()->host(), arguments);
+    mProcess->start(transport()->host(), arguments);
 
-    if (!d->process->waitForStarted()) {
+    if (!mProcess->waitForStarted()) {
         setError(UserDefinedError);
         setErrorText(i18n("Failed to execute mailer program %1", transport()->host()));
         emitResult();
     } else {
-        d->process->write(buffer()->readAll());
-        d->process->closeWriteChannel();
+        mProcess->write(buffer()->readAll());
+        mProcess->closeWriteChannel();
     }
 }
 
@@ -80,10 +67,10 @@ void SendmailJob::sendmailExited(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
         setError(UserDefinedError);
-        if (d->lastError.isEmpty()) {
+        if (mLastError.isEmpty()) {
             setErrorText(i18n("Sendmail exited abnormally."));
         } else {
-            setErrorText(i18n("Sendmail exited abnormally: %1", d->lastError));
+            setErrorText(i18n("Sendmail exited abnormally: %1", mLastError));
         }
     }
     emitResult();
@@ -91,17 +78,17 @@ void SendmailJob::sendmailExited(int exitCode, QProcess::ExitStatus exitStatus)
 
 void SendmailJob::receivedError()
 {
-    d->lastError += d->process->errorString();
+    mLastError += mProcess->errorString();
 }
 
 void SendmailJob::receivedStdErr()
 {
-    d->lastError += QLatin1String(d->process->readAllStandardError());
+    mLastError += QLatin1String(mProcess->readAllStandardError());
 }
 
 bool SendmailJob::doKill()
 {
-    delete d->process;
-    d->process = nullptr;
+    delete mProcess;
+    mProcess = nullptr;
     return true;
 }

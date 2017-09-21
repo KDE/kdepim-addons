@@ -28,8 +28,6 @@
 
 #include <QtCore/QProcess>
 
-class SendMailJobPrivate;
-
 namespace MailTransport {
 /**
   Mail transport job for sendmail.
@@ -62,7 +60,8 @@ private Q_SLOTS:
     void receivedStdErr();
 
 private:
-    SendMailJobPrivate *const d;
+    QString mLastError;
+    QProcess *mProcess = nullptr;
 };
 } // namespace MailTransport
 
