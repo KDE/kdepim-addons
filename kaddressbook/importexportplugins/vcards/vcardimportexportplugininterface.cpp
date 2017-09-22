@@ -123,7 +123,7 @@ void VCardImportExportPluginInterface::slotImportVCard()
 void VCardImportExportPluginInterface::importVCard()
 {
     KContacts::Addressee::List addrList;
-    const QString filter = i18n("*.vcf|vCard (*.vcf)\n*|all files (*)");
+    const QString filter = i18n("vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)");
     QList<QUrl> urls
         = QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"),
                                        QUrl(),
