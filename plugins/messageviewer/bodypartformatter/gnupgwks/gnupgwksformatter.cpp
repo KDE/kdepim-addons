@@ -68,7 +68,7 @@ Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part
         }
     }
 
-    return BodyPartFormatter::process(part);
+    return {};
 }
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
