@@ -51,7 +51,7 @@ void AntiSpamPluginInterfaceTest::shouldEmitActivatedSignal()
     AntiSpamPluginInterface interface;
     interface.createAction(new KActionCollection(this));
 
-    QSignalSpy spy1(&interface, SIGNAL(emitPluginActivated(PimCommon::AbstractGenericPluginInterface *)));
+    QSignalSpy spy1(&interface, SIGNAL(emitPluginActivated(PimCommon::AbstractGenericPluginInterface*)));
     interface.actionType().action()->trigger();
     QCOMPARE(spy1.count(), 1);
 }
