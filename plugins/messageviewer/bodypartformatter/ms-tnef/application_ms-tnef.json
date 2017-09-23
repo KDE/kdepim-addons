@@ -1,6 +1,5 @@
 { "formatter":
     [
-        { "type": "application", "subtype": "ms-tnef" },
-        { "type": "application", "subtype": "vnd.ms-tnef" }
+        { "mimetype": "application/vnd.ms-tnef" }
     ]
 }

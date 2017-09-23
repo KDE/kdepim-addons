@@ -1,7 +1,7 @@
 { "formatter":
     [
-        { "type": "multipart", "subtype": "mixed" },
-        { "type": "application", "subtype": "vnd.gnupg.wks" },
-        { "type": "application", "subtype": "pgp-keys" }
+        { "mimetype": "multipart/mixed" },
+        { "mimetype": "application/vnd.gnupg.wks" },
+        { "mimetype": "application/pgp-keys" }
     ]
 }

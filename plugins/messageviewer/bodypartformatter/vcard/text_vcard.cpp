@@ -320,7 +320,7 @@ public:
 private:
     bool validIndex(int idx) const
     {
-        return idx >= 0 && idx <= 2;
+        return idx == 0;
     }
 };
 }

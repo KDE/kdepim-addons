@@ -1,6 +1,5 @@
 { "formatter":
     [
-        { "type": "text", "subtype": "calendar" },
-        { "type": "text", "subtype": "x-vcalendar" }
+        { "mimetype": "text/calendar" }
     ]
 }

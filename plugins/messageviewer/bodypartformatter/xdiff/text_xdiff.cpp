@@ -80,7 +80,7 @@ class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatt
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
-        if (idx == 0 || idx == 1) {
+        if (idx == 0) {
             return new Formatter();
         }
         return nullptr;

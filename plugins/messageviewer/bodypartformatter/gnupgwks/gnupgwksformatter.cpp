@@ -78,7 +78,8 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
     }
 
     if (part->content()->contentType(false) && part->content()->contentType()->isMimeType("multipart/mixed")) {
-        const auto formatters = part->source()->bodyPartFormatterFactory()->formattersForType("multipart", "mixed");
+        auto formatters = part->source()->bodyPartFormatterFactory()->formattersForType(QStringLiteral("multipart/mixed"));
+        formatters.removeAll(this);
         Q_ASSERT(!formatters.isEmpty()); // there *must* be a multipart/mixed handler
 
         return formatters.at(0)->format(part, writer);

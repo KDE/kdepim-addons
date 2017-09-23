@@ -1,6 +1,5 @@
 { "formatter":
     [
-        { "type": "text", "subtype": "x-diff" },
-        { "type": "text", "subtype": "x-patch" }
+        { "mimetype": "text/x-patch" }
     ]
 }
