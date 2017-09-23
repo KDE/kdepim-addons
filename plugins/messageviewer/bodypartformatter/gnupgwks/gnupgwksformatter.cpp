@@ -78,11 +78,10 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
     }
 
     if (part->content()->contentType(false) && part->content()->contentType()->isMimeType("multipart/mixed")) {
-        const auto registry = part->source()->bodyPartFormatterFactory()->subtypeRegistry("multipart");
-        const auto mixed = registry.find("mixed");
-        Q_ASSERT(mixed != registry.end()); // there *must* be a multipart/mixed handler
+        const auto formatters = part->source()->bodyPartFormatterFactory()->formattersForType("multipart", "mixed");
+        Q_ASSERT(!formatters.isEmpty()); // there *must* be a multipart/mixed handler
 
-        return mixed->second->format(part, writer);
+        return formatters.at(0)->format(part, writer);
     }
 
     const auto content = part->content()->decodedContent();
