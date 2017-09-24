@@ -188,12 +188,12 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
 
     reloadCodecs();
 
-    connect(mUrlRequester, SIGNAL(returnPressed(QString)), this, SLOT(setFile(QString)));
+    connect(mUrlRequester, QOverload<const QString &>::of(&KUrlRequester::returnPressed), this, &CSVImportDialog::setFile);
     connect(mUrlRequester, &KUrlRequester::urlSelected, this, &CSVImportDialog::setUrl);
     connect(mUrlRequester->lineEdit(), &QLineEdit::textChanged, this, &CSVImportDialog::urlChanged);
     connect(mDelimiterGroup, SIGNAL(buttonClicked(int)), this, SLOT(delimiterClicked(int)));
-    connect(mDelimiterEdit, SIGNAL(returnPressed()), this, SLOT(customDelimiterChanged()));
-    connect(mDelimiterEdit, SIGNAL(textChanged(QString)), this, SLOT(customDelimiterChanged(QString)));
+    connect(mDelimiterEdit, QOverload<>::of(&QLineEdit::returnPressed), this, [this]() { customDelimiterChanged(); });
+    connect(mDelimiterEdit, QOverload<const QString &>::of(&QLineEdit::textChanged), [this](const QString &str) { customDelimiterChanged(str); });
     connect(mComboQuote, SIGNAL(activated(QString)), this, SLOT(textQuoteChanged(QString)));
     connect(mCodecCombo, SIGNAL(activated(QString)), this, SLOT(codecChanged()));
     connect(mSkipFirstRow, SIGNAL(toggled(bool)), this, SLOT(skipFirstRowChanged(bool)));
