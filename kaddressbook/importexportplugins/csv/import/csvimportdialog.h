@@ -46,7 +46,7 @@ public:
 
     KContacts::AddresseeList contacts() const;
 
-private Q_SLOTS:
+private:
     void setFile(const QString &);
     void setUrl(const QUrl &);
     void urlChanged(const QString &);
