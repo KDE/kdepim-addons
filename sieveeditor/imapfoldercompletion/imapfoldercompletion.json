@@ -1,21 +1,7 @@
 {
     "KPlugin": {
         "Id": "imapcompletionfolder",
-        "Name": "ImapCompletionFolder",
-        "Name[ca@valencia]": "CarpetaComplecióImap",
-        "Name[ca]": "CarpetaComplecióImap",
-        "Name[es]": "Carpeta de completado de Imap",
-        "Name[fr]": "Compléter les dossiers IMAP",
-        "Name[pl]": "Katalog uzupełniania imap",
-        "Name[pt]": "Pasta de Completação de IMAP",
-        "Name[sl]": "Dopolnjevanje map IMAP",
-        "Name[sr@ijekavian]": "Допуњавање ИМАП фасцикли",
-        "Name[sr@ijekavianlatin]": "Dopunjavanje IMAP fascikli",
-        "Name[sr@latin]": "Dopunjavanje IMAP fascikli",
-        "Name[sr]": "Допуњавање ИМАП фасцикли",
-        "Name[sv]": "IMAP-kompletteringskatalog",
-        "Name[uk]": "Тека доповнення IMAP",
-        "Name[x-test]": "xxImapCompletionFolderxx",
+        "Name": "IMAP Folder Completion",
         "ServiceTypes": [
             "LibKSieve/ImapFolderCompletion"
         ],
