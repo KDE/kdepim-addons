@@ -45,7 +45,7 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     cr->setTypeMonitored(Akonadi::Monitor::Collections);
     cr->collectionFetchScope().setListFilter(Akonadi::CollectionFetchScope::Enabled);
 
-    mEtm = new Akonadi::EntityTreeModel(cr);
+    mEtm = new Akonadi::EntityTreeModel(cr, this);
     mEtm->setItemPopulationStrategy(Akonadi::EntityTreeModel::NoItemPopulation);
     mEtm->setListFilter(Akonadi::CollectionFetchScope::Enabled);
     connect(mEtm, &Akonadi::EntityTreeModel::collectionTreeFetched,
