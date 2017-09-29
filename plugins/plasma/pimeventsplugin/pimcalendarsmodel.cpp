@@ -20,7 +20,7 @@
 #include "pimcalendarsmodel.h"
 #include "settingschangenotifier.h"
 
-#include <AkonadiCore/ChangeRecorder>
+#include <AkonadiCore/Monitor>
 #include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/EntityTreeModel>
 #include <AkonadiCore/EntityDisplayAttribute>
@@ -39,7 +39,7 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     setSortLocaleAware(true);
     setDynamicSortFilter(true);
 
-    auto cr = new Akonadi::ChangeRecorder(this);
+    auto cr = new Akonadi::Monitor(this);
     cr->setMimeTypeMonitored(KCalCore::Event::eventMimeType());
     cr->setMimeTypeMonitored(KCalCore::Todo::todoMimeType());
     cr->setTypeMonitored(Akonadi::Monitor::Collections);
