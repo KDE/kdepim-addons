@@ -30,7 +30,7 @@ class ApplicationGnuPGWKSFormatter : public MimeTreeParser::Interface::BodyPartF
 public:
     ApplicationGnuPGWKSFormatter() = default;
 
-    MimeTreeParser::Interface::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart &part) const override;
 
     MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const override;
 

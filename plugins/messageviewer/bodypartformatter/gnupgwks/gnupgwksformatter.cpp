@@ -54,7 +54,7 @@ bool partHasMimeType(KMime::Content *part, const char *mt)
 }
 }
 
-Interface::MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
+MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
 {
     const auto ct = part.content()->contentType(false);
     if (ct && ct->isMimeType("multipart/mixed")) {
