@@ -57,7 +57,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     lay->addWidget(mShowList);
     connect(mShowList, &QToolButton::clicked, this, &AdBlockAddSubscriptionDialog::slotShowList);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("listsubscriptionbuttonBox"));
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
