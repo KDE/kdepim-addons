@@ -266,9 +266,9 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
 void CSVImportDialog::initGUI()
 {
     QWidget *page = new QWidget(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(page);
 
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
