@@ -63,7 +63,7 @@ public:
         DiffHighlighter highLighter;
         highLighter.highlightDiff(diff);
         const QString html = highLighter.outputDiff();
-        writer->queue(html);
+        writer->write(html);
 
         return Ok;
     }

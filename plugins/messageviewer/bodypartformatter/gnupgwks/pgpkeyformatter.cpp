@@ -67,7 +67,7 @@ BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, Mim
         mp.setKey(m->key());
     }
 
-    writer->queue(render(mp));
+    writer->write(render(mp));
     return Ok;
 }
 

@@ -120,7 +120,7 @@ public:
             htmlStr += QStringLiteral("&nbsp;&lt;") + i18nc("TNEF attachment has no content", "empty") + QStringLiteral("&gt;");
             htmlStr += endRow;
             htmlStr += QStringLiteral("</table>");
-            writer->queue(htmlStr);
+            writer->write(htmlStr);
 
             return NeedContent;
         }
@@ -146,7 +146,7 @@ public:
         if (!tnefatts.isEmpty()) {
             htmlStr += startRow;
         }
-        writer->queue(htmlStr);
+        writer->write(htmlStr);
         const int numberOfTnef(tnefatts.count());
         for (int i = 0; i < numberOfTnef; ++i) {
             KTnef::KTNEFAttach *att = tnefatts.at(i);
@@ -171,15 +171,15 @@ public:
             const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
                                                                                                   KIconLoader::Desktop, attFileName)).url();
 
-            writer->queue(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"")
+            writer->write(QStringLiteral("<div><a href=\"") + href + QStringLiteral("\"><img src=\"")
                           +iconName + QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") + label
                           +QStringLiteral("</a></div><br/>"));
         }
 
         if (!tnefatts.isEmpty()) {
-            writer->queue(endRow);
+            writer->write(endRow);
         }
-        writer->queue(QStringLiteral("</table>"));
+        writer->write(QStringLiteral("</table>"));
 
         return Ok;
     }

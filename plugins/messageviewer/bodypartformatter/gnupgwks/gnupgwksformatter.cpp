@@ -141,6 +141,6 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
     style.setProperty("errorFg", MessageCore::ColorUtil::self()->pgpSignedBadTextColor().name());
     ctx.insert(QStringLiteral("style"), &style);
 
-    writer->queue(tpl->render(&ctx));
+    writer->write(tpl->render(&ctx));
     return Ok;
 }

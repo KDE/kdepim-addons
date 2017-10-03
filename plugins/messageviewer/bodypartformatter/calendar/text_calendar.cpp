@@ -230,7 +230,7 @@ public:
                 if (html.isEmpty()) {
                     return AsIcon;
                 }
-                writer->queue(html);
+                writer->write(html);
             }
         } else {
             MemoryCalendarMemento *memento = new MemoryCalendarMemento();

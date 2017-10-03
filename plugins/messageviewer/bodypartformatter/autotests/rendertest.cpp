@@ -81,21 +81,20 @@ void RenderTest::testRender()
 
     // render the mail
     MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
+    fileWriter.begin();
     QImage paintDevice;
     MessageViewer::CSSHelperBase cssHelper(&paintDevice);
     MimeTreeParser::NodeHelper nodeHelper;
     TestObjectTreeSource testSource(&fileWriter, &cssHelper);
     MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
-    fileWriter.begin(QString());
-    fileWriter.queue(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+    fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
                                     "<html>\n"
                                     "<body>\n"));
 
     otp.parseObjectTree(msg.data());
 
-    fileWriter.queue(QStringLiteral("</body></html>"));
-    fileWriter.flush();
+    fileWriter.write(QStringLiteral("</body></html>"));
     fileWriter.end();
 
     QVERIFY(QFile::exists(outFileName));

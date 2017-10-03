@@ -104,7 +104,7 @@ public:
             return AsIcon;
         }
 
-        writer->queue(QStringLiteral("<div align=\"center\"><h2>")
+        writer->write(QStringLiteral("<div align=\"center\"><h2>")
                       +i18np("Attached business card", "Attached business cards", count)
                       +QStringLiteral("</h2></div>"));
 
@@ -144,14 +144,14 @@ public:
                 const QString href = QStringLiteral("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
                 htmlStr.replace(QLatin1String("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
             }
-            writer->queue(htmlStr);
+            writer->write(htmlStr);
 
             if (!memento
                 || (memento && !memento->finished())
                 || (memento && memento->finished() && !memento->vcardExist(count))) {
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
                 QString op = QStringLiteral("addToAddressBook:%1").arg(count);
-                writer->queue(QStringLiteral("<div align=\"center\"><a href=\"")
+                writer->write(QStringLiteral("<div align=\"center\"><a href=\"")
                               +bodyPart->makeLink(op)
                               +QStringLiteral("\">")
                               +addToLinkText
@@ -160,14 +160,14 @@ public:
                 if (memento->address(count) != a) {
                     const QString addToLinkText = i18n("[Update this contact to the address book]");
                     const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
-                    writer->queue(QStringLiteral("<div align=\"center\"><a href=\"")
+                    writer->write(QStringLiteral("<div align=\"center\"><a href=\"")
                                   +bodyPart->makeLink(op)
                                   +QStringLiteral("\">")
                                   +addToLinkText
                                   +QStringLiteral("</a></div><br><br>"));
                 } else {
                     const QString addToLinkText = i18n("[This contact is already in addressbook]");
-                    writer->queue(QStringLiteral("<div align=\"center\">")
+                    writer->write(QStringLiteral("<div align=\"center\">")
                                   +addToLinkText
                                   +QStringLiteral("</a></div><br><br>"));
                 }
