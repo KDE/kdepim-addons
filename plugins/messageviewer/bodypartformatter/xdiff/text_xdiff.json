@@ -1,5 +1,3 @@
-{ "formatter":
-    [
-        { "mimetype": "text/x-patch" }
-    ]
+{
+    "renderer": [ { "type": "MimeTreeParser::AttachmentMessagePart" } ]
 }

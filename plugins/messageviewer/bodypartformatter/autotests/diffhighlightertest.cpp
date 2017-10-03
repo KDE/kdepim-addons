@@ -21,11 +21,17 @@
 #include "../xdiff/diffhighlighter.h"
 
 #include <QProcess>
+#include <QStandardPaths>
 #include <QTest>
 
 DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
+    // trick the highlighter into using the light color theme
+    auto pal = QGuiApplication::palette();
+    pal.setColor(QPalette::Base, Qt::white);
+    QGuiApplication::setPalette(pal);
 }
 
 QString readDiffFile(const QString &diffFile)

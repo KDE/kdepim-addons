@@ -21,6 +21,8 @@
 #include <KSyntaxHighlighting/Format>
 #include <KSyntaxHighlighting/Theme>
 #include <KSyntaxHighlighting/State>
+
+#include <QGuiApplication>
 #include <QPalette>
 
 DiffHighlighter::DiffHighlighter()
@@ -28,9 +30,9 @@ DiffHighlighter::DiffHighlighter()
     mDef = mRepo.definitionForName(QStringLiteral("Diff"));
     setDefinition(mDef);
 
-    setTheme(/*(palette().color(QPalette::Base).lightness() < 128)
-                 ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)*/
-        /*:*/ mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+    setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
+        ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+        : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
 }
 
 DiffHighlighter::~DiffHighlighter()
@@ -40,16 +42,7 @@ DiffHighlighter::~DiffHighlighter()
 void DiffHighlighter::highlightDiff(const QString &str)
 {
     mOutputDiff.clear();
-
-    static const QLatin1String tableStyle(
-        "style=\""
-        "text-align: left; "
-        "border: solid black 1px; "
-        "padding: 0.5em; "
-        "margin: 0em;\"");
-
-    mOutputDiff = QStringLiteral("<br><div align=\"center\">");
-    mOutputDiff += QStringLiteral("<pre ") + tableStyle + QLatin1Char('>');
+    mOutputDiff = QStringLiteral("<pre>");
 
     KSyntaxHighlighting::State state;
 
@@ -61,8 +54,7 @@ void DiffHighlighter::highlightDiff(const QString &str)
         state = highlightLine(mCurrentLine, state);
         mOutputDiff += QLatin1Char('\n');
     }
-    mOutputDiff += QLatin1Char('\n');
-    mOutputDiff += QLatin1String("</pre></div>");
+    mOutputDiff += QLatin1String("</pre>\n");
 }
 
 void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)

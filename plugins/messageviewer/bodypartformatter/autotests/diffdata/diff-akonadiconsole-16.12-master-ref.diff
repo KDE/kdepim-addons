@@ -1,4 +1,4 @@
-<br><div align="center"><pre style="text-align: left; border: solid black 1px; padding: 0.5em; margin: 0em;"><span style="font-weight:bold;">diff --git a/CMakeLists.txt b/CMakeLists.txt</span>
+<pre><span style="font-weight:bold;">diff --git a/CMakeLists.txt b/CMakeLists.txt</span>
 index b4ef75c..258dcc1 100644
 <span style="color:#0057ae;">--- a/CMakeLists.txt</span>
 <span style="color:#0057ae;">+++ b/CMakeLists.txt</span>
@@ -1096,5 +1096,4 @@ index 389683b..d17dffe 100644
      virtual ~TagPropertiesDialog();
  
      Akonadi::Tag tag() const;
-
-</pre></div>
+</pre>

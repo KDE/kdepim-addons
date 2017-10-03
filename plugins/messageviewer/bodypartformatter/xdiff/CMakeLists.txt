@@ -4,6 +4,11 @@ set(messageviewer_bodypartformatter_text_xdiff_PART_SRCS text_xdiff.cpp diffhigh
 
 add_library(messageviewer_bodypartformatter_text_xdiff MODULE ${messageviewer_bodypartformatter_text_xdiff_PART_SRCS})
 
-target_link_libraries(messageviewer_bodypartformatter_text_xdiff  Qt5::Core KF5::I18n KF5::CoreAddons KF5::IconThemes KF5::WidgetsAddons KF5::MessageViewer KF5::SyntaxHighlighting)
+target_link_libraries(messageviewer_bodypartformatter_text_xdiff
+    Qt5::Core
+    KF5::MessageViewer
+    KF5::SyntaxHighlighting
+    Grantlee5::Templates
+)
 
 install(TARGETS messageviewer_bodypartformatter_text_xdiff  DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

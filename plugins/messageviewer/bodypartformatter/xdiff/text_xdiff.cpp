@@ -31,58 +31,60 @@
 
 #include "diffhighlighter.h"
 
-#include <MessageViewer/BodyPartURLHandler>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/BodyPart>
+#include <MessageViewer/MessagePartRendererBase>
+#include <MessageViewer/MessagePartRendererManager>
+#include <MessageViewer/MessagePartRenderPlugin>
+
+#include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/HtmlWriter>
 
-#include <kstringhandler.h>
+#include <grantlee/template.h>
 
 namespace {
-// TODO: Show filename header to make it possible to save the patch.
 // FIXME: The box should only be as wide as necessary.
 
-class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
+class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
     {
-        if (!writer) {
-            return Ok;
-        }
+        Q_UNUSED(context);
+        auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
+        if (!mp || mp->isHidden() || mp->text().isEmpty() || mp->asIcon() != MimeTreeParser::NoIcon)
+            return false;
 
-        if (bodyPart->defaultDisplay() == MimeTreeParser::Interface::BodyPart::AsIcon) {
-            return AsIcon;
-        }
+        const bool diffMimeType = msgPart->content()->contentType()->mimeType() == "text/x-patch"
+                               || msgPart->content()->contentType()->mimeType() == "text/x-diff";
+        const bool diffFileName = msgPart->content()->contentType()->name().endsWith(QLatin1String(".diff"))
+                               || msgPart->content()->contentType()->name().endsWith(QLatin1String(".patch"));
+        if (!diffMimeType && !diffFileName)
+            return false;
 
-        const QString diff = bodyPart->asText();
-        if (diff.isEmpty()) {
-            return AsIcon;
-        }
+        auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
+        c.insert(QStringLiteral("block"), msgPart.data());
+        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([msgPart](Grantlee::OutputStream *stream) {
+            DiffHighlighter highLighter;
+            highLighter.highlightDiff(msgPart->text());
+            *stream << highLighter.outputDiff();
+        }));
 
-        DiffHighlighter highLighter;
-        highLighter.highlightDiff(diff);
-        const QString html = highLighter.outputDiff();
-        writer->write(html);
-
-        return Ok;
+        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/textmessagepart.html"));
+        Grantlee::OutputStream s(htmlWriter->stream());
+        t->render(&s, &c);
+        return true;
     }
-
-    // unhide the overload with three arguments
-    using MimeTreeParser::Interface::BodyPartFormatter::format;
 };
 
-class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
-    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_xdiff.json")
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
+    MessageViewer::MessagePartRendererBase* renderer(int index) override
     {
-        if (idx == 0) {
+        if (index == 0)
             return new Formatter();
-        }
         return nullptr;
     }
 };

@@ -1,4 +1,4 @@
-<br><div align="center"><pre style="text-align: left; border: solid black 1px; padding: 0.5em; margin: 0em;">commit 93f6aaf446133e05826a4d8e50e2da8ffac7c28f
+<pre>commit 93f6aaf446133e05826a4d8e50e2da8ffac7c28f
 Author: David Faure &lt;faure@kde.org&gt;
 Date:   Mon Apr 17 20:41:55 2017 +0200
 
@@ -475,5 +475,4 @@ index a16f320f..bc91299c 100644
  
                  currentVCard.addLine(vCardLine);
              }
-
-</pre></div>
+</pre>
