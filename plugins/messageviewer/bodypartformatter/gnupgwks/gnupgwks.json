@@ -1,10 +1,10 @@
 {
     "formatter": [
+        { "mimetype": "application/pgp-keys" },
         { "mimetype": "multipart/mixed" },
-        { "mimetype": "application/vnd.gnupg.wks" },
-        { "mimetype": "application/pgp-keys" }
+        { "mimetype": "application/vnd.gnupg.wks" }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::AttachmentMessagePart" }
+        { "type": "PgpKeyMessagePart" }
     ]
 }

@@ -35,27 +35,23 @@
 
 using namespace MimeTreeParser::Interface;
 
-BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
+MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParser::Interface::BodyPart& part) const
 {
-    if (!writer) {
-        return Ok;
-    }
-
-    PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(part->memento());
-    PgpKeyMessagePart mp(part);
+    auto mp = new PgpKeyMessagePart(&part);
+    PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
 
     if (!m) {
         auto memento = new PgpKeyMemento();
-        auto nodeHelper = part->nodeHelper();
+        auto nodeHelper = part.nodeHelper();
         if (nodeHelper) {
             QObject::connect(memento, &PgpKeyMemento::update,
                              nodeHelper, &MimeTreeParser::NodeHelper::update);
-            memento->start(mp.fingerprint());
+            memento->start(mp->fingerprint());
         } else {
-            memento->exec(mp.fingerprint());
+            memento->exec(mp->fingerprint());
             m = memento;
         }
-        part->setBodyPartMemento(memento);
+        mp->setMemento(memento);
     } else if (m->isRunning()) {
         m = nullptr;
     }
@@ -63,16 +59,19 @@ BodyPartFormatter::Result ApplicationPGPKeyFormatter::format(BodyPart *part, Mim
     if (m) {
         Q_ASSERT(!m->isRunning());
 
-        mp.setError(m->error());
-        mp.setKey(m->key());
+        mp->setError(m->error());
+        mp->setKey(m->key());
     }
-
-    writer->write(render(mp));
-    return Ok;
+    return MimeTreeParser::MessagePartPtr(mp);
 }
 
-QString ApplicationPGPKeyFormatter::render(const PgpKeyMessagePart &mp) const
+bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
+    Q_UNUSED(context);
+    auto mp = msgPart.dynamicCast<PgpKeyMessagePart>();
+    if (!mp)
+        return false;
+
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
     engine.addTemplateLoader(QSharedPointer<GrantleeTheme::QtResourceTemplateLoader>::create());
@@ -83,14 +82,14 @@ QString ApplicationPGPKeyFormatter::render(const PgpKeyMessagePart &mp) const
 
     QObject block;
 
-    block.setProperty("showKeyDetails", mp.source()->showSignatureDetails());
-    block.setProperty("error", mp.error());
-    block.setProperty("importUrl", mp.part()->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
-    const auto key = mp.key();
+    block.setProperty("showKeyDetails", mp->source()->showSignatureDetails());
+    block.setProperty("error", mp->error());
+    block.setProperty("importUrl", mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
+    const auto key = mp->key();
     if (key.isNull()) {
-        block.setProperty("uid", mp.userID());
-        block.setProperty("fingerprint", mp.fingerprint());
-        block.setProperty("created", mp.keyDate().toString(Qt::SystemLocaleDate));
+        block.setProperty("uid", mp->userID());
+        block.setProperty("fingerprint", mp->fingerprint());
+        block.setProperty("created", mp->keyDate().toString(Qt::SystemLocaleDate));
     } else {
         const auto uid = key.userID(0);
         block.setProperty("hasKey", true);
@@ -121,5 +120,7 @@ QString ApplicationPGPKeyFormatter::render(const PgpKeyMessagePart &mp) const
 
     ctx.insert(QStringLiteral("block"), &block);
     ctx.insert(QStringLiteral("style"), &style);
-    return tpl->render(&ctx);
+    Grantlee::OutputStream s(htmlWriter->stream());
+    tpl->render(&s, &ctx);
+    return true;
 }

@@ -21,15 +21,19 @@
 #define PGPKEYFORMATTER_H_
 
 #include <MimeTreeParser/BodyPartFormatter>
+#include <MessageViewer/MessagePartRendererBase>
 
 class PgpKeyMessagePart;
 
-class ApplicationPGPKeyFormatter : public MimeTreeParser::Interface::BodyPartFormatter
+class ApplicationPGPKeyFormatter
+    : public MimeTreeParser::Interface::BodyPartFormatter
+    , public MessageViewer::MessagePartRendererBase
 {
 public:
     ApplicationPGPKeyFormatter() = default;
 
-    MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const override;
+    MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart & part) const override;
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:
     QString render(const PgpKeyMessagePart &mp) const;

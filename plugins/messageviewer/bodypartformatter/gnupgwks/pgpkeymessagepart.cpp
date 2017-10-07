@@ -25,9 +25,10 @@
 #include <KMime/Content>
 
 PgpKeyMessagePart::PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part)
-    : mPart(part)
+    : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
 {
-    parseContent(mPart->content());
+    setContent(part->content());
+    parseContent(part->content());
 }
 
 QDateTime PgpKeyMessagePart::keyDate() const
@@ -72,17 +73,7 @@ void PgpKeyMessagePart::setError(const QString &error)
 
 QByteArray PgpKeyMessagePart::rawKey() const
 {
-    return mPart->content()->decodedContent();
-}
-
-MimeTreeParser::Interface::ObjectTreeSource *PgpKeyMessagePart::source() const
-{
-    return mPart->source();
-}
-
-MimeTreeParser::Interface::BodyPart *PgpKeyMessagePart::part() const
-{
-    return mPart;
+    return content()->decodedContent();
 }
 
 void PgpKeyMessagePart::parseContent(KMime::Content *node)

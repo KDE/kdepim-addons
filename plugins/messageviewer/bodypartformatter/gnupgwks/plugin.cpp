@@ -26,9 +26,9 @@
 
 namespace {
 enum Index {
+    application_pgp_keys,
     multipart_mixed,
-    application_vnd_gnupg_keys,
-    application_pgp_keys
+    application_vnd_gnupg_keys
 };
 }
 
@@ -45,10 +45,17 @@ const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::b
     }
 }
 
-MessageViewer::MessagePartRendererBase* ApplicationGnuPGWKSPlugin::renderer(int index)
+MessageViewer::MessagePartRendererBase* ApplicationGnuPGWKSPlugin::renderer(int idx)
 {
-    Q_UNUSED(index);
-    return nullptr;
+    switch (idx) {
+    case multipart_mixed:
+    case application_vnd_gnupg_keys:
+        return nullptr; // TODO
+    case application_pgp_keys:
+        return new ApplicationPGPKeyFormatter();
+    default:
+        return nullptr;
+    }
 }
 
 const MessageViewer::Interface::BodyPartURLHandler *ApplicationGnuPGWKSPlugin::urlHandler(int idx) const

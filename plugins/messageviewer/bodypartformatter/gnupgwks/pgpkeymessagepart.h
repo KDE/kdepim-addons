@@ -20,6 +20,8 @@
 #ifndef PGPKEYMESSAGEPART_H_
 #define PGPKEYMESSAGEPART_H_
 
+#include <MimeTreeParser/MessagePart>
+
 #include <QDateTime>
 #include <QString>
 
@@ -35,12 +37,12 @@ namespace KMime {
 class Content;
 }
 
-class PgpKeyMessagePart
+class PgpKeyMessagePart : public MimeTreeParser::MessagePart
 {
+    Q_OBJECT
 public:
-    PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part);
-
-    virtual ~PgpKeyMessagePart() = default;
+    explicit PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part);
+    ~PgpKeyMessagePart() = default;
 
     QDateTime keyDate() const;
     QString userID() const;
@@ -55,13 +57,9 @@ public:
 
     QByteArray rawKey() const;
 
-    MimeTreeParser::Interface::ObjectTreeSource *source() const;
-    MimeTreeParser::Interface::BodyPart *part() const;
-
 protected:
     void parseContent(KMime::Content *node);
 
-    MimeTreeParser::Interface::BodyPart *mPart = nullptr;
     QDateTime mKeyDate;
     QString mUserID;
     QString mKeyID;
