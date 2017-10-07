@@ -1,0 +1,18 @@
+From: patrice.lumumba@example.net
+To: key-submission@example.net
+Subject: Key publication confirmation
+MIME-Version: 1.0
+Content-Type: multipart/mixed;
+        boundary="=-=01-iacqg4og4pqz11a5cg1o=-="
+Date: Wed, 05 Oct 2016 10:18:52 +0000
+
+--=-=01-iacqg4og4pqz11a5cg1o=-=
+Content-Type: application/vnd.gnupg.wks
+Content-Transfer-Encoding: 8bit
+
+type: confirmation-response
+sender: key-submission@example.net
+address: patrice.lumumba@example.net
+nonce: f5pscz57zj6fk11wekk8gx4cmrb659a7
+
+--=-=01-iacqg4og4pqz11a5cg1o=-=--

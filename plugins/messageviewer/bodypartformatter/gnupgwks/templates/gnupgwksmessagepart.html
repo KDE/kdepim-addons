@@ -31,10 +31,10 @@
     <p style="gnupgwkserror">{% i18n "An error occurred while publishing the key. Please try again later." %}</p>
     {% else %}
     <a class="gnupgwksbutton" href="{{ block.confirmUrl }}">{% i18n "Register the key" %}</a>
-    <br><br>
+    <br/><br/>
     <p>{% i18n "The email will be automatically deleted once you confirm the registration." %}</p>
     {% endif %}
-    <br></br>
+    <br/><br/>
     <a href="{{ block.keyUrl }}">{% i18n "Show key details" %}</a>
   </div>
 {% elif block.isResponse %}
