@@ -100,7 +100,7 @@ public:
                 }
             }
         }
-        if (!count) {
+        if (!count && !memento) {
             return AsIcon;
         }
 
@@ -155,7 +155,7 @@ public:
                               +bodyPart->makeLink(op)
                               +QStringLiteral("\">")
                               +addToLinkText
-                              +QStringLiteral("</a></div><br><br>"));
+                              +QStringLiteral("</a></div><br/><br/>"));
             } else {
                 if (memento->address(count) != a) {
                     const QString addToLinkText = i18n("[Update this contact to the address book]");

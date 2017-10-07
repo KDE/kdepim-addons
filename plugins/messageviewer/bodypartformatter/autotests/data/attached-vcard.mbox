@@ -1,0 +1,33 @@
+From: Volker Krause <vkrause@kde.org>
+To: vkrause@kde.org
+Subject: vcard test attachment
+Date: Thu, 21 Sep 2017 20:00:14 +0200
+Message-ID: <4938516.GQA1Me2Nvk@vkpc5>
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="nextPart4098239.4lZYQBrKDX"
+Content-Transfer-Encoding: 7Bit
+
+This is a multi-part message in MIME format.
+
+--nextPart4098239.4lZYQBrKDX
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/plain; charset="us-ascii"
+
+body text
+
+--nextPart4098239.4lZYQBrKDX
+Content-Disposition: attachment; filename="Dr Konqui.vcf"
+Content-Transfer-Encoding: 7Bit
+Content-Type: text/x-vcard; charset="utf-8"; name="Dr Konqui.vcf"
+
+BEGIN:VCARD
+VERSION:3.0
+CATEGORIES:KDE
+EMAIL;TYPE=WORK:my-test-email@kde.org
+FN:Dr Konqui
+N:Konqui;Dr;;;
+REV:2017-08-01T20:59:16Z
+UID:152c6e04-2f94-4951-9204-c97b69024ff0
+END:VCARD
+
+--nextPart4098239.4lZYQBrKDX--

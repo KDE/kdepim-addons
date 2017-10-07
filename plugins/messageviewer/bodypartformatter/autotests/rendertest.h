@@ -29,6 +29,10 @@ class RenderTest : public QObject
 private Q_SLOTS:
     void testRender_data();
     void testRender();
+
+private:
+    void compareFile(const QString &outFile, const QString &referenceFile);
+
 };
 
 #endif

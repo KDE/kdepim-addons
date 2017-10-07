@@ -97,7 +97,30 @@ void RenderTest::testRender()
     fileWriter.write(QStringLiteral("</body></html>"));
     fileWriter.end();
 
-    QVERIFY(QFile::exists(outFileName));
+    compareFile(outFileName, referenceFileName);
+}
+
+void RenderTest::compareFile(const QString &outFile, const QString &referenceFile)
+{
+    QVERIFY(QFile::exists(outFile));
+
+    const QString htmlFile = outFile + QStringLiteral(".html");
+    // remove tailing newlines and spaces and make htmlmore uniform (breaks pre tags)
+    {
+        QFile f(outFile);
+        QVERIFY(f.open(QIODevice::ReadOnly));
+        QString content = QString::fromUtf8(f.readAll());
+        f.close();
+        content.replace(QRegExp(QStringLiteral("[\t ]+")), QStringLiteral(" "));
+        content.replace(QRegExp(QStringLiteral("[\t ]*\n+[\t ]*")), QStringLiteral("\n"));
+        content.replace(QRegExp(QStringLiteral("([\n\t ])\\1+")), QStringLiteral("\\1"));
+        content.replace(QRegExp(QStringLiteral(">\n+[\t ]*")), QStringLiteral(">"));
+        content.replace(QRegExp(QStringLiteral("[\t ]*\n+[\t ]*<")), QStringLiteral("<"));
+        content.replace(QLatin1String("&nbsp;"), QLatin1String("NBSP_ENTITY_PLACEHOLDER")); // xmlling chokes on &nbsp;
+        QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
+        f.write(content.toUtf8());
+        f.close();
+    }
 
     // validate xml and pretty-print for comparisson
     // TODO add proper cmake check for xmllint and diff
@@ -106,17 +129,21 @@ void RenderTest::testRender()
                        << QStringLiteral("--encode")
                        << QStringLiteral("UTF8")
                        << QStringLiteral("--output")
-                       << htmlFileName
-                       << outFileName;
-    QCOMPARE(QProcess::execute(QLatin1String("xmllint"), args), 0);
+                       << htmlFile
+                       << outFile;
+    QCOMPARE(QProcess::execute(QStringLiteral("xmllint"), args), 0);
 
     // get rid of system dependent or random paths
     {
-        QFile f(htmlFileName);
+        QFile f(htmlFile);
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegExp(QLatin1String("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
+        content.replace(QRegExp(QStringLiteral(
+                                    "\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")),
+                        QStringLiteral("\"file:\\1\""));
+        content.replace(QLatin1String("NBSP_ENTITY_PLACEHOLDER"), QLatin1String("&nbsp;")); // undo above transformation for xmllint
+        content.replace(QRegExp(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
         f.write(content.toUtf8());
         f.close();
@@ -125,8 +152,8 @@ void RenderTest::testRender()
     // compare to reference file
     args = QStringList()
            << QStringLiteral("-u")
-           << referenceFileName
-           << htmlFileName;
+           << referenceFile
+           << htmlFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);
