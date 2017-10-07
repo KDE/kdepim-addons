@@ -33,17 +33,19 @@
 
 #include "updatecontactjob.h"
 #include "vcardmemento.h"
+#include "vcard_debug.h"
 
 #include <KContacts/VCardConverter>
 #include <KContacts/Addressee>
 
-
 #include <MessageViewer/BodyPartURLHandler>
+#include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRenderPlugin>
-#include <MimeTreeParser/BodyPartFormatter>
+
 #include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/HtmlWriter>
+#include <MimeTreeParser/MessagePart>
+#include <MimeTreeParser/NodeHelper>
 using MimeTreeParser::Interface::BodyPart;
 
 #include <LibkdepimAkonadi/AddContactJob>
@@ -51,40 +53,39 @@ using MimeTreeParser::Interface::BodyPart;
 #include <Akonadi/Contact/ContactViewer>
 #include <Akonadi/Contact/StandardContactFormatter>
 
-
+#include <KIO/StatJob>
+#include <KIO/FileCopyJob>
 #include <KLocalizedString>
 #include <KIconLoader>
 
 #include <QFileDialog>
 #include <QIcon>
 #include <QMenu>
+#include <QMimeDatabase>
+#include <QMimeType>
 #include <QTemporaryFile>
-#include <KIO/StatJob>
-#include <KIO/FileCopyJob>
-#include "vcard_debug.h"
 
 namespace {
-class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
+class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    Formatter()
-    {
-    }
+    Formatter() = default;
 
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *writer, MessageViewer::RenderContext*) const override
     {
-        if (!writer) {
-            return Ok;
-        }
+        QMimeDatabase db;
+        auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
+        if (!mt.isValid() || mt.name() != QLatin1String("text/vcard"))
+            return false;
 
-        const QString vCard = bodyPart->asText();
+        const QString vCard = msgPart->text();
         if (vCard.isEmpty()) {
-            return AsIcon;
+            return false;
         }
 
         KContacts::VCardConverter vcc;
 
-        MessageViewer::VcardMemento *memento = dynamic_cast<MessageViewer::VcardMemento *>(bodyPart->memento());
+        MessageViewer::VcardMemento *memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
         QStringList lst;
 
         // Pre-count the number of non-empty addressees
@@ -102,7 +103,7 @@ public:
             }
         }
         if (!count && !memento) {
-            return AsIcon;
+            return false;
         }
 
         writer->write(QStringLiteral("<div align=\"center\"><h2>")
@@ -115,9 +116,9 @@ public:
 
         if (!memento) {
             MessageViewer::VcardMemento *memento = new MessageViewer::VcardMemento(lst);
-            bodyPart->setBodyPartMemento(memento);
+            msgPart->setMemento(memento);
 
-            auto nodeHelper = bodyPart->nodeHelper();
+            auto nodeHelper = msgPart->nodeHelper();
             if (nodeHelper) {
                 QObject::connect(memento, &MessageViewer::VcardMemento::update,
                                  nodeHelper, &MimeTreeParser::NodeHelper::update);
@@ -138,10 +139,10 @@ public:
                 htmlStr.replace(QStringLiteral("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(defaultPixmapPath));
             } else {
                 QImage img = a.photo().data();
-                const QString dir = bodyPart->nodeHelper()->createTempDir(QStringLiteral("vcard-") + a.uid());
+                const QString dir = msgPart->nodeHelper()->createTempDir(QStringLiteral("vcard-") + a.uid());
                 const QString filename = dir + QDir::separator() + a.uid();
                 img.save(filename, "PNG");
-                bodyPart->nodeHelper()->addTempFile(filename);
+                msgPart->nodeHelper()->addTempFile(filename);
                 const QString href = QStringLiteral("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
                 htmlStr.replace(QLatin1String("img src=\"contact_photo\""), QStringLiteral("img src=\"%1\"").arg(href));
             }
@@ -153,7 +154,7 @@ public:
                 const QString addToLinkText = i18n("[Add this contact to the address book]");
                 QString op = QStringLiteral("addToAddressBook:%1").arg(count);
                 writer->write(QStringLiteral("<div align=\"center\"><a href=\"")
-                              +bodyPart->makeLink(op)
+                              +msgPart->makeLink(op)
                               +QStringLiteral("\">")
                               +addToLinkText
                               +QStringLiteral("</a></div><br/><br/>"));
@@ -162,7 +163,7 @@ public:
                     const QString addToLinkText = i18n("[Update this contact to the address book]");
                     const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
                     writer->write(QStringLiteral("<div align=\"center\"><a href=\"")
-                                  +bodyPart->makeLink(op)
+                                  +msgPart->makeLink(op)
                                   +QStringLiteral("\">")
                                   +addToLinkText
                                   +QStringLiteral("</a></div><br><br>"));
@@ -176,7 +177,7 @@ public:
             count++;
         }
 
-        return Ok;
+        return true;
     }
 };
 
@@ -186,7 +187,7 @@ public:
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
     {
         Q_UNUSED(viewerInstance);
-        const QString vCard = bodyPart->asText();
+        const QString vCard = bodyPart->content()->decodedText();
         if (vCard.isEmpty()) {
             return true;
         }
@@ -214,7 +215,7 @@ public:
 
     static KContacts::Addressee findAddressee(BodyPart *part, const QString &path)
     {
-        const QString vCard = part->asText();
+        const QString vCard = part->content()->decodedText();
         if (!vCard.isEmpty()) {
             KContacts::VCardConverter vcc;
             const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
@@ -228,7 +229,7 @@ public:
 
     bool handleContextMenuRequest(BodyPart *part, const QString &path, const QPoint &point) const override
     {
-        const QString vCard = part->asText();
+        const QString vCard = part->content()->decodedText();
         if (vCard.isEmpty()) {
             return true;
         }
@@ -302,22 +303,15 @@ public:
     }
 };
 
-class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
+class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
-    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_vcard.json")
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
-    {
-        return validIndex(idx) ? new Formatter() : nullptr;
-    }
-
     MessageViewer::MessagePartRendererBase* renderer(int index) override
     {
-        Q_UNUSED(index);
-        return nullptr;
+        return validIndex(index) ? new Formatter() : nullptr;
     }
 
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override

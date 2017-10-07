@@ -3,6 +3,6 @@
         { "mimetype": "text/vcard" }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::AttachmentMessagePart" }
+        { "type": "MimeTreeParser::AttachmentMessagePart", "mimetype": "text/vcard" }
     ]
 }
