@@ -41,12 +41,13 @@
 #include <KIdentityManagement/IdentityManager>
 
 #include <MessageViewer/BodyPartURLHandler>
+#include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/Viewer>
 #include <MimeTreeParser/HtmlWriter>
 #include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
+#include <MimeTreeParser/MessagePart>
 using namespace MessageViewer;
 
 #include <KCalCore/ICalFormat>
@@ -74,6 +75,8 @@ using namespace KCalCore;
 
 #include <QEventLoop>
 #include <QDBusServiceWatcher>
+#include <QMimeDatabase>
+#include <QMimeType>
 #include <QProcess>
 #include <QUrl>
 #include <QTemporaryFile>
@@ -157,7 +160,7 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
 class KMInvitationFormatterHelper : public KCalUtils::InvitationFormatterHelper
 {
 public:
-    KMInvitationFormatterHelper(MimeTreeParser::Interface::BodyPart *bodyPart, const KCalCore::MemoryCalendar::Ptr &calendar)
+    KMInvitationFormatterHelper(const MimeTreeParser::MessagePartPtr &bodyPart, const KCalCore::MemoryCalendar::Ptr &calendar)
         : mBodyPart(bodyPart)
         , mCalendar(calendar)
     {
@@ -174,24 +177,23 @@ public:
     }
 
 private:
-    MimeTreeParser::Interface::BodyPart *mBodyPart = nullptr;
+    MimeTreeParser::MessagePartPtr mBodyPart;
     KCalCore::MemoryCalendar::Ptr mCalendar;
 };
 
-class Formatter : public MimeTreeParser::Interface::BodyPartFormatter
+class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    Result format(MimeTreeParser::Interface::BodyPart *bodyPart, MimeTreeParser::HtmlWriter *writer) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter* writer, MessageViewer::RenderContext*) const override
     {
-        if (!writer) {
-            // Guard against crashes in createReply()
-            return Ok;
-        }
+        QMimeDatabase db;
+        auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
+        if (!mt.isValid() || mt.name() != QLatin1String("text/calendar"))
+            return false;
 
-        auto nodeHelper = bodyPart->nodeHelper();
-
+        auto nodeHelper = msgPart->nodeHelper();
         if (!nodeHelper) {
-            return Ok;
+            return false;
         }
 
         /** Formating is async now because we need to fetch incidences from akonadi.
@@ -202,25 +204,25 @@ public:
 
             BodyPartMementos are documented in MessageViewer/ObjectTreeParser
         */
-        MemoryCalendarMemento *memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
+        MemoryCalendarMemento *memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
 
         if (memento) {
-            KMime::Message *const message = dynamic_cast<KMime::Message *>(bodyPart->topLevelContent());
+            KMime::Message *const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
             if (!message) {
                 qCWarning(TEXT_CALENDAR_LOG) << "The top-level content is not a message. Cannot handle the invitation then.";
-                return Failed;
+                return false;
             }
 
             if (memento->finished()) {
-                KMInvitationFormatterHelper helper(bodyPart, memento->calendar());
+                KMInvitationFormatterHelper helper(msgPart, memento->calendar());
                 QString source;
                 // If the bodypart does not have a charset specified, we need to fall back to utf8,
                 // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
-                if (bodyPart->contentTypeParameter("charset").isEmpty()) {
-                    const QByteArray &ba = bodyPart->asBinary();
+                if (msgPart->content()->contentType()->parameter(QStringLiteral("charset")).isEmpty()) {
+                    const QByteArray &ba = msgPart->content()->decodedContent();
                     source = QString::fromUtf8(ba);
                 } else {
-                    source = bodyPart->asText();
+                    source = msgPart->text();
                 }
 
                 MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
@@ -229,18 +231,18 @@ public:
                     source, cl, &helper, message->sender()->asUnicodeString());
 
                 if (html.isEmpty()) {
-                    return AsIcon;
+                    return false;
                 }
                 writer->write(html);
             }
         } else {
             MemoryCalendarMemento *memento = new MemoryCalendarMemento();
-            bodyPart->setBodyPartMemento(memento);
+            msgPart->setMemento(memento);
             QObject::connect(memento, &MemoryCalendarMemento::update,
                              nodeHelper, &MimeTreeParser::NodeHelper::update);
         }
 
-        return Ok;
+        return true;
     }
 };
 
@@ -1260,11 +1262,11 @@ public:
         // If the bodypart does not have a charset specified, we need to fall back to utf8,
         // not the KMail fallback encoding, so get the contents as binary and decode explicitly.
         QString iCal;
-        if (part->contentTypeParameter("charset").isEmpty()) {
-            const QByteArray &ba = part->asBinary();
+        if (!part->content()->contentType()->hasParameter(QLatin1String("charset"))) {
+            const QByteArray &ba = part->content()->decodedContent();
             iCal = QString::fromUtf8(ba);
         } else {
-            iCal = part->asText();
+            iCal = part->content()->decodedText();
         }
 
         Incidence::Ptr incidence = stringToIncidence(iCal);
@@ -1397,11 +1399,11 @@ public:
         }
 
         QString iCal;
-        if (part->contentTypeParameter("charset").isEmpty()) {
-            const QByteArray &ba = part->asBinary();
+        if (!part->content()->contentType()->hasParameter(QLatin1String("charset"))) {
+            const QByteArray &ba = part->content()->decodedContent();
             iCal = QString::fromUtf8(ba);
         } else {
-            iCal = part->asText();
+            iCal = part->content()->decodedText();
         }
 
         QMenu *menu = new QMenu();
@@ -1475,26 +1477,19 @@ public:
     }
 };
 
-class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
+class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
-    Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_calendar.json")
 public:
-    const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
+    MessageViewer::MessagePartRendererBase* renderer(int idx) override
     {
-        if (idx == 0) {
+        if (idx < 2) {
             return new Formatter();
         } else {
-            return 0;
+            return nullptr;
         }
-    }
-
-    MessageViewer::MessagePartRendererBase* renderer(int index) override
-    {
-        Q_UNUSED(index);
-        return nullptr;
     }
 
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override

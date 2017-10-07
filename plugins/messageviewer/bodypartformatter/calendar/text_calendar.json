@@ -3,6 +3,7 @@
         { "mimetype": "text/calendar" }
     ],
     "renderer": [
-        { "type": "MimeTreeParser::AttachmentMessagePart" }
+        { "type": "MimeTreeParser::AttachmentMessagePart", "mimetype": "text/calendar" },
+        { "type": "MimeTreeParser::TextMessagePart", "mimetype": "text/calendar" }
     ]
 }
