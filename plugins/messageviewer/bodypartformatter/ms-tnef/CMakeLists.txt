@@ -10,11 +10,11 @@ target_link_libraries(messageviewer_bodypartformatter_application_mstnef
   Qt5::Core
   KF5::CalendarCore
   KF5::CalendarUtils
-  KF5::Mime
   KF5::Tnef
   KF5::MessageCore
   KF5::MessageViewer
   KF5::IconThemes
   KF5::I18n
+  Grantlee5::Templates
 )
 install(TARGETS messageviewer_bodypartformatter_application_mstnef DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
