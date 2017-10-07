@@ -1,7 +1,10 @@
-{ "formatter":
-    [
+{
+    "formatter": [
         { "mimetype": "multipart/mixed" },
         { "mimetype": "application/vnd.gnupg.wks" },
         { "mimetype": "application/pgp-keys" }
+    ],
+    "renderer": [
+        { "type": "MimeTreeParser::AttachmentMessagePart" }
     ]
 }

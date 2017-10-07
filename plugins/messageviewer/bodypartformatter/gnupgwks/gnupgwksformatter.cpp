@@ -30,7 +30,7 @@
 #include <MimeTreeParser/HtmlWriter>
 #include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/MessagePart>
-#include <MimeTreeParser/BodyPartFormatterBaseFactory>
+#include <MimeTreeParser/BodyPartFormatterFactory>
 #include <MessageCore/MessageCoreUtil>
 #include <MessageViewer/Viewer>
 

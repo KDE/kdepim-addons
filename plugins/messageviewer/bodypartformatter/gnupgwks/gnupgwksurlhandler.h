@@ -26,7 +26,7 @@
 
 class GnuPGWKSMessagePart;
 
-class ApplicationGnuPGWKSUrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
+class ApplicationGnuPGWKSUrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
     ApplicationGnuPGWKSUrlHandler() = default;

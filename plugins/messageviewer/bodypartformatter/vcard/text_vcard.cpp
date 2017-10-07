@@ -39,6 +39,7 @@
 
 
 #include <MessageViewer/BodyPartURLHandler>
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
@@ -179,7 +180,7 @@ public:
     }
 };
 
-class UrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
+class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
@@ -301,10 +302,11 @@ public:
     }
 };
 
-class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_vcard.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
@@ -312,7 +314,13 @@ public:
         return validIndex(idx) ? new Formatter() : nullptr;
     }
 
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override
+    MessageViewer::MessagePartRendererBase* renderer(int index) override
+    {
+        Q_UNUSED(index);
+        return nullptr;
+    }
+
+    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         return validIndex(idx) ? new UrlHandler() : nullptr;
     }

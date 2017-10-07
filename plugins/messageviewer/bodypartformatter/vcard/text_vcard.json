@@ -1,5 +1,8 @@
-{ "formatter":
-    [
+{
+    "formatter": [
         { "mimetype": "text/vcard" }
+    ],
+    "renderer": [
+        { "type": "MimeTreeParser::AttachmentMessagePart" }
     ]
 }

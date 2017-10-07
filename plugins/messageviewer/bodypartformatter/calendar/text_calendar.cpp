@@ -41,6 +41,7 @@
 #include <KIdentityManagement/IdentityManager>
 
 #include <MessageViewer/BodyPartURLHandler>
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/Viewer>
 #include <MimeTreeParser/HtmlWriter>
@@ -282,7 +283,7 @@ static Incidence::Ptr stringToIncidence(const QString &iCal)
     return message->event().dynamicCast<Incidence>();
 }
 
-class UrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
+class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
     UrlHandler()
@@ -1474,10 +1475,11 @@ public:
     }
 };
 
-class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin
+class Plugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
+    Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_calendar.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
@@ -1489,7 +1491,13 @@ public:
         }
     }
 
-    const MimeTreeParser::Interface::BodyPartURLHandler *urlHandler(int idx) const override
+    MessageViewer::MessagePartRendererBase* renderer(int index) override
+    {
+        Q_UNUSED(index);
+        return nullptr;
+    }
+
+    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
             return new UrlHandler();

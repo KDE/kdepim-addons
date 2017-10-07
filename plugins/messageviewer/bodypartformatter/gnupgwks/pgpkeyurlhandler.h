@@ -24,7 +24,7 @@
 
 class QUrlQuery;
 
-class ApplicationPgpKeyUrlHandler : public MimeTreeParser::Interface::BodyPartURLHandler
+class ApplicationPgpKeyUrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
     ApplicationPgpKeyUrlHandler() = default;
