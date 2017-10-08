@@ -20,6 +20,8 @@
 #ifndef GNUPGWKSMESSAGEPART_H_
 #define GNUPGWKSMESSAGEPART_H_
 
+#include <MimeTreeParser/MessagePart>
+
 #include <QString>
 
 namespace MimeTreeParser {
@@ -32,8 +34,9 @@ namespace KMime {
 class Content;
 }
 
-class GnuPGWKSMessagePart
+class GnuPGWKSMessagePart : public MimeTreeParser::MessagePart
 {
+    Q_OBJECT
 public:
     enum ConfirmationType {
         UnknownType,
@@ -50,14 +53,11 @@ public:
     QString address() const;
     QString fingerprint() const;
     QString nonce() const;
-    KMime::Content *node() const;
-    MimeTreeParser::Interface::BodyPart *part() const;
 
 protected:
     void parseContent(KMime::Content *node);
     ConfirmationType stringToType(const QStringRef &str);
 
-    MimeTreeParser::Interface::BodyPart *mPart = nullptr;
     QString mSender;
     QString mAddress;
     QString mFingerprint;

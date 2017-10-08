@@ -30,7 +30,6 @@
 #include <MimeTreeParser/HtmlWriter>
 #include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/MessagePart>
-#include <MimeTreeParser/BodyPartFormatterFactory>
 #include <MessageCore/MessageCoreUtil>
 #include <MessageViewer/Viewer>
 
@@ -68,43 +67,35 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
         }
     }
 
-    if (ct && ct->isMimeType("application/vnd.gnupg.wks"))
-        return BodyPartFormatter::process(part);
+    if (ct && ct->isMimeType("application/vnd.gnupg.wks")) {
+        const auto content = part.content()->decodedContent();
+        if (content.startsWith("-----BEGIN PGP MESSAGE")) {
+            auto decrypt = QGpgME::openpgp()->decryptJob();
+            QByteArray plainText;
+            auto result = decrypt->exec(part.content()->decodedContent(), plainText);
+            if (result.error()) {
+                qWarning() << "Decryption failed!" << result.error().asString();
+                return {};
+            }
+            part.content()->setBody(plainText);
+        }
+        return MessagePart::Ptr(new GnuPGWKSMessagePart(&part));
+    }
+
     return {};
 }
 
-BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
+bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr& msgPart, MimeTreeParser::HtmlWriter* htmlWriter, MessageViewer::RenderContext* context) const
 {
-    if (!writer) {
-        return Ok;
-    }
+    Q_UNUSED(context);
+    auto mp = msgPart.dynamicCast<GnuPGWKSMessagePart>();
+    if (!mp)
+        return false;
 
-    if (part->content()->contentType(false) && part->content()->contentType()->isMimeType("multipart/mixed")) {
-        auto formatters = part->source()->bodyPartFormatterFactory()->formattersForType(QStringLiteral("multipart/mixed"));
-        formatters.removeAll(this);
-        Q_ASSERT(!formatters.isEmpty()); // there *must* be a multipart/mixed handler
-
-        return formatters.at(0)->format(part, writer);
-    }
-
-    const auto content = part->content()->decodedContent();
-    if (content.startsWith("-----BEGIN PGP MESSAGE")) {
-        auto decrypt = QGpgME::openpgp()->decryptJob();
-        QByteArray plainText;
-        auto result = decrypt->exec(part->content()->decodedContent(), plainText);
-        if (result.error()) {
-            qWarning() << "Decryption failed!" << result.error().asString();
-            return Failed;
-        }
-        part->content()->setBody(plainText);
-    }
-
-    GnuPGWKSMessagePart mp(part);
-
-    const QByteArray propertyName = "_GnuPGWKS" + mp.fingerprint().toLatin1();
-    const bool hasError = (part->nodeHelper()->property(propertyName).toString() == QLatin1String("error"));
+    const QByteArray propertyName = "_GnuPGWKS" + mp->fingerprint().toLatin1();
+    const bool hasError = (mp->nodeHelper()->property(propertyName).toString() == QLatin1String("error"));
     if (hasError) {
-        part->nodeHelper()->setProperty(propertyName, QVariant());
+        mp->nodeHelper()->setProperty(propertyName, QVariant());
     }
 
     GrantleeTheme::Engine engine;
@@ -118,16 +109,16 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
     QObject block;
 
     const auto baseUrl = QStringLiteral("gnupgwks?%1");
-    block.setProperty("isRequest", mp.confirmationType() == GnuPGWKSMessagePart::ConfirmationRequest);
-    block.setProperty("isResponse", mp.confirmationType() == GnuPGWKSMessagePart::ConfirmationResponse);
+    block.setProperty("isRequest", mp->confirmationType() == GnuPGWKSMessagePart::ConfirmationRequest);
+    block.setProperty("isResponse", mp->confirmationType() == GnuPGWKSMessagePart::ConfirmationResponse);
     QUrlQuery confirmQuery;
     confirmQuery.addQueryItem(QStringLiteral("action"), QStringLiteral("confirm"));
-    confirmQuery.addQueryItem(QStringLiteral("fpr"), mp.fingerprint());
-    block.setProperty("confirmUrl", mp.part()->makeLink(baseUrl.arg(confirmQuery.toString(QUrl::FullyDecoded))));
+    confirmQuery.addQueryItem(QStringLiteral("fpr"), mp->fingerprint());
+    block.setProperty("confirmUrl", mp->makeLink(baseUrl.arg(confirmQuery.toString(QUrl::FullyDecoded))));
     QUrlQuery keyQuery;
     keyQuery.addQueryItem(QStringLiteral("action"), QStringLiteral("show"));
-    keyQuery.addQueryItem(QStringLiteral("fpr"), mp.fingerprint());
-    block.setProperty("keyUrl", mp.part()->makeLink(baseUrl.arg(keyQuery.toString(QUrl::FullyDecoded))));
+    keyQuery.addQueryItem(QStringLiteral("fpr"), mp->fingerprint());
+    block.setProperty("keyUrl", mp->makeLink(baseUrl.arg(keyQuery.toString(QUrl::FullyDecoded))));
     block.setProperty("hasError", hasError);
     ctx.insert(QStringLiteral("block"), &block);
 
@@ -143,6 +134,7 @@ BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, M
     style.setProperty("errorFg", MessageCore::ColorUtil::self()->pgpSignedBadTextColor().name());
     ctx.insert(QStringLiteral("style"), &style);
 
-    writer->write(tpl->render(&ctx));
-    return Ok;
+    Grantlee::OutputStream s(htmlWriter->stream());
+    tpl->render(&s, &ctx);
+    return true;
 }

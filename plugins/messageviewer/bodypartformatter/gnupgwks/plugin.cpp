@@ -27,8 +27,8 @@
 namespace {
 enum Index {
     application_pgp_keys,
-    multipart_mixed,
-    application_vnd_gnupg_keys
+    application_vnd_gnupg_keys,
+    multipart_mixed
 };
 }
 
@@ -50,7 +50,7 @@ MessageViewer::MessagePartRendererBase* ApplicationGnuPGWKSPlugin::renderer(int 
     switch (idx) {
     case multipart_mixed:
     case application_vnd_gnupg_keys:
-        return nullptr; // TODO
+        return new ApplicationGnuPGWKSFormatter();
     case application_pgp_keys:
         return new ApplicationPGPKeyFormatter();
     default:

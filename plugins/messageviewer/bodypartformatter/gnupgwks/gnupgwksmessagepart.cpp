@@ -23,9 +23,10 @@
 #include <KMime/Content>
 
 GnuPGWKSMessagePart::GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part)
-    : mPart(part)
+    : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
 {
-    parseContent(mPart->content());
+    setContent(part->content());
+    parseContent(content());
 }
 
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::confirmationType() const
@@ -51,16 +52,6 @@ QString GnuPGWKSMessagePart::fingerprint() const
 QString GnuPGWKSMessagePart::nonce() const
 {
     return mNonce;
-}
-
-KMime::Content *GnuPGWKSMessagePart::node() const
-{
-    return mPart->content();
-}
-
-MimeTreeParser::Interface::BodyPart *GnuPGWKSMessagePart::part() const
-{
-    return mPart;
 }
 
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QStringRef &str)

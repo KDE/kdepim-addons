@@ -20,19 +20,21 @@
 #ifndef GNUPGWKSFORMATTER_H_
 #define GNUPGWKSFORMATTER_H_
 
+#include <MessageViewer/MessagePartRendererBase>
 #include <MimeTreeParser/BodyPartFormatter>
 
 class GnuPGWKSMessagePart;
 class GnuPGWKSMemento;
 
-class ApplicationGnuPGWKSFormatter : public MimeTreeParser::Interface::BodyPartFormatter
+class ApplicationGnuPGWKSFormatter
+    : public MimeTreeParser::Interface::BodyPartFormatter
+    , public MessageViewer::MessagePartRendererBase
 {
 public:
     ApplicationGnuPGWKSFormatter() = default;
 
     MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart &part) const override;
-
-    MimeTreeParser::Interface::BodyPartFormatter::Result format(MimeTreeParser::Interface::BodyPart *part, MimeTreeParser::HtmlWriter *writer) const override;
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:
     enum WKSStatus {

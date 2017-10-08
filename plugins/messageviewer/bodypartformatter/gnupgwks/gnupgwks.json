@@ -5,6 +5,7 @@
         { "mimetype": "application/vnd.gnupg.wks" }
     ],
     "renderer": [
-        { "type": "PgpKeyMessagePart" }
+        { "type": "PgpKeyMessagePart" },
+        { "type": "GnuPGWKSMessagePart" }
     ]
 }
