@@ -17,30 +17,26 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef DIFFHIGHLIGHTER_H
-#define DIFFHIGHLIGHTER_H
+#ifndef HIGHLIGHTER_H
+#define HIGHLIGHTER_H
 
 #include <KSyntaxHighlighting/AbstractHighlighter>
-#include <KSyntaxHighlighting/Repository>
-#include <KSyntaxHighlighting/Definition>
 
-class DiffHighlighter : public KSyntaxHighlighting::AbstractHighlighter
+class QTextStream;
+
+class Highlighter : public KSyntaxHighlighting::AbstractHighlighter
 {
 public:
-    DiffHighlighter();
-    ~DiffHighlighter();
+    Highlighter(QTextStream *stream);
+    ~Highlighter();
 
-    void highlightDiff(const QString &str);
-
-    QString outputDiff() const;
+    void highlight(const QString &str);
 
 protected:
     void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) override;
 private:
-    KSyntaxHighlighting::Repository mRepo;
-    KSyntaxHighlighting::Definition mDef;
     QString mCurrentLine;
-    QString mOutputDiff;
+    QTextStream *mStream;
 };
 
 #endif // DIFFHIGHLIGHTER_H

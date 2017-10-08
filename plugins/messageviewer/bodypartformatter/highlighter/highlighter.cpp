@@ -17,32 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "diffhighlighter.h"
+#include "highlighter.h"
+
 #include <KSyntaxHighlighting/Format>
-#include <KSyntaxHighlighting/Theme>
 #include <KSyntaxHighlighting/State>
+#include <KSyntaxHighlighting/Theme>
 
-#include <QGuiApplication>
-#include <QPalette>
+#include <QTextStream>
 
-DiffHighlighter::DiffHighlighter()
-{
-    mDef = mRepo.definitionForName(QStringLiteral("Diff"));
-    setDefinition(mDef);
-
-    setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
-        ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-        : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
-}
-
-DiffHighlighter::~DiffHighlighter()
+Highlighter::Highlighter(QTextStream *stream)
+    : mStream(stream)
 {
 }
 
-void DiffHighlighter::highlightDiff(const QString &str)
+Highlighter::~Highlighter() = default;
+
+void Highlighter::highlight(const QString &str)
 {
-    mOutputDiff.clear();
-    mOutputDiff = QStringLiteral("<pre>");
+    *mStream << QStringLiteral("<pre>");
 
     KSyntaxHighlighting::State state;
 
@@ -52,44 +44,44 @@ void DiffHighlighter::highlightDiff(const QString &str)
     for (; lineEnd != -1; lineStart = lineEnd + 1, lineEnd = str.indexOf(QLatin1Char('\n'), lineStart)) {
         mCurrentLine = str.mid(lineStart, lineEnd - lineStart);
         state = highlightLine(mCurrentLine, state);
-        mOutputDiff += QLatin1Char('\n');
+        *mStream << QLatin1Char('\n');
     }
-    mOutputDiff += QLatin1String("</pre>\n");
+    if (lineStart < str.size()) { // remaining content if str isn't ending with a newline
+       mCurrentLine = str.mid(lineStart);
+       state = highlightLine(mCurrentLine, state);
+       *mStream << QLatin1Char('\n');
+    }
+    *mStream << QLatin1String("</pre>\n");
 }
 
-void DiffHighlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
+void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format)
 {
     if (!format.isDefaultTextStyle(theme())) {
-        mOutputDiff += QStringLiteral("<span style=\"");
+        *mStream << QStringLiteral("<span style=\"");
         if (format.hasTextColor(theme())) {
-            mOutputDiff += QStringLiteral("color:") + format.textColor(theme()).name() + QStringLiteral(";");
+            *mStream << QStringLiteral("color:") << format.textColor(theme()).name() << QStringLiteral(";");
         }
         if (format.hasBackgroundColor(theme())) {
-            mOutputDiff += QStringLiteral("background-color:") + format.backgroundColor(theme()).name() + QStringLiteral(";");
+            *mStream << QStringLiteral("background-color:") << format.backgroundColor(theme()).name() << QStringLiteral(";");
         }
         if (format.isBold(theme())) {
-            mOutputDiff += QStringLiteral("font-weight:bold;");
+            *mStream << QStringLiteral("font-weight:bold;");
         }
         if (format.isItalic(theme())) {
-            mOutputDiff += QStringLiteral("font-style:italic;");
+            *mStream << QStringLiteral("font-style:italic;");
         }
         if (format.isUnderline(theme())) {
-            mOutputDiff += QStringLiteral("text-decoration:underline;");
+            *mStream << QStringLiteral("text-decoration:underline;");
         }
         if (format.isStrikeThrough(theme())) {
-            mOutputDiff += QStringLiteral("text-decoration:line-through;");
+            *mStream << QStringLiteral("text-decoration:line-through;");
         }
-        mOutputDiff += QStringLiteral("\">");
+        *mStream << QStringLiteral("\">");
     }
 
-    mOutputDiff += mCurrentLine.mid(offset, length).toHtmlEscaped();
+    *mStream << mCurrentLine.mid(offset, length).toHtmlEscaped();
 
     if (!format.isDefaultTextStyle(theme())) {
-        mOutputDiff += QStringLiteral("</span>");
+        *mStream << QStringLiteral("</span>");
     }
-}
-
-QString DiffHighlighter::outputDiff() const
-{
-    return mOutputDiff;
 }

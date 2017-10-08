@@ -29,7 +29,7 @@
     your version.
 */
 
-#include "diffhighlighter.h"
+#include "highlighter.h"
 
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
@@ -38,10 +38,18 @@
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/HtmlWriter>
 
+#include <KSyntaxHighlighting/Definition>
+#include <KSyntaxHighlighting/Repository>
+#include <KSyntaxHighlighting/Theme>
+
 #include <grantlee/template.h>
 
+#include <QGuiApplication>
+#include <QMimeDatabase>
+#include <QMimeType>
+#include <QPalette>
+
 namespace {
-// FIXME: The box should only be as wide as necessary.
 
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
@@ -53,19 +61,26 @@ public:
         if (!mp || mp->isHidden() || mp->text().isEmpty() || mp->asIcon() != MimeTreeParser::NoIcon)
             return false;
 
-        const bool diffMimeType = msgPart->content()->contentType()->mimeType() == "text/x-patch"
-                               || msgPart->content()->contentType()->mimeType() == "text/x-diff";
-        const bool diffFileName = msgPart->content()->contentType()->name().endsWith(QLatin1String(".diff"))
-                               || msgPart->content()->contentType()->name().endsWith(QLatin1String(".patch"));
-        if (!diffMimeType && !diffFileName)
+        QMimeDatabase db;
+        auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
+        if (!mt.isValid())
+            return false;
+        if (mt.name() != QLatin1String("text/plain") && !mt.allAncestors().contains(QLatin1String("text/plain")))
+            return false;
+
+        const auto def = mRepo.definitionForFileName(mp->label());
+        if (!def.isValid())
             return false;
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([msgPart](Grantlee::OutputStream *stream) {
-            DiffHighlighter highLighter;
-            highLighter.highlightDiff(msgPart->text());
-            *stream << highLighter.outputDiff();
+        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream*) {
+            Highlighter highLighter(htmlWriter->stream());
+            highLighter.setDefinition(def);
+            highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
+                ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+            highLighter.highlight(msgPart->text());
         }));
 
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/textmessagepart.html"));
@@ -73,13 +88,16 @@ public:
         t->render(&s, &c);
         return true;
     }
+
+private:
+    mutable KSyntaxHighlighting::Repository mRepo;
 };
 
 class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_xdiff.json")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "texthighlighterplugin.json")
 public:
     MessageViewer::MessagePartRendererBase* renderer(int index) override
     {
@@ -90,4 +108,4 @@ public:
 };
 }
 
-#include "text_xdiff.moc"
+#include "texthighlighterplugin.moc"

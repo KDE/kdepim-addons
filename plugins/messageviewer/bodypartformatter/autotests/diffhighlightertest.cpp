@@ -18,7 +18,11 @@
 */
 
 #include "diffhighlightertest.h"
-#include "../xdiff/diffhighlighter.h"
+#include "../highlighter/highlighter.h"
+
+#include <KSyntaxHighlighting/Definition>
+#include <KSyntaxHighlighting/Repository>
+#include <KSyntaxHighlighting/Theme>
 
 #include <QProcess>
 #include <QStandardPaths>
@@ -28,10 +32,6 @@ DiffHighlighterTest::DiffHighlighterTest(QObject *parent)
     : QObject(parent)
 {
     QStandardPaths::setTestModeEnabled(true);
-    // trick the highlighter into using the light color theme
-    auto pal = QGuiApplication::palette();
-    pal.setColor(QPalette::Base, Qt::white);
-    QGuiApplication::setPalette(pal);
 }
 
 QString readDiffFile(const QString &diffFile)
@@ -60,14 +60,18 @@ void DiffHighlighterTest::shouldGenerateDiff()
     const QString generatedFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
     QString diff = readDiffFile(originalFile);
 
-    DiffHighlighter highLighter;
-    highLighter.highlightDiff(diff);
-    const QString html = highLighter.outputDiff();
-
     //Create generated file
     QFile f(generatedFile);
     QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
-    f.write(html.toUtf8());
+    QTextStream s(&f);
+
+    KSyntaxHighlighting::Repository repo;
+    Highlighter highLighter(&s);
+    highLighter.setDefinition(repo.definitionForName(QStringLiteral("Diff")));
+    highLighter.setTheme(repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+    highLighter.highlight(diff);
+
+    s.flush();
     f.close();
 
     // compare to reference file
