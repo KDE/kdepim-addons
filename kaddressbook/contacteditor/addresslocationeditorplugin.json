@@ -1,0 +1,10 @@
+{
+    "KPlugin": {
+        "Id": "addresslocationeditorplugin",
+        "Name": "RegexpEditorLineEdit",
+        "ServiceTypes": [
+            "ContactEditor/AddressLocationEditor"
+        ],
+        "Version": "1.0"
+    }
+}

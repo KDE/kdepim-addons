@@ -1,0 +1,16 @@
+#headeraddress {
+}
+
+#addresstype {
+   float: left;
+   color: #0000FF;
+}
+
+#actiontype {
+   float: right;
+   text-align: right;
+}
+
+#address {
+   float: left;
+}
