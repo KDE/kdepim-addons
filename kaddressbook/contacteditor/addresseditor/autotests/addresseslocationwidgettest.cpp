@@ -21,14 +21,12 @@
 */
 
 #include "addresseslocationwidgettest.h"
-#include "config-contact-editor.h"
 #include "../webengine/addresseslocationengineviewer.h"
 
 #include "../addresseslocationwidget.h"
+#include "../addresslocationwidget.h"
 #include <QTest>
 
-#include <editor/addresseditor/addresslocationwidget.h>
-using namespace ContactEditor;
 AddressesLocationWidgetTest::AddressesLocationWidgetTest(QObject *parent)
     : QObject(parent)
 {

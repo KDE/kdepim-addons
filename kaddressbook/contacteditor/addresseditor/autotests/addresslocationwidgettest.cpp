@@ -28,8 +28,7 @@
 #include <KLineEdit>
 #include <QTest>
 #include <QCheckBox>
-#include <editor/addresseditor/selectaddresstypecombobox.h>
-using namespace ContactEditor;
+#include "../selectaddresstypecombobox.h"
 AddressLocationWidgetTest::AddressLocationWidgetTest(QObject *parent)
     : QObject(parent)
 {

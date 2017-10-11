@@ -15,10 +15,10 @@ ecm_qt_declare_logging_category(contacteditor_addresslocationeditor_plugin_SRCS 
     ADDRESSLOCATIONEDITORPLUGIN_LOG CATEGORY_NAME org.kde.pim.addresslocationeditorplugin)
 
 
-#if(BUILD_TESTING)
-#    add_subdirectory(addresseditor/tests)
-#    add_subdirectory(addresseditor/autotests)
-#endif()
+if(BUILD_TESTING)
+    add_subdirectory(addresseditor/tests)
+    add_subdirectory(addresseditor/autotests)
+endif()
 
 
 set(addresslocationeditorplugin_SRCS

@@ -4,7 +4,8 @@ set(akonadicontact_addresslocation_web_editor_SRCS
     )
 set(akonadicontact_webengine_LIB Qt5::WebEngine Qt5::WebEngineWidgets)
 
-ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER contacteditor_debug.h IDENTIFIER CONTACTEDITOR_LOG CATEGORY_NAME org.kde.pim.akonadi_contact)
+ecm_qt_declare_logging_category(akonadicontact_addresslocation_web_editor_SRCS HEADER addresslocationeditorplugin_debug.h IDENTIFIER
+    ADDRESSLOCATIONEDITORPLUGIN_LOG CATEGORY_NAME org.kde.pim.addresslocationeditorplugin)
 
 set(addresseditor_SRCS
     ${akonadicontact_addresslocation_web_editor_SRCS}

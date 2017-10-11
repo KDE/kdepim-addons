@@ -21,10 +21,8 @@
 */
 
 #include "addresseslocationviewertest.h"
-#include "config-contact-editor.h"
 #include "../webengine/addresseslocationengineviewer.h"
 #include <QTest>
-using namespace ContactEditor;
 AddressesLocationViewerTest::AddressesLocationViewerTest(QObject *parent)
     : QObject(parent)
 {

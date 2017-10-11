@@ -23,7 +23,6 @@
 #include <QApplication>
 
 #include "../addresseslocationwidget.h"
-using namespace ContactEditor;
 int main(int argc, char *argv[])
 {
     QApplication app(argc, argv);
