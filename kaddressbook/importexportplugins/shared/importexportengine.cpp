@@ -73,7 +73,7 @@ void ImportExportEngine::importContacts()
         i18n("Select the address book the imported contact(s) shall be saved in:"));
     dlg->setDefaultCollection(mDefaultAddressBook);
 
-    if (!dlg->exec() || !dlg) {
+    if (!dlg->exec()) {
         delete dlg;
         deleteLater();
         return;

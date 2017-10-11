@@ -65,7 +65,7 @@ void LDapImportExportPluginInterface::importLdap()
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     QPointer<KLDAP::LdapSearchDialog> dlg = new KLDAP::LdapSearchDialog(parentWidget());
 
-    if (dlg->exec() && dlg) {
+    if (dlg->exec()) {
         contactList.setAddressList(dlg->selectedContacts());
     }
 

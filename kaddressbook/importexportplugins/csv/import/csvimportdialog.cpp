@@ -620,7 +620,7 @@ void CSVImportDialog::applyTemplate()
         return;
     }
 
-    if (!dlg->exec() || !dlg) {
+    if (!dlg->exec()) {
         delete dlg;
         return;
     }

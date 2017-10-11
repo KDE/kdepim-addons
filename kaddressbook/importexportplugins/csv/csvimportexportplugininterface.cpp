@@ -75,7 +75,7 @@ void CSVImportExportPluginInterface::importCSV()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     QPointer<CSVImportDialog> dlg = new CSVImportDialog(parentWidget());
-    if (dlg->exec() && dlg) {
+    if (dlg->exec()) {
         contactList.setAddressList(dlg->contacts());
     }
 
@@ -163,7 +163,7 @@ void CSVImportExportPluginInterface::exportCSV()
         = new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
-    if (!dlg->exec() || !dlg) {
+    if (!dlg->exec()) {
         delete dlg;
         return;
     }
