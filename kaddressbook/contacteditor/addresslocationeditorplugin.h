@@ -20,10 +20,8 @@
 #ifndef ADDRESSLOCATIONEDITORPLUGIN_H
 #define ADDRESSLOCATIONEDITORPLUGIN_H
 
-#include <QWidget>
 #include <ContactEditor/AbstractAddressLocationWidget>
-class QLineEdit;
-class QToolButton;
+class AddressesLocationWidget;
 class AddressLocationEditor : public ContactEditor::AbstractAddressLocationWidget
 {
     Q_OBJECT
@@ -36,6 +34,8 @@ public:
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;
     void setReadOnly(bool readOnly) override;
+private:
+    AddressesLocationWidget *mAddressesLocationWidget = nullptr;
 };
 
 #endif // ADDRESSLOCATIONEDITORPLUGIN_H

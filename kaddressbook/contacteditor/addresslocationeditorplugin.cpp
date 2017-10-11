@@ -19,6 +19,7 @@
 
 #include "addresslocationeditorplugin.h"
 #include <kpluginfactory.h>
+#include "addresseditor/addresseslocationwidget.h"
 
 #include <QHBoxLayout>
 
@@ -27,6 +28,12 @@ K_PLUGIN_FACTORY_WITH_JSON(AddressLocationEditorFactory, "addresslocationeditorp
 AddressLocationEditor::AddressLocationEditor(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::AbstractAddressLocationWidget(parent)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
+    mAddressesLocationWidget = new AddressesLocationWidget(this);
+    mAddressesLocationWidget->setObjectName(QStringLiteral("addresseslocationwidget"));
+    mainLayout->addWidget(mAddressesLocationWidget);
 }
 
 AddressLocationEditor::~AddressLocationEditor()
@@ -35,15 +42,17 @@ AddressLocationEditor::~AddressLocationEditor()
 
 void AddressLocationEditor::loadContact(const KContacts::Addressee &contact)
 {
-
+    mAddressesLocationWidget->loadContact(contact);
 }
 
 void AddressLocationEditor::storeContact(KContacts::Addressee &contact) const
 {
+    mAddressesLocationWidget->storeContact(contact);
 }
 
 void AddressLocationEditor::setReadOnly(bool readOnly)
 {
+    mAddressesLocationWidget->setReadOnly(readOnly);
 }
 
 #include "addresslocationeditorplugin.moc"
