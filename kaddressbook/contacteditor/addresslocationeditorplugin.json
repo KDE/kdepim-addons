@@ -2,6 +2,16 @@
     "KPlugin": {
         "Id": "addresslocationeditorplugin",
         "Name": "RegexpEditorLineEdit",
+        "Name[ca@valencia]": "EditaLíniaEditorExpReg",
+        "Name[ca]": "EditaLíniaEditorExpReg",
+        "Name[fr]": "Ligne de saisie de l'éditeur d'expression rationnelle",
+        "Name[sr@ijekavian]": "Уређивач поља регуларног израза",
+        "Name[sr@ijekavianlatin]": "Uređivač polja regularnog izraza",
+        "Name[sr@latin]": "Uređivač polja regularnog izraza",
+        "Name[sr]": "Уређивач поља регуларног израза",
+        "Name[sv]": "Radeditor för reguljära uttryck",
+        "Name[uk]": "Редактор формальних виразів",
+        "Name[x-test]": "xxRegexpEditorLineEditxx",
         "ServiceTypes": [
             "ContactEditor/AddressLocationEditor"
         ],
