@@ -477,11 +477,27 @@ void VCardImportExportPluginInterface::exportVCard()
     bool ok = true;
     if (list.count() == 1) {
         QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-        url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(
-                                              QString(list[ 0 ].givenName()
-                                                      +QLatin1Char(QLatin1Char('_'))
-                                                      +list[ 0 ].familyName()
-                                                      +QStringLiteral(".vcf"))),
+        QString filename;
+        const KContacts::Addressee addr = list.at(0);
+        if (!addr.givenName().isEmpty()) {
+            filename = addr.givenName();
+        }
+        if (!addr.familyName().isEmpty()) {
+            if (filename.isEmpty()) {
+                filename = addr.familyName();
+            } else {
+                filename += QLatin1Char('_') + addr.familyName();
+            }
+        }
+        if (filename.isEmpty()) {
+            if (!addr.emailList().isEmpty()) {
+                filename = addr.emailList().at(0).mail();
+            } else {
+                filename = QStringLiteral("contact");
+            }
+        }
+        filename += QStringLiteral(".vcf");
+        url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(filename),
                                           QString(), nullptr, options);
         if (url.isEmpty()) {   // user canceled export
             return;
