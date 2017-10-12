@@ -83,15 +83,15 @@ void EventModel::createMonitor()
         if (oldIncidence->allDay() != incidence->allDay()
             || oldIncidence->dtStart() != incidence->dtStart()
             || oldIncidence->dateTime(KCalCore::IncidenceBase::RoleEnd) != incidence->dateTime(KCalCore::IncidenceBase::RoleEnd)) {
-            incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
-            incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
-            incidenceChanger()->modifyFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger()->modifyFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         }
     });
     connect(mMonitor, &Akonadi::Monitor::itemRemoved,
             this, [this](const Akonadi::Item &item) {
-        incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        Q_EMIT incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
     connect(mMonitor, &Akonadi::Monitor::collectionRemoved,
             this, &EventModel::removeCalendar);
@@ -156,7 +156,7 @@ void EventModel::onItemsReceived(const Akonadi::Item::List &items)
     qCDebug(PIMEVENTSPLUGIN_LOG) << "Batch: received" << items.count() << "items";
     for (const auto &item : items) {
         if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
-            incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload";
         }
@@ -181,5 +181,5 @@ void EventModel::removeCollection(const Akonadi::Collection &col)
     std::transform(items.cbegin(), items.cend(), std::back_inserter(ids),
                    std::mem_fn(&Akonadi::Item::id));
 
-    incidenceChanger()->deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+    Q_EMIT incidenceChanger()->deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
 }

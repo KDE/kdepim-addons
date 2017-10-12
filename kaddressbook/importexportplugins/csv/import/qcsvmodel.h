@@ -46,7 +46,7 @@ public:
     /**
      * Sets the character that is used for quoting. The default is '"'.
      */
-    void setTextQuote(const QChar &textQuote);
+    void setTextQuote(QChar textQuote);
 
     /**
      * Returns the character that is used for quoting.

@@ -26,7 +26,7 @@ namespace PimCommon {
 class CustomTreeView;
 }
 namespace AdBlock {
-class AdBlockResult;
+struct AdBlockResult;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
 {
     Q_OBJECT

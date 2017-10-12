@@ -47,6 +47,7 @@ QStringList TestDataParser::allTestData()
     QDir testdir(QStringLiteral(PIMEVENT_DATADIR "/data"));
     const auto data = testdir.entryInfoList({ QStringLiteral("*.json") }, QDir::Files);
     QStringList testcases;
+    testcases.reserve(data.count());
     for (const auto &fi : data) {
         testcases << fi.baseName();
     }

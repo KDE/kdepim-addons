@@ -79,9 +79,9 @@ Q_SIGNALS:
     void gotNewExtensiveText(const QString &) const;
     void gotNewUrl(const QUrl &) const;
     // The following three signals are only used internally
-    void step1Success() const;
-    void step2Success() const;
-    void step3Success() const;
+    void step1Success();
+    void step2Success();
+    void step3Success();
 
 protected Q_SLOTS:
     void step1StartDownload();

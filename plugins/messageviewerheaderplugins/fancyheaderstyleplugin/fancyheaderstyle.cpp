@@ -103,8 +103,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
         headerStr += QStringLiteral("<div dir=\"%1\">%2</div>\n")
-                     .arg(subjectDir)
-                     .arg(mHeaderStyleUtil.subjectString(message, flags));
+                     .arg(subjectDir, mHeaderStyleUtil.subjectString(message, flags));
     }
     headerStr += QLatin1String("<table class=\"outer\"><tr><td width=\"100%\"><table>\n");
     //headerStr += "<table>\n";
@@ -154,8 +153,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
 
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td>%2</td></tr>\n")
-                         .arg(i18nc("To-field of the mail header.", "To: "))
-                         .arg(to));
+                         .arg(i18nc("To-field of the mail header.", "To: "), to));
     }
 
     // cc line, if an
@@ -166,8 +164,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         if (!str.isEmpty()) {
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2</td></tr>\n")
-                             .arg(i18n("CC: "))
-                             .arg(str));
+                             .arg(i18n("CC: "), str));
         }
     }
 

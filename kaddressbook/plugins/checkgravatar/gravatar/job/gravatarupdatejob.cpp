@@ -94,7 +94,9 @@ void GravatarUpdateJob::updatePixmap(const QPixmap &pix)
 {
     if (mItem.hasPayload<KContacts::Addressee>()) {
         KContacts::Addressee contact = mItem.payload<KContacts::Addressee>();
-        contact.photo().setData(pix.toImage());
+        KContacts::Picture pic = contact.photo();
+        pic.setData(pix.toImage());
+        contact.setPhoto(pic);
         mItem.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage

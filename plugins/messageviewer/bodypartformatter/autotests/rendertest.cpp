@@ -66,8 +66,6 @@ void RenderTest::testRender()
     QFETCH(QString, referenceFileName);
     QFETCH(QString, outFileName);
 
-    const QString htmlFileName = outFileName + QStringLiteral(".html");
-
     QIcon::setThemeName(QStringLiteral("oxygen"));
 
     // load input mail

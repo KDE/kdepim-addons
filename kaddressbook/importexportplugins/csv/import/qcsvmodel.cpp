@@ -179,7 +179,7 @@ bool QCsvModel::load(QIODevice *device)
     return true;
 }
 
-void QCsvModel::setTextQuote(const QChar &textQuote)
+void QCsvModel::setTextQuote(QChar textQuote)
 {
     const bool isRunning = d->mParser->isRunning();
 
