@@ -1,6 +1,12 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to block advertising.",
+        "Description[ca]": "Aquest connector permet bloquejar la publicitat.",
+        "Description[nl]": "Deze plug-in stelt u in staat advertenties te blokkeren.",
+        "Description[pt]": "Este 'plugin' permite-lhe bloquear a publicidade.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att blockera reklam.",
+        "Description[uk]": "За допомогою цього додатка можна блокувати рекламу.",
+        "Description[x-test]": "xxThis plugin allows you to block advertising.xx",
         "EnabledByDefault": "false",
         "Id": "messagevieweradblockplugin",
         "Name": "Adblock",
