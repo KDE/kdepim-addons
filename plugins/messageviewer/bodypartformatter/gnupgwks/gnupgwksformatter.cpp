@@ -68,7 +68,9 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
         }
     }
 
-    return BodyPartFormatter::process(part);
+    if (ct && ct->isMimeType("application/vnd.gnupg.wks"))
+        return BodyPartFormatter::process(part);
+    return {};
 }
 
 BodyPartFormatter::Result ApplicationGnuPGWKSFormatter::format(BodyPart *part, MimeTreeParser::HtmlWriter *writer) const
