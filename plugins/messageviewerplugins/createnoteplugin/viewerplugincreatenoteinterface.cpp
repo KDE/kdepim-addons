@@ -106,10 +106,10 @@ void ViewerPluginCreatenoteInterface::slotNoteItemFetched(KJob *job)
     } else {
         Akonadi::ItemFetchJob *fetch = qobject_cast<Akonadi::ItemFetchJob *>(job);
         Q_ASSERT(fetch);
-        if (fetch->items().isEmpty() || !fetch->items().first().hasPayload<KMime::Message::Ptr>()) {
+        if (fetch->items().isEmpty() || !fetch->items().constFirst().hasPayload<KMime::Message::Ptr>()) {
             showCreateNewNoteWidget();
         } else {
-            Akonadi::NoteUtils::NoteMessageWrapper note(fetch->items().first().payload<KMime::Message::Ptr>());
+            Akonadi::NoteUtils::NoteMessageWrapper note(fetch->items().constFirst().payload<KMime::Message::Ptr>());
             widget()->setMessage(note.message());
             showCreateNewNoteWidget();
         }
