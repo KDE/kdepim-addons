@@ -24,7 +24,6 @@
 #include <MimeTreeParser/Enums>
 
 #include <QObject>
-#include <QMap>
 #include <KContacts/Addressee>
 
 class KJob;

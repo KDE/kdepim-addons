@@ -46,7 +46,6 @@
 
 #include <QGuiApplication>
 #include <QMimeDatabase>
-#include <QMimeType>
 #include <QPalette>
 
 namespace {

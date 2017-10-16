@@ -76,7 +76,6 @@ using namespace KCalCore;
 #include <QEventLoop>
 #include <QDBusServiceWatcher>
 #include <QMimeDatabase>
-#include <QMimeType>
 #include <QProcess>
 #include <QUrl>
 #include <QTemporaryFile>

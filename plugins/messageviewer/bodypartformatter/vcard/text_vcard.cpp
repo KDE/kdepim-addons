@@ -62,7 +62,6 @@ using MimeTreeParser::Interface::BodyPart;
 #include <QIcon>
 #include <QMenu>
 #include <QMimeDatabase>
-#include <QMimeType>
 #include <QTemporaryFile>
 
 namespace {

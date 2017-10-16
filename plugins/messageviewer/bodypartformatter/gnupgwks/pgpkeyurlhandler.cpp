@@ -21,7 +21,6 @@
 
 #include <QString>
 #include <QUrlQuery>
-#include <QProcess>
 
 #include <KLocalizedString>
 
