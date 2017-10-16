@@ -30,7 +30,6 @@
 namespace MimeTreeParser {
 namespace Interface {
 class BodyPart;
-class ObjectTreeSource;
 }
 }
 namespace KMime {
