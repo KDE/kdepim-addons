@@ -61,7 +61,7 @@ void CreateTodoJob::slotFetchDone(KJob *job)
         mItem = fetchJob->items().at(0);
     } else {
         qCDebug(CREATETODOPLUGIN_LOG) << " createTodo Error during fetch: " << job->errorString();
-        Q_EMIT emitResult();
+        emitResult();
         return;
     }
     createTodo();
@@ -71,7 +71,7 @@ void CreateTodoJob::createTodo()
 {
     if (!mItem.hasPayload<KMime::Message::Ptr>()) {
         qCDebug(CREATETODOPLUGIN_LOG) << " item has not payload";
-        Q_EMIT emitResult();
+        emitResult();
         return;
     }
 
@@ -89,7 +89,7 @@ void CreateTodoJob::todoCreated(KJob *job)
         qCDebug(CREATETODOPLUGIN_LOG) << "Error during create new Todo " << job->errorString();
         setError(job->error());
         setErrorText(job->errorText());
-        Q_EMIT emitResult();
+        emitResult();
     } else {
         Akonadi::ItemCreateJob *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
@@ -103,5 +103,5 @@ void CreateTodoJob::relationCreated(KJob *job)
     if (job->error()) {
         qCDebug(CREATETODOPLUGIN_LOG) << "Error during create new Todo " << job->errorString();
     }
-    Q_EMIT emitResult();
+    emitResult();
 }
