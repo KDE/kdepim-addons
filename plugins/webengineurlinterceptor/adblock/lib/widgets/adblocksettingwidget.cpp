@@ -205,7 +205,7 @@ void AdBlockSettingWidget::doResetToDefaultsOther()
     const bool bUseDefaults = AdBlock::AdBlockSettings::self()->useDefaults(true);
     loadWidget(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
     mUi->tabWidget->setEnabled(AdBlock::AdBlockSettings::self()->adBlockEnabled());
-    saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
+    loadWidget(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     loadWidget(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
     AdBlock::AdBlockSettings::self()->useDefaults(bUseDefaults);
 }
