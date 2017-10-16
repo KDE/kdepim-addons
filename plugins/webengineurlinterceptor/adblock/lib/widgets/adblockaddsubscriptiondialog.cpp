@@ -42,15 +42,15 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     QWidget *w = new QWidget;
     QHBoxLayout *lay = new QHBoxLayout;
     lay->setMargin(0);
-    QLabel *lab = new QLabel(i18n("Select List:"));
+    QLabel *lab = new QLabel(i18n("Select List:"), this);
     lab->setObjectName(QStringLiteral("listsubscriptionlabel"));
     lay->addWidget(lab);
 
-    mListSubscription = new QComboBox;
+    mListSubscription = new QComboBox(this);
     mListSubscription->setObjectName(QStringLiteral("listsubscriptioncombobox"));
     lay->addWidget(mListSubscription);
 
-    mShowList = new QToolButton;
+    mShowList = new QToolButton(this);
     mShowList->setToolTip(i18n("Show List"));
     mShowList->setObjectName(QStringLiteral("showlisttoolbutton"));
     mShowList->setIcon(QIcon::fromTheme(QStringLiteral("document-preview")));

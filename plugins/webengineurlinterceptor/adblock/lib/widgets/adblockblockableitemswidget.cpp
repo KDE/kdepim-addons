@@ -42,7 +42,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
 {
     QVBoxLayout *lay = new QVBoxLayout(this);
     lay->setMargin(0);
-    mListItems = new PimCommon::CustomTreeView;
+    mListItems = new PimCommon::CustomTreeView(this);
     mListItems->setDefaultText(i18n("No blockable element found."));
 
     mListItems->setContextMenuPolicy(Qt::CustomContextMenu);
