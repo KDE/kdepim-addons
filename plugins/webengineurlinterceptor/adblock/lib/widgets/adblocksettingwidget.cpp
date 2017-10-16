@@ -322,7 +322,7 @@ void AdBlockSettingWidget::save()
 
     QStringList disableCustomFilter;
     QTextStream out(&ruleFile);
-    for (int i = 0; i < mUi->manualFiltersListWidget->count(); ++i) {
+    for (int i = 0, total = mUi->manualFiltersListWidget->count(); i < total; ++i) {
         QListWidgetItem *subItem = mUi->manualFiltersListWidget->item(i);
         const QString stringRule = subItem->text();
         if (!stringRule.trimmed().isEmpty()) {
