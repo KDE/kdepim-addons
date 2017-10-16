@@ -40,7 +40,6 @@ private:
     QString mEmail;
     KContacts::Addressee mContact;
     QWidget *mParentWidget = nullptr;
-
 };
 
 #endif // UPDATECONTACTJOB_H

@@ -47,9 +47,9 @@ void Highlighter::highlight(const QString &str)
         *mStream << QLatin1Char('\n');
     }
     if (lineStart < str.size()) { // remaining content if str isn't ending with a newline
-       mCurrentLine = str.mid(lineStart);
-       state = highlightLine(mCurrentLine, state);
-       *mStream << QLatin1Char('\n');
+        mCurrentLine = str.mid(lineStart);
+        state = highlightLine(mCurrentLine, state);
+        *mStream << QLatin1Char('\n');
     }
     *mStream << QLatin1String("</pre>\n");
 }

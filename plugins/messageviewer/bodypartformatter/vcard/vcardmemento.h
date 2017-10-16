@@ -61,7 +61,6 @@ public:
 
     KContacts::Addressee address(int index) const;
 
-
 Q_SIGNALS:
     // TODO: Factor our update and detach into base class
     void update(MimeTreeParser::UpdateMode);

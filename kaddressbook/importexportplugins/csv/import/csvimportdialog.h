@@ -22,7 +22,6 @@
 
 #include <kaddressbookimportexport/kaddressbookimportexportcontactfields.h>
 
-
 #include <QDialog>
 
 #include <QList>

@@ -33,6 +33,7 @@ public:
     ~EnterpriseHeaderStyle()
     {
     }
+
     const char *name() const override;
 
     QString format(KMime::Message *message) const override;

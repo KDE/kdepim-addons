@@ -45,7 +45,7 @@ const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::b
     }
 }
 
-MessageViewer::MessagePartRendererBase* ApplicationGnuPGWKSPlugin::renderer(int idx)
+MessageViewer::MessagePartRendererBase *ApplicationGnuPGWKSPlugin::renderer(int idx)
 {
     switch (idx) {
     case multipart_mixed:

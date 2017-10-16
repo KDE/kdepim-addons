@@ -19,8 +19,6 @@
 
 #include "gearyaddressbook.h"
 
-
-
 GearyAddressBook::GearyAddressBook(const QString &filename)
 {
 }

@@ -19,7 +19,6 @@
 
 #include "viewerpluginexternalscripttest.h"
 
-
 ViewerPluginExternalscriptTest::ViewerPluginExternalscriptTest(QObject *parent)
     : QObject(parent)
 {

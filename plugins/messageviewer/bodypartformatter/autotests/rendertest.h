@@ -32,7 +32,6 @@ private Q_SLOTS:
 
 private:
     void compareFile(const QString &outFile, const QString &referenceFile);
-
 };
 
 #endif

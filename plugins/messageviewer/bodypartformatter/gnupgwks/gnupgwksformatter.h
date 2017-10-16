@@ -26,9 +26,7 @@
 class GnuPGWKSMessagePart;
 class GnuPGWKSMemento;
 
-class ApplicationGnuPGWKSFormatter
-    : public MimeTreeParser::Interface::BodyPartFormatter
-    , public MessageViewer::MessagePartRendererBase
+class ApplicationGnuPGWKSFormatter : public MimeTreeParser::Interface::BodyPartFormatter, public MessageViewer::MessagePartRendererBase
 {
 public:
     ApplicationGnuPGWKSFormatter() = default;

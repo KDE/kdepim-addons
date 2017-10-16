@@ -35,10 +35,10 @@ SendmailJob::SendmailJob(Transport *transport, QObject *parent)
     : TransportJob(transport, parent)
 {
     mProcess = new QProcess(this);
-    connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &SendmailJob::sendmailExited);
+    connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &SendmailJob::sendmailExited);
     connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
             this, &SendmailJob::receivedError);
-    connect(mProcess, &QProcess::readyReadStandardError, this,  &SendmailJob::receivedStdErr);
+    connect(mProcess, &QProcess::readyReadStandardError, this, &SendmailJob::receivedStdErr);
 }
 
 SendmailJob::~SendmailJob()

@@ -184,12 +184,13 @@ private:
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter* writer, MessageViewer::RenderContext*) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *writer, MessageViewer::RenderContext *) const override
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid() || mt.name() != QLatin1String("text/calendar"))
+        if (!mt.isValid() || mt.name() != QLatin1String("text/calendar")) {
             return false;
+        }
 
         auto nodeHelper = msgPart->nodeHelper();
         if (!nodeHelper) {
@@ -1483,7 +1484,7 @@ class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_calendar.json")
 public:
-    MessageViewer::MessagePartRendererBase* renderer(int idx) override
+    MessageViewer::MessagePartRendererBase *renderer(int idx) override
     {
         if (idx < 2) {
             return new Formatter();

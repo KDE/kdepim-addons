@@ -25,14 +25,12 @@
 
 class PgpKeyMessagePart;
 
-class ApplicationPGPKeyFormatter
-    : public MimeTreeParser::Interface::BodyPartFormatter
-    , public MessageViewer::MessagePartRendererBase
+class ApplicationPGPKeyFormatter : public MimeTreeParser::Interface::BodyPartFormatter, public MessageViewer::MessagePartRendererBase
 {
 public:
     ApplicationPGPKeyFormatter() = default;
 
-    MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart & part) const override;
+    MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart &part) const override;
     bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:

@@ -71,12 +71,13 @@ class Formatter : public MessageViewer::MessagePartRendererBase
 public:
     Formatter() = default;
 
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *writer, MessageViewer::RenderContext*) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *writer, MessageViewer::RenderContext *) const override
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid() || mt.name() != QLatin1String("text/vcard"))
+        if (!mt.isValid() || mt.name() != QLatin1String("text/vcard")) {
             return false;
+        }
 
         const QString vCard = msgPart->text();
         if (vCard.isEmpty()) {
@@ -309,7 +310,7 @@ class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "text_vcard.json")
 public:
-    MessageViewer::MessagePartRendererBase* renderer(int index) override
+    MessageViewer::MessagePartRendererBase *renderer(int index) override
     {
         return validIndex(index) ? new Formatter() : nullptr;
     }

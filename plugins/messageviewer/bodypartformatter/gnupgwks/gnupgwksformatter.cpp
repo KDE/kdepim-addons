@@ -85,12 +85,13 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
     return {};
 }
 
-bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr& msgPart, MimeTreeParser::HtmlWriter* htmlWriter, MessageViewer::RenderContext* context) const
+bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
     auto mp = msgPart.dynamicCast<GnuPGWKSMessagePart>();
-    if (!mp)
+    if (!mp) {
         return false;
+    }
 
     const QByteArray propertyName = "_GnuPGWKS" + mp->fingerprint().toLatin1();
     const bool hasError = (mp->nodeHelper()->property(propertyName).toString() == QLatin1String("error"));

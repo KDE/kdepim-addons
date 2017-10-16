@@ -50,7 +50,6 @@
 #include <QPalette>
 
 namespace {
-
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -58,30 +57,34 @@ public:
     {
         Q_UNUSED(context);
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
-        if (!mp || mp->isHidden() || mp->text().isEmpty() || mp->asIcon() != MimeTreeParser::NoIcon)
+        if (!mp || mp->isHidden() || mp->text().isEmpty() || mp->asIcon() != MimeTreeParser::NoIcon) {
             return false;
+        }
 
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));
-        if (!mt.isValid())
+        if (!mt.isValid()) {
             return false;
-        if (mt.name() != QLatin1String("text/plain") && !mt.allAncestors().contains(QLatin1String("text/plain")))
+        }
+        if (mt.name() != QLatin1String("text/plain") && !mt.allAncestors().contains(QLatin1String("text/plain"))) {
             return false;
+        }
 
         const auto def = mRepo.definitionForFileName(mp->label());
-        if (!def.isValid())
+        if (!def.isValid()) {
             return false;
+        }
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
-        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream*) {
-            Highlighter highLighter(htmlWriter->stream());
-            highLighter.setDefinition(def);
-            highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
-                ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-                : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
-            highLighter.highlight(msgPart->text());
-        }));
+        c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
+                Highlighter highLighter(htmlWriter->stream());
+                highLighter.setDefinition(def);
+                highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
+                                     ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                                     : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+                highLighter.highlight(msgPart->text());
+            }));
 
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());
@@ -99,10 +102,11 @@ class Plugin : public QObject, public MessageViewer::MessagePartRenderPlugin
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "texthighlighterplugin.json")
 public:
-    MessageViewer::MessagePartRendererBase* renderer(int index) override
+    MessageViewer::MessagePartRendererBase *renderer(int index) override
     {
-        if (index == 0)
+        if (index == 0) {
             return new Formatter();
+        }
         return nullptr;
     }
 };

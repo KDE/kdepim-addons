@@ -35,7 +35,7 @@
 
 using namespace MimeTreeParser::Interface;
 
-MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParser::Interface::BodyPart& part) const
+MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParser::Interface::BodyPart &part) const
 {
     auto mp = new PgpKeyMessagePart(&part);
     PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
@@ -69,8 +69,9 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
 {
     Q_UNUSED(context);
     auto mp = msgPart.dynamicCast<PgpKeyMessagePart>();
-    if (!mp)
+    if (!mp) {
         return false;
+    }
 
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));

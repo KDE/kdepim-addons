@@ -51,7 +51,6 @@ TripModel::TripModel(Akonadi::Monitor *monitor, QObject *parent)
     QTimer::singleShot(0, this, SLOT(repopulate()));
 
     connect(this, SIGNAL(modelReset()), SLOT(thisModelReset()));
-
 }
 
 QModelIndex TripModel::index(int row, int column, const QModelIndex &parent) const
@@ -249,7 +248,6 @@ void TripModel::thisRowsRemoved(const QModelIndex &index, int start, int end)
     m_trips.clear();
     m_tripWidgets.clear();
 }
-
 
 QHash<int, QByteArray> TripModel::roleNames() const
 {

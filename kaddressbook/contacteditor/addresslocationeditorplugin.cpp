@@ -23,7 +23,8 @@
 
 #include <QHBoxLayout>
 
-K_PLUGIN_FACTORY_WITH_JSON(AddressLocationEditorFactory, "addresslocationeditorplugin.json", registerPlugin<AddressLocationEditor>();)
+K_PLUGIN_FACTORY_WITH_JSON(AddressLocationEditorFactory, "addresslocationeditorplugin.json", registerPlugin<AddressLocationEditor>();
+                           )
 
 AddressLocationEditor::AddressLocationEditor(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::AbstractAddressLocationWidget(parent)

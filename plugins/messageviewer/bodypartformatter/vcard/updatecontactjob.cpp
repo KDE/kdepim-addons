@@ -85,7 +85,6 @@ void UpdateContactJob::slotUpdateContactDone(KJob *job)
     emitResult();
 }
 
-
 void UpdateContactJob::start()
 {
     if (mEmail.isEmpty()) {
