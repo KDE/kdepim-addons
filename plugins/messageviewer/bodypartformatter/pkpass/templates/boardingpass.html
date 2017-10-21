@@ -1,0 +1,110 @@
+<a name="att{{block.attachmentIndex}}"></a>
+<div id="attachmentDiv{{block.attachmentIndex}}">
+
+<div style="
+    background-color: {{ pass.backgroundColor }};
+    color: {{ pass.foregroundColor }};
+    padding:12px;
+    border-radius:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 332px;
+">
+<!-- header -->
+<div>
+    <table style="border-collapse: collapse;">
+        <tr>
+            <td rowspan="2" style="vertical-align:center;">
+            {% if pass.logoUrl %}
+                <img src="{{ pass.logoUrl }}"/>
+            {% endif %}
+            </td>
+            <td rowspan="2" style="vertical-align:center; font-size:150%; font-weight:bold; width:100%;">{{ pass.logoText }}</td>
+        {% for field in pass.headerFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr>
+        {% for field in pass.headerFields %}
+            <td style="font-size: 150%; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- primary fields -->
+<hr/>
+<div>
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+            <td style="width:50%; white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ pass.primaryFields.0.label }}</td>
+            <td></td>
+            <td style="width:50%; white-space: nowrap; text-align:right; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ pass.primaryFields.1.label }}</td>
+        </tr><tr style="font-size: 200%;">
+            <td style="vertical-align:top; padding-top:0px;">{{ pass.primaryFields.0.value }}</td>
+            <td style="color: {{ pass.labelColor }}; padding-top:0px;">
+                {% if pass.transitType == pass.Air %}
+                    &#9992;
+                {% elif pass.transitType == pass.Bus %} <!-- the Unicode characters for the other transport type are not widely available -->
+                    &rarr;
+                {% elif pass.transitType == pass.Boat %}
+                    &rarr;
+                {% elif pass.transitType == pass.Train %}
+                    &rarr;
+                {% else %}
+                    &rarr;
+                {% endif %}
+            </td>
+            <td style="text-align:right; vertical-align:top; padding-top:0px;">{{ pass.primaryFields.1.value }}</td>
+        </tr>
+    </table>
+</div>
+<!-- auxiliaryFields fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.auxiliaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 150%;">
+        {% for field in pass.auxiliaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- secondary fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.secondaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 150%;">
+        {% for field in pass.secondaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- footer (not included in boarding passes apparently) -->
+<!-- barcode -->
+<div style="background-color: #ffffff; color: #000000; margin-top:8px;">
+    <div style="text-align:center;">
+    {% if pass.barcodeUrl %}
+        <img src="{{ pass.barcodeUrl }}"/>
+    {% else %}
+        Unsupported barcode format.
+    {% endif %}
+    </div>
+    <div style="text-align:center; color: #606060;">{{ pass.barcodeAltText }}</div>
+</div>
+<!-- back fields -->
+<hr/>
+{% for field in pass.backFields %}
+    <div style="color: {{ pass.labelColor }};">{{ field.label }}</div>
+    <div>{{ field.value|safe }}</div>
+{% endfor %}
+</div> <!-- boarding pass -->
+
+</div> <!-- attachment container -->

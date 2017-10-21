@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/org.kde.messageviewer/pkpass">
+        <file alias="boardingpass.html">templates/boardingpass.html</file>
+    </qresource>
+</RCC>
