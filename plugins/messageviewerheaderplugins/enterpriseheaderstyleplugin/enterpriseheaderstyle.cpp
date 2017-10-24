@@ -55,10 +55,10 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     QString linkColor = QStringLiteral("class =\"white\"");
     const QColor activeColor = KColorScheme(QPalette::Active, KColorScheme::Selection).
                                background().color();
-    QColor activeColorDark = activeColor.dark(130);
+    QColor activeColorDark = activeColor.darker(130);
     // reverse colors for encapsulated
     if (!isTopLevel()) {
-        activeColorDark = activeColor.dark(50);
+        activeColorDark = activeColor.darker(50);
         fontColor = QColor(Qt::black);
         linkColor = QStringLiteral("class =\"black\"");
     }
