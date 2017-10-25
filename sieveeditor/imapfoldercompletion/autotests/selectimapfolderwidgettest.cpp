@@ -23,6 +23,7 @@
 #include <QLineEdit>
 #include <QVBoxLayout>
 #include <QTest>
+#include <QToolButton>
 
 SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)
     : QObject(parent)
@@ -47,6 +48,10 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mSearchLineEdit);
     QVERIFY(mSearchLineEdit->isClearButtonEnabled());
     QVERIFY(mSearchLineEdit->text().isEmpty());
+
+    QToolButton *refreshImap = w.findChild<QToolButton *>(QStringLiteral("refreshimap"));
+    QVERIFY(refreshImap);
+    QVERIFY(!refreshImap->toolTip().isEmpty());
 }
 
 QTEST_MAIN(SelectImapFolderWidgetTest)
