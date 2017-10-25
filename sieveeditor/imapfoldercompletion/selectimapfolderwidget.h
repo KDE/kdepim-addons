@@ -67,6 +67,7 @@ private:
     void slotDoubleClicked(const QModelIndex &index);
     void slotSearchPattern(const QString &pattern);
     void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
+    void slotRefreshImap();
 
     KSieveUi::SieveImapAccountSettings mAccount;
     QLineEdit *mSearchLineEdit = nullptr;
