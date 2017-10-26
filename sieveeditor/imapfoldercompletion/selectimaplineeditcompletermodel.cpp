@@ -29,7 +29,9 @@ SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveU
     mFlatProxy = new KDescendantsProxyModel(this);
     mFlatProxy->setDisplayAncestorData(true);
     mFlatProxy->setAncestorSeparator(QStringLiteral("/"));
-    mFlatProxy->setSourceModel(SelectImapFolderModel::self()->folderModel(account));
+    bool modelIsInitalized = false;
+    mFlatProxy->setSourceModel(SelectImapFolderModel::self()->folderModel(account, modelIsInitalized));
+    //TODO
 }
 
 SelectImapLineEditCompleterModel::~SelectImapLineEditCompleterModel()

@@ -36,7 +36,9 @@ void SelectImapFolderModelTest::shouldNotCreateModelIfAccountIsNotValid()
     SelectImapFolderModel model;
     KSieveUi::SieveImapAccountSettings account;
     QVERIFY(!account.isValid());
-    QVERIFY(!model.folderModel(account));
+    bool modelIsInitialized = false;
+    QVERIFY(!model.folderModel(account, modelIsInitialized));
+    QVERIFY(!modelIsInitialized);
 }
 
 QTEST_MAIN(SelectImapFolderModelTest)

@@ -35,7 +35,7 @@ public:
 
     static SelectImapFolderModel *self();
 
-    QStandardItemModel *folderModel(const KSieveUi::SieveImapAccountSettings &account);
+    QStandardItemModel *folderModel(const KSieveUi::SieveImapAccountSettings &account, bool &modelIsInitialized);
 
     void reloadFolderModel(const KSieveUi::SieveImapAccountSettings &account);
 

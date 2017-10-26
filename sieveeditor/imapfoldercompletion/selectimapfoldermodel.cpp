@@ -89,7 +89,7 @@ void SelectImapFolderModel::reloadFolderModel(const KSieveUi::SieveImapAccountSe
     }
 }
 
-QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account)
+QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImapAccountSettings &account, bool &modelIsInitialized)
 {
     QStandardItemModel *model = nullptr;
     if (account.isValid()) {
@@ -99,8 +99,12 @@ QStandardItemModel *SelectImapFolderModel::folderModel(const KSieveUi::SieveImap
             model = new QStandardItemModel(this);
             fillModel(account, model);
             mHashFolderModel.insert(identifier, model);
+            modelIsInitialized = false;
+        } else {
+            modelIsInitialized = true;
         }
     } else {
+        modelIsInitialized = false;
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "account is invalid";
     }
     return model;
