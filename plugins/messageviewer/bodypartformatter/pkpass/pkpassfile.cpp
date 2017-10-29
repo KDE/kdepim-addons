@@ -112,7 +112,8 @@ QImage PkPassFile::barcode() const
     if (!code)
         return {};
     code->setData(msg);
-    return code->toImage(code->minimumSize() * 4);
+    code->toImage(code->minimumSize()); // minimumSize is only available after we rendered once...
+    return code->toImage(code->minimumSize());
 }
 
 QString PkPassFile::barcodeAltText() const
