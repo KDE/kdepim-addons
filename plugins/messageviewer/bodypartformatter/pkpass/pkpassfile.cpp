@@ -239,8 +239,17 @@ bool PkPassFile::parseMessages(const QString &lang)
         return false;
 
     std::unique_ptr<QIODevice> dev(file->createDevice());
-    auto codec = QTextCodec::codecForName("UTF-16BE");
-    const auto catalog = codec->toUnicode(dev->readAll());
+    const auto rawData = dev->readAll();
+    // this should be UTF-16BE, but that doesn't stop Eurowings from using UTF-8,
+    // so do a primitive auto-detection here. UTF-16's first byte would either be the BOM
+    // or \0.
+    QString catalog;
+    if (rawData.at(0) == '"') {
+        catalog = QString::fromUtf8(rawData);
+    } else {
+        auto codec = QTextCodec::codecForName("UTF-16BE");
+        catalog = codec->toUnicode(rawData);
+    }
 
     int idx = 0;
     while (idx < catalog.size()) {
