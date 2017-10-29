@@ -295,7 +295,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
             case typeHome:
                 address = addressee->address(KContacts::Address::Home);
                 phone = addressee->phoneNumber(KContacts::PhoneNumber::Home);
-                if (cellPhones.count() > 0) {
+                if (!cellPhones.isEmpty()) {
                     cell = cellPhones.at(0);
                     if (!cell.isEmpty()) {
                         prefFlag |= 4;
