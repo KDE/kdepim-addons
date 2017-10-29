@@ -103,7 +103,7 @@
 <hr/>
 {% for field in pass.backFields %}
     <div style="color: {{ pass.labelColor }};">{{ field.label }}</div>
-    <div>{{ field.value|safe }}</div>
+    <div>{{ field.value|safe|linebreaksbr }}</div>
 {% endfor %}
 </div> <!-- boarding pass -->
 
