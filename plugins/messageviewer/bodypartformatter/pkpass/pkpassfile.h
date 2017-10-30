@@ -32,7 +32,6 @@
 
 class KZip;
 class QBuffer;
-class QColor;
 class QLatin1String;
 class QString;
 

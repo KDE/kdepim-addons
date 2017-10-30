@@ -24,13 +24,13 @@
 #include <prison/Prison>
 
 #include <QBuffer>
-#include <QDebug>
 #include <QImage>
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
 #include <QLocale>
 #include <QTextCodec>
+#include <QImage>
 
 PkPassFile::PkPassFile(const QString &passType, QObject *parent)
     : QObject(parent)

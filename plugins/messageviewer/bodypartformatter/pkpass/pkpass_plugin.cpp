@@ -30,10 +30,9 @@
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
 
-#include <QDebug>
+#include <QUrl>
 #include <QImage>
 #include <QMetaProperty>
-#include <QUrl>
 
 // Grantlee has no Q_GADGET support yet
 GRANTLEE_BEGIN_LOOKUP(PkPassField)
