@@ -32,8 +32,8 @@
 #include <QLocale>
 #include <QTextCodec>
 
-PkPassFile::PkPassFile(const QString &passType, QObject* parent)
-    : QObject (parent)
+PkPassFile::PkPassFile(const QString &passType, QObject *parent)
+    : QObject(parent)
     , m_passType(passType)
 {
 }
@@ -50,11 +50,12 @@ QJsonObject PkPassFile::passData() const
     return m_passObj.value(m_passType).toObject();
 }
 
-QString PkPassFile::message(const QString& key) const
+QString PkPassFile::message(const QString &key) const
 {
     const auto it = m_messages.constFind(key);
-    if (it != m_messages.constEnd())
+    if (it != m_messages.constEnd()) {
         return it.value();
+    }
     return key;
 }
 
@@ -71,8 +72,9 @@ QString PkPassFile::foregroundColor() const
 QString PkPassFile::labelColor() const
 {
     const auto c = m_passObj.value(QLatin1String("labelColor")).toString();
-    if (!c.isEmpty())
+    if (!c.isEmpty()) {
         return c;
+    }
     return foregroundColor();
 }
 
@@ -84,8 +86,9 @@ QString PkPassFile::logoText() const
 QImage PkPassFile::logo() const
 {
     auto file = m_zip->directory()->file(QStringLiteral("logo.png"));
-    if (!file)
+    if (!file) {
         return {};
+    }
     std::unique_ptr<QIODevice> dev(file->createDevice());
     return QImage::fromData(dev->readAll());
 }
@@ -96,21 +99,23 @@ QImage PkPassFile::barcode() const
     const auto formatName = barcodeData.value(QLatin1String("format")).toString();
     const auto msg = barcodeData.value(QLatin1String("message")).toString();
     // TODO: consider messageEncoding, once Prison supports that
-    if (formatName.isEmpty() || msg.isEmpty())
+    if (formatName.isEmpty() || msg.isEmpty()) {
         return {};
+    }
 
     std::unique_ptr<Prison::AbstractBarcode> code;
-    if (formatName == QLatin1String("PKBarcodeFormatQR"))
+    if (formatName == QLatin1String("PKBarcodeFormatQR")) {
         code.reset(Prison::createBarcode(Prison::QRCode));
-    else if (formatName == QLatin1String("PKBarcodeFormatPDF417"))
-        {} // TODO
-    else if (formatName == QLatin1String("PKBarcodeFormatAztec"))
+    } else if (formatName == QLatin1String("PKBarcodeFormatPDF417")) {
+    }      // TODO
+    else if (formatName == QLatin1String("PKBarcodeFormatAztec")) {
         code.reset(Prison::createBarcode(Prison::Aztec));
-    else if (formatName == QLatin1String("PKBarcodeFormatCode128"))
-        {} // TODO
+    } else if (formatName == QLatin1String("PKBarcodeFormatCode128")) {
+    }      // TODO
 
-    if (!code)
+    if (!code) {
         return {};
+    }
     code->setData(msg);
     code->toImage(code->minimumSize()); // minimumSize is only available after we rendered once...
     return code->toImage(code->minimumSize());
@@ -146,29 +151,33 @@ QVector<PkPassField> PkPassFile::secondaryFields() const
     return fields(QLatin1String("secondaryFields"));
 }
 
-PkPassFile* PkPassFile::fromData(const QByteArray &data, QObject *parent)
+PkPassFile *PkPassFile::fromData(const QByteArray &data, QObject *parent)
 {
     std::unique_ptr<QBuffer> buffer(new QBuffer);
     buffer->setData(data);
     buffer->open(QBuffer::ReadOnly);
 
     std::unique_ptr<KZip> zip(new KZip(buffer.get()));
-    if (!zip->open(QIODevice::ReadOnly))
+    if (!zip->open(QIODevice::ReadOnly)) {
         return nullptr;
+    }
 
     // extract pass.json
     auto file = zip->directory()->file(QStringLiteral("pass.json"));
-    if (!file)
+    if (!file) {
         return nullptr;
+    }
     std::unique_ptr<QIODevice> dev(file->createDevice());
     const auto passObj = QJsonDocument::fromJson(dev->readAll()).object();
 
     PkPassFile *pass = nullptr;
-    if (passObj.contains(QLatin1String("boardingPass")))
+    if (passObj.contains(QLatin1String("boardingPass"))) {
         pass = new PkPassBoardingPass(parent);
+    }
     // TODO: coupon, eventTicket, storeCard, generic
-    else
+    else {
         pass = new PkPassFile(QStringLiteral("generic"), parent);
+    }
 
     pass->m_buffer = std::move(buffer);
     pass->m_zip = std::move(zip);
@@ -182,20 +191,24 @@ void PkPassFile::parse()
     // find the message catalog
     auto lang = QLocale().name();
     auto idx = lang.indexOf(QLatin1Char('_'));
-    if (idx > 0)
+    if (idx > 0) {
         lang = lang.left(idx);
+    }
     lang += QLatin1String(".lproj");
-    if (!parseMessages(lang))
+    if (!parseMessages(lang)) {
         parseMessages(QStringLiteral("en.lproj"));
+    }
 }
 
 static int indexOfUnquoted(const QString &catalog, QLatin1Char c, int start)
 {
     for (int i = start; i < catalog.size(); ++i) {
-        if (catalog.at(i) == c)
+        if (catalog.at(i) == c) {
             return i;
-        if (catalog.at(i) == QLatin1Char('\\'))
+        }
+        if (catalog.at(i) == QLatin1Char('\\')) {
             ++i;
+        }
     }
 
     return -1;
@@ -230,13 +243,15 @@ static QString unquote(const QStringRef &str)
 bool PkPassFile::parseMessages(const QString &lang)
 {
     auto entry = m_zip->directory()->entry(lang);
-    if (!entry || !entry->isDirectory())
+    if (!entry || !entry->isDirectory()) {
         return false;
+    }
 
-    auto dir = dynamic_cast<const KArchiveDirectory*>(entry);
+    auto dir = dynamic_cast<const KArchiveDirectory *>(entry);
     auto file = dir->file(QStringLiteral("pass.strings"));
-    if (!file)
+    if (!file) {
         return false;
+    }
 
     std::unique_ptr<QIODevice> dev(file->createDevice());
     const auto rawData = dev->readAll();
@@ -255,19 +270,23 @@ bool PkPassFile::parseMessages(const QString &lang)
     while (idx < catalog.size()) {
         // key
         const auto keyBegin = indexOfUnquoted(catalog, QLatin1Char('"'), idx) + 1;
-        if (keyBegin < 1)
+        if (keyBegin < 1) {
             break;
+        }
         const auto keyEnd = indexOfUnquoted(catalog, QLatin1Char('"'), keyBegin);
-        if (keyEnd <= keyBegin)
+        if (keyEnd <= keyBegin) {
             break;
+        }
 
         // value
         const auto valueBegin = indexOfUnquoted(catalog, QLatin1Char('"'), keyEnd + 2) + 1; // there's at least also the '='
-        if (valueBegin <= keyEnd)
+        if (valueBegin <= keyEnd) {
             break;
+        }
         const auto valueEnd = indexOfUnquoted(catalog, QLatin1Char('"'), valueBegin);
-        if (valueEnd <= valueBegin)
+        if (valueEnd <= valueBegin) {
             break;
+        }
 
         const auto key = catalog.mid(keyBegin, keyEnd - keyBegin);
         const auto value = unquote(catalog.midRef(valueBegin, valueEnd - valueBegin));
@@ -283,7 +302,8 @@ QVector<PkPassField> PkPassFile::fields(const QLatin1String &fieldType) const
     const auto a = passData().value(fieldType).toArray();
     QVector<PkPassField> f;
     f.reserve(a.size());
-    foreach (const auto &v, a)
+    foreach (const auto &v, a) {
         f.push_back(PkPassField{v.toObject(), this});
+    }
     return f;
 }

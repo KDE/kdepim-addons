@@ -21,7 +21,7 @@
 
 #include <QDebug>
 
-PkPassBoardingPass::PkPassBoardingPass(QObject* parent)
+PkPassBoardingPass::PkPassBoardingPass(QObject *parent)
     : PkPassFile(QStringLiteral("boardingPass"), parent)
 {
 }
@@ -29,13 +29,14 @@ PkPassBoardingPass::PkPassBoardingPass(QObject* parent)
 PkPassBoardingPass::TransitType PkPassBoardingPass::transitType() const
 {
     const auto t = passData().value(QLatin1String("transitType")).toString();
-    if (t == QLatin1String("PKTransitTypeAir"))
+    if (t == QLatin1String("PKTransitTypeAir")) {
         return Air;
-    else if (t == QLatin1String("PKTransitTypeBoat"))
+    } else if (t == QLatin1String("PKTransitTypeBoat")) {
         return Boat;
-    else if (t == QLatin1String("PKTransitTypeBus"))
+    } else if (t == QLatin1String("PKTransitTypeBus")) {
         return Bus;
-    else if (t == QLatin1String("PKTransitTypeTrain"))
+    } else if (t == QLatin1String("PKTransitTypeTrain")) {
         return Train;
+    }
     return Generic;
 }

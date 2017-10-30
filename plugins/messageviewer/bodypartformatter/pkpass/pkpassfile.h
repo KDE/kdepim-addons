@@ -77,7 +77,7 @@ public:
     QVector<PkPassField> secondaryFields() const;
 
     /** Create a appropriate sub-class based on the pkpass file type. */
-    static PkPassFile* fromData(const QByteArray &data, QObject *parent = nullptr);
+    static PkPassFile *fromData(const QByteArray &data, QObject *parent = nullptr);
 
 protected:
     explicit PkPassFile(const QString &passType, QObject *parent = nullptr);

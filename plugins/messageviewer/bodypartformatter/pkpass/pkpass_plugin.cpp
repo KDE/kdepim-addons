@@ -37,11 +37,12 @@
 
 // Grantlee has no Q_GADGET support yet
 GRANTLEE_BEGIN_LOOKUP(PkPassField)
-    const auto idx = PkPassField::staticMetaObject.indexOfProperty(property.toUtf8().constData());
-    if (idx < 0)
-        return {};
-    const auto mp = PkPassField::staticMetaObject.property(idx);
-    return mp.readOnGadget(&object);
+const auto idx = PkPassField::staticMetaObject.indexOfProperty(property.toUtf8().constData());
+if (idx < 0) {
+    return {};
+}
+const auto mp = PkPassField::staticMetaObject.property(idx);
+return mp.readOnGadget(&object);
 GRANTLEE_END_LOOKUP
 
 namespace {
@@ -57,9 +58,9 @@ public:
         }
 
         std::unique_ptr<PkPassFile> pass(PkPassFile::fromData(msgPart->content()->decodedContent()));
-        if (!qobject_cast<PkPassBoardingPass*>(pass.get()))
+        if (!qobject_cast<PkPassBoardingPass *>(pass.get())) {
             return false; // only boarding passes implemented so far
-
+        }
         const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
         const auto logo = pass->logo();
         if (!logo.isNull()) {
@@ -99,12 +100,11 @@ public:
         Grantlee::registerMetaType<PkPassField>();
     }
 
-    MessageViewer::MessagePartRendererBase* renderer(int index) override
+    MessageViewer::MessagePartRendererBase *renderer(int index) override
     {
         return index == 0 ? new Formatter() : nullptr;
     }
 };
-
 }
 
 #include "pkpass_plugin.moc"
