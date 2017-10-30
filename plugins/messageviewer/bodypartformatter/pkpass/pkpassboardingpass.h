@@ -37,8 +37,8 @@ public:
     };
     Q_ENUM(TransitType)
 
-    PkPassBoardingPass(QObject *parent = nullptr);
-    ~PkPassBoardingPass();
+    explicit PkPassBoardingPass(QObject *parent = nullptr);
+    ~PkPassBoardingPass() = default;
 
     TransitType transitType() const;
 };

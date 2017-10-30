@@ -33,9 +33,9 @@ class PkPassField
     Q_PROPERTY(QString label READ label CONSTANT)
     Q_PROPERTY(QString value READ value CONSTANT)
 public:
-    PkPassField();
+    PkPassField() = default;
     explicit PkPassField(const QJsonObject &obj, const PkPassFile *file);
-    ~PkPassField();
+    ~PkPassField() = default;
 
     QString label() const;
     QString value() const;

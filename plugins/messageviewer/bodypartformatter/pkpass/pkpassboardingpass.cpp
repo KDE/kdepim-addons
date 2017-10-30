@@ -26,8 +26,6 @@ PkPassBoardingPass::PkPassBoardingPass(QObject* parent)
 {
 }
 
-PkPassBoardingPass::~PkPassBoardingPass() = default;
-
 PkPassBoardingPass::TransitType PkPassBoardingPass::transitType() const
 {
     const auto t = passData().value(QLatin1String("transitType")).toString();

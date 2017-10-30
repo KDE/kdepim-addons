@@ -22,15 +22,11 @@
 
 #include <QJsonObject>
 
-PkPassField::PkPassField() = default;
-
 PkPassField::PkPassField(const QJsonObject& obj, const PkPassFile *file)
 {
     m_label = file->message(obj.value(QLatin1String("label")).toString());
     m_value = file->message(obj.value(QLatin1String("value")).toString());
 }
-
-PkPassField::~PkPassField() = default;
 
 QString PkPassField::label() const
 {
