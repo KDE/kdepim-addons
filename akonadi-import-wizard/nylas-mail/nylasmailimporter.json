@@ -1,0 +1,31 @@
+{
+    "KPlugin": {
+        "Id": "gearyimporter",
+        "Name": "Geary Importer",
+        "Name[ca@valencia]": "Importador del Geary",
+        "Name[ca]": "Importador del Geary",
+        "Name[cs]": "Importér Geary",
+        "Name[de]": "Import-Modul für Geary",
+        "Name[es]": "Importador Geary",
+        "Name[fr]": "Import Geary",
+        "Name[it]": "Importatore da Geary",
+        "Name[nl]": "Geary-importeur",
+        "Name[pl]": "Importer Geary",
+        "Name[pt]": "Importador do Geary",
+        "Name[sk]": "Importér Geary",
+        "Name[sl]": "Uvoznik iz programa Geary",
+        "Name[sr@ijekavian]": "Увозник из Гирија",
+        "Name[sr@ijekavianlatin]": "Uvoznik iz Gearyja",
+        "Name[sr@latin]": "Uvoznik iz Gearyja",
+        "Name[sr]": "Увозник из Гирија",
+        "Name[sv]": "Geary-importverktyg",
+        "Name[tr]": "Geary İçe Aktarıcı",
+        "Name[uk]": "Засіб імпортування з Geary",
+        "Name[x-test]": "xxGeary Importerxx",
+        "Name[zh_CN]": "Geary 导入器",
+        "ServiceTypes": [
+            "ImportWizard/PluginMailImporter"
+        ],
+        "Version": "1.0"
+    }
+}
