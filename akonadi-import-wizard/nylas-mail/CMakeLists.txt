@@ -1,5 +1,6 @@
 set(nylasmailimporter_SRCS
    nylasmailsettings.cpp
+   nylasmaildata.cpp
 )
 
 ecm_qt_declare_logging_category(nylasmailimporter_SRCS HEADER nylasmailplugin_debug.h IDENTIFIER NYLASMAILPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.nylasmailplugin)
