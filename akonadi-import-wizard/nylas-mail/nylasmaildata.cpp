@@ -86,7 +86,8 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions NylasMailImportData::sup
 {
     TypeSupportedOptions options;
     //options |=LibImportWizard::AbstractImporter::Mails;
-    options |= LibImportWizard::AbstractImporter::Settings;
+    //Disable it for the moment
+    //options |= LibImportWizard::AbstractImporter::Settings;
     //options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }

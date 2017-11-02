@@ -49,19 +49,10 @@ void GearySettings::readImapAccount()
 {
     QMap<QString, QVariant> newSettings;
 
-    QString name;
-
-    name = settings->value(QStringLiteral("imap_host")).toString();
+    QString name = settings->value(QStringLiteral("imap_host")).toString();
     if (!name.isEmpty()) {
         newSettings.insert(QStringLiteral("ImapServer"), name);
     }
-#if 0
-    imap_host=hostname
-    imap_port=143
-    imap_ssl=false
-    imap_starttls=true
-    imap_username=username
-#endif
 
     const QString username = settings->value(QStringLiteral("imap_username")).toString();
     newSettings.insert(QStringLiteral("UserName"), username);
@@ -117,48 +108,7 @@ void GearySettings::readTransport()
         storeTransport(mt, true);   //only one smtp for the moment
     }
 #if 0
-    smtp_host = smtp.bla.bla
-            smtp_port = 465
-            smtp_ssl = true
-            smtp_starttls = false
             smtp_use_imap_credentials = false
-            smtp_noauth = true
-#endif
-#if 0
-    const QString smtpMethod = settings->value(QStringLiteral("msa.method")).toString();
-    if (!smtpMethod.isEmpty()) {
-        MailTransport::Transport *mt = createTransport();
-        if (smtpMethod == QLatin1String("IMAP-SENDMAIL")) {
-            //see http://tools.ietf.org/html/draft-kundrat-imap-submit-01
-        } else if (smtpMethod == QLatin1String("SMTP") || smtpMethod == QLatin1String("SSMTP")) {
-            if (settings->contains(QStringLiteral("msa.smtp.host"))) {
-                mt->setHost(settings->value(QStringLiteral("msa.smtp.host")).toString());
-            }
-            if (settings->contains(QStringLiteral("msa.smtp.port"))) {
-                mt->setPort(settings->value(QStringLiteral("msa.smtp.port")).toInt());
-            }
-            if (settings->contains(QStringLiteral("msa.smtp.auth"))) {
-                if (settings->value(QStringLiteral("msa.smtp.auth")).toBool()) {
-                    if (settings->contains(QStringLiteral("msa.smtp.auth.user"))) {
-                        mt->setUserName(settings->value(QStringLiteral("msa.smtp.auth.user")).toString());
-                    }
-                    if (settings->contains(QStringLiteral("msa.smtp.auth.pass"))) {
-                        mt->setPassword(settings->value(QStringLiteral("msa.smtp.auth.pass")).toString());
-                    }
-                }
-            }
-
-            if (settings->contains(QStringLiteral("msa.smtp.starttls"))) {
-                if (settings->value(QStringLiteral("msa.smtp.starttls")).toBool()) {
-                    mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
-                }
-            }
-            mt->setType(MailTransport::Transport::EnumType::SMTP);
-        } else {
-            qCWarning(IMPORTWIZARD_LOG) << " smtpMethod unknown " << smtpMethod;
-        }
-        storeTransport(mt, true);   //only one smtp for the moment
-    }
 #endif
 }
 
@@ -185,7 +135,7 @@ void GearySettings::readIdentity()
             identity->setSignature(signature);
         }
 
-        //TODO add "nickname=bli@kde.org"
+        //Implement  "nickname=bli@kde.org" ?
         storeIdentity(identity);
     }
 }
