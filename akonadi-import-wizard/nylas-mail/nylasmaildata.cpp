@@ -60,10 +60,10 @@ bool NylasMailImportData::importMails()
 
 bool NylasMailImportData::importSettings()
 {
-    /*
     QDir directory(mPath);
     const QStringList lstDir = directory.entryList(QDir::AllDirs);
-    qCDebug(NylasMailPLUGIN_LOG) << "Number of directory " << lstDir.count();
+    qCDebug(NYLASMAILPLUGIN_LOG) << "Number of directory " << lstDir.count();
+    /*
     const QString configName = QStringLiteral("NylasMail.ini");
     for (int i = 0; i < lstDir.count(); ++i) {
         const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
