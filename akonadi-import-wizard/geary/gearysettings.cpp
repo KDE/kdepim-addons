@@ -55,6 +55,16 @@ void GearySettings::readImapAccount()
     if (!name.isEmpty()) {
         newSettings.insert(QStringLiteral("ImapServer"), name);
     }
+#if 0
+    imap_host=hostname
+    imap_port=143
+    imap_ssl=false
+    imap_starttls=true
+    imap_username=username
+#endif
+
+    const QString username = settings->value(QStringLiteral("imap_username")).toString();
+    newSettings.insert(QStringLiteral("UserName"), username);
 
     const int port = settings->value(QStringLiteral("imap_port"), -1).toInt();
     if (port > -1) {
@@ -67,10 +77,11 @@ void GearySettings::readImapAccount()
             newSettings.insert(QStringLiteral("Safety"), QStringLiteral("STARTTLS"));
         }
     }
-
-    const QString userName = settings->value(QStringLiteral("imap_username")).toString();
-    if (!userName.isEmpty()) {
-        newSettings.insert(QStringLiteral("Username"), userName);
+    if (settings->contains(QStringLiteral("imap_ssl"))) {
+        const bool useSSL = settings->value(QStringLiteral("imap_ssl")).toBool();
+        if (useSSL) {
+            newSettings.insert(QStringLiteral("Safety"), QStringLiteral("SSL"));
+        }
     }
 
     if (!name.isEmpty()) {
@@ -93,7 +104,13 @@ void GearySettings::readTransport()
         }
 
         if (!settings->value(QStringLiteral("smtp_noauth"), true).toBool()) {
-            //TODO auth
+            mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
+        }
+        if (settings->value(QStringLiteral("smtp_ssl"), true).toBool()) {
+            mt->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
+        }
+        if (settings->value(QStringLiteral("smtp_starttls"), true).toBool()) {
+            mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
         }
 
         //ADD more settings
