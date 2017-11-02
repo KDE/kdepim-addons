@@ -87,10 +87,15 @@ void GearySettings::readTransport()
         MailTransport::Transport *mt = createTransport();
         mt->setIdentifier(QStringLiteral("SMTP"));
         mt->setHost(host);
-        const int port = settings->value(QStringLiteral("msa.smtp.port"), -1).toInt();
+        const int port = settings->value(QStringLiteral("smtp_port"), -1).toInt();
         if (port != -1) {
             mt->setPort(port);
         }
+
+        if (!settings->value(QStringLiteral("smtp_noauth"), true).toBool()) {
+            //TODO auth
+        }
+
         //ADD more settings
         storeTransport(mt, true);   //only one smtp for the moment
     }
