@@ -103,13 +103,13 @@ void GearySettings::readTransport()
         if (settings->value(QStringLiteral("smtp_starttls"), true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
         }
+        if (settings->value(QStringLiteral("smtp_use_imap_credentials"), true).toBool()) {
+            //TODO store value
+        }
 
         //ADD more settings
         storeTransport(mt, true);   //only one smtp for the moment
     }
-#if 0
-            smtp_use_imap_credentials = false
-#endif
 }
 
 void GearySettings::readIdentity()
