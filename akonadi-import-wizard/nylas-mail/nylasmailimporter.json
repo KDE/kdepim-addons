@@ -2,6 +2,10 @@
     "KPlugin": {
         "Id": "nylasmailimporter",
         "Name": "Nylas Mail Importer",
+        "Name[ca]": "Importador del Nylas Mail",
+        "Name[nl]": "Nylas-e-mail-importeur",
+        "Name[uk]": "Засіб імпортування з Nylas",
+        "Name[x-test]": "xxNylas Mail Importerxx",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
         ],
