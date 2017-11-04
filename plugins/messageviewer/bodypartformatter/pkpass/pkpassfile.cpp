@@ -95,7 +95,9 @@ QImage PkPassFile::logo() const
 
 QImage PkPassFile::barcode() const
 {
-    const auto barcodeData = data().value(QLatin1String("barcode")).toObject();
+    auto barcodeData = data().value(QLatin1String("barcodes")).toArray().at(0).toObject();
+    if (barcodeData.isEmpty())
+        barcodeData = data().value(QLatin1String("barcode")).toObject();
     const auto formatName = barcodeData.value(QLatin1String("format")).toString();
     const auto msg = barcodeData.value(QLatin1String("message")).toString();
     // TODO: consider messageEncoding, once Prison supports that
@@ -123,7 +125,10 @@ QImage PkPassFile::barcode() const
 
 QString PkPassFile::barcodeAltText() const
 {
-    return data().value(QLatin1String("barcode")).toObject().value(QLatin1String("altText")).toString();
+    auto barcodeData = data().value(QLatin1String("barcodes")).toArray().at(0).toObject();
+    if (barcodeData.isEmpty())
+        barcodeData = data().value(QLatin1String("barcode")).toObject();
+    return barcodeData.value(QLatin1String("altText")).toString();
 }
 
 QVector<PkPassField> PkPassFile::auxiliaryFields() const
