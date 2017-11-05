@@ -19,6 +19,7 @@
 
 #include "pkpassfile.h"
 #include "pkpassboardingpass.h"
+#include "pkpass_debug.h"
 
 #include <KZip>
 #include <prison/Prison>
@@ -109,11 +110,15 @@ QImage PkPassFile::barcode() const
     if (formatName == QLatin1String("PKBarcodeFormatQR")) {
         code.reset(Prison::createBarcode(Prison::QRCode));
     } else if (formatName == QLatin1String("PKBarcodeFormatPDF417")) {
-    }      // TODO
+        // TODO
+    }
     else if (formatName == QLatin1String("PKBarcodeFormatAztec")) {
         code.reset(Prison::createBarcode(Prison::Aztec));
     } else if (formatName == QLatin1String("PKBarcodeFormatCode128")) {
-    }      // TODO
+        // TODO
+    } else {
+        qCDebug(PKPASS_LOG) << "Unknown formatName: " << formatName;
+    }
 
     if (!code) {
         return {};
