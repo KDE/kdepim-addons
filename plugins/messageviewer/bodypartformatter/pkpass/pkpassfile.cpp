@@ -257,7 +257,7 @@ bool PkPassFile::parseMessages(const QString &lang)
         return false;
     }
 
-    auto dir = dynamic_cast<const KArchiveDirectory *>(entry);
+    auto dir = static_cast<const KArchiveDirectory *>(entry);
     auto file = dir->file(QStringLiteral("pass.strings"));
     if (!file) {
         return false;
