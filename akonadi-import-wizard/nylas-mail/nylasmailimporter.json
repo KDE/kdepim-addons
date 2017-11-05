@@ -4,6 +4,11 @@
         "Name": "Nylas Mail Importer",
         "Name[ca]": "Importador del Nylas Mail",
         "Name[nl]": "Nylas-e-mail-importeur",
+        "Name[pt]": "Importador do Nylas Mail",
+        "Name[sr@ijekavian]": "Увозник из Најласове поште",
+        "Name[sr@ijekavianlatin]": "Uvoznik iz Nylasove pošte",
+        "Name[sr@latin]": "Uvoznik iz Nylasove pošte",
+        "Name[sr]": "Увозник из Најласове поште",
         "Name[uk]": "Засіб імпортування з Nylas",
         "Name[x-test]": "xxNylas Mail Importerxx",
         "ServiceTypes": [
