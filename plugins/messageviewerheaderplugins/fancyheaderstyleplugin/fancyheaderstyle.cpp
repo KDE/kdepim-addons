@@ -186,25 +186,6 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                          .arg(mHeaderStyleUtil.directionOf(mHeaderStyleUtil.dateStr(message->date()->dateTime())))
                          .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
     }
-    if (MessageViewer::MessageViewerSettings::self()->showUserAgent()) {
-        if (strategy->showHeader(QStringLiteral("user-agent"))) {
-            if (auto hdr = message->userAgent(false)) {
-                headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                                "<td>%2</td></tr>\n")
-                                 .arg(i18n("User-Agent: "))
-                                 .arg(mHeaderStyleUtil.strToHtml(hdr->asUnicodeString())));
-            }
-        }
-
-        if (strategy->showHeader(QStringLiteral("x-mailer"))) {
-            if (auto hrd = message->headerByType("X-Mailer")) {
-                headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
-                                                "<td>%2</td></tr>\n")
-                                 .arg(i18n("X-Mailer: "))
-                                 .arg(mHeaderStyleUtil.strToHtml(hrd->asUnicodeString())));
-            }
-        }
-    }
 
     if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
         if (message->hasHeader("X-Bugzilla-URL")) {
