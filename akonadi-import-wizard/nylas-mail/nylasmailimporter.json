@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "nylasmailimporter",
         "Name": "Nylas Mail Importer",
+        "Name[ca@valencia]": "Importador del Nylas Mail",
         "Name[ca]": "Importador del Nylas Mail",
         "Name[nl]": "Nylas-e-mail-importeur",
         "Name[pt]": "Importador do Nylas Mail",
