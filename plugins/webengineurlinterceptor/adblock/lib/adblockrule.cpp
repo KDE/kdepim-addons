@@ -99,7 +99,7 @@ AdBlockRule::AdBlockRule(const QString &filter, AdBlockSubscription *subscriptio
     , m_isEnabled(true)
     , m_isException(false)
     , m_isInternalDisabled(false)
-    , m_regExp(0)
+    , m_regExp(nullptr)
 {
     setFilter(filter);
 }
@@ -202,7 +202,7 @@ void AdBlockRule::setEnabled(bool enabled)
 
 bool AdBlockRule::isSlow() const
 {
-    return m_regExp != 0;
+    return m_regExp != nullptr;
 }
 
 bool AdBlockRule::isInternalDisabled() const
