@@ -145,6 +145,8 @@ public:
     int addRule(AdBlockRule *rule) override;
     bool removeRule(int offset) override;
     const AdBlockRule *replaceRule(AdBlockRule *rule, int offset) override;
+private:
+    QByteArray readAllFileByteContents(const QString &filename);
 };
 }
 

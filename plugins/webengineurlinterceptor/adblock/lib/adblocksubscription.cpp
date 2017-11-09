@@ -332,15 +332,14 @@ AdBlockCustomList::AdBlockCustomList(QObject *parent)
 
 void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
 {
-#if 0
     // DuckDuckGo ad whitelist rules
     // They cannot be removed, but can be disabled.
     // Please consider not disabling them. Thanks!
 
-    const QString ddg1 = QSL("@@||duckduckgo.com^$document");
-    const QString ddg2 = QSL("duckduckgo.com#@#.has-ad");
+    const QString ddg1 = QStringLiteral("@@||duckduckgo.com^$document");
+    const QString ddg2 = QStringLiteral("duckduckgo.com#@#.has-ad");
 
-    const QString rules = QzTools::readAllFileContents(filePath());
+    const QString rules = QString::fromUtf8(readAllFileByteContents(filePath()));
 
     QFile file(filePath());
     if (file.open(QFile::WriteOnly | QFile::Append)) {
@@ -358,11 +357,20 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
     file.close();
 
     AdBlockSubscription::loadSubscription(disabledRules);
-#else
-    Q_UNUSED(disabledRules);
-#endif
 }
 
+QByteArray AdBlockCustomList::readAllFileByteContents(const QString &filename)
+{
+    QFile file(filename);
+
+    if (!filename.isEmpty() && file.open(QFile::ReadOnly)) {
+        const QByteArray a = file.readAll();
+        file.close();
+        return a;
+    }
+
+    return QByteArray();
+}
 void AdBlockCustomList::saveSubscription()
 {
     QFile file(filePath());

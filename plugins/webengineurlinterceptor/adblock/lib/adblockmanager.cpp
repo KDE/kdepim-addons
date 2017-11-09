@@ -46,7 +46,6 @@ void AdblockManager::reloadConfig()
     loadSubscriptions();
     bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
-    qDebug() << " void AdblockManager::reloadConfig()" << enabled << "  " << this;
 }
 
 void AdblockManager::loadSubscriptions()
