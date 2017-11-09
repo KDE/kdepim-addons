@@ -70,6 +70,7 @@
 #include <QFile>
 #include <QTimer>
 #include <QNetworkReply>
+#include <QStandardPaths>
 using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
@@ -326,9 +327,7 @@ AdBlockSubscription::~AdBlockSubscription()
 AdBlockCustomList::AdBlockCustomList(QObject *parent)
     : AdBlockSubscription(i18n("Custom Rules"), parent)
 {
-#if 0
-    setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/customlist.txt"));
-#endif
+    setFilePath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock/customlist.txt"));
 }
 
 void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)

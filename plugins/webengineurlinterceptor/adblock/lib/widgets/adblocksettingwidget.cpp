@@ -470,7 +470,7 @@ void AdBlockSettingWidget::slotImportFilters()
 void AdBlockSettingWidget::addManualFilter(const QString &text, const QStringList &excludeRules)
 {
     QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
-    subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
+    subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
     subItem->setCheckState(excludeRules.contains(text) ? Qt::Unchecked : Qt::Checked);
     subItem->setText(text);
 }
