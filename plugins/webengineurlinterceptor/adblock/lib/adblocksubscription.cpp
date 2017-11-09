@@ -64,6 +64,7 @@
 //#include "datapaths.h"
 #include "adblockutil.h"
 //#include "followredirectreply.h"
+#include "adblockinterceptor_debug.h"
 
 #include <KLocalizedString>
 #include <QFile>
@@ -114,7 +115,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     }
 
     if (!file.open(QFile::ReadOnly)) {
-        qWarning() << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for reading" << m_filePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for reading" << m_filePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
@@ -127,7 +128,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     QString header = textStream.readLine(1024);
 
     if (!header.startsWith(QLatin1String("[Adblock")) || m_title.isEmpty()) {
-        qWarning() << "AdBlockSubscription::" << __FUNCTION__ << "invalid format of adblock file" << m_filePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "invalid format of adblock file" << m_filePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
@@ -205,7 +206,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
     QFile file(m_filePath);
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
-        qWarning() << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << m_filePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << m_filePath;
         return false;
     }
 
@@ -376,7 +377,7 @@ void AdBlockCustomList::saveSubscription()
     QFile file(filePath());
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
-        qWarning() << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << filePath();
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << filePath();
         return;
     }
 

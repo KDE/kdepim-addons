@@ -32,7 +32,7 @@
 * ============================================================ */
 #include "adblocksearchtree.h"
 #include "adblockrule.h"
-#include <QDebug>
+#include "adblockinterceptor_debug.h"
 #include <QWebEngineUrlRequestInfo>
 using namespace AdBlock;
 
@@ -62,7 +62,7 @@ bool AdBlockSearchTree::add(const AdBlockRule *rule)
     int len = filter.size();
 
     if (len <= 0) {
-        qDebug() << "AdBlockSearchTree: Inserting rule with filter len <= 0!";
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSearchTree: Inserting rule with filter len <= 0!";
         return false;
     }
 
