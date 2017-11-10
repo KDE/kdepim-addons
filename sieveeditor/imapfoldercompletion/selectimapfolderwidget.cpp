@@ -84,7 +84,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     QToolButton *refreshImap = new QToolButton(this);
     refreshImap->setObjectName(QStringLiteral("refreshimap"));
     refreshImap->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
-    refreshImap->setToolTip(i18n("Refresh Imap Folder List"));
+    refreshImap->setToolTip(i18n("Refresh IMAP Folder List"));
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);
 
