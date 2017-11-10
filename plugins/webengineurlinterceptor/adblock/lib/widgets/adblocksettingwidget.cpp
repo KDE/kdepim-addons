@@ -193,6 +193,11 @@ void AdBlockSettingWidget::removeRule()
     if (select.isEmpty()) {
         return;
     }
+    if (KMessageBox::No == KMessageBox::warningYesNo(this,
+                                                     i18np("Do you want to remove this rule?", "Do you want to remove theses rules?", select.count()),
+                                                     i18n("Remove"))) {
+            return;
+    }
     for (QListWidgetItem *item : select) {
         delete item;
     }

@@ -92,6 +92,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
+    qWarning() << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
     //TODO
 }
 
