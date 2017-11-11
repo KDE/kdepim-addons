@@ -19,6 +19,7 @@
 
 #include "semanticprocessor.h"
 #include "semanticrenderer.h"
+#include "semanticurlhandler.h"
 
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -49,7 +50,8 @@ public:
 
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
-        Q_UNUSED(idx);
+        if (idx == 0)
+            return new SemanticUrlHandler();
         return nullptr;
     }
 };
