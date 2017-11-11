@@ -18,11 +18,13 @@
 */
 
 #include "semanticprocessor.h"
+#include "jsonlddocument.h"
 #include "structureddataextractor.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
 #include <QDebug>
+#include <QJsonDocument>
 
 MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
 {
@@ -38,7 +40,13 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     extractor.parse(part.content()->decodedText());
     memento = new SemanticMemento;
     nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
-    memento->setData(extractor.data());
+
+    const auto data = extractor.data();
+    const auto decodedData = JsonLdDocument::fromJson(data);
+    if (data.size() != decodedData.size()) {
+        qCDebug(SEMANTIC_LOG) << "Unhandled content:" << QJsonDocument(data).toJson();
+    }
+    memento->setData(decodedData);
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
 }

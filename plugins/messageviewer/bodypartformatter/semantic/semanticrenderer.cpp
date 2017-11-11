@@ -19,7 +19,6 @@
 
 #include "semanticrenderer.h"
 #include "datatypes.h"
-#include "jsonlddocument.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
@@ -31,7 +30,6 @@
 
 #include <QDebug>
 #include <QGuiApplication>
-#include <QJsonDocument>
 #include <QMetaProperty>
 #include <QPalette>
 
@@ -81,14 +79,8 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mim
     if (!memento || memento->isEmpty())
         return false;
 
-    const auto decodedData = JsonLdDocument::fromJson(memento->data());
-    if (decodedData.isEmpty()) {
-        qCDebug(SEMANTIC_LOG) << "Unhandled content:" << QJsonDocument(memento->data()).toJson();
-        return false;
-    }
-
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-    c.insert(QStringLiteral("data"), decodedData);
+    c.insert(QStringLiteral("data"), QVariant::fromValue(memento->data()));
 
     const auto pal = qGuiApp->palette();
     QVariantMap style;
