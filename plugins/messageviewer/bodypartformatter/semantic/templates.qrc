@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/org.kde.messageviewer/semantic">
+        <file alias="semantic.html">templates/semantic.html</file>
+        <file alias="flightreservation.html">templates/flightreservation.html</file>
+        <file alias="lodgingreservation.html">templates/lodgingreservation.html</file>
+    </qresource>
+</RCC>

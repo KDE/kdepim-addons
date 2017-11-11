@@ -25,4 +25,5 @@ org.kde.pim.gnupgwks kdepim-addons (OpenPGP and GnuPG WKS body part formatter pl
 org.kde.pim.imapfoldercompletion kdepim-addons (SieveEditor imap completion folder)
 org.kde.pim.regexpeditorlineedit kdepim-addons (SieveEditor Regexp Editor plugin)
 org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact editor)
-org.kde.pim.pkpass ldepim-addons (pkpass formater)
+org.kde.pim.pkpass kdepim-addons (pkpass formater)
+org.kde.pim.messageviewer.semantic kdepim-addons (Semantic plugin)

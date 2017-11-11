@@ -1,0 +1,12 @@
+<div style="margin: 0px 5%; padding: 10px; border: 2px solid {{ style.frameColor }}; margin-bottom:10px;">
+{% for item in data %}
+    {% if item.className == "FlightReservation" %}
+        {% include ":/org.kde.messageviewer/semantic/flightreservation.html" %}
+    {% elif item.className == "LodgingReservation" %}
+        {% include ":/org.kde.messageviewer/semantic/lodgingreservation.html" %}
+    {% endif %}
+    {% if not forloop.last %}
+        <hr/>
+    {% endif %}
+{% endfor %}
+</div>

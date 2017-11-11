@@ -42,3 +42,13 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
 endmacro ()
 
 add_diff_bodyformatter_class_unittest(diffhighlightertest.cpp "../highlighter/highlighter.cpp")
+
+add_definitions(-DSOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}" )
+include_directories(${CMAKE_CURRENT_BINARY_DIR}/../semantic/)
+ecm_add_test(
+    structureddataextractortest.cpp
+    ${CMAKE_CURRENT_BINARY_DIR}/../semantic/semantic_debug.cpp
+    TEST_NAME structureddataextractortest
+    NAME_PREFIX "messageviewerplugins"
+    LINK_LIBRARIES Qt5::Test
+)

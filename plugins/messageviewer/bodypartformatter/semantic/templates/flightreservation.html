@@ -1,0 +1,12 @@
+<table style="width:100%;">
+    <tr>
+        <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.departureAirport.name }}">{{ item.reservationFor.departureAirport.iataCode }}</td>
+        <td style="font-size:200%; width:33%; text-align:center;">&#9992;</td>
+        <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.arrivalAirport.name }}">{{ item.reservationFor.arrivalAirport.iataCode }}</td>
+    </tr>
+    <tr>
+        <td>{{ item.reservationFor.departureTimeLocalized }}</td>
+        <td style="white-space: nowrap; text-align:center;" title="{{ item.reservationFor.airline.name }}">{{ item.reservationFor.airline.iataCode }} {{ item.reservationFor.flightNumber }}</td>
+        <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
+    </tr>
+</table>
