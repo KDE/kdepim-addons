@@ -25,6 +25,8 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
 
+#include <CalendarSupport/CalendarSingleton>
+
 #include <KMime/Content>
 
 #include <KDBusServiceStarter>
@@ -65,8 +67,8 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         action = menu.addAction(QIcon::fromTheme(QStringLiteral("view-calendar")), i18n("Show Calendar"));
         QObject::connect(action, &QAction::triggered, this, [this, date](){ showCalendar(date); });
     }
-//     action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
-//     QObject::connect(action, &QAction::triggered, this, [this, m](){ addToCalendar(m); });
+    action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
+    QObject::connect(action, &QAction::triggered, this, [this, m](){ addToCalendar(m); });
 
     if (menu.isEmpty())
         return true;
@@ -148,7 +150,79 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     korgIface->call(QStringLiteral("showDate"), date);
 }
 
+KCalCore::Event::Ptr SemanticUrlHandler::eventForReservation(const QVariant& reservation) const
+{
+    if (reservation.userType() == qMetaTypeId<FlightReservation>())
+        return eventForFlightReservation(reservation);
+    else if (reservation.userType() == qMetaTypeId<LodgingReservation>())
+        return eventForLodgingReservation(reservation);
+    return {};
+}
+
+KCalCore::Event::Ptr SemanticUrlHandler::eventForFlightReservation(const QVariant& reservation) const
+{
+    using namespace KCalCore;
+
+    const auto flight = readOnGadget<FlightReservation>(reservation, "reservationFor");
+    const auto airline = readOnGadget<Flight>(flight, "airline");
+    const auto depPort = readOnGadget<Flight>(flight, "departureAirport");
+    const auto arrPort = readOnGadget<Flight>(flight, "arrivalAirport");
+    if (flight.isNull() || airline.isNull() || depPort.isNull() || arrPort.isNull())
+        return {};
+
+    Event::Ptr event(new Event);
+    event->setSummary(i18n("Flight %1 %2 from %3 to %4",
+        readOnGadget<Airline>(airline, "iataCode").toString(),
+        readOnGadget<Flight>(flight, "flightNumber").toString(),
+        readOnGadget<Airport>(depPort, "iataCode").toString(),
+        readOnGadget<Airport>(arrPort, "iataCode").toString()
+    ));
+    event->setLocation(readOnGadget<Airport>(depPort, "name").toString());
+    event->setDtStart(readOnGadget<Flight>(flight, "departureTime").toDateTime());
+    event->setDtEnd(readOnGadget<Flight>(flight, "arrivalTime").toDateTime());
+    event->setAllDay(false);
+    event->setDescription(i18n("Booking reference: %1",
+        readOnGadget<FlightReservation>(reservation, "reservationNumber").toString()
+    ));
+    return event;
+}
+
+KCalCore::Event::Ptr SemanticUrlHandler::eventForLodgingReservation(const QVariant& reservation) const
+{
+    using namespace KCalCore;
+
+    const auto lodgingBusiness = readOnGadget<LodgingReservation>(reservation, "reservationFor");
+    const auto address = readOnGadget<LodgingBusiness>(lodgingBusiness, "address");
+    if (lodgingBusiness.isNull() || address.isNull())
+        return {};
+
+    Event::Ptr event(new Event);
+    event->setSummary(i18n("Hotel reservation: %1",
+        readOnGadget<LodgingBusiness>(lodgingBusiness, "name").toString()
+    ));
+    event->setLocation(i18n("%1, %2 %3, %4",
+        readOnGadget<PostalAddress>(address, "streetAddress").toString(),
+        readOnGadget<PostalAddress>(address, "postalCode").toString(),
+        readOnGadget<PostalAddress>(address, "addressLocality").toString(),
+        readOnGadget<PostalAddress>(address, "addressCountry").toString()
+    ));
+    event->setDtStart(QDateTime(readOnGadget<LodgingReservation>(reservation, "checkinDate").toDate(), QTime()));
+    event->setDtEnd(QDateTime(readOnGadget<LodgingReservation>(reservation, "checkoutDate").toDate(), QTime(23, 59, 59)));
+    event->setAllDay(true);
+    event->setDescription(i18n("Booking reference: %1",
+        readOnGadget<FlightReservation>(reservation, "reservationNumber").toString()
+    ));
+    event->setTransparency(Event::Transparent);
+    return event;
+}
+
 void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 {
-    qCDebug(SEMANTIC_LOG) << "ADD TO CALENDAR" << memento;
+    auto calendar = CalendarSupport::calendarSingleton(true);
+    for (const auto &r : memento->data()) {
+        const auto event = eventForReservation(r);
+        if (!event)
+            continue;
+        calendar->addEvent(event);
+    }
 }
