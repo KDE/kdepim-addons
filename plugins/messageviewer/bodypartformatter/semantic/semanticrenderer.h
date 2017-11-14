@@ -27,7 +27,7 @@ class SemanticRenderer : public MessageViewer::MessagePartRendererBase
 {
 public:
     SemanticRenderer();
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 };
 
 #endif // SEMANTICRENDERER_H

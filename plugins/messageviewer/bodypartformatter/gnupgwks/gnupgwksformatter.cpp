@@ -27,7 +27,7 @@
 #include <QUrlQuery>
 
 #include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/MessagePart>
 #include <MessageCore/MessageCoreUtil>
@@ -85,7 +85,7 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
     return {};
 }
 
-bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
     auto mp = msgPart.dynamicCast<GnuPGWKSMessagePart>();

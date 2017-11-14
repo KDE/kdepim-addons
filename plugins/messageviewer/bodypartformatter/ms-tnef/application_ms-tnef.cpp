@@ -37,7 +37,7 @@
 
 #include <MessageCore/StringUtil>
 
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
 
@@ -65,11 +65,11 @@ namespace {
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
     {
         Q_UNUSED(context);
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
-        if (!mp || mp->isHidden()) {
+        if (!mp || context->isHiddenHint(msgPart)) {
             return false;
         }
 
@@ -109,9 +109,9 @@ public:
             }
         }
 
-        mp->setShowTextFrame(true);
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
+        c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([&](Grantlee::OutputStream *stream) {
                 const auto tnefatts = parser.message()->attachmentList();
                 if (tnefatts.isEmpty() && inviteStr.isEmpty()) {

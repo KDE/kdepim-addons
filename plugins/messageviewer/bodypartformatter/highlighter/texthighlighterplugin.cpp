@@ -36,7 +36,7 @@
 #include <MessageViewer/MessagePartRenderPlugin>
 
 #include <MimeTreeParser/MessagePart>
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 
 #include <KSyntaxHighlighting/Definition>
 #include <KSyntaxHighlighting/Repository>
@@ -52,11 +52,11 @@ namespace {
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
     {
         Q_UNUSED(context);
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
-        if (!mp || mp->isHidden() || mp->text().isEmpty() || mp->asIcon() != MimeTreeParser::NoIcon) {
+        if (!mp || context->isHiddenHint(msgPart) || mp->text().isEmpty() || context->displayHint(msgPart) != MimeTreeParser::NoIcon) {
             return false;
         }
 
@@ -76,6 +76,7 @@ public:
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), msgPart.data());
+        c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
                 Highlighter highLighter(htmlWriter->stream());
                 highLighter.setDefinition(def);

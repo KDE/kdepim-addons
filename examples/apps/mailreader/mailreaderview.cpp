@@ -6,7 +6,7 @@
 #include "mailreaderview.h"
 #include "settings.h"
 #include <MessageViewer/Viewer>
-#include <MimeTreeParser/AttachmentStrategy>
+#include <MessageViewer/AttachmentStrategy>
 #include <messageviewersettings.h>
 #include <KXmlGuiWindow>
 #include <KConfigDialog>
@@ -25,7 +25,7 @@ mailreaderView::mailreaderView(QWidget *parent)
     ui_mailreaderview.setupUi(this);
     QHBoxLayout *layout = new QHBoxLayout;
     m_readerWin = new MessageViewer::Viewer(this, parent, dynamic_cast<KXmlGuiWindow *>(parent)->actionCollection());
-    m_readerWin->setAttachmentStrategy(MimeTreeParser::AttachmentStrategy::inlined());
+    m_readerWin->setAttachmentStrategy(MessageViewer::AttachmentStrategy::inlined());
     layout->addWidget(m_readerWin);
     setLayout(layout);
     setAutoFillBackground(true);

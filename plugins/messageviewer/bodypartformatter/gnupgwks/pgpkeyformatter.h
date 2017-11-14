@@ -31,7 +31,7 @@ public:
     ApplicationPGPKeyFormatter() = default;
 
     MimeTreeParser::MessagePartPtr process(MimeTreeParser::Interface::BodyPart &part) const override;
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:
     QString render(const PgpKeyMessagePart &mp) const;

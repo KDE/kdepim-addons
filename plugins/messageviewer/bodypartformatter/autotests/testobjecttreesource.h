@@ -23,19 +23,19 @@
 
 #include <MessageViewer/ObjectTreeEmptySource>
 #include <MessageViewer/CSSHelperBase>
-#include <MimeTreeParser/AttachmentStrategy>
+#include <MessageViewer/AttachmentStrategy>
 
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {
 public:
-    TestObjectTreeSource(MimeTreeParser::HtmlWriter *writer, MessageViewer::CSSHelperBase *cssHelper)
+    TestObjectTreeSource(MessageViewer::HtmlWriter *writer, MessageViewer::CSSHelperBase *cssHelper)
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
     {
     }
 
-    MimeTreeParser::HtmlWriter *htmlWriter() override
+    MessageViewer::HtmlWriter *htmlWriter() override
     {
         return mWriter;
     }
@@ -87,9 +87,9 @@ public:
         return QString();
     }
 
-    const MimeTreeParser::AttachmentStrategy *attachmentStrategy() override
+    const MessageViewer::AttachmentStrategy *attachmentStrategy() override
     {
-        return MimeTreeParser::AttachmentStrategy::smart();
+        return MessageViewer::AttachmentStrategy::smart();
     }
 
     bool autoImportKeys() const override
@@ -113,7 +113,7 @@ public:
     }
 
 private:
-    MimeTreeParser::HtmlWriter *mWriter = nullptr;
+    MessageViewer::HtmlWriter *mWriter = nullptr;
     MessageViewer::CSSHelperBase *mCSSHelper = nullptr;
     bool mHtmlLoadExternal;
 };

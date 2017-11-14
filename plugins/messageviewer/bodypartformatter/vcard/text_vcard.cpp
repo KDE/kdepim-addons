@@ -43,7 +43,7 @@
 #include <MessageViewer/MessagePartRenderPlugin>
 
 #include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
 using MimeTreeParser::Interface::BodyPart;
@@ -70,7 +70,7 @@ class Formatter : public MessageViewer::MessagePartRendererBase
 public:
     Formatter() = default;
 
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *writer, MessageViewer::RenderContext *) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *writer, MessageViewer::RenderContext *) const override
     {
         QMimeDatabase db;
         auto mt = db.mimeTypeForName(QString::fromLatin1(msgPart->content()->contentType()->mimeType().toLower()));

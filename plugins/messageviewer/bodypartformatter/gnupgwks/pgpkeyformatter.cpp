@@ -24,7 +24,7 @@
 #include <QApplication>
 #include <QPalette>
 
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
 #include <GrantleeTheme/GrantleeThemeEngine>
@@ -65,7 +65,7 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
     return MimeTreeParser::MessagePartPtr(mp);
 }
 
-bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
     auto mp = msgPart.dynamicCast<PgpKeyMessagePart>();

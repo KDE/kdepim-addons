@@ -24,7 +24,7 @@
 #include <MessageViewer/MessagePartRendererManager>
 #include <MessageViewer/MessagePartRenderPlugin>
 
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
 #include <grantlee/metatype.h>
@@ -48,11 +48,11 @@ namespace {
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
+    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
     {
         Q_UNUSED(context);
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
-        if (!mp || mp->isHidden()) {
+        if (!mp || context->isHiddenHint(msgPart)) {
             return false;
         }
 

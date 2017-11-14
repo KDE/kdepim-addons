@@ -24,7 +24,7 @@
 
 #include <MimeTreeParser/ObjectTreeParser>
 #include <MessageViewer/CSSHelperBase>
-#include <MimeTreeParser/FileHtmlWriter>
+#include <MessageViewer/FileHtmlWriter>
 
 #include <KMime/Message>
 #include <QTest>
@@ -78,7 +78,7 @@ void RenderTest::testRender()
     msg->parse();
 
     // render the mail
-    MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
+    MessageViewer::FileHtmlWriter fileWriter(outFileName);
     fileWriter.begin();
     QImage paintDevice;
     MessageViewer::CSSHelperBase cssHelper(&paintDevice);

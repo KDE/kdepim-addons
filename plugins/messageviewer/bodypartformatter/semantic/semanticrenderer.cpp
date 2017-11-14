@@ -23,7 +23,7 @@
 #include "semantic_debug.h"
 
 #include <MessageViewer/MessagePartRendererManager>
-#include <MimeTreeParser/HtmlWriter>
+#include <MessageViewer/HtmlWriter>
 
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
@@ -62,7 +62,7 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<PostalAddress>();
 }
 
-bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MimeTreeParser::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
     const auto mpList = msgPart.dynamicCast<MimeTreeParser::MessagePartList>();
