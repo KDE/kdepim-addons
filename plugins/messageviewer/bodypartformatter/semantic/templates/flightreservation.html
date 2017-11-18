@@ -1,8 +1,20 @@
 <table style="width:100%;">
     <tr>
-        <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.departureAirport.name }}">{{ item.reservationFor.departureAirport.iataCode }}</td>
+        {% if item.reservationFor.departureAirport.iataCode %}
+            <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.departureAirport.name }}">
+            {{ item.reservationFor.departureAirport.iataCode }}
+            </td>
+        {% else %}
+            <td style="font-size:120%; width:33%;">{{ item.reservationFor.departureAirport.name }}</td>
+        {% endif %}
         <td style="font-size:200%; width:33%; text-align:center;">&#9992;</td>
-        <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.arrivalAirport.name }}">{{ item.reservationFor.arrivalAirport.iataCode }}</td>
+        {% if item.reservationFor.arrivalAirport.iataCode %}
+            <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.arrivalAirport.name }}">
+            {{ item.reservationFor.arrivalAirport.iataCode }}
+            </td>
+        {% else %}
+            <td style="font-size:120%; width:33%;">{{ item.reservationFor.arrivalAirport.name }}</td>
+        {% endif %}
     </tr>
     <tr>
         <td>{{ item.reservationFor.departureTimeLocalized }}</td>
