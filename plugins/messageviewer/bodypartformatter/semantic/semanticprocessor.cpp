@@ -32,21 +32,38 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     if (!nodeHelper)
         return {};
     auto memento = dynamic_cast<SemanticMemento*>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
-    if (memento)
+    if (!memento) {
+        memento = new SemanticMemento;
+        nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
+    }
+
+
+    // check if we still have to do anything at all
+    if (memento->hasStructuredData())
         return {};
+    if (memento->isParsed(part.content()->index()))
+        return {};
+    memento->setParsed(part.content()->index());
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- BEGIN SEMANTIC PARSING";
-    StructuredDataExtractor extractor;
-    extractor.parse(part.content()->decodedText());
-    memento = new SemanticMemento;
-    nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
+    qCDebug(SEMANTIC_LOG()) << part.content()->contentType()->mimeType();
 
-    const auto data = extractor.data();
-    const auto decodedData = JsonLdDocument::fromJson(data);
-    if (data.size() != decodedData.size()) {
-        qCDebug(SEMANTIC_LOG) << "Unhandled content:" << QJsonDocument(data).toJson();
+    // look for structured data first, cheaper and better quality
+    if (part.content()->contentType()->mimeType() == "text/html") {
+        StructuredDataExtractor extractor;
+        extractor.parse(part.content()->decodedText());
+
+        const auto data = extractor.data();
+        const auto decodedData = JsonLdDocument::fromJson(data);
+        if (data.size() != decodedData.size()) {
+            qCDebug(SEMANTIC_LOG) << "Unhandled content:" << QJsonDocument(data).toJson();
+        }
+        if (!decodedData.isEmpty()) {
+            memento->setData(decodedData);
+            memento->setStructuredDataFound(true);
+            qCDebug(SEMANTIC_LOG) << "Found structured data:" << decodedData;
+        }
     }
-    memento->setData(decodedData);
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
 }

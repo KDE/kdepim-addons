@@ -1,6 +1,7 @@
 {
     "formatter": [
-        { "mimetype": "text/html" }
+        { "mimetype": "text/html" },
+        { "mimetype": "text/plain" }
     ],
     "renderer": [
         { "type": "MimeTreeParser::MessagePartList" }
