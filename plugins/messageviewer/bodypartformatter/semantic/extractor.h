@@ -17,23 +17,34 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICPROCESSOR_H
-#define SEMANTICPROCESSOR_H
+#ifndef EXTRACTOR_H
+#define EXTRACTOR_H
 
-#include "extractorrepository.h"
+#include "extractorfilter.h"
 
-#include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/MessagePart>
+#include <QVector>
+#include <vector>
 
-/** Processor plugin for MimeTreeParser. */
-class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
+class ExtractorRule;
+class QString;
+
+/** A single unstructured data extraction rule set. */
+class Extractor
 {
 public:
-    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    Extractor();
+    Extractor(const Extractor&) = delete;
+    Extractor(Extractor&&);
+    ~Extractor();
+
+    bool load(const QString &fileName);
+
+    QVector<ExtractorRule*> rules() const;
+    const std::vector<ExtractorFilter>& filters() const;
 
 private:
-    ExtractorRepository m_repository;
+    QVector<ExtractorRule*> m_rules;
+    std::vector<ExtractorFilter> m_filters;
 };
 
-#endif // SEMANTICPROCESSOR_H
+#endif // EXTRACTOR_H

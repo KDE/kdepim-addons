@@ -17,23 +17,30 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICPROCESSOR_H
-#define SEMANTICPROCESSOR_H
+#ifndef EXTRACTORREPOSITORY_H
+#define EXTRACTORREPOSITORY_H
 
-#include "extractorrepository.h"
+#include <vector>
 
-#include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/MessagePart>
+namespace KMime { class Content; }
 
-/** Processor plugin for MimeTreeParser. */
-class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
+class Extractor;
+
+/** Collection of all unstructured data extractor rule sets. */
+class ExtractorRepository
 {
 public:
-    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    ExtractorRepository();
+    ~ExtractorRepository();
+    ExtractorRepository(const ExtractorRepository&) = delete;
+
+    /** Finds matching extractors for the given message part. */
+    std::vector<const Extractor*> extractorsForMessage(KMime::Content *part) const;
 
 private:
-    ExtractorRepository m_repository;
+    void loadExtractors();
+
+    std::vector<Extractor> m_extractors;
 };
 
-#endif // SEMANTICPROCESSOR_H
+#endif // EXTRACTORREPOSITORY_H

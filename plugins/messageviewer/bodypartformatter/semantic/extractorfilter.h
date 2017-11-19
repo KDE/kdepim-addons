@@ -17,23 +17,28 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICPROCESSOR_H
-#define SEMANTICPROCESSOR_H
+#ifndef EXTRACTORFILTER_H
+#define EXTRACTORFILTER_H
 
-#include "extractorrepository.h"
+#include <QRegularExpression>
+#include <QByteArray>
 
-#include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/MessagePart>
+class QXmlStreamReader;
 
-/** Processor plugin for MimeTreeParser. */
-class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
+/** Determines whether an extractor is applicable to a given email. */
+class ExtractorFilter
 {
 public:
-    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    ExtractorFilter();
+    ~ExtractorFilter();
+
+    const char* headerName() const;
+    bool matches(const QString &headerData) const;
+    bool load(QXmlStreamReader &reader);
 
 private:
-    ExtractorRepository m_repository;
+    QByteArray m_headerName;
+    QRegularExpression m_exp;
 };
 
-#endif // SEMANTICPROCESSOR_H
+#endif // EXTRACTORFILTER_H

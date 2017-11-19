@@ -24,6 +24,9 @@
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
 
+// needs to be outside of the anonymous namespace
+static void initResource() { Q_INIT_RESOURCE(rules); }
+
 namespace {
 class SemanticPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
 {
@@ -32,7 +35,10 @@ class SemanticPlugin : public QObject, public MimeTreeParser::Interface::BodyPar
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "semantic_plugin.json")
 public:
-    SemanticPlugin() = default;
+    SemanticPlugin()
+    {
+        initResource();
+    }
 
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {

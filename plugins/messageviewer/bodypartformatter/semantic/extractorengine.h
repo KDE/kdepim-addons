@@ -17,23 +17,37 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICPROCESSOR_H
-#define SEMANTICPROCESSOR_H
+#ifndef EXTRACTORENGINE_H
+#define EXTRACTORENGINE_H
 
-#include "extractorrepository.h"
+#include "extractor.h"
 
-#include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/MessagePart>
+#include <QJsonArray>
+#include <QString>
 
-/** Processor plugin for MimeTreeParser. */
-class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
+#include <vector>
+
+class ExtractorContext;
+
+/** Code for executing an extractor rule set on a specific email part. */
+class ExtractorEngine
 {
 public:
-    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    ExtractorEngine();
+    ~ExtractorEngine();
+
+    void setExtractor(const Extractor *extractor);
+    const QString& text() const;
+    void setText(const QString &text);
+
+    QJsonArray extract();
 
 private:
-    ExtractorRepository m_repository;
+    void executeContext(ExtractorContext *context);
+
+    const Extractor *m_extractor = nullptr;
+    QString m_text;
+    QJsonArray m_result;
 };
 
-#endif // SEMANTICPROCESSOR_H
+#endif // EXTRACTORENGINE_H

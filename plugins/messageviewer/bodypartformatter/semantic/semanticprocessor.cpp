@@ -18,6 +18,7 @@
 */
 
 #include "semanticprocessor.h"
+#include "extractorengine.h"
 #include "jsonlddocument.h"
 #include "structureddataextractor.h"
 #include "semanticmemento.h"
@@ -64,6 +65,30 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             qCDebug(SEMANTIC_LOG) << "Found structured data:" << decodedData;
         }
     }
+
+    // try the unstructured data extractor as a fallback
+    if (memento->isEmpty()) {
+        const auto extractors = m_repository.extractorsForMessage(part.content());
+        if (extractors.empty())
+            return {};
+        qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
+
+        // TODO preprocessor to remove HTML tags and to extract PDFs
+        if (!part.content()->contentType()->isPlainText())
+            return {};
+
+        ExtractorEngine engine;
+        engine.setExtractor(extractors.at(0));
+        engine.setText(part.content()->decodedText());
+        const auto data = engine.extract();
+        qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+        const auto decodedData = JsonLdDocument::fromJson(data);
+        if (!decodedData.isEmpty())
+            memento->setData(decodedData);
+    }
+
+    // TODO postprocessor to filter incomplete/broken elements and merge duplicates
+
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
 }

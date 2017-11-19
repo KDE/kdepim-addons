@@ -17,23 +17,27 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICPROCESSOR_H
-#define SEMANTICPROCESSOR_H
+#include "extractorfilter.h"
 
-#include "extractorrepository.h"
+#include <QXmlStreamReader>
 
-#include <MimeTreeParser/BodyPart>
-#include <MimeTreeParser/BodyPartFormatter>
-#include <MimeTreeParser/MessagePart>
+ExtractorFilter::ExtractorFilter() = default;
+ExtractorFilter::~ExtractorFilter() = default;
 
-/** Processor plugin for MimeTreeParser. */
-class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
+const char* ExtractorFilter::headerName() const
 {
-public:
-    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
+    return m_headerName.constData();
+}
 
-private:
-    ExtractorRepository m_repository;
-};
+bool ExtractorFilter::matches(const QString& headerData) const
+{
+    return m_exp.match(headerData).hasMatch();
+}
 
-#endif // SEMANTICPROCESSOR_H
+bool ExtractorFilter::load(QXmlStreamReader& reader)
+{
+    Q_ASSERT(reader.name() == QLatin1String("filter"));
+    m_headerName = reader.attributes().value(QLatin1String("header")).toString().toUtf8();
+    m_exp.setPattern(reader.attributes().value(QLatin1String("match")).toString());
+    return !m_headerName.isEmpty() && m_exp.isValid();
+}
