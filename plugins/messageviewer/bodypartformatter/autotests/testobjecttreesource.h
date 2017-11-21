@@ -35,12 +35,12 @@ public:
     {
     }
 
-    MessageViewer::HtmlWriter *htmlWriter() override
+    MessageViewer::HtmlWriter *htmlWriter() const override
     {
         return mWriter;
     }
 
-    MessageViewer::CSSHelperBase *cssHelper() override
+    MessageViewer::CSSHelperBase *cssHelper() const override
     {
         return mCSSHelper;
     }
@@ -87,7 +87,7 @@ public:
         return QString();
     }
 
-    const MessageViewer::AttachmentStrategy *attachmentStrategy() override
+    const MessageViewer::AttachmentStrategy *attachmentStrategy() const override
     {
         return MessageViewer::AttachmentStrategy::smart();
     }
