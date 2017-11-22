@@ -36,8 +36,13 @@
 #ifndef Q_OS_WIN
 void initLocale()
 {
+    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QString::fromLatin1(
+                                            "/.qttest")).constData(), 1);
     setenv("LC_ALL", "en_US.utf-8", 1);
+    setenv("TZ", "UTC", 1);
     QStandardPaths::setTestModeEnabled(true);
+    QIcon::setThemeName(QStringLiteral("breeze"));
+    QLocale::setDefault(QLocale(QStringLiteral("en_US")));
 }
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)
@@ -65,8 +70,6 @@ void RenderTest::testRender()
     QFETCH(QString, mailFileName);
     QFETCH(QString, referenceFileName);
     QFETCH(QString, outFileName);
-
-    QIcon::setThemeName(QStringLiteral("oxygen"));
 
     // load input mail
     QFile mailFile(mailFileName);
