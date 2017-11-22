@@ -78,6 +78,13 @@ QByteArray PgpKeyMessagePart::rawKey() const
 
 void PgpKeyMessagePart::parseContent(KMime::Content *node)
 {
+    // TODO if GpgME dependency is 1.9.0 this can use
+    // GpgME::Data::toKeys
+    //
+    //something like:
+    // QGpgME::QByteArrayDataProvider dp(node->decodedContent());
+    // Data data(&dp);
+    // std::vector <Key> keys = data.toKeys();
     QProcess p;
     p.start(QStringLiteral("gpg"), { QStringLiteral("--with-colons"),
                                      QStringLiteral("--fixed-list-mode"),
