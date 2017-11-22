@@ -40,7 +40,7 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
     auto mp = new PgpKeyMessagePart(&part);
     PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
 
-    if (!m) {
+    if (!m && !mp->fingerprint().isEmpty()) {
         auto memento = new PgpKeyMemento();
         auto nodeHelper = part.nodeHelper();
         if (nodeHelper) {
@@ -53,6 +53,8 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
         }
         mp->setMemento(memento);
         mp->setSearchRunning(memento->isRunning());
+    } else if (mp->fingerprint().isEmpty()) {
+        mp->setError(i18n("No valid key data in file."));
     } else if (m && m->isRunning()) {
         mp->setSearchRunning(m->isRunning());
         m = nullptr;
