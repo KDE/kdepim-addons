@@ -99,7 +99,6 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
         block.setProperty("created", mp->keyDate().toString(Qt::SystemLocaleDate));
     } else {
         const auto uid = key.userID(0);
-        block.setProperty("hasKey", true);
         if (uid.email() && *uid.email() && uid.name() && *uid.name()) {
             block.setProperty("uid", QStringLiteral("%1 <%2>").arg(QString::fromUtf8(uid.name()),
                                                                    QString::fromUtf8(uid.email())));
