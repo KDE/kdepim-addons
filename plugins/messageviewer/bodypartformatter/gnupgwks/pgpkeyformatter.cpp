@@ -52,11 +52,14 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
             m = memento;
         }
         mp->setMemento(memento);
-    } else if (m->isRunning()) {
+        mp->setSearchRunning(memento->isRunning());
+    } else if (m && m->isRunning()) {
+        mp->setSearchRunning(m->isRunning());
         m = nullptr;
     }
 
     if (m) {
+        mp->setSearchRunning(m->isRunning());
         Q_ASSERT(!m->isRunning());
 
         mp->setError(m->error());
@@ -86,6 +89,7 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     block.setProperty("showKeyDetails", mp->source()->showSignatureDetails());
     block.setProperty("error", mp->error());
     block.setProperty("importUrl", mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
+    block.setProperty("searchRunning", mp->searchRunning());
     const auto key = mp->key();
     if (key.isNull()) {
         block.setProperty("uid", mp->userID());

@@ -19,34 +19,35 @@ table .keyB {
   </p>
 
   {% if block.showKeyDetails %}
-    {% if block.hasKey %}
-    <table border="0" cellspacing="1" cellpadding="1">
-      <tr>
-        <td><b>{% i18n "Owner:" %}&nbsp;</b></td><td>{{ block.uid }}</td>
-      </tr>
+    {% if block.searchRunning %}
+        <p>{% i18n "Loading key details..." %}</p>
+    {% endif %}
+    {% if not block.error %}
+      <table border="0" cellspacing="1" cellpadding="1">
+        <tr>
+          <td><b>{% i18n "Owner:" %}&nbsp;</b></td><td>{{ block.uid }}</td>
+        </tr>
       {% if block.created %}
-      <tr>
-        <td><b>{% i18n "Created:" %}&nbsp;</td><td>{{ block.created }}</td>
-      </tr>
+        <tr>
+          <td><b>{% i18n "Created:" %}&nbsp;</td><td>{{ block.created }}</td>
+        </tr>
       {% endif %}
       {% if block.fingerprint %}
-      <tr>
-        <td><b>{% i18n "Fingerprint:" %}&nbsp;</td><td>{{ block.fingerprint }}</td>
-      </tr>
+        <tr>
+          <td><b>{% i18n "Fingerprint:" %}&nbsp;</td><td>{{ block.fingerprint }}</td>
+        </tr>
       {% endif %}
-    </table>
+      </table>
+    {% else %}
+        <p class="error">{% i18n "Error while loading key: %1" block.error %}</p>
+    {% endif %}
     <a href="kmail:hideSignatureDetails">{% i18n "Hide key details" %}</a>
     {% if block.keyUrl %}
-      | <a href="{{ block.keyUrl }}">{% i18n "Open in Kleopatra" %}</a>
-    {% endif %}
-    {% elif block.error %}
-      <p class="error">{% i18n "Error while loading key: %1" key.error %}</p>
-    {% else %}
-      <p>{% i18n "Loading key details..." %}</p>
+        | <a href="{{ block.keyUrl }}">{% i18n "Open in Kleopatra" %}</a>
     {% endif %}
   {% else %}
     <a href="kmail:showSignatureDetails">{% i18n "Show key details ..." %}</a>
-    {% endif %}
+  {% endif %}
     | <a href="{{ block.importUrl }}">{% i18n "Import key" %}</a>
     </div>
 </td></tr>

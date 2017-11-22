@@ -56,6 +56,9 @@ public:
 
     QByteArray rawKey() const;
 
+    void setSearchRunning(bool searchRunning);
+    bool searchRunning() const;
+
 protected:
     void parseContent(KMime::Content *node);
 
@@ -65,6 +68,7 @@ protected:
     QString mFingerprint;
     QString mError;
     GpgME::Key mKey;
+    bool mSearchRunning;
 };
 
 #endif
