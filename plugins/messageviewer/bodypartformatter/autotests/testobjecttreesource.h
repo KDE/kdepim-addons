@@ -32,6 +32,7 @@ public:
         : mWriter(writer)
         , mCSSHelper(cssHelper)
         , mHtmlLoadExternal(false)
+        , mShowSignatureDetails(false)
     {
     }
 
@@ -62,7 +63,12 @@ public:
 
     bool showSignatureDetails() const override
     {
-        return false;
+        return mShowSignatureDetails;
+    }
+
+    void setShowSignatureDetails(bool showSignatureDetails)
+    {
+        mShowSignatureDetails = showSignatureDetails;
     }
 
     void setHtmlMode(MimeTreeParser::Util::HtmlMode mode, const QList<MimeTreeParser::Util::HtmlMode> &availableModes) override
@@ -116,6 +122,7 @@ private:
     MimeTreeParser::HtmlWriter *mWriter = nullptr;
     MessageViewer::CSSHelperBase *mCSSHelper = nullptr;
     bool mHtmlLoadExternal;
+    bool mShowSignatureDetails;
 };
 
 #endif

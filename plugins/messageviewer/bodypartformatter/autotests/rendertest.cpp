@@ -101,6 +101,70 @@ void RenderTest::testRender()
     compareFile(outFileName, referenceFileName);
 }
 
+void RenderTest::testRenderKeyDetails_data()
+{
+    QTest::addColumn<QString>("basename");
+    QTest::newRow("message-with-openpgp-key.mbox") << QStringLiteral("message-with-openpgp-key.mbox");
+    QTest::newRow("message-with-two-openpgp-key.mbox") << QStringLiteral("message-with-two-openpgp-key.mbox");
+}
+
+void RenderTest::testRenderKeyDetails()
+{
+    QFETCH(QString, basename);
+    QString mailFileName = QStringLiteral(MAIL_DATA_DIR) + QLatin1Char('/') + basename;
+    QString referenceFileName = QStringLiteral(MAIL_DATA_DIR) + QLatin1Char('/') + basename + QStringLiteral(".html");
+    QString outFileName = basename + QStringLiteral(".out");
+
+    // load input mail
+    QFile mailFile(mailFileName);
+    QVERIFY(mailFile.open(QIODevice::ReadOnly));
+    const QByteArray mailData = KMime::CRLFtoLF(mailFile.readAll());
+    QVERIFY(!mailData.isEmpty());
+    KMime::Message::Ptr msg(new KMime::Message);
+    msg->setContent(mailData);
+    msg->parse();
+
+    // render the mail
+    QEventLoop loop;
+    MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
+    fileWriter.begin();
+    QImage paintDevice;
+    MessageViewer::CSSHelperBase cssHelper(&paintDevice);
+    MimeTreeParser::NodeHelper nodeHelper;
+    TestObjectTreeSource testSource(&fileWriter, &cssHelper);
+    testSource.setShowSignatureDetails(true);
+    MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
+
+    fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+                                    "<html>\n"
+                                    "<body>\n"));
+
+    connect(&nodeHelper, &MimeTreeParser::NodeHelper::update, &loop, &QEventLoop::quit);
+    otp.parseObjectTree(msg.data());
+
+    fileWriter.write(QStringLiteral("</body></html>"));
+    fileWriter.end();
+
+    compareFile(outFileName, referenceFileName + QStringLiteral(".running"));
+    loop.exec();
+
+    {
+        MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
+        fileWriter.begin();
+        fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+                                    "<html>\n"
+                                    "<body>\n"));
+        otp.parseObjectTree(msg.data());
+
+        fileWriter.write(QStringLiteral("</body></html>"));
+        fileWriter.end();
+
+        compareFile(outFileName, referenceFileName + QStringLiteral(".details"));
+    }
+}
+
+
+
 void RenderTest::compareFile(const QString &outFile, const QString &referenceFile)
 {
     QVERIFY(QFile::exists(outFile));

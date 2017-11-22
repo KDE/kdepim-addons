@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <body>
+    <div style="position: relative; word-wrap: break-word">
+      <a name="att"/>
+      <div id="attachmentDiv">
+        <table cellspacing="1" cellpadding="1" class="signWarn">
+          <tr class="signWarnH">
+            <td dir="ltr">
+              <table cellspacing="0" cellpadding="0" width="100%">
+                <tr>
+                  <td rowspan="2">Message was signed on 5/19/17 3:20 PM with unknown key <a href="kmail:showCertificate#gpg ### OpenPGP ### 10F5C047999C3545">0x10F5C047999C3545</a>.<br/>The validity of the signature cannot be verified.<br/>Status:<i>No public key to verify the signature</i></td>
+                  <td align="right" valign="top" nowrap="nowrap">
+                    <a href="kmail:hideSignatureDetails">Hide Details</a>
+                  </td>
+                </tr>
+                <tr>
+                  <td align="right" valign="bottom" nowrap="nowrap"/>
+                </tr>
+              </table>
+            </td>
+          </tr>
+          <tr class="signWarnB">
+            <td>
+              <a name="att1"/>
+              <div id="attachmentDiv1">
+                <a name="att1.1"/>
+                <div id="attachmentDiv1.1">
+                  <div class="noquote">
+                    <div dir="ltr">test</div>
+                  </div>
+                </div>
+                <style type="text/css">table.key {
+width: 100%;
+border: 1px solid #000000;
+}
+table .keyH {
+background-color: #000000;
+color: #ffffff;
+}
+table .keyB {
+}</style>
+                <table cellspacing="0" cellpadding="2" class="key">
+                  <tr class="keyH">
+                    <td>OpenPGP Key</td>
+                  </tr>
+                  <tr class="keyb">
+                    <td>
+                      <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><table border="0" cellspacing="1" cellpadding="1"><tr><td><b>Owner:&nbsp;</b></td><td>Laurent Montel &lt;laurent.montel@kdab.com&gt;</td></tr><tr><td><b>Created:&nbsp;</b></td><td>9/15/15 12:53 PM</td></tr><tr><td><b>Fingerprint:&nbsp;</b></td><td>5B8D88290B819F70CAB1E090F8971E06FD551F2C</td></tr></table><p>This key is unknown, it could not be found in your local keyring. You may want to import this key. </p><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/1.2/pgpkey?action=import">Import key</a></div>
+                    </td>
+                  </tr>
+                  <tr class="keyH">
+                    <td>&nbsp;</td>
+                  </tr>
+                </table>
+              </div>
+            </td>
+          </tr>
+          <tr class="signWarnH">
+            <td dir="ltr">End of signed message</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>

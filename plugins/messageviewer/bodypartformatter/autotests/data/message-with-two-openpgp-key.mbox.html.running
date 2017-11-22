@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF8"?>
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+  <body>
+    <div style="position: relative; word-wrap: break-word">
+      <a name="att"/>
+      <div id="attachmentDiv">
+        <a name="att1"/>
+        <div id="attachmentDiv1">
+          <div class="noquote">
+            <div dir="ltr">The first atachment is a key that exists in local keyring.</div>
+            <div dir="ltr">The second attachment is a file with invalid keymaterial.</div>
+          </div>
+        </div>
+        <style type="text/css">table.key {
+width: 100%;
+border: 1px solid #000000;
+}
+table .keyH {
+background-color: #000000;
+color: #ffffff;
+}
+table .keyB {
+}</style>
+        <table cellspacing="0" cellpadding="2" class="key">
+          <tr class="keyH">
+            <td>OpenPGP Key</td>
+          </tr>
+          <tr class="keyb">
+            <td>
+              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><p>Loading key details...</p><table border="0" cellspacing="1" cellpadding="1"><tr><td><b>Owner:&nbsp;</b></td><td>Sandro Knauß &lt;sknauss@kde.org&gt;</td></tr><tr><td><b>Created:&nbsp;</b></td><td>8/15/13 8:07 PM</td></tr><tr><td><b>Fingerprint:&nbsp;</b></td><td>39EC11A02016B72926491A06E3ADB00850605636</td></tr></table><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/2/pgpkey?action=import">Import key</a></div>
+            </td>
+          </tr>
+          <tr class="keyH">
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+        <style type="text/css">table.key {
+width: 100%;
+border: 1px solid #000000;
+}
+table .keyH {
+background-color: #000000;
+color: #ffffff;
+}
+table .keyB {
+}</style>
+        <table cellspacing="0" cellpadding="2" class="key">
+          <tr class="keyH">
+            <td>OpenPGP Key</td>
+          </tr>
+          <tr class="keyb">
+            <td>
+              <div style="padding: 10pt;"><p>This is an OpenPGP key, which can be used to sign or encrypt emails.</p><p class="error">Error while loading key: No valid key data in file.</p><a href="kmail:hideSignatureDetails">Hide key details</a>| <a href="x-kmail:/bodypart/0/3/pgpkey?action=import">Import key</a></div>
+            </td>
+          </tr>
+          <tr class="keyH">
+            <td>&nbsp;</td>
+          </tr>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
