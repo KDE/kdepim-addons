@@ -38,6 +38,9 @@ table .keyB {
         </tr>
       {% endif %}
       </table>
+      {% if not block.searchRunning and not block.keyUrl %}
+          <p>{% i18n "This key is unknown, it could not be found in your local keyring. You may want to import this key." %} </p>
+      {% endif %}
     {% else %}
         <p class="error">{% i18n "Error while loading key: %1" block.error %}</p>
     {% endif %}
