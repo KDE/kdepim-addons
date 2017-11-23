@@ -70,8 +70,6 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
     QObject::connect(action, &QAction::triggered, this, [this, m](){ addToCalendar(m); });
 
-    if (menu.isEmpty())
-        return true;
     menu.exec(p);
     return true;
 }
