@@ -48,7 +48,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     memento->setParsed(part.content()->index());
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- BEGIN SEMANTIC PARSING";
-    qCDebug(SEMANTIC_LOG()) << part.content()->contentType()->mimeType();
+    qCDebug(SEMANTIC_LOG) << part.content()->contentType()->mimeType();
 
     // look for structured data first, cheaper and better quality
     if (part.content()->contentType()->mimeType() == "text/html") {
