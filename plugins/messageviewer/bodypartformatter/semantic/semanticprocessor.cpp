@@ -33,6 +33,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     auto nodeHelper = part.nodeHelper();
     if (!nodeHelper) {
         return {};
+    }
     auto memento = dynamic_cast<SemanticMemento*>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
     if (!memento) {
         memento = new SemanticMemento;
