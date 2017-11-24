@@ -371,6 +371,7 @@ QByteArray AdBlockCustomList::readAllFileByteContents(const QString &filename)
 
     return QByteArray();
 }
+
 void AdBlockCustomList::saveSubscription()
 {
     QFile file(filePath());

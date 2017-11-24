@@ -19,7 +19,6 @@
 
 #include "pkpassboardingpass.h"
 
-
 PkPassBoardingPass::PkPassBoardingPass(QObject *parent)
     : PkPassFile(QStringLiteral("boardingPass"), parent)
 {

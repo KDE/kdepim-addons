@@ -37,8 +37,8 @@
 #define GRANTLEE_MAKE_GADGET(Class) \
     GRANTLEE_BEGIN_LOOKUP(Class) \
     const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData()); \
-    if (idx < 0) \
-        return {}; \
+    if (idx < 0) { \
+        return {};} \
     const auto mp = Class::staticMetaObject.property(idx); \
     return mp.readOnGadget(&object); \
     GRANTLEE_END_LOOKUP
@@ -66,18 +66,21 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
 {
     Q_UNUSED(context);
     const auto mpList = msgPart.dynamicCast<MimeTreeParser::MessagePartList>();
-    if (!msgPart->isRoot() || !mpList->hasSubParts())
+    if (!msgPart->isRoot() || !mpList->hasSubParts()) {
         return false;
+    }
 
     qCDebug(SEMANTIC_LOG) << "========================================= Semantic Rendering";
     const auto node = mpList->subParts().at(0)->content();
     const auto nodeHelper = msgPart->nodeHelper();
-    if (!nodeHelper || !node)
+    if (!nodeHelper || !node) {
         return false;
+    }
 
-    auto memento = dynamic_cast<SemanticMemento*>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
-    if (!memento || memento->isEmpty())
+    auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
+    if (!memento || memento->isEmpty()) {
         return false;
+    }
 
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
     c.insert(QStringLiteral("data"), QVariant::fromValue(memento->data()));

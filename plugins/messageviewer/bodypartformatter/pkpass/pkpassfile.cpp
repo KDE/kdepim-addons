@@ -97,8 +97,9 @@ QImage PkPassFile::logo() const
 QImage PkPassFile::barcode() const
 {
     auto barcodeData = data().value(QLatin1String("barcodes")).toArray().at(0).toObject();
-    if (barcodeData.isEmpty())
+    if (barcodeData.isEmpty()) {
         barcodeData = data().value(QLatin1String("barcode")).toObject();
+    }
     const auto formatName = barcodeData.value(QLatin1String("format")).toString();
     const auto msg = barcodeData.value(QLatin1String("message")).toString();
     // TODO: consider messageEncoding, once Prison supports that
@@ -111,8 +112,7 @@ QImage PkPassFile::barcode() const
         code.reset(Prison::createBarcode(Prison::QRCode));
     } else if (formatName == QLatin1String("PKBarcodeFormatPDF417")) {
         // TODO
-    }
-    else if (formatName == QLatin1String("PKBarcodeFormatAztec")) {
+    } else if (formatName == QLatin1String("PKBarcodeFormatAztec")) {
         code.reset(Prison::createBarcode(Prison::Aztec));
     } else if (formatName == QLatin1String("PKBarcodeFormatCode128")) {
         // TODO
@@ -131,8 +131,9 @@ QImage PkPassFile::barcode() const
 QString PkPassFile::barcodeAltText() const
 {
     auto barcodeData = data().value(QLatin1String("barcodes")).toArray().at(0).toObject();
-    if (barcodeData.isEmpty())
+    if (barcodeData.isEmpty()) {
         barcodeData = data().value(QLatin1String("barcode")).toObject();
+    }
     return barcodeData.value(QLatin1String("altText")).toString();
 }
 

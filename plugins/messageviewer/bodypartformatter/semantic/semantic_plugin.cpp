@@ -44,20 +44,23 @@ public:
     {
         if (idx < 2)
             return new SemanticProcessor();
+        }
         return nullptr;
     }
 
     MessageViewer::MessagePartRendererBase *renderer(int idx) override
     {
-        if (idx == 0)
+        if (idx == 0) {
             return new SemanticRenderer();
+        }
         return nullptr;
     }
 
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
-        if (idx == 0)
+        if (idx == 0) {
             return new SemanticUrlHandler();
+        }
         return nullptr;
     }
 };
