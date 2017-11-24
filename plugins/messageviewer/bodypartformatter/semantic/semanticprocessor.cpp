@@ -29,11 +29,13 @@
 MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
 {
     auto nodeHelper = part.nodeHelper();
-    if (!nodeHelper)
+    if (!nodeHelper) {
         return {};
-    auto memento = dynamic_cast<SemanticMemento*>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
-    if (memento)
+    }
+    auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
+    if (memento) {
         return {};
+    }
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- BEGIN SEMANTIC PARSING";
     StructuredDataExtractor extractor;

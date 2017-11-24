@@ -41,7 +41,7 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
-    SemanticMemento* memento(MimeTreeParser::Interface::BodyPart *part) const;
+    SemanticMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
     QDate dateForReservation(SemanticMemento *memento) const;
     void showCalendar(const QDate &date) const;
 
