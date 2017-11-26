@@ -7,6 +7,8 @@
         {% include ":/org.kde.messageviewer/semantic/flightreservation.html" %}
     {% elif item.className == "LodgingReservation" %}
         {% include ":/org.kde.messageviewer/semantic/lodgingreservation.html" %}
+    {% elif item.className == "TrainReservation" %}
+        {% include ":/org.kde.messageviewer/semantic/trainreservation.html" %}
     {% endif %}
     {% if not forloop.last %}
         <hr/>

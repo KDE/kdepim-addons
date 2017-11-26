@@ -3,5 +3,6 @@
         <file alias="semantic.html">templates/semantic.html</file>
         <file alias="flightreservation.html">templates/flightreservation.html</file>
         <file alias="lodgingreservation.html">templates/lodgingreservation.html</file>
+        <file alias="trainreservation.html">templates/trainreservation.html</file>
     </qresource>
 </RCC>
