@@ -48,6 +48,7 @@ private:
     KCalCore::Event::Ptr eventForReservation(const QVariant &reservation) const;
     KCalCore::Event::Ptr eventForFlightReservation(const QVariant &reservation) const;
     KCalCore::Event::Ptr eventForLodgingReservation(const QVariant &reservation) const;
+    KCalCore::Event::Ptr eventForTrainReservation(const QVariant &reservation) const;
     void addToCalendar(SemanticMemento *memento) const;
 };
 

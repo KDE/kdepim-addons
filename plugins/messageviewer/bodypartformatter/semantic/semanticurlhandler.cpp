@@ -139,6 +139,11 @@ QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
             if (d.isValid()) {
                 return d;
             }
+        } else if (r.userType() == qMetaTypeId<TrainReservation>()) {
+            const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
+            const auto d = JsonLdDocument::readProperty(trip, "departureTime").toDate();
+            if (d.isValid())
+                return d;
         }
     }
     return {};
@@ -179,6 +184,8 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForReservation(const QVariant &res
         return eventForFlightReservation(reservation);
     } else if (reservation.userType() == qMetaTypeId<LodgingReservation>()) {
         return eventForLodgingReservation(reservation);
+    } else if (reservation.userType() == qMetaTypeId<TrainReservation>()) {
+        return eventForTrainReservation(reservation);
     }
     return {};
 }
@@ -239,6 +246,33 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForLodgingReservation(const QVaria
         JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
     ));
     event->setTransparency(Event::Transparent);
+    return event;
+}
+
+KCalCore::Event::Ptr SemanticUrlHandler::eventForTrainReservation(const QVariant &reservation) const
+{
+    using namespace KCalCore;
+
+    const auto trip = JsonLdDocument::readProperty(reservation, "reservationFor");
+    const auto depStation = JsonLdDocument::readProperty(trip, "departureStation");
+    const auto arrStation = JsonLdDocument::readProperty(trip, "arrivalStation");
+    if (trip.isNull() || depStation.isNull() || arrStation.isNull()) {
+        return {};
+    }
+
+    Event::Ptr event(new Event);
+    event->setSummary(i18n("Train %1 from %2 to %3",
+        JsonLdDocument::readProperty(trip, "trainNumber").toString(),
+        JsonLdDocument::readProperty(depStation, "name").toString(),
+        JsonLdDocument::readProperty(arrStation, "name").toString()
+    ));
+    event->setLocation(JsonLdDocument::readProperty(depStation, "name").toString());
+    event->setDtStart(JsonLdDocument::readProperty(trip, "departureTime").toDateTime());
+    event->setDtEnd(JsonLdDocument::readProperty(trip, "arrivalTime").toDateTime());
+    event->setAllDay(false);
+    event->setDescription(i18n("Booking reference: %1",
+        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+    ));
     return event;
 }
 
