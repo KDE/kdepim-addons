@@ -70,7 +70,7 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *i
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         ConfirmAddressConfigureTabWidget *w = new ConfirmAddressConfigureTabWidget(this);
         connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
-        mTabWidget->addTab(w, (*it).identityName());
+        mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
     }
