@@ -35,9 +35,11 @@
 
 #include <QDate>
 #include <QDBusInterface>
+#include <QDesktopServices>
 #include <QIcon>
 #include <QMenu>
 #include <QMetaProperty>
+#include <QUrlQuery>
 
 #include <memory>
 
@@ -72,10 +74,33 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
             showCalendar(date);
         });
     }
+
     action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
     QObject::connect(action, &QAction::triggered, this, [this, m](){
         addToCalendar(m);
     });
+
+    for (const auto &r : m->data()) {
+        if (r.userType() == qMetaTypeId<LodgingReservation>()) {
+            const auto hotel = JsonLdDocument::readProperty(r, "reservationFor");
+            const auto addr = JsonLdDocument::readProperty(hotel, "address");
+            action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show %1 On Map", JsonLdDocument::readProperty(hotel, "name").toString()));
+            QObject::connect(action, &QAction::triggered, this, [addr]() {
+                QUrl url;
+                url.setScheme(QStringLiteral("https"));
+                url.setHost(QStringLiteral("www.openstreetmap.org"));
+                url.setPath(QStringLiteral("/search"));
+                const QString queryString = JsonLdDocument::readProperty(addr, "streetAddress").toString() + QLatin1String(", ")
+                    + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
+                    + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
+                    + JsonLdDocument::readProperty(addr, "addressCountry").toString();
+                QUrlQuery query;
+                query.addQueryItem(QStringLiteral("query"), queryString);
+                url.setQuery(query);
+                QDesktopServices::openUrl(url);
+            });
+        }
+    }
 
     menu.exec(p);
     return true;
