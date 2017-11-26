@@ -1,7 +1,8 @@
 {
     "formatter": [
         { "mimetype": "text/html" },
-        { "mimetype": "text/plain" }
+        { "mimetype": "text/plain" },
+        { "mimetype": "application/pdf" }
     ],
     "renderer": [
         { "type": "MimeTreeParser::MessagePartList" }

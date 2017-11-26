@@ -42,7 +42,7 @@ public:
 
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
-        if (idx < 2) {
+        if (idx < 3) {
             return new SemanticProcessor();
         }
         return nullptr;

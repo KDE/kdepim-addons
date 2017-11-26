@@ -75,14 +75,16 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             return {};
         qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
 
-        // preprocessor to remove HTML tags and to extract PDFs (TODO)
         ExtractorPreprocessor preproc;
-        if (part.content()->contentType()->isPlainText())
+        if (part.content()->contentType()->isPlainText()) {
             preproc.preprocessPlainText(part.content()->decodedText());
-        else if (part.content()->contentType()->isHTMLText())
+        } else if (part.content()->contentType()->isHTMLText()) {
             preproc.preprocessHtml(part.content()->decodedText());
-        else
+        } else if (part.content()->contentType()->mimeType() == "application/pdf") {
+            preproc.preprocessPdf(part.content()->decodedContent());
+        } else {
             return {};
+        }
 
         ExtractorEngine engine;
         engine.setExtractor(extractors.at(0));
