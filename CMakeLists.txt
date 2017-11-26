@@ -51,6 +51,9 @@ include(ECMQtDeclareLoggingCategory)
 
 option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
+option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
+
+
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
 
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
@@ -123,6 +126,12 @@ add_definitions( -DQT_NO_CAST_FROM_ASCII )
 add_definitions( -DQT_NO_CAST_TO_ASCII )
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
+
+if(KDEPIM_ENTERPRISE_BUILD)
+    set(KDEPIM_ENTERPRISE_BUILD true)
+else()
+    set(KDEPIM_ENTERPRISE_BUILD false)
+endif()
 
 # Extra package
 find_package(Gpgmepp 1.8.0 CONFIG)
