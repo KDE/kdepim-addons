@@ -19,6 +19,7 @@
 
 #include "semanticurlhandler.h"
 #include "datatypes.h"
+#include "jsonlddocument.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
@@ -99,32 +100,17 @@ SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart
     return dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
 }
 
-template<typename T>
-static QVariant readOnGadget(const QVariant &v, const char *name)
-{
-    if (v.userType() != qMetaTypeId<T>()) {
-        return {};
-    }
-
-    const auto idx = T::staticMetaObject.indexOfProperty(name);
-    if (idx < 0) {
-        return {};
-    }
-    const auto prop = T::staticMetaObject.property(idx);
-    return prop.readOnGadget(v.constData());
-}
-
 QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 {
     for (const auto &r : memento->data()) {
         if (r.userType() == qMetaTypeId<FlightReservation>()) {
-            const auto v = readOnGadget<FlightReservation>(r, "reservationFor");
-            const auto d = readOnGadget<Flight>(v, "departureTime").toDate();
+            const auto v = JsonLdDocument::readProperty(r, "reservationFor");
+            const auto d = JsonLdDocument::readProperty(v, "departureTime").toDate();
             if (d.isValid()) {
                 return d;
             }
         } else if (r.userType() == qMetaTypeId<LodgingReservation>()) {
-            const auto d = readOnGadget<LodgingReservation>(r, "checkinDate").toDate();
+            const auto d = JsonLdDocument::readProperty(r, "checkinDate").toDate();
             if (d.isValid()) {
                 return d;
             }
@@ -176,28 +162,28 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForFlightReservation(const QVarian
 {
     using namespace KCalCore;
 
-    const auto flight = readOnGadget<FlightReservation>(reservation, "reservationFor");
-    const auto airline = readOnGadget<Flight>(flight, "airline");
-    const auto depPort = readOnGadget<Flight>(flight, "departureAirport");
-    const auto arrPort = readOnGadget<Flight>(flight, "arrivalAirport");
+    const auto flight = JsonLdDocument::readProperty(reservation, "reservationFor");
+    const auto airline = JsonLdDocument::readProperty(flight, "airline");
+    const auto depPort = JsonLdDocument::readProperty(flight, "departureAirport");
+    const auto arrPort = JsonLdDocument::readProperty(flight, "arrivalAirport");
     if (flight.isNull() || airline.isNull() || depPort.isNull() || arrPort.isNull()) {
         return {};
     }
 
     Event::Ptr event(new Event);
     event->setSummary(i18n("Flight %1 %2 from %3 to %4",
-                           readOnGadget<Airline>(airline, "iataCode").toString(),
-                           readOnGadget<Flight>(flight, "flightNumber").toString(),
-                           readOnGadget<Airport>(depPort, "iataCode").toString(),
-                           readOnGadget<Airport>(arrPort, "iataCode").toString()
-                           ));
-    event->setLocation(readOnGadget<Airport>(depPort, "name").toString());
-    event->setDtStart(readOnGadget<Flight>(flight, "departureTime").toDateTime());
-    event->setDtEnd(readOnGadget<Flight>(flight, "arrivalTime").toDateTime());
+        JsonLdDocument::readProperty(airline, "iataCode").toString(),
+        JsonLdDocument::readProperty(flight, "flightNumber").toString(),
+        JsonLdDocument::readProperty(depPort, "iataCode").toString(),
+        JsonLdDocument::readProperty(arrPort, "iataCode").toString()
+    ));
+    event->setLocation(JsonLdDocument::readProperty(depPort, "name").toString());
+    event->setDtStart(JsonLdDocument::readProperty(flight, "departureTime").toDateTime());
+    event->setDtEnd(JsonLdDocument::readProperty(flight, "arrivalTime").toDateTime());
     event->setAllDay(false);
     event->setDescription(i18n("Booking reference: %1",
-                               readOnGadget<FlightReservation>(reservation, "reservationNumber").toString()
-                               ));
+        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+    ));
     return event;
 }
 
@@ -205,28 +191,28 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForLodgingReservation(const QVaria
 {
     using namespace KCalCore;
 
-    const auto lodgingBusiness = readOnGadget<LodgingReservation>(reservation, "reservationFor");
-    const auto address = readOnGadget<LodgingBusiness>(lodgingBusiness, "address");
+    const auto lodgingBusiness = JsonLdDocument::readProperty(reservation, "reservationFor");
+    const auto address = JsonLdDocument::readProperty(lodgingBusiness, "address");
     if (lodgingBusiness.isNull() || address.isNull()) {
         return {};
     }
 
     Event::Ptr event(new Event);
     event->setSummary(i18n("Hotel reservation: %1",
-                           readOnGadget<LodgingBusiness>(lodgingBusiness, "name").toString()
-                           ));
+        JsonLdDocument::readProperty(lodgingBusiness, "name").toString()
+    ));
     event->setLocation(i18n("%1, %2 %3, %4",
-                            readOnGadget<PostalAddress>(address, "streetAddress").toString(),
-                            readOnGadget<PostalAddress>(address, "postalCode").toString(),
-                            readOnGadget<PostalAddress>(address, "addressLocality").toString(),
-                            readOnGadget<PostalAddress>(address, "addressCountry").toString()
-                            ));
-    event->setDtStart(QDateTime(readOnGadget<LodgingReservation>(reservation, "checkinDate").toDate(), QTime()));
-    event->setDtEnd(QDateTime(readOnGadget<LodgingReservation>(reservation, "checkoutDate").toDate(), QTime(23, 59, 59)));
+        JsonLdDocument::readProperty(address, "streetAddress").toString(),
+        JsonLdDocument::readProperty(address, "postalCode").toString(),
+        JsonLdDocument::readProperty(address, "addressLocality").toString(),
+        JsonLdDocument::readProperty(address, "addressCountry").toString()
+    ));
+    event->setDtStart(QDateTime(JsonLdDocument::readProperty(reservation, "checkinDate").toDate(), QTime()));
+    event->setDtEnd(QDateTime(JsonLdDocument::readProperty(reservation, "checkoutDate").toDate(), QTime(23, 59, 59)));
     event->setAllDay(true);
     event->setDescription(i18n("Booking reference: %1",
-                               readOnGadget<FlightReservation>(reservation, "reservationNumber").toString()
-                               ));
+        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+    ));
     event->setTransparency(Event::Transparent);
     return event;
 }
