@@ -34,18 +34,19 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     if (!nodeHelper) {
         return {};
     }
-    auto memento = dynamic_cast<SemanticMemento*>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
+    auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
     if (!memento) {
         memento = new SemanticMemento;
         nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
     }
 
-
     // check if we still have to do anything at all
-    if (memento->hasStructuredData())
+    if (memento->hasStructuredData()) {
         return {};
-    if (memento->isParsed(part.content()->index()))
+    }
+    if (memento->isParsed(part.content()->index())) {
         return {};
+    }
     memento->setParsed(part.content()->index());
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- BEGIN SEMANTIC PARSING";
@@ -71,8 +72,9 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     // try the unstructured data extractor as a fallback
     if (memento->isEmpty()) {
         const auto extractors = m_repository.extractorsForMessage(part.content());
-        if (extractors.empty())
+        if (extractors.empty()) {
             return {};
+        }
         qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
 
         ExtractorPreprocessor preproc;
@@ -92,8 +94,9 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         const auto data = engine.extract();
         qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
         const auto decodedData = JsonLdDocument::fromJson(data);
-        if (!decodedData.isEmpty())
+        if (!decodedData.isEmpty()) {
             memento->setData(decodedData);
+        }
     }
 
     // TODO postprocessor to filter incomplete/broken elements and merge duplicates

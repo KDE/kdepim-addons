@@ -91,9 +91,9 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 url.setHost(QStringLiteral("www.openstreetmap.org"));
                 url.setPath(QStringLiteral("/search"));
                 const QString queryString = JsonLdDocument::readProperty(addr, "streetAddress").toString() + QLatin1String(", ")
-                    + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
-                    + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
-                    + JsonLdDocument::readProperty(addr, "addressCountry").toString();
+                                            + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
+                                            + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
+                                            + JsonLdDocument::readProperty(addr, "addressCountry").toString();
                 QUrlQuery query;
                 query.addQueryItem(QStringLiteral("query"), queryString);
                 url.setQuery(query);
@@ -142,8 +142,9 @@ QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
         } else if (r.userType() == qMetaTypeId<TrainReservation>()) {
             const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
             const auto d = JsonLdDocument::readProperty(trip, "departureTime").toDate();
-            if (d.isValid())
+            if (d.isValid()) {
                 return d;
+            }
         }
     }
     return {};
@@ -204,18 +205,18 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForFlightReservation(const QVarian
 
     Event::Ptr event(new Event);
     event->setSummary(i18n("Flight %1 %2 from %3 to %4",
-        JsonLdDocument::readProperty(airline, "iataCode").toString(),
-        JsonLdDocument::readProperty(flight, "flightNumber").toString(),
-        JsonLdDocument::readProperty(depPort, "iataCode").toString(),
-        JsonLdDocument::readProperty(arrPort, "iataCode").toString()
-    ));
+                           JsonLdDocument::readProperty(airline, "iataCode").toString(),
+                           JsonLdDocument::readProperty(flight, "flightNumber").toString(),
+                           JsonLdDocument::readProperty(depPort, "iataCode").toString(),
+                           JsonLdDocument::readProperty(arrPort, "iataCode").toString()
+                           ));
     event->setLocation(JsonLdDocument::readProperty(depPort, "name").toString());
     event->setDtStart(JsonLdDocument::readProperty(flight, "departureTime").toDateTime());
     event->setDtEnd(JsonLdDocument::readProperty(flight, "arrivalTime").toDateTime());
     event->setAllDay(false);
     event->setDescription(i18n("Booking reference: %1",
-        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-    ));
+                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+                               ));
     return event;
 }
 
@@ -231,20 +232,20 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForLodgingReservation(const QVaria
 
     Event::Ptr event(new Event);
     event->setSummary(i18n("Hotel reservation: %1",
-        JsonLdDocument::readProperty(lodgingBusiness, "name").toString()
-    ));
+                           JsonLdDocument::readProperty(lodgingBusiness, "name").toString()
+                           ));
     event->setLocation(i18n("%1, %2 %3, %4",
-        JsonLdDocument::readProperty(address, "streetAddress").toString(),
-        JsonLdDocument::readProperty(address, "postalCode").toString(),
-        JsonLdDocument::readProperty(address, "addressLocality").toString(),
-        JsonLdDocument::readProperty(address, "addressCountry").toString()
-    ));
+                            JsonLdDocument::readProperty(address, "streetAddress").toString(),
+                            JsonLdDocument::readProperty(address, "postalCode").toString(),
+                            JsonLdDocument::readProperty(address, "addressLocality").toString(),
+                            JsonLdDocument::readProperty(address, "addressCountry").toString()
+                            ));
     event->setDtStart(QDateTime(JsonLdDocument::readProperty(reservation, "checkinDate").toDate(), QTime()));
     event->setDtEnd(QDateTime(JsonLdDocument::readProperty(reservation, "checkoutDate").toDate(), QTime(23, 59, 59)));
     event->setAllDay(true);
     event->setDescription(i18n("Booking reference: %1",
-        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-    ));
+                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+                               ));
     event->setTransparency(Event::Transparent);
     return event;
 }
@@ -262,17 +263,17 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForTrainReservation(const QVariant
 
     Event::Ptr event(new Event);
     event->setSummary(i18n("Train %1 from %2 to %3",
-        JsonLdDocument::readProperty(trip, "trainNumber").toString(),
-        JsonLdDocument::readProperty(depStation, "name").toString(),
-        JsonLdDocument::readProperty(arrStation, "name").toString()
-    ));
+                           JsonLdDocument::readProperty(trip, "trainNumber").toString(),
+                           JsonLdDocument::readProperty(depStation, "name").toString(),
+                           JsonLdDocument::readProperty(arrStation, "name").toString()
+                           ));
     event->setLocation(JsonLdDocument::readProperty(depStation, "name").toString());
     event->setDtStart(JsonLdDocument::readProperty(trip, "departureTime").toDateTime());
     event->setDtEnd(JsonLdDocument::readProperty(trip, "arrivalTime").toDateTime());
     event->setAllDay(false);
     event->setDescription(i18n("Booking reference: %1",
-        JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-    ));
+                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
+                               ));
     return event;
 }
 

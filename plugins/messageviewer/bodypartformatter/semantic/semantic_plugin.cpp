@@ -25,7 +25,10 @@
 #include <MimeTreeParser/BodyPartFormatter>
 
 // needs to be outside of the anonymous namespace
-static void initResource() { Q_INIT_RESOURCE(rules); }
+static void initResource()
+{
+    Q_INIT_RESOURCE(rules);
+}
 
 namespace {
 class SemanticPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
