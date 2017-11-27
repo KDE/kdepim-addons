@@ -126,7 +126,7 @@ void RenderTest::testRenderKeyDetails()
 
     // render the mail
     QEventLoop loop;
-    MimeTreeParser::FileHtmlWriter fileWriter(outFileName);
+    MessageViewer::FileHtmlWriter fileWriter(outFileName);
     fileWriter.begin();
     QImage paintDevice;
     MessageViewer::CSSHelperBase cssHelper(&paintDevice);
