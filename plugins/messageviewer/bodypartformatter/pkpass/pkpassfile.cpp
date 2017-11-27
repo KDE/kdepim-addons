@@ -104,6 +104,7 @@ QImage PkPassFile::barcode() const
     const auto msg = barcodeData.value(QLatin1String("message")).toString();
     // TODO: consider messageEncoding, once Prison supports that
     if (formatName.isEmpty() || msg.isEmpty()) {
+        qCDebug(PKPASS_LOG) << "formatName empty or msg empty";
         return {};
     }
 
@@ -121,6 +122,7 @@ QImage PkPassFile::barcode() const
     }
 
     if (!code) {
+        qCDebug(PKPASS_LOG) << "Unsupported formatName: " << formatName;
         return {};
     }
     code->setData(msg);
