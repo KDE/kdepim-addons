@@ -25,7 +25,6 @@
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
-#include <QDebug>
 #include <QJsonDocument>
 
 MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const

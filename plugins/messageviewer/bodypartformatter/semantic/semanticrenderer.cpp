@@ -28,7 +28,6 @@
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
 
-#include <QDebug>
 #include <QGuiApplication>
 #include <QMetaProperty>
 #include <QPalette>
