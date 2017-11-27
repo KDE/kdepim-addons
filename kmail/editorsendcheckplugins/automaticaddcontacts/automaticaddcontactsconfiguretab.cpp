@@ -50,7 +50,7 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityMana
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
         AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(this);
         connect(w, &AutomaticAddContactsTabWidget::configureChanged, this, &AutomaticAddContactsConfigureTab::configureChanged);
-        mTabWidget->addTab(w, (*it).identityName());
+        mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());
         mListTabWidget.append(w);
     }
