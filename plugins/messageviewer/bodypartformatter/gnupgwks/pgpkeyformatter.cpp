@@ -40,7 +40,7 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
     auto mp = new PgpKeyMessagePart(&part);
     PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
 
-    if (!m) {
+    if (!m && !mp->fingerprint().isEmpty()) {
         auto memento = new PgpKeyMemento();
         auto nodeHelper = part.nodeHelper();
         if (nodeHelper) {
@@ -52,11 +52,16 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
             m = memento;
         }
         mp->setMemento(memento);
-    } else if (m->isRunning()) {
+        mp->setSearchRunning(memento->isRunning());
+    } else if (mp->fingerprint().isEmpty()) {
+        mp->setError(i18n("No valid key data in file."));
+    } else if (m && m->isRunning()) {
+        mp->setSearchRunning(m->isRunning());
         m = nullptr;
     }
 
     if (m) {
+        mp->setSearchRunning(m->isRunning());
         Q_ASSERT(!m->isRunning());
 
         mp->setError(m->error());
@@ -86,26 +91,12 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     block.setProperty("showKeyDetails", context->showSignatureDetails());
     block.setProperty("error", mp->error());
     block.setProperty("importUrl", mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
+    block.setProperty("searchRunning", mp->searchRunning());
     const auto key = mp->key();
-    if (key.isNull()) {
-        block.setProperty("uid", mp->userID());
-        block.setProperty("fingerprint", mp->fingerprint());
-        block.setProperty("created", mp->keyDate().toString(Qt::SystemLocaleDate));
-    } else {
-        const auto uid = key.userID(0);
-        block.setProperty("hasKey", true);
-        if (uid.email() && *uid.email() && uid.name() && *uid.name()) {
-            block.setProperty("uid", QStringLiteral("%1 <%2>").arg(QString::fromUtf8(uid.name()),
-                                                                   QString::fromUtf8(uid.email())));
-        } else if (uid.name() && *uid.name()) {
-            block.setProperty("uid", QString::fromUtf8(uid.name()));
-        } else if (uid.email() && *uid.email()) {
-            block.setProperty("uid", QString::fromUtf8(uid.email()));
-        } else {
-            block.setProperty("uid", i18n("Unknown identity"));
-        }
-        block.setProperty("created", QDateTime::fromTime_t(key.subkey(0).creationTime()).toString(Qt::SystemLocaleDate));
-        block.setProperty("fingerprint", QString::fromLatin1(key.primaryFingerprint()));
+    block.setProperty("uid", mp->userID());
+    block.setProperty("fingerprint", mp->fingerprint());
+    block.setProperty("created", mp->keyDate().toString(Qt::SystemLocaleDate));
+    if (!key.isNull()) {
         block.setProperty("keyUrl", QStringLiteral("kmail:showCertificate#GpgME ### gpgme ### %1").arg(QString::fromLatin1(key.keyID())));
     }
 

@@ -26,6 +26,7 @@
 
 PgpKeyMessagePart::PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
+    , mSearchRunning(false)
 {
     setContent(part->content());
     parseContent(part->content());
@@ -75,6 +76,17 @@ QByteArray PgpKeyMessagePart::rawKey() const
 {
     return content()->decodedContent();
 }
+
+void PgpKeyMessagePart::setSearchRunning(bool searchRunning)
+{
+    mSearchRunning = searchRunning;
+}
+
+bool PgpKeyMessagePart::searchRunning() const
+{
+    return mSearchRunning;
+}
+
 
 void PgpKeyMessagePart::parseContent(KMime::Content *node)
 {
