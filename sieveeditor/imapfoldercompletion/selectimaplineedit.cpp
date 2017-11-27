@@ -25,6 +25,7 @@ SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
     : QLineEdit(parent)
     , mCompleter(nullptr)
 {
+    setClearButtonEnabled(true);
 }
 
 SelectImapLineEdit::~SelectImapLineEdit()
