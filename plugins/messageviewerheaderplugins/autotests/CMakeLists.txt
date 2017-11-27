@@ -21,6 +21,10 @@ macro(add_messageviewer_header_class_unittest _source )
     target_link_libraries( ${_name} KF5::MessageViewer KF5::Libkleo Qt5::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::XmlGui)
 endmacro ()
 
+configure_file(
+        ${CMAKE_CURRENT_SOURCE_DIR}/../enterpriseheaderstyleplugin/messageviewer_enterpriseheaderstyleplugin.json.cmake
+        ${CMAKE_CURRENT_BINARY_DIR}/messageviewer_enterpriseheaderstyleplugin.json)
+
 
 add_messageviewer_header_unittest( briefheaderstyleplugintest.cpp "../briefheaderstyleplugin/briefheaderstrategy.cpp;../briefheaderstyleplugin/briefheaderstyle.cpp;../briefheaderstyleplugin/briefheaderstyleplugin.cpp;../briefheaderstyleplugin/briefheaderstyleinterface.cpp")
 
