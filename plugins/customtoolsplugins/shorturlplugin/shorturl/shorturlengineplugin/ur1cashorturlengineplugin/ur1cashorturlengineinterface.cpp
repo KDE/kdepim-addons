@@ -81,7 +81,6 @@ void Ur1CaShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     if (!output.isEmpty()) {
         Q_EMIT shortUrlGenerated(output);
     } else {
-        //TODO
         Q_EMIT shortUrlFailed(QString());
     }
     reply->deleteLater();
