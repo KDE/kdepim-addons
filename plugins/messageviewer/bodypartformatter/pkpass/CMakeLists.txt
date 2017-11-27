@@ -1,3 +1,5 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_bodypartformatter_pkpass\")
+
 set(pkpass_srcs
     pkpassfield.cpp
     pkpassfile.cpp
