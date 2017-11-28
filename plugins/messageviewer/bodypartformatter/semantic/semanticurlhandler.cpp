@@ -43,9 +43,6 @@
 
 #include <memory>
 
-SemanticUrlHandler::SemanticUrlHandler() = default;
-SemanticUrlHandler::~SemanticUrlHandler() = default;
-
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
@@ -67,7 +64,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     const auto date = dateForReservation(m);
 
     QMenu menu;
-    QAction *action;
+    QAction *action = nullptr;
     if (date.isValid()) {
         action = menu.addAction(QIcon::fromTheme(QStringLiteral("view-calendar")), i18n("Show Calendar"));
         QObject::connect(action, &QAction::triggered, this, [this, date](){
@@ -181,11 +178,12 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
 
 KCalCore::Event::Ptr SemanticUrlHandler::eventForReservation(const QVariant &reservation) const
 {
-    if (reservation.userType() == qMetaTypeId<FlightReservation>()) {
+    const int reservationId = reservation.userType();
+    if (reservationId == qMetaTypeId<FlightReservation>()) {
         return eventForFlightReservation(reservation);
-    } else if (reservation.userType() == qMetaTypeId<LodgingReservation>()) {
+    } else if (reservationId == qMetaTypeId<LodgingReservation>()) {
         return eventForLodgingReservation(reservation);
-    } else if (reservation.userType() == qMetaTypeId<TrainReservation>()) {
+    } else if (reservationId == qMetaTypeId<TrainReservation>()) {
         return eventForTrainReservation(reservation);
     }
     return {};

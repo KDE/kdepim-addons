@@ -33,8 +33,8 @@ class SemanticUrlHandler : public QObject, public MessageViewer::Interface::Body
 {
     Q_OBJECT
 public:
-    SemanticUrlHandler();
-    ~SemanticUrlHandler();
+    SemanticUrlHandler() = default;
+    ~SemanticUrlHandler() = default;
 
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
