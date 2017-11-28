@@ -38,7 +38,6 @@
 #include <QDesktopServices>
 #include <QIcon>
 #include <QMenu>
-#include <QMetaProperty>
 #include <QUrlQuery>
 
 #include <memory>
