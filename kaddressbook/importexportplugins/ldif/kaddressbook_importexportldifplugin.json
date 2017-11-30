@@ -25,7 +25,7 @@
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі LDIF.",
         "Description[x-test]": "xxThis plugin allows you to import/export LDIF.xx",
         "Description[zh_CN]": "此插件允许您导入/导出 LDIF。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kaddressbookimportexportldif",
         "Name": "Import/Export LDIF",
         "Name[ca@valencia]": "Importa/exporta el LDIF",

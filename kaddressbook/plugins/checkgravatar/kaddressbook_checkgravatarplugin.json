@@ -25,7 +25,7 @@
         "Description[uk]": "За допомогою цього додатка можна визначати зображення gravatar.",
         "Description[x-test]": "xxThis plugin allows you to check the Gravatar images.xx",
         "Description[zh_CN]": "此插件允许您检查 Gravatar 头像。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kaddressbookcheckgravatar",
         "Name": "Check Gravatar",
         "Name[ca@valencia]": "Comprova el «Gravatar»",
