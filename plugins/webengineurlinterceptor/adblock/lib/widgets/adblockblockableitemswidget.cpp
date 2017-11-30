@@ -256,6 +256,10 @@ QString AdBlockBlockableItemsWidget::elementType(AdBlockBlockableItemsWidget::Ty
 
 void AdBlockBlockableItemsWidget::slotRemoveFilter()
 {
-    //TODO
-    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " AdBlockBlockableItemsWidget::slotRemoveFilter not implement yet";
+    QTreeWidgetItem *item = mListItems->currentItem();
+    if (!item) {
+        return;
+    }
+
+    item->setText(FilterValue, QString());
 }
