@@ -27,11 +27,13 @@
 #include <MimeTreeParser/FileHtmlWriter>
 
 #include <KMime/Message>
-#include <QTest>
 #include <QDir>
 #include <QIcon>
 #include <QProcess>
 #include <QStandardPaths>
+#include <QStyle>
+#include <QStyleFactory>
+#include <QTest>
 
 #ifndef Q_OS_WIN
 void initLocale()
@@ -47,6 +49,12 @@ void initLocale()
 
 Q_CONSTRUCTOR_FUNCTION(initLocale)
 #endif
+
+void RenderTest::initTestCase()
+{
+    QApplication::setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
+    QApplication::setPalette(QApplication::style()->standardPalette());
+}
 
 void RenderTest::testRender_data()
 {
