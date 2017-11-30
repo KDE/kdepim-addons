@@ -88,11 +88,15 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         item->setTextColor(FilterValue, Qt::red);
     }
     mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
+    //TODO read existing list for enable/disable it.
 }
 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
     qWarning() << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
+    for (int i = 0; i < mListItems->model()->rowCount(); ++i) {
+        //TODO
+    }
     //TODO
 }
 
