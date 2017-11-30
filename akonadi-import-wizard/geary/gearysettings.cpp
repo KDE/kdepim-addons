@@ -96,13 +96,12 @@ void GearySettings::readTransport()
 
         if (!settings->value(QStringLiteral("smtp_noauth"), true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::None);
-        }
-        if (settings->value(QStringLiteral("smtp_ssl"), true).toBool()) {
+        } else if (settings->value(QStringLiteral("smtp_ssl"), true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::SSL);
-        }
-        if (settings->value(QStringLiteral("smtp_starttls"), true).toBool()) {
+        } else if (settings->value(QStringLiteral("smtp_starttls"), true).toBool()) {
             mt->setEncryption(MailTransport::Transport::EnumEncryption::TLS);
         }
+
         if (settings->value(QStringLiteral("smtp_use_imap_credentials"), true).toBool()) {
             //TODO store value
         }
