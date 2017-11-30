@@ -26,6 +26,9 @@ class RenderTest : public QObject
 {
     Q_OBJECT
 
+public Q_SLOTS:
+    void initTestCase();
+
 private Q_SLOTS:
     void testRender_data();
     void testRender();
