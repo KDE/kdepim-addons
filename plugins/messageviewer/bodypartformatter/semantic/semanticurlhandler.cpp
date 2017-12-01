@@ -80,7 +80,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         if (r.userType() == qMetaTypeId<LodgingReservation>()) {
             const auto hotel = JsonLdDocument::readProperty(r, "reservationFor");
             const auto addr = JsonLdDocument::readProperty(hotel, "address");
-            action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show %1 On Map", JsonLdDocument::readProperty(hotel, "name").toString()));
+            action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(hotel, "name").toString()));
             QObject::connect(action, &QAction::triggered, this, [addr]() {
                 QUrl url;
                 url.setScheme(QStringLiteral("https"));
