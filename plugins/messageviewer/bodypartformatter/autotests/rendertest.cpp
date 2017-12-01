@@ -29,6 +29,7 @@
 #include <KMime/Message>
 #include <QDir>
 #include <QIcon>
+#include <QPalette>
 #include <QProcess>
 #include <QStandardPaths>
 #include <QStyle>
@@ -53,7 +54,12 @@ Q_CONSTRUCTOR_FUNCTION(initLocale)
 void RenderTest::initTestCase()
 {
     QApplication::setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
-    QApplication::setPalette(QApplication::style()->standardPalette());
+    QPalette p(QApplication::style()->standardPalette());
+    p.setCurrentColorGroup(QPalette::Normal);
+    p.setColor(QPalette::Button, QColor::fromRgb(0xef,0xeb,0xe7));
+    p.setColor(QPalette::ButtonText, QColor::fromRgb(0, 0, 0));
+    p.setColor(QPalette::Shadow, QColor::fromRgb(0x76,0x74,0x72));
+    QApplication::setPalette(p);
 }
 
 void RenderTest::testRender_data()
