@@ -98,7 +98,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
 #else
     mFilter = new QSortFilterProxyModel(this);
     mFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
-    mFilter->setRecursiveFiltering(true);
+    mFilter->setRecursiveFilteringEnabled(true);
     mFilter->setSourceModel(mModel);
 #endif
 
