@@ -87,7 +87,6 @@ bool PgpKeyMessagePart::searchRunning() const
     return mSearchRunning;
 }
 
-
 void PgpKeyMessagePart::parseContent(KMime::Content *node)
 {
     // TODO if GpgME dependency is 1.9.0 this can use

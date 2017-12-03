@@ -56,9 +56,9 @@ void RenderTest::initTestCase()
     QApplication::setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     QPalette p(QApplication::style()->standardPalette());
     p.setCurrentColorGroup(QPalette::Normal);
-    p.setColor(QPalette::Button, QColor::fromRgb(0xef,0xeb,0xe7));
+    p.setColor(QPalette::Button, QColor::fromRgb(0xef, 0xeb, 0xe7));
     p.setColor(QPalette::ButtonText, QColor::fromRgb(0, 0, 0));
-    p.setColor(QPalette::Shadow, QColor::fromRgb(0x76,0x74,0x72));
+    p.setColor(QPalette::Shadow, QColor::fromRgb(0x76, 0x74, 0x72));
     QApplication::setPalette(p);
 }
 
@@ -166,8 +166,8 @@ void RenderTest::testRenderKeyDetails()
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
         fileWriter.begin();
         fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                                    "<html>\n"
-                                    "<body>\n"));
+                                        "<html>\n"
+                                        "<body>\n"));
         otp.parseObjectTree(msg.data());
 
         fileWriter.write(QStringLiteral("</body></html>"));
@@ -176,8 +176,6 @@ void RenderTest::testRenderKeyDetails()
         compareFile(outFileName, referenceFileName + QStringLiteral(".details"));
     }
 }
-
-
 
 void RenderTest::compareFile(const QString &outFile, const QString &referenceFile)
 {
