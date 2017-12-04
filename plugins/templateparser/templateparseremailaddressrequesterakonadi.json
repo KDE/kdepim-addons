@@ -6,6 +6,7 @@
         "Name[ca]": "Adreça de correu electrònic requerida per «Templateparser»",
         "Name[es]": "Peticionario de dirección de correo para Templateparser",
         "Name[fr]": "Demandeur de l'adresses de courrier électronique pour l'analyse du modèle",
+        "Name[ko]": "Templateparser를 위한 이메일 주소 요청 도구",
         "Name[nl]": "Verzoeker om e-mailadres voor ontleden van sjabloon",
         "Name[pl]": "Program żądający adresu pocztowego dla przetwarzania szablonów",
         "Name[pt]": "Pedido de Endereço de E-Mail para o Processador de Modelos",
