@@ -216,10 +216,11 @@ void PkPassFile::parse()
 static int indexOfUnquoted(const QString &catalog, QLatin1Char c, int start)
 {
     for (int i = start; i < catalog.size(); ++i) {
-        if (catalog.at(i) == c) {
+        const QChar catalogChar = catalog.at(i);
+        if (catalogChar == c) {
             return i;
         }
-        if (catalog.at(i) == QLatin1Char('\\')) {
+        if (catalogChar == QLatin1Char('\\')) {
             ++i;
         }
     }
