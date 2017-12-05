@@ -119,7 +119,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("from"))) {
         // We by design use the stripped mail address here, it is more enterprise-like.
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(),
-                                                         StringUtil::DisplayNameOnly, linkColor);
+                                                         StringUtil::DisplayFullAddress, linkColor);
         if (!vCardName().isEmpty()) {
             fromPart += QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]") + QStringLiteral("</a>");
         }
