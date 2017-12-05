@@ -35,7 +35,7 @@
 using namespace MessageCore;
 using namespace MessageViewer;
 
-namespace MessageViewer {
+
 QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 {
     if (!message) {
@@ -230,5 +230,4 @@ bool EnterpriseHeaderStyle::hasAttachmentQuickList() const
 const char *MessageViewer::EnterpriseHeaderStyle::name() const
 {
     return "enterprise";
-}
 }
