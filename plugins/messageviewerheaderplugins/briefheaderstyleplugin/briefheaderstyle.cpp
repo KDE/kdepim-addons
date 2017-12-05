@@ -91,7 +91,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
         if ( fromStr.isEmpty() ) // no valid email in from, maybe just a name
         fromStr = message->fromStrip(); // let's use that
         */
-        QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayNameOnly);
+        QString fromPart = StringUtil::emailAddrAsAnchor(message->from(), StringUtil::DisplayFullAddress);
         if (!vCardName().isEmpty()) {
             fromPart += QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">") + i18n("[vCard]") + QStringLiteral("</a>");
         }
@@ -99,14 +99,14 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
-        const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayNameOnly);
+        const QString str = StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("CC: ") + str;
         }
     }
 
     if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
-        const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayNameOnly);
+        const QString str = StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress);
         if (!str.isEmpty()) {
             headerParts << i18n("BCC: ") + str;
         }
