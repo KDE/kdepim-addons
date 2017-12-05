@@ -88,7 +88,6 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);
 
-
     mTreeView = new SelectImapFolderTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mTreeView->header()->hide();
