@@ -144,7 +144,7 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
 
     KMime::Message::Ptr msg(new KMime::Message);
@@ -162,7 +162,7 @@ void EventEditTest::shouldHideWidgetWhenPressEnter()
 {
     MessageViewer::EventEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
 
     KMime::Message::Ptr msg(new KMime::Message);
@@ -180,7 +180,7 @@ void EventEditTest::shouldHideWidgetWhenPressEscape()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QLineEdit *eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
     QVERIFY(eventedit->hasFocus());
@@ -192,7 +192,7 @@ void EventEditTest::shouldHideWidgetWhenSaveClicked()
 {
     MessageViewer::EventEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
@@ -206,7 +206,7 @@ void EventEditTest::shouldSaveCollectionSettings()
 {
     MessageViewer::EventEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(3);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
@@ -219,7 +219,7 @@ void EventEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 {
     MessageViewer::EventEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(4);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
@@ -326,7 +326,7 @@ void EventEditTest::shouldSetFocusWhenWeCallTodoEdit()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
     edit.setFocus();

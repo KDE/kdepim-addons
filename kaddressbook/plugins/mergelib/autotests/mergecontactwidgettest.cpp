@@ -127,7 +127,7 @@ void MergeContactWidgetTest::shouldEnableButton()
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     mergeWidget.show();
-    QTest::qWaitForWindowExposed(&mergeWidget);
+    QVERIFY(QTest::qWaitForWindowExposed(&mergeWidget));
     listWidget->item(0)->setCheckState(Qt::Checked);
     listWidget->item(1)->setCheckState(Qt::Checked);
     QCOMPARE(button->isEnabled(), true);
@@ -141,7 +141,7 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsElementSelected()
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     mergeWidget.show();
-    QTest::qWaitForWindowExposed(&mergeWidget);
+    QVERIFY(QTest::qWaitForWindowExposed(&mergeWidget));
     listWidget->item(0)->setCheckState(Qt::Checked);
     listWidget->item(1)->setCheckState(Qt::Checked);
     QSignalSpy spy(&mergeWidget, SIGNAL(mergeContact(Akonadi::Item::List,Akonadi::Collection)));
@@ -161,7 +161,7 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsTwoElementsSelected()
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     mergeWidget.show();
-    QTest::qWaitForWindowExposed(&mergeWidget);
+    QVERIFY(QTest::qWaitForWindowExposed(&mergeWidget));
     listWidget->item(0)->setCheckState(Qt::Checked);
     QSignalSpy spy(&mergeWidget, SIGNAL(mergeContact(Akonadi::Item::List,Akonadi::Collection)));
     QTest::mouseClick(button, Qt::LeftButton);

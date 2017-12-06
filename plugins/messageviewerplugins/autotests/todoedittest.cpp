@@ -257,7 +257,7 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
     MessageViewer::TodoEdit edit;
     edit.show();
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
@@ -304,7 +304,7 @@ void TodoEditTest::shouldHideWidgetWhenClickOnCloseButton()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
     QPushButton *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
     QTest::mouseClick(close, Qt::LeftButton);
@@ -317,7 +317,7 @@ void TodoEditTest::shouldHideWidgetWhenPressEscape()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setFocus();
     QVERIFY(noteedit->hasFocus());
@@ -329,7 +329,7 @@ void TodoEditTest::shouldHideWidgetWhenSaveClicked()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
@@ -376,7 +376,7 @@ void TodoEditTest::shouldSetFocusWhenWeCallTodoEdit()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
@@ -418,7 +418,7 @@ void TodoEditTest::shouldHaveLineEditFocus()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
@@ -431,7 +431,7 @@ void TodoEditTest::shouldShowMessageWidget()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
@@ -448,7 +448,7 @@ void TodoEditTest::shouldHideMessageWidget()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test note"));
 
@@ -466,7 +466,7 @@ void TodoEditTest::shouldHideMessageWidgetWhenAddNewMessage()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
@@ -489,7 +489,7 @@ void TodoEditTest::shouldHideMessageWidgetWhenCloseWidget()
 {
     MessageViewer::TodoEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");

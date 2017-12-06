@@ -288,7 +288,7 @@ void NoteEditTest::shouldHideWidgetWhenClickOnCloseButton()
 {
     MessageViewer::NoteEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
     QPushButton *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
     QTest::mouseClick(close, Qt::LeftButton);
@@ -301,7 +301,7 @@ void NoteEditTest::shouldHideWidgetWhenPressEscape()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setFocus();
     QVERIFY(noteedit->hasFocus());
@@ -313,7 +313,7 @@ void NoteEditTest::shouldHideWidgetWhenSaveClicked()
 {
     MessageViewer::NoteEdit edit;
     edit.show();
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
@@ -360,7 +360,7 @@ void NoteEditTest::shouldSetFocusWhenWeCallNoteEdit()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
@@ -402,7 +402,7 @@ void NoteEditTest::shouldHaveLineEditFocus()
     edit.show();
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
-    QTest::qWaitForWindowExposed(&edit);
+    QVERIFY(QTest::qWaitForWindowExposed(&edit));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
