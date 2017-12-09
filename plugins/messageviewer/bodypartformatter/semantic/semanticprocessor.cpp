@@ -20,6 +20,7 @@
 #include "semanticprocessor.h"
 #include "extractorengine.h"
 #include "extractorpreprocessor.h"
+#include "extractorpostprocessor.h"
 #include "jsonlddocument.h"
 #include "structureddataextractor.h"
 #include "semanticmemento.h"
@@ -98,7 +99,10 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         }
     }
 
-    // TODO postprocessor to filter incomplete/broken elements and merge duplicates
+    // postprocessor to filter incomplete/broken elements and merge duplicates
+    ExtractorPostprocessor postproc;
+    postproc.process(memento->data());
+    memento->setData(postproc.result());
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
