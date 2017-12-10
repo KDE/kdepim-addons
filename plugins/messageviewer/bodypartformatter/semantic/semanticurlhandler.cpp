@@ -49,6 +49,47 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
     return path == QLatin1String("semanticAction");
 }
 
+static void addGoToMapAction(QMenu *menu, const QVariant &place)
+{
+    if (place.isNull())
+        return;
+
+    const auto addr = JsonLdDocument::readProperty(place, "address");
+    if (!addr.isNull()) {
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(place, "name").toString()));
+        QObject::connect(action, &QAction::triggered, menu, [addr]() {
+            QUrl url;
+            url.setScheme(QStringLiteral("https"));
+            url.setHost(QStringLiteral("www.openstreetmap.org"));
+            url.setPath(QStringLiteral("/search"));
+            const QString queryString = JsonLdDocument::readProperty(addr, "streetAddress").toString() + QLatin1String(", ")
+                                        + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
+                                        + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
+                                        + JsonLdDocument::readProperty(addr, "addressCountry").toString();
+            QUrlQuery query;
+            query.addQueryItem(QStringLiteral("query"), queryString);
+            url.setQuery(query);
+            QDesktopServices::openUrl(url);
+        });
+        return;
+    }
+
+    const auto geo = JsonLdDocument::readProperty(place, "geo");
+    if (!geo.isNull()) {
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(place, "name").toString()));
+        QObject::connect(action, &QAction::triggered, menu, [geo]() {
+            QUrl url;
+            url.setScheme(QStringLiteral("https"));
+            url.setHost(QStringLiteral("www.openstreetmap.org"));
+            url.setPath(QStringLiteral("/"));
+            const QString fragment = QLatin1String("map=12/") + JsonLdDocument::readProperty(geo, "longitude").toString()
+                + QLatin1String("/") + JsonLdDocument::readProperty(geo, "latitude").toString();
+            url.setFragment(fragment);
+            QDesktopServices::openUrl(url);
+        });
+    }
+}
+
 bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
@@ -76,25 +117,26 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         addToCalendar(m);
     });
 
+    QSet<QString> places;
     for (const auto &r : m->data()) {
         if (r.userType() == qMetaTypeId<LodgingReservation>()) {
-            const auto hotel = JsonLdDocument::readProperty(r, "reservationFor");
-            const auto addr = JsonLdDocument::readProperty(hotel, "address");
-            action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(hotel, "name").toString()));
-            QObject::connect(action, &QAction::triggered, this, [addr]() {
-                QUrl url;
-                url.setScheme(QStringLiteral("https"));
-                url.setHost(QStringLiteral("www.openstreetmap.org"));
-                url.setPath(QStringLiteral("/search"));
-                const QString queryString = JsonLdDocument::readProperty(addr, "streetAddress").toString() + QLatin1String(", ")
-                                            + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
-                                            + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
-                                            + JsonLdDocument::readProperty(addr, "addressCountry").toString();
-                QUrlQuery query;
-                query.addQueryItem(QStringLiteral("query"), queryString);
-                url.setQuery(query);
-                QDesktopServices::openUrl(url);
-            });
+            addGoToMapAction(&menu, JsonLdDocument::readProperty(r, "reservationFor"));
+        } else if (r.userType() == qMetaTypeId<FlightReservation>()) {
+            const auto flight = JsonLdDocument::readProperty(r, "reservationFor");
+
+            auto airport = JsonLdDocument::readProperty(flight, "departureAirport");
+            auto iataCode = JsonLdDocument::readProperty(airport, "iataCode").toString();
+            if (!places.contains(iataCode)) {
+                addGoToMapAction(&menu, airport);
+                places.insert(iataCode);
+            }
+
+            airport = JsonLdDocument::readProperty(flight, "arrivalAirport");
+            iataCode = JsonLdDocument::readProperty(airport, "iataCode").toString();
+            if (!places.contains(iataCode)) {
+                addGoToMapAction(&menu, airport);
+                places.insert(iataCode);
+            }
         }
     }
 
