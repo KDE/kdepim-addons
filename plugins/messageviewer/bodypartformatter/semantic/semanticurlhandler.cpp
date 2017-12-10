@@ -51,8 +51,9 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
 
 static void addGoToMapAction(QMenu *menu, const QVariant &place)
 {
-    if (place.isNull())
+    if (place.isNull()) {
         return;
+    }
 
     const auto addr = JsonLdDocument::readProperty(place, "address");
     if (!addr.isNull()) {
@@ -83,7 +84,7 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setHost(QStringLiteral("www.openstreetmap.org"));
             url.setPath(QStringLiteral("/"));
             const QString fragment = QLatin1String("map=12/") + JsonLdDocument::readProperty(geo, "longitude").toString()
-                + QLatin1String("/") + JsonLdDocument::readProperty(geo, "latitude").toString();
+                                     + QLatin1String("/") + JsonLdDocument::readProperty(geo, "latitude").toString();
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
