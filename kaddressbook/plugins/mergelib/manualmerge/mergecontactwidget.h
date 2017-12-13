@@ -54,7 +54,6 @@ private:
     void slotMergeDone(const Akonadi::Item &item);
     Akonadi::Item::List listSelectedContacts() const;
     Akonadi::Item currentItem() const;
-    void fillListContact();
     MergeContacts::ConflictInformations mConflictTypes;
     Akonadi::Item::List mSelectedItems;
     Akonadi::Item::List mItems;

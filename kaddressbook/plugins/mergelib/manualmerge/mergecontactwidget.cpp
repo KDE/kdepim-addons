@@ -91,13 +91,10 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
 
     lay->addLayout(hbox);
 
-    hbox = new QHBoxLayout;
-    hbox->addStretch();
     mMergeButton = new QPushButton(i18n("merge"));
     mMergeButton->setObjectName(QStringLiteral("mergebutton"));
     hbox->addWidget(mMergeButton);
     mMergeButton->setEnabled(false);
-    lay->addLayout(hbox);
 
     connect(mMergeButton, &QPushButton::clicked, this, &MergeContactWidget::slotMergeContacts);
 }
@@ -109,11 +106,6 @@ MergeContactWidget::~MergeContactWidget()
 void MergeContactWidget::setContacts(const Akonadi::Item::List &items)
 {
     mItems = items;
-    fillListContact();
-}
-
-void MergeContactWidget::fillListContact()
-{
     mListWidget->fillListContact(mItems);
 }
 

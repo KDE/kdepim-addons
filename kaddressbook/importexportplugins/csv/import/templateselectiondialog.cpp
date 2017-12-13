@@ -41,7 +41,7 @@
 typedef struct {
     QString displayName;
     QString fileName;
-    bool isDeletable;
+    bool isDeletable = false;
 } TemplateInfo;
 
 class TemplatesModel : public QAbstractTableModel
