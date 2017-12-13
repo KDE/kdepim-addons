@@ -31,7 +31,6 @@
 
 CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
-    , mAction(nullptr)
 {
 }
 
