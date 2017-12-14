@@ -43,8 +43,7 @@ EventSelectorDialog::EventSelectorDialog(QWidget *parent, Qt::WindowFlags f)
     : QDialog(parent, f)
 {
     QWidget *mainWidget = new QWidget(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(mainWidget);
     QHBoxLayout *layout = new QHBoxLayout(mainWidget);
     m_view = new QTreeView;

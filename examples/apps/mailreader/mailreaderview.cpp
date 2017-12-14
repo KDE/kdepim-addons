@@ -23,11 +23,10 @@
 mailreaderView::mailreaderView(QWidget *parent)
 {
     ui_mailreaderview.setupUi(this);
-    QHBoxLayout *layout = new QHBoxLayout;
+    QHBoxLayout *layout = new QHBoxLayout(this);
     m_readerWin = new MessageViewer::Viewer(this, parent, dynamic_cast<KXmlGuiWindow *>(parent)->actionCollection());
     m_readerWin->setAttachmentStrategy(MessageViewer::AttachmentStrategy::inlined());
     layout->addWidget(m_readerWin);
-    setLayout(layout);
     setAutoFillBackground(true);
     displayAboutPage();
     connect(m_readerWin, SIGNAL(urlClicked(Akonadi::Item,QUrl)), this,

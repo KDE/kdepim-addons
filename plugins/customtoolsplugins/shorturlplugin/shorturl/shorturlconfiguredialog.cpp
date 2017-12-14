@@ -40,9 +40,8 @@ ShortUrlConfigureDialog::ShortUrlConfigureDialog(QWidget *parent)
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &ShortUrlConfigureDialog::slotDefaultClicked);
 
     QWidget *w = new QWidget;
-    QVBoxLayout *lay = new QVBoxLayout;
+    QVBoxLayout *lay = new QVBoxLayout(w);
     lay->setMargin(0);
-    w->setLayout(lay);
     mainLayout->addWidget(w);
     mainLayout->addWidget(buttonBox);
 
