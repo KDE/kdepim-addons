@@ -43,7 +43,7 @@ SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountS
     layout->addWidget(buttonBox);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 
-    mNewFolder = new QPushButton(i18n("Create Folder..."));
+    mNewFolder = new QPushButton(i18n("Create Folder..."), this);
     mNewFolder->setObjectName(QStringLiteral("createfolder"));
     mNewFolder->setEnabled(false);
     buttonBox->addButton(mNewFolder, QDialogButtonBox::ActionRole);
