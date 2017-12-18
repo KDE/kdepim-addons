@@ -42,7 +42,6 @@ using namespace AdBlock;
 AdBlockMatcher::AdBlockMatcher(AdblockManager *manager)
     : QObject(manager)
     , m_manager(manager)
-    , m_enabled(false)
 {
     connect(manager, &AdblockManager::enabledChanged, this, &AdBlockMatcher::enabledChanged);
 }

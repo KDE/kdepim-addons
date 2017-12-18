@@ -82,7 +82,7 @@ private:
     QString m_elementHidingRules;
     AdBlockSearchTree m_networkBlockTree;
     AdBlockSearchTree m_networkExceptionTree;
-    bool m_enabled;
+    bool m_enabled = false;
 };
 }
 

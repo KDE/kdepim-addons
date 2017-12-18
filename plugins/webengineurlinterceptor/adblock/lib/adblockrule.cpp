@@ -588,7 +588,7 @@ bool AdBlockRule::filterIsOnlyDomain(const QString &filter) const
 
 bool AdBlockRule::filterIsOnlyEndsMatch(const QString &filter) const
 {
-    for (int i = 0; i < filter.size(); ++i) {
+    for (int i = 0, total = filter.size(); i < total; ++i) {
         switch (filter.at(i).toLatin1()) {
         case '^':
         case '*':

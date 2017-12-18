@@ -44,6 +44,7 @@ AdBlockSearchTree::AdBlockSearchTree()
 AdBlockSearchTree::~AdBlockSearchTree()
 {
     deleteNode(m_root);
+    m_root = nullptr;
 }
 
 void AdBlockSearchTree::clear()
