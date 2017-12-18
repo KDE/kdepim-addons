@@ -1,15 +1,15 @@
 {
     "KPlugin": {
-        "Name": "PIM Events Plugin",
-        "Description": "Calendar plugin for displaying events from KDE PIM calendars",
-        "Icon": "view-calendar",
-        "ConfigUi": "pimevents/PimEventsConfig.qml",
         "Authors": [
             {
-                "Name": "Daniel Vrátil",
-                "Email": "dvratil@kde.org"
+                "Email": "dvratil@kde.org",
+                "Name": "Daniel Vrátil"
             }
         ],
+        "ConfigUi": "pimevents/PimEventsConfig.qml",
+        "Description": "Calendar plugin for displaying events from KDE PIM calendars",
+        "Icon": "view-calendar",
+        "Name": "PIM Events Plugin",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ]
