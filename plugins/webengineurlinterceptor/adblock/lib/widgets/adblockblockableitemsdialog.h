@@ -35,6 +35,7 @@ public:
     void saveFilters();
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
 
+    void accept() override;
 private:
     void writeConfig();
     void readConfig();

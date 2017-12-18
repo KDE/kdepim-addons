@@ -57,6 +57,12 @@ AdBlockBlockableItemsDialog::~AdBlockBlockableItemsDialog()
     writeConfig();
 }
 
+void AdBlockBlockableItemsDialog::accept()
+{
+    saveFilters();
+    QDialog::accept();
+}
+
 void AdBlockBlockableItemsDialog::saveFilters()
 {
     mBlockableItems->saveFilters();

@@ -20,6 +20,7 @@
 #include "adblockblockableitemswidget.h"
 #include "adblockcreatefilterdialog.h"
 #include "adblockinterceptor_debug.h"
+#include "adblockutil.h"
 #include <WebEngineViewer/WebEngineScript>
 
 #include <QVBoxLayout>
@@ -34,6 +35,7 @@
 #include <QApplication>
 #include <QPointer>
 #include <adblockblockableitemsjob.h>
+#include <qfile.h>
 #include <KIOWidgets/KRun>
 using namespace AdBlock;
 
@@ -74,6 +76,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         item->setText(Url, res.src);
         switch (res.type) {
         case AdBlock::AdBlockBlockableItemsJob::UnKnown:
+            qCDebug(ADBLOCKINTERCEPTOR_LOG) << " unknown ablock type : " << res.src;
             //TODO ?
             break;
         case AdBlock::AdBlockBlockableItemsJob::Image:
@@ -94,10 +97,22 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
     qWarning() << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
-    for (int i = 0; i < mListItems->model()->rowCount(); ++i) {
+    // local filters
+    const QString localRulesFilePath = AdBlock::AdBlockUtil::localFilterPath();
+
+    QFile ruleFile(localRulesFilePath);
+    if (!ruleFile.open(QFile::WriteOnly | QFile::Text | QFile::Append)) {
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
+        return;
+    }
+    for (int i = 0; i < mListItems->topLevelItemCount(); ++i) {
+        QTreeWidgetItem *item = mListItems->topLevelItem(i);
+        const QString itemStr = item->text(FilterValue);
+        if (!itemStr.isEmpty()) {
+            qDebug() << " item !:" << item->text(FilterValue);
+        }
         //TODO
     }
-    //TODO
 }
 
 void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
@@ -168,6 +183,7 @@ void AdBlockBlockableItemsWidget::slotBlockItem()
     if (dlg->exec()) {
         const QString filter = dlg->filter();
         item->setText(FilterValue, filter);
+        item->setToolTip(FilterValue, filter);
     }
     delete dlg;
 }
