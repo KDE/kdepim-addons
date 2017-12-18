@@ -56,7 +56,6 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const
 {
     QList<QAction *> lstAction;
-    qDebug() << " mAdblockManager->isEnabled()" << mAdblockManager->isEnabled();
     if (mAdblockManager->isEnabled()) {
         lstAction.append(mShowBlockableItems);
         if (!result.imageUrl().isEmpty()) {
@@ -94,6 +93,7 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 void AdblockInterceptorInterface::slotBlockImage()
 {
     if (mCurrentWebHitTest.imageUrl().isValid()) {
+        qDebug() << " mCurrentWebHitTest.imageUrl()"<<mCurrentWebHitTest.imageUrl();
         //TODO block it.
     }
     //TODO
@@ -101,6 +101,7 @@ void AdblockInterceptorInterface::slotBlockImage()
 
 void AdblockInterceptorInterface::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
 {
+    //TODO update
     QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
     dlg->setAdblockResult(result);
     dlg->exec();
