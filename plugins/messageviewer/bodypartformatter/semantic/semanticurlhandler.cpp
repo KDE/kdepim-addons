@@ -311,9 +311,18 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForTrainReservation(const QVariant
     event->setDtStart(JsonLdDocument::readProperty(trip, "departureTime").toDateTime());
     event->setDtEnd(JsonLdDocument::readProperty(trip, "arrivalTime").toDateTime());
     event->setAllDay(false);
-    event->setDescription(i18n("Booking reference: %1",
-                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-                               ));
+
+    QStringList desc;
+    auto s = JsonLdDocument::readProperty(trip, "departurePlatform").toString();
+    if (!s.isEmpty())
+        desc.push_back(i18n("Departure platform: %1", s));
+    s = JsonLdDocument::readProperty(trip, "arrivalPlatform").toString();
+    if (!s.isEmpty())
+        desc.push_back(i18n("Arrival platform: %1", s));
+    s = JsonLdDocument::readProperty(reservation, "reservationNumber").toString();
+    if (!s.isEmpty())
+        desc.push_back(i18n("Booking reference: %1", s));
+    event->setDescription(desc.join(QLatin1Char('\n')));
     return event;
 }
 
