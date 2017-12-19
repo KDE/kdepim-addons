@@ -3,13 +3,26 @@
         "Authors": [
             {
                 "Email": "dvratil@kde.org",
-                "Name": "Daniel Vrátil"
+                "Name": "Daniel Vrátil",
+                "Name[x-test]": "xxDaniel Vrátilxx"
             }
         ],
         "ConfigUi": "pimevents/PimEventsConfig.qml",
         "Description": "Calendar plugin for displaying events from KDE PIM calendars",
+        "Description[ca]": "Connector de calendari per a mostrar els esdeveniments des dels calendaris PIM del KDE",
+        "Description[nl]": "Plug-in voor agenda voor tonen van gebeurtenissen uit KDE PIM agenda's",
+        "Description[pt]": "'Plugin' do calendário para mostrar eventos nos calendários do KDE PIM",
+        "Description[sv]": "Kalenderinsticksprogram för att visa händelser från kalendrar i KDE:s personliga informationshantering",
+        "Description[uk]": "Додаток календаря для показу подій з календарів PIM KDE",
+        "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
         "Icon": "view-calendar",
         "Name": "PIM Events Plugin",
+        "Name[ca]": "Connector d'esdeveniments del PIM",
+        "Name[nl]": "Plug-in voor gebeurtenis van PIM",
+        "Name[pt]": "'Plugin' de Eventos PIM",
+        "Name[sv]": "Händelseinsticksprogram för personlig informationshantering",
+        "Name[uk]": "Додаток подій PIM",
+        "Name[x-test]": "xxPIM Events Pluginxx",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ]
