@@ -1,9 +1,18 @@
 <table style="width:100%;">
     <tr>
-        <!-- TODO show platforms if available -->
-        <td style="font-size:120%; width:33;">{{ item.reservationFor.departureStation.name }}</td>
+        <td style="font-size:120%; width:33;">
+            {{ item.reservationFor.departureStation.name }}
+            {% if item.reservationFor.departurePlatform %}
+                [{{ item.reservationFor.departurePlatform }}]
+            {% endif %}
+        </td>
         <td style="font-size:120%; width:33%; text-align:center;">&rarr;</td>
-        <td style="font-size:120%; width:33%;">{{ item.reservationFor.arrivalStation.name}}</td>
+        <td style="font-size:120%; width:33%;">
+            {{ item.reservationFor.arrivalStation.name}}
+            {% if item.reservationFor.arrivalPlatform %}
+                [{{ item.reservationFor.arrivalPlatform }}]
+            {% endif %}
+        </td>
     </tr>
     <tr>
         <td>{{ item.reservationFor.departureTimeLocalized }}</td>
