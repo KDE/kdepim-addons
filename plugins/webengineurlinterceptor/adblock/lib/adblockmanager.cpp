@@ -117,6 +117,14 @@ void AdblockManager::loadSubscriptions()
     */
 }
 
+void AdblockManager::save()
+{
+    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+        subscription->saveSubscription();
+    }
+
+}
+
 void AdblockManager::removeDisabledRule(const QString &filter)
 {
     //TODO

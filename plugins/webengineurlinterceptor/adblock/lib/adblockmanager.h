@@ -41,6 +41,8 @@ public:
 
     void addDisabledRule(const QString &str);
     void removeDisabledRule(const QString &filter);
+
+    void save();
 Q_SIGNALS:
     void enabledChanged(bool);
 
