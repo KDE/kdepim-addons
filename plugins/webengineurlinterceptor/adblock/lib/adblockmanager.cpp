@@ -19,6 +19,7 @@
 
 #include "adblockmanager.h"
 #include "adblockmatcher.h"
+#include "adblocksubscription.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QUrl>
 
@@ -44,7 +45,7 @@ AdblockManager::~AdblockManager()
 void AdblockManager::reloadConfig()
 {
     loadSubscriptions();
-    bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
+    const bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
     Q_EMIT enabledChanged(enabled);
 }
 
@@ -52,13 +53,26 @@ void AdblockManager::loadSubscriptions()
 {
     //Clear subscription
     mSubscriptions.clear();
-    //TODO load element
 
+    //TODO load it
+    // new AdBlockSubscription(...);
+    // loadSubscription()
+    //TODO load element
+    // Append CustomList
+    AdBlockCustomList* customList = new AdBlockCustomList(this);
+    mSubscriptions.append(customList);
+    // Load all subscriptions
+    /*
+    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+        subscription->loadSubscription(m_disabledRules);
+
+    }
+    */
 }
 
 void AdblockManager::removeDisabledRule(const QString &filter)
 {
-
+    //TODO
 }
 
 void AdblockManager::addDisabledRule(const QString &filter)
