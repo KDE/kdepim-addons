@@ -52,6 +52,17 @@ void AdblockManager::loadSubscriptions()
 {
     //Clear subscription
     mSubscriptions.clear();
+    //TODO load element
+
+}
+
+void AdblockManager::removeDisabledRule(const QString &filter)
+{
+
+}
+
+void AdblockManager::addDisabledRule(const QString &filter)
+{
     //TODO
 }
 

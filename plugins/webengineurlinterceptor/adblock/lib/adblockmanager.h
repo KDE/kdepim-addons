@@ -39,6 +39,8 @@ public:
 
     QList<AdBlockSubscription *> subscriptions() const;
 
+    void addDisabledRule(const QString &str);
+    void removeDisabledRule(const QString &filter);
 Q_SIGNALS:
     void enabledChanged(bool);
 

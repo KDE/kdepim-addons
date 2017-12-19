@@ -75,40 +75,40 @@ using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
     : QObject(parent)
-    , m_reply(0)
-    , m_title(title)
-    , m_updated(false)
+    , mReply(0)
+    , mTitle(title)
+    , mUpdated(false)
 {
 }
 
 QString AdBlockSubscription::title() const
 {
-    return m_title;
+    return mTitle;
 }
 
 QString AdBlockSubscription::filePath() const
 {
-    return m_filePath;
+    return mFilePath;
 }
 
 void AdBlockSubscription::setFilePath(const QString &path)
 {
-    m_filePath = path;
+    mFilePath = path;
 }
 
 QUrl AdBlockSubscription::url() const
 {
-    return m_url;
+    return mUrl;
 }
 
 void AdBlockSubscription::setUrl(const QUrl &url)
 {
-    m_url = url;
+    mUrl = url;
 }
 
 void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
 {
-    QFile file(m_filePath);
+    QFile file(mFilePath);
 
     if (!file.exists()) {
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
@@ -116,7 +116,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     }
 
     if (!file.open(QFile::ReadOnly)) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for reading" << m_filePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for reading" << mFilePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
@@ -128,13 +128,13 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     textStream.readLine(1024);
     QString header = textStream.readLine(1024);
 
-    if (!header.startsWith(QLatin1String("[Adblock")) || m_title.isEmpty()) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "invalid format of adblock file" << m_filePath;
+    if (!header.startsWith(QLatin1String("[Adblock")) || mTitle.isEmpty()) {
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "invalid format of adblock file" << mFilePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
 
-    m_rules.clear();
+    mRules.clear();
 
     while (!textStream.atEnd()) {
         AdBlockRule *rule = new AdBlockRule(textStream.readLine(), this);
@@ -143,11 +143,11 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
             rule->setEnabled(false);
         }
 
-        m_rules.append(rule);
+        mRules.append(rule);
     }
 
     // Initial update
-    if (m_rules.isEmpty() && !m_updated) {
+    if (mRules.isEmpty() && !mUpdated) {
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
     }
 }
@@ -238,27 +238,27 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 
 const AdBlockRule *AdBlockSubscription::rule(int offset) const
 {
-    if (!AdblockUtil::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(mRules, offset)) {
         return 0;
     }
 
-    return m_rules[offset];
+    return mRules[offset];
 }
 
 QVector<AdBlockRule *> AdBlockSubscription::allRules() const
 {
-    return m_rules;
+    return mRules;
 }
 
 const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 {
-    if (!AdblockUtil::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(mRules, offset)) {
         return nullptr;
     }
 
-    AdBlockRule *rule = m_rules[offset];
+    AdBlockRule *rule = mRules[offset];
     rule->setEnabled(true);
-    //FIXME AdBlockManager::instance()->removeDisabledRule(rule->filter());
+    AdblockManager::self()->removeDisabledRule(rule->filter());
 
     Q_EMIT subscriptionChanged();
 
@@ -271,13 +271,13 @@ const AdBlockRule *AdBlockSubscription::enableRule(int offset)
 
 const AdBlockRule *AdBlockSubscription::disableRule(int offset)
 {
-    if (!AdblockUtil::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(mRules, offset)) {
         return nullptr;
     }
 
-    AdBlockRule *rule = m_rules[offset];
+    AdBlockRule *rule = mRules[offset];
     rule->setEnabled(false);
-    //FIXME AdBlockManager::instance()->addDisabledRule(rule->filter());
+    AdblockManager::self()->addDisabledRule(rule->filter());
 
     Q_EMIT subscriptionChanged();
 
@@ -319,7 +319,7 @@ const AdBlockRule *AdBlockSubscription::replaceRule(AdBlockRule *rule, int offse
 
 AdBlockSubscription::~AdBlockSubscription()
 {
-    qDeleteAll(m_rules);
+    qDeleteAll(mRules);
 }
 
 // AdBlockCustomList
@@ -387,7 +387,7 @@ void AdBlockCustomList::saveSubscription()
     textStream << "Url: " << url().toString() << endl;
     textStream << "[Adblock Plus 1.1.1]" << endl;
 
-    foreach (const AdBlockRule *rule, m_rules) {
+    foreach (const AdBlockRule *rule, mRules) {
         textStream << rule->filter() << endl;
     }
 
@@ -406,7 +406,7 @@ bool AdBlockCustomList::canBeRemoved() const
 
 bool AdBlockCustomList::containsFilter(const QString &filter) const
 {
-    foreach (const AdBlockRule *rule, m_rules) {
+    foreach (const AdBlockRule *rule, mRules) {
         if (rule->filter() == filter) {
             return true;
         }
@@ -417,9 +417,9 @@ bool AdBlockCustomList::containsFilter(const QString &filter) const
 
 bool AdBlockCustomList::removeFilter(const QString &filter)
 {
-    const int numberRules(m_rules.count());
+    const int numberRules(mRules.count());
     for (int i = 0; i < numberRules; ++i) {
-        const AdBlockRule *rule = m_rules.at(i);
+        const AdBlockRule *rule = mRules.at(i);
 
         if (rule->filter() == filter) {
             return removeRule(i);
@@ -431,7 +431,7 @@ bool AdBlockCustomList::removeFilter(const QString &filter)
 
 int AdBlockCustomList::addRule(AdBlockRule *rule)
 {
-    m_rules.append(rule);
+    mRules.append(rule);
 
     Q_EMIT subscriptionChanged();
 
@@ -439,19 +439,19 @@ int AdBlockCustomList::addRule(AdBlockRule *rule)
         //FIXME mApp->reloadUserStyleSheet();
     }
 
-    return m_rules.count() - 1;
+    return mRules.count() - 1;
 }
 
 bool AdBlockCustomList::removeRule(int offset)
 {
-    if (!AdblockUtil::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(mRules, offset)) {
         return false;
     }
 
-    AdBlockRule *rule = m_rules.at(offset);
+    AdBlockRule *rule = mRules.at(offset);
     const QString filter = rule->filter();
 
-    m_rules.remove(offset);
+    mRules.remove(offset);
 
     Q_EMIT subscriptionChanged();
 
@@ -467,12 +467,12 @@ bool AdBlockCustomList::removeRule(int offset)
 
 const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
 {
-    if (!AdblockUtil::containsIndex(m_rules, offset)) {
+    if (!AdblockUtil::containsIndex(mRules, offset)) {
         return nullptr;
     }
 
-    AdBlockRule *oldRule = m_rules.at(offset);
-    m_rules[offset] = rule;
+    AdBlockRule *oldRule = mRules.at(offset);
+    mRules[offset] = rule;
 
     Q_EMIT subscriptionChanged();
 
@@ -481,5 +481,5 @@ const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
     }
 
     delete oldRule;
-    return m_rules[offset];
+    return mRules[offset];
 }
