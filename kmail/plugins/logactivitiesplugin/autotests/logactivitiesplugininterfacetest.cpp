@@ -36,7 +36,7 @@ void LogActivitiesPluginInterfaceTest::shouldHaveDefaultValue()
 {
     LogActivitiesPluginInterface interface;
     QVERIFY(!interface.parentWidget());
-    QCOMPARE(!interface.actionTypes().count(), 1);
+    QCOMPARE(interface.actionTypes().count(), 1);
     QVERIFY(!interface.actionTypes().at(0).action());
 }
 
