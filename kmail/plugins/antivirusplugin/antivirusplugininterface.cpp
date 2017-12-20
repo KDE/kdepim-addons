@@ -38,7 +38,7 @@ void AntiVirusPluginInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("antiVirusWizard"), action);
     connect(action, &QAction::triggered, this, &AntiVirusPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void AntiVirusPluginInterface::slotActivated()

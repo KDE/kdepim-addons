@@ -41,7 +41,7 @@ void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
     action->setText(i18n("Search Duplicate Contacts..."));
     connect(action, &QAction::triggered, this, &SearchDuplicatesPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void SearchDuplicatesPluginInterface::slotActivated()

@@ -36,14 +36,15 @@ void AntiSpamPluginInterfaceTest::shouldHaveDefaultValue()
 {
     AntiSpamPluginInterface interface;
     QVERIFY(!interface.parentWidget());
-    QVERIFY(!interface.actionType().action());
+    QCOMPARE(interface.actionTypes().count(), 1);
+    QVERIFY(!interface.actionTypes().at(0).action());
 }
 
 void AntiSpamPluginInterfaceTest::shouldCreateAction()
 {
     AntiSpamPluginInterface interface;
     interface.createAction(new KActionCollection(this));
-    QVERIFY(interface.actionType().action());
+    QVERIFY(interface.actionTypes().at(0).action());
 }
 
 void AntiSpamPluginInterfaceTest::shouldEmitActivatedSignal()
@@ -52,7 +53,7 @@ void AntiSpamPluginInterfaceTest::shouldEmitActivatedSignal()
     interface.createAction(new KActionCollection(this));
 
     QSignalSpy spy1(&interface, SIGNAL(emitPluginActivated(PimCommon::AbstractGenericPluginInterface*)));
-    interface.actionType().action()->trigger();
+    interface.actionTypes().at(0).action()->trigger();
     QCOMPARE(spy1.count(), 1);
 }
 

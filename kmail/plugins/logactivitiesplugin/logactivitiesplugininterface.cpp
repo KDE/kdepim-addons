@@ -38,7 +38,7 @@ void LogActivitiesPluginInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("logactivities"), action);
     connect(action, &QAction::triggered, this, &LogActivitiesPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void LogActivitiesPluginInterface::slotActivated()

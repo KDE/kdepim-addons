@@ -39,7 +39,7 @@ void AntiSpamPluginInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("antiSpamWizard"), action);
     connect(action, &QAction::triggered, this, &AntiSpamPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void AntiSpamPluginInterface::slotActivated()

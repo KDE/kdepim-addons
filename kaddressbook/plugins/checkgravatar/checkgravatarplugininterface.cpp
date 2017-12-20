@@ -52,7 +52,7 @@ void CheckGravatarPluginInterface::createAction(KActionCollection *ac)
     mAction->setText(i18n("Check Gravatar..."));
     connect(mAction, &QAction::triggered, this, &CheckGravatarPluginInterface::slotActivated);
     PimCommon::ActionType type(mAction, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void CheckGravatarPluginInterface::slotActivated()

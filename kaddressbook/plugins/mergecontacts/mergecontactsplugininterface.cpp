@@ -41,7 +41,7 @@ void MergeContactsPluginInterface::createAction(KActionCollection *ac)
     action->setText(i18n("Merge Contacts..."));
     connect(action, &QAction::triggered, this, &MergeContactsPluginInterface::slotActivated);
     PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    setActionType(type);
+    addActionType(type);
 }
 
 void MergeContactsPluginInterface::slotActivated()
