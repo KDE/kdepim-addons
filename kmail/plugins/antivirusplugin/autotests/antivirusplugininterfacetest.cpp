@@ -36,14 +36,14 @@ void AntiVirusPluginInterfaceTest::shouldHaveDefaultValue()
 {
     AntiVirusPluginInterface interface;
     QVERIFY(!interface.parentWidget());
-    QCOMPARE(interface.actionTypes().count(), 1);
-    QVERIFY(!interface.actionTypes().at(0).action());
+    QCOMPARE(interface.actionTypes().count(), 0);
 }
 
 void AntiVirusPluginInterfaceTest::shouldCreateAction()
 {
     AntiVirusPluginInterface interface;
     interface.createAction(new KActionCollection(this));
+    QCOMPARE(interface.actionTypes().count(), 1);
     QVERIFY(interface.actionTypes().at(0).action());
 }
 

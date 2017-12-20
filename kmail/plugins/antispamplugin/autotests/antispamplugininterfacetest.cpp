@@ -36,7 +36,6 @@ void AntiSpamPluginInterfaceTest::shouldHaveDefaultValue()
 {
     AntiSpamPluginInterface interface;
     QVERIFY(!interface.parentWidget());
-    QCOMPARE(interface.actionTypes().count(), 1);
     QVERIFY(!interface.actionTypes().at(0).action());
 }
 
@@ -44,6 +43,7 @@ void AntiSpamPluginInterfaceTest::shouldCreateAction()
 {
     AntiSpamPluginInterface interface;
     interface.createAction(new KActionCollection(this));
+    QCOMPARE(interface.actionTypes().count(), 1);
     QVERIFY(interface.actionTypes().at(0).action());
 }
 
