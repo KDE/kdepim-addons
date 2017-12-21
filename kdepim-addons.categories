@@ -27,3 +27,4 @@ org.kde.pim.regexpeditorlineedit kdepim-addons (SieveEditor Regexp Editor plugin
 org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact editor)
 org.kde.pim.pkpass kdepim-addons (pkpass formater)
 org.kde.pim.messageviewer.semantic kdepim-addons (Semantic plugin)
+org.kde.pim.kmail_expertplugin kdepim-addons (kmail expert plugin)
