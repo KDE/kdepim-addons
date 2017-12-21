@@ -21,6 +21,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QDebug>
 
 ExpertPluginInterface::ExpertPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -37,6 +38,8 @@ void ExpertPluginInterface::createAction(KActionCollection *ac)
     if (action) {
         PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
         addActionType(type);
+    } else {
+        qWarning() << "toggle_mimeparttree is not defined ";
     }
 }
 
