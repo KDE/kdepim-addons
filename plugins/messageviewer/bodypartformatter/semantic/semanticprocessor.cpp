@@ -60,7 +60,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         const auto data = extractor.data();
         const auto decodedData = JsonLdDocument::fromJson(data);
         if (data.size() != decodedData.size()) {
-            qCDebug(SEMANTIC_LOG) << "Unhandled content:" << QJsonDocument(data).toJson();
+            qCDebug(SEMANTIC_LOG).noquote() << "Unhandled content:" << QJsonDocument(data).toJson();
         }
         if (!decodedData.isEmpty()) {
             memento->setData(decodedData);
