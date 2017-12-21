@@ -33,13 +33,11 @@ ExpertPluginInterface::~ExpertPluginInterface()
 
 void ExpertPluginInterface::createAction(KActionCollection *ac)
 {
-/*    
-    QAction *action = new QAction(i18n("&Log Activities..."), this);
-    ac->addAction(QStringLiteral("logactivities"), action);
-    connect(action, &QAction::triggered, this, &ExpertPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
-    addActionType(type);
-    */
+    QAction *action = ac->action(QStringLiteral("toggle_mimeparttree"));
+    if (action) {
+        PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+        addActionType(type);
+    }
 }
 
 void ExpertPluginInterface::slotActivated()
