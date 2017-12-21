@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin activates some expert actions.",
+        "EnabledByDefault": "false",
+        "Id": "kmailexpert",
+        "Name": "Expert Plugin",
+        "ServiceTypes": [
+            "KMail/MainViewPlugin"
+        ],
+        "Version": "1.0"
+    }
+}
