@@ -18,6 +18,7 @@
 */
 
 #include "expertplugininterface.h"
+#include "expertplugin_debug.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -39,7 +40,7 @@ void ExpertPluginInterface::createAction(KActionCollection *ac)
         PimCommon::ActionType type(action, PimCommon::ActionType::Message);
         addActionType(type);
     } else {
-        qWarning() << "toggle_mimeparttree is not defined ";
+        qCWarning(KMAIL_EXPERT_PLUGIN_LOG) << "toggle_mimeparttree is not defined ";
     }
 }
 

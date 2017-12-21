@@ -3,6 +3,11 @@ set(kmail_expertplugin_SRCS
     expertplugininterface.cpp
 )
 
+ecm_qt_declare_logging_category(kmail_expertplugin_SRCS
+    HEADER expertplugin_debug.h
+    IDENTIFIER KMAIL_EXPERT_PLUGIN_LOG
+    CATEGORY_NAME org.kde.pim.kmail_expertplugin)
+
 kcoreaddons_add_plugin(kmail_expertplugin JSON kmail_expertplugin.json SOURCES
     ${kmail_expertplugin_SRCS} INSTALL_NAMESPACE kmail)
 
