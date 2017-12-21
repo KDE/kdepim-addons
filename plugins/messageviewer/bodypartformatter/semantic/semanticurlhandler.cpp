@@ -83,8 +83,8 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setScheme(QStringLiteral("https"));
             url.setHost(QStringLiteral("www.openstreetmap.org"));
             url.setPath(QStringLiteral("/"));
-            const QString fragment = QLatin1String("map=12/") + JsonLdDocument::readProperty(geo, "longitude").toString()
-                                     + QLatin1String("/") + JsonLdDocument::readProperty(geo, "latitude").toString();
+            const QString fragment = QLatin1String("map=12/") + JsonLdDocument::readProperty(geo, "latitude").toString()
+                                     + QLatin1String("/") + JsonLdDocument::readProperty(geo, "longitude").toString();
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
