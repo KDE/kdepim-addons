@@ -138,6 +138,22 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, airport);
                 places.insert(iataCode);
             }
+        } else if (r.userType() == qMetaTypeId<TrainReservation>()) {
+            const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
+
+            auto station = JsonLdDocument::readProperty(trip, "departureStation");
+            auto name = JsonLdDocument::readProperty(station, "name").toString();
+            if (!places.contains(name)) {
+                addGoToMapAction(&menu, station);
+                places.insert(name);
+            }
+
+            station = JsonLdDocument::readProperty(trip, "arrivalStation");
+            name = JsonLdDocument::readProperty(station, "name").toString();
+            if (!places.contains(name)) {
+                addGoToMapAction(&menu, station);
+                places.insert(name);
+            }
         }
     }
 
