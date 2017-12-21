@@ -78,13 +78,16 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
     const auto geo = JsonLdDocument::readProperty(place, "geo");
     if (!geo.isNull()) {
         auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(place, "name").toString()));
-        QObject::connect(action, &QAction::triggered, menu, [geo]() {
+        // zoom out further from airports, they are larger and you usually want to go further away from them
+        const auto zoom = place.userType() == qMetaTypeId<Airport>() ? 12 : 16;
+        QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
             url.setHost(QStringLiteral("www.openstreetmap.org"));
             url.setPath(QStringLiteral("/"));
-            const QString fragment = QLatin1String("map=12/") + JsonLdDocument::readProperty(geo, "latitude").toString()
-                                     + QLatin1String("/") + JsonLdDocument::readProperty(geo, "longitude").toString();
+            const QString fragment = QLatin1String("map=") + QString::number(zoom)
+                                     + QLatin1Char('/') + JsonLdDocument::readProperty(geo, "latitude").toString()
+                                     + QLatin1Char('/') + JsonLdDocument::readProperty(geo, "longitude").toString();
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
