@@ -27,7 +27,7 @@
 // needs to be outside of the anonymous namespace
 static void initResource()
 {
-    Q_INIT_RESOURCE(rules);
+    Q_INIT_RESOURCE(extractors);
 }
 
 namespace {
