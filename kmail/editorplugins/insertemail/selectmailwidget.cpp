@@ -43,3 +43,8 @@ SelectMailWidget::~SelectMailWidget()
 {
 
 }
+
+QStringList SelectMailWidget::selectedEmails() const
+{
+    return {}; //mView->selectedAddresses();
+}

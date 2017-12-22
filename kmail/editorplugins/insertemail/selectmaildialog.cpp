@@ -47,5 +47,11 @@ SelectMailDialog::~SelectMailDialog()
 
 QStringList SelectMailDialog::selectedEmails() const
 {
-    return {};
+    return mSelectMailWidget->selectedEmails();
+}
+
+void SelectMailDialog::accept()
+{
+    Q_EMIT emailSelected(selectedEmails());
+    QDialog::accept();
 }

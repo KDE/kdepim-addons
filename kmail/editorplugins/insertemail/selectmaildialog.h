@@ -33,6 +33,7 @@ public:
 
     QStringList selectedEmails() const;
 
+    void accept() override;
 Q_SIGNALS:
     void emailSelected(const QStringList &lst);
 
