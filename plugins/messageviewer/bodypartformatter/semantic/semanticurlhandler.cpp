@@ -336,6 +336,16 @@ KCalCore::Event::Ptr SemanticUrlHandler::eventForTrainReservation(const QVariant
     if (!s.isEmpty()) {
         desc.push_back(i18n("Departure platform: %1", s));
     }
+    const auto ticket = JsonLdDocument::readProperty(reservation, "reservedTicket");
+    const auto seat = JsonLdDocument::readProperty(ticket, "ticketedSeat");
+    s = JsonLdDocument::readProperty(seat, "seatSection").toString();
+    if (!s.isEmpty()) {
+        desc.push_back(i18n("Coach: %1", s));
+    }
+    s = JsonLdDocument::readProperty(seat, "seatNumber").toString();
+    if (!s.isEmpty()) {
+        desc.push_back(i18n("Seat: %1", s));
+    }
     s = JsonLdDocument::readProperty(trip, "arrivalPlatform").toString();
     if (!s.isEmpty()) {
         desc.push_back(i18n("Arrival platform: %1", s));
