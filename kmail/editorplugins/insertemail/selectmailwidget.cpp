@@ -30,8 +30,7 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
 
-    //TODO customize it
-    mView = new Akonadi::EmailAddressSelectionWidget(this);
+    mView = new Akonadi::EmailAddressSelectionWidget(true, nullptr, this);
     layout->addWidget(mView);
     mView->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mView->view()->setAlternatingRowColors(true);
@@ -48,7 +47,7 @@ QStringList SelectMailWidget::selectedEmails() const
 {
     QStringList lst;
     for (const Akonadi::EmailAddressSelection &selection : mView->selectedAddresses()) {
-        lst.append(selection.quotedEmail());
+        lst.append(selection.email());
     }
 
     return lst;
