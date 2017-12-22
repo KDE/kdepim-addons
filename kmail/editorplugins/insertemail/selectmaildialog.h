@@ -32,6 +32,10 @@ public:
     ~SelectMailDialog();
 
     QStringList selectedEmails() const;
+
+Q_SIGNALS:
+    void emailSelected(const QStringList &lst);
+
 private:
     SelectMailWidget *mSelectMailWidget = nullptr;
 };

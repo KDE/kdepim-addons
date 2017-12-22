@@ -34,6 +34,7 @@ public:
     void exec() override;
 
 private:
+    void slotEmailSelected(const QStringList &lst);
     void slotActivated();
     QPointer<SelectMailDialog> mSelectMailDialog;
 };

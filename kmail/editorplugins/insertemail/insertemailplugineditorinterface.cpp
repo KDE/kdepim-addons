@@ -51,7 +51,12 @@ void InsertEmailPluginEditorInterface::exec()
 {
     if (!mSelectMailDialog) {
         mSelectMailDialog = new SelectMailDialog(parentWidget());
+        connect(mSelectMailDialog.data(), &SelectMailDialog::emailSelected, this, &InsertEmailPluginEditorInterface::slotEmailSelected);
     }
     mSelectMailDialog->show();
 }
 
+void InsertEmailPluginEditorInterface::slotEmailSelected(const QStringList &lst)
+{
+    //richTextEditor()->insertPlainText(lst.join());
+}
