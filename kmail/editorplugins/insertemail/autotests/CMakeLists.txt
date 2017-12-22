@@ -12,3 +12,5 @@ add_kmail_editorplugin_unittest(insertemailplugineditortest.cpp
     "../insertemailplugineditor.cpp;../insertemailplugineditorinterface.cpp;../selectmaildialog.cpp;../selectmailwidget.cpp")
 
 add_kmail_editorplugin_unittest(insertemailplugineditorinterfacetest.cpp "../insertemailplugineditorinterface.cpp;../selectmaildialog.cpp;../selectmailwidget.cpp")
+
+add_kmail_editorplugin_unittest(selectmaildialogtest.cpp "../selectmaildialog.cpp;../selectmailwidget.cpp")
