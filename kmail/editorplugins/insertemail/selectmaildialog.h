@@ -38,6 +38,8 @@ Q_SIGNALS:
     void emailSelected(const QStringList &lst);
 
 private:
+    void writeConfig();
+    void readConfig();
     SelectMailWidget *mSelectMailWidget = nullptr;
 };
 

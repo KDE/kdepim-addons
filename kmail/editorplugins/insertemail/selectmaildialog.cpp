@@ -23,6 +23,8 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 SelectMailDialog::SelectMailDialog(QWidget *parent)
     : QDialog(parent)
@@ -38,11 +40,12 @@ SelectMailDialog::SelectMailDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectMailDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectMailDialog::reject);
     mainLayout->addWidget(buttonBox);
+    readConfig();
 }
 
 SelectMailDialog::~SelectMailDialog()
 {
-
+    writeConfig();
 }
 
 QStringList SelectMailDialog::selectedEmails() const
@@ -54,4 +57,20 @@ void SelectMailDialog::accept()
 {
     Q_EMIT emailSelected(selectedEmails());
     QDialog::accept();
+}
+
+void SelectMailDialog::readConfig()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "SelectMailDialog");
+    const QSize size = grp.readEntry("Size", QSize(300, 200));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void SelectMailDialog::writeConfig()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "SelectMailDialog");
+    grp.writeEntry("Size", size());
+    grp.sync();
 }
