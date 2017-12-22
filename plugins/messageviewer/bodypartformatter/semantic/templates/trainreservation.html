@@ -21,4 +21,13 @@
         </td>
         <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
     </tr>
+    <tr colspan="3"><td>
+    {% if item.reservedTicket.ticketedSeat.seatSection %}
+        {% i18n "Coach: %1" item.reservedTicket.ticketedSeat.seatSection %}
+    {% endif %}
+
+    {% if item.reservedTicket.ticketedSeat.seatNumber %}
+        {% i18n "Seat: %1" item.reservedTicket.ticketedSeat.seatNumber %}
+    {% endif %}
+    </td></tr>
 </table>
