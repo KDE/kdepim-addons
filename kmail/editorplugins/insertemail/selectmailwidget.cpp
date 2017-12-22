@@ -46,5 +46,10 @@ SelectMailWidget::~SelectMailWidget()
 
 QStringList SelectMailWidget::selectedEmails() const
 {
-    return {}; //mView->selectedAddresses();
+    QStringList lst;
+    for (const Akonadi::EmailAddressSelection &selection : mView->selectedAddresses()) {
+        lst.append(selection.quotedEmail());
+    }
+
+    return lst;
 }
