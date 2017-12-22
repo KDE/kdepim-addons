@@ -101,14 +101,17 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             return {};
         }
 
-        ExtractorEngine engine;
-        engine.setExtractor(extractors.at(0));
-        engine.setText(preproc.text());
-        const auto data = engine.extract();
-        qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
-        const auto decodedData = JsonLdDocument::fromJson(data);
-        if (!decodedData.isEmpty()) {
-            memento->setData(decodedData);
+        for (auto extractor : extractors) {
+            ExtractorEngine engine;
+            engine.setExtractor(extractor);
+            engine.setText(preproc.text());
+            const auto data = engine.extract();
+            qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+            const auto decodedData = JsonLdDocument::fromJson(data);
+            if (!decodedData.isEmpty()) {
+                memento->setData(decodedData);
+                break;
+            }
         }
     }
 
