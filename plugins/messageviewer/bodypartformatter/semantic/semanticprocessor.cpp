@@ -28,6 +28,19 @@
 
 #include <QJsonDocument>
 
+std::weak_ptr<ExtractorRepository> SemanticProcessor::s_repository;
+
+SemanticProcessor::SemanticProcessor()
+{
+    m_repository = s_repository.lock();
+    if (!m_repository) {
+        m_repository.reset(new ExtractorRepository);
+        s_repository = m_repository;
+    }
+}
+
+SemanticProcessor::~SemanticProcessor() = default;
+
 MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
 {
     auto nodeHelper = part.nodeHelper();
@@ -71,7 +84,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     // try the unstructured data extractor as a fallback
     if (memento->isEmpty()) {
-        const auto extractors = m_repository.extractorsForMessage(part.content());
+        const auto extractors = m_repository->extractorsForMessage(part.content());
         if (extractors.empty()) {
             return {};
         }

@@ -26,14 +26,20 @@
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/MessagePart>
 
+#include <memory>
+
 /** Processor plugin for MimeTreeParser. */
 class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
+    SemanticProcessor();
+    ~SemanticProcessor();
+
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 
 private:
-    ExtractorRepository m_repository;
+    std::shared_ptr<ExtractorRepository> m_repository;
+    static std::weak_ptr<ExtractorRepository> s_repository;
 };
 
 #endif // SEMANTICPROCESSOR_H
