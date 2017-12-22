@@ -49,6 +49,8 @@ GRANTLEE_MAKE_GADGET(FlightReservation)
 GRANTLEE_MAKE_GADGET(LodgingBusiness)
 GRANTLEE_MAKE_GADGET(LodgingReservation)
 GRANTLEE_MAKE_GADGET(PostalAddress)
+GRANTLEE_MAKE_GADGET(Seat)
+GRANTLEE_MAKE_GADGET(Ticket)
 GRANTLEE_MAKE_GADGET(TrainStation)
 GRANTLEE_MAKE_GADGET(TrainTrip)
 GRANTLEE_MAKE_GADGET(TrainReservation)
@@ -62,6 +64,8 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<LodgingBusiness>();
     Grantlee::registerMetaType<LodgingReservation>();
     Grantlee::registerMetaType<PostalAddress>();
+    Grantlee::registerMetaType<Seat>();
+    Grantlee::registerMetaType<Ticket>();
     Grantlee::registerMetaType<TrainStation>();
     Grantlee::registerMetaType<TrainTrip>();
     Grantlee::registerMetaType<TrainReservation>();
