@@ -1,9 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to select email and insert it in composer.",
+        "Description[ca]": "Aquest connector permet seleccionar un correu electrònic i inserir-lo a l'editor.",
+        "Description[nl]": "Deze plug-in stelt u in staat e-mail te selecteren en in de opsteller in te voegen.",
+        "Description[pt]": "Este 'plugin' permite-lhe seleccionar um e-mail e inseri-lo no compositor.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att markera brev och infoga i brevfönstret.",
+        "Description[uk]": "За допомогою цього додатка можна вибрати повідомлення електронної пошти і вставити його до вікна редактора.",
+        "Description[x-test]": "xxThis plugin allows you to select email and insert it in composer.xx",
         "EnabledByDefault": "true",
         "Id": "kmailinsertemail",
         "Name": "Insert Email",
+        "Name[ca]": "Insereix un correu electrònic",
+        "Name[nl]": "E-mail invoegen",
+        "Name[pt]": "Inserir um E-Mail",
+        "Name[sv]": "Infoga brev",
+        "Name[uk]": "Вставлення повідомлень",
+        "Name[x-test]": "xxInsert Emailxx",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],

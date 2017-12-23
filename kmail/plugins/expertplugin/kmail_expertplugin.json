@@ -1,9 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin activates some expert actions.",
+        "Description[ca]": "Aquest connector activa diverses accions expertes.",
+        "Description[nl]": "Deze plug-in activeert enige acties voor experts.",
+        "Description[pt]": "Este 'plugin' activa algumas funcionalidades avançadas.",
+        "Description[sv]": "Insticksprogrammet aktiverar några expertalternativ.",
+        "Description[uk]": "За допомогою цього додатка можна увімкнути деякі дії для досвідчених користувачів.",
+        "Description[x-test]": "xxThis plugin activates some expert actions.xx",
         "EnabledByDefault": "false",
         "Id": "kmailexpert",
         "Name": "Expert Plugin",
+        "Name[ca]": "Connector expert",
+        "Name[nl]": "Plug-in voor expert",
+        "Name[pt]": "'Plugin' Avançado",
+        "Name[sv]": "Expertinsticksprogram",
+        "Name[uk]": "Додаток експерта",
+        "Name[x-test]": "xxExpert Pluginxx",
         "ServiceTypes": [
             "KMail/MainViewPlugin"
         ],
