@@ -42,7 +42,6 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
 
 SelectMailWidget::~SelectMailWidget()
 {
-
 }
 
 QStringList SelectMailWidget::selectedEmails() const

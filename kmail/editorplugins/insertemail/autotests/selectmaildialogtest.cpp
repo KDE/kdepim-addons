@@ -25,5 +25,4 @@ QTEST_MAIN(SelectMailDialogTest)
 SelectMailDialogTest::SelectMailDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }

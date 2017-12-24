@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "selectmaildialog.h"
 #include "selectmailwidget.h"
 #include <KLocalizedString>
