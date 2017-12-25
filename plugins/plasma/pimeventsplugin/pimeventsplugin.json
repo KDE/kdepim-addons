@@ -4,6 +4,10 @@
             {
                 "Email": "dvratil@kde.org",
                 "Name": "Daniel Vrátil",
+                "Name[sr@ijekavian]": "Данијел Вратил",
+                "Name[sr@ijekavianlatin]": "Danijel Vratil",
+                "Name[sr@latin]": "Danijel Vratil",
+                "Name[sr]": "Данијел Вратил",
                 "Name[x-test]": "xxDaniel Vrátilxx"
             }
         ],
@@ -14,6 +18,10 @@
         "Description[it]": "Estensione calendario per mostrare gli eventi dai calendari di KDE PIM",
         "Description[nl]": "Plug-in voor agenda voor tonen van gebeurtenissen uit KDE PIM agenda's",
         "Description[pt]": "'Plugin' do calendário para mostrar eventos nos calendários do KDE PIM",
+        "Description[sr@ijekavian]": "Прикључак за приказ догађаја из календара КДЕ‑ПИМ‑а",
+        "Description[sr@ijekavianlatin]": "Priključak za prikaz događaja iz kalendara KDE‑PIM‑a",
+        "Description[sr@latin]": "Priključak za prikaz događaja iz kalendara KDE‑PIM‑a",
+        "Description[sr]": "Прикључак за приказ догађаја из календара КДЕ‑ПИМ‑а",
         "Description[sv]": "Kalenderinsticksprogram för att visa händelser från kalendrar i KDE:s personliga informationshantering",
         "Description[uk]": "Додаток календаря для показу подій з календарів PIM KDE",
         "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
@@ -24,6 +32,10 @@
         "Name[it]": "Estensione eventi di PIM",
         "Name[nl]": "Plug-in voor gebeurtenis van PIM",
         "Name[pt]": "'Plugin' de Eventos PIM",
+        "Name[sr@ijekavian]": "Прикључак ПИМ догађаја",
+        "Name[sr@ijekavianlatin]": "Priključak PIM događaja",
+        "Name[sr@latin]": "Priključak PIM događaja",
+        "Name[sr]": "Прикључак ПИМ догађаја",
         "Name[sv]": "Händelseinsticksprogram för personlig informationshantering",
         "Name[uk]": "Додаток подій PIM",
         "Name[x-test]": "xxPIM Events Pluginxx",
