@@ -34,13 +34,11 @@ InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface()
 
 void InsertShorturlPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    /*
-    QAction *action = new QAction(i18n("Insert Email..."), this);
-    ac->addAction(QStringLiteral("insert_email"), action);
+    QAction *action = new QAction(i18n("Insert Short Url..."), this);
+    ac->addAction(QStringLiteral("insert_shortulr"), action);
     connect(action, &QAction::triggered, this, &InsertShorturlPluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
+    MessageComposer::ActionType type(action, MessageComposer::ActionType::PopupMenu);
     setActionType(type);
-    */
 }
 
 void InsertShorturlPluginEditorInterface::slotActivated()
