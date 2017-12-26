@@ -35,8 +35,8 @@ void InsertShorturlPluginEditorTest::shouldHaveDefaultValue()
 {
     InsertShorturlPluginEditor plugin;
     QVERIFY(plugin.createInterface(new KActionCollection(this)));
-    QVERIFY(!plugin.hasConfigureDialog());
-    QVERIFY(!plugin.hasPopupMenuSupport());
+    QVERIFY(plugin.hasConfigureDialog());
+    QVERIFY(plugin.hasPopupMenuSupport());
     QVERIFY(!plugin.hasToolBarSupport());
 }
 
