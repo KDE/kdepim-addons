@@ -40,4 +40,19 @@ MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterf
     return interface;
 }
 
+bool InsertShorturlPluginEditor::hasPopupMenuSupport() const
+{
+    return true;
+}
+
+bool InsertShorturlPluginEditor::hasConfigureDialog() const
+{
+    return true;
+}
+
+void InsertShorturlPluginEditor::showConfigureDialog(QWidget *parent)
+{
+    //TODO
+}
+
 #include "insertshorturlplugineditor.moc"

@@ -33,6 +33,10 @@ public:
     ~InsertShorturlPluginEditor();
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
+
+    bool hasPopupMenuSupport() const override;
+    bool hasConfigureDialog() const override;
+    void showConfigureDialog(QWidget *parent = nullptr) override;
 };
 
 #endif
