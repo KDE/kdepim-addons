@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin activates some expert actions.",
+        "Description[ca@valencia]": "Este connector activa diverses accions expertes.",
         "Description[ca]": "Aquest connector activa diverses accions expertes.",
         "Description[nl]": "Deze plug-in activeert enige acties voor experts.",
         "Description[pt]": "Este 'plugin' activa algumas funcionalidades avançadas.",
@@ -14,6 +15,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailexpert",
         "Name": "Expert Plugin",
+        "Name[ca@valencia]": "Connector expert",
         "Name[ca]": "Connector expert",
         "Name[nl]": "Plug-in voor expert",
         "Name[pt]": "'Plugin' Avançado",
