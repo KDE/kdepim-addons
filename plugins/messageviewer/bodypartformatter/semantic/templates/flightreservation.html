@@ -21,4 +21,21 @@
         <td style="white-space: nowrap; text-align:center;" title="{{ item.reservationFor.airline.name }}">{{ item.reservationFor.airline.iataCode }} {{ item.reservationFor.flightNumber }}</td>
         <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
     </tr>
+    <tr><td colspan="3">
+    {% if item.reservationFor.departureGate %}
+        {% i18n "Gate: %1" item.reservationFor.departureGate %}
+    {% endif %}
+
+    {% if item.reservationFor.boardingTimeLocalized %}
+        {% i18n "Boarding: %1" item.reservationFor.boardingTimeLocalized %}
+    {% endif %}
+
+    {% if item.boardingGroup %}
+        {% i18n "Group: %1" item.boardingGroup %}
+    {% endif %}
+
+    {% if item.airplaneSeat %}
+        {% i18n "Seat: %1" item.airplaneSeat %}
+    {% endif %}
+    </td></tr>
 </table>
