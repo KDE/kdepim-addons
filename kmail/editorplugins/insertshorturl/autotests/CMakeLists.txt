@@ -12,3 +12,5 @@ add_kmail_editorplugin_unittest(insertshorturlplugineditortest.cpp
     "../insertshorturlplugineditor.cpp;../insertshorturlplugineditorinterface.cpp")
 
 add_kmail_editorplugin_unittest(insertshorturlplugineditorinterfacetest.cpp "../insertshorturlplugineditorinterface.cpp")
+add_kmail_editorplugin_unittest(insertshorturlconfigurewidgettest.cpp "../insertshorturlconfigurewidget.cpp")
+add_kmail_editorplugin_unittest(insertshorturlconfiguredialogtest.cpp "../insertshorturlconfiguredialog.cpp;../insertshorturlconfigurewidget.cpp")

@@ -2,6 +2,7 @@ set(kmail_insertshorturleditorplugin_SRCS
     insertshorturlplugineditor.cpp
     insertshorturlplugineditorinterface.cpp
     insertshorturlconfiguredialog.cpp
+    insertshorturlconfigurewidget.cpp
 )
 
 kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshorturleditorplugin.json SOURCES

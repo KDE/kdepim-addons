@@ -18,22 +18,14 @@
 */
 
 
-#ifndef INSERTSHORTURLCONFIGUREDIALOG_H
-#define INSERTSHORTURLCONFIGUREDIALOG_H
+#include "insertshorturlconfigurewidgettest.h"
 
-#include <QDialog>
-class InsertShorturlConfigureWidget;
-class InsertShorturlConfigureDialog : public QDialog
+#include <QTest>
+
+QTEST_MAIN(InsertShorturlConfigureWidgetTest)
+
+InsertShorturlConfigureWidgetTest::InsertShorturlConfigureWidgetTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit InsertShorturlConfigureDialog(QWidget *parent = nullptr);
-    ~InsertShorturlConfigureDialog();
 
-    void accept() override;
-
-private:
-    InsertShorturlConfigureWidget *mInsertShortUrlWidget = nullptr;
-};
-
-#endif // INSERTSHORTURLCONFIGUREDIALOG_H
+}

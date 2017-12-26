@@ -17,23 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef INSERTSHORTURLCONFIGUREDIALOGTEST_H
+#define INSERTSHORTURLCONFIGUREDIALOGTEST_H
 
-#ifndef INSERTSHORTURLCONFIGUREDIALOG_H
-#define INSERTSHORTURLCONFIGUREDIALOG_H
+#include <QObject>
 
-#include <QDialog>
-class InsertShorturlConfigureWidget;
-class InsertShorturlConfigureDialog : public QDialog
+class InsertShorturlConfigureDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit InsertShorturlConfigureDialog(QWidget *parent = nullptr);
-    ~InsertShorturlConfigureDialog();
-
-    void accept() override;
-
-private:
-    InsertShorturlConfigureWidget *mInsertShortUrlWidget = nullptr;
+    explicit InsertShorturlConfigureDialogTest(QObject *parent = nullptr);
+    ~InsertShorturlConfigureDialogTest() = default;
 };
 
-#endif // INSERTSHORTURLCONFIGUREDIALOG_H
+#endif // INSERTSHORTURLCONFIGUREDIALOGTEST_H

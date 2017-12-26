@@ -18,22 +18,24 @@
 */
 
 
-#ifndef INSERTSHORTURLCONFIGUREDIALOG_H
-#define INSERTSHORTURLCONFIGUREDIALOG_H
+#ifndef INSERTSHORTURLCONFIGUREWIDGET_H
+#define INSERTSHORTURLCONFIGUREWIDGET_H
 
-#include <QDialog>
-class InsertShorturlConfigureWidget;
-class InsertShorturlConfigureDialog : public QDialog
+#include <QWidget>
+class QComboBox;
+class InsertShorturlConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit InsertShorturlConfigureDialog(QWidget *parent = nullptr);
-    ~InsertShorturlConfigureDialog();
+    explicit InsertShorturlConfigureWidget(QWidget *parent = nullptr);
+    ~InsertShorturlConfigureWidget();
 
-    void accept() override;
-
+    void writeConfig();
 private:
-    InsertShorturlConfigureWidget *mInsertShortUrlWidget = nullptr;
+    void slotChanged();
+    void loadConfig();
+    bool mChanged = false;
+    QComboBox *mShortUrlServer = nullptr;
 };
 
-#endif // INSERTSHORTURLCONFIGUREDIALOG_H
+#endif // INSERTSHORTURLCONFIGUREWIDGET_H
