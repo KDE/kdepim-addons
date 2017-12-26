@@ -20,6 +20,7 @@
 #include "insertshorturlplugineditor.h"
 #include "insertshorturlplugineditorinterface.h"
 #include <kpluginfactory.h>
+#include <QPointer>
 
 K_PLUGIN_FACTORY_WITH_JSON(InsertShorturlPluginEditorFactory, "kmail_insertshorturleditorplugin.json", registerPlugin<InsertShorturlPluginEditor>();
                            )
@@ -52,6 +53,10 @@ bool InsertShorturlPluginEditor::hasConfigureDialog() const
 
 void InsertShorturlPluginEditor::showConfigureDialog(QWidget *parent)
 {
+//    QPointer<ExternalComposerConfigureDialog> dlg = new ExternalComposerConfigureDialog(parent);
+//    dlg->exec();
+//    delete dlg;
+
     //TODO
 }
 
