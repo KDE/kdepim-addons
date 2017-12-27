@@ -31,7 +31,7 @@
                 "iataCode": "HEL",
                 "name": "Helsinki"
             },
-            "departureGate": "",
+            "departureGate": "16",
             "departureTime": "2017-09-20T15:05:00+03:00",
             "flightNumber": "8075"
         },
