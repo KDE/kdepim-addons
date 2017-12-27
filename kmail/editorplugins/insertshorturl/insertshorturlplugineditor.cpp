@@ -19,6 +19,7 @@
 
 #include "insertshorturlplugineditor.h"
 #include "insertshorturlplugineditorinterface.h"
+#include "insertshorturlconfiguredialog.h"
 #include <kpluginfactory.h>
 #include <QPointer>
 
@@ -53,11 +54,9 @@ bool InsertShorturlPluginEditor::hasConfigureDialog() const
 
 void InsertShorturlPluginEditor::showConfigureDialog(QWidget *parent)
 {
-//    QPointer<ExternalComposerConfigureDialog> dlg = new ExternalComposerConfigureDialog(parent);
-//    dlg->exec();
-//    delete dlg;
-
-    //TODO
+    QPointer<InsertShorturlConfigureDialog> dlg = new InsertShorturlConfigureDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 #include "insertshorturlplugineditor.moc"

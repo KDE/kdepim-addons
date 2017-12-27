@@ -9,8 +9,8 @@ macro(add_kmail_editorplugin_unittest _source _additional)
 endmacro ()
 
 add_kmail_editorplugin_unittest(insertshorturlplugineditortest.cpp
-    "../insertshorturlplugineditor.cpp;../insertshorturlplugineditorinterface.cpp")
+    "../insertshorturlplugineditor.cpp;../insertshorturlplugineditorinterface.cpp;../insertshorturlconfiguredialog.cpp;../insertshorturlconfigurewidget.cpp")
 
-add_kmail_editorplugin_unittest(insertshorturlplugineditorinterfacetest.cpp "../insertshorturlplugineditorinterface.cpp")
+add_kmail_editorplugin_unittest(insertshorturlplugineditorinterfacetest.cpp "../insertshorturlplugineditorinterface.cpp;../insertshorturlconfiguredialog.cpp;../insertshorturlconfigurewidget.cpp")
 add_kmail_editorplugin_unittest(insertshorturlconfigurewidgettest.cpp "../insertshorturlconfigurewidget.cpp")
 add_kmail_editorplugin_unittest(insertshorturlconfiguredialogtest.cpp "../insertshorturlconfiguredialog.cpp;../insertshorturlconfigurewidget.cpp")
