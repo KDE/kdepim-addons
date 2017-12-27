@@ -19,7 +19,10 @@
 
 
 #include "insertshorturlconfiguredialogtest.h"
+#include "../insertshorturlconfiguredialog.h"
+#include "../insertshorturlconfigurewidget.h"
 
+#include <QDialogButtonBox>
 #include <QTest>
 
 QTEST_MAIN(InsertShorturlConfigureDialogTest)
@@ -28,4 +31,15 @@ InsertShorturlConfigureDialogTest::InsertShorturlConfigureDialogTest(QObject *pa
     : QObject(parent)
 {
 
+}
+
+void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()
+{
+    InsertShorturlConfigureDialog dlg;
+
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(buttonBox);
+
+    InsertShorturlConfigureWidget *mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(QStringLiteral("insertshorturlwidget"));
+    QVERIFY(mInsertShortUrlWidget);
 }
