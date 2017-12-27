@@ -32,6 +32,7 @@
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
+    setNeedSelectedText(true);
     initializePlugins();
 }
 
@@ -88,10 +89,9 @@ void InsertShorturlPluginEditorInterface::slotActivated()
 void InsertShorturlPluginEditorInterface::exec()
 {
     QTextCursor textCursor = richTextEditor()->textCursor();
-    if (textCursor.hasSelection()) {
-        QString urlStr = textCursor.selectedText();
-        if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
-            /*
+    QString urlStr = textCursor.selectedText();
+    if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
+        /*
             if (!mCurrentEngine) {
                 return;
             }
@@ -107,10 +107,8 @@ void InsertShorturlPluginEditorInterface::exec()
             mShortUrl->clear();
             mCurrentEngine->generateShortUrl();
             */
-            //textCursor.insertText(newText);
-        }
+        //textCursor.insertText(newText);
     }
-    //editorUtil.upperCase(textCursor);
 
 }
 void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)

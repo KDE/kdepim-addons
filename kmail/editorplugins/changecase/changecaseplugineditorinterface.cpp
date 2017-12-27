@@ -28,6 +28,7 @@
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
+    setNeedSelectedText(true);
 }
 
 ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
