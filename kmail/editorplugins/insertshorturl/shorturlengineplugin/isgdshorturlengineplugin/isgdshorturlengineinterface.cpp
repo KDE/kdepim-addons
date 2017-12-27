@@ -24,7 +24,7 @@
 #include <QNetworkReply>
 #include <QNetworkRequest>
 
-#include "../../../shorturl/shorturlengineplugin/shorturlengineplugin.h"
+#include "../../shorturlengineplugin/shorturlengineplugin.h"
 
 IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : ShortUrlEngineInterface(plugin, parent)
