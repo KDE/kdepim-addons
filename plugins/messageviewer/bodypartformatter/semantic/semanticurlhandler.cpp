@@ -18,6 +18,7 @@
 */
 
 #include "semanticurlhandler.h"
+#include "calendarhandler.h"
 #include "datatypes.h"
 #include "jsonlddocument.h"
 #include "semanticmemento.h"
@@ -237,133 +238,15 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     korgIface->call(QStringLiteral("showDate"), date);
 }
 
-KCalCore::Event::Ptr SemanticUrlHandler::eventForReservation(const QVariant &reservation) const
-{
-    const int reservationId = reservation.userType();
-    if (reservationId == qMetaTypeId<FlightReservation>()) {
-        return eventForFlightReservation(reservation);
-    } else if (reservationId == qMetaTypeId<LodgingReservation>()) {
-        return eventForLodgingReservation(reservation);
-    } else if (reservationId == qMetaTypeId<TrainReservation>()) {
-        return eventForTrainReservation(reservation);
-    }
-    return {};
-}
-
-KCalCore::Event::Ptr SemanticUrlHandler::eventForFlightReservation(const QVariant &reservation) const
-{
-    using namespace KCalCore;
-
-    const auto flight = JsonLdDocument::readProperty(reservation, "reservationFor");
-    const auto airline = JsonLdDocument::readProperty(flight, "airline");
-    const auto depPort = JsonLdDocument::readProperty(flight, "departureAirport");
-    const auto arrPort = JsonLdDocument::readProperty(flight, "arrivalAirport");
-    if (flight.isNull() || airline.isNull() || depPort.isNull() || arrPort.isNull()) {
-        return {};
-    }
-
-    Event::Ptr event(new Event);
-    event->setSummary(i18n("Flight %1 %2 from %3 to %4",
-                           JsonLdDocument::readProperty(airline, "iataCode").toString(),
-                           JsonLdDocument::readProperty(flight, "flightNumber").toString(),
-                           JsonLdDocument::readProperty(depPort, "iataCode").toString(),
-                           JsonLdDocument::readProperty(arrPort, "iataCode").toString()
-                           ));
-    event->setLocation(JsonLdDocument::readProperty(depPort, "name").toString());
-    event->setDtStart(JsonLdDocument::readProperty(flight, "departureTime").toDateTime());
-    event->setDtEnd(JsonLdDocument::readProperty(flight, "arrivalTime").toDateTime());
-    event->setAllDay(false);
-    event->setDescription(i18n("Booking reference: %1",
-                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-                               ));
-    return event;
-}
-
-KCalCore::Event::Ptr SemanticUrlHandler::eventForLodgingReservation(const QVariant &reservation) const
-{
-    using namespace KCalCore;
-
-    const auto lodgingBusiness = JsonLdDocument::readProperty(reservation, "reservationFor");
-    const auto address = JsonLdDocument::readProperty(lodgingBusiness, "address");
-    if (lodgingBusiness.isNull() || address.isNull()) {
-        return {};
-    }
-
-    Event::Ptr event(new Event);
-    event->setSummary(i18n("Hotel reservation: %1",
-                           JsonLdDocument::readProperty(lodgingBusiness, "name").toString()
-                           ));
-    event->setLocation(i18n("%1, %2 %3, %4",
-                            JsonLdDocument::readProperty(address, "streetAddress").toString(),
-                            JsonLdDocument::readProperty(address, "postalCode").toString(),
-                            JsonLdDocument::readProperty(address, "addressLocality").toString(),
-                            JsonLdDocument::readProperty(address, "addressCountry").toString()
-                            ));
-    event->setDtStart(QDateTime(JsonLdDocument::readProperty(reservation, "checkinDate").toDate(), QTime()));
-    event->setDtEnd(QDateTime(JsonLdDocument::readProperty(reservation, "checkoutDate").toDate(), QTime(23, 59, 59)));
-    event->setAllDay(true);
-    event->setDescription(i18n("Booking reference: %1",
-                               JsonLdDocument::readProperty(reservation, "reservationNumber").toString()
-                               ));
-    event->setTransparency(Event::Transparent);
-    return event;
-}
-
-KCalCore::Event::Ptr SemanticUrlHandler::eventForTrainReservation(const QVariant &reservation) const
-{
-    using namespace KCalCore;
-
-    const auto trip = JsonLdDocument::readProperty(reservation, "reservationFor");
-    const auto depStation = JsonLdDocument::readProperty(trip, "departureStation");
-    const auto arrStation = JsonLdDocument::readProperty(trip, "arrivalStation");
-    if (trip.isNull() || depStation.isNull() || arrStation.isNull()) {
-        return {};
-    }
-
-    Event::Ptr event(new Event);
-    event->setSummary(i18n("Train %1 from %2 to %3",
-                           JsonLdDocument::readProperty(trip, "trainNumber").toString(),
-                           JsonLdDocument::readProperty(depStation, "name").toString(),
-                           JsonLdDocument::readProperty(arrStation, "name").toString()
-                           ));
-    event->setLocation(JsonLdDocument::readProperty(depStation, "name").toString());
-    event->setDtStart(JsonLdDocument::readProperty(trip, "departureTime").toDateTime());
-    event->setDtEnd(JsonLdDocument::readProperty(trip, "arrivalTime").toDateTime());
-    event->setAllDay(false);
-
-    QStringList desc;
-    auto s = JsonLdDocument::readProperty(trip, "departurePlatform").toString();
-    if (!s.isEmpty()) {
-        desc.push_back(i18n("Departure platform: %1", s));
-    }
-    const auto ticket = JsonLdDocument::readProperty(reservation, "reservedTicket");
-    const auto seat = JsonLdDocument::readProperty(ticket, "ticketedSeat");
-    s = JsonLdDocument::readProperty(seat, "seatSection").toString();
-    if (!s.isEmpty()) {
-        desc.push_back(i18n("Coach: %1", s));
-    }
-    s = JsonLdDocument::readProperty(seat, "seatNumber").toString();
-    if (!s.isEmpty()) {
-        desc.push_back(i18n("Seat: %1", s));
-    }
-    s = JsonLdDocument::readProperty(trip, "arrivalPlatform").toString();
-    if (!s.isEmpty()) {
-        desc.push_back(i18n("Arrival platform: %1", s));
-    }
-    s = JsonLdDocument::readProperty(reservation, "reservationNumber").toString();
-    if (!s.isEmpty()) {
-        desc.push_back(i18n("Booking reference: %1", s));
-    }
-    event->setDescription(desc.join(QLatin1Char('\n')));
-    return event;
-}
-
 void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 {
+    using namespace KCalCore;
+
     auto calendar = CalendarSupport::calendarSingleton(true);
     for (const auto &r : memento->data()) {
-        const auto event = eventForReservation(r);
-        if (!event) {
+        Event::Ptr event(new Event);
+        CalendarHandler::fillEvent(r, event);
+        if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
             continue;
         }
         calendar->addEvent(event);

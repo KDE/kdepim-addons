@@ -68,3 +68,8 @@ ecm_add_test(
     NAME_PREFIX "messageviewerplugins-"
     LINK_LIBRARIES Qt5::Test semantic_extractor
 )
+ecm_add_test(
+    calendarhandlertest.cpp
+    NAME_PREFIX "messageviewerplugins-"
+    LINK_LIBRARIES Qt5::Test semantic_extractor
+)
