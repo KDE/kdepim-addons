@@ -19,12 +19,14 @@
 
 #include "insertshorturlplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
+#include <PimCommon/NetworkManager>
 #include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
 #include <KSharedConfig>
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <QAction>
+#include <QNetworkConfigurationManager>
 #include "shorturlengineplugin/shorturlengineinterface.h"
 #include "shorturlengineplugin/shorturlengineplugin.h"
 #include "shorturlengineplugin/shorturlenginepluginmanager.h"
@@ -91,20 +93,15 @@ void InsertShorturlPluginEditorInterface::exec()
     QTextCursor textCursor = richTextEditor()->textCursor();
     QString urlStr = textCursor.selectedText();
     if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
-        /*
             if (!mCurrentEngine) {
                 return;
             }
             if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
-                KMessageBox::information(this, i18n("No network connection detected, we cannot shorten URL."), i18n("No network"));
+                Q_EMIT message(i18n("No network connection detected, we cannot shorten URL."));
                 return;
             }
-            if (mOriginalUrl->text().isEmpty()) {
-                return;
-            }
-            mIndicatorLabel->start();
-            mCurrentEngine->setShortUrl(mOriginalUrl->text());
-            mShortUrl->clear();
+            /*
+            mCurrentEngine->setShortUrl(urlStr);
             mCurrentEngine->generateShortUrl();
             */
         //textCursor.insertText(newText);
@@ -113,12 +110,12 @@ void InsertShorturlPluginEditorInterface::exec()
 }
 void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
 {
+    //Insert new url
     //mIndicatorLabel->stop();
 }
 
 void InsertShorturlPluginEditorInterface::slotShortUrlFailed(const QString &errMsg)
 {
-    //KMessageBox::error(this, i18n("An error occurred: \"%1\"", errMsg));
-    //mIndicatorLabel->stop();
+    Q_EMIT message(i18n("An error occurred: \"%1\"", errMsg));
 }
 
