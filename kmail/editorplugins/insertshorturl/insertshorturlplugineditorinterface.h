@@ -23,6 +23,7 @@
 #include <messagecomposer/plugineditorinterface.h>
 #include <QPointer>
 class SelectMailDialog;
+class ShortUrlEngineInterface;
 class InsertShorturlPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -34,7 +35,13 @@ public:
     void exec() override;
 
 private:
+    void initializePlugins();
     void slotActivated();
+    void loadEngine();
+    void slotShortUrlDone(const QString &url);
+    void slotShortUrlFailed(const QString &errMsg);
+    QHash<QString, ShortUrlEngineInterface *> mLstInterface;
+    ShortUrlEngineInterface *mCurrentEngine = nullptr;
 };
 
 #endif

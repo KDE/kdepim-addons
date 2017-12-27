@@ -1,6 +1,7 @@
 set(shorturlpluginprivate_SRCS
     shorturlengineplugin/shorturlengineinterface.cpp
     shorturlengineplugin/shorturlengineplugin.cpp
+    shorturlengineplugin/shorturlenginepluginmanager.cpp
 )
 
 
@@ -9,7 +10,7 @@ generate_export_header(shorturlpluginprivate BASE_NAME shorturl)
 
 target_link_libraries(shorturlpluginprivate
 PRIVATE
-    Qt5::Network KF5::I18n
+    Qt5::Network KF5::I18n KF5::CoreAddons
 )
 
 set_target_properties(shorturlpluginprivate
@@ -34,7 +35,7 @@ kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshortur
     ${kmail_insertshorturleditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_insertshorturleditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n shorturlpluginprivate
+  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n shorturlpluginprivate KF5::CoreAddons
 )
 
 if(BUILD_TESTING)

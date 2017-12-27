@@ -22,15 +22,54 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <KSharedConfig>
+#include <KSharedConfig>
+#include <KConfigGroup>
+#include "shorturlengineplugin/shorturlengineinterface.h"
+#include "shorturlengineplugin/shorturlengineplugin.h"
+#include "shorturlengineplugin/shorturlenginepluginmanager.h"
 
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
+    initializePlugins();
 }
 
 InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface()
 {
 }
+
+void InsertShorturlPluginEditorInterface::initializePlugins()
+{
+    const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    for (ShortUrlEnginePlugin *plugin : lstPlugin) {
+        ShortUrlEngineInterface *interface = plugin->createInterface(this);
+        if (interface) {
+            mLstInterface.insert(interface->engineName(), interface);
+        }
+    }
+}
+
+void InsertShorturlPluginEditorInterface::loadEngine()
+{
+    if (mCurrentEngine) {
+        disconnect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlGenerated, this, &InsertShorturlPluginEditorInterface::slotShortUrlDone);
+        disconnect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &InsertShorturlPluginEditorInterface::slotShortUrlFailed);
+    }
+
+    KConfigGroup grp(KSharedConfig::openConfig(), "ShortUrl");
+    const QString engineName = grp.readEntry("EngineName");
+    mCurrentEngine = mLstInterface.value(engineName);
+    if (!mCurrentEngine && !mLstInterface.isEmpty()) {
+        mCurrentEngine = mLstInterface.cbegin().value();
+    }
+
+    if (mCurrentEngine) {
+        connect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlGenerated, this, &InsertShorturlPluginEditorInterface::slotShortUrlDone);
+        connect(mCurrentEngine, &ShortUrlEngineInterface::shortUrlFailed, this, &InsertShorturlPluginEditorInterface::slotShortUrlFailed);
+    }
+}
+
 
 void InsertShorturlPluginEditorInterface::createAction(KActionCollection *ac)
 {
@@ -52,9 +91,36 @@ void InsertShorturlPluginEditorInterface::exec()
     if (textCursor.hasSelection()) {
         QString urlStr = textCursor.selectedText();
         if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
+            /*
+            if (!mCurrentEngine) {
+                return;
+            }
+            if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+                KMessageBox::information(this, i18n("No network connection detected, we cannot shorten URL."), i18n("No network"));
+                return;
+            }
+            if (mOriginalUrl->text().isEmpty()) {
+                return;
+            }
+            mIndicatorLabel->start();
+            mCurrentEngine->setShortUrl(mOriginalUrl->text());
+            mShortUrl->clear();
+            mCurrentEngine->generateShortUrl();
+            */
             //textCursor.insertText(newText);
         }
     }
     //editorUtil.upperCase(textCursor);
 
 }
+void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
+{
+    //mIndicatorLabel->stop();
+}
+
+void InsertShorturlPluginEditorInterface::slotShortUrlFailed(const QString &errMsg)
+{
+    //KMessageBox::error(this, i18n("An error occurred: \"%1\"", errMsg));
+    //mIndicatorLabel->stop();
+}
+

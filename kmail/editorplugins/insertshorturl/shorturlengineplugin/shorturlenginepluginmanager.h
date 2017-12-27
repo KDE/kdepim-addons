@@ -21,9 +21,10 @@
 #define SHORTURLENGINEPLUGINMANAGER_H
 
 #include <QObject>
+#include "shorturl_export.h"
 class ShortUrlEnginePlugin;
 class ShortUrlEnginePluginManagerPrivate;
-class ShortUrlEnginePluginManager : public QObject
+class SHORTURL_EXPORT ShortUrlEnginePluginManager : public QObject
 {
     Q_OBJECT
 public:
