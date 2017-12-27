@@ -19,8 +19,13 @@
 
 
 #include "insertshorturlconfigurewidgettest.h"
+#include "../insertshorturlconfigurewidget.h"
 
+#include <QComboBox>
+#include <QLabel>
 #include <QTest>
+#include <QVBoxLayout>
+
 
 QTEST_MAIN(InsertShorturlConfigureWidgetTest)
 
@@ -28,4 +33,21 @@ InsertShorturlConfigureWidgetTest::InsertShorturlConfigureWidgetTest(QObject *pa
     : QObject(parent)
 {
 
+}
+
+void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
+{
+    InsertShorturlConfigureWidget w;
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(lab);
+    QVERIFY(!lab->text().isEmpty());
+
+
+    QComboBox *mShortUrlServer = w.findChild<QComboBox *>(QStringLiteral("shorturlserver"));
+    QVERIFY(mShortUrlServer);
 }
