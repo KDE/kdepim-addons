@@ -48,9 +48,13 @@ void InsertShorturlPluginEditorInterface::slotActivated()
 
 void InsertShorturlPluginEditorInterface::exec()
 {
-}
+    QTextCursor textCursor = richTextEditor()->textCursor();
+    if (textCursor.hasSelection()) {
+        QString urlStr = textCursor.selectedText();
+        if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
+            //textCursor.insertText(newText);
+        }
+    }
+    //editorUtil.upperCase(textCursor);
 
-//void InsertShorturlPluginEditorInterface::slotEmailSelected(const QStringList &lst)
-//{
-//    richTextEditor()->insertPlainText(lst.join(QLatin1Char(' ')));
-//}
+}
