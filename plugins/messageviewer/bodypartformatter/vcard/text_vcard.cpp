@@ -202,10 +202,10 @@ public:
             return true;
         }
 
-        if (path.startsWith(QStringLiteral("addToAddressBook"))) {
+        if (path.startsWith(QLatin1String("addToAddressBook"))) {
             KPIM::AddContactJob *job = new KPIM::AddContactJob(a, nullptr);
             job->start();
-        } else if (path.startsWith(QStringLiteral("updateToAddressBook"))) {
+        } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
             UpdateContactJob *job = new UpdateContactJob(a.emails().first(), a, nullptr);
             job->start();
         }
@@ -257,7 +257,7 @@ public:
     QString statusBarMessage(BodyPart *part, const QString &path) const override
     {
         KContacts::Addressee a = findAddressee(part, path);
-        const bool addToAddressBook = path.startsWith(QStringLiteral("addToAddressBook"));
+        const bool addToAddressBook = path.startsWith(QLatin1String("addToAddressBook"));
         if (a.realName().isEmpty()) {
             return addToAddressBook ? i18n("Add this contact to the address book.") : i18n("Update this contact to the address book.");
         } else {

@@ -210,7 +210,7 @@ void LDifImportExportPluginInterface::exportLdif()
 
 bool LDifImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QStringLiteral(".ldif"));
+    return url.path().endsWith(QLatin1String(".ldif"));
 }
 
 void LDifImportExportPluginInterface::importFile(const QUrl &url)

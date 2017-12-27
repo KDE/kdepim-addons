@@ -468,8 +468,8 @@ void GMXImportExportPluginInterface::importGMX()
     QString line, line2;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QStringLiteral("AB_ADDRESSES:"))
-        || !line2.startsWith(QStringLiteral("Address_id"))) {
+    if (!line.startsWith(QLatin1String("AB_ADDRESSES:"))
+        || !line2.startsWith(QLatin1String("Address_id"))) {
         KMessageBox::error(
             parentWidget(),
             i18n("%1 is not a GMX address book file.", fileName));
@@ -519,7 +519,7 @@ void GMXImportExportPluginInterface::importGMX()
 
     // now read the address records
     line = gmxStream.readLine();
-    if (!line.startsWith(QStringLiteral("AB_ADDRESS_RECORDS:"))) {
+    if (!line.startsWith(QLatin1String("AB_ADDRESS_RECORDS:"))) {
         qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find address records!";
         return;
     }
@@ -529,7 +529,7 @@ void GMXImportExportPluginInterface::importGMX()
     line = gmxStream.readLine();
     line = gmxStream.readLine();
 
-    while (!line.startsWith(QStringLiteral("####")) && !gmxStream.atEnd()) {
+    while (!line.startsWith(QLatin1String("####")) && !gmxStream.atEnd()) {
         // an address entry may spread over several lines in the file
         while (1) {
             itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
@@ -619,11 +619,11 @@ void GMXImportExportPluginInterface::importGMX()
     QStringList usedCategoryList;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QStringLiteral("AB_CATEGORIES:"))
-        || !line2.startsWith(QStringLiteral("Category_id"))) {
+    if (!line.startsWith(QLatin1String("AB_CATEGORIES:"))
+        || !line2.startsWith(QLatin1String("Category_id"))) {
         qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find category records!";
     } else {
-        while (!line.startsWith(QStringLiteral("####"))
+        while (!line.startsWith(QLatin1String("####"))
                && !gmxStream.atEnd()) {
             // a category should not spread over multiple lines, but just in case
             while (1) {
@@ -672,5 +672,5 @@ void GMXImportExportPluginInterface::importGMX()
 
 bool GMXImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QStringLiteral(".gmx"));
+    return url.path().endsWith(QLatin1String(".gmx"));
 }

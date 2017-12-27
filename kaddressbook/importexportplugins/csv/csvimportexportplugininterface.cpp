@@ -225,7 +225,7 @@ void CSVImportExportPluginInterface::exportCSV()
 
 bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QStringLiteral(".csv"));
+    return url.path().endsWith(QLatin1String(".csv"));
 }
 
 void CSVImportExportPluginInterface::importFile(const QUrl &url)

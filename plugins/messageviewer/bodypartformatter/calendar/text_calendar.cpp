@@ -842,7 +842,7 @@ public:
                 } else {
                     queryStr = i18n("Do you really want to cancel this invitation?");
                 }
-            } else if (path.startsWith(QStringLiteral("ATTACH:"))) {
+            } else if (path.startsWith(QLatin1String("ATTACH:"))) {
                 return false;
             } else {
                 queryStr = i18n("%1?", path);
@@ -1372,7 +1372,7 @@ public:
             result = true;
         }
 
-        if (path.startsWith(QStringLiteral("ATTACH:"))) {
+        if (path.startsWith(QLatin1String("ATTACH:"))) {
             const QString name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
             result = openAttachment(name, iCal);
         }
@@ -1392,7 +1392,7 @@ public:
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &point) const override
     {
         QString name = path;
-        if (path.startsWith(QStringLiteral("ATTACH:"))) {
+        if (path.startsWith(QLatin1String("ATTACH:"))) {
             name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
         } else {
             return false; //because it isn't an attachment inviation
@@ -1455,7 +1455,7 @@ public:
                 return i18n("Forward invitation");
             } else if (path == QLatin1String("cancel")) {
                 return i18n("Remove invitation from my calendar");
-            } else if (path.startsWith(QStringLiteral("ATTACH:"))) {
+            } else if (path.startsWith(QLatin1String("ATTACH:"))) {
                 const QString name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
                 return i18n("Open attachment \"%1\"", name);
             }

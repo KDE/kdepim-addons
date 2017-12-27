@@ -515,7 +515,7 @@ void VCardImportExportPluginInterface::exportVCard()
 
 bool VCardImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    return url.path().endsWith(QStringLiteral(".vcf"));
+    return url.path().endsWith(QLatin1String(".vcf"));
 }
 
 QString VCardImportExportPluginInterface::contactFileName(const KContacts::Addressee &contact) const

@@ -54,27 +54,27 @@ void OperaAddressBook::importAddressBook()
             if (!contact) {
                 contact = new KContacts::Addressee;
             }
-            if (line.startsWith(QStringLiteral("ID"))) {
+            if (line.startsWith(QLatin1String("ID"))) {
                 //Nothing
-            } else if (line.startsWith(QStringLiteral("NAME"))) {
+            } else if (line.startsWith(QLatin1String("NAME"))) {
                 contact->setName(line.remove(QStringLiteral("NAME=")));
-            } else if (line.startsWith(QStringLiteral("URL"))) {
+            } else if (line.startsWith(QLatin1String("URL"))) {
                 KContacts::ResourceLocatorUrl url;
                 url.setUrl(QUrl(line.remove(QStringLiteral("URL="))));
                 contact->setUrl(url);
-            } else if (line.startsWith(QStringLiteral("DESCRIPTION"))) {
+            } else if (line.startsWith(QLatin1String("DESCRIPTION"))) {
                 contact->setNote(line.remove(QStringLiteral("DESCRIPTION=")));
-            } else if (line.startsWith(QStringLiteral("PHONE"))) {
+            } else if (line.startsWith(QLatin1String("PHONE"))) {
                 contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("PHONE=")), KContacts::PhoneNumber::Home));
-            } else if (line.startsWith(QStringLiteral("FAX"))) {
+            } else if (line.startsWith(QLatin1String("FAX"))) {
                 contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("FAX=")), KContacts::PhoneNumber::Fax));
-            } else if (line.startsWith(QStringLiteral("POSTALADDRESS"))) {
+            } else if (line.startsWith(QLatin1String("POSTALADDRESS"))) {
                 //TODO
-            } else if (line.startsWith(QStringLiteral("PICTUREURL"))) {
+            } else if (line.startsWith(QLatin1String("PICTUREURL"))) {
                 //TODO
-            } else if (line.startsWith(QStringLiteral("ICON"))) {
+            } else if (line.startsWith(QLatin1String("ICON"))) {
                 //TODO
-            } else if (line.startsWith(QStringLiteral("SHORT NAME"))) {
+            } else if (line.startsWith(QLatin1String("SHORT NAME"))) {
                 contact->setNickName(line.remove(QStringLiteral("SHORT NAME=")));
             }
         }
