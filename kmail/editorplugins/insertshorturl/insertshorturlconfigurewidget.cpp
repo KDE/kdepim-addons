@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "insertshorturlconfigurewidget.h"
 #include <KConfigGroup>
 #include <KLocalizedString>
@@ -47,7 +46,6 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
 
 InsertShorturlConfigureWidget::~InsertShorturlConfigureWidget()
 {
-
 }
 
 void InsertShorturlConfigureWidget::slotChanged()

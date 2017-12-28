@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "insertshorturlconfiguredialogtest.h"
 #include "../insertshorturlconfiguredialog.h"
 #include "../insertshorturlconfigurewidget.h"
@@ -30,7 +29,6 @@ QTEST_MAIN(InsertShorturlConfigureDialogTest)
 InsertShorturlConfigureDialogTest::InsertShorturlConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()

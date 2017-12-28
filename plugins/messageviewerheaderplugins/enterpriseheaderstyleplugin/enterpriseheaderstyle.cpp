@@ -35,7 +35,6 @@
 using namespace MessageCore;
 using namespace MessageViewer;
 
-
 QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 {
     if (!message) {

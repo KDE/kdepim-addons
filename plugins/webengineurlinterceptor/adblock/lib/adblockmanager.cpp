@@ -59,54 +59,54 @@ void AdblockManager::loadSubscriptions()
     mSubscriptions.clear();
 #if 0
     QDir adblockDir(DataPaths::currentProfilePath() + "/adblock");
-     // Create if neccessary
-     if (!adblockDir.exists()) {
-         QDir(DataPaths::currentProfilePath()).mkdir("adblock");
-     }
+    // Create if neccessary
+    if (!adblockDir.exists()) {
+        QDir(DataPaths::currentProfilePath()).mkdir("adblock");
+    }
 
-     foreach (const QString &fileName, adblockDir.entryList(QStringList("*.txt"), QDir::Files)) {
-         if (fileName == QLatin1String("customlist.txt")) {
-             continue;
-         }
+    foreach (const QString &fileName, adblockDir.entryList(QStringList("*.txt"), QDir::Files)) {
+        if (fileName == QLatin1String("customlist.txt")) {
+            continue;
+        }
 
-         const QString absolutePath = adblockDir.absoluteFilePath(fileName);
-         QFile file(absolutePath);
-         if (!file.open(QFile::ReadOnly)) {
-             continue;
-         }
+        const QString absolutePath = adblockDir.absoluteFilePath(fileName);
+        QFile file(absolutePath);
+        if (!file.open(QFile::ReadOnly)) {
+            continue;
+        }
 
-         QTextStream textStream(&file);
-         textStream.setCodec("UTF-8");
-         QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
-         QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
+        QTextStream textStream(&file);
+        textStream.setCodec("UTF-8");
+        QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
+        QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
 
-         if (title.isEmpty() || !url.isValid()) {
-             qWarning() << "AdBlockManager: Invalid subscription file" << absolutePath;
-             continue;
-         }
+        if (title.isEmpty() || !url.isValid()) {
+            qWarning() << "AdBlockManager: Invalid subscription file" << absolutePath;
+            continue;
+        }
 
-         AdBlockSubscription* subscription = new AdBlockSubscription(title, this);
-         subscription->setUrl(url);
-         subscription->setFilePath(absolutePath);
+        AdBlockSubscription *subscription = new AdBlockSubscription(title, this);
+        subscription->setUrl(url);
+        subscription->setFilePath(absolutePath);
 
-         mSubscriptions.append(subscription);
-     }
+        mSubscriptions.append(subscription);
+    }
  #endif
-     // Prepend EasyList if subscriptions are empty
-     if (mSubscriptions.isEmpty()) {
+    // Prepend EasyList if subscriptions are empty
+    if (mSubscriptions.isEmpty()) {
 //         AdBlockSubscription* easyList = new AdBlockSubscription(tr("EasyList"), this);
 //         easyList->setUrl(QUrl(ADBLOCK_EASYLIST_URL));
 //         easyList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/easylist.txt"));
 
 //         mSubscriptions.prepend(easyList);
-     }
+    }
 
     //TODO load it
     // new AdBlockSubscription(...);
     // loadSubscription()
     //TODO load element
     // Append CustomList
-    AdBlockCustomList* customList = new AdBlockCustomList(this);
+    AdBlockCustomList *customList = new AdBlockCustomList(this);
     mSubscriptions.append(customList);
     // Load all subscriptions
     /*
@@ -119,10 +119,9 @@ void AdblockManager::loadSubscriptions()
 
 void AdblockManager::save()
 {
-    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+    foreach (AdBlockSubscription *subscription, mSubscriptions) {
         subscription->saveSubscription();
     }
-
 }
 
 void AdblockManager::removeDisabledRule(const QString &filter)

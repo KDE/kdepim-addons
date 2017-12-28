@@ -73,7 +73,6 @@ void InsertShorturlPluginEditorInterface::loadEngine()
     }
 }
 
-
 void InsertShorturlPluginEditorInterface::createAction(KActionCollection *ac)
 {
     QAction *action = new QAction(i18n("Insert Short Url..."), this);
@@ -93,21 +92,21 @@ void InsertShorturlPluginEditorInterface::exec()
     QTextCursor textCursor = richTextEditor()->textCursor();
     QString urlStr = textCursor.selectedText();
     if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
-            if (!mCurrentEngine) {
-                return;
-            }
-            if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
-                Q_EMIT message(i18n("No network connection detected, we cannot shorten URL."));
-                return;
-            }
-            /*
-            mCurrentEngine->setShortUrl(urlStr);
-            mCurrentEngine->generateShortUrl();
-            */
+        if (!mCurrentEngine) {
+            return;
+        }
+        if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+            Q_EMIT message(i18n("No network connection detected, we cannot shorten URL."));
+            return;
+        }
+        /*
+        mCurrentEngine->setShortUrl(urlStr);
+        mCurrentEngine->generateShortUrl();
+        */
         //textCursor.insertText(newText);
     }
-
 }
+
 void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
 {
     //Insert new url
@@ -118,4 +117,3 @@ void InsertShorturlPluginEditorInterface::slotShortUrlFailed(const QString &errM
 {
     Q_EMIT message(i18n("An error occurred: \"%1\"", errMsg));
 }
-

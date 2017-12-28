@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "insertshorturlconfigurewidgettest.h"
 #include "../insertshorturlconfigurewidget.h"
 
@@ -26,13 +25,11 @@
 #include <QTest>
 #include <QVBoxLayout>
 
-
 QTEST_MAIN(InsertShorturlConfigureWidgetTest)
 
 InsertShorturlConfigureWidgetTest::InsertShorturlConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
@@ -46,7 +43,6 @@ void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
-
 
     QComboBox *mShortUrlServer = w.findChild<QComboBox *>(QStringLiteral("shorturlserver"));
     QVERIFY(mShortUrlServer);

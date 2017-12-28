@@ -29,7 +29,6 @@ K_PLUGIN_FACTORY_WITH_JSON(InsertShorturlPluginEditorFactory, "kmail_insertshort
 InsertShorturlPluginEditor::InsertShorturlPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
 {
-
 }
 
 InsertShorturlPluginEditor::~InsertShorturlPluginEditor()

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "insertshorturlconfiguredialog.h"
 #include "insertshorturlconfigurewidget.h"
 #include <QVBoxLayout>
@@ -41,7 +40,6 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
 
 InsertShorturlConfigureDialog::~InsertShorturlConfigureDialog()
 {
-
 }
 
 void InsertShorturlConfigureDialog::accept()

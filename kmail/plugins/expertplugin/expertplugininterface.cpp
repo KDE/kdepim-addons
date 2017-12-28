@@ -51,5 +51,4 @@ void ExpertPluginInterface::slotActivated()
 
 void ExpertPluginInterface::exec()
 {
-    
 }

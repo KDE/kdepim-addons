@@ -26,5 +26,4 @@ QTEST_MAIN(ExpertPluginInterfaceTest)
 ExpertPluginInterfaceTest::ExpertPluginInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
