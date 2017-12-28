@@ -19,33 +19,21 @@
 
 #include "shorturlengineplugin.h"
 
-class ShortUrlEnginePluginPrivate
-{
-public:
-    ShortUrlEnginePluginPrivate()
-    {
-    }
-
-    QString name;
-};
-
 ShortUrlEnginePlugin::ShortUrlEnginePlugin(QObject *parent)
     : QObject(parent)
-    , d(new ShortUrlEnginePluginPrivate)
 {
 }
 
 ShortUrlEnginePlugin::~ShortUrlEnginePlugin()
 {
-    delete d;
 }
 
 QString ShortUrlEnginePlugin::pluginName() const
 {
-    return d->name;
+    return mName;
 }
 
 void ShortUrlEnginePlugin::setPluginName(const QString &pluginname)
 {
-    d->name = pluginname;
+    mName = pluginname;
 }
