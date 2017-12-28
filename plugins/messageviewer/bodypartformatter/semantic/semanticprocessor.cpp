@@ -104,6 +104,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         for (auto extractor : extractors) {
             ExtractorEngine engine;
             engine.setExtractor(extractor);
+            engine.setSenderDate(static_cast<KMime::Message*>(part.content()->topLevel())->date()->dateTime());
             engine.setText(preproc.text());
             const auto data = engine.extract();
             qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
