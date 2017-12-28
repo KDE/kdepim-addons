@@ -187,23 +187,9 @@ SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart
 QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 {
     for (const auto &r : memento->data()) {
-        if (r.userType() == qMetaTypeId<FlightReservation>()) {
-            const auto v = JsonLdDocument::readProperty(r, "reservationFor");
-            const auto d = JsonLdDocument::readProperty(v, "departureTime").toDate();
-            if (d.isValid()) {
-                return d;
-            }
-        } else if (r.userType() == qMetaTypeId<LodgingReservation>()) {
-            const auto d = JsonLdDocument::readProperty(r, "checkinDate").toDate();
-            if (d.isValid()) {
-                return d;
-            }
-        } else if (r.userType() == qMetaTypeId<TrainReservation>()) {
-            const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
-            const auto d = JsonLdDocument::readProperty(trip, "departureTime").toDate();
-            if (d.isValid()) {
-                return d;
-            }
+        const auto dt = CalendarHandler::startDateTime(r);
+        if (dt.isValid()) {
+            return dt.date();
         }
     }
     return {};
