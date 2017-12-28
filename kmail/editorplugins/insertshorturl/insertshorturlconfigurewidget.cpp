@@ -18,6 +18,9 @@
 */
 
 #include "insertshorturlconfigurewidget.h"
+#include "shorturlengineplugin/shorturlengineplugin.h"
+#include "shorturlengineplugin/shorturlenginepluginmanager.h"
+
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
@@ -39,6 +42,10 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     mShortUrlServer = new QComboBox(this);
     mShortUrlServer->setObjectName(QStringLiteral("shorturlserver"));
     mainLayout->addWidget(mShortUrlServer);
+    const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();
+    for (ShortUrlEnginePlugin *plugin : lstPlugin) {
+        mShortUrlServer->addItem(plugin->pluginName(), plugin->engineName());
+    }
 
     connect(mShortUrlServer, QOverload<int>::of(&QComboBox::activated), this, &InsertShorturlConfigureWidget::slotChanged);
     loadConfig();
