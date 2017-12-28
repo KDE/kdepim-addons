@@ -38,6 +38,7 @@ InsertShorturlPluginEditor::~InsertShorturlPluginEditor()
 MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
 {
     InsertShorturlPluginEditorInterface *interface = new InsertShorturlPluginEditorInterface(parent);
+    connect(this, &InsertShorturlPluginEditor::configChanged, interface, &InsertShorturlPluginEditorInterface::loadEngine);
     interface->createAction(ac);
     return interface;
 }
@@ -55,7 +56,9 @@ bool InsertShorturlPluginEditor::hasConfigureDialog() const
 void InsertShorturlPluginEditor::showConfigureDialog(QWidget *parent)
 {
     QPointer<InsertShorturlConfigureDialog> dlg = new InsertShorturlConfigureDialog(parent);
-    dlg->exec();
+    if (dlg->exec()) {
+        Q_EMIT configChanged();
+    }
     delete dlg;
 }
 

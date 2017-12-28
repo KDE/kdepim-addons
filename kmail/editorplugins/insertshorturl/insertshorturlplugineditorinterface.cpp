@@ -36,6 +36,7 @@ InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject
 {
     setNeedSelectedText(true);
     initializePlugins();
+    loadEngine();
 }
 
 InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface()

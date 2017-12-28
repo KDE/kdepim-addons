@@ -34,10 +34,10 @@ public:
     void createAction(KActionCollection *ac) override;
     void exec() override;
 
+    void loadEngine();
 private:
     void initializePlugins();
     void slotActivated();
-    void loadEngine();
     void slotShortUrlDone(const QString &url);
     void slotShortUrlFailed(const QString &errMsg);
     QHash<QString, ShortUrlEngineInterface *> mLstInterface;
