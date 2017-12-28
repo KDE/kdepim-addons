@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include <QNetworkReply>
+#include <QTextCursor>
 #include "shorturl_export.h"
 class QNetworkAccessManager;
 class ShortUrlEnginePlugin;
@@ -37,6 +38,7 @@ public:
     virtual QString engineName() const = 0;
     QString pluginName() const;
 
+    void setTextCursor(const QTextCursor &cursor);
 protected Q_SLOTS:
     void slotErrorFound(QNetworkReply::NetworkError error);
 
@@ -46,6 +48,7 @@ Q_SIGNALS:
 
 protected:
     QString mOriginalUrl;
+    QTextCursor mTextCursor;
     bool mErrorFound = false;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     ShortUrlEnginePlugin *mEnginePlugin = nullptr;

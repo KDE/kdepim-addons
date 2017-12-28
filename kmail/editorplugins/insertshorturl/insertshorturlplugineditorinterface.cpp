@@ -99,10 +99,9 @@ void InsertShorturlPluginEditorInterface::exec()
             Q_EMIT message(i18n("No network connection detected, we cannot shorten URL."));
             return;
         }
-        /*
+        mCurrentEngine->setTextCursor(textCursor);
         mCurrentEngine->setShortUrl(urlStr);
         mCurrentEngine->generateShortUrl();
-        */
         //textCursor.insertText(newText);
     }
 }

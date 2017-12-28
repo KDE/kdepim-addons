@@ -60,3 +60,8 @@ QString ShortUrlEngineInterface::pluginName() const
 {
     return mEnginePlugin->pluginName();
 }
+
+void ShortUrlEngineInterface::setTextCursor(const QTextCursor &cursor)
+{
+    mTextCursor = cursor;
+}

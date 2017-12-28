@@ -10,7 +10,7 @@ generate_export_header(shorturlpluginprivate BASE_NAME shorturl)
 
 target_link_libraries(shorturlpluginprivate
 PRIVATE
-    Qt5::Network KF5::I18n KF5::CoreAddons
+    Qt5::Network KF5::I18n KF5::CoreAddons Qt5::Gui
 )
 
 set_target_properties(shorturlpluginprivate
