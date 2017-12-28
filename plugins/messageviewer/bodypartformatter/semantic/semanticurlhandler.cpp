@@ -242,13 +242,19 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 {
     using namespace KCalCore;
 
-    auto calendar = CalendarSupport::calendarSingleton(true);
+    const auto calendar = CalendarSupport::calendarSingleton(true);
     for (const auto &r : memento->data()) {
-        Event::Ptr event(new Event);
-        CalendarHandler::fillEvent(r, event);
-        if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
-            continue;
+        auto event = CalendarHandler::findEvent(calendar, r);
+        if (!event) {
+            event.reset(new Event);
+            CalendarHandler::fillEvent(r, event);
+            if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
+                continue;
+            }
+            calendar->addEvent(event);
+        } else {
+            CalendarHandler::fillEvent(r, event);
+            calendar->modifyIncidence(event);
         }
-        calendar->addEvent(event);
     }
 }

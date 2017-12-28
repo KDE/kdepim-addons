@@ -104,6 +104,47 @@ private Q_SLOTS:
             QVERIFY(*newEvent == *refEvent);
         }
     }
+
+    void testFindEvent_data()
+    {
+        QTest::addColumn<QString>("jsonFile");
+        QTest::addColumn<QString>("icalFile");
+
+        QDir dir(QStringLiteral(SOURCE_DIR "/calendarhandlerdata"));
+        const auto lst = dir.entryList(QStringList(QStringLiteral("*.json")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+        for (const auto &file : lst) {
+            const auto refFile = dir.path() + QLatin1Char('/') + file.left(file.size() - 4) + QStringLiteral("ics");
+            if (!QFile::exists(refFile)) {
+                qDebug() << "reference file" << refFile << "does not exist, skipping test file" << file;
+                continue;
+            }
+            QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << refFile;
+        }
+    }
+
+    void testFindEvent()
+    {
+        QFETCH(QString, jsonFile);
+        QFETCH(QString, icalFile);
+
+        QFile f(jsonFile);
+        QVERIFY(f.open(QFile::ReadOnly));
+        const auto inArray = QJsonDocument::fromJson(f.readAll()).array();
+        QVERIFY(!inArray.isEmpty());
+        const auto preData = JsonLdDocument::fromJson(inArray);
+        QCOMPARE(inArray.size(), preData.size());
+
+        ExtractorPostprocessor postproc;
+        postproc.process(preData);
+        QCOMPARE(inArray.size(), postproc.result().size());
+
+        MemoryCalendar::Ptr refCal(new MemoryCalendar(QTimeZone{}));
+        ICalFormat format;
+        format.load(refCal, icalFile);
+
+        const auto event = CalendarHandler::findEvent(refCal, postproc.result().at(0));
+        QVERIFY(event);
+    }
 };
 
 QTEST_APPLESS_MAIN(CalendarHandlerTest)
