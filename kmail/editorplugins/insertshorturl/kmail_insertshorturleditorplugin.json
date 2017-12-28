@@ -7,7 +7,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att generera avkortade webbadresser...",
         "Description[uk]": "За допомогою цього додатка можна створювати скорочені адреси.",
         "Description[x-test]": "xxThis plugin allows you to generate shorter url..xx",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kmailinsertshorturl",
         "Name": "Insert Short Url",
         "Name[ca]": "Inserció d'un URL curt",
