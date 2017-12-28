@@ -10,6 +10,19 @@
     {% elif item.className == "TrainReservation" %}
         {% include ":/org.kde.messageviewer/semantic/trainreservation.html" %}
     {% endif %}
+
+    {% if item.url %}
+        <a href="{{ item.url }}"/>{% i18n "View..." %}</a>
+    {% endif %}
+
+    {% if item.modifyReservationUrl %}
+        <a href="{{ item.modifyReservationUrl }}"/>{% i18n "Modify..." %}</a>
+    {% endif %}
+
+    {% if item.cancelReservationUrl %}
+        <a href="{{ item.cancelReservationUrl }}"/>{% i18n "Cancel..." %}</a>
+    {% endif %}
+
     {% if not forloop.last %}
         <hr/>
     {% endif %}
