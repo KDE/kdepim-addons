@@ -33,6 +33,14 @@
 
 using namespace KCalCore;
 
+void initLocale()
+{
+    qputenv("LC_ALL", "en_US.utf-8");
+    qputenv("TZ", "UTC");
+}
+
+Q_CONSTRUCTOR_FUNCTION(initLocale)
+
 class CalendarHandlerTest : public QObject
 {
     Q_OBJECT
