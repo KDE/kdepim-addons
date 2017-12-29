@@ -18,6 +18,7 @@
 */
 
 #include "insertshorturlplugineditorinterface.h"
+#include "kmail_insertshorturl_debug.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <PimCommon/NetworkManager>
 #include <KLocalizedString>
@@ -103,7 +104,6 @@ void InsertShorturlPluginEditorInterface::exec()
         mCurrentEngine->setTextCursor(textCursor);
         mCurrentEngine->setShortUrl(urlStr);
         mCurrentEngine->generateShortUrl();
-        //textCursor.insertText(newText);
     }
 }
 
@@ -111,6 +111,7 @@ void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
 {
     //Insert new url
     //mIndicatorLabel->stop();
+    qCDebug(KMAIL_INSERTSHORTURL_LOG) << " new url " << url;
 }
 
 void InsertShorturlPluginEditorInterface::slotShortUrlFailed(const QString &errMsg)

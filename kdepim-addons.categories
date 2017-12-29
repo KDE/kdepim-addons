@@ -28,3 +28,4 @@ org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact edit
 org.kde.pim.pkpass kdepim-addons (pkpass formater)
 org.kde.pim.messageviewer.semantic kdepim-addons (Semantic plugin)
 org.kde.pim.kmail_expertplugin kdepim-addons (kmail expert plugin)
+org.kde.pim.kmail_insertshorturl kdepim-addons (kmail insert short url plugin)
