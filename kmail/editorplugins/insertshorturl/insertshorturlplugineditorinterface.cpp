@@ -110,7 +110,6 @@ void InsertShorturlPluginEditorInterface::exec()
 void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
 {
     //Insert new url
-    //mIndicatorLabel->stop();
     qCDebug(KMAIL_INSERTSHORTURL_LOG) << " new url " << url;
 }
 
