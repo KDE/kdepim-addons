@@ -1,9 +1,19 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to generate a shorter URL.",
+        "Description[ca]": "Aquest connector permet generar un URL més curt.",
+        "Description[nl]": "Deze plug-in stelt u in staat een kortere URL te genereren.",
+        "Description[pt]": "Este 'plugin' permite-lhe gerar um URL mais curto.",
+        "Description[uk]": "За допомогою цього додатка можна створювати скорочені адреси.",
+        "Description[x-test]": "xxThis plugin allows you to generate a shorter URL.xx",
         "EnabledByDefault": "false",
         "Id": "kmailinsertshorturl",
         "Name": "Insert Short URL",
+        "Name[ca]": "Inserció d'un URL curt",
+        "Name[nl]": "Ingekort URL-adres invoegen",
+        "Name[pt]": "Inserir um URL Curto",
+        "Name[uk]": "Вставлення скороченої адреси",
+        "Name[x-test]": "xxInsert Short URLxx",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
