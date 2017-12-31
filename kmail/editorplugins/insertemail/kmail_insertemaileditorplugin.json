@@ -16,7 +16,7 @@
         "EnabledByDefault": "true",
         "Id": "kmailinsertemail",
         "Name": "Insert Email",
-        "Name[ca@valencia]": "Insereix un correu electrònic",
+        "Name[ca@valencia]": "Inserció d'un correu electrònic",
         "Name[ca]": "Inserció d'un correu electrònic",
         "Name[it]": "Inserisci messaggi di posta",
         "Name[nl]": "E-mail invoegen",
