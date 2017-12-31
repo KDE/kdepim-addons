@@ -78,6 +78,7 @@ void IsgdShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
 
     QVariant var = map.value(QStringLiteral("shorturl"));
     if (var.isValid()) {
+        mTextCursor.insertText(var.toString());
         Q_EMIT shortUrlGenerated(var.toString());
     }
 }
