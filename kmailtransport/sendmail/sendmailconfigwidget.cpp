@@ -1,5 +1,5 @@
 /*
-  Copyright (c) 2013-2017 Laurent Montel <montel@kde.org>
+  Copyright (C) 2013-2018 Laurent Montel <montel@kde.org>
   Copyright (c) 2009 Constantin Berzan <exit3219@gmail.com>
 
   Based on MailTransport code by:
