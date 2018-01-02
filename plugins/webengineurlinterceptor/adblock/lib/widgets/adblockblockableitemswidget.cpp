@@ -96,7 +96,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
-    qWarning() << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
+    qCWarning(ADBLOCKINTERCEPTOR_LOG) << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
     // local filters
     const QString localRulesFilePath = AdBlock::AdBlockUtil::localFilterPath();
 

@@ -19,6 +19,7 @@
 
 #include "gnupgwksformatter.h"
 #include "gnupgwksmessagepart.h"
+#include "gnupgwks_debug.h"
 
 #include <QObject>
 #include <QVariant>
@@ -74,7 +75,7 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
             QByteArray plainText;
             auto result = decrypt->exec(part.content()->decodedContent(), plainText);
             if (result.error()) {
-                qWarning() << "Decryption failed!" << result.error().asString();
+                qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asString();
                 return {};
             }
             part.content()->setBody(plainText);
