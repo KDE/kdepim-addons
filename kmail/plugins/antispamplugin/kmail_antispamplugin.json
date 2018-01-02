@@ -25,7 +25,7 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати засіб боротьби зі спамом у KMail.",
         "Description[x-test]": "xxThis plugin allows you to configure Anti Spam in KMail.xx",
         "Description[zh_CN]": "此插件允许您配置 KMail 反垃圾邮件机制。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kmailantispam",
         "Name": "Antispam",
         "Name[ca@valencia]": "Contra el correu brossa",
