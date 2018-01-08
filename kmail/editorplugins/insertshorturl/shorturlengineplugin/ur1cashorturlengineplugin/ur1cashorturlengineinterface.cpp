@@ -65,23 +65,21 @@ void Ur1CaShortUrlEngineInterface::slotSslErrors(QNetworkReply *reply, const QLi
 
 void Ur1CaShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
 {
-    if (mErrorFound) {
-        reply->deleteLater();
-        return;
-    }
-    QString output = QLatin1String(reply->readAll());
-    qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "void Ur1CaShortUrl::slotShortUrlFinished(QNetworkReply *reply) " << output;
-    QRegExp rx(QStringLiteral("<p class=[\'\"]success[\'\"]>(.*)</p>"));
-    rx.setMinimal(true);
-    output = rx.cap(1);
-    rx.setPattern(QStringLiteral("href=[\'\"](.*)[\'\"]"));
-    rx.indexIn(output);
-    output = rx.cap(1);
-    qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "Short url is: " << output;
-    if (!output.isEmpty()) {
-        mTextCursor.insertText(output);
-    } else {
-        Q_EMIT shortUrlFailed(QString());
+    if (!mErrorFound) {
+        QString output = QLatin1String(reply->readAll());
+        qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "void Ur1CaShortUrl::slotShortUrlFinished(QNetworkReply *reply) " << output;
+        QRegExp rx(QStringLiteral("<p class=[\'\"]success[\'\"]>(.*)</p>"));
+        rx.setMinimal(true);
+        output = rx.cap(1);
+        rx.setPattern(QStringLiteral("href=[\'\"](.*)[\'\"]"));
+        rx.indexIn(output);
+        output = rx.cap(1);
+        qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "Short url is: " << output;
+        if (!output.isEmpty()) {
+            mTextCursor.insertText(output);
+        } else {
+            Q_EMIT shortUrlFailed(QString());
+        }
     }
     reply->deleteLater();
 }
