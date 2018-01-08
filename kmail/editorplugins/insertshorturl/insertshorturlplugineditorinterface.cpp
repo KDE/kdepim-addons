@@ -105,12 +105,13 @@ void InsertShorturlPluginEditorInterface::exec()
         mCurrentEngine->setTextCursor(textCursor);
         mCurrentEngine->setShortUrl(urlStr);
         mCurrentEngine->generateShortUrl();
+    } else {
+        Q_EMIT message(i18n("String doesn't seem to be a url"));
     }
 }
 
 void InsertShorturlPluginEditorInterface::slotShortUrlDone(const QString &url)
 {
-    //Insert new url
     qCDebug(KMAIL_INSERTSHORTURL_LOG) << " new url " << url;
 }
 
