@@ -95,6 +95,7 @@ void InsertShorturlPluginEditorInterface::exec()
     QString urlStr = textCursor.selectedText();
     if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))) {
         if (!mCurrentEngine) {
+            qCWarning(KMAIL_INSERTSHORTURL_LOG) << "Current Engine not defined";
             return;
         }
         if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
