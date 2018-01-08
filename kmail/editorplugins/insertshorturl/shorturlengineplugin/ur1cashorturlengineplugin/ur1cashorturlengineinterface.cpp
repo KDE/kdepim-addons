@@ -80,7 +80,6 @@ void Ur1CaShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
     qCDebug(UR1CASHORTURLENGINEPLUGIN_LOG) << "Short url is: " << output;
     if (!output.isEmpty()) {
         mTextCursor.insertText(output);
-        Q_EMIT shortUrlGenerated(output);
     } else {
         Q_EMIT shortUrlFailed(QString());
     }

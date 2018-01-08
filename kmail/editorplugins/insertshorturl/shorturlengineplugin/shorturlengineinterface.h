@@ -43,7 +43,6 @@ protected Q_SLOTS:
     void slotErrorFound(QNetworkReply::NetworkError error);
 
 Q_SIGNALS:
-    void shortUrlGenerated(const QString &url);
     void shortUrlFailed(const QString &error);
 
 protected:

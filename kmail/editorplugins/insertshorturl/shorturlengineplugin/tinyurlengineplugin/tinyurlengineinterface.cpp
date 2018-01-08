@@ -51,7 +51,6 @@ void TinyUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)
         const QString data = QString::fromUtf8(reply->readAll());
         if (!data.isEmpty()) {
             mTextCursor.insertText(data);
-            Q_EMIT shortUrlGenerated(data);
         }
     }
     reply->deleteLater();

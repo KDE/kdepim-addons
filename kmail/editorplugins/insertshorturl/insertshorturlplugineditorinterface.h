@@ -38,7 +38,6 @@ public:
 private:
     void initializePlugins();
     void slotActivated();
-    void slotShortUrlDone(const QString &url);
     void slotShortUrlFailed(const QString &errMsg);
     QHash<QString, ShortUrlEngineInterface *> mLstInterface;
     ShortUrlEngineInterface *mCurrentEngine = nullptr;
