@@ -22,7 +22,7 @@
 
 #include <QAbstractTableModel>
 #include <QIODevice>
-
+class CsvParser;
 class QCsvModel : public QAbstractTableModel
 {
     Q_OBJECT
@@ -123,14 +123,19 @@ Q_SIGNALS:
      */
     void finishedLoading();
 
+private Q_SLOTS:
+    void columnCountChanged(int columns);
+    void rowCountChanged(int rows);
+    void fieldChanged(const QString &data, int row, int column);
 private:
-    class Private;
-    Private *const d;
 
-    Q_PRIVATE_SLOT(d, void columnCountChanged(int))
-    Q_PRIVATE_SLOT(d, void rowCountChanged(int))
-    Q_PRIVATE_SLOT(d, void fieldChanged(const QString &, int, int))
-    Q_PRIVATE_SLOT(d, void finishedLoading())
+    CsvParser *mParser = nullptr;
+    QVector<QString> mFieldIdentifiers;
+    QMap< QPair<int, int>, QString> mFields;
+    QIODevice *mDevice = nullptr;
+
+    int mRowCount = 0;
+    int mColumnCount = 0;
 };
 
 #endif
