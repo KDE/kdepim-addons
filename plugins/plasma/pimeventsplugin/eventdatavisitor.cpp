@@ -170,6 +170,13 @@ void EventDataVisitor::insertResult(const CalendarEvents::EventData &result)
 {
     QDate d = result.startDateTime().date();
     const QDate end = result.endDateTime().date();
+
+    // Agenda without start date will be placed at the end (due) date
+    if (!d.isValid()) {
+        mResults.insert(end, result);
+        return;
+    }
+
     while (d <= end) {
         mResults.insert(d, result);
         d = d.addDays(1);
