@@ -106,7 +106,7 @@ void InsertShorturlPluginEditorInterface::exec()
         mCurrentEngine->setShortUrl(urlStr);
         mCurrentEngine->generateShortUrl();
     } else {
-        Q_EMIT message(i18n("String doesn't seem to be a url"));
+        Q_EMIT message(i18n("String doesn't seem to be a URL"));
     }
 }
 
