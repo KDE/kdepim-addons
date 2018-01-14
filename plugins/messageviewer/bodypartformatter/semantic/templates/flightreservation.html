@@ -22,20 +22,43 @@
         <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
     </tr>
     <tr><td colspan="3">
-    {% if item.reservationFor.departureGate %}
-        {% i18n "Gate: %1" item.reservationFor.departureGate %}
-    {% endif %}
+        <div style="float:left">
+        {% if item.reservationFor.departureGate %}
+            {% i18n "Gate: %1" item.reservationFor.departureGate %}
+        {% endif %}
 
-    {% if item.reservationFor.boardingTimeLocalized %}
-        {% i18n "Boarding: %1" item.reservationFor.boardingTimeLocalized %}
-    {% endif %}
+        {% if item.reservationFor.boardingTimeLocalized %}
+            {% i18n "Boarding: %1" item.reservationFor.boardingTimeLocalized %}
+        {% endif %}
 
-    {% if item.boardingGroup %}
-        {% i18n "Group: %1" item.boardingGroup %}
-    {% endif %}
+        {% if item.boardingGroup %}
+            {% i18n "Group: %1" item.boardingGroup %}
+        {% endif %}
 
-    {% if item.airplaneSeat %}
-        {% i18n "Seat: %1" item.airplaneSeat %}
-    {% endif %}
+        {% if item.airplaneSeat %}
+            {% i18n "Seat: %1" item.airplaneSeat %}
+        {% endif %}
+        </div>
+
+        <div style="float:right">
+        {% if item.ticketDownloadUrl %}
+            <a href="{{ item.ticketDownloadUrl }}">{% i18n "Download" %}</a>
+            {% if item.url or item.modifyReservationUrl or item.cancelReservationUrl %}|{% endif %}
+        {% endif %}
+
+        {% if item.url %}
+            <a href="{{ item.url }}"/>{% i18n "View" %}</a>
+            {% if item.modifyReservationUrl or item.cancelReservationUrl %}|{% endif %}
+        {% endif %}
+
+        {% if item.modifyReservationUrl %}
+            <a href="{{ item.modifyReservationUrl }}"/>{% i18n "Modify" %}</a>
+            {% if item.cancelReservationUrl %}|{% endif %}
+        {% endif %}
+
+        {% if item.cancelReservationUrl %}
+            <a href="{{ item.cancelReservationUrl }}"/>{% i18n "Cancel" %}</a>
+        {% endif %}
+        </div>
     </td></tr>
 </table>
