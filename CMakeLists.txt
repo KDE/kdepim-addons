@@ -7,7 +7,7 @@ if (POLICY CMP0063)
     cmake_policy(SET CMP0063 NEW)
 endif()
 
-set(KF5_VERSION "5.41.0")
+set(KF5_VERSION "5.42.0")
 
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
@@ -139,14 +139,6 @@ set( SharedMimeInfo_MINIMUM_VERSION "1.0" )
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 find_package(Poppler COMPONENTS Qt5)
 set_package_properties("Poppler" PROPERTIES TYPE OPTIONAL PURPOSE "Support for PDF booking confirmations in the semantic extraction plugin.")
-
-if(NOT CMAKE_VERSION VERSION_LESS "3.10.0" AND KF5_VERSION VERSION_LESS "5.42.0")
-  # CMake 3.9+ warns about automoc on files without Q_OBJECT, and doesn't know about other macros.
-  # 3.10+ lets us provide more macro names that require automoc.
-  # KF5 >= 5.42 takes care itself of adding its macros in its cmake config files
-  list(APPEND CMAKE_AUTOMOC_MACRO_NAMES "K_PLUGIN_FACTORY_WITH_JSON" "K_PLUGIN_FACTORY")
-endif()
-
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
     add_subdirectory(examples)
