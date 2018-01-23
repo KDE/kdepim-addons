@@ -36,6 +36,7 @@
         "Name[sv]": "Infoga brev",
         "Name[uk]": "Вставлення повідомлень",
         "Name[x-test]": "xxInsert Emailxx",
+        "Name[zh_CN]": "插入电子邮件",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
