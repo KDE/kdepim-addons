@@ -1246,7 +1246,7 @@ public:
     {
         // filter out known paths that don't belong to this type of urlmanager.
         // kolab/issue4054 msg27201
-        if (path.contains(QStringLiteral("addToAddressBook:")) || path.contains(QStringLiteral("updateToAddressBook"))) {
+        if (path.contains(QLatin1String("addToAddressBook:")) || path.contains(QLatin1String("updateToAddressBook"))) {
             return false;
         }
 
