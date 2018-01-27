@@ -46,8 +46,20 @@
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
-    Q_UNUSED(part);
-    return path == QLatin1String("semanticAction");
+    if (path == QLatin1String("semanticAction")) {
+        return true;
+    }
+
+    if (path.startsWith(QLatin1String("semanticExpand?"))) {
+        auto idx = path.midRef(15).toInt();
+        auto m = memento(part);
+        m->toggleExpanded(idx);
+        const auto nodeHelper = part->nodeHelper();
+        emit nodeHelper->update(MimeTreeParser::Delayed);
+        return true;
+    }
+
+    return false;
 }
 
 static void addGoToMapAction(QMenu *menu, const QVariant &place)

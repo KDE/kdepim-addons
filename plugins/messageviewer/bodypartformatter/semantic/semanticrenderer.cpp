@@ -19,14 +19,18 @@
 
 #include "semanticrenderer.h"
 #include "datatypes.h"
+#include "jsonlddocument.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
-#include <MessageViewer/MessagePartRendererManager>
+#include <MessageViewer/IconNameCache>
 #include <MessageViewer/HtmlWriter>
+#include <MessageViewer/MessagePartRendererManager>
 
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
+
+#include <prison/Prison>
 
 #include <QGuiApplication>
 #include <QMetaProperty>
@@ -79,7 +83,6 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         return false;
     }
 
-    qCDebug(SEMANTIC_LOG) << "========================================= Semantic Rendering";
     const auto node = mpList->subParts().at(0)->content();
     const auto nodeHelper = msgPart->nodeHelper();
     if (!nodeHelper || !node) {
@@ -91,13 +94,45 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         return false;
     }
 
+    const auto dir = nodeHelper->createTempDir(QStringLiteral("semantic"));
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
-    c.insert(QStringLiteral("data"), QVariant::fromValue(memento->data()));
 
     const auto pal = qGuiApp->palette();
     QVariantMap style;
     style.insert(QStringLiteral("frameColor"), pal.link().color().name());
+    style.insert(QStringLiteral("expandIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png")));
+    style.insert(QStringLiteral("collapseIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
     c.insert(QStringLiteral("style"), style);
+
+    // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
+    QVariantList elems;
+    elems.reserve(memento->data().size());
+    for (int i = 0; i < memento->data().size(); ++i) {
+        const auto res = memento->data().at(i);
+        QVariantMap data;
+        data.insert(QStringLiteral("reservation"), res);
+
+        QVariantMap state;
+        state.insert(QStringLiteral("expanded"), memento->expanded().at(i));
+        data.insert(QStringLiteral("state"), state);
+
+        // generate ticket barcodes
+        const auto ticket = JsonLdDocument::readProperty(res, "reservedTicket");
+        const auto ticketToken = JsonLdDocument::readProperty(ticket, "ticketToken").toString();
+        if (ticketToken.startsWith(QLatin1String("azteccode:"), Qt::CaseInsensitive)) {
+            std::unique_ptr<Prison::AbstractBarcode> barcode(Prison::createBarcode(Prison::Aztec));
+            barcode->setData(ticketToken.mid(10));
+            barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
+            const auto img = barcode->toImage(barcode->minimumSize());
+            const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+            img.save(fileName);
+            data.insert(QStringLiteral("ticketToken"), fileName);
+            nodeHelper->addTempFile(fileName);
+        }
+
+        elems.push_back(data);
+    }
+    c.insert(QStringLiteral("data"), elems);
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/semantic/semantic.html"));
     Grantlee::OutputStream s(htmlWriter->stream());
