@@ -65,7 +65,7 @@ using DateTimeRange = QPair<QDateTime, QDateTime>;
 
 void EventDataVisitorTest::initTestCase()
 {
-    setenv("TZ", "Europe/Berlin", 1);
+    qputenv("TZ", "Europe/Berlin");
 }
 
 void EventDataVisitorTest::testGenerateUID_data()
