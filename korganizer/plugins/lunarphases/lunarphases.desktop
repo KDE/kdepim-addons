@@ -1,0 +1,8 @@
+[Desktop Entry]
+X-KDE-Library=korg_lunarphases
+Name=Lunar Phases Plugin for Calendars
+Comment=This plugin shows the day's lunar phase (New, First, Last, Full)
+Type=Service
+X-KDE-ServiceTypes=Calendar/Plugin,Calendar/Decoration
+X-KDE-KOrganizer-HasSettings=false
+X-KDE-PluginInterfaceVersion=2

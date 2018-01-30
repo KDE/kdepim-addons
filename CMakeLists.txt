@@ -3,8 +3,8 @@ cmake_minimum_required(VERSION 3.1)
 set(PIM_VERSION "5.7.40")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
-if (POLICY CMP0063)
-    cmake_policy(SET CMP0063 NEW)
+if(POLICY CMP0063)
+  cmake_policy(SET CMP0063 NEW)
 endif()
 
 set(KF5_VERSION "5.42.0")
@@ -17,7 +17,7 @@ set(KDEPIM_DEV_VERSION alpha)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
-    set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
+  set(KDEPIM_DEV_VERSION " ${KDEPIM_DEV_VERSION}")
 endif()
 
 set(KDEPIMADDONS_VERSION_NUMBER ${PIM_VERSION})
@@ -41,7 +41,6 @@ include(CheckFunctionExists)
 include(ECMGeneratePriFile)
 include(ECMCoverageOption)
 
-
 include(KDEInstallDirs)
 include(KDECMakeSettings)
 include(KDECompilerSettings NO_POLICY_SCOPE)
@@ -51,7 +50,6 @@ include(ECMQtDeclareLoggingCategory)
 option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications." TRUE)
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
-
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
 
@@ -66,7 +64,7 @@ find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Parts ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Prison ${KF5_VERSION} CONFIG REQUIRED)
-
+find_package(KF5Holidays ${KF5_VERSION} CONFIG REQUIRED)
 
 set(MAILCOMMON_LIB_VERSION "5.7.40")
 set(GRAVATAR_LIB_VERSION "5.7.40")
@@ -90,7 +88,6 @@ set(KMAILTRANSPORT_LIB_VERSION "5.7.40")
 set(AKONADICONTACT_LIB_VERSION "5.7.40")
 set(IMPORTWIZARD_LIB_VERSION "5.7.40")
 set(MAILIMPORTER_LIB_VERSION "5.7.40")
-
 
 find_package(KF5CalendarUtils ${CALENDAR_UTILS_VERSION} CONFIG REQUIRED)
 find_package(KF5WebEngineViewer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
@@ -121,27 +118,27 @@ find_package(KF5MailTransportAkonadi ${KMAILTRANSPORT_LIB_VERSION} CONFIG REQUIR
 find_package(KF5AkonadiContact ${AKONADICONTACT_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimImportWizard ${IMPORTWIZARD_LIB_VERSION} CONFIG)
 find_package(KF5MailImporterAkonadi ${MAILIMPORTER_LIB_VERSION} CONFIG REQUIRED)
-add_definitions( -DQT_NO_CAST_FROM_ASCII )
-add_definitions( -DQT_NO_CAST_TO_ASCII )
+add_definitions(-DQT_NO_CAST_FROM_ASCII)
+add_definitions(-DQT_NO_CAST_TO_ASCII)
 add_definitions(-DQT_NO_NARROWING_CONVERSIONS_IN_CONNECT)
 add_definitions(-DQT_NO_URL_CAST_FROM_STRING)
 
 if(KDEPIM_ENTERPRISE_BUILD)
-    set(KDEPIM_ENTERPRISE_BUILD true)
+  set(KDEPIM_ENTERPRISE_BUILD true)
 else()
-    set(KDEPIM_ENTERPRISE_BUILD false)
+  set(KDEPIM_ENTERPRISE_BUILD false)
 endif()
 
 # Extra package
 find_package(Gpgmepp 1.8.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "http://www.gnupg.org" TYPE REQUIRED)
-set( SharedMimeInfo_MINIMUM_VERSION "1.0" )
+set(SharedMimeInfo_MINIMUM_VERSION "1.0")
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 find_package(Poppler COMPONENTS Qt5)
 set_package_properties("Poppler" PROPERTIES TYPE OPTIONAL PURPOSE "Support for PDF booking confirmations in the semantic extraction plugin.")
 
-if (KDEPIMADDONS_BUILD_EXAMPLES)
-    add_subdirectory(examples)
+if(KDEPIMADDONS_BUILD_EXAMPLES)
+  add_subdirectory(examples)
 endif()
 
 add_subdirectory(plugins)
@@ -151,9 +148,9 @@ add_subdirectory(kaddressbook)
 add_subdirectory(akregator)
 add_subdirectory(sieveeditor)
 add_subdirectory(kmailtransport)
-if (KPimImportWizard_FOUND)
-   add_subdirectory(akonadi-import-wizard)
+if(KPimImportWizard_FOUND)
+  add_subdirectory(akonadi-import-wizard)
 endif()
 
-install( FILES kdepim-addons.categories kdepim-addons.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR} )
+install(FILES kdepim-addons.categories kdepim-addons.renamecategories DESTINATION ${KDE_INSTALL_CONFDIR})
 feature_summary(WHAT ALL FATAL_ON_MISSING_REQUIRED_PACKAGES)
