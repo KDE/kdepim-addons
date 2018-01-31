@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to insert a templace command in composer.",
+        "EnabledByDefault": "true",
+        "Id": "kmailinserttemplatecommand",
+        "Name": "Insert Template Command",
+        "ServiceTypes": [
+            "KMailEditor/Plugin"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-KMailEditor-Order": "2"
+}
