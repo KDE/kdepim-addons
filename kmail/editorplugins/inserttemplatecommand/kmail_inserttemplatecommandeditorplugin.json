@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to insert a templace command in composer.",
+        "Description": "This plugin allows you to insert a template command in composer.",
         "EnabledByDefault": "true",
         "Id": "kmailinserttemplatecommand",
         "Name": "Insert Template Command",
