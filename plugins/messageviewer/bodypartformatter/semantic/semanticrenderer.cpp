@@ -119,9 +119,15 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         // generate ticket barcodes
         const auto ticket = JsonLdDocument::readProperty(res, "reservedTicket");
         const auto ticketToken = JsonLdDocument::readProperty(ticket, "ticketToken").toString();
+        std::unique_ptr<Prison::AbstractBarcode> barcode;
         if (ticketToken.startsWith(QLatin1String("azteccode:"), Qt::CaseInsensitive)) {
-            std::unique_ptr<Prison::AbstractBarcode> barcode(Prison::createBarcode(Prison::Aztec));
+            barcode.reset(Prison::createBarcode(Prison::Aztec));
             barcode->setData(ticketToken.mid(10));
+        } else if (ticketToken.startsWith(QLatin1String("qrcode:"), Qt::CaseInsensitive)) {
+            barcode.reset(Prison::createBarcode(Prison::QRCode));
+            barcode->setData(ticketToken.mid(7));
+        }
+        if (barcode) {
             barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
             const auto img = barcode->toImage(barcode->minimumSize());
             const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
