@@ -49,8 +49,3 @@ void InsertTemplateCommandPluginEditorInterface::slotActivated()
 void InsertTemplateCommandPluginEditorInterface::exec()
 {
 }
-
-void InsertTemplateCommandPluginEditorInterface::charSelected(QChar c)
-{
-    richTextEditor()->insertPlainText(c);
-}
