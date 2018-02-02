@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to log KMail activities.",
+        "Description[ar]": "تتيح لك هذه الملحقة تسجيل أنشطة «بريدك».",
         "Description[ca@valencia]": "Este connector permet gravar les activitats del KMail.",
         "Description[ca]": "Aquest connector permet enregistrar les activitats del KMail.",
         "Description[de]": "Mit diesem Modul können Sie KMail-Aktivitäten protokollieren.",
@@ -27,6 +28,7 @@
         "EnabledByDefault": "false",
         "Id": "kmaillogactivities",
         "Name": "Log Activities",
+        "Name[ar]": "تسجيل الأنشطة",
         "Name[ca@valencia]": "Registra les activitats",
         "Name[ca]": "Registra les activitats",
         "Name[cs]": "Zaznamenávat aktivity",

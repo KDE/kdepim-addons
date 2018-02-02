@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "addresslocationeditorplugin",
         "Name": "RegexpEditorLineEdit",
+        "Name[ar]": "محرّر النّصوص الخطّيّة بالتّعبير النّمطيّة",
         "Name[ca@valencia]": "EditaLíniaEditorExpReg",
         "Name[ca]": "EditaLíniaEditorExpReg",
         "Name[fr]": "Ligne de saisie de l'éditeur d'expression rationnelle",

@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "thebatimporter",
         "Name": "TheBat Importer",
+        "Name[ar]": "مستورد TheBat",
         "Name[ca@valencia]": "Importador del TheBat",
         "Name[ca]": "Importador del TheBat",
         "Name[cs]": "Importér TheBat",

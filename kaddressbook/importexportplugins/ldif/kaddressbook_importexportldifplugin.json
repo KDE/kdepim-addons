@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import/export LDIF.",
+        "Description[ar]": "تتيح لك هذه الملحقة استيراد وتصدير LDIF.",
         "Description[ca@valencia]": "Este connector permet importar o exportar els LDIF.",
         "Description[ca]": "Aquest connector permet importar o exportar els LDIF.",
         "Description[cs]": "Tento modul umožňuje import/export LDIF.",
@@ -29,6 +30,7 @@
         "EnabledByDefault": "false",
         "Id": "kaddressbookimportexportldif",
         "Name": "Import/Export LDIF",
+        "Name[ar]": "استيراد/تصدير LDIF",
         "Name[ca@valencia]": "Importa/exporta el LDIF",
         "Name[ca]": "Importa/exporta el LDIF",
         "Name[cs]": "Importovat/Exportovat LDIF",

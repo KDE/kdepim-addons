@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to send vCard from selected contacts.",
+        "Description[ar]": "تتيح لك هذه الملحقة إرسال vCard من المتراسلين المحدّدين.",
         "Description[ca@valencia]": "Este connector permet enviar les vCard dels contactes seleccionats.",
         "Description[ca]": "Aquest connector permet enviar les vCard dels contactes seleccionats.",
         "Description[de]": "Mit diesem Modul können Sie vCards ausgewählter Kontakte senden.",
@@ -28,6 +29,7 @@
         "EnabledByDefault": "true",
         "Id": "kaddressbooksendvcards",
         "Name": "Send vCards",
+        "Name[ar]": "إرسال بطاقات vCar",
         "Name[ca@valencia]": "Envia unes quantes vCard",
         "Name[ca]": "Envia unes quantes vCard",
         "Name[cs]": "Poslat vizitky",

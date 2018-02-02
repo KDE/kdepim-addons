@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin shows you all mail header.",
+        "Description[ar]": "تعرض لك هذه الملحقة كلّ ترويسات البريد.",
         "Description[ca@valencia]": "Este connector mostra totes les capçaleres del correu.",
         "Description[ca]": "Aquest connector mostra totes les capçaleres del correu.",
         "Description[de]": "Dieses Modul zeigt alle Vorspannfelder der E-Mail.",
@@ -27,6 +28,7 @@
         "Description[zh_CN]": "此插件为您呈现所有邮件头部。",
         "EnabledByDefault": "false",
         "Name": "All Header Style",
+        "Name[ar]": "كلّ أنماط التّرويسات",
         "Name[ca@valencia]": "Tots els estils de capçalera",
         "Name[ca]": "Tots els estils de capçalera",
         "Name[de]": "Vorspann-Design „Alles“",

@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin reduces mail header to strict minimum.",
+        "Description[ar]": "تقلّل هذه الملحقة ترويسة البريد لتكون بأقلّ قدر ممكن.",
         "Description[ca@valencia]": "Este connector redueix la capçalera del correu al mínim estricte.",
         "Description[ca]": "Aquest connector redueix la capçalera del correu al mínim estricte.",
         "Description[es]": "Este complemento reduce el encabezado del mensaje al mínimo estricto.",
@@ -26,6 +27,7 @@
         "Description[zh_CN]": "此插件将邮件头部精简到最小。",
         "EnabledByDefault": "true",
         "Name": "Brief Header Style",
+        "Name[ar]": "نمط التّرويسات مختصر",
         "Name[ca@valencia]": "Estil de capçalera breu",
         "Name[ca]": "Estil de capçalera breu",
         "Name[de]": "Vorspann-Design „Kurz“",

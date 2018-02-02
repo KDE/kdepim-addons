@@ -17,6 +17,7 @@ X-KDE-PluginInfo-EnabledByDefault=true
 X-KDE-PluginInfo-AllowEmptySettings=true
 
 Comment=Coisceim Plugin
+Comment[ar]=ملحقة ”خطوة“
 Comment[ca]=Connector del Coisceim
 Comment[ca@valencia]=Connector del Coisceim
 Comment[da]=Coisceim-plugin
@@ -49,6 +50,7 @@ Comment[uk]=Додаток Coisceim
 Comment[x-test]=xxCoisceim Pluginxx
 Comment[zh_CN]=Coisceim 插件
 Name=Trips
+Name[ar]=الرّحلات
 Name[ca]=Viatges
 Name[ca@valencia]=Viatges
 Name[da]=Trips

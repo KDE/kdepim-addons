@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure Anti Spam in KMail.",
+        "Description[ar]": "تتيح لك هذه الملحقة ضبط مضادّ السّخام في «بريدك».",
         "Description[ca@valencia]": "Este connector permet comprovar el correu brossa en el KMail.",
         "Description[ca]": "Aquest connector permet comprovar el correu brossa en el KMail.",
         "Description[de]": "Mit diesem Modul können Sie die Anti-Spam-Funktion in KMail einrichten.",
@@ -28,6 +29,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailantispam",
         "Name": "Antispam",
+        "Name[ar]": "مضاد السّخام",
         "Name[ca@valencia]": "Contra el correu brossa",
         "Name[ca]": "Contra el correu brossa",
         "Name[de]": "Anti-Spam",

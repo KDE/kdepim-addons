@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "oeimporter",
         "Name": "OE Importer",
+        "Name[ar]": "مستورد OE",
         "Name[ca@valencia]": "Importador de l'OE",
         "Name[ca]": "Importador de l'OE",
         "Name[cs]": "Importér OE",

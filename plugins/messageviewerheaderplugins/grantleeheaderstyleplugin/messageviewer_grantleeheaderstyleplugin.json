@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to use a Grantlee-based mail header style.",
+        "Description[ar]": "تتيح لك هذه الملحقة استخدام نمط ترويسات بريد مبنيّ على «غرانتلي».",
         "Description[ca@valencia]": "Este connector permet usar un estil de capçalera de correu basat en el «Grantlee».",
         "Description[ca]": "Aquest connector permet usar un estil de capçalera de correu basat en el «Grantlee».",
         "Description[de]": "Mit diesem Modul können Sie ein Vorspann-Design auf der Grundlage von „Grantlee“ verwenden.",
@@ -27,6 +28,7 @@
         "Description[zh_CN]": "此插件允许您使用基于 Grantlee 的邮件头部样式。",
         "EnabledByDefault": "true",
         "Name": "Grantlee Header Style",
+        "Name[ar]": "نمط ترويسات «غرانتلي»",
         "Name[ca@valencia]": "Estil de capçalera «Grantlee»",
         "Name[ca]": "Estil de capçalera «Grantlee»",
         "Name[de]": "Vorspann-Design „Grantlee“",

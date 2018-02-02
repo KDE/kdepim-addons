@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "templateparseremailaddressrequesterakonadi",
         "Name": "Email Address Requester for Templateparser",
+        "Name[ar]": "أداة طلب عنوان البريد لِ‍«محلّل القوالب»",
         "Name[ca@valencia]": "Adreça de correu electrònic requerida per «Templateparser»",
         "Name[ca]": "Adreça de correu electrònic requerida per «Templateparser»",
         "Name[es]": "Peticionario de dirección de correo para Templateparser",

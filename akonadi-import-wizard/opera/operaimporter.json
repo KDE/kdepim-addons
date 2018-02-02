@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "operaimporter",
         "Name": "Opera Importer",
+        "Name[ar]": "مستورد «أوپرا»",
         "Name[ca@valencia]": "Importador de l'Opera",
         "Name[ca]": "Importador de l'Opera",
         "Name[cs]": "Importér Opera",

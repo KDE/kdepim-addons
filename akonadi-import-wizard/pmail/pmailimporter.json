@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "pmailimporter",
         "Name": "PMail Importer",
+        "Name[ar]": "مستورد PMail",
         "Name[ca@valencia]": "Importador del PMail",
         "Name[ca]": "Importador del PMail",
         "Name[cs]": "Importér PMail",

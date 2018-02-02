@@ -2,6 +2,7 @@
     "KPlugin": {
         "Id": "mailappimporter",
         "Name": "MailApp Importer",
+        "Name[ar]": "مستورد MailApp",
         "Name[ca@valencia]": "Importador del MailApp",
         "Name[ca]": "Importador del MailApp",
         "Name[cs]": "Importér MailApp",

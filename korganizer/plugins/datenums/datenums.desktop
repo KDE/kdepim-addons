@@ -1,6 +1,7 @@
 [Desktop Entry]
 X-KDE-Library=korg_datenums
 Name=Date Numbers Plugin for Calendars
+Name[ar]=ملحقة ترقيم الأيّام للتّقاويم
 Name[ca]=Connector de números de data pels calendaris
 Name[ca@valencia]=Connector de números de data pels calendaris
 Name[cs]=Modul pro očíslování dat v kalendáři
@@ -35,6 +36,7 @@ Name[uk]=Додаток дат для календарів
 Name[x-test]=xxDate Numbers Plugin for Calendarsxx
 Name[zh_CN]=日历的日期数字插件
 Comment=For each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.
+Comment[ar]=تعرض هذه الملحقة لكلّ يوم رقمه من السّنة أعلى منظور جدول الأعمال. أي مثلًا الأوّل من فبراير هو اليوم ال‍ ٣٢ من السّنة.
 Comment[ca]=Per a cada dia, aquest connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de Febrer serà el dia 32 de l'any.
 Comment[ca@valencia]=Per a cada dia, este connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de Febrer serà el dia 32 de l'any.
 Comment[cs]=tento modul pro každý den zobrazuje pořadí dne v roce na vrcholu pohledu. Např. 1. únor je 32 druhý den v roce.

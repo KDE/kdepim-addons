@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to block advertising.",
+        "Description[ar]": "تتيح لك هذه الملحقة حجب الإعلانات.",
         "Description[ca@valencia]": "Este connector permet bloquejar la publicitat.",
         "Description[ca]": "Aquest connector permet bloquejar la publicitat.",
         "Description[cs]": "Tento modul umožňuje blokovat reklamy.",
@@ -25,6 +26,7 @@
         "EnabledByDefault": "false",
         "Id": "messagevieweradblockplugin",
         "Name": "Adblock",
+        "Name[ar]": "حاجب الإعلانات",
         "Name[es]": "AdBlock",
         "Name[et]": "AdBlock",
         "Name[fi]": "Mainosesto",

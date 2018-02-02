@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to search duplicate contacts.",
+        "Description[ar]": "تتيح لك هذه الملحقة البحث عن المتراسلين المتكرّرين.",
         "Description[ca@valencia]": "Este connector permet buscar contactes duplicats.",
         "Description[ca]": "Aquest connector permet cercar contactes duplicats.",
         "Description[cs]": "Tento modul umožňuje hledat duplicitní kontakt.",
@@ -29,6 +30,7 @@
         "EnabledByDefault": "true",
         "Id": "kaddressbooksearchduplicatecontacts",
         "Name": "Search Duplicate Contacts",
+        "Name[ar]": "البحث عن المتراسلين المتكرّرين",
         "Name[ca@valencia]": "Busca els contactes duplicats",
         "Name[ca]": "Cerca els contactes duplicats",
         "Name[cs]": "Hledat duplicitní kontakty",

@@ -1,5 +1,6 @@
 [Desktop Entry]
 Name=akonadimailreader
+Name[ar]=قارئ «أكونادي» للبريد
 Name[ca]=akonadimailreader
 Name[ca@valencia]=akonadimailreader
 Name[cs]=akonadimailreader
@@ -33,6 +34,7 @@ Icon=mailreader
 Type=Application
 X-DocPath=mailreader/index.html
 GenericName=A simple Akonadi-based Mail Application
+GenericName[ar]=تطبيق بريد بسيط مبنيّ على «أكونادي»
 GenericName[ca]=Una senzilla aplicació de correu basada en Akonadi
 GenericName[ca@valencia]=Una senzilla aplicació de correu basada en Akonadi
 GenericName[de]=Ein einfaches E-Mail-Programm auf der Grundlage von Akonadi

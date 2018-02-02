@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to create a todo from a message.",
+        "Description[ar]": "تتيح لك هذه الملحقة إنشاء مهمّة من رسالة ما.",
         "Description[ca@valencia]": "Este connector permet crear una tasca pendent a partir d'un missatge.",
         "Description[ca]": "Aquest connector permet crear una tasca pendent a partir d'un missatge.",
         "Description[de]": "Mit diesem Modul können Sie eine Aufgabe aus einer Nachricht erstellen.",
@@ -28,6 +29,7 @@
         "EnabledByDefault": "false",
         "Id": "messageviewercreatetodoplugin",
         "Name": "Create Todo",
+        "Name[ar]": "إنشاء المهامّ",
         "Name[ca@valencia]": "Crea una pendent",
         "Name[ca]": "Crea una pendent",
         "Name[cs]": "Vytvořit úkol",

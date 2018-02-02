@@ -4,6 +4,11 @@
         "EnabledByDefault": "true",
         "Id": "kmailinserttemplatecommand",
         "Name": "Insert Template Command",
+        "Name[ca]": "Insereix ordre de plantilla",
+        "Name[pt]": "Inserir um Modelo de Comando",
+        "Name[sv]": "Infoga mallkommando",
+        "Name[uk]": "Вставлення шаблонної команди",
+        "Name[x-test]": "xxInsert Template Commandxx",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],

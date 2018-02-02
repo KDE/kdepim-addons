@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin adds support for \"do not track\".",
+        "Description[ar]": "تُضيف هذه الملحقة دعم ”عدم التّعقّب“.",
         "Description[ca@valencia]": "Este connector afig suport per a «no vull ser seguit».",
         "Description[ca]": "Aquest connector afegeix suport per a «no vull ser seguit».",
         "Description[es]": "Este complemento añade apoyo de «no seguir».",
@@ -27,6 +28,7 @@
         "EnabledByDefault": "true",
         "Id": "messageviewerdonottrackplugin",
         "Name": "Do Not Track",
+        "Name[ar]": "عدم التّعقّب",
         "Name[ca@valencia]": "No deixis rastre",
         "Name[ca]": "No deixis rastre",
         "Name[cs]": "Nesledovat",
