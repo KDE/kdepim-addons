@@ -34,10 +34,11 @@ InsertTemplateCommandPluginEditorInterface::~InsertTemplateCommandPluginEditorIn
 
 void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Insert Special Character..."), this);
-    ac->addAction(QStringLiteral("insert_special_character"), action);
+    //ADD template button
+    QAction *action = new QAction(i18n("Insert Template Command..."), this);
+    ac->addAction(QStringLiteral("insert_template_command"), action);
     connect(action, &QAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
+    MessageComposer::ActionType type(action, MessageComposer::ActionType::ToolBar);
     setActionType(type);
 }
 

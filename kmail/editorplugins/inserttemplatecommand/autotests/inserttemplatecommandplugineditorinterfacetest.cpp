@@ -37,7 +37,7 @@ void InsertTemplateCommandPluginEditorInterfaceTest::shouldHaveDefaultValue()
     interface.createAction(new KActionCollection(this));
     MessageComposer::ActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
+    QCOMPARE(type.type(), MessageComposer::ActionType::ToolBar);
 }
 
 QTEST_MAIN(InsertTemplateCommandPluginEditorInterfaceTest)
