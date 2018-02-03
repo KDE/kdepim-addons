@@ -63,8 +63,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     }
 
     QString imgpath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("libmessageviewer/pics/"), QStandardPaths::LocateDirectory));
-    imgpath.prepend(QStringLiteral("file:///"));
-    imgpath.append(QStringLiteral("enterprise_"));
+    imgpath.prepend(QLatin1String("file:///"));
+    imgpath.append(QLatin1String("enterprise_"));
     const QString borderSettings(QStringLiteral(" padding-top: 0px; padding-bottom: 0px; border-width: 0px "));
     QString headerStr;
 
