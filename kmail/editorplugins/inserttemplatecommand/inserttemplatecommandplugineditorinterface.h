@@ -21,7 +21,9 @@
 #define INSERTTEMPLATECOMMANDPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-
+namespace TemplateParser {
+class TemplatesInsertCommandAction;
+}
 class InsertTemplateCommandPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -35,8 +37,10 @@ public:
 private:
     void slotInsertCommand(const QString &cmd, int adjustCursor);
     void slotActivated();
+    void slotOpenMenu();
     QString mCommand;
     int mAdjustCursor = 0;
+    TemplateParser::TemplatesInsertCommandAction *mCommandAction = nullptr;
 };
 
 #endif

@@ -23,6 +23,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QMenu>
 
 InsertTemplateCommandPluginEditorInterface::InsertTemplateCommandPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -35,17 +36,23 @@ InsertTemplateCommandPluginEditorInterface::~InsertTemplateCommandPluginEditorIn
 
 void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    TemplateParser::TemplatesInsertCommandAction *action = new TemplateParser::TemplatesInsertCommandAction(this);
-    action->setText(i18n("Insert Template Command..."));
-    ac->addAction(QStringLiteral("insert_template_command"), action);
-    connect(action, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::ToolBar);
+    mCommandAction = new TemplateParser::TemplatesInsertCommandAction(this);
+    mCommandAction->setText(i18n("Insert Template Command..."));
+    ac->addAction(QStringLiteral("insert_template_command"), mCommandAction);
+    connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotOpenMenu);
+    connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
+    MessageComposer::ActionType type(mCommandAction, MessageComposer::ActionType::ToolBar);
     setActionType(type);
 }
 
 void InsertTemplateCommandPluginEditorInterface::slotActivated()
 {
     Q_EMIT emitPluginActivated(this);
+}
+
+void InsertTemplateCommandPluginEditorInterface::slotOpenMenu()
+{
+    mCommandAction->menu()->exec(QCursor::pos());
 }
 
 void InsertTemplateCommandPluginEditorInterface::exec()
