@@ -19,6 +19,7 @@
 
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
+#include <TemplateParser/TemplatesInsertCommand>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
