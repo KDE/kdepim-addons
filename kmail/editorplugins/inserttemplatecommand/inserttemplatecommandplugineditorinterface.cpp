@@ -19,7 +19,7 @@
 
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
-#include <TemplateParser/TemplatesInsertCommand>
+#include <TemplateParser/TemplatesInsertCommandAction>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -36,7 +36,8 @@ InsertTemplateCommandPluginEditorInterface::~InsertTemplateCommandPluginEditorIn
 void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection *ac)
 {
     //ADD template button
-    QAction *action = new QAction(i18n("Insert Template Command..."), this);
+    TemplateParser::TemplatesInsertCommandAction *action = new TemplateParser::TemplatesInsertCommandAction(this);
+    action->setText(i18n("Insert Template Command..."));
     ac->addAction(QStringLiteral("insert_template_command"), action);
     connect(action, &QAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotActivated);
     MessageComposer::ActionType type(action, MessageComposer::ActionType::ToolBar);
