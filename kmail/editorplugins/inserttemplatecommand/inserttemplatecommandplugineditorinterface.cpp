@@ -35,7 +35,6 @@ InsertTemplateCommandPluginEditorInterface::~InsertTemplateCommandPluginEditorIn
 
 void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    //ADD template button
     TemplateParser::TemplatesInsertCommandAction *action = new TemplateParser::TemplatesInsertCommandAction(this);
     action->setText(i18n("Insert Template Command..."));
     ac->addAction(QStringLiteral("insert_template_command"), action);
