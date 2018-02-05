@@ -38,7 +38,7 @@ void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection 
     TemplateParser::TemplatesInsertCommandAction *action = new TemplateParser::TemplatesInsertCommandAction(this);
     action->setText(i18n("Insert Template Command..."));
     ac->addAction(QStringLiteral("insert_template_command"), action);
-    connect(action, &QAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotActivated);
+    connect(action, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
     MessageComposer::ActionType type(action, MessageComposer::ActionType::ToolBar);
     setActionType(type);
 }
@@ -50,4 +50,20 @@ void InsertTemplateCommandPluginEditorInterface::slotActivated()
 
 void InsertTemplateCommandPluginEditorInterface::exec()
 {
+    if (!mCommand.isEmpty()) {
+        QTextCursor cursor = richTextEditor()->textCursor();
+        cursor.insertText(mCommand);
+        cursor.setPosition(cursor.position() + mAdjustCursor);
+        richTextEditor()->setTextCursor(cursor);
+        richTextEditor()->setFocus();
+    }
+}
+
+void InsertTemplateCommandPluginEditorInterface::slotInsertCommand(const QString &cmd, int adjustCursor)
+{
+    if (!cmd.isEmpty()) {
+        mCommand = cmd;
+        mAdjustCursor = adjustCursor;
+        slotActivated();
+    }
 }

@@ -33,7 +33,10 @@ public:
     void exec() override;
 
 private:
+    void slotInsertCommand(const QString &cmd, int adjustCursor);
     void slotActivated();
+    QString mCommand;
+    int mAdjustCursor = 0;
 };
 
 #endif
