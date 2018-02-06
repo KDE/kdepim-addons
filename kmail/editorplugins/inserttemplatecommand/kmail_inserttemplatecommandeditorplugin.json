@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to insert a template command in composer.",
+        "Description[ca@valencia]": "Este connector permet inserir una orde de plantilla a l'editor.",
         "Description[ca]": "Aquest connector permet inserir una ordre de plantilla a l'editor.",
         "Description[nl]": "Deze plug-in stelt u in staat een sjablooncommando in de opsteller in te voegen.",
         "Description[pt]": "Este 'plugin' permite-lhe inserir um comando-modelo no compositor.",
@@ -10,6 +11,7 @@
         "EnabledByDefault": "true",
         "Id": "kmailinserttemplatecommand",
         "Name": "Insert Template Command",
+        "Name[ca@valencia]": "Insereix orde de plantilla",
         "Name[ca]": "Insereix ordre de plantilla",
         "Name[nl]": "Sjablooncommando invoegen",
         "Name[pt]": "Inserir um Modelo de Comando",
