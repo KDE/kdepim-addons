@@ -19,12 +19,13 @@
 
 #include "addresslocationeditorplugin.h"
 #include <kpluginfactory.h>
+#include "kcoreaddons_kdepim_compat.h"
 #include "addresseditor/addresseslocationwidget.h"
 
 #include <QHBoxLayout>
 
-K_PLUGIN_FACTORY_WITH_JSON(AddressLocationEditorFactory, "addresslocationeditorplugin.json", registerPlugin<AddressLocationEditor>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(AddressLocationEditor, "addresslocationeditorplugin.json")
+
 
 AddressLocationEditor::AddressLocationEditor(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::AbstractAddressLocationWidget(parent)

@@ -22,13 +22,12 @@
 #include "operasettings.h"
 #include "mailimporter/filteropera.h"
 #include "mailimporter/filterinfo.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(OperaImporterFactory, "operaimporter.json", registerPlugin<OperaImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(OperaImportData, "operaimporter.json")
 
 OperaImportData::OperaImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

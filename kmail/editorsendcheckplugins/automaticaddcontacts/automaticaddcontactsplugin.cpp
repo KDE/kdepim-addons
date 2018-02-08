@@ -21,13 +21,11 @@
 #include "automaticaddcontactsinterface.h"
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguredialog.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <QPointer>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_automaticaddcontactsplugin.json", registerPlugin<AutomaticAddContactsPlugin>();
-                           )
-
+K_PLUGIN_CLASS_WITH_JSON(AutomaticAddContactsPlugin, "kmail_automaticaddcontactsplugin.json")
 AutomaticAddContactsPlugin::AutomaticAddContactsPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)
 {

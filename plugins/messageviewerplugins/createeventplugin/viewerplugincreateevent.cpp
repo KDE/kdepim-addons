@@ -21,10 +21,9 @@
 #include "viewerplugincreateeventinterface.h"
 #include <KActionCollection>
 #include <kpluginfactory.h>
-
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreateeventFactory, "messageviewer_createeventplugin.json", registerPlugin<ViewerPluginCreateevent>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreateevent, "messageviewer_createeventplugin.json")
 
 ViewerPluginCreateevent::ViewerPluginCreateevent(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)

@@ -20,9 +20,8 @@
 #include "changecaseplugineditor.h"
 #include "changecaseplugineditorinterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_changecaseeditorplugin.json", registerPlugin<ChangeCasePluginEditor>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(ChangeCasePluginEditor, "kmail_changecaseeditorplugin.json")
 
 ChangeCasePluginEditor::ChangeCasePluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)

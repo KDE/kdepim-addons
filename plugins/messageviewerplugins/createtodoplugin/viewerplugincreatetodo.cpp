@@ -21,10 +21,9 @@
 #include "viewerplugincreatetodointerface.h"
 #include <KActionCollection>
 #include <kpluginfactory.h>
-
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginCreatetodoFactory, "messageviewer_createtodoplugin.json", registerPlugin<ViewerPluginCreatetodo>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreatetodo, "messageviewer_createtodoplugin.json")
 
 ViewerPluginCreatetodo::ViewerPluginCreatetodo(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)

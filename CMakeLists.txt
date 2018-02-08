@@ -140,6 +140,8 @@ set_package_properties("Poppler" PROPERTIES TYPE OPTIONAL PURPOSE "Support for P
 if(KDEPIMADDONS_BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()
+include_directories(${CMAKE_CURRENT_SOURCE_DIR})
+
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)

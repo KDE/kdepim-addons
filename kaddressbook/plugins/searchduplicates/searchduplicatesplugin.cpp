@@ -20,9 +20,8 @@
 #include "searchduplicatesplugin.h"
 #include "searchduplicatesplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(MergeContactsPluginFactory, "kaddressbook_searchduplicatesplugin.json", registerPlugin<SearchDuplicatesPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(SearchDuplicatesPlugin, "kaddressbook_searchduplicatesplugin.json")
 
 SearchDuplicatesPlugin::SearchDuplicatesPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)

@@ -22,11 +22,10 @@
 #include "allheaderstyleinterface.h"
 #include "allheaderstrategy.h"
 #include <kpluginfactory.h>
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerAllHeaderStylePluginFactory, "messageviewer_allheaderstyleplugin.json", registerPlugin<AllHeaderStylePlugin>();
-                           )
-
+K_PLUGIN_CLASS_WITH_JSON(AllHeaderStylePlugin, "messageviewer_allheaderstyleplugin.json")
 AllHeaderStylePlugin::AllHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
     : MessageViewer::HeaderStylePlugin(parent)
     , mHeaderStyle(new PlainHeaderStyle)

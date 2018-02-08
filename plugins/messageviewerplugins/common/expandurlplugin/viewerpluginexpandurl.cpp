@@ -21,10 +21,9 @@
 #include "viewerpluginexpandurlinterface.h"
 #include <KActionCollection>
 #include <kpluginfactory.h>
-
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginExpandurlFactory, "messageviewer_expandurlplugin.json", registerPlugin<ViewerPluginExpandurl>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExpandurl, "messageviewer_expandurlplugin.json")
 
 ViewerPluginExpandurl::ViewerPluginExpandurl(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)

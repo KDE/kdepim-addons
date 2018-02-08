@@ -20,9 +20,8 @@
 #include "sendvcardsplugin.h"
 #include "sendvcardsplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(SendVcardsPluginFactory, "kaddressbook_sendvcardsplugin.json", registerPlugin<SendVcardsPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(SendVcardsPlugin, "kaddressbook_sendvcardsplugin.json")
 
 SendVcardsPlugin::SendVcardsPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)

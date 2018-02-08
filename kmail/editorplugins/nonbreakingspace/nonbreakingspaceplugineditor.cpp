@@ -20,9 +20,8 @@
 #include "nonbreakingspaceplugineditor.h"
 #include "nonbreakingspaceplugineditorinterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(NonBreakingSpacePluginEditorFactory, "kmail_nonbreakingspaceeditorplugin.json", registerPlugin<NonBreakingSpacePluginEditor>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(NonBreakingSpacePluginEditor, "kmail_nonbreakingspaceeditorplugin.json")
 
 NonBreakingSpacePluginEditor::NonBreakingSpacePluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)

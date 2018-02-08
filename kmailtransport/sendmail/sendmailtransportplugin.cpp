@@ -23,9 +23,8 @@
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 #include <QPointer>
-
-K_PLUGIN_FACTORY_WITH_JSON(SendMailTransportPluginFactory, "sendmailtransport.json", registerPlugin<SendMailTransportPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(SendMailTransportPlugin, "sendmailtransport.json")
 
 SendMailTransportPlugin::SendMailTransportPlugin(QObject *parent, const QList<QVariant> &)
     : MailTransport::TransportAbstractPlugin(parent)

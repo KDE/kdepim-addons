@@ -21,10 +21,9 @@
 #include <QHBoxLayout>
 #include <Akonadi/Contact/EmailAddressRequester>
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(TemplateParserEmailAddressRequesterAkonadiFactory,
-                           "templateparseremailaddressrequesterakonadi.json", registerPlugin<TemplateParserEmailAddressRequesterAkonadi>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi,
+                           "templateparseremailaddressrequesterakonadi.json")
 
 TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent, const QList<QVariant> &)
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)

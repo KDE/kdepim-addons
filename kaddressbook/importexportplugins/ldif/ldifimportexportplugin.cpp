@@ -20,9 +20,8 @@
 #include "ldifimportexportplugin.h"
 #include "ldifimportexportplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(LDifImportExportPluginFactory, "kaddressbook_importexportldifplugin.json", registerPlugin<LDifImportExportPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(LDifImportExportPlugin, "kaddressbook_importexportldifplugin.json")
 
 LDifImportExportPlugin::LDifImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)

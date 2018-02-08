@@ -22,10 +22,8 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <pimcommon/customtoolswidgetng.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(PimCommonTranslatorPluginFactory, "pimcommon_translatorplugin.json", registerPlugin<TranslatorPlugin>();
-                           )
-
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(TranslatorPlugin, "pimcommon_translatorplugin.json")
 TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)
 {

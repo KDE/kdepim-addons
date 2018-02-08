@@ -20,9 +20,8 @@
 #include "autocorrectionplugineditor.h"
 #include "autocorrectionplugineditorinterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(AutoCorrectionPluginEditorFactory, "kmail_autocorrectioneditorplugin.json", registerPlugin<AutoCorrectionPluginEditor>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(AutoCorrectionPluginEditor, "kmail_autocorrectioneditorplugin.json")
 
 AutoCorrectionPluginEditor::AutoCorrectionPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)

@@ -20,9 +20,8 @@
 #include "gmximportexportplugin.h"
 #include "gmximportexportplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(GMXImportExportPluginFactory, "kaddressbook_importexportgmxplugin.json", registerPlugin<GMXImportExportPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(GMXImportExportPlugin, "kaddressbook_importexportgmxplugin.json")
 
 GMXImportExportPlugin::GMXImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)

@@ -21,12 +21,11 @@
 #include "checkbeforesendinterface.h"
 #include "configurewidget/checkbeforesendconfigurewidget.h"
 #include "configurewidget/checkbeforesendconfiguredialog.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <QPointer>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_checkbeforesendplugin.json", registerPlugin<CheckBeforeSendPlugin>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(CheckBeforeSendPlugin, "kmail_checkbeforesendplugin.json")
 
 CheckBeforeSendPlugin::CheckBeforeSendPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)

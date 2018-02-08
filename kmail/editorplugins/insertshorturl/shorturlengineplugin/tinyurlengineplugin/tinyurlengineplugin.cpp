@@ -20,9 +20,8 @@
 #include "tinyurlengineplugin.h"
 #include "tinyurlengineinterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(TinyUrlEnginePluginFactory, "pimcommon_tinyurlengineplugin.json", registerPlugin<TinyUrlEnginePlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(TinyUrlEnginePlugin, "pimcommon_tinyurlengineplugin.json")
 
 TinyUrlEnginePlugin::TinyUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
     : ShortUrlEnginePlugin(parent)

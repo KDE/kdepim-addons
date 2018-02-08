@@ -20,9 +20,8 @@
 #include "logactivitiesplugin.h"
 #include "logactivitiesplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(KMailAntiSpamPluginFactory, "kmail_logactivitiesplugin.json", registerPlugin<LogActivitiesPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(LogActivitiesPlugin, "kmail_logactivitiesplugin.json")
 
 LogActivitiesPlugin::LogActivitiesPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)

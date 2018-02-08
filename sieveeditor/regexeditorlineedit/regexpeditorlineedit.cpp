@@ -27,11 +27,10 @@
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 #include <QDialog>
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <KTextWidgets/kregexpeditorinterface.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(RegexpEditorLineEditFactory, "regexepeditorlineedit.json", registerPlugin<RegexpEditorLineEdit>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")
 struct InfoRegExp
 {
     InfoRegExp()

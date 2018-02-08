@@ -20,8 +20,8 @@
 #include "checkgravatarplugin.h"
 #include "checkgravatarplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(CheckGravatarPluginFactory, "kaddressbook_checkgravatarplugin.json", registerPlugin<CheckGravatarPlugin>();
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(CheckGravatarPlugin, "kaddressbook_checkgravatarplugin.json"
                            )
 
 CheckGravatarPlugin::CheckGravatarPlugin(QObject *parent, const QList<QVariant> &)

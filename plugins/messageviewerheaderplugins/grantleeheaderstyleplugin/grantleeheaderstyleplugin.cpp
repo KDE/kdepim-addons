@@ -21,11 +21,11 @@
 #include "grantleeheaderstyleplugin.h"
 #include <messageviewer/grantleeheaderstyle.h>
 #include "grantleeheaderstrategy.h"
+#include "kcoreaddons_kdepim_compat.h"
 #include <kpluginfactory.h>
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerGrantleeHeaderStylePluginFactory, "messageviewer_grantleeheaderstyleplugin.json", registerPlugin<GrantleeHeaderStylePlugin>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(GrantleeHeaderStylePlugin, "messageviewer_grantleeheaderstyleplugin.json")
 
 GrantleeHeaderStylePlugin::GrantleeHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
     : MessageViewer::HeaderStylePlugin(parent)

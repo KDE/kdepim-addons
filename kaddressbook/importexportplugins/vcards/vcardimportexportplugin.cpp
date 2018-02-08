@@ -20,9 +20,8 @@
 #include "vcardimportexportplugin.h"
 #include "vcardimportexportplugininterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(VCardImportExportPluginFactory, "kaddressbook_importexportvcardplugin.json", registerPlugin<VCardImportExportPlugin>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(VCardImportExportPlugin, "kaddressbook_importexportvcardplugin.json")
 VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent, const QList<QVariant> &)
     : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
 {

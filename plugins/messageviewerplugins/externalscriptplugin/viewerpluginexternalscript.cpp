@@ -23,10 +23,9 @@
 #include <KActionCollection>
 #include <QPointer>
 #include <kpluginfactory.h>
-
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
-K_PLUGIN_FACTORY_WITH_JSON(ViewerPluginExternalscriptFactory, "messageviewer_externalscriptplugin.json", registerPlugin<ViewerPluginExternalscript>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExternalscript, "messageviewer_externalscriptplugin.json")
 
 ViewerPluginExternalscript::ViewerPluginExternalscript(QObject *parent, const QList<QVariant> &)
     : MessageViewer::ViewerPlugin(parent)

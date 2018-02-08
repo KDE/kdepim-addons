@@ -22,10 +22,10 @@
 #include "fancyheaderstyle.h"
 #include "messageviewer/richheaderstrategy.h"
 #include <kpluginfactory.h>
+#include "kcoreaddons_kdepim_compat.h"
 using namespace MessageViewer;
 
-K_PLUGIN_FACTORY_WITH_JSON(MessageViewerFancyHeaderStylePluginFactory, "messageviewer_fancyheaderstyleplugin.json", registerPlugin<FancyHeaderStylePlugin>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(FancyHeaderStylePlugin, "messageviewer_fancyheaderstyleplugin.json")
 
 FancyHeaderStylePlugin::FancyHeaderStylePlugin(QObject *parent, const QList<QVariant> &)
     : MessageViewer::HeaderStylePlugin(parent)

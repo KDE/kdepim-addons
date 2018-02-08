@@ -22,13 +22,12 @@
 #include "gearyaddressbook.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include "gearyplugin_debug.h"
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(GearyImporterFactory, "gearyimporter.json", registerPlugin<GearyImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(GearyImportData, "gearyimporter.json")
 
 GearyImportData::GearyImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)

@@ -21,9 +21,8 @@
 #include "externalcomposerplugineditorinterface.h"
 #include "externalcomposerconfiguredialog.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(ExternalComposerPluginEditorFactory, "kmail_externalcomposereditorplugin.json", registerPlugin<ExternalComposerPluginEditor>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(ExternalComposerPluginEditor, "kmail_externalcomposereditorplugin.json")
 
 ExternalComposerPluginEditor::ExternalComposerPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorInit(parent)

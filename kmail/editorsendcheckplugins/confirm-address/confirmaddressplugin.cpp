@@ -21,12 +21,11 @@
 #include "confirmaddressinterface.h"
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressconfiguredialog.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include <QPointer>
 #include <kpluginfactory.h>
 
-K_PLUGIN_FACTORY_WITH_JSON(ChangeCasePluginEditorFactory, "kmail_confirmaddressplugin.json", registerPlugin<ConfirmAddressPlugin>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(ConfirmAddressPlugin, "kmail_confirmaddressplugin.json")
 
 ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorCheckBeforeSend(parent)

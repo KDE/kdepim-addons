@@ -20,9 +20,8 @@
 #include "inserttemplatecommandplugineditor.h"
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <kpluginfactory.h>
-
-K_PLUGIN_FACTORY_WITH_JSON(InsertTemplateCommandPluginEditorFactory, "kmail_inserttemplatecommandeditorplugin.json", registerPlugin<InsertTemplateCommandPluginEditor>();
-                           )
+#include "kcoreaddons_kdepim_compat.h"
+K_PLUGIN_CLASS_WITH_JSON(InsertTemplateCommandPluginEditor, "kmail_inserttemplatecommandeditorplugin.json")
 
 InsertTemplateCommandPluginEditor::InsertTemplateCommandPluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)

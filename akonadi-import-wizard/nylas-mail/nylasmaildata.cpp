@@ -21,13 +21,12 @@
 #include "nylasmailsettings.h"
 #include "mailimporter/filterinfo.h"
 #include "mailimporter/othermailerutil.h"
-
+#include "kcoreaddons_kdepim_compat.h"
 #include "nylasmailplugin_debug.h"
 #include <kpluginfactory.h>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(NylasMailImporterFactory, "nylasmailimporter.json", registerPlugin<NylasMailImportData>();
-                           )
+K_PLUGIN_CLASS_WITH_JSON(NylasMailImportData, "nylasmailimporter.json")
 
 NylasMailImportData::NylasMailImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
