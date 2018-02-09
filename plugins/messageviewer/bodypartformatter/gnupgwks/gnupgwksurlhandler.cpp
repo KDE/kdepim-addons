@@ -146,7 +146,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     }
     // No transport exists, ask user to create one
     if (transportId == -1) {
-        if (!transportMgr->showTransportCreationDialog(0, MailTransport::TransportManager::IfNoTransportExists)) {
+        if (!transportMgr->showTransportCreationDialog(nullptr, MailTransport::TransportManager::IfNoTransportExists)) {
             return false;
         }
         transportId = transportMgr->defaultTransportId();
