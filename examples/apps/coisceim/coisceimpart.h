@@ -42,7 +42,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~CoisceimPart();
+    ~CoisceimPart() override;
 
     static KAboutData *createAboutData();
 

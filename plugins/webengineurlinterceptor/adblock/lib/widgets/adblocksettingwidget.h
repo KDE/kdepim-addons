@@ -45,7 +45,7 @@ class ADBLOCKLIB_EXPORT AdBlockSettingWidget : public QWidget
 
 public:
     explicit AdBlockSettingWidget(QWidget *parent = nullptr);
-    virtual ~AdBlockSettingWidget();
+    ~AdBlockSettingWidget() override;
 
     bool changed() const;
 

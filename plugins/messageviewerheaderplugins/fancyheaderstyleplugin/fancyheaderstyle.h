@@ -29,7 +29,7 @@ class FancyHeaderStyle : public HeaderStyle
 {
 public:
     FancyHeaderStyle();
-    virtual ~FancyHeaderStyle();
+    ~FancyHeaderStyle() override;
 
 public:
     const char *name() const override;

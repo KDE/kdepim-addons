@@ -40,7 +40,7 @@ public:
     /**
      * Destructor
      */
-    virtual ~mailreaderView();
+    ~mailreaderView() override;
 
     void showItem(const Akonadi::Item &item);
     void showAboutPage();

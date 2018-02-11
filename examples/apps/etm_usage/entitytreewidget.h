@@ -39,7 +39,7 @@ class EntityTreeWidget : public QWidget
     Q_OBJECT
 public:
     EntityTreeWidget(QWidget *parent = nullptr);
-    virtual ~EntityTreeWidget();
+    ~EntityTreeWidget() override;
 
     QTreeView *view() const;
     Akonadi::EntityTreeModel *model() const;

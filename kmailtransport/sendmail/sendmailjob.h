@@ -48,7 +48,7 @@ public:
     /**
       Destroys this job.
     */
-    virtual ~SendmailJob();
+    ~SendmailJob() override;
 
 protected:
     virtual void doStart();

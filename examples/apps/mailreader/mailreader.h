@@ -39,7 +39,7 @@ public:
     /**
      * Default Destructor
      */
-    virtual ~mailreader();
+    ~mailreader() override;
 
 private Q_SLOTS:
     void slotMessageSelected(const Akonadi::Item &item);

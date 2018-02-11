@@ -35,7 +35,7 @@ class ConfigDialog : public QDialog
 
 public:
     explicit ConfigDialog(QWidget *parent = nullptr);
-    virtual ~ConfigDialog();
+    ~ConfigDialog() override;
 
 protected:
     void load();

@@ -30,7 +30,7 @@ class SendMailConfigDialog : public QDialog
     Q_OBJECT
 public:
     explicit SendMailConfigDialog(MailTransport::Transport *transport, QWidget *parent = nullptr);
-    virtual ~SendMailConfigDialog();
+    ~SendMailConfigDialog() override;
 
 private:
     void okClicked();

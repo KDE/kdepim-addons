@@ -35,7 +35,7 @@ class MailModel : public EntityTreeModel
 public:
 
     explicit MailModel(Monitor *monitor, QObject *parent = nullptr);
-    virtual ~MailModel();
+    ~MailModel() override;
 
     QVariant entityData(const Item &item, int column, int role = Qt::DisplayRole) const override;
 
