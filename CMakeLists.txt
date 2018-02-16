@@ -132,7 +132,7 @@ endif()
 # Extra package
 find_package(Gpgmepp 1.8.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "http://www.gnupg.org" TYPE REQUIRED)
-set(SharedMimeInfo_MINIMUM_VERSION "1.0")
+set(SharedMimeInfo_MINIMUM_VERSION "1.3")
 find_package(SharedMimeInfo ${SharedMimeInfo_MINIMUM_VERSION} REQUIRED)
 find_package(Poppler COMPONENTS Qt5)
 set_package_properties("Poppler" PROPERTIES TYPE OPTIONAL PURPOSE "Support for PDF booking confirmations in the semantic extraction plugin.")
