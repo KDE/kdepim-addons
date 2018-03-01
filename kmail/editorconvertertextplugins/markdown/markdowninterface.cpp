@@ -18,6 +18,9 @@
 */
 
 #include "markdowninterface.h"
+#include <KLocalizedString>
+#include <QAction>
+#include <KActionCollection>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
@@ -26,6 +29,34 @@ MarkdownInterface::MarkdownInterface(QObject *parent)
 }
 
 MarkdownInterface::~MarkdownInterface()
+{
+
+}
+
+void MarkdownInterface::createAction(KActionCollection *ac)
+{
+    QAction *action = new QAction(i18n("Generate HTML from markdown."), this);
+    ac->addAction(QStringLiteral("generate_markdown"), action);
+    connect(action, &QAction::triggered, this, &MarkdownInterface::slotActivated);
+    MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
+    setActionType(type);
+}
+
+bool MarkdownInterface::reformatText()
+{
+    return false;
+}
+
+bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
+{
+    return false;
+}
+
+void MarkdownInterface::reloadConfig()
+{
+}
+
+void MarkdownInterface::slotActivated()
 {
 
 }

@@ -19,6 +19,7 @@
 
 
 #include "markdownplugin.h"
+#include "markdowninterface.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include "kcoreaddons_kdepim_compat.h"
@@ -37,10 +38,10 @@ MarkdownPlugin::~MarkdownPlugin()
 }
 
 
-MessageComposer::PluginEditorConverttextInterface *MarkdownPlugin::createInterface(QObject *parent)
+MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(QObject *parent)
 {
     //TODO
-    return nullptr;
+    return new MarkdownInterface(parent);
 }
 
 
@@ -56,8 +57,7 @@ void MarkdownPlugin::showConfigureDialog(QWidget *parent)
 
 QString MarkdownPlugin::description() const
 {
-    //TODO
-    return {};
+    return i18n("Generate HTML from markdown language.");
 }
 
 #include "markdownplugin.moc"

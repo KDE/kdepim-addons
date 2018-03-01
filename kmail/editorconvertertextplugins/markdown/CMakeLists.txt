@@ -13,7 +13,7 @@ kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURC
     ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_markdownplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::XmlGui
     )
 
 if(BUILD_TESTING)

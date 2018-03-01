@@ -22,13 +22,23 @@
 
 #include <QObject>
 #include <MessageComposer/PluginEditorConvertTextInterface>
-
+class KActionCollection;
 class MarkdownInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
     Q_OBJECT
 public:
     explicit MarkdownInterface(QObject *parent = nullptr);
-    ~MarkdownInterface();
+    ~MarkdownInterface() override;
+    void createAction(KActionCollection *ac) override;
+
+    bool reformatText() override;
+    bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
+
+public Q_SLOTS:
+    void reloadConfig() override;
+
+private:
+    void slotActivated();
 };
 
 #endif // MARKDOWNINTERFACE_H

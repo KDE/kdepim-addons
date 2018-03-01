@@ -29,7 +29,7 @@ public:
     explicit MarkdownPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~MarkdownPlugin() override;
 
-    MessageComposer::PluginEditorConverttextInterface *createInterface(QObject *parent) override;
+    MessageComposer::PluginEditorConvertTextInterface *createInterface(QObject *parent) override;
 
     bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
