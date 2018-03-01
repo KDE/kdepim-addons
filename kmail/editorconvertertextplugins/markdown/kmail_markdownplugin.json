@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to generate html from markdown language",
+        "EnabledByDefault": "false",
+        "Id": "kmailmarkdown",
+        "Name": "Markdown",
+        "ServiceTypes": [
+            "KMailEditor/PluginEditorConvertText"
+        ],
+        "Version": "1.0"
+    }
+}
+~      

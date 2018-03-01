@@ -1,0 +1,21 @@
+include_directories(
+    ${CMAKE_CURRENT_SOURCE_DIR}/
+)
+
+set(kmail_markdownplugin_SRCS
+    markdowninterface.cpp
+    markdownplugin.cpp
+    )
+
+ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
+
+kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURCES
+    ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail)
+
+target_link_libraries(kmail_markdownplugin
+    KF5::IconThemes KF5::MessageComposer KF5::I18n
+    )
+
+if(BUILD_TESTING)
+    add_subdirectory(autotests)
+endif()
