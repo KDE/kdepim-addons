@@ -26,10 +26,14 @@ class MarkdownPlugin : public MessageComposer::PluginEditorConvertText
 {
     Q_OBJECT
 public:
-    explicit MarkdownPlugin(QObject *parent = nullptr);
+    explicit MarkdownPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~MarkdownPlugin() override;
 
     MessageComposer::PluginEditorConverttextInterface *createInterface(QObject *parent) override;
+
+    bool hasConfigureDialog() const override;
+    void showConfigureDialog(QWidget *parent) override;
+    QString description() const override;
 };
 
 #endif // MARKDOWNPLUGIN_H

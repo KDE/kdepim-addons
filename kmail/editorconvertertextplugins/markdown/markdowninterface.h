@@ -17,41 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef MARKDOWNINTERFACE_H
+#define MARKDOWNINTERFACE_H
 
-#include "markdownplugin.h"
-#include <KLocalizedString>
+#include <QObject>
+#include <MessageComposer/PluginEditorConvertTextInterface>
 
-MarkdownPlugin::MarkdownPlugin(QObject *parent, const QList<QVariant> &)
-    : MessageComposer::PluginEditorConvertText(parent)
+class MarkdownInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
+    Q_OBJECT
+public:
+    explicit MarkdownInterface(QObject *parent = nullptr);
+    ~MarkdownInterface();
+};
 
-}
-
-MarkdownPlugin::~MarkdownPlugin()
-{
-
-}
-
-
-MessageComposer::PluginEditorConverttextInterface *MarkdownPlugin::createInterface(QObject *parent)
-{
-    //TODO
-    return nullptr;
-}
-
-
-bool MarkdownPlugin::hasConfigureDialog() const
-{
-    return false;
-}
-
-void MarkdownPlugin::showConfigureDialog(QWidget *parent)
-{
-    //TODO
-}
-
-QString MarkdownPlugin::description() const
-{
-    //TODO
-    return {};
-}
+#endif // MARKDOWNINTERFACE_H
