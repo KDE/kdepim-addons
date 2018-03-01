@@ -38,7 +38,7 @@ void InsertEmailPluginEditorInterface::createAction(KActionCollection *ac)
     QAction *action = new QAction(i18n("Insert Email..."), this);
     ac->addAction(QStringLiteral("insert_email"), action);
     connect(action, &QAction::triggered, this, &InsertEmailPluginEditorInterface::slotActivated);
-    MessageComposer::ActionType type(action, MessageComposer::ActionType::Edit);
+    MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 }
 

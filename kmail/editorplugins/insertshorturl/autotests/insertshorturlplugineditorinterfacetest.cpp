@@ -35,9 +35,9 @@ void InsertShorturlPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
     InsertShorturlPluginEditorInterface interface(nullptr);
     interface.createAction(new KActionCollection(this));
-    MessageComposer::ActionType type = interface.actionType();
+    MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::ActionType::PopupMenu);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::PopupMenu);
 }
 
 QTEST_MAIN(InsertShorturlPluginEditorInterfaceTest)

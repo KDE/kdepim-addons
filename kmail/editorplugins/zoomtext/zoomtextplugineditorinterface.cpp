@@ -58,7 +58,7 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
     connect(zoomResetAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomReset);
     ac->setDefaultShortcut(zoomResetAction, QKeySequence(Qt::CTRL + Qt::Key_0));
 
-    MessageComposer::ActionType type(zoomMenu, MessageComposer::ActionType::Edit);
+    MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 }
 

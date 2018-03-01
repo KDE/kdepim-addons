@@ -35,9 +35,9 @@ void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()
 {
     ChangeCasePluginEditorInterface interface(nullptr);
     interface.createAction(new KActionCollection(this));
-    MessageComposer::ActionType type = interface.actionType();
+    MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::ActionType::Edit);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::Edit);
 }
 
 QTEST_MAIN(ChangeCasePluginEditorInterfaceTest)

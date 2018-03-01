@@ -35,9 +35,9 @@ void AutoCorrectionPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
     AutoCorrectionPluginEditorInterface interface(nullptr);
     interface.createAction(new KActionCollection(this));
-    MessageComposer::ActionType type = interface.actionType();
+    MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::ActionType::Tools);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::Tools);
 }
 
 QTEST_MAIN(AutoCorrectionPluginEditorInterfaceTest)

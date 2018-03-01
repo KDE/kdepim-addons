@@ -44,7 +44,7 @@ void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::lowerCase, this, &ChangeCasePluginEditorInterface::slotLowerCase);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::sentenceCase, this, &ChangeCasePluginEditorInterface::slotSentenceCase);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::reverseCase, this, &ChangeCasePluginEditorInterface::slotReverseCase);
-    MessageComposer::ActionType type(ChangeCaseMenu, MessageComposer::ActionType::Edit);
+    MessageComposer::PluginActionType type(ChangeCaseMenu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 }
 
