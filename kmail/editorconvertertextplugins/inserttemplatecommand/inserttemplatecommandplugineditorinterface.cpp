@@ -20,13 +20,14 @@
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <TemplateParser/TemplatesInsertCommandAction>
+#include <KPIMTextEdit/RichTextComposer>
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
 #include <QMenu>
 
 InsertTemplateCommandPluginEditorInterface::InsertTemplateCommandPluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+    : MessageComposer::PluginEditorConvertTextInterface(parent)
 {
 }
 
@@ -45,32 +46,30 @@ void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection 
     setActionType(type);
 }
 
-void InsertTemplateCommandPluginEditorInterface::slotActivated()
-{
-    Q_EMIT emitPluginActivated(this);
-}
-
 void InsertTemplateCommandPluginEditorInterface::slotOpenMenu()
 {
     mCommandAction->menu()->exec(QCursor::pos());
 }
 
-void InsertTemplateCommandPluginEditorInterface::exec()
+void InsertTemplateCommandPluginEditorInterface::slotInsertCommand(const QString &cmd, int adjustCursor)
 {
-    if (!mCommand.isEmpty()) {
+    if (!cmd.isEmpty()) {
         QTextCursor cursor = richTextEditor()->textCursor();
-        cursor.insertText(mCommand);
-        cursor.setPosition(cursor.position() + mAdjustCursor);
+        cursor.insertText(cmd);
+        cursor.setPosition(cursor.position() + adjustCursor);
         richTextEditor()->setTextCursor(cursor);
         richTextEditor()->setFocus();
     }
 }
 
-void InsertTemplateCommandPluginEditorInterface::slotInsertCommand(const QString &cmd, int adjustCursor)
+bool InsertTemplateCommandPluginEditorInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
-    if (!cmd.isEmpty()) {
-        mCommand = cmd;
-        mAdjustCursor = adjustCursor;
-        slotActivated();
-    }
+    Q_UNUSED(textPart);
+    return false;
+}
+
+bool InsertTemplateCommandPluginEditorInterface::reformatText()
+{
+    //TODO we need to reformat text and change text.
+    return false;
 }

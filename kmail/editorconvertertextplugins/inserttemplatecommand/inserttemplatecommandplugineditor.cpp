@@ -24,7 +24,7 @@
 K_PLUGIN_CLASS_WITH_JSON(InsertTemplateCommandPluginEditor, "kmail_inserttemplatecommandeditorplugin.json")
 
 InsertTemplateCommandPluginEditor::InsertTemplateCommandPluginEditor(QObject *parent, const QList<QVariant> &)
-    : MessageComposer::PluginEditor(parent)
+    : MessageComposer::PluginEditorConvertText(parent)
 {
 }
 
@@ -32,7 +32,7 @@ InsertTemplateCommandPluginEditor::~InsertTemplateCommandPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *InsertTemplateCommandPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorConvertTextInterface *InsertTemplateCommandPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
 {
     InsertTemplateCommandPluginEditorInterface *interface = new InsertTemplateCommandPluginEditorInterface(parent);
     interface->createAction(ac);

@@ -21,7 +21,7 @@
         "Name[uk]": "Вставлення шаблонної команди",
         "Name[x-test]": "xxInsert Template Commandxx",
         "ServiceTypes": [
-            "KMailEditor/Plugin"
+            "KMailEditor/PluginEditorConvertText"
         ],
         "Version": "1.0"
     },

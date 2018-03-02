@@ -20,19 +20,21 @@
 #ifndef INSERTTEMPLATECOMMANDPLUGINEDITORINTERFACE_H
 #define INSERTTEMPLATECOMMANDPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorConvertTextInterface>
 namespace TemplateParser {
 class TemplatesInsertCommandAction;
 }
-class InsertTemplateCommandPluginEditorInterface : public MessageComposer::PluginEditorInterface
+class InsertTemplateCommandPluginEditorInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
     Q_OBJECT
 public:
     explicit InsertTemplateCommandPluginEditorInterface(QObject *parent = nullptr);
-    ~InsertTemplateCommandPluginEditorInterface();
+    ~InsertTemplateCommandPluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
-    void exec() override;
+    bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
+    bool reformatText() override;
+
 
 private:
     void slotInsertCommand(const QString &cmd, int adjustCursor);
@@ -41,6 +43,7 @@ private:
     QString mCommand;
     int mAdjustCursor = 0;
     TemplateParser::TemplatesInsertCommandAction *mCommandAction = nullptr;
+
 };
 
 #endif

@@ -37,11 +37,11 @@ MarkdownPlugin::~MarkdownPlugin()
 
 }
 
-
-MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(QObject *parent)
+MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {
-    //TODO
-    return new MarkdownInterface(parent);
+    MarkdownInterface *interface = new MarkdownInterface(parent);
+    interface->createAction(ac);
+    return interface;
 }
 
 
