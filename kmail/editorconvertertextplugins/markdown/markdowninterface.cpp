@@ -54,9 +54,10 @@ bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 
 void MarkdownInterface::reloadConfig()
 {
+    //TODO
 }
 
 void MarkdownInterface::slotActivated()
 {
-
+    //TODO
 }

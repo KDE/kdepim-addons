@@ -52,6 +52,7 @@ bool MarkdownPlugin::hasConfigureDialog() const
 
 void MarkdownPlugin::showConfigureDialog(QWidget *parent)
 {
+    Q_UNUSED(parent)
     //TODO
 }
 
