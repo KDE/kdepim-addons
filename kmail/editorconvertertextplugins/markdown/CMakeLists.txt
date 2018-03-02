@@ -5,6 +5,7 @@ include_directories(
 set(kmail_markdownplugin_SRCS
     markdowninterface.cpp
     markdownplugin.cpp
+    markdownpreviewwidget.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
