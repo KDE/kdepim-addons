@@ -26,7 +26,7 @@ class ExpertPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     explicit ExpertPluginInterface(QObject *parent = nullptr);
-    ~ExpertPluginInterface();
+    ~ExpertPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

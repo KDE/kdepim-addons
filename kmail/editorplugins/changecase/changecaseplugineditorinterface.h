@@ -27,7 +27,7 @@ class ChangeCasePluginEditorInterface : public MessageComposer::PluginEditorInte
     Q_OBJECT
 public:
     explicit ChangeCasePluginEditorInterface(QObject *parent = nullptr);
-    ~ChangeCasePluginEditorInterface();
+    ~ChangeCasePluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

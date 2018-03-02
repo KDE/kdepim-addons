@@ -30,7 +30,7 @@ class InsertShorturlPluginEditor : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit InsertShorturlPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~InsertShorturlPluginEditor();
+    ~InsertShorturlPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 

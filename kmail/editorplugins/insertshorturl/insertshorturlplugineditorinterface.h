@@ -29,7 +29,7 @@ class InsertShorturlPluginEditorInterface : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit InsertShorturlPluginEditorInterface(QObject *parent = nullptr);
-    ~InsertShorturlPluginEditorInterface();
+    ~InsertShorturlPluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

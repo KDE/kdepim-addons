@@ -30,7 +30,7 @@ class InsertEmailPluginEditor : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit InsertEmailPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~InsertEmailPluginEditor();
+    ~InsertEmailPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 };

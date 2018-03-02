@@ -30,7 +30,7 @@ class ZoomTextPluginEditor : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit ZoomTextPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~ZoomTextPluginEditor();
+    ~ZoomTextPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
     bool hasPopupMenuSupport() const override;

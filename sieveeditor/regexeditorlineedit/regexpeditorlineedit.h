@@ -31,7 +31,7 @@ public:
     explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~RegexpEditorLineEdit();
+    ~RegexpEditorLineEdit() override;
 
     void switchToRegexpEditorLineEdit(bool regexpEditor) override;
     void setCode(const QString &str) override;

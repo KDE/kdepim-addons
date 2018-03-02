@@ -31,7 +31,7 @@ class LogActivitiesPlugin : public PimCommon::GenericPlugin
     Q_OBJECT
 public:
     explicit LogActivitiesPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~LogActivitiesPlugin();
+    ~LogActivitiesPlugin() override;
 
     PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 };

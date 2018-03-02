@@ -29,7 +29,7 @@ public:
     explicit CheckBeforeSendPlugin(QObject *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~CheckBeforeSendPlugin();
+    ~CheckBeforeSendPlugin() override;
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;
     bool hasConfigureDialog() const override;

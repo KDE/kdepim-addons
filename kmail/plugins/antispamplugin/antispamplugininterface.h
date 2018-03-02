@@ -26,7 +26,7 @@ class AntiSpamPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     explicit AntiSpamPluginInterface(QObject *parent = nullptr);
-    ~AntiSpamPluginInterface();
+    ~AntiSpamPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

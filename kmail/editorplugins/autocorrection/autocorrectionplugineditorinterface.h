@@ -27,7 +27,7 @@ class AutoCorrectionPluginEditorInterface : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit AutoCorrectionPluginEditorInterface(QObject *parent = nullptr);
-    ~AutoCorrectionPluginEditorInterface();
+    ~AutoCorrectionPluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

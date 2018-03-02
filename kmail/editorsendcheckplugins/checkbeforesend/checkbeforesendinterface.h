@@ -26,7 +26,7 @@ class CheckBeforeSendInterface : public MessageComposer::PluginEditorCheckBefore
     Q_OBJECT
 public:
     explicit CheckBeforeSendInterface(QObject *parent = nullptr);
-    ~CheckBeforeSendInterface();
+    ~CheckBeforeSendInterface() override;
 
     bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 

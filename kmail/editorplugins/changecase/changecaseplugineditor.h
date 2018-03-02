@@ -30,7 +30,7 @@ class ChangeCasePluginEditor : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit ChangeCasePluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~ChangeCasePluginEditor();
+    ~ChangeCasePluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
     bool hasPopupMenuSupport() const override;

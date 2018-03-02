@@ -27,7 +27,7 @@ class ConfirmAddressInterface : public MessageComposer::PluginEditorCheckBeforeS
     Q_OBJECT
 public:
     explicit ConfirmAddressInterface(QObject *parent = nullptr);
-    ~ConfirmAddressInterface();
+    ~ConfirmAddressInterface() override;
     bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 
 Q_SIGNALS:

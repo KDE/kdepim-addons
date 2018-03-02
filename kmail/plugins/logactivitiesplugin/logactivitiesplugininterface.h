@@ -26,7 +26,7 @@ class LogActivitiesPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     explicit LogActivitiesPluginInterface(QObject *parent = nullptr);
-    ~LogActivitiesPluginInterface();
+    ~LogActivitiesPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

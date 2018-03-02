@@ -28,7 +28,7 @@ class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckB
     Q_OBJECT
 public:
     explicit AutomaticAddContactsInterface(QObject *parent = nullptr);
-    ~AutomaticAddContactsInterface();
+    ~AutomaticAddContactsInterface() override;
 
     bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 

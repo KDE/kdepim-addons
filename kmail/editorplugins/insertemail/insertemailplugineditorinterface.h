@@ -28,7 +28,7 @@ class InsertEmailPluginEditorInterface : public MessageComposer::PluginEditorInt
     Q_OBJECT
 public:
     explicit InsertEmailPluginEditorInterface(QObject *parent = nullptr);
-    ~InsertEmailPluginEditorInterface();
+    ~InsertEmailPluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
