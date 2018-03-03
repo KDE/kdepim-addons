@@ -9,3 +9,4 @@ macro(add_kmail_converttext_unittest _source _additional)
 endmacro ()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "")
+add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "")
