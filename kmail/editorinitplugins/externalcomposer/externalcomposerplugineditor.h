@@ -30,7 +30,7 @@ class ExternalComposerPluginEditor : public MessageComposer::PluginEditorInit
     Q_OBJECT
 public:
     explicit ExternalComposerPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~ExternalComposerPluginEditor();
+    ~ExternalComposerPluginEditor() override;
 
     MessageComposer::PluginEditorInitInterface *createInterface(QObject *parent = nullptr) override;
 

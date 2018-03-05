@@ -25,7 +25,7 @@ class TheBatImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit TheBatImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~TheBatImportData();
+    ~TheBatImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

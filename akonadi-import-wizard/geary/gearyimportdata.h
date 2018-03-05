@@ -25,7 +25,7 @@ class GearyImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit GearyImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~GearyImportData();
+    ~GearyImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

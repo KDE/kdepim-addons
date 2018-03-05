@@ -29,7 +29,7 @@ class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInit
     Q_OBJECT
 public:
     explicit ExternalComposerConfigureWidget(QWidget *parent = nullptr);
-    ~ExternalComposerConfigureWidget();
+    ~ExternalComposerConfigureWidget() override;
 
     void loadSettings() override;
     void saveSettings() override;

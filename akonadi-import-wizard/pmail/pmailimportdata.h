@@ -26,7 +26,7 @@ class PMailImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit PMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~PMailImportData();
+    ~PMailImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

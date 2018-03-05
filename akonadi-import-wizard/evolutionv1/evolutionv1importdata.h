@@ -25,7 +25,7 @@ class Evolutionv1ImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit Evolutionv1ImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~Evolutionv1ImportData();
+    ~Evolutionv1ImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

@@ -25,7 +25,7 @@ class OeImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit OeImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~OeImportData();
+    ~OeImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

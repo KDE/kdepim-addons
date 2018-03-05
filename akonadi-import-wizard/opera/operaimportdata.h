@@ -26,7 +26,7 @@ class OperaImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit OperaImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~OperaImportData();
+    ~OperaImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;

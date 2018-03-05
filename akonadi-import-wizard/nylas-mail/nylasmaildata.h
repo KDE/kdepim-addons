@@ -25,7 +25,7 @@ class NylasMailImportData : public LibImportWizard::AbstractImporter
 {
 public:
     explicit NylasMailImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
-    ~NylasMailImportData();
+    ~NylasMailImportData() override;
 
     TypeSupportedOptions supportedOption() override;
     bool foundMailer() const override;
