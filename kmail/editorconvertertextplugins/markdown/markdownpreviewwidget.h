@@ -22,6 +22,7 @@
 
 #include <QWidget>
 class QWebEngineView;
+class MarkdownDocument;
 class MarkdownPreviewWidget : public QWidget
 {
     Q_OBJECT
@@ -29,6 +30,7 @@ public:
     explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
     ~MarkdownPreviewWidget();
 private:
+    MarkdownDocument *mDocument = nullptr;
     QWebEngineView *mWebView = nullptr;
 };
 
