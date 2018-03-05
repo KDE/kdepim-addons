@@ -18,11 +18,17 @@
 */
 
 #include "markdownpreviewwidgettest.h"
+#include "markdownpreviewwidget.h"
 #include <QTest>
 QTEST_MAIN(MarkdownPreviewWidgetTest)
 
 MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
     : QObject(parent)
+{
+
+}
+
+void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
 {
 
 }

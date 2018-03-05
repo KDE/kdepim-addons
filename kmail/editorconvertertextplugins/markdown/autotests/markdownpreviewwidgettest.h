@@ -28,6 +28,8 @@ class MarkdownPreviewWidgetTest : public QObject
 public:
     explicit MarkdownPreviewWidgetTest(QObject *parent = nullptr);
     ~MarkdownPreviewWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MARKDOWNPREVIEWWIDGETTEST_H
