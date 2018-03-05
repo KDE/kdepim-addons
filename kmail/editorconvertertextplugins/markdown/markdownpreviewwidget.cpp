@@ -19,6 +19,7 @@
 
 #include "markdownpreviewwidget.h"
 #include <QHBoxLayout>
+#include <QWebEngineView>
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
@@ -27,6 +28,11 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mainLayout->setMargin(0);
+
+    mWebView = new QWebEngineView(this);
+    mWebView->setObjectName(QStringLiteral("webengine"));
+    mainLayout->addWidget(mWebView);
+    mWebView->setContextMenuPolicy(Qt::NoContextMenu);
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
