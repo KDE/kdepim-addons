@@ -20,4 +20,5 @@ target_link_libraries(kmail_markdownplugin
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
+    add_subdirectory(tests)
 endif()
