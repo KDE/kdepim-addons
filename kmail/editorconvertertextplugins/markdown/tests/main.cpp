@@ -20,13 +20,15 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
+#include "markdowndemowidget.h"
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
 
-    //TODO
+    MarkdownDemoWidget w;
+    w.show();
     app.exec();
     return 0;
 }

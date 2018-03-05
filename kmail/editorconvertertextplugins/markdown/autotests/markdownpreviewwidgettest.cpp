@@ -19,8 +19,10 @@
 
 #include "markdownpreviewwidgettest.h"
 #include "markdownpreviewwidget.h"
+#include "markdowndocument.h"
 #include <QHBoxLayout>
 #include <QTest>
+#include <QWebChannel>
 #include <QWebEngineView>
 QTEST_MAIN(MarkdownPreviewWidgetTest)
 
@@ -40,4 +42,12 @@ void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
     QWebEngineView *mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
     QVERIFY(mWebView);
     QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
+
+
+    MarkdownDocument *mDocument = w.findChild<MarkdownDocument *>(QStringLiteral("document"));
+    QVERIFY(mDocument);
+    QVERIFY(mDocument->text().isEmpty());
+
+    QWebChannel *channel = w.findChild<QWebChannel *>(QStringLiteral("webchannel"));
+    QVERIFY(channel);
 }

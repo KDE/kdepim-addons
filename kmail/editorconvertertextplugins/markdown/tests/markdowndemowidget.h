@@ -17,27 +17,23 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNPREVIEWWIDGET_H
-#define MARKDOWNPREVIEWWIDGET_H
+#ifndef MARKDOWNDEMOWIDGET_H
+#define MARKDOWNDEMOWIDGET_H
 
 #include <QWidget>
-class QWebEngineView;
-class MarkdownDocument;
-class MarkdownPreviewWidget : public QWidget
+class QTextEdit;
+class MarkdownPreviewWidget;
+class MarkdownDemoWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
-    ~MarkdownPreviewWidget();
-
-    QString saveHtml() const;
-
-public Q_SLOTS:
-    void slotUpdatePreview(const QString &text);
+    explicit MarkdownDemoWidget(QWidget *parent = nullptr);
+    ~MarkdownDemoWidget() = default;
 
 private:
-    MarkdownDocument *mDocument = nullptr;
-    QWebEngineView *mWebView = nullptr;
+    void slotSaveHtml();
+    QTextEdit *mEdit = nullptr;
+    MarkdownPreviewWidget *mPreview = nullptr;
 };
 
-#endif // MARKDOWNPREVIEWWIDGET_H
+#endif // MARKDOWNDEMOWIDGET_H

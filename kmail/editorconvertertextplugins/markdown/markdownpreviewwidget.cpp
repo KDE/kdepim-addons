@@ -27,9 +27,10 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
 {
     mDocument = new MarkdownDocument(this);
+    mDocument->setObjectName(QStringLiteral("document"));
+
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-
     mainLayout->setMargin(0);
 
     mWebView = new QWebEngineView(this);
@@ -38,12 +39,23 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->setContextMenuPolicy(Qt::NoContextMenu);
 
     QWebChannel *channel = new QWebChannel(this);
+    channel->setObjectName(QStringLiteral("webchannel"));
     channel->registerObject(QStringLiteral("content"), mDocument);
-    mWebView->page()->setWebChannel(channel);
-
+    mWebView->page()->setWebChannel(channel);    
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
 {
 
+}
+
+void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
+{
+    mDocument->setText(text);
+}
+
+QString MarkdownPreviewWidget::saveHtml() const
+{
+    //TODO
+    return {};
 }
