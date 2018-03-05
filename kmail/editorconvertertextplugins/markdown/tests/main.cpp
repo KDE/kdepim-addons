@@ -17,37 +17,16 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QStandardPaths>
 
-#include "markdowndocumenttest.h"
-#include "markdowndocument.h"
-#include <QTest>
-#include <QSignalSpy>
-QTEST_MAIN(MarkdownDocumentTest)
-
-MarkdownDocumentTest::MarkdownDocumentTest(QObject *parent)
-    : QObject(parent)
+int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+    QStandardPaths::setTestModeEnabled(true);
 
-}
-
-void MarkdownDocumentTest::shouldHaveDefaultValue()
-{
-    MarkdownDocument d;
-    QVERIFY(d.text().isEmpty());
-}
-
-void MarkdownDocumentTest::shouldEmitSignal()
-{
-    MarkdownDocument d;
-    QSignalSpy spy(&d, &MarkdownDocument::textChanged);
-    d.setText(QStringLiteral("fii"));
-    QCOMPARE(spy.count(), 1);
-    spy.clear();
-
-    d.setText(QStringLiteral("fii"));
-    QCOMPARE(spy.count(), 0);
-
-    spy.clear();
-    d.setText(QString());
-    QCOMPARE(spy.count(), 1);
+    //TODO
+    app.exec();
+    return 0;
 }

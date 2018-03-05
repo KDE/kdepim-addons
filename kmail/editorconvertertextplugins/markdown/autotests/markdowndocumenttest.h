@@ -28,6 +28,9 @@ class MarkdownDocumentTest : public QObject
 public:
     explicit MarkdownDocumentTest(QObject *parent = nullptr);
     ~MarkdownDocumentTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
+    void shouldEmitSignal();
 };
 
 #endif // MARKDOWNDOCUMENTTEST_H
