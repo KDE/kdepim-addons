@@ -17,18 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "markdowninterfacetest.h"
-#include "../markdowninterface.h"
-#include <QTest>
-QTEST_MAIN(MarkdownInterfaceTest)
+#ifndef MARKDOWNPLUGINTEST_H
+#define MARKDOWNPLUGINTEST_H
 
-MarkdownInterfaceTest::MarkdownInterfaceTest(QObject *parent)
-    : QObject(parent)
+#include <QObject>
+
+class MarkdownPluginTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit MarkdownPluginTest(QObject *parent = nullptr);
+    ~MarkdownPluginTest() = default;
+};
 
-}
-
-void MarkdownInterfaceTest::shouldHaveDefaultValue()
-{
-
-}
+#endif // MARKDOWNPLUGINTEST_H

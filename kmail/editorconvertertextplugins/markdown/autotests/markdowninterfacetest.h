@@ -28,6 +28,8 @@ class MarkdownInterfaceTest : public QObject
 public:
     explicit MarkdownInterfaceTest(QObject *parent = nullptr);
     ~MarkdownInterfaceTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MARKDOWNINTERFACETEST_H

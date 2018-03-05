@@ -17,18 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "markdowninterfacetest.h"
-#include "../markdowninterface.h"
+#include "markdownplugintest.h"
 #include <QTest>
-QTEST_MAIN(MarkdownInterfaceTest)
+QTEST_MAIN(MarkdownPluginTest)
 
-MarkdownInterfaceTest::MarkdownInterfaceTest(QObject *parent)
+MarkdownPluginTest::MarkdownPluginTest(QObject *parent)
     : QObject(parent)
-{
-
-}
-
-void MarkdownInterfaceTest::shouldHaveDefaultValue()
 {
 
 }

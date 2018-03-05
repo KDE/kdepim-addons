@@ -5,8 +5,9 @@ macro(add_kmail_converttext_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_converttext-${_name})
-    target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer KF5::I18n)
+    target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer KF5::I18n Qt5::WebEngineWidgets)
 endmacro ()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "")
 add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "")
+add_kmail_converttext_unittest(markdownplugintest.cpp "")
