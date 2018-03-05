@@ -19,7 +19,9 @@
 
 #include "markdownpreviewwidgettest.h"
 #include "markdownpreviewwidget.h"
+#include <QHBoxLayout>
 #include <QTest>
+#include <QWebEngineView>
 QTEST_MAIN(MarkdownPreviewWidgetTest)
 
 MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
@@ -30,5 +32,12 @@ MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
 
 void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
 {
+    MarkdownPreviewWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 
+    QWebEngineView *mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
+    QVERIFY(mWebView);
+    QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
 }

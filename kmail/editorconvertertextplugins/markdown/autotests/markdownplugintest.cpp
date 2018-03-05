@@ -18,6 +18,9 @@
 */
 
 #include "markdownplugintest.h"
+#include "markdownplugin.h"
+#include "markdowninterface.h"
+#include <KActionCollection>
 #include <QTest>
 QTEST_MAIN(MarkdownPluginTest)
 
@@ -25,4 +28,11 @@ MarkdownPluginTest::MarkdownPluginTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void MarkdownPluginTest::shouldCreateInterface()
+{
+    MarkdownPlugin w;
+    KActionCollection *ac = new KActionCollection(this);
+    QVERIFY(w.createInterface(ac, this));
 }

@@ -28,6 +28,8 @@ class MarkdownPluginTest : public QObject
 public:
     explicit MarkdownPluginTest(QObject *parent = nullptr);
     ~MarkdownPluginTest() = default;
+private Q_SLOTS:
+    void shouldCreateInterface();
 };
 
 #endif // MARKDOWNPLUGINTEST_H
