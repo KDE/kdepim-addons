@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/markdown">
+        <file alias="index.html">markdownindex.html</file>
+        <file alias="qwebchannel.js">3rdparty/qwebchannel.js</file>
+        <file alias="marked.min.js">3rdparty/marked/marked.min.js</file>
+        <file alias="markdown.css">3rdparty/markdown.css/markdown.css</file>
+    </qresource>
+</RCC>

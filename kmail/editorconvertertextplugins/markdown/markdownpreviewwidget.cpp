@@ -42,6 +42,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     channel->setObjectName(QStringLiteral("webchannel"));
     channel->registerObject(QStringLiteral("content"), mDocument);
     mWebView->page()->setWebChannel(channel);    
+    mWebView->setUrl(QUrl(QStringLiteral("qrc:/index.html")));
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()

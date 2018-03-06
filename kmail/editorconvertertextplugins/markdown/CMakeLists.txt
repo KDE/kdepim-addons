@@ -7,9 +7,15 @@ set(kmail_markdownplugin_SRCS
     markdownplugin.cpp
     markdownpreviewwidget.cpp
     markdowndocument.cpp
+    markdownpreviewpage.cpp
     )
 
+qt5_add_resources(kmail_markdownplugin_SRCS data/markdown.qrc)
+
+
 ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
+
+
 
 kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURCES
     ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail)
