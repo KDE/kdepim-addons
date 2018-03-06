@@ -18,6 +18,7 @@
 */
 
 #include "markdowninterface.h"
+#include "markdownpreviewwidget.h"
 #include <KLocalizedString>
 #include <QAction>
 #include <KActionCollection>

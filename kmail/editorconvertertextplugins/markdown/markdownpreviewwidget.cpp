@@ -38,8 +38,6 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
 
     mWebView = new QWebEngineView(this);
     mWebView->setPage(webenginePage);
-    //connect(webenginePage, &MarkdownPreviewPage::openUrlRequested, this, &QWebEngineView::openUrlRequested);
-    //connect(webenginePage, &MarkdownPreviewPage::linkHovered, this, &QWebEngineView::linkHovered);
 
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
