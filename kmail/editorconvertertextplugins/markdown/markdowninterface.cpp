@@ -60,5 +60,6 @@ void MarkdownInterface::reloadConfig()
 
 void MarkdownInterface::slotActivated()
 {
-    //TODO
+
+    //TODO signal/slot
 }

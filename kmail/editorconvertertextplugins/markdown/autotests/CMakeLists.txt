@@ -12,3 +12,4 @@ add_kmail_converttext_unittest(markdowninterfacetest.cpp "../markdowninterface.c
 add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "../markdownpreviewwidget.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
 add_kmail_converttext_unittest(markdownplugintest.cpp "../markdownplugin.cpp;../markdowninterface.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
 add_kmail_converttext_unittest(markdowndocumenttest.cpp "../markdowndocument.cpp")
+add_kmail_converttext_unittest(markdownconfigurewidgettest.cpp "../markdownconfigurewidget.cpp")
