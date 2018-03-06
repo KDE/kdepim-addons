@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2017-2018 Montel Laurent <montel@kde.org>
+   Copyright (C) 2018 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,28 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef EXTERNALCOMPOSERCONFIGUREDIALOG_H
-#define EXTERNALCOMPOSERCONFIGUREDIALOG_H
+#include "markdownconfiguredialogtest.h"
+#include "../markdownconfiguredialog.h"
+#include <QTest>
+QTEST_MAIN(MarkdownConfigureDialogTest)
 
-#include <PimCommon/ConfigurePluginDialog>
-
-class ExternalComposerConfigureWidget;
-class ExternalComposerConfigureDialog : public PimCommon::ConfigurePluginDialog
+MarkdownConfigureDialogTest::MarkdownConfigureDialogTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit ExternalComposerConfigureDialog(QWidget *parent = nullptr);
-    ~ExternalComposerConfigureDialog() override;
 
-protected:
-    QWidget *createLayout() override;
-    void save() override;
-    void load() override;
-    void reset() override;
-    void help() override;
-
-private:
-    ExternalComposerConfigureWidget *mConfigureWidget = nullptr;
-};
-
-#endif // EXTERNALCOMPOSERCONFIGUREDIALOG_H
+}

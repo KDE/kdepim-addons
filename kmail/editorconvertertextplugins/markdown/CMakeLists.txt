@@ -9,6 +9,7 @@ set(kmail_markdownplugin_SRCS
     markdowndocument.cpp
     markdownpreviewpage.cpp
     markdownconfigurewidget.cpp
+    markdownconfiguredialog.cpp
     )
 
 qt5_add_resources(kmail_markdownplugin_SRCS data/markdown.qrc)
