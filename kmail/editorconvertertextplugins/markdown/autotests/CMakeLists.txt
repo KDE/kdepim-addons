@@ -9,6 +9,6 @@ macro(add_kmail_converttext_unittest _source _additional)
 endmacro ()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "../markdowninterface.cpp")
-add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "../markdownpreviewwidget.cpp;../markdowndocument.cpp")
-add_kmail_converttext_unittest(markdownplugintest.cpp "../markdownplugin.cpp;../markdowninterface.cpp;../markdowndocument.cpp")
+add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "../markdownpreviewwidget.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
+add_kmail_converttext_unittest(markdownplugintest.cpp "../markdownplugin.cpp;../markdowninterface.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
 add_kmail_converttext_unittest(markdowndocumenttest.cpp "../markdowndocument.cpp")
