@@ -18,7 +18,7 @@
 */
 
 #include "markdowndocument.h"
-
+#include <QDebug>
 MarkdownDocument::MarkdownDocument(QObject *parent)
     : QObject(parent)
 {
@@ -35,6 +35,7 @@ void MarkdownDocument::setText(const QString &text)
     if (mText == text)
         return;
     mText = text;
+    qDebug() << " void MarkdownDocument::setText(const QString &text)"<<text;
     Q_EMIT textChanged(mText);
 }
 

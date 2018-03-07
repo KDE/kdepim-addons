@@ -2,8 +2,8 @@
 <html lang="en">
 <meta charset="utf-8">
 <head>
-  <link rel="stylesheet" type="text/css" href="markdown.css">
-  <script src="marked.min.js"></script>
+  <link rel="stylesheet" type="text/css" href="3rdparty/markdown.css">
+  <script src="3rdparty/marked.min.js"></script>
   <script src="qwebchannel.js"></script>
 </head>
 <body>
@@ -13,31 +13,20 @@
 
   var placeholder = document.getElementById('placeholder');
 
-  var viewObject;
-
   var updateText = function(text) {
       placeholder.innerHTML = marked(text);
-      viewObject.emitRenderingDone();
   }
 
   new QWebChannel(qt.webChannelTransport,
-        function(channel) {
-            var sourceTextObject = channel.objects.sourceTextObject;
-            viewObject = channel.objects.viewObject;
-
-            // document.body.onscroll does not work (sometimes?)
-            window.onscroll = function() {
-                viewObject.setScrollPosition(document.body.scrollLeft, document.body.scrollTop);
-            };
-            viewObject.requestSetScrollPosition.connect(function(x,y) {
-                document.body.scrollTop = y;
-                document.body.scrollLeft = x;
-            });
-
-            updateText(sourceTextObject.text);
-            sourceTextObject.textChanged.connect(updateText);
-        }
+    function(channel) {
+      var content = channel.objects.content;
+      updateText(content.text);
+      content.textChanged.connect(updateText);
+    }
   );
   </script>
 </body>
 </html>
+
+
+
