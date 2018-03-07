@@ -10,7 +10,7 @@ endmacro ()
 
 add_kmail_converttext_unittest(markdowninterfacetest.cpp "../markdowninterface.cpp")
 add_kmail_converttext_unittest(markdownpreviewwidgettest.cpp "../markdownpreviewwidget.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
-add_kmail_converttext_unittest(markdownplugintest.cpp "../markdownplugin.cpp;../markdowninterface.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp")
+add_kmail_converttext_unittest(markdownplugintest.cpp "../markdownplugin.cpp;../markdowninterface.cpp;../markdowndocument.cpp;../markdownpreviewpage.cpp;../markdownconfiguredialog.cpp;../markdownconfigurewidget.cpp")
 add_kmail_converttext_unittest(markdowndocumenttest.cpp "../markdowndocument.cpp")
 add_kmail_converttext_unittest(markdownconfigurewidgettest.cpp "../markdownconfigurewidget.cpp")
 add_kmail_converttext_unittest(markdownconfiguredialogtest.cpp "../markdownconfiguredialog.cpp;../markdownconfigurewidget.cpp")

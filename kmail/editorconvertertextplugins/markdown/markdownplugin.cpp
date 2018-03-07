@@ -20,9 +20,11 @@
 
 #include "markdownplugin.h"
 #include "markdowninterface.h"
+#include "markdownconfiguredialog.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include "kcoreaddons_kdepim_compat.h"
+#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(MarkdownPlugin, "kmail_markdownplugin.json")
 
@@ -52,8 +54,9 @@ bool MarkdownPlugin::hasConfigureDialog() const
 
 void MarkdownPlugin::showConfigureDialog(QWidget *parent)
 {
-    Q_UNUSED(parent)
-    //TODO
+    QPointer<MarkdownConfigureDialog> dlg = new MarkdownConfigureDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 QString MarkdownPlugin::description() const
