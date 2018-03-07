@@ -20,6 +20,7 @@
 #include "markdowndemowidget.h"
 #include "../markdownpreviewwidget.h"
 #include <QTextEdit>
+#include <QFile>
 #include <QHBoxLayout>
 #include <QPushButton>
 
@@ -30,17 +31,28 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout;
     vboxLayout->addLayout(mainLayout);
     mEdit = new QTextEdit(this);
+    mEdit->setAcceptRichText(false);
     mainLayout->addWidget(mEdit);
     mPreview = new MarkdownPreviewWidget(this);
     mainLayout->addWidget(mPreview);
+
+    mSaveText = new QTextEdit(this);
+    mSaveText->setReadOnly(true);
+    mainLayout->addWidget(mSaveText);
+
     connect(mEdit, &QTextEdit::textChanged,
             [this]() { mPreview->slotUpdatePreview(mEdit->toPlainText()); });
     QPushButton *saveHtml = new QPushButton(QStringLiteral("Save Html"), this);
     connect(saveHtml, &QPushButton::clicked, this, &MarkdownDemoWidget::slotSaveHtml);
     vboxLayout->addWidget(saveHtml);
+
+    QFile defaultTextFile(QStringLiteral(":/test.txt"));
+    defaultTextFile.open(QIODevice::ReadOnly);
+    mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
 }
 
 void MarkdownDemoWidget::slotSaveHtml()
 {
+    const QString saveHtml = mPreview->saveHtml();
     //TODO
 }

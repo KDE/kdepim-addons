@@ -33,6 +33,7 @@ public:
 private:
     void slotSaveHtml();
     QTextEdit *mEdit = nullptr;
+    QTextEdit *mSaveText = nullptr;
     MarkdownPreviewWidget *mPreview = nullptr;
 };
 

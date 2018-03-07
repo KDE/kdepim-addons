@@ -35,7 +35,6 @@ void MarkdownDocument::setText(const QString &text)
     if (mText == text)
         return;
     mText = text;
-    qDebug() << " void MarkdownDocument::setText(const QString &text)"<<text;
     Q_EMIT textChanged(mText);
 }
 

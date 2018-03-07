@@ -19,6 +19,7 @@
 
 #include "markdownpreviewpage.h"
 #include <QWebEngineSettings>
+#include <QDebug>
 
 MarkdownPreviewPage::MarkdownPreviewPage(QWebEngineProfile *profile, QObject *parent)
     : QWebEnginePage(profile, parent)

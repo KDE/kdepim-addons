@@ -62,6 +62,8 @@ void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
 
 QString MarkdownPreviewWidget::saveHtml() const
 {
+    //FIXME
+    mWebView->page()->save(QStringLiteral("foo.html"));
     //TODO
     return {};
 }
