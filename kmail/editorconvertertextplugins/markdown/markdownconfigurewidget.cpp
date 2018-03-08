@@ -19,12 +19,24 @@
 
 #include "markdownconfigurewidget.h"
 #include <QHBoxLayout>
+#include <QComboBox>
+#include <QLabel>
+#include <KLocalizedString>
+
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+
+    QLabel *lab = new QLabel(i18n("Select CSS"), this);
+    lab->setObjectName(QStringLiteral("labelcss"));
+    mainLayout->addWidget(lab);
+
+    mCssCombobox = new QComboBox(this);
+    mCssCombobox->setObjectName(QStringLiteral("csscombobox"));
+    mainLayout->addWidget(mCssCombobox);
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()

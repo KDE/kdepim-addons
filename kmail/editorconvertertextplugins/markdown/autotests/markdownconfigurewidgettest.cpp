@@ -19,7 +19,9 @@
 
 #include "markdownconfigurewidgettest.h"
 #include "../markdownconfigurewidget.h"
+#include <QComboBox>
 #include <QHBoxLayout>
+#include <QLabel>
 #include <QTest>
 
 QTEST_MAIN(MarkdownConfigureWidgetTest)
@@ -35,4 +37,11 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
+
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("labelcss"));
+    QVERIFY(lab);
+    QVERIFY(!lab->text().isEmpty());
+
+    QComboBox *mCssCombobox = w.findChild<QComboBox *>(QStringLiteral("csscombobox"));
+    QVERIFY(mCssCombobox);
 }
