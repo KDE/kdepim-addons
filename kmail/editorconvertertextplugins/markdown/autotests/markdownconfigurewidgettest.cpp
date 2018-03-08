@@ -19,6 +19,7 @@
 
 #include "markdownconfigurewidgettest.h"
 #include "../markdownconfigurewidget.h"
+#include <QHBoxLayout>
 #include <QTest>
 
 QTEST_MAIN(MarkdownConfigureWidgetTest)
@@ -26,4 +27,12 @@ MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
+{
+    MarkdownConfigureWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 }

@@ -18,11 +18,13 @@
 */
 
 #include "markdownconfigurewidget.h"
-
+#include <QHBoxLayout>
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
 {
-
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()
