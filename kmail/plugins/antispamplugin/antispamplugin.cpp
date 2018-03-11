@@ -19,7 +19,7 @@
 #include "antispamplugin.h"
 #include "antispamplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(AntiSpamPlugin, "kmail_antispamplugin.json")
 
 AntiSpamPlugin::AntiSpamPlugin(QObject *parent, const QList<QVariant> &)

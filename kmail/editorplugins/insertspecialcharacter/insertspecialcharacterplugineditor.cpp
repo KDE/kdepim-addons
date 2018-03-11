@@ -20,7 +20,7 @@
 #include "insertspecialcharacterplugineditor.h"
 #include "insertspecialcharacterplugineditorinterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(InsertSpecialCharacterPluginEditor, "kmail_insertspecialcharactereditorplugin.json")
 
 InsertSpecialCharacterPluginEditor::InsertSpecialCharacterPluginEditor(QObject *parent, const QList<QVariant> &)

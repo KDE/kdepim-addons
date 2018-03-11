@@ -20,7 +20,7 @@
 #include "sendmailplugin.h"
 #include "sendmailplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(SendMailPlugin, "kaddressbook_sendmailplugin.json")
 
 SendMailPlugin::SendMailPlugin(QObject *parent, const QList<QVariant> &)

@@ -21,7 +21,7 @@
 #include "automaticaddcontactsinterface.h"
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguredialog.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <QPointer>
 #include <kpluginfactory.h>
 

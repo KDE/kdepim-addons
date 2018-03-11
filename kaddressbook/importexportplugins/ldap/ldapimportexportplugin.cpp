@@ -20,7 +20,7 @@
 #include "ldapimportexportplugin.h"
 #include "ldapimportexportplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(LDapImportExportPlugin, "kaddressbook_importexportldapplugin.json")
 
 LDapImportExportPlugin::LDapImportExportPlugin(QObject *parent, const QList<QVariant> &)

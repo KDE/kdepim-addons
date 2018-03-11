@@ -24,7 +24,7 @@
 #include "../lib/widgets/adblockpluginurlinterceptorconfiguredialog.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(AdblockPluginUrlInterceptor, "messageviewer_adblockurlinterceptor.json")
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)
     : WebEngineViewer::NetworkPluginUrlInterceptor(parent)

@@ -20,7 +20,7 @@
 #include "sendvcardsplugin.h"
 #include "sendvcardsplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(SendVcardsPlugin, "kaddressbook_sendvcardsplugin.json")
 
 SendVcardsPlugin::SendVcardsPlugin(QObject *parent, const QList<QVariant> &)

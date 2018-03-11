@@ -21,7 +21,7 @@
 #include "checkbeforesendinterface.h"
 #include "configurewidget/checkbeforesendconfigurewidget.h"
 #include "configurewidget/checkbeforesendconfiguredialog.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <QPointer>
 #include <kpluginfactory.h>
 

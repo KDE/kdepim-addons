@@ -20,7 +20,7 @@
 #include "evolutionv1importdata.h"
 #include "mailimporter/filterevolution.h"
 #include "mailimporter/filterinfo.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 
 #include <KLocalizedString>
 #include <kpluginfactory.h>

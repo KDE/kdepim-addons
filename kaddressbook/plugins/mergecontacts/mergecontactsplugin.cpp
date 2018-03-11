@@ -20,7 +20,7 @@
 #include "mergecontactsplugin.h"
 #include "mergecontactsplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(MergeContactsPlugin, "kaddressbook_mergecontactsplugin.json"
                            )
 

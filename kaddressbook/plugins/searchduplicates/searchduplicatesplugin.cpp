@@ -20,7 +20,7 @@
 #include "searchduplicatesplugin.h"
 #include "searchduplicatesplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(SearchDuplicatesPlugin, "kaddressbook_searchduplicatesplugin.json")
 
 SearchDuplicatesPlugin::SearchDuplicatesPlugin(QObject *parent, const QList<QVariant> &)

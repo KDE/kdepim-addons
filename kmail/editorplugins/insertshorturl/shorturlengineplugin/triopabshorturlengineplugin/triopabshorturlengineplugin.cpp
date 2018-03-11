@@ -20,7 +20,7 @@
 #include "triopabshorturlengineplugin.h"
 #include "triopabshorturlengineinterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(TriopAbShortUrlEnginePlugin, "pimcommon_triopabshorturlengineplugin.json")
 
 TriopAbShortUrlEnginePlugin::TriopAbShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)

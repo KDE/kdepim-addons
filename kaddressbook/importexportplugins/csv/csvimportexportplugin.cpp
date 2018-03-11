@@ -20,7 +20,7 @@
 #include "csvimportexportplugin.h"
 #include "csvimportexportplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(CSVImportExportPlugin, "kaddressbook_importexportcsvplugin.json")
 
 CSVImportExportPlugin::CSVImportExportPlugin(QObject *parent, const QList<QVariant> &)

@@ -23,7 +23,7 @@
 #include "markdownconfiguredialog.h"
 #include <KLocalizedString>
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(MarkdownPlugin, "kmail_markdownplugin.json")

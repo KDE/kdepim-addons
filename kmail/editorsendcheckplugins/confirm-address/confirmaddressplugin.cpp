@@ -21,7 +21,7 @@
 #include "confirmaddressinterface.h"
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressconfiguredialog.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <QPointer>
 #include <kpluginfactory.h>
 

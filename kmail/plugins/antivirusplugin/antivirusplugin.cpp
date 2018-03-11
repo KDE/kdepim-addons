@@ -20,7 +20,7 @@
 #include "antivirusplugin.h"
 #include "antivirusplugininterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(AntiVirusPlugin, "kmail_antivirusplugin.json")
 
 AntiVirusPlugin::AntiVirusPlugin(QObject *parent, const QList<QVariant> &)

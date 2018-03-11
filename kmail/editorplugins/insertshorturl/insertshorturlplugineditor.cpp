@@ -22,7 +22,7 @@
 #include "insertshorturlconfiguredialog.h"
 #include <kpluginfactory.h>
 #include <QPointer>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(InsertShorturlPluginEditor, "kmail_insertshorturleditorplugin.json")
 
 InsertShorturlPluginEditor::InsertShorturlPluginEditor(QObject *parent, const QList<QVariant> &)

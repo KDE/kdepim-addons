@@ -23,7 +23,7 @@
 #include <KActionCollection>
 #include <QPointer>
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExternalscript, "messageviewer_externalscriptplugin.json")
 

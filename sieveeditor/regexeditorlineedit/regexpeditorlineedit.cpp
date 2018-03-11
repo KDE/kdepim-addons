@@ -27,7 +27,7 @@
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 #include <QDialog>
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <KTextWidgets/kregexpeditorinterface.h>
 
 K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")

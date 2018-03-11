@@ -19,7 +19,7 @@
 
 #include "addresslocationeditorplugin.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 #include "addresseditor/addresseslocationwidget.h"
 
 #include <QHBoxLayout>

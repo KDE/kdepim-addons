@@ -22,7 +22,7 @@
 #include <KLocalizedString>
 #include <kpluginfactory.h>
 #include <pimcommon/customtoolswidgetng.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(TranslatorPlugin, "pimcommon_translatorplugin.json")
 TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)

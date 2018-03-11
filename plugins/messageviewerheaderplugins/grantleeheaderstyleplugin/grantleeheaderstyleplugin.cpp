@@ -21,7 +21,7 @@
 #include "grantleeheaderstyleplugin.h"
 #include <messageviewer/grantleeheaderstyle.h>
 #include "grantleeheaderstrategy.h"
-#include "kcoreaddons_kdepim_compat.h"
+
 #include <kpluginfactory.h>
 using namespace MessageViewer;
 

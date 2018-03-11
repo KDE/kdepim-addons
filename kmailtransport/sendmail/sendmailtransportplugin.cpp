@@ -23,7 +23,7 @@
 #include <kpluginfactory.h>
 #include <KLocalizedString>
 #include <QPointer>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(SendMailTransportPlugin, "sendmailtransport.json")
 
 SendMailTransportPlugin::SendMailTransportPlugin(QObject *parent, const QList<QVariant> &)

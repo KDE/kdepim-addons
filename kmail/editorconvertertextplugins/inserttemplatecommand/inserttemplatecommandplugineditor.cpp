@@ -20,7 +20,7 @@
 #include "inserttemplatecommandplugineditor.h"
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <kpluginfactory.h>
-#include "kcoreaddons_kdepim_compat.h"
+
 K_PLUGIN_CLASS_WITH_JSON(InsertTemplateCommandPluginEditor, "kmail_inserttemplatecommandeditorplugin.json")
 
 InsertTemplateCommandPluginEditor::InsertTemplateCommandPluginEditor(QObject *parent, const QList<QVariant> &)
