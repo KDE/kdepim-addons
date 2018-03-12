@@ -17,6 +17,7 @@ Name[zh_CN]=日历的月相插件
 Comment=This plugin shows the day's lunar phase (New, First, Last, Full)
 Comment[ca]=Aquest connector mostra la fase lunar del dia (Nova, Creixent, Plena, Minvant)
 Comment[ca@valencia]=Este connector mostra la fase lunar del dia (Nova, Creixent, Plena, Minvant)
+Comment[de]=Dieses Modul zeigt die Mondphasen (Neumond, Erstes Viertel, Letztes Viertel, Vollmond)
 Comment[en_GB]=This plugin shows the day's lunar phase (New, First, Last, Full)
 Comment[es]=Este complemento muestra el día de la fase de la luna (nueva, creciente, menguante, llena)
 Comment[fr]=Ce module affiche la phase lunaire des jours (nouvelle lune, premier quartier, pleine lune, dernier quartier)
