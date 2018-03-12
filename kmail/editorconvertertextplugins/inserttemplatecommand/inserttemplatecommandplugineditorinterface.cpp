@@ -70,6 +70,8 @@ bool InsertTemplateCommandPluginEditorInterface::convertTextToFormat(MessageComp
 
 bool InsertTemplateCommandPluginEditorInterface::reformatText()
 {
+    //TODO use templateparser.
+    //TODO show list of action depend if it's a new message or a reply etc.
     //TODO we need to reformat text and change text.
     return false;
 }
