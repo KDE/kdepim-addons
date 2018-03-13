@@ -21,6 +21,7 @@
 #define INSERTTEMPLATECOMMANDPLUGINEDITORINTERFACE_H
 
 #include <MessageComposer/PluginEditorConvertTextInterface>
+class QToolButton;
 namespace TemplateParser {
 class TemplatesInsertCommandAction;
 }
@@ -34,7 +35,7 @@ public:
     void createAction(KActionCollection *ac) override;
     bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
     bool reformatText() override;
-
+    void setMessage(const KMime::Message::Ptr &) override;
 
 private:
     void slotInsertCommand(const QString &cmd, int adjustCursor);
@@ -43,7 +44,7 @@ private:
     QString mCommand;
     int mAdjustCursor = 0;
     TemplateParser::TemplatesInsertCommandAction *mCommandAction = nullptr;
-
+    QToolButton *mToolButton = nullptr;
 };
 
 #endif

@@ -40,17 +40,17 @@ void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection 
 {
     mCommandAction = new TemplateParser::TemplatesInsertCommandAction(this);
     mCommandAction->setType(TemplateParser::TemplatesCommandMenu::CurrentMessage);
-    QToolButton *toolButton = new QToolButton;
+    mToolButton = new QToolButton;
+    mToolButton->setMenu(mCommandAction->menu());
 
-    toolButton->setText(i18n("Insert Template Command..."));
-    toolButton->setPopupMode(QToolButton::MenuButtonPopup);
-    mCommandAction->setDefaultWidget(toolButton);
+    mToolButton->setText(i18n("Insert Template Command..."));
+    mToolButton->setPopupMode(QToolButton::MenuButtonPopup);
+    mCommandAction->setDefaultWidget(mToolButton);
     ac->addAction(QStringLiteral("insert_template_command"), mCommandAction);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotOpenMenu);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
     MessageComposer::PluginActionType type(mCommandAction, MessageComposer::PluginActionType::ToolBar);
     setActionType(type);
-    toolButton->setMenu(mCommandAction->menu());
 }
 
 void InsertTemplateCommandPluginEditorInterface::slotOpenMenu()
@@ -81,4 +81,15 @@ bool InsertTemplateCommandPluginEditorInterface::reformatText()
     //TODO show list of action depend if it's a new message or a reply etc.
     //TODO we need to reformat text and change text.
     return false;
+}
+
+
+void InsertTemplateCommandPluginEditorInterface::setMessage(const KMime::Message::Ptr &msg)
+{
+    MessageComposer::PluginEditorConvertTextInterface::setMessage(msg);
+    TemplateParser::TemplatesCommandMenu::MenuTypes type;
+    type |= TemplateParser::TemplatesCommandMenu::ReplyForwardMessage;
+    type |= TemplateParser::TemplatesCommandMenu::CurrentMessage;
+    mCommandAction->setType(type);
+    mToolButton->setMenu(mCommandAction->menu());
 }
