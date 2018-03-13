@@ -85,6 +85,7 @@ bool InsertTemplateCommandPluginEditorInterface::reformatText()
 
 void InsertTemplateCommandPluginEditorInterface::setMessage(const KMime::Message::Ptr &msg)
 {
+    //We need to understand how we can find a new message
     MessageComposer::PluginEditorConvertTextInterface::setMessage(msg);
     TemplateParser::TemplatesCommandMenu::MenuTypes type;
     type |= TemplateParser::TemplatesCommandMenu::ReplyForwardMessage;
