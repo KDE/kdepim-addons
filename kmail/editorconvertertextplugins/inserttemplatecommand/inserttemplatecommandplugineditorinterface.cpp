@@ -24,6 +24,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QWidgetAction>
 #include <QMenu>
 
 InsertTemplateCommandPluginEditorInterface::InsertTemplateCommandPluginEditorInterface(QObject *parent)
@@ -38,7 +39,10 @@ InsertTemplateCommandPluginEditorInterface::~InsertTemplateCommandPluginEditorIn
 void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection *ac)
 {
     mCommandAction = new TemplateParser::TemplatesInsertCommandAction(this);
-    mCommandAction->setText(i18n("Insert Template Command..."));
+    mCommandAction->setType(TemplateParser::TemplatesCommandMenu::CurrentMessage);
+    QToolButton *toolButton = new QToolButton;
+
+    toolButton->setText(i18n("Insert Template Command..."));
     ac->addAction(QStringLiteral("insert_template_command"), mCommandAction);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotOpenMenu);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
