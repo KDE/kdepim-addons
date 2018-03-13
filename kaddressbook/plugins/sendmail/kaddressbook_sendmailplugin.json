@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to send email directly to selected contacts.",
-        "Description[ca@valencia]": "Este connector permet enviar correus electrònics directament als contactes seleccionats.",
+        "Description[ca@valencia]": "Aquest connector permet enviar correus electrònics directament als contactes seleccionats.",
         "Description[ca]": "Aquest connector permet enviar correus electrònics directament als contactes seleccionats.",
         "Description[cs]": "Tento modul umožňuje odeslat e-mail přímo vybraným kontaktům.",
         "Description[de]": "Mit diesem Modul können Sie E-Mails direkt an ausgewählte Kontakte senden.",

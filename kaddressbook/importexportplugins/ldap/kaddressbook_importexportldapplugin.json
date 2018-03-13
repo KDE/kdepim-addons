@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to import/export LDAP contacts.",
-        "Description[ca@valencia]": "Este connector permet importar o exportar els contactes LDAP.",
+        "Description[ca@valencia]": "Aquest connector permet importar o exportar els contactes LDAP.",
         "Description[ca]": "Aquest connector permet importar o exportar els contactes LDAP.",
         "Description[cs]": "Tento modul umožňuje import/export kontakt; LDAP.",
         "Description[de]": "Mit diesem Modul können Sie LDAP-Kontakte importieren oder exportieren.",

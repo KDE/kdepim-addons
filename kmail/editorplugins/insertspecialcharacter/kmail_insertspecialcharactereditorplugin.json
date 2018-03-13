@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to insert special character in composer.",
-        "Description[ca@valencia]": "Este connector permet inserir caràcters especials a l'editor.",
+        "Description[ca@valencia]": "Aquest connector permet inserir caràcters especials a l'editor.",
         "Description[ca]": "Aquest connector permet inserir caràcters especials a l'editor.",
         "Description[de]": "Dieses Modul ermöglicht das Einfügen von Sonderzeichen in E-Mails.",
         "Description[es]": "Este complemento le permite insertar caracteres especiales en el editor.",

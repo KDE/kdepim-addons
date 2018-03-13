@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin defines a mail header style for enterprise.",
-        "Description[ca@valencia]": "Este connector defineix un estil empresarial per a la capçalera del correu.",
+        "Description[ca@valencia]": "Aquest connector defineix un estil empresarial per a la capçalera del correu.",
         "Description[ca]": "Aquest connector defineix un estil empresarial per a la capçalera del correu.",
         "Description[es]": "Este complemento define un estilo de encabezado de correo para empresarial.",
         "Description[et]": "See plugin võimaldab kasutada firmapäise stiili.",

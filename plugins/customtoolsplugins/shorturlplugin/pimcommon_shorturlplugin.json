@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to expand URL.",
-        "Description[ca@valencia]": "Este connector permet expandir els URL.",
+        "Description[ca@valencia]": "Aquest connector permet expandir els URL.",
         "Description[ca]": "Aquest connector permet expandir els URL.",
         "Description[de]": "Mit diesem Modul können Sie URLs/Adressen erweitern.",
         "Description[es]": "Este complemento le permite expandir un URL.",
