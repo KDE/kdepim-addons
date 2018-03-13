@@ -44,10 +44,9 @@ void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection 
     mToolButton->setMenu(mCommandAction->menu());
 
     mToolButton->setText(i18n("Insert Template Command..."));
-    mToolButton->setPopupMode(QToolButton::MenuButtonPopup);
+    mToolButton->setPopupMode(QToolButton::InstantPopup);
     mCommandAction->setDefaultWidget(mToolButton);
     ac->addAction(QStringLiteral("insert_template_command"), mCommandAction);
-    connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::triggered, this, &InsertTemplateCommandPluginEditorInterface::slotOpenMenu);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
     MessageComposer::PluginActionType type(mCommandAction, MessageComposer::PluginActionType::ToolBar);
     setActionType(type);
