@@ -2,7 +2,7 @@
 Name=Search Subject on Web
 Name[ar]=ابحث عن موضوع في الوبّ
 Name[ca]=Cerca l'assumpte al web
-Name[ca@valencia]=Busca l'assumpte al web
+Name[ca@valencia]=Cerca l'assumpte al web
 Name[cs]=Hledat předmět na webu
 Name[de]=Thema im Internet suchen
 Name[en_GB]=Search Subject on Web
@@ -35,7 +35,7 @@ Icon=firefox
 Description=Search subject on web
 Description[ar]=ابحث عن موضوع في الوبّ
 Description[ca]=Cerca l'assumpte al web
-Description[ca@valencia]=Busca l'assumpte al web
+Description[ca@valencia]=Cerca l'assumpte al web
 Description[cs]=Hledat předmět na webu
 Description[de]=Thema im Internet suchen
 Description[en_GB]=Search subject on web

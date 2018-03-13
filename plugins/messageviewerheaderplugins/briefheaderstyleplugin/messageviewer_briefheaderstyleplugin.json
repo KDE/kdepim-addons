@@ -2,7 +2,7 @@
     "KPlugin": {
         "Description": "This plugin reduces mail header to strict minimum.",
         "Description[ar]": "تقلّل هذه الملحقة ترويسة البريد لتكون بأقلّ قدر ممكن.",
-        "Description[ca@valencia]": "Este connector redueix la capçalera del correu al mínim estricte.",
+        "Description[ca@valencia]": "Aquest connector redueix la capçalera del correu al mínim estricte.",
         "Description[ca]": "Aquest connector redueix la capçalera del correu al mínim estricte.",
         "Description[es]": "Este complemento reduce el encabezado del mensaje al mínimo estricto.",
         "Description[et]": "See plugin kahandab kirja päise rangelt nõutava miinimumini.",

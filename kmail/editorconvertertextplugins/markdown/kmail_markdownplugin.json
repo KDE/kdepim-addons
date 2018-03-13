@@ -1,7 +1,9 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to generate html from markdown language",
+        "Description[ca@valencia]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
         "Description[ca]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
+        "Description[fr]": "Ce module permet de générer du HTML à partir du langage Markdown",
         "Description[nl]": "Deze plug-in stelt u in staat html te maken uit een markdown-taal.",
         "Description[pt]": "Este 'plugin' permite-lhe gerar HTML a partir da linguagem Markdown",
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa HTML från språket Markdown",

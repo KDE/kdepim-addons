@@ -2,7 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to create an event from a message.",
         "Description[ar]": "تتيح لك هذه الملحقة إنشاء حدث من رسالة ما.",
-        "Description[ca@valencia]": "Este connector permet crear un esdeveniment a partir d'un missatge.",
+        "Description[ca@valencia]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.",
         "Description[ca]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.",
         "Description[de]": "Mit diesem Modul können Sie einen Termin aus einer Nachricht erstellen.",
         "Description[es]": "Este complemento le permite crear un evento desde un mensaje.",
