@@ -154,7 +154,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, airport);
                 places.insert(iataCode);
             }
-        } else if (r.userType() == qMetaTypeId<TrainReservation>()) {
+        } else if (r.userType() == qMetaTypeId<TrainReservation>() || r.userType() == qMetaTypeId<BusReservation>()) {
             const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
 
             auto station = JsonLdDocument::readProperty(trip, "departureStation");

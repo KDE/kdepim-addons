@@ -58,6 +58,9 @@ GRANTLEE_MAKE_GADGET(Ticket)
 GRANTLEE_MAKE_GADGET(TrainStation)
 GRANTLEE_MAKE_GADGET(TrainTrip)
 GRANTLEE_MAKE_GADGET(TrainReservation)
+GRANTLEE_MAKE_GADGET(BusStation)
+GRANTLEE_MAKE_GADGET(BusTrip)
+GRANTLEE_MAKE_GADGET(BusReservation)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -73,6 +76,9 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<TrainStation>();
     Grantlee::registerMetaType<TrainTrip>();
     Grantlee::registerMetaType<TrainReservation>();
+    Grantlee::registerMetaType<BusStation>();
+    Grantlee::registerMetaType<BusTrip>();
+    Grantlee::registerMetaType<BusReservation>();
 }
 
 bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const

@@ -10,6 +10,8 @@
         {% include ":/org.kde.messageviewer/semantic/lodgingreservation.html" %}
     {% elif item.className == "TrainReservation" %}
         {% include ":/org.kde.messageviewer/semantic/trainreservation.html" %}
+    {% elif item.className == "BusReservation" %}
+        {% include ":/org.kde.messageviewer/semantic/busreservation.html" %}
     {% endif %}
 
     {% if not forloop.last %}

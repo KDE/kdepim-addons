@@ -1,0 +1,70 @@
+<table style="width:100%;">
+    <tr>
+        <td style="font-size:120%; width:33;">
+            {{ item.reservationFor.departureStation.name }}
+            {% if item.reservationFor.departurePlatform %}
+                [{{ item.reservationFor.departurePlatform }}]
+            {% endif %}
+        </td>
+        <td style="font-size:120%; width:33%; text-align:center;">&rarr;</td>
+        <td style="font-size:120%; width:33%;">
+            {{ item.reservationFor.arrivalStation.name}}
+            {% if item.reservationFor.arrivalPlatform %}
+                [{{ item.reservationFor.arrivalPlatform }}]
+            {% endif %}
+        </td>
+    </tr>
+    <tr>
+        <td>{{ item.reservationFor.departureTimeLocalized }}</td>
+        <td style="white-space: nowrap; text-align:center;">
+            {% if item.reservationFor.busName and item.reservationiFor.busNumber %}
+                {{ item.reservationFor.busName }} <br> {{ item.reservationFor.busNumber }}
+            {% else %}
+                {{ item.reservationFor.busName }} {{ item.reservationFor.busNumber }}
+            {% endif %}
+        </td>
+        <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
+    </tr>
+    <tr><td colspan="3">
+        <div style="float:left">
+        {% if elem.ticketToken %}
+            <a href="x-kmail:/bodypart/0//semanticExpand?{{ forloop.counter0 }}">
+            {% if elem.state.expanded %}
+                <img src="{{ style.collapseIcon }}" style="margin-right: 4px;"/>
+            {% else %}
+                <img src="{{ style.expandIcon }}" style="margin-right: 4px;"/>
+            {% endif %}
+            </a>
+        {% endif %}
+
+        {% if item.reservedTicket.ticketedSeat.seatNumber %}
+            {% i18n "Seat: %1" item.reservedTicket.ticketedSeat.seatNumber %}
+        {% endif %}
+        </div>
+
+        <div style="float:right">
+        {% if item.url %}
+            <a href="{{ item.url }}"/>{% i18n "View" %}</a>
+            {% if item.modifyReservationUrl or item.cancelReservationUrl %}|{% endif %}
+        {% endif %}
+
+        {% if item.modifyReservationUrl %}
+            <a href="{{ item.modifyReservationUrl }}"/>{% i18n "Modify" %}</a>
+            {% if item.cancelReservationUrl %}|{% endif %}
+        {% endif %}
+
+        {% if item.cancelReservationUrl %}
+            <a href="{{ item.cancelReservationUrl }}"/>{% i18n "Cancel" %}</a>
+        {% endif %}
+        </div>
+
+    </td></tr>
+</table>
+
+{% if elem.state.expanded %}
+    <div style="text-align:center;">
+        <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
+        <img src="{{ elem.ticketToken }}"/>
+        </div>
+    </div>
+{% endif %}
