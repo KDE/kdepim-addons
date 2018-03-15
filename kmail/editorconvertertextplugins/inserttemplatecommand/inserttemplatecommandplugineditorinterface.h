@@ -35,7 +35,7 @@ public:
     void createAction(KActionCollection *ac) override;
     bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
     bool reformatText() override;
-    void setMessage(const KMime::Message::Ptr &) override;
+    void setInitialData(const MessageComposer::PluginEditorConverterInitialData &data) override;
 
 private:
     void slotInsertCommand(const QString &cmd, int adjustCursor);
@@ -45,6 +45,7 @@ private:
     int mAdjustCursor = 0;
     TemplateParser::TemplatesInsertCommandAction *mCommandAction = nullptr;
     QToolButton *mToolButton = nullptr;
+
 };
 
 #endif

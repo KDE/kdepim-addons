@@ -20,6 +20,7 @@
 #include "inserttemplatecommandplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <TemplateParser/TemplatesInsertCommandAction>
+#include <MessageComposer/PluginEditorConverterInitialData>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -82,14 +83,14 @@ bool InsertTemplateCommandPluginEditorInterface::reformatText()
     return false;
 }
 
-
-void InsertTemplateCommandPluginEditorInterface::setMessage(const KMime::Message::Ptr &msg)
+void InsertTemplateCommandPluginEditorInterface::setInitialData(const MessageComposer::PluginEditorConverterInitialData &data)
 {
-    //We need to understand how we can find a new message
-    MessageComposer::PluginEditorConvertTextInterface::setMessage(msg);
+    MessageComposer::PluginEditorConvertTextInterface::setInitialData(data);
     TemplateParser::TemplatesCommandMenu::MenuTypes type;
-    type |= TemplateParser::TemplatesCommandMenu::ReplyForwardMessage;
     type |= TemplateParser::TemplatesCommandMenu::CurrentMessage;
+    if (!data.newMessage()) {
+        type |= TemplateParser::TemplatesCommandMenu::ReplyForwardMessage;
+    }
     mCommandAction->setType(type);
     mToolButton->setMenu(mCommandAction->menu());
 }
