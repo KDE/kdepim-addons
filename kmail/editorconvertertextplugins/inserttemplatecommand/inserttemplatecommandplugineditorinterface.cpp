@@ -27,6 +27,7 @@
 #include <QAction>
 #include <QWidgetAction>
 #include <QMenu>
+#include <KMessageBox>
 
 InsertTemplateCommandPluginEditorInterface::InsertTemplateCommandPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
@@ -77,10 +78,12 @@ bool InsertTemplateCommandPluginEditorInterface::convertTextToFormat(MessageComp
 
 bool InsertTemplateCommandPluginEditorInterface::reformatText()
 {
+
     //TODO use templateparser.
     //TODO show list of action depend if it's a new message or a reply etc.
     //TODO we need to reformat text and change text.
-    return false;
+    //We need to reformat text.
+    return true;
 }
 
 void InsertTemplateCommandPluginEditorInterface::setInitialData(const MessageComposer::PluginEditorConverterInitialData &data)

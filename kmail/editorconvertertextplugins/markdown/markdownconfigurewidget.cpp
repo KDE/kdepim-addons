@@ -46,12 +46,15 @@ MarkdownConfigureWidget::~MarkdownConfigureWidget()
 
 void MarkdownConfigureWidget::loadSettings()
 {
+    //TODO
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
+    //TODO
 }
 
 void MarkdownConfigureWidget::resetSettings()
 {
+    //TODO
 }
