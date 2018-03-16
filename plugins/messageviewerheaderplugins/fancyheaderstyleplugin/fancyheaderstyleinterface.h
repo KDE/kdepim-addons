@@ -28,7 +28,7 @@ class FancyHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
     Q_OBJECT
 public:
     explicit FancyHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~FancyHeaderStyleInterface();
+    ~FancyHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

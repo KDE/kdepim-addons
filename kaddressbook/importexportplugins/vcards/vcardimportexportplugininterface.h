@@ -28,7 +28,7 @@ class VCardImportExportPluginInterface : public KAddressBookImportExport::KAddre
     Q_OBJECT
 public:
     explicit VCardImportExportPluginInterface(QObject *parent = nullptr);
-    ~VCardImportExportPluginInterface();
+    ~VCardImportExportPluginInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

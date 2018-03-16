@@ -31,7 +31,7 @@ class ViewerPluginCreateTodoInterface : public ViewerPluginInterface
     Q_OBJECT
 public:
     explicit ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent = nullptr);
-    ~ViewerPluginCreateTodoInterface();
+    ~ViewerPluginCreateTodoInterface() override;
 
     void setText(const QString &text) override;
     QList<QAction *> actions() const override;

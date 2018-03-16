@@ -29,7 +29,7 @@ class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheck
     Q_OBJECT
 public:
     explicit CheckBeforeSendConfigureWidget(QWidget *parent = nullptr);
-    ~CheckBeforeSendConfigureWidget();
+    ~CheckBeforeSendConfigureWidget() override;
 
     void loadSettings() override;
     void saveSettings() override;

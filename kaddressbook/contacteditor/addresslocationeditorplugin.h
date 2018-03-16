@@ -29,7 +29,7 @@ public:
     explicit AddressLocationEditor(QWidget *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~AddressLocationEditor();
+    ~AddressLocationEditor() override;
 
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;

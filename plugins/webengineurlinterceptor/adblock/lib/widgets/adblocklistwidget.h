@@ -30,7 +30,7 @@ class AdBlockListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit AdBlockListWidget(QWidget *parent = nullptr);
-    ~AdBlockListWidget();
+    ~AdBlockListWidget() override;
 
 protected:
     void paintEvent(QPaintEvent *event) override;

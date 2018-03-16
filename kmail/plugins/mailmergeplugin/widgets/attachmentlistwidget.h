@@ -27,7 +27,7 @@ class AttachmentListWidget : public PimCommon::SimpleStringListEditor
 public:
     explicit AttachmentListWidget(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(),
                                   const QString &removeLabel = QString(), const QString &modifyLabel = QString());
-    ~AttachmentListWidget();
+    ~AttachmentListWidget() override;
 
     void addNewEntry() override;
     QString modifyEntry(const QString &text) override;

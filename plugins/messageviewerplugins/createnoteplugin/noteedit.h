@@ -36,7 +36,7 @@ class NoteEdit : public QWidget
     Q_OBJECT
 public:
     explicit NoteEdit(QWidget *parent = nullptr);
-    ~NoteEdit();
+    ~NoteEdit() override;
 
     Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);

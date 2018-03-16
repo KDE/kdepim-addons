@@ -28,7 +28,7 @@ class CSVImportExportPluginInterface : public KAddressBookImportExport::KAddress
     Q_OBJECT
 public:
     explicit CSVImportExportPluginInterface(QObject *parent = nullptr);
-    ~CSVImportExportPluginInterface();
+    ~CSVImportExportPluginInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

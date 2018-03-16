@@ -38,7 +38,7 @@ class TodoEdit : public QWidget
     Q_OBJECT
 public:
     explicit TodoEdit(QWidget *parent = nullptr);
-    ~TodoEdit();
+    ~TodoEdit() override;
 
     Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);

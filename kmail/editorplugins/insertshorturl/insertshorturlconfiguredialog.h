@@ -27,7 +27,7 @@ class InsertShorturlConfigureDialog : public QDialog
     Q_OBJECT
 public:
     explicit InsertShorturlConfigureDialog(QWidget *parent = nullptr);
-    ~InsertShorturlConfigureDialog();
+    ~InsertShorturlConfigureDialog() override;
 
     void accept() override;
 

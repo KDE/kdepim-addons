@@ -39,7 +39,7 @@ class EventEdit : public QWidget
     Q_OBJECT
 public:
     explicit EventEdit(QWidget *parent = nullptr);
-    ~EventEdit();
+    ~EventEdit() override;
 
     Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);

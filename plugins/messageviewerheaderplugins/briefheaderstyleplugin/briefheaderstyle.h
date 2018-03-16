@@ -44,7 +44,7 @@ public:
     {
     }
 
-    ~BriefHeaderStyle()
+    ~BriefHeaderStyle() override
     {
     }
 

@@ -29,7 +29,7 @@ class TriopAbShortUrlEnginePlugin : public ShortUrlEnginePlugin
     Q_OBJECT
 public:
     explicit TriopAbShortUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~TriopAbShortUrlEnginePlugin();
+    ~TriopAbShortUrlEnginePlugin() override;
 
     ShortUrlEngineInterface *createInterface(QObject *parent) override;
     QString engineName() const override;

@@ -30,7 +30,7 @@ class IsgdShortUrlEngineInterface : public ShortUrlEngineInterface
     Q_OBJECT
 public:
     explicit IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
-    ~IsgdShortUrlEngineInterface();
+    ~IsgdShortUrlEngineInterface() override;
 
     void generateShortUrl() override;
     QString engineName() const override;

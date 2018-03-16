@@ -30,7 +30,7 @@ class CsvParser : public QThread, public QCsvBuilderInterface
 
 public:
     explicit CsvParser(QObject *parent);
-    ~CsvParser();
+    ~CsvParser() override;
 
     void load(QIODevice *device);
 

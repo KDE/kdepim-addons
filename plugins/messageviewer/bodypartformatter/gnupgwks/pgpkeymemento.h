@@ -34,8 +34,8 @@ class PgpKeyMemento : public QObject, public MimeTreeParser::Interface::BodyPart
 {
     Q_OBJECT
 public:
-    explicit PgpKeyMemento();
-    ~PgpKeyMemento();
+    PgpKeyMemento();
+    ~PgpKeyMemento() override;
 
     bool isRunning() const;
     void setRunning(bool running);

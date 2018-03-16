@@ -27,7 +27,7 @@ class ConfirmAddressConfigureDialog : public PimCommon::ConfigurePluginDialog
     Q_OBJECT
 public:
     explicit ConfirmAddressConfigureDialog(QWidget *parent = nullptr);
-    ~ConfirmAddressConfigureDialog();
+    ~ConfirmAddressConfigureDialog() override;
 
 protected:
     QWidget *createLayout() override;

@@ -32,7 +32,7 @@ class GrantleeHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
     Q_OBJECT
 public:
     explicit GrantleeHeaderStyleInterface(HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~GrantleeHeaderStyleInterface();
+    ~GrantleeHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

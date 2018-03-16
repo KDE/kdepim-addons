@@ -30,7 +30,7 @@ class Picoftheday : public Decoration
 {
 public:
     Picoftheday();
-    ~Picoftheday();
+    ~Picoftheday() override;
 
     Element::List createDayElements(const QDate &) override;
 

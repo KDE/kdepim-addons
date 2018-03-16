@@ -32,7 +32,7 @@ class AkonadiPimDataSource : public QObject, public PimDataSource
 
 public:
     explicit AkonadiPimDataSource(QObject *parent = nullptr);
-    ~AkonadiPimDataSource();
+    ~AkonadiPimDataSource() override;
 
     qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;
     KCalCore::Calendar *calendar() const override;

@@ -29,7 +29,7 @@ class Datenums : public Decoration
 {
 public:
     Datenums();
-    ~Datenums()
+    ~Datenums() override
     {
     }
 

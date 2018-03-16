@@ -30,7 +30,7 @@ class GrantleeHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
     Q_OBJECT
 public:
     explicit GrantleeHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~GrantleeHeaderStylePlugin();
+    ~GrantleeHeaderStylePlugin() override;
 
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;

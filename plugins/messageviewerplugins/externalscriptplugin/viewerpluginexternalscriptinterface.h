@@ -29,7 +29,7 @@ class ViewerPluginExternalscriptInterface : public ViewerPluginInterface
     Q_OBJECT
 public:
     explicit ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent = nullptr);
-    ~ViewerPluginExternalscriptInterface();
+    ~ViewerPluginExternalscriptInterface() override;
 
     QList<QAction *> actions() const override;
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;

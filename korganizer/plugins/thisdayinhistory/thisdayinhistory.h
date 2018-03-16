@@ -29,7 +29,7 @@ class ThisDayInHistory : public Decoration
 {
 public:
     ThisDayInHistory();
-    ~ThisDayInHistory()
+    ~ThisDayInHistory() override
     {
     }
 

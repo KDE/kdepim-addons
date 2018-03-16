@@ -33,7 +33,7 @@ class CreateNoteJob : public KJob
     Q_OBJECT
 public:
     explicit CreateNoteJob(const KMime::Message::Ptr &notePtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
-    ~CreateNoteJob();
+    ~CreateNoteJob() override;
 
     void start() override;
 

@@ -29,7 +29,7 @@ class ViewerPluginExpandurlInterface : public ViewerPluginInterface
     Q_OBJECT
 public:
     explicit ViewerPluginExpandurlInterface(KActionCollection *ac, QWidget *parent = nullptr);
-    ~ViewerPluginExpandurlInterface();
+    ~ViewerPluginExpandurlInterface() override;
 
     QList<QAction *> actions() const override;
     void execute() override;

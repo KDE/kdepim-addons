@@ -31,7 +31,7 @@ class BriefHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
     Q_OBJECT
 public:
     explicit BriefHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~BriefHeaderStylePlugin();
+    ~BriefHeaderStylePlugin() override;
 
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;

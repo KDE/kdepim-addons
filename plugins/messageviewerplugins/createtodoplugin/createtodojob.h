@@ -31,7 +31,7 @@ class CreateTodoJob : public KJob
     Q_OBJECT
 public:
     explicit CreateTodoJob(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
-    ~CreateTodoJob();
+    ~CreateTodoJob() override;
 
     void start() override;
 

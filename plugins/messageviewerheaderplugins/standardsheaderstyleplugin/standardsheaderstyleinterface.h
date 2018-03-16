@@ -28,7 +28,7 @@ class StandardsHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
     Q_OBJECT
 public:
     explicit StandardsHeaderStyleInterface(HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~StandardsHeaderStyleInterface();
+    ~StandardsHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

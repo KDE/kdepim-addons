@@ -27,7 +27,7 @@ class ViewerPluginExternalConfigureDialog : public PimCommon::ConfigurePluginDia
     Q_OBJECT
 public:
     explicit ViewerPluginExternalConfigureDialog(QWidget *parent = nullptr);
-    ~ViewerPluginExternalConfigureDialog();
+    ~ViewerPluginExternalConfigureDialog() override;
 
 protected:
     QWidget *createLayout() override;

@@ -37,7 +37,7 @@ class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin, public KCal
 public:
     explicit PimEventsPlugin(QObject *parent = nullptr);
     explicit PimEventsPlugin(PimDataSource *factory, QObject *parent = nullptr);
-    ~PimEventsPlugin();
+    ~PimEventsPlugin() override;
 
     // CalendarEvents::CalendarEventsPlugin
     void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;

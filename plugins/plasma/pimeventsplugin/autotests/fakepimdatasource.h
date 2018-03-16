@@ -26,7 +26,7 @@ class FakePimDataSource : public PimDataSource
 {
 public:
     FakePimDataSource();
-    ~FakePimDataSource();
+    ~FakePimDataSource() override;
 
     void setAkonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence, qint64 akonadiId);
     qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;

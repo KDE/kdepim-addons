@@ -28,7 +28,7 @@ class LongHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
     Q_OBJECT
 public:
     explicit LongHeaderStyleInterface(HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~LongHeaderStyleInterface();
+    ~LongHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

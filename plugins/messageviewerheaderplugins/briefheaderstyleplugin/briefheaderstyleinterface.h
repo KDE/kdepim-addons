@@ -29,7 +29,7 @@ class BriefHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
     Q_OBJECT
 public:
     explicit BriefHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~BriefHeaderStyleInterface();
+    ~BriefHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

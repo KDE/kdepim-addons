@@ -26,7 +26,7 @@ class Lunarphases : public Decoration
 {
 public:
     Lunarphases();
-    ~Lunarphases()
+    ~Lunarphases() override
     {
     }
 

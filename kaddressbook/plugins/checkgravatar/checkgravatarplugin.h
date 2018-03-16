@@ -31,7 +31,7 @@ class CheckGravatarPlugin : public PimCommon::GenericPlugin
     Q_OBJECT
 public:
     explicit CheckGravatarPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~CheckGravatarPlugin();
+    ~CheckGravatarPlugin() override;
 
     PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 

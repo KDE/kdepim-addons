@@ -28,7 +28,7 @@ class SelectMailDialog : public QDialog
     Q_OBJECT
 public:
     explicit SelectMailDialog(QWidget *parent = nullptr);
-    ~SelectMailDialog();
+    ~SelectMailDialog() override;
 
     QStringList selectedEmails() const;
 

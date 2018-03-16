@@ -26,7 +26,7 @@ class DoNotTrackInterceptorInterface : public WebEngineViewer::NetworkPluginUrlI
     Q_OBJECT
 public:
     explicit DoNotTrackInterceptorInterface(QObject *parent = nullptr);
-    ~DoNotTrackInterceptorInterface();
+    ~DoNotTrackInterceptorInterface() override;
 
     bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
 };

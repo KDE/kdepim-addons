@@ -194,7 +194,7 @@ public:
     /**
      * Destroys the csv standard builder.
      */
-    ~QCsvStandardBuilder();
+    ~QCsvStandardBuilder() override;
 
     /**
      * Returns the error message of the last error.

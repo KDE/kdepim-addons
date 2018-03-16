@@ -28,7 +28,7 @@ class EnterpriseHeaderStyleInterface : public MessageViewer::HeaderStyleInterfac
     Q_OBJECT
 public:
     explicit EnterpriseHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent = nullptr);
-    ~EnterpriseHeaderStyleInterface();
+    ~EnterpriseHeaderStyleInterface() override;
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;

@@ -50,7 +50,7 @@ class VcardMemento : public QObject, public MimeTreeParser::Interface::BodyPartM
     Q_OBJECT
 public:
     explicit VcardMemento(const QStringList &emails);
-    ~VcardMemento();
+    ~VcardMemento() override;
 
     bool finished() const;
 

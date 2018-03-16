@@ -31,7 +31,7 @@ class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureDialog : public PimC
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptorConfigureDialog(QWidget *parent = nullptr);
-    ~AdblockPluginUrlInterceptorConfigureDialog();
+    ~AdblockPluginUrlInterceptorConfigureDialog() override;
 
 protected:
     QWidget *createLayout() override;

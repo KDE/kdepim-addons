@@ -51,7 +51,7 @@ class EventDataVisitor : public BaseEventDataVisitor
 {
 public:
     EventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
-    ~EventDataVisitor();
+    ~EventDataVisitor() override;
 
     const QMultiHash<QDate, CalendarEvents::EventData> &results() const;
 

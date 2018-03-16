@@ -29,7 +29,7 @@ class GMXImportExportPluginInterface : public KAddressBookImportExport::KAddress
     Q_OBJECT
 public:
     explicit GMXImportExportPluginInterface(QObject *parent = nullptr);
-    ~GMXImportExportPluginInterface();
+    ~GMXImportExportPluginInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

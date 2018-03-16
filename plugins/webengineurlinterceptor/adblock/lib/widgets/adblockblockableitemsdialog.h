@@ -30,7 +30,7 @@ class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog
     Q_OBJECT
 public:
     explicit AdBlockBlockableItemsDialog(QWidget *parent = nullptr);
-    ~AdBlockBlockableItemsDialog();
+    ~AdBlockBlockableItemsDialog() override;
 
     void saveFilters();
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);

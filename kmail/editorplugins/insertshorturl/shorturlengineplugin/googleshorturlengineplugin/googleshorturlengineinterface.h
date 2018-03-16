@@ -26,7 +26,7 @@ class GoogleShortUrlEngineInterface : public ShortUrlEngineInterface
 {
 public:
     explicit GoogleShortUrlEngineInterface(QObject *parent = nullptr);
-    ~GoogleShortUrlEngineInterface();
+    ~GoogleShortUrlEngineInterface() override;
 
     void generateShortUrl() override;
     QString engineName() const override;

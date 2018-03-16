@@ -36,7 +36,7 @@ public:
     };
 
     explicit PimCalendarsModel(QObject *parent = nullptr);
-    ~PimCalendarsModel();
+    ~PimCalendarsModel() override;
 
     QHash<int, QByteArray> roleNames() const override;
     QVariant data(const QModelIndex &index, int role) const override;

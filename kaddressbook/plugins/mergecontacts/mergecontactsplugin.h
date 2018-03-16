@@ -31,7 +31,7 @@ class MergeContactsPlugin : public PimCommon::GenericPlugin
     Q_OBJECT
 public:
     explicit MergeContactsPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~MergeContactsPlugin();
+    ~MergeContactsPlugin() override;
 
     PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 };

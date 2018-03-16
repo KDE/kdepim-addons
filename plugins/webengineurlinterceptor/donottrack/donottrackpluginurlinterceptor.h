@@ -30,7 +30,7 @@ class DoNotTrackPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlI
     Q_OBJECT
 public:
     explicit DoNotTrackPluginUrlInterceptor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~DoNotTrackPluginUrlInterceptor();
+    ~DoNotTrackPluginUrlInterceptor() override;
 
     WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 };

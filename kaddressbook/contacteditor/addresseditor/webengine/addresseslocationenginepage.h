@@ -29,7 +29,7 @@ class AddressesLocationEnginePage : public QWebEnginePage
     Q_OBJECT
 public:
     explicit AddressesLocationEnginePage(QObject *parent = nullptr);
-    ~AddressesLocationEnginePage();
+    ~AddressesLocationEnginePage() override;
 
 Q_SIGNALS:
     void urlClicked(const QUrl &url);

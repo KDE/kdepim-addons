@@ -31,7 +31,7 @@ class SearchDuplicatesPlugin : public PimCommon::GenericPlugin
     Q_OBJECT
 public:
     explicit SearchDuplicatesPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~SearchDuplicatesPlugin();
+    ~SearchDuplicatesPlugin() override;
 
     PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
 };

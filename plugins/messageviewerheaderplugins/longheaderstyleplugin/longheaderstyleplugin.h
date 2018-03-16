@@ -30,7 +30,7 @@ class LongHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
     Q_OBJECT
 public:
     explicit LongHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~LongHeaderStylePlugin();
+    ~LongHeaderStylePlugin() override;
 
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;

@@ -28,7 +28,7 @@ class SelectImapFolderTreeView : public QTreeView
     Q_OBJECT
 public:
     explicit SelectImapFolderTreeView(QWidget *parent);
-    ~SelectImapFolderTreeView();
+    ~SelectImapFolderTreeView() override;
     enum LoadingStatus {
         InProgress = 0,
         Success,

@@ -27,7 +27,7 @@ class SendVcardsPluginInterface : public PimCommon::GenericPluginInterface
     Q_OBJECT
 public:
     explicit SendVcardsPluginInterface(QObject *parent = nullptr);
-    ~SendVcardsPluginInterface();
+    ~SendVcardsPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

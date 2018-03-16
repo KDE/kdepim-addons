@@ -30,7 +30,7 @@ class EnterpriseHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
     Q_OBJECT
 public:
     explicit EnterpriseHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~EnterpriseHeaderStylePlugin();
+    ~EnterpriseHeaderStylePlugin() override;
 
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;

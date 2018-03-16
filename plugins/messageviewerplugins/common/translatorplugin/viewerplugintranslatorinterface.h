@@ -31,7 +31,7 @@ class ViewerPluginTranslatorInterface : public ViewerPluginInterface
     Q_OBJECT
 public:
     explicit ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent = nullptr);
-    ~ViewerPluginTranslatorInterface();
+    ~ViewerPluginTranslatorInterface() override;
 
     void setText(const QString &text) override;
     QList<QAction *> actions() const override;

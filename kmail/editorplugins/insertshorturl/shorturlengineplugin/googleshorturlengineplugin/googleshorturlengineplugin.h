@@ -29,7 +29,7 @@ class GoogleShortUrlEnginePlugin : public ShortUrlEnginePlugin
     Q_OBJECT
 public:
     explicit GoogleShortUrlEnginePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~GoogleShortUrlEnginePlugin();
+    ~GoogleShortUrlEnginePlugin() override;
 
     ShortUrlEngineInterface *createInterface(QObject *parent) override;
 };

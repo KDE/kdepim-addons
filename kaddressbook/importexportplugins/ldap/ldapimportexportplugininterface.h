@@ -26,7 +26,7 @@ class LDapImportExportPluginInterface : public KAddressBookImportExport::KAddres
     Q_OBJECT
 public:
     explicit LDapImportExportPluginInterface(QObject *parent = nullptr);
-    ~LDapImportExportPluginInterface();
+    ~LDapImportExportPluginInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;

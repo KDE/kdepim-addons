@@ -31,7 +31,7 @@ class CreateEventJob : public KJob
     Q_OBJECT
 public:
     explicit CreateEventJob(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
-    ~CreateEventJob();
+    ~CreateEventJob() override;
 
     void start() override;
 

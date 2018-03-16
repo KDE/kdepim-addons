@@ -30,7 +30,7 @@ class FancyHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
     Q_OBJECT
 public:
     explicit FancyHeaderStylePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~FancyHeaderStylePlugin();
+    ~FancyHeaderStylePlugin() override;
 
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;

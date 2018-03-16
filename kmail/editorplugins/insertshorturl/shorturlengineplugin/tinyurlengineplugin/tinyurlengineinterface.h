@@ -27,7 +27,7 @@ class TinyUrlEngineInterface : public ShortUrlEngineInterface
     Q_OBJECT
 public:
     explicit TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent = nullptr);
-    ~TinyUrlEngineInterface();
+    ~TinyUrlEngineInterface() override;
 
     void generateShortUrl() override;
 

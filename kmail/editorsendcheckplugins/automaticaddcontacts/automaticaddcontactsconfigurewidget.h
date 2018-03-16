@@ -28,7 +28,7 @@ class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditor
     Q_OBJECT
 public:
     explicit AutomaticAddContactsConfigureWidget(QWidget *parent = nullptr);
-    ~AutomaticAddContactsConfigureWidget();
+    ~AutomaticAddContactsConfigureWidget() override;
 
     void loadSettings() override;
     void saveSettings() override;

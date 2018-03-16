@@ -33,7 +33,7 @@ class SemanticProcessor : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
     SemanticProcessor();
-    ~SemanticProcessor();
+    ~SemanticProcessor() override;
 
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 

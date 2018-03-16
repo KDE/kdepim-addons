@@ -40,7 +40,7 @@ class CryptoPagePlugin : public ContactEditor::ContactEditorPagePlugin
     Q_PLUGIN_METADATA(IID "org.kde.kaddressbook.CryptoPagePlugin")
 public:
     CryptoPagePlugin();
-    ~CryptoPagePlugin();
+    ~CryptoPagePlugin() override;
     QString title() const override;
     void loadContact(const KContacts::Addressee &contact) override;
     void storeContact(KContacts::Addressee &contact) const override;

@@ -30,7 +30,7 @@ public:
     {
     }
 
-    ~EnterpriseHeaderStyle()
+    ~EnterpriseHeaderStyle() override
     {
     }
 

@@ -27,7 +27,7 @@ class MarkdownPreviewPage : public QWebEnginePage
     Q_OBJECT
 public:
     explicit MarkdownPreviewPage(QWebEngineProfile* profile, QObject* parent);
-    ~MarkdownPreviewPage() = default;
+    ~MarkdownPreviewPage() override = default;
 
 Q_SIGNALS:
     void openUrlRequested(const QUrl& url);

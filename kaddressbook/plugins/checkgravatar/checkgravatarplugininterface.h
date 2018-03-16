@@ -26,7 +26,7 @@ class CheckGravatarPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     explicit CheckGravatarPluginInterface(QObject *parent = nullptr);
-    ~CheckGravatarPluginInterface();
+    ~CheckGravatarPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

@@ -30,7 +30,7 @@ class Hebrew : public Decoration
 {
 public:
     Hebrew();
-    ~Hebrew();
+    ~Hebrew() override;
 
     void configure(QWidget *parent) override;
 

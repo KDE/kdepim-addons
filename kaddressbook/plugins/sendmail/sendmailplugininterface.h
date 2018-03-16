@@ -26,7 +26,7 @@ class SendMailPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     explicit SendMailPluginInterface(QObject *parent = nullptr);
-    ~SendMailPluginInterface();
+    ~SendMailPluginInterface() override;
 
     void exec() override;
     void createAction(KActionCollection *ac) override;

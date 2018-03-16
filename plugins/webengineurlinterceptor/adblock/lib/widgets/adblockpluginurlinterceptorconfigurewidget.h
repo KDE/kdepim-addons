@@ -30,7 +30,7 @@ class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebE
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptorConfigureWidget(QWidget *parent = nullptr);
-    ~AdblockPluginUrlInterceptorConfigureWidget();
+    ~AdblockPluginUrlInterceptorConfigureWidget() override;
 
     void loadSettings() override;
     void saveSettings() override;

@@ -28,7 +28,7 @@ public:
     explicit CSVImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~CSVImportExportPlugin();
+    ~CSVImportExportPlugin() override;
 
     PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) override;
     bool hasPopupMenuSupport() const override;

@@ -27,7 +27,7 @@ class CheckBeforeSendConfigureDialog : public PimCommon::ConfigurePluginDialog
     Q_OBJECT
 public:
     explicit CheckBeforeSendConfigureDialog(QWidget *parent = nullptr);
-    ~CheckBeforeSendConfigureDialog();
+    ~CheckBeforeSendConfigureDialog() override;
 
 protected:
     QWidget *createLayout() override;
