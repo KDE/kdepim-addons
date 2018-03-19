@@ -30,9 +30,9 @@
 
 #include <KTextWidgets/kregexpeditorinterface.h>
 
-K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")
+K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 
-RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
+EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractSelectEmailLineEdit(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
@@ -40,62 +40,29 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mainLayout->setMargin(0);
 
     mLineEdit = new QLineEdit(this);
-    connect(mLineEdit, &QLineEdit::textChanged, this, &RegexpEditorLineEdit::textChanged);
+    //FIXME connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::textChanged);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
-    mRegExpEditorButton = new QToolButton(this);
-    mRegExpEditorButton->setText(i18n("..."));
-    mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
-    mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
-    mainLayout->addWidget(mRegExpEditorButton);
-    if (s_regexpeditorinstalled->status == InfoRegExp::Unknown) {
-        if (KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty()) {
-            s_regexpeditorinstalled->status = InfoRegExp::NotInstalled;
-        } else {
-            s_regexpeditorinstalled->status = InfoRegExp::Installed;
-        }
-    }
-    if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
-        connect(mRegExpEditorButton, &QToolButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
-    } else {
-        qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
-    }
-    //Hidden by default
-    mRegExpEditorButton->setVisible(false);
+    mEmailButton = new QToolButton(this);
+    mEmailButton->setText(i18n("..."));
+    mEmailButton->setObjectName(QStringLiteral("emailbutton"));
+    mEmailButton->setToolTip(i18n("Select Emails"));
+    mainLayout->addWidget(mEmailButton);
 }
 
-RegexpEditorLineEdit::~RegexpEditorLineEdit()
+EmailLineEdit::~EmailLineEdit()
 {
 }
 
-void RegexpEditorLineEdit::slotOpenRegexpEditor()
+void EmailLineEdit::setText(const QString &str)
 {
-    if (!s_regexpeditorinstalled->mEditorDialog) {
-        QString error;
-
-        s_regexpeditorinstalled->mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
-        if (!s_regexpeditorinstalled->mEditorDialog) {
-            qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
-            return;
-        }
-    }
-    KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(s_regexpeditorinstalled->mEditorDialog);
-    Q_ASSERT(iface);   // This should not fail!
-
-    // now use the editor.
-    iface->setRegExp(mLineEdit->text());
-
-    if (s_regexpeditorinstalled->mEditorDialog->exec() == QDialog::Accepted) {
-        mLineEdit->setText(iface->regExp());
-    }
+    mLineEdit->setText(str);
 }
 
-void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
+QString EmailLineEdit::text() const
 {
-    if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
-        mRegExpEditorButton->setVisible(regexpEditor);
-    }
+    return mLineEdit->text();
 }
 
 #include "emaillineedit.moc"

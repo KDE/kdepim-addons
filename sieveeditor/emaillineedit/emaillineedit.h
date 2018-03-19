@@ -17,25 +17,27 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef REGEXPEDITORLINEEDIT_H
-#define REGEXPEDITORLINEEDIT_H
+#ifndef EMAILLINEEDIT_H
+#define EMAILLINEEDIT_H
 
 #include <QWidget>
 #include <KSieveUi/AbstractSelectEmailLineEdit>
 class QLineEdit;
 class QToolButton;
-class RegexpEditorLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
+class EmailLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
 {
     Q_OBJECT
 public:
-    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & =
+    explicit EmailLineEdit(QWidget *parent = nullptr, const QList<QVariant> & =
     {
     });
-    ~RegexpEditorLineEdit() override;
+    ~EmailLineEdit() override;
 
+    void setText(const QString &str) override;
+    QString text() const override;
 private:
     QLineEdit *mLineEdit = nullptr;
-    QToolButton *mRegExpEditorButton = nullptr;
+    QToolButton *mEmailButton = nullptr;
 };
 
-#endif // REGEXPEDITORLINEEDIT_H
+#endif // EMAILLINEEDIT_H
