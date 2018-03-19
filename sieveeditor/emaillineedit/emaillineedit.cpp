@@ -21,7 +21,6 @@
 #include "sieveeditoremaillineditplugin_debug.h"
 #include <kpluginfactory.h>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
-#include <AkonadiCore/ServerManager>
 
 #include <QHBoxLayout>
 #include <QLineEdit>
@@ -53,10 +52,16 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     mainLayout->addWidget(mEmailButton);
     connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);
     verifyAkonadiStatus();
+    connect(Akonadi::ServerManager::self(), &Akonadi::ServerManager::stateChanged, this, &EmailLineEdit::akonadiStateChanged);
 }
 
 EmailLineEdit::~EmailLineEdit()
 {
+}
+
+void EmailLineEdit::akonadiStateChanged(Akonadi::ServerManager::State state)
+{
+    mEmailButton->setVisible(state == Akonadi::ServerManager::Running);
 }
 
 void EmailLineEdit::verifyAkonadiStatus()

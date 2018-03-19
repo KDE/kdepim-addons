@@ -20,8 +20,8 @@
 #ifndef EMAILLINEEDIT_H
 #define EMAILLINEEDIT_H
 
-#include <QWidget>
 #include <KSieveUi/AbstractSelectEmailLineEdit>
+#include <AkonadiCore/ServerManager>
 class QLineEdit;
 class QToolButton;
 class EmailLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
@@ -40,6 +40,7 @@ private:
     void verifyAddress();
     void slotSelectEmail();
     void verifyAkonadiStatus();
+    void akonadiStateChanged(Akonadi::ServerManager::State state);
     QString mNegativeBackground;
     QLineEdit *mLineEdit = nullptr;
     QToolButton *mEmailButton = nullptr;
