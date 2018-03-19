@@ -37,6 +37,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     layout->setMargin(0);
     mLineEdit = new SelectImapLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
+    mLineEdit->setPlaceholderText(i18n("Click on button for selecting folder..."));
     layout->addWidget(mLineEdit);
 
     mToolButton = new QToolButton(this);
