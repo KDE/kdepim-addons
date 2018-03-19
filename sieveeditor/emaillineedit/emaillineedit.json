@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Id": "emaillineedit",
+        "ServiceTypes": [
+            "LibKSieve/EmailLineEdit"
+        ],
+        "Version": "1.0"
+    }
+}
