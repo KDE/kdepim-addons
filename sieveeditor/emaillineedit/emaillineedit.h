@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2017-2018 Montel Laurent <montel@kde.org>
+   Copyright (C) 2018 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -21,10 +21,10 @@
 #define REGEXPEDITORLINEEDIT_H
 
 #include <QWidget>
-#include <KSieveUi/AbstractRegexpEditorLineEdit>
+#include <KSieveUi/AbstractSelectEmailLineEdit>
 class QLineEdit;
 class QToolButton;
-class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
+class RegexpEditorLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
 {
     Q_OBJECT
 public:
@@ -33,14 +33,7 @@ public:
     });
     ~RegexpEditorLineEdit() override;
 
-    void switchToRegexpEditorLineEdit(bool regexpEditor) override;
-    void setCode(const QString &str) override;
-    QString code() const override;
-    void setClearButtonEnabled(bool b) override;
-    void setPlaceholderText(const QString &str) override;
-
 private:
-    void slotOpenRegexpEditor();
     QLineEdit *mLineEdit = nullptr;
     QToolButton *mRegExpEditorButton = nullptr;
 };

@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2017-2018 Montel Laurent <montel@kde.org>
+   Copyright (C) 2018 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "regexpeditorlineedit.h"
+#include "emaillineedit.h"
 #include "regexpeditorlineeditplugin_debug.h"
 #include <kpluginfactory.h>
 
@@ -31,27 +31,9 @@
 #include <KTextWidgets/kregexpeditorinterface.h>
 
 K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")
-struct InfoRegExp
-{
-    InfoRegExp()
-        : status(Unknown)
-        , mEditorDialog(nullptr)
-    {
-    }
-
-    enum RegexpEditorStatus {
-        Unknown = 0,
-        Installed,
-        NotInstalled
-    };
-    RegexpEditorStatus status;
-    QDialog *mEditorDialog = nullptr;
-};
-
-Q_GLOBAL_STATIC(InfoRegExp, s_regexpeditorinstalled)
 
 RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant> &)
-    : KSieveUi::AbstractRegexpEditorLineEdit(parent)
+    : KSieveUi::AbstractSelectEmailLineEdit(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -116,24 +98,4 @@ void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
     }
 }
 
-void RegexpEditorLineEdit::setCode(const QString &str)
-{
-    mLineEdit->setText(str);
-}
-
-QString RegexpEditorLineEdit::code() const
-{
-    return mLineEdit->text();
-}
-
-void RegexpEditorLineEdit::setClearButtonEnabled(bool b)
-{
-    mLineEdit->setClearButtonEnabled(b);
-}
-
-void RegexpEditorLineEdit::setPlaceholderText(const QString &str)
-{
-    mLineEdit->setPlaceholderText(str);
-}
-
-#include "regexpeditorlineedit.moc"
+#include "emaillineedit.moc"
