@@ -4,6 +4,11 @@ set(sieveeditoremaillinedit_plugin_categories_SRCS)
 ecm_qt_declare_logging_category(sieveeditoremaillinedit_plugin_categories_SRCS HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
     EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit)
 
+if(BUILD_TESTING)
+    add_subdirectory(tests)
+    add_subdirectory(autotests)
+endif()
+
 set(sieveeditoremaillineditplugin_SRCS
     emaillineedit.cpp
     ${sieveeditoremaillinedit_plugin_categories_SRCS}
@@ -17,8 +22,4 @@ target_link_libraries(emaillineeditplugin
     )
 
 
-if(BUILD_TESTING)
-    add_subdirectory(tests)
-    add_subdirectory(autotests)
-endif()
 
