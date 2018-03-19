@@ -75,13 +75,23 @@ void EmailLineEdit::slotSelectEmail()
     std::unique_ptr<Akonadi::EmailAddressSelectionDialog> dlg(
         new Akonadi::EmailAddressSelectionDialog(this));
     dlg->setWindowTitle(i18n("Select Emails"));
-    dlg->view()->view()->setSelectionMode(QAbstractItemView::SingleSelection);
+    dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
 
     if (dlg->exec()) {
         QStringList addresses;
         const Akonadi::EmailAddressSelection::List lstAddress = dlg->selectedAddresses();
         if (!lstAddress.isEmpty()) {
-            mLineEdit->setText(lstAddress.constFirst().email());
+            bool firstElement = true;
+            QString result;
+            for (const Akonadi::EmailAddressSelection &value : lstAddress) {
+                if (!firstElement) {
+                    result.append(QLatin1Char(';'));
+                } else {
+                    firstElement = false;
+                }
+                result.append(value.email());
+            }
+            mLineEdit->setText(result);
         }
     }
 }
