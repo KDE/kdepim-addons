@@ -36,6 +36,11 @@ public:
     void setText(const QString &str) override;
     QString text() const override;
 private:
+    void slotTextChanged();
+    void verifyAddress();
+    void slotSelectEmail();
+    void verifyAkonadiStatus();
+    QString mNegativeBackground;
     QLineEdit *mLineEdit = nullptr;
     QToolButton *mEmailButton = nullptr;
 };

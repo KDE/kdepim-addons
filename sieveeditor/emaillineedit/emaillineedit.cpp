@@ -18,17 +18,19 @@
 */
 
 #include "emaillineedit.h"
-#include "regexpeditorlineeditplugin_debug.h"
+#include "sieveeditoremaillineditplugin_debug.h"
 #include <kpluginfactory.h>
+#include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <AkonadiCore/ServerManager>
 
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QToolButton>
 #include <KLocalizedString>
-#include <KServiceTypeTrader>
 #include <QDialog>
-
-#include <KTextWidgets/kregexpeditorinterface.h>
+#include <QTreeView>
+#include <KColorScheme>
+#include <memory>
 
 K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 
@@ -40,7 +42,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     mainLayout->setMargin(0);
 
     mLineEdit = new QLineEdit(this);
-    //FIXME connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::textChanged);
+    connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mainLayout->addWidget(mLineEdit);
 
@@ -49,10 +51,34 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     mEmailButton->setObjectName(QStringLiteral("emailbutton"));
     mEmailButton->setToolTip(i18n("Select Emails"));
     mainLayout->addWidget(mEmailButton);
+    connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);
+    verifyAkonadiStatus();
 }
 
 EmailLineEdit::~EmailLineEdit()
 {
+}
+
+void EmailLineEdit::verifyAkonadiStatus()
+{
+    Akonadi::ServerManager::State state = Akonadi::ServerManager::self()->state();
+    mEmailButton->setVisible(state == Akonadi::ServerManager::Running);
+}
+
+void EmailLineEdit::slotSelectEmail()
+{
+    std::unique_ptr<Akonadi::EmailAddressSelectionDialog> dlg(
+        new Akonadi::EmailAddressSelectionDialog(this));
+    dlg->setWindowTitle(i18n("Select Emails"));
+    dlg->view()->view()->setSelectionMode(QAbstractItemView::SingleSelection);
+
+    if (dlg->exec()) {
+        QStringList addresses;
+        const Akonadi::EmailAddressSelection::List lstAddress = dlg->selectedAddresses();
+        if (!lstAddress.isEmpty()) {
+            mLineEdit->setText(lstAddress.constFirst().email());
+        }
+    }
 }
 
 void EmailLineEdit::setText(const QString &str)
@@ -63,6 +89,31 @@ void EmailLineEdit::setText(const QString &str)
 QString EmailLineEdit::text() const
 {
     return mLineEdit->text();
+}
+
+void EmailLineEdit::slotTextChanged()
+{
+    verifyAddress();
+    Q_EMIT valueChanged();
+}
+
+void EmailLineEdit::verifyAddress()
+{
+#ifndef QT_NO_STYLE_STYLESHEET
+    QString styleSheet;
+    const QString lineEditText = text();
+    if (!lineEditText.isEmpty()) {
+        const bool incorrectEmail = !lineEditText.contains(QLatin1Char('@'));
+        if (mNegativeBackground.isEmpty()) {
+            KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
+            mNegativeBackground = QStringLiteral("QLineEdit{ color:%1 }").arg(bgBrush.brush(this).color().name());
+        }
+        if (incorrectEmail) {
+            styleSheet = mNegativeBackground;
+        }
+    }
+    mLineEdit->setStyleSheet(styleSheet);
+#endif
 }
 
 #include "emaillineedit.moc"
