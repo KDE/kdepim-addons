@@ -1,9 +1,9 @@
 [
     {
+        "@context": "http://schema.org",
         "@type": "TrainReservation",
         "reservationFor": {
             "@type": "TrainTrip",
-            "arrivalPlatform": "",
             "arrivalStation": {
                 "@type": "TrainStation",
                 "name": "Brno hl.n."
@@ -28,6 +28,7 @@
         }
     },
     {
+        "@context": "http://schema.org",
         "@type": "TrainReservation",
         "reservationFor": {
             "@type": "TrainTrip",
@@ -37,7 +38,6 @@
                 "name": "Berlin Hbf (tief)"
             },
             "arrivalTime": "2027-11-17T21:15:00",
-            "departurePlatform": "",
             "departureStation": {
                 "@type": "TrainStation",
                 "name": "Brno hl.n."
