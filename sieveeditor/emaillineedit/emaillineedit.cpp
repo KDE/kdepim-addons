@@ -41,8 +41,9 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     mainLayout->setMargin(0);
 
     mLineEdit = new QLineEdit(this);
-    connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
+    mLineEdit->setClearButtonEnabled(true);
+    connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
     mEmailButton = new QToolButton(this);
