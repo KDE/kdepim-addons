@@ -20,6 +20,7 @@
 #include "extractor.h"
 #include "extractorengine.h"
 #include "extractorpreprocessor.h"
+#include "jsonlddocument.h"
 
 #include <QDebug>
 #include <QDir>
@@ -74,7 +75,7 @@ private Q_SLOTS:
         engine.setText(QString::fromUtf8(f.readAll()));
         engine.setSenderDate(QDateTime(QDate(2017, 12, 29), QTime(18, 46, 2)));
         engine.setExtractor(&extractor);
-        const auto data = engine.extract();
+        const auto data = JsonLdDocument::toJson(JsonLdDocument::fromJson(engine.extract()));
 
         QFile ref(jsonFile);
         QVERIFY(ref.open(QFile::ReadOnly));
@@ -125,7 +126,7 @@ private Q_SLOTS:
         engine.setText(preproc.text());
         engine.setSenderDate(QDateTime(QDate(2017, 12, 29), QTime(18, 46, 2)));
         engine.setExtractor(&extractor);
-        const auto data = engine.extract();
+        const auto data = JsonLdDocument::toJson(JsonLdDocument::fromJson(engine.extract()));
 
         QFile ref(jsonFile);
         QVERIFY(ref.open(QFile::ReadOnly));
