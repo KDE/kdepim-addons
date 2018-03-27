@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to generate html from markdown language",
         "Description[ca@valencia]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
         "Description[ca]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
+        "Description[es]": "Este complemento le permite generar html desde un lenguaje de marcas",
         "Description[fr]": "Ce module permet de générer du HTML à partir du langage Markdown",
         "Description[nl]": "Deze plug-in stelt u in staat html te maken uit een markdown-taal.",
         "Description[pt]": "Este 'plugin' permite-lhe gerar HTML a partir da linguagem Markdown",
@@ -12,6 +13,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailmarkdown",
         "Name": "Markdown",
+        "Name[es]": "Marcado",
         "Name[x-test]": "xxMarkdownxx",
         "ServiceTypes": [
             "KMailEditor/PluginEditorConvertText"
