@@ -46,30 +46,3 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
 endmacro ()
 
 add_diff_bodyformatter_class_unittest(diffhighlightertest.cpp "../highlighter/highlighter.cpp")
-
-ecm_add_test(
-    airportdbtest.cpp
-    NAME_PREFIX "messageviewerplugins-"
-    LINK_LIBRARIES Qt5::Test semantic_extractor
-)
-add_definitions(-DSOURCE_DIR="${CMAKE_CURRENT_SOURCE_DIR}")
-ecm_add_test(
-    structureddataextractortest.cpp
-    NAME_PREFIX "messageviewerplugins-"
-    LINK_LIBRARIES Qt5::Test semantic_extractor
-)
-ecm_add_test(
-    unstructureddataextractortest.cpp
-    NAME_PREFIX "messageviewerplugins-"
-    LINK_LIBRARIES Qt5::Test semantic_extractor
-)
-ecm_add_test(
-    postprocessortest.cpp
-    NAME_PREFIX "messageviewerplugins-"
-    LINK_LIBRARIES Qt5::Test semantic_extractor
-)
-ecm_add_test(
-    calendarhandlertest.cpp
-    NAME_PREFIX "messageviewerplugins-"
-    LINK_LIBRARIES Qt5::Test semantic_extractor
-)

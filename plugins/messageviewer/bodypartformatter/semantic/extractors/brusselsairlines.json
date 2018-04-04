@@ -1,6 +1,0 @@
-{
-    "filter": [
-        { "header": "From", "match": "@brusselsairlines.com" }
-    ],
-    "script": "brusselsairlines.js"
-}

@@ -18,9 +18,6 @@
 */
 
 #include "semanticurlhandler.h"
-#include "calendarhandler.h"
-#include "datatypes.h"
-#include "jsonlddocument.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
@@ -28,6 +25,11 @@
 #include <MimeTreeParser/NodeHelper>
 
 #include <CalendarSupport/CalendarSingleton>
+
+#include <KItinerary/CalendarHandler>
+#include <KItinerary/JsonLdDocument>
+#include <KItinerary/Place>
+#include <KItinerary/Reservation>
 
 #include <KMime/Content>
 
@@ -42,6 +44,8 @@
 #include <QUrlQuery>
 
 #include <memory>
+
+using namespace KItinerary;
 
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {

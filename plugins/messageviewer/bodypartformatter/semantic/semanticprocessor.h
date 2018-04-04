@@ -20,11 +20,11 @@
 #ifndef SEMANTICPROCESSOR_H
 #define SEMANTICPROCESSOR_H
 
-#include "extractorrepository.h"
-
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/MessagePart>
+
+#include <KItinerary/ExtractorRepository>
 
 #include <memory>
 
@@ -38,8 +38,8 @@ public:
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 
 private:
-    std::shared_ptr<ExtractorRepository> m_repository;
-    static std::weak_ptr<ExtractorRepository> s_repository;
+    std::shared_ptr<KItinerary::ExtractorRepository> m_repository;
+    static std::weak_ptr<KItinerary::ExtractorRepository> s_repository;
 };
 
 #endif // SEMANTICPROCESSOR_H

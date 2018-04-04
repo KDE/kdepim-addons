@@ -18,15 +18,19 @@
 */
 
 #include "semanticprocessor.h"
-#include "extractorengine.h"
-#include "extractorpreprocessor.h"
-#include "extractorpostprocessor.h"
-#include "jsonlddocument.h"
-#include "structureddataextractor.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
+#include <KItinerary/ExtractorEngine>
+#include <KItinerary/ExtractorPreprocessor>
+#include <KItinerary/ExtractorPostprocessor>
+#include <KItinerary/JsonLdDocument>
+#include <KItinerary/StructuredDataExtractor>
+
+#include <QJsonArray>
 #include <QJsonDocument>
+
+using namespace KItinerary;
 
 std::weak_ptr<ExtractorRepository> SemanticProcessor::s_repository;
 

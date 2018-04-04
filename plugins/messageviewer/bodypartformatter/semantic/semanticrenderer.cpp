@@ -18,14 +18,21 @@
 */
 
 #include "semanticrenderer.h"
-#include "datatypes.h"
-#include "jsonlddocument.h"
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
 #include <MessageViewer/IconNameCache>
 #include <MessageViewer/HtmlWriter>
 #include <MessageViewer/MessagePartRendererManager>
+
+#include <KItinerary/BusTrip>
+#include <KItinerary/Flight>
+#include <KItinerary/JsonLdDocument>
+#include <KItinerary/Organization>
+#include <KItinerary/Place>
+#include <KItinerary/Reservation>
+#include <KItinerary/Ticket>
+#include <KItinerary/TrainTrip>
 
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
@@ -35,6 +42,8 @@
 #include <QGuiApplication>
 #include <QMetaProperty>
 #include <QPalette>
+
+using namespace KItinerary;
 
 // Grantlee has no Q_GADGET support yet
 #define GRANTLEE_MAKE_GADGET(Class) \
