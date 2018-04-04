@@ -2,8 +2,8 @@
 <div id="attachmentDiv{{block.attachmentIndex}}">
 
 <div style="
-    background-color: {{ pass.backgroundColor }};
-    color: {{ pass.foregroundColor }};
+    background-color: {{ pass.backgroundColorName }};
+    color: {{ pass.foregroundColorName }};
     padding:12px;
     border-radius:10px;
     margin-left: auto;
@@ -23,7 +23,7 @@
             </td>
             <td rowspan="2" style="vertical-align:center; font-size:150%; font-weight:bold; width:100%;">{{ pass.logoText }}</td>
         {% for field in pass.headerFields %}
-            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
         {% endfor %}
         </tr><tr>
         {% for field in pass.headerFields %}
@@ -37,12 +37,12 @@
 <div>
     <table style="width:100%; border-collapse: collapse;">
         <tr>
-            <td style="width:50%; white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ pass.primaryFields.0.label }}</td>
+            <td style="width:50%; white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ pass.primaryFields.0.label }}</td>
             <td></td>
-            <td style="width:50%; white-space: nowrap; text-align:right; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ pass.primaryFields.1.label }}</td>
+            <td style="width:50%; white-space: nowrap; text-align:right; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ pass.primaryFields.1.label }}</td>
         </tr><tr style="font-size: 200%;">
             <td style="vertical-align:top; padding-top:0px;">{{ pass.primaryFields.0.value }}</td>
-            <td style="color: {{ pass.labelColor }}; padding-top:0px;">
+            <td style="color: {{ pass.labelColorName }}; padding-top:0px;">
                 {% if pass.transitType == pass.Air %}
                     &#9992;
                 {% elif pass.transitType == pass.Bus %} <!-- the Unicode characters for the other transport type are not widely available -->
@@ -64,7 +64,7 @@
     <table style="width:100%; border-collapse: collapse;">
         <tr>
         {% for field in pass.auxiliaryFields %}
-            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.auxiliaryFields %}
@@ -78,7 +78,7 @@
     <table style="width:100%; border-collapse: collapse;">
         <tr>
         {% for field in pass.secondaryFields %}
-            <td style="white-space: nowrap; color: {{ pass.labelColor }}; padding-bottom:0px;">{{ field.label }}</td>
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.secondaryFields %}
@@ -97,12 +97,12 @@
         {% i18n "Unsupported barcode format." %}
     {% endif %}
     </div>
-    <div style="text-align:center; color: #606060;">{{ pass.barcodeAltText }}</div>
+    <div style="text-align:center; color: #606060;">{{ pass.barcodes.0.alternativeText }}</div>
 </div>
 <!-- back fields -->
 <hr/>
 {% for field in pass.backFields %}
-    <div style="color: {{ pass.labelColor }};">{{ field.label }}</div>
+    <div style="color: {{ pass.labelColorName }};">{{ field.label }}</div>
     <div>{{ field.value|safe|linebreaksbr }}</div>
 {% endfor %}
 </div> <!-- boarding pass -->

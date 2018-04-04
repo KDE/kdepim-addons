@@ -17,9 +17,6 @@
    02110-1301, USA.
 */
 
-#include "pkpassfile.h"
-#include "pkpassboardingpass.h"
-
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
 #include <MessageViewer/MessagePartRenderPlugin>
@@ -27,22 +24,31 @@
 #include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
+#include <KPkPass/BoardingPass>
+#include <KPkPass/Barcode>
+
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
+
+#include <prison/Prison>
 
 #include <QUrl>
 #include <QImage>
 #include <QMetaProperty>
 
 // Grantlee has no Q_GADGET support yet
-GRANTLEE_BEGIN_LOOKUP(PkPassField)
-const auto idx = PkPassField::staticMetaObject.indexOfProperty(property.toUtf8().constData());
-if (idx < 0) {
-    return {};
-}
-const auto mp = PkPassField::staticMetaObject.property(idx);
-return mp.readOnGadget(&object);
+#define GRANTLEE_MAKE_GADGET(Class) \
+GRANTLEE_BEGIN_LOOKUP(Class) \
+    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData()); \
+    if (idx < 0) { \
+        return {}; \
+    } \
+    const auto mp = Class::staticMetaObject.property(idx); \
+    return mp.readOnGadget(&object); \
 GRANTLEE_END_LOOKUP
+
+GRANTLEE_MAKE_GADGET(KPkPass::Barcode)
+GRANTLEE_MAKE_GADGET(KPkPass::Field)
 
 namespace {
 class Formatter : public MessageViewer::MessagePartRendererBase
@@ -56,8 +62,8 @@ public:
             return false;
         }
 
-        std::unique_ptr<PkPassFile> pass(PkPassFile::fromData(msgPart->content()->decodedContent()));
-        if (!qobject_cast<PkPassBoardingPass *>(pass.get())) {
+        std::unique_ptr<KPkPass::Pass> pass(KPkPass::Pass::fromData(msgPart->content()->decodedContent()));
+        if (!qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
             return false; // only boarding passes implemented so far
         }
         const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
@@ -69,13 +75,37 @@ public:
             mp->nodeHelper()->addTempFile(fileName);
         }
 
-        const auto barcode = pass->barcode();
-        if (!barcode.isNull()) {
-            const auto fileName = dir + QStringLiteral("/barcode.png");
-            barcode.save(fileName);
-            pass->setProperty("barcodeUrl", QUrl::fromLocalFile(fileName));
-            mp->nodeHelper()->addTempFile(fileName);
+        const auto barcodes = pass->barcodes();
+        if (!barcodes.isEmpty()) {
+            const auto barcode = barcodes.at(0);
+            std::unique_ptr<Prison::AbstractBarcode> code;
+            switch (barcode.format()) {
+                case KPkPass::Barcode::QR:
+                    code.reset(Prison::createBarcode(Prison::QRCode));
+                    break;
+                case KPkPass::Barcode::Aztec:
+                    code.reset(Prison::createBarcode(Prison::Aztec));
+                    break;
+                default:
+                    break;
+            }
+
+            if (code) {
+                code->setData(barcode.message());
+                code->toImage(code->minimumSize()); // minimumSize is only available after we rendered once...
+
+                const auto fileName = dir + QStringLiteral("/barcode.png");
+                code->toImage(code->minimumSize()).save(fileName);
+
+                pass->setProperty("barcodeUrl", QUrl::fromLocalFile(fileName));
+                mp->nodeHelper()->addTempFile(fileName);
+            }
         }
+
+        // Grantlee can't handle QColor...
+        pass->setProperty("foregroundColorName", pass->foregroundColor().name());
+        pass->setProperty("backgroundColorName", pass->backgroundColor().name());
+        pass->setProperty("labelColorName", pass->labelColor().name());
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), mp.data());
@@ -96,7 +126,8 @@ public:
     explicit Plugin(QObject *parent = nullptr)
         : QObject(parent)
     {
-        Grantlee::registerMetaType<PkPassField>();
+        Grantlee::registerMetaType<KPkPass::Barcode>();
+        Grantlee::registerMetaType<KPkPass::Field>();
     }
 
     MessageViewer::MessagePartRendererBase *renderer(int index) override

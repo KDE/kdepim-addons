@@ -1,9 +1,6 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_bodypartformatter_pkpass\")
 
 set(pkpass_srcs
-    pkpassfield.cpp
-    pkpassfile.cpp
-    pkpassboardingpass.cpp
     pkpass_plugin.cpp
 )
 qt5_add_resources(pkpass_srcs templates.qrc)
@@ -15,8 +12,7 @@ target_link_libraries(messageviewer_bodypartformatter_pkpass
   KF5::Prison
   KF5::MessageViewer
   Grantlee5::Templates
+  KPim::PkPass
 )
 install(TARGETS messageviewer_bodypartformatter_pkpass DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
 
-install(FILES application-vnd-apple-pkpass.xml DESTINATION ${XDG_MIME_INSTALL_DIR})
-update_xdg_mimetypes(${XDG_MIME_INSTALL_DIR})
