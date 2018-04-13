@@ -26,7 +26,6 @@
 
 PgpKeyMessagePart::PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
-    , mSearchRunning(false)
 {
     setContent(part->content());
     parseContent(part->content());

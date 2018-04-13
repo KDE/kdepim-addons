@@ -35,7 +35,7 @@ PgpKeyMemento::~PgpKeyMemento()
 
 void PgpKeyMemento::detach()
 {
-    disconnect(this, SIGNAL(update(MimeTreeParser::UpdateMode)), 0, 0);
+    disconnect(this, SIGNAL(update(MimeTreeParser::UpdateMode)), nullptr, nullptr);
 }
 
 void PgpKeyMemento::notify()

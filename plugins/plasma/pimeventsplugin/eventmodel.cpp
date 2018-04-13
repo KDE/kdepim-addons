@@ -32,7 +32,6 @@
 
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)
-    , mMonitor(nullptr)
 {
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }

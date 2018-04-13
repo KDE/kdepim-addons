@@ -81,13 +81,13 @@ void ViewerPluginExternalscriptInterface::execute()
         const QString executable = mCurrentInfo.at(1);
         const QString executablePath = QStandardPaths::findExecutable(executable);
         if (executablePath.isEmpty()) {
-            KMessageBox::error(0, i18n("\'%1\' not found", executable), i18n("Executable not found."));
+            KMessageBox::error(nullptr, i18n("\'%1\' not found", executable), i18n("Executable not found."));
         } else {
             QProcess proc;
             const QStringList newCommandLine = mCurrentInfo.at(0).split(QLatin1Char(' '), QString::SkipEmptyParts);
             const QStringList splitArguments = adaptArguments(newCommandLine);
             if (!proc.startDetached(executablePath, splitArguments)) {
-                KMessageBox::error(0, i18n("Impossible to start executable"));
+                KMessageBox::error(nullptr, i18n("Impossible to start executable"));
             }
         }
     } else {

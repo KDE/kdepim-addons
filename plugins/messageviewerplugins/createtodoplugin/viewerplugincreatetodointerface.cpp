@@ -31,7 +31,6 @@ using namespace MessageViewer;
 
 ViewerPluginCreateTodoInterface::ViewerPluginCreateTodoInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent)
-    , mTodoEdit(nullptr)
 {
     createAction(ac);
 }

@@ -68,7 +68,7 @@ protected:
     QString mFingerprint;
     QString mError;
     GpgME::Key mKey;
-    bool mSearchRunning;
+    bool mSearchRunning = false;
 };
 
 #endif
