@@ -34,7 +34,7 @@ class SemanticPlugin : public QObject, public MimeTreeParser::Interface::BodyPar
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
-        if (idx < 3) {
+        if (idx < 4) {
             return new SemanticProcessor();
         }
         return nullptr;

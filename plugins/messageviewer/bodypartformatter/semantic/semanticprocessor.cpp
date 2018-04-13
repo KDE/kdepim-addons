@@ -27,6 +27,8 @@
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/StructuredDataExtractor>
 
+#include <KPkPass/Pass>
+
 #include <QJsonArray>
 #include <QJsonDocument>
 
@@ -70,7 +72,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     qCDebug(SEMANTIC_LOG) << part.content()->contentType()->mimeType();
 
     // look for structured data first, cheaper and better quality
-    if (part.content()->contentType()->mimeType() == "text/html") {
+    if (part.content()->contentType()->isHTMLText()) {
         StructuredDataExtractor extractor;
         extractor.parse(part.content()->decodedText());
 
@@ -88,8 +90,16 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     // try the unstructured data extractor as a fallback
     if (memento->isEmpty()) {
-        const auto extractors = m_repository->extractorsForMessage(part.content());
+        std::vector<const Extractor*> extractors;
+        std::unique_ptr<KPkPass::Pass> pass;
+        if (part.content()->contentType()->mimeType() == "application/vnd.apple.pkpass") {
+            pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
+            extractors = m_repository->extractorsForPass(pass.get());
+        } else {
+            extractors = m_repository->extractorsForMessage(part.content());
+        }
         if (extractors.empty()) {
+            qCDebug(SEMANTIC_LOG) << "Found no suitable extractors.";
             return {};
         }
         qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
@@ -101,8 +111,6 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             preproc.preprocessHtml(part.content()->decodedText());
         } else if (part.content()->contentType()->mimeType() == "application/pdf") {
             preproc.preprocessPdf(part.content()->decodedContent());
-        } else {
-            return {};
         }
 
         for (auto extractor : extractors) {
@@ -110,6 +118,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             engine.setExtractor(extractor);
             engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
             engine.setText(preproc.text());
+            engine.setPass(pass.get());
             const auto data = engine.extract();
             qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
             const auto decodedData = JsonLdDocument::fromJson(data);
@@ -122,6 +131,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     // postprocessor to filter incomplete/broken elements and merge duplicates
     ExtractorPostprocessor postproc;
+    postproc.setContextDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
     postproc.process(memento->data());
     memento->setData(postproc.result());
 
