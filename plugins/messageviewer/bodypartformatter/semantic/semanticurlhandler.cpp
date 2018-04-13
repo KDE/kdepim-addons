@@ -28,6 +28,7 @@
 
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
+#include <KItinerary/Flight>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
 
@@ -66,35 +67,25 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
     return false;
 }
 
+static QString placeName(const QVariant &place)
+{
+    const auto name = JsonLdDocument::readProperty(place, "name").toString();
+    if (!name.isEmpty()) {
+        return name;
+    }
+    // airports with no name, as extracted from IATA BCBP messages
+    return JsonLdDocument::readProperty(place, "iataCode").toString();
+}
+
 static void addGoToMapAction(QMenu *menu, const QVariant &place)
 {
     if (place.isNull()) {
         return;
     }
 
-    const auto addr = JsonLdDocument::readProperty(place, "address");
-    if (!addr.isNull()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(place, "name").toString()));
-        QObject::connect(action, &QAction::triggered, menu, [addr]() {
-            QUrl url;
-            url.setScheme(QStringLiteral("https"));
-            url.setHost(QStringLiteral("www.openstreetmap.org"));
-            url.setPath(QStringLiteral("/search"));
-            const QString queryString = JsonLdDocument::readProperty(addr, "streetAddress").toString() + QLatin1String(", ")
-                                        + JsonLdDocument::readProperty(addr, "postalCode").toString() + QLatin1Char(' ')
-                                        + JsonLdDocument::readProperty(addr, "addressLocality").toString() + QLatin1String(", ")
-                                        + JsonLdDocument::readProperty(addr, "addressCountry").toString();
-            QUrlQuery query;
-            query.addQueryItem(QStringLiteral("query"), queryString);
-            url.setQuery(query);
-            QDesktopServices::openUrl(url);
-        });
-        return;
-    }
-
-    const auto geo = JsonLdDocument::readProperty(place, "geo");
-    if (!geo.isNull()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", JsonLdDocument::readProperty(place, "name").toString()));
+    const auto geo = JsonLdDocument::readProperty(place, "geo").value<GeoCoordinates>();
+    if (geo.isValid()) {
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName(place)));
         // zoom out further from airports, they are larger and you usually want to go further away from them
         const auto zoom = place.userType() == qMetaTypeId<Airport>() ? 12 : 16;
         QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
@@ -103,11 +94,31 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setHost(QStringLiteral("www.openstreetmap.org"));
             url.setPath(QStringLiteral("/"));
             const QString fragment = QLatin1String("map=") + QString::number(zoom)
-                                     + QLatin1Char('/') + JsonLdDocument::readProperty(geo, "latitude").toString()
-                                     + QLatin1Char('/') + JsonLdDocument::readProperty(geo, "longitude").toString();
+                                     + QLatin1Char('/') + QString::number(geo.latitude())
+                                     + QLatin1Char('/') + QString::number(geo.longitude());
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
+    }
+
+    const auto addr = JsonLdDocument::readProperty(place, "address").value<PostalAddress>();
+    if (!addr.addressLocality().isEmpty()) {
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName(place)));
+        QObject::connect(action, &QAction::triggered, menu, [addr]() {
+            QUrl url;
+            url.setScheme(QStringLiteral("https"));
+            url.setHost(QStringLiteral("www.openstreetmap.org"));
+            url.setPath(QStringLiteral("/search"));
+            const QString queryString = addr.streetAddress() + QLatin1String(", ")
+                                        + addr.postalCode() + QLatin1Char(' ')
+                                        + addr.addressLocality() + QLatin1String(", ")
+                                        + addr.addressCountry();
+            QUrlQuery query;
+            query.addQueryItem(QStringLiteral("query"), queryString);
+            url.setQuery(query);
+            QDesktopServices::openUrl(url);
+        });
+        return;
     }
 }
 
@@ -141,22 +152,20 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     QSet<QString> places;
     for (const auto &r : m->data()) {
         if (r.userType() == qMetaTypeId<LodgingReservation>()) {
-            addGoToMapAction(&menu, JsonLdDocument::readProperty(r, "reservationFor"));
+            addGoToMapAction(&menu, r.value<LodgingReservation>().reservationFor());
         } else if (r.userType() == qMetaTypeId<FlightReservation>()) {
-            const auto flight = JsonLdDocument::readProperty(r, "reservationFor");
+            const auto flight = r.value<FlightReservation>().reservationFor().value<Flight>();
 
-            auto airport = JsonLdDocument::readProperty(flight, "departureAirport");
-            auto iataCode = JsonLdDocument::readProperty(airport, "iataCode").toString();
-            if (!places.contains(iataCode)) {
+            auto airport = flight.departureAirport();
+            if (!places.contains(airport.iataCode())) {
                 addGoToMapAction(&menu, airport);
-                places.insert(iataCode);
+                places.insert(airport.iataCode());
             }
 
-            airport = JsonLdDocument::readProperty(flight, "arrivalAirport");
-            iataCode = JsonLdDocument::readProperty(airport, "iataCode").toString();
-            if (!places.contains(iataCode)) {
+            airport = flight.arrivalAirport();
+            if (!places.contains(airport.iataCode())) {
                 addGoToMapAction(&menu, airport);
-                places.insert(iataCode);
+                places.insert(airport.iataCode());
             }
         } else if (r.userType() == qMetaTypeId<TrainReservation>() || r.userType() == qMetaTypeId<BusReservation>()) {
             const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
