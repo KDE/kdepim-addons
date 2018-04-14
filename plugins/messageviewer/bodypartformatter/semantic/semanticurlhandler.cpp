@@ -69,7 +69,8 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
 
 static QString placeName(const QVariant &place)
 {
-    const auto name = JsonLdDocument::readProperty(place, "name").toString();
+    const auto name = JsonLdDocument::readProperty(place, "name").toString()
+        .replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
     if (!name.isEmpty()) {
         return name;
     }
@@ -87,7 +88,7 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
     if (geo.isValid()) {
         auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName(place)));
         // zoom out further from airports, they are larger and you usually want to go further away from them
-        const auto zoom = place.userType() == qMetaTypeId<Airport>() ? 12 : 16;
+        const auto zoom = place.userType() == qMetaTypeId<Airport>() ? 12 : 17;
         QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -99,6 +100,7 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
+        return;
     }
 
     const auto addr = JsonLdDocument::readProperty(place, "address").value<PostalAddress>();
@@ -118,7 +120,6 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setQuery(query);
             QDesktopServices::openUrl(url);
         });
-        return;
     }
 }
 
