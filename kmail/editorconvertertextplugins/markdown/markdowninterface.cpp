@@ -55,7 +55,7 @@ bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 
 void MarkdownInterface::reloadConfig()
 {
-    //TODO
+    //TODO load css !
 }
 
 void MarkdownInterface::slotActivated()
