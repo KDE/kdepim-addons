@@ -42,6 +42,7 @@ MarkdownPlugin::~MarkdownPlugin()
 MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(KActionCollection *ac, QObject *parent)
 {
     MarkdownInterface *interface = new MarkdownInterface(parent);
+    connect(this, &MarkdownPlugin::configChanged, interface, &MarkdownInterface::reloadConfig);
     interface->createAction(ac);
     return interface;
 }
@@ -55,7 +56,9 @@ bool MarkdownPlugin::hasConfigureDialog() const
 void MarkdownPlugin::showConfigureDialog(QWidget *parent)
 {
     QPointer<MarkdownConfigureDialog> dlg = new MarkdownConfigureDialog(parent);
-    dlg->exec();
+    if (dlg->exec()) {
+        Q_EMIT configChanged();
+    }
     delete dlg;
 }
 

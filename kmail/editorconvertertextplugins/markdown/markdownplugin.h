@@ -34,6 +34,9 @@ public:
     bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
     QString description() const override;
+
+Q_SIGNALS:
+    void configChanged();
 };
 
 #endif // MARKDOWNPLUGIN_H
