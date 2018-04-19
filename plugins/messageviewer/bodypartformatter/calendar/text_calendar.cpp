@@ -228,7 +228,7 @@ public:
                 MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
                 const QString html
                     = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
-                    source, cl, &helper, message->sender()->asUnicodeString());
+                          source, cl, &helper, message->sender()->asUnicodeString());
 
                 if (html.isEmpty()) {
                     return false;
@@ -593,7 +593,7 @@ public:
         KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
         const KIdentityManagement::Identity identity
             = im->identityForAddress(
-            findReceiver(viewerInstance->message().data()));
+                  findReceiver(viewerInstance->message().data()));
 
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
 
@@ -1328,15 +1328,15 @@ public:
             QString summary;
             int response
                 = KMessageBox::questionYesNoCancel(
-                nullptr,
-                i18nc("@info",
-                      "The organizer is not expecting a reply to this invitation "
-                      "but you can send them an email message if you desire.\n\n"
-                      "Would you like to send the organizer a message regarding this invitation?\n"
-                      "Press the [Cancel] button to cancel the recording operation."),
-                i18nc("@title:window", "Send Email to Organizer"),
-                KGuiItem(i18n("Do Not Send")),
-                KGuiItem(i18n("Send EMail")));
+                      nullptr,
+                      i18nc("@info",
+                            "The organizer is not expecting a reply to this invitation "
+                            "but you can send them an email message if you desire.\n\n"
+                            "Would you like to send the organizer a message regarding this invitation?\n"
+                            "Press the [Cancel] button to cancel the recording operation."),
+                      i18nc("@title:window", "Send Email to Organizer"),
+                      KGuiItem(i18n("Do Not Send")),
+                      KGuiItem(i18n("Send EMail")));
 
             switch (response) {
             case KMessageBox::Cancel:

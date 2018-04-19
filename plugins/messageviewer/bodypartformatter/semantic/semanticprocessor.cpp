@@ -90,7 +90,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     // try the unstructured data extractor as a fallback
     if (memento->isEmpty()) {
-        std::vector<const Extractor*> extractors;
+        std::vector<const Extractor *> extractors;
         std::unique_ptr<KPkPass::Pass> pass;
         if (part.content()->contentType()->mimeType() == "application/vnd.apple.pkpass") {
             pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));

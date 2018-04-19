@@ -70,7 +70,7 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
 static QString placeName(const QVariant &place)
 {
     const auto name = JsonLdDocument::readProperty(place, "name").toString()
-        .replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
+                      .replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
     if (!name.isEmpty()) {
         return name;
     }
