@@ -52,7 +52,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
                                           QStringLiteral("application/x-desktop")});
 
     mEditorRequester->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
-    mEditorRequester->setEnabled(false);   // !mExternalEditorCheck->isChecked()
+    mEditorRequester->setEnabled(false);
 
     mainLayout->addLayout(hbox);
 
