@@ -22,6 +22,8 @@
 #include <QComboBox>
 #include <QLabel>
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
@@ -46,11 +48,14 @@ MarkdownConfigureWidget::~MarkdownConfigureWidget()
 
 void MarkdownConfigureWidget::loadSettings()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+
     //TODO
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
+    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
     //TODO
 }
 
