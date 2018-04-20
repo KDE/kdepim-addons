@@ -55,17 +55,22 @@ void MarkdownConfigureWidget::fillCombobox()
 void MarkdownConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-
-    //TODO
+    const QString cssname = grp.readEntry(QStringLiteral("cssname"), QString());
+    if (!cssname.isEmpty()) {
+        const int index = mCssCombobox->findText(cssname);
+        if (index > -1) {
+            mCssCombobox->setCurrentIndex(index);
+        }
+    }
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-    //TODO
+    grp.writeEntry(QStringLiteral("cssname"), mCssCombobox->currentText());
 }
 
 void MarkdownConfigureWidget::resetSettings()
 {
-    //TODO
+    mCssCombobox->setCurrentIndex(0);
 }
