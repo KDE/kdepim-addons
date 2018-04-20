@@ -33,6 +33,7 @@ public:
     void saveSettings() override;
     void resetSettings() override;
 private:
+    void fillCombobox();
     QComboBox *mCssCombobox = nullptr;
 };
 

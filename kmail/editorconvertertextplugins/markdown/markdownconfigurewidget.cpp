@@ -39,9 +39,15 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     mCssCombobox = new QComboBox(this);
     mCssCombobox->setObjectName(QStringLiteral("csscombobox"));
     mainLayout->addWidget(mCssCombobox);
+    fillCombobox();
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()
+{
+
+}
+
+void MarkdownConfigureWidget::fillCombobox()
 {
 
 }
