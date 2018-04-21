@@ -124,8 +124,6 @@ void GravatarUpdateWidget::slotSearchGravatar()
         job->setEmail(mEmail);
         if (job->canStart()) {
             job->setUseDefaultPixmap(false);
-            job->setUseLibravatar(mUseLibravatar->isChecked());
-            job->setFallbackGravatar(mFallbackGravatar->isChecked());
             connect(job, &Gravatar::GravatarResolvUrlJob::finished, this, &GravatarUpdateWidget::slotSearchGravatarFinished);
             connect(job, &Gravatar::GravatarResolvUrlJob::resolvUrl, this, &GravatarUpdateWidget::slotResolvUrl);
             mSearchGravatar->setEnabled(false);
