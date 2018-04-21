@@ -105,7 +105,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     }
 
     auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
-    if (!memento || memento->isEmpty()) {
+    if (!memento || memento->extractedData().isEmpty()) {
         return false;
     }
 
@@ -121,9 +121,9 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;
-    elems.reserve(memento->data().size());
-    for (int i = 0; i < memento->data().size(); ++i) {
-        const auto res = memento->data().at(i);
+    elems.reserve(memento->extractedData().size());
+    for (int i = 0; i < memento->extractedData().size(); ++i) {
+        const auto res = memento->extractedData().at(i);
         QVariantMap data;
         data.insert(QStringLiteral("reservation"), res);
 

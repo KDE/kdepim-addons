@@ -22,9 +22,13 @@
 
 #include <MimeTreeParser/BodyPart>
 
+#include <KItinerary/ExtractorPostprocessor>
+
 #include <QSet>
 #include <QVariant>
 #include <QVector>
+
+class QDateTime;
 
 namespace KMime {
 class ContentIndex;
@@ -36,25 +40,24 @@ class SemanticMemento : public MimeTreeParser::Interface::BodyPartMemento
 public:
     ~SemanticMemento() override = default;
     void detach() override;
-    bool isEmpty() const;
 
     bool isParsed(const KMime::ContentIndex &index) const;
     void setParsed(const KMime::ContentIndex &index);
 
-    QVector<QVariant> data() const;
-    void setData(const QVector<QVariant> &data);
+    void setMessageDate(const QDateTime &contextDt);
+    void appendUnstructuredData(const QVector<QVariant> &data);
+    void appendStructuredData(const QVector<QVariant> &data);
+
+    QVector<QVariant> extractedData();
 
     QVector<bool> expanded() const;
     void toggleExpanded(int index);
 
-    bool hasStructuredData() const;
-    void setStructuredDataFound(bool f);
-
 private:
-    QVector<QVariant> m_data;
+    QVector<QVariant> m_pendingStructuredData;
     QVector<bool> m_expanded;
     QSet<KMime::ContentIndex> m_parsedParts;
-    bool m_foundStructuredData = false;
+    KItinerary::ExtractorPostprocessor m_postProc;
 };
 
 #endif // SEMANTICMEMENTO_H

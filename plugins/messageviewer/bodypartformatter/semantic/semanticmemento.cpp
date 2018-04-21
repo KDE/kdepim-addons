@@ -25,11 +25,6 @@ void SemanticMemento::detach()
 {
 }
 
-bool SemanticMemento::isEmpty() const
-{
-    return m_data.isEmpty();
-}
-
 bool SemanticMemento::isParsed(const KMime::ContentIndex &index) const
 {
     return m_parsedParts.contains(index);
@@ -40,15 +35,30 @@ void SemanticMemento::setParsed(const KMime::ContentIndex &index)
     m_parsedParts.insert(index);
 }
 
-QVector<QVariant> SemanticMemento::data() const
+void SemanticMemento::setMessageDate(const QDateTime& contextDt)
 {
-    return m_data;
+    m_postProc.setContextDate(contextDt);
 }
 
-void SemanticMemento::setData(const QVector<QVariant> &data)
+void SemanticMemento::appendStructuredData(const QVector<QVariant> &data)
 {
-    m_data = data;
-    m_expanded.resize(data.size());
+    m_pendingStructuredData.append(data);
+}
+
+void SemanticMemento::appendUnstructuredData(const QVector<QVariant> &data)
+{
+    m_postProc.process(data);
+}
+
+QVector<QVariant> SemanticMemento::extractedData()
+{
+    if (!m_pendingStructuredData.isEmpty()) {
+        m_postProc.process(m_pendingStructuredData);
+        m_pendingStructuredData.clear();
+    }
+    const auto res = m_postProc.result();
+    m_expanded.resize(res.size());
+    return res;
 }
 
 QVector<bool> SemanticMemento::expanded() const
@@ -62,14 +72,4 @@ void SemanticMemento::toggleExpanded(int index)
         return;
     }
     m_expanded[index] = !m_expanded.at(index);
-}
-
-bool SemanticMemento::hasStructuredData() const
-{
-    return m_foundStructuredData && !isEmpty();
-}
-
-void SemanticMemento::setStructuredDataFound(bool f)
-{
-    m_foundStructuredData = f;
 }

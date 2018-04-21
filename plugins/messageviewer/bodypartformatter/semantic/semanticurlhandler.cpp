@@ -131,7 +131,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     }
 
     const auto m = memento(part);
-    if (!m || m->isEmpty()) {
+    if (!m || m->extractedData().isEmpty()) {
         return false;
     }
     const auto date = dateForReservation(m);
@@ -151,7 +151,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     });
 
     QSet<QString> places;
-    for (const auto &r : m->data()) {
+    for (const auto &r : m->extractedData()) {
         if (r.userType() == qMetaTypeId<LodgingReservation>()) {
             addGoToMapAction(&menu, r.value<LodgingReservation>().reservationFor());
         } else if (r.userType() == qMetaTypeId<FlightReservation>()) {
@@ -212,7 +212,7 @@ SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart
 
 QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 {
-    for (const auto &r : memento->data()) {
+    for (const auto &r : memento->extractedData()) {
         const auto dt = CalendarHandler::startDateTime(r);
         if (dt.isValid()) {
             return dt.date();
@@ -255,7 +255,7 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
     using namespace KCalCore;
 
     const auto calendar = CalendarSupport::calendarSingleton(true);
-    for (const auto &r : memento->data()) {
+    for (const auto &r : memento->extractedData()) {
         auto event = CalendarHandler::findEvent(calendar, r);
         if (!event) {
             event.reset(new Event);

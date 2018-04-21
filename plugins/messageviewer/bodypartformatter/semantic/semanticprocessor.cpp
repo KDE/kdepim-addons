@@ -56,13 +56,11 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
     if (!memento) {
         memento = new SemanticMemento;
+        memento->setMessageDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
         nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
     }
 
     // check if we still have to do anything at all
-    if (memento->hasStructuredData()) {
-        return {};
-    }
     if (memento->isParsed(part.content()->index())) {
         return {};
     }
@@ -82,58 +80,50 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
             qCDebug(SEMANTIC_LOG).noquote() << "Unhandled content:" << QJsonDocument(data).toJson();
         }
         if (!decodedData.isEmpty()) {
-            memento->setData(decodedData);
-            memento->setStructuredDataFound(true);
+            memento->appendStructuredData(decodedData);
             qCDebug(SEMANTIC_LOG) << "Found structured data:" << decodedData;
+            return {};
         }
     }
 
     // try the unstructured data extractor as a fallback
-    if (memento->isEmpty()) {
-        std::vector<const Extractor *> extractors;
-        std::unique_ptr<KPkPass::Pass> pass;
-        if (part.content()->contentType()->mimeType() == "application/vnd.apple.pkpass") {
-            pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
-            extractors = m_repository->extractorsForPass(pass.get());
-        } else {
-            extractors = m_repository->extractorsForMessage(part.content());
-        }
-        if (extractors.empty()) {
-            qCDebug(SEMANTIC_LOG) << "Found no suitable extractors.";
-            return {};
-        }
-        qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
+    std::vector<const Extractor *> extractors;
+    std::unique_ptr<KPkPass::Pass> pass;
+    if (part.content()->contentType()->mimeType() == "application/vnd.apple.pkpass") {
+        pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
+        extractors = m_repository->extractorsForPass(pass.get());
+    } else {
+        extractors = m_repository->extractorsForMessage(part.content());
+    }
+    if (extractors.empty()) {
+        qCDebug(SEMANTIC_LOG) << "Found no suitable extractors.";
+        return {};
+    }
+    qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
 
-        ExtractorPreprocessor preproc;
-        if (part.content()->contentType()->isPlainText()) {
-            preproc.preprocessPlainText(part.content()->decodedText());
-        } else if (part.content()->contentType()->isHTMLText()) {
-            preproc.preprocessHtml(part.content()->decodedText());
-        } else if (part.content()->contentType()->mimeType() == "application/pdf") {
-            preproc.preprocessPdf(part.content()->decodedContent());
-        }
-
-        for (auto extractor : extractors) {
-            ExtractorEngine engine;
-            engine.setExtractor(extractor);
-            engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
-            engine.setText(preproc.text());
-            engine.setPass(pass.get());
-            const auto data = engine.extract();
-            qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
-            const auto decodedData = JsonLdDocument::fromJson(data);
-            if (!decodedData.isEmpty()) {
-                memento->setData(decodedData);
-                break;
-            }
-        }
+    ExtractorPreprocessor preproc;
+    if (part.content()->contentType()->isPlainText()) {
+        preproc.preprocessPlainText(part.content()->decodedText());
+    } else if (part.content()->contentType()->isHTMLText()) {
+        preproc.preprocessHtml(part.content()->decodedText());
+    } else if (part.content()->contentType()->mimeType() == "application/pdf") {
+        preproc.preprocessPdf(part.content()->decodedContent());
     }
 
-    // postprocessor to filter incomplete/broken elements and merge duplicates
-    ExtractorPostprocessor postproc;
-    postproc.setContextDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
-    postproc.process(memento->data());
-    memento->setData(postproc.result());
+    for (auto extractor : extractors) {
+        ExtractorEngine engine;
+        engine.setExtractor(extractor);
+        engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
+        engine.setText(preproc.text());
+        engine.setPass(pass.get());
+        const auto data = engine.extract();
+        qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+        const auto decodedData = JsonLdDocument::fromJson(data);
+        if (!decodedData.isEmpty()) {
+            memento->appendStructuredData(decodedData);
+            break;
+        }
+    }
 
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
