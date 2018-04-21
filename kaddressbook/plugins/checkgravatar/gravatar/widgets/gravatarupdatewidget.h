@@ -58,8 +58,6 @@ private:
     QLabel *mEmailLab = nullptr;
     QPushButton *mSearchGravatar = nullptr;
     QLabel *mResultGravatar = nullptr;
-    QCheckBox *mUseLibravatar = nullptr;
-    QCheckBox *mFallbackGravatar = nullptr;
 };
 }
 

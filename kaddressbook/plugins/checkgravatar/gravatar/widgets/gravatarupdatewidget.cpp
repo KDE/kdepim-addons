@@ -47,21 +47,11 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     hboxEmail->addWidget(mEmailLab);
     mainLayout->addLayout(hboxEmail, 0, 0);
 
-    mUseLibravatar = new QCheckBox(i18n("Use Libravatar"));
-    mUseLibravatar->setObjectName(QStringLiteral("uselibravatar"));
-    mainLayout->addWidget(mUseLibravatar, 2, 0);
-
-    mFallbackGravatar = new QCheckBox(i18n("Fallback to Gravatar"));
-    mFallbackGravatar->setObjectName(QStringLiteral("fallbackgravatar"));
-    mainLayout->addWidget(mFallbackGravatar, 3, 0);
-    mFallbackGravatar->setEnabled(false);
-
     mSearchGravatar = new QPushButton(i18n("Search"));
     mSearchGravatar->setEnabled(false);
     mSearchGravatar->setObjectName(QStringLiteral("search"));
     mainLayout->addWidget(mSearchGravatar, 4, 0);
     connect(mSearchGravatar, &QAbstractButton::clicked, this, &GravatarUpdateWidget::slotSearchGravatar);
-    connect(mUseLibravatar, &QCheckBox::toggled, mFallbackGravatar, &QCheckBox::setEnabled);
     mResultGravatar = new QLabel;
     QFont font = mResultGravatar->font();
     font.setBold(true);
