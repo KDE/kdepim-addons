@@ -25,7 +25,10 @@
 #include <MessageViewer/HtmlWriter>
 #include <MessageViewer/MessagePartRendererManager>
 
+#include <CalendarSupport/CalendarSingleton>
+
 #include <KItinerary/BusTrip>
+#include <KItinerary/CalendarHandler>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Organization>
@@ -119,11 +122,19 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     style.insert(QStringLiteral("collapseIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
     c.insert(QStringLiteral("style"), style);
 
+    const auto calendar = CalendarSupport::calendarSingleton(true);
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;
     elems.reserve(memento->extractedData().size());
     for (int i = 0; i < memento->extractedData().size(); ++i) {
-        const auto res = memento->extractedData().at(i);
+        auto res = memento->extractedData().at(i);
+
+        const auto event = CalendarHandler::findEvent(calendar, res);
+        if (event) {
+            const auto existingRes = CalendarHandler::reservationForEvent(event);
+            res = JsonLdDocument::apply(existingRes, res);
+        }
+
         QVariantMap data;
         data.insert(QStringLiteral("reservation"), res);
 
