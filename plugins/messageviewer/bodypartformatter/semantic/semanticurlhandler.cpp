@@ -265,7 +265,11 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
             }
             calendar->addEvent(event);
         } else {
-            CalendarHandler::fillEvent(r, event);
+            const auto oldRes = CalendarHandler::reservationForEvent(event);
+            const auto mergedRes = JsonLdDocument::apply(oldRes, r);
+            event->startUpdates();
+            CalendarHandler::fillEvent(mergedRes, event);
+            event->endUpdates();
             calendar->modifyIncidence(event);
         }
     }
