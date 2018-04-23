@@ -36,7 +36,6 @@ public:
 
     QString format(KMime::Message *message) const override;
 
-    bool hasAttachmentQuickList() const override;
 private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
