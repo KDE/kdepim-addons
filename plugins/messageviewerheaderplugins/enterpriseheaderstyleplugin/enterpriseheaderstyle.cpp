@@ -221,11 +221,6 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     return headerStr;
 }
 
-bool EnterpriseHeaderStyle::hasAttachmentQuickList() const
-{
-    return true;
-}
-
 const char *MessageViewer::EnterpriseHeaderStyle::name() const
 {
     return "enterprise";

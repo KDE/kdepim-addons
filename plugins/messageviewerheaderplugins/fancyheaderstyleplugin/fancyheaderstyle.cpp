@@ -233,8 +233,3 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     headerStr += QLatin1String("</div>\n\n");
     return headerStr;
 }
-
-bool FancyHeaderStyle::hasAttachmentQuickList() const
-{
-    return true;
-}
