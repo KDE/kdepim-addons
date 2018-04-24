@@ -225,10 +225,10 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                          .arg(subjectDir, i18n("Spam Status:"), spamHTML));
     }
 
-    headerStr.append(QLatin1String("<tr><td colspan=\"2\"><div id=\"attachmentInjectionPoint\"></div></td></tr>"));
+    headerStr.append(QStringLiteral("<tr><td colspan=\"2\"><div>%1</div></td></tr>").arg(attachmentHtml()));
 
     headerStr.append(
-        QStringLiteral("</table></td><td align=\"center\">%1</td></tr></table>\n").arg(userHTML));
+            QStringLiteral("</table></td><td align=\"center\">%1</td></tr></table>\n").arg(userHTML));
 
     headerStr += QLatin1String("</div>\n\n");
     return headerStr;
