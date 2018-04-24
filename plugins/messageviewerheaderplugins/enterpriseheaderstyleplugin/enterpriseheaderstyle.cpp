@@ -180,10 +180,10 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                              "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath + QStringLiteral("left.png);'</td>"
                                                                                                                        "<td style='padding-right:20px;'>"
                                                                                                                        "<div class=\"noprint\" >"
-                                                                                                                       "<div id=\"attachmentInjectionPoint\"></div>"
+                                                                                                                       "<div>%1</div>"
                                                                                                                        "</div>"
                                                                                                                        "</td>"
-                                                                                                                       "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath
+                                                                                                                       "<td style='min-width: 6px; max-width: 6px; background: url(").arg(attachmentHtml()) + imgpath
               + QStringLiteral("right.png);'</td>"
                                "</tr>");
     }
