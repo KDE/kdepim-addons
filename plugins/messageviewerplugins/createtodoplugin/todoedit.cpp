@@ -107,7 +107,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &TodoEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton = new QPushButton(i18n("Open &editor..."), this);
+    mOpenEditorButton = new QPushButton(i18n("Open &Editor..."), this);
     mOpenEditorButton->setObjectName(QStringLiteral("open-editor-button"));
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open todo editor, where more details can be changed."));
