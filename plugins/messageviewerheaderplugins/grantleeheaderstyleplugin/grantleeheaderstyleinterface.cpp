@@ -32,6 +32,10 @@ GrantleeHeaderStyleInterface::GrantleeHeaderStyleInterface(MessageViewer::Header
 
 GrantleeHeaderStyleInterface::~GrantleeHeaderStyleInterface()
 {
+    if (mThemeManager) {
+        mThemeManager->setThemeMenu(nullptr);
+        mThemeManager->setActionGroup(nullptr);
+    }
 }
 
 void GrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
