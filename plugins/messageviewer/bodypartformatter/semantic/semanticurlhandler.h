@@ -22,8 +22,6 @@
 
 #include <MessageViewer/BodyPartURLHandler>
 
-#include <KCalCore/Event>
-
 #include <QObject>
 
 class SemanticMemento;
@@ -44,11 +42,6 @@ private:
     SemanticMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
     QDate dateForReservation(SemanticMemento *memento) const;
     void showCalendar(const QDate &date) const;
-
-    KCalCore::Event::Ptr eventForReservation(const QVariant &reservation) const;
-    KCalCore::Event::Ptr eventForFlightReservation(const QVariant &reservation) const;
-    KCalCore::Event::Ptr eventForLodgingReservation(const QVariant &reservation) const;
-    KCalCore::Event::Ptr eventForTrainReservation(const QVariant &reservation) const;
     void addToCalendar(SemanticMemento *memento) const;
 };
 

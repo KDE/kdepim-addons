@@ -34,6 +34,8 @@
 
 #include <KMime/Content>
 
+#include <KCalCore/Event>
+
 #include <KDBusServiceStarter>
 #include <KLocalizedString>
 
