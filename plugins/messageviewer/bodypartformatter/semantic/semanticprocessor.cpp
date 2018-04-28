@@ -125,6 +125,10 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         }
     }
 
+    if (pass) {
+        memento->addPass(pass.get(), part.content()->decodedContent());
+    }
+
     qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
     return {};
 }

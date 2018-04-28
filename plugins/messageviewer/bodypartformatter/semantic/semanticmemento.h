@@ -28,11 +28,17 @@
 #include <QVariant>
 #include <QVector>
 
-class QDateTime;
+#include <vector>
+
+namespace KPkPass {
+class Pass;
+}
 
 namespace KMime {
 class ContentIndex;
 }
+
+class QDateTime;
 
 /** Memento holding the semantic information extracted for an email. */
 class SemanticMemento : public MimeTreeParser::Interface::BodyPartMemento
@@ -53,11 +59,21 @@ public:
     QVector<bool> expanded() const;
     void toggleExpanded(int index);
 
+    void addPass(KPkPass::Pass* pass, const QByteArray &rawData);
+    QByteArray rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const;
+
 private:
     QVector<QVariant> m_pendingStructuredData;
     QVector<bool> m_expanded;
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
+
+    struct PassData {
+        QString passTypeIdentifier;
+        QString serialNumber;
+        QByteArray rawData;
+    };
+    std::vector<PassData> m_passes;
 };
 
 #endif // SEMANTICMEMENTO_H

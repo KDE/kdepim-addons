@@ -19,6 +19,8 @@
 
 #include "semanticmemento.h"
 
+#include <KPkPass/Pass>
+
 #include <KMime/ContentIndex>
 
 void SemanticMemento::detach()
@@ -72,4 +74,18 @@ void SemanticMemento::toggleExpanded(int index)
         return;
     }
     m_expanded[index] = !m_expanded.at(index);
+}
+
+void SemanticMemento::addPass(KPkPass::Pass *pass, const QByteArray &rawData)
+{
+    m_passes.emplace_back(PassData{pass->passTypeIdentifier(), pass->serialNumber(), rawData});
+}
+
+QByteArray SemanticMemento::rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const
+{
+    for (const auto &pass : m_passes) {
+        if (pass.passTypeIdentifier == passTypeIdentifier && pass.serialNumber == serialNumber)
+            return pass.rawData;
+    }
+    return {};
 }

@@ -250,6 +250,25 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     korgIface->call(QStringLiteral("showDate"), date);
 }
 
+static void attachPass(const KCalCore::Event::Ptr &event, const QVariant &reservation, SemanticMemento *memento)
+{
+    if (!JsonLd::canConvert<Reservation>(reservation)) {
+        return;
+    }
+
+    const auto res = JsonLd::convert<Reservation>(reservation);
+    const auto data = memento->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
+    if (data.isEmpty()) {
+        return;
+    }
+
+    event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
+    using namespace KCalCore;
+    Attachment::Ptr att(new Attachment(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass")));
+    att->setLabel(i18n("Boarding Pass"));
+    event->addAttachment(att);
+}
+
 void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 {
     using namespace KCalCore;
@@ -263,6 +282,7 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
             if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
                 continue;
             }
+            attachPass(event, r, memento);
             calendar->addEvent(event);
         } else {
             const auto oldRes = CalendarHandler::reservationForEvent(event);
@@ -270,6 +290,7 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
             event->startUpdates();
             CalendarHandler::fillEvent(mergedRes, event);
             event->endUpdates();
+            attachPass(event, r, memento);
             calendar->modifyIncidence(event);
         }
     }
