@@ -127,8 +127,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr
             += QStringLiteral("     <tr> \n"
                               "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ") + borderSettings + QStringLiteral("\">") + i18n(
-            "From: ") + QStringLiteral("</td> \n"
-                                       "      <td style=\"")
+                   "From: ") + QStringLiteral("</td> \n"
+                                              "      <td style=\"")
                + borderSettings + QStringLiteral("\">") + fromPart + QStringLiteral("</td> "
                                                                                     "     </tr> ");
     }
@@ -138,8 +138,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr
             += QStringLiteral("     <tr> "
                               "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
-            "To: ") + QStringLiteral("</td> "
-                                     "      <td style=\"")
+                   "To: ") + QStringLiteral("</td> "
+                                            "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
@@ -151,8 +151,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr
             += QStringLiteral("     <tr> "
                               "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
-            "CC: ") + QStringLiteral("</td> "
-                                     "      <td style=\"")
+                   "CC: ") + QStringLiteral("</td> "
+                                            "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->cc(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
@@ -164,8 +164,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         headerStr
             += QStringLiteral("     <tr> "
                               "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
-            "BCC: ") + QStringLiteral("</td> "
-                                      "      <td style=\"")
+                   "BCC: ") + QStringLiteral("</td> "
+                                             "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
                +StringUtil::emailAddrAsAnchor(message->bcc(), StringUtil::DisplayFullAddress, linkColor)
                +QStringLiteral("      </td> "
@@ -183,7 +183,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                                                                                                                        "<div>%1</div>"
                                                                                                                        "</div>"
                                                                                                                        "</td>"
-                                                                                                                       "<td style='min-width: 6px; max-width: 6px; background: url(").arg(attachmentHtml()) + imgpath
+                                                                                                                       "<td style='min-width: 6px; max-width: 6px; background: url(").arg(
+                  attachmentHtml()) + imgpath
               + QStringLiteral("right.png);'</td>"
                                "</tr>");
     }

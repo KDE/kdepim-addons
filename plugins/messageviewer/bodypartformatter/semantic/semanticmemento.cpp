@@ -37,7 +37,7 @@ void SemanticMemento::setParsed(const KMime::ContentIndex &index)
     m_parsedParts.insert(index);
 }
 
-void SemanticMemento::setMessageDate(const QDateTime& contextDt)
+void SemanticMemento::setMessageDate(const QDateTime &contextDt)
 {
     m_postProc.setContextDate(contextDt);
 }
@@ -84,8 +84,9 @@ void SemanticMemento::addPass(KPkPass::Pass *pass, const QByteArray &rawData)
 QByteArray SemanticMemento::rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const
 {
     for (const auto &pass : m_passes) {
-        if (pass.passTypeIdentifier == passTypeIdentifier && pass.serialNumber == serialNumber)
+        if (pass.passTypeIdentifier == passTypeIdentifier && pass.serialNumber == serialNumber) {
             return pass.rawData;
+        }
     }
     return {};
 }

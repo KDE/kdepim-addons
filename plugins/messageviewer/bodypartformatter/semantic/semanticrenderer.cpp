@@ -146,16 +146,16 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         const auto ticket = JsonLdDocument::readProperty(res, "reservedTicket").value<Ticket>();
         std::unique_ptr<Prison::AbstractBarcode> barcode;
         switch (ticket.ticketTokenType()) {
-            case Ticket::AztecCode:
-                barcode.reset(Prison::createBarcode(Prison::Aztec));
-                barcode->setData(ticket.ticketTokenData());
-                break;
-            case Ticket::QRCode:
-                barcode.reset(Prison::createBarcode(Prison::QRCode));
-                barcode->setData(ticket.ticketTokenData());
-                break;
-            default:
-                break;
+        case Ticket::AztecCode:
+            barcode.reset(Prison::createBarcode(Prison::Aztec));
+            barcode->setData(ticket.ticketTokenData());
+            break;
+        case Ticket::QRCode:
+            barcode.reset(Prison::createBarcode(Prison::QRCode));
+            barcode->setData(ticket.ticketTokenData());
+            break;
+        default:
+            break;
         }
         if (barcode) {
             barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...

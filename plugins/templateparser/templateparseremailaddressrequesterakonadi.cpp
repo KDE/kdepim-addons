@@ -23,7 +23,7 @@
 #include <kpluginfactory.h>
 
 K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi,
-                           "templateparseremailaddressrequesterakonadi.json")
+                         "templateparseremailaddressrequesterakonadi.json")
 
 TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent, const QList<QVariant> &)
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)

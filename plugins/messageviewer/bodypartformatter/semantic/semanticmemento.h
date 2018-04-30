@@ -59,7 +59,7 @@ public:
     QVector<bool> expanded() const;
     void toggleExpanded(int index);
 
-    void addPass(KPkPass::Pass* pass, const QByteArray &rawData);
+    void addPass(KPkPass::Pass *pass, const QByteArray &rawData);
     QByteArray rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const;
 
 private:
