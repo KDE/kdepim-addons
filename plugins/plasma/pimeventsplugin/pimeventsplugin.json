@@ -12,7 +12,6 @@
                 "Name[x-test]": "xxDaniel Vrátilxx"
             }
         ],
-        "ConfigUi": "pimevents/PimEventsConfig.qml",
         "Description": "Calendar plugin for displaying events from KDE PIM calendars",
         "Description[ar]": "ملحقة تقويم لعرض الأحداث من تقاويم «كدي PIM»",
         "Description[ca@valencia]": "Connector de calendari per a mostrar els esdeveniments des dels calendaris PIM del KDE",
@@ -55,5 +54,6 @@
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"
         ]
-    }
+    },
+    "X-KDE-PlasmaCalendar-ConfigUi": "pimevents/PimEventsConfig.qml"
 }
