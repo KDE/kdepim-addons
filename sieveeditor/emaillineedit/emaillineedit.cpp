@@ -43,6 +43,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     mLineEdit = new QLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mLineEdit->setClearButtonEnabled(true);
+    mLineEdit->setPlaceholderText(i18n("Click on button for selecting emails..."));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
