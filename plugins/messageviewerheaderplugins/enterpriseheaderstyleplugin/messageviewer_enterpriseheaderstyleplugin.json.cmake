@@ -8,6 +8,7 @@
         "Description[et]": "See plugin võimaldab kasutada firmapäise stiili.",
         "Description[fi]": "Tällä liitännäisellä voit määrittää yrityksen viestiotsaketyylin.",
         "Description[fr]": "Ce module définit un style d'en-tête de message pour une entreprise.",
+        "Description[gl]": "Este complemento define un estilo de cabeceira de correo para empresas.",
         "Description[it]": "Questa estensione definisce uno stile di intestazioni di tipo aziendale per la posta.",
         "Description[ko]": "이 플러그인은 기업식 헤더 스타일을 제공합니다.",
         "Description[nl]": "Deze plug-in definieert een e-mailheaderstijl voor bedrijven.",
