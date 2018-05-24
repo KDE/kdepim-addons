@@ -31,6 +31,7 @@
 #include <KItinerary/Flight>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
+#include <KItinerary/SortUtil>
 
 #include <KMime/Content>
 
@@ -215,7 +216,7 @@ SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart
 QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 {
     for (const auto &r : memento->extractedData()) {
-        const auto dt = CalendarHandler::startDateTime(r);
+        const auto dt = SortUtil::startDateTime(r);
         if (dt.isValid()) {
             return dt.date();
         }
