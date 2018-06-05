@@ -26,12 +26,14 @@
 
 #include <CalendarSupport/CalendarSingleton>
 
+#include <KItinerary/BusTrip>
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Flight>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
 #include <KItinerary/SortUtil>
+#include <KItinerary/TrainTrip>
 
 #include <KMime/Content>
 
@@ -155,9 +157,9 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
 
     QSet<QString> places;
     for (const auto &r : m->extractedData()) {
-        if (r.userType() == qMetaTypeId<LodgingReservation>()) {
+        if (JsonLd::isA<LodgingReservation>(r)) {
             addGoToMapAction(&menu, r.value<LodgingReservation>().reservationFor());
-        } else if (r.userType() == qMetaTypeId<FlightReservation>()) {
+        } else if (JsonLd::isA<FlightReservation>(r)) {
             const auto flight = r.value<FlightReservation>().reservationFor().value<Flight>();
 
             auto airport = flight.departureAirport();
@@ -171,21 +173,25 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, airport);
                 places.insert(airport.iataCode());
             }
-        } else if (r.userType() == qMetaTypeId<TrainReservation>() || r.userType() == qMetaTypeId<BusReservation>()) {
-            const auto trip = JsonLdDocument::readProperty(r, "reservationFor");
-
-            auto station = JsonLdDocument::readProperty(trip, "departureStation");
-            auto name = JsonLdDocument::readProperty(station, "name").toString();
-            if (!places.contains(name)) {
-                addGoToMapAction(&menu, station);
-                places.insert(name);
+        } else if (JsonLd::isA<TrainReservation>(r)) {
+            const auto trip = r.value<TrainReservation>().reservationFor().value<TrainTrip>();
+            if (!places.contains(trip.departureStation().name())) {
+                addGoToMapAction(&menu, trip.departureStation());
+                places.insert(trip.departureStation().name());
             }
-
-            station = JsonLdDocument::readProperty(trip, "arrivalStation");
-            name = JsonLdDocument::readProperty(station, "name").toString();
-            if (!places.contains(name)) {
-                addGoToMapAction(&menu, station);
-                places.insert(name);
+            if (!places.contains(trip.arrivalStation().name())) {
+                addGoToMapAction(&menu, trip.arrivalStation());
+                places.insert(trip.arrivalStation().name());
+            }
+        } else if (JsonLd::isA<BusReservation>(r)) {
+            const auto trip = r.value<BusReservation>().reservationFor().value<BusTrip>();
+            if (!places.contains(trip.departureStation().name())) {
+                addGoToMapAction(&menu, trip.departureStation());
+                places.insert(trip.departureStation().name());
+            }
+            if (!places.contains(trip.arrivalStation().name())) {
+                addGoToMapAction(&menu, trip.arrivalStation());
+                places.insert(trip.arrivalStation().name());
             }
         }
     }
