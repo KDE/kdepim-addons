@@ -30,6 +30,7 @@
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Flight>
+#include <KItinerary/Organization>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
 #include <KItinerary/SortUtil>
@@ -50,6 +51,7 @@
 #include <QUrlQuery>
 
 #include <memory>
+#include <type_traits>
 
 using namespace KItinerary;
 
@@ -72,28 +74,25 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
     return false;
 }
 
-static QString placeName(const QVariant &place)
+template <typename T>
+static QString placeName(const T &place)
 {
-    const auto name = JsonLdDocument::readProperty(place, "name").toString()
-                      .replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
-    if (!name.isEmpty()) {
-        return name;
-    }
-    // airports with no name, as extracted from IATA BCBP messages
-    return JsonLdDocument::readProperty(place, "iataCode").toString();
+    return place.name().replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
 }
 
-static void addGoToMapAction(QMenu *menu, const QVariant &place)
+template <>
+QString placeName(const Airport &place)
 {
-    if (place.isNull()) {
-        return;
+    if (place.name().isEmpty()) {
+        return place.iataCode();
     }
+    return place.name().replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
+}
 
-    const auto geo = JsonLdDocument::readProperty(place, "geo").value<GeoCoordinates>();
+static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QString &placeName, int zoom = 17)
+{
     if (geo.isValid()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName(place)));
-        // zoom out further from airports, they are larger and you usually want to go further away from them
-        const auto zoom = place.userType() == qMetaTypeId<Airport>() ? 12 : 17;
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName));
         QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -105,12 +104,13 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setFragment(fragment);
             QDesktopServices::openUrl(url);
         });
-        return;
     }
+}
 
-    const auto addr = JsonLdDocument::readProperty(place, "address").value<PostalAddress>();
+static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QString &placeName)
+{
     if (!addr.addressLocality().isEmpty()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName(place)));
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName));
         QObject::connect(action, &QAction::triggered, menu, [addr]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -125,6 +125,17 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place)
             url.setQuery(query);
             QDesktopServices::openUrl(url);
         });
+    }
+}
+
+template <typename T>
+static void addGoToMapAction(QMenu *menu, const T &place)
+{
+    const auto name = placeName(place);
+    // zoom out further from airports, they are larger and you usually want to go further away from them
+    addGoToMapAction(menu, place.geo(), name, std::is_same<T, Airport>::value ? 12 : 17);
+    if (!place.geo().isValid()) {
+        addGoToMapAction(menu, place.address(), name);
     }
 }
 
@@ -158,7 +169,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     QSet<QString> places;
     for (const auto &r : m->extractedData()) {
         if (JsonLd::isA<LodgingReservation>(r)) {
-            addGoToMapAction(&menu, r.value<LodgingReservation>().reservationFor());
+            addGoToMapAction(&menu, r.value<LodgingReservation>().reservationFor().value<LodgingBusiness>());
         } else if (JsonLd::isA<FlightReservation>(r)) {
             const auto flight = r.value<FlightReservation>().reservationFor().value<Flight>();
 
