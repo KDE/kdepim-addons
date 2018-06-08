@@ -143,27 +143,29 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         data.insert(QStringLiteral("state"), state);
 
         // generate ticket barcodes
-        const auto ticket = JsonLdDocument::readProperty(res, "reservedTicket").value<Ticket>();
-        std::unique_ptr<Prison::AbstractBarcode> barcode;
-        switch (ticket.ticketTokenType()) {
-        case Ticket::AztecCode:
-            barcode.reset(Prison::createBarcode(Prison::Aztec));
-            barcode->setData(ticket.ticketTokenData());
-            break;
-        case Ticket::QRCode:
-            barcode.reset(Prison::createBarcode(Prison::QRCode));
-            barcode->setData(ticket.ticketTokenData());
-            break;
-        default:
-            break;
-        }
-        if (barcode) {
-            barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
-            const auto img = barcode->toImage(barcode->minimumSize());
-            const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
-            img.save(fileName);
-            data.insert(QStringLiteral("ticketToken"), fileName);
-            nodeHelper->addTempFile(fileName);
+        if (JsonLd::canConvert<Reservation>(res)) {
+            const auto ticket = JsonLd::convert<Reservation>(res).reservedTicket().value<Ticket>();
+            std::unique_ptr<Prison::AbstractBarcode> barcode;
+            switch (ticket.ticketTokenType()) {
+            case Ticket::AztecCode:
+                barcode.reset(Prison::createBarcode(Prison::Aztec));
+                barcode->setData(ticket.ticketTokenData());
+                break;
+            case Ticket::QRCode:
+                barcode.reset(Prison::createBarcode(Prison::QRCode));
+                barcode->setData(ticket.ticketTokenData());
+                break;
+            default:
+                break;
+            }
+            if (barcode) {
+                barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
+                const auto img = barcode->toImage(barcode->minimumSize());
+                const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+                img.save(fileName);
+                data.insert(QStringLiteral("ticketToken"), fileName);
+                nodeHelper->addTempFile(fileName);
+            }
         }
 
         elems.push_back(data);
