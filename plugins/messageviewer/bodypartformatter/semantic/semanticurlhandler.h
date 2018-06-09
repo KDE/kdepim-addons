@@ -31,7 +31,7 @@ class SemanticUrlHandler : public QObject, public MessageViewer::Interface::Body
 {
     Q_OBJECT
 public:
-    SemanticUrlHandler() = default;
+    SemanticUrlHandler();
     ~SemanticUrlHandler() override = default;
 
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
@@ -43,6 +43,9 @@ private:
     QDate dateForReservation(SemanticMemento *memento) const;
     void showCalendar(const QDate &date) const;
     void addToCalendar(SemanticMemento *memento) const;
+    void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
+
+    QString m_appPath;
 };
 
 #endif // SEMANTICURLHANDLER_H

@@ -47,13 +47,23 @@
 #include <QDBusInterface>
 #include <QDesktopServices>
 #include <QIcon>
+#include <QJsonArray>
+#include <QJsonDocument>
 #include <QMenu>
+#include <QProcess>
+#include <QStandardPaths>
+#include <QTemporaryFile>
 #include <QUrlQuery>
 
 #include <memory>
 #include <type_traits>
 
 using namespace KItinerary;
+
+SemanticUrlHandler::SemanticUrlHandler()
+{
+    m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
+}
 
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
@@ -92,7 +102,7 @@ QString placeName(const Airport &place)
 static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QString &placeName, int zoom = 17)
 {
     if (geo.isValid()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName));
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", placeName));
         QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -110,7 +120,7 @@ static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QStri
 static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QString &placeName)
 {
     if (!addr.addressLocality().isEmpty()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Show \'%1\' On Map", placeName));
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", placeName));
         QObject::connect(action, &QAction::triggered, menu, [addr]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -205,6 +215,13 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 places.insert(trip.arrivalStation().name());
             }
         }
+    }
+
+    if (!m_appPath.isEmpty()) {
+        action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Import into KDE Itinerary"));
+        QObject::connect(action, &QAction::triggered, this, [this, part]() {
+            openInApp(part);
+        });
     }
 
     menu.exec(p);
@@ -314,4 +331,54 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
             calendar->modifyIncidence(event);
         }
     }
+}
+
+void SemanticUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
+{
+    QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.jsonld"));
+    if (!f.open()) {
+        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+        return;
+    }
+
+    const auto m = memento(part);
+
+    auto data = m->extractedData();
+    for (auto &res : data) {
+        const auto event = CalendarHandler::findEvent(CalendarSupport::calendarSingleton(true), res);
+        if (!event) {
+            continue;
+        }
+        res = JsonLdDocument::apply(CalendarHandler::reservationForEvent(event), res);
+    }
+    f.write(QJsonDocument(JsonLdDocument::toJson(data)).toJson());
+    f.close();
+    part->nodeHelper()->addTempFile(f.fileName());
+    f.setAutoRemove(false);
+
+    QStringList args(f.fileName());
+
+    // add pkpass attachments
+    for (const auto &elem : data) {
+        if (!JsonLd::canConvert<Reservation>(elem)) {
+            continue;
+        }
+        const auto res = JsonLd::convert<Reservation>(elem);
+        const auto b = m->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
+        if (b.isEmpty()) {
+            continue;
+        }
+
+        QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.pkpass"));
+        if (!f.open()) {
+            qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+            return;
+        }
+        f.write(b);
+        part->nodeHelper()->addTempFile(f.fileName());
+        f.setAutoRemove(false);
+        args.push_back(f.fileName());
+    }
+
+    QProcess::startDetached(m_appPath, args);
 }
