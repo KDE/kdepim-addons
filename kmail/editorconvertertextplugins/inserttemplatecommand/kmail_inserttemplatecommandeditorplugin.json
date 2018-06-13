@@ -29,6 +29,7 @@
         "Name[sv]": "Infoga mallkommando",
         "Name[uk]": "Вставлення шаблонної команди",
         "Name[x-test]": "xxInsert Template Commandxx",
+        "Name[zh_CN]": "插入模板命令",
         "ServiceTypes": [
             "KMailEditor/PluginEditorConvertText"
         ],
