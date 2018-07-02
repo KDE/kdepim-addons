@@ -35,7 +35,7 @@ class EventSelectorDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit EventSelectorDialog(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
+    explicit EventSelectorDialog(QWidget *parent = nullptr, Qt::WindowFlags f = {});
 
     Akonadi::Item selectedItem();
 
@@ -47,7 +47,7 @@ class EventSelectorWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit EventSelectorWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
+    explicit EventSelectorWidget(QWidget *parent = nullptr, Qt::WindowFlags f = {});
 
     void clear();
 

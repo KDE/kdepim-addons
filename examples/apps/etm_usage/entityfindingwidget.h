@@ -46,7 +46,7 @@ class EntityFindingWidget : public QWidget
 {
     Q_OBJECT
 public:
-    EntityFindingWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
+    EntityFindingWidget(QWidget *parent = nullptr, Qt::WindowFlags f = {});
 
 private Q_SLOTS:
 

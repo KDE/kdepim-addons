@@ -49,7 +49,7 @@ class UnreadMailsInCollectionsWidget : public QWidget
 {
     Q_OBJECT
 public:
-    UnreadMailsInCollectionsWidget(QWidget *parent = nullptr, Qt::WindowFlags f = 0);
+    UnreadMailsInCollectionsWidget(QWidget *parent = nullptr, Qt::WindowFlags f = {});
     ~UnreadMailsInCollectionsWidget() override;
 
 private Q_SLOTS:

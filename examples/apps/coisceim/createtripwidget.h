@@ -38,7 +38,7 @@ class CreateTripWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidget *parent = nullptr, Qt::WindowFlags f = 0);
+    explicit CreateTripWidget(Trip *trip, Akonadi::Monitor *monitor, QWidget *parent = nullptr, Qt::WindowFlags f = {});
 
 private Q_SLOTS:
     void tripSelected(const Akonadi::Item &item);
