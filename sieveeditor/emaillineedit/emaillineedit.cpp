@@ -108,6 +108,12 @@ QString EmailLineEdit::text() const
     return mLineEdit->text();
 }
 
+bool EmailLineEdit::isValid() const
+{
+    //TODO
+    return true;
+}
+
 void EmailLineEdit::slotTextChanged()
 {
     verifyAddress();

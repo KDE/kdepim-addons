@@ -35,6 +35,7 @@ public:
 
     void setText(const QString &str) override;
     QString text() const override;
+    bool isValid() const override;
 private:
     void slotTextChanged();
     void verifyAddress();
