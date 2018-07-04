@@ -110,8 +110,7 @@ QString EmailLineEdit::text() const
 
 bool EmailLineEdit::isValid() const
 {
-    //TODO
-    return true;
+    return mEmailIsValid;
 }
 
 void EmailLineEdit::slotTextChanged()
@@ -126,12 +125,12 @@ void EmailLineEdit::verifyAddress()
     QString styleSheet;
     const QString lineEditText = text();
     if (!lineEditText.isEmpty()) {
-        const bool incorrectEmail = !lineEditText.contains(QLatin1Char('@'));
+        mEmailIsValid = lineEditText.contains(QLatin1Char('@'));
         if (mNegativeBackground.isEmpty()) {
             KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
             mNegativeBackground = QStringLiteral("QLineEdit{ color:%1 }").arg(bgBrush.brush(this).color().name());
         }
-        if (incorrectEmail) {
+        if (!mEmailIsValid) {
             styleSheet = mNegativeBackground;
         }
     }

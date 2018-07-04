@@ -45,6 +45,7 @@ private:
     QString mNegativeBackground;
     QLineEdit *mLineEdit = nullptr;
     QToolButton *mEmailButton = nullptr;
+    bool mEmailIsValid = false;
 };
 
 #endif // EMAILLINEEDIT_H
