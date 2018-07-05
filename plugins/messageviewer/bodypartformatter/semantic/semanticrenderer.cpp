@@ -27,6 +27,7 @@
 
 #include <CalendarSupport/CalendarSingleton>
 
+#include <KItinerary/Action>
 #include <KItinerary/BusTrip>
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/Flight>
@@ -73,6 +74,11 @@ GRANTLEE_MAKE_GADGET(TrainReservation)
 GRANTLEE_MAKE_GADGET(BusStation)
 GRANTLEE_MAKE_GADGET(BusTrip)
 GRANTLEE_MAKE_GADGET(BusReservation)
+GRANTLEE_MAKE_GADGET(CancelAction)
+GRANTLEE_MAKE_GADGET(CheckInAction)
+GRANTLEE_MAKE_GADGET(DownloadAction)
+GRANTLEE_MAKE_GADGET(UpdateAction)
+GRANTLEE_MAKE_GADGET(ViewAction)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -91,6 +97,11 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<BusStation>();
     Grantlee::registerMetaType<BusTrip>();
     Grantlee::registerMetaType<BusReservation>();
+    Grantlee::registerMetaType<CancelAction>();
+    Grantlee::registerMetaType<CheckInAction>();
+    Grantlee::registerMetaType<DownloadAction>();
+    Grantlee::registerMetaType<UpdateAction>();
+    Grantlee::registerMetaType<ViewAction>();
 }
 
 bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const

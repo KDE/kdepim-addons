@@ -44,23 +44,7 @@
             {% i18n "Seat: %1" item.reservedTicket.ticketedSeat.seatNumber %}
         {% endif %}
         </div>
-
-        <div style="float:right">
-        {% if item.url %}
-            <a href="{{ item.url }}"/>{% i18n "View" %}</a>
-            {% if item.modifyReservationUrl or item.cancelReservationUrl %}|{% endif %}
-        {% endif %}
-
-        {% if item.modifyReservationUrl %}
-            <a href="{{ item.modifyReservationUrl }}"/>{% i18n "Modify" %}</a>
-            {% if item.cancelReservationUrl %}|{% endif %}
-        {% endif %}
-
-        {% if item.cancelReservationUrl %}
-            <a href="{{ item.cancelReservationUrl }}"/>{% i18n "Cancel" %}</a>
-        {% endif %}
-        </div>
-
+        {% include ":/org.kde.messageviewer/semantic/actions.html" %}
     </td></tr>
 </table>
 
