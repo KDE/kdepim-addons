@@ -1,6 +1,4 @@
 <div style="font-size:125%;">{{ item.reservationFor.name }} {{ item.checkinDateLocalized }} - {{ item.checkoutDateLocalized }}</div>
-<div>{{ item.reservationFor.address.streetAddress }}</div>
-<div>{{ item.reservationFor.address.postalCode }} {{ item.reservationFor.address.addressLocality }}</div>
-<div style="float:left;">{{ item.reservationFor.address.addressCountry }}</div>
+<div>{{ item.reservationFor.address|formatAddress|safe }}</div>
 {% include ":/org.kde.messageviewer/semantic/actions.html" %}
 <div style="clear:both;"></div>
