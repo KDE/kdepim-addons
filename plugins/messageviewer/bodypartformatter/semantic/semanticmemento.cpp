@@ -19,9 +19,16 @@
 
 #include "semanticmemento.h"
 
+#include <CalendarSupport/CalendarSingleton>
+
+#include <KItinerary/CalendarHandler>
+#include <KItinerary/JsonLdDocument>
+
 #include <KPkPass/Pass>
 
 #include <KMime/ContentIndex>
+
+using namespace KItinerary;
 
 void SemanticMemento::detach()
 {
@@ -52,28 +59,44 @@ void SemanticMemento::appendUnstructuredData(const QVector<QVariant> &data)
     m_postProc.process(data);
 }
 
-QVector<QVariant> SemanticMemento::extractedData()
+bool SemanticMemento::hasData() const
+{
+    return !m_data.isEmpty() || !m_pendingStructuredData.isEmpty() || !m_postProc.result().isEmpty();
+}
+
+QVector<SemanticMemento::ReservationData> SemanticMemento::data()
 {
     if (!m_pendingStructuredData.isEmpty()) {
         m_postProc.process(m_pendingStructuredData);
         m_pendingStructuredData.clear();
     }
-    const auto res = m_postProc.result();
-    m_expanded.resize(res.size());
-    return res;
-}
 
-QVector<bool> SemanticMemento::expanded() const
-{
-    return m_expanded;
+    if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
+        const auto calendar = CalendarSupport::calendarSingleton(true);
+        for (const auto &r : m_postProc.result()) {
+            ReservationData data;
+            data.res = r;
+            data.expanded = false;
+
+            data.event = CalendarHandler::findEvent(calendar, data.res);
+            if (data.event) {
+                const auto existingRes = CalendarHandler::reservationForEvent(data.event);
+                data.res = JsonLdDocument::apply(existingRes, data.res);
+            }
+
+            m_data.push_back(data);
+        }
+    }
+
+    return m_data;
 }
 
 void SemanticMemento::toggleExpanded(int index)
 {
-    if (index >= m_expanded.size()) {
+    if (index >= m_data.size()) {
         return;
     }
-    m_expanded[index] = !m_expanded.at(index);
+    m_data[index].expanded = !m_data.at(index).expanded;
 }
 
 void SemanticMemento::addPass(KPkPass::Pass *pass, const QByteArray &rawData)

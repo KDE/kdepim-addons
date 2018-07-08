@@ -25,11 +25,8 @@
 #include <MessageViewer/HtmlWriter>
 #include <MessageViewer/MessagePartRendererManager>
 
-#include <CalendarSupport/CalendarSingleton>
-
 #include <KItinerary/Action>
 #include <KItinerary/BusTrip>
-#include <KItinerary/CalendarHandler>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Organization>
@@ -119,7 +116,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     }
 
     auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
-    if (!memento || memento->extractedData().isEmpty()) {
+    if (!memento || !memento->hasData()) {
         return false;
     }
 
@@ -133,29 +130,22 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     style.insert(QStringLiteral("collapseIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
     c.insert(QStringLiteral("style"), style);
 
-    const auto calendar = CalendarSupport::calendarSingleton(true);
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
+    const auto extractedData = memento->data();
     QVariantList elems;
-    elems.reserve(memento->extractedData().size());
-    for (int i = 0; i < memento->extractedData().size(); ++i) {
-        auto res = memento->extractedData().at(i);
-
-        const auto event = CalendarHandler::findEvent(calendar, res);
-        if (event) {
-            const auto existingRes = CalendarHandler::reservationForEvent(event);
-            res = JsonLdDocument::apply(existingRes, res);
-        }
-
+    elems.reserve(extractedData.size());
+    for (int i = 0; i < extractedData.size(); ++i) {
+        const auto d = extractedData.at(i);
         QVariantMap data;
-        data.insert(QStringLiteral("reservation"), res);
+        data.insert(QStringLiteral("reservation"), d.res);
 
         QVariantMap state;
-        state.insert(QStringLiteral("expanded"), memento->expanded().at(i));
+        state.insert(QStringLiteral("expanded"), d.expanded);
         data.insert(QStringLiteral("state"), state);
 
         // generate ticket barcodes
-        if (JsonLd::canConvert<Reservation>(res)) {
-            const auto ticket = JsonLd::convert<Reservation>(res).reservedTicket().value<Ticket>();
+        if (JsonLd::canConvert<Reservation>(d.res)) {
+            const auto ticket = JsonLd::convert<Reservation>(d.res).reservedTicket().value<Ticket>();
             std::unique_ptr<Prison::AbstractBarcode> barcode;
             switch (ticket.ticketTokenType()) {
             case Ticket::AztecCode:

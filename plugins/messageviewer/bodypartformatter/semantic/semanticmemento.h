@@ -23,6 +23,7 @@
 #include <MimeTreeParser/BodyPart>
 
 #include <KItinerary/ExtractorPostprocessor>
+#include <KCalCore/Event>
 
 #include <QSet>
 #include <QVariant>
@@ -54,9 +55,13 @@ public:
     void appendUnstructuredData(const QVector<QVariant> &data);
     void appendStructuredData(const QVector<QVariant> &data);
 
-    QVector<QVariant> extractedData();
-
-    QVector<bool> expanded() const;
+    bool hasData() const;
+    struct ReservationData {
+        QVariant res;
+        KCalCore::Event::Ptr event;
+        bool expanded;
+    };
+    QVector<ReservationData> data();
     void toggleExpanded(int index);
 
     void addPass(KPkPass::Pass *pass, const QByteArray &rawData);
@@ -64,9 +69,9 @@ public:
 
 private:
     QVector<QVariant> m_pendingStructuredData;
-    QVector<bool> m_expanded;
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
+    QVector<ReservationData> m_data;
 
     struct PassData {
         QString passTypeIdentifier;
