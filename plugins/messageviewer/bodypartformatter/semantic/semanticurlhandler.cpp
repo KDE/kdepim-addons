@@ -149,6 +149,22 @@ static void addGoToMapAction(QMenu *menu, const T &place)
     }
 }
 
+static bool canAddToCalendar(SemanticMemento *m)
+{
+    for (const auto &d : m->data()) {
+        if (JsonLd::isA<FlightReservation>(d.res)) {
+            const auto f = d.res.value<FlightReservation>().reservationFor().value<Flight>();
+            if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
+                return true;
+            }
+            continue;
+        } else if (SortUtil::startDateTime(d.res).isValid()) {
+            return true;
+        }
+    }
+    return false;
+}
+
 bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
@@ -172,6 +188,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     }
 
     action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
+    action->setEnabled(canAddToCalendar(m));
     QObject::connect(action, &QAction::triggered, this, [this, m](){
         addToCalendar(m);
     });
