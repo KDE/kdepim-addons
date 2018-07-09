@@ -1,4 +1,4 @@
-<div style="font-size:125%;">{{ item.reservationFor.name }} {{ item.checkinDateLocalized }} - {{ item.checkoutDateLocalized }}</div>
+<div style="font-size:125%;">{{ item.reservationFor.name }} {{ item.checkinTime|formatDate }} - {{ item.checkoutTime|formatDate }}</div>
 <div>{{ item.reservationFor.address|formatAddress|safe }}</div>
 {% include ":/org.kde.messageviewer/semantic/actions.html" %}
 <div style="clear:both;"></div>

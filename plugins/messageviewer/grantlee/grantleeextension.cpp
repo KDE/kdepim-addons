@@ -25,7 +25,9 @@
 #include <grantlee/exception.h>
 #include <grantlee/parser.h>
 
+#include <QDateTime>
 #include <QDebug>
+#include <QTimeZone>
 
 QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
@@ -53,6 +55,53 @@ bool AddressFormatter::isSafe() const
     return true;
 }
 
+QVariant DateFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
+{
+    Q_UNUSED(arg);
+    Q_UNUSED(autoescape);
+
+    const auto dt = input.value<QDateTime>();
+    if (!dt.isValid()) {
+        return {};
+    }
+
+    return QLocale().toString(dt.date(), QLocale::ShortFormat);
+}
+
+QVariant DateTimeFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
+{
+    Q_UNUSED(arg);
+    Q_UNUSED(autoescape);
+
+    const auto dt = input.value<QDateTime>();
+    if (!dt.isValid()) {
+        return {};
+    }
+
+    auto s = QLocale().toString(dt, QLocale::ShortFormat);
+    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC) {
+        s += QLatin1Char(' ') + dt.timeZone().abbreviation(dt);
+    }
+    return s;
+}
+
+QVariant TimeFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
+{
+    Q_UNUSED(arg);
+    Q_UNUSED(autoescape);
+
+    const auto dt = input.value<QDateTime>();
+    if (!dt.isValid()) {
+        return {};
+    }
+
+    auto s = QLocale().toString(dt.time(), QLocale::ShortFormat);
+    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC) {
+        s += QLatin1Char(' ') + dt.timeZone().abbreviation(dt);
+    }
+    return s;
+}
+
 
 TagLibrary::TagLibrary(QObject *parent)
     : QObject(parent)
@@ -64,5 +113,8 @@ QHash<QString, Grantlee::Filter*> TagLibrary::filters(const QString &name)
     Q_UNUSED(name);
     QHash<QString, Grantlee::Filter*> filters;
     filters.insert(QStringLiteral("formatAddress"), new AddressFormatter());
+    filters.insert(QStringLiteral("formatDate"), new DateFormatter());
+    filters.insert(QStringLiteral("formatDateTime"), new DateTimeFormatter());
+    filters.insert(QStringLiteral("formatTime"), new TimeFormatter());
     return filters;
 }

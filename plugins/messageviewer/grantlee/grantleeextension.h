@@ -32,6 +32,24 @@ public:
     bool isSafe() const override;
 };
 
+class DateFormatter : public Grantlee::Filter
+{
+public:
+    QVariant doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const override;
+};
+
+class DateTimeFormatter : public Grantlee::Filter
+{
+public:
+    QVariant doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const override;
+};
+
+class TimeFormatter : public Grantlee::Filter
+{
+public:
+    QVariant doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const override;
+};
+
 class TagLibrary : public QObject, public Grantlee::TagLibraryInterface
 {
     Q_OBJECT

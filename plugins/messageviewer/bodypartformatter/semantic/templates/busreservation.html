@@ -15,7 +15,7 @@
         </td>
     </tr>
     <tr>
-        <td>{{ item.reservationFor.departureTimeLocalized }}</td>
+        <td>{{ item.reservationFor.departureTime|formatDateTime }}</td>
         <td style="white-space: nowrap; text-align:center;">
             {% if item.reservationFor.busName and item.reservationiFor.busNumber %}
                 {{ item.reservationFor.busName }} <br> {{ item.reservationFor.busNumber }}
@@ -23,7 +23,7 @@
                 {{ item.reservationFor.busName }} {{ item.reservationFor.busNumber }}
             {% endif %}
         </td>
-        <td>{{ item.reservationFor.arrivalTimeLocalized }}</td>
+        <td>{{ item.reservationFor.arrivalTime|formatDateTime }}</td>
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
