@@ -29,6 +29,7 @@
 #include <KItinerary/BusTrip>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
+#include <KItinerary/MergeUtil>
 #include <KItinerary/Organization>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
@@ -135,41 +136,58 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     const auto extractedData = memento->data();
     QVariantList elems;
     elems.reserve(extractedData.size());
-    for (int i = 0; i < extractedData.size(); ++i) {
-        const auto d = extractedData.at(i);
+    for (int i = 0; i < extractedData.size();) {
         QVariantMap data;
-        data.insert(QStringLiteral("reservation"), d.res);
-
         QVariantMap state;
+        const auto d = extractedData.at(i);
         state.insert(QStringLiteral("expanded"), d.expanded);
         data.insert(QStringLiteral("state"), state);
 
-        // generate ticket barcodes
+        QVector<QVariant> reservations;
         if (JsonLd::canConvert<Reservation>(d.res)) {
-            const auto ticket = JsonLd::convert<Reservation>(d.res).reservedTicket().value<Ticket>();
-            std::unique_ptr<Prison::AbstractBarcode> barcode;
-            switch (ticket.ticketTokenType()) {
-            case Ticket::AztecCode:
-                barcode.reset(Prison::createBarcode(Prison::Aztec));
-                barcode->setData(ticket.ticketTokenData());
-                break;
-            case Ticket::QRCode:
-                barcode.reset(Prison::createBarcode(Prison::QRCode));
-                barcode->setData(ticket.ticketTokenData());
-                break;
-            default:
-                break;
-            }
-            if (barcode) {
-                barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
-                const auto img = barcode->toImage(barcode->minimumSize());
-                const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
-                img.save(fileName);
-                data.insert(QStringLiteral("ticketToken"), fileName);
-                nodeHelper->addTempFile(fileName);
-            }
-        }
+            const auto trip = JsonLd::convert<Reservation>(d.res).reservationFor();
+            // merge multi-traveler elements
+            for (; i < extractedData.size(); ++i) {
+                const auto d = extractedData.at(i);
+                if (!JsonLd::canConvert<Reservation>(d.res) || !MergeUtil::isSame(JsonLd::convert<Reservation>(d.res).reservationFor(), trip)) {
+                    break;
+                }
+                QVariantMap m;
+                m.insert(QStringLiteral("reservation"), d.res);
 
+                // generate ticket barcodes
+                const auto ticket = JsonLd::convert<Reservation>(d.res).reservedTicket().value<Ticket>();
+                std::unique_ptr<Prison::AbstractBarcode> barcode;
+                switch (ticket.ticketTokenType()) {
+                case Ticket::AztecCode:
+                    barcode.reset(Prison::createBarcode(Prison::Aztec));
+                    barcode->setData(ticket.ticketTokenData());
+                    break;
+                case Ticket::QRCode:
+                    barcode.reset(Prison::createBarcode(Prison::QRCode));
+                    barcode->setData(ticket.ticketTokenData());
+                    break;
+                default:
+                    break;
+                }
+                if (barcode) {
+                    barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
+                    const auto img = barcode->toImage(barcode->minimumSize());
+                    const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+                    img.save(fileName);
+                    m.insert(QStringLiteral("ticketToken"), fileName);
+                    nodeHelper->addTempFile(fileName);
+                }
+
+                reservations.push_back(m);
+            }
+        } else {
+            QVariantMap m;
+            m.insert(QStringLiteral("reservation"), d.res);
+            reservations.push_back(m);
+            ++i;
+        }
+        data.insert(QStringLiteral("reservations"), QVariant::fromValue(reservations));
         elems.push_back(data);
     }
     c.insert(QStringLiteral("data"), elems);

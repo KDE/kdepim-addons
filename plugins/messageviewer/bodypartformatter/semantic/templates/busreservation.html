@@ -27,7 +27,7 @@
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
-        {% if elem.ticketToken %}
+        {% if elem.reservations.0.ticketToken %}
             <a href="x-kmail:/bodypart/0//semanticExpand?{{ forloop.counter0 }}">
             {% if elem.state.expanded %}
                 <img src="{{ style.collapseIcon }}" style="margin-right: 4px;"/>
@@ -48,7 +48,7 @@
 {% if elem.state.expanded %}
     <div style="text-align:center;">
         <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
-        <img src="{{ elem.ticketToken }}"/>
+        <img src="{{ elem.reservations.0.ticketToken }}"/>
         </div>
     </div>
 {% endif %}
