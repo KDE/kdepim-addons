@@ -23,8 +23,8 @@
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
-        {% if elem.reservations.0.ticketToken %}
-            <a href="x-kmail:/bodypart/0//semanticExpand?{{ forloop.counter0 }}">
+        {% if elem.reservations.0.ticketToken or elem.reservations.size > 1 %}
+            <a href="x-kmail:/bodypart/0//semanticExpand?{{ elem.groupId }}">
             {% if elem.state.expanded %}
                 <img src="{{ style.collapseIcon }}" style="margin-right: 4px;"/>
             {% else %}
@@ -40,11 +40,11 @@
             {% i18n "Boarding: %1" item.reservationFor.boardingTime|formatTime %}
         {% endif %}
 
-        {% if item.boardingGroup %}
+        {% if item.boardingGroup and elem.reservations.size == 1 and not elem.state.expanded %}
             {% i18n "Group: %1" item.boardingGroup %}
         {% endif %}
 
-        {% if item.airplaneSeat %}
+        {% if item.airplaneSeat and elem.reservations.size == 1 and not elem.state.expanded %}
             {% i18n "Seat: %1" item.airplaneSeat %}
         {% endif %}
         </div>
@@ -53,9 +53,22 @@
 </table>
 
 {% if elem.state.expanded %}
-    <div style="text-align:center;">
-        <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
-        <img src="{{ elem.reservations.0.ticketToken }}"/>
+    {% for d in elem.reservations %}
+        {% with d.reservation as res %}
+        {% if res.underName.name %}
+            <div>{{ res.underName.name }}</div>
+        {% endif %}
+        <div>
+        {% if res.boardingGroup %} {% i18n "Group: %1" res.boardingGroup %} {% endif %}
+        {% if res.airplaneSeat %} {% i18n "Seat: %1" res.airplaneSeat %} {% endif %}
         </div>
-    </div>
+        {% if d.ticketToken %}
+            <div style="text-align:center;">
+                <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
+                <img src="{{ d.ticketToken }}"/>
+                </div>
+            </div>
+        {% endif %}
+        {% endwith %}
+    {% endfor %}
 {% endif %}

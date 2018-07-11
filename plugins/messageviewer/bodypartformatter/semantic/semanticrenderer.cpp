@@ -31,6 +31,7 @@
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/MergeUtil>
 #include <KItinerary/Organization>
+#include <KItinerary/Person>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
 #include <KItinerary/Ticket>
@@ -64,6 +65,7 @@ GRANTLEE_MAKE_GADGET(Flight)
 GRANTLEE_MAKE_GADGET(FlightReservation)
 GRANTLEE_MAKE_GADGET(LodgingBusiness)
 GRANTLEE_MAKE_GADGET(LodgingReservation)
+GRANTLEE_MAKE_GADGET(Person)
 GRANTLEE_MAKE_GADGET(PostalAddress)
 GRANTLEE_MAKE_GADGET(Seat)
 GRANTLEE_MAKE_GADGET(Ticket)
@@ -87,6 +89,7 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<FlightReservation>();
     Grantlee::registerMetaType<LodgingBusiness>();
     Grantlee::registerMetaType<LodgingReservation>();
+    Grantlee::registerMetaType<Person>();
     Grantlee::registerMetaType<PostalAddress>();
     Grantlee::registerMetaType<Seat>();
     Grantlee::registerMetaType<Ticket>();
@@ -142,6 +145,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         const auto d = extractedData.at(i);
         state.insert(QStringLiteral("expanded"), d.expanded);
         data.insert(QStringLiteral("state"), state);
+        data.insert(QStringLiteral("groupId"), i);
 
         QVector<QVariant> reservations;
         if (JsonLd::canConvert<Reservation>(d.res)) {
