@@ -48,7 +48,9 @@
             {% i18n "Seat: %1" res.airplaneSeat %}
         {% endif %}
         </div>
-        {% include ":/org.kde.messageviewer/semantic/actions.html" %}
+        {% if elem.reservations.size == 1 %}
+            {% include ":/org.kde.messageviewer/semantic/actions.html" %}
+        {% endif %}
     </td></tr>
 </table>
 
@@ -68,6 +70,9 @@
                 <img src="{{ d.ticketToken }}"/>
                 </div>
             </div>
+        {% endif %}
+        {% if elem.reservations.size > 1 %}
+            {% include ":/org.kde.messageviewer/semantic/actions.html" %}
         {% endif %}
         {% endwith %}
     {% endfor %}
