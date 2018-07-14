@@ -1,5 +1,5 @@
 <div style="float:right">
-{% for action in item.potentialAction %}
+{% for action in res.potentialAction %}
     {% if action.className == "ViewAction" %}
         <a href="{{ action.target }}"/>{% i18n "View" %}</a>
     {% elif action.className == "DownloadAction" %}

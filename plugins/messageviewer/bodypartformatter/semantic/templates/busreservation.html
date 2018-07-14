@@ -1,29 +1,29 @@
 <table style="width:100%;">
     <tr>
         <td style="font-size:120%; width:33;">
-            {{ item.reservationFor.departureStation.name }}
-            {% if item.reservationFor.departurePlatform %}
-                [{{ item.reservationFor.departurePlatform }}]
+            {{ trip.departureStation.name }}
+            {% if trip.departurePlatform %}
+                [{{ trip.departurePlatform }}]
             {% endif %}
         </td>
         <td style="font-size:120%; width:33%; text-align:center;">&rarr;</td>
         <td style="font-size:120%; width:33%;">
-            {{ item.reservationFor.arrivalStation.name}}
-            {% if item.reservationFor.arrivalPlatform %}
-                [{{ item.reservationFor.arrivalPlatform }}]
+            {{ trip.arrivalStation.name}}
+            {% if trip.arrivalPlatform %}
+                [{{ trip.arrivalPlatform }}]
             {% endif %}
         </td>
     </tr>
     <tr>
-        <td>{{ item.reservationFor.departureTime|formatDateTime }}</td>
+        <td>{{ trip.departureTime|formatDateTime }}</td>
         <td style="white-space: nowrap; text-align:center;">
-            {% if item.reservationFor.busName and item.reservationiFor.busNumber %}
-                {{ item.reservationFor.busName }} <br> {{ item.reservationFor.busNumber }}
+            {% if trip.busName and trip.busNumber %}
+                {{ trip.busName }} <br> {{ trip.busNumber }}
             {% else %}
-                {{ item.reservationFor.busName }} {{ item.reservationFor.busNumber }}
+                {{ trip.busName }} {{ trip.busNumber }}
             {% endif %}
         </td>
-        <td>{{ item.reservationFor.arrivalTime|formatDateTime }}</td>
+        <td>{{ trip.arrivalTime|formatDateTime }}</td>
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
@@ -37,8 +37,8 @@
             </a>
         {% endif %}
 
-        {% if item.reservedTicket.ticketedSeat.seatNumber %}
-            {% i18n "Seat: %1" item.reservedTicket.ticketedSeat.seatNumber %}
+        {% if res.reservedTicket.ticketedSeat.seatNumber %}
+            {% i18n "Seat: %1" res.reservedTicket.ticketedSeat.seatNumber %}
         {% endif %}
         </div>
         {% include ":/org.kde.messageviewer/semantic/actions.html" %}

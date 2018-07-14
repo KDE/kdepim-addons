@@ -1,25 +1,25 @@
 <table style="width:100%;">
     <tr>
-        {% if item.reservationFor.departureAirport.iataCode %}
-            <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.departureAirport.name }}">
-            {{ item.reservationFor.departureAirport.iataCode }}
+        {% if trip.departureAirport.iataCode %}
+            <td style="font-size:200%; width:33%;" title="{{ trip.departureAirport.name }}">
+            {{ trip.departureAirport.iataCode }}
             </td>
         {% else %}
-            <td style="font-size:120%; width:33%;">{{ item.reservationFor.departureAirport.name }}</td>
+            <td style="font-size:120%; width:33%;">{{ trip.departureAirport.name }}</td>
         {% endif %}
         <td style="font-size:200%; width:33%; text-align:center;">&#9992;</td>
-        {% if item.reservationFor.arrivalAirport.iataCode %}
-            <td style="font-size:200%; width:33%;" title="{{ item.reservationFor.arrivalAirport.name }}">
-            {{ item.reservationFor.arrivalAirport.iataCode }}
+        {% if trip.arrivalAirport.iataCode %}
+            <td style="font-size:200%; width:33%;" title="{{ trip.arrivalAirport.name }}">
+            {{ trip.arrivalAirport.iataCode }}
             </td>
         {% else %}
-            <td style="font-size:120%; width:33%;">{{ item.reservationFor.arrivalAirport.name }}</td>
+            <td style="font-size:120%; width:33%;">{{ trip.arrivalAirport.name }}</td>
         {% endif %}
     </tr>
     <tr>
-        <td>{{ item.reservationFor.departureTime|formatDateTime }}</td>
-        <td style="white-space: nowrap; text-align:center;" title="{{ item.reservationFor.airline.name }}">{{ item.reservationFor.airline.iataCode }} {{ item.reservationFor.flightNumber }}</td>
-        <td>{{ item.reservationFor.arrivalTime|formatDateTime }}</td>
+        <td>{{ trip.departureTime|formatDateTime }}</td>
+        <td style="white-space: nowrap; text-align:center;" title="{{ trip.airline.name }}">{{ trip.airline.iataCode }} {{ trip.flightNumber }}</td>
+        <td>{{ trip.arrivalTime|formatDateTime }}</td>
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
@@ -32,20 +32,20 @@
             {% endif %}
             </a>
         {% endif %}
-        {% if item.reservationFor.departureGate %}
-            {% i18n "Gate: %1" item.reservationFor.departureGate %}
+        {% if trip.departureGate %}
+            {% i18n "Gate: %1" trip.departureGate %}
         {% endif %}
 
-        {% if item.reservationFor.boardingTime %}
-            {% i18n "Boarding: %1" item.reservationFor.boardingTime|formatTime %}
+        {% if trip.boardingTime %}
+            {% i18n "Boarding: %1" trip.boardingTime|formatTime %}
         {% endif %}
 
-        {% if item.boardingGroup and elem.reservations.size == 1 and not elem.state.expanded %}
-            {% i18n "Group: %1" item.boardingGroup %}
+        {% if res.boardingGroup and elem.reservations.size == 1 and not elem.state.expanded %}
+            {% i18n "Group: %1" res.boardingGroup %}
         {% endif %}
 
-        {% if item.airplaneSeat and elem.reservations.size == 1 and not elem.state.expanded %}
-            {% i18n "Seat: %1" item.airplaneSeat %}
+        {% if res.airplaneSeat and elem.reservations.size == 1 and not elem.state.expanded %}
+            {% i18n "Seat: %1" res.airplaneSeat %}
         {% endif %}
         </div>
         {% include ":/org.kde.messageviewer/semantic/actions.html" %}
