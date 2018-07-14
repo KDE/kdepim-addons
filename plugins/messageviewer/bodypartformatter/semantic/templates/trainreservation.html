@@ -27,7 +27,7 @@
     </tr>
     <tr><td colspan="3">
         <div style="float:left">
-        {% if elem.reservations.0.ticketToken %}
+        {% if elem.reservations.0.ticketToken or elem.reservations.size > 1 %}
             <a href="x-kmail:/bodypart/0//semanticExpand?{{ forloop.counter0 }}">
             {% if elem.state.expanded %}
                 <img src="{{ style.collapseIcon }}" style="margin-right: 4px;"/>
@@ -36,11 +36,11 @@
             {% endif %}
             </a>
         {% endif %}
-        {% if res.reservedTicket.ticketedSeat.seatSection %}
+        {% if res.reservedTicket.ticketedSeat.seatSection and not elem.state.expanded %}
             {% i18n "Coach: %1" res.reservedTicket.ticketedSeat.seatSection %}
         {% endif %}
 
-        {% if res.reservedTicket.ticketedSeat.seatNumber %}
+        {% if res.reservedTicket.ticketedSeat.seatNumber and not elem.state.expanded %}
             {% i18n "Seat: %1" res.reservedTicket.ticketedSeat.seatNumber %}
         {% endif %}
         </div>
@@ -49,9 +49,30 @@
 </table>
 
 {% if elem.state.expanded %}
-    <div style="text-align:center;">
-        <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
-        <img src="{{ elem.reservations.0.ticketToken }}"/>
+    {% for d in elem.reservations %}
+        {% with d.reservation as res %}
+        {% if res.underName.name %}
+            <div>{{ res.underName.name }}</div>
+        {% endif %}
+        <div>
+        {% if res.reservedTicket.ticketedSeat.seatSection %}
+            {% i18n "Coach: %1" res.reservedTicket.ticketedSeat.seatSection %}
+        {% endif %}
+
+        {% if res.reservedTicket.ticketedSeat.seatNumber %}
+            {% i18n "Seat: %1" res.reservedTicket.ticketedSeat.seatNumber %}
+        {% endif %}
         </div>
-    </div>
+        {% if d.ticketToken %}
+            <div style="text-align:center;">
+                <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
+                <img src="{{ d.ticketToken }}"/>
+                </div>
+            </div>
+        {% endif %}
+        {% if elem.reservations.size > 1 %}
+            {% include ":/org.kde.messageviewer/semantic/actions.html" %}
+        {% endif %}
+        {% endwith %}
+    {% endfor %}
 {% endif %}
