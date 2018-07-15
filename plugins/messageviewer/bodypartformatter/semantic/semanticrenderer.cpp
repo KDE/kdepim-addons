@@ -124,6 +124,10 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     if (!memento || !memento->hasData()) {
         return false;
     }
+    const auto extractedData = memento->data();
+    if (extractedData.isEmpty()) { // hasData() will not be correct for filtered structured data on the first pass through here...
+        return false;
+    }
 
     const auto dir = nodeHelper->createTempDir(QStringLiteral("semantic"));
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
@@ -136,7 +140,6 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     c.insert(QStringLiteral("style"), style);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
-    const auto extractedData = memento->data();
     QVariantList elems;
     elems.reserve(extractedData.size());
     for (int i = 0; i < extractedData.size();) {
