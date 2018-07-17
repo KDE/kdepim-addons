@@ -56,12 +56,12 @@ public:
     void appendStructuredData(const QVector<QVariant> &data);
 
     bool hasData() const;
-    struct ReservationData {
-        QVariant res;
+    struct TripData {
+        QVector<QVariant> reservations;
         KCalCore::Event::Ptr event;
         bool expanded;
     };
-    QVector<ReservationData> data();
+    QVector<TripData> data();
     void toggleExpanded(int index);
 
     void addPass(KPkPass::Pass *pass, const QByteArray &rawData);
@@ -71,7 +71,7 @@ private:
     QVector<QVariant> m_pendingStructuredData;
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
-    QVector<ReservationData> m_data;
+    QVector<TripData> m_data;
 
     struct PassData {
         QString passTypeIdentifier;

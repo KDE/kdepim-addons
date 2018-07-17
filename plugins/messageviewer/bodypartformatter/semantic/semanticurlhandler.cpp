@@ -152,13 +152,13 @@ static void addGoToMapAction(QMenu *menu, const T &place)
 static bool canAddToCalendar(SemanticMemento *m)
 {
     for (const auto &d : m->data()) {
-        if (JsonLd::isA<FlightReservation>(d.res)) {
-            const auto f = d.res.value<FlightReservation>().reservationFor().value<Flight>();
+        if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
+            const auto f = d.reservations.at(0).value<FlightReservation>().reservationFor().value<Flight>();
             if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
                 return true;
             }
             continue;
-        } else if (SortUtil::startDateTime(d.res).isValid()) {
+        } else if (SortUtil::startDateTime(d.reservations.at(0)).isValid()) {
             return true;
         }
     }
@@ -195,10 +195,11 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
 
     QSet<QString> places;
     for (const auto &d : m->data()) {
-        if (JsonLd::isA<LodgingReservation>(d.res)) {
-            addGoToMapAction(&menu, d.res.value<LodgingReservation>().reservationFor().value<LodgingBusiness>());
-        } else if (JsonLd::isA<FlightReservation>(d.res)) {
-            const auto flight = d.res.value<FlightReservation>().reservationFor().value<Flight>();
+        const auto res = d.reservations.at(0); // for multi-traveler reservations all subsequent ones are equal regarding what we are interested here
+        if (JsonLd::isA<LodgingReservation>(res)) {
+            addGoToMapAction(&menu, res.value<LodgingReservation>().reservationFor().value<LodgingBusiness>());
+        } else if (JsonLd::isA<FlightReservation>(res)) {
+            const auto flight = res.value<FlightReservation>().reservationFor().value<Flight>();
 
             auto airport = flight.departureAirport();
             if (!places.contains(airport.iataCode())) {
@@ -211,8 +212,8 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, airport);
                 places.insert(airport.iataCode());
             }
-        } else if (JsonLd::isA<TrainReservation>(d.res)) {
-            const auto trip = d.res.value<TrainReservation>().reservationFor().value<TrainTrip>();
+        } else if (JsonLd::isA<TrainReservation>(res)) {
+            const auto trip = res.value<TrainReservation>().reservationFor().value<TrainTrip>();
             if (!places.contains(trip.departureStation().name())) {
                 addGoToMapAction(&menu, trip.departureStation());
                 places.insert(trip.departureStation().name());
@@ -221,8 +222,8 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, trip.arrivalStation());
                 places.insert(trip.arrivalStation().name());
             }
-        } else if (JsonLd::isA<BusReservation>(d.res)) {
-            const auto trip = d.res.value<BusReservation>().reservationFor().value<BusTrip>();
+        } else if (JsonLd::isA<BusReservation>(res)) {
+            const auto trip = res.value<BusReservation>().reservationFor().value<BusTrip>();
             if (!places.contains(trip.departureStation().name())) {
                 addGoToMapAction(&menu, trip.departureStation());
                 places.insert(trip.departureStation().name());
@@ -267,7 +268,7 @@ SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart
 QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 {
     for (const auto &d : memento->data()) {
-        const auto dt = SortUtil::startDateTime(d.res);
+        const auto dt = SortUtil::startDateTime(d.reservations.at(0));
         if (dt.isValid()) {
             return dt.date();
         }
@@ -304,23 +305,25 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     korgIface->call(QStringLiteral("showDate"), date);
 }
 
-static void attachPass(const KCalCore::Event::Ptr &event, const QVariant &reservation, SemanticMemento *memento)
+static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant> &reservations, SemanticMemento *memento)
 {
-    if (!JsonLd::canConvert<Reservation>(reservation)) {
-        return;
-    }
+    for (const auto &reservation : reservations) {
+        if (!JsonLd::canConvert<Reservation>(reservation)) {
+            return;
+        }
 
-    const auto res = JsonLd::convert<Reservation>(reservation);
-    const auto data = memento->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
-    if (data.isEmpty()) {
-        return;
-    }
+        const auto res = JsonLd::convert<Reservation>(reservation);
+        const auto data = memento->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
+        if (data.isEmpty()) {
+            return;
+        }
 
-    event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
-    using namespace KCalCore;
-    Attachment::Ptr att(new Attachment(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass")));
-    att->setLabel(i18n("Boarding Pass"));
-    event->addAttachment(att);
+        event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
+        using namespace KCalCore;
+        Attachment::Ptr att(new Attachment(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass")));
+        att->setLabel(i18n("Boarding Pass")); // TODO add passenger name after string freeze is lifted
+        event->addAttachment(att);
+    }
 }
 
 void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
@@ -332,17 +335,17 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
         auto event = d.event;
         if (!event) {
             event.reset(new Event);
-            CalendarHandler::fillEvent(d.res, event);
+            CalendarHandler::fillEvent(d.reservations, event);
             if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
                 continue;
             }
-            attachPass(event, d.res, memento);
+            attachPass(event, d.reservations, memento);
             calendar->addEvent(event);
         } else {
             event->startUpdates();
-            CalendarHandler::fillEvent(d.res, event);
+            CalendarHandler::fillEvent(d.reservations, event);
             event->endUpdates();
-            attachPass(event, d.res, memento);
+            attachPass(event, d.reservations, memento);
             calendar->modifyIncidence(event);
         }
     }
@@ -359,9 +362,9 @@ void SemanticUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) co
     const auto m = memento(part);
     const auto extractedData = m->data();
     QVector<QVariant> data;
-    data.resize(extractedData.size());
+    data.reserve(extractedData.size());
     for (const auto &d : m->data()) {
-        data.push_back(d.res);
+        data += d.reservations;
     }
     f.write(QJsonDocument(JsonLdDocument::toJson(data)).toJson());
     f.close();
