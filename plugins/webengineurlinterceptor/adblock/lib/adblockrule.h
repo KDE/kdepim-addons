@@ -156,7 +156,7 @@ private:
     inline void setException(const RuleOption &opt, bool on);
 
     void parseFilter();
-    void parseDomains(const QString &domains, const QChar &separator);
+    void parseDomains(const QString &domains, QChar separator);
     bool filterIsOnlyDomain(const QString &filter) const;
     bool filterIsOnlyEndsMatch(const QString &filter) const;
     QString createRegExpFromFilter(const QString &filter) const;

@@ -543,7 +543,7 @@ void AdBlockRule::parseFilter()
     m_matchString = parsedLine;
 }
 
-void AdBlockRule::parseDomains(const QString &domains, const QChar &separator)
+void AdBlockRule::parseDomains(const QString &domains, QChar separator)
 {
     const QStringList domainsList = domains.split(separator, QString::SkipEmptyParts);
 

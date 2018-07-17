@@ -166,7 +166,7 @@ QChar QCsvModel::textQuote() const
     return mParser->reader()->textQuote();
 }
 
-void QCsvModel::setDelimiter(const QChar &delimiter)
+void QCsvModel::setDelimiter(QChar delimiter)
 {
     const bool isRunning = mParser->isRunning();
 

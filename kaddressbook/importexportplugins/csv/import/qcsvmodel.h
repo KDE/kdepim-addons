@@ -57,7 +57,7 @@ public:
      * Sets the character that is used as delimiter for fields.
      * The default is ' '.
      */
-    void setDelimiter(const QChar &delimiter);
+    void setDelimiter(QChar delimiter);
 
     /**
      * Returns the delimiter that is used as delimiter for fields.
