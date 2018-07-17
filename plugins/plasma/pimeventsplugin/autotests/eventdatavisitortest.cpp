@@ -268,7 +268,7 @@ void EventDataVisitorTest::testEventDataIdVisitor_data()
     for (const auto &testData : allTestData) {
         TestDataParser parser(testData, true);
         QStringList uids;
-        Q_FOREACH (const auto &ed, parser.eventData()) {
+        for (const auto &ed : parser.eventData()) {
             uids.push_back(ed.uid());
         }
         QTest::newRow(qPrintable(testData)) << parser.rangeStart()

@@ -94,7 +94,7 @@ void PimEventsPlugin::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &i
     }
     EventDataVisitor visitor(mDataSource, mStart, mEnd);
     if (visitor.act(incidence)) {
-        Q_FOREACH (const auto &ed, visitor.results()) {
+        for (const auto &ed : visitor.results()) {
             Q_EMIT eventModified(ed);
         }
     }
@@ -107,7 +107,7 @@ void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalCore::Incidenc
     }
     EventDataIdVisitor visitor(mDataSource, mStart, mEnd);
     if (visitor.act(incidence)) {
-        Q_FOREACH (const QString &uid, visitor.results()) {
+        for (const QString &uid : visitor.results()) {
             Q_EMIT eventRemoved(uid);
         }
     }

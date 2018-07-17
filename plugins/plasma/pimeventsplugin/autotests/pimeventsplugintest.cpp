@@ -39,7 +39,7 @@ void PimEventsPluginTest::initTestCase()
 bool PimEventsPluginTest::compareEventDataHashes(const DateEventDataHash &actual, const DateEventDataHash &expected)
 {
     COMPARE(actual.size(), expected.size());
-    Q_FOREACH (const QDate &resultKey, actual.uniqueKeys()) {
+    for (const QDate &resultKey : actual.uniqueKeys()) {
         VERIFY(expected.contains(resultKey));
         auto resultValues = actual.values(resultKey);
         auto expectedValues = expected.values(resultKey);
@@ -127,7 +127,7 @@ void PimEventsPluginTest::testEventAdded()
     plugin.loadEventsForDateRange(QDate(2016, 5, 1), QDate(2016, 5, 31));
     QCOMPARE(dataReadySpy.size(), 0);
 
-    Q_FOREACH (const QString &data, allData) {
+    for (const QString &data : allData) {
         TestDataParser parser(data, true);
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;
@@ -137,7 +137,7 @@ void PimEventsPluginTest::testEventAdded()
             source.setAkonadiIdForIncidence(event, parser.akonadiId());
             source.calendar()->addEvent(event);
             DateEventDataHash expectedData;
-            Q_FOREACH (const CalendarEvents::EventData &dt, parser.eventData()) {
+            for (const CalendarEvents::EventData &dt : parser.eventData()) {
                 QDate d = dt.startDateTime().date();
                 while (d <= dt.endDateTime().date()) {
                     expectedData.insert(d, dt);
