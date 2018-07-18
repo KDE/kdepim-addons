@@ -142,7 +142,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;
     elems.reserve(extractedData.size());
-    for (int i = 0; i < extractedData.size();) {
+    for (int i = 0; i < extractedData.size(); ++i) {
         QVariantMap data;
         QVariantMap state;
         const auto d = extractedData.at(i);
@@ -151,48 +151,35 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         data.insert(QStringLiteral("groupId"), i);
 
         QVector<QVariant> reservations;
-        if (JsonLd::canConvert<Reservation>(d.res)) {
-            const auto trip = JsonLd::convert<Reservation>(d.res).reservationFor();
-            // merge multi-traveler elements
-            for (; i < extractedData.size(); ++i) {
-                const auto d = extractedData.at(i);
-                if (!JsonLd::canConvert<Reservation>(d.res) || !MergeUtil::isSame(JsonLd::convert<Reservation>(d.res).reservationFor(), trip)) {
-                    break;
-                }
-                QVariantMap m;
-                m.insert(QStringLiteral("reservation"), d.res);
-
-                // generate ticket barcodes
-                const auto ticket = JsonLd::convert<Reservation>(d.res).reservedTicket().value<Ticket>();
-                std::unique_ptr<Prison::AbstractBarcode> barcode;
-                switch (ticket.ticketTokenType()) {
-                case Ticket::AztecCode:
-                    barcode.reset(Prison::createBarcode(Prison::Aztec));
-                    barcode->setData(ticket.ticketTokenData());
-                    break;
-                case Ticket::QRCode:
-                    barcode.reset(Prison::createBarcode(Prison::QRCode));
-                    barcode->setData(ticket.ticketTokenData());
-                    break;
-                default:
-                    break;
-                }
-                if (barcode) {
-                    barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
-                    const auto img = barcode->toImage(barcode->minimumSize());
-                    const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
-                    img.save(fileName);
-                    m.insert(QStringLiteral("ticketToken"), fileName);
-                    nodeHelper->addTempFile(fileName);
-                }
-
-                reservations.push_back(m);
-            }
-        } else {
+        for (const auto &r : d.reservations) {
             QVariantMap m;
-            m.insert(QStringLiteral("reservation"), d.res);
+            m.insert(QStringLiteral("reservation"), r);
+
+            // generate ticket barcodes
+            const auto ticket = JsonLd::convert<Reservation>(r).reservedTicket().value<Ticket>();
+            std::unique_ptr<Prison::AbstractBarcode> barcode;
+            switch (ticket.ticketTokenType()) {
+            case Ticket::AztecCode:
+                barcode.reset(Prison::createBarcode(Prison::Aztec));
+                barcode->setData(ticket.ticketTokenData());
+                break;
+            case Ticket::QRCode:
+                barcode.reset(Prison::createBarcode(Prison::QRCode));
+                barcode->setData(ticket.ticketTokenData());
+                break;
+            default:
+                break;
+            }
+            if (barcode) {
+                barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
+                const auto img = barcode->toImage(barcode->minimumSize());
+                const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+                img.save(fileName);
+                m.insert(QStringLiteral("ticketToken"), fileName);
+                nodeHelper->addTempFile(fileName);
+            }
+
             reservations.push_back(m);
-            ++i;
         }
         data.insert(QStringLiteral("reservations"), QVariant::fromValue(reservations));
         elems.push_back(data);

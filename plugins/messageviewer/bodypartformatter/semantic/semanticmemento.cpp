@@ -23,6 +23,8 @@
 
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
+#include <KItinerary/MergeUtil>
+#include <KItinerary/Reservation>
 
 #include <KPkPass/Pass>
 
@@ -64,7 +66,7 @@ bool SemanticMemento::hasData() const
     return !m_data.isEmpty() || !m_pendingStructuredData.isEmpty() || !m_postProc.result().isEmpty();
 }
 
-QVector<SemanticMemento::ReservationData> SemanticMemento::data()
+QVector<SemanticMemento::TripData> SemanticMemento::data()
 {
     if (!m_pendingStructuredData.isEmpty()) {
         m_postProc.process(m_pendingStructuredData);
@@ -72,16 +74,40 @@ QVector<SemanticMemento::ReservationData> SemanticMemento::data()
     }
 
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
+        // perform calendar lookup and merge results
+        std::vector<std::pair<QVariant, KCalCore::Event::Ptr>> resolvedEvents;
+        resolvedEvents.reserve(m_postProc.result().size());
         const auto calendar = CalendarSupport::calendarSingleton(true);
         for (const auto &r : m_postProc.result()) {
-            ReservationData data;
-            data.res = r;
-            data.expanded = false;
+            auto e = std::make_pair(r, CalendarHandler::findEvent(calendar, r));
+            if (e.second) {
+                const auto existingRes = CalendarHandler::reservationsForEvent(e.second);
+                for (const auto &ev : existingRes) {
+                    if (MergeUtil::isSame(ev, e.first)) {
+                        e.first = JsonLdDocument::apply(ev, e.first);
+                        break;
+                    }
+                }
+            }
+            resolvedEvents.push_back(e);
+        }
 
-            data.event = CalendarHandler::findEvent(calendar, data.res);
-            if (data.event) {
-                const auto existingRes = CalendarHandler::reservationForEvent(data.event);
-                data.res = JsonLdDocument::apply(existingRes, data.res);
+        // merge multi-traveler elements
+        for (auto it = resolvedEvents.begin(); it != resolvedEvents.end();) {
+            TripData data;
+            data.reservations.push_back((*it).first);
+            data.event = (*it).second;
+            data.expanded = false;
+            ++it;
+
+            if (JsonLd::canConvert<Reservation>(data.reservations.at(0))) {
+                const auto trip = JsonLd::convert<Reservation>(data.reservations.at(0)).reservationFor();
+                for (; it != resolvedEvents.end(); ++it) {
+                    if (!JsonLd::canConvert<Reservation>((*it).first) || !MergeUtil::isSame(JsonLd::convert<Reservation>((*it).first).reservationFor(), trip)) {
+                        break;
+                    }
+                    data.reservations.push_back((*it).first);
+                }
             }
 
             m_data.push_back(data);
