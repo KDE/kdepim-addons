@@ -19,6 +19,7 @@
 
 #include "markdowninterface.h"
 #include "markdownpreviewwidget.h"
+#include "markdownplugin_debug.h"
 #include <KLocalizedString>
 #include <QAction>
 #include <KActionCollection>
@@ -52,6 +53,7 @@ bool MarkdownInterface::reformatText()
 
 bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
+    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "MarkdownInterface::convertTextToFormat: not implemented yet!";
     return false;
 }
 
@@ -65,6 +67,6 @@ void MarkdownInterface::reloadConfig()
 
 void MarkdownInterface::slotActivated()
 {
-
+    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "MarkdownInterface::slotActivated: not implemented yet!";
     //TODO signal/slot
 }
