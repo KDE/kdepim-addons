@@ -44,7 +44,6 @@ void initLocale()
     setenv("LC_ALL", "en_US.utf-8", 1);
     setenv("TZ", "UTC", 1);
     QStandardPaths::setTestModeEnabled(true);
-    QIcon::setThemeName(QStringLiteral("breeze"));
     QLocale::setDefault(QLocale(QStringLiteral("en_US")));
 }
 
@@ -53,6 +52,7 @@ Q_CONSTRUCTOR_FUNCTION(initLocale)
 
 void RenderTest::initTestCase()
 {
+    QIcon::setThemeName(QStringLiteral("breeze"));
     QApplication::setStyle(QStyleFactory::create(QStringLiteral("Fusion")));
     QPalette p(QApplication::style()->standardPalette());
     p.setCurrentColorGroup(QPalette::Normal);
