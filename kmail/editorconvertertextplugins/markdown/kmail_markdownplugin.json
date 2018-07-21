@@ -11,6 +11,7 @@
         "Description[nl]": "Deze plug-in stelt u in staat html te maken uit een markdown-taal.",
         "Description[pl]": "Ta wtyczka umożliwia utworzenie html z języka markdown",
         "Description[pt]": "Este 'plugin' permite-lhe gerar HTML a partir da linguagem Markdown",
+        "Description[ru]": "Этот модуль позволяет преобразовывать текст с разметкой Markdown в формат HTML.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa HTML från språket Markdown",
         "Description[uk]": "За допомогою цього додатка можна створювати сторінки HTML на основі коду мовою Markdown.",
         "Description[x-test]": "xxThis plugin allows you to generate html from markdown languagexx",
