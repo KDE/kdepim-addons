@@ -1,0 +1,6 @@
+<config>
+  <datahome>xdglocal</datahome>
+  <envvar name="AKONADI_DISABLE_AGENT_AUTOSTART">true</envvar>
+  <envvar name="AKONADI_OVERRIDE_SEARCHPLUGIN">testsearchplugin</envvar>
+</config>
+

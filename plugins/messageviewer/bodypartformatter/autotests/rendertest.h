@@ -34,9 +34,6 @@ private Q_SLOTS:
     void testRender();
     void testRenderKeyDetails_data();
     void testRenderKeyDetails();
-
-private:
-    void compareFile(const QString &outFile, const QString &referenceFile);
 };
 
 #endif
