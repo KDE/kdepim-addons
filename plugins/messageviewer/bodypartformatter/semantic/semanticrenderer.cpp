@@ -135,8 +135,8 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     const auto pal = qGuiApp->palette();
     QVariantMap style;
     style.insert(QStringLiteral("frameColor"), pal.link().color().name());
-    style.insert(QStringLiteral("expandIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png")));
-    style.insert(QStringLiteral("collapseIcon"), MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
+    style.insert(QStringLiteral("expandIcon"), QLatin1String("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png")));
+    style.insert(QStringLiteral("collapseIcon"), QLatin1String("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
     c.insert(QStringLiteral("style"), style);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
