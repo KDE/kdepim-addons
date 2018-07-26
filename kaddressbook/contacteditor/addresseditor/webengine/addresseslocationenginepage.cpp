@@ -44,6 +44,17 @@ AddressesLocationEnginePage::AddressesLocationEnginePage(QObject *parent)
 
     settings()->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
     settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
+
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+    settings()->setAttribute(QWebEngineSettings::ShowScrollBars, true);
+    settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
+#endif
+#if QT_VERSION >= QT_VERSION_CHECK(5, 11, 0)
+    settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, false);
+    settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
+    settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
+#endif
+
     profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
 }
 
