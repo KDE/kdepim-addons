@@ -55,6 +55,10 @@ bool AddressesLocationEnginePage::acceptNavigationRequest(const QUrl &url, Navig
 {
     Q_UNUSED(type);
     Q_UNUSED(isMainFrame);
+    if (url.scheme() == QLatin1String("data")) {
+        return true;
+    }
+
     Q_EMIT urlClicked(url);
     return false;
 }
