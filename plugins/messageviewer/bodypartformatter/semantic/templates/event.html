@@ -1,0 +1,8 @@
+<div style="font-size:125%;">{{ trip.name }}</div>
+<div>
+    {{ trip.startDate|formatDateTime }}<br/>
+    {{ trip.location.name }}<br/>
+    {{ trip.location.address|formatAddress|safe }}
+</div>
+{% include ":/org.kde.messageviewer/semantic/actions.html" %}
+<div style="clear:both;"></div>

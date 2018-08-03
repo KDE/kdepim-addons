@@ -27,6 +27,7 @@
 
 #include <KItinerary/Action>
 #include <KItinerary/BusTrip>
+#include <KItinerary/Event>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/MergeUtil>
@@ -61,11 +62,14 @@ using namespace KItinerary;
 
 GRANTLEE_MAKE_GADGET(Airport)
 GRANTLEE_MAKE_GADGET(Airline)
+GRANTLEE_MAKE_GADGET(Event)
+GRANTLEE_MAKE_GADGET(EventReservation)
 GRANTLEE_MAKE_GADGET(Flight)
 GRANTLEE_MAKE_GADGET(FlightReservation)
 GRANTLEE_MAKE_GADGET(LodgingBusiness)
 GRANTLEE_MAKE_GADGET(LodgingReservation)
 GRANTLEE_MAKE_GADGET(Person)
+GRANTLEE_MAKE_GADGET(Place)
 GRANTLEE_MAKE_GADGET(PostalAddress)
 GRANTLEE_MAKE_GADGET(Seat)
 GRANTLEE_MAKE_GADGET(Ticket)
@@ -85,11 +89,14 @@ SemanticRenderer::SemanticRenderer()
 {
     Grantlee::registerMetaType<Airport>();
     Grantlee::registerMetaType<Airline>();
+    Grantlee::registerMetaType<Event>();
+    Grantlee::registerMetaType<EventReservation>();
     Grantlee::registerMetaType<Flight>();
     Grantlee::registerMetaType<FlightReservation>();
     Grantlee::registerMetaType<LodgingBusiness>();
     Grantlee::registerMetaType<LodgingReservation>();
     Grantlee::registerMetaType<Person>();
+    Grantlee::registerMetaType<Place>();
     Grantlee::registerMetaType<PostalAddress>();
     Grantlee::registerMetaType<Seat>();
     Grantlee::registerMetaType<Ticket>();
