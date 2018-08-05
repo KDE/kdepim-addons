@@ -13,6 +13,7 @@
         "Name[nl]": "Verzoeker om e-mailadres voor ontleden van sjabloon",
         "Name[pl]": "Program żądający adresu pocztowego dla przetwarzania szablonów",
         "Name[pt]": "Pedido de Endereço de E-Mail para o Processador de Modelos",
+        "Name[pt_BR]": "Pedido de endereço de e-mail para o Processador de Modelos",
         "Name[ru]": "Инициатор запроса адреса эл. почты для TemplateParser",
         "Name[sk]": "Requester e-mailovej adresy pre Templateparser",
         "Name[sl]": "Program za zahteve e-poštnih naslovov za Templateparser",

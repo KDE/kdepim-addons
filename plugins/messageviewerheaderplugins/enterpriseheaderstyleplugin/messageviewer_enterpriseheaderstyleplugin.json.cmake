@@ -14,6 +14,7 @@
         "Description[nl]": "Deze plug-in definieert een e-mailheaderstijl voor bedrijven.",
         "Description[pl]": "Ta wtyczka określa wygląd nagłówka pocztowego dla firm.",
         "Description[pt]": "Este 'plugin' define um estilo de cabeçalhos dos e-mails para empresas.",
+        "Description[pt_BR]": "Este plugin define um estilo de cabeçalhos de e-mails para empresas.",
         "Description[ru]": "Этот модуль определяет корпоративный стиль заголовков.",
         "Description[sk]": "Tento plugin definuje štýl mailovej hlavičky pre podnik.",
         "Description[sl]": "Ta vstavek določa poslovni slog glav sporočila.",
