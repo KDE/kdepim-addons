@@ -20,6 +20,7 @@
 #include "zoomtextplugineditor.h"
 #include "zoomtextplugineditorinterface.h"
 #include <kpluginfactory.h>
+#include <QLabel>
 
 K_PLUGIN_CLASS_WITH_JSON(ZoomTextPluginEditor, "kmail_zoomtexteditorplugin.json")
 
@@ -42,6 +43,11 @@ MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(KA
 bool ZoomTextPluginEditor::hasPopupMenuSupport() const
 {
     return false;
+}
+
+bool ZoomTextPluginEditor::hasStatusBarSupport() const
+{
+    return true;
 }
 
 #include "zoomtextplugineditor.moc"

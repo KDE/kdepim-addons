@@ -21,7 +21,7 @@
 #define ZOOMTEXTPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-
+class ZoomLabel;
 class ZoomTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -31,6 +31,9 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+
+Q_SIGNALS:
+    void zoomFactorChanged(int val);
 
 private:
     void slotZoomOut();
@@ -47,6 +50,7 @@ private:
         ZoomOut
     };
     ZoomTextType mType = Unknown;
+    ZoomLabel *mZoomLabelWidget = nullptr;
 };
 
 #endif

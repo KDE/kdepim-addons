@@ -34,6 +34,9 @@ public:
 
     MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
     bool hasPopupMenuSupport() const override;
+    bool hasStatusBarSupport() const override;
+Q_SIGNALS:
+    void zoomFactorChanged(int val);
 };
 
 #endif

@@ -19,6 +19,7 @@
 
 #include "zoomtextplugineditorinterface.h"
 #include "zoomtexteditorplugin_debug.h"
+#include "zoomlabel.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -60,6 +61,9 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 
     MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
+    mZoomLabelWidget = new ZoomLabel;
+    connect(this, &ZoomTextPluginEditorInterface::zoomFactorChanged, mZoomLabelWidget, &ZoomLabel::setZoomLabel);
+    setStatusBarWidget(mZoomLabelWidget);
 }
 
 void ZoomTextPluginEditorInterface::slotZoomOut()
@@ -102,14 +106,17 @@ void ZoomTextPluginEditorInterface::exec()
 void ZoomTextPluginEditorInterface::zoomReset()
 {
     richTextEditor()->slotZoomReset();
+    Q_EMIT zoomFactorChanged(richTextEditor()->zoomFactor());
 }
 
 void ZoomTextPluginEditorInterface::zoomIn()
 {
     richTextEditor()->zoomIn();
+    Q_EMIT zoomFactorChanged(richTextEditor()->zoomFactor());
 }
 
 void ZoomTextPluginEditorInterface::zoomOut()
 {
     richTextEditor()->zoomOut();
+    Q_EMIT zoomFactorChanged(richTextEditor()->zoomFactor());
 }

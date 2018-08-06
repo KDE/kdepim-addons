@@ -11,6 +11,6 @@ macro(add_kmail_editorplugin_unittest _source _additional)
     target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::MessageComposer KF5::I18n)
 endmacro ()
 
-add_kmail_editorplugin_unittest(zoomtextplugineditortest.cpp "../zoomtextplugineditor.cpp;../zoomtextplugineditorinterface.cpp")
+add_kmail_editorplugin_unittest(zoomtextplugineditortest.cpp "../zoomlabel.cpp;../zoomtextplugineditor.cpp;../zoomtextplugineditorinterface.cpp")
 
-add_kmail_editorplugin_unittest(zoomtextplugineditorinterfacetest.cpp "../zoomtextplugineditorinterface.cpp")
+add_kmail_editorplugin_unittest(zoomtextplugineditorinterfacetest.cpp "../zoomtextplugineditorinterface.cpp;../zoomlabel.cpp")

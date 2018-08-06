@@ -1,6 +1,7 @@
 set(kmail_zoomtexteditorplugin_SRCS
     zoomtextplugineditor.cpp
     zoomtextplugineditorinterface.cpp
+    zoomlabel.cpp
 )
 
 ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin)
