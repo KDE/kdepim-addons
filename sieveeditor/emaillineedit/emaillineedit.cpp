@@ -55,6 +55,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     connect(mEmailButton, &QToolButton::clicked, this, &EmailLineEdit::slotSelectEmail);
     verifyAkonadiStatus();
     connect(Akonadi::ServerManager::self(), &Akonadi::ServerManager::stateChanged, this, &EmailLineEdit::akonadiStateChanged);
+    verifyAddress();
 }
 
 EmailLineEdit::~EmailLineEdit()
@@ -124,15 +125,13 @@ void EmailLineEdit::verifyAddress()
 #ifndef QT_NO_STYLE_STYLESHEET
     QString styleSheet;
     const QString lineEditText = text();
-    if (!lineEditText.isEmpty()) {
-        mEmailIsValid = lineEditText.contains(QLatin1Char('@'));
-        if (mNegativeBackground.isEmpty()) {
-            KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
-            mNegativeBackground = QStringLiteral("QLineEdit{ color:%1 }").arg(bgBrush.brush(this).color().name());
-        }
-        if (!mEmailIsValid) {
-            styleSheet = mNegativeBackground;
-        }
+    mEmailIsValid = lineEditText.contains(QLatin1Char('@'));
+    if (mNegativeBackground.isEmpty()) {
+        KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
+        mNegativeBackground = QStringLiteral("QLineEdit{ background-color:%1 }").arg(bgBrush.brush(this).color().name());
+    }
+    if (!mEmailIsValid) {
+        styleSheet = mNegativeBackground;
     }
     mLineEdit->setStyleSheet(styleSheet);
 #endif
