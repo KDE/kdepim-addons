@@ -1,35 +1,40 @@
 # kdepim-addons
-org.kde.pim.createeventplugin kdepim-addons (create event plugin)
-org.kde.pim.createnoteplugin kdepim-addons (create note plugin)
-org.kde.pim.createtodoplugin kdepim-addons (create todo plugin)
-org.kde.pim.isgdshorturlengineplugin kdepim-addons (shorturl engine isgd)
+org.kde.pim.createeventplugin kdepim-addons (create event plugin) IDENTIFIER [CREATEEVENTPLUGIN_LOG]
+org.kde.pim.createnoteplugin kdepim-addons (create note plugin) IDENTIFIER [CREATENOTEPLUGIN_LOG]
+org.kde.pim.createtodoplugin kdepim-addons (create todo plugin) IDENTIFIER [CREATETODOPLUGIN_LOG]
+org.kde.pim.isgdshorturlengineplugin kdepim-addons (shorturl engine isgd) IDENTIFIER [ISGDSHORTURLENGINEPLUGIN_LOG]
 org.kde.pim.ur1cashorturlengineplugin kdepim-addons (shorturl engine ur1ca)
-org.kde.pim.korganizer_picoftheday_plugins kdepim-addons (korganizer picoftheday plugins)
-org.kde.pim.kaddressbook_sendvcards kdepim-addons (kaddressbook sendvcards plugins)
-org.kde.pim.kaddressbook_sendmail kdepim-addons (kaddressbook sendmail plugins)
-org.kde.pim.kmail_zoomtexteditorplugin kdepim-addons (kmail zoomtext editor plugins)
-org.kde.pim.kmail_changecaseeditorplugin kdepim-addons (kmail changecase editor plugins)
+org.kde.pim.korganizer_picoftheday_plugins kdepim-addons (korganizer picoftheday plugins) IDENTIFIER [KORGANIZERPICOFTHEDAYPLUGIN_LOG]
+org.kde.pim.korganizer_hebrew_plugin kdepim-addons (korganizer hebrew plugins) IDENTIFIER [KORGANIZER_HEBREWPLUGIN_LOG]
+org.kde.pim.kmail_zoomtexteditorplugin kdepim-addons (kmail zoomtext editor plugins) IDENTIFIER [KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG]
+org.kde.pim.kmail_changecaseeditorplugin kdepim-addons (kmail changecase editor plugins) IDENTIFIER [KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG]
 org.kde.pim.adblockinterceptor kdepim-addons (adblock interceptor)
 org.kde.pim.donottrackinterceptor kdepim-addons (do not track interceptor)
 org.kde.pim.expandurlplugin kdepim-addons (Expand Url Plugin)
-org.kde.pim.externalscriptplugin kdepim-addons (External Script Plugin)
+org.kde.pim.externalscriptplugin kdepim-addons (External Script Plugin) IDENTIFIER [EXTERNALSCRIPTPLUGIN_LOG]
 org.kde.pim.text_calendar kdepim-addons (messageviewer calendar plugins)
-org.kde.pim.ms_tnef kdepim-addons (ms_tnef)
-org.kde.pim.vcard kdepim-addons (vcard)
-org.kde.pim.pimeventsplugin kdepim-addons (Plasma calendar plugin)
+org.kde.pim.ms_tnef kdepim-addons (ms_tnef) IDENTIFIER [MS_TNEF_LOG]
+org.kde.pim.vcard kdepim-addons (vcard) IDENTIFIER [VCARD_LOG]
+org.kde.pim.pimeventsplugin kdepim-addons (Plasma calendar plugin) IDENTIFIER [PIMEVENTSPLUGIN_LOG]
 org.kde.pim.kmail_confirmaddressplugin kdepim-addons (Confirm Address plugin)
 org.kde.pim.kmail_checkbeforesend kdepim-addons (Check Before Send plugin)
-org.kde.pim.kmail_automaticaddcontactsplugin kdepim-addons (Automatic add contacts plugin)
-org.kde.pim.kaddressbook_importexportgmx kdepim-addons (KAddressbook import export gmx plugin)
+org.kde.pim.kmail_automaticaddcontactsplugin kdepim-addons (Automatic add contacts plugin) 
+org.kde.pim.kaddressbook_importexportgmx kdepim-addons (KAddressbook import export gmx plugin) IDENTIFIER [KADDRESSBOOK_IMPORTEXPORT_GMX_LOG]
 org.kde.pim.gnupgwks kdepim-addons (OpenPGP and GnuPG WKS body part formatter plugin)
 org.kde.pim.imapfoldercompletion kdepim-addons (SieveEditor imap completion folder)
 org.kde.pim.regexpeditorlineedit kdepim-addons (SieveEditor Regexp Editor plugin)
 org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact editor)
+org.kde.pim.kaddressbook_checkgravatar kdepim-addons (kaddressbook gravatar plugin) IDENTIFIER [KADDRESSBOOK_CHECKGRAVATAR_LOG]
+org.kde.pim.kaddressbookmergelibprivate kdepim-addons (kaddressbook merge contact plugin) IDENTIFIER [KADDRESSBOOKMERGELIBPRIVATE_LOG]
+org.kde.pim.kaddressbook_sendmail kdepim-addons (kaddressbook send mail plugin) IDENTIFIER [KADDRESSBOOK_SENDMAIL_LOG]
+org.kde.pim.kaddressbook_sendvcards kdepim-addons (kaddressbook send vcard plugin) IDENTIFIER [KADDRESSBOOK_SENDVCARDS_LOG]
 org.kde.pim.pkpass kdepim-addons (pkpass formater)
 org.kde.pim.messageviewer.semantic kdepim-addons (Semantic plugin)
 org.kde.pim.kmail_expertplugin kdepim-addons (kmail expert plugin)
 org.kde.pim.kmail_insertshorturl kdepim-addons (kmail insert short url plugin)
 org.kde.pim.sieveeditoremaillinedit kdepim-addons (SieveEditor email line plugin)
-org.kde.pim.importwizard.gearyplugin kdepim-addons (importwizard gearyplugin)
-org.kde.pim.importwizard.nylasmailplugin kdepim-addons (importwizard nylasmail plugin)
-org.kde.pim.importwizard.operaplugin kdepim-addons (importwizard opera plugin)
+org.kde.pim.importwizard.gearyplugin kdepim-addons (importwizard gearyplugin) IDENTIFIER [GEARYPLUGIN_LOG]
+org.kde.pim.importwizard.nylasmailplugin kdepim-addons (importwizard nylasmail plugin) IDENTIFIER [NYLASMAILPLUGIN_LOG]
+org.kde.pim.importwizard.operaplugin kdepim-addons (importwizard opera plugin) IDENTIFIER [OPERAPLUGIN_LOG]
+org.kde.pim.kmail_markdownplugin kdepim-addons (kmail markdonw plugin) IDENTIFIER [KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG]
+
