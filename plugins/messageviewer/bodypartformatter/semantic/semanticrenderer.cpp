@@ -84,6 +84,8 @@ GRANTLEE_MAKE_GADGET(CheckInAction)
 GRANTLEE_MAKE_GADGET(DownloadAction)
 GRANTLEE_MAKE_GADGET(UpdateAction)
 GRANTLEE_MAKE_GADGET(ViewAction)
+GRANTLEE_MAKE_GADGET(FoodEstablishment)
+GRANTLEE_MAKE_GADGET(FoodEstablishmentReservation)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -111,6 +113,8 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<DownloadAction>();
     Grantlee::registerMetaType<UpdateAction>();
     Grantlee::registerMetaType<ViewAction>();
+    Grantlee::registerMetaType<FoodEstablishment>();
+    Grantlee::registerMetaType<FoodEstablishmentReservation>();
 }
 
 bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const

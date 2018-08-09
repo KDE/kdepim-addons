@@ -7,5 +7,6 @@
         <file alias="busreservation.html">templates/busreservation.html</file>
         <file alias="event.html">templates/event.html</file>
         <file alias="actions.html">templates/actions.html</file>
+        <file alias="foodestablishmentreservation.html">templates/foodestablishmentreservation.html</file>
     </qresource>
 </RCC>

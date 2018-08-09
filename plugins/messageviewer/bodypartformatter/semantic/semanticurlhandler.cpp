@@ -65,10 +65,38 @@ SemanticUrlHandler::SemanticUrlHandler()
     m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
 }
 
+static bool canAddToCalendar(SemanticMemento *m)
+{
+    for (const auto &d : m->data()) {
+        if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
+            const auto f = d.reservations.at(0).value<FlightReservation>().reservationFor().value<Flight>();
+            if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
+                return true;
+            }
+            continue;
+        } else if (SortUtil::startDateTime(d.reservations.at(0)).isValid()) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
     if (path == QLatin1String("semanticAction")) {
+
+        const auto m = memento(part);
+        if (!m || !m->hasData()) {
+            qCWarning(SEMANTIC_LOG) << "sementic action: data not found";
+            return true;
+        }
+        if (canAddToCalendar(m)) {
+            addToCalendar(m);
+        } else {
+            qCWarning(SEMANTIC_LOG) << "Impossible to add to calendar. Need to investigate it.";
+        }
         return true;
     }
 
@@ -149,22 +177,6 @@ static void addGoToMapAction(QMenu *menu, const T &place)
     }
 }
 
-static bool canAddToCalendar(SemanticMemento *m)
-{
-    for (const auto &d : m->data()) {
-        if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
-            const auto f = d.reservations.at(0).value<FlightReservation>().reservationFor().value<Flight>();
-            if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
-                return true;
-            }
-            continue;
-        } else if (SortUtil::startDateTime(d.reservations.at(0)).isValid()) {
-            return true;
-        }
-    }
-    return false;
-}
-
 bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
@@ -232,6 +244,8 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
                 addGoToMapAction(&menu, trip.arrivalStation());
                 places.insert(trip.arrivalStation().name());
             }
+        } else if (JsonLd::isA<FoodEstablishmentReservation>(res)) {
+            addGoToMapAction(&menu, res.value<FoodEstablishmentReservation>().reservationFor().value<FoodEstablishment>());
         }
     }
 
