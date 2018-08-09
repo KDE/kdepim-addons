@@ -250,6 +250,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     }
 
     if (!m_appPath.isEmpty()) {
+        menu.addSeparator();
         action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Import into KDE Itinerary"));
         QObject::connect(action, &QAction::triggered, this, [this, part]() {
             openInApp(part);
