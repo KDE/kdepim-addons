@@ -35,6 +35,7 @@
 #include <KItinerary/Person>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
+#include <KItinerary/RentalCar>
 #include <KItinerary/Ticket>
 #include <KItinerary/TrainTrip>
 
@@ -86,6 +87,8 @@ GRANTLEE_MAKE_GADGET(UpdateAction)
 GRANTLEE_MAKE_GADGET(ViewAction)
 GRANTLEE_MAKE_GADGET(FoodEstablishment)
 GRANTLEE_MAKE_GADGET(FoodEstablishmentReservation)
+GRANTLEE_MAKE_GADGET(RentalCarReservation)
+GRANTLEE_MAKE_GADGET(RentalCar)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -115,6 +118,8 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<ViewAction>();
     Grantlee::registerMetaType<FoodEstablishment>();
     Grantlee::registerMetaType<FoodEstablishmentReservation>();
+    Grantlee::registerMetaType<RentalCarReservation>();
+    Grantlee::registerMetaType<RentalCar>();
 }
 
 bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const

@@ -17,6 +17,8 @@
         {% include ":/org.kde.messageviewer/semantic/event.html" %}
     {% elif res.className == "FoodEstablishmentReservation" %}
         {% include ":/org.kde.messageviewer/semantic/foodestablishmentreservation.html" %}
+    {% elif res.className == "RentalCarReservation" %}
+        {% include ":/org.kde.messageviewer/semantic/rentalcarreservation.html" %}
     {% endif %}
 
     {% if not forloop.last %}
