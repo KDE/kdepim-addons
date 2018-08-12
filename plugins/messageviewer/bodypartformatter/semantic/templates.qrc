@@ -9,5 +9,6 @@
         <file alias="actions.html">templates/actions.html</file>
         <file alias="foodestablishmentreservation.html">templates/foodestablishmentreservation.html</file>
         <file alias="rentalcarreservation.html">templates/rentalcarreservation.html</file>
+        <file alias="taxireservation.html">templates/taxireservation.html</file>
     </qresource>
 </RCC>
