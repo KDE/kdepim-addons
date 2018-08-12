@@ -45,7 +45,8 @@ AddressesLocationEnginePage::AddressesLocationEnginePage(QObject *parent)
     settings()->setAttribute(QWebEngineSettings::FocusOnNavigationEnabled, false);
     settings()->setAttribute(QWebEngineSettings::AllowRunningInsecureContent, false);
 
-#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0)
+// FreeBSD actually ships QtWebengine 5.9 with Qt 5.10, so these enums do not exist there
+#if QT_VERSION >= QT_VERSION_CHECK(5, 10, 0) && !defined(Q_OS_FREEBSD)
     settings()->setAttribute(QWebEngineSettings::ShowScrollBars, true);
     settings()->setAttribute(QWebEngineSettings::AllowWindowActivationFromJavaScript, false);
 #endif
