@@ -20,6 +20,7 @@
 #include "zoomtextplugineditorinterface.h"
 #include "zoomtexteditorplugin_debug.h"
 #include "zoomlabel.h"
+#include <kconfig_version.h>
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -40,24 +41,27 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
     KActionMenu *zoomMenu = new KActionMenu(i18n("Zoom..."), this);
     ac->addAction(QStringLiteral("zoom_menu"), zoomMenu);
 
-    QAction *zoomInAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-in")), i18n("&Zoom In"), this);
+    QAction *zoomInAction = KStandardAction::zoomIn(this, &ZoomTextPluginEditorInterface::slotZoomIn, this);
     zoomMenu->addAction(zoomInAction);
     ac->addAction(QStringLiteral("zoom_in"), zoomInAction);
-    connect(zoomInAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomIn);
-    ac->setDefaultShortcut(zoomInAction, QKeySequence(Qt::CTRL + Qt::Key_Plus));
 
-    QAction *zoomOutAction = new QAction(QIcon::fromTheme(QStringLiteral("zoom-out")), i18n("Zoom &Out"), this);
+    QAction *zoomOutAction = KStandardAction::zoomOut(this, &ZoomTextPluginEditorInterface::slotZoomOut, this);
     zoomMenu->addAction(zoomOutAction);
     ac->addAction(QStringLiteral("zoom_out"), zoomOutAction);
-    connect(zoomOutAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomOut);
-    ac->setDefaultShortcut(zoomOutAction, QKeySequence(Qt::CTRL + Qt::Key_Minus));
 
     zoomMenu->addSeparator();
+#if KCONFIG_VERSION < QT_VERSION_CHECK(5, 50, 0)
     QAction *zoomResetAction = new QAction(i18n("Reset"), this);
     zoomMenu->addAction(zoomResetAction);
     ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
     connect(zoomResetAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomReset);
     ac->setDefaultShortcut(zoomResetAction, QKeySequence(Qt::CTRL + Qt::Key_0));
+#else
+    QAction *zoomResetAction = KStandardAction::actualSize(this, &ZoomTextPluginEditorInterface::slotZoomReset, this);
+    ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
+    zoomMenu->addAction(zoomResetAction);
+#endif
+
 
     MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::Edit);
     setActionType(type);
