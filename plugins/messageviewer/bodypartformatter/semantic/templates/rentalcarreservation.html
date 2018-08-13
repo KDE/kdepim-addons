@@ -1,4 +1,4 @@
-<div style="font-size:125%;"><b>{{ trip.name }}</b> - {{ res.pickupTime|formatDateTime }} - {{ res.dropoffTime|formatDateTime }}</div>
+<div style="font-size:125%;">{{ res.pickupTime|formatDateTime }} - {{ res.dropoffTime|formatDateTime }}</div>
 <div>{% i18n "Reservation Number: %1" res.reservationNumber %}</div>
 {% if res.underName.name %}
     <div>{% i18n "Under Name: %1" res.underName.name %}</div>
