@@ -35,6 +35,7 @@
 #include <KItinerary/Reservation>
 #include <KItinerary/SortUtil>
 #include <KItinerary/TrainTrip>
+#include <KItinerary/Taxi>
 
 #include <KMime/Content>
 
@@ -256,6 +257,12 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
             if (!places.contains(dropOffLocation.name())) {
                 addGoToMapAction(&menu, dropOffLocation);
                 places.insert(dropOffLocation.name());
+            }
+        } else if (JsonLd::isA<TaxiReservation>(res)) {
+            const auto pickupLocation = res.value<TaxiReservation>().pickUpLocation();
+            if (!places.contains(pickupLocation.name())) {
+                addGoToMapAction(&menu, pickupLocation);
+                places.insert(pickupLocation.name());
             }
         }
     }
