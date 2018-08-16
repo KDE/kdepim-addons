@@ -23,9 +23,10 @@
 
 #include "sendmailjob.h"
 #include "transport.h"
+#include "sendmailplugin_debug.h"
 
 #include <KLocalizedString>
-
+#include <KShell>
 #include <QProcess>
 #include <QBuffer>
 
@@ -47,7 +48,14 @@ SendmailJob::~SendmailJob()
 
 void SendmailJob::doStart()
 {
-    const QStringList arguments = QStringList() << QStringLiteral("-i") << QStringLiteral("-f") << sender() << to() << cc() << bcc();
+    QStringList arguments = QStringList() << QStringLiteral("-i") << QStringLiteral("-f") << sender() << to() << cc() << bcc();
+    qDebug() << " void SendmailJob::doStart()***************" << arguments;
+    qDebug() <<" transport()->options()"<<transport()->options();
+    if (!transport()->options().isEmpty()) {
+        const QStringList arg = KShell::splitArgs(transport()->options().trimmed());
+        arguments << arg;
+    }
+    qCDebug(MAILTRANSPORT_PLUGIN_LOG) << "Sendmail arguments " << arguments;
     mProcess->start(transport()->host(), arguments);
 
     if (!mProcess->waitForStarted()) {

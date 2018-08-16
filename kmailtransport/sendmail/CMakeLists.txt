@@ -5,6 +5,9 @@ set(mailtransport_sendplugin_SRCS
     sendmailconfigdialog.cpp
     )
 
+ecm_qt_declare_logging_category(mailtransport_sendplugin_SRCS HEADER sendmailplugin_debug.h IDENTIFIER MAILTRANSPORT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.mailtransport_sendmail)
+
+
 ki18n_wrap_ui(mailtransport_sendplugin_SRCS
     sendmailsettings.ui
     )
