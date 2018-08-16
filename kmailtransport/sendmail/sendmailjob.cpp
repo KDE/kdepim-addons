@@ -49,8 +49,6 @@ SendmailJob::~SendmailJob()
 void SendmailJob::doStart()
 {
     QStringList arguments = QStringList() << QStringLiteral("-i") << QStringLiteral("-f") << sender() << to() << cc() << bcc();
-    qDebug() << " void SendmailJob::doStart()***************" << arguments;
-    qDebug() <<" transport()->options()"<<transport()->options();
     if (!transport()->options().isEmpty()) {
         const QStringList arg = KShell::splitArgs(transport()->options().trimmed());
         arguments << arg;
