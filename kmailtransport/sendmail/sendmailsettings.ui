@@ -55,7 +55,11 @@
     </widget>
    </item>
    <item row="1" column="1">
-    <widget class="QLineEdit" name="kcfg_options"/>
+    <widget class="QLineEdit" name="kcfg_options">
+     <property name="clearButtonEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
    </item>
   </layout>
  </widget>
