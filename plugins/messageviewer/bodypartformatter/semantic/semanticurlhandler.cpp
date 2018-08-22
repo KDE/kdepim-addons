@@ -248,18 +248,18 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         } else if (JsonLd::isA<FoodEstablishmentReservation>(res)) {
             addGoToMapAction(&menu, res.value<FoodEstablishmentReservation>().reservationFor().value<FoodEstablishment>());
         } else if (JsonLd::isA<RentalCarReservation>(res)) {
-            const auto pickupLocation = res.value<RentalCarReservation>().pickUpLocation();
+            const auto pickupLocation = res.value<RentalCarReservation>().pickupLocation();
             if (!places.contains(pickupLocation.name())) {
                 addGoToMapAction(&menu, pickupLocation);
                 places.insert(pickupLocation.name());
             }
-            const auto dropOffLocation = res.value<RentalCarReservation>().dropOffLocation();
-            if (!places.contains(dropOffLocation.name())) {
-                addGoToMapAction(&menu, dropOffLocation);
-                places.insert(dropOffLocation.name());
+            const auto dropoffLocation = res.value<RentalCarReservation>().dropoffLocation();
+            if (!places.contains(dropoffLocation.name())) {
+                addGoToMapAction(&menu, dropoffLocation);
+                places.insert(dropoffLocation.name());
             }
         } else if (JsonLd::isA<TaxiReservation>(res)) {
-            const auto pickupLocation = res.value<TaxiReservation>().pickUpLocation();
+            const auto pickupLocation = res.value<TaxiReservation>().pickupLocation();
             if (!places.contains(pickupLocation.name())) {
                 addGoToMapAction(&menu, pickupLocation);
                 places.insert(pickupLocation.name());
