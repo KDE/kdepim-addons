@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to insert a template command in composer.",
         "Description[ca@valencia]": "Aquest connector permet inserir una ordre de plantilla a l'editor.",
         "Description[ca]": "Aquest connector permet inserir una ordre de plantilla a l'editor.",
+        "Description[de]": "Mit diesem Modul können Sie einen Vorlagenbefehl in den E-Mail-Editor einfügen.",
         "Description[es]": "Este complemento le permite insertar una orden de plantilla en el editor.",
         "Description[fi]": "Tällä liitännäisellä voit lisätä kirjoitusikkunaan mallipohjakomennon.",
         "Description[fr]": "Ce module permet d'insérer une commande de modèle dans l'éditeur.",
