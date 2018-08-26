@@ -24,6 +24,7 @@
 #include <KItinerary/ExtractorEngine>
 #include <KItinerary/ExtractorPreprocessor>
 #include <KItinerary/ExtractorPostprocessor>
+#include <KItinerary/HtmlDocument>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/PdfDocument>
 #include <KItinerary/StructuredDataExtractor>
@@ -104,9 +105,11 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     ExtractorPreprocessor preproc;
     std::unique_ptr<PdfDocument> pdfDoc;
+    std::unique_ptr<HtmlDocument> htmlDoc;
     if (part.content()->contentType()->isPlainText()) {
         preproc.preprocessPlainText(part.content()->decodedText());
     } else if (part.content()->contentType()->isHTMLText()) {
+        htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedText().toUtf8()));
         preproc.preprocessHtml(part.content()->decodedText());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
@@ -116,6 +119,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
     engine.setText(preproc.text());
     engine.setPass(pass.get());
+    engine.setHtmlDocument(htmlDoc.get());
     engine.setPdfDocument(pdfDoc.get());
     for (auto extractor : extractors) {
         engine.setExtractor(extractor);
