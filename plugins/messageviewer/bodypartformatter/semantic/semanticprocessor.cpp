@@ -38,6 +38,22 @@ using namespace KItinerary;
 
 std::weak_ptr<ExtractorRepository> SemanticProcessor::s_repository;
 
+static bool isPkPassContent(KMime::Content *content)
+{
+    const auto ct = content->contentType();
+    if (ct->mimeType() == "application/vnd.apple.pkpass") {
+        return true;
+    }
+    if (ct->mimeType() != "application/octet-stream" && ct->mimeType() != "application/zip") {
+        return false;
+    }
+    if (ct->name().endsWith(QLatin1String("pkpass"))) {
+        return true;
+    }
+    const auto cd = content->contentDisposition(false);
+    return cd && cd->filename().endsWith(QLatin1String("pkpass"));
+}
+
 SemanticProcessor::SemanticProcessor()
 {
     m_repository = s_repository.lock();
@@ -91,7 +107,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     // try the unstructured data extractor as a fallback
     std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
-    if (part.content()->contentType()->mimeType() == "application/vnd.apple.pkpass") {
+    if (isPkPassContent(part.content())) {
         pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
         extractors = m_repository->extractorsForPass(pass.get());
     } else {
@@ -113,6 +129,9 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         preproc.preprocessHtml(part.content()->decodedText());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
+    } else if (!pass) {
+        // we have extractors but this isn't a mimetype we understand
+        return {};
     }
 
     ExtractorEngine engine;

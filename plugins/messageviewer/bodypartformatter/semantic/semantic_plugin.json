@@ -2,8 +2,7 @@
     "formatter": [
         { "mimetype": "text/html" },
         { "mimetype": "text/plain" },
-        { "mimetype": "application/pdf" },
-        { "mimetype": "application/vnd.apple.pkpass" }
+        { "mimetype": "application/octet-stream" }
     ],
     "renderer": [
         { "type": "MimeTreeParser::MessagePartList" }
