@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to insert a template command in composer.",
+        "Description[ar]": "تتيح لك هذه الملحقة إدراج أمر قالب في المؤلّف.",
         "Description[ca@valencia]": "Aquest connector permet inserir una ordre de plantilla a l'editor.",
         "Description[ca]": "Aquest connector permet inserir una ordre de plantilla a l'editor.",
         "Description[de]": "Mit diesem Modul können Sie einen Vorlagenbefehl in den E-Mail-Editor einfügen.",
@@ -21,6 +22,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailinserttemplatecommand",
         "Name": "Insert Template Command",
+        "Name[ar]": "أدرِج قالبًا مخصّصًا",
         "Name[ca@valencia]": "Insereix ordre de plantilla",
         "Name[ca]": "Insereix ordre de plantilla",
         "Name[de]": "Befehlsvorlage einfügen",
