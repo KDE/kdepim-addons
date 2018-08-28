@@ -79,7 +79,7 @@ QVariant DateTimeFormatter::doFilter(const QVariant &input, const QVariant &arg,
     }
 
     auto s = QLocale().toString(dt, QLocale::ShortFormat);
-    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC) {
+    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC || dt.timeSpec() == Qt::UTC) {
         s += QLatin1Char(' ') + dt.timeZone().abbreviation(dt);
     }
     return s;
@@ -96,7 +96,7 @@ QVariant TimeFormatter::doFilter(const QVariant &input, const QVariant &arg, boo
     }
 
     auto s = QLocale().toString(dt.time(), QLocale::ShortFormat);
-    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC) {
+    if (dt.timeSpec() == Qt::TimeZone || dt.timeSpec() == Qt::OffsetFromUTC || dt.timeSpec() == Qt::UTC) {
         s += QLatin1Char(' ') + dt.timeZone().abbreviation(dt);
     }
     return s;
