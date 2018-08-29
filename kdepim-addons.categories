@@ -23,7 +23,7 @@ org.kde.pim.kaddressbook_importexportgmx kdepim-addons (KAddressbook import expo
 org.kde.pim.gnupgwks kdepim-addons (OpenPGP and GnuPG WKS body part formatter plugin) IDENTIFIER [GNUPGWKS_LOG] 
 org.kde.pim.imapfoldercompletion kdepim-addons (SieveEditor imap completion folder) IDENTIFIER [IMAPFOLDERCOMPLETIONPLUGIN_LOG]
 org.kde.pim.regexpeditorlineedit kdepim-addons (SieveEditor Regexp Editor plugin) IDENTIFIER [REGEXPEDITORLINEEDITPLUGIN_LOG]
-org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact editor) IDENTIFIR [ADDRESSLOCATIONEDITORPLUGIN_LOG]
+org.kde.pim.addresslocationeditorplugin kdepim-addons (kaddressbook contact editor) IDENTIFIER [ADDRESSLOCATIONEDITORPLUGIN_LOG]
 org.kde.pim.kaddressbook_checkgravatar kdepim-addons (kaddressbook gravatar plugin) IDENTIFIER [KADDRESSBOOK_CHECKGRAVATAR_LOG]
 org.kde.pim.kaddressbookmergelibprivate kdepim-addons (kaddressbook merge contact plugin) IDENTIFIER [KADDRESSBOOKMERGELIBPRIVATE_LOG]
 org.kde.pim.kaddressbook_sendmail kdepim-addons (kaddressbook send mail plugin) IDENTIFIER [KADDRESSBOOK_SENDMAIL_LOG]
