@@ -22,7 +22,6 @@
 #include "semantic_debug.h"
 
 #include <KItinerary/ExtractorEngine>
-#include <KItinerary/ExtractorPreprocessor>
 #include <KItinerary/HtmlDocument>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/PdfDocument>
@@ -95,28 +94,27 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         return {};
     }
 
-    ExtractorPreprocessor preproc;
     std::unique_ptr<PdfDocument> pdfDoc;
     std::unique_ptr<HtmlDocument> htmlDoc;
+
+    ExtractorEngine engine;
+    engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
+    engine.setExtractors(std::move(extractors));
+    engine.setPass(pass.get());
+
     if (part.content()->contentType()->isPlainText()) {
-        preproc.preprocessPlainText(part.content()->decodedText());
+        engine.setText(part.content()->decodedText());
     } else if (part.content()->contentType()->isHTMLText()) {
         htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedText().toUtf8()));
-        preproc.preprocessHtml(part.content()->decodedText());
+        engine.setHtmlDocument(htmlDoc.get());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
+        engine.setPdfDocument(pdfDoc.get());
     } else if (!pass) {
         // we have extractors but this isn't a mimetype we understand
         return {};
     }
 
-    ExtractorEngine engine;
-    engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
-    engine.setText(preproc.text());
-    engine.setPass(pass.get());
-    engine.setHtmlDocument(htmlDoc.get());
-    engine.setPdfDocument(pdfDoc.get());
-    engine.setExtractors(std::move(extractors));
     const auto data = engine.extract();
     qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
     const auto decodedData = JsonLdDocument::fromJson(data);
