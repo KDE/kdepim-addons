@@ -23,11 +23,9 @@
 
 #include <KItinerary/ExtractorEngine>
 #include <KItinerary/ExtractorPreprocessor>
-#include <KItinerary/ExtractorPostprocessor>
 #include <KItinerary/HtmlDocument>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/PdfDocument>
-#include <KItinerary/StructuredDataExtractor>
 
 #include <KPkPass/Pass>
 
@@ -84,27 +82,6 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     }
     memento->setParsed(part.content()->index());
 
-    qCDebug(SEMANTIC_LOG) << "-------------------------------------------- BEGIN SEMANTIC PARSING";
-    qCDebug(SEMANTIC_LOG) << part.content()->contentType()->mimeType();
-
-    // look for structured data first, cheaper and better quality
-    if (part.content()->contentType()->isHTMLText()) {
-        StructuredDataExtractor extractor;
-        extractor.parse(part.content()->decodedText());
-
-        const auto data = extractor.data();
-        const auto decodedData = JsonLdDocument::fromJson(data);
-        if (data.size() != decodedData.size()) {
-            qCDebug(SEMANTIC_LOG).noquote() << "Unhandled content:" << QJsonDocument(data).toJson();
-        }
-        if (!decodedData.isEmpty()) {
-            memento->appendStructuredData(decodedData);
-            qCDebug(SEMANTIC_LOG) << "Found structured data:" << decodedData;
-            return {};
-        }
-    }
-
-    // try the unstructured data extractor as a fallback
     std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
     if (isPkPassContent(part.content())) {
@@ -117,7 +94,6 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         qCDebug(SEMANTIC_LOG) << "Found no suitable extractors.";
         return {};
     }
-    qCDebug(SEMANTIC_LOG) << "Found unstructured extractor rules for message" << extractors.size();
 
     ExtractorPreprocessor preproc;
     std::unique_ptr<PdfDocument> pdfDoc;
@@ -140,15 +116,12 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     engine.setPass(pass.get());
     engine.setHtmlDocument(htmlDoc.get());
     engine.setPdfDocument(pdfDoc.get());
-    for (auto extractor : extractors) {
-        engine.setExtractor(extractor);
-        const auto data = engine.extract();
-        qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
-        const auto decodedData = JsonLdDocument::fromJson(data);
-        if (!decodedData.isEmpty()) {
-            memento->appendStructuredData(decodedData);
-            break;
-        }
+    engine.setExtractors(std::move(extractors));
+    const auto data = engine.extract();
+    qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+    const auto decodedData = JsonLdDocument::fromJson(data);
+    if (!decodedData.isEmpty()) {
+        memento->appendData(decodedData);
     }
 
     if (pass) {

@@ -52,8 +52,7 @@ public:
     void setParsed(const KMime::ContentIndex &index);
 
     void setMessageDate(const QDateTime &contextDt);
-    void appendUnstructuredData(const QVector<QVariant> &data);
-    void appendStructuredData(const QVector<QVariant> &data);
+    void appendData(const QVector<QVariant> &data);
 
     bool hasData() const;
     struct TripData {
@@ -68,7 +67,6 @@ public:
     QByteArray rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const;
 
 private:
-    QVector<QVariant> m_pendingStructuredData;
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
     QVector<TripData> m_data;

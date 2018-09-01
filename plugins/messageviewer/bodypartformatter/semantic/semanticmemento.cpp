@@ -51,28 +51,18 @@ void SemanticMemento::setMessageDate(const QDateTime &contextDt)
     m_postProc.setContextDate(contextDt);
 }
 
-void SemanticMemento::appendStructuredData(const QVector<QVariant> &data)
-{
-    m_pendingStructuredData.append(data);
-}
-
-void SemanticMemento::appendUnstructuredData(const QVector<QVariant> &data)
+void SemanticMemento::appendData(const QVector<QVariant> &data)
 {
     m_postProc.process(data);
 }
 
 bool SemanticMemento::hasData() const
 {
-    return !m_data.isEmpty() || !m_pendingStructuredData.isEmpty() || !m_postProc.result().isEmpty();
+    return !m_data.isEmpty() || !m_postProc.result().isEmpty();
 }
 
 QVector<SemanticMemento::TripData> SemanticMemento::data()
 {
-    if (!m_pendingStructuredData.isEmpty()) {
-        m_postProc.process(m_pendingStructuredData);
-        m_pendingStructuredData.clear();
-    }
-
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // perform calendar lookup and merge results
         std::vector<std::pair<QVariant, KCalCore::Event::Ptr>> resolvedEvents;
