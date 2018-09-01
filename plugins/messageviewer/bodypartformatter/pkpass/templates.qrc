@@ -1,5 +1,6 @@
 <RCC>
     <qresource prefix="/org.kde.messageviewer/pkpass">
         <file alias="boardingpass.html">templates/boardingpass.html</file>
+        <file alias="eventticket.html">templates/eventticket.html</file>
     </qresource>
 </RCC>

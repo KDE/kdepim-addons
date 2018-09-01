@@ -63,15 +63,19 @@ public:
         }
 
         std::unique_ptr<KPkPass::Pass> pass(KPkPass::Pass::fromData(msgPart->content()->decodedContent()));
-        if (!qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
-            return false; // only boarding passes implemented so far
-        }
         const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
         const auto logo = pass->logo();
         if (!logo.isNull()) {
             const auto fileName = dir + QStringLiteral("/logo.png");
             logo.save(fileName);
             pass->setProperty("logoUrl", QUrl::fromLocalFile(fileName));
+            mp->nodeHelper()->addTempFile(fileName);
+        }
+        const auto strip = pass->strip();
+        if (!strip.isNull()) {
+            const auto fileName = dir + QStringLiteral("/strip.png");
+            strip.save(fileName);
+            pass->setProperty("stripUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
 
@@ -110,7 +114,14 @@ public:
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), mp.data());
         c.insert(QStringLiteral("pass"), pass.get());
-        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/pkpass/boardingpass.html"));
+
+        Grantlee::Template t;
+        if (qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/pkpass/boardingpass.html"));
+        } else if (pass->type() == KPkPass::Pass::EventTicket) {
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/pkpass/eventticket.html"));
+        }
+
         Grantlee::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);
         return true;

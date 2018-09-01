@@ -1,0 +1,103 @@
+<a name="att{{block.attachmentIndex}}"></a>
+<div id="attachmentDiv{{block.attachmentIndex}}">
+
+<div style="
+    background-color: {{ pass.backgroundColorName }};
+    color: {{ pass.foregroundColorName }};
+    padding:12px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 332px;
+">
+<!-- header -->
+<div>
+    <table style="border-collapse: collapse;">
+        <tr>
+            <td rowspan="2" style="vertical-align:center;">
+            {% if pass.logoUrl %}
+                <img src="{{ pass.logoUrl }}"/>
+            {% endif %}
+            </td>
+            <td rowspan="2" style="vertical-align:center; font-size:120%; font-weight:bold; width:100%;">{{ pass.logoText }}</td>
+        {% for field in pass.headerFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr>
+        {% for field in pass.headerFields %}
+            <td style="font-size: 120%; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- strip image, if present -->
+{% if pass.stripUrl %}
+<div style="margin-top: 10px;">
+    <center><img src="{{ pass.stripUrl }}"/></center>
+</div>
+{% endif %}
+<!-- primary fields TODO: in theory this should be on top of the strip image? -->
+<div>
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.primaryFields%}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.primaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- secondary fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.secondaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.secondaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- auxiliaryFields fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.auxiliaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.auxiliaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- barcode -->
+<div style="background-color: #ffffff; color: #000000; margin-top:8px;">
+    <div style="text-align:center;">
+    {% if pass.barcodeUrl %}
+        <center><img src="{{ pass.barcodeUrl }}" style="padding:4px;"/></center>
+    {% else %}
+        {% i18n "Unsupported barcode format." %}
+    {% endif %}
+    </div>
+    <div style="text-align:center; color: #606060;">{{ pass.barcodes.0.alternativeText }}</div>
+</div>
+<!-- footer (not included in event tickets apparently) -->
+<!-- back fields -->
+<hr/>
+{% for field in pass.backFields %}
+    <div style="color: {{ pass.labelColorName }};">{{ field.label }}</div>
+    <div>{{ field.value|safe|linebreaksbr }}</div>
+{% endfor %}
+</div> <!-- boarding pass -->
+
+</div> <!-- attachment container -->
+
