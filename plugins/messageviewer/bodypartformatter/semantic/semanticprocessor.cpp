@@ -105,7 +105,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     if (part.content()->contentType()->isPlainText()) {
         engine.setText(part.content()->decodedText());
     } else if (part.content()->contentType()->isHTMLText()) {
-        htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedText().toUtf8()));
+        htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedContent()));
         engine.setHtmlDocument(htmlDoc.get());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
