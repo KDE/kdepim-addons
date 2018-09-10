@@ -20,7 +20,6 @@
 #include "zoomtextplugineditorinterface.h"
 #include "zoomtexteditorplugin_debug.h"
 #include "zoomlabel.h"
-#include <kconfig_version.h>
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -50,17 +49,9 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("zoom_out"), zoomOutAction);
 
     zoomMenu->addSeparator();
-#if KCONFIG_VERSION < QT_VERSION_CHECK(5, 50, 0)
-    QAction *zoomResetAction = new QAction(i18n("Reset"), this);
-    zoomMenu->addAction(zoomResetAction);
-    ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
-    connect(zoomResetAction, &QAction::triggered, this, &ZoomTextPluginEditorInterface::slotZoomReset);
-    ac->setDefaultShortcut(zoomResetAction, QKeySequence(Qt::CTRL + Qt::Key_0));
-#else
     QAction *zoomResetAction = KStandardAction::actualSize(this, &ZoomTextPluginEditorInterface::slotZoomReset, this);
     ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
     zoomMenu->addAction(zoomResetAction);
-#endif
 
 
     MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::Edit);
