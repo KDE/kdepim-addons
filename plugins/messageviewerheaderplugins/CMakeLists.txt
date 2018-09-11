@@ -1,6 +1,5 @@
 
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewerheaderplugins\")
-add_subdirectory(allheaderstyleplugin)
 add_subdirectory(briefheaderstyleplugin)
 add_subdirectory(enterpriseheaderstyleplugin)  
 add_subdirectory(fancyheaderstyleplugin)  
