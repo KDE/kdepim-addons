@@ -68,10 +68,23 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     if (!nodeHelper) {
         return {};
     }
+
+    // determine sender date of the current part (differs from topLevel()->date() for forwarded mails
+    QDateTime senderDateTime;
+    auto node = part.content();
+    auto dateHdr = node->header<KMime::Headers::Date>();
+    while (!dateHdr && node->parent()) {
+        node = node->parent();
+        dateHdr = node->header<KMime::Headers::Date>();
+    }
+    if (dateHdr) {
+        senderDateTime = dateHdr->dateTime();
+    }
+
     auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
     if (!memento) {
         memento = new SemanticMemento;
-        memento->setMessageDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
+        memento->setMessageDate(senderDateTime);
         nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
     }
 
@@ -98,7 +111,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     std::unique_ptr<HtmlDocument> htmlDoc;
 
     ExtractorEngine engine;
-    engine.setSenderDate(static_cast<KMime::Message *>(part.content()->topLevel())->date()->dateTime());
+    engine.setSenderDate(senderDateTime);
     engine.setExtractors(std::move(extractors));
     engine.setPass(pass.get());
 
