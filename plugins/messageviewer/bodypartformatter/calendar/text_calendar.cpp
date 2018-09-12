@@ -1025,9 +1025,7 @@ public:
             QDesktopServices::openUrl(QUrl(attachment->uri()));
         } else {
             // put the attachment in a temporary file and launch it
-            QTemporaryFile *file{
-                nullptr
-            };
+            QTemporaryFile *file = nullptr;
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
             if (!patterns.empty()) {
