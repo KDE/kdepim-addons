@@ -44,6 +44,7 @@ private:
     void showCalendar(const QDate &date) const;
     void addToCalendar(SemanticMemento *memento) const;
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
+    void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
 
     QString m_appPath;
 };

@@ -55,6 +55,8 @@
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QUrlQuery>
+#include <QDBusPendingReply>
+#include <QDBusReply>
 
 #include <memory>
 #include <type_traits>
@@ -275,6 +277,29 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         });
     }
 
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect"), QStringLiteral("org.kde.kdeconnect.daemon"), QStringLiteral("devices"));
+    msg.setArguments({true, true});
+    QDBusPendingReply<QStringList> reply = QDBusConnection::sessionBus().asyncCall(msg);
+    reply.waitForFinished();
+
+    if(reply.isValid()) {
+        for (const QString &deviceId : reply.value()) {
+
+            QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
+
+            QDBusReply<bool> pluginReply = deviceIface.call(QLatin1String("hasPlugin"), QLatin1String("kdeconnect_share"));
+
+            if (pluginReply.value()) {
+
+                action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", deviceIface.property("name").toString()));
+
+                QObject::connect(action, &QAction::triggered, this, [this, part, deviceId]() {
+                    openWithKDEConnect(part, deviceId);
+                });
+            }
+        }
+    }
+
     menu.exec(p);
     return true;
 }
@@ -423,10 +448,62 @@ void SemanticUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) co
             return;
         }
         f.write(b);
+        f.close();
         part->nodeHelper()->addTempFile(f.fileName());
         f.setAutoRemove(false);
         args.push_back(f.fileName());
     }
 
     QProcess::startDetached(m_appPath, args);
+}
+
+void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const
+{
+    QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.jsonld"));
+    if (!f.open()) {
+        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+        return;
+    }
+
+    const auto m = memento(part);
+    const auto extractedData = m->data();
+    QVector<QVariant> data;
+    data.reserve(extractedData.size());
+    for (const auto &d : m->data()) {
+        data += d.reservations;
+    }
+    f.write(QJsonDocument(JsonLdDocument::toJson(data)).toJson());
+    f.close();
+    part->nodeHelper()->addTempFile(f.fileName());
+    f.setAutoRemove(false);
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral("org.kde.kdeconnect.device.share"), QStringLiteral("openFile"));
+    msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
+
+    QDBusConnection::sessionBus().send(msg);
+
+    // add pkpass attachments
+    for (const auto &elem : data) {
+        if (!JsonLd::canConvert<Reservation>(elem)) {
+            continue;
+        }
+        const auto res = JsonLd::convert<Reservation>(elem);
+        const auto b = m->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
+        if (b.isEmpty()) {
+            continue;
+        }
+
+        QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.pkpass"));
+        if (!f.open()) {
+            qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+            return;
+        }
+        f.write(b);
+        f.close();
+        part->nodeHelper()->addTempFile(f.fileName());
+        f.setAutoRemove(false);
+        msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
+
+        QDBusConnection::sessionBus().send(msg);
+    }
 }
