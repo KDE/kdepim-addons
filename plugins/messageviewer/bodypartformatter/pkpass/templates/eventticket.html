@@ -5,7 +5,7 @@
     background-color: {{ pass.backgroundColorName }};
     {% if pass.backgroundUrl %}
         background-image: url('{{ pass.backgroundUrl }}');
-         background-repeat: no-repeat;
+        background-repeat: no-repeat;
         background-position: center top;
     {% endif %}
     color: {{ pass.foregroundColorName }};
@@ -22,7 +22,7 @@
         <tr>
             <td rowspan="2" style="vertical-align:center;">
             {% if pass.logoUrl %}
-                <img src="{{ pass.logoUrl }}"/>
+                <img src="{{ pass.logoUrl }}" style="max-width:160px; max-height:50px;"/>
             {% endif %}
             </td>
             <td rowspan="2" style="vertical-align:center; font-size:120%; font-weight:bold; width:100%;">{{ pass.logoText }}</td>
