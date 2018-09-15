@@ -28,6 +28,9 @@
 
 #include <KPkPass/Pass>
 
+#include <KCalCore/MemoryCalendar>
+#include <KCalCore/ICalFormat>
+
 #include <QJsonArray>
 #include <QJsonDocument>
 
@@ -49,6 +52,22 @@ static bool isPkPassContent(KMime::Content *content)
     }
     const auto cd = content->contentDisposition(false);
     return cd && cd->filename().endsWith(QLatin1String("pkpass"));
+}
+
+static bool isCalendarContent(KMime::Content *content)
+{
+    const auto ct = content->contentType();
+    if (ct->mimeType() == "text/calendar") {
+        return true;
+    }
+    if (ct->mimeType() != "text/plain" && ct->mimeType() != "application/octet-stream") {
+        return false;
+    }
+    if (ct->name().endsWith(QLatin1String(".ics"))) {
+        return true;
+    }
+    const auto cd = content->contentDisposition(false);
+    return cd && cd->filename().endsWith(QLatin1String(".ics"));
 }
 
 SemanticProcessor::SemanticProcessor()
@@ -109,20 +128,27 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     std::unique_ptr<PdfDocument> pdfDoc;
     std::unique_ptr<HtmlDocument> htmlDoc;
+    KCalCore::Calendar::Ptr calendar;
 
     ExtractorEngine engine;
     engine.setSenderDate(senderDateTime);
     engine.setExtractors(std::move(extractors));
     engine.setPass(pass.get());
 
-    if (part.content()->contentType()->isPlainText()) {
-        engine.setText(part.content()->decodedText());
-    } else if (part.content()->contentType()->isHTMLText()) {
+    if (part.content()->contentType()->isHTMLText()) {
         htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedContent()));
         engine.setHtmlDocument(htmlDoc.get());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
         engine.setPdfDocument(pdfDoc.get());
+    } else if (isCalendarContent(part.content())) {
+        calendar.reset(new KCalCore::MemoryCalendar(QTimeZone()));
+        KCalCore::ICalFormat format;
+        if (format.fromRawString(calendar, part.content()->decodedContent())) {
+            engine.setCalendar(calendar);
+        }
+    } else if (part.content()->contentType()->isPlainText()) {
+        engine.setText(part.content()->decodedText());
     } else if (!pass) {
         // we have extractors but this isn't a mimetype we understand
         return {};
