@@ -94,6 +94,20 @@ public:
             pass->setProperty("stripUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
+        const auto background = pass->background();
+        if (!background.isNull()) {
+            const auto fileName = dir + QStringLiteral("/background.png");
+            background.save(fileName);
+            pass->setProperty("backgroundUrl", QUrl::fromLocalFile(fileName));
+            mp->nodeHelper()->addTempFile(fileName);
+        }
+        const auto footer = pass->footer();
+        if (!footer.isNull()) {
+            const auto fileName = dir + QStringLiteral("/footer.png");
+            footer.save(fileName);
+            pass->setProperty("footerUrl", QUrl::fromLocalFile(fileName));
+            mp->nodeHelper()->addTempFile(fileName);
+        }
 
         const auto barcodes = pass->barcodes();
         if (!barcodes.isEmpty()) {

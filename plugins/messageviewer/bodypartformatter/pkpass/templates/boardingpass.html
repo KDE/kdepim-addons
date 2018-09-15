@@ -87,7 +87,12 @@
         </tr>
     </table>
 </div>
-<!-- footer (not included in boarding passes apparently) -->
+<!-- footer -->
+{% if pass.footerUrl %}
+<div style="margin-top: 10px;">
+    <center><img src="{{ pass.footerUrl }}"/></center>
+</div>
+{% endif %}
 <!-- barcode -->
 <div style="background-color: #ffffff; color: #000000; margin-top:8px;">
     <div style="text-align:center;">
