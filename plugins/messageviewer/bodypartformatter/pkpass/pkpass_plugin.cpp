@@ -36,6 +36,22 @@
 #include <QImage>
 #include <QMetaProperty>
 
+static bool isPkPassContent(KMime::Content *content)
+{
+    const auto ct = content->contentType(false);
+    if (ct && ct->mimeType() == "application/vnd.apple.pkpass") {
+        return true;
+    }
+    if (ct && ct->mimeType() != "application/octet-stream" && ct->mimeType() != "application/zip") {
+        return false;
+    }
+    if (ct && ct->name().endsWith(QLatin1String("pkpass"))) {
+        return true;
+    }
+    const auto cd = content->contentDisposition(false);
+    return cd && cd->filename().endsWith(QLatin1String("pkpass"));
+}
+
 // Grantlee has no Q_GADGET support yet
 #define GRANTLEE_MAKE_GADGET(Class) \
     GRANTLEE_BEGIN_LOOKUP(Class) \
@@ -58,7 +74,7 @@ public:
     {
         Q_UNUSED(context);
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
-        if (!mp || context->isHiddenHint(msgPart)) {
+        if (!mp || context->isHiddenHint(msgPart) || !msgPart->content() || !isPkPassContent(msgPart->content())) {
             return false;
         }
 
