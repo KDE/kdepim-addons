@@ -1,0 +1,12 @@
+<div style="margin-top:8px; text-align: center;">
+    <div style="background-color: #ffffff; border-radius: 6px; margin: 0 auto; padding: 4px; display:inline-block;">
+    {% if pass.barcodeUrl %}
+        <center><img src="{{ pass.barcodeUrl }}" style="padding:4px;"/></center>
+    {% else %}
+        <div style="text-align:center; color: #000000;">
+        {% i18n "Unsupported barcode format." %}
+        </div>
+    {% endif %}
+    <div style="text-align:center; color: #606060;">{{ pass.barcodes.0.alternativeText }}</div>
+    </div>
+</div>

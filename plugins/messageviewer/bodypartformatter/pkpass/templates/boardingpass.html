@@ -94,16 +94,7 @@
 </div>
 {% endif %}
 <!-- barcode -->
-<div style="background-color: #ffffff; color: #000000; margin-top:8px;">
-    <div style="text-align:center;">
-    {% if pass.barcodeUrl %}
-        <center><img src="{{ pass.barcodeUrl }}" style="padding:4px;"/></center>
-    {% else %}
-        {% i18n "Unsupported barcode format." %}
-    {% endif %}
-    </div>
-    <div style="text-align:center; color: #606060;">{{ pass.barcodes.0.alternativeText }}</div>
-</div>
+{% include ":/org.kde.messageviewer/pkpass/barcode.html" %}
 <!-- back fields -->
 <hr/>
 {% for field in pass.backFields %}
