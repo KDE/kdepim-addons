@@ -332,7 +332,7 @@ void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KConta
 
     QGpgME::QByteArrayDataProvider dataProvider;
     GpgME::Data dataObj(&dataProvider);
-    GpgME::Error error = context->exportPublicKeys(fingerprint.toLatin1(), dataObj);
+    GpgME::Error error = context->exportPublicKeys(fingerprint.toLatin1().constData(), dataObj);
     delete context;
 
     if (error) {

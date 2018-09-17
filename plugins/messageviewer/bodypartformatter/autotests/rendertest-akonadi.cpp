@@ -51,7 +51,7 @@ Q_CONSTRUCTOR_FUNCTION(initLocale)
 
 class RenderTestAkonadi : public QObject {
 Q_OBJECT
-private slots:
+private Q_SLOTS:
     void initTestCase()
     {
         QIcon::setThemeName(QStringLiteral("breeze"));
@@ -76,7 +76,7 @@ private slots:
             if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))) {
                 continue;
             }
-            QTest::newRow(file.toLatin1()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
+            QTest::newRow(file.toLatin1().constData()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
                                         << QString(file + QStringLiteral(".out"));
         }
     }

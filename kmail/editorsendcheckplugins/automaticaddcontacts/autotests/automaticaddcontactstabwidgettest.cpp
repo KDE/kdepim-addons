@@ -57,7 +57,7 @@ AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest()
 
 AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactWidget()
 {
-    AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(0, mComboboxModel);
+    AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(nullptr, mComboboxModel);
     return w;
 }
 

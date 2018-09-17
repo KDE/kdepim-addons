@@ -154,8 +154,8 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     const auto pal = qGuiApp->palette();
     QVariantMap style;
     style.insert(QStringLiteral("frameColor"), pal.link().color().name());
-    style.insert(QStringLiteral("expandIcon"), QLatin1String("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png")));
-    style.insert(QStringLiteral("collapseIcon"), QLatin1String("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png")));
+    style.insert(QStringLiteral("expandIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
+    style.insert(QStringLiteral("collapseIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
     c.insert(QStringLiteral("style"), style);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
@@ -192,7 +192,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
             if (barcode) {
                 barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
                 const auto img = barcode->toImage(barcode->minimumSize());
-                const auto fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+                const QString fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
                 img.save(fileName);
                 m.insert(QStringLiteral("ticketToken"), fileName);
                 nodeHelper->addTempFile(fileName);

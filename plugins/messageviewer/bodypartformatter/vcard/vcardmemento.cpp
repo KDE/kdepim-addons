@@ -88,7 +88,7 @@ bool VcardMemento::finished() const
 
 void VcardMemento::detach()
 {
-    disconnect(this, SIGNAL(update(MimeTreeParser::UpdateMode)), 0, 0);
+    disconnect(this, SIGNAL(update(MimeTreeParser::UpdateMode)), nullptr, nullptr);
 }
 
 bool VcardMemento::vcardExist(int index) const

@@ -69,7 +69,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
     } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
         GnuPGWKSMessagePart mp(part);
         if (!sendConfirmation(viewerInstance, mp)) {
-            part->nodeHelper()->setProperty("__GnuPGWKS" + mp.fingerprint().toLatin1(), QStringLiteral("error"));
+            part->nodeHelper()->setProperty((QStringLiteral("__GnuPGWKS") + mp.fingerprint()).toLatin1().constData(), QStringLiteral("error"));
         }
         return true;
     }

@@ -37,7 +37,7 @@ void ViewerPluginTranslatorTest::shouldHaveDefaultValue()
 {
     MessageViewer::ViewerPluginTranslator *translator = new MessageViewer::ViewerPluginTranslator(this);
     QVERIFY(!translator->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
 
     QVERIFY(translator->createView(parent, new KActionCollection(this)));
@@ -47,7 +47,7 @@ void ViewerPluginTranslatorTest::shouldCreateAction()
 {
     MessageViewer::ViewerPluginTranslator *translator = new MessageViewer::ViewerPluginTranslator(this);
     QVERIFY(!translator->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
 
     MessageViewer::ViewerPluginInterface *interface = translator->createView(parent, new KActionCollection(this));

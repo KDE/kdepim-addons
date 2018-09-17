@@ -76,7 +76,7 @@ void mailreader::setupDocks()
     entityModel->setItemPopulationStrategy(Akonadi::EntityTreeModel::LazyPopulation);
 
     // Create the collection view
-    Akonadi::EntityTreeView *collectionView = new Akonadi::EntityTreeView(0, this);
+    Akonadi::EntityTreeView *collectionView = new Akonadi::EntityTreeView(nullptr, this);
     collectionView->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
     // Setup the message folders collection...

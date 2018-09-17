@@ -75,9 +75,7 @@ using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
     : QObject(parent)
-    , mReply(0)
     , mTitle(title)
-    , mUpdated(false)
 {
 }
 
@@ -239,7 +237,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 const AdBlockRule *AdBlockSubscription::rule(int offset) const
 {
     if (!AdblockUtil::containsIndex(mRules, offset)) {
-        return 0;
+        return nullptr;
     }
 
     return mRules[offset];

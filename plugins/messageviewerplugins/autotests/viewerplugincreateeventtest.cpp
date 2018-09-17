@@ -44,7 +44,7 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
 {
     MessageViewer::ViewerPluginCreateevent *event = new MessageViewer::ViewerPluginCreateevent(this);
     QVERIFY(!event->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -54,7 +54,7 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
 void ViewerPluginCreateeventTest::shouldShowWidget()
 {
     MessageViewer::ViewerPluginCreateevent *event = new MessageViewer::ViewerPluginCreateevent(this);
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     interface->execute();

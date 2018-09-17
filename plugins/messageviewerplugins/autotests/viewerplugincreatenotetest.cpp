@@ -44,7 +44,7 @@ void ViewerPluginCreateNoteTest::shouldCreateAction()
 {
     MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
     QVERIFY(!note->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -54,7 +54,7 @@ void ViewerPluginCreateNoteTest::shouldCreateAction()
 void ViewerPluginCreateNoteTest::shouldShowWidget()
 {
     MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     interface->execute();

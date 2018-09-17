@@ -90,7 +90,7 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
 
     block.setProperty("showKeyDetails", context->showSignatureDetails());
     block.setProperty("error", mp->error());
-    block.setProperty("importUrl", mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import"));
+    block.setProperty("importUrl", QString(mp->makeLink(QStringLiteral("pgpkey")) + QStringLiteral("?action=import")));
     block.setProperty("searchRunning", mp->searchRunning());
     const auto key = mp->key();
     block.setProperty("uid", mp->userID());
