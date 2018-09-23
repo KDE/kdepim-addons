@@ -18,12 +18,17 @@
 */
 
 #include "briefheaderstyleplugintest.h"
+#include "utils.h"
 #include "../briefheaderstyleplugin/briefheaderstyleplugin.h"
 #include "../briefheaderstyleplugin/briefheaderstyleinterface.h"
+
+#include <MessageViewer/HeaderStyle>
+
 #include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+
 
 BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
@@ -49,6 +54,41 @@ void BriefHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+}
+
+void BriefHeaderStylePluginTest::testFormatEmpty()
+{
+    MessageViewer::BriefHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = new KMime::Message();
+    testHeaderFile(style->format(aMsg), QStringLiteral("empty.brief"));
+}
+
+void BriefHeaderStylePluginTest::testFormat_data()
+{
+    QTest::addColumn<QString>("mailbox");
+
+    QDir dir(QStringLiteral(HEADER_DATA_DIR));
+    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    foreach (const QString &file, l) {
+        QTest::newRow(file.toLatin1().constData()) << file;
+    }
+}
+
+void BriefHeaderStylePluginTest::testFormat()
+{
+    QFETCH(QString, mailbox);
+
+    MessageViewer::BriefHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = readAndParseMail(mailbox);
+    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".brief"));
 }
 
 QTEST_MAIN(BriefHeaderStylePluginTest)

@@ -32,6 +32,9 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCreateInterface();
+    void testFormatEmpty();
+    void testFormat_data();
+    void testFormat();
 };
 
 #endif // BRIEFHEADERSTYLEPLUGINTEST_H
