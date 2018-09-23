@@ -18,8 +18,12 @@
 */
 
 #include "fancyheaderstyleplugintest.h"
+#include "utils.h"
 #include "../fancyheaderstyleplugin/fancyheaderstyleplugin.h"
 #include "../fancyheaderstyleplugin/fancyheaderstyleinterface.h"
+
+#include <MessageViewer/HeaderStyle>
+
 #include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
@@ -50,6 +54,41 @@ void FancyHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+}
+
+void FancyHeaderStylePluginTest::testFormatEmpty()
+{
+    MessageViewer::FancyHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = new KMime::Message();
+    testHeaderFile(style->format(aMsg), QStringLiteral("empty.fancy"));
+}
+
+void FancyHeaderStylePluginTest::testFormat_data()
+{
+    QTest::addColumn<QString>("mailbox");
+
+    QDir dir(QStringLiteral(HEADER_DATA_DIR));
+    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    foreach (const QString &file, l) {
+        QTest::newRow(file.toLatin1().constData()) << file;
+    }
+}
+
+void FancyHeaderStylePluginTest::testFormat()
+{
+    QFETCH(QString, mailbox);
+
+    MessageViewer::FancyHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = readAndParseMail(mailbox);
+    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".fancy"));
 }
 
 QTEST_MAIN(FancyHeaderStylePluginTest)
