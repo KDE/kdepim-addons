@@ -1,0 +1,38 @@
+From admin@ssrr.link Mon May 21 16:52:43 2018
+Return-Path: <admin@ssrr.link>
+Delivered-To: spam@example.org
+Received: from localhost (localhost [127.0.0.1])
+	by mail.example.org (Postfix) with ESMTP id 63C71100013
+	for <spam@example.org>; Mon, 21 May 2018 18:55:17 +0200 (CEST)
+X-Quarantine-ID: <xAHhIeP7m9gc>
+X-Virus-Scanned: Debian amavisd-new at example.org
+X-Spam-Flag: YES
+X-Spam-Score: 10.792
+X-Spam-Level: **********
+X-Spam-Status: Yes, score=10.792 required=6.31 tests=[BAYES_99=3.5,
+	BAYES_999=0.2, BODY_URI_ONLY=0.673, DKIM_SIGNED=0.1,
+	HEADER_FROM_DIFFERENT_DOMAINS=0.001, HTML_MESSAGE=0.001,
+	HTML_OBFUSCATE_05_10=0.26, RAZOR2_CF_RANGE_51_100=0.5,
+	RAZOR2_CF_RANGE_E8_51_100=1.886, RAZOR2_CHECK=0.922,
+	RCVD_IN_DNSWL_NONE=-0.0001, TVD_SPACE_RATIO_MINFP=2.749,
+	T_DKIM_INVALID=0.01, T_RP_MATCHES_RCVD=-0.01]
+	autolearn=no autolearn_force=no
+Date: Tue, 22 May 2018 00:52:43 +0800
+Message-Id: <201805211652.w4LGqhL4028396@ssrr.link>
+Resent-From: resent@example.org
+From: =?utf-8?q?admin?= <admin@ssrr.link>
+To: spam1 <spam1@example.org>, spam2 <spam2@example.org>, spam3 <spam3@example.org>,
+    spam4 <spam4@example.org>, spam5 <spam5@example.org>, spam6 <spam6@example.org>
+Cc: foo@exampleorg
+Bcc: bcc@example.org
+Organization: =?ISO-8859-15?Q?Universit=E4t KDE?=
+Subject: =?utf-8?b?c3NyL3Zwbui2heS9juS7t+S/gw==?=
+ =?utf-8?b?6ZSA?=
+X-Mailman-Version: 2.1.23
+Precedence: list
+List-Id: testlist <testlist@listi.example.org>
+Sender: "sender" <sender@example.org>
+X-Face: &O7POA^t$8Gq0El|^zM9V:*jgn,ETU\1A73;Zdeojd,G(a";/Y0Fu|/*_jQF+@3';#.O@&.T"FaLh+5o_F,\lrKg~{JYYVM20<P[J.ve7:7m;51A=i@"XBI].=`ZFX4h@tGL>Q1I&fUN4<\TGcR5=
+
+very uniteressting for header tests :D
+

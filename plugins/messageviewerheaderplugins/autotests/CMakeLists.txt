@@ -1,7 +1,8 @@
 # convenience macro to add qtest unit tests
+add_definitions( -DHEADER_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 
 macro(add_messageviewer_header_unittest _source _additional)
-    set( _test ${_source}  ${_additional})
+    set( _test ${_source} utils.cpp  ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )

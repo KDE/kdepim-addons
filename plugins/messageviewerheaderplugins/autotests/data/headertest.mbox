@@ -1,0 +1,19 @@
+From admin@ssrr.link Mon May 21 16:52:43 2018
+Date: Tue, 22 May 2018 00:52:43 +0800
+Resent-From: resent-from@example.org, resent-from2@example.org, resent-from3@example.org,
+    resent-from4@example.org, resent-to5@example.org, resent-to6@example.org
+Resent-To: resent-to@example.org, resent-to2@example.org, resent-to3@example.org,
+    resent-to4@example.org, resent-to5@example.org, resent-to6@example.org
+Reply-To: me <reply-to@example.org>, me3 <reply-to3@example.org>, me3 <reply-to3@example.org>,
+    me4 <reply-to4@example.org>, me5 <reply-to5@example.org>, me6 <reply-to6@example.org>
+From: =?utf-8?q?admin?= <admin@ssrr.link>, from2 <from2@example.org>, from3 <from3@example.org>,
+    from4 <from4@example.org>, from5 <from5@example.org>, from6 <from6@example.org>
+To: direct recipient1 <tospam1@example.org>, direct recipient2 <tospam2@example.org>, direct recipient3 <tospam3@example.org>,
+    direct recipient4 <tospam4@example.org>, direct recipient5 <tospam5@example.org>, direct recipient6 <tospam6@example.org>
+Cc: copy recipient1 <ccspam1@example.org>, copy recipient2 <ccspam2@example.org>, copy recipient3 <ccspam3@example.org>,
+    copy recipient4 <ccspam4@example.org>, copy recipient5 <ccspam5@example.org>, copy recipient6 <ccspam6@example.org>
+Bcc: blind copy recipient1 <bccspam1@example.org>, blind copy recipient2 <bccspam2@example.org>, blind copy recipient3 <bccspam3@example.org>,
+    blind copy recipient4 <bccspam4@example.org>, blind copy recipient5 <bccspam5@example.org>, blind copy recipient6 <bccspam6@example.org>
+
+very uniteressting for header tests :D
+
