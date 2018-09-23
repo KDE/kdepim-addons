@@ -63,7 +63,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     }
 
     QString imgpath(QStandardPaths::locate(QStandardPaths::GenericDataLocation, QStringLiteral("libmessageviewer/pics/"), QStandardPaths::LocateDirectory));
-    imgpath.prepend(QLatin1String("file:///"));
+    imgpath.prepend(QLatin1String("file://"));
     imgpath.append(QLatin1String("enterprise_"));
     const QString borderSettings(QStringLiteral(" padding-top: 0px; padding-bottom: 0px; border-width: 0px "));
     QString headerStr;
@@ -82,7 +82,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
            + mHeaderStyleUtil.dateString(message, isPrinting(), /* shortDate */ MessageViewer::HeaderStyleUtil::CustomDate) + QStringLiteral("</span></div>"
                                                                                                                                              // #0057ae
                                                                                                                                              "<table style=\"background: ") + activeColorDark.name()
-           + QStringLiteral("; border-collapse:collapse; top: 14px; min-width: 200px; \" cellpadding=0> \n"
+           + QStringLiteral("; border-collapse:collapse; top: 14px; min-width: 200px; \" cellpadding='0'> \n"
                             "  <tr> \n"
                             "   <td style=\"min-width: 6px; background-image: url(")
            + imgpath + QStringLiteral("top_left.png); \"></td> \n"
@@ -96,10 +96,10 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                                       "   <td style=\"\"> \n");
     headerStr
         += QStringLiteral("<div class=\"noprint\" style=\"z-index: 1; float:right; position: relative; top: -35px; right: 20px ; max-height: 65px\">\n"
-                          "<img src=\"") + imgpath + QStringLiteral("icon.png\">\n"
+                          "<img src=\"") + imgpath + QStringLiteral("icon.png\"/>\n"
                                                                     "</div>\n");
     headerStr
-        += QStringLiteral("    <table style=\"color: ") + fontColor.name() + QStringLiteral(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding=0> \n");
+        += QStringLiteral("    <table style=\"color: ") + fontColor.name() + QStringLiteral(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
@@ -177,7 +177,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (isTopLevel()) {
         attachment
             = QStringLiteral("<tr>"
-                             "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath + QStringLiteral("left.png);'</td>"
+                             "<td style='min-width: 6px; max-width: 6px; background: url(") + imgpath + QStringLiteral("left.png);'></td>"
                                                                                                                        "<td style='padding-right:20px;'>"
                                                                                                                        "<div class=\"noprint\" >"
                                                                                                                        "<div>%1</div>"
@@ -185,7 +185,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                                                                                                                        "</td>"
                                                                                                                        "<td style='min-width: 6px; max-width: 6px; background: url(").arg(
                   attachmentHtml()) + imgpath
-              + QStringLiteral("right.png);'</td>"
+              + QStringLiteral("right.png);'></td>"
                                "</tr>");
     }
 
@@ -199,9 +199,9 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                            "   <td style=\"min-width: 6px; background: url(") + imgpath + QStringLiteral("s_left.png); \"></td> \n"
                                                                                                          "   <td style=\"height: 35px; width: 80%; background: url(") + imgpath + QStringLiteral("sbar.png);\"> \n"
                                                                                                                                                                                                  "    <img src=\"")
-           + imgpath + QStringLiteral("sw.png\" style=\"margin: 0px; height: 30px; overflow:hidden; \"> \n"
+           + imgpath + QStringLiteral("sw.png\" style=\"margin: 0px; height: 30px; overflow:hidden; \"/> \n"
                                       "    <img src=\"")
-           + imgpath + QStringLiteral("sp_right.png\" style=\"float: right; \"> </td> \n"
+           + imgpath + QStringLiteral("sp_right.png\" style=\"float: right; \"/> </td> \n"
                                       "   <td style=\"min-width: 6px; background: url(")
            + imgpath + QStringLiteral("s_right.png); \"></td> \n"
                                       "  </tr> \n"
