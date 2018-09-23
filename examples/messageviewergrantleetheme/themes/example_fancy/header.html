@@ -30,20 +30,20 @@
 
     <tr>
     <th align="left" style="font-size: 10px;">{{ header.toi18n }}</th>
-    <td style="font-size: 10px;">{{ header.toExpandable|safe }}</td>
+    <td style="font-size: 10px;">{{ header.to.expandableTo|safe }}</td>
     </tr>
 
-{% if header.cc %}
+{% if header.cc.isSet %}
     <tr>
     <th align="left" style="font-size: 10px;"> {{ header.cci18n }} </th>
-    <td style="font-size: 10px;">{{ header.ccExpandable|safe }}</td>
+    <td style="font-size: 10px;">{{ header.cc.expandableCc|safe }}</td>
     </tr>
 {% endif %}
 
-{% if header.bcc %}
+{% if header.bcc.isSet %}
     <tr>
     <th align="left" style="font-size: 10px;"> {{ header.bcci18n }} </th>
-    <td style="font-size: 10px;">{{ header.bccExpandable|safe }}</td>
+    <td style="font-size: 10px;">{{ header.bcc.expandableBCC|safe }}</td>
     </tr>
 {% endif %}
 

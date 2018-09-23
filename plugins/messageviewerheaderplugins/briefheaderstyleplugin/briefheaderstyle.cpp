@@ -113,7 +113,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     if (strategy->showHeader(QStringLiteral("date"))) {
-        headerParts << mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* shortDate = */ MessageViewer::HeaderStyleUtil::ShortDate));
+        headerParts << mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* shortDate = */ MessageViewer::HeaderStyleUtil::ShortDate));
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"

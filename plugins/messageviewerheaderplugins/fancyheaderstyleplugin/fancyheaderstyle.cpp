@@ -111,7 +111,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     // the mailto: URLs can contain %3 etc., therefore usage of multiple
     // QString::arg is not possible
     if (strategy->showHeader(QStringLiteral("from"))) {
-        const QVector<KMime::Types::Mailbox> resentFrom = mHeaderStyleUtil.resentFromList(message);
+        const auto resentFrom = mHeaderStyleUtil.resentFromList(message);
         headerStr += QStringLiteral("<tr><th>%1</th>\n"
                                     "<td>")
                      .arg(i18n("From: "))
@@ -119,7 +119,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
                      + (message->headerByType("Resent-From") ? QStringLiteral("&nbsp;")
                         + i18n("(resent from %1)",
                                StringUtil::emailAddrAsAnchor(
-                                   resentFrom, StringUtil::DisplayFullAddress))
+                                   resentFrom.data(), StringUtil::DisplayFullAddress))
                         : QString())
                      + (!vCardName().isEmpty() ? QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\">")
                         + i18n("[vCard]") + QStringLiteral("</a>")
@@ -133,12 +133,12 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     }
     // to line
     if (strategy->showHeader(QStringLiteral("to"))) {
-        const QVector<KMime::Types::Mailbox> resentTo = mHeaderStyleUtil.resentToList(message);
+        const auto resentTo = mHeaderStyleUtil.resentToList(message);
 
         QString to;
         if (message->headerByType("Resent-To")) {
             to
-                = StringUtil::emailAddrAsAnchor(resentTo,
+                = StringUtil::emailAddrAsAnchor(resentTo.data(),
                                                 StringUtil::DisplayFullAddress) + QLatin1Char(' ')
                   + i18n("(receiver was %1)", StringUtil::emailAddrAsAnchor(message->to(), StringUtil::DisplayFullAddress,
                                                                             QString(), StringUtil::ShowLink,
@@ -183,8 +183,8 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td dir=\"%2\">%3</td></tr>\n")
                          .arg(i18n("Date: "))
-                         .arg(mHeaderStyleUtil.directionOf(mHeaderStyleUtil.dateStr(message->date()->dateTime())))
-                         .arg(mHeaderStyleUtil.strToHtml(mHeaderStyleUtil.dateString(message, isPrinting(), /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
+                         .arg(mHeaderStyleUtil.directionOf(HeaderStyleUtil::dateStr(message->date()->dateTime())))
+                         .arg(mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
     }
 
     if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
