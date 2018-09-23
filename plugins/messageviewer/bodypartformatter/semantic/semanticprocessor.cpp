@@ -36,8 +36,6 @@
 
 using namespace KItinerary;
 
-std::weak_ptr<ExtractorRepository> SemanticProcessor::s_repository;
-
 static bool isPkPassContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
@@ -70,15 +68,7 @@ static bool isCalendarContent(KMime::Content *content)
     return cd && cd->filename().endsWith(QLatin1String(".ics"));
 }
 
-SemanticProcessor::SemanticProcessor()
-{
-    m_repository = s_repository.lock();
-    if (!m_repository) {
-        m_repository.reset(new ExtractorRepository);
-        s_repository = m_repository;
-    }
-}
-
+SemanticProcessor::SemanticProcessor() = default;
 SemanticProcessor::~SemanticProcessor() = default;
 
 MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
@@ -115,27 +105,16 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
-    if (isPkPassContent(part.content())) {
-        pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
-        extractors = m_repository->extractorsForPass(pass.get());
-    } else {
-        extractors = m_repository->extractorsForMessage(part.content());
-    }
-    if (extractors.empty()) {
-        qCDebug(SEMANTIC_LOG) << "Found no suitable extractors.";
-        return {};
-    }
-
     std::unique_ptr<PdfDocument> pdfDoc;
     std::unique_ptr<HtmlDocument> htmlDoc;
     KCalCore::Calendar::Ptr calendar;
 
     ExtractorEngine engine;
-    engine.setSenderDate(senderDateTime);
-    engine.setExtractors(std::move(extractors));
-    engine.setPass(pass.get());
-
-    if (part.content()->contentType()->isHTMLText()) {
+    engine.setContext(part.content());
+    if (isPkPassContent(part.content())) {
+        pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
+        engine.setPass(pass.get());
+    } else if (part.content()->contentType()->isHTMLText()) {
         htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedContent()));
         engine.setHtmlDocument(htmlDoc.get());
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
@@ -149,7 +128,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         }
     } else if (part.content()->contentType()->isPlainText()) {
         engine.setText(part.content()->decodedText());
-    } else if (!pass) {
+    } else {
         // we have extractors but this isn't a mimetype we understand
         return {};
     }

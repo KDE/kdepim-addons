@@ -24,8 +24,6 @@
 #include <MimeTreeParser/BodyPartFormatter>
 #include <MimeTreeParser/MessagePart>
 
-#include <KItinerary/ExtractorRepository>
-
 #include <memory>
 
 /** Processor plugin for MimeTreeParser. */
@@ -36,10 +34,6 @@ public:
     ~SemanticProcessor() override;
 
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
-
-private:
-    std::shared_ptr<KItinerary::ExtractorRepository> m_repository;
-    static std::weak_ptr<KItinerary::ExtractorRepository> s_repository;
 };
 
 #endif // SEMANTICPROCESSOR_H
