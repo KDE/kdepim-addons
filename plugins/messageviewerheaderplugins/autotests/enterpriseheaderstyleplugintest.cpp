@@ -18,8 +18,12 @@
 */
 
 #include "enterpriseheaderstyleplugintest.h"
+#include "utils.h"
 #include "../enterpriseheaderstyleplugin/enterpriseheaderstyleplugin.h"
 #include "../enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.h"
+
+#include <MessageViewer/HeaderStyle>
+
 #include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
@@ -50,6 +54,41 @@ void EnterpriseHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+}
+
+void EnterpriseHeaderStylePluginTest::testFormatEmpty()
+{
+    MessageViewer::EnterpriseHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = new KMime::Message();
+    testHeaderFile(style->format(aMsg), QStringLiteral("empty.enterprise"));
+}
+
+void EnterpriseHeaderStylePluginTest::testFormat_data()
+{
+    QTest::addColumn<QString>("mailbox");
+
+    QDir dir(QStringLiteral(HEADER_DATA_DIR));
+    const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
+    foreach (const QString &file, l) {
+        QTest::newRow(file.toLatin1().constData()) << file;
+    }
+}
+
+void EnterpriseHeaderStylePluginTest::testFormat()
+{
+    QFETCH(QString, mailbox);
+
+    MessageViewer::EnterpriseHeaderStylePlugin plugin;
+    auto style = plugin.headerStyle();
+    auto stategy = plugin.headerStrategy();
+    style->setHeaderStrategy(stategy);
+    QCOMPARE(style->headerStrategy(), stategy);
+    auto aMsg = readAndParseMail(mailbox);
+    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".enterprise"));
 }
 
 QTEST_MAIN(EnterpriseHeaderStylePluginTest)
