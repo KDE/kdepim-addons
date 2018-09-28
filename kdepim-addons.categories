@@ -38,3 +38,4 @@ org.kde.pim.importwizard.nylasmailplugin kdepim-addons (importwizard nylasmail p
 org.kde.pim.importwizard.operaplugin kdepim-addons (importwizard opera plugin) IDENTIFIER [OPERAPLUGIN_LOG]
 org.kde.pim.kmail_markdownplugin kdepim-addons (kmail markdonw plugin) IDENTIFIER [KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG]
 org.kde.pim.mailtransport_sendmail kdepim-addons (kmailtransport sendmail plugin) IDENTIFIER [MAILTRANSPORT_PLUGIN_LOG]
+org.kde.pim.kmail_sharetexteditorplugin kdepim-addons (share text editor plugin) IDENTIFIER [KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG]
