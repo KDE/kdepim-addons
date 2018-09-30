@@ -51,8 +51,8 @@ public:
     ~SendmailJob() override;
 
 protected:
-    virtual void doStart();
-    virtual bool doKill();
+    void doStart() override;
+    bool doKill() override;
 
 private Q_SLOTS:
     void sendmailExited(int, QProcess::ExitStatus);
