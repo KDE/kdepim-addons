@@ -4,6 +4,12 @@
         "EnabledByDefault": "false",
         "Id": "kmailsharetext",
         "Name": "Share Text",
+        "Name[ca@valencia]": "Comparteix el text",
+        "Name[ca]": "Comparteix el text",
+        "Name[nl]": "Gedeelde tekst",
+        "Name[sv]": "Dela text",
+        "Name[uk]": "Оприлюднення тексту",
+        "Name[x-test]": "xxShare Textxx",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
