@@ -239,13 +239,13 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
             }
         } else if (JsonLd::isA<BusReservation>(res)) {
             const auto trip = res.value<BusReservation>().reservationFor().value<BusTrip>();
-            if (!places.contains(trip.departureStation().name())) {
-                addGoToMapAction(&menu, trip.departureStation());
-                places.insert(trip.departureStation().name());
+            if (!places.contains(trip.departureBusStop().name())) {
+                addGoToMapAction(&menu, trip.departureBusStop());
+                places.insert(trip.departureBusStop().name());
             }
-            if (!places.contains(trip.arrivalStation().name())) {
-                addGoToMapAction(&menu, trip.arrivalStation());
-                places.insert(trip.arrivalStation().name());
+            if (!places.contains(trip.arrivalBusStop().name())) {
+                addGoToMapAction(&menu, trip.arrivalBusStop());
+                places.insert(trip.arrivalBusStop().name());
             }
         } else if (JsonLd::isA<FoodEstablishmentReservation>(res)) {
             addGoToMapAction(&menu, res.value<FoodEstablishmentReservation>().reservationFor().value<FoodEstablishment>());

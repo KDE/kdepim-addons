@@ -1,14 +1,14 @@
 <table style="width:100%;">
     <tr>
         <td style="font-size:120%; width:33;">
-            {{ trip.departureStation.name }}
+            {{ trip.departureBusStop.name }}
             {% if trip.departurePlatform %}
                 [{{ trip.departurePlatform }}]
             {% endif %}
         </td>
         <td style="font-size:120%; width:33%; text-align:center;">&rarr;</td>
         <td style="font-size:120%; width:33%;">
-            {{ trip.arrivalStation.name}}
+            {{ trip.arrivalBusStop.name }}
             {% if trip.arrivalPlatform %}
                 [{{ trip.arrivalPlatform }}]
             {% endif %}
