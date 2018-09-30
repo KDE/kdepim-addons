@@ -44,7 +44,7 @@ void ViewerPluginCreateTodoTest::shouldCreateAction()
 {
     MessageViewer::ViewerPluginCreatetodo *todo = new MessageViewer::ViewerPluginCreatetodo(this);
     QVERIFY(!todo->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -54,7 +54,7 @@ void ViewerPluginCreateTodoTest::shouldCreateAction()
 void ViewerPluginCreateTodoTest::shouldShowWidget()
 {
     MessageViewer::ViewerPluginCreatetodo *todo = new MessageViewer::ViewerPluginCreatetodo(this);
-    QWidget *parent = new QWidget(0);
+    QWidget *parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     interface->execute();

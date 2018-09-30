@@ -44,7 +44,7 @@
 class CategorisedEntityModelFactory : public EntityTreeModelFactory
 {
 public:
-    CategorisedEntityModelFactory(QObject *parent = 0)
+    explicit CategorisedEntityModelFactory(QObject *parent = nullptr)
         : EntityTreeModelFactory(parent)
     {
     }
@@ -58,9 +58,8 @@ public:
 class Tab7TreeWidget : public EntityTreeWidget
 {
 public:
-    Tab7TreeWidget(QWidget *parent = nullptr)
+    explicit Tab7TreeWidget(QWidget *parent = nullptr)
         : EntityTreeWidget(parent)
-        , m_model(0)
     {
     }
 
@@ -89,8 +88,8 @@ public:
     }
 
 private:
-    Akonadi::EntityMimeTypeFilterModel *m_collectionFilter;
-    Akonadi::EntityTreeModel *m_model;
+    Akonadi::EntityMimeTypeFilterModel *m_collectionFilter = nullptr;
+    Akonadi::EntityTreeModel *m_model = nullptr;
 };
 
 Tab7Widget::Tab7Widget(QWidget *parent, Qt::WindowFlags f)

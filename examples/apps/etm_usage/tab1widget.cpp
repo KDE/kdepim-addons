@@ -31,6 +31,7 @@
 #include "itemviewerwidget.h"
 
 Tab1Widget::Tab1Widget(QWidget *parent)
+    : QWidget(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     QSplitter *splitter = new QSplitter(this);
