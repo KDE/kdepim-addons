@@ -37,7 +37,7 @@ void ShareTextPluginEditorInterfaceTest::shouldHaveDefaultValues()
     interface.createAction(new KActionCollection(this));
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::PluginActionType::Edit);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::File);
 }
 
 QTEST_MAIN(ShareTextPluginEditorInterfaceTest)
