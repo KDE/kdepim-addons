@@ -57,7 +57,7 @@ class TagLibrary : public QObject, public Grantlee::TagLibraryInterface
     Q_PLUGIN_METADATA(IID "org.grantlee.TagLibraryInterface")
 public:
     explicit TagLibrary(QObject *parent = nullptr);
-    QHash<QString, Grantlee::Filter*> filters(const QString &name) override;
+    QHash<QString, Grantlee::Filter *> filters(const QString &name) override;
 };
 
 #endif

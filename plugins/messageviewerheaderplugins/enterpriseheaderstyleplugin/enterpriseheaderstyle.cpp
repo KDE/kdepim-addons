@@ -80,8 +80,8 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     headerStr
         += QStringLiteral("<div style=\"margin-left: 10px; top: 0px;\"><span style=\"font-size: 0.8em; font-weight: bold;\">")
            + HeaderStyleUtil::dateString(message, /* shortDate */ MessageViewer::HeaderStyleUtil::CustomDate) + QStringLiteral("</span></div>"
-                                                                                                                                             // #0057ae
-                                                                                                                                             "<table style=\"background: ") + activeColorDark.name()
+                                                                                                                               // #0057ae
+                                                                                                                               "<table style=\"background: ") + activeColorDark.name()
            + QStringLiteral("; border-collapse:collapse; top: 14px; min-width: 200px; \" cellpadding='0'> \n"
                             "  <tr> \n"
                             "   <td style=\"min-width: 6px; background-image: url(")

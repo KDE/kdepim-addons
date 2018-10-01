@@ -20,7 +20,6 @@
 #ifndef INSERTTEMPLATECOMMANDPLUGINEDITOR_H
 #define INSERTTEMPLATECOMMANDPLUGINEDITOR_H
 
-
 #include <MessageComposer/PluginEditorConvertText>
 #include <QVariant>
 class KActionCollection;

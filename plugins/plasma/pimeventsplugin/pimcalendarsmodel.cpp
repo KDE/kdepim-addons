@@ -67,8 +67,8 @@ PimCalendarsModel::~PimCalendarsModel()
 QHash<int, QByteArray> PimCalendarsModel::roleNames() const
 {
     return { {
-                 DataRole, "data"
-             } };
+        DataRole, "data"
+    } };
 }
 
 QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
@@ -91,20 +91,20 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
     auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
     const QString icon = attr ? attr->iconName() : QString();
     return QVariantMap { {
-                             QStringLiteral("id"), col.id()
-                         },
-                         {
-                             QStringLiteral("name"), col.displayName()
-                         },
-                         {
-                             QStringLiteral("enabled"), enabled
-                         },
-                         {
-                             QStringLiteral("checked"), mEnabledCalendars.contains(col.id())
-                         },
-                         {
-                             QStringLiteral("iconName"), icon
-                         } };
+        QStringLiteral("id"), col.id()
+    },
+        {
+            QStringLiteral("name"), col.displayName()
+        },
+        {
+            QStringLiteral("enabled"), enabled
+        },
+        {
+            QStringLiteral("checked"), mEnabledCalendars.contains(col.id())
+        },
+        {
+            QStringLiteral("iconName"), icon
+        } };
 }
 
 void PimCalendarsModel::setChecked(qint64 collectionId, bool checked)

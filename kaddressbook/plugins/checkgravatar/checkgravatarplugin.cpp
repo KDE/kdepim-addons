@@ -22,7 +22,7 @@
 #include <kpluginfactory.h>
 
 K_PLUGIN_CLASS_WITH_JSON(CheckGravatarPlugin, "kaddressbook_checkgravatarplugin.json"
-                           )
+                         )
 
 CheckGravatarPlugin::CheckGravatarPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::GenericPlugin(parent)

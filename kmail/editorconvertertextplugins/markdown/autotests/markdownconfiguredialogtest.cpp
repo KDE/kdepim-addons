@@ -25,5 +25,4 @@ QTEST_MAIN(MarkdownConfigureDialogTest)
 MarkdownConfigureDialogTest::MarkdownConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }

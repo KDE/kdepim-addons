@@ -26,7 +26,6 @@
 
 K_PLUGIN_CLASS_WITH_JSON(AddressLocationEditor, "addresslocationeditorplugin.json")
 
-
 AddressLocationEditor::AddressLocationEditor(QWidget *parent, const QList<QVariant> &)
     : ContactEditor::AbstractAddressLocationWidget(parent)
 {

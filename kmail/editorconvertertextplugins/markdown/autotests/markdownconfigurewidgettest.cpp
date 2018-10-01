@@ -28,7 +28,6 @@ QTEST_MAIN(MarkdownConfigureWidgetTest)
 MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()

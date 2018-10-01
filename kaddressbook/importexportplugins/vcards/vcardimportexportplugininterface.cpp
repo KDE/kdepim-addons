@@ -447,13 +447,13 @@ void VCardImportExportPluginInterface::exportVCard()
     } else {
         const int answer
             = KMessageBox::questionYesNoCancel(
-            parentWidget(),
-            i18nc("@info",
-                  "You have selected a list of contacts, "
-                  "shall they be exported to several files?"),
-            QString(),
-            KGuiItem(i18nc("@action:button", "Export to One File")),
-            KGuiItem(i18nc("@action:button", "Export to Several Files")));
+                  parentWidget(),
+                  i18nc("@info",
+                        "You have selected a list of contacts, "
+                        "shall they be exported to several files?"),
+                  QString(),
+                  KGuiItem(i18nc("@action:button", "Export to One File")),
+                  KGuiItem(i18nc("@action:button", "Export to Several Files")));
 
         switch (answer) {
         case KMessageBox::No:

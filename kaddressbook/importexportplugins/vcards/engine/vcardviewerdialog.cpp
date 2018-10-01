@@ -57,7 +57,7 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
 
     QLabel *label
         = new QLabel(
-        i18nc("@info", "Do you want to import this contact into your address book?"), page);
+              i18nc("@info", "Do you want to import this contact into your address book?"), page);
     QFont font = label->font();
     font.setBold(true);
     label->setFont(font);

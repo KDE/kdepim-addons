@@ -44,12 +44,10 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()
 {
-
 }
 
 void MarkdownConfigureWidget::fillCombobox()
 {
-
 }
 
 void MarkdownConfigureWidget::loadSettings()

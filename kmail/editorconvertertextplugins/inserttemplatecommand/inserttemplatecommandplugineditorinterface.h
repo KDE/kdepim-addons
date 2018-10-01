@@ -45,7 +45,6 @@ private:
     int mAdjustCursor = 0;
     TemplateParser::TemplatesInsertCommandAction *mCommandAction = nullptr;
     QToolButton *mToolButton = nullptr;
-
 };
 
 #endif

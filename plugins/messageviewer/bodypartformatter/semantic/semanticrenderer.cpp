@@ -90,7 +90,7 @@ GRANTLEE_MAKE_GADGET(FoodEstablishment)
 GRANTLEE_MAKE_GADGET(FoodEstablishmentReservation)
 GRANTLEE_MAKE_GADGET(RentalCarReservation)
 GRANTLEE_MAKE_GADGET(RentalCar)
-GRANTLEE_MAKE_GADGET(Brand)	
+GRANTLEE_MAKE_GADGET(Brand)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -206,7 +206,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
     c.insert(QStringLiteral("data"), elems);
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/semantic/semantic.html"));
-    const_cast<Grantlee::Engine*>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
+    const_cast<Grantlee::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
     Grantlee::OutputStream s(htmlWriter->stream());
     t->render(&s, &c);
     return false; // yes, false, we want the rest of the email rendered normally after this

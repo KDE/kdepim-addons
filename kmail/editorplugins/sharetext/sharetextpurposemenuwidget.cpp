@@ -23,7 +23,6 @@
 SharetextPurposeMenuWidget::SharetextPurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     : PimCommon::PurposeMenuWidget(parentWidget, parent)
 {
-
 }
 
 SharetextPurposeMenuWidget::~SharetextPurposeMenuWidget()

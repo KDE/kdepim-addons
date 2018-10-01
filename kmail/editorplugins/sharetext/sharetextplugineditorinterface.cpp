@@ -57,4 +57,3 @@ void ShareTextPluginEditorInterface::exec()
 {
     //Nothing
 }
-

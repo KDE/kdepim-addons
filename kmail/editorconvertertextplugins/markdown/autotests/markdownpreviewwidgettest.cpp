@@ -29,7 +29,6 @@ QTEST_MAIN(MarkdownPreviewWidgetTest)
 MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
@@ -42,7 +41,6 @@ void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
     QWebEngineView *mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
     QVERIFY(mWebView);
     QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
-
 
     MarkdownDocument *mDocument = w.findChild<MarkdownDocument *>(QStringLiteral("document"));
     QVERIFY(mDocument);

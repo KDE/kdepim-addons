@@ -22,18 +22,17 @@
 MarkdownDocument::MarkdownDocument(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MarkdownDocument::~MarkdownDocument()
 {
-
 }
 
 void MarkdownDocument::setText(const QString &text)
 {
-    if (mText == text)
+    if (mText == text) {
         return;
+    }
     mText = text;
     Q_EMIT textChanged(mText);
 }

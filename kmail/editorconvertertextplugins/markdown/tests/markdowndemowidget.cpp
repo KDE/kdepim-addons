@@ -41,7 +41,9 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     mainLayout->addWidget(mSaveText);
 
     connect(mEdit, &QTextEdit::textChanged,
-            [this]() { mPreview->slotUpdatePreview(mEdit->toPlainText()); });
+            [this]() {
+        mPreview->slotUpdatePreview(mEdit->toPlainText());
+    });
     QPushButton *saveHtml = new QPushButton(QStringLiteral("Save Html"), this);
     connect(saveHtml, &QPushButton::clicked, this, &MarkdownDemoWidget::slotSaveHtml);
     vboxLayout->addWidget(saveHtml);

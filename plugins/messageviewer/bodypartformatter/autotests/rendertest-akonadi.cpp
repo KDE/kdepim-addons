@@ -49,8 +49,9 @@ void initLocale()
 Q_CONSTRUCTOR_FUNCTION(initLocale)
 #endif
 
-class RenderTestAkonadi : public QObject {
-Q_OBJECT
+class RenderTestAkonadi : public QObject
+{
+    Q_OBJECT
 private Q_SLOTS:
     void initTestCase()
     {
@@ -77,7 +78,7 @@ private Q_SLOTS:
                 continue;
             }
             QTest::newRow(file.toLatin1().constData()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
-                                        << QString(file + QStringLiteral(".out"));
+                                                       << QString(file + QStringLiteral(".out"));
         }
     }
 

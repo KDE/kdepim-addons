@@ -76,7 +76,7 @@ void RenderTest::testRender_data()
             continue;
         }
         QTest::newRow(file.toLatin1().constData()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
-                                       << QString(file + QStringLiteral(".out"));
+                                                   << QString(file + QStringLiteral(".out"));
     }
 }
 

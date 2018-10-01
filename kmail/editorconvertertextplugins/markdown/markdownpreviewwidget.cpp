@@ -46,13 +46,12 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     QWebChannel *channel = new QWebChannel(this);
     channel->setObjectName(QStringLiteral("webchannel"));
     channel->registerObject(QStringLiteral("content"), mDocument);
-    mWebView->page()->setWebChannel(channel);    
+    mWebView->page()->setWebChannel(channel);
     mWebView->setUrl(QUrl(QStringLiteral("qrc:/markdown/index.html")));
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
 {
-
 }
 
 void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)

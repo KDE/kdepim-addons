@@ -26,14 +26,14 @@ class MarkdownPreviewPage : public QWebEnginePage
 {
     Q_OBJECT
 public:
-    explicit MarkdownPreviewPage(QWebEngineProfile* profile, QObject* parent);
+    explicit MarkdownPreviewPage(QWebEngineProfile *profile, QObject *parent);
     ~MarkdownPreviewPage() override = default;
 
 Q_SIGNALS:
-    void openUrlRequested(const QUrl& url);
+    void openUrlRequested(const QUrl &url);
 
 protected:
-    bool acceptNavigationRequest(const QUrl& url, NavigationType type, bool isMainFrame) override;
+    bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) override;
 };
 
 #endif // MARKDOWNPREVIEWPAGE_H

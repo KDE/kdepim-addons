@@ -38,7 +38,6 @@ Q_SIGNALS:
     void textChanged(const QString &text);
 private:
     QString mText;
-
 };
 
 #endif // MARKDOWNDOCUMENT_H

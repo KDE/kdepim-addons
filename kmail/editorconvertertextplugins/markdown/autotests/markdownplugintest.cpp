@@ -27,7 +27,6 @@ QTEST_MAIN(MarkdownPluginTest)
 MarkdownPluginTest::MarkdownPluginTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownPluginTest::shouldCreateInterface()

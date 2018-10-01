@@ -84,12 +84,10 @@ static bool canAddToCalendar(SemanticMemento *m)
     return false;
 }
 
-
 bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
     if (path == QLatin1String("semanticAction")) {
-
         const auto m = memento(part);
         if (!m || !m->hasData()) {
             qCWarning(SEMANTIC_LOG) << "sementic action: data not found";
@@ -115,13 +113,13 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
     return false;
 }
 
-template <typename T>
+template<typename T>
 static QString placeName(const T &place)
 {
     return place.name().replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
 }
 
-template <>
+template<>
 QString placeName(const Airport &place)
 {
     if (place.name().isEmpty()) {
@@ -169,7 +167,7 @@ static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QStri
     }
 }
 
-template <typename T>
+template<typename T>
 static void addGoToMapAction(QMenu *menu, const T &place)
 {
     const auto name = placeName(place);
@@ -277,20 +275,19 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         });
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect"), QStringLiteral("org.kde.kdeconnect.daemon"), QStringLiteral("devices"));
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect"), QStringLiteral("org.kde.kdeconnect.daemon"), QStringLiteral(
+                                                          "devices"));
     msg.setArguments({true, true});
     QDBusPendingReply<QStringList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     reply.waitForFinished();
 
-    if(reply.isValid()) {
+    if (reply.isValid()) {
         for (const QString &deviceId : reply.value()) {
-
             QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
 
             QDBusReply<bool> pluginReply = deviceIface.call(QLatin1String("hasPlugin"), QLatin1String("kdeconnect_share"));
 
             if (pluginReply.value()) {
-
                 action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", deviceIface.property("name").toString()));
 
                 QObject::connect(action, &QAction::triggered, this, [this, part, deviceId]() {
@@ -477,7 +474,9 @@ void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart 
     part->nodeHelper()->addTempFile(f.fileName());
     f.setAutoRemove(false);
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral("org.kde.kdeconnect.device.share"), QStringLiteral("openFile"));
+    QDBusMessage msg
+        = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral(
+                                             "org.kde.kdeconnect.device.share"), QStringLiteral("openFile"));
     msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
 
     QDBusConnection::sessionBus().send(msg);

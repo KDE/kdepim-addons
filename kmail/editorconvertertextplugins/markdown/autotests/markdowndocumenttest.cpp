@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "markdowndocumenttest.h"
 #include "markdowndocument.h"
 #include <QTest>
@@ -27,7 +26,6 @@ QTEST_MAIN(MarkdownDocumentTest)
 MarkdownDocumentTest::MarkdownDocumentTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownDocumentTest::shouldHaveDefaultValue()

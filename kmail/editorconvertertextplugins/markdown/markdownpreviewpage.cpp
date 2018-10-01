@@ -30,9 +30,7 @@ MarkdownPreviewPage::MarkdownPreviewPage(QWebEngineProfile *profile, QObject *pa
     settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, true);
 }
 
-bool MarkdownPreviewPage::acceptNavigationRequest(const QUrl& url,
-                                                NavigationType type,
-                                                bool isMainFrame)
+bool MarkdownPreviewPage::acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame)
 {
     Q_UNUSED(type);
     Q_UNUSED(isMainFrame);

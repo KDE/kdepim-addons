@@ -102,16 +102,15 @@ QVariant TimeFormatter::doFilter(const QVariant &input, const QVariant &arg, boo
     return s;
 }
 
-
 TagLibrary::TagLibrary(QObject *parent)
     : QObject(parent)
 {
 }
 
-QHash<QString, Grantlee::Filter*> TagLibrary::filters(const QString &name)
+QHash<QString, Grantlee::Filter *> TagLibrary::filters(const QString &name)
 {
     Q_UNUSED(name);
-    QHash<QString, Grantlee::Filter*> filters;
+    QHash<QString, Grantlee::Filter *> filters;
     filters.insert(QStringLiteral("formatAddress"), new AddressFormatter());
     filters.insert(QStringLiteral("formatDate"), new DateFormatter());
     filters.insert(QStringLiteral("formatDateTime"), new DateTimeFormatter());

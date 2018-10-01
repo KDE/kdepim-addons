@@ -29,12 +29,10 @@
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
 {
-
 }
 
 MarkdownInterface::~MarkdownInterface()
 {
-
 }
 
 void MarkdownInterface::createAction(KActionCollection *ac)

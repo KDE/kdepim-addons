@@ -29,7 +29,6 @@
 #include <KActionMenu>
 #include <QActionGroup>
 
-
 BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
 {

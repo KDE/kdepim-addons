@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "markdownplugin.h"
 #include "markdowninterface.h"
 #include "markdownconfiguredialog.h"
@@ -31,12 +30,10 @@ K_PLUGIN_CLASS_WITH_JSON(MarkdownPlugin, "kmail_markdownplugin.json")
 MarkdownPlugin::MarkdownPlugin(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditorConvertText(parent)
 {
-
 }
 
 MarkdownPlugin::~MarkdownPlugin()
 {
-
 }
 
 MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(KActionCollection *ac, QObject *parent)
@@ -46,7 +43,6 @@ MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterfa
     interface->createAction(ac);
     return interface;
 }
-
 
 bool MarkdownPlugin::hasConfigureDialog() const
 {

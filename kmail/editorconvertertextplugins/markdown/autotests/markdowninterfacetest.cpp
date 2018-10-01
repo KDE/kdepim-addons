@@ -25,10 +25,8 @@ QTEST_MAIN(MarkdownInterfaceTest)
 MarkdownInterfaceTest::MarkdownInterfaceTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownInterfaceTest::shouldHaveDefaultValue()
 {
-
 }
