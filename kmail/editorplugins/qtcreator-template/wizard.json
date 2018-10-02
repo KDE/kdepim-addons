@@ -1,0 +1,106 @@
+{
+    "version": 1,
+    "supportedProjectTypes": [ "CMakeProjectManager.CMakeProject" ],
+    "id": "K.KMailEditorPlugin",
+    "category": "K.PIM",
+    "trDescription": "Create a KMail Editor Plugin.",
+    "trDisplayName": "KMail Editor Plugin",
+    "trDisplayCategory": "Plugin",
+    "enabled": "%{JS: [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}",
+
+    "options":
+    [
+        { "key": "ProjectFile", "value": "%{JS: '%{CMakeFile}'}" },
+        { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
+        { "key": "JsonFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'json')}" },
+        { "key": "CppPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.cpp')}" },
+        { "key": "CN", "value": "%{JS: Cpp.className('%{ProjectName}')}" },
+	{ "key": "HeaderPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.h')}" },
+	{ "key": "CppPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditorinterface.cpp')}" },
+	{ "key": "HeaderPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditorinterface.h')}" }
+    ],
+
+    "pages":
+    [
+        {
+            "trDisplayName": "Project Location",
+            "trShortTitle": "Location",
+            "typeId": "Project",
+            "data": { "trDescription": "This wizard creates a kmail editor plugin." }
+        },
+	{
+            "trDisplayName": "Define Project Details",
+            "trShortTitle": "Details",
+            "typeId": "Fields",
+	    "data" :
+	    [
+	      	{
+                	"name": "DebugCategoryName",
+	                "trDisplayName": "Debug Category Name:",
+        	        "mandatory": true,
+                	"type": "LineEdit",
+	                "data": { "validator": "(?:(?:[a-zA-Z_][a-zA-Z_0-9]*::)+[a-zA-Z_][a-zA-Z_0-9]*|)" }
+            	},
+                {
+                        "name": "DebugIdentifierName",
+                        "trDisplayName": "Debug Identifier Name:",
+                        "mandatory": true,
+                        "type": "LineEdit",
+                        "data": { "validator": "(?:(?:[a-zA-Z_][a-zA-Z_0-9]*::)+[a-zA-Z_][a-zA-Z_0-9]*|)" }
+                }
+	    ]
+	},
+	        {
+            "trDisplayName": "Kit Selection",
+            "trShortTitle": "Kits",
+            "typeId": "Kits",
+            "enabled": "%{JS: ! %{IsSubproject}}",
+            "data": { "projectFilePath": "%{ProjectFile}" }
+        },
+
+        {
+            "trDisplayName": "Project Management",
+            "trShortTitle": "Summary",
+            "typeId": "Summary"
+        }
+    ],
+    "generators":
+    [
+        {
+            "typeId": "File",
+            "data":
+            [
+                {
+                    "source": "CMakeLists.txt",
+                    "openAsProject": true,
+                    "condition": "true"
+                },
+                {
+                    "source": "plugineditor.cpp",
+                    "target": "%{CppPluginEditor}",
+                    "openInEditor": true
+                },
+                {
+                    "source": "plugineditor.h",
+                    "target": "%{HeaderPluginEditor}",
+                    "openInEditor": true
+                },
+                {
+                    "source": "plugineditorinterface.cpp",
+                    "target": "%{CppPluginEditorInterface}",
+                    "openInEditor": true
+                },
+                {
+                    "source": "plugineditorinterface.h",
+                    "target": "%{HeaderPluginEditorInterface}",
+                    "openInEditor": true
+                },
+                {
+                    "source": "plugin.json",
+                    "target": "%{JsonFileName}",
+                    "openInEditor": false
+                }
+            ]
+        }
+    ]
+}
