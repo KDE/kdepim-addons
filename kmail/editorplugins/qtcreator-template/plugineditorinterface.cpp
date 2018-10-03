@@ -1,8 +1,7 @@
 %{Cpp:LicenseTemplate}\
 		
-#include "sharetextplugineditorinterface.h"
-#include "sharetexteditorplugin_debug.h"
-#include "sharetextpurposemenuwidget.h"
+#include "%{CN}plugineditorinterface.h"
+#include "%{CN}editorplugin_debug.h"
 #include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
 #include <KActionCollection>
@@ -10,20 +9,20 @@
 #include <KLocalizedString>
 #include <QAction>
 
-ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
+%{CN}PluginEditorInterface::%{CN}PluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
 }
 
-ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface()
+%{CN}PluginEditorInterface::~%{CN}PluginEditorInterface()
 {
 }
 
-void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
+void %{CN}PluginEditorInterface::createAction(KActionCollection *ac)
 {
 }
 
-void ShareTextPluginEditorInterface::exec()
+void %{CN}PluginEditorInterface::exec()
 {
-    //Nothing
+    //TODO
 }

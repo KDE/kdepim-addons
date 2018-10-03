@@ -1,10 +1,10 @@
 %{Cpp:LicenseTemplate}\
 
-#include "sharetextplugineditor.h"
-#include "sharetextplugineditorinterface.h"
+#include "%{CN}plugineditor.h"
+#include "%{CN}plugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_CLASS_WITH_JSON(%{CN}PluginEditor, "kmail_sharetexteditorplugin.json")
+K_PLUGIN_CLASS_WITH_JSON(%{CN}PluginEditor, "%{CN}editorplugin.json")
 
 %{CN}PluginEditor::%{CN}PluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)

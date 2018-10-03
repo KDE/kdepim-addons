@@ -5,12 +5,12 @@
 
 #include <messagecomposer/plugineditorinterface.h>
 
-class ShareTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
+class %{CN}PluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
 public:
-    explicit ShareTextPluginEditorInterface(QObject *parent = nullptr);
-    ~ShareTextPluginEditorInterface() override;
+    explicit %{CN}PluginEditorInterface(QObject *parent = nullptr);
+    ~%{CN}PluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
