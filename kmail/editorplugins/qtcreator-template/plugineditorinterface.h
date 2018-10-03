@@ -1,7 +1,7 @@
 %{Cpp:LicenseTemplate}\
 
-#ifndef SHARETEXTPLUGINEDITORINTERFACE_H
-#define SHARETEXTPLUGINEDITORINTERFACE_H
+#ifndef %{JS: Cpp.headerGuard('%{HeaderPluginEditorInterface}')}
+#define %{JS: Cpp.headerGuard('%{HeaderPluginEditorInterface}')}
 
 #include <messagecomposer/plugineditorinterface.h>
 

@@ -1,6 +1,6 @@
 %{Cpp:LicenseTemplate}\
-#ifndef %{JS: Cpp.headerGuard('%{FileName}')}
-#define %{JS: Cpp.headerGuard('%{FileName}')}
+#ifndef %{JS: Cpp.headerGuard('%{HeaderPluginEditor}')}
+#define %{JS: Cpp.headerGuard('%{HeaderPluginEditor}')}
 
 #include <messagecomposer/plugineditor.h>
 
@@ -18,4 +18,4 @@ public:
     bool hasPopupMenuSupport() const override;
 };
 
-#endif // %{JS: Cpp.headerGuard('%{FileName}')}
+#endif // %{JS: Cpp.headerGuard('%{HeaderPluginEditor}')}
