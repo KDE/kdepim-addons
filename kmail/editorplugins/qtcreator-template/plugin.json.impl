@@ -1,9 +1,9 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to <define it>.",
+        "Description": "%{PluginDescription}",
         "EnabledByDefault": "false",
         "Id": "kmail%{CN}",
-        "Name": "Share Text",
+        "Name": "%{PluginName}",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
