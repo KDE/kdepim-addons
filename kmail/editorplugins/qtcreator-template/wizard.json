@@ -38,13 +38,13 @@
                     "name": "PluginName",
                     "trDisplayName": "Name:",
                     "mandatory": true,
-                    "type": "LineEdit",
+                    "type": "LineEdit"
                 },
                 {
                     "name": "PluginDescription",
                     "trDisplayName": "Description:",
                     "mandatory": true,
-                    "type": "LineEdit",
+                    "type": "LineEdit"
                 },
                 {
                     "name": "DebugCategoryName",
