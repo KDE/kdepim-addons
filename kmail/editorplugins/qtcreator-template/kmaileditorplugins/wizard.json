@@ -52,13 +52,15 @@
                     "name": "DebugCategoryName",
                     "trDisplayName": "Debug Category Name:",
                     "mandatory": true,
-                    "type": "LineEdit"
+                    "type": "LineEdit",
+                    "data": { "validator": "(?:(?:[a-zA-Z_][a-zA-Z_0-9]*::)*[a-zA-Z_][a-zA-Z_0-9]*|)" }
                 },
                 {
                     "name": "DebugIdentifierName",
                     "trDisplayName": "Debug Identifier Name:",
                     "mandatory": true,
-                    "type": "LineEdit"
+                    "type": "LineEdit",
+                    "data": { "validator": "(?:(?:[a-zA-Z_][a-zA-Z_0-9]*::)*[a-zA-Z_][a-zA-Z_0-9]*|)" }
                 }
             ]
         },
