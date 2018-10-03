@@ -31,14 +31,20 @@ find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidge
 
 find_package(KF5I18n ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KIO ${KF5_VERSION} CONFIG REQUIRED)
 
+
+set(MESSAGELIB_LIB_VERSION "5.9.0")
+
+find_package(KF5MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 
 set(%{ProjectName}_SRCS
     %{ProjectName}plugineditor.cpp
     %{ProjectName}plugineditorinterface.cpp
 )
 
-ecm_qt_declare_logging_category(%{ProjectName}_SRCS HEADER %{ProjectName}_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
+ecm_qt_declare_logging_category(%{ProjectName}_SRCS HEADER %{ProjectName}editorplugin_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
 
 kcoreaddons_add_plugin(%{ProjectName} JSON %{JsonFileName} SOURCES
     ${%{ProjectName}_SRCS} INSTALL_NAMESPACE kmail)
