@@ -96,7 +96,7 @@
                     "openInEditor": true
                 },
                 {
-                    "source": "plugin.json",
+                    "source": "plugin.json.impl",
                     "target": "%{JsonFileName}",
                     "openInEditor": false
                 }

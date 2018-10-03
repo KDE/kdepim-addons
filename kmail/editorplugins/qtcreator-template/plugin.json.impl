@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to <define it>.",
+        "EnabledByDefault": "false",
+        "Id": "kmail%{CN}",
+        "Name": "Share Text",
+        "ServiceTypes": [
+            "KMailEditor/Plugin"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-KMailEditor-Order": "1"
+}
