@@ -12,7 +12,7 @@
         [
         { "key": "ProjectFile", "value": "%{JS: '%{CMakeFile}'}" },
         { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
-        { "key": "JsonFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}', 'json')}" },
+        { "key": "JsonFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}editorplugin', 'json')}" },
         { "key": "CppPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.cpp')}" },
         { "key": "CN", "value": "%{JS: Cpp.className('%{ProjectName}')}" },
         { "key": "HeaderPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.h')}" },

@@ -46,7 +46,7 @@ set(%{ProjectName}_SRCS
 
 ecm_qt_declare_logging_category(%{ProjectName}_SRCS HEADER %{ProjectName}editorplugin_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
 
-kcoreaddons_add_plugin(%{ProjectName} JSON %{JsonFileName} SOURCES
+kcoreaddons_add_plugin(%{ProjectName} JSON %{ProjectName}editorplugin.json SOURCES
     ${%{ProjectName}_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(%{ProjectName}
