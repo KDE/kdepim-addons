@@ -5,7 +5,7 @@
     "category": "K.PIM",
     "trDescription": "Create a KMail Editor Plugin.",
     "trDisplayName": "KMail Editor Plugin",
-    "trDisplayCategory": "Plugin",
+    "trDisplayCategory": "KMail Plugin",
     "enabled": "%{JS: [ %{Plugins} ].indexOf('CMakeProjectManager') >= 0}",
 
     "options":
