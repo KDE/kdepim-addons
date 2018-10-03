@@ -36,7 +36,6 @@ find_package(KF5XmlGui ${KF5_VERSION} CONFIG REQUIRED)
 set(%{ProjectName}_SRCS
     %{ProjectName}plugineditor.cpp
     %{ProjectName}plugineditorinterface.cpp
-    %{ProjectName}purposemenuwidget.cpp
 )
 
 ecm_qt_declare_logging_category(%{ProjectName}_SRCS HEADER %{ProjectName}_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
