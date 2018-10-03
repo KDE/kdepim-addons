@@ -39,17 +39,17 @@ set(MESSAGELIB_LIB_VERSION "5.9.0")
 
 find_package(KF5MessageComposer ${MESSAGELIB_LIB_VERSION} CONFIG REQUIRED)
 
-set(%{ProjectName}_SRCS
-    %{ProjectName}plugineditor.cpp
-    %{ProjectName}plugineditorinterface.cpp
+set(%{ProjectNameUpper}_SRCS
+    %{ProjectNameLower}plugineditor.cpp
+    %{ProjectNameLower}plugineditorinterface.cpp
 )
 
-ecm_qt_declare_logging_category(%{ProjectName}_SRCS HEADER %{ProjectName}editorplugin_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
+ecm_qt_declare_logging_category(%{ProjectNameUpper}_SRCS HEADER %{ProjectNameLower}editorplugin_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
 
-kcoreaddons_add_plugin(%{ProjectName} JSON %{ProjectName}editorplugin.json SOURCES
-    ${%{ProjectName}_SRCS} INSTALL_NAMESPACE kmail)
+kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin JSON %{ProjectNameLower}editorplugin.json SOURCES
+    ${%{ProjectNameUpper}_SRCS} INSTALL_NAMESPACE kmail)
 
-target_link_libraries(%{ProjectName}
+target_link_libraries(%{ProjectNameLower}editorplugin
   KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 

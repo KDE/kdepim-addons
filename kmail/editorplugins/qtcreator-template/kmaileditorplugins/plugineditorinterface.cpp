@@ -1,7 +1,7 @@
 %{Cpp:LicenseTemplate}\
 		
-#include "%{CN}plugineditorinterface.h"
-#include "%{CN}editorplugin_debug.h"
+#include "%{ProjectNameLower}plugineditorinterface.h"
+#include "%{ProjectNameLower}editorplugin_debug.h"
 #include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
 #include <KActionCollection>

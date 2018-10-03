@@ -12,12 +12,14 @@
         [
         { "key": "ProjectFile", "value": "%{JS: '%{CMakeFile}'}" },
         { "key": "CMakeFile", "value": "%{ProjectDirectory}/CMakeLists.txt" },
-        { "key": "JsonFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}editorplugin', 'json')}" },
-        { "key": "CppPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.cpp')}" },
-        { "key": "CN", "value": "%{JS: Cpp.className('%{ProjectName}')}" },
-        { "key": "HeaderPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditor.h')}" },
-        { "key": "CppPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditorinterface.cpp')}" },
-        { "key": "HeaderPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectName}plugineditorinterface.h')}" }
+        { "key": "JsonFileName", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectNameLower}editorplugin', 'json')}" },
+        { "key": "CppPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectNameLower}plugineditor.cpp')}" },
+        { "key": "CN", "value": "%{JS: '%{ProjectName}'.charAt(0).toUpperCase() + '%{ProjectName}'.substr(1)}" },
+        { "key": "ProjectNameLower", "value": "%{JS: '%{ProjectName}'.toLowerCase() }" },
+        { "key": "ProjectNameUpper", "value": "%{JS: '%{ProjectName}'.toUpperCase()}" },
+        { "key": "HeaderPluginEditor", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectNameLower}plugineditor.h')}" },
+        { "key": "CppPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectNameLower}plugineditorinterface.cpp')}" },
+        { "key": "HeaderPluginEditorInterface", "value": "%{JS: Util.fileName('%{ProjectDirectory}/%{ProjectNameLower}plugineditorinterface.h')}" }
     ],
 
     "pages":

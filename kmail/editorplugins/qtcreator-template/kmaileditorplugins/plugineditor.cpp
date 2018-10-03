@@ -1,10 +1,10 @@
 %{Cpp:LicenseTemplate}\
 
-#include "%{CN}plugineditor.h"
-#include "%{CN}plugineditorinterface.h"
+#include "%{ProjectNameLower}plugineditor.h"
+#include "%{ProjectNameLower}plugineditorinterface.h"
 #include <kpluginfactory.h>
 
-K_PLUGIN_CLASS_WITH_JSON(%{CN}PluginEditor, "%{CN}editorplugin.json")
+K_PLUGIN_CLASS_WITH_JSON(%{CN}PluginEditor, "%{ProjectNameLower}editorplugin.json")
 
 %{CN}PluginEditor::%{CN}PluginEditor(QObject *parent, const QList<QVariant> &)
     : MessageComposer::PluginEditor(parent)
@@ -27,4 +27,4 @@ MessageComposer::PluginEditorInterface *%{CN}PluginEditor::createInterface(KActi
     return interface;
 }
 
-#include "%{JS: '%{ProjectName}plugineditor.moc'.toLowerCase() }"
+#include "%{ProjectNameLower}plugineditor.moc"
