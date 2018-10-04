@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to share text.",
         "Description[ca]": "Aquest connector permet compartir el text.",
+        "Description[es]": "Este complemento le permite compartir texto.",
         "Description[it]": "Questa estensione permette di condividere del testo.",
         "Description[nl]": "Deze plug-in stelt u in staat tekst te delen.",
         "Description[pt]": "Este 'plugin' permite-lhe partilhar texto.",
@@ -13,6 +14,7 @@
         "Name": "Share Text",
         "Name[ca@valencia]": "Comparteix el text",
         "Name[ca]": "Comparteix el text",
+        "Name[es]": "Compartir texto",
         "Name[it]": "Condividi testo",
         "Name[nl]": "Gedeelde tekst",
         "Name[pt]": "Partilhar o Texto",
