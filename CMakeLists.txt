@@ -29,14 +29,14 @@ set(KDEPIMADDONS_LIB_SOVERSION "5")
 set(AKONADINOTES_LIB_VERSION "5.9.40")
 set(QT_REQUIRED_VERSION "5.9.0")
 
-include(ECMOptionalAddSubdirectory)
+
 include(ECMInstallIcons)
 include(ECMSetupVersion)
 include(ECMAddTests)
-include(ECMMarkNonGuiExecutable)
+
 include(GenerateExportHeader)
 include(ECMGenerateHeaders)
-include(CMakePackageConfigHelpers)
+
 include(FeatureSummary)
 include(CheckFunctionExists)
 include(ECMGeneratePriFile)
