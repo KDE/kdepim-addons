@@ -142,6 +142,8 @@ if(KDEPIMADDONS_BUILD_EXAMPLES)
 endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
+set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator-templates CACHE PATH "Define qtcreator template install path")
+
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)

@@ -1,1 +1,1 @@
-install(DIRECTORY kmaileditorplugins DESTINATION ${KDE_INSTALL_DATADIR}/qtcreator-templates )
+install(DIRECTORY kmaileditorplugins DESTINATION ${QTCREATOR_TEMPLATE_INSTALL_DIR} )
