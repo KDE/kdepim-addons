@@ -18,6 +18,7 @@
 */
 
 #include "markdownconverter.h"
+#include "mkdio.h"
 
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)
@@ -28,4 +29,22 @@ MarkdownConverter::MarkdownConverter(QObject *parent)
 MarkdownConverter::~MarkdownConverter()
 {
 
+}
+
+QString MarkdownConverter::convertTextToMarkdown(const QString &str)
+{
+    if (str.isEmpty()) {
+        return {};
+    }
+    const QByteArray textArray = str.toUtf8();
+
+    //TODO verify
+    MMIOT *markdownHandle = mkd_string(textArray.constData(), 0, 0);
+    char *htmlDocument;
+    const int size = mkd_document( markdownHandle, &htmlDocument );
+
+    const QString html = QString::fromUtf8( htmlDocument, size );
+
+    mkd_cleanup( markdownHandle );
+    return {};
 }

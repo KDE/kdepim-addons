@@ -28,6 +28,7 @@ class MarkdownConverter : public QObject
 public:
     explicit MarkdownConverter(QObject *parent = nullptr);
     ~MarkdownConverter();
+    QString convertTextToMarkdown(const QString &str);
 private:
     Q_DISABLE_COPY(MarkdownConverter)
 };
