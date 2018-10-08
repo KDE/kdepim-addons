@@ -23,8 +23,8 @@ ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_
 kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURCES
     ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail)
 
-target_link_libraries(kmail_markdownplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::XmlGui Qt5::WebEngineWidgets discount::Lib
+target_link_libraries(kmail_markdownplugin PRIVATE
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::XmlGui Qt5::WebEngineWidgets  discount::Lib
     )
 
 if(BUILD_TESTING)

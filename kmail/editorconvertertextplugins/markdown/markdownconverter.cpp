@@ -18,7 +18,9 @@
 */
 
 #include "markdownconverter.h"
-#include "mkdio.h"
+extern "C" {
+#include <mkdio.h>
+}
 
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)
@@ -46,5 +48,5 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const QString html = QString::fromUtf8( htmlDocument, size );
 
     mkd_cleanup( markdownHandle );
-    return {};
+    return html;
 }
