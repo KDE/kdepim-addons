@@ -10,7 +10,7 @@ endif()
 set(KF5_VERSION "5.50.0")
 
 find_package(ECM ${KF5_VERSION} CONFIG REQUIRED)
-set(CMAKE_MODULE_PATH ${ECM_MODULE_PATH})
+set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
 
 # Do NOT add quote
 set(KDEPIM_DEV_VERSION alpha)
