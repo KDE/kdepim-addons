@@ -144,6 +144,13 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
 set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator-templates CACHE PATH "Define qtcreator template install path")
 
+find_package(Discount "2")
+set_package_properties("discount" PROPERTIES
+        DESCRIPTION "A library that gives you formatting functions suitable for marking down entire documents or lines of text"
+        URL "http://www.pell.portland.or.us/~orc/Code/discount/"
+        TYPE RECOMMENDED
+        PURPOSE "Generate Markdown file.")
+
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)
