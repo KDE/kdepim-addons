@@ -29,6 +29,10 @@ public:
     explicit MarkdownConverter(QObject *parent = nullptr);
     ~MarkdownConverter();
     QString convertTextToMarkdown(const QString &str);
+
+Q_SIGNALS:
+    void failed(const QString &str);
+
 private:
     Q_DISABLE_COPY(MarkdownConverter)
 };

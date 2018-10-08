@@ -6,7 +6,6 @@ set(kmail_markdownplugin_SRCS
     markdowninterface.cpp
     markdownplugin.cpp
     markdownpreviewwidget.cpp
-    markdownpreviewpage.cpp
     markdownconfigurewidget.cpp
     markdownconfiguredialog.cpp
     markdownconverter.cpp

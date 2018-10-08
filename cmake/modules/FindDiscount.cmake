@@ -8,18 +8,16 @@
 
 # Copyright (c) 2017, Julian Wolff, <wolff@julianwolff.de>
 # Copyright (c) 2018, Sune Vuorela, <sune@kde.org>
+# Copyright (c) 2018, Laurent Montel, <montel@kde.org>
 #
 # Redistribution and use is allowed according to the terms of the BSD license.
 # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
 
 
 if (discount_INCLUDE_DIRS AND discount_LIBRARIES)
-
   # Already in cache
   set (discount_FOUND TRUE)
-
-else (discount_INCLUDE_DIRS AND discount_LIBRARIES)
-
+else ()
   find_library (discount_LIBRARY
     NAMES markdown libmarkdown
   )
@@ -34,7 +32,7 @@ else (discount_INCLUDE_DIRS AND discount_LIBRARIES)
   include (FindPackageHandleStandardArgs)
   find_package_handle_standard_args (discount DEFAULT_MSG discount_LIBRARIES discount_INCLUDE_DIR)
 
-endif (discount_INCLUDE_DIRS AND discount_LIBRARIES)
+endif()
 
 mark_as_advanced(discount_INCLUDE_DIRS discount_LIBRARIES)
 if (discount_FOUND)

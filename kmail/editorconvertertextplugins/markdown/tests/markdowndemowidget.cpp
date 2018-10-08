@@ -36,10 +36,6 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     mPreview = new MarkdownPreviewWidget(this);
     mainLayout->addWidget(mPreview);
 
-    mSaveText = new QTextEdit(this);
-    mSaveText->setReadOnly(true);
-    mainLayout->addWidget(mSaveText);
-
     connect(mEdit, &QTextEdit::textChanged,
             [this]() {
         mPreview->slotUpdatePreview(mEdit->toPlainText());

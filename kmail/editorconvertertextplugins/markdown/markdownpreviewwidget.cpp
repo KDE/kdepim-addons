@@ -18,18 +18,16 @@
 */
 
 #include "markdownpreviewwidget.h"
-#include "markdownpreviewpage.h"
 #include "markdownconverter.h"
 #include <QHBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineProfile>
+#include <QWebEngineSettings>
 #include <QWebEngineView>
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
 {
-    MarkdownPreviewPage *webenginePage = new MarkdownPreviewPage(new QWebEngineProfile(this), this);
-
     mConverter = new MarkdownConverter(this);
 
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
@@ -37,7 +35,12 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mainLayout->setMargin(0);
 
     mWebView = new QWebEngineView(this);
-    mWebView->setPage(webenginePage);
+    mWebView->resize(600, 800);
+
+    mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
+    mWebView->settings()->setAttribute(QWebEngineSettings::PluginsEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, true);
 
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
