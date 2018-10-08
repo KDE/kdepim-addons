@@ -22,7 +22,7 @@
 
 #include <QWidget>
 class QWebEngineView;
-class MarkdownDocument;
+class MarkdownConverter;
 class MarkdownPreviewWidget : public QWidget
 {
     Q_OBJECT
@@ -36,8 +36,8 @@ public Q_SLOTS:
     void slotUpdatePreview(const QString &text);
 
 private:
-    MarkdownDocument *mDocument = nullptr;
     QWebEngineView *mWebView = nullptr;
+    MarkdownConverter *mConverter = nullptr;
 };
 
 #endif // MARKDOWNPREVIEWWIDGET_H

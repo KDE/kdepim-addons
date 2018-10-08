@@ -18,8 +18,8 @@
 */
 
 #include "markdownpreviewwidget.h"
-#include "markdowndocument.h"
 #include "markdownpreviewpage.h"
+#include "markdownconverter.h"
 #include <QHBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineProfile>
@@ -29,8 +29,8 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
 {
     MarkdownPreviewPage *webenginePage = new MarkdownPreviewPage(new QWebEngineProfile(this), this);
-    mDocument = new MarkdownDocument(this);
-    mDocument->setObjectName(QStringLiteral("document"));
+
+    mConverter = new MarkdownConverter(this);
 
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -42,12 +42,6 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
     mWebView->setContextMenuPolicy(Qt::NoContextMenu);
-
-    QWebChannel *channel = new QWebChannel(this);
-    channel->setObjectName(QStringLiteral("webchannel"));
-    channel->registerObject(QStringLiteral("content"), mDocument);
-    mWebView->page()->setWebChannel(channel);
-    mWebView->setUrl(QUrl(QStringLiteral("qrc:/markdown/index.html")));
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
@@ -55,8 +49,8 @@ MarkdownPreviewWidget::~MarkdownPreviewWidget()
 }
 
 void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
-{
-    mDocument->setText(text);
+{    
+    mWebView->setHtml(mConverter->convertTextToMarkdown(text));
 }
 
 QString MarkdownPreviewWidget::saveHtml() const
