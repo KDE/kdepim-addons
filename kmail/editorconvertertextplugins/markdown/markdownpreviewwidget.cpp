@@ -55,11 +55,3 @@ void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
 {    
     mWebView->setHtml(mConverter->convertTextToMarkdown(text));
 }
-
-QString MarkdownPreviewWidget::saveHtml() const
-{
-    //FIXME define a temp file.
-    mWebView->page()->save(QStringLiteral("/home/laurent/foo1.html"), QWebEngineDownloadItem::CompleteHtmlSaveFormat);
-    //TODO return temp file !
-    return {};
-}

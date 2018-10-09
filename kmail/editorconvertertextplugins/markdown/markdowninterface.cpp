@@ -57,8 +57,8 @@ bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 
 void MarkdownInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-    const QString cssname = grp.readEntry(QStringLiteral("cssname"), QString());
+//    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+//    const QString cssname = grp.readEntry(QStringLiteral("cssname"), QString());
 
     //TODO load css !
 }

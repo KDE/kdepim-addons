@@ -40,17 +40,8 @@ MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
             [this]() {
         mPreview->slotUpdatePreview(mEdit->toPlainText());
     });
-    QPushButton *saveHtml = new QPushButton(QStringLiteral("Save Html"), this);
-    connect(saveHtml, &QPushButton::clicked, this, &MarkdownDemoWidget::slotSaveHtml);
-    vboxLayout->addWidget(saveHtml);
 
     QFile defaultTextFile(QStringLiteral(":/test.txt"));
     defaultTextFile.open(QIODevice::ReadOnly);
     mEdit->setPlainText(QString::fromUtf8(defaultTextFile.readAll()));
-}
-
-void MarkdownDemoWidget::slotSaveHtml()
-{
-    const QString saveHtml = mPreview->saveHtml();
-    //TODO
 }

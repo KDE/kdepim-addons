@@ -51,11 +51,11 @@ bool MarkdownPlugin::hasConfigureDialog() const
 
 void MarkdownPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<MarkdownConfigureDialog> dlg = new MarkdownConfigureDialog(parent);
-    if (dlg->exec()) {
-        Q_EMIT configChanged();
-    }
-    delete dlg;
+//    QPointer<MarkdownConfigureDialog> dlg = new MarkdownConfigureDialog(parent);
+//    if (dlg->exec()) {
+//        Q_EMIT configChanged();
+//    }
+//    delete dlg;
 }
 
 QString MarkdownPlugin::description() const

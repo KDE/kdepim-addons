@@ -30,8 +30,6 @@ public:
     explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
     ~MarkdownPreviewWidget();
 
-    QString saveHtml() const;
-
 public Q_SLOTS:
     void slotUpdatePreview(const QString &text);
 

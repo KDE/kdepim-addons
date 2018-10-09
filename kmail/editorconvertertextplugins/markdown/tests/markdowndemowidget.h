@@ -31,7 +31,6 @@ public:
     ~MarkdownDemoWidget() = default;
 
 private:
-    void slotSaveHtml();
     QTextEdit *mEdit = nullptr;
     MarkdownPreviewWidget *mPreview = nullptr;
 };
