@@ -1,0 +1,13 @@
+{
+    "KPlugin": {
+        "Description": "%{PluginDescription}",
+        "EnabledByDefault": "false",
+        "Id": "kmail%{CN}",
+        "Name": "%{PluginName}",
+        "ServiceTypes": [
+            "KMailEditor/PluginEditorConvertText"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-KMailEditor-Order": "1"
+}
