@@ -18,7 +18,7 @@
 */
 
 #include "markdowninterface.h"
-#include "markdownpreviewwidget.h"
+#include "markdownpreviewdialog.h"
 #include "markdownplugin_debug.h"
 #include <KLocalizedString>
 #include <QAction>

@@ -28,6 +28,8 @@ class MarkdownPreviewDialogTest : public QObject
 public:
     explicit MarkdownPreviewDialogTest(QObject *parent = nullptr);
     ~MarkdownPreviewDialogTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MARKDOWNPREVIEWDIALOGTEST_H

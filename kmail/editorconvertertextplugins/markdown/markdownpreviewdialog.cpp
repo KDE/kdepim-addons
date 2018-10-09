@@ -43,3 +43,8 @@ MarkdownPreviewDialog::~MarkdownPreviewDialog()
 {
 
 }
+
+void MarkdownPreviewDialog::setText(const QString &str)
+{
+    mPreviewWidget->slotUpdatePreview(str);
+}

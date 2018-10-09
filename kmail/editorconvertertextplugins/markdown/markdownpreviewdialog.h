@@ -28,6 +28,7 @@ class MarkdownPreviewDialog : public QDialog
 public:
     explicit MarkdownPreviewDialog(QWidget *parent = nullptr);
     ~MarkdownPreviewDialog();
+    void setText(const QString &str);
 private:
     MarkdownPreviewWidget *mPreviewWidget = nullptr;
 };
