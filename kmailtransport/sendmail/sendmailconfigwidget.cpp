@@ -83,3 +83,11 @@ bool SendmailConfigWidget::pathIsEmpty() const
     Q_D(const SendmailConfigWidget);
     return d->ui.kcfg_host->text().trimmed().isEmpty();
 }
+
+
+void SendmailConfigWidget::apply()
+{
+    Q_D(const SendmailConfigWidget);
+    d->ui.kcfg_options->setText(d->ui.kcfg_options->text().trimmed());
+    TransportConfigWidget::apply();
+}

@@ -50,6 +50,9 @@ public:
 Q_SIGNALS:
     void enableButtonOk(bool);
 
+public Q_SLOTS:
+    void apply();
+
 private Q_SLOTS:
     void slotTextChanged(const QString &text);
 
