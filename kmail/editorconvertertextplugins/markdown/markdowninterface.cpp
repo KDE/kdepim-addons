@@ -25,6 +25,7 @@
 #include <KActionCollection>
 #include <KSharedConfig>
 #include <KConfigGroup>
+#include <KMessageBox>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
@@ -37,10 +38,12 @@ MarkdownInterface::~MarkdownInterface()
 
 void MarkdownInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Generate HTML from markdown."), this);
-    ac->addAction(QStringLiteral("generate_markdown"), action);
-    connect(action, &QAction::triggered, this, &MarkdownInterface::slotActivated);
-    MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
+    mAction = new QAction(i18n("Generate HTML from markdown."), this);
+    mAction->setCheckable(true);
+    mAction->setChecked(false);
+    ac->addAction(QStringLiteral("generate_markdown"), mAction);
+    connect(mAction, &QAction::triggered, this, &MarkdownInterface::slotActivated);
+    MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 }
 
@@ -51,8 +54,12 @@ bool MarkdownInterface::reformatText()
 
 bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
-    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "MarkdownInterface::convertTextToFormat: not implemented yet!";
-    return false;
+    if (mAction->isChecked()) {
+        //Add messagebox
+    } else {
+
+    }
+    return true;
 }
 
 void MarkdownInterface::reloadConfig()

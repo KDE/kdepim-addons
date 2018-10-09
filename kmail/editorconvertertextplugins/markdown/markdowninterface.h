@@ -39,6 +39,7 @@ public Q_SLOTS:
 
 private:
     void slotActivated();
+    QAction *mAction = nullptr;
 };
 
 #endif // MARKDOWNINTERFACE_H
