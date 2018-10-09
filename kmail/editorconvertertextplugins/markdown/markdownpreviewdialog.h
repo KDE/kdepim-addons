@@ -21,13 +21,15 @@
 #define MARKDOWNPREVIEWDIALOG_H
 
 #include <QDialog>
-
+class MarkdownPreviewWidget;
 class MarkdownPreviewDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit MarkdownPreviewDialog(QWidget *parent = nullptr);
     ~MarkdownPreviewDialog();
+private:
+    MarkdownPreviewWidget *mPreviewWidget = nullptr;
 };
 
 #endif // MARKDOWNPREVIEWDIALOG_H

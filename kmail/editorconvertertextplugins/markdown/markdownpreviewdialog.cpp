@@ -18,12 +18,24 @@
 */
 
 #include "markdownpreviewdialog.h"
+#include "markdownpreviewwidget.h"
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
 MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     : QDialog(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+
+    mPreviewWidget = new MarkdownPreviewWidget(this);
+    mPreviewWidget->setObjectName(QStringLiteral("previewwidget"));
+    mainLayout->addWidget(mPreviewWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    buttonBox->setObjectName(QStringLiteral("buttonbox"));
+    mainLayout->addWidget(buttonBox);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &MarkdownPreviewDialog::accept);
 
 }
 
