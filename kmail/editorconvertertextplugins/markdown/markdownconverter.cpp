@@ -49,8 +49,6 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     }
 
     char *htmlDocument;
-
-
     const int size = mkd_document( markdownHandle, &htmlDocument );
 
     const QString html = QStringLiteral("<html><body>") + QString::fromUtf8( htmlDocument, size ) + QStringLiteral("</body></html>");

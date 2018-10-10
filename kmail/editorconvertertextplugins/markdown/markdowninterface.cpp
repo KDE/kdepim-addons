@@ -72,6 +72,6 @@ void MarkdownInterface::reloadConfig()
 
 void MarkdownInterface::slotActivated()
 {
-    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "MarkdownInterface::slotActivated: not implemented yet!";
-    //TODO signal/slot
+    MarkdownPreviewDialog *dialog = new MarkdownPreviewDialog(parentWidget());
+    dialog->show();
 }

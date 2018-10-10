@@ -30,6 +30,8 @@ public:
     ~MarkdownPreviewDialog();
     void setText(const QString &str);
 private:
+    void readConfig();
+    void writeConfig();
     MarkdownPreviewWidget *mPreviewWidget = nullptr;
 };
 

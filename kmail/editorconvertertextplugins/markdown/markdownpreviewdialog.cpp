@@ -21,10 +21,16 @@
 #include "markdownpreviewwidget.h"
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <KLocalizedString>
 
 MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Markdown Rendering Preview"));
+    setAttribute(Qt::WA_DeleteOnClose);
+
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -36,12 +42,27 @@ MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &MarkdownPreviewDialog::accept);
-
+    readConfig();
 }
 
 MarkdownPreviewDialog::~MarkdownPreviewDialog()
 {
+    writeConfig();
+}
 
+void MarkdownPreviewDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownPreviewDialog");
+    group.writeEntry("Size", size());
+}
+
+void MarkdownPreviewDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownPreviewDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }
 
 void MarkdownPreviewDialog::setText(const QString &str)
