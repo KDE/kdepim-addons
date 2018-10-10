@@ -29,6 +29,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
 {
     mConverter = new MarkdownConverter(this);
+    mConverter->setObjectName(QStringLiteral("converter"));
 
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));

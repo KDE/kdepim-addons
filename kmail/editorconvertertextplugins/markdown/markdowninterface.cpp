@@ -20,6 +20,7 @@
 #include "markdowninterface.h"
 #include "markdownpreviewdialog.h"
 #include "markdownplugin_debug.h"
+#include "markdownconverter.h"
 #include <KPIMTextEdit/RichTextComposer>
 #include <KLocalizedString>
 #include <QAction>
@@ -27,6 +28,8 @@
 #include <KSharedConfig>
 #include <KConfigGroup>
 #include <KMessageBox>
+#include <QPointer>
+#include <MessageComposer/TextPart>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
@@ -39,7 +42,7 @@ MarkdownInterface::~MarkdownInterface()
 
 void MarkdownInterface::createAction(KActionCollection *ac)
 {
-    mAction = new QAction(i18n("Generate HTML from markdown."), this);
+    mAction = new QAction(i18n("Generate HTML from markdown language."), this);
     mAction->setCheckable(true);
     mAction->setChecked(false);
     ac->addAction(QStringLiteral("generate_markdown"), mAction);
@@ -56,9 +59,15 @@ bool MarkdownInterface::reformatText()
 bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     if (mAction->isChecked()) {
-        //Add messagebox
-    } else {
+        if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
+            MarkdownConverter converter;
+            //FIXME
+            const QString result = converter.convertTextToMarkdown(textPart->cleanPlainText());
+            if (!result.isEmpty()) {
+                //TODO
+            }
 
+        }
     }
     return true;
 }
@@ -73,12 +82,14 @@ void MarkdownInterface::reloadConfig()
 
 void MarkdownInterface::slotActivated()
 {
-    MarkdownPreviewDialog *dialog = new MarkdownPreviewDialog(parentWidget());
-    dialog->setText(richTextEditor()->toPlainText());
-    connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this, dialog]()
-    {
-        dialog->setText(richTextEditor()->toPlainText());
+    if (mDialog.isNull()) {
+        mDialog = new MarkdownPreviewDialog(parentWidget());
+        mDialog->setText(richTextEditor()->toPlainText());
+        connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this]()
+        {
+            mDialog->setText(richTextEditor()->toPlainText());
+        }
+        );
     }
-    );
-    dialog->show();
+    mDialog->show();
 }

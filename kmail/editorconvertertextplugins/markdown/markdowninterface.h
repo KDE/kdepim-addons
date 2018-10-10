@@ -21,8 +21,10 @@
 #define MARKDOWNINTERFACE_H
 
 #include <QObject>
+#include <QPointer>
 #include <MessageComposer/PluginEditorConvertTextInterface>
 class KActionCollection;
+class MarkdownPreviewDialog;
 class MarkdownInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
     Q_OBJECT
@@ -40,6 +42,7 @@ public Q_SLOTS:
 private:
     void slotActivated();
     QAction *mAction = nullptr;
+    QPointer<MarkdownPreviewDialog> mDialog;
 };
 
 #endif // MARKDOWNINTERFACE_H
