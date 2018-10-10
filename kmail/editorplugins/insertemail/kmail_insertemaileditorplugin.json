@@ -24,6 +24,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att markera brev och infoga i brevfönstret.",
         "Description[uk]": "За допомогою цього додатка можна вибрати повідомлення електронної пошти і вставити його до вікна редактора.",
         "Description[x-test]": "xxThis plugin allows you to select email and insert it in composer.xx",
+        "Description[zh_CN]": "此插件允许您选择邮件地址并插入到邮件编辑器中。",
         "EnabledByDefault": "false",
         "Id": "kmailinsertemail",
         "Name": "Insert Email",

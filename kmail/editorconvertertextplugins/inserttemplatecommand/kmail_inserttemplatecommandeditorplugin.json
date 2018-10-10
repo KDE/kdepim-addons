@@ -19,6 +19,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att infoga ett mallkommando i brevfönstret.",
         "Description[uk]": "За допомогою цього додатка можна вставити шаблонну команду символ до вікна редактора повідомлень.",
         "Description[x-test]": "xxThis plugin allows you to insert a template command in composer.xx",
+        "Description[zh_CN]": "此插件允许您在编辑器中插入模板命令。",
         "EnabledByDefault": "false",
         "Id": "kmailinserttemplatecommand",
         "Name": "Insert Template Command",
