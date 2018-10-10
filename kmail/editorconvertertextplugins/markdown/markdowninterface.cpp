@@ -20,6 +20,7 @@
 #include "markdowninterface.h"
 #include "markdownpreviewdialog.h"
 #include "markdownplugin_debug.h"
+#include <KPIMTextEdit/RichTextComposer>
 #include <KLocalizedString>
 #include <QAction>
 #include <KActionCollection>
@@ -73,5 +74,11 @@ void MarkdownInterface::reloadConfig()
 void MarkdownInterface::slotActivated()
 {
     MarkdownPreviewDialog *dialog = new MarkdownPreviewDialog(parentWidget());
+    dialog->setText(richTextEditor()->toPlainText());
+    connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this, dialog]()
+    {
+        dialog->setText(richTextEditor()->toPlainText());
+    }
+    );
     dialog->show();
 }
