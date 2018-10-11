@@ -22,10 +22,10 @@ void %{CN}PluginEditorInterface::createAction(KActionCollection *ac)
 {
 }
 
-bool %{CN}PluginEditorInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
+MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus %{CN}PluginEditorInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     Q_UNUSED(textPart);
-    return false;
+    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
 }
 
 bool %{CN}PluginEditorInterface::reformatText()

@@ -34,7 +34,7 @@ public:
     void createAction(KActionCollection *ac) override;
 
     bool reformatText() override;
-    bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
+    MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus convertTextToFormat(MessageComposer::TextPart *textPart) override;
 
 public Q_SLOTS:
     void reloadConfig() override;

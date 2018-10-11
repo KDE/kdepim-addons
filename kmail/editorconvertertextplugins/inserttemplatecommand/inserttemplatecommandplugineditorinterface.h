@@ -33,7 +33,7 @@ public:
     ~InsertTemplateCommandPluginEditorInterface() override;
 
     void createAction(KActionCollection *ac) override;
-    bool convertTextToFormat(MessageComposer::TextPart *textPart) override;
+    ConvertTextStatus convertTextToFormat(MessageComposer::TextPart *textPart) override;
     bool reformatText() override;
     void setInitialData(const MessageComposer::PluginEditorConverterInitialData &data) override;
 

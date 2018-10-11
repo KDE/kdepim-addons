@@ -56,7 +56,7 @@ bool MarkdownInterface::reformatText()
     return false;
 }
 
-bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
+MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     if (mAction->isChecked()) {
         const QString str = textPart->cleanPlainText();
@@ -67,16 +67,18 @@ bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
                 const QString result = converter.convertTextToMarkdown(str);
                 if (!result.isEmpty()) {
                     //TODO
+                    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
                 } else {
-                    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to converte text";
-                    return false;
+                    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to convert text";
+                    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Error;
                 }
             }
         } else {
             qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "empty text! Bug ?";
+            return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
         }
     }
-    return true;
+    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
 }
 
 void MarkdownInterface::reloadConfig()

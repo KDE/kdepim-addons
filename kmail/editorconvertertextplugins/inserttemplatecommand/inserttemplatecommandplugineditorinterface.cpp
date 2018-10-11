@@ -70,10 +70,10 @@ void InsertTemplateCommandPluginEditorInterface::slotInsertCommand(const QString
     }
 }
 
-bool InsertTemplateCommandPluginEditorInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
+MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus InsertTemplateCommandPluginEditorInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     Q_UNUSED(textPart);
-    return false;
+    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
 }
 
 bool InsertTemplateCommandPluginEditorInterface::reformatText()
