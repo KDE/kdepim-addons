@@ -59,14 +59,19 @@ bool MarkdownInterface::reformatText()
 bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     if (mAction->isChecked()) {
-        if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
-            MarkdownConverter converter;
-            //FIXME
-            const QString result = converter.convertTextToMarkdown(textPart->cleanPlainText());
-            if (!result.isEmpty()) {
-                //TODO
+        const QString str = textPart->cleanPlainText();
+        if (!str.isEmpty()) {
+            if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
+                MarkdownConverter converter;
+                //FIXME
+                const QString result = converter.convertTextToMarkdown(str);
+                if (!result.isEmpty()) {
+                    //TODO
+                } else {
+                    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to converte text";
+                    return false;
+                }
             }
-
         }
     }
     return true;
