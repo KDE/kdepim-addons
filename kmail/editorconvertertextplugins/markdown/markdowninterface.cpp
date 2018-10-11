@@ -72,6 +72,8 @@ bool MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
                     return false;
                 }
             }
+        } else {
+            qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "empty text! Bug ?";
         }
     }
     return true;
