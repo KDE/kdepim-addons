@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef ISGDSHORTURLENGINEPLUGIN_H
-#define ISGDSHORTURLENGINEPLUGIN_H
+#ifndef TRIOPABSHORTURLENGINEPLUGIN_H
+#define TRIOPABSHORTURLENGINEPLUGIN_H
 
 #include "../shorturlengineplugin.h"
 
@@ -35,4 +35,4 @@ public:
     QString engineName() const override;
 };
 
-#endif // ISGDSHORTURLENGINEPLUGIN_H
+#endif // TRIOPABSHORTURLENGINEPLUGIN_H

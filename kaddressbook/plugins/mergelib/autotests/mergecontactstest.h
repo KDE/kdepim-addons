@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MERGECONTACTTEST_H
-#define MERGECONTACTTEST_H
+#ifndef MERGECONTACTSTEST_H
+#define MERGECONTACTSTEST_H
 
 #include <QObject>
 
@@ -98,4 +98,4 @@ private Q_SLOTS:
     void checkNeedManualSelectionWithBirthday();
 };
 
-#endif // MERGECONTACTTEST_H
+#endif // MERGECONTACTSTEST_H

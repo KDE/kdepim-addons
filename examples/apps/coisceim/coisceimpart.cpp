@@ -26,8 +26,8 @@
 
 #include <kpluginfactory.h>
 
-#include <QtCore/QFile>
-#include <QtCore/QTextStream>
+#include <QFile>
+#include <QTextStream>
 
 K_PLUGIN_FACTORY(CoisceimPartFactory, registerPlugin<CoisceimPart>();
                  )

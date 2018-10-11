@@ -7,7 +7,7 @@
 
 SettingsChangeNotifier *SettingsChangeNotifier::self()
 {
-    // We can't easilly use a global static (or a static member) to store the
+    // We can't easily use a global static (or a static member) to store the
     // global instance of SettingsChangeNotifier. We need the same instance to
     // be accessible by both PimEventsPlugin and PimCalendarsPlugin so I would
     // have to put this class to a .so and link it from both to get a
@@ -17,7 +17,7 @@ SettingsChangeNotifier *SettingsChangeNotifier::self()
     //
     // Also note the cast to quintptr: we have the same problem as above with
     // SettingsChangeNotifier::staticMetaObject as each "copy" of the class
-    // has its own instance of it, which causes  pointer comparision in
+    // has its own instance of it, which causes  pointer comparison in
     // QMetaObject::inherits() to fail. This leads to v.isValid() being true but
     // v.value<SettingsChangeNotifier*>() returning a null pointer, because
     // the internal qobject_cast fails.

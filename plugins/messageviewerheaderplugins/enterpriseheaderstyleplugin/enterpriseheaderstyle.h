@@ -16,8 +16,8 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef ENTREPRISEHEADERSTYLE_H
-#define ENTREPRISEHEADERSTYLE_H
+#ifndef ENTERPRISEHEADERSTYLE_H
+#define ENTERPRISEHEADERSTYLE_H
 
 #include "messageviewer/headerstyle.h"
 
@@ -43,4 +43,4 @@ private:
 };
 }
 
-#endif // ENTREPRISEHEADERSTYLE_H
+#endif // ENTERPRISEHEADERSTYLE_H

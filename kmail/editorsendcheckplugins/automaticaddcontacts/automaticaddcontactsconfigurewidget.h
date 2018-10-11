@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CONFIRMADDRESSCONFIGUREWIDGET_H
-#define CONFIRMADDRESSCONFIGUREWIDGET_H
+#ifndef AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
+#define AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
@@ -37,4 +37,4 @@ private:
     AutomaticAddContactsConfigureTab *mConfigureTab = nullptr;
 };
 
-#endif // CONFIRMADDRESSCONFIGUREWIDGET_H
+#endif // AUTOMATICADDCONTACTSCONFIGUREWIDGET_H

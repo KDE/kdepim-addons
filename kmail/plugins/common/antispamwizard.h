@@ -58,7 +58,7 @@ class ASWizSummaryPage;
 
     The wizard helps to create filter rules to let KMail operate
     with external anti-spam tools. The wizard tries to detect the
-    tools, but the user can overide the preselections.
+    tools, but the user can override the preselections.
     Then the user can decide what functionality shall be supported
     by the created filter rules.
     The wizard will append the created filter rules after the
@@ -165,7 +165,7 @@ protected:
         bool isVirusTool() const;
 
     private:
-        // used to identifiy configs for the same tool
+        // used to identify configs for the same tool
         QString mId;
         // The version of the config data, used for merging and
         // detecting newer configs

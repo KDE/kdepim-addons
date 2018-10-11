@@ -23,7 +23,6 @@
 #include "job/mergecontactsjob.h"
 #include "widgets/mergecontacterrorlabel.h"
 #include "widgets/mergecontactselectinformationscrollarea.h"
-#include <widgets/mergecontactselectinformationscrollarea.h>
 
 #include <AkonadiCore/Item>
 

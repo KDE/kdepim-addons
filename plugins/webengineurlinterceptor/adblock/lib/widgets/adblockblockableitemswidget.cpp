@@ -76,7 +76,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         item->setText(Url, res.src);
         switch (res.type) {
         case AdBlock::AdBlockBlockableItemsJob::UnKnown:
-            qCDebug(ADBLOCKINTERCEPTOR_LOG) << " unknown ablock type : " << res.src;
+            qCDebug(ADBLOCKINTERCEPTOR_LOG) << " unknown adblock type : " << res.src;
             //TODO ?
             break;
         case AdBlock::AdBlockBlockableItemsJob::Image:

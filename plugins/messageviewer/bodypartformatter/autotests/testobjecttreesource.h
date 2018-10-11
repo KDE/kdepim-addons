@@ -18,8 +18,8 @@
   02110-1301, USA.
 */
 
-#ifndef MESSAGECORE_TESTS_UTIL_H
-#define MESSAGECORE_TESTS_UTIL_H
+#ifndef TESTOBJECTTREESOURCE_H
+#define TESTOBJECTTREESOURCE_H
 
 #include <MessageViewer/ObjectTreeEmptySource>
 #include <MessageViewer/CSSHelperBase>

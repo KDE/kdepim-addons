@@ -645,7 +645,7 @@ void GMXImportExportPluginInterface::importGMX()
          addresseeIt != addresseeMap.end(); ++addresseeIt) {
         KContacts::Addressee *addressee = addresseeIt.value();
         // Add categories
-        // catgories is a bitfield with max 31 defined categories
+        // categories is a bitfield with max 31 defined categories
         int categories = categoriesOfAddressee[ addresseeIt.key() ].toInt();
         for (int i = 32; i >= 0; --i) {
             // convert category index to bitfield value for comparison

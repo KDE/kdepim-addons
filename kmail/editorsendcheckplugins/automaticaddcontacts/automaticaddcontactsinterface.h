@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CHECKBEFORESENDINTERFACE_H
-#define CHECKBEFORESENDINTERFACE_H
+#ifndef AUTOMATICADDCONTACTSINTERFACE_H
+#define AUTOMATICADDCONTACTSINTERFACE_H
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 #include <AkonadiCore/Collection>
@@ -47,4 +47,4 @@ private:
     QHash<uint, AutomaticAddContactsSettings> mHashSettings;
 };
 
-#endif // CHECKBEFORESENDINTERFACE_H
+#endif // AUTOMATICADDCONTACTSINTERFACE_H

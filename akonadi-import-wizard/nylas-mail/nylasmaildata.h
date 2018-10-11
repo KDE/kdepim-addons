@@ -16,8 +16,8 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef NylasMailImportData_H
-#define NylasMailImportData_H
+#ifndef NYLASMAILDATA_H
+#define NYLASMAILDATA_H
 
 #include <ImportWizard/AbstractImporter>
 
@@ -37,4 +37,4 @@ public:
     QString name() const override;
 };
 
-#endif /* NylasMailImportData_H */
+#endif /* NYLASMAILDATA_H */

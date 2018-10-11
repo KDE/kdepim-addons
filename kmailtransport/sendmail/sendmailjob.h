@@ -26,7 +26,7 @@
 
 #include <mailtransport/transportjob.h>
 
-#include <QtCore/QProcess>
+#include <QProcess>
 
 namespace MailTransport {
 /**

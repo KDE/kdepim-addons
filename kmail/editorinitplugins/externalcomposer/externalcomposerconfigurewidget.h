@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef CONFIRMADDRESSCONFIGUREWIDGET_H
-#define CONFIRMADDRESSCONFIGUREWIDGET_H
+#ifndef EXTERNALCOMPOSERCONFIGUREWIDGET_H
+#define EXTERNALCOMPOSERCONFIGUREWIDGET_H
 
 #include <QWidget>
 #include <MessageComposer/PluginEditorInitConfigureWidget>
@@ -39,4 +39,4 @@ private:
     KUrlRequester *mEditorRequester = nullptr;
 };
 
-#endif // CONFIRMADDRESSCONFIGUREWIDGET_H
+#endif // EXTERNALCOMPOSERCONFIGUREWIDGET_H

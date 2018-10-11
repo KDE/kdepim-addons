@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef SELECTITEMFOLDERJOB_H
-#define SELECTITEMFOLDERJOB_H
+#ifndef SELECTIMAPLOADFOLDERSJOB_H
+#define SELECTIMAPLOADFOLDERSJOB_H
 
 #include <QObject>
 #include <kimap/listjob.h>
@@ -60,4 +60,4 @@ private:
     QStandardItemModel *mModel = nullptr;
 };
 
-#endif // SELECTITEMFOLDERJOB_H
+#endif // SELECTIMAPLOADFOLDERSJOB_H

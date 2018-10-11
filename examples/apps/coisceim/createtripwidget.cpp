@@ -32,7 +32,6 @@
 #include <KSharedConfig>
 
 #include <AkonadiCore/Monitor>
-#include <KSharedConfig>
 
 #include "createfoldercontentswidget.h"
 #include "eventselectorwidget.h"

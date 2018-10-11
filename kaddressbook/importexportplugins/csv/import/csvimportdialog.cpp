@@ -367,7 +367,7 @@ void CSVImportDialog::initGUI()
     mDelimiterGroup->addButton(button, 3);
     delimiterLayout->addWidget(button, 1, 1);
 
-    button = new QRadioButton(i18nc("@option:radio Custum field separator", "Other"));
+    button = new QRadioButton(i18nc("@option:radio Custom field separator", "Other"));
     button->setToolTip(
         i18nc("@info:tooltip", "Set the field separator to a custom character"));
     button->setWhatsThis(

@@ -81,7 +81,6 @@ using namespace KCalCore;
 #include <QTemporaryFile>
 #include <QIcon>
 #include <QFileDialog>
-#include <QMimeDatabase>
 #include <QDesktopServices>
 #include <QInputDialog>
 #include <QMenu>
@@ -196,7 +195,7 @@ public:
             return false;
         }
 
-        /** Formating is async now because we need to fetch incidences from akonadi.
+        /** Formatting is async now because we need to fetch incidences from akonadi.
             Basically this method (format()) will be called twice. The first time
             it creates the memento that fetches incidences and returns.
 
@@ -1098,7 +1097,7 @@ public:
     bool ensureKorganizerRunning(bool switchTo) const
     {
         // FIXME: this function should be inside a QObject, and async,
-        //         and Q_EMIT a signal when korg registered itself successfuly
+        //         and Q_EMIT a signal when korg registered itself successfully
 
         // Or better, use DBus activation in all cases.
 
@@ -1393,7 +1392,7 @@ public:
         if (path.startsWith(QLatin1String("ATTACH:"))) {
             name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
         } else {
-            return false; //because it isn't an attachment inviation
+            return false; //because it isn't an attachment invitation
         }
 
         QString iCal;

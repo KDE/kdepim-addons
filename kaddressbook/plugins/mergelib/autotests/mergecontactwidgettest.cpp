@@ -149,7 +149,7 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsElementSelected()
     QCOMPARE(spy.count(), 1);
     listWidget->item(1)->setCheckState(Qt::Unchecked);
     QTest::mouseClick(button, Qt::LeftButton);
-    QCOMPARE(spy.count(), 1); //No new signal emited when we are not 2 items checked
+    QCOMPARE(spy.count(), 1); //No new signal emitted when we are not 2 items checked
 #endif
 }
 

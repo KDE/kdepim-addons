@@ -59,7 +59,7 @@ void AdblockManager::loadSubscriptions()
     mSubscriptions.clear();
 #if 0
     QDir adblockDir(DataPaths::currentProfilePath() + "/adblock");
-    // Create if neccessary
+    // Create if necessary
     if (!adblockDir.exists()) {
         QDir(DataPaths::currentProfilePath()).mkdir("adblock");
     }

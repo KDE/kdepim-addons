@@ -24,7 +24,7 @@
 #include <QJsonObject>
 #include <QTimeZone>
 
-#include <QtTest/QTest>
+#include <QTest>
 
 #include <KCalCore/ICalFormat>
 #include <KCalCore/MemoryCalendar>

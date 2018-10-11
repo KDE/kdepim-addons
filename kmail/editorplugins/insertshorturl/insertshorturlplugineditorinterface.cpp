@@ -24,7 +24,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <KSharedConfig>
-#include <KSharedConfig>
 #include <KConfigGroup>
 #include <QAction>
 #include <QNetworkConfigurationManager>

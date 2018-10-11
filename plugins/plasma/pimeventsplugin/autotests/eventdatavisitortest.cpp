@@ -23,7 +23,7 @@
 #include "testutils.h"
 #include "../eventdatavisitor.h"
 
-#include <QtTest/QTest>
+#include <QTest>
 
 #include <KCalCore/Event>
 #include <KCalCore/Todo>

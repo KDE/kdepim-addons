@@ -47,7 +47,7 @@ void CreateNoteJob::start()
     if (!mItem.relations().isEmpty()) {
         Akonadi::Relation relation;
         for (const Akonadi::Relation &r : mItem.relations()) {
-            // assuming that GENERIC relations to emails are notes is a pretty horirific hack imo - aseigo
+            // assuming that GENERIC relations to emails are notes is a pretty horrific hack imo - aseigo
             if (r.type() == Akonadi::Relation::GENERIC && r.right().mimeType() == Akonadi::NoteUtils::noteMimeType()) {
                 relation = r;
                 break;

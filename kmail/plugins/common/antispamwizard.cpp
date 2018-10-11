@@ -456,7 +456,7 @@ void AntiSpamWizard::accept()
     /* Now that all the filters have been added to the list, tell
     * the filter manager about it. That will Q_EMIT filterListUpdate
     * which will result in the filter list in kmmainwidget being
-    * initialized. This should happend only once. */
+    * initialized. This should happened only once. */
     if (!filterList.isEmpty()) {
         MailCommon::FilterManager::instance()->appendFilters(filterList, replaceExistingFilters);
     }
@@ -619,7 +619,7 @@ void AntiSpamWizard::slotBuildSummary()
         }
         sortFilterOnExistance(i18n("Spam Handling"), newFilters, replaceFilters);
 
-        // The need for a andling of status "probably spam" depends on the tools chosen
+        // The need for a handling of status "probably spam" depends on the tools chosen
         if (mSpamRulesPage->moveUnsureSelected()) {
             bool atLeastOneUnsurePattern = false;
             end = mToolList.constEnd();
