@@ -62,7 +62,7 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
     if (mAction->isChecked()) {
         const QString str = richTextEditor()->composerControler()->toCleanPlainText();
         if (!str.isEmpty()) {
-            if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
+            if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Do you still want to convert text to HTML?"), i18n("Convert Markdown Language"))) {
                 MarkdownConverter converter;
                 const QString result = converter.convertTextToMarkdown(str);
                 if (!result.isEmpty()) {
