@@ -22,6 +22,7 @@
 #include "markdownplugin_debug.h"
 #include "markdownconverter.h"
 #include <KPIMTextEdit/RichTextComposer>
+#include <KPIMTextEdit/RichTextComposerControler>
 #include <KLocalizedString>
 #include <QAction>
 #include <KActionCollection>
@@ -59,13 +60,15 @@ bool MarkdownInterface::reformatText()
 MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     if (mAction->isChecked()) {
-        const QString str = textPart->cleanPlainText();
+        const QString str = richTextEditor()->composerControler()->toCleanPlainText();
         if (!str.isEmpty()) {
             if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
                 MarkdownConverter converter;
                 const QString result = converter.convertTextToMarkdown(str);
                 if (!result.isEmpty()) {
-                    //TODO
+                    textPart->setCleanPlainText(str);
+                    textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
+                    textPart->setCleanHtml(result);
                     return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
                 } else {
                     qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to convert text";
