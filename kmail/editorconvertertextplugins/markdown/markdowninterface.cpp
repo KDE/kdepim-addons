@@ -63,7 +63,6 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
         if (!str.isEmpty()) {
             if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Convert Markdown Language"), i18n("Do you still want to convert text to HTML?"))) {
                 MarkdownConverter converter;
-                //FIXME
                 const QString result = converter.convertTextToMarkdown(str);
                 if (!result.isEmpty()) {
                     //TODO
