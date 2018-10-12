@@ -19,11 +19,11 @@
 
 #include "markdownconfigurewidget.h"
 #include <QHBoxLayout>
-#include <QComboBox>
 #include <QLabel>
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QCheckBox>
 
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
@@ -32,43 +32,26 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
 
-    QLabel *lab = new QLabel(i18n("Select CSS"), this);
-    lab->setObjectName(QStringLiteral("labelcss"));
-    mainLayout->addWidget(lab);
-
-    mCssCombobox = new QComboBox(this);
-    mCssCombobox->setObjectName(QStringLiteral("csscombobox"));
-    mainLayout->addWidget(mCssCombobox);
-    fillCombobox();
+    mLatexSupport = new QCheckBox(i18n("Enable embedded LaTeX"), this);
+    mLatexSupport->setObjectName(QStringLiteral("latex"));
+    mainLayout->addWidget(mLatexSupport);
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()
 {
 }
 
-void MarkdownConfigureWidget::fillCombobox()
-{
-}
-
 void MarkdownConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-    const QString cssname = grp.readEntry(QStringLiteral("cssname"), QString());
-    if (!cssname.isEmpty()) {
-        const int index = mCssCombobox->findText(cssname);
-        if (index > -1) {
-            mCssCombobox->setCurrentIndex(index);
-        }
-    }
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-    grp.writeEntry(QStringLiteral("cssname"), mCssCombobox->currentText());
 }
 
 void MarkdownConfigureWidget::resetSettings()
 {
-    mCssCombobox->setCurrentIndex(0);
+    mLatexSupport->setChecked(false);
 }

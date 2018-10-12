@@ -21,7 +21,7 @@
 #define MARKDOWNCONFIGUREWIDGET_H
 
 #include <MessageComposer/PluginEditorConvertTextConfigureWidget>
-class QComboBox;
+class QCheckBox;
 class MarkdownConfigureWidget : public MessageComposer::PluginEditorConvertTextConfigureWidget
 {
     Q_OBJECT
@@ -33,8 +33,7 @@ public:
     void saveSettings() override;
     void resetSettings() override;
 private:
-    void fillCombobox();
-    QComboBox *mCssCombobox = nullptr;
+    QCheckBox *mLatexSupport = nullptr;
 };
 
 #endif // MARKDOWNCONFIGUREWIDGET_H

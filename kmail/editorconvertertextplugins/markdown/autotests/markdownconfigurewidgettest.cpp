@@ -36,11 +36,4 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
-
-    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("labelcss"));
-    QVERIFY(lab);
-    QVERIFY(!lab->text().isEmpty());
-
-    QComboBox *mCssCombobox = w.findChild<QComboBox *>(QStringLiteral("csscombobox"));
-    QVERIFY(mCssCombobox);
 }

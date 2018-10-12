@@ -43,7 +43,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const QByteArray textArray = str.toUtf8();
 
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.count(), 0);
-    if ( !mkd_compile( markdownHandle, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK ) ) {
+    if ( !mkd_compile( markdownHandle, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK /*| MKD_LATEX*/  | MKD_DLEXTRA ) ) {
         Q_EMIT failed(i18n( "Failed to compile the Markdown document." ));
         return {};
     }
@@ -51,7 +51,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     char *htmlDocument;
     const int size = mkd_document( markdownHandle, &htmlDocument );
 
-    const QString html = QStringLiteral("<html><body>") + QString::fromUtf8( htmlDocument, size ) + QStringLiteral("</body></html>");
+    const QString html = QString::fromUtf8( htmlDocument, size );
     mkd_cleanup( markdownHandle );
     return html;
 }

@@ -85,10 +85,8 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
 
 void MarkdownInterface::reloadConfig()
 {
+    //TODO
 //    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
-//    const QString cssname = grp.readEntry(QStringLiteral("cssname"), QString());
-
-    //TODO load css !
 }
 
 void MarkdownInterface::slotActivated()
