@@ -59,6 +59,6 @@ void MarkdownPreviewWidget::setConverterSettings(bool enableEmbeddedLabel, bool 
 }
 
 void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
-{    
+{
     mWebView->setHtml(mConverter->convertTextToMarkdown(text));
 }

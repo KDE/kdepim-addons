@@ -102,7 +102,7 @@ void MarkdownInterface::slotActivated()
         {
             mDialog->setText(richTextEditor()->toPlainText());
         }
-        );
+                );
     }
     mDialog->show();
 }

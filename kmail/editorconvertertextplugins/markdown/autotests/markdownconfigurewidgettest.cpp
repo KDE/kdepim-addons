@@ -38,11 +38,11 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
 
-    QCheckBox *mLatexSupport =  w.findChild<QCheckBox *>(QStringLiteral("latex"));
+    QCheckBox *mLatexSupport = w.findChild<QCheckBox *>(QStringLiteral("latex"));
     QVERIFY(mLatexSupport);
     QVERIFY(!mLatexSupport->text().isEmpty());
 
-    QCheckBox *mExtraDefinitionLists =  w.findChild<QCheckBox *>(QStringLiteral("extradefinitionlists"));
+    QCheckBox *mExtraDefinitionLists = w.findChild<QCheckBox *>(QStringLiteral("extradefinitionlists"));
     QVERIFY(mExtraDefinitionLists);
     QVERIFY(!mExtraDefinitionLists->text().isEmpty());
 }

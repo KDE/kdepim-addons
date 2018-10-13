@@ -27,12 +27,10 @@ extern "C" {
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 MarkdownConverter::~MarkdownConverter()
 {
-
 }
 
 QString MarkdownConverter::convertTextToMarkdown(const QString &str)
@@ -50,16 +48,16 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     if (mEnableExtraDefinitionLists) {
         flags |= MKD_DLEXTRA;
     }
-    if ( !mkd_compile( markdownHandle, flags ) ) {
-        Q_EMIT failed(i18n( "Failed to compile the Markdown document." ));
+    if (!mkd_compile(markdownHandle, flags)) {
+        Q_EMIT failed(i18n("Failed to compile the Markdown document."));
         return {};
     }
 
     char *htmlDocument;
-    const int size = mkd_document( markdownHandle, &htmlDocument );
+    const int size = mkd_document(markdownHandle, &htmlDocument);
 
-    const QString html = QString::fromUtf8( htmlDocument, size );
-    mkd_cleanup( markdownHandle );
+    const QString html = QString::fromUtf8(htmlDocument, size);
+    mkd_cleanup(markdownHandle);
     return html;
 }
 

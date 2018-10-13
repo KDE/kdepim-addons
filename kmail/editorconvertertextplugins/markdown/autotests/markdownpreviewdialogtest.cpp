@@ -28,7 +28,6 @@ QTEST_MAIN(MarkdownPreviewDialogTest)
 MarkdownPreviewDialogTest::MarkdownPreviewDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownPreviewDialogTest::shouldHaveDefaultValue()
