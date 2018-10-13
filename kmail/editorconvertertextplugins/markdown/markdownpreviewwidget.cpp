@@ -52,6 +52,12 @@ MarkdownPreviewWidget::~MarkdownPreviewWidget()
 {
 }
 
+void MarkdownPreviewWidget::setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists)
+{
+    mConverter->setEnableEmbeddedLabel(enableEmbeddedLabel);
+    mConverter->setEnableExtraDefinitionLists(enableExtraDefinitionLists);
+}
+
 void MarkdownPreviewWidget::slotUpdatePreview(const QString &text)
 {    
     mWebView->setHtml(mConverter->convertTextToMarkdown(text));

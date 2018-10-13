@@ -29,6 +29,8 @@ public:
     explicit MarkdownPreviewDialog(QWidget *parent = nullptr);
     ~MarkdownPreviewDialog();
     void setText(const QString &str);
+
+    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
 private:
     void readConfig();
     void writeConfig();

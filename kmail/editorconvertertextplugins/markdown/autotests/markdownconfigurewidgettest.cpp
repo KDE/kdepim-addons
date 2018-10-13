@@ -34,7 +34,7 @@ MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
 void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownConfigureWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
 

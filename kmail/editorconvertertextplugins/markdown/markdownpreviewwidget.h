@@ -29,6 +29,7 @@ class MarkdownPreviewWidget : public QWidget
 public:
     explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
     ~MarkdownPreviewWidget();
+    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
 
 public Q_SLOTS:
     void slotUpdatePreview(const QString &text);

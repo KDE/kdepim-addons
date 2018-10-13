@@ -43,7 +43,14 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const QByteArray textArray = str.toUtf8();
 
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.count(), 0);
-    if ( !mkd_compile( markdownHandle, MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK /*| MKD_LATEX*/  | MKD_DLEXTRA ) ) {
+    mkd_flag_t flags = MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK;
+    if (mEnableEmbeddedLabel) {
+        flags |= MKD_LATEX;
+    }
+    if (mEnableExtraDefinitionLists) {
+        flags |= MKD_DLEXTRA;
+    }
+    if ( !mkd_compile( markdownHandle, flags ) ) {
         Q_EMIT failed(i18n( "Failed to compile the Markdown document." ));
         return {};
     }
@@ -54,4 +61,24 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const QString html = QString::fromUtf8( htmlDocument, size );
     mkd_cleanup( markdownHandle );
     return html;
+}
+
+bool MarkdownConverter::enableEmbeddedLabel() const
+{
+    return mEnableEmbeddedLabel;
+}
+
+void MarkdownConverter::setEnableEmbeddedLabel(bool enableEmbeddedLabel)
+{
+    mEnableEmbeddedLabel = enableEmbeddedLabel;
+}
+
+bool MarkdownConverter::enableExtraDefinitionLists() const
+{
+    return mEnableExtraDefinitionLists;
+}
+
+void MarkdownConverter::setEnableExtraDefinitionLists(bool enableExtraDefinitionLists)
+{
+    mEnableExtraDefinitionLists = enableExtraDefinitionLists;
 }

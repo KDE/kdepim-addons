@@ -28,7 +28,7 @@
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
 
@@ -39,6 +39,7 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     mExtraDefinitionLists = new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this);
     mExtraDefinitionLists->setObjectName(QStringLiteral("extradefinitionlists"));
     mainLayout->addWidget(mExtraDefinitionLists);
+    mainLayout->addStretch(1);
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()

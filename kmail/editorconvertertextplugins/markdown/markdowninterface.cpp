@@ -64,6 +64,8 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
         if (!str.isEmpty()) {
             if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Do you still want to convert text to HTML?"), i18n("Convert Markdown Language"))) {
                 MarkdownConverter converter;
+                converter.setEnableEmbeddedLabel(mEnableEmbeddedLabel);
+                converter.setEnableExtraDefinitionLists(mEnableExtraDefinitionLists);
                 const QString result = converter.convertTextToMarkdown(str);
                 if (!result.isEmpty()) {
                     textPart->setCleanPlainText(str);
@@ -85,8 +87,10 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
 
 void MarkdownInterface::reloadConfig()
 {
-    //TODO
-//    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+
+    mEnableEmbeddedLabel = grp.readEntry("Enable Embedded Latex", false);
+    mEnableExtraDefinitionLists = grp.readEntry("Enable Extra Definition Lists", false);
 }
 
 void MarkdownInterface::slotActivated()

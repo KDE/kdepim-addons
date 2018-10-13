@@ -43,6 +43,8 @@ private:
     void slotActivated();
     QAction *mAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;
+    bool mEnableEmbeddedLabel = false;
+    bool mEnableExtraDefinitionLists = false;
 };
 
 #endif // MARKDOWNINTERFACE_H

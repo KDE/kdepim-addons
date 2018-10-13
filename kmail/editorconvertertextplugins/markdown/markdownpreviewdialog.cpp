@@ -69,3 +69,8 @@ void MarkdownPreviewDialog::setText(const QString &str)
 {
     mPreviewWidget->slotUpdatePreview(str);
 }
+
+void MarkdownPreviewDialog::setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists)
+{
+    mPreviewWidget->setConverterSettings(enableEmbeddedLabel, enableExtraDefinitionLists);
+}

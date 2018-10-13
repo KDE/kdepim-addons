@@ -28,13 +28,21 @@ class MarkdownConverter : public QObject
 public:
     explicit MarkdownConverter(QObject *parent = nullptr);
     ~MarkdownConverter();
-    QString convertTextToMarkdown(const QString &str);
+    Q_REQUIRED_RESULT QString convertTextToMarkdown(const QString &str);
+
+    Q_REQUIRED_RESULT bool enableEmbeddedLabel() const;
+    void setEnableEmbeddedLabel(bool enableEmbeddedLabel);
+
+    Q_REQUIRED_RESULT bool enableExtraDefinitionLists() const;
+    void setEnableExtraDefinitionLists(bool enableExtraDefinitionLists);
 
 Q_SIGNALS:
     void failed(const QString &str);
 
 private:
     Q_DISABLE_COPY(MarkdownConverter)
+    bool mEnableEmbeddedLabel = false;
+    bool mEnableExtraDefinitionLists = false;
 };
 
 #endif // MARKDOWNCONVERTER_H

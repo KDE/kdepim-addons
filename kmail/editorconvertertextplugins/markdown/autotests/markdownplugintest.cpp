@@ -34,4 +34,5 @@ void MarkdownPluginTest::shouldCreateInterface()
     MarkdownPlugin w;
     KActionCollection *ac = new KActionCollection(this);
     QVERIFY(w.createInterface(ac, this));
+    QVERIFY(w.hasConfigureDialog());
 }
