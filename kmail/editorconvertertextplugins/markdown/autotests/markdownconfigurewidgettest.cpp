@@ -19,6 +19,7 @@
 
 #include "markdownconfigurewidgettest.h"
 #include "../markdownconfigurewidget.h"
+#include <QCheckBox>
 #include <QComboBox>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -36,4 +37,12 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
+
+    QCheckBox *mLatexSupport =  w.findChild<QCheckBox *>(QStringLiteral("latex"));
+    QVERIFY(mLatexSupport);
+    QVERIFY(!mLatexSupport->text().isEmpty());
+
+    QCheckBox *mExtraDefinitionLists =  w.findChild<QCheckBox *>(QStringLiteral("extradefinitionlists"));
+    QVERIFY(mExtraDefinitionLists);
+    QVERIFY(!mExtraDefinitionLists->text().isEmpty());
 }

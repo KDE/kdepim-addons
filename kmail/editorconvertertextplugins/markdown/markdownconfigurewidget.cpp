@@ -35,6 +35,10 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     mLatexSupport = new QCheckBox(i18n("Enable embedded LaTeX"), this);
     mLatexSupport->setObjectName(QStringLiteral("latex"));
     mainLayout->addWidget(mLatexSupport);
+
+    mExtraDefinitionLists = new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this);
+    mExtraDefinitionLists->setObjectName(QStringLiteral("extradefinitionlists"));
+    mainLayout->addWidget(mExtraDefinitionLists);
 }
 
 MarkdownConfigureWidget::~MarkdownConfigureWidget()
@@ -44,14 +48,19 @@ MarkdownConfigureWidget::~MarkdownConfigureWidget()
 void MarkdownConfigureWidget::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    mLatexSupport->setChecked(grp.readEntry("Enable Embedded Latex", false));
+    mExtraDefinitionLists->setChecked(grp.readEntry("Enable Extra Definition Lists", false));
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    grp.writeEntry("Enable Embedded Latex", mLatexSupport->isChecked());
+    grp.writeEntry("Enable Extra Definition Lists", mExtraDefinitionLists->isChecked());
 }
 
 void MarkdownConfigureWidget::resetSettings()
 {
     mLatexSupport->setChecked(false);
+    mExtraDefinitionLists->setChecked(false);
 }

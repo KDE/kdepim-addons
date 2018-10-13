@@ -34,6 +34,7 @@ public:
     void resetSettings() override;
 private:
     QCheckBox *mLatexSupport = nullptr;
+    QCheckBox *mExtraDefinitionLists = nullptr;
 };
 
 #endif // MARKDOWNCONFIGUREWIDGET_H
