@@ -64,4 +64,9 @@ QString MarkdownPlugin::description() const
     return i18n("Generate HTML from markdown language.");
 }
 
+bool MarkdownPlugin::canWorkOnHtml() const
+{
+    return false;
+}
+
 #include "markdownplugin.moc"

@@ -34,6 +34,7 @@ public:
     bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
     QString description() const override;
+    bool canWorkOnHtml() const override;
 
 Q_SIGNALS:
     void configChanged();
