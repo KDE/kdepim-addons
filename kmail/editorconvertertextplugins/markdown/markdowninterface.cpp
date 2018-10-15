@@ -61,6 +61,7 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
 {
     //It can't work on html email
     if (richTextEditor()->composerControler()->isFormattingUsed()) {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "We can't convert html email";
         return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
     }
     if (mAction->isChecked()) {
