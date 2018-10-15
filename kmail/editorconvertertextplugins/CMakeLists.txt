@@ -1,5 +1,8 @@
 if(discount_FOUND)
 	add_subdirectory(markdown)
 endif()
-add_subdirectory(inserttemplatecommand)
+
+if (KMAIL_EDITORCONVERTERPLUGIN_TEMPLATE_BUILD)
+	add_subdirectory(inserttemplatecommand)
+endif()
 add_subdirectory(qtcreator-template)
