@@ -90,6 +90,13 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
     return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
 }
 
+void MarkdownInterface::enableDisablePluginActions(bool richText)
+{
+    if (mAction) {
+        mAction->setEnabled(!richText);
+    }
+}
+
 void MarkdownInterface::reloadConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");

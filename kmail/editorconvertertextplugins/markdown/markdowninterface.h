@@ -35,6 +35,7 @@ public:
 
     bool reformatText() override;
     MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus convertTextToFormat(MessageComposer::TextPart *textPart) override;
+    void enableDisablePluginActions(bool richText) override;
 
 public Q_SLOTS:
     void reloadConfig() override;
