@@ -59,6 +59,10 @@ bool MarkdownInterface::reformatText()
 
 MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
+    //It can't work on html email
+    if (richTextEditor()->composerControler()->isFormattingUsed()) {
+        return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
+    }
     if (mAction->isChecked()) {
         const QString str = richTextEditor()->composerControler()->toCleanPlainText();
         if (!str.isEmpty()) {
