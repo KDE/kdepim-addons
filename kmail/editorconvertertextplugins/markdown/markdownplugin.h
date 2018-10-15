@@ -35,6 +35,7 @@ public:
     void showConfigureDialog(QWidget *parent) override;
     QString description() const override;
     bool canWorkOnHtml() const override;
+    bool hasStatusBarSupport() const override;
 
 Q_SIGNALS:
     void configChanged();

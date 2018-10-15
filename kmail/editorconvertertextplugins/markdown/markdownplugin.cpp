@@ -69,4 +69,11 @@ bool MarkdownPlugin::canWorkOnHtml() const
     return false;
 }
 
+bool MarkdownPlugin::hasStatusBarSupport() const
+{
+    return true;
+}
+
 #include "markdownplugin.moc"
+
+
