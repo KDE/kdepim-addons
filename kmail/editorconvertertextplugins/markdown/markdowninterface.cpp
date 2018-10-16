@@ -53,6 +53,9 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     setActionType(type);
 
     mStatusBarLabel = new QLabel;
+    QFont f = mStatusBarLabel->font();
+    f.setBold(true);
+    mStatusBarLabel->setFont(f);
     setStatusBarWidget(mStatusBarLabel);
 }
 
