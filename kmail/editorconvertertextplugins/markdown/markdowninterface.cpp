@@ -123,6 +123,10 @@ void MarkdownInterface::slotActivated(bool checked)
         }
                 );
     }
-    mDialog->show();
+    if (checked) {
+        mDialog->show();
+    } else {
+        mDialog->hide();
+    }
     mStatusBarLabel->setText(checked ? i18n("Markdown") : QString());
 }
