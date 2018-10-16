@@ -30,6 +30,7 @@
 #include <KConfigGroup>
 #include <KMessageBox>
 #include <QPointer>
+#include <QLabel>
 #include <MessageComposer/TextPart>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
@@ -48,8 +49,11 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mAction->setChecked(false);
     ac->addAction(QStringLiteral("generate_markdown"), mAction);
     connect(mAction, &QAction::triggered, this, &MarkdownInterface::slotActivated);
-    MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
+    MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);    
     setActionType(type);
+
+    mStatusBarLabel = new QLabel;
+    setStatusBarWidget(mStatusBarLabel);
 }
 
 bool MarkdownInterface::reformatText()
@@ -105,7 +109,7 @@ void MarkdownInterface::reloadConfig()
     mEnableExtraDefinitionLists = grp.readEntry("Enable Extra Definition Lists", false);
 }
 
-void MarkdownInterface::slotActivated()
+void MarkdownInterface::slotActivated(bool checked)
 {
     if (mDialog.isNull()) {
         mDialog = new MarkdownPreviewDialog(parentWidget());
@@ -117,4 +121,5 @@ void MarkdownInterface::slotActivated()
                 );
     }
     mDialog->show();
+    mStatusBarLabel->setText(checked ? i18n("Markdown") : QString());
 }

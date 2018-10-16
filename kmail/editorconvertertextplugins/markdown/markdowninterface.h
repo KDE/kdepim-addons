@@ -25,6 +25,7 @@
 #include <MessageComposer/PluginEditorConvertTextInterface>
 class KActionCollection;
 class MarkdownPreviewDialog;
+class QLabel;
 class MarkdownInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
     Q_OBJECT
@@ -41,11 +42,12 @@ public Q_SLOTS:
     void reloadConfig() override;
 
 private:
-    void slotActivated();
+    void slotActivated(bool checked);
     QAction *mAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;
     bool mEnableEmbeddedLabel = false;
     bool mEnableExtraDefinitionLists = false;
+    QLabel *mStatusBarLabel = nullptr;
 };
 
 #endif // MARKDOWNINTERFACE_H
