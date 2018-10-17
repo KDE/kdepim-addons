@@ -74,20 +74,18 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
     if (mAction->isChecked()) {
         const QString str = richTextEditor()->composerControler()->toCleanPlainText();
         if (!str.isEmpty()) {
-            if (KMessageBox::Yes == KMessageBox::warningYesNo(parentWidget(), i18n("Do you still want to convert text to HTML?"), i18n("Convert Markdown Language"))) {
-                MarkdownConverter converter;
-                converter.setEnableEmbeddedLabel(mEnableEmbeddedLabel);
-                converter.setEnableExtraDefinitionLists(mEnableExtraDefinitionLists);
-                const QString result = converter.convertTextToMarkdown(str);
-                if (!result.isEmpty()) {
-                    textPart->setCleanPlainText(str);
-                    textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
-                    textPart->setCleanHtml(result);
-                    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
-                } else {
-                    qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to convert text";
-                    return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Error;
-                }
+            MarkdownConverter converter;
+            converter.setEnableEmbeddedLabel(mEnableEmbeddedLabel);
+            converter.setEnableExtraDefinitionLists(mEnableExtraDefinitionLists);
+            const QString result = converter.convertTextToMarkdown(str);
+            if (!result.isEmpty()) {
+                textPart->setCleanPlainText(str);
+                textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
+                textPart->setCleanHtml(result);
+                return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
+            } else {
+                qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to convert text";
+                return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Error;
             }
         } else {
             qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "empty text! Bug ?";
