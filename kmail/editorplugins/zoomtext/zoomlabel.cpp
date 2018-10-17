@@ -32,5 +32,5 @@ ZoomLabel::~ZoomLabel()
 
 void ZoomLabel::setZoomLabel(int value)
 {
-    setText(i18n("Zoom: %1%", value));
+    setText(value == 100 ? QString() : i18n("Zoom: %1%", value));
 }
