@@ -142,7 +142,7 @@ if(KDEPIMADDONS_BUILD_EXAMPLES)
 endif()
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
 
-set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator-templates CACHE PATH "Define qtcreator template install path")
+set(QTCREATOR_TEMPLATE_INSTALL_DIR ${KDE_INSTALL_DATADIR}/qtcreator/templates CACHE PATH "Define qtcreator template install path (default is /usr/share/qtcreator/templates)")
 
 find_package(Discount "2")
 set_package_properties("discount" PROPERTIES
