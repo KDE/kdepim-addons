@@ -37,6 +37,10 @@ public:
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
     QString name() const override;
     int elidedTextSize() const override;
+    QString extraScreenCss(const QString &headerFont) const override;
+    QString extraPrintCss(const QString &headerFont) const override;
+    QString extraCommonCss(const QString &headerFont) const override;
+
 private:
     HeaderStyle *mHeaderStyle = nullptr;
     HeaderStrategy *mHeaderStrategy = nullptr;
