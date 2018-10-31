@@ -10,6 +10,7 @@ set(kmail_markdownplugin_SRCS
     markdownconfiguredialog.cpp
     markdownconverter.cpp
     markdownpreviewdialog.cpp
+    markdownenginepage.cpp
     )
 
 
