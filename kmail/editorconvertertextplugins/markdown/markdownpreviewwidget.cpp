@@ -19,6 +19,7 @@
 
 #include "markdownpreviewwidget.h"
 #include "markdownconverter.h"
+#include "markdownenginepage.h"
 #include <QHBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineProfile>
@@ -35,7 +36,9 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setMargin(0);
 
+    MarkdownEnginePage *page = new MarkdownEnginePage(this);
     mWebView = new QWebEngineView(this);
+    mWebView->setPage(page);
     mWebView->resize(600, 800);
 
     mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
