@@ -73,7 +73,7 @@ void EnterpriseHeaderStylePluginTest::testFormat_data()
 
     QDir dir(QStringLiteral(HEADER_DATA_DIR));
     const auto l = dir.entryList(QStringList(QStringLiteral("*.mbox")), QDir::Files | QDir::Readable | QDir::NoSymLinks);
-    foreach (const QString &file, l) {
+    for (const QString &file : l) {
         QTest::newRow(file.toLatin1().constData()) << file;
     }
 }
