@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to configure gravatar support.",
+        "EnabledByDefault": "true",
+        "Name": "Gravatar",
+        "ServiceTypes": [
+            "MessageViewerConfigureSettingsPlugin/Plugin"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-MessageViewer-Configure-Order": "100"
+}
