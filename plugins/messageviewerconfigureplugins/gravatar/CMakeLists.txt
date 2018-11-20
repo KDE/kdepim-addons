@@ -10,5 +10,6 @@ kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin JSON messageviewer_gra
 target_link_libraries(messageviewer_gravatarconfigplugin
   KF5::MessageViewer
   KF5::PimCommon
+  KF5::Gravatar
   KF5::I18n
 )

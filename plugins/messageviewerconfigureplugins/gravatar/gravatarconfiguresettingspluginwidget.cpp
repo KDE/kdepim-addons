@@ -18,11 +18,18 @@
 */
 
 #include "gravatarconfiguresettingspluginwidget.h"
+#include <QVBoxLayout>
+#include <Gravatar/GravatarConfigWidget>
 
 GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWidget *parent)
     : MessageViewer::MessageViewerConfigureSettingsPluginWidget(parent)
 {
-
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
+    mGravatarConfigWidget = new Gravatar::GravatarConfigWidget(this);
+    mGravatarConfigWidget->setObjectName(QStringLiteral("gravatarconfigwidget"));
+    mainLayout->addWidget(mGravatarConfigWidget);
 }
 
 GravatarConfigureSettingsPluginWidget::~GravatarConfigureSettingsPluginWidget()
@@ -32,12 +39,15 @@ GravatarConfigureSettingsPluginWidget::~GravatarConfigureSettingsPluginWidget()
 
 void GravatarConfigureSettingsPluginWidget::loadSettings()
 {
+    mGravatarConfigWidget->doLoadFromGlobalSettings();
 }
 
 void GravatarConfigureSettingsPluginWidget::saveSettings()
 {
+    mGravatarConfigWidget->save();
 }
 
 void GravatarConfigureSettingsPluginWidget::resetSettings()
 {
+    mGravatarConfigWidget->doResetToDefaultsOther();
 }

@@ -21,7 +21,9 @@
 #define GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
 
 #include <MessageViewer/MessageViewerConfigureSettingsPluginWidget>
-
+namespace Gravatar {
+class GravatarConfigWidget;
+}
 class GravatarConfigureSettingsPluginWidget : public MessageViewer::MessageViewerConfigureSettingsPluginWidget
 {
     Q_OBJECT
@@ -29,10 +31,12 @@ public:
     explicit GravatarConfigureSettingsPluginWidget(QWidget *parent = nullptr);
     ~GravatarConfigureSettingsPluginWidget() override;
 
-public:
     void loadSettings() override;
     void saveSettings() override;
     void resetSettings() override;
+
+private:
+    Gravatar::GravatarConfigWidget *mGravatarConfigWidget = nullptr;
 };
 
 #endif // GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
