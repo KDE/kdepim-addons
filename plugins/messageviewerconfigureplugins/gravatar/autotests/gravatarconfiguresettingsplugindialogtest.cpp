@@ -17,29 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "gravatarconfiguresettingsplugin.h"
-#include "gravatarconfiguresettingsplugindialog.h"
-#include <kpluginfactory.h>
+#include "gravatarconfiguresettingsplugindialogtest.h"
+#include <QTest>
 
-K_PLUGIN_CLASS_WITH_JSON(GravatarConfigureSettingsPlugin, "messageviewer_gravatarconfigplugin.json")
+QTEST_MAIN(GravatarConfigureSettingsPluginDialogTest)
 
-GravatarConfigureSettingsPlugin::GravatarConfigureSettingsPlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::MessageViewerConfigureSettingsPlugin(parent)
+GravatarConfigureSettingsPluginDialogTest::GravatarConfigureSettingsPluginDialogTest(QObject *parent)
+    : QObject(parent)
 {
 
 }
-
-
-GravatarConfigureSettingsPlugin::~GravatarConfigureSettingsPlugin()
-{
-
-}
-
-void GravatarConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
-{
-    QPointer<GravatarConfigureSettingsPluginDialog> dlg = new GravatarConfigureSettingsPluginDialog(parent);
-    dlg->exec();
-    delete dlg;
-}
-
-#include "gravatarconfiguresettingsplugin.moc"

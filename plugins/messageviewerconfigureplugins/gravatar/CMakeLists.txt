@@ -13,3 +13,5 @@ target_link_libraries(messageviewer_gravatarconfigplugin
   KF5::Gravatar
   KF5::I18n
 )
+
+add_subdirectory(autotests)
