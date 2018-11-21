@@ -1,8 +1,22 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure gravatar support.",
+        "Description[ca]": "Aquest connector permet configurar el funcionament del «Gravatar».",
+        "Description[gl]": "Este complemento permítelle configurar a compatibilidade con gravatar.",
+        "Description[it]": "Questa estensione permette di configurare il supporto per Gravatar.",
+        "Description[nl]": "Deze plug-in stelt u in staat om ondersteuning voor gravatar te configureren.",
+        "Description[pt]": "Este 'plugin' permite-lhe configurar o suporte para o Gravatar.",
+        "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку Gravatar.",
+        "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "EnabledByDefault": "true",
         "Name": "Gravatar",
+        "Name[ca]": "Gravatar",
+        "Name[gl]": "Gravatar",
+        "Name[it]": "Gravatar",
+        "Name[nl]": "Gravatar",
+        "Name[pt]": "Gravatar",
+        "Name[uk]": "Gravatar",
+        "Name[x-test]": "xxGravatarxx",
         "ServiceTypes": [
             "MessageViewerConfigureSettingsPlugin/Plugin"
         ],
