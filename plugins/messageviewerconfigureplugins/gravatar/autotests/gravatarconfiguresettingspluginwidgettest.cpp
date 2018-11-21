@@ -18,7 +18,10 @@
 */
 
 #include "gravatarconfiguresettingspluginwidgettest.h"
+#include "../gravatarconfiguresettingspluginwidget.h"
+#include <Gravatar/GravatarConfigWidget>
 #include <QTest>
+#include <QVBoxLayout>
 
 QTEST_MAIN(GravatarConfigureSettingsPluginWidgetTest)
 
@@ -30,5 +33,12 @@ GravatarConfigureSettingsPluginWidgetTest::GravatarConfigureSettingsPluginWidget
 
 void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
 {
-    //TODO
+    GravatarConfigureSettingsPluginWidget w;
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+
+    Gravatar::GravatarConfigWidget *mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigWidget *>(QStringLiteral("gravatarconfigwidget"));
+    QVERIFY(mGravatarConfigWidget);
 }
