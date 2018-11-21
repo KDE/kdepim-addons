@@ -15,6 +15,6 @@ target_link_libraries(messageviewer_gravatarconfigplugin
 )
 
 if(BUILD_TESTING)
-add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()
 
