@@ -32,10 +32,9 @@ SearchDuplicatesPlugin::~SearchDuplicatesPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *SearchDuplicatesPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *SearchDuplicatesPlugin::createInterface(QObject *parent)
 {
     SearchDuplicatesPluginInterface *interface = new SearchDuplicatesPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

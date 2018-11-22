@@ -32,10 +32,9 @@ InsertEmailPluginEditor::~InsertEmailPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *InsertEmailPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *InsertEmailPluginEditor::createInterface(QObject *parent)
 {
     InsertEmailPluginEditorInterface *interface = new InsertEmailPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

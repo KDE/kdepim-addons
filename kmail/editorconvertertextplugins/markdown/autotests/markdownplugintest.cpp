@@ -32,8 +32,7 @@ MarkdownPluginTest::MarkdownPluginTest(QObject *parent)
 void MarkdownPluginTest::shouldCreateInterface()
 {
     MarkdownPlugin w;
-    KActionCollection *ac = new KActionCollection(this);
-    QVERIFY(w.createInterface(ac, this));
+    QVERIFY(w.createInterface(this));
     QVERIFY(w.hasConfigureDialog());
     QVERIFY(w.hasStatusBarSupport());
 }

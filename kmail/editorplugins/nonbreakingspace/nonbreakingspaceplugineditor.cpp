@@ -32,10 +32,9 @@ NonBreakingSpacePluginEditor::~NonBreakingSpacePluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInterface(QObject *parent)
 {
     NonBreakingSpacePluginEditorInterface *interface = new NonBreakingSpacePluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

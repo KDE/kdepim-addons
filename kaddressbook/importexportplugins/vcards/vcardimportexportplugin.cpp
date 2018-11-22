@@ -31,10 +31,9 @@ VCardImportExportPlugin::~VCardImportExportPlugin()
 {
 }
 
-PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(QObject *parent)
 {
     VCardImportExportPluginInterface *interface = new VCardImportExportPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

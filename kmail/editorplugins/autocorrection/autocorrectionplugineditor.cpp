@@ -32,10 +32,9 @@ AutoCorrectionPluginEditor::~AutoCorrectionPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterface(QObject *parent)
 {
     AutoCorrectionPluginEditorInterface *interface = new AutoCorrectionPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

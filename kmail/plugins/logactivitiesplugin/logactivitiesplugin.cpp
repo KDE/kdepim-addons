@@ -32,10 +32,9 @@ LogActivitiesPlugin::~LogActivitiesPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *LogActivitiesPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *LogActivitiesPlugin::createInterface(QObject *parent)
 {
     LogActivitiesPluginInterface *interface = new LogActivitiesPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

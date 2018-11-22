@@ -30,7 +30,7 @@ public:
     });
     ~VCardImportExportPlugin() override;
 
-    PimCommon::AbstractGenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent) override;
+    PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
     bool hasPopupMenuSupport() const override;
 };
 

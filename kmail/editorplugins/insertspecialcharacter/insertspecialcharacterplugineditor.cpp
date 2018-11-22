@@ -32,10 +32,9 @@ InsertSpecialCharacterPluginEditor::~InsertSpecialCharacterPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::createInterface(QObject *parent)
 {
     InsertSpecialCharacterPluginEditorInterface *interface = new InsertSpecialCharacterPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

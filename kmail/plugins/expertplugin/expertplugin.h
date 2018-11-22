@@ -33,7 +33,7 @@ public:
     explicit ExpertPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ExpertPlugin() override;
 
-    PimCommon::GenericPluginInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
+    PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };
 
 #endif // EXPERTPLUGIN_H

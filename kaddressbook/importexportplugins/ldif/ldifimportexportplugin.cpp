@@ -32,10 +32,9 @@ LDifImportExportPlugin::~LDifImportExportPlugin()
 {
 }
 
-PimCommon::AbstractGenericPluginInterface *LDifImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::AbstractGenericPluginInterface *LDifImportExportPlugin::createInterface(QObject *parent)
 {
     LDifImportExportPluginInterface *interface = new LDifImportExportPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

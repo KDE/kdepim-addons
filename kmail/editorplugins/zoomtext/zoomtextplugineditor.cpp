@@ -33,10 +33,9 @@ ZoomTextPluginEditor::~ZoomTextPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(QObject *parent)
 {
     ZoomTextPluginEditorInterface *interface = new ZoomTextPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

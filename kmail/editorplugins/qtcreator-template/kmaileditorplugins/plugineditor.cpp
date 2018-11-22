@@ -20,10 +20,9 @@ bool %{CN}PluginEditor::hasPopupMenuSupport() const
     return false;
 }
 
-MessageComposer::PluginEditorInterface *%{CN}PluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *%{CN}PluginEditor::createInterface(QObject *parent)
 {
     %{CN}PluginEditorInterface *interface = new %{CN}PluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 
