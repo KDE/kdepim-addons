@@ -31,10 +31,9 @@ AntiSpamPlugin::~AntiSpamPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(QObject *parent)
 {
     AntiSpamPluginInterface *interface = new AntiSpamPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

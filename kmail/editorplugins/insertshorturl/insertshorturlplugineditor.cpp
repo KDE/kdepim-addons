@@ -34,11 +34,10 @@ InsertShorturlPluginEditor::~InsertShorturlPluginEditor()
 {
 }
 
-MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterface(QObject *parent)
 {
     InsertShorturlPluginEditorInterface *interface = new InsertShorturlPluginEditorInterface(parent);
     connect(this, &InsertShorturlPluginEditor::configChanged, interface, &InsertShorturlPluginEditorInterface::loadEngine);
-    interface->createAction(ac);
     return interface;
 }
 

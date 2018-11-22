@@ -37,10 +37,9 @@ bool ChangeCasePluginEditor::hasPopupMenuSupport() const
     return true;
 }
 
-MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(QObject *parent)
 {
     ChangeCasePluginEditorInterface *interface = new ChangeCasePluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

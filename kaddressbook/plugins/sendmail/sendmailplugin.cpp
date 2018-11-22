@@ -32,10 +32,9 @@ SendMailPlugin::~SendMailPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(QObject *parent)
 {
     SendMailPluginInterface *interface = new SendMailPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

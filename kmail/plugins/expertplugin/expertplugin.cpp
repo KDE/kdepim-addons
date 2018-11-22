@@ -32,10 +32,9 @@ ExpertPlugin::~ExpertPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *ExpertPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *ExpertPlugin::createInterface(QObject *parent)
 {
     ExpertPluginInterface *interface = new ExpertPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

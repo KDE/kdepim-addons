@@ -32,10 +32,9 @@ GMXImportExportPlugin::~GMXImportExportPlugin()
 {
 }
 
-PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(QObject *parent)
 {
     GMXImportExportPluginInterface *interface = new GMXImportExportPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

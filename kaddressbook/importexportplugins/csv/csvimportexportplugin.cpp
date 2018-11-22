@@ -32,10 +32,9 @@ CSVImportExportPlugin::~CSVImportExportPlugin()
 {
 }
 
-PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(QObject *parent)
 {
     CSVImportExportPluginInterface *interface = new CSVImportExportPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

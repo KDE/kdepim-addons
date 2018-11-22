@@ -32,7 +32,7 @@ public:
     explicit ZoomTextPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~ZoomTextPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
+    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
     bool hasPopupMenuSupport() const override;
     bool hasStatusBarSupport() const override;
 Q_SIGNALS:

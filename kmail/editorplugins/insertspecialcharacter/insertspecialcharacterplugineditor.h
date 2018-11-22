@@ -32,7 +32,7 @@ public:
     explicit InsertSpecialCharacterPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~InsertSpecialCharacterPluginEditor() override;
 
-    MessageComposer::PluginEditorInterface *createInterface(KActionCollection *ac, QObject *parent = nullptr) override;
+    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };
 
 #endif

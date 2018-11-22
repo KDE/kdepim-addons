@@ -32,10 +32,9 @@ SendVcardsPlugin::~SendVcardsPlugin()
 {
 }
 
-PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(QObject *parent)
 {
     SendVcardsPluginInterface *interface = new SendVcardsPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

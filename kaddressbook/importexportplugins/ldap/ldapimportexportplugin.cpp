@@ -32,10 +32,9 @@ LDapImportExportPlugin::~LDapImportExportPlugin()
 {
 }
 
-PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(KActionCollection *ac, QObject *parent)
+PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(QObject *parent)
 {
     LDapImportExportPluginInterface *interface = new LDapImportExportPluginInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 

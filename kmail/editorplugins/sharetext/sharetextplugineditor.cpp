@@ -37,10 +37,9 @@ bool ShareTextPluginEditor::hasPopupMenuSupport() const
     return false;
 }
 
-MessageComposer::PluginEditorInterface *ShareTextPluginEditor::createInterface(KActionCollection *ac, QObject *parent)
+MessageComposer::PluginEditorInterface *ShareTextPluginEditor::createInterface(QObject *parent)
 {
     ShareTextPluginEditorInterface *interface = new ShareTextPluginEditorInterface(parent);
-    interface->createAction(ac);
     return interface;
 }
 
