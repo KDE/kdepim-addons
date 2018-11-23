@@ -117,9 +117,11 @@ void MarkdownInterface::slotActivated(bool checked)
         mDialog->setText(richTextEditor()->toPlainText());
         connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this]()
         {
-            mDialog->setText(richTextEditor()->toPlainText());
+            if (mDialog) {
+                mDialog->setText(richTextEditor()->toPlainText());
+            }
         }
-                );
+        );
     }
     if (checked) {
         mDialog->show();
