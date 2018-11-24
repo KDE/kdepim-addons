@@ -8,6 +8,7 @@
         "Description[it]": "Questa estensione permette di configurare il supporto per Gravatar.",
         "Description[nl]": "Deze plug-in stelt u in staat om ondersteuning voor gravatar te configureren.",
         "Description[pt]": "Este 'plugin' permite-lhe configurar o suporte para o Gravatar.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa Gravatar-stöd",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку Gravatar.",
         "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "EnabledByDefault": "true",
@@ -19,6 +20,7 @@
         "Name[it]": "Gravatar",
         "Name[nl]": "Gravatar",
         "Name[pt]": "Gravatar",
+        "Name[sv]": "Gravatar",
         "Name[uk]": "Gravatar",
         "Name[x-test]": "xxGravatarxx",
         "ServiceTypes": [
