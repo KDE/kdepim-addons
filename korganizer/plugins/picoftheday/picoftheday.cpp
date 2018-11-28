@@ -90,7 +90,7 @@ void POTDElement::step1StartDownload()
 {
     // Start downloading the picture
     if (!mFirstStepCompleted && !mFirstStepJob) {
-        QUrl url = QUrl(QStringLiteral("http://en.wikipedia.org/w/index.php?title=Template:POTD/")
+        QUrl url = QUrl(QStringLiteral("https://en.wikipedia.org/w/index.php?title=Template:POTD/")
                         +mDate.toString(Qt::ISODate) + QStringLiteral("&action=raw"));
         // The file at that URL contains the file name for the POTD
 
@@ -157,7 +157,7 @@ void POTDElement::step1Result(KJob *job)
 void POTDElement::step2GetImagePage()
 {
     if (!mSecondStepCompleted && !mSecondStepJob) {
-        mUrl = QUrl(QStringLiteral("http://en.wikipedia.org/wiki/File:") + mFileName);
+        mUrl = QUrl(QStringLiteral("https://en.wikipedia.org/wiki/File:") + mFileName);
         // We'll find the info to get the thumbnail we want on the POTD's image page
 
         Q_EMIT gotNewUrl(mUrl);
@@ -249,7 +249,7 @@ QUrl POTDElement::thumbnailUrl(const QUrl &fullSizeUrl, const int width) const
         thumbUrl.replace(QRegExp(QLatin1String("//upload.wikimedia.org/wikipedia/commons/(.*)/([^/]*)")),
                          QStringLiteral("//upload.wikimedia.org/wikipedia/commons/thumb/\\1/\\2"));
     }
-    thumbUrl.replace(QRegExp(QLatin1String("^file:////")), QStringLiteral("http://"));
+    thumbUrl.replace(QRegExp(QLatin1String("^file:////")), QStringLiteral("https://"));
     return QUrl(thumbUrl);
 }
 
