@@ -68,6 +68,7 @@ find_package(KF5IconThemes ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Parts ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Prison ${KF5_VERSION} CONFIG REQUIRED)
 find_package(KF5Holidays ${KF5_VERSION} CONFIG REQUIRED)
+find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED) #for the korganizer hebrew plugin
 
 set(MAILCOMMON_LIB_VERSION "5.10.40")
 set(GRAVATAR_LIB_VERSION "5.10.40")
