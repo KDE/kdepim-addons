@@ -2,6 +2,7 @@
 ########### next target ###############
 
 set(korg_hebrew_PART_SRCS
+  qcalendarsystem.cpp
   configdialog.cpp
   converter.cpp
   hebrew.cpp
@@ -10,6 +11,7 @@ set(korg_hebrew_PART_SRCS
 )
 
 ecm_qt_declare_logging_category(korg_hebrew_PART_SRCS HEADER korganizer_hebrew_debug.h IDENTIFIER KORGANIZER_HEBREWPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_hebrew_plugin)
+
 add_library(korg_hebrew MODULE ${korg_hebrew_PART_SRCS})
 
 target_link_libraries(korg_hebrew
