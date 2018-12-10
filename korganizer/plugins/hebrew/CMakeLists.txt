@@ -1,6 +1,6 @@
 
 ########### next target ###############
-
+find_package(KF5KDELibs4Support ${KF5_VERSION} CONFIG REQUIRED) #for the korganizer hebrew plugin
 set(korg_hebrew_PART_SRCS
   qcalendarsystem.cpp
   configdialog.cpp
