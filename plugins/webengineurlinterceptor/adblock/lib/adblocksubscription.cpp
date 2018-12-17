@@ -76,6 +76,7 @@ using namespace AdBlock;
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
     : QObject(parent)
     , mTitle(title)
+    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
 }
 
@@ -156,63 +157,57 @@ void AdBlockSubscription::saveSubscription()
 
 void AdBlockSubscription::updateSubscription()
 {
-#if 0
-    if (m_reply || !m_url.isValid()) {
+    if (mReply || !mUrl.isValid()) {
         return;
     }
+    mReply = mNetworkAccessManager->get(QNetworkRequest(mUrl));
 
-    m_reply = new FollowRedirectReply(m_url, mApp->networkManager());
-
-    connect(m_reply, SIGNAL(finished()), this, SLOT(subscriptionDownloaded()));
-#endif
+    connect(mReply, &QNetworkReply::finished, this, &AdBlockSubscription::subscriptionDownloaded);
 }
 
 void AdBlockSubscription::subscriptionDownloaded()
 {
-#if 0
-    if (m_reply != qobject_cast<FollowRedirectReply *>(sender())) {
+    if (mReply != qobject_cast<QNetworkReply *>(sender())) {
         return;
     }
 
     bool error = false;
-    const QByteArray response = QString::fromUtf8(m_reply->readAll()).toUtf8();
+    const QByteArray response = QString::fromUtf8(mReply->readAll()).toUtf8();
 
-    if (m_reply->error() != QNetworkReply::NoError
+    if (mReply->error() != QNetworkReply::NoError
         || !response.startsWith(QByteArray("[Adblock"))
         || !saveDownloadedData(response)
         ) {
         error = true;
     }
 
-    m_reply->deleteLater();
-    m_reply = 0;
+    mReply->deleteLater();
+    mReply = nullptr;
 
     if (error) {
         Q_EMIT subscriptionError(i18n("Cannot load subscription!"));
         return;
     }
 
-    loadSubscription(AdBlockManager::instance()->disabledRules());
+    loadSubscription(AdblockManager::self()->disabledRules());
 
     Q_EMIT subscriptionUpdated();
     Q_EMIT subscriptionChanged();
-#endif
 }
 
 bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 {
-#if 0
-    QFile file(m_filePath);
+    QFile file(mFilePath);
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << m_filePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << mFilePath;
         return false;
     }
 
     // Write subscription header
-    file.write(QString("Title: %1\nUrl: %2\n").arg(title(), url().toString()).toUtf8());
-
-    if (AdBlockManager::instance()->useLimitedEasyList() && m_url == QUrl(ADBLOCK_EASYLIST_URL)) {
+    file.write(QStringLiteral("Title: %1\nUrl: %2\n").arg(title(), url().toString()).toUtf8());
+#if 0
+    if (AdblockManager::self()->useLimitedEasyList() && mUrl == QUrl(ADBLOCK_EASYLIST_URL)) {
         // Third-party advertisers rules are with start domain (||) placeholder which needs regexps
         // So we are ignoring it for keeping good performance
         // But we will use whitelist rules at the end of list
@@ -225,12 +220,9 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
         file.close();
         return true;
     }
-
+#endif
     file.write(data);
     file.close();
-#else
-    Q_UNUSED(data);
-#endif
     return true;
 }
 

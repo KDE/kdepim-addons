@@ -67,9 +67,9 @@
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
 
+class QNetworkAccessManager;
 class QUrl;
-
-class FollowRedirectReply;
+class QNetworkReply;
 namespace AdBlock {
 class AdBlockSubscription : public QObject
 {
@@ -116,7 +116,8 @@ protected Q_SLOTS:
 protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
-    FollowRedirectReply *mReply = nullptr;
+
+    QNetworkReply *mReply = nullptr;
     QVector<AdBlockRule *> mRules;
 
 private:
@@ -124,6 +125,7 @@ private:
     QString mFilePath;
 
     QUrl mUrl;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
     bool mUpdated = false;
 };
 
