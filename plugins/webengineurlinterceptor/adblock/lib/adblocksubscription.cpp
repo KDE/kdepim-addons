@@ -71,6 +71,7 @@
 #include <QTimer>
 #include <QNetworkReply>
 #include <QStandardPaths>
+#include <QSaveFile>
 using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
@@ -197,32 +198,17 @@ void AdBlockSubscription::subscriptionDownloaded()
 
 bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
 {
-    QFile file(mFilePath);
+    QSaveFile file(mFilePath);
 
-    if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
+    if (!file.open(QFile::WriteOnly)) {
         qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << mFilePath;
         return false;
     }
 
     // Write subscription header
     file.write(QStringLiteral("Title: %1\nUrl: %2\n").arg(title(), url().toString()).toUtf8());
-#if 0
-    if (AdblockManager::self()->useLimitedEasyList() && mUrl == QUrl(ADBLOCK_EASYLIST_URL)) {
-        // Third-party advertisers rules are with start domain (||) placeholder which needs regexps
-        // So we are ignoring it for keeping good performance
-        // But we will use whitelist rules at the end of list
-
-        QByteArray part1 = data.left(data.indexOf(QLatin1String("!-----------------------------Third-party adverts-----------------------------!")));
-        QByteArray part2 = data.mid(data.indexOf(QLatin1String("!---------------------------------Whitelists----------------------------------!")));
-
-        file.write(part1);
-        file.write(part2);
-        file.close();
-        return true;
-    }
-#endif
     file.write(data);
-    file.close();
+    file.commit();
     return true;
 }
 
@@ -449,7 +435,7 @@ bool AdBlockCustomList::removeRule(int offset)
         //FIXME mApp->reloadUserStyleSheet();
     }
 
-    //FIXME AdBlockManager::instance()->removeDisabledRule(filter);
+    AdblockManager::self()->removeDisabledRule(filter);
 
     delete rule;
     return true;
