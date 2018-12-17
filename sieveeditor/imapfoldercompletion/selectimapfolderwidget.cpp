@@ -34,32 +34,6 @@
 
 #include <KLocalizedString>
 #include <QToolButton>
-#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-SearchFilterProxyModel::SearchFilterProxyModel(QObject *parent)
-    : KRecursiveFilterProxyModel(parent)
-{
-}
-
-void SearchFilterProxyModel::setSearchPattern(const QString &pattern)
-{
-    if (mPattern != pattern) {
-        mPattern = pattern;
-        invalidate();
-    }
-}
-
-bool SearchFilterProxyModel::acceptRow(int sourceRow, const QModelIndex &sourceParent) const
-{
-    QModelIndex sourceIndex = sourceModel()->index(sourceRow, 0, sourceParent);
-    if (!mPattern.isEmpty()) {
-        const QString text = sourceIndex.data(Qt::DisplayRole).toString();
-        return text.contains(mPattern, Qt::CaseInsensitive);
-    } else {
-        return true;
-    }
-}
-
-#endif
 
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
     : QWidget(parent)
@@ -91,15 +65,10 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     mTreeView = new SelectImapFolderTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mTreeView->header()->hide();
-#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-    mFilter = new SearchFilterProxyModel(this);
-    mFilter->setSourceModel(mModel);
-#else
     mFilter = new QSortFilterProxyModel(this);
     mFilter->setFilterCaseSensitivity(Qt::CaseInsensitive);
     mFilter->setRecursiveFilteringEnabled(true);
     mFilter->setSourceModel(mModel);
-#endif
 
     mTreeView->setModel(mFilter);
     connect(mTreeView, &QTreeView::doubleClicked, this, &SelectImapFolderWidget::slotDoubleClicked);
@@ -126,11 +95,7 @@ void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model, bool suc
 void SelectImapFolderWidget::slotSearchPattern(const QString &pattern)
 {
     mTreeView->expandAll();
-#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-    mFilter->setSearchPattern(pattern);
-#else
     mFilter->setFilterFixedString(pattern);
-#endif
 }
 
 void SelectImapFolderWidget::slotDoubleClicked(const QModelIndex &index)

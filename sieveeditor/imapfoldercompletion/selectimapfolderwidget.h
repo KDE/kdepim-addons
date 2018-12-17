@@ -29,24 +29,6 @@ class QStandardItemModel;
 class QLineEdit;
 class SelectImapFolderTreeView;
 class QSortFilterProxyModel;
-#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-#include <KRecursiveFilterProxyModel>
-class SearchFilterProxyModel : public KRecursiveFilterProxyModel
-{
-    Q_OBJECT
-public:
-    explicit SearchFilterProxyModel(QObject *parent = nullptr);
-
-public Q_SLOTS:
-    void setSearchPattern(const QString &pattern);
-
-protected:
-    bool acceptRow(int sourceRow, const QModelIndex &sourceParent) const override;
-
-private:
-    QString mPattern;
-};
-#endif
 
 class SelectImapFolderWidget : public QWidget
 {
@@ -73,11 +55,7 @@ private:
     QLineEdit *mSearchLineEdit = nullptr;
     SelectImapFolderTreeView *mTreeView = nullptr;
     QStandardItemModel *mModel = nullptr;
-#if (QT_VERSION < QT_VERSION_CHECK(5, 10, 0))
-    SearchFilterProxyModel *mFilter = nullptr;
-#else
     QSortFilterProxyModel *mFilter = nullptr;
-#endif
 };
 
 #endif // SELECTIMAPFOLDERWIDGET_H
