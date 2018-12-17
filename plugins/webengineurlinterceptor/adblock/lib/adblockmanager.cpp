@@ -124,14 +124,19 @@ void AdblockManager::save()
     }
 }
 
+QStringList AdblockManager::disabledRules() const
+{
+    return mDisabledRules;
+}
+
 void AdblockManager::removeDisabledRule(const QString &filter)
 {
-    //TODO
+     mDisabledRules.removeOne(filter);
 }
 
 void AdblockManager::addDisabledRule(const QString &filter)
 {
-    //TODO
+    mDisabledRules.append(filter);
 }
 
 bool AdblockManager::isEnabled() const

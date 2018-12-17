@@ -43,6 +43,9 @@ public:
     void removeDisabledRule(const QString &filter);
 
     void save();
+
+    Q_REQUIRED_RESULT QStringList disabledRules() const;
+
 Q_SIGNALS:
     void enabledChanged(bool);
 
@@ -54,6 +57,7 @@ private:
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;
     AdBlockMatcher *mAdBlockMatcher = nullptr;
+    QStringList mDisabledRules;
     QList<AdBlockSubscription *> mSubscriptions;
 };
 }
