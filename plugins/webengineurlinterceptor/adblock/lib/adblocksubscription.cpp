@@ -60,10 +60,7 @@
 #include "adblocksubscription.h"
 #include "adblockmanager.h"
 #include "adblocksearchtree.h"
-//#include "networkmanager.h"
-//#include "datapaths.h"
 #include "adblockutil.h"
-//#include "followredirectreply.h"
 #include "adblockinterceptor_debug.h"
 
 #include <KLocalizedString>
@@ -237,11 +234,6 @@ const AdBlockRule *AdBlockSubscription::enableRule(int offset)
     AdblockManager::self()->removeDisabledRule(rule->filter());
 
     Q_EMIT subscriptionChanged();
-
-    if (rule->isCssRule()) {
-        //FIXME mApp->reloadUserStyleSheet();
-    }
-
     return rule;
 }
 
@@ -256,10 +248,6 @@ const AdBlockRule *AdBlockSubscription::disableRule(int offset)
     AdblockManager::self()->addDisabledRule(rule->filter());
 
     Q_EMIT subscriptionChanged();
-
-    if (rule->isCssRule()) {
-        //FIXME mApp->reloadUserStyleSheet();
-    }
 
     return rule;
 }
@@ -411,10 +399,6 @@ int AdBlockCustomList::addRule(AdBlockRule *rule)
 
     Q_EMIT subscriptionChanged();
 
-    if (rule->isCssRule()) {
-        //FIXME mApp->reloadUserStyleSheet();
-    }
-
     return mRules.count() - 1;
 }
 
@@ -430,10 +414,6 @@ bool AdBlockCustomList::removeRule(int offset)
     mRules.remove(offset);
 
     Q_EMIT subscriptionChanged();
-
-    if (rule->isCssRule()) {
-        //FIXME mApp->reloadUserStyleSheet();
-    }
 
     AdblockManager::self()->removeDisabledRule(filter);
 
@@ -451,10 +431,6 @@ const AdBlockRule *AdBlockCustomList::replaceRule(AdBlockRule *rule, int offset)
     mRules[offset] = rule;
 
     Q_EMIT subscriptionChanged();
-
-    if (rule->isCssRule() || oldRule->isCssRule()) {
-        //FIXME mApp->reloadUserStyleSheet();
-    }
 
     delete oldRule;
     return mRules[offset];
