@@ -306,6 +306,10 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
     const QString rules = QString::fromUtf8(readAllFileByteContents(filePath()));
 
     QFile file(filePath());
+    if (!file.exists()) {
+        saveSubscription();
+    }
+
     if (file.open(QFile::WriteOnly | QFile::Append)) {
         QTextStream stream(&file);
         stream.setCodec("UTF-8");
@@ -339,6 +343,7 @@ QByteArray AdBlockCustomList::readAllFileByteContents(const QString &filename)
 void AdBlockCustomList::saveSubscription()
 {
     QFile file(filePath());
+    qDebug() << " void AdBlockCustomList::saveSubscription()**************************"<<filePath();
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
         qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << filePath();
