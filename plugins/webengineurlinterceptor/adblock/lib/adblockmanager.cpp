@@ -20,6 +20,7 @@
 #include "adblockmanager.h"
 #include "adblockmatcher.h"
 #include "adblocksubscription.h"
+#include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QDir>
 #include <QTextStream>
@@ -36,6 +37,7 @@ AdblockManager *AdblockManager::self()
 AdblockManager::AdblockManager(QObject *parent)
     : QObject(parent)
 {
+    qDebug() << " AdblockManager::AdblockManager(QObject *parent)*********************";
     mAdBlockMatcher = new AdBlockMatcher(this);
     reloadConfig();
 }
@@ -54,6 +56,7 @@ void AdblockManager::reloadConfig()
 
 void AdblockManager::loadSubscriptions()
 {
+    qDebug() << " void AdblockManager::loadSubscriptions()";
     //Clear subscription
     qDeleteAll(mSubscriptions);
     mSubscriptions.clear();
@@ -101,20 +104,12 @@ void AdblockManager::loadSubscriptions()
 //         mSubscriptions.prepend(easyList);
     }
 
-    //TODO load it
-    // new AdBlockSubscription(...);
-    // loadSubscription()
-    //TODO load element
-    // Append CustomList
     AdBlockCustomList *customList = new AdBlockCustomList(this);
     mSubscriptions.append(customList);
     // Load all subscriptions
-    /*
     foreach (AdBlockSubscription* subscription, mSubscriptions) {
-        subscription->loadSubscription(m_disabledRules);
-
+        subscription->loadSubscription(mDisabledRules);
     }
-    */
 }
 
 void AdblockManager::save()
