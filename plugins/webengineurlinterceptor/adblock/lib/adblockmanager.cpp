@@ -23,6 +23,7 @@
 #include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <QDir>
+#include <QStandardPaths>
 #include <QTextStream>
 #include <QUrl>
 
@@ -37,7 +38,6 @@ AdblockManager *AdblockManager::self()
 AdblockManager::AdblockManager(QObject *parent)
     : QObject(parent)
 {
-    qDebug() << " AdblockManager::AdblockManager(QObject *parent)*********************";
     mAdBlockMatcher = new AdBlockMatcher(this);
     reloadConfig();
 }
@@ -56,18 +56,16 @@ void AdblockManager::reloadConfig()
 
 void AdblockManager::loadSubscriptions()
 {
-    qDebug() << " void AdblockManager::loadSubscriptions()";
     //Clear subscription
     qDeleteAll(mSubscriptions);
     mSubscriptions.clear();
-#if 0
-    QDir adblockDir(DataPaths::currentProfilePath() + "/adblock");
+    QDir adblockDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock"));
     // Create if necessary
     if (!adblockDir.exists()) {
-        QDir(DataPaths::currentProfilePath()).mkdir("adblock");
+        QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)).mkdir(QStringLiteral("adblock"));
     }
 
-    foreach (const QString &fileName, adblockDir.entryList(QStringList("*.txt"), QDir::Files)) {
+    for ( const QString &fileName : adblockDir.entryList(QStringList() << QLatin1String("*.txt"), QDir::Files)) {
         if (fileName == QLatin1String("customlist.txt")) {
             continue;
         }
@@ -94,7 +92,6 @@ void AdblockManager::loadSubscriptions()
 
         mSubscriptions.append(subscription);
     }
- #endif
     // Prepend EasyList if subscriptions are empty
     if (mSubscriptions.isEmpty()) {
 //         AdBlockSubscription* easyList = new AdBlockSubscription(tr("EasyList"), this);
