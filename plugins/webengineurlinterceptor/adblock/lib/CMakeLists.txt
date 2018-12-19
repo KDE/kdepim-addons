@@ -12,7 +12,6 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblocklistwidget.cpp
     widgets/adblocksettingwidget.cpp
     widgets/adblockshowlistdialog.cpp
-    widgets/adblockutil.cpp
     )
 
 set(adblocklibprivate_job_SRCS

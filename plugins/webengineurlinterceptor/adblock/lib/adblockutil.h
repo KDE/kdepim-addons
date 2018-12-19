@@ -45,6 +45,9 @@ public:
     {
         return index >= 0 && container.count() > index;
     }
+    static QMap<QString, QString> listSubscriptions();
+
+    static QString localFilterPath();
 };
 }
 #endif

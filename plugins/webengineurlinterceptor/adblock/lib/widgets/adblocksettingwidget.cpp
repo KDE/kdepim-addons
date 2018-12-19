@@ -229,7 +229,6 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     // ------------------------------------------------------------------------------
 
     // automatic filters
-    KConfig config(QStringLiteral("AdBlockadblockrc"));
 
     //TODO load customlist !
     for (AdBlockSubscription* subscription : AdblockManager::self()->subscriptions()) {
@@ -253,43 +252,17 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
         }
     }
 
-
-    const QStringList itemList = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
-    for (const QString &item : itemList) {
-        KConfigGroup filtersGroup(&config, item);
-        const bool isFilterEnabled = filtersGroup.readEntry(QStringLiteral("FilterEnabled"), false);
-        const QString url = filtersGroup.readEntry(QStringLiteral("url"));
-        const QString path = filtersGroup.readEntry(QStringLiteral("path"));
-        const QString name = filtersGroup.readEntry(QStringLiteral("name"));
-        const QDateTime lastUpdate = filtersGroup.readEntry(QStringLiteral("lastUpdate"), QDateTime());
-        if (url.isEmpty() || path.isEmpty() || name.isEmpty()) {
-            continue;
-        }
-
-        QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
-        subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
-        if (isFilterEnabled) {
-            subItem->setCheckState(Qt::Checked);
-        } else {
-            subItem->setCheckState(Qt::Unchecked);
-        }
-
-        subItem->setData(UrlList, url);
-        subItem->setData(PathList, path);
-        subItem->setText(name);
-    }
-
     // ------------------------------------------------------------------------------
 
     // local filters
-    const QString localRulesFilePath = AdBlock::AdBlockUtil::localFilterPath();
+    const QString localRulesFilePath = AdBlock::AdblockUtil::localFilterPath();
 
     QFile ruleFile(localRulesFilePath);
     if (!ruleFile.open(QFile::ReadOnly | QFile::Text)) {
         qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
         return;
     }
-
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
     KConfigGroup grp = config.group(QStringLiteral("DisableRules"));
     const QStringList disableRules = grp.readEntry("DisableRules", QStringList());
 
@@ -338,7 +311,7 @@ void AdBlockSettingWidget::save()
 
     config.sync();
     // local filters
-    const QString localRulesFilePath = AdBlock::AdBlockUtil::localFilterPath();
+    const QString localRulesFilePath = AdBlock::AdblockUtil::localFilterPath();
 
     QFile ruleFile(localRulesFilePath);
     if (!ruleFile.open(QFile::WriteOnly | QFile::Text)) {

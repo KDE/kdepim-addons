@@ -63,6 +63,7 @@
 #include "adblockutil.h"
 #include "adblockinterceptor_debug.h"
 
+
 #include <KLocalizedString>
 #include <QFile>
 #include <QTimer>
@@ -291,7 +292,7 @@ AdBlockSubscription::~AdBlockSubscription()
 AdBlockCustomList::AdBlockCustomList(QObject *parent)
     : AdBlockSubscription(i18n("Custom Rules"), parent)
 {
-    setFilePath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock/customlist.txt"));
+    setFilePath(AdBlock::AdblockUtil::localFilterPath());
 }
 
 void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
