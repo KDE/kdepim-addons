@@ -221,17 +221,15 @@ void AdblockManager::updateMatcher()
 
 bool AdblockManager::removeSubscription(AdBlockSubscription* subscription)
 {
-//    QMutexLocker locker(&m_mutex);
+    if (!mSubscriptions.contains(subscription) || !subscription->canBeRemoved()) {
+        return false;
+    }
 
-//    if (!m_subscriptions.contains(subscription) || !subscription->canBeRemoved()) {
-//        return false;
-//    }
+    QFile(subscription->filePath()).remove();
+    mSubscriptions.removeOne(subscription);
 
-//    QFile(subscription->filePath()).remove();
-//    m_subscriptions.removeOne(subscription);
-
-//    m_matcher->update();
-//    delete subscription;
+    mAdBlockMatcher->update();
+    delete subscription;
 
     return true;
 }

@@ -234,8 +234,9 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
         const QString name = subscription->title();
         qDebug() << " url" << url << " subscription " << name;
         if (!url.isEmpty()) {
-            QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
+            AdBlockListwidget *subItem = new AdBlockListwidget(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
+            subItem->setSubscription(subscription);
             if (subscription->enabled()) {
                 subItem->setCheckState(Qt::Checked);
             } else {
@@ -349,13 +350,14 @@ void AdBlockSettingWidget::slotAddFilter()
         QString name;
         QString url;
         dlg->selectedList(name, url);
-        if (AdblockManager::self()->addSubscription(name, url)) {
-            QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
+        if (AdBlockSubscription *subscription = AdblockManager::self()->addSubscription(name, url)) {
+            AdBlockListwidget *subItem = new AdBlockListwidget(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
             subItem->setCheckState(Qt::Checked);
             subItem->setText(name);
             subItem->setData(UrlList, url);
             subItem->setData(PathList, QString());
+            subItem->setSubscription(subscription);
             hasChanged();
         }
     }
@@ -367,21 +369,12 @@ void AdBlockSettingWidget::slotRemoveSubscription()
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
         if (KMessageBox::questionYesNo(this, i18n("Do you want to delete list \"%1\"?", item->text()), i18n("Delete current list")) == KMessageBox::Yes) {
-
-//            void AdBlockDialog::removeSubscription()
-//            {
-//                if (m_manager->removeSubscription(m_currentSubscription)) {
-//                    delete m_currentTreeWidget;
-//                }
-//            }
-
-            const QString path = item->data(PathList).toString();
-            if (!path.isEmpty()) {
-                if (!QFile(path).remove()) {
-                    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " we can not remove file:" << path;
+            AdBlockListwidget *subItem = dynamic_cast<AdBlockListwidget *>(item);
+            if (subItem) {
+                if (AdblockManager::self()->removeSubscription(subItem->subscription())) {
+                    delete subItem;
                 }
             }
-            delete item;
         }
         hasChanged();
     }
@@ -472,4 +465,20 @@ void AdBlockSettingWidget::slotExportFilters()
 void AdBlockSettingWidget::slotAutomaticFilterDouble(QListWidgetItem *item)
 {
     showAutomaticFilterList(item);
+}
+
+AdBlockListwidget::AdBlockListwidget(QListWidget *parent)
+    : QListWidgetItem(parent)
+{
+
+}
+
+AdBlockSubscription *AdBlockListwidget::subscription() const
+{
+    return mSubscription;
+}
+
+void AdBlockListwidget::setSubscription(AdBlockSubscription *subscription)
+{
+    mSubscription = subscription;
 }

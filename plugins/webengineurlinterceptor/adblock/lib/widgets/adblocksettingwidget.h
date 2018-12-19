@@ -30,6 +30,7 @@
 #include "adblocklib_export.h"
 
 // Qt Includes
+#include <QListWidgetItem>
 #include <QWidget>
 
 class QListWidgetItem;
@@ -39,6 +40,18 @@ class adblock;
 }
 
 namespace AdBlock {
+class AdBlockSubscription;
+class AdBlockListwidget : public QListWidgetItem
+{
+public:
+    explicit AdBlockListwidget(QListWidget *parent);
+    AdBlockSubscription *subscription() const;
+    void setSubscription(AdBlockSubscription *subscription);
+
+private:
+    AdBlockSubscription *mSubscription = nullptr;
+};
+
 class ADBLOCKLIB_EXPORT AdBlockSettingWidget : public QWidget
 {
     Q_OBJECT
