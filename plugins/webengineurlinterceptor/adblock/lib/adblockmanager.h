@@ -46,6 +46,8 @@ public:
 
     Q_REQUIRED_RESULT QStringList disabledRules() const;
 
+    void updateAllSubscriptions();
+
 Q_SIGNALS:
     void enabledChanged(bool);
 

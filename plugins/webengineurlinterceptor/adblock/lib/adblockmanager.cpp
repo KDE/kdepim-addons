@@ -22,9 +22,13 @@
 #include "adblocksubscription.h"
 #include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
+#include <KConfig>
+#include <KConfigGroup>
+#include <QDateTime>
 #include <QDir>
 #include <QStandardPaths>
 #include <QTextStream>
+#include <QTimer>
 #include <QUrl>
 
 using namespace AdBlock;
@@ -92,20 +96,20 @@ void AdblockManager::loadSubscriptions()
 
         mSubscriptions.append(subscription);
     }
-    // Prepend EasyList if subscriptions are empty
-    if (mSubscriptions.isEmpty()) {
-//         AdBlockSubscription* easyList = new AdBlockSubscription(tr("EasyList"), this);
-//         easyList->setUrl(QUrl(ADBLOCK_EASYLIST_URL));
-//         easyList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/easylist.txt"));
-
-//         mSubscriptions.prepend(easyList);
-    }
 
     AdBlockCustomList *customList = new AdBlockCustomList(this);
     mSubscriptions.append(customList);
     // Load all subscriptions
     foreach (AdBlockSubscription* subscription, mSubscriptions) {
         subscription->loadSubscription(mDisabledRules);
+    }
+    if (!mSubscriptions.isEmpty()) {
+        KConfig config(QStringLiteral("AdBlockadblockrc"));
+        KConfigGroup general = config.group(QStringLiteral("General"));
+        const QDateTime lastUpdate = general.readEntry(QStringLiteral("lastUpdate"), QDateTime());
+        if (lastUpdate.addDays(AdBlock::AdBlockSettings::self()->adBlockUpdateInterval()) < QDateTime::currentDateTime()) {
+            QTimer::singleShot(1000 * 60, this, &AdblockManager::updateAllSubscriptions);
+        }
     }
 }
 
@@ -164,4 +168,15 @@ bool AdblockManager::canRunOnScheme(const QString &scheme) const
 QList<AdBlockSubscription *> AdblockManager::subscriptions() const
 {
     return mSubscriptions;
+}
+
+void AdblockManager::updateAllSubscriptions()
+{
+    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+        subscription->updateSubscription();
+    }
+
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+    general.writeEntry(QStringLiteral("lastUpdate"), QDateTime::currentDateTime());
 }

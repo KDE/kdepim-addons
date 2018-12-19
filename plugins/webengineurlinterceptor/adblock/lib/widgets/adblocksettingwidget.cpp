@@ -230,6 +230,8 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     // automatic filters
     KConfig config(QStringLiteral("AdBlockadblockrc"));
 
+    //TODO load customlist !
+
     const QStringList itemList = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
     for (const QString &item : itemList) {
         KConfigGroup filtersGroup(&config, item);
@@ -289,6 +291,7 @@ void AdBlockSettingWidget::save()
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
     // automatic filters
+    //save custom list
     KConfig config(QStringLiteral("AdBlockadblockrc"));
     const QStringList list = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
     for (const QString &group : list) {
