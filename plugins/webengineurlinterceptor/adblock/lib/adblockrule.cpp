@@ -99,7 +99,6 @@ AdBlockRule::AdBlockRule(const QString &filter, AdBlockSubscription *subscriptio
     , m_isEnabled(true)
     , m_isException(false)
     , m_isInternalDisabled(false)
-    , m_regExp(nullptr)
 {
     setFilter(filter);
 }
@@ -151,8 +150,10 @@ QString AdBlockRule::filter() const
 
 void AdBlockRule::setFilter(const QString &filter)
 {
-    m_filter = filter;
-    parseFilter();
+    if (m_filter != filter) {
+        m_filter = filter;
+        parseFilter();
+    }
 }
 
 bool AdBlockRule::isCssRule() const

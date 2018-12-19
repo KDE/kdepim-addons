@@ -245,28 +245,17 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
 
             subItem->setData(UrlList, url);
             subItem->setText(name);
+        } else { //Custom .
+            for (AdBlockRule *rule : subscription->allRules()) {
+                QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
+                subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
+                subItem->setCheckState(rule->isEnabled() ? Qt::Unchecked : Qt::Checked);
+                subItem->setText(rule->filter());
+            }
         }
     }
 
     // ------------------------------------------------------------------------------
-
-    // local filters
-    const QString localRulesFilePath = AdBlock::AdblockUtil::localFilterPath();
-
-    QFile ruleFile(localRulesFilePath);
-    if (!ruleFile.open(QFile::ReadOnly | QFile::Text)) {
-        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
-        return;
-    }
-    KConfig config(QStringLiteral("AdBlockadblockrc"));
-    KConfigGroup grp = config.group(QStringLiteral("DisableRules"));
-    const QStringList disableRules = grp.readEntry("DisableRules", QStringList());
-
-    QTextStream in(&ruleFile);
-    while (!in.atEnd()) {
-        QString stringRule = in.readLine();
-        addManualFilter(stringRule, disableRules);
-    }
     updateCheckBox();
 }
 
@@ -280,37 +269,9 @@ void AdBlockSettingWidget::save()
     saveCheckBox(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
-    // automatic filters
-    //save custom list
-    // local filters
-    const QString localRulesFilePath = AdBlock::AdblockUtil::localFilterPath();
 
-    QFile ruleFile(localRulesFilePath);
-    if (!ruleFile.open(QFile::WriteOnly | QFile::Text)) {
-        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
-        return;
-    }
 
-    QStringList disableCustomFilter;
-    QTextStream out(&ruleFile);
-    for (int i = 0, total = mUi->manualFiltersListWidget->count(); i < total; ++i) {
-        QListWidgetItem *subItem = mUi->manualFiltersListWidget->item(i);
-        const QString stringRule = subItem->text();
-        if (!stringRule.trimmed().isEmpty()) {
-            out << stringRule << '\n';
-        }
-        if (subItem->checkState() == Qt::Unchecked) {
-            disableCustomFilter << stringRule;
-        }
-    }
-    KConfig config(QStringLiteral("AdBlockadblockrc"));
-    if (!disableCustomFilter.isEmpty()) {
-        KConfigGroup grp = config.group(QStringLiteral("DisableRules"));
-        grp.writeEntry("DisableRules", disableCustomFilter);
-    } else {
-        config.deleteGroup(QStringLiteral("DisableRules"));
-    }
-    // -------------------------------------------------------------------------------
+
     mChanged = false;
     Q_EMIT changed(false);
     AdBlock::AdBlockSettings::self()->save();
