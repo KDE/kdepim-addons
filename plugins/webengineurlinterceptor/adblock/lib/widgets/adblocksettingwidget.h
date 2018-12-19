@@ -81,7 +81,6 @@ private:
     enum List {
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,
-        LastUpdateList = Qt::UserRole + 3
     };
     Ui::adblock *mUi = nullptr;
     bool mChanged = false;

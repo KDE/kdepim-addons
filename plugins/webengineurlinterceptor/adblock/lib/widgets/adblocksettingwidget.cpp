@@ -59,6 +59,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QRegularExpression>
 #include <QDir>
 #include <KRun>
+#include <adblocksubscription.h>
 
 using namespace AdBlock;
 AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
@@ -231,6 +232,27 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     KConfig config(QStringLiteral("AdBlockadblockrc"));
 
     //TODO load customlist !
+    for (AdBlockSubscription* subscription : AdblockManager::self()->subscriptions()) {
+        const QString url = subscription->url().toString();
+        const QString name = subscription->title();
+        qDebug() << " url" << url << " subscription " << name;
+        if (!url.isEmpty()) {
+            QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
+            subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
+//            if (isFilterEnabled) {
+//                subItem->setCheckState(Qt::Checked);
+//            } else {
+//                subItem->setCheckState(Qt::Unchecked);
+//            }
+
+            subItem->setData(UrlList, url);
+            subItem->setText(name);
+            //subItem->setData(PathList, path);
+
+            //TODO
+        }
+    }
+
 
     const QStringList itemList = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
     for (const QString &item : itemList) {
@@ -254,7 +276,6 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
 
         subItem->setData(UrlList, url);
         subItem->setData(PathList, path);
-        subItem->setData(LastUpdateList, lastUpdate);
         subItem->setText(name);
     }
 
@@ -308,9 +329,6 @@ void AdBlockSettingWidget::save()
         grp.writeEntry(QStringLiteral("FilterEnabled"), subItem->checkState() == Qt::Checked);
         grp.writeEntry(QStringLiteral("url"), subItem->data(UrlList).toString());
         grp.writeEntry(QStringLiteral("name"), subItem->text());
-        if (subItem->data(LastUpdateList).toDateTime().isValid()) {
-            grp.writeEntry(QStringLiteral("lastUpdate"), subItem->data(LastUpdateList).toDateTime());
-        }
         QString path = subItem->data(PathList).toString();
         if (path.isEmpty()) {
             path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock/adblockrules-%1").arg(i);
@@ -392,7 +410,6 @@ void AdBlockSettingWidget::slotAddFilter()
         subItem->setCheckState(Qt::Checked);
         subItem->setText(name);
         subItem->setData(UrlList, url);
-        subItem->setData(LastUpdateList, QDateTime());
         subItem->setData(PathList, QString());
         hasChanged();
     }
