@@ -209,8 +209,12 @@ AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const
     subscription->loadSubscription(mDisabledRules);
 
     mSubscriptions.append(subscription);
-//    connect(subscription, SIGNAL(subscriptionUpdated()), mApp, SLOT(reloadUserStyleSheet()));
-//    connect(subscription, SIGNAL(subscriptionChanged()), this, SLOT(updateMatcher()));
+    connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
 
     return subscription;
+}
+
+void AdblockManager::updateMatcher()
+{
+    mAdBlockMatcher->update();
 }

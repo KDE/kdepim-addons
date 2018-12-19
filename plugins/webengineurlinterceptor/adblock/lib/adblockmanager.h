@@ -57,6 +57,7 @@ public Q_SLOTS:
     void reloadConfig();
 
 private:
+    void updateMatcher();
     void loadSubscriptions();
     bool canRunOnScheme(const QString &scheme) const;
     bool mEnabled;

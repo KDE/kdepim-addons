@@ -372,6 +372,14 @@ void AdBlockSettingWidget::slotRemoveSubscription()
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
         if (KMessageBox::questionYesNo(this, i18n("Do you want to delete list \"%1\"?", item->text()), i18n("Delete current list")) == KMessageBox::Yes) {
+
+//            void AdBlockDialog::removeSubscription()
+//            {
+//                if (m_manager->removeSubscription(m_currentSubscription)) {
+//                    delete m_currentTreeWidget;
+//                }
+//            }
+
             const QString path = item->data(PathList).toString();
             if (!path.isEmpty()) {
                 if (!QFile(path).remove()) {
