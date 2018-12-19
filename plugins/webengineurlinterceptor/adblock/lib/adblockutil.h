@@ -49,7 +49,7 @@ public:
 
     static QString localFilterPath();
     static QString filterCharsFromFilename(const QString &name);
-    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat);
+    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QStringLiteral("(%1)"));
 };
 }
 #endif
