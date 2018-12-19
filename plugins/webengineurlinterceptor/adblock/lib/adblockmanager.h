@@ -48,6 +48,8 @@ public:
 
     void updateAllSubscriptions();
 
+    AdBlockSubscription* addSubscription(const QString &title, const QString &url);
+
 Q_SIGNALS:
     void enabledChanged(bool);
 

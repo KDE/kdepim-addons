@@ -21,11 +21,14 @@
 #include "adblockmatcher.h"
 #include "adblocksubscription.h"
 #include "adblockinterceptor_debug.h"
+#include "adblockutil.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDateTime>
 #include <QDir>
+#include <QSaveFile>
+#include <QStandardPaths>
 #include <QStandardPaths>
 #include <QTextStream>
 #include <QTimer>
@@ -179,4 +182,35 @@ void AdblockManager::updateAllSubscriptions()
     KConfig config(QStringLiteral("AdBlockadblockrc"));
     KConfigGroup general = config.group(QStringLiteral("General"));
     general.writeEntry(QStringLiteral("lastUpdate"), QDateTime::currentDateTime());
+}
+
+AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const QString &url)
+{
+    if (title.isEmpty() || url.isEmpty()) {
+        return nullptr;
+    }
+
+    QString fileName = AdBlock::AdblockUtil::filterCharsFromFilename(title.toLower()) + QStringLiteral(".txt");
+    QString filePath = AdBlock::AdblockUtil::ensureUniqueFilename(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock/"), fileName);
+
+    QByteArray data = QStringLiteral("Title: %1\nUrl: %2\n[Adblock Plus 1.1.1]").arg(title, url).toLatin1();
+
+    QSaveFile file(filePath);
+    if (!file.open(QFile::WriteOnly)) {
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockManager: Cannot write to file" << filePath;
+        return nullptr;
+    }
+    file.write(data);
+    file.commit();
+
+    AdBlockSubscription* subscription = new AdBlockSubscription(title, this);
+    subscription->setUrl(QUrl(url));
+    subscription->setFilePath(filePath);
+    subscription->loadSubscription(mDisabledRules);
+
+    mSubscriptions.insert(mSubscriptions.count() - 1, subscription);
+//    connect(subscription, SIGNAL(subscriptionUpdated()), mApp, SLOT(reloadUserStyleSheet()));
+//    connect(subscription, SIGNAL(subscriptionChanged()), this, SLOT(updateMatcher()));
+
+    return subscription;
 }

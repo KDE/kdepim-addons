@@ -32,6 +32,8 @@
 * ============================================================ */
 #include "adblockutil.h"
 
+#include <QDir>
+#include <QFileInfo>
 #include <QMap>
 #include <QStandardPaths>
 
@@ -89,4 +91,50 @@ QMap<QString, QString> AdBlock::AdblockUtil::listSubscriptions()
 QString AdBlock::AdblockUtil::localFilterPath()
 {
     return QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock/customlist.txt");
+}
+
+QString AdBlock::AdblockUtil::filterCharsFromFilename(const QString &name)
+{
+    QString value = name;
+
+    value.replace(QLatin1Char('/'), QLatin1Char('-'));
+    value.remove(QLatin1Char('\\'));
+    value.remove(QLatin1Char(':'));
+    value.remove(QLatin1Char('*'));
+    value.remove(QLatin1Char('?'));
+    value.remove(QLatin1Char('"'));
+    value.remove(QLatin1Char('<'));
+    value.remove(QLatin1Char('>'));
+    value.remove(QLatin1Char('|'));
+
+    return value;
+}
+
+QString AdBlock::AdblockUtil::ensureUniqueFilename(const QString &name, const QString &appendFormat)
+{
+    Q_ASSERT(appendFormat.contains(QStringLiteral("%1")));
+
+    QFileInfo info(name);
+
+    if (!info.exists())
+        return name;
+
+    const QDir dir = info.absoluteDir();
+    const QString fileName = info.fileName();
+
+    int i = 1;
+
+    while (info.exists()) {
+        QString file = fileName;
+        int index = file.lastIndexOf(QLatin1Char('.'));
+        const QString appendString = appendFormat.arg(i);
+        if (index == -1)
+            file.append(appendString);
+        else
+            file = file.left(index) + appendString + file.mid(index);
+        info.setFile(dir, file);
+        i++;
+    }
+
+    return info.absoluteFilePath();
 }

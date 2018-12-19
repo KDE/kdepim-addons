@@ -48,6 +48,8 @@ public:
     static QMap<QString, QString> listSubscriptions();
 
     static QString localFilterPath();
+    static QString filterCharsFromFilename(const QString &name);
+    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat);
 };
 }
 #endif

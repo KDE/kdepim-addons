@@ -286,30 +286,6 @@ void AdBlockSettingWidget::save()
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
     // automatic filters
     //save custom list
-    KConfig config(QStringLiteral("AdBlockadblockrc"));
-    const QStringList list = config.groupList().filter(QRegularExpression(QStringLiteral("FilterList \\d+")));
-    for (const QString &group : list) {
-        config.deleteGroup(group);
-    }
-
-    // make sure the directory exists, otherwise saving the filters will fail
-    QDir().mkpath(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock"));
-
-    const int numberItem(mUi->automaticFiltersListWidget->count());
-    for (int i = 0; i < numberItem; ++i) {
-        QListWidgetItem *subItem = mUi->automaticFiltersListWidget->item(i);
-        KConfigGroup grp = config.group(QStringLiteral("FilterList %1").arg(i));
-        grp.writeEntry(QStringLiteral("FilterEnabled"), subItem->checkState() == Qt::Checked);
-        grp.writeEntry(QStringLiteral("url"), subItem->data(UrlList).toString());
-        grp.writeEntry(QStringLiteral("name"), subItem->text());
-        QString path = subItem->data(PathList).toString();
-        if (path.isEmpty()) {
-            path = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock/adblockrules-%1").arg(i);
-        }
-        grp.writeEntry(QStringLiteral("path"), path);
-    }
-
-    config.sync();
     // local filters
     const QString localRulesFilePath = AdBlock::AdblockUtil::localFilterPath();
 
@@ -331,7 +307,7 @@ void AdBlockSettingWidget::save()
             disableCustomFilter << stringRule;
         }
     }
-
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
     if (!disableCustomFilter.isEmpty()) {
         KConfigGroup grp = config.group(QStringLiteral("DisableRules"));
         grp.writeEntry("DisableRules", disableCustomFilter);
@@ -378,13 +354,15 @@ void AdBlockSettingWidget::slotAddFilter()
         QString name;
         QString url;
         dlg->selectedList(name, url);
-        QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
-        subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
-        subItem->setCheckState(Qt::Checked);
-        subItem->setText(name);
-        subItem->setData(UrlList, url);
-        subItem->setData(PathList, QString());
-        hasChanged();
+        if (AdblockManager::self()->addSubscription(name, url)) {
+            QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
+            subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
+            subItem->setCheckState(Qt::Checked);
+            subItem->setText(name);
+            subItem->setData(UrlList, url);
+            subItem->setData(PathList, QString());
+            hasChanged();
+        }
     }
     delete dlg;
 }
