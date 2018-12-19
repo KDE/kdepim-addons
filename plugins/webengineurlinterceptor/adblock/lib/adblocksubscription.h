@@ -78,12 +78,12 @@ public:
     explicit AdBlockSubscription(const QString &title, QObject *parent = nullptr);
     ~AdBlockSubscription();
 
-    QString title() const;
+    Q_REQUIRED_RESULT QString title() const;
 
-    QString filePath() const;
+    Q_REQUIRED_RESULT QString filePath() const;
     void setFilePath(const QString &path);
 
-    QUrl url() const;
+    Q_REQUIRED_RESULT QUrl url() const;
     void setUrl(const QUrl &url);
 
     virtual void loadSubscription(const QStringList &disabledRules);
@@ -95,12 +95,15 @@ public:
     const AdBlockRule *enableRule(int offset);
     const AdBlockRule *disableRule(int offset);
 
-    virtual bool canEditRules() const;
-    virtual bool canBeRemoved() const;
+    virtual Q_REQUIRED_RESULT bool canEditRules() const;
+    virtual Q_REQUIRED_RESULT bool canBeRemoved() const;
 
-    virtual int addRule(AdBlockRule *rule);
-    virtual bool removeRule(int offset);
+    virtual Q_REQUIRED_RESULT int addRule(AdBlockRule *rule);
+    virtual Q_REQUIRED_RESULT bool removeRule(int offset);
     virtual const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
+
+    Q_REQUIRED_RESULT bool enabled() const;
+    void setEnabled(bool enabled);
 
 public Q_SLOTS:
     void updateSubscription();
@@ -127,6 +130,7 @@ private:
     QUrl mUrl;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     bool mUpdated = false;
+    bool mEnabled = true;
 };
 
 class AdBlockCustomList : public AdBlockSubscription

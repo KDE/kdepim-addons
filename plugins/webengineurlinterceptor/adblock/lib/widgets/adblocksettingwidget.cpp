@@ -229,8 +229,6 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     // ------------------------------------------------------------------------------
 
     // automatic filters
-
-    //TODO load customlist !
     for (AdBlockSubscription* subscription : AdblockManager::self()->subscriptions()) {
         const QString url = subscription->url().toString();
         const QString name = subscription->title();
@@ -238,17 +236,14 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
         if (!url.isEmpty()) {
             QListWidgetItem *subItem = new QListWidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
-//            if (isFilterEnabled) {
-//                subItem->setCheckState(Qt::Checked);
-//            } else {
-//                subItem->setCheckState(Qt::Unchecked);
-//            }
+            if (subscription->enabled()) {
+                subItem->setCheckState(Qt::Checked);
+            } else {
+                subItem->setCheckState(Qt::Unchecked);
+            }
 
             subItem->setData(UrlList, url);
             subItem->setText(name);
-            //subItem->setData(PathList, path);
-
-            //TODO
         }
     }
 

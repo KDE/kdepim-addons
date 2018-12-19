@@ -210,6 +210,16 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
     return true;
 }
 
+bool AdBlockSubscription::enabled() const
+{
+    return mEnabled;
+}
+
+void AdBlockSubscription::setEnabled(bool enabled)
+{
+    mEnabled = enabled;
+}
+
 const AdBlockRule *AdBlockSubscription::rule(int offset) const
 {
     if (!AdblockUtil::containsIndex(mRules, offset)) {
