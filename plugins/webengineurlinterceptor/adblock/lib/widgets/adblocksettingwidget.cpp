@@ -250,7 +250,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
             for (AdBlockRule *rule : subscription->allRules()) {
                 QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
                 subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
-                subItem->setCheckState(rule->isEnabled() ? Qt::Unchecked : Qt::Checked);
+                subItem->setCheckState(rule->isEnabled() ? Qt::Checked : Qt::Unchecked);
                 subItem->setText(rule->filter());
             }
         }
@@ -272,7 +272,7 @@ void AdBlockSettingWidget::save()
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
 
 
-
+    mCustomSubscription->saveSubscription();
     mChanged = false;
     Q_EMIT changed(false);
     AdBlock::AdBlockSettings::self()->save();
@@ -399,6 +399,11 @@ void AdBlockSettingWidget::slotImportFilters()
 
 void AdBlockSettingWidget::addManualFilter(const QString &text, const QStringList &excludeRules)
 {
+    AdBlockRule* rule = new AdBlockRule(text, mCustomSubscription);
+    if (excludeRules.contains(text)) {
+        rule->setEnabled(false);
+    }
+    int offset = mCustomSubscription->addRule(rule);
     QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
     subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
     subItem->setCheckState(excludeRules.contains(text) ? Qt::Unchecked : Qt::Checked);
