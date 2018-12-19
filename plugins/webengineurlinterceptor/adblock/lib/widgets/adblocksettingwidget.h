@@ -91,6 +91,7 @@ private:
     void updateCheckBox();
     void addManualFilter(const QString &text, const QStringList &excludeRules = QStringList());
     void showAutomaticFilterList(QListWidgetItem *item);
+    void slotManualFiltersChanged(QListWidgetItem *item);
     enum List {
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,
@@ -98,6 +99,7 @@ private:
     AdBlockSubscription *mCustomSubscription = nullptr;
     Ui::adblock *mUi = nullptr;
     bool mChanged = false;
+    bool mBlockUpdate = true;
 };
 }
 

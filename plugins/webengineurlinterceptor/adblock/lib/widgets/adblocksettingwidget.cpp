@@ -84,7 +84,7 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
     connect(mUi->removeButton, &QPushButton::clicked, this, &AdBlockSettingWidget::removeRule);
     connect(mUi->removeSubscription, &QPushButton::clicked, this, &AdBlockSettingWidget::slotRemoveSubscription);
     connect(mUi->manualFiltersListWidget, &QListWidget::currentItemChanged, this, &AdBlockSettingWidget::slotUpdateManualButtons);
-    connect(mUi->manualFiltersListWidget, &QListWidget::itemChanged, this, &AdBlockSettingWidget::hasChanged);
+    connect(mUi->manualFiltersListWidget, &QListWidget::itemChanged, this, &AdBlockSettingWidget::slotManualFiltersChanged);
 
     mUi->spinBox->setSuffix(ki18np(" day", " days"));
 
@@ -112,6 +112,27 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
 AdBlockSettingWidget::~AdBlockSettingWidget()
 {
     delete mUi;
+}
+
+void AdBlockSettingWidget::slotManualFiltersChanged(QListWidgetItem *item)
+{
+    if (!mBlockUpdate) {
+        const int offset = mUi->manualFiltersListWidget->row(item);
+        if (offset >= 0) {
+            const AdBlockRule *oldRule = mCustomSubscription->rule(mUi->manualFiltersListWidget->row(item));
+            if (item->checkState() == Qt::Checked && !oldRule->isEnabled()) {
+                const AdBlockRule* rule = mCustomSubscription->enableRule(offset);
+            } else if (item->checkState() == Qt::Unchecked && oldRule->isEnabled()) {
+                const AdBlockRule* rule = mCustomSubscription->disableRule(offset);
+            } else if (mCustomSubscription->canEditRules()) {
+                AdBlockRule* newRule = new AdBlockRule(item->text(), mCustomSubscription);
+                const AdBlockRule* rule = mCustomSubscription->replaceRule(newRule, offset);
+
+                //adjustItemFeatures(item, rule);
+            }
+            hasChanged();
+        }
+    }
 }
 
 void AdBlockSettingWidget::slotManualFilterLineEditTextChanged(const QString &text)
@@ -247,12 +268,14 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
             subItem->setText(name);
         } else { //Custom .
             mCustomSubscription = subscription;
+            mBlockUpdate = true;
             for (AdBlockRule *rule : subscription->allRules()) {
                 QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
                 subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
                 subItem->setCheckState(rule->isEnabled() ? Qt::Checked : Qt::Unchecked);
                 subItem->setText(rule->filter());
             }
+            mBlockUpdate = false;
         }
     }
 
@@ -403,11 +426,13 @@ void AdBlockSettingWidget::addManualFilter(const QString &text, const QStringLis
     if (excludeRules.contains(text)) {
         rule->setEnabled(false);
     }
-    int offset = mCustomSubscription->addRule(rule);
-    QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
-    subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
-    subItem->setCheckState(excludeRules.contains(text) ? Qt::Unchecked : Qt::Checked);
-    subItem->setText(text);
+    const int offset = mCustomSubscription->addRule(rule);
+    if (offset >= 0) {
+        QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
+        subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
+        subItem->setCheckState(excludeRules.contains(text) ? Qt::Unchecked : Qt::Checked);
+        subItem->setText(text);
+    }
 }
 
 void AdBlockSettingWidget::slotExportFilters()
