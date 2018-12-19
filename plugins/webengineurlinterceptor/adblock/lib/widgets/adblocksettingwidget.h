@@ -41,10 +41,10 @@ class adblock;
 
 namespace AdBlock {
 class AdBlockSubscription;
-class AdBlockListwidget : public QListWidgetItem
+class AdBlockListwidgetItem : public QListWidgetItem
 {
 public:
-    explicit AdBlockListwidget(QListWidget *parent);
+    explicit AdBlockListwidgetItem(QListWidget *parent);
     AdBlockSubscription *subscription() const;
     void setSubscription(AdBlockSubscription *subscription);
 
@@ -95,6 +95,7 @@ private:
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,
     };
+    AdBlockSubscription *mCustomSubscription = nullptr;
     Ui::adblock *mUi = nullptr;
     bool mChanged = false;
 };

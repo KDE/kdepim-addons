@@ -234,7 +234,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
         const QString name = subscription->title();
         qDebug() << " url" << url << " subscription " << name;
         if (!url.isEmpty()) {
-            AdBlockListwidget *subItem = new AdBlockListwidget(mUi->automaticFiltersListWidget);
+            AdBlockListwidgetItem *subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
             subItem->setSubscription(subscription);
             if (subscription->enabled()) {
@@ -246,6 +246,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
             subItem->setData(UrlList, url);
             subItem->setText(name);
         } else { //Custom .
+            mCustomSubscription = subscription;
             for (AdBlockRule *rule : subscription->allRules()) {
                 QListWidgetItem *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
                 subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
@@ -312,7 +313,7 @@ void AdBlockSettingWidget::slotAddFilter()
         QString url;
         dlg->selectedList(name, url);
         if (AdBlockSubscription *subscription = AdblockManager::self()->addSubscription(name, url)) {
-            AdBlockListwidget *subItem = new AdBlockListwidget(mUi->automaticFiltersListWidget);
+            AdBlockListwidgetItem *subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
             subItem->setCheckState(Qt::Checked);
             subItem->setText(name);
@@ -330,14 +331,14 @@ void AdBlockSettingWidget::slotRemoveSubscription()
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
         if (KMessageBox::questionYesNo(this, i18n("Do you want to delete list \"%1\"?", item->text()), i18n("Delete current list")) == KMessageBox::Yes) {
-            AdBlockListwidget *subItem = dynamic_cast<AdBlockListwidget *>(item);
+            AdBlockListwidgetItem *subItem = dynamic_cast<AdBlockListwidgetItem *>(item);
             if (subItem) {
                 if (AdblockManager::self()->removeSubscription(subItem->subscription())) {
+                    hasChanged();
                     delete subItem;
                 }
             }
         }
-        hasChanged();
     }
 }
 
@@ -360,16 +361,12 @@ void AdBlockSettingWidget::showAutomaticFilterList(QListWidgetItem *item)
 
 void AdBlockSettingWidget::slotDeleteList(const QString &listName)
 {
-    QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
+    AdBlockListwidgetItem *item = dynamic_cast<AdBlockListwidgetItem *>(mUi->automaticFiltersListWidget->currentItem());
     if (item && item->text() == listName) {
-        const QString path = item->data(PathList).toString();
-        if (!path.isEmpty()) {
-            if (!QFile(path).remove()) {
-                qCDebug(ADBLOCKINTERCEPTOR_LOG) << " we can not remove file:" << path;
-            }
+        if (AdblockManager::self()->removeSubscription(item->subscription())) {
+            delete item;
+            hasChanged();
         }
-        delete item;
-        hasChanged();
     }
 }
 
@@ -428,18 +425,18 @@ void AdBlockSettingWidget::slotAutomaticFilterDouble(QListWidgetItem *item)
     showAutomaticFilterList(item);
 }
 
-AdBlockListwidget::AdBlockListwidget(QListWidget *parent)
+AdBlockListwidgetItem::AdBlockListwidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
 
 }
 
-AdBlockSubscription *AdBlockListwidget::subscription() const
+AdBlockSubscription *AdBlockListwidgetItem::subscription() const
 {
     return mSubscription;
 }
 
-void AdBlockListwidget::setSubscription(AdBlockSubscription *subscription)
+void AdBlockListwidgetItem::setSubscription(AdBlockSubscription *subscription)
 {
     mSubscription = subscription;
 }
