@@ -41,7 +41,7 @@
 using namespace AdBlock;
 AdBlockMatcher::AdBlockMatcher(AdblockManager *manager)
     : QObject(manager)
-    , m_manager(manager)
+    , mManager(manager)
 {
     connect(manager, &AdblockManager::enabledChanged, this, &AdBlockMatcher::enabledChanged);
 }
@@ -54,26 +54,26 @@ AdBlockMatcher::~AdBlockMatcher()
 const AdBlockRule *AdBlockMatcher::match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const
 {
     // Exception rules
-    if (m_networkExceptionTree.find(request, urlDomain, urlString)) {
+    if (mNetworkExceptionTree.find(request, urlDomain, urlString)) {
         return nullptr;
     }
 
-    int count = m_networkExceptionRules.count();
+    int count = mNetworkExceptionRules.count();
     for (int i = 0; i < count; ++i) {
-        const AdBlockRule *rule = m_networkExceptionRules.at(i);
+        const AdBlockRule *rule = mNetworkExceptionRules.at(i);
         if (rule->networkMatch(request, urlDomain, urlString)) {
             return nullptr;
         }
     }
 
     // Block rules
-    if (const AdBlockRule *rule = m_networkBlockTree.find(request, urlDomain, urlString)) {
+    if (const AdBlockRule *rule = mNetworkBlockTree.find(request, urlDomain, urlString)) {
         return rule;
     }
 
-    count = m_networkBlockRules.count();
+    count = mNetworkBlockRules.count();
     for (int i = 0; i < count; ++i) {
-        const AdBlockRule *rule = m_networkBlockRules.at(i);
+        const AdBlockRule *rule = mNetworkBlockRules.at(i);
         if (rule->networkMatch(request, urlDomain, urlString)) {
             return rule;
         }
@@ -84,10 +84,10 @@ const AdBlockRule *AdBlockMatcher::match(const QWebEngineUrlRequestInfo &request
 
 bool AdBlockMatcher::adBlockDisabledForUrl(const QUrl &url) const
 {
-    const int count = m_documentRules.count();
+    const int count = mDocumentRules.count();
 
     for (int i = 0; i < count; ++i) {
-        if (m_documentRules.at(i)->urlMatch(url)) {
+        if (mDocumentRules.at(i)->urlMatch(url)) {
             return true;
         }
     }
@@ -101,10 +101,10 @@ bool AdBlockMatcher::elemHideDisabledForUrl(const QUrl &url) const
         return true;
     }
 
-    const int count = m_elemhideRules.count();
+    const int count = mElemhideRules.count();
 
     for (int i = 0; i < count; ++i) {
-        if (m_elemhideRules.at(i)->urlMatch(url)) {
+        if (mElemhideRules.at(i)->urlMatch(url)) {
             return true;
         }
     }
@@ -114,17 +114,17 @@ bool AdBlockMatcher::elemHideDisabledForUrl(const QUrl &url) const
 
 QString AdBlockMatcher::elementHidingRules() const
 {
-    return m_elementHidingRules;
+    return mElementHidingRules;
 }
 
 QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 {
     QString rules;
     int addedRulesCount = 0;
-    const int count = m_domainRestrictedCssRules.count();
+    const int count = mDomainRestrictedCssRules.count();
 
     for (int i = 0; i < count; ++i) {
-        const AdBlockRule *rule = m_domainRestrictedCssRules.at(i);
+        const AdBlockRule *rule = mDomainRestrictedCssRules.at(i);
         if (!rule->matchDomain(domain)) {
             continue;
         }
@@ -141,7 +141,7 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 
     if (addedRulesCount != 0) {
         rules = rules.left(rules.size() - 1);
-        rules.append(QLatin1String("{display:none !important;}\n"));
+        rules.append(QStringLiteral("{display:none !important;}\n"));
     }
 
     return rules;
@@ -149,7 +149,7 @@ QString AdBlockMatcher::elementHidingRulesForDomain(const QString &domain) const
 
 bool AdBlockMatcher::isEnabled() const
 {
-    return m_enabled;
+    return mEnabled;
 }
 
 void AdBlockMatcher::update()
@@ -158,8 +158,8 @@ void AdBlockMatcher::update()
 
     QHash<QString, const AdBlockRule *> cssRulesHash;
     QVector<const AdBlockRule *> exceptionCssRules;
-    Q_FOREACH (AdBlockSubscription *subscription, m_manager->subscriptions()) {
-        Q_FOREACH (const AdBlockRule *rule, subscription->allRules()) {
+    Q_FOREACH (AdBlockSubscription *subscription, mManager->subscriptions()) {
+        for (const AdBlockRule *rule : subscription->allRules()) {
             // Don't add internally disabled rules to cache
             if (rule->isInternalDisabled()) {
                 continue;
@@ -178,22 +178,22 @@ void AdBlockMatcher::update()
                     cssRulesHash.insert(rule->cssSelector(), rule);
                 }
             } else if (rule->isDocument()) {
-                m_documentRules.append(rule);
+                mDocumentRules.append(rule);
             } else if (rule->isElemhide()) {
-                m_elemhideRules.append(rule);
+                mElemhideRules.append(rule);
             } else if (rule->isException()) {
-                if (!m_networkExceptionTree.add(rule)) {
-                    m_networkExceptionRules.append(rule);
+                if (!mNetworkExceptionTree.add(rule)) {
+                    mNetworkExceptionRules.append(rule);
                 }
             } else {
-                if (!m_networkBlockTree.add(rule)) {
-                    m_networkBlockRules.append(rule);
+                if (!mNetworkBlockTree.add(rule)) {
+                    mNetworkBlockRules.append(rule);
                 }
             }
         }
     }
 
-    foreach (const AdBlockRule *rule, exceptionCssRules) {
+    for (const AdBlockRule *rule : qAsConst(exceptionCssRules)) {
         const AdBlockRule *originalRule = cssRulesHash.value(rule->cssSelector());
 
         // If we don't have this selector, the exception does nothing
@@ -206,7 +206,7 @@ void AdBlockMatcher::update()
         copiedRule->m_blockedDomains.append(rule->m_allowedDomains);
 
         cssRulesHash[rule->cssSelector()] = copiedRule;
-        m_createdRules.append(copiedRule);
+        mCreatedRules.append(copiedRule);
     }
 
     // Apparently, excessive amount of selectors for one CSS rule is not what WebKit likes.
@@ -220,41 +220,41 @@ void AdBlockMatcher::update()
         const AdBlockRule *rule = it.value();
 
         if (rule->isDomainRestricted()) {
-            m_domainRestrictedCssRules.append(rule);
+            mDomainRestrictedCssRules.append(rule);
         } else if (Q_UNLIKELY(hidingRulesCount == 1000)) {
-            m_elementHidingRules.append(rule->cssSelector());
-            m_elementHidingRules.append(QStringLiteral("{display:none !important;} "));
+            mElementHidingRules.append(rule->cssSelector());
+            mElementHidingRules.append(QStringLiteral("{display:none !important;} "));
             hidingRulesCount = 0;
         } else {
-            m_elementHidingRules.append(rule->cssSelector() + QLatin1Char(','));
+            mElementHidingRules.append(rule->cssSelector() + QLatin1Char(','));
             hidingRulesCount++;
         }
     }
 
     if (hidingRulesCount != 0) {
-        m_elementHidingRules = m_elementHidingRules.left(m_elementHidingRules.size() - 1);
-        m_elementHidingRules.append(QLatin1String("{display:none !important;} "));
+        mElementHidingRules = mElementHidingRules.left(mElementHidingRules.size() - 1);
+        mElementHidingRules.append(QLatin1String("{display:none !important;} "));
     }
 }
 
 void AdBlockMatcher::clear()
 {
-    m_networkExceptionTree.clear();
-    m_networkExceptionRules.clear();
-    m_networkBlockTree.clear();
-    m_networkBlockRules.clear();
-    m_domainRestrictedCssRules.clear();
-    m_elementHidingRules.clear();
-    m_documentRules.clear();
-    m_elemhideRules.clear();
-    qDeleteAll(m_createdRules);
-    m_createdRules.clear();
+    mNetworkExceptionTree.clear();
+    mNetworkExceptionRules.clear();
+    mNetworkBlockTree.clear();
+    mNetworkBlockRules.clear();
+    mDomainRestrictedCssRules.clear();
+    mElementHidingRules.clear();
+    mDocumentRules.clear();
+    mElemhideRules.clear();
+    qDeleteAll(mCreatedRules);
+    mCreatedRules.clear();
 }
 
 void AdBlockMatcher::enabledChanged(bool enabled)
 {
-    m_enabled = enabled;
-    if (m_enabled) {
+    mEnabled = enabled;
+    if (mEnabled) {
         update();
     } else {
         clear();

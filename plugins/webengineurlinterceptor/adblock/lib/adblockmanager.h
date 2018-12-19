@@ -26,6 +26,7 @@
 namespace AdBlock {
 class AdBlockMatcher;
 class AdBlockSubscription;
+class AdBlockCustomList;
 class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 {
     Q_OBJECT
@@ -51,6 +52,7 @@ public:
     AdBlockSubscription* addSubscription(const QString &title, const QString &url);
 
     Q_REQUIRED_RESULT bool removeSubscription(AdBlockSubscription *subscription);
+    void addCustomRule(const QString &filter);
 Q_SIGNALS:
     void enabledChanged(bool);
 
@@ -65,6 +67,7 @@ private:
     AdBlockMatcher *mAdBlockMatcher = nullptr;
     QStringList mDisabledRules;
     QList<AdBlockSubscription *> mSubscriptions;
+    AdBlockCustomList *mCustomList = nullptr;
 };
 }
 #endif // ADBLOCKMANAGER_H

@@ -122,8 +122,10 @@ void AdBlockSettingWidget::slotManualFiltersChanged(QListWidgetItem *item)
             const AdBlockRule *oldRule = mCustomSubscription->rule(mUi->manualFiltersListWidget->row(item));
             if (item->checkState() == Qt::Checked && !oldRule->isEnabled()) {
                 const AdBlockRule* rule = mCustomSubscription->enableRule(offset);
+                qDebug() << " enable " << rule;
             } else if (item->checkState() == Qt::Unchecked && oldRule->isEnabled()) {
                 const AdBlockRule* rule = mCustomSubscription->disableRule(offset);
+                qDebug() << " disable " << rule;
             } else if (mCustomSubscription->canEditRules()) {
                 AdBlockRule* newRule = new AdBlockRule(item->text(), mCustomSubscription);
                 const AdBlockRule* rule = mCustomSubscription->replaceRule(newRule, offset);
@@ -299,6 +301,7 @@ void AdBlockSettingWidget::save()
     mChanged = false;
     Q_EMIT changed(false);
     AdBlock::AdBlockSettings::self()->save();
+    AdBlock::AdblockManager::self()->save();
     AdBlock::AdblockManager::self()->reloadConfig();
 }
 

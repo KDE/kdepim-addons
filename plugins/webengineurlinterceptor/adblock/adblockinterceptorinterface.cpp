@@ -47,10 +47,7 @@ bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &inf
     if (!mAdblockManager->isEnabled()) {
         return false;
     }
-    if (mAdblockManager->interceptRequest(info)) {
-        return true;
-    }
-    return false;
+    return mAdblockManager->interceptRequest(info);
 }
 
 QList<QAction *> AdblockInterceptorInterface::interceptorUrlActions(const WebEngineViewer::WebHitTestResult &result) const

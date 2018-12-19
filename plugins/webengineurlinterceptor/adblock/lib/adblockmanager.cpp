@@ -22,6 +22,7 @@
 #include "adblocksubscription.h"
 #include "adblockinterceptor_debug.h"
 #include "adblockutil.h"
+#include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <KConfig>
 #include <KConfigGroup>
@@ -63,9 +64,18 @@ void AdblockManager::reloadConfig()
 
 void AdblockManager::loadSubscriptions()
 {
-    //Clear subscription
     qDeleteAll(mSubscriptions);
     mSubscriptions.clear();
+    const bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
+    if (!enabled) {
+        return;
+    }
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+
+    mDisabledRules = general.readEntry(QStringLiteral("disabledRules"), QStringList());
+    qDebug() << " mDisabledRules"<<mDisabledRules;
+    //Clear subscription
     QDir adblockDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock"));
     // Create if necessary
     if (!adblockDir.exists()) {
@@ -100,15 +110,14 @@ void AdblockManager::loadSubscriptions()
         mSubscriptions.append(subscription);
     }
 
-    AdBlockCustomList *customList = new AdBlockCustomList(this);
-    mSubscriptions.append(customList);
+    mCustomList = new AdBlockCustomList(this);
+    mSubscriptions.append(mCustomList);
     // Load all subscriptions
     foreach (AdBlockSubscription* subscription, mSubscriptions) {
         subscription->loadSubscription(mDisabledRules);
+        connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
     }
     if (!mSubscriptions.isEmpty()) {
-        KConfig config(QStringLiteral("AdBlockadblockrc"));
-        KConfigGroup general = config.group(QStringLiteral("General"));
         const QDateTime lastUpdate = general.readEntry(QStringLiteral("lastUpdate"), QDateTime());
         if (lastUpdate.addDays(AdBlock::AdBlockSettings::self()->adBlockUpdateInterval()) < QDateTime::currentDateTime()) {
             QTimer::singleShot(1000 * 60, this, &AdblockManager::updateAllSubscriptions);
@@ -118,6 +127,9 @@ void AdblockManager::loadSubscriptions()
 
 void AdblockManager::save()
 {
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+    general.writeEntry(QStringLiteral("disabledRules"), mDisabledRules);
     foreach (AdBlockSubscription *subscription, mSubscriptions) {
         subscription->saveSubscription();
     }
@@ -155,9 +167,11 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
         return result;
     }
 
+    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " urlString" << urlString;
     const AdBlockRule *blockedRule = mAdBlockMatcher->match(info, host, urlString);
     if (blockedRule) {
         result = true;
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << " blocked !!!!!!!!!!!!" << blockedRule->filter();
         //TODO
     }
     return result;
@@ -232,4 +246,12 @@ bool AdblockManager::removeSubscription(AdBlockSubscription* subscription)
     delete subscription;
 
     return true;
+}
+
+void AdblockManager::addCustomRule(const QString &filter)
+{
+    AdBlockRule *rule = new AdBlockRule(filter, mCustomList);
+    mCustomList->addRule(rule);
+    mCustomList->saveSubscription();
+    updateMatcher();
 }

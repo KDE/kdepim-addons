@@ -70,19 +70,19 @@ public Q_SLOTS:
 
 private:
     void enabledChanged(bool enabled);
-    AdblockManager *m_manager = nullptr;
+    AdblockManager *mManager = nullptr;
 
-    QVector<AdBlockRule *> m_createdRules;
-    QVector<const AdBlockRule *> m_networkExceptionRules;
-    QVector<const AdBlockRule *> m_networkBlockRules;
-    QVector<const AdBlockRule *> m_domainRestrictedCssRules;
-    QVector<const AdBlockRule *> m_documentRules;
-    QVector<const AdBlockRule *> m_elemhideRules;
+    QVector<AdBlockRule *> mCreatedRules;
+    QVector<const AdBlockRule *> mNetworkExceptionRules;
+    QVector<const AdBlockRule *> mNetworkBlockRules;
+    QVector<const AdBlockRule *> mDomainRestrictedCssRules;
+    QVector<const AdBlockRule *> mDocumentRules;
+    QVector<const AdBlockRule *> mElemhideRules;
 
-    QString m_elementHidingRules;
-    AdBlockSearchTree m_networkBlockTree;
-    AdBlockSearchTree m_networkExceptionTree;
-    bool m_enabled = false;
+    QString mElementHidingRules;
+    AdBlockSearchTree mNetworkBlockTree;
+    AdBlockSearchTree mNetworkExceptionTree;
+    bool mEnabled = false;
 };
 }
 
