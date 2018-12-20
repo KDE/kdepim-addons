@@ -11,7 +11,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 /* ============================================================
 * QupZilla - WebKit based browser
@@ -28,7 +28,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 * ============================================================ */
 #include "adblocksearchtree.h"
 #include "adblockrule.h"
@@ -71,14 +71,15 @@ bool AdBlockSearchTree::add(const AdBlockRule *rule)
 
     for (int i = 0; i < len; ++i) {
         const QChar c = filter.at(i);
-        if (!node->children.contains(c)) {
-            Node *n = new Node;
-            n->c = c;
+        Node *next = node->children.value(c);
+        if (!next) {
+            next = new Node;
+            next->c = c;
 
-            node->children[c] = n;
+            node->children[c] = next;
         }
 
-        node = node->children[c];
+        node = next;
     }
 
     node->rule = rule;
@@ -91,7 +92,7 @@ const AdBlockRule *AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
     int len = urlString.size();
 
     if (len <= 0) {
-        return 0;
+        return nullptr;
     }
 
     const QChar *string = urlString.constData();
@@ -103,7 +104,7 @@ const AdBlockRule *AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
         }
     }
 
-    return 0;
+    return nullptr;
 }
 
 const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar *string, int len) const
@@ -113,25 +114,21 @@ const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInf
     }
 
     QChar c = string[0];
+    Node *node = m_root->children.value(c);
 
-    if (!m_root->children.contains(c)) {
+    if (!node) {
         return nullptr;
     }
-
-    Node *node = m_root->children[c];
-
     for (int i = 1; i < len; ++i) {
         const QChar c = (++string)[0];
 
         if (node->rule && node->rule->networkMatch(request, domain, urlString)) {
             return node->rule;
         }
-
-        if (!node->children.contains(c)) {
+        node = node->children.value(c);
+        if (!node) {
             return nullptr;
         }
-
-        node = node->children[c];
     }
 
     if (node->rule && node->rule->networkMatch(request, domain, urlString)) {

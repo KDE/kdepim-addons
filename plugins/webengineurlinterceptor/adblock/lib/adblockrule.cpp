@@ -11,7 +11,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 /* ============================================================
 * QupZilla - WebKit based browser
@@ -28,7 +28,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 * ============================================================ */
 /**
  * Copyright (c) 2009, Zsombor Gegesy <gzsombor@gmail.com>
@@ -67,6 +67,7 @@
 #include <QUrl>
 #include <QString>
 #include <QStringList>
+#include <QDebug>
 #include <QWebEngineUrlRequestInfo>
 using namespace AdBlock;
 
@@ -99,7 +100,6 @@ AdBlockRule::AdBlockRule(const QString &filter, AdBlockSubscription *subscriptio
     , m_isEnabled(true)
     , m_isException(false)
     , m_isInternalDisabled(false)
-    , m_regExp(nullptr)
 {
     setFilter(filter);
 }
@@ -151,8 +151,10 @@ QString AdBlockRule::filter() const
 
 void AdBlockRule::setFilter(const QString &filter)
 {
-    m_filter = filter;
-    parseFilter();
+    if (m_filter != filter) {
+        m_filter = filter;
+        parseFilter();
+    }
 }
 
 bool AdBlockRule::isCssRule() const
@@ -227,10 +229,11 @@ bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QS
     if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
         return false;
     }
-
+//qDebug() << " bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl)";
     bool matched = stringMatch(domain, encodedUrl);
 
     if (matched) {
+        qDebug() << " matched !!!!!" << domain << " encoded " << encodedUrl;
         // Check domain restrictions
         if (hasOption(DomainRestrictedOption) && !matchDomain(request.firstPartyUrl().host())) {
             return false;

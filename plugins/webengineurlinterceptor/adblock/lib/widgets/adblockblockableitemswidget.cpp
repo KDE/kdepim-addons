@@ -21,6 +21,7 @@
 #include "adblockcreatefilterdialog.h"
 #include "adblockinterceptor_debug.h"
 #include "adblockutil.h"
+#include "adblockmanager.h"
 #include <WebEngineViewer/WebEngineScript>
 
 #include <QVBoxLayout>
@@ -96,22 +97,12 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
-    qCWarning(ADBLOCKINTERCEPTOR_LOG) << " void AdBlockBlockableItemsWidget::saveFilters() unimplemented yet";
-    // local filters
-    const QString localRulesFilePath = AdBlock::AdBlockUtil::localFilterPath();
-
-    QFile ruleFile(localRulesFilePath);
-    if (!ruleFile.open(QFile::WriteOnly | QFile::Text | QFile::Append)) {
-        qCDebug(ADBLOCKINTERCEPTOR_LOG) << "Unable to open rule file" << localRulesFilePath;
-        return;
-    }
     for (int i = 0; i < mListItems->topLevelItemCount(); ++i) {
         QTreeWidgetItem *item = mListItems->topLevelItem(i);
         const QString itemStr = item->text(FilterValue);
         if (!itemStr.isEmpty()) {
-            qDebug() << " item !:" << item->text(FilterValue);
+            AdblockManager::self()->addCustomRule(itemStr);
         }
-        //TODO
     }
 }
 

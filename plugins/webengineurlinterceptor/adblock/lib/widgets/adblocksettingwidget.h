@@ -20,7 +20,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 *
 * ============================================================ */
 
@@ -30,6 +30,7 @@
 #include "adblocklib_export.h"
 
 // Qt Includes
+#include <QListWidgetItem>
 #include <QWidget>
 
 class QListWidgetItem;
@@ -39,6 +40,18 @@ class adblock;
 }
 
 namespace AdBlock {
+class AdBlockSubscription;
+class AdBlockListwidgetItem : public QListWidgetItem
+{
+public:
+    explicit AdBlockListwidgetItem(QListWidget *parent);
+    AdBlockSubscription *subscription() const;
+    void setSubscription(AdBlockSubscription *subscription);
+
+private:
+    AdBlockSubscription *mSubscription = nullptr;
+};
+
 class ADBLOCKLIB_EXPORT AdBlockSettingWidget : public QWidget
 {
     Q_OBJECT
@@ -78,13 +91,15 @@ private:
     void updateCheckBox();
     void addManualFilter(const QString &text, const QStringList &excludeRules = QStringList());
     void showAutomaticFilterList(QListWidgetItem *item);
+    void slotManualFiltersChanged(QListWidgetItem *item);
     enum List {
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,
-        LastUpdateList = Qt::UserRole + 3
     };
+    AdBlockSubscription *mCustomSubscription = nullptr;
     Ui::adblock *mUi = nullptr;
     bool mChanged = false;
+    bool mBlockUpdate = true;
 };
 }
 

@@ -77,7 +77,7 @@ AdBlockAddSubscriptionDialog::~AdBlockAddSubscriptionDialog()
 
 void AdBlockAddSubscriptionDialog::initializeList(const QStringList &excludeList)
 {
-    QMapIterator<QString, QString> i(AdBlock::AdBlockUtil::listSubscriptions());
+    QMapIterator<QString, QString> i(AdBlock::AdblockUtil::listSubscriptions());
     while (i.hasNext()) {
         i.next();
         if (!excludeList.contains(i.key())) {

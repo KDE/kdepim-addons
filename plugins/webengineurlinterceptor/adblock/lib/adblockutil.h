@@ -11,7 +11,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 /* ============================================================
 * QupZilla - WebKit based browser
@@ -28,7 +28,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 * ============================================================ */
 #ifndef ADBLOCKUTILS_H
 #define ADBLOCKUTILS_H
@@ -45,6 +45,12 @@ public:
     {
         return index >= 0 && container.count() > index;
     }
+
+    static QMap<QString, QString> listSubscriptions();
+
+    static QString localFilterPath();
+    static QString filterCharsFromFilename(const QString &name);
+    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QStringLiteral("(%1)"));
 };
 }
 #endif

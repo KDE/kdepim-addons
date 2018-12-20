@@ -101,7 +101,7 @@ void AdBlockCreateFilterDialog::initialize()
         QListWidgetItem *item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)), mUi->applyListElement);
         item->setData(ElementValue, static_cast<AdBlockBlockableItemsWidget::TypeElement>(i));
         item->setCheckState(Qt::Unchecked);
-        if (i == (int)mCurrentType) {
+        if (i == static_cast<int>(mCurrentType)) {
             item->setFlags(item->flags() & ~Qt::ItemIsEnabled);
         }
     }

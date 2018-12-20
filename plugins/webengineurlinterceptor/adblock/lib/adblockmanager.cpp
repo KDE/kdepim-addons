@@ -20,9 +20,19 @@
 #include "adblockmanager.h"
 #include "adblockmatcher.h"
 #include "adblocksubscription.h"
+#include "adblockinterceptor_debug.h"
+#include "adblockutil.h"
+#include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
+#include <KConfig>
+#include <KConfigGroup>
+#include <QDateTime>
 #include <QDir>
+#include <QSaveFile>
+#include <QStandardPaths>
+#include <QStandardPaths>
 #include <QTextStream>
+#include <QTimer>
 #include <QUrl>
 
 using namespace AdBlock;
@@ -54,17 +64,25 @@ void AdblockManager::reloadConfig()
 
 void AdblockManager::loadSubscriptions()
 {
-    //Clear subscription
     qDeleteAll(mSubscriptions);
     mSubscriptions.clear();
-#if 0
-    QDir adblockDir(DataPaths::currentProfilePath() + "/adblock");
+    const bool enabled = AdBlock::AdBlockSettings::self()->adBlockEnabled();
+    if (!enabled) {
+        return;
+    }
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+
+    mDisabledRules = general.readEntry(QStringLiteral("disabledRules"), QStringList());
+    qDebug() << " mDisabledRules"<<mDisabledRules;
+    //Clear subscription
+    QDir adblockDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock"));
     // Create if necessary
     if (!adblockDir.exists()) {
-        QDir(DataPaths::currentProfilePath()).mkdir("adblock");
+        QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)).mkdir(QStringLiteral("adblock"));
     }
 
-    foreach (const QString &fileName, adblockDir.entryList(QStringList("*.txt"), QDir::Files)) {
+    for (const QString &fileName : adblockDir.entryList(QStringList() << QLatin1String("*.txt"), QDir::Files)) {
         if (fileName == QLatin1String("customlist.txt")) {
             continue;
         }
@@ -91,47 +109,45 @@ void AdblockManager::loadSubscriptions()
 
         mSubscriptions.append(subscription);
     }
- #endif
-    // Prepend EasyList if subscriptions are empty
-    if (mSubscriptions.isEmpty()) {
-//         AdBlockSubscription* easyList = new AdBlockSubscription(tr("EasyList"), this);
-//         easyList->setUrl(QUrl(ADBLOCK_EASYLIST_URL));
-//         easyList->setFilePath(DataPaths::currentProfilePath() + QLatin1String("/adblock/easylist.txt"));
 
-//         mSubscriptions.prepend(easyList);
-    }
-
-    //TODO load it
-    // new AdBlockSubscription(...);
-    // loadSubscription()
-    //TODO load element
-    // Append CustomList
-    AdBlockCustomList *customList = new AdBlockCustomList(this);
-    mSubscriptions.append(customList);
+    mCustomList = new AdBlockCustomList(this);
+    mSubscriptions.append(mCustomList);
     // Load all subscriptions
-    /*
-    foreach (AdBlockSubscription* subscription, mSubscriptions) {
-        subscription->loadSubscription(m_disabledRules);
-
+    foreach (AdBlockSubscription *subscription, mSubscriptions) {
+        subscription->loadSubscription(mDisabledRules);
+        connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
     }
-    */
+    if (!mSubscriptions.isEmpty()) {
+        const QDateTime lastUpdate = general.readEntry(QStringLiteral("lastUpdate"), QDateTime());
+        if (lastUpdate.addDays(AdBlock::AdBlockSettings::self()->adBlockUpdateInterval()) < QDateTime::currentDateTime()) {
+            QTimer::singleShot(1000 * 60, this, &AdblockManager::updateAllSubscriptions);
+        }
+    }
 }
 
 void AdblockManager::save()
 {
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+    general.writeEntry(QStringLiteral("disabledRules"), mDisabledRules);
     foreach (AdBlockSubscription *subscription, mSubscriptions) {
         subscription->saveSubscription();
     }
 }
 
+QStringList AdblockManager::disabledRules() const
+{
+    return mDisabledRules;
+}
+
 void AdblockManager::removeDisabledRule(const QString &filter)
 {
-    //TODO
+    mDisabledRules.removeOne(filter);
 }
 
 void AdblockManager::addDisabledRule(const QString &filter)
 {
-    //TODO
+    mDisabledRules.append(filter);
 }
 
 bool AdblockManager::isEnabled() const
@@ -151,9 +167,11 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
         return result;
     }
 
+    qCDebug(ADBLOCKINTERCEPTOR_LOG) << " urlString" << urlString;
     const AdBlockRule *blockedRule = mAdBlockMatcher->match(info, host, urlString);
     if (blockedRule) {
         result = true;
+        qCDebug(ADBLOCKINTERCEPTOR_LOG) << " blocked !!!!!!!!!!!!" << blockedRule->filter();
         //TODO
     }
     return result;
@@ -167,4 +185,73 @@ bool AdblockManager::canRunOnScheme(const QString &scheme) const
 QList<AdBlockSubscription *> AdblockManager::subscriptions() const
 {
     return mSubscriptions;
+}
+
+void AdblockManager::updateAllSubscriptions()
+{
+    foreach (AdBlockSubscription *subscription, mSubscriptions) {
+        subscription->updateSubscription();
+    }
+
+    KConfig config(QStringLiteral("AdBlockadblockrc"));
+    KConfigGroup general = config.group(QStringLiteral("General"));
+    general.writeEntry(QStringLiteral("lastUpdate"), QDateTime::currentDateTime());
+}
+
+AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const QString &url)
+{
+    if (title.isEmpty() || url.isEmpty()) {
+        return nullptr;
+    }
+
+    QString fileName = AdBlock::AdblockUtil::filterCharsFromFilename(title.toLower()) + QStringLiteral(".txt");
+    QString filePath = AdBlock::AdblockUtil::ensureUniqueFilename(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/adblock/") + fileName);
+
+    QByteArray data = QStringLiteral("Title: %1\nUrl: %2\n[Adblock Plus 1.1.1]").arg(title, url).toLatin1();
+
+    QSaveFile file(filePath);
+    if (!file.open(QFile::WriteOnly)) {
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockManager: Cannot write to file" << filePath;
+        return nullptr;
+    }
+    file.write(data);
+    file.commit();
+
+    AdBlockSubscription *subscription = new AdBlockSubscription(title, this);
+    subscription->setUrl(QUrl(url));
+    subscription->setFilePath(filePath);
+    subscription->loadSubscription(mDisabledRules);
+
+    mSubscriptions.append(subscription);
+    connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
+
+    return subscription;
+}
+
+void AdblockManager::updateMatcher()
+{
+    mAdBlockMatcher->update();
+}
+
+bool AdblockManager::removeSubscription(AdBlockSubscription *subscription)
+{
+    if (!mSubscriptions.contains(subscription) || !subscription->canBeRemoved()) {
+        return false;
+    }
+
+    QFile(subscription->filePath()).remove();
+    mSubscriptions.removeOne(subscription);
+
+    mAdBlockMatcher->update();
+    delete subscription;
+
+    return true;
+}
+
+void AdblockManager::addCustomRule(const QString &filter)
+{
+    AdBlockRule *rule = new AdBlockRule(filter, mCustomList);
+    mCustomList->addRule(rule);
+    mCustomList->saveSubscription();
+    updateMatcher();
 }

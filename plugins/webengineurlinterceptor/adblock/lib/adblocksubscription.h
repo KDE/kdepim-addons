@@ -11,7 +11,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 */
 /* ============================================================
 * QupZilla - WebKit based browser
@@ -28,7 +28,7 @@
 * GNU General Public License for more details.
 *
 * You should have received a copy of the GNU General Public License
-* along with this program.  If not, see <http://www.gnu.org/licenses/>.
+* along with this program.  If not, see <https://www.gnu.org/licenses/>.
 * ============================================================ */
 /**
  * Copyright (c) 2009, Benjamin C. Meyer <ben@meyerhome.net>
@@ -67,9 +67,9 @@
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
 
+class QNetworkAccessManager;
 class QUrl;
-
-class FollowRedirectReply;
+class QNetworkReply;
 namespace AdBlock {
 class AdBlockSubscription : public QObject
 {
@@ -78,12 +78,12 @@ public:
     explicit AdBlockSubscription(const QString &title, QObject *parent = nullptr);
     ~AdBlockSubscription();
 
-    QString title() const;
+    Q_REQUIRED_RESULT QString title() const;
 
-    QString filePath() const;
+    Q_REQUIRED_RESULT QString filePath() const;
     void setFilePath(const QString &path);
 
-    QUrl url() const;
+    Q_REQUIRED_RESULT QUrl url() const;
     void setUrl(const QUrl &url);
 
     virtual void loadSubscription(const QStringList &disabledRules);
@@ -95,12 +95,15 @@ public:
     const AdBlockRule *enableRule(int offset);
     const AdBlockRule *disableRule(int offset);
 
-    virtual bool canEditRules() const;
-    virtual bool canBeRemoved() const;
+    virtual Q_REQUIRED_RESULT bool canEditRules() const;
+    virtual Q_REQUIRED_RESULT bool canBeRemoved() const;
 
-    virtual int addRule(AdBlockRule *rule);
-    virtual bool removeRule(int offset);
+    virtual Q_REQUIRED_RESULT int addRule(AdBlockRule *rule);
+    virtual Q_REQUIRED_RESULT bool removeRule(int offset);
     virtual const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
+
+    Q_REQUIRED_RESULT bool enabled() const;
+    void setEnabled(bool enabled);
 
 public Q_SLOTS:
     void updateSubscription();
@@ -116,7 +119,7 @@ protected Q_SLOTS:
 protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
-    FollowRedirectReply *mReply = nullptr;
+    QNetworkReply *mReply = nullptr;
     QVector<AdBlockRule *> mRules;
 
 private:
@@ -124,7 +127,9 @@ private:
     QString mFilePath;
 
     QUrl mUrl;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
     bool mUpdated = false;
+    bool mEnabled = true;
 };
 
 class AdBlockCustomList : public AdBlockSubscription
