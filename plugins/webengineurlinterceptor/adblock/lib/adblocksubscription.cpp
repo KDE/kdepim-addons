@@ -114,7 +114,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     }
 
     if (!file.open(QFile::ReadOnly)) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for reading" << mFilePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "Unable to open adblock file for reading" << mFilePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
@@ -127,7 +127,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     QString header = textStream.readLine(1024);
 
     if (!header.startsWith(QLatin1String("[Adblock")) || mTitle.isEmpty()) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "invalid format of adblock file" << mFilePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "invalid format of adblock file" << mFilePath;
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
     }
@@ -198,7 +198,7 @@ bool AdBlockSubscription::saveDownloadedData(const QByteArray &data)
     QSaveFile file(mFilePath);
 
     if (!file.open(QFile::WriteOnly)) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << mFilePath;
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "Unable to open adblock file for writing:" << mFilePath;
         return false;
     }
 
@@ -355,7 +355,7 @@ void AdBlockCustomList::saveSubscription()
     QFile file(filePath());
 
     if (!file.open(QFile::ReadWrite | QFile::Truncate)) {
-        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockSubscription::" << __FUNCTION__ << "Unable to open adblock file for writing:" << filePath();
+        qCWarning(ADBLOCKINTERCEPTOR_LOG) << "Unable to open adblock file for writing:" << filePath();
         return;
     }
 
