@@ -63,7 +63,6 @@
 #include "adblockutil.h"
 #include "adblockinterceptor_debug.h"
 
-
 #include <KLocalizedString>
 #include <QFile>
 #include <QTimer>

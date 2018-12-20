@@ -49,7 +49,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mAction->setChecked(false);
     ac->addAction(QStringLiteral("generate_markdown"), mAction);
     connect(mAction, &QAction::triggered, this, &MarkdownInterface::slotActivated);
-    MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);    
+    MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
     setActionType(type);
 
     mStatusBarLabel = new QLabel;
@@ -121,7 +121,7 @@ void MarkdownInterface::slotActivated(bool checked)
                 mDialog->setText(richTextEditor()->toPlainText());
             }
         }
-        );
+                );
     }
     if (checked) {
         mDialog->show();

@@ -36,7 +36,6 @@ GravatarConfigureSettingsPluginWidget::~GravatarConfigureSettingsPluginWidget()
 {
 }
 
-
 void GravatarConfigureSettingsPluginWidget::loadSettings()
 {
     mGravatarConfigWidget->doLoadFromGlobalSettings();

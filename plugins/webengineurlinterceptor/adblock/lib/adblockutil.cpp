@@ -116,8 +116,9 @@ QString AdBlock::AdblockUtil::ensureUniqueFilename(const QString &name, const QS
 
     QFileInfo info(name);
 
-    if (!info.exists())
+    if (!info.exists()) {
         return name;
+    }
 
     const QDir dir = info.absoluteDir();
     const QString fileName = info.fileName();
@@ -128,10 +129,11 @@ QString AdBlock::AdblockUtil::ensureUniqueFilename(const QString &name, const QS
         QString file = fileName;
         int index = file.lastIndexOf(QLatin1Char('.'));
         const QString appendString = appendFormat.arg(i);
-        if (index == -1)
+        if (index == -1) {
             file.append(appendString);
-        else
+        } else {
             file = file.left(index) + appendString + file.mid(index);
+        }
         info.setFile(dir, file);
         i++;
     }

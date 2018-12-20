@@ -74,5 +74,3 @@ bool MarkdownPlugin::hasStatusBarSupport() const
 }
 
 #include "markdownplugin.moc"
-
-

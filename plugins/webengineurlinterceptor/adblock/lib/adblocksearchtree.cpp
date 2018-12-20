@@ -114,7 +114,7 @@ const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInf
     }
 
     QChar c = string[0];
-    Node* node = m_root->children.value(c);
+    Node *node = m_root->children.value(c);
 
     if (!node) {
         return nullptr;

@@ -119,7 +119,6 @@ protected Q_SLOTS:
 protected:
     virtual bool saveDownloadedData(const QByteArray &data);
 
-
     QNetworkReply *mReply = nullptr;
     QVector<AdBlockRule *> mRules;
 

@@ -26,13 +26,10 @@ K_PLUGIN_CLASS_WITH_JSON(GravatarConfigureSettingsPlugin, "messageviewer_gravata
 GravatarConfigureSettingsPlugin::GravatarConfigureSettingsPlugin(QObject *parent, const QList<QVariant> &)
     : MessageViewer::MessageViewerConfigureSettingsPlugin(parent)
 {
-
 }
-
 
 GravatarConfigureSettingsPlugin::~GravatarConfigureSettingsPlugin()
 {
-
 }
 
 void GravatarConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)

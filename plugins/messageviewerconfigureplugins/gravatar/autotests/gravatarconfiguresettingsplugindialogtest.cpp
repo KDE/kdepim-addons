@@ -25,5 +25,4 @@ QTEST_MAIN(GravatarConfigureSettingsPluginDialogTest)
 GravatarConfigureSettingsPluginDialogTest::GravatarConfigureSettingsPluginDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }

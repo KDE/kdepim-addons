@@ -82,7 +82,7 @@ void AdblockManager::loadSubscriptions()
         QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)).mkdir(QStringLiteral("adblock"));
     }
 
-    for ( const QString &fileName : adblockDir.entryList(QStringList() << QLatin1String("*.txt"), QDir::Files)) {
+    for (const QString &fileName : adblockDir.entryList(QStringList() << QLatin1String("*.txt"), QDir::Files)) {
         if (fileName == QLatin1String("customlist.txt")) {
             continue;
         }
@@ -113,7 +113,7 @@ void AdblockManager::loadSubscriptions()
     mCustomList = new AdBlockCustomList(this);
     mSubscriptions.append(mCustomList);
     // Load all subscriptions
-    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+    foreach (AdBlockSubscription *subscription, mSubscriptions) {
         subscription->loadSubscription(mDisabledRules);
         connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
     }
@@ -142,7 +142,7 @@ QStringList AdblockManager::disabledRules() const
 
 void AdblockManager::removeDisabledRule(const QString &filter)
 {
-     mDisabledRules.removeOne(filter);
+    mDisabledRules.removeOne(filter);
 }
 
 void AdblockManager::addDisabledRule(const QString &filter)
@@ -189,7 +189,7 @@ QList<AdBlockSubscription *> AdblockManager::subscriptions() const
 
 void AdblockManager::updateAllSubscriptions()
 {
-    foreach (AdBlockSubscription* subscription, mSubscriptions) {
+    foreach (AdBlockSubscription *subscription, mSubscriptions) {
         subscription->updateSubscription();
     }
 
@@ -217,7 +217,7 @@ AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const
     file.write(data);
     file.commit();
 
-    AdBlockSubscription* subscription = new AdBlockSubscription(title, this);
+    AdBlockSubscription *subscription = new AdBlockSubscription(title, this);
     subscription->setUrl(QUrl(url));
     subscription->setFilePath(filePath);
     subscription->loadSubscription(mDisabledRules);
@@ -233,7 +233,7 @@ void AdblockManager::updateMatcher()
     mAdBlockMatcher->update();
 }
 
-bool AdblockManager::removeSubscription(AdBlockSubscription* subscription)
+bool AdblockManager::removeSubscription(AdBlockSubscription *subscription)
 {
     if (!mSubscriptions.contains(subscription) || !subscription->canBeRemoved()) {
         return false;

@@ -121,14 +121,14 @@ void AdBlockSettingWidget::slotManualFiltersChanged(QListWidgetItem *item)
         if (offset >= 0) {
             const AdBlockRule *oldRule = mCustomSubscription->rule(mUi->manualFiltersListWidget->row(item));
             if (item->checkState() == Qt::Checked && !oldRule->isEnabled()) {
-                const AdBlockRule* rule = mCustomSubscription->enableRule(offset);
+                const AdBlockRule *rule = mCustomSubscription->enableRule(offset);
                 qDebug() << " enable " << rule;
             } else if (item->checkState() == Qt::Unchecked && oldRule->isEnabled()) {
-                const AdBlockRule* rule = mCustomSubscription->disableRule(offset);
+                const AdBlockRule *rule = mCustomSubscription->disableRule(offset);
                 qDebug() << " disable " << rule;
             } else if (mCustomSubscription->canEditRules()) {
-                AdBlockRule* newRule = new AdBlockRule(item->text(), mCustomSubscription);
-                const AdBlockRule* rule = mCustomSubscription->replaceRule(newRule, offset);
+                AdBlockRule *newRule = new AdBlockRule(item->text(), mCustomSubscription);
+                const AdBlockRule *rule = mCustomSubscription->replaceRule(newRule, offset);
 
                 //adjustItemFeatures(item, rule);
             }
@@ -252,7 +252,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     // ------------------------------------------------------------------------------
 
     // automatic filters
-    for (AdBlockSubscription* subscription : AdblockManager::self()->subscriptions()) {
+    for (AdBlockSubscription *subscription : AdblockManager::self()->subscriptions()) {
         const QString url = subscription->url().toString();
         const QString name = subscription->title();
         qDebug() << " url" << url << " subscription " << name;
@@ -295,7 +295,6 @@ void AdBlockSettingWidget::save()
     saveCheckBox(mUi->checkEnableAdblock, AdBlock::AdBlockSettings::self()->adBlockEnabledItem());
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
-
 
     mCustomSubscription->saveSubscription();
     mChanged = false;
@@ -425,7 +424,7 @@ void AdBlockSettingWidget::slotImportFilters()
 
 void AdBlockSettingWidget::addManualFilter(const QString &text, const QStringList &excludeRules)
 {
-    AdBlockRule* rule = new AdBlockRule(text, mCustomSubscription);
+    AdBlockRule *rule = new AdBlockRule(text, mCustomSubscription);
     if (excludeRules.contains(text)) {
         rule->setEnabled(false);
     }
@@ -461,7 +460,6 @@ void AdBlockSettingWidget::slotAutomaticFilterDouble(QListWidgetItem *item)
 AdBlockListwidgetItem::AdBlockListwidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
-
 }
 
 AdBlockSubscription *AdBlockListwidgetItem::subscription() const

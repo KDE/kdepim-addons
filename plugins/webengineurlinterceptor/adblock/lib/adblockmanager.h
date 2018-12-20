@@ -49,7 +49,7 @@ public:
 
     void updateAllSubscriptions();
 
-    AdBlockSubscription* addSubscription(const QString &title, const QString &url);
+    AdBlockSubscription *addSubscription(const QString &title, const QString &url);
 
     Q_REQUIRED_RESULT bool removeSubscription(AdBlockSubscription *subscription);
     void addCustomRule(const QString &filter);

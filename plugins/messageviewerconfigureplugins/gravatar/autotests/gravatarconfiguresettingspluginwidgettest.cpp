@@ -28,7 +28,6 @@ QTEST_MAIN(GravatarConfigureSettingsPluginWidgetTest)
 GravatarConfigureSettingsPluginWidgetTest::GravatarConfigureSettingsPluginWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
