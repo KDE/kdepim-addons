@@ -83,7 +83,6 @@ private:
     void slotShowList();
     void slotImportFilters();
     void slotExportFilters();
-    void slotUpdateManualButtons();
     void slotEditFilter();
     void slotManualFilterLineEditTextChanged(const QString &);
     void slotAutomaticFilterDouble(QListWidgetItem *item);
@@ -92,6 +91,7 @@ private:
     void addManualFilter(const QString &text, const QStringList &excludeRules = QStringList());
     void showAutomaticFilterList(QListWidgetItem *item);
     void slotManualFiltersChanged(QListWidgetItem *item);
+    void slotSelectionChanged();
     enum List {
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,

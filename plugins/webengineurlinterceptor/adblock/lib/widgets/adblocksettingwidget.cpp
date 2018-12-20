@@ -83,9 +83,8 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
     mUi->removeButton->setIcon(QIcon::fromTheme(QStringLiteral("list-remove")));
     connect(mUi->removeButton, &QPushButton::clicked, this, &AdBlockSettingWidget::removeRule);
     connect(mUi->removeSubscription, &QPushButton::clicked, this, &AdBlockSettingWidget::slotRemoveSubscription);
-    connect(mUi->manualFiltersListWidget, &QListWidget::currentItemChanged, this, &AdBlockSettingWidget::slotUpdateManualButtons);
     connect(mUi->manualFiltersListWidget, &QListWidget::itemChanged, this, &AdBlockSettingWidget::slotManualFiltersChanged);
-
+    connect(mUi->manualFiltersListWidget, &QListWidget::itemSelectionChanged, this, &AdBlockSettingWidget::slotSelectionChanged);
     mUi->spinBox->setSuffix(ki18np(" day", " days"));
 
     mUi->removeSubscription->setEnabled(false);
@@ -105,7 +104,7 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
     connect(mUi->importFilters, &QPushButton::clicked, this, &AdBlockSettingWidget::slotImportFilters);
     connect(mUi->exportFilters, &QPushButton::clicked, this, &AdBlockSettingWidget::slotExportFilters);
     connect(mUi->addFilterLineEdit, &QLineEdit::textChanged, this, &AdBlockSettingWidget::slotManualFilterLineEditTextChanged);
-    slotUpdateManualButtons();
+    slotSelectionChanged();
     mUi->insertButton->setEnabled(false);
 }
 
@@ -155,14 +154,6 @@ void AdBlockSettingWidget::slotUpdateButtons()
     const bool enabled = mUi->automaticFiltersListWidget->currentItem();
     mUi->removeSubscription->setEnabled(enabled);
     mUi->showList->setEnabled(enabled);
-}
-
-void AdBlockSettingWidget::slotUpdateManualButtons()
-{
-    const bool enabled = mUi->manualFiltersListWidget->currentItem();
-    mUi->removeButton->setEnabled(enabled);
-    mUi->editFilter->setEnabled(enabled);
-    mUi->exportFilters->setEnabled(mUi->manualFiltersListWidget->count() > 0);
 }
 
 void AdBlockSettingWidget::slotInfoLinkActivated(const QString &url)
@@ -457,6 +448,14 @@ void AdBlockSettingWidget::slotAutomaticFilterDouble(QListWidgetItem *item)
     showAutomaticFilterList(item);
 }
 
+void AdBlockSettingWidget::slotSelectionChanged()
+{
+    const int numberOfElement(mUi->manualFiltersListWidget->selectedItems().count());
+    mUi->exportFilters->setEnabled(numberOfElement > 0);
+    mUi->editFilter->setEnabled(numberOfElement == 1);
+    mUi->removeButton->setEnabled(numberOfElement > 0);
+}
+
 AdBlockListwidgetItem::AdBlockListwidgetItem(QListWidget *parent)
     : QListWidgetItem(parent)
 {
@@ -471,3 +470,4 @@ void AdBlockListwidgetItem::setSubscription(AdBlockSubscription *subscription)
 {
     mSubscription = subscription;
 }
+
