@@ -46,7 +46,6 @@ InvokeWrapper<Arg, R, C> invoke(R *receiver, void (C::*memberFunction)(Arg))
 
 AdBlockBlockableItemsJob::AdBlockBlockableItemsJob(QObject *parent)
     : QObject(parent)
-    , mWebEngineView(nullptr)
 {
 }
 
