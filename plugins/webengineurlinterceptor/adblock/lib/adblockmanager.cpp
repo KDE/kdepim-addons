@@ -74,7 +74,6 @@ void AdblockManager::loadSubscriptions()
     KConfigGroup general = config.group(QStringLiteral("General"));
 
     mDisabledRules = general.readEntry(QStringLiteral("disabledRules"), QStringList());
-    qDebug() << " mDisabledRules"<<mDisabledRules;
     //Clear subscription
     QDir adblockDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock"));
     // Create if necessary
