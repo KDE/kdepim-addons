@@ -19,7 +19,6 @@
 #include "sharetextpurposemenuwidget.h"
 #include "sharetextplugineditorinterface.h"
 #include <KPIMTextEdit/RichTextEditor>
-#include <QDebug>
 SharetextPurposeMenuWidget::SharetextPurposeMenuWidget(QWidget *parentWidget, QObject *parent)
     : PimCommon::PurposeMenuWidget(parentWidget, parent)
 {

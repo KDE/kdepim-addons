@@ -22,7 +22,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QDebug>
 
 ExpertPluginInterface::ExpertPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
