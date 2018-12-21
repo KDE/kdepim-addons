@@ -105,6 +105,9 @@ void AdBlockSubscription::setUrl(const QUrl &url)
 
 void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
 {
+    if (!enabled()) {
+        return;
+    }
     QFile file(mFilePath);
     //qCWarning(ADBLOCKINTERCEPTOR_LOG) << "loadSubscription:: loading path:" << mFilePath;
     if (!file.exists()) {
