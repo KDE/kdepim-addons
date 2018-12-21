@@ -229,11 +229,11 @@ bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QS
     if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
         return false;
     }
-//qDebug() << " bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl)";
+    //qDebug() << " bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl)";
     bool matched = stringMatch(domain, encodedUrl);
 
     if (matched) {
-        qDebug() << " matched !!!!!" << domain << " encoded " << encodedUrl;
+        //qDebug() << " matched !!!!!" << domain << " encoded " << encodedUrl;
         // Check domain restrictions
         if (hasOption(DomainRestrictedOption) && !matchDomain(request.firstPartyUrl().host())) {
             return false;

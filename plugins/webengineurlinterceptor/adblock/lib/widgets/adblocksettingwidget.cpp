@@ -73,7 +73,7 @@ AdBlockSettingWidget::AdBlockSettingWidget(QWidget *parent)
     connect(mUi->hintLabel, &QLabel::linkActivated, this, &AdBlockSettingWidget::slotInfoLinkActivated);
     mUi->hintLabel->setContextMenuPolicy(Qt::NoContextMenu);
 
-    mUi->manualFiltersListWidget->setSelectionMode(QAbstractItemView::MultiSelection);
+    mUi->manualFiltersListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
 
     mUi->searchLine->setListWidget(mUi->manualFiltersListWidget);
 
@@ -121,15 +121,11 @@ void AdBlockSettingWidget::slotManualFiltersChanged(QListWidgetItem *item)
             const AdBlockRule *oldRule = mCustomSubscription->rule(mUi->manualFiltersListWidget->row(item));
             if (item->checkState() == Qt::Checked && !oldRule->isEnabled()) {
                 const AdBlockRule *rule = mCustomSubscription->enableRule(offset);
-                qDebug() << " enable " << rule;
             } else if (item->checkState() == Qt::Unchecked && oldRule->isEnabled()) {
                 const AdBlockRule *rule = mCustomSubscription->disableRule(offset);
-                qDebug() << " disable " << rule;
             } else if (mCustomSubscription->canEditRules()) {
                 AdBlockRule *newRule = new AdBlockRule(item->text(), mCustomSubscription);
                 const AdBlockRule *rule = mCustomSubscription->replaceRule(newRule, offset);
-
-                //adjustItemFeatures(item, rule);
             }
             hasChanged();
         }
@@ -246,7 +242,6 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
     for (AdBlockSubscription *subscription : AdblockManager::self()->subscriptions()) {
         const QString url = subscription->url().toString();
         const QString name = subscription->title();
-        qDebug() << " url" << url << " subscription " << name;
         if (!url.isEmpty()) {
             AdBlockListwidgetItem *subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
