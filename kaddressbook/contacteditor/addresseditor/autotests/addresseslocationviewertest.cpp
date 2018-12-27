@@ -2,7 +2,7 @@
     This file is part of Contact Editor.
 
     Copyright (C) 2016 eyeOS S.L.U., a Telefonica company, sales@eyeos.com
-    Copyright (C) 2016-2018 Laurent Montel <laurent.montel@kdab.com>
+    Copyright (C) 2016-2019 Laurent Montel <laurent.montel@kdab.com>
 
     This library is free software; you can redistribute it and/or modify it
     under the terms of the GNU Library General Public License as published by
