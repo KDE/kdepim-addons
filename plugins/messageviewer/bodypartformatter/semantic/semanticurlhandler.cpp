@@ -94,11 +94,8 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
             qCWarning(SEMANTIC_LOG) << "sementic action: data not found";
             return true;
         }
-        if (canAddToCalendar(m)) {
-            addToCalendar(m);
-        } else {
-            qCWarning(SEMANTIC_LOG) << "Impossible to add to calendar. Need to investigate it.";
-        }
+
+        handleContextMenuRequest(part, path, QCursor::pos());
         return true;
     }
 
