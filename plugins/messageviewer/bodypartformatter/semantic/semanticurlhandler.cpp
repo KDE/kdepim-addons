@@ -58,6 +58,7 @@
 #include <QUrlQuery>
 #include <QDBusPendingReply>
 #include <QDBusReply>
+#include <QVersionNumber>
 
 #include <memory>
 #include <type_traits>
@@ -484,9 +485,19 @@ void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart 
     part->nodeHelper()->addTempFile(f.fileName());
     f.setAutoRemove(false);
 
-    QDBusMessage msg
-        = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral(
-                                             "org.kde.kdeconnect.device.share"), QStringLiteral("openFile"));
+
+    QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
+    QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
+
+    QString method;
+    if(kdeconnectVersion >= QVersionNumber(1, 4, 0)) {
+        method = QStringLiteral("openFile");
+    } else {
+        method = QStringLiteral("shareUrl");
+    }
+
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral(
+                                             "org.kde.kdeconnect.device.share"), method);
     msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
 
     QDBusConnection::sessionBus().send(msg);
