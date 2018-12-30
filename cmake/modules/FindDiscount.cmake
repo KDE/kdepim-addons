@@ -8,7 +8,7 @@
 
 # Copyright (c) 2017, Julian Wolff, <wolff@julianwolff.de>
 # Copyright (c) 2018, Sune Vuorela, <sune@kde.org>
-# Copyright (c) 2018, Laurent Montel, <montel@kde.org>
+# Copyright (c) 2018-2019, Laurent Montel, <montel@kde.org>
 #
 # Redistribution and use is allowed according to the terms of the BSD license.
 # For details see the accompanying COPYING-CMAKE-SCRIPTS file.
