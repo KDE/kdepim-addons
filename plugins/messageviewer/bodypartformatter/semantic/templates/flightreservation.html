@@ -17,7 +17,13 @@
         {% endif %}
     </tr>
     <tr>
-        <td>{{ trip.departureTime|formatDateTime }}</td>
+        <td>
+            {% if trip.departureTime %}
+                {{ trip.departureTime|formatDateTime }}
+            {% else %}
+                {{ trip.departureDay|formatDate }}
+            {% endif %}
+        </td>
         <td style="white-space: nowrap; text-align:center;" title="{{ trip.airline.name }}">{{ trip.airline.iataCode }} {{ trip.flightNumber }}</td>
         <td>{{ trip.arrivalTime|formatDateTime }}</td>
     </tr>

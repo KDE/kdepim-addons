@@ -15,7 +15,13 @@
         </td>
     </tr>
     <tr>
-        <td>{{ trip.departureTime|formatDateTime }}</td>
+        <td>
+            {% if trip.departureTime %}
+                {{ trip.departureTime|formatDateTime }}
+            {% else %}
+                {{ trip.departureDay|formatDate }}
+            {% endif %}
+        </td>
         <td style="white-space: nowrap; text-align:center;">
             {% if trip.trainName and trip.trainNumber %}
                 {{ trip.trainName }} <br> {{ trip.trainNumber }}
