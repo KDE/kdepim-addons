@@ -30,6 +30,7 @@
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Flight>
+#include <KItinerary/LocationUtil>
 #include <KItinerary/Organization>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
@@ -112,25 +113,15 @@ bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mime
     return false;
 }
 
-template<typename T>
-static QString placeName(const T &place)
+static QString escapePlaceName(const QString &name)
 {
-    return place.name().replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
-}
-
-template<>
-QString placeName(const Airport &place)
-{
-    if (place.name().isEmpty()) {
-        return place.iataCode();
-    }
-    return place.name().replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
+    return QString(name).replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
 }
 
 static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QString &placeName, int zoom = 17)
 {
     if (geo.isValid()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", placeName));
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", escapePlaceName(placeName)));
         QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -148,7 +139,7 @@ static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QStri
 static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QString &placeName)
 {
     if (!addr.addressLocality().isEmpty()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", placeName));
+        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", escapePlaceName(placeName)));
         QObject::connect(action, &QAction::triggered, menu, [addr]() {
             QUrl url;
             url.setScheme(QStringLiteral("https"));
@@ -166,14 +157,20 @@ static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QStri
     }
 }
 
-template<typename T>
-static void addGoToMapAction(QMenu *menu, const T &place)
+static void addGoToMapAction(QMenu *menu, const QVariant &place, QSet<QString> &places)
 {
-    const auto name = placeName(place);
-    // zoom out further from airports, they are larger and you usually want to go further away from them
-    addGoToMapAction(menu, place.geo(), name, std::is_same<T, Airport>::value ? 12 : 17);
-    if (!place.geo().isValid()) {
-        addGoToMapAction(menu, place.address(), name);
+    const auto name = LocationUtil::name(place);
+    if (places.contains(name)) {
+        return;
+    }
+    places.insert(name);
+
+    const auto geo = LocationUtil::geo(place);
+    const auto zoom = JsonLd::isA<Airport>(place) ? 12 : 17;
+    if (geo.isValid()) {
+        addGoToMapAction(menu, geo, name, zoom);
+    } else {
+        addGoToMapAction(menu, LocationUtil::address(place), name);
     }
 }
 
@@ -208,70 +205,14 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     QSet<QString> places;
     for (const auto &d : m->data()) {
         const auto res = d.reservations.at(0); // for multi-traveler reservations all subsequent ones are equal regarding what we are interested here
-        if (JsonLd::isA<LodgingReservation>(res)) {
-            addGoToMapAction(&menu, res.value<LodgingReservation>().reservationFor().value<LodgingBusiness>());
-        } else if (JsonLd::isA<EventReservation>(res)) {
-
-            const auto event = res.value<EventReservation>().reservationFor().value<Event>();
-            Place location;
-            if (JsonLd::canConvert<Place>(event.location())) {
-                location = JsonLd::convert<Place>(event.location());
-                addGoToMapAction(&menu, location);
-            }
-
-        } else if (JsonLd::isA<FlightReservation>(res)) {
-            const auto flight = res.value<FlightReservation>().reservationFor().value<Flight>();
-
-            auto airport = flight.departureAirport();
-            if (!places.contains(airport.iataCode())) {
-                addGoToMapAction(&menu, airport);
-                places.insert(airport.iataCode());
-            }
-
-            airport = flight.arrivalAirport();
-            if (!places.contains(airport.iataCode())) {
-                addGoToMapAction(&menu, airport);
-                places.insert(airport.iataCode());
-            }
-        } else if (JsonLd::isA<TrainReservation>(res)) {
-            const auto trip = res.value<TrainReservation>().reservationFor().value<TrainTrip>();
-            if (!places.contains(trip.departureStation().name())) {
-                addGoToMapAction(&menu, trip.departureStation());
-                places.insert(trip.departureStation().name());
-            }
-            if (!places.contains(trip.arrivalStation().name())) {
-                addGoToMapAction(&menu, trip.arrivalStation());
-                places.insert(trip.arrivalStation().name());
-            }
-        } else if (JsonLd::isA<BusReservation>(res)) {
-            const auto trip = res.value<BusReservation>().reservationFor().value<BusTrip>();
-            if (!places.contains(trip.departureBusStop().name())) {
-                addGoToMapAction(&menu, trip.departureBusStop());
-                places.insert(trip.departureBusStop().name());
-            }
-            if (!places.contains(trip.arrivalBusStop().name())) {
-                addGoToMapAction(&menu, trip.arrivalBusStop());
-                places.insert(trip.arrivalBusStop().name());
-            }
-        } else if (JsonLd::isA<FoodEstablishmentReservation>(res)) {
-            addGoToMapAction(&menu, res.value<FoodEstablishmentReservation>().reservationFor().value<FoodEstablishment>());
-        } else if (JsonLd::isA<RentalCarReservation>(res)) {
-            const auto pickupLocation = res.value<RentalCarReservation>().pickupLocation();
-            if (!places.contains(pickupLocation.name())) {
-                addGoToMapAction(&menu, pickupLocation);
-                places.insert(pickupLocation.name());
-            }
-            const auto dropoffLocation = res.value<RentalCarReservation>().dropoffLocation();
-            if (!places.contains(dropoffLocation.name())) {
-                addGoToMapAction(&menu, dropoffLocation);
-                places.insert(dropoffLocation.name());
-            }
-        } else if (JsonLd::isA<TaxiReservation>(res)) {
-            const auto pickupLocation = res.value<TaxiReservation>().pickupLocation();
-            if (!places.contains(pickupLocation.name())) {
-                addGoToMapAction(&menu, pickupLocation);
-                places.insert(pickupLocation.name());
-            }
+        if (LocationUtil::isLocationChange(res)) {
+            const auto dep = LocationUtil::departureLocation(res);
+            addGoToMapAction(&menu, dep, places);
+            const auto arr = LocationUtil::arrivalLocation(res);
+            addGoToMapAction(&menu, arr, places);
+        } else {
+            const auto loc = LocationUtil::location(res);
+            addGoToMapAction(&menu, loc, places);
         }
     }
 
