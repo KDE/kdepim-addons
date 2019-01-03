@@ -36,6 +36,7 @@
 #include <KItinerary/SortUtil>
 #include <KItinerary/TrainTrip>
 #include <KItinerary/Taxi>
+#include <KItinerary/Event>
 
 #include <KMime/Content>
 
@@ -211,6 +212,15 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         const auto res = d.reservations.at(0); // for multi-traveler reservations all subsequent ones are equal regarding what we are interested here
         if (JsonLd::isA<LodgingReservation>(res)) {
             addGoToMapAction(&menu, res.value<LodgingReservation>().reservationFor().value<LodgingBusiness>());
+        } else if (JsonLd::isA<EventReservation>(res)) {
+
+            const auto event = res.value<EventReservation>().reservationFor().value<Event>();
+            Place location;
+            if (JsonLd::canConvert<Place>(event.location())) {
+                location = JsonLd::convert<Place>(event.location());
+                addGoToMapAction(&menu, location);
+            }
+
         } else if (JsonLd::isA<FlightReservation>(res)) {
             const auto flight = res.value<FlightReservation>().reservationFor().value<Flight>();
 
@@ -389,7 +399,7 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
     for (const auto &d : memento->data()) {
         auto event = d.event;
         if (!event) {
-            event.reset(new Event);
+            event.reset(new KCalCore::Event);
             CalendarHandler::fillEvent(d.reservations, event);
             if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
                 continue;
