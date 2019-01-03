@@ -64,7 +64,7 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
         if (event) {
             source->setAkonadiIdForIncidence(event, parser.akonadiId());
             source->calendar()->addEvent(event);
-            Q_FOREACH (const CalendarEvents::EventData &dt, parser.eventData()) {
+            for (const CalendarEvents::EventData &dt : parser.eventData()) {
                 if (uniqueEventData) {
                     expectedData.insert(dt.startDateTime().date(), dt);
                 } else {

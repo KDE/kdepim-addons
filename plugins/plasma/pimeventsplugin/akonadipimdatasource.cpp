@@ -103,7 +103,9 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidenc
 void AkonadiPimDataSource::onSettingsChanged()
 {
     QSet<Akonadi::Collection> monitored;
-    Q_FOREACH (const Akonadi::Collection &col, mCalendar->collections()) {
+    const auto collections = mCalendar->collections();
+    monitored.reserve(collections.count());
+    for (const Akonadi::Collection &col : collections) {
         monitored.insert(col);
     }
 
