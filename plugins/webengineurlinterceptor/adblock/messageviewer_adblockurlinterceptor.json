@@ -61,7 +61,7 @@
         "Name[tr]": "Adblock",
         "Name[uk]": "Блокування реклами",
         "Name[x-test]": "xxAdblockxx",
-        "Name[zh_CN]": "广告屏蔽",
+        "Name[zh_CN]": "Adblock",
         "ServiceTypes": [
             "WebEngineViewer/UrlInterceptor"
         ],

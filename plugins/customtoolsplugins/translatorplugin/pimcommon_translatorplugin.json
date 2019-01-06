@@ -62,7 +62,7 @@
         "Name[tr]": "Çeviren",
         "Name[uk]": "Перекладач",
         "Name[x-test]": "xxTranslatorxx",
-        "Name[zh_CN]": "翻译者",
+        "Name[zh_CN]": "翻译服务",
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"
         ],
