@@ -234,7 +234,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
         for (const QString &deviceId : reply.value()) {
             QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
 
-            QDBusReply<bool> pluginReply = deviceIface.call(QLatin1String("hasPlugin"), QLatin1String("kdeconnect_share"));
+            QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1String("kdeconnect_share"));
 
             if (pluginReply.value()) {
                 action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", deviceIface.property("name").toString()));

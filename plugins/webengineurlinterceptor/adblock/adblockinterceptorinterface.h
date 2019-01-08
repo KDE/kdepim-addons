@@ -25,7 +25,7 @@
 class QWebEngineView;
 namespace AdBlock {
 class AdblockManager;
-class AdBlockResult;
+struct AdBlockResult;
 }
 class AdblockInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
 {

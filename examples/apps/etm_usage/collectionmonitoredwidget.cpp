@@ -42,7 +42,7 @@ CollectionMonitoredWidget::CollectionMonitoredWidget(QWidget *parent, Qt::Window
 
     m_etw = new EntityTreeWidget(splitter);
     m_etw->init();
-    connect(m_etw->view()->selectionModel(), SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(selectionChanged(QItemSelection,QItemSelection)));
+    connect(m_etw->view()->selectionModel(), &QItemSelectionModel::selectionChanged, this, &CollectionMonitoredWidget::selectionChanged);
 
     m_oneCollectionChangeRecorder = new Akonadi::Monitor(this);
 

@@ -36,9 +36,6 @@ public:
     QString description() const override;
     bool canWorkOnHtml() const override;
     bool hasStatusBarSupport() const override;
-
-Q_SIGNALS:
-    void configChanged();
 };
 
 #endif // MARKDOWNPLUGIN_H

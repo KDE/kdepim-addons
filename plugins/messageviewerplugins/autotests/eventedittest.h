@@ -25,7 +25,7 @@ class EventEditTest : public QObject
 {
     Q_OBJECT
 public:
-    EventEditTest();
+    explicit EventEditTest(QObject *parent = nullptr);
 
 private Q_SLOTS:
     void shouldHaveDefaultValuesOnCreation();

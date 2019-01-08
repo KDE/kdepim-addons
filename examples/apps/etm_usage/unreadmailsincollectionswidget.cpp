@@ -83,7 +83,7 @@ UnreadMailsInCollectionsWidget::UnreadMailsInCollectionsWidget(QWidget *parent, 
 {
     QVBoxLayout *layout = new QVBoxLayout(this);
     QPushButton *configureButton = new QPushButton(QStringLiteral("Configure"));
-    connect(configureButton, SIGNAL(clicked(bool)), SLOT(configure()));
+    connect(configureButton, &QAbstractButton::clicked, this, &UnreadMailsInCollectionsWidget::configure);
     layout->addWidget(configureButton);
 
     QSplitter *splitter = new QSplitter;

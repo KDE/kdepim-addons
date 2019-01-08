@@ -82,28 +82,28 @@ public:
         const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
         const auto logo = pass->logo();
         if (!logo.isNull()) {
-            const auto fileName = dir + QStringLiteral("/logo.png");
+            const QString fileName = dir + QStringLiteral("/logo.png");
             logo.save(fileName);
             pass->setProperty("logoUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto strip = pass->strip();
         if (!strip.isNull()) {
-            const auto fileName = dir + QStringLiteral("/strip.png");
+            const QString fileName = dir + QStringLiteral("/strip.png");
             strip.save(fileName);
             pass->setProperty("stripUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto background = pass->background();
         if (!background.isNull()) {
-            const auto fileName = dir + QStringLiteral("/background.png");
+            const QString fileName = dir + QStringLiteral("/background.png");
             background.save(fileName);
             pass->setProperty("backgroundUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
         const auto footer = pass->footer();
         if (!footer.isNull()) {
-            const auto fileName = dir + QStringLiteral("/footer.png");
+            const QString fileName = dir + QStringLiteral("/footer.png");
             footer.save(fileName);
             pass->setProperty("footerUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
@@ -128,7 +128,7 @@ public:
                 code->setData(barcode.message());
                 code->toImage(code->minimumSize()); // minimumSize is only available after we rendered once...
 
-                const auto fileName = dir + QStringLiteral("/barcode.png");
+                const QString fileName = dir + QStringLiteral("/barcode.png");
                 code->toImage(code->minimumSize()).save(fileName);
 
                 pass->setProperty("barcodeUrl", QUrl::fromLocalFile(fileName));

@@ -174,8 +174,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         if (!str.isEmpty()) {
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2</td></tr>\n")
-                             .arg(i18n("BCC: "))
-                             .arg(str));
+                             .arg(i18n("BCC: "), str));
         }
     }
 
@@ -203,10 +202,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
             }
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2/%3, <strong>%4</strong></td></tr>\n")
-                             .arg(i18n("Bugzilla: "))
-                             .arg(mHeaderStyleUtil.strToHtml(product))
-                             .arg(mHeaderStyleUtil.strToHtml(component))
-                             .arg(mHeaderStyleUtil.strToHtml(status)));
+                             .arg(i18n("Bugzilla: "), mHeaderStyleUtil.strToHtml(product), mHeaderStyleUtil.strToHtml(component), mHeaderStyleUtil.strToHtml(status)));
         }
     }
 
@@ -215,8 +211,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
             const QString to = hrd->asUnicodeString();
             headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                             "<td>%2</tr>\n")
-                             .arg(i18n("MDN To: "))
-                             .arg(mHeaderStyleUtil.strToHtml(to)));
+                             .arg(i18n("MDN To: "), mHeaderStyleUtil.strToHtml(to)));
         }
     }
 

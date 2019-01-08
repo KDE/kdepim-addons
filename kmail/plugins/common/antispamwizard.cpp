@@ -536,7 +536,7 @@ void AntiSpamWizard::checkToolAvailability()
                     const KConfigGroup grp = resourceFile.group(QStringLiteral("network"));
                     if (grp.isValid()) {
                         const QString host = grp.readEntry(QStringLiteral("ImapServer"));
-                        if (host.toLower().contains(pattern.toLower())) {
+                        if (host.contains(pattern.toLower(), Qt::CaseInsensitive)) {
                             mInfoPage->addAvailableTool((*it).getVisibleName());
                             found = true;
                         }
@@ -546,7 +546,7 @@ void AntiSpamWizard::checkToolAvailability()
                     const KConfigGroup grp = resourceFile.group(QStringLiteral("General"));
                     if (grp.isValid()) {
                         const QString host = grp.readEntry(QStringLiteral("host"));
-                        if (host.toLower().contains(pattern.toLower())) {
+                        if (host.contains(pattern.toLower(), Qt::CaseInsensitive)) {
                             mInfoPage->addAvailableTool((*it).getVisibleName());
                             found = true;
                         }

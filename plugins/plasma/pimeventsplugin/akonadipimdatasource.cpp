@@ -45,9 +45,6 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
 
     mCalendar = new EventModel(this);
 
-    const auto config = KSharedConfig::openConfig();
-    const auto group = config->group("PIMEventsPlugin");
-    const QList<qint64> calendars = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
     onSettingsChanged();
 
     // Would be nice to have a proper API to read KOrganizer calendar colors...

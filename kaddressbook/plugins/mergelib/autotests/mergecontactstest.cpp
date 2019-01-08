@@ -23,7 +23,8 @@
 
 using namespace KABMergeContacts;
 using namespace KContacts;
-MergeContactsTest::MergeContactsTest()
+MergeContactsTest::MergeContactsTest(QObject *parent)
+    : QObject(parent)
 {
 }
 

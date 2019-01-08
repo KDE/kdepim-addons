@@ -76,7 +76,7 @@ NoteViewer::NoteViewer(QWidget *parent, Qt::WindowFlags f)
 void NoteViewer::setIndex(const QPersistentModelIndex &index)
 {
     m_persistentIndex = index;
-    connect(m_persistentIndex.model(), SIGNAL(dataChanged(QModelIndex,QModelIndex)), SLOT(dataChanged(QModelIndex,QModelIndex)));
+    connect(m_persistentIndex.model(), &QAbstractItemModel::dataChanged, this, &NoteViewer::dataChanged);
     populateWidget(m_persistentIndex);
 }
 

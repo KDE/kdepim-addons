@@ -120,7 +120,7 @@ void EntityTreeWidget::init()
     m_etm = getETM();
     connectTreeToModel(m_treeView, m_etm);
     connect(m_typeComboBox, SIGNAL(currentIndexChanged(int)), SLOT(mimeTypesChoiceChanged(int)));
-    connect(m_typeLineEdit, SIGNAL(textChanged(QString)), SLOT(mimeTypesChanged(QString)));
+    connect(m_typeLineEdit, &QLineEdit::textChanged, this, &EntityTreeWidget::mimeTypesChanged);
 }
 
 Akonadi::Monitor *EntityTreeWidget::monitor() const

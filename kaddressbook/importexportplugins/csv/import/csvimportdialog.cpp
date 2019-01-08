@@ -197,7 +197,7 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mDelimiterEdit, QOverload<>::of(&QLineEdit::returnPressed), this, [this]() {
         customDelimiterChanged();
     });
-    connect(mDelimiterEdit, QOverload<const QString &>::of(&QLineEdit::textChanged), [this](const QString &str) {
+    connect(mDelimiterEdit, QOverload<const QString &>::of(&QLineEdit::textChanged), this, [this](const QString &str) {
         customDelimiterChanged(str);
     });
     connect(mComboQuote, QOverload<const QString &>::of(&KComboBox::activated), this, [this](const QString &str) {

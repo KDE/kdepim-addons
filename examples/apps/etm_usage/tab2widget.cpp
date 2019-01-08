@@ -78,7 +78,7 @@ Tab2Widget::Tab2Widget(QWidget *parent, Qt::WindowFlags f)
 
     ItemViewerWidget *viewerWidget = new ItemViewerWidget(m_itemView->selectionModel(), rhsContainer);
 
-    connect(m_etw->view(), SIGNAL(activated(QModelIndex)), SLOT(setMappedRootIndex(QModelIndex)));
+    connect(m_etw->view(), &QAbstractItemView::activated, this, &Tab2Widget::setMappedRootIndex);
 }
 
 void Tab2Widget::setMappedRootIndex(const QModelIndex &index)

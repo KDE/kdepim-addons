@@ -47,7 +47,7 @@ DescTabWidget::DescTabWidget(QWidget *parent, Qt::WindowFlags f)
 
     m_descView = new QTreeView(splitter);
 
-    QTimer::singleShot(5000, this, SLOT(connectProxy()));
+    QTimer::singleShot(5000, this, &DescTabWidget::connectProxy);
 }
 
 void DescTabWidget::connectProxy()

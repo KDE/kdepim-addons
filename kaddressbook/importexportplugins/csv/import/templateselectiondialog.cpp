@@ -152,6 +152,7 @@ private:
 
 class TemplateSelectionDelegate : public QStyledItemDelegate
 {
+    Q_OBJECT
 public:
     explicit TemplateSelectionDelegate(QObject *parent = nullptr)
         : QStyledItemDelegate(parent)

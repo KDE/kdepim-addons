@@ -26,8 +26,8 @@
 
 StackedWidgetView::StackedWidgetView(int widgetRole, QWidget *parent)
     : QStackedWidget(parent)
-    , m_model(0)
-    , m_selectionModel(0)
+    , m_model(nullptr)
+    , m_selectionModel(nullptr)
     , m_widgetRole(widgetRole)
 {
 }
@@ -38,16 +38,16 @@ void StackedWidgetView::setModel(QAbstractItemModel *model)
 
     refill();
 
-    connect(model, SIGNAL(modelReset()), SLOT(refill()));
-    connect(model, SIGNAL(rowsInserted(QModelIndex,int,int)), SLOT(insertRows(QModelIndex,int,int)));
-    connect(model, SIGNAL(rowsAboutToBeRemoved(QModelIndex,int,int)), SLOT(removeRows(QModelIndex,int,int)));
+    connect(model, &QAbstractItemModel::modelReset, this, &StackedWidgetView::refill);
+    connect(model, &QAbstractItemModel::rowsInserted, this, &StackedWidgetView::insertRows);
+    connect(model, &QAbstractItemModel::rowsAboutToBeRemoved, this, &StackedWidgetView::removeRows);
 }
 
 void StackedWidgetView::setSelectionModel(QItemSelectionModel *selectionModel)
 {
     m_selectionModel = selectionModel;
 
-    connect(m_selectionModel, SIGNAL(selectionChanged(QItemSelection,QItemSelection)), SLOT(updateCurrentWidget()));
+    connect(m_selectionModel, &QItemSelectionModel::selectionChanged, this, &StackedWidgetView::updateCurrentWidget);
 }
 
 void StackedWidgetView::refill()

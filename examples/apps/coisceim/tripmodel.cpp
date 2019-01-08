@@ -48,9 +48,9 @@ TripModel::TripModel(Akonadi::Monitor *monitor, QObject *parent)
     Trip *create = new Trip(createIndex(0, 0), monitor, &factory);
     m_createWidget = new CreateTripWidget(create, monitor);
 
-    QTimer::singleShot(0, this, SLOT(repopulate()));
+    QTimer::singleShot(0, this, &TripModel::repopulate);
 
-    connect(this, SIGNAL(modelReset()), SLOT(thisModelReset()));
+    connect(this, &QAbstractItemModel::modelReset, this, &TripModel::thisModelReset);
 }
 
 QModelIndex TripModel::index(int row, int column, const QModelIndex &parent) const

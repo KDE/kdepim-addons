@@ -42,7 +42,7 @@ Trip::Trip(const QPersistentModelIndex &index, Akonadi::Monitor *monitor, TripCo
     , m_monitor(monitor)
 {
     QAbstractItemModel *model = const_cast<QAbstractItemModel *>(m_index.model());
-    connect(model, SIGNAL(dataChanged(QModelIndex,QModelIndex)), SLOT(dataChanged(QModelIndex,QModelIndex)));
+    connect(model, &QAbstractItemModel::dataChanged, this, &Trip::dataChanged);
     connect(model, &QAbstractItemModel::modelReset, this, &Trip::modelReset);
     connect(model, &QAbstractItemModel::layoutChanged, this, &Trip::layoutChanged);
     connect(model, &QAbstractItemModel::rowsRemoved, this, &Trip::rowsRemoved);

@@ -119,12 +119,12 @@ QCsvModel::QCsvModel(QObject *parent)
 {
     mParser = new CsvParser(this);
 
-    connect(mParser, SIGNAL(columnCountChanged(int)),
-            this, SLOT(columnCountChanged(int)), Qt::QueuedConnection);
-    connect(mParser, SIGNAL(rowCountChanged(int)),
-            this, SLOT(rowCountChanged(int)), Qt::QueuedConnection);
-    connect(mParser, SIGNAL(dataChanged(QString,int,int)),
-            this, SLOT(fieldChanged(QString,int,int)), Qt::QueuedConnection);
+    connect(mParser, &CsvParser::columnCountChanged,
+            this, &QCsvModel::columnCountChanged, Qt::QueuedConnection);
+    connect(mParser, &CsvParser::rowCountChanged,
+            this, &QCsvModel::rowCountChanged, Qt::QueuedConnection);
+    connect(mParser, &CsvParser::dataChanged,
+            this, &QCsvModel::fieldChanged, Qt::QueuedConnection);
     connect(mParser, &CsvParser::ended, this, &QCsvModel::finishedLoading);
 }
 

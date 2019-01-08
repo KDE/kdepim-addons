@@ -57,7 +57,7 @@ ItemViewerWidget::ItemViewerWidget(ItemSelection *itemSelection, QWidget *parent
     m_widgetStack->addWidget(m_noteViewer);
     m_widgetStack->addWidget(m_incidenceViewer);
 
-    connect(itemSelection, SIGNAL(selectionChanged(QModelIndex)), SLOT(selectionChanged(QModelIndex)));
+    connect(itemSelection, &ItemSelection::selectionChanged, this, &ItemViewerWidget::selectionChanged);
 }
 
 void ItemViewerWidget::selectionChanged(const QModelIndex &selectedIndex)

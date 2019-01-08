@@ -26,7 +26,7 @@ class MergeContactsTest : public QObject
 {
     Q_OBJECT
 public:
-    MergeContactsTest();
+    explicit MergeContactsTest(QObject *parent = nullptr);
 
 private Q_SLOTS:
     void shouldReturnDefaultAddressWhenNoListItem();

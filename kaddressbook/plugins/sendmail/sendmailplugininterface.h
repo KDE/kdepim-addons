@@ -24,6 +24,7 @@
 
 class SendMailPluginInterface : public PimCommon::GenericPluginInterface
 {
+    Q_OBJECT
 public:
     explicit SendMailPluginInterface(QObject *parent = nullptr);
     ~SendMailPluginInterface() override;
