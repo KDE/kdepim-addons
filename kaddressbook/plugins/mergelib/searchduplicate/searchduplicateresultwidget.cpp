@@ -116,11 +116,11 @@ void SearchDuplicateResultWidget::slotMergeContact()
         }
 
         mMergeContact->setEnabled(false);
-        if (!conflictFound) {
+        if (conflictFound) {
+            mMergeContactWarning->animatedShow();
+        } else {
             //Detect if conflict.
             mergeContact();
-        } else {
-            mMergeContactWarning->animatedShow();
         }
     }
 }

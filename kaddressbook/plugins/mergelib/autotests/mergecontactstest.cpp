@@ -1121,10 +1121,13 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday_data()
     QTest::newRow("noWithOneNameConflict") <<  QString() << QString() << QStringLiteral("20150606") << false;
     QTest::newRow("noWithOneNameConflict1") <<  QString() << QStringLiteral("20150606") << QString()  << false;
     QTest::newRow("noWithOneNameConflict2") <<  QStringLiteral("20150606") << QString() << QString() << false;
-    QTest::newRow("noConflictWithSameName") <<  QStringLiteral("20150606") << QStringLiteral("20150606") << QString() << false;
-    QTest::newRow("noConflictWithSameName2") <<  QStringLiteral("20150606") << QStringLiteral("20150606") << QStringLiteral("20150606") << false;
+    QTest::newRow("noConflictWithSameBirthday") <<  QStringLiteral("20150606") << QStringLiteral("20150606") << QString() << false;
+    QTest::newRow("noConflictWithSameBirthday2") <<  QStringLiteral("20150606") << QStringLiteral("20150606") << QStringLiteral("20150606") << false;
     QTest::newRow("conflict") <<  QStringLiteral("20150606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
     QTest::newRow("conflict1") <<  QString() << QStringLiteral("20150606") << QStringLiteral("20150608") << true;
+    QTest::newRow("conflict2") <<  QStringLiteral("20150606") << QString() << QStringLiteral("20150608") << true;
+    QTest::newRow("conflict2") <<  QStringLiteral("20150606") << QStringLiteral("20150608") << QString() << true;
+    QTest::newRow("conflict4") <<  QStringLiteral("20180606") << QStringLiteral("20150608") << QStringLiteral("20150606") << true;
 }
 
 void MergeContactsTest::checkNeedManualSelectionWithBirthday()
