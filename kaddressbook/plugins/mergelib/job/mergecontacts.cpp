@@ -95,7 +95,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     // Merge Phone
     const PhoneNumber::List listPhone = fromContact.phoneNumbers();
     if (!listPhone.isEmpty()) {
-        PhoneNumber::List newContactsPhone = newContact.phoneNumbers();
+        const PhoneNumber::List newContactsPhone = newContact.phoneNumbers();
         for (const PhoneNumber &phone : listPhone) {
             if (!newContactsPhone.contains(phone)) {
                 newContact.insertPhoneNumber(phone);
@@ -106,7 +106,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     // Merge Address
     const Address::List listAddress = fromContact.addresses();
     if (!listAddress.isEmpty()) {
-        Address::List newContactsAddress = newContact.addresses();
+        const Address::List newContactsAddress = newContact.addresses();
         for (const Address &addr : listAddress) {
             if (!newContactsAddress.contains(addr)) {
                 newContact.insertAddress(addr);
@@ -117,7 +117,7 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
     // Merge Impp
     const Impp::List listImpp = fromContact.imppList();
     if (!listImpp.isEmpty()) {
-        Impp::List newContactsImpp = newContact.imppList();
+        const Impp::List newContactsImpp = newContact.imppList();
         for (const Impp &impp : listImpp) {
             if (!newContactsImpp.contains(impp)) {
                 newContact.insertImpp(impp);
@@ -163,11 +163,15 @@ void MergeContacts::mergeToContact(KContacts::Addressee &newContact, const KCont
             newContact.setPhoto(fromContact.photo());
         }
 
+        // Merge Birthday
+        if (!newContact.birthday().isValid() && !fromContact.birthday().isValid()) {
+            newContact.setBirthday(fromContact.birthday());
+        }
+
         // Merge Logo
         if (newContact.logo().isEmpty() && !fromContact.logo().isEmpty()) {
             newContact.setLogo(fromContact.logo());
         }
-        // Merge Birthday TODO
 
         // Merge Blog
         mergeCustomValue(fromContact, QStringLiteral("BlogFeed"), newContact);
