@@ -56,5 +56,5 @@ void AutomaticAddContactsConfigureDialog::reset()
 
 void AutomaticAddContactsConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), QString());
+    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }

@@ -56,5 +56,5 @@ void CheckBeforeSendConfigureDialog::reset()
 
 void CheckBeforeSendConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), QString());
+    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }

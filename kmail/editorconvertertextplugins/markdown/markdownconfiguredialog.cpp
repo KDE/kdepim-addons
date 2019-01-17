@@ -56,5 +56,5 @@ void MarkdownConfigureDialog::reset()
 
 void MarkdownConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), QString());
+    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
 }
