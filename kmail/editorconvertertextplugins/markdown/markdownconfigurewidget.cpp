@@ -65,10 +65,3 @@ void MarkdownConfigureWidget::resetSettings()
     mLatexSupport->setChecked(false);
     mExtraDefinitionLists->setChecked(false);
 }
-
-
-QString MarkdownConfigureWidget::helpAnchor() const
-{
-    //TODO
-    return {};
-}

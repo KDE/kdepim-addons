@@ -20,6 +20,8 @@
 #include "markdownconfiguredialog.h"
 #include "markdownconfigurewidget.h"
 #include <KLocalizedString>
+#include <QDesktopServices>
+#include <QUrl>
 
 MarkdownConfigureDialog::MarkdownConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
@@ -56,5 +58,5 @@ void MarkdownConfigureDialog::reset()
 
 void MarkdownConfigureDialog::help()
 {
-    showHelp(QStringLiteral("kmail2"), mConfigureWidget->helpAnchor());
+    QDesktopServices::openUrl(QUrl(QStringLiteral("https://tools.ietf.org/html/rfc7763")));
 }
