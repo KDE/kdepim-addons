@@ -32,6 +32,7 @@ public:
     void loadSettings() override;
     void saveSettings() override;
     void resetSettings() override;
+    QString helpAnchor() const override;
 private:
     QCheckBox *mLatexSupport = nullptr;
     QCheckBox *mExtraDefinitionLists = nullptr;
