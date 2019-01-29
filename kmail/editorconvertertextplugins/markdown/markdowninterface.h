@@ -43,6 +43,7 @@ public Q_SLOTS:
 
 private:
     void addTitle();
+    void addHorizontalRule();
     void slotActivated(bool checked);
     QAction *mAction = nullptr;
     QAction *mPopupMenuAction = nullptr;

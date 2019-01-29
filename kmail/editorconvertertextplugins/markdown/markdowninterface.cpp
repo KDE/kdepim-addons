@@ -62,10 +62,17 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mPopupMenuAction = new QAction(i18n("Markdown Action"), this);
 
     QMenu *mardownMenu = new QMenu;
-    mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
     mPopupMenuAction->setMenu(mardownMenu);
+    mPopupMenuAction->setEnabled(false);
+    mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
+    mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
+}
+
+void MarkdownInterface::addHorizontalRule()
+{
+
 }
 
 void MarkdownInterface::addTitle()
@@ -113,6 +120,7 @@ void MarkdownInterface::enableDisablePluginActions(bool richText)
 {
     if (mAction) {
         mAction->setEnabled(!richText);
+        mPopupMenuAction->setEnabled(!richText && mAction->isChecked());
     }
 }
 
@@ -141,4 +149,5 @@ void MarkdownInterface::slotActivated(bool checked)
         mDialog->hide();
     }
     mStatusBarLabel->setText(checked ? i18n("Markdown") : QString());
+    mPopupMenuAction->setEnabled(checked);
 }
