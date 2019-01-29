@@ -42,8 +42,10 @@ public Q_SLOTS:
     void reloadConfig() override;
 
 private:
+    void addTitle();
     void slotActivated(bool checked);
     QAction *mAction = nullptr;
+    QAction *mPopupMenuAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;
     bool mEnableEmbeddedLabel = false;
     bool mEnableExtraDefinitionLists = false;

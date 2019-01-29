@@ -31,6 +31,7 @@
 #include <KMessageBox>
 #include <QPointer>
 #include <QLabel>
+#include <QMenu>
 #include <MessageComposer/TextPart>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
@@ -57,6 +58,19 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     f.setBold(true);
     mStatusBarLabel->setFont(f);
     setStatusBarWidget(mStatusBarLabel);
+
+    mPopupMenuAction = new QAction(i18n("Markdown Action"), this);
+
+    QMenu *mardownMenu = new QMenu;
+    mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
+    mPopupMenuAction->setMenu(mardownMenu);
+    MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
+    addActionType(typePopup);
+}
+
+void MarkdownInterface::addTitle()
+{
+
 }
 
 bool MarkdownInterface::reformatText()
