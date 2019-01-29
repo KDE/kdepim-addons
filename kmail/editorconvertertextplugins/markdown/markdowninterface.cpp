@@ -50,7 +50,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("generate_markdown"), mAction);
     connect(mAction, &QAction::triggered, this, &MarkdownInterface::slotActivated);
     MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
-    setActionType(type);
+    addActionType(type);
 
     mStatusBarLabel = new QLabel;
     QFont f = mStatusBarLabel->font();
