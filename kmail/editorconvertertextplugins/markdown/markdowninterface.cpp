@@ -32,6 +32,7 @@
 #include <QPointer>
 #include <QLabel>
 #include <QMenu>
+#include <QTextCursor>
 #include <MessageComposer/TextPart>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)
@@ -66,6 +67,9 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mPopupMenuAction->setEnabled(false);
     mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
+    mardownMenu->addAction(i18n("Change as Bold"), this, &MarkdownInterface::addBold);
+    mardownMenu->addAction(i18n("Change as Italic"), this, &MarkdownInterface::addItalic);
+    mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
 }
@@ -73,6 +77,27 @@ void MarkdownInterface::createAction(KActionCollection *ac)
 void MarkdownInterface::addHorizontalRule()
 {
     richTextEditor()->insertPlainText(QStringLiteral("---"));
+}
+
+void MarkdownInterface::addBold()
+{
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        richTextEditor()->textCursor().insertText(QStringLiteral("**%1**").arg(selectedText));
+    }
+}
+
+void MarkdownInterface::addItalic()
+{
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        richTextEditor()->textCursor().insertText(QStringLiteral("_%1_").arg(selectedText));
+    }
+}
+
+void MarkdownInterface::addLink()
+{
+    //TODO
 }
 
 void MarkdownInterface::addTitle()

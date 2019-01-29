@@ -42,7 +42,10 @@ public Q_SLOTS:
     void reloadConfig() override;
 
 private:
+    void addBold();
+    void addItalic();
     void addTitle();
+    void addLink();
     void addHorizontalRule();
     void slotActivated(bool checked);
     QAction *mAction = nullptr;
