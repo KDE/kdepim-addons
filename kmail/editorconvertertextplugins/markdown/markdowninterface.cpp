@@ -72,7 +72,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
 
 void MarkdownInterface::addHorizontalRule()
 {
-
+    richTextEditor()->insertPlainText(QStringLiteral("---"));
 }
 
 void MarkdownInterface::addTitle()
