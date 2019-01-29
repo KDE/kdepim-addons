@@ -129,13 +129,11 @@ void MarkdownInterface::slotActivated(bool checked)
     if (mDialog.isNull()) {
         mDialog = new MarkdownPreviewDialog(parentWidget());
         mDialog->setText(richTextEditor()->toPlainText());
-        connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this]()
-        {
+        connect(richTextEditor(), &KPIMTextEdit::RichTextEditor::textChanged, this, [this]() {
             if (mDialog) {
                 mDialog->setText(richTextEditor()->toPlainText());
             }
-        }
-                );
+        });
     }
     if (checked) {
         mDialog->show();
