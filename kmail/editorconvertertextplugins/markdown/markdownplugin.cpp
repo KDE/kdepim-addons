@@ -73,4 +73,14 @@ bool MarkdownPlugin::hasStatusBarSupport() const
     return true;
 }
 
+bool MarkdownPlugin::hasPopupMenuSupport() const
+{
+    return true;
+}
+
+bool MarkdownPlugin::hasToolBarSupport() const
+{
+    return false;
+}
+
 #include "markdownplugin.moc"

@@ -36,6 +36,9 @@ public:
     QString description() const override;
     bool canWorkOnHtml() const override;
     bool hasStatusBarSupport() const override;
+
+    bool hasPopupMenuSupport() const override;
+    bool hasToolBarSupport() const override;
 };
 
 #endif // MARKDOWNPLUGIN_H
