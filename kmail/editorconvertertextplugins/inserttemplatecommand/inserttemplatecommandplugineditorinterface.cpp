@@ -51,7 +51,7 @@ void InsertTemplateCommandPluginEditorInterface::createAction(KActionCollection 
     ac->addAction(QStringLiteral("insert_template_command"), mCommandAction);
     connect(mCommandAction, &TemplateParser::TemplatesInsertCommandAction::insertCommand, this, &InsertTemplateCommandPluginEditorInterface::slotInsertCommand);
     MessageComposer::PluginActionType type(mCommandAction, MessageComposer::PluginActionType::ToolBar);
-    setActionType(type);
+    setActionTypes(type);
 }
 
 void InsertTemplateCommandPluginEditorInterface::slotOpenMenu()
