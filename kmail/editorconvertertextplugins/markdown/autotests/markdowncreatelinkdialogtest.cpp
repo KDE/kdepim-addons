@@ -22,7 +22,9 @@
 #include "markdowncreatelinkwidget.h"
 
 
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(MarkdownCreateLinkDialogTest)
 
 MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)
@@ -33,5 +35,14 @@ MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)
 
 void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()
 {
+    MarkdownCreateLinkDialog dlg;
+    QVERIFY(!dlg.windowTitle().isEmpty());
+    QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
 
+    MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = dlg.findChild<MarkdownCreateLinkWidget *>(QStringLiteral("markdowncreatelinkwidget"));
+    QVERIFY(mMarkdownCreateLinkWidget);
+    QDialogButtonBox *box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    QVERIFY(box);
+    QVERIFY(dlg.linkStr().isEmpty());
 }
