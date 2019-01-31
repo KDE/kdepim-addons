@@ -30,6 +30,7 @@ public:
     ~MarkdownCreateLinkWidgetTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldGenerateLink();
 };
 
 #endif // MARKDOWNCREATELINKWIDGETTEST_H

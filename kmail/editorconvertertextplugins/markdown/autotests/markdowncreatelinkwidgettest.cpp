@@ -48,3 +48,13 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
 }
+
+void MarkdownCreateLinkWidgetTest::shouldGenerateLink()
+{
+    MarkdownCreateLinkWidget w;
+    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    mLink->setText(QStringLiteral("http://www.kde.org"));
+    mTitle->setText(QStringLiteral("TITLE"));
+    QCOMPARE(w.linkStr(), QStringLiteral("[TITLE](http://www.kde.org)"));
+}
