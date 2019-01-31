@@ -21,6 +21,7 @@
 #include "markdownpreviewdialog.h"
 #include "markdownplugin_debug.h"
 #include "markdownconverter.h"
+#include "markdowncreatelinkdialog.h"
 #include <KPIMTextEdit/RichTextComposer>
 #include <KPIMTextEdit/RichTextComposerControler>
 #include <KLocalizedString>
@@ -97,7 +98,14 @@ void MarkdownInterface::addItalic()
 
 void MarkdownInterface::addLink()
 {
-    //TODO
+    QPointer<MarkdownCreateLinkDialog> dlg = new MarkdownCreateLinkDialog(parentWidget());
+    if (dlg->exec()) {
+        const QString str = dlg->linkStr();
+        if (!str.isEmpty()) {
+            richTextEditor()->textCursor().insertText(str);
+        }
+    }
+    delete dlg;
 }
 
 void MarkdownInterface::addTitle()
