@@ -28,6 +28,9 @@ class GrammarResultTextEdit : public QTextEdit
 public:
     explicit GrammarResultTextEdit(QWidget *parent = nullptr);
     ~GrammarResultTextEdit();
+
+    void setText(const QString &str);
+    void checkGrammar();
 };
 
 #endif // GRAMMARRESULTTEXTEDIT_H
