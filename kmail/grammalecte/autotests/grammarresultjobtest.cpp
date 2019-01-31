@@ -18,10 +18,17 @@
 */
 
 #include "grammarresultjobtest.h"
+#include "grammarresultjob.h"
 #include <QTest>
 QTEST_MAIN(GrammarResultJobTest)
 GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void GrammarResultJobTest::shouldHaveDefaultValue()
+{
+    GrammarResultJob job;
+    QVERIFY(!job.canStart());
 }

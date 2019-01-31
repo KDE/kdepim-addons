@@ -19,6 +19,7 @@
 
 
 #include "grammalecteparsertest.h"
+#include "grammalecteparser.h"
 #include <QTest>
 QTEST_MAIN(GrammalecteParserTest)
 

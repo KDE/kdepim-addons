@@ -18,6 +18,7 @@
 */
 
 #include "grammarresultjob.h"
+#include "grammalecteplugin_debug.h"
 
 GrammarResultJob::GrammarResultJob(QObject *parent)
     : QObject(parent)
@@ -35,7 +36,9 @@ void GrammarResultJob::start()
     if (canStart()) {
         //TODO
     } else {
-        //TODO
+        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
+        Q_EMIT error();
+        deleteLater();
     }
 }
 

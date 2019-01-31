@@ -22,9 +22,9 @@
 
 #include <QVector>
 #include <QJsonObject>
-
-class GrammalecteInfo;
-class GrammalecteParser
+#include "libgrammalect_private_export.h"
+#include "grammalecteinfo.h"
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
 {
 public:
     GrammalecteParser();

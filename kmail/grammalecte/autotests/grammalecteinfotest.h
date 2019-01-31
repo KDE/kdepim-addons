@@ -27,6 +27,8 @@ class GrammalecteInfoTest : public QObject
 public:
     explicit GrammalecteInfoTest(QObject *parent = nullptr);
     ~GrammalecteInfoTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // GRAMMALECTEINFOTEST_H

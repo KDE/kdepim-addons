@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2019 Montel Laurent <montel@kde.org>
+   Copyright (C) 2018-2019 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,22 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QStandardPaths>
+#include "markdowndemowidget.h"
 
-#include <QWidget>
-#include "libgrammalect_private_export.h"
-class GrammarResultTextEdit;
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultWidget : public QWidget
+int main(int argc, char **argv)
 {
-    Q_OBJECT
-public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void checkGrammar();
-private:
-    GrammarResultTextEdit *mResult = nullptr;
-};
+    QApplication app(argc, argv);
+    QStandardPaths::setTestModeEnabled(true);
 
-#endif // GRAMMARRESULTWIDGET_H
+    MarkdownDemoWidget w;
+    w.show();
+    app.exec();
+    return 0;
+}

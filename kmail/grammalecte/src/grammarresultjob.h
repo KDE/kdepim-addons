@@ -21,8 +21,8 @@
 #define GRAMMARRESULTJOB_H
 
 #include <QObject>
-
-class GrammarResultJob : public QObject
+#include "libgrammalect_private_export.h"
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultJob : public QObject
 {
     Q_OBJECT
 public:
@@ -30,13 +30,16 @@ public:
     ~GrammarResultJob();
 
     void start();
+
     Q_REQUIRED_RESULT bool canStart() const;
 
     Q_REQUIRED_RESULT QString text() const;
     void setText(const QString &text);
+
 Q_SIGNALS:
     void finished();
     void error();
+
 private:
     QString mText;
 };

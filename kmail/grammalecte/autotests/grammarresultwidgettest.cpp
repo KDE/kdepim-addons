@@ -18,6 +18,9 @@
 */
 
 #include "grammarresultwidgettest.h"
+#include "grammarresultwidget.h"
+#include "grammarresulttextedit.h"
+#include <QHBoxLayout>
 #include <QTest>
 QTEST_MAIN(GrammarResultWidgetTest)
 
@@ -25,4 +28,14 @@ GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void GrammarResultWidgetTest::shouldHaveDefaultValue()
+{
+    GrammarResultWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+    GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    QVERIFY(mResult);
 }

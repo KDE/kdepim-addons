@@ -27,6 +27,8 @@ class GrammarResultWidgetTest : public QObject
 public:
     explicit GrammarResultWidgetTest(QObject *parent = nullptr);
     ~GrammarResultWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // GRAMMARRESULTWIDGETTEST_H

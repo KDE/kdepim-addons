@@ -32,11 +32,6 @@ GrammarResultTextEdit::~GrammarResultTextEdit()
 
 }
 
-void GrammarResultTextEdit::setText(const QString &str)
-{
-    //TODO
-}
-
 void GrammarResultTextEdit::checkGrammar()
 {
     //TODO

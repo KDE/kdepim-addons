@@ -23,8 +23,8 @@
 #include <QObject>
 #include <QColor>
 #include <QString>
-
-class GrammalecteInfo
+#include "libgrammalect_private_export.h"
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteInfo
 {
 public:
     GrammalecteInfo();
@@ -46,6 +46,8 @@ public:
 
     Q_REQUIRED_RESULT QStringList suggestions() const;
     void setSuggestions(const QStringList &suggestions);
+
+    Q_REQUIRED_RESULT bool isValid() const;
 
 private:
     QStringList mSuggestions;

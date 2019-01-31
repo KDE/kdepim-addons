@@ -17,22 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
+#ifndef GRAMMARRESULTTEXTEDITTEST_H
+#define GRAMMARRESULTTEXTEDITTEST_H
 
-#include <QWidget>
-#include "libgrammalect_private_export.h"
-class GrammarResultTextEdit;
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultWidget : public QWidget
+#include <QObject>
+
+class GrammarResultTextEditTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void checkGrammar();
-private:
-    GrammarResultTextEdit *mResult = nullptr;
+    explicit GrammarResultTextEditTest(QObject *parent = nullptr);
+    ~GrammarResultTextEditTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
-#endif // GRAMMARRESULTWIDGET_H
+#endif // GRAMMARRESULTTEXTEDITTEST_H

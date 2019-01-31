@@ -21,15 +21,14 @@
 #define GRAMMARRESULTTEXTEDIT_H
 
 #include <QTextEdit>
-
-class GrammarResultTextEdit : public QTextEdit
+#include "libgrammalect_private_export.h"
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:
     explicit GrammarResultTextEdit(QWidget *parent = nullptr);
     ~GrammarResultTextEdit();
 
-    void setText(const QString &str);
     void checkGrammar();
 };
 

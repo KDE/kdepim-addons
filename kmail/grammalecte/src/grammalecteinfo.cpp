@@ -88,3 +88,9 @@ void GrammalecteInfo::setSuggestions(const QStringList &suggestions)
 {
     mSuggestions = suggestions;
 }
+
+bool GrammalecteInfo::isValid() const
+{
+    //TODO
+    return false;
+}

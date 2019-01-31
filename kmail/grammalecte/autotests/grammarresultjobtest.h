@@ -28,6 +28,8 @@ class GrammarResultJobTest : public QObject
 public:
     explicit GrammarResultJobTest(QObject *parent = nullptr);
     ~GrammarResultJobTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // GRAMMARRESULTJOBTEST_H
