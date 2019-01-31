@@ -28,3 +28,8 @@ GrammalecteParser::~GrammalecteParser()
 {
 
 }
+
+QVector<GrammalecteInfo> GrammalecteParser::parseResult(const QJsonObject &obj) const
+{
+    return {};
+}

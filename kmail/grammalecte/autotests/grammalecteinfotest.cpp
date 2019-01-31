@@ -17,19 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEPARSER_H
-#define GRAMMALECTEPARSER_H
+#include "grammalecteinfotest.h"
+#include "grammalecteinfo.h"
+#include <QTest>
+QTEST_MAIN(GrammalecteInfoTest)
 
-#include <QVector>
-#include <QJsonObject>
-
-class GrammalecteInfo;
-class GrammalecteParser
+GrammalecteInfoTest::GrammalecteInfoTest(QObject *parent)
+    : QObject(parent)
 {
-public:
-    GrammalecteParser();
-    ~GrammalecteParser();
-    QVector<GrammalecteInfo> parseResult(const QJsonObject &obj) const;
-};
 
-#endif // GRAMMALECTEPARSER_H
+}

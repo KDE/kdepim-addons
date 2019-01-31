@@ -17,19 +17,39 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEPARSER_H
-#define GRAMMALECTEPARSER_H
+#include "grammarresultjob.h"
 
-#include <QVector>
-#include <QJsonObject>
-
-class GrammalecteInfo;
-class GrammalecteParser
+GrammarResultJob::GrammarResultJob(QObject *parent)
+    : QObject(parent)
 {
-public:
-    GrammalecteParser();
-    ~GrammalecteParser();
-    QVector<GrammalecteInfo> parseResult(const QJsonObject &obj) const;
-};
 
-#endif // GRAMMALECTEPARSER_H
+}
+
+GrammarResultJob::~GrammarResultJob()
+{
+
+}
+
+void GrammarResultJob::start()
+{
+    if (canStart()) {
+        //TODO
+    } else {
+        //TODO
+    }
+}
+
+bool GrammarResultJob::canStart() const
+{
+    return !mText.isEmpty();
+}
+
+QString GrammarResultJob::text() const
+{
+    return mText;
+}
+
+void GrammarResultJob::setText(const QString &text)
+{
+    mText = text;
+}

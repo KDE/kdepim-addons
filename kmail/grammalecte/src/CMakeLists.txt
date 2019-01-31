@@ -2,6 +2,8 @@ set(kmail_grammalecteplugin_SRCS
     grammalecteparser.cpp
     grammarresultwidget.cpp
     grammarresulttextedit.cpp
+    grammalecteinfo.cpp
+    grammarresultjob.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_grammalecteplugin_SRCS HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin)

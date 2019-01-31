@@ -16,20 +16,17 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+#ifndef GRAMMALECTEINFOTEST_H
+#define GRAMMALECTEINFOTEST_H
 
-#ifndef GRAMMALECTEPARSER_H
-#define GRAMMALECTEPARSER_H
+#include <QObject>
 
-#include <QVector>
-#include <QJsonObject>
-
-class GrammalecteInfo;
-class GrammalecteParser
+class GrammalecteInfoTest : public QObject
 {
+    Q_OBJECT
 public:
-    GrammalecteParser();
-    ~GrammalecteParser();
-    QVector<GrammalecteInfo> parseResult(const QJsonObject &obj) const;
+    explicit GrammalecteInfoTest(QObject *parent = nullptr);
+    ~GrammalecteInfoTest() = default;
 };
 
-#endif // GRAMMALECTEPARSER_H
+#endif // GRAMMALECTEINFOTEST_H

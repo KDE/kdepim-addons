@@ -18,6 +18,7 @@
 */
 
 
+#include "grammarresulttextedit.h"
 #include "grammarresultwidget.h"
 #include <QHBoxLayout>
 #include <QTextEdit>
@@ -28,9 +29,22 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+    mResult = new GrammarResultTextEdit(this);
+    mResult->setObjectName(QStringLiteral("grammarResult"));
+    mainLayout->addWidget(mResult);
 }
 
 GrammarResultWidget::~GrammarResultWidget()
 {
 
+}
+
+void GrammarResultWidget::setText(const QString &str)
+{
+    mResult->setText(str);
+}
+
+void GrammarResultWidget::checkGrammar()
+{
+    mResult->checkGrammar();
 }

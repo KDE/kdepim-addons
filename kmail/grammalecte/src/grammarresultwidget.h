@@ -21,13 +21,17 @@
 #define GRAMMARRESULTWIDGET_H
 
 #include <QWidget>
-
+class GrammarResultTextEdit;
 class GrammarResultWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit GrammarResultWidget(QWidget *parent = nullptr);
     ~GrammarResultWidget();
+    void setText(const QString &str);
+    void checkGrammar();
+private:
+    GrammarResultTextEdit *mResult = nullptr;
 };
 
 #endif // GRAMMARRESULTWIDGET_H
