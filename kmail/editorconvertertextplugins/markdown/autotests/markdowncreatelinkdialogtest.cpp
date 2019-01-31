@@ -18,11 +18,20 @@
 */
 
 #include "markdowncreatelinkdialogtest.h"
+#include "markdowncreatelinkdialog.h"
+#include "markdowncreatelinkwidget.h"
+
+
 #include <QTest>
 QTEST_MAIN(MarkdownCreateLinkDialogTest)
 
 MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)
     : QObject(parent)
+{
+
+}
+
+void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()
 {
 
 }

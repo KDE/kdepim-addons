@@ -18,11 +18,17 @@
 */
 
 #include "markdowncreatelinkwidgettest.h"
+#include "markdowncreatelinkwidget.h"
 #include <QTest>
 QTEST_MAIN(MarkdownCreateLinkWidgetTest)
 
 MarkdownCreateLinkWidgetTest::MarkdownCreateLinkWidgetTest(QObject *parent)
     : QObject(parent)
+{
+
+}
+
+void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 {
 
 }

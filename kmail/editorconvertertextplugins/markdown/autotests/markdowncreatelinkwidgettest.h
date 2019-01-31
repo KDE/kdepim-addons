@@ -28,6 +28,8 @@ class MarkdownCreateLinkWidgetTest : public QObject
 public:
     explicit MarkdownCreateLinkWidgetTest(QObject *parent = nullptr);
     ~MarkdownCreateLinkWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MARKDOWNCREATELINKWIDGETTEST_H

@@ -28,6 +28,8 @@ class MarkdownCreateLinkWidget : public QWidget
 public:
     explicit MarkdownCreateLinkWidget(QWidget *parent = nullptr);
     ~MarkdownCreateLinkWidget();
+public:
+    QString linkStr() const;
 };
 
 #endif // MARKDOWNCREATELINKWIDGET_H

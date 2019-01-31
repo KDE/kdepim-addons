@@ -28,6 +28,7 @@ class MarkdownCreateLinkDialog : public QDialog
 public:
     explicit MarkdownCreateLinkDialog(QWidget *parent = nullptr);
     ~MarkdownCreateLinkDialog();
+    QString linkStr() const;
 private:
     MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = nullptr;
 };

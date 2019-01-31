@@ -33,9 +33,20 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     mMarkdownCreateLinkWidget->setObjectName(QStringLiteral("markdowncreatelinkwidget"));
 
     mainLayout->addWidget(mMarkdownCreateLinkWidget);
+
+    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    box->setObjectName(QStringLiteral("buttonbox"));
+    mainLayout->addWidget(box);
+    connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);
+    connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateLinkDialog::reject);
 }
 
 MarkdownCreateLinkDialog::~MarkdownCreateLinkDialog()
 {
 
+}
+
+QString MarkdownCreateLinkDialog::linkStr() const
+{
+    return mMarkdownCreateLinkWidget->linkStr();
 }

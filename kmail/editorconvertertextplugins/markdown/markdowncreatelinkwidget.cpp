@@ -31,3 +31,9 @@ MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()
 {
 
 }
+
+QString MarkdownCreateLinkWidget::linkStr() const
+{
+    //TODO
+    return {};
+}

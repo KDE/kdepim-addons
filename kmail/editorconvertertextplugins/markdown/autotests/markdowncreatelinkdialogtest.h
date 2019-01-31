@@ -28,6 +28,8 @@ class MarkdownCreateLinkDialogTest : public QObject
 public:
     explicit MarkdownCreateLinkDialogTest(QObject *parent = nullptr);
     ~MarkdownCreateLinkDialogTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // MARKDOWNCREATELINKDIALOGTEST_H
