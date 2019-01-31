@@ -17,20 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
+#ifndef GRAMMARRESULTTEXTEDIT_H
+#define GRAMMARRESULTTEXTEDIT_H
 
-#include "grammarresultwidget.h"
-#include <QHBoxLayout>
 #include <QTextEdit>
 
-GrammarResultWidget::GrammarResultWidget(QWidget *parent)
-    : QWidget(parent)
+class GrammarResultTextEdit : public QTextEdit
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
-}
+    Q_OBJECT
+public:
+    explicit GrammarResultTextEdit(QWidget *parent = nullptr);
+    ~GrammarResultTextEdit();
+};
 
-GrammarResultWidget::~GrammarResultWidget()
-{
-
-}
+#endif // GRAMMARRESULTTEXTEDIT_H

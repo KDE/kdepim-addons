@@ -18,19 +18,16 @@
 */
 
 
-#include "grammarresultwidget.h"
-#include <QHBoxLayout>
-#include <QTextEdit>
+#include "grammarresulttextedit.h"
 
-GrammarResultWidget::GrammarResultWidget(QWidget *parent)
-    : QWidget(parent)
+GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
+    : QTextEdit(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    setReadOnly(true);
+    setAcceptRichText(false);
 }
 
-GrammarResultWidget::~GrammarResultWidget()
+GrammarResultTextEdit::~GrammarResultTextEdit()
 {
 
 }
