@@ -47,6 +47,5 @@ MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()
 
 QString MarkdownCreateLinkWidget::linkStr() const
 {
-    //TODO
-    return {};
+    return QStringLiteral("[%1](%2)").arg(mTitle->text(), mLink->text());
 }
