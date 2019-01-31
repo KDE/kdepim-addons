@@ -19,12 +19,25 @@
 
 #include "markdowncreatelinkwidget.h"
 #include <KLocalizedString>
+#include <QFormLayout>
 #include <QHBoxLayout>
+#include <QLineEdit>
 
 MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QFormLayout *mainLayout = new QFormLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setMargin(0);
 
+    mTitle = new QLineEdit(this);
+    mTitle->setObjectName(QStringLiteral("title"));
+    mLink = new QLineEdit(this);
+    mLink->setObjectName(QStringLiteral("link"));
+
+
+    mainLayout->addRow(i18n("Title:"), mTitle);
+    mainLayout->addRow(i18n("Link:"), mLink);
 }
 
 MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()

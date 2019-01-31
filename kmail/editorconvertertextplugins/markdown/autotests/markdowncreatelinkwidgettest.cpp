@@ -19,6 +19,8 @@
 
 #include "markdowncreatelinkwidgettest.h"
 #include "markdowncreatelinkwidget.h"
+#include <QFormLayout>
+#include <QLineEdit>
 #include <QTest>
 QTEST_MAIN(MarkdownCreateLinkWidgetTest)
 
@@ -30,5 +32,19 @@ MarkdownCreateLinkWidgetTest::MarkdownCreateLinkWidgetTest(QObject *parent)
 
 void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 {
+    MarkdownCreateLinkWidget w;
 
+    QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+    mainLayout->setMargin(0);
+
+
+    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    QVERIFY(mTitle);
+    QVERIFY(mTitle->text().isEmpty());
+
+    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    QVERIFY(mLink);
+    QVERIFY(mLink->text().isEmpty());
 }

@@ -21,15 +21,18 @@
 #define MARKDOWNCREATELINKWIDGET_H
 
 #include <QWidget>
-
+class QLineEdit;
 class MarkdownCreateLinkWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit MarkdownCreateLinkWidget(QWidget *parent = nullptr);
     ~MarkdownCreateLinkWidget();
-public:
     QString linkStr() const;
+
+private:
+    QLineEdit *mTitle = nullptr;
+    QLineEdit *mLink = nullptr;
 };
 
 #endif // MARKDOWNCREATELINKWIDGET_H
