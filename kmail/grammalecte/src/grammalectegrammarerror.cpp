@@ -99,10 +99,23 @@ bool GrammalecteGrammarError::isValid() const
     return false;
 }
 
-void GrammalecteGrammarError::parse(const QJsonObject &obj)
+void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    //mBlockId = obj[QLatin1String("iParagraph")].toInt();
+    mBlockId = blockindex;
+    mEnd = obj[QStringLiteral("nEnd")].toInt();
+    mBegin = obj[QStringLiteral("nStart")].toInt();
+    mError = obj[QStringLiteral("sMessage")].toString();
     //TODO
+}
+
+QStringList GrammalecteGrammarError::parseSuggestion()
+{
+    return {};
+}
+
+QColor GrammalecteGrammarError::parseColor()
+{
+    return {};
 }
 
 QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)

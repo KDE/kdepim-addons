@@ -36,6 +36,7 @@ void GrammalecteParserTest::shouldParseJson_data()
     QTest::addColumn<int>("numberOfElement");
     QTest::newRow("noerror") << QStringLiteral("noerror") << 0;
     QTest::newRow("noerror2") << QStringLiteral("noerror2") << 0;
+    QTest::newRow("result2") << QStringLiteral("result2") << 3;
 }
 
 void GrammalecteParserTest::shouldParseJson()

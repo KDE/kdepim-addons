@@ -50,9 +50,11 @@ public:
 
     Q_REQUIRED_RESULT bool isValid() const;
 
-    void parse(const QJsonObject &obj);
+    void parse(const QJsonObject &obj, int blockindex);
 
 private:
+    static QColor parseColor();
+    static QStringList parseSuggestion();
     QStringList mSuggestions;
     QString mError;
     QColor mColor;
