@@ -48,6 +48,7 @@ private:
     void addLink();
     void addHorizontalRule();
     void slotActivated(bool checked);
+    void addCode();
     QAction *mAction = nullptr;
     QAction *mPopupMenuAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;

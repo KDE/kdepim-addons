@@ -70,6 +70,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     mardownMenu->addAction(i18n("Change as Bold"), this, &MarkdownInterface::addBold);
     mardownMenu->addAction(i18n("Change as Italic"), this, &MarkdownInterface::addItalic);
+    mardownMenu->addAction(i18n("Change as Code"), this, &MarkdownInterface::addCode);
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
@@ -85,6 +86,14 @@ void MarkdownInterface::addBold()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("**%1**").arg(selectedText));
+    }
+}
+
+void MarkdownInterface::addCode()
+{
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        richTextEditor()->textCursor().insertText(QStringLiteral("`%1`").arg(selectedText));
     }
 }
 
@@ -110,7 +119,10 @@ void MarkdownInterface::addLink()
 
 void MarkdownInterface::addTitle()
 {
-
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        richTextEditor()->textCursor().insertText(QStringLiteral("#%1#").arg(selectedText));
+    }
 }
 
 bool MarkdownInterface::reformatText()
