@@ -31,4 +31,5 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 {
     GrammarResultJob job;
     QVERIFY(!job.canStart());
+    QVERIFY(job.text().isEmpty());
 }
