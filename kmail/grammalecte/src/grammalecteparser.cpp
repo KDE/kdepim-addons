@@ -43,6 +43,7 @@ QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObjec
     QJsonArray array = obj.value(QLatin1String("data")).toArray();
     for (const QJsonValue &current : array) {
         if (current.type() == QJsonValue::Object) {
+            //Check lGrammarErrors
             const QJsonObject grammaObject = current.toObject();
             GrammalecteGrammarError info;
             info.parse(grammaObject);
