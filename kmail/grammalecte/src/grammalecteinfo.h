@@ -49,6 +49,8 @@ public:
 
     Q_REQUIRED_RESULT bool isValid() const;
 
+    void parse();
+
 private:
     QStringList mSuggestions;
     QString mError;

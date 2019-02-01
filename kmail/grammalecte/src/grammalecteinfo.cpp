@@ -94,3 +94,8 @@ bool GrammalecteInfo::isValid() const
     //TODO
     return false;
 }
+
+void GrammalecteInfo::parse()
+{
+    //TODO
+}
