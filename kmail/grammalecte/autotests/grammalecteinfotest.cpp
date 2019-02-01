@@ -30,7 +30,7 @@ GrammalecteInfoTest::GrammalecteInfoTest(QObject *parent)
 
 void GrammalecteInfoTest::shouldHaveDefaultValue()
 {
-    GrammalecteInfo info;
+    GrammalecteGrammarError info;
     QCOMPARE(info.end(), -1);
     QCOMPARE(info.begin(), -1);
     QCOMPARE(info.blockId(), -1);

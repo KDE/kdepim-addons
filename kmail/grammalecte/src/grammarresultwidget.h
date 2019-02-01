@@ -31,7 +31,7 @@ public:
     explicit GrammarResultWidget(QWidget *parent = nullptr);
     ~GrammarResultWidget();
     void setText(const QString &str);
-    void applyGrammarResult(const QVector<GrammalecteInfo> &infos);
+    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
 private:
     GrammarResultTextEdit *mResult = nullptr;
 };

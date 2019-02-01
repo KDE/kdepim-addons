@@ -32,9 +32,9 @@ GrammarResultTextEdit::~GrammarResultTextEdit()
 
 }
 
-void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteInfo> &infos)
+void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarError> &infos)
 {
-    for (const GrammalecteInfo &info : infos) {
+    for (const GrammalecteGrammarError &info : infos) {
         //TODO
     }
     //TOOD

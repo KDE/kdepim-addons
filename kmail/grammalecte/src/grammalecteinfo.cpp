@@ -19,77 +19,79 @@
 
 #include "grammalecteinfo.h"
 
-GrammalecteInfo::GrammalecteInfo()
+#include <QJsonObject>
+
+GrammalecteGrammarError::GrammalecteGrammarError()
 {
 
 }
 
-GrammalecteInfo::~GrammalecteInfo()
+GrammalecteGrammarError::~GrammalecteGrammarError()
 {
 
 }
 
-QColor GrammalecteInfo::color() const
+QColor GrammalecteGrammarError::color() const
 {
     return mColor;
 }
 
-void GrammalecteInfo::setColor(const QColor &color)
+void GrammalecteGrammarError::setColor(const QColor &color)
 {
     mColor = color;
 }
 
-QString GrammalecteInfo::error() const
+QString GrammalecteGrammarError::error() const
 {
     return mError;
 }
 
-void GrammalecteInfo::setError(const QString &error)
+void GrammalecteGrammarError::setError(const QString &error)
 {
     mError = error;
 }
 
-int GrammalecteInfo::blockId() const
+int GrammalecteGrammarError::blockId() const
 {
     return mBlockId;
 }
 
-void GrammalecteInfo::setBlockId(int blockId)
+void GrammalecteGrammarError::setBlockId(int blockId)
 {
     mBlockId = blockId;
 }
 
-int GrammalecteInfo::begin() const
+int GrammalecteGrammarError::begin() const
 {
     return mBegin;
 }
 
-void GrammalecteInfo::setBegin(int begin)
+void GrammalecteGrammarError::setBegin(int begin)
 {
     mBegin = begin;
 }
 
-int GrammalecteInfo::end() const
+int GrammalecteGrammarError::end() const
 {
     return mEnd;
 }
 
-void GrammalecteInfo::setEnd(int end)
+void GrammalecteGrammarError::setEnd(int end)
 {
     mEnd = end;
 }
 
-QStringList GrammalecteInfo::suggestions() const
+QStringList GrammalecteGrammarError::suggestions() const
 {
     return mSuggestions;
 }
 
-void GrammalecteInfo::setSuggestions(const QStringList &suggestions)
+void GrammalecteGrammarError::setSuggestions(const QStringList &suggestions)
 {
     mSuggestions = suggestions;
 }
 
-bool GrammalecteInfo::isValid() const
+bool GrammalecteGrammarError::isValid() const
 {
     //TODO
     if ((mEnd != -1) && (mBegin != -1))
@@ -97,12 +99,13 @@ bool GrammalecteInfo::isValid() const
     return false;
 }
 
-void GrammalecteInfo::parse(const QJsonObject &obj)
+void GrammalecteGrammarError::parse(const QJsonObject &obj)
 {
+    //mBlockId = obj[QLatin1String("iParagraph")].toInt();
     //TODO
 }
 
-QDebug operator <<(QDebug d, const GrammalecteInfo &t)
+QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)
 {
     d << "mError: " << t.error();
     d << "Start: " << t.begin();

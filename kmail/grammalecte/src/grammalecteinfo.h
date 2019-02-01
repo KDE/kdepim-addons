@@ -25,11 +25,11 @@
 #include <QString>
 #include <QDebug>
 #include "libgrammalect_private_export.h"
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteInfo
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGrammarError
 {
 public:
-    GrammalecteInfo();
-    ~GrammalecteInfo();
+    GrammalecteGrammarError();
+    ~GrammalecteGrammarError();
     Q_REQUIRED_RESULT QColor color() const;
     void setColor(const QColor &color);
 
@@ -61,6 +61,6 @@ private:
     int mEnd = -1;
 };
 
-Q_DECLARE_TYPEINFO(GrammalecteInfo, Q_MOVABLE_TYPE);
-LIBKMAILGRAMMALECT_EXPORT QDebug operator <<(QDebug d, const GrammalecteInfo &t);
+Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
+LIBKMAILGRAMMALECT_EXPORT QDebug operator <<(QDebug d, const GrammalecteGrammarError &t);
 #endif // GRAMMALECTEINFO_H

@@ -30,7 +30,7 @@ public:
     explicit GrammarResultTextEdit(QWidget *parent = nullptr);
     ~GrammarResultTextEdit();
 
-    void applyGrammarResult(const QVector<GrammalecteInfo> &infos);
+    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
 };
 
 #endif // GRAMMARRESULTTEXTEDIT_H
