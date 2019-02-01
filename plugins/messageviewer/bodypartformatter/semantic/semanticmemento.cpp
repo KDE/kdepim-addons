@@ -74,7 +74,7 @@ QVector<SemanticMemento::TripData> SemanticMemento::data()
                 const auto existingRes = CalendarHandler::reservationsForEvent(e.second);
                 for (const auto &ev : existingRes) {
                     if (MergeUtil::isSame(ev, e.first)) {
-                        e.first = JsonLdDocument::apply(ev, e.first);
+                        e.first = MergeUtil::merge(ev, e.first);
                         break;
                     }
                 }
