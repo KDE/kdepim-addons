@@ -2,7 +2,7 @@ set(kmail_grammalecteplugin_SRCS
     grammalecteparser.cpp
     grammarresultwidget.cpp
     grammarresulttextedit.cpp
-    grammalecteinfo.cpp
+    grammalectegrammarerror.cpp
     grammarresultjob.cpp
     grammalecteconfigwidget.cpp
     )

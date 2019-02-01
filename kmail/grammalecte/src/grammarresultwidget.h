@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include "libgrammalect_private_export.h"
-#include "grammalecteinfo.h"
+#include "grammalectegrammarerror.h"
 class GrammarResultTextEdit;
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultWidget : public QWidget
 {

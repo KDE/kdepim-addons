@@ -14,6 +14,6 @@ endmacro ()
 
 add_kmail_grammalecte_unittest(grammalecteparsertest.cpp "")
 add_kmail_grammalecte_unittest(grammarresultwidgettest.cpp "")
-add_kmail_grammalecte_unittest(grammalecteinfotest.cpp "")
+add_kmail_grammalecte_unittest(grammalectegrammarerrortest.cpp "")
 add_kmail_grammalecte_unittest(grammarresultjobtest.cpp "")
 add_kmail_grammalecte_unittest(grammarresulttextedittest.cpp "")

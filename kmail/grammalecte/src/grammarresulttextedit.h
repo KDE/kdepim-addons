@@ -21,7 +21,7 @@
 #define GRAMMARRESULTTEXTEDIT_H
 
 #include <QTextEdit>
-#include "grammalecteinfo.h"
+#include "grammalectegrammarerror.h"
 #include "libgrammalect_private_export.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultTextEdit : public QTextEdit
 {

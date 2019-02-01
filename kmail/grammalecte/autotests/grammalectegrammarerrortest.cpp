@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammalecteinfotest.h"
-#include "grammalecteinfo.h"
+#include "grammalectegrammarerrortest.h"
+#include "grammalectegrammarerror.h"
 #include <QTest>
 QTEST_MAIN(GrammalecteInfoTest)
 

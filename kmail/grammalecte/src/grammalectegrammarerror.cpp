@@ -17,7 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammalecteinfo.h"
+#include "grammalectegrammarerror.h"
 
 #include <QJsonObject>
 
