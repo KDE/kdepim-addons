@@ -17,18 +17,23 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <QApplication>
-#include <QCommandLineParser>
-#include <QStandardPaths>
-#include "grammalectewidget.h"
+#ifndef GRAMMALECTEWIDGET_H
+#define GRAMMALECTEWIDGET_H
 
-int main(int argc, char **argv)
+#include <QWidget>
+class GrammarResultWidget;
+class QTextEdit;
+class GrammalecteWidget : public QWidget
 {
-    QApplication app(argc, argv);
-    QStandardPaths::setTestModeEnabled(true);
+    Q_OBJECT
+public:
+    explicit GrammalecteWidget(QWidget *parent = nullptr);
+    ~GrammalecteWidget();
 
-    GrammalecteWidget w;
-    w.show();
-    app.exec();
-    return 0;
-}
+private:
+    void slotCheckGrammar();
+    QTextEdit *mInput = nullptr;
+    GrammarResultWidget *mResultWidget = nullptr;
+};
+
+#endif // GRAMMALECTEWIDGET_H

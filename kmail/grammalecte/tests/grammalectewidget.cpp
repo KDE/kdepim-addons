@@ -17,18 +17,35 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include <QApplication>
-#include <QCommandLineParser>
-#include <QStandardPaths>
 #include "grammalectewidget.h"
+#include <QVBoxLayout>
+#include <QTextEdit>
+#include <QPushButton>
+#include "grammarresultwidget.h"
 
-int main(int argc, char **argv)
+GrammalecteWidget::GrammalecteWidget(QWidget *parent)
+    : QWidget(parent)
 {
-    QApplication app(argc, argv);
-    QStandardPaths::setTestModeEnabled(true);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
-    GrammalecteWidget w;
-    w.show();
-    app.exec();
-    return 0;
+    QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
+    mainLayout->addWidget(button);
+
+    mInput = new QTextEdit(this);
+    mainLayout->addWidget(mInput);
+
+    mResultWidget = new GrammarResultWidget(this);
+    mainLayout->addWidget(mResultWidget);
+
+    connect(button, &QPushButton::clicked, this, &GrammalecteWidget::slotCheckGrammar);
+}
+
+GrammalecteWidget::~GrammalecteWidget()
+{
+
+}
+
+void GrammalecteWidget::slotCheckGrammar()
+{
+
 }
