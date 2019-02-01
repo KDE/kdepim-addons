@@ -29,7 +29,6 @@
 #include <KActionCollection>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <KMessageBox>
 #include <QPointer>
 #include <QLabel>
 #include <QMenu>
