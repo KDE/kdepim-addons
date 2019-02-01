@@ -18,6 +18,10 @@
 */
 
 #include "grammalecteparser.h"
+#include "grammalecteplugin_debug.h"
+#include <QJsonArray>
+#include <QJsonObject>
+#include <QJsonValue>
 
 GrammalecteParser::GrammalecteParser()
 {
@@ -31,5 +35,19 @@ GrammalecteParser::~GrammalecteParser()
 
 QVector<GrammalecteInfo> GrammalecteParser::parseResult(const QJsonObject &obj) const
 {
-    return {};
+    QVector<GrammalecteInfo> infos;
+    QJsonArray array = obj.value(QLatin1String("data")).toArray();
+    for (const QJsonValue &current : array) {
+        if (current.type() == QJsonValue::Object) {
+            const QJsonObject grammaObject = current.toObject();
+            GrammalecteInfo info;
+            info.parse(grammaObject);
+            if (info.isValid()) {
+                infos.append(info);
+            }
+        } else {
+            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte result" << current;
+        }
+    }
+    return infos;
 }

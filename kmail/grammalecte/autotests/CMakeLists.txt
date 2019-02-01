@@ -1,3 +1,5 @@
+add_definitions( -DGRAMMALECTE_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
+
 set(kmail_grammalecteplugin_debug_SRCS)
 
 macro(add_kmail_grammalecte_unittest _source _additional)

@@ -23,6 +23,7 @@
 #include <QObject>
 #include <QColor>
 #include <QString>
+#include <QDebug>
 #include "libgrammalect_private_export.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteInfo
 {
@@ -49,7 +50,7 @@ public:
 
     Q_REQUIRED_RESULT bool isValid() const;
 
-    void parse();
+    void parse(const QJsonObject &obj);
 
 private:
     QStringList mSuggestions;
@@ -61,5 +62,5 @@ private:
 };
 
 Q_DECLARE_TYPEINFO(GrammalecteInfo, Q_MOVABLE_TYPE);
-
+LIBKMAILGRAMMALECT_EXPORT QDebug operator <<(QDebug d, const GrammalecteInfo &t);
 #endif // GRAMMALECTEINFO_H

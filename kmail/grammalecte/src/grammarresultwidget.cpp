@@ -44,7 +44,7 @@ void GrammarResultWidget::setText(const QString &str)
     mResult->setText(str);
 }
 
-void GrammarResultWidget::checkGrammar()
+void GrammarResultWidget::applyGrammarResult(const QVector<GrammalecteInfo> &infos)
 {
-    mResult->checkGrammar();
+    mResult->applyGrammarResult(infos);
 }

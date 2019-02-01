@@ -19,6 +19,7 @@
 
 #include "grammarresultjob.h"
 #include "grammalecteplugin_debug.h"
+#include <QProcess>
 
 GrammarResultJob::GrammarResultJob(QObject *parent)
     : QObject(parent)

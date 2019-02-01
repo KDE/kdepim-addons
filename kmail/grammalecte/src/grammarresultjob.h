@@ -37,7 +37,7 @@ public:
     void setText(const QString &text);
 
 Q_SIGNALS:
-    void finished();
+    void finished(const QString &result);
     void error();
 
 private:

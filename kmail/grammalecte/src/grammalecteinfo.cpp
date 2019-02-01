@@ -92,10 +92,23 @@ void GrammalecteInfo::setSuggestions(const QStringList &suggestions)
 bool GrammalecteInfo::isValid() const
 {
     //TODO
+    if ((mEnd != -1) && (mBegin != -1))
+        return true;
     return false;
 }
 
-void GrammalecteInfo::parse()
+void GrammalecteInfo::parse(const QJsonObject &obj)
 {
     //TODO
+}
+
+QDebug operator <<(QDebug d, const GrammalecteInfo &t)
+{
+    d << "mError: " << t.error();
+    d << "Start: " << t.begin();
+    d << "End: " << t.end();
+    d << "BlockId: " << t.blockId();
+    d << "Color: " << t.color().name();
+    d << "Suggestion: " << t.suggestions();
+    return d;
 }

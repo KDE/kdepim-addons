@@ -22,6 +22,7 @@
 
 #include <QWidget>
 #include "libgrammalect_private_export.h"
+#include "grammalecteinfo.h"
 class GrammarResultTextEdit;
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultWidget : public QWidget
 {
@@ -30,7 +31,7 @@ public:
     explicit GrammarResultWidget(QWidget *parent = nullptr);
     ~GrammarResultWidget();
     void setText(const QString &str);
-    void checkGrammar();
+    void applyGrammarResult(const QVector<GrammalecteInfo> &infos);
 private:
     GrammarResultTextEdit *mResult = nullptr;
 };
