@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Montel Laurent <montel@kde.org>
+   Copyright (C) 2019 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -20,15 +20,14 @@
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
-#include "markdowndemowidget.h"
 
 int main(int argc, char **argv)
 {
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
 
-    MarkdownDemoWidget w;
-    w.show();
+    //MarkdownDemoWidget w;
+    //w.show();
     app.exec();
     return 0;
 }
