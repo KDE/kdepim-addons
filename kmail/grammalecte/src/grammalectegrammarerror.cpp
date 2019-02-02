@@ -18,7 +18,9 @@
 */
 
 #include "grammalectegrammarerror.h"
+#include "grammalecteplugin_debug.h"
 
+#include <QJsonArray>
 #include <QJsonObject>
 
 GrammalecteGrammarError::GrammalecteGrammarError()
@@ -105,17 +107,37 @@ void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
     mEnd = obj[QStringLiteral("nEnd")].toInt();
     mBegin = obj[QStringLiteral("nStart")].toInt();
     mError = obj[QStringLiteral("sMessage")].toString();
+    mColor = parseColor(obj);
+    mSuggestions = parseSuggestion(obj);
     //TODO
 }
 
-QStringList GrammalecteGrammarError::parseSuggestion()
+QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
 {
-    return {};
+    QStringList lst;
+    const QJsonArray array = obj[QStringLiteral("aSuggestions")].toArray();
+    const QVariantList list = array.toVariantList();
+    for (const QVariant &v : list) {
+        qDebug() << " v" << v.toString();
+        lst.append(v.toString());
+    }
+    return lst;
 }
 
-QColor GrammalecteGrammarError::parseColor()
+QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
 {
-    return {};
+    QColor col;
+    const QJsonArray array = obj[QStringLiteral("aColor")].toArray();
+    if (array.count() == 3) {
+        const QVariantList list = array.toVariantList();
+//        for (const QVariant &v : list) {
+//            qDebug() << " v" << v.toInt();
+//        }
+        col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
+    } else {
+        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;
+    }
+    return col;
 }
 
 QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)

@@ -24,6 +24,7 @@
 #include <QColor>
 #include <QString>
 #include <QDebug>
+#include <QJsonObject>
 #include "libgrammalect_private_export.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGrammarError
 {
@@ -53,8 +54,8 @@ public:
     void parse(const QJsonObject &obj, int blockindex);
 
 private:
-    static QColor parseColor();
-    static QStringList parseSuggestion();
+    static QColor parseColor(const QJsonObject &obj);
+    static QStringList parseSuggestion(const QJsonObject &obj);
     QStringList mSuggestions;
     QString mError;
     QColor mColor;
