@@ -21,12 +21,12 @@
 
 #include <QObject>
 
-class GrammalecteInfoTest : public QObject
+class GrammalecteGrammarErrorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit GrammalecteInfoTest(QObject *parent = nullptr);
-    ~GrammalecteInfoTest() = default;
+    explicit GrammalecteGrammarErrorTest(QObject *parent = nullptr);
+    ~GrammalecteGrammarErrorTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
