@@ -128,7 +128,7 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
     const QJsonArray array = obj[QStringLiteral("aSuggestions")].toArray();
     const QVariantList list = array.toVariantList();
     for (const QVariant &v : list) {
-        qDebug() << " v" << v.toString();
+        //qDebug() << " v" << v.toString();
         lst.append(v.toString());
     }
     return lst;

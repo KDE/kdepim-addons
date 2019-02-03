@@ -47,7 +47,14 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     QTest::addColumn<int>("nbBlock");
     QTest::addColumn<GrammalecteGrammarError>("error");
     QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammalecteGrammarError();
-    QTest::newRow("error1") << QStringLiteral("error1") << 1 << GrammalecteGrammarError();
+    GrammalecteGrammarError err;
+    err.setBlockId(1);
+    err.setBegin(15);
+    err.setEnd(20);
+    err.setColor(QColor(217,128,38));
+    err.setSuggestions(QStringList() << QStringLiteral("Alors"));
+    err.setError(QStringLiteral("Après un point, une majuscule est généralement requise."));
+    QTest::newRow("error1") << QStringLiteral("error1") << 1 << err;
 }
 
 void GrammalecteGrammarErrorTest::shouldParseJson()
