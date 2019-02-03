@@ -119,7 +119,9 @@ bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) 
             (mBegin == other.begin()) &&
             (mColor == other.color()) &&
             (mSuggestions == other.suggestions()) &&
-            (mError == other.error());
+            (mError == other.error()) &&
+            (mOption == other.option()) &&
+            (mRule == other.rule());
 }
 
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
@@ -132,6 +134,26 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
         lst.append(v.toString());
     }
     return lst;
+}
+
+QString GrammalecteGrammarError::rule() const
+{
+    return mRule;
+}
+
+void GrammalecteGrammarError::setRule(const QString &rule)
+{
+    mRule = rule;
+}
+
+QString GrammalecteGrammarError::option() const
+{
+    return mOption;
+}
+
+void GrammalecteGrammarError::setOption(const QString &option)
+{
+    mOption = option;
 }
 
 QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
@@ -158,5 +180,7 @@ QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)
     d << "BlockId: " << t.blockId();
     d << "Color: " << t.color().name();
     d << "Suggestion: " << t.suggestions();
+    d << "Option: " << t.option();
+    d << "Rule: " << t.rule();
     return d;
 }

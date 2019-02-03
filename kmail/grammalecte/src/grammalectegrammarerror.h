@@ -54,11 +54,20 @@ public:
     void parse(const QJsonObject &obj, int blockindex);
 
     Q_REQUIRED_RESULT bool operator ==(const GrammalecteGrammarError &other) const;
+
+    Q_REQUIRED_RESULT QString option() const;
+    void setOption(const QString &option);
+
+    Q_REQUIRED_RESULT QString rule() const;
+    void setRule(const QString &rule);
+
 private:
     static QColor parseColor(const QJsonObject &obj);
     static QStringList parseSuggestion(const QJsonObject &obj);
     QStringList mSuggestions;
     QString mError;
+    QString mOption;
+    QString mRule;
     QColor mColor;
     int mBlockId = -1;
     int mBegin = -1;
