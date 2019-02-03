@@ -112,6 +112,16 @@ void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
     //TODO
 }
 
+bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) const
+{
+    return (mBlockId == other.blockId()) &&
+            (mEnd == other.end()) &&
+            (mBegin == other.begin()) &&
+            (mColor == other.color()) &&
+            (mSuggestions == other.suggestions()) &&
+            (mError == other.error());
+}
+
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
 {
     QStringList lst;

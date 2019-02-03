@@ -19,6 +19,7 @@
 
 #include "grammalectegrammarerrortest.h"
 #include "grammalectegrammarerror.h"
+#include <QJsonDocument>
 #include <QTest>
 QTEST_MAIN(GrammalecteGrammarErrorTest)
 
@@ -39,20 +40,20 @@ void GrammalecteGrammarErrorTest::shouldHaveDefaultValue()
     QVERIFY(!info.color().isValid());
     QVERIFY(!info.isValid());
 }
-/*
-void GrammalecteParserTest::shouldParseJson_data()
+
+void GrammalecteGrammarErrorTest::shouldParseJson_data()
 {
     QTest::addColumn<QString>("fileName");
-    QTest::addColumn<int>("numberOfElement");
-    QTest::newRow("noerror") << QStringLiteral("noerror") << 0;
-    QTest::newRow("noerror2") << QStringLiteral("noerror2") << 0;
-    QTest::newRow("result2") << QStringLiteral("result2") << 3;
+    QTest::addColumn<int>("nbBlock");
+    QTest::addColumn<GrammalecteGrammarError>("error");
+    QTest::newRow("empty") << QStringLiteral("empty") << 1 << GrammalecteGrammarError();
 }
 
-void GrammalecteParserTest::shouldParseJson()
+void GrammalecteGrammarErrorTest::shouldParseJson()
 {
     QFETCH(QString, fileName);
-    QFETCH(int, numberOfElement);
+    QFETCH(int, nbBlock);
+    QFETCH(GrammalecteGrammarError, error);
     const QString originalJsonFile = QLatin1String(GRAMMALECTE_DATA_DIR) + QLatin1Char('/') + fileName + QStringLiteral(".json");
     QFile f(originalJsonFile);
     QVERIFY(f.open(QIODevice::ReadOnly));
@@ -60,8 +61,7 @@ void GrammalecteParserTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    GrammalecteParser parser;
-    QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
-
+    GrammalecteGrammarError parser;
+    parser.parse(fields, nbBlock);
+    QCOMPARE(parser, error);
 }
-*/

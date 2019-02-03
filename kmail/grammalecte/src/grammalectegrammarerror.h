@@ -53,6 +53,7 @@ public:
 
     void parse(const QJsonObject &obj, int blockindex);
 
+    Q_REQUIRED_RESULT bool operator ==(const GrammalecteGrammarError &other) const;
 private:
     static QColor parseColor(const QJsonObject &obj);
     static QStringList parseSuggestion(const QJsonObject &obj);
@@ -63,7 +64,7 @@ private:
     int mBegin = -1;
     int mEnd = -1;
 };
-
+Q_DECLARE_METATYPE(GrammalecteGrammarError)
 Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
 LIBKMAILGRAMMALECT_EXPORT QDebug operator <<(QDebug d, const GrammalecteGrammarError &t);
 #endif // GRAMMALECTEINFO_H

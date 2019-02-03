@@ -29,6 +29,8 @@ public:
     ~GrammalecteGrammarErrorTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldParseJson_data();
+    void shouldParseJson();
 };
 
 #endif // GRAMMALECTEINFOTEST_H
