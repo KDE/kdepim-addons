@@ -47,6 +47,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     QTest::addColumn<int>("nbBlock");
     QTest::addColumn<GrammalecteGrammarError>("error");
     QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammalecteGrammarError();
+    QTest::newRow("error1") << QStringLiteral("error1") << 1 << GrammalecteGrammarError();
 }
 
 void GrammalecteGrammarErrorTest::shouldParseJson()
