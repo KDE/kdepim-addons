@@ -95,21 +95,21 @@ void GrammalecteGrammarError::setSuggestions(const QStringList &suggestions)
 
 bool GrammalecteGrammarError::isValid() const
 {
-    //TODO
-    if ((mEnd != -1) && (mBegin != -1))
+    if ((mEnd != -1) && (mBegin != -1) && (!mError.isEmpty()))
         return true;
     return false;
 }
 
 void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    mBlockId = blockindex;
-    mEnd = obj[QStringLiteral("nEnd")].toInt();
-    mBegin = obj[QStringLiteral("nStart")].toInt();
+    mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
+    mBegin = obj[QStringLiteral("nStart")].toInt(-1);
     mError = obj[QStringLiteral("sMessage")].toString();
-    mColor = parseColor(obj);
-    mSuggestions = parseSuggestion(obj);
-    //TODO
+    if (mEnd != -1) {
+        mBlockId = blockindex;
+        mColor = parseColor(obj);
+        mSuggestions = parseSuggestion(obj);
+    }
 }
 
 bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) const

@@ -46,7 +46,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     QTest::addColumn<QString>("fileName");
     QTest::addColumn<int>("nbBlock");
     QTest::addColumn<GrammalecteGrammarError>("error");
-    QTest::newRow("empty") << QStringLiteral("empty") << 1 << GrammalecteGrammarError();
+    QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammalecteGrammarError();
 }
 
 void GrammalecteGrammarErrorTest::shouldParseJson()
@@ -63,5 +63,10 @@ void GrammalecteGrammarErrorTest::shouldParseJson()
     const QJsonObject fields = doc.object();
     GrammalecteGrammarError parser;
     parser.parse(fields, nbBlock);
-    QCOMPARE(parser, error);
+    const bool compare = (parser == error);
+    if (!compare) {
+        qDebug() << " Parser " << parser;
+        qDebug() << " error " << error;
+    }
+    QVERIFY(compare);
 }
