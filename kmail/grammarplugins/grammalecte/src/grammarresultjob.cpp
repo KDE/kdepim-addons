@@ -47,14 +47,16 @@ void GrammarResultJob::start()
         file->close();
 
         mProcess->setProgram(mPythonPath);
-        //TODO add argument!!!
-        mProcess->setArguments(QStringList() << mGrammarlecteCliPath << mArguments << file->fileName());
-        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
+        mProcess->setArguments(QStringList() << mGrammarlecteCliPath << mArguments << QStringLiteral("-f") << file->fileName());
+        qDebug() << " ARGUMENT " << mProcess->arguments();
+        connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                 this, &GrammarResultJob::receivedError);
         connect(mProcess, &QProcess::readyReadStandardError, this, &GrammarResultJob::receivedStdErr);
-        connect(mProcess, &QProcess::readAllStandardOutput, this, &GrammarResultJob::receivedStandardOutput);
+        connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammarResultJob::receivedStandardOutput);
 
+        qDebug() << "mPythonPath " << mPythonPath;
+        mProcess->start();
         if (!mProcess->waitForStarted()) {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
             Q_EMIT error();

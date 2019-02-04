@@ -52,15 +52,18 @@ GrammalecteWidget::~GrammalecteWidget()
 void GrammalecteWidget::slotCheckGrammar()
 {
     GrammarResultJob *job = new GrammarResultJob(this);
-    job->setPythonPath(QStringLiteral(""));
-    job->setGrammarlecteCliPath(QStringLiteral(""));
-    job->setArguments(QStringList() << QStringLiteral(""));
+    job->setPythonPath(QStringLiteral("/usr/bin/python3"));
+    job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
+    job->setArguments(QStringList() << QStringLiteral("-j"));
+    job->setText(mInput->toPlainText());
     connect(job, &GrammarResultJob::finished, this, &GrammalecteWidget::slotResultFinished);
+    job->start();
 }
 
 void GrammalecteWidget::slotResultFinished(const QString &result)
 {
     qDebug() << " result" << result;
+    mResultWidget->setText(mInput->toPlainText());
     GrammalecteParser parser;
     const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
     const QJsonObject fields = doc.object();
