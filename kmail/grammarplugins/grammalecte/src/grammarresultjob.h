@@ -52,10 +52,15 @@ Q_SIGNALS:
 
 private:
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
+    void receivedStdErr();
+    void receivedError();
+    void receivedStandardOutput();
     QStringList mArguments;
+    QString mResult;
     QString mText;
     QString mPythonPath;
     QString mGrammarlecteCliPath;
+    QProcess *mProcess = nullptr;
 };
 
 #endif // GRAMMARRESULTJOB_H

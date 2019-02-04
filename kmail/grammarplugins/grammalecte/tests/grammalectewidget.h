@@ -32,6 +32,7 @@ public:
 
 private:
     void slotCheckGrammar();
+    void slotResultFinished(const QString &result);
     QTextEdit *mInput = nullptr;
     GrammarResultWidget *mResultWidget = nullptr;
 };

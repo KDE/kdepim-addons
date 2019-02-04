@@ -18,9 +18,13 @@
 */
 
 #include "grammalectewidget.h"
+#include "grammarresultjob.h"
+#include "grammalecteparser.h"
 #include <QVBoxLayout>
 #include <QTextEdit>
 #include <QPushButton>
+#include <QDebug>
+#include <QJsonDocument>
 #include "grammarresultwidget.h"
 
 GrammalecteWidget::GrammalecteWidget(QWidget *parent)
@@ -47,5 +51,18 @@ GrammalecteWidget::~GrammalecteWidget()
 
 void GrammalecteWidget::slotCheckGrammar()
 {
+    GrammarResultJob *job = new GrammarResultJob(this);
+    job->setPythonPath(QStringLiteral(""));
+    job->setGrammarlecteCliPath(QStringLiteral(""));
+    job->setArguments(QStringList() << QStringLiteral(""));
+    connect(job, &GrammarResultJob::finished, this, &GrammalecteWidget::slotResultFinished);
+}
 
+void GrammalecteWidget::slotResultFinished(const QString &result)
+{
+    qDebug() << " result" << result;
+    GrammalecteParser parser;
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonObject fields = doc.object();
+    mResultWidget->applyGrammarResult(parser.parseResult(fields));
 }

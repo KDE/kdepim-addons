@@ -20,6 +20,8 @@
 #include "grammarresultjob.h"
 #include "grammalecteplugin_debug.h"
 
+#include <QTemporaryFile>
+
 GrammarResultJob::GrammarResultJob(QObject *parent)
     : QObject(parent)
 {
@@ -34,12 +36,26 @@ GrammarResultJob::~GrammarResultJob()
 void GrammarResultJob::start()
 {
     if (canStart()) {
-        QProcess *process = new QProcess(this);
-        process->setProgram(mPythonPath);
+        mProcess = new QProcess(this);
+
+
+        QTemporaryFile *file = nullptr;
+        file = new QTemporaryFile(this);
+        file->open();
+        file->setPermissions(QFile::ReadUser);
+        file->write(mText.toUtf8());
+        file->close();
+
+        mProcess->setProgram(mPythonPath);
         //TODO add argument!!!
-        process->setArguments(QStringList() << mGrammarlecteCliPath << mArguments);
-        connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
-        if (!process->waitForStarted()) {
+        mProcess->setArguments(QStringList() << mGrammarlecteCliPath << mArguments << file->fileName());
+        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
+        connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
+                this, &GrammarResultJob::receivedError);
+        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammarResultJob::receivedStdErr);
+        connect(mProcess, &QProcess::readAllStandardOutput, this, &GrammarResultJob::receivedStandardOutput);
+
+        if (!mProcess->waitForStarted()) {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
             Q_EMIT error();
             deleteLater();
@@ -51,9 +67,30 @@ void GrammarResultJob::start()
     }
 }
 
+void GrammarResultJob::receivedStandardOutput()
+{
+    mResult += QString::fromUtf8(mProcess->readAllStandardOutput());
+}
+
+void GrammarResultJob::receivedError()
+{
+    //mLastError += mProcess->errorString();
+}
+
+void GrammarResultJob::receivedStdErr()
+{
+    //mLastError += QLatin1String(mProcess->readAllStandardError());
+}
+
 void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
-    //TODO emit signal
+    if (exitStatus != 0 || exitCode != 0) {
+        qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
+        //TODO error !!!!!
+    } else {
+        Q_EMIT finished(mResult);
+    }
+    deleteLater();
 }
 
 QStringList GrammarResultJob::arguments() const
