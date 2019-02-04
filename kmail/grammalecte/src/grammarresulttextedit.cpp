@@ -19,7 +19,9 @@
 
 
 #include "grammarresulttextedit.h"
-
+#include "grammalecteplugin_debug.h"
+#include <QTextBlock>
+#include <QTextDocument>
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
 {
@@ -35,7 +37,16 @@ GrammarResultTextEdit::~GrammarResultTextEdit()
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarError> &infos)
 {
     for (const GrammalecteGrammarError &info : infos) {
-        //TODO
+        //Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
+        QTextBlock block = document()->findBlock(info.blockId() - 1);
+        if (block.isValid()) {
+            QTextCursor cur(block);
+            //TODO
+
+        } else {
+            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
+        }
+         //TODO
     }
     //TOOD
 }
