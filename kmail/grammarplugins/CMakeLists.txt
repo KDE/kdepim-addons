@@ -1,1 +1,2 @@
 add_subdirectory(grammalecte)
+add_subdirectory(languagetool)
