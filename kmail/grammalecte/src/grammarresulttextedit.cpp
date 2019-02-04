@@ -39,15 +39,18 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
 {
     for (const GrammalecteGrammarError &info : infos) {
         //Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
-        QTextBlock block = document()->findBlock(info.blockId() - 1);
+        QTextBlock block = document()->findBlockByNumber(info.blockId() - 1);
         if (block.isValid()) {
             QTextCursor cur(block);
-            //TODO
+            const int position = cur.position();
+            QTextCharFormat format;
+            format.setBackground(info.color());
+            cur.setPosition(position + info.begin());
+            cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
+            cur.mergeCharFormat(format);
 
         } else {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
         }
-         //TODO
     }
-    //TOOD
 }
