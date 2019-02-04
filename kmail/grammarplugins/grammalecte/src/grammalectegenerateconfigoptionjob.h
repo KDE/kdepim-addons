@@ -21,8 +21,9 @@
 #define GRAMMALECTEGENERATECONFIGOPTIONJOB_H
 
 #include <QObject>
+#include <QProcess>
 #include "libgrammalect_private_export.h"
-class QProcess;
+
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGenerateConfigOptionJob : public QObject
 {
     Q_OBJECT
@@ -44,6 +45,8 @@ Q_SIGNALS:
     void finished(const QStringList &result);
 
 private:
+    void receivedStandardOutput();
+    void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
     QString mResult;
     QString mPythonPath;
     QString mGrammarlecteCliPath;

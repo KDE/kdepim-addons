@@ -20,7 +20,6 @@
 #include "grammalectegenerateconfigoptionjob.h"
 #include "grammalecteplugin_debug.h"
 
-#include <QProcess>
 GrammalecteGenerateConfigOptionJob::GrammalecteGenerateConfigOptionJob(QObject *parent)
     : QObject(parent)
 {
@@ -38,11 +37,11 @@ void GrammalecteGenerateConfigOptionJob::start()
         mProcess = new QProcess(this);
         mProcess->setProgram(mPythonPath);
         mProcess->setArguments(QStringList() << mGrammarlecteCliPath << QStringLiteral("-lo"));
-//        connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteGenerateConfigOptionJob::slotFinished);
+        connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteGenerateConfigOptionJob::slotFinished);
 //        connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
 //                this, &GrammalecteGenerateConfigOptionJob::receivedError);
 //        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteGenerateConfigOptionJob::receivedStdErr);
-//        connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteGenerateConfigOptionJob::receivedStandardOutput);
+        connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteGenerateConfigOptionJob::receivedStandardOutput);
         mProcess->start();
         if (!mProcess->waitForStarted()) {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start GrammalecteGenerateConfigOptionJob";
@@ -82,4 +81,20 @@ QString GrammalecteGenerateConfigOptionJob::grammarlecteCliPath() const
 void GrammalecteGenerateConfigOptionJob::setGrammarlecteCliPath(const QString &grammarlecteCliPath)
 {
     mGrammarlecteCliPath = grammarlecteCliPath;
+}
+
+void GrammalecteGenerateConfigOptionJob::receivedStandardOutput()
+{
+    mResult += QString::fromUtf8(mProcess->readAllStandardOutput());
+}
+
+void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    if (exitStatus != 0 || exitCode != 0) {
+        qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
+    } else {
+        //TODO fixit !
+        Q_EMIT finished(QStringList() << mResult);
+    }
+    deleteLater();
 }
