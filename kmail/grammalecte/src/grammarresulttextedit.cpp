@@ -22,6 +22,7 @@
 #include "grammalecteplugin_debug.h"
 #include <QTextBlock>
 #include <QTextDocument>
+
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
 {
