@@ -173,6 +173,8 @@ void GrammalecteGrammarError::setOption(const QString &option)
 
 QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
 {
+    //TODO verify when color is null !!!!
+
     QColor col;
     const QJsonArray array = obj[QStringLiteral("aColor")].toArray();
     if (array.count() == 3) {
