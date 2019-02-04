@@ -61,6 +61,9 @@ public:
     Q_REQUIRED_RESULT QString rule() const;
     void setRule(const QString &rule);
 
+    Q_REQUIRED_RESULT QString url() const;
+    void setUrl(const QString &url);
+
 private:
     static QColor parseColor(const QJsonObject &obj);
     static QStringList parseSuggestion(const QJsonObject &obj);
@@ -68,6 +71,7 @@ private:
     QString mError;
     QString mOption;
     QString mRule;
+    QString mUrl;
     QColor mColor;
     int mBlockId = -1;
     int mBegin = -1;

@@ -110,6 +110,10 @@ void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
         mColor = parseColor(obj);
         mSuggestions = parseSuggestion(obj);
     }
+    mRule = obj[QStringLiteral("sRuleId")].toString();
+    mOption = obj[QStringLiteral("sType")].toString();
+    mUrl = obj[QStringLiteral("URL")].toString();
+
 }
 
 bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) const
@@ -121,7 +125,8 @@ bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) 
             (mSuggestions == other.suggestions()) &&
             (mError == other.error()) &&
             (mOption == other.option()) &&
-            (mRule == other.rule());
+            (mRule == other.rule()) &&
+            (mUrl == other.url());
 }
 
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
@@ -134,6 +139,16 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
         lst.append(v.toString());
     }
     return lst;
+}
+
+QString GrammalecteGrammarError::url() const
+{
+    return mUrl;
+}
+
+void GrammalecteGrammarError::setUrl(const QString &url)
+{
+    mUrl = url;
 }
 
 QString GrammalecteGrammarError::rule() const
@@ -182,5 +197,6 @@ QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)
     d << "Suggestion: " << t.suggestions();
     d << "Option: " << t.option();
     d << "Rule: " << t.rule();
+    d << "Url: " << t.url();
     return d;
 }
