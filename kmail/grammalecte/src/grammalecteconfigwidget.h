@@ -28,6 +28,11 @@ class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteConfigWidget : public QWidget
 public:
     explicit GrammalecteConfigWidget(QWidget *parent = nullptr);
     ~GrammalecteConfigWidget();
+    void loadSettings();
+    void saveSettings();
+private:
+    QWidget *addGeneralTab();
+    QWidget *addGrammarTab();
 };
 
 #endif // GRAMMALECTECONFIGWIDGET_H

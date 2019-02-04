@@ -16,6 +16,7 @@ generate_export_header(libkmailgrammalect BASE_NAME libkmailgrammalect)
 target_link_libraries(libkmailgrammalect
     KF5::I18n
     KF5::IconThemes
+    KF5::ConfigCore
 )
 
 set_target_properties(libkmailgrammalect

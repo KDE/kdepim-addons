@@ -19,7 +19,10 @@
 
 #include "grammalecteconfigwidget.h"
 #include <QVBoxLayout>
+#include <QTabWidget>
 #include <KLocalizedString>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     : QWidget(parent)
@@ -27,9 +30,41 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+
+    QTabWidget *mTab = new QTabWidget(this);
+    mTab->setObjectName(QStringLiteral("mTab"));
+    mainLayout->addWidget(mTab);
+    mTab->addTab(addGeneralTab(), i18n("General"));
+    mTab->addTab(addGrammarTab(), i18n("Grammar Settings"));
 }
 
 GrammalecteConfigWidget::~GrammalecteConfigWidget()
 {
 
+}
+
+QWidget *GrammalecteConfigWidget::addGrammarTab()
+{
+    QWidget *w = new QWidget(this);
+    w->setObjectName(QStringLiteral("grammar"));
+    return w;
+}
+
+QWidget *GrammalecteConfigWidget::addGeneralTab()
+{
+    QWidget *w = new QWidget(this);
+    w->setObjectName(QStringLiteral("general"));
+    return w;
+}
+
+void GrammalecteConfigWidget::loadSettings()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    //TODO
+}
+
+void GrammalecteConfigWidget::saveSettings()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    //TODO
 }

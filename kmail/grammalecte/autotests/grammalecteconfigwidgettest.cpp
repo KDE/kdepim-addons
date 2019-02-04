@@ -17,23 +17,26 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEUTIL_H
-#define GRAMMALECTEUTIL_H
-
-#include "libgrammalect_private_export.h"
-#include <QString>
-
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteUtil
+#include "grammalecteconfigwidgettest.h"
+#include "grammalecteconfigwidget.h"
+#include <QTabWidget>
+#include <QTest>
+#include <QVBoxLayout>
+#include <QStandardPaths>
+QTEST_MAIN(GrammalecteConfigWidgetTest)
+GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
+    : QObject(parent)
 {
-public:
-    GrammalecteUtil();
+    QStandardPaths::setTestModeEnabled(true);
+}
 
-    Q_REQUIRED_RESULT QString pythonPath() const;
-    Q_REQUIRED_RESULT QString grammalectePath() const;
+void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
+{
+    GrammalecteConfigWidget w;
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
 
-private:
-    QString mPythonPath;
-    QString mGrammalectePath;
-};
-
-#endif // GRAMMALECTEUTIL_H
+    QTabWidget *mTab = w.findChild<QTabWidget *>(QStringLiteral("mTab"));
+    QVERIFY(mTab);
+}

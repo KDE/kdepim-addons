@@ -21,6 +21,7 @@
 #define GRAMMARRESULTJOB_H
 
 #include <QObject>
+#include <QProcess>
 #include "libgrammalect_private_export.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultJob : public QObject
 {
@@ -36,12 +37,25 @@ public:
     Q_REQUIRED_RESULT QString text() const;
     void setText(const QString &text);
 
+    Q_REQUIRED_RESULT QString pythonPath() const;
+    void setPythonPath(const QString &pythonPath);
+
+    Q_REQUIRED_RESULT QString grammarlecteCliPath() const;
+    void setGrammarlecteCliPath(const QString &grammarlecteCliPath);
+
+    Q_REQUIRED_RESULT QStringList arguments() const;
+    void setArguments(const QStringList &arguments);
+
 Q_SIGNALS:
     void finished(const QString &result);
     void error();
 
 private:
+    void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
+    QStringList mArguments;
     QString mText;
+    QString mPythonPath;
+    QString mGrammarlecteCliPath;
 };
 
 #endif // GRAMMARRESULTJOB_H

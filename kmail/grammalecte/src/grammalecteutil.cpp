@@ -28,3 +28,8 @@ QString GrammalecteUtil::pythonPath() const
 {
     return mPythonPath;
 }
+
+QString GrammalecteUtil::grammalectePath() const
+{
+    return mGrammalectePath;
+}

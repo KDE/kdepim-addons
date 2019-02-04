@@ -32,4 +32,21 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
     GrammarResultJob job;
     QVERIFY(!job.canStart());
     QVERIFY(job.text().isEmpty());
+    QVERIFY(job.pythonPath().isEmpty());
+    QVERIFY(job.grammarlecteCliPath().isEmpty());
+    QVERIFY(job.arguments().isEmpty());
+}
+
+void GrammarResultJobTest::shouldBeAbleToStart()
+{
+    GrammarResultJob job;
+    QVERIFY(!job.canStart());
+    job.setText(QStringLiteral("ff"));
+    QVERIFY(!job.canStart());
+    job.setPythonPath(QStringLiteral("ff"));
+    QVERIFY(!job.canStart());
+    job.setGrammarlecteCliPath(QStringLiteral("ff"));
+    QVERIFY(!job.canStart());
+    job.setArguments(QStringList() << QStringLiteral("ff"));
+    QVERIFY(job.canStart());
 }

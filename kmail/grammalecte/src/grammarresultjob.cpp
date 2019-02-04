@@ -19,7 +19,6 @@
 
 #include "grammarresultjob.h"
 #include "grammalecteplugin_debug.h"
-#include <QProcess>
 
 GrammarResultJob::GrammarResultJob(QObject *parent)
     : QObject(parent)
@@ -35,12 +34,56 @@ GrammarResultJob::~GrammarResultJob()
 void GrammarResultJob::start()
 {
     if (canStart()) {
-        //TODO
+        QProcess *process = new QProcess(this);
+        process->setProgram(mPythonPath);
+        //TODO add argument!!!
+        process->setArguments(QStringList() << mGrammarlecteCliPath << mArguments);
+        connect(process, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
+        if (!process->waitForStarted()) {
+            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
+            Q_EMIT error();
+            deleteLater();
+        }
     } else {
         qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
         Q_EMIT error();
         deleteLater();
     }
+}
+
+void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
+{
+    //TODO emit signal
+}
+
+QStringList GrammarResultJob::arguments() const
+{
+    return mArguments;
+}
+
+void GrammarResultJob::setArguments(const QStringList &arguments)
+{
+    mArguments = arguments;
+}
+
+QString GrammarResultJob::grammarlecteCliPath() const
+{
+    return mGrammarlecteCliPath;
+}
+
+void GrammarResultJob::setGrammarlecteCliPath(const QString &grammarlecteCliPath)
+{
+    mGrammarlecteCliPath = grammarlecteCliPath;
+}
+
+QString GrammarResultJob::pythonPath() const
+{
+    return mPythonPath;
+}
+
+void GrammarResultJob::setPythonPath(const QString &pythonPath)
+{
+    mPythonPath = pythonPath;
 }
 
 static bool hasNotEmptyText(const QString &text)
@@ -55,7 +98,7 @@ static bool hasNotEmptyText(const QString &text)
 
 bool GrammarResultJob::canStart() const
 {
-    if (hasNotEmptyText(mText)) {
+    if (hasNotEmptyText(mText) && !mGrammarlecteCliPath.isEmpty() && !mPythonPath.isEmpty() && !mArguments.isEmpty()) {
         return true;
     }
     return false;

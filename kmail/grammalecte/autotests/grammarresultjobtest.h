@@ -30,6 +30,7 @@ public:
     ~GrammarResultJobTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldBeAbleToStart();
 };
 
 #endif // GRAMMARRESULTJOBTEST_H
