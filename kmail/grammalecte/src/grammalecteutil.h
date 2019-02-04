@@ -21,11 +21,14 @@
 #define GRAMMALECTEUTIL_H
 
 #include "libgrammalect_private_export.h"
+#include <QString>
 
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteUtil
 {
 public:
     GrammalecteUtil();
+
+    QString pythonPath() const;
 };
 
 #endif // GRAMMALECTEUTIL_H

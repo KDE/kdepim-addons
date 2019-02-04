@@ -18,8 +18,13 @@
 */
 
 #include "grammalecteutil.h"
-
+#include <QStandardPaths>
 GrammalecteUtil::GrammalecteUtil()
 {
 
+}
+
+QString GrammalecteUtil::pythonPath() const
+{
+    return QStandardPaths::findExecutable(QStringLiteral("python3"));
 }
