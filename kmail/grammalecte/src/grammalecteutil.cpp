@@ -21,10 +21,10 @@
 #include <QStandardPaths>
 GrammalecteUtil::GrammalecteUtil()
 {
-
+    mPythonPath = QStandardPaths::findExecutable(QStringLiteral("python3"));
 }
 
 QString GrammalecteUtil::pythonPath() const
 {
-    return QStandardPaths::findExecutable(QStringLiteral("python3"));
+    return mPythonPath;
 }

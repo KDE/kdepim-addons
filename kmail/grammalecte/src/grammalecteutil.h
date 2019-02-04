@@ -29,6 +29,8 @@ public:
     GrammalecteUtil();
 
     QString pythonPath() const;
+private:
+    QString mPythonPath;
 };
 
 #endif // GRAMMALECTEUTIL_H
