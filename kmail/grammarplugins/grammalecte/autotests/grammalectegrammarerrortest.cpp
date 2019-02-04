@@ -57,6 +57,8 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     err.setOption(QStringLiteral("maj"));
     err.setRule(QStringLiteral("majuscule_après_point"));
     QTest::newRow("error1") << QStringLiteral("error1") << 1 << err;
+    err.setColor(QColor());
+    QTest::newRow("empty-color") << QStringLiteral("empty-color") << 1 << err;
 }
 
 void GrammalecteGrammarErrorTest::shouldParseJson()

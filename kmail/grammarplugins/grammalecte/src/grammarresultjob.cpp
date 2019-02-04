@@ -38,7 +38,6 @@ void GrammarResultJob::start()
     if (canStart()) {
         mProcess = new QProcess(this);
 
-
         QTemporaryFile *file = nullptr;
         file = new QTemporaryFile(this);
         file->open();
@@ -48,14 +47,12 @@ void GrammarResultJob::start()
 
         mProcess->setProgram(mPythonPath);
         mProcess->setArguments(QStringList() << mGrammarlecteCliPath << mArguments << QStringLiteral("-f") << file->fileName());
-        qDebug() << " ARGUMENT " << mProcess->arguments();
         connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                 this, &GrammarResultJob::receivedError);
         connect(mProcess, &QProcess::readyReadStandardError, this, &GrammarResultJob::receivedStdErr);
         connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammarResultJob::receivedStandardOutput);
 
-        qDebug() << "mPythonPath " << mPythonPath;
         mProcess->start();
         if (!mProcess->waitForStarted()) {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
@@ -88,7 +85,6 @@ void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatu
 {
     if (exitStatus != 0 || exitCode != 0) {
         qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
-        //TODO error !!!!!
     } else {
         Q_EMIT finished(mResult);
     }

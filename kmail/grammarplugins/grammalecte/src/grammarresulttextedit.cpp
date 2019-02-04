@@ -20,6 +20,7 @@
 
 #include "grammarresulttextedit.h"
 #include "grammalecteplugin_debug.h"
+
 #include <QTextBlock>
 #include <QTextDocument>
 
@@ -44,11 +45,12 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
             QTextCursor cur(block);
             const int position = cur.position();
             QTextCharFormat format;
-            format.setBackground(info.color());
+            //Verify color
+            format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
+            format.setToolTip(info.error());
             cur.setPosition(position + info.begin());
             cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
-
         } else {
             qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
         }

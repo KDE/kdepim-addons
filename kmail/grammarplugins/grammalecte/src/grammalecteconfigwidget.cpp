@@ -18,6 +18,7 @@
 */
 
 #include "grammalecteconfigwidget.h"
+#include "grammalectegenerateconfigoptionjob.h"
 #include <QVBoxLayout>
 #include <QTabWidget>
 #include <KLocalizedString>
