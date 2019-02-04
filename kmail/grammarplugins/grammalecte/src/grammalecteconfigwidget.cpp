@@ -19,6 +19,7 @@
 
 #include "grammalecteconfigwidget.h"
 #include "grammalectegenerateconfigoptionjob.h"
+
 #include <QVBoxLayout>
 #include <QTabWidget>
 #include <KLocalizedString>
@@ -37,11 +38,18 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     mainLayout->addWidget(mTab);
     mTab->addTab(addGeneralTab(), i18n("General"));
     mTab->addTab(addGrammarTab(), i18n("Grammar Settings"));
+    loadGrammarSettings();
 }
 
 GrammalecteConfigWidget::~GrammalecteConfigWidget()
 {
 
+}
+
+void GrammalecteConfigWidget::loadGrammarSettings()
+{
+    GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);
+    //TODO
 }
 
 QWidget *GrammalecteConfigWidget::addGrammarTab()

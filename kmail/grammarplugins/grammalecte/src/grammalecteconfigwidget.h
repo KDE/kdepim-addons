@@ -31,6 +31,7 @@ public:
     void loadSettings();
     void saveSettings();
 private:
+    void loadGrammarSettings();
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
 };
