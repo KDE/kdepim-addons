@@ -1,4 +1,4 @@
-add_subdirectory(plugins)
+add_subdirectory(grammarplugins)
 add_subdirectory(editorplugins)
 add_subdirectory(editorsendcheckplugins)
 add_subdirectory(editorinitplugins)
