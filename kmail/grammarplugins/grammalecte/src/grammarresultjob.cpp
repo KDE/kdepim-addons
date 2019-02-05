@@ -73,18 +73,18 @@ void GrammarResultJob::receivedStandardOutput()
 
 void GrammarResultJob::receivedError()
 {
-    //mLastError += mProcess->errorString();
+    mLastError += mProcess->errorString();
 }
 
 void GrammarResultJob::receivedStdErr()
 {
-    //mLastError += QLatin1String(mProcess->readAllStandardError());
+    mLastError += QLatin1String(mProcess->readAllStandardError());
 }
 
 void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
-        qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
+        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Error during running GrammarResultJob: " << mLastError;
     } else {
         Q_EMIT finished(mResult);
     }

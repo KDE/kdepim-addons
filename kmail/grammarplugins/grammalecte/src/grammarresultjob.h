@@ -60,6 +60,7 @@ private:
     QString mText;
     QString mPythonPath;
     QString mGrammarlecteCliPath;
+    QString mLastError;
     QProcess *mProcess = nullptr;
 };
 

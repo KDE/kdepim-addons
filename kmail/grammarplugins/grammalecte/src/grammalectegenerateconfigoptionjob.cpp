@@ -104,19 +104,20 @@ void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::Ex
 QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOptionJob::parseResult() const
 {
     QVector<GrammalecteGenerateConfigOptionJob::Option> opts;
-    QRegularExpression reg(QStringLiteral("^([a-zA-Z0-9]+):\\s*(True|False)\\s*(.*)$"));
+    const QRegularExpression reg(QStringLiteral("^([a-zA-Z0-9]+):\\s*(True|False)\\s*(.*)$"));
     const QStringList lst = mResult.split(QLatin1Char('\n'));
     for (const QString &str : lst) {
         const QRegularExpressionMatch match = reg.match(str);
         if (match.hasMatch()) {
             const QString optionName = match.captured(1);
-            const QString value = match.captured(2);
+            //const QString value = match.captured(2);
             const QString description = match.captured(3);
-            qDebug() << "optionName " << optionName << " value " << value << " description " << description;
-            GrammalecteGenerateConfigOptionJob::Option opt;
-            opt.description = description;
-            opt.optionName = optionName;
-            opts.append(opt);
+            if (!optionName.isEmpty() && !description.isEmpty()) {
+                GrammalecteGenerateConfigOptionJob::Option opt;
+                opt.description = description;
+                opt.optionName = optionName;
+                opts.append(opt);
+            }
         }
     }
     return opts;
