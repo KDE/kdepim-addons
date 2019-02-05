@@ -55,7 +55,7 @@ Q_SIGNALS:
 private:
     void receivedStandardOutput();
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
-    void parseResult();
+    QVector<GrammalecteGenerateConfigOptionJob::Option> parseResult() const;
     QString mResult;
     QString mPythonPath;
     QString mGrammarlecteCliPath;

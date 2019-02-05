@@ -19,6 +19,8 @@
 
 #include "grammalectegenerateconfigoptionjob.h"
 #include "grammalecteplugin_debug.h"
+#include <QRegularExpression>
+#include <QRegularExpressionMatch>
 
 GrammalecteGenerateConfigOptionJob::GrammalecteGenerateConfigOptionJob(QObject *parent)
     : QObject(parent)
@@ -93,15 +95,25 @@ void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::Ex
     if (exitStatus != 0 || exitCode != 0) {
         qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
     } else {
-        parseResult();
-        //TODO fixit !
-        Q_EMIT finished({});
+        Q_EMIT finished(parseResult());
     }
     deleteLater();
 }
 
 
-void GrammalecteGenerateConfigOptionJob::parseResult()
+QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOptionJob::parseResult() const
 {
-
+    QVector<GrammalecteGenerateConfigOptionJob::Option> opt;
+    QRegularExpression reg(QStringLiteral("^([a-zA-Z0-9]+):\\s*(True|False)\\s*(.*)$"));
+    const QStringList lst = mResult.split(QLatin1Char('\n'));
+    for (const QString &str : lst) {
+        const QRegularExpressionMatch match = reg.match(str);
+        if (match.hasMatch()) {
+            const QString optionName = match.captured(0);
+            const QString value = match.captured(1);
+            const QString description = match.captured(2);
+            qDebug() << "optionName " << optionName << " value " << value << " description " << description;
+        }
+    }
+    return opt;
 }
