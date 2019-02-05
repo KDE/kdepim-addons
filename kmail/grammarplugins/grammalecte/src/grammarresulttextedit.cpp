@@ -56,3 +56,5 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
         }
     }
 }
+//TODO add popupmenu
+//Replace text

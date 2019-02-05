@@ -18,7 +18,7 @@
 */
 
 #include "grammalecteconfigwidget.h"
-#include "grammalectegenerateconfigoptionjob.h"
+
 
 #include <QVBoxLayout>
 #include <QTabWidget>
@@ -48,8 +48,19 @@ GrammalecteConfigWidget::~GrammalecteConfigWidget()
 
 void GrammalecteConfigWidget::loadGrammarSettings()
 {
+    //Remove hardcoded path
     GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);
-    //TODO
+    job->setPythonPath(QStringLiteral("/usr/bin/python3"));
+    job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
+    connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteConfigWidget::slotGetSettingsFinished);
+    job->start();
+}
+
+void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
+{
+    for (const GrammalecteGenerateConfigOptionJob::Option &opt : result) {
+        //TODO
+    }
 }
 
 QWidget *GrammalecteConfigWidget::addGrammarTab()

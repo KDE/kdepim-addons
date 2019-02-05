@@ -22,6 +22,7 @@
 
 #include <QWidget>
 #include "libgrammalect_private_export.h"
+#include "grammalectegenerateconfigoptionjob.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
@@ -31,6 +32,7 @@ public:
     void loadSettings();
     void saveSettings();
 private:
+    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void loadGrammarSettings();
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
