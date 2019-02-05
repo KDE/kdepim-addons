@@ -21,6 +21,7 @@
 #define GRAMMALECTEWIDGET_H
 
 #include <QWidget>
+#include "grammalectegenerateconfigoptionjob.h"
 class GrammarResultWidget;
 class QTextEdit;
 class GrammalecteWidget : public QWidget
@@ -32,6 +33,8 @@ public:
 
 private:
     void slotCheckGrammar();
+    void slotGetSettings();
+    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void slotResultFinished(const QString &result);
     QTextEdit *mInput = nullptr;
     GrammarResultWidget *mResultWidget = nullptr;

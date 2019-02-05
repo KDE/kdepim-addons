@@ -19,6 +19,7 @@
 
 #include "grammalectewidget.h"
 #include "grammarresultjob.h"
+
 #include "grammalecteparser.h"
 #include <QVBoxLayout>
 #include <QTextEdit>
@@ -35,6 +36,9 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
 
+    QPushButton *checkSettingsButton = new QPushButton(QStringLiteral("Get Settings"), this);
+    mainLayout->addWidget(checkSettingsButton);
+
     mInput = new QTextEdit(this);
     mainLayout->addWidget(mInput);
 
@@ -42,9 +46,24 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     mainLayout->addWidget(mResultWidget);
 
     connect(button, &QPushButton::clicked, this, &GrammalecteWidget::slotCheckGrammar);
+    connect(checkSettingsButton, &QPushButton::clicked, this, &GrammalecteWidget::slotGetSettings);
 }
 
 GrammalecteWidget::~GrammalecteWidget()
+{
+
+}
+
+void GrammalecteWidget::slotGetSettings()
+{
+    GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);
+    job->setPythonPath(QStringLiteral("/usr/bin/python3"));
+    job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
+    connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteWidget::slotGetSettingsFinished);
+    job->start();
+}
+
+void GrammalecteWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
 {
 
 }
