@@ -17,23 +17,23 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
+#ifndef GRAMMALECTEPLUGIN_H
+#define GRAMMALECTEPLUGIN_H
 
-#include <QWidget>
-#include "libkmailgrammalect_export.h"
-#include "grammalectegrammarerror.h"
-class GrammarResultTextEdit;
-class LIBKMAILGRAMMALECT_EXPORT GrammarResultWidget : public QWidget
+#include <PimCommon/CustomToolsPlugin>
+#include <QVariant>
+class GrammalectePlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
 public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
-private:
-    GrammarResultTextEdit *mResult = nullptr;
+    explicit GrammalectePlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
+    ~GrammalectePlugin() override;
+
+    PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
+    Q_REQUIRED_RESULT QString customToolName() const override;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
+    void showConfigureDialog(QWidget *parent) override;
+    Q_REQUIRED_RESULT QString description() const override;
 };
 
-#endif // GRAMMARRESULTWIDGET_H
+#endif // GRAMMALECTEPLUGIN_H

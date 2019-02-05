@@ -26,10 +26,3 @@ set_target_properties(libkmailgrammalecte
 
 
 install(TARGETS libkmailgrammalecte ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
-
-#kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json SOURCES
-#    ${kmail_grammalecteplugin_SRCS} INSTALL_NAMESPACE kmail)
-
-#target_link_libraries(kmail_grammalecteplugin
-#        KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon libkmailgrammalect
-#    )

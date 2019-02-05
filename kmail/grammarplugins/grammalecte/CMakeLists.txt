@@ -1,4 +1,6 @@
+add_definitions(-DTRANSLATION_DOMAIN=\"kmail_editorgrammar_plugins\")
 add_subdirectory(src)
+add_subdirectory(plugin)
 if(BUILD_TESTING)
    add_subdirectory(tests)
    add_subdirectory(autotests)

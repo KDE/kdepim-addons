@@ -1,0 +1,12 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to check grammar in french only.",
+        "EnabledByDefault": "false",
+        "Id": "kmailgrammalecte",
+        "Name": "French Grammar Checker",
+        "ServiceTypes": [
+            "KMailEditor/PluginEditorGrammar"
+        ],
+        "Version": "1.0"
+    }
+}

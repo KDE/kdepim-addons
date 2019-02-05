@@ -16,24 +16,27 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+#ifndef GRAMMALECTEINTERFACE_H
+#define GRAMMALECTEINTERFACE_H
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
-
-#include <QWidget>
-#include "libkmailgrammalect_export.h"
-#include "grammalectegrammarerror.h"
-class GrammarResultTextEdit;
-class LIBKMAILGRAMMALECT_EXPORT GrammarResultWidget : public QWidget
+#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
+class KActionCollection;
+class GrammarResultWidget;
+class GrammalecteInterface : public MessageComposer::PluginEditorGrammarCustomToolsViewInterface
 {
     Q_OBJECT
 public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
+    explicit GrammalecteInterface(KActionCollection *ac, QWidget *parent = nullptr);
+    ~GrammalecteInterface() override;
+
+    void setText(const QString &text) override;
+    KToggleAction *action() const override;
+
 private:
-    GrammarResultTextEdit *mResult = nullptr;
+    void slotActivateGrammalecte(bool state);
+    void createAction(KActionCollection *ac);
+    GrammarResultWidget *mGrammarResultWidget = nullptr;
+    KToggleAction *mAction = nullptr;
 };
 
-#endif // GRAMMARRESULTWIDGET_H
+#endif // GRAMMALECTEINTERFACE_H
