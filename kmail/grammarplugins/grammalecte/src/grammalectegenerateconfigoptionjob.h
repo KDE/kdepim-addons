@@ -22,12 +22,20 @@
 
 #include <QObject>
 #include <QProcess>
+#include <QVector>
 #include "libgrammalect_private_export.h"
 
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGenerateConfigOptionJob : public QObject
 {
     Q_OBJECT
 public:
+
+    struct Option
+    {
+        QString optionName;
+        QString description;
+    };
+
     explicit GrammalecteGenerateConfigOptionJob(QObject *parent = nullptr);
     ~GrammalecteGenerateConfigOptionJob();
 
@@ -42,15 +50,16 @@ public:
 
 Q_SIGNALS:
     void error();
-    void finished(const QStringList &result);
+    void finished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
 
 private:
     void receivedStandardOutput();
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
+    void parseResult();
     QString mResult;
     QString mPythonPath;
     QString mGrammarlecteCliPath;
     QProcess *mProcess = nullptr;
 };
-
+Q_DECLARE_TYPEINFO(GrammalecteGenerateConfigOptionJob::Option, Q_MOVABLE_TYPE);
 #endif // GRAMMALECTEGENERATECONFIGOPTIONJOB_H

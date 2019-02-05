@@ -93,8 +93,15 @@ void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::Ex
     if (exitStatus != 0 || exitCode != 0) {
         qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
     } else {
+        parseResult();
         //TODO fixit !
-        Q_EMIT finished(QStringList() << mResult);
+        Q_EMIT finished({});
     }
     deleteLater();
+}
+
+
+void GrammalecteGenerateConfigOptionJob::parseResult()
+{
+
 }
