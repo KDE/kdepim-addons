@@ -79,5 +79,5 @@ private:
 };
 Q_DECLARE_METATYPE(GrammalecteGrammarError)
 Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
-LIBKMAILGRAMMALECT_EXPORT QDebug operator <<(QDebug d, const GrammalecteGrammarError &t);
+LIBKMAILGRAMMALECTE_EXPORT QDebug operator <<(QDebug d, const GrammalecteGrammarError &t);
 #endif // GRAMMALECTEINFO_H

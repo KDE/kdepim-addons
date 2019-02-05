@@ -18,7 +18,7 @@
 */
 
 #include "grammalecteparser.h"
-#include "grammalecteplugin_debug.h"
+#include "libgrammalecte_debug.h"
 #include <QJsonArray>
 #include <QJsonObject>
 #include <QJsonValue>
@@ -37,7 +37,7 @@ QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObjec
 {
     QVector<GrammalecteGrammarError> infos;
     if (!obj.contains(QLatin1String("grammalecte"))) {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Error in json " << obj;
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error in json " << obj;
         return infos;
     }
     const QJsonArray array = obj.value(QLatin1String("data")).toArray();
@@ -57,11 +57,11 @@ QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObjec
                         infos.append(info);
                     }
                 } else {
-                    qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte error" << error;
+                    qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte error" << error;
                 }
             }
         } else {
-            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte result" << current;
+            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Problem when parsing grammalecte result" << current;
         }
     }
     return infos;

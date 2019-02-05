@@ -33,7 +33,6 @@ public:
     Q_REQUIRED_RESULT QString customToolName() const override;
     Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
-    Q_REQUIRED_RESULT QString description() const override;
 };
 
 #endif // GRAMMALECTEPLUGIN_H

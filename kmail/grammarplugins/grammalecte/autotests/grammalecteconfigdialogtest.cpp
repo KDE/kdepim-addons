@@ -17,23 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
-
-#include <QWidget>
-#include "libkmailgrammalecte_export.h"
-#include "grammalectegrammarerror.h"
-class GrammarResultTextEdit;
-class LIBKMAILGRAMMALECTE_EXPORT GrammarResultWidget : public QWidget
+#include "grammalecteconfigdialogtest.h"
+#include "grammalecteconfigdialog.h"
+#include <QTest>
+QTEST_MAIN(GrammalecteConfigDialogTest)
+GrammalecteConfigDialogTest::GrammalecteConfigDialogTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
-private:
-    GrammarResultTextEdit *mResult = nullptr;
-};
 
-#endif // GRAMMARRESULTWIDGET_H
+}
+
+void GrammalecteConfigDialogTest::shouldHaveDefaultValue()
+{
+    GrammalecteConfigDialog w;
+    QVERIFY(!w.windowTitle().isEmpty());
+}

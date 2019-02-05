@@ -7,6 +7,8 @@ set(grammalecteplugin_SRCS
     grammalecteinterface.cpp
     )
 
+ecm_qt_declare_logging_category(grammalecteplugin_SRCS HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin)
+
 kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json SOURCES
     ${grammalecteplugin_SRCS} INSTALL_NAMESPACE kmail)
 

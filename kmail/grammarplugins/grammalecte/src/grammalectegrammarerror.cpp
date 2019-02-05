@@ -18,7 +18,7 @@
 */
 
 #include "grammalectegrammarerror.h"
-#include "grammalecteplugin_debug.h"
+#include "libgrammalecte_debug.h"
 
 #include <QJsonArray>
 #include <QJsonObject>
@@ -185,7 +185,7 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
 //        }
         col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
     } else {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;
     }
     return col;
 }

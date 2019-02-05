@@ -25,6 +25,7 @@
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QCheckBox>
 
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     : QWidget(parent)
@@ -37,7 +38,9 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     mTab->setObjectName(QStringLiteral("mTab"));
     mainLayout->addWidget(mTab);
     mTab->addTab(addGeneralTab(), i18n("General"));
-    mTab->addTab(addGrammarTab(), i18n("Grammar Settings"));
+    mGrammarTabWidget = addGrammarTab();
+    mTab->addTab(mGrammarTabWidget, i18n("Grammar Settings"));
+    loadSettings(); //First
     loadGrammarSettings();
 }
 
@@ -58,16 +61,23 @@ void GrammalecteConfigWidget::loadGrammarSettings()
 
 void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
 {
+    mListOptions.reserve(result.count());
     for (const GrammalecteGenerateConfigOptionJob::Option &opt : result) {
-        //TODO
+        QCheckBox *box = new QCheckBox(opt.description, this);
+        box->setProperty("optionname", opt.optionName);
+        mGrammarTabWidget->layout()->addWidget(box);
+        mListOptions.append(box);
     }
 }
 
 QWidget *GrammalecteConfigWidget::addGrammarTab()
 {
-    QWidget *w = new QWidget(this);
-    w->setObjectName(QStringLiteral("grammar"));
-    return w;
+    QWidget *grammarTabWidget = new QWidget(this);
+    grammarTabWidget->setObjectName(QStringLiteral("grammar"));
+    QVBoxLayout *layout = new QVBoxLayout(grammarTabWidget);
+    layout->setObjectName(QStringLiteral("grammartablayout"));
+    layout->setMargin(0);
+    return grammarTabWidget;
 }
 
 QWidget *GrammalecteConfigWidget::addGeneralTab()

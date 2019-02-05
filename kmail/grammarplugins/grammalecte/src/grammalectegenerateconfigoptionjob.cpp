@@ -18,7 +18,7 @@
 */
 
 #include "grammalectegenerateconfigoptionjob.h"
-#include "grammalecteplugin_debug.h"
+#include "libgrammalecte_debug.h"
 #include <QRegularExpression>
 #include <QRegularExpressionMatch>
 
@@ -46,12 +46,12 @@ void GrammalecteGenerateConfigOptionJob::start()
         connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteGenerateConfigOptionJob::receivedStandardOutput);
         mProcess->start();
         if (!mProcess->waitForStarted()) {
-            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start GrammalecteGenerateConfigOptionJob";
+            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start GrammalecteGenerateConfigOptionJob";
             Q_EMIT error();
             deleteLater();
         }
     } else {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start GrammalecteGenerateConfigOptionJob";
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start GrammalecteGenerateConfigOptionJob";
         Q_EMIT error();
         deleteLater();
     }
@@ -93,7 +93,7 @@ void GrammalecteGenerateConfigOptionJob::receivedStandardOutput()
 void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
-        qDebug() << " ERROR :!!!!!!!!!!!!!!!!!!!!";
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "GrammalecteGenerateConfigOptionJob ERROR :!!!!!!!!!!!!!!!!!!!!" ;
     } else {
         Q_EMIT finished(parseResult());
     }

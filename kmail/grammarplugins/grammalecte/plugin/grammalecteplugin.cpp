@@ -18,8 +18,14 @@
 */
 
 #include "grammalecteplugin.h"
+#include "grammalecteinterface.h"
+#include "grammalecteconfigdialog.h"
+#include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
 #include <kpluginfactory.h>
+
+#include <QPointer>
+
 K_PLUGIN_CLASS_WITH_JSON(GrammalectePlugin, "kmail_grammalecteplugin.json")
 GrammalectePlugin::GrammalectePlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)
@@ -35,8 +41,12 @@ GrammalectePlugin::~GrammalectePlugin()
 
 PimCommon::CustomToolsViewInterface *GrammalectePlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    //TODO
-    return {};
+    GrammalecteInterface *view = new GrammalecteInterface(ac, parent);
+
+    connect(view, &GrammalecteInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
+    connect(view, &GrammalecteInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
+    connect(view, &GrammalecteInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
+    return view;
 }
 
 QString GrammalectePlugin::customToolName() const
@@ -51,12 +61,11 @@ bool GrammalectePlugin::hasConfigureDialog() const
 
 void GrammalectePlugin::showConfigureDialog(QWidget *parent)
 {
-    //TODO
+    QPointer<GrammalecteConfigDialog> dlg = new GrammalecteConfigDialog(parent);
+    if (dlg->exec()) {
+        //TODO
+    }
+    delete dlg;
 }
 
-QString GrammalectePlugin::description() const
-{
-    //TODO
-    return {};
-}
 #include "grammalecteplugin.moc"

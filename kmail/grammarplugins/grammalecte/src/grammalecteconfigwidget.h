@@ -21,9 +21,10 @@
 #define GRAMMALECTECONFIGWIDGET_H
 
 #include <QWidget>
-#include "libgrammalect_private_export.h"
+#include "libkmailgrammalecte_export.h"
 #include "grammalectegenerateconfigoptionjob.h"
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteConfigWidget : public QWidget
+class QCheckBox;
+class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -36,6 +37,8 @@ private:
     void loadGrammarSettings();
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
+    QWidget *mGrammarTabWidget = nullptr;
+    QList<QCheckBox *> mListOptions;
 };
 
 #endif // GRAMMALECTECONFIGWIDGET_H

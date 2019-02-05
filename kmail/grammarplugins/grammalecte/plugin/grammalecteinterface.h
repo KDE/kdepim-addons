@@ -29,7 +29,6 @@ public:
     explicit GrammalecteInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~GrammalecteInterface() override;
 
-    void setText(const QString &text) override;
     KToggleAction *action() const override;
 
 private:

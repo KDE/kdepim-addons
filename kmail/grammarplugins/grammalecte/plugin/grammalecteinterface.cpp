@@ -26,7 +26,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 
-#include <QDebug>
 #include <QHBoxLayout>
 
 
@@ -36,9 +35,6 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
     mGrammarResultWidget = new GrammarResultWidget(this);
-
-//TODO ????
-    //connect(mTranslatorWidget, &PimCommon::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -53,22 +49,15 @@ void GrammalecteInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
         mGrammarResultWidget->show();
+        if (richTextEditor()) {
+            mGrammarResultWidget->setText(richTextEditor()->toPlainText());
+        } else {
+
+        }
         Q_EMIT activateView(this);
     } else {
         mGrammarResultWidget->hide();
         Q_EMIT activateView(nullptr);
-    }
-}
-
-void GrammalecteInterface::setText(const QString &text)
-{
-    //TOOD ???? using it ?
-    Q_UNUSED(text);
-    if (richTextEditor()) {
-        mGrammarResultWidget->setText(richTextEditor()->toPlainText());
-    } else {
-        //Add qdebug categories
-        qWarning() << "RichTextEditor not setted";
     }
 }
 
@@ -83,7 +72,6 @@ void GrammalecteInterface::createAction(KActionCollection *ac)
     connect(mAction, &KToggleAction::triggered, this, &GrammalecteInterface::slotActivateGrammalecte);
     if (ac) {
         ac->addAction(QStringLiteral("checkgrammar-grammalecte"), mAction);
-        //ac->setDefaultShortcut(mAction, QKeySequence(Qt::CTRL + Qt::ALT + Qt::Key_T));
     }
     mAction->setChecked(false);
 }

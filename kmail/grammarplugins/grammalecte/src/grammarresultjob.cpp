@@ -18,7 +18,7 @@
 */
 
 #include "grammarresultjob.h"
-#include "grammalecteplugin_debug.h"
+#include "libgrammalecte_debug.h"
 
 #include <QTemporaryFile>
 
@@ -55,12 +55,12 @@ void GrammarResultJob::start()
 
         mProcess->start();
         if (!mProcess->waitForStarted()) {
-            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
+            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
             Q_EMIT error();
             deleteLater();
         }
     } else {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
         Q_EMIT error();
         deleteLater();
     }
@@ -84,7 +84,7 @@ void GrammarResultJob::receivedStdErr()
 void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Error during running GrammarResultJob: " << mLastError;
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error during running GrammarResultJob: " << mLastError;
     } else {
         Q_EMIT finished(mResult);
     }

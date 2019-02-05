@@ -7,9 +7,10 @@ set(kmail_grammalecteplugin_SRCS
     grammalecteconfigwidget.cpp
     grammalecteutil.cpp
     grammalectegenerateconfigoptionjob.cpp
+    grammalecteconfigdialog.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_grammalecteplugin_SRCS HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin)
+ecm_qt_declare_logging_category(kmail_grammalecteplugin_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
 
 
 add_library(libkmailgrammalecte ${kmail_grammalecteplugin_SRCS})

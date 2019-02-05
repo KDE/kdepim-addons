@@ -19,7 +19,7 @@
 
 
 #include "grammarresulttextedit.h"
-#include "grammalecteplugin_debug.h"
+#include "libgrammalecte_debug.h"
 
 #include <QTextBlock>
 #include <QTextDocument>
@@ -52,7 +52,7 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
             cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
         } else {
-            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
+            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
         }
     }
 }

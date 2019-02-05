@@ -20,12 +20,12 @@
 #ifndef LIBGRAMMALECTPRIVATE_EXPORT_H
 #define LIBGRAMMALECTPRIVATE_EXPORT_H
 
-#include "libkmailgrammalect_export.h"
+#include "libkmailgrammalecte_export.h"
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
 # ifndef LIBGRAMMALECTPRIVATE_TESTS_EXPORT
-#  define LIBGRAMMALECTPRIVATE_TESTS_EXPORT LIBKMAILGRAMMALECT_EXPORT
+#  define LIBGRAMMALECTPRIVATE_TESTS_EXPORT LIBKMAILGRAMMALECTE_EXPORT
 # endif
 #else /* not compiling tests */
 # define LIBGRAMMALECTPRIVATE_TESTS_EXPORT
