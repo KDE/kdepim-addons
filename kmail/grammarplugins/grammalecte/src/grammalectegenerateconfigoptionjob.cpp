@@ -40,9 +40,9 @@ void GrammalecteGenerateConfigOptionJob::start()
         mProcess->setProgram(mPythonPath);
         mProcess->setArguments(QStringList() << mGrammarlecteCliPath << QStringLiteral("-lo"));
         connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteGenerateConfigOptionJob::slotFinished);
-//        connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
-//                this, &GrammalecteGenerateConfigOptionJob::receivedError);
-//        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteGenerateConfigOptionJob::receivedStdErr);
+        connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
+                this, &GrammalecteGenerateConfigOptionJob::receivedError);
+        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteGenerateConfigOptionJob::receivedStdErr);
         connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteGenerateConfigOptionJob::receivedStandardOutput);
         mProcess->start();
         if (!mProcess->waitForStarted()) {
@@ -64,6 +64,17 @@ bool GrammalecteGenerateConfigOptionJob::canStart() const
     }
     return true;
 }
+
+void GrammalecteGenerateConfigOptionJob::receivedError()
+{
+    mLastError += mProcess->errorString();
+}
+
+void GrammalecteGenerateConfigOptionJob::receivedStdErr()
+{
+    mLastError += QLatin1String(mProcess->readAllStandardError());
+}
+
 
 QString GrammalecteGenerateConfigOptionJob::pythonPath() const
 {
@@ -93,7 +104,7 @@ void GrammalecteGenerateConfigOptionJob::receivedStandardOutput()
 void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "GrammalecteGenerateConfigOptionJob ERROR :!!!!!!!!!!!!!!!!!!!!" ;
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "GrammalecteGenerateConfigOptionJob ERROR: " << mLastError;
     } else {
         Q_EMIT finished(parseResult());
     }

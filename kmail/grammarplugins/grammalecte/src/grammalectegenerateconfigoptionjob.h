@@ -56,10 +56,13 @@ Q_SIGNALS:
 private:
     void receivedStandardOutput();
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
+    void receivedError();
+    void receivedStdErr();
     QVector<GrammalecteGenerateConfigOptionJob::Option> parseResult() const;
     QString mResult;
     QString mPythonPath;
     QString mGrammarlecteCliPath;
+    QString mLastError;
     QProcess *mProcess = nullptr;
 };
 Q_DECLARE_TYPEINFO(GrammalecteGenerateConfigOptionJob::Option, Q_MOVABLE_TYPE);
