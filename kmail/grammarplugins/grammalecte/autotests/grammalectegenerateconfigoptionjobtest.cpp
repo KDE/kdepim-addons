@@ -33,6 +33,11 @@ void GrammalecteGenerateConfigOptionJobTest::shouldHaveDefaultValue()
 {
     GrammalecteGenerateConfigOptionJob job;
     QVERIFY(!job.canStart());
+
+    GrammalecteGenerateConfigOptionJob::Option opt;
+    QVERIFY(opt.optionName.isEmpty());
+    QVERIFY(opt.description.isEmpty());
+    QVERIFY(!opt.defaultValue);
 }
 
 void GrammalecteGenerateConfigOptionJobTest::shouldBeAbleToStart()
