@@ -30,12 +30,15 @@ public:
     explicit GrammalecteManager(QObject *parent = nullptr);
     ~GrammalecteManager();
 
+    static GrammalecteManager *self();
+
     Q_REQUIRED_RESULT QString pythonPath() const;
     Q_REQUIRED_RESULT QString grammalectePath() const;
 
     void setPythonPath(const QString &pythonPath);
     void setGrammalectePath(const QString &grammalectePath);
 
+    void loadSettings();
 private:
     QString mPythonPath;
     QString mGrammalectePath;

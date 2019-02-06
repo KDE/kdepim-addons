@@ -19,15 +19,34 @@
 
 
 #include "grammalectemanager.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QStandardPaths>
 
 GrammalecteManager::GrammalecteManager(QObject *parent)
     : QObject(parent)
 {
-
+    loadSettings();
 }
 
 GrammalecteManager::~GrammalecteManager()
 {
+}
+
+GrammalecteManager *GrammalecteManager::self()
+{
+    static GrammalecteManager s_self;
+    return &s_self;
+}
+
+void GrammalecteManager::loadSettings()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    mPythonPath = grp.readEntry(QStringLiteral("pythonpath"));
+    if (mPythonPath.isEmpty()) {
+        mPythonPath = QStandardPaths::findExecutable(QStringLiteral("python3"));
+    }
+    mGrammalectePath = grp.readEntry(QStringLiteral("grammalectepath"));
 }
 
 QString GrammalecteManager::pythonPath() const
