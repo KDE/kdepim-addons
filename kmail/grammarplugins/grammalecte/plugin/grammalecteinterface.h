@@ -35,6 +35,7 @@ private:
     void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
+    void checkAgain();
     GrammarResultWidget *mGrammarResultWidget = nullptr;
     KToggleAction *mAction = nullptr;
 };

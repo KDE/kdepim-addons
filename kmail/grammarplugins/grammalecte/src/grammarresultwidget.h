@@ -38,6 +38,7 @@ public:
     void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
+    void checkAgain();
 private:
     void slotCheckGrammarFinished(const QString &result);
     GrammarResultTextEdit *mResult = nullptr;

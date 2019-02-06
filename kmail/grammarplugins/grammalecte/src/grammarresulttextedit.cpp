@@ -84,6 +84,9 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                 connect(actReplacement, &QAction::triggered, this, [this, act, str]() {slotReplaceWord(act, str);});
             }
         }
+        popup->addSeparator();
+        QAction *checkAgainAct = popup->addAction(i18n("Check Again"));
+        connect(checkAgainAct, &QAction::triggered, this, &GrammarResultTextEdit::checkAgain);
         popup->exec(event->globalPos());
         delete popup;
     }

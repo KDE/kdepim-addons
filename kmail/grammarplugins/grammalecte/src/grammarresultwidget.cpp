@@ -36,6 +36,7 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
     connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
+    connect(mResult, &GrammarResultTextEdit::checkAgain, this, &GrammarResultWidget::checkAgain);
     mainLayout->addWidget(mResult);
 }
 

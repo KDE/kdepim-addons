@@ -40,7 +40,7 @@ protected:
 
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
-
+    void checkAgain();
 private:
     void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
     enum TextInfo {

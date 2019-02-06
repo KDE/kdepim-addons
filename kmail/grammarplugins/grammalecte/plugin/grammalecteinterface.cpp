@@ -38,6 +38,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     layout->setMargin(0);
     mGrammarResultWidget = new GrammarResultWidget(this);
     connect(mGrammarResultWidget, &GrammarResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &GrammarResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -66,12 +67,7 @@ void GrammalecteInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
         mGrammarResultWidget->show();
-        if (richTextEditor()) {
-            mGrammarResultWidget->setText(richTextEditor()->toPlainText());
-            mGrammarResultWidget->checkGrammar();
-        } else {
-            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
-        }
+        checkAgain();
         Q_EMIT activateView(this);
     } else {
         mGrammarResultWidget->hide();
@@ -92,4 +88,14 @@ void GrammalecteInterface::createAction(KActionCollection *ac)
         ac->addAction(QStringLiteral("checkgrammar-grammalecte"), mAction);
     }
     mAction->setChecked(false);
+}
+
+void GrammalecteInterface::checkAgain()
+{
+    if (richTextEditor()) {
+        mGrammarResultWidget->setText(richTextEditor()->toPlainText());
+        mGrammarResultWidget->checkGrammar();
+    } else {
+        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
+    }
 }
