@@ -26,6 +26,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QCheckBox>
+#include <QScrollArea>
 
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     : QWidget(parent)
@@ -38,8 +39,7 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     mTab->setObjectName(QStringLiteral("mTab"));
     mainLayout->addWidget(mTab);
     mTab->addTab(addGeneralTab(), i18n("General"));
-    mGrammarTabWidget = addGrammarTab();
-    mTab->addTab(mGrammarTabWidget, i18n("Grammar Settings"));
+    mTab->addTab(addGrammarTab(), i18n("Grammar Settings"));
     loadSettings(); //First
     loadGrammarSettings();
 }
@@ -73,12 +73,14 @@ void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteG
 
 QWidget *GrammalecteConfigWidget::addGrammarTab()
 {
-    QWidget *grammarTabWidget = new QWidget(this);
-    grammarTabWidget->setObjectName(QStringLiteral("grammar"));
-    QVBoxLayout *layout = new QVBoxLayout(grammarTabWidget);
+    QScrollArea *area = new QScrollArea(this);
+    area->setWidgetResizable(true);
+    mGrammarTabWidget = new QWidget;
+    mGrammarTabWidget->setObjectName(QStringLiteral("grammar"));
+    QVBoxLayout *layout = new QVBoxLayout(mGrammarTabWidget);
     layout->setObjectName(QStringLiteral("grammartablayout"));
-    layout->setMargin(0);
-    return grammarTabWidget;
+    area->setWidget(mGrammarTabWidget);
+    return area;
 }
 
 QWidget *GrammalecteConfigWidget::addGeneralTab()

@@ -22,6 +22,8 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent)
     : QDialog(parent)
@@ -39,20 +41,25 @@ GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent)
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &GrammalecteConfigDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &GrammalecteConfigDialog::reject);
+    readConfig();
 }
 
 GrammalecteConfigDialog::~GrammalecteConfigDialog()
 {
-
+    writeConfig();
 }
 
-
-void GrammalecteConfigDialog::loadSettings()
+void GrammalecteConfigDialog::writeConfig()
 {
-    //TODO
+    KConfigGroup group(KSharedConfig::openConfig(), "GrammalecteConfigDialog");
+    group.writeEntry("Size", size());
 }
 
-void GrammalecteConfigDialog::saveSettings()
+void GrammalecteConfigDialog::readConfig()
 {
-    //TODO
+    KConfigGroup group(KSharedConfig::openConfig(), "GrammalecteConfigDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }
