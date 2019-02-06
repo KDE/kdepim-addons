@@ -5,9 +5,9 @@ set(kmail_grammalecteplugin_SRCS
     grammalectegrammarerror.cpp
     grammarresultjob.cpp
     grammalecteconfigwidget.cpp
-    grammalecteutil.cpp
     grammalectegenerateconfigoptionjob.cpp
     grammalecteconfigdialog.cpp
+    grammalectemanager.cpp
     )
 
 ecm_qt_declare_logging_category(kmail_grammalecteplugin_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)

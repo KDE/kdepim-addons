@@ -17,19 +17,35 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammalecteutil.h"
-#include <QStandardPaths>
-GrammalecteUtil::GrammalecteUtil()
+
+#include "grammalectemanager.h"
+
+GrammalecteManager::GrammalecteManager(QObject *parent)
+    : QObject(parent)
 {
-    mPythonPath = QStandardPaths::findExecutable(QStringLiteral("python3"));
+
 }
 
-QString GrammalecteUtil::pythonPath() const
+GrammalecteManager::~GrammalecteManager()
+{
+}
+
+QString GrammalecteManager::pythonPath() const
 {
     return mPythonPath;
 }
 
-QString GrammalecteUtil::grammalectePath() const
+QString GrammalecteManager::grammalectePath() const
 {
     return mGrammalectePath;
+}
+
+void GrammalecteManager::setPythonPath(const QString &pythonPath)
+{
+    mPythonPath = pythonPath;
+}
+
+void GrammalecteManager::setGrammalectePath(const QString &grammalectePath)
+{
+    mGrammalectePath = grammalectePath;
 }

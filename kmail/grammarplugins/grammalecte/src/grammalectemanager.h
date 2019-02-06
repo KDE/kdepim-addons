@@ -17,23 +17,28 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEUTIL_H
-#define GRAMMALECTEUTIL_H
 
-#include "libgrammalect_private_export.h"
-#include <QString>
+#ifndef GRAMMALECTEMANAGER_H
+#define GRAMMALECTEMANAGER_H
 
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteUtil
+#include <QObject>
+
+class GrammalecteManager : public QObject
 {
+    Q_OBJECT
 public:
-    GrammalecteUtil();
+    explicit GrammalecteManager(QObject *parent = nullptr);
+    ~GrammalecteManager();
 
     Q_REQUIRED_RESULT QString pythonPath() const;
     Q_REQUIRED_RESULT QString grammalectePath() const;
+
+    void setPythonPath(const QString &pythonPath);
+    void setGrammalectePath(const QString &grammalectePath);
 
 private:
     QString mPythonPath;
     QString mGrammalectePath;
 };
 
-#endif // GRAMMALECTEUTIL_H
+#endif // GRAMMALECTEMANAGER_H
