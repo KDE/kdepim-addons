@@ -24,6 +24,7 @@
 #include "libkmailgrammalecte_export.h"
 #include "grammalectegenerateconfigoptionjob.h"
 class QCheckBox;
+class KUrlRequester;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
@@ -36,10 +37,12 @@ private:
     void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void loadGrammarSettings();
     void slotGetSettingsError();
+    QList<QCheckBox *> mListOptions;
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
     QWidget *mGrammarTabWidget = nullptr;
-    QList<QCheckBox *> mListOptions;
+    KUrlRequester *mPythonPath = nullptr;
+    KUrlRequester *mGrammalectePath = nullptr;
 };
 
 #endif // GRAMMALECTECONFIGWIDGET_H

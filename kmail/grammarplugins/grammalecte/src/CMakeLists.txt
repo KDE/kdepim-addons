@@ -20,6 +20,7 @@ target_link_libraries(libkmailgrammalecte
     KF5::IconThemes
     KF5::ConfigCore
     KF5::WidgetsAddons
+    KF5::KIOWidgets
 )
 
 set_target_properties(libkmailgrammalecte

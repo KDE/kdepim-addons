@@ -28,6 +28,9 @@
 #include <QTabWidget>
 #include <QCheckBox>
 #include <QScrollArea>
+#include <QFormLayout>
+
+#include <KUrlRequester>
 
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
     : QWidget(parent)
@@ -94,6 +97,19 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
 {
     QWidget *w = new QWidget(this);
     w->setObjectName(QStringLiteral("general"));
+    QFormLayout *lay = new QFormLayout(w);
+    lay->setMargin(0);
+    lay->setObjectName(QStringLiteral("generallayout"));
+
+
+    mPythonPath = new KUrlRequester(this);
+    mPythonPath->setObjectName(QStringLiteral("pythonpath"));
+    lay->addRow(i18n("Python Path:"), mPythonPath);
+
+    mGrammalectePath = new KUrlRequester(this);
+    mGrammalectePath->setObjectName(QStringLiteral("grammalectepath"));
+    lay->addRow(i18n("Grammalecte Path:"), mGrammalectePath);
+
     return w;
 }
 
