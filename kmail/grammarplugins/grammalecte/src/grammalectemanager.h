@@ -22,8 +22,8 @@
 #define GRAMMALECTEMANAGER_H
 
 #include <QObject>
-
-class GrammalecteManager : public QObject
+#include "libkmailgrammalecte_export.h"
+class LIBKMAILGRAMMALECTE_EXPORT GrammalecteManager : public QObject
 {
     Q_OBJECT
 public:

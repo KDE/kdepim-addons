@@ -20,6 +20,7 @@
 #include "grammalecteplugin.h"
 #include "grammalecteinterface.h"
 #include "grammalecteconfigdialog.h"
+#include "grammalectemanager.h"
 #include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -63,7 +64,7 @@ void GrammalectePlugin::showConfigureDialog(QWidget *parent)
 {
     QPointer<GrammalecteConfigDialog> dlg = new GrammalecteConfigDialog(parent);
     if (dlg->exec()) {
-        //TODO
+        GrammalecteManager::self()->loadSettings();
     }
     delete dlg;
 }

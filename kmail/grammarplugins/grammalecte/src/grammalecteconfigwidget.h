@@ -37,6 +37,7 @@ private:
     void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void loadGrammarSettings();
     void slotGetSettingsError();
+    QStringList mSaveOptions;
     QList<QCheckBox *> mListOptions;
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
