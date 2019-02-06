@@ -19,12 +19,13 @@
 
 #include "grammalecteconfigwidget.h"
 
-
-#include <QVBoxLayout>
-#include <QTabWidget>
+#include <KMessageBox>
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
+
+#include <QVBoxLayout>
+#include <QTabWidget>
 #include <QCheckBox>
 #include <QScrollArea>
 
@@ -56,7 +57,13 @@ void GrammalecteConfigWidget::loadGrammarSettings()
     job->setPythonPath(QStringLiteral("/usr/bin/python3"));
     job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
     connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteConfigWidget::slotGetSettingsFinished);
+    connect(job, &GrammalecteGenerateConfigOptionJob::error, this, &GrammalecteConfigWidget::slotGetSettingsError);
     job->start();
+}
+
+void GrammalecteConfigWidget::slotGetSettingsError()
+{
+    KMessageBox::error(this, i18n("Error during Extracting Options"), i18n("Impossible to get options. Please verify that you have grammalected installed."));
 }
 
 void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)

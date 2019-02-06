@@ -35,6 +35,7 @@ public:
 private:
     void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void loadGrammarSettings();
+    void slotGetSettingsError();
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
     QWidget *mGrammarTabWidget = nullptr;
