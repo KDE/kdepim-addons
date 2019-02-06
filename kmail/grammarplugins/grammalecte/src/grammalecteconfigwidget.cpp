@@ -51,7 +51,7 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
 
 GrammalecteConfigWidget::~GrammalecteConfigWidget()
 {
-
+    saveSettings();
 }
 
 void GrammalecteConfigWidget::loadGrammarSettings()
