@@ -22,12 +22,13 @@
 #include "grammalecteparser.h"
 #include <QJsonDocument>
 #include <QTest>
+#include <QStandardPaths>
 QTEST_MAIN(GrammalecteParserTest)
 
 GrammalecteParserTest::GrammalecteParserTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GrammalecteParserTest::shouldParseJson_data()

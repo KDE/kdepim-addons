@@ -20,7 +20,11 @@
 
 #include "grammarresulttextedit.h"
 #include "grammarresultwidget.h"
+#include "grammalectemanager.h"
+#include "grammarresultjob.h"
+#include "grammalecteparser.h"
 #include <QHBoxLayout>
+#include <QJsonDocument>
 #include <QTextEdit>
 
 GrammarResultWidget::GrammarResultWidget(QWidget *parent)
@@ -31,12 +35,32 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mainLayout->setMargin(0);
     mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
+    connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
     mainLayout->addWidget(mResult);
 }
 
 GrammarResultWidget::~GrammarResultWidget()
 {
 
+}
+
+void GrammarResultWidget::checkGrammar()
+{
+    GrammarResultJob *job = new GrammarResultJob(this);
+    job->setPythonPath(GrammalecteManager::self()->pythonPath());
+    job->setGrammarlecteCliPath(GrammalecteManager::self()->grammalectePath());
+    job->setArguments(GrammalecteManager::self()->options());
+    job->setText(mResult->toPlainText());
+    connect(job, &GrammarResultJob::finished, this, &GrammarResultWidget::slotCheckGrammarFinished);
+    job->start();
+}
+
+void GrammarResultWidget::slotCheckGrammarFinished(const QString &result)
+{
+    GrammalecteParser parser;
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonObject fields = doc.object();
+    applyGrammarResult(parser.parseResult(fields));
 }
 
 void GrammarResultWidget::setText(const QString &str)

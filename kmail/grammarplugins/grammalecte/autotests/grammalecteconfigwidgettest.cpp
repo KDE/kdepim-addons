@@ -32,7 +32,7 @@ GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
 
 void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
 {
-    GrammalecteConfigWidget w;
+    GrammalecteConfigWidget w(nullptr, true);
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);

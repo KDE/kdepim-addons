@@ -32,6 +32,7 @@ public:
     KToggleAction *action() const override;
 
 private:
+    void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     GrammarResultWidget *mGrammarResultWidget = nullptr;

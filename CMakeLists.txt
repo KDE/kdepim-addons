@@ -52,7 +52,7 @@ option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
 option(KMAIL_EDITORCONVERTERPLUGIN_TEMPLATE_BUILD "Build the kmail editor converter plugin." FALSE)
-option(KMAIL_GRAMMALECTEPLUGIN_BUILD "Build grammalecte plugin (very experimental." FALSE)
+option(KMAIL_LANGUAGETOOLPLUGIN_BUILD "Build languagetool plugin (very experimental)." FALSE)
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
 
@@ -81,7 +81,7 @@ set(LIBKLEO_LIB_VERSION "5.10.40")
 set(AKONADI_LIB_VERSION "5.10.40")
 set(INCIDENCEEDITOR_LIB_VERSION "5.10.40")
 set(KTNEF_LIB_VERSION "5.10.40")
-set(MESSAGELIB_LIB_VERSION "5.10.47")
+set(MESSAGELIB_LIB_VERSION "5.10.49")
 set(AKONADICALENDAR_LIB_VERSION "5.10.40")
 set(CALENDAR_UTILS_VERSION "5.10.40")
 set(KPIMTEXTEDIT_LIB_VERSION "5.10.40")

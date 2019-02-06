@@ -19,6 +19,7 @@
 
 #include "grammalecteinterface.h"
 #include "grammarresultwidget.h"
+#include "grammalecteplugin_debug.h"
 
 #include <KPIMTextEdit/RichTextComposer>
 
@@ -27,6 +28,7 @@
 #include <KActionCollection>
 
 #include <QHBoxLayout>
+#include <QTextBlock>
 
 
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
@@ -35,6 +37,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
     mGrammarResultWidget = new GrammarResultWidget(this);
+    connect(mGrammarResultWidget, &GrammarResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -45,14 +48,29 @@ GrammalecteInterface::~GrammalecteInterface()
 
 }
 
+void GrammalecteInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+{
+    if (richTextEditor()) {
+        QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
+        if (block.isValid()) {
+            QTextCursor cur(block);
+            const int position = cur.position();
+            cur.setPosition(position + act.start());
+            cur.setPosition(position + act.end(), QTextCursor::KeepAnchor);
+            cur.insertText(act.replacement());
+        }
+    }
+}
+
 void GrammalecteInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
         mGrammarResultWidget->show();
         if (richTextEditor()) {
             mGrammarResultWidget->setText(richTextEditor()->toPlainText());
+            mGrammarResultWidget->checkGrammar();
         } else {
-
+            qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
         }
         Q_EMIT activateView(this);
     } else {

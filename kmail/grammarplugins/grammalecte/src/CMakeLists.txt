@@ -21,6 +21,7 @@ target_link_libraries(libkmailgrammalecte
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::KIOWidgets
+    KF5::MessageComposer
 )
 
 set_target_properties(libkmailgrammalecte

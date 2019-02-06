@@ -33,9 +33,8 @@ GrammalecteConfigDialogTest::GrammalecteConfigDialogTest(QObject *parent)
 
 void GrammalecteConfigDialogTest::shouldHaveDefaultValue()
 {
-    GrammalecteConfigDialog w;
+    GrammalecteConfigDialog w(nullptr, true);
     QVERIFY(!w.windowTitle().isEmpty());
-
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);

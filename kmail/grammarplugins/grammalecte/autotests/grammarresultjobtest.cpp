@@ -20,11 +20,12 @@
 #include "grammarresultjobtest.h"
 #include "grammarresultjob.h"
 #include <QTest>
+#include <QStandardPaths>
 QTEST_MAIN(GrammarResultJobTest)
 GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GrammarResultJobTest::shouldHaveDefaultValue()
@@ -40,13 +41,15 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 void GrammarResultJobTest::shouldBeAbleToStart()
 {
     GrammarResultJob job;
+    //Args can be empty if we use default values
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));
     QVERIFY(!job.canStart());
     job.setPythonPath(QStringLiteral("ff"));
     QVERIFY(!job.canStart());
     job.setGrammarlecteCliPath(QStringLiteral("ff"));
-    QVERIFY(!job.canStart());
+    QVERIFY(job.canStart());
+
     job.setArguments(QStringList() << QStringLiteral("ff"));
     QVERIFY(job.canStart());
 }

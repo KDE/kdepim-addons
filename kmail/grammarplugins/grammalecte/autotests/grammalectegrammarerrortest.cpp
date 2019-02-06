@@ -20,13 +20,14 @@
 #include "grammalectegrammarerrortest.h"
 #include "grammalectegrammarerror.h"
 #include <QJsonDocument>
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(GrammalecteGrammarErrorTest)
 
 GrammalecteGrammarErrorTest::GrammalecteGrammarErrorTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GrammalecteGrammarErrorTest::shouldHaveDefaultValue()

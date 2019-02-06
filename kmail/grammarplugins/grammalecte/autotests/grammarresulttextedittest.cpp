@@ -20,12 +20,13 @@
 #include "grammarresulttextedittest.h"
 #include "grammarresulttextedit.h"
 #include <QTest>
+#include <QStandardPaths>
 QTEST_MAIN(GrammarResultTextEditTest)
 
 GrammarResultTextEditTest::GrammarResultTextEditTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GrammarResultTextEditTest::shouldHaveDefaultValue()

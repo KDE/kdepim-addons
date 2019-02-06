@@ -39,6 +39,25 @@ GrammalecteManager *GrammalecteManager::self()
     return &s_self;
 }
 
+void GrammalecteManager::saveSettings()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    grp.writeEntry(QStringLiteral("pythonpath"), mPythonPath);
+    grp.writeEntry(QStringLiteral("grammalectepath"), mGrammalectePath);
+    grp.writeEntry(QStringLiteral("options"), mOptions);
+
+}
+
+QStringList GrammalecteManager::options() const
+{
+    return mOptions;
+}
+
+void GrammalecteManager::setOptions(const QStringList &saveOptions)
+{
+    mOptions = saveOptions;
+}
+
 void GrammalecteManager::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
@@ -47,6 +66,7 @@ void GrammalecteManager::loadSettings()
         mPythonPath = QStandardPaths::findExecutable(QStringLiteral("python3"));
     }
     mGrammalectePath = grp.readEntry(QStringLiteral("grammalectepath"));
+    mOptions = grp.readEntry(QStringLiteral("options"), QStringList());
 }
 
 QString GrammalecteManager::pythonPath() const

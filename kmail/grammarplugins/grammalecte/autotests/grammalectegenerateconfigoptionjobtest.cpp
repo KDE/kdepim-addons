@@ -20,13 +20,14 @@
 
 #include "grammalectegenerateconfigoptionjobtest.h"
 #include "grammalectegenerateconfigoptionjob.h"
+#include <QStandardPaths>
 #include <QTest>
 QTEST_MAIN(GrammalecteGenerateConfigOptionJobTest)
 
 GrammalecteGenerateConfigOptionJobTest::GrammalecteGenerateConfigOptionJobTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void GrammalecteGenerateConfigOptionJobTest::shouldHaveDefaultValue()

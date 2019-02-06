@@ -37,9 +37,14 @@ public:
 
     void setPythonPath(const QString &pythonPath);
     void setGrammalectePath(const QString &grammalectePath);
+    Q_REQUIRED_RESULT QStringList options() const;
+    void setOptions(const QStringList &saveOptions);
 
     void loadSettings();
+    void saveSettings();
+
 private:
+    QStringList mOptions;
     QString mPythonPath;
     QString mGrammalectePath;
 };

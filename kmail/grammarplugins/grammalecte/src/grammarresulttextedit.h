@@ -23,14 +23,29 @@
 #include <QTextEdit>
 #include "grammalectegrammarerror.h"
 #include "libgrammalect_private_export.h"
+namespace MessageComposer {
+class PluginGrammarAction;
+}
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:
     explicit GrammarResultTextEdit(QWidget *parent = nullptr);
-    ~GrammarResultTextEdit();
+    ~GrammarResultTextEdit() override;
 
     void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
+
+protected:
+    void contextMenuEvent(QContextMenuEvent *event) override;
+
+Q_SIGNALS:
+    void replaceText(const MessageComposer::PluginGrammarAction &act);
+
+private:
+    void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
+    enum TextInfo {
+        ReplaceFormatInfo = QTextFormat::UserProperty + 1
+    };
 };
 
 #endif // GRAMMARRESULTTEXTEDIT_H

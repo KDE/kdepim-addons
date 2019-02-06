@@ -29,14 +29,15 @@ class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GrammalecteConfigWidget(QWidget *parent = nullptr);
+    explicit GrammalecteConfigWidget(QWidget *parent = nullptr, bool disableMessageBox = false);
     ~GrammalecteConfigWidget();
     void loadSettings();
     void saveSettings();
 private:
-    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void loadGrammarSettings();
+    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void slotGetSettingsError();
+
     QStringList mSaveOptions;
     QList<QCheckBox *> mListOptions;
     QWidget *addGeneralTab();
@@ -44,6 +45,7 @@ private:
     QWidget *mGrammarTabWidget = nullptr;
     KUrlRequester *mPythonPath = nullptr;
     KUrlRequester *mGrammalectePath = nullptr;
+    bool mDisableDialogBox = false;
 };
 
 #endif // GRAMMALECTECONFIGWIDGET_H

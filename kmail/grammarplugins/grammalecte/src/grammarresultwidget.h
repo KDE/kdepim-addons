@@ -23,6 +23,9 @@
 #include <QWidget>
 #include "libkmailgrammalecte_export.h"
 #include "grammalectegrammarerror.h"
+namespace MessageComposer {
+class PluginGrammarAction;
+}
 class GrammarResultTextEdit;
 class LIBKMAILGRAMMALECTE_EXPORT GrammarResultWidget : public QWidget
 {
@@ -31,8 +34,12 @@ public:
     explicit GrammarResultWidget(QWidget *parent = nullptr);
     ~GrammarResultWidget();
     void setText(const QString &str);
+    void checkGrammar();
     void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
+Q_SIGNALS:
+    void replaceText(const MessageComposer::PluginGrammarAction &act);
 private:
+    void slotCheckGrammarFinished(const QString &result);
     GrammarResultTextEdit *mResult = nullptr;
 };
 

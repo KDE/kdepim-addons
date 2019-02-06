@@ -22,19 +22,18 @@
 
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <KConfigGroup>
-#include <KSharedConfig>
 
 #include <QVBoxLayout>
 #include <QTabWidget>
 #include <QCheckBox>
 #include <QScrollArea>
 #include <QFormLayout>
+#include <QVariant>
 
 #include <KUrlRequester>
-
-GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent)
+GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMessageBox)
     : QWidget(parent)
+    , mDisableDialogBox(disableMessageBox)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -66,7 +65,9 @@ void GrammalecteConfigWidget::loadGrammarSettings()
 
 void GrammalecteConfigWidget::slotGetSettingsError()
 {
-    KMessageBox::error(this, i18n("Error during Extracting Options"), i18n("Impossible to get options. Please verify that you have grammalected installed."));
+    if (!mDisableDialogBox) {
+        KMessageBox::error(this, i18n("Impossible to get options. Please verify that you have grammalected installed."), i18n("Error during Extracting Options"));
+    }
 }
 
 void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
@@ -102,7 +103,6 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
     QWidget *w = new QWidget(this);
     w->setObjectName(QStringLiteral("general"));
     QFormLayout *lay = new QFormLayout(w);
-    lay->setMargin(0);
     lay->setObjectName(QStringLiteral("generallayout"));
 
 
@@ -119,22 +119,21 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
 
 void GrammalecteConfigWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
-    mPythonPath->setText(grp.readEntry(QStringLiteral("pythonpath")));
-    mGrammalectePath->setText(grp.readEntry(QStringLiteral("grammalectepath")));
-    mSaveOptions = grp.readEntry(QStringLiteral("options"), QStringList());
+    mPythonPath->setText(GrammalecteManager::self()->pythonPath());
+    mGrammalectePath->setText(GrammalecteManager::self()->grammalectePath());
+    mSaveOptions = GrammalecteManager::self()->options();
 }
 
 void GrammalecteConfigWidget::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
-    grp.writeEntry(QStringLiteral("pythonpath"), mPythonPath->text());
-    grp.writeEntry(QStringLiteral("grammalectepath"), mGrammalectePath->text());
     QStringList result;
     for (QCheckBox *checkBox : qAsConst(mListOptions)) {
         if (checkBox->isChecked()) {
             result += checkBox->property("optionname").toString();
         }
     }
-    grp.writeEntry(QStringLiteral("options"), result);
+    GrammalecteManager::self()->setPythonPath(mPythonPath->text());
+    GrammalecteManager::self()->setGrammalectePath(mGrammalectePath->text());
+    GrammalecteManager::self()->setOptions(result);
+    GrammalecteManager::self()->saveSettings();
 }

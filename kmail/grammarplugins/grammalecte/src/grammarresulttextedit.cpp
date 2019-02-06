@@ -19,8 +19,13 @@
 
 
 #include "grammarresulttextedit.h"
+#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include "libgrammalecte_debug.h"
 
+#include <KLocalizedString>
+
+#include <QMenu>
+#include <QAction>
 #include <QTextBlock>
 #include <QTextDocument>
 
@@ -48,6 +53,13 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
             //Verify color
             format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
             format.setToolTip(info.error());
+            //TODO
+            MessageComposer::PluginGrammarAction act;
+            act.setEnd(info.end());
+            act.setStart(info.begin());
+            act.setSuggestions(info.suggestions());
+            act.setBlockId(info.blockId());
+            format.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
             cur.setPosition(position + info.begin());
             cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
@@ -56,5 +68,41 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
         }
     }
 }
-//TODO add popupmenu
-//Replace text
+
+void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
+{
+    QMenu *popup = createStandardContextMenu();
+    if (popup) {
+        QTextCursor cursor = cursorForPosition(event->pos());
+        if (cursor.charFormat().hasProperty(ReplaceFormatInfo)) {
+            const MessageComposer::PluginGrammarAction act = cursor.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
+            //qDebug() << " property " << act;
+            popup->addSeparator();
+            QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
+            for (const QString &str : act.suggestions()) {
+                QAction *actReplacement = popupReplacement->addAction(str);
+                connect(actReplacement, &QAction::triggered, this, [this, act, str]() {slotReplaceWord(act, str);});
+            }
+        }
+        popup->exec(event->globalPos());
+        delete popup;
+    }
+}
+
+void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord)
+{
+    MessageComposer::PluginGrammarAction actWithReplacement = act;
+    actWithReplacement.setReplacement(replacementWord);
+
+    QTextBlock block = document()->findBlockByNumber(act.blockId() - 1);
+    if (block.isValid()) {
+        QTextCursor cur(block);
+        const int position = cur.position();
+        cur.setPosition(position + act.start());
+        cur.setPosition(position + act.end(), QTextCursor::KeepAnchor);
+        QTextCharFormat format;
+        cur.insertText(replacementWord, format);
+    }
+
+    Q_EMIT replaceText(actWithReplacement);
+}

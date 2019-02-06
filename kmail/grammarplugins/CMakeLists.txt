@@ -1,2 +1,4 @@
 add_subdirectory(grammalecte)
-add_subdirectory(languagetool)
+if (KMAIL_LANGUAGETOOLPLUGIN_BUILD)
+	add_subdirectory(languagetool)
+endif()	

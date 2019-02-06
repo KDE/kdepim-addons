@@ -73,7 +73,6 @@ void GrammalecteWidget::slotCheckGrammar()
     GrammarResultJob *job = new GrammarResultJob(this);
     job->setPythonPath(QStringLiteral("/usr/bin/python3"));
     job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
-    job->setArguments(QStringList() << QStringLiteral("-j"));
     job->setText(mInput->toPlainText());
     connect(job, &GrammarResultJob::finished, this, &GrammalecteWidget::slotResultFinished);
     job->start();

@@ -25,14 +25,14 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent)
+GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)
 {
     setWindowTitle(i18n("Configure Grammalecte"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfigWidget = new GrammalecteConfigWidget(this);
+    mConfigWidget = new GrammalecteConfigWidget(this, disableMessageBox);
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 
