@@ -45,3 +45,14 @@ GrammalecteConfigDialog::~GrammalecteConfigDialog()
 {
 
 }
+
+
+void GrammalecteConfigDialog::loadSettings()
+{
+    //TODO
+}
+
+void GrammalecteConfigDialog::saveSettings()
+{
+    //TODO
+}

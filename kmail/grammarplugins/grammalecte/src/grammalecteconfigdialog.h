@@ -29,6 +29,8 @@ public:
     explicit GrammalecteConfigDialog(QWidget *parent = nullptr);
     ~GrammalecteConfigDialog();
 private:
+    void loadSettings();
+    void saveSettings();
     GrammalecteConfigWidget *mConfigWidget = nullptr;
 };
 

@@ -34,6 +34,7 @@ public:
     {
         QString optionName;
         QString description;
+        bool defaultValue = false;
     };
 
     explicit GrammalecteGenerateConfigOptionJob(QObject *parent = nullptr);

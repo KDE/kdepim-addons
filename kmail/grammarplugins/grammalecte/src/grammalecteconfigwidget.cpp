@@ -65,6 +65,7 @@ void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteG
     for (const GrammalecteGenerateConfigOptionJob::Option &opt : result) {
         QCheckBox *box = new QCheckBox(opt.description, this);
         box->setProperty("optionname", opt.optionName);
+        box->setChecked(opt.defaultValue);
         mGrammarTabWidget->layout()->addWidget(box);
         mListOptions.append(box);
     }

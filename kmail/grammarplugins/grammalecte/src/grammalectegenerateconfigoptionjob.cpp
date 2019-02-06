@@ -110,12 +110,13 @@ QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOpt
         const QRegularExpressionMatch match = reg.match(str);
         if (match.hasMatch()) {
             const QString optionName = match.captured(1);
-            //const QString value = match.captured(2);
+            const QString value = match.captured(2);
             const QString description = match.captured(3);
-            if (!optionName.isEmpty() && !description.isEmpty()) {
+            if (!optionName.isEmpty() && !description.isEmpty() && !value.isEmpty()) {
                 GrammalecteGenerateConfigOptionJob::Option opt;
                 opt.description = description;
                 opt.optionName = optionName;
+                opt.defaultValue = (value == QStringLiteral("True"));
                 opts.append(opt);
             }
         }
