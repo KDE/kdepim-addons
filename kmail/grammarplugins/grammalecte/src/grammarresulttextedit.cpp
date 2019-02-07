@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "grammarresulttextedit.h"
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include "libgrammalecte_debug.h"
@@ -38,7 +37,6 @@ GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
 
 GrammarResultTextEdit::~GrammarResultTextEdit()
 {
-
 }
 
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarError> &infos)
@@ -79,7 +77,9 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
             QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
             for (const QString &str : act.suggestions()) {
                 QAction *actReplacement = popupReplacement->addAction(str);
-                connect(actReplacement, &QAction::triggered, this, [this, act, str]() {slotReplaceWord(act, str);});
+                connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
+                    slotReplaceWord(act, str);
+                });
             }
         }
         popup->addSeparator();

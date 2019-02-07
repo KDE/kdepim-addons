@@ -52,7 +52,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     err.setBlockId(1);
     err.setBegin(15);
     err.setEnd(20);
-    err.setColor(QColor(217,128,38));
+    err.setColor(QColor(217, 128, 38));
     err.setSuggestions(QStringList() << QStringLiteral("Alors"));
     err.setError(QStringLiteral("Après un point, une majuscule est généralement requise."));
     err.setOption(QStringLiteral("maj"));

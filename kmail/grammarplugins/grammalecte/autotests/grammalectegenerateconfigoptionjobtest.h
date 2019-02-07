@@ -17,13 +17,12 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef GRAMMALECTEGENERATECONFIGOPTIONJOBTEST_H
 #define GRAMMALECTEGENERATECONFIGOPTIONJOBTEST_H
 
 #include <QObject>
 
-class  GrammalecteGenerateConfigOptionJobTest : public QObject
+class GrammalecteGenerateConfigOptionJobTest : public QObject
 {
     Q_OBJECT
 public:
@@ -32,7 +31,6 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();
-
 };
 
 #endif // GRAMMALECTEGENERATECONFIGOPTIONJOBTEST_H

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "grammalectemanager.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
@@ -45,7 +44,6 @@ void GrammalecteManager::saveSettings()
     grp.writeEntry(QStringLiteral("pythonpath"), mPythonPath);
     grp.writeEntry(QStringLiteral("grammalectepath"), mGrammalectePath);
     grp.writeEntry(QStringLiteral("options"), mOptions);
-
 }
 
 QStringList GrammalecteManager::options() const

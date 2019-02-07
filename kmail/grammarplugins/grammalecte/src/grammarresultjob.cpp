@@ -25,12 +25,10 @@
 GrammarResultJob::GrammarResultJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GrammarResultJob::~GrammarResultJob()
 {
-
 }
 
 void GrammarResultJob::start()
@@ -53,7 +51,7 @@ void GrammarResultJob::start()
         }
         args << QStringLiteral("-f") << file->fileName() << QStringLiteral("-j");
         mProcess->setArguments(args);
-        connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
+        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                 this, &GrammarResultJob::receivedError);
         connect(mProcess, &QProcess::readyReadStandardError, this, &GrammarResultJob::receivedStdErr);

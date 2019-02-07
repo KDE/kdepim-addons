@@ -25,12 +25,10 @@
 
 GrammalecteGrammarError::GrammalecteGrammarError()
 {
-
 }
 
 GrammalecteGrammarError::~GrammalecteGrammarError()
 {
-
 }
 
 QColor GrammalecteGrammarError::color() const
@@ -95,8 +93,9 @@ void GrammalecteGrammarError::setSuggestions(const QStringList &suggestions)
 
 bool GrammalecteGrammarError::isValid() const
 {
-    if ((mEnd != -1) && (mBegin != -1) && (!mError.isEmpty()))
+    if ((mEnd != -1) && (mBegin != -1) && (!mError.isEmpty())) {
         return true;
+    }
     return false;
 }
 
@@ -113,20 +112,19 @@ void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
     mRule = obj[QStringLiteral("sRuleId")].toString();
     mOption = obj[QStringLiteral("sType")].toString();
     mUrl = obj[QStringLiteral("URL")].toString();
-
 }
 
 bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) const
 {
-    return (mBlockId == other.blockId()) &&
-            (mEnd == other.end()) &&
-            (mBegin == other.begin()) &&
-            (mColor == other.color()) &&
-            (mSuggestions == other.suggestions()) &&
-            (mError == other.error()) &&
-            (mOption == other.option()) &&
-            (mRule == other.rule()) &&
-            (mUrl == other.url());
+    return (mBlockId == other.blockId())
+           && (mEnd == other.end())
+           && (mBegin == other.begin())
+           && (mColor == other.color())
+           && (mSuggestions == other.suggestions())
+           && (mError == other.error())
+           && (mOption == other.option())
+           && (mRule == other.rule())
+           && (mUrl == other.url());
 }
 
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)

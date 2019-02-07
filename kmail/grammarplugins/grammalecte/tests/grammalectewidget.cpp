@@ -51,7 +51,6 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
 
 GrammalecteWidget::~GrammalecteWidget()
 {
-
 }
 
 void GrammalecteWidget::slotGetSettings()
@@ -65,7 +64,6 @@ void GrammalecteWidget::slotGetSettings()
 
 void GrammalecteWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
 {
-
 }
 
 void GrammalecteWidget::slotCheckGrammar()

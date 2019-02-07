@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "grammarresulttextedit.h"
 #include "grammarresultwidget.h"
 #include "grammalectemanager.h"
@@ -42,7 +41,6 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
 
 GrammarResultWidget::~GrammarResultWidget()
 {
-
 }
 
 void GrammarResultWidget::checkGrammar()

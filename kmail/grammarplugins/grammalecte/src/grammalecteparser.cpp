@@ -25,12 +25,10 @@
 
 GrammalecteParser::GrammalecteParser()
 {
-
 }
 
 GrammalecteParser::~GrammalecteParser()
 {
-
 }
 
 QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) const

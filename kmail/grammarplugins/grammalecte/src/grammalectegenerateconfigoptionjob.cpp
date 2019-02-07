@@ -25,13 +25,12 @@
 GrammalecteGenerateConfigOptionJob::GrammalecteGenerateConfigOptionJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 GrammalecteGenerateConfigOptionJob::~GrammalecteGenerateConfigOptionJob()
 {
-
 }
+
 //^([a-zA-Z0-9]+):\s*(True|False)\s*(.*)$
 void GrammalecteGenerateConfigOptionJob::start()
 {
@@ -39,7 +38,7 @@ void GrammalecteGenerateConfigOptionJob::start()
         mProcess = new QProcess(this);
         mProcess->setProgram(mPythonPath);
         mProcess->setArguments(QStringList() << mGrammarlecteCliPath << QStringLiteral("-lo"));
-        connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteGenerateConfigOptionJob::slotFinished);
+        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteGenerateConfigOptionJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                 this, &GrammalecteGenerateConfigOptionJob::receivedError);
         connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteGenerateConfigOptionJob::receivedStdErr);
@@ -75,7 +74,6 @@ void GrammalecteGenerateConfigOptionJob::receivedStdErr()
     mLastError += QLatin1String(mProcess->readAllStandardError());
 }
 
-
 QString GrammalecteGenerateConfigOptionJob::pythonPath() const
 {
     return mPythonPath;
@@ -110,7 +108,6 @@ void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::Ex
     }
     deleteLater();
 }
-
 
 QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOptionJob::parseResult() const
 {

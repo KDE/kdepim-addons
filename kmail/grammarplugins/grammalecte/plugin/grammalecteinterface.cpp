@@ -30,7 +30,6 @@
 #include <QHBoxLayout>
 #include <QTextBlock>
 
-
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
 {
@@ -46,7 +45,6 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
 
 GrammalecteInterface::~GrammalecteInterface()
 {
-
 }
 
 void GrammalecteInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)

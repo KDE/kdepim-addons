@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "grammalecteparsertest.h"
 #include "grammalecteparser.h"
 #include <QJsonDocument>
@@ -53,5 +52,4 @@ void GrammalecteParserTest::shouldParseJson()
     const QJsonObject fields = doc.object();
     GrammalecteParser parser;
     QCOMPARE(parser.parseResult(fields).count(), numberOfElement);
-
 }

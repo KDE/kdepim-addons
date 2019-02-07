@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef GRAMMALECTEMANAGER_H
 #define GRAMMALECTEMANAGER_H
 

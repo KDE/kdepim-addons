@@ -31,14 +31,11 @@ K_PLUGIN_CLASS_WITH_JSON(GrammalectePlugin, "kmail_grammalecteplugin.json")
 GrammalectePlugin::GrammalectePlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)
 {
-
 }
 
 GrammalectePlugin::~GrammalectePlugin()
 {
-
 }
-
 
 PimCommon::CustomToolsViewInterface *GrammalectePlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {

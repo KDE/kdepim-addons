@@ -27,7 +27,6 @@ QTEST_MAIN(GrammarResultWidgetTest)
 GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void GrammarResultWidgetTest::shouldHaveDefaultValue()

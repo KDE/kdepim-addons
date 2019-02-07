@@ -105,7 +105,6 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
     QFormLayout *lay = new QFormLayout(w);
     lay->setObjectName(QStringLiteral("generallayout"));
 
-
     mPythonPath = new KUrlRequester(this);
     mPythonPath->setObjectName(QStringLiteral("pythonpath"));
     lay->addRow(i18n("Python Path:"), mPythonPath);
