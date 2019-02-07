@@ -53,7 +53,6 @@ void GrammarResultJob::start()
         }
         args << QStringLiteral("-f") << file->fileName() << QStringLiteral("-j");
         mProcess->setArguments(args);
-        qDebug() << " args " << args;
         connect(mProcess, QOverload<int,QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
                 this, &GrammarResultJob::receivedError);
@@ -140,7 +139,7 @@ static bool hasNotEmptyText(const QString &text)
 
 bool GrammarResultJob::canStart() const
 {
-    if (hasNotEmptyText(mText) && !mGrammarlecteCliPath.isEmpty() && !mPythonPath.isEmpty()/* && !mArguments.isEmpty()*/) {
+    if (hasNotEmptyText(mText) && !mGrammarlecteCliPath.isEmpty() && !mPythonPath.isEmpty()) {
         return true;
     }
     return false;
