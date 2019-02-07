@@ -1,4 +1,4 @@
-set(kmail_grammalecteplugin_SRCS
+set(kmailgrammalecte_SRCS
     grammalecteparser.cpp
     grammarresultwidget.cpp
     grammarresulttextedit.cpp
@@ -10,10 +10,10 @@ set(kmail_grammalecteplugin_SRCS
     grammalectemanager.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_grammalecteplugin_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
+ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
 
 
-add_library(kmailgrammalecte ${kmail_grammalecteplugin_SRCS})
+add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})
 generate_export_header(kmailgrammalecte BASE_NAME libkmailgrammalecte)
 target_link_libraries(kmailgrammalecte
     KF5::I18n
