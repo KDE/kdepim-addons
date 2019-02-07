@@ -53,7 +53,6 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
             //Verify color
             format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
             format.setToolTip(info.error());
-            //TODO
             MessageComposer::PluginGrammarAction act;
             act.setEnd(info.end());
             act.setStart(info.begin());
@@ -76,7 +75,6 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
         QTextCursor cursor = cursorForPosition(event->pos());
         if (cursor.charFormat().hasProperty(ReplaceFormatInfo)) {
             const MessageComposer::PluginGrammarAction act = cursor.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
-            //qDebug() << " property " << act;
             popup->addSeparator();
             QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
             for (const QString &str : act.suggestions()) {
