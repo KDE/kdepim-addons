@@ -73,13 +73,18 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
         QTextCursor cursor = cursorForPosition(event->pos());
         if (cursor.charFormat().hasProperty(ReplaceFormatInfo)) {
             const MessageComposer::PluginGrammarAction act = cursor.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
-            popup->addSeparator();
-            QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
-            for (const QString &str : act.suggestions()) {
-                QAction *actReplacement = popupReplacement->addAction(str);
-                connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
-                    slotReplaceWord(act, str);
-                });
+            const QStringList sugg = act.suggestions();
+            if (!sugg.isEmpty()) {
+                popup->addSeparator();
+                QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
+                for (const QString &str : act.suggestions()) {
+                    QAction *actReplacement = popupReplacement->addAction(str);
+                    connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
+                        slotReplaceWord(act, str);
+                    });
+                }
+            } else {
+                qDebug() << " no suggestion " << act;
             }
         }
         popup->addSeparator();
