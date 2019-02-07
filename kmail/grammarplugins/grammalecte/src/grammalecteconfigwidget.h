@@ -34,6 +34,7 @@ public:
     void loadSettings();
     void saveSettings();
 private:
+    Q_DISABLE_COPY(GrammalecteConfigWidget)
     void loadGrammarSettings();
     void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
     void slotGetSettingsError();

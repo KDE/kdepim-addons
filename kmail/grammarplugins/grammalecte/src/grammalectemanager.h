@@ -43,6 +43,7 @@ public:
     void saveSettings();
 
 private:
+    Q_DISABLE_COPY(GrammalecteManager)
     QStringList mOptions;
     QString mPythonPath;
     QString mGrammalectePath;

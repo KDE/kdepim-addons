@@ -29,6 +29,7 @@ public:
     explicit GrammalecteConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
     ~GrammalecteConfigDialog();
 private:
+    Q_DISABLE_COPY(GrammalecteConfigDialog)
     void writeConfig();
     void readConfig();
     GrammalecteConfigWidget *mConfigWidget = nullptr;

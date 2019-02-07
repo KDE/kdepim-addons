@@ -51,6 +51,7 @@ Q_SIGNALS:
     void error();
 
 private:
+    Q_DISABLE_COPY(GrammarResultJob)
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void receivedStdErr();
     void receivedError();
