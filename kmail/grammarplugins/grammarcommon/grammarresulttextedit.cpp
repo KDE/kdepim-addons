@@ -19,7 +19,7 @@
 
 #include "grammarresulttextedit.h"
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
-#include "libgrammalecte_debug.h"
+#include "grammarcommon_debug.h"
 
 #include <KLocalizedString>
 
@@ -39,9 +39,9 @@ GrammarResultTextEdit::~GrammarResultTextEdit()
 {
 }
 
-void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarError> &infos)
+void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &infos)
 {
-    for (const GrammalecteGrammarError &info : infos) {
+    for (const GrammarError &info : infos) {
         //Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
         QTextBlock block = document()->findBlockByNumber(info.blockId() - 1);
         if (block.isValid()) {
@@ -53,15 +53,15 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammalecteGrammarE
             format.setToolTip(info.error());
             MessageComposer::PluginGrammarAction act;
             act.setEnd(info.end());
-            act.setStart(info.begin());
+            act.setStart(info.start());
             act.setSuggestions(info.suggestions());
             act.setBlockId(info.blockId());
             format.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
-            cur.setPosition(position + info.begin());
+            cur.setPosition(position + info.start());
             cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
         } else {
-            qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Unable to find block Id" << (info.blockId() -1);
+            qCWarning(LIBGRAMMARCOMMON_LOG) << "Unable to find block Id" << (info.blockId() -1);
         }
     }
 }

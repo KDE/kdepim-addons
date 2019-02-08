@@ -25,12 +25,12 @@
 #include <QString>
 #include <QDebug>
 #include <QJsonObject>
-#include "libgrammalect_private_export.h"
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGrammarError
+#include "grammarcommon_export.h"
+class GRAMMARCOMMON_EXPORT GrammarError
 {
 public:
-    GrammalecteGrammarError();
-    ~GrammalecteGrammarError();
+    GrammarError();
+    ~GrammarError();
     Q_REQUIRED_RESULT QColor color() const;
     void setColor(const QColor &color);
 
@@ -40,8 +40,8 @@ public:
     Q_REQUIRED_RESULT int blockId() const;
     void setBlockId(int blockId);
 
-    Q_REQUIRED_RESULT int begin() const;
-    void setBegin(int begin);
+    Q_REQUIRED_RESULT int start() const;
+    void setStart(int start);
 
     Q_REQUIRED_RESULT int end() const;
     void setEnd(int end);
@@ -53,7 +53,7 @@ public:
 
     void parse(const QJsonObject &obj, int blockindex);
 
-    Q_REQUIRED_RESULT bool operator ==(const GrammalecteGrammarError &other) const;
+    Q_REQUIRED_RESULT bool operator ==(const GrammarError &other) const;
 
     Q_REQUIRED_RESULT QString option() const;
     void setOption(const QString &option);
@@ -74,10 +74,10 @@ private:
     QString mUrl;
     QColor mColor;
     int mBlockId = -1;
-    int mBegin = -1;
+    int mStart = -1;
     int mEnd = -1;
 };
-Q_DECLARE_METATYPE(GrammalecteGrammarError)
-Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
-LIBKMAILGRAMMALECTE_EXPORT QDebug operator <<(QDebug d, const GrammalecteGrammarError &t);
+Q_DECLARE_METATYPE(GrammarError)
+Q_DECLARE_TYPEINFO(GrammarError, Q_MOVABLE_TYPE);
+GRAMMARCOMMON_EXPORT QDebug operator <<(QDebug d, const GrammarError &t);
 #endif // GRAMMALECTEINFO_H

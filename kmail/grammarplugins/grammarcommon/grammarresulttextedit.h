@@ -21,19 +21,19 @@
 #define GRAMMARRESULTTEXTEDIT_H
 
 #include <QTextEdit>
-#include "grammalectegrammarerror.h"
-#include "libgrammalect_private_export.h"
+#include "grammarerror.h"
+#include "grammarcommon_export.h"
 namespace MessageComposer {
 class PluginGrammarAction;
 }
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultTextEdit : public QTextEdit
+class GRAMMARCOMMON_EXPORT GrammarResultTextEdit : public QTextEdit
 {
     Q_OBJECT
 public:
     explicit GrammarResultTextEdit(QWidget *parent = nullptr);
     ~GrammarResultTextEdit() override;
 
-    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
+    void applyGrammarResult(const QVector<GrammarError> &infos);
 
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;

@@ -17,92 +17,92 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammalectegrammarerror.h"
-#include "libgrammalecte_debug.h"
+#include "grammarerror.h"
+#include "grammarcommon_debug.h"
 
 #include <QJsonArray>
 #include <QJsonObject>
 
-GrammalecteGrammarError::GrammalecteGrammarError()
+GrammarError::GrammarError()
 {
 }
 
-GrammalecteGrammarError::~GrammalecteGrammarError()
+GrammarError::~GrammarError()
 {
 }
 
-QColor GrammalecteGrammarError::color() const
+QColor GrammarError::color() const
 {
     return mColor;
 }
 
-void GrammalecteGrammarError::setColor(const QColor &color)
+void GrammarError::setColor(const QColor &color)
 {
     mColor = color;
 }
 
-QString GrammalecteGrammarError::error() const
+QString GrammarError::error() const
 {
     return mError;
 }
 
-void GrammalecteGrammarError::setError(const QString &error)
+void GrammarError::setError(const QString &error)
 {
     mError = error;
 }
 
-int GrammalecteGrammarError::blockId() const
+int GrammarError::blockId() const
 {
     return mBlockId;
 }
 
-void GrammalecteGrammarError::setBlockId(int blockId)
+void GrammarError::setBlockId(int blockId)
 {
     mBlockId = blockId;
 }
 
-int GrammalecteGrammarError::begin() const
+int GrammarError::start() const
 {
-    return mBegin;
+    return mStart;
 }
 
-void GrammalecteGrammarError::setBegin(int begin)
+void GrammarError::setStart(int begin)
 {
-    mBegin = begin;
+    mStart = begin;
 }
 
-int GrammalecteGrammarError::end() const
+int GrammarError::end() const
 {
     return mEnd;
 }
 
-void GrammalecteGrammarError::setEnd(int end)
+void GrammarError::setEnd(int end)
 {
     mEnd = end;
 }
 
-QStringList GrammalecteGrammarError::suggestions() const
+QStringList GrammarError::suggestions() const
 {
     return mSuggestions;
 }
 
-void GrammalecteGrammarError::setSuggestions(const QStringList &suggestions)
+void GrammarError::setSuggestions(const QStringList &suggestions)
 {
     mSuggestions = suggestions;
 }
 
-bool GrammalecteGrammarError::isValid() const
+bool GrammarError::isValid() const
 {
-    if ((mEnd != -1) && (mBegin != -1) && (!mError.isEmpty())) {
+    if ((mEnd != -1) && (mStart != -1) && (!mError.isEmpty())) {
         return true;
     }
     return false;
 }
 
-void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
+void GrammarError::parse(const QJsonObject &obj, int blockindex)
 {
     mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
-    mBegin = obj[QStringLiteral("nStart")].toInt(-1);
+    mStart = obj[QStringLiteral("nStart")].toInt(-1);
     mError = obj[QStringLiteral("sMessage")].toString();
     if (mEnd != -1) {
         mBlockId = blockindex;
@@ -114,11 +114,11 @@ void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
     mUrl = obj[QStringLiteral("URL")].toString();
 }
 
-bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) const
+bool GrammarError::operator ==(const GrammarError &other) const
 {
     return (mBlockId == other.blockId())
            && (mEnd == other.end())
-           && (mBegin == other.begin())
+           && (mStart == other.start())
            && (mColor == other.color())
            && (mSuggestions == other.suggestions())
            && (mError == other.error())
@@ -127,7 +127,7 @@ bool GrammalecteGrammarError::operator ==(const GrammalecteGrammarError &other) 
            && (mUrl == other.url());
 }
 
-QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
+QStringList GrammarError::parseSuggestion(const QJsonObject &obj)
 {
     QStringList lst;
     const QJsonArray array = obj[QStringLiteral("aSuggestions")].toArray();
@@ -139,37 +139,37 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
     return lst;
 }
 
-QString GrammalecteGrammarError::url() const
+QString GrammarError::url() const
 {
     return mUrl;
 }
 
-void GrammalecteGrammarError::setUrl(const QString &url)
+void GrammarError::setUrl(const QString &url)
 {
     mUrl = url;
 }
 
-QString GrammalecteGrammarError::rule() const
+QString GrammarError::rule() const
 {
     return mRule;
 }
 
-void GrammalecteGrammarError::setRule(const QString &rule)
+void GrammarError::setRule(const QString &rule)
 {
     mRule = rule;
 }
 
-QString GrammalecteGrammarError::option() const
+QString GrammarError::option() const
 {
     return mOption;
 }
 
-void GrammalecteGrammarError::setOption(const QString &option)
+void GrammarError::setOption(const QString &option)
 {
     mOption = option;
 }
 
-QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
+QColor GrammarError::parseColor(const QJsonObject &obj)
 {
     QColor col;
     const QJsonArray array = obj[QStringLiteral("aColor")].toArray();
@@ -183,15 +183,15 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
 //        }
         col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
     } else {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;
+        qCWarning(LIBGRAMMARCOMMON_LOG) << "Parsing color: Array is not correct:" << array;
     }
     return col;
 }
 
-QDebug operator <<(QDebug d, const GrammalecteGrammarError &t)
+QDebug operator <<(QDebug d, const GrammarError &t)
 {
     d << "mError: " << t.error();
-    d << "Start: " << t.begin();
+    d << "Start: " << t.start();
     d << "End: " << t.end();
     d << "BlockId: " << t.blockId();
     d << "Color: " << t.color().name();

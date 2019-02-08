@@ -67,7 +67,7 @@ void GrammarResultWidget::setText(const QString &str)
     mResult->setText(str);
 }
 
-void GrammarResultWidget::applyGrammarResult(const QVector<GrammalecteGrammarError> &infos)
+void GrammarResultWidget::applyGrammarResult(const QVector<GrammarError> &infos)
 {
     mResult->applyGrammarResult(infos);
 }

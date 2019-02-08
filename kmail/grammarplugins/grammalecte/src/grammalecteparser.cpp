@@ -31,9 +31,9 @@ GrammalecteParser::~GrammalecteParser()
 {
 }
 
-QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) const
+QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) const
 {
-    QVector<GrammalecteGrammarError> infos;
+    QVector<GrammarError> infos;
     if (!obj.contains(QLatin1String("grammalecte"))) {
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error in json " << obj;
         return infos;
@@ -48,7 +48,7 @@ QVector<GrammalecteGrammarError> GrammalecteParser::parseResult(const QJsonObjec
             const QJsonArray grammarErrorArray = grammaObject.value(QLatin1String("lGrammarErrors")).toArray();
             for (const QJsonValue &error : grammarErrorArray) {
                 //qDebug() << " grammarErrorArray"<<error;
-                GrammalecteGrammarError info;
+                GrammarError info;
                 if (error.type() == QJsonValue::Object) {
                     info.parse(error.toObject(), blockId);
                     if (info.isValid()) {

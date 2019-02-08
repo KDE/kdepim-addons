@@ -18,7 +18,7 @@
 */
 
 #include "grammalectegrammarerrortest.h"
-#include "grammalectegrammarerror.h"
+#include "grammarerror.h"
 #include <QJsonDocument>
 #include <QStandardPaths>
 #include <QTest>
@@ -32,9 +32,9 @@ GrammalecteGrammarErrorTest::GrammalecteGrammarErrorTest(QObject *parent)
 
 void GrammalecteGrammarErrorTest::shouldHaveDefaultValue()
 {
-    GrammalecteGrammarError info;
+    GrammarError info;
     QCOMPARE(info.end(), -1);
-    QCOMPARE(info.begin(), -1);
+    QCOMPARE(info.start(), -1);
     QCOMPARE(info.blockId(), -1);
     QVERIFY(info.error().isEmpty());
     QVERIFY(info.suggestions().isEmpty());
@@ -46,11 +46,11 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
 {
     QTest::addColumn<QString>("fileName");
     QTest::addColumn<int>("nbBlock");
-    QTest::addColumn<GrammalecteGrammarError>("error");
-    QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammalecteGrammarError();
-    GrammalecteGrammarError err;
+    QTest::addColumn<GrammarError>("error");
+    QTest::newRow("empty-error") << QStringLiteral("empty-error") << 1 << GrammarError();
+    GrammarError err;
     err.setBlockId(1);
-    err.setBegin(15);
+    err.setStart(15);
     err.setEnd(20);
     err.setColor(QColor(217, 128, 38));
     err.setSuggestions(QStringList() << QStringLiteral("Alors"));
@@ -66,7 +66,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson()
 {
     QFETCH(QString, fileName);
     QFETCH(int, nbBlock);
-    QFETCH(GrammalecteGrammarError, error);
+    QFETCH(GrammarError, error);
     const QString originalJsonFile = QLatin1String(GRAMMALECTE_DATA_DIR) + QLatin1Char('/') + fileName + QStringLiteral(".json");
     QFile f(originalJsonFile);
     QVERIFY(f.open(QIODevice::ReadOnly));
@@ -74,7 +74,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson()
     f.close();
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
-    GrammalecteGrammarError parser;
+    GrammarError parser;
     parser.parse(fields, nbBlock);
     const bool compare = (parser == error);
     if (!compare) {

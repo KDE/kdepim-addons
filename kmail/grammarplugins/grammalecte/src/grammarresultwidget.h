@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include "libkmailgrammalecte_export.h"
-#include "grammalectegrammarerror.h"
+#include "grammarerror.h"
 namespace MessageComposer {
 class PluginGrammarAction;
 }
@@ -35,7 +35,7 @@ public:
     ~GrammarResultWidget();
     void setText(const QString &str);
     void checkGrammar();
-    void applyGrammarResult(const QVector<GrammalecteGrammarError> &infos);
+    void applyGrammarResult(const QVector<GrammarError> &infos);
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();

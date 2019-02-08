@@ -23,13 +23,13 @@
 #include <QVector>
 #include <QJsonObject>
 #include "libgrammalect_private_export.h"
-#include "grammalectegrammarerror.h"
+#include "grammarerror.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
 {
 public:
     GrammalecteParser();
     ~GrammalecteParser();
-    QVector<GrammalecteGrammarError> parseResult(const QJsonObject &obj) const;
+    QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
 
 #endif // GRAMMALECTEPARSER_H
