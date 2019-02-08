@@ -1,4 +1,5 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"kmail_editorgrammar_plugins\")
+add_subdirectory(grammarcommon)
 add_subdirectory(grammalecte)
 if (KMAIL_LANGUAGETOOLPLUGIN_BUILD)
 	add_subdirectory(languagetool)
