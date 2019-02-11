@@ -4,7 +4,11 @@ set(kmaillanguagetool_SRCS
     languagetoolresultwidget.cpp
     languagetoolconfigdialog.cpp
     languagetoolconfigwidget.cpp
+    languagetoolmanager.cpp
+    languagetoolresultjob.cpp
 )
+
+ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin)
 
 add_library(kmaillanguagetool ${kmaillanguagetool_SRCS})
 generate_export_header(kmaillanguagetool BASE_NAME libkmaillanguagetool)

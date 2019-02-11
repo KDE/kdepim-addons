@@ -17,21 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolconfigwidgettest.h"
-#include "languagetoolconfigwidget.h"
-#include <QTest>
-#include <QVBoxLayout>
-QTEST_MAIN(LanguagetoolConfigWidgetTest)
-LanguagetoolConfigWidgetTest::LanguagetoolConfigWidgetTest(QObject *parent)
+#include "languagetoolresultjob.h"
+#include "liblanguagetool_debug.h"
+
+LanguagetoolResultJob::LanguagetoolResultJob(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-void LanguagetoolConfigWidgetTest::shouldHaveDefaultValue()
+LanguagetoolResultJob::~LanguagetoolResultJob()
 {
-    LanguagetoolConfigWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+
+}
+
+bool LanguagetoolResultJob::canStart() const
+{
+    //TODO
+    return false;
+}
+
+void LanguagetoolResultJob::start()
+{
+    if (!canStart()) {
+        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start language tool";
+        return;
+    }
 }

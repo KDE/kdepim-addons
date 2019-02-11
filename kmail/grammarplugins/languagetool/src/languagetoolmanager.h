@@ -17,21 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolconfigwidgettest.h"
-#include "languagetoolconfigwidget.h"
-#include <QTest>
-#include <QVBoxLayout>
-QTEST_MAIN(LanguagetoolConfigWidgetTest)
-LanguagetoolConfigWidgetTest::LanguagetoolConfigWidgetTest(QObject *parent)
-    : QObject(parent)
-{
+#ifndef LANGUAGETOOLMANAGER_H
+#define LANGUAGETOOLMANAGER_H
 
-}
+#include <QObject>
+#include "libkmaillanguagetool_export.h"
 
-void LanguagetoolConfigWidgetTest::shouldHaveDefaultValue()
+class LIBKMAILLANGUAGETOOL_EXPORT LanguagetoolManager : public QObject
 {
-    LanguagetoolConfigWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
-}
+    Q_OBJECT
+public:
+    explicit LanguagetoolManager(QObject *parent = nullptr);
+    ~LanguagetoolManager();
+    static LanguagetoolManager *self();
+};
+
+#endif // LANGUAGETOOLMANAGER_H

@@ -17,21 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolconfigwidgettest.h"
-#include "languagetoolconfigwidget.h"
-#include <QTest>
-#include <QVBoxLayout>
-QTEST_MAIN(LanguagetoolConfigWidgetTest)
-LanguagetoolConfigWidgetTest::LanguagetoolConfigWidgetTest(QObject *parent)
-    : QObject(parent)
-{
+#ifndef LANGUAGETOOLRESULTJOB_H
+#define LANGUAGETOOLRESULTJOB_H
 
-}
+#include <QObject>
 
-void LanguagetoolConfigWidgetTest::shouldHaveDefaultValue()
+class LanguagetoolResultJob : public QObject
 {
-    LanguagetoolConfigWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
-}
+    Q_OBJECT
+public:
+    explicit LanguagetoolResultJob(QObject *parent = nullptr);
+    ~LanguagetoolResultJob();
+    bool canStart() const;
+    void start();
+};
+
+#endif // LANGUAGETOOLRESULTJOB_H

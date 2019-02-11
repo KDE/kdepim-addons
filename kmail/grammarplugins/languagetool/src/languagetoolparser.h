@@ -20,11 +20,16 @@
 #ifndef LANGUAGETOOLPARSER_H
 #define LANGUAGETOOLPARSER_H
 
+#include "liblanguagetool_private_export.h"
 
-class LanguageToolParser
+#include <grammarerror.h>
+
+class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolParser
 {
 public:
     LanguageToolParser();
+    ~LanguageToolParser();
+    QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
 
 #endif // LANGUAGETOOLPARSER_H

@@ -23,3 +23,13 @@ LanguageToolParser::LanguageToolParser()
 {
 
 }
+
+LanguageToolParser::~LanguageToolParser()
+{
+
+}
+
+QVector<GrammarError> LanguageToolParser::parseResult(const QJsonObject &obj) const
+{
+    return {};
+}
