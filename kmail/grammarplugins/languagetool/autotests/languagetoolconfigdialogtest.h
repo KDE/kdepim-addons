@@ -28,6 +28,8 @@ class LanguagetoolConfigDialogTest : public QObject
 public:
     explicit LanguagetoolConfigDialogTest(QObject *parent = nullptr);
     ~LanguagetoolConfigDialogTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LANGUAGETOOLCONFIGDIALOGTEST_H

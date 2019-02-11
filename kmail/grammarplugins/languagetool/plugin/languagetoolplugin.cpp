@@ -18,9 +18,9 @@
 */
 
 #include "languagetoolplugin.h"
-#include "grammalecteinterface.h"
-#include "grammalecteconfigdialog.h"
-#include "grammalectemanager.h"
+#include "languagetoolinterface.h"
+#include "languagetoolconfigdialog.h"
+//#include "grammalectemanager.h"
 #include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
 #include <kpluginfactory.h>
@@ -39,17 +39,17 @@ LanguagetoolPlugin::~LanguagetoolPlugin()
 
 PimCommon::CustomToolsViewInterface *LanguagetoolPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    GrammalecteInterface *view = new GrammalecteInterface(ac, parent);
+    LanguagetoolInterface *view = new LanguagetoolInterface(ac, parent);
 
-    connect(view, &GrammalecteInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
-    connect(view, &GrammalecteInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
-    connect(view, &GrammalecteInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
+    connect(view, &LanguagetoolInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
+    connect(view, &LanguagetoolInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
+    connect(view, &LanguagetoolInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
     return view;
 }
 
 QString LanguagetoolPlugin::customToolName() const
 {
-    return i18n("Grammalecte Plugin");
+    return i18n("Languagetool Plugin");
 }
 
 bool LanguagetoolPlugin::hasConfigureDialog() const
@@ -59,9 +59,9 @@ bool LanguagetoolPlugin::hasConfigureDialog() const
 
 void LanguagetoolPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<GrammalecteConfigDialog> dlg = new GrammalecteConfigDialog(parent);
+    QPointer<LanguagetoolConfigDialog> dlg = new LanguagetoolConfigDialog(parent);
     if (dlg->exec()) {
-        GrammalecteManager::self()->loadSettings();
+        //TODO GrammalecteManager::self()->loadSettings();
     }
     delete dlg;
 }

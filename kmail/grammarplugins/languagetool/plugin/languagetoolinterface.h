@@ -21,7 +21,7 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
-class GrammalecteResultWidget;
+class LanguagetoolResultWidget;
 class LanguagetoolInterface : public MessageComposer::PluginEditorGrammarCustomToolsViewInterface
 {
     Q_OBJECT
@@ -36,7 +36,7 @@ private:
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void checkAgain();
-    GrammalecteResultWidget *mGrammarResultWidget = nullptr;
+    LanguagetoolResultWidget *mGrammarResultWidget = nullptr;
     KToggleAction *mAction = nullptr;
 };
 

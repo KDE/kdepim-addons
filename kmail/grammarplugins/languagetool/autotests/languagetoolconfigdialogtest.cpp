@@ -18,10 +18,30 @@
 */
 
 #include "languagetoolconfigdialogtest.h"
+#include "languagetoolconfigdialog.h"
+#include "languagetoolconfigwidget.h"
+#include <QVBoxLayout>
+#include <QStandardPaths>
 #include <QTest>
+#include <QDialogButtonBox>
 QTEST_MAIN(LanguagetoolConfigDialogTest)
 LanguagetoolConfigDialogTest::LanguagetoolConfigDialogTest(QObject *parent)
     : QObject(parent)
 {
+    QStandardPaths::setTestModeEnabled(true);
+}
 
+void LanguagetoolConfigDialogTest::shouldHaveDefaultValue()
+{
+    LanguagetoolConfigDialog w(nullptr, true);
+    QVERIFY(!w.windowTitle().isEmpty());
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    LanguagetoolConfigWidget *mConfigWidget = w.findChild<LanguagetoolConfigWidget *>(QStringLiteral("configwidget"));
+    QVERIFY(mConfigWidget);
+
+    QDialogButtonBox *box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));
+    QVERIFY(box);
 }

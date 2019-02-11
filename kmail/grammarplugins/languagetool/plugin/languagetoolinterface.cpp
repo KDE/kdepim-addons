@@ -18,7 +18,7 @@
 */
 
 #include "languagetoolinterface.h"
-#include "grammalecteresultwidget.h"
+#include "languagetoolresultwidget.h"
 #include "languagetoolplugin_debug.h"
 
 #include <KPIMTextEdit/RichTextComposer>
@@ -35,9 +35,9 @@ LanguagetoolInterface::LanguagetoolInterface(KActionCollection *ac, QWidget *par
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    mGrammarResultWidget = new GrammalecteResultWidget(this);
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &LanguagetoolInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &LanguagetoolInterface::checkAgain);
+    mGrammarResultWidget = new LanguagetoolResultWidget(this);
+    connect(mGrammarResultWidget, &LanguagetoolResultWidget::replaceText, this, &LanguagetoolInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &LanguagetoolResultWidget::checkAgain, this, &LanguagetoolInterface::checkAgain);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -94,6 +94,6 @@ void LanguagetoolInterface::checkAgain()
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());
         mGrammarResultWidget->checkGrammar();
     } else {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
+        qCWarning(KMAIL_EDITOR_LANGUAGETOOL_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
     }
 }
