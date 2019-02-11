@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check grammar in french only.",
+        "Description[ca@valencia]": "Aquest connector permet comprovar la gramàtica només en francés.",
         "Description[ca]": "Aquest connector permet comprovar la gramàtica només en francès.",
         "Description[gl]": "Este complemento permítelle corrixir a gramática só en francés.",
         "Description[nl]": "Deze plugin stelt u in staat alleen de grammatica in het Frans te controleren",
@@ -11,6 +12,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailgrammalecte",
         "Name": "French Grammar Checker",
+        "Name[ca@valencia]": "Comprova la gramàtica en francés",
         "Name[ca]": "Comprova la gramàtica en francès",
         "Name[gl]": "Corrector de gramática francesa",
         "Name[nl]": "Grammaticacontrole op Frans",
