@@ -30,7 +30,7 @@ class GRAMMARCOMMON_EXPORT GrammarError
 {
 public:
     GrammarError();
-    ~GrammarError();
+    virtual ~GrammarError();
     Q_REQUIRED_RESULT QColor color() const;
     void setColor(const QColor &color);
 
@@ -51,7 +51,7 @@ public:
 
     Q_REQUIRED_RESULT bool isValid() const;
 
-    void parse(const QJsonObject &obj, int blockindex);
+    virtual void parse(const QJsonObject &obj, int blockindex);
 
     Q_REQUIRED_RESULT bool operator ==(const GrammarError &other) const;
 

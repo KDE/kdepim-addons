@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include "libkmailgrammalecte_export.h"
-#include "grammarerror.h"
+#include "grammalectegrammarerror.h"
 namespace MessageComposer {
 class PluginGrammarAction;
 }

@@ -48,7 +48,7 @@ QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) con
             const QJsonArray grammarErrorArray = grammaObject.value(QLatin1String("lGrammarErrors")).toArray();
             for (const QJsonValue &error : grammarErrorArray) {
                 //qDebug() << " grammarErrorArray"<<error;
-                GrammarError info;
+                GrammalecteGrammarError info;
                 if (error.type() == QJsonValue::Object) {
                     info.parse(error.toObject(), blockId);
                     if (info.isValid()) {

@@ -24,6 +24,11 @@ GrammalecteGrammarError::GrammalecteGrammarError()
 
 }
 
+GrammalecteGrammarError::~GrammalecteGrammarError()
+{
+
+}
+
 void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
     mEnd = obj[QStringLiteral("nEnd")].toInt(-1);

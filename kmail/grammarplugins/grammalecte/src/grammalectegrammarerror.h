@@ -21,12 +21,15 @@
 #define GRAMMALECTEGRAMMARERROR_H
 
 #include "grammarerror.h"
-
-class GrammalecteGrammarError : public GrammarError
+#include "libgrammalect_private_export.h"
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGrammarError : public GrammarError
 {
 public:
     GrammalecteGrammarError();
-    void parse(const QJsonObject &obj, int blockindex);
+    ~GrammalecteGrammarError() override;
+    void parse(const QJsonObject &obj, int blockindex) override;
 };
+Q_DECLARE_METATYPE(GrammalecteGrammarError)
+Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
 
 #endif // GRAMMALECTEGRAMMARERROR_H

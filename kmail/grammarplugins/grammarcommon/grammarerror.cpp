@@ -99,20 +99,10 @@ bool GrammarError::isValid() const
     return false;
 }
 
-//Make as virtual
 void GrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
-    mStart = obj[QStringLiteral("nStart")].toInt(-1);
-    mError = obj[QStringLiteral("sMessage")].toString();
-    if (mEnd != -1) {
-        mBlockId = blockindex;
-        mColor = parseColor(obj);
-        mSuggestions = parseSuggestion(obj);
-    }
-    mRule = obj[QStringLiteral("sRuleId")].toString();
-    mOption = obj[QStringLiteral("sType")].toString();
-    mUrl = obj[QStringLiteral("URL")].toString();
+    Q_UNUSED(obj);
+    Q_UNUSED(blockindex);
 }
 
 bool GrammarError::operator ==(const GrammarError &other) const

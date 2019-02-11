@@ -23,7 +23,7 @@
 #include <QVector>
 #include <QJsonObject>
 #include "libgrammalect_private_export.h"
-#include "grammarerror.h"
+#include "grammalectegrammarerror.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
 {
 public:
