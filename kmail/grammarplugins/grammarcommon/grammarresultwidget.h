@@ -17,27 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEWIDGET_H
-#define GRAMMALECTEWIDGET_H
+#ifndef GRAMMARRESULTWIDGET_H
+#define GRAMMARRESULTWIDGET_H
 
 #include <QWidget>
-#include "grammalectegenerateconfigoptionjob.h"
-class GrammalecteResultWidget;
-class QTextEdit;
-class GrammalecteWidget : public QWidget
+#include "grammarcommon_export.h"
+#include "grammarerror.h"
+namespace MessageComposer {
+class PluginGrammarAction;
+}
+class GrammarResultTextEdit;
+class GRAMMARCOMMON_EXPORT GrammarResultWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit GrammalecteWidget(QWidget *parent = nullptr);
-    ~GrammalecteWidget();
-
-private:
-    void slotCheckGrammar();
-    void slotGetSettings();
-    void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
-    void slotResultFinished(const QString &result);
-    QTextEdit *mInput = nullptr;
-    GrammalecteResultWidget *mResultWidget = nullptr;
+    explicit GrammarResultWidget(QWidget *parent = nullptr);
+    ~GrammarResultWidget();
+    void setText(const QString &str);
+    virtual void checkGrammar() = 0;
+    void applyGrammarResult(const QVector<GrammarError> &infos);
+Q_SIGNALS:
+    void replaceText(const MessageComposer::PluginGrammarAction &act);
+    void checkAgain();
+protected:
+    GrammarResultTextEdit *mResult = nullptr;
 };
 
-#endif // GRAMMALECTEWIDGET_H
+#endif // GRAMMARRESULTWIDGET_H

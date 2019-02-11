@@ -1,6 +1,7 @@
 set(grammarcommon_SRCS
 	grammarerror.cpp
 	grammarresulttextedit.cpp
+	grammarresultwidget.cpp
 	)
 
 ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon)

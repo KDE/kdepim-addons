@@ -5,7 +5,7 @@ set(kmailgrammalecte_SRCS
     grammalectegenerateconfigoptionjob.cpp
     grammalecteconfigdialog.cpp
     grammalectemanager.cpp
-    grammarresultwidget.cpp
+    grammalecteresultwidget.cpp
     grammalectegrammarerror.cpp
     )
 

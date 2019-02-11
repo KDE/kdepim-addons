@@ -17,31 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
+#include "grammalecteresultwidgettest.h"
+#include "grammalecteresultwidget.h"
+#include "grammarresulttextedit.h"
+#include <QHBoxLayout>
+#include <QTest>
+QTEST_MAIN(GrammarResultWidgetTest)
 
-#include <QWidget>
-#include "libkmailgrammalecte_export.h"
-#include "grammalectegrammarerror.h"
-namespace MessageComposer {
-class PluginGrammarAction;
-}
-class GrammarResultTextEdit;
-class LIBKMAILGRAMMALECTE_EXPORT GrammarResultWidget : public QWidget
+GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
-    void setText(const QString &str);
-    void checkGrammar();
-    void applyGrammarResult(const QVector<GrammarError> &infos);
-Q_SIGNALS:
-    void replaceText(const MessageComposer::PluginGrammarAction &act);
-    void checkAgain();
-private:
-    void slotCheckGrammarFinished(const QString &result);
-    GrammarResultTextEdit *mResult = nullptr;
-};
+}
 
-#endif // GRAMMARRESULTWIDGET_H
+void GrammarResultWidgetTest::shouldHaveDefaultValue()
+{
+    GrammalecteResultWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+    GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    QVERIFY(mResult);
+}

@@ -13,5 +13,5 @@ kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json
     ${grammalecteplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_grammalecteplugin
-        KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmailgrammalecte
+        KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmailgrammalecte  grammarcommon
     )

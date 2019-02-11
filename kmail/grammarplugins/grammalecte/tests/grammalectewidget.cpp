@@ -26,7 +26,7 @@
 #include <QPushButton>
 #include <QDebug>
 #include <QJsonDocument>
-#include "grammarresultwidget.h"
+#include "grammalecteresultwidget.h"
 
 GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     : QWidget(parent)
@@ -42,7 +42,7 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     mInput = new QTextEdit(this);
     mainLayout->addWidget(mInput);
 
-    mResultWidget = new GrammarResultWidget(this);
+    mResultWidget = new GrammalecteResultWidget(this);
     mainLayout->addWidget(mResultWidget);
 
     connect(button, &QPushButton::clicked, this, &GrammalecteWidget::slotCheckGrammar);

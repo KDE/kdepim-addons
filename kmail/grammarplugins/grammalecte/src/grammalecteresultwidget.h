@@ -17,24 +17,28 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammarresultwidgettest.h"
+#ifndef GRAMMALECTERESULTWIDGET_H
+#define GRAMMALECTERESULTWIDGET_H
+
 #include "grammarresultwidget.h"
-#include "grammarresulttextedit.h"
-#include <QHBoxLayout>
-#include <QTest>
-QTEST_MAIN(GrammarResultWidgetTest)
-
-GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
-    : QObject(parent)
-{
+#include "libkmailgrammalecte_export.h"
+#include "grammalectegrammarerror.h"
+namespace MessageComposer {
+class PluginGrammarAction;
 }
-
-void GrammarResultWidgetTest::shouldHaveDefaultValue()
+class GrammarResultTextEdit;
+class LIBKMAILGRAMMALECTE_EXPORT GrammalecteResultWidget : public GrammarResultWidget
 {
-    GrammarResultWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
-    GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
-    QVERIFY(mResult);
-}
+    Q_OBJECT
+public:
+    explicit GrammalecteResultWidget(QWidget *parent = nullptr);
+    ~GrammalecteResultWidget() override;
+    void checkGrammar() override;
+Q_SIGNALS:
+    void replaceText(const MessageComposer::PluginGrammarAction &act);
+    void checkAgain();
+private:
+    void slotCheckGrammarFinished(const QString &result);
+};
+
+#endif // GRAMMALECTERESULTWIDGET_H

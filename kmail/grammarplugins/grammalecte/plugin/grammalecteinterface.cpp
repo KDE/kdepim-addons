@@ -18,7 +18,7 @@
 */
 
 #include "grammalecteinterface.h"
-#include "grammarresultwidget.h"
+#include "grammalecteresultwidget.h"
 #include "grammalecteplugin_debug.h"
 
 #include <KPIMTextEdit/RichTextComposer>
@@ -35,9 +35,9 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    mGrammarResultWidget = new GrammarResultWidget(this);
-    connect(mGrammarResultWidget, &GrammarResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &GrammarResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
+    mGrammarResultWidget = new GrammalecteResultWidget(this);
+    connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
