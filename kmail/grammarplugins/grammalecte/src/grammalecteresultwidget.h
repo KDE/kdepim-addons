@@ -34,9 +34,6 @@ public:
     explicit GrammalecteResultWidget(QWidget *parent = nullptr);
     ~GrammalecteResultWidget() override;
     void checkGrammar() override;
-Q_SIGNALS:
-    void replaceText(const MessageComposer::PluginGrammarAction &act);
-    void checkAgain();
 private:
     void slotCheckGrammarFinished(const QString &result);
 };
