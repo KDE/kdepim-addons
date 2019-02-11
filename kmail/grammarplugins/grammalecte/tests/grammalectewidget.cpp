@@ -18,7 +18,7 @@
 */
 
 #include "grammalectewidget.h"
-#include "grammarresultjob.h"
+#include "grammalecteresultjob.h"
 
 #include "grammalecteparser.h"
 #include <QVBoxLayout>
@@ -68,11 +68,11 @@ void GrammalecteWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerat
 
 void GrammalecteWidget::slotCheckGrammar()
 {
-    GrammarResultJob *job = new GrammarResultJob(this);
+    GrammalecteResultJob *job = new GrammalecteResultJob(this);
     job->setPythonPath(QStringLiteral("/usr/bin/python3"));
     job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
     job->setText(mInput->toPlainText());
-    connect(job, &GrammarResultJob::finished, this, &GrammalecteWidget::slotResultFinished);
+    connect(job, &GrammalecteResultJob::finished, this, &GrammalecteWidget::slotResultFinished);
     job->start();
 }
 

@@ -20,7 +20,7 @@
 #include "grammarresulttextedit.h"
 #include "grammalecteresultwidget.h"
 #include "grammalectemanager.h"
-#include "grammarresultjob.h"
+#include "grammalecteresultjob.h"
 #include "grammalecteparser.h"
 #include <QHBoxLayout>
 #include <QJsonDocument>
@@ -37,12 +37,12 @@ GrammalecteResultWidget::~GrammalecteResultWidget()
 
 void GrammalecteResultWidget::checkGrammar()
 {
-    GrammarResultJob *job = new GrammarResultJob(this);
+    GrammalecteResultJob *job = new GrammalecteResultJob(this);
     job->setPythonPath(GrammalecteManager::self()->pythonPath());
     job->setGrammarlecteCliPath(GrammalecteManager::self()->grammalectePath());
     job->setArguments(GrammalecteManager::self()->options());
     job->setText(mResult->toPlainText());
-    connect(job, &GrammarResultJob::finished, this, &GrammalecteResultWidget::slotCheckGrammarFinished);
+    connect(job, &GrammalecteResultJob::finished, this, &GrammalecteResultWidget::slotCheckGrammarFinished);
     job->start();
 }
 

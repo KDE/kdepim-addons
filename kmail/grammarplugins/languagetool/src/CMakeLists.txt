@@ -1,5 +1,9 @@
 set(kmaillanguagetool_SRCS
     languagetoolparser.cpp
+    languagetoolgrammarerror.cpp
+    languagetoolresultwidget.cpp
+    languagetoolconfigdialog.cpp
+    languagetoolconfigwidget.cpp
 )
 
 add_library(kmaillanguagetool ${kmaillanguagetool_SRCS})
@@ -11,4 +15,5 @@ target_link_libraries(kmaillanguagetool
     KF5::WidgetsAddons
     KF5::KIOWidgets
     KF5::MessageComposer
+    grammarcommon
 )

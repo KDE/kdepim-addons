@@ -17,21 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammarresultjob.h"
+#include "grammalecteresultjob.h"
 #include "libgrammalecte_debug.h"
 
 #include <QTemporaryFile>
 
-GrammarResultJob::GrammarResultJob(QObject *parent)
+GrammalecteResultJob::GrammalecteResultJob(QObject *parent)
     : QObject(parent)
 {
 }
 
-GrammarResultJob::~GrammarResultJob()
+GrammalecteResultJob::~GrammalecteResultJob()
 {
 }
 
-void GrammarResultJob::start()
+void GrammalecteResultJob::start()
 {
     if (canStart()) {
         mProcess = new QProcess(this);
@@ -51,11 +51,11 @@ void GrammarResultJob::start()
         }
         args << QStringLiteral("-f") << file->fileName() << QStringLiteral("-j");
         mProcess->setArguments(args);
-        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammarResultJob::slotFinished);
+        connect(mProcess, QOverload<int, QProcess::ExitStatus>::of(&QProcess::finished), this, &GrammalecteResultJob::slotFinished);
         connect(mProcess, QOverload<QProcess::ProcessError>::of(&QProcess::error),
-                this, &GrammarResultJob::receivedError);
-        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammarResultJob::receivedStdErr);
-        connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammarResultJob::receivedStandardOutput);
+                this, &GrammalecteResultJob::receivedError);
+        connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteResultJob::receivedStdErr);
+        connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteResultJob::receivedStandardOutput);
 
         mProcess->start();
         if (!mProcess->waitForStarted()) {
@@ -70,22 +70,22 @@ void GrammarResultJob::start()
     }
 }
 
-void GrammarResultJob::receivedStandardOutput()
+void GrammalecteResultJob::receivedStandardOutput()
 {
     mResult += QString::fromUtf8(mProcess->readAllStandardOutput());
 }
 
-void GrammarResultJob::receivedError()
+void GrammalecteResultJob::receivedError()
 {
     mLastError += mProcess->errorString();
 }
 
-void GrammarResultJob::receivedStdErr()
+void GrammalecteResultJob::receivedStdErr()
 {
     mLastError += QLatin1String(mProcess->readAllStandardError());
 }
 
-void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
+void GrammalecteResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatus)
 {
     if (exitStatus != 0 || exitCode != 0) {
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Error during running GrammarResultJob: " << mLastError;
@@ -95,32 +95,32 @@ void GrammarResultJob::slotFinished(int exitCode, QProcess::ExitStatus exitStatu
     deleteLater();
 }
 
-QStringList GrammarResultJob::arguments() const
+QStringList GrammalecteResultJob::arguments() const
 {
     return mArguments;
 }
 
-void GrammarResultJob::setArguments(const QStringList &arguments)
+void GrammalecteResultJob::setArguments(const QStringList &arguments)
 {
     mArguments = arguments;
 }
 
-QString GrammarResultJob::grammarlecteCliPath() const
+QString GrammalecteResultJob::grammarlecteCliPath() const
 {
     return mGrammarlecteCliPath;
 }
 
-void GrammarResultJob::setGrammarlecteCliPath(const QString &grammarlecteCliPath)
+void GrammalecteResultJob::setGrammarlecteCliPath(const QString &grammarlecteCliPath)
 {
     mGrammarlecteCliPath = grammarlecteCliPath;
 }
 
-QString GrammarResultJob::pythonPath() const
+QString GrammalecteResultJob::pythonPath() const
 {
     return mPythonPath;
 }
 
-void GrammarResultJob::setPythonPath(const QString &pythonPath)
+void GrammalecteResultJob::setPythonPath(const QString &pythonPath)
 {
     mPythonPath = pythonPath;
 }
@@ -135,7 +135,7 @@ static bool hasNotEmptyText(const QString &text)
     return false;
 }
 
-bool GrammarResultJob::canStart() const
+bool GrammalecteResultJob::canStart() const
 {
     if (hasNotEmptyText(mText) && !mGrammarlecteCliPath.isEmpty() && !mPythonPath.isEmpty()) {
         return true;
@@ -143,12 +143,12 @@ bool GrammarResultJob::canStart() const
     return false;
 }
 
-QString GrammarResultJob::text() const
+QString GrammalecteResultJob::text() const
 {
     return mText;
 }
 
-void GrammarResultJob::setText(const QString &text)
+void GrammalecteResultJob::setText(const QString &text)
 {
     mText = text;
 }

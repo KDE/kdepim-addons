@@ -84,7 +84,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                     });
                 }
             } else {
-                qDebug() << " no suggestion " << act;
+                qCDebug(LIBGRAMMARCOMMON_LOG) << " no suggestion " << act;
             }
         }
         popup->addSeparator();

@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "grammarresultjobtest.h"
-#include "grammarresultjob.h"
+#include "grammalecteresultjobtest.h"
+#include "grammalecteresultjob.h"
 #include <QTest>
 #include <QStandardPaths>
 QTEST_MAIN(GrammarResultJobTest)
@@ -30,7 +30,7 @@ GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
 
 void GrammarResultJobTest::shouldHaveDefaultValue()
 {
-    GrammarResultJob job;
+    GrammalecteResultJob job;
     QVERIFY(!job.canStart());
     QVERIFY(job.text().isEmpty());
     QVERIFY(job.pythonPath().isEmpty());
@@ -40,7 +40,7 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 
 void GrammarResultJobTest::shouldBeAbleToStart()
 {
-    GrammarResultJob job;
+    GrammalecteResultJob job;
     //Args can be empty if we use default values
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));

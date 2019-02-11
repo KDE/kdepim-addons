@@ -23,12 +23,12 @@
 #include <QObject>
 #include <QProcess>
 #include "libgrammalect_private_export.h"
-class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammarResultJob : public QObject
+class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteResultJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit GrammarResultJob(QObject *parent = nullptr);
-    ~GrammarResultJob();
+    explicit GrammalecteResultJob(QObject *parent = nullptr);
+    ~GrammalecteResultJob();
 
     void start();
 
@@ -51,7 +51,7 @@ Q_SIGNALS:
     void error();
 
 private:
-    Q_DISABLE_COPY(GrammarResultJob)
+    Q_DISABLE_COPY(GrammalecteResultJob)
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void receivedStdErr();
     void receivedError();

@@ -1,6 +1,6 @@
 set(kmailgrammalecte_SRCS
     grammalecteparser.cpp
-    grammarresultjob.cpp
+    grammalecteresultjob.cpp
     grammalecteconfigwidget.cpp
     grammalectegenerateconfigoptionjob.cpp
     grammalecteconfigdialog.cpp
