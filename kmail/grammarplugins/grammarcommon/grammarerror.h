@@ -17,8 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef GRAMMALECTEINFO_H
-#define GRAMMALECTEINFO_H
+#ifndef GRAMMARERROR_H
+#define GRAMMARERROR_H
 
 #include <QObject>
 #include <QColor>
@@ -64,7 +64,7 @@ public:
     Q_REQUIRED_RESULT QString url() const;
     void setUrl(const QString &url);
 
-private:
+protected:
     static QColor parseColor(const QJsonObject &obj);
     static QStringList parseSuggestion(const QJsonObject &obj);
     QStringList mSuggestions;
@@ -80,4 +80,4 @@ private:
 Q_DECLARE_METATYPE(GrammarError)
 Q_DECLARE_TYPEINFO(GrammarError, Q_MOVABLE_TYPE);
 GRAMMARCOMMON_EXPORT QDebug operator <<(QDebug d, const GrammarError &t);
-#endif // GRAMMALECTEINFO_H
+#endif // GRAMMARERROR_H

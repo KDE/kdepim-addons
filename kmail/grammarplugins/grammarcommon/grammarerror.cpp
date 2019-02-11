@@ -99,6 +99,7 @@ bool GrammarError::isValid() const
     return false;
 }
 
+//Make as virtual
 void GrammarError::parse(const QJsonObject &obj, int blockindex)
 {
     mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
