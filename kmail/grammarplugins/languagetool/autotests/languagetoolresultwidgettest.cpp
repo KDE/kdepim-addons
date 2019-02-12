@@ -18,10 +18,23 @@
 */
 
 #include "languagetoolresultwidgettest.h"
+#include "languagetoolresultwidget.h"
 #include <QTest>
+#include <QHBoxLayout>
+#include <grammarresulttextedit.h>
 QTEST_MAIN(LanguagetoolResultWidgetTest)
 LanguagetoolResultWidgetTest::LanguagetoolResultWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void LanguagetoolResultWidgetTest::shouldHaveDefaultValue()
+{
+    LanguagetoolResultWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->margin(), 0);
+    GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    QVERIFY(mResult);
 }

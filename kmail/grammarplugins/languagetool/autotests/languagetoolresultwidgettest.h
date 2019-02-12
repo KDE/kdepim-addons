@@ -27,6 +27,8 @@ class LanguagetoolResultWidgetTest : public QObject
 public:
     explicit LanguagetoolResultWidgetTest(QObject *parent = nullptr);
     ~LanguagetoolResultWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LANGUAGETOOLRESULTWIDGETTEST_H
