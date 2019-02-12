@@ -33,6 +33,10 @@ public:
 
     QNetworkAccessManager *networkAccessManager() const;
     Q_REQUIRED_RESULT QString languageToolPath() const;
+
+    void loadSettings();
+    void saveSettings();
+
 private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };

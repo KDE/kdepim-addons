@@ -20,7 +20,9 @@
 #ifndef LANGUAGETOOLWIDGET_H
 #define LANGUAGETOOLWIDGET_H
 
+#include <PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
+class QNetworkAccessManager;
 class LanguagetoolResultWidget;
 class QTextEdit;
 class LanguagetoolWidget : public QWidget
@@ -31,10 +33,13 @@ public:
     ~LanguagetoolWidget();
 
 private:
+    void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
     void slotCheckGrammar();
+    void slotError();
     void slotResultFinished(const QString &result);
     QTextEdit *mInput = nullptr;
     LanguagetoolResultWidget *mResultWidget = nullptr;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
 #endif // LANGUAGETOOLWIDGET_H

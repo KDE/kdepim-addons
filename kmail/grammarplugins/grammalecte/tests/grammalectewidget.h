@@ -20,6 +20,7 @@
 #ifndef GRAMMALECTEWIDGET_H
 #define GRAMMALECTEWIDGET_H
 
+#include <PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
 #include "grammalectegenerateconfigoptionjob.h"
 class GrammalecteResultWidget;
@@ -32,6 +33,7 @@ public:
     ~GrammalecteWidget();
 
 private:
+    void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
     void slotCheckGrammar();
     void slotGetSettings();
     void slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);

@@ -26,6 +26,7 @@
 #include <QPushButton>
 #include <QDebug>
 #include <QJsonDocument>
+#include <QTextBlock>
 #include "grammalecteresultwidget.h"
 
 GrammalecteWidget::GrammalecteWidget(QWidget *parent)
@@ -44,6 +45,7 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
 
     mResultWidget = new GrammalecteResultWidget(this);
     mainLayout->addWidget(mResultWidget);
+    connect(mResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteWidget::slotReplaceText);
 
     connect(button, &QPushButton::clicked, this, &GrammalecteWidget::slotCheckGrammar);
     connect(checkSettingsButton, &QPushButton::clicked, this, &GrammalecteWidget::slotGetSettings);
@@ -52,6 +54,19 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
 GrammalecteWidget::~GrammalecteWidget()
 {
 }
+
+void GrammalecteWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+{
+    QTextBlock block = mInput->document()->findBlockByNumber(act.blockId() - 1);
+    if (block.isValid()) {
+        QTextCursor cur(block);
+        const int position = cur.position() + act.start();
+        cur.setPosition(position);
+        cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
+        cur.insertText(act.replacement());
+    }
+}
+
 
 void GrammalecteWidget::slotGetSettings()
 {

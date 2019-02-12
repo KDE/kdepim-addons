@@ -107,9 +107,26 @@ void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammar
         cur.setPosition(position);
         cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
         QTextCharFormat format;
-
         cur.insertText(replacementWord, format);
-        if (act.length() != replacementWord.length()) {
+        const int diff = act.length() - replacementWord.length();
+        if (diff != 0) {
+            const int blockLength = block.length();
+            for (int i = position + replacementWord.length() + 1; i < blockLength; ++i) {
+                cur.setPosition(i);
+                QTextCharFormat currentCharFormat = cur.charFormat();
+                if (currentCharFormat.hasProperty(ReplaceFormatInfo)) {
+                    MessageComposer::PluginGrammarAction act = cur.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
+                    act.setStart(act.start() - diff);
+                    currentCharFormat.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
+
+                    const int newPosition = i - 1;
+                    cur.setPosition(newPosition);
+                    cur.setPosition(newPosition + act.length(), QTextCursor::KeepAnchor);
+                    cur.setCharFormat(currentCharFormat);
+
+                    i += act.length();
+                }
+            }
             qDebug() << " We need to update act";
         }
     }

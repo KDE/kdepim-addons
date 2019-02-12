@@ -35,6 +35,8 @@ void LanguagetoolResultJobTest::shouldHaveDefaultValue()
    QVERIFY(job.arguments().isEmpty());
    QVERIFY(!job.canStart());
    QVERIFY(job.text().isEmpty());
+   QVERIFY(job.url().isEmpty());
+   QVERIFY(job.language().isEmpty());
 }
 
 void LanguagetoolResultJobTest::shouldBeAbleToStart()
@@ -42,6 +44,10 @@ void LanguagetoolResultJobTest::shouldBeAbleToStart()
     LanguagetoolResultJob job;
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("foo"));
+    QVERIFY(!job.canStart());
+    job.setUrl(QStringLiteral("http://www.kde.org"));
+    QVERIFY(!job.canStart());
+    job.setLanguage(QStringLiteral("foo"));
     QVERIFY(!job.canStart());
     QNetworkAccessManager network;
     job.setNetworkAccessManager(&network);

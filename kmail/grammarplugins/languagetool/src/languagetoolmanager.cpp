@@ -48,3 +48,13 @@ QString LanguagetoolManager::languageToolPath() const
 {
     return QStringLiteral("https://languagetool.org/api/v2/check");
 }
+
+void LanguagetoolManager::loadSettings()
+{
+    //TODO
+}
+
+void LanguagetoolManager::saveSettings()
+{
+    //TODO
+}

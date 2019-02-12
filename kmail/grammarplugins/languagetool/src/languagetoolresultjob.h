@@ -41,6 +41,12 @@ public:
     Q_REQUIRED_RESULT QString text() const;
     void setText(const QString &text);
 
+    Q_REQUIRED_RESULT QString url() const;
+    void setUrl(const QString &url);
+
+    Q_REQUIRED_RESULT QString language() const;
+    void setLanguage(const QString &language);
+
 Q_SIGNALS:
     void finished(const QString &result);
     void error();
@@ -51,6 +57,8 @@ private:
     void addRequestAttribute(QNetworkRequest &request) const;
     QStringList mArguments;
     QString mText;
+    QString mUrl;
+    QString mLanguage;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
