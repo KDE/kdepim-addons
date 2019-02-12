@@ -46,7 +46,6 @@ static bool hasNotEmptyText(const QString &text)
 
 bool LanguagetoolResultJob::canStart() const
 {
-    //
     if (!mNetworkAccessManager || !hasNotEmptyText(mText)) {
         return false;
     }
