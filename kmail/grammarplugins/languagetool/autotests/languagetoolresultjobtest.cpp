@@ -34,4 +34,20 @@ void LanguagetoolResultJobTest::shouldHaveDefaultValue()
    QVERIFY(!job.networkAccessManager());
    QVERIFY(job.arguments().isEmpty());
    QVERIFY(!job.canStart());
+   QVERIFY(job.text().isEmpty());
+}
+
+void LanguagetoolResultJobTest::shouldBeAbleToStart()
+{
+    LanguagetoolResultJob job;
+    QVERIFY(!job.canStart());
+    job.setText(QStringLiteral("foo"));
+    QVERIFY(!job.canStart());
+    QNetworkAccessManager network;
+    job.setNetworkAccessManager(&network);
+    QVERIFY(job.canStart());
+    job.setText(QStringLiteral(" "));
+    QVERIFY(!job.canStart());
+    job.setText(QStringLiteral(" DDDD"));
+    QVERIFY(job.canStart());
 }

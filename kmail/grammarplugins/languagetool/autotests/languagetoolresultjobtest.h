@@ -30,6 +30,7 @@ public:
     ~LanguagetoolResultJobTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldBeAbleToStart();
 };
 
 #endif // LANGUAGETOOLRESULTJOBTEST_H

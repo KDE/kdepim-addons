@@ -33,9 +33,21 @@ LanguagetoolResultJob::~LanguagetoolResultJob()
 
 }
 
+static bool hasNotEmptyText(const QString &text)
+{
+    for (int i = 0; i < text.length(); ++i) {
+        if (!text.at(i).isSpace()) {
+            return true;
+        }
+    }
+    return false;
+}
+
+
 bool LanguagetoolResultJob::canStart() const
 {
-    if (!mNetworkAccessManager) {
+    //
+    if (!mNetworkAccessManager || !hasNotEmptyText(mText)) {
         return false;
     }
     return true;
@@ -68,4 +80,14 @@ QNetworkAccessManager *LanguagetoolResultJob::networkAccessManager() const
 void LanguagetoolResultJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 {
     mNetworkAccessManager = networkAccessManager;
+}
+
+QString LanguagetoolResultJob::text() const
+{
+    return mText;
+}
+
+void LanguagetoolResultJob::setText(const QString &text)
+{
+    mText = text;
 }

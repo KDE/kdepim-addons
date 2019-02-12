@@ -36,6 +36,10 @@ public:
 
     QNetworkAccessManager *networkAccessManager() const;
     void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
+
+    Q_REQUIRED_RESULT QString text() const;
+    void setText(const QString &text);
+
 Q_SIGNALS:
     void finished(const QString &result);
     void error();
@@ -43,6 +47,7 @@ Q_SIGNALS:
 private:
     Q_DISABLE_COPY(LanguagetoolResultJob)
     QStringList mArguments;
+    QString mText;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
