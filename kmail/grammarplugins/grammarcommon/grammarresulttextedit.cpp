@@ -107,7 +107,11 @@ void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammar
         cur.setPosition(position);
         cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
         QTextCharFormat format;
+
         cur.insertText(replacementWord, format);
+        if (act.length() != replacementWord.length()) {
+            qDebug() << " We need to update act";
+        }
     }
 
     Q_EMIT replaceText(actWithReplacement);
