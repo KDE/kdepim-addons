@@ -22,7 +22,7 @@
 
 #include <QObject>
 #include "libkmaillanguagetool_export.h"
-
+class QNetworkAccessManager;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguagetoolManager : public QObject
 {
     Q_OBJECT
@@ -30,6 +30,10 @@ public:
     explicit LanguagetoolManager(QObject *parent = nullptr);
     ~LanguagetoolManager();
     static LanguagetoolManager *self();
+
+    QNetworkAccessManager *networkAccessManager() const;
+private:
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
 #endif // LANGUAGETOOLMANAGER_H

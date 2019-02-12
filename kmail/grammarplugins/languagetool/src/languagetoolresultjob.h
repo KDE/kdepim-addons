@@ -21,7 +21,7 @@
 #define LANGUAGETOOLRESULTJOB_H
 
 #include <QObject>
-
+class QNetworkAccessManager;
 class LanguagetoolResultJob : public QObject
 {
     Q_OBJECT
@@ -30,6 +30,19 @@ public:
     ~LanguagetoolResultJob();
     bool canStart() const;
     void start();
+    Q_REQUIRED_RESULT QStringList arguments() const;
+    void setArguments(const QStringList &arguments);
+
+    QNetworkAccessManager *networkAccessManager() const;
+    void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
+Q_SIGNALS:
+    void finished(const QString &result);
+    void error();
+
+private:
+    Q_DISABLE_COPY(LanguagetoolResultJob)
+    QStringList mArguments;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
 #endif // LANGUAGETOOLRESULTJOB_H

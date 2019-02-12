@@ -19,8 +19,11 @@
 
 #include "languagetoolmanager.h"
 
+#include <QNetworkAccessManager>
+
 LanguagetoolManager::LanguagetoolManager(QObject *parent)
     : QObject(parent)
+    , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
 
 }
@@ -34,4 +37,9 @@ LanguagetoolManager *LanguagetoolManager::self()
 {
     static LanguagetoolManager s_self;
     return &s_self;
+}
+
+QNetworkAccessManager *LanguagetoolManager::networkAccessManager() const
+{
+    return mNetworkAccessManager;
 }

@@ -20,6 +20,8 @@
 #include "languagetoolresultjob.h"
 #include "liblanguagetool_debug.h"
 
+#include <QNetworkAccessManager>
+
 LanguagetoolResultJob::LanguagetoolResultJob(QObject *parent)
     : QObject(parent)
 {
@@ -33,8 +35,10 @@ LanguagetoolResultJob::~LanguagetoolResultJob()
 
 bool LanguagetoolResultJob::canStart() const
 {
-    //TODO
-    return false;
+    if (!mNetworkAccessManager) {
+        return false;
+    }
+    return true;
 }
 
 void LanguagetoolResultJob::start()
@@ -43,4 +47,25 @@ void LanguagetoolResultJob::start()
         qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start language tool";
         return;
     }
+    //TODO
+}
+
+QStringList LanguagetoolResultJob::arguments() const
+{
+    return mArguments;
+}
+
+void LanguagetoolResultJob::setArguments(const QStringList &arguments)
+{
+    mArguments = arguments;
+}
+
+QNetworkAccessManager *LanguagetoolResultJob::networkAccessManager() const
+{
+    return mNetworkAccessManager;
+}
+
+void LanguagetoolResultJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
+{
+    mNetworkAccessManager = networkAccessManager;
 }

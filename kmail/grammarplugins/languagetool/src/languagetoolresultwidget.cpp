@@ -19,7 +19,8 @@
 
 #include "grammarresulttextedit.h"
 #include "languagetoolresultwidget.h"
-#include <QHBoxLayout>
+#include "languagetoolparser.h"
+#include "languagetoolresultjob.h"
 #include <QJsonDocument>
 #include <QTextEdit>
 
