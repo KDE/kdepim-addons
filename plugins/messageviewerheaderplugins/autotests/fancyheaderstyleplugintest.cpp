@@ -60,9 +60,9 @@ void FancyHeaderStylePluginTest::testFormatEmpty()
 {
     MessageViewer::FancyHeaderStylePlugin plugin;
     auto style = plugin.headerStyle();
-    auto stategy = plugin.headerStrategy();
-    style->setHeaderStrategy(stategy);
-    QCOMPARE(style->headerStrategy(), stategy);
+    auto strategy = plugin.headerStrategy();
+    style->setHeaderStrategy(strategy);
+    QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
     testHeaderFile(style->format(aMsg), QStringLiteral("empty.fancy"));
 }
@@ -84,9 +84,9 @@ void FancyHeaderStylePluginTest::testFormat()
 
     MessageViewer::FancyHeaderStylePlugin plugin;
     auto style = plugin.headerStyle();
-    auto stategy = plugin.headerStrategy();
-    style->setHeaderStrategy(stategy);
-    QCOMPARE(style->headerStrategy(), stategy);
+    auto strategy = plugin.headerStrategy();
+    style->setHeaderStrategy(strategy);
+    QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
     testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".fancy"));
 }

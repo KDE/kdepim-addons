@@ -1,6 +1,6 @@
 {
     "KPlugin": {
-        "Description": "This plugin allows you to check grammar using LAnguageTool.",
+        "Description": "This plugin allows you to check grammar using LanguageTool.",
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",

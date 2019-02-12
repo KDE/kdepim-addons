@@ -60,9 +60,9 @@ void EnterpriseHeaderStylePluginTest::testFormatEmpty()
 {
     MessageViewer::EnterpriseHeaderStylePlugin plugin;
     auto style = plugin.headerStyle();
-    auto stategy = plugin.headerStrategy();
-    style->setHeaderStrategy(stategy);
-    QCOMPARE(style->headerStrategy(), stategy);
+    auto strategy = plugin.headerStrategy();
+    style->setHeaderStrategy(strategy);
+    QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
     testHeaderFile(style->format(aMsg), QStringLiteral("empty.enterprise"));
 }
@@ -84,9 +84,9 @@ void EnterpriseHeaderStylePluginTest::testFormat()
 
     MessageViewer::EnterpriseHeaderStylePlugin plugin;
     auto style = plugin.headerStyle();
-    auto stategy = plugin.headerStrategy();
-    style->setHeaderStrategy(stategy);
-    QCOMPARE(style->headerStrategy(), stategy);
+    auto strategy = plugin.headerStrategy();
+    style->setHeaderStrategy(strategy);
+    QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
     testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".enterprise"));
 }
