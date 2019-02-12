@@ -37,6 +37,8 @@ void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
     mStart = obj[QStringLiteral("offset")].toInt(-1);
     mLength = obj[QStringLiteral("length")].toInt(-1);
     mSuggestions = parseSuggestion(obj);
+    //TODO generate specific color!
+    mColor = QColor(Qt::red);
     //TODO ???
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
 //    mOption = obj[QStringLiteral("sType")].toString();

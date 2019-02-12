@@ -36,6 +36,7 @@ void LanguageToolParserTest::shouldParseJson_data()
     QTest::addColumn<int>("numberOfElement");
     QTest::newRow("noerror") << QStringLiteral("noerror") << 0;
     QTest::newRow("test1") << QStringLiteral("test1") << 1;
+    QTest::newRow("test2") << QStringLiteral("test2") << 3;
 }
 
 void LanguageToolParserTest::shouldParseJson()
