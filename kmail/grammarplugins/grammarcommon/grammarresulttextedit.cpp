@@ -46,19 +46,19 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
         QTextBlock block = document()->findBlockByNumber(info.blockId() - 1);
         if (block.isValid()) {
             QTextCursor cur(block);
-            const int position = cur.position();
             QTextCharFormat format;
             //Verify color
             format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
             format.setToolTip(info.error());
             MessageComposer::PluginGrammarAction act;
-            act.setEnd(info.end());
+            act.setLength(info.length());
             act.setStart(info.start());
             act.setSuggestions(info.suggestions());
             act.setBlockId(info.blockId());
             format.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
-            cur.setPosition(position + info.start());
-            cur.setPosition(position + info.end(), QTextCursor::KeepAnchor);
+            const int position = cur.position() + info.start();
+            cur.setPosition(position);
+            cur.setPosition(position + info.length(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
         } else {
             qCWarning(LIBGRAMMARCOMMON_LOG) << "Unable to find block Id" << (info.blockId() -1);
@@ -103,9 +103,9 @@ void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammar
     QTextBlock block = document()->findBlockByNumber(act.blockId() - 1);
     if (block.isValid()) {
         QTextCursor cur(block);
-        const int position = cur.position();
-        cur.setPosition(position + act.start());
-        cur.setPosition(position + act.end(), QTextCursor::KeepAnchor);
+        const int position = cur.position() + act.start();
+        cur.setPosition(position);
+        cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
         QTextCharFormat format;
         cur.insertText(replacementWord, format);
     }

@@ -71,14 +71,14 @@ void GrammarError::setStart(int begin)
     mStart = begin;
 }
 
-int GrammarError::end() const
+int GrammarError::length() const
 {
-    return mEnd;
+    return mLength;
 }
 
-void GrammarError::setEnd(int end)
+void GrammarError::setLength(int length)
 {
-    mEnd = end;
+    mLength = length;
 }
 
 QStringList GrammarError::suggestions() const
@@ -93,7 +93,7 @@ void GrammarError::setSuggestions(const QStringList &suggestions)
 
 bool GrammarError::isValid() const
 {
-    if ((mEnd != -1) && (mStart != -1) && (!mError.isEmpty())) {
+    if ((mLength != -1) && (mStart != -1) && (!mError.isEmpty())) {
         return true;
     }
     return false;
@@ -108,7 +108,7 @@ void GrammarError::parse(const QJsonObject &obj, int blockindex)
 bool GrammarError::operator ==(const GrammarError &other) const
 {
     return (mBlockId == other.blockId())
-           && (mEnd == other.end())
+           && (mLength == other.length())
            && (mStart == other.start())
            && (mColor == other.color())
            && (mSuggestions == other.suggestions())
@@ -118,17 +118,6 @@ bool GrammarError::operator ==(const GrammarError &other) const
            && (mUrl == other.url());
 }
 
-QStringList GrammarError::parseSuggestion(const QJsonObject &obj)
-{
-    QStringList lst;
-    const QJsonArray array = obj[QStringLiteral("aSuggestions")].toArray();
-    const QVariantList list = array.toVariantList();
-    for (const QVariant &v : list) {
-        //qDebug() << " v" << v.toString();
-        lst.append(v.toString());
-    }
-    return lst;
-}
 
 QString GrammarError::url() const
 {
@@ -160,30 +149,11 @@ void GrammarError::setOption(const QString &option)
     mOption = option;
 }
 
-QColor GrammarError::parseColor(const QJsonObject &obj)
-{
-    QColor col;
-    const QJsonArray array = obj[QStringLiteral("aColor")].toArray();
-    if (array.isEmpty()) {
-        return col;
-    }
-    if (array.count() == 3) {
-        const QVariantList list = array.toVariantList();
-//        for (const QVariant &v : list) {
-//            qDebug() << " v" << v.toInt();
-//        }
-        col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
-    } else {
-        qCWarning(LIBGRAMMARCOMMON_LOG) << "Parsing color: Array is not correct:" << array;
-    }
-    return col;
-}
-
 QDebug operator <<(QDebug d, const GrammarError &t)
 {
     d << "mError: " << t.error();
     d << "Start: " << t.start();
-    d << "End: " << t.end();
+    d << "Length: " << t.length();
     d << "BlockId: " << t.blockId();
     d << "Color: " << t.color().name();
     d << "Suggestion: " << t.suggestions();

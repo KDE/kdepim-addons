@@ -43,8 +43,8 @@ public:
     Q_REQUIRED_RESULT int start() const;
     void setStart(int start);
 
-    Q_REQUIRED_RESULT int end() const;
-    void setEnd(int end);
+    Q_REQUIRED_RESULT int length() const;
+    void setLength(int length);
 
     Q_REQUIRED_RESULT QStringList suggestions() const;
     void setSuggestions(const QStringList &suggestions);
@@ -65,8 +65,6 @@ public:
     void setUrl(const QString &url);
 
 protected:
-    static QColor parseColor(const QJsonObject &obj);
-    static QStringList parseSuggestion(const QJsonObject &obj);
     QStringList mSuggestions;
     QString mError;
     QString mOption;
@@ -75,7 +73,7 @@ protected:
     QColor mColor;
     int mBlockId = -1;
     int mStart = -1;
-    int mEnd = -1;
+    int mLength = -1;
 };
 Q_DECLARE_METATYPE(GrammarError)
 Q_DECLARE_TYPEINFO(GrammarError, Q_MOVABLE_TYPE);

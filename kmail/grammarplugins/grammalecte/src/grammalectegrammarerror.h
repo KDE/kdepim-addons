@@ -28,6 +28,9 @@ public:
     GrammalecteGrammarError();
     ~GrammalecteGrammarError() override;
     void parse(const QJsonObject &obj, int blockindex) override;
+private:
+    static QStringList parseSuggestion(const QJsonObject &obj);
+    static QColor parseColor(const QJsonObject &obj);
 };
 Q_DECLARE_METATYPE(GrammalecteGrammarError)
 Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);

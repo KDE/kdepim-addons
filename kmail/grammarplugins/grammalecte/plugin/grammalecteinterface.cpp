@@ -53,9 +53,9 @@ void GrammalecteInterface::slotReplaceText(const MessageComposer::PluginGrammarA
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
         if (block.isValid()) {
             QTextCursor cur(block);
-            const int position = cur.position();
-            cur.setPosition(position + act.start());
-            cur.setPosition(position + act.end(), QTextCursor::KeepAnchor);
+            const int position = cur.position() + act.start();
+            cur.setPosition(position);
+            cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
             cur.insertText(act.replacement());
         }
     }

@@ -33,7 +33,7 @@ GrammalecteGrammarErrorTest::GrammalecteGrammarErrorTest(QObject *parent)
 void GrammalecteGrammarErrorTest::shouldHaveDefaultValue()
 {
     GrammalecteGrammarError info;
-    QCOMPARE(info.end(), -1);
+    QCOMPARE(info.length(), -1);
     QCOMPARE(info.start(), -1);
     QCOMPARE(info.blockId(), -1);
     QVERIFY(info.error().isEmpty());
@@ -51,7 +51,7 @@ void GrammalecteGrammarErrorTest::shouldParseJson_data()
     GrammalecteGrammarError err;
     err.setBlockId(1);
     err.setStart(15);
-    err.setEnd(20);
+    err.setLength(5);
     err.setColor(QColor(217, 128, 38));
     err.setSuggestions(QStringList() << QStringLiteral("Alors"));
     err.setError(QStringLiteral("Après un point, une majuscule est généralement requise."));
