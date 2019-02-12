@@ -17,33 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef LANGUAGETOOLRESULTJOB_H
-#define LANGUAGETOOLRESULTJOB_H
+#ifndef LANGUAGETOOLRESULTJOBTEST_H
+#define LANGUAGETOOLRESULTJOBTEST_H
 
 #include <QObject>
-#include "liblanguagetool_private_export.h"
-class QNetworkAccessManager;
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguagetoolResultJob : public QObject
+
+class LanguagetoolResultJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolResultJob(QObject *parent = nullptr);
-    ~LanguagetoolResultJob();
-    bool canStart() const;
-    void start();
-    Q_REQUIRED_RESULT QStringList arguments() const;
-    void setArguments(const QStringList &arguments);
-
-    QNetworkAccessManager *networkAccessManager() const;
-    void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
-Q_SIGNALS:
-    void finished(const QString &result);
-    void error();
-
-private:
-    Q_DISABLE_COPY(LanguagetoolResultJob)
-    QStringList mArguments;
-    QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    explicit LanguagetoolResultJobTest(QObject *parent = nullptr);
+    ~LanguagetoolResultJobTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
-#endif // LANGUAGETOOLRESULTJOB_H
+#endif // LANGUAGETOOLRESULTJOBTEST_H
