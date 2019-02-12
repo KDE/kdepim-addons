@@ -19,6 +19,8 @@
 
 #include "languagetoolgrammarerror.h"
 
+#include <QJsonArray>
+
 LanguagetoolGrammarError::LanguagetoolGrammarError()
 {
 
@@ -32,14 +34,10 @@ LanguagetoolGrammarError::~LanguagetoolGrammarError()
 void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
     mError = obj[QStringLiteral("message")].toString();
-
-//    mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
-//    mStart = obj[QStringLiteral("nStart")].toInt(-1);
-//    if (mEnd != -1) {
-//        mBlockId = blockindex;
-//        //mColor = parseColor(obj);
-//        //mSuggestions = parseSuggestion(obj);
-//    }
+    mStart = obj[QStringLiteral("offset")].toInt(-1);
+    mLength = obj[QStringLiteral("length")].toInt(-1);
+    mSuggestions = parseSuggestion(obj);
+    //TODO ???
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
 //    mOption = obj[QStringLiteral("sType")].toString();
 //    mUrl = obj[QStringLiteral("URL")].toString();
@@ -48,6 +46,12 @@ void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 
 QStringList LanguagetoolGrammarError::parseSuggestion(const QJsonObject &obj)
 {
-    //TODO
-    return {};
+    QStringList lst;
+    const QJsonArray array = obj[QStringLiteral("replacements")].toArray();
+    const QVariantList list = array.toVariantList();
+    for (const QVariant &v : list) {
+        //qDebug() << " v" << v.toString();
+        lst.append(v.toString());
+    }
+    return lst;
 }
