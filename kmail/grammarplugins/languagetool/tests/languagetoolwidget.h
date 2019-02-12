@@ -17,34 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolmanager.h"
+#ifndef LANGUAGETOOLWIDGET_H
+#define LANGUAGETOOLWIDGET_H
 
-#include <QNetworkAccessManager>
-
-LanguagetoolManager::LanguagetoolManager(QObject *parent)
-    : QObject(parent)
-    , mNetworkAccessManager(new QNetworkAccessManager(this))
+#include <QWidget>
+class LanguagetoolResultWidget;
+class QTextEdit;
+class LanguagetoolWidget : public QWidget
 {
+    Q_OBJECT
+public:
+    explicit LanguagetoolWidget(QWidget *parent = nullptr);
+    ~LanguagetoolWidget();
 
-}
+private:
+    void slotCheckGrammar();
+    void slotResultFinished(const QString &result);
+    QTextEdit *mInput = nullptr;
+    LanguagetoolResultWidget *mResultWidget = nullptr;
+};
 
-LanguagetoolManager::~LanguagetoolManager()
-{
-
-}
-
-LanguagetoolManager *LanguagetoolManager::self()
-{
-    static LanguagetoolManager s_self;
-    return &s_self;
-}
-
-QNetworkAccessManager *LanguagetoolManager::networkAccessManager() const
-{
-    return mNetworkAccessManager;
-}
-
-QString LanguagetoolManager::languageToolPath() const
-{
-    return QStringLiteral("https://languagetool.org/api/v2/check");
-}
+#endif // LANGUAGETOOLWIDGET_H

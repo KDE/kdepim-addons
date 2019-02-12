@@ -31,5 +31,23 @@ LanguagetoolGrammarError::~LanguagetoolGrammarError()
 
 void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
+    mError = obj[QStringLiteral("message")].toString();
+
+//    mEnd = obj[QStringLiteral("nEnd")].toInt(-1);
+//    mStart = obj[QStringLiteral("nStart")].toInt(-1);
+//    if (mEnd != -1) {
+//        mBlockId = blockindex;
+//        //mColor = parseColor(obj);
+//        //mSuggestions = parseSuggestion(obj);
+//    }
+//    mRule = obj[QStringLiteral("sRuleId")].toString();
+//    mOption = obj[QStringLiteral("sType")].toString();
+//    mUrl = obj[QStringLiteral("URL")].toString();
+}
+
+
+QStringList LanguagetoolGrammarError::parseSuggestion(const QJsonObject &obj)
+{
     //TODO
+    return {};
 }

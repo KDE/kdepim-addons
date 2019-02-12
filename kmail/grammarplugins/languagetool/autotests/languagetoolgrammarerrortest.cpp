@@ -20,9 +20,8 @@
 
 #include "languagetoolgrammarerrortest.h"
 #include <QTest>
-QTEST_MAIN(LanguagetoolGrammarErrorTest)
+QTEST_GUILESS_MAIN(LanguagetoolGrammarErrorTest)
 LanguagetoolGrammarErrorTest::LanguagetoolGrammarErrorTest(QObject *parent)
     : QObject(parent)
 {
-
 }

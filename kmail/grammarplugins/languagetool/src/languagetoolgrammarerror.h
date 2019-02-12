@@ -28,6 +28,8 @@ public:
     LanguagetoolGrammarError();
     ~LanguagetoolGrammarError() override;
     void parse(const QJsonObject &obj, int blockindex) override;
+private:
+    static QStringList parseSuggestion(const QJsonObject &obj);
 };
 Q_DECLARE_METATYPE(LanguagetoolGrammarError)
 Q_DECLARE_TYPEINFO(LanguagetoolGrammarError, Q_MOVABLE_TYPE);

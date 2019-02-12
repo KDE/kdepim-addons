@@ -21,6 +21,7 @@
 #include "liblanguagetool_debug.h"
 
 #include <QNetworkAccessManager>
+#include <QNetworkReply>
 
 LanguagetoolResultJob::LanguagetoolResultJob(QObject *parent)
     : QObject(parent)
@@ -58,7 +59,24 @@ void LanguagetoolResultJob::start()
         qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start language tool";
         return;
     }
-    //TODO
+//    QNetworkReply *reply = mNetworkAccessManager->post(request(), baPostData);
+//    connect(reply, &QNetworkReply::finished, this, &LanguagetoolResultJob::slotCheckGrammarFinished);
+//    //TODO
+}
+
+void LanguagetoolResultJob::slotCheckGrammarFinished()
+{
+    QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
+    if (reply) {
+        const QByteArray data = reply->readAll();
+        qDebug() << " data " << data;
+    }
+    deleteLater();
+}
+
+void LanguagetoolResultJob::addRequestAttribute(QNetworkRequest &request) const
+{
+    request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
 }
 
 QStringList LanguagetoolResultJob::arguments() const

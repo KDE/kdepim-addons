@@ -32,6 +32,7 @@ public:
     static LanguagetoolManager *self();
 
     QNetworkAccessManager *networkAccessManager() const;
+    Q_REQUIRED_RESULT QString languageToolPath() const;
 private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };

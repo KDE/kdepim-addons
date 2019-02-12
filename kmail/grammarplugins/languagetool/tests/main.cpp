@@ -17,34 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolmanager.h"
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QStandardPaths>
+#include "languagetoolwidget.h"
 
-#include <QNetworkAccessManager>
-
-LanguagetoolManager::LanguagetoolManager(QObject *parent)
-    : QObject(parent)
-    , mNetworkAccessManager(new QNetworkAccessManager(this))
+int main(int argc, char **argv)
 {
+    QApplication app(argc, argv);
+    QStandardPaths::setTestModeEnabled(true);
 
-}
-
-LanguagetoolManager::~LanguagetoolManager()
-{
-
-}
-
-LanguagetoolManager *LanguagetoolManager::self()
-{
-    static LanguagetoolManager s_self;
-    return &s_self;
-}
-
-QNetworkAccessManager *LanguagetoolManager::networkAccessManager() const
-{
-    return mNetworkAccessManager;
-}
-
-QString LanguagetoolManager::languageToolPath() const
-{
-    return QStringLiteral("https://languagetool.org/api/v2/check");
+    LanguagetoolWidget w;
+    w.show();
+    app.exec();
+    return 0;
 }

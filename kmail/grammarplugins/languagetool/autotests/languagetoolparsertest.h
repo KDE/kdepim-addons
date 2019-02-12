@@ -27,6 +27,9 @@ class LanguageToolParserTest : public QObject
 public:
     explicit LanguageToolParserTest(QObject *parent = nullptr);
     ~LanguageToolParserTest() = default;
+private Q_SLOTS:
+    void shouldParseJson();
+    void shouldParseJson_data();
 };
 
 #endif // LANGUAGETOOLPARSERTEST_H
