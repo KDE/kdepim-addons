@@ -19,6 +19,7 @@
 
 #include "languagetoolconfigwidget.h"
 #include "languagetoolmanager.h"
+#include "languagetoolcombobox.h"
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
@@ -53,6 +54,16 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
         instancePathLabel->setEnabled(b);
         mInstancePath->setEnabled(b);}
     );
+
+    QLabel *languageLabel = new QLabel(i18n("Language:"), this);
+    languageLabel->setObjectName(QStringLiteral("languageLabel"));
+    mainLayout->addWidget(languageLabel);
+
+    mLanguageToolCombobox = new LanguageToolComboBox(this);
+    mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
+    mainLayout->addWidget(mLanguageToolCombobox);
+
+
     mainLayout->addStretch(1);
     loadSettings();
 }
@@ -66,10 +77,12 @@ void LanguageToolConfigWidget::loadSettings()
 {
     mUseLocalInstance->setChecked(LanguageToolManager::self()->useLocalInstance());
     mInstancePath->setText(LanguageToolManager::self()->languageToolPath());
+    mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
 }
 
 void LanguageToolConfigWidget::saveSettings()
 {
     LanguageToolManager::self()->setUseLocalInstance(mUseLocalInstance->isChecked());
     LanguageToolManager::self()->setLanguageToolPath(mInstancePath->text());
+    LanguageToolManager::self()->setLanguage(mLanguageToolCombobox->language());
 }

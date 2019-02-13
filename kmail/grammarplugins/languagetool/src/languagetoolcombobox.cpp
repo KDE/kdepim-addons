@@ -18,14 +18,35 @@
 */
 
 #include "languagetoolcombobox.h"
+#include <KLocalizedString>
 
 LanguageToolComboBox::LanguageToolComboBox(QWidget *parent)
     : QComboBox(parent)
 {
-
+    fillComboBox();
 }
 
 LanguageToolComboBox::~LanguageToolComboBox()
 {
 
+}
+
+void LanguageToolComboBox::fillComboBox()
+{
+    //TODO add more
+    addItem(i18n("French"), QStringLiteral("fr"));
+    addItem(i18n("English"), QStringLiteral("en"));
+}
+
+void LanguageToolComboBox::setLanguage(const QString &str)
+{
+    const int pos = findData(str);
+    if (pos != -1) {
+        setCurrentIndex(pos);
+    }
+}
+
+QString LanguageToolComboBox::language() const
+{
+    return currentData().toString();
 }

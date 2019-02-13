@@ -24,6 +24,7 @@
 #include "libkmaillanguagetool_export.h"
 class QCheckBox;
 class QLineEdit;
+class LanguageToolComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
 {
     Q_OBJECT
@@ -36,6 +37,7 @@ private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     QCheckBox *mUseLocalInstance = nullptr;
     QLineEdit *mInstancePath = nullptr;
+    LanguageToolComboBox *mLanguageToolCombobox = nullptr;
 };
 
 #endif // LANGUAGETOOLCONFIGWIDGET_H

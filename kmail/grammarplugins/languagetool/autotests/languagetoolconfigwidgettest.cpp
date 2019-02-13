@@ -19,11 +19,13 @@
 
 #include "languagetoolconfigwidgettest.h"
 #include "languagetoolconfigwidget.h"
+#include "languagetoolcombobox.h"
 #include <QCheckBox>
 #include <QLabel>
 #include <QLineEdit>
 #include <QTest>
 #include <QVBoxLayout>
+
 QTEST_MAIN(LanguageToolConfigWidgetTest)
 LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
     : QObject(parent)
@@ -53,4 +55,11 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mInstancePath);
     QVERIFY(mInstancePath->text().isEmpty());
     QVERIFY(!mInstancePath->isEnabled());
+
+    QLabel *languageLabel = w.findChild<QLabel *>(QStringLiteral("languageLabel"));
+    QVERIFY(languageLabel);
+    QVERIFY(!languageLabel->text().isEmpty());
+
+    LanguageToolComboBox *mLanguageToolCombobox = w.findChild<LanguageToolComboBox *>(QStringLiteral("languagecombobox"));
+    QVERIFY(mLanguageToolCombobox);
 }

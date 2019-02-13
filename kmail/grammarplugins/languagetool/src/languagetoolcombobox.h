@@ -28,10 +28,12 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolComboBox : public QComboBox
 public:
     explicit LanguageToolComboBox(QWidget *parent = nullptr);
     ~LanguageToolComboBox();
+
+    void setLanguage(const QString &str);
+    Q_REQUIRED_RESULT QString language() const;
+
 private:
-    enum LanguageName {
-        LanguageNameRole = Qt::UserRole + 1
-    };
+    void fillComboBox();
 };
 
 #endif // LANGUAGETOOLCOMBOBOX_H
