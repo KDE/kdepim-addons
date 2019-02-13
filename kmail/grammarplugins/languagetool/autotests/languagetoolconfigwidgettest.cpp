@@ -21,16 +21,16 @@
 #include "languagetoolconfigwidget.h"
 #include <QTest>
 #include <QVBoxLayout>
-QTEST_MAIN(LanguagetoolConfigWidgetTest)
-LanguagetoolConfigWidgetTest::LanguagetoolConfigWidgetTest(QObject *parent)
+QTEST_MAIN(LanguageToolConfigWidgetTest)
+LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-void LanguagetoolConfigWidgetTest::shouldHaveDefaultValue()
+void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 {
-    LanguagetoolConfigWidget w;
+    LanguageToolConfigWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);

@@ -22,16 +22,16 @@
 
 #include "grammarerror.h"
 #include "liblanguagetool_private_export.h"
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguagetoolGrammarError : public GrammarError
+class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
 {
 public:
-    LanguagetoolGrammarError();
-    ~LanguagetoolGrammarError() override;
+    LanguageToolGrammarError();
+    ~LanguageToolGrammarError() override;
     void parse(const QJsonObject &obj, int blockindex) override;
 private:
     static QStringList parseSuggestion(const QJsonObject &obj);
 };
-Q_DECLARE_METATYPE(LanguagetoolGrammarError)
-Q_DECLARE_TYPEINFO(LanguagetoolGrammarError, Q_MOVABLE_TYPE);
+Q_DECLARE_METATYPE(LanguageToolGrammarError)
+Q_DECLARE_TYPEINFO(LanguageToolGrammarError, Q_MOVABLE_TYPE);
 
 #endif // LANGUAGETOOLGRAMMARERROR_H

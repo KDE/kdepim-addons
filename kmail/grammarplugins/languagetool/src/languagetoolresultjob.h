@@ -24,12 +24,12 @@
 #include "liblanguagetool_private_export.h"
 class QNetworkRequest;
 class QNetworkAccessManager;
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguagetoolResultJob : public QObject
+class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultJob : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolResultJob(QObject *parent = nullptr);
-    ~LanguagetoolResultJob();
+    explicit LanguageToolResultJob(QObject *parent = nullptr);
+    ~LanguageToolResultJob();
     bool canStart() const;
     void start();
     Q_REQUIRED_RESULT QStringList arguments() const;
@@ -52,7 +52,7 @@ Q_SIGNALS:
     void error();
 
 private:
-    Q_DISABLE_COPY(LanguagetoolResultJob)
+    Q_DISABLE_COPY(LanguageToolResultJob)
     void slotCheckGrammarFinished();
     void addRequestAttribute(QNetworkRequest &request) const;
     QStringList mArguments;

@@ -23,14 +23,14 @@
 #include <PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
 class QNetworkAccessManager;
-class LanguagetoolResultWidget;
+class LanguageToolResultWidget;
 class QTextEdit;
-class LanguagetoolWidget : public QWidget
+class LanguageToolWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolWidget(QWidget *parent = nullptr);
-    ~LanguagetoolWidget();
+    explicit LanguageToolWidget(QWidget *parent = nullptr);
+    ~LanguageToolWidget();
 
 private:
     void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
@@ -38,7 +38,7 @@ private:
     void slotError();
     void slotResultFinished(const QString &result);
     QTextEdit *mInput = nullptr;
-    LanguagetoolResultWidget *mResultWidget = nullptr;
+    LanguageToolResultWidget *mResultWidget = nullptr;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 

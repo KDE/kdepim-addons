@@ -30,24 +30,24 @@
 #include <QHBoxLayout>
 #include <QTextBlock>
 
-LanguagetoolInterface::LanguagetoolInterface(KActionCollection *ac, QWidget *parent)
+LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setMargin(0);
-    mGrammarResultWidget = new LanguagetoolResultWidget(this);
-    connect(mGrammarResultWidget, &LanguagetoolResultWidget::replaceText, this, &LanguagetoolInterface::slotReplaceText);
-    connect(mGrammarResultWidget, &LanguagetoolResultWidget::checkAgain, this, &LanguagetoolInterface::checkAgain);
+    mGrammarResultWidget = new LanguageToolResultWidget(this);
+    connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
+    connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
 }
 
-LanguagetoolInterface::~LanguagetoolInterface()
+LanguageToolInterface::~LanguageToolInterface()
 {
 }
 
-void LanguagetoolInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {
     if (richTextEditor()) {
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
@@ -61,7 +61,7 @@ void LanguagetoolInterface::slotReplaceText(const MessageComposer::PluginGrammar
     }
 }
 
-void LanguagetoolInterface::slotActivateGrammalecte(bool state)
+void LanguageToolInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
         mGrammarResultWidget->show();
@@ -73,22 +73,22 @@ void LanguagetoolInterface::slotActivateGrammalecte(bool state)
     }
 }
 
-KToggleAction *LanguagetoolInterface::action() const
+KToggleAction *LanguageToolInterface::action() const
 {
     return mAction;
 }
 
-void LanguagetoolInterface::createAction(KActionCollection *ac)
+void LanguageToolInterface::createAction(KActionCollection *ac)
 {
     mAction = new KToggleAction(i18n("&Check Grammar (LanguageTool)"), this);
-    connect(mAction, &KToggleAction::triggered, this, &LanguagetoolInterface::slotActivateGrammalecte);
+    connect(mAction, &KToggleAction::triggered, this, &LanguageToolInterface::slotActivateGrammalecte);
     if (ac) {
         ac->addAction(QStringLiteral("checkgrammar-languagetool"), mAction);
     }
     mAction->setChecked(false);
 }
 
-void LanguagetoolInterface::checkAgain()
+void LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());

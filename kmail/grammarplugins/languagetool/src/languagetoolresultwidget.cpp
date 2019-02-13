@@ -25,28 +25,28 @@
 #include <QJsonDocument>
 #include <QTextEdit>
 
-LanguagetoolResultWidget::LanguagetoolResultWidget(QWidget *parent)
+LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
 {
 }
 
-LanguagetoolResultWidget::~LanguagetoolResultWidget()
+LanguageToolResultWidget::~LanguageToolResultWidget()
 {
 }
 
-void LanguagetoolResultWidget::checkGrammar()
+void LanguageToolResultWidget::checkGrammar()
 {
-    LanguagetoolResultJob *job = new LanguagetoolResultJob(this);
-    job->setUrl(LanguagetoolManager::self()->languageToolPath());
-    job->setNetworkAccessManager(LanguagetoolManager::self()->networkAccessManager());
+    LanguageToolResultJob *job = new LanguageToolResultJob(this);
+    job->setUrl(LanguageToolManager::self()->languageToolPath());
+    job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     job->setText(mResult->toPlainText());
-    job->setLanguage(LanguagetoolManager::self()->language());
-    connect(job, &LanguagetoolResultJob::finished, this, &LanguagetoolResultWidget::slotCheckGrammarFinished);
-    connect(job, &LanguagetoolResultJob::error, this, &LanguagetoolResultWidget::slotError);
+    job->setLanguage(LanguageToolManager::self()->language());
+    connect(job, &LanguageToolResultJob::finished, this, &LanguageToolResultWidget::slotCheckGrammarFinished);
+    connect(job, &LanguageToolResultJob::error, this, &LanguageToolResultWidget::slotError);
     job->start();
 }
 
-void LanguagetoolResultWidget::slotCheckGrammarFinished(const QString &result)
+void LanguageToolResultWidget::slotCheckGrammarFinished(const QString &result)
 {
     LanguageToolParser parser;
     const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
@@ -54,7 +54,7 @@ void LanguagetoolResultWidget::slotCheckGrammarFinished(const QString &result)
     applyGrammarResult(parser.parseResult(fields));
 }
 
-void LanguagetoolResultWidget::slotError()
+void LanguageToolResultWidget::slotError()
 {
     //TODO
 }

@@ -27,12 +27,12 @@ namespace MessageComposer {
 class PluginGrammarAction;
 }
 class GrammarResultTextEdit;
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguagetoolResultWidget : public GrammarResultWidget
+class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolResultWidget(QWidget *parent = nullptr);
-    ~LanguagetoolResultWidget() override;
+    explicit LanguageToolResultWidget(QWidget *parent = nullptr);
+    ~LanguageToolResultWidget() override;
     void checkGrammar() override;
 private:
     void slotCheckGrammarFinished(const QString &result);

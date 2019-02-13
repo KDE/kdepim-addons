@@ -22,16 +22,16 @@
 #include <QTest>
 #include <QHBoxLayout>
 #include <grammarresulttextedit.h>
-QTEST_MAIN(LanguagetoolResultWidgetTest)
-LanguagetoolResultWidgetTest::LanguagetoolResultWidgetTest(QObject *parent)
+QTEST_MAIN(LanguageToolResultWidgetTest)
+LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-void LanguagetoolResultWidgetTest::shouldHaveDefaultValue()
+void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
 {
-    LanguagetoolResultWidget w;
+    LanguageToolResultWidget w;
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);

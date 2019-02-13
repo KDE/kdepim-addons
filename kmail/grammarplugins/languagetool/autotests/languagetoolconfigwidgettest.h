@@ -22,12 +22,12 @@
 
 #include <QObject>
 
-class LanguagetoolConfigWidgetTest : public QObject
+class LanguageToolConfigWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolConfigWidgetTest(QObject *parent = nullptr);
-    ~LanguagetoolConfigWidgetTest() = default;
+    explicit LanguageToolConfigWidgetTest(QObject *parent = nullptr);
+    ~LanguageToolConfigWidgetTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

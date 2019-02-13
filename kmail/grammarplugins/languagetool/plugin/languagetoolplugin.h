@@ -22,12 +22,12 @@
 
 #include <PimCommon/CustomToolsPlugin>
 #include <QVariant>
-class LanguagetoolPlugin : public PimCommon::CustomToolsPlugin
+class LanguageToolPlugin : public PimCommon::CustomToolsPlugin
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~LanguagetoolPlugin() override;
+    explicit LanguageToolPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
+    ~LanguageToolPlugin() override;
 
     PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
     Q_REQUIRED_RESULT QString customToolName() const override;

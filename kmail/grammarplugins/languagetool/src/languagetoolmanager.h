@@ -23,13 +23,13 @@
 #include <QObject>
 #include "libkmaillanguagetool_export.h"
 class QNetworkAccessManager;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguagetoolManager : public QObject
+class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolManager : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolManager(QObject *parent = nullptr);
-    ~LanguagetoolManager();
-    static LanguagetoolManager *self();
+    explicit LanguageToolManager(QObject *parent = nullptr);
+    ~LanguageToolManager();
+    static LanguageToolManager *self();
 
     QNetworkAccessManager *networkAccessManager() const;
 

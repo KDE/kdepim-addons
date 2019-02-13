@@ -22,12 +22,12 @@
 
 #include <QObject>
 
-class LanguagetoolGrammarErrorTest : public QObject
+class LanguageToolGrammarErrorTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolGrammarErrorTest(QObject *parent = nullptr);
-    ~LanguagetoolGrammarErrorTest() = default;
+    explicit LanguageToolGrammarErrorTest(QObject *parent = nullptr);
+    ~LanguageToolGrammarErrorTest() = default;
 };
 
 #endif // LANGUAGETOOLGRAMMARERRORTEST_H

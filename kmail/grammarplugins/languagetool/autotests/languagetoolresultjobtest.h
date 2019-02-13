@@ -22,12 +22,12 @@
 
 #include <QObject>
 
-class LanguagetoolResultJobTest : public QObject
+class LanguageToolResultJobTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolResultJobTest(QObject *parent = nullptr);
-    ~LanguagetoolResultJobTest() = default;
+    explicit LanguageToolResultJobTest(QObject *parent = nullptr);
+    ~LanguageToolResultJobTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();

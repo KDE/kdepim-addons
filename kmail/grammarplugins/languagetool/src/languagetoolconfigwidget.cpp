@@ -30,7 +30,7 @@
 #include <QVariant>
 
 #include <KUrlRequester>
-LanguagetoolConfigWidget::LanguagetoolConfigWidget(QWidget *parent, bool disableMessageBox)
+LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent, bool disableMessageBox)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -38,15 +38,15 @@ LanguagetoolConfigWidget::LanguagetoolConfigWidget(QWidget *parent, bool disable
     mainLayout->setMargin(0);
 }
 
-LanguagetoolConfigWidget::~LanguagetoolConfigWidget()
+LanguageToolConfigWidget::~LanguageToolConfigWidget()
 {
     saveSettings();
 }
 
-void LanguagetoolConfigWidget::loadSettings()
+void LanguageToolConfigWidget::loadSettings()
 {
 }
 
-void LanguagetoolConfigWidget::saveSettings()
+void LanguageToolConfigWidget::saveSettings()
 {
 }

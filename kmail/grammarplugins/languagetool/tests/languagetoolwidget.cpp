@@ -31,7 +31,7 @@
 #include <QNetworkAccessManager>
 #include "languagetoolresultwidget.h"
 
-LanguagetoolWidget::LanguagetoolWidget(QWidget *parent)
+LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     : QWidget(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
@@ -43,19 +43,19 @@ LanguagetoolWidget::LanguagetoolWidget(QWidget *parent)
     mInput = new QTextEdit(this);
     mainLayout->addWidget(mInput);
 
-    mResultWidget = new LanguagetoolResultWidget(this);
+    mResultWidget = new LanguageToolResultWidget(this);
     mainLayout->addWidget(mResultWidget);
-    connect(mResultWidget, &LanguagetoolResultWidget::replaceText, this, &LanguagetoolWidget::slotReplaceText);
+    connect(mResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolWidget::slotReplaceText);
 
-    connect(button, &QPushButton::clicked, this, &LanguagetoolWidget::slotCheckGrammar);
+    connect(button, &QPushButton::clicked, this, &LanguageToolWidget::slotCheckGrammar);
 }
 
-LanguagetoolWidget::~LanguagetoolWidget()
+LanguageToolWidget::~LanguageToolWidget()
 {
 }
 
 
-void LanguagetoolWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
+void LanguageToolWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {
     QTextBlock block = mInput->document()->findBlockByNumber(act.blockId() - 1);
     if (block.isValid()) {
@@ -67,24 +67,24 @@ void LanguagetoolWidget::slotReplaceText(const MessageComposer::PluginGrammarAct
     }
 }
 
-void LanguagetoolWidget::slotCheckGrammar()
+void LanguageToolWidget::slotCheckGrammar()
 {
-    LanguagetoolResultJob *job = new LanguagetoolResultJob(this);
+    LanguageToolResultJob *job = new LanguageToolResultJob(this);
     job->setUrl(QStringLiteral("https://languagetool.org/api/v2/check"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     job->setText(mInput->toPlainText());
     job->setLanguage(QStringLiteral("en"));
-    connect(job, &LanguagetoolResultJob::finished, this, &LanguagetoolWidget::slotResultFinished);
-    connect(job, &LanguagetoolResultJob::error, this, &LanguagetoolWidget::slotError);
+    connect(job, &LanguageToolResultJob::finished, this, &LanguageToolWidget::slotResultFinished);
+    connect(job, &LanguageToolResultJob::error, this, &LanguageToolWidget::slotError);
     job->start();
 }
 
-void LanguagetoolWidget::slotError()
+void LanguageToolWidget::slotError()
 {
     qDebug() << " error !!!!";
 }
 
-void LanguagetoolWidget::slotResultFinished(const QString &result)
+void LanguageToolWidget::slotResultFinished(const QString &result)
 {
     qDebug() << " result" << result;
     mResultWidget->setText(mInput->toPlainText());

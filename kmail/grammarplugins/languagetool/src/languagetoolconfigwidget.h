@@ -24,16 +24,16 @@
 #include "libkmaillanguagetool_export.h"
 class QCheckBox;
 class KUrlRequester;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguagetoolConfigWidget : public QWidget
+class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolConfigWidget(QWidget *parent = nullptr, bool disableMessageBox = false);
-    ~LanguagetoolConfigWidget();
+    explicit LanguageToolConfigWidget(QWidget *parent = nullptr, bool disableMessageBox = false);
+    ~LanguageToolConfigWidget();
     void loadSettings();
     void saveSettings();
 private:
-    Q_DISABLE_COPY(LanguagetoolConfigWidget)
+    Q_DISABLE_COPY(LanguageToolConfigWidget)
 };
 
 #endif // LANGUAGETOOLCONFIGWIDGET_H

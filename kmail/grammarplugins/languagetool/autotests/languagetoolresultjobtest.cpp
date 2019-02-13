@@ -21,16 +21,16 @@
 #include "languagetoolresultjobtest.h"
 #include "languagetoolresultjob.h"
 #include <QTest>
-QTEST_MAIN(LanguagetoolResultJobTest)
-LanguagetoolResultJobTest::LanguagetoolResultJobTest(QObject *parent)
+QTEST_MAIN(LanguageToolResultJobTest)
+LanguageToolResultJobTest::LanguageToolResultJobTest(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-void LanguagetoolResultJobTest::shouldHaveDefaultValue()
+void LanguageToolResultJobTest::shouldHaveDefaultValue()
 {
-   LanguagetoolResultJob job;
+   LanguageToolResultJob job;
    QVERIFY(!job.networkAccessManager());
    QVERIFY(job.arguments().isEmpty());
    QVERIFY(!job.canStart());
@@ -39,9 +39,9 @@ void LanguagetoolResultJobTest::shouldHaveDefaultValue()
    QVERIFY(job.language().isEmpty());
 }
 
-void LanguagetoolResultJobTest::shouldBeAbleToStart()
+void LanguageToolResultJobTest::shouldBeAbleToStart()
 {
-    LanguagetoolResultJob job;
+    LanguageToolResultJob job;
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("foo"));
     QVERIFY(!job.canStart());

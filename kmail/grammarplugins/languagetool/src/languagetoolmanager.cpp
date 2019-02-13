@@ -23,59 +23,59 @@
 #include <KSharedConfig>
 #include <QNetworkAccessManager>
 
-LanguagetoolManager::LanguagetoolManager(QObject *parent)
+LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
     loadSettings();
 }
 
-LanguagetoolManager::~LanguagetoolManager()
+LanguageToolManager::~LanguageToolManager()
 {
 
 }
 
-LanguagetoolManager *LanguagetoolManager::self()
+LanguageToolManager *LanguageToolManager::self()
 {
-    static LanguagetoolManager s_self;
+    static LanguageToolManager s_self;
     return &s_self;
 }
 
-QNetworkAccessManager *LanguagetoolManager::networkAccessManager() const
+QNetworkAccessManager *LanguageToolManager::networkAccessManager() const
 {
     return mNetworkAccessManager;
 }
 
-QString LanguagetoolManager::languageToolPath() const
+QString LanguageToolManager::languageToolPath() const
 {
     return mLanguageToolPath;
 }
 
-void LanguagetoolManager::setLanguageToolPath(const QString &path)
+void LanguageToolManager::setLanguageToolPath(const QString &path)
 {
     mLanguageToolPath = path;
 }
 
-void LanguagetoolManager::loadSettings()
+void LanguageToolManager::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
     mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2/check"));
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
 }
 
-void LanguagetoolManager::saveSettings()
+void LanguageToolManager::saveSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
     grp.writeEntry(QStringLiteral("languagetoolpath"), mLanguageToolPath);
     grp.writeEntry(QStringLiteral("language"), mLanguage);
 }
 
-QString LanguagetoolManager::language() const
+QString LanguageToolManager::language() const
 {
     return mLanguage;
 }
 
-void LanguagetoolManager::setLanguage(const QString &language)
+void LanguageToolManager::setLanguage(const QString &language)
 {
     mLanguage = language;
 }

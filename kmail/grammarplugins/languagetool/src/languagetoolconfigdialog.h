@@ -21,18 +21,18 @@
 #define LANGUAGETOOLCONFIGDIALOG_H
 #include <QDialog>
 #include "libkmaillanguagetool_export.h"
-class LanguagetoolConfigWidget;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguagetoolConfigDialog : public QDialog
+class LanguageToolConfigWidget;
+class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
-    ~LanguagetoolConfigDialog();
+    explicit LanguageToolConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
+    ~LanguageToolConfigDialog();
 private:
-    Q_DISABLE_COPY(LanguagetoolConfigDialog)
+    Q_DISABLE_COPY(LanguageToolConfigDialog)
     void writeConfig();
     void readConfig();
-    LanguagetoolConfigWidget *mConfigWidget = nullptr;
+    LanguageToolConfigWidget *mConfigWidget = nullptr;
 };
 
 #endif // LANGUAGETOOLCONFIGDIALOG_H

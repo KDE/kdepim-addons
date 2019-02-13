@@ -21,13 +21,13 @@
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
-class LanguagetoolResultWidget;
-class LanguagetoolInterface : public MessageComposer::PluginEditorGrammarCustomToolsViewInterface
+class LanguageToolResultWidget;
+class LanguageToolInterface : public MessageComposer::PluginEditorGrammarCustomToolsViewInterface
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolInterface(KActionCollection *ac, QWidget *parent = nullptr);
-    ~LanguagetoolInterface() override;
+    explicit LanguageToolInterface(KActionCollection *ac, QWidget *parent = nullptr);
+    ~LanguageToolInterface() override;
 
     KToggleAction *action() const override;
 
@@ -36,7 +36,7 @@ private:
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void checkAgain();
-    LanguagetoolResultWidget *mGrammarResultWidget = nullptr;
+    LanguageToolResultWidget *mGrammarResultWidget = nullptr;
     KToggleAction *mAction = nullptr;
 };
 

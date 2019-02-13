@@ -21,17 +21,17 @@
 
 #include <QJsonArray>
 
-LanguagetoolGrammarError::LanguagetoolGrammarError()
+LanguageToolGrammarError::LanguageToolGrammarError()
 {
 
 }
 
-LanguagetoolGrammarError::~LanguagetoolGrammarError()
+LanguageToolGrammarError::~LanguageToolGrammarError()
 {
 
 }
 
-void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
+void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
     //We use block id index based on 1 in API
     mBlockId = blockindex + 1;
@@ -51,7 +51,7 @@ void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 }
 
 
-QStringList LanguagetoolGrammarError::parseSuggestion(const QJsonObject &obj)
+QStringList LanguageToolGrammarError::parseSuggestion(const QJsonObject &obj)
 {
     QStringList lst;
     const QJsonArray array = obj[QStringLiteral("replacements")].toArray();

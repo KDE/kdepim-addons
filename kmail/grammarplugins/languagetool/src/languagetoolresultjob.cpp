@@ -23,13 +23,13 @@
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
 
-LanguagetoolResultJob::LanguagetoolResultJob(QObject *parent)
+LanguageToolResultJob::LanguageToolResultJob(QObject *parent)
     : QObject(parent)
 {
 
 }
 
-LanguagetoolResultJob::~LanguagetoolResultJob()
+LanguageToolResultJob::~LanguageToolResultJob()
 {
 
 }
@@ -45,7 +45,7 @@ static bool hasNotEmptyText(const QString &text)
 }
 
 
-bool LanguagetoolResultJob::canStart() const
+bool LanguageToolResultJob::canStart() const
 {
     if (!mNetworkAccessManager || !hasNotEmptyText(mText) || mUrl.isEmpty() || mLanguage.isEmpty()) {
         return false;
@@ -53,7 +53,7 @@ bool LanguagetoolResultJob::canStart() const
     return true;
 }
 
-void LanguagetoolResultJob::start()
+void LanguageToolResultJob::start()
 {
     if (!canStart()) {
         qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start language tool";
@@ -63,10 +63,10 @@ void LanguagetoolResultJob::start()
     addRequestAttribute(request);
     const QByteArray ba = "text=" + mText.toUtf8() + "&language=" + mLanguage.toLatin1();
     QNetworkReply *reply = mNetworkAccessManager->post(request, ba);
-    connect(reply, &QNetworkReply::finished, this, &LanguagetoolResultJob::slotCheckGrammarFinished);
+    connect(reply, &QNetworkReply::finished, this, &LanguageToolResultJob::slotCheckGrammarFinished);
 }
 
-void LanguagetoolResultJob::slotCheckGrammarFinished()
+void LanguageToolResultJob::slotCheckGrammarFinished()
 {
     QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
     if (reply) {
@@ -76,57 +76,57 @@ void LanguagetoolResultJob::slotCheckGrammarFinished()
     deleteLater();
 }
 
-void LanguagetoolResultJob::addRequestAttribute(QNetworkRequest &request) const
+void LanguageToolResultJob::addRequestAttribute(QNetworkRequest &request) const
 {
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
 }
 
-QString LanguagetoolResultJob::language() const
+QString LanguageToolResultJob::language() const
 {
     return mLanguage;
 }
 
-void LanguagetoolResultJob::setLanguage(const QString &language)
+void LanguageToolResultJob::setLanguage(const QString &language)
 {
     mLanguage = language;
 }
 
-QString LanguagetoolResultJob::url() const
+QString LanguageToolResultJob::url() const
 {
     return mUrl;
 }
 
-void LanguagetoolResultJob::setUrl(const QString &url)
+void LanguageToolResultJob::setUrl(const QString &url)
 {
     mUrl = url;
 }
 
-QStringList LanguagetoolResultJob::arguments() const
+QStringList LanguageToolResultJob::arguments() const
 {
     return mArguments;
 }
 
-void LanguagetoolResultJob::setArguments(const QStringList &arguments)
+void LanguageToolResultJob::setArguments(const QStringList &arguments)
 {
     mArguments = arguments;
 }
 
-QNetworkAccessManager *LanguagetoolResultJob::networkAccessManager() const
+QNetworkAccessManager *LanguageToolResultJob::networkAccessManager() const
 {
     return mNetworkAccessManager;
 }
 
-void LanguagetoolResultJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
+void LanguageToolResultJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 {
     mNetworkAccessManager = networkAccessManager;
 }
 
-QString LanguagetoolResultJob::text() const
+QString LanguageToolResultJob::text() const
 {
     return mText;
 }
 
-void LanguagetoolResultJob::setText(const QString &text)
+void LanguageToolResultJob::setText(const QString &text)
 {
     mText = text;
 }

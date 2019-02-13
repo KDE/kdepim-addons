@@ -27,7 +27,7 @@ int main(int argc, char **argv)
     QApplication app(argc, argv);
     QStandardPaths::setTestModeEnabled(true);
 
-    LanguagetoolWidget w;
+    LanguageToolWidget w;
     w.show();
     app.exec();
     return 0;

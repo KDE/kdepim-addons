@@ -27,41 +27,41 @@
 
 #include <QPointer>
 
-K_PLUGIN_CLASS_WITH_JSON(LanguagetoolPlugin, "kmail_languagetoolplugin.json")
-LanguagetoolPlugin::LanguagetoolPlugin(QObject *parent, const QList<QVariant> &)
+K_PLUGIN_CLASS_WITH_JSON(LanguageToolPlugin, "kmail_languagetoolplugin.json")
+LanguageToolPlugin::LanguageToolPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)
 {
 }
 
-LanguagetoolPlugin::~LanguagetoolPlugin()
+LanguageToolPlugin::~LanguageToolPlugin()
 {
 }
 
-PimCommon::CustomToolsViewInterface *LanguagetoolPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
+PimCommon::CustomToolsViewInterface *LanguageToolPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    LanguagetoolInterface *view = new LanguagetoolInterface(ac, parent);
+    LanguageToolInterface *view = new LanguageToolInterface(ac, parent);
 
-    connect(view, &LanguagetoolInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
-    connect(view, &LanguagetoolInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
-    connect(view, &LanguagetoolInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
+    connect(view, &LanguageToolInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
+    connect(view, &LanguageToolInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
+    connect(view, &LanguageToolInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
     return view;
 }
 
-QString LanguagetoolPlugin::customToolName() const
+QString LanguageToolPlugin::customToolName() const
 {
-    return i18n("Languagetool Plugin");
+    return i18n("LanguageTool Plugin");
 }
 
-bool LanguagetoolPlugin::hasConfigureDialog() const
+bool LanguageToolPlugin::hasConfigureDialog() const
 {
     return true;
 }
 
-void LanguagetoolPlugin::showConfigureDialog(QWidget *parent)
+void LanguageToolPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<LanguagetoolConfigDialog> dlg = new LanguagetoolConfigDialog(parent);
+    QPointer<LanguageToolConfigDialog> dlg = new LanguageToolConfigDialog(parent);
     if (dlg->exec()) {
-        LanguagetoolManager::self()->loadSettings();
+        LanguageToolManager::self()->loadSettings();
     }
     delete dlg;
 }

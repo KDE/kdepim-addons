@@ -21,12 +21,12 @@
 
 #include <QObject>
 
-class LanguagetoolResultWidgetTest : public QObject
+class LanguageToolResultWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguagetoolResultWidgetTest(QObject *parent = nullptr);
-    ~LanguagetoolResultWidgetTest() = default;
+    explicit LanguageToolResultWidgetTest(QObject *parent = nullptr);
+    ~LanguageToolResultWidgetTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
