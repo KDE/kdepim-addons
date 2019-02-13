@@ -33,6 +33,8 @@ LanguagetoolGrammarError::~LanguagetoolGrammarError()
 
 void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
+    //TODO
+    mBlockId = blockindex + 1;
     mError = obj[QStringLiteral("message")].toString();
     mStart = obj[QStringLiteral("offset")].toInt(-1);
     mLength = obj[QStringLiteral("length")].toInt(-1);
@@ -41,7 +43,7 @@ void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
     mColor = QColor(Qt::red);
     const QJsonArray urlArray = obj[QStringLiteral("urls")].toArray();
     if (!urlArray.isEmpty()) {
-        mUrl = urlArray.at(0)[QLatin1String("value")].toString();
+        mUrl = urlArray.at(0)[QLatin1String("urls")].toString();
     }
     //TODO ???
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
@@ -53,10 +55,12 @@ QStringList LanguagetoolGrammarError::parseSuggestion(const QJsonObject &obj)
 {
     QStringList lst;
     const QJsonArray array = obj[QStringLiteral("replacements")].toArray();
-    const QVariantList list = array.toVariantList();
-    for (const QVariant &v : list) {
-        //qDebug() << " v" << v.toString();
-        lst.append(v.toString());
+    for (const QJsonValue &current : array) {
+        if (current.type() == QJsonValue::Object) {
+            const QJsonObject suggestionObject = current.toObject();
+            lst.append(suggestionObject[QLatin1String("value")].toString());
+        }
     }
+    //qDebug() << " lst : " << lst;
     return lst;
 }
