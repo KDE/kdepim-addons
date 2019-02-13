@@ -18,10 +18,17 @@
 */
 
 #include "languagetoolcomboboxtest.h"
+#include "languagetoolcombobox.h"
 #include <QTest>
 QTEST_MAIN(LanguageToolComboBoxTest)
 LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void LanguageToolComboBoxTest::shouldHaveDefaultValue()
+{
+    LanguageToolComboBox w;
+    QCOMPARE(w.count(), 0);
 }

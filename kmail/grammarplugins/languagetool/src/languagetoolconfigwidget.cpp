@@ -19,15 +19,16 @@
 
 #include "languagetoolconfigwidget.h"
 
-#include <KMessageBox>
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
 #include <QCheckBox>
+#include <QLineEdit>
+#include <QLabel>
 #include <QVariant>
 
 #include <KUrlRequester>
-LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent, bool disableMessageBox)
+LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
@@ -37,6 +38,21 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent, bool disable
     mUseLocalInstance = new QCheckBox(i18n("Use Local Instance"), this);
     mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
     mainLayout->addWidget(mUseLocalInstance);
+
+    QLabel *instancePathLabel = new QLabel(i18n("Instance Path:"), this);
+    instancePathLabel->setObjectName(QStringLiteral("instancepath"));
+    instancePathLabel->setEnabled(false);
+    mainLayout->addWidget(instancePathLabel);
+
+    mInstancePath = new QLineEdit(this);
+    mInstancePath->setObjectName(QStringLiteral("instancepath"));
+    mInstancePath->setEnabled(false);
+    mainLayout->addWidget(mInstancePath);
+
+    connect(mUseLocalInstance, &QCheckBox::clicked, this, [this, instancePathLabel](bool b) {
+        instancePathLabel->setEnabled(b);
+        mInstancePath->setEnabled(b);}
+    );
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()

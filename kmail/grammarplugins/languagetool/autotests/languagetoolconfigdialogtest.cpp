@@ -33,7 +33,7 @@ LanguageToolConfigDialogTest::LanguageToolConfigDialogTest(QObject *parent)
 
 void LanguageToolConfigDialogTest::shouldHaveDefaultValue()
 {
-    LanguageToolConfigDialog w(nullptr, true);
+    LanguageToolConfigDialog w(nullptr);
     QVERIFY(!w.windowTitle().isEmpty());
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));

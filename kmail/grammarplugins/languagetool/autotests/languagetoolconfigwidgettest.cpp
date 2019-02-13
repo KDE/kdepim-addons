@@ -20,6 +20,8 @@
 #include "languagetoolconfigwidgettest.h"
 #include "languagetoolconfigwidget.h"
 #include <QCheckBox>
+#include <QLabel>
+#include <QLineEdit>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(LanguageToolConfigWidgetTest)
@@ -40,4 +42,15 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QCheckBox *mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
     QVERIFY(mUseLocalInstance);
     QVERIFY(!mUseLocalInstance->text().isEmpty());
+    QVERIFY(!mUseLocalInstance->isChecked());
+
+    QLabel *instancePathLabel = w.findChild<QLabel *>(QStringLiteral("instancepath"));
+    QVERIFY(instancePathLabel);
+    QVERIFY(!instancePathLabel->text().isEmpty());
+    QVERIFY(!instancePathLabel->isEnabled());
+
+    QLineEdit *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
+    QVERIFY(mInstancePath);
+    QVERIFY(mInstancePath->text().isEmpty());
+    QVERIFY(!mInstancePath->isEnabled());
 }

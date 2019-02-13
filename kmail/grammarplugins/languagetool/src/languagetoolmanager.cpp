@@ -61,6 +61,7 @@ void LanguageToolManager::loadSettings()
     KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
     mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2/check"));
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
+    //TODO add options ?
 }
 
 void LanguageToolManager::saveSettings()

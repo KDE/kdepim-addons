@@ -38,7 +38,7 @@ QVector<GrammarError> LanguageToolParser::parseResult(const QJsonObject &obj) co
     QVector<GrammarError> infos;
     const QJsonArray array = obj.value(QLatin1String("matches")).toArray();
     for (const QJsonValue &current : array) {
-        qDebug() << " current " << current;
+        //qDebug() << " current " << current;
         if (current.type() == QJsonValue::Object) {
             const QJsonObject languageToolObject = current.toObject();
             LanguageToolGrammarError error;

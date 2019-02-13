@@ -23,18 +23,19 @@
 #include <QWidget>
 #include "libkmaillanguagetool_export.h"
 class QCheckBox;
-class KUrlRequester;
+class QLineEdit;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit LanguageToolConfigWidget(QWidget *parent = nullptr, bool disableMessageBox = false);
+    explicit LanguageToolConfigWidget(QWidget *parent = nullptr);
     ~LanguageToolConfigWidget();
     void loadSettings();
     void saveSettings();
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     QCheckBox *mUseLocalInstance = nullptr;
+    QLineEdit *mInstancePath = nullptr;
 };
 
 #endif // LANGUAGETOOLCONFIGWIDGET_H

@@ -28,6 +28,9 @@ class LanguageToolGrammarErrorTest : public QObject
 public:
     explicit LanguageToolGrammarErrorTest(QObject *parent = nullptr);
     ~LanguageToolGrammarErrorTest() = default;
+private Q_SLOTS:
+    void shouldParseJson_data();
+    void shouldParseJson();
 };
 
 #endif // LANGUAGETOOLGRAMMARERRORTEST_H

@@ -22,3 +22,9 @@ target_link_libraries(kmaillanguagetool
     KF5::MessageComposer
     grammarcommon
 )
+
+set_target_properties(kmaillanguagetool
+    PROPERTIES OUTPUT_NAME kmaillanguagetool VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+    )
+
+install(TARGETS kmaillanguagetool ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)

@@ -28,6 +28,8 @@ class LanguageToolComboBoxTest : public QObject
 public:
     explicit LanguageToolComboBoxTest(QObject *parent = nullptr);
     ~LanguageToolComboBoxTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValue();
 };
 
 #endif // LANGUAGETOOLCOMBOBOXTEST_H

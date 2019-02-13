@@ -25,3 +25,13 @@ LanguageToolGrammarErrorTest::LanguageToolGrammarErrorTest(QObject *parent)
     : QObject(parent)
 {
 }
+
+void LanguageToolGrammarErrorTest::shouldParseJson_data()
+{
+    //TODO
+}
+
+void LanguageToolGrammarErrorTest::shouldParseJson()
+{
+    //TODO
+}

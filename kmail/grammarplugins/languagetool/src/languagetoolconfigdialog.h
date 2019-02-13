@@ -26,7 +26,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit LanguageToolConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
+    explicit LanguageToolConfigDialog(QWidget *parent = nullptr);
     ~LanguageToolConfigDialog();
 private:
     Q_DISABLE_COPY(LanguageToolConfigDialog)
