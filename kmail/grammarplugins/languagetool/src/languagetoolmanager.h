@@ -42,10 +42,14 @@ public:
     Q_REQUIRED_RESULT QString language() const;
     void setLanguage(const QString &language);
 
+    Q_REQUIRED_RESULT bool useLocalInstance() const;
+    void setUseLocalInstance(bool useLocalInstance);
+
 private:
     QString mLanguage;
     QString mLanguageToolPath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    bool mUseLocalInstance = false;
 };
 
 #endif // LANGUAGETOOLMANAGER_H

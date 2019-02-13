@@ -80,3 +80,13 @@ void LanguageToolManager::setLanguage(const QString &language)
 {
     mLanguage = language;
 }
+
+bool LanguageToolManager::useLocalInstance() const
+{
+    return mUseLocalInstance;
+}
+
+void LanguageToolManager::setUseLocalInstance(bool useLocalInstance)
+{
+    mUseLocalInstance = useLocalInstance;
+}
