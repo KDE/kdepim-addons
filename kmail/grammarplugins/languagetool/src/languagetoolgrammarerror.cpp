@@ -33,7 +33,7 @@ LanguagetoolGrammarError::~LanguagetoolGrammarError()
 
 void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    //TODO
+    //We use block id index based on 1 in API
     mBlockId = blockindex + 1;
     mError = obj[QStringLiteral("message")].toString();
     mStart = obj[QStringLiteral("offset")].toInt(-1);

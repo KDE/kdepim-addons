@@ -19,13 +19,15 @@
 
 #include "languagetoolmanager.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QNetworkAccessManager>
 
 LanguagetoolManager::LanguagetoolManager(QObject *parent)
     : QObject(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
-
+    loadSettings();
 }
 
 LanguagetoolManager::~LanguagetoolManager()
@@ -46,17 +48,26 @@ QNetworkAccessManager *LanguagetoolManager::networkAccessManager() const
 
 QString LanguagetoolManager::languageToolPath() const
 {
-    return QStringLiteral("https://languagetool.org/api/v2/check");
+    return mLanguageToolPath;
+}
+
+void LanguagetoolManager::setLanguageToolPath(const QString &path)
+{
+    mLanguageToolPath = path;
 }
 
 void LanguagetoolManager::loadSettings()
 {
-    //TODO
+    KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
+    mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2/check"));
+    mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
 }
 
 void LanguagetoolManager::saveSettings()
 {
-    //TODO
+    KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
+    grp.writeEntry(QStringLiteral("languagetoolpath"), mLanguageToolPath);
+    grp.writeEntry(QStringLiteral("language"), mLanguage);
 }
 
 QString LanguagetoolManager::language() const

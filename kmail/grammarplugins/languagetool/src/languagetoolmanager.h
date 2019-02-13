@@ -32,7 +32,9 @@ public:
     static LanguagetoolManager *self();
 
     QNetworkAccessManager *networkAccessManager() const;
+
     Q_REQUIRED_RESULT QString languageToolPath() const;
+    void setLanguageToolPath(const QString &path);
 
     void loadSettings();
     void saveSettings();
@@ -42,6 +44,7 @@ public:
 
 private:
     QString mLanguage;
+    QString mLanguageToolPath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 

@@ -73,7 +73,7 @@ void LanguagetoolWidget::slotCheckGrammar()
     job->setUrl(QStringLiteral("https://languagetool.org/api/v2/check"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     job->setText(mInput->toPlainText());
-    job->setLanguage(QStringLiteral("fr"));
+    job->setLanguage(QStringLiteral("en"));
     connect(job, &LanguagetoolResultJob::finished, this, &LanguagetoolWidget::slotResultFinished);
     connect(job, &LanguagetoolResultJob::error, this, &LanguagetoolWidget::slotError);
     job->start();
