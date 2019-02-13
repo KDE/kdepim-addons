@@ -37,7 +37,11 @@ public:
     void loadSettings();
     void saveSettings();
 
+    Q_REQUIRED_RESULT QString language() const;
+    void setLanguage(const QString &language);
+
 private:
+    QString mLanguage;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 

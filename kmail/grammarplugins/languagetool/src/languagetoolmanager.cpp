@@ -58,3 +58,13 @@ void LanguagetoolManager::saveSettings()
 {
     //TODO
 }
+
+QString LanguagetoolManager::language() const
+{
+    return mLanguage;
+}
+
+void LanguagetoolManager::setLanguage(const QString &language)
+{
+    mLanguage = language;
+}

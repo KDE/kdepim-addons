@@ -43,6 +43,7 @@ void GrammalecteResultWidget::checkGrammar()
     job->setArguments(GrammalecteManager::self()->options());
     job->setText(mResult->toPlainText());
     connect(job, &GrammalecteResultJob::finished, this, &GrammalecteResultWidget::slotCheckGrammarFinished);
+    connect(job, &GrammalecteResultJob::error, this, &GrammalecteResultWidget::slotError);
     job->start();
 }
 
@@ -54,3 +55,7 @@ void GrammalecteResultWidget::slotCheckGrammarFinished(const QString &result)
     applyGrammarResult(parser.parseResult(fields));
 }
 
+void GrammalecteResultWidget::slotError()
+{
+    //TODO
+}

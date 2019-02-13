@@ -36,6 +36,7 @@ public:
     void checkGrammar() override;
 private:
     void slotCheckGrammarFinished(const QString &result);
+    void slotError();
 };
 
 #endif // GRAMMALECTERESULTWIDGET_H

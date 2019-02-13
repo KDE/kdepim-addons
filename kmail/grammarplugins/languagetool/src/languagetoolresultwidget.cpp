@@ -20,6 +20,7 @@
 #include "grammarresulttextedit.h"
 #include "languagetoolresultwidget.h"
 #include "languagetoolparser.h"
+#include "languagetoolmanager.h"
 #include "languagetoolresultjob.h"
 #include <QJsonDocument>
 #include <QTextEdit>
@@ -35,13 +36,25 @@ LanguagetoolResultWidget::~LanguagetoolResultWidget()
 
 void LanguagetoolResultWidget::checkGrammar()
 {
+    LanguagetoolResultJob *job = new LanguagetoolResultJob(this);
+    job->setUrl(LanguagetoolManager::self()->languageToolPath());
+    job->setNetworkAccessManager(LanguagetoolManager::self()->networkAccessManager());
+    job->setText(mResult->toPlainText());
+    job->setLanguage(LanguagetoolManager::self()->language());
+    connect(job, &LanguagetoolResultJob::finished, this, &LanguagetoolResultWidget::slotCheckGrammarFinished);
+    connect(job, &LanguagetoolResultJob::error, this, &LanguagetoolResultWidget::slotError);
+    job->start();
 }
 
 void LanguagetoolResultWidget::slotCheckGrammarFinished(const QString &result)
 {
-//    GrammalecteParser parser;
-//    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
-//    const QJsonObject fields = doc.object();
-//    applyGrammarResult(parser.parseResult(fields));
+    LanguageToolParser parser;
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonObject fields = doc.object();
+    applyGrammarResult(parser.parseResult(fields));
 }
 
+void LanguagetoolResultWidget::slotError()
+{
+    //TODO
+}
