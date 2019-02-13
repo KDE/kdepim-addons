@@ -1,9 +1,17 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check grammar using LanguageTool.",
+        "Description[uk]": "За допомогою цього додатка можна перевіряти граматику за допомогою LanguageTool.",
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",
+        "Name[ca]": "Comprova la gramàtica (LanguageTool)",
+        "Name[gl]": "Corrector gramatical (LanguageTool)",
+        "Name[nl]": "Grammaticacontrole (LanguageTool)",
+        "Name[pt]": "Verificação Gramatical (LanguageTool)",
+        "Name[sv]": "Grammatikkontroll (LanguageTool)",
+        "Name[uk]": "Перевірка граматики (LanguageTool)",
+        "Name[x-test]": "xxGrammar Checker (LanguageTool)xx",
         "ServiceTypes": [
             "KMailEditor/PluginEditorGrammar"
         ],
