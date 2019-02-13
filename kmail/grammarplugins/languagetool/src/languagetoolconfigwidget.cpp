@@ -23,10 +23,7 @@
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
-#include <QTabWidget>
 #include <QCheckBox>
-#include <QScrollArea>
-#include <QFormLayout>
 #include <QVariant>
 
 #include <KUrlRequester>
@@ -36,6 +33,10 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent, bool disable
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setMargin(0);
+
+    mUseLocalInstance = new QCheckBox(i18n("Use Local Instance"), this);
+    mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
+    mainLayout->addWidget(mUseLocalInstance);
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()

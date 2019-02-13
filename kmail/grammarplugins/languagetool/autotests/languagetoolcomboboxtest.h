@@ -17,27 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolconfigwidgettest.h"
-#include "languagetoolconfigwidget.h"
-#include <QCheckBox>
-#include <QTest>
-#include <QVBoxLayout>
-QTEST_MAIN(LanguageToolConfigWidgetTest)
-LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
-    : QObject(parent)
+#ifndef LANGUAGETOOLCOMBOBOXTEST_H
+#define LANGUAGETOOLCOMBOBOXTEST_H
+
+#include <QObject>
+
+class LanguageToolComboBoxTest : public QObject
 {
+    Q_OBJECT
+public:
+    explicit LanguageToolComboBoxTest(QObject *parent = nullptr);
+    ~LanguageToolComboBoxTest() = default;
+};
 
-}
-
-void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
-{
-    LanguageToolConfigWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
-
-
-    QCheckBox *mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
-    QVERIFY(mUseLocalInstance);
-    QVERIFY(!mUseLocalInstance->text().isEmpty());
-}
+#endif // LANGUAGETOOLCOMBOBOXTEST_H

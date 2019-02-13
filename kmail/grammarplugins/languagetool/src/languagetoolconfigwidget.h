@@ -34,6 +34,7 @@ public:
     void saveSettings();
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
+    QCheckBox *mUseLocalInstance = nullptr;
 };
 
 #endif // LANGUAGETOOLCONFIGWIDGET_H
