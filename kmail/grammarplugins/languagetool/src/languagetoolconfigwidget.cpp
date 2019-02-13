@@ -18,7 +18,7 @@
 */
 
 #include "languagetoolconfigwidget.h"
-
+#include "languagetoolmanager.h"
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
@@ -54,6 +54,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
         mInstancePath->setEnabled(b);}
     );
     mainLayout->addStretch(1);
+    loadSettings();
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()
@@ -63,8 +64,12 @@ LanguageToolConfigWidget::~LanguageToolConfigWidget()
 
 void LanguageToolConfigWidget::loadSettings()
 {
+    mUseLocalInstance->setChecked(LanguageToolManager::self()->useLocalInstance());
+    mInstancePath->setText(LanguageToolManager::self()->languageToolPath());
 }
 
 void LanguageToolConfigWidget::saveSettings()
 {
+    LanguageToolManager::self()->setUseLocalInstance(mUseLocalInstance->isChecked());
+    LanguageToolManager::self()->setLanguageToolPath(mInstancePath->text());
 }
