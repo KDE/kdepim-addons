@@ -53,6 +53,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
         instancePathLabel->setEnabled(b);
         mInstancePath->setEnabled(b);}
     );
+    mainLayout->addStretch(1);
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()
