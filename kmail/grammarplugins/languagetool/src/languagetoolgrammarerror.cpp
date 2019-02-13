@@ -39,10 +39,13 @@ void LanguagetoolGrammarError::parse(const QJsonObject &obj, int blockindex)
     mSuggestions = parseSuggestion(obj);
     //TODO generate specific color!
     mColor = QColor(Qt::red);
+    const QJsonArray urlArray = obj[QStringLiteral("urls")].toArray();
+    if (!urlArray.isEmpty()) {
+        mUrl = urlArray.at(0)[QLatin1String("value")].toString();
+    }
     //TODO ???
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
 //    mOption = obj[QStringLiteral("sType")].toString();
-//    mUrl = obj[QStringLiteral("URL")].toString();
 }
 
 

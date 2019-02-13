@@ -88,8 +88,8 @@ void LanguagetoolWidget::slotResultFinished(const QString &result)
 {
     qDebug() << " result" << result;
     mResultWidget->setText(mInput->toPlainText());
-//    LanguagetoolParser parser;
-//    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
-//    const QJsonObject fields = doc.object();
-//    mResultWidget->applyGrammarResult(parser.parseResult(fields));
+    LanguageToolParser parser;
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonObject fields = doc.object();
+    mResultWidget->applyGrammarResult(parser.parseResult(fields));
 }

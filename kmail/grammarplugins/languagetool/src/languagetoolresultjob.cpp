@@ -71,7 +71,7 @@ void LanguagetoolResultJob::slotCheckGrammarFinished()
     QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
     if (reply) {
         const QByteArray data = reply->readAll();
-        qDebug() << " data " << data;
+        Q_EMIT finished(QString::fromUtf8(data));
     }
     deleteLater();
 }
