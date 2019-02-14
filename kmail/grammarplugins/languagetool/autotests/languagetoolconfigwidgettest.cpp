@@ -25,12 +25,13 @@
 #include <QLineEdit>
 #include <QTest>
 #include <QVBoxLayout>
+#include <QStandardPaths>
 
 QTEST_MAIN(LanguageToolConfigWidgetTest)
 LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()

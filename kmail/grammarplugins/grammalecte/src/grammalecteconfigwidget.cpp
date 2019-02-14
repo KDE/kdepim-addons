@@ -72,7 +72,12 @@ void GrammalecteConfigWidget::slotGetSettingsError()
 
 void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
 {
+    mListOptions.clear();
     mListOptions.reserve(result.count());
+    delete mGrammarTabWidget->layout();
+    QVBoxLayout *layout = new QVBoxLayout(mGrammarTabWidget);
+    layout->setObjectName(QStringLiteral("grammartablayout"));
+
     for (const GrammalecteGenerateConfigOptionJob::Option &opt : result) {
         QCheckBox *box = new QCheckBox(opt.description, this);
         box->setProperty("optionname", opt.optionName);
