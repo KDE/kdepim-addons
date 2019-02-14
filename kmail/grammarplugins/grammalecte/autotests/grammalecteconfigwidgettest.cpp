@@ -25,6 +25,10 @@
 #include <QStandardPaths>
 #include <QFormLayout>
 #include <KUrlRequester>
+#include <QStackedWidget>
+#include <QScrollArea>
+#include <QLabel>
+#include <QToolButton>
 QTEST_MAIN(GrammalecteConfigWidgetTest)
 GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
     : QObject(parent)
@@ -50,51 +54,32 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
 
     KUrlRequester *mPythonPath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("pythonpath"));
     QVERIFY(mPythonPath);
-    QVERIFY(mPythonPath->text().isEmpty());
+    QVERIFY(!mPythonPath->text().isEmpty());
 
     KUrlRequester *mGrammalectePath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("grammalectepath"));
     QVERIFY(mGrammalectePath);
     QVERIFY(mGrammalectePath->text().isEmpty());
 
 
-#if 0
 
-    return w;
+    QStackedWidget *mStackedWidget = mTab->findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    QVERIFY(mStackedWidget);
+    QScrollArea *mScrollArea = mStackedWidget->findChild<QScrollArea *>(QStringLiteral("scrollarea"));
+    QVERIFY(mScrollArea);
+    QVERIFY(mScrollArea->widget());
+    QCOMPARE(mScrollArea->widget()->objectName(), QStringLiteral("grammar"));
 
+    QWidget *mReloadSettingsWidget = mStackedWidget->findChild<QWidget *>(QStringLiteral("reloadwidget"));
+    QVERIFY(mReloadSettingsWidget);
 
-    mStackedWidget = new QStackedWidget(this);
-    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    QVBoxLayout *reloadSettingsLayout = mReloadSettingsWidget->findChild<QVBoxLayout *>(QStringLiteral("reloadSettingsLayout"));
+    QVERIFY(reloadSettingsLayout);
 
-    mScrollArea = new QScrollArea(this);
-    mScrollArea->setObjectName(QStringLiteral("scrollarea"));
-    mScrollArea->setWidgetResizable(true);
-    mGrammarTabWidget = new QWidget;
-    mGrammarTabWidget->setObjectName(QStringLiteral("grammar"));
-    QVBoxLayout *layout = new QVBoxLayout(mGrammarTabWidget);
-    layout->setObjectName(QStringLiteral("grammartablayout"));
-    mScrollArea->setWidget(mGrammarTabWidget);
-
-    mStackedWidget->addWidget(mScrollArea);
-
-    mReloadSettingsWidget = new QWidget;
-    mReloadSettingsWidget->setObjectName(QStringLiteral("reloadwidget"));
-    mStackedWidget->addWidget(mReloadSettingsWidget);
-    QVBoxLayout *reloadSettingsLayout = new QVBoxLayout(mReloadSettingsWidget);
-    reloadSettingsLayout->setObjectName(QStringLiteral("reloadSettingsLayout"));
-    QHBoxLayout *horizontallayout = new QHBoxLayout;
-    reloadSettingsLayout->addLayout(horizontallayout);
-    QLabel *label = new QLabel(i18n("Reload Settings"), this);
-    label->setObjectName(QStringLiteral("label"));
-    horizontallayout->addWidget(label);
-
-    QToolButton *buttonReloadSettings = new QToolButton(this);
-    buttonReloadSettings->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
-    buttonReloadSettings->setObjectName(QStringLiteral("buttonReloadSettings"));
-    horizontallayout->addWidget(buttonReloadSettings);
-    connect(buttonReloadSettings, &QToolButton::clicked, this, &GrammalecteConfigWidget::loadGrammarSettings);
-
-    reloadSettingsLayout->addStretch(1);
-    return mStackedWidget;
-#endif
+    QLabel *label = mReloadSettingsWidget->findChild<QLabel *>(QStringLiteral("label"));
+    QVERIFY(label);
+    QVERIFY(!label->text().isEmpty());
+    QToolButton *buttonReloadSettings = mReloadSettingsWidget->findChild<QToolButton *>(QStringLiteral("buttonReloadSettings"));
+    QVERIFY(buttonReloadSettings);
+    QVERIFY(!buttonReloadSettings->icon().isNull());
 
 }
