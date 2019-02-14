@@ -103,6 +103,7 @@ void GrammalecteGenerateConfigOptionJob::slotFinished(int exitCode, QProcess::Ex
 {
     if (exitStatus != 0 || exitCode != 0) {
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "GrammalecteGenerateConfigOptionJob ERROR: " << mLastError;
+        Q_EMIT error();
     } else {
         Q_EMIT finished(parseResult());
     }

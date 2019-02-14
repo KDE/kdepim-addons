@@ -29,6 +29,9 @@
 #include <QScrollArea>
 #include <QFormLayout>
 #include <QVariant>
+#include <QStackedWidget>
+#include <QLabel>
+#include <QToolButton>
 
 #include <KUrlRequester>
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMessageBox)
@@ -65,6 +68,7 @@ void GrammalecteConfigWidget::loadGrammarSettings()
 
 void GrammalecteConfigWidget::slotGetSettingsError()
 {
+    mStackedWidget->setCurrentWidget(mReloadSettingsWidget);
     if (!mDisableDialogBox) {
         KMessageBox::error(this, i18n("Impossible to get options. Please verify that you have grammalected installed."), i18n("Error during Extracting Options"));
     }
@@ -72,6 +76,7 @@ void GrammalecteConfigWidget::slotGetSettingsError()
 
 void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result)
 {
+    mStackedWidget->setCurrentWidget(mScrollArea);
     mListOptions.clear();
     mListOptions.reserve(result.count());
     delete mGrammarTabWidget->layout();
@@ -93,14 +98,38 @@ void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteG
 
 QWidget *GrammalecteConfigWidget::addGrammarTab()
 {
-    QScrollArea *area = new QScrollArea(this);
-    area->setWidgetResizable(true);
+    mStackedWidget = new QStackedWidget(this);
+    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+
+    mScrollArea = new QScrollArea(this);
+    mScrollArea->setObjectName(QStringLiteral("scrollarea"));
+    mScrollArea->setWidgetResizable(true);
     mGrammarTabWidget = new QWidget;
     mGrammarTabWidget->setObjectName(QStringLiteral("grammar"));
     QVBoxLayout *layout = new QVBoxLayout(mGrammarTabWidget);
     layout->setObjectName(QStringLiteral("grammartablayout"));
-    area->setWidget(mGrammarTabWidget);
-    return area;
+    mScrollArea->setWidget(mGrammarTabWidget);
+
+    mStackedWidget->addWidget(mScrollArea);
+
+    mReloadSettingsWidget = new QWidget;
+    mReloadSettingsWidget->setObjectName(QStringLiteral("reloadwidget"));
+    mStackedWidget->addWidget(mReloadSettingsWidget);
+    QVBoxLayout *reloadSettingsLayout = new QVBoxLayout(mReloadSettingsWidget);
+    reloadSettingsLayout->setObjectName(QStringLiteral("reloadSettingsLayout"));
+    QHBoxLayout *horizontallayout = new QHBoxLayout;
+    reloadSettingsLayout->addLayout(horizontallayout);
+    QLabel *label = new QLabel(i18n("Reload Settings"), this);
+    label->setObjectName(QStringLiteral("label"));
+    horizontallayout->addWidget(label);
+
+    QToolButton *buttonReloadSettings = new QToolButton(this);
+    buttonReloadSettings->setObjectName(QStringLiteral("buttonReloadSettings"));
+    horizontallayout->addWidget(buttonReloadSettings);
+    connect(buttonReloadSettings, &QToolButton::clicked, this, &GrammalecteConfigWidget::loadGrammarSettings);
+
+    reloadSettingsLayout->addStretch(1);
+    return mStackedWidget;
 }
 
 QWidget *GrammalecteConfigWidget::addGeneralTab()

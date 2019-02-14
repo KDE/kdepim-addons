@@ -25,6 +25,8 @@
 #include "grammalectegenerateconfigoptionjob.h"
 class QCheckBox;
 class KUrlRequester;
+class QStackedWidget;
+class QScrollArea;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigWidget : public QWidget
 {
     Q_OBJECT
@@ -43,7 +45,10 @@ private:
     QList<QCheckBox *> mListOptions;
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
+    QStackedWidget *mStackedWidget = nullptr;
     QWidget *mGrammarTabWidget = nullptr;
+    QWidget *mReloadSettingsWidget = nullptr;
+    QScrollArea *mScrollArea = nullptr;
     KUrlRequester *mPythonPath = nullptr;
     KUrlRequester *mGrammalectePath = nullptr;
     bool mDisableDialogBox = false;
