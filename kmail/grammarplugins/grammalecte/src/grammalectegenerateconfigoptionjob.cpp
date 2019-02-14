@@ -121,6 +121,9 @@ QVector<GrammalecteGenerateConfigOptionJob::Option> GrammalecteGenerateConfigOpt
             const QString value = match.captured(2);
             const QString description = match.captured(3);
             if (!optionName.isEmpty() && !description.isEmpty() && !value.isEmpty()) {
+                if (description == QLatin1Char('?')) {
+                    continue;
+                }
                 GrammalecteGenerateConfigOptionJob::Option opt;
                 opt.description = description;
                 opt.optionName = optionName;
