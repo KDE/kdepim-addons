@@ -1,7 +1,13 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check grammar using LanguageTool.",
+        "Description[ca]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
+        "Description[gl]": "Este complemento permítelle corrixir a gramática usando LanguageTool.",
+        "Description[nl]": "Deze plugin stelt u in staat alleen de grammatica te controleren met LanguageTool.",
+        "Description[pt]": "Este 'plugin' permite-lhe verificar a gramática com o LanguageTool.",
+        "Description[sv]": "Insticksprogrammet låter dig kontrollera grammatik med användning av LanguageTool.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти граматику за допомогою LanguageTool.",
+        "Description[x-test]": "xxThis plugin allows you to check grammar using LanguageTool.xx",
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",
