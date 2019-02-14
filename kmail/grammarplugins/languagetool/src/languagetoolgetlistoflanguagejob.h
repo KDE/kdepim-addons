@@ -17,17 +17,20 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolcomboboxtest.h"
-#include "languagetoolcombobox.h"
-#include <QTest>
-QTEST_MAIN(LanguageToolComboBoxTest)
-LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
-    : QObject(parent)
-{
-}
+#ifndef LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
+#define LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
 
-void LanguageToolComboBoxTest::shouldHaveDefaultValue()
+#include <QObject>
+#include "libkmaillanguagetool_export.h"
+class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObject
 {
-    LanguageToolComboBox w;
-    QCOMPARE(w.count(), 30);
-}
+    Q_OBJECT
+public:
+    explicit LanguageToolGetListOfLanguageJob(QObject *parent = nullptr);
+    ~LanguageToolGetListOfLanguageJob();
+
+    Q_REQUIRED_RESULT bool canStart() const;
+    void start();
+};
+
+#endif // LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
