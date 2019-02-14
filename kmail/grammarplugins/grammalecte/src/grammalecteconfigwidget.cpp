@@ -124,6 +124,7 @@ QWidget *GrammalecteConfigWidget::addGrammarTab()
     horizontallayout->addWidget(label);
 
     QToolButton *buttonReloadSettings = new QToolButton(this);
+    buttonReloadSettings->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     buttonReloadSettings->setObjectName(QStringLiteral("buttonReloadSettings"));
     horizontallayout->addWidget(buttonReloadSettings);
     connect(buttonReloadSettings, &QToolButton::clicked, this, &GrammalecteConfigWidget::loadGrammarSettings);
