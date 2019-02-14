@@ -56,8 +56,8 @@ GrammalecteConfigWidget::~GrammalecteConfigWidget()
 void GrammalecteConfigWidget::loadGrammarSettings()
 {
     GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);
-    job->setPythonPath(GrammalecteManager::self()->pythonPath());
-    job->setGrammarlecteCliPath(GrammalecteManager::self()->grammalectePath());
+    job->setPythonPath(mPythonPath->text());
+    job->setGrammarlecteCliPath(mGrammalectePath->text());
     connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteConfigWidget::slotGetSettingsFinished);
     connect(job, &GrammalecteGenerateConfigOptionJob::error, this, &GrammalecteConfigWidget::slotGetSettingsError);
     job->start();
