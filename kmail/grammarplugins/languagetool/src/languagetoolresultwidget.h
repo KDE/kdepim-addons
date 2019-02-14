@@ -21,13 +21,13 @@
 #define LANGUAGETOOLRESULTWIDGET_H
 
 #include "grammarresultwidget.h"
-#include "liblanguagetool_private_export.h"
+#include "libkmaillanguagetool_export.h"
 #include "languagetoolgrammarerror.h"
 namespace MessageComposer {
 class PluginGrammarAction;
 }
 class GrammarResultTextEdit;
-class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultWidget : public GrammarResultWidget
+class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
 public:
