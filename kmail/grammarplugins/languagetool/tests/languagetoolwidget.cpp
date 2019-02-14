@@ -54,7 +54,6 @@ LanguageToolWidget::~LanguageToolWidget()
 {
 }
 
-
 void LanguageToolWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {
     QTextBlock block = mInput->document()->findBlockByNumber(act.blockId() - 1);

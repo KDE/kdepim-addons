@@ -93,11 +93,11 @@ void LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         if (!LanguageToolManager::self()->useLocalInstance()) {
-            if (KMessageBox::warningYesNo(parentWidget(), i18n("You do not use local instance. Your text will send on a external web site (https://languagetool.org/). Do you want to continue?")
-                                      , i18n("Check Grammar with LanguageTool"),
+            if (KMessageBox::warningYesNo(parentWidget(), i18n("You do not use local instance. Your text will send on a external web site (https://languagetool.org/). Do you want to continue?"),
+                                          i18n("Check Grammar with LanguageTool"),
                                           KStandardGuiItem::yes(),
                                           KStandardGuiItem::no(),
-                                          QStringLiteral("send_data_on_languagetool"))== KMessageBox::No) {
+                                          QStringLiteral("send_data_on_languagetool")) == KMessageBox::No) {
                 return;
             }
         }

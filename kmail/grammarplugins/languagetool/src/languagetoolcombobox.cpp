@@ -28,7 +28,6 @@ LanguageToolComboBox::LanguageToolComboBox(QWidget *parent)
 
 LanguageToolComboBox::~LanguageToolComboBox()
 {
-
 }
 
 void LanguageToolComboBox::fillComboBox()

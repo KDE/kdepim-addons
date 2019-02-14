@@ -23,12 +23,10 @@
 
 LanguageToolGrammarError::LanguageToolGrammarError()
 {
-
 }
 
 LanguageToolGrammarError::~LanguageToolGrammarError()
 {
-
 }
 
 void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
@@ -49,7 +47,6 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
 //    mOption = obj[QStringLiteral("sType")].toString();
 }
-
 
 QStringList LanguageToolGrammarError::parseSuggestion(const QJsonObject &obj)
 {

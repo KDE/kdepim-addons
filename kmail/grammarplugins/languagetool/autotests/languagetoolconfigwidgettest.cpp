@@ -41,7 +41,6 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
 
-
     QCheckBox *mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
     QVERIFY(mUseLocalInstance);
     QVERIFY(!mUseLocalInstance->text().isEmpty());

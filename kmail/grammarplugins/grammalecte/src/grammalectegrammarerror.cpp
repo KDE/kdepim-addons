@@ -24,12 +24,10 @@
 
 GrammalecteGrammarError::GrammalecteGrammarError()
 {
-
 }
 
 GrammalecteGrammarError::~GrammalecteGrammarError()
 {
-
 }
 
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
@@ -62,7 +60,6 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
     }
     return col;
 }
-
 
 void GrammalecteGrammarError::parse(const QJsonObject &obj, int blockindex)
 {

@@ -26,7 +26,6 @@ QTEST_MAIN(LanguageToolResultWidgetTest)
 LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageToolResultWidgetTest::shouldHaveDefaultValue()

@@ -118,7 +118,6 @@ bool GrammarError::operator ==(const GrammarError &other) const
            && (mUrl == other.url());
 }
 
-
 QString GrammarError::url() const
 {
     return mUrl;

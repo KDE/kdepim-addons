@@ -51,7 +51,6 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
     QFormLayout *lay = generalWidget->findChild<QFormLayout *>(QStringLiteral("generallayout"));
     QVERIFY(lay);
 
-
     KUrlRequester *mPythonPath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("pythonpath"));
     QVERIFY(mPythonPath);
     QVERIFY(!mPythonPath->text().isEmpty());
@@ -59,8 +58,6 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
     KUrlRequester *mGrammalectePath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("grammalectepath"));
     QVERIFY(mGrammalectePath);
     QVERIFY(mGrammalectePath->text().isEmpty());
-
-
 
     QStackedWidget *mStackedWidget = mTab->findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);
@@ -81,5 +78,4 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
     QToolButton *buttonReloadSettings = mReloadSettingsWidget->findChild<QToolButton *>(QStringLiteral("buttonReloadSettings"));
     QVERIFY(buttonReloadSettings);
     QVERIFY(!buttonReloadSettings->icon().isNull());
-
 }

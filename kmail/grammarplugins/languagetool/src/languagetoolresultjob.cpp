@@ -26,12 +26,10 @@
 LanguageToolResultJob::LanguageToolResultJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LanguageToolResultJob::~LanguageToolResultJob()
 {
-
 }
 
 static bool hasNotEmptyText(const QString &text)
@@ -43,7 +41,6 @@ static bool hasNotEmptyText(const QString &text)
     }
     return false;
 }
-
 
 bool LanguageToolResultJob::canStart() const
 {

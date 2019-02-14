@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "languagetoolresultjobtest.h"
 #include "languagetoolresultjob.h"
 #include <QTest>
@@ -25,18 +24,17 @@ QTEST_MAIN(LanguageToolResultJobTest)
 LanguageToolResultJobTest::LanguageToolResultJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageToolResultJobTest::shouldHaveDefaultValue()
 {
-   LanguageToolResultJob job;
-   QVERIFY(!job.networkAccessManager());
-   QVERIFY(job.arguments().isEmpty());
-   QVERIFY(!job.canStart());
-   QVERIFY(job.text().isEmpty());
-   QVERIFY(job.url().isEmpty());
-   QVERIFY(job.language().isEmpty());
+    LanguageToolResultJob job;
+    QVERIFY(!job.networkAccessManager());
+    QVERIFY(job.arguments().isEmpty());
+    QVERIFY(!job.canStart());
+    QVERIFY(job.text().isEmpty());
+    QVERIFY(job.url().isEmpty());
+    QVERIFY(job.language().isEmpty());
 }
 
 void LanguageToolResultJobTest::shouldBeAbleToStart()

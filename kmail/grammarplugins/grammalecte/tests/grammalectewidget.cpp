@@ -67,7 +67,6 @@ void GrammalecteWidget::slotReplaceText(const MessageComposer::PluginGrammarActi
     }
 }
 
-
 void GrammalecteWidget::slotGetSettings()
 {
     GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);

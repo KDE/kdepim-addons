@@ -56,8 +56,9 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 
     connect(mUseLocalInstance, &QCheckBox::clicked, this, [this, instancePathLabel](bool b) {
         instancePathLabel->setEnabled(b);
-        mInstancePath->setEnabled(b);}
-    );
+        mInstancePath->setEnabled(b);
+    }
+            );
 
     QHBoxLayout *languageLayout = new QHBoxLayout;
     languageLayout->setObjectName(QStringLiteral("languagelayout"));
@@ -69,7 +70,6 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
     languageLayout->addWidget(mLanguageToolCombobox);
     mainLayout->addLayout(languageLayout);
-
 
     mainLayout->addStretch(1);
     loadSettings();

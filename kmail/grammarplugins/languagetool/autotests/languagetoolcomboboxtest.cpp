@@ -24,7 +24,6 @@ QTEST_MAIN(LanguageToolComboBoxTest)
 LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageToolComboBoxTest::shouldHaveDefaultValue()

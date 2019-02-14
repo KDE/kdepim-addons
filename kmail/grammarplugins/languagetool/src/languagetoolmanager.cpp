@@ -32,7 +32,6 @@ LanguageToolManager::LanguageToolManager(QObject *parent)
 
 LanguageToolManager::~LanguageToolManager()
 {
-
 }
 
 LanguageToolManager *LanguageToolManager::self()
