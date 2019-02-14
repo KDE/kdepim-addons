@@ -36,7 +36,7 @@ public:
     void checkGrammar() override;
 private:
     void slotCheckGrammarFinished(const QString &result);
-    void slotError();
+    void slotError(const QString &str);
 };
 
 #endif // LANGUAGETOOLRESULTWIDGET_H

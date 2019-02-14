@@ -22,6 +22,10 @@
 #include "languagetoolparser.h"
 #include "languagetoolmanager.h"
 #include "languagetoolresultjob.h"
+
+#include <KMessageBox>
+#include <KLocalizedString>
+
 #include <QJsonDocument>
 #include <QTextEdit>
 
@@ -54,7 +58,7 @@ void LanguageToolResultWidget::slotCheckGrammarFinished(const QString &result)
     applyGrammarResult(parser.parseResult(fields));
 }
 
-void LanguageToolResultWidget::slotError()
+void LanguageToolResultWidget::slotError(const QString &str)
 {
-    //TODO
+    KMessageBox::error(this, i18n("An error was reported: %1", str), i18n("Failed to check grammar"));
 }

@@ -64,6 +64,15 @@ void LanguageToolResultJob::start()
     const QByteArray ba = "text=" + mText.toUtf8() + "&language=" + mLanguage.toLatin1();
     QNetworkReply *reply = mNetworkAccessManager->post(request, ba);
     connect(reply, &QNetworkReply::finished, this, &LanguageToolResultJob::slotCheckGrammarFinished);
+    connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &LanguageToolResultJob::slotFinish);
+}
+
+void LanguageToolResultJob::slotFinish(QNetworkReply *reply)
+{
+    if (reply->error() != QNetworkReply::NoError) {
+        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << " Error reply - "<<reply->errorString();
+        Q_EMIT error(reply->errorString());
+    }
 }
 
 void LanguageToolResultJob::slotCheckGrammarFinished()

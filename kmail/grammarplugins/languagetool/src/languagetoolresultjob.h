@@ -23,6 +23,7 @@
 #include <QObject>
 #include "liblanguagetool_private_export.h"
 class QNetworkRequest;
+class QNetworkReply;
 class QNetworkAccessManager;
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultJob : public QObject
 {
@@ -49,12 +50,13 @@ public:
 
 Q_SIGNALS:
     void finished(const QString &result);
-    void error();
+    void error(const QString &errorStr);
 
 private:
     Q_DISABLE_COPY(LanguageToolResultJob)
     void slotCheckGrammarFinished();
     void addRequestAttribute(QNetworkRequest &request) const;
+    void slotFinish(QNetworkReply *reply);
     QStringList mArguments;
     QString mText;
     QString mUrl;
