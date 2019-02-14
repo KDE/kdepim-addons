@@ -40,28 +40,35 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
     mainLayout->addWidget(mUseLocalInstance);
 
+    QHBoxLayout *instanceLayout = new QHBoxLayout;
+    instanceLayout->setObjectName(QStringLiteral("instancelayout"));
+    instanceLayout->setMargin(0);
     QLabel *instancePathLabel = new QLabel(i18n("Instance Path:"), this);
     instancePathLabel->setObjectName(QStringLiteral("instancepath"));
     instancePathLabel->setEnabled(false);
-    mainLayout->addWidget(instancePathLabel);
+    instanceLayout->addWidget(instancePathLabel);
 
     mInstancePath = new QLineEdit(this);
     mInstancePath->setObjectName(QStringLiteral("instancepath"));
     mInstancePath->setEnabled(false);
-    mainLayout->addWidget(mInstancePath);
+    instanceLayout->addWidget(mInstancePath);
+    mainLayout->addLayout(instanceLayout);
 
     connect(mUseLocalInstance, &QCheckBox::clicked, this, [this, instancePathLabel](bool b) {
         instancePathLabel->setEnabled(b);
         mInstancePath->setEnabled(b);}
     );
 
+    QHBoxLayout *languageLayout = new QHBoxLayout;
+    languageLayout->setObjectName(QStringLiteral("languagelayout"));
     QLabel *languageLabel = new QLabel(i18n("Language:"), this);
     languageLabel->setObjectName(QStringLiteral("languageLabel"));
-    mainLayout->addWidget(languageLabel);
+    languageLayout->addWidget(languageLabel);
 
     mLanguageToolCombobox = new LanguageToolComboBox(this);
     mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
-    mainLayout->addWidget(mLanguageToolCombobox);
+    languageLayout->addWidget(mLanguageToolCombobox);
+    mainLayout->addLayout(languageLayout);
 
 
     mainLayout->addStretch(1);

@@ -30,5 +30,5 @@ LanguageToolComboBoxTest::LanguageToolComboBoxTest(QObject *parent)
 void LanguageToolComboBoxTest::shouldHaveDefaultValue()
 {
     LanguageToolComboBox w;
-    QCOMPARE(w.count(), 0);
+    QCOMPARE(w.count(), 2);
 }
