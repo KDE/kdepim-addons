@@ -18,6 +18,7 @@
 */
 
 #include "languagetoolgrammarerror.h"
+#include "liblanguagetool_debug.h"
 
 #include <QJsonArray>
 
@@ -43,6 +44,9 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
     if (!rulesObj.isEmpty()) {
         const QJsonArray urlArray = rulesObj[QStringLiteral("urls")].toArray();
         if (!urlArray.isEmpty()) {
+            if (urlArray.count() > 1) {
+                qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "LanguageToolGrammarError::parse : more than 1 url found. Perhaps need to adapt api ";
+            }
             mUrl = urlArray.at(0)[QLatin1String("value")].toString();
             //qDebug() << " mUrl" << mUrl;
         }
