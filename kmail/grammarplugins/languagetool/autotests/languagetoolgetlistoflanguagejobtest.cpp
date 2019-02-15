@@ -18,10 +18,18 @@
 */
 
 #include "languagetoolgetlistoflanguagejobtest.h"
+#include "languagetoolgetlistoflanguagejob.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(LanguageToolGetListOfLanguageJobTest)
 LanguageToolGetListOfLanguageJobTest::LanguageToolGetListOfLanguageJobTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void LanguageToolGetListOfLanguageJobTest::shouldHaveDefaultValues()
+{
+    LanguageToolGetListOfLanguageJob w;
+    QVERIFY(!w.canStart());
+    QVERIFY(w.listOfLanguagePath().isEmpty());
 }

@@ -28,6 +28,8 @@ class LanguageToolGetListOfLanguageJobTest : public QObject
 public:
     explicit LanguageToolGetListOfLanguageJobTest(QObject *parent = nullptr);
     ~LanguageToolGetListOfLanguageJobTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 
 };
 

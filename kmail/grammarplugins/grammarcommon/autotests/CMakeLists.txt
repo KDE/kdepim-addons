@@ -1,4 +1,4 @@
-macro(add_kmail_grammarcommon_unittest _source _additional)
+macro(add_kmail_grammarcommon_unittest _source)
     set( _test ${_source} ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
@@ -8,4 +8,4 @@ macro(add_kmail_grammarcommon_unittest _source _additional)
     target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::IconThemes KF5::I18n grammarcommon)
 endmacro ()
 
-add_kmail_grammarcommon_unittest(grammarresulttextedittest.cpp "")
+add_kmail_grammarcommon_unittest(grammarresulttextedittest.cpp)

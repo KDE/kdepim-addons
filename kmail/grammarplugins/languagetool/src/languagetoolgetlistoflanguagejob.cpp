@@ -44,3 +44,13 @@ void LanguageToolGetListOfLanguageJob::start()
         return;
     }
 }
+
+QString LanguageToolGetListOfLanguageJob::listOfLanguagePath() const
+{
+    return mListOfLanguagePath;
+}
+
+void LanguageToolGetListOfLanguageJob::setListOfLanguagePath(const QString &getListOfLanguagePath)
+{
+    mListOfLanguagePath = getListOfLanguagePath;
+}
