@@ -49,7 +49,11 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
             QTextCharFormat format;
             //Verify color
             format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
-            format.setToolTip(info.error());
+            QString toolTip = info.error();
+            if (!info.url().isEmpty()) {
+                toolTip += QLatin1Char('\n') + i18n("See on: %1", info.url());
+            }
+            format.setToolTip(toolTip);
             MessageComposer::PluginGrammarAction act;
             act.setLength(info.length());
             act.setStart(info.start());
