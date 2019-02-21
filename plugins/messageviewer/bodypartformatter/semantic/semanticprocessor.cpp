@@ -124,6 +124,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         calendar.reset(new KCalCore::MemoryCalendar(QTimeZone()));
         KCalCore::ICalFormat format;
         if (format.fromRawString(calendar, part.content()->decodedContent())) {
+            calendar->setProductId(format.loadedProductId());
             engine.setCalendar(calendar);
         }
     } else if (part.content()->contentType()->isPlainText()) {
