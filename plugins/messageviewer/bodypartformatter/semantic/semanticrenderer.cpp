@@ -91,6 +91,7 @@ GRANTLEE_MAKE_GADGET(FoodEstablishmentReservation)
 GRANTLEE_MAKE_GADGET(RentalCarReservation)
 GRANTLEE_MAKE_GADGET(RentalCar)
 GRANTLEE_MAKE_GADGET(Brand)
+GRANTLEE_MAKE_GADGET(Organization)
 
 SemanticRenderer::SemanticRenderer()
 {
@@ -123,6 +124,7 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<RentalCarReservation>();
     Grantlee::registerMetaType<RentalCar>();
     Grantlee::registerMetaType<Brand>();
+    Grantlee::registerMetaType<Organization>();
 }
 
 bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
