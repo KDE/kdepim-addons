@@ -92,7 +92,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
             }
         }
         popup->addSeparator();
-        QAction *checkAgainAct = popup->addAction(i18n("Check Again"));
+        QAction *checkAgainAct = popup->addAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("Check Again"));
         connect(checkAgainAct, &QAction::triggered, this, &GrammarResultTextEdit::checkAgain);
         popup->exec(event->globalPos());
         delete popup;
