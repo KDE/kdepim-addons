@@ -51,6 +51,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mInstancePath = new QLineEdit(this);
     mInstancePath->setObjectName(QStringLiteral("instancepath"));
     mInstancePath->setEnabled(false);
+    mInstancePath->setClearButtonEnabled(true);
     instanceLayout->addWidget(mInstancePath);
     mainLayout->addLayout(instanceLayout);
 

@@ -55,6 +55,7 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mInstancePath);
     QVERIFY(mInstancePath->text().isEmpty());
     QVERIFY(!mInstancePath->isEnabled());
+    QVERIFY(mInstancePath->isClearButtonEnabled());
 
     QLabel *languageLabel = w.findChild<QLabel *>(QStringLiteral("languageLabel"));
     QVERIFY(languageLabel);
