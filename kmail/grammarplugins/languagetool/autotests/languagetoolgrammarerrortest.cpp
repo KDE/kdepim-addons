@@ -27,7 +27,6 @@ LanguageToolGrammarErrorTest::LanguageToolGrammarErrorTest(QObject *parent)
 {
 }
 
-
 void LanguageToolGrammarErrorTest::shouldParseJson_data()
 {
     QTest::addColumn<QString>("fileName");
@@ -41,7 +40,7 @@ void LanguageToolGrammarErrorTest::shouldParseJson_data()
     err.setSuggestions(QStringList() << QStringLiteral("ne suis pas"));
     err.setError(QStringLiteral("Voulez-vous écrire \"ne suis pas\" ?"));
     //err.setOption(QStringLiteral("maj"));
-   // err.setRule(QStringLiteral("majuscule_après_point"));
+    // err.setRule(QStringLiteral("majuscule_après_point"));
     err.setUrl(QStringLiteral("http://www.academie-francaise.fr/ne"));
     QTest::newRow("parse-error1") << QStringLiteral("parse-error1") << 1 << err;
 }

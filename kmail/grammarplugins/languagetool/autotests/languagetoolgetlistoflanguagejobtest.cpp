@@ -24,7 +24,6 @@ QTEST_GUILESS_MAIN(LanguageToolGetListOfLanguageJobTest)
 LanguageToolGetListOfLanguageJobTest::LanguageToolGetListOfLanguageJobTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageToolGetListOfLanguageJobTest::shouldHaveDefaultValues()

@@ -32,7 +32,6 @@ public:
     Q_REQUIRED_RESULT bool canStart() const;
     void start();
 
-
     Q_REQUIRED_RESULT QString listOfLanguagePath() const;
     void setListOfLanguagePath(const QString &listOfLanguagePath);
 

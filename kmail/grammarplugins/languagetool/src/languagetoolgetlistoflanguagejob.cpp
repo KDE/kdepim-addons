@@ -22,12 +22,10 @@
 LanguageToolGetListOfLanguageJob::LanguageToolGetListOfLanguageJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LanguageToolGetListOfLanguageJob::~LanguageToolGetListOfLanguageJob()
 {
-
 }
 
 bool LanguageToolGetListOfLanguageJob::canStart() const

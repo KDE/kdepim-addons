@@ -52,7 +52,6 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
         }
     }
 
-
     //TODO ???
 //    mRule = obj[QStringLiteral("sRuleId")].toString();
 //    mOption = obj[QStringLiteral("sType")].toString();

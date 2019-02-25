@@ -30,7 +30,6 @@ public:
     ~LanguageToolGetListOfLanguageJobTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
-
 };
 
 #endif // LANGUAGETOOLGETLISTOFLANGUAGEJOBTEST_H
