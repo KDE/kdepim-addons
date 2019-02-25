@@ -65,8 +65,11 @@ void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammar
 void LanguageToolInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
+        if (!checkAgain()) {
+            mAction->setChecked(false);
+            return;
+        }
         mGrammarResultWidget->show();
-        checkAgain();
         Q_EMIT activateView(this);
     } else {
         mGrammarResultWidget->hide();
@@ -89,7 +92,7 @@ void LanguageToolInterface::createAction(KActionCollection *ac)
     mAction->setChecked(false);
 }
 
-void LanguageToolInterface::checkAgain()
+bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         if (!LanguageToolManager::self()->useLocalInstance()) {
@@ -98,7 +101,7 @@ void LanguageToolInterface::checkAgain()
                                           KStandardGuiItem::yes(),
                                           KStandardGuiItem::no(),
                                           QStringLiteral("send_data_on_languagetool")) == KMessageBox::No) {
-                return;
+                return false;
             }
         }
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());
@@ -106,4 +109,5 @@ void LanguageToolInterface::checkAgain()
     } else {
         qCWarning(KMAIL_EDITOR_LANGUAGETOOL_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
     }
+    return true;
 }
