@@ -38,6 +38,8 @@ public:
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
 
+    void paintEvent(QPaintEvent *event) override;
+
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
@@ -46,6 +48,8 @@ private:
     enum TextInfo {
         ReplaceFormatInfo = QTextFormat::UserProperty + 1
     };
+    void generalPaletteChanged();
+    QColor mTextColor;
 };
 
 #endif // GRAMMARRESULTTEXTEDIT_H

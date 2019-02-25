@@ -27,6 +27,7 @@
 #include <QAction>
 #include <QTextBlock>
 #include <QTextDocument>
+#include <QPainter>
 
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
@@ -37,6 +38,36 @@ GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
 
 GrammarResultTextEdit::~GrammarResultTextEdit()
 {
+}
+
+void GrammarResultTextEdit::paintEvent(QPaintEvent *event)
+{
+    if (document()->isEmpty()) {
+        const QString label = i18n("Any text to check.");
+
+        QPainter p(viewport());
+
+        QFont font = p.font();
+        font.setItalic(true);
+        p.setFont(font);
+
+        if (!mTextColor.isValid()) {
+            generalPaletteChanged();
+        }
+        p.setPen(mTextColor);
+
+        p.drawText(QRect(0, 0, width(), height()), Qt::AlignCenter, label);
+    } else {
+        QTextEdit::paintEvent(event);
+    }
+}
+
+void GrammarResultTextEdit::generalPaletteChanged()
+{
+    const QPalette palette = viewport()->palette();
+    QColor color = palette.text().color();
+    color.setAlpha(128);
+    mTextColor = color;
 }
 
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &infos)
@@ -131,7 +162,6 @@ void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammar
                     i += act.length();
                 }
             }
-            qDebug() << " We need to update act";
         }
     }
 
