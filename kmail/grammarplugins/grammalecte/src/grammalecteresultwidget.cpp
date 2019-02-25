@@ -19,8 +19,8 @@
 
 #include "grammarresulttextedit.h"
 #include "grammalecteresultwidget.h"
+#include "libgrammalecte_debug.h"
 #include "grammalectemanager.h"
-#include "grammalecteresultjob.h"
 #include "grammalecteparser.h"
 #include <QHBoxLayout>
 #include <QJsonDocument>
@@ -55,7 +55,22 @@ void GrammalecteResultWidget::slotCheckGrammarFinished(const QString &result)
     applyGrammarResult(parser.parseResult(fields));
 }
 
-void GrammalecteResultWidget::slotError()
+void GrammalecteResultWidget::slotError(GrammalecteResultJob::ErrorType error)
 {
-    //TODO
+    switch (error) {
+    case GrammalecteResultJob::ErrorType::NoError:
+        break;
+    case GrammalecteResultJob::ErrorType::TextIsEmpty:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: text is empty";
+        break;
+    case GrammalecteResultJob::ErrorType::PythonPathMissing:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing python path";
+        break;
+    case GrammalecteResultJob::ErrorType::GrammalecteMissing:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing grammalectepath" ;
+        break;
+    case GrammalecteResultJob::ErrorType::Unknown:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: unknow error";
+        break;
+    }
 }

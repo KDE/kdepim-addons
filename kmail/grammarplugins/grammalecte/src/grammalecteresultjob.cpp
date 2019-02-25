@@ -60,12 +60,13 @@ void GrammalecteResultJob::start()
         mProcess->start();
         if (!mProcess->waitForStarted()) {
             qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
-            Q_EMIT error();
+            Q_EMIT error(ErrorType::Unknown);
             deleteLater();
         }
     } else {
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Impossible to start grammarresultjob";
-        Q_EMIT error();
+        if (mErrorType != ErrorType::TextIsEmpty) {
+            Q_EMIT error(mErrorType);
+        }
         deleteLater();
     }
 }
@@ -135,12 +136,21 @@ static bool hasNotEmptyText(const QString &text)
     return false;
 }
 
-bool GrammalecteResultJob::canStart() const
+bool GrammalecteResultJob::canStart()
 {
-    if (hasNotEmptyText(mText) && !mGrammarlecteCliPath.isEmpty() && !mPythonPath.isEmpty()) {
-        return true;
+    if (!hasNotEmptyText(mText)) {
+        mErrorType = ErrorType::TextIsEmpty;
+        return false;
     }
-    return false;
+    if (mGrammarlecteCliPath.isEmpty()) {
+        mErrorType = ErrorType::GrammalecteMissing;
+        return false;
+    }
+    if (mPythonPath.isEmpty()) {
+        mErrorType = ErrorType::PythonPathMissing;
+        return false;
+    }
+    return true;
 }
 
 QString GrammalecteResultJob::text() const

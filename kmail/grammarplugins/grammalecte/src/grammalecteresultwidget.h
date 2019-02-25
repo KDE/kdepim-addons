@@ -23,10 +23,12 @@
 #include "grammarresultwidget.h"
 #include "libkmailgrammalecte_export.h"
 #include "grammalectegrammarerror.h"
+#include "grammalecteresultjob.h"
 namespace MessageComposer {
 class PluginGrammarAction;
 }
 class GrammarResultTextEdit;
+class GrammalecteResultJob;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
@@ -36,7 +38,7 @@ public:
     void checkGrammar() override;
 private:
     void slotCheckGrammarFinished(const QString &result);
-    void slotError();
+    void slotError(GrammalecteResultJob::ErrorType error);
 };
 
 #endif // GRAMMALECTERESULTWIDGET_H

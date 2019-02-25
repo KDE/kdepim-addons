@@ -30,9 +30,17 @@ public:
     explicit GrammalecteResultJob(QObject *parent = nullptr);
     ~GrammalecteResultJob();
 
+    enum class ErrorType {
+        NoError = 0,
+        TextIsEmpty = 1,
+        PythonPathMissing = 2,
+        GrammalecteMissing = 3,
+        Unknown = 4,
+    };
+
     void start();
 
-    Q_REQUIRED_RESULT bool canStart() const;
+    Q_REQUIRED_RESULT bool canStart();
 
     Q_REQUIRED_RESULT QString text() const;
     void setText(const QString &text);
@@ -48,7 +56,7 @@ public:
 
 Q_SIGNALS:
     void finished(const QString &result);
-    void error();
+    void error(GrammalecteResultJob::ErrorType type);
 
 private:
     Q_DISABLE_COPY(GrammalecteResultJob)
@@ -62,6 +70,7 @@ private:
     QString mPythonPath;
     QString mGrammarlecteCliPath;
     QString mLastError;
+    GrammalecteResultJob::ErrorType mErrorType = ErrorType::NoError;
     QProcess *mProcess = nullptr;
 };
 
