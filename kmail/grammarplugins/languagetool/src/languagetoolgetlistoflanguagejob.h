@@ -20,9 +20,11 @@
 #ifndef LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
 #define LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
 
+#include <QNetworkRequest>
 #include <QObject>
 #include "libkmaillanguagetool_export.h"
 class QNetworkAccessManager;
+class QNetworkReply;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObject
 {
     Q_OBJECT
@@ -42,8 +44,15 @@ public:
     Q_REQUIRED_RESULT QString url() const;
     void setUrl(const QString &url);
 
+Q_SIGNALS:
+    void finished(const QString &result);
+    void error(const QString &errorStr);
+
 private:
     Q_DISABLE_COPY(LanguageToolGetListOfLanguageJob)
+    void addRequestAttribute(QNetworkRequest &request) const;
+    void slotCheckListOfLanguagesFinished();
+    void slotFinish(QNetworkReply *reply);
 
     QString mListOfLanguagePath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
