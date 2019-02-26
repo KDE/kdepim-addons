@@ -45,6 +45,22 @@ QNetworkAccessManager *LanguageToolManager::networkAccessManager() const
     return mNetworkAccessManager;
 }
 
+QString LanguageToolManager::languageToolCheckPath() const
+{
+    if (mLanguageToolPath.isEmpty()) {
+        return {};
+    }
+    return mLanguageToolPath + QStringLiteral("/check");
+}
+
+QString LanguageToolManager::languageToolLanguagesPath() const
+{
+    if (mLanguageToolPath.isEmpty()) {
+        return {};
+    }
+    return mLanguageToolPath + QStringLiteral("/languages");
+}
+
 QString LanguageToolManager::languageToolPath() const
 {
     return mLanguageToolPath;
@@ -58,7 +74,7 @@ void LanguageToolManager::setLanguageToolPath(const QString &path)
 void LanguageToolManager::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), "LanguageTool");
-    mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2/check"));
+    mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2"));
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
     //TODO add options ?
 }

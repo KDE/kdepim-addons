@@ -41,7 +41,7 @@ LanguageToolResultWidget::~LanguageToolResultWidget()
 void LanguageToolResultWidget::checkGrammar()
 {
     LanguageToolResultJob *job = new LanguageToolResultJob(this);
-    job->setUrl(LanguageToolManager::self()->languageToolPath());
+    job->setUrl(LanguageToolManager::self()->languageToolCheckPath());
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     job->setText(mResult->toPlainText());
     job->setLanguage(LanguageToolManager::self()->language());

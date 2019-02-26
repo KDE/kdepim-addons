@@ -45,6 +45,9 @@ public:
     Q_REQUIRED_RESULT bool useLocalInstance() const;
     void setUseLocalInstance(bool useLocalInstance);
 
+    Q_REQUIRED_RESULT QString languageToolCheckPath() const;
+
+    Q_REQUIRED_RESULT QString languageToolLanguagesPath() const;
 private:
     Q_DISABLE_COPY(LanguageToolManager)
     QString mLanguage;
