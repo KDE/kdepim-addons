@@ -8,6 +8,8 @@ set(kmaillanguagetool_SRCS
     languagetoolresultjob.cpp
     languagetoolcombobox.cpp
     languagetoolgetlistoflanguagejob.cpp
+    languagetoollistoflanguagesparser.cpp
+    languageinfo.cpp
 )
 
 ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin)
