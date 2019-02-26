@@ -18,6 +18,7 @@
 */
 
 #include "languagetoolgetlistoflanguagejob.h"
+#include "liblanguagetool_debug.h"
 
 LanguageToolGetListOfLanguageJob::LanguageToolGetListOfLanguageJob(QObject *parent)
     : QObject(parent)
@@ -30,17 +31,20 @@ LanguageToolGetListOfLanguageJob::~LanguageToolGetListOfLanguageJob()
 
 bool LanguageToolGetListOfLanguageJob::canStart() const
 {
-    //TODO
-    return false;
+    if (!mNetworkAccessManager) {
+        return false;
+    }
+    return true;
 }
 
 void LanguageToolGetListOfLanguageJob::start()
 {
     if (!canStart()) {
-        //TODO
+        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start LanguageToolGetListOfLanguageJob";
         deleteLater();
         return;
     }
+    //TODO
 }
 
 QString LanguageToolGetListOfLanguageJob::listOfLanguagePath() const
@@ -51,4 +55,14 @@ QString LanguageToolGetListOfLanguageJob::listOfLanguagePath() const
 void LanguageToolGetListOfLanguageJob::setListOfLanguagePath(const QString &getListOfLanguagePath)
 {
     mListOfLanguagePath = getListOfLanguagePath;
+}
+
+QNetworkAccessManager *LanguageToolGetListOfLanguageJob::networkAccessManager() const
+{
+    return mNetworkAccessManager;
+}
+
+void LanguageToolGetListOfLanguageJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
+{
+    mNetworkAccessManager = networkAccessManager;
 }

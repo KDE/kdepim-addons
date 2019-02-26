@@ -22,6 +22,7 @@
 
 #include <QObject>
 #include "libkmaillanguagetool_export.h"
+class QNetworkAccessManager;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObject
 {
     Q_OBJECT
@@ -35,10 +36,14 @@ public:
     Q_REQUIRED_RESULT QString listOfLanguagePath() const;
     void setListOfLanguagePath(const QString &listOfLanguagePath);
 
+    QNetworkAccessManager *networkAccessManager() const;
+    void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
+
 private:
     Q_DISABLE_COPY(LanguageToolGetListOfLanguageJob)
 
     QString mListOfLanguagePath;
+    QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
 #endif // LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
