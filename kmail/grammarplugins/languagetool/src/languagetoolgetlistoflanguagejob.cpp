@@ -31,7 +31,7 @@ LanguageToolGetListOfLanguageJob::~LanguageToolGetListOfLanguageJob()
 
 bool LanguageToolGetListOfLanguageJob::canStart() const
 {
-    if (!mNetworkAccessManager) {
+    if (!mNetworkAccessManager || mUrl.isEmpty()) {
         return false;
     }
     return true;
@@ -65,4 +65,14 @@ QNetworkAccessManager *LanguageToolGetListOfLanguageJob::networkAccessManager() 
 void LanguageToolGetListOfLanguageJob::setNetworkAccessManager(QNetworkAccessManager *networkAccessManager)
 {
     mNetworkAccessManager = networkAccessManager;
+}
+
+QString LanguageToolGetListOfLanguageJob::url() const
+{
+    return mUrl;
+}
+
+void LanguageToolGetListOfLanguageJob::setUrl(const QString &url)
+{
+    mUrl = url;
 }

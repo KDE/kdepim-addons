@@ -31,4 +31,16 @@ void LanguageToolGetListOfLanguageJobTest::shouldHaveDefaultValues()
     LanguageToolGetListOfLanguageJob w;
     QVERIFY(!w.canStart());
     QVERIFY(w.listOfLanguagePath().isEmpty());
+    QVERIFY(w.url().isEmpty());
+}
+
+void LanguageToolGetListOfLanguageJobTest::shouldBeAbleToStart()
+{
+    LanguageToolGetListOfLanguageJob job;
+    QVERIFY(!job.canStart());
+    job.setUrl(QStringLiteral("foo"));
+    QVERIFY(!job.canStart());
+    QNetworkAccessManager network;
+    job.setNetworkAccessManager(&network);
+    QVERIFY(job.canStart());
 }

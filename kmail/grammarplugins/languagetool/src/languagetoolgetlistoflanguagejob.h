@@ -39,11 +39,15 @@ public:
     QNetworkAccessManager *networkAccessManager() const;
     void setNetworkAccessManager(QNetworkAccessManager *networkAccessManager);
 
+    Q_REQUIRED_RESULT QString url() const;
+    void setUrl(const QString &url);
+
 private:
     Q_DISABLE_COPY(LanguageToolGetListOfLanguageJob)
 
     QString mListOfLanguagePath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    QString mUrl;
 };
 
 #endif // LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
