@@ -41,6 +41,8 @@ Q_SIGNALS:
     void checkAgain();
 protected:
     GrammarResultTextEdit *mResult = nullptr;
+private:
+    Q_DISABLE_COPY(GrammarResultWidget)
 };
 
 #endif // GRAMMARRESULTWIDGET_H

@@ -46,6 +46,7 @@ public:
     void setUseLocalInstance(bool useLocalInstance);
 
 private:
+    Q_DISABLE_COPY(LanguageToolManager)
     QString mLanguage;
     QString mLanguageToolPath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;

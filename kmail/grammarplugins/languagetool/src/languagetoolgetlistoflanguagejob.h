@@ -36,6 +36,8 @@ public:
     void setListOfLanguagePath(const QString &listOfLanguagePath);
 
 private:
+    Q_DISABLE_COPY(LanguageToolGetListOfLanguageJob)
+
     QString mListOfLanguagePath;
 };
 

@@ -44,6 +44,7 @@ Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
 private:
+    Q_DISABLE_COPY(GrammarResultTextEdit)
     void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
     enum TextInfo {
         ReplaceFormatInfo = QTextFormat::UserProperty + 1

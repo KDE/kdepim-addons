@@ -35,6 +35,7 @@ public:
     ~LanguageToolResultWidget() override;
     void checkGrammar() override;
 private:
+    Q_DISABLE_COPY(LanguageToolResultWidget)
     void slotCheckGrammarFinished(const QString &result);
     void slotError(const QString &str);
 };

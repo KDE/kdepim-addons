@@ -54,6 +54,7 @@ Q_SIGNALS:
     void finished(const QVector<GrammalecteGenerateConfigOptionJob::Option> &result);
 
 private:
+    Q_DISABLE_COPY(GrammalecteGenerateConfigOptionJob)
     void receivedStandardOutput();
     void slotFinished(int exitCode, QProcess::ExitStatus exitStatus);
     void receivedError();

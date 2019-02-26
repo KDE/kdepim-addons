@@ -34,6 +34,7 @@ public:
 
 private:
     void fillComboBox();
+    Q_DISABLE_COPY(LanguageToolComboBox)
 };
 
 #endif // LANGUAGETOOLCOMBOBOX_H
