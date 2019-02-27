@@ -29,7 +29,7 @@ class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolListOfLanguagesParser
 public:
     LanguageToolListOfLanguagesParser();
     ~LanguageToolListOfLanguagesParser();
-    QVector<LanguageInfo> parseResult(const QJsonObject &obj) const;
+    QVector<LanguageInfo> parseResult(const QJsonArray &obj) const;
 };
 
 #endif // LANGUAGETOOLLISTOFLANGUAGESPARSER_H

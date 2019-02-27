@@ -20,6 +20,7 @@
 #include "languagetoolwidget.h"
 #include "languagetoolresultjob.h"
 #include "languagetoolmanager.h"
+#include "languagetoolgetlistoflanguagejob.h"
 
 #include "languagetoolparser.h"
 #include <QVBoxLayout>
@@ -29,6 +30,7 @@
 #include <QJsonDocument>
 #include <QTextBlock>
 #include <QNetworkAccessManager>
+#include <QJsonArray>
 #include "languagetoolresultwidget.h"
 
 LanguageToolWidget::LanguageToolWidget(QWidget *parent)
@@ -40,6 +42,9 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
 
+    QPushButton *languageButton = new QPushButton(QStringLiteral("Get List Of Languages"), this);
+    mainLayout->addWidget(languageButton);
+
     mInput = new QTextEdit(this);
     mainLayout->addWidget(mInput);
 
@@ -48,6 +53,8 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     connect(mResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolWidget::slotReplaceText);
 
     connect(button, &QPushButton::clicked, this, &LanguageToolWidget::slotCheckGrammar);
+    connect(languageButton, &QPushButton::clicked, this, &LanguageToolWidget::slotGetListOfLanguages);
+
 }
 
 LanguageToolWidget::~LanguageToolWidget()
@@ -78,9 +85,33 @@ void LanguageToolWidget::slotCheckGrammar()
     job->start();
 }
 
+void LanguageToolWidget::slotGetListOfLanguages()
+{
+    LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
+    job->setUrl(QStringLiteral("https://languagetool.org/api/v2/languages"));
+    job->setNetworkAccessManager(mNetworkAccessManager);
+    connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolWidget::slotGetLanguagesFinished);
+    connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolWidget::slotGetLanguagesError);
+    job->start();
+}
+
 void LanguageToolWidget::slotError()
 {
     qDebug() << " error !!!!";
+}
+
+void LanguageToolWidget::slotGetLanguagesError()
+{
+    qDebug() << " error !!!!";
+}
+
+
+void LanguageToolWidget::slotGetLanguagesFinished(const QString &result)
+{
+    qDebug() << " result " << result;
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonArray fields = doc.array();
+    qDebug() << " fields =" << fields;
 }
 
 void LanguageToolWidget::slotResultFinished(const QString &result)

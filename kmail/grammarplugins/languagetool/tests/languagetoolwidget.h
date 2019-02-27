@@ -36,7 +36,10 @@ private:
     void slotReplaceText(const MessageComposer::PluginGrammarAction &act);
     void slotCheckGrammar();
     void slotError();
+    void slotGetListOfLanguages();
     void slotResultFinished(const QString &result);
+    void slotGetLanguagesError();
+    void slotGetLanguagesFinished(const QString &result);
     QTextEdit *mInput = nullptr;
     LanguageToolResultWidget *mResultWidget = nullptr;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;

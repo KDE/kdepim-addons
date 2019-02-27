@@ -28,6 +28,8 @@ class LanguageInfoTest : public QObject
 public:
     explicit LanguageInfoTest(QObject *parent = nullptr);
     ~LanguageInfoTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // LANGUAGEINFOTEST_H

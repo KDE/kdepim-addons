@@ -22,6 +22,7 @@
 
 #include <QComboBox>
 #include "libkmaillanguagetool_export.h"
+class LanguageInfo;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolComboBox : public QComboBox
 {
     Q_OBJECT
@@ -31,6 +32,11 @@ public:
 
     void setLanguage(const QString &str);
     Q_REQUIRED_RESULT QString language() const;
+
+    void fillComboBox(const QVector<LanguageInfo> &info);
+
+Q_SIGNALS:
+    void updateListOfLanguagesRequested();
 
 private:
     void fillComboBox();

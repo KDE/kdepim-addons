@@ -20,6 +20,8 @@
 #include "languagetoolconfigwidget.h"
 #include "languagetoolmanager.h"
 #include "languagetoolcombobox.h"
+#include "languagetoolgetlistoflanguagejob.h"
+#include "languagetoollistoflanguagesparser.h"
 #include <KLocalizedString>
 
 #include <QVBoxLayout>
@@ -27,6 +29,9 @@
 #include <QLineEdit>
 #include <QLabel>
 #include <QVariant>
+#include <QJsonDocument>
+#include <QJsonArray>
+#include <QDebug>
 
 #include <KUrlRequester>
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
@@ -73,6 +78,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mainLayout->addLayout(languageLayout);
 
     mainLayout->addStretch(1);
+    uploadListOfLanguages();
     loadSettings();
 }
 
@@ -93,4 +99,28 @@ void LanguageToolConfigWidget::saveSettings()
     LanguageToolManager::self()->setUseLocalInstance(mUseLocalInstance->isChecked());
     LanguageToolManager::self()->setLanguageToolPath(mInstancePath->text());
     LanguageToolManager::self()->setLanguage(mLanguageToolCombobox->language());
+}
+
+void LanguageToolConfigWidget::uploadListOfLanguages()
+{
+    LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
+    job->setUrl(LanguageToolManager::self()->languageToolLanguagesPath());
+    job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
+    connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolConfigWidget::slotGetLanguagesFinished);
+    connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolConfigWidget::slotGetLanguagesError);
+    job->start();
+}
+
+void LanguageToolConfigWidget::slotGetLanguagesError()
+{
+    qDebug() << " error !!!!";
+}
+
+void LanguageToolConfigWidget::slotGetLanguagesFinished(const QString &result)
+{
+    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
+    const QJsonArray fields = doc.array();
+    LanguageToolListOfLanguagesParser parser;
+    mLanguageToolCombobox->fillComboBox(parser.parseResult(fields));
+    mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
 }

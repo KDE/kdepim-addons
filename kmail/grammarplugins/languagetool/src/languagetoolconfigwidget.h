@@ -35,6 +35,9 @@ public:
     void saveSettings();
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
+    void uploadListOfLanguages();
+    void slotGetLanguagesError();
+    void slotGetLanguagesFinished(const QString &result);
     QCheckBox *mUseLocalInstance = nullptr;
     QLineEdit *mInstancePath = nullptr;
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
