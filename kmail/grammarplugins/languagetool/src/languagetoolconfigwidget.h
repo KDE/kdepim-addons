@@ -38,6 +38,7 @@ private:
     void uploadListOfLanguages();
     void slotGetLanguagesError();
     void slotGetLanguagesFinished(const QString &result);
+    void refreshListOfLanguages();
     QCheckBox *mUseLocalInstance = nullptr;
     QLineEdit *mInstancePath = nullptr;
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;

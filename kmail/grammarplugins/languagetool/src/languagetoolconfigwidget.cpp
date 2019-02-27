@@ -81,6 +81,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     refreshButton->setObjectName(QStringLiteral("refreshbutton"));
     refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     languageLayout->addWidget(refreshButton);
+    connect(refreshButton, &QToolButton::clicked, this, &LanguageToolConfigWidget::refreshListOfLanguages);
 
     mainLayout->addLayout(languageLayout);
 
@@ -93,6 +94,16 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 LanguageToolConfigWidget::~LanguageToolConfigWidget()
 {
     saveSettings();
+}
+
+void LanguageToolConfigWidget::refreshListOfLanguages()
+{
+    LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
+    job->setUrl(mInstancePath->text() + QStringLiteral("/languages"));
+    job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
+    connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolConfigWidget::slotGetLanguagesFinished);
+    connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolConfigWidget::slotGetLanguagesError);
+    job->start();
 }
 
 void LanguageToolConfigWidget::loadSettings()
