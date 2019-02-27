@@ -26,6 +26,7 @@
 #include <QTest>
 #include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QToolButton>
 
 QTEST_MAIN(LanguageToolConfigWidgetTest)
 LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
@@ -53,7 +54,8 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 
     QLineEdit *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
     QVERIFY(mInstancePath);
-    QVERIFY(mInstancePath->text().isEmpty());
+    //We load default value
+    QVERIFY(!mInstancePath->text().isEmpty());
     QVERIFY(!mInstancePath->isEnabled());
     QVERIFY(mInstancePath->isClearButtonEnabled());
 
@@ -63,4 +65,8 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 
     LanguageToolComboBox *mLanguageToolCombobox = w.findChild<LanguageToolComboBox *>(QStringLiteral("languagecombobox"));
     QVERIFY(mLanguageToolCombobox);
+
+    QToolButton *refreshButton = w.findChild<QToolButton *>(QStringLiteral("refreshbutton"));
+    QVERIFY(refreshButton);
+    QVERIFY(!refreshButton->icon().isNull());
 }

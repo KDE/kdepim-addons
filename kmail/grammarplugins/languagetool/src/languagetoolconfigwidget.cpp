@@ -32,6 +32,7 @@
 #include <QJsonDocument>
 #include <QJsonArray>
 #include <QDebug>
+#include <QToolButton>
 
 #include <KUrlRequester>
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
@@ -75,7 +76,14 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolCombobox = new LanguageToolComboBox(this);
     mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
     languageLayout->addWidget(mLanguageToolCombobox);
+
+    QToolButton *refreshButton = new QToolButton(this);
+    refreshButton->setObjectName(QStringLiteral("refreshbutton"));
+    refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
+    languageLayout->addWidget(refreshButton);
+
     mainLayout->addLayout(languageLayout);
+
 
     mainLayout->addStretch(1);
     uploadListOfLanguages();
