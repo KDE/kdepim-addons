@@ -48,6 +48,8 @@ public:
     Q_REQUIRED_RESULT QString languageToolCheckPath() const;
 
     Q_REQUIRED_RESULT QString languageToolLanguagesPath() const;
+
+    static QString convertToLanguagePath(const QString &path);
 private:
     Q_DISABLE_COPY(LanguageToolManager)
     QString mLanguage;

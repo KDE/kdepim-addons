@@ -58,7 +58,12 @@ QString LanguageToolManager::languageToolLanguagesPath() const
     if (mLanguageToolPath.isEmpty()) {
         return {};
     }
-    return mLanguageToolPath + QStringLiteral("/languages");
+    return convertToLanguagePath(mLanguageToolPath);
+}
+
+QString LanguageToolManager::convertToLanguagePath(const QString &path)
+{
+    return path + QStringLiteral("/languages");
 }
 
 QString LanguageToolManager::languageToolPath() const

@@ -99,7 +99,7 @@ LanguageToolConfigWidget::~LanguageToolConfigWidget()
 void LanguageToolConfigWidget::refreshListOfLanguages()
 {
     LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
-    job->setUrl(mInstancePath->text() + QStringLiteral("/languages"));
+    job->setUrl(LanguageToolManager::convertToLanguagePath(mInstancePath->text()));
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolConfigWidget::slotGetLanguagesFinished);
     connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolConfigWidget::slotGetLanguagesError);
