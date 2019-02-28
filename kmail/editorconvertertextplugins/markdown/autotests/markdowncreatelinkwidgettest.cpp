@@ -19,6 +19,7 @@
 
 #include "markdowncreatelinkwidgettest.h"
 #include "markdowncreatelinkwidget.h"
+#include "kdepimtest_layout.h"
 #include <QFormLayout>
 #include <QLineEdit>
 #include <QTest>
@@ -36,7 +37,7 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 
     QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
 

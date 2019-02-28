@@ -19,7 +19,7 @@
 
 #include "viewerpluginexternaleditwidgettest.h"
 #include "../configuredialog/viewerpluginexternaleditwidget.h"
-
+#include "kdepimtest_layout.h"
 #include <KUrlRequester>
 #include <QFormLayout>
 #include <QLineEdit>
@@ -39,7 +39,7 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
     ViewerPluginExternalEditWidget w;
     QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QLineEdit *mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
     QVERIFY(mName);

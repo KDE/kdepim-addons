@@ -19,6 +19,7 @@
 
 #include "insertshorturlconfigurewidgettest.h"
 #include "../insertshorturlconfigurewidget.h"
+#include "kdepimtest_layout.h"
 
 #include <QComboBox>
 #include <QLabel>
@@ -38,7 +39,7 @@ void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);

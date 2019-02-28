@@ -19,6 +19,7 @@
 
 #include "markdownconfigurewidgettest.h"
 #include "../markdownconfigurewidget.h"
+#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QComboBox>
 #include <QHBoxLayout>
@@ -36,7 +37,7 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     MarkdownConfigureWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QCheckBox *mLatexSupport = w.findChild<QCheckBox *>(QStringLiteral("latex"));
     QVERIFY(mLatexSupport);

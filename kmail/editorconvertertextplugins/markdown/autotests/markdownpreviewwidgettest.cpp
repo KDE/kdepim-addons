@@ -19,6 +19,7 @@
 
 #include "markdownpreviewwidgettest.h"
 #include "markdownpreviewwidget.h"
+#include "kdepimtest_layout.h"
 #include <QHBoxLayout>
 #include <QTest>
 #include <QWebChannel>
@@ -35,7 +36,7 @@ void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
     MarkdownPreviewWidget w;
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QWebEngineView *mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
     QVERIFY(mWebView);

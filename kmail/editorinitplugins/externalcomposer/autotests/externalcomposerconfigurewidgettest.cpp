@@ -19,6 +19,7 @@
 
 #include "externalcomposerconfigurewidgettest.h"
 #include "../externalcomposerconfigurewidget.h"
+#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <QLabel>
@@ -37,7 +38,7 @@ void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
     ExternalComposerConfigureWidget w(nullptr);
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
-    QCOMPARE(vboxlayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, vboxlayout);
 
     QCheckBox *mExternalEditorCheck = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
     QVERIFY(mExternalEditorCheck);

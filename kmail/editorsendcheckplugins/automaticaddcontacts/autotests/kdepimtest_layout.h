@@ -17,24 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "languagetoolresultwidgettest.h"
-#include "languagetoolresultwidget.h"
-#include "kdepimtest_layout.h"
+#ifndef KDEPIMTEST_LAYOUT_H
+#define KDEPIMTEST_LAYOUT_H
 #include <QTest>
-#include <QHBoxLayout>
-#include <grammarresulttextedit.h>
-QTEST_MAIN(LanguageToolResultWidgetTest)
-LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
-    : QObject(parent)
+#include <QLayout>
+namespace KdepimTestLayout
 {
+void checkContentsMargins(int margin, QLayout *layout)
+{
+    int top = -1;
+    int bottom = -1;
+    int left = -1;
+    int right = -1;
+    layout->getContentsMargins(&left, &top, &right, &bottom);
+    QCOMPARE(top, margin);
+    QCOMPARE(left, margin);
+    QCOMPARE(bottom, margin);
+    QCOMPARE(right, margin);
+}
 }
 
-void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
-{
-    LanguageToolResultWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
-    GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
-    QVERIFY(mResult);
-}
+#endif

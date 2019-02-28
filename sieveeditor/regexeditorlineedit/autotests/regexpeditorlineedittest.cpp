@@ -19,6 +19,7 @@
 
 #include "regexpeditorlineedittest.h"
 #include "../regexpeditorlineedit.h"
+#include "kdepimtest_layout.h"
 #include <QLineEdit>
 #include <QToolButton>
 #include <QTest>
@@ -35,7 +36,7 @@ void RegexpEditorLineEditTest::shouldHaveDefaultValue()
 
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QLineEdit *mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);

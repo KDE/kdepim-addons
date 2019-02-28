@@ -20,6 +20,7 @@
 #include "grammalecteresultwidgettest.h"
 #include "grammalecteresultwidget.h"
 #include "grammarresulttextedit.h"
+#include "kdepimtest_layout.h"
 #include <QHBoxLayout>
 #include <QTest>
 QTEST_MAIN(GrammarResultWidgetTest)
@@ -34,7 +35,7 @@ void GrammarResultWidgetTest::shouldHaveDefaultValue()
     GrammalecteResultWidget w;
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
     GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 }

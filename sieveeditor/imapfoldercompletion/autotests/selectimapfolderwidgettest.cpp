@@ -19,6 +19,7 @@
 
 #include "selectimapfolderwidgettest.h"
 #include "../selectimapfolderwidget.h"
+#include "kdepimtest_layout.h"
 #include <QTreeView>
 #include <QLineEdit>
 #include <QVBoxLayout>
@@ -40,7 +41,7 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
     SelectImapFolderWidget w(account);
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
     QTreeView *mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
     QVERIFY(mTreeView);
 

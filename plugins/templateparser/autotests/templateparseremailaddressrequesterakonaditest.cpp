@@ -19,6 +19,7 @@
 
 #include "templateparseremailaddressrequesterakonaditest.h"
 #include "../templateparseremailaddressrequesterakonadi.h"
+#include "kdepimtest_layout.h"
 #include <QHBoxLayout>
 #include <QSignalSpy>
 #include <QTest>
@@ -35,7 +36,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
 
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     Akonadi::EmailAddressRequester *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     QVERIFY(mLineEdit);

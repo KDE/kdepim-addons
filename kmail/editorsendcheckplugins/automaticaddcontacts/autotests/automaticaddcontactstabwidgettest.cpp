@@ -19,7 +19,7 @@
 
 #include "automaticaddcontactstabwidgettest.h"
 #include "../automaticaddcontactstabwidget.h"
-
+#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QTest>
 #include <QVBoxLayout>
@@ -74,7 +74,7 @@ void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 
     QHBoxLayout *hlay = w->findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
     QVERIFY(hlay);
-    QCOMPARE(hlay->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, hlay);
 
     QLabel *lab = w->findChild<QLabel *>(QStringLiteral("labelfolder"));
     QVERIFY(lab);

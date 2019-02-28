@@ -20,6 +20,7 @@
 #include "languagetoolconfigwidgettest.h"
 #include "languagetoolconfigwidget.h"
 #include "languagetoolcombobox.h"
+#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QLabel>
 #include <QLineEdit>
@@ -40,7 +41,7 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     LanguageToolConfigWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QCheckBox *mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
     QVERIFY(mUseLocalInstance);
