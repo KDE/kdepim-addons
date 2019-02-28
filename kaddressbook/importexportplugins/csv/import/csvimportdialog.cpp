@@ -297,7 +297,7 @@ void CSVImportDialog::initGUI()
 
     QGridLayout *layout = new QGridLayout;
     mainLayout->addLayout(layout);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     QHBoxLayout *hbox = new QHBoxLayout;
 

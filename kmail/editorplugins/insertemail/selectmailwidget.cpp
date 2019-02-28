@@ -29,7 +29,7 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     mView = new Akonadi::EmailAddressSelectionWidget(true, nullptr, this);
     mView->setObjectName(QStringLiteral("emailaddressselectionwidget"));

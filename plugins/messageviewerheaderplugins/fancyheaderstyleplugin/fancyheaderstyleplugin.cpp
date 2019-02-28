@@ -106,8 +106,8 @@ QString FancyHeaderStylePlugin::extraScreenCss(const QString &headerFont) const
                                        "}\n\n"
                                        ).arg(pal.color(QPalette::Highlight).name(),
                                              pal.color(QPalette::HighlightedText).name(),
-                                             pal.color(QPalette::Foreground).name(),
-                                             pal.color(QPalette::Background).name());
+                                             pal.color(QPalette::WindowText).name(),
+                                             pal.color(QPalette::Window).name());
     return val;
 }
 
@@ -135,8 +135,8 @@ QString FancyHeaderStylePlugin::extraPrintCss(const QString &headerFont) const
                                        "  border-left: solid %2 1px ! important;\n"
                                        "  border-right: solid %2 1px ! important;\n"
                                        "}\n\n"
-                                       ).arg(pal.color(QPalette::Background).name(),
-                                             pal.color(QPalette::Foreground).name());
+                                       ).arg(pal.color(QPalette::Window).name(),
+                                             pal.color(QPalette::WindowText).name());
     return val;
 }
 
@@ -190,8 +190,8 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
         "div.fancy.header table a:hover {\n"
         "  background-color: transparent ! important;\n"
         "}\n\n")
-                        .arg(pal.color(QPalette::Background).name())
-                        .arg(pal.color(QPalette::Foreground).name())
+                        .arg(pal.color(QPalette::Window).name())
+                        .arg(pal.color(QPalette::WindowText).name())
                         .arg(headerFont);
     return val;
 }

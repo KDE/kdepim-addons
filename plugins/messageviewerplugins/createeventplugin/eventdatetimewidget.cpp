@@ -31,7 +31,7 @@ EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mDateEdit = new KDateComboBox;
     mDateEdit->setObjectName(QStringLiteral("eventdatecombobox"));
     mainLayout->addWidget(mDateEdit);

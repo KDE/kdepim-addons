@@ -35,7 +35,7 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     mGrammarResultWidget = new LanguageToolResultWidget(this);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);

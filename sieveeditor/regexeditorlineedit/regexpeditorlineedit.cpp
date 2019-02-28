@@ -55,7 +55,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     mLineEdit = new QLineEdit(this);
     connect(mLineEdit, &QLineEdit::textChanged, this, &RegexpEditorLineEdit::textChanged);

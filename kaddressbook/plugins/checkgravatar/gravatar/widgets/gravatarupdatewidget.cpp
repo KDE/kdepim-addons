@@ -34,7 +34,7 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     : QWidget(parent)
 {
     QGridLayout *mainLayout = new QGridLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     QHBoxLayout *hboxEmail = new QHBoxLayout;
 

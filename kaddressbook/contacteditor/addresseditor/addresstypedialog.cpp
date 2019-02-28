@@ -44,7 +44,7 @@ AddressTypeDialog::AddressTypeDialog(KContacts::Address::Type type, QWidget *par
     mainLayout->addWidget(page);
     mainLayout->addWidget(buttonBox);
     QVBoxLayout *layout = new QVBoxLayout(page);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
 
     QGroupBox *box = new QGroupBox(i18nc("street/postal", "Address Types"), page);
     mainLayout->addWidget(box);

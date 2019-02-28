@@ -44,10 +44,10 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     QHBoxLayout *topLayout = new QHBoxLayout;
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addLayout(topLayout);
     mSearchLineEdit = new QLineEdit(this);
     mSearchLineEdit->setObjectName(QStringLiteral("searchline"));

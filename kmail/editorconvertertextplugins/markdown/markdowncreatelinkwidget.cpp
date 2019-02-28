@@ -28,7 +28,7 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
 {
     QFormLayout *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));

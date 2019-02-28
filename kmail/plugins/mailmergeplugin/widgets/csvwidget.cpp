@@ -28,7 +28,7 @@ CsvWidget::CsvWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *csvWidgetLayout = new QVBoxLayout;
-    csvWidgetLayout->setMargin(0);
+    csvWidgetLayout->setContentsMargins(0, 0, 0, 0);
     setLayout(csvWidgetLayout);
 
     QLabel *lab = new QLabel(i18n("Path:"));

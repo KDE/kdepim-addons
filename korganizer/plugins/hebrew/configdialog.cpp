@@ -48,7 +48,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     okButton->setDefault(true);
     setModal(true);
     QVBoxLayout *topLayout = new QVBoxLayout(topFrame);
-    topLayout->setMargin(0);
+    topLayout->setContentsMargins(0, 0, 0, 0);
 
     mIsraelBox = new QCheckBox(topFrame);
     mIsraelBox->setText(i18n("Use Israeli holidays"));

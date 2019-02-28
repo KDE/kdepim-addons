@@ -49,7 +49,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     vbox->setSpacing(2);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
@@ -81,7 +81,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     hbox->addWidget(mCollectionCombobox);
 
     hbox = new QHBoxLayout;
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
@@ -89,7 +89,7 @@ NoteEdit::NoteEdit(QWidget *parent)
 
     hbox = new QHBoxLayout;
     hbox->setSpacing(2);
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
     vbox->addLayout(hbox);
 
     hbox->addStretch(1);

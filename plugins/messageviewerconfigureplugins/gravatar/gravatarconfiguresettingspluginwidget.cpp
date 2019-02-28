@@ -26,7 +26,7 @@ GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWi
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mGravatarConfigWidget = new Gravatar::GravatarConfigWidget(this);
     mGravatarConfigWidget->setObjectName(QStringLiteral("gravatarconfigwidget"));
     mainLayout->addWidget(mGravatarConfigWidget);

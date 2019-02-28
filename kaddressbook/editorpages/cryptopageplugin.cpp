@@ -86,7 +86,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     // Send preferences/sign (see kleo/kleo/enum.h)
     QWidget *hbox = new QWidget(box);
     QHBoxLayout *hboxHBoxLayout = new QHBoxLayout(hbox);
-    hboxHBoxLayout->setMargin(0);
+    hboxHBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     l = new QLabel(i18n("Sign:"), hbox);
     hboxHBoxLayout->addWidget(l);
@@ -104,7 +104,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     // Send preferences/encrypt (see kleo/kleo/enum.h)
     hbox = new QWidget(box);
     hboxHBoxLayout = new QHBoxLayout(hbox);
-    hboxHBoxLayout->setMargin(0);
+    hboxHBoxLayout->setContentsMargins(0, 0, 0, 0);
 
     l = new QLabel(i18n("Encrypt:"), hbox);
     hboxHBoxLayout->addWidget(l);

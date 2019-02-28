@@ -37,7 +37,7 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
     QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->margin(), 0);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
 
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));

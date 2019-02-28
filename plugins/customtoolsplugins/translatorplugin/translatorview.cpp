@@ -31,7 +31,7 @@ TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     , mTranslatorWidget(nullptr)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     mTranslatorWidget = new PimCommon::TranslatorWidget(this);
     connect(mTranslatorWidget, &PimCommon::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
 

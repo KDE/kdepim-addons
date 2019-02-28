@@ -28,7 +28,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 {
     QFormLayout *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     mName = new QLineEdit(this);
     mName->setObjectName(QStringLiteral("name"));

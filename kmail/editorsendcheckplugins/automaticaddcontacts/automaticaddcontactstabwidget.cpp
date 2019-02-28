@@ -45,7 +45,7 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     mainLayout->addWidget(mEnabled);
 
     QHBoxLayout *hlay = new QHBoxLayout;
-    hlay->setMargin(0);
+    hlay->setContentsMargins(0, 0, 0, 0);
     hlay->setObjectName(QStringLiteral("folderlayout"));
     mainLayout->addLayout(hlay);
 

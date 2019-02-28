@@ -29,7 +29,7 @@ AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mConfigureTab = new AutomaticAddContactsConfigureTab(this);

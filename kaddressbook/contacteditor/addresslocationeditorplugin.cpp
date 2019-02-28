@@ -31,7 +31,7 @@ AddressLocationEditor::AddressLocationEditor(QWidget *parent, const QList<QVaria
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setMargin(0);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
     mAddressesLocationWidget = new AddressesLocationWidget(this);
     mAddressesLocationWidget->setObjectName(QStringLiteral("addresseslocationwidget"));
     mainLayout->addWidget(mAddressesLocationWidget);

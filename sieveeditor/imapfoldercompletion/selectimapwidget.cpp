@@ -34,7 +34,7 @@ SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
 {
     QHBoxLayout *layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
-    layout->setMargin(0);
+    layout->setContentsMargins(0, 0, 0, 0);
     mLineEdit = new SelectImapLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     layout->addWidget(mLineEdit);

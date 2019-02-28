@@ -27,7 +27,7 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
     : WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget(parent)
 {
     QHBoxLayout *hbox = new QHBoxLayout(this);
-    hbox->setMargin(0);
+    hbox->setContentsMargins(0, 0, 0, 0);
     mConfigureWidget = new AdBlock::AdBlockSettingWidget(this);
     mConfigureWidget->setObjectName(QStringLiteral("configurewidget"));
     hbox->addWidget(mConfigureWidget);
