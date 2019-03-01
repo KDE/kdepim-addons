@@ -20,6 +20,7 @@
 #include "languagetoolconfigwidget.h"
 #include "languagetoolmanager.h"
 #include "languagetoolcombobox.h"
+#include "liblanguagetool_debug.h"
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
 #include <KLocalizedString>
@@ -80,6 +81,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     QToolButton *refreshButton = new QToolButton(this);
     refreshButton->setObjectName(QStringLiteral("refreshbutton"));
     refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
+    refreshButton->setToolTip(i18n("Refresh"));
     languageLayout->addWidget(refreshButton);
     connect(refreshButton, &QToolButton::clicked, this, &LanguageToolConfigWidget::refreshListOfLanguages);
 
@@ -130,9 +132,9 @@ void LanguageToolConfigWidget::uploadListOfLanguages()
     job->start();
 }
 
-void LanguageToolConfigWidget::slotGetLanguagesError()
+void LanguageToolConfigWidget::slotGetLanguagesError(const QString &error)
 {
-    qDebug() << " error !!!!";
+    qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Error during loading languages from server : " << error;
 }
 
 void LanguageToolConfigWidget::slotGetLanguagesFinished(const QString &result)

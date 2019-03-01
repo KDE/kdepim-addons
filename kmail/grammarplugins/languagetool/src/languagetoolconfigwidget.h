@@ -36,7 +36,7 @@ public:
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     void uploadListOfLanguages();
-    void slotGetLanguagesError();
+    void slotGetLanguagesError(const QString &error);
     void slotGetLanguagesFinished(const QString &result);
     void refreshListOfLanguages();
     QCheckBox *mUseLocalInstance = nullptr;
