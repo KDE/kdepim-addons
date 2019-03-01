@@ -42,6 +42,7 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
     mColor = QColor(Qt::red);
     const QJsonObject rulesObj = obj[QStringLiteral("rule")].toObject();
     if (!rulesObj.isEmpty()) {
+        mRule = rulesObj[QStringLiteral("id")].toString();
         const QJsonArray urlArray = rulesObj[QStringLiteral("urls")].toArray();
         if (!urlArray.isEmpty()) {
             if (urlArray.count() > 1) {
