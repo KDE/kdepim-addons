@@ -85,6 +85,8 @@ void MarkdownInterface::addBold()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("**%1**").arg(selectedText));
+    } else {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
 }
 
@@ -93,6 +95,8 @@ void MarkdownInterface::addCode()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("`%1`").arg(selectedText));
+    } else {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
 }
 
@@ -101,6 +105,8 @@ void MarkdownInterface::addItalic()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("_%1_").arg(selectedText));
+    } else {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
 }
 
@@ -121,6 +127,8 @@ void MarkdownInterface::addTitle()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("#%1#").arg(selectedText));
+    } else {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }
 }
 
