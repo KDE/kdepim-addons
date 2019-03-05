@@ -49,7 +49,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
-    vbox->setMargin(5);
+    vbox->setContentsMargins(5, 5, 5, 5);
     vbox->setSpacing(2);
 
     mMsgWidget = new KMessageWidget(this);

@@ -138,7 +138,7 @@ endif()
 # Extra package
 find_package(Gpgmepp 1.8.0 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "http://www.gnupg.org" TYPE REQUIRED)
-
+add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x060000)
 if(KDEPIMADDONS_BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()

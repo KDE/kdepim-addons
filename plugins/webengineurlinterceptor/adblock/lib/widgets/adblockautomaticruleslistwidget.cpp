@@ -45,22 +45,22 @@ void AdBlockAutomaticRulesListWidget::updateItem(QListWidgetItem *item)
         font.setItalic(false);
         item->setFont(font);
         if (rule.contains(QRegularExpression(QStringLiteral("^@@.*")))) {
-            item->setTextColor(Qt::magenta);
+            item->setForeground(Qt::magenta);
         } else if (rule.contains(QRegularExpression(QStringLiteral("^\\[.*")))) {
-            item->setTextColor(Qt::red);
+            item->setForeground(Qt::red);
         } else if (rule.contains(QRegularExpression(QStringLiteral(".*##.*")))) {
-            item->setTextColor(Qt::blue);
+            item->setForeground(Qt::blue);
         } else {
             if (!defaultTextColor.isValid()) {
                 const QPalette palette = viewport()->palette();
                 defaultTextColor = palette.text().color();
             }
-            item->setTextColor(defaultTextColor);
+            item->setForeground(defaultTextColor);
         }
     } else {
         font.setItalic(true);
         item->setFont(font);
-        item->setTextColor(Qt::gray);
+        item->setForeground(Qt::gray);
     }
 }
 
@@ -85,7 +85,7 @@ void AdBlockAutomaticRulesListWidget::createItem(const QString &rule)
     if (rule.startsWith(QLatin1Char('!')) || rule.startsWith(QLatin1Char('['))) {
         //Comment
         subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
-        subItem->setTextColor(Qt::gray);
+        subItem->setForeground(Qt::gray);
     } else {
         subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
         const bool checkState = mDisabledRules.contains(rule);

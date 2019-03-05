@@ -126,7 +126,7 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
                 mUserID = QString::fromUtf8(cols[9]);
             }
             if (size > 6) {
-                mKeyDate = QDateTime::fromTime_t(cols[5].toUInt());
+                mKeyDate = QDateTime::fromSecsSinceEpoch(cols[5].toUInt());
             }
             // gpg2: UID is on a separate line
         } else if (cols[0] == "uid" && size > 9 && mUserID.isEmpty()) {
