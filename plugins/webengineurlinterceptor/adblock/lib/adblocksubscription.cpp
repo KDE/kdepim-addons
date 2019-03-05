@@ -367,7 +367,7 @@ void AdBlockCustomList::saveSubscription()
     textStream << "Url: " << url().toString() << endl;
     textStream << "[Adblock Plus 1.1.1]" << endl;
 
-    foreach (const AdBlockRule *rule, mRules) {
+    for (const AdBlockRule *rule : qAsConst(mRules)) {
         textStream << rule->filter() << endl;
     }
 
@@ -386,7 +386,7 @@ bool AdBlockCustomList::canBeRemoved() const
 
 bool AdBlockCustomList::containsFilter(const QString &filter) const
 {
-    foreach (const AdBlockRule *rule, mRules) {
+    for (const AdBlockRule *rule : qAsConst(mRules)) {
         if (rule->filter() == filter) {
             return true;
         }

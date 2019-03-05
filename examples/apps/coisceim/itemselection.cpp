@@ -80,7 +80,8 @@ static QModelIndexList selectedRows(const QItemSelection &selection, int column 
 {
     QModelIndexList list;
 
-    foreach (const QModelIndex &idx, selection.indexes()) {
+    const auto listSelection = selection.indexes();
+    for (const QModelIndex &idx : listSelection) {
         if (idx.column() == column) {
             list << idx;
         }

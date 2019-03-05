@@ -65,7 +65,8 @@ void CollectionMonitoredWidget::selectionChanged(const QItemSelection &selected,
         return;
     }
 
-    foreach (const Akonadi::Collection &oldCol, m_oneCollectionChangeRecorder->collectionsMonitored()) {
+    const auto listCol = m_oneCollectionChangeRecorder->collectionsMonitored();
+    for (const Akonadi::Collection &oldCol : listCol) {
         m_oneCollectionChangeRecorder->setCollectionMonitored(oldCol, false);
     }
     m_oneCollectionChangeRecorder->setCollectionMonitored(col, true);

@@ -49,7 +49,8 @@ void TodoCheckableProxyModel::selectionChanged(const QItemSelection &selected, c
 
 void TodoCheckableProxyModel::setChecked(const QItemSelection &selection, bool checked)
 {
-    foreach (const QModelIndex &index, selection.indexes()) {
+    const auto listSelection = selection.indexes();
+    for (const QModelIndex &index : listSelection) {
         if (index.column() == 0) {
             Item item = sourceModel()->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
             if (!item.hasPayload<KCalCore::Todo::Ptr>()) {

@@ -294,26 +294,26 @@ bool AdBlockRule::matchDomain(const QString &domain) const
     }
 
     if (m_blockedDomains.isEmpty()) {
-        foreach (const QString &d, m_allowedDomains) {
+        for (const QString &d : qAsConst(m_allowedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return true;
             }
         }
     } else if (m_allowedDomains.isEmpty()) {
-        foreach (const QString &d, m_blockedDomains) {
+        for (const QString &d : qAsConst(m_blockedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return false;
             }
         }
         return true;
     } else {
-        foreach (const QString &d, m_blockedDomains) {
+        for (const QString &d : qAsConst(m_blockedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return false;
             }
         }
 
-        foreach (const QString &d, m_allowedDomains) {
+        for (const QString &d : qAsConst(m_allowedDomains)) {
             if (isMatchingDomain(domain, d)) {
                 return true;
             }

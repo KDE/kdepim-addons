@@ -82,7 +82,7 @@ void CreateTripWidget::tripSelected(const Akonadi::Item &item)
 void addTrip(QVariantList *list, Item::Id newId)
 {
     bool found = false;
-    foreach (const QVariant &id, *list) {
+    for (const QVariant &id : qAsConst(*list)) {
         if (id.toLongLong() == newId) {
             found = true;
         }
