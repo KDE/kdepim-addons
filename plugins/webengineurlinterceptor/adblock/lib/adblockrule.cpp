@@ -701,7 +701,7 @@ bool AdBlockRule::isMatchingRegExpStrings(const QString &url) const
 {
     Q_ASSERT(m_regExp);
 
-    foreach (const QStringMatcher &matcher, m_regExp->matchers) {
+    for (const QStringMatcher &matcher : qAsConst(m_regExp->matchers)) {
         if (matcher.indexIn(url) == -1) {
             return false;
         }
