@@ -22,6 +22,7 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QNetworkAccessManager>
+#include <QColor>
 
 LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
@@ -64,6 +65,18 @@ QString LanguageToolManager::languageToolLanguagesPath() const
 QString LanguageToolManager::convertToLanguagePath(const QString &path)
 {
     return path + QStringLiteral("/languages");
+}
+
+QColor LanguageToolManager::grammarColorForError(const QString &error)
+{
+    QColor col = mGrammarColor.value(error);
+    if (col.isValid()) {
+        return col;
+    }
+    col.setRgb(qrand() % 256, qrand() % 256, qrand() % 256);
+    //Generate color.
+    mGrammarColor.insert(error, col);
+    return col;
 }
 
 QString LanguageToolManager::languageToolPath() const

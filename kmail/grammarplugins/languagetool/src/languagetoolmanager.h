@@ -21,7 +21,9 @@
 #define LANGUAGETOOLMANAGER_H
 
 #include <QObject>
+#include <QHash>
 #include "libkmaillanguagetool_export.h"
+class QColor;
 class QNetworkAccessManager;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolManager : public QObject
 {
@@ -50,8 +52,11 @@ public:
     Q_REQUIRED_RESULT QString languageToolLanguagesPath() const;
 
     static QString convertToLanguagePath(const QString &path);
+
+    Q_REQUIRED_RESULT QColor grammarColorForError(const QString &error);
 private:
     Q_DISABLE_COPY(LanguageToolManager)
+    QHash<QString, QColor> mGrammarColor;
     QString mLanguage;
     QString mLanguageToolPath;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;

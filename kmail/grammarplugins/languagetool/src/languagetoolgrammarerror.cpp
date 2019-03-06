@@ -19,6 +19,7 @@
 
 #include "languagetoolgrammarerror.h"
 #include "liblanguagetool_debug.h"
+#include "languagetoolmanager.h"
 
 #include <QJsonArray>
 
@@ -38,8 +39,6 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
     mStart = obj[QStringLiteral("offset")].toInt(-1);
     mLength = obj[QStringLiteral("length")].toInt(-1);
     mSuggestions = parseSuggestion(obj);
-    //TODO generate specific color!
-    mColor = QColor(Qt::red);
     const QJsonObject rulesObj = obj[QStringLiteral("rule")].toObject();
     if (!rulesObj.isEmpty()) {
         mRule = rulesObj[QStringLiteral("id")].toString();
@@ -52,10 +51,11 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
             //qDebug() << " mUrl" << mUrl;
         }
     }
-
-    //TODO ???
-//    mRule = obj[QStringLiteral("sRuleId")].toString();
-//    mOption = obj[QStringLiteral("sType")].toString();
+    if (!mRule.isEmpty()) {
+        mColor = LanguageToolManager::self()->grammarColorForError(mRule);
+    } else {
+        mColor = QColor(Qt::red);
+    }
 }
 
 QStringList LanguageToolGrammarError::parseSuggestion(const QJsonObject &obj)
