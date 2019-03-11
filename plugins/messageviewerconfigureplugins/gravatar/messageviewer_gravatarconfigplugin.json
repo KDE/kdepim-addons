@@ -18,7 +18,6 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку Gravatar.",
         "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "Description[zh_CN]": "此插件允许您配置 Gravatar 支持。",
-        "EnabledByDefault": "true",
         "Name": "Gravatar",
         "Name[ca@valencia]": "Gravatar",
         "Name[ca]": "Gravatar",
