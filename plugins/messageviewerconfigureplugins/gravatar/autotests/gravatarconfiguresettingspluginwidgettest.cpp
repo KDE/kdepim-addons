@@ -20,7 +20,8 @@
 #include "gravatarconfiguresettingspluginwidgettest.h"
 #include "../gravatarconfiguresettingspluginwidget.h"
 #include "kdepimtest_layout.h"
-#include <Gravatar/GravatarConfigWidget>
+#include <Gravatar/GravatarConfigureSettingsWidget>
+#include <QCheckBox>
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -39,6 +40,11 @@ void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
-    Gravatar::GravatarConfigWidget *mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigWidget *>(QStringLiteral("gravatarconfigwidget"));
+    QCheckBox *mEnableGravatarSupport = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
+    QVERIFY(mEnableGravatarSupport);
+    QVERIFY(!mEnableGravatarSupport->isChecked());
+    QVERIFY(!mEnableGravatarSupport->text().isEmpty());
+
+    Gravatar::GravatarConfigureSettingsWidget *mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfigwidget"));
     QVERIFY(mGravatarConfigWidget);
 }

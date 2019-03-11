@@ -21,8 +21,9 @@
 #define GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
 
 #include <MessageViewer/MessageViewerConfigureSettingsPluginWidget>
+class QCheckBox;
 namespace Gravatar {
-class GravatarConfigWidget;
+class GravatarConfigureSettingsWidget;
 }
 class GravatarConfigureSettingsPluginWidget : public MessageViewer::MessageViewerConfigureSettingsPluginWidget
 {
@@ -36,7 +37,8 @@ public:
     void resetSettings() override;
 
 private:
-    Gravatar::GravatarConfigWidget *mGravatarConfigWidget = nullptr;
+    Gravatar::GravatarConfigureSettingsWidget *mGravatarConfigWidget = nullptr;
+    QCheckBox *mEnableGravatarSupport = nullptr;
 };
 
 #endif // GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
