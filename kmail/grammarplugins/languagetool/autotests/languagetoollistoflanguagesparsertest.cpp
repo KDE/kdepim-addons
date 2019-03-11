@@ -24,5 +24,4 @@ QTEST_GUILESS_MAIN(LanguageToolListOfLanguagesParserTest)
 LanguageToolListOfLanguagesParserTest::LanguageToolListOfLanguagesParserTest(QObject *parent)
     : QObject(parent)
 {
-
 }

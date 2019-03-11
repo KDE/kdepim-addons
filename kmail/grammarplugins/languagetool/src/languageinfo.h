@@ -37,7 +37,6 @@ public:
     Q_REQUIRED_RESULT QString code() const;
     void setCode(const QString &code);
 
-
     Q_REQUIRED_RESULT bool isValid() const;
 
     void parse(const QJsonObject &obj);

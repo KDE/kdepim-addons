@@ -87,7 +87,6 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 
     mainLayout->addLayout(languageLayout);
 
-
     mainLayout->addStretch(1);
     uploadListOfLanguages();
     loadSettings();

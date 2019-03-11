@@ -21,8 +21,7 @@
 #define KDEPIMTEST_LAYOUT_H
 #include <QTest>
 #include <QLayout>
-namespace KdepimTestLayout
-{
+namespace KdepimTestLayout {
 void checkContentsMargins(int margin, QLayout *layout)
 {
     int top = -1;

@@ -351,8 +351,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
     return result;
 }
 
-void MergeContacts::checkCustomValue(const KContacts::Addressee &address, const QString &variable, KContacts::Addressee &newContact, MergeContacts::ConflictInformations &result,
-                                     MergeContacts::ConflictInformation conflict)
+void MergeContacts::checkCustomValue(const KContacts::Addressee &address, const QString &variable, KContacts::Addressee &newContact, MergeContacts::ConflictInformations &result, MergeContacts::ConflictInformation conflict)
 {
     const QString value = address.custom(QStringLiteral("KADDRESSBOOK"), variable);
     if (!value.isEmpty()) {

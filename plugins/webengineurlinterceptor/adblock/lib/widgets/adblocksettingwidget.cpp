@@ -465,4 +465,3 @@ void AdBlockListwidgetItem::setSubscription(AdBlockSubscription *subscription)
 {
     mSubscription = subscription;
 }
-

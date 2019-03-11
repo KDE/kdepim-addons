@@ -23,12 +23,10 @@
 
 LanguageInfo::LanguageInfo()
 {
-
 }
 
 LanguageInfo::~LanguageInfo()
 {
-
 }
 
 QString LanguageInfo::name() const

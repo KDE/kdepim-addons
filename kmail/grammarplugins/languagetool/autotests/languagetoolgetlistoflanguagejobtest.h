@@ -33,5 +33,4 @@ private Q_SLOTS:
     void shouldBeAbleToStart();
 };
 
-
 #endif // LANGUAGETOOLGETLISTOFLANGUAGEJOBTEST_H

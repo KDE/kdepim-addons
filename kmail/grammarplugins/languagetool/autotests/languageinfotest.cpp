@@ -25,7 +25,6 @@ QTEST_GUILESS_MAIN(LanguageInfoTest)
 LanguageInfoTest::LanguageInfoTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageInfoTest::shouldHaveDefaultValues()

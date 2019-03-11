@@ -54,7 +54,6 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
 
     connect(button, &QPushButton::clicked, this, &LanguageToolWidget::slotCheckGrammar);
     connect(languageButton, &QPushButton::clicked, this, &LanguageToolWidget::slotGetListOfLanguages);
-
 }
 
 LanguageToolWidget::~LanguageToolWidget()
@@ -104,7 +103,6 @@ void LanguageToolWidget::slotGetLanguagesError()
 {
     qDebug() << " error !!!!";
 }
-
 
 void LanguageToolWidget::slotGetLanguagesFinished(const QString &result)
 {

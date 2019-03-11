@@ -35,14 +35,12 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     mLink = new QLineEdit(this);
     mLink->setObjectName(QStringLiteral("link"));
 
-
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Link:"), mLink);
 }
 
 MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()
 {
-
 }
 
 QString MarkdownCreateLinkWidget::linkStr() const

@@ -24,12 +24,10 @@
 
 LanguageToolListOfLanguagesParser::LanguageToolListOfLanguagesParser()
 {
-
 }
 
 LanguageToolListOfLanguagesParser::~LanguageToolListOfLanguagesParser()
 {
-
 }
 
 QVector<LanguageInfo> LanguageToolListOfLanguagesParser::parseResult(const QJsonArray &array) const

@@ -28,7 +28,6 @@ QTEST_MAIN(MarkdownCreateLinkWidgetTest)
 MarkdownCreateLinkWidgetTest::MarkdownCreateLinkWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
@@ -39,7 +38,6 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     KdepimTestLayout::checkContentsMargins(0, mainLayout);
     mainLayout->setContentsMargins(0, 0, 0, 0);
-
 
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);

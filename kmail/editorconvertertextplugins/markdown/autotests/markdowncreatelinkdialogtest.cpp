@@ -21,7 +21,6 @@
 #include "markdowncreatelinkdialog.h"
 #include "markdowncreatelinkwidget.h"
 
-
 #include <QDialogButtonBox>
 #include <QTest>
 #include <QVBoxLayout>
@@ -30,7 +29,6 @@ QTEST_MAIN(MarkdownCreateLinkDialogTest)
 MarkdownCreateLinkDialogTest::MarkdownCreateLinkDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()

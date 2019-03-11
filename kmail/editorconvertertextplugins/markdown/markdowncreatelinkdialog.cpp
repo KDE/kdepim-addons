@@ -44,7 +44,6 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
 
 MarkdownCreateLinkDialog::~MarkdownCreateLinkDialog()
 {
-
 }
 
 QString MarkdownCreateLinkDialog::linkStr() const

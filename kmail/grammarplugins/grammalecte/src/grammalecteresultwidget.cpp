@@ -67,7 +67,7 @@ void GrammalecteResultWidget::slotError(GrammalecteResultJob::ErrorType error)
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing python path";
         break;
     case GrammalecteResultJob::ErrorType::GrammalecteMissing:
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing grammalectepath" ;
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing grammalectepath";
         break;
     case GrammalecteResultJob::ErrorType::Unknown:
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: unknow error";

@@ -78,7 +78,6 @@ void LanguageToolGetListOfLanguageJob::addRequestAttribute(QNetworkRequest &requ
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/x-www-form-urlencoded"));
 }
 
-
 QString LanguageToolGetListOfLanguageJob::listOfLanguagePath() const
 {
     return mListOfLanguagePath;
