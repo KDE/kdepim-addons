@@ -53,6 +53,8 @@ option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branc
 
 option(KMAIL_EDITORCONVERTERPLUGIN_TEMPLATE_BUILD "Build the kmail editor converter plugin." FALSE)
 
+option(KMAIL_DKIM_CONFIGURE_DIALOG_BUILD "Build dkim-verify configure dialog (experimental)." FALSE)
+
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
 
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
