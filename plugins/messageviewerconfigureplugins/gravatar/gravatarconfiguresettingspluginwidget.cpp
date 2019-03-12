@@ -18,7 +18,6 @@
 */
 
 #include "gravatarconfiguresettingspluginwidget.h"
-#include <Gravatar/GravatarConfigWidget>
 #include <Gravatar/GravatarConfigureSettingsWidget>
 #include <Gravatar/GravatarCache>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
