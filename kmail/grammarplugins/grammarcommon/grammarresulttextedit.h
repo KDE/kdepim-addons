@@ -51,6 +51,7 @@ private:
     };
     void generalPaletteChanged();
     QColor mTextColor;
+    QColor mNegativeTextColor;
 };
 
 #endif // GRAMMARRESULTTEXTEDIT_H

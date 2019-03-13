@@ -28,12 +28,14 @@
 #include <QTextBlock>
 #include <QTextDocument>
 #include <QPainter>
+#include <KColorScheme>
 
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
 {
     setReadOnly(true);
     setAcceptRichText(false);
+    generalPaletteChanged();
 }
 
 GrammarResultTextEdit::~GrammarResultTextEdit()
@@ -68,6 +70,8 @@ void GrammarResultTextEdit::generalPaletteChanged()
     QColor color = palette.text().color();
     color.setAlpha(128);
     mTextColor = color;
+    const KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
+    mNegativeTextColor = bgBrush.brush(this).color();
 }
 
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &infos)
@@ -79,7 +83,7 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
             QTextCursor cur(block);
             QTextCharFormat format;
             //Verify color
-            format.setBackground(info.color().isValid() ? info.color() : QColor(Qt::red));
+            format.setBackground(info.color().isValid() ? info.color() : mNegativeTextColor);
             QString toolTip = info.error();
             if (!info.url().isEmpty()) {
                 toolTip += QLatin1Char('\n') + i18n("See on: %1", info.url());
