@@ -21,11 +21,11 @@
 #define DKIMCONFIGUREDIALOG_H
 
 #include <QDialog>
-#include "messageviewer_private_export.h"
+#include "dkimconfigure_private_export.h"
 
-namespace MessageViewer {
+
 class DKIMConfigureWidget;
-class MESSAGEVIEWER_TESTS_EXPORT DKIMConfigureDialog : public QDialog
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -39,5 +39,4 @@ private:
     void writeConfig();
     DKIMConfigureWidget *mConfigureWidget = nullptr;
 };
-}
 #endif // DKIMCONFIGUREDIALOG_H

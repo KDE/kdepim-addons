@@ -1,3 +1,26 @@
+set(dkimverifyconfigure_SRCS
+    dkimconfiguredialog.cpp
+    dkimconfiguretab.cpp
+    dkimconfiguretabwidget.cpp
+    dkimconfigurewidget.cpp
+)
+
+ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
+
+add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
+generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
+target_link_libraries(dkimverifyconfigure
+    KF5::I18n
+    KF5::IconThemes
+    KF5::ConfigCore
+    KF5::WidgetsAddons
+    )
+
+set_target_properties(dkimverifyconfigure
+    PROPERTIES OUTPUT_NAME dkimverifyconfigure VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
+    )
+
+install(TARGETS dkimverifyconfigure ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()

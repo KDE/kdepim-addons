@@ -26,7 +26,6 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
-using namespace MessageViewer;
 DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {

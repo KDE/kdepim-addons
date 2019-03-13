@@ -21,11 +21,11 @@
 #define DKIMCONFIGURETAB_H
 
 #include <QWidget>
-#include "messageviewer_private_export.h"
+#include "dkimconfigure_private_export.h"
+
 class QTabWidget;
-namespace MessageViewer {
 class DKIMConfigureTabWidget;
-class MESSAGEVIEWER_TESTS_EXPORT DKIMConfigureTab : public QWidget
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
 {
     Q_OBJECT
 public:
@@ -40,6 +40,5 @@ private:
     QList<DKIMConfigureTabWidget *> mListTabWidget;
     QTabWidget *mTabWidget = nullptr;
 };
-}
 
 #endif // DKIMCONFIGURETAB_H

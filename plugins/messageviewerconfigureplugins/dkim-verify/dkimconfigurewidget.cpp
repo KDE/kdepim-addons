@@ -24,7 +24,6 @@
 
 #include <KLocalizedString>
 
-using namespace MessageViewer;
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {

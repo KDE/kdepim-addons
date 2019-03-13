@@ -23,7 +23,6 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 
-using namespace MessageViewer;
 DKIMConfigureTabWidget::DKIMConfigureTabWidget(QWidget *parent)
     : QWidget(parent)
 {

@@ -25,7 +25,6 @@
 #include <QRegularExpression>
 #include <QTabWidget>
 
-using namespace MessageViewer;
 DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
 {
