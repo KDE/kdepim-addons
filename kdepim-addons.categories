@@ -43,3 +43,4 @@ org.kde.pim.kmail_grammalecteplugin kdepim-addons (grammalecte plugin) IDENTIFIE
 org.kde.pim.libgrammalecteplugin kdepim-addons (libgramalecte) IDENTIFIER [LIBGRAMMALECTE_PLUGIN_LOG]
 org.kde.pim.kmail_languagetoolplugin kdepim-addons (languagetool plugin) IDENTIFIER [KMAIL_EDITOR_LANGUAGETOOL_PLUGIN_LOG]
 org.kde.pim.liblanguagetoolplugin kdepim-addons (liblanguagetool) IDENTIFIER [LIBLANGUAGE_PLUGIN_LOG]
+org.kde.pim.libdkimconfigureplugin kdepim-addons (dkim-verify-configure) IDENTIFIER [LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG]
