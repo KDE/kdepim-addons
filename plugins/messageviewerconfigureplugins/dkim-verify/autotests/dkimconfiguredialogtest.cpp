@@ -18,8 +18,8 @@
 */
 
 #include "dkimconfiguredialogtest.h"
-#include "dkim-verify/dkimconfiguredialog.h"
-#include "dkim-verify/dkimconfigurewidget.h"
+#include "../dkimconfiguredialog.h"
+#include "../dkimconfigurewidget.h"
 #include <QTest>
 #include <QStandardPaths>
 #include <QVBoxLayout>
@@ -35,12 +35,12 @@ DKIMConfigureDialogTest::DKIMConfigureDialogTest(QObject *parent)
 
 void DKIMConfigureDialogTest::shouldHaveDefaultValue()
 {
-    MessageViewer::DKIMConfigureDialog dlg;
+    DKIMConfigureDialog dlg;
 
     QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    MessageViewer::DKIMConfigureWidget *mConfigureWidget = dlg.findChild<MessageViewer::DKIMConfigureWidget *>(QStringLiteral("mConfigureWidget"));
+    DKIMConfigureWidget *mConfigureWidget = dlg.findChild<DKIMConfigureWidget *>(QStringLiteral("mConfigureWidget"));
     QVERIFY(mConfigureWidget);
 
     QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));

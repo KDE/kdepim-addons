@@ -18,8 +18,9 @@
 */
 
 #include "dkimconfigurewidgettest.h"
-#include "dkim-verify/dkimconfigurewidget.h"
-#include "dkim-verify/dkimconfiguretab.h"
+#include "../dkimconfigurewidget.h"
+#include "../dkimconfiguretab.h"
+#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -32,11 +33,11 @@ DKIMConfigureWidgetTest::DKIMConfigureWidgetTest(QObject *parent)
 
 void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
 {
-    MessageViewer::DKIMConfigureWidget w;
+    DKIMConfigureWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->margin(), 0);
+    KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
-    MessageViewer::DKIMConfigureTab *mTabWidget = w.findChild<MessageViewer::DKIMConfigureTab *>(QStringLiteral("tabwidget"));
+    DKIMConfigureTab *mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
