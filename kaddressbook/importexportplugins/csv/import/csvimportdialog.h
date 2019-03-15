@@ -26,7 +26,7 @@
 
 #include <QList>
 
-class KComboBox;
+class QComboBox;
 class QLineEdit;
 class KUrlRequester;
 
@@ -71,8 +71,8 @@ private:
     QButtonGroup *mDelimiterGroup = nullptr;
     QLineEdit *mDelimiterEdit = nullptr;
     QLineEdit *mDatePatternEdit = nullptr;
-    KComboBox *mComboQuote = nullptr;
-    KComboBox *mCodecCombo = nullptr;
+    QComboBox *mComboQuote = nullptr;
+    QComboBox *mCodecCombo = nullptr;
     QCheckBox *mSkipFirstRow = nullptr;
     KUrlRequester *mUrlRequester = nullptr;
     QCsvModel *mModel = nullptr;

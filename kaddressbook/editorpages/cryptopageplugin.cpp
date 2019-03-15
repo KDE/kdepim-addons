@@ -91,7 +91,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     l = new QLabel(i18n("Sign:"), hbox);
     hboxHBoxLayout->addWidget(l);
 
-    mSignPref = new KComboBox(hbox);
+    mSignPref = new QComboBox(hbox);
     hboxHBoxLayout->addWidget(mSignPref);
     l->setBuddy(mSignPref);
     mSignPref->setEditable(false);
@@ -109,7 +109,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     l = new QLabel(i18n("Encrypt:"), hbox);
     hboxHBoxLayout->addWidget(l);
 
-    mCryptPref = new KComboBox(hbox);
+    mCryptPref = new QComboBox(hbox);
     hboxHBoxLayout->addWidget(mCryptPref);
     l->setBuddy(mCryptPref);
     mCryptPref->setEditable(false);

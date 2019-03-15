@@ -22,7 +22,7 @@
 #include "attachmentlistwidget.h"
 
 #include <KLocalizedString>
-#include <KComboBox>
+#include <QComboBox>
 
 #include <QHBoxLayout>
 #include <QVBoxLayout>
@@ -43,12 +43,12 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Source:"));
     hbox->addWidget(lab);
 
-    mSource = new KComboBox;
+    mSource = new QComboBox;
     mSource->setObjectName(QStringLiteral("source"));
     mSource->addItem(i18n("Address Book"), AddressBook);
     mSource->addItem(i18n("CSV"), CSV);
-    connect(mSource, QOverload<int>::of(&KComboBox::currentIndexChanged), this, &MailMergeWidget::slotSourceChanged);
-    connect(mSource, QOverload<int>::of(&KComboBox::activated), this, &MailMergeWidget::slotSourceChanged);
+    connect(mSource, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MailMergeWidget::slotSourceChanged);
+    connect(mSource, QOverload<int>::of(&QComboBox::activated), this, &MailMergeWidget::slotSourceChanged);
 
     hbox->addWidget(mSource);
 

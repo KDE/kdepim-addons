@@ -20,7 +20,7 @@
 
 #include <QWidget>
 
-class KComboBox;
+class QComboBox;
 class QStackedWidget;
 
 namespace MailMerge {
@@ -46,7 +46,7 @@ private Q_SLOTS:
     void slotSourceChanged(int index);
 
 private:
-    KComboBox *mSource = nullptr;
+    QComboBox *mSource = nullptr;
     QStackedWidget *mStackedWidget = nullptr;
     AttachmentListWidget *mAttachment = nullptr;
     MailMerge::CsvWidget *mCsvWidget = nullptr;

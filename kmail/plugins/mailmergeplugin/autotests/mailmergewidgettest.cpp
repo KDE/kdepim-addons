@@ -19,7 +19,7 @@
 #include "../widgets/mailmergewidget.h"
 #include "PimCommon/SimpleStringlistEditor"
 #include <qtest.h>
-#include <KComboBox>
+#include <QComboBox>
 #include <QStackedWidget>
 #include <QSignalSpy>
 using namespace MailMerge;
@@ -32,7 +32,7 @@ MailMergeWidgetTest::MailMergeWidgetTest()
 void MailMergeWidgetTest::shouldHaveDefaultValueOnCreation()
 {
     MailMergeWidget mailmerge;
-    KComboBox *source = mailmerge.findChild<KComboBox *>(QStringLiteral("source"));
+    QComboBox *source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QVERIFY(source);
     QCOMPARE(source->currentIndex(), 0);
 
@@ -55,7 +55,7 @@ void MailMergeWidgetTest::shouldHaveDefaultValueOnCreation()
 void MailMergeWidgetTest::shouldEmitSourceModeChanged()
 {
     MailMergeWidget mailmerge;
-    KComboBox *source = mailmerge.findChild<KComboBox *>(QStringLiteral("source"));
+    QComboBox *source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QCOMPARE(source->currentIndex(), 0);
     QSignalSpy spy(&mailmerge, SIGNAL(sourceModeChanged(MailMerge::MailMergeWidget::SourceType)));
     source->setCurrentIndex(1);
@@ -65,7 +65,7 @@ void MailMergeWidgetTest::shouldEmitSourceModeChanged()
 void MailMergeWidgetTest::shouldDontEmitSourceModeChangedWhenIndexIsInvalid()
 {
     MailMergeWidget mailmerge;
-    KComboBox *source = mailmerge.findChild<KComboBox *>(QStringLiteral("source"));
+    QComboBox *source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QCOMPARE(source->currentIndex(), 0);
     QSignalSpy spy(&mailmerge, SIGNAL(sourceModeChanged(MailMerge::MailMergeWidget::SourceType)));
     source->setCurrentIndex(-1);
@@ -75,7 +75,7 @@ void MailMergeWidgetTest::shouldDontEmitSourceModeChangedWhenIndexIsInvalid()
 void MailMergeWidgetTest::shouldChangeStackedWidgetIndexWhenChangeComboboxIndex()
 {
     MailMergeWidget mailmerge;
-    KComboBox *source = mailmerge.findChild<KComboBox *>(QStringLiteral("source"));
+    QComboBox *source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QCOMPARE(source->currentIndex(), 0);
 
     QStackedWidget *stackedwidget = mailmerge.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));

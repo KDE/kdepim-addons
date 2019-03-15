@@ -24,7 +24,7 @@
 #include "templateselectiondialog.h"
 
 #include <KConfig>
-#include <KComboBox>
+#include <QComboBox>
 #include <QInputDialog>
 #include <QLineEdit>
 #include <KLocalizedString>
@@ -62,13 +62,13 @@ enum {
     Codec = 4
 };
 
-class ContactFieldComboBox : public KComboBox
+class ContactFieldComboBox : public QComboBox
 {
     Q_OBJECT
 public:
 
     ContactFieldComboBox(QWidget *parent = nullptr)
-        : KComboBox(parent)
+        : QComboBox(parent)
     {
         fillFieldMap();
 
@@ -200,10 +200,10 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mDelimiterEdit, QOverload<const QString &>::of(&QLineEdit::textChanged), this, [this](const QString &str) {
         customDelimiterChanged(str);
     });
-    connect(mComboQuote, QOverload<const QString &>::of(&KComboBox::activated), this, [this](const QString &str) {
+    connect(mComboQuote, QOverload<const QString &>::of(&QComboBox::activated), this, [this](const QString &str) {
         textQuoteChanged(str);
     });
-    connect(mCodecCombo, QOverload<const QString &>::of(&KComboBox::activated), this, [this]() {
+    connect(mCodecCombo, QOverload<const QString &>::of(&QComboBox::activated), this, [this]() {
         codecChanged();
     });
     connect(mSkipFirstRow, &QCheckBox::toggled, this, [this](bool b) {
@@ -393,7 +393,7 @@ void CSVImportDialog::initGUI()
     mainLayout->addWidget(label);
     layout->addWidget(label, 1, 2);
 
-    mComboQuote = new KComboBox(page);
+    mComboQuote = new QComboBox(page);
     mainLayout->addWidget(mComboQuote);
     mComboQuote->setToolTip(
         i18nc("@info:tooltip", "Select the quote character"));
@@ -451,7 +451,7 @@ void CSVImportDialog::initGUI()
     mainLayout->addWidget(label);
     layout->addWidget(label, 3, 2);
 
-    mCodecCombo = new KComboBox(page);
+    mCodecCombo = new QComboBox(page);
     mainLayout->addWidget(mCodecCombo);
     mCodecCombo->setToolTip(
         i18nc("@info:tooltip", "Select the text codec"));

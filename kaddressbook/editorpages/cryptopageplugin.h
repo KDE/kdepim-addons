@@ -30,7 +30,7 @@ namespace Kleo {
 class KeyRequester;
 }
 
-class KComboBox;
+class QComboBox;
 class QCheckBox;
 
 class CryptoPagePlugin : public ContactEditor::ContactEditorPagePlugin
@@ -51,8 +51,8 @@ private:
         NumberOfProtocols = 4
     };
     QCheckBox *mProtocolCB[NumberOfProtocols];
-    KComboBox *mSignPref = nullptr;
-    KComboBox *mCryptPref = nullptr;
+    QComboBox *mSignPref = nullptr;
+    QComboBox *mCryptPref = nullptr;
     Kleo::KeyRequester *mPgpKey = nullptr;
     Kleo::KeyRequester *mSmimeCert = nullptr;
     bool mReadOnly = false;
