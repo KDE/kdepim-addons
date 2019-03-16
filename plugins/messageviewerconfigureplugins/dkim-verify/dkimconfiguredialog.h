@@ -23,7 +23,6 @@
 #include <QDialog>
 #include "dkimconfigure_private_export.h"
 
-
 class DKIMConfigureWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureDialog : public QDialog
 {

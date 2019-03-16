@@ -23,7 +23,8 @@
 
 #include <QPointer>
 
-ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel, const QString &addDialogLabel)
+ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel,
+                                                                           const QString &addDialogLabel)
     : PimCommon::SimpleStringListEditor(parent, buttons, addLabel, removeLabel, modifyLabel, addDialogLabel)
 {
 }

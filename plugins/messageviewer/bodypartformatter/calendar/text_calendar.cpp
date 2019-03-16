@@ -662,7 +662,8 @@ public:
         return true;
     }
 
-    bool mail(Viewer *viewerInstance, const Incidence::Ptr &incidence, const QString &status, iTIPMethod method = iTIPReply, const QString &receiver = QString(), const QString &to = QString(), MailType type = Answer) const
+    bool mail(Viewer *viewerInstance, const Incidence::Ptr &incidence, const QString &status, iTIPMethod method = iTIPReply, const QString &receiver = QString(),
+              const QString &to = QString(), MailType type = Answer) const
     {
         //status is accepted/tentative/declined
         ICalFormat format;
