@@ -1,15 +1,19 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure dkim support.",
+        "Description[ca@valencia]": "Aquest connector permet configurar el funcionament del «dkim».",
         "Description[ca]": "Aquest connector permet configurar el funcionament del «dkim».",
         "Description[gl]": "Este complemento permítelle configurar a compatibilidade con dkim.",
         "Description[nl]": "Deze plug-in stelt u in staat om ondersteuning voor dkim te configureren.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa DKIM-stöd",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку DKIM.",
         "Description[x-test]": "xxThis plugin allows you to configure dkim support.xx",
         "Name": "DKIM",
+        "Name[ca@valencia]": "DKIM",
         "Name[ca]": "DKIM",
         "Name[gl]": "DKIM",
         "Name[nl]": "DKIM",
+        "Name[sv]": "DKIM",
         "Name[uk]": "DKIM",
         "Name[x-test]": "xxDKIMxx",
         "ServiceTypes": [
