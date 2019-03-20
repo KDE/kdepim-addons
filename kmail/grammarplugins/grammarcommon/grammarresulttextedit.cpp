@@ -85,6 +85,7 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
             //Verify color
             format.setBackground(info.color().isValid() ? info.color() : mNegativeTextColor);
             QString toolTip = info.error();
+            //TODO generate new tooltip!
             if (!info.url().isEmpty()) {
                 toolTip += QLatin1Char('\n') + i18n("See on: %1", info.url());
             }
