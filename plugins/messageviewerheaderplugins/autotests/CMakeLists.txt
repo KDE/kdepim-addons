@@ -1,5 +1,6 @@
 # convenience macro to add qtest unit tests
 add_definitions( -DHEADER_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
+add_definitions( -DGRANTLEETHEME_DATA_DIR="${CMAKE_SOURCE_DIR}/examples/messageviewergrantleetheme/themes" )
 
 macro(add_messageviewer_header_unittest _source _additional)
     set( _test ${_source} utils.cpp  ${_additional})

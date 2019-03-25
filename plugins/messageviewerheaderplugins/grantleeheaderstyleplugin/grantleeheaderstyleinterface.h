@@ -26,6 +26,8 @@ namespace GrantleeTheme {
 class ThemeManager;
 }
 
+class GrantleeHeaderStylePluginTest;
+
 namespace MessageViewer {
 class GrantleeHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
@@ -38,6 +40,8 @@ public:
     void activateAction() override;
 private:
     void slotGrantleeHeaders();
+
+    friend ::GrantleeHeaderStylePluginTest;
     GrantleeTheme::ThemeManager *mThemeManager = nullptr;
 };
 }

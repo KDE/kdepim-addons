@@ -23,7 +23,7 @@
 #include <QString>
 #include <KMime/Message>
 
-void testHeaderFile(const QString &data, const QString &name);
+void testHeaderFile(const QString &data, const QString &name, const QString &dir = QString());
 KMime::Message::Ptr readAndParseMail(const QString &mailFile);
 
 #endif // HEADERSTYLEPLUGINTESTUTILS_H

@@ -26,7 +26,7 @@
 #include <KMime/Message>
 #include <MessageViewer/HeaderStyle>
 
-void testHeaderFile(const QString &data, const QString &name)
+void testHeaderFile(const QString &data, const QString &name, const QString &dir)
 {
     QString header = QStringLiteral("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
                                     "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
@@ -46,7 +46,13 @@ void testHeaderFile(const QString &data, const QString &name)
     QString outName = name + QStringLiteral(".out.html");
     QString fName = name + QStringLiteral(".html");
 
-    QVERIFY(QFile(QStringLiteral(HEADER_DATA_DIR "/") + fName).exists());
+    QString referenceFile = QStringLiteral(HEADER_DATA_DIR "/");
+    if (!dir.isEmpty()) {
+        referenceFile += dir + QStringLiteral("/");
+    }
+    referenceFile += fName;
+
+    QVERIFY(QFile(referenceFile).exists());
 
     {
         QFile f(outName);
@@ -69,7 +75,7 @@ void testHeaderFile(const QString &data, const QString &name)
         const QStringList args = QStringList()
                                  << QStringLiteral("-u")
                                  << fName
-                                 << QStringLiteral(HEADER_DATA_DIR "/") + fName;
+                                 << referenceFile;
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start(QStringLiteral("diff"), args);

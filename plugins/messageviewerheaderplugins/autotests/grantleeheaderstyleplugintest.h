@@ -29,9 +29,20 @@ public:
     explicit GrantleeHeaderStylePluginTest(QObject *parent = nullptr);
     ~GrantleeHeaderStylePluginTest();
 
+public Q_SLOTS:
+    void initTestCase();
+    void cleanupTestCase();
+
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCreateInterface();
+    void testThemeActivation_data();
+    void testThemeActivation();
+    void testThemeRender_data();
+    void testThemeRender();
+
+private:
+    QString expectedDataLocation;
 };
 
 #endif // GRANTLEEHEADERSTYLEPLUGINTEST_H
