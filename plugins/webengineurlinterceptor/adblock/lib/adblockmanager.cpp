@@ -94,8 +94,8 @@ void AdblockManager::loadSubscriptions()
 
         QTextStream textStream(&file);
         textStream.setCodec("UTF-8");
-        QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
-        QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
+        const QString title = textStream.readLine(1024).remove(QLatin1String("Title: "));
+        const QUrl url = QUrl(textStream.readLine(1024).remove(QLatin1String("Url: ")));
 
         if (title.isEmpty() || !url.isValid()) {
             qCWarning(ADBLOCKINTERCEPTOR_LOG) << "AdBlockManager: Invalid subscription file" << absolutePath;
