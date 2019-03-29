@@ -119,10 +119,10 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
 {
     QString pattern = mUi->filtercustom->text();
     if (mUi->atTheBeginning->isChecked()) {
-        pattern = QStringLiteral("|") + pattern;
+        pattern = QLatin1Char('|') + pattern;
     }
     if (mUi->atTheEnd->isChecked()) {
-        pattern += QLatin1String("|");
+        pattern += QLatin1Char('|');
     }
 
     const QString collapseValue = mUi->collapseBlocked->itemData(mUi->collapseBlocked->currentIndex()).toString();

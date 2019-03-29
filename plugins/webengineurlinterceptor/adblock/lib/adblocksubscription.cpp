@@ -330,7 +330,7 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
             stream << ddg1 << endl;
         }
 
-        if (!rules.contains(QLatin1String("\n") + ddg2)) {
+        if (!rules.contains(QLatin1Char('\n') + ddg2)) {
             stream << ddg2 << endl;
         }
     }
