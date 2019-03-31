@@ -34,7 +34,7 @@ int main(int argc, char *argv[])
                          QStringLiteral("0.99"),
                          i18n("Test app for EntityTreeModel"),
                          KAboutLicense::GPL,
-                         QStringLiteral("http://pim.kde.org/akonadi/"));
+                         QStringLiteral("https://pim.kde.org/akonadi/"));
     QApplication::setWindowIcon(QIcon::fromTheme(QStringLiteral("akonadi")));
     aboutData.addAuthor(i18n("Stephen Kelly"), i18n("Author"), QStringLiteral("steveire@gmail.com"));
 

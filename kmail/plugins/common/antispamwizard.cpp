@@ -922,7 +922,7 @@ AntiSpamWizard::SpamToolConfig AntiSpamWizard::ConfigReader::createDummyConfig()
 {
     return SpamToolConfig(QStringLiteral("spamassassin"), 0, 1,
                           QStringLiteral("SpamAssassin"), QStringLiteral("spamassassin -V"),
-                          QStringLiteral("http://spamassassin.org"), QStringLiteral("SpamAssassin Check"),
+                          QStringLiteral("https://spamassassin.apache.org/"), QStringLiteral("SpamAssassin Check"),
                           QStringLiteral("spamassassin -L"),
                           QStringLiteral("sa-learn -L --spam --no-sync --single"),
                           QStringLiteral("sa-learn -L --ham --no-sync --single"),
