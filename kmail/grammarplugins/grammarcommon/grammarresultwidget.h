@@ -39,6 +39,7 @@ public:
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
+    void closeChecker();
 protected:
     GrammarResultTextEdit *mResult = nullptr;
 private:

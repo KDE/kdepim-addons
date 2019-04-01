@@ -39,6 +39,7 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
     mGrammarResultWidget = new LanguageToolResultWidget(this);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
+    connect(mGrammarResultWidget, &LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -62,6 +63,12 @@ void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammar
     }
 }
 
+void LanguageToolInterface::closeChecker()
+{
+    mGrammarResultWidget->hide();
+    Q_EMIT activateView(nullptr);
+}
+
 void LanguageToolInterface::slotActivateGrammalecte(bool state)
 {
     if (state) {
@@ -72,8 +79,7 @@ void LanguageToolInterface::slotActivateGrammalecte(bool state)
         mGrammarResultWidget->show();
         Q_EMIT activateView(this);
     } else {
-        mGrammarResultWidget->hide();
-        Q_EMIT activateView(nullptr);
+        closeChecker();
     }
 }
 

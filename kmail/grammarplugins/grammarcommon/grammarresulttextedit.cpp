@@ -22,6 +22,7 @@
 #include "grammarcommon_debug.h"
 
 #include <KLocalizedString>
+#include <KStandardAction>
 
 #include <QMenu>
 #include <QAction>
@@ -130,6 +131,8 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
         popup->addSeparator();
         QAction *checkAgainAct = popup->addAction(QIcon::fromTheme(QStringLiteral("view-refresh")), i18n("Check Again"));
         connect(checkAgainAct, &QAction::triggered, this, &GrammarResultTextEdit::checkAgain);
+        popup->addSeparator();
+        popup->addAction(KStandardAction::close(this, &GrammarResultTextEdit::closeChecker, this));
         popup->exec(event->globalPos());
         delete popup;
     }

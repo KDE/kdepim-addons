@@ -37,6 +37,7 @@ private:
     void slotActivateGrammalecte(bool state);
     void createAction(KActionCollection *ac);
     void checkAgain();
+    void closeChecker();
     GrammalecteResultWidget *mGrammarResultWidget = nullptr;
     KToggleAction *mAction = nullptr;
 };

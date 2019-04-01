@@ -43,6 +43,7 @@ protected:
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
+    void closeChecker();
 private:
     Q_DISABLE_COPY(GrammarResultTextEdit)
     void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
