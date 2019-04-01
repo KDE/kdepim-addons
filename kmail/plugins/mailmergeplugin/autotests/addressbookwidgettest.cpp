@@ -16,7 +16,7 @@
 */
 
 #include "addressbookwidgettest.h"
-#include <qtest.h>
+#include <QTest>
 AddressBookWidgetTest::AddressBookWidgetTest(QObject *parent)
     : QObject(parent)
 {

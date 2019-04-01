@@ -23,7 +23,7 @@
 
 #include <QTimer>
 
-#include <qicon.h>
+#include <QIcon>
 #include <KConfigGroup>
 #include <KConfig>
 

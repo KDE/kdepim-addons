@@ -19,7 +19,7 @@
 
 #include "mergecontactinfowidgettest.h"
 
-#include <qtest.h>
+#include <QTest>
 #include "widgets/mergecontactinfowidget.h"
 #include <QStackedWidget>
 #include <QStandardPaths>

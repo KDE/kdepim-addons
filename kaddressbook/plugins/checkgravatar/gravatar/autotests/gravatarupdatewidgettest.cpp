@@ -18,7 +18,7 @@
 */
 
 #include "gravatarupdatewidgettest.h"
-#include <qtest.h>
+#include <QTest>
 #include <QLabel>
 #include <QPushButton>
 #include <QCheckBox>

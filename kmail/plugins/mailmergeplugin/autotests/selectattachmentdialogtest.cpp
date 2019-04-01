@@ -19,7 +19,7 @@
 #include "../widgets/selectattachmentdialog.h"
 #include <KUrlRequester>
 #include <QLabel>
-#include <qtest.h>
+#include <QTest>
 SelectAttachmentDialogTest::SelectAttachmentDialogTest(QObject *parent)
     : QObject(parent)
 {

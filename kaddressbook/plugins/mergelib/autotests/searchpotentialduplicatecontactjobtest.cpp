@@ -22,7 +22,7 @@
 
 #include <AkonadiCore/item.h>
 #include <kcontacts/addressee.h>
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 
 using namespace KABMergeContacts;

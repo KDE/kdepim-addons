@@ -29,7 +29,7 @@
 #include <KCalCore/Event>
 #include <QPushButton>
 
-#include <qtest.h>
+#include <QTest>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
 

@@ -36,7 +36,7 @@
 #include <QApplication>
 #include <QPointer>
 #include <adblockblockableitemsjob.h>
-#include <qfile.h>
+#include <QFile>
 #include <KIOWidgets/KRun>
 using namespace AdBlock;
 

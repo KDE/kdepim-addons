@@ -21,7 +21,7 @@
 #include "manualmerge/mergecontactsdialog.h"
 
 #include <QStackedWidget>
-#include <qtest.h>
+#include <QTest>
 
 #include <QDialogButtonBox>
 #include <QStandardPaths>

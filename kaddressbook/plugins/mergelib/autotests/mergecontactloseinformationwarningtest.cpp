@@ -20,7 +20,7 @@
 #include "mergecontactloseinformationwarningtest.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
 #include <QAction>
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 #include <qtestmouse.h>
 

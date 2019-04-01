@@ -20,7 +20,7 @@
 
 #include "sendvcardsjobtest.h"
 #include "sendvcards/sendvcardsjob.h"
-#include <qtest.h>
+#include <QTest>
 #include <AkonadiCore/Item>
 SendVcardsJobTest::SendVcardsJobTest(QObject *parent)
     : QObject(parent)
