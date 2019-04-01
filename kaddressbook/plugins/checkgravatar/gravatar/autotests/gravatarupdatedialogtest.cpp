@@ -21,7 +21,7 @@
 #include "../widgets/gravatarupdatedialog.h"
 #include "../widgets/gravatarupdatewidget.h"
 #include <QDialogButtonBox>
-#include <qtest.h>
+#include <QTest>
 
 GravatarUpdateDialogTest::GravatarUpdateDialogTest(QObject *parent)
     : QObject(parent)

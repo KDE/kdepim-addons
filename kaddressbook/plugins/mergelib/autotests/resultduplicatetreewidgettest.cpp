@@ -19,7 +19,7 @@
 
 #include "resultduplicatetreewidgettest.h"
 #include "../searchduplicate/resultduplicatetreewidget.h"
-#include <qtest.h>
+#include <QTest>
 #include <KContacts/Addressee>
 
 using namespace KContacts;

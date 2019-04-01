@@ -28,7 +28,7 @@
 #include <KCmdLineArgs>
 #include <QIcon>
 #include <KLocalizedString>
-#include <qdebug.h>
+#include <QDebug>
 
 EXPORT_KONTACT_PLUGIN(CoisceimPlugin, coisceim)
 

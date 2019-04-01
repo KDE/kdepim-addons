@@ -22,7 +22,7 @@
 
 #include <KContacts/Addressee>
 
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 
 MailSenderJobTest::MailSenderJobTest()

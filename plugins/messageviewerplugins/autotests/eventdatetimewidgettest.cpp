@@ -21,7 +21,7 @@
 #include "../createeventplugin/eventdatetimewidget.h"
 #include <KDateComboBox>
 #include <KTimeComboBox>
-#include <qtest.h>
+#include <QTest>
 #include <QSignalSpy>
 
 EventDateTimeWidgetTest::EventDateTimeWidgetTest(QObject *parent)

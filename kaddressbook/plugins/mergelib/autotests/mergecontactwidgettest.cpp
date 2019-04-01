@@ -22,7 +22,7 @@
 #include <AkonadiCore/EntityTreeModel>
 #include "../manualmerge/mergecontactwidget.h"
 
-#include <qtest.h>
+#include <QTest>
 #include <qtestmouse.h>
 #include <QListWidget>
 #include <QPushButton>

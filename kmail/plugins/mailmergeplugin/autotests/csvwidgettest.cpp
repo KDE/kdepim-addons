@@ -19,7 +19,7 @@
 #include "../widgets/csvwidget.h"
 #include <KUrlRequester>
 #include <QLabel>
-#include <qtest.h>
+#include <QTest>
 CsvWidgetTest::CsvWidgetTest(QObject *parent)
     : QObject(parent)
 {

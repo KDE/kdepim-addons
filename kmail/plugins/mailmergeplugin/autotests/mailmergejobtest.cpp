@@ -16,7 +16,7 @@
 */
 
 #include "mailmergejobtest.h"
-#include <qtest.h>
+#include <QTest>
 MailMergeJobTest::MailMergeJobTest(QObject *parent)
     : QObject(parent)
 {

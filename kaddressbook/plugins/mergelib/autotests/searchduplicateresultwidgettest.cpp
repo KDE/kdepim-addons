@@ -27,9 +27,9 @@
 #include <QLayout>
 #include <QTreeWidget>
 #include <QLabel>
-#include <qtest.h>
+#include <QTest>
 #include <QPushButton>
-#include <qstandarditemmodel.h>
+#include <QStandardItemModel>
 #include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
 #include <KContacts/Addressee>

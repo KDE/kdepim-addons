@@ -18,7 +18,7 @@
 */
 
 #include "mergecontactselectinformationscrollareatest.h"
-#include <qtest.h>
+#include <QTest>
 #include "../widgets/mergecontactselectinformationwidget.h"
 #include "../widgets/mergecontactselectinformationscrollarea.h"
 #include "../widgets/mergecontactinfowidget.h"

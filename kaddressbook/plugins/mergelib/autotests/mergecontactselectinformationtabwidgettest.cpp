@@ -19,7 +19,7 @@
 
 #include "mergecontactselectinformationtabwidgettest.h"
 #include "../searchduplicate/mergecontactselectinformationtabwidget.h"
-#include <qtest.h>
+#include <QTest>
 
 MergeContactSelectInformationTabWidgetTest::MergeContactSelectInformationTabWidgetTest(QObject *parent)
     : QObject(parent)

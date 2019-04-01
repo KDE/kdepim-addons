@@ -21,7 +21,7 @@
 
 #include "../searchduplicate/searchandmergecontactduplicatecontactdialog.h"
 
-#include <qtest.h>
+#include <QTest>
 #include <QStandardPaths>
 
 #include <QStackedWidget>

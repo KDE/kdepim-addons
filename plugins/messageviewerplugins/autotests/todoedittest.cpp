@@ -26,7 +26,7 @@
 #include <QStandardItemModel>
 #include <QPushButton>
 #include <KMessageWidget>
-#include <qtest.h>
+#include <QTest>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
 

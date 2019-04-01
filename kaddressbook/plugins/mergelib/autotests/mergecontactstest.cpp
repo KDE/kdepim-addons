@@ -18,7 +18,7 @@
 */
 
 #include "mergecontactstest.h"
-#include <qtest.h>
+#include <QTest>
 #include "../job/mergecontacts.h"
 
 using namespace KABMergeContacts;

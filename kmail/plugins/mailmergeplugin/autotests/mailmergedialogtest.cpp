@@ -19,7 +19,7 @@
 #include "../mailmergedialog.h"
 #include "../widgets/mailmergewidget.h"
 #include <QDialogButtonBox>
-#include <qtest.h>
+#include <QTest>
 
 MailMergeDialogTest::MailMergeDialogTest(QObject *parent) : QObject(parent)
 {
