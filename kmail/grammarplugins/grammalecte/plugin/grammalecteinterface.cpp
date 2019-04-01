@@ -38,6 +38,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     mGrammarResultWidget = new GrammalecteResultWidget(this);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
+    connect(mGrammarResultWidget, &GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);
@@ -68,9 +69,14 @@ void GrammalecteInterface::slotActivateGrammalecte(bool state)
         checkAgain();
         Q_EMIT activateView(this);
     } else {
-        mGrammarResultWidget->hide();
-        Q_EMIT activateView(nullptr);
+        closeChecker();
     }
+}
+
+void GrammalecteInterface::closeChecker()
+{
+    mGrammarResultWidget->hide();
+    Q_EMIT activateView(nullptr);
 }
 
 KToggleAction *GrammalecteInterface::action() const
@@ -97,3 +103,4 @@ void GrammalecteInterface::checkAgain()
         qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
     }
 }
+
