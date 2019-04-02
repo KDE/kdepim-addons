@@ -58,5 +58,5 @@ void InsertEmailPluginEditorInterface::exec()
 
 void InsertEmailPluginEditorInterface::slotEmailSelected(const QStringList &lst)
 {
-    richTextEditor()->insertPlainText(lst.join(QLatin1Char(' ')));
+    Q_EMIT insertText(lst.join(QLatin1Char(' ')));
 }
