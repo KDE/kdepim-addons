@@ -59,5 +59,5 @@ void InsertSpecialCharacterPluginEditorInterface::exec()
 
 void InsertSpecialCharacterPluginEditorInterface::charSelected(QChar c)
 {
-    richTextEditor()->insertPlainText(c);
+    Q_EMIT insertText(c);
 }
