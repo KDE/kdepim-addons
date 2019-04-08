@@ -19,7 +19,6 @@
 
 #include "markdownconverter.h"
 #include <KLocalizedString>
-
 extern "C" {
 #include <mkdio.h>
 }
@@ -50,6 +49,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     }
     if (!mkd_compile(markdownHandle, flags)) {
         Q_EMIT failed(i18n("Failed to compile the Markdown document."));
+        mkd_cleanup(markdownHandle);
         return {};
     }
 
@@ -57,6 +57,13 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const int size = mkd_document(markdownHandle, &htmlDocument);
 
     const QString html = QString::fromUtf8(htmlDocument, size);
+#if 0
+    char *cssDocument;
+    const int cssSize = mkd_css(markdownHandle, &cssDocument);
+
+    const QString css = QString::fromUtf8(cssDocument, cssSize);
+#endif
+
     mkd_cleanup(markdownHandle);
     return html;
 }
