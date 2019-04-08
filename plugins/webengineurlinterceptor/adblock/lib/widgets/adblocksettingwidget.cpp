@@ -282,7 +282,9 @@ void AdBlockSettingWidget::save()
     saveCheckBox(mUi->checkHideAds, AdBlock::AdBlockSettings::self()->hideAdsEnabledItem());
     saveSpinBox(mUi->spinBox, AdBlock::AdBlockSettings::self()->adBlockUpdateIntervalItem());
 
-    mCustomSubscription->saveSubscription();
+    if (mCustomSubscription) {
+        mCustomSubscription->saveSubscription();
+    }
     mChanged = false;
     Q_EMIT changed(false);
     AdBlock::AdBlockSettings::self()->save();
