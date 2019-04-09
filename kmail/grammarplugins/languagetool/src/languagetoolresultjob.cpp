@@ -44,17 +44,39 @@ static bool hasNotEmptyText(const QString &text)
 
 bool LanguageToolResultJob::canStart() const
 {
-    if (!mNetworkAccessManager || !hasNotEmptyText(mText) || mUrl.isEmpty() || mLanguage.isEmpty()) {
-        return false;
+    return (canStartError() == LanguageToolResultJob::JobError::NotError);
+}
+
+LanguageToolResultJob::JobError LanguageToolResultJob::canStartError() const
+{
+    if (!mNetworkAccessManager) {
+        return LanguageToolResultJob::JobError::NetworkManagerNotDefined;
     }
-    return true;
+    if (!hasNotEmptyText(mText)) {
+        return LanguageToolResultJob::JobError::EmptyText;
+    }
+    if (mUrl.isEmpty()) {
+        return LanguageToolResultJob::JobError::UrlNotDefined;
+    }
+    if (mLanguage.isEmpty()) {
+        return LanguageToolResultJob::JobError::LanguageNotDefined;
+    }
+    return LanguageToolResultJob::JobError::NotError;
 }
 
 void LanguageToolResultJob::start()
 {
-    if (!canStart()) {
+    const LanguageToolResultJob::JobError errorType = canStartError();
+    switch (errorType) {
+    case LanguageToolResultJob::JobError::EmptyText:
+        return;
+    case LanguageToolResultJob::JobError::UrlNotDefined:
+    case LanguageToolResultJob::JobError::NetworkManagerNotDefined:
+    case LanguageToolResultJob::JobError::LanguageNotDefined:
         qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Impossible to start language tool";
         return;
+    case LanguageToolResultJob::JobError::NotError:
+        break;
     }
     QNetworkRequest request(QUrl::fromUserInput(mUrl));
     addRequestAttribute(request);

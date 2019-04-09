@@ -54,6 +54,15 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(LanguageToolResultJob)
+    enum class JobError {
+        NotError,
+        EmptyText,
+        UrlNotDefined,
+        NetworkManagerNotDefined,
+        LanguageNotDefined
+    };
+
+    LanguageToolResultJob::JobError canStartError() const;
     void slotCheckGrammarFinished();
     void addRequestAttribute(QNetworkRequest &request) const;
     void slotFinish(QNetworkReply *reply);
