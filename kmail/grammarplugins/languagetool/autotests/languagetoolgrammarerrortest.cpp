@@ -40,7 +40,7 @@ void LanguageToolGrammarErrorTest::shouldParseJson_data()
     err.setSuggestions(QStringList() << QStringLiteral("ne suis pas"));
     err.setError(QStringLiteral("Voulez-vous écrire \"ne suis pas\" ?"));
     //err.setOption(QStringLiteral("maj"));
-    // err.setRule(QStringLiteral("majuscule_après_point"));
+    err.setRule(QStringLiteral("P_V_PAS"));
     err.setUrl(QStringLiteral("http://www.academie-francaise.fr/ne"));
     QTest::newRow("parse-error1") << QStringLiteral("parse-error1") << 1 << err;
 }
@@ -58,6 +58,7 @@ void LanguageToolGrammarErrorTest::shouldParseJson()
     const QJsonDocument doc = QJsonDocument::fromJson(content);
     const QJsonObject fields = doc.object();
     LanguageToolGrammarError parser;
+    parser.setTesting(true);
     parser.parse(fields, nbBlock);
     const bool compare = (parser == error);
     if (!compare) {
