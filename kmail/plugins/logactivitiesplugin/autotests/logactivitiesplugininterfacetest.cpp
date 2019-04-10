@@ -35,9 +35,10 @@ LogActivitiesPluginInterfaceTest::~LogActivitiesPluginInterfaceTest()
 void LogActivitiesPluginInterfaceTest::shouldHaveDefaultValue()
 {
     LogActivitiesPluginInterface interface;
+    interface.createAction(new KActionCollection(this));
     QVERIFY(!interface.parentWidget());
     QCOMPARE(interface.actionTypes().count(), 1);
-    QVERIFY(!interface.actionTypes().at(0).action());
+    QVERIFY(interface.actionTypes().at(0).action());
 }
 
 void LogActivitiesPluginInterfaceTest::shouldCreateAction()
