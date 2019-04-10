@@ -51,11 +51,16 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
             //qDebug() << " mUrl" << mUrl;
         }
     }
-    if (!mRule.isEmpty()) {
+    if (!mRule.isEmpty() && !mTesting) {
         mColor = LanguageToolManager::self()->grammarColorForError(mRule);
     } else {
         mColor = QColor(Qt::red);
     }
+}
+
+void LanguageToolGrammarError::setTesting(bool b)
+{
+    mTesting = b;
 }
 
 QStringList LanguageToolGrammarError::parseSuggestion(const QJsonObject &obj)
