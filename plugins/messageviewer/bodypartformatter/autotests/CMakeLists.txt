@@ -19,8 +19,10 @@ macro(add_kdepimaddons_crypto_unittest _source)
 endmacro ()
 add_kdepimaddons_crypto_unittest(rendertest.cpp)
 
-add_akonadi_isolated_test(SOURCE rendertest-akonadi.cpp BACKENDS SQLITE LINK_LIBRARIES KF5::MessageViewer)
-target_compile_definitions(rendertest-akonadi PRIVATE -DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data-akonadi")
+if (KDEPIM_RUN_AKONADI_TEST)
+	add_akonadi_isolated_test(SOURCE rendertest-akonadi.cpp BACKENDS SQLITE LINK_LIBRARIES KF5::MessageViewer)
+	target_compile_definitions(rendertest-akonadi PRIVATE -DDATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data-akonadi")
+endif()	
 
 macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
     set( _test ${_source} ${common_SRCS} ${_additional})

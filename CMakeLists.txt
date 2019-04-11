@@ -150,7 +150,7 @@ if (${KF5Config_VERSION} STRGREATER "5.56.0")
         add_definitions(-DQT_NO_FOREACH)
         MESSAGE(STATUS "compile without foreach")
 endif()
-
+option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 if(KDEPIMADDONS_BUILD_EXAMPLES)
   add_subdirectory(examples)
 endif()
