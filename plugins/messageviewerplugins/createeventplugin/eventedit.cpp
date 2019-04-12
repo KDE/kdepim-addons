@@ -81,8 +81,8 @@ EventEdit::EventEdit(QWidget *parent)
 #endif
     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
 
-    connect(mCollectionCombobox, QOverload<int>::of(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
-    connect(mCollectionCombobox, QOverload<int>::of(&Akonadi::CollectionComboBox::activated), this, &EventEdit::slotCollectionChanged);
+    connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
+    connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::activated), this, &EventEdit::slotCollectionChanged);
     connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &EventEdit::comboboxRowInserted);
     hbox->addWidget(mCollectionCombobox);
 

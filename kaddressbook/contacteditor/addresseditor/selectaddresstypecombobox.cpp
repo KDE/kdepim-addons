@@ -41,7 +41,7 @@ SelectAddressTypeComboBox::SelectAddressTypeComboBox(QWidget *parent)
 
     update();
 
-    connect(this, QOverload<int>::of(&KComboBox::activated), this, &SelectAddressTypeComboBox::selected);
+    connect(this, qOverload<int>(&KComboBox::activated), this, &SelectAddressTypeComboBox::selected);
 }
 
 SelectAddressTypeComboBox::~SelectAddressTypeComboBox()

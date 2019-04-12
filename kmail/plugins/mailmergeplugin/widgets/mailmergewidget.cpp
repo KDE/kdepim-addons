@@ -47,8 +47,8 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     mSource->setObjectName(QStringLiteral("source"));
     mSource->addItem(i18n("Address Book"), AddressBook);
     mSource->addItem(i18n("CSV"), CSV);
-    connect(mSource, QOverload<int>::of(&QComboBox::currentIndexChanged), this, &MailMergeWidget::slotSourceChanged);
-    connect(mSource, QOverload<int>::of(&QComboBox::activated), this, &MailMergeWidget::slotSourceChanged);
+    connect(mSource, qOverload<int>(&QComboBox::currentIndexChanged), this, &MailMergeWidget::slotSourceChanged);
+    connect(mSource, qOverload<int>(&QComboBox::activated), this, &MailMergeWidget::slotSourceChanged);
 
     hbox->addWidget(mSource);
 

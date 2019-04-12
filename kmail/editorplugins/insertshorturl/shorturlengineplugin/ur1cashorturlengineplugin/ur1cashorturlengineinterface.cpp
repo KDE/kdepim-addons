@@ -55,7 +55,7 @@ void Ur1CaShortUrlEngineInterface::generateShortUrl()
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("text/plain"));
 
     QNetworkReply *reply = mNetworkAccessManager->post(request, postData);
-    connect(reply, QOverload<QNetworkReply::NetworkError>::of(&QNetworkReply::error), this, &Ur1CaShortUrlEngineInterface::slotErrorFound);
+    connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::error), this, &Ur1CaShortUrlEngineInterface::slotErrorFound);
 }
 
 void Ur1CaShortUrlEngineInterface::slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error)

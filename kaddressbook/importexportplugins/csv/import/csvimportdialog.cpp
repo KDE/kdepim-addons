@@ -188,22 +188,22 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
 
     reloadCodecs();
 
-    connect(mUrlRequester, QOverload<const QString &>::of(&KUrlRequester::returnPressed), this, &CSVImportDialog::setFile);
+    connect(mUrlRequester, qOverload<const QString &>(&KUrlRequester::returnPressed), this, &CSVImportDialog::setFile);
     connect(mUrlRequester, &KUrlRequester::urlSelected, this, &CSVImportDialog::setUrl);
     connect(mUrlRequester->lineEdit(), &QLineEdit::textChanged, this, &CSVImportDialog::urlChanged);
-    connect(mDelimiterGroup, QOverload<int>::of(&QButtonGroup::buttonClicked), this, [this](int val) {
+    connect(mDelimiterGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, [this](int val) {
         delimiterClicked(val);
     });
-    connect(mDelimiterEdit, QOverload<>::of(&QLineEdit::returnPressed), this, [this]() {
+    connect(mDelimiterEdit, qOverload<>(&QLineEdit::returnPressed), this, [this]() {
         customDelimiterChanged();
     });
-    connect(mDelimiterEdit, QOverload<const QString &>::of(&QLineEdit::textChanged), this, [this](const QString &str) {
+    connect(mDelimiterEdit, qOverload<const QString &>(&QLineEdit::textChanged), this, [this](const QString &str) {
         customDelimiterChanged(str);
     });
-    connect(mComboQuote, QOverload<const QString &>::of(&QComboBox::activated), this, [this](const QString &str) {
+    connect(mComboQuote, qOverload<const QString &>(&QComboBox::activated), this, [this](const QString &str) {
         textQuoteChanged(str);
     });
-    connect(mCodecCombo, QOverload<const QString &>::of(&QComboBox::activated), this, [this]() {
+    connect(mCodecCombo, qOverload<const QString &>(&QComboBox::activated), this, [this]() {
         codecChanged();
     });
     connect(mSkipFirstRow, &QCheckBox::toggled, this, [this](bool b) {
