@@ -34,10 +34,15 @@ ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest()
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
     ZoomTextPluginEditorInterface interface(nullptr);
-    interface.createAction(new KActionCollection(this));
+    KActionCollection *ac = new KActionCollection(this);
+    interface.createAction(ac);
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
     QCOMPARE(type.type(), MessageComposer::PluginActionType::Edit);
+    QVERIFY(ac->action(QStringLiteral("zoom_menu")));
+    QVERIFY(ac->action(QStringLiteral("zoom_in")));
+    QVERIFY(ac->action(QStringLiteral("zoom_out")));
+    QVERIFY(ac->action(QStringLiteral("zoom_reset")));
 }
 
 QTEST_MAIN(ZoomTextPluginEditorInterfaceTest)
