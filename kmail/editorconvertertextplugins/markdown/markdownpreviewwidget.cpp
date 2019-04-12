@@ -41,10 +41,21 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->setPage(page);
     mWebView->resize(600, 800);
 
-    mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, true);
+    mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::PluginsEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptCanOpenWindows, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::JavascriptCanAccessClipboard, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::XSSAuditingEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, false);
-    mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, true);
+    mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::ErrorPageEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::HyperlinkAuditingEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::WebGLEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::AutoLoadIconsForPage, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::Accelerated2dCanvasEnabled, false);
+    mWebView->settings()->setAttribute(QWebEngineSettings::WebGLEnabled, false);
 
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
