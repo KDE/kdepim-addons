@@ -162,7 +162,12 @@ set_package_properties("discount" PROPERTIES
         URL "https://www.pell.portland.or.us/~orc/Code/discount/"
         TYPE RECOMMENDED
         PURPOSE "Generate Markdown file.")
+MESSAGE(STATUS "${PC_LIBMARKDOWN_VERSION_STRING}")
 
+if (${PC_LIBMARKDOWN_VERSION_STRING} STRGREATER "2.2.3")
+     #TODO add support for highlighting format.
+     MESSAGE(STATUS "FORMATING support")
+endif()	
 
 add_subdirectory(plugins)
 add_subdirectory(korganizer)

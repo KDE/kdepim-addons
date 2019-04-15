@@ -18,6 +18,12 @@ if (discount_INCLUDE_DIRS AND discount_LIBRARIES)
   # Already in cache
   set (discount_FOUND TRUE)
 else ()
+  if (NOT WIN32)
+      find_package(PkgConfig QUIET)
+      PKG_CHECK_MODULES(PC_LIBMARKDOWN QUIET libmarkdown)
+      set(PC_LIBMARKDOWN_VERSION_STRING ${PC_LIBMARKDOWN_VERSION})
+      MESSAGE(STATUS "VERSION ${PC_LIBMARKDOWN_VERSION_STRING}")
+  endif ()	
   find_library (discount_LIBRARY
     NAMES markdown libmarkdown
   )
