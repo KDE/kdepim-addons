@@ -24,6 +24,13 @@ extern "C" {
 #include <mkdio.h>
 }
 
+#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+char *
+external_codefmt(const char *src, int len, void *lang)
+{
+    return nullptr;
+}
+#endif
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)
 {
@@ -48,6 +55,9 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     if (mEnableExtraDefinitionLists) {
         flags |= MKD_DLEXTRA;
     }
+#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+    mkd_e_code_format(markdownHandle, external_codefmt);
+#endif
     if (!mkd_compile(markdownHandle, flags)) {
         Q_EMIT failed(i18n("Failed to compile the Markdown document."));
         mkd_cleanup(markdownHandle);
