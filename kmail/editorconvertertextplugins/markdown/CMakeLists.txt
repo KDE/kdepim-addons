@@ -18,6 +18,8 @@ set(kmail_markdownplugin_SRCS
     markdownenginepage.cpp
     markdowncreatelinkwidget.cpp
     markdowncreatelinkdialog.cpp
+    markdowncreateimagewidget.cpp
+    markdowncreateimagedialog.cpp
     )
 
 

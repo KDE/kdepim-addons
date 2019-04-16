@@ -22,6 +22,7 @@
 #include "markdownplugin_debug.h"
 #include "markdownconverter.h"
 #include "markdowncreatelinkdialog.h"
+#include "markdowncreateimagedialog.h"
 #include <KPIMTextEdit/RichTextComposer>
 #include <KPIMTextEdit/RichTextComposerControler>
 #include <KLocalizedString>
@@ -71,6 +72,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mardownMenu->addAction(i18n("Change as Italic"), this, &MarkdownInterface::addItalic);
     mardownMenu->addAction(i18n("Change as Code"), this, &MarkdownInterface::addCode);
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
+    mardownMenu->addAction(i18n("Add Image"), this, &MarkdownInterface::addImage);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
 }
@@ -113,6 +115,18 @@ void MarkdownInterface::addItalic()
 void MarkdownInterface::addLink()
 {
     QPointer<MarkdownCreateLinkDialog> dlg = new MarkdownCreateLinkDialog(parentWidget());
+    if (dlg->exec()) {
+        const QString str = dlg->linkStr();
+        if (!str.isEmpty()) {
+            richTextEditor()->textCursor().insertText(str);
+        }
+    }
+    delete dlg;
+}
+
+void MarkdownInterface::addImage()
+{
+    QPointer<MarkdownCreateImageDialog> dlg = new MarkdownCreateImageDialog(parentWidget());
     if (dlg->exec()) {
         const QString str = dlg->linkStr();
         if (!str.isEmpty()) {

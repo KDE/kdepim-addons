@@ -46,6 +46,7 @@ private:
     void addItalic();
     void addTitle();
     void addLink();
+    void addImage();
     void addHorizontalRule();
     void slotActivated(bool checked);
     void addCode();
