@@ -19,6 +19,7 @@
 
 #include "markdownconverter.h"
 #include <KLocalizedString>
+#include "config-markdownplugin.h"
 extern "C" {
 #include <mkdio.h>
 }
