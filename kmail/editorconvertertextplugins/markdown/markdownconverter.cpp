@@ -20,6 +20,10 @@
 #include "markdownconverter.h"
 #include <KLocalizedString>
 #include "config-markdownplugin.h"
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
 extern "C" {
 #include <mkdio.h>
 }
@@ -28,7 +32,46 @@ extern "C" {
 char *
 external_codefmt(const char *src, int len, void *lang)
 {
-    return nullptr;
+    std::cout << "src :" << src << std::endl;
+    int extra = 0;
+    int i, x;
+    char *res;
+
+//    if ( lang == nullptr )
+//        lang = "generic_code";
+
+    for ( i=0; i < len; i++) {
+        if ( src[i] == '&' )
+            extra += 5;
+        else if ( src[i] == '<' || src[i] == '>' )
+            extra += 4;
+    }
+
+    /* 80 characters for the format wrappers */
+//    if ( (res = malloc(len+extra+80+strlen(lang))) ==0 )
+//        /* out of memory?  drat! */
+//        return nullptr;
+
+    sprintf(res, "<pre><code class=\"%s\">\n", lang);
+    x = strlen(res);
+    for ( i=0; i < len; i++ ) {
+//        switch (src[i]) {
+//        case '&':   strcpy(&src[x], "&amp;");
+//                    x += 5 /*strlen(&amp;)*/ ;
+//                    break;
+//        case '<':   strcpy(&src[x], "&lt;");
+//                    x += 4 /*strlen(&lt;)*/ ;
+//                    break;
+//        case '>':   strcpy(&src[x], "&gt;");
+//                    x += 4 /*strlen(&gt;)*/ ;
+//                    break;
+//        default:
+        res[x++] = src[i];
+//                    break;
+        }
+//    }
+    strcpy(&res[x], "</code></pre>\n");
+    return res;
 }
 #endif
 MarkdownConverter::MarkdownConverter(QObject *parent)
