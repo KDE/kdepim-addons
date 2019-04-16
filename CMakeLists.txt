@@ -165,10 +165,12 @@ set_package_properties("discount" PROPERTIES
 MESSAGE(STATUS "${PC_LIBMARKDOWN_VERSION_STRING}")
 
 if(discount_FOUND)
-   if (${PC_LIBMARKDOWN_VERSION_STRING} STRGREATER "2.2.5")
-        set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
-	MESSAGE(STATUS "Discount ${PC_LIBMARKDOWN_VERSION_STRING}: has hightlighting support")
-   endif()	
+   if (${PC_LIBMARKDOWN_VERSION_STRING})
+      if (${PC_LIBMARKDOWN_VERSION_STRING} STRGREATER "2.2.5")
+           set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
+           MESSAGE(STATUS "Discount ${PC_LIBMARKDOWN_VERSION_STRING}: has hightlighting support")
+      endif()
+   endif()
 endif()
 
 add_subdirectory(plugins)
