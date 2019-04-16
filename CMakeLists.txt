@@ -162,7 +162,6 @@ set_package_properties("discount" PROPERTIES
         URL "https://www.pell.portland.or.us/~orc/Code/discount/"
         TYPE RECOMMENDED
         PURPOSE "Generate Markdown file.")
-MESSAGE(STATUS "${PC_LIBMARKDOWN_VERSION_STRING}")
 
 if(discount_FOUND)
    if (${PC_LIBMARKDOWN_VERSION_STRING})
