@@ -46,6 +46,10 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
+
+    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    QVERIFY(mAlternateText);
+    QVERIFY(mAlternateText->text().isEmpty());
 }
 
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()
@@ -53,7 +57,11 @@ void MarkdownCreateImageWidgetTest::shouldGenerateLink()
     MarkdownCreateImageWidget w;
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     mLink->setText(QStringLiteral("http://www.kde.org"));
     mTitle->setText(QStringLiteral("TITLE"));
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org)"));
+
+    mAlternateText->setText(QStringLiteral("alternate"));
+    QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org \"alternate\")"));
 }

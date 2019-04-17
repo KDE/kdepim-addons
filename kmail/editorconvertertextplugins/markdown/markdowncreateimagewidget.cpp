@@ -35,8 +35,13 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mImageUrl = new QLineEdit(this);
     mImageUrl->setObjectName(QStringLiteral("image"));
 
+    mAlternateText = new QLineEdit(this);
+    mAlternateText->setObjectName(QStringLiteral("alternatetext"));
+
+
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
+    mainLayout->addRow(i18n("Alternate text:"), mAlternateText);
 }
 
 MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
@@ -45,8 +50,12 @@ MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
 
 QString MarkdownCreateImageWidget::linkStr() const
 {
-    if (mTitle->text().isEmpty() && mImageUrl->text().isEmpty()) {
+    if (mTitle->text().trimmed().isEmpty() && mImageUrl->text().trimmed().isEmpty()) {
         return {};
     }
-    return QStringLiteral("![%1](%2)").arg(mTitle->text(), mImageUrl->text());
+    if (!mAlternateText->text().trimmed().isEmpty()) {
+        return QStringLiteral("![%1](%2 \"%3\")").arg(mTitle->text(), mImageUrl->text(), mAlternateText->text());
+    } else {
+        return QStringLiteral("![%1](%2)").arg(mTitle->text(), mImageUrl->text());
+    }
 }

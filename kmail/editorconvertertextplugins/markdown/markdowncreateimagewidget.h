@@ -33,6 +33,7 @@ public:
 private:
     QLineEdit *mTitle = nullptr;
     QLineEdit *mImageUrl = nullptr;
+    QLineEdit *mAlternateText = nullptr;
 };
 
 #endif // MARKDOWNCREATEIMAGEWIDGET_H
