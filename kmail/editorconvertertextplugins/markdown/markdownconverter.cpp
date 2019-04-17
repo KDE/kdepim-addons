@@ -40,11 +40,12 @@ external_codefmt(const char *src, int len, void *lang)
 //    if ( lang == nullptr )
 //        lang = "generic_code";
 
-    for ( i=0; i < len; i++) {
-        if ( src[i] == '&' )
+    for (i = 0; i < len; i++) {
+        if (src[i] == '&') {
             extra += 5;
-        else if ( src[i] == '<' || src[i] == '>' )
+        } else if (src[i] == '<' || src[i] == '>') {
             extra += 4;
+        }
     }
 
     /* 80 characters for the format wrappers */
@@ -54,7 +55,7 @@ external_codefmt(const char *src, int len, void *lang)
 
     sprintf(res, "<pre><code class=\"%s\">\n", lang);
     x = strlen(res);
-    for ( i=0; i < len; i++ ) {
+    for (i = 0; i < len; i++) {
 //        switch (src[i]) {
 //        case '&':   strcpy(&src[x], "&amp;");
 //                    x += 5 /*strlen(&amp;)*/ ;
@@ -68,11 +69,12 @@ external_codefmt(const char *src, int len, void *lang)
 //        default:
         res[x++] = src[i];
 //                    break;
-        }
+    }
 //    }
     strcpy(&res[x], "</code></pre>\n");
     return res;
 }
+
 #endif
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)

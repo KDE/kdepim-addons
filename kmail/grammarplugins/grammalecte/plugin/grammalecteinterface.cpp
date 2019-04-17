@@ -103,4 +103,3 @@ void GrammalecteInterface::checkAgain()
         qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
     }
 }
-

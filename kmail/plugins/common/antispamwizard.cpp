@@ -690,9 +690,7 @@ void AntiSpamWizard::sortFilterOnExistance(
 }
 
 //---------------------------------------------------------------------------
-AntiSpamWizard::SpamToolConfig::SpamToolConfig(const QString &toolId, int configVersion, int prio, const QString &name, const QString &exec, const QString &url, const QString &filter,
-                                               const QString &detection, const QString &spam, const QString &ham, const QString &noSpam, const QString &header, const QString &pattern,
-                                               const QString &pattern2, const QString &serverPattern, bool detectionOnly, bool regExp, bool bayesFilter, bool tristateDetection, WizardMode type)
+AntiSpamWizard::SpamToolConfig::SpamToolConfig(const QString &toolId, int configVersion, int prio, const QString &name, const QString &exec, const QString &url, const QString &filter, const QString &detection, const QString &spam, const QString &ham, const QString &noSpam, const QString &header, const QString &pattern, const QString &pattern2, const QString &serverPattern, bool detectionOnly, bool regExp, bool bayesFilter, bool tristateDetection, WizardMode type)
     : mId(toolId)
     , mVersion(configVersion)
     , mPrio(prio)

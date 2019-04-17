@@ -44,7 +44,7 @@ static bool hasNotEmptyText(const QString &text)
 
 bool LanguageToolResultJob::canStart() const
 {
-    return (canStartError() == LanguageToolResultJob::JobError::NotError);
+    return canStartError() == LanguageToolResultJob::JobError::NotError;
 }
 
 LanguageToolResultJob::JobError LanguageToolResultJob::canStartError() const
