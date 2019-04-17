@@ -101,7 +101,8 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
         flags |= MKD_DLEXTRA;
     }
 #ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
-    mkd_e_code_format(markdownHandle, external_codefmt);
+    //Comment for the moment until I will be able to implement it.
+    //mkd_e_code_format(markdownHandle, external_codefmt);
 #endif
     if (!mkd_compile(markdownHandle, flags)) {
         Q_EMIT failed(i18n("Failed to compile the Markdown document."));
@@ -113,7 +114,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const int size = mkd_document(markdownHandle, &htmlDocument);
 
     const QString html = QString::fromUtf8(htmlDocument, size);
-#if 0
+#if 0 //CSS ?
     char *cssDocument;
     const int cssSize = mkd_css(markdownHandle, &cssDocument);
 
