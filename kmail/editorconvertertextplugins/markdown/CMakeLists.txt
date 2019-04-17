@@ -20,6 +20,7 @@ set(kmail_markdownplugin_SRCS
     markdowncreatelinkdialog.cpp
     markdowncreateimagewidget.cpp
     markdowncreateimagedialog.cpp
+    markdownhighlighter.cpp
     )
 
 
@@ -31,7 +32,7 @@ kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURC
     ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_markdownplugin PRIVATE
-    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::XmlGui Qt5::WebEngineWidgets  discount::Lib
+    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::XmlGui Qt5::WebEngineWidgets  discount::Lib KF5::SyntaxHighlighting
     )
 
 if(BUILD_TESTING)

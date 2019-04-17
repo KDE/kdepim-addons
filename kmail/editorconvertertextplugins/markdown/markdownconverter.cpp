@@ -18,61 +18,41 @@
 */
 
 #include "markdownconverter.h"
+#include "markdownhighlighter.h"
+
+#include <KSyntaxHighlighting/Definition>
+#include <KSyntaxHighlighting/Repository>
+#include <KSyntaxHighlighting/Theme>
+
 #include <KLocalizedString>
+#include <QGuiApplication>
+#include <QPalette>
+#include <QDebug>
 #include "config-markdownplugin.h"
 #include <iostream>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
 extern "C" {
+#include <QTextStream>
 #include <mkdio.h>
 }
 
 #ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 char *
-external_codefmt(const char *src, int len, void *lang)
+external_codefmt(const char *src, int, void *)
 {
-    std::cout << "src :" << src << std::endl;
-    int extra = 0;
-    int i, x;
-    char *res;
-
-//    if ( lang == nullptr )
-//        lang = "generic_code";
-
-    for (i = 0; i < len; i++) {
-        if (src[i] == '&') {
-            extra += 5;
-        } else if (src[i] == '<' || src[i] == '>') {
-            extra += 4;
-        }
-    }
-
-    /* 80 characters for the format wrappers */
-//    if ( (res = malloc(len+extra+80+strlen(lang))) ==0 )
-//        /* out of memory?  drat! */
-//        return nullptr;
-
-    sprintf(res, "<pre><code class=\"%s\">\n", lang);
-    x = strlen(res);
-    for (i = 0; i < len; i++) {
-//        switch (src[i]) {
-//        case '&':   strcpy(&src[x], "&amp;");
-//                    x += 5 /*strlen(&amp;)*/ ;
-//                    break;
-//        case '<':   strcpy(&src[x], "&lt;");
-//                    x += 4 /*strlen(&lt;)*/ ;
-//                    break;
-//        case '>':   strcpy(&src[x], "&gt;");
-//                    x += 4 /*strlen(&gt;)*/ ;
-//                    break;
-//        default:
-        res[x++] = src[i];
-//                    break;
-    }
-//    }
-    strcpy(&res[x], "</code></pre>\n");
-    return res;
+    KSyntaxHighlighting::Repository repo;
+    QString result;
+    QTextStream stream(&result);
+    MarkdownHighlighter highLighter(&stream);
+    highLighter.setDefinition(repo.definitionForName(QStringLiteral("SystemC")));
+    highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
+                         ? repo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                         : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+    highLighter.highlight(QString::fromLatin1(src));
+    QByteArray ba = result.toLatin1();
+    return ba.data();
 }
 
 #endif
@@ -102,7 +82,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     }
 #ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
     //Comment for the moment until I will be able to implement it.
-    //mkd_e_code_format(markdownHandle, external_codefmt);
+    mkd_e_code_format(markdownHandle, external_codefmt);
 #endif
     if (!mkd_compile(markdownHandle, flags)) {
         Q_EMIT failed(i18n("Failed to compile the Markdown document."));
