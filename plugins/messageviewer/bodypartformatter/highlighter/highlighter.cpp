@@ -59,10 +59,10 @@ void Highlighter::applyFormat(int offset, int length, const KSyntaxHighlighting:
     if (!format.isDefaultTextStyle(theme())) {
         *mStream << QStringLiteral("<span style=\"");
         if (format.hasTextColor(theme())) {
-            *mStream << QStringLiteral("color:") << format.textColor(theme()).name() << QStringLiteral(";");
+            *mStream << QStringLiteral("color:") << format.textColor(theme()).name() << QLatin1Char(';');
         }
         if (format.hasBackgroundColor(theme())) {
-            *mStream << QStringLiteral("background-color:") << format.backgroundColor(theme()).name() << QStringLiteral(";");
+            *mStream << QStringLiteral("background-color:") << format.backgroundColor(theme()).name() << QLatin1Char(';');
         }
         if (format.isBold(theme())) {
             *mStream << QStringLiteral("font-weight:bold;");
