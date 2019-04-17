@@ -18,23 +18,21 @@
 */
 
 #include "markdownconverter.h"
+#include "config-markdownplugin.h"
+#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
 #include "markdownhighlighter.h"
 
 #include <KSyntaxHighlighting/Definition>
 #include <KSyntaxHighlighting/Repository>
 #include <KSyntaxHighlighting/Theme>
-
-#include <KLocalizedString>
 #include <QGuiApplication>
 #include <QPalette>
-#include <QDebug>
-#include "config-markdownplugin.h"
-#include <iostream>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-extern "C" {
 #include <QTextStream>
+#endif
+
+#include <KLocalizedString>
+#include <QDebug>
+extern "C" {
 #include <mkdio.h>
 }
 
@@ -54,8 +52,8 @@ external_codefmt(const char *src, int, void *)
     QByteArray ba = result.toLatin1();
     return ba.data();
 }
-
 #endif
+
 MarkdownConverter::MarkdownConverter(QObject *parent)
     : QObject(parent)
 {
