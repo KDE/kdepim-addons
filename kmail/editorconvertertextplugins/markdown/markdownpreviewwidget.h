@@ -35,6 +35,7 @@ public Q_SLOTS:
     void slotUpdatePreview(const QString &text);
 
 private:
+    void converterFailed(const QString &msg);
     QWebEngineView *mWebView = nullptr;
     MarkdownConverter *mConverter = nullptr;
 };

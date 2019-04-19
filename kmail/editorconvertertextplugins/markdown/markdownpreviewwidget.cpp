@@ -20,6 +20,8 @@
 #include "markdownpreviewwidget.h"
 #include "markdownconverter.h"
 #include "markdownenginepage.h"
+#include <KMessageBox>
+#include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineProfile>
@@ -31,6 +33,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
 {
     mConverter = new MarkdownConverter(this);
     mConverter->setObjectName(QStringLiteral("converter"));
+    connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
 
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -64,6 +67,11 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
 {
+}
+
+void MarkdownPreviewWidget::converterFailed(const QString &msg)
+{
+    KMessageBox::error(this, i18n("Converter Error"), msg);
 }
 
 void MarkdownPreviewWidget::setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists)
