@@ -48,14 +48,14 @@ MarkdownConfigureWidget::~MarkdownConfigureWidget()
 
 void MarkdownConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    KConfigGroup grp(KSharedConfig::openConfig(), "Markdown");
     mLatexSupport->setChecked(grp.readEntry("Enable Embedded Latex", false));
     mExtraDefinitionLists->setChecked(grp.readEntry("Enable Extra Definition Lists", false));
 }
 
 void MarkdownConfigureWidget::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    KConfigGroup grp(KSharedConfig::openConfig(), "Markdown");
     grp.writeEntry("Enable Embedded Latex", mLatexSupport->isChecked());
     grp.writeEntry("Enable Extra Definition Lists", mExtraDefinitionLists->isChecked());
 }

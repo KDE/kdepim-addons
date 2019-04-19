@@ -192,7 +192,7 @@ void MarkdownInterface::enableDisablePluginActions(bool richText)
 
 void MarkdownInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Mardown");
+    KConfigGroup grp(KSharedConfig::openConfig(), "Markdown");
 
     mEnableEmbeddedLabel = grp.readEntry("Enable Embedded Latex", false);
     mEnableExtraDefinitionLists = grp.readEntry("Enable Extra Definition Lists", false);
