@@ -119,6 +119,7 @@ void LanguageToolConfigWidget::saveSettings()
     LanguageToolManager::self()->setUseLocalInstance(mUseLocalInstance->isChecked());
     LanguageToolManager::self()->setLanguageToolPath(mInstancePath->text());
     LanguageToolManager::self()->setLanguage(mLanguageToolCombobox->language());
+    LanguageToolManager::self()->saveSettings();
 }
 
 void LanguageToolConfigWidget::uploadListOfLanguages()
