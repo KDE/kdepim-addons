@@ -57,7 +57,7 @@ void EventDateTimeWidgetTest::shouldEmitSignalWhenDateTimeChanged()
     QDateTime currentDateTime = QDateTime::currentDateTime();
     edit.setDateTime(currentDateTime);
 
-    QSignalSpy spy(&edit, SIGNAL(dateTimeChanged(QDateTime)));
+    QSignalSpy spy(&edit, &MessageViewer::EventDateTimeWidget::dateTimeChanged);
     currentDateTime.setDate(currentDateTime.date().addDays(1));
     edit.setDateTime(currentDateTime);
 
@@ -70,7 +70,7 @@ void EventDateTimeWidgetTest::shouldEmitSignalWhenJustTimeChanged()
     QDateTime currentDateTime = QDateTime::currentDateTime();
     edit.setDateTime(currentDateTime);
 
-    QSignalSpy spy(&edit, SIGNAL(dateTimeChanged(QDateTime)));
+    QSignalSpy spy(&edit, &MessageViewer::EventDateTimeWidget::dateTimeChanged);
     QTime time = currentDateTime.time().addSecs(3600);
     edit.setTime(time);
 
@@ -83,7 +83,7 @@ void EventDateTimeWidgetTest::shouldEmitSignalWhenJustDateChanged()
     QDateTime currentDateTime = QDateTime::currentDateTime();
     edit.setDateTime(currentDateTime);
 
-    QSignalSpy spy(&edit, SIGNAL(dateTimeChanged(QDateTime)));
+    QSignalSpy spy(&edit, &MessageViewer::EventDateTimeWidget::dateTimeChanged);
     QDate date = currentDateTime.date().addDays(1);
     edit.setDate(date);
 
@@ -96,7 +96,7 @@ void EventDateTimeWidgetTest::shouldNotEmitSignalWhenDateTimeWasNotChanged()
     QDateTime currentDateTime = QDateTime::currentDateTime();
     edit.setDateTime(currentDateTime);
 
-    QSignalSpy spy(&edit, SIGNAL(dateTimeChanged(QDateTime)));
+    QSignalSpy spy(&edit, &MessageViewer::EventDateTimeWidget::dateTimeChanged);
     currentDateTime.setDate(currentDateTime.date().addDays(1));
     edit.setDateTime(currentDateTime);
 

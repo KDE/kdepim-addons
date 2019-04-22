@@ -85,7 +85,7 @@ void TodoEditTest::shouldHaveDefaultValuesOnCreation()
 void TodoEditTest::shouldEmitCollectionChanged()
 {
     MessageViewer::TodoEdit edit;
-    QSignalSpy spy(&edit, SIGNAL(collectionChanged(Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::collectionChanged);
     edit.setCollection(Akonadi::Collection(42));
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<Akonadi::Collection>(), Akonadi::Collection(42));
@@ -94,7 +94,7 @@ void TodoEditTest::shouldEmitCollectionChanged()
 void TodoEditTest::shouldEmitMessageChanged()
 {
     MessageViewer::TodoEdit edit;
-    QSignalSpy spy(&edit, SIGNAL(messageChanged(KMime::Message::Ptr)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::messageChanged);
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
     QCOMPARE(spy.count(), 1);
@@ -105,7 +105,7 @@ void TodoEditTest::shouldNotEmitWhenCollectionIsNotChanged()
 {
     MessageViewer::TodoEdit edit;
     edit.setCollection(Akonadi::Collection(42));
-    QSignalSpy spy(&edit, SIGNAL(collectionChanged(Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::collectionChanged);
     edit.setCollection(Akonadi::Collection(42));
     QCOMPARE(spy.count(), 0);
 }
@@ -115,7 +115,7 @@ void TodoEditTest::shouldNotEmitWhenMessageIsNotChanged()
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
-    QSignalSpy spy(&edit, SIGNAL(messageChanged(KMime::Message::Ptr)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::messageChanged);
     edit.setMessage(msg);
     QCOMPARE(spy.count(), 0);
 }
@@ -200,7 +200,7 @@ void TodoEditTest::shouldEmitNotEmitTodoWhenTextIsEmpty()
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
 }
@@ -211,7 +211,7 @@ void TodoEditTest::shouldEmitNotEmitTodoWhenTextTrimmedIsEmpty()
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     noteedit->setText(QStringLiteral("      "));
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
@@ -230,7 +230,7 @@ void TodoEditTest::shouldEmitTodoWhenPressEnter()
     edit.setMessage(msg);
     edit.showToDoWidget();
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
 }
@@ -244,7 +244,7 @@ void TodoEditTest::shouldTodoHasCorrectSubject()
     edit.setMessage(msg);
     edit.showToDoWidget();
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
     KCalCore::Todo::Ptr todoPtr = spy.at(0).at(0).value<KCalCore::Todo::Ptr>();
@@ -276,7 +276,7 @@ void TodoEditTest::shouldEmitCollectionChangedWhenCurrentCollectionWasChanged()
     Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(0);
     QCOMPARE(akonadicombobox->currentIndex(), 0);
-    QSignalSpy spy(&edit, SIGNAL(collectionChanged(Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::collectionChanged);
     akonadicombobox->setCurrentIndex(3);
     QCOMPARE(akonadicombobox->currentIndex(), 3);
     QCOMPARE(spy.count(), 1);
@@ -294,7 +294,7 @@ void TodoEditTest::shouldEmitCorrectCollection()
     akonadicombobox->setCurrentIndex(3);
     Akonadi::Collection col = akonadicombobox->currentCollection();
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(1).value<Akonadi::Collection>(), col);
@@ -395,7 +395,7 @@ void TodoEditTest::shouldNotEmitTodoWhenMessageIsNull()
     QString subject = QStringLiteral("Test Note");
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(subject);
-    QSignalSpy spy(&edit, SIGNAL(createTodo(KCalCore::Todo::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
 }

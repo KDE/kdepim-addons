@@ -104,7 +104,7 @@ void EventEditTest::shouldHaveDefaultValuesOnCreation()
 void EventEditTest::shouldEmitCollectionChanged()
 {
     MessageViewer::EventEdit edit;
-    QSignalSpy spy(&edit, SIGNAL(collectionChanged(Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::collectionChanged);
     edit.setCollection(Akonadi::Collection(42));
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<Akonadi::Collection>(), Akonadi::Collection(42));
@@ -113,7 +113,7 @@ void EventEditTest::shouldEmitCollectionChanged()
 void EventEditTest::shouldEmitMessageChanged()
 {
     MessageViewer::EventEdit edit;
-    QSignalSpy spy(&edit, SIGNAL(messageChanged(KMime::Message::Ptr)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::messageChanged);
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
     QCOMPARE(spy.count(), 1);
@@ -124,7 +124,7 @@ void EventEditTest::shouldNotEmitWhenCollectionIsNotChanged()
 {
     MessageViewer::EventEdit edit;
     edit.setCollection(Akonadi::Collection(42));
-    QSignalSpy spy(&edit, SIGNAL(collectionChanged(Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::collectionChanged);
     edit.setCollection(Akonadi::Collection(42));
     QCOMPARE(spy.count(), 0);
 }
@@ -134,7 +134,7 @@ void EventEditTest::shouldNotEmitWhenMessageIsNotChanged()
     MessageViewer::EventEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
-    QSignalSpy spy(&edit, SIGNAL(messageChanged(KMime::Message::Ptr)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::messageChanged);
     edit.setMessage(msg);
     QCOMPARE(spy.count(), 0);
 }
@@ -154,7 +154,7 @@ void EventEditTest::shouldEmitEventWhenPressEnter()
     edit.setMessage(msg);
     QLineEdit *eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     eventedit->setFocus();
-    QSignalSpy spy(&edit, SIGNAL(createEvent(KCalCore::Event::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(eventedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
 }
@@ -253,7 +253,7 @@ void EventEditTest::shouldNotEmitCreateEventWhenDateIsInvalid()
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
     QLineEdit *eventedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
-    QSignalSpy spy(&edit, SIGNAL(createEvent(KCalCore::Event::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(eventedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
 }
@@ -267,7 +267,7 @@ void EventEditTest::shouldEventHasCorrectSubject()
     edit.setMessage(msg);
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
-    QSignalSpy spy(&edit, SIGNAL(createEvent(KCalCore::Event::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
     KCalCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalCore::Event::Ptr>();
@@ -307,7 +307,7 @@ void EventEditTest::shouldHaveCorrectStartEndDateTime()
 
     QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("eventedit"));
     QVERIFY(noteedit);
-    QSignalSpy spy(&edit, SIGNAL(createEvent(KCalCore::Event::Ptr,Akonadi::Collection)));
+    QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
     KCalCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalCore::Event::Ptr>();

@@ -53,7 +53,7 @@ void LogActivitiesPluginInterfaceTest::shouldEmitActivatedSignal()
     LogActivitiesPluginInterface interface;
     interface.createAction(new KActionCollection(this));
 
-    QSignalSpy spy1(&interface, SIGNAL(emitPluginActivated(PimCommon::AbstractGenericPluginInterface*)));
+    QSignalSpy spy1(&interface, &PimCommon::AbstractGenericPluginInterface::emitPluginActivated);
     interface.actionTypes().at(0).action()->trigger();
     QCOMPARE(spy1.count(), 1);
 }
