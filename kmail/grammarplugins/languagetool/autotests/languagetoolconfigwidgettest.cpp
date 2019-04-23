@@ -71,3 +71,23 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
     QVERIFY(refreshButton);
     QVERIFY(!refreshButton->icon().isNull());
 }
+
+void LanguageToolConfigWidgetTest::shouldUpdateWidgets()
+{
+    LanguageToolConfigWidget w;
+
+    QCheckBox *mUseLocalInstance = w.findChild<QCheckBox *>(QStringLiteral("uselocalinstance"));
+
+    QLabel *instancePathLabel = w.findChild<QLabel *>(QStringLiteral("instancepath"));
+
+    QLineEdit *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
+    mUseLocalInstance->setChecked(true);
+    QVERIFY(mUseLocalInstance->isEnabled());
+    QVERIFY(instancePathLabel->isEnabled());
+    QVERIFY(mInstancePath->isEnabled());
+
+    mUseLocalInstance->setChecked(false);
+    QVERIFY(mUseLocalInstance->isEnabled());
+    QVERIFY(!instancePathLabel->isEnabled());
+    QVERIFY(!mInstancePath->isEnabled());
+}

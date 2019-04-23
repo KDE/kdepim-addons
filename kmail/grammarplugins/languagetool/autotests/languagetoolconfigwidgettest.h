@@ -30,6 +30,7 @@ public:
     ~LanguageToolConfigWidgetTest() = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
+    void shouldUpdateWidgets();
 };
 
 #endif // LANGUAGETOOLCONFIGWIDGETTEST_H
