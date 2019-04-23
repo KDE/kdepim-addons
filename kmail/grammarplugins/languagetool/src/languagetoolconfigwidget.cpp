@@ -50,10 +50,10 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     QHBoxLayout *instanceLayout = new QHBoxLayout;
     instanceLayout->setObjectName(QStringLiteral("instancelayout"));
     instanceLayout->setContentsMargins(0, 0, 0, 0);
-    QLabel *instancePathLabel = new QLabel(i18n("Instance Path:"), this);
-    instancePathLabel->setObjectName(QStringLiteral("instancepath"));
-    instancePathLabel->setEnabled(false);
-    instanceLayout->addWidget(instancePathLabel);
+    mInstancePathLabel = new QLabel(i18n("Instance Path:"), this);
+    mInstancePathLabel->setObjectName(QStringLiteral("instancepath"));
+    mInstancePathLabel->setEnabled(false);
+    instanceLayout->addWidget(mInstancePathLabel);
 
     mInstancePath = new QLineEdit(this);
     mInstancePath->setObjectName(QStringLiteral("instancepath"));
@@ -62,11 +62,10 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     instanceLayout->addWidget(mInstancePath);
     mainLayout->addLayout(instanceLayout);
 
-    connect(mUseLocalInstance, &QCheckBox::clicked, this, [this, instancePathLabel](bool b) {
-        instancePathLabel->setEnabled(b);
-        mInstancePath->setEnabled(b);
+    connect(mUseLocalInstance, &QCheckBox::clicked, this, [this](bool b) {
+        updateWidgets(b);
     }
-            );
+    );
 
     QHBoxLayout *languageLayout = new QHBoxLayout;
     languageLayout->setObjectName(QStringLiteral("languagelayout"));
@@ -90,11 +89,18 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mainLayout->addStretch(1);
     uploadListOfLanguages();
     loadSettings();
+    updateWidgets(mUseLocalInstance->isChecked());
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()
 {
     saveSettings();
+}
+
+void LanguageToolConfigWidget::updateWidgets(bool enabled)
+{
+    mInstancePathLabel->setEnabled(enabled);
+    mInstancePath->setEnabled(enabled);
 }
 
 void LanguageToolConfigWidget::refreshListOfLanguages()

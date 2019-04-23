@@ -24,6 +24,7 @@
 #include "libkmaillanguagetool_export.h"
 class QCheckBox;
 class QLineEdit;
+class QLabel;
 class LanguageToolComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
 {
@@ -39,8 +40,10 @@ private:
     void slotGetLanguagesError(const QString &error);
     void slotGetLanguagesFinished(const QString &result);
     void refreshListOfLanguages();
+    void updateWidgets(bool enabled);
     QCheckBox *mUseLocalInstance = nullptr;
     QLineEdit *mInstancePath = nullptr;
+    QLabel *mInstancePathLabel = nullptr;
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
 };
 
