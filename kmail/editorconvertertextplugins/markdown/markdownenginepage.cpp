@@ -55,7 +55,7 @@ MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
 #endif
 #if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
-    settings()->setAttribute(QWebEngineSettings::PDFViewerEnabled, false);
+    settings()->setAttribute(QWebEngineSettings::PdfViewerEnabled, false);
 #endif
     profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
 }
