@@ -3,8 +3,7 @@ include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}/
 )
 
-set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT ${DISCOUNT_HAS_HIGHLIGHTING_SUPPORT})
-configure_file(config-markdownplugin.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-markdownplugin.h )
+configure_file(config-markdownplugin.h.cmake ${CMAKE_CURRENT_BINARY_DIR}/config-markdownplugin.h)
 
 
 set(kmail_markdownplugin_SRCS
