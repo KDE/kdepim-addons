@@ -167,6 +167,8 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
             const QString result = converter.convertTextToMarkdown(str);
             if (!result.isEmpty()) {
                 textPart->setCleanPlainText(str);
+                //TODO add image
+                //richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(image1Path));
                 textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
                 textPart->setCleanHtml(result);
                 return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
