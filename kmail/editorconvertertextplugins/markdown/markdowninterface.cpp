@@ -22,6 +22,7 @@
 #include "markdownplugin_debug.h"
 #include "markdownconverter.h"
 #include "markdowncreatelinkdialog.h"
+#include "markdownutil.h"
 #include "markdowncreateimagedialog.h"
 #include <KPIMTextEdit/RichTextComposer>
 #include <KPIMTextEdit/RichTextComposerControler>
@@ -167,8 +168,14 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
             const QString result = converter.convertTextToMarkdown(str);
             if (!result.isEmpty()) {
                 textPart->setCleanPlainText(str);
+
+                const QStringList listImage = MarkdownUtil::imagePaths(str);
+                //Search image from str
                 //TODO add image
-                //richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(image1Path));
+
+                //richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(QStringLiteral("dd")));
+                //textPart->setEmbeddedImages(richTextEditor()->composerControler()->composerImages()->embeddedImages());
+
                 textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
                 textPart->setCleanHtml(result);
                 return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;

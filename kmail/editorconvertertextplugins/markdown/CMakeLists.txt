@@ -21,6 +21,7 @@ set(kmail_markdownplugin_SRCS
     markdowncreateimagewidget.cpp
     markdowncreateimagedialog.cpp
     markdownhighlighter.cpp
+    markdownutil.cpp
     )
 
 
