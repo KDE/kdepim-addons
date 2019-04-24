@@ -78,7 +78,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     if (mEnableExtraDefinitionLists) {
         flags |= MKD_DLEXTRA;
     }
-#ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
+#if DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
     mkd_e_code_format(markdownHandle, external_codefmt);
 #endif
     if (!mkd_compile(markdownHandle, flags)) {
