@@ -170,11 +170,12 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
                 textPart->setCleanPlainText(str);
 
                 const QStringList listImage = MarkdownUtil::imagePaths(str);
-                //Search image from str
-                //TODO add image
-
-                //richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(QStringLiteral("dd")));
-                //textPart->setEmbeddedImages(richTextEditor()->composerControler()->composerImages()->embeddedImages());
+                if (!listImage.isEmpty()) {
+                    for (const QString &urlImage : listImage) {
+                        richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(urlImage));
+                    }
+                    textPart->setEmbeddedImages(richTextEditor()->composerControler()->composerImages()->embeddedImages());
+                }
 
                 textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
                 textPart->setCleanHtml(result);
