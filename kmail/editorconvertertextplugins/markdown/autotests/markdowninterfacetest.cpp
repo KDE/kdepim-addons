@@ -18,7 +18,7 @@
 */
 
 #include "markdowninterfacetest.h"
-//#include "markdowninterface.h"
+#include "../plugin/markdowninterface.h"
 #include <QTest>
 QTEST_MAIN(MarkdownInterfaceTest)
 
