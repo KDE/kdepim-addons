@@ -224,7 +224,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         addr.setLangs((*it).langs());
         addr.setKind((*it).kind());
         addr.setMembers((*it).members());
-        addr.setRelationShips((*it).relationShips());
+        addr.setRelationships((*it).relationships());
         addr.setSourcesUrlList((*it).sourcesUrlList());
         addr.setImppList((*it).imppList());
         addr.setFieldGroupList((*it).fieldGroupList());
