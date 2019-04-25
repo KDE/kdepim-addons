@@ -16,9 +16,10 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+
 #include "markdownutil.h"
 #include <QRegularExpression>
-#include <QDebug>
+
 QStringList MarkdownUtil::imagePaths(const QString &str)
 {
     static QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)([\\s]*\".*\")*\\s*\\)"));
@@ -29,7 +30,6 @@ QStringList MarkdownUtil::imagePaths(const QString &str)
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         if (match.hasMatch()) {
-             qDebug() << match.captured(1);
              results.append(match.captured(1));
         }
     }
