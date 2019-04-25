@@ -31,6 +31,8 @@ public:
     ~MarkdownCreateImageDialog();
     Q_REQUIRED_RESULT QString linkStr() const;
 private:
+    void writeConfig();
+    void readConfig();
     MarkdownCreateImageWidget *mMarkdownCreateImageWidget = nullptr;
 };
 

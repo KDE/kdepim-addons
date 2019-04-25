@@ -22,11 +22,13 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Create Link"));
+    setWindowTitle(i18n("Add Link"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -40,13 +42,30 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateLinkDialog::reject);
+    readConfig();
 }
 
 MarkdownCreateLinkDialog::~MarkdownCreateLinkDialog()
 {
+    writeConfig();
 }
 
 QString MarkdownCreateLinkDialog::linkStr() const
 {
     return mMarkdownCreateLinkWidget->linkStr();
+}
+
+void MarkdownCreateLinkDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateLinkDialog");
+    group.writeEntry("Size", size());
+}
+
+void MarkdownCreateLinkDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateLinkDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }

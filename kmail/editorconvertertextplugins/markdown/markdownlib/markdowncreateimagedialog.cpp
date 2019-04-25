@@ -22,11 +22,13 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <KConfigGroup>
+#include <KSharedConfig>
 
 MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Create Link"));
+    setWindowTitle(i18n("Add Image"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -40,13 +42,31 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateImageDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateImageDialog::reject);
+    readConfig();
 }
 
 MarkdownCreateImageDialog::~MarkdownCreateImageDialog()
 {
+    writeConfig();
 }
 
 QString MarkdownCreateImageDialog::linkStr() const
 {
     return mMarkdownCreateImageWidget->linkStr();
 }
+
+void MarkdownCreateImageDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateImageDialog");
+    group.writeEntry("Size", size());
+}
+
+void MarkdownCreateImageDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateImageDialog");
+    const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
+}
+

@@ -29,8 +29,10 @@ class LIBKMAILMARKDOWN_EXPORT MarkdownCreateLinkDialog : public QDialog
 public:
     explicit MarkdownCreateLinkDialog(QWidget *parent = nullptr);
     ~MarkdownCreateLinkDialog();
-    QString linkStr() const;
+    Q_REQUIRED_RESULT QString linkStr() const;
 private:
+    void writeConfig();
+    void readConfig();
     MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = nullptr;
 };
 
