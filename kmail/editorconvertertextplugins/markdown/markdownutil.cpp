@@ -21,7 +21,8 @@
 #include <QDebug>
 QStringList MarkdownUtil::imagePaths(const QString &str)
 {
-    static QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)?\\s+\".*\"?\\)"));
+    static QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)([\\s]*\".*\")*\\s*\\)"));
+
     imageRegular.setPatternOptions(QRegularExpression::InvertedGreedinessOption);
     QRegularExpressionMatchIterator i = imageRegular.globalMatch(str);
     QStringList results;
