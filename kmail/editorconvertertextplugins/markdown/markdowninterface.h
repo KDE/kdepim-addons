@@ -42,6 +42,7 @@ public Q_SLOTS:
     void reloadConfig() override;
 
 private:
+    void addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const;
     void addBold();
     void addItalic();
     void addTitle();

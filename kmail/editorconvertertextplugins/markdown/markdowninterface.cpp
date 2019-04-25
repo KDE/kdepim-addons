@@ -152,6 +152,54 @@ bool MarkdownInterface::reformatText()
     return false;
 }
 
+void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const
+{
+    QStringList listImage = MarkdownUtil::imagePaths(textVersion);
+    QList< QSharedPointer<KPIMTextEdit::EmbeddedImage> > lstEmbeddedImages;
+    if (!listImage.isEmpty()) {
+        listImage.removeDuplicates();
+        QStringList imageNameAdded;
+        for (const QString &urlImage : listImage) {
+            QImage image;
+            if (!image.load(urlImage)) {
+                qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Impossible to load " << urlImage;
+                continue;
+            }
+            const QFileInfo fi(urlImage);
+            const QString imageName
+                = fi.baseName().isEmpty()
+                  ? QStringLiteral("image.png")
+                  : QString(fi.baseName() + QLatin1String(".png"));
+
+            QString imageNameToAdd = imageName;
+            int imageNumber = 1;
+            while (imageNameAdded.contains(imageNameToAdd)) {
+                const int firstDot = imageName.indexOf(QLatin1Char('.'));
+                if (firstDot == -1) {
+                    imageNameToAdd = imageName + QString::number(imageNumber++);
+                } else {
+                    imageNameToAdd = imageName.left(firstDot) + QString::number(imageNumber++)
+                            +imageName.mid(firstDot);
+                }
+            }
+
+
+            QSharedPointer<KPIMTextEdit::EmbeddedImage> embeddedImage = richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
+            lstEmbeddedImages.append(embeddedImage);
+
+            const QString newImageName = QLatin1String("cid:") + embeddedImage->contentID;
+            const QString quote(QStringLiteral("\""));
+            htmlVersion.replace(QString(quote + urlImage + quote),
+                           QString(quote + newImageName + quote));
+            textVersion.replace(urlImage, newImageName);
+            imageNameAdded << imageNameToAdd;
+        }
+        if (!lstEmbeddedImages.isEmpty()) {
+            textPart->setEmbeddedImages(lstEmbeddedImages);
+        }
+    }
+}
+
 MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
     //It can't work on html email
@@ -160,24 +208,18 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
         return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;
     }
     if (mAction->isChecked()) {
-        const QString str = richTextEditor()->composerControler()->toCleanPlainText();
-        if (!str.isEmpty()) {
+        QString textVersion = richTextEditor()->composerControler()->toCleanPlainText();
+        if (!textVersion.isEmpty()) {
             MarkdownConverter converter;
             converter.setEnableEmbeddedLabel(mEnableEmbeddedLabel);
             converter.setEnableExtraDefinitionLists(mEnableExtraDefinitionLists);
-            const QString result = converter.convertTextToMarkdown(str);
+            QString result = converter.convertTextToMarkdown(textVersion);
             if (!result.isEmpty()) {
-                textPart->setCleanPlainText(str);
+                addEmbeddedImages(textPart, textVersion, result);
+                textPart->setCleanPlainText(textVersion);
 
-                const QStringList listImage = MarkdownUtil::imagePaths(str);
-                if (!listImage.isEmpty()) {
-                    for (const QString &urlImage : listImage) {
-                        richTextEditor()->composerControler()->composerImages()->addImage(QUrl::fromLocalFile(urlImage));
-                    }
-                    textPart->setEmbeddedImages(richTextEditor()->composerControler()->composerImages()->embeddedImages());
-                }
 
-                textPart->setWrappedPlainText(richTextEditor()->composerControler()->toWrappedPlainText());
+                textPart->setWrappedPlainText(textVersion);
                 textPart->setCleanHtml(result);
                 return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::Converted;
             } else {
