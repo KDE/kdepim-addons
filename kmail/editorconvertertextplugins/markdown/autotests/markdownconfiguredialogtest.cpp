@@ -18,7 +18,7 @@
 */
 
 #include "markdownconfiguredialogtest.h"
-#include "../markdownconfiguredialog.h"
+#include "markdownconfiguredialog.h"
 #include <QTest>
 QTEST_MAIN(MarkdownConfigureDialogTest)
 

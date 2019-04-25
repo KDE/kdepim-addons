@@ -18,7 +18,7 @@
 */
 
 #include "markdownutiltest.h"
-#include "../markdownutil.h"
+#include "markdownutil.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(MarkdownUtilTest)
 

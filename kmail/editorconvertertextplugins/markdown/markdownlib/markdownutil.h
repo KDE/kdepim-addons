@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Montel Laurent <montel@kde.org>
+   Copyright (C) 2019 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,27 +17,14 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNPREVIEWWIDGET_H
-#define MARKDOWNPREVIEWWIDGET_H
+#ifndef MARKDOWNUTIL_H
+#define MARKDOWNUTIL_H
 
-#include <QWidget>
-class QWebEngineView;
-class MarkdownConverter;
-class MarkdownPreviewWidget : public QWidget
+#include <QStringList>
+#include "libkmailmarkdown_export.h"
+namespace MarkdownUtil
 {
-    Q_OBJECT
-public:
-    explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
-    ~MarkdownPreviewWidget();
-    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
+    LIBKMAILMARKDOWN_EXPORT QStringList imagePaths(const QString &str);
+}
 
-public Q_SLOTS:
-    void slotUpdatePreview(const QString &text);
-
-private:
-    void converterFailed(const QString &msg);
-    QWebEngineView *mWebView = nullptr;
-    MarkdownConverter *mConverter = nullptr;
-};
-
-#endif // MARKDOWNPREVIEWWIDGET_H
+#endif // MARKDOWNUTIL_H

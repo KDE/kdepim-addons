@@ -18,7 +18,7 @@
 */
 
 #include "markdowndemowidget.h"
-#include "../markdownpreviewwidget.h"
+#include "markdownpreviewwidget.h"
 #include <QTextEdit>
 #include <QFile>
 #include <QHBoxLayout>

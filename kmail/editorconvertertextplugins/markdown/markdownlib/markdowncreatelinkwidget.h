@@ -17,20 +17,23 @@
     02110-1301, USA.
 */
 
-#ifndef MARKDOWNCREATELINKDIALOG_H
-#define MARKDOWNCREATELINKDIALOG_H
+#ifndef MARKDOWNCREATELINKWIDGET_H
+#define MARKDOWNCREATELINKWIDGET_H
 
-#include <QDialog>
-class MarkdownCreateLinkWidget;
-class MarkdownCreateLinkDialog : public QDialog
+#include <QWidget>
+#include "markdownlib_private_export.h"
+class QLineEdit;
+class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownCreateLinkWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MarkdownCreateLinkDialog(QWidget *parent = nullptr);
-    ~MarkdownCreateLinkDialog();
+    explicit MarkdownCreateLinkWidget(QWidget *parent = nullptr);
+    ~MarkdownCreateLinkWidget();
     QString linkStr() const;
+
 private:
-    MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = nullptr;
+    QLineEdit *mTitle = nullptr;
+    QLineEdit *mLink = nullptr;
 };
 
-#endif // MARKDOWNCREATELINKDIALOG_H
+#endif // MARKDOWNCREATELINKWIDGET_H

@@ -17,23 +17,21 @@
     02110-1301, USA.
 */
 
-#ifndef MARKDOWNCREATEIMAGEWIDGET_H
-#define MARKDOWNCREATEIMAGEWIDGET_H
+#ifndef MARKDOWNCREATELINKDIALOG_H
+#define MARKDOWNCREATELINKDIALOG_H
 
-#include <QWidget>
-class QLineEdit;
-class MarkdownCreateImageWidget : public QWidget
+#include <QDialog>
+#include "libkmailmarkdown_export.h"
+class MarkdownCreateLinkWidget;
+class LIBKMAILMARKDOWN_EXPORT MarkdownCreateLinkDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit MarkdownCreateImageWidget(QWidget *parent = nullptr);
-    ~MarkdownCreateImageWidget();
+    explicit MarkdownCreateLinkDialog(QWidget *parent = nullptr);
+    ~MarkdownCreateLinkDialog();
     QString linkStr() const;
-
 private:
-    QLineEdit *mTitle = nullptr;
-    QLineEdit *mImageUrl = nullptr;
-    QLineEdit *mAlternateText = nullptr;
+    MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = nullptr;
 };
 
-#endif // MARKDOWNCREATEIMAGEWIDGET_H
+#endif // MARKDOWNCREATELINKDIALOG_H

@@ -18,7 +18,7 @@
 */
 
 #include "markdownconfigurewidgettest.h"
-#include "../markdownconfigurewidget.h"
+#include "markdownconfigurewidget.h"
 #include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QComboBox>

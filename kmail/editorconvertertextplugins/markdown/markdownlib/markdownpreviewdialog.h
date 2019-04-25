@@ -17,28 +17,25 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNCONFIGUREDIALOG_H
-#define MARKDOWNCONFIGUREDIALOG_H
+#ifndef MARKDOWNPREVIEWDIALOG_H
+#define MARKDOWNPREVIEWDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
-
-class MarkdownConfigureWidget;
-class MarkdownConfigureDialog : public PimCommon::ConfigurePluginDialog
+#include <QDialog>
+#include "libkmailmarkdown_export.h"
+class MarkdownPreviewWidget;
+class LIBKMAILMARKDOWN_EXPORT MarkdownPreviewDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit MarkdownConfigureDialog(QWidget *parent = nullptr);
-    ~MarkdownConfigureDialog() override;
+    explicit MarkdownPreviewDialog(QWidget *parent = nullptr);
+    ~MarkdownPreviewDialog();
+    void setText(const QString &str);
 
-protected:
-    QWidget *createLayout() override;
-    void save() override;
-    void load() override;
-    void reset() override;
-    void help() override;
-
+    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
 private:
-    MarkdownConfigureWidget *mConfigureWidget = nullptr;
+    void readConfig();
+    void writeConfig();
+    MarkdownPreviewWidget *mPreviewWidget = nullptr;
 };
 
-#endif // MARKDOWNCONFIGUREDIALOG_H
+#endif // MARKDOWNPREVIEWDIALOG_H

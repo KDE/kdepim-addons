@@ -17,32 +17,25 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNCONVERTER_H
-#define MARKDOWNCONVERTER_H
+#ifndef MARKDOWNCONFIGUREWIDGET_H
+#define MARKDOWNCONFIGUREWIDGET_H
 
-#include <QObject>
-
-class MarkdownConverter : public QObject
+#include <MessageComposer/PluginEditorConvertTextConfigureWidget>
+#include "markdownlib_private_export.h"
+class QCheckBox;
+class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureWidget : public MessageComposer::PluginEditorConvertTextConfigureWidget
 {
     Q_OBJECT
 public:
-    explicit MarkdownConverter(QObject *parent = nullptr);
-    ~MarkdownConverter();
-    Q_REQUIRED_RESULT QString convertTextToMarkdown(const QString &str);
+    explicit MarkdownConfigureWidget(QWidget *parent = nullptr);
+    ~MarkdownConfigureWidget() override;
 
-    Q_REQUIRED_RESULT bool enableEmbeddedLabel() const;
-    void setEnableEmbeddedLabel(bool enableEmbeddedLabel);
-
-    Q_REQUIRED_RESULT bool enableExtraDefinitionLists() const;
-    void setEnableExtraDefinitionLists(bool enableExtraDefinitionLists);
-
-Q_SIGNALS:
-    void failed(const QString &str);
-
+    void loadSettings() override;
+    void saveSettings() override;
+    void resetSettings() override;
 private:
-    Q_DISABLE_COPY(MarkdownConverter)
-    bool mEnableEmbeddedLabel = false;
-    bool mEnableExtraDefinitionLists = false;
+    QCheckBox *mLatexSupport = nullptr;
+    QCheckBox *mExtraDefinitionLists = nullptr;
 };
 
-#endif // MARKDOWNCONVERTER_H
+#endif // MARKDOWNCONFIGUREWIDGET_H

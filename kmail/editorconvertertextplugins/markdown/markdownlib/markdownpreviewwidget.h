@@ -17,24 +17,28 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNCONFIGUREWIDGET_H
-#define MARKDOWNCONFIGUREWIDGET_H
+#ifndef MARKDOWNPREVIEWWIDGET_H
+#define MARKDOWNPREVIEWWIDGET_H
 
-#include <MessageComposer/PluginEditorConvertTextConfigureWidget>
-class QCheckBox;
-class MarkdownConfigureWidget : public MessageComposer::PluginEditorConvertTextConfigureWidget
+#include <QWidget>
+#include "markdownlib_private_export.h"
+class QWebEngineView;
+class MarkdownConverter;
+class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownPreviewWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit MarkdownConfigureWidget(QWidget *parent = nullptr);
-    ~MarkdownConfigureWidget() override;
+    explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
+    ~MarkdownPreviewWidget();
+    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
 
-    void loadSettings() override;
-    void saveSettings() override;
-    void resetSettings() override;
+public Q_SLOTS:
+    void slotUpdatePreview(const QString &text);
+
 private:
-    QCheckBox *mLatexSupport = nullptr;
-    QCheckBox *mExtraDefinitionLists = nullptr;
+    void converterFailed(const QString &msg);
+    QWebEngineView *mWebView = nullptr;
+    MarkdownConverter *mConverter = nullptr;
 };
 
-#endif // MARKDOWNCONFIGUREWIDGET_H
+#endif // MARKDOWNPREVIEWWIDGET_H

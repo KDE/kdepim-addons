@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2019 Montel Laurent <montel@kde.org>
+   Copyright (C) 2018-2019 Montel Laurent <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -17,14 +17,28 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNUTIL_H
-#define MARKDOWNUTIL_H
+#ifndef MARKDOWNCONFIGUREDIALOG_H
+#define MARKDOWNCONFIGUREDIALOG_H
 
-#include <QStringList>
-
-namespace MarkdownUtil
+#include <PimCommon/ConfigurePluginDialog>
+#include "markdownlib_private_export.h"
+class MarkdownConfigureWidget;
+class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
-    QStringList imagePaths(const QString &str);
-}
+    Q_OBJECT
+public:
+    explicit MarkdownConfigureDialog(QWidget *parent = nullptr);
+    ~MarkdownConfigureDialog() override;
 
-#endif // MARKDOWNUTIL_H
+protected:
+    QWidget *createLayout() override;
+    void save() override;
+    void load() override;
+    void reset() override;
+    void help() override;
+
+private:
+    MarkdownConfigureWidget *mConfigureWidget = nullptr;
+};
+
+#endif // MARKDOWNCONFIGUREDIALOG_H

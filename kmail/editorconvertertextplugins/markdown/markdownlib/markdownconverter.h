@@ -17,24 +17,32 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARKDOWNPREVIEWDIALOG_H
-#define MARKDOWNPREVIEWDIALOG_H
+#ifndef MARKDOWNCONVERTER_H
+#define MARKDOWNCONVERTER_H
 
-#include <QDialog>
-class MarkdownPreviewWidget;
-class MarkdownPreviewDialog : public QDialog
+#include <QObject>
+#include "libkmailmarkdown_export.h"
+class LIBKMAILMARKDOWN_EXPORT MarkdownConverter : public QObject
 {
     Q_OBJECT
 public:
-    explicit MarkdownPreviewDialog(QWidget *parent = nullptr);
-    ~MarkdownPreviewDialog();
-    void setText(const QString &str);
+    explicit MarkdownConverter(QObject *parent = nullptr);
+    ~MarkdownConverter();
+    Q_REQUIRED_RESULT QString convertTextToMarkdown(const QString &str);
 
-    void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
+    Q_REQUIRED_RESULT bool enableEmbeddedLabel() const;
+    void setEnableEmbeddedLabel(bool enableEmbeddedLabel);
+
+    Q_REQUIRED_RESULT bool enableExtraDefinitionLists() const;
+    void setEnableExtraDefinitionLists(bool enableExtraDefinitionLists);
+
+Q_SIGNALS:
+    void failed(const QString &str);
+
 private:
-    void readConfig();
-    void writeConfig();
-    MarkdownPreviewWidget *mPreviewWidget = nullptr;
+    Q_DISABLE_COPY(MarkdownConverter)
+    bool mEnableEmbeddedLabel = false;
+    bool mEnableExtraDefinitionLists = false;
 };
 
-#endif // MARKDOWNPREVIEWDIALOG_H
+#endif // MARKDOWNCONVERTER_H
