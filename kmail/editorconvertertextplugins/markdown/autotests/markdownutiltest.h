@@ -27,6 +27,9 @@ class MarkdownUtilTest : public QObject
 public:
     explicit MarkdownUtilTest(QObject *parent = nullptr);
     ~MarkdownUtilTest() = default;
+private Q_SLOTS:
+    void shouldConvert();
+    void shouldConvert_data();
 };
 
 #endif // MARKDOWNUTILTEST_H

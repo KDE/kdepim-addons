@@ -18,9 +18,18 @@
 */
 #include "markdownutil.h"
 #include <QRegularExpression>
-
+#include <QDebug>
 QStringList MarkdownUtil::imagePaths(const QString &str)
 {
-    const QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)[\\s]*\".*\")"));
-    return {};
+    const QRegularExpression imageRegular(QStringLiteral("!\\[.*\\]\\((.*)[\\s]*\".*\"\\)"));
+    QRegularExpressionMatchIterator i = imageRegular.globalMatch(str);
+    QStringList results;
+    while (i.hasNext()) {
+        QRegularExpressionMatch match = i.next();
+        if (match.hasMatch()) {
+             qDebug() << match.captured(0);
+             results.append(match.captured(0));
+        }
+    }
+    return results;
 }

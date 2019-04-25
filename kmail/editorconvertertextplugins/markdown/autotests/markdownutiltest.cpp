@@ -18,6 +18,7 @@
 */
 
 #include "markdownutiltest.h"
+#include "../markdownutil.h"
 #include <QTest>
 QTEST_GUILESS_MAIN(MarkdownUtilTest)
 
@@ -25,4 +26,18 @@ MarkdownUtilTest::MarkdownUtilTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void MarkdownUtilTest::shouldConvert()
+{
+    QFETCH(QString, input);
+    QFETCH(QStringList, results);
+    QCOMPARE(MarkdownUtil::imagePaths(input), results);
+}
+
+void MarkdownUtilTest::shouldConvert_data()
+{
+    QTest::addColumn<QString>("input");
+    QTest::addColumn<QStringList>("results");
+    QTest::newRow("empty") <<  QString() << QStringList();
 }
