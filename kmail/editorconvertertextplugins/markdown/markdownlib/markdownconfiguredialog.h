@@ -21,9 +21,9 @@
 #define MARKDOWNCONFIGUREDIALOG_H
 
 #include <PimCommon/ConfigurePluginDialog>
-#include "markdownlib_private_export.h"
+#include "libkmailmarkdown_export.h"
 class MarkdownConfigureWidget;
-class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureDialog : public PimCommon::ConfigurePluginDialog
+class LIBKMAILMARKDOWN_EXPORT MarkdownConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
     Q_OBJECT
 public:
