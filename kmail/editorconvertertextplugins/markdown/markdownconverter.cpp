@@ -50,7 +50,7 @@ external_codefmt(const char *src, int, void *)
                          : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     highLighter.highlight(QString::fromLatin1(src));
     QByteArray ba = result.toLatin1();
-    return ba.data();
+    return qstrdup(ba.data());
 }
 #endif
 
