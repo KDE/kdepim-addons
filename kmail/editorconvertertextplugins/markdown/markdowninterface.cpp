@@ -69,9 +69,11 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mPopupMenuAction->setEnabled(false);
     mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
+    mardownMenu->addSeparator();
     mardownMenu->addAction(i18n("Change as Bold"), this, &MarkdownInterface::addBold);
     mardownMenu->addAction(i18n("Change as Italic"), this, &MarkdownInterface::addItalic);
     mardownMenu->addAction(i18n("Change as Code"), this, &MarkdownInterface::addCode);
+    mardownMenu->addSeparator();
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     mardownMenu->addAction(i18n("Add Image"), this, &MarkdownInterface::addImage);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
