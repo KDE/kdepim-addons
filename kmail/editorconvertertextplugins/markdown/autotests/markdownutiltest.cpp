@@ -40,4 +40,11 @@ void MarkdownUtilTest::shouldConvert_data()
     QTest::addColumn<QString>("input");
     QTest::addColumn<QStringList>("results");
     QTest::newRow("empty") <<  QString() << QStringList();
+    QStringList result;
+    result << QStringLiteral("image.png");
+    QTest::newRow("one item") <<  QStringLiteral("![foo](image.png \"ss\") bla") << result;
+    result.clear();
+    result << QStringLiteral("image.png");
+    result << QStringLiteral("image2.png");
+    QTest::newRow("two item") <<  QStringLiteral("![foo](image.png \"ss\") bla ![bli](image2.png \"sdsd\")") << result;
 }
