@@ -139,7 +139,7 @@ else()
 endif()
 
 # Extra package
-find_package(Gpgmepp 1.8.0 CONFIG)
+find_package(Gpgmepp 1.11.1 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
 # workaround for https://bugreports.qt.io/browse/QTBUG-74665 (bug in qt5.13 reevaluate it)
 if (${Qt5Widgets_VERSION} STREQUAL "5.13.0")
