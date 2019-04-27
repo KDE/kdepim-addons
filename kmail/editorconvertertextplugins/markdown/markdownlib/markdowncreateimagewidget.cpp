@@ -42,6 +42,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
     mainLayout->addRow(i18n("Alternate text:"), mAlternateText);
+    //TODO add image size too
 }
 
 MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
