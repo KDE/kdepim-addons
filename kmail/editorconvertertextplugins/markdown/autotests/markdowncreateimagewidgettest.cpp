@@ -20,8 +20,11 @@
 #include "markdowncreateimagewidgettest.h"
 #include "markdowncreateimagewidget.h"
 #include "kdepimtest_layout.h"
+#include <QCheckBox>
 #include <QFormLayout>
+#include <QLabel>
 #include <QLineEdit>
+#include <QSpinBox>
 #include <QTest>
 QTEST_MAIN(MarkdownCreateImageWidgetTest)
 
@@ -53,6 +56,29 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mAlternateText);
     QVERIFY(mAlternateText->text().isEmpty());
     QVERIFY(mAlternateText->isClearButtonEnabled());
+
+    QCheckBox *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
+    QVERIFY(mKeepOriginalSize);
+    QVERIFY(mKeepOriginalSize->isChecked());
+
+
+    QLabel *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
+    QVERIFY(mLabWidth);
+    QVERIFY(!mLabWidth->text().isEmpty());
+
+    QSpinBox *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
+    QCOMPARE(mWidth->minimum(), 1);
+    QCOMPARE(mWidth->maximum(), 999);
+    QVERIFY(!mWidth->isEnabled());
+
+    QLabel *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
+    QVERIFY(mLabHeight);
+    QVERIFY(!mLabHeight->text().isEmpty());
+
+    QSpinBox *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
+    QCOMPARE(mHeight->minimum(), 1);
+    QCOMPARE(mHeight->maximum(), 999);
+    QVERIFY(!mHeight->isEnabled());
 }
 
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()

@@ -22,6 +22,9 @@
 #include <QFormLayout>
 #include <QHBoxLayout>
 #include <QLineEdit>
+#include <QCheckBox>
+#include <QLabel>
+#include <QSpinBox>
 
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
@@ -45,11 +48,44 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
     mainLayout->addRow(i18n("Alternate text:"), mAlternateText);
-    //TODO add image size too
+
+    mKeepOriginalSize = new QCheckBox(i18n("Keep original size"), this);
+    mKeepOriginalSize->setObjectName(QStringLiteral("keeporiginalsize"));
+    mKeepOriginalSize->setChecked(true);
+    mainLayout->addRow(mKeepOriginalSize);
+    connect(mKeepOriginalSize, &QCheckBox::clicked, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
+
+    mLabWidth = new QLabel(i18n("Width:"), this);
+    mLabWidth->setObjectName(QStringLiteral("labwidth"));
+    mWidth = new QSpinBox(this);
+    mWidth->setObjectName(QStringLiteral("mwidth"));
+    mWidth->setMinimum(1);
+    mWidth->setMaximum(999);
+    mWidth->setEnabled(false);
+    mWidth->setSuffix(i18n(" px"));
+    mainLayout->addRow(mLabWidth, mWidth);
+
+    mLabHeight = new QLabel(i18n("Height:"), this);
+    mLabHeight->setObjectName(QStringLiteral("labheight"));
+    mHeight = new QSpinBox(this);
+    mHeight->setObjectName(QStringLiteral("mheight"));
+    mHeight->setMinimum(1);
+    mHeight->setMaximum(999);
+    mHeight->setEnabled(false);
+    mHeight->setSuffix(i18n(" px"));
+    mainLayout->addRow(mLabHeight, mHeight);
 }
 
 MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
 {
+}
+
+void MarkdownCreateImageWidget::slotKeepOriginalSizeChanged(bool checked)
+{
+    mLabWidth->setEnabled(!checked);
+    mWidth->setEnabled(!checked);
+    mLabHeight->setEnabled(!checked);
+    mHeight->setEnabled(!checked);
 }
 
 QString MarkdownCreateImageWidget::linkStr() const
@@ -57,9 +93,18 @@ QString MarkdownCreateImageWidget::linkStr() const
     if (mTitle->text().trimmed().isEmpty() && mImageUrl->text().trimmed().isEmpty()) {
         return {};
     }
+    QString defineSize;
+    if (!mKeepOriginalSize->isChecked()) {
+        defineSize = QStringLiteral(" =%1x%2").arg(mWidth->value()).arg(mHeight->value());
+    }
+
+    QString imageText = mImageUrl->text();
+    if (!defineSize.isEmpty()) {
+        imageText += defineSize;
+    }
     if (!mAlternateText->text().trimmed().isEmpty()) {
-        return QStringLiteral("![%1](%2 \"%3\")").arg(mTitle->text(), mImageUrl->text(), mAlternateText->text());
+        return QStringLiteral("![%1](%2 \"%3\")").arg(mTitle->text(), imageText, mAlternateText->text());
     } else {
-        return QStringLiteral("![%1](%2)").arg(mTitle->text(), mImageUrl->text());
+        return QStringLiteral("![%1](%2)").arg(mTitle->text(), imageText);
     }
 }
