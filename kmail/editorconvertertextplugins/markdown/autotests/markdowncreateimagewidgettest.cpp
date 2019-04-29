@@ -42,14 +42,17 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);
     QVERIFY(mTitle->text().isEmpty());
+    QVERIFY(mTitle->isClearButtonEnabled());
 
     QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
+    QVERIFY(mLink->isClearButtonEnabled());
 
     QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     QVERIFY(mAlternateText);
     QVERIFY(mAlternateText->text().isEmpty());
+    QVERIFY(mAlternateText->isClearButtonEnabled());
 }
 
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()

@@ -32,11 +32,14 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
 
     mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));
+    mTitle->setClearButtonEnabled(true);
     mImageUrl = new QLineEdit(this);
     mImageUrl->setObjectName(QStringLiteral("image"));
+    mImageUrl->setClearButtonEnabled(true);
 
     mAlternateText = new QLineEdit(this);
     mAlternateText->setObjectName(QStringLiteral("alternatetext"));
+    mAlternateText->setClearButtonEnabled(true);
 
 
     mainLayout->addRow(i18n("Title:"), mTitle);
