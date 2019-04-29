@@ -57,6 +57,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
 
     mLabWidth = new QLabel(i18n("Width:"), this);
     mLabWidth->setObjectName(QStringLiteral("labwidth"));
+    mLabWidth->setEnabled(false);
     mWidth = new QSpinBox(this);
     mWidth->setObjectName(QStringLiteral("mwidth"));
     mWidth->setMinimum(1);
@@ -67,6 +68,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
 
     mLabHeight = new QLabel(i18n("Height:"), this);
     mLabHeight->setObjectName(QStringLiteral("labheight"));
+    mLabHeight->setEnabled(false);
     mHeight = new QSpinBox(this);
     mHeight->setObjectName(QStringLiteral("mheight"));
     mHeight->setMinimum(1);

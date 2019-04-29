@@ -93,4 +93,28 @@ void MarkdownCreateImageWidgetTest::shouldGenerateLink()
 
     mAlternateText->setText(QStringLiteral("alternate"));
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org \"alternate\")"));
+
+
+}
+
+void MarkdownCreateImageWidgetTest::shouldChangeState()
+{
+    MarkdownCreateImageWidget w;
+    QCheckBox *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
+    QLabel *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
+    QSpinBox *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
+    QLabel *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
+    QSpinBox *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
+
+    mKeepOriginalSize->setChecked(true);
+    QVERIFY(!mLabWidth->isEnabled());
+    QVERIFY(!mWidth->isEnabled());
+    QVERIFY(!mLabHeight->isEnabled());
+    QVERIFY(!mHeight->isEnabled());
+
+    mKeepOriginalSize->setChecked(false);
+    QVERIFY(mLabWidth->isEnabled());
+    QVERIFY(mWidth->isEnabled());
+    QVERIFY(mLabHeight->isEnabled());
+    QVERIFY(mHeight->isEnabled());
 }
