@@ -25,7 +25,7 @@
 #include <QCheckBox>
 #include <QLabel>
 #include <QSpinBox>
-
+#include <QDebug>
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -53,7 +53,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mKeepOriginalSize->setObjectName(QStringLiteral("keeporiginalsize"));
     mKeepOriginalSize->setChecked(true);
     mainLayout->addRow(mKeepOriginalSize);
-    connect(mKeepOriginalSize, &QCheckBox::clicked, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
+    connect(mKeepOriginalSize, &QCheckBox::stateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
 
     mLabWidth = new QLabel(i18n("Width:"), this);
     mLabWidth->setObjectName(QStringLiteral("labwidth"));
@@ -82,12 +82,13 @@ MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
 {
 }
 
-void MarkdownCreateImageWidget::slotKeepOriginalSizeChanged(bool checked)
+void MarkdownCreateImageWidget::slotKeepOriginalSizeChanged()
 {
-    mLabWidth->setEnabled(!checked);
-    mWidth->setEnabled(!checked);
-    mLabHeight->setEnabled(!checked);
-    mHeight->setEnabled(!checked);
+    bool enabled = !mKeepOriginalSize->isChecked();
+    mLabWidth->setEnabled(enabled);
+    mWidth->setEnabled(enabled);
+    mLabHeight->setEnabled(enabled);
+    mHeight->setEnabled(enabled);
 }
 
 QString MarkdownCreateImageWidget::linkStr() const

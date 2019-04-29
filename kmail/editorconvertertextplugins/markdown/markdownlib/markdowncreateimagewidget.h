@@ -35,7 +35,7 @@ public:
     Q_REQUIRED_RESULT QString linkStr() const;
 
 private:
-    void slotKeepOriginalSizeChanged(bool checked);
+    void slotKeepOriginalSizeChanged();
     QLineEdit *mTitle = nullptr;
     QLineEdit *mImageUrl = nullptr;
     QLineEdit *mAlternateText = nullptr;

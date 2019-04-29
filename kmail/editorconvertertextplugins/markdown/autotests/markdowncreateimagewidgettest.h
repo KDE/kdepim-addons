@@ -32,6 +32,7 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGenerateLink();
     void shouldChangeState();
+    void shouldAddSize();
 };
 
 #endif // MARKDOWNCREATEIMAGEWIDGETTEST_H
