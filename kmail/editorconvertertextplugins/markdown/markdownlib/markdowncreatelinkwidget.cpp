@@ -32,8 +32,10 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
 
     mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));
+    mTitle->setClearButtonEnabled(true);
     mLink = new QLineEdit(this);
     mLink->setObjectName(QStringLiteral("link"));
+    mLink->setClearButtonEnabled(true);
 
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Link:"), mLink);

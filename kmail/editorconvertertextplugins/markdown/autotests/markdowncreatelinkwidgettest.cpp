@@ -42,10 +42,12 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);
     QVERIFY(mTitle->text().isEmpty());
+    QVERIFY(mTitle->isClearButtonEnabled());
 
     QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
+    QVERIFY(mLink->isClearButtonEnabled());
 }
 
 void MarkdownCreateLinkWidgetTest::shouldGenerateLink()
