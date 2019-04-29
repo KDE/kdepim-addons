@@ -45,6 +45,7 @@ void MarkdownUtilTest::shouldConvert_data()
     QStringList result;
     result << QStringLiteral("image.png");
     QTest::newRow("one item") <<  QStringLiteral("![foo](image.png \"ss\") bla") << result;
+    QTest::newRow("one item-2") <<  QStringLiteral("![foo](image.png) bla") << result;
     result.clear();
     result << QStringLiteral("image.png");
     result << QStringLiteral("image2.png");
@@ -52,4 +53,8 @@ void MarkdownUtilTest::shouldConvert_data()
     QTest::newRow("two item-2") <<  QStringLiteral("![foo](image.png) bla ![bli](image2.png)") << result;
     QTest::newRow("two item-3") <<  QStringLiteral("![foo](image.png  \"blz\") bla ![bli](image2.png)") << result;
     QTest::newRow("two item-3") <<  QStringLiteral("![foo](image.png  \"blz\") bla ![bli](image2.png \"ez\" )") << result;
+
+    //With size
+    QTest::newRow("two item-3") <<  QStringLiteral("![foo](image.png =50x50 \"blz\") bla ![bli](image2.png \"ez\" )") << result;
+    QTest::newRow("two item-3") <<  QStringLiteral("![foo](image.png =50x50 \"blz\") bla ![bli](image2.png =100x100 \"ez\" )") << result;
 }
