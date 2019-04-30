@@ -77,7 +77,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
 
 void MarkdownInterface::addHorizontalRule()
 {
-    richTextEditor()->insertPlainText(QStringLiteral("---"));
+    richTextEditor()->insertPlainText(QStringLiteral("\n---"));
 }
 
 void MarkdownInterface::addBold()
