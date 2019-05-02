@@ -78,7 +78,13 @@ MarkdownPreviewWidget::~MarkdownPreviewWidget()
 
 void MarkdownPreviewWidget::slotLinkHovered(const QString &url)
 {
-    mHoverUrlLabel->setText(url);
+    QString truncateUrl = url;
+    if (truncateUrl.length() > 80) {
+        truncateUrl.truncate(80);
+        truncateUrl += QStringLiteral("...");
+    }
+    mHoverUrlLabel->setText(truncateUrl);
+    mHoverUrlLabel->setToolTip(url);
 }
 
 void MarkdownPreviewWidget::converterFailed(const QString &msg)
