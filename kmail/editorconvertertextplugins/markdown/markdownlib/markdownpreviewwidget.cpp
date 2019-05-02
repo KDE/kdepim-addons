@@ -27,6 +27,7 @@
 #include <QWebEngineProfile>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
+#include <QLabel>
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
@@ -35,7 +36,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mConverter->setObjectName(QStringLiteral("converter"));
     connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
 
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
@@ -62,11 +63,22 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
 
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
+
+    mHoverUrlLabel = new QLabel(this);
+    mHoverUrlLabel->setObjectName(QStringLiteral("mHoverUrlLabel"));
+    mainLayout->addWidget(mHoverUrlLabel);
+
     mWebView->setContextMenuPolicy(Qt::NoContextMenu);
+    connect(page, &MarkdownEnginePage::linkHovered, this, &MarkdownPreviewWidget::slotLinkHovered);
 }
 
 MarkdownPreviewWidget::~MarkdownPreviewWidget()
 {
+}
+
+void MarkdownPreviewWidget::slotLinkHovered(const QString &url)
+{
+    mHoverUrlLabel->setText(url);
 }
 
 void MarkdownPreviewWidget::converterFailed(const QString &msg)

@@ -24,6 +24,7 @@
 #include "markdownlib_private_export.h"
 class QWebEngineView;
 class MarkdownConverter;
+class QLabel;
 class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownPreviewWidget : public QWidget
 {
     Q_OBJECT
@@ -36,9 +37,11 @@ public Q_SLOTS:
     void slotUpdatePreview(const QString &text);
 
 private:
+    void slotLinkHovered(const QString &url);
     void converterFailed(const QString &msg);
     QWebEngineView *mWebView = nullptr;
     MarkdownConverter *mConverter = nullptr;
+    QLabel *mHoverUrlLabel = nullptr;
 };
 
 #endif // MARKDOWNPREVIEWWIDGET_H

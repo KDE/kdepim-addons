@@ -20,8 +20,9 @@
 #include "markdownpreviewwidgettest.h"
 #include "markdownpreviewwidget.h"
 #include "kdepimtest_layout.h"
-#include <QHBoxLayout>
+#include <QVBoxLayout>
 #include <QTest>
+#include <QLabel>
 #include <QWebChannel>
 #include <QWebEngineView>
 QTEST_MAIN(MarkdownPreviewWidgetTest)
@@ -34,11 +35,15 @@ MarkdownPreviewWidgetTest::MarkdownPreviewWidgetTest(QObject *parent)
 void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownPreviewWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     KdepimTestLayout::checkContentsMargins(0, mainLayout);
 
     QWebEngineView *mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
     QVERIFY(mWebView);
     QCOMPARE(mWebView->contextMenuPolicy(), Qt::NoContextMenu);
+
+    QLabel *mHoverUrlLabel = w.findChild<QLabel *>(QStringLiteral("mHoverUrlLabel"));
+    QVERIFY(mHoverUrlLabel);
+    QVERIFY(mHoverUrlLabel->text().isEmpty());
 }
