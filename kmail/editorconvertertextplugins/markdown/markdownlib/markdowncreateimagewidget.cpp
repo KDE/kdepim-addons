@@ -62,6 +62,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mWidth->setObjectName(QStringLiteral("mwidth"));
     mWidth->setMinimum(1);
     mWidth->setMaximum(999);
+    mWidth->setValue(50);
     mWidth->setEnabled(false);
     mWidth->setSuffix(i18n(" px"));
     mainLayout->addRow(mLabWidth, mWidth);
@@ -73,6 +74,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mHeight->setObjectName(QStringLiteral("mheight"));
     mHeight->setMinimum(1);
     mHeight->setMaximum(999);
+    mHeight->setValue(50);
     mHeight->setEnabled(false);
     mHeight->setSuffix(i18n(" px"));
     mainLayout->addRow(mLabHeight, mHeight);
