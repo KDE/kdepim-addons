@@ -70,9 +70,9 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     mardownMenu->addSeparator();
-    mardownMenu->addAction(i18n("Change as Bold"), this, &MarkdownInterface::addBold);
-    mardownMenu->addAction(i18n("Change as Italic"), this, &MarkdownInterface::addItalic);
-    mardownMenu->addAction(i18n("Change as Code"), this, &MarkdownInterface::addCode);
+    mardownMenu->addAction(i18n("Change Selected Text as Bold"), this, &MarkdownInterface::addBold);
+    mardownMenu->addAction(i18n("Change Selected Text as Italic"), this, &MarkdownInterface::addItalic);
+    mardownMenu->addAction(i18n("Change Selected Text as Code"), this, &MarkdownInterface::addCode);
     mardownMenu->addSeparator();
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     mardownMenu->addAction(i18n("Add Image"), this, &MarkdownInterface::addImage);
@@ -145,7 +145,7 @@ void MarkdownInterface::addTitle()
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("#%1#").arg(selectedText));
     } else {
-        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
+        richTextEditor()->textCursor().insertText(QStringLiteral("# #"));
     }
 }
 
