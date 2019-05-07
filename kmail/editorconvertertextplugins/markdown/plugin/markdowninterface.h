@@ -50,8 +50,12 @@ private:
     void addImage();
     void addHorizontalRule();
     void slotActivated(bool checked);
+    void slotSelectionChanged();
     void addCode();
     QAction *mAction = nullptr;
+    QAction *mBoldAction = nullptr;
+    QAction *mItalicAction = nullptr;
+    QAction *mCodeAction = nullptr;
     QAction *mPopupMenuAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;
     bool mEnableEmbeddedLabel = false;

@@ -34,6 +34,7 @@
 #include <QPointer>
 #include <QLabel>
 #include <QMenu>
+
 #include <QTextCursor>
 #include <MessageComposer/TextPart>
 
@@ -70,14 +71,26 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     mardownMenu->addSeparator();
-    mardownMenu->addAction(i18n("Change Selected Text as Bold"), this, &MarkdownInterface::addBold);
-    mardownMenu->addAction(i18n("Change Selected Text as Italic"), this, &MarkdownInterface::addItalic);
-    mardownMenu->addAction(i18n("Change Selected Text as Code"), this, &MarkdownInterface::addCode);
+    mBoldAction = mardownMenu->addAction(i18n("Change Selected Text as Bold"), this, &MarkdownInterface::addBold);
+    mBoldAction->setEnabled(false);
+    mItalicAction = mardownMenu->addAction(i18n("Change Selected Text as Italic"), this, &MarkdownInterface::addItalic);
+    mItalicAction->setEnabled(false);
+    mCodeAction = mardownMenu->addAction(i18n("Change Selected Text as Code"), this, &MarkdownInterface::addCode);
+    mCodeAction->setEnabled(false);
     mardownMenu->addSeparator();
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     mardownMenu->addAction(i18n("Add Image"), this, &MarkdownInterface::addImage);
     MessageComposer::PluginActionType typePopup(mPopupMenuAction, MessageComposer::PluginActionType::PopupMenu);
     addActionType(typePopup);
+    connect(richTextEditor(), &KPIMTextEdit::RichTextComposer::selectionChanged, this, &MarkdownInterface::slotSelectionChanged);
+}
+
+void MarkdownInterface::slotSelectionChanged()
+{
+    const bool enabled = richTextEditor()->textCursor().hasSelection();
+    mBoldAction->setEnabled(enabled);
+    mItalicAction->setEnabled(enabled);
+    mCodeAction->setEnabled(enabled);
 }
 
 void MarkdownInterface::addHorizontalRule()
