@@ -33,6 +33,7 @@ private Q_SLOTS:
     void shouldGenerateLink();
     void shouldChangeState();
     void shouldAddSize();
+    void shouldEmitSignal();
 };
 
 #endif // MARKDOWNCREATEIMAGEWIDGETTEST_H

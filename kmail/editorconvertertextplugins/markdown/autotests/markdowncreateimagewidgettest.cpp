@@ -25,6 +25,8 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QSpinBox>
+#include <QSignalSpy>
+
 #include <QTest>
 QTEST_MAIN(MarkdownCreateImageWidgetTest)
 
@@ -138,4 +140,28 @@ void MarkdownCreateImageWidgetTest::shouldAddSize()
     mAlternateText->setText(QString());
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org =45x70)"));
 
+}
+
+void MarkdownCreateImageWidgetTest::shouldEmitSignal()
+{
+    MarkdownCreateImageWidget w;
+    QSignalSpy spy(&w, &MarkdownCreateImageWidget::enabledOkButton);
+    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    mTitle->setText(QStringLiteral("foo"));
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.at(0).at(0).value<bool>(), false);
+    spy.clear();
+
+    mAlternateText->setText(QStringLiteral("dd"));
+    QCOMPARE(spy.count(), 0);
+    spy.clear();
+
+    mLink->setText(QStringLiteral("dd"));
+    QCOMPARE(spy.at(0).at(0).value<bool>(), true);
+    spy.clear();
+    mTitle->clear();
+    QCOMPARE(spy.at(0).at(0).value<bool>(), false);
+    spy.clear();
 }
