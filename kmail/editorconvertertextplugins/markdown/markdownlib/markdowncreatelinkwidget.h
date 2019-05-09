@@ -29,9 +29,13 @@ class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownCreateLinkWidget : public QWi
 public:
     explicit MarkdownCreateLinkWidget(QWidget *parent = nullptr);
     ~MarkdownCreateLinkWidget();
-    QString linkStr() const;
+    Q_REQUIRED_RESULT QString linkStr() const;
+
+Q_SIGNALS:
+    void enabledOkButton(bool enabled);
 
 private:
+    void slotEnableButton();
     QLineEdit *mTitle = nullptr;
     QLineEdit *mLink = nullptr;
 };

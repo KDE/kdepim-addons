@@ -31,6 +31,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGenerateLink();
+    void shouldEmitSignal();
 };
 
 #endif // MARKDOWNCREATELINKWIDGETTEST_H

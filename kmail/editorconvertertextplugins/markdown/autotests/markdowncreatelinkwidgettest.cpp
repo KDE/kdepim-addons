@@ -22,6 +22,7 @@
 #include "kdepimtest_layout.h"
 #include <QFormLayout>
 #include <QLineEdit>
+#include <QSignalSpy>
 #include <QTest>
 QTEST_MAIN(MarkdownCreateLinkWidgetTest)
 
@@ -58,4 +59,20 @@ void MarkdownCreateLinkWidgetTest::shouldGenerateLink()
     mLink->setText(QStringLiteral("http://www.kde.org"));
     mTitle->setText(QStringLiteral("TITLE"));
     QCOMPARE(w.linkStr(), QStringLiteral("[TITLE](http://www.kde.org)"));
+}
+
+void MarkdownCreateLinkWidgetTest::shouldEmitSignal()
+{
+    MarkdownCreateLinkWidget w;
+    QSignalSpy spy(&w, &MarkdownCreateLinkWidget::enabledOkButton);
+    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    mTitle->setText(QStringLiteral("foo"));
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.at(0).at(0).value<bool>(), false);
+    spy.clear();
+
+    mLink->setText(QStringLiteral("dd"));
+    QCOMPARE(spy.count(), 1);
+    QCOMPARE(spy.at(0).at(0).value<bool>(), true);
 }

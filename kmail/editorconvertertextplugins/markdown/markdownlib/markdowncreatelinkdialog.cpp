@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -42,12 +43,22 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateLinkDialog::reject);
+
+    mOkButton = box->button(QDialogButtonBox::Ok);
+    mOkButton->setObjectName(QStringLiteral("okbutton"));
+    mOkButton->setEnabled(false);
+    connect(mMarkdownCreateLinkWidget, &MarkdownCreateLinkWidget::enabledOkButton, this, &MarkdownCreateLinkDialog::slotEnabledOkButton);
     readConfig();
 }
 
 MarkdownCreateLinkDialog::~MarkdownCreateLinkDialog()
 {
     writeConfig();
+}
+
+void MarkdownCreateLinkDialog::slotEnabledOkButton(bool enabled)
+{
+    mOkButton->setEnabled(enabled);
 }
 
 QString MarkdownCreateLinkDialog::linkStr() const

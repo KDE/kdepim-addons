@@ -37,12 +37,21 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     mLink->setObjectName(QStringLiteral("link"));
     mLink->setClearButtonEnabled(true);
 
+    connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateLinkWidget::slotEnableButton);
+    connect(mLink, &QLineEdit::textChanged, this, &MarkdownCreateLinkWidget::slotEnableButton);
+
+
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Link:"), mLink);
 }
 
 MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()
 {
+}
+
+void MarkdownCreateLinkWidget::slotEnableButton()
+{
+    Q_EMIT enabledOkButton(!mTitle->text().isEmpty() && !mLink->text().isEmpty());
 }
 
 QString MarkdownCreateLinkWidget::linkStr() const

@@ -159,6 +159,7 @@ void MarkdownCreateImageWidgetTest::shouldEmitSignal()
     spy.clear();
 
     mLink->setText(QStringLiteral("dd"));
+    QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<bool>(), true);
     spy.clear();
     mTitle->clear();
