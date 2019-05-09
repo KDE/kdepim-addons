@@ -23,6 +23,7 @@
 #include <QDialog>
 #include "libkmailmarkdown_export.h"
 class MarkdownCreateImageWidget;
+class QPushButton;
 class LIBKMAILMARKDOWN_EXPORT MarkdownCreateImageDialog : public QDialog
 {
     Q_OBJECT
@@ -33,7 +34,9 @@ public:
 private:
     void writeConfig();
     void readConfig();
+    void slotEnabledOkButton(bool enabled);
     MarkdownCreateImageWidget *mMarkdownCreateImageWidget = nullptr;
+    QPushButton *mOkButton = nullptr;
 };
 
 #endif // MARKDOWNCREATEIMAGEDIALOG_H

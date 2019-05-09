@@ -34,8 +34,12 @@ public:
     ~MarkdownCreateImageWidget();
     Q_REQUIRED_RESULT QString linkStr() const;
 
+Q_SIGNALS:
+    void enabledOkButton(bool enabled);
+
 private:
     void slotKeepOriginalSizeChanged();
+    void slotEnableButton();
     QLineEdit *mTitle = nullptr;
     QLineEdit *mImageUrl = nullptr;
     QLineEdit *mAlternateText = nullptr;

@@ -22,6 +22,7 @@
 #include "markdowncreateimagewidget.h"
 
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(MarkdownCreateImageDialogTest)
@@ -43,4 +44,8 @@ void MarkdownCreateImageDialogTest::shouldHaveDefaultValue()
     QDialogButtonBox *box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
+
+    QPushButton *mOkButton = box->button(QDialogButtonBox::Ok);
+    QVERIFY(mOkButton);
+    QVERIFY(!mOkButton->isEnabled());
 }

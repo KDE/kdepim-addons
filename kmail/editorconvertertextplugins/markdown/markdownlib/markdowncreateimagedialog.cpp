@@ -22,6 +22,7 @@
 #include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
 
@@ -39,15 +40,24 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     box->setObjectName(QStringLiteral("buttonbox"));
+    mOkButton = box->button(QDialogButtonBox::Ok);
+    mOkButton->setObjectName(QStringLiteral("okbutton"));
+    mOkButton->setEnabled(false);
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateImageDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &MarkdownCreateImageDialog::reject);
+    connect(mMarkdownCreateImageWidget, &MarkdownCreateImageWidget::enabledOkButton, this, &MarkdownCreateImageDialog::slotEnabledOkButton);
     readConfig();
 }
 
 MarkdownCreateImageDialog::~MarkdownCreateImageDialog()
 {
     writeConfig();
+}
+
+void MarkdownCreateImageDialog::slotEnabledOkButton(bool enabled)
+{
+    mOkButton->setEnabled(enabled);
 }
 
 QString MarkdownCreateImageDialog::linkStr() const

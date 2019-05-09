@@ -36,9 +36,11 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));
     mTitle->setClearButtonEnabled(true);
+    connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
     mImageUrl = new QLineEdit(this);
     mImageUrl->setObjectName(QStringLiteral("image"));
     mImageUrl->setClearButtonEnabled(true);
+    connect(mImageUrl, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
 
     mAlternateText = new QLineEdit(this);
     mAlternateText->setObjectName(QStringLiteral("alternatetext"));
@@ -91,6 +93,11 @@ void MarkdownCreateImageWidget::slotKeepOriginalSizeChanged()
     mWidth->setEnabled(enabled);
     mLabHeight->setEnabled(enabled);
     mHeight->setEnabled(enabled);
+}
+
+void MarkdownCreateImageWidget::slotEnableButton()
+{
+    Q_EMIT enabledOkButton(!mTitle->text().trimmed().isEmpty() && !mImageUrl->text().trimmed().isEmpty());
 }
 
 QString MarkdownCreateImageWidget::linkStr() const
