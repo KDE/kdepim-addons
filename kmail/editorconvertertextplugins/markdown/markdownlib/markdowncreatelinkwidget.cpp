@@ -59,5 +59,5 @@ QString MarkdownCreateLinkWidget::linkStr() const
     if (mTitle->text().trimmed().isEmpty() && mLink->text().trimmed().isEmpty()) {
         return {};
     }
-    return QStringLiteral("[%1](%2)").arg(mTitle->text(), mLink->text());
+    return QStringLiteral("[%1](%2)").arg(mTitle->text().trimmed(), mLink->text().trimmed());
 }

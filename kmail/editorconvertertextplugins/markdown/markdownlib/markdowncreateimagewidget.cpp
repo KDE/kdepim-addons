@@ -115,8 +115,8 @@ QString MarkdownCreateImageWidget::linkStr() const
         imageText += defineSize;
     }
     if (!mAlternateText->text().trimmed().isEmpty()) {
-        return QStringLiteral("![%1](%2 \"%3\")").arg(mTitle->text(), imageText, mAlternateText->text());
+        return QStringLiteral("![%1](%2 \"%3\")").arg(mTitle->text().trimmed(), imageText, mAlternateText->text().trimmed());
     } else {
-        return QStringLiteral("![%1](%2)").arg(mTitle->text(), imageText);
+        return QStringLiteral("![%1](%2)").arg(mTitle->text().trimmed(), imageText);
     }
 }
