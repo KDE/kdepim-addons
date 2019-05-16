@@ -79,4 +79,3 @@ void MarkdownCreateImageDialog::readConfig()
         resize(sizeDialog);
     }
 }
-

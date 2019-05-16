@@ -40,7 +40,6 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateLinkWidget::slotEnableButton);
     connect(mLink, &QLineEdit::textChanged, this, &MarkdownCreateLinkWidget::slotEnableButton);
 
-
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Link:"), mLink);
 }

@@ -168,8 +168,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::parseVCard(const QB
     return converter.parseVCards(data);
 }
 
-KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList,
-                                                                            KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFieldType) const
+KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFieldType) const
 {
     KContacts::Addressee::List list;
 

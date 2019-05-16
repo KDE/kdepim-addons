@@ -199,10 +199,9 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                     imageNameToAdd = imageName + QString::number(imageNumber++);
                 } else {
                     imageNameToAdd = imageName.left(firstDot) + QString::number(imageNumber++)
-                            +imageName.mid(firstDot);
+                                     +imageName.mid(firstDot);
                 }
             }
-
 
             QSharedPointer<KPIMTextEdit::EmbeddedImage> embeddedImage = richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
             lstEmbeddedImages.append(embeddedImage);
@@ -210,7 +209,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
             const QString newImageName = QLatin1String("cid:") + embeddedImage->contentID;
             const QString quote(QStringLiteral("\""));
             htmlVersion.replace(QString(quote + urlImage + quote),
-                           QString(quote + newImageName + quote));
+                                QString(quote + newImageName + quote));
             textVersion.replace(urlImage, newImageName);
             imageNameAdded << imageNameToAdd;
         }
@@ -237,7 +236,6 @@ MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInt
             if (!result.isEmpty()) {
                 addEmbeddedImages(textPart, textVersion, result);
                 textPart->setCleanPlainText(textVersion);
-
 
                 textPart->setWrappedPlainText(textVersion);
                 textPart->setCleanHtml(result);

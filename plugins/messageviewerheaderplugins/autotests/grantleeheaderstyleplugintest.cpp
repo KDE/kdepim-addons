@@ -64,7 +64,6 @@ void GrantleeHeaderStylePluginTest::initTestCase()
             qDebug() << file << newPath;
             QVERIFY(QFile(file.absoluteFilePath()).copy(newPath));
         }
-
     }
 }
 

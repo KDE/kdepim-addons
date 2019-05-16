@@ -52,6 +52,7 @@ external_codefmt(const char *src, int, void *)
     QByteArray ba = result.toLatin1();
     return qstrdup(ba.data());
 }
+
 #endif
 
 MarkdownConverter::MarkdownConverter(QObject *parent)

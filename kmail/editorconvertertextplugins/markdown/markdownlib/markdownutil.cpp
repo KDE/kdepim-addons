@@ -30,7 +30,7 @@ QStringList MarkdownUtil::imagePaths(const QString &str)
     while (i.hasNext()) {
         QRegularExpressionMatch match = i.next();
         if (match.hasMatch()) {
-             results.append(match.captured(1));
+            results.append(match.captured(1));
         }
     }
     return results;

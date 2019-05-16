@@ -47,4 +47,3 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mExtraDefinitionLists);
     QVERIFY(!mExtraDefinitionLists->text().isEmpty());
 }
-

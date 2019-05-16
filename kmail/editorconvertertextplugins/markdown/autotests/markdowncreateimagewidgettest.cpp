@@ -63,7 +63,6 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mKeepOriginalSize);
     QVERIFY(mKeepOriginalSize->isChecked());
 
-
     QLabel *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
     QVERIFY(mLabWidth);
     QVERIFY(!mLabWidth->text().isEmpty());
@@ -139,7 +138,6 @@ void MarkdownCreateImageWidgetTest::shouldAddSize()
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org =45x70 \"alternate\")"));
     mAlternateText->setText(QString());
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org =45x70)"));
-
 }
 
 void MarkdownCreateImageWidgetTest::shouldEmitSignal()

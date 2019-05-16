@@ -46,7 +46,6 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mAlternateText->setObjectName(QStringLiteral("alternatetext"));
     mAlternateText->setClearButtonEnabled(true);
 
-
     mainLayout->addRow(i18n("Title:"), mTitle);
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
     mainLayout->addRow(i18n("Alternate text:"), mAlternateText);

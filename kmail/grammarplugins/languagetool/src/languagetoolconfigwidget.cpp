@@ -65,7 +65,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     connect(mUseLocalInstance, &QCheckBox::clicked, this, [this](bool b) {
         updateWidgets(b);
     }
-    );
+            );
 
     QHBoxLayout *languageLayout = new QHBoxLayout;
     languageLayout->setObjectName(QStringLiteral("languagelayout"));

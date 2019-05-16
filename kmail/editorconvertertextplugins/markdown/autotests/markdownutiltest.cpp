@@ -25,7 +25,6 @@ QTEST_GUILESS_MAIN(MarkdownUtilTest)
 MarkdownUtilTest::MarkdownUtilTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void MarkdownUtilTest::shouldConvert()

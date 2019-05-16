@@ -22,9 +22,8 @@
 
 #include <QStringList>
 #include "libkmailmarkdown_export.h"
-namespace MarkdownUtil
-{
-    LIBKMAILMARKDOWN_EXPORT QStringList imagePaths(const QString &str);
+namespace MarkdownUtil {
+LIBKMAILMARKDOWN_EXPORT QStringList imagePaths(const QString &str);
 }
 
 #endif // MARKDOWNUTIL_H
