@@ -33,11 +33,12 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setSpacing(0);
 
     QToolButton *closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
-    closeBtn->setIconSize(QSize(16, 16));
+    closeBtn->setIconSize(QSize(12, 12));
     closeBtn->setToolTip(i18n("Close"));
     mainLayout->addWidget(closeBtn);
     connect(closeBtn, &QToolButton::clicked, this, &GrammarResultWidget::closeChecker);
