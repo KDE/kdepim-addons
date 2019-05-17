@@ -32,7 +32,7 @@ LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
 void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
 {
     LanguageToolResultWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     KdepimTestLayout::checkContentsMargins(0, mainLayout);
     GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));

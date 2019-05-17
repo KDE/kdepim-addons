@@ -19,16 +19,29 @@
 
 #include "grammarresulttextedit.h"
 #include "grammarresultwidget.h"
+
+#include <KLocalizedString>
+
 #include <QHBoxLayout>
 #include <QJsonDocument>
 #include <QTextEdit>
+#include <QToolButton>
 
 GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    QToolButton *closeBtn = new QToolButton(this);
+    closeBtn->setObjectName(QStringLiteral("close-button"));
+    closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
+    closeBtn->setIconSize(QSize(16, 16));
+    closeBtn->setToolTip(i18n("Close"));
+    mainLayout->addWidget(closeBtn);
+    connect(closeBtn, &QToolButton::clicked, this, &GrammarResultWidget::closeChecker);
+
     mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
     connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
