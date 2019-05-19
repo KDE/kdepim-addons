@@ -27,6 +27,7 @@ namespace MessageComposer {
 class PluginGrammarAction;
 }
 class GrammarResultTextEdit;
+class QHBoxLayout;
 class GRAMMARCOMMON_EXPORT GrammarResultWidget : public QWidget
 {
     Q_OBJECT
@@ -40,8 +41,12 @@ Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
     void closeChecker();
+
 protected:
+    virtual void addExtraWidget();
     GrammarResultTextEdit *mResult = nullptr;
+    QHBoxLayout *mExtraWidgetLayout = nullptr;
+
 private:
     Q_DISABLE_COPY(GrammarResultWidget)
 };

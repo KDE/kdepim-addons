@@ -35,13 +35,19 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mainLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->setSpacing(0);
 
+    mExtraWidgetLayout = new QHBoxLayout;
+    mExtraWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->addLayout(mExtraWidgetLayout);
+
     QToolButton *closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
     closeBtn->setIconSize(QSize(12, 12));
     closeBtn->setToolTip(i18n("Close"));
-    mainLayout->addWidget(closeBtn);
+    mExtraWidgetLayout->addWidget(closeBtn);
     connect(closeBtn, &QToolButton::clicked, this, &GrammarResultWidget::closeChecker);
+
+    addExtraWidget();
 
     mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
@@ -53,6 +59,11 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
 
 GrammarResultWidget::~GrammarResultWidget()
 {
+}
+
+void GrammarResultWidget::addExtraWidget()
+{
+
 }
 
 void GrammarResultWidget::setText(const QString &str)
