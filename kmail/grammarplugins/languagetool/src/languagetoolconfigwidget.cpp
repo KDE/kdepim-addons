@@ -36,6 +36,8 @@
 #include <QToolButton>
 
 #include <KUrlRequester>
+#include <KMessageBox>
+
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -141,6 +143,7 @@ void LanguageToolConfigWidget::uploadListOfLanguages()
 void LanguageToolConfigWidget::slotGetLanguagesError(const QString &error)
 {
     qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Error during loading languages from server : " << error;
+    KMessageBox::error(this, i18n("An error was found during got languages:\n%1", error), i18n("List of Languages"));
 }
 
 void LanguageToolConfigWidget::slotGetLanguagesFinished(const QString &result)
