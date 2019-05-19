@@ -22,16 +22,19 @@
 #include "languagetoolparser.h"
 #include "languagetoolmanager.h"
 #include "languagetoolresultjob.h"
+#include "languagetoolcombobox.h"
 
 #include <KMessageBox>
 #include <KLocalizedString>
 
+#include <QHBoxLayout>
 #include <QJsonDocument>
 #include <QTextEdit>
 
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
 {
+    addExtraWidget();
 }
 
 LanguageToolResultWidget::~LanguageToolResultWidget()
@@ -61,4 +64,17 @@ void LanguageToolResultWidget::slotCheckGrammarFinished(const QString &result)
 void LanguageToolResultWidget::slotError(const QString &str)
 {
     KMessageBox::error(this, i18n("An error was reported: %1", str), i18n("Failed to check grammar."));
+}
+
+
+void LanguageToolResultWidget::addExtraWidget()
+{
+    QHBoxLayout *extraWidgetLayout = new QHBoxLayout;
+    extraWidgetLayout->setObjectName(QStringLiteral("extraWidgetLayout"));
+    extraWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    mLanguageToolComboBox = new LanguageToolComboBox(this);
+    mLanguageToolComboBox->setObjectName(QStringLiteral("languagetoolcombobox"));
+    extraWidgetLayout->addWidget(mLanguageToolComboBox);
+    mExtraWidgetLayout->addStretch(1);
+    mExtraWidgetLayout->addLayout(extraWidgetLayout);
 }

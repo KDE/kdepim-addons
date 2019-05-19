@@ -26,6 +26,7 @@
 namespace MessageComposer {
 class PluginGrammarAction;
 }
+class LanguageToolComboBox;
 class GrammarResultTextEdit;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
@@ -34,10 +35,15 @@ public:
     explicit LanguageToolResultWidget(QWidget *parent = nullptr);
     ~LanguageToolResultWidget() override;
     void checkGrammar() override;
+
+protected:
+    void addExtraWidget() override;
+
 private:
     Q_DISABLE_COPY(LanguageToolResultWidget)
     void slotCheckGrammarFinished(const QString &result);
     void slotError(const QString &str);
+    LanguageToolComboBox *mLanguageToolComboBox = nullptr;
 };
 
 #endif // LANGUAGETOOLRESULTWIDGET_H

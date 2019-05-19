@@ -47,8 +47,6 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mExtraWidgetLayout->addWidget(closeBtn);
     connect(closeBtn, &QToolButton::clicked, this, &GrammarResultWidget::closeChecker);
 
-    addExtraWidget();
-
     mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
     connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
