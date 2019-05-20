@@ -52,7 +52,7 @@ void LanguageToolResultWidget::checkGrammar()
     job->setUrl(LanguageToolManager::self()->languageToolCheckPath());
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     job->setText(mResult->toPlainText());
-    job->setLanguage(LanguageToolManager::self()->language());
+    job->setLanguage(/*LanguageToolManager::self()->language()*/mLanguageToolComboBox->language());
     connect(job, &LanguageToolResultJob::finished, this, &LanguageToolResultWidget::slotCheckGrammarFinished);
     connect(job, &LanguageToolResultJob::error, this, &LanguageToolResultWidget::slotError);
     job->start();
