@@ -80,6 +80,5 @@ void LanguageToolResultWidget::addExtraWidget()
     mLanguageToolComboBox = new LanguageToolComboBox(this);
     mLanguageToolComboBox->setObjectName(QStringLiteral("languagetoolcombobox"));
     extraWidgetLayout->addWidget(mLanguageToolComboBox);
-    mExtraWidgetLayout->addStretch(1);
     mExtraWidgetLayout->addLayout(extraWidgetLayout);
 }
