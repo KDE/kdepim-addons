@@ -28,6 +28,7 @@ class PluginGrammarAction;
 }
 class LanguageToolComboBox;
 class GrammarResultTextEdit;
+class LanguageToolUpdateComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {
     Q_OBJECT
@@ -44,6 +45,7 @@ private:
     void slotCheckGrammarFinished(const QString &result);
     void slotError(const QString &str);
     LanguageToolComboBox *mLanguageToolComboBox = nullptr;
+    LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
 };
 
 #endif // LANGUAGETOOLRESULTWIDGET_H

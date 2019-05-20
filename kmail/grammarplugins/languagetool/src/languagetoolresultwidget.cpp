@@ -23,6 +23,7 @@
 #include "languagetoolmanager.h"
 #include "languagetoolresultjob.h"
 #include "languagetoolcombobox.h"
+#include "languagetoolupdatecombobox.h"
 
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -34,7 +35,11 @@
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
 {
+    mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
     addExtraWidget();
+    mLanguageToolUpdateCombobox->setLanguageToolCombobox(mLanguageToolComboBox);
+    mLanguageToolUpdateCombobox->setParentWidget(this);
+    mLanguageToolUpdateCombobox->refreshListOfLanguages();
 }
 
 LanguageToolResultWidget::~LanguageToolResultWidget()
