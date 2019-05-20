@@ -21,8 +21,10 @@
 #define LANGUAGETOOLUPDATECOMBOBOX_H
 
 #include <QObject>
+#include "liblanguagetool_private_export.h"
+
 class LanguageToolComboBox;
-class LanguageToolUpdateComboBox : public QObject
+class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject
 {
     Q_OBJECT
 public:
