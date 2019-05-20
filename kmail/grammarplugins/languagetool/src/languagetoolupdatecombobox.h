@@ -17,32 +17,32 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef LANGUAGETOOLCONFIGWIDGET_H
-#define LANGUAGETOOLCONFIGWIDGET_H
+#ifndef LANGUAGETOOLUPDATECOMBOBOX_H
+#define LANGUAGETOOLUPDATECOMBOBOX_H
 
-#include <QWidget>
-#include "libkmaillanguagetool_export.h"
-class QCheckBox;
-class QLineEdit;
-class QLabel;
+#include <QObject>
 class LanguageToolComboBox;
-class LanguageToolUpdateComboBox;
-class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
+class LanguageToolUpdateComboBox : public QObject
 {
     Q_OBJECT
 public:
-    explicit LanguageToolConfigWidget(QWidget *parent = nullptr);
-    ~LanguageToolConfigWidget();
-    void loadSettings();
-    void saveSettings();
+    explicit LanguageToolUpdateComboBox(QObject *parent = nullptr);
+    ~LanguageToolUpdateComboBox();
+
+    LanguageToolComboBox *languageToolCombobox() const;
+    void setLanguageToolCombobox(LanguageToolComboBox *languageToolCombobox);
+
+    void checkListOfLanguagesFromSpecificPath(const QString &url);
+    void refreshListOfLanguages();
+
+    QWidget *parentWidget() const;
+    void setParentWidget(QWidget *parentWidget);
+
 private:
-    Q_DISABLE_COPY(LanguageToolConfigWidget)
-    void updateWidgets(bool enabled);
-    QCheckBox *mUseLocalInstance = nullptr;
-    QLineEdit *mInstancePath = nullptr;
-    QLabel *mInstancePathLabel = nullptr;
+    void slotGetLanguagesFinished(const QString &result);
+    void slotGetLanguagesError(const QString &error);
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
-    LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
+    QWidget *mParentWidget = nullptr;
 };
 
-#endif // LANGUAGETOOLCONFIGWIDGET_H
+#endif // LANGUAGETOOLUPDATECOMBOBOX_H

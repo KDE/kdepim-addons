@@ -20,6 +20,7 @@
 #include "languagetoolconfigwidget.h"
 #include "languagetoolmanager.h"
 #include "languagetoolcombobox.h"
+#include "languagetoolupdatecombobox.h"
 #include "liblanguagetool_debug.h"
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
@@ -41,6 +42,7 @@
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
 {
+    mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
@@ -78,18 +80,22 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolCombobox = new LanguageToolComboBox(this);
     mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
     languageLayout->addWidget(mLanguageToolCombobox);
+    mLanguageToolUpdateCombobox->setLanguageToolCombobox(mLanguageToolCombobox);
+    mLanguageToolUpdateCombobox->setParentWidget(this);
 
     QToolButton *refreshButton = new QToolButton(this);
     refreshButton->setObjectName(QStringLiteral("refreshbutton"));
     refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     refreshButton->setToolTip(i18n("Refresh"));
     languageLayout->addWidget(refreshButton);
-    connect(refreshButton, &QToolButton::clicked, this, &LanguageToolConfigWidget::refreshListOfLanguages);
+    connect(refreshButton, &QToolButton::clicked, this, [this]() {
+        mLanguageToolUpdateCombobox->checkListOfLanguagesFromSpecificPath(mInstancePath->text());
+    });
 
     mainLayout->addLayout(languageLayout);
 
     mainLayout->addStretch(1);
-    uploadListOfLanguages();
+    mLanguageToolUpdateCombobox->refreshListOfLanguages();
     loadSettings();
     updateWidgets(mUseLocalInstance->isChecked());
 }
@@ -105,16 +111,6 @@ void LanguageToolConfigWidget::updateWidgets(bool enabled)
     mInstancePath->setEnabled(enabled);
 }
 
-void LanguageToolConfigWidget::refreshListOfLanguages()
-{
-    LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
-    job->setUrl(LanguageToolManager::convertToLanguagePath(mInstancePath->text()));
-    job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
-    connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolConfigWidget::slotGetLanguagesFinished);
-    connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolConfigWidget::slotGetLanguagesError);
-    job->start();
-}
-
 void LanguageToolConfigWidget::loadSettings()
 {
     mUseLocalInstance->setChecked(LanguageToolManager::self()->useLocalInstance());
@@ -128,29 +124,4 @@ void LanguageToolConfigWidget::saveSettings()
     LanguageToolManager::self()->setLanguageToolPath(mInstancePath->text());
     LanguageToolManager::self()->setLanguage(mLanguageToolCombobox->language());
     LanguageToolManager::self()->saveSettings();
-}
-
-void LanguageToolConfigWidget::uploadListOfLanguages()
-{
-    LanguageToolGetListOfLanguageJob *job = new LanguageToolGetListOfLanguageJob(this);
-    job->setUrl(LanguageToolManager::self()->languageToolLanguagesPath());
-    job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
-    connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolConfigWidget::slotGetLanguagesFinished);
-    connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolConfigWidget::slotGetLanguagesError);
-    job->start();
-}
-
-void LanguageToolConfigWidget::slotGetLanguagesError(const QString &error)
-{
-    qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "Error during loading languages from server : " << error;
-    KMessageBox::error(this, i18n("An error was found during got languages:\n%1", error), i18n("List of Languages"));
-}
-
-void LanguageToolConfigWidget::slotGetLanguagesFinished(const QString &result)
-{
-    const QJsonDocument doc = QJsonDocument::fromJson(result.toUtf8());
-    const QJsonArray fields = doc.array();
-    LanguageToolListOfLanguagesParser parser;
-    mLanguageToolCombobox->fillComboBox(parser.parseResult(fields));
-    mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
 }
