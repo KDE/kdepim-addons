@@ -689,17 +689,17 @@ public:
         }
 
         // Set the organizer to the sender, if the ORGANIZER hasn't been set.
-        if (incidence->organizer()->isEmpty()) {
+        if (incidence->organizer().isEmpty()) {
             QString tname, temail;
             KMime::Message::Ptr message = viewerInstance->message();
             KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(),
                                                       temail, tname);
-            incidence->setOrganizer(Person::Ptr(new Person(tname, temail)));
+            incidence->setOrganizer(Person(tname, temail));
         }
 
         QString recv = to;
         if (recv.isEmpty()) {
-            recv = incidence->organizer()->fullName();
+            recv = incidence->organizer().fullName();
         }
         return mailICal(receiver, recv, msg, subject, status, type != Forward, viewerInstance);
     }
@@ -919,7 +919,7 @@ public:
             if (delegateString.isEmpty()) {
                 return true;
             }
-            if (KEmailAddress::compareEmail(delegateString, incidence->organizer()->email(), false)) {
+            if (KEmailAddress::compareEmail(delegateString, incidence->organizer().email(), false)) {
                 KMessageBox::sorry(nullptr, i18n("Delegation to organizer is not possible."));
                 return true;
             }
@@ -1345,7 +1345,7 @@ public:
                 }
 
                 QUrlQuery query;
-                query.addQueryItem(QStringLiteral("to"), incidence->organizer()->email());
+                query.addQueryItem(QStringLiteral("to"), incidence->organizer().email());
                 query.addQueryItem(QStringLiteral("subject"), summary);
                 QUrl url;
                 url.setScheme(QStringLiteral("mailto"));
