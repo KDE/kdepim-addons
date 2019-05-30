@@ -1,6 +1,10 @@
 <div style="font-size:125%;"><b>{{ trip.name }}</b> - {{ res.startTime|formatDateTime }}</div>
-<div>{% i18n "Number Of People: %1" res.partySize %}</div>
-<div>{% i18n "Reservation Number: %1" res.reservationNumber %}</div>
+{% if res.partySize > 0 %}
+    <div>{% i18n "Number Of People: %1" res.partySize %}</div>
+{% endif %}
+{% if res.reservationNumber %}
+    <div>{% i18n "Reservation Number: %1" res.reservationNumber %}</div>
+{% endif %}
 {% if res.underName.name %}
     <div>{% i18n "Under Name: %1" res.underName.name %}</div>
 {% endif %}
