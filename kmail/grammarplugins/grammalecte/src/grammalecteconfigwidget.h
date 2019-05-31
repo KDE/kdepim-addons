@@ -42,7 +42,7 @@ private:
     void slotGetSettingsError();
 
     QStringList mSaveOptions;
-    QList<QCheckBox *> mListOptions;
+    QVector<QCheckBox *> mListOptions;
     QWidget *addGeneralTab();
     QWidget *addGrammarTab();
     QStackedWidget *mStackedWidget = nullptr;
