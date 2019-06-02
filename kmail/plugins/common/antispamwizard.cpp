@@ -64,7 +64,7 @@
 #include <QListWidget>
 #include <QPushButton>
 #include <KConfigGroup>
-
+#include <QVector>
 #include <MailCommon/ResourceReadConfigFile>
 using namespace KMail;
 using namespace MailCommon;
@@ -152,7 +152,7 @@ void AntiSpamWizard::accept()
     }
 
     FilterActionDict dict;
-    QList<MailFilter *> filterList;
+    QVector<MailFilter *> filterList;
     bool replaceExistingFilters = false;
 
     // Let's start with virus detection and handling,
