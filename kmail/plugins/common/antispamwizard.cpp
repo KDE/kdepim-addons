@@ -171,7 +171,7 @@ void AntiSpamWizard::accept()
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
                 MailFilter *pipeFilter = new MailFilter();
-                QList<FilterAction *> *pipeFilterActions = pipeFilter->actions();
+                QVector<FilterAction *> *pipeFilterActions = pipeFilter->actions();
                 FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
                 pipeFilterActions->append(pipeFilterAction);
@@ -192,7 +192,7 @@ void AntiSpamWizard::accept()
         if (mVirusRulesPage->moveRulesSelected()) {
             // Sort out viruses depending on header fields set by the tools
             MailFilter *virusFilter = new MailFilter();
-            QList<FilterAction *> *virusFilterActions = virusFilter->actions();
+            QVector<FilterAction *> *virusFilterActions = virusFilter->actions();
             FilterAction *virusFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
             virusFilterAction1->argsFromString(mVirusRulesPage->selectedFolderName());
             virusFilterActions->append(virusFilterAction1);
@@ -249,7 +249,7 @@ void AntiSpamWizard::accept()
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
                 MailFilter *pipeFilter = new MailFilter();
-                QList<FilterAction *> *pipeFilterActions = pipeFilter->actions();
+                QVector<FilterAction *> *pipeFilterActions = pipeFilter->actions();
                 FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
                 pipeFilterActions->append(pipeFilterAction);
@@ -273,7 +273,7 @@ void AntiSpamWizard::accept()
 
         // Sort out spam depending on header fields set by the tools
         MailFilter *spamFilter = new MailFilter();
-        QList<FilterAction *> *spamFilterActions = spamFilter->actions();
+        QVector<FilterAction *> *spamFilterActions = spamFilter->actions();
         if (mSpamRulesPage->moveSpamSelected()) {
             FilterAction *spamFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
             spamFilterAction1->argsFromString(mSpamRulesPage->selectedSpamCollectionId());
@@ -324,7 +324,7 @@ void AntiSpamWizard::accept()
             // Sort out messages classified as unsure
             bool atLeastOneUnsurePattern = false;
             MailFilter *unsureFilter = new MailFilter();
-            QList<FilterAction *> *unsureFilterActions = unsureFilter->actions();
+            QVector<FilterAction *> *unsureFilterActions = unsureFilter->actions();
             FilterAction *unsureFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
             unsureFilterAction1->argsFromString(mSpamRulesPage->selectedUnsureCollectionId());
             unsureFilterActions->append(unsureFilterAction1);
@@ -371,7 +371,7 @@ void AntiSpamWizard::accept()
         // Classify messages manually as Spam
         MailFilter *classSpamFilter = new MailFilter();
         classSpamFilter->setIcon(QStringLiteral("mail-mark-junk"));
-        QList<FilterAction *> *classSpamFilterActions = classSpamFilter->actions();
+        QVector<FilterAction *> *classSpamFilterActions = classSpamFilter->actions();
         FilterAction *classSpamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
         classSpamFilterActionFirst->argsFromString(QStringLiteral("P"));
         classSpamFilterActions->append(classSpamFilterActionFirst);
@@ -411,7 +411,7 @@ void AntiSpamWizard::accept()
         // Classify messages manually as not Spam / as Ham
         MailFilter *classHamFilter = new MailFilter();
         classHamFilter->setIcon(QStringLiteral("mail-mark-notjunk"));
-        QList<FilterAction *> *classHamFilterActions = classHamFilter->actions();
+        QVector<FilterAction *> *classHamFilterActions = classHamFilter->actions();
         FilterAction *classHamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
         classHamFilterActionFirst->argsFromString(QStringLiteral("H"));
         classHamFilterActions->append(classHamFilterActionFirst);
