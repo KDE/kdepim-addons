@@ -23,7 +23,6 @@
 #include "liblanguagetool_private_export.h"
 #include "languageinfo.h"
 #include <QVector>
-class QJsonObject;
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolListOfLanguagesParser
 {
 public:

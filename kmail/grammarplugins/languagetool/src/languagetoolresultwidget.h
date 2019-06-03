@@ -24,10 +24,8 @@
 #include "libkmaillanguagetool_export.h"
 #include "languagetoolgrammarerror.h"
 namespace MessageComposer {
-class PluginGrammarAction;
 }
 class LanguageToolComboBox;
-class GrammarResultTextEdit;
 class LanguageToolUpdateComboBox;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolResultWidget : public GrammarResultWidget
 {

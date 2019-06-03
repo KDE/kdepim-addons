@@ -23,7 +23,6 @@
 #include <messagecomposer/plugineditorinterface.h>
 #include <QPointer>
 #include <QHash>
-class SelectMailDialog;
 class ShortUrlEngineInterface;
 class InsertShorturlPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

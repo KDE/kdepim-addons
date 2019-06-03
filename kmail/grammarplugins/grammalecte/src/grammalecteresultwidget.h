@@ -25,9 +25,7 @@
 #include "grammalectegrammarerror.h"
 #include "grammalecteresultjob.h"
 namespace MessageComposer {
-class PluginGrammarAction;
 }
-class GrammarResultTextEdit;
 class GrammalecteResultJob;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteResultWidget : public GrammarResultWidget
 {
