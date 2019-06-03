@@ -214,10 +214,10 @@ protected:
     class ConfigReader
     {
     public:
-        ConfigReader(WizardMode mode, QList<SpamToolConfig> &configList);
+        ConfigReader(WizardMode mode, QVector<SpamToolConfig> &configList);
         ~ConfigReader();
 
-        QList<SpamToolConfig> &getToolList()
+        QVector<SpamToolConfig> &getToolList()
         {
             return mToolList;
         }
@@ -225,7 +225,7 @@ protected:
         void readAndMergeConfig();
 
     private:
-        QList<SpamToolConfig> &mToolList;
+        QVector<SpamToolConfig> &mToolList;
         KSharedConfig::Ptr mConfig;
         WizardMode mMode;
 
@@ -273,7 +273,7 @@ private:
     KPageWidgetItem *mSummaryPageItem = nullptr;
 
     /* The configured tools and it's settings to be used in the wizard. */
-    QList<SpamToolConfig> mToolList;
+    QVector<SpamToolConfig> mToolList;
 
     /* Are any spam tools selected? */
     bool mSpamToolsUsed;
@@ -392,5 +392,4 @@ private:
     QLabel *mSummaryText = nullptr;
 };
 } // namespace KMail
-
 #endif // KMAIL_ANTISPAMWIZARD_H
