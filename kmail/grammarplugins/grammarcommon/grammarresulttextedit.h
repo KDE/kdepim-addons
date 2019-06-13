@@ -50,6 +50,7 @@ private:
     enum TextInfo {
         ReplaceFormatInfo = QTextFormat::UserProperty + 1
     };
+    void slotOpenGrammarUrlInfo(const QString &url);
     void generalPaletteChanged();
     QColor mTextColor;
     QColor mNegativeTextColor;

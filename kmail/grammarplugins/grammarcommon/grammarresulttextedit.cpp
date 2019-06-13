@@ -23,6 +23,7 @@
 
 #include <KLocalizedString>
 #include <KStandardAction>
+#include <QDesktopServices>
 
 #include <QMenu>
 #include <QAction>
@@ -96,6 +97,9 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
             act.setStart(info.start());
             act.setSuggestions(info.suggestions());
             act.setBlockId(info.blockId());
+            if (!info.url().isEmpty()) {
+                act.setInfoUrls({info.url()});
+            }
             format.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
             const int position = cur.position() + info.start();
             cur.setPosition(position);
@@ -124,6 +128,15 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                         slotReplaceWord(act, str);
                     });
                 }
+                if (!act.infoUrls().isEmpty()) {
+                    QMenu *popupUrlInfo = popup->addMenu(i18n("Grammar Web Site Info"));
+                    for (const QString &str : act.infoUrls()) {
+                        QAction *actUrlInfo = popupUrlInfo->addAction(str);
+                        connect(actUrlInfo, &QAction::triggered, this, [this, str]() {
+                            slotOpenGrammarUrlInfo(str);
+                        });
+                    }
+                }
             } else {
                 qCDebug(LIBGRAMMARCOMMON_LOG) << " no suggestion " << act;
             }
@@ -138,6 +151,11 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
         popup->exec(event->globalPos());
         delete popup;
     }
+}
+
+void GrammarResultTextEdit::slotOpenGrammarUrlInfo(const QString &url)
+{
+    QDesktopServices::openUrl(QUrl(url));
 }
 
 void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord)
