@@ -68,7 +68,11 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     QMenu *mardownMenu = new QMenu;
     mPopupMenuAction->setMenu(mardownMenu);
     mPopupMenuAction->setEnabled(false);
-    mardownMenu->addAction(i18n("Add Title"), this, &MarkdownInterface::addTitle);
+    QMenu *titleMenu = new QMenu(i18n("Add Title"), mardownMenu);
+    mardownMenu->addMenu(titleMenu);
+    for (int i = 1; i < 5; ++i) {
+        titleMenu->addAction(i18n("Level %1", QString::number(i)), this, [this, i]() {addTitle(i);});
+    }
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     mardownMenu->addSeparator();
     mBoldAction = mardownMenu->addAction(i18n("Change Selected Text as Bold"), this, &MarkdownInterface::addBold);
@@ -152,13 +156,17 @@ void MarkdownInterface::addImage()
     delete dlg;
 }
 
-void MarkdownInterface::addTitle()
+void MarkdownInterface::addTitle(int index)
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
+    QString tag = QStringLiteral("#");
+    for (int i = 1; i < index; ++i) {
+        tag += QLatin1Char('#');
+    }
     if (!selectedText.isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("# %1").arg(selectedText));
+        richTextEditor()->textCursor().insertText(QStringLiteral("%1 %2").arg(tag, selectedText));
     } else {
-        richTextEditor()->textCursor().insertText(QStringLiteral("# "));
+        richTextEditor()->textCursor().insertText(QStringLiteral("%1 ").arg(tag));
     }
 }
 

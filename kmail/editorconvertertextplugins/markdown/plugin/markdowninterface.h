@@ -45,7 +45,7 @@ private:
     void addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const;
     void addBold();
     void addItalic();
-    void addTitle();
+    void addTitle(int i);
     void addLink();
     void addImage();
     void addHorizontalRule();
