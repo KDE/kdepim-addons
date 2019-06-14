@@ -299,21 +299,27 @@ public:
     Attendee::Ptr findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
     {
         const Attendee::List attendees = incidence->attendees();
-        Attendee::List::ConstIterator it;
-        Attendee::Ptr myself;
+        const auto idx = findMyself(attendees, receiver);
+        if (idx >= 0) {
+            return attendees.at(idx);
+        }
+        return {};
+    }
+
+    int findMyself(const Attendee::List &attendees, const QString &receiver) const
+    {
         // Find myself. There will always be all attendees listed, even if
         // only I need to answer it.
-        Attendee::List::ConstIterator end = attendees.constEnd();
-        for (it = attendees.constBegin(); it != end; ++it) {
+        for (int i = 0; i < attendees.size(); ++i) {
             // match only the email part, not the name
-            if (KEmailAddress::compareEmail((*it)->email(), receiver, false)) {
+            if (KEmailAddress::compareEmail(attendees.at(i)->email(), receiver, false)) {
                 // We are the current one, and even the receiver, note
                 // this and quit searching.
-                myself = (*it);
+                return i;
                 break;
             }
         }
-        return myself;
+        return -1;
     }
 
     static bool heuristicalRSVP(const Incidence::Ptr &incidence)
@@ -933,7 +939,7 @@ public:
             return false;
         }
 
-        Attendee::Ptr myself = findMyself(incidence, receiver);
+        const Attendee::Ptr myself = findMyself(incidence, receiver);
 
         // find our delegator, we need to inform him as well
         QString delegator;
@@ -993,10 +999,12 @@ public:
         // our calendar
         if (status == Attendee::Delegated) {
             incidence = stringToIncidence(iCal);
-            myself = findMyself(incidence, receiver);
-            if (myself) {
-                myself->setStatus(status);
-                myself->setDelegate(delegateString);
+            auto attendees = incidence->attendees();
+            const int myselfIdx = findMyself(attendees, receiver);
+            if (myselfIdx >= 0) {
+                attendees[myselfIdx]->setStatus(status);
+                attendees[myselfIdx]->setDelegate(delegateString);
+                incidence->setAttendees(attendees);
             }
             QString name, email;
             KEmailAddress::extractEmailAddressAndName(delegateString, email, name);
