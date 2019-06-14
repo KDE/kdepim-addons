@@ -156,9 +156,9 @@ void MarkdownInterface::addTitle()
 {
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
-        richTextEditor()->textCursor().insertText(QStringLiteral("#%1#").arg(selectedText));
+        richTextEditor()->textCursor().insertText(QStringLiteral("# %1").arg(selectedText));
     } else {
-        richTextEditor()->textCursor().insertText(QStringLiteral("# #"));
+        richTextEditor()->textCursor().insertText(QStringLiteral("# "));
     }
 }
 
