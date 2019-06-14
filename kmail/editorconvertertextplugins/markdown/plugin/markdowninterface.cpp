@@ -158,12 +158,12 @@ void MarkdownInterface::addImage()
 
 void MarkdownInterface::addTitle(int index)
 {
-    const QString selectedText = richTextEditor()->textCursor().selectedText();
     QString tag = QStringLiteral("#");
     for (int i = 1; i < index; ++i) {
         tag += QLatin1Char('#');
     }
-    if (!selectedText.isEmpty()) {
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.trimmed().isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("%1 %2").arg(tag, selectedText));
     } else {
         richTextEditor()->textCursor().insertText(QStringLiteral("%1 ").arg(tag));
