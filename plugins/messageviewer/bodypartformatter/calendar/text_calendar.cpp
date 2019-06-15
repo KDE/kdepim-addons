@@ -296,7 +296,8 @@ public:
     {
         return QStringLiteral("calendar handler");
     }
-    Attendee::Ptr findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
+
+    Attendee findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
     {
         const Attendee::List attendees = incidence->attendees();
         const auto idx = findMyself(attendees, receiver);
@@ -312,7 +313,7 @@ public:
         // only I need to answer it.
         for (int i = 0; i < attendees.size(); ++i) {
             // match only the email part, not the name
-            if (KEmailAddress::compareEmail(attendees.at(i)->email(), receiver, false)) {
+            if (KEmailAddress::compareEmail(attendees.at(i).email(), receiver, false)) {
                 // We are the current one, and even the receiver, note
                 // this and quit searching.
                 return i;
@@ -330,9 +331,9 @@ public:
         Attendee::List::ConstIterator end(attendees.constEnd());
         for (it = attendees.constBegin(); it != end; ++it) {
             if (it == attendees.constBegin()) {
-                rsvp = (*it)->RSVP(); // use what the first one has
+                rsvp = (*it).RSVP(); // use what the first one has
             } else {
-                if ((*it)->RSVP() != rsvp) {
+                if ((*it).RSVP() != rsvp) {
                     rsvp = true; // they differ, default
                     break;
                 }
@@ -350,9 +351,9 @@ public:
 
         for (it = attendees.constBegin(); it != end; ++it) {
             if (it == attendees.constBegin()) {
-                role = (*it)->role(); // use what the first one has
+                role = (*it).role(); // use what the first one has
             } else {
-                if ((*it)->role() != role) {
+                if ((*it).role() != role) {
                     role = Attendee::OptParticipant; // they differ, default
                     break;
                 }
@@ -481,32 +482,31 @@ public:
         return receiver;
     }
 
-    Attendee::Ptr setStatusOnMyself(const Incidence::Ptr &incidence, const Attendee::Ptr &myself, Attendee::PartStat status, const QString &receiver) const
+    Attendee setStatusOnMyself(const Incidence::Ptr &incidence, const Attendee &myself, Attendee::PartStat status, const QString &receiver) const
     {
         QString name;
         QString email;
         KEmailAddress::extractEmailAddressAndName(receiver, email, name);
-        if (name.isEmpty() && myself) {
-            name = myself->name();
+        if (name.isEmpty() && !myself.isNull()) {
+            name = myself.name();
         }
-        if (email.isEmpty() && myself) {
-            email = myself->email();
+        if (email.isEmpty() && !myself.isNull()) {
+            email = myself.email();
         }
         Q_ASSERT(!email.isEmpty());   // delivery must be possible
 
-        Attendee::Ptr newMyself(
-            new Attendee(name, email, true,  // RSVP, otherwise we would not be here
+        Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
                          status,
-                         myself ? myself->role() : heuristicalRole(incidence),
-                         myself ? myself->uid() : QString()));
-        if (myself) {
-            newMyself->setDelegate(myself->delegate());
-            newMyself->setDelegator(myself->delegator());
+                         !myself.isNull() ? myself.role() : heuristicalRole(incidence),
+                         myself.uid());
+        if (!myself.isNull()) {
+            newMyself.setDelegate(myself.delegate());
+            newMyself.setDelegator(myself.delegator());
         }
 
         // Make sure only ourselves is in the event
         incidence->clearAttendees();
-        if (newMyself) {
+        if (!newMyself.isNull()) {
             incidence->addAttendee(newMyself);
         }
         return newMyself;
@@ -939,51 +939,50 @@ public:
             return false;
         }
 
-        const Attendee::Ptr myself = findMyself(incidence, receiver);
+        const Attendee myself = findMyself(incidence, receiver);
 
         // find our delegator, we need to inform him as well
         QString delegator;
-        if (status != Attendee::NeedsAction && myself && !myself->delegator().isEmpty()) {
+        if (status != Attendee::NeedsAction && !myself.isNull() && !myself.delegator().isEmpty()) {
             const Attendee::List attendees = incidence->attendees();
             Attendee::List::ConstIterator end = attendees.constEnd();
             for (Attendee::List::ConstIterator it = attendees.constBegin();
                  it != end; ++it) {
-                if (KEmailAddress::compareEmail((*it)->fullName(), myself->delegator(), false)
-                    && (*it)->status() == Attendee::Delegated) {
-                    delegator = (*it)->fullName();
-                    delegatorRSVP = (*it)->RSVP();
+                if (KEmailAddress::compareEmail((*it).fullName(), myself.delegator(), false)
+                    && (*it).status() == Attendee::Delegated) {
+                    delegator = (*it).fullName();
+                    delegatorRSVP = (*it).RSVP();
                     break;
                 }
             }
         }
 
-        if (status != Attendee::NeedsAction && ((myself && (myself->RSVP() || myself->status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
-            Attendee::Ptr newMyself = setStatusOnMyself(incidence, myself, status, receiver);
-            if (newMyself && status == Attendee::Delegated) {
-                newMyself->setDelegate(delegateString);
-                newMyself->setRSVP(delegatorRSVP);
+        if (status != Attendee::NeedsAction && ((!myself.isNull() && (myself.RSVP() || myself.status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
+            Attendee newMyself = setStatusOnMyself(incidence, myself, status, receiver);
+            if (!newMyself.isNull() && status == Attendee::Delegated) {
+                newMyself.setDelegate(delegateString);
+                newMyself.setRSVP(delegatorRSVP);
             }
             ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver);
 
             // check if we need to inform our delegator about this as well
-            if (newMyself
+            if (!newMyself.isNull()
                 && (status == Attendee::Accepted || status == Attendee::Declined)
                 && !delegator.isEmpty()) {
                 if (delegatorRSVP || status == Attendee::Declined) {
                     ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver, delegator);
                 }
             }
-        } else if (!myself && (status != Attendee::Declined && status != Attendee::NeedsAction)) {
+        } else if (myself.isNull() && (status != Attendee::Declined && status != Attendee::NeedsAction)) {
             // forwarded invitation
             QString name;
             QString email;
             KEmailAddress::extractEmailAddressAndName(receiver, email, name);
             if (!email.isEmpty()) {
-                Attendee::Ptr newMyself(
-                    new Attendee(name, email, true,  // RSVP, otherwise we would not be here
+                Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
                                  status,
                                  heuristicalRole(incidence),
-                                 QString()));
+                                 QString());
                 incidence->clearAttendees();
                 incidence->addAttendee(newMyself);
                 ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver);
@@ -1002,14 +1001,14 @@ public:
             auto attendees = incidence->attendees();
             const int myselfIdx = findMyself(attendees, receiver);
             if (myselfIdx >= 0) {
-                attendees[myselfIdx]->setStatus(status);
-                attendees[myselfIdx]->setDelegate(delegateString);
+                attendees[myselfIdx].setStatus(status);
+                attendees[myselfIdx].setDelegate(delegateString);
                 incidence->setAttendees(attendees);
             }
             QString name, email;
             KEmailAddress::extractEmailAddressAndName(delegateString, email, name);
-            Attendee::Ptr delegate(new Attendee(name, email, true));
-            delegate->setDelegator(receiver);
+            Attendee delegate(name, email, true);
+            delegate.setDelegator(receiver);
             incidence->addAttendee(delegate);
 
             ICalFormat format;
