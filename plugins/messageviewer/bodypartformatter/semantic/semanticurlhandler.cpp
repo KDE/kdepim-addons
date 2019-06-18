@@ -71,6 +71,11 @@ SemanticUrlHandler::SemanticUrlHandler()
     m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
 }
 
+QString SemanticUrlHandler::name() const
+{
+    return QStringLiteral("SemanticUrlHandler");
+}
+
 static bool canAddToCalendar(SemanticMemento *m)
 {
     for (const auto &d : m->data()) {

@@ -184,6 +184,10 @@ public:
 class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 {
 public:
+    QString name() const override
+    {
+        return QStringLiteral("vcardhandler");
+    }
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
     {
         Q_UNUSED(viewerInstance);

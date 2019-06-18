@@ -62,6 +62,11 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
     return QString();
 }
 
+QString ApplicationPgpKeyUrlHandler::name() const
+{
+    return QStringLiteral("ApplicationPgpKeyUrlHandler");
+}
+
 bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart *part, const QString &path) const
 {
     const QUrlQuery q = decodePath(path);

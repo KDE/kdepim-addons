@@ -28,7 +28,7 @@ class ApplicationPgpKeyUrlHandler : public MessageViewer::Interface::BodyPartURL
 {
 public:
     ApplicationPgpKeyUrlHandler() = default;
-
+    QString name() const override;
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;

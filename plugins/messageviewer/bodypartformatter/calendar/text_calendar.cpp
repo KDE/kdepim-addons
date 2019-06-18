@@ -292,6 +292,10 @@ public:
         //qCDebug(TEXT_CALENDAR_LOG) << "UrlHandler() (iCalendar)";
     }
 
+    QString name() const override
+    {
+        return QStringLiteral("calendar handler");
+    }
     Attendee::Ptr findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
     {
         const Attendee::List attendees = incidence->attendees();

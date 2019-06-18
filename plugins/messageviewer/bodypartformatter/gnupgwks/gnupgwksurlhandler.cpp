@@ -53,6 +53,11 @@ bool ApplicationGnuPGWKSUrlHandler::handleContextMenuRequest(BodyPart *, const Q
     return false;
 }
 
+QString ApplicationGnuPGWKSUrlHandler::name() const
+{
+    return QStringLiteral("ApplicationGnuPGWKSUrlHandler");
+}
+
 bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
