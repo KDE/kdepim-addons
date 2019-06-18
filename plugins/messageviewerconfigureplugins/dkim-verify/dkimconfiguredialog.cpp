@@ -22,7 +22,6 @@
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 

@@ -31,7 +31,6 @@
 #include <QDir>
 #include <QIcon>
 #include <QPalette>
-#include <QProcess>
 #include <QStandardPaths>
 #include <QStyle>
 #include <QStyleFactory>

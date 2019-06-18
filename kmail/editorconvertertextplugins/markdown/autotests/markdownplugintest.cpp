@@ -20,7 +20,6 @@
 #include "markdownplugintest.h"
 #include "../plugin/markdownplugin.h"
 #include "../plugin/markdowninterface.h"
-#include <KActionCollection>
 #include <QTest>
 QTEST_MAIN(MarkdownPluginTest)
 

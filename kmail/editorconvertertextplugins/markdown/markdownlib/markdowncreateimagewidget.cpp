@@ -20,12 +20,10 @@
 #include "markdowncreateimagewidget.h"
 #include <KLocalizedString>
 #include <QFormLayout>
-#include <QHBoxLayout>
 #include <QLineEdit>
 #include <QCheckBox>
 #include <QLabel>
 #include <QSpinBox>
-#include <QDebug>
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
 {

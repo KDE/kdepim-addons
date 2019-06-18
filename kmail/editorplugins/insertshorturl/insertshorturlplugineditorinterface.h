@@ -21,7 +21,6 @@
 #define INSERTSHORTURLPLUGINEDITORINTERFACE_H
 
 #include <messagecomposer/plugineditorinterface.h>
-#include <QPointer>
 #include <QHash>
 class ShortUrlEngineInterface;
 class InsertShorturlPluginEditorInterface : public MessageComposer::PluginEditorInterface

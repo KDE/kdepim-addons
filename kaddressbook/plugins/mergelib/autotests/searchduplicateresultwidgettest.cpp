@@ -25,7 +25,6 @@
 #include <KaddressbookGrantlee/GrantleeContactViewer>
 #include <QSplitter>
 #include <QLayout>
-#include <QTreeWidget>
 #include <QLabel>
 #include <QTest>
 #include <QPushButton>

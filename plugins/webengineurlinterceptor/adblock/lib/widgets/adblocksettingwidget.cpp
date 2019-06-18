@@ -52,12 +52,8 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 // Qt Includes
 #include <QWhatsThis>
 #include <QListWidgetItem>
-#include <QFile>
 #include <QPointer>
-#include <QTextStream>
 #include <QStandardPaths>
-#include <QRegularExpression>
-#include <QDir>
 #include <KRun>
 #include <adblocksubscription.h>
 

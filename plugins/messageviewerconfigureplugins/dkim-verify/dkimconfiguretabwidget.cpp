@@ -18,9 +18,7 @@
 */
 
 #include "dkimconfiguretabwidget.h"
-#include <KConfigGroup>
 #include <KSharedConfig>
-#include <KLocalizedString>
 #include <QVBoxLayout>
 
 DKIMConfigureTabWidget::DKIMConfigureTabWidget(QWidget *parent)

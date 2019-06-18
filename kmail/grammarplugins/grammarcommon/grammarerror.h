@@ -20,7 +20,6 @@
 #ifndef GRAMMARERROR_H
 #define GRAMMARERROR_H
 
-#include <QObject>
 #include <QColor>
 #include <QString>
 #include <QDebug>

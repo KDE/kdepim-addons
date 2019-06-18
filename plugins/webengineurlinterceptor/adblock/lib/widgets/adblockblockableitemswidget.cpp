@@ -23,7 +23,7 @@
 #include "adblockutil.h"
 #include "adblockmanager.h"
 #include <WebEngineViewer/WebEngineScript>
-
+#include <KIOWidgets/KRun>
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <CustomTreeView>
@@ -36,8 +36,6 @@
 #include <QApplication>
 #include <QPointer>
 #include <adblockblockableitemsjob.h>
-#include <QFile>
-#include <KIOWidgets/KRun>
 using namespace AdBlock;
 
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)

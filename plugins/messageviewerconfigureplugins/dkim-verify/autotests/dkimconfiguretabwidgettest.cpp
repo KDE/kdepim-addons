@@ -20,7 +20,6 @@
 #include "dkimconfiguretabwidgettest.h"
 #include "../dkimconfiguretabwidget.h"
 #include "kdepimtest_layout.h"
-#include <QTabWidget>
 #include <QTest>
 #include <QVBoxLayout>
 

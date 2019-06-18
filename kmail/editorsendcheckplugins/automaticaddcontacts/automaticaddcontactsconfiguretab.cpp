@@ -20,7 +20,6 @@
 #include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactstabwidget.h"
 
-#include <KConfigGroup>
 #include <QHBoxLayout>
 #include <QTabWidget>
 #include <KSharedConfig>

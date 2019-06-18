@@ -25,9 +25,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QWidgetAction>
-#include <QMenu>
-#include <KMessageBox>
 
 InsertTemplateCommandPluginEditorInterface::InsertTemplateCommandPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)

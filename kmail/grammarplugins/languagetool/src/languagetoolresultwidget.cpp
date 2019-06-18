@@ -30,7 +30,6 @@
 
 #include <QHBoxLayout>
 #include <QJsonDocument>
-#include <QTextEdit>
 
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)

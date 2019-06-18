@@ -18,7 +18,6 @@
 #include "selectattachmentdialog.h"
 #include <KLocalizedString>
 #include <kurlrequester.h>
-#include <QBoxLayout>
 #include <QLabel>
 #include <QDialogButtonBox>
 using namespace MailMerge;

@@ -23,8 +23,6 @@
 #include <KLocalizedString>
 
 #include <QHBoxLayout>
-#include <QJsonDocument>
-#include <QTextEdit>
 #include <QToolButton>
 
 GrammarResultWidget::GrammarResultWidget(QWidget *parent)

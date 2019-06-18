@@ -21,7 +21,6 @@
 #include "languagetoolresultwidget.h"
 #include "kdepimtest_layout.h"
 #include <QTest>
-#include <QHBoxLayout>
 #include <grammarresulttextedit.h>
 QTEST_MAIN(LanguageToolResultWidgetTest)
 LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)

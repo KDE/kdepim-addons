@@ -19,7 +19,6 @@
 
 #include "expertplugininterface.h"
 #include "expertplugin_debug.h"
-#include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
 

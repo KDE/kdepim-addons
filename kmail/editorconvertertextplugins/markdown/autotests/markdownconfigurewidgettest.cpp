@@ -21,9 +21,6 @@
 #include "markdownconfigurewidget.h"
 #include "kdepimtest_layout.h"
 #include <QCheckBox>
-#include <QComboBox>
-#include <QHBoxLayout>
-#include <QLabel>
 #include <QTest>
 
 QTEST_MAIN(MarkdownConfigureWidgetTest)

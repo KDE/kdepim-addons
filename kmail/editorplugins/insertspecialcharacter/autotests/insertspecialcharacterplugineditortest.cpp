@@ -19,7 +19,6 @@
 
 #include "insertspecialcharacterplugineditortest.h"
 #include "../insertspecialcharacterplugineditor.h"
-#include <KActionCollection>
 #include <QTest>
 
 InsertSpecialCharacterPluginEditorTest::InsertSpecialCharacterPluginEditorTest(QObject *parent)

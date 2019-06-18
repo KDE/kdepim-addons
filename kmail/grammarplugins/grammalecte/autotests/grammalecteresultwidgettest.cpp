@@ -21,7 +21,6 @@
 #include "grammalecteresultwidget.h"
 #include "grammarresulttextedit.h"
 #include "kdepimtest_layout.h"
-#include <QHBoxLayout>
 #include <QTest>
 #include <QToolButton>
 QTEST_MAIN(GrammarResultWidgetTest)

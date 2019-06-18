@@ -20,7 +20,6 @@
 #include "markdowncreatelinkwidget.h"
 #include <KLocalizedString>
 #include <QFormLayout>
-#include <QHBoxLayout>
 #include <QLineEdit>
 
 MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)

@@ -35,7 +35,6 @@
 #include <QLabel>
 #include <QMenu>
 
-#include <QTextCursor>
 #include <MessageComposer/TextPart>
 
 MarkdownInterface::MarkdownInterface(QObject *parent)

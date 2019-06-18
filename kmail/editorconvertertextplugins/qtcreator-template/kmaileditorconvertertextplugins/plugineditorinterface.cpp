@@ -4,10 +4,7 @@
 #include <KPIMTextEdit/RichTextEditor>
 #include <MessageComposer/PluginEditorConverterInitialData>
 #include <KPIMTextEdit/RichTextComposer>
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
-#include <QWidgetAction>
 
 %{CN}PluginEditorInterface::%{CN}PluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)

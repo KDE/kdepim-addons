@@ -31,7 +31,6 @@
 #endif
 
 #include <KLocalizedString>
-#include <QDebug>
 extern "C" {
 #include <mkdio.h>
 }

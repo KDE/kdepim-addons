@@ -22,12 +22,11 @@
 #include "markdownenginepage.h"
 #include <KMessageBox>
 #include <KLocalizedString>
-#include <QHBoxLayout>
 #include <QWebChannel>
-#include <QWebEngineProfile>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
 #include <QLabel>
+#include <QVBoxLayout>
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)

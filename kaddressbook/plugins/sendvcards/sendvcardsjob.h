@@ -21,7 +21,6 @@
 #define SENDVCARDSJOB_H
 #include <QObject>
 #include <AkonadiCore/Item>
-#include <QStringList>
 #include <KContacts/VCardConverter>
 
 class QTemporaryDir;

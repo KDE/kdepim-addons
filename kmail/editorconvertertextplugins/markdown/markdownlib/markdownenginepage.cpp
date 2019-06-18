@@ -20,7 +20,6 @@
 #include "markdownenginepage.h"
 #include <QWebEngineSettings>
 #include <QWebEngineProfile>
-#include <QtWebEngineWidgets>
 
 MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     : QWebEnginePage(parent)

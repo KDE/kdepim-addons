@@ -21,9 +21,7 @@
 #include "qcsvmodel_p.h"
 #include "qcsvreader.h"
 
-#include <QMap>
 #include <QPair>
-#include <QVector>
 
 CsvParser::CsvParser(QObject *parent)
     : QThread(parent)

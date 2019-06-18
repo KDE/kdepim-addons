@@ -20,11 +20,11 @@
 #include "selectimapwidgettest.h"
 #include "../selectimapwidget.h"
 #include "kdepimtest_layout.h"
-#include <KLineEdit>
 
 #include <QTest>
 #include <QHBoxLayout>
 #include <QToolButton>
+#include <QLineEdit>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
     : QObject(parent)

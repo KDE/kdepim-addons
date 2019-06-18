@@ -24,7 +24,6 @@
 #include "recursiveitemlistwidget.h"
 
 #include <QHBoxLayout>
-#include <QListView>
 
 #include <AkonadiCore/entitytreemodel.h>
 #include <AkonadiCore/entitymimetypefiltermodel.h>

@@ -6,8 +6,6 @@
 #include <KPIMTextEdit/RichTextEditor>
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
-#include <KLocalizedString>
-#include <QAction>
 
 %{CN}PluginEditorInterface::%{CN}PluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

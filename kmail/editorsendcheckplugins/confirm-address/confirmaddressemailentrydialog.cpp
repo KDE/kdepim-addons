@@ -19,10 +19,10 @@
 
 #include "confirmaddressemailentrydialog.h"
 #include <KLocalizedString>
-#include <QHBoxLayout>
 #include <QDialogButtonBox>
 #include <QLineEdit>
 #include <QLabel>
+#include <QVBoxLayout>
 #include <Libkdepim/EmailValidator>
 
 ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)

@@ -20,7 +20,6 @@
 #include "grammarerror.h"
 #include "grammarcommon_debug.h"
 
-#include <QJsonArray>
 #include <QJsonObject>
 
 GrammarError::GrammarError()

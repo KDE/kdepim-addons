@@ -22,9 +22,7 @@
 #include "libgrammalecte_debug.h"
 #include "grammalectemanager.h"
 #include "grammalecteparser.h"
-#include <QHBoxLayout>
 #include <QJsonDocument>
-#include <QTextEdit>
 
 GrammalecteResultWidget::GrammalecteResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)

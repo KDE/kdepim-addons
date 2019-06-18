@@ -18,13 +18,11 @@
 */
 
 #include "markdownconfigurewidget.h"
-#include <QHBoxLayout>
-#include <QLabel>
 #include <KLocalizedString>
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QCheckBox>
-
+#include <QVBoxLayout>
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
 {

@@ -26,7 +26,6 @@
 #include <QLineEdit>
 #include <QToolButton>
 #include <KLocalizedString>
-#include <QDialog>
 #include <QTreeView>
 #include <KColorScheme>
 #include <memory>

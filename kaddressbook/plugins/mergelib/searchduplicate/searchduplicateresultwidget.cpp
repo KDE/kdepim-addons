@@ -25,7 +25,6 @@
 #include "resultduplicatetreewidget.h"
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <QTreeWidget>
 #include <QSplitter>
 #include <QLabel>
 #include <QPushButton>

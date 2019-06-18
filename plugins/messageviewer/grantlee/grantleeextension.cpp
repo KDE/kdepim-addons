@@ -26,7 +26,6 @@
 #include <grantlee/parser.h>
 
 #include <QDateTime>
-#include <QDebug>
 #include <QTimeZone>
 
 QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const

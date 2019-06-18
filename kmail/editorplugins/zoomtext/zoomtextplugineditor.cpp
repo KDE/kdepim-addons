@@ -20,7 +20,6 @@
 #include "zoomtextplugineditor.h"
 #include "zoomtextplugineditorinterface.h"
 #include <kpluginfactory.h>
-#include <QLabel>
 
 K_PLUGIN_CLASS_WITH_JSON(ZoomTextPluginEditor, "kmail_zoomtexteditorplugin.json")
 

@@ -19,7 +19,6 @@
 
 #include "selectmaildialog.h"
 #include "selectmailwidget.h"
-#include <KLocalizedString>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <KConfigGroup>

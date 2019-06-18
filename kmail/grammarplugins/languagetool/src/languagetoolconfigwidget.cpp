@@ -30,14 +30,8 @@
 #include <QCheckBox>
 #include <QLineEdit>
 #include <QLabel>
-#include <QVariant>
-#include <QJsonDocument>
-#include <QJsonArray>
-#include <QDebug>
 #include <QToolButton>
 
-#include <KUrlRequester>
-#include <KMessageBox>
 
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)

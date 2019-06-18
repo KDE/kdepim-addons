@@ -20,7 +20,6 @@
 #include "languagetoolcombobox.h"
 #include "languageinfo.h"
 #include <KLocalizedString>
-#include <QDebug>
 
 LanguageToolComboBox::LanguageToolComboBox(QWidget *parent)
     : QComboBox(parent)

@@ -23,9 +23,9 @@
 #include <KLocalizedString>
 
 #include <KActionCollection>
-#include <QHBoxLayout>
 #include <QIcon>
 #include <QAction>
+#include <QLayout>
 
 using namespace MessageViewer;
 
