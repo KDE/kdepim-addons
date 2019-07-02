@@ -1,4 +1,4 @@
-{
+	{
     "KPlugin": {
         "Description": "This plugin allows you to configure dkim support.",
         "Description[ca@valencia]": "Aquest connector permet configurar el funcionament del «dkim».",
