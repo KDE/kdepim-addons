@@ -182,7 +182,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
     for (it = addrList.begin(); it != end; ++it) {
         KContacts::Addressee addr;
 
-        addr.setUid((*it).uid());
+        addr.setUid(QString());
         addr.setFormattedName((*it).formattedName());
 
         bool addrDone = false;
