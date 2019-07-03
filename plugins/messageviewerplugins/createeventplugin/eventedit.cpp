@@ -338,10 +338,10 @@ void EventEdit::slotStartDateTimeChanged(const QDateTime &newDateTime)
 
 KCalCore::Event::Ptr EventEdit::createEventItem()
 {
-    KCalCore::Attachment::Ptr attachment(new KCalCore::Attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType()));
+    KCalCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     if (subject) {
-        attachment->setLabel(subject->asUnicodeString());
+        attachment.setLabel(subject->asUnicodeString());
     }
     KCalCore::Event::Ptr event(new KCalCore::Event);
     event->setSummary(mEventEdit->text());

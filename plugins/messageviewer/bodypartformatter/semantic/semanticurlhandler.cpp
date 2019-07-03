@@ -329,8 +329,8 @@ static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant
 
         event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
         using namespace KCalCore;
-        Attachment::Ptr att(new Attachment(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass")));
-        att->setLabel(i18n("Boarding Pass")); // TODO add passenger name after string freeze is lifted
+        Attachment att(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass"));
+        att.setLabel(i18n("Boarding Pass")); // TODO add passenger name after string freeze is lifted
         event->addAttachment(att);
     }
 }

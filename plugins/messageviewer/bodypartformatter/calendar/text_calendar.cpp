@@ -362,33 +362,31 @@ public:
         return role;
     }
 
-    static Attachment::Ptr findAttachment(const QString &name, const QString &iCal)
+    static Attachment findAttachment(const QString &name, const QString &iCal)
     {
         Incidence::Ptr incidence = stringToIncidence(iCal);
 
         // get the attachment by name from the incidence
         Attachment::List attachments = incidence->attachments();
-        Attachment::Ptr attachment;
-        if (!attachments.isEmpty()) {
-            const Attachment::List::ConstIterator end = attachments.constEnd();
-            for (Attachment::List::ConstIterator it = attachments.constBegin(); it != end; ++it) {
-                if ((*it)->label() == name) {
-                    attachment = *it;
-                    break;
-                }
+        Attachment attachment;
+        const Attachment::List::ConstIterator end = attachments.constEnd();
+        for (Attachment::List::ConstIterator it = attachments.constBegin(); it != end; ++it) {
+            if ((*it).label() == name) {
+                attachment = *it;
+                break;
             }
         }
 
-        if (!attachment) {
+        if (attachment.isEmpty()) {
             KMessageBox::error(
                 nullptr,
                 i18n("No attachment named \"%1\" found in the invitation.", name));
-            return Attachment::Ptr();
+            return Attachment();
         }
 
-        if (attachment->isUri()) {
+        if (attachment.isUri()) {
             bool fileExists = false;
-            QUrl attachmentUrl(attachment->uri());
+            QUrl attachmentUrl(attachment.uri());
             if (attachmentUrl.isLocalFile()) {
                 fileExists = QFile::exists(attachmentUrl.toLocalFile());
             } else {
@@ -403,7 +401,7 @@ public:
                          "organizer to resend the invitation with this attachment "
                          "stored inline instead of a link.",
                          attachmentUrl.toDisplayString()));
-                return Attachment::Ptr();
+                return Attachment();
             }
         }
         return attachment;
@@ -1025,18 +1023,18 @@ public:
 
     bool openAttachment(const QString &name, const QString &iCal) const
     {
-        Attachment::Ptr attachment(findAttachment(name, iCal));
-        if (!attachment) {
+        Attachment attachment(findAttachment(name, iCal));
+        if (attachment.isEmpty()) {
             return false;
         }
 
-        if (attachment->isUri()) {
-            QDesktopServices::openUrl(QUrl(attachment->uri()));
+        if (attachment.isUri()) {
+            QDesktopServices::openUrl(QUrl(attachment.uri()));
         } else {
             // put the attachment in a temporary file and launch it
             QTemporaryFile *file = nullptr;
             QMimeDatabase db;
-            QStringList patterns = db.mimeTypeForName(attachment->mimeType()).globPatterns();
+            QStringList patterns = db.mimeTypeForName(attachment.mimeType()).globPatterns();
             if (!patterns.empty()) {
                 QString pattern = patterns.at(0);
                 file = new QTemporaryFile(QDir::tempPath() + QStringLiteral("/messageviewer_XXXXXX") + pattern.remove(QLatin1Char('*')));
@@ -1046,12 +1044,12 @@ public:
             file->setAutoRemove(false);
             file->open();
             file->setPermissions(QFile::ReadUser);
-            file->write(QByteArray::fromBase64(attachment->data()));
+            file->write(QByteArray::fromBase64(attachment.data()));
             file->close();
 
             KRun::RunFlags flags;
             flags |= KRun::DeleteTemporaryFiles;
-            bool stat = KRun::runUrl(QUrl::fromLocalFile(file->fileName()), attachment->mimeType(), nullptr, flags);
+            bool stat = KRun::runUrl(QUrl::fromLocalFile(file->fileName()), attachment.mimeType(), nullptr, flags);
             delete file;
             return stat;
         }
@@ -1060,8 +1058,8 @@ public:
 
     bool saveAsAttachment(const QString &name, const QString &iCal) const
     {
-        Attachment::Ptr a(findAttachment(name, iCal));
-        if (!a) {
+        Attachment a(findAttachment(name, iCal));
+        if (a.isEmpty()) {
             return false;
         }
 
@@ -1073,9 +1071,9 @@ public:
         }
 
         bool stat = false;
-        if (a->isUri()) {
+        if (a.isUri()) {
             // save the attachment url
-            auto job = KIO::file_copy(QUrl(a->uri()), QUrl::fromLocalFile(saveAsFile));
+            auto job = KIO::file_copy(QUrl(a.uri()), QUrl::fromLocalFile(saveAsFile));
             stat = job->exec();
         } else {
             // put the attachment in a temporary file and save it
@@ -1083,7 +1081,7 @@ public:
                 nullptr
             };
             QMimeDatabase db;
-            QStringList patterns = db.mimeTypeForName(a->mimeType()).globPatterns();
+            QStringList patterns = db.mimeTypeForName(a.mimeType()).globPatterns();
             if (!patterns.empty()) {
                 QString pattern = patterns.at(0);
                 file = new QTemporaryFile(QDir::tempPath() + QStringLiteral("/messageviewer_XXXXXX") + pattern.remove(QLatin1Char('*')));
@@ -1093,7 +1091,7 @@ public:
             file->setAutoRemove(false);
             file->open();
             file->setPermissions(QFile::ReadUser);
-            file->write(QByteArray::fromBase64(a->data()));
+            file->write(QByteArray::fromBase64(a.data()));
             file->close();
             const QString filename = file->fileName();
             delete file;

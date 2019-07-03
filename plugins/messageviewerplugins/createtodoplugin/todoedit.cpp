@@ -261,10 +261,10 @@ KCalCore::Todo::Ptr TodoEdit::createTodoItem()
 {
     KCalCore::Todo::Ptr todo(new KCalCore::Todo);
     todo->setSummary(mNoteEdit->text());
-    KCalCore::Attachment::Ptr attachment(new KCalCore::Attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType()));
+    KCalCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     if (subject) {
-        attachment->setLabel(subject->asUnicodeString());
+        attachment.setLabel(subject->asUnicodeString());
     }
 
     todo->addAttachment(attachment);
