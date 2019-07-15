@@ -297,7 +297,13 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         }
 
         if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
-            addr.setCustoms((*it).customs());
+            QStringList exportFields;
+            for (const QString &customStr : (*it).customs()) {
+                if (!customStr.startsWith(QLatin1String("X-GCALENDAR-groupMembershipInfo"))) {
+                    exportFields.append(customStr);
+                }
+            }
+            addr.setCustoms(exportFields);
         }
 
         if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Encryption) {
