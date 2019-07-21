@@ -64,9 +64,10 @@ using namespace KCalCore;
 #include <MailTransportAkonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
 
+#include <KontactInterface/PimUniqueApplication>
+
 #include "text_calendar_debug.h"
 
-#include <KDBusServiceStarter>
 #include <KMessageBox>
 #include <KRun>
 #include <KIO/FileCopyJob>
@@ -1102,97 +1103,18 @@ public:
         return stat;
     }
 
-    bool ensureKorganizerRunning(bool switchTo) const
-    {
-        // FIXME: this function should be inside a QObject, and async,
-        //         and Q_EMIT a signal when korg registered itself successfully
-
-        // Or better, use DBus activation in all cases.
-
-        QString error;
-        bool result = true;
-        QString dbusService;
-
-#if defined(Q_OS_WIN32)
-        //Can't run the korganizer-mobile.sh through KDBusServiceStarter in these platforms.
-        QDBusInterface *interface = new QDBusInterface(QLatin1String("org.kde.korganizer"), QStringLiteral("/MainApplication"));
-        if (!interface->isValid()) {
-            qCDebug(TEXT_CALENDAR_LOG) << "Starting korganizer...";
-
-            QDBusServiceWatcher *watcher
-                = new QDBusServiceWatcher(QLatin1String("org.kde.korganizer"), QDBusConnection::sessionBus(),
-                                          QDBusServiceWatcher::WatchForRegistration);
-            QEventLoop loop;
-            watcher->connect(watcher, &QDBusServiceWatcher::serviceRegistered, &loop, &QEventLoop::quit);
-            result = QProcess::startDetached(QLatin1String("korganizer"));
-            if (result) {
-                qCDebug(TEXT_CALENDAR_LOG) << "Starting loop";
-                loop.exec();
-                qCDebug(TEXT_CALENDAR_LOG) << "Korganizer finished starting";
-            } else {
-                qCWarning(TEXT_CALENDAR_LOG) << "Failed to start korganizer with QProcess";
-            }
-
-            delete watcher;
-        }
-        delete interface;
-#else
-        QString constraint;
-
-        result = KDBusServiceStarter::self()->findServiceFor(QStringLiteral("DBUS/Organizer"),
-                                                             constraint,
-                                                             &error, &dbusService) == 0;
-#endif
-        if (result) {
-            // OK, so korganizer (or kontact) is running. Now ensure the object we want is loaded.
-            QDBusInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/MainApplication"),
-                                 QStringLiteral("org.kde.PIMUniqueApplication"));
-            if (iface.isValid()) {
-                if (switchTo) {
-                    iface.call(QStringLiteral("newInstance"));   // activate korganizer window
-                }
-#if 0 //Not exist
-                QDBusInterface pimIface("org.kde.korganizer", "/korganizer_PimApplication",
-                                        "org.kde.PIMUniqueApplication");
-                QDBusReply<bool> r = pimIface.call("load");
-                if (!r.isValid() || !r.value()) {
-                    qCWarning(TEXT_CALENDAR_LOG) << "Loading korganizer failed: " << pimIface.lastError().message();
-                }
-#endif
-            } else {
-                qCWarning(TEXT_CALENDAR_LOG) << "Couldn't obtain korganizer D-Bus interface" << iface.lastError().message();
-            }
-
-            // We don't do anything with it, we just need it to be running so that it handles
-            // the incoming directory.
-        } else {
-            qCWarning(TEXT_CALENDAR_LOG) << "Couldn't start DBUS/Organizer:" << dbusService << error;
-        }
-        return result;
-    }
-
     void showCalendar(const QDate &date) const
     {
-        if (ensureKorganizerRunning(true)) {
-            QDBusInterface *kontact
-                = new QDBusInterface(QStringLiteral("org.kde.kontact"), QStringLiteral("/KontactInterface"),
-                                     QStringLiteral("org.kde.kontact.KontactInterface"), QDBusConnection::sessionBus());
-            if (kontact->isValid()) {
-                kontact->call(QStringLiteral("selectPlugin"), QStringLiteral("kontact_korganizerplugin"));
-            }
-            delete kontact;
-
-            OrgKdeKorganizerCalendarInterface *iface
-                = new OrgKdeKorganizerCalendarInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                                                        QDBusConnection::sessionBus(), nullptr);
-            if (!iface->isValid()) {
-                qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface->lastError().message();
-                delete iface;
+        // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
+        if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
+            OrgKdeKorganizerCalendarInterface iface (QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                    QDBusConnection::sessionBus(), nullptr);
+            if (!iface.isValid()) {
+                qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface.lastError().message();
                 return;
             }
-            iface->showEventView();
-            iface->showDate(date);
-            delete iface;
+            iface.showEventView();
+            iface.showDate(date);
         }
     }
 

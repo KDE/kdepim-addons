@@ -17,6 +17,7 @@ add_library(messageviewer_bodypartformatter_text_calendar MODULE ${messageviewer
 
 
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
+    KF5::KontactInterface
     KF5::Codecs
     Qt5::Core
     KF5::CalendarCore
