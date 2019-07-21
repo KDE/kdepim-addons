@@ -11,6 +11,7 @@ qt5_add_resources(semantic_plugin_srcs templates.qrc)
 add_library(messageviewer_bodypartformatter_semantic MODULE ${semantic_plugin_srcs})
 target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\")
 target_link_libraries(messageviewer_bodypartformatter_semantic
+  KF5::KontactInterface
   KF5::MessageViewer
   KF5::CalendarSupport
   KF5::I18n

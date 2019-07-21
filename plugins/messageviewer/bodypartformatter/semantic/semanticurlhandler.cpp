@@ -43,7 +43,7 @@
 
 #include <KCalCore/Event>
 
-#include <KDBusServiceStarter>
+#include <KontactInterface/PimUniqueApplication>
 #include <KLocalizedString>
 
 #include <QDate>
@@ -288,30 +288,18 @@ QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
 void SemanticUrlHandler::showCalendar(const QDate &date) const
 {
     // ensure KOrganizer or Kontact are running
-    QString error, dbusService;
-    const auto result = KDBusServiceStarter::self()->findServiceFor(QStringLiteral("DBUS/Organizer"), {}, &error, &dbusService) == 0;
-    if (!result) {
-        qCWarning(SEMANTIC_LOG) << "Failed to start KOrganizer" << error << dbusService;
-    }
+    if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
 
-    // switch to KOrganizer if we are using Kontact
-    std::unique_ptr<QDBusInterface> kontactIface(
-        new QDBusInterface(QStringLiteral("org.kde.kontact"), QStringLiteral("/KontactInterface"),
-                           QStringLiteral("org.kde.kontact.KontactInterface"), QDBusConnection::sessionBus()));
-    if (kontactIface->isValid()) {
-        kontactIface->call(QStringLiteral("selectPlugin"), QStringLiteral("kontact_korganizerplugin"));
+        // select the date of the reservation
+        QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());
+        if (!korgIface.isValid()) {
+            qCWarning(SEMANTIC_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
+            return;
+        }
+        korgIface.call(QStringLiteral("showEventView"));
+        korgIface.call(QStringLiteral("showDate"), date);
     }
-
-    // select the date of the reservation
-    std::unique_ptr<QDBusInterface> korgIface(
-        new QDBusInterface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                           QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus()));
-    if (!korgIface->isValid()) {
-        qCWarning(SEMANTIC_LOG) << "Calendar interface is not valid! " << korgIface->lastError().message();
-        return;
-    }
-    korgIface->call(QStringLiteral("showEventView"));
-    korgIface->call(QStringLiteral("showDate"), date);
 }
 
 static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant> &reservations, SemanticMemento *memento)
