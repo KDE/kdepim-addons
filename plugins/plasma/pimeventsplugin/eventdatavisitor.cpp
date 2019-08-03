@@ -32,25 +32,25 @@ BaseEventDataVisitor::~BaseEventDataVisitor()
 {
 }
 
-bool BaseEventDataVisitor::act(const KCalCore::Incidence::Ptr &incidence)
+bool BaseEventDataVisitor::act(const KCalendarCore::Incidence::Ptr &incidence)
 {
     return incidence->accept(*this, incidence);
 }
 
-bool BaseEventDataVisitor::act(const KCalCore::Event::List &events)
+bool BaseEventDataVisitor::act(const KCalendarCore::Event::List &events)
 {
     bool ok = false;
-    for (const KCalCore::Event::Ptr &event : events) {
-        ok = event.staticCast<KCalCore::IncidenceBase>()->accept(*this, event) || ok;
+    for (const KCalendarCore::Event::Ptr &event : events) {
+        ok = event.staticCast<KCalendarCore::IncidenceBase>()->accept(*this, event) || ok;
     }
     return ok;
 }
 
-bool BaseEventDataVisitor::act(const KCalCore::Todo::List &todos)
+bool BaseEventDataVisitor::act(const KCalendarCore::Todo::List &todos)
 {
     bool ok = false;
-    for (const KCalCore::Todo::Ptr &todo : todos) {
-        ok = todo.staticCast<KCalCore::IncidenceBase>()->accept(*this, todo) || ok;
+    for (const KCalendarCore::Todo::Ptr &todo : todos) {
+        ok = todo.staticCast<KCalendarCore::IncidenceBase>()->accept(*this, todo) || ok;
     }
     return ok;
 }
@@ -72,7 +72,7 @@ bool BaseEventDataVisitor::isInRange(const QDate &start, const QDate &end) const
     }
 }
 
-QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
+QString BaseEventDataVisitor::generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
 {
     // Get a corresponding Akonadi Item: Akonadi ID is the only reliably unique
     // and persistent identifier when dealing with incidences from multiple
@@ -91,7 +91,7 @@ QString BaseEventDataVisitor::generateUid(const KCalCore::Incidence::Ptr &incide
     }
 }
 
-QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalCore::Incidence::Ptr &incidence, bool &ok)
+QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
 {
     Q_ASSERT(incidence->recurs());
 
@@ -135,7 +135,7 @@ const QMultiHash<QDate, CalendarEvents::EventData> &EventDataVisitor::results() 
     return mResults;
 }
 
-bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType type)
+bool EventDataVisitor::visit(const KCalendarCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType type)
 {
     CalendarEvents::EventData data = incidenceData(incidence);
     data.setEventType(type);
@@ -156,12 +156,12 @@ bool EventDataVisitor::visit(const KCalCore::Incidence::Ptr &incidence, Calendar
     return false;
 }
 
-bool EventDataVisitor::visit(const KCalCore::Event::Ptr &event)
+bool EventDataVisitor::visit(const KCalendarCore::Event::Ptr &event)
 {
     return visit(event, CalendarEvents::EventData::Event);
 }
 
-bool EventDataVisitor::visit(const KCalCore::Todo::Ptr &todo)
+bool EventDataVisitor::visit(const KCalendarCore::Todo::Ptr &todo)
 {
     return visit(todo, CalendarEvents::EventData::Todo);
 }
@@ -183,7 +183,7 @@ void EventDataVisitor::insertResult(const CalendarEvents::EventData &result)
     }
 }
 
-CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incidence::Ptr &incidence) const
+CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     CalendarEvents::EventData data;
     data.setTitle(incidence->summary());
@@ -192,7 +192,7 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalCore::Incide
     data.setIsMinor(false);
     data.setUid(generateUid(incidence));
     data.setStartDateTime(incidence->dtStart().toLocalTime());
-    data.setEndDateTime(incidence->dateTime(KCalCore::Incidence::RoleEnd).toLocalTime());
+    data.setEndDateTime(incidence->dateTime(KCalendarCore::Incidence::RoleEnd).toLocalTime());
     data.setEventColor(mDataSource->calendarColorForIncidence(incidence));
     return data;
 }
@@ -207,17 +207,17 @@ const QStringList &EventDataIdVisitor::results() const
     return mResults;
 }
 
-bool EventDataIdVisitor::visit(const KCalCore::Event::Ptr &event)
+bool EventDataIdVisitor::visit(const KCalendarCore::Event::Ptr &event)
 {
-    return visit(event.staticCast<KCalCore::Incidence>());
+    return visit(event.staticCast<KCalendarCore::Incidence>());
 }
 
-bool EventDataIdVisitor::visit(const KCalCore::Todo::Ptr &todo)
+bool EventDataIdVisitor::visit(const KCalendarCore::Todo::Ptr &todo)
 {
-    return visit(todo.staticCast<KCalCore::Incidence>());
+    return visit(todo.staticCast<KCalendarCore::Incidence>());
 }
 
-bool EventDataIdVisitor::visit(const KCalCore::Incidence::Ptr &incidence)
+bool EventDataIdVisitor::visit(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (incidence->recurs()) {
         CalendarEvents::EventData ed;

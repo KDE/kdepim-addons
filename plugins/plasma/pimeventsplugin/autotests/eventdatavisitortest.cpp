@@ -25,13 +25,13 @@
 
 #include <QTest>
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
 Q_DECLARE_METATYPE(CalendarEvents::EventData)
-Q_DECLARE_METATYPE(KCalCore::Incidence::Ptr)
+Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
 template<typename Visitor>
 class TestableVisitor : public Visitor
@@ -42,7 +42,7 @@ public:
     {
     }
 
-    QString callGenerateUid(const KCalCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
+    QString callGenerateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
     {
         return Visitor::generateUid(incidence, recurrenceId);
     }
@@ -52,7 +52,7 @@ public:
         return Visitor::isInRange(start, end);
     }
 
-    QVector<CalendarEvents::EventData> callExplodeIncidenceOccurences(const CalendarEvents::EventData &baseEd, const KCalCore::Incidence::Ptr &incidence, bool &ok)
+    QVector<CalendarEvents::EventData> callExplodeIncidenceOccurences(const CalendarEvents::EventData &baseEd, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
     {
         return Visitor::explodeIncidenceOccurences(baseEd, incidence, ok);
     }
@@ -70,18 +70,18 @@ void EventDataVisitorTest::initTestCase()
 
 void EventDataVisitorTest::testGenerateUID_data()
 {
-    QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
+    QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<QDateTime>("recurrenceId");
     QTest::addColumn<qint64>("itemId");
     QTest::addColumn<QString>("expectedUID");
 
-    auto incidence = KCalCore::Event::Ptr::create().staticCast<KCalCore::Incidence>();
+    auto incidence = KCalendarCore::Event::Ptr::create().staticCast<KCalendarCore::Incidence>();
     QTest::newRow("simple event") << incidence << QDateTime()
                                   << 1ll << QStringLiteral("Akonadi-1");
     QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), Qt::UTC)
                                      << 1ll << QStringLiteral("Akonadi-1-20160529T154700UTC");
 
-    incidence = KCalCore::Todo::Ptr::create().staticCast<KCalCore::Incidence>();
+    incidence = KCalendarCore::Todo::Ptr::create().staticCast<KCalendarCore::Incidence>();
     QTest::newRow("simple todo") << incidence << QDateTime()
                                  << 42ll << QStringLiteral("Akonadi-42");
     QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), Qt::UTC)
@@ -90,7 +90,7 @@ void EventDataVisitorTest::testGenerateUID_data()
 
 void EventDataVisitorTest::testGenerateUID()
 {
-    QFETCH(KCalCore::Incidence::Ptr, incidence);
+    QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(QDateTime, recurrenceId);
     QFETCH(qint64, itemId);
     QFETCH(QString, expectedUID);
@@ -168,7 +168,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
     QTest::addColumn<QDate>("rangeStart");
     QTest::addColumn<QDate>("rangeEnd");
     QTest::addColumn<CalendarEvents::EventData>("baseEventData");
-    QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
+    QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
     QTest::addColumn<QVector<CalendarEvents::EventData> >("expectedEventData");
 
@@ -193,7 +193,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences()
     QFETCH(QDate, rangeStart);
     QFETCH(QDate, rangeEnd);
     QFETCH(CalendarEvents::EventData, baseEventData);
-    QFETCH(KCalCore::Incidence::Ptr, incidence);
+    QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(qint64, akonadiItemId);
     QFETCH(QVector<CalendarEvents::EventData>, expectedEventData);
 
@@ -214,7 +214,7 @@ void EventDataVisitorTest::testEventDataVisitor_data()
 {
     QTest::addColumn<QDate>("rangeStart");
     QTest::addColumn<QDate>("rangeEnd");
-    QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
+    QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
     QTest::addColumn<QVector<CalendarEvents::EventData> >("expectedResults");
 
@@ -234,7 +234,7 @@ void EventDataVisitorTest::testEventDataVisitor()
 {
     QFETCH(QDate, rangeStart);
     QFETCH(QDate, rangeEnd);
-    QFETCH(KCalCore::Incidence::Ptr, incidence);
+    QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(qint64, akonadiItemId);
     QFETCH(QVector<CalendarEvents::EventData>, expectedResults);
 
@@ -260,7 +260,7 @@ void EventDataVisitorTest::testEventDataIdVisitor_data()
 {
     QTest::addColumn<QDate>("rangeStart");
     QTest::addColumn<QDate>("rangeEnd");
-    QTest::addColumn<KCalCore::Incidence::Ptr>("incidence");
+    QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
     QTest::addColumn<QStringList>("expectedUids");
 
@@ -283,7 +283,7 @@ void EventDataVisitorTest::testEventDataIdVisitor()
 {
     QFETCH(QDate, rangeStart);
     QFETCH(QDate, rangeEnd);
-    QFETCH(KCalCore::Incidence::Ptr, incidence);
+    QFETCH(KCalendarCore::Incidence::Ptr, incidence);
     QFETCH(qint64, akonadiItemId);
     QFETCH(QStringList, expectedUids);
 

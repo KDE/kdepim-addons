@@ -41,7 +41,7 @@
 
 #include <KMime/Content>
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 #include <KontactInterface/PimUniqueApplication>
 #include <KLocalizedString>
@@ -302,7 +302,7 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     }
 }
 
-static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant> &reservations, SemanticMemento *memento)
+static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVariant> &reservations, SemanticMemento *memento)
 {
     for (const auto &reservation : reservations) {
         if (!JsonLd::canConvert<Reservation>(reservation)) {
@@ -316,7 +316,7 @@ static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant
         }
 
         event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
-        using namespace KCalCore;
+        using namespace KCalendarCore;
         Attachment att(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass"));
         att.setLabel(i18n("Boarding Pass")); // TODO add passenger name after string freeze is lifted
         event->addAttachment(att);
@@ -325,13 +325,13 @@ static void attachPass(const KCalCore::Event::Ptr &event, const QVector<QVariant
 
 void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 {
-    using namespace KCalCore;
+    using namespace KCalendarCore;
 
     const auto calendar = CalendarSupport::calendarSingleton(true);
     for (const auto &d : memento->data()) {
         auto event = d.event;
         if (!event) {
-            event.reset(new KCalCore::Event);
+            event.reset(new KCalendarCore::Event);
             CalendarHandler::fillEvent(d.reservations, event);
             if (!event->dtStart().isValid() || !event->dtEnd().isValid() || event->summary().isEmpty()) {
                 continue;

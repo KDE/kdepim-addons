@@ -25,7 +25,7 @@
 
 #include <AkonadiCore/Monitor>
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
 #include "tripcomponentfactory.h"
 #include "tripmodel.h"
@@ -126,10 +126,10 @@ void Trip::rowsRemoved(const QModelIndex &parent, int start, int end)
 void Trip::updateEvent()
 {
     Akonadi::Item item = m_index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    if (!item.hasPayload<KCalCore::Incidence::Ptr>()) {
+    if (!item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
         return;
     }
-    KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+    KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
     setEventDescription(incidence->description());
     setEventName(incidence->summary());
 }

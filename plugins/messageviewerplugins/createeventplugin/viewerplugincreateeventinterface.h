@@ -21,7 +21,7 @@
 #define VIEWERPLUGINCREATEEVENTINTERFACE_H
 
 #include <messageviewer/viewerplugininterface.h>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 class KActionCollection;
 namespace MessageViewer {
 class EventEdit;
@@ -41,7 +41,7 @@ public:
     ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
-    void slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection);
+    void slotCreateEvent(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection);
     void createAction(KActionCollection *ac);
     EventEdit *widget();
 

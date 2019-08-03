@@ -81,7 +81,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     mCollectionCombobox = new Akonadi::CollectionComboBox(_k_todoEditStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
-    mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalCore::Todo::todoMimeType());
+    mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalendarCore::Todo::todoMimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
     connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &TodoEdit::comboboxRowInserted);
 #ifndef QT_NO_ACCESSIBILITY
@@ -247,7 +247,7 @@ void TodoEdit::slotReturnPressed()
     if (!mNoteEdit->text().trimmed().isEmpty()) {
         mMsgWidget->setText(i18nc("%1 is summary of the todo, %2 is name of the folder in which it is stored",
                                   "New todo '%1' was added to task list '%2'", mNoteEdit->text(), collection.displayName()));
-        KCalCore::Todo::Ptr todo = createTodoItem();
+        KCalendarCore::Todo::Ptr todo = createTodoItem();
         mNoteEdit->clear();
 
         // We don't hide the widget here, so that multiple todo's can be added
@@ -257,11 +257,11 @@ void TodoEdit::slotReturnPressed()
     }
 }
 
-KCalCore::Todo::Ptr TodoEdit::createTodoItem()
+KCalendarCore::Todo::Ptr TodoEdit::createTodoItem()
 {
-    KCalCore::Todo::Ptr todo(new KCalCore::Todo);
+    KCalendarCore::Todo::Ptr todo(new KCalendarCore::Todo);
     todo->setSummary(mNoteEdit->text());
-    KCalCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
+    KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     if (subject) {
         attachment.setLabel(subject->asUnicodeString());
@@ -302,13 +302,13 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
 
 void TodoEdit::slotOpenEditor()
 {
-    KCalCore::Todo::Ptr event = createTodoItem();
+    KCalendarCore::Todo::Ptr event = createTodoItem();
 
     Akonadi::Item item;
-    item.setPayload<KCalCore::Todo::Ptr>(event);
-    item.setMimeType(KCalCore::Todo::todoMimeType());
+    item.setPayload<KCalendarCore::Todo::Ptr>(event);
+    item.setMimeType(KCalendarCore::Todo::todoMimeType());
 
-    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalCore::IncidenceBase::TypeTodo, nullptr, this);
+    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeTodo, nullptr, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
     dlg->load(item);
     dlg->open();

@@ -25,8 +25,8 @@
 #include <AkonadiCore/EntityTreeModel>
 #include <AkonadiCore/EntityDisplayAttribute>
 
-#include <KCalCore/Event>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Todo>
 
 #include <KSharedConfig>
 #include <KConfigGroup>
@@ -40,8 +40,8 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     setDynamicSortFilter(true);
 
     auto cr = new Akonadi::Monitor(this);
-    cr->setMimeTypeMonitored(KCalCore::Event::eventMimeType());
-    cr->setMimeTypeMonitored(KCalCore::Todo::todoMimeType());
+    cr->setMimeTypeMonitored(KCalendarCore::Event::eventMimeType());
+    cr->setMimeTypeMonitored(KCalendarCore::Todo::todoMimeType());
     cr->setTypeMonitored(Akonadi::Monitor::Collections);
     cr->collectionFetchScope().setListFilter(Akonadi::CollectionFetchScope::Enabled);
 
@@ -86,7 +86,7 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
         return QVariant();
     }
     const auto mts = col.contentMimeTypes();
-    const bool enabled = mts.contains(KCalCore::Event::eventMimeType()) || mts.contains(KCalCore::Todo::todoMimeType());
+    const bool enabled = mts.contains(KCalendarCore::Event::eventMimeType()) || mts.contains(KCalendarCore::Todo::todoMimeType());
 
     auto attr = col.attribute<Akonadi::EntityDisplayAttribute>();
     const QString icon = attr ? attr->iconName() : QString();

@@ -50,7 +50,7 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
     int eventsCount = 0, eventDataCount = 0;
     {
         EventDataVisitor visitor(mDataSource, startDate, endDate);
-        const KCalCore::Event::List events = mDataSource->calendar()->events(startDate, endDate);
+        const KCalendarCore::Event::List events = mDataSource->calendar()->events(startDate, endDate);
         eventsCount = events.count();
         if (visitor.act(events)) {
             eventDataCount = visitor.results().count();
@@ -61,7 +61,7 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
     int todosCount = 0, todoDataCount = 0;
     {
         EventDataVisitor visitor(mDataSource, startDate, endDate);
-        const KCalCore::Todo::List todos = mDataSource->calendar()->todos(startDate, endDate);
+        const KCalendarCore::Todo::List todos = mDataSource->calendar()->todos(startDate, endDate);
         todosCount = todos.count();
         if (visitor.act(todos)) {
             todoDataCount = visitor.results().count();
@@ -75,7 +75,7 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
                                  << "TodoData:" << todoDataCount;
 }
 
-void PimEventsPlugin::calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence)
+void PimEventsPlugin::calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!mStart.isValid() || !mEnd.isValid()) {
         // Don't bother with changes that happen before the applet starts populating data
@@ -87,7 +87,7 @@ void PimEventsPlugin::calendarIncidenceAdded(const KCalCore::Incidence::Ptr &inc
     }
 }
 
-void PimEventsPlugin::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence)
+void PimEventsPlugin::calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!mStart.isValid() || !mEnd.isValid()) {
         return;
@@ -100,7 +100,7 @@ void PimEventsPlugin::calendarIncidenceChanged(const KCalCore::Incidence::Ptr &i
     }
 }
 
-void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence)
+void PimEventsPlugin::calendarIncidenceAboutToBeDeleted(const KCalendarCore::Incidence::Ptr &incidence)
 {
     if (!mStart.isValid() || !mEnd.isValid()) {
         return;

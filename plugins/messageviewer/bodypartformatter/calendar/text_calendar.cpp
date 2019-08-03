@@ -50,8 +50,8 @@
 #include <MimeTreeParser/MessagePart>
 using namespace MessageViewer;
 
-#include <KCalCore/ICalFormat>
-using namespace KCalCore;
+#include <KCalendarCore/ICalFormat>
+using namespace KCalendarCore;
 
 #include <KCalUtils/IncidenceFormatter>
 
@@ -159,7 +159,7 @@ static bool occurredAlready(const Incidence::Ptr &incidence)
 class KMInvitationFormatterHelper : public KCalUtils::InvitationFormatterHelper
 {
 public:
-    KMInvitationFormatterHelper(const MimeTreeParser::MessagePartPtr &bodyPart, const KCalCore::MemoryCalendar::Ptr &calendar)
+    KMInvitationFormatterHelper(const MimeTreeParser::MessagePartPtr &bodyPart, const KCalendarCore::MemoryCalendar::Ptr &calendar)
         : mBodyPart(bodyPart)
         , mCalendar(calendar)
     {
@@ -170,14 +170,14 @@ public:
         return mBodyPart->makeLink(id);
     }
 
-    KCalCore::Calendar::Ptr calendar() const override
+    KCalendarCore::Calendar::Ptr calendar() const override
     {
         return mCalendar;
     }
 
 private:
     MimeTreeParser::MessagePartPtr mBodyPart;
-    KCalCore::MemoryCalendar::Ptr mCalendar;
+    KCalendarCore::MemoryCalendar::Ptr mCalendar;
 };
 
 class Formatter : public MessageViewer::MessagePartRendererBase
@@ -1153,7 +1153,7 @@ public:
                 incidence->addComment(comment);
             }
         }
-        return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalCore::iTIPDeclineCounter,
+        return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalendarCore::iTIPDeclineCounter,
                     receiver, QString(), DeclineCounter);
     }
 

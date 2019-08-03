@@ -92,7 +92,7 @@ void ViewerPluginCreateTodoInterface::createAction(KActionCollection *ac)
     }
 }
 
-void ViewerPluginCreateTodoInterface::slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection)
+void ViewerPluginCreateTodoInterface::slotCreateTodo(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection)
 {
     CreateTodoJob *createJob = new CreateTodoJob(todoPtr, collection, mMessageItem, this);
     createJob->start();

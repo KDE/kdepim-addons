@@ -28,7 +28,7 @@
 
 #include <KMime/Message>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 #include "note.h"
 #include "todocheckableproxymodel.h"
@@ -53,7 +53,7 @@ Akonadi::Monitor *TripComponentFactory::createNotesMonitor(QObject *parent)
 Akonadi::Monitor *TripComponentFactory::createTodoMonitor(QObject *parent)
 {
     Akonadi::Monitor *chMon = new Akonadi::Monitor(parent);
-    chMon->setMimeTypeMonitored(KCalCore::Todo::todoMimeType());
+    chMon->setMimeTypeMonitored(KCalendarCore::Todo::todoMimeType());
     chMon->itemFetchScope().fetchFullPayload(true);
     return chMon;
 }
@@ -78,7 +78,7 @@ QAbstractItemModel *TripComponentFactory::createTodoModel(Akonadi::Monitor *moni
     model->setCollectionFetchStrategy(MixedTreeModel::FetchNoCollections);
 
     Akonadi::EntityMimeTypeFilterModel *filterModel = new Akonadi::EntityMimeTypeFilterModel(monitor);
-    filterModel->addMimeTypeInclusionFilter(KCalCore::Todo::todoMimeType());
+    filterModel->addMimeTypeInclusionFilter(KCalendarCore::Todo::todoMimeType());
     filterModel->setHeaderGroup(MixedTreeModel::ItemListHeaders);
     filterModel->setSourceModel(model);
 

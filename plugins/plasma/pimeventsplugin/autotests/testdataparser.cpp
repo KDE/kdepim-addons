@@ -26,8 +26,8 @@
 
 #include <QTest>
 
-#include <KCalCore/ICalFormat>
-#include <KCalCore/MemoryCalendar>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/MemoryCalendar>
 
 #include <CalendarEvents/CalendarEventsPlugin>
 
@@ -74,7 +74,7 @@ QVector<CalendarEvents::EventData> TestDataParser::eventData() const
     return mEventData;
 }
 
-KCalCore::Incidence::Ptr TestDataParser::incidence() const
+KCalendarCore::Incidence::Ptr TestDataParser::incidence() const
 {
     return mIncidence;
 }
@@ -96,8 +96,8 @@ void TestDataParser::parse()
     QVERIFY(icalFile.exists());
     QVERIFY(icalFile.open(QIODevice::ReadOnly));
 
-    auto calendar = KCalCore::MemoryCalendar::Ptr::create(QTimeZone::systemTimeZone());
-    KCalCore::ICalFormat format;
+    auto calendar = KCalendarCore::MemoryCalendar::Ptr::create(QTimeZone::systemTimeZone());
+    KCalendarCore::ICalFormat format;
     QVERIFY(format.load(calendar, icalFile.fileName()));
     QVERIFY(!calendar->incidences().isEmpty());
     mIncidence = calendar->incidences().at(0);

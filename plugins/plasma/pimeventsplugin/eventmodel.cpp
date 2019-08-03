@@ -62,16 +62,16 @@ void EventModel::createMonitor()
     });
     connect(mMonitor, &Akonadi::Monitor::itemChanged,
             this, [this](const Akonadi::Item &item) {
-        if (!item.hasPayload<KCalCore::Incidence::Ptr>()) {
+        if (!item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload!";
             return;
         }
 
-        auto incidence = item.payload<KCalCore::Incidence::Ptr>();
+        auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
         if (!incidence) {
             return;         // HUH?!
         }
-        const KCalCore::Incidence::Ptr oldIncidence = this->incidence(incidence->instanceIdentifier());
+        const KCalendarCore::Incidence::Ptr oldIncidence = this->incidence(incidence->instanceIdentifier());
         if (!oldIncidence) {
             // Change for event we don't know about -> discard
             return;
@@ -81,7 +81,7 @@ void EventModel::createMonitor()
         // so we have to simulate via remove+add
         if (oldIncidence->allDay() != incidence->allDay()
             || oldIncidence->dtStart() != incidence->dtStart()
-            || oldIncidence->dateTime(KCalCore::IncidenceBase::RoleEnd) != incidence->dateTime(KCalCore::IncidenceBase::RoleEnd)) {
+            || oldIncidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd) != incidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd)) {
             Q_EMIT incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
             Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
@@ -154,7 +154,7 @@ void EventModel::onItemsReceived(const Akonadi::Item::List &items)
 {
     qCDebug(PIMEVENTSPLUGIN_LOG) << "Batch: received" << items.count() << "items";
     for (const auto &item : items) {
-        if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
+        if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload";

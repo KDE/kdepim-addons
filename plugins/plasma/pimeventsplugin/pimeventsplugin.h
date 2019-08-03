@@ -21,14 +21,14 @@
 #define PIMEVENTSPLUGIN_H
 
 #include <CalendarEvents/CalendarEventsPlugin>
-#include <KCalCore/Calendar>
+#include <KCalendarCore/Calendar>
 
 namespace Akonadi {
 class ETMCalendar;
 }
 
 class PimDataSource;
-class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin, public KCalCore::Calendar::CalendarObserver
+class PimEventsPlugin : public CalendarEvents::CalendarEventsPlugin, public KCalendarCore::Calendar::CalendarObserver
 {
     Q_OBJECT
     Q_INTERFACES(CalendarEvents::CalendarEventsPlugin)
@@ -42,12 +42,12 @@ public:
     // CalendarEvents::CalendarEventsPlugin
     void loadEventsForDateRange(const QDate &startDate, const QDate &endDate) override;
 
-    // KCalCore::Calendar::CalendarObserver
-    void calendarIncidenceChanged(const KCalCore::Incidence::Ptr &incidence) override;
-    void calendarIncidenceAdded(const KCalCore::Incidence::Ptr &incidence) override;
+    // KCalendarCore::Calendar::CalendarObserver
+    void calendarIncidenceChanged(const KCalendarCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence) override;
     // Handle removal before it really happens otherwise we would not be able
     // to lookup corresponding Akonadi ID in ETMCalendar
-    void calendarIncidenceAboutToBeDeleted(const KCalCore::Incidence::Ptr &incidence) override;
+    void calendarIncidenceAboutToBeDeleted(const KCalendarCore::Incidence::Ptr &incidence) override;
 
 private:
     PimDataSource *mDataSource = nullptr;

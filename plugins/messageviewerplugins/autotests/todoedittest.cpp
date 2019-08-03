@@ -42,7 +42,7 @@ TodoEditTest::TodoEditTest()
 {
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
-    qRegisterMetaType<KCalCore::Todo::Ptr>();
+    qRegisterMetaType<KCalendarCore::Todo::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
     QStandardItemModel *model = new QStandardItemModel;
@@ -50,7 +50,7 @@ TodoEditTest::TodoEditTest()
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
         collection.setName(QString::number(id));
-        collection.setContentMimeTypes(QStringList() << KCalCore::Todo::todoMimeType());
+        collection.setContentMimeTypes(QStringList() << KCalendarCore::Todo::todoMimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
         item->setData(QVariant::fromValue(collection),
@@ -247,7 +247,7 @@ void TodoEditTest::shouldTodoHasCorrectSubject()
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
-    KCalCore::Todo::Ptr todoPtr = spy.at(0).at(0).value<KCalCore::Todo::Ptr>();
+    KCalendarCore::Todo::Ptr todoPtr = spy.at(0).at(0).value<KCalendarCore::Todo::Ptr>();
     QVERIFY(todoPtr);
     QCOMPARE(todoPtr->summary(), QStringLiteral("Reply to \"%1\"").arg(subject));
 }

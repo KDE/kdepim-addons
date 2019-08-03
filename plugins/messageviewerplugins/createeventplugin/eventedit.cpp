@@ -74,7 +74,7 @@ EventEdit::EventEdit(QWidget *parent)
     mCollectionCombobox = new Akonadi::CollectionComboBox(_k_eventEditStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
-    mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalCore::Event::eventMimeType());
+    mCollectionCombobox->setMimeTypeFilter(QStringList() << KCalendarCore::Event::eventMimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
 #ifndef QT_NO_ACCESSIBILITY
     mCollectionCombobox->setAccessibleDescription(i18n("Calendar where the new event will be stored."));
@@ -274,7 +274,7 @@ void EventEdit::slotReturnPressed()
     }
 
     if (!mEventEdit->text().trimmed().isEmpty()) {
-        KCalCore::Event::Ptr event = createEventItem();
+        KCalendarCore::Event::Ptr event = createEventItem();
         Q_EMIT createEvent(event, collection);
         mEventEdit->clear();
         hide();
@@ -336,14 +336,14 @@ void EventEdit::slotStartDateTimeChanged(const QDateTime &newDateTime)
     mEndDateTimeEdit->setMinimumDateTime(newDateTime);
 }
 
-KCalCore::Event::Ptr EventEdit::createEventItem()
+KCalendarCore::Event::Ptr EventEdit::createEventItem()
 {
-    KCalCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
+    KCalendarCore::Attachment attachment(mMessage->encodedContent().toBase64(), KMime::Message::mimeType());
     const KMime::Headers::Subject *const subject = mMessage->subject(false);
     if (subject) {
         attachment.setLabel(subject->asUnicodeString());
     }
-    KCalCore::Event::Ptr event(new KCalCore::Event);
+    KCalendarCore::Event::Ptr event(new KCalendarCore::Event);
     event->setSummary(mEventEdit->text());
     event->setDtStart(mStartDateTimeEdit->dateTime());
     event->setDtEnd(mEndDateTimeEdit->dateTime());
@@ -353,13 +353,13 @@ KCalCore::Event::Ptr EventEdit::createEventItem()
 
 void EventEdit::slotOpenEditor()
 {
-    KCalCore::Event::Ptr event = createEventItem();
+    KCalendarCore::Event::Ptr event = createEventItem();
 
     Akonadi::Item item;
-    item.setPayload<KCalCore::Event::Ptr>(event);
-    item.setMimeType(KCalCore::Event::eventMimeType());
+    item.setPayload<KCalendarCore::Event::Ptr>(event);
+    item.setMimeType(KCalendarCore::Event::eventMimeType());
 
-    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalCore::IncidenceBase::TypeEvent, nullptr, this);
+    IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeEvent, nullptr, this);
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &EventEdit::slotCloseWidget);
     dlg->load(item);
     dlg->open();

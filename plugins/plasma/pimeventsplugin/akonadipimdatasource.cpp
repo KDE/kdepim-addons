@@ -58,17 +58,17 @@ AkonadiPimDataSource::~AkonadiPimDataSource()
 {
 }
 
-qint64 AkonadiPimDataSource::akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+qint64 AkonadiPimDataSource::akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     return mCalendar->item(incidence).id();
 }
 
-KCalCore::Calendar *AkonadiPimDataSource::calendar() const
+KCalendarCore::Calendar *AkonadiPimDataSource::calendar() const
 {
     return mCalendar;
 }
 
-QString AkonadiPimDataSource::calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const
+QString AkonadiPimDataSource::calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
     const auto &item = mCalendar->item(incidence);
     if (!item.isValid()) {

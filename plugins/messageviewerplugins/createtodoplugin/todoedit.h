@@ -23,7 +23,7 @@
 #include <QWidget>
 #include <AkonadiCore/Collection>
 #include <KMime/Message>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 class KMessageWidget;
 class QLineEdit;
@@ -54,14 +54,14 @@ public Q_SLOTS:
     void slotCloseWidget();
 
 Q_SIGNALS:
-    void createTodo(const KCalCore::Todo::Ptr &todo, const Akonadi::Collection &collection);
+    void createTodo(const KCalendarCore::Todo::Ptr &todo, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
     void messageChanged(const KMime::Message::Ptr &msg);
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 private:
-    KCalCore::Todo::Ptr createTodoItem();
+    KCalendarCore::Todo::Ptr createTodoItem();
     void comboboxRowInserted();
     void slotReturnPressed();
     void slotCollectionChanged(int);

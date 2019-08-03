@@ -17,7 +17,7 @@
  *
  */
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 #include <QDate>
 
 namespace CalendarEvents {
@@ -35,7 +35,7 @@ public:
     QDate rangeStart() const;
     QDate rangeEnd() const;
     qint64 akonadiId() const;
-    KCalCore::Incidence::Ptr incidence() const;
+    KCalendarCore::Incidence::Ptr incidence() const;
     QVector<CalendarEvents::EventData> eventData() const;
 
     static QStringList allTestData();
@@ -48,7 +48,7 @@ private:
     QDate mRangeStart;
     QDate mRangeEnd;
     qint64 mAkonadiId;
-    KCalCore::Incidence::Ptr mIncidence;
+    KCalendarCore::Incidence::Ptr mIncidence;
     QVector<CalendarEvents::EventData> mEventData;
     bool mUniqueEventData;
 };

@@ -60,7 +60,7 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;
         }
-        const KCalCore::Event::Ptr event = parser.incidence().dynamicCast<KCalCore::Event>();
+        const KCalendarCore::Event::Ptr event = parser.incidence().dynamicCast<KCalendarCore::Event>();
         if (event) {
             source->setAkonadiIdForIncidence(event, parser.akonadiId());
             source->calendar()->addEvent(event);
@@ -81,7 +81,7 @@ DateEventDataHash PimEventsPluginTest::populateCalendar(FakePimDataSource *sourc
     return expectedData;
 }
 
-QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalCore::Event::Ptr &event, const DateEventDataHash &allData)
+QVector<CalendarEvents::EventData> PimEventsPluginTest::findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData)
 {
     QVector<CalendarEvents::EventData> data;
     for (auto it = allData.cbegin(), end = allData.cend(); it != end; ++it) {
@@ -132,7 +132,7 @@ void PimEventsPluginTest::testEventAdded()
         if (parser.rangeEnd() < QDate(2016, 5, 1) || parser.rangeStart() > QDate(2016, 5, 31)) {
             continue;
         }
-        const KCalCore::Event::Ptr event = parser.incidence().dynamicCast<KCalCore::Event>();
+        const KCalendarCore::Event::Ptr event = parser.incidence().dynamicCast<KCalendarCore::Event>();
         if (event) {
             source.setAkonadiIdForIncidence(event, parser.akonadiId());
             source.calendar()->addEvent(event);
@@ -170,7 +170,7 @@ void PimEventsPluginTest::testEventModified()
     // Non-recurring event
     {
         QVERIFY(eventModifiedSpy.isEmpty());
-        KCalCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
         QVERIFY(event);
         const auto expectedData = findEventData(event, allData);
         QCOMPARE(expectedData.size(), 1);
@@ -188,7 +188,7 @@ void PimEventsPluginTest::testEventModified()
     // Recurring event
     {
         QVERIFY(eventModifiedSpy.isEmpty());
-        KCalCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
         QVERIFY(event);
         auto expectedData = findEventData(event, allData);
         event->setSummary(QStringLiteral("TEST2"));
@@ -227,7 +227,7 @@ void PimEventsPluginTest::testEventRemoved()
     // Non-recurring event
     {
         QVERIFY(eventRemovedSpy.isEmpty());
-        const KCalCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
+        const KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("4d7fdd2c-2d3a-4ecf-8964-00eb92225209"));
         QVERIFY(event);
         const auto expectedData = findEventData(event, allData);
         QCOMPARE(expectedData.size(), 1);
@@ -242,7 +242,7 @@ void PimEventsPluginTest::testEventRemoved()
     // Recurring event
     {
         QVERIFY(eventRemovedSpy.isEmpty());
-        KCalCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
+        KCalendarCore::Event::Ptr event = source.calendar()->event(QStringLiteral("69971015-fe9c-4800-a20e-d46bafa24e41"));
         QVERIFY(event);
         auto expectedData = findEventData(event, allData);
 

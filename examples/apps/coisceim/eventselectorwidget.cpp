@@ -31,7 +31,7 @@
 #include <AkonadiCore/ChangeRecorder>
 #include <AkonadiCore/ItemFetchScope>
 
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <QVBoxLayout>
 #include <QDialogButtonBox>
 
@@ -58,7 +58,7 @@ EventSelectorDialog::EventSelectorDialog(QWidget *parent, Qt::WindowFlags f)
     mainLayout->addWidget(buttonBox);
 
     ChangeRecorder *recorder = new ChangeRecorder;
-    recorder->setMimeTypeMonitored(KCalCore::Event::eventMimeType());
+    recorder->setMimeTypeMonitored(KCalendarCore::Event::eventMimeType());
     recorder->itemFetchScope().fetchFullPayload(true);
     MixedTreeModel *model = new MixedTreeModel(recorder);
     model->setCollectionFetchStrategy(MixedTreeModel::InvisibleCollectionFetch);

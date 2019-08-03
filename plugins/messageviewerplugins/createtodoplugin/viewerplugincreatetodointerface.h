@@ -21,7 +21,7 @@
 #define VIEWERPLUGINCREATETODOINTERFACE_H
 
 #include <messageviewer/viewerplugininterface.h>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 #include <AkonadiCore/Collection>
 class KActionCollection;
 namespace MessageViewer {
@@ -43,7 +43,7 @@ public:
     void setCurrentCollection(const Akonadi::Collection &col) override;
 
 private:
-    void slotCreateTodo(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
+    void slotCreateTodo(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection);
     void createAction(KActionCollection *ac);
     TodoEdit *widget();
 

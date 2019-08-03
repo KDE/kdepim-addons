@@ -22,7 +22,7 @@
 #include <KJob>
 #include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 #include <QObject>
 namespace MessageViewer {
@@ -30,7 +30,7 @@ class CreateTodoJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit CreateTodoJob(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
+    explicit CreateTodoJob(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
     ~CreateTodoJob() override;
 
     void start() override;
@@ -44,7 +44,7 @@ private:
     void createTodo();
     Akonadi::Item mItem;
     Akonadi::Collection mCollection;
-    KCalCore::Todo::Ptr mTodoPtr;
+    KCalendarCore::Todo::Ptr mTodoPtr;
 };
 }
 

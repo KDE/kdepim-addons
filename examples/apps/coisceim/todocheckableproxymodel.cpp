@@ -23,7 +23,7 @@
 
 #include <AkonadiCore/EntityTreeModel>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 using namespace Akonadi;
 
@@ -53,10 +53,10 @@ void TodoCheckableProxyModel::setChecked(const QItemSelection &selection, bool c
     for (const QModelIndex &index : listSelection) {
         if (index.column() == 0) {
             Item item = sourceModel()->data(index, Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-            if (!item.hasPayload<KCalCore::Todo::Ptr>()) {
+            if (!item.hasPayload<KCalendarCore::Todo::Ptr>()) {
                 continue;
             }
-            KCalCore::Todo::Ptr incidence = item.payload<KCalCore::Todo::Ptr>();
+            KCalendarCore::Todo::Ptr incidence = item.payload<KCalendarCore::Todo::Ptr>();
             incidence->setCompleted(checked);
             sourceModel()->setData(index, QVariant::fromValue(item), Akonadi::EntityTreeModel::ItemRole);
         }

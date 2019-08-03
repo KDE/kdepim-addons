@@ -24,7 +24,7 @@
 
 #include <AkonadiCore/Collection>
 #include <KMime/Message>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 class QLineEdit;
 class QPushButton;
@@ -62,14 +62,14 @@ private Q_SLOTS:
 
     void slotEndDateTimeChanged(const QDateTime &newDateTime);
 Q_SIGNALS:
-    void createEvent(const KCalCore::Event::Ptr &event, const Akonadi::Collection &collection);
+    void createEvent(const KCalendarCore::Event::Ptr &event, const Akonadi::Collection &collection);
     void collectionChanged(const Akonadi::Collection &col);
     void messageChanged(const KMime::Message::Ptr &msg);
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
 private:
-    KCalCore::Event::Ptr createEventItem();
+    KCalendarCore::Event::Ptr createEventItem();
     void readConfig();
     void comboboxRowInserted();
     Akonadi::Collection mCollection;

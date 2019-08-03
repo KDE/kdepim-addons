@@ -25,7 +25,7 @@
 
 #include <KMime/Message>
 #include <KLocalizedString>
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 #include "note.h"
 #include <KContacts/Addressee>
 
@@ -93,8 +93,8 @@ QVariant MixedTreeModel::entityData(const Akonadi::Item &item, int column, int r
             }
         }
 
-        if (item.hasPayload<KCalCore::Incidence::Ptr>()) {
-            KCalCore::Incidence::Ptr incidence = item.payload<KCalCore::Incidence::Ptr>();
+        if (item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
+            KCalendarCore::Incidence::Ptr incidence = item.payload<KCalendarCore::Incidence::Ptr>();
             switch (column) {
             case 0:
                 return incidence->summary();
