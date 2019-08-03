@@ -29,7 +29,7 @@
 
 using namespace MessageViewer;
 
-CreateTodoJob::CreateTodoJob(const KCalCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
+CreateTodoJob::CreateTodoJob(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
     : KJob(parent)
     , mItem(item)
     , mCollection(collection)
@@ -76,8 +76,8 @@ void CreateTodoJob::createTodo()
     }
 
     Akonadi::Item newTodoItem;
-    newTodoItem.setMimeType(KCalCore::Todo::todoMimeType());
-    newTodoItem.setPayload<KCalCore::Todo::Ptr>(mTodoPtr);
+    newTodoItem.setMimeType(KCalendarCore::Todo::todoMimeType());
+    newTodoItem.setPayload<KCalendarCore::Todo::Ptr>(mTodoPtr);
 
     Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(newTodoItem, mCollection);
     connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateTodoJob::todoCreated);

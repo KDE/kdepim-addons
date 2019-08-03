@@ -28,16 +28,16 @@ public:
     FakePimDataSource();
     ~FakePimDataSource() override;
 
-    void setAkonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence, qint64 akonadiId);
-    qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;
+    void setAkonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence, qint64 akonadiId);
+    qint64 akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
-    KCalCore::Calendar *calendar() const override;
+    KCalendarCore::Calendar *calendar() const override;
 
-    QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const override;
+    QString calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const override;
 
 private:
-    QMap<KCalCore::Incidence::Ptr, qint64> mAkonadiIdMap;
-    KCalCore::Calendar *mCalendar = nullptr;
+    QMap<KCalendarCore::Incidence::Ptr, qint64> mAkonadiIdMap;
+    KCalendarCore::Calendar *mCalendar = nullptr;
 };
 
 #endif

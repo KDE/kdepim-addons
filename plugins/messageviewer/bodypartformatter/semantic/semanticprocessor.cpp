@@ -28,8 +28,8 @@
 
 #include <KPkPass/Pass>
 
-#include <KCalCore/MemoryCalendar>
-#include <KCalCore/ICalFormat>
+#include <KCalendarCore/MemoryCalendar>
+#include <KCalendarCore/ICalFormat>
 
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -107,7 +107,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     std::unique_ptr<KPkPass::Pass> pass;
     std::unique_ptr<PdfDocument> pdfDoc;
     std::unique_ptr<HtmlDocument> htmlDoc;
-    KCalCore::Calendar::Ptr calendar;
+    KCalendarCore::Calendar::Ptr calendar;
 
     ExtractorEngine engine;
     engine.setContext(part.content());
@@ -121,8 +121,8 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
         engine.setPdfDocument(pdfDoc.get());
     } else if (isCalendarContent(part.content())) {
-        calendar.reset(new KCalCore::MemoryCalendar(QTimeZone()));
-        KCalCore::ICalFormat format;
+        calendar.reset(new KCalendarCore::MemoryCalendar(QTimeZone()));
+        KCalendarCore::ICalFormat format;
         if (format.fromRawString(calendar, part.content()->decodedContent())) {
             calendar->setProductId(format.loadedProductId());
             engine.setCalendar(calendar);

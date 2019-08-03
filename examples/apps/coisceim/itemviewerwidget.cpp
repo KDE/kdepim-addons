@@ -28,7 +28,7 @@
 
 #include <AkonadiCore/entitytreemodel.h>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 #include "Akonadi/Contact/ContactViewer"
 #include "messageviewer/viewer.h"
@@ -84,7 +84,7 @@ void ItemViewerWidget::selectionChanged(const QModelIndex &selectedIndex)
         m_noteViewer->setIndex(selectedIndex);
         return;
     }
-    if (mimeType == KCalCore::Todo::todoMimeType()) {
+    if (mimeType == KCalendarCore::Todo::todoMimeType()) {
         m_widgetStack->setCurrentIndex(4);
         m_incidenceViewer->setItem(item);
         return;

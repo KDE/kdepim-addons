@@ -20,9 +20,9 @@
 #ifndef PIMDATASOURCE_H
 #define PIMDATASOURCE_H
 
-#include <KCalCore/Incidence>
+#include <KCalendarCore/Incidence>
 
-namespace KCalCore {
+namespace KCalendarCore {
 class Calendar;
 }
 
@@ -33,9 +33,9 @@ public:
     {
     }
 
-    virtual KCalCore::Calendar *calendar() const = 0;
-    virtual qint64 akonadiIdForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;
-    virtual QString calendarColorForIncidence(const KCalCore::Incidence::Ptr &incidence) const = 0;
+    virtual KCalendarCore::Calendar *calendar() const = 0;
+    virtual qint64 akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const = 0;
+    virtual QString calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const = 0;
 };
 
 #endif

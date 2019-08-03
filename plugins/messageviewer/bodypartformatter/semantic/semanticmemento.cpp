@@ -65,7 +65,7 @@ QVector<SemanticMemento::TripData> SemanticMemento::data()
 {
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // perform calendar lookup and merge results
-        std::vector<std::pair<QVariant, KCalCore::Event::Ptr> > resolvedEvents;
+        std::vector<std::pair<QVariant, KCalendarCore::Event::Ptr> > resolvedEvents;
         resolvedEvents.reserve(m_postProc.result().size());
         const auto calendar = CalendarSupport::calendarSingleton(true);
         for (const auto &r : m_postProc.result()) {

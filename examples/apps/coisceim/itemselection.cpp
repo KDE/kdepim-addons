@@ -23,7 +23,7 @@
 
 #include <QItemSelectionModel>
 #include <AkonadiCore/EntityTreeModel>
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 #include <KMime/Message>
 #include "note.h"
 
@@ -114,7 +114,7 @@ qint64 ItemSelection::id()
 ItemSelection::ItemType ItemSelection::itemType() const
 {
     Akonadi::Item item = m_index.data(Akonadi::EntityTreeModel::ItemRole).value<Akonadi::Item>();
-    if (item.mimeType() == KCalCore::Todo::todoMimeType()) {
+    if (item.mimeType() == KCalendarCore::Todo::todoMimeType()) {
         return TodoType;
     }
     if (item.mimeType() == KMime::Message::mimeType()) {

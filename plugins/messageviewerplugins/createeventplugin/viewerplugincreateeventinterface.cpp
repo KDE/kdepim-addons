@@ -103,7 +103,7 @@ EventEdit *ViewerPluginCreateEventInterface::widget()
     return mEventEdit;
 }
 
-void ViewerPluginCreateEventInterface::slotCreateEvent(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection)
+void ViewerPluginCreateEventInterface::slotCreateEvent(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection)
 {
     CreateEventJob *createJob = new CreateEventJob(eventPtr, collection, mMessageItem, this);
     createJob->start();

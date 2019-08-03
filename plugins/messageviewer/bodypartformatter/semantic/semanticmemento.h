@@ -23,7 +23,7 @@
 #include <MimeTreeParser/BodyPart>
 
 #include <KItinerary/ExtractorPostprocessor>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 #include <QSet>
 #include <QVariant>
@@ -57,7 +57,7 @@ public:
     bool hasData() const;
     struct TripData {
         QVector<QVariant> reservations;
-        KCalCore::Event::Ptr event;
+        KCalendarCore::Event::Ptr event;
         bool expanded;
     };
     QVector<TripData> data();

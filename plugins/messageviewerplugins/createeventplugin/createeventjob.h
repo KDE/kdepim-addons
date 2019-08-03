@@ -22,7 +22,7 @@
 #include <KJob>
 #include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 
 #include <QObject>
 namespace MessageViewer {
@@ -30,7 +30,7 @@ class CreateEventJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit CreateEventJob(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
+    explicit CreateEventJob(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
     ~CreateEventJob() override;
 
     void start() override;
@@ -42,7 +42,7 @@ private:
     void createEvent();
     Akonadi::Item mItem;
     Akonadi::Collection mCollection;
-    KCalCore::Event::Ptr mEventPtr;
+    KCalendarCore::Event::Ptr mEventPtr;
 };
 }
 

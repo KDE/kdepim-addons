@@ -26,7 +26,7 @@
 #include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
 #include <QStandardItemModel>
-#include <KCalCore/Event>
+#include <KCalendarCore/Event>
 #include <QPushButton>
 
 #include <QTest>
@@ -46,7 +46,7 @@ EventEditTest::EventEditTest(QObject *parent)
 {
     qRegisterMetaType<Akonadi::Collection>();
     qRegisterMetaType<KMime::Message::Ptr>();
-    qRegisterMetaType<KCalCore::Event::Ptr>();
+    qRegisterMetaType<KCalendarCore::Event::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
     QStandardItemModel *model = new QStandardItemModel;
@@ -54,7 +54,7 @@ EventEditTest::EventEditTest(QObject *parent)
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
         collection.setName(QString::number(id));
-        collection.setContentMimeTypes(QStringList() << KCalCore::Event::eventMimeType());
+        collection.setContentMimeTypes(QStringList() << KCalendarCore::Event::eventMimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
         item->setData(QVariant::fromValue(collection),
@@ -270,7 +270,7 @@ void EventEditTest::shouldEventHasCorrectSubject()
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
-    KCalCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalCore::Event::Ptr>();
+    KCalendarCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalendarCore::Event::Ptr>();
     QVERIFY(eventPtr);
     QCOMPARE(eventPtr->summary(), subject);
 }
@@ -310,7 +310,7 @@ void EventEditTest::shouldHaveCorrectStartEndDateTime()
     QSignalSpy spy(&edit, &MessageViewer::EventEdit::createEvent);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
-    KCalCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalCore::Event::Ptr>();
+    KCalendarCore::Event::Ptr eventPtr = spy.at(0).at(0).value<KCalendarCore::Event::Ptr>();
     QVERIFY(eventPtr);
     QCOMPARE(eventPtr->dtStart().date(), currentDateTime.date());
     QCOMPARE(eventPtr->dtStart().time().hour(), currentDateTime.time().hour());

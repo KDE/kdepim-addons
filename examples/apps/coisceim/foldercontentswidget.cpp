@@ -33,7 +33,7 @@
 
 #include <kmime/kmime_message.h>
 
-#include <KCalCore/Todo>
+#include <KCalendarCore/Todo>
 
 #include "trip.h"
 #include "note.h"
@@ -79,7 +79,7 @@ static QString getMimeType(int role)
     case Trip::MailCollectionRole:
         return KMime::Message::mimeType();
     case Trip::TodoCollectionRole:
-        return KCalCore::Todo::todoMimeType();
+        return KCalendarCore::Todo::todoMimeType();
     case Trip::NotesCollectionRole:
         return Akonotes::Note::mimeType();
     }

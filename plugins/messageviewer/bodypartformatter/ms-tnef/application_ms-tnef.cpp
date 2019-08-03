@@ -41,10 +41,10 @@
 #include <MimeTreeParser/MessagePart>
 #include <MimeTreeParser/NodeHelper>
 
-#include <KCalCore/Event>
-#include <KCalCore/Incidence>
-#include <KCalCore/ICalFormat>
-#include <KCalCore/MemoryCalendar>
+#include <KCalendarCore/Event>
+#include <KCalendarCore/Incidence>
+#include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/MemoryCalendar>
 
 #include <KCalUtils/IncidenceFormatter>
 
@@ -96,13 +96,13 @@ public:
             f.close();
         }
         if (!buf.isEmpty()) {
-            KCalCore::MemoryCalendar::Ptr cl(
-                new KCalCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+            KCalendarCore::MemoryCalendar::Ptr cl(
+                new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
             KCalUtils::InvitationFormatterHelper helper;
             const QString invite = KTnef::formatTNEFInvitation(buf, cl, &helper);
-            KCalCore::ICalFormat format;
-            KCalCore::Incidence::Ptr inc = format.fromString(invite);
-            KCalCore::Event::Ptr event = inc.dynamicCast<KCalCore::Event>();
+            KCalendarCore::ICalFormat format;
+            KCalendarCore::Incidence::Ptr inc = format.fromString(invite);
+            KCalendarCore::Event::Ptr event = inc.dynamicCast<KCalendarCore::Event>();
             if (event && event->hasEndDate()) {
                 // no enddate => not a valid invitation
                 inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(cl, inc);

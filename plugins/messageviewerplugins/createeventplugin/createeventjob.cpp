@@ -29,7 +29,7 @@
 
 using namespace MessageViewer;
 
-CreateEventJob::CreateEventJob(const KCalCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
+CreateEventJob::CreateEventJob(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent)
     : KJob(parent)
     , mItem(item)
     , mCollection(collection)
@@ -74,8 +74,8 @@ void CreateEventJob::createEvent()
     }
 
     Akonadi::Item newEventItem;
-    newEventItem.setMimeType(KCalCore::Event::eventMimeType());
-    newEventItem.setPayload<KCalCore::Event::Ptr>(mEventPtr);
+    newEventItem.setMimeType(KCalendarCore::Event::eventMimeType());
+    newEventItem.setPayload<KCalendarCore::Event::Ptr>(mEventPtr);
 
     Akonadi::ItemCreateJob *createJob = new Akonadi::ItemCreateJob(newEventItem, mCollection);
     connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateEventJob::slotEventCreated);
