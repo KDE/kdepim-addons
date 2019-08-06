@@ -28,6 +28,7 @@
 #include <QVBoxLayout>
 #include <QStandardPaths>
 #include <QToolButton>
+#include <qtestmouse.h>
 
 QTEST_MAIN(LanguageToolConfigWidgetTest)
 LanguageToolConfigWidgetTest::LanguageToolConfigWidgetTest(QObject *parent)
@@ -81,12 +82,15 @@ void LanguageToolConfigWidgetTest::shouldUpdateWidgets()
     QLabel *instancePathLabel = w.findChild<QLabel *>(QStringLiteral("instancepath"));
 
     QLineEdit *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
-    mUseLocalInstance->setChecked(true);
+    QTest::mouseClick( mUseLocalInstance, Qt::LeftButton );
+
+    QVERIFY(mUseLocalInstance->isChecked());
     QVERIFY(mUseLocalInstance->isEnabled());
     QVERIFY(instancePathLabel->isEnabled());
     QVERIFY(mInstancePath->isEnabled());
 
-    mUseLocalInstance->setChecked(false);
+    QTest::mouseClick( mUseLocalInstance, Qt::LeftButton );
+    QVERIFY(!mUseLocalInstance->isChecked());
     QVERIFY(mUseLocalInstance->isEnabled());
     QVERIFY(!instancePathLabel->isEnabled());
     QVERIFY(!mInstancePath->isEnabled());
