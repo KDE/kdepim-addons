@@ -36,7 +36,7 @@ void AntiSpamPluginInterfaceTest::shouldHaveDefaultValue()
 {
     AntiSpamPluginInterface interface;
     QVERIFY(!interface.parentWidget());
-    QVERIFY(!interface.actionTypes().at(0).action());
+    QVERIFY(interface.actionTypes().isEmpty());
 }
 
 void AntiSpamPluginInterfaceTest::shouldCreateAction()
