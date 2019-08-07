@@ -11,6 +11,6 @@ kcoreaddons_add_plugin(messageviewer_createtodoplugin JSON messageviewer_createt
 
 
 target_link_libraries(messageviewer_createtodoplugin
-	KF5::MessageViewer KF5::XmlGui KF5::CalendarCore KF5::IncidenceEditor KF5::AkonadiWidgets
+        KF5::MessageViewer KF5::XmlGui KF5::CalendarCore KF5::IncidenceEditor KF5::AkonadiWidgets KF5::CalendarSupport
 )
 
