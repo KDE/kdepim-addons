@@ -37,6 +37,7 @@
         "Description[ar]": "ملحقة تقويم لعرض الأحداث من تقاويم «كدي PIM»",
         "Description[ca@valencia]": "Connector de calendari per a mostrar els esdeveniments des dels calendaris PIM del KDE",
         "Description[ca]": "Connector de calendari per a mostrar els esdeveniments des dels calendaris PIM del KDE",
+        "Description[de]": "Kalender-Modul für die Anzeige von Terminen aus KDE-PIM-Kalendern",
         "Description[en_GB]": "Calendar plugin for displaying events from KDE PIM calendars",
         "Description[es]": "Complemento de calendarios para mostrar eventos desde calendarios KDE PIM.",
         "Description[fi]": "Kalenteriliitännäinen KDE:n PIM-kalenterien tapahtumien näyttämiseksi",
