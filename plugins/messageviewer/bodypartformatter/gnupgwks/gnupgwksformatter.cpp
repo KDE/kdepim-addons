@@ -36,7 +36,6 @@
 
 #include <GrantleeTheme/GrantleeThemeEngine>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
-#include <GrantleeTheme/QtResourceTemplateLoader>
 #include <grantlee/context.h>
 #include <grantlee/template.h>
 
@@ -102,9 +101,13 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
 
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
-    engine.addTemplateLoader(QSharedPointer<GrantleeTheme::QtResourceTemplateLoader>::create());
-
-    Grantlee::Template tpl = engine.loadByName(QStringLiteral(":/gnupgwksmessagepart.html"));
+    auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
+    loader->setTemplateDirs({QStringLiteral(":/")});
+    engine.addTemplateLoader(loader);
+    Grantlee::Template tpl = engine.loadByName(QStringLiteral("gnupgwksmessagepart.html"));
+    if (tpl->error()) {
+        qCWarning(GNUPGWKS_LOG) << tpl->errorString();
+    }
     Grantlee::Context ctx;
     ctx.setLocalizer(engine.localizer());
 

@@ -23,12 +23,12 @@
 
 #include <QApplication>
 #include <QPalette>
+#include <QDebug>
 
 #include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
 #include <GrantleeTheme/GrantleeThemeEngine>
-#include <GrantleeTheme/QtResourceTemplateLoader>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
 
 #include <KLocalizedString>
@@ -80,9 +80,14 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
 
     GrantleeTheme::Engine engine;
     engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
-    engine.addTemplateLoader(QSharedPointer<GrantleeTheme::QtResourceTemplateLoader>::create());
 
-    Grantlee::Template tpl = engine.loadByName(QStringLiteral(":/pgpkeymessagepart.html"));
+    auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
+    loader->setTemplateDirs({QStringLiteral(":/")});
+    engine.addTemplateLoader(loader);
+    Grantlee::Template tpl = engine.loadByName(QStringLiteral("pgpkeymessagepart.html"));
+    if (tpl->error()) {
+        qWarning() << tpl->errorString();
+    }
     Grantlee::Context ctx;
     ctx.setLocalizer(engine.localizer());
 
