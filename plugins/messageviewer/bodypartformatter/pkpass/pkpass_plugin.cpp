@@ -147,9 +147,9 @@ public:
 
         Grantlee::Template t;
         if (qobject_cast<KPkPass::BoardingPass *>(pass.get())) {
-            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/pkpass/boardingpass.html"));
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/boardingpass.html"));
         } else if (pass->type() == KPkPass::Pass::EventTicket) {
-            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/org.kde.messageviewer/pkpass/eventticket.html"));
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/eventticket.html"));
         }
 
         Grantlee::OutputStream s(htmlWriter->stream());

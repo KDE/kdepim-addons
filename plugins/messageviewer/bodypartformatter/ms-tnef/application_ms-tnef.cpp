@@ -154,7 +154,7 @@ public:
                 }
             }));
 
-        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral(":/textmessagepart.html"));
+        auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);
         return true;
