@@ -34,7 +34,7 @@ Highlighter::~Highlighter() = default;
 
 void Highlighter::highlight(const QString &str)
 {
-    *mStream << QStringLiteral("<pre>");
+    *mStream << QStringLiteral("<pre class=\"highlightattachment\">");
 
     KSyntaxHighlighting::State state;
 
