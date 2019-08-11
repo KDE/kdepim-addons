@@ -55,7 +55,7 @@
         {% endif %}
         </div>
         {% if elem.reservations.size == 1 %}
-            {% include ":/org.kde.messageviewer/semantic/actions.html" %}
+            {% include "org.kde.messageviewer/semantic/actions.html" %}
         {% endif %}
     </td></tr>
 </table>
@@ -78,7 +78,7 @@
             </div>
         {% endif %}
         {% if elem.reservations.size > 1 %}
-            {% include ":/org.kde.messageviewer/semantic/actions.html" %}
+            {% include "org.kde.messageviewer/semantic/actions.html" %}
         {% endif %}
         {% endwith %}
     {% endfor %}
