@@ -142,3 +142,8 @@ QByteArray SemanticMemento::rawPassData(const QString &passTypeIdentifier, const
     }
     return {};
 }
+
+void SemanticMemento::addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData)
+{
+    m_docs.push_back({docId, docInfo, docData});
+}

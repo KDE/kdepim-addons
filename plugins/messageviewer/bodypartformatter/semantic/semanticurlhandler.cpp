@@ -409,7 +409,10 @@ QString SemanticUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyP
         file.addPass(KItinerary::File::passId(passData.passTypeIdentifier, passData.serialNumber), passData.rawData);
     }
 
-    // TODO add PDF documents or the entire email
+    // add documents
+    for (const auto &docData : m->documentData()) {
+        file.addDocument(docData.docId, docData.docInfo, docData.rawData);
+    }
 
     return f.fileName();
 }

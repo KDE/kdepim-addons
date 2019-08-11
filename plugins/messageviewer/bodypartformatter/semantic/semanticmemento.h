@@ -73,12 +73,20 @@ public:
     };
     const std::vector<PassData>& passData() const { return m_passes; }
 
+    struct DocumentData {
+        QString docId;
+        QVariant docInfo;
+        QByteArray rawData;
+    };
+    const std::vector<DocumentData>& documentData() const { return m_docs; }
+    void addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData);
+
 private:
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;
     QVector<TripData> m_data;
-
     std::vector<PassData> m_passes;
+    std::vector<DocumentData> m_docs;
 };
 
 #endif // SEMANTICMEMENTO_H

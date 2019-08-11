@@ -21,6 +21,8 @@
 #include "semanticmemento.h"
 #include "semantic_debug.h"
 
+#include <KItinerary/CreativeWork>
+#include <KItinerary/DocumentUtil>
 #include <KItinerary/ExtractorEngine>
 #include <KItinerary/JsonLdDocument>
 
@@ -100,6 +102,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
+    bool isPdf = false;
 
     ExtractorEngine engine;
     engine.setUseSeparateProcess(true);
@@ -110,6 +113,7 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     } else if (part.content()->contentType()->isHTMLText()) {
         engine.setData(part.content()->decodedContent(), ExtractorInput::Html);
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
+        isPdf = true;
         engine.setData(part.content()->decodedContent(), ExtractorInput::Pdf);
     } else if (isCalendarContent(part.content())) {
         engine.setData(part.content()->decodedContent(), ExtractorInput::ICal);
@@ -121,9 +125,23 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
     }
 
     const auto data = engine.extract();
-    qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
-    const auto decodedData = JsonLdDocument::fromJson(data);
+    //qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+    auto decodedData = JsonLdDocument::fromJson(data);
+
     if (!decodedData.isEmpty()) {
+        if (isPdf) {
+            const auto docData = part.content()->decodedContent();
+            const auto docId = DocumentUtil::idForContent(docData);
+            DigitalDocument docInfo;
+            docInfo.setEncodingFormat(QLatin1String("application/pdf"));
+            docInfo.setName(MimeTreeParser::NodeHelper::fileName(part.content()));
+            memento->addDocument(docId, docInfo, docData);
+
+            for (auto &res : decodedData) {
+                DocumentUtil::addDocumentId(res, docId);
+            }
+        }
+
         memento->appendData(decodedData);
     }
 
