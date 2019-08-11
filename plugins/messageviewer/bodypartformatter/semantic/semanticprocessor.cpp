@@ -22,14 +22,9 @@
 #include "semantic_debug.h"
 
 #include <KItinerary/ExtractorEngine>
-#include <KItinerary/HtmlDocument>
 #include <KItinerary/JsonLdDocument>
-#include <KItinerary/PdfDocument>
 
 #include <KPkPass/Pass>
-
-#include <KCalendarCore/MemoryCalendar>
-#include <KCalendarCore/ICalFormat>
 
 #include <QJsonArray>
 #include <QJsonDocument>
@@ -105,28 +100,19 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
 
     std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
-    std::unique_ptr<PdfDocument> pdfDoc;
-    std::unique_ptr<HtmlDocument> htmlDoc;
-    KCalendarCore::Calendar::Ptr calendar;
 
     ExtractorEngine engine;
+    engine.setUseSeparateProcess(true);
     engine.setContext(part.content());
     if (isPkPassContent(part.content())) {
         pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
         engine.setPass(pass.get());
     } else if (part.content()->contentType()->isHTMLText()) {
-        htmlDoc.reset(HtmlDocument::fromData(part.content()->decodedContent()));
-        engine.setHtmlDocument(htmlDoc.get());
+        engine.setData(part.content()->decodedContent(), ExtractorInput::Html);
     } else if (part.content()->contentType()->mimeType() == "application/pdf") {
-        pdfDoc.reset(PdfDocument::fromData(part.content()->decodedContent()));
-        engine.setPdfDocument(pdfDoc.get());
+        engine.setData(part.content()->decodedContent(), ExtractorInput::Pdf);
     } else if (isCalendarContent(part.content())) {
-        calendar.reset(new KCalendarCore::MemoryCalendar(QTimeZone()));
-        KCalendarCore::ICalFormat format;
-        if (format.fromRawString(calendar, part.content()->decodedContent())) {
-            calendar->setProductId(format.loadedProductId());
-            engine.setCalendar(calendar);
-        }
+        engine.setData(part.content()->decodedContent(), ExtractorInput::ICal);
     } else if (part.content()->contentType()->isPlainText()) {
         engine.setText(part.content()->decodedText());
     } else {
