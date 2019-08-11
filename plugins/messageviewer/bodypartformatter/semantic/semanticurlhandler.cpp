@@ -29,6 +29,7 @@
 #include <KItinerary/BusTrip>
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
+#include <KItinerary/File>
 #include <KItinerary/Flight>
 #include <KItinerary/LocationUtil>
 #include <KItinerary/Organization>
@@ -350,71 +351,13 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
 
 void SemanticUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
-    QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.jsonld"));
-    if (!f.open()) {
-        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
-        return;
-    }
-
-    const auto m = memento(part);
-    const auto extractedData = m->data();
-    QVector<QVariant> data;
-    data.reserve(extractedData.size());
-    for (const auto &d : m->data()) {
-        data += d.reservations;
-    }
-    f.write(QJsonDocument(JsonLdDocument::toJson(data)).toJson());
-    f.close();
-    part->nodeHelper()->addTempFile(f.fileName());
-    f.setAutoRemove(false);
-
-    QStringList args(f.fileName());
-
-    // add pkpass attachments
-    for (const auto &elem : data) {
-        if (!JsonLd::canConvert<Reservation>(elem)) {
-            continue;
-        }
-        const auto res = JsonLd::convert<Reservation>(elem);
-        const auto b = m->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
-        if (b.isEmpty()) {
-            continue;
-        }
-
-        QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.pkpass"));
-        if (!f.open()) {
-            qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
-            return;
-        }
-        f.write(b);
-        f.close();
-        part->nodeHelper()->addTempFile(f.fileName());
-        f.setAutoRemove(false);
-        args.push_back(f.fileName());
-    }
-
-    QProcess::startDetached(m_appPath, args);
+    const auto fileName = createItineraryFile(part);
+    QProcess::startDetached(m_appPath, {fileName});
 }
 
 void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const
 {
-    QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.jsonld"));
-    if (!f.open()) {
-        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
-        return;
-    }
-
-    const auto m = memento(part);
-    const auto extractedData = m->data();
-    QVector<QVariant> data;
-    data.reserve(extractedData.size());
-    for (const auto &d : m->data()) {
-        data += d.reservations;
-    }
-    f.write(QJsonDocument(JsonLdDocument::toJson(data)).toJson());
-    f.close();
-    part->nodeHelper()->addTempFile(f.fileName());
-    f.setAutoRemove(false);
+    const auto fileName = createItineraryFile(part);
 
     QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
     QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
@@ -426,34 +369,47 @@ void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart 
         method = QStringLiteral("shareUrl");
     }
 
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"), QStringLiteral(
-                                                          "org.kde.kdeconnect.device.share"), method);
-    msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
+    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
+        QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
+        QStringLiteral("org.kde.kdeconnect.device.share"), method);
+    msg.setArguments({QUrl::fromLocalFile(fileName).toString()});
 
     QDBusConnection::sessionBus().send(msg);
+}
+
+QString SemanticUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const
+{
+    QTemporaryFile f(QStringLiteral("XXXXXX.itinerary"));
+    if (!f.open()) {
+        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+        return {};
+    }
+    f.close();
+    part->nodeHelper()->addTempFile(f.fileName());
+    f.setAutoRemove(false);
+
+    KItinerary::File file(f.fileName());
+    if (!file.open(KItinerary::File::Write)) {
+        qCWarning(SEMANTIC_LOG) << "Failed to open itinerary bundle file:" << file.errorString();
+        return {};
+    }
+
+    const auto m = memento(part);
+
+    // add reservations
+    const auto extractedData = m->data();
+    for (const auto &d : extractedData) {
+        for (const auto &res : d.reservations) {
+            file.addReservation(res);
+        }
+    }
 
     // add pkpass attachments
-    for (const auto &elem : data) {
-        if (!JsonLd::canConvert<Reservation>(elem)) {
-            continue;
-        }
-        const auto res = JsonLd::convert<Reservation>(elem);
-        const auto b = m->rawPassData(res.pkpassPassTypeIdentifier(), res.pkpassSerialNumber());
-        if (b.isEmpty()) {
-            continue;
-        }
-
-        QTemporaryFile f(QStringLiteral("itinerary.XXXXXX.pkpass"));
-        if (!f.open()) {
-            qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
-            return;
-        }
-        f.write(b);
-        f.close();
-        part->nodeHelper()->addTempFile(f.fileName());
-        f.setAutoRemove(false);
-        msg.setArguments({QUrl::fromLocalFile(f.fileName()).toString()});
-
-        QDBusConnection::sessionBus().send(msg);
+    for (const auto &passData : m->passData()) {
+        file.addPass(KItinerary::File::passId(passData.passTypeIdentifier, passData.serialNumber), passData.rawData);
     }
+
+    // TODO add PDF documents or the entire email
+
+    return f.fileName();
 }

@@ -46,6 +46,7 @@ private:
     void addToCalendar(SemanticMemento *memento) const;
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
     void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
+    QString createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const;
 
     QString m_appPath;
 };

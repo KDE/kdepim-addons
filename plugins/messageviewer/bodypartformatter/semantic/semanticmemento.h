@@ -66,16 +66,18 @@ public:
     void addPass(KPkPass::Pass *pass, const QByteArray &rawData);
     QByteArray rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const;
 
-private:
-    QSet<KMime::ContentIndex> m_parsedParts;
-    KItinerary::ExtractorPostprocessor m_postProc;
-    QVector<TripData> m_data;
-
     struct PassData {
         QString passTypeIdentifier;
         QString serialNumber;
         QByteArray rawData;
     };
+    const std::vector<PassData>& passData() const { return m_passes; }
+
+private:
+    QSet<KMime::ContentIndex> m_parsedParts;
+    KItinerary::ExtractorPostprocessor m_postProc;
+    QVector<TripData> m_data;
+
     std::vector<PassData> m_passes;
 };
 
