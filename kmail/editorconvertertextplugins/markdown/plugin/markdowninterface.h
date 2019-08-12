@@ -23,6 +23,11 @@
 #include <QObject>
 #include <QPointer>
 #include <MessageComposer/PluginEditorConvertTextInterface>
+
+namespace MessageComposer {
+class StatusBarLabelToggledState;
+}
+
 class KActionCollection;
 class MarkdownPreviewDialog;
 class QLabel;
@@ -60,7 +65,7 @@ private:
     QPointer<MarkdownPreviewDialog> mDialog;
     bool mEnableEmbeddedLabel = false;
     bool mEnableExtraDefinitionLists = false;
-    QLabel *mStatusBarLabel = nullptr;
+    MessageComposer::StatusBarLabelToggledState *mStatusBarLabel = nullptr;
 };
 
 #endif // MARKDOWNINTERFACE_H

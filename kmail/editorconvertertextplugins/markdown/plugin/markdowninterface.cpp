@@ -37,6 +37,8 @@
 
 #include <MessageComposer/TextPart>
 
+#include <MessageComposer/StatusBarLabelToggledState>
+
 MarkdownInterface::MarkdownInterface(QObject *parent)
     : MessageComposer::PluginEditorConvertTextInterface(parent)
 {
@@ -56,11 +58,12 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     MessageComposer::PluginActionType type(mAction, MessageComposer::PluginActionType::Edit);
     addActionType(type);
 
-    mStatusBarLabel = new QLabel;
+    mStatusBarLabel = new MessageComposer::StatusBarLabelToggledState(parentWidget());
     QFont f = mStatusBarLabel->font();
     f.setBold(true);
     mStatusBarLabel->setFont(f);
     setStatusBarWidget(mStatusBarLabel);
+    mStatusBarLabel->setStateString(i18n("Markdown"), QString());
 
     mPopupMenuAction = new QAction(i18n("Markdown Action"), this);
 
@@ -286,11 +289,11 @@ void MarkdownInterface::slotActivated(bool checked)
             }
         });
     }
+    mStatusBarLabel->setToggleMode(checked);
     if (checked) {
         mDialog->show();
     } else {
         mDialog->hide();
     }
-    mStatusBarLabel->setText(checked ? i18n("Markdown") : QString());
     mPopupMenuAction->setEnabled(checked);
 }
