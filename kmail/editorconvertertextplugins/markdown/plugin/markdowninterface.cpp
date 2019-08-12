@@ -59,6 +59,10 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     addActionType(type);
 
     mStatusBarLabel = new MessageComposer::StatusBarLabelToggledState(parentWidget());
+    connect(mStatusBarLabel, &MessageComposer::StatusBarLabelToggledState::toggleModeChanged, this, [this](bool checked) {
+        mAction->setChecked(checked);
+        slotActivated(checked);}
+    );
     QFont f = mStatusBarLabel->font();
     f.setBold(true);
     mStatusBarLabel->setFont(f);
