@@ -87,6 +87,8 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mItalicAction->setEnabled(false);
     mCodeAction = mardownMenu->addAction(i18n("Change Selected Text as Code"), this, &MarkdownInterface::addCode);
     mCodeAction->setEnabled(false);
+    mBlockQuoteAction = mardownMenu->addAction(i18n("Change Selected Text as Block Quote"), this, &MarkdownInterface::addBlockQuote);
+    mBlockQuoteAction->setEnabled(false);
     mardownMenu->addSeparator();
     mardownMenu->addAction(i18n("Add Link"), this, &MarkdownInterface::addLink);
     mardownMenu->addAction(i18n("Add Image"), this, &MarkdownInterface::addImage);
@@ -101,6 +103,7 @@ void MarkdownInterface::slotSelectionChanged()
     mBoldAction->setEnabled(enabled);
     mItalicAction->setEnabled(enabled);
     mCodeAction->setEnabled(enabled);
+    mBlockQuoteAction->setEnabled(enabled);
 }
 
 void MarkdownInterface::addHorizontalRule()
@@ -113,6 +116,16 @@ void MarkdownInterface::addBold()
     const QString selectedText = richTextEditor()->textCursor().selectedText();
     if (!selectedText.isEmpty()) {
         richTextEditor()->textCursor().insertText(QStringLiteral("**%1**").arg(selectedText));
+    } else {
+        qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
+    }
+}
+
+void MarkdownInterface::addBlockQuote()
+{
+    const QString selectedText = richTextEditor()->textCursor().selectedText();
+    if (!selectedText.isEmpty()) {
+        richTextEditor()->composerControler()->addQuotes(QStringLiteral(">"));
     } else {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Any text selected";
     }

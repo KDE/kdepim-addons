@@ -57,10 +57,12 @@ private:
     void slotActivated(bool checked);
     void slotSelectionChanged();
     void addCode();
+    void addBlockQuote();
     QAction *mAction = nullptr;
     QAction *mBoldAction = nullptr;
     QAction *mItalicAction = nullptr;
     QAction *mCodeAction = nullptr;
+    QAction *mBlockQuoteAction = nullptr;
     QAction *mPopupMenuAction = nullptr;
     QPointer<MarkdownPreviewDialog> mDialog;
     bool mEnableEmbeddedLabel = false;
