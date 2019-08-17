@@ -17,7 +17,7 @@
    02110-1301, USA.
 */
 
-#include "semanticmemento.h"
+#include "itinerarymemento.h"
 
 #include <CalendarSupport/CalendarSingleton>
 
@@ -32,36 +32,36 @@
 
 using namespace KItinerary;
 
-void SemanticMemento::detach()
+void ItineraryMemento::detach()
 {
 }
 
-bool SemanticMemento::isParsed(const KMime::ContentIndex &index) const
+bool ItineraryMemento::isParsed(const KMime::ContentIndex &index) const
 {
     return m_parsedParts.contains(index);
 }
 
-void SemanticMemento::setParsed(const KMime::ContentIndex &index)
+void ItineraryMemento::setParsed(const KMime::ContentIndex &index)
 {
     m_parsedParts.insert(index);
 }
 
-void SemanticMemento::setMessageDate(const QDateTime &contextDt)
+void ItineraryMemento::setMessageDate(const QDateTime &contextDt)
 {
     m_postProc.setContextDate(contextDt);
 }
 
-void SemanticMemento::appendData(const QVector<QVariant> &data)
+void ItineraryMemento::appendData(const QVector<QVariant> &data)
 {
     m_postProc.process(data);
 }
 
-bool SemanticMemento::hasData() const
+bool ItineraryMemento::hasData() const
 {
     return !m_data.isEmpty() || !m_postProc.result().isEmpty();
 }
 
-QVector<SemanticMemento::TripData> SemanticMemento::data()
+QVector<ItineraryMemento::TripData> ItineraryMemento::data()
 {
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // perform calendar lookup and merge results
@@ -120,7 +120,7 @@ QVector<SemanticMemento::TripData> SemanticMemento::data()
     return m_data;
 }
 
-void SemanticMemento::toggleExpanded(int index)
+void ItineraryMemento::toggleExpanded(int index)
 {
     if (index >= m_data.size()) {
         return;
@@ -128,12 +128,12 @@ void SemanticMemento::toggleExpanded(int index)
     m_data[index].expanded = !m_data.at(index).expanded;
 }
 
-void SemanticMemento::addPass(KPkPass::Pass *pass, const QByteArray &rawData)
+void ItineraryMemento::addPass(KPkPass::Pass *pass, const QByteArray &rawData)
 {
     m_passes.emplace_back(PassData{pass->passTypeIdentifier(), pass->serialNumber(), rawData});
 }
 
-QByteArray SemanticMemento::rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const
+QByteArray ItineraryMemento::rawPassData(const QString &passTypeIdentifier, const QString &serialNumber) const
 {
     for (const auto &pass : m_passes) {
         if (pass.passTypeIdentifier == passTypeIdentifier && pass.serialNumber == serialNumber) {
@@ -143,7 +143,7 @@ QByteArray SemanticMemento::rawPassData(const QString &passTypeIdentifier, const
     return {};
 }
 
-void SemanticMemento::addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData)
+void ItineraryMemento::addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData)
 {
     m_docs.push_back({docId, docInfo, docData});
 }

@@ -17,17 +17,23 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICRENDERER_H
-#define SEMANTICRENDERER_H
+#ifndef ITINERARYPROCESSOR_H
+#define ITINERARYPROCESSOR_H
 
-#include <MessageViewer/MessagePartRendererBase>
+#include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/BodyPartFormatter>
+#include <MimeTreeParser/MessagePart>
 
-/** Rendering plugin for semantic information about the email content. */
-class SemanticRenderer : public MessageViewer::MessagePartRendererBase
+#include <memory>
+
+/** Processor plugin for MimeTreeParser. */
+class ItineraryProcessor : public MimeTreeParser::Interface::BodyPartFormatter
 {
 public:
-    SemanticRenderer();
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
+    ItineraryProcessor();
+    ~ItineraryProcessor() override;
+
+    MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 };
 
-#endif // SEMANTICRENDERER_H
+#endif // ITINERARYPROCESSOR_H

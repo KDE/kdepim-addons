@@ -17,8 +17,8 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICMEMENTO_H
-#define SEMANTICMEMENTO_H
+#ifndef ITINERARYMEMENTO_H
+#define ITINERARYMEMENTO_H
 
 #include <MimeTreeParser/BodyPart>
 
@@ -41,11 +41,11 @@ class ContentIndex;
 
 class QDateTime;
 
-/** Memento holding the semantic information extracted for an email. */
-class SemanticMemento : public MimeTreeParser::Interface::BodyPartMemento
+/** Memento holding the itinerary information extracted for an email. */
+class ItineraryMemento : public MimeTreeParser::Interface::BodyPartMemento
 {
 public:
-    ~SemanticMemento() override = default;
+    ~ItineraryMemento() override = default;
     void detach() override;
 
     bool isParsed(const KMime::ContentIndex &index) const;
@@ -89,4 +89,4 @@ private:
     std::vector<DocumentData> m_docs;
 };
 
-#endif // SEMANTICMEMENTO_H
+#endif // ITINERARYMEMENTO_H

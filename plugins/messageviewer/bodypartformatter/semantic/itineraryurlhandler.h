@@ -17,22 +17,22 @@
    02110-1301, USA.
 */
 
-#ifndef SEMANTICURLHANDLER_H
-#define SEMANTICURLHANDLER_H
+#ifndef ITINERARYURLHANDLER_H
+#define ITINERARYURLHANDLER_H
 
 #include <MessageViewer/BodyPartURLHandler>
 
 #include <QObject>
 
-class SemanticMemento;
+class ItineraryMemento;
 
-/** URL handler for the semantic plugin. */
-class SemanticUrlHandler : public QObject, public MessageViewer::Interface::BodyPartURLHandler
+/** URL handler for the itinerary plugin. */
+class ItineraryUrlHandler : public QObject, public MessageViewer::Interface::BodyPartURLHandler
 {
     Q_OBJECT
 public:
-    SemanticUrlHandler();
-    ~SemanticUrlHandler() override = default;
+    ItineraryUrlHandler();
+    ~ItineraryUrlHandler() override = default;
 
     QString name() const override;
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
@@ -40,10 +40,10 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
-    SemanticMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
-    QDate dateForReservation(SemanticMemento *memento) const;
+    ItineraryMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
+    QDate dateForReservation(ItineraryMemento *memento) const;
     void showCalendar(const QDate &date) const;
-    void addToCalendar(SemanticMemento *memento) const;
+    void addToCalendar(ItineraryMemento *memento) const;
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
     void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
     QString createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const;
@@ -51,4 +51,4 @@ private:
     QString m_appPath;
 };
 
-#endif // SEMANTICURLHANDLER_H
+#endif // ITINERARYURLHANDLER_H

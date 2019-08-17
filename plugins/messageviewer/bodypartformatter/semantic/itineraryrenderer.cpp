@@ -17,8 +17,8 @@
    02110-1301, USA.
 */
 
-#include "semanticrenderer.h"
-#include "semanticmemento.h"
+#include "itineraryrenderer.h"
+#include "itinerarymemento.h"
 #include "semantic_debug.h"
 
 #include <MessageViewer/IconNameCache>
@@ -93,7 +93,7 @@ GRANTLEE_MAKE_GADGET(RentalCar)
 GRANTLEE_MAKE_GADGET(Brand)
 GRANTLEE_MAKE_GADGET(Organization)
 
-SemanticRenderer::SemanticRenderer()
+ItineraryRenderer::ItineraryRenderer()
 {
     Grantlee::registerMetaType<Airport>();
     Grantlee::registerMetaType<Airline>();
@@ -127,7 +127,7 @@ SemanticRenderer::SemanticRenderer()
     Grantlee::registerMetaType<Organization>();
 }
 
-bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
     const auto mpList = msgPart.dynamicCast<MimeTreeParser::MessagePartList>();
@@ -141,7 +141,7 @@ bool SemanticRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Mes
         return false;
     }
 
-    auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
+    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
     if (!memento || !memento->hasData()) {
         return false;
     }

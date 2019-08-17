@@ -17,8 +17,8 @@
    02110-1301, USA.
 */
 
-#include "semanticprocessor.h"
-#include "semanticmemento.h"
+#include "itineraryprocessor.h"
+#include "itinerarymemento.h"
 #include "semantic_debug.h"
 
 #include <KItinerary/CreativeWork>
@@ -65,10 +65,10 @@ static bool isCalendarContent(KMime::Content *content)
     return cd && cd->filename().endsWith(QLatin1String(".ics"));
 }
 
-SemanticProcessor::SemanticProcessor() = default;
-SemanticProcessor::~SemanticProcessor() = default;
+ItineraryProcessor::ItineraryProcessor() = default;
+ItineraryProcessor::~ItineraryProcessor() = default;
 
-MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
+MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Interface::BodyPart &part) const
 {
     auto nodeHelper = part.nodeHelper();
     if (!nodeHelper) {
@@ -87,9 +87,9 @@ MimeTreeParser::MessagePart::Ptr SemanticProcessor::process(MimeTreeParser::Inte
         senderDateTime = dateHdr->dateTime();
     }
 
-    auto memento = dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
+    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
     if (!memento) {
-        memento = new SemanticMemento;
+        memento = new ItineraryMemento;
         memento->setMessageDate(senderDateTime);
         nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
     }

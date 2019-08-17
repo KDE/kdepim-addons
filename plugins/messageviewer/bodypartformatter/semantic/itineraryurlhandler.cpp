@@ -17,8 +17,8 @@
    02110-1301, USA.
 */
 
-#include "semanticurlhandler.h"
-#include "semanticmemento.h"
+#include "itineraryurlhandler.h"
+#include "itinerarymemento.h"
 #include "semantic_debug.h"
 
 #include <MimeTreeParser/BodyPart>
@@ -67,17 +67,17 @@
 
 using namespace KItinerary;
 
-SemanticUrlHandler::SemanticUrlHandler()
+ItineraryUrlHandler::ItineraryUrlHandler()
 {
     m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
 }
 
-QString SemanticUrlHandler::name() const
+QString ItineraryUrlHandler::name() const
 {
-    return QStringLiteral("SemanticUrlHandler");
+    return QString::fromUtf8(staticMetaObject.className());
 }
 
-static bool canAddToCalendar(SemanticMemento *m)
+static bool canAddToCalendar(ItineraryMemento *m)
 {
     for (const auto &d : m->data()) {
         if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
@@ -93,7 +93,7 @@ static bool canAddToCalendar(SemanticMemento *m)
     return false;
 }
 
-bool SemanticUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
+bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
     if (path == QLatin1String("semanticAction")) {
@@ -180,7 +180,7 @@ static void addGoToMapAction(QMenu *menu, const QVariant &place, QSet<QString> &
     }
 }
 
-bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
+bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
     if (path != QLatin1String("semanticAction")) {
@@ -256,7 +256,7 @@ bool SemanticUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bod
     return true;
 }
 
-QString SemanticUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const
+QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(part);
     if (path == QLatin1String("semanticAction")) {
@@ -265,17 +265,17 @@ QString SemanticUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart
     return {};
 }
 
-SemanticMemento *SemanticUrlHandler::memento(MimeTreeParser::Interface::BodyPart *part) const
+ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto node = part->content()->topLevel();
     const auto nodeHelper = part->nodeHelper();
     if (!nodeHelper || !node) {
         return nullptr;
     }
-    return dynamic_cast<SemanticMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
+    return dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
 }
 
-QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
+QDate ItineraryUrlHandler::dateForReservation(ItineraryMemento *memento) const
 {
     for (const auto &d : memento->data()) {
         const auto dt = SortUtil::startDateTime(d.reservations.at(0));
@@ -286,7 +286,7 @@ QDate SemanticUrlHandler::dateForReservation(SemanticMemento *memento) const
     return {};
 }
 
-void SemanticUrlHandler::showCalendar(const QDate &date) const
+void ItineraryUrlHandler::showCalendar(const QDate &date) const
 {
     // ensure KOrganizer or Kontact are running
     if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
@@ -303,7 +303,7 @@ void SemanticUrlHandler::showCalendar(const QDate &date) const
     }
 }
 
-static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVariant> &reservations, SemanticMemento *memento)
+static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVariant> &reservations, ItineraryMemento *memento)
 {
     for (const auto &reservation : reservations) {
         if (!JsonLd::canConvert<Reservation>(reservation)) {
@@ -324,7 +324,7 @@ static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVa
     }
 }
 
-void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
+void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
 {
     using namespace KCalendarCore;
 
@@ -349,13 +349,13 @@ void SemanticUrlHandler::addToCalendar(SemanticMemento *memento) const
     }
 }
 
-void SemanticUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
+void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto fileName = createItineraryFile(part);
     QProcess::startDetached(m_appPath, {fileName});
 }
 
-void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const
+void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const
 {
     const auto fileName = createItineraryFile(part);
 
@@ -377,7 +377,7 @@ void SemanticUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart 
     QDBusConnection::sessionBus().send(msg);
 }
 
-QString SemanticUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const
+QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const
 {
     QTemporaryFile f(QStringLiteral("XXXXXX.itinerary"));
     if (!f.open()) {

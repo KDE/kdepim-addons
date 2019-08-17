@@ -17,25 +17,25 @@
    02110-1301, USA.
 */
 
-#include "semanticprocessor.h"
-#include "semanticrenderer.h"
-#include "semanticurlhandler.h"
+#include "itineraryprocessor.h"
+#include "itineraryrenderer.h"
+#include "itineraryurlhandler.h"
 
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
 
 namespace {
-class SemanticPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
+class ItineraryPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT
     Q_INTERFACES(MimeTreeParser::Interface::BodyPartFormatterPlugin)
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
-    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "semantic_plugin.json")
+    Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "itinerary_plugin.json")
 public:
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         if (idx < 3) {
-            return new SemanticProcessor();
+            return new ItineraryProcessor();
         }
         return nullptr;
     }
@@ -43,7 +43,7 @@ public:
     MessageViewer::MessagePartRendererBase *renderer(int idx) override
     {
         if (idx == 0) {
-            return new SemanticRenderer();
+            return new ItineraryRenderer();
         }
         return nullptr;
     }
@@ -51,11 +51,11 @@ public:
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
-            return new SemanticUrlHandler();
+            return new ItineraryUrlHandler();
         }
         return nullptr;
     }
 };
 }
 
-#include "semantic_plugin.moc"
+#include "itinerary_plugin.moc"
