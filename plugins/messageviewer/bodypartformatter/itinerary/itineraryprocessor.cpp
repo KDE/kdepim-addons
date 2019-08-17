@@ -87,11 +87,11 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         senderDateTime = dateHdr->dateTime();
     }
 
-    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData"));
+    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(part.topLevelContent(), ItineraryMemento::identifier()));
     if (!memento) {
         memento = new ItineraryMemento;
         memento->setMessageDate(senderDateTime);
-        nodeHelper->setBodyPartMemento(part.topLevelContent(), "org.kde.messageviewer.semanticData", memento);
+        nodeHelper->setBodyPartMemento(part.topLevelContent(), ItineraryMemento::identifier(), memento);
     }
 
     // check if we still have to do anything at all

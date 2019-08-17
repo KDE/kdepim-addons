@@ -141,7 +141,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
         return false;
     }
 
-    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
+    auto memento = dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), ItineraryMemento::identifier()));
     if (!memento || !memento->hasData()) {
         return false;
     }

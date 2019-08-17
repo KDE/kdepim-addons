@@ -272,7 +272,7 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
     if (!nodeHelper || !node) {
         return nullptr;
     }
-    return dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), "org.kde.messageviewer.semanticData"));
+    return dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), ItineraryMemento::identifier()));
 }
 
 QDate ItineraryUrlHandler::dateForReservation(ItineraryMemento *memento) const

@@ -48,6 +48,8 @@ public:
     ~ItineraryMemento() override = default;
     void detach() override;
 
+    static const char* identifier();
+
     bool isParsed(const KMime::ContentIndex &index) const;
     void setParsed(const KMime::ContentIndex &index);
 

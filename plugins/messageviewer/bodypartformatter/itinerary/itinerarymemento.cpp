@@ -36,6 +36,11 @@ void ItineraryMemento::detach()
 {
 }
 
+const char* ItineraryMemento::identifier()
+{
+    return "org.kde.messageviewer.itineraryData";
+}
+
 bool ItineraryMemento::isParsed(const KMime::ContentIndex &index) const
 {
     return m_parsedParts.contains(index);
