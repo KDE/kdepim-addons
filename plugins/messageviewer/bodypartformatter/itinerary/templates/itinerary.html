@@ -6,21 +6,21 @@
     {% with elem.reservations.0.reservation as res %}
     {% with elem.reservations.0.reservation.reservationFor as trip %}
     {% if res.className == "FlightReservation" %}
-        {% include "org.kde.messageviewer/semantic/flightreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/flightreservation.html" %}
     {% elif res.className == "LodgingReservation" %}
-        {% include "org.kde.messageviewer/semantic/lodgingreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/lodgingreservation.html" %}
     {% elif res.className == "TrainReservation" %}
-        {% include "org.kde.messageviewer/semantic/trainreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/trainreservation.html" %}
     {% elif res.className == "BusReservation" %}
-        {% include "org.kde.messageviewer/semantic/busreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/busreservation.html" %}
     {% elif res.className == "EventReservation" %}
-        {% include "org.kde.messageviewer/semantic/event.html" %}
+        {% include "org.kde.messageviewer/itinerary/event.html" %}
     {% elif res.className == "FoodEstablishmentReservation" %}
-        {% include "org.kde.messageviewer/semantic/foodestablishmentreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/foodestablishmentreservation.html" %}
     {% elif res.className == "RentalCarReservation" %}
-        {% include "org.kde.messageviewer/semantic/rentalcarreservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/rentalcarreservation.html" %}
     {% elif res.className == "TaxiReservation" %}
-        {% include "org.kde.messageviewer/semantic/taxireservation.html" %}
+        {% include "org.kde.messageviewer/itinerary/taxireservation.html" %}
     {% endif %}
 
     {% if not forloop.last %}
