@@ -5,7 +5,7 @@ set(itinerary_plugin_srcs
     itineraryrenderer.cpp
     itineraryurlhandler.cpp
 )
-ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER semantic_debug.h IDENTIFIER SEMANTIC_LOG CATEGORY_NAME org.kde.pim.messageviewer.semantic)
+ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary)
 qt5_add_resources(itinerary_plugin_srcs templates.qrc)
 
 add_library(messageviewer_bodypartformatter_semantic MODULE ${itinerary_plugin_srcs})

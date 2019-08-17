@@ -19,7 +19,7 @@
 
 #include "itineraryrenderer.h"
 #include "itinerarymemento.h"
-#include "semantic_debug.h"
+#include "itinerary_debug.h"
 
 #include <MessageViewer/IconNameCache>
 #include <MessageViewer/HtmlWriter>

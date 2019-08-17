@@ -29,7 +29,7 @@ org.kde.pim.kaddressbookmergelibprivate kdepim-addons (kaddressbook merge contac
 org.kde.pim.kaddressbook_sendmail kdepim-addons (kaddressbook send mail plugin) IDENTIFIER [KADDRESSBOOK_SENDMAIL_LOG]
 org.kde.pim.kaddressbook_sendvcards kdepim-addons (kaddressbook send vcard plugin) IDENTIFIER [KADDRESSBOOK_SENDVCARDS_LOG]
 org.kde.pim.pkpass kdepim-addons (pkpass formater) IDENTIFIER [PKPASS_LOG]
-org.kde.pim.messageviewer.semantic kdepim-addons (Semantic plugin) IDENTIFIER [SEMANTIC_LOG]
+org.kde.pim.messageviewer.itinerary kdepim-addons (Itinerary plugin) IDENTIFIER [ITINERARY_LOG]
 org.kde.pim.kmail_expertplugin kdepim-addons (kmail expert plugin) IDENTIFIER [KMAIL_EXPERT_PLUGIN_LOG]
 org.kde.pim.kmail_insertshorturl kdepim-addons (kmail insert short url plugin) IDENTIFIER [KMAIL_INSERTSHORTURL_LOG]
 org.kde.pim.sieveeditoremaillinedit kdepim-addons (SieveEditor email line plugin) IDENTIFIER [EMAILLINEEDITPLUGIN_LOG]

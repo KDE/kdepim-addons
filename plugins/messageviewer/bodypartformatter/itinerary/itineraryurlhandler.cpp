@@ -19,7 +19,7 @@
 
 #include "itineraryurlhandler.h"
 #include "itinerarymemento.h"
-#include "semantic_debug.h"
+#include "itinerary_debug.h"
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
@@ -99,7 +99,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
     if (path == QLatin1String("semanticAction")) {
         const auto m = memento(part);
         if (!m || !m->hasData()) {
-            qCWarning(SEMANTIC_LOG) << "sementic action: data not found";
+            qCWarning(ITINERARY_LOG) << "sementic action: data not found";
             return true;
         }
 
@@ -295,7 +295,7 @@ void ItineraryUrlHandler::showCalendar(const QDate &date) const
         QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
                 QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());
         if (!korgIface.isValid()) {
-            qCWarning(SEMANTIC_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
+            qCWarning(ITINERARY_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
             return;
         }
         korgIface.call(QStringLiteral("showEventView"));
@@ -381,7 +381,7 @@ QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::Body
 {
     QTemporaryFile f(QStringLiteral("XXXXXX.itinerary"));
     if (!f.open()) {
-        qCWarning(SEMANTIC_LOG) << "Failed to open temporary file:" << f.errorString();
+        qCWarning(ITINERARY_LOG) << "Failed to open temporary file:" << f.errorString();
         return {};
     }
     f.close();
@@ -390,7 +390,7 @@ QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::Body
 
     KItinerary::File file(f.fileName());
     if (!file.open(KItinerary::File::Write)) {
-        qCWarning(SEMANTIC_LOG) << "Failed to open itinerary bundle file:" << file.errorString();
+        qCWarning(ITINERARY_LOG) << "Failed to open itinerary bundle file:" << file.errorString();
         return {};
     }
 

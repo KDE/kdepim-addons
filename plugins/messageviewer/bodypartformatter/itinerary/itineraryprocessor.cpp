@@ -19,7 +19,7 @@
 
 #include "itineraryprocessor.h"
 #include "itinerarymemento.h"
-#include "semantic_debug.h"
+#include "itinerary_debug.h"
 
 #include <KItinerary/CreativeWork>
 #include <KItinerary/DocumentUtil>
@@ -125,7 +125,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
 
     const auto data = engine.extract();
-    //qCDebug(SEMANTIC_LOG).noquote() << QJsonDocument(data).toJson();
+    //qCDebug(ITINERARY_LOG).noquote() << QJsonDocument(data).toJson();
     auto decodedData = JsonLdDocument::fromJson(data);
 
     if (!decodedData.isEmpty()) {
@@ -149,6 +149,6 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         memento->addPass(pass.get(), part.content()->decodedContent());
     }
 
-    qCDebug(SEMANTIC_LOG) << "-------------------------------------------- END SEMANTIC PARSING";
+    qCDebug(ITINERARY_LOG) << "-------------------------------------------- END ITINERARY PARSING";
     return {};
 }
