@@ -72,7 +72,7 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
         // perform calendar lookup and merge results
         std::vector<std::pair<QVariant, KCalendarCore::Event::Ptr> > resolvedEvents;
         resolvedEvents.reserve(m_postProc.result().size());
-        const auto calendar = CalendarSupport::calendarSingleton(true);
+        const auto calendar = CalendarSupport::calendarSingleton(qEnvironmentVariableIsSet("BPF_ITINERARY_NO_AKONADI") ? false : true);
         for (const auto &r : m_postProc.result()) {
             auto e = std::make_pair(r, CalendarHandler::findEvent(calendar, r));
             if (e.second) {
