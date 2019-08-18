@@ -1,8 +1,11 @@
 <div style="font-size:125%;">{{ trip.name }}</div>
 <div>
     {{ trip.startDate|formatDateTime }}<br/>
-    {{ trip.location.name }}<br/>
-    {{ trip.location.address|formatAddress|safe }}
+    {{ trip.location.name }}
+    {% with trip.location as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
+    {% if not trip.location.address.isEmpty %}
+        <br/>{{ trip.location.address|formatAddress|safe }}
+    {% endif %}
     {% if res.underName.name %}
         <div>{% i18n "Under Name: %1" res.underName.name %}</div>
     {% endif %}

@@ -1,4 +1,6 @@
-<div style="font-size:125%;"><b>{{ trip.name }}</b> - {{ res.startTime|formatDateTime }}</div>
+<div style="font-size:125%;"><b>{{ trip.name }}</b>
+    {% with trip as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
+    - {{ res.startTime|formatDateTime }}</div>
 {% if res.partySize > 0 %}
     <div>{% i18n "Number Of People: %1" res.partySize %}</div>
 {% endif %}

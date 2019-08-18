@@ -119,67 +119,6 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
     return false;
 }
 
-static QString escapePlaceName(const QString &name)
-{
-    return QString(name).replace(QLatin1Char('&'), QLatin1String("&&")); // avoid & being turned into an action accelerator;
-}
-
-static void addGoToMapAction(QMenu *menu, const GeoCoordinates &geo, const QString &placeName, int zoom = 17)
-{
-    if (geo.isValid()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", escapePlaceName(placeName)));
-        QObject::connect(action, &QAction::triggered, menu, [geo, zoom]() {
-            QUrl url;
-            url.setScheme(QStringLiteral("https"));
-            url.setHost(QStringLiteral("www.openstreetmap.org"));
-            url.setPath(QStringLiteral("/"));
-            const QString fragment = QLatin1String("map=") + QString::number(zoom)
-                                     + QLatin1Char('/') + QString::number(geo.latitude())
-                                     + QLatin1Char('/') + QString::number(geo.longitude());
-            url.setFragment(fragment);
-            QDesktopServices::openUrl(url);
-        });
-    }
-}
-
-static void addGoToMapAction(QMenu *menu, const PostalAddress &addr, const QString &placeName)
-{
-    if (!addr.addressLocality().isEmpty()) {
-        auto action = menu->addAction(QIcon::fromTheme(QStringLiteral("map-symbolic")), i18n("Show \'%1\' On Map", escapePlaceName(placeName)));
-        QObject::connect(action, &QAction::triggered, menu, [addr]() {
-            QUrl url;
-            url.setScheme(QStringLiteral("https"));
-            url.setHost(QStringLiteral("www.openstreetmap.org"));
-            url.setPath(QStringLiteral("/search"));
-            const QString queryString = addr.streetAddress() + QLatin1String(", ")
-                                        + addr.postalCode() + QLatin1Char(' ')
-                                        + addr.addressLocality() + QLatin1String(", ")
-                                        + addr.addressCountry();
-            QUrlQuery query;
-            query.addQueryItem(QStringLiteral("query"), queryString);
-            url.setQuery(query);
-            QDesktopServices::openUrl(url);
-        });
-    }
-}
-
-static void addGoToMapAction(QMenu *menu, const QVariant &place, QSet<QString> &places)
-{
-    const auto name = LocationUtil::name(place);
-    if (places.contains(name)) {
-        return;
-    }
-    places.insert(name);
-
-    const auto geo = LocationUtil::geo(place);
-    const auto zoom = JsonLd::isA<Airport>(place) ? 12 : 17;
-    if (geo.isValid()) {
-        addGoToMapAction(menu, geo, name, zoom);
-    } else {
-        addGoToMapAction(menu, LocationUtil::address(place), name);
-    }
-}
-
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
@@ -207,20 +146,6 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
     QObject::connect(action, &QAction::triggered, this, [this, m](){
         addToCalendar(m);
     });
-
-    QSet<QString> places;
-    for (const auto &d : m->data()) {
-        const auto res = d.reservations.at(0); // for multi-traveler reservations all subsequent ones are equal regarding what we are interested here
-        if (LocationUtil::isLocationChange(res)) {
-            const auto dep = LocationUtil::departureLocation(res);
-            addGoToMapAction(&menu, dep, places);
-            const auto arr = LocationUtil::arrivalLocation(res);
-            addGoToMapAction(&menu, arr, places);
-        } else {
-            const auto loc = LocationUtil::location(res);
-            addGoToMapAction(&menu, loc, places);
-        }
-    }
 
     if (!m_appPath.isEmpty()) {
         menu.addSeparator();

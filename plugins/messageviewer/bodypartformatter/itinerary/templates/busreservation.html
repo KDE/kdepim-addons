@@ -5,6 +5,7 @@
             {% if trip.departurePlatform %}
                 [{{ trip.departurePlatform }}]
             {% endif %}
+            {% with trip.departureBusStop as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
         </td>
         <td style="font-size:120%; width:33%; text-align:center;">&rarr;</td>
         <td style="font-size:120%; width:33%;">
@@ -12,6 +13,7 @@
             {% if trip.arrivalPlatform %}
                 [{{ trip.arrivalPlatform }}]
             {% endif %}
+            {% with trip.arrivalBusStop as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
         </td>
     </tr>
     <tr>

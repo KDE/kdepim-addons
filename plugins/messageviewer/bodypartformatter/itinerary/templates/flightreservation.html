@@ -1,20 +1,22 @@
 <table style="width:100%;">
     <tr>
-        {% if trip.departureAirport.iataCode %}
-            <td style="font-size:200%; width:33%;" title="{{ trip.departureAirport.name }}">
-            {{ trip.departureAirport.iataCode }}
-            </td>
-        {% else %}
-            <td style="font-size:120%; width:33%;">{{ trip.departureAirport.name }}</td>
-        {% endif %}
+        <td style="width:33%;" title="{{ trip.departureAirport.name }}">
+            {% if trip.departureAirport.iataCode %}
+                <span style="font-size:200%;">{{ trip.departureAirport.iataCode }}
+            {% else %}
+                <span style="font-size:120%;">{{ trip.departureAirport.name }}
+            {% endif %}
+            {% with trip.departureAirport as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}</span>
+        </td>
         <td style="font-size:200%; width:33%; text-align:center;">&#9992;</td>
-        {% if trip.arrivalAirport.iataCode %}
-            <td style="font-size:200%; width:33%;" title="{{ trip.arrivalAirport.name }}">
-            {{ trip.arrivalAirport.iataCode }}
-            </td>
-        {% else %}
-            <td style="font-size:120%; width:33%;">{{ trip.arrivalAirport.name }}</td>
-        {% endif %}
+        <td style="width:33%;" title="{{ trip.arrivalAirport.name }}">
+            {% if trip.arrivalAirport.iataCode %}
+                <span style="font-size:200%;">{{ trip.arrivalAirport.iataCode }}
+            {% else %}
+                <span style="font-size:120%;">{{ trip.arrivalAirport.name }}
+            {% endif %}
+            {% with trip.arrivalAirport as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}</span>
+        </td>
     </tr>
     <tr>
         <td>

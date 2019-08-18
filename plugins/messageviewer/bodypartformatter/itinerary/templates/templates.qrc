@@ -2,6 +2,7 @@
     <qresource prefix="/org.kde.messageviewer/itinerary">
         <file>itinerary.html</file>
         <file>flightreservation.html</file>
+        <file>location.html</file>
         <file>lodgingreservation.html</file>
         <file>trainreservation.html</file>
         <file>busreservation.html</file>
