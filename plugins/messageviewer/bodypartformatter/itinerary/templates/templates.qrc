@@ -1,0 +1,14 @@
+<RCC>
+    <qresource prefix="/org.kde.messageviewer/itinerary">
+        <file>itinerary.html</file>
+        <file>flightreservation.html</file>
+        <file>lodgingreservation.html</file>
+        <file>trainreservation.html</file>
+        <file>busreservation.html</file>
+        <file>event.html</file>
+        <file>actions.html</file>
+        <file>foodestablishmentreservation.html</file>
+        <file>rentalcarreservation.html</file>
+        <file>taxireservation.html</file>
+    </qresource>
+</RCC>
