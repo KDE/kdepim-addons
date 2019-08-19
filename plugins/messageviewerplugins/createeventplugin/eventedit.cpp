@@ -22,6 +22,7 @@
 #include "globalsettings_messageviewer.h"
 #include "eventdatetimewidget.h"
 #include <CalendarSupport/KCalPrefs>
+#include <CalendarSupport/Utils>
 
 #include <KLocalizedString>
 #include <QLineEdit>
@@ -351,27 +352,8 @@ KCalendarCore::Event::Ptr EventEdit::createEventItem()
     event->addAttachment(attachment);
 
     if (CalendarSupport::KCalPrefs::instance()->defaultEventReminders()) {
-        int duration; // in secs
-        switch (CalendarSupport::KCalPrefs::instance()->mReminderTimeUnits) {
-        default:
-        case 0: // mins
-            duration = CalendarSupport::KCalPrefs::instance()->mReminderTime * 60;
-            break;
-        case 1: // hours
-            duration = CalendarSupport::KCalPrefs::instance()->mReminderTime * 60 * 60;
-            break;
-        case 2: // days
-            duration = CalendarSupport::KCalPrefs::instance()->mReminderTime * 60 * 60 * 24;
-            break;
-        }
         KCalendarCore::Alarm::Ptr alm = event->newAlarm();
-        alm->setType(KCalendarCore::Alarm::Display);
-        alm->setEnabled(true);
-        if (event->type() == KCalendarCore::Incidence::TypeEvent) {
-            alm->setStartOffset(KCalendarCore::Duration(-duration));
-        } else {
-            alm->setEndOffset(KCalendarCore::Duration(-duration));
-        }
+        CalendarSupport::createAlarmReminder(alm, event->type());
     }
 
     return event;
