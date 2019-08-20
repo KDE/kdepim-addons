@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Id": "emailaddressselectionldapdialog",
+        "ServiceTypes": [
+            "Akonadi/EmailAddressSelectionLdapDialog"
+        ],
+        "Version": "1.0"
+    }
+}
