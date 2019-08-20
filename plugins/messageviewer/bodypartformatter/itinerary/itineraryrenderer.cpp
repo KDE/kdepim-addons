@@ -68,6 +68,7 @@ GRANTLEE_MAKE_GADGET(Event)
 GRANTLEE_MAKE_GADGET(EventReservation)
 GRANTLEE_MAKE_GADGET(Flight)
 GRANTLEE_MAKE_GADGET(FlightReservation)
+GRANTLEE_MAKE_GADGET(GeoCoordinates)
 GRANTLEE_MAKE_GADGET(LodgingBusiness)
 GRANTLEE_MAKE_GADGET(LodgingReservation)
 GRANTLEE_MAKE_GADGET(Person)
@@ -101,6 +102,7 @@ ItineraryRenderer::ItineraryRenderer()
     Grantlee::registerMetaType<EventReservation>();
     Grantlee::registerMetaType<Flight>();
     Grantlee::registerMetaType<FlightReservation>();
+    Grantlee::registerMetaType<GeoCoordinates>();
     Grantlee::registerMetaType<LodgingBusiness>();
     Grantlee::registerMetaType<LodgingReservation>();
     Grantlee::registerMetaType<Person>();
