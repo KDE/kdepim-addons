@@ -29,6 +29,7 @@
 #include <QTreeView>
 #include <KColorScheme>
 #include <memory>
+#include <KPluginLoader>
 
 K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 
@@ -74,8 +75,14 @@ void EmailLineEdit::verifyAkonadiStatus()
 
 void EmailLineEdit::slotSelectEmail()
 {
-    std::unique_ptr<Akonadi::EmailAddressSelectionDialog> dlg(
-        new Akonadi::EmailAddressSelectionDialog(this));
+    std::unique_ptr<Akonadi::AbstractEmailAddressSelectionDialog> dlg;
+    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
+    KPluginFactory *factory = loader.factory();
+    if (factory) {
+        dlg.reset(factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(this));
+    } else {
+        dlg.reset(new Akonadi::EmailAddressSelectionDialog(this));
+    }
     dlg->setWindowTitle(i18n("Select Emails"));
     dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
 

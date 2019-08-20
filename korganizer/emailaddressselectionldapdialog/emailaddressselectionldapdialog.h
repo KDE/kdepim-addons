@@ -20,8 +20,13 @@
 #define EMAILADDRESSSELECTIONLDAPDIALOG_H
 
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
+namespace Akonadi {
+class RecipientsPickerWidget;
+}
 
-
+namespace KLDAP {
+class LdapSearchDialog;
+}
 
 class EmailAddressSelectionLdapDialog : public Akonadi::AbstractEmailAddressSelectionDialog
 {
@@ -32,6 +37,13 @@ public:
 
     Akonadi::EmailAddressSelection::List selectedAddresses() const override;
     Akonadi::EmailAddressSelectionWidget *view() const override;
+private:
+    void writeConfig();
+    void readConfig();
+    void slotSearchLDAP();
+    void ldapSearchResult();
+    Akonadi::RecipientsPickerWidget *mView = nullptr;
+    KLDAP::LdapSearchDialog *mLdapSearchDialog = nullptr;
 };
 
 #endif // EMAILADDRESSSELECTIONLDAPDIALOG_H
