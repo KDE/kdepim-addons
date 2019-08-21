@@ -157,7 +157,6 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
 
     const auto pal = qGuiApp->palette();
     QVariantMap style;
-    style.insert(QStringLiteral("frameColor"), pal.link().color().name());
     style.insert(QStringLiteral("expandIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
     style.insert(QStringLiteral("collapseIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
     c.insert(QStringLiteral("style"), style);
