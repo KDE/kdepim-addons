@@ -22,6 +22,7 @@
 
 #include <KSieveUi/AbstractSelectEmailLineEdit>
 #include <AkonadiCore/ServerManager>
+#include <KContacts/Addressee>
 class QLineEdit;
 class QToolButton;
 class EmailLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
@@ -37,6 +38,7 @@ public:
     QString text() const override;
     bool isValid() const override;
 private:
+    void insertAddresses(const KContacts::Addressee::List &list);
     void slotTextChanged();
     void verifyAddress();
     void slotSelectEmail();

@@ -108,9 +108,7 @@ void EmailAddressSelectionLdapDialog::slotSearchLDAP()
 void EmailAddressSelectionLdapDialog::ldapSearchResult()
 {
     const KContacts::Addressee::List contacts = mLdapSearchDialog->selectedContacts();
-    for (const KContacts::Addressee &contact : contacts) {
-        //TODO
-    }
+    Q_EMIT insertAddresses(contacts);
 }
 
 #include "emailaddressselectionldapdialog.moc"

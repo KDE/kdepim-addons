@@ -73,6 +73,21 @@ void EmailLineEdit::verifyAkonadiStatus()
     mEmailButton->setVisible(state == Akonadi::ServerManager::Running);
 }
 
+void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
+{
+    QString currentText = mLineEdit->text();
+    bool firstElement = currentText.isEmpty();
+    for (const KContacts::Addressee &contact : list) {
+        if (!firstElement) {
+            currentText.append(QLatin1Char(';'));
+        } else {
+            firstElement = false;
+        }
+        currentText.append(contact.preferredEmail());
+    }
+    mLineEdit->setText(currentText);
+}
+
 void EmailLineEdit::slotSelectEmail()
 {
     std::unique_ptr<Akonadi::AbstractEmailAddressSelectionDialog> dlg;
@@ -85,7 +100,7 @@ void EmailLineEdit::slotSelectEmail()
     }
     dlg->setWindowTitle(i18n("Select Emails"));
     dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
-
+    connect(dlg.get(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &EmailLineEdit::insertAddresses);
     if (dlg->exec()) {
         QStringList addresses;
         const Akonadi::EmailAddressSelection::List lstAddress = dlg->selectedAddresses();
