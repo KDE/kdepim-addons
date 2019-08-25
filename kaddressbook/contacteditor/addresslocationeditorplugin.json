@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "addresslocationeditorplugin",
         "Name": "Contact Address Location Editor",
+        "Name[ca]": "Editor per a la ubicació de l'adreça del contacte",
+        "Name[gl]": "Editor de enderezos físicos de contactos",
+        "Name[nl]": "Bewerker van locatie-adres van contactpersoon",
+        "Name[pt]": "Editor da Localização do Endereço do Contacto",
+        "Name[uk]": "Редактор адреси контакту",
+        "Name[x-test]": "xxContact Address Location Editorxx",
         "ServiceTypes": [
             "ContactEditor/AddressLocationEditor"
         ],
