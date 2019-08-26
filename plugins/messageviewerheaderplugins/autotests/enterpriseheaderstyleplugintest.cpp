@@ -64,7 +64,8 @@ void EnterpriseHeaderStylePluginTest::testFormatEmpty()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
-    testHeaderFile(style->format(aMsg), QStringLiteral("empty.enterprise"));
+    QString closedDiv = style->format(aMsg) + QStringLiteral("</div>");
+    testHeaderFile(closedDiv, QStringLiteral("empty.enterprise"));
 }
 
 void EnterpriseHeaderStylePluginTest::testFormat_data()
@@ -88,7 +89,8 @@ void EnterpriseHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".enterprise"));
+    QString closedDiv = style->format(aMsg.data()) + QStringLiteral("</div>");
+    testHeaderFile(closedDiv, mailbox+QStringLiteral(".enterprise"));
 }
 
 QTEST_MAIN(EnterpriseHeaderStylePluginTest)
