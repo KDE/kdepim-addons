@@ -117,7 +117,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     }
 
     // remove all empty (modulo whitespace) entries and joins them via ", \n"
-    headerStr += QStringLiteral(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QStringLiteral(",\n")) + QLatin1Char(')');
+    headerStr += QStringLiteral(" (") + headerParts.filter(QRegularExpression(QStringLiteral("\\S"))).join(QLatin1String(",\n")) + QLatin1Char(')');
 
     headerStr += QLatin1String("</div>\n");
 

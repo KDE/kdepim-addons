@@ -1231,7 +1231,7 @@ public:
             if (dlg.exec() == QDialog::Rejected) {
                 return true;
             }
-            QString fwdTo = dlg.attendees().join(QStringLiteral(", "));
+            QString fwdTo = dlg.attendees().join(QLatin1String(", "));
             if (fwdTo.isEmpty()) {
                 return true;
             }

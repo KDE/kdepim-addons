@@ -105,7 +105,7 @@ QString AdBlock::AdblockUtil::filterCharsFromFilename(const QString &name)
 
 QString AdBlock::AdblockUtil::ensureUniqueFilename(const QString &name, const QString &appendFormat)
 {
-    Q_ASSERT(appendFormat.contains(QStringLiteral("%1")));
+    Q_ASSERT(appendFormat.contains(QLatin1String("%1")));
 
     QFileInfo info(name);
 
