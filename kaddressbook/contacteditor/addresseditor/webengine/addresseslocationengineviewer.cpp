@@ -57,11 +57,11 @@ void AddressesLocationEngineViewer::slotLinkClicked(const QUrl &url)
         if (url.hasQuery()) {
             const QUrlQuery urlQuery(url);
             const int addressId = urlQuery.queryItemValue(QStringLiteral("id")).toInt();
-            if (urlPath == QStringLiteral("removeaddress")) {
+            if (urlPath == QLatin1String("removeaddress")) {
                 if (!mEditMode) {
                     removeAddress(addressId);
                 }
-            } else if (urlPath == QStringLiteral("editaddress")) {
+            } else if (urlPath == QLatin1String("editaddress")) {
                 if (!mEditMode) {
                     editAddress(addressId);
                 }
