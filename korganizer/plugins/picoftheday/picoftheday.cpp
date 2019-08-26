@@ -128,7 +128,7 @@ void POTDElement::step1Result(KJob *job)
             break;
         }
     }
-    mFileName = mFileName.remove(QStringLiteral("|image=")).replace(QLatin1Char(' '), QLatin1Char('_'));
+    mFileName.remove(QStringLiteral("|image=")).replace(QLatin1Char(' '), QLatin1Char('_'));
 
     for (const QString &line : lines) {
         if (line.startsWith(QLatin1String("|texttitle="))) {
@@ -136,7 +136,7 @@ void POTDElement::step1Result(KJob *job)
             break;
         }
     }
-    mDescription = mDescription.remove(QStringLiteral("|texttitle="));
+    mDescription.remove(QStringLiteral("|texttitle="));
     if (!mDescription.isEmpty()) {
         mLongText = mDescription;
     } else {
