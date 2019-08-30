@@ -3,6 +3,7 @@
         "Id": "addresslocationeditorplugin",
         "Name": "Contact Address Location Editor",
         "Name[ca]": "Editor per a la ubicació de l'adreça del contacte",
+        "Name[es]": "Editor de ubicación de direcciones de contacto",
         "Name[fr]": "Éditeur d'emplacement de l'adresse du contact",
         "Name[gl]": "Editor de enderezos físicos de contactos",
         "Name[nl]": "Bewerker van locatie-adres van contactpersoon",
