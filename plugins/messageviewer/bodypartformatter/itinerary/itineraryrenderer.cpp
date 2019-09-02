@@ -195,7 +195,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
             if (barcode) {
                 barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
                 const auto img = barcode->toImage(barcode->minimumSize());
-                const QString fileName = dir + QStringLiteral("/ticketToken") + QString::number(i) + QStringLiteral(".png");
+                const QString fileName = dir + QLatin1String("/ticketToken") + QString::number(i) + QLatin1String(".png");
                 img.save(fileName);
                 m.insert(QStringLiteral("ticketToken"), fileName);
                 nodeHelper->addTempFile(fileName);

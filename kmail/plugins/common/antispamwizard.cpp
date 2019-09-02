@@ -683,9 +683,9 @@ void AntiSpamWizard::sortFilterOnExistance(
     const QString &intendedFilterName, QString &newFilters, QString &replaceFilters)
 {
     if (uniqueNameFor(intendedFilterName) == intendedFilterName) {
-        newFilters += QStringLiteral("<li>") + intendedFilterName + QStringLiteral("</li>");
+        newFilters += QLatin1String("<li>") + intendedFilterName + QLatin1String("</li>");
     } else {
-        replaceFilters += QStringLiteral("<li>") + intendedFilterName + QStringLiteral("</li>");
+        replaceFilters += QLatin1String("<li>") + intendedFilterName + QLatin1String("</li>");
     }
 }
 

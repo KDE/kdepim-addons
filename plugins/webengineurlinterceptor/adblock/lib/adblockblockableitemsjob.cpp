@@ -112,9 +112,9 @@ void AdBlockBlockableItemsJob::adaptSource(QString &src, const QString &hostName
     if (src.startsWith(QLatin1String("http://")) || src.startsWith(QLatin1String("https://"))) {
         //Nothing
     } else if (src.startsWith(QLatin1String("//"))) {
-        src = QStringLiteral("https:") + src;
+        src = QLatin1String("https:") + src;
     } else if (src.startsWith(QLatin1Char('/'))) {
-        src = QStringLiteral("https://") + hostName + src;
+        src = QLatin1String("https://") + hostName + src;
     } else {
         src = QString();
     }

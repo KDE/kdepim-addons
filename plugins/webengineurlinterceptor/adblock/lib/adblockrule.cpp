@@ -418,7 +418,7 @@ void AdBlockRule::parseFilter()
     // Exception always starts with @@
     if (parsedLine.startsWith(QLatin1String("@@"))) {
         m_isException = true;
-        parsedLine = parsedLine.mid(2);
+        parsedLine.remove(0, 2);
     }
 
     // Parse all options following $ char
@@ -485,12 +485,12 @@ void AdBlockRule::parseFilter()
             return;
         }
 
-        parsedLine = parsedLine.left(optionsIndex);
+        parsedLine.truncate(optionsIndex);
     }
 
     // Rule is classic regexp
     if (parsedLine.startsWith(QLatin1Char('/')) && parsedLine.endsWith(QLatin1Char('/'))) {
-        parsedLine = parsedLine.mid(1);
+        parsedLine.remove(0, 1);
         parsedLine = parsedLine.left(parsedLine.size() - 1);
 
         m_type = RegExpMatchRule;
@@ -502,7 +502,7 @@ void AdBlockRule::parseFilter()
 
     // Remove starting and ending wildcards (*)
     if (parsedLine.startsWith(QLatin1Char('*'))) {
-        parsedLine = parsedLine.mid(1);
+        parsedLine.remove(0, 1);
     }
 
     if (parsedLine.endsWith(QLatin1Char('*'))) {
@@ -511,7 +511,7 @@ void AdBlockRule::parseFilter()
 
     // We can use fast string matching for domain here
     if (filterIsOnlyDomain(parsedLine)) {
-        parsedLine = parsedLine.mid(2);
+        parsedLine.remove(0, 2);
         parsedLine = parsedLine.left(parsedLine.size() - 1);
 
         m_type = DomainMatchRule;

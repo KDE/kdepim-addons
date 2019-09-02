@@ -99,7 +99,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
                           "<img src=\"") + imgpath + QStringLiteral("icon.png\"/>\n"
                                                                     "</div>\n");
     headerStr
-        += QStringLiteral("    <table style=\"color: ") + fontColor.name() + QStringLiteral(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
+        += QLatin1String("    <table style=\"color: ") + fontColor.name() + QLatin1String(" ! important; margin: 1px; border-spacing: 0px;\" cellpadding='0'> \n");
 
     // subject
     if (strategy->showHeader(QStringLiteral("subject"))) {
@@ -120,13 +120,13 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
         QString fromPart = StringUtil::emailAddrAsAnchor(message->from(),
                                                          StringUtil::DisplayFullAddress, linkColor);
         if (!vCardName().isEmpty()) {
-            fromPart += QStringLiteral("&nbsp;&nbsp;<a href=\"") + vCardName() + QStringLiteral("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]") + QStringLiteral("</a>");
+            fromPart += QLatin1String("&nbsp;&nbsp;<a href=\"") + vCardName() + QLatin1String("\" ") + linkColor + QLatin1Char('>') + i18n("[vCard]") + QLatin1String("</a>");
         }
         //TDDO strategy date
         //if ( strategy->showHeader( "date" ) )
         headerStr
             += QStringLiteral("     <tr> \n"
-                              "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; padding-left: 5px; padding-right: 24px; text-align: right; vertical-align:top; ") + borderSettings + QLatin1String("\">") + i18n(
                    "From: ") + QStringLiteral("</td> \n"
                                               "      <td style=\"")
                + borderSettings + QStringLiteral("\">") + fromPart + QStringLiteral("</td> "
@@ -137,7 +137,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("to"))) {
         headerStr
             += QStringLiteral("     <tr> "
-                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QLatin1String("\">") + i18n(
                    "To: ") + QStringLiteral("</td> "
                                             "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
@@ -150,7 +150,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("cc")) && message->cc(false)) {
         headerStr
             += QStringLiteral("     <tr> "
-                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QLatin1String("\">") + i18n(
                    "CC: ") + QStringLiteral("</td> "
                                             "      <td style=\"")
                + borderSettings + QStringLiteral("\">")
@@ -163,7 +163,7 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("bcc")) && message->bcc(false)) {
         headerStr
             += QStringLiteral("     <tr> "
-                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QStringLiteral("\">") + i18n(
+                              "      <td style=\"font-size: 0.8em; text-align: right; vertical-align:top; padding-left: 5px; padding-right: 24px; ") + borderSettings + QLatin1String("\">") + i18n(
                    "BCC: ") + QStringLiteral("</td> "
                                              "      <td style=\"")
                + borderSettings + QStringLiteral("\">")

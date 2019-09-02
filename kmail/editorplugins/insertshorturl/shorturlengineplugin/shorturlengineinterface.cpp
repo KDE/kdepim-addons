@@ -50,7 +50,7 @@ void ShortUrlEngineInterface::setShortUrl(const QString &url)
         && !url.trimmed().startsWith(QLatin1String("https://"))
         && !url.trimmed().startsWith(QLatin1String("ftp://"))
         && !url.trimmed().startsWith(QLatin1String("ftps://"))) {
-        mOriginalUrl = QStringLiteral("http://") + url;
+        mOriginalUrl = QLatin1String("http://") + url;
     } else {
         mOriginalUrl = url;
     }

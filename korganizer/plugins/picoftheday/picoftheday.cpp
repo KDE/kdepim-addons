@@ -157,7 +157,7 @@ void POTDElement::step1Result(KJob *job)
 void POTDElement::step2GetImagePage()
 {
     if (!mSecondStepCompleted && !mSecondStepJob) {
-        mUrl = QUrl(QStringLiteral("https://en.wikipedia.org/wiki/File:") + mFileName);
+        mUrl = QUrl(QLatin1String("https://en.wikipedia.org/wiki/File:") + mFileName);
         // We'll find the info to get the thumbnail we want on the POTD's image page
 
         Q_EMIT gotNewUrl(mUrl);

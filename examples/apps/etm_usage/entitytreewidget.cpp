@@ -88,7 +88,7 @@ void EntityTreeWidget::mimeTypesChoiceChanged(int index)
 
 void EntityTreeWidget::mimeTypesChanged(const QString &mimetypeList)
 {
-    const QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QStringLiteral(","));
+    const QStringList list = mimetypeList.isEmpty() ? QStringList() : mimetypeList.split(QLatin1Char(','));
 
     const auto listMimetypes = m_monitor->mimeTypesMonitored();
     for (const QString &mimetype : listMimetypes) {

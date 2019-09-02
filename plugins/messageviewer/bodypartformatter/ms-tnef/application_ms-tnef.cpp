@@ -133,7 +133,7 @@ public:
                     }
                     label = MessageCore::StringUtil::quoteHtmlChars(label, true);
 
-                    const QString dir = mp->nodeHelper()->createTempDir(QStringLiteral("ktnef-") + QString::number(i));
+                    const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
                     parser.extractFileTo(att->name(), dir);
 
                     // falling back to internal TNEF attachement name if no filename is given for the attached file
@@ -143,7 +143,7 @@ public:
                         attFileName = att->name();
                     }
                     mp->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
-                    const QString href = QStringLiteral("file:") + dir + QDir::separator() + attFileName;
+                    const QString href = QLatin1String("file:") + dir + QDir::separator() + attFileName;
 
                     const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
                                                                                                           KIconLoader::Desktop, attFileName)).url();

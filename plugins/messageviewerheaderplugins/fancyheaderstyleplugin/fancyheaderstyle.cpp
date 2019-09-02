@@ -95,7 +95,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         //qCDebug(MESSAGEVIEWER_LOG) << "Got a photo:" << xface.photoURL;
         userHTML = QStringLiteral("<img src=\"%1\" width=\"%2\" height=\"%3\"/>")
                    .arg(xface.photoURL).arg(xface.photoWidth).arg(xface.photoHeight);
-        userHTML = QStringLiteral("<div class=\"senderpic\">") + userHTML + QStringLiteral("</div>");
+        userHTML = QLatin1String("<div class=\"senderpic\">") + userHTML + QLatin1String("</div>");
     }
 
     // the subject line and box below for details

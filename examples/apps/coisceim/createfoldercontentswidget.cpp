@@ -31,7 +31,7 @@ CreateFolderContentsWidget::CreateFolderContentsWidget(Trip *trip, int role, con
     , m_trip(trip)
     , m_role(role)
 {
-    QPushButton *button = new QPushButton(QStringLiteral("Select ") + type);
+    QPushButton *button = new QPushButton(QLatin1String("Select ") + type);
 
     QString iconName;
 

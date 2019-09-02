@@ -133,7 +133,7 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
     pattern += (collapseValue.isEmpty() ? QStringLiteral("$") : QStringLiteral(",")) + AdBlockBlockableItemsWidget::elementType(mCurrentType);
 
     if (mUi->exceptionFilter->isChecked()) {
-        pattern = QStringLiteral("@@") + pattern;
+        pattern = QLatin1String("@@") + pattern;
     }
     const int numberOfElement(mUi->applyListElement->count());
     for (int i = 0; i < numberOfElement; ++i) {
@@ -145,7 +145,7 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
 
     if (mUi->restrictToDomain->isChecked()) {
         if (!mUi->restrictToDomainStr->text().isEmpty()) {
-            pattern += QStringLiteral(",domain=") + mUi->restrictToDomainStr->text();
+            pattern += QLatin1String(",domain=") + mUi->restrictToDomainStr->text();
         }
     }
     if (mUi->matchCase->isChecked()) {
