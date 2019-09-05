@@ -396,7 +396,7 @@ void AdBlockSettingWidget::slotImportFilters()
     }
 
     for (const QString &element : listFilter) {
-        if (element == QLatin1String("\n")) {
+        if (element == QLatin1Char('\n')) {
             continue;
         }
         if (excludeFilter.contains(element)) {

@@ -326,7 +326,7 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
         QTextStream stream(&file);
         stream.setCodec("UTF-8");
 
-        if (!rules.contains(ddg1 + QLatin1String("\n"))) {
+        if (!rules.contains(ddg1 + QLatin1Char('\n'))) {
             stream << ddg1 << endl;
         }
 

@@ -154,7 +154,7 @@ QString EntityTreeWidget::dumpLevel(const QModelIndex &parent, int level)
         }
         line.append(QString::number(num++));
         line.append(QLatin1String("\""));
-        line.append(QLatin1String("\n"));
+        line.append(QLatin1Char('\n'));
         lines.append(line);
 //     qDebug() << line;
         static const int column = 0;
