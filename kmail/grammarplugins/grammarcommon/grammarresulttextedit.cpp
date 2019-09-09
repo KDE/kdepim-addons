@@ -129,7 +129,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                     });
                 }
                 if (!act.infoUrls().isEmpty()) {
-                    QMenu *popupUrlInfo = popup->addMenu(i18n("Grammar Web Site Info"));
+                    QMenu *popupUrlInfo = popup->addMenu(i18n("Online Grammar Information"));
                     for (const QString &str : act.infoUrls()) {
                         QAction *actUrlInfo = popupUrlInfo->addAction(str);
                         connect(actUrlInfo, &QAction::triggered, this, [this, str]() {
