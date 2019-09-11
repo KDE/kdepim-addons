@@ -18,6 +18,7 @@
 */
 
 #include "quicktextplugineditorinterface.h"
+#include "quicktextmenu.h"
 #include <KPIMTextEdit/RichTextEditor>
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -34,9 +35,10 @@ QuickTextPluginEditorInterface::~QuickTextPluginEditorInterface()
 
 void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    //TODO
-    QAction *action = new QAction(i18n("Insert Special Character..."), this);
-    ac->addAction(QStringLiteral("insert_special_character"), action);
+    QuickTextMenu *quickTextMenu = new QuickTextMenu(parentWidget(), this);
+    QAction *action = new QAction(i18n("Variables"), this);
+    action->setMenu(quickTextMenu->menu());
+    ac->addAction(QStringLiteral("insert_variables"), action);
     connect(action, &QAction::triggered, this, &QuickTextPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);

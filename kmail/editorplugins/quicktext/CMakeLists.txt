@@ -5,6 +5,7 @@ endif()
 set(kmail_quicktextplugin_SRCS
     quicktextplugineditor.cpp
     quicktextplugineditorinterface.cpp
+    quicktextmenu.cpp
 )
 
 ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin)
