@@ -2,6 +2,12 @@
     "KPlugin": {
         "Id": "templateparseremailaddressrequesterakonadi",
         "Name": "Email Address Akonadi Requester for Template Parser library",
+        "Name[ca]": "Sol·licitant d'adreces de correu electrònic de l'Akonadi per a la biblioteca del «Template Parser»",
+        "Name[nl]": "Akonadi-verzoeker om e-mailadres voor bibliotheek ontleden van sjabloon",
+        "Name[pt]": "Pedido de Endereço de E-Mail para o Processador de Modelos do Akonadi",
+        "Name[sv]": "Akonadi e-postadressbegäran för malltolkbibliotek",
+        "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти Akonadi для бібліотеки обробки шаблонів",
+        "Name[x-test]": "xxEmail Address Akonadi Requester for Template Parser libraryxx",
         "ServiceTypes": [
             "TemplateParser/TemplateParserEmailAddressRequester"
         ],
