@@ -43,7 +43,10 @@ private:
     void insertNumberOfAttachment();
     void insertNamesAttachment();
     void insertToEmails();
+    void insertCcEmails();
+    void insertFromEmails();
     void insertNamesAndSizesOfAttachment();
+    void insertSubject();
     QWidget *mParentWidget = nullptr;
     QMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;

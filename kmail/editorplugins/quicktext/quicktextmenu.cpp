@@ -38,15 +38,28 @@ void QuickTextMenu::initializeMenu()
     mMenu = new QMenu(mParentWidget);
     mMenu->setFocusPolicy(Qt::NoFocus);
 
-    QMenu *toMenuVariable = new QMenu(i18n("To:"), mMenu);
+    QMenu *toMenuVariable = new QMenu(i18n("To"), mMenu);
     toMenuVariable->addAction(i18n("Emails"), this, &QuickTextMenu::insertToEmails);
     mMenu->addMenu(toMenuVariable);
+
+    QMenu *fromMenuVariable = new QMenu(i18n("From"), mMenu);
+    fromMenuVariable->addAction(i18n("Emails"), this, &QuickTextMenu::insertFromEmails);
+    mMenu->addMenu(fromMenuVariable);
+
+    QMenu *ccMenuVariable = new QMenu(i18n("Cc"), mMenu);
+    ccMenuVariable->addAction(i18n("Emails"), this, &QuickTextMenu::insertCcEmails);
+    mMenu->addMenu(ccMenuVariable);
 
     QMenu *attachmentMenuVariable = new QMenu(i18n("Attachment"), mMenu);
     attachmentMenuVariable->addAction(i18n("Number Of Attachments"), this, &QuickTextMenu::insertNumberOfAttachment);
     attachmentMenuVariable->addAction(i18n("Names"), this, &QuickTextMenu::insertNamesAttachment);
     attachmentMenuVariable->addAction(i18n("Names and Sizes"), this, &QuickTextMenu::insertNamesAndSizesOfAttachment);
     mMenu->addMenu(attachmentMenuVariable);
+
+    QMenu *miscVariable = new QMenu(i18n("Misc"), mMenu);
+    miscVariable->addAction(i18n("Subject"), this, &QuickTextMenu::insertSubject);
+    mMenu->addMenu(miscVariable);
+
 }
 
 QMenu *QuickTextMenu::menu() const
@@ -77,4 +90,19 @@ void QuickTextMenu::insertNamesAndSizesOfAttachment()
 void QuickTextMenu::insertToEmails()
 {
     Q_EMIT insertText(mComposerInterface->to());
+}
+
+void QuickTextMenu::insertCcEmails()
+{
+    Q_EMIT insertText(mComposerInterface->cc());
+}
+
+void QuickTextMenu::insertFromEmails()
+{
+    Q_EMIT insertText(mComposerInterface->from());
+}
+
+void QuickTextMenu::insertSubject()
+{
+    Q_EMIT insertText(mComposerInterface->subject());
 }
