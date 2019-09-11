@@ -13,8 +13,8 @@
     <th align="left" style="font-size: 10px;">{{ header.fromi18n }}</th>
     <td style="font-size: 10px;">{{ header.from.str}}
 
-    {% if header.resentfrom %}
-      &nbsp; {{ header.resentfromi18n }}: {{ header.resentfrom }}
+    {% if header.resentFrom %}
+      &nbsp; {{ header.resentFromi18n }} {{ header.resentFrom }}
     {% endif %}
 
     {% if vCardName %}
@@ -47,10 +47,10 @@
     </tr>
 {% endif %}
 
-{% if header.Sender %}
+{% if header.sender.isSet %}
     <tr>
-    <th align="left" style="font-size: 10px;"> Sender: </th>
-    <td style="font-size: 10px;">{{ header.Sender }}</td>
+    <th align="left" style="font-size: 10px;"> {{ header.senderi18n }} </th>
+    <td style="font-size: 10px;">{{ header.sender.str }}</td>
     </tr>
 {% endif %}
 
