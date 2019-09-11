@@ -38,7 +38,6 @@ MessageComposer::PluginEditorInterface *QuickTextPluginEditor::createInterface(Q
     return interface;
 }
 
-
 bool QuickTextPluginEditor::hasStatusBarSupport() const
 {
     return true;

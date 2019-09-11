@@ -25,13 +25,12 @@
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     : QObject(parent)
     , mParentWidget(parentWidget)
-{    
+{
     initializeMenu();
 }
 
 QuickTextMenu::~QuickTextMenu()
 {
-
 }
 
 void QuickTextMenu::initializeMenu()

@@ -25,5 +25,4 @@ QTEST_MAIN(QuickTextMenuTest)
 QuickTextMenuTest::QuickTextMenuTest(QObject *parent)
     : QObject(parent)
 {
-
 }
