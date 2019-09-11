@@ -99,19 +99,19 @@ private Q_SLOTS:
 
         // render the mail
         MessageViewer::FileHtmlWriter fileWriter(outFileName);
-        fileWriter.begin();
         QImage paintDevice;
         MessageViewer::CSSHelperBase cssHelper(&paintDevice);
         MimeTreeParser::NodeHelper nodeHelper;
         TestObjectTreeSource testSource(&fileWriter, &cssHelper);
         MimeTreeParser::ObjectTreeParser otp(&testSource, &nodeHelper);
 
+        otp.parseObjectTree(msg.data());
+
+        fileWriter.begin();
         fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
                                         "<html>\n"
                                         "<body>\n"));
-
-        otp.parseObjectTree(msg.data());
-
+        testSource.render(otp.parsedPart(), false);
         fileWriter.write(QStringLiteral("</body></html>"));
         fileWriter.end();
 

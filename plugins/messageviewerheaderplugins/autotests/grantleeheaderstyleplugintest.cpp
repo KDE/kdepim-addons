@@ -24,6 +24,7 @@
 
 #include <GrantleeTheme/GrantleeThemeManager>
 #include <MessageViewer/HeaderStyle>
+#include <MimeTreeParser/NodeHelper>
 
 #include <QTest>
 #include <QStandardPaths>
@@ -157,6 +158,8 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
     auto aMsg = readAndParseMail(mailFileName);
     MessageViewer::GrantleeHeaderStylePlugin plugin;
     auto *style = plugin.headerStyle();
+    MimeTreeParser::NodeHelper nodeHelper;
+    style->setNodeHelper(&nodeHelper);
     KActionMenu *menu = new KActionMenu(this);
     QActionGroup *act = new QActionGroup(this);
 
