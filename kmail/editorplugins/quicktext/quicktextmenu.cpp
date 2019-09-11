@@ -37,6 +37,7 @@ QuickTextMenu::~QuickTextMenu()
 void QuickTextMenu::initializeMenu()
 {
     mMenu = new QMenu(mParentWidget);
+    mMenu->setFocusPolicy(Qt::NoFocus);
     QMenu *attachmentMenuVariable = new QMenu(i18n("Attachment"), mMenu);
     attachmentMenuVariable->addAction(i18n("Number Of Attachments"), this, &QuickTextMenu::insertNumberOfAttachment);
     mMenu->addMenu(attachmentMenuVariable);

@@ -46,6 +46,7 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
     QPushButton *button = new QPushButton(i18n("Variables"));
+    button->setFocusPolicy(Qt::NoFocus);
     button->setMenu(quickTextMenu->menu());
     setStatusBarWidget(button);
 }
