@@ -41,6 +41,9 @@ Q_SIGNALS:
 private:
     void initializeMenu();
     void insertNumberOfAttachment();
+    void insertNamesAttachment();
+    void insertToEmails();
+    void insertNamesAndSizesOfAttachment();
     QWidget *mParentWidget = nullptr;
     QMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;

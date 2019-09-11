@@ -37,8 +37,15 @@ void QuickTextMenu::initializeMenu()
 {
     mMenu = new QMenu(mParentWidget);
     mMenu->setFocusPolicy(Qt::NoFocus);
+
+    QMenu *toMenuVariable = new QMenu(i18n("To:"), mMenu);
+    toMenuVariable->addAction(i18n("Emails"), this, &QuickTextMenu::insertToEmails);
+    mMenu->addMenu(toMenuVariable);
+
     QMenu *attachmentMenuVariable = new QMenu(i18n("Attachment"), mMenu);
     attachmentMenuVariable->addAction(i18n("Number Of Attachments"), this, &QuickTextMenu::insertNumberOfAttachment);
+    attachmentMenuVariable->addAction(i18n("Names"), this, &QuickTextMenu::insertNamesAttachment);
+    attachmentMenuVariable->addAction(i18n("Names and Sizes"), this, &QuickTextMenu::insertNamesAndSizesOfAttachment);
     mMenu->addMenu(attachmentMenuVariable);
 }
 
@@ -55,4 +62,19 @@ void QuickTextMenu::setPluginComposerInterface(MessageComposer::PluginComposerIn
 void QuickTextMenu::insertNumberOfAttachment()
 {
     Q_EMIT insertText(QString::number(mComposerInterface->attachments().count()));
+}
+
+void QuickTextMenu::insertNamesAttachment()
+{
+    Q_EMIT insertText(mComposerInterface->attachments().names().join(QLatin1String(", ")));
+}
+
+void QuickTextMenu::insertNamesAndSizesOfAttachment()
+{
+    Q_EMIT insertText(mComposerInterface->attachments().namesAndSize().join(QLatin1String(", ")));
+}
+
+void QuickTextMenu::insertToEmails()
+{
+    Q_EMIT insertText(mComposerInterface->to());
 }
