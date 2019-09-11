@@ -18,14 +18,14 @@
 */
 
 #include "quicktextmenu.h"
-
+#include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
 
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     : QObject(parent)
     , mParentWidget(parentWidget)
-{
-    mMenu = new QMenu(mParentWidget);
+{    
+    initializeMenu();
 }
 
 QuickTextMenu::~QuickTextMenu()
@@ -33,7 +33,17 @@ QuickTextMenu::~QuickTextMenu()
 
 }
 
+void QuickTextMenu::initializeMenu()
+{
+    mMenu = new QMenu(mParentWidget);
+}
+
 QMenu *QuickTextMenu::menu() const
 {
     return mMenu;
+}
+
+void QuickTextMenu::setPluginComposerInterface(MessageComposer::PluginComposerInterface *composerInterface)
+{
+    mComposerInterface = composerInterface;
 }

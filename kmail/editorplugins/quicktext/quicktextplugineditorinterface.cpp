@@ -36,6 +36,7 @@ QuickTextPluginEditorInterface::~QuickTextPluginEditorInterface()
 void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     QuickTextMenu *quickTextMenu = new QuickTextMenu(parentWidget(), this);
+    quickTextMenu->setPluginComposerInterface(composerInterface());
     QAction *action = new QAction(i18n("Variables"), this);
     action->setMenu(quickTextMenu->menu());
     ac->addAction(QStringLiteral("insert_variables"), action);

@@ -17,32 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef QUICKTEXTMENU_H
-#define QUICKTEXTMENU_H
+#include "quicktextmenutest.h"
+#include <QTest>
 
-#include <QObject>
-class QMenu;
-namespace MessageComposer {
-class PluginComposerInterface;
-}
-class QuickTextMenu : public QObject
+QTEST_MAIN(QuickTextMenuTest)
+
+QuickTextMenuTest::QuickTextMenuTest(QObject *parent)
+    : QObject(parent)
 {
-    Q_OBJECT
-public:
-    explicit QuickTextMenu(QWidget *parentWidget, QObject *parent = nullptr);
-    ~QuickTextMenu();
-    QMenu *menu() const;
 
-    void setPluginComposerInterface(MessageComposer::PluginComposerInterface *composerInterface);
-
-Q_SIGNALS:
-    void insertText(const QString &str);
-
-private:
-    void initializeMenu();
-    QWidget *mParentWidget = nullptr;
-    QMenu *mMenu = nullptr;
-    MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
-};
-
-#endif // QUICKTEXTMENU_H
+}
