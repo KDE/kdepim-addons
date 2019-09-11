@@ -23,6 +23,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
+#include <QPushButton>
 
 QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -37,13 +38,16 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     QuickTextMenu *quickTextMenu = new QuickTextMenu(parentWidget(), this);
     quickTextMenu->setPluginComposerInterface(composerInterface());
+    connect(quickTextMenu, &QuickTextMenu::insertText, this, &QuickTextPluginEditorInterface::insertText);
     QAction *action = new QAction(i18n("Variables"), this);
     action->setMenu(quickTextMenu->menu());
     ac->addAction(QStringLiteral("insert_variables"), action);
     connect(action, &QAction::triggered, this, &QuickTextPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
     setActionType(type);
-    //Add widget setStatusBarWidget()
+    QPushButton *button = new QPushButton(i18n("Variables"));
+    button->setMenu(quickTextMenu->menu());
+    setStatusBarWidget(button);
 }
 
 void QuickTextPluginEditorInterface::slotActivated()

@@ -18,6 +18,7 @@
 */
 
 #include "quicktextmenu.h"
+#include <KLocalizedString>
 #include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
 
@@ -36,6 +37,9 @@ QuickTextMenu::~QuickTextMenu()
 void QuickTextMenu::initializeMenu()
 {
     mMenu = new QMenu(mParentWidget);
+    QMenu *attachmentMenuVariable = new QMenu(i18n("Attachment"), mMenu);
+    attachmentMenuVariable->addAction(i18n("Number Of Attachments"), this, &QuickTextMenu::insertNumberOfAttachment);
+    mMenu->addMenu(attachmentMenuVariable);
 }
 
 QMenu *QuickTextMenu::menu() const
@@ -46,4 +50,9 @@ QMenu *QuickTextMenu::menu() const
 void QuickTextMenu::setPluginComposerInterface(MessageComposer::PluginComposerInterface *composerInterface)
 {
     mComposerInterface = composerInterface;
+}
+
+void QuickTextMenu::insertNumberOfAttachment()
+{
+    Q_EMIT insertText(QString::number(mComposerInterface->attachments().count()));
 }

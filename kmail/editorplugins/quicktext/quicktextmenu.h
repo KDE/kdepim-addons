@@ -40,6 +40,7 @@ Q_SIGNALS:
 
 private:
     void initializeMenu();
+    void insertNumberOfAttachment();
     QWidget *mParentWidget = nullptr;
     QMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
