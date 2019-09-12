@@ -3,6 +3,7 @@
         "Description": "This plugin allows you to configure dkim support.",
         "Description[ca@valencia]": "Aquest connector permet configurar el funcionament del «dkim».",
         "Description[ca]": "Aquest connector permet configurar el funcionament del «dkim».",
+        "Description[cs]": "Tento modul umožňuje nastavit podporu pro dkim.",
         "Description[de]": "Mit diesem Modul können Sie die Unterstützung von DKIM einrichten.",
         "Description[en_GB]": "This plugin allows you to configure dkim support.",
         "Description[es]": "Este complemento le permite configurar el uso de dkim.",
