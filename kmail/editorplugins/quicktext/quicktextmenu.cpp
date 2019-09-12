@@ -21,6 +21,8 @@
 #include <KLocalizedString>
 #include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
+#include <QDate>
+#include <QTime>
 
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     : QObject(parent)
@@ -55,6 +57,15 @@ void QuickTextMenu::initializeMenu()
     attachmentMenuVariable->addAction(i18n("Names"), this, &QuickTextMenu::insertNamesAttachment);
     attachmentMenuVariable->addAction(i18n("Names and Sizes"), this, &QuickTextMenu::insertNamesAndSizesOfAttachment);
     mMenu->addMenu(attachmentMenuVariable);
+
+
+    QMenu *dateTimeMenuVariable = new QMenu(i18n("Date/Time"), mMenu);
+    dateTimeMenuVariable->addAction(i18n("Date (%1)", QDate::currentDate().toString(Qt::SystemLocaleShortDate)), this, &QuickTextMenu::insertShortDate);
+    dateTimeMenuVariable->addAction(i18n("Date (%1)", QDate::currentDate().toString(Qt::SystemLocaleLongDate)), this, &QuickTextMenu::insertLongDate);
+    dateTimeMenuVariable->addAction(i18n("Time (%1)", QTime::currentTime().toString(Qt::SystemLocaleShortDate)), this, &QuickTextMenu::insertShortTime);
+    dateTimeMenuVariable->addAction(i18n("Time (%1)", QTime::currentTime().toString(Qt::SystemLocaleLongDate)), this, &QuickTextMenu::insertLongTime);
+    mMenu->addMenu(dateTimeMenuVariable);
+
 
     QMenu *miscVariable = new QMenu(i18n("Misc"), mMenu);
     miscVariable->addAction(i18n("Subject"), this, &QuickTextMenu::insertSubject);
@@ -105,4 +116,24 @@ void QuickTextMenu::insertFromEmails()
 void QuickTextMenu::insertSubject()
 {
     Q_EMIT insertText(mComposerInterface->subject());
+}
+
+void QuickTextMenu::insertShortDate()
+{
+    Q_EMIT insertText(QDate::currentDate().toString(Qt::SystemLocaleShortDate));
+}
+
+void QuickTextMenu::insertLongDate()
+{
+    Q_EMIT insertText(QDate::currentDate().toString(Qt::SystemLocaleLongDate));
+}
+
+void QuickTextMenu::insertShortTime()
+{
+    Q_EMIT insertText(QTime::currentTime().toString(Qt::SystemLocaleShortDate));
+}
+
+void QuickTextMenu::insertLongTime()
+{
+    Q_EMIT insertText(QTime::currentTime().toString(Qt::SystemLocaleLongDate));
 }

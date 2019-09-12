@@ -47,6 +47,10 @@ private:
     void insertFromEmails();
     void insertNamesAndSizesOfAttachment();
     void insertSubject();
+    void insertShortDate();
+    void insertLongDate();
+    void insertShortTime();
+    void insertLongTime();
     QWidget *mParentWidget = nullptr;
     QMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
