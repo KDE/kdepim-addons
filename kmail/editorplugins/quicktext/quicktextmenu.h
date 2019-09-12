@@ -51,6 +51,7 @@ private:
     void insertLongDate();
     void insertShortTime();
     void insertLongTime();
+    void insertDayOfWeek();
     QWidget *mParentWidget = nullptr;
     QMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;

@@ -23,6 +23,7 @@
 #include <QMenu>
 #include <QDate>
 #include <QTime>
+#include <QLocale>
 
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     : QObject(parent)
@@ -60,6 +61,7 @@ void QuickTextMenu::initializeMenu()
 
 
     QMenu *dateTimeMenuVariable = new QMenu(i18n("Date/Time"), mMenu);
+    dateTimeMenuVariable->addAction(i18n("Day Of Week"), this, &QuickTextMenu::insertDayOfWeek);
     dateTimeMenuVariable->addAction(i18n("Date (%1)", QDate::currentDate().toString(Qt::SystemLocaleShortDate)), this, &QuickTextMenu::insertShortDate);
     dateTimeMenuVariable->addAction(i18n("Date (%1)", QDate::currentDate().toString(Qt::SystemLocaleLongDate)), this, &QuickTextMenu::insertLongDate);
     dateTimeMenuVariable->addAction(i18n("Time (%1)", QTime::currentTime().toString(Qt::SystemLocaleShortDate)), this, &QuickTextMenu::insertShortTime);
@@ -136,4 +138,11 @@ void QuickTextMenu::insertShortTime()
 void QuickTextMenu::insertLongTime()
 {
     Q_EMIT insertText(QTime::currentTime().toString(Qt::SystemLocaleLongDate));
+}
+
+void QuickTextMenu::insertDayOfWeek()
+{
+    const QDateTime date = QDateTime::currentDateTime().toLocalTime();
+    const QString str = QLocale().dayName(date.date().dayOfWeek(), QLocale::LongFormat);
+    Q_EMIT insertText(str);
 }
