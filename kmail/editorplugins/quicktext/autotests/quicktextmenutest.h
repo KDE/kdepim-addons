@@ -28,6 +28,8 @@ class QuickTextMenuTest : public QObject
 public:
     explicit QuickTextMenuTest(QObject *parent = nullptr);
     ~QuickTextMenuTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // QUICKTEXTMENUTEST_H
