@@ -189,6 +189,9 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
                 barcode.reset(Prison::createBarcode(Prison::QRCode));
                 barcode->setData(ticket.ticketTokenData());
                 break;
+            case Ticket::DataMatrix:
+                barcode.reset(Prison::createBarcode(Prison::DataMatrix));
+                barcode->setData(ticket.ticketTokenData());
             default:
                 break;
             }
