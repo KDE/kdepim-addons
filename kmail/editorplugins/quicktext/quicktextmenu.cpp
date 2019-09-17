@@ -122,27 +122,25 @@ void QuickTextMenu::insertSubject()
 
 void QuickTextMenu::insertShortDate()
 {
-    Q_EMIT insertText(QDate::currentDate().toString(Qt::SystemLocaleShortDate));
+    Q_EMIT insertText(mComposerInterface->shortDate());
 }
 
 void QuickTextMenu::insertLongDate()
 {
-    Q_EMIT insertText(QDate::currentDate().toString(Qt::SystemLocaleLongDate));
+    Q_EMIT insertText(mComposerInterface->longDate());
 }
 
 void QuickTextMenu::insertShortTime()
 {
-    Q_EMIT insertText(QTime::currentTime().toString(Qt::SystemLocaleShortDate));
+    Q_EMIT insertText(mComposerInterface->shortTime());
 }
 
 void QuickTextMenu::insertLongTime()
 {
-    Q_EMIT insertText(QTime::currentTime().toString(Qt::SystemLocaleLongDate));
+    Q_EMIT insertText(mComposerInterface->longTime());
 }
 
 void QuickTextMenu::insertDayOfWeek()
 {
-    const QDateTime date = QDateTime::currentDateTime().toLocalTime();
-    const QString str = QLocale().dayName(date.date().dayOfWeek(), QLocale::LongFormat);
-    Q_EMIT insertText(str);
+    Q_EMIT insertText(mComposerInterface->insertDayOfWeek());
 }
