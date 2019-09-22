@@ -48,7 +48,7 @@ public:
     ~ItineraryMemento() override = default;
     void detach() override;
 
-    static const char* identifier();
+    static const char *identifier();
 
     bool isParsed(const KMime::ContentIndex &index) const;
     void setParsed(const KMime::ContentIndex &index);
@@ -73,14 +73,21 @@ public:
         QString serialNumber;
         QByteArray rawData;
     };
-    const std::vector<PassData>& passData() const { return m_passes; }
+    const std::vector<PassData> &passData() const
+    {
+        return m_passes;
+    }
 
     struct DocumentData {
         QString docId;
         QVariant docInfo;
         QByteArray rawData;
     };
-    const std::vector<DocumentData>& documentData() const { return m_docs; }
+    const std::vector<DocumentData> &documentData() const
+    {
+        return m_docs;
+    }
+
     void addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData);
 
 private:

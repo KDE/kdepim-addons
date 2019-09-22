@@ -32,14 +32,11 @@
 LanguageToolUpdateComboBox::LanguageToolUpdateComboBox(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 LanguageToolUpdateComboBox::~LanguageToolUpdateComboBox()
 {
-
 }
-
 
 void LanguageToolUpdateComboBox::checkListOfLanguagesFromSpecificPath(const QString &url)
 {
@@ -80,7 +77,6 @@ void LanguageToolUpdateComboBox::setLanguageToolCombobox(LanguageToolComboBox *l
 {
     mLanguageToolCombobox = languageToolCombobox;
 }
-
 
 void LanguageToolUpdateComboBox::slotGetLanguagesError(const QString &error)
 {

@@ -59,7 +59,6 @@ void QuickTextMenu::initializeMenu()
     attachmentMenuVariable->addAction(i18n("Names and Sizes"), this, &QuickTextMenu::insertNamesAndSizesOfAttachment);
     mMenu->addMenu(attachmentMenuVariable);
 
-
     QMenu *dateTimeMenuVariable = new QMenu(i18n("Date/Time"), mMenu);
     dateTimeMenuVariable->addAction(i18n("Day Of Week"), this, &QuickTextMenu::insertDayOfWeek);
     dateTimeMenuVariable->addAction(i18n("Date (%1)", QDate::currentDate().toString(Qt::SystemLocaleShortDate)), this, &QuickTextMenu::insertShortDate);
@@ -68,11 +67,9 @@ void QuickTextMenu::initializeMenu()
     dateTimeMenuVariable->addAction(i18n("Time (%1)", QTime::currentTime().toString(Qt::SystemLocaleLongDate)), this, &QuickTextMenu::insertLongTime);
     mMenu->addMenu(dateTimeMenuVariable);
 
-
     QMenu *miscVariable = new QMenu(i18n("Misc"), mMenu);
     miscVariable->addAction(i18n("Subject"), this, &QuickTextMenu::insertSubject);
     mMenu->addMenu(miscVariable);
-
 }
 
 QMenu *QuickTextMenu::menu() const

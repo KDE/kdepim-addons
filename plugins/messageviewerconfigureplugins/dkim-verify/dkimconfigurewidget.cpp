@@ -22,7 +22,6 @@
 #include <QWidget>
 #include <QVBoxLayout>
 
-
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
     : QWidget(parent)
 {

@@ -36,7 +36,7 @@ void ItineraryMemento::detach()
 {
 }
 
-const char* ItineraryMemento::identifier()
+const char *ItineraryMemento::identifier()
 {
     return "org.kde.messageviewer.itineraryData";
 }

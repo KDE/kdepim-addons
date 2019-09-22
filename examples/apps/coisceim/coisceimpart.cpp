@@ -26,7 +26,6 @@
 
 #include <kpluginfactory.h>
 
-
 K_PLUGIN_FACTORY(CoisceimPartFactory, registerPlugin<CoisceimPart>();
                  )
 

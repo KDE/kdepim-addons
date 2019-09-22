@@ -60,7 +60,6 @@ GrammarResultWidget::~GrammarResultWidget()
 
 void GrammarResultWidget::addExtraWidget()
 {
-
 }
 
 void GrammarResultWidget::setText(const QString &str)

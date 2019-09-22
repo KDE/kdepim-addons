@@ -39,7 +39,6 @@ void GrammarResultWidgetTest::shouldHaveDefaultValue()
     GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 
-
     QToolButton *closeBtn = w.findChild<QToolButton *>(QStringLiteral("close-button"));
     QVERIFY(closeBtn);
     QVERIFY(!closeBtn->icon().isNull());

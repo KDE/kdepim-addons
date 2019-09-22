@@ -495,9 +495,9 @@ public:
         Q_ASSERT(!email.isEmpty());   // delivery must be possible
 
         Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
-                         status,
-                         !myself.isNull() ? myself.role() : heuristicalRole(incidence),
-                         myself.uid());
+                           status,
+                           !myself.isNull() ? myself.role() : heuristicalRole(incidence),
+                           myself.uid());
         if (!myself.isNull()) {
             newMyself.setDelegate(myself.delegate());
             newMyself.setDelegator(myself.delegator());
@@ -979,9 +979,9 @@ public:
             KEmailAddress::extractEmailAddressAndName(receiver, email, name);
             if (!email.isEmpty()) {
                 Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
-                                 status,
-                                 heuristicalRole(incidence),
-                                 QString());
+                                   status,
+                                   heuristicalRole(incidence),
+                                   QString());
                 incidence->clearAttendees();
                 incidence->addAttendee(newMyself);
                 ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver);
@@ -1107,8 +1107,8 @@ public:
     {
         // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
         if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
-            OrgKdeKorganizerCalendarInterface iface (QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                    QDBusConnection::sessionBus(), nullptr);
+            OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
+                                                    QDBusConnection::sessionBus(), nullptr);
             if (!iface.isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface.lastError().message();
                 return;

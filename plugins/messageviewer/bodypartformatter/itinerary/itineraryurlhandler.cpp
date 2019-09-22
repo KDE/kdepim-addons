@@ -215,10 +215,9 @@ void ItineraryUrlHandler::showCalendar(const QDate &date) const
 {
     // ensure KOrganizer or Kontact are running
     if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
-
         // select the date of the reservation
         QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());
+                                 QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());
         if (!korgIface.isValid()) {
             qCWarning(ITINERARY_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
             return;
@@ -295,8 +294,8 @@ void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart
     }
 
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
-        QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
-        QStringLiteral("org.kde.kdeconnect.device.share"), method);
+                                                      QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
+                                                      QStringLiteral("org.kde.kdeconnect.device.share"), method);
     msg.setArguments({QUrl::fromLocalFile(fileName).toString()});
 
     QDBusConnection::sessionBus().send(msg);

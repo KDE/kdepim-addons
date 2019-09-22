@@ -51,7 +51,7 @@ void LanguageToolResultWidget::checkGrammar()
     job->setUrl(LanguageToolManager::self()->languageToolCheckPath());
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     job->setText(mResult->toPlainText());
-    job->setLanguage(/*LanguageToolManager::self()->language()*/mLanguageToolComboBox->language());
+    job->setLanguage(/*LanguageToolManager::self()->language()*/ mLanguageToolComboBox->language());
     connect(job, &LanguageToolResultJob::finished, this, &LanguageToolResultWidget::slotCheckGrammarFinished);
     connect(job, &LanguageToolResultJob::error, this, &LanguageToolResultWidget::slotError);
     job->start();
@@ -69,7 +69,6 @@ void LanguageToolResultWidget::slotError(const QString &str)
 {
     KMessageBox::error(this, i18n("An error was reported: %1", str), i18n("Failed to check grammar."));
 }
-
 
 void LanguageToolResultWidget::addExtraWidget()
 {

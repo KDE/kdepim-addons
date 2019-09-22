@@ -32,7 +32,6 @@
 #include <QLabel>
 #include <QToolButton>
 
-
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
 {

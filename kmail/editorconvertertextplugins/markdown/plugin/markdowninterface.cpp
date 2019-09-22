@@ -61,8 +61,9 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     mStatusBarLabel = new MessageComposer::StatusBarLabelToggledState(parentWidget());
     connect(mStatusBarLabel, &MessageComposer::StatusBarLabelToggledState::toggleModeChanged, this, [this](bool checked) {
         mAction->setChecked(checked);
-        slotActivated(checked);}
-    );
+        slotActivated(checked);
+    }
+            );
     QFont f = mStatusBarLabel->font();
     f.setBold(true);
     mStatusBarLabel->setFont(f);
@@ -77,7 +78,9 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     QMenu *titleMenu = new QMenu(i18n("Add Title"), mardownMenu);
     mardownMenu->addMenu(titleMenu);
     for (int i = 1; i < 5; ++i) {
-        titleMenu->addAction(i18n("Level %1", QString::number(i)), this, [this, i]() {addTitle(i);});
+        titleMenu->addAction(i18n("Level %1", QString::number(i)), this, [this, i]() {
+            addTitle(i);
+        });
     }
     mardownMenu->addAction(i18n("Horizontal Rule"), this, &MarkdownInterface::addHorizontalRule);
     mardownMenu->addSeparator();

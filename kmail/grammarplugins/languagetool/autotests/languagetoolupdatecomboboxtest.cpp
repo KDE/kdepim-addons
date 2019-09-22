@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "languagetoolupdatecomboboxtest.h"
 #include "languagetoolupdatecombobox.h"
 #include <QTest>
@@ -26,7 +25,6 @@ QTEST_MAIN(LanguageToolUpdateComboBoxTest)
 LanguageToolUpdateComboBoxTest::LanguageToolUpdateComboBoxTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void LanguageToolUpdateComboBoxTest::shouldHaveDefaultValues()

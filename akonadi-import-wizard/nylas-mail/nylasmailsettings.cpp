@@ -25,7 +25,6 @@
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
 
-
 NylasMailSettings::NylasMailSettings(const QString &filename)
 {
 }

@@ -47,7 +47,7 @@ public:
     ~SyncItipHandler();
 
 public Q_SLOTS:
-    void onITipMessageProcessed(Akonadi::ITIPHandler::Result, const QString & errorMessage);
+    void onITipMessageProcessed(Akonadi::ITIPHandler::Result, const QString &errorMessage);
 
 public:
     QString errorMessage() const;

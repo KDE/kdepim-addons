@@ -82,14 +82,14 @@ void LanguageToolConfigWidgetTest::shouldUpdateWidgets()
     QLabel *instancePathLabel = w.findChild<QLabel *>(QStringLiteral("instancepath"));
 
     QLineEdit *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
-    QTest::mouseClick( mUseLocalInstance, Qt::LeftButton );
+    QTest::mouseClick(mUseLocalInstance, Qt::LeftButton);
 
     QVERIFY(mUseLocalInstance->isChecked());
     QVERIFY(mUseLocalInstance->isEnabled());
     QVERIFY(instancePathLabel->isEnabled());
     QVERIFY(mInstancePath->isEnabled());
 
-    QTest::mouseClick( mUseLocalInstance, Qt::LeftButton );
+    QTest::mouseClick(mUseLocalInstance, Qt::LeftButton);
     QVERIFY(!mUseLocalInstance->isChecked());
     QVERIFY(mUseLocalInstance->isEnabled());
     QVERIFY(!instancePathLabel->isEnabled());

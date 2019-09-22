@@ -188,6 +188,7 @@ public:
     {
         return QStringLiteral("vcardhandler");
     }
+
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
     {
         Q_UNUSED(viewerInstance);
