@@ -21,9 +21,12 @@
 #define QUICKTEXTMENU_H
 
 #include <QObject>
+
+#include <MessageComposer/ConvertSnippetVariablesUtil>
 class QMenu;
 namespace MessageComposer {
 class PluginComposerInterface;
+class ConvertSnippetVariableMenu;
 }
 class QuickTextMenu : public QObject
 {
@@ -37,22 +40,11 @@ public:
 
 Q_SIGNALS:
     void insertText(const QString &str);
-
+    void insertVariable(MessageComposer::ConvertSnippetVariablesUtil::VariableType type);
 private:
     void initializeMenu();
-    void insertNamesAttachment();
-    void insertToEmails();
-    void insertCcEmails();
-    void insertFromEmails();
-    void insertNamesAndSizesOfAttachment();
-    void insertSubject();
-    void insertShortDate();
-    void insertLongDate();
-    void insertShortTime();
-    void insertLongTime();
-    void insertDayOfWeek();
     QWidget *mParentWidget = nullptr;
-    QMenu *mMenu = nullptr;
+    MessageComposer::ConvertSnippetVariableMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
 };
 
