@@ -20,6 +20,7 @@
 #include "quicktextmenu.h"
 #include <KLocalizedString>
 #include <MessageComposer/PluginComposerInterface>
+#include <MessageComposer/ConvertSnippetVariablesJob>
 #include <QMenu>
 #include <QDate>
 #include <QTime>
@@ -84,7 +85,7 @@ void QuickTextMenu::setPluginComposerInterface(MessageComposer::PluginComposerIn
 
 void QuickTextMenu::insertNumberOfAttachment()
 {
-    Q_EMIT insertText(QString::number(mComposerInterface->attachments().count()));
+    Q_EMIT insertText(mComposerInterface->convertVariable(QStringLiteral("%ATTACHMENTCOUNT")));
 }
 
 void QuickTextMenu::insertNamesAttachment()
