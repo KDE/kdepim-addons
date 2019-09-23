@@ -40,7 +40,6 @@ Q_SIGNALS:
 
 private:
     void initializeMenu();
-    void insertNumberOfAttachment();
     void insertNamesAttachment();
     void insertToEmails();
     void insertCcEmails();
