@@ -21,14 +21,14 @@
 #define QUICKTEXTMENU_H
 
 #include <QObject>
-
+#include "quicktext_export.h"
 #include <MessageComposer/ConvertSnippetVariablesUtil>
 class QMenu;
 namespace MessageComposer {
 class PluginComposerInterface;
 class ConvertSnippetVariableMenu;
 }
-class QuickTextMenu : public QObject
+class QUICKTEXT_EXPORT QuickTextMenu : public QObject
 {
     Q_OBJECT
 public:

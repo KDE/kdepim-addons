@@ -17,28 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef QUICKTEXTPLUGINEDITOR_H
-#define QUICKTEXTPLUGINEDITOR_H
-
-#include <messagecomposer/plugineditor.h>
-
-#include <messagecomposer/plugineditorinterface.h>
-#include <QVariant>
-
-class QuickTextPluginEditor : public MessageComposer::PluginEditor
+#ifndef QUICKTEXTCONFIGUREDIALOG_H
+#define QUICKTEXTCONFIGUREDIALOG_H
+#include <QDialog>
+#include "quicktext_export.h"
+class QuickTextConfigureWidget;
+class QUICKTEXT_EXPORT QuickTextConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
-    explicit QuickTextPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~QuickTextPluginEditor() override;
-
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
-    Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
-
-    bool hasConfigureDialog() const override;
-    void showConfigureDialog(QWidget *parent) override;
-
-    bool canProcessKeyEvent() const override;
+    explicit QuickTextConfigureDialog(QWidget *parent = nullptr);
+    ~QuickTextConfigureDialog();
+private:
+    QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
 };
 
-#endif
+#endif // QUICKTEXTCONFIGUREDIALOG_H

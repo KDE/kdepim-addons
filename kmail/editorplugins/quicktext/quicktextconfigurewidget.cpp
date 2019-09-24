@@ -17,28 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef QUICKTEXTPLUGINEDITOR_H
-#define QUICKTEXTPLUGINEDITOR_H
+#include "quicktextconfigurewidget.h"
+#include <QVBoxLayout>
+#include <KLocalizedString>
 
-#include <messagecomposer/plugineditor.h>
-
-#include <messagecomposer/plugineditorinterface.h>
-#include <QVariant>
-
-class QuickTextPluginEditor : public MessageComposer::PluginEditor
+QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
+    : QWidget(parent)
 {
-    Q_OBJECT
-public:
-    explicit QuickTextPluginEditor(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
-    ~QuickTextPluginEditor() override;
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+}
 
-    MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
-    Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
+QuickTextConfigureWidget::~QuickTextConfigureWidget()
+{
 
-    bool hasConfigureDialog() const override;
-    void showConfigureDialog(QWidget *parent) override;
-
-    bool canProcessKeyEvent() const override;
-};
-
-#endif
+}

@@ -33,9 +33,10 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+    bool processProcessKeyEvent(QKeyEvent *event) override;
 
 private:
-    void slotActivated();
+    void slotActivated();    
 };
 
 #endif

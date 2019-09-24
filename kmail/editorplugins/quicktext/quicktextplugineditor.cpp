@@ -43,4 +43,21 @@ bool QuickTextPluginEditor::hasStatusBarSupport() const
     return true;
 }
 
+bool QuickTextPluginEditor::hasConfigureDialog() const
+{
+    return true;
+}
+
+void QuickTextPluginEditor::showConfigureDialog(QWidget *parent)
+{
+    //TODO
+}
+
+bool QuickTextPluginEditor::canProcessKeyEvent() const
+{
+    return true;
+}
+
 #include "quicktextplugineditor.moc"
+
+
