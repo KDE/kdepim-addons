@@ -19,9 +19,13 @@
 #include "quicktextconfiguredialog.h"
 #include "quicktextconfigurewidget.h"
 
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
-
+namespace {
+static const char myConfigGroupName[] = "QuickTextConfigureDialog";
+}
 QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -37,9 +41,25 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
     mainLayout->addWidget(buttonBox);
+    writeConfig();
 }
 
 QuickTextConfigureDialog::~QuickTextConfigureDialog()
 {
+    readConfig();
+}
 
+void QuickTextConfigureDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    group.writeEntry("Size", size());
+}
+
+void QuickTextConfigureDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    const QSize sizeDialog = group.readEntry("Size", QSize(300, 350));
+    if (sizeDialog.isValid()) {
+        resize(sizeDialog);
+    }
 }

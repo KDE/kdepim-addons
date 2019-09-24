@@ -29,6 +29,8 @@ public:
     explicit QuickTextConfigureDialog(QWidget *parent = nullptr);
     ~QuickTextConfigureDialog();
 private:
+    void writeConfig();
+    void readConfig();
     QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
 };
 

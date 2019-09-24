@@ -20,6 +20,7 @@
 #include "quicktextplugineditor.h"
 #include "quicktextplugineditorinterface.h"
 #include <kpluginfactory.h>
+#include "quicktextconfiguredialog.h"
 
 K_PLUGIN_CLASS_WITH_JSON(QuickTextPluginEditor, "kmail_quicktextplugin.json")
 
@@ -50,7 +51,11 @@ bool QuickTextPluginEditor::hasConfigureDialog() const
 
 void QuickTextPluginEditor::showConfigureDialog(QWidget *parent)
 {
-    //TODO
+    QPointer<QuickTextConfigureDialog> dlg = new QuickTextConfigureDialog(parent);
+    if (dlg->exec()) {
+        //TODO Q_EMIT configChanged();
+    }
+    delete dlg;
 }
 
 bool QuickTextPluginEditor::canProcessKeyEvent() const
