@@ -17,27 +17,13 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "quicktextconfigurewidgettest.h"
-#include "quicktextconfigurewidget.h"
-#include "quicktexttreewidget.h"
-#include <QTest>
-#include <QVBoxLayout>
-QTEST_MAIN(QuickTextConfigureWidgetTest)
 
-QuickTextConfigureWidgetTest::QuickTextConfigureWidgetTest(QObject *parent)
+#include "quicktextstackwidgettest.h"
+#include <QTest>
+QTEST_MAIN(QuickTextStackWidgetTest)
+
+QuickTextStackWidgetTest::QuickTextStackWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
-}
-
-void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
-{
-    QuickTextConfigureWidget w;
-
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
-
-    QuicktextTreeWidget *mSnippetWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("snippetwidget"));
-    QVERIFY(mSnippetWidget);
 }

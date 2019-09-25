@@ -16,46 +16,18 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
-#ifndef QUICKTEXT_QUICKTEXTWIDGET_H
-#define QUICKTEXT_QUICKTEXTWIDGET_H
 
-#include <QTreeView>
+#ifndef QUICKTEXTWIDGET_H
+#define QUICKTEXTWIDGET_H
 
-class QContextMenuEvent;
-
-class QuicktextManager;
-class QuicktextWidget : public QTreeView
+#include <QWidget>
+#include "quicktext_export.h"
+class QUICKTEXT_EXPORT QuickTextWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit QuicktextWidget(QWidget *parent = nullptr);
-    ~QuicktextWidget() override;
-
-    QuicktextManager *snippetsManager() const;
-
-protected:
-    void contextMenuEvent(QContextMenuEvent *) override;
-    void dropEvent(QDropEvent *) override;
-
-Q_SIGNALS:
-    void insertSnippetText(const QString &str);
-
-    void addSnippet();
-    void editSnippet();
-    void addSnippetGroup();
-    void editSnippetGroup();
-
-private:
-    void deleteSnippet();
-    void deleteSnippetGroup();
-    void selectionWasChanged();
-    QuicktextManager *mSnippetsManager = nullptr;
-    QAction *mAddSnippetAction = nullptr;
-    QAction *mEditSnippetAction = nullptr;
-    QAction *mDeleteSnippetAction = nullptr;
-    QAction *mAddSnippetGroupAction = nullptr;
-    QAction *mEditSnippetGroupAction = nullptr;
-    QAction *mDeleteSnippetGroupAction = nullptr;
+    explicit QuickTextWidget(QWidget *parent = nullptr);
+    ~QuickTextWidget();
 };
 
-#endif
+#endif // QUICKTEXTWIDGET_H

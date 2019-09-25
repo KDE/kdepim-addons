@@ -22,7 +22,7 @@
 
 #include <QWidget>
 #include "quicktext_export.h"
-class QuicktextWidget;
+class QuicktextTreeWidget;
 class QUICKTEXT_EXPORT QuickTextConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -30,7 +30,7 @@ public:
     explicit QuickTextConfigureWidget(QWidget *parent = nullptr);
     ~QuickTextConfigureWidget();
 private:
-    QuicktextWidget *mSnippetWidget = nullptr;
+    QuicktextTreeWidget *mSnippetWidget = nullptr;
 };
 
 #endif // QUICKTEXTCONFIGUREWIDGET_H

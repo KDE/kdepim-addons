@@ -3,7 +3,9 @@ set(kmail_quicktextplugin_private_SRCS
     quicktextconfigurewidget.cpp
     quicktextconfiguredialog.cpp
     quicktextmanager.cpp
+    quicktexttreewidget.cpp
     quicktextwidget.cpp
+    quicktextstackwidget.cpp
 )
 
 
