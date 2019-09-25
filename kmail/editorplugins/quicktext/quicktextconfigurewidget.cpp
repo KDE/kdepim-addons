@@ -18,8 +18,10 @@
 */
 
 #include "quicktextconfigurewidget.h"
+#include "quicktextwidget.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <MailCommon/SnippetWidget>
 
 QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
     : QWidget(parent)
@@ -27,6 +29,11 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mSnippetWidget = new QuicktextWidget(this);
+    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
+
+    mainLayout->addWidget(mSnippetWidget);
 }
 
 QuickTextConfigureWidget::~QuickTextConfigureWidget()

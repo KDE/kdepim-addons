@@ -2,6 +2,8 @@ set(kmail_quicktextplugin_private_SRCS
     quicktextmenu.cpp
     quicktextconfigurewidget.cpp
     quicktextconfiguredialog.cpp
+    quicktextmanager.cpp
+    quicktextwidget.cpp
 )
 
 
@@ -10,7 +12,7 @@ generate_export_header(kmailquicktextpluginprivate BASE_NAME quicktext)
 
 target_link_libraries(kmailquicktextpluginprivate
 PRIVATE
-    KF5::I18n KF5::CoreAddons Qt5::Gui Qt5::Widgets KF5::MessageComposer
+    KF5::I18n KF5::CoreAddons Qt5::Gui Qt5::Widgets KF5::MessageComposer KF5::MailCommon KF5::XmlGui
 )
 
 set_target_properties(kmailquicktextpluginprivate
