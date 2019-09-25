@@ -28,6 +28,8 @@ class QuickTextConfigureWidgetTest : public QObject
 public:
     explicit QuickTextConfigureWidgetTest(QObject *parent = nullptr);
     ~QuickTextConfigureWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // QUICKTEXTCONFIGUREWIDGETTEST_H

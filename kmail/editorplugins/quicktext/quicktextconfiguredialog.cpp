@@ -31,7 +31,6 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
     mQuickTextConfigureWidget = new QuickTextConfigureWidget(this);
     mQuickTextConfigureWidget->setObjectName(QStringLiteral("quicktextconfigurewidget"));
     mainLayout->addWidget(mQuickTextConfigureWidget);

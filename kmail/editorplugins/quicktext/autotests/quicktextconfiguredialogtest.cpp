@@ -38,7 +38,6 @@ void QuickTextConfigureDialogTest::shouldHaveDefaultValues()
 
     QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QuickTextConfigureWidget *mQuickTextConfigureWidget = dlg.findChild<QuickTextConfigureWidget *>(QStringLiteral("quicktextconfigurewidget"));
     QVERIFY(mQuickTextConfigureWidget);
