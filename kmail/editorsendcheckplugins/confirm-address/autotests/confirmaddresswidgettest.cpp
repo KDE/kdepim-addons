@@ -19,7 +19,6 @@
 
 #include "confirmaddresswidgettest.h"
 #include "../confirmaddresswidget.h"
-#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QVBoxLayout>
 #include <QListWidget>
@@ -41,7 +40,7 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
     ConfirmAddressWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QListWidget *listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
     QVERIFY(listEmails);

@@ -19,7 +19,6 @@
 
 #include "markdowncreateimagewidgettest.h"
 #include "markdowncreateimagewidget.h"
-#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QFormLayout>
 #include <QLabel>
@@ -41,8 +40,8 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
 
     QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);

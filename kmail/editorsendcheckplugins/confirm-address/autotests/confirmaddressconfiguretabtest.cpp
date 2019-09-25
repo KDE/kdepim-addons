@@ -19,7 +19,6 @@
 
 #include "confirmaddressconfiguretabtest.h"
 #include "../confirmaddressconfiguretab.h"
-#include "kdepimtest_layout.h"
 #include <QTabWidget>
 #include <QTest>
 #include <QVBoxLayout>
@@ -38,7 +37,7 @@ void ConfirmAddressConfigureTabTest::shouldHaveDefaultValue()
     ConfirmAddressConfigureTab w(nullptr);
     QVBoxLayout *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
-    KdepimTestLayout::checkContentsMargins(0, vboxlayout);
+    QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);

@@ -19,9 +19,9 @@
 
 #include "markdownconfigurewidgettest.h"
 #include "markdownconfigurewidget.h"
-#include "kdepimtest_layout.h"
 #include <QCheckBox>
 #include <QTest>
+#include <QVBoxLayout>
 
 QTEST_MAIN(MarkdownConfigureWidgetTest)
 MarkdownConfigureWidgetTest::MarkdownConfigureWidgetTest(QObject *parent)
@@ -34,7 +34,7 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     MarkdownConfigureWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QCheckBox *mLatexSupport = w.findChild<QCheckBox *>(QStringLiteral("latex"));
     QVERIFY(mLatexSupport);

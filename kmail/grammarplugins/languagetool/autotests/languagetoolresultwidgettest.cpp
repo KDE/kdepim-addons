@@ -19,8 +19,8 @@
 
 #include "languagetoolresultwidgettest.h"
 #include "languagetoolresultwidget.h"
-#include "kdepimtest_layout.h"
 #include <QTest>
+#include <QVBoxLayout>
 #include <grammarresulttextedit.h>
 QTEST_MAIN(LanguageToolResultWidgetTest)
 LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
@@ -33,7 +33,8 @@ void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
     LanguageToolResultWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
     GrammarResultTextEdit *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 }

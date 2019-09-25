@@ -19,7 +19,6 @@
 
 #include "grammalecteconfigwidgettest.h"
 #include "grammalecteconfigwidget.h"
-#include "kdepimtest_layout.h"
 #include <QTabWidget>
 #include <QTest>
 #include <QVBoxLayout>
@@ -42,7 +41,7 @@ void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
     GrammalecteConfigWidget w(nullptr, true);
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QTabWidget *mTab = w.findChild<QTabWidget *>(QStringLiteral("mTab"));
     QVERIFY(mTab);

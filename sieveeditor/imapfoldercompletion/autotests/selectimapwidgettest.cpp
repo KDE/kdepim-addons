@@ -19,7 +19,6 @@
 
 #include "selectimapwidgettest.h"
 #include "../selectimapwidget.h"
-#include "kdepimtest_layout.h"
 
 #include <QTest>
 #include <QHBoxLayout>
@@ -39,7 +38,9 @@ void SelectImapWidgetTest::shouldHaveDefaultValue()
 {
     SelectImapWidget w;
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
     QLineEdit *mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());

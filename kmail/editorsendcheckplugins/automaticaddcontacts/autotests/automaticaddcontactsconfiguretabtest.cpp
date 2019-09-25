@@ -19,7 +19,6 @@
 
 #include "automaticaddcontactsconfiguretabtest.h"
 #include "../automaticaddcontactsconfiguretab.h"
-#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QStandardPaths>
 #include <QHBoxLayout>
@@ -40,7 +39,7 @@ void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
     AutomaticAddContactsConfigureTab w(nullptr);
     QHBoxLayout *vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
-    KdepimTestLayout::checkContentsMargins(0, vboxlayout);
+    QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
     QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }

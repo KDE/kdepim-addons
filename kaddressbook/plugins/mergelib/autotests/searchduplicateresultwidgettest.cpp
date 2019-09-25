@@ -21,7 +21,6 @@
 #include "../searchduplicate/searchduplicateresultwidget.h"
 #include "../searchduplicate/resultduplicatetreewidget.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
-#include "kdepimtest_layout.h"
 #include <KaddressbookGrantlee/GrantleeContactViewer>
 #include <QSplitter>
 #include <QLayout>
@@ -66,8 +65,7 @@ SearchDuplicateResultWidgetTest::~SearchDuplicateResultWidgetTest()
 void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
 {
     KABMergeContacts::SearchDuplicateResultWidget w;
-
-    KdepimTestLayout::checkContentsMargins(0, w.layout());
+    QCOMPARE(w.layout()->contentsMargins(), QMargins(0, 0, 0, 0));
 
     KABMergeContacts::ResultDuplicateTreeWidget *tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(QStringLiteral("result_treewidget"));
     QVERIFY(tree);

@@ -19,7 +19,6 @@
 
 #include "viewerpluginexternalconfigurewidgettest.h"
 #include "../configuredialog/viewerpluginexternalconfigurewidget.h"
-#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QLabel>
 #include <QVBoxLayout>
@@ -42,7 +41,8 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(label);
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
 
     QListWidget *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);
