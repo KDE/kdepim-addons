@@ -29,6 +29,8 @@ class QuickTextStackWidgetTest : public QObject
 public:
     explicit QuickTextStackWidgetTest(QObject *parent = nullptr);
     ~QuickTextStackWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // QUICKTEXTSTACKWIDGETTEST_H

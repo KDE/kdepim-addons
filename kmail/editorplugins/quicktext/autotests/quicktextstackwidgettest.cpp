@@ -19,11 +19,21 @@
 
 
 #include "quicktextstackwidgettest.h"
+#include "quicktextstackwidget.h"
 #include <QTest>
+#include <QHBoxLayout>
 QTEST_MAIN(QuickTextStackWidgetTest)
 
 QuickTextStackWidgetTest::QuickTextStackWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void QuickTextStackWidgetTest::shouldHaveDefaultValues()
+{
+    QuickTextStackWidget w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
 }
