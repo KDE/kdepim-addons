@@ -19,7 +19,7 @@
 
 #include "quicktextconfigurewidgettest.h"
 #include "quicktextconfigurewidget.h"
-#include "quicktexttreewidget.h"
+#include "quicktextwidget.h"
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(QuickTextConfigureWidgetTest)
@@ -38,6 +38,6 @@ void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QuicktextTreeWidget *mSnippetWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("snippetwidget"));
+    QuickTextWidget *mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
     QVERIFY(mSnippetWidget);
 }

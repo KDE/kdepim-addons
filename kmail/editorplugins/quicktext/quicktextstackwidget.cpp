@@ -18,7 +18,9 @@
 */
 
 #include "quicktextstackwidget.h"
+#include "quicktextsnippetgroup.h"
 #include <QHBoxLayout>
+#include <QStackedWidget>
 
 QuickTextStackWidget::QuickTextStackWidget(QWidget *parent)
     : QWidget(parent)
@@ -26,9 +28,21 @@ QuickTextStackWidget::QuickTextStackWidget(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mStackedWidget = new QStackedWidget(this);
+    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mainLayout->addWidget(mStackedWidget);
+
+    initializeStackedWidget();
 }
 
 QuickTextStackWidget::~QuickTextStackWidget()
 {
 
+}
+
+void QuickTextStackWidget::initializeStackedWidget()
+{
+    mQuickTextSnippetGroup = new QuickTextSnippetGroup(this);
+    mStackedWidget->addWidget(mQuickTextSnippetGroup);
 }

@@ -6,6 +6,8 @@ set(kmail_quicktextplugin_private_SRCS
     quicktexttreewidget.cpp
     quicktextwidget.cpp
     quicktextstackwidget.cpp
+    quicktextsnippetgroup.cpp
+    quicktextsnippet.cpp
 )
 
 

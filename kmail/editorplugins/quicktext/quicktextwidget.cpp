@@ -16,7 +16,9 @@
    the Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
    Boston, MA 02110-1301, USA.
 */
+#include "quicktexttreewidget.h"
 #include "quicktextwidget.h"
+#include "quicktextstackwidget.h"
 #include <QHBoxLayout>
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
@@ -25,6 +27,15 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mTreeWidget = new QuicktextTreeWidget(this);
+    mTreeWidget->setObjectName(QStringLiteral("treewidget"));
+    mainLayout->addWidget(mTreeWidget);
+
+    mStackedWidget = new QuickTextStackWidget(this);
+    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mainLayout->addWidget(mStackedWidget);
+
 }
 
 QuickTextWidget::~QuickTextWidget()

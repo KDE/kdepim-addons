@@ -17,26 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "quicktextconfigurewidget.h"
-#include "quicktextwidget.h"
-#include <QVBoxLayout>
+#include "quicktextsnippet.h"
+#include <QFormLayout>
 #include <KLocalizedString>
-#include <MailCommon/SnippetWidget>
 
-QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
+QuickTextSnippet::QuickTextSnippet(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    mSnippetWidget = new QuickTextWidget(this);
-    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
-
-    mainLayout->addWidget(mSnippetWidget);
 }
 
-QuickTextConfigureWidget::~QuickTextConfigureWidget()
+QuickTextSnippet::~QuickTextSnippet()
 {
 
 }

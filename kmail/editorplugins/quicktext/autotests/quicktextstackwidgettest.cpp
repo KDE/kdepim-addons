@@ -22,6 +22,7 @@
 #include "quicktextstackwidget.h"
 #include <QTest>
 #include <QHBoxLayout>
+#include <QStackedWidget>
 QTEST_MAIN(QuickTextStackWidgetTest)
 
 QuickTextStackWidgetTest::QuickTextStackWidgetTest(QObject *parent)
@@ -36,4 +37,8 @@ void QuickTextStackWidgetTest::shouldHaveDefaultValues()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
+
+
+    QStackedWidget *mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    QVERIFY(mStackedWidget);
 }

@@ -22,12 +22,18 @@
 
 #include <QWidget>
 #include "quicktext_export.h"
+class QStackedWidget;
+class QuickTextSnippetGroup;
 class QUICKTEXT_EXPORT QuickTextStackWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit QuickTextStackWidget(QWidget *parent = nullptr);
     ~QuickTextStackWidget();
+private:
+    void initializeStackedWidget();
+    QStackedWidget *mStackedWidget = nullptr;
+    QuickTextSnippetGroup *mQuickTextSnippetGroup = nullptr;
 };
 
 #endif // QUICKTEXTSTACKWIDGET_H

@@ -17,26 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "quicktextconfigurewidget.h"
-#include "quicktextwidget.h"
-#include <QVBoxLayout>
-#include <KLocalizedString>
-#include <MailCommon/SnippetWidget>
+#ifndef QUICKTEXTSNIPPETGROUPTEST_H
+#define QUICKTEXTSNIPPETGROUPTEST_H
 
-QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
-    : QWidget(parent)
+#include <QObject>
+
+class QuickTextSnippetGroupTest : public QObject
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    Q_OBJECT
+public:
+    explicit QuickTextSnippetGroupTest(QObject *parent = nullptr);
+    ~QuickTextSnippetGroupTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
+};
 
-    mSnippetWidget = new QuickTextWidget(this);
-    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
-
-    mainLayout->addWidget(mSnippetWidget);
-}
-
-QuickTextConfigureWidget::~QuickTextConfigureWidget()
-{
-
-}
+#endif // QUICKTEXTSNIPPETGROUPTEST_H

@@ -22,12 +22,17 @@
 
 #include <QWidget>
 #include "quicktext_export.h"
+class QuicktextTreeWidget;
+class QuickTextStackWidget;
 class QUICKTEXT_EXPORT QuickTextWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit QuickTextWidget(QWidget *parent = nullptr);
     ~QuickTextWidget();
+private:
+    QuicktextTreeWidget *mTreeWidget = nullptr;
+    QuickTextStackWidget *mStackedWidget = nullptr;
 };
 
 #endif // QUICKTEXTWIDGET_H
