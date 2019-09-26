@@ -24,7 +24,9 @@
 #include <KItinerary/CreativeWork>
 #include <KItinerary/DocumentUtil>
 #include <KItinerary/ExtractorEngine>
+#include <KItinerary/Event>
 #include <KItinerary/JsonLdDocument>
+#include <KItinerary/Reservation>
 
 #include <KPkPass/Pass>
 
@@ -127,6 +129,21 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     const auto data = engine.extract();
     //qCDebug(ITINERARY_LOG).noquote() << QJsonDocument(data).toJson();
     auto decodedData = JsonLdDocument::fromJson(data);
+
+    for (auto it = decodedData.begin(); it != decodedData.end();) {
+        if (JsonLd::isA<Event>(*it)) { // promote Event to EventReservation
+            EventReservation res;
+            res.setReservationFor(*it);
+            *it = res;
+        }
+        // filter out non-Reservation objects we can't display
+        if (!JsonLd::canConvert<Reservation>(*it)) {
+            it = decodedData.erase(it);
+            continue;
+        }
+
+        ++it;
+    }
 
     if (!decodedData.isEmpty()) {
         if (isPdf) {
