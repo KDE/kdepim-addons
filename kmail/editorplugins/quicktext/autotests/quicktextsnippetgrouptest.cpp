@@ -19,6 +19,9 @@
 
 #include "quicktextsnippetgrouptest.h"
 #include "quicktextsnippetgroup.h"
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
 #include <QTest>
 QTEST_MAIN(QuickTextSnippetGroupTest)
 
@@ -29,5 +32,15 @@ QuickTextSnippetGroupTest::QuickTextSnippetGroupTest(QObject *parent)
 
 void QuickTextSnippetGroupTest::shouldHaveDefaultValues()
 {
-    //TODO
+    QuickTextSnippetGroup w;
+    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
+    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("name"));
+    QVERIFY(lab);
+
+    QLineEdit *mGroupNameLineEdit = w.findChild<QLineEdit *>(QStringLiteral("groupnamelineedit"));
+    QVERIFY(mGroupNameLineEdit);
+    QVERIFY(mGroupNameLineEdit->text().isEmpty());
 }

@@ -22,12 +22,20 @@
 
 #include <QWidget>
 #include "quicktext_export.h"
+
+class QLineEdit;
+
 class QUICKTEXT_EXPORT QuickTextSnippetGroup : public QWidget
 {
     Q_OBJECT
 public:
     explicit QuickTextSnippetGroup(QWidget *parent = nullptr);
     ~QuickTextSnippetGroup();
+
+    void setGroupName(const QString &name);
+    Q_REQUIRED_RESULT QString groupName() const;
+private:
+    QLineEdit *mGroupNameLineEdit = nullptr;
 };
 
 #endif // QUICKTEXTSNIPPETGROUP_H

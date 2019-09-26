@@ -19,6 +19,7 @@
 
 #include "quicktextstackwidget.h"
 #include "quicktextsnippetgroup.h"
+#include "quicktextsnippet.h"
 #include <QHBoxLayout>
 #include <QStackedWidget>
 
@@ -44,4 +45,8 @@ void QuickTextStackWidget::initializeStackedWidget()
 {
     mQuickTextSnippetGroup = new QuickTextSnippetGroup(this);
     mStackedWidget->addWidget(mQuickTextSnippetGroup);
+
+
+    mQuickTextSnipper = new QuickTextSnippet(this);
+    mStackedWidget->addWidget(mQuickTextSnipper);
 }

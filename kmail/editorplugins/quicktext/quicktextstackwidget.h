@@ -24,16 +24,22 @@
 #include "quicktext_export.h"
 class QStackedWidget;
 class QuickTextSnippetGroup;
+class QuickTextSnippet;
 class QUICKTEXT_EXPORT QuickTextStackWidget : public QWidget
 {
     Q_OBJECT
 public:
+    enum class PageType {
+        GroupPage,
+        SnippetPage,
+    };
     explicit QuickTextStackWidget(QWidget *parent = nullptr);
     ~QuickTextStackWidget();
 private:
     void initializeStackedWidget();
     QStackedWidget *mStackedWidget = nullptr;
     QuickTextSnippetGroup *mQuickTextSnippetGroup = nullptr;
+    QuickTextSnippet *mQuickTextSnipper = nullptr;
 };
 
 #endif // QUICKTEXTSTACKWIDGET_H

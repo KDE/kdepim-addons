@@ -19,12 +19,36 @@
 
 #include "quicktextsnippetgroup.h"
 #include <QHBoxLayout>
+#include <QLabel>
+#include <KLocalizedString>
+#include <QLineEdit>
 
 QuickTextSnippetGroup::QuickTextSnippetGroup(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    QLabel *lab = new QLabel(i18n("Name:"), this);
+    lab->setObjectName(QStringLiteral("name"));
+    mainLayout->addWidget(lab);
+
+    mGroupNameLineEdit = new QLineEdit(this);
+    mGroupNameLineEdit->setObjectName(QStringLiteral("groupnamelineedit"));
+    mainLayout->addWidget(mGroupNameLineEdit);
 }
 
 QuickTextSnippetGroup::~QuickTextSnippetGroup()
 {
+}
+
+void QuickTextSnippetGroup::setGroupName(const QString &name)
+{
+    mGroupNameLineEdit->setText(name);
+}
+
+QString QuickTextSnippetGroup::groupName() const
+{
+    return mGroupNameLineEdit->text();
 }
