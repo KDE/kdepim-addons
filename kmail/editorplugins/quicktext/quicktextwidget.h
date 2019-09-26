@@ -20,6 +20,7 @@
 #ifndef QUICKTEXTWIDGET_H
 #define QUICKTEXTWIDGET_H
 
+#include <QModelIndex>
 #include <QWidget>
 #include "quicktext_export.h"
 class QuicktextTreeWidget;
@@ -55,6 +56,7 @@ private:
 
 
 
+    QModelIndex mCurrentGroupIndex;
     EditMode mMode = EditMode::Unknown;
 
     QuicktextTreeWidget *mTreeWidget = nullptr;

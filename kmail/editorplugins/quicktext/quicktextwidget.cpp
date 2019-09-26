@@ -24,6 +24,7 @@
 #include <MailCommon/SnippetWidget>
 #include <MailCommon/SnippetsModel>
 #include <QDebug>
+#include <KMessageBox>
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
     : QWidget(parent)
@@ -57,21 +58,23 @@ QuickTextWidget::~QuickTextWidget()
 
 void QuickTextWidget::save()
 {
-    switch (mMode) {
-    case EditMode::AddSnippet:
-        saveAddSnippet();
-        break;
-    case EditMode::EditSnippet:
-        saveEditSnippet();
-        break;
-    case EditMode::AddGroup:
-        saveAddGroup();
-        break;
-    case EditMode::EditGroup:
-        saveEditGroup();
-        break;
-    case EditMode::Unknown:
-        break;
+    if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("QuickText was changed. Do you want to save it?"), i18n("Save"))) {
+        switch (mMode) {
+        case EditMode::AddSnippet:
+            saveAddSnippet();
+            break;
+        case EditMode::EditSnippet:
+            saveEditSnippet();
+            break;
+        case EditMode::AddGroup:
+            saveAddGroup();
+            break;
+        case EditMode::EditGroup:
+            saveEditGroup();
+            break;
+        case EditMode::Unknown:
+            break;
+        }
     }
     mMode = EditMode::Unknown;
     mSnippetWidget->clear();
@@ -106,22 +109,22 @@ void QuickTextWidget::editSnippet()
     mSnippetWidget->clear();
     mSnippetWidget->setGroupSelected(false);
 
-    QModelIndex index = mSnippetsManager->selectionModel()->selectedIndexes().first();
-    if (!index.isValid() || index.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
+    mCurrentGroupIndex = mSnippetsManager->selectionModel()->selectedIndexes().first();
+    if (!mCurrentGroupIndex.isValid() || mCurrentGroupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
         return;
     }
 
     const QModelIndex oldGroupIndex = mSnippetsManager->currentGroupIndex();
 
-    const QString oldSnippetName = index.data(MailCommon::SnippetsModel::NameRole).toString();
+    const QString oldSnippetName = mCurrentGroupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
     mSnippetWidget->setGroupModel(mSnippetsManager->model());
     mSnippetWidget->setGroupIndex(oldGroupIndex);
     mSnippetWidget->setName(oldSnippetName);
-    mSnippetWidget->setText(index.data(MailCommon::SnippetsModel::TextRole).toString());
-    mSnippetWidget->setKeyword(index.data(MailCommon::SnippetsModel::KeywordRole).toString());
+    mSnippetWidget->setText(mCurrentGroupIndex.data(MailCommon::SnippetsModel::TextRole).toString());
+    mSnippetWidget->setKeyword(mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeywordRole).toString());
     mSnippetWidget->setKeySequence(
                 QKeySequence::fromString(
-                    index.data(MailCommon::SnippetsModel::KeySequenceRole).toString()));
+                    mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeySequenceRole).toString()));
 }
 
 void QuickTextWidget::addSnippetGroup()
@@ -135,12 +138,12 @@ void QuickTextWidget::editSnippetGroup()
 {
     mMode = EditMode::EditGroup;
     mSnippetWidget->clear();
-    const QModelIndex groupIndex = mSnippetsManager->currentGroupIndex();
-    if (!groupIndex.isValid() || !groupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
+    mCurrentGroupIndex = mSnippetsManager->currentGroupIndex();
+    if (!mCurrentGroupIndex.isValid() || !mCurrentGroupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
         return;
     }
     mSnippetWidget->setGroupSelected(true);
-    const QString oldGroupName = groupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
+    const QString oldGroupName = mCurrentGroupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
     mSnippetWidget->setName(oldGroupName);
 }
 
@@ -165,22 +168,18 @@ void QuickTextWidget::saveEditSnippet()
 {
     const QModelIndex newGroupIndex = mSnippetWidget->groupIndex();
     const QModelIndex oldGroupIndex = mSnippetsManager->currentGroupIndex();
-    QModelIndex index = mSnippetsManager->selectionModel()->selectedIndexes().first();
-    if (!index.isValid() || index.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
-        return;
-    }
 
     if (oldGroupIndex != newGroupIndex) {
-        mSnippetsManager->model()->removeRow(index.row(), oldGroupIndex);
+        mSnippetsManager->model()->removeRow(mCurrentGroupIndex.row(), oldGroupIndex);
         mSnippetsManager->model()->insertRow(mSnippetsManager->model()->rowCount(newGroupIndex), newGroupIndex);
 
-        index = mSnippetsManager->model()->index(mSnippetsManager->model()->rowCount(newGroupIndex) - 1, 0, newGroupIndex);
+        mCurrentGroupIndex = mSnippetsManager->model()->index(mSnippetsManager->model()->rowCount(newGroupIndex) - 1, 0, newGroupIndex);
     }
 
-    mSnippetsManager->model()->setData(index, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
-    mSnippetsManager->model()->setData(index, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
-    mSnippetsManager->model()->setData(index, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
-    mSnippetsManager->model()->setData(index, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
     mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 
@@ -201,17 +200,13 @@ void QuickTextWidget::saveAddGroup()
 
 void QuickTextWidget::saveEditGroup()
 {
-    const QModelIndex groupIndex = mSnippetsManager->currentGroupIndex();
-    if (!groupIndex.isValid() || !groupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
-        return;
-    }
-    const QString oldGroupName = groupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
+    const QString oldGroupName = mCurrentGroupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
 
     if (oldGroupName == mSnippetWidget->name()) {
         return;
     }
 
-    mSnippetsManager->model()->setData(groupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
     mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }

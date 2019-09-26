@@ -36,5 +36,5 @@ kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json SOU
     ${kmail_quicktextplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_quicktextplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n kmailquicktextpluginprivate
+  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n kmailquicktextpluginprivate KF5::MailCommon
 )

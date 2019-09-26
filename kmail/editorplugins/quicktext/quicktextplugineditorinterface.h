@@ -22,8 +22,9 @@
 
 #include <messagecomposer/plugineditorinterface.h>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
+#include <MailCommon/SnippetsModel>
 #include <QPointer>
-
+#include <QTextCursor>
 class QuickTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
     Q_OBJECT
@@ -37,6 +38,9 @@ public:
 
 private:
     void slotActivated();
+    void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
+    QVector<MailCommon::SnippetsInfo> mSnippetsInfo;
+    MailCommon::SnippetsModel *mModel = nullptr;
 };
 
 #endif
