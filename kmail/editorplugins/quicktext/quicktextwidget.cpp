@@ -46,7 +46,7 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     connect(mTreeWidget, &QuicktextTreeWidget::editSnippetGroup, this, &QuickTextWidget::editSnippetGroup);
     connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged,
             this, [this]() {
-        //save();
+        save();
     });
 
 }
@@ -74,7 +74,7 @@ void QuickTextWidget::save()
         break;
     }
     mMode = EditMode::Unknown;
-    //mSnippetWidget->clear();
+    mSnippetWidget->clear();
 }
 
 void QuickTextWidget::addSnippet()
@@ -158,7 +158,7 @@ void QuickTextWidget::saveAddSnippet()
     mSnippetsManager->model()->setData(index, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
     mSnippetsManager->setDirty(true);
-    save();
+    mSnippetsManager->save();
 }
 
 void QuickTextWidget::saveEditSnippet()
@@ -182,7 +182,7 @@ void QuickTextWidget::saveEditSnippet()
     mSnippetsManager->model()->setData(index, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
     mSnippetsManager->setDirty(true);
-    save();
+    mSnippetsManager->save();
 
 }
 
@@ -196,7 +196,7 @@ void QuickTextWidget::saveAddGroup()
     const QModelIndex groupIndex = mSnippetsManager->model()->index(mSnippetsManager->model()->rowCount() - 1, 0, QModelIndex());
     mSnippetsManager->model()->setData(groupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
     mSnippetsManager->setDirty(true);
-    save();
+    mSnippetsManager->save();
 }
 
 void QuickTextWidget::saveEditGroup()
@@ -213,5 +213,5 @@ void QuickTextWidget::saveEditGroup()
 
     mSnippetsManager->model()->setData(groupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
     mSnippetsManager->setDirty(true);
-    save();
+    mSnippetsManager->save();
 }

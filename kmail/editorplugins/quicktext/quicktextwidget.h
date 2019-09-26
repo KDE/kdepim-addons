@@ -55,7 +55,7 @@ private:
 
 
 
-    EditMode mMode;
+    EditMode mMode = EditMode::Unknown;
 
     QuicktextTreeWidget *mTreeWidget = nullptr;
     MailCommon::SnippetWidget *mSnippetWidget = nullptr;
