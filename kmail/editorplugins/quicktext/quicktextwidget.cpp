@@ -35,10 +35,8 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     mStackedWidget = new QuickTextStackWidget(this);
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
     mainLayout->addWidget(mStackedWidget);
-
 }
 
 QuickTextWidget::~QuickTextWidget()
 {
-
 }

@@ -25,5 +25,4 @@ QTEST_MAIN(QuickTextSnippetTest)
 QuickTextSnippetTest::QuickTextSnippetTest(QObject *parent)
     : QObject(parent)
 {
-
 }

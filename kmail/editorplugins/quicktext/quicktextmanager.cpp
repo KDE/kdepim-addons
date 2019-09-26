@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "quicktextmanager.h"
 #include <KSharedConfig>
 #include <MailCommon/SnippetsModel>
@@ -244,7 +243,6 @@ QuicktextManager::QuicktextManager(QObject *parent, QWidget *parentWidget)
 {
     d->mModel = MailCommon::SnippetsModel::instance();
     d->mSelectionModel = new QItemSelectionModel(d->mModel);
-
 
     connect(d->mModel, &MailCommon::SnippetsModel::dndDone, this, [this]() {
         d->dndDone();

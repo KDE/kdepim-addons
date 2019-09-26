@@ -38,5 +38,4 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
 
 QuickTextConfigureWidget::~QuickTextConfigureWidget()
 {
-
 }

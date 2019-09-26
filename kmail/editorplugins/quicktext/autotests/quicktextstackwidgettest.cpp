@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "quicktextstackwidgettest.h"
 #include "quicktextstackwidget.h"
 #include <QTest>
@@ -28,7 +27,6 @@ QTEST_MAIN(QuickTextStackWidgetTest)
 QuickTextStackWidgetTest::QuickTextStackWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void QuickTextStackWidgetTest::shouldHaveDefaultValues()
@@ -37,7 +35,6 @@ void QuickTextStackWidgetTest::shouldHaveDefaultValues()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
-
 
     QStackedWidget *mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);

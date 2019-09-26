@@ -27,7 +27,6 @@ QTEST_MAIN(QuickTextWidgetTest)
 QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void QuickTextWidgetTest::shouldHaveDefaultValues()
@@ -36,7 +35,6 @@ void QuickTextWidgetTest::shouldHaveDefaultValues()
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
-
 
     QuicktextTreeWidget *mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
     QVERIFY(mTreeWidget);

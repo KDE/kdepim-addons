@@ -27,7 +27,6 @@ QTEST_MAIN(QuickTextConfigureWidgetTest)
 QuickTextConfigureWidgetTest::QuickTextConfigureWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()

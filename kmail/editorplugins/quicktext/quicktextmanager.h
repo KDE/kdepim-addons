@@ -17,10 +17,8 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef QUICKTEXT_MANAGER_H
 #define QUICKTEXT_MANAGER_H
-
 
 #include <QObject>
 

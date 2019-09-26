@@ -23,10 +23,8 @@
 QuickTextSnippetGroup::QuickTextSnippetGroup(QWidget *parent)
     : QWidget(parent)
 {
-
 }
 
 QuickTextSnippetGroup::~QuickTextSnippetGroup()
 {
-
 }

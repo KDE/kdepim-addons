@@ -25,7 +25,6 @@ QTEST_MAIN(QuickTextSnippetGroupTest)
 QuickTextSnippetGroupTest::QuickTextSnippetGroupTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void QuickTextSnippetGroupTest::shouldHaveDefaultValues()

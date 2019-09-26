@@ -24,10 +24,8 @@
 QuickTextSnippet::QuickTextSnippet(QWidget *parent)
     : QWidget(parent)
 {
-
 }
 
 QuickTextSnippet::~QuickTextSnippet()
 {
-
 }

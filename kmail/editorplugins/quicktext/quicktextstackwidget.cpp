@@ -38,7 +38,6 @@ QuickTextStackWidget::QuickTextStackWidget(QWidget *parent)
 
 QuickTextStackWidget::~QuickTextStackWidget()
 {
-
 }
 
 void QuickTextStackWidget::initializeStackedWidget()

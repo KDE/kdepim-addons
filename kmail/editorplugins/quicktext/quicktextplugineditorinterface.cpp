@@ -60,7 +60,6 @@ void QuickTextPluginEditorInterface::exec()
 {
 }
 
-
 bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *event)
 {
     return false;

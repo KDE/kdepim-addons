@@ -36,7 +36,7 @@ public:
     bool processProcessKeyEvent(QKeyEvent *event) override;
 
 private:
-    void slotActivated();    
+    void slotActivated();
 };
 
 #endif

@@ -29,7 +29,6 @@ QTEST_MAIN(QuickTextConfigureDialogTest)
 QuickTextConfigureDialogTest::QuickTextConfigureDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void QuickTextConfigureDialogTest::shouldHaveDefaultValues()
