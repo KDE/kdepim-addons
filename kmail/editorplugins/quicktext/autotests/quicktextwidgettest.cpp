@@ -20,7 +20,6 @@
 #include "quicktextwidgettest.h"
 #include "quicktextwidget.h"
 #include "quicktexttreewidget.h"
-#include "quicktextstackwidget.h"
 #include <QTest>
 #include <QHBoxLayout>
 QTEST_MAIN(QuickTextWidgetTest)
@@ -39,6 +38,4 @@ void QuickTextWidgetTest::shouldHaveDefaultValues()
     QuicktextTreeWidget *mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
     QVERIFY(mTreeWidget);
 
-    QuickTextStackWidget *mStackedWidget = w.findChild<QuickTextStackWidget *>(QStringLiteral("stackedwidget"));
-    QVERIFY(mStackedWidget);
 }

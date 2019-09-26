@@ -28,7 +28,7 @@ class QUICKTEXT_EXPORT QuicktextTreeWidget : public QTreeView
 {
     Q_OBJECT
 public:
-    explicit QuicktextTreeWidget(QWidget *parent = nullptr);
+    explicit QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent = nullptr);
     ~QuicktextTreeWidget() override;
 
     QuicktextManager *snippetsManager() const;

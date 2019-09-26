@@ -29,15 +29,15 @@
 #include <QMenu>
 #include <MailCommon/SnippetsModel>
 
-QuicktextTreeWidget::QuicktextTreeWidget(QWidget *parent)
-    : QTreeView(parent)
+QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent)
+    : QTreeView(parent),
+      mSnippetsManager(manager)
 {
     header()->hide();
     setAcceptDrops(true);
     setDragEnabled(true);
     setRootIsDecorated(true);
     setAlternatingRowColors(true);
-    mSnippetsManager = new QuicktextManager(this, this);
     connect(mSnippetsManager, &QuicktextManager::insertPlainText, this, &QuicktextTreeWidget::insertSnippetText);
 
     setModel(mSnippetsManager->model());

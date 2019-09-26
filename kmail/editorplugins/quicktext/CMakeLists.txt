@@ -5,9 +5,6 @@ set(kmail_quicktextplugin_private_SRCS
     quicktextmanager.cpp
     quicktexttreewidget.cpp
     quicktextwidget.cpp
-    quicktextstackwidget.cpp
-    quicktextsnippetgroup.cpp
-    quicktextsnippet.cpp
 )
 
 
@@ -27,7 +24,6 @@ install(TARGETS kmailquicktextpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} 
 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
-    add_subdirectory(tests)
 endif()
 set(kmail_quicktextplugin_SRCS
     quicktextplugineditor.cpp

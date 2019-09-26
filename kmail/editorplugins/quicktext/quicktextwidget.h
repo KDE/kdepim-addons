@@ -23,16 +23,43 @@
 #include <QWidget>
 #include "quicktext_export.h"
 class QuicktextTreeWidget;
-class QuickTextStackWidget;
+namespace MailCommon {
+class SnippetWidget;
+}
+class QuicktextManager;
 class QUICKTEXT_EXPORT QuickTextWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit QuickTextWidget(QWidget *parent = nullptr);
     ~QuickTextWidget();
+
+    void save();
 private:
+    enum class EditMode {
+        AddSnippet,
+        EditSnippet,
+        AddGroup,
+        EditGroup,
+        Unknown
+    };
+    void addSnippet();
+    void editSnippet();
+    void addSnippetGroup();
+    void editSnippetGroup();
+
+    void saveAddSnippet();
+    void saveEditSnippet();
+    void saveAddGroup();
+    void saveEditGroup();
+
+
+
+    EditMode mMode;
+
     QuicktextTreeWidget *mTreeWidget = nullptr;
-    QuickTextStackWidget *mStackedWidget = nullptr;
+    MailCommon::SnippetWidget *mSnippetWidget = nullptr;
+    QuicktextManager *mSnippetsManager = nullptr;
 };
 
 #endif // QUICKTEXTWIDGET_H

@@ -29,6 +29,7 @@
 #include <QAction>
 #include <QPointer>
 #include <QItemSelectionModel>
+#include <QDebug>
 
 class QuicktextManager::Private
 {
@@ -42,13 +43,6 @@ public:
     QModelIndex currentGroupIndex() const;
 
     void dndDone();
-    void addSnippet();
-    void editSnippet();
-
-    void addSnippetGroup();
-    void editSnippetGroup();
-
-    void createSnippet(const QString &text = QString());
 
     void slotAddNewDndSnippset(const QString &);
 
@@ -63,6 +57,7 @@ public:
 
 QModelIndex QuicktextManager::Private::currentGroupIndex() const
 {
+    qDebug() << mSelectionModel->selectedIndexes();
     if (mSelectionModel->selectedIndexes().isEmpty()) {
         return QModelIndex();
     }
@@ -75,11 +70,7 @@ QModelIndex QuicktextManager::Private::currentGroupIndex() const
     }
 }
 
-void QuicktextManager::Private::addSnippet()
-{
-    createSnippet();
-}
-
+#if 0
 void QuicktextManager::Private::createSnippet(const QString &text)
 {
     const bool noGroupAvailable = (mModel->rowCount() == 0);
@@ -95,7 +86,7 @@ void QuicktextManager::Private::createSnippet(const QString &text)
 
         mSelectionModel->select(groupIndex, QItemSelectionModel::ClearAndSelect);
     }
-#if 0
+
     QPointer<SnippetDialog> dlg = new SnippetDialog(mActionCollection, false, mParent);
     dlg->setWindowTitle(i18nc("@title:window", "Add Snippet"));
     dlg->setGroupModel(mModel);
@@ -121,19 +112,18 @@ void QuicktextManager::Private::createSnippet(const QString &text)
         save();
     }
     delete dlg;
-#endif
 }
+#endif
 
 void QuicktextManager::Private::slotAddNewDndSnippset(const QString &text)
 {
-    createSnippet(text);
 }
 
 void QuicktextManager::Private::dndDone()
 {
     mDirty = true;
 }
-
+#if 0
 void QuicktextManager::Private::editSnippet()
 {
     QModelIndex index = mSelectionModel->selectedIndexes().first();
@@ -144,7 +134,6 @@ void QuicktextManager::Private::editSnippet()
     const QModelIndex oldGroupIndex = currentGroupIndex();
 
     const QString oldSnippetName = index.data(MailCommon::SnippetsModel::NameRole).toString();
-#if 0
     QPointer<SnippetDialog> dlg = new SnippetDialog(mActionCollection, false, mParent);
     dlg->setWindowTitle(i18nc("@title:window", "Edit Snippet"));
     dlg->setGroupModel(mModel);
@@ -176,12 +165,10 @@ void QuicktextManager::Private::editSnippet()
         save();
     }
     delete dlg;
-#endif
 }
 
 void QuicktextManager::Private::addSnippetGroup()
 {
-#if 0
     QPointer<SnippetDialog> dlg = new SnippetDialog(mActionCollection, true, mParent);
     dlg->setWindowTitle(i18nc("@title:window", "Add Group"));
 
@@ -198,7 +185,6 @@ void QuicktextManager::Private::addSnippetGroup()
         save();
     }
     delete dlg;
-#endif
 }
 
 void QuicktextManager::Private::editSnippetGroup()
@@ -226,6 +212,7 @@ void QuicktextManager::Private::editSnippetGroup()
     delete dlg;
 #endif
 }
+#endif
 
 void QuicktextManager::Private::save()
 {
