@@ -33,11 +33,16 @@ QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
 {
     mModel = MailCommon::SnippetsModel::instance();
-    mSnippetsInfo = mModel->snippetsInfo();
+    updateSnippetsInfo();
 }
 
 QuickTextPluginEditorInterface::~QuickTextPluginEditorInterface()
 {
+}
+
+void QuickTextPluginEditorInterface::updateSnippetsInfo()
+{
+    mSnippetsInfo = mModel->snippetsInfo();
 }
 
 void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
@@ -64,6 +69,11 @@ void QuickTextPluginEditorInterface::slotActivated()
 
 void QuickTextPluginEditorInterface::exec()
 {
+}
+
+void QuickTextPluginEditorInterface::reloadConfig()
+{
+    updateSnippetsInfo();
 }
 
 bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)

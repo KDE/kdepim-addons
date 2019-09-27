@@ -36,7 +36,9 @@ public:
     void exec() override;
     bool processProcessKeyEvent(QKeyEvent *event) override;
 
+    void reloadConfig();
 private:
+    void updateSnippetsInfo();
     void slotActivated();
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     QVector<MailCommon::SnippetsInfo> mSnippetsInfo;

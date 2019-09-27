@@ -25,6 +25,7 @@
 #include <MailCommon/SnippetsModel>
 #include <QDebug>
 #include <KMessageBox>
+#include <QStackedWidget>
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
     : QWidget(parent)
@@ -39,9 +40,17 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     mTreeWidget->setObjectName(QStringLiteral("treewidget"));
     mainLayout->addWidget(mTreeWidget);
 
+    mStackedWidget = new QStackedWidget(this);
+    mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
+    mainLayout->addWidget(mStackedWidget);
+
     mSnippetWidget = new MailCommon::SnippetWidget(this);
     mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
-    mainLayout->addWidget(mSnippetWidget);
+    mStackedWidget->addWidget(mSnippetWidget);
+
+    mEmptyWidget = new QWidget(this);
+    mStackedWidget->addWidget(mEmptyWidget);
+
     connect(mTreeWidget, &QuicktextTreeWidget::addSnippet, this, &QuickTextWidget::addSnippet);
     connect(mTreeWidget, &QuicktextTreeWidget::editSnippet, this, &QuickTextWidget::editSnippet);
     connect(mTreeWidget, &QuicktextTreeWidget::addSnippetGroup, this, &QuickTextWidget::addSnippetGroup);
@@ -50,8 +59,10 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
             this, [this]() {
         save();
         if (mSnippetsManager->selectionModel()->selectedIndexes().isEmpty()) {
+            mStackedWidget->setCurrentWidget(mEmptyWidget);
             return;
         }
+        mStackedWidget->setCurrentWidget(mSnippetWidget);
         const QModelIndex index = mSnippetsManager->selectionModel()->selectedIndexes().first();
         const bool isGroup = index.data(MailCommon::SnippetsModel::IsGroupRole).toBool();
         if (isGroup) {
@@ -60,6 +71,7 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
             editSnippet();
         }
     });
+    mStackedWidget->setCurrentWidget(mEmptyWidget);
 }
 
 QuickTextWidget::~QuickTextWidget()
@@ -95,6 +107,7 @@ void QuickTextWidget::save()
 
 void QuickTextWidget::addSnippet()
 {
+    mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::AddSnippet;
     mSnippetWidget->clear();
     const bool noGroupAvailable = (mSnippetsManager->model()->rowCount() == 0);
@@ -118,6 +131,7 @@ void QuickTextWidget::addSnippet()
 
 void QuickTextWidget::editSnippet()
 {
+    mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::EditSnippet;
     mSnippetWidget->clear();
 
@@ -142,6 +156,7 @@ void QuickTextWidget::editSnippet()
 
 void QuickTextWidget::addSnippetGroup()
 {
+    mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::AddGroup;
     mSnippetWidget->clear();
     mSnippetWidget->setWasChanged(false);
@@ -149,6 +164,7 @@ void QuickTextWidget::addSnippetGroup()
 
 void QuickTextWidget::editSnippetGroup()
 {
+    mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::EditGroup;
     mSnippetWidget->clear();
     mCurrentGroupIndex = mSnippetsManager->currentGroupIndex();

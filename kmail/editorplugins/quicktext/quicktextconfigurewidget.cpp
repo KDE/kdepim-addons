@@ -39,3 +39,8 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
 QuickTextConfigureWidget::~QuickTextConfigureWidget()
 {
 }
+
+void QuickTextConfigureWidget::save()
+{
+    mSnippetWidget->save();
+}

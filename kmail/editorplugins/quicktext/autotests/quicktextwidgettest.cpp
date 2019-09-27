@@ -23,6 +23,7 @@
 #include <MailCommon/SnippetWidget>
 #include <QTest>
 #include <QHBoxLayout>
+#include <QStackedWidget>
 QTEST_MAIN(QuickTextWidgetTest)
 QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
     : QObject(parent)
@@ -39,6 +40,6 @@ void QuickTextWidgetTest::shouldHaveDefaultValues()
     QuicktextTreeWidget *mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
     QVERIFY(mTreeWidget);
 
-    MailCommon::SnippetWidget *mSnippetWidget = w.findChild<MailCommon::SnippetWidget *>(QStringLiteral("snippetwidget"));
-    QVERIFY(mSnippetWidget);
+    QStackedWidget *mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    QVERIFY(mStackedWidget);
 }

@@ -29,6 +29,7 @@ class QUICKTEXT_EXPORT QuickTextConfigureWidget : public QWidget
 public:
     explicit QuickTextConfigureWidget(QWidget *parent = nullptr);
     ~QuickTextConfigureWidget();
+    void save();
 private:
     QuickTextWidget *mSnippetWidget = nullptr;
 };

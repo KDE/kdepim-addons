@@ -23,6 +23,8 @@
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QCloseEvent>
+
 namespace {
 static const char myConfigGroupName[] = "QuickTextConfigureDialog";
 }
@@ -37,7 +39,7 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
     mainLayout->addWidget(buttonBox);
     writeConfig();
@@ -61,4 +63,16 @@ void QuickTextConfigureDialog::readConfig()
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
     }
+}
+
+void QuickTextConfigureDialog::closeEvent(QCloseEvent *e)
+{
+    mQuickTextConfigureWidget->save();
+    e->accept();
+}
+
+void QuickTextConfigureDialog::slotAccepted()
+{
+    mQuickTextConfigureWidget->save();
+    QDialog::accept();
 }

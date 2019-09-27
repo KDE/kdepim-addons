@@ -36,6 +36,7 @@ QuickTextPluginEditor::~QuickTextPluginEditor()
 MessageComposer::PluginEditorInterface *QuickTextPluginEditor::createInterface(QObject *parent)
 {
     QuickTextPluginEditorInterface *interface = new QuickTextPluginEditorInterface(parent);
+    connect(this, &QuickTextPluginEditor::configChanged, interface, &QuickTextPluginEditorInterface::reloadConfig);
     return interface;
 }
 
@@ -53,7 +54,7 @@ void QuickTextPluginEditor::showConfigureDialog(QWidget *parent)
 {
     QPointer<QuickTextConfigureDialog> dlg = new QuickTextConfigureDialog(parent);
     if (dlg->exec()) {
-        //TODO Q_EMIT configChanged();
+        Q_EMIT configChanged();
     }
     delete dlg;
 }

@@ -28,9 +28,14 @@ class QUICKTEXT_EXPORT QuickTextConfigureDialog : public QDialog
 public:
     explicit QuickTextConfigureDialog(QWidget *parent = nullptr);
     ~QuickTextConfigureDialog();
+
+protected:
+    void closeEvent(QCloseEvent *e) override;
+
 private:
     void writeConfig();
     void readConfig();
+    void slotAccepted();
     QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
 };
 

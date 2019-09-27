@@ -28,6 +28,7 @@ namespace MailCommon {
 class SnippetWidget;
 }
 class QuicktextManager;
+class QStackedWidget;
 class QUICKTEXT_EXPORT QuickTextWidget : public QWidget
 {
     Q_OBJECT
@@ -62,6 +63,8 @@ private:
     QuicktextTreeWidget *mTreeWidget = nullptr;
     MailCommon::SnippetWidget *mSnippetWidget = nullptr;
     QuicktextManager *mSnippetsManager = nullptr;
+    QStackedWidget *mStackedWidget = nullptr;
+    QWidget *mEmptyWidget = nullptr;
 };
 
 #endif // QUICKTEXTWIDGET_H
