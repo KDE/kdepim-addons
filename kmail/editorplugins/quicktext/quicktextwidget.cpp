@@ -48,8 +48,17 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged,
             this, [this]() {
         save();
+        if (mSnippetsManager->selectionModel()->selectedIndexes().isEmpty()) {
+            return;
+        }
+        const QModelIndex index = mSnippetsManager->selectionModel()->selectedIndexes().first();
+        const bool isGroup = index.data(MailCommon::SnippetsModel::IsGroupRole).toBool();
+        if (isGroup) {
+            editSnippetGroup();
+        } else {
+            editSnippet();
+        }
     });
-
 }
 
 QuickTextWidget::~QuickTextWidget()
@@ -58,26 +67,29 @@ QuickTextWidget::~QuickTextWidget()
 
 void QuickTextWidget::save()
 {
-    if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("QuickText was changed. Do you want to save it?"), i18n("Save"))) {
-        switch (mMode) {
-        case EditMode::AddSnippet:
-            saveAddSnippet();
-            break;
-        case EditMode::EditSnippet:
-            saveEditSnippet();
-            break;
-        case EditMode::AddGroup:
-            saveAddGroup();
-            break;
-        case EditMode::EditGroup:
-            saveEditGroup();
-            break;
-        case EditMode::Unknown:
-            break;
+    if (mSnippetWidget->wasChanged()) {
+        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("QuickText was changed. Do you want to save it?"), i18n("Save"))) {
+            switch (mMode) {
+            case EditMode::AddSnippet:
+                saveAddSnippet();
+                break;
+            case EditMode::EditSnippet:
+                saveEditSnippet();
+                break;
+            case EditMode::AddGroup:
+                saveAddGroup();
+                break;
+            case EditMode::EditGroup:
+                saveEditGroup();
+                break;
+            case EditMode::Unknown:
+                break;
+            }
         }
     }
     mMode = EditMode::Unknown;
     mSnippetWidget->clear();
+    mSnippetWidget->setWasChanged(false);
 }
 
 void QuickTextWidget::addSnippet()
@@ -97,10 +109,11 @@ void QuickTextWidget::addSnippet()
         mSnippetsManager->model()->setData(groupIndex, i18n("General"), MailCommon::SnippetsModel::NameRole);
 
         mSnippetsManager->selectionModel()->select(groupIndex, QItemSelectionModel::ClearAndSelect);
-        mSnippetWidget->setGroupModel(mSnippetsManager->model());
         mSnippetWidget->setGroupIndex(mSnippetsManager->currentGroupIndex());
         mSnippetWidget->setText(QString());
     }
+    mSnippetWidget->setGroupModel(mSnippetsManager->model());
+    mSnippetWidget->setWasChanged(false);
 }
 
 void QuickTextWidget::editSnippet()
@@ -125,6 +138,7 @@ void QuickTextWidget::editSnippet()
     mSnippetWidget->setKeySequence(
                 QKeySequence::fromString(
                     mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeySequenceRole).toString()));
+    mSnippetWidget->setWasChanged(false);
 }
 
 void QuickTextWidget::addSnippetGroup()
@@ -132,6 +146,7 @@ void QuickTextWidget::addSnippetGroup()
     mMode = EditMode::AddGroup;
     mSnippetWidget->clear();
     mSnippetWidget->setGroupSelected(true);
+    mSnippetWidget->setWasChanged(false);
 }
 
 void QuickTextWidget::editSnippetGroup()
@@ -145,6 +160,7 @@ void QuickTextWidget::editSnippetGroup()
     mSnippetWidget->setGroupSelected(true);
     const QString oldGroupName = mCurrentGroupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
     mSnippetWidget->setName(oldGroupName);
+    mSnippetWidget->setWasChanged(false);
 }
 
 void QuickTextWidget::saveAddSnippet()
@@ -188,7 +204,6 @@ void QuickTextWidget::saveEditSnippet()
 void QuickTextWidget::saveAddGroup()
 {
     if (!mSnippetsManager->model()->insertRow(mSnippetsManager->model()->rowCount(), QModelIndex())) {
-        qDebug() << "unable to insert row";
         return;
     }
 
