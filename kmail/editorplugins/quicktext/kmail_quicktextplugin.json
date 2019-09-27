@@ -16,6 +16,12 @@
         "EnabledByDefault": "false",
         "Id": "kmailquicktext",
         "Name": "Quick Text",
+        "Name[ca]": "Text ràpid",
+        "Name[nl]": "Snelle tekst",
+        "Name[pt]": "Texto Rápido",
+        "Name[sv]": "Snabbtext",
+        "Name[uk]": "Швидкий текст",
+        "Name[x-test]": "xxQuick Textxx",
         "ServiceTypes": [
             "KMailEditor/Plugin"
         ],
