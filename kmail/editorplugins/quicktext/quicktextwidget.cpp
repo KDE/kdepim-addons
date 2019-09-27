@@ -40,6 +40,7 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     mainLayout->addWidget(mTreeWidget);
 
     mSnippetWidget = new MailCommon::SnippetWidget(this);
+    mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
     mainLayout->addWidget(mSnippetWidget);
     connect(mTreeWidget, &QuicktextTreeWidget::addSnippet, this, &QuickTextWidget::addSnippet);
     connect(mTreeWidget, &QuicktextTreeWidget::editSnippet, this, &QuickTextWidget::editSnippet);
