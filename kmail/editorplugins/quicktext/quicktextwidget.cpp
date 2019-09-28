@@ -110,6 +110,7 @@ void QuickTextWidget::addSnippet()
     mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::AddSnippet;
     mSnippetWidget->clear();
+    mSnippetWidget->setGroupSelected(false);
     const bool noGroupAvailable = (mSnippetsManager->model()->rowCount() == 0);
 
     if (noGroupAvailable) {
@@ -134,6 +135,7 @@ void QuickTextWidget::editSnippet()
     mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::EditSnippet;
     mSnippetWidget->clear();
+    mSnippetWidget->setGroupSelected(false);
 
     mCurrentGroupIndex = mSnippetsManager->selectionModel()->selectedIndexes().first();
     if (!mCurrentGroupIndex.isValid() || mCurrentGroupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
@@ -159,6 +161,7 @@ void QuickTextWidget::addSnippetGroup()
     mStackedWidget->setCurrentWidget(mSnippetWidget);
     mMode = EditMode::AddGroup;
     mSnippetWidget->clear();
+    mSnippetWidget->setGroupSelected(true);
     mSnippetWidget->setWasChanged(false);
 }
 
@@ -171,6 +174,7 @@ void QuickTextWidget::editSnippetGroup()
     if (!mCurrentGroupIndex.isValid() || !mCurrentGroupIndex.data(MailCommon::SnippetsModel::IsGroupRole).toBool()) {
         return;
     }
+    mSnippetWidget->setGroupSelected(true);
     const QString oldGroupName = mCurrentGroupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
     mSnippetWidget->setName(oldGroupName);
     mSnippetWidget->setWasChanged(false);
