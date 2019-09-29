@@ -22,7 +22,7 @@
 #include <MailCommon/SnippetsModel>
 
 #include <KLocalizedString>
-#include <KMessageBox>
+#include <QFileDialog>
 #include <QIcon>
 #include <QTextEdit>
 
@@ -134,12 +134,18 @@ void QuicktextManager::setDirty(bool b)
 
 void QuicktextManager::importQuickText()
 {
-
+    const QString filename = QFileDialog::getOpenFileName(d->mParent, i18n("Import QuickText"));
+    if (!filename.isEmpty()) {
+        d->mModel->load(filename);
+    }
 }
 
 void QuicktextManager::exportQuickText()
 {
-
+    const QString filename = QFileDialog::getSaveFileName(d->mParent, i18n("Export QuickText"));
+    if (!filename.isEmpty()) {
+        d->mModel->save(filename);
+    }
 }
 
 #include "moc_quicktextmanager.cpp"
