@@ -51,7 +51,6 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     buttonBox->addButton(exportButton, QDialogButtonBox::ActionRole);
     connect(exportButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotExport);
 
-
     mainLayout->addWidget(buttonBox);
     writeConfig();
 }

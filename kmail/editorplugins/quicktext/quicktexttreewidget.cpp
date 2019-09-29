@@ -30,8 +30,8 @@
 #include <MailCommon/SnippetsModel>
 
 QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent)
-    : QTreeView(parent),
-      mSnippetsManager(manager)
+    : QTreeView(parent)
+    , mSnippetsManager(manager)
 {
     header()->hide();
     setAcceptDrops(true);

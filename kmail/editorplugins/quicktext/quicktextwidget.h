@@ -55,8 +55,6 @@ private:
     void saveAddGroup();
     void saveEditGroup();
 
-
-
     QModelIndex mCurrentGroupIndex;
     EditMode mMode = EditMode::Unknown;
 
