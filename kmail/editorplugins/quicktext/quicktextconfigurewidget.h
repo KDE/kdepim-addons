@@ -30,6 +30,8 @@ public:
     explicit QuickTextConfigureWidget(QWidget *parent = nullptr);
     ~QuickTextConfigureWidget();
     void save();
+    void importQuickText();
+    void exportQuickText();
 private:
     QuickTextWidget *mSnippetWidget = nullptr;
 };

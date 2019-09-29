@@ -44,3 +44,13 @@ void QuickTextConfigureWidget::save()
 {
     mSnippetWidget->save();
 }
+
+void QuickTextConfigureWidget::importQuickText()
+{
+    mSnippetWidget->importQuickText();
+}
+
+void QuickTextConfigureWidget::exportQuickText()
+{
+    mSnippetWidget->exportQuickText();
+}

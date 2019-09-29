@@ -77,12 +77,13 @@ void QuickTextConfigureDialog::readConfig()
 
 void QuickTextConfigureDialog::slotImport()
 {
-    //TODO
+    mQuickTextConfigureWidget->importQuickText();
 }
 
 void QuickTextConfigureDialog::slotExport()
 {
-    //TODO
+
+    mQuickTextConfigureWidget->exportQuickText();
 }
 
 void QuickTextConfigureDialog::closeEvent(QCloseEvent *e)

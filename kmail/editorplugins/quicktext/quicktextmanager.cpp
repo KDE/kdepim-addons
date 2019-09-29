@@ -132,4 +132,14 @@ void QuicktextManager::setDirty(bool b)
     d->mDirty = b;
 }
 
+void QuicktextManager::importQuickText()
+{
+
+}
+
+void QuicktextManager::exportQuickText()
+{
+
+}
+
 #include "moc_quicktextmanager.cpp"

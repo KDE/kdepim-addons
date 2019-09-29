@@ -68,6 +68,10 @@ public:
 
     Q_REQUIRED_RESULT QModelIndex currentGroupIndex() const;
     void setDirty(bool b);
+
+    void importQuickText();
+    void exportQuickText();
+
 Q_SIGNALS:
     void insertSnippet();
     void insertPlainText(const QString &snippetText);

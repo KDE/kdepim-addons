@@ -241,3 +241,13 @@ void QuickTextWidget::saveEditGroup()
     mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
+
+void QuickTextWidget::importQuickText()
+{
+    mSnippetsManager->importQuickText();
+}
+
+void QuickTextWidget::exportQuickText()
+{
+    mSnippetsManager->exportQuickText();
+}

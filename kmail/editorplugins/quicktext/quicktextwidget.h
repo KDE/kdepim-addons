@@ -37,6 +37,9 @@ public:
     ~QuickTextWidget();
 
     void save();
+    void importQuickText();
+    void exportQuickText();
+
 private:
     enum class EditMode {
         AddSnippet,
