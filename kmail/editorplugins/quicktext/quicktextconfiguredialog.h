@@ -36,6 +36,8 @@ private:
     void writeConfig();
     void readConfig();
     void slotAccepted();
+    void slotExport();
+    void slotImport();
     QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
 };
 

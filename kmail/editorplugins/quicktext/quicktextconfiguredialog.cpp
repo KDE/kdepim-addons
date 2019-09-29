@@ -21,9 +21,11 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 #include <QCloseEvent>
+#include <QPushButton>
 
 namespace {
 static const char myConfigGroupName[] = "QuickTextConfigureDialog";
@@ -41,6 +43,15 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
+
+    QPushButton *importButton = new QPushButton(i18n("Import..."), this);
+    buttonBox->addButton(importButton, QDialogButtonBox::ActionRole);
+    connect(importButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotImport);
+    QPushButton *exportButton = new QPushButton(i18n("Export..."), this);
+    buttonBox->addButton(exportButton, QDialogButtonBox::ActionRole);
+    connect(exportButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotExport);
+
+
     mainLayout->addWidget(buttonBox);
     writeConfig();
 }
@@ -63,6 +74,16 @@ void QuickTextConfigureDialog::readConfig()
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
     }
+}
+
+void QuickTextConfigureDialog::slotImport()
+{
+    //TODO
+}
+
+void QuickTextConfigureDialog::slotExport()
+{
+    //TODO
 }
 
 void QuickTextConfigureDialog::closeEvent(QCloseEvent *e)
