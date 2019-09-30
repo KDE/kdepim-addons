@@ -52,8 +52,6 @@ option(KDEPIMADDONS_BUILD_EXAMPLES "Build the kdepim-addons example applications
 
 option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branch, which are normally disabled. Also, it disables many components not needed for Kontact such as the Kolab client." FALSE)
 
-option(KMAIL_EDITORCONVERTERPLUGIN_TEMPLATE_BUILD "Build the kmail editor converter plugin." FALSE)
-
 option(KMAIL_DKIM_CONFIGURE_DIALOG_BUILD "Build dkim-verify configure dialog (experimental)." FALSE)
 
 find_package(Qt5 ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngine WebEngineWidgets Widgets Test)
