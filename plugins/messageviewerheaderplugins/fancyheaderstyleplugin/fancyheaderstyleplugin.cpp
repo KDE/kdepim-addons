@@ -146,6 +146,7 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
     const QString val = QStringLiteral(
         "div.fancy.header table {\n"
         "  width: 100% ! important;\n"
+        "   table-layout: auto;\n"
         "  border-width: 0px ! important;\n"
         "  line-height: normal;\n"
         "}\n\n"
