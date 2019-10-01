@@ -67,7 +67,6 @@ public:
     void save();
 
     Q_REQUIRED_RESULT QModelIndex currentGroupIndex() const;
-    void setDirty(bool b);
 
     void importQuickText();
     void exportQuickText();

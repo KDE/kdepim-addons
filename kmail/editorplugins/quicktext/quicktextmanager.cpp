@@ -48,7 +48,6 @@ public:
     MailCommon::SnippetsModel *mModel = nullptr;
     QItemSelectionModel *mSelectionModel = nullptr;
     QWidget *mParent = nullptr;
-    bool mDirty = false;
 };
 
 QModelIndex QuicktextManager::Private::currentGroupIndex() const
@@ -67,12 +66,7 @@ QModelIndex QuicktextManager::Private::currentGroupIndex() const
 
 void QuicktextManager::Private::save()
 {
-    if (!mDirty) {
-        return;
-    }
-
     MailCommon::SnippetsModel::instance()->save();
-    mDirty = false;
 }
 
 QuicktextManager::QuicktextManager(QObject *parent, QWidget *parentWidget)
@@ -125,11 +119,6 @@ void QuicktextManager::save()
 QModelIndex QuicktextManager::currentGroupIndex() const
 {
     return d->currentGroupIndex();
-}
-
-void QuicktextManager::setDirty(bool b)
-{
-    d->mDirty = b;
 }
 
 void QuicktextManager::importQuickText()

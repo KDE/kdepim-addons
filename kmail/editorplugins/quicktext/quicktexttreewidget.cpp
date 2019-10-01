@@ -181,7 +181,6 @@ void QuicktextTreeWidget::deleteSnippet()
     }
 
     mSnippetsManager->model()->removeRow(index.row(), mSnippetsManager->currentGroupIndex());
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
 
@@ -216,6 +215,5 @@ void QuicktextTreeWidget::deleteSnippetGroup()
     }
 
     mSnippetsManager->model()->removeRow(groupIndex.row(), QModelIndex());
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }

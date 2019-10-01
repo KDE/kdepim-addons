@@ -193,7 +193,6 @@ void QuickTextWidget::saveAddSnippet()
     mSnippetsManager->model()->setData(index, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
 
@@ -213,7 +212,6 @@ void QuickTextWidget::saveEditSnippet()
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
 
@@ -225,7 +223,6 @@ void QuickTextWidget::saveAddGroup()
 
     const QModelIndex groupIndex = mSnippetsManager->model()->index(mSnippetsManager->model()->rowCount() - 1, 0, QModelIndex());
     mSnippetsManager->model()->setData(groupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
 
@@ -238,7 +235,6 @@ void QuickTextWidget::saveEditGroup()
     }
 
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->name(), MailCommon::SnippetsModel::NameRole);
-    mSnippetsManager->setDirty(true);
     mSnippetsManager->save();
 }
 
