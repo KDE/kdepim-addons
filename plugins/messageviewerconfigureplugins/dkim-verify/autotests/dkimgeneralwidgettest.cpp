@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Laurent Montel <montel@kde.org>
+   Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,26 +17,32 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "dkimconfiguretabtest.h"
-#include "../dkimconfiguretab.h"
-#include <QHBoxLayout>
-#include <QTabWidget>
+#include "dkimgeneralwidgettest.h"
+#include "dkimgeneralwidget.h"
+#include <QCheckBox>
 #include <QTest>
-QTEST_MAIN(DKIMConfigureTabTest)
-
-DKIMConfigureTabTest::DKIMConfigureTabTest(QObject *parent)
+#include <QVBoxLayout>
+QTEST_MAIN(DKIMGeneralWidgetTest)
+DKIMGeneralWidgetTest::DKIMGeneralWidgetTest(QObject *parent)
     : QObject(parent)
 {
+
 }
 
-void DKIMConfigureTabTest::shouldHaveDefaultValue()
+void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
 {
-    DKIMConfigureTab w;
-
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    DKIMGeneralWidget w;
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
-    QVERIFY(mTabWidget);
+    QCheckBox *mEnableDkimSupport = w.findChild<QCheckBox *>(QStringLiteral("enableDkimSupport"));
+    QVERIFY(mEnableDkimSupport);
+    QVERIFY(!mEnableDkimSupport->text().isEmpty());
+    QVERIFY(!mEnableDkimSupport->isChecked());
+
+    QCheckBox *mSaveResult = w.findChild<QCheckBox *>(QStringLiteral("mSaveResult"));
+    QVERIFY(mSaveResult);
+    QVERIFY(!mSaveResult->text().isEmpty());
+    QVERIFY(!mSaveResult->isChecked());
 }

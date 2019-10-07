@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Laurent Montel <montel@kde.org>
+   Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,23 +17,24 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "dkimconfiguretabwidgettest.h"
-#include "../dkimconfiguretabwidget.h"
-#include <QTest>
-#include <QVBoxLayout>
+#ifndef DKIMGENERALWIDGET_H
+#define DKIMGENERALWIDGET_H
 
-QTEST_MAIN(DKIMConfigureTabWidgetTest)
-
-DKIMConfigureTabWidgetTest::DKIMConfigureTabWidgetTest(QObject *parent)
-    : QObject(parent)
+#include <QWidget>
+#include "dkimconfigure_private_export.h"
+class QCheckBox;
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMGeneralWidget : public QWidget
 {
-}
+    Q_OBJECT
+public:
+    explicit DKIMGeneralWidget(QWidget *parent = nullptr);
+    ~DKIMGeneralWidget();
+    void loadSettings();
+    void saveSettings();
+    void resetSettings();
+private:
+     QCheckBox *mEnableDkimSupport = nullptr;
+     QCheckBox *mSaveResult = nullptr;
+};
 
-void DKIMConfigureTabWidgetTest::shouldHaveDefaultValue()
-{
-    DKIMConfigureTabWidget w;
-
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
-    QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
-}
+#endif // DKIMGENERALWIDGET_H

@@ -9,5 +9,5 @@ endmacro ()
 
 add_messageviewer_dkim_verify_unittest(dkimconfiguredialogtest.cpp)
 add_messageviewer_dkim_verify_unittest(dkimconfiguretabtest.cpp)
-add_messageviewer_dkim_verify_unittest(dkimconfiguretabwidgettest.cpp)
 add_messageviewer_dkim_verify_unittest(dkimconfigurewidgettest.cpp)
+add_messageviewer_dkim_verify_unittest(dkimgeneralwidgettest.cpp)

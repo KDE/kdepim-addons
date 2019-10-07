@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Laurent Montel <montel@kde.org>
+   Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,35 +17,46 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "dkimconfiguretabwidget.h"
-#include <KSharedConfig>
+
+#include "dkimgeneralwidget.h"
+#include <KLocalizedString>
+#include <QCheckBox>
 #include <QVBoxLayout>
 
-DKIMConfigureTabWidget::DKIMConfigureTabWidget(QWidget *parent)
+DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainlayout"));
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mEnableDkimSupport = new QCheckBox(i18n("Enable DKimSupport"));
+    mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
+    mEnableDkimSupport->setChecked(false);
+    mainLayout->addWidget(mEnableDkimSupport);
+
+    mSaveResult = new QCheckBox(i18n("Save Result"));
+    mSaveResult->setObjectName(QStringLiteral("mSaveResult"));
+    mSaveResult->setChecked(false);
+    mainLayout->addWidget(mSaveResult);
 }
 
-DKIMConfigureTabWidget::~DKIMConfigureTabWidget()
+DKIMGeneralWidget::~DKIMGeneralWidget()
 {
+
 }
 
-void DKIMConfigureTabWidget::loadSettings()
+void DKIMGeneralWidget::loadSettings()
 {
+    //TODO
 }
 
-void DKIMConfigureTabWidget::saveSettings()
+void DKIMGeneralWidget::saveSettings()
 {
+    //TODO
 }
 
-void DKIMConfigureTabWidget::resetSettings()
-{
-}
-
-void DKIMConfigureTabWidget::init()
+void DKIMGeneralWidget::resetSettings()
 {
     //TODO
 }

@@ -24,8 +24,7 @@
 #include "dkimconfigure_private_export.h"
 
 class QTabWidget;
-class QCheckBox;
-class DKIMConfigureTabWidget;
+class DKIMGeneralWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
 {
     Q_OBJECT
@@ -38,9 +37,9 @@ public:
     void resetSettings();
 
 private:
-    QList<DKIMConfigureTabWidget *> mListTabWidget;
+    void initTab();
+    DKIMGeneralWidget *mGeneralWidget = nullptr;
     QTabWidget *mTabWidget = nullptr;
-    QCheckBox *mEnableDkimSupport = nullptr;
 };
 
 #endif // DKIMCONFIGURETAB_H

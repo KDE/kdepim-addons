@@ -18,11 +18,9 @@
 */
 
 #include "dkimconfiguretab.h"
-#include "dkimconfiguretabwidget.h"
-
+#include "dkimgeneralwidget.h"
 #include <KSharedConfig>
 #include <KLocalizedString>
-#include <QCheckBox>
 #include <QHBoxLayout>
 #include <QRegularExpression>
 #include <QTabWidget>
@@ -34,42 +32,33 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    mEnableDkimSupport = new QCheckBox(i18n("Enable DKimSupport"));
-    mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
-    mainLayout->addWidget(mEnableDkimSupport);
-
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
+    initTab();
 }
 
 DKIMConfigureTab::~DKIMConfigureTab()
 {
 }
 
+void DKIMConfigureTab::initTab()
+{
+    mGeneralWidget = new DKIMGeneralWidget(this);
+    mTabWidget->addTab(mGeneralWidget, i18n("General"));
+}
+
 void DKIMConfigureTab::loadSettings()
 {
-    for (DKIMConfigureTabWidget *w : qAsConst(mListTabWidget)) {
-        w->loadSettings();
-    }
+    mGeneralWidget->loadSettings();
 }
 
 void DKIMConfigureTab::saveSettings()
 {
-    KSharedConfig::Ptr config = KSharedConfig::openConfig();
-    // first, delete all filter groups:
-    const QStringList filterGroups = config->groupList().filter(QRegularExpression(QStringLiteral("DKIM \\d+")));
-    for (const QString &group : filterGroups) {
-        config->deleteGroup(group);
-    }
-    for (DKIMConfigureTabWidget *w : qAsConst(mListTabWidget)) {
-        w->saveSettings();
-    }
+    mGeneralWidget->saveSettings();
 }
 
 void DKIMConfigureTab::resetSettings()
 {
-    for (DKIMConfigureTabWidget *w : qAsConst(mListTabWidget)) {
-        w->resetSettings();
-    }
+    mGeneralWidget->resetSettings();
 }
