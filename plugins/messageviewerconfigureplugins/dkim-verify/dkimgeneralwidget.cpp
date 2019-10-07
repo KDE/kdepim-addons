@@ -19,10 +19,12 @@
 
 
 #include "dkimgeneralwidget.h"
+#include "messageviewer/messageviewersettings.h"
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
-
+#include <PimCommon/ConfigureImmutableWidgetUtils>
+using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -53,15 +55,22 @@ DKIMGeneralWidget::~DKIMGeneralWidget()
 
 void DKIMGeneralWidget::loadSettings()
 {
-    //TODO
+
+    loadWidget(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
+    loadWidget(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
+    loadWidget(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
 }
 
 void DKIMGeneralWidget::saveSettings()
 {
-    //TODO
+    saveCheckBox(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
+    saveCheckBox(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
+    saveCheckBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
 }
 
 void DKIMGeneralWidget::resetSettings()
 {
-    //TODO
+    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
+    loadSettings();
+    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
 }

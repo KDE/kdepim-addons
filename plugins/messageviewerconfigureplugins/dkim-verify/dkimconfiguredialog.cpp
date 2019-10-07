@@ -47,10 +47,12 @@ DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &DKIMConfigureDialog::reject);
     connect(buttonBox->button(QDialogButtonBox::RestoreDefaults), &QPushButton::clicked, this, &DKIMConfigureDialog::slotReset);
     mConfigureWidget->loadSettings();
+    readConfig();
 }
 
 DKIMConfigureDialog::~DKIMConfigureDialog()
 {
+    writeConfig();
 }
 
 void DKIMConfigureDialog::slotAccepted()
