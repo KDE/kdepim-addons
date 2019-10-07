@@ -1,3 +1,17 @@
+set(messageviewer_dkimconfigplugin_SRCS
+   dkimconfiguresettingsplugin.cpp
+)
+
+kcoreaddons_add_plugin(messageviewer_dkimconfigplugin JSON messageviewer_dkimconfigplugin.json SOURCES
+    ${messageviewer_dkimconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+
+target_link_libraries(messageviewer_dkimconfigplugin
+  KF5::MessageViewer
+  KF5::I18n
+  dkimverifyconfigure
+  )
+
+
 set(dkimverifyconfigure_SRCS
     dkimconfiguredialog.cpp
     dkimconfiguretab.cpp

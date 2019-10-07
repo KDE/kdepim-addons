@@ -45,4 +45,9 @@ void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mSaveResult);
     QVERIFY(!mSaveResult->text().isEmpty());
     QVERIFY(!mSaveResult->isChecked());
+
+    QCheckBox *mSaveKey = w.findChild<QCheckBox *>(QStringLiteral("mSaveKey"));
+    QVERIFY(mSaveKey);
+    QVERIFY(!mSaveKey->text().isEmpty());
+    QVERIFY(!mSaveKey->isChecked());
 }

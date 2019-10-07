@@ -30,15 +30,20 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
-    mEnableDkimSupport = new QCheckBox(i18n("Enable DKimSupport"));
+    mEnableDkimSupport = new QCheckBox(i18n("Enable DKIM Support"));
     mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
     mEnableDkimSupport->setChecked(false);
     mainLayout->addWidget(mEnableDkimSupport);
 
-    mSaveResult = new QCheckBox(i18n("Save Result"));
+    mSaveResult = new QCheckBox(i18n("Save DKIM Result"));
     mSaveResult->setObjectName(QStringLiteral("mSaveResult"));
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
+
+    mSaveKey = new QCheckBox(i18n("Save Key"));
+    mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
+    mSaveKey->setChecked(false);
+    mainLayout->addWidget(mSaveKey);
 }
 
 DKIMGeneralWidget::~DKIMGeneralWidget()
