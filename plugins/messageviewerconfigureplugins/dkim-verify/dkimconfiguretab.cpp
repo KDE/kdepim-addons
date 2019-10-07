@@ -21,6 +21,8 @@
 #include "dkimconfiguretabwidget.h"
 
 #include <KSharedConfig>
+#include <KLocalizedString>
+#include <QCheckBox>
 #include <QHBoxLayout>
 #include <QRegularExpression>
 #include <QTabWidget>
@@ -31,6 +33,10 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mEnableDkimSupport = new QCheckBox(i18n("Enable DKimSupport"));
+    mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
+    mainLayout->addWidget(mEnableDkimSupport);
 
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));

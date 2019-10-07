@@ -20,7 +20,6 @@
 #include "dkimconfigurewidgettest.h"
 #include "../dkimconfigurewidget.h"
 #include "../dkimconfiguretab.h"
-#include "kdepimtest_layout.h"
 #include <QTest>
 #include <QVBoxLayout>
 
@@ -36,7 +35,7 @@ void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
     DKIMConfigureWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     DKIMConfigureTab *mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);

@@ -19,7 +19,7 @@
 
 #include "dkimconfiguretabtest.h"
 #include "../dkimconfiguretab.h"
-#include "kdepimtest_layout.h"
+#include <QCheckBox>
 #include <QHBoxLayout>
 #include <QTabWidget>
 #include <QTest>
@@ -36,7 +36,13 @@ void DKIMConfigureTabTest::shouldHaveDefaultValue()
 
     QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    KdepimTestLayout::checkContentsMargins(0, mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
+    QCheckBox *mEnableDkimSupport = w.findChild<QCheckBox *>(QStringLiteral("enableDkimSupport"));
+    QVERIFY(mEnableDkimSupport);
+    QVERIFY(!mEnableDkimSupport->text().isEmpty());
+    QVERIFY(!mEnableDkimSupport->isChecked());
+
 
     QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
