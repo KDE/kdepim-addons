@@ -46,6 +46,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
     mSaveKey->setChecked(false);
     mainLayout->addWidget(mSaveKey);
+    mainLayout->addStretch(1);
 }
 
 DKIMGeneralWidget::~DKIMGeneralWidget()

@@ -19,6 +19,7 @@
 
 #include "dkimconfiguretab.h"
 #include "dkimgeneralwidget.h"
+#include "dkimkeyrecordwidget.h"
 #include <KSharedConfig>
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -46,19 +47,25 @@ void DKIMConfigureTab::initTab()
 {
     mGeneralWidget = new DKIMGeneralWidget(this);
     mTabWidget->addTab(mGeneralWidget, i18n("General"));
+
+    mRecordWidget = new DKIMKeyRecordWidget(this);
+    mTabWidget->addTab(mRecordWidget, i18n("Record Keys"));
 }
 
 void DKIMConfigureTab::loadSettings()
 {
     mGeneralWidget->loadSettings();
+    mRecordWidget->loadSettings();
 }
 
 void DKIMConfigureTab::saveSettings()
 {
     mGeneralWidget->saveSettings();
+    mRecordWidget->saveSettings();
 }
 
 void DKIMConfigureTab::resetSettings()
 {
     mGeneralWidget->resetSettings();
+    mRecordWidget->resetSettings();
 }

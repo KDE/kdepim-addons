@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2018-2019 Laurent Montel <montel@kde.org>
+   Copyright (C) 2019 Laurent Montel <montel@kde.org>
 
    This library is free software; you can redistribute it and/or
    modify it under the terms of the GNU Library General Public
@@ -17,31 +17,19 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef DKIMCONFIGURETAB_H
-#define DKIMCONFIGURETAB_H
+#ifndef DKIMKEYRECORDWIDGETTEST_H
+#define DKIMKEYRECORDWIDGETTEST_H
 
-#include <QWidget>
-#include "dkimconfigure_private_export.h"
+#include <QObject>
 
-class QTabWidget;
-class DKIMGeneralWidget;
-class DKIMKeyRecordWidget;
-class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
+class DKIMKeyRecordWidgetTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit DKIMConfigureTab(QWidget *parent = nullptr);
-    ~DKIMConfigureTab();
-
-    void loadSettings();
-    void saveSettings();
-    void resetSettings();
-
-private:
-    void initTab();
-    DKIMGeneralWidget *mGeneralWidget = nullptr;
-    DKIMKeyRecordWidget *mRecordWidget = nullptr;
-    QTabWidget *mTabWidget = nullptr;
+    explicit DKIMKeyRecordWidgetTest(QObject *parent = nullptr);
+    ~DKIMKeyRecordWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
-#endif // DKIMCONFIGURETAB_H
+#endif // DKIMKEYRECORDWIDGETTEST_H
