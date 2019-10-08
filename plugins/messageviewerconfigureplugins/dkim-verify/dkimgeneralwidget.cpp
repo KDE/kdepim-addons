@@ -42,7 +42,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
 
-    mSaveKey = new QCheckBox(i18n("Save Key"));
+    mSaveKey = new QCheckBox(i18n("Save Record Key"));
     mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
     mSaveKey->setChecked(false);
     mainLayout->addWidget(mSaveKey);
