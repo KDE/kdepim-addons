@@ -38,7 +38,7 @@ void QuickTextMenu::initializeMenu()
     mMenu = new MessageComposer::ConvertSnippetVariableMenu(mParentWidget, this);
 
     connect(mMenu, &MessageComposer::ConvertSnippetVariableMenu::insertVariable, this, [this](MessageComposer::ConvertSnippetVariablesUtil::VariableType type) {
-        Q_EMIT insertText(mComposerInterface->convertVariable(type));
+        Q_EMIT insertText(mComposerInterface->convertVariable(type) + QLatin1Char(' '));
     });
 }
 
