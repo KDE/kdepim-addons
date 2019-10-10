@@ -21,6 +21,13 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку DKIM.",
         "Description[x-test]": "xxThis plugin allows you to configure dkim support.xx",
         "Name": "DKIM Checker",
+        "Name[ca]": "Verificador del DKIM",
+        "Name[cs]": "Kontrola DKIM",
+        "Name[gl]": "Corrector de DKIM",
+        "Name[nl]": "Controleren op DKIM",
+        "Name[pt]": "Verificação do DKIM",
+        "Name[uk]": "Засіб перевірки DKIM",
+        "Name[x-test]": "xxDKIM Checkerxx",
         "ServiceTypes": [
             "MessageViewerConfigureSettingsPlugin/Plugin"
         ],
