@@ -67,7 +67,7 @@ void DKIMGeneralWidget::saveSettings()
     saveCheckBox(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
     saveCheckBox(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
     saveCheckBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
-    if (!mEnableDkimSupport) {
+    if (!mEnableDkimSupport->isChecked()) {
         MessageViewer::DKIMManager::self()->clearInfoWidget();
     }
 }
