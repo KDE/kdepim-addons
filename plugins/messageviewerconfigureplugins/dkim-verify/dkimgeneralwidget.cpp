@@ -20,6 +20,7 @@
 
 #include "dkimgeneralwidget.h"
 #include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/DKIMManager>
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
@@ -56,7 +57,6 @@ DKIMGeneralWidget::~DKIMGeneralWidget()
 
 void DKIMGeneralWidget::loadSettings()
 {
-
     loadWidget(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
     loadWidget(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
     loadWidget(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
@@ -67,6 +67,9 @@ void DKIMGeneralWidget::saveSettings()
     saveCheckBox(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
     saveCheckBox(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
     saveCheckBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
+    if (!mEnableDkimSupport) {
+        MessageViewer::DKIMManager::self()->clearInfoWidget();
+    }
 }
 
 void DKIMGeneralWidget::resetSettings()
