@@ -46,12 +46,12 @@ class SendmailConfigWidget : public TransportConfigWidget
 
 public:
     explicit SendmailConfigWidget(Transport *transport, QWidget *parent = nullptr);
-    bool pathIsEmpty() const;
+    Q_REQUIRED_RESULT bool pathIsEmpty() const;
 Q_SIGNALS:
     void enableButtonOk(bool);
 
 public Q_SLOTS:
-    void apply();
+    void apply() override;
 
 private Q_SLOTS:
     void slotTextChanged(const QString &text);
