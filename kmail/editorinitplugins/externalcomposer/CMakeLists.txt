@@ -9,7 +9,7 @@ kcoreaddons_add_plugin(kmail_externalcomposereditorplugin JSON kmail_externalcom
     ${kmail_externalcomposereditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_externalcomposereditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n KF5::KIOWidgets
+    KF5::MessageComposer KF5::XmlGui KF5::I18n KF5::KIOWidgets
     )
 
 if(BUILD_TESTING)

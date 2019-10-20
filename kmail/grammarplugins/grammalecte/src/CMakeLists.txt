@@ -16,7 +16,6 @@ add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})
 generate_export_header(kmailgrammalecte BASE_NAME libkmailgrammalecte)
 target_link_libraries(kmailgrammalecte
     KF5::I18n
-    KF5::IconThemes
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::KIOWidgets

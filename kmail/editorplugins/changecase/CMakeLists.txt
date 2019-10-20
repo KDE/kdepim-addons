@@ -9,7 +9,7 @@ kcoreaddons_add_plugin(kmail_changecaseeditorplugin JSON kmail_changecaseeditorp
     ${kmail_changecaseeditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_changecaseeditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
+  KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 if(BUILD_TESTING)

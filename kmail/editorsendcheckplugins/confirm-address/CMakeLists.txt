@@ -18,7 +18,7 @@ kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin JSON kmail_confirmaddres
     ${kmail_confirmaddresseditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_confirmaddresseditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::Libkdepim
+    KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::Libkdepim
     )
 
 if(BUILD_TESTING)

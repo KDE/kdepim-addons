@@ -18,7 +18,6 @@ set(kmailmarkdownlib_SRCS
 add_library(kmailmarkdown ${kmailmarkdownlib_SRCS})
 generate_export_header(kmailmarkdown BASE_NAME libkmailmarkdown)
 target_link_libraries(kmailmarkdown
-    KF5::IconThemes
     KF5::MessageComposer
     KF5::I18n
     Qt5::WebEngineWidgets

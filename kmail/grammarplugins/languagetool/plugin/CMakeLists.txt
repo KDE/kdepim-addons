@@ -13,5 +13,5 @@ kcoreaddons_add_plugin(kmail_languagetoolplugin JSON kmail_languagetoolplugin.js
     ${languagetoolplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_languagetoolplugin
-        KF5::IconThemes KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmaillanguagetool  grammarcommon
+        KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmaillanguagetool  grammarcommon
     )

@@ -12,7 +12,7 @@ kcoreaddons_add_plugin(kmail_zoomtexteditorplugin JSON kmail_zoomtexteditorplugi
 
 
 target_link_libraries(kmail_zoomtexteditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
+  KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 if(BUILD_TESTING)

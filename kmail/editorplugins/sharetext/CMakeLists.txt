@@ -10,7 +10,7 @@ kcoreaddons_add_plugin(kmail_sharetexteditorplugin JSON kmail_sharetexteditorplu
     ${kmail_sharetexteditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_sharetexteditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
+  KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 if(BUILD_TESTING)

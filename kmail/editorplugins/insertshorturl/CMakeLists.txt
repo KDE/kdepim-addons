@@ -36,7 +36,7 @@ kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshortur
     ${kmail_insertshorturleditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_insertshorturleditorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n shorturlpluginprivate KF5::CoreAddons
+  KF5::MessageComposer KF5::XmlGui KF5::I18n shorturlpluginprivate KF5::CoreAddons
 )
 
 if(BUILD_TESTING)

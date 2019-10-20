@@ -20,7 +20,7 @@ kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin JSON kmail_checkbefores
     ${kmail_checkbeforesendeditorplugin_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(kmail_checkbeforesendeditorplugin
-    KF5::IconThemes KF5::MessageComposer KF5::I18n
+    KF5::MessageComposer KF5::I18n
     )
 
 if(BUILD_TESTING)
