@@ -19,6 +19,7 @@
 
 #include "itineraryrenderer.h"
 #include "itinerarymemento.h"
+#include "itineraryurlhandler.h"
 #include "itinerary_debug.h"
 
 #include <MessageViewer/IconNameCache>
@@ -164,6 +165,12 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     style.insert(QStringLiteral("palette"), QGuiApplication::palette());
     style.insert(QStringLiteral("viewScheme"), QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
     c.insert(QStringLiteral("style"), style);
+
+    QVariantMap actionState;
+    actionState.insert(QStringLiteral("canShowCalendar"), memento->startDate().isValid());
+    actionState.insert(QStringLiteral("canAddToCalendar"), memento->canAddToCalendar());
+    actionState.insert(QStringLiteral("hasItineraryApp"), ItineraryUrlHandler::hasItineraryApp());
+    c.insert(QStringLiteral("actionState"), actionState);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;

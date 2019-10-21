@@ -90,6 +90,14 @@ public:
 
     void addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData);
 
+    /** At least one reservation has enough information to add it to the calendar. */
+    bool canAddToCalendar() const;
+    /** Start date of the reservation data.
+     *  TODO this eventually should include the end date too, for showing the full range in the calendar,
+     *  but KOrganizer doesn't support that yet
+     */
+    QDate startDate() const;
+
 private:
     QSet<KMime::ContentIndex> m_parsedParts;
     KItinerary::ExtractorPostprocessor m_postProc;

@@ -39,16 +39,16 @@ public:
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
+    static bool hasItineraryApp();
 private:
     ItineraryMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
-    QDate dateForReservation(ItineraryMemento *memento) const;
     void showCalendar(const QDate &date) const;
     void addToCalendar(ItineraryMemento *memento) const;
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
     void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
     QString createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const;
 
-    QString m_appPath;
+    static QString m_appPath;
 };
 
 #endif // ITINERARYURLHANDLER_H

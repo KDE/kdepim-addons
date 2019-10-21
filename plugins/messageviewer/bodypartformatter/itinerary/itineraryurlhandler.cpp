@@ -26,19 +26,14 @@
 
 #include <CalendarSupport/CalendarSingleton>
 
-#include <KItinerary/BusTrip>
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/File>
-#include <KItinerary/Flight>
 #include <KItinerary/LocationUtil>
 #include <KItinerary/Organization>
 #include <KItinerary/Place>
 #include <KItinerary/Reservation>
 #include <KItinerary/SortUtil>
-#include <KItinerary/TrainTrip>
-#include <KItinerary/Taxi>
-#include <KItinerary/Event>
 
 #include <KMime/Content>
 
@@ -67,6 +62,8 @@
 
 using namespace KItinerary;
 
+QString ItineraryUrlHandler::m_appPath;
+
 ItineraryUrlHandler::ItineraryUrlHandler()
 {
     m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
@@ -75,22 +72,6 @@ ItineraryUrlHandler::ItineraryUrlHandler()
 QString ItineraryUrlHandler::name() const
 {
     return QString::fromUtf8(staticMetaObject.className());
-}
-
-static bool canAddToCalendar(ItineraryMemento *m)
-{
-    for (const auto &d : m->data()) {
-        if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
-            const auto f = d.reservations.at(0).value<FlightReservation>().reservationFor().value<Flight>();
-            if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
-                return true;
-            }
-            continue;
-        } else if (SortUtil::startDateTime(d.reservations.at(0)).isValid()) {
-            return true;
-        }
-    }
-    return false;
 }
 
 bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
@@ -130,7 +111,7 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
     if (!m || !m->hasData()) {
         return false;
     }
-    const auto date = dateForReservation(m);
+    const auto date = m->startDate();
 
     QMenu menu;
     QAction *action = nullptr;
@@ -142,7 +123,7 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
     }
 
     action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
-    action->setEnabled(canAddToCalendar(m));
+    action->setEnabled(m->canAddToCalendar());
     QObject::connect(action, &QAction::triggered, this, [this, m](){
         addToCalendar(m);
     });
@@ -190,6 +171,11 @@ QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPar
     return {};
 }
 
+bool ItineraryUrlHandler::hasItineraryApp()
+{
+    return !m_appPath.isEmpty();
+}
+
 ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto node = part->content()->topLevel();
@@ -198,17 +184,6 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
         return nullptr;
     }
     return dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), ItineraryMemento::identifier()));
-}
-
-QDate ItineraryUrlHandler::dateForReservation(ItineraryMemento *memento) const
-{
-    for (const auto &d : memento->data()) {
-        const auto dt = SortUtil::startDateTime(d.reservations.at(0));
-        if (dt.isValid()) {
-            return dt.date();
-        }
-    }
-    return {};
 }
 
 void ItineraryUrlHandler::showCalendar(const QDate &date) const

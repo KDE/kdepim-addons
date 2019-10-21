@@ -22,9 +22,11 @@
 #include <CalendarSupport/CalendarSingleton>
 
 #include <KItinerary/CalendarHandler>
+#include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/MergeUtil>
 #include <KItinerary/Reservation>
+#include <KItinerary/SortUtil>
 
 #include <KPkPass/Pass>
 
@@ -151,4 +153,31 @@ QByteArray ItineraryMemento::rawPassData(const QString &passTypeIdentifier, cons
 void ItineraryMemento::addDocument(const QString &docId, const QVariant &docInfo, const QByteArray &docData)
 {
     m_docs.push_back({docId, docInfo, docData});
+}
+
+bool ItineraryMemento::canAddToCalendar() const
+{
+    for (const auto &d : m_data) {
+        if (JsonLd::isA<FlightReservation>(d.reservations.at(0))) {
+            const auto f = d.reservations.at(0).value<FlightReservation>().reservationFor().value<Flight>();
+            if (f.departureTime().isValid() && f.arrivalTime().isValid()) {
+                return true;
+            }
+            continue;
+        } else if (SortUtil::startDateTime(d.reservations.at(0)).isValid()) {
+            return true;
+        }
+    }
+    return false;
+}
+
+QDate ItineraryMemento::startDate() const
+{
+    for (const auto &d : m_data) {
+        const auto dt = SortUtil::startDateTime(d.reservations.at(0));
+        if (dt.isValid()) {
+            return dt.date();
+        }
+    }
+    return {};
 }
