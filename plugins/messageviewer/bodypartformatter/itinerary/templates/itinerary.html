@@ -1,3 +1,37 @@
+<style type="text/css">
+/** all values taken from the Breeze QStyle */
+a.itineraryButton {
+    margin-top: 6px;
+    margin-bottom: 6px;
+    padding: 0px 1px 1px 0px;
+    display:inline-block;
+    cursor: default;
+    user-select: none;
+    vertical-align: top;
+}
+a.itineraryButton span {
+    border-radius:2px;
+    border: 1px solid;
+    border-color:{% colorMix style.palette.button style.palette.buttonText 0.3 %};
+    background: linear-gradient({{ style.palette.button|colorLighter:101|colorHexRgb }}, {{ style.palette.button|colorDarker:103|colorHexRgb }});
+    padding: 6px;
+    box-shadow: 1px 1px 1px {{ style.palette.shadow|colorSetAlpha:38|colorCssRgba }};
+    color:{{ style.palette.buttonText|colorHexRgb }};
+}
+a.itineraryButton span img {
+    vertical-align: sub;
+}
+a.itineraryButton:hover span {
+    border-color: {% colorMix style.viewScheme.hoverColor palette.buttonText 0.15 %};
+}
+a.itineraryButton:active span {
+    {% colorMix style.palette.button style.palette.buttonText 0.2 as activeButtonBackground %}
+    background: linear-gradient({{ activeButtonBackground|colorLighter:101|colorHexRgb }}, {{ activeButtonBackground|colorDarker:103|colorHexRgb }});
+}
+a.itineraryButton:active {
+    padding: 1px 0px 0px 1px;
+}
+</style>
 <div class="inlineMessageInformation" style="position:relative;">
 <div style="position: absolute; top: 4px; right: 4px;">
     <a href="x-kmail:/bodypart/0//semanticAction">{% icon "map-globe" small _("Add reservation to calendar.") %}</a>

@@ -40,6 +40,8 @@
 #include <KItinerary/Ticket>
 #include <KItinerary/TrainTrip>
 
+#include <KColorScheme>
+
 #include <grantlee/engine.h>
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
@@ -159,6 +161,8 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     QVariantMap style;
     style.insert(QStringLiteral("expandIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
     style.insert(QStringLiteral("collapseIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
+    style.insert(QStringLiteral("palette"), QGuiApplication::palette());
+    style.insert(QStringLiteral("viewScheme"), QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
     c.insert(QStringLiteral("style"), style);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
