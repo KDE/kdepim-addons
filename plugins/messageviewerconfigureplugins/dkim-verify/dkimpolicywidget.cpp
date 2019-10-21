@@ -18,8 +18,14 @@
 */
 
 #include "dkimpolicywidget.h"
-
+#include <KLocalizedString>
+#include <QCheckBox>
 #include <QVBoxLayout>
+
+#include "messageviewer/messageviewersettings.h"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
+
+using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     : QWidget(parent)
@@ -27,9 +33,42 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mVerifyIfEmailMustBeSigned = new QCheckBox(i18n("Check if e-mail should be signed"), this);
+    mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("mVerifyIfEmailMustBeSigned"));
+    mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
+    connect(mVerifyIfEmailMustBeSigned, &QCheckBox::clicked, this, [this](bool state) {
+        mUseDMARC->setEnabled(state);
+    });
+
+    mUseDMARC = new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this);
+    mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
+    mUseDMARC->setEnabled(false);
+    mainLayout->addWidget(mUseDMARC);
+
+    mainLayout->addStretch(1);
 }
 
 DKIMPolicyWidget::~DKIMPolicyWidget()
 {
 
+}
+
+void DKIMPolicyWidget::loadSettings()
+{
+    loadWidget(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
+    loadWidget(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
+}
+
+void DKIMPolicyWidget::saveSettings()
+{
+    saveCheckBox(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
+    saveCheckBox(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
+}
+
+void DKIMPolicyWidget::resetSettings()
+{
+    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
+    loadSettings();
+    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
 }

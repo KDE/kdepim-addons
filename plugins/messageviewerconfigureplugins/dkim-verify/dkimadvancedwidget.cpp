@@ -18,8 +18,11 @@
 */
 
 #include "dkimadvancedwidget.h"
-
+#include <KLocalizedString>
 #include <QVBoxLayout>
+#include "messageviewer/messageviewersettings.h"
+#include <PimCommon/ConfigureImmutableWidgetUtils>
+using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
@@ -31,6 +34,21 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
 }
 
 DKIMAdvancedWidget::~DKIMAdvancedWidget()
+{
+
+}
+
+void DKIMAdvancedWidget::loadSettings()
+{
+
+}
+
+void DKIMAdvancedWidget::saveSettings()
+{
+
+}
+
+void DKIMAdvancedWidget::resetSettings()
 {
 
 }

@@ -17,9 +17,11 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "dkimadvancedwidget.h"
 #include "dkimconfiguretab.h"
 #include "dkimgeneralwidget.h"
 #include "dkimkeyrecordwidget.h"
+#include "dkimpolicywidget.h"
 #include <KSharedConfig>
 #include <KLocalizedString>
 #include <QHBoxLayout>
@@ -50,22 +52,34 @@ void DKIMConfigureTab::initTab()
 
     mRecordWidget = new DKIMKeyRecordWidget(this);
     mTabWidget->addTab(mRecordWidget, i18n("Record Keys"));
+
+    mPolicyWidget = new DKIMPolicyWidget(this);
+    mTabWidget->addTab(mPolicyWidget, i18n("Policy"));
+
+    mAdvancedWidget = new DKIMAdvancedWidget(this);
+    mTabWidget->addTab(mAdvancedWidget, i18n("Advanced"));
 }
 
 void DKIMConfigureTab::loadSettings()
 {
     mGeneralWidget->loadSettings();
     mRecordWidget->loadSettings();
+    mPolicyWidget->loadSettings();
+    mAdvancedWidget->loadSettings();
 }
 
 void DKIMConfigureTab::saveSettings()
 {
     mGeneralWidget->saveSettings();
     mRecordWidget->saveSettings();
+    mPolicyWidget->saveSettings();
+    mAdvancedWidget->saveSettings();
 }
 
 void DKIMConfigureTab::resetSettings()
 {
     mGeneralWidget->resetSettings();
     mRecordWidget->resetSettings();
+    mPolicyWidget->resetSettings();
+    mAdvancedWidget->resetSettings();
 }

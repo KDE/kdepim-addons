@@ -22,13 +22,19 @@
 
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
-
+class QCheckBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit DKIMPolicyWidget(QWidget *parent = nullptr);
     ~DKIMPolicyWidget();
+    void loadSettings();
+    void saveSettings();
+    void resetSettings();
+private:
+    QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
+    QCheckBox *mUseDMARC = nullptr;
 };
 
 #endif // DKIMPOLICYWIDGET_H

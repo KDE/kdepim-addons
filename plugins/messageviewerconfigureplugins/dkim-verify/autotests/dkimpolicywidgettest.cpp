@@ -19,6 +19,7 @@
 
 #include "dkimpolicywidgettest.h"
 #include "dkimpolicywidget.h"
+#include <QCheckBox>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(DKIMPolicyWidgetTest)
@@ -39,4 +40,14 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
+    QCheckBox *mVerifyIfEmailMustBeSigned = w.findChild<QCheckBox *>(QStringLiteral("mVerifyIfEmailMustBeSigned"));
+    QVERIFY(mVerifyIfEmailMustBeSigned);
+    QVERIFY(!mVerifyIfEmailMustBeSigned->text().isEmpty());
+    QVERIFY(mVerifyIfEmailMustBeSigned->isEnabled());
+
+    QCheckBox *mUseDMARC = w.findChild<QCheckBox *>QStringLiteral("mUseDMARC");
+    QVERIFY(mUseDMARC);
+    QVERIFY(!mUseDMARC->text().isEmpty());
+    QVERIFY(!mUseDMARC->isEnabled());
 }

@@ -30,6 +30,9 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
 public:
     explicit DKIMAdvancedWidget(QWidget *parent = nullptr);
     ~DKIMAdvancedWidget();
+    void loadSettings();
+    void saveSettings();
+    void resetSettings();
 };
 
 #endif // DKIMADVANCEDWIDGET_H

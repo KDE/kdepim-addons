@@ -26,6 +26,8 @@
 class QTabWidget;
 class DKIMGeneralWidget;
 class DKIMKeyRecordWidget;
+class DKIMAdvancedWidget;
+class DKIMPolicyWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
 {
     Q_OBJECT
@@ -41,6 +43,8 @@ private:
     void initTab();
     DKIMGeneralWidget *mGeneralWidget = nullptr;
     DKIMKeyRecordWidget *mRecordWidget = nullptr;
+    DKIMAdvancedWidget *mAdvancedWidget = nullptr;
+    DKIMPolicyWidget *mPolicyWidget = nullptr;
     QTabWidget *mTabWidget = nullptr;
 };
 
