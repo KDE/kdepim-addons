@@ -19,18 +19,25 @@
 
 #include "dkimadvancedwidget.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <QFormLayout>
 #include "messageviewer/messageviewersettings.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
+#include <QLabel>
+#include <QComboBox>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    QFormLayout *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
+    mSha1Policy = new QComboBox(this);
+    mSha1Policy->setObjectName(QStringLiteral("rsa1-policy"));
+    mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
+
+    mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
 }
 
 DKIMAdvancedWidget::~DKIMAdvancedWidget()
@@ -40,15 +47,17 @@ DKIMAdvancedWidget::~DKIMAdvancedWidget()
 
 void DKIMAdvancedWidget::loadSettings()
 {
-
+    loadWidget(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
 }
 
 void DKIMAdvancedWidget::saveSettings()
 {
-
+    saveComboBox(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
 }
 
 void DKIMAdvancedWidget::resetSettings()
 {
-
+    const bool bUseDefaults = MessageViewer::MessageViewerSettings::self()->useDefaults(true);
+    loadSettings();
+    MessageViewer::MessageViewerSettings::self()->useDefaults(bUseDefaults);
 }

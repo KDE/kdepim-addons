@@ -23,7 +23,7 @@
 
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
-
+class QComboBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
 {
     Q_OBJECT
@@ -33,6 +33,8 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+private:
+    QComboBox *mSha1Policy = nullptr;
 };
 
 #endif // DKIMADVANCEDWIDGET_H

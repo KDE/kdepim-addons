@@ -21,7 +21,7 @@
 #include "dkimadvancedwidgettest.h"
 #include "dkimadvancedwidget.h"
 #include <QTest>
-#include <QVBoxLayout>
+#include <QFormLayout>
 QTEST_MAIN(DKIMAdvancedWidgetTest)
 
 DKIMAdvancedWidgetTest::DKIMAdvancedWidgetTest(QObject *parent)
@@ -33,7 +33,7 @@ DKIMAdvancedWidgetTest::DKIMAdvancedWidgetTest(QObject *parent)
 void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
 {
     DKIMAdvancedWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
