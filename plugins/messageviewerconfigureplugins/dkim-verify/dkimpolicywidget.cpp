@@ -37,7 +37,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mVerifyIfEmailMustBeSigned = new QCheckBox(i18n("Check if e-mail should be signed"), this);
     mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("mVerifyIfEmailMustBeSigned"));
     mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
-    connect(mVerifyIfEmailMustBeSigned, &QCheckBox::clicked, this, [this](bool state) {
+    connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
         mUseDMARC->setEnabled(state);
     });
 
