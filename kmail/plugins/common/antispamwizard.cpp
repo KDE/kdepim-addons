@@ -47,7 +47,6 @@
 #include <AkonadiCore/AgentInstance>
 
 #include <QDialog>
-#include <kiconloader.h>
 #include <KLocalizedString>
 #include <KProcess>
 #include <ktoolinvocation.h>
@@ -989,15 +988,16 @@ ASWizPage::ASWizPage(QWidget *parent, const QString &name)
     : QWidget(parent)
 {
     setObjectName(name);
-    const QString banner = QStringLiteral("kmwizard.png");
     mLayout = new QHBoxLayout(this);
 
     QVBoxLayout *sideLayout = new QVBoxLayout();
     mLayout->addItem(sideLayout);
     mLayout->addItem(new QSpacerItem(5, 5, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
+    QPixmap banner;
+    banner.load(QStringLiteral(":/org/kde/kmail/pics/kmwizard.png"));
     QLabel *bannerLabel = new QLabel(this);
-    bannerLabel->setPixmap(UserIcon(banner));
+    bannerLabel->setPixmap(banner);
     bannerLabel->setScaledContents(false);
     bannerLabel->setFrameShape(QFrame::StyledPanel);
     bannerLabel->setFrameShadow(QFrame::Sunken);

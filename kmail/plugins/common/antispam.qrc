@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/org/kde/kmail/">
+        <file>pics/kmwizard.png</file>
+    </qresource>
+</RCC>
