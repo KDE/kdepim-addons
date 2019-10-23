@@ -29,10 +29,10 @@ int main(int argc, char **argv)
 
     // see if we are starting with session management
     if (app.isSessionRestored()) {
-        RESTORE(mailreader);
+        kRestoreMainWindows<mailreader>();
     } else {
         // no session.. just start up normally
-        if (parser.positionalArguments().count() == 0) {
+        if (parser.positionalArguments().isEmpty()) {
             //mailreader *widget = new mailreader;
             widget->show();
         } else {
