@@ -17,24 +17,26 @@
    02110-1301, USA.
 */
 
-#ifndef ITINERARYRENDERER_H
-#define ITINERARYRENDERER_H
+#ifndef ITINERARYKDECONNECTHANDLER_H
+#define ITINERARYKDECONNECTHANDLER_H
 
-#include <MessageViewer/MessagePartRendererBase>
+#include <QObject>
+#include <QString>
 
-class ItineraryKDEConnectHandler;
-
-/** Rendering plugin for itinerary information about the email content. */
-class ItineraryRenderer : public MessageViewer::MessagePartRendererBase
+class ItineraryKDEConnectHandler : public QObject
 {
+    Q_OBJECT
 public:
-    ItineraryRenderer();
-    void setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect);
+    explicit ItineraryKDEConnectHandler(QObject *parent = nullptr);
 
-    bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
+    struct Device {
+        QString deviceId;
+        QString name;
+    };
 
-private:
-    ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
+    QVector<Device> devices() const;
+
+    void sendToDevice(const QString &fileName, const QString &deviceId);
 };
 
-#endif // ITINERARYRENDERER_H
+#endif // ITINERARYKDECONNECTHANDLER_H

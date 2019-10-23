@@ -25,6 +25,7 @@
 #include <QObject>
 
 class ItineraryMemento;
+class ItineraryKDEConnectHandler;
 
 /** URL handler for the itinerary plugin. */
 class ItineraryUrlHandler : public QObject, public MessageViewer::Interface::BodyPartURLHandler
@@ -33,6 +34,7 @@ class ItineraryUrlHandler : public QObject, public MessageViewer::Interface::Bod
 public:
     ItineraryUrlHandler();
     ~ItineraryUrlHandler() override = default;
+    void setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect);
 
     QString name() const override;
     bool handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
@@ -47,6 +49,8 @@ private:
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
     void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
     QString createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const;
+
+    ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
 
     static QString m_appPath;
 };

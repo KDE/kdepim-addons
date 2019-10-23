@@ -19,6 +19,7 @@
 
 #include "itineraryurlhandler.h"
 #include "itinerarymemento.h"
+#include "itinerarykdeconnecthandler.h"
 #include "itinerary_debug.h"
 
 #include <MimeTreeParser/BodyPart>
@@ -53,9 +54,6 @@
 #include <QStandardPaths>
 #include <QTemporaryFile>
 #include <QUrlQuery>
-#include <QDBusPendingReply>
-#include <QDBusReply>
-#include <QVersionNumber>
 
 #include <memory>
 #include <type_traits>
@@ -74,26 +72,46 @@ QString ItineraryUrlHandler::name() const
     return QString::fromUtf8(staticMetaObject.className());
 }
 
+void ItineraryUrlHandler::setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect)
+{
+    m_kdeConnect = kdeConnect;
+}
+
 bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(viewerInstance);
-    if (path == QLatin1String("semanticAction")) {
-        const auto m = memento(part);
-        if (!m || !m->hasData()) {
-            qCWarning(ITINERARY_LOG) << "sementic action: data not found";
-            return true;
-        }
+    const auto m = memento(part);
 
+    if (path.startsWith(QLatin1String("semanticExpand?"))) {
+        auto idx = path.midRef(15).toInt();
+        m->toggleExpanded(idx);
+        const auto nodeHelper = part->nodeHelper();
+        emit nodeHelper->update(MimeTreeParser::Delayed);
+        return true;
+    }
+
+    if (path == QLatin1String("showCalendar")) {
+        showCalendar(m->startDate());
+        return true;
+    }
+
+    if (path == QLatin1String("addToCalendar")) {
+        addToCalendar(m);
+        return true;
+    }
+
+    if (path == QLatin1String("import")) {
+        openInApp(part);
+        return true;
+    }
+
+    if (path == QLatin1String("sendToDeviceList")) {
         handleContextMenuRequest(part, path, QCursor::pos());
         return true;
     }
 
-    if (path.startsWith(QLatin1String("semanticExpand?"))) {
-        auto idx = path.midRef(15).toInt();
-        auto m = memento(part);
-        m->toggleExpanded(idx);
-        const auto nodeHelper = part->nodeHelper();
-        emit nodeHelper->update(MimeTreeParser::Delayed);
+    if (path.startsWith(QLatin1String("sendToDevice-"))) {
+        openWithKDEConnect(part, path.mid(13));
         return true;
     }
 
@@ -103,7 +121,12 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part);
-    if (path != QLatin1String("semanticAction")) {
+    if (path == QLatin1String("showCalendar") || path == QLatin1String("addToCalendar") || path == QLatin1String("import") || path.startsWith(QLatin1String("sendToDevice-"))) {
+        // suppress default context menus for our buttons
+        return true;
+    }
+
+    if (path != QLatin1String("sendToDeviceList")) {
         return false;
     }
 
@@ -111,51 +134,15 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
     if (!m || !m->hasData()) {
         return false;
     }
-    const auto date = m->startDate();
 
     QMenu menu;
     QAction *action = nullptr;
-    if (date.isValid()) {
-        action = menu.addAction(QIcon::fromTheme(QStringLiteral("view-calendar")), i18n("Show Calendar"));
-        QObject::connect(action, &QAction::triggered, this, [this, date](){
-            showCalendar(date);
+    const auto devices = m_kdeConnect->devices();
+    for (const auto &device : devices) {
+        action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", device.name));
+        QObject::connect(action, &QAction::triggered, this, [this, part, device]() {
+            openWithKDEConnect(part, device.deviceId);
         });
-    }
-
-    action = menu.addAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Add To Calendar"));
-    action->setEnabled(m->canAddToCalendar());
-    QObject::connect(action, &QAction::triggered, this, [this, m](){
-        addToCalendar(m);
-    });
-
-    if (!m_appPath.isEmpty()) {
-        menu.addSeparator();
-        action = menu.addAction(QIcon::fromTheme(QStringLiteral("map-globe")), i18n("Import into KDE Itinerary"));
-        QObject::connect(action, &QAction::triggered, this, [this, part]() {
-            openInApp(part);
-        });
-    }
-
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect"), QStringLiteral("org.kde.kdeconnect.daemon"), QStringLiteral(
-                                                          "devices"));
-    msg.setArguments({true, true});
-    QDBusPendingReply<QStringList> reply = QDBusConnection::sessionBus().asyncCall(msg);
-    reply.waitForFinished();
-
-    if (reply.isValid()) {
-        for (const QString &deviceId : reply.value()) {
-            QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
-
-            QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1String("kdeconnect_share"));
-
-            if (pluginReply.value()) {
-                action = menu.addAction(QIcon::fromTheme(QStringLiteral("kdeconnect")), i18n("Send to %1", deviceIface.property("name").toString()));
-
-                QObject::connect(action, &QAction::triggered, this, [this, part, deviceId]() {
-                    openWithKDEConnect(part, deviceId);
-                });
-            }
-        }
     }
 
     menu.exec(p);
@@ -165,8 +152,17 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
 QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
     Q_UNUSED(part);
-    if (path == QLatin1String("semanticAction")) {
+    if (path == QLatin1String("showCalendar")) {
+        return i18n("Show calendar at the time of this reservation.");
+    }
+    if (path == QLatin1String("addToCalendar")) {
         return i18n("Add reservation to your calendar.");
+    }
+    if (path == QLatin1String("import")) {
+        return i18n("Import reservation into KDE Itinerary.");
+    }
+    if (path.startsWith(QLatin1String("sendToDevice"))) {
+        return i18n("Send this reservation to a device using KDE Connect.");
     }
     return {};
 }
@@ -257,23 +253,7 @@ void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) c
 void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const
 {
     const auto fileName = createItineraryFile(part);
-
-    QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
-    QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
-
-    QString method;
-    if (kdeconnectVersion >= QVersionNumber(1, 4, 0)) {
-        method = QStringLiteral("openFile");
-    } else {
-        method = QStringLiteral("shareUrl");
-    }
-
-    QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
-                                                      QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
-                                                      QStringLiteral("org.kde.kdeconnect.device.share"), method);
-    msg.setArguments({QUrl::fromLocalFile(fileName).toString()});
-
-    QDBusConnection::sessionBus().send(msg);
+    m_kdeConnect->sendToDevice(fileName, deviceId);
 }
 
 QString ItineraryUrlHandler::createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const

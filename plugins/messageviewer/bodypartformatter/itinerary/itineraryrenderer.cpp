@@ -20,6 +20,7 @@
 #include "itineraryrenderer.h"
 #include "itinerarymemento.h"
 #include "itineraryurlhandler.h"
+#include "itinerarykdeconnecthandler.h"
 #include "itinerary_debug.h"
 
 #include <MessageViewer/IconNameCache>
@@ -132,6 +133,11 @@ ItineraryRenderer::ItineraryRenderer()
     Grantlee::registerMetaType<Organization>();
 }
 
+void ItineraryRenderer::setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect)
+{
+    m_kdeConnect = kdeConnect;
+}
+
 bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context);
@@ -166,10 +172,19 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     style.insert(QStringLiteral("viewScheme"), QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
     c.insert(QStringLiteral("style"), style);
 
+    const bool testMode = qEnvironmentVariableIsSet("BPF_ITINERARY_TESTMODE"); // ensure deterministic results for unit tests
     QVariantMap actionState;
     actionState.insert(QStringLiteral("canShowCalendar"), memento->startDate().isValid());
     actionState.insert(QStringLiteral("canAddToCalendar"), memento->canAddToCalendar());
-    actionState.insert(QStringLiteral("hasItineraryApp"), ItineraryUrlHandler::hasItineraryApp());
+    actionState.insert(QStringLiteral("hasItineraryApp"), ItineraryUrlHandler::hasItineraryApp() || testMode);
+    if (!testMode) {
+        const auto devices = m_kdeConnect->devices();
+        actionState.insert(QStringLiteral("canSendToDevice"), !devices.isEmpty());
+        if (devices.size() == 1) {
+            actionState.insert(QStringLiteral("defaultDeviceName"), devices[0].name);
+            actionState.insert(QStringLiteral("defaultDeviceId"), devices[0].deviceId);
+        }
+    }
     c.insert(QStringLiteral("actionState"), actionState);
 
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already

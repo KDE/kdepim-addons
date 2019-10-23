@@ -43,7 +43,7 @@ void initLocale()
                                             "/.qttest")).constData(), 1);
     setenv("LC_ALL", "en_US.utf-8", 1);
     setenv("TZ", "UTC", 1);
-    setenv("BPF_ITINERARY_NO_AKONADI", "1", 1); // avoid itinerary plugin doing calendar lookups
+    setenv("BPF_ITINERARY_TESTMODE", "1", 1); // avoid itinerary plugin doing calendar lookups or D-Bus calls etc
     QStandardPaths::setTestModeEnabled(true);
     QLocale::setDefault(QLocale(QStringLiteral("en_US")));
 }

@@ -4,6 +4,7 @@ set(itinerary_plugin_srcs
     itineraryprocessor.cpp
     itineraryrenderer.cpp
     itineraryurlhandler.cpp
+    itinerarykdeconnecthandler.cpp
     templates/templates.qrc
 )
 ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary)

@@ -20,6 +20,7 @@
 #include "itineraryprocessor.h"
 #include "itineraryrenderer.h"
 #include "itineraryurlhandler.h"
+#include "itinerarykdeconnecthandler.h"
 
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -32,6 +33,12 @@ class ItineraryPlugin : public QObject, public MimeTreeParser::Interface::BodyPa
     Q_INTERFACES(MessageViewer::MessagePartRenderPlugin)
     Q_PLUGIN_METADATA(IID "com.kde.messageviewer.bodypartformatter" FILE "itinerary_plugin.json")
 public:
+    explicit ItineraryPlugin(QObject *parent = nullptr)
+        : QObject(parent)
+        , m_kdeConnect(new ItineraryKDEConnectHandler(this))
+    {
+    }
+
     const MimeTreeParser::Interface::BodyPartFormatter *bodyPartFormatter(int idx) const override
     {
         if (idx < 3) {
@@ -43,7 +50,9 @@ public:
     MessageViewer::MessagePartRendererBase *renderer(int idx) override
     {
         if (idx == 0) {
-            return new ItineraryRenderer();
+            auto renderer = new ItineraryRenderer();
+            renderer->setKDEConnectHandler(m_kdeConnect);
+            return renderer;
         }
         return nullptr;
     }
@@ -51,10 +60,15 @@ public:
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
-            return new ItineraryUrlHandler();
+            auto handler = new ItineraryUrlHandler();
+            handler->setKDEConnectHandler(m_kdeConnect);
+            return handler;
         }
         return nullptr;
     }
+
+private:
+    ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
 };
 }
 

@@ -34,11 +34,6 @@ a.itineraryButton:active {
 padding: 1px 0px 0px 1px;
 }</style>
     <div class="inlineMessageInformation" style="position:relative;">
-      <div style="position: absolute; top: 4px; right: 4px;">
-        <a href="x-kmail:/bodypart/0//semanticAction">
-          <img src="file:map-globe.svg" align="top" height="16" width="16" alt="Add reservation to calendar." title="Add reservation to calendar."/>
-        </a>
-      </div>
       <table style="width:100%;">
         <tr>
           <td style="width:33%;" title="">
@@ -63,6 +58,15 @@ Seat: 10E</div>
           </td>
         </tr>
       </table>
+      <hr/>
+      <div style="text-align:right">
+        <a href="x-kmail:/bodypart/0//showCalendar" class="itineraryButton" draggable="false">
+          <span><img src="file:view-calendar.svg" align="top" height="16" width="16" alt="view-calendar" title=""/>Show Calendar</span>
+        </a>
+        <a href="x-kmail:/bodypart/0//import" class="itineraryButton" draggable="false">
+          <span><img src="file:map-globe.svg" align="top" height="16" width="16" alt="map-globe" title=""/>Add to KDE Itinerary</span>
+        </a>
+      </div>
     </div>
     <div style="position: relative; word-wrap: break-word">
       <a name="att"/>
