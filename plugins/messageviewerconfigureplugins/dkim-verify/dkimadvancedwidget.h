@@ -24,6 +24,7 @@
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
 class QComboBox;
+class QCheckBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
 {
     Q_OBJECT
@@ -35,6 +36,7 @@ public:
     void resetSettings();
 private:
     QComboBox *mSha1Policy = nullptr;
+    QCheckBox *mCheckDKIMWhenOnlyTesting = nullptr;
 };
 
 #endif // DKIMADVANCEDWIDGET_H

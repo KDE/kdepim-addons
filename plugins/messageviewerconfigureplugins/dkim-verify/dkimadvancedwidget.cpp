@@ -24,6 +24,7 @@
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QLabel>
 #include <QComboBox>
+#include <QCheckBox>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
@@ -32,6 +33,10 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     QFormLayout *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mCheckDKIMWhenOnlyTesting = new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this);
+    mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
+    mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
     mSha1Policy = new QComboBox(this);
     mSha1Policy->setObjectName(QStringLiteral("rsa1-policy"));
@@ -48,11 +53,13 @@ DKIMAdvancedWidget::~DKIMAdvancedWidget()
 void DKIMAdvancedWidget::loadSettings()
 {
     loadWidget(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
+    loadWidget(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
 }
 
 void DKIMAdvancedWidget::saveSettings()
 {
     saveComboBox(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
+    saveCheckBox(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
 }
 
 void DKIMAdvancedWidget::resetSettings()
