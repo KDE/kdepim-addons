@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimadvancedwidgettest.h"
 #include "dkimadvancedwidget.h"
 #include <QTest>
@@ -27,7 +26,6 @@ QTEST_MAIN(DKIMAdvancedWidgetTest)
 DKIMAdvancedWidgetTest::DKIMAdvancedWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
@@ -36,5 +34,4 @@ void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
     QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
-
 }

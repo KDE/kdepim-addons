@@ -26,12 +26,10 @@ QTEST_MAIN(DKIMPolicyWidgetTest)
 DKIMPolicyWidgetTest::DKIMPolicyWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 DKIMPolicyWidgetTest::~DKIMPolicyWidgetTest()
 {
-
 }
 
 void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
@@ -46,7 +44,7 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mVerifyIfEmailMustBeSigned->text().isEmpty());
     QVERIFY(mVerifyIfEmailMustBeSigned->isEnabled());
 
-    QCheckBox *mUseDMARC = w.findChild<QCheckBox *>QStringLiteral("mUseDMARC");
+    QCheckBox *mUseDMARC = w.findChild<QCheckBox *> QStringLiteral("mUseDMARC");
     QVERIFY(mUseDMARC);
     QVERIFY(!mUseDMARC->text().isEmpty());
     QVERIFY(!mUseDMARC->isEnabled());

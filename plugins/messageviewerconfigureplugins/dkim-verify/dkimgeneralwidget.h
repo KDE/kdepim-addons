@@ -33,9 +33,9 @@ public:
     void saveSettings();
     void resetSettings();
 private:
-     QCheckBox *mEnableDkimSupport = nullptr;
-     QCheckBox *mSaveResult = nullptr;
-     QCheckBox *mSaveKey = nullptr;
+    QCheckBox *mEnableDkimSupport = nullptr;
+    QCheckBox *mSaveResult = nullptr;
+    QCheckBox *mSaveKey = nullptr;
 };
 
 #endif // DKIMGENERALWIDGET_H

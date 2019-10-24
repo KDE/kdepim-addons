@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimgeneralwidget.h"
 #include "messageviewer/messageviewersettings.h"
 #include <MessageViewer/DKIMManager>
@@ -52,7 +51,6 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
 
 DKIMGeneralWidget::~DKIMGeneralWidget()
 {
-
 }
 
 void DKIMGeneralWidget::loadSettings()

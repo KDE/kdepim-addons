@@ -51,7 +51,6 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
 
 DKIMPolicyWidget::~DKIMPolicyWidget()
 {
-
 }
 
 void DKIMPolicyWidget::loadSettings()

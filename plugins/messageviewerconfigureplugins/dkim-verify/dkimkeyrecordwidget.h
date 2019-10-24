@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef DKIMKEYRECORDWIDGET_H
 #define DKIMKEYRECORDWIDGET_H
 #include "dkimconfigure_private_export.h"

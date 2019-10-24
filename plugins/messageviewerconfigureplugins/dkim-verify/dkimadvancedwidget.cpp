@@ -47,7 +47,6 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
 
 DKIMAdvancedWidget::~DKIMAdvancedWidget()
 {
-
 }
 
 void DKIMAdvancedWidget::loadSettings()

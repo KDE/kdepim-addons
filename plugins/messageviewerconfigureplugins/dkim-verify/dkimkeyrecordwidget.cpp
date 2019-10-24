@@ -35,7 +35,6 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
 
 DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
 {
-
 }
 
 void DKIMKeyRecordWidget::loadSettings()

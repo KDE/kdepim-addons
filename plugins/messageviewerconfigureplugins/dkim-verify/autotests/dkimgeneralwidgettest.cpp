@@ -26,7 +26,6 @@ QTEST_MAIN(DKIMGeneralWidgetTest)
 DKIMGeneralWidgetTest::DKIMGeneralWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
