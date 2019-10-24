@@ -21,10 +21,10 @@
 #define DKIMCONFIGUREDIALOG_H
 
 #include <QDialog>
-#include "dkimconfigure_private_export.h"
+#include "libdkimverifyconfigure_export.h"
 
 class DKIMConfigureWidget;
-class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureDialog : public QDialog
+class LIBDKIMVERIFYCONFIGURE_EXPORT DKIMConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
