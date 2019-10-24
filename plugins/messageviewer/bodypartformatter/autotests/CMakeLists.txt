@@ -12,7 +12,7 @@ macro(add_kdepimaddons_crypto_unittest _source)
     target_link_libraries( ${_name}
         KF5::MessageViewer
         Qt5::Test
-        KF5::IconThemes
+        
     )
     add_gpg_crypto_test(${_name} messageviewerplugins-${_name})
     ecm_mark_as_test(messageviewerplugins-${_name})

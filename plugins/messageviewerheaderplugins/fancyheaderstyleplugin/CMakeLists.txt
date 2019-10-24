@@ -10,6 +10,5 @@ kcoreaddons_add_plugin(messageviewer_fancyheaderstyleplugin JSON messageviewer_f
 target_link_libraries(messageviewer_fancyheaderstyleplugin
   KF5::MessageViewer
   KF5::XmlGui
-  KF5::IconThemes
   KF5::I18n
 )

@@ -28,7 +28,6 @@ add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
 target_link_libraries(dkimverifyconfigure
     KF5::I18n
-    KF5::IconThemes
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::MessageViewer

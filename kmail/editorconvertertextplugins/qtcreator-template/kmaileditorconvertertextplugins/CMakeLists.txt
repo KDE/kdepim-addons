@@ -49,7 +49,7 @@ kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin JSON %{ProjectNameLower}e
     ${%{ProjectNameUpper}_SRCS} INSTALL_NAMESPACE kmail)
 
 target_link_libraries(%{ProjectNameLower}editorplugin
-  KF5::IconThemes KF5::MessageComposer KF5::XmlGui KF5::I18n
+   KF5::MessageComposer KF5::XmlGui KF5::I18n
 )
 
 

@@ -20,7 +20,7 @@ kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkg
     ${kaddressbook_checkgravatarplugin_SRCS} INSTALL_NAMESPACE kaddressbook)
 
 target_link_libraries(kaddressbook_checkgravatarplugin
-	KF5::PimCommon KF5::Completion KF5::IconThemes KF5::PimCommonAkonadi KF5::XmlGui KF5::Gravatar KF5::I18n KF5::Contacts
+	KF5::PimCommon KF5::Completion  KF5::PimCommonAkonadi KF5::XmlGui KF5::Gravatar KF5::I18n KF5::Contacts
 )
 
 if (BUILD_TESTING)
