@@ -20,15 +20,54 @@
 
 #include "dkimrulewidget.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <QCheckBox>
+#include <QFormLayout>
+#include <QLineEdit>
 
 DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QFormLayout *layout = new QFormLayout(this);
+    layout->setObjectName(QStringLiteral("layout"));
+    layout->setContentsMargins(0, 0, 0, 0);
 
+    mEnabled = new QCheckBox(i18n("Enabled"), this);
+    mEnabled->setObjectName(QStringLiteral("enabled"));
+    layout->addWidget(mEnabled);
+
+    mDomain = new QLineEdit(this);
+    mDomain->setObjectName(QStringLiteral("domain"));
+    layout->addRow(i18n("Domain:"), mDomain);
+
+    mSignatureDomainIdentifier = new QLineEdit(this);
+    mSignatureDomainIdentifier->setObjectName(QStringLiteral("signaturedomainidentifier"));
+    layout->addRow(i18n("SDID:"), mSignatureDomainIdentifier);
+
+    mFrom = new QLineEdit(this);
+    mFrom->setObjectName(QStringLiteral("from"));
+    layout->addRow(i18n("From:"), mFrom);
 }
 
 DKIMRuleWidget::~DKIMRuleWidget()
 {
 
 }
+
+void DKIMRuleWidget::loadRule(const MessageViewer::DKIMRule &rule)
+{
+    mEnabled->setChecked(rule.enabled());
+    mDomain->setText(rule.domain());
+    mSignatureDomainIdentifier->setText(rule.signedDomainIdentifier().join(QLatin1Char(' ')));
+    mFrom->setText(rule.from());
+}
+
+MessageViewer::DKIMRule DKIMRuleWidget::rule() const
+{
+    MessageViewer::DKIMRule rule;
+    rule.setEnabled(mEnabled->isChecked());
+    rule.setDomain(mDomain->text());
+    rule.setSignedDomainIdentifier(mSignatureDomainIdentifier->text().split(QLatin1Char(' ')));
+    rule.setFrom(mFrom->text());
+    return rule;
+}
+

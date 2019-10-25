@@ -22,13 +22,22 @@
 #define DKIMRULEWIDGET_H
 #include <QWidget>
 #include "libdkimverifyconfigure_export.h"
-
+#include <MessageViewer/DKIMRule>
+class QCheckBox;
+class QLineEdit;
 class LIBDKIMVERIFYCONFIGURE_EXPORT DKIMRuleWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit DKIMRuleWidget(QWidget *parent = nullptr);
     ~DKIMRuleWidget();
+    void loadRule(const MessageViewer::DKIMRule &rule);
+    Q_REQUIRED_RESULT MessageViewer::DKIMRule rule() const;
+private:
+    QCheckBox *mEnabled = nullptr;
+    QLineEdit *mDomain = nullptr;
+    QLineEdit *mSignatureDomainIdentifier = nullptr;
+    QLineEdit *mFrom = nullptr;
 };
 
 #endif // DKIMRULEWIDGET_H

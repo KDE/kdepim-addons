@@ -22,6 +22,8 @@
 
 #include "dkimconfigure_private_export.h"
 #include <QDialog>
+#include <MessageViewer/DKIMRule>
+class DKIMRuleWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMRuleDialog : public QDialog
 {
     Q_OBJECT
@@ -29,10 +31,13 @@ public:
     explicit DKIMRuleDialog(QWidget *parent = nullptr);
     ~DKIMRuleDialog();
 
+    MessageViewer::DKIMRule rule() const;
+    void loadRule(const MessageViewer::DKIMRule &rule);
 private:
     void slotAccepted();
     void writeConfig();
     void readConfig();
+    DKIMRuleWidget *mRuleWidget = nullptr;
 };
 
 #endif // DKIMRULEDIALOG_H

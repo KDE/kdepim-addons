@@ -31,5 +31,7 @@ DKIMRuleWidgetTest::DKIMRuleWidgetTest(QObject *parent)
 
 void DKIMRuleWidgetTest::shouldHaveDefaultValues()
 {
+    DKIMRuleWidget w;
+    QVERIFY(!w.rule().isValid());
     //TODO
 }
