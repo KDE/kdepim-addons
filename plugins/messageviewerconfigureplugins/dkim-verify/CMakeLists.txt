@@ -22,6 +22,8 @@ set(dkimverifyconfigure_SRCS
     dkimpolicywidget.cpp
     dkimruledialog.cpp
     dkimrulewidget.cpp
+    dkimmanageruleswidget.cpp
+    dkimmanagerulesdialog.cpp
 )
 
 ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
