@@ -28,6 +28,8 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidget : public QWidget
 public:
     explicit DKIMManageRulesWidget(QWidget *parent = nullptr);
     ~DKIMManageRulesWidget();
+    void loadSettings();
+    void saveSettings();
 };
 
 #endif // DKIMMANAGERULESWIDGET_H

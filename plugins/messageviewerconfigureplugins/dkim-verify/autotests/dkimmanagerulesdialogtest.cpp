@@ -19,7 +19,10 @@
 
 #include "dkimmanagerulesdialogtest.h"
 #include "dkimmanagerulesdialog.h"
+#include "dkimmanageruleswidget.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(DKIMManageRulesDialogTest)
 
 DKIMManageRulesDialogTest::DKIMManageRulesDialogTest(QObject *parent)
@@ -31,4 +34,14 @@ DKIMManageRulesDialogTest::DKIMManageRulesDialogTest(QObject *parent)
 void DKIMManageRulesDialogTest::shouldHaveDefaultValues()
 {
     DKIMManageRulesDialog w;
+
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    DKIMManageRulesWidget *mRulesWidget = w.findChild<DKIMManageRulesWidget *>(QStringLiteral("mRulesWidget"));
+    QVERIFY(mRulesWidget);
+
+    QDialogButtonBox *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
+    QCOMPARE(buttonBox->standardButtons(), {QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }

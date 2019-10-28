@@ -21,12 +21,19 @@
 
 #include <QDialog>
 #include "dkimconfigure_private_export.h"
+class DKIMManageRulesWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit DKIMManageRulesDialog(QWidget *parent = nullptr);
     ~DKIMManageRulesDialog();
+
+private:
+    void slotAccepted();
+    void readConfig();
+    void writeConfig();
+    DKIMManageRulesWidget *mRulesWidget = nullptr;
 };
 
 #endif // DKIMMANAGERULESDIALOG_H

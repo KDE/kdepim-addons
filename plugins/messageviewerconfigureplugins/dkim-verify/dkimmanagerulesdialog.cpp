@@ -18,14 +18,60 @@
 */
 
 #include "dkimmanagerulesdialog.h"
+#include "dkimmanageruleswidget.h"
+
+#include <KConfigGroup>
+#include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
+
+namespace {
+static const char myConfigGroupName[] = "DKIMManageRulesDialog";
+}
 
 DKIMManageRulesDialog::DKIMManageRulesDialog(QWidget *parent)
     : QDialog(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
+    mRulesWidget = new DKIMManageRulesWidget(this);
+    mRulesWidget->setObjectName(QStringLiteral("mRulesWidget"));
+    mainLayout->addWidget(mRulesWidget);
+
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    mainLayout->addWidget(buttonBox);
+
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMManageRulesDialog::slotAccepted);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &DKIMManageRulesDialog::reject);
+    mRulesWidget->loadSettings();
+    readConfig();
 }
 
 DKIMManageRulesDialog::~DKIMManageRulesDialog()
 {
 
+}
+
+void DKIMManageRulesDialog::slotAccepted()
+{
+    mRulesWidget->saveSettings();
+    accept();
+}
+
+void DKIMManageRulesDialog::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    const QSize size = group.readEntry("Size", QSize(600, 400));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void DKIMManageRulesDialog::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    group.writeEntry("Size", size());
+    group.sync();
 }
