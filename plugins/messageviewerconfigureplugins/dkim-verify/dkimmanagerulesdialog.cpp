@@ -51,7 +51,6 @@ DKIMManageRulesDialog::DKIMManageRulesDialog(QWidget *parent)
 
 DKIMManageRulesDialog::~DKIMManageRulesDialog()
 {
-
 }
 
 void DKIMManageRulesDialog::slotAccepted()

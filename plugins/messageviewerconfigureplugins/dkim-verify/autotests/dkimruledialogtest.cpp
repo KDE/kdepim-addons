@@ -29,7 +29,6 @@ QTEST_MAIN(DKIMRuleDialogTest)
 DKIMRuleDialogTest::DKIMRuleDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMRuleDialogTest::shouldHaveDefaultValues()

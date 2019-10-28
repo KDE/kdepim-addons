@@ -28,7 +28,6 @@ QTEST_MAIN(DKIMManageRulesDialogTest)
 DKIMManageRulesDialogTest::DKIMManageRulesDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMManageRulesDialogTest::shouldHaveDefaultValues()

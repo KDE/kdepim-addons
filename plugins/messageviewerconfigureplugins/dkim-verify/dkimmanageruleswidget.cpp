@@ -46,12 +46,10 @@ DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
 
     mainLayout->addWidget(mTreeWidget);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &DKIMManageRulesWidget::customContextMenuRequested);
-
 }
 
 DKIMManageRulesWidget::~DKIMManageRulesWidget()
 {
-
 }
 
 void DKIMManageRulesWidget::loadSettings()
@@ -72,7 +70,6 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     QMenu menu(this);
     if (item) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, item]() {
-
         });
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimrulewidgettest.h"
 #include "dkimrulewidget.h"
 
@@ -26,7 +25,6 @@ QTEST_MAIN(DKIMRuleWidgetTest)
 DKIMRuleWidgetTest::DKIMRuleWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMRuleWidgetTest::shouldHaveDefaultValues()

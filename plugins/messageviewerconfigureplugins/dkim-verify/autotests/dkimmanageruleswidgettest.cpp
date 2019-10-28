@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimmanageruleswidgettest.h"
 #include "dkimmanageruleswidget.h"
 
@@ -32,7 +31,6 @@ QTEST_MAIN(DKIMManageRulesWidgetTest)
 DKIMManageRulesWidgetTest::DKIMManageRulesWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMManageRulesWidgetTest::shouldHaveDefaultValues()
@@ -41,7 +39,6 @@ void DKIMManageRulesWidgetTest::shouldHaveDefaultValues()
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
-
 
     QTreeWidget *mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("treewidget"));
     QVERIFY(mTreeWidget);

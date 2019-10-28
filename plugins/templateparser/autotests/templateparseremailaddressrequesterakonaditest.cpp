@@ -37,7 +37,6 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-
     Akonadi::EmailAddressRequester *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());

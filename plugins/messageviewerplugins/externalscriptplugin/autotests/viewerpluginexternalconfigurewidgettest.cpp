@@ -43,7 +43,6 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-
     QListWidget *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);
     QCOMPARE(mListExternal->selectionMode(), QAbstractItemView::SingleSelection);

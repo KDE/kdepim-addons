@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef DKIMRULEWIDGETTEST_H
 #define DKIMRULEWIDGETTEST_H
 

@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #ifndef DKIMRULEWIDGET_H
 #define DKIMRULEWIDGET_H
 #include <QWidget>

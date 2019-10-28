@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimrulewidget.h"
 #include <KLocalizedString>
 #include <QCheckBox>
@@ -50,7 +49,6 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
 
 DKIMRuleWidget::~DKIMRuleWidget()
 {
-
 }
 
 void DKIMRuleWidget::loadRule(const MessageViewer::DKIMRule &rule)
@@ -70,4 +68,3 @@ MessageViewer::DKIMRule DKIMRuleWidget::rule() const
     rule.setFrom(mFrom->text());
     return rule;
 }
-
