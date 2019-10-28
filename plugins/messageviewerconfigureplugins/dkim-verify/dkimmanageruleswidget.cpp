@@ -35,7 +35,7 @@ DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     mTreeWidget = new QTreeWidget(this);
     mTreeWidget->setObjectName(QStringLiteral("treewidget"));
     mTreeWidget->setRootIsDecorated(false);
-    mTreeWidget->setHeaderLabels({i18n("SDID"), i18n("Selector"), i18n("DKIM Key")});
+    mTreeWidget->setHeaderLabels({i18n("Domain"), i18n("List-ID"), i18n("From"), i18n("SDID"), i18n("Rule type")});
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mTreeWidget->setAlternatingRowColors(true);
 
@@ -69,7 +69,11 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     QMenu menu(this);
     if (item) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), this, [this, item]() {
+            //TODO
+        });
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, item]() {
+            //TODO
         });
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {
