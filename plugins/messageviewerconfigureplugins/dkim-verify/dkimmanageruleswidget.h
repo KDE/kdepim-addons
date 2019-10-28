@@ -20,8 +20,24 @@
 #ifndef DKIMMANAGERULESWIDGET_H
 #define DKIMMANAGERULESWIDGET_H
 #include "dkimconfigure_private_export.h"
+#include <MessageViewer/DKIMRule>
+#include <QTreeWidgetItem>
 #include <QWidget>
 class QTreeWidget;
+
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidgetItem : public QTreeWidgetItem
+{
+public:
+    explicit DKIMManageRulesWidgetItem(QTreeWidget *parent = nullptr);
+    ~DKIMManageRulesWidgetItem();
+
+    Q_REQUIRED_RESULT MessageViewer::DKIMRule rule() const;
+    void setRule(const MessageViewer::DKIMRule &rule);
+
+private:
+    MessageViewer::DKIMRule mRule;
+};
+
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidget : public QWidget
 {
     Q_OBJECT

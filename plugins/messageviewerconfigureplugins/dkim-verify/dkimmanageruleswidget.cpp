@@ -18,12 +18,14 @@
 */
 
 #include "dkimmanageruleswidget.h"
+#include "dkimruledialog.h"
 #include <MessageViewer/DKIMManagerRules>
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QTreeWidget>
 #include <KTreeWidgetSearchLine>
 #include <QMenu>
+#include <QPointer>
 
 DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     : QWidget(parent)
@@ -68,12 +70,22 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     Q_UNUSED(pos);
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     QMenu menu(this);
-    if (item) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), this, [this, item]() {
-            //TODO
+    DKIMManageRulesWidgetItem *rulesItem = dynamic_cast<DKIMManageRulesWidgetItem *>(item);
+    if (rulesItem) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), this, [this, rulesItem]() {
+            QPointer<DKIMRuleDialog> dlg = new DKIMRuleDialog(this);
+            if (dlg->exec()) {
+                rulesItem->setRule(dlg->rule());
+            }
+            delete dlg;
         });
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, item]() {
-            //TODO
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, rulesItem]() {
+            QPointer<DKIMRuleDialog> dlg = new DKIMRuleDialog(this);
+            dlg->loadRule(rulesItem->rule());
+            if (dlg->exec()) {
+                rulesItem->setRule(dlg->rule());
+            }
+            delete dlg;
         });
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {
@@ -85,4 +97,25 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
         mTreeWidget->clear();
     });
     menu.exec(QCursor::pos());
+}
+
+DKIMManageRulesWidgetItem::DKIMManageRulesWidgetItem(QTreeWidget *parent)
+    : QTreeWidgetItem(parent)
+{
+
+}
+
+DKIMManageRulesWidgetItem::~DKIMManageRulesWidgetItem()
+{
+
+}
+
+MessageViewer::DKIMRule DKIMManageRulesWidgetItem::rule() const
+{
+    return mRule;
+}
+
+void DKIMManageRulesWidgetItem::setRule(const MessageViewer::DKIMRule &rule)
+{
+    mRule = rule;
 }
