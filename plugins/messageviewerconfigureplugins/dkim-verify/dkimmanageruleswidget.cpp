@@ -20,6 +20,8 @@
 #include "dkimmanageruleswidget.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <QTreeWidget>
+#include <KTreeWidgetSearchLine>
 
 DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     : QWidget(parent)
@@ -27,6 +29,21 @@ DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    mTreeWidget = new QTreeWidget(this);
+    mTreeWidget->setObjectName(QStringLiteral("treewidget"));
+    mTreeWidget->setRootIsDecorated(false);
+    mTreeWidget->setHeaderLabels({i18n("SDID"), i18n("Selector"), i18n("DKIM Key")});
+    mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    mTreeWidget->setAlternatingRowColors(true);
+
+    KTreeWidgetSearchLine *searchLineEdit = new KTreeWidgetSearchLine(this, mTreeWidget);
+    searchLineEdit->setObjectName(QStringLiteral("searchlineedit"));
+    searchLineEdit->setClearButtonEnabled(true);
+    mainLayout->addWidget(searchLineEdit);
+
+    mainLayout->addWidget(mTreeWidget);
+    connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &DKIMManageRulesWidget::customContextMenuRequested);
 
 }
 
@@ -43,4 +60,9 @@ void DKIMManageRulesWidget::loadSettings()
 void DKIMManageRulesWidget::saveSettings()
 {
     //TODO
+}
+
+void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
+{
+
 }

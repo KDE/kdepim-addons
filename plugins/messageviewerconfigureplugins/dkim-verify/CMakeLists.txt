@@ -35,6 +35,7 @@ target_link_libraries(dkimverifyconfigure
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::MessageViewer
+    KF5::ItemViews
     )
 
 set_target_properties(dkimverifyconfigure

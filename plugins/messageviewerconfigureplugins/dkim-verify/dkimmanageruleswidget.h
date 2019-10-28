@@ -21,7 +21,7 @@
 #define DKIMMANAGERULESWIDGET_H
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
-
+class QTreeWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidget : public QWidget
 {
     Q_OBJECT
@@ -30,6 +30,9 @@ public:
     ~DKIMManageRulesWidget();
     void loadSettings();
     void saveSettings();
+private:
+    void customContextMenuRequested(const QPoint &);
+    QTreeWidget *mTreeWidget = nullptr;
 };
 
 #endif // DKIMMANAGERULESWIDGET_H
