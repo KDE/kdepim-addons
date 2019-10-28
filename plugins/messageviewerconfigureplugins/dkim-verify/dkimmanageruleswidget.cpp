@@ -18,10 +18,12 @@
 */
 
 #include "dkimmanageruleswidget.h"
+#include <MessageViewer/DKIMManagerRules>
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <QTreeWidget>
 #include <KTreeWidgetSearchLine>
+#include <QMenu>
 
 DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     : QWidget(parent)
@@ -54,6 +56,7 @@ DKIMManageRulesWidget::~DKIMManageRulesWidget()
 
 void DKIMManageRulesWidget::loadSettings()
 {
+    const QVector<MessageViewer::DKIMRule> rules = MessageViewer::DKIMManagerRules::self()->rules();
     //TODO
 }
 
@@ -64,5 +67,21 @@ void DKIMManageRulesWidget::saveSettings()
 
 void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
 {
+    Q_UNUSED(pos);
+    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    QMenu menu(this);
+    if (item) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, item]() {
 
+        });
+        menu.addSeparator();
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {
+            delete item;
+        });
+        menu.addSeparator();
+    }
+    menu.addAction(i18n("Delete All"), this, [this]() {
+        mTreeWidget->clear();
+    });
+    menu.exec(QCursor::pos());
 }
