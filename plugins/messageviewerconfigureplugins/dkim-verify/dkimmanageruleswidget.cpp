@@ -27,6 +27,28 @@
 #include <QMenu>
 #include <QPointer>
 
+DKIMManageRulesWidgetItem::DKIMManageRulesWidgetItem(QTreeWidget *parent)
+    : QTreeWidgetItem(parent)
+{
+
+}
+
+DKIMManageRulesWidgetItem::~DKIMManageRulesWidgetItem()
+{
+
+}
+
+MessageViewer::DKIMRule DKIMManageRulesWidgetItem::rule() const
+{
+    return mRule;
+}
+
+void DKIMManageRulesWidgetItem::setRule(const MessageViewer::DKIMRule &rule)
+{
+    mRule = rule;
+}
+
+
 DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     : QWidget(parent)
 {
@@ -57,12 +79,25 @@ DKIMManageRulesWidget::~DKIMManageRulesWidget()
 void DKIMManageRulesWidget::loadSettings()
 {
     const QVector<MessageViewer::DKIMRule> rules = MessageViewer::DKIMManagerRules::self()->rules();
-    //TODO
+
+    for (const MessageViewer::DKIMRule &rule : rules) {
+        DKIMManageRulesWidgetItem *item = new DKIMManageRulesWidgetItem(mTreeWidget);
+        item->setCheckState(0, rule.enabled() ? Qt::Checked : Qt::Unchecked);
+        item->setText(0, rule.domain());
+        item->setText(1, rule.from());
+        item->setText(2, rule.signedDomainIdentifier().join(QLatin1Char(' ')));
+    }
 }
 
 void DKIMManageRulesWidget::saveSettings()
 {
-    //TODO
+    QVector<MessageViewer::DKIMRule> rules;
+    for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
+        QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
+        DKIMManageRulesWidgetItem *ruleItem = static_cast<DKIMManageRulesWidgetItem *>(item);
+        rules.append(ruleItem->rule());
+    }
+    MessageViewer::DKIMManagerRules::self()->saveRules(rules);
 }
 
 void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
@@ -99,23 +134,3 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     menu.exec(QCursor::pos());
 }
 
-DKIMManageRulesWidgetItem::DKIMManageRulesWidgetItem(QTreeWidget *parent)
-    : QTreeWidgetItem(parent)
-{
-
-}
-
-DKIMManageRulesWidgetItem::~DKIMManageRulesWidgetItem()
-{
-
-}
-
-MessageViewer::DKIMRule DKIMManageRulesWidgetItem::rule() const
-{
-    return mRule;
-}
-
-void DKIMManageRulesWidgetItem::setRule(const MessageViewer::DKIMRule &rule)
-{
-    mRule = rule;
-}

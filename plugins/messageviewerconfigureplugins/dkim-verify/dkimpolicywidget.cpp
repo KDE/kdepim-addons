@@ -39,7 +39,12 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
     connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
         mUseDMARC->setEnabled(state);
+        mUseDefaultRules->setEnabled(state);
     });
+
+    mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
+    mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
+    mainLayout->addWidget(mUseDefaultRules);
 
     mUseDMARC = new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this);
     mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
@@ -57,12 +62,14 @@ void DKIMPolicyWidget::loadSettings()
 {
     loadWidget(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
     loadWidget(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
+    loadWidget(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
 }
 
 void DKIMPolicyWidget::saveSettings()
 {
     saveCheckBox(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
     saveCheckBox(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
+    saveCheckBox(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
 }
 
 void DKIMPolicyWidget::resetSettings()

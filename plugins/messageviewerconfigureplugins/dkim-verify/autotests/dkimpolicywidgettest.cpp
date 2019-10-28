@@ -48,4 +48,9 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mUseDMARC);
     QVERIFY(!mUseDMARC->text().isEmpty());
     QVERIFY(!mUseDMARC->isEnabled());
+
+    QCheckBox *mUseDefaultRules = w.findChild<QCheckBox *> QStringLiteral("mUseDefaultRules");
+    QVERIFY(mUseDefaultRules);
+    QVERIFY(!mUseDefaultRules->text().isEmpty());
+    QVERIFY(!mUseDefaultRules->isEnabled());
 }

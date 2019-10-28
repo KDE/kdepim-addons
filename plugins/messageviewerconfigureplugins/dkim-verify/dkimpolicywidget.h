@@ -35,6 +35,7 @@ public:
 private:
     QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
     QCheckBox *mUseDMARC = nullptr;
+    QCheckBox *mUseDefaultRules = nullptr;
 };
 
 #endif // DKIMPOLICYWIDGET_H
