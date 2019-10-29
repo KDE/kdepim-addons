@@ -24,6 +24,7 @@
 #include <QPushButton>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KLocalizedString>
 
 namespace {
 static const char myConfigGroupName[] = "DKIMConfigureDialog";
@@ -32,6 +33,7 @@ static const char myConfigGroupName[] = "DKIMConfigureDialog";
 DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Configure DKIM"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

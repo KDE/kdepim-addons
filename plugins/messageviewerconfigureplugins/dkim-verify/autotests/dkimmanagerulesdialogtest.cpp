@@ -33,6 +33,7 @@ DKIMManageRulesDialogTest::DKIMManageRulesDialogTest(QObject *parent)
 void DKIMManageRulesDialogTest::shouldHaveDefaultValues()
 {
     DKIMManageRulesDialog w;
+    QVERIFY(!w.windowTitle().isEmpty());
 
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);

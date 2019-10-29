@@ -21,6 +21,7 @@
 #include "dkimrulewidget.h"
 
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -32,6 +33,8 @@ static const char myConfigGroupName[] = "DKIMRuleDialog";
 DKIMRuleDialog::DKIMRuleDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Add Rule"));
+
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -76,6 +79,7 @@ void DKIMRuleDialog::writeConfig()
 
 void DKIMRuleDialog::loadRule(const MessageViewer::DKIMRule &rule)
 {
+    setWindowTitle(i18n("Modify Rule"));
     mRuleWidget->loadRule(rule);
 }
 

@@ -36,6 +36,7 @@ DKIMConfigureDialogTest::DKIMConfigureDialogTest(QObject *parent)
 void DKIMConfigureDialogTest::shouldHaveDefaultValue()
 {
     DKIMConfigureDialog dlg;
+    QVERIFY(!dlg.windowTitle().isEmpty());
 
     QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);

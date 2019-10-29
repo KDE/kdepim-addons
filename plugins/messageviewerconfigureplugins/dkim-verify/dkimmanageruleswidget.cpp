@@ -112,15 +112,16 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     Q_UNUSED(pos);
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     QMenu menu(this);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), this, [this]() {
+        QPointer<DKIMRuleDialog> dlg = new DKIMRuleDialog(this);
+        if (dlg->exec()) {
+            DKIMManageRulesWidgetItem *item = new DKIMManageRulesWidgetItem(mTreeWidget);
+            item->setRule(dlg->rule());
+        }
+        delete dlg;
+    });
     DKIMManageRulesWidgetItem *rulesItem = dynamic_cast<DKIMManageRulesWidgetItem *>(item);
     if (rulesItem) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add..."), this, [this, rulesItem]() {
-            QPointer<DKIMRuleDialog> dlg = new DKIMRuleDialog(this);
-            if (dlg->exec()) {
-                rulesItem->setRule(dlg->rule());
-            }
-            delete dlg;
-        });
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Modify..."), this, [this, rulesItem]() {
             QPointer<DKIMRuleDialog> dlg = new DKIMRuleDialog(this);
             dlg->loadRule(rulesItem->rule());
@@ -133,8 +134,8 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {
             delete item;
         });
-        menu.addSeparator();
     }
+    menu.addSeparator();
     menu.addAction(i18n("Delete All"), this, [this]() {
         mTreeWidget->clear();
     });

@@ -22,6 +22,7 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
@@ -32,6 +33,7 @@ static const char myConfigGroupName[] = "DKIMManageRulesDialog";
 DKIMManageRulesDialog::DKIMManageRulesDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Configure Rule"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
