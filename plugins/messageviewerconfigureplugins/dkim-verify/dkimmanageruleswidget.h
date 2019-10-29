@@ -35,6 +35,7 @@ public:
     void setRule(const MessageViewer::DKIMRule &rule);
 
 private:
+    void updateInfo();
     MessageViewer::DKIMRule mRule;
 };
 

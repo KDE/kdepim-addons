@@ -46,6 +46,16 @@ MessageViewer::DKIMRule DKIMManageRulesWidgetItem::rule() const
 void DKIMManageRulesWidgetItem::setRule(const MessageViewer::DKIMRule &rule)
 {
     mRule = rule;
+    updateInfo();
+}
+
+void DKIMManageRulesWidgetItem::updateInfo()
+{
+    setCheckState(0, mRule.enabled() ? Qt::Checked : Qt::Unchecked);
+    setText(1, mRule.domain());
+    //TODO
+    setText(3, mRule.from());
+    setText(4, mRule.signedDomainIdentifier().join(QLatin1Char(' ')));
 }
 
 
@@ -59,7 +69,7 @@ DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     mTreeWidget = new QTreeWidget(this);
     mTreeWidget->setObjectName(QStringLiteral("treewidget"));
     mTreeWidget->setRootIsDecorated(false);
-    mTreeWidget->setHeaderLabels({i18n("Domain"), i18n("List-ID"), i18n("From"), i18n("SDID"), i18n("Rule type")});
+    mTreeWidget->setHeaderLabels({i18n("Active"), i18n("Domain"), i18n("List-ID"), i18n("From"), i18n("SDID"), i18n("Rule type")});
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mTreeWidget->setAlternatingRowColors(true);
 
@@ -82,10 +92,7 @@ void DKIMManageRulesWidget::loadSettings()
 
     for (const MessageViewer::DKIMRule &rule : rules) {
         DKIMManageRulesWidgetItem *item = new DKIMManageRulesWidgetItem(mTreeWidget);
-        item->setCheckState(0, rule.enabled() ? Qt::Checked : Qt::Unchecked);
-        item->setText(0, rule.domain());
-        item->setText(1, rule.from());
-        item->setText(2, rule.signedDomainIdentifier().join(QLatin1Char(' ')));
+        item->setRule(rule);
     }
 }
 
