@@ -20,6 +20,7 @@
 #include "dkimpolicywidgettest.h"
 #include "dkimpolicywidget.h"
 #include <QCheckBox>
+#include <QPushButton>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(DKIMPolicyWidgetTest)
@@ -53,4 +54,9 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mUseDefaultRules);
     QVERIFY(!mUseDefaultRules->text().isEmpty());
     QVERIFY(!mUseDefaultRules->isEnabled());
+
+    QPushButton *mRulesButton = w.findChild<QPushButton *>(QStringLiteral("rules"));
+    QVERIFY(mRulesButton);
+    QVERIFY(!mRulesButton->isEnabled());
+    QVERIFY(!mRulesButton->text().isEmpty());
 }

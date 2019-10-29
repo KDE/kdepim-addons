@@ -18,12 +18,15 @@
 */
 
 #include "dkimpolicywidget.h"
+#include "dkimmanagerulesdialog.h"
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
 
 #include "messageviewer/messageviewersettings.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
+#include <QPointer>
+#include <QPushButton>
 
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
@@ -40,16 +43,31 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
         mUseDMARC->setEnabled(state);
         mUseDefaultRules->setEnabled(state);
+        mRulesButton->setEnabled(state);
     });
 
     mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
     mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
+    mUseDefaultRules->setEnabled(false);
     mainLayout->addWidget(mUseDefaultRules);
 
     mUseDMARC = new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this);
     mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
+
+    QHBoxLayout *ruleLayout = new QHBoxLayout;
+    mainLayout->addLayout(ruleLayout);
+    mRulesButton = new QPushButton(i18n("Show Rules"), this);
+    mRulesButton->setObjectName(QStringLiteral("rules"));
+    mRulesButton->setEnabled(false);
+    ruleLayout->addWidget(mRulesButton);
+    connect(mRulesButton, &QPushButton::clicked, this, [this]() {
+        QPointer<DKIMManageRulesDialog> dlg = new DKIMManageRulesDialog(this);
+        dlg->exec();
+        delete dlg;
+    });
+    ruleLayout->addStretch(1);
 
     mainLayout->addStretch(1);
 }

@@ -23,6 +23,7 @@
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
 class QCheckBox;
+class QPushButton;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
 {
     Q_OBJECT
@@ -36,6 +37,7 @@ private:
     QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
     QCheckBox *mUseDMARC = nullptr;
     QCheckBox *mUseDefaultRules = nullptr;
+    QPushButton *mRulesButton = nullptr;
 };
 
 #endif // DKIMPOLICYWIDGET_H
