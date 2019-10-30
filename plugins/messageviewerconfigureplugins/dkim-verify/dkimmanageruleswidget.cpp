@@ -24,6 +24,7 @@
 #include <KLocalizedString>
 #include <QTreeWidget>
 #include <KTreeWidgetSearchLine>
+#include <KMessageBox>
 #include <QMenu>
 #include <QPointer>
 
@@ -132,7 +133,9 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
         });
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, [this, item]() {
-            delete item;
+            if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to delete this rule?"), i18n("Delete Rule"))) {
+                delete item;
+            }
         });
     }
     menu.addSeparator();
