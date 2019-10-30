@@ -38,13 +38,14 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
     mDomain->setObjectName(QStringLiteral("domain"));
     layout->addRow(i18n("Domain:"), mDomain);
 
+    mFrom = new QLineEdit(this);
+    mFrom->setObjectName(QStringLiteral("from"));
+    layout->addRow(i18n("From:"), mFrom);
+
     mSignatureDomainIdentifier = new QLineEdit(this);
     mSignatureDomainIdentifier->setObjectName(QStringLiteral("signaturedomainidentifier"));
     layout->addRow(i18n("SDID:"), mSignatureDomainIdentifier);
 
-    mFrom = new QLineEdit(this);
-    mFrom->setObjectName(QStringLiteral("from"));
-    layout->addRow(i18n("From:"), mFrom);
 }
 
 DKIMRuleWidget::~DKIMRuleWidget()
