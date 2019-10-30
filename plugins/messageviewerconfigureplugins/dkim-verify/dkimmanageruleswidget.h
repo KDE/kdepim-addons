@@ -23,11 +23,31 @@
 #include <MessageViewer/DKIMRule>
 #include <QTreeWidgetItem>
 #include <QWidget>
+#include <QComboBox>
 class QTreeWidget;
+
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesComboBox : public QComboBox
+{
+    Q_OBJECT
+public:
+    explicit DKIMManageRulesComboBox(QWidget *parent = nullptr);
+    ~DKIMManageRulesComboBox();
+private:
+    void init();
+};
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidgetItem : public QTreeWidgetItem
 {
 public:
+    enum ColumnType {
+        Enabled = 0,
+        Domain = 1,
+        ListId = 2,
+        From = 3,
+        SDid = 4,
+        RuleType = 5,
+    };
+
     explicit DKIMManageRulesWidgetItem(QTreeWidget *parent = nullptr);
     ~DKIMManageRulesWidgetItem();
 
@@ -37,6 +57,7 @@ public:
 private:
     void updateInfo();
     MessageViewer::DKIMRule mRule;
+    DKIMManageRulesComboBox *mRuleTypeCombobox = nullptr;
 };
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidget : public QWidget

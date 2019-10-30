@@ -31,7 +31,8 @@
 DKIMManageRulesWidgetItem::DKIMManageRulesWidgetItem(QTreeWidget *parent)
     : QTreeWidgetItem(parent)
 {
-
+    mRuleTypeCombobox = new DKIMManageRulesComboBox;
+    treeWidget()->setItemWidget(this, ColumnType::RuleType, mRuleTypeCombobox);
 }
 
 DKIMManageRulesWidgetItem::~DKIMManageRulesWidgetItem()
@@ -52,11 +53,12 @@ void DKIMManageRulesWidgetItem::setRule(const MessageViewer::DKIMRule &rule)
 
 void DKIMManageRulesWidgetItem::updateInfo()
 {
-    setCheckState(0, mRule.enabled() ? Qt::Checked : Qt::Unchecked);
-    setText(1, mRule.domain());
-    //TODO
-    setText(3, mRule.from());
-    setText(4, mRule.signedDomainIdentifier().join(QLatin1Char(' ')));
+    setCheckState(ColumnType::Enabled, mRule.enabled() ? Qt::Checked : Qt::Unchecked);
+    setText(ColumnType::Domain, mRule.domain());
+    setText(ColumnType::ListId, mRule.listId());
+    setText(ColumnType::From, mRule.from());
+    setText(ColumnType::SDid, mRule.signedDomainIdentifier().join(QLatin1Char(' ')));
+    //TODO rule type
 }
 
 
@@ -145,3 +147,19 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     menu.exec(QCursor::pos());
 }
 
+
+DKIMManageRulesComboBox::DKIMManageRulesComboBox(QWidget *parent)
+    : QComboBox(parent)
+{
+    init();
+}
+
+DKIMManageRulesComboBox::~DKIMManageRulesComboBox()
+{
+
+}
+
+void DKIMManageRulesComboBox::init()
+{
+
+}
