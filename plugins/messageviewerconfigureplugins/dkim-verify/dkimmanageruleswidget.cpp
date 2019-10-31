@@ -59,7 +59,7 @@ void DKIMManageRulesWidgetItem::updateInfo()
     setText(ColumnType::ListId, mRule.listId());
     setText(ColumnType::From, mRule.from());
     setText(ColumnType::SDid, mRule.signedDomainIdentifier().join(QLatin1Char(' ')));
-    //TODO rule type
+    mRuleTypeCombobox->setRuleType(mRule.ruleType());
 }
 
 

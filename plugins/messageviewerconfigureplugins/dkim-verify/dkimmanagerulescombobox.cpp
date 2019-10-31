@@ -38,7 +38,15 @@ void DKIMManageRulesComboBox::init()
     addItem(i18n("Ignore if not signed"), QVariant::fromValue(MessageViewer::DKIMRule::RuleType::IgnoreEmailNotSigned));
 }
 
-MessageViewer::DKIMRule::RuleType DKIMManageRulesComboBox::value() const
+MessageViewer::DKIMRule::RuleType DKIMManageRulesComboBox::ruleType() const
 {
     return currentData().value<MessageViewer::DKIMRule::RuleType>();
+}
+
+void DKIMManageRulesComboBox::setRuleType(MessageViewer::DKIMRule::RuleType type)
+{
+    const int index = findData(QVariant::fromValue(type));
+    if (index != -1) {
+        setCurrentIndex(index);
+    }
 }

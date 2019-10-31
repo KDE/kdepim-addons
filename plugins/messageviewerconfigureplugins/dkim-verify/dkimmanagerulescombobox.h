@@ -29,7 +29,8 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesComboBox : public QComb
 public:
     explicit DKIMManageRulesComboBox(QWidget *parent = nullptr);
     ~DKIMManageRulesComboBox();
-    MessageViewer::DKIMRule::RuleType value() const;
+    Q_REQUIRED_RESULT MessageViewer::DKIMRule::RuleType ruleType() const;
+    void setRuleType(MessageViewer::DKIMRule::RuleType type);
 private:
     void init();
 };

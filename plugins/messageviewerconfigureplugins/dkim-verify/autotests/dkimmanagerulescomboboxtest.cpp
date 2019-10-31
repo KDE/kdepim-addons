@@ -34,3 +34,10 @@ void DKIMManageRulesComboBoxTest::shouldHaveDefaultValues()
     DKIMManageRulesComboBox w;
     QVERIFY(w.count() > 0);
 }
+
+void DKIMManageRulesComboBoxTest::shouldChangeIndex()
+{
+    DKIMManageRulesComboBox w;
+    w.setCurrentIndex(1);
+    QCOMPARE(w.ruleType(), MessageViewer::DKIMRule::RuleType::CanBeSigned);
+}

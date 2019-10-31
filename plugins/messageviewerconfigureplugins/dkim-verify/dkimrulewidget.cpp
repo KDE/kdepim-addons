@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "dkimmanagerulescombobox.h"
 #include "dkimrulewidget.h"
 #include <KLocalizedString>
 #include <QCheckBox>
@@ -38,6 +39,10 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
     mDomain->setObjectName(QStringLiteral("domain"));
     layout->addRow(i18n("Domain:"), mDomain);
 
+    mListId = new QLineEdit(this);
+    mListId->setObjectName(QStringLiteral("listid"));
+    layout->addRow(i18n("Domain:"), mListId);
+
     mFrom = new QLineEdit(this);
     mFrom->setObjectName(QStringLiteral("from"));
     layout->addRow(i18n("From:"), mFrom);
@@ -46,6 +51,9 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
     mSignatureDomainIdentifier->setObjectName(QStringLiteral("signaturedomainidentifier"));
     layout->addRow(i18n("SDID:"), mSignatureDomainIdentifier);
 
+    mRuleType = new DKIMManageRulesComboBox(this);
+    mRuleType->setObjectName(QStringLiteral("ruletype"));
+    layout->addRow(i18n("Rule:"), mRuleType);
 }
 
 DKIMRuleWidget::~DKIMRuleWidget()
@@ -58,6 +66,8 @@ void DKIMRuleWidget::loadRule(const MessageViewer::DKIMRule &rule)
     mDomain->setText(rule.domain());
     mSignatureDomainIdentifier->setText(rule.signedDomainIdentifier().join(QLatin1Char(' ')));
     mFrom->setText(rule.from());
+    mListId->setText(rule.listId());
+    mRuleType->setRuleType(rule.ruleType());
 }
 
 MessageViewer::DKIMRule DKIMRuleWidget::rule() const
@@ -67,5 +77,7 @@ MessageViewer::DKIMRule DKIMRuleWidget::rule() const
     rule.setDomain(mDomain->text());
     rule.setSignedDomainIdentifier(mSignatureDomainIdentifier->text().split(QLatin1Char(' ')));
     rule.setFrom(mFrom->text());
+    rule.setListId(mListId->text());
+    rule.setRuleType(mRuleType->ruleType());
     return rule;
 }

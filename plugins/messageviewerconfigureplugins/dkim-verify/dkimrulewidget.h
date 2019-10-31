@@ -24,6 +24,7 @@
 #include <MessageViewer/DKIMRule>
 class QCheckBox;
 class QLineEdit;
+class DKIMManageRulesComboBox;
 class LIBDKIMVERIFYCONFIGURE_EXPORT DKIMRuleWidget : public QWidget
 {
     Q_OBJECT
@@ -37,6 +38,8 @@ private:
     QLineEdit *mDomain = nullptr;
     QLineEdit *mSignatureDomainIdentifier = nullptr;
     QLineEdit *mFrom = nullptr;
+    QLineEdit *mListId = nullptr;
+    DKIMManageRulesComboBox *mRuleType = nullptr;
 };
 
 #endif // DKIMRULEWIDGET_H
