@@ -37,6 +37,7 @@ private:
     QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
     QCheckBox *mUseDMARC = nullptr;
     QCheckBox *mUseDefaultRules = nullptr;
+    QCheckBox *mAutoGenerateRule = nullptr;
     QPushButton *mRulesButton = nullptr;
 };
 

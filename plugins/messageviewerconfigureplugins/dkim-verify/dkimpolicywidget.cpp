@@ -44,6 +44,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mUseDMARC->setEnabled(state);
         mUseDefaultRules->setEnabled(state);
         mRulesButton->setEnabled(state);
+        mAutoGenerateRule->setEnabled(state);
     });
 
     mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
@@ -55,6 +56,12 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
+
+    mAutoGenerateRule = new QCheckBox(i18n("Autogenerate rule"), this);
+    mAutoGenerateRule->setObjectName(QStringLiteral("mAutoGenerateRule"));
+    mAutoGenerateRule->setEnabled(false);
+    mainLayout->addWidget(mAutoGenerateRule);
+
 
     QHBoxLayout *ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
@@ -69,6 +76,8 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     });
     ruleLayout->addStretch(1);
 
+
+
     mainLayout->addStretch(1);
 }
 
@@ -81,6 +90,7 @@ void DKIMPolicyWidget::loadSettings()
     loadWidget(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
     loadWidget(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
     loadWidget(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
+    loadWidget(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
 }
 
 void DKIMPolicyWidget::saveSettings()
@@ -88,6 +98,7 @@ void DKIMPolicyWidget::saveSettings()
     saveCheckBox(mVerifyIfEmailMustBeSigned, MessageViewer::MessageViewerSettings::self()->checkIfEmailShouldBeSignedItem());
     saveCheckBox(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
     saveCheckBox(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
+    saveCheckBox(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
 }
 
 void DKIMPolicyWidget::resetSettings()

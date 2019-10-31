@@ -45,12 +45,12 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mVerifyIfEmailMustBeSigned->text().isEmpty());
     QVERIFY(mVerifyIfEmailMustBeSigned->isEnabled());
 
-    QCheckBox *mUseDMARC = w.findChild<QCheckBox *> QStringLiteral("mUseDMARC");
+    QCheckBox *mUseDMARC = w.findChild<QCheckBox *>(QStringLiteral("mUseDMARC"));
     QVERIFY(mUseDMARC);
     QVERIFY(!mUseDMARC->text().isEmpty());
     QVERIFY(!mUseDMARC->isEnabled());
 
-    QCheckBox *mUseDefaultRules = w.findChild<QCheckBox *> QStringLiteral("mUseDefaultRules");
+    QCheckBox *mUseDefaultRules = w.findChild<QCheckBox *>(QStringLiteral("mUseDefaultRules"));
     QVERIFY(mUseDefaultRules);
     QVERIFY(!mUseDefaultRules->text().isEmpty());
     QVERIFY(!mUseDefaultRules->isEnabled());
@@ -59,4 +59,10 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mRulesButton);
     QVERIFY(!mRulesButton->isEnabled());
     QVERIFY(!mRulesButton->text().isEmpty());
+
+
+    QCheckBox *mAutoGenerateRule = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateRule"));
+    QVERIFY(mAutoGenerateRule);
+    QVERIFY(!mAutoGenerateRule->text().isEmpty());
+    QVERIFY(!mAutoGenerateRule->isEnabled());
 }
