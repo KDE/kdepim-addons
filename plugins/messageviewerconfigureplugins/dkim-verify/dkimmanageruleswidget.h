@@ -25,17 +25,7 @@
 #include <QWidget>
 #include <QComboBox>
 class QTreeWidget;
-
-class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesComboBox : public QComboBox
-{
-    Q_OBJECT
-public:
-    explicit DKIMManageRulesComboBox(QWidget *parent = nullptr);
-    ~DKIMManageRulesComboBox();
-private:
-    void init();
-};
-
+class DKIMManageRulesComboBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMManageRulesWidgetItem : public QTreeWidgetItem
 {
 public:

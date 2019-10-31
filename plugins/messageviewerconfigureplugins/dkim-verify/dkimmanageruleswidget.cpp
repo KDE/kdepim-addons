@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "dkimmanagerulescombobox.h"
 #include "dkimmanageruleswidget.h"
 #include "dkimruledialog.h"
 #include <MessageViewer/DKIMManagerRules>
@@ -147,19 +148,3 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     menu.exec(QCursor::pos());
 }
 
-
-DKIMManageRulesComboBox::DKIMManageRulesComboBox(QWidget *parent)
-    : QComboBox(parent)
-{
-    init();
-}
-
-DKIMManageRulesComboBox::~DKIMManageRulesComboBox()
-{
-
-}
-
-void DKIMManageRulesComboBox::init()
-{
-
-}
