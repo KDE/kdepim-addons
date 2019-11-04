@@ -44,6 +44,10 @@
             {% endif %}
             </a>
         {% endif %}
+        {% if res.reservedTicket.ticketedSeat.seatingType %}
+            {% i18n "Class: %1" res.reservedTicket.ticketedSeat.seatingType %}
+        {% endif %}
+
         {% if res.reservedTicket.ticketedSeat.seatSection and not elem.state.expanded %}
             {% i18n "Coach: %1" res.reservedTicket.ticketedSeat.seatSection %}
         {% endif %}
@@ -63,6 +67,10 @@
             <div>{{ res.underName.name }}</div>
         {% endif %}
         <div>
+        {% if res.reservedTicket.ticketedSeat.seatingType %}
+            {% i18n "Class: %1" res.reservedTicket.ticketedSeat.seatingType %}
+        {% endif %}
+
         {% if res.reservedTicket.ticketedSeat.seatSection %}
             {% i18n "Coach: %1" res.reservedTicket.ticketedSeat.seatSection %}
         {% endif %}
