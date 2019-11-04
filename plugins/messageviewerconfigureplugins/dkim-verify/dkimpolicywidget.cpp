@@ -62,7 +62,6 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
-
     QHBoxLayout *ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
     mRulesButton = new QPushButton(i18n("Show Rules"), this);
@@ -75,8 +74,6 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         delete dlg;
     });
     ruleLayout->addStretch(1);
-
-
 
     mainLayout->addStretch(1);
 }

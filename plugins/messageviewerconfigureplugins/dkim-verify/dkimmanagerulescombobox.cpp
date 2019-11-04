@@ -28,7 +28,6 @@ DKIMManageRulesComboBox::DKIMManageRulesComboBox(QWidget *parent)
 
 DKIMManageRulesComboBox::~DKIMManageRulesComboBox()
 {
-
 }
 
 void DKIMManageRulesComboBox::init()

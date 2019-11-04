@@ -60,7 +60,6 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mRulesButton->isEnabled());
     QVERIFY(!mRulesButton->text().isEmpty());
 
-
     QCheckBox *mAutoGenerateRule = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateRule"));
     QVERIFY(mAutoGenerateRule);
     QVERIFY(!mAutoGenerateRule->text().isEmpty());

@@ -38,7 +38,6 @@ DKIMManageRulesWidgetItem::DKIMManageRulesWidgetItem(QTreeWidget *parent)
 
 DKIMManageRulesWidgetItem::~DKIMManageRulesWidgetItem()
 {
-
 }
 
 MessageViewer::DKIMRule DKIMManageRulesWidgetItem::rule() const
@@ -61,7 +60,6 @@ void DKIMManageRulesWidgetItem::updateInfo()
     setText(ColumnType::SDid, mRule.signedDomainIdentifier().join(QLatin1Char(' ')));
     mRuleTypeCombobox->setRuleType(mRule.ruleType());
 }
-
 
 DKIMManageRulesWidget::DKIMManageRulesWidget(QWidget *parent)
     : QWidget(parent)
@@ -147,4 +145,3 @@ void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
     });
     menu.exec(QCursor::pos());
 }
-

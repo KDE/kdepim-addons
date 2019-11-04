@@ -17,7 +17,6 @@
    Boston, MA 02110-1301, USA.
 */
 
-
 #include "dkimmanagerulescomboboxtest.h"
 #include "dkimmanagerulescombobox.h"
 #include <QTest>
@@ -26,7 +25,6 @@ QTEST_MAIN(DKIMManageRulesComboBoxTest)
 DKIMManageRulesComboBoxTest::DKIMManageRulesComboBoxTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void DKIMManageRulesComboBoxTest::shouldHaveDefaultValues()
