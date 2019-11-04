@@ -64,4 +64,9 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mAutoGenerateRule);
     QVERIFY(!mAutoGenerateRule->text().isEmpty());
     QVERIFY(!mAutoGenerateRule->isEnabled());
+
+    QCheckBox *mReadAuthResultHeader = w.findChild<QCheckBox *>(QStringLiteral("mReadAuthResultHeader"));
+    QVERIFY(mReadAuthResultHeader);
+    QVERIFY(!mReadAuthResultHeader->text().isEmpty());
+    QVERIFY(!mReadAuthResultHeader->isEnabled());
 }

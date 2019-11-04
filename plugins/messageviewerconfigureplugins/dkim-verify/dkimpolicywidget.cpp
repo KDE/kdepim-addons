@@ -45,17 +45,23 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mUseDefaultRules->setEnabled(state);
         mRulesButton->setEnabled(state);
         mAutoGenerateRule->setEnabled(state);
+        mReadAuthResultHeader->setEnabled(state);
     });
-
-    mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
-    mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
-    mUseDefaultRules->setEnabled(false);
-    mainLayout->addWidget(mUseDefaultRules);
 
     mUseDMARC = new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this);
     mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
+
+    mReadAuthResultHeader = new QCheckBox(i18n("Read Authentication-Results header"), this);
+    mReadAuthResultHeader->setObjectName(QStringLiteral("mReadAuthResultHeader"));
+    mReadAuthResultHeader->setEnabled(false);
+    mainLayout->addWidget(mReadAuthResultHeader);
+
+    mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
+    mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
+    mUseDefaultRules->setEnabled(false);
+    mainLayout->addWidget(mUseDefaultRules);
 
     mAutoGenerateRule = new QCheckBox(i18n("Autogenerate rule"), this);
     mAutoGenerateRule->setObjectName(QStringLiteral("mAutoGenerateRule"));
@@ -88,6 +94,7 @@ void DKIMPolicyWidget::loadSettings()
     loadWidget(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
     loadWidget(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
     loadWidget(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
+    loadWidget(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
 }
 
 void DKIMPolicyWidget::saveSettings()
@@ -96,6 +103,7 @@ void DKIMPolicyWidget::saveSettings()
     saveCheckBox(mUseDMARC, MessageViewer::MessageViewerSettings::self()->useDMarcItem());
     saveCheckBox(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
     saveCheckBox(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
+    saveCheckBox(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
 }
 
 void DKIMPolicyWidget::resetSettings()

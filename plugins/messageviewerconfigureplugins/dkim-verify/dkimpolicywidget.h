@@ -38,6 +38,7 @@ private:
     QCheckBox *mUseDMARC = nullptr;
     QCheckBox *mUseDefaultRules = nullptr;
     QCheckBox *mAutoGenerateRule = nullptr;
+    QCheckBox *mReadAuthResultHeader = nullptr;
     QPushButton *mRulesButton = nullptr;
 };
 
