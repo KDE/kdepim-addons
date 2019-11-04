@@ -63,9 +63,14 @@
 {% if elem.state.expanded %}
     {% for d in elem.reservations %}
         {% with d.reservation as res %}
+        <div>
         {% if res.underName.name %}
-            <div>{{ res.underName.name }}</div>
+            {{ res.underName.name }}
         {% endif %}
+        {% if res.reservedTicket.name %}
+            ({{ res.reservedTicket.name }})
+        {% endif %}
+        </div>
         <div>
         {% if res.reservedTicket.ticketedSeat.seatingType %}
             {% i18n "Class: %1" res.reservedTicket.ticketedSeat.seatingType %}
