@@ -148,6 +148,10 @@ void QuickTextWidget::editSnippet()
     mSnippetWidget->setGroupModel(mSnippetsManager->model());
     mSnippetWidget->setGroupIndex(oldGroupIndex);
     mSnippetWidget->setName(oldSnippetName);
+    mSnippetWidget->setTo(mCurrentGroupIndex.data(MailCommon::SnippetsModel::ToRole).toString());
+    mSnippetWidget->setSubject(mCurrentGroupIndex.data(MailCommon::SnippetsModel::SubjectRole).toString());
+    mSnippetWidget->setCc(mCurrentGroupIndex.data(MailCommon::SnippetsModel::CcRole).toString());
+    mSnippetWidget->setBcc(mCurrentGroupIndex.data(MailCommon::SnippetsModel::BccRole).toString());
     mSnippetWidget->setText(mCurrentGroupIndex.data(MailCommon::SnippetsModel::TextRole).toString());
     mSnippetWidget->setKeyword(mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeywordRole).toString());
     mSnippetWidget->setKeySequence(
@@ -193,6 +197,10 @@ void QuickTextWidget::saveAddSnippet()
     mSnippetsManager->model()->setData(index, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(index, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
+    mSnippetsManager->model()->setData(index, mSnippetWidget->subject(), MailCommon::SnippetsModel::SubjectRole);
+    mSnippetsManager->model()->setData(index, mSnippetWidget->cc(), MailCommon::SnippetsModel::CcRole);
+    mSnippetsManager->model()->setData(index, mSnippetWidget->bcc(), MailCommon::SnippetsModel::BccRole);
+    mSnippetsManager->model()->setData(index, mSnippetWidget->to(), MailCommon::SnippetsModel::ToRole);
     mSnippetsManager->save();
 }
 
@@ -212,6 +220,11 @@ void QuickTextWidget::saveEditSnippet()
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->text(), MailCommon::SnippetsModel::TextRole);
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keySequence().toString(), MailCommon::SnippetsModel::KeySequenceRole);
     mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->keyword(), MailCommon::SnippetsModel::KeywordRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->subject(), MailCommon::SnippetsModel::SubjectRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->cc(), MailCommon::SnippetsModel::CcRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->bcc(), MailCommon::SnippetsModel::BccRole);
+    mSnippetsManager->model()->setData(mCurrentGroupIndex, mSnippetWidget->to(), MailCommon::SnippetsModel::ToRole);
+
     mSnippetsManager->save();
 }
 
