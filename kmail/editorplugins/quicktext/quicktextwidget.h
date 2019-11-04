@@ -57,6 +57,7 @@ private:
     void saveEditSnippet();
     void saveAddGroup();
     void saveEditGroup();
+    void saveModelIndex(const QModelIndex &index);
 
     QModelIndex mCurrentGroupIndex;
     EditMode mMode = EditMode::Unknown;

@@ -33,6 +33,7 @@ static const char myConfigGroupName[] = "QuickTextConfigureDialog";
 QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
+    setWindowTitle(i18n("Configure quick text"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mQuickTextConfigureWidget = new QuickTextConfigureWidget(this);
