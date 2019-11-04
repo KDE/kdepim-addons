@@ -190,6 +190,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     // Grantlee can't do indexed map/array lookups, so we need to interleave this here already
     QVariantList elems;
     elems.reserve(extractedData.size());
+    int ticketTokenId = 0;
     for (int i = 0; i < extractedData.size(); ++i) {
         QVariantMap data;
         QVariantMap state;
@@ -224,7 +225,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
             if (barcode) {
                 barcode->toImage(barcode->minimumSize()); // minimumSize is only available after we rendered once...
                 const auto img = barcode->toImage(barcode->minimumSize());
-                const QString fileName = dir + QLatin1String("/ticketToken") + QString::number(i) + QLatin1String(".png");
+                const QString fileName = dir + QLatin1String("/ticketToken") + QString::number(ticketTokenId++) + QLatin1String(".png");
                 img.save(fileName);
                 m.insert(QStringLiteral("ticketToken"), fileName);
                 nodeHelper->addTempFile(fileName);
