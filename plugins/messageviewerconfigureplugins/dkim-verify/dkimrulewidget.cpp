@@ -46,6 +46,7 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
     mFrom = new QLineEdit(this);
     mFrom->setObjectName(QStringLiteral("from"));
     layout->addRow(i18n("From:"), mFrom);
+    mFrom->setPlaceholderText(i18n("Use '*' for specify all email from domain"));
 
     mSignatureDomainIdentifier = new QLineEdit(this);
     mSignatureDomainIdentifier->setObjectName(QStringLiteral("signaturedomainidentifier"));

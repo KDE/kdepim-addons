@@ -19,8 +19,12 @@
 
 #include "dkimrulewidgettest.h"
 #include "dkimrulewidget.h"
-
+#include <QCheckBox>
+#include <QFormLayout>
+#include <QLineEdit>
 #include <QTest>
+#include <dkimmanagerulescombobox.h>
+
 QTEST_MAIN(DKIMRuleWidgetTest)
 DKIMRuleWidgetTest::DKIMRuleWidgetTest(QObject *parent)
     : QObject(parent)
@@ -31,5 +35,31 @@ void DKIMRuleWidgetTest::shouldHaveDefaultValues()
 {
     DKIMRuleWidget w;
     QVERIFY(!w.rule().isValid());
-    //TODO
+
+    QFormLayout *layout = w.findChild<QFormLayout *>(QStringLiteral("layout"));
+    QCOMPARE(layout->contentsMargins(), QMargins(0, 0, 0, 0));
+
+    QCheckBox *mEnabled = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
+    QVERIFY(mEnabled);
+    QVERIFY(!mEnabled->text().isEmpty());
+    QVERIFY(!mEnabled->isChecked());
+
+    QLineEdit *mDomain = w.findChild<QLineEdit *>(QStringLiteral("domain"));
+    QVERIFY(mDomain);
+    QVERIFY(mDomain->text().isEmpty());
+
+    QLineEdit *mListId = w.findChild<QLineEdit *>(QStringLiteral("listid"));
+    QVERIFY(mListId);
+    QVERIFY(mListId->text().isEmpty());
+
+    QLineEdit *mFrom = w.findChild<QLineEdit *>(QStringLiteral("from"));
+    QVERIFY(mFrom);
+    QVERIFY(mFrom->text().isEmpty());
+
+    QLineEdit *mSignatureDomainIdentifier = w.findChild<QLineEdit *>(QStringLiteral("signaturedomainidentifier"));
+    QVERIFY(mSignatureDomainIdentifier);
+    QVERIFY(mSignatureDomainIdentifier->text().isEmpty());
+
+    DKIMManageRulesComboBox *mRuleType = w.findChild<DKIMManageRulesComboBox *>(QStringLiteral("ruletype"));
+    QVERIFY(mRuleType);
 }
