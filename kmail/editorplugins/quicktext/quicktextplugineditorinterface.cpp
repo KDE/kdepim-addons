@@ -80,7 +80,7 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
 {
     if (e->key() == Qt::Key_Tab) {
         if (!richTextEditor()->textCursor().hasSelection()) {
-            const QTextCharFormat initialTextFormat = richTextEditor()->textCursor().charFormat();
+            //const QTextCharFormat initialTextFormat = richTextEditor()->textCursor().charFormat();
             int position = richTextEditor()->textCursor().position();
             QTextCursor cur = richTextEditor()->textCursor();
             selectPreviousWord(cur, position);
