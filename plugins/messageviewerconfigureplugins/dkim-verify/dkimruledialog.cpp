@@ -24,6 +24,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 namespace {
@@ -46,6 +47,13 @@ DKIMRuleDialog::DKIMRuleDialog(QWidget *parent)
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
 
+    QPushButton *importButton = new QPushButton(i18n("Import..."), this);
+    buttonBox->addButton(importButton, QDialogButtonBox::ActionRole);
+    connect(importButton, &QPushButton::clicked, this, &DKIMRuleDialog::slotImport);
+    QPushButton *exportButton = new QPushButton(i18n("Export..."), this);
+    buttonBox->addButton(exportButton, QDialogButtonBox::ActionRole);
+    connect(exportButton, &QPushButton::clicked, this, &DKIMRuleDialog::slotExport);
+
     connect(buttonBox, &QDialogButtonBox::accepted, this, &DKIMRuleDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &DKIMRuleDialog::reject);
     readConfig();
@@ -59,6 +67,16 @@ DKIMRuleDialog::~DKIMRuleDialog()
 void DKIMRuleDialog::slotAccepted()
 {
     accept();
+}
+
+void DKIMRuleDialog::slotExport()
+{
+
+}
+
+void DKIMRuleDialog::slotImport()
+{
+
 }
 
 void DKIMRuleDialog::readConfig()
