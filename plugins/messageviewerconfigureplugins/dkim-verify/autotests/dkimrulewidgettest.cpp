@@ -47,18 +47,22 @@ void DKIMRuleWidgetTest::shouldHaveDefaultValues()
     QLineEdit *mDomain = w.findChild<QLineEdit *>(QStringLiteral("domain"));
     QVERIFY(mDomain);
     QVERIFY(mDomain->text().isEmpty());
+    QVERIFY(mDomain->isClearButtonEnabled());
 
     QLineEdit *mListId = w.findChild<QLineEdit *>(QStringLiteral("listid"));
     QVERIFY(mListId);
     QVERIFY(mListId->text().isEmpty());
+    QVERIFY(mListId->isClearButtonEnabled());
 
     QLineEdit *mFrom = w.findChild<QLineEdit *>(QStringLiteral("from"));
     QVERIFY(mFrom);
     QVERIFY(mFrom->text().isEmpty());
+    QVERIFY(mFrom->isClearButtonEnabled());
 
     QLineEdit *mSignatureDomainIdentifier = w.findChild<QLineEdit *>(QStringLiteral("signaturedomainidentifier"));
     QVERIFY(mSignatureDomainIdentifier);
     QVERIFY(mSignatureDomainIdentifier->text().isEmpty());
+    QVERIFY(mSignatureDomainIdentifier->isClearButtonEnabled());
 
     DKIMManageRulesComboBox *mRuleType = w.findChild<DKIMManageRulesComboBox *>(QStringLiteral("ruletype"));
     QVERIFY(mRuleType);

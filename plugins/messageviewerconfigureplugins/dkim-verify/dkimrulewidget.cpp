@@ -37,19 +37,23 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
 
     mDomain = new QLineEdit(this);
     mDomain->setObjectName(QStringLiteral("domain"));
+    mDomain->setClearButtonEnabled(true);
     layout->addRow(i18n("Domain:"), mDomain);
 
     mListId = new QLineEdit(this);
     mListId->setObjectName(QStringLiteral("listid"));
+    mListId->setClearButtonEnabled(true);
     layout->addRow(i18n("List-Id:"), mListId);
 
     mFrom = new QLineEdit(this);
     mFrom->setObjectName(QStringLiteral("from"));
+    mFrom->setClearButtonEnabled(true);
     layout->addRow(i18n("From:"), mFrom);
     mFrom->setPlaceholderText(i18n("Use '*' for specify all email from domain"));
 
     mSignatureDomainIdentifier = new QLineEdit(this);
     mSignatureDomainIdentifier->setObjectName(QStringLiteral("signaturedomainidentifier"));
+    mSignatureDomainIdentifier->setClearButtonEnabled(true);
     layout->addRow(i18n("SDID:"), mSignatureDomainIdentifier);
 
     mRuleType = new DKIMManageRulesComboBox(this);
