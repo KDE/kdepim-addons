@@ -19,11 +19,13 @@
 
 #include "dkimruledialog.h"
 #include "dkimrulewidget.h"
+#include <MessageViewer/DKIMManagerRules>
 
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
+#include <QFileDialog>
 #include <QPushButton>
 #include <QVBoxLayout>
 
@@ -71,12 +73,18 @@ void DKIMRuleDialog::slotAccepted()
 
 void DKIMRuleDialog::slotExport()
 {
-
+    const QString fileName = QFileDialog::getSaveFileName(this, i18n("Export Rules"));
+    if (!fileName.isEmpty()) {
+        MessageViewer::DKIMManagerRules::self()->exportRules(fileName);
+    }
 }
 
 void DKIMRuleDialog::slotImport()
 {
-
+    const QString fileName = QFileDialog::getOpenFileName(this, i18n("Import Rules"));
+    if (!fileName.isEmpty()) {
+        MessageViewer::DKIMManagerRules::self()->importRules(fileName);
+    }
 }
 
 void DKIMRuleDialog::readConfig()
