@@ -41,7 +41,7 @@ DKIMRuleWidget::DKIMRuleWidget(QWidget *parent)
 
     mListId = new QLineEdit(this);
     mListId->setObjectName(QStringLiteral("listid"));
-    layout->addRow(i18n("Domain:"), mListId);
+    layout->addRow(i18n("List-Id:"), mListId);
 
     mFrom = new QLineEdit(this);
     mFrom->setObjectName(QStringLiteral("from"));
