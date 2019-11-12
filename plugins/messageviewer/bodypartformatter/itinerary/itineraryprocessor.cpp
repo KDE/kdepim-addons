@@ -114,7 +114,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         engine.setPass(pass.get());
     } else if (part.content()->contentType()->isHTMLText()) {
         engine.setData(part.content()->decodedContent(), ExtractorInput::Html);
-    } else if (part.content()->contentType()->mimeType() == "application/pdf") {
+    } else if (part.content()->contentType()->mimeType() == "application/pdf" || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
         engine.setData(part.content()->decodedContent(), ExtractorInput::Pdf);
     } else if (isCalendarContent(part.content())) {
