@@ -28,7 +28,7 @@ public:
     explicit ConfirmAddressSimpleStringListEditor(QWidget *parent = nullptr, ButtonCode buttons = Unsorted, const QString &addLabel = QString(), const QString &removeLabel = QString(), const QString &modifyLabel = QString(), const QString &addDialogLabel = QString());
 
     void addNewEntry() override;
-    QString modifyEntry(const QString &text) override;
+    Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
 };
 
 #endif // CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H

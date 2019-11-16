@@ -31,14 +31,14 @@ public:
 
     MessageComposer::PluginEditorConvertTextInterface *createInterface(QObject *parent) override;
 
-    bool hasConfigureDialog() const override;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
-    QString description() const override;
-    bool canWorkOnHtml() const override;
-    bool hasStatusBarSupport() const override;
+    Q_REQUIRED_RESULT QString description() const override;
+    Q_REQUIRED_RESULT bool canWorkOnHtml() const override;
+    Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
 
-    bool hasPopupMenuSupport() const override;
-    bool hasToolBarSupport() const override;
+    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
+    Q_REQUIRED_RESULT bool hasToolBarSupport() const override;
 };
 
 #endif // MARKDOWNPLUGIN_H

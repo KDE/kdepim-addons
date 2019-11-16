@@ -56,9 +56,9 @@ public:
     Q_ENUMS(ConflictInformation)
     Q_DECLARE_FLAGS(ConflictInformations, ConflictInformation)
 
-    KContacts::Addressee mergedContact(bool excludeConflictPart = false);
+    Q_REQUIRED_RESULT KContacts::Addressee mergedContact(bool excludeConflictPart = false);
 
-    MergeContacts::ConflictInformations requiresManualSelectionOfInformation();
+    Q_REQUIRED_RESULT MergeContacts::ConflictInformations requiresManualSelectionOfInformation();
 
     void setItems(const Akonadi::Item::List &items);
 private:

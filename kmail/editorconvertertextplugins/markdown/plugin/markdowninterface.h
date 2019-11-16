@@ -39,8 +39,8 @@ public:
     ~MarkdownInterface() override;
     void createAction(KActionCollection *ac) override;
 
-    bool reformatText() override;
-    MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus convertTextToFormat(MessageComposer::TextPart *textPart) override;
+    Q_REQUIRED_RESULT bool reformatText() override;
+    Q_REQUIRED_RESULT MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus convertTextToFormat(MessageComposer::TextPart *textPart) override;
     void enableDisablePluginActions(bool richText) override;
 
 public Q_SLOTS:

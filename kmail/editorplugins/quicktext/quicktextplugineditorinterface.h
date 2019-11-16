@@ -34,7 +34,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
-    bool processProcessKeyEvent(QKeyEvent *event) override;
+    Q_REQUIRED_RESULT bool processProcessKeyEvent(QKeyEvent *event) override;
 
     void reloadConfig();
 private:

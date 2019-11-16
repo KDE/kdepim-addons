@@ -37,7 +37,7 @@ MergeContactsJob::~MergeContactsJob()
 {
 }
 
-bool MergeContactsJob::canStart()
+bool MergeContactsJob::canStart() const
 {
     if (!mCollection.isValid()) {
         qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " mCollection is not valid !";

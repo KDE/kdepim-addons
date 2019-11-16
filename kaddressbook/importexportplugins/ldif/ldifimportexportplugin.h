@@ -31,7 +31,7 @@ public:
     ~LDifImportExportPlugin() override;
 
     PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;
-    bool hasPopupMenuSupport() const override;
+    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
 #endif // LDIFIMPORTEXPORTPLUGIN_H

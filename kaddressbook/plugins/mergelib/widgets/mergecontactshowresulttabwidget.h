@@ -33,7 +33,7 @@ public:
 
     void updateTabWidget();
 
-    bool tabBarVisible() const;
+    Q_REQUIRED_RESULT bool tabBarVisible() const;
 
     void showMergedContacts(const Akonadi::Item::List &lstItem);
     void addMergedContact(const Akonadi::Item &item, bool updateTab = false);

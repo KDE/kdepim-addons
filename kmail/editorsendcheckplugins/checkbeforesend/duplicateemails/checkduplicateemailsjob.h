@@ -32,7 +32,7 @@ public:
     void start();
 
     void setEmails(const QStringList &list);
-    QMap<QString, int> result() const;
+    Q_REQUIRED_RESULT QMap<QString, int> result() const;
 
 private:
     QStringList mEmails;

@@ -33,8 +33,8 @@ public:
     ~ZoomTextPluginEditor() override;
 
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
-    bool hasPopupMenuSupport() const override;
-    bool hasStatusBarSupport() const override;
+    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
+    Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
 Q_SIGNALS:
     void zoomFactorChanged(int val);
 };

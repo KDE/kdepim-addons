@@ -38,7 +38,7 @@ public:
 
     void setDestination(const Akonadi::Collection &collection);
 
-    bool canStart();
+    Q_REQUIRED_RESULT bool canStart() const;
 
     void setNewContact(const KContacts::Addressee &addr);
 

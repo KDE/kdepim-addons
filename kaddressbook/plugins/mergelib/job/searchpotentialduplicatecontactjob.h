@@ -33,7 +33,7 @@ public:
 
     void start();
 
-    QVector<Akonadi::Item::List> potentialDuplicateContacts() const;
+    Q_REQUIRED_RESULT QVector<Akonadi::Item::List> potentialDuplicateContacts() const;
 
 Q_SIGNALS:
     void finished(const QVector<Akonadi::Item::List> &);

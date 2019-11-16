@@ -32,7 +32,7 @@ public:
     explicit SelectMailWidget(QWidget *parent = nullptr);
     ~SelectMailWidget();
 
-    QStringList selectedEmails() const;
+    Q_REQUIRED_RESULT QStringList selectedEmails() const;
 
 private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;

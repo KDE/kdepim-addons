@@ -31,7 +31,7 @@ public:
     explicit ConfirmAddressEmailEntryDialog(QWidget *parent = nullptr);
     ~ConfirmAddressEmailEntryDialog() = default;
 
-    QString emails() const;
+    Q_REQUIRED_RESULT QString emails() const;
     void setValue(const QString &val);
 private:
     QDialogButtonBox *mButtons = nullptr;

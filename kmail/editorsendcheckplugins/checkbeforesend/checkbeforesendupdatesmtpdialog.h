@@ -29,7 +29,7 @@ public:
     explicit CheckBeforeSendUpdateSmtpDialog(QWidget *parent = nullptr);
     ~CheckBeforeSendUpdateSmtpDialog();
 
-    bool changeSmtp() const;
+    Q_REQUIRED_RESULT bool changeSmtp() const;
 private:
     QCheckBox *mChangeSmtp = nullptr;
 };
