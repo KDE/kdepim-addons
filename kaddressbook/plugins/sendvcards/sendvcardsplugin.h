@@ -33,8 +33,8 @@ public:
     explicit SendVcardsPlugin(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
     ~SendVcardsPlugin() override;
 
-    PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
-    bool hasPopupMenuSupport() const override;
+    Q_REQUIRED_RESULT PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
+    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
 #endif // SENDVCARDSPLUGIN_H

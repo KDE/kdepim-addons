@@ -34,7 +34,7 @@ public:
     ~SendMailPlugin() override;
 
     PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
-    bool hasPopupMenuSupport() const override;
+    Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
 #endif // SENDMAILPLUGIN_H

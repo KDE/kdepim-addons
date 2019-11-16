@@ -29,7 +29,7 @@ public:
     explicit SharetextPurposeMenuWidget(QWidget *parentWidget, QObject *parent = nullptr);
     ~SharetextPurposeMenuWidget() override;
 
-    QByteArray text() override;
+    Q_REQUIRED_RESULT QByteArray text() override;
     void setEditorWidget(ShareTextPluginEditorInterface *interface);
 private:
     ShareTextPluginEditorInterface *mInterface = nullptr;

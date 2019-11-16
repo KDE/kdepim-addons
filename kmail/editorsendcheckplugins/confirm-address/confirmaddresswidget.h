@@ -32,7 +32,7 @@ public:
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);
-    QStringList whiteListSelectedEmails() const;
+    Q_REQUIRED_RESULT QStringList whiteListSelectedEmails() const;
 
 Q_SIGNALS:
     void updateButtonStatus(bool hasElementChecked);

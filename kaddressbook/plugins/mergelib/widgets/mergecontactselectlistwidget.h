@@ -39,9 +39,9 @@ public:
     ~MergeContactSelectListWidget();
 
     void setContacts(MergeContacts::ConflictInformation conflictType, const KContacts::Addressee::List &lst);
-    int selectedContact() const;
+    Q_REQUIRED_RESULT int selectedContact() const;
     MergeContacts::ConflictInformation conflictType() const;
-    bool verifySelectedInfo() const;
+    Q_REQUIRED_RESULT bool verifySelectedInfo() const;
 private:
     void fillList(const KContacts::Addressee::List &lst);
     void updateTitle();

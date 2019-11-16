@@ -30,7 +30,7 @@ public:
     explicit AutomaticAddContactsInterface(QObject *parent = nullptr);
     ~AutomaticAddContactsInterface() override;
 
-    bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
+    Q_REQUIRED_RESULT bool exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params) override;
 
 public Q_SLOTS:
     void reloadConfig() override;

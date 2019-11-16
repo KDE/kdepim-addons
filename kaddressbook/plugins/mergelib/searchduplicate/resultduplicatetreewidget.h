@@ -33,12 +33,12 @@ public:
     explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = nullptr);
     ~ResultDuplicateTreeWidgetItem();
 
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);
 
 private:
     void setDisplayName();
-    QString contactName(const KContacts::Addressee &address);
+    Q_REQUIRED_RESULT QString contactName(const KContacts::Addressee &address);
     Akonadi::Item mItem;
 };
 
@@ -50,7 +50,7 @@ public:
     ~ResultDuplicateTreeWidget();
     void setContacts(const QVector<Akonadi::Item::List> &lstItem);
 
-    QVector<Akonadi::Item::List> selectedContactsToMerge() const;
+    Q_REQUIRED_RESULT QVector<Akonadi::Item::List> selectedContactsToMerge() const;
 
 Q_SIGNALS:
     void showContactPreview(const Akonadi::Item &item);

@@ -28,7 +28,7 @@ class ExternalComposerPluginEditorInterface : public MessageComposer::PluginEdit
 public:
     explicit ExternalComposerPluginEditorInterface(QObject *parent = nullptr);
     ~ExternalComposerPluginEditorInterface() override;
-    bool exec() override;
+    Q_REQUIRED_RESULT bool exec() override;
 
     void reloadConfig() override;
 private:

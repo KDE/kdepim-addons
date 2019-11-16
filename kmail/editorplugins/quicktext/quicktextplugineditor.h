@@ -35,10 +35,10 @@ public:
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
     Q_REQUIRED_RESULT bool hasStatusBarSupport() const override;
 
-    bool hasConfigureDialog() const override;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
 
-    bool canProcessKeyEvent() const override;
+    Q_REQUIRED_RESULT bool canProcessKeyEvent() const override;
 };
 
 #endif

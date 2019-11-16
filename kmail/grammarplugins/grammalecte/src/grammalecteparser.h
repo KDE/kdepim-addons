@@ -29,7 +29,7 @@ class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
 public:
     GrammalecteParser();
     ~GrammalecteParser();
-    QVector<GrammarError> parseResult(const QJsonObject &obj) const;
+    Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
 
 #endif // GRAMMALECTEPARSER_H

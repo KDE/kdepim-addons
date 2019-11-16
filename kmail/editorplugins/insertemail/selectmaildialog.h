@@ -30,7 +30,7 @@ public:
     explicit SelectMailDialog(QWidget *parent = nullptr);
     ~SelectMailDialog() override;
 
-    QStringList selectedEmails() const;
+    Q_REQUIRED_RESULT QStringList selectedEmails() const;
 
     void accept() override;
 Q_SIGNALS:

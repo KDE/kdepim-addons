@@ -35,7 +35,7 @@ public:
     explicit SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
     ~SendVcardsJob();
 
-    bool start();
+    Q_REQUIRED_RESULT bool start();
 
     KContacts::VCardConverter::Version version() const;
     void setVersion(KContacts::VCardConverter::Version version);

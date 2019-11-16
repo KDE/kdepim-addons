@@ -32,7 +32,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
-    bool canImportFileType(const QUrl &url) override;
+    Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
 private:
     enum ExportVCardType {
         VCard2_1 = 0,
@@ -48,9 +48,9 @@ private:
     void slotImportVCard();
     void slotExportVCard4();
     void slotExportVCard3();
-    QString contactFileName(const KContacts::Addressee &contact) const;
+    Q_REQUIRED_RESULT QString contactFileName(const KContacts::Addressee &contact) const;
     void slotExportVCard2();
-    bool doExport(const QUrl &url, const QByteArray &data) const;
+    Q_REQUIRED_RESULT bool doExport(const QUrl &url, const QByteArray &data) const;
 
     ExportVCardType mExportVCardType;
 };

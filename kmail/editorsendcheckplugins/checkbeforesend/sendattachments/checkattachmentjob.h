@@ -30,10 +30,10 @@ public:
 
     void start();
 
-    QStringList originalEmails() const;
+    Q_REQUIRED_RESULT QStringList originalEmails() const;
     void setOriginalEmails(const QStringList &originalEmails);
 
-    QStringList resultList() const;
+    Q_REQUIRED_RESULT QStringList resultList() const;
     void setResultList(const QStringList &resultList);
 
 private:

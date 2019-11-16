@@ -29,7 +29,7 @@ class MergeContactWidgetListItem : public QListWidgetItem
 {
 public:
     MergeContactWidgetListItem(const Akonadi::Item &item, QListWidget *parent = nullptr);
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
 
 private:
     Akonadi::Item mItem;

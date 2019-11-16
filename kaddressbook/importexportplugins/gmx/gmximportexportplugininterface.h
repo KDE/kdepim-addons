@@ -33,7 +33,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
-    bool canImportFileType(const QUrl &url) override;
+    Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
 private:
     void doExport(QFile *fp, const KContacts::AddresseeList &list) const;
     void slotImportGmx();
