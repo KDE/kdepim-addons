@@ -23,6 +23,7 @@
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
 class QCheckBox;
+class QComboBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMGeneralWidget : public QWidget
 {
     Q_OBJECT
@@ -35,7 +36,7 @@ public:
 private:
     QCheckBox *mEnableDkimSupport = nullptr;
     QCheckBox *mSaveResult = nullptr;
-    QCheckBox *mSaveKey = nullptr;
+    QComboBox *mSaveKey = nullptr;
 };
 
 #endif // DKIMGENERALWIDGET_H

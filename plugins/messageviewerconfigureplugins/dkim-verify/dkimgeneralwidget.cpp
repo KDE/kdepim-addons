@@ -22,6 +22,8 @@
 #include <MessageViewer/DKIMManager>
 #include <KLocalizedString>
 #include <QCheckBox>
+#include <QComboBox>
+#include <QLabel>
 #include <QVBoxLayout>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
@@ -42,10 +44,19 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
 
-    mSaveKey = new QCheckBox(i18n("Save Record Key"));
+    QHBoxLayout *saveKeyLayout = new QHBoxLayout;
+    saveKeyLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->addLayout(saveKeyLayout);
+    QLabel *saveKeyLabel = new QLabel(i18n("Save Record Key:"), this);
+    saveKeyLabel->setObjectName(QStringLiteral("saveKeyLabel"));
+    saveKeyLayout->addWidget(saveKeyLabel);
+
+    mSaveKey = new QComboBox(this);
     mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
-    mSaveKey->setChecked(false);
-    mainLayout->addWidget(mSaveKey);
+    mSaveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
+    saveKeyLayout->addWidget(mSaveKey);
+    saveKeyLayout->addStretch(1);
+
     mainLayout->addStretch(1);
 }
 
@@ -64,7 +75,7 @@ void DKIMGeneralWidget::saveSettings()
 {
     saveCheckBox(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
     saveCheckBox(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
-    saveCheckBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
+    saveComboBox(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
     if (!mEnableDkimSupport->isChecked()) {
         MessageViewer::DKIMManager::self()->clearInfoWidget();
     }

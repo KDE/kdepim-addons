@@ -20,6 +20,7 @@
 #include "dkimgeneralwidgettest.h"
 #include "dkimgeneralwidget.h"
 #include <QCheckBox>
+#include <QComboBox>
 #include <QTest>
 #include <QVBoxLayout>
 QTEST_MAIN(DKIMGeneralWidgetTest)
@@ -45,8 +46,6 @@ void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mSaveResult->text().isEmpty());
     QVERIFY(!mSaveResult->isChecked());
 
-    QCheckBox *mSaveKey = w.findChild<QCheckBox *>(QStringLiteral("mSaveKey"));
+    QComboBox *mSaveKey = w.findChild<QComboBox *>(QStringLiteral("mSaveKey"));
     QVERIFY(mSaveKey);
-    QVERIFY(!mSaveKey->text().isEmpty());
-    QVERIFY(!mSaveKey->isChecked());
 }
