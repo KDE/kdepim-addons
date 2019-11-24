@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.12.80")
+set(PIM_VERSION "5.12.90")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 if(POLICY CMP0063)
@@ -13,7 +13,7 @@ set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_P
 set(CMAKE_AUTORCC TRUE)
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION beta1)
+set(KDEPIM_DEV_VERSION rc)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
