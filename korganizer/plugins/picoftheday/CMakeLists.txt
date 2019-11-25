@@ -10,8 +10,10 @@ ecm_qt_declare_logging_category(korg_picoftheday_PART_SRCS HEADER korganizer_pic
 add_library(korg_picoftheday MODULE ${korg_picoftheday_PART_SRCS})
 
 target_link_libraries(korg_picoftheday
+PRIVATE
   KF5::EventViews
   KF5::KIOCore
+  Qt5::Xml
 )
 
 install(TARGETS
