@@ -38,6 +38,10 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
     mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
+    mUseAuthenticationResultRelaxedParser = new QCheckBox(i18n("Use relaxed parsing when reading \"Authentication-Result\" header"), this);
+    mUseAuthenticationResultRelaxedParser->setObjectName(QStringLiteral("mUseAuthenticationResultRelaxedParser"));
+    mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
+
     mSha1Policy = new QComboBox(this);
     mSha1Policy->setObjectName(QStringLiteral("rsa1-policy"));
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
@@ -53,12 +57,14 @@ void DKIMAdvancedWidget::loadSettings()
 {
     loadWidget(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
     loadWidget(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
+    loadWidget(mUseAuthenticationResultRelaxedParser, MessageViewer::MessageViewerSettings::self()->useRelaxedParsingAuthenticationResultsItem());
 }
 
 void DKIMAdvancedWidget::saveSettings()
 {
     saveComboBox(mSha1Policy, MessageViewer::MessageViewerSettings::self()->policyRsaSha1Item());
     saveCheckBox(mCheckDKIMWhenOnlyTesting, MessageViewer::MessageViewerSettings::self()->verifySignatureWhenOnlyTestItem());
+    saveCheckBox(mUseAuthenticationResultRelaxedParser, MessageViewer::MessageViewerSettings::self()->useRelaxedParsingAuthenticationResultsItem());
 }
 
 void DKIMAdvancedWidget::resetSettings()

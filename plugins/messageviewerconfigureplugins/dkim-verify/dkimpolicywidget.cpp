@@ -56,7 +56,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mReadAuthResultHeader = new QCheckBox(i18n("Read Authentication-Results header"), this);
     mReadAuthResultHeader->setObjectName(QStringLiteral("mReadAuthResultHeader"));
     mReadAuthResultHeader->setEnabled(false);
-    mReadAuthResultHeader->setVisible(false); //Reenable when code will be clean!
+    //mReadAuthResultHeader->setVisible(false); //Reenable when code will be clean!
     mainLayout->addWidget(mReadAuthResultHeader);
 
     mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);

@@ -36,6 +36,7 @@ public:
 private:
     QComboBox *mSha1Policy = nullptr;
     QCheckBox *mCheckDKIMWhenOnlyTesting = nullptr;
+    QCheckBox *mUseAuthenticationResultRelaxedParser = nullptr;
 };
 
 #endif // DKIMADVANCEDWIDGET_H
