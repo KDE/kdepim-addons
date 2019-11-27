@@ -222,7 +222,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
     t << "Address_id,Nickname,Firstname,Lastname,Title,Birthday,Comments,"
          "Change_date,Status,Address_link_id,Categories\n";
 
-    QList<QString> categoryMap;
+    QStringList categoryMap;
     categoryMap.append(assignedCategoriesSorted(list));
 
     int addresseeId = 0;

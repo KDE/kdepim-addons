@@ -323,7 +323,7 @@ public:
     QString mLastErrorString;
     uint mRowCount;
     uint mColumnCount;
-    QList<QStringList> mRows;
+    QVector<QStringList> mRows;
 };
 
 void QCsvStandardBuilder::Private::init()
