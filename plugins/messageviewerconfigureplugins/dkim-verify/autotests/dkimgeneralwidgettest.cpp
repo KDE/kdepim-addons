@@ -48,4 +48,10 @@ void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
 
     QComboBox *mSaveKey = w.findChild<QComboBox *>(QStringLiteral("mSaveKey"));
     QVERIFY(mSaveKey);
+
+
+    QCheckBox *mUseOnlyAuthenticationResult = w.findChild<QCheckBox *>(QStringLiteral("mUseOnlyAuthenticationResult"));
+    QVERIFY(mUseOnlyAuthenticationResult);
+    QVERIFY(!mUseOnlyAuthenticationResult->text().isEmpty());
+    QVERIFY(!mUseOnlyAuthenticationResult->isChecked());
 }

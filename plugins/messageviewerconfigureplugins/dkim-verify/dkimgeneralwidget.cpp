@@ -57,6 +57,11 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     saveKeyLayout->addWidget(mSaveKey);
     saveKeyLayout->addStretch(1);
 
+    mUseOnlyAuthenticationResult = new QCheckBox(i18n("Replace DKIM result by Authentication-Result header value"));
+    mUseOnlyAuthenticationResult->setObjectName(QStringLiteral("mUseOnlyAuthenticationResult"));
+    mUseOnlyAuthenticationResult->setChecked(false);
+    mainLayout->addWidget(mUseOnlyAuthenticationResult);
+
     mainLayout->addStretch(1);
 }
 
@@ -69,6 +74,7 @@ void DKIMGeneralWidget::loadSettings()
     loadWidget(mEnableDkimSupport, MessageViewer::MessageViewerSettings::self()->enabledDkimItem());
     loadWidget(mSaveResult, MessageViewer::MessageViewerSettings::self()->saveDkimResultItem());
     loadWidget(mSaveKey, MessageViewer::MessageViewerSettings::self()->saveKeyItem());
+    loadWidget(mUseOnlyAuthenticationResult, MessageViewer::MessageViewerSettings::self()->useOnlyAuthenticationResultsItem());
 }
 
 void DKIMGeneralWidget::saveSettings()
@@ -79,6 +85,7 @@ void DKIMGeneralWidget::saveSettings()
     if (!mEnableDkimSupport->isChecked()) {
         MessageViewer::DKIMManager::self()->clearInfoWidget();
     }
+    loadWidget(mUseOnlyAuthenticationResult, MessageViewer::MessageViewerSettings::self()->useOnlyAuthenticationResultsItem());
 }
 
 void DKIMGeneralWidget::resetSettings()

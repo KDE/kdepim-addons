@@ -37,6 +37,7 @@ private:
     QCheckBox *mEnableDkimSupport = nullptr;
     QCheckBox *mSaveResult = nullptr;
     QComboBox *mSaveKey = nullptr;
+    QCheckBox *mUseOnlyAuthenticationResult = nullptr;
 };
 
 #endif // DKIMGENERALWIDGET_H
