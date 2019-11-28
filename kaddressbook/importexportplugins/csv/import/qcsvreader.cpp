@@ -22,7 +22,7 @@
 #include <QStringList>
 #include <QTextCodec>
 #include <QTextStream>
-
+#include <QVector>
 #include <KLocalizedString>
 
 QCsvBuilderInterface::~QCsvBuilderInterface()
