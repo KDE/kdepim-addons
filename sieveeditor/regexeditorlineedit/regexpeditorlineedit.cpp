@@ -98,6 +98,7 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
             return;
         }
     }
+#if 0
     KRegExpEditorInterface *iface = qobject_cast<KRegExpEditorInterface *>(s_regexpeditorinstalled->mEditorDialog);
     Q_ASSERT(iface);   // This should not fail!
 
@@ -107,6 +108,9 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
     if (s_regexpeditorinstalled->mEditorDialog->exec() == QDialog::Accepted) {
         mLineEdit->setText(iface->regExp());
     }
+#else
+    qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditorInterface is deprecated. Need to adapt KRegExpEditor first ";
+#endif
 }
 
 void RegexpEditorLineEdit::switchToRegexpEditorLineEdit(bool regexpEditor)
