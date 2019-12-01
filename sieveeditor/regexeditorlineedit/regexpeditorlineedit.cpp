@@ -67,6 +67,8 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
     mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
+    //Disable for the moment until we fix kregexeditor
+    s_regexpeditorinstalled->status = InfoRegExp::NotInstalled;
     if (s_regexpeditorinstalled->status == InfoRegExp::Unknown) {
         if (KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty()) {
             s_regexpeditorinstalled->status = InfoRegExp::NotInstalled;
