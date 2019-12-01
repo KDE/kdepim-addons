@@ -26,6 +26,7 @@ set(dkimverifyconfigure_SRCS
     dkimmanagerulesdialog.cpp
     dkimmanagerulescombobox.cpp
     dkimauthenticationverifiedserverwidget.cpp
+    dkimauthenticationverifiedserverdialog.cpp
 )
 
 ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
