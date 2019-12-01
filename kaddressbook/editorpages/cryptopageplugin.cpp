@@ -32,7 +32,7 @@
 #include <QPushButton>
 
 #include <kcontacts/addressee.h>
-#include <kcombobox.h>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <kiconloader.h>
 #include <KLocalizedString>
