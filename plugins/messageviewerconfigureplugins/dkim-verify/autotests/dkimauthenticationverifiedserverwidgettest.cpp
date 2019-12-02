@@ -20,6 +20,8 @@
 #include "dkimauthenticationverifiedserverwidgettest.h"
 #include "dkimauthenticationverifiedserverwidget.h"
 #include <QTest>
+#include <QVBoxLayout>
+
 QTEST_MAIN(DKIMAuthenticationVerifiedServerWidgetTest)
 DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidgetTest(QObject *parent)
     : QObject(parent)
@@ -30,5 +32,7 @@ DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidg
 void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()
 {
     DKIMAuthenticationVerifiedServerWidget w;
-    //TODO
+    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 }
