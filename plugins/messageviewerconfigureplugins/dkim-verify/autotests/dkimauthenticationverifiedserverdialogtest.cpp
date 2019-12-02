@@ -19,17 +19,31 @@
 
 #include "dkimauthenticationverifiedserverdialogtest.h"
 #include "dkimauthenticationverifiedserverdialog.h"
+#include "dkimauthenticationverifiedserverwidget.h"
 #include <QTest>
+#include <QStandardPaths>
+#include <QVBoxLayout>
+#include <QDialogButtonBox>
 QTEST_MAIN(DKIMAuthenticationVerifiedServerDialogTest)
 
 DKIMAuthenticationVerifiedServerDialogTest::DKIMAuthenticationVerifiedServerDialogTest(QObject *parent)
     : QObject(parent)
 {
-
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void DKIMAuthenticationVerifiedServerDialogTest::shouldHaveDefaultValues()
 {
-    DKIMAuthenticationVerifiedServerDialog w;
-    //TODO
+    DKIMAuthenticationVerifiedServerDialog dlg;
+    QVERIFY(!dlg.windowTitle().isEmpty());
+
+    QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    DKIMAuthenticationVerifiedServerWidget *mConfigureWidget = dlg.findChild<DKIMAuthenticationVerifiedServerWidget *>(QStringLiteral("mAuthenticationVerifiedWidget"));
+    QVERIFY(mConfigureWidget);
+
+    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
+    QCOMPARE(buttonBox->standardButtons(), {QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }

@@ -33,12 +33,12 @@ static const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog"
 DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure DKIM"));
+    setWindowTitle(i18n("Configure Authentication Verified Server"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mAuthenticationVerifiedWidget = new DKIMAuthenticationVerifiedServerWidget(this);
-    mAuthenticationVerifiedWidget->setObjectName(QStringLiteral("mConfigureWidget"));
+    mAuthenticationVerifiedWidget->setObjectName(QStringLiteral("mAuthenticationVerifiedWidget"));
     mainLayout->addWidget(mAuthenticationVerifiedWidget);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
