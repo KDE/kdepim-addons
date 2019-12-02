@@ -19,7 +19,7 @@
 
 #include "mergecontactsplugin.h"
 #include "mergecontactsplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(MergeContactsPlugin, "kaddressbook_mergecontactsplugin.json"
                          )

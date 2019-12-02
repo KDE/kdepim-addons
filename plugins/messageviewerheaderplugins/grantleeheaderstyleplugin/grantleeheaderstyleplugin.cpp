@@ -22,7 +22,7 @@
 #include <messageviewer/grantleeheaderstyle.h>
 #include "grantleeheaderstrategy.h"
 
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 using namespace MessageViewer;
 
 K_PLUGIN_CLASS_WITH_JSON(GrantleeHeaderStylePlugin, "messageviewer_grantleeheaderstyleplugin.json")

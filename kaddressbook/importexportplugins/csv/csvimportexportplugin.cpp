@@ -19,7 +19,7 @@
 
 #include "csvimportexportplugin.h"
 #include "csvimportexportplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CSVImportExportPlugin, "kaddressbook_importexportcsvplugin.json")
 

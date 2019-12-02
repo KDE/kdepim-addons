@@ -24,7 +24,7 @@
 #include "mailimporter/othermailerutil.h"
 
 #include "gearyplugin_debug.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDir>
 
 K_PLUGIN_CLASS_WITH_JSON(GearyImportData, "gearyimporter.json")

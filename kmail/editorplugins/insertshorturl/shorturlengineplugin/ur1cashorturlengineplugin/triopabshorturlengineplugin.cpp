@@ -19,7 +19,7 @@
 
 #include "triopabshorturlengineplugin.h"
 #include "triopabshorturlengineinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(TriopAbShortUrlEnginePluginFactory, "pimcommon_triopabshorturlengineplugin.json", registerPlugin<TriopAbShortUrlEnginePlugin>();
                            )

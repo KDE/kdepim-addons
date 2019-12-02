@@ -19,7 +19,7 @@
 
 #include "googleshorturlengineplugin.h"
 #include "googleshorturlengineinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(GoogleShortUrlEnginePluginFactory, "pimcommon_googleshorturlengineplugin.json", registerPlugin<GoogleShortUrlEnginePlugin>();
                            )

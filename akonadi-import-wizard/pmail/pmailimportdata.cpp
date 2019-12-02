@@ -23,7 +23,7 @@
 #include "mailimporter/filterinfo.h"
 
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDir>
 
 K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();

@@ -21,7 +21,7 @@
 #include "fancyheaderstyleplugin.h"
 #include "fancyheaderstyle.h"
 #include "messageviewer/richheaderstrategy.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QApplication>
 
 using namespace MessageViewer;

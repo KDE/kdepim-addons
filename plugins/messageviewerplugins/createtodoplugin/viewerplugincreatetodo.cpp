@@ -20,7 +20,7 @@
 #include "viewerplugincreatetodo.h"
 #include "viewerplugincreatetodointerface.h"
 #include <KActionCollection>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreatetodo, "messageviewer_createtodoplugin.json")

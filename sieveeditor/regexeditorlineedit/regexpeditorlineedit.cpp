@@ -19,7 +19,7 @@
 
 #include "regexpeditorlineedit.h"
 #include "regexpeditorlineeditplugin_debug.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 #include <QHBoxLayout>
 #include <QLineEdit>

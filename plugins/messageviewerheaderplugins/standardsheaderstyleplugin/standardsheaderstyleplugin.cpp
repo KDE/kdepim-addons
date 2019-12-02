@@ -21,7 +21,7 @@
 #include "standardsheaderstyleinterface.h"
 #include "standardheaderstrategy.h"
 #include "messageviewer/plainheaderstyle.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 

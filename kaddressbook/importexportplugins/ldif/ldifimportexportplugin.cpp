@@ -19,7 +19,7 @@
 
 #include "ldifimportexportplugin.h"
 #include "ldifimportexportplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(LDifImportExportPlugin, "kaddressbook_importexportldifplugin.json")
 

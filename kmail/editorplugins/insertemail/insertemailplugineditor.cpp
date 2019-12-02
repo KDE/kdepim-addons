@@ -19,7 +19,7 @@
 
 #include "insertemailplugineditor.h"
 #include "insertemailplugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(InsertEmailPluginEditor, "kmail_insertemaileditorplugin.json")
 

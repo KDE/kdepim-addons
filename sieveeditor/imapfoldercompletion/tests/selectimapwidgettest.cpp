@@ -20,7 +20,7 @@
 #include "selectimapwidgettest.h"
 #include <KPluginLoader>
 #include <QHBoxLayout>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDebug>
 #include <QLabel>
 

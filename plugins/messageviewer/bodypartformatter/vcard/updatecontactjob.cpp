@@ -22,7 +22,7 @@
 #include <AkonadiCore/itemmodifyjob.h>
 #include <kcontacts/addressee.h>
 #include <KLocalizedString>
-#include <kmessagebox.h>
+#include <KMessageBox>
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)

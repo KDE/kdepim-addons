@@ -20,7 +20,7 @@
 #include "viewerplugincreateevent.h"
 #include "viewerplugincreateeventinterface.h"
 #include <KActionCollection>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreateevent, "messageviewer_createeventplugin.json")

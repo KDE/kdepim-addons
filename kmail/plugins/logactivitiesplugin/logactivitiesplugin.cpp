@@ -19,7 +19,7 @@
 
 #include "logactivitiesplugin.h"
 #include "logactivitiesplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(LogActivitiesPlugin, "kmail_logactivitiesplugin.json")
 

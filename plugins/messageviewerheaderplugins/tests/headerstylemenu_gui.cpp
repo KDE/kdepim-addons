@@ -27,7 +27,7 @@
 #include <QMenuBar>
 #include <QVBoxLayout>
 
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <QTextEdit>
 #include <KActionMenu>
 #include <messageviewer/headerstrategy.h>

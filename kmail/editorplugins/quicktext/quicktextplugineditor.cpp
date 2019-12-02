@@ -19,7 +19,7 @@
 
 #include "quicktextplugineditor.h"
 #include "quicktextplugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include "quicktextconfiguredialog.h"
 
 K_PLUGIN_CLASS_WITH_JSON(QuickTextPluginEditor, "kmail_quicktextplugin.json")

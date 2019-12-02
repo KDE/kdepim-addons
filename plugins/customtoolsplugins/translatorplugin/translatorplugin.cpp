@@ -20,7 +20,7 @@
 #include "translatorplugin.h"
 #include "translatorview.h"
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <pimcommon/customtoolswidgetng.h>
 
 K_PLUGIN_CLASS_WITH_JSON(TranslatorPlugin, "pimcommon_translatorplugin.json")

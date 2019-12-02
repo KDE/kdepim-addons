@@ -19,7 +19,7 @@
 
 #include "ur1cashorturlengineplugin.h"
 #include "ur1cashorturlengineinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_FACTORY_WITH_JSON(Ur1CaShortUrlEnginePluginFactory, "pimcommon_ur1cashorturlengineplugin.json", registerPlugin<Ur1CaShortUrlEnginePlugin>();
                            )

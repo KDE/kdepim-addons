@@ -19,7 +19,7 @@
 
 #include "gravatarconfiguresettingsplugin.h"
 #include "gravatarconfiguresettingsplugindialog.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(GravatarConfigureSettingsPlugin, "messageviewer_gravatarconfigplugin.json")
 

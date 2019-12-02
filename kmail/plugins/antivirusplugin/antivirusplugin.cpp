@@ -19,7 +19,7 @@
 
 #include "antivirusplugin.h"
 #include "antivirusplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(AntiVirusPlugin, "kmail_antivirusplugin.json")
 

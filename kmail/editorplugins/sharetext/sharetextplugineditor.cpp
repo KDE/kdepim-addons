@@ -19,7 +19,7 @@
 
 #include "sharetextplugineditor.h"
 #include "sharetextplugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ShareTextPluginEditor, "kmail_sharetexteditorplugin.json")
 

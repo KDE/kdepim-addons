@@ -20,7 +20,7 @@
 #ifndef UPDATECONTACTJOB_H
 #define UPDATECONTACTJOB_H
 
-#include <kjob.h>
+#include <KJob>
 
 #include <KContacts/Addressee>
 

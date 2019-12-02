@@ -26,7 +26,7 @@
 #include <QHBoxLayout>
 #include <QPointer>
 
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")
 
 SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)

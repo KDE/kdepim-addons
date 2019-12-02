@@ -20,7 +20,7 @@
 #include "viewerplugintranslator.h"
 #include "viewerplugintranslatorinterface.h"
 #include <KActionCollection>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginTranslator, "messageviewer_translatorplugin.json")

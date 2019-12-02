@@ -49,8 +49,8 @@
 #include <QDialog>
 #include <KLocalizedString>
 #include <KProcess>
-#include <ktoolinvocation.h>
-#include <kconfiggroup.h>
+#include <KToolInvocation>
+#include <KConfigGroup>
 
 #include <QLabel>
 #include <QTextEdit>

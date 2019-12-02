@@ -23,7 +23,7 @@
 #include "configurewidget/checkbeforesendconfiguredialog.h"
 
 #include <QPointer>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CheckBeforeSendPlugin, "kmail_checkbeforesendplugin.json")
 

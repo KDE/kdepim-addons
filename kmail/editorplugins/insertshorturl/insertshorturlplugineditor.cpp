@@ -20,7 +20,7 @@
 #include "insertshorturlplugineditor.h"
 #include "insertshorturlplugineditorinterface.h"
 #include "insertshorturlconfiguredialog.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(InsertShorturlPluginEditor, "kmail_insertshorturleditorplugin.json")

@@ -24,7 +24,7 @@
 #include "mailimporter/filterinfo.h"
 
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDir>
 
 K_PLUGIN_CLASS_WITH_JSON(OperaImportData, "operaimporter.json")

@@ -22,7 +22,7 @@
 #include "configuredialog/viewerpluginexternalconfiguredialog.h"
 #include <KActionCollection>
 #include <QPointer>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExternalscript, "messageviewer_externalscriptplugin.json")

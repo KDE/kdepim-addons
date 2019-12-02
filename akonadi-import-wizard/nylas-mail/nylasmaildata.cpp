@@ -23,7 +23,7 @@
 #include "mailimporter/othermailerutil.h"
 
 #include "nylasmailplugin_debug.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <QDir>
 
 K_PLUGIN_CLASS_WITH_JSON(NylasMailImportData, "nylasmailimporter.json")

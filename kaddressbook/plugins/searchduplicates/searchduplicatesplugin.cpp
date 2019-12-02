@@ -19,7 +19,7 @@
 
 #include "searchduplicatesplugin.h"
 #include "searchduplicatesplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(SearchDuplicatesPlugin, "kaddressbook_searchduplicatesplugin.json")
 

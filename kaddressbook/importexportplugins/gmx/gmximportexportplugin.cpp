@@ -19,7 +19,7 @@
 
 #include "gmximportexportplugin.h"
 #include "gmximportexportplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(GMXImportExportPlugin, "kaddressbook_importexportgmxplugin.json")
 

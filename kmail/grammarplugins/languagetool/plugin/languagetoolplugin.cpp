@@ -23,7 +23,7 @@
 #include "languagetoolmanager.h"
 #include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 #include <QPointer>
 

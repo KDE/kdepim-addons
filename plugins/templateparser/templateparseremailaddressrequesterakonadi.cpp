@@ -20,7 +20,7 @@
 #include "templateparseremailaddressrequesterakonadi.h"
 #include <QHBoxLayout>
 #include <Akonadi/Contact/EmailAddressRequester>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi,
                          "templateparseremailaddressrequesterakonadi.json")

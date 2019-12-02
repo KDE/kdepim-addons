@@ -22,7 +22,7 @@
 
 #include <QFileInfo>
 #include <QVector>
-#include <kpluginmetadata.h>
+#include <KPluginMetaData>
 #include <KPluginLoader>
 #include <KPluginFactory>
 #include <QSet>

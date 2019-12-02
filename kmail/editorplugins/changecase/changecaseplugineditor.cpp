@@ -19,7 +19,7 @@
 
 #include "changecaseplugineditor.h"
 #include "changecaseplugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ChangeCasePluginEditor, "kmail_changecaseeditorplugin.json")
 

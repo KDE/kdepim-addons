@@ -2,7 +2,7 @@
 
 #include "%{ProjectNameLower}plugineditor.h"
 #include "%{ProjectNameLower}plugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(%{CN}PluginEditor, "%{ProjectNameLower}editorplugin.json")
 

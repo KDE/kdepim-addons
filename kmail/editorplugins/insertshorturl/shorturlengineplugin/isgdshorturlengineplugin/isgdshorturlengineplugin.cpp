@@ -19,7 +19,7 @@
 
 #include "isgdshorturlengineplugin.h"
 #include "isgdshorturlengineinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(IsgdShortUrlEnginePlugin, "pimcommon_isgdshorturlengineplugin.json")
 

@@ -19,7 +19,7 @@
 
 #include "insertspecialcharacterplugineditor.h"
 #include "insertspecialcharacterplugineditorinterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(InsertSpecialCharacterPluginEditor, "kmail_insertspecialcharactereditorplugin.json")
 

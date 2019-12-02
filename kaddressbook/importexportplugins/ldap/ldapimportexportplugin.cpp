@@ -19,7 +19,7 @@
 
 #include "ldapimportexportplugin.h"
 #include "ldapimportexportplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(LDapImportExportPlugin, "kaddressbook_importexportldapplugin.json")
 

@@ -20,7 +20,7 @@
 #include "sendmailtransportplugin.h"
 #include "sendmailconfigdialog.h"
 #include "sendmailjob.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <KLocalizedString>
 #include <QPointer>
 

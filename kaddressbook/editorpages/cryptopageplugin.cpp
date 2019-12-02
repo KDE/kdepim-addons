@@ -34,7 +34,7 @@
 #include <kcontacts/addressee.h>
 #include <QComboBox>
 #include <QHBoxLayout>
-#include <kiconloader.h>
+#include <KIconLoader>
 #include <KLocalizedString>
 
 #include "gpgme++/data.h"

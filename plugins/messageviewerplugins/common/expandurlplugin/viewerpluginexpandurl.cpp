@@ -20,7 +20,7 @@
 #include "viewerpluginexpandurl.h"
 #include "viewerpluginexpandurlinterface.h"
 #include <KActionCollection>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExpandurl, "messageviewer_expandurlplugin.json")

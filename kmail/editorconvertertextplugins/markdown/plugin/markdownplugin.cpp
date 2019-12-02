@@ -21,7 +21,7 @@
 #include "markdowninterface.h"
 #include "markdownconfiguredialog.h"
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 #include <QPointer>
 

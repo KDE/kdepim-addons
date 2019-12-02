@@ -19,7 +19,7 @@
 
 #include "vcardimportexportplugin.h"
 #include "vcardimportexportplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(VCardImportExportPlugin, "kaddressbook_importexportvcardplugin.json")
 VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent, const QList<QVariant> &)

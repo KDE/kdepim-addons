@@ -19,7 +19,7 @@
 
 #include "expertplugin.h"
 #include "expertplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ExpertPlugin, "kmail_expertplugin.json")
 

@@ -22,7 +22,7 @@
 #include "mailimporter/filterinfo.h"
 
 #include <KLocalizedString>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 #include <QDir>
 

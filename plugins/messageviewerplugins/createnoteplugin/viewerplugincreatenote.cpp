@@ -20,7 +20,7 @@
 #include "viewerplugincreatenote.h"
 #include "viewerplugincreatenoteinterface.h"
 #include <KActionCollection>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginCreatenote, "messageviewer_createnoteplugin.json")

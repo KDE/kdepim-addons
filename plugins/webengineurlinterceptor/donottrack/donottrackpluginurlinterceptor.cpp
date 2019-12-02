@@ -20,7 +20,7 @@
 #include "donottrackpluginurlinterceptor.h"
 #include "donottrackinterceptorinterface.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(DoNotTrackPluginUrlInterceptor, "messageviewer_donottrackurlinterceptor.json")
 DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)

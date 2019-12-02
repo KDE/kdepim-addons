@@ -21,7 +21,7 @@
 
 #include <KLocalizedString>
 
-#include <kconfig.h>
+#include <KConfig>
 #include <KConfigGroup>
 #include <QCheckBox>
 #include <QGridLayout>

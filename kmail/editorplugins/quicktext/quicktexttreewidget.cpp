@@ -20,7 +20,7 @@
 #include "quicktexttreewidget.h"
 #include "quicktextmanager.h"
 
-#include <kactioncollection.h>
+#include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
 

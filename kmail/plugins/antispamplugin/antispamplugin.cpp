@@ -18,7 +18,7 @@
 */
 #include "antispamplugin.h"
 #include "antispamplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(AntiSpamPlugin, "kmail_antispamplugin.json")
 

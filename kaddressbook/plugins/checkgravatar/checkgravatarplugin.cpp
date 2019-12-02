@@ -19,7 +19,7 @@
 
 #include "checkgravatarplugin.h"
 #include "checkgravatarplugininterface.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(CheckGravatarPlugin, "kaddressbook_checkgravatarplugin.json"
                          )

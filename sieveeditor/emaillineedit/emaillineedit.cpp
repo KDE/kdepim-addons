@@ -19,7 +19,7 @@
 
 #include "emaillineedit.h"
 #include "sieveeditoremaillineditplugin_debug.h"
-#include <kpluginfactory.h>
+#include <KPluginFactory>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 
 #include <QHBoxLayout>
