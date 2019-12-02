@@ -29,6 +29,8 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerWidget
 public:
     explicit DKIMAuthenticationVerifiedServerWidget(QWidget *parent = nullptr);
     ~DKIMAuthenticationVerifiedServerWidget();
+    void loadSettings();
+    void saveSettings();
 };
 
 #endif // DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H

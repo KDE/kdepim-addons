@@ -22,13 +22,19 @@
 
 #include <QDialog>
 #include "dkimconfigure_private_export.h"
-
+class DKIMAuthenticationVerifiedServerWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit DKIMAuthenticationVerifiedServerDialog(QWidget *parent = nullptr);
     ~DKIMAuthenticationVerifiedServerDialog();
+
+private:
+    void slotAccepted();
+    void readConfig();
+    void writeConfig();
+    DKIMAuthenticationVerifiedServerWidget *mAuthenticationVerifiedWidget = nullptr;
 };
 
 #endif // DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H

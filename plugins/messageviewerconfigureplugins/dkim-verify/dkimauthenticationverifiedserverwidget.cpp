@@ -31,3 +31,13 @@ DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget(
 {
 
 }
+
+void DKIMAuthenticationVerifiedServerWidget::loadSettings()
+{
+    //TODO
+}
+
+void DKIMAuthenticationVerifiedServerWidget::saveSettings()
+{
+    //TODO
+}
