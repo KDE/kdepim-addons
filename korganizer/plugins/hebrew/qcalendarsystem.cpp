@@ -24,7 +24,7 @@
 #include <QDate>
 #include <QSharedData>
 
-#include "qdebug.h"
+#include <QDebug>
 
 class QCalendarSystemPrivate : public QSharedData
 {
