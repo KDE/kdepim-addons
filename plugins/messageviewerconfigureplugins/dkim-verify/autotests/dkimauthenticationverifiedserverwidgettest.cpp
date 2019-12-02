@@ -35,4 +35,8 @@ void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+
+
+    DKIMAuthenticationVerifiedServerSelectorWidget *mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(QStringLiteral("mSelector"));
+    QVERIFY(mSelector);
 }

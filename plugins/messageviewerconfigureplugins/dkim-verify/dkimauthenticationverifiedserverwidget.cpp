@@ -28,6 +28,9 @@ DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(Q
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
+    mSelector = new DKIMAuthenticationVerifiedServerSelectorWidget(this);
+    mSelector->setObjectName(QStringLiteral("mSelector"));
+    mainLayout->addWidget(mSelector);
 }
 
 DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget()
@@ -43,4 +46,20 @@ void DKIMAuthenticationVerifiedServerWidget::loadSettings()
 void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 {
     //TODO
+}
+
+DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent)
+    : PimCommon::SimpleStringListEditor(parent)
+{
+
+}
+
+DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
+{
+
+}
+
+void DKIMAuthenticationVerifiedServerSelectorWidget::addNewEntry()
+{
+
 }

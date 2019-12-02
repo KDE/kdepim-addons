@@ -22,6 +22,17 @@
 
 #include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <PimCommon/SimpleStringListEditor>
+
+class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerSelectorWidget : public PimCommon::SimpleStringListEditor
+{
+    Q_OBJECT
+public:
+    explicit DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent = nullptr);
+    ~DKIMAuthenticationVerifiedServerSelectorWidget();
+
+    void addNewEntry() override;
+};
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerWidget : public QWidget
 {
@@ -31,6 +42,8 @@ public:
     ~DKIMAuthenticationVerifiedServerWidget();
     void loadSettings();
     void saveSettings();
+private:
+    DKIMAuthenticationVerifiedServerSelectorWidget *mSelector = nullptr;
 };
 
 #endif // DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H
