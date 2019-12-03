@@ -40,11 +40,13 @@ DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget(
 
 void DKIMAuthenticationVerifiedServerWidget::loadSettings()
 {
+    mSelector->setStringList(QStringList());
     //TODO
 }
 
 void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 {
+    const QStringList lst = mSelector->stringList();
     //TODO
 }
 
