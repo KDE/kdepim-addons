@@ -20,6 +20,9 @@
 #include "dkimadvancedwidget.h"
 #include <KLocalizedString>
 #include <QFormLayout>
+#include <QPointer>
+#include <QPushButton>
+#include "dkimauthenticationverifiedserverdialog.h"
 #include "messageviewer/messageviewersettings.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QLabel>
@@ -47,10 +50,21 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
 
     mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
+    QPushButton *configureServer = new QPushButton(i18n("Configure"), this);
+    configureServer->setObjectName(QStringLiteral("configure_button"));
+    connect(configureServer, &QPushButton::clicked, this, &DKIMAdvancedWidget::slotConfigureAuthenticationServer);
+    mainLayout->addRow(i18n("Authentication Server verified:"), configureServer);
 }
 
 DKIMAdvancedWidget::~DKIMAdvancedWidget()
 {
+}
+
+void DKIMAdvancedWidget::slotConfigureAuthenticationServer()
+{
+    QPointer<DKIMAuthenticationVerifiedServerDialog> dlg = new DKIMAuthenticationVerifiedServerDialog(this);
+    dlg->exec();
+    delete dlg;
 }
 
 void DKIMAdvancedWidget::loadSettings()

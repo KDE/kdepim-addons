@@ -34,6 +34,7 @@ public:
     void saveSettings();
     void resetSettings();
 private:
+    void slotConfigureAuthenticationServer();
     QComboBox *mSha1Policy = nullptr;
     QCheckBox *mCheckDKIMWhenOnlyTesting = nullptr;
     QCheckBox *mUseAuthenticationResultRelaxedParser = nullptr;
