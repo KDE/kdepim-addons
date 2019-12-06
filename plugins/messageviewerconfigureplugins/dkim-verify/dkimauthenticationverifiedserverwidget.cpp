@@ -20,6 +20,7 @@
 #include "dkimauthenticationverifiedserverwidget.h"
 #include <QVBoxLayout>
 #include <KLocalizedString>
+#include <MessageViewer/DKIMManagerAuthenticationServer>
 
 DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(QWidget *parent)
     : QWidget(parent)
@@ -40,14 +41,13 @@ DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget(
 
 void DKIMAuthenticationVerifiedServerWidget::loadSettings()
 {
-    mSelector->setStringList(QStringList());
-    //TODO
+    mSelector->setStringList(MessageViewer::DKIMManagerAuthenticationServer::self()->serverList());
 }
 
 void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 {
     const QStringList lst = mSelector->stringList();
-    //TODO
+    MessageViewer::DKIMManagerAuthenticationServer::self()->setServerList(lst);
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent)
@@ -57,11 +57,6 @@ DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServer
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
-{
-
-}
-
-void DKIMAuthenticationVerifiedServerSelectorWidget::addNewEntry()
 {
 
 }

@@ -30,8 +30,6 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerSelect
 public:
     explicit DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent = nullptr);
     ~DKIMAuthenticationVerifiedServerSelectorWidget();
-
-    void addNewEntry() override;
 };
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerWidget : public QWidget
