@@ -31,7 +31,7 @@
 
 #include <KLocalizedString>
 
-#include <kcodecs.h>
+#include <KCodecs>
 #include <KColorScheme>
 
 #include <QApplication>
