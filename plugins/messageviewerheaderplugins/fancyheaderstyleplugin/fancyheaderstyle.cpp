@@ -136,7 +136,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
         const auto resentTo = mHeaderStyleUtil.resentToList(message);
 
         QString to;
-        if (message->headerByType("Resent-To")) {
+        if (resentTo.data()) {
             to
                 = StringUtil::emailAddrAsAnchor(resentTo.data(),
                                                 StringUtil::DisplayFullAddress) + QLatin1Char(' ')
