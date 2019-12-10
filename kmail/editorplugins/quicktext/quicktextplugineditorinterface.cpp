@@ -91,7 +91,11 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
             //qDebug() << "selected " << selectedWord;
             for (const MailCommon::SnippetsInfo &info : mSnippetsInfo) {
                 //qDebug() << " info.keyword" << info.keyword;
-                if (info.keyword == selectedWord) {
+                QString infoKeyword = info.keyword;
+                if (!infoKeyword.startsWith(QLatin1Char('\\'))) {
+                    infoKeyword = QLatin1Char('\\') + infoKeyword;
+                }
+                if (infoKeyword == selectedWord) {
                     qDebug() << "found snippetsinfo " << info.keyword;
                     cur.insertText(composerInterface()->convertText(info.text));
                     //TODO change pos cur.setPosition(position);
