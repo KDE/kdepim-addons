@@ -1,6 +1,10 @@
 <div style="font-size:125%;">{{ trip.name }}</div>
 <div>
-    {{ trip.startDate|formatDateTime }}<br/>
+    {{ trip.startDate|formatDateTime }}
+    {% if trip.endDate %}
+        - {{ trip.endDate|formatDateTime }}
+    {% endif %}
+    <br/>
     {{ trip.location.name }}
     {% with trip.location as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
     {% if not trip.location.address.isEmpty %}
