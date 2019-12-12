@@ -53,7 +53,7 @@ void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent)
     : PimCommon::SimpleStringListEditor(parent)
 {
-
+   setAddDialogLabel(i18n("New Server"));
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
