@@ -29,7 +29,7 @@ using namespace MailMerge;
 MailMergeDialog::MailMergeDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Mail Merge"));
+    setWindowTitle(i18nc("@title:window", "Mail Merge"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
     QVBoxLayout *mainLayout = new QVBoxLayout;
     setLayout(mainLayout);
