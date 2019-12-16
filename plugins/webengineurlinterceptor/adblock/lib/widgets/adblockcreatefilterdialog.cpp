@@ -32,7 +32,7 @@ AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
     : QDialog(parent)
     , mCurrentType(AdBlockBlockableItemsWidget::None)
 {
-    setWindowTitle(i18n("Create Filter"));
+    setWindowTitle(i18nc("@title:window", "Create Filter"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);

@@ -31,7 +31,7 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)
     , mCurrentIdentity(0)
 {
-    setWindowTitle(i18n("Confirm Addresses"));
+    setWindowTitle(i18nc("@title:window", "Confirm Addresses"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

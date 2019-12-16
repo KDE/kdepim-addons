@@ -50,7 +50,7 @@ bool SendMailTransportPlugin::configureTransport(const QString &identifier, Mail
     Q_UNUSED(identifier);
     QPointer<SendMailConfigDialog> transportConfigDialog
         = new SendMailConfigDialog(transport, parent);
-    transportConfigDialog->setWindowTitle(i18n("Configure account"));
+    transportConfigDialog->setWindowTitle(i18nc("@title:window", "Configure account"));
     bool okClicked = (transportConfigDialog->exec() == QDialog::Accepted);
     delete transportConfigDialog;
     return okClicked;

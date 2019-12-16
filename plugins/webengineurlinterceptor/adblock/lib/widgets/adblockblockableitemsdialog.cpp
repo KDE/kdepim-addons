@@ -32,7 +32,7 @@ using namespace AdBlock;
 AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Blockable Items"));
+    setWindowTitle(i18nc("@title:window", "Blockable Items"));
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 

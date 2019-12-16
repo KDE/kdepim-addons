@@ -27,7 +27,7 @@
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Check SMTP server"));
+    setWindowTitle(i18nc("@title:window", "Check SMTP server"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

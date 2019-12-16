@@ -32,7 +32,7 @@
 AttendeeSelector::AttendeeSelector(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Select Attendees"));
+    setWindowTitle(i18nc("@title:window", "Select Attendees"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QWidget *mainWidget = new QWidget(this);

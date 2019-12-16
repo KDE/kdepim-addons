@@ -29,7 +29,7 @@
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Add or Modify External Script"));
+    setWindowTitle(i18nc("@title:window", "Add or Modify External Script"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     mEditWidget = new ViewerPluginExternalEditWidget(this);

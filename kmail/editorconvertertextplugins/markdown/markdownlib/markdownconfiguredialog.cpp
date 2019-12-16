@@ -26,7 +26,7 @@
 MarkdownConfigureDialog::MarkdownConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
-    setWindowTitle(i18n("Configure Markdown Plugin"));
+    setWindowTitle(i18nc("@title:window", "Configure Markdown Plugin"));
     initLayout();
 }
 

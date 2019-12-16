@@ -33,7 +33,7 @@ static const char myConfigGroupName[] = "DKIMConfigureDialog";
 DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure DKIM"));
+    setWindowTitle(i18nc("@title:window", "Configure DKIM"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

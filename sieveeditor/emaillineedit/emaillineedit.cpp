@@ -98,7 +98,7 @@ void EmailLineEdit::slotSelectEmail()
     } else {
         dlg.reset(new Akonadi::EmailAddressSelectionDialog(this));
     }
-    dlg->setWindowTitle(i18n("Select Emails"));
+    dlg->setWindowTitle(i18nc("@title:window", "Select Emails"));
     dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
     connect(dlg.get(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &EmailLineEdit::insertAddresses);
     if (dlg->exec()) {

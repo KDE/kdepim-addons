@@ -36,7 +36,7 @@
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure Day Numbers"));
+    setWindowTitle(i18nc("@title:window", "Configure Day Numbers"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);

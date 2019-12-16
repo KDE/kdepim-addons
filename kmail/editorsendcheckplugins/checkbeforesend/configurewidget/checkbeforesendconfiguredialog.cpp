@@ -25,7 +25,7 @@ CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
     , mConfigureWidget(nullptr)
 {
-    setWindowTitle(i18n("Configure \"Check Before Send Mail\" Plugin"));
+    setWindowTitle(i18nc("@title:window", "Configure \"Check Before Send Mail\" Plugin"));
     initLayout();
 }
 

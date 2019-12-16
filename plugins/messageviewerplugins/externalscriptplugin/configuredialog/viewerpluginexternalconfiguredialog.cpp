@@ -26,7 +26,7 @@
 ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
-    setWindowTitle(i18n("Configure \"External Script\" Plugin"));
+    setWindowTitle(i18nc("@title:window", "Configure \"External Script\" Plugin"));
     initLayout();
     buttonBox()->button(QDialogButtonBox::RestoreDefaults)->hide();
 }

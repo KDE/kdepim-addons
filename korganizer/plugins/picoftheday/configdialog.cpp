@@ -36,7 +36,7 @@
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure Picture of the Day"));
+    setWindowTitle(i18nc("@title:window", "Configure Picture of the Day"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);

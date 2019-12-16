@@ -28,7 +28,7 @@
 LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure LanguageTool"));
+    setWindowTitle(i18nc("@title:window", "Configure LanguageTool"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

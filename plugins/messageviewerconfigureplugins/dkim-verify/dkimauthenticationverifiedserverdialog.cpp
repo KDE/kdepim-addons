@@ -33,7 +33,7 @@ static const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog"
 DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure Authentication Verified Server"));
+    setWindowTitle(i18nc("@title:window", "Configure Authentication Verified Server"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

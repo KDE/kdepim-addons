@@ -39,7 +39,7 @@ using namespace KABMergeContacts;
 MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Select Contacts to merge"));
+    setWindowTitle(i18nc("@title:window", "Select Contacts to merge"));
     mButtonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     mButtonBox->setObjectName(QStringLiteral("buttonbox"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

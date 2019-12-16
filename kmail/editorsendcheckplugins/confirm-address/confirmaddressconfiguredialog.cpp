@@ -25,7 +25,7 @@ ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
     , mConfigureWidget(nullptr)
 {
-    setWindowTitle(i18n("Configure \"Confirm Email Address\" Plugin"));
+    setWindowTitle(i18nc("@title:window", "Configure \"Confirm Email Address\" Plugin"));
     initLayout();
 }
 

@@ -28,7 +28,7 @@
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Configure Grammalecte"));
+    setWindowTitle(i18nc("@title:window", "Configure Grammalecte"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

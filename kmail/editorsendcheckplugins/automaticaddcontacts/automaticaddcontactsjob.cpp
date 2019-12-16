@@ -116,7 +116,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                       "You must create an address book before adding a contact. Do you want to create an address book?"),
                 i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
             QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
-            dlg->setWindowTitle(i18n("Add Address Book"));
+            dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::ContactGroup::mimeType());
             dlg->agentFilterProxyModel()->addCapabilityFilter(QStringLiteral("Resource"));

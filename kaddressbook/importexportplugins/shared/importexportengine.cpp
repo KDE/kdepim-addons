@@ -68,7 +68,7 @@ void ImportExportEngine::importContacts()
     QPointer<Akonadi::CollectionDialog> dlg = new Akonadi::CollectionDialog(mParentWidget);
     dlg->setMimeTypeFilter(mimeTypes);
     dlg->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
-    dlg->setWindowTitle(i18n("Select Address Book"));
+    dlg->setWindowTitle(i18nc("@title:window", "Select Address Book"));
     dlg->setDescription(
         i18n("Select the address book the imported contact(s) shall be saved in:"));
     dlg->setDefaultCollection(mDefaultAddressBook);
@@ -85,7 +85,7 @@ void ImportExportEngine::importContacts()
     mNumberElementToImport = mContactsList.count();
     if (!mImportProgressDialog) {
         mImportProgressDialog = new QProgressDialog(mParentWidget);
-        mImportProgressDialog->setWindowTitle(i18n("Import Contacts"));
+        mImportProgressDialog->setWindowTitle(i18nc("@title:window", "Import Contacts"));
         mImportProgressDialog->setLabelText(
             i18np("Importing one contact to %2", "Importing %1 contacts to %2",
                   mNumberElementToImport, collection.name()));

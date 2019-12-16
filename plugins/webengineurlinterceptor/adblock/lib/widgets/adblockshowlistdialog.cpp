@@ -43,7 +43,7 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
     , mTemporaryFile(nullptr)
     , mUser1Button(nullptr)
 {
-    setWindowTitle(i18n("Show adblock list"));
+    setWindowTitle(i18nc("@title:window", "Show adblock list"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdBlockShowListDialog::reject);

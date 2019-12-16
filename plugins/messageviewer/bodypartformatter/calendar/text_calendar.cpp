@@ -883,7 +883,7 @@ public:
         // get comment for tentative acceptance
         if (askForComment(status)) {
             QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
-            dlg->setWindowTitle(i18n("Reaction to Invitation"));
+            dlg->setWindowTitle(i18nc("@title:window", "Reaction to Invitation"));
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();
@@ -1134,7 +1134,7 @@ public:
         Incidence::Ptr incidence(stringToIncidence(iCal));
         if (askForComment(Attendee::Declined)) {
             QPointer<ReactionToInvitationDialog> dlg = new ReactionToInvitationDialog(nullptr);
-            dlg->setWindowTitle(i18n("Decline Counter Proposal"));
+            dlg->setWindowTitle(i18nc("@title:window", "Decline Counter Proposal"));
             QString comment;
             if (dlg->exec()) {
                 comment = dlg->comment();

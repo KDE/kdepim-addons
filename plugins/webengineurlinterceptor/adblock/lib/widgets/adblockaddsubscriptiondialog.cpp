@@ -36,7 +36,7 @@ using namespace AdBlock;
 AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &excludeList, QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Add subscription"));
+    setWindowTitle(i18nc("@title:window", "Add subscription"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QWidget *w = new QWidget;

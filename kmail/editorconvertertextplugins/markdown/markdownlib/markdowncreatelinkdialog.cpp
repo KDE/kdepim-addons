@@ -29,7 +29,7 @@
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)
 {
-    setWindowTitle(i18n("Add Link"));
+    setWindowTitle(i18nc("@title:window", "Add Link"));
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 

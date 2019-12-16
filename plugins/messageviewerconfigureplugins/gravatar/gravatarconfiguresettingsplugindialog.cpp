@@ -24,7 +24,7 @@
 GravatarConfigureSettingsPluginDialog::GravatarConfigureSettingsPluginDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
-    setWindowTitle(i18n("Configure Gravatar"));
+    setWindowTitle(i18nc("@title:window", "Configure Gravatar"));
     initLayout(true);
 }
 

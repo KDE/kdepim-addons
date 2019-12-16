@@ -29,7 +29,7 @@ using namespace AdBlock;
 AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
 {
-    setWindowTitle(i18n("Configure AdBlock Plugin"));
+    setWindowTitle(i18nc("@title:window", "Configure AdBlock Plugin"));
     initLayout();
 }
 

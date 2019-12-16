@@ -31,7 +31,7 @@ ConfirmAddressSimpleStringListEditor::ConfirmAddressSimpleStringListEditor(QWidg
 void ConfirmAddressSimpleStringListEditor::addNewEntry()
 {
     QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
-    dlg->setWindowTitle(i18n("Add Value"));
+    dlg->setWindowTitle(i18nc("@title:window", "Add Value"));
     if (dlg->exec()) {
         insertNewEntry(dlg->emails());
     }
@@ -42,7 +42,7 @@ QString ConfirmAddressSimpleStringListEditor::modifyEntry(const QString &text)
 {
     QString newText;
     QPointer<ConfirmAddressEmailEntryDialog> dlg = new ConfirmAddressEmailEntryDialog(this);
-    dlg->setWindowTitle(i18n("Change Value"));
+    dlg->setWindowTitle(i18nc("@title:window", "Change Value"));
     dlg->setValue(text);
     if (dlg->exec()) {
         newText = dlg->emails();
