@@ -23,6 +23,7 @@
 #include <KSharedConfig>
 #include <QNetworkAccessManager>
 #include <QColor>
+#include <QRandomGenerator>
 
 LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
@@ -73,7 +74,7 @@ QColor LanguageToolManager::grammarColorForError(const QString &error)
     if (col.isValid()) {
         return col;
     }
-    col.setRgb(qrand() % 256, qrand() % 256, qrand() % 256);
+    col.setRgb(QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256));
     //Generate color.
     mGrammarColor.insert(error, col);
     return col;
