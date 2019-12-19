@@ -127,7 +127,7 @@ void PimCalendarsModel::saveConfig()
     auto config = KSharedConfig::openConfig();
     auto group = config->group("PIMEventsPlugin");
     auto savedList = group.readEntry("calendars", QList<qint64>());
-    auto currentList = mEnabledCalendars.toList();
+    auto currentList = mEnabledCalendars.values();
     std::sort(savedList.begin(), savedList.end());
     std::sort(currentList.begin(), currentList.end());
 
