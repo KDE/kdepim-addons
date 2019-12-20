@@ -40,6 +40,7 @@ public:
     QString extraScreenCss(const QString &headerFont) const override;
     QString extraPrintCss(const QString &headerFont) const override;
     QString extraCommonCss(const QString &headerFont) const override;
+    QString attachmentHtml() const override;
 
 private:
     HeaderStyle *mHeaderStyle = nullptr;

@@ -22,6 +22,7 @@
 #include "fancyheaderstyle.h"
 #include "messageviewer/richheaderstrategy.h"
 #include <KPluginFactory>
+#include <KLocalizedString>
 #include <QApplication>
 
 using namespace MessageViewer;
@@ -197,4 +198,11 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
     return val;
 }
 
+QString MessageViewer::FancyHeaderStylePlugin::attachmentHtml() const
+{
+    return QStringLiteral("<div style=\"float:left;\">%1&nbsp;</div>").arg(i18n("Attachments:"));
+}
+
 #include "fancyheaderstyleplugin.moc"
+
+
