@@ -54,6 +54,7 @@ DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServer
     : PimCommon::SimpleStringListEditor(parent)
 {
    setAddDialogLabel(i18n("New Server"));
+   setRemoveDialogLabel(i18n("Do you want to delete selected server name?"));
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
