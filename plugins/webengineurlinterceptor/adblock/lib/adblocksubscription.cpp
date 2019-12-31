@@ -327,11 +327,11 @@ void AdBlockCustomList::loadSubscription(const QStringList &disabledRules)
         stream.setCodec("UTF-8");
 
         if (!rules.contains(ddg1 + QLatin1Char('\n'))) {
-            stream << ddg1 << endl;
+            stream << ddg1 << QLatin1Char('\n');
         }
 
         if (!rules.contains(QLatin1Char('\n') + ddg2)) {
-            stream << ddg2 << endl;
+            stream << ddg2 << QLatin1Char('\n');
         }
     }
     file.close();
@@ -363,12 +363,12 @@ void AdBlockCustomList::saveSubscription()
 
     QTextStream textStream(&file);
     textStream.setCodec("UTF-8");
-    textStream << "Title: " << title() << endl;
-    textStream << "Url: " << url().toString() << endl;
-    textStream << "[Adblock Plus 1.1.1]" << endl;
+    textStream << "Title: " << title() << QLatin1Char('\n');
+    textStream << "Url: " << url().toString() << QLatin1Char('\n');
+    textStream << "[Adblock Plus 1.1.1]" << QLatin1Char('\n');
 
     for (const AdBlockRule *rule : qAsConst(mRules)) {
-        textStream << rule->filter() << endl;
+        textStream << rule->filter() << QLatin1Char('\n');
     }
 
     file.close();

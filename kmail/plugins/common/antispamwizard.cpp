@@ -84,9 +84,9 @@ AntiSpamWizard::AntiSpamWizard(WizardMode mode, QWidget *parent)
     mToolList = reader.getToolList();
 #ifndef NDEBUG
     if (mMode == AntiSpam) {
-        qDebug() << endl << "Considered anti-spam tools:";
+        qDebug() << "\nConsidered anti-spam tools:";
     } else {
-        qDebug() << endl << "Considered anti-virus tools:";
+        qDebug() << "\nConsidered anti-virus tools:";
     }
     QVector<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
     for (QVector<SpamToolConfig>::ConstIterator it = mToolList.constBegin();

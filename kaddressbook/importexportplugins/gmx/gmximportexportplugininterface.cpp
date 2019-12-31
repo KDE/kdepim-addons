@@ -265,7 +265,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
           << dateString(addressee->revision()) << DELIM     // Change_date
           << "1" << DELIM                     // Status
           << DELIM                            // Address_link_id
-          << category << endl;                // Categories
+          << category << QLatin1Char('\n');                // Categories
     }
 
     t << "####\n";
@@ -424,25 +424,25 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
                   << prefFlag << DELIM                // Preferred:
                     // ( & 1: preferred email,
                     //   & 4: preferred cell phone )
-                  << 1 << endl;                       // Status (should always be "1")
+                  << 1 << QLatin1Char('\n');                       // Status (should always be "1")
             }
         }
 
         ++addresseeId;
     }
 
-    t << "####" << endl;
-    t << "AB_CATEGORIES:" << endl;
-    t << "Category_id,Name,Icon_id" << endl;
+    t << "####" << QLatin1Char('\n');
+    t << "AB_CATEGORIES:" << QLatin1Char('\n');
+    t << "Category_id,Name,Icon_id" << QLatin1Char('\n');
 
     //  Write Category List (beware: Category_ID 0 is reserved for none
     //  Interestingly: The index here is an int sequence and does not
     //  correspond to the bit reference used above.
     const int categoryCount(categoryMap.size());
     for (int i = 0; i < categoryCount; ++i) {
-        t << (i + 1) << DELIM << categoryMap.at(i) << DELIM << 0 << endl;
+        t << (i + 1) << DELIM << categoryMap.at(i) << DELIM << 0 << QLatin1Char('\n');
     }
-    t << "####" << endl;
+    t << "####" << QLatin1Char('\n');
 }
 
 void GMXImportExportPluginInterface::importGMX()
