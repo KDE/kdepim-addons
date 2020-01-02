@@ -18,11 +18,10 @@
 */
 
 #include "dkimpolicywidget.h"
-#include "dkimmanagerulesdialog.h"
 #include <KLocalizedString>
 #include <QCheckBox>
 #include <QVBoxLayout>
-
+#include <MessageViewer/DKIMManageRulesDialog>
 #include "messageviewer/messageviewersettings.h"
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QPointer>
@@ -75,7 +74,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mRulesButton->setEnabled(false);
     ruleLayout->addWidget(mRulesButton);
     connect(mRulesButton, &QPushButton::clicked, this, [this]() {
-        QPointer<DKIMManageRulesDialog> dlg = new DKIMManageRulesDialog(this);
+        QPointer<MessageViewer::DKIMManageRulesDialog> dlg = new MessageViewer::DKIMManageRulesDialog(this);
         dlg->exec();
         delete dlg;
     });

@@ -20,11 +20,6 @@ set(dkimverifyconfigure_SRCS
     dkimkeyrecordwidget.cpp
     dkimadvancedwidget.cpp
     dkimpolicywidget.cpp
-    dkimruledialog.cpp
-    dkimrulewidget.cpp
-    dkimmanageruleswidget.cpp
-    dkimmanagerulesdialog.cpp
-    dkimmanagerulescombobox.cpp
     dkimauthenticationverifiedserverwidget.cpp
     dkimauthenticationverifiedserverdialog.cpp
 )
