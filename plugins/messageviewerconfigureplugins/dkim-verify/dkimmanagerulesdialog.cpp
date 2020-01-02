@@ -66,6 +66,7 @@ void DKIMManageRulesDialog::readConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize size = group.readEntry("Size", QSize(600, 400));
+    mRulesWidget->restoreHeaders(group.readEntry("Header", QByteArray()));
     if (size.isValid()) {
         resize(size);
     }
@@ -74,6 +75,7 @@ void DKIMManageRulesDialog::readConfig()
 void DKIMManageRulesDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    group.writeEntry("Header", mRulesWidget->saveHeaders());
     group.writeEntry("Size", size());
     group.sync();
 }

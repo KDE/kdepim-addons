@@ -58,6 +58,8 @@ public:
     ~DKIMManageRulesWidget();
     void loadSettings();
     void saveSettings();
+    Q_REQUIRED_RESULT QByteArray saveHeaders() const;
+    void restoreHeaders(const QByteArray &header);
 private:
     void customContextMenuRequested(const QPoint &);
     QTreeWidget *mTreeWidget = nullptr;

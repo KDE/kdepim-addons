@@ -22,6 +22,7 @@
 #include "dkimruledialog.h"
 #include <MessageViewer/DKIMManagerRules>
 #include <QVBoxLayout>
+#include <QHeaderView>
 #include <KLocalizedString>
 #include <QTreeWidget>
 #include <KTreeWidgetSearchLine>
@@ -107,6 +108,16 @@ void DKIMManageRulesWidget::saveSettings()
         rules.append(ruleItem->rule());
     }
     MessageViewer::DKIMManagerRules::self()->saveRules(rules);
+}
+
+QByteArray DKIMManageRulesWidget::saveHeaders() const
+{
+    return mTreeWidget->header()->saveState();
+}
+
+void DKIMManageRulesWidget::restoreHeaders(const QByteArray &header)
+{
+    mTreeWidget->header()->restoreState(header);
 }
 
 void DKIMManageRulesWidget::customContextMenuRequested(const QPoint &pos)
