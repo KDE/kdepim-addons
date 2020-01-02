@@ -19,7 +19,13 @@
 
 #include "dkimkeyrecordwidget.h"
 #include <MessageViewer/DKIMManagerKeyWidget>
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QHBoxLayout>
+
+namespace {
+static const char myConfigGroupName[] = "DKIMKeyRecordWidget";
+}
 
 DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
     : QWidget(parent)
@@ -31,10 +37,25 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
     mManagerKeyWidget = new MessageViewer::DKIMManagerKeyWidget(this);
     mManagerKeyWidget->setObjectName(QStringLiteral("mManagerKeyWidget"));
     mainLayout->addWidget(mManagerKeyWidget);
+    readConfig();
 }
 
 DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
 {
+    writeConfig();
+}
+
+void DKIMKeyRecordWidget::readConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    mManagerKeyWidget->restoreHeaders(group.readEntry("Header", QByteArray()));
+}
+
+void DKIMKeyRecordWidget::writeConfig()
+{
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    group.writeEntry("Header", mManagerKeyWidget->saveHeaders());
+    group.sync();
 }
 
 void DKIMKeyRecordWidget::loadSettings()

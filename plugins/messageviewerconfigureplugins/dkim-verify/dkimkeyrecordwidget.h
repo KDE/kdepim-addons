@@ -35,6 +35,8 @@ public:
     void saveSettings();
     void resetSettings();
 private:
+    void readConfig();
+    void writeConfig();
     MessageViewer::DKIMManagerKeyWidget *mManagerKeyWidget = nullptr;
 };
 
