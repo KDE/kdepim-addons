@@ -20,6 +20,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa DKIM-stöd",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку DKIM.",
         "Description[x-test]": "xxThis plugin allows you to configure dkim support.xx",
+        "Description[zh_CN]": "此插件可以让您配置 dkim 支持。",
         "Name": "DKIM Checker",
         "Name[ca]": "Verificador del DKIM",
         "Name[cs]": "Kontrola DKIM",
@@ -36,6 +37,7 @@
         "Name[sv]": "DKIM-kontroll",
         "Name[uk]": "Засіб перевірки DKIM",
         "Name[x-test]": "xxDKIM Checkerxx",
+        "Name[zh_CN]": "DKIM 检查器",
         "ServiceTypes": [
             "MessageViewerConfigureSettingsPlugin/Plugin"
         ],
