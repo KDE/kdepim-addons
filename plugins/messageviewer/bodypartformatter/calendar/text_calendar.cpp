@@ -92,12 +92,13 @@ using namespace MailTransport;
 namespace {
 static bool hasMyWritableEventsFolders(const QString &family)
 {
+    Q_UNUSED(family)
+#if 0 // TODO port to Akonadi
     QString myfamily = family;
     if (family.isEmpty()) {
         myfamily = QStringLiteral("calendar");
     }
 
-#if 0 // TODO port to Akonadi
 #ifndef KDEPIM_NO_KRESOURCES
     CalendarResourceManager manager(myfamily);
     manager.readConfig();
@@ -318,7 +319,6 @@ public:
                 // We are the current one, and even the receiver, note
                 // this and quit searching.
                 return i;
-                break;
             }
         }
         return -1;

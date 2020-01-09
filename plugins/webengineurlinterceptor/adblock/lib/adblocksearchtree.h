@@ -47,7 +47,7 @@ public:
 
     void clear();
 
-    bool add(const AdBlockRule *rule);
+    Q_REQUIRED_RESULT bool add(const AdBlockRule *rule) const;
     const AdBlockRule *find(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString) const;
 
 private:

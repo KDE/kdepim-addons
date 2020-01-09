@@ -178,9 +178,8 @@ void LDifImportExportPluginInterface::exportLdif()
 
         if (QFileInfo::exists(fileName)) {
             if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-                PimCommon::RenameFileDialog::RenameFileDialogResult result = PimCommon::RenameFileDialog::RENAMEFILE_IGNORE;
                 PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
-                result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+                PimCommon::RenameFileDialog::RenameFileDialogResult result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
                 if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                     fileName = dialog->newName().toLocalFile();
                 } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {

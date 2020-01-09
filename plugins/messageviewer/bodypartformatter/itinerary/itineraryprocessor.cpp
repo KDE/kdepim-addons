@@ -102,7 +102,6 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
     memento->setParsed(part.content()->index());
 
-    std::vector<const Extractor *> extractors;
     std::unique_ptr<KPkPass::Pass> pass;
     bool isPdf = false;
 

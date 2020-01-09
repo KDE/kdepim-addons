@@ -71,13 +71,13 @@ void MailSenderJob::start()
             for (unsigned int i = 0; i < nbContactReference; ++i) {
                 KContacts::ContactGroup::ContactReference reference = group.contactReference(i);
 
-                Akonadi::Item item;
+                Akonadi::Item newItem;
                 if (reference.gid().isEmpty()) {
-                    item.setId(reference.uid().toLongLong());
+                    newItem.setId(reference.uid().toLongLong());
                 } else {
-                    item.setGid(reference.gid());
+                    newItem.setGid(reference.gid());
                 }
-                mItemToFetch << item;
+                mItemToFetch << newItem;
             }
         }
     }

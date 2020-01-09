@@ -27,7 +27,7 @@ class QTextStream;
 class MarkdownHighlighter : public KSyntaxHighlighting::AbstractHighlighter
 {
 public:
-    MarkdownHighlighter(QTextStream *stream);
+    explicit MarkdownHighlighter(QTextStream *stream);
     ~MarkdownHighlighter() override;
 
     void highlight(const QString &str);

@@ -34,11 +34,7 @@ class QCsvReader::Private
 public:
     Private(QCsvBuilderInterface *builder)
         : mBuilder(builder)
-        , mNotTerminated(true)
     {
-        mTextQuote = QLatin1Char('"');
-        mDelimiter = QLatin1Char(' ');
-        mStartRow = 0;
         mCodec = QTextCodec::codecForLocale();
     }
 
@@ -48,8 +44,8 @@ public:
 
     QCsvBuilderInterface *mBuilder = nullptr;
     QTextCodec *mCodec = nullptr;
-    QChar mTextQuote;
-    QChar mDelimiter;
+    QChar mTextQuote = QLatin1Char('"');
+    QChar mDelimiter = QLatin1Char(' ');
 
     uint mStartRow = 0;
     bool mNotTerminated = true;

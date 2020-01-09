@@ -44,7 +44,7 @@ public:
         ConfirmationResponse
     };
 
-    GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part);
+    explicit GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part);
 
     virtual ~GnuPGWKSMessagePart() = default;
 

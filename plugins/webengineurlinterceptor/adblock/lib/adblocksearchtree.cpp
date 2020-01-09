@@ -53,7 +53,7 @@ void AdBlockSearchTree::clear()
     m_root = new Node;
 }
 
-bool AdBlockSearchTree::add(const AdBlockRule *rule)
+bool AdBlockSearchTree::add(const AdBlockRule *rule) const
 {
     if (rule->m_type != AdBlockRule::StringContainsMatchRule) {
         return false;

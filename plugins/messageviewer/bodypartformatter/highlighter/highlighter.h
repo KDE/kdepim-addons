@@ -27,7 +27,7 @@ class QTextStream;
 class Highlighter : public KSyntaxHighlighting::AbstractHighlighter
 {
 public:
-    Highlighter(QTextStream *stream);
+    explicit Highlighter(QTextStream *stream);
     ~Highlighter() override;
 
     void highlight(const QString &str);

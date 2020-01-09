@@ -44,7 +44,7 @@ public:
 class ShortUrlEnginePluginManagerPrivate
 {
 public:
-    ShortUrlEnginePluginManagerPrivate(ShortUrlEnginePluginManager *qq)
+    explicit ShortUrlEnginePluginManagerPrivate(ShortUrlEnginePluginManager *qq)
         : q(qq)
     {
     }
