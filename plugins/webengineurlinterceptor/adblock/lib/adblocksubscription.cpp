@@ -174,7 +174,11 @@ void AdBlockSubscription::subscriptionDownloaded()
     bool error = false;
     const QByteArray response = QString::fromUtf8(mReply->readAll()).toUtf8();
 
+#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     if (mReply->error() != QNetworkReply::NoError
+#else
+    if (mReply->networkError() != QNetworkReply::NoError
+#endif
         || !response.startsWith(QByteArray("[Adblock"))
         || !saveDownloadedData(response)
         ) {
