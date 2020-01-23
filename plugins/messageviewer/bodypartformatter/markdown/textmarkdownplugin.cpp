@@ -57,7 +57,7 @@ public:
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
             QTextDocument textDocument;
-            textDocument.setMarkdown(msgPart->text());
+            textDocument.setMarkdown(msgPart->text(), QTextDocument::MarkdownNoHTML);
             const QString result = textDocument.toHtml();
             (*htmlWriter->stream()) << result;
         }));
