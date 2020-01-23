@@ -33,7 +33,7 @@ set(kmail_insertshorturleditorplugin_SRCS
 ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin_SRCS HEADER kmail_insertshorturl_debug.h IDENTIFIER KMAIL_INSERTSHORTURL_LOG CATEGORY_NAME org.kde.pim.kmail_insertshorturl)
 
 kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshorturleditorplugin.json SOURCES
-    ${kmail_insertshorturleditorplugin_SRCS} INSTALL_NAMESPACE kmail)
+    ${kmail_insertshorturleditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_insertshorturleditorplugin
   KF5::MessageComposer KF5::XmlGui KF5::I18n shorturlpluginprivate KF5::CoreAddons

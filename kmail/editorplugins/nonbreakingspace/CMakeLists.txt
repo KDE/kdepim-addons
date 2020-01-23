@@ -4,7 +4,7 @@ set(kmail_nonbreakingspaceeditorplugin_SRCS
 )
 
 kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin JSON kmail_nonbreakingspaceeditorplugin.json SOURCES
-    ${kmail_nonbreakingspaceeditorplugin_SRCS} INSTALL_NAMESPACE kmail)
+    ${kmail_nonbreakingspaceeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_nonbreakingspaceeditorplugin
   KF5::MessageComposer KF5::XmlGui KF5::I18n

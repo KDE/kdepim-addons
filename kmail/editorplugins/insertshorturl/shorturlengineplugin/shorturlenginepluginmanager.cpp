@@ -58,9 +58,7 @@ public:
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon"), [](const KPluginMetaData &md) {
-        return md.serviceTypes().contains(QLatin1String("PimCommonShortUrlEngine/Plugin"));
-    });
+    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon/shorturlengine"));
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();

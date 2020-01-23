@@ -5,7 +5,7 @@ set(messageviewer_standardsheaderstyleplugin_SRCS
 )
 
 kcoreaddons_add_plugin(messageviewer_standardsheaderstyleplugin JSON messageviewer_standardsheaderstyleplugin.json SOURCES
-    ${messageviewer_standardsheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+    ${messageviewer_standardsheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer/headerstyle)
 
 target_link_libraries(messageviewer_standardsheaderstyleplugin
   KF5::MessageViewer

@@ -11,7 +11,7 @@ ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddre
 
 
 kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcardsplugin.json SOURCES
-    ${kaddressbook_sendvcardsplugin_SRCS} INSTALL_NAMESPACE kaddressbook)
+    ${kaddressbook_sendvcardsplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 
 
 target_link_libraries(kaddressbook_sendvcardsplugin

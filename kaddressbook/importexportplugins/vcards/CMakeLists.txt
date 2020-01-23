@@ -7,7 +7,7 @@ set(kaddressbook_importexport_vcard_SRCS
 
 
 kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_importexportvcardplugin.json SOURCES
-    ${kaddressbook_importexport_vcard_SRCS} INSTALL_NAMESPACE kaddressbook)
+    ${kaddressbook_importexport_vcard_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
 target_link_libraries(kaddressbook_importexportvcardplugin
     KF5::KaddressbookImportExport

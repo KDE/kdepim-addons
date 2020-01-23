@@ -7,7 +7,7 @@ ecm_qt_declare_logging_category(kaddressbook_importexport_gmx_SRCS HEADER kaddre
 
 
 kcoreaddons_add_plugin(kaddressbook_importexportgmxplugin JSON kaddressbook_importexportgmxplugin.json SOURCES
-    ${kaddressbook_importexport_gmx_SRCS} INSTALL_NAMESPACE kaddressbook)
+    ${kaddressbook_importexport_gmx_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
 target_link_libraries(kaddressbook_importexportgmxplugin KF5::KaddressbookImportExport
         KF5::PimCommon

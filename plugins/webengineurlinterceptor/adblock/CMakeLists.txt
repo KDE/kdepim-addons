@@ -7,7 +7,7 @@ ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_
 
 
 kcoreaddons_add_plugin(webengineviewer_adblockplugin JSON messageviewer_adblockurlinterceptor.json SOURCES
-    ${webengineviewer_webengineurlinterceptor_adblock_SRCS} INSTALL_NAMESPACE webengineviewer)
+    ${webengineviewer_webengineurlinterceptor_adblock_SRCS} INSTALL_NAMESPACE webengineviewer/urlinterceptor)
 
 target_link_libraries(webengineviewer_adblockplugin
     KF5::MessageViewer

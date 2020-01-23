@@ -4,7 +4,7 @@ set(messageviewer_longheaderstyleplugin_SRCS
 )
 
 kcoreaddons_add_plugin(messageviewer_longheaderstyleplugin JSON messageviewer_longheaderstyleplugin.json SOURCES
-    ${messageviewer_longheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+    ${messageviewer_longheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer/headerstyle)
 
 target_link_libraries(messageviewer_longheaderstyleplugin
   KF5::MessageViewer

@@ -6,7 +6,7 @@ set(messageviewer_briefheaderstyleplugin_SRCS
 )
 
 kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin JSON messageviewer_briefheaderstyleplugin.json SOURCES
-    ${messageviewer_briefheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+    ${messageviewer_briefheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer/headerstyle)
 
 target_link_libraries(messageviewer_briefheaderstyleplugin
   KF5::MessageViewer

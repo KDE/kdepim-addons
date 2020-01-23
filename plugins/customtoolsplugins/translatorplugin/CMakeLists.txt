@@ -4,7 +4,7 @@ set(pimcommon_translatorplugin_SRCS
 )
 
 kcoreaddons_add_plugin(pimcommon_translatorplugin JSON pimcommon_translatorplugin.json SOURCES
-    ${pimcommon_translatorplugin_SRCS} INSTALL_NAMESPACE pimcommon)
+    ${pimcommon_translatorplugin_SRCS} INSTALL_NAMESPACE pimcommon/customtools)
 
 target_link_libraries(pimcommon_translatorplugin
   KF5::PimCommon

@@ -4,7 +4,7 @@ set(kmail_insertspecialcharactereditorplugin_SRCS
 )
 
 kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin JSON kmail_insertspecialcharactereditorplugin.json SOURCES
-    ${kmail_insertspecialcharactereditorplugin_SRCS} INSTALL_NAMESPACE kmail)
+    ${kmail_insertspecialcharactereditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_insertspecialcharactereditorplugin
   KF5::MessageComposer KF5::XmlGui KF5::I18n

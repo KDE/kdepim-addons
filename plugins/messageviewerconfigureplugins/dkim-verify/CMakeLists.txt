@@ -3,7 +3,7 @@ set(messageviewer_dkimconfigplugin_SRCS
 )
 
 kcoreaddons_add_plugin(messageviewer_dkimconfigplugin JSON messageviewer_dkimconfigplugin.json SOURCES
-    ${messageviewer_dkimconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer)
+    ${messageviewer_dkimconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
 
 target_link_libraries(messageviewer_dkimconfigplugin
   KF5::MessageViewer

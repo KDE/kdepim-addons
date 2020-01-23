@@ -17,7 +17,7 @@ set(kmail_checkbeforesendeditorplugin_SRCS
 ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
 
 kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin JSON kmail_checkbeforesendplugin.json SOURCES
-    ${kmail_checkbeforesendeditorplugin_SRCS} INSTALL_NAMESPACE kmail)
+    ${kmail_checkbeforesendeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 
 target_link_libraries(kmail_checkbeforesendeditorplugin
     KF5::MessageComposer KF5::I18n
