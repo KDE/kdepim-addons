@@ -39,6 +39,7 @@ private:
     QCheckBox *mUseDefaultRules = nullptr;
     QCheckBox *mAutoGenerateRule = nullptr;
     QCheckBox *mReadAuthResultHeader = nullptr;
+    QCheckBox *mAutoGenerateOnlyIfSenderInSDID = nullptr;
     QPushButton *mRulesButton = nullptr;
 };
 

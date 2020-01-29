@@ -67,6 +67,11 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
+    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(i18n("Autogenerate when Sender in SDID"), this);
+    mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
+    mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
+    mainLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
+
     QHBoxLayout *ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
     mRulesButton = new QPushButton(i18n("Show Rules"), this);
@@ -94,6 +99,7 @@ void DKIMPolicyWidget::loadSettings()
     loadWidget(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
     loadWidget(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
     loadWidget(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
+    loadWidget(mAutoGenerateOnlyIfSenderInSDID, MessageViewer::MessageViewerSettings::self()->autogenerateRuleOnlyIfSenderOnSDIDItem());
 }
 
 void DKIMPolicyWidget::saveSettings()
@@ -103,6 +109,7 @@ void DKIMPolicyWidget::saveSettings()
     saveCheckBox(mUseDefaultRules, MessageViewer::MessageViewerSettings::self()->useDefaultRulesItem());
     saveCheckBox(mAutoGenerateRule, MessageViewer::MessageViewerSettings::self()->autogenerateRuleItem());
     saveCheckBox(mReadAuthResultHeader, MessageViewer::MessageViewerSettings::self()->useAuthenticationResultsItem());
+    saveCheckBox(mAutoGenerateOnlyIfSenderInSDID, MessageViewer::MessageViewerSettings::self()->autogenerateRuleOnlyIfSenderOnSDIDItem());
 }
 
 void DKIMPolicyWidget::resetSettings()
