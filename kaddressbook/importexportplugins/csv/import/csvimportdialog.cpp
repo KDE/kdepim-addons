@@ -191,8 +191,11 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mUrlRequester, qOverload<const QString &>(&KUrlRequester::returnPressed), this, &CSVImportDialog::setFile);
     connect(mUrlRequester, &KUrlRequester::urlSelected, this, &CSVImportDialog::setUrl);
     connect(mUrlRequester->lineEdit(), &QLineEdit::textChanged, this, &CSVImportDialog::urlChanged);
-    connect(mDelimiterGroup, qOverload<int>(&QButtonGroup::buttonClicked), this, [this](int val) {
-        delimiterClicked(val);
+    connect(mDelimiterGroup, qOverload<QAbstractButton *>(&QButtonGroup::buttonClicked), this, [this](QAbstractButton *button) {
+        if (button) {
+            const int val = mDelimiterGroup->id(button);
+            delimiterClicked(val);
+        }
     });
     connect(mDelimiterEdit, qOverload<>(&QLineEdit::returnPressed), this, [this]() {
         customDelimiterChanged();
