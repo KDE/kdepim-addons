@@ -69,4 +69,9 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mReadAuthResultHeader);
     QVERIFY(!mReadAuthResultHeader->text().isEmpty());
     QVERIFY(!mReadAuthResultHeader->isEnabled());
+
+    QCheckBox *mAutoGenerateOnlyIfSenderInSDID = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
+    QVERIFY(mAutoGenerateOnlyIfSenderInSDID);
+    QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->text().isEmpty());
+    QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->isEnabled());
 }

@@ -43,6 +43,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mUseDMARC->setEnabled(state);
         mUseDefaultRules->setEnabled(state);
         mRulesButton->setEnabled(state);
+        mAutoGenerateOnlyIfSenderInSDID->setEnabled(state);
         mAutoGenerateRule->setEnabled(state);
         mReadAuthResultHeader->setEnabled(state);
     });
@@ -67,7 +68,8 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
-    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(i18n("Autogenerate when Sender in SDID"), this);
+    //TODO Add spacer
+    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(QStringLiteral("    ") + i18n("Autogenerate when Sender in SDID"), this);
     mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
