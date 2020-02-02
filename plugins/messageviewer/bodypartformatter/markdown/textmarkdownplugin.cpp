@@ -25,9 +25,9 @@
 #include <MessageViewer/HtmlWriter>
 #include "markdownabstract.h"
 #ifdef USE_DISCOUNT_LIB
-#include "mardowndiscount.h"
+#include "markdowndiscount.h"
 #else
-#include "mardownqtextdocument.h"
+#include "markdownqtextdocument.h"
 #endif
 
 #include <grantlee/template.h>
@@ -63,11 +63,11 @@ public:
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
             QString result;
 #ifdef USE_DISCOUNT_LIB
-            MardownDiscount engine;
+            MarkdownDiscount engine;
             engine.setText(msgPart->text());
             result = engine.toHtml();
 #else
-            MardownQTextDocument engine;
+            MarkdownQTextDocument engine;
             engine.setText(msgPart->text());
             result = engine.toHtml();
 #endif

@@ -17,17 +17,18 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef MARDOWNQTEXTDOCUMENT_H
-#define MARDOWNQTEXTDOCUMENT_H
+#ifndef MARKDOWNDISCOUNT_H
+#define MARKDOWNDISCOUNT_H
 
 #include "markdownabstract.h"
 
-class MardownQTextDocument : public MarkdownAbstract
+class MarkdownDiscount : public MarkdownAbstract
 {
 public:
-    MardownQTextDocument();
-    ~MardownQTextDocument();
+    MarkdownDiscount();
+    ~MarkdownDiscount();
+
     Q_REQUIRED_RESULT QString toHtml() const override;
 };
 
-#endif // MARDOWNQTEXTDOCUMENT_H
+#endif // MARKDOWNDISCOUNT_H

@@ -17,23 +17,23 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "mardowndiscount.h"
+#include "markdowndiscount.h"
 #include <QDebug>
 extern "C" {
 #include <mkdio.h>
 }
 
-MardownDiscount::MardownDiscount()
+MarkdownDiscount::MarkdownDiscount()
 {
 
 }
 
-MardownDiscount::~MardownDiscount()
+MarkdownDiscount::~MarkdownDiscount()
 {
 
 }
 
-QString MardownDiscount::toHtml() const
+QString MarkdownDiscount::toHtml() const
 {
     if (mText.isEmpty()) {
         return {};

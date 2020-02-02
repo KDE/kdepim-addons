@@ -17,21 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "mardownqtextdocument.h"
+#include "markdownqtextdocument.h"
 
 #include <QTextDocument>
 
-MardownQTextDocument::MardownQTextDocument()
+MarkdownQTextDocument::MarkdownQTextDocument()
 {
 
 }
 
-MardownQTextDocument::~MardownQTextDocument()
+MarkdownQTextDocument::~MarkdownQTextDocument()
 {
 
 }
 
-QString MardownQTextDocument::toHtml() const
+QString MarkdownQTextDocument::toHtml() const
 {
     QTextDocument textDocument;
     textDocument.setMarkdown(mText, QTextDocument::MarkdownNoHTML);
