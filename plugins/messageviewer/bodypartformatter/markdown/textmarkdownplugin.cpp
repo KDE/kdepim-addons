@@ -23,7 +23,12 @@
 
 #include <MimeTreeParser/MessagePart>
 #include <MessageViewer/HtmlWriter>
-
+#include "markdownabstract.h"
+#ifdef USE_DISCOUNT_LIB
+#include "mardowndiscount.h"
+#else
+#include "mardownqtextdocument.h"
+#endif
 
 #include <grantlee/template.h>
 #include <QTextDocument>
@@ -56,9 +61,16 @@ public:
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-            QTextDocument textDocument;
-            textDocument.setMarkdown(msgPart->text(), QTextDocument::MarkdownNoHTML);
-            const QString result = textDocument.toHtml();
+            QString result;
+#ifdef USE_DISCOUNT_LIB
+            MardownDiscount engine;
+            engine.setText(msgPart->text());
+            result = engine.toHtml();
+#else
+            MardownQTextDocument engine;
+            engine.setText(msgPart->text());
+            result = engine.toHtml();
+#endif
             (*htmlWriter->stream()) << result;
         }));
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));

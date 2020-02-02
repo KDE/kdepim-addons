@@ -39,8 +39,6 @@ QString MardownDiscount::toHtml() const
         return {};
     }
     const QByteArray textArray = mText.toUtf8();
-    qDebug( ) << "textArray" << textArray;
-
     MMIOT *markdownHandle = mkd_string(textArray.constData(), textArray.count(), 0);
     mkd_flag_t flags = MKD_FENCEDCODE | MKD_GITHUBTAGS | MKD_AUTOLINK;
     if (!mkd_compile(markdownHandle, flags)) {

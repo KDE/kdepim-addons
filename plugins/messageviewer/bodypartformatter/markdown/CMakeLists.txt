@@ -1,6 +1,7 @@
 set(mardown_engine_SRCS)
 set(discount_LIB)
 if(USE_DISCOUNT_LIB)
+    add_definitions(-DUSE_DISCOUNT_LIB)
     set(mardown_engine_SRCS mardowndiscount.cpp)
     set(discount_LIB discount::Lib)
 else()
