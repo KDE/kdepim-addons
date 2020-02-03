@@ -26,6 +26,7 @@
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QPointer>
 #include <QPushButton>
+#include <QSpacerItem>
 
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
@@ -69,10 +70,17 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mainLayout->addWidget(mAutoGenerateRule);
 
     //TODO Add spacer
-    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(QStringLiteral("    ") + i18n("Autogenerate when Sender in SDID"), this);
+    QHBoxLayout *autogenerateOnlyLayout = new QHBoxLayout;
+    autogenerateOnlyLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->addLayout(autogenerateOnlyLayout);
+
+    QSpacerItem *item = new QSpacerItem(30, 0);
+    autogenerateOnlyLayout->addItem(item);
+
+    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(i18n("Autogenerate when Sender in SDID"), this);
     mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
-    mainLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
+    autogenerateOnlyLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
 
     QHBoxLayout *ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
