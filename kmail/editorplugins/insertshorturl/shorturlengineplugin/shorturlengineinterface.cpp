@@ -30,6 +30,9 @@ ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, Q
     , mNetworkAccessManager(new QNetworkAccessManager(this))
     , mEnginePlugin(plugin)
 {
+    mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+    mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
+    mNetworkAccessManager->enableStrictTransportSecurityStore(true);
 }
 
 ShortUrlEngineInterface::~ShortUrlEngineInterface()

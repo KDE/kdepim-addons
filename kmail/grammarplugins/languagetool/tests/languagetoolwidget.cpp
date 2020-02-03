@@ -37,6 +37,9 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     : QWidget(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
+    mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+    mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
+    mNetworkAccessManager->enableStrictTransportSecurityStore(true);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);

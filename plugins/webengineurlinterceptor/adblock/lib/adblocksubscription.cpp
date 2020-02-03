@@ -76,6 +76,9 @@ AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
     , mTitle(title)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
+    mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+    mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
+    mNetworkAccessManager->enableStrictTransportSecurityStore(true);
 }
 
 QString AdBlockSubscription::title() const

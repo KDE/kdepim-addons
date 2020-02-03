@@ -29,6 +29,9 @@ LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
 {
+    mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
+    mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
+    mNetworkAccessManager->enableStrictTransportSecurityStore(true);
     loadSettings();
 }
 
