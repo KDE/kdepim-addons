@@ -69,7 +69,6 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
-    //TODO Add spacer
     QHBoxLayout *autogenerateOnlyLayout = new QHBoxLayout;
     autogenerateOnlyLayout->setContentsMargins(0, 0, 0, 0);
     mainLayout->addLayout(autogenerateOnlyLayout);
