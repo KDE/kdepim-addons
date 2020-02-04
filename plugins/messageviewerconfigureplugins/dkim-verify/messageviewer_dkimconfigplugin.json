@@ -23,6 +23,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure dkim support.xx",
         "Description[zh_CN]": "此插件可以让您配置 dkim 支持。",
         "Name": "DKIM Checker",
+        "Name[ca@valencia]": "Verificador del DKIM",
         "Name[ca]": "Verificador del DKIM",
         "Name[cs]": "Kontrola DKIM",
         "Name[en_GB]": "DKIM Checker",
