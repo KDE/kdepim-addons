@@ -49,4 +49,8 @@ void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
     QComboBox *mSha1Policy = w.findChild<QComboBox *>(QStringLiteral("rsa1-policy"));
     QVERIFY(mSha1Policy);
     QVERIFY(mSha1Policy->count() > 0);
+
+    QComboBox *mSmallKeyPolicy = w.findChild<QComboBox *>(QStringLiteral("mSmallKeyPolicy"));
+    QVERIFY(mSmallKeyPolicy);
+    QVERIFY(mSmallKeyPolicy->count() > 0);
 }
