@@ -10,9 +10,6 @@
     {% if not trip.location.address.isEmpty %}
         <br/>{{ trip.location.address|formatAddress|safe }}
     {% endif %}
-    {% if res.underName.name %}
-        <div>{% i18n "Under Name: %1" res.underName.name %}</div>
-    {% endif %}
 </div>
 {% include "org.kde.messageviewer/itinerary/actions.html" %}
 <div style="clear:both;"></div>
