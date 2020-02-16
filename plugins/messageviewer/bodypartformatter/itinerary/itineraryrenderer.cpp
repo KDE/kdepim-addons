@@ -27,6 +27,9 @@
 #include <MessageViewer/HtmlWriter>
 #include <MessageViewer/MessagePartRendererManager>
 
+#include <GrantleeTheme/GrantleeThemeEngine>
+#include <GrantleeTheme/GrantleeKi18nLocalizer>
+
 #include <KItinerary/Action>
 #include <KItinerary/BusTrip>
 #include <KItinerary/Brand>
@@ -240,7 +243,9 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/itinerary/itinerary.html"));
     const_cast<Grantlee::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
+    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));
     Grantlee::OutputStream s(htmlWriter->stream());
     t->render(&s, &c);
+    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
     return false; // yes, false, we want the rest of the email rendered normally after this
 }

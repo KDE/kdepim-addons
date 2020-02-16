@@ -16,6 +16,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
   KF5::MessageViewer
   KF5::CalendarSupport
   KF5::I18n
+  KF5::GrantleeTheme
   Grantlee5::Templates
   Qt5::DBus
   KF5::Prison
