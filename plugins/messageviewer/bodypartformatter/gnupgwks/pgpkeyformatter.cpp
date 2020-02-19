@@ -100,7 +100,8 @@ bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &ms
     const auto key = mp->key();
     block.setProperty("uid", mp->userID());
     block.setProperty("fingerprint", mp->fingerprint());
-    block.setProperty("created", mp->keyDate().toString(Qt::SystemLocaleDate));
+    QLocale l;
+    block.setProperty("created", l.toString(mp->keyDate(), QLocale::ShortFormat));
     if (!key.isNull()) {
         block.setProperty("keyUrl", QStringLiteral("kmail:showCertificate#GpgME ### gpgme ### %1").arg(QString::fromLatin1(key.keyID())));
     }

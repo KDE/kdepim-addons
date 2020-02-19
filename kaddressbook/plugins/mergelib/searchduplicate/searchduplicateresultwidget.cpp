@@ -73,7 +73,11 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
+#else
+    connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
+#endif
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::activated), this, &SearchDuplicateResultWidget::slotUpdateMergeButton);
     mergeLayout->addWidget(mCollectionCombobox);
 
