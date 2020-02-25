@@ -1106,7 +1106,7 @@ public:
     void showCalendar(const QDate &date) const
     {
         // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
-        if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
+        if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
             OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
                                                     QDBusConnection::sessionBus(), nullptr);
             if (!iface.isValid()) {

@@ -606,7 +606,7 @@ bool AdBlockRule::filterIsOnlyEndsMatch(const QString &filter) const
     return false;
 }
 
-static bool wordCharacter(const QChar &c)
+static bool wordCharacter(QChar c)
 {
     return c.isLetterOrNumber() || c.isMark() || c == QLatin1Char('_');
 }

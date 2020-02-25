@@ -185,7 +185,7 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
 void ItineraryUrlHandler::showCalendar(const QDate &date) const
 {
     // ensure KOrganizer or Kontact are running
-    if (KontactInterface::PimUniqueApplication::activateApplication(QLatin1String("korganizer"))) {
+    if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
         // select the date of the reservation
         QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
                                  QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());

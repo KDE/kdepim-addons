@@ -122,15 +122,16 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
             if (!sugg.isEmpty()) {
                 popup->addSeparator();
                 QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
-                for (const QString &str : act.suggestions()) {
+                for (const QString &str : sugg) {
                     QAction *actReplacement = popupReplacement->addAction(str);
                     connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
                         slotReplaceWord(act, str);
                     });
                 }
-                if (!act.infoUrls().isEmpty()) {
+                const QStringList lst = act.infoUrls();
+                if (!lst.isEmpty()) {
                     QMenu *popupUrlInfo = popup->addMenu(i18n("Online Grammar Information"));
-                    for (const QString &str : act.infoUrls()) {
+                    for (const QString &str : lst) {
                         QAction *actUrlInfo = popupUrlInfo->addAction(str);
                         connect(actUrlInfo, &QAction::triggered, this, [this, str]() {
                             slotOpenGrammarUrlInfo(str);

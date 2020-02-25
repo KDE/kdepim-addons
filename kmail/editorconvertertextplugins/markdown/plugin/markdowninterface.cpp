@@ -204,7 +204,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
     if (!listImage.isEmpty()) {
         listImage.removeDuplicates();
         QStringList imageNameAdded;
-        for (const QString &urlImage : listImage) {
+        for (const QString &urlImage : qAsConst(listImage)) {
             const QUrl url = QUrl::fromUserInput(urlImage);
             if (!url.isLocalFile()) {
                 qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "Url is not a local file " << url;

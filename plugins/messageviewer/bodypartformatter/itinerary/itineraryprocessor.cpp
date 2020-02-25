@@ -149,7 +149,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
             const auto docData = part.content()->decodedContent();
             const auto docId = DocumentUtil::idForContent(docData);
             DigitalDocument docInfo;
-            docInfo.setEncodingFormat(QLatin1String("application/pdf"));
+            docInfo.setEncodingFormat(QStringLiteral("application/pdf"));
             docInfo.setName(MimeTreeParser::NodeHelper::fileName(part.content()));
             memento->addDocument(docId, docInfo, docData);
 
