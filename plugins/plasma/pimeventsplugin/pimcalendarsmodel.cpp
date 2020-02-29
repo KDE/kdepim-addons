@@ -57,7 +57,12 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
 
     auto config = KSharedConfig::openConfig();
     auto group = config->group("PIMEventsPlugin");
-    mEnabledCalendars = QSet<qint64>::fromList(group.readEntry(QStringLiteral("calendars"), QList<qint64>()));
+    const auto enabledCalendarIds = group.readEntry(QStringLiteral("calendars"), QList<qint64>());
+#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
+    mEnabledCalendars = QSet<qint64>::fromList(enabledCalendarIds);
+#else
+    mEnabledCalendars = QSet<qint64>(enabledCalendarIds.begin(), enabledCalendarIds.end());
+#endif
 }
 
 PimCalendarsModel::~PimCalendarsModel()
