@@ -1,7 +1,14 @@
 set( EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR} )
 
 set(kaddressbookmergelibprivate_common_SRCS)
-ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
+else()
+    ecm_qt_declare_logging_category(kaddressbookmergelibprivate_common_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate
+        DESCRIPTION "kdepim-addons (kaddressbook merge contact plugin)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 include_directories( ${CMAKE_CURRENT_SOURCE_DIR}/.. ${CMAKE_CURRENT_SOURCE_DIR}/../.. )
 include_directories(${CMAKE_BINARY_DIR}/kaddressbook/)

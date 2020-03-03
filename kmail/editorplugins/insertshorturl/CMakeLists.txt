@@ -30,7 +30,14 @@ set(kmail_insertshorturleditorplugin_SRCS
     insertshorturlconfigurewidget.cpp
     ${pimcommon_shorturlplugin_shorturllib_SRCS}
 )
-ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin_SRCS HEADER kmail_insertshorturl_debug.h IDENTIFIER KMAIL_INSERTSHORTURL_LOG CATEGORY_NAME org.kde.pim.kmail_insertshorturl)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin_SRCS HEADER kmail_insertshorturl_debug.h IDENTIFIER KMAIL_INSERTSHORTURL_LOG CATEGORY_NAME org.kde.pim.kmail_insertshorturl)
+else()
+    ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin_SRCS HEADER kmail_insertshorturl_debug.h IDENTIFIER KMAIL_INSERTSHORTURL_LOG CATEGORY_NAME org.kde.pim.kmail_insertshorturl
+        DESCRIPTION "kdepim-addons (kmail insert short url plugin)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshorturleditorplugin.json SOURCES
     ${kmail_insertshorturleditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)

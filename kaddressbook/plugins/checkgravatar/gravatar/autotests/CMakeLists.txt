@@ -5,7 +5,14 @@ if (KDEPIM_RUN_AKONADI_TEST)
 	set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
 	set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 	set(kaddressbook_checkgravatarplugin_test_SRCS)
-	ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_test_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar)
+        if (ECM_VERSION VERSION_LESS "5.68.0")
+            ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_test_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar)
+        else()
+            ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_test_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar
+                DESCRIPTION "kdepim-addons (kaddressbook gravatar plugin)"
+                EXPORT KDEPIMADDONS
+            )
+        endif()
 
 
 	add_akonadi_isolated_test_advanced( gravatarupdatejobtest.cpp "../job/gravatarupdatejob.cpp;${kaddressbook_checkgravatarplugin_test_SRCS}" "KF5::PimCommon;KF5::Contacts;KF5::Gravatar;KF5::I18n")

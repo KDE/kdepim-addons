@@ -1,5 +1,13 @@
 set(changecaseplugineditor_common_SRCS)
-ecm_qt_declare_logging_category(changecaseplugineditor_common_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(changecaseplugineditor_common_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin)
+else()
+    ecm_qt_declare_logging_category(changecaseplugineditor_common_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin
+        DESCRIPTION "kdepim-addons (kmail changecase editor plugins)"
+        OLD_CATEGORY_NAMES log_kmail_changecaseeditorplugin
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 macro(add_kmail_editorplugin_unittest _source _additional)
     set( _test ${_source} ${_additional} ${changecaseplugineditor_common_SRCS})

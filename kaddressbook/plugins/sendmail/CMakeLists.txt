@@ -9,7 +9,15 @@ set(kaddressbook_sendmailplugin_SRCS
     mailsenderjob.cpp
 )
 
-ecm_qt_declare_logging_category(kaddressbook_sendmailplugin_SRCS HEADER kaddressbook_sendmailplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDMAIL_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendmail)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kaddressbook_sendmailplugin_SRCS HEADER kaddressbook_sendmailplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDMAIL_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendmail)
+else()
+    ecm_qt_declare_logging_category(kaddressbook_sendmailplugin_SRCS HEADER kaddressbook_sendmailplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDMAIL_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendmail
+        DESCRIPTION "kdepim-addons (kaddressbook send mail plugin)"
+        OLD_CATEGORY_NAMES log_kaddressbook_sendmail
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 kcoreaddons_add_plugin(kaddressbook_sendmailplugin JSON kaddressbook_sendmailplugin.json SOURCES
     ${kaddressbook_sendmailplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)

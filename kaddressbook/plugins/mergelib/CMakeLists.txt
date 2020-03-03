@@ -20,7 +20,14 @@ set(kaddressbookmergelibprivate_SRCS
    widgets/mergecontactselectinformationscrollarea.cpp
    widgets/mergecontacterrorlabel.cpp
 )
-ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate)
+else()
+    ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate
+        DESCRIPTION "kdepim-addons (kaddressbook merge contact plugin)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 add_library(kaddressbookmergelibprivate ${kaddressbookmergelibprivate_SRCS})
 generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergelib)
