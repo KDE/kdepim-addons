@@ -132,7 +132,11 @@ QString CryptoPagePlugin::title() const
 
 void CryptoPagePlugin::loadContact(const KContacts::Addressee &contact)
 {
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     const QStringList protocolPrefs = contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF")).split(QLatin1Char(','), QString::SkipEmptyParts);
+#else
+    const QStringList protocolPrefs = contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF")).split(QLatin1Char(','), Qt::SkipEmptyParts);
+#endif
     const uint cryptoFormats = Kleo::stringListToCryptoMessageFormats(protocolPrefs);
 
     uint msgFormat = 1;
@@ -146,8 +150,16 @@ void CryptoPagePlugin::loadContact(const KContacts::Addressee &contact)
     // We don't use the contents of addr->key(...) because we want just a ref.
     // to the key/cert. stored elsewhere.
 
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     mPgpKey->setFingerprints(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("OPENPGPFP")).split(QLatin1Char(','), QString::SkipEmptyParts));
+#else
+    mPgpKey->setFingerprints(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("OPENPGPFP")).split(QLatin1Char(','), Qt::SkipEmptyParts));
+#endif
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     mSmimeCert->setFingerprints(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("SMIMEFP")).split(QLatin1Char(','), QString::SkipEmptyParts));
+#else
+    mSmimeCert->setFingerprints(contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("SMIMEFP")).split(QLatin1Char(','), Qt::SkipEmptyParts));
+#endif
 }
 
 void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const

@@ -68,7 +68,11 @@ GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QS
 void GnuPGWKSMessagePart::parseContent(KMime::Content *node)
 {
     const auto text = QString::fromUtf8(node->decodedContent());
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     const auto lines = text.split(QLatin1Char('\n'), QString::SkipEmptyParts);
+#else
+    const auto lines = text.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+#endif
     // https://tools.ietf.org/id/draft-koch-openpgp-webkey-service-02.txt
     // sections 4.3 and 4.4
     for (const auto &line : lines) {

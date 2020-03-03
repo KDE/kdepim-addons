@@ -72,7 +72,11 @@ void AdBlockAutomaticRulesListWidget::setDisabledRules(const QStringList &disabl
 void AdBlockAutomaticRulesListWidget::setRules(const QString &rules)
 {
     clear();
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     const QStringList lst = rules.split(QLatin1Char('\n'), QString::SkipEmptyParts);
+#else
+    const QStringList lst = rules.split(QLatin1Char('\n'), Qt::SkipEmptyParts);
+#endif
     for (const QString &rule : lst) {
         createItem(rule);
     }

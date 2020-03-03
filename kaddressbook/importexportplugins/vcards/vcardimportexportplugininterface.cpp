@@ -187,7 +187,11 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         bool addrDone = false;
         if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::DiplayName) {                  // output display name as N field
             QString fmtName = (*it).formattedName();
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
             QStringList splitNames = fmtName.split(QLatin1Char(' '), QString::SkipEmptyParts);
+#else
+            QStringList splitNames = fmtName.split(QLatin1Char(' '), Qt::SkipEmptyParts);
+#endif
             if (splitNames.count() >= 2) {
                 addr.setPrefix(QString());
                 addr.setGivenName(splitNames.takeFirst());
