@@ -13,10 +13,21 @@ set(messageviewer_bodypartformatter_application_gnupgwks_SRCS
 
 qt5_add_resources(messageviewer_bodypartformatter_application_gnupgwks_SRCS templates.qrc)
 
-ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks_SRCS
-    HEADER gnupgwks_debug.h
-    IDENTIFIER GNUPGWKS_LOG
-    CATEGORY_NAME org.kde.pim.gnupgwks)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks_SRCS
+        HEADER gnupgwks_debug.h
+        IDENTIFIER GNUPGWKS_LOG
+        CATEGORY_NAME org.kde.pim.gnupgwks)
+else()
+    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks_SRCS
+        HEADER gnupgwks_debug.h
+        IDENTIFIER GNUPGWKS_LOG
+        CATEGORY_NAME org.kde.pim.gnupgwks
+        DESCRIPTION "kdepim-addons (OpenPGP and GnuPG WKS body part formatter plugin)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE ${messageviewer_bodypartformatter_application_gnupgwks_SRCS})
 

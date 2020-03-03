@@ -4,8 +4,16 @@ set(korg_picoftheday_PART_SRCS
   configdialog.cpp
   picoftheday.cpp
 )
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(korg_picoftheday_PART_SRCS HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins)
+else()
+    ecm_qt_declare_logging_category(korg_picoftheday_PART_SRCS HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins
+        DESCRIPTION "kdepim-addons (korganizer picoftheday plugins)"
+        OLD_CATEGORY_NAMES log_korganizer_picoftheday_plugins
+        EXPORT KDEPIMADDONS
+        )
+endif()
 
-ecm_qt_declare_logging_category(korg_picoftheday_PART_SRCS HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins)
 
 add_library(korg_picoftheday MODULE ${korg_picoftheday_PART_SRCS})
 

@@ -7,7 +7,15 @@ set(itinerary_plugin_srcs
     itinerarykdeconnecthandler.cpp
     templates/templates.qrc
 )
-ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary)
+else()
+    ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary
+        DESCRIPTION "kdepim-addons (Itinerary plugin)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 add_library(messageviewer_bodypartformatter_semantic MODULE ${itinerary_plugin_srcs})
 target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\")

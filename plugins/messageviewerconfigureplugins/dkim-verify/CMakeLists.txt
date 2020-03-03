@@ -24,7 +24,14 @@ set(dkimverifyconfigure_SRCS
     dkimauthenticationverifiedserverdialog.cpp
 )
 
-ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
+else()
+    ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin
+        DESCRIPTION "kdepim-addons (dkim-verify-configure)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
 
 add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
