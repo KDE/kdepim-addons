@@ -1,8 +1,17 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 set(sieveeditor_plugin_categories_SRCS)
-ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER
-    IMAPFOLDERCOMPLETIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.imapfoldercompletion)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER
+        IMAPFOLDERCOMPLETIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.imapfoldercompletion)
+else()
+    ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER
+        IMAPFOLDERCOMPLETIONPLUGIN_LOG CATEGORY_NAME org.kde.pim.imapfoldercompletion
+        DESCRIPTION "kdepim-addons (SieveEditor imap completion folder)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 if(BUILD_TESTING)
     add_subdirectory(tests)

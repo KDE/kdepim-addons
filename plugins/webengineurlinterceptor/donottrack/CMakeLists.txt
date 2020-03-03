@@ -3,7 +3,16 @@ set(webengineviewer_webengineurlinterceptor_donottrack_SRCS
     donottrackpluginurlinterceptor.cpp
     )
 
-ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor)
+else()
+    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor
+        DESCRIPTION "kdepim-addons (do not track interceptor)"
+        OLD_CATEGORY_NAMES log_donottrackinterceptor
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 kconfig_add_kcfg_files(webengineviewer_webengineurlinterceptor_donottrack_SRCS
   settings/donottracksettings.kcfgc
