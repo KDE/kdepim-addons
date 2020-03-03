@@ -1,5 +1,13 @@
 set(zoomdebug_SRCS)
-ecm_qt_declare_logging_category(zoomdebug_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(zoomdebug_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin)
+else()
+    ecm_qt_declare_logging_category(zoomdebug_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin
+        DESCRIPTION "kdepim-addons (kmail zoomtext editor plugins)"
+        OLD_CATEGORY_NAMES log_kmail_zoomtexteditorplugin
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 macro(add_kmail_editorplugin_unittest _source _additional)
     set( _test ${_source} ${_additional} ${zoomdebug_SRCS})

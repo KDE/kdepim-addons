@@ -1,10 +1,18 @@
 set(grammarcommon_SRCS
-	grammarerror.cpp
-	grammarresulttextedit.cpp
-	grammarresultwidget.cpp
-	)
+    grammarerror.cpp
+    grammarresulttextedit.cpp
+    grammarresultwidget.cpp
+    )
 
-ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon)
+else()
+    ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon
+        DESCRIPTION "kdepim-addons (libgramalecte common)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 
 add_library(grammarcommon ${grammarcommon_SRCS})

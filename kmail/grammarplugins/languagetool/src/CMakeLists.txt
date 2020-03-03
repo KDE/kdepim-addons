@@ -13,7 +13,15 @@ set(kmaillanguagetool_SRCS
     languagetoolupdatecombobox.cpp
 )
 
-ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin)
+else()
+    ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin
+        DESCRIPTION "kdepim-addons (liblanguagetool)"
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
 
 add_library(kmaillanguagetool ${kmaillanguagetool_SRCS})
 generate_export_header(kmaillanguagetool BASE_NAME libkmaillanguagetool)

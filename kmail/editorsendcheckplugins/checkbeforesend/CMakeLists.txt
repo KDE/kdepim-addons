@@ -14,7 +14,14 @@ set(kmail_checkbeforesendeditorplugin_SRCS
     sendattachments/checkattachmentjob.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
+else()
+    ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin
+        DESCRIPTION "kdepim-addons (check before send editor plugin)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
 
 kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin JSON kmail_checkbeforesendplugin.json SOURCES
     ${kmail_checkbeforesendeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugincheckbeforesend)

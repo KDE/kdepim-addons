@@ -30,7 +30,16 @@ set(kmail_quicktextplugin_SRCS
     quicktextplugineditorinterface.cpp
 )
 
-ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin)
+else()
+    ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin
+        DESCRIPTION "kdepim-addons (kmail quicktext editor plugin)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
+
+
 
 kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json SOURCES
     ${kmail_quicktextplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)

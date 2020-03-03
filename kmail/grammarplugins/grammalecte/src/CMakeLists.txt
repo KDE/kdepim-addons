@@ -9,7 +9,15 @@ set(kmailgrammalecte_SRCS
     grammalectegrammarerror.cpp
     )
 
-ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
+else()
+    ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin
+        DESCRIPTION "kdepim-addons (libgramalecte)"
+        EXPORT KDEPIMADDONS
+    )
+endif()
+
 
 
 add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})

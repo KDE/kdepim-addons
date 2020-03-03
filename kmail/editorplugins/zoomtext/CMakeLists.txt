@@ -4,7 +4,16 @@ set(kmail_zoomtexteditorplugin_SRCS
     zoomlabel.cpp
 )
 
-ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin)
+else()
+    ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin
+        DESCRIPTION "kdepim-addons (kmail zoomtext editor plugins)"
+        OLD_CATEGORY_NAMES log_kmail_zoomtexteditorplugin
+        EXPORT KDEPIMADDONS
+    )
+endif()
+
 
 
 kcoreaddons_add_plugin(kmail_zoomtexteditorplugin JSON kmail_zoomtexteditorplugin.json SOURCES
