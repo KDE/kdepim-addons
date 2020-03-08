@@ -30,7 +30,6 @@ class StatusBarLabelToggledState;
 
 class KActionCollection;
 class MarkdownPreviewDialog;
-class QLabel;
 class MarkdownInterface : public MessageComposer::PluginEditorConvertTextInterface
 {
     Q_OBJECT

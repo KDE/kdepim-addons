@@ -22,10 +22,8 @@
 
 #include <QObject>
 
-class KActionCollection;
 
 class QAbstractItemModel;
-class QAction;
 class QItemSelectionModel;
 class QuicktextManager : public QObject
 {
