@@ -1,4 +1,5 @@
 add_definitions (-DTEST_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/externaldatas")
+
 ecm_qt_declare_logging_category(common_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
 
 macro(add_messageviewer_viewerplugin_external_plugin_unittest _source _additional _jsonfile)

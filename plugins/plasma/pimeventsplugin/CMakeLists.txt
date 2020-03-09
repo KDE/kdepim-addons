@@ -10,12 +10,23 @@ set(pimeventsplugin_SRCS
     settingschangenotifier.cpp
     eventmodel.cpp
 )
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(loggingcategory_SRCS
+        HEADER pimeventsplugin_debug.h
+        IDENTIFIER PIMEVENTSPLUGIN_LOG
+        CATEGORY_NAME org.kde.pim.pimeventsplugin
+    )
+else()
+    ecm_qt_declare_logging_category(loggingcategory_SRCS
+        HEADER pimeventsplugin_debug.h
+        IDENTIFIER PIMEVENTSPLUGIN_LOG
+        CATEGORY_NAME org.kde.pim.pimeventsplugin
+        DESCRIPTION "kdepim-addons (Plasma calendar plugin)"
+        OLD_CATEGORY_NAMES log_pimeventsplugin
+        EXPORT KDEPIMADDONS
+        )
+endif()
 
-ecm_qt_declare_logging_category(loggingcategory_SRCS
-    HEADER pimeventsplugin_debug.h
-    IDENTIFIER PIMEVENTSPLUGIN_LOG
-    CATEGORY_NAME org.kde.pim.pimeventsplugin
-)
 
 set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
 kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json SOURCES

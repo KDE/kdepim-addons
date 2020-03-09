@@ -3,7 +3,17 @@ set(webengineviewer_webengineurlinterceptor_adblock_SRCS
     adblockpluginurlinterceptor.cpp
     )
 
-ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
+if (ECM_VERSION VERSION_LESS "5.68.0")
+    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
+else()
+    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
+        DESCRIPTION "kdepim-addons (adblock interceptor)"
+        OLD_CATEGORY_NAMES log_adblockinterceptor
+        EXPORT KDEPIMADDONS
+        )
+endif()
+
+
 
 
 kcoreaddons_add_plugin(webengineviewer_adblockplugin JSON messageviewer_adblockurlinterceptor.json SOURCES
