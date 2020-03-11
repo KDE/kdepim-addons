@@ -1,12 +1,12 @@
 cmake_minimum_required(VERSION 3.5)
-set(PIM_VERSION "5.13.40")
+set(PIM_VERSION "5.13.80")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 if(POLICY CMP0063)
   cmake_policy(SET CMP0063 NEW)
 endif()
 
-set(KF5_MIN_VERSION "5.67.0")
+set(KF5_MIN_VERSION "5.68.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
