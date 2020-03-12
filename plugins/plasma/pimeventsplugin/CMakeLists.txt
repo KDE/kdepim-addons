@@ -9,23 +9,15 @@ set(pimeventsplugin_SRCS
     eventdatavisitor.cpp
     settingschangenotifier.cpp
     eventmodel.cpp
-)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(loggingcategory_SRCS
-        HEADER pimeventsplugin_debug.h
-        IDENTIFIER PIMEVENTSPLUGIN_LOG
-        CATEGORY_NAME org.kde.pim.pimeventsplugin
     )
-else()
-    ecm_qt_declare_logging_category(loggingcategory_SRCS
-        HEADER pimeventsplugin_debug.h
-        IDENTIFIER PIMEVENTSPLUGIN_LOG
-        CATEGORY_NAME org.kde.pim.pimeventsplugin
-        DESCRIPTION "kdepim-addons (Plasma calendar plugin)"
-        OLD_CATEGORY_NAMES log_pimeventsplugin
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(loggingcategory_SRCS
+    HEADER pimeventsplugin_debug.h
+    IDENTIFIER PIMEVENTSPLUGIN_LOG
+    CATEGORY_NAME org.kde.pim.pimeventsplugin
+    DESCRIPTION "kdepim-addons (Plasma calendar plugin)"
+    OLD_CATEGORY_NAMES log_pimeventsplugin
+    EXPORT KDEPIMADDONS
+    )
 
 
 set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
@@ -41,7 +33,7 @@ target_link_libraries(pimevents
     KF5::EventViews # for reading KOrganizer calendar colors
     KF5::ConfigCore
     KF5::KIOCore
-)
+    )
 
 
 
@@ -51,7 +43,7 @@ set(plasmapimcalendarsplugin_SRCS
     pimcalendarsplugin.cpp
     pimcalendarsmodel.cpp
     settingschangenotifier.cpp
-)
+    )
 
 add_library(pimcalendarsplugin SHARED ${plasmapimcalendarsplugin_SRCS} ${loggingcategory_SRCS})
 target_link_libraries(pimcalendarsplugin
@@ -60,14 +52,14 @@ target_link_libraries(pimcalendarsplugin
     KF5::AkonadiCore
     KF5::CalendarCore
     KF5::ConfigCore
-)
+    )
 
 install(TARGETS pimcalendarsplugin
-        DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
+    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
+    )
 install(FILES qmldir
-        DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
-)
+    DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
+    )
 install(FILES PimEventsConfig.qml
-        DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins/pimevents
-)
+    DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins/pimevents
+    )

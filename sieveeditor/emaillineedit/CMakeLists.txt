@@ -1,16 +1,11 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 set(sieveeditoremaillinedit_plugin_categories_SRCS)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(sieveeditoremaillinedit_plugin_categories_SRCS HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
-        EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit)
-else()
-    ecm_qt_declare_logging_category(sieveeditoremaillinedit_plugin_categories_SRCS HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
-        EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit
-        DESCRIPTION "kdepim-addons (SieveEditor email line plugin)"
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(sieveeditoremaillinedit_plugin_categories_SRCS HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
+    EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit
+    DESCRIPTION "kdepim-addons (SieveEditor email line plugin)"
+    EXPORT KDEPIMADDONS
+    )
 
 
 if(BUILD_TESTING)

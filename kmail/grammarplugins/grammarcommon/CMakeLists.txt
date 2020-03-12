@@ -4,14 +4,10 @@ set(grammarcommon_SRCS
     grammarresultwidget.cpp
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon)
-else()
-    ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon
-        DESCRIPTION "kdepim-addons (libgramalecte common)"
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon
+    DESCRIPTION "kdepim-addons (libgramalecte common)"
+    EXPORT KDEPIMADDONS
+    )
 
 
 
@@ -20,7 +16,7 @@ generate_export_header(grammarcommon BASE_NAME grammarcommon)
 target_link_libraries(grammarcommon
     KF5::I18n
     KF5::MessageComposer
-)
+    )
 
 set_target_properties(grammarcommon
     PROPERTIES OUTPUT_NAME grammarcommon VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
@@ -30,5 +26,5 @@ set_target_properties(grammarcommon
 install(TARGETS grammarcommon ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 if(BUILD_TESTING)
-   add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()

@@ -1,12 +1,5 @@
 set(checkbeforesend_common_SRCS)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
-else()
-    ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin
-        DESCRIPTION "kdepim-addons (check before send editor plugin)"
-        EXPORT KDEPIMADDONS
-    )
-endif()
+ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
 
 macro(add_kmail_checkbeforesend_unittest _source _additional)
     set( _test ${_source} ${_additional} ${checkbeforesend_common_SRCS})

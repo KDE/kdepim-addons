@@ -5,20 +5,20 @@ set(kmail_quicktextplugin_private_SRCS
     quicktextmanager.cpp
     quicktexttreewidget.cpp
     quicktextwidget.cpp
-)
+    )
 
 
 add_library(kmailquicktextpluginprivate ${kmail_quicktextplugin_private_SRCS})
 generate_export_header(kmailquicktextpluginprivate BASE_NAME quicktext)
 
 target_link_libraries(kmailquicktextpluginprivate
-PRIVATE
+    PRIVATE
     KF5::I18n KF5::CoreAddons Qt5::Gui Qt5::Widgets KF5::MessageComposer KF5::MailCommon KF5::XmlGui
-)
+    )
 
 set_target_properties(kmailquicktextpluginprivate
     PROPERTIES VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
-)
+    )
 
 install(TARGETS kmailquicktextpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
@@ -28,16 +28,12 @@ endif()
 set(kmail_quicktextplugin_SRCS
     quicktextplugineditor.cpp
     quicktextplugineditorinterface.cpp
-)
-
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin)
-else()
-    ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin
-        DESCRIPTION "kdepim-addons (kmail quicktext editor plugin)"
-        EXPORT KDEPIMADDONS
     )
-endif()
+
+ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin
+    DESCRIPTION "kdepim-addons (kmail quicktext editor plugin)"
+    EXPORT KDEPIMADDONS
+    )
 
 
 
@@ -45,5 +41,5 @@ kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json SOU
     ${kmail_quicktextplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_quicktextplugin
-  KF5::MessageComposer KF5::XmlGui KF5::I18n kmailquicktextpluginprivate KF5::MailCommon
-)
+    KF5::MessageComposer KF5::XmlGui KF5::I18n kmailquicktextpluginprivate KF5::MailCommon
+    )

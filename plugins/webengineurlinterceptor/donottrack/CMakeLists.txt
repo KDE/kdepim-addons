@@ -3,20 +3,16 @@ set(webengineviewer_webengineurlinterceptor_donottrack_SRCS
     donottrackpluginurlinterceptor.cpp
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor)
-else()
-    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor
-        DESCRIPTION "kdepim-addons (do not track interceptor)"
-        OLD_CATEGORY_NAMES log_donottrackinterceptor
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_donottrack_SRCS HEADER donottrackinterceptor_debug.h IDENTIFIER DONOTTRACKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.donottrackinterceptor
+    DESCRIPTION "kdepim-addons (do not track interceptor)"
+    OLD_CATEGORY_NAMES log_donottrackinterceptor
+    EXPORT KDEPIMADDONS
+    )
 
 
 kconfig_add_kcfg_files(webengineviewer_webengineurlinterceptor_donottrack_SRCS
-  settings/donottracksettings.kcfgc
-)
+    settings/donottracksettings.kcfgc
+    )
 
 
 kcoreaddons_add_plugin(webengineviewer_donottrackplugin JSON messageviewer_donottrackurlinterceptor.json SOURCES
@@ -30,5 +26,5 @@ target_link_libraries(webengineviewer_donottrackplugin
     KF5::CoreAddons
     )
 if(BUILD_TESTING)
-   add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()

@@ -3,15 +3,11 @@ set(webengineviewer_webengineurlinterceptor_adblock_SRCS
     adblockpluginurlinterceptor.cpp
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
-else()
-    ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
-        DESCRIPTION "kdepim-addons (adblock interceptor)"
-        OLD_CATEGORY_NAMES log_adblockinterceptor
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(webengineviewer_webengineurlinterceptor_adblock_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor
+    DESCRIPTION "kdepim-addons (adblock interceptor)"
+    OLD_CATEGORY_NAMES log_adblockinterceptor
+    EXPORT KDEPIMADDONS
+    )
 
 
 
@@ -32,8 +28,8 @@ target_link_libraries(webengineviewer_adblockplugin
     )
 
 if(BUILD_TESTING)
-   add_subdirectory(tests)
-   add_subdirectory(autotests)
+    add_subdirectory(tests)
+    add_subdirectory(autotests)
 endif()
 add_subdirectory(lib)
 add_subdirectory(kconf_update)

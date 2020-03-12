@@ -1,16 +1,11 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
 
 set(sieveeditorregexp_plugin_categories_SRCS)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(sieveeditorregexp_plugin_categories_SRCS HEADER regexpeditorlineeditplugin_debug.h IDENTIFIER
-        REGEXPEDITORLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.regexpeditorlineedit)
-else()
-    ecm_qt_declare_logging_category(sieveeditorregexp_plugin_categories_SRCS HEADER regexpeditorlineeditplugin_debug.h IDENTIFIER
-        REGEXPEDITORLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.regexpeditorlineedit
-        DESCRIPTION "kdepim-addons (SieveEditor Regexp Editor plugin)"
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(sieveeditorregexp_plugin_categories_SRCS HEADER regexpeditorlineeditplugin_debug.h IDENTIFIER
+    REGEXPEDITORLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.regexpeditorlineedit
+    DESCRIPTION "kdepim-addons (SieveEditor Regexp Editor plugin)"
+    EXPORT KDEPIMADDONS
+    )
 
 
 if(BUILD_TESTING)

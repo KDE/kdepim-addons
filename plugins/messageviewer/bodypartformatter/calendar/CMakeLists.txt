@@ -5,15 +5,11 @@ set(messageviewer_bodypartformatter_text_calendar_PART_SRCS
     text_calendar.cpp delegateselector.cpp attendeeselector.cpp memorycalendarmemento.cpp syncitiphandler.cpp
     reactiontoinvitationdialog.cpp)
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar_PART_SRCS HEADER text_calendar_debug.h IDENTIFIER TEXT_CALENDAR_LOG CATEGORY_NAME org.kde.pim.text_calendar)
-else()
-    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar_PART_SRCS HEADER text_calendar_debug.h IDENTIFIER TEXT_CALENDAR_LOG CATEGORY_NAME org.kde.pim.text_calendar
-        DESCRIPTION "kdepim-addons (messageviewer calendar plugins)"
-        OLD_CATEGORY_NAMES log_text_calendar
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar_PART_SRCS HEADER text_calendar_debug.h IDENTIFIER TEXT_CALENDAR_LOG CATEGORY_NAME org.kde.pim.text_calendar
+    DESCRIPTION "kdepim-addons (messageviewer calendar plugins)"
+    OLD_CATEGORY_NAMES log_text_calendar
+    EXPORT KDEPIMADDONS
+    )
 
 
 qt5_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS

@@ -1,15 +1,15 @@
 set(messageviewer_dkimconfigplugin_SRCS
-   dkimconfiguresettingsplugin.cpp
-)
+    dkimconfiguresettingsplugin.cpp
+    )
 
 kcoreaddons_add_plugin(messageviewer_dkimconfigplugin JSON messageviewer_dkimconfigplugin.json SOURCES
     ${messageviewer_dkimconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
 
 target_link_libraries(messageviewer_dkimconfigplugin
-  KF5::MessageViewer
-  KF5::I18n
-  dkimverifyconfigure
-  )
+    KF5::MessageViewer
+    KF5::I18n
+    dkimverifyconfigure
+    )
 
 
 set(dkimverifyconfigure_SRCS
@@ -22,16 +22,12 @@ set(dkimverifyconfigure_SRCS
     dkimpolicywidget.cpp
     dkimauthenticationverifiedserverwidget.cpp
     dkimauthenticationverifiedserverdialog.cpp
-)
+    )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin)
-else()
-    ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin
-        DESCRIPTION "kdepim-addons (dkim-verify-configure)"
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin
+    DESCRIPTION "kdepim-addons (dkim-verify-configure)"
+    EXPORT KDEPIMADDONS
+    )
 
 add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)

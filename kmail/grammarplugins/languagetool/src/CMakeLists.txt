@@ -11,16 +11,12 @@ set(kmaillanguagetool_SRCS
     languagetoollistoflanguagesparser.cpp
     languageinfo.cpp
     languagetoolupdatecombobox.cpp
-)
+    )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin)
-else()
-    ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin
-        DESCRIPTION "kdepim-addons (liblanguagetool)"
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(kmaillanguagetool_SRCS HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin
+    DESCRIPTION "kdepim-addons (liblanguagetool)"
+    EXPORT KDEPIMADDONS
+    )
 
 
 add_library(kmaillanguagetool ${kmaillanguagetool_SRCS})
@@ -32,7 +28,7 @@ target_link_libraries(kmaillanguagetool
     KF5::KIOWidgets
     KF5::MessageComposer
     grammarcommon
-)
+    )
 
 set_target_properties(kmaillanguagetool
     PROPERTIES OUTPUT_NAME kmaillanguagetool VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}

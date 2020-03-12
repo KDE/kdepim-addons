@@ -1,12 +1,5 @@
 set(sharetextplugineditor_common_SRCS)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(sharetextplugineditor_common_SRCS HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin)
-else()
-    ecm_qt_declare_logging_category(sharetextplugineditor_common_SRCS HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin
-        DESCRIPTION "kdepim-addons (share text editor plugin)"
-        EXPORT KDEPIMADDONS
-    )
-endif()
+ecm_qt_declare_logging_category(sharetextplugineditor_common_SRCS HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin)
 
 macro(add_kmail_editorplugin_unittest _source _additional)
     set( _test ${_source} ${_additional} ${sharetextplugineditor_common_SRCS})

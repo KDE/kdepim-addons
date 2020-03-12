@@ -1,26 +1,22 @@
 set(kmail_changecaseeditorplugin_SRCS
     changecaseplugineditor.cpp
     changecaseplugineditorinterface.cpp
-)
-
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin)
-else()
-    ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin
-        DESCRIPTION "kdepim-addons (kmail changecase editor plugins)"
-        OLD_CATEGORY_NAMES log_kmail_changecaseeditorplugin
-        EXPORT KDEPIMADDONS
     )
-endif()
+
+ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin
+    DESCRIPTION "kdepim-addons (kmail changecase editor plugins)"
+    OLD_CATEGORY_NAMES log_kmail_changecaseeditorplugin
+    EXPORT KDEPIMADDONS
+    )
 
 kcoreaddons_add_plugin(kmail_changecaseeditorplugin JSON kmail_changecaseeditorplugin.json SOURCES
     ${kmail_changecaseeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_changecaseeditorplugin
-  KF5::MessageComposer KF5::XmlGui KF5::I18n
-)
+    KF5::MessageComposer KF5::XmlGui KF5::I18n
+    )
 
 if(BUILD_TESTING)
-   add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()
 

@@ -1,12 +1,5 @@
 set(kmail_markdownplugin_debug_SRCS)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(kmail_markdownplugin_debug_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
-else()
-    ecm_qt_declare_logging_category(kmail_markdownplugin_debug_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin
-        DESCRIPTION "kdepim-addons (kmail markdown plugin)"
-        EXPORT KDEPIMADDONS
-    )
-endif()
+ecm_qt_declare_logging_category(kmail_markdownplugin_debug_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
 
 
 macro(add_kmail_converttext_unittest _source _additional)

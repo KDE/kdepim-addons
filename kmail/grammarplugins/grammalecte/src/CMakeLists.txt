@@ -9,14 +9,10 @@ set(kmailgrammalecte_SRCS
     grammalectegrammarerror.cpp
     )
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin)
-else()
-    ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin
-        DESCRIPTION "kdepim-addons (libgramalecte)"
-        EXPORT KDEPIMADDONS
+ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin
+    DESCRIPTION "kdepim-addons (libgramalecte)"
+    EXPORT KDEPIMADDONS
     )
-endif()
 
 
 
@@ -29,7 +25,7 @@ target_link_libraries(kmailgrammalecte
     KF5::KIOWidgets
     KF5::MessageComposer
     grammarcommon
-)
+    )
 
 set_target_properties(kmailgrammalecte
     PROPERTIES OUTPUT_NAME kmailgrammalecte VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}

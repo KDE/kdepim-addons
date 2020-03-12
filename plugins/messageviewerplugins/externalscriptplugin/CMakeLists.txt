@@ -1,5 +1,5 @@
 set(messageviewer_externalscriptplugin_SRCS
-    viewerpluginexternalscript.cpp  
+    viewerpluginexternalscript.cpp
     viewerpluginexternalscriptinterface.cpp
     viewerpluginexternalscriptmanager.cpp
     viewerpluginexternalscriptinfo.cpp
@@ -9,30 +9,26 @@ set(messageviewer_externalscriptplugin_SRCS
     configuredialog/viewerpluginexternalconfigurewidget.cpp
     configuredialog/viewerpluginexternaleditdialog.cpp
     configuredialog/viewerpluginexternaleditwidget.cpp
-)
+    )
 
 
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin)
-else()
-    ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin
-        DESCRIPTION "kdepim-addons (External Script Plugin)"
-        OLD_CATEGORY_NAMES log_externalscriptplugin
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin
+    DESCRIPTION "kdepim-addons (External Script Plugin)"
+    OLD_CATEGORY_NAMES log_externalscriptplugin
+    EXPORT KDEPIMADDONS
+    )
 
 kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json
     SOURCES ${messageviewer_externalscriptplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
 
 target_link_libraries(messageviewer_externalscriptplugin
-        KF5::MessageViewer KF5::XmlGui KF5::I18n KF5::PimCommon KF5::KIOWidgets
-)
+    KF5::MessageViewer KF5::XmlGui KF5::I18n KF5::PimCommon KF5::KIOWidgets
+    )
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
-   add_subdirectory(examples)
+    add_subdirectory(examples)
 endif() 
 
 if(BUILD_TESTING)
-   add_subdirectory(autotests)
+    add_subdirectory(autotests)
 endif()

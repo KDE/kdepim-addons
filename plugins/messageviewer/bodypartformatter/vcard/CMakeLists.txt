@@ -2,15 +2,11 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_vcard_plugin\")
 
 set(messageviewer_bodypartformatter_text_vcard_PART_SRCS text_vcard.cpp vcardmemento.cpp updatecontactjob.cpp)
-if (ECM_VERSION VERSION_LESS "5.68.0")
-    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_SRCS HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME org.kde.pim.vcard)
-else()
-    ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_SRCS HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME org.kde.pim.vcard
-        DESCRIPTION "kdepim-addons (vcard)"
-        OLD_CATEGORY_NAMES log_vcard
-        EXPORT KDEPIMADDONS
-        )
-endif()
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard_PART_SRCS HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME org.kde.pim.vcard
+    DESCRIPTION "kdepim-addons (vcard)"
+    OLD_CATEGORY_NAMES log_vcard
+    EXPORT KDEPIMADDONS
+    )
 
 
 add_library(messageviewer_bodypartformatter_text_vcard MODULE ${messageviewer_bodypartformatter_text_vcard_PART_SRCS})
