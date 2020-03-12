@@ -60,6 +60,7 @@ using namespace KCalendarCore;
 #include <KIdentityManagement/Identity>
 
 #include <KEmailAddress>
+#include <kio_version.h>
 
 #include <MailTransportAkonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
@@ -391,7 +392,11 @@ public:
             if (attachmentUrl.isLocalFile()) {
                 fileExists = QFile::exists(attachmentUrl.toLocalFile());
             } else {
+#if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
                 auto job = KIO::stat(attachmentUrl, KIO::StatJob::SourceSide, 0);
+#else
+                auto job = KIO::statDetails(attachmentUrl, KIO::StatJob::SourceSide, KIO::StatDetail::Basic);
+#endif
                 fileExists = job->exec();
             }
             if (!fileExists) {
