@@ -8,7 +8,13 @@
             {% endif %}
             {% with trip.departureAirport as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}</span>
         </td>
-        <td style="font-size:200%; width:33%; text-align:center;">&#9992;</td>
+        <td style="font-size:200%; width:33%; text-align:center;">
+        {% if elem.reservations.0.reservation.reservationStatus == 1 %}
+            {% icon "dialog-cancel" sizemedium _("Reservation canceled.") %}
+        {% else %}
+            &#9992;
+        {% endif %}
+        </td>
         <td style="width:33%;" title="{{ trip.arrivalAirport.name }}">
             {% if trip.arrivalAirport.iataCode %}
                 <span style="font-size:200%;">{{ trip.arrivalAirport.iataCode }}

@@ -1,4 +1,8 @@
-<div style="font-size:125%;">{{ trip.name }}
+<div style="font-size:125%;">
+    {% if elem.reservations.0.reservation.reservationStatus == 1 %}
+        <b>{% i18n "Canceled:" %}
+    {% endif %}
+    {{ trip.name }}
     {% with trip as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
     {{ res.checkinTime|formatDate }} - {{ res.checkoutTime|formatDate }}</div>
 <div>{{ trip.address|formatAddress|safe }}</div>

@@ -12,7 +12,7 @@ find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
 
 # Do NOT add quote
-set(KDEPIM_DEV_VERSION alpha)
+set(KDEPIM_DEV_VERSION beta1)
 
 # add an extra space
 if(DEFINED KDEPIM_DEV_VERSION)
