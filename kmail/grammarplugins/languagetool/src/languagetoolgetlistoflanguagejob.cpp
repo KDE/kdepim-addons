@@ -57,11 +57,7 @@ void LanguageToolGetListOfLanguageJob::start()
 
 void LanguageToolGetListOfLanguageJob::slotFinish(QNetworkReply *reply)
 {
-#if (QT_VERSION < QT_VERSION_CHECK(5, 15, 0))
     if (reply->error() != QNetworkReply::NoError) {
-#else
-    if (reply->networkError() != QNetworkReply::NoError) {
-#endif
         qCWarning(LIBLANGUAGE_PLUGIN_LOG) << " Error reply - "<<reply->errorString();
         Q_EMIT error(reply->errorString());
     }
