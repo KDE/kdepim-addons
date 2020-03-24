@@ -102,7 +102,6 @@ void EmailLineEdit::slotSelectEmail()
     dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
     connect(dlg.get(), &Akonadi::AbstractEmailAddressSelectionDialog::insertAddresses, this, &EmailLineEdit::insertAddresses);
     if (dlg->exec()) {
-        QStringList addresses;
         const Akonadi::EmailAddressSelection::List lstAddress = dlg->selectedAddresses();
         if (!lstAddress.isEmpty()) {
             bool firstElement = true;

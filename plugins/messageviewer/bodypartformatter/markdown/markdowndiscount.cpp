@@ -53,6 +53,4 @@ QString MarkdownDiscount::toHtml() const
     const QString html = QString::fromUtf8(htmlDocument, size);
     mkd_cleanup(markdownHandle);
     return html;
-
-    return {};
 }
