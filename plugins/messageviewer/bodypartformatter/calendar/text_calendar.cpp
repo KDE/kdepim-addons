@@ -395,7 +395,7 @@ public:
 #if KIO_VERSION < QT_VERSION_CHECK(5, 69, 0)
                 auto job = KIO::stat(attachmentUrl, KIO::StatJob::SourceSide, 0);
 #else
-                auto job = KIO::statDetails(attachmentUrl, KIO::StatJob::SourceSide, KIO::StatDetail::Basic);
+                auto job = KIO::statDetails(attachmentUrl, KIO::StatJob::SourceSide, KIO::StatBasic);
 #endif
                 fileExists = job->exec();
             }
