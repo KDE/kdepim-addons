@@ -22,6 +22,7 @@
 #include <CalendarSupport/CalendarSingleton>
 
 #include <KItinerary/CalendarHandler>
+#include <KItinerary/ExtractorValidator>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/MergeUtil>
@@ -33,6 +34,11 @@
 #include <KMime/ContentIndex>
 
 using namespace KItinerary;
+
+ItineraryMemento::ItineraryMemento()
+{
+    m_postProc.setValidationEnabled(false);
+}
 
 void ItineraryMemento::detach()
 {
@@ -71,11 +77,29 @@ bool ItineraryMemento::hasData() const
 QVector<ItineraryMemento::TripData> ItineraryMemento::data()
 {
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
+        // filter out types we can't handle, but keep incomplete elements to see if we can complete them from the calendar
+        ExtractorValidator validator;
+        validator.setAcceptedTypes<
+            BusReservation,
+            EventReservation,
+            FlightReservation,
+            FoodEstablishmentReservation,
+            LodgingReservation,
+            RentalCarReservation,
+            TaxiReservation,
+            TrainReservation
+        >();
+        validator.setAcceptOnlyCompleteElements(false);
+        auto postProcResult = m_postProc.result();
+        postProcResult.erase(std::remove_if(postProcResult.begin(), postProcResult.end(), [&validator](const auto &elem) {
+            return !validator.isValidElement(elem);
+        }), postProcResult.end());
+
         // perform calendar lookup and merge results
         std::vector<std::pair<QVariant, KCalendarCore::Event::Ptr> > resolvedEvents;
-        resolvedEvents.reserve(m_postProc.result().size());
+        resolvedEvents.reserve(postProcResult.size());
         const auto calendar = CalendarSupport::calendarSingleton(!qEnvironmentVariableIsSet("BPF_ITINERARY_TESTMODE"));
-        for (const auto &r : m_postProc.result()) {
+        for (const auto &r : qAsConst(postProcResult)) {
             auto e = std::make_pair(r, CalendarHandler::findEvent(calendar, r));
             if (e.second) {
                 const auto existingRes = CalendarHandler::reservationsForEvent(e.second);
@@ -88,6 +112,12 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
             }
             resolvedEvents.push_back(e);
         }
+
+        // discard elemnents we couldn't complete from the calendar
+        validator.setAcceptOnlyCompleteElements(true);
+        resolvedEvents.erase(std::remove_if(resolvedEvents.begin(), resolvedEvents.end(), [&validator](const auto &p) {
+            return !validator.isValidElement(p.first);
+        }), resolvedEvents.end());
 
         // merge multi-traveler elements
         for (auto it = resolvedEvents.begin(); it != resolvedEvents.end();) {

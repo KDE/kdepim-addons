@@ -129,19 +129,12 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     //qCDebug(ITINERARY_LOG).noquote() << QJsonDocument(data).toJson();
     auto decodedData = JsonLdDocument::fromJson(data);
 
-    for (auto it = decodedData.begin(); it != decodedData.end();) {
+    for (auto it = decodedData.begin(); it != decodedData.end(); ++it) {
         if (JsonLd::isA<Event>(*it)) { // promote Event to EventReservation
             EventReservation res;
             res.setReservationFor(*it);
             *it = res;
         }
-        // filter out non-Reservation objects we can't display
-        if (!JsonLd::canConvert<Reservation>(*it)) {
-            it = decodedData.erase(it);
-            continue;
-        }
-
-        ++it;
     }
 
     if (!decodedData.isEmpty()) {

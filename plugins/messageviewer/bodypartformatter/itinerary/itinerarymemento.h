@@ -45,6 +45,7 @@ class QDateTime;
 class ItineraryMemento : public MimeTreeParser::Interface::BodyPartMemento
 {
 public:
+    ItineraryMemento();
     ~ItineraryMemento() override = default;
     void detach() override;
 
