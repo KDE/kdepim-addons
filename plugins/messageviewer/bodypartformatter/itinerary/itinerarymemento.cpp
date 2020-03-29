@@ -100,17 +100,20 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
         resolvedEvents.reserve(postProcResult.size());
         const auto calendar = CalendarSupport::calendarSingleton(!qEnvironmentVariableIsSet("BPF_ITINERARY_TESTMODE"));
         for (const auto &r : qAsConst(postProcResult)) {
-            auto e = std::make_pair(r, CalendarHandler::findEvent(calendar, r));
-            if (e.second) {
-                const auto existingRes = CalendarHandler::reservationsForEvent(e.second);
+            const auto events = CalendarHandler::findEvents(calendar, r);
+            if (events.empty()) {
+                resolvedEvents.push_back(std::make_pair(r, KCalendarCore::Event::Ptr()));
+                continue;
+            }
+
+            for (const auto &event : events) {
+                const auto existingRes = CalendarHandler::reservationsForEvent(event);
                 for (const auto &ev : existingRes) {
-                    if (MergeUtil::isSame(ev, e.first)) {
-                        e.first = MergeUtil::merge(ev, e.first);
-                        break;
+                    if (MergeUtil::isSame(ev, r)) {
+                        resolvedEvents.push_back(std::make_pair(MergeUtil::merge(ev, r), event));
                     }
                 }
             }
-            resolvedEvents.push_back(e);
         }
 
         // discard elemnents we couldn't complete from the calendar
