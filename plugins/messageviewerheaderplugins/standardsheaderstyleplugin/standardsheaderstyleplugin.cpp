@@ -20,7 +20,7 @@
 #include "standardsheaderstyleplugin.h"
 #include "standardsheaderstyleinterface.h"
 #include "standardheaderstrategy.h"
-#include "messageviewer/plainheaderstyle.h"
+#include <MessageViewer/PlainHeaderStyle>
 #include <KPluginFactory>
 
 using namespace MessageViewer;

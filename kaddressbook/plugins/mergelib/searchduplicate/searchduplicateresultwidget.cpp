@@ -28,7 +28,7 @@
 #include <QSplitter>
 #include <QLabel>
 #include <QPushButton>
-#include "KaddressbookGrantlee/GrantleeContactViewer"
+#include <KaddressbookGrantlee/GrantleeContactViewer>
 #include <AkonadiWidgets/CollectionComboBox>
 
 namespace KABMergeContacts {

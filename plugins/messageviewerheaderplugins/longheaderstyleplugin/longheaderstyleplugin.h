@@ -20,7 +20,7 @@
 #ifndef LONGHEADERSTYLEPLUGIN_H
 #define LONGHEADERSTYLEPLUGIN_H
 
-#include "messageviewer/headerstyleplugin.h"
+#include <MessageViewer/HeaderStylePlugin>
 
 #include <QVariant>
 

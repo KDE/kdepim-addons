@@ -19,7 +19,7 @@
 
 #ifndef TRANSLATORPLUGIN_H
 #define TRANSLATORPLUGIN_H
-#include "pimcommon/customtoolsplugin.h"
+#include <PimCommon/CustomToolsPlugin>
 
 #include <QVariant>
 class TranslatorPlugin : public PimCommon::CustomToolsPlugin

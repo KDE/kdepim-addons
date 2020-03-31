@@ -20,7 +20,7 @@
 #ifndef FANCYHEADERSTYLE_H
 #define FANCYHEADERSTYLE_H
 
-#include "messageviewer/headerstyle.h"
+#include <MessageViewer/HeaderStyle>
 
 #include <headerstyle_util.h>
 namespace MessageViewer {

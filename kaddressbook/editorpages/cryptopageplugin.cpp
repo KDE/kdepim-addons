@@ -40,8 +40,8 @@
 #include "gpgme++/data.h"
 #include "gpgme++/key.h"
 
-#include "Libkleo/KeyRequester"
-#include "Libkleo/Enum"
+#include <Libkleo/KeyRequester>
+#include <Libkleo/Enum>
 
 CryptoPagePlugin::CryptoPagePlugin()
     : mReadOnly(false)

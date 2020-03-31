@@ -18,8 +18,8 @@
 */
 
 #include "oeimportdata.h"
-#include "mailimporter/filteroe.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterOE>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

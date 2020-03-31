@@ -18,7 +18,7 @@
 */
 
 #include "viewerplugintranslatorinterface.h"
-#include "pimcommon/translatorwidget.h"
+#include <PimCommon/TranslatorWidget>
 
 #include <QIcon>
 #include <QAction>

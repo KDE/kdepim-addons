@@ -19,8 +19,8 @@
 
 #include "nylasmaildata.h"
 #include "nylasmailsettings.h"
-#include "mailimporter/filterinfo.h"
-#include "mailimporter/othermailerutil.h"
+#include <MailImporter/FilterInfo>
+#include <MailImporter/OtherMailerUtil>
 
 #include "nylasmailplugin_debug.h"
 #include <KPluginFactory>

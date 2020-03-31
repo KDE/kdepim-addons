@@ -32,10 +32,10 @@
 */
 
 #include "briefheaderstyle.h"
-#include "messageviewer/headerstyle.h"
-#include "messageviewer/headerstyle_util.h"
-#include "messageviewer/messageviewersettings.h"
-#include "messageviewer/headerstrategy.h"
+#include <MessageViewer/HeaderStyle>
+#include <MessageViewer/HeaderStyle_Util>
+#include <MessageViewer/MessageViewerSettings>
+#include <MessageViewer/HeaderStrategy>
 
 #include <MessageCore/StringUtil>
 

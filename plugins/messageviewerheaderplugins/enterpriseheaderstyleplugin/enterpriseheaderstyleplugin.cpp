@@ -21,7 +21,7 @@
 #include "enterpriseheaderstyle.h"
 #include "enterpriseheaderstyleinterface.h"
 
-#include "messageviewer/richheaderstrategy.h"
+#include <MessageViewer/RichHeaderStrategy>
 #include <KPluginFactory>
 
 using namespace MessageViewer;

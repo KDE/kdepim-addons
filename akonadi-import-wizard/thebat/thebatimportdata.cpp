@@ -18,8 +18,8 @@
 */
 
 #include "thebatimportdata.h"
-#include "mailimporter/filterthebat.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterTheBat>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

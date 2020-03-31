@@ -18,8 +18,8 @@
 */
 
 #include "mailappimportdata.h"
-#include "mailimporter/filtermailapp.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterMailApp>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

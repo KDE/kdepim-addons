@@ -20,7 +20,7 @@
 #ifndef FANCYHEADERSTYLEPLUGIN_H
 #define FANCYHEADERSTYLEPLUGIN_H
 
-#include "messageviewer/headerstyleplugin.h"
+#include <MessageViewer/HeaderStylePlugin>
 
 #include <QVariant>
 

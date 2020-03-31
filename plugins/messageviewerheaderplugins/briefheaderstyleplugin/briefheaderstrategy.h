@@ -20,7 +20,7 @@
 #ifndef BRIEFHEADERSTRATEGY_H
 #define BRIEFHEADERSTRATEGY_H
 
-#include <messageviewer/headerstrategy.h>
+#include <MessageViewer/HeaderStrategy>
 #include <QStringList>
 
 namespace MessageViewer {

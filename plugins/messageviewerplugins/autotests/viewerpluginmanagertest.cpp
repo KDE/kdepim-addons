@@ -18,7 +18,7 @@
 */
 
 #include "viewerpluginmanagertest.h"
-#include "messageviewer/viewerpluginmanager.h"
+#include <MessageViewer/ViewerPluginManager>
 #include <QTest>
 
 ViewerPluginManagerTest::ViewerPluginManagerTest(QObject *parent)

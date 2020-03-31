@@ -20,7 +20,7 @@
 #ifndef BRIEFHEADERSTYLEPLUGIN_H
 #define BRIEFHEADERSTYLEPLUGIN_H
 
-#include "messageviewer/headerstyleplugin.h"
+#include <MessageViewer/HeaderStylePlugin>
 
 #include <QVariant>
 

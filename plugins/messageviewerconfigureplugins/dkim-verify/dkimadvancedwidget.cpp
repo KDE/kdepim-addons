@@ -23,7 +23,7 @@
 #include <QPointer>
 #include <QPushButton>
 #include "dkimauthenticationverifiedserverdialog.h"
-#include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QLabel>
 #include <QComboBox>

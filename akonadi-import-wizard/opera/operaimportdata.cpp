@@ -20,8 +20,8 @@
 #include "operaimportdata.h"
 #include "operaaddressbook.h"
 #include "operasettings.h"
-#include "mailimporter/filteropera.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterOpera>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

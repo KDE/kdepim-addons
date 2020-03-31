@@ -18,7 +18,7 @@
 */
 
 #include "dkimgeneralwidget.h"
-#include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/DKIMManager>
 #include <KLocalizedString>
 #include <QCheckBox>

@@ -19,12 +19,12 @@
 
 #include "fancyheaderstyle.h"
 #include "messageviewer_debug.h"
-#include "messageviewer/headerstyle.h"
-#include "messageviewer/headerstyle_util.h"
+#include <MessageViewer/HeaderStyle>
+#include <MessageViewer/HeaderStyle_Util>
 
-#include "messageviewer/headerstrategy.h"
+#include <MessageViewer/HeaderStrategy>
 #include <KTextToHTML>
-#include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/MessageViewerSettings>
 #include <MimeTreeParser/NodeHelper>
 
 #include <MessageCore/StringUtil>

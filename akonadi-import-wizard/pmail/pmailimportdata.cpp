@@ -19,8 +19,8 @@
 
 #include "pmailimportdata.h"
 #include "pmailsettings.h"
-#include "mailimporter/filterpmail.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterPMail>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

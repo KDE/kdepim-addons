@@ -22,7 +22,7 @@
 #include <QCheckBox>
 #include <QVBoxLayout>
 #include <MessageViewer/DKIMManageRulesDialog>
-#include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QPointer>
 #include <QPushButton>

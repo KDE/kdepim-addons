@@ -26,7 +26,7 @@
 #include <KSharedConfig>
 #include <QPushButton>
 #include <KPIMTextEdit/PlainTextEditor>
-#include "kpimtextedit/plaintexteditorwidget.h"
+#include <KPIMTextEdit/PlainTextEditorWidget>
 
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)

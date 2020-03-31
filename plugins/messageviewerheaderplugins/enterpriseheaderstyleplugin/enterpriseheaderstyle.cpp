@@ -18,10 +18,10 @@
 */
 
 #include "enterpriseheaderstyle.h"
-#include "messageviewer/headerstyle_util.h"
-#include "messageviewer/messageviewersettings.h"
+#include <MessageViewer/HeaderStyle_Util>
+#include <MessageViewer/MessageViewerSettings>
 
-#include "messageviewer/headerstrategy.h"
+#include <MessageViewer/HeaderStrategy>
 
 #include <MessageCore/StringUtil>
 

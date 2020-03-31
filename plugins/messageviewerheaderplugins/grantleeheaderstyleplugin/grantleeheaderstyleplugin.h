@@ -20,7 +20,7 @@
 #ifndef GRANTLEEHEADERSTYLEPLUGIN_H
 #define GRANTLEEHEADERSTYLEPLUGIN_H
 
-#include "messageviewer/headerstyleplugin.h"
+#include <MessageViewer/HeaderStylePlugin>
 
 #include <QVariant>
 

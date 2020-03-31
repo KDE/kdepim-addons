@@ -29,20 +29,20 @@
 
 #include "antispamwizard.h"
 #ifndef QT_NO_CURSOR
-#include "Libkdepim/KCursorSaver"
+#include <Libkdepim/KCursorSaver>
 #endif
-#include "MailCommon/FolderRequester"
-#include "MailCommon/FolderTreeWidget"
-#include "MailCommon/FolderTreeView"
-#include "MailCommon/FolderTreeWidgetProxyModel"
-#include "MailCommon/MailUtil"
-#include "MailCommon/MailKernel"
-#include "MailCommon/MailFilter"
-#include "MailCommon/FilterAction"
-#include "MailCommon/FilterActionDict"
-#include "MailCommon/FilterManager"
+#include <MailCommon/FolderRequester>
+#include <MailCommon/FolderTreeWidget>
+#include <MailCommon/FolderTreeView>
+#include <MailCommon/FolderTreeWidgetProxyModel>
+#include <MailCommon/MailUtil>
+#include <MailCommon/MailKernel>
+#include <MailCommon/MailFilter>
+#include <MailCommon/FilterAction>
+#include <MailCommon/FilterActionDict>
+#include <MailCommon/FilterManager>
 
-#include "PimCommon/PimUtil"
+#include <PimCommon/PimUtil>
 
 #include <AkonadiCore/AgentInstance>
 

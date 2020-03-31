@@ -20,7 +20,7 @@
 #ifndef GRANTLEEHEADERSTRATEGY_H
 #define GRANTLEEHEADERSTRATEGY_H
 
-#include <messageviewer/headerstrategy.h>
+#include <MessageViewer/HeaderStrategy>
 
 namespace MessageViewer {
 class GrantleeHeaderStrategy : public HeaderStrategy

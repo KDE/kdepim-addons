@@ -22,7 +22,7 @@
 #include <QDialogButtonBox>
 #include <QTest>
 #include <QLabel>
-#include <kpimtextedit/plaintexteditorwidget.h>
+#include <KPIMTextEdit/PlainTextEditorWidget>
 #include <QStandardPaths>
 
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)

@@ -34,7 +34,7 @@
 #ifndef BRIEFHEADERSTYLE_H
 #define BRIEFHEADERSTYLE_H
 
-#include "messageviewer/headerstyle.h"
+#include <MessageViewer/HeaderStyle>
 #include "headerstyle_util.h"
 namespace MessageViewer {
 class BriefHeaderStyle : public HeaderStyle

@@ -18,8 +18,8 @@
 */
 
 #include "evolutionv2importdata.h"
-#include "mailimporter/filterevolution_v2.h"
-#include "mailimporter/filterinfo.h"
+#include <MailImporter/FilterEvolution_v2>
+#include <MailImporter/FilterInfo>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

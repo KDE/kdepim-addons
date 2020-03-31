@@ -20,7 +20,7 @@
 #include "fancyheaderstyleinterface.h"
 #include "fancyheaderstyleplugin.h"
 #include "fancyheaderstyle.h"
-#include "messageviewer/richheaderstrategy.h"
+#include <MessageViewer/RichHeaderStrategy>
 #include <KPluginFactory>
 #include <KLocalizedString>
 #include <QApplication>

@@ -19,9 +19,9 @@
 
 #include "longheaderstyleinterface.h"
 #include "longheaderstyleplugin.h"
-#include "messageviewer/plainheaderstyle.h"
+#include <MessageViewer/PlainHeaderStyle>
 
-#include "messageviewer/richheaderstrategy.h"
+#include <MessageViewer/RichHeaderStrategy>
 #include <KPluginFactory>
 
 using namespace MessageViewer;

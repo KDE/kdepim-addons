@@ -19,9 +19,9 @@
 
 #include "adblockshowlistdialog.h"
 #include "adblockinterceptor_debug.h"
-#include "kpimtextedit/plaintexteditorwidget.h"
-#include "kpimtextedit/plaintexteditor.h"
-#include "Libkdepim/ProgressIndicatorLabel"
+#include <KPIMTextEdit/PlainTextEditorWidget>
+#include <KPIMTextEdit/PlainTextEditor>
+#include <Libkdepim/ProgressIndicatorLabel>
 
 #include <KLocalizedString>
 #include <KIO/Job>

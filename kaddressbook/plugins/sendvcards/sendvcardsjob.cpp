@@ -23,7 +23,7 @@
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include "MimeTreeParser/AttachmentTemporaryFilesDirs"
+#include <MimeTreeParser/AttachmentTemporaryFilesDirs>
 #include "kaddressbook_sendvcardsplugin_debug.h"
 #include <QTemporaryDir>
 #include <QFile>

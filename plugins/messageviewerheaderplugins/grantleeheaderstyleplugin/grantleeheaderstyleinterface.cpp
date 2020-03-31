@@ -18,8 +18,8 @@
 */
 
 #include "grantleeheaderstyleinterface.h"
-#include "messageviewer/headerstyleplugin.h"
-#include "messageviewer/headerstyle.h"
+#include <MessageViewer/HeaderStylePlugin>
+#include <MessageViewer/HeaderStyle>
 #include <grantleetheme/grantleethememanager.h>
 #include <KToggleAction>
 

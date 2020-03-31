@@ -18,7 +18,7 @@
 */
 
 #include "headerstylemenu_gui.h"
-#include "messageviewer/headerstylemenumanager.h"
+#include <MessageViewer/HeaderStyleMenuManager>
 #include <QStandardPaths>
 
 #include <QApplication>
@@ -30,9 +30,9 @@
 #include <KActionCollection>
 #include <QTextEdit>
 #include <KActionMenu>
-#include <messageviewer/headerstrategy.h>
-#include <messageviewer/headerstyle.h>
-#include <messageviewer/headerstyleplugin.h>
+#include <MessageViewer/HeaderStrategy>
+#include <MessageViewer/HeaderStyle>
+#include <MessageViewer/HeaderStylePlugin>
 
 HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
     : QWidget(parent)

@@ -20,8 +20,8 @@
 #include "gearyimportdata.h"
 #include "gearysettings.h"
 #include "gearyaddressbook.h"
-#include "mailimporter/filterinfo.h"
-#include "mailimporter/othermailerutil.h"
+#include <MailImporter/FilterInfo>
+#include <MailImporter/OtherMailerUtil>
 
 #include "gearyplugin_debug.h"
 #include <KPluginFactory>
