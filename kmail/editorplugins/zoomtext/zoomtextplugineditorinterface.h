@@ -20,7 +20,7 @@
 #ifndef ZOOMTEXTPLUGINEDITORINTERFACE_H
 #define ZOOMTEXTPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 class ZoomLabel;
 class ZoomTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

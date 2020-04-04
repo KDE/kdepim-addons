@@ -20,7 +20,7 @@
 #ifndef ChangeCasePLUGINEDITORINTERFACE_H
 #define ChangeCasePLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 
 class ChangeCasePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

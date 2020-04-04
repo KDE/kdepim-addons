@@ -20,9 +20,9 @@
 #ifndef ZOOMTEXTPLUGINEDITOR_H
 #define ZOOMTEXTPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class ZoomTextPluginEditor : public MessageComposer::PluginEditor

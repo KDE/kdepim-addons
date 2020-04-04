@@ -20,7 +20,7 @@
 #ifndef LONGHEADERSTYLEINTERFACE_H
 #define LONGHEADERSTYLEINTERFACE_H
 
-#include <messageviewer/headerstyleinterface.h>
+#include <MessageViewer/HeaderStyleInterface>
 
 namespace MessageViewer {
 class LongHeaderStyleInterface : public MessageViewer::HeaderStyleInterface

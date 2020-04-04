@@ -20,7 +20,7 @@
 #ifndef AUTOCORRECTIONPLUGINEDITORINTERFACE_H
 #define AUTOCORRECTIONPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 
 class AutoCorrectionPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

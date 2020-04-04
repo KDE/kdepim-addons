@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
 #define VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
 class QActionGroup;
 namespace MessageViewer {

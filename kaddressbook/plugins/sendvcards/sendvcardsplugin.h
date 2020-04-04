@@ -20,7 +20,7 @@
 #ifndef SENDVCARDSPLUGIN_H
 #define SENDVCARDSPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 

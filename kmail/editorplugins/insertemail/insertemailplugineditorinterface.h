@@ -20,7 +20,7 @@
 #ifndef INSERTEMAILPLUGINEDITORINTERFACE_H
 #define INSERTEMAILPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QPointer>
 class SelectMailDialog;
 class InsertEmailPluginEditorInterface : public MessageComposer::PluginEditorInterface

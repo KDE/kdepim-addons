@@ -20,7 +20,7 @@
 #ifndef TRANSLATORVIEW_H
 #define TRANSLATORVIEW_H
 
-#include <pimcommon/customtoolsviewinterface.h>
+#include <PimCommon/CustomToolsViewInterface>
 class KActionCollection;
 namespace PimCommon {
 class TranslatorWidget;

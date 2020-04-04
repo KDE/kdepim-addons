@@ -20,7 +20,7 @@
 #ifndef QUICKTEXTPLUGINEDITORINTERFACE_H
 #define QUICKTEXTPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MailCommon/SnippetsModel>
 #include <QPointer>

@@ -3,7 +3,7 @@
 #ifndef %{JS: Cpp.headerGuard('%{HeaderPluginEditorInterface}')}
 #define %{JS: Cpp.headerGuard('%{HeaderPluginEditorInterface}')}
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 
 class %{CN}PluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

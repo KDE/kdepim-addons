@@ -20,9 +20,9 @@
 #ifndef AUTOCORRECTIONPLUGINEDITOR_H
 #define AUTOCORRECTIONPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class AutoCorrectionPluginEditor : public MessageComposer::PluginEditor

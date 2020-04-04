@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINEXPANDURL_H
 #define VIEWERPLUGINEXPANDURL_H
 
-#include <messageviewer/viewerplugin.h>
+#include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer {
 class ViewerPluginExpandurl : public MessageViewer::ViewerPlugin

@@ -20,7 +20,7 @@
 #ifndef EXPERTPLUGIN_H
 #define EXPERTPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 

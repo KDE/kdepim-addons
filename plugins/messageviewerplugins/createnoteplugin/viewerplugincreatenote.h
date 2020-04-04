@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINCREATENOTE_H
 #define VIEWERPLUGINCREATENOTE_H
 
-#include <messageviewer/viewerplugin.h>
+#include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer {
 class ViewerPluginCreatenote : public MessageViewer::ViewerPlugin

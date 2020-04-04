@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINCREATETODO_H
 #define VIEWERPLUGINCREATETODO_H
 
-#include <messageviewer/viewerplugin.h>
+#include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer {
 class ViewerPluginCreatetodo : public MessageViewer::ViewerPlugin

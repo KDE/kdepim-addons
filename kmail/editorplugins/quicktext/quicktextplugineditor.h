@@ -20,9 +20,9 @@
 #ifndef QUICKTEXTPLUGINEDITOR_H
 #define QUICKTEXTPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class QuickTextPluginEditor : public MessageComposer::PluginEditor

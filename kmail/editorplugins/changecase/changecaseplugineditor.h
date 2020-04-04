@@ -20,9 +20,9 @@
 #ifndef ChangeCasePLUGINEDITOR_H
 #define ChangeCasePLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class ChangeCasePluginEditor : public MessageComposer::PluginEditor

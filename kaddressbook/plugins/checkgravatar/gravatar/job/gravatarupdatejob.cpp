@@ -20,7 +20,7 @@
 #include "gravatarupdatejob.h"
 #include "kaddressbook_checkgravatarplugin_debug.h"
 
-#include <gravatar/gravatarresolvurljob.h>
+#include <Gravatar/GravatarResolvUrlJob>
 
 #include <KContacts/Addressee>
 #include <AkonadiCore/ItemModifyJob>

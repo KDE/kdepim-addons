@@ -20,7 +20,7 @@
 #ifndef ANTIVIRUSPLUGIN_H
 #define ANTIVIRUSPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 

@@ -20,9 +20,9 @@
 #ifndef INSERTSPECIALCHARACTERPLUGINEDITOR_H
 #define INSERTSPECIALCHARACTERPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class InsertSpecialCharacterPluginEditor : public MessageComposer::PluginEditor

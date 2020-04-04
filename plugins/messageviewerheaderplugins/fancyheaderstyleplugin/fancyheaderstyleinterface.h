@@ -20,7 +20,7 @@
 #ifndef FANCYHEADERSTYLEINTERFACE_H
 #define FANCYHEADERSTYLEINTERFACE_H
 
-#include <messageviewer/headerstyleinterface.h>
+#include <MessageViewer/HeaderStyleInterface>
 
 namespace MessageViewer {
 class FancyHeaderStyleInterface : public MessageViewer::HeaderStyleInterface

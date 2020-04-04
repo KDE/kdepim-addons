@@ -2,9 +2,9 @@
 #ifndef %{JS: Cpp.headerGuard('%{HeaderPluginEditor}')}
 #define %{JS: Cpp.headerGuard('%{HeaderPluginEditor}')}
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class %{CN}PluginEditor : public MessageComposer::PluginEditor

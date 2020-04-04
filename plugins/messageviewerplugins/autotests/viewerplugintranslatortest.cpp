@@ -22,7 +22,7 @@
 #include <QTest>
 #include <KActionCollection>
 #include <QHBoxLayout>
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 
 ViewerPluginTranslatorTest::ViewerPluginTranslatorTest(QObject *parent)
     : QObject(parent)

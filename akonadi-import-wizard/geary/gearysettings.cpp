@@ -20,7 +20,7 @@
 #include "gearysettings.h"
 #include <ImportWizard/ImportWizardUtil>
 
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>

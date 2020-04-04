@@ -20,7 +20,7 @@
 #ifndef EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
 #define EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinitinterface.h>
+#include <MessageComposer/PluginEditorInitInterface>
 
 class ExternalComposerPluginEditorInterface : public MessageComposer::PluginEditorInitInterface
 {

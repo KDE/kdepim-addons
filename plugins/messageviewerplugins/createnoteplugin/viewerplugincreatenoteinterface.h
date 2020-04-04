@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINCREATENOTEINTERFACE_H
 #define VIEWERPLUGINCREATENOTEINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
 
 namespace MessageViewer {

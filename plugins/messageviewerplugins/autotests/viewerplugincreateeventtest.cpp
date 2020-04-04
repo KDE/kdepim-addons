@@ -22,7 +22,7 @@
 #include <KActionCollection>
 #include <QTest>
 #include <QStandardItemModel>
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 #include <QHBoxLayout>
 
 namespace MessageViewer {

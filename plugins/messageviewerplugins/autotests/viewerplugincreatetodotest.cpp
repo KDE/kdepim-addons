@@ -23,7 +23,7 @@
 #include <KActionCollection>
 #include <QHBoxLayout>
 #include <QStandardItemModel>
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 
 namespace MessageViewer {
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;

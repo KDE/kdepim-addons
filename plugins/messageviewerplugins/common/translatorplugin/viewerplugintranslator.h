@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINTRANSLATOR_H
 #define VIEWERPLUGINTRANSLATOR_H
 
-#include <messageviewer/viewerplugin.h>
+#include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer {
 class ViewerPluginTranslator : public MessageViewer::ViewerPlugin

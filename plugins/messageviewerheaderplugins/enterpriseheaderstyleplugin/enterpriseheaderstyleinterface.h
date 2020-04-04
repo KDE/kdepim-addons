@@ -20,7 +20,7 @@
 #ifndef ENTERPRISEHEADERSTYLEINTERFACE_H
 #define ENTERPRISEHEADERSTYLEINTERFACE_H
 
-#include <messageviewer/headerstyleinterface.h>
+#include <MessageViewer/HeaderStyleInterface>
 
 namespace MessageViewer {
 class EnterpriseHeaderStyleInterface : public MessageViewer::HeaderStyleInterface

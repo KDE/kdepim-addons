@@ -20,7 +20,7 @@
 #ifndef INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
 #define INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <QPointer>
 

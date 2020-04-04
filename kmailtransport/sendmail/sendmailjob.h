@@ -24,7 +24,7 @@
 #ifndef MAILTRANSPORT_SENDMAILJOB_H
 #define MAILTRANSPORT_SENDMAILJOB_H
 
-#include <mailtransport/transportjob.h>
+#include <MailTransport/TransportJob>
 
 #include <QProcess>
 

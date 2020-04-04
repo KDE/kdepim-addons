@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINEXPANDURLINTERFACE_H
 #define VIEWERPLUGINEXPANDURLINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 #include <QUrl>
 class KActionCollection;
 namespace MessageViewer {

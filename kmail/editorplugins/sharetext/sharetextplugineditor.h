@@ -20,9 +20,9 @@
 #ifndef SHARETEXTPLUGINEDITOR_H
 #define SHARETEXTPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditor.h>
+#include <MessageComposer/PluginEditor>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class ShareTextPluginEditor : public MessageComposer::PluginEditor

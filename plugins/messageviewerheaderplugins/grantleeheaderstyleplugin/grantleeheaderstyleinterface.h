@@ -20,7 +20,7 @@
 #ifndef GRANTLEEHEADERSTYLEINTERFACE_H
 #define GRANTLEEHEADERSTYLEINTERFACE_H
 
-#include <messageviewer/headerstyleinterface.h>
+#include <MessageViewer/HeaderStyleInterface>
 
 namespace GrantleeTheme {
 class ThemeManager;

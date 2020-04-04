@@ -20,7 +20,7 @@
 #ifndef NONBREAKINGSPACEPLUGINEDITORINTERFACE_H
 #define NONBREAKINGSPACEPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 
 class NonBreakingSpacePluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

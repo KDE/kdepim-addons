@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINCREATETODOINTERFACE_H
 #define VIEWERPLUGINCREATETODOINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 #include <KCalendarCore/Todo>
 #include <AkonadiCore/Collection>
 class KActionCollection;

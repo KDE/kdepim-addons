@@ -21,7 +21,7 @@
 #include "translatorview.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <pimcommon/customtoolswidgetng.h>
+#include <PimCommon/CustomToolsWidgetng>
 
 K_PLUGIN_CLASS_WITH_JSON(TranslatorPlugin, "pimcommon_translatorplugin.json")
 TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)

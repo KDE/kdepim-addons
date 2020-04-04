@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINCREATEEVENTINTERFACE_H
 #define VIEWERPLUGINCREATEEVENTINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 #include <KCalendarCore/Event>
 class KActionCollection;
 namespace MessageViewer {

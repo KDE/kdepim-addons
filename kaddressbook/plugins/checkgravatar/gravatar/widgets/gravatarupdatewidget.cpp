@@ -25,7 +25,7 @@
 #include <QPushButton>
 #include <QCheckBox>
 
-#include <gravatar/gravatarresolvurljob.h>
+#include <Gravatar/GravatarResolvUrlJob>
 
 #include <kio/transferjob.h>
 

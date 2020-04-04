@@ -20,9 +20,9 @@
 #ifndef EXTERNALCOMPOSERPLUGINEDITOR_H
 #define EXTERNALCOMPOSERPLUGINEDITOR_H
 
-#include <messagecomposer/plugineditorinit.h>
+#include <MessageComposer/PluginEditorInit>
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QVariant>
 
 class ExternalComposerPluginEditor : public MessageComposer::PluginEditorInit

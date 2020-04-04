@@ -19,7 +19,7 @@
 
 #include "grantleeheaderstyleinterface.h"
 #include "grantleeheaderstyleplugin.h"
-#include <messageviewer/grantleeheaderstyle.h>
+#include <MessageViewer/GrantleeHeaderStyle>
 #include "grantleeheaderstrategy.h"
 
 #include <KPluginFactory>

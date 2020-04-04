@@ -20,7 +20,7 @@
 #ifndef CHECKGRAVATARPLUGIN_H
 #define CHECKGRAVATARPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 

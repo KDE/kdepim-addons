@@ -21,7 +21,7 @@
 #include "operaplugin_debug.h"
 #include <MailImporter/FilterOpera>
 
-#include <mailtransport/transportmanager.h>
+#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>

@@ -20,7 +20,7 @@
 #include "grantleeheaderstyleinterface.h"
 #include <MessageViewer/HeaderStylePlugin>
 #include <MessageViewer/HeaderStyle>
-#include <grantleetheme/grantleethememanager.h>
+#include <GrantleeTheme/GrantleeThemeManager>
 #include <KToggleAction>
 
 using namespace MessageViewer;

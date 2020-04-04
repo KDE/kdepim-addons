@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINTRANSLATORINTERFACE_H
 #define VIEWERPLUGINTRANSLATORINTERFACE_H
 
-#include <messageviewer/viewerplugininterface.h>
+#include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
 namespace PimCommon {
 class TranslatorWidget;

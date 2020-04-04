@@ -20,7 +20,7 @@
 #ifndef INSERTSHORTURLPLUGINEDITORINTERFACE_H
 #define INSERTSHORTURLPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 #include <QHash>
 class ShortUrlEngineInterface;
 class InsertShorturlPluginEditorInterface : public MessageComposer::PluginEditorInterface

@@ -20,7 +20,7 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPT_H
 #define VIEWERPLUGINEXTERNALSCRIPT_H
 
-#include <messageviewer/viewerplugin.h>
+#include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer {
 class ViewerPluginExternalscript : public MessageViewer::ViewerPlugin

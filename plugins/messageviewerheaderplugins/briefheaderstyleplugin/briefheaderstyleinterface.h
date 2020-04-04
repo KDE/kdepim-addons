@@ -20,7 +20,7 @@
 #ifndef BRIEFHEADERSTYLEINTERFACE_H
 #define BRIEFHEADERSTYLEINTERFACE_H
 
-#include <messageviewer/headerstyleinterface.h>
+#include <MessageViewer/HeaderStyleInterface>
 
 class KActionCollection;
 namespace MessageViewer {

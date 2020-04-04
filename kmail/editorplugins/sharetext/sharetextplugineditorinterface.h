@@ -20,7 +20,7 @@
 #ifndef SHARETEXTPLUGINEDITORINTERFACE_H
 #define SHARETEXTPLUGINEDITORINTERFACE_H
 
-#include <messagecomposer/plugineditorinterface.h>
+#include <MessageComposer/PluginEditorInterface>
 
 class ShareTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

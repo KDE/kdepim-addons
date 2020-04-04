@@ -20,7 +20,7 @@
 #ifndef SEARCHDUPLICATESPLUGIN_H
 #define SEARCHDUPLICATESPLUGIN_H
 
-#include <pimcommon/genericplugin.h>
+#include <PimCommon/GenericPlugin>
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
