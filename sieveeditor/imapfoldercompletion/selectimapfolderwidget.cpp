@@ -119,7 +119,11 @@ void SelectImapFolderWidget::createFolder()
 {
     const QModelIndex index = mTreeView->currentIndex();
     if (index.isValid()) {
-        const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"));
+        bool ok = false;
+        const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"), {}, {}, &ok);
+	if (!ok) {
+           return;
+	}
         if (!name.trimmed().isEmpty()) {
             const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
             if (name.contains(QLatin1Char('/'))) {
@@ -128,6 +132,8 @@ void SelectImapFolderWidget::createFolder()
             }
             //TODO more check for folder name ?
             SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
+        } else {
+            KMessageBox::error(this, i18n("Empty folder name is not supported."), i18n("Create Folder"));
         }
     }
 }
