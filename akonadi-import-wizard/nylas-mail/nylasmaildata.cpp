@@ -65,7 +65,7 @@ bool NylasMailImportData::importSettings()
     /*
     const QString configName = QStringLiteral("NylasMail.ini");
     for (int i = 0; i < lstDir.count(); ++i) {
-        const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
+        const QString fullPath = lstDir.at(i) + QLatin1Char('/') + configName;
         if (QFileInfo::exists(fullPath)) {
             NylasMailSettings setting(fullPath);
             setting.setAbstractDisplayInfo(mAbstractDisplayInfo);

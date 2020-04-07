@@ -65,7 +65,7 @@ bool GearyImportData::importSettings()
     qCDebug(GEARYPLUGIN_LOG) << "Number of directory " << lstDir.count();
     const QString configName = QStringLiteral("geary.ini");
     for (int i = 0; i < lstDir.count(); ++i) {
-        const QString fullPath = lstDir.at(i) + QDir::separator() + configName;
+        const QString fullPath = lstDir.at(i) + QLatin1Char('/') + configName;
         if (QFileInfo::exists(fullPath)) {
             GearySettings setting(fullPath);
             setting.setAbstractDisplayInfo(mAbstractDisplayInfo);
