@@ -142,8 +142,8 @@ public:
                     if (attFileName.isEmpty()) {
                         attFileName = att->name();
                     }
-                    mp->nodeHelper()->addTempFile(dir + QDir::separator() + attFileName);
-                    const QString href = QLatin1String("file:") + dir + QDir::separator() + attFileName;
+                    mp->nodeHelper()->addTempFile(dir + QLatin1Char('/') + attFileName);
+                    const QString href = QLatin1String("file:") + dir + QLatin1Char('/') + attFileName;
 
                     const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
                                                                                                           KIconLoader::Desktop, attFileName)).url();
