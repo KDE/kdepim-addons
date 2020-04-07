@@ -83,11 +83,7 @@ EventEdit::EventEdit(QWidget *parent)
 #endif
     mCollectionCombobox->setToolTip(i18n("Calendar where the new event will be stored"));
 
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
-#else
-    connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &EventEdit::slotCollectionChanged);
-#endif
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::activated), this, &EventEdit::slotCollectionChanged);
 
     connect(mCollectionCombobox->model(), &QAbstractItemModel::rowsInserted, this, &EventEdit::comboboxRowInserted);
