@@ -60,11 +60,7 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     mCollectionCombobox->setObjectName(QStringLiteral("akonadicombobox"));
     hlay->addWidget(mCollectionCombobox);
     hlay->addStretch(1);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &AutomaticAddContactsTabWidget::configureChanged);
-#else
-    connect(mCollectionCombobox, qOverload<int, const QString &>(&Akonadi::CollectionComboBox::currentIndexChanged), this, &AutomaticAddContactsTabWidget::configureChanged);
-#endif
     connect(mCollectionCombobox, qOverload<int>(&Akonadi::CollectionComboBox::activated), this, &AutomaticAddContactsTabWidget::configureChanged);
 
     mainLayout->addStretch(1);
