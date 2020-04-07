@@ -140,7 +140,7 @@ public:
             } else {
                 QImage img = a.photo().data();
                 const QString dir = msgPart->nodeHelper()->createTempDir(QLatin1String("vcard-") + a.uid());
-                const QString filename = dir + QDir::separator() + a.uid();
+                const QString filename = dir + QLatin1Char('/') + a.uid();
                 img.save(filename, "PNG");
                 msgPart->nodeHelper()->addTempFile(filename);
                 const QString href = QLatin1String("file:") + QLatin1String(QUrl::toPercentEncoding(filename));
