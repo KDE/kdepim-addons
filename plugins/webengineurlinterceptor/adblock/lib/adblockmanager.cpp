@@ -81,7 +81,8 @@ void AdblockManager::loadSubscriptions()
         QDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)).mkdir(QStringLiteral("adblock"));
     }
 
-    for (const QString &fileName : adblockDir.entryList(QStringList() << QStringLiteral("*.txt"), QDir::Files)) {
+    const QStringList files = adblockDir.entryList(QStringList() << QStringLiteral("*.txt"), QDir::Files);
+    for (const QString &fileName : files) {
         if (fileName == QLatin1String("customlist.txt")) {
             continue;
         }
