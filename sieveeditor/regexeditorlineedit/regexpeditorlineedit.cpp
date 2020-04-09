@@ -79,7 +79,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     if (s_regexpeditorinstalled->status == InfoRegExp::Installed) {
         connect(mRegExpEditorButton, &QToolButton::clicked, this, &RegexpEditorLineEdit::slotOpenRegexpEditor);
     } else {
-        qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
+        qCDebug(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
     }
     //Hidden by default
     mRegExpEditorButton->setVisible(false);
