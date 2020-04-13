@@ -16,6 +16,7 @@
         "Name[pl]": "Program Akonadi żądający adresu pocztowego dla biblioteki przetwarzania szablonów",
         "Name[pt]": "Pedido de Endereço de E-Mail para o Processador de Modelos do Akonadi",
         "Name[pt_BR]": "Pedido de endereço de e-mail para a biblioteca do processador de modelos do Akonadi",
+        "Name[ru]": "Инициатор запроса адреса эл. почты для библиотеки разбора шаблонов",
         "Name[sv]": "Akonadi e-postadressbegäran för malltolkbibliotek",
         "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти Akonadi для бібліотеки обробки шаблонів",
         "Name[x-test]": "xxEmail Address Akonadi Requester for Template Parser libraryxx",
