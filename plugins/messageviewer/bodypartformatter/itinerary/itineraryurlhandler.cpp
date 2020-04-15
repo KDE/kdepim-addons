@@ -86,7 +86,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
         auto idx = path.midRef(15).toInt();
         m->toggleExpanded(idx);
         const auto nodeHelper = part->nodeHelper();
-        emit nodeHelper->update(MimeTreeParser::Delayed);
+        Q_EMIT nodeHelper->update(MimeTreeParser::Delayed);
         return true;
     }
 
