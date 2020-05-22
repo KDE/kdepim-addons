@@ -160,7 +160,7 @@ public:
                               +QStringLiteral("</a></div><br/><br/>"));
             } else {
                 if (memento->address(count) != a) {
-                    const QString addToLinkText = i18n("[Update this contact to the address book]");
+                    const QString addToLinkText = i18n("[Update this contact in the address book]");
                     const QString op = QStringLiteral("updateToAddressBook:%1").arg(count);
                     writer->write(QStringLiteral("<div align=\"center\"><a href=\"")
                                   +msgPart->makeLink(op)

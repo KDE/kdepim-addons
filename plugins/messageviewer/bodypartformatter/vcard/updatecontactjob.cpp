@@ -77,7 +77,7 @@ void UpdateContactJob::slotUpdateContactDone(KJob *job)
         return;
     }
 
-    const QString text = i18n("The vCard was updated to your address book; "
+    const QString text = i18n("The vCard was updated in your address book; "
                               "you can add more information to this "
                               "entry by opening the address book.");
     KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("updatedtokabc"));
