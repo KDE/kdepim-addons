@@ -97,7 +97,7 @@ public:
             }
             if (!memento) {
                 if (!a.emails().isEmpty()) {
-                    lst.append(a.emails().first());
+                    lst.append(a.emails().constFirst());
                     count++;
                 }
             }
@@ -211,7 +211,7 @@ public:
             KPIM::AddContactJob *job = new KPIM::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
-            UpdateContactJob *job = new UpdateContactJob(a.emails().first(), a, nullptr);
+            UpdateContactJob *job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
             job->start();
         }
 

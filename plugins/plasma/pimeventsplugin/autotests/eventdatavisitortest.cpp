@@ -181,7 +181,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
         }
         QTest::newRow(qPrintable(testData)) << parser.rangeStart()
                                             << parser.rangeEnd()
-                                            << parser.eventData().first()
+                                            << parser.eventData().constFirst()
                                             << parser.incidence()
                                             << parser.akonadiId()
                                             << parser.eventData();

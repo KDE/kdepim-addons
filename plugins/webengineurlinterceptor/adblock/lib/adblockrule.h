@@ -149,11 +149,11 @@ private:
 
     Q_DECLARE_FLAGS(RuleOptions, RuleOption)
 
-    inline bool hasOption(const RuleOption &opt) const;
-    inline bool hasException(const RuleOption &opt) const;
+    inline bool hasOption(RuleOption opt) const;
+    inline bool hasException(RuleOption opt) const;
 
-    inline void setOption(const RuleOption &opt);
-    inline void setException(const RuleOption &opt, bool on);
+    inline void setOption(RuleOption opt);
+    inline void setException(RuleOption opt, bool on);
 
     void parseFilter();
     void parseDomains(const QString &domains, QChar separator);

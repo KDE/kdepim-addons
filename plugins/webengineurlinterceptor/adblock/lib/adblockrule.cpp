@@ -747,22 +747,22 @@ QStringList AdBlockRule::parseRegExpFilter(const QString &filter) const
     return list;
 }
 
-bool AdBlockRule::hasOption(const AdBlockRule::RuleOption &opt) const
+bool AdBlockRule::hasOption(AdBlockRule::RuleOption opt) const
 {
     return m_options & opt;
 }
 
-bool AdBlockRule::hasException(const AdBlockRule::RuleOption &opt) const
+bool AdBlockRule::hasException(AdBlockRule::RuleOption opt) const
 {
     return m_exceptions & opt;
 }
 
-void AdBlockRule::setOption(const AdBlockRule::RuleOption &opt)
+void AdBlockRule::setOption(AdBlockRule::RuleOption opt)
 {
     m_options |= opt;
 }
 
-void AdBlockRule::setException(const AdBlockRule::RuleOption &opt, bool on)
+void AdBlockRule::setException(AdBlockRule::RuleOption opt, bool on)
 {
     if (on) {
         m_exceptions |= opt;

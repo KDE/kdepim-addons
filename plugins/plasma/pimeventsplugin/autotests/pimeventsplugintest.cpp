@@ -107,7 +107,7 @@ void PimEventsPluginTest::testLoadEventsForDataRange()
 
     plugin.loadEventsForDateRange(QDate(2016, 5, 1), QDate(2016, 5, 31));
     QCOMPARE(dataReadySpy.size(), 1);
-    const auto results = dataReadySpy.takeFirst().first().value<DateEventDataHash>();
+    const auto results = dataReadySpy.takeFirst().constFirst().value<DateEventDataHash>();
     QVERIFY(compareEventDataHashes(results, expectedData));
 
     plugin.loadEventsForDateRange(QDate(2016, 1, 1), QDate(2016, 1, 30));
