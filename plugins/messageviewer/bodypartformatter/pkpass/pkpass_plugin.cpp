@@ -32,6 +32,7 @@
 
 #include <prison/Prison>
 
+#include <QGuiApplication>
 #include <QUrl>
 #include <QImage>
 #include <QMetaProperty>
@@ -126,10 +127,9 @@ public:
 
             if (code) {
                 code->setData(barcode.message());
-                code->toImage(code->minimumSize()); // minimumSize is only available after we rendered once...
 
                 const QString fileName = dir + QStringLiteral("/barcode.png");
-                code->toImage(code->minimumSize()).save(fileName);
+                code->toImage(code->preferredSize(qGuiApp->devicePixelRatio())).save(fileName);
 
                 pass->setProperty("barcodeUrl", QUrl::fromLocalFile(fileName));
                 mp->nodeHelper()->addTempFile(fileName);
