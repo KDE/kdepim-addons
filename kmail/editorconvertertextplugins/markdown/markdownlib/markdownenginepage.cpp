@@ -20,7 +20,6 @@
 #include "markdownenginepage.h"
 #include <QWebEngineSettings>
 #include <QWebEngineProfile>
-#include <qtwebenginewidgetsversion.h>
 
 MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     : QWebEnginePage(parent)
@@ -49,9 +48,7 @@ MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     settings()->setAttribute(QWebEngineSettings::PlaybackRequiresUserGesture, false);
     settings()->setAttribute(QWebEngineSettings::JavascriptCanPaste, false);
     settings()->setAttribute(QWebEngineSettings::WebRTCPublicInterfacesOnly, false);
-#if QTWEBENGINEWIDGETS_VERSION >= QT_VERSION_CHECK(5, 13, 0)
     settings()->setAttribute(QWebEngineSettings::PdfViewerEnabled, false);
-#endif
     profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
 }
 
