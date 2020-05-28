@@ -54,7 +54,13 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QListWidgetItem>
 #include <QPointer>
 #include <QStandardPaths>
+#include <kio_version.h>
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
+#include <KIO/JobUiDelegate>
+#include <KIO/OpenUrlJob>
+#else
 #include <KRun>
+#endif
 #include <adblocksubscription.h>
 
 using namespace AdBlock;
@@ -168,7 +174,13 @@ bool AdBlockSettingWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::WhatsThisClicked) {
         QWhatsThisClickedEvent *clicked = static_cast<QWhatsThisClickedEvent *>(event);
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
+        KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl(clicked->href()));
+        job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
+        job->start();
+#else
         new KRun(QUrl(clicked->href()), this);
+#endif
         return true;
     }
     return QWidget::event(event);

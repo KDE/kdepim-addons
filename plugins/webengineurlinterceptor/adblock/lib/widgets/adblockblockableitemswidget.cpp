@@ -23,7 +23,13 @@
 #include "adblockutil.h"
 #include "adblockmanager.h"
 #include <WebEngineViewer/WebEngineScript>
-#include <KIOWidgets/KRun>
+#include <kio_version.h>
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
+#include <KIO/JobUiDelegate>
+#include <KIO/OpenUrlJob>
+#else
+#include <KRun>
+#endif
 #include <QVBoxLayout>
 #include <KLocalizedString>
 #include <CustomTreeView>
@@ -157,8 +163,15 @@ void AdBlockBlockableItemsWidget::slotOpenItem()
         return;
     }
     const QUrl url(item->text(Url));
+#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
+    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(url);
+    job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
+    job->setRunExecutables(false);
+    job->start();
+#else
     KRun *runner = new KRun(url, this);   // will delete itself
     runner->setRunExecutables(false);
+#endif
 }
 
 void AdBlockBlockableItemsWidget::slotBlockItem()
