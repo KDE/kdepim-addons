@@ -19,6 +19,7 @@
 
 #include "sendvcardsjob.h"
 #include "sendvcardsplugininterface.h"
+#include "kaddressbook_sendvcardsplugin_debug.h"
 
 #include <KMessageBox>
 #include <KLocalizedString>
@@ -27,7 +28,6 @@
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
-    , mAction(nullptr)
 {
 }
 
@@ -73,7 +73,9 @@ void SendVcardsPluginInterface::exec()
     if (!mListItems.isEmpty()) {
         KABSendVCards::SendVcardsJob *sendVcards = new KABSendVCards::SendVcardsJob(mListItems, this);
         connect(sendVcards, &KABSendVCards::SendVcardsJob::sendVCardsError, this, &SendVcardsPluginInterface::slotSendVcardsError);
-        sendVcards->start();
+        if (!sendVcards->start()) {
+            qCDebug(KADDRESSBOOK_SENDVCARDS_LOG) << "Impossible to send vcard";
+        }
     }
 }
 

@@ -46,7 +46,8 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
     }
 
     QVector<Device> devices;
-    for (const QString &deviceId : reply.value()) {
+    const auto values = reply.value();
+    for (const QString &deviceId : values) {
         QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
         QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1String("kdeconnect_share"));
 

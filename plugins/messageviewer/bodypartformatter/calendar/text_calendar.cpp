@@ -465,6 +465,7 @@ public:
                 selectMessage
                     = i18n("<qt>Several of your identities match the receiver of this message,<br/>"
                            "please choose which of the following addresses is yours:</qt>");
+                possibleAddrs.reserve(addrs.count() + ccaddrs.count());
                 for (const KMime::Types::Mailbox &mbx : qAsConst(addrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }

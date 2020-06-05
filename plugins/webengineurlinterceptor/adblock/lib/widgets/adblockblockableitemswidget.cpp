@@ -55,7 +55,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     mListItems->setContextMenuPolicy(Qt::CustomContextMenu);
     mListItems->setAlternatingRowColors(true);
     mListItems->setRootIsDecorated(false);
-    connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::customContextMenuRequested);
+    connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::slotCustomContextMenuRequested);
 
     const QStringList lst = {i18n("Filter"), i18n("Address"), i18n("Type")};
     mListItems->setHeaderLabels(lst);
@@ -110,7 +110,7 @@ void AdBlockBlockableItemsWidget::saveFilters()
     }
 }
 
-void AdBlockBlockableItemsWidget::customContextMenuRequested(const QPoint &)
+void AdBlockBlockableItemsWidget::slotCustomContextMenuRequested(const QPoint &)
 {
     QTreeWidgetItem *item = mListItems->currentItem();
     if (!item) {

@@ -78,7 +78,7 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         mPluginList.push_back(info);
         unique.insert(info.metaDataFileNameBaseName);
     }
-    QVector<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
+    const QVector<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
     for (QVector<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
         loadPlugin(&(*it));
     }

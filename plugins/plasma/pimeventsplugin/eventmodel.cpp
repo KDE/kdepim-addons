@@ -58,7 +58,7 @@ void EventModel::createMonitor()
         // This is super-ugly, but the only way how to insert into CalendarBase
         // without having direct access to CalendarBasePrivate.
         // changeId is luckily ignored by CalendarBase.
-        incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+        Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
     connect(mMonitor, &Akonadi::Monitor::itemChanged,
             this, [this](const Akonadi::Item &item) {
