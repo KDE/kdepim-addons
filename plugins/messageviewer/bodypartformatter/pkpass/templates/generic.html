@@ -1,0 +1,96 @@
+<a name="att{{block.attachmentIndex}}"></a>
+<div id="attachmentDiv{{block.attachmentIndex}}">
+
+<div style="
+    background-color: {{ pass.backgroundColorName }};
+    color: {{ pass.foregroundColorName }};
+    padding:12px;
+    border-radius:10px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 332px;
+">
+<!-- header -->
+<div>
+    <table style="border-collapse: collapse;">
+        <tr>
+            <td rowspan="2" style="vertical-align:center;">
+            {% if pass.logoUrl %}
+                <img src="{{ pass.logoUrl }}" style="max-width:160px; max-height:50px;"/>
+            {% endif %}
+            </td>
+            <td rowspan="2" style="vertical-align:center; font-size:120%; font-weight:bold; width:100%;">{{ pass.logoText }}</td>
+        {% for field in pass.headerFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr>
+        {% for field in pass.headerFields %}
+            <td style="font-size: 120%; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<hr/>
+<div>
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.primaryFields%}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        {% if pass.thumbnailUrl %}
+            <td rowspan="2"><img src="{{ pass.thumbnailUrl }}"/></td>
+        {% endif %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.primaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- secondary fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.secondaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.secondaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- auxiliaryFields fields -->
+<div style="padding-top:4px;">
+    <table style="width:100%; border-collapse: collapse;">
+        <tr>
+        {% for field in pass.auxiliaryFields %}
+            <td style="white-space: nowrap; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ field.label }}</td>
+        {% endfor %}
+        </tr><tr style="font-size: 120%;">
+        {% for field in pass.auxiliaryFields %}
+            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+        {% endfor %}
+        </tr>
+    </table>
+</div>
+<!-- barcode -->
+{% include "org.kde.messageviewer/pkpass/barcode.html" %}
+<!-- footer -->
+{% if pass.footerUrl %}
+<div style="margin-top: 10px;">
+    <center><img src="{{ pass.footerUrl }}"/></center>
+</div>
+{% endif %}
+<!-- back fields -->
+<hr/>
+{% for field in pass.backFields %}
+    <div style="color: {{ pass.labelColorName }};">{{ field.label }}</div>
+    <div>{{ field.value|safe|linebreaksbr }}</div>
+{% endfor %}
+</div> <!-- pass background -->
+
+</div> <!-- attachment container -->

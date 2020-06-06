@@ -3,5 +3,6 @@
         <file alias="barcode.html">templates/barcode.html</file>
         <file alias="boardingpass.html">templates/boardingpass.html</file>
         <file alias="eventticket.html">templates/eventticket.html</file>
+        <file alias="generic.html">templates/generic.html</file>
     </qresource>
 </RCC>

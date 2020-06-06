@@ -109,6 +109,13 @@ public:
             pass->setProperty("footerUrl", QUrl::fromLocalFile(fileName));
             mp->nodeHelper()->addTempFile(fileName);
         }
+        const auto thumbnail = pass->thumbnail();
+        if (!thumbnail.isNull()) {
+            const QString fileName = dir + QStringLiteral("/thumbnail.png");
+            thumbnail.save(fileName);
+            pass->setProperty("thumbnailUrl", QUrl::fromLocalFile(fileName));
+            mp->nodeHelper()->addTempFile(fileName);
+        }
 
         const auto barcodes = pass->barcodes();
         if (!barcodes.isEmpty()) {
@@ -150,6 +157,8 @@ public:
             t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/boardingpass.html"));
         } else if (pass->type() == KPkPass::Pass::EventTicket) {
             t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/eventticket.html"));
+        } else if (pass->type() == KPkPass::Pass::Generic) {
+            t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/generic.html"));
         } else {
             // unknown pass type we have no template for
             return false;
