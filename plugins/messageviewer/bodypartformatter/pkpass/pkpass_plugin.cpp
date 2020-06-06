@@ -150,6 +150,9 @@ public:
             t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/boardingpass.html"));
         } else if (pass->type() == KPkPass::Pass::EventTicket) {
             t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/pkpass/eventticket.html"));
+        } else {
+            // unknown pass type we have no template for
+            return false;
         }
 
         Grantlee::OutputStream s(htmlWriter->stream());
