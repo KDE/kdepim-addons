@@ -22,8 +22,6 @@
 
 #include <ImportWizard/AbstractSettings>
 
-class QSettings;
-
 class NylasMailSettings : public AbstractSettings
 {
 public:
@@ -35,7 +33,6 @@ private:
     void readIdentity();
     void readGlobalSettings();
     void readTransport();
-    QSettings *settings = nullptr;
 };
 
 #endif // ClawsMailSettings_H

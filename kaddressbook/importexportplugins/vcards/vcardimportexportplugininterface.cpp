@@ -302,7 +302,8 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
 
         if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
             QStringList exportFields;
-            for (const QString &customStr : (*it).customs()) {
+            const QStringList customs = (*it).customs();
+            for (const QString &customStr : customs) {
                 if (!customStr.startsWith(QLatin1String("X-GCALENDAR-groupMembershipInfo"))) {
                     exportFields.append(customStr);
                 }

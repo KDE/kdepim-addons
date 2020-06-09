@@ -206,7 +206,7 @@ static const QStringList assignedCategoriesSorted(const KContacts::AddresseeList
 
 void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::AddresseeList &list) const
 {
-    if (!fp || !list.count()) {
+    if (!fp || list.isEmpty()) {
         return;
     }
 

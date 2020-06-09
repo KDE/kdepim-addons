@@ -35,6 +35,7 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
     QStringList lst;
     const QJsonArray array = obj[QStringLiteral("aSuggestions")].toArray();
     const QVariantList list = array.toVariantList();
+    lst.reserve(list.count());
     for (const QVariant &v : list) {
         //qDebug() << " v" << v.toString();
         lst.append(v.toString());
@@ -50,7 +51,7 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
         return col;
     }
     if (array.count() == 3) {
-        const QVariantList list = array.toVariantList();
+        //const QVariantList list = array.toVariantList();
 //        for (const QVariant &v : list) {
 //            qDebug() << " v" << v.toInt();
 //        }

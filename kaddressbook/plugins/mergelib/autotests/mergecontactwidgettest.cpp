@@ -65,6 +65,7 @@ MergeContactWidgetTest::MergeContactWidgetTest()
 Akonadi::Item::List MergeContactWidgetTest::createItems()
 {
     Akonadi::Item::List lst;
+    lst.reserve(10);
     for (int i = 0; i < 10; ++i) {
         Akonadi::Item item(i);
         KContacts::Addressee address;

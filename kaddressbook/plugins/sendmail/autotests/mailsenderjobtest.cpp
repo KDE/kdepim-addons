@@ -33,7 +33,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenWeDontSelectItem()
 {
     Akonadi::Item::List lst;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 0);
 }
@@ -44,7 +44,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenNoValidAddressItem()
     Akonadi::Item item;
     lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 0);
 }
@@ -58,7 +58,7 @@ void MailSenderJobTest::shouldNotSendSignalWhenNoEmails()
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 0);
 }
@@ -73,7 +73,7 @@ void MailSenderJobTest::shouldSendSignalWhenOneEmail()
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 1);
     const QStringList resultLst = spy.at(0).at(0).toStringList();
@@ -90,7 +90,7 @@ void MailSenderJobTest::shouldNotSendTwiceEmails()
     item.setPayload<KContacts::Addressee>(address);
     lst << item << item;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     const QStringList resultLst = spy.at(0).at(0).toStringList();
     QCOMPARE(resultLst.count(), 1);
@@ -107,7 +107,7 @@ void MailSenderJobTest::shouldNotAddInvalidEmail()
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 0);
 }
@@ -145,7 +145,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     lst << item4;
 
     KABMailSender::MailSenderJob mailsender(lst);
-    QSignalSpy spy(&mailsender, SIGNAL(sendMails(QStringList)));
+    QSignalSpy spy(&mailsender, &KABMailSender::MailSenderJob::sendMails);
     mailsender.start();
     QCOMPARE(spy.count(), 1);
     const QStringList resultLst = spy.at(0).at(0).toStringList();
