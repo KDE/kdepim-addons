@@ -13,5 +13,5 @@ kcoreaddons_add_plugin(emailaddressselectionldapdialogplugin JSON emailaddressse
     ${emailaddressselectionldapdialog_SRCS} INSTALL_NAMESPACE akonadi)
 
 target_link_libraries(emailaddressselectionldapdialogplugin
-    KF5::I18n KF5::AkonadiContact KF5::Libkdepim
+    KF5::I18n KF5::AkonadiContact KF5::PimCommonAkonadi
     )

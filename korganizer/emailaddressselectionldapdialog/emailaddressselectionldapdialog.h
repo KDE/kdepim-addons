@@ -24,7 +24,7 @@ namespace Akonadi {
 class RecipientsPickerWidget;
 }
 
-namespace KLDAP {
+namespace PimCommon {
 class LdapSearchDialog;
 }
 
@@ -43,7 +43,7 @@ private:
     void slotSearchLDAP();
     void ldapSearchResult();
     Akonadi::RecipientsPickerWidget *mView = nullptr;
-    KLDAP::LdapSearchDialog *mLdapSearchDialog = nullptr;
+    PimCommon::LdapSearchDialog *mLdapSearchDialog = nullptr;
 };
 
 #endif // EMAILADDRESSSELECTIONLDAPDIALOG_H

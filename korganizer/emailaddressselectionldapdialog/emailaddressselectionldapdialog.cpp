@@ -22,7 +22,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <Libkdepim/LdapSearchDialog>
+#include <PimCommonAkonadi/LdapSearchDialog>
 #include <QBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
@@ -97,8 +97,8 @@ Akonadi::EmailAddressSelectionWidget *EmailAddressSelectionLdapDialog::view() co
 void EmailAddressSelectionLdapDialog::slotSearchLDAP()
 {
     if (!mLdapSearchDialog) {
-        mLdapSearchDialog = new KLDAP::LdapSearchDialog(this);
-        connect(mLdapSearchDialog, &KLDAP::LdapSearchDialog::contactsAdded, this, &EmailAddressSelectionLdapDialog::ldapSearchResult);
+        mLdapSearchDialog = new PimCommon::LdapSearchDialog(this);
+        connect(mLdapSearchDialog, &PimCommon::LdapSearchDialog::contactsAdded, this, &EmailAddressSelectionLdapDialog::ldapSearchResult);
     }
 
     mLdapSearchDialog->setSearchText(mView->emailAddressSelectionWidget()->searchLineEdit()->text());

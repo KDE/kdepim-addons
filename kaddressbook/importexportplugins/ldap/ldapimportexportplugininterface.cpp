@@ -22,7 +22,7 @@
 #include <KActionCollection>
 #include <QAction>
 #include <QPointer>
-#include <Libkdepim/LdapSearchDialog>
+#include <PimCommonAkonadi/LdapSearchDialog>
 #include "../shared/importexportengine.h"
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
@@ -63,7 +63,7 @@ void LDapImportExportPluginInterface::slotImportLdap()
 void LDapImportExportPluginInterface::importLdap()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
-    QPointer<KLDAP::LdapSearchDialog> dlg = new KLDAP::LdapSearchDialog(parentWidget());
+    QPointer<PimCommon::LdapSearchDialog> dlg = new PimCommon::LdapSearchDialog(parentWidget());
 
     if (dlg->exec()) {
         contactList.setAddressList(dlg->selectedContacts());
