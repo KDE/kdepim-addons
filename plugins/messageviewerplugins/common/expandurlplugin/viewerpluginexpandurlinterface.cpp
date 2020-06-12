@@ -25,7 +25,7 @@
 
 #include <QAction>
 
-#include <BroadcastStatus>
+#include <PimCommon/BroadcastStatus>
 #include <KActionCollection>
 #include <KLocalizedString>
 
@@ -53,7 +53,7 @@ void ViewerPluginExpandurlInterface::execute()
             MessageViewer::ScamExpandUrlJob *job = new MessageViewer::ScamExpandUrlJob(this);
             job->expandedUrl(mCurrentUrl);
         } else {
-            KPIM::BroadcastStatus ::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));
+            PimCommon::BroadcastStatus::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));
         }
     } else {
         qCWarning(EXPANDURLPLUGIN_LOG) << "Url is not valid";
