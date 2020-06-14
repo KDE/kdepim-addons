@@ -69,13 +69,8 @@ using namespace KCalendarCore;
 #include "text_calendar_debug.h"
 
 #include <KMessageBox>
-#include <kio_version.h>
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
-#else
-#include <KRun>
-#endif
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>
 #include <KLocalizedString>
@@ -1055,15 +1050,9 @@ public:
             file->write(QByteArray::fromBase64(attachment.data()));
             file->close();
 
-#if KIO_VERSION >= QT_VERSION_CHECK(5, 71, 0)
             KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(file->fileName()), attachment.mimeType());
             job->setDeleteTemporaryFile(true);
             job->start();
-#else
-            KRun::RunFlags flags;
-            flags |= KRun::DeleteTemporaryFiles;
-            KRun::runUrl(QUrl::fromLocalFile(file->fileName()), attachment.mimeType(), nullptr, flags);
-#endif
             delete file;
         }
     }
