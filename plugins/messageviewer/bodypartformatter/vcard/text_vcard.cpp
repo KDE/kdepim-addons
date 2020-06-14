@@ -48,7 +48,7 @@
 #include <MimeTreeParser/NodeHelper>
 using MimeTreeParser::Interface::BodyPart;
 
-#include <LibkdepimAkonadi/AddContactJob>
+#include <Akonadi/Contact/AddContactJob>
 
 #include <Akonadi/Contact/ContactViewer>
 #include <Akonadi/Contact/StandardContactFormatter>
@@ -208,7 +208,7 @@ public:
         }
 
         if (path.startsWith(QLatin1String("addToAddressBook"))) {
-            KPIM::AddContactJob *job = new KPIM::AddContactJob(a, nullptr);
+            Akonadi::AddContactJob *job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
             UpdateContactJob *job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
