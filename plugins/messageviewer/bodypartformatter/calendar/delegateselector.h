@@ -23,7 +23,7 @@
 
 #include <QDialog>
 class QPushButton;
-namespace KPIM {
+namespace PimCommon {
 class AddresseeLineEdit;
 }
 
@@ -39,11 +39,11 @@ class DelegateSelector : public QDialog
 public:
     explicit DelegateSelector(QWidget *parent = nullptr);
 
-    QString delegate() const;
-    bool rsvp() const;
+    Q_REQUIRED_RESULT QString delegate() const;
+    Q_REQUIRED_RESULT bool rsvp() const;
 private:
     void slotTextChanged(const QString &text);
-    KPIM::AddresseeLineEdit *mDelegate = nullptr;
+    PimCommon::AddresseeLineEdit *mDelegate = nullptr;
     QCheckBox *mRsvp = nullptr;
     QPushButton *mOkButton = nullptr;
 };

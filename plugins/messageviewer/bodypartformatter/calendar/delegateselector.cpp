@@ -20,7 +20,7 @@
 
 #include "delegateselector.h"
 
-#include <LibkdepimAkonadi/AddresseeLineEdit>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 
 #include <KLocalizedString>
 
@@ -40,11 +40,11 @@ DelegateSelector::DelegateSelector(QWidget *parent)
     label->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(label);
 
-    mDelegate = new KPIM::AddresseeLineEdit(this);
+    mDelegate = new PimCommon::AddresseeLineEdit(this);
     mDelegate->setObjectName(QStringLiteral("delegate"));
     mainLayout->addWidget(mDelegate);
 
-    connect(mDelegate, &KPIM::AddresseeLineEdit::textChanged, this, &DelegateSelector::slotTextChanged);
+    connect(mDelegate, &PimCommon::AddresseeLineEdit::textChanged, this, &DelegateSelector::slotTextChanged);
     mRsvp = new QCheckBox(i18n("Keep me informed about status changes of this incidence."), this);
     mRsvp->setObjectName(QStringLiteral("informcheckbox"));
 

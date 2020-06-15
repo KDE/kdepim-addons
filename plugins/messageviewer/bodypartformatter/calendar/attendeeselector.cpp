@@ -19,7 +19,7 @@
 
 #include "attendeeselector.h"
 
-#include <LibkdepimAkonadi/AddresseeLineEdit>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 #include <KEmailAddress>
 
 #include <KLocalizedString>
@@ -52,8 +52,8 @@ AttendeeSelector::AttendeeSelector(QWidget *parent)
     connect(ui.removeButton, &QPushButton::clicked, this, &AttendeeSelector::removeClicked);
 
     ui.attendeeEdit->setPlaceholderText(i18n("Click to add a new attendee"));
-    connect(ui.attendeeEdit, &KPIM::AddresseeLineEdit::textChanged, this, &AttendeeSelector::textChanged);
-    connect(ui.attendeeEdit, &KPIM::AddresseeLineEdit::returnPressed, this, &AttendeeSelector::addClicked);
+    connect(ui.attendeeEdit, &PimCommon::AddresseeLineEdit::textChanged, this, &AttendeeSelector::textChanged);
+    connect(ui.attendeeEdit, &PimCommon::AddresseeLineEdit::returnPressed, this, &AttendeeSelector::addClicked);
 
     connect(ui.attendeeList, &QListWidget::itemSelectionChanged, this, &AttendeeSelector::selectionChanged);
     mOkButton->setEnabled(false);

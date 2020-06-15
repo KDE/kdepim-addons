@@ -24,7 +24,7 @@
 #include <QCheckBox>
 #include <QPushButton>
 #include <QDialogButtonBox>
-#include <LibkdepimAkonadi/AddresseeLineEdit>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 
 DelegateSelectorTest::DelegateSelectorTest(QObject *parent)
     : QObject(parent)
@@ -42,7 +42,7 @@ void DelegateSelectorTest::shouldHaveDefaultValue()
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    KPIM::AddresseeLineEdit *mDelegate = w.findChild<KPIM::AddresseeLineEdit *>(QStringLiteral("delegate"));
+    PimCommon::AddresseeLineEdit *mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
     QVERIFY(mDelegate);
     QVERIFY(mDelegate->text().isEmpty());
 
@@ -62,7 +62,7 @@ void DelegateSelectorTest::shouldHaveDefaultValue()
 void DelegateSelectorTest::shouldChangeOkButtonState()
 {
     DelegateSelector w;
-    KPIM::AddresseeLineEdit *mDelegate = w.findChild<KPIM::AddresseeLineEdit *>(QStringLiteral("delegate"));
+    PimCommon::AddresseeLineEdit *mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
     mDelegate->setEnableAkonadiSearch(false);
     mDelegate->setEnableBalooSearch(false);
 
