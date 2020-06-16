@@ -19,7 +19,7 @@
 
 #include "confirmaddressemailentrydialogtest.h"
 #include "../confirmaddressemailentrydialog.h"
-#include <EmailValidator>
+#include <PimCommon/EmailValidator>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QLineEdit>
@@ -47,7 +47,7 @@ void ConfirmAddressEmailEntryDialogTest::shouldHaveDefaultValue()
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());
     QVERIFY(mLineEdit->validator());
-    QVERIFY(qobject_cast<const KPIM::EmailValidator *>(mLineEdit->validator()));
+    QVERIFY(qobject_cast<const PimCommon::EmailValidator *>(mLineEdit->validator()));
 
     QDialogButtonBox *buttons = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttons"));
     QVERIFY(buttons);
