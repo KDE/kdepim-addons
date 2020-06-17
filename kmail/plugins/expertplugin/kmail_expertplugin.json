@@ -27,7 +27,6 @@
         "Description[sr]": "Овај прикључак активира неке стручне радње",
         "Description[sv]": "Insticksprogrammet aktiverar några expertalternativ.",
         "Description[uk]": "За допомогою цього додатка можна увімкнути деякі дії для досвідчених користувачів.",
-        "Description[x-test]": "xxThis plugin activates some expert actions.xx",
         "Description[zh_CN]": "此插件激活一些专家操作。",
         "EnabledByDefault": "false",
         "Id": "kmailexpert",
@@ -58,7 +57,6 @@
         "Name[sr]": "Стручни прикључак",
         "Name[sv]": "Expertinsticksprogram",
         "Name[uk]": "Додаток експерта",
-        "Name[x-test]": "xxExpert Pluginxx",
         "Name[zh_CN]": "专家插件",
         "ServiceTypes": [
             "KMail/MainViewPlugin"

@@ -21,7 +21,6 @@
         "Description[sk]": "Tento doplnok umožňuje vložiť špeciálny text ako názov prílohy, e-maily atď.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att infoga specialtext som namn på bilagor, e-post, etc.",
         "Description[uk]": "За допомогою цього додатка можна вставити спеціальний текст, зокрема назву долучення, повідомлення електронної пошти тощо.",
-        "Description[x-test]": "xxThis plugin allows you to insert special text as attachment name, emails etc.xx",
         "Description[zh_CN]": "此插件可以让您插入特殊文本作为附件名称、电子邮件等。",
         "EnabledByDefault": "true",
         "Id": "kmailquicktext",
@@ -46,7 +45,6 @@
         "Name[sk]": "Rýchly text",
         "Name[sv]": "Snabbtext",
         "Name[uk]": "Швидкий текст",
-        "Name[x-test]": "xxQuick Textxx",
         "Name[zh_CN]": "快速文本",
         "ServiceTypes": [
             "KMailEditor/Plugin"

@@ -22,7 +22,6 @@
         "Description[sk]": "Tento doplnok umožňuje konfigurovať podporu gravatar.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa Gravatar-stöd",
         "Description[uk]": "За допомогою цього додатка можна налаштувати підтримку Gravatar.",
-        "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "Description[zh_CN]": "此插件允许您配置 Gravatar 支持。",
         "Name": "Gravatar",
         "Name[ca@valencia]": "Gravatar",
@@ -46,7 +45,6 @@
         "Name[sk]": "Gravatar",
         "Name[sv]": "Gravatar",
         "Name[uk]": "Gravatar",
-        "Name[x-test]": "xxGravatarxx",
         "Name[zh_CN]": "Gravatar",
         "ServiceTypes": [
             "MessageViewerConfigureSettingsPlugin/Plugin"

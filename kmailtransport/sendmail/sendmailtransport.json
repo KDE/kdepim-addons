@@ -30,7 +30,6 @@
         "Name[sv]": "SendMail e-postöverföring",
         "Name[tr]": "SenMail Posta İletimi",
         "Name[uk]": "Надсилання пошти SendMail",
-        "Name[x-test]": "xxSendMail Mail Transportxx",
         "Name[zh_CN]": "SendMail 邮件传输",
         "ServiceTypes": [
             "MailTransport/Plugin"

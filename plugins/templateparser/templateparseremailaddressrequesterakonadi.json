@@ -19,7 +19,6 @@
         "Name[ru]": "Инициатор запроса адреса эл. почты для библиотеки разбора шаблонов",
         "Name[sv]": "Akonadi e-postadressbegäran för malltolkbibliotek",
         "Name[uk]": "Засіб надсилання запитів щодо адрес електронної пошти Akonadi для бібліотеки обробки шаблонів",
-        "Name[x-test]": "xxEmail Address Akonadi Requester for Template Parser libraryxx",
         "Name[zh_CN]": "模板分析库的邮件地址 Akonadi 请求器",
         "ServiceTypes": [
             "TemplateParser/TemplateParserEmailAddressRequester"

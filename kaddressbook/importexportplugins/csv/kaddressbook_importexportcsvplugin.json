@@ -29,7 +29,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera CSV.",
         "Description[tr]": "Bu eklenti, CSV içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі CSV.",
-        "Description[x-test]": "xxThis plugin allows you to import/export CSV.xx",
         "Description[zh_CN]": "此插件允许您导入/导出 CSV 表格。",
         "EnabledByDefault": "true",
         "Id": "kaddressbookimportexportcsv",
@@ -62,7 +61,6 @@
         "Name[sv]": "Importera och exportera CSV",
         "Name[tr]": "CSV İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування CSV",
-        "Name[x-test]": "xxImport/Export CSVxx",
         "Name[zh_CN]": "导入/导出 CSV 表格",
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"

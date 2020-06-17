@@ -28,7 +28,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att automatiskt lägga till e-postadresser i adressboken.",
         "Description[tr]": "Bu eklenti, eposta adreslerini otomatik olarak adres defterine eklemenize imkan verir.",
         "Description[uk]": "Цей додаток надає вам змогу автоматично додавати адресу електронної пошти до адресної книги.",
-        "Description[x-test]": "xxThis plugin allows you to add automatically email address to addressbook.xx",
         "Description[zh_CN]": "此插件允许您自动添加电子邮件地址到地址簿。",
         "EnabledByDefault": "false",
         "Id": "kmailautomaticaddcontacts",
@@ -61,7 +60,6 @@
         "Name[sv]": "Lägg automatiskt till kontakter",
         "Name[tr]": "Kişileri Otomatik Ekle",
         "Name[uk]": "Автоматичне додавання контактів",
-        "Name[x-test]": "xxAutomatic Add Contactsxx",
         "Name[zh_CN]": "自动添加联系人",
         "ServiceTypes": [
             "KMailEditor/PluginCheckBeforeSend"

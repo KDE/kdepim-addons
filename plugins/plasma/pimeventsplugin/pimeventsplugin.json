@@ -31,7 +31,6 @@
                 "Name[sr]": "Данијел Вратил",
                 "Name[sv]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
-                "Name[x-test]": "xxDaniel Vrátilxx",
                 "Name[zh_CN]": "Daniel Vrátil"
             }
         ],
@@ -63,7 +62,6 @@
         "Description[sr]": "Прикључак за приказ догађаја из календара КДЕ‑ПИМ‑а",
         "Description[sv]": "Kalenderinsticksprogram för att visa händelser från kalendrar i KDE:s personliga informationshantering",
         "Description[uk]": "Додаток календаря для показу подій з календарів PIM KDE",
-        "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
         "Description[zh_CN]": "用于显示 KDE PIM 日历中事件的日历插件",
         "Icon": "view-calendar",
         "Name": "PIM Events Plugin",
@@ -95,7 +93,6 @@
         "Name[sr]": "Прикључак ПИМ догађаја",
         "Name[sv]": "Händelseinsticksprogram för personlig informationshantering",
         "Name[uk]": "Додаток подій PIM",
-        "Name[x-test]": "xxPIM Events Pluginxx",
         "Name[zh_CN]": "PIM 事件插件",
         "ServiceTypes": [
             "PlasmaCalendar/Plugin"

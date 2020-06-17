@@ -28,7 +28,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa skräpposthantering i Kmail.",
         "Description[tr]": "Bu eklenti, KMail içinde Anti Spam yapılandırmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати засіб боротьби зі спамом у KMail.",
-        "Description[x-test]": "xxThis plugin allows you to configure Anti Spam in KMail.xx",
         "Description[zh_CN]": "此插件允许您配置 KMail 反垃圾邮件机制。",
         "EnabledByDefault": "false",
         "Id": "kmailantispam",
@@ -61,7 +60,6 @@
         "Name[sv]": "Antiskräppost",
         "Name[tr]": "Antispam",
         "Name[uk]": "Антиспам",
-        "Name[x-test]": "xxAntispamxx",
         "Name[zh_CN]": "垃圾防御",
         "ServiceTypes": [
             "KMail/MainViewPlugin"
