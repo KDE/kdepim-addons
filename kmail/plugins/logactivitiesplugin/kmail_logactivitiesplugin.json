@@ -28,7 +28,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att logga aktiviteter i Kmail.",
         "Description[tr]": "Bu eklenti, KMail etkinliklerini günlüklemenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка ви можете записувати журнал дій у KMail.",
-        "Description[x-test]": "xxThis plugin allows you to log KMail activities.xx",
         "Description[zh_CN]": "此插件允许您记录 KMail 活动日志。",
         "EnabledByDefault": "false",
         "Id": "kmaillogactivities",
@@ -61,7 +60,6 @@
         "Name[sv]": "Logga aktiviteter",
         "Name[tr]": "Günlük Etkinlikleri",
         "Name[uk]": "Запис журналу дій",
-        "Name[x-test]": "xxLog Activitiesxx",
         "Name[zh_CN]": "记录活动日志",
         "ServiceTypes": [
             "KMail/MainViewPlugin"

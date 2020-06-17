@@ -28,7 +28,6 @@
         "Description[sv]": "Insticksprogrammet expanderar webbadresser.",
         "Description[tr]": "Bu eklenti, URL'leri genişletir.",
         "Description[uk]": "Цей додаток розгортає адресу.",
-        "Description[x-test]": "xxThis plugin expands URL.xx",
         "Description[zh_CN]": "此插件可展开 URL。",
         "EnabledByDefault": "true",
         "Id": "messageviewerexpandurl",
@@ -62,7 +61,6 @@
         "Name[sv]": "Expandera webbadress",
         "Name[tr]": "URL Genişlet",
         "Name[uk]": "Розгортання адреси",
-        "Name[x-test]": "xxExpand URLxx",
         "Name[zh_CN]": "展开 URL",
         "ServiceTypes": [
             "MessageViewer/ViewerCommonPlugin"

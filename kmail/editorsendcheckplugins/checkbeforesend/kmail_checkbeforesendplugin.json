@@ -28,7 +28,6 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera inställningarna för brev innan de skickas.",
         "Description[tr]": "Bu eklenti, gönderimden önce ileti ayarlarınızı kontrol etmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти параметри повідомлення перед надсиланням.",
-        "Description[x-test]": "xxThis plugin allows you to check message settings before sending.xx",
         "Description[zh_CN]": "此插件允许您在发送前检查信件设置。",
         "EnabledByDefault": "true",
         "Id": "kmailcheckbeforesend",
@@ -61,7 +60,6 @@
         "Name[sv]": "Kontrollera innan sändning",
         "Name[tr]": "Göndermeden Önce Kontrol Et",
         "Name[uk]": "Перевірка перед надсиланням",
-        "Name[x-test]": "xxCheck Before Sendxx",
         "Name[zh_CN]": "发送前检查",
         "ServiceTypes": [
             "KMailEditor/PluginCheckBeforeSend"

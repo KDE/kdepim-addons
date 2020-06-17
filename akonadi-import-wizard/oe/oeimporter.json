@@ -30,7 +30,6 @@
         "Name[sv]": "OE-importverktyg",
         "Name[tr]": "OE İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з Outlook Express",
-        "Name[x-test]": "xxOE Importerxx",
         "Name[zh_CN]": "OE 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"

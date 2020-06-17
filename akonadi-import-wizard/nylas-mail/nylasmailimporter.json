@@ -29,7 +29,6 @@
         "Name[sr]": "Увозник из Најласове поште",
         "Name[sv]": "Nylas Mail-importverktyg",
         "Name[uk]": "Засіб імпортування з Nylas",
-        "Name[x-test]": "xxNylas Mail Importerxx",
         "Name[zh_CN]": "Nylas 邮件导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"

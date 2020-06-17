@@ -27,7 +27,6 @@
         "Description[sv]": "Insticksprogrammet definierar en brevhuvudstil för företag.",
         "Description[tr]": "Bu eklenti, kurumsal posta başlığı biçimi tanımlar.",
         "Description[uk]": "Цим додатком визначається стиль заголовка повідомлення для бізнес-середовищ.",
-        "Description[x-test]": "xxThis plugin defines a mail header style for enterprise.xx",
         "Description[zh_CN]": "此插件定义了企业邮件头部样式。",
         "EnabledByDefault": "@KDEPIM_ENTERPRISE_BUILD@",
         "Name": "Enterprise Header Style",
@@ -58,7 +57,6 @@
         "Name[sv]": "Företagsrubrikstil",
         "Name[tr]": "Kurumsal Başlık Biçimi",
         "Name[uk]": "Корпоративний стиль заголовків",
-        "Name[x-test]": "xxEnterprise Header Stylexx",
         "Name[zh_CN]": "企业信头风格",
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"

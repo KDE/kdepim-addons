@@ -30,7 +30,6 @@
         "Name[sv]": "Is.gd",
         "Name[tr]": "Is.gd",
         "Name[uk]": "Is.gd",
-        "Name[x-test]": "xxIs.gdxx",
         "Name[zh_CN]": "Is.gd",
         "ServiceTypes": [
             "PimCommonShortUrlEngine/Plugin"
