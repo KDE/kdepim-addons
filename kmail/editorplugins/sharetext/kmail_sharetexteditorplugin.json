@@ -23,6 +23,7 @@
         "Description[sl]": "Ta vstavek omogoča deljenje besedila z drugimi.",
         "Description[sv]": "Insticksprogrammet gör det möjligt att dela text.",
         "Description[uk]": "За допомогою цього додатка можна оприлюднювати тексти.",
+        "Description[x-test]": "xxThis plugin allows you to share text.xx",
         "Description[zh_CN]": "此插件允许您共享文本。",
         "EnabledByDefault": "false",
         "Id": "kmailsharetext",
@@ -49,6 +50,7 @@
         "Name[sl]": "Deli besedilo",
         "Name[sv]": "Dela text",
         "Name[uk]": "Оприлюднення тексту",
+        "Name[x-test]": "xxShare Textxx",
         "Name[zh_CN]": "分享文本",
         "ServiceTypes": [
             "KMailEditor/Plugin"

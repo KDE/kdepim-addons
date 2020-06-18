@@ -28,6 +28,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att skapa en anteckning av ett brev.",
         "Description[tr]": "Bu eklenti, bir iletiden not oluşturmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна створювати нотатки на основі повідомлення.",
+        "Description[x-test]": "xxThis plugin allows you to create a note from a message.xx",
         "Description[zh_CN]": "此插件允许您从信件创建便笺。",
         "EnabledByDefault": "false",
         "Id": "messageviewercreatenoteplugin",
@@ -61,6 +62,7 @@
         "Name[sv]": "Skapa anteckning",
         "Name[tr]": "Not Oluştur",
         "Name[uk]": "Створення нотатки",
+        "Name[x-test]": "xxCreate Notexx",
         "Name[zh_CN]": "创建便笺",
         "ServiceTypes": [
             "MessageViewer/ViewerPlugin"

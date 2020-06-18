@@ -28,6 +28,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att ändra skiftläge på markerad text.",
         "Description[tr]": "Bu eklenti, seçili metnin büyük/küçük harf türünü değiştirmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна змінити регістр символів позначеного фрагмента тексту.",
+        "Description[x-test]": "xxThis plugin allows you to change the case of the selected text.xx",
         "Description[zh_CN]": "此插件允许您更改所选文本的大小写。",
         "EnabledByDefault": "false",
         "Id": "kmailchangecase",
@@ -60,6 +61,7 @@
         "Name[sv]": "Ändra skiftläge",
         "Name[tr]": "Büyük Küçük Harf Değiştir",
         "Name[uk]": "Зміна регістру",
+        "Name[x-test]": "xxChange Casexx",
         "Name[zh_CN]": "更改大小写",
         "ServiceTypes": [
             "KMailEditor/Plugin"

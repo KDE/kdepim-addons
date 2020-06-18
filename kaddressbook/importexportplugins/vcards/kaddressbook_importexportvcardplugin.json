@@ -29,6 +29,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera visitkort.",
         "Description[tr]": "Bu eklenti, vCard içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі візитівок.",
+        "Description[x-test]": "xxThis plugin allows you to import/export vCards.xx",
         "Description[zh_CN]": "此插件允许您导入/导出 vCard 名片。",
         "EnabledByDefault": "true",
         "Id": "kaddressbookimportexportvcard",
@@ -61,6 +62,7 @@
         "Name[sv]": "Importera och exportera vCard",
         "Name[tr]": "vCard İçe/Dışa Aktar",
         "Name[uk]": "Імпортування та експортування vCard",
+        "Name[x-test]": "xxImport/Export vCardxx",
         "Name[zh_CN]": "导入/导出 vCard 名片",
         "ServiceTypes": [
             "KAddressBook/ImportExportPlugin"

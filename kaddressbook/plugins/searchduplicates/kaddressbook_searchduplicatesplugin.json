@@ -29,6 +29,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att söka efter duplicerade kontakter.",
         "Description[tr]": "Bu eklenti, yinelenen kişileri aramanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна виявляти дублікати записів контактів.",
+        "Description[x-test]": "xxThis plugin allows you to search duplicate contacts.xx",
         "Description[zh_CN]": "此茶碗见允许您搜索重复的联系人。",
         "EnabledByDefault": "true",
         "Id": "kaddressbooksearchduplicatecontacts",
@@ -62,6 +63,7 @@
         "Name[sv]": "Sök efter duplicerade kontakter",
         "Name[tr]": "Yinelenen Kişileri Ara",
         "Name[uk]": "Пошук дублікатів записів контактів",
+        "Name[x-test]": "xxSearch Duplicate Contactsxx",
         "Name[zh_CN]": "搜索重复的联系人",
         "ServiceTypes": [
             "KAddressBook/MainViewPlugin"

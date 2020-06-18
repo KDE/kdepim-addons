@@ -27,6 +27,7 @@
         "Description[sv]": "Insticksprogrammet tillhandahåller en snygg brevhuvudstil.",
         "Description[tr]": "Bu eklenti, süslü posta başlığı biçimi sağlar.",
         "Description[uk]": "За допомогою цього додатка можна використати найвигадливіші стилі заголовків повідомлення.",
+        "Description[x-test]": "xxThis plugin provides you a fancy mail header style.xx",
         "Description[zh_CN]": "此插件为您提供了花式的邮件头部样式。",
         "EnabledByDefault": "true",
         "Name": "Fancy Header Style",
@@ -57,6 +58,7 @@
         "Name[sv]": "Snygg rubrikstil",
         "Name[tr]": "Süslü Başlık Biçimi",
         "Name[uk]": "Красивий стиль заголовків",
+        "Name[x-test]": "xxFancy Header Stylexx",
         "Name[zh_CN]": "亮丽信头风格",
         "ServiceTypes": [
             "MessageViewerHeaderStyle/Plugin"

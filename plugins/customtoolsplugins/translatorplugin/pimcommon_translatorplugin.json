@@ -28,6 +28,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att översätta text.",
         "Description[tr]": "Bu eklenti, metni çevirmenize imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна перекладати тексти.",
+        "Description[x-test]": "xxThis plugin allows you to translate text.xx",
         "Description[zh_CN]": "此插件允许您翻译文本。",
         "EnabledByDefault": "true",
         "Id": "customtoolstranslator",
@@ -61,6 +62,7 @@
         "Name[sv]": "Översättning",
         "Name[tr]": "Çeviren",
         "Name[uk]": "Перекладач",
+        "Name[x-test]": "xxTranslatorxx",
         "Name[zh_CN]": "翻译服务",
         "ServiceTypes": [
             "PimCommonCustomTools/Plugin"

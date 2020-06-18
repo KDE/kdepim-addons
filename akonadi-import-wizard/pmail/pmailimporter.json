@@ -30,6 +30,7 @@
         "Name[sv]": "PMail-importverktyg",
         "Name[tr]": "PMail İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з PMail",
+        "Name[x-test]": "xxPMail Importerxx",
         "Name[zh_CN]": "PMail 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
