@@ -22,6 +22,7 @@
         "Description[sk]": "Tento plugin vám umožní skontrolovať gramatiku len vo francúzštine",
         "Description[sv]": "Insticksprogrammet låter dig kontrollera grammatik enbart för franska.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти граматику французькою мовою.",
+        "Description[x-test]": "xxThis plugin allows you to check grammar in french only.xx",
         "Description[zh_CN]": "此插件可以让您只检查法语语法。",
         "EnabledByDefault": "false",
         "Id": "kmailgrammalecte",
@@ -46,6 +47,7 @@
         "Name[sk]": "Kontrola francúzskej gramatiky",
         "Name[sv]": "Fransk grammatikkontroll",
         "Name[uk]": "Перевірка граматики французькою",
+        "Name[x-test]": "xxFrench Grammar Checkerxx",
         "Name[zh_CN]": "法语语法检查器",
         "ServiceTypes": [
             "KMailEditor/PluginEditorGrammar"

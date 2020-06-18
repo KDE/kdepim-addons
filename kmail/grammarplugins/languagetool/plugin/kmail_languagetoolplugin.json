@@ -22,6 +22,7 @@
         "Description[sk]": "Tento plugin vám umožní skontrolovať gramatiku pomocou LanguageTool.",
         "Description[sv]": "Insticksprogrammet låter dig kontrollera grammatik med användning av LanguageTool.",
         "Description[uk]": "За допомогою цього додатка можна перевіряти граматику за допомогою LanguageTool.",
+        "Description[x-test]": "xxThis plugin allows you to check grammar using LanguageTool.xx",
         "Description[zh_CN]": "此插件可以让您使用语言工具检查语法。",
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
@@ -46,6 +47,7 @@
         "Name[sk]": "Kontrola gramatiky (LanguageTool)",
         "Name[sv]": "Grammatikkontroll (LanguageTool)",
         "Name[uk]": "Перевірка граматики (LanguageTool)",
+        "Name[x-test]": "xxGrammar Checker (LanguageTool)xx",
         "Name[zh_CN]": "语法检查器 (语言工具)",
         "ServiceTypes": [
             "KMailEditor/PluginEditorGrammar"

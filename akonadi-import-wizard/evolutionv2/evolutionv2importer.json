@@ -30,6 +30,7 @@
         "Name[sv]": "Evolution2-importverktyg",
         "Name[tr]": "Evolution2 İçe Aktarıcı",
         "Name[uk]": "Засіб імпортування з Evolution2",
+        "Name[x-test]": "xxEvolution2 Importerxx",
         "Name[zh_CN]": "Evolution2 导入器",
         "ServiceTypes": [
             "ImportWizard/PluginMailImporter"
