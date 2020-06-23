@@ -33,10 +33,12 @@ InsertSpecialCharacterPluginEditorTest::~InsertSpecialCharacterPluginEditorTest(
 void InsertSpecialCharacterPluginEditorTest::shouldHaveDefaultValue()
 {
     InsertSpecialCharacterPluginEditor plugin;
-    QVERIFY(plugin.createInterface());
+    auto interface = plugin.createInterface();
+    QVERIFY(interface);
     QVERIFY(!plugin.hasConfigureDialog());
     QVERIFY(!plugin.hasPopupMenuSupport());
     QVERIFY(!plugin.hasToolBarSupport());
+    delete interface;
 }
 
 QTEST_MAIN(InsertSpecialCharacterPluginEditorTest)
