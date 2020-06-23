@@ -54,6 +54,7 @@ void FancyHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+    delete interface;
 }
 
 void FancyHeaderStylePluginTest::testFormatEmpty()
@@ -65,6 +66,7 @@ void FancyHeaderStylePluginTest::testFormatEmpty()
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
     testHeaderFile(style->format(aMsg), QStringLiteral("empty.fancy"));
+    delete aMsg;
 }
 
 void FancyHeaderStylePluginTest::testFormat_data()
