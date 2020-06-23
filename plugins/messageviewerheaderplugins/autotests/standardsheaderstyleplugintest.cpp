@@ -50,6 +50,7 @@ void StandardsHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+    delete interface;
 }
 
 QTEST_MAIN(StandardsHeaderStylePluginTest)

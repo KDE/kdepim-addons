@@ -30,7 +30,9 @@ void ExternalComposerPluginEditorTest::shouldHaveDefaultValue()
 {
     ExternalComposerPluginEditor plugin;
     QVERIFY(plugin.hasConfigureDialog());
-    QVERIFY(plugin.createInterface(nullptr));
+    auto interface = plugin.createInterface(nullptr);
+    QVERIFY(interface);
+    delete interface;
 }
 
 QTEST_MAIN(ExternalComposerPluginEditorTest)
