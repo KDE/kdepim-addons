@@ -53,6 +53,7 @@ void BriefHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+    delete interface;
 }
 
 void BriefHeaderStylePluginTest::testFormatEmpty()
@@ -64,6 +65,7 @@ void BriefHeaderStylePluginTest::testFormatEmpty()
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = new KMime::Message();
     testHeaderFile(style->format(aMsg), QStringLiteral("empty.brief"));
+    delete aMsg;
 }
 
 void BriefHeaderStylePluginTest::testFormat_data()

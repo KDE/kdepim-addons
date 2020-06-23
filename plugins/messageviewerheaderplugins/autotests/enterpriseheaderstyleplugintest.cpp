@@ -54,6 +54,7 @@ void EnterpriseHeaderStylePluginTest::shouldCreateInterface()
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
     QVERIFY(!interface->action().isEmpty());
+    delete interface;
 }
 
 void EnterpriseHeaderStylePluginTest::testFormatEmpty()
@@ -66,6 +67,7 @@ void EnterpriseHeaderStylePluginTest::testFormatEmpty()
     auto aMsg = new KMime::Message();
     QString closedDiv = style->format(aMsg) + QStringLiteral("</div>");
     testHeaderFile(closedDiv, QStringLiteral("empty.enterprise"));
+    delete aMsg;
 }
 
 void EnterpriseHeaderStylePluginTest::testFormat_data()
