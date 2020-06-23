@@ -1,4 +1,4 @@
-<pre><span style="font-weight:bold;">diff --git a/CMakeLists.txt b/CMakeLists.txt</span>
+<pre class="highlightattachment"><span style="font-weight:bold;">diff --git a/CMakeLists.txt b/CMakeLists.txt</span>
 index b4ef75c..258dcc1 100644
 <span style="color:#0057ae;">--- a/CMakeLists.txt</span>
 <span style="color:#0057ae;">+++ b/CMakeLists.txt</span>
