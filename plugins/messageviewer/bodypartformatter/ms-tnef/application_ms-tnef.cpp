@@ -73,8 +73,9 @@ public:
             return false;
         }
 
-        if (mp->content()->contentType()->mimeType() != QByteArrayLiteral("application/vnd.ms-tnef")
-            && mp->content()->contentType()->mimeType() != QByteArrayLiteral("application/ms-tnef")) {
+        const QByteArray mimetype = mp->content()->contentType()->mimeType();
+        if (mimetype != QByteArrayLiteral("application/vnd.ms-tnef")
+            && mimetype != QByteArrayLiteral("application/ms-tnef")) {
             return false;
         }
 

@@ -549,10 +549,11 @@ public:
         msg->date()->setDateTime(QDateTime::currentDateTime());
 
         if (MessageViewer::MessageViewerSettings::self()->legacyBodyInvites()) {
-            msg->contentType()->setMimeType("text/calendar");
-            msg->contentType()->setCharset("utf-8");
-            msg->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
-            msg->contentType()->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
+            auto ct = msg->contentType(); //create
+            ct->setMimeType("text/calendar");
+            ct->setCharset("utf-8");
+            ct->setName(QStringLiteral("cal.ics"), "utf-8");
+            ct->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
 
             KMime::Headers::ContentDisposition *disposition = new KMime::Headers::ContentDisposition;
             disposition->setDisposition(KMime::Headers::CDinline);
@@ -574,8 +575,9 @@ public:
             KMime::Content *bodyMessage = new KMime::Content;
             KMime::Headers::ContentDisposition *bodyDisposition = new KMime::Headers::ContentDisposition;
             bodyDisposition->setDisposition(KMime::Headers::CDinline);
-            bodyMessage->contentType()->setMimeType("text/plain");
-            bodyMessage->contentType()->setCharset("utf-8");
+            auto bodyMessageCt = bodyMessage->contentType();
+            bodyMessageCt->setMimeType("text/plain");
+            bodyMessageCt->setCharset("utf-8");
             bodyMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             const QString answer = i18n("Invitation answer attached.");
             bodyMessage->setBody(answer.toUtf8());
@@ -586,10 +588,11 @@ public:
             KMime::Content *attachMessage = new KMime::Content;
             KMime::Headers::ContentDisposition *attachDisposition = new KMime::Headers::ContentDisposition;
             attachDisposition->setDisposition(KMime::Headers::CDattachment);
-            attachMessage->contentType()->setMimeType("text/calendar");
-            attachMessage->contentType()->setCharset("utf-8");
-            attachMessage->contentType()->setName(QStringLiteral("cal.ics"), "utf-8");
-            attachMessage->contentType()->setParameter(QStringLiteral("method"),
+            auto attachCt = attachMessage->contentType();
+            attachCt->setMimeType("text/calendar");
+            attachCt->setCharset("utf-8");
+            attachCt->setName(QStringLiteral("cal.ics"), "utf-8");
+            attachCt->setParameter(QStringLiteral("method"),
                                                        QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
