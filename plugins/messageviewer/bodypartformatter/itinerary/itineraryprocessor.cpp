@@ -38,10 +38,11 @@ using namespace KItinerary;
 static bool isPkPassContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
-    if (ct->mimeType() == "application/vnd.apple.pkpass") {
+    const QByteArray mimetype = ct->mimeType();
+    if (mimetype == "application/vnd.apple.pkpass") {
         return true;
     }
-    if (ct->mimeType() != "application/octet-stream" && ct->mimeType() != "application/zip") {
+    if (mimetype != "application/octet-stream" && mimetype != "application/zip") {
         return false;
     }
     if (ct->name().endsWith(QLatin1String("pkpass"))) {
@@ -54,13 +55,14 @@ static bool isPkPassContent(KMime::Content *content)
 static bool isCalendarContent(KMime::Content *content)
 {
     const auto ct = content->contentType();
-    if (ct->mimeType() == "text/calendar") {
+    const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
+    if (mimetype == "text/calendar") {
         return true;
     }
-    if (ct->mimeType() != "text/plain" && ct->mimeType() != "application/octet-stream") {
+    if (mimetype != "text/plain" && mimetype != "application/octet-stream") {
         return false;
     }
-    if (ct->name().endsWith(QLatin1String(".ics"))) {
+    if (ct && ct->name().endsWith(QLatin1String(".ics"))) {
         return true;
     }
     const auto cd = content->contentDisposition(false);

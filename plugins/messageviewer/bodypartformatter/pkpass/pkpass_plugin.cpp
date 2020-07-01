@@ -40,10 +40,11 @@
 static bool isPkPassContent(KMime::Content *content)
 {
     const auto ct = content->contentType(false);
-    if (ct && ct->mimeType() == "application/vnd.apple.pkpass") {
+    const QByteArray mimetype = ct ? ct->mimeType() : QByteArray();
+    if (mimetype == "application/vnd.apple.pkpass") {
         return true;
     }
-    if (ct && ct->mimeType() != "application/octet-stream" && ct->mimeType() != "application/zip") {
+    if (mimetype != "application/octet-stream" && mimetype != "application/zip") {
         return false;
     }
     if (ct && ct->name().endsWith(QLatin1String("pkpass"))) {
