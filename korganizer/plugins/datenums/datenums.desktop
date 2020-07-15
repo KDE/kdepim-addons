@@ -2,8 +2,8 @@
 X-KDE-Library=korg_datenums
 Name=Date Numbers Plugin for Calendars
 Name[ar]=ملحقة ترقيم الأيّام للتّقاويم
-Name[ca]=Connector de números de data pels calendaris
-Name[ca@valencia]=Connector de números de data pels calendaris
+Name[ca]=Connector de números de data per als calendaris
+Name[ca@valencia]=Connector de números de data per als calendaris
 Name[cs]=Modul pro očíslování dat v kalendáři
 Name[da]=Datonumre-plugin for kalendere
 Name[de]=Kalendertag-Modul für Kalender
