@@ -17,27 +17,30 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "expireaccounttrashfolderconfigplugin.h"
-#include "expireaccounttrashfolderconfigdialog.h"
-#include <KPluginFactory>
-#include <QPointer>
+#include "expireaccounttrashfolderconfigwidget.h"
 
-K_PLUGIN_CLASS_WITH_JSON(ExpireAccountTrashFolderConfigPlugin, "messageviewer_expireaccounttrashfolderconfigplugin.json")
+#include <QVBoxLayout>
 
-ExpireAccountTrashFolderConfigPlugin::ExpireAccountTrashFolderConfigPlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::MessageViewerConfigureSettingsPlugin(parent)
+ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
+    : QWidget(parent)
 {
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    //TODO
 }
 
-ExpireAccountTrashFolderConfigPlugin::~ExpireAccountTrashFolderConfigPlugin()
+ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()
 {
+
 }
 
-void ExpireAccountTrashFolderConfigPlugin::showConfigureDialog(QWidget *parent)
+void ExpireAccountTrashFolderConfigWidget::save()
 {
-    QPointer<ExpireAccountTrashFolderConfigDialog> dlg = new ExpireAccountTrashFolderConfigDialog(parent);
-    dlg->exec();
-    delete dlg;
+    //TODO
 }
 
-#include "expireaccounttrashfolderconfigplugin.moc"
+void ExpireAccountTrashFolderConfigWidget::init()
+{
+    //TODO
+}

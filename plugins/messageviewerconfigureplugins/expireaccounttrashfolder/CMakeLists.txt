@@ -1,5 +1,7 @@
 set(messageviewer_expireaccounttrashfolderonfigplugin_SRCS
    expireaccounttrashfolderconfigplugin.cpp 
+   expireaccounttrashfolderconfigdialog.cpp
+   expireaccounttrashfolderconfigwidget.cpp
 )
 
 kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin JSON messageviewer_expireaccounttrashfolderconfigplugin.json SOURCES
