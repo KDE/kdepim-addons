@@ -10,6 +10,7 @@ kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin JSON m
 target_link_libraries(messageviewer_expireaccounttrashfolderconfigplugin
   KF5::MessageViewer
   KF5::I18n
+  KF5::MailCommon
 )
 
 
