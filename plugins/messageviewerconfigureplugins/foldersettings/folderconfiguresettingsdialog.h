@@ -17,26 +17,21 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "folderconfiguresettingsplugin.h"
-#include <KPluginFactory>
-#include <QPointer>
+#ifndef FOLDERCONFIGURESETTINGSDIALOG_H
+#define FOLDERCONFIGURESETTINGSDIALOG_H
 
-K_PLUGIN_CLASS_WITH_JSON(FolderConfigureSettingsPlugin, "messageviewer_folderconfiguresettingsplugin.json")
+#include <QDialog>
 
-FolderConfigureSettingsPlugin::FolderConfigureSettingsPlugin(QObject *parent, const QList<QVariant> &)
-    : MessageViewer::MessageViewerConfigureSettingsPlugin(parent)
+class FolderConfigureSettingsDialog : public QDialog
 {
-}
+    Q_OBJECT
+public:
+    explicit FolderConfigureSettingsDialog(QWidget *parent = nullptr);
+    ~FolderConfigureSettingsDialog();
 
-FolderConfigureSettingsPlugin::~FolderConfigureSettingsPlugin()
-{
-}
+private:
+    void readConfig();
+    void writeConfig();
+};
 
-void FolderConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
-{
-//    QPointer<FolderConfigureSettingsDialog> dlg = new FolderConfigureSettingsDialog(parent);
-//    dlg->exec();
-//    delete dlg;
-}
-
-#include "folderconfiguresettingsplugin.moc"
+#endif // FOLDERCONFIGURESETTINGSDIALOG_H

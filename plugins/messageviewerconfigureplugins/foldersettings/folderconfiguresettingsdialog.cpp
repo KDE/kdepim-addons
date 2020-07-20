@@ -17,44 +17,39 @@
    Boston, MA 02110-1301, USA.
 */
 
-#include "expireaccounttrashfolderconfigdialog.h"
-#include "expireaccounttrashfolderconfigwidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <QDialogButtonBox>
+#include "folderconfiguresettingsdialog.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <KLocalizedString>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 namespace {
-static const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
+static const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
 }
 
-ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidget *parent)
+FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
 
-    mExpireAccountTrashFolderConfig = new ExpireAccountTrashFolderConfigWidget(this);
-    mExpireAccountTrashFolderConfig->setObjectName(QStringLiteral("mExpireAccountTrashFolderConfig"));
-    mainLayout->addWidget(mExpireAccountTrashFolderConfig);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel|QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &ExpireAccountTrashFolderConfigDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &FolderConfigureSettingsDialog::reject);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::accept);
     mainLayout->addWidget(buttonBox);
     readConfig();
 }
 
-ExpireAccountTrashFolderConfigDialog::~ExpireAccountTrashFolderConfigDialog()
+FolderConfigureSettingsDialog::~FolderConfigureSettingsDialog()
 {
     writeConfig();
 }
 
-void ExpireAccountTrashFolderConfigDialog::readConfig()
+void FolderConfigureSettingsDialog::readConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
@@ -63,10 +58,9 @@ void ExpireAccountTrashFolderConfigDialog::readConfig()
     }
 }
 
-void ExpireAccountTrashFolderConfigDialog::writeConfig()
+void FolderConfigureSettingsDialog::writeConfig()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }
-
