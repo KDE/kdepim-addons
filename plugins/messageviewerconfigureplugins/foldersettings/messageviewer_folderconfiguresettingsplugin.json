@@ -1,0 +1,11 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to configure folder settings.",
+        "Name": "Folder Settings",
+        "ServiceTypes": [
+            "MessageViewerConfigureSettingsPlugin/Plugin"
+        ],
+        "Version": "1.0"
+    },
+    "X-KDE-MessageViewer-Configure-Order": "100"
+}
