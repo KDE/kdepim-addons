@@ -18,7 +18,7 @@
 */
 
 #include "expireaccounttrashfolderconfigwidget.h"
-
+#include <MailCommon/CollectionExpiryWidget>
 #include <QVBoxLayout>
 
 ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
@@ -27,7 +27,11 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
-    //TODO
+
+
+     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
+     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
+     mainLayout->addWidget(mCollectionExpiryWidget);
 }
 
 ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()

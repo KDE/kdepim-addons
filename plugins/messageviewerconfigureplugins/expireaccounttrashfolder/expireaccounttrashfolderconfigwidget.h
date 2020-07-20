@@ -21,6 +21,10 @@
 #define EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
 
 #include <QWidget>
+namespace MailCommon
+{
+class CollectionExpiryWidget;
+}
 
 class ExpireAccountTrashFolderConfigWidget : public QWidget
 {
@@ -31,6 +35,7 @@ public:
     void save();
 private:
     void init();
+    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
 };
 
 #endif // EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H

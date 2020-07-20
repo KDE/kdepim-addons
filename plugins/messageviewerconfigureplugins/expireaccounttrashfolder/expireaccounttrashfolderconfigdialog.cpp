@@ -35,7 +35,7 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    setWindowTitle(i18nc("@title:window", "Check and update Gravatar"));
+    setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
 
     mExpireAccountTrashFolderConfig = new ExpireAccountTrashFolderConfigWidget(this);
     mExpireAccountTrashFolderConfig->setObjectName(QStringLiteral("mExpireAccountTrashFolderConfig"));
