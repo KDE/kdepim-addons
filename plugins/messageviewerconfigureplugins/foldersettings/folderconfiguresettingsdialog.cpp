@@ -18,6 +18,7 @@
 */
 
 #include "folderconfiguresettingsdialog.h"
+#include "folderconfiguresettingswidget.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <KLocalizedString>
@@ -33,8 +34,11 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
+    setWindowTitle(i18nc("@title:window", "Configure Folder Settings"));
 
+    mFolderConfigureSettingsWidget = new FolderConfigureSettingsWidget(this);
+    mFolderConfigureSettingsWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsWidget"));
+    mainLayout->addWidget(mFolderConfigureSettingsWidget);
 
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel|QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));

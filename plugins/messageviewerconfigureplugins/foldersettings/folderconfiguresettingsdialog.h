@@ -21,7 +21,7 @@
 #define FOLDERCONFIGURESETTINGSDIALOG_H
 
 #include <QDialog>
-
+class FolderConfigureSettingsWidget;
 class FolderConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
@@ -32,6 +32,7 @@ public:
 private:
     void readConfig();
     void writeConfig();
+    FolderConfigureSettingsWidget *mFolderConfigureSettingsWidget = nullptr;
 };
 
 #endif // FOLDERCONFIGURESETTINGSDIALOG_H

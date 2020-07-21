@@ -18,6 +18,7 @@
 */
 
 #include "folderconfiguresettingsplugin.h"
+#include "folderconfiguresettingsdialog.h"
 #include <KPluginFactory>
 #include <QPointer>
 
@@ -34,9 +35,9 @@ FolderConfigureSettingsPlugin::~FolderConfigureSettingsPlugin()
 
 void FolderConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {
-//    QPointer<FolderConfigureSettingsDialog> dlg = new FolderConfigureSettingsDialog(parent);
-//    dlg->exec();
-//    delete dlg;
+    QPointer<FolderConfigureSettingsDialog> dlg = new FolderConfigureSettingsDialog(parent);
+    dlg->exec();
+    delete dlg;
 }
 
 #include "folderconfiguresettingsplugin.moc"
