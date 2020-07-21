@@ -18,12 +18,30 @@
 */
 
 #include "folderconfiguresettingswidget.h"
+#include <KCheckableProxyModel>
 #include <QHBoxLayout>
+#include <MailCommon/FolderTreeWidget>
+#include <MailCommon/FolderTreeView>
 
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
 {
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+    auto ftw = new MailCommon::FolderTreeWidget(this, nullptr,
+                                                MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
+                                                                                              |MailCommon::FolderTreeWidget::HideStatistics
+                                                                                              |MailCommon::FolderTreeWidget::HideHeaderViewMenu));
+    ftw->folderTreeView()->setDragEnabled(false);
+    auto ftv = ftw->folderTreeView();
+    auto sourceModel = ftv->model();
+    auto selectionModel = ftw->selectionModel();
 
+    auto checkable = new KCheckableProxyModel(this);
+    checkable->setSourceModel(sourceModel);
+    checkable->setSelectionModel(selectionModel);
+
+    mainLayout->addWidget(ftw);
 }
 
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
