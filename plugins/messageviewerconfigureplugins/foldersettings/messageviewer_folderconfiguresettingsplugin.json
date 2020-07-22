@@ -1,7 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure folder settings.",
+        "Description[ca@valencia]": "Aquest connector permet configurar els paràmetres de les carpetes.",
+        "Description[ca]": "Aquest connector permet configurar els paràmetres de les carpetes.",
+        "Description[nl]": "Deze plug-in stelt u in staat om mapinstellingen te configureren.",
+        "Description[pt]": "Este 'plugin' permite-lhe configurar as definições da pasta.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa kataloginställningar.",
+        "Description[uk]": "За допомогою цього додатка можна налаштувати параметри тек.",
+        "Description[x-test]": "xxThis plugin allows you to configure folder settings.xx",
         "Name": "Folder Settings",
+        "Name[ca@valencia]": "Paràmetres de les carpetes",
+        "Name[ca]": "Paràmetres de les carpetes",
+        "Name[nl]": "Mapinstellingen",
+        "Name[pt]": "Configuração da Pasta",
+        "Name[sv]": "Kataloginställningar",
+        "Name[uk]": "Параметри тек",
+        "Name[x-test]": "xxFolder Settingsxx",
         "ServiceTypes": [
             "MessageViewerConfigureSettingsPlugin/Plugin"
         ],
