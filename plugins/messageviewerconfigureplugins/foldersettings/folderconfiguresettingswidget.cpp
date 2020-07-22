@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguresettingswidget.h"
 #include "folderconfiguretreewidget.h"
 #include <QHBoxLayout>
@@ -29,6 +30,8 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
+    //TODO add label ?
+
     QSplitter *splitter = new QSplitter(this);
     splitter->setObjectName(QStringLiteral("splitter"));
     splitter->setChildrenCollapsible(false);
@@ -37,6 +40,12 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     mFolderConfigureTreeWidget = new FolderConfigureTreeWidget(this);
     mFolderConfigureTreeWidget->setObjectName(QStringLiteral("mFolderConfigureTreeWidget"));
     splitter->addWidget(mFolderConfigureTreeWidget);
+
+
+    mFolderConfigureSettingsPageWidget = new FolderConfigureSettingsPageWidget(this);
+    mFolderConfigureSettingsPageWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsPageWidget"));
+    splitter->addWidget(mFolderConfigureSettingsPageWidget);
+
 }
 
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()

@@ -22,6 +22,7 @@
 
 #include <QWidget>
 class FolderConfigureTreeWidget;
+class FolderConfigureSettingsPageWidget;
 class FolderConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
@@ -31,6 +32,7 @@ public:
     void save();
 private:
     FolderConfigureTreeWidget *mFolderConfigureTreeWidget = nullptr;
+    FolderConfigureSettingsPageWidget *mFolderConfigureSettingsPageWidget = nullptr;
 };
 
 #endif // FOLDERCONFIGURESETTINGSWIDGET_H
