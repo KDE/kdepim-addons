@@ -17,20 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef FOLDERCONFIGURESETTINGSWIDGET_H
-#define FOLDERCONFIGURESETTINGSWIDGET_H
+#ifndef FOLDERCONFIGURETREEWIDGET_H
+#define FOLDERCONFIGURETREEWIDGET_H
 
 #include <QWidget>
-class FolderConfigureTreeWidget;
-class FolderConfigureSettingsWidget : public QWidget
+
+class FolderConfigureTreeWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FolderConfigureSettingsWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsWidget();
-    void save();
-private:
-    FolderConfigureTreeWidget *mFolderConfigureTreeWidget = nullptr;
+    explicit FolderConfigureTreeWidget(QWidget *parent = nullptr);
+    ~FolderConfigureTreeWidget();
 };
 
-#endif // FOLDERCONFIGURESETTINGSWIDGET_H
+#endif // FOLDERCONFIGURETREEWIDGET_H
