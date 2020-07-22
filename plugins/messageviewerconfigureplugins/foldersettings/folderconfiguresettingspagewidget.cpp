@@ -18,6 +18,8 @@
 */
 
 #include "folderconfiguresettingspagewidget.h"
+#include <MailCommon/CollectionExpiryWidget>
+#include <KLocalizedString>
 #include <QTabWidget>
 #include <QVBoxLayout>
 
@@ -31,6 +33,11 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     QTabWidget *tab = new QTabWidget(this);
     tab->setObjectName(QStringLiteral("tab"));
     mainLayout->addWidget(tab);
+
+    mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
+    mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
+    tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
+
 
     //configure expire folder
     //Preference mail

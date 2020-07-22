@@ -21,7 +21,9 @@
 #define FOLDERCONFIGURESETTINGSPAGEWIDGET_H
 
 #include <QWidget>
-
+namespace MailCommon {
+class CollectionExpiryWidget;
+}
 class FolderConfigureSettingsPageWidget : public QWidget
 {
     Q_OBJECT
@@ -30,6 +32,8 @@ public:
     ~FolderConfigureSettingsPageWidget();
 
     void save();
+private:
+    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
 };
 
 #endif // FOLDERCONFIGURESETTINGSPAGEWIDGET_H
