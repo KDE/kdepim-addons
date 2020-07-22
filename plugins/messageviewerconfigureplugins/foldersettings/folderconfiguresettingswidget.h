@@ -28,6 +28,7 @@ class FolderConfigureSettingsWidget : public QWidget
 public:
     explicit FolderConfigureSettingsWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsWidget();
+    void save();
 };
 
 #endif // FOLDERCONFIGURESETTINGSWIDGET_H

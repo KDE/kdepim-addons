@@ -18,6 +18,7 @@
 */
 
 #include "folderconfiguresettingswidget.h"
+#include "foldersettingfilterproxymodel.h"
 #include <KCheckableProxyModel>
 #include <QHBoxLayout>
 #include <MailCommon/FolderTreeWidget>
@@ -27,19 +28,31 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
     auto ftw = new MailCommon::FolderTreeWidget(this, nullptr,
                                                 MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
                                                                                               |MailCommon::FolderTreeWidget::HideStatistics
                                                                                               |MailCommon::FolderTreeWidget::HideHeaderViewMenu));
+    ftw->setObjectName(QStringLiteral("foldertreewidget"));
     ftw->folderTreeView()->setDragEnabled(false);
     auto ftv = ftw->folderTreeView();
     auto sourceModel = ftv->model();
     auto selectionModel = ftw->selectionModel();
 
     auto checkable = new KCheckableProxyModel(this);
+    checkable->setObjectName(QStringLiteral("checkable"));
     checkable->setSourceModel(sourceModel);
     checkable->setSelectionModel(selectionModel);
+
+
+    auto folderSettingFilterProxyModel = new FolderSettingFilterProxyModel(this);
+    folderSettingFilterProxyModel->setObjectName(QStringLiteral("folderSettingFilterProxyModel"));
+    folderSettingFilterProxyModel->setSourceModel(checkable);
+
+    ftv->setModel(folderSettingFilterProxyModel);
+    ftv->expandAll();
+
 
     mainLayout->addWidget(ftw);
 }
@@ -47,4 +60,9 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
 {
 
+}
+
+void FolderConfigureSettingsWidget::save()
+{
+    //TODO
 }
