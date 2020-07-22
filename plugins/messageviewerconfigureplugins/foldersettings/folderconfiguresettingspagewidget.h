@@ -29,6 +29,7 @@ public:
     explicit FolderConfigureSettingsPageWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsPageWidget();
 
+    void save();
 };
 
 #endif // FOLDERCONFIGURESETTINGSPAGEWIDGET_H

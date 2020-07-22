@@ -18,17 +18,31 @@
 */
 
 #include "folderconfiguresettingspagewidget.h"
+#include <QTabWidget>
+#include <QVBoxLayout>
 
 FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *parent)
     : QWidget(parent)
 {
-    //Add tabWidget here.
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins(0, 0, 0, 0);
+
+    QTabWidget *tab = new QTabWidget(this);
+    tab->setObjectName(QStringLiteral("tab"));
+    mainLayout->addWidget(tab);
+
     //configure expire folder
     //Preference mail
     //General
 }
 
 FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
+{
+
+}
+
+void FolderConfigureSettingsPageWidget::save()
 {
 
 }
