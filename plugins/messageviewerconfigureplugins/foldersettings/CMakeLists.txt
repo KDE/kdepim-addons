@@ -4,6 +4,7 @@ set(messageviewer_folderconfiguresettingsplugin_SRCS
    folderconfiguresettingswidget.cpp
    foldersettingfilterproxymodel.cpp
    folderconfiguretreewidget.cpp
+   folderconfiguresettingspagewidget.cpp
 )
 
 kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin JSON messageviewer_folderconfiguresettingsplugin.json SOURCES

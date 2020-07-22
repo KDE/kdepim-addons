@@ -20,6 +20,7 @@
 #include "folderconfiguresettingswidget.h"
 #include "folderconfiguretreewidget.h"
 #include <QHBoxLayout>
+#include <QSplitter>
 
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
@@ -28,9 +29,14 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
 
+    QSplitter *splitter = new QSplitter(this);
+    splitter->setObjectName(QStringLiteral("splitter"));
+    splitter->setChildrenCollapsible(false);
+    mainLayout->addWidget(splitter);
+
     mFolderConfigureTreeWidget = new FolderConfigureTreeWidget(this);
     mFolderConfigureTreeWidget->setObjectName(QStringLiteral("mFolderConfigureTreeWidget"));
-    mainLayout->addWidget(mFolderConfigureTreeWidget);
+    splitter->addWidget(mFolderConfigureTreeWidget);
 }
 
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
