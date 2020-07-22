@@ -22,7 +22,10 @@
 FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *parent)
     : QWidget(parent)
 {
-
+    //Add tabWidget here.
+    //configure expire folder
+    //Preference mail
+    //General
 }
 
 FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
