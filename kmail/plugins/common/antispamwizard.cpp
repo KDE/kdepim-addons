@@ -28,8 +28,13 @@
 */
 
 #include "antispamwizard.h"
+#include <kguiaddons_version.h>
+#if KGUIADDONS_VERSION < QT_VERSION_CHECK(5, 73, 0)
 #ifndef QT_NO_CURSOR
 #include <Libkdepim/KCursorSaver>
+#endif
+#else
+#include <KCursorSaver>
 #endif
 #include <MailCommon/FolderRequester>
 #include <MailCommon/FolderTreeWidget>
@@ -64,6 +69,8 @@
 #include <QPushButton>
 #include <KConfigGroup>
 #include <QVector>
+#include <QEventLoop>
+#include <QApplication>
 #include <MailCommon/ResourceReadConfigFile>
 using namespace KMail;
 using namespace MailCommon;
@@ -511,8 +518,12 @@ void AntiSpamWizard::checkVirusRulesSelections()
 void AntiSpamWizard::checkToolAvailability()
 {
     // this can take some time to find the tools
+#if KGUIADDONS_VERSION < QT_VERSION_CHECK(5, 73, 0)
 #ifndef QT_NO_CURSOR
-    KPIM::KCursorSaver busy(KPIM::KBusyPtr::busy());
+    const KPIM::KCursorSaver busy(KPIM::KBusyPtr::busy());
+#endif
+#else
+    KCursorSaver saver(Qt::WaitCursor);
 #endif
     bool found = false;
     QVector<SpamToolConfig>::ConstIterator end(mToolList.constEnd());
