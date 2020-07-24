@@ -17,25 +17,17 @@
    Boston, MA 02110-1301, USA.
 */
 
-#ifndef FOLDERCONFIGURESETTINGSPAGEWIDGET_H
-#define FOLDERCONFIGURESETTINGSPAGEWIDGET_H
+#ifndef FOLDERCONFIGURESETTINGSGENERALWIDGET_H
+#define FOLDERCONFIGURESETTINGSGENERALWIDGET_H
 
 #include <QWidget>
-namespace MailCommon {
-class CollectionExpiryWidget;
-}
-class FolderConfigureSettingsGeneralWidget;
-class FolderConfigureSettingsPageWidget : public QWidget
+
+class FolderConfigureSettingsGeneralWidget : public QWidget
 {
     Q_OBJECT
 public:
-    explicit FolderConfigureSettingsPageWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsPageWidget();
-
-    void save();
-private:
-    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
-    FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;
+    explicit FolderConfigureSettingsGeneralWidget(QWidget *parent = nullptr);
+    ~FolderConfigureSettingsGeneralWidget();
 };
 
-#endif // FOLDERCONFIGURESETTINGSPAGEWIDGET_H
+#endif // FOLDERCONFIGURESETTINGSGENERALWIDGET_H

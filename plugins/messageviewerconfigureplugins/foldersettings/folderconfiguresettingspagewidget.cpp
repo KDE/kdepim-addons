@@ -17,6 +17,7 @@
    Boston, MA 02110-1301, USA.
 */
 
+#include "folderconfiguresettingsgeneralwidget.h"
 #include "folderconfiguresettingspagewidget.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <KLocalizedString>
@@ -34,11 +35,13 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     tab->setObjectName(QStringLiteral("tab"));
     mainLayout->addWidget(tab);
 
+    mFolderConfigureSettingsGeneralWidget = new FolderConfigureSettingsGeneralWidget(this);
+    mFolderConfigureSettingsGeneralWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsGeneralWidget"));
+    tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
+
     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
-
-
     //configure expire folder
     //Preference mail
     //General
