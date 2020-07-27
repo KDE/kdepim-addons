@@ -21,9 +21,10 @@
 #define FOLDERCONFIGURESETTINGSWIDGET_H
 
 #include <QWidget>
+#include "folderconfiguresettings_private_export.h"
 class FolderConfigureTreeWidget;
 class FolderConfigureSettingsPageWidget;
-class FolderConfigureSettingsWidget : public QWidget
+class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
 public:

@@ -21,11 +21,14 @@
 #define FOLDERCONFIGURESETTINGSPAGEWIDGET_H
 
 #include <QWidget>
+#include "folderconfiguresettings_private_export.h"
+
+
 namespace MailCommon {
 class CollectionExpiryWidget;
 }
 class FolderConfigureSettingsGeneralWidget;
-class FolderConfigureSettingsPageWidget : public QWidget
+class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsPageWidget : public QWidget
 {
     Q_OBJECT
 public:
