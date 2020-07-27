@@ -21,8 +21,9 @@
 #define FOLDERCONFIGURESETTINGSDIALOG_H
 
 #include <QDialog>
+#include "libfolderconfiguresettings_export.h"
 class FolderConfigureSettingsWidget;
-class FolderConfigureSettingsDialog : public QDialog
+class LIBFOLDERCONFIGURESETTINGS_EXPORT FolderConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
