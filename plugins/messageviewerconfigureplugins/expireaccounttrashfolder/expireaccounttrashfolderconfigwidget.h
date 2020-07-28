@@ -21,12 +21,12 @@
 #define EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
 
 #include <QWidget>
+#include "expireaccounttrashfolderconfig_private_export.h"
 namespace MailCommon
 {
 class CollectionExpiryWidget;
 }
-
-class ExpireAccountTrashFolderConfigWidget : public QWidget
+class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT ExpireAccountTrashFolderConfigWidget : public QWidget
 {
     Q_OBJECT
 public:

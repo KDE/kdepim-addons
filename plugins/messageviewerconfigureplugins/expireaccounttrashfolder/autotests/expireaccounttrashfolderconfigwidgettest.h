@@ -28,6 +28,8 @@ class ExpireAccountTrashFolderConfigWidgetTest : public QObject
 public:
     explicit ExpireAccountTrashFolderConfigWidgetTest(QObject *parent = nullptr);
     ~ExpireAccountTrashFolderConfigWidgetTest() = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };
 
 #endif // EXPIREACCOUNTTRASHFOLDERCONFIGWIDGETTEST_H

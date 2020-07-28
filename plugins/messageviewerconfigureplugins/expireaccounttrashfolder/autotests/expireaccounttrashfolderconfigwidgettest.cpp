@@ -18,10 +18,16 @@
 */
 
 #include "expireaccounttrashfolderconfigwidgettest.h"
+#include "../expireaccounttrashfolderconfigwidget.h"
 #include <QTest>
 QTEST_MAIN(ExpireAccountTrashFolderConfigWidgetTest)
 ExpireAccountTrashFolderConfigWidgetTest::ExpireAccountTrashFolderConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
 
+}
+
+void ExpireAccountTrashFolderConfigWidgetTest::shouldHaveDefaultValues()
+{
+    ExpireAccountTrashFolderConfigWidget w;
 }
