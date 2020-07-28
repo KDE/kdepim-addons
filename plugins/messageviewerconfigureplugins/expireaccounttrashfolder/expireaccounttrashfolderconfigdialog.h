@@ -21,8 +21,9 @@
 #define EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H
 
 #include <QDialog>
+#include "expireaccounttrashfolderconfig_private_export.h"
 class ExpireAccountTrashFolderConfigWidget;
-class ExpireAccountTrashFolderConfigDialog : public QDialog
+class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT ExpireAccountTrashFolderConfigDialog : public QDialog
 {
     Q_OBJECT
 public:
