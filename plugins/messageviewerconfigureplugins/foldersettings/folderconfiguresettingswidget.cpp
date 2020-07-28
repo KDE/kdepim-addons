@@ -56,5 +56,13 @@ FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
 
 void FolderConfigureSettingsWidget::save()
 {
+#if 0
+    const auto indexes = checkable->selectionModel()->selectedIndexes();
+    QSet<qint64> list;
+    list.reserve(indexes.count());
+    for (const auto &index : indexes) {
+        list << index.data(Akonadi::EntityTreeModel::CollectionIdRole).toLongLong();
+    }
+#endif
     //TODO
 }
