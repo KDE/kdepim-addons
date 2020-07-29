@@ -31,6 +31,7 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
 
      mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
      mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
+     connect(mCollectionExpiryWidget, &MailCommon::CollectionExpiryWidget::saveAndExpireRequested, this, &ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested);
      mainLayout->addWidget(mCollectionExpiryWidget);
 }
 
@@ -44,7 +45,8 @@ void ExpireAccountTrashFolderConfigWidget::save()
     //TODO
 }
 
-void ExpireAccountTrashFolderConfigWidget::init()
+void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested()
 {
+    //mCollectionExpiryWidget->save(collection, saveSettings, expireNow);
     //TODO
 }
