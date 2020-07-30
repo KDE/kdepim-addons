@@ -26,7 +26,6 @@ target_link_libraries(kmaillanguagetool
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::KIOWidgets
-    KF5::MessageComposer
     grammarcommon
     )
 
