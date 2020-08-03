@@ -45,35 +45,57 @@ WindowsContactImportExportPluginInterface::~WindowsContactImportExportPluginInte
 
 void WindowsContactImportExportPluginInterface::createAction(KActionCollection *ac)
 {
-//    QAction *action = ac->addAction(QStringLiteral("file_export_csv"));
-//    action->setText(i18n("Export CSV file..."));
-//    action->setWhatsThis(i18n("Export contacts to a file in comma separated value format."));
-//    setExportActions(QList<QAction *>() << action);
-//    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotExportCVS);
+    QAction *action = ac->addAction(QStringLiteral("file_export_windows_contact"));
+    action->setText(i18n("Export Windows Contact file..."));
+    action->setWhatsThis(i18n("Export contacts to windows contact file."));
+    setExportActions(QList<QAction *>() << action);
+    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotExportWindowsContact);
 
-//    action = ac->addAction(QStringLiteral("file_import_csv"));
-//    action->setText(i18n("Import CSV file..."));
-//    action->setWhatsThis(i18n("Import contacts from a file in comma separated value format."));
-//    setImportActions(QList<QAction *>() << action);
-//    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotImportCVS);
+    action = ac->addAction(QStringLiteral("file_import_windows_contact"));
+    action->setText(i18n("Import Windows Contact file..."));
+    action->setWhatsThis(i18n("Import contacts from windows contact file."));
+    setImportActions(QList<QAction *>() << action);
+    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotImportWindowsContact);
 }
+
+void WindowsContactImportExportPluginInterface::slotExportWindowsContact()
+{
+    mImportExportAction = Export;
+    Q_EMIT emitPluginActivated(this);
+}
+
+void WindowsContactImportExportPluginInterface::slotImportWindowsContact()
+{
+    mImportExportAction = Import;
+    Q_EMIT emitPluginActivated(this);
+}
+
 
 void WindowsContactImportExportPluginInterface::exec()
 {
-//    switch (mImportExportAction) {
-//    case Import:
-//        importCSV();
-//        break;
-//    case Export:
-//        exportCSV();
-//        break;
-    //    }
+    switch (mImportExportAction) {
+    case Import:
+        importWindowsContact();
+        break;
+    case Export:
+        exportWindowsContact();
+        break;
+        }
+}
+
+void WindowsContactImportExportPluginInterface::importWindowsContact()
+{
+    //TODO
+}
+
+void WindowsContactImportExportPluginInterface::exportWindowsContact()
+{
+    //TODO
 }
 
 bool WindowsContactImportExportPluginInterface::canImportFileType(const QUrl &url)
 {
-    //TODO
-    return false;
+    return url.path().endsWith(QLatin1String(".contact"));
 }
 
 void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)

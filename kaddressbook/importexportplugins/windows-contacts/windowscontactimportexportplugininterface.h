@@ -35,6 +35,12 @@ public:
 
     Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
     void importFile(const QUrl &url) override;
+
+private:
+    void slotExportWindowsContact();
+    void slotImportWindowsContact();
+    void importWindowsContact();
+    void exportWindowsContact();
 };
 
 #endif
