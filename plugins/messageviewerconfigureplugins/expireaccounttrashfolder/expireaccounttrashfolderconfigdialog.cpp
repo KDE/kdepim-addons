@@ -51,6 +51,7 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
 
 ExpireAccountTrashFolderConfigDialog::~ExpireAccountTrashFolderConfigDialog()
 {
+    mExpireAccountTrashFolderConfig->save();
     writeConfig();
 }
 

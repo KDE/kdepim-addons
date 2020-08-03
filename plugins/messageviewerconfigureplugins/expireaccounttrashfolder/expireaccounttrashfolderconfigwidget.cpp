@@ -19,6 +19,8 @@
 
 #include "expireaccounttrashfolderconfigwidget.h"
 #include <MailCommon/CollectionExpiryWidget>
+#include <AkonadiCore/AgentManager>
+#include <akonadi/kmime/specialmailcollections.h>
 #include <QVBoxLayout>
 
 ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
@@ -43,12 +45,18 @@ ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()
 void ExpireAccountTrashFolderConfigWidget::save()
 {
     const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
-    //mCollectionExpiryWidget->
-    //TODO
+    const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
+    for (const Akonadi::AgentInstance &agent : agents) {
+        Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
+        if (trashCol.isValid()) {
+            mCollectionExpiryWidget->save(settings, trashCol, true, true);
+        }
+    }
 }
 
 void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested()
 {
+    qWarning() << " void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested() not implement yet";
     //mCollectionExpiryWidget->save(collection, saveSettings, expireNow);
     //TODO
 }
