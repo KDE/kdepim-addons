@@ -34,6 +34,7 @@ public:
     ~ExpireAccountTrashFolderConfigWidget();
     void save();
 private:
+    void save(bool saveSettings, bool expireNow);
     void slotSaveAndExpireRequested();
     MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
 };

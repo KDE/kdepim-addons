@@ -42,21 +42,29 @@ ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()
 
 }
 
-void ExpireAccountTrashFolderConfigWidget::save()
+void ExpireAccountTrashFolderConfigWidget::save(bool saveSettings, bool expireNow)
 {
     const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
     const Akonadi::AgentInstance::List agents = Akonadi::AgentManager::self()->instances();
+    QList<Akonadi::Collection::Id> mListCollection;
     for (const Akonadi::AgentInstance &agent : agents) {
         Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
+        if (mListCollection.contains(trashCol.id())) {
+            continue;
+        }
+        mListCollection.append(trashCol.id());
         if (trashCol.isValid()) {
-            mCollectionExpiryWidget->save(settings, trashCol, true, true);
+            mCollectionExpiryWidget->save(settings, trashCol, saveSettings, expireNow);
         }
     }
 }
 
+void ExpireAccountTrashFolderConfigWidget::save()
+{
+    save(true, false);
+}
+
 void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested()
 {
-    qWarning() << " void ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested() not implement yet";
-    //mCollectionExpiryWidget->save(collection, saveSettings, expireNow);
-    //TODO
+    save(true, true);
 }
