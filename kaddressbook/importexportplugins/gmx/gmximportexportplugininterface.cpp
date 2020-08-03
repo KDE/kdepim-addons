@@ -447,7 +447,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 void GMXImportExportPluginInterface::importGMX()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
-    QString fileName
+    const QString fileName
         = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), GMX_FILESELECTION_STRING);
 
     if (fileName.isEmpty()) {
