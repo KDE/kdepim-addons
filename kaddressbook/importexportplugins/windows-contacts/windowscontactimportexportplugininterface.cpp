@@ -100,7 +100,7 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
         KMessageBox::error(parentWidget(), msg);
         return;
     }
-    //TODO
+    //TODO read xml
 }
 
 void WindowsContactImportExportPluginInterface::exportWindowsContact()
