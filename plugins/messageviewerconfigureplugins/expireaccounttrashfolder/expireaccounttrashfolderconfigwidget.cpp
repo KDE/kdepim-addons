@@ -42,6 +42,8 @@ ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()
 
 void ExpireAccountTrashFolderConfigWidget::save()
 {
+    const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
+    //mCollectionExpiryWidget->
     //TODO
 }
 
