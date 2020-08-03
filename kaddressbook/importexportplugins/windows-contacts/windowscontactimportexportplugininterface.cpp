@@ -19,6 +19,7 @@
 
 #include "windowscontactimportexportplugininterface.h"
 #include "../shared/importexportengine.h"
+#include "importexportwindowscontactplugin_debug.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -32,6 +33,8 @@
 #include <QTextCodec>
 #include <QPointer>
 #include <KAddressBookContactSelectionDialog>
+#include <QFile>
+#include <QDomElement>
 #include <KIO/Job>
 
 WindowsContactImportExportPluginInterface::WindowsContactImportExportPluginInterface(QObject *parent)
@@ -84,6 +87,20 @@ void WindowsContactImportExportPluginInterface::exec()
         }
 }
 
+bool WindowsContactImportExportPluginInterface::loadDomElement(QDomDocument &doc, QFile *file)
+{
+    QString errorMsg;
+    int errorRow;
+    int errorCol;
+    if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
+        qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
+                               << ", col " << errorCol << ": " << errorMsg;
+        return false;
+    }
+    return true;
+}
+
+
 void WindowsContactImportExportPluginInterface::importWindowsContact()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
@@ -100,12 +117,15 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
         KMessageBox::error(parentWidget(), msg);
         return;
     }
+    QDomDocument doc;
+    if (loadDomElement(doc, &file)) {
     //TODO read xml
+    }
 }
 
 void WindowsContactImportExportPluginInterface::exportWindowsContact()
 {
-    qWarning() << "Export windows contact not implement yet";
+    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Export windows contact not implement yet";
     //TODO
 }
 

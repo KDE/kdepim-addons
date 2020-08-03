@@ -23,6 +23,7 @@
 #include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
 #include <KContacts/Addressee>
 class QFile;
+class QDomDocument;
 class WindowsContactImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
 {
     Q_OBJECT
@@ -41,6 +42,7 @@ private:
     void slotImportWindowsContact();
     void importWindowsContact();
     void exportWindowsContact();
+    Q_REQUIRED_RESULT bool loadDomElement(QDomDocument &doc, QFile *file);
 };
 
 #endif
