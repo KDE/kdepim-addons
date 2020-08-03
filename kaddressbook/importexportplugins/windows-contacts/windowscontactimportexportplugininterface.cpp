@@ -86,6 +86,20 @@ void WindowsContactImportExportPluginInterface::exec()
 
 void WindowsContactImportExportPluginInterface::importWindowsContact()
 {
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    const QString fileName
+        = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), i18n("Windows Contact file (*.contact)"));
+
+    if (fileName.isEmpty()) {
+        return;
+    }
+
+    QFile file(fileName);
+    if (!file.open(QIODevice::ReadOnly)) {
+        const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
+        KMessageBox::error(parentWidget(), msg);
+        return;
+    }
     //TODO
 }
 
@@ -102,7 +116,6 @@ bool WindowsContactImportExportPluginInterface::canImportFileType(const QUrl &ur
 
 void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)
 {
-    //TODO
 }
 
 
