@@ -36,7 +36,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnEmptyListWhenNoItem()
 {
     Akonadi::Item::List lst;
     SearchPotentialDuplicateContactJob job(lst);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
@@ -48,7 +48,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnEmptyListWhenOneItem()
     Akonadi::Item::List lst;
     lst << Akonadi::Item(42);
     SearchPotentialDuplicateContactJob job(lst);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
@@ -67,7 +67,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenTwoItemsAreDupl
     lst << itemA << itemA;
 
     SearchPotentialDuplicateContactJob job(lst);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
@@ -86,7 +86,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnListWhenThreeItemsAreDu
     lst << itemA << itemA << itemA;
 
     SearchPotentialDuplicateContactJob job(lst);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
@@ -112,7 +112,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnTwoList()
     lst << item << item << item;
 
     SearchPotentialDuplicateContactJob job(lst);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();
@@ -179,7 +179,7 @@ void SearchPotentialDuplicateContactJobTest::shouldReturnList()
     QFETCH(int, numberOfList);
 
     SearchPotentialDuplicateContactJob job(listItem);
-    QSignalSpy spy(&job, SIGNAL(finished(QVector<Akonadi::Item::List>)));
+    QSignalSpy spy(&job, &SearchPotentialDuplicateContactJob::finished);
     job.start();
     QCOMPARE(spy.count(), 1);
     QVector<Akonadi::Item::List> lstResult = spy.at(0).at(0).value< QVector<Akonadi::Item::List> >();

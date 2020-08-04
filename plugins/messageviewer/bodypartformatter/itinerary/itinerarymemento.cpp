@@ -142,7 +142,8 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
                 // add other traveler we already know about from previous data in the calendar
                 // but that aren't in the currently extracted data set
                 if (data.event) {
-                    for (const auto &prev : CalendarHandler::reservationsForEvent(data.event)) {
+                    const auto reservationsForEvent = CalendarHandler::reservationsForEvent(data.event);
+                    for (const auto &prev : reservationsForEvent) {
                         const auto notFound = std::find_if(data.reservations.constBegin(), data.reservations.constEnd(), [prev](const QVariant &v) {
                             return MergeUtil::isSame(v, prev);
                         }) == data.reservations.constEnd();

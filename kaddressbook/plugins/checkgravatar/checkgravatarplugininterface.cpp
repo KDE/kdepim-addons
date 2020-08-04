@@ -76,7 +76,7 @@ void CheckGravatarPluginInterface::exec()
         KMessageBox::sorry(parentWidget(), i18n("You have not selected any contacts."));
     } else {
         if (mListItems.count() == 1) {
-            Akonadi::Item item = mListItems.first();
+            Akonadi::Item item = mListItems.constFirst();
             if (item.hasPayload<KContacts::Addressee>()) {
                 KContacts::Addressee address = item.payload<KContacts::Addressee>();
                 const QString email = address.preferredEmail();

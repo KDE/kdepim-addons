@@ -168,7 +168,8 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));
 
-    for (const auto &theme : interface->mThemeManager->themes()) {
+    const auto themes = interface->mThemeManager->themes();
+    for (const auto &theme : themes) {
         if (theme.dirName() != themeName) {
             continue;
         }

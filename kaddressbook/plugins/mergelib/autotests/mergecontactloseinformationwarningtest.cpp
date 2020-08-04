@@ -48,8 +48,8 @@ void MergeContactLoseInformationWarningTest::shouldEmitSignals()
     QVERIFY(w.isVisible());
     QAction *customize = w.findChild<QAction *>(QStringLiteral("customize"));
     QAction *automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
-    QSignalSpy spy1(&w, SIGNAL(continueMerging()));
-    QSignalSpy spy2(&w, SIGNAL(customizeMergingContacts()));
+    QSignalSpy spy1(&w, &KABMergeContacts::MergeContactLoseInformationWarning::continueMerging);
+    QSignalSpy spy2(&w, &KABMergeContacts::MergeContactLoseInformationWarning::customizeMergingContacts);
     customize->trigger();
     QCOMPARE(spy1.count(), 0);
     QCOMPARE(spy2.count(), 1);

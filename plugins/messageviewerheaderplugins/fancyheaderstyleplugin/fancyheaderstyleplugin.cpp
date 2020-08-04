@@ -192,9 +192,7 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
         "div.fancy.header table a:hover {\n"
         "  background-color: transparent ! important;\n"
         "}\n\n")
-                        .arg(pal.color(QPalette::Window).name())
-                        .arg(pal.color(QPalette::WindowText).name())
-                        .arg(headerFont);
+                        .arg(pal.color(QPalette::Window).name(),pal.color(QPalette::WindowText).name(), headerFont);
     return val;
 }
 

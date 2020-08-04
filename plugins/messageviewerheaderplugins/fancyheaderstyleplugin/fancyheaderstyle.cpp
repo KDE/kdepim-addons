@@ -181,8 +181,7 @@ QString FancyHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("date"))) {
         headerStr.append(QStringLiteral("<tr><th>%1</th>\n"
                                         "<td dir=\"%2\">%3</td></tr>\n")
-                         .arg(i18n("Date: "))
-                         .arg(mHeaderStyleUtil.directionOf(HeaderStyleUtil::dateStr(message->date()->dateTime())), mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
+                         .arg(i18n("Date: "), mHeaderStyleUtil.directionOf(HeaderStyleUtil::dateStr(message->date()->dateTime())), mHeaderStyleUtil.strToHtml(HeaderStyleUtil::dateString(message, /* short = */ MessageViewer::HeaderStyleUtil::CustomDate))));
     }
 
     if (strategy->showHeader(QStringLiteral("x-bugzilla-url"))) {
