@@ -18,6 +18,7 @@
 */
 
 #include "expireaccounttrashfolderconfigwidget.h"
+#include "libexpireaccounttrashfolderconfig_debug.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <AkonadiCore/AgentManager>
 #include <akonadi/kmime/specialmailcollections.h>
@@ -49,11 +50,14 @@ void ExpireAccountTrashFolderConfigWidget::save(bool saveSettings, bool expireNo
     QList<Akonadi::Collection::Id> mListCollection;
     for (const Akonadi::AgentInstance &agent : agents) {
         Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
-        if (mListCollection.contains(trashCol.id())) {
-            continue;
-        }
-        mListCollection.append(trashCol.id());
+        const auto trashColId = trashCol.id();
+        //qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection found " << trashCol;
         if (trashCol.isValid()) {
+            qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection valid found " << trashCol;
+            if (mListCollection.contains(trashColId)) {
+                continue;
+            }
+            mListCollection.append(trashColId);
             mCollectionExpiryWidget->save(settings, trashCol, saveSettings, expireNow);
         }
     }
