@@ -119,7 +119,15 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
     }
     QDomDocument doc;
     if (loadDomElement(doc, &file)) {
-    //TODO read xml
+        QDomElement list = doc.documentElement();
+        if (list.isNull()) {
+            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "No list defined in file";
+        } else {
+            for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
+                const QString tag = e.tagName();
+                qDebug() << " tahg " << tag;
+            }
+        }
     }
 }
 
