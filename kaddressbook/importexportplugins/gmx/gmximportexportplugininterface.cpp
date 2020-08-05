@@ -446,7 +446,6 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
 void GMXImportExportPluginInterface::importGMX()
 {
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     const QString fileName
         = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), GMX_FILESELECTION_STRING);
 
@@ -673,6 +672,7 @@ void GMXImportExportPluginInterface::importGMX()
     }
 
     file.close();
+    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     contactList.setAddressList(addresseeList);
 
     ImportExportEngine *engine = new ImportExportEngine(this);
