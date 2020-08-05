@@ -33,11 +33,11 @@ public:
 
     Q_REQUIRED_RESULT KContacts::Addressee::List importFile(const QString &fileName);
     void setParentWidget(QWidget *parentWidget);
-    void setShowMessageBox(bool b); //Only for autotest
+    void setAutoTests(bool b); //Only for autotest
 
 private:
     Q_REQUIRED_RESULT bool loadDomElement(QDomDocument &doc, QFile *file);
-    bool mShowMessageBox = true;
+    bool mAutoTest = false;
     QWidget *mParentWidget = nullptr;
 };
 

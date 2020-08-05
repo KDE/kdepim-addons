@@ -39,7 +39,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
     KContacts::Addressee::List lst;
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        if (mShowMessageBox) {
+        if (!mAutoTest) {
             const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
             KMessageBox::error(mParentWidget, msg);
         } else {
@@ -53,10 +53,62 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
         if (list.isNull()) {
             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "No list defined in file";
         } else {
+            KContacts::Addressee contact;
+            if (mAutoTest) {
+                contact.setUid(QStringLiteral("foo"));
+            }
             for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
                 const QString tag = e.tagName();
-                qDebug() << " tag " << tag;
+                if (tag == QLatin1String("c:EmailAddressCollection")) {
+                    KContacts::Email::List lstEmails;
+                    for (QDomElement emails = e.firstChildElement(); !emails.isNull(); emails = emails.nextSiblingElement()) {
+                        const QString emailsTag = emails.tagName();
+                        qDebug() << " emailstag "<< emailsTag;
+                        if (emailsTag == QLatin1String("c:EmailAddress")) {
+                            KContacts::Email email;
+                            for (QDomElement addresses = emails.firstChildElement(); !addresses.isNull(); addresses = addresses.nextSiblingElement()) {
+                                const QString addressesTag = addresses.tagName();
+                                if (addressesTag == QLatin1String("c:Type")) {
+
+                                } else if (addressesTag == QLatin1String("c:Address")) {
+                                    email.setEmail(addresses.text());
+                                } else {
+                                    qDebug() << " address tag not supported yet " << addressesTag;
+                                }
+                            }
+                            lstEmails << email;
+                        }
+                        contact.setEmailList(lstEmails);
+                    }
+                } else if (tag == QLatin1String("c:NameCollection")) {
+                    for (QDomElement name = e.firstChildElement(); !name.isNull(); name = name.nextSiblingElement()) {
+                        const QString nameTag = name.tagName();
+                        if (nameTag == QLatin1String("c:Name")) {
+                            for (QDomElement nameInfo = name.firstChildElement(); !nameInfo.isNull(); nameInfo = nameInfo.nextSiblingElement()) {
+                                const QString nameInfoTag = nameInfo.tagName();
+                                if (nameInfoTag == QLatin1String("c:FormattedName")) {
+                                    contact.setName(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:GivenName")) {
+                                    contact.setGivenName(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:FamilyName")) {
+                                    contact.setFamilyName(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:FormattedName")) {
+                                    contact.setFormattedName(nameInfo.text());
+                                } else {
+                                    qDebug() << " name tag not supported yet " << nameInfoTag;
+                                }
+                            }
+                        } else {
+                            qDebug() << " name tag unknow:" << nameTag;
+                        }
+                    }
+                } else if (tag == QLatin1String("c:PhotoCollection")) {
+
+                } else {
+                    qDebug() << "unknown tag " << tag;
+                }
             }
+            lst << contact;
         }
     }
     return lst;
@@ -80,7 +132,7 @@ void ImportWindowContact::setParentWidget(QWidget *parentWidget)
     mParentWidget = parentWidget;
 }
 
-void ImportWindowContact::setShowMessageBox(bool b)
+void ImportWindowContact::setAutoTests(bool b)
 {
-    mShowMessageBox = b;
+    mAutoTest = b;
 }

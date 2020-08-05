@@ -20,6 +20,7 @@
 #include "importwindowcontacttest.h"
 #include "../importwindowcontact.h"
 #include <QTest>
+#include <KContacts/Addressee>
 QTEST_MAIN(ImportWindowContactTest)
 ImportWindowContactTest::ImportWindowContactTest(QObject *parent)
     : QObject(parent)
@@ -31,6 +32,34 @@ void ImportWindowContactTest::shouldImportWindowContact_data()
     QTest::addColumn<QString>("filename");
     QTest::addColumn<KContacts::Addressee::List>("result");
     QTest::newRow("empty") << QString() << KContacts::Addressee::List();
+    {
+        KContacts::Addressee::List result;
+        KContacts::Addressee address;
+        address.setName(QStringLiteral("John Doe"));
+        address.setUid(QStringLiteral("foo"));
+        KContacts::Email email;
+        email.setEmail(QStringLiteral("sample-email@kde.org"));
+        address.setEmailList({email});
+
+        result << address;
+
+        QTest::newRow("test1") << QStringLiteral("test1.contact") << result;
+    }
+    {
+        KContacts::Addressee::List result;
+        KContacts::Addressee address;
+        address.setName(QStringLiteral("John Anon"));
+        address.setFamilyName(QStringLiteral("Anon"));
+        address.setGivenName(QStringLiteral("John"));
+        address.setUid(QStringLiteral("foo"));
+        KContacts::Email email;
+        email.setEmail(QStringLiteral("sampleaddress@yahoo.com"));
+        address.setEmailList({email});
+
+        result << address;
+
+        QTest::newRow("sample2") << QStringLiteral("sample2.contact") << result;
+    }
 }
 
 void ImportWindowContactTest::shouldImportWindowContact()
@@ -38,7 +67,22 @@ void ImportWindowContactTest::shouldImportWindowContact()
     QFETCH(QString, filename);
     QFETCH(KContacts::Addressee::List, result);
     ImportWindowContact contact;
-    contact.setShowMessageBox(false);
+    contact.setAutoTests(true);
     const QString fullPath = QStringLiteral(WINDOWSCONTACT_DATADIR "/data/") + filename;
-    QCOMPARE(contact.importFile(fullPath), result);
+
+    const KContacts::Addressee::List importData = contact.importFile(fullPath);
+    const bool contactEqual = (importData == result);
+    //Pb with setUid which is different.
+    if (!contactEqual) {
+        qDebug() << " RESULT";
+        for (const KContacts::Addressee &address : importData) {
+            qDebug() << "Data: " << address.toString();
+
+        }
+        qDebug() << " EXPECTED";
+        for (const KContacts::Addressee &address : result) {
+            qDebug() << "Data: " << address.toString();
+        }
+    }
+    QVERIFY(contactEqual);
 }
