@@ -39,8 +39,12 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
     KContacts::Addressee::List lst;
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
-        const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
-        KMessageBox::error(mParentWidget, msg);
+        if (mShowMessageBox) {
+            const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
+            KMessageBox::error(mParentWidget, msg);
+        } else {
+            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Impossible to open file: " << fileName;
+        }
         return lst;
     }
     QDomDocument doc;
@@ -74,4 +78,9 @@ bool ImportWindowContact::loadDomElement(QDomDocument &doc, QFile *file)
 void ImportWindowContact::setParentWidget(QWidget *parentWidget)
 {
     mParentWidget = parentWidget;
+}
+
+void ImportWindowContact::setShowMessageBox(bool b)
+{
+    mShowMessageBox = b;
 }

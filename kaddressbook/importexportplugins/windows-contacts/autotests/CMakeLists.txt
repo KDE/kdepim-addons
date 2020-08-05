@@ -2,7 +2,7 @@ ecm_qt_declare_logging_category(kaddressbook_importexport_windowscontact_debugfi
     DESCRIPTION "kdepim-addons (Import/Export Windows Contact plugin)"
     EXPORT KDEPIMADDONS
     )
-
+add_definitions(-DWINDOWSCONTACT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
 macro(add_windowscontact_unittest _source _additional)
     set( _test ${_source} ${_additional} ${kaddressbook_importexport_windowscontact_debugfile_autotest_SRCS})
     get_filename_component(_name ${_source} NAME_WE)

@@ -28,6 +28,9 @@ class ImportWindowContactTest : public QObject
 public:
     explicit ImportWindowContactTest(QObject *parent = nullptr);
     ~ImportWindowContactTest() = default;
+private Q_SLOTS:
+    void shouldImportWindowContact_data();
+    void shouldImportWindowContact();
 };
 
 #endif // IMPORTWINDOWCONTACTTEST_H

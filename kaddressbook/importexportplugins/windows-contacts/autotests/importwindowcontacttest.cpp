@@ -24,5 +24,21 @@ QTEST_MAIN(ImportWindowContactTest)
 ImportWindowContactTest::ImportWindowContactTest(QObject *parent)
     : QObject(parent)
 {
+}
 
+void ImportWindowContactTest::shouldImportWindowContact_data()
+{
+    QTest::addColumn<QString>("filename");
+    QTest::addColumn<KContacts::Addressee::List>("result");
+    QTest::newRow("empty") << QString() << KContacts::Addressee::List();
+}
+
+void ImportWindowContactTest::shouldImportWindowContact()
+{
+    QFETCH(QString, filename);
+    QFETCH(KContacts::Addressee::List, result);
+    ImportWindowContact contact;
+    contact.setShowMessageBox(false);
+    const QString fullPath = QStringLiteral(WINDOWSCONTACT_DATADIR "/data/") + filename;
+    QCOMPARE(contact.importFile(fullPath), result);
 }
