@@ -24,6 +24,8 @@
 #include <QDomDocument>
 #include <QFile>
 
+//https://docs.microsoft.com/en-us/previous-versions//ms735869(v=vs.85)
+
 ImportWindowContact::ImportWindowContact()
 {
 
@@ -94,16 +96,50 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                     contact.setFamilyName(nameInfo.text());
                                 } else if (nameInfoTag == QLatin1String("c:FormattedName")) {
                                     contact.setFormattedName(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:Title")) {
+                                    contact.setTitle(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:NickName")) {
+                                    contact.setNickName(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:Prefix")) {
+                                    contact.setPrefix(nameInfo.text());
+                                } else if (nameInfoTag == QLatin1String("c:Suffix")) {
+                                    contact.setSuffix(nameInfo.text());
                                 } else {
                                     qDebug() << " name tag not supported yet " << nameInfoTag;
                                 }
                             }
                         } else {
-                            qDebug() << " name tag unknow:" << nameTag;
+                            qDebug() << " name tag unknown:" << nameTag;
                         }
                     }
+                } else if (tag == QLatin1String("c:PhoneNumberCollection")) {
+
                 } else if (tag == QLatin1String("c:PhotoCollection")) {
 
+                } else if (tag == QLatin1String("c:PositionCollection")) {
+                    for (QDomElement position = e.firstChildElement(); !position.isNull(); position = position.nextSiblingElement()) {
+                        const QString positionTag = position.tagName();
+                        if (positionTag == QLatin1String("c:Position")) {
+                            for (QDomElement positionInfo = position.firstChildElement(); !positionInfo.isNull(); positionInfo = positionInfo.nextSiblingElement()) {
+                                const QString positionInfoTag = positionInfo.tagName();
+                                if (positionInfoTag == QLatin1String("c:Organization")) {
+                                    contact.setOrganization(positionInfo.text());
+                                } else if (positionInfoTag == QLatin1String("c:Department")) {
+                                    contact.setDepartment(positionInfo.text());
+                                } else if (positionInfoTag == QLatin1String("c:Office")) {
+                                    contact.setOffice(positionInfo.text());
+                                } else if (positionInfoTag == QLatin1String("c:Profession")) {
+                                    contact.setProfession(positionInfo.text());
+                                } else if (positionInfoTag == QLatin1String("c:Role")) {
+                                    contact.setRole(positionInfo.text());
+                                } else {
+                                    qDebug() << " position info tag not supported yet " << positionInfoTag;
+                                }
+                            }
+                        } else {
+                            qDebug() << " position tag unknown:" << positionTag;
+                        }
+                    }
                 } else {
                     qDebug() << "unknown tag " << tag;
                 }
