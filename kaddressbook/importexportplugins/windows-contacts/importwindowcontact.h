@@ -21,6 +21,7 @@
 #define IMPORTCONTACTEXPORT_H
 
 #include <QString>
+#include <KContacts/Addressee>
 class QDomDocument;
 class QFile;
 class QWidget;
@@ -30,7 +31,7 @@ public:
     ImportWindowContact();
     ~ImportWindowContact();
 
-    void importFile(const QString &fileName);
+    Q_REQUIRED_RESULT KContacts::Addressee::List importFile(const QString &fileName);
     void setParentWidget(QWidget *parentWidget);
 
 private:

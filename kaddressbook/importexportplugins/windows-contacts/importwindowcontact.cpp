@@ -34,13 +34,14 @@ ImportWindowContact::~ImportWindowContact()
 
 }
 
-void ImportWindowContact::importFile(const QString &fileName)
+KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileName)
 {
+    KContacts::Addressee::List lst;
     QFile file(fileName);
     if (!file.open(QIODevice::ReadOnly)) {
         const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
         KMessageBox::error(mParentWidget, msg);
-        return;
+        return lst;
     }
     QDomDocument doc;
     if (loadDomElement(doc, &file)) {
@@ -50,11 +51,11 @@ void ImportWindowContact::importFile(const QString &fileName)
         } else {
             for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
                 const QString tag = e.tagName();
-                qDebug() << " tahg " << tag;
+                qDebug() << " tag " << tag;
             }
         }
     }
-
+    return lst;
 }
 
 bool ImportWindowContact::loadDomElement(QDomDocument &doc, QFile *file)
