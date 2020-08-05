@@ -1,6 +1,7 @@
 set(kaddressbook_importexport_windowscontact_SRCS
     windowscontactimportexportplugin.cpp
     windowscontactimportexportplugininterface.cpp
+    importwindowcontact.cpp
     )
 
 

@@ -1,5 +1,5 @@
 /*
-   Copyright (C) 2016-2020 Laurent Montel <montel@kde.org>
+   Copyright (C) 2020 Laurent Montel <montel@kde.org>
 
    This program is free software; you can redistribute it and/or
    modify it under the terms of the GNU General Public
@@ -20,6 +20,7 @@
 #include "windowscontactimportexportplugininterface.h"
 #include "../shared/importexportengine.h"
 #include "importexportwindowscontactplugin_debug.h"
+#include "importwindowcontact.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -87,20 +88,6 @@ void WindowsContactImportExportPluginInterface::exec()
         }
 }
 
-bool WindowsContactImportExportPluginInterface::loadDomElement(QDomDocument &doc, QFile *file)
-{
-    QString errorMsg;
-    int errorRow;
-    int errorCol;
-    if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
-                               << ", col " << errorCol << ": " << errorMsg;
-        return false;
-    }
-    return true;
-}
-
-
 void WindowsContactImportExportPluginInterface::importWindowsContact()
 {
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
@@ -111,24 +98,9 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
         return;
     }
 
-    QFile file(fileName);
-    if (!file.open(QIODevice::ReadOnly)) {
-        const QString msg = i18n("<qt>Unable to open <b>%1</b> for reading.</qt>", fileName);
-        KMessageBox::error(parentWidget(), msg);
-        return;
-    }
-    QDomDocument doc;
-    if (loadDomElement(doc, &file)) {
-        QDomElement list = doc.documentElement();
-        if (list.isNull()) {
-            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "No list defined in file";
-        } else {
-            for (QDomElement e = list.firstChildElement(); !e.isNull(); e = e.nextSiblingElement()) {
-                const QString tag = e.tagName();
-                qDebug() << " tahg " << tag;
-            }
-        }
-    }
+    ImportWindowContact importer;
+    importer.setParentWidget(parentWidget());
+    importer.importFile(fileName);
 }
 
 void WindowsContactImportExportPluginInterface::exportWindowsContact()
