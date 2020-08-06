@@ -113,9 +113,61 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                         }
                     }
                 } else if (tag == QLatin1String("c:PhoneNumberCollection")) {
+                    for (QDomElement number = e.firstChildElement(); !number.isNull(); number = number.nextSiblingElement()) {
+                        const QString numberTag = number.tagName();
+                        if (numberTag == QLatin1String("c:PhoneNumber")) {
+                            KContacts::PhoneNumber phoneNumber;
+                            for (QDomElement numberInfo = number.firstChildElement(); !numberInfo.isNull(); numberInfo = numberInfo.nextSiblingElement()) {
+                                const QString numberInfoTag = numberInfo.tagName();
+                                if (numberInfoTag == QLatin1String("c:Number")) {
+                                    phoneNumber.setNumber(numberInfo.text());
+                                } else {
+                                    qDebug() << " number info tag not supported yet:" << numberInfoTag;
+                                }
+                            }
+                            if (!phoneNumber.isEmpty()) {
+                                contact.insertPhoneNumber(phoneNumber);
+                            }
+                        } else {
+                            qDebug() << " number tag unknown:" << numberTag;
+                        }
+                    }
+                } else if (tag == QLatin1String("c:IMAddressCollection")) {
 
                 } else if (tag == QLatin1String("c:PhotoCollection")) {
 
+                } else if (tag == QLatin1String("c:PhysicalAddressCollection")) {
+                    for (QDomElement address = e.firstChildElement(); !address.isNull(); address = address.nextSiblingElement()) {
+                        const QString addressTag = address.tagName();
+                        if (addressTag == QLatin1String("c:PhysicalAddress")) {
+                            KContacts::Address addressType;
+                            for (QDomElement addressInfo = address.firstChildElement(); !addressInfo.isNull(); addressInfo = addressInfo.nextSiblingElement()) {
+                                const QString addressInfoTag = addressInfo.tagName();
+                                if (addressInfoTag == QLatin1String("c:AddressLabel")) {
+                                    addressType.setLabel(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:Street")) {
+                                    addressType.setStreet(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:Locality")) {
+                                    addressType.setLocality(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:Region")) {
+                                    addressType.setRegion(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:Country")) {
+                                    addressType.setCountry(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:PostalCode")) {
+                                    addressType.setPostalCode(addressInfo.text());
+                                } else if (addressInfoTag == QLatin1String("c:POBox")) {
+                                    addressType.setPostOfficeBox(addressInfo.text());
+                                } else {
+                                    qDebug() << " address info tag not supported yet " << addressInfoTag;
+                                }
+                            }
+                            if (!addressType.isEmpty()) {
+                                contact.insertAddress(addressType);
+                            }
+                        } else {
+                            qDebug() << " address tag unknown:" << addressTag;
+                        }
+                    }
                 } else if (tag == QLatin1String("c:PositionCollection")) {
                     for (QDomElement position = e.firstChildElement(); !position.isNull(); position = position.nextSiblingElement()) {
                         const QString positionTag = position.tagName();
