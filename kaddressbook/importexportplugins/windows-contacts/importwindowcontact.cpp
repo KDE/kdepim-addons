@@ -133,9 +133,48 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                         }
                     }
                 } else if (tag == QLatin1String("c:IMAddressCollection")) {
-
+                    for (QDomElement im = e.firstChildElement(); !im.isNull(); im = im.nextSiblingElement()) {
+                        const QString imTag = im.tagName();
+                        if (imTag == QLatin1String("c:IMAddress")) {
+                            KContacts::Impp impp;
+                            for (QDomElement imInfo = im.firstChildElement(); !imInfo.isNull(); imInfo = imInfo.nextSiblingElement()) {
+                                const QString imInfoTag = imInfo.tagName();
+                                if (imInfoTag == QLatin1String("c:Value")) {
+                                    impp.setAddress(QUrl(imInfo.text()));
+                                } else {
+                                    qDebug() << " im info tag not supported yet " << imInfoTag;
+                                }
+                            }
+                            if (impp.isValid()) {
+                                contact.insertImpp(impp);
+                            }
+                        } else {
+                            qDebug() << " im tag unknown:" << imTag;
+                        }
+                    }
                 } else if (tag == QLatin1String("c:PhotoCollection")) {
-
+                    for (QDomElement photo = e.firstChildElement(); !photo.isNull(); photo = photo.nextSiblingElement()) {
+                        const QString photoTag = photo.tagName();
+                        if (photoTag == QLatin1String("c:Photo")) {
+                            KContacts::Picture picture;
+                            for (QDomElement photoInfo = photo.firstChildElement(); !photoInfo.isNull(); photoInfo = photoInfo.nextSiblingElement()) {
+                                const QString photoInfoTag = photoInfo.tagName();
+                                if (photoInfoTag == QLatin1String("c:Value")) {
+                                    const QString contentType = photoInfo.attribute(QStringLiteral("c:ContentType"));
+                                    picture.setRawData(photoInfo.text().toLatin1(), contentType);
+                                } else if (photoInfoTag == QLatin1String("c:Url")) {
+                                    picture.setUrl(photoInfo.text());
+                                } else {
+                                    qDebug() << " photo info tag not supported yet " << photoInfoTag;
+                                }
+                            }
+                            if (!picture.isEmpty()) {
+                                contact.setPhoto(picture);
+                            }
+                        } else {
+                            qDebug() << " photo tag unknown:" << photoTag;
+                        }
+                    }
                 } else if (tag == QLatin1String("c:PhysicalAddressCollection")) {
                     for (QDomElement address = e.firstChildElement(); !address.isNull(); address = address.nextSiblingElement()) {
                         const QString addressTag = address.tagName();
