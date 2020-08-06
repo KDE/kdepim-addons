@@ -65,7 +65,6 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     KContacts::Email::List lstEmails;
                     for (QDomElement emails = e.firstChildElement(); !emails.isNull(); emails = emails.nextSiblingElement()) {
                         const QString emailsTag = emails.tagName();
-                        qDebug() << " emailstag "<< emailsTag;
                         if (emailsTag == QLatin1String("c:EmailAddress")) {
                             KContacts::Email email;
                             for (QDomElement addresses = emails.firstChildElement(); !addresses.isNull(); addresses = addresses.nextSiblingElement()) {
@@ -75,10 +74,12 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (addressesTag == QLatin1String("c:Address")) {
                                     email.setEmail(addresses.text());
                                 } else {
-                                    qDebug() << " address tag not supported yet " << addressesTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address tag not supported yet " << addressesTag;
                                 }
                             }
-                            lstEmails << email;
+                            if (email.isValid()) {
+                                lstEmails << email;
+                            }
                         }
                         contact.setEmailList(lstEmails);
                     }
@@ -105,11 +106,11 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (nameInfoTag == QLatin1String("c:Suffix")) {
                                     contact.setSuffix(nameInfo.text());
                                 } else {
-                                    qDebug() << " name tag not supported yet " << nameInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " name tag not supported yet " << nameInfoTag;
                                 }
                             }
                         } else {
-                            qDebug() << " name tag unknown:" << nameTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " name tag unknown:" << nameTag;
                         }
                     }
                 } else if (tag == QLatin1String("c:PhoneNumberCollection")) {
@@ -122,14 +123,14 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 if (numberInfoTag == QLatin1String("c:Number")) {
                                     phoneNumber.setNumber(numberInfo.text());
                                 } else {
-                                    qDebug() << " number info tag not supported yet:" << numberInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " number info tag not supported yet:" << numberInfoTag;
                                 }
                             }
                             if (!phoneNumber.isEmpty()) {
                                 contact.insertPhoneNumber(phoneNumber);
                             }
                         } else {
-                            qDebug() << " number tag unknown:" << numberTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " number tag unknown:" << numberTag;
                         }
                     }
                 } else if (tag == QLatin1String("c:IMAddressCollection")) {
@@ -142,14 +143,14 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 if (imInfoTag == QLatin1String("c:Value")) {
                                     impp.setAddress(QUrl(imInfo.text()));
                                 } else {
-                                    qDebug() << " im info tag not supported yet " << imInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " im info tag not supported yet " << imInfoTag;
                                 }
                             }
                             if (impp.isValid()) {
                                 contact.insertImpp(impp);
                             }
                         } else {
-                            qDebug() << " im tag unknown:" << imTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " im tag unknown:" << imTag;
                         }
                     }
                 } else if (tag == QLatin1String("c:PhotoCollection")) {
@@ -161,18 +162,18 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 const QString photoInfoTag = photoInfo.tagName();
                                 if (photoInfoTag == QLatin1String("c:Value")) {
                                     const QString contentType = photoInfo.attribute(QStringLiteral("c:ContentType"));
-                                    picture.setRawData(photoInfo.text().toLatin1(), contentType);
+                                    picture.setRawData(photoInfo.text().toUtf8(), contentType);
                                 } else if (photoInfoTag == QLatin1String("c:Url")) {
                                     picture.setUrl(photoInfo.text());
                                 } else {
-                                    qDebug() << " photo info tag not supported yet " << photoInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " photo info tag not supported yet " << photoInfoTag;
                                 }
                             }
                             if (!picture.isEmpty()) {
                                 contact.setPhoto(picture);
                             }
                         } else {
-                            qDebug() << " photo tag unknown:" << photoTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " photo tag unknown:" << photoTag;
                         }
                     }
                 } else if (tag == QLatin1String("c:PhysicalAddressCollection")) {
@@ -197,14 +198,14 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (addressInfoTag == QLatin1String("c:POBox")) {
                                     addressType.setPostOfficeBox(addressInfo.text());
                                 } else {
-                                    qDebug() << " address info tag not supported yet " << addressInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address info tag not supported yet " << addressInfoTag;
                                 }
                             }
                             if (!addressType.isEmpty()) {
                                 contact.insertAddress(addressType);
                             }
                         } else {
-                            qDebug() << " address tag unknown:" << addressTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " address tag unknown:" << addressTag;
                         }
                     }
                 } else if (tag == QLatin1String("c:PositionCollection")) {
@@ -224,15 +225,15 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (positionInfoTag == QLatin1String("c:Role")) {
                                     contact.setRole(positionInfo.text());
                                 } else {
-                                    qDebug() << " position info tag not supported yet " << positionInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position info tag not supported yet " << positionInfoTag;
                                 }
                             }
                         } else {
-                            qDebug() << " position tag unknown:" << positionTag;
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position tag unknown:" << positionTag;
                         }
                     }
                 } else {
-                    qDebug() << "unknown tag " << tag;
+                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "unknown tag " << tag;
                 }
             }
             lst << contact;
