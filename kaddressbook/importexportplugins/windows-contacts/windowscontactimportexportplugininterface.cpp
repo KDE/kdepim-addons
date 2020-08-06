@@ -90,17 +90,19 @@ void WindowsContactImportExportPluginInterface::exec()
 
 void WindowsContactImportExportPluginInterface::importWindowsContact()
 {
-    const QString fileName
-        = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), i18n("Windows Contact file (*.contact)"));
+    const QStringList fileNames
+        = QFileDialog::getOpenFileNames(parentWidget(), QString(), QDir::homePath(), i18n("Windows Contact file (*.contact)"));
 
-    if (fileName.isEmpty()) {
+    if (fileNames.isEmpty()) {
         return;
     }
 
     KContacts::Addressee::List addresseeList;
     ImportWindowContact importer;
     importer.setParentWidget(parentWidget());
-    addresseeList = importer.importFile(fileName);
+    for (const QString &fileName : fileNames) {
+        addresseeList.append(importer.importFile(fileName));
+    }
 
     KAddressBookImportExport::KAddressBookImportExportContactList contactList;
     contactList.setAddressList(addresseeList);
