@@ -232,6 +232,30 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position tag unknown:" << positionTag;
                         }
                     }
+                } else if (tag == QLatin1String("c:Gender")) { //TODO verify it
+                    KContacts::Gender gender;
+                    gender.setGender(e.text());
+                    contact.setGender(gender);
+                } else if (tag == QLatin1String("c:Notes")) { //TODO verify it
+                    contact.setNote(e.text());
+                } else if (tag == QLatin1String("c:UrlCollection")) { //TODO verify it
+                    for (QDomElement url = e.firstChildElement(); !url.isNull(); url = url.nextSiblingElement()) {
+                        const QString urlTag = url.tagName();
+                        if (urlTag == QLatin1String("c:Url")) {
+                            for (QDomElement urlInfo = url.firstChildElement(); !urlInfo.isNull(); urlInfo = urlInfo.nextSiblingElement()) {
+                                const QString urlInfoTag = urlInfo.tagName();
+                                if (urlInfoTag == QLatin1String("c:Value")) {
+                                    KContacts::ResourceLocatorUrl url;
+                                    url.setUrl(QUrl::fromUserInput(urlInfo.text()));
+                                    contact.insertExtraUrl(url);
+                                } else {
+                                   qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " url info tag not supported yet " << urlInfoTag;
+                                }
+                            }
+                        } else {
+                            qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " url tag unknown:" << urlTag;
+                        }
+                    }
                 } else {
                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "unknown tag " << tag;
                 }
