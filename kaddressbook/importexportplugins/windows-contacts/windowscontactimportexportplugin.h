@@ -25,8 +25,7 @@ class WindowsContactImportExportPlugin : public KAddressBookImportExport::KAddre
 {
     Q_OBJECT
 public:
-    explicit WindowsContactImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
-    {
+    explicit WindowsContactImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {
     });
     ~WindowsContactImportExportPlugin() override;
 

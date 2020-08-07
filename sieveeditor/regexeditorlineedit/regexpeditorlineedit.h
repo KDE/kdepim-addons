@@ -28,8 +28,7 @@ class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
 {
     Q_OBJECT
 public:
-    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & =
-    {
+    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {
     });
     ~RegexpEditorLineEdit() override;
 

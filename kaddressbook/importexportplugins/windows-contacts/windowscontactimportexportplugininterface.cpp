@@ -75,7 +75,6 @@ void WindowsContactImportExportPluginInterface::slotImportWindowsContact()
     Q_EMIT emitPluginActivated(this);
 }
 
-
 void WindowsContactImportExportPluginInterface::exec()
 {
     switch (mImportExportAction) {
@@ -85,7 +84,7 @@ void WindowsContactImportExportPluginInterface::exec()
     case Export:
         exportWindowsContact();
         break;
-        }
+    }
 }
 
 void WindowsContactImportExportPluginInterface::importWindowsContact()
@@ -128,5 +127,3 @@ void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)
 {
     Q_UNUSED(url);
 }
-
-

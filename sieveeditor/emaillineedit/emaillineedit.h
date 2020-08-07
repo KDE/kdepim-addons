@@ -29,8 +29,7 @@ class EmailLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
 {
     Q_OBJECT
 public:
-    explicit EmailLineEdit(QWidget *parent = nullptr, const QList<QVariant> & =
-    {
+    explicit EmailLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {
     });
     ~EmailLineEdit() override;
 

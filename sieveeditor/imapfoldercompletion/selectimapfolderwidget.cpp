@@ -121,9 +121,9 @@ void SelectImapFolderWidget::createFolder()
     if (index.isValid()) {
         bool ok = false;
         const QString name = QInputDialog::getText(this, i18n("Create Folder"), i18n("Folder Name:"), {}, {}, &ok);
-	if (!ok) {
-           return;
-	}
+        if (!ok) {
+            return;
+        }
         if (!name.trimmed().isEmpty()) {
             const QString currentPath = index.data(SelectImapLoadFoldersJob::PathRole).toString();
             if (name.contains(QLatin1Char('/'))) {
