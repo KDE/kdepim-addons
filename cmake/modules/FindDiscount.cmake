@@ -6,12 +6,11 @@
 #  discount_LIBRARIES - the discount library
 #  discount_INCLUDE_DIR - the include path of the discount library
 
-# Copyright (c) 2017, Julian Wolff, <wolff@julianwolff.de>
-# Copyright (c) 2018, Sune Vuorela, <sune@kde.org>
-# Copyright (c) 2018-2019, Laurent Montel, <montel@kde.org>
+# SPDX-FileCopyrightText: 2017 Julian Wolff <wolff@julianwolff.de>
+# SPDX-FileCopyrightText: 2018 Sune Vuorela <sune@kde.org>
+# SPDX-FileCopyrightText: 2018-2019 Laurent Montel <montel@kde.org>
 #
-# Redistribution and use is allowed according to the terms of the BSD license.
-# For details see the accompanying COPYING-CMAKE-SCRIPTS file.
+# SPDX-License-Identifier: BSD-3-Clause
 
 
 if (discount_INCLUDE_DIRS AND discount_LIBRARIES)

@@ -1,9 +1,7 @@
-# Copyright (c) 2006, Alexander Neundorf, <neundorf@kde.org>
-# Copyright (c) 2013, Sandro Knauß <mail@sandroknauss.de>
+# SPDX-FileCopyrightText: 2006 Alexander Neundorf <neundorf@kde.org>
+# SPDX-FileCopyrightText: 2013 Sandro Knauß <mail@sandroknauss.de>
 #
-# Redistribution and use is allowed according to the terms of the BSD license.
-# For details see the accompanying COPYING-CMAKE-SCRIPTS file.
-
+# SPDX-License-Identifier: BSD-3-Clause
 
 if (UNIX)
 
