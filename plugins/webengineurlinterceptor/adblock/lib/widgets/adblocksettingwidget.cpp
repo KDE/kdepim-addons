@@ -40,7 +40,6 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 #include <QListWidgetItem>
 #include <QPointer>
 #include <QStandardPaths>
-#include <kio_version.h>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
 #include <adblocksubscription.h>
