@@ -25,7 +25,7 @@ template<typename Visitor>
 class TestableVisitor : public Visitor
 {
 public:
-    TestableVisitor(PimDataSource *source, const QDate &start = QDate(), const QDate &end = QDate())
+    TestableVisitor(PimDataSource *source, QDate start = QDate(), QDate end = QDate())
         : Visitor(source, start, end)
     {
     }
@@ -35,7 +35,7 @@ public:
         return Visitor::generateUid(incidence, recurrenceId);
     }
 
-    bool callIsInRange(const QDate &start, const QDate &end) const
+    bool callIsInRange(QDate start, QDate end) const
     {
         return Visitor::isInRange(start, end);
     }

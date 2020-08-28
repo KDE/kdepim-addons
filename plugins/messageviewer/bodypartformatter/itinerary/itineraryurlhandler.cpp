@@ -169,7 +169,7 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
     return dynamic_cast<ItineraryMemento *>(nodeHelper->bodyPartMemento(node->topLevel(), ItineraryMemento::identifier()));
 }
 
-void ItineraryUrlHandler::showCalendar(const QDate &date) const
+void ItineraryUrlHandler::showCalendar(QDate date) const
 {
     // ensure KOrganizer or Kontact are running
     if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {

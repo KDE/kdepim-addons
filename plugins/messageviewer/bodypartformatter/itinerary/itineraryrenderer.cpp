@@ -189,6 +189,7 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
         data.insert(QStringLiteral("groupId"), i);
 
         QVector<QVariant> reservations;
+        reservations.reserve(d.reservations.count());
         for (const auto &r : d.reservations) {
             QVariantMap m;
             m.insert(QStringLiteral("reservation"), r);
@@ -231,6 +232,6 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));
     Grantlee::OutputStream s(htmlWriter->stream());
     t->render(&s, &c);
-    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
+    qobject_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
     return false; // yes, false, we want the rest of the email rendered normally after this
 }

@@ -9,7 +9,7 @@
 #include "pimdatasource.h"
 #include "pimeventsplugin_debug.h"
 
-BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
+BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end)
     : mDataSource(dataSource)
     , mStart(start)
     , mEnd(end)
@@ -43,7 +43,7 @@ bool BaseEventDataVisitor::act(const KCalendarCore::Todo::List &todos)
     return ok;
 }
 
-bool BaseEventDataVisitor::isInRange(const QDate &start, const QDate &end) const
+bool BaseEventDataVisitor::isInRange(QDate start, QDate end) const
 {
     if (!mStart.isValid() || !mEnd.isValid()) {
         return true;
@@ -185,7 +185,7 @@ CalendarEvents::EventData EventDataVisitor::incidenceData(const KCalendarCore::I
     return data;
 }
 
-EventDataIdVisitor::EventDataIdVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end)
+EventDataIdVisitor::EventDataIdVisitor(PimDataSource *dataSource, QDate start, QDate end)
     : BaseEventDataVisitor(dataSource, start, end)
 {
 }

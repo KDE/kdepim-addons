@@ -10,7 +10,7 @@
 #include <QWidget>
 class QWebEngineView;
 namespace AdBlock {
-class AdBlockResult;
+struct AdBlockResult;
 }
 
 class AdblockBlockableElementGui : public QWidget

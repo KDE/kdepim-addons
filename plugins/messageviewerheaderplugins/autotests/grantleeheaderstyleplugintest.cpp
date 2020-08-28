@@ -107,7 +107,8 @@ void GrantleeHeaderStylePluginTest::testThemeActivation()
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));
 
-    for (const auto &action : act->actions()) {
+    const auto actions = act->actions();
+    for (const auto &action : actions) {
         if (action->data() == themeName) {
             action->trigger();
             break;

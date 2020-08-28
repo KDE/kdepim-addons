@@ -23,10 +23,10 @@ public:
     bool act(const KCalendarCore::Todo::List &todos);
 
 protected:
-    BaseEventDataVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
+    BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end);
 
     QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
-    bool isInRange(const QDate &start, const QDate &end) const;
+    bool isInRange(QDate start, QDate end) const;
 
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
 protected:
@@ -68,7 +68,7 @@ private:
 class EventDataIdVisitor : public BaseEventDataVisitor
 {
 public:
-    explicit EventDataIdVisitor(PimDataSource *dataSource, const QDate &start, const QDate &end);
+    explicit EventDataIdVisitor(PimDataSource *dataSource, QDate start, QDate end);
 
     const QStringList &results() const;
 

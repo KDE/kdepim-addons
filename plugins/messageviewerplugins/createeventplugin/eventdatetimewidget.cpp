@@ -79,12 +79,12 @@ QTime EventDateTimeWidget::time() const
     return mTimeEdit->time();
 }
 
-void EventDateTimeWidget::setTime(const QTime &time)
+void EventDateTimeWidget::setTime(QTime time)
 {
     mTimeEdit->setTime(time);
 }
 
-void EventDateTimeWidget::setDate(const QDate &date)
+void EventDateTimeWidget::setDate(QDate date)
 {
     mDateEdit->setDate(date);
 }

@@ -54,7 +54,7 @@ Element::List Picoftheday::createDayElements(const QDate &date)
 
 ////////////////////////////////////////////////////////////////////////////////
 
-POTDElement::POTDElement(const QString &id, const QDate &date, const QSize &initialThumbSize)
+POTDElement::POTDElement(const QString &id, QDate date, QSize initialThumbSize)
     : StoredElement(id)
     , mDate(date)
     , mThumbSize(initialThumbSize)
@@ -340,7 +340,7 @@ QPixmap POTDElement::newPixmap(const QSize &size)
     return mPixmap.scaled(size, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 }
 
-void POTDElement::setThumbnailSize(const QSize &size)
+void POTDElement::setThumbnailSize(QSize size)
 {
     mThumbSize = size;
 }

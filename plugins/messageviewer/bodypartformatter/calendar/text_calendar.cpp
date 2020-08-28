@@ -1084,7 +1084,7 @@ public:
         return stat;
     }
 
-    void showCalendar(const QDate &date) const
+    void showCalendar(QDate date) const
     {
         // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
         if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {

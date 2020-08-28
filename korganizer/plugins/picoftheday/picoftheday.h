@@ -46,13 +46,12 @@ class POTDElement : public StoredElement
     Q_OBJECT
 
 public:
-    POTDElement(const QString &id, const QDate &date, const QSize &initialThumbSize);
+    POTDElement(const QString &id, QDate date, QSize initialThumbSize);
     ~POTDElement()
     {
     }
 
-    void setDate(const QDate &date);
-    void setThumbnailSize(const QSize &size);
+    void setThumbnailSize(QSize size);
     /** @reimp from Element */
     QPixmap newPixmap(const QSize &size) override;
 

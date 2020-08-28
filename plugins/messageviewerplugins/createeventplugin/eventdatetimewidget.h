@@ -26,8 +26,8 @@ public:
 
     QDate date() const;
     QTime time() const;
-    void setTime(const QTime &time);
-    void setDate(const QDate &date);
+    void setTime(QTime time);
+    void setDate(QDate date);
 
 Q_SIGNALS:
     void dateTimeChanged(const QDateTime &dateTime);

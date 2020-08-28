@@ -167,7 +167,7 @@ void PimEventsPluginTest::testEventModified()
         QVERIFY(source.calendar()->addEvent(event));
 
         QCOMPARE(eventModifiedSpy.size(), 1);
-        const auto result = eventModifiedSpy.takeFirst().first().value<CalendarEvents::EventData>();
+        const auto result = eventModifiedSpy.takeFirst().constFirst().value<CalendarEvents::EventData>();
         // TODO: Test for other property changes too?
         QCOMPARE(result.title(), event->summary());
         QCOMPARE(result.uid(), expectedData[0].uid());

@@ -93,7 +93,7 @@ void ImportWindowContactTest::shouldImportWindowContact()
 
         }
         qDebug() << " EXPECTED";
-        for (const KContacts::Addressee &address : result) {
+        for (const KContacts::Addressee &address : qAsConst(result)) {
             qDebug() << "Data: " << address.toString();
         }
     }

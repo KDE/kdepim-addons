@@ -31,7 +31,7 @@ public:
     static bool hasItineraryApp();
 private:
     ItineraryMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
-    void showCalendar(const QDate &date) const;
+    void showCalendar(QDate date) const;
     void addToCalendar(ItineraryMemento *memento) const;
     void openInApp(MimeTreeParser::Interface::BodyPart *part) const;
     void openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const;
