@@ -22,6 +22,7 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     tab->setObjectName(QStringLiteral("tab"));
     mainLayout->addWidget(tab);
 
+    //General
     mFolderConfigureSettingsGeneralWidget = new FolderConfigureSettingsGeneralWidget(this);
     mFolderConfigureSettingsGeneralWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsGeneralWidget"));
     tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
@@ -29,9 +30,7 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
-    //configure expire folder
     //Preference mail
-    //General
 }
 
 FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()

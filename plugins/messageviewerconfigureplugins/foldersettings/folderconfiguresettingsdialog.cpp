@@ -54,6 +54,4 @@ void FolderConfigureSettingsDialog::writeConfig()
     KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
-#if 0
-#endif
 }
