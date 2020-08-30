@@ -27,8 +27,8 @@ public:
     QString alignment() const override;
     int elidedTextSize() const override;
 private:
-    HeaderStyle *mHeaderStyle = nullptr;
-    HeaderStrategy *mHeaderStrategy = nullptr;
+    HeaderStyle *const mHeaderStyle;
+    HeaderStrategy *const mHeaderStrategy;
 };
 }
 #endif // ENTERPRISEHEADERSTYLEPLUGIN_H

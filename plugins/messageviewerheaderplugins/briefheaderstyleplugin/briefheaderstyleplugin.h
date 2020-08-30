@@ -25,8 +25,8 @@ public:
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
     QString name() const override;
 private:
-    HeaderStyle *mHeaderStyle = nullptr;
-    HeaderStrategy *mHeaderStrategy = nullptr;
+    HeaderStyle *const mHeaderStyle;
+    HeaderStrategy *const mHeaderStrategy;
 };
 }
 #endif // BRIEFHEADERSTYLEPLUGIN_H

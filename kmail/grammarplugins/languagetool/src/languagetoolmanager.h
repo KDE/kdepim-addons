@@ -46,7 +46,7 @@ private:
     QHash<QString, QColor> mGrammarColor;
     QString mLanguage;
     QString mLanguageToolPath;
-    QNetworkAccessManager *mNetworkAccessManager = nullptr;
+    QNetworkAccessManager *const mNetworkAccessManager;
     bool mUseLocalInstance = false;
 };
 

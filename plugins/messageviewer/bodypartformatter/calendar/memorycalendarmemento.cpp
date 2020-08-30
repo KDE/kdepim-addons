@@ -14,7 +14,6 @@ using namespace Akonadi;
 
 MemoryCalendarMemento::MemoryCalendarMemento()
     : QObject(nullptr)
-    , mFinished(false)
 {
     Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/ false);
     if (etmCalendar && etmCalendar->isLoaded()) {

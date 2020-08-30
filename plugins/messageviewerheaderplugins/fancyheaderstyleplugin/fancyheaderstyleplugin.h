@@ -30,8 +30,8 @@ public:
     QString attachmentHtml() const override;
 
 private:
-    HeaderStyle *mHeaderStyle = nullptr;
-    HeaderStrategy *mHeaderStrategy = nullptr;
+    HeaderStyle *const mHeaderStyle;
+    HeaderStrategy *const mHeaderStrategy;
 };
 }
 #endif // FANCYHEADERSTYLEPLUGIN_H

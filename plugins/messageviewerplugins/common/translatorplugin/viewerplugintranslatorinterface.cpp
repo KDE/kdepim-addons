@@ -17,7 +17,6 @@ using namespace MessageViewer;
 
 ViewerPluginTranslatorInterface::ViewerPluginTranslatorInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent)
-    , mTranslatorWidget(nullptr)
 {
     createAction(ac);
 }

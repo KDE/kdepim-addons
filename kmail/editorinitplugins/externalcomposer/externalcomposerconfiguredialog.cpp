@@ -10,7 +10,6 @@
 
 ExternalComposerConfigureDialog::ExternalComposerConfigureDialog(QWidget *parent)
     : PimCommon::ConfigurePluginDialog(parent)
-    , mConfigureWidget(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "Configure \"External Composer\" Plugin"));
     initLayout();

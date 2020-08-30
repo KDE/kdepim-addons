@@ -18,8 +18,6 @@ using namespace MailTransport;
 SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, QWidget *parent)
     : QDialog(parent)
     , mTransport(transport)
-    , mConfigWidget(nullptr)
-    , mOkButton(nullptr)
 {
     Q_ASSERT(transport);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);

@@ -23,7 +23,7 @@ protected:
     void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) override;
 private:
     QString mCurrentLine;
-    QTextStream *mStream;
+    QTextStream *const mStream;
 };
 
 #endif // MARKDOWNHighlighter_H
