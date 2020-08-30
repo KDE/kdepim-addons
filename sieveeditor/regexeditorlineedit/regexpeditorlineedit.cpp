@@ -20,18 +20,12 @@
 K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")
 struct InfoRegExp
 {
-    InfoRegExp()
-        : status(Unknown)
-        , mEditorDialog(nullptr)
-    {
-    }
-
     enum RegexpEditorStatus {
         Unknown = 0,
         Installed,
         NotInstalled
     };
-    RegexpEditorStatus status;
+    RegexpEditorStatus status = Unknown;
     QDialog *mEditorDialog = nullptr;
 };
 

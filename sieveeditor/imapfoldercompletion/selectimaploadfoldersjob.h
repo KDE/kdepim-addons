@@ -44,7 +44,7 @@ private:
     KSieveUi::SieveImapAccountSettings mSieveImapAccount;
     QMap<QString, QStandardItem *> mItemsMap;
     KIMAP::Session *mSession = nullptr;
-    QStandardItemModel *mModel = nullptr;
+    QStandardItemModel *const mModel;
 };
 
 #endif // SELECTIMAPLOADFOLDERSJOB_H

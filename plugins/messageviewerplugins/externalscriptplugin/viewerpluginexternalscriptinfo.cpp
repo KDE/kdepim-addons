@@ -7,7 +7,6 @@
 #include "viewerpluginexternalscriptinfo.h"
 
 ViewerPluginExternalScriptInfo::ViewerPluginExternalScriptInfo()
-    : mIsReadOnly(false)
 {
 }
 

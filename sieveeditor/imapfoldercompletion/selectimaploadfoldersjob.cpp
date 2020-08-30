@@ -15,7 +15,6 @@
 
 SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent)
     : QObject(parent)
-    , mSession(nullptr)
     , mModel(model)
 {
 }

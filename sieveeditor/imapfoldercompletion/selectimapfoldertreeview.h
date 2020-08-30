@@ -29,7 +29,7 @@ protected:
 private:
     void generalPaletteChanged();
     QColor mTextColor;
-    LoadingStatus mStatus;
+    LoadingStatus mStatus = InProgress;
 };
 
 #endif // SELECTIMAPFOLDERTREEVIEW_H

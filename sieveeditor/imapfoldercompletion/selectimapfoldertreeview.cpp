@@ -11,7 +11,6 @@
 
 SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
     : QTreeView(parent)
-    , mStatus(InProgress)
 {
 }
 
