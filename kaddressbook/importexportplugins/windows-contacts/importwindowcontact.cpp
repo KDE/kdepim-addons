@@ -93,6 +93,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (nameInfoTag == QLatin1String("c:Suffix")) {
                                     contact.setSuffix(nameInfo.text());
                                 } else {
+                                    //TODO middlename/generation
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " name tag not supported yet " << nameInfoTag;
                                 }
                             }
@@ -221,7 +222,15 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     }
                 } else if (tag == QLatin1String("c:Gender")) { //TODO verify it
                     KContacts::Gender gender;
-                    gender.setGender(e.text());
+                    const QString genderStr = e.text();
+                    if (genderStr == QLatin1String("Male")) {
+                        gender.setGender(QStringLiteral("H"));
+                    } else if (genderStr == QLatin1String("Female")) {
+                        gender.setGender(QStringLiteral("F"));
+                    } else {
+                        //Don't provide gender
+                        continue;
+                    }
                     contact.setGender(gender);
                 } else if (tag == QLatin1String("c:Notes")) { //TODO verify it
                     contact.setNote(e.text());
