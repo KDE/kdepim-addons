@@ -100,7 +100,7 @@ private:
         KAddressBookImportExport::KAddressBookImportExportContactFields::Fields fields = KAddressBookImportExport::KAddressBookImportExportContactFields::allFields();
         fields.remove(KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined);
 
-        for (int i = 0; i < fields.count(); ++i) {
+        for (int i = 0, total = fields.count(); i < total; ++i) {
             mFieldMap.insert(KAddressBookImportExport::KAddressBookImportExportContactFields::label(fields.at(i)), fields.at(i));
         }
     }
@@ -165,7 +165,6 @@ public:
 
 CSVImportDialog::CSVImportDialog(QWidget *parent)
     : QDialog(parent)
-    , mDevice(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "CSV Import Dialog"));
     setModal(true);
@@ -511,7 +510,7 @@ void CSVImportDialog::reloadCodecs()
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Unicode"), Uni);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Microsoft Unicode"), MSBug);
 
-    for (int i = 0; i < mCodecs.count(); ++i) {
+    for (int i = 0, total = mCodecs.count(); i < total; ++i) {
         mCodecCombo->addItem(QLatin1String(mCodecs.at(i)->name()), Codec + i);
     }
 }

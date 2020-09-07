@@ -12,8 +12,8 @@
 
 CsvParser::CsvParser(QObject *parent)
     : QThread(parent)
+    , mReader(new QCsvReader(this))
 {
-    mReader = new QCsvReader(this);
 }
 
 CsvParser::~CsvParser()

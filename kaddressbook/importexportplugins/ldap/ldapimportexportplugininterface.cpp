@@ -26,7 +26,7 @@ void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
     QAction *action = ac->addAction(QStringLiteral("file_import_ldap"));
     action->setText(i18n("Import From LDAP server..."));
     action->setWhatsThis(i18n("Import contacts from an LDAP server."));
-    setImportActions(QList<QAction *>() << action);
+    setImportActions({action});
     connect(action, &QAction::triggered, this, &LDapImportExportPluginInterface::slotImportLdap);
 }
 

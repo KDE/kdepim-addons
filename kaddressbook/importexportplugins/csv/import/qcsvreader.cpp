@@ -29,7 +29,7 @@ public:
     void emitEndLine(uint row);
     void emitField(const QString &data, int row, int column);
 
-    QCsvBuilderInterface *mBuilder = nullptr;
+    QCsvBuilderInterface *const mBuilder;
     QTextCodec *mCodec = nullptr;
     QChar mTextQuote = QLatin1Char('"');
     QChar mDelimiter = QLatin1Char(' ');

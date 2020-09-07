@@ -43,7 +43,7 @@ protected:
     void run() override;
 
 private:
-    QCsvReader *mReader = nullptr;
+    QCsvReader *const mReader;
     QIODevice *mDevice = nullptr;
     int mRowCount = 0;
     int mColumnCount = 0;
