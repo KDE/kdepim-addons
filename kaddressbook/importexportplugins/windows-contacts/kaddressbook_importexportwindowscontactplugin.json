@@ -14,7 +14,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att importera och exportera Windows-kontakter.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі записів контактів Windows.",
         "Description[x-test]": "xxThis plugin allows you to import/export Windows Contacts.xx",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Id": "kaddressbookimportexportwindowscontact",
         "Name": "Import/Export Windows Contact",
         "Name[ca@valencia]": "Importa/exporta un Contact del Windows",
