@@ -55,7 +55,7 @@ public:
     }
 
 private:
-    ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
+    ItineraryKDEConnectHandler *const m_kdeConnect;
 };
 }
 

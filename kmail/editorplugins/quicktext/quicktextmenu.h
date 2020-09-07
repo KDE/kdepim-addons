@@ -30,7 +30,7 @@ Q_SIGNALS:
     void insertVariable(MessageComposer::ConvertSnippetVariablesUtil::VariableType type);
 private:
     void initializeMenu();
-    QWidget *mParentWidget = nullptr;
+    QWidget *const mParentWidget;
     MessageComposer::ConvertSnippetVariableMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
 };

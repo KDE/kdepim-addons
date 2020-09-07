@@ -22,10 +22,6 @@
 
 CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
-    , mSendPlainText(false)
-    , mCheckMailTransport(false)
-    , mCheckDuplicateEmails(false)
-    , mCheckSendAttachments(false)
 {
 }
 

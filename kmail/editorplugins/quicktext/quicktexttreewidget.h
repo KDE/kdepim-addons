@@ -36,7 +36,7 @@ private:
     void deleteSnippet();
     void deleteSnippetGroup();
     void selectionWasChanged();
-    QuicktextManager *mSnippetsManager = nullptr;
+    QuicktextManager *const mSnippetsManager;
     QAction *mAddSnippetAction = nullptr;
     QAction *mEditSnippetAction = nullptr;
     QAction *mDeleteSnippetAction = nullptr;

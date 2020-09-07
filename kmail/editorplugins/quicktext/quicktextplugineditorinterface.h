@@ -29,7 +29,7 @@ private:
     void slotActivated();
     void selectPreviousWord(QTextCursor &cursor, int cursorPosition);
     QVector<MailCommon::SnippetsInfo> mSnippetsInfo;
-    MailCommon::SnippetsModel *mModel = nullptr;
+    MailCommon::SnippetsModel *const mModel;
 };
 
 #endif

@@ -18,8 +18,8 @@
 
 QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
+    , mModel(MailCommon::SnippetsModel::instance())
 {
-    mModel = MailCommon::SnippetsModel::instance();
     updateSnippetsInfo();
 }
 

@@ -31,10 +31,10 @@ public:
 
     void save();
 
-    QuicktextManager *q = nullptr;
+    QuicktextManager *const q;
     MailCommon::SnippetsModel *mModel = nullptr;
     QItemSelectionModel *mSelectionModel = nullptr;
-    QWidget *mParent = nullptr;
+    QWidget *const mParent;
 };
 
 QModelIndex QuicktextManager::Private::currentGroupIndex() const
