@@ -29,7 +29,7 @@
         "Description[uk]": "За допомогою цього додатка можна строго мінімізувати заголовок повідомлення.",
         "Description[x-test]": "xxThis plugin reduces mail header to strict minimum.xx",
         "Description[zh_CN]": "此插件将邮件头部精简到最小。",
-        "EnabledByDefault": "true",
+        "EnabledByDefault": "false",
         "Name": "Brief Header Style",
         "Name[ar]": "نمط التّرويسات مختصر",
         "Name[ca@valencia]": "Estil de capçalera breu",
