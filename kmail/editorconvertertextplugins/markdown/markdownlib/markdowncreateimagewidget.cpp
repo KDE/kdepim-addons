@@ -41,6 +41,14 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mainLayout->addRow(mKeepOriginalSize);
     connect(mKeepOriginalSize, &QCheckBox::stateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
 
+    QWidget *sizeWidget = new QWidget;
+    sizeWidget->setObjectName(QStringLiteral("sizeWidget"));
+    QHBoxLayout *sizeWidgetLayout = new QHBoxLayout(sizeWidget);
+    sizeWidgetLayout->setObjectName(QStringLiteral("sizeWidgetLayout"));
+    sizeWidgetLayout->setContentsMargins({});
+    mainLayout->addRow(sizeWidget);
+
+
     mLabWidth = new QLabel(i18n("Width:"), this);
     mLabWidth->setObjectName(QStringLiteral("labwidth"));
     mLabWidth->setEnabled(false);
@@ -51,7 +59,8 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mWidth->setValue(50);
     mWidth->setEnabled(false);
     mWidth->setSuffix(i18n(" px"));
-    mainLayout->addRow(mLabWidth, mWidth);
+    sizeWidgetLayout->addWidget(mLabWidth);
+    sizeWidgetLayout->addWidget(mWidth);
 
     mLabHeight = new QLabel(i18n("Height:"), this);
     mLabHeight->setObjectName(QStringLiteral("labheight"));
@@ -63,7 +72,9 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mHeight->setValue(50);
     mHeight->setEnabled(false);
     mHeight->setSuffix(i18n(" px"));
-    mainLayout->addRow(mLabHeight, mHeight);
+    sizeWidgetLayout->addWidget(mLabHeight);
+    sizeWidgetLayout->addWidget(mHeight);
+    sizeWidgetLayout->addStretch(1);
 }
 
 MarkdownCreateImageWidget::~MarkdownCreateImageWidget()

@@ -66,6 +66,14 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QCOMPARE(mHeight->minimum(), 1);
     QCOMPARE(mHeight->maximum(), 999);
     QVERIFY(!mHeight->isEnabled());
+
+
+    QWidget *sizeWidget = w.findChild<QWidget *>(QStringLiteral("sizeWidget"));
+    QVERIFY(sizeWidget);
+
+    QHBoxLayout *sizeWidgetLayout = w.findChild<QHBoxLayout *>(QStringLiteral("sizeWidgetLayout"));
+    QVERIFY(sizeWidgetLayout);
+    QCOMPARE(sizeWidgetLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 }
 
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()
