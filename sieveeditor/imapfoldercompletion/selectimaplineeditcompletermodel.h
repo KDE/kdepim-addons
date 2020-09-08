@@ -20,9 +20,9 @@ public:
     explicit SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent = nullptr);
     ~SelectImapLineEditCompleterModel();
 
-    QAbstractProxyModel *completerModel() const;
+    Q_REQUIRED_RESULT QAbstractProxyModel *completerModel() const;
 private:
-    KDescendantsProxyModel *mFlatProxy = nullptr;
+    KDescendantsProxyModel *const mFlatProxy;
 };
 
 #endif // SELECTIMAPLINEEDITCOMPLETERMODEL_H

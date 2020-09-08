@@ -38,7 +38,7 @@ private:
     void slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous);
     void slotRefreshImap();
 
-    KSieveUi::SieveImapAccountSettings mAccount;
+    const KSieveUi::SieveImapAccountSettings mAccount;
     QLineEdit *mSearchLineEdit = nullptr;
     SelectImapFolderTreeView *mTreeView = nullptr;
     QStandardItemModel *mModel = nullptr;

@@ -12,8 +12,8 @@
 
 SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent)
     : QObject(parent)
+    , mFlatProxy(new KDescendantsProxyModel(this))
 {
-    mFlatProxy = new KDescendantsProxyModel(this);
     mFlatProxy->setDisplayAncestorData(true);
     mFlatProxy->setAncestorSeparator(QStringLiteral("/"));
     bool modelIsInitalized = false;

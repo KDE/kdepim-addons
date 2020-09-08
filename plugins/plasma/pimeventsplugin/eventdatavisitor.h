@@ -30,9 +30,9 @@ protected:
 
     QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
 protected:
-    PimDataSource *mDataSource = nullptr;
-    QDate mStart;
-    QDate mEnd;
+    PimDataSource *const mDataSource;
+    const QDate mStart;
+    const QDate mEnd;
 };
 
 class EventDataVisitor : public BaseEventDataVisitor

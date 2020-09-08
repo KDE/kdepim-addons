@@ -30,7 +30,7 @@ private Q_SLOTS:
 private:
     void createTodo();
     Akonadi::Item mItem;
-    Akonadi::Collection mCollection;
+    const Akonadi::Collection mCollection;
     KCalendarCore::Todo::Ptr mTodoPtr;
 };
 }
