@@ -7,8 +7,9 @@
 #ifndef LDAPIMPORTEXPORTPLUGININTERFACE_H
 #define LDAPIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
-class LDapImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
+#include <KAddressBookImportExport/PluginInterface>
+
+class LDapImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
     Q_OBJECT
 public:

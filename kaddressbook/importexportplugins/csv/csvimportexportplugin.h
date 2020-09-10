@@ -6,9 +6,11 @@
 
 #ifndef CSVIMPORTEXPORTPLUGIN_H
 #define CSVIMPORTEXPORTPLUGIN_H
-#include <KAddressBookImportExport/KAddressBookImportExportPlugin>
+
+#include <KAddressBookImportExport/Plugin>
 #include <QVariant>
-class CSVImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
+
+class CSVImportExportPlugin : public KAddressBookImportExport::Plugin
 {
     Q_OBJECT
 public:

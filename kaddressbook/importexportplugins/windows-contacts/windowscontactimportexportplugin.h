@@ -6,14 +6,15 @@
 
 #ifndef WINDOWSCONTACTIMPORTEXPORTPLUGIN_H
 #define WINDOWSCONTACTIMPORTEXPORTPLUGIN_H
-#include <KAddressBookImportExport/KAddressBookImportExportPlugin>
+
+#include <KAddressBookImportExport/Plugin>
 #include <QVariant>
-class WindowsContactImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
+
+class WindowsContactImportExportPlugin : public KAddressBookImportExport::Plugin
 {
     Q_OBJECT
 public:
-    explicit WindowsContactImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {
-    });
+    explicit WindowsContactImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~WindowsContactImportExportPlugin() override;
 
     PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;

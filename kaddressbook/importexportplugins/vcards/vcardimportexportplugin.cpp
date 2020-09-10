@@ -10,13 +10,11 @@
 
 K_PLUGIN_CLASS_WITH_JSON(VCardImportExportPlugin, "kaddressbook_importexportvcardplugin.json")
 VCardImportExportPlugin::VCardImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-VCardImportExportPlugin::~VCardImportExportPlugin()
-{
-}
+VCardImportExportPlugin::~VCardImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(QObject *parent)
 {

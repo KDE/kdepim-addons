@@ -10,16 +10,14 @@
 #include <QAction>
 #include <QPointer>
 #include <PimCommonAkonadi/LdapSearchDialog>
-#include "../shared/importexportengine.h"
+#include <KAddressBookImportExport/ImportExportEngine>
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::PluginInterface(parent)
 {
 }
 
-LDapImportExportPluginInterface::~LDapImportExportPluginInterface()
-{
-}
+LDapImportExportPluginInterface::~LDapImportExportPluginInterface() = default;
 
 void LDapImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -49,7 +47,7 @@ void LDapImportExportPluginInterface::slotImportLdap()
 
 void LDapImportExportPluginInterface::importLdap()
 {
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    KAddressBookImportExport::ContactList contactList;
     QPointer<PimCommon::LdapSearchDialog> dlg = new PimCommon::LdapSearchDialog(parentWidget());
 
     if (dlg->exec()) {
@@ -57,7 +55,7 @@ void LDapImportExportPluginInterface::importLdap()
     }
 
     delete dlg;
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();

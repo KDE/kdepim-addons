@@ -6,15 +6,15 @@
 
 #ifndef LDIFIMPORTEXPORTPLUGIN_H
 #define LDIFIMPORTEXPORTPLUGIN_H
-#include <KAddressBookImportExport/KAddressBookImportExportPlugin>
+
+#include <KAddressBookImportExport/Plugin>
 #include <QVariant>
-class LDifImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
+
+class LDifImportExportPlugin : public KAddressBookImportExport::Plugin
 {
     Q_OBJECT
 public:
-    explicit LDifImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
-    {
-    });
+    explicit LDifImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~LDifImportExportPlugin() override;
 
     PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;

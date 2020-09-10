@@ -6,15 +6,15 @@
 
 #ifndef VCARDIMPORTEXPORTPLUGIN_H
 #define VCARDIMPORTEXPORTPLUGIN_H
-#include <KAddressBookImportExport/KAddressBookImportExportPlugin>
+
+#include <KAddressBookImportExport/Plugin>
 #include <QVariant>
-class VCardImportExportPlugin : public KAddressBookImportExport::KAddressBookImportExportPlugin
+
+class VCardImportExportPlugin : public KAddressBookImportExport::Plugin
 {
     Q_OBJECT
 public:
-    explicit VCardImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & =
-    {
-    });
+    explicit VCardImportExportPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~VCardImportExportPlugin() override;
 
     PimCommon::AbstractGenericPluginInterface *createInterface(QObject *parent) override;

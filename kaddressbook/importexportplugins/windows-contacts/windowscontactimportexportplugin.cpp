@@ -6,18 +6,17 @@
 
 #include "windowscontactimportexportplugin.h"
 #include "windowscontactimportexportplugininterface.h"
+
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(WindowsContactImportExportPlugin, "kaddressbook_importexportwindowscontactplugin.json")
 
 WindowsContactImportExportPlugin::WindowsContactImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-WindowsContactImportExportPlugin::~WindowsContactImportExportPlugin()
-{
-}
+WindowsContactImportExportPlugin::~WindowsContactImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *WindowsContactImportExportPlugin::createInterface(QObject *parent)
 {

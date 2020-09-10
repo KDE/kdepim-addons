@@ -10,14 +10,13 @@ kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_im
     ${kaddressbook_importexport_vcard_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
 target_link_libraries(kaddressbook_importexportvcardplugin
-    KF5::KaddressbookImportExport
+    KPim::AddressbookImportExport
     KF5::PimCommon
     KF5::I18n
     KF5::XmlGui
     KF5::Contacts
     KF5::JobWidgets
     KF5::AkonadiContact
-    kaddressbookimportexportlibprivate
     Gpgmepp
     QGpgme
     )

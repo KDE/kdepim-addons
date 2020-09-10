@@ -7,9 +7,10 @@
 #ifndef WINDOWSCONTACTIMPORTEXPORTPLUGININTERFACE_H
 #define WINDOWSCONTACTIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
+#include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
-class WindowsContactImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
+
+class WindowsContactImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
     Q_OBJECT
 public:

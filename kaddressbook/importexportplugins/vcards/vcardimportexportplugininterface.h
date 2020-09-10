@@ -7,10 +7,11 @@
 #ifndef VCARDIMPORTEXPORTPLUGININTERFACE_H
 #define VCARDIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
-#include <KAddressBookImportExport/KAddressBookExportSelectionWidget>
+#include <KAddressBookImportExport/PluginInterface>
+#include <KAddressBookImportExport/ExportSelectionWidget>
 #include <KContacts/Addressee>
-class VCardImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
+
+class VCardImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
     Q_OBJECT
 public:
@@ -27,7 +28,7 @@ private:
         VCard4
     };
     KContacts::Addressee::List parseVCard(const QByteArray &data) const;
-    KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFieldType) const;
+    KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::ExportSelectionWidget::ExportFields exportFieldType) const;
     void addKey(KContacts::Addressee &addr, KContacts::Key::Type type) const;
 
     void exportVCard();

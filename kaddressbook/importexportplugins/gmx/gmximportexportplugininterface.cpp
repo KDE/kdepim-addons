@@ -16,10 +16,11 @@
 #include <QTemporaryFile>
 #include <KJobWidgets>
 #include <QTextStream>
-#include <KAddressBookContactSelectionDialog>
 #include <QPointer>
 #include <importexportengine.h>
 #include <KIOCore/kio/filecopyjob.h>
+
+#include <KAddressBookImportExport/ContactSelectionDialog>
 
 #define GMX_FILESELECTION_STRING i18n("GMX address book file (*.gmxa)")
 const int typeHome = 0;
@@ -27,13 +28,11 @@ const int typeWork = 1;
 const int typeOther = 2;
 
 GMXImportExportPluginInterface::GMXImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::PluginInterface(parent)
 {
 }
 
-GMXImportExportPluginInterface::~GMXImportExportPluginInterface()
-{
-}
+GMXImportExportPluginInterface::~GMXImportExportPluginInterface() = default;
 
 void GMXImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -76,8 +75,8 @@ void GMXImportExportPluginInterface::slotExportGmx()
 
 void GMXImportExportPluginInterface::exportGMX()
 {
-    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg
-        = new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
+        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -92,7 +91,7 @@ void GMXImportExportPluginInterface::exportGMX()
         return;
     }
 
-    KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
+    KAddressBookImportExport::ContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.gmx")), GMX_FILESELECTION_STRING, nullptr, options);
@@ -659,10 +658,10 @@ void GMXImportExportPluginInterface::importGMX()
     }
 
     file.close();
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    KAddressBookImportExport::ContactList contactList;
     contactList.setAddressList(addresseeList);
 
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();

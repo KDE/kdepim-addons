@@ -11,13 +11,11 @@
 K_PLUGIN_CLASS_WITH_JSON(LDifImportExportPlugin, "kaddressbook_importexportldifplugin.json")
 
 LDifImportExportPlugin::LDifImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-LDifImportExportPlugin::~LDifImportExportPlugin()
-{
-}
+LDifImportExportPlugin::~LDifImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *LDifImportExportPlugin::createInterface(QObject *parent)
 {

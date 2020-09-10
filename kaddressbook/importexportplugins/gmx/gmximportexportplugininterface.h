@@ -7,11 +7,11 @@
 #ifndef GMXIMPORTEXPORTPLUGININTERFACE_H
 #define GMXIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
+#include <KAddressBookImportExport/PluginInterface>
 #include <QFile>
 #include <KContacts/Addressee>
 
-class GMXImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
+class GMXImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
     Q_OBJECT
 public:

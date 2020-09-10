@@ -5,7 +5,6 @@
 */
 
 #include "windowscontactimportexportplugininterface.h"
-#include "../shared/importexportengine.h"
 #include "importexportwindowscontactplugin_debug.h"
 #include "importwindowcontact.h"
 #include <KLocalizedString>
@@ -20,19 +19,19 @@
 #include <QFileDialog>
 #include <QTextCodec>
 #include <QPointer>
-#include <KAddressBookContactSelectionDialog>
 #include <QFile>
 #include <QDomElement>
 #include <KIO/Job>
 
+#include <KAddressBookImportExport/ImportExportEngine>
+#include <KAddressBookImportExport/ContactSelectionDialog>
+
 WindowsContactImportExportPluginInterface::WindowsContactImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::PluginInterface(parent)
 {
 }
 
-WindowsContactImportExportPluginInterface::~WindowsContactImportExportPluginInterface()
-{
-}
+WindowsContactImportExportPluginInterface::~WindowsContactImportExportPluginInterface() = default;
 
 void WindowsContactImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -90,10 +89,10 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
         addresseeList.append(importer.importFile(fileName));
     }
 
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    KAddressBookImportExport::ContactList contactList;
     contactList.setAddressList(addresseeList);
 
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();

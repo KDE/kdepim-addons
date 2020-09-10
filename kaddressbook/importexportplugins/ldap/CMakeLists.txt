@@ -7,11 +7,11 @@ set(kaddressbook_importexport_ldap_SRCS
 kcoreaddons_add_plugin(kaddressbook_importexportldapplugin JSON kaddressbook_importexportldapplugin.json SOURCES
     ${kaddressbook_importexport_ldap_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
-target_link_libraries(kaddressbook_importexportldapplugin KF5::KaddressbookImportExport
+target_link_libraries(kaddressbook_importexportldapplugin
+        KPim::AddressbookImportExport
         KF5::AkonadiCore
         KF5::I18n
         KF5::XmlGui
         KF5::Contacts
-        kaddressbookimportexportlibprivate
         KF5::PimCommonAkonadi
     )

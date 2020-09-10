@@ -11,13 +11,11 @@
 K_PLUGIN_CLASS_WITH_JSON(GMXImportExportPlugin, "kaddressbook_importexportgmxplugin.json")
 
 GMXImportExportPlugin::GMXImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-GMXImportExportPlugin::~GMXImportExportPlugin()
-{
-}
+GMXImportExportPlugin::~GMXImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(QObject *parent)
 {

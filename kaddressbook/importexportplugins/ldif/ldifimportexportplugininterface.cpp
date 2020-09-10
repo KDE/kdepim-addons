@@ -5,7 +5,6 @@
 */
 
 #include "ldifimportexportplugininterface.h"
-#include "../shared/importexportengine.h"
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
@@ -19,17 +18,17 @@
 #include <KIOCore/kio/filecopyjob.h>
 #include <PimCommon/RenameFileDialog>
 #include <KContacts/LDIFConverter>
-#include <KAddressBookImportExport/KAddressBookContactSelectionDialog>
-#include <KAddressBookImportExport/KAddressBookImportExportContactList>
+
+#include <KAddressBookImportExport/ContactSelectionDialog>
+#include <KAddressBookImportExport/ContactList>
+#include <KAddressBookImportExport/ImportExportEngine>
 
 LDifImportExportPluginInterface::LDifImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::PluginInterface(parent)
 {
 }
 
-LDifImportExportPluginInterface::~LDifImportExportPluginInterface()
-{
-}
+LDifImportExportPluginInterface::~LDifImportExportPluginInterface() = default;
 
 void LDifImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -92,11 +91,11 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
     KContacts::ContactGroup::List lstGroup;
     KContacts::Addressee::List lstAddresses;
     KContacts::LDIFConverter::LDIFToAddressee(wholeFile, lstAddresses, lstGroup, dtDefault);
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    KAddressBookImportExport::ContactList contactList;
     contactList.setAddressList(lstAddresses);
     contactList.setContactGroupList(lstGroup);
 
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -108,7 +107,7 @@ void LDifImportExportPluginInterface::importLdif()
     importLdifFile(fileName);
 }
 
-void doExport(QFile *file, const KAddressBookImportExport::KAddressBookImportExportContactList &list)
+void doExport(QFile *file, const KAddressBookImportExport::ContactList &list)
 {
     QString data;
     KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(list.addressList(), list.contactGroupList(), data);
@@ -120,8 +119,8 @@ void doExport(QFile *file, const KAddressBookImportExport::KAddressBookImportExp
 
 void LDifImportExportPluginInterface::exportLdif()
 {
-    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg
-        = new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
+        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -136,7 +135,7 @@ void LDifImportExportPluginInterface::exportLdif()
         return;
     }
 
-    KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
+    KAddressBookImportExport::ContactList contactLists;
     contactLists.setAddressList(contacts);
 
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;

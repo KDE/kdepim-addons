@@ -7,10 +7,10 @@
 #ifndef CSVIMPORTEXPORTPLUGININTERFACE_H
 #define CSVIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/KAddressBookImportExportPluginInterface>
+#include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
 class QFile;
-class CSVImportExportPluginInterface : public KAddressBookImportExport::KAddressBookImportExportPluginInterface
+class CSVImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
     Q_OBJECT
 public:

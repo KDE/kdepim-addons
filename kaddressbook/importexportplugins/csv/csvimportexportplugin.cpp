@@ -11,13 +11,11 @@
 K_PLUGIN_CLASS_WITH_JSON(CSVImportExportPlugin, "kaddressbook_importexportcsvplugin.json")
 
 CSVImportExportPlugin::CSVImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-CSVImportExportPlugin::~CSVImportExportPlugin()
-{
-}
+CSVImportExportPlugin::~CSVImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(QObject *parent)
 {

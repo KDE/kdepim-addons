@@ -5,7 +5,6 @@
 */
 
 #include "csvimportexportplugininterface.h"
-#include "../shared/importexportengine.h"
 #include "import/csvimportdialog.h"
 #include <KLocalizedString>
 #include <KActionCollection>
@@ -19,17 +18,17 @@
 #include <QFileDialog>
 #include <QTextCodec>
 #include <QPointer>
-#include <KAddressBookContactSelectionDialog>
 #include <KIO/Job>
 
+#include <KAddressBookImportExport/ContactSelectionDialog>
+#include <KAddressBookImportExport/ImportExportEngine>
+
 CSVImportExportPluginInterface::CSVImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : KAddressBookImportExport::PluginInterface(parent)
 {
 }
 
-CSVImportExportPluginInterface::~CSVImportExportPluginInterface()
-{
-}
+CSVImportExportPluginInterface::~CSVImportExportPluginInterface() = default;
 
 void CSVImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -60,14 +59,14 @@ void CSVImportExportPluginInterface::exec()
 
 void CSVImportExportPluginInterface::importCSV()
 {
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    KAddressBookImportExport::ContactList contactList;
     QPointer<CSVImportDialog> dlg = new CSVImportDialog(parentWidget());
     if (dlg->exec()) {
         contactList.setAddressList(dlg->contacts());
     }
 
     delete dlg;
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -90,8 +89,8 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
     QTextStream stream(file);
     stream.setCodec(QTextCodec::codecForLocale());
 
-    KAddressBookImportExport::KAddressBookImportExportContactFields::Fields fields = KAddressBookImportExport::KAddressBookImportExportContactFields::allFields();
-    fields.remove(KAddressBookImportExport::KAddressBookImportExportContactFields::Undefined);
+    auto fields = KAddressBookImportExport::ContactFields::allFields();
+    fields.remove(KAddressBookImportExport::ContactFields::Undefined);
 
     bool first = true;
 
@@ -103,7 +102,7 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
         }
 
         // add quoting as defined in RFC 4180
-        QString label = KAddressBookImportExport::KAddressBookImportExportContactFields::label(fields.at(i));
+        QString label = KAddressBookImportExport::ContactFields::label(fields.at(i));
         label.replace(QLatin1Char('"'), QStringLiteral("\"\""));
 
         stream << "\"" << label << "\"";
@@ -122,15 +121,15 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
             }
 
             QString content;
-            if (fields.at(j) == KAddressBookImportExport::KAddressBookImportExportContactFields::Birthday
-                || fields.at(j) == KAddressBookImportExport::KAddressBookImportExportContactFields::Anniversary) {
+            if (fields.at(j) == KAddressBookImportExport::ContactFields::Birthday
+                || fields.at(j) == KAddressBookImportExport::ContactFields::Anniversary) {
                 const QDateTime dateTime
-                    = QDateTime::fromString(KAddressBookImportExport::KAddressBookImportExportContactFields::value(fields.at(j), contact), Qt::ISODate);
+                    = QDateTime::fromString(KAddressBookImportExport::ContactFields::value(fields.at(j), contact), Qt::ISODate);
                 if (dateTime.isValid()) {
                     content = dateTime.date().toString(Qt::ISODate);
                 }
             } else {
-                content = KAddressBookImportExport::KAddressBookImportExportContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
+                content = KAddressBookImportExport::ContactFields::value(fields.at(j), contact).replace(QLatin1Char('\n'), QStringLiteral("\\n"));
             }
 
             // add quoting as defined in RFC 4180
@@ -146,8 +145,8 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
 void CSVImportExportPluginInterface::exportCSV()
 {
-    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg
-        = new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
+        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -162,7 +161,7 @@ void CSVImportExportPluginInterface::exportCSV()
         return;
     }
 
-    KAddressBookImportExport::KAddressBookImportExportContactList contactLists;
+    KAddressBookImportExport::ContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
     QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.csv")), QString(), nullptr, options);

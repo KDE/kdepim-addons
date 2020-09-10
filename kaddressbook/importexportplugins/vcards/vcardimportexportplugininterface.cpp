@@ -8,7 +8,7 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <KAddressBookImportExport/KAddressBookContactSelectionDialog>
+#include <KAddressBookImportExport/ContactSelectionDialog>
 #include <QPointer>
 #include <KMessageBox>
 #include <QUrl>
@@ -21,22 +21,22 @@
 
 #ifdef QGPGME_FOUND
 #include <QTemporaryFile>
-#include <importexportengine.h>
+#include <KAddressBookImportExport/ImportExportEngine>
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
 #include <gpgme++/key.h>
 #include <qgpgme/dataprovider.h>
 #endif // QGPGME_FOUND
 
+using namespace KAddressBookImportExport;
+
 VCardImportExportPluginInterface::VCardImportExportPluginInterface(QObject *parent)
-    : KAddressBookImportExport::KAddressBookImportExportPluginInterface(parent)
+    : PluginInterface(parent)
     , mExportVCardType(VCard3)
 {
 }
 
-VCardImportExportPluginInterface::~VCardImportExportPluginInterface()
-{
-}
+VCardImportExportPluginInterface::~VCardImportExportPluginInterface() = default;
 
 void VCardImportExportPluginInterface::createAction(KActionCollection *ac)
 {
@@ -141,9 +141,9 @@ void VCardImportExportPluginInterface::importVCard()
             KMessageBox::error(parentWidget(), msg, caption);
         }
     }
-    KAddressBookImportExport::KAddressBookImportExportContactList contactList;
+    ContactList contactList;
     contactList.setAddressList(addrList);
-    ImportExportEngine *engine = new ImportExportEngine(this);
+    auto *engine = new ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -155,7 +155,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::parseVCard(const QB
     return converter.parseVCards(data);
 }
 
-KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFieldType) const
+KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList, ExportSelectionWidget::ExportFields exportFieldType) const
 {
     KContacts::Addressee::List list;
 
@@ -172,7 +172,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         addr.setFormattedName((*it).formattedName());
 
         bool addrDone = false;
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::DiplayName) {                  // output display name as N field
+        if (exportFieldType & ExportSelectionWidget::DiplayName) {                  // output display name as N field
             QString fmtName = (*it).formattedName();
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
             QStringList splitNames = fmtName.split(QLatin1Char(' '), QString::SkipEmptyParts);
@@ -219,24 +219,24 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         addr.setImppList((*it).imppList());
         addr.setFieldGroupList((*it).fieldGroupList());
 
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+        if (exportFieldType & ExportSelectionWidget::Private) {
             addr.setBirthday((*it).birthday());
             addr.setNote((*it).note());
         }
 
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Picture) {
-            if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+        if (exportFieldType & ExportSelectionWidget::Picture) {
+            if (exportFieldType & ExportSelectionWidget::Private) {
                 addr.setPhoto((*it).photo());
                 addr.setExtraPhotoList((*it).extraPhotoList());
             }
 
-            if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business) {
+            if (exportFieldType & ExportSelectionWidget::Business) {
                 addr.setLogo((*it).logo());
                 addr.setExtraLogoList((*it).extraLogoList());
             }
         }
 
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business) {
+        if (exportFieldType & ExportSelectionWidget::Business) {
             addr.setExtraTitleList((*it).extraTitleList());
             addr.setExtraRoleList((*it).extraRoleList());
             addr.setExtraOrganizationList((*it).extraOrganizationList());
@@ -263,11 +263,11 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         for (phoneIt = phones.begin(); phoneIt != phoneEnd; ++phoneIt) {
             int phoneType = (*phoneIt).type();
 
-            if ((phoneType &KContacts::PhoneNumber::Home) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private)) {
+            if ((phoneType &KContacts::PhoneNumber::Home) && (exportFieldType & ExportSelectionWidget::Private)) {
                 addr.insertPhoneNumber(*phoneIt);
-            } else if ((phoneType &KContacts::PhoneNumber::Work) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business)) {
+            } else if ((phoneType &KContacts::PhoneNumber::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
                 addr.insertPhoneNumber(*phoneIt);
-            } else if ((exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other)) {
+            } else if ((exportFieldType & ExportSelectionWidget::Other)) {
                 addr.insertPhoneNumber(*phoneIt);
             }
         }
@@ -278,16 +278,16 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         for (addrIt = addresses.begin(); addrIt != addrEnd; ++addrIt) {
             int addressType = (*addrIt).type();
 
-            if ((addressType &KContacts::Address::Home) && exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Private) {
+            if ((addressType &KContacts::Address::Home) && exportFieldType & ExportSelectionWidget::Private) {
                 addr.insertAddress(*addrIt);
-            } else if ((addressType &KContacts::Address::Work) && (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Business)) {
+            } else if ((addressType &KContacts::Address::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
                 addr.insertAddress(*addrIt);
-            } else if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
+            } else if (exportFieldType & ExportSelectionWidget::Other) {
                 addr.insertAddress(*addrIt);
             }
         }
 
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Other) {
+        if (exportFieldType & ExportSelectionWidget::Other) {
             QStringList exportFields;
             const QStringList customs = (*it).customs();
             for (const QString &customStr : customs) {
@@ -298,7 +298,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
             addr.setCustoms(exportFields);
         }
 
-        if (exportFieldType & KAddressBookImportExport::KAddressBookExportSelectionWidget::Encryption) {
+        if (exportFieldType & ExportSelectionWidget::Encryption) {
             addKey(addr, KContacts::Key::PGP);
             addKey(addr, KContacts::Key::X509);
         }
@@ -375,8 +375,8 @@ bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArra
 
 void VCardImportExportPluginInterface::exportVCard()
 {
-    QPointer<KAddressBookImportExport::KAddressBookContactSelectionDialog> dlg
-        = new KAddressBookImportExport::KAddressBookContactSelectionDialog(itemSelectionModel(), true, parentWidget());
+    QPointer<ContactSelectionDialog> dlg
+        = new ContactSelectionDialog(itemSelectionModel(), true, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec() || !dlg) {
@@ -385,7 +385,7 @@ void VCardImportExportPluginInterface::exportVCard()
     }
 
     const KContacts::AddresseeList contacts = dlg->selectedContacts().addressList();
-    const KAddressBookImportExport::KAddressBookExportSelectionWidget::ExportFields exportFields = dlg->exportType();
+    const ExportSelectionWidget::ExportFields exportFields = dlg->exportType();
     delete dlg;
 
     if (contacts.isEmpty()) {

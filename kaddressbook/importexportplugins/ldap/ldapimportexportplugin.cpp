@@ -11,13 +11,11 @@
 K_PLUGIN_CLASS_WITH_JSON(LDapImportExportPlugin, "kaddressbook_importexportldapplugin.json")
 
 LDapImportExportPlugin::LDapImportExportPlugin(QObject *parent, const QList<QVariant> &)
-    : KAddressBookImportExport::KAddressBookImportExportPlugin(parent)
+    : KAddressBookImportExport::Plugin(parent)
 {
 }
 
-LDapImportExportPlugin::~LDapImportExportPlugin()
-{
-}
+LDapImportExportPlugin::~LDapImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(QObject *parent)
 {
