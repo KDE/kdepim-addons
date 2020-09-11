@@ -8,7 +8,7 @@
 #include "../searchduplicate/searchduplicateresultwidget.h"
 #include "../searchduplicate/resultduplicatetreewidget.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
-#include <KaddressbookGrantlee/GrantleeContactViewer>
+#include <Akonadi/Contact/GrantleeContactViewer>
 #include <QSplitter>
 #include <QLayout>
 #include <QLabel>

@@ -22,20 +22,20 @@ if (KDEPIM_RUN_AKONADI_TEST)
     set(KDEPIMLIBS_RUN_ISOLATED_TESTS TRUE)
     set(KDEPIMLIBS_RUN_SQLITE_ISOLATED_TESTS TRUE)
 
-    add_akonadi_isolated_test_advanced( mergecontactinfowidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "KF5::AkonadiContact;KF5::KaddressbookGrantlee")
-    add_akonadi_isolated_test_advanced( mergecontactwidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::KaddressbookGrantlee;KF5::Contacts;KF5::AkonadiContact;KF5::WidgetsAddons")
+    add_akonadi_isolated_test_advanced( mergecontactinfowidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "KF5::AkonadiContact")
+    add_akonadi_isolated_test_advanced( mergecontactwidgettest.cpp "../widgets/mergecontactinfowidget.cpp;${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::WidgetsAddons")
     add_akonadi_isolated_test_advanced( searchandmergecontactduplicatecontactdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
-    add_akonadi_isolated_test_advanced( searchduplicateresultwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::KaddressbookGrantlee;KF5::Contacts;KF5::WidgetsAddons;KF5::AkonadiWidgets;KF5::AkonadiContact")
+    add_akonadi_isolated_test_advanced( searchduplicateresultwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts;KF5::WidgetsAddons;KF5::AkonadiWidgets;KF5::AkonadiContact")
     add_akonadi_isolated_test_advanced( resultduplicatetreewidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
     add_akonadi_isolated_test_advanced( searchpotentialduplicatecontactjobtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../job/searchpotentialduplicatecontactjob.cpp" "KF5::Contacts")
     add_akonadi_isolated_test_advanced( mergecontactselectinformationwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
     add_akonadi_isolated_test_advanced( mergecontactselectlistwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
 
-    add_akonadi_isolated_test_advanced( mergecontactselectinformationscrollareatest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::KaddressbookGrantlee")
+    add_akonadi_isolated_test_advanced( mergecontactselectinformationscrollareatest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact")
 
     add_akonadi_isolated_test_advanced( mergecontactselectinformationtabwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
 
-    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactsdialog.cpp;../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::KaddressbookGrantlee;KF5::I18n;KF5::WidgetsAddons")
+    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactsdialog.cpp;../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n;KF5::WidgetsAddons")
     add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact")
 
 endif()

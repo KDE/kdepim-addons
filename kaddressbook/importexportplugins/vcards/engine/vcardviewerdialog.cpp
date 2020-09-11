@@ -11,7 +11,7 @@
 #include <KConfigGroup>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KaddressbookGrantlee/GrantleeContactViewer>
+#include <Akonadi/Contact/GrantleeContactViewer>
 #include <QPushButton>
 #include <QDialogButtonBox>
 
