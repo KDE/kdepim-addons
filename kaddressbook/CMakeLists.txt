@@ -1,3 +1,5 @@
 add_subdirectory( editorpages )
 add_subdirectory( plugins )
-add_subdirectory( importexportplugins )
+if (KPimAddressbookImportExport_FOUND)
+	add_subdirectory( importexportplugins )
+endif()	
