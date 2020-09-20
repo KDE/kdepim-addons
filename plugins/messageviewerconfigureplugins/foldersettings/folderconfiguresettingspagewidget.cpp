@@ -27,10 +27,10 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     mFolderConfigureSettingsGeneralWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsGeneralWidget"));
     tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
 
+    //Expiry
     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
-    //Preference mail
 }
 
 FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
