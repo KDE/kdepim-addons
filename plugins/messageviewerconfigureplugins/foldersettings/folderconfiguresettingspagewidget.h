@@ -15,6 +15,7 @@ namespace MailCommon {
 class CollectionExpiryWidget;
 }
 class FolderConfigureSettingsGeneralWidget;
+class FolderConfigureSettingsTemplateWidget;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsPageWidget : public QWidget
 {
     Q_OBJECT
@@ -26,6 +27,7 @@ public:
 private:
     MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
     FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;
+    FolderConfigureSettingsTemplateWidget *mCollectionTemplateWidget = nullptr;
 };
 
 #endif // FOLDERCONFIGURESETTINGSPAGEWIDGET_H
