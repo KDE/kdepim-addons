@@ -20,3 +20,8 @@ FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
 {
 
 }
+
+void FolderConfigureSettingsGeneralWidget::save()
+{
+
+}

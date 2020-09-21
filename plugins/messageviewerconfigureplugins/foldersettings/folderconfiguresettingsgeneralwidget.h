@@ -16,6 +16,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidg
 public:
     explicit FolderConfigureSettingsGeneralWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsGeneralWidget();
+    void save();
 };
 
 #endif // FOLDERCONFIGURESETTINGSGENERALWIDGET_H

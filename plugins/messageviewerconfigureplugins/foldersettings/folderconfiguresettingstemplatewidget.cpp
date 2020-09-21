@@ -5,6 +5,7 @@
 */
 
 #include "folderconfiguresettingstemplatewidget.h"
+#include <MailCommon/CollectionTemplatesWidget>
 #include <QVBoxLayout>
 
 FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWidget *parent)
@@ -13,9 +14,17 @@ FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWi
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(0, 0, 0, 0);
+    mCollectionTemplateWidget = new MailCommon::CollectionTemplatesWidget(this);
+    mCollectionTemplateWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
+    mainLayout->addWidget(mCollectionTemplateWidget);
 }
 
 FolderConfigureSettingsTemplateWidget::~FolderConfigureSettingsTemplateWidget()
+{
+
+}
+
+void FolderConfigureSettingsTemplateWidget::save()
 {
 
 }

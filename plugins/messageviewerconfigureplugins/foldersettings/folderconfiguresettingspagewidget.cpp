@@ -46,5 +46,8 @@ FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
 
 void FolderConfigureSettingsPageWidget::save()
 {
-
+    //TODO
+    mFolderConfigureSettingsGeneralWidget->save();
+    //mCollectionExpiryWidget->save();
+    mCollectionTemplateWidget->save();
 }
