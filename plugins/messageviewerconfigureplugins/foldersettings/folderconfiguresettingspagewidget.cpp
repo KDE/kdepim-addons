@@ -7,6 +7,7 @@
 #include "folderconfiguresettingsgeneralwidget.h"
 #include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguresettingstemplatewidget.h"
+#include "folderconfiguresettingsviewwidget.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <KLocalizedString>
 #include <QTabWidget>
@@ -27,6 +28,11 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     mFolderConfigureSettingsGeneralWidget = new FolderConfigureSettingsGeneralWidget(this);
     mFolderConfigureSettingsGeneralWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsGeneralWidget"));
     tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
+
+    //View
+    mFolderConfigureSettingsViewWidget = new FolderConfigureSettingsViewWidget(this);
+    mFolderConfigureSettingsViewWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsViewWidget"));
+    tab->addTab(mFolderConfigureSettingsViewWidget, i18n("View"));
 
     //Expiry
     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
@@ -49,5 +55,6 @@ void FolderConfigureSettingsPageWidget::save()
     //TODO
     mFolderConfigureSettingsGeneralWidget->save();
     //mCollectionExpiryWidget->save();
+    mFolderConfigureSettingsViewWidget->save();
     mCollectionTemplateWidget->save();
 }
