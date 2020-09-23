@@ -39,3 +39,19 @@ Qt::ItemFlags FolderSettingFilterProxyModel::flags(const QModelIndex &index) con
         return QSortFilterProxyModel::flags(index);
     }
 }
+
+bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVariant &value, int role)
+{
+    if (role == Qt::CheckStateRole) {
+        if (index.isValid()) {
+            const Akonadi::Collection collection
+                = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+            //mNotificationCollection[collection] = (value == Qt::Checked);
+            qDebug() << " collectionId " << collection.id();
+            Q_EMIT dataChanged(index, index);
+            //return true;
+        }
+    }
+
+    return QSortFilterProxyModel::setData(index, value, role);
+}

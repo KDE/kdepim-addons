@@ -16,9 +16,10 @@ public:
     explicit FolderSettingFilterProxyModel(QObject *parent = nullptr);
     ~FolderSettingFilterProxyModel();
 
-    QVariant data(const QModelIndex &index, int role) const override;
+    Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
+    bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
-    Qt::ItemFlags flags(const QModelIndex &index) const override;
+    Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
 };
 
 #endif // FOLDERSETTINGFILTERPROXYMODEL_H
