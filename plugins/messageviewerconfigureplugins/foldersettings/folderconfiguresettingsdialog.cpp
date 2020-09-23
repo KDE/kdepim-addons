@@ -30,7 +30,7 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel|QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &FolderConfigureSettingsDialog::reject);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::slotSave);
     mainLayout->addWidget(buttonBox);
     readConfig();
 }
@@ -38,6 +38,12 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
 FolderConfigureSettingsDialog::~FolderConfigureSettingsDialog()
 {
     writeConfig();
+}
+
+void FolderConfigureSettingsDialog::slotSave()
+{
+    mFolderConfigureSettingsWidget->save();
+    accept();
 }
 
 void FolderConfigureSettingsDialog::readConfig()

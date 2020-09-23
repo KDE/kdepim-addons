@@ -18,6 +18,7 @@ public:
     ~FolderConfigureSettingsDialog();
 
 private:
+    void slotSave();
     void readConfig();
     void writeConfig();
     FolderConfigureSettingsWidget *mFolderConfigureSettingsWidget = nullptr;
