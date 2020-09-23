@@ -179,7 +179,7 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
         "div.fancy.header table a:hover {\n"
         "  background-color: transparent ! important;\n"
         "}\n\n")
-                        .arg(pal.color(QPalette::Window).name(),pal.color(QPalette::WindowText).name(), headerFont);
+                        .arg(pal.color(QPalette::Window).name(), pal.color(QPalette::WindowText).name(), headerFont);
     return val;
 }
 
@@ -189,5 +189,3 @@ QString MessageViewer::FancyHeaderStylePlugin::attachmentHtml() const
 }
 
 #include "fancyheaderstyleplugin.moc"
-
-

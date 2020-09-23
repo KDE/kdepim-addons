@@ -8,12 +8,10 @@
 
 MarkdownAbstract::MarkdownAbstract()
 {
-
 }
 
 MarkdownAbstract::~MarkdownAbstract()
 {
-
 }
 
 void MarkdownAbstract::setText(const QString &str)

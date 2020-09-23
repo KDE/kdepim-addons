@@ -14,7 +14,6 @@ FolderSettingFilterProxyModel::FolderSettingFilterProxyModel(QObject *parent)
 
 FolderSettingFilterProxyModel::~FolderSettingFilterProxyModel()
 {
-
 }
 
 QVariant FolderSettingFilterProxyModel::data(const QModelIndex &index, int role) const

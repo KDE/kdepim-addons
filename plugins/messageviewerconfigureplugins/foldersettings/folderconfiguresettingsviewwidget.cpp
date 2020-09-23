@@ -20,10 +20,8 @@ FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *pa
 
 FolderConfigureSettingsViewWidget::~FolderConfigureSettingsViewWidget()
 {
-
 }
 
 void FolderConfigureSettingsViewWidget::save()
 {
-
 }

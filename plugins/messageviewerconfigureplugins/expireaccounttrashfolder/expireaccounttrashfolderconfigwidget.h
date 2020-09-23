@@ -9,8 +9,7 @@
 
 #include <QWidget>
 #include "expireaccounttrashfolderconfig_private_export.h"
-namespace MailCommon
-{
+namespace MailCommon {
 class CollectionExpiryWidget;
 }
 class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT ExpireAccountTrashFolderConfigWidget : public QWidget

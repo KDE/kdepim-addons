@@ -48,7 +48,6 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     sizeWidgetLayout->setContentsMargins({});
     mainLayout->addRow(sizeWidget);
 
-
     mLabWidth = new QLabel(i18n("Width:"), this);
     mLabWidth->setObjectName(QStringLiteral("labwidth"));
     mLabWidth->setEnabled(false);

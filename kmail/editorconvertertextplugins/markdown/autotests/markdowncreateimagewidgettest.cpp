@@ -67,7 +67,6 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     QCOMPARE(mHeight->maximum(), 999);
     QVERIFY(!mHeight->isEnabled());
 
-
     QWidget *sizeWidget = w.findChild<QWidget *>(QStringLiteral("sizeWidget"));
     QVERIFY(sizeWidget);
 

@@ -28,7 +28,6 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     mFolderConfigureTreeWidget->setObjectName(QStringLiteral("mFolderConfigureTreeWidget"));
     splitter->addWidget(mFolderConfigureTreeWidget);
 
-
     mFolderConfigureSettingsPageWidget = new FolderConfigureSettingsPageWidget(this);
     mFolderConfigureSettingsPageWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsPageWidget"));
     splitter->addWidget(mFolderConfigureSettingsPageWidget);
@@ -36,7 +35,6 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
 
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
 {
-
 }
 
 void FolderConfigureSettingsWidget::save()

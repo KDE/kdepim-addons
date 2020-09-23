@@ -10,7 +10,6 @@
 #include <QWidget>
 #include "folderconfiguresettings_private_export.h"
 
-
 namespace MailCommon {
 class CollectionExpiryWidget;
 }

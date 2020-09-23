@@ -24,7 +24,6 @@ void DKIMAdvancedWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-
     QCheckBox *mCheckDKIMWhenOnlyTesting = w.findChild<QCheckBox *>(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
     QVERIFY(mCheckDKIMWhenOnlyTesting);
     QVERIFY(!mCheckDKIMWhenOnlyTesting->text().isEmpty());

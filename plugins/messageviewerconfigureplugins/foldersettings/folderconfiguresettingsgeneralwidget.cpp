@@ -23,11 +23,8 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
 
 FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
 {
-
 }
 
 void FolderConfigureSettingsGeneralWidget::save()
 {
-
 }
-

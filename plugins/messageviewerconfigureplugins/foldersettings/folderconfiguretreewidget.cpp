@@ -32,7 +32,6 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     checkable->setSourceModel(sourceModel);
     checkable->setSelectionModel(selectionModel);
 
-
     auto folderSettingFilterProxyModel = new FolderSettingFilterProxyModel(this);
     folderSettingFilterProxyModel->setObjectName(QStringLiteral("folderSettingFilterProxyModel"));
     folderSettingFilterProxyModel->setSourceModel(checkable);
@@ -40,11 +39,9 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     ftv->setModel(folderSettingFilterProxyModel);
     ftv->expandAll();
 
-
     mainLayout->addWidget(ftw);
 }
 
 FolderConfigureTreeWidget::~FolderConfigureTreeWidget()
 {
-
 }

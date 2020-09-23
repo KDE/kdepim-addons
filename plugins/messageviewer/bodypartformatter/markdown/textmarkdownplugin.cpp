@@ -48,18 +48,18 @@ public:
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-            QString result;
+                QString result;
 #ifdef USE_DISCOUNT_LIB
-            MarkdownDiscount engine;
-            engine.setText(msgPart->text());
-            result = engine.toHtml();
+                MarkdownDiscount engine;
+                engine.setText(msgPart->text());
+                result = engine.toHtml();
 #else
-            MarkdownQTextDocument engine;
-            engine.setText(msgPart->text());
-            result = engine.toHtml();
+                MarkdownQTextDocument engine;
+                engine.setText(msgPart->text());
+                result = engine.toHtml();
 #endif
-            (*htmlWriter->stream()) << result;
-        }));
+                (*htmlWriter->stream()) << result;
+            }));
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);

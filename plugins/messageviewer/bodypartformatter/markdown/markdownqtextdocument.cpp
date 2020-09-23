@@ -10,12 +10,10 @@
 
 MarkdownQTextDocument::MarkdownQTextDocument()
 {
-
 }
 
 MarkdownQTextDocument::~MarkdownQTextDocument()
 {
-
 }
 
 QString MarkdownQTextDocument::toHtml() const

@@ -11,7 +11,6 @@ QTEST_MAIN(ExpireAccountTrashFolderConfigWidgetTest)
 ExpireAccountTrashFolderConfigWidgetTest::ExpireAccountTrashFolderConfigWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void ExpireAccountTrashFolderConfigWidgetTest::shouldHaveDefaultValues()

@@ -15,12 +15,10 @@
 
 ImportWindowContact::ImportWindowContact()
 {
-
 }
 
 ImportWindowContact::~ImportWindowContact()
 {
-
 }
 
 KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileName)
@@ -57,7 +55,6 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             for (QDomElement addresses = emails.firstChildElement(); !addresses.isNull(); addresses = addresses.nextSiblingElement()) {
                                 const QString addressesTag = addresses.tagName();
                                 if (addressesTag == QLatin1String("c:Type")) {
-
                                 } else if (addressesTag == QLatin1String("c:Address")) {
                                     email.setEmail(addresses.text());
                                 } else {
@@ -245,7 +242,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                     url.setUrl(QUrl::fromUserInput(urlInfo.text()));
                                     contact.insertExtraUrl(url);
                                 } else {
-                                   qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " url info tag not supported yet " << urlInfoTag;
+                                    qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " url info tag not supported yet " << urlInfoTag;
                                 }
                             }
                         } else {
@@ -269,7 +266,7 @@ bool ImportWindowContact::loadDomElement(QDomDocument &doc, QFile *file)
     int errorCol;
     if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
         qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
-                               << ", col " << errorCol << ": " << errorMsg;
+                                                        << ", col " << errorCol << ": " << errorMsg;
         return false;
     }
     return true;

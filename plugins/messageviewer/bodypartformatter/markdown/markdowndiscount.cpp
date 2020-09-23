@@ -12,12 +12,10 @@ extern "C" {
 
 MarkdownDiscount::MarkdownDiscount()
 {
-
 }
 
 MarkdownDiscount::~MarkdownDiscount()
 {
-
 }
 
 QString MarkdownDiscount::toHtml() const

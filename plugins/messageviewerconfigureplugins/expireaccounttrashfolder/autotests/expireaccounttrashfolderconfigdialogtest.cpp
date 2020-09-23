@@ -10,5 +10,4 @@ QTEST_MAIN(ExpireAccountTrashFolderConfigDialogTest)
 ExpireAccountTrashFolderConfigDialogTest::ExpireAccountTrashFolderConfigDialogTest(QObject *parent)
     : QObject(parent)
 {
-
 }

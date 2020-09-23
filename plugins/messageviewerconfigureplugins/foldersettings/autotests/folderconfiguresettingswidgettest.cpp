@@ -11,7 +11,6 @@ QTEST_MAIN(FolderConfigureSettingsWidgetTest)
 FolderConfigureSettingsWidgetTest::FolderConfigureSettingsWidgetTest(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 void FolderConfigureSettingsWidgetTest::shouldHaveDefaultValues()

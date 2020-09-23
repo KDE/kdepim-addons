@@ -75,7 +75,7 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
             RentalCarReservation,
             TaxiReservation,
             TrainReservation
-        >();
+            >();
         validator.setAcceptOnlyCompleteElements(false);
         auto postProcResult = m_postProc.result();
         postProcResult.erase(std::remove_if(postProcResult.begin(), postProcResult.end(), [&validator](const auto &elem) {

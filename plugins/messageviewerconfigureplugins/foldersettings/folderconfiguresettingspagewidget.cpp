@@ -47,7 +47,6 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
 
 FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
 {
-
 }
 
 void FolderConfigureSettingsPageWidget::save()

@@ -571,7 +571,7 @@ public:
             attachCt->setCharset("utf-8");
             attachCt->setName(QStringLiteral("cal.ics"), "utf-8");
             attachCt->setParameter(QStringLiteral("method"),
-                                                       QStringLiteral("reply"));
+                                   QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));

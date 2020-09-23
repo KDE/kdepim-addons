@@ -57,4 +57,3 @@ void ExpireAccountTrashFolderConfigDialog::writeConfig()
     grp.writeEntry("Size", size());
     grp.sync();
 }
-

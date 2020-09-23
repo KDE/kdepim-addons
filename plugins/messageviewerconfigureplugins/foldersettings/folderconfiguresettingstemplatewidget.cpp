@@ -21,10 +21,8 @@ FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWi
 
 FolderConfigureSettingsTemplateWidget::~FolderConfigureSettingsTemplateWidget()
 {
-
 }
 
 void FolderConfigureSettingsTemplateWidget::save()
 {
-
 }
