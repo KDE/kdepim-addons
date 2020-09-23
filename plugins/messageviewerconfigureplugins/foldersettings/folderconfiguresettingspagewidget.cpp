@@ -49,11 +49,11 @@ FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
 {
 }
 
-void FolderConfigureSettingsPageWidget::save()
+void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &cols)
 {
     //TODO
-    mFolderConfigureSettingsGeneralWidget->save();
+    mFolderConfigureSettingsGeneralWidget->save(cols);
     //mCollectionExpiryWidget->save();
     mFolderConfigureSettingsViewWidget->save();
-    mCollectionTemplateWidget->save();
+    mCollectionTemplateWidget->save(cols);
 }

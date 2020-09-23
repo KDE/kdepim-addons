@@ -25,6 +25,7 @@ FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
 {
 }
 
-void FolderConfigureSettingsGeneralWidget::save()
+void FolderConfigureSettingsGeneralWidget::save(const Akonadi::Collection::List &cols)
 {
+    //TODO
 }

@@ -8,6 +8,7 @@
 #define FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H
 
 #include <QWidget>
+#include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionTemplatesWidget;
 }
@@ -17,7 +18,7 @@ class FolderConfigureSettingsTemplateWidget : public QWidget
 public:
     explicit FolderConfigureSettingsTemplateWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsTemplateWidget();
-    void save();
+    void save(const Akonadi::Collection::List &cols);
 private:
     MailCommon::CollectionTemplatesWidget *mCollectionTemplateWidget = nullptr;
 };

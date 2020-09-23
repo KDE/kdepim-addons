@@ -9,7 +9,7 @@
 
 #include <QWidget>
 #include "folderconfiguresettings_private_export.h"
-
+#include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionExpiryWidget;
 }
@@ -23,7 +23,7 @@ public:
     explicit FolderConfigureSettingsPageWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsPageWidget();
 
-    void save();
+    void save(const Akonadi::Collection::List &cols);
 private:
     MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
     FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;

@@ -9,6 +9,7 @@
 
 #include <QWidget>
 #include "folderconfiguresettings_private_export.h"
+#include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionGeneralWidget;
 }
@@ -18,7 +19,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidg
 public:
     explicit FolderConfigureSettingsGeneralWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsGeneralWidget();
-    void save();
+    void save(const Akonadi::Collection::List &cols);
 private:
     MailCommon::CollectionGeneralWidget *mCollectionGeneralWidget = nullptr;
 };
