@@ -19,7 +19,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidg
 public:
     explicit FolderConfigureSettingsGeneralWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsGeneralWidget();
-    void save(const Akonadi::Collection::List &cols);
+    void save(Akonadi::Collection &col);
 private:
     MailCommon::CollectionGeneralWidget *mCollectionGeneralWidget = nullptr;
 };

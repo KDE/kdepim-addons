@@ -8,6 +8,7 @@
 #define FOLDERCONFIGURESETTINGSVIEWWIDGET_H
 
 #include <QWidget>
+#include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionViewWidget;
 }
@@ -17,7 +18,7 @@ class FolderConfigureSettingsViewWidget : public QWidget
 public:
     explicit FolderConfigureSettingsViewWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsViewWidget();
-    void save();
+    void save(Akonadi::Collection &col);
 private:
     MailCommon::CollectionViewWidget *mCollectionViewWidget = nullptr;
 };

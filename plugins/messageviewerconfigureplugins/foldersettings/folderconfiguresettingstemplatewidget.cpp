@@ -23,6 +23,7 @@ FolderConfigureSettingsTemplateWidget::~FolderConfigureSettingsTemplateWidget()
 {
 }
 
-void FolderConfigureSettingsTemplateWidget::save(const Akonadi::Collection::List &cols)
+void FolderConfigureSettingsTemplateWidget::save(Akonadi::Collection &col)
 {
+    mCollectionTemplateWidget->save(col);
 }

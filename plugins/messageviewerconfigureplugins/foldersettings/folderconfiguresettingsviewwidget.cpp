@@ -22,6 +22,7 @@ FolderConfigureSettingsViewWidget::~FolderConfigureSettingsViewWidget()
 {
 }
 
-void FolderConfigureSettingsViewWidget::save()
+void FolderConfigureSettingsViewWidget::save(Akonadi::Collection &col)
 {
+    mCollectionViewWidget->save(col);
 }
