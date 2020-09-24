@@ -40,6 +40,11 @@ Qt::ItemFlags FolderSettingFilterProxyModel::flags(const QModelIndex &index) con
     }
 }
 
+Akonadi::Collection::List FolderSettingFilterProxyModel::listCollections() const
+{
+    return mListCollections;
+}
+
 bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVariant &value, int role)
 {
     if (role == Qt::CheckStateRole) {
@@ -51,7 +56,6 @@ bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVar
             } else {
                 mListCollections.removeAll(collection);
             }
-            qDebug() << " collectionId " << collection.id();
             Q_EMIT dataChanged(index, index);
         }
     }
