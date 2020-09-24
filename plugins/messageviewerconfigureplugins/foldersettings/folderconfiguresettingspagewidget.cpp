@@ -58,7 +58,7 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
         const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
         for (Akonadi::Collection col : cols) {
             mFolderConfigureSettingsGeneralWidget->save(col);
-            mCollectionExpiryWidget->save(settings, col, true, false); //TODO verify boolean
+            mCollectionExpiryWidget->save(settings, col, true, false);
             mFolderConfigureSettingsViewWidget->save(col);
             mCollectionTemplateWidget->save(col);
             //TODO sync col
