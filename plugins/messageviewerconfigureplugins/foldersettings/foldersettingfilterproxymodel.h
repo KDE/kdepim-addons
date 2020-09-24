@@ -8,6 +8,7 @@
 #define FOLDERSETTINGFILTERPROXYMODEL_H
 
 #include <QSortFilterProxyModel>
+#include <AkonadiCore/Collection>
 
 class FolderSettingFilterProxyModel : public QSortFilterProxyModel
 {
@@ -20,6 +21,8 @@ public:
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;
 
     Q_REQUIRED_RESULT Qt::ItemFlags flags(const QModelIndex &index) const override;
+private:
+    Akonadi::Collection::List mListCollections;
 };
 
 #endif // FOLDERSETTINGFILTERPROXYMODEL_H

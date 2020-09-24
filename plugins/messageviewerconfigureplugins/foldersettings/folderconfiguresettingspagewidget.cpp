@@ -10,6 +10,7 @@
 #include "folderconfiguresettingsviewwidget.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <QTabWidget>
 #include <QVBoxLayout>
 
@@ -51,12 +52,15 @@ FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
 
 void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &cols)
 {
-    const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
-    for (Akonadi::Collection col : cols) {
-        mFolderConfigureSettingsGeneralWidget->save(col);
-        mCollectionExpiryWidget->save(settings, col, true, false); //TODO verify boolean
-        mFolderConfigureSettingsViewWidget->save(col);
-        mCollectionTemplateWidget->save(col);
-        //TODO sync col
+    if (KMessageBox::Continue ==
+            KMessageBox::warningContinueCancel(this, i18n("It will override all settings for each selectioned folder. Do you want to continue?"),i18n("Save Folder Settings"))) {
+        const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
+        for (Akonadi::Collection col : cols) {
+            mFolderConfigureSettingsGeneralWidget->save(col);
+            mCollectionExpiryWidget->save(settings, col, true, false); //TODO verify boolean
+            mFolderConfigureSettingsViewWidget->save(col);
+            mCollectionTemplateWidget->save(col);
+            //TODO sync col
+        }
     }
 }

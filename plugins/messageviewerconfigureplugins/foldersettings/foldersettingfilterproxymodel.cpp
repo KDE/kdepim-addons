@@ -46,10 +46,13 @@ bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVar
         if (index.isValid()) {
             const Akonadi::Collection collection
                 = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
-            //mNotificationCollection[collection] = (value == Qt::Checked);
+            if (value == Qt::Checked) {
+               mListCollections.append(collection);
+            } else {
+                mListCollections.removeAll(collection);
+            }
             qDebug() << " collectionId " << collection.id();
             Q_EMIT dataChanged(index, index);
-            //return true;
         }
     }
 

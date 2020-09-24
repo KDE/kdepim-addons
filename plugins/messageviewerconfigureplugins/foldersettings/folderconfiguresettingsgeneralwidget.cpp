@@ -13,7 +13,6 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
 
     mCollectionGeneralWidget = new MailCommon::CollectionGeneralWidget(this);
     mCollectionGeneralWidget->setObjectName(QStringLiteral("mCollectionGeneralWidget"));
