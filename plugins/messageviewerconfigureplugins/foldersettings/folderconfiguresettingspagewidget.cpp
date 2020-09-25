@@ -54,7 +54,7 @@ FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
 void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &cols)
 {
     if (KMessageBox::Continue ==
-            KMessageBox::warningContinueCancel(this, i18n("It will override all settings for each selectioned folder. Do you want to continue?"),i18n("Save Folder Settings"))) {
+            KMessageBox::warningContinueCancel(this, i18n("It will override all settings for each selected folder. Do you want to continue?"),i18n("Save Folder Settings"))) {
         const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
         for (Akonadi::Collection col : cols) {
             mFolderConfigureSettingsGeneralWidget->save(col);
