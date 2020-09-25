@@ -8,6 +8,7 @@
 #include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguresettingstemplatewidget.h"
 #include "folderconfiguresettingsviewwidget.h"
+#include "folderconfiguremodifycollectionjob.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -61,7 +62,9 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
             mCollectionExpiryWidget->save(settings, col, true, false);
             mFolderConfigureSettingsViewWidget->save(col);
             mCollectionTemplateWidget->save(col);
-            //TODO sync col
+            FolderConfigureModifyCollectionJob *job = new FolderConfigureModifyCollectionJob();
+            job->setCollection(col);
+            job->start();
         }
     }
 }
