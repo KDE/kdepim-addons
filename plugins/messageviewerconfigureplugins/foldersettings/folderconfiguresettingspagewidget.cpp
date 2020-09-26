@@ -36,7 +36,7 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     mFolderConfigureSettingsViewWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsViewWidget"));
     tab->addTab(mFolderConfigureSettingsViewWidget, i18n("View"));
 
-    //Expiry
+    //Expiry => add Tab
     mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     mCollectionExpiryWidget->hideExpireNowButton();

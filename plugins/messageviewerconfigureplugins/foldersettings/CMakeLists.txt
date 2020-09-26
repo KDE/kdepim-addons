@@ -9,6 +9,7 @@ set(folderconfiguresettings_SRCS
     folderconfiguresettingstemplatewidget.cpp
     folderconfiguresettingsviewwidget.cpp
     folderconfiguremodifycollectionjob.cpp
+    folderconfiguresettingspagebase.cpp
     )
 
 ecm_qt_declare_logging_category(folderconfiguresettings_SRCS HEADER libfolderconfiguresettings_debug.h IDENTIFIER LIBFOLDERCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
