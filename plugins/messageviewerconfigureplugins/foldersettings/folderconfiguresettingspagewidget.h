@@ -10,12 +10,10 @@
 #include <QWidget>
 #include "folderconfiguresettings_private_export.h"
 #include <AkonadiCore/Collection>
-namespace MailCommon {
-class CollectionExpiryWidget;
-}
 class FolderConfigureSettingsGeneralWidget;
 class FolderConfigureSettingsTemplateWidget;
 class FolderConfigureSettingsViewWidget;
+class FolderConfigureSettingsExperyWidget;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsPageWidget : public QWidget
 {
     Q_OBJECT
@@ -25,7 +23,7 @@ public:
 
     void save(const Akonadi::Collection::List &cols);
 private:
-    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
+    FolderConfigureSettingsExperyWidget *mCollectionExpiryWidget = nullptr;
     FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;
     FolderConfigureSettingsTemplateWidget *mCollectionTemplateWidget = nullptr;
     FolderConfigureSettingsViewWidget *mFolderConfigureSettingsViewWidget = nullptr;

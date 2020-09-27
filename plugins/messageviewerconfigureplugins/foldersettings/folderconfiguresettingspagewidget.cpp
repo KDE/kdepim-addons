@@ -9,6 +9,7 @@
 #include "folderconfiguresettingstemplatewidget.h"
 #include "folderconfiguresettingsviewwidget.h"
 #include "folderconfiguremodifycollectionjob.h"
+#include "folderconfiguresettingsexperywidget.h"
 #include <MailCommon/CollectionExpiryWidget>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -37,9 +38,8 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     tab->addTab(mFolderConfigureSettingsViewWidget, i18n("View"));
 
     //Expiry => add Tab
-    mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
+    mCollectionExpiryWidget = new FolderConfigureSettingsExperyWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
-    mCollectionExpiryWidget->hideExpireNowButton();
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
 
     //Template
@@ -56,10 +56,10 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
 {
     if (KMessageBox::Continue ==
             KMessageBox::warningContinueCancel(this, i18n("It will override all settings for each selected folder. Do you want to continue?"),i18n("Save Folder Settings"))) {
-        const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
+
         for (Akonadi::Collection col : cols) {
             mFolderConfigureSettingsGeneralWidget->save(col);
-            mCollectionExpiryWidget->save(settings, col, true, false);
+            mCollectionExpiryWidget->save(col);
             mFolderConfigureSettingsViewWidget->save(col);
             mCollectionTemplateWidget->save(col);
             FolderConfigureModifyCollectionJob *job = new FolderConfigureModifyCollectionJob();
