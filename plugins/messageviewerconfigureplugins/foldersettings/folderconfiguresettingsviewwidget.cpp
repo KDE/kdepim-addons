@@ -9,13 +9,11 @@
 #include <QVBoxLayout>
 
 FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *parent)
-    : QWidget(parent)
+    : FolderConfigureSettingsPageBase(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mCollectionViewWidget = new MailCommon::CollectionViewWidget(this);
     mCollectionViewWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
-    mainLayout->addWidget(mCollectionViewWidget);
+    addMainWidget(mCollectionViewWidget);
 }
 
 FolderConfigureSettingsViewWidget::~FolderConfigureSettingsViewWidget()
@@ -24,5 +22,7 @@ FolderConfigureSettingsViewWidget::~FolderConfigureSettingsViewWidget()
 
 void FolderConfigureSettingsViewWidget::save(Akonadi::Collection &col)
 {
-    mCollectionViewWidget->save(col);
+    if (wasModified()) {
+        mCollectionViewWidget->save(col);
+    }
 }

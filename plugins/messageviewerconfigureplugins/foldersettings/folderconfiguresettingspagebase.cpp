@@ -19,6 +19,7 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     mModifyCheckBox = new QCheckBox(i18n("Modify Settings"), this);
     mModifyCheckBox->setObjectName(QStringLiteral("mModifiedCheckBox"));
     mModifyCheckBox->setChecked(false);
+    mMainLayout->addWidget(mModifyCheckBox);
     connect(mModifyCheckBox, &QCheckBox::clicked, this, &FolderConfigureSettingsPageBase::slotModifyClicked);
 }
 

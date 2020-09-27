@@ -9,11 +9,12 @@
 
 #include <QWidget>
 #include "folderconfiguresettings_private_export.h"
+#include "folderconfiguresettingspagebase.h"
 #include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionGeneralWidget;
 }
-class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidget : public QWidget
+class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidget : public FolderConfigureSettingsPageBase
 {
     Q_OBJECT
 public:

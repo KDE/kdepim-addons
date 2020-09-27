@@ -9,15 +9,12 @@
 #include <QVBoxLayout>
 
 FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidget *parent)
-    : QWidget(parent)
+    : FolderConfigureSettingsPageBase(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
-
     mCollectionGeneralWidget = new MailCommon::CollectionGeneralWidget(this);
     mCollectionGeneralWidget->setObjectName(QStringLiteral("mCollectionGeneralWidget"));
-    mainLayout->addWidget(mCollectionGeneralWidget);
-    mainLayout->addStretch();
+    addMainWidget(mCollectionGeneralWidget);
+    mMainLayout->addStretch();
 }
 
 FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
@@ -26,5 +23,7 @@ FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
 
 void FolderConfigureSettingsGeneralWidget::save(Akonadi::Collection &col)
 {
-    mCollectionGeneralWidget->save(col);
+    if (wasModified()) {
+        mCollectionGeneralWidget->save(col);
+    }
 }

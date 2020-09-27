@@ -7,12 +7,14 @@
 #ifndef FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H
 #define FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H
 
+#include "folderconfiguresettingspagebase.h"
+
 #include <QWidget>
 #include <AkonadiCore/Collection>
 namespace MailCommon {
 class CollectionTemplatesWidget;
 }
-class FolderConfigureSettingsTemplateWidget : public QWidget
+class FolderConfigureSettingsTemplateWidget : public FolderConfigureSettingsPageBase
 {
     Q_OBJECT
 public:
