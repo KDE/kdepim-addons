@@ -16,7 +16,7 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     , mMainLayout(new QVBoxLayout(this))
 {
     mMainLayout->setObjectName(QStringLiteral("mMainLayout"));
-    mModifyCheckBox = new QCheckBox(i18n("Modify Settings"), this);
+    mModifyCheckBox = new QCheckBox(i18n("Modify"), this);
     mModifyCheckBox->setObjectName(QStringLiteral("mModifiedCheckBox"));
     mModifyCheckBox->setChecked(false);
     mMainLayout->addWidget(mModifyCheckBox);
