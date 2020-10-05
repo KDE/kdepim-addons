@@ -21,8 +21,8 @@ class QCsvReader::Private
 public:
     Private(QCsvBuilderInterface *builder)
         : mBuilder(builder)
+        , mCodec(QTextCodec::codecForLocale())
     {
-        mCodec = QTextCodec::codecForLocale();
     }
 
     void emitBeginLine(uint row);

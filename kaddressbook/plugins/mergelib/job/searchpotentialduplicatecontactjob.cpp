@@ -42,7 +42,7 @@ Akonadi::Item::List SearchPotentialDuplicateContactJob::checkList(const Akonadi:
     Akonadi::Item::List notDuplicate;
     Akonadi::Item::List lst;
     if (!lstItem.isEmpty()) {
-        Akonadi::Item firstItem = lstItem.at(0);
+        const Akonadi::Item firstItem = lstItem.at(0);
         const int numberOfItems(lstItem.count());
         for (int j = 1; j < numberOfItems; ++j) {
             const Akonadi::Item nextItem = lstItem.at(j);

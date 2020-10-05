@@ -35,7 +35,7 @@ private:
     void finishJob();
     void fetchItem(const Akonadi::Item &item);
     void fetchNextItem();
-    Akonadi::Item::List mListItem;
+    const Akonadi::Item::List mListItem;
     Akonadi::Item::List mItemToFetch;
     QStringList mEmailAddresses;
     int mFetchJobCount = 0;

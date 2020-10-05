@@ -18,8 +18,12 @@ DateParser::~DateParser()
 
 QDateTime DateParser::parse(const QString &dateStr) const
 {
-    int year, month, day, hour, minute, second;
-    year = month = day = hour = minute = second = 0;
+    int year = 0;
+    int month = 0;
+    int day = 0;
+    int hour = 0;
+    int minute = 0;
+    int second = 0;
 
     int currPos = 0;
     for (int i = 0; i < mPattern.length(); ++i) {

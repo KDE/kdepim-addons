@@ -191,7 +191,7 @@ public:
     }
 
 private:
-    QIcon mIcon;
+    const QIcon mIcon;
 };
 
 TemplateSelectionDialog::TemplateSelectionDialog(QWidget *parent)

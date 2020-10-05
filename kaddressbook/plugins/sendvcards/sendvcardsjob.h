@@ -35,7 +35,7 @@ private:
     void createTemporaryFile(const QByteArray &data, const QString &filename);
     void createTemporaryDir();
     void jobFinished();
-    Akonadi::Item::List mListItem;
+    const Akonadi::Item::List mListItem;
     MimeTreeParser::AttachmentTemporaryFilesDirs *mAttachmentTemporary = nullptr;
     QTemporaryDir *mTempDir = nullptr;
     KContacts::VCardConverter::Version mVersion = KContacts::VCardConverter::v3_0;
