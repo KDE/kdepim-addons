@@ -8,19 +8,26 @@
 
 #include <KLocalizedString>
 
-#include <QCheckBox>
+#include <QGroupBox>
 #include <QVBoxLayout>
 
 FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent)
     : QWidget(parent)
-    , mMainLayout(new QVBoxLayout(this))
+    , mMainLayout(new QVBoxLayout)
 {
+    QVBoxLayout *topLayout = new QVBoxLayout(this);
+    topLayout->setObjectName(QStringLiteral("topLayout"));
+
     mMainLayout->setObjectName(QStringLiteral("mMainLayout"));
-    mModifyCheckBox = new QCheckBox(i18n("Modify"), this);
-    mModifyCheckBox->setObjectName(QStringLiteral("mModifiedCheckBox"));
-    mModifyCheckBox->setChecked(false);
-    mMainLayout->addWidget(mModifyCheckBox);
-    connect(mModifyCheckBox, &QCheckBox::clicked, this, &FolderConfigureSettingsPageBase::slotModifyClicked);
+
+    mGroupBox = new QGroupBox(i18n("Modify"), this);
+    mGroupBox->setObjectName(QStringLiteral("mGroupBox"));
+    mGroupBox->setCheckable(true);
+    mGroupBox->setChecked(false);
+
+    mGroupBox->setLayout(mMainLayout);
+    topLayout->addWidget(mGroupBox);
+    connect(mGroupBox, &QGroupBox::clicked, this, &FolderConfigureSettingsPageBase::slotModifyClicked);
 }
 
 FolderConfigureSettingsPageBase::~FolderConfigureSettingsPageBase()
@@ -35,7 +42,7 @@ void FolderConfigureSettingsPageBase::slotModifyClicked(bool clicked)
 
 bool FolderConfigureSettingsPageBase::wasModified() const
 {
-    return mModifyCheckBox->isChecked();
+    return mGroupBox->isChecked();
 }
 
 void FolderConfigureSettingsPageBase::addMainWidget(QWidget *widget)

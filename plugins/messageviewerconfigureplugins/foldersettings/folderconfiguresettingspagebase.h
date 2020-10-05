@@ -9,7 +9,7 @@
 
 #include <QWidget>
 class QVBoxLayout;
-class QCheckBox;
+class QGroupBox;
 class FolderConfigureSettingsPageBase : public QWidget
 {
     Q_OBJECT
@@ -23,8 +23,8 @@ protected:
     QVBoxLayout *const mMainLayout;
 private:
     void slotModifyClicked(bool clicked);
-    QCheckBox *mModifyCheckBox = nullptr;
     QWidget *mMainWidget = nullptr;
+    QGroupBox *mGroupBox = nullptr;
 };
 
 #endif // FOLDERCONFIGURESETTINGSPAGEBASE_H
