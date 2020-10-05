@@ -24,8 +24,10 @@ FolderConfigureSettingsExperyWidget::~FolderConfigureSettingsExperyWidget()
 
 void FolderConfigureSettingsExperyWidget::save(Akonadi::Collection &col)
 {
-    const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
-    if (wasModified()) {
-        mCollectionExpiryWidget->save(settings, col, true, false);
+    if (MailCommon::CollectionExpiryWidget::canHandle(col)) {
+        const MailCommon::CollectionExpirySettings settings = mCollectionExpiryWidget->settings();
+        if (wasModified()) {
+            mCollectionExpiryWidget->save(settings, col, true, false);
+        }
     }
 }
