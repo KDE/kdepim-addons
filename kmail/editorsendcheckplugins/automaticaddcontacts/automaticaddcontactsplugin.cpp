@@ -36,9 +36,8 @@ bool AutomaticAddContactsPlugin::hasConfigureDialog() const
 
 void AutomaticAddContactsPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<AutomaticAddContactsConfigureDialog> dlg = new AutomaticAddContactsConfigureDialog(parent);
-    dlg->exec();
-    delete dlg;
+    AutomaticAddContactsConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "automaticaddcontactsplugin.moc"
