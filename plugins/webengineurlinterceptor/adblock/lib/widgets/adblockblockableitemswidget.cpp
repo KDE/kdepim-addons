@@ -30,7 +30,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *lay = new QVBoxLayout(this);
-    lay->setContentsMargins(0, 0, 0, 0);
+    lay->setContentsMargins({});
     mListItems = new PimCommon::CustomTreeView(this);
     mListItems->setDefaultText(i18n("No blockable element found."));
 

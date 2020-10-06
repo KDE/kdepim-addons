@@ -19,7 +19,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mEnableDkimSupport = new QCheckBox(i18n("Enable DKIM Support"));
     mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
@@ -32,7 +32,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mainLayout->addWidget(mSaveResult);
 
     QHBoxLayout *saveKeyLayout = new QHBoxLayout;
-    saveKeyLayout->setContentsMargins(0, 0, 0, 0);
+    saveKeyLayout->setContentsMargins({});
     mainLayout->addLayout(saveKeyLayout);
     QLabel *saveKeyLabel = new QLabel(i18n("Save Record Key:"), this);
     saveKeyLabel->setObjectName(QStringLiteral("saveKeyLabel"));

@@ -27,7 +27,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     QSplitter *splitter = new QSplitter;
     splitter->setObjectName(QStringLiteral("splitter"));

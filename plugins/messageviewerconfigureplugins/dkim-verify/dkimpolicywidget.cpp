@@ -22,7 +22,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mVerifyIfEmailMustBeSigned = new QCheckBox(i18n("Check if e-mail should be signed"), this);
     mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("mVerifyIfEmailMustBeSigned"));
@@ -57,7 +57,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mainLayout->addWidget(mAutoGenerateRule);
 
     QHBoxLayout *autogenerateOnlyLayout = new QHBoxLayout;
-    autogenerateOnlyLayout->setContentsMargins(0, 0, 0, 0);
+    autogenerateOnlyLayout->setContentsMargins({});
     mainLayout->addLayout(autogenerateOnlyLayout);
 
     QSpacerItem *item = new QSpacerItem(30, 0);

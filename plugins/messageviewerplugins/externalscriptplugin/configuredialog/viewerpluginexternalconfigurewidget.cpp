@@ -53,7 +53,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("layout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     QLabel *lab = new QLabel(i18n("External Script:"), this);
     lab->setObjectName(QStringLiteral("lab"));

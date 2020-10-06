@@ -15,7 +15,7 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mSnippetWidget = new QuickTextWidget(this);
     mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));

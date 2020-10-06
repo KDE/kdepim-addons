@@ -22,7 +22,7 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
 {
     QFormLayout *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mCheckDKIMWhenOnlyTesting = new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this);
     mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("mCheckDKIMWhenOnlyTesting"));

@@ -17,7 +17,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     : MessageComposer::PluginEditorInitConfigureWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mExternalEditorCheck = new QCheckBox(i18n("Use external editor instead of composer"), this);

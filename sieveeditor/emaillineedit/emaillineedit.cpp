@@ -25,7 +25,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mLineEdit = new QLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));

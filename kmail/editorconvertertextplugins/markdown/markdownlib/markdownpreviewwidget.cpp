@@ -24,7 +24,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
 
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     MarkdownEnginePage *page = new MarkdownEnginePage(this);
     mWebView = new QWebEngineView(this);

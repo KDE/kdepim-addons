@@ -17,7 +17,7 @@ TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterA
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     mEmailAddressRequester = new Akonadi::EmailAddressRequester(this);
     mEmailAddressRequester->setObjectName(QStringLiteral("EmailAddressRequester"));
     mainLayout->addWidget(mEmailAddressRequester);

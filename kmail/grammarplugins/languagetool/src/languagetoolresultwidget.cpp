@@ -61,7 +61,7 @@ void LanguageToolResultWidget::addExtraWidget()
 {
     QHBoxLayout *extraWidgetLayout = new QHBoxLayout;
     extraWidgetLayout->setObjectName(QStringLiteral("extraWidgetLayout"));
-    extraWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    extraWidgetLayout->setContentsMargins({});
     mLanguageToolComboBox = new LanguageToolComboBox(this);
     mLanguageToolComboBox->setObjectName(QStringLiteral("languagetoolcombobox"));
     extraWidgetLayout->addWidget(mLanguageToolComboBox);

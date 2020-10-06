@@ -16,7 +16,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
     QVBoxLayout *vboxlayout = new QVBoxLayout(this);
-    vboxlayout->setContentsMargins(0, 0, 0, 0);
+    vboxlayout->setContentsMargins({});
     vboxlayout->setObjectName(QStringLiteral("mainlayout"));
     mConfirmAddressConfigureTab = new ConfirmAddressConfigureTab(this);
     mConfirmAddressConfigureTab->setObjectName(QStringLiteral("confirmaddresstab"));

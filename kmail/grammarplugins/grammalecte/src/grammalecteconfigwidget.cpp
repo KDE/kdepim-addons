@@ -27,7 +27,7 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMe
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     QTabWidget *mTab = new QTabWidget(this);
     mTab->setObjectName(QStringLiteral("mTab"));

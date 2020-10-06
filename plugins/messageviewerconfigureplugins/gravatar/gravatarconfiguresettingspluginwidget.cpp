@@ -22,7 +22,7 @@ GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWi
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mEnableGravatarSupport = new QCheckBox(i18n("Enable Gravatar Support"));
     mEnableGravatarSupport->setObjectName(QStringLiteral("gravatarcheckbox"));

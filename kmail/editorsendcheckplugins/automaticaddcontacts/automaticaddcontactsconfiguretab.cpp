@@ -19,7 +19,7 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *pare
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);

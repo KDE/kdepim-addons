@@ -17,11 +17,11 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     mainLayout->setSpacing(0);
 
     mExtraWidgetLayout = new QHBoxLayout;
-    mExtraWidgetLayout->setContentsMargins(0, 0, 0, 0);
+    mExtraWidgetLayout->setContentsMargins({});
     mainLayout->addLayout(mExtraWidgetLayout);
 
     QToolButton *closeBtn = new QToolButton(this);

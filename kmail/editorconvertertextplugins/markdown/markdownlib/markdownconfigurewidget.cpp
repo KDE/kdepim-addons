@@ -15,7 +15,7 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mLatexSupport = new QCheckBox(i18n("Enable embedded LaTeX"), this);
     mLatexSupport->setObjectName(QStringLiteral("latex"));

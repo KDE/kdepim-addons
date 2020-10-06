@@ -28,7 +28,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
 
     QWidget *w = new QWidget;
     QHBoxLayout *lay = new QHBoxLayout;
-    lay->setContentsMargins(0, 0, 0, 0);
+    lay->setContentsMargins({});
     QLabel *lab = new QLabel(i18n("Select List:"), this);
     lab->setObjectName(QStringLiteral("listsubscriptionlabel"));
     lay->addWidget(lab);

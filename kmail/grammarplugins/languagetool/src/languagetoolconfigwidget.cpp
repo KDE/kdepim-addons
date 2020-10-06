@@ -25,7 +25,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     mUseLocalInstance = new QCheckBox(i18n("Use Local Instance"), this);
     mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
@@ -33,7 +33,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 
     QHBoxLayout *instanceLayout = new QHBoxLayout;
     instanceLayout->setObjectName(QStringLiteral("instancelayout"));
-    instanceLayout->setContentsMargins(0, 0, 0, 0);
+    instanceLayout->setContentsMargins({});
     mInstancePathLabel = new QLabel(i18n("Instance Path:"), this);
     mInstancePathLabel->setObjectName(QStringLiteral("instancepath"));
     mInstancePathLabel->setEnabled(false);

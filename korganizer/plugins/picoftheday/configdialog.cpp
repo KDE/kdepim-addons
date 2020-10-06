@@ -36,7 +36,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     QFrame *topFrame = new QFrame(this);
     mainLayout->addWidget(topFrame);
     QVBoxLayout *topLayout = new QVBoxLayout(topFrame);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
 
     QGroupBox *aspectRatioBox = new QGroupBox(i18n("Thumbnail Aspect Ratio Mode"), topFrame);
     topLayout->addWidget(aspectRatioBox);

@@ -16,7 +16,7 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
     auto ftw = new MailCommon::FolderTreeWidget(this, nullptr,
                                                 MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
                                                                                               |MailCommon::FolderTreeWidget::HideStatistics

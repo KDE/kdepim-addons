@@ -17,7 +17,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     QGroupBox *groupBoxDomainName = new QGroupBox(this);
     groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));

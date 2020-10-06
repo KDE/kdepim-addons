@@ -14,7 +14,7 @@ MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget
     : QWidget(parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 }
 
 MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget()

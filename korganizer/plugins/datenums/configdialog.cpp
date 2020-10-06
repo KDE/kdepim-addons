@@ -37,7 +37,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     mainLayout->addStretch(1);
     mainLayout->addWidget(buttonBox);
     QVBoxLayout *topLayout = new QVBoxLayout(topFrame);
-    topLayout->setContentsMargins(0, 0, 0, 0);
+    topLayout->setContentsMargins({});
 
     QGroupBox *dayNumBox = new QGroupBox(i18n("Show Date Number"), topFrame);
     topLayout->addWidget(dayNumBox);

@@ -21,7 +21,7 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins(0, 0, 0, 0);
+    mainLayout->setContentsMargins({});
 
     QTabWidget *tab = new QTabWidget(this);
     tab->setObjectName(QStringLiteral("tab"));
