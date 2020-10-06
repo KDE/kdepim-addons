@@ -30,10 +30,7 @@ QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *par
     setModel(mSnippetsManager->model());
     setSelectionModel(mSnippetsManager->selectionModel());
 
-    connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged,
-            this, [this]() {
-        selectionWasChanged();
-    });
+    connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged, this, &QuicktextTreeWidget::selectionWasChanged);
 
     connect(mSnippetsManager->model(), &QAbstractItemModel::rowsInserted,
             this, &QTreeView::expandAll);
@@ -54,25 +51,13 @@ QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *par
     mDeleteSnippetGroupAction = new QAction(i18n("Remove Group"), this);
     mDeleteSnippetGroupAction->setIcon(QIcon::fromTheme(QStringLiteral("edit-delete")));
 
-    connect(mAddSnippetAction, &QAction::triggered, this, [this]() {
-        Q_EMIT addSnippet();
-    });
-    connect(mEditSnippetAction, &QAction::triggered, this, [this]() {
-        Q_EMIT editSnippet();
-    });
-    connect(mAddSnippetGroupAction, &QAction::triggered, this, [this]() {
-        Q_EMIT addSnippetGroup();
-    });
-    connect(mEditSnippetGroupAction, &QAction::triggered, this, [this]() {
-        Q_EMIT editSnippetGroup();
-    });
+    connect(mAddSnippetAction, &QAction::triggered, this, &QuicktextTreeWidget::addSnippet);
+    connect(mEditSnippetAction, &QAction::triggered, this, &QuicktextTreeWidget::editSnippet);
+    connect(mAddSnippetGroupAction, &QAction::triggered, this, &QuicktextTreeWidget::addSnippetGroup);
+    connect(mEditSnippetGroupAction, &QAction::triggered, this, &QuicktextTreeWidget::editSnippetGroup);
 
-    connect(mDeleteSnippetGroupAction, &QAction::triggered, this, [this]() {
-        deleteSnippetGroup();
-    });
-    connect(mDeleteSnippetAction, &QAction::triggered, this, [this]() {
-        deleteSnippet();
-    });
+    connect(mDeleteSnippetGroupAction, &QAction::triggered, this, &QuicktextTreeWidget::deleteSnippetGroup);
+    connect(mDeleteSnippetAction, &QAction::triggered, this, &QuicktextTreeWidget::deleteSnippet);
 
     expandAll();
     selectionWasChanged();

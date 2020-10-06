@@ -27,7 +27,7 @@ public:
     {
     }
 
-    QModelIndex currentGroupIndex() const;
+    Q_REQUIRED_RESULT QModelIndex currentGroupIndex() const;
 
     void save();
 
