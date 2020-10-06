@@ -11,8 +11,6 @@ using namespace MessageViewer;
 
 VcardMemento::VcardMemento(const QStringList &emails)
     : QObject(nullptr)
-    , mIndex(0)
-    , mFinished(false)
 {
     mVCardList.reserve(emails.count());
     for (const QString &str : emails) {

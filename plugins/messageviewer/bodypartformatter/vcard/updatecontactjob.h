@@ -24,9 +24,9 @@ private:
     void slotSearchDone(KJob *);
     void slotUpdateContactDone(KJob *);
 
-    QString mEmail;
-    KContacts::Addressee mContact;
-    QWidget *mParentWidget = nullptr;
+    const QString mEmail;
+    const KContacts::Addressee mContact;
+    QWidget *const mParentWidget;
 };
 
 #endif // UPDATECONTACTJOB_H

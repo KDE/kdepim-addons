@@ -56,8 +56,8 @@ private:
     void checkEmail();
     void continueToCheckEmail();
     QVector<VCard> mVCardList;
-    int mIndex;
-    bool mFinished;
+    int mIndex = 0;
+    bool mFinished = false;
 };
 }
 
