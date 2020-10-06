@@ -33,9 +33,8 @@ bool ExternalComposerPluginEditor::hasConfigureDialog() const
 
 void ExternalComposerPluginEditor::showConfigureDialog(QWidget *parent)
 {
-    QPointer<ExternalComposerConfigureDialog> dlg = new ExternalComposerConfigureDialog(parent);
-    dlg->exec();
-    delete dlg;
+    ExternalComposerConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "externalcomposerplugineditor.moc"
