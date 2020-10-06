@@ -156,8 +156,8 @@ public:
     }
 
 private:
-    MimeTreeParser::MessagePartPtr mBodyPart;
-    KCalendarCore::MemoryCalendar::Ptr mCalendar;
+    const MimeTreeParser::MessagePartPtr mBodyPart;
+    const KCalendarCore::MemoryCalendar::Ptr mCalendar;
 };
 
 class Formatter : public MessageViewer::MessagePartRendererBase

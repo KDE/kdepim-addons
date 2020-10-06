@@ -48,7 +48,7 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
 
 void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QString &deviceId)
 {
-    QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
+    const QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
     QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
 
     QString method;

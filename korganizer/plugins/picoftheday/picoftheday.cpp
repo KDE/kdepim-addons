@@ -31,9 +31,8 @@ Picoftheday::~Picoftheday()
 
 void Picoftheday::configure(QWidget *parent)
 {
-    QPointer<ConfigDialog> dlg = new ConfigDialog(parent);
-    dlg->exec();
-    delete dlg;
+    ConfigDialog dlg(parent);
+    dlg.exec();
 }
 
 QString Picoftheday::info() const

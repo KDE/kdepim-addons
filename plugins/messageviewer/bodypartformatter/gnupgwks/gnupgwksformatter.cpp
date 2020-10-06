@@ -43,30 +43,32 @@ bool partHasMimeType(KMime::Content *part, const char *mt)
 MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
 {
     const auto ct = part.content()->contentType(false);
-    if (ct && ct->isMimeType("multipart/mixed")) {
-        const auto subParts = part.content()->contents();
-        if (subParts.size() == 2
-            && partHasMimeType(subParts[0], "text/plain")
-            && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
-            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(1), false));
-        } else {
-            return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(0), false));
-        }
-    }
-
-    if (ct && ct->isMimeType("application/vnd.gnupg.wks")) {
-        const auto content = part.content()->decodedContent();
-        if (content.startsWith("-----BEGIN PGP MESSAGE")) {
-            auto decrypt = QGpgME::openpgp()->decryptJob();
-            QByteArray plainText;
-            auto result = decrypt->exec(part.content()->decodedContent(), plainText);
-            if (result.error()) {
-                qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asString();
-                return {};
+    if (ct) {
+        if (ct->isMimeType("multipart/mixed")) {
+            const auto subParts = part.content()->contents();
+            if (subParts.size() == 2
+                    && partHasMimeType(subParts[0], "text/plain")
+                    && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
+                return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(1), false));
+            } else {
+                return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(0), false));
             }
-            part.content()->setBody(plainText);
         }
-        return MessagePart::Ptr(new GnuPGWKSMessagePart(&part));
+
+        if (ct->isMimeType("application/vnd.gnupg.wks")) {
+            const auto content = part.content()->decodedContent();
+            if (content.startsWith("-----BEGIN PGP MESSAGE")) {
+                auto decrypt = QGpgME::openpgp()->decryptJob();
+                QByteArray plainText;
+                auto result = decrypt->exec(part.content()->decodedContent(), plainText);
+                if (result.error()) {
+                    qCWarning(GNUPGWKS_LOG) << "Decryption failed!" << result.error().asString();
+                    return {};
+                }
+                part.content()->setBody(plainText);
+            }
+            return MessagePart::Ptr(new GnuPGWKSMessagePart(&part));
+        }
     }
 
     return {};
