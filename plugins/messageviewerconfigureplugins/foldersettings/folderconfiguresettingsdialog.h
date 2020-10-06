@@ -21,7 +21,7 @@ private:
     void slotSave();
     void readConfig();
     void writeConfig();
-    FolderConfigureSettingsWidget *mFolderConfigureSettingsWidget = nullptr;
+    FolderConfigureSettingsWidget *const mFolderConfigureSettingsWidget;
 };
 
 #endif // FOLDERCONFIGURESETTINGSDIALOG_H

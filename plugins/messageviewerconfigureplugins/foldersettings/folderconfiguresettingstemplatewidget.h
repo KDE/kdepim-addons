@@ -22,7 +22,7 @@ public:
     ~FolderConfigureSettingsTemplateWidget();
     void save(Akonadi::Collection &col);
 private:
-    MailCommon::CollectionTemplatesWidget *mCollectionTemplateWidget = nullptr;
+    MailCommon::CollectionTemplatesWidget *const mCollectionTemplateWidget;
 };
 
 #endif // FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H

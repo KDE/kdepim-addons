@@ -20,7 +20,7 @@ public:
 private:
     void writeConfig();
     void readConfig();
-    ExpireAccountTrashFolderConfigWidget *mExpireAccountTrashFolderConfig = nullptr;
+    ExpireAccountTrashFolderConfigWidget *const mExpireAccountTrashFolderConfig;
 };
 
 #endif // EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H

@@ -22,7 +22,7 @@ public:
     ~FolderConfigureSettingsGeneralWidget();
     void save(Akonadi::Collection &col);
 private:
-    MailCommon::CollectionGeneralWidget *mCollectionGeneralWidget = nullptr;
+    MailCommon::CollectionGeneralWidget *const mCollectionGeneralWidget;
 };
 
 #endif // FOLDERCONFIGURESETTINGSGENERALWIDGET_H

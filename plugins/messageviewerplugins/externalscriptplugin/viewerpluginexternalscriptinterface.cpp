@@ -21,8 +21,8 @@ using namespace MessageViewer;
 
 ViewerPluginExternalscriptInterface::ViewerPluginExternalscriptInterface(KActionCollection *ac, QWidget *parent)
     : ViewerPluginInterface(parent)
+    , mActionGroup(new QActionGroup(this))
 {
-    mActionGroup = new QActionGroup(this);
     createAction(ac);
 }
 

@@ -22,7 +22,7 @@ public:
 private:
     void save(bool saveSettings, bool expireNow);
     void slotSaveAndExpireRequested();
-    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
+    MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
 
 #endif // EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H

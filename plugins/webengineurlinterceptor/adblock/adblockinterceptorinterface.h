@@ -35,7 +35,7 @@ private:
     mutable WebEngineViewer::WebHitTestResult mCurrentWebHitTest;
     QAction *mShowBlockableItems = nullptr;
     QAction *mBlockImage = nullptr;
-    AdBlock::AdblockManager *mAdblockManager = nullptr;
+    AdBlock::AdblockManager *const mAdblockManager;
     QWebEngineView *mWebEngineView = nullptr;
 };
 

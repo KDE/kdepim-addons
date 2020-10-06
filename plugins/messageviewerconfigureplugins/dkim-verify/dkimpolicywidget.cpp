@@ -75,9 +75,8 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mRulesButton->setEnabled(false);
     ruleLayout->addWidget(mRulesButton);
     connect(mRulesButton, &QPushButton::clicked, this, [this]() {
-        QPointer<MessageViewer::DKIMManageRulesDialog> dlg = new MessageViewer::DKIMManageRulesDialog(this);
-        dlg->exec();
-        delete dlg;
+        MessageViewer::DKIMManageRulesDialog dlg(this);
+        dlg.exec();
     });
     ruleLayout->addStretch(1);
 

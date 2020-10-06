@@ -10,8 +10,8 @@
 
 FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
+    , mCollectionTemplateWidget(new MailCommon::CollectionTemplatesWidget(this))
 {
-    mCollectionTemplateWidget = new MailCommon::CollectionTemplatesWidget(this);
     mCollectionTemplateWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
     addMainWidget(mCollectionTemplateWidget);
 }

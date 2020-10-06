@@ -33,8 +33,8 @@ private Q_SLOTS:
 
 private:
     void createNote();
-    Akonadi::Item mItem;
-    Akonadi::Collection mCollection;
+    const Akonadi::Item mItem;
+    const Akonadi::Collection mCollection;
     Akonadi::NoteUtils::NoteMessageWrapper mNote;
 };
 }

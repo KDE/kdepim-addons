@@ -26,7 +26,7 @@ public:
     void clear() override;
 
 private:
-    Akonadi::EmailAddressRequester *mEmailAddressRequester = nullptr;
+    Akonadi::EmailAddressRequester *const mEmailAddressRequester;
 };
 
 #endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H

@@ -21,7 +21,7 @@ public:
     ~FolderConfigureSettingsExperyWidget();
     void save(Akonadi::Collection &col);
 private:
-    MailCommon::CollectionExpiryWidget *mCollectionExpiryWidget = nullptr;
+    MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
 
 #endif // FOLDERCONFIGURESETTINGSEXPERYWIDGET_H

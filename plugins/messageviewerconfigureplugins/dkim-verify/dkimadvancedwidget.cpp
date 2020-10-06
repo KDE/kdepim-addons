@@ -54,9 +54,8 @@ DKIMAdvancedWidget::~DKIMAdvancedWidget()
 
 void DKIMAdvancedWidget::slotConfigureAuthenticationServer()
 {
-    QPointer<DKIMAuthenticationVerifiedServerDialog> dlg = new DKIMAuthenticationVerifiedServerDialog(this);
-    dlg->exec();
-    delete dlg;
+    DKIMAuthenticationVerifiedServerDialog dlg(this);
+    dlg.exec();
 }
 
 void DKIMAdvancedWidget::loadSettings()

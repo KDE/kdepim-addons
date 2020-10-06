@@ -14,11 +14,11 @@ K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi,
 
 TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent, const QList<QVariant> &)
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)
+    , mEmailAddressRequester(new Akonadi::EmailAddressRequester(this))
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
-    mEmailAddressRequester = new Akonadi::EmailAddressRequester(this);
     mEmailAddressRequester->setObjectName(QStringLiteral("EmailAddressRequester"));
     mainLayout->addWidget(mEmailAddressRequester);
     connect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);

@@ -18,12 +18,12 @@ static const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
 
 FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
+    , mFolderConfigureSettingsWidget(new FolderConfigureSettingsWidget(this))
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Folder Settings"));
 
-    mFolderConfigureSettingsWidget = new FolderConfigureSettingsWidget(this);
     mFolderConfigureSettingsWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsWidget"));
     mainLayout->addWidget(mFolderConfigureSettingsWidget);
 

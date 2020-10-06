@@ -10,8 +10,8 @@
 
 FolderConfigureSettingsExperyWidget::FolderConfigureSettingsExperyWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
+    , mCollectionExpiryWidget(new MailCommon::CollectionExpiryWidget(this))
 {
-    mCollectionExpiryWidget = new MailCommon::CollectionExpiryWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     mCollectionExpiryWidget->hideExpireNowButton();
     addMainWidget(mCollectionExpiryWidget);

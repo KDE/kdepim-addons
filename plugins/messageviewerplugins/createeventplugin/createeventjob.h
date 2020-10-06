@@ -28,8 +28,8 @@ private:
     void slotRelationCreated(KJob *job);
     void createEvent();
     Akonadi::Item mItem;
-    Akonadi::Collection mCollection;
-    KCalendarCore::Event::Ptr mEventPtr;
+    const Akonadi::Collection mCollection;
+    const KCalendarCore::Event::Ptr mEventPtr;
 };
 }
 
