@@ -29,7 +29,11 @@ void TinyUrlEngineInterface::generateShortUrl()
 {
     const QString requestUrl = QStringLiteral("https://tinyurl.com/api-create.php?url=%1").arg(mOriginalUrl);
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
+#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
     connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::error), this, &TinyUrlEngineInterface::slotErrorFound);
+#else
+    connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::errorOccurred), this, &TinyUrlEngineInterface::slotErrorFound);
+#endif
 }
 
 void TinyUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)

@@ -13,7 +13,6 @@
 
 ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, QObject *parent)
     : QObject(parent)
-    , mErrorFound(false)
     , mNetworkAccessManager(new QNetworkAccessManager(this))
     , mEnginePlugin(plugin)
 {

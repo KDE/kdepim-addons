@@ -17,10 +17,6 @@
 class ShortUrlEnginePluginInfo
 {
 public:
-    ShortUrlEnginePluginInfo()
-        : plugin(nullptr)
-    {
-    }
 
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
@@ -40,7 +36,7 @@ public:
     void loadPlugin(ShortUrlEnginePluginInfo *item);
     QVector<ShortUrlEnginePlugin *> pluginsList() const;
     QVector<ShortUrlEnginePluginInfo> mPluginList;
-    ShortUrlEnginePluginManager *q;
+    ShortUrlEnginePluginManager *const q;
 };
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()

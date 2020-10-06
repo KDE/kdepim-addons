@@ -36,7 +36,7 @@ protected:
     QString mOriginalUrl;
     QTextCursor mTextCursor;
     bool mErrorFound = false;
-    QNetworkAccessManager *mNetworkAccessManager = nullptr;
-    ShortUrlEnginePlugin *mEnginePlugin = nullptr;
+    QNetworkAccessManager *const mNetworkAccessManager;
+    ShortUrlEnginePlugin *const mEnginePlugin;
 };
 #endif // SHORTURLENGINEINTERFACE_H
