@@ -38,7 +38,7 @@ private:
     QScrollArea *mScrollArea = nullptr;
     KUrlRequester *mPythonPath = nullptr;
     KUrlRequester *mGrammalectePath = nullptr;
-    bool mDisableDialogBox = false;
+    const bool mDisableDialogBox = false;
 };
 
 #endif // GRAMMALECTECONFIGWIDGET_H

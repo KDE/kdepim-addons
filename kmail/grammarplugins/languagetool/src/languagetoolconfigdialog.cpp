@@ -12,6 +12,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+namespace {
+static const char myConfigGroupName[] = "LanguageToolConfigDialog";
+}
 LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -38,13 +41,13 @@ LanguageToolConfigDialog::~LanguageToolConfigDialog()
 
 void LanguageToolConfigDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "LanguageToolConfigDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
     group.writeEntry("Size", size());
 }
 
 void LanguageToolConfigDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "LanguageToolConfigDialog");
+    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
