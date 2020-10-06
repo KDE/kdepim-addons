@@ -15,7 +15,6 @@
 #include <KLocalizedString>
 
 Datenums::Datenums()
-    : mDisplayedInfo(DayOfYear | DaysRemaining)
 {
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");

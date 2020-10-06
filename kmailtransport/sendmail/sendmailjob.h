@@ -48,7 +48,7 @@ private Q_SLOTS:
 
 private:
     QString mLastError;
-    QProcess *mProcess = nullptr;
+    QProcess *const mProcess;
 };
 } // namespace MailTransport
 

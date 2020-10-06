@@ -36,7 +36,6 @@ void AntiSpamPluginInterface::slotActivated()
 
 void AntiSpamPluginInterface::exec()
 {
-    QPointer<KMail::AntiSpamWizard> wiz = new KMail::AntiSpamWizard(KMail::AntiSpamWizard::AntiSpam, parentWidget());
-    wiz->exec();
-    delete wiz;
+    KMail::AntiSpamWizard wiz(KMail::AntiSpamWizard::AntiSpam, parentWidget());
+    wiz.exec();
 }
