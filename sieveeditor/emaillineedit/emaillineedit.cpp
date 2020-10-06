@@ -22,19 +22,19 @@ K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 
 EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractSelectEmailLineEdit(parent)
+    , mLineEdit(new QLineEdit(this))
+    , mEmailButton(new QToolButton(this))
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mLineEdit = new QLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     mLineEdit->setClearButtonEnabled(true);
     mLineEdit->setPlaceholderText(i18n("Click on button for selecting contacts..."));
     connect(mLineEdit, &QLineEdit::textChanged, this, &EmailLineEdit::slotTextChanged);
     mainLayout->addWidget(mLineEdit);
 
-    mEmailButton = new QToolButton(this);
     mEmailButton->setText(i18n("..."));
     mEmailButton->setObjectName(QStringLiteral("emailbutton"));
     mEmailButton->setToolTip(i18n("Select Emails"));

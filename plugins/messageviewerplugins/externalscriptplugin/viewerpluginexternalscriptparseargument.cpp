@@ -22,6 +22,7 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
     }
 
     QStringList newArguments;
+    newArguments.reserve(scriptArguments.count());
     for (const QString &arg : scriptArguments) {
         if (arg == QLatin1String("%s")) {
             const KMime::Headers::Subject *const subject = mMessage ? mMessage->subject(false) : nullptr;

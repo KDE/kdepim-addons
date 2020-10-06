@@ -31,8 +31,8 @@ private:
     void verifyAkonadiStatus();
     void akonadiStateChanged(Akonadi::ServerManager::State state);
     QString mNegativeBackground;
-    QLineEdit *mLineEdit = nullptr;
-    QToolButton *mEmailButton = nullptr;
+    QLineEdit *const mLineEdit;
+    QToolButton *const mEmailButton;
     bool mEmailIsValid = false;
 };
 
