@@ -14,7 +14,9 @@
 #include <QPushButton>
 
 using namespace KABGravatar;
-
+namespace {
+static const char myConfigGroupName[] = "GravatarUpdateDialog";
+}
 GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -96,7 +98,7 @@ void GravatarUpdateDialog::setOriginalPixmap(const QPixmap &pix)
 
 void GravatarUpdateDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "GravatarUpdateDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -105,7 +107,7 @@ void GravatarUpdateDialog::readConfig()
 
 void GravatarUpdateDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "GravatarUpdateDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }

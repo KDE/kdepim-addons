@@ -11,6 +11,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 
+namespace {
+static const char myConfigGroupName[] = "SelectMailDialog";
+}
 SelectMailDialog::SelectMailDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -46,7 +49,7 @@ void SelectMailDialog::accept()
 
 void SelectMailDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "SelectMailDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -55,7 +58,7 @@ void SelectMailDialog::readConfig()
 
 void SelectMailDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "SelectMailDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }

@@ -17,7 +17,9 @@
 #include <KIdentityManagement/Identity>
 #include <MessageComposer/AliasesExpandJob>
 #include <PimCommon/PimUtil>
-
+namespace {
+static const char myConfigGroupName[] = "Confirm Address";
+}
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
 {
@@ -82,7 +84,7 @@ bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBefor
 
 void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uint currentIdentity)
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     KConfigGroup identityGroup = grp.group(QStringLiteral("Confirm Address %1").arg(currentIdentity));
     QStringList oldWhiteList = identityGroup.readEntry("Emails", QStringList());
     for (const QString &email : lst) {
@@ -97,7 +99,7 @@ void ConfirmAddressInterface::slotAddWhiteListEmails(const QStringList &lst, uin
 
 void ConfirmAddressInterface::reloadConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Confirm Address");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     mHashSettings.clear();
 
     KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();

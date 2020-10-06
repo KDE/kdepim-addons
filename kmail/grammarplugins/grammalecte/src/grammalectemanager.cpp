@@ -8,7 +8,9 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QStandardPaths>
-
+namespace {
+static const char myConfigGroupName[] = "Grammalecte";
+}
 GrammalecteManager::GrammalecteManager(QObject *parent)
     : QObject(parent)
 {
@@ -27,7 +29,7 @@ GrammalecteManager *GrammalecteManager::self()
 
 void GrammalecteManager::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry(QStringLiteral("pythonpath"), mPythonPath);
     grp.writeEntry(QStringLiteral("grammalectepath"), mGrammalectePath);
     grp.writeEntry(QStringLiteral("options"), mOptions);
@@ -45,7 +47,7 @@ void GrammalecteManager::setOptions(const QStringList &saveOptions)
 
 void GrammalecteManager::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Grammalecte");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     mPythonPath = grp.readEntry(QStringLiteral("pythonpath"));
     if (mPythonPath.isEmpty()) {
         mPythonPath = QStandardPaths::findExecutable(QStringLiteral("python3"));

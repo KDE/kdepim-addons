@@ -23,6 +23,9 @@
 #include <QStackedWidget>
 
 using namespace KABMergeContacts;
+namespace {
+static const char myConfigGroupName[] = "MergeContactsDialog";
+}
 MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     : QDialog(parent)
 {
@@ -89,7 +92,7 @@ void MergeContactsDialog::slotCustomizeMergeContact(const Akonadi::Item::List &l
 
 void MergeContactsDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "MergeContactsDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -98,7 +101,7 @@ void MergeContactsDialog::readConfig()
 
 void MergeContactsDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "MergeContactsDialog");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }

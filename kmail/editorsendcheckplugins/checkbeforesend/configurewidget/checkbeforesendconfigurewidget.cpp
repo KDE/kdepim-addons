@@ -10,7 +10,9 @@
 #include <QCheckBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
-
+namespace {
+static const char myConfigGroupName[] = "Check Before Send";
+}
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
@@ -47,7 +49,7 @@ CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
 
 void CheckBeforeSendConfigureWidget::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     mCheckPlainTextMail->setChecked(grp.readEntry("SendPlainText", false));
     mCheckMailTransport->setChecked(grp.readEntry("SmtpDefinedInIdentity", false));
     mCheckDuplicateEmailsAddresses->setChecked(grp.readEntry("CheckDuplicatedEmails", false));
@@ -56,7 +58,7 @@ void CheckBeforeSendConfigureWidget::loadSettings()
 
 void CheckBeforeSendConfigureWidget::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), "Check Before Send");
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
     grp.writeEntry("SendPlainText", mCheckPlainTextMail->isChecked());
     grp.writeEntry("SmtpDefinedInIdentity", mCheckMailTransport->isChecked());
     grp.writeEntry("CheckDuplicatedEmails", mCheckDuplicateEmailsAddresses->isChecked());
