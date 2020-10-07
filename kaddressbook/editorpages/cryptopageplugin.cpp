@@ -28,7 +28,6 @@
 #include <Libkleo/Enum>
 
 CryptoPagePlugin::CryptoPagePlugin()
-    : mReadOnly(false)
 {
     KIconLoader::global()->addAppDir(QStringLiteral("libkleopatra"));
 

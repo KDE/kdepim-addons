@@ -30,7 +30,7 @@ private Q_SLOTS:
     void onSettingsChanged();
 
 private:
-    EventModel *mCalendar = nullptr;
+    EventModel *const mCalendar;
     EventViews::PrefsPtr mEventViewsPrefs;
     mutable QHash<qint64, QString> mColorCache;
 };

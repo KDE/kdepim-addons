@@ -19,7 +19,7 @@ public:
     void accept() override;
 
 private:
-    InsertShorturlConfigureWidget *mInsertShortUrlWidget = nullptr;
+    InsertShorturlConfigureWidget *const mInsertShortUrlWidget;
 };
 
 #endif // INSERTSHORTURLCONFIGUREDIALOG_H
