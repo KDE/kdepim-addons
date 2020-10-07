@@ -17,12 +17,12 @@
 
 DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
+    , mTabWidget(new QTabWidget(this))
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
     initTab();

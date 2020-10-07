@@ -28,7 +28,7 @@ public:
     void loadSettings();
     void saveSettings();
 private:
-    DKIMAuthenticationVerifiedServerSelectorWidget *mSelector = nullptr;
+    DKIMAuthenticationVerifiedServerSelectorWidget *const mSelector;
 };
 
 #endif // DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H

@@ -11,12 +11,12 @@
 
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
     : QWidget(parent)
+    , mTabWidget(new DKIMConfigureTab(this))
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mTabWidget = new DKIMConfigureTab(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 }

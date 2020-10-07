@@ -11,12 +11,12 @@
 
 DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(QWidget *parent)
     : QWidget(parent)
+    , mSelector(new DKIMAuthenticationVerifiedServerSelectorWidget(this))
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mSelector = new DKIMAuthenticationVerifiedServerSelectorWidget(this);
     mSelector->setObjectName(QStringLiteral("mSelector"));
     mainLayout->addWidget(mSelector);
 }

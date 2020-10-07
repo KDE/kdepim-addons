@@ -16,12 +16,12 @@ static const char myConfigGroupName[] = "DKIMKeyRecordWidget";
 
 DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
     : QWidget(parent)
+    , mManagerKeyWidget(new MessageViewer::DKIMManagerKeyWidget(this))
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    mManagerKeyWidget = new MessageViewer::DKIMManagerKeyWidget(this);
     mManagerKeyWidget->setObjectName(QStringLiteral("mManagerKeyWidget"));
     mainLayout->addWidget(mManagerKeyWidget);
     readConfig();

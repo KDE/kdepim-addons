@@ -24,7 +24,7 @@ public:
 private:
     void readConfig();
     void writeConfig();
-    MessageViewer::DKIMManagerKeyWidget *mManagerKeyWidget = nullptr;
+    MessageViewer::DKIMManagerKeyWidget *const mManagerKeyWidget;
 };
 
 #endif // DKIMKEYRECORDWIDGET_H

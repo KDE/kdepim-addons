@@ -22,7 +22,7 @@ public:
     void saveSettings();
     void resetSettings();
 private:
-    DKIMConfigureTab *mTabWidget = nullptr;
+    DKIMConfigureTab *const mTabWidget;
 };
 
 #endif // DKIMCONFIGUREWIDGET_H

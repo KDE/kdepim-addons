@@ -74,13 +74,13 @@ public:
             f.close();
         }
         if (!buf.isEmpty()) {
-            KCalendarCore::MemoryCalendar::Ptr cl(
+            const KCalendarCore::MemoryCalendar::Ptr cl(
                 new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
             KCalUtils::InvitationFormatterHelper helper;
             const QString invite = KTnef::formatTNEFInvitation(buf, cl, &helper);
             KCalendarCore::ICalFormat format;
-            KCalendarCore::Incidence::Ptr inc = format.fromString(invite);
-            KCalendarCore::Event::Ptr event = inc.dynamicCast<KCalendarCore::Event>();
+            const KCalendarCore::Incidence::Ptr inc = format.fromString(invite);
+            const KCalendarCore::Event::Ptr event = inc.dynamicCast<KCalendarCore::Event>();
             if (event && event->hasEndDate()) {
                 // no enddate => not a valid invitation
                 inviteStr = KCalUtils::IncidenceFormatter::extensiveDisplayStr(cl, inc);

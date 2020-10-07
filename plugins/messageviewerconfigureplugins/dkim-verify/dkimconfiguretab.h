@@ -32,7 +32,7 @@ private:
     DKIMKeyRecordWidget *mRecordWidget = nullptr;
     DKIMAdvancedWidget *mAdvancedWidget = nullptr;
     DKIMPolicyWidget *mPolicyWidget = nullptr;
-    QTabWidget *mTabWidget = nullptr;
+    QTabWidget *const mTabWidget;
 };
 
 #endif // DKIMCONFIGURETAB_H
