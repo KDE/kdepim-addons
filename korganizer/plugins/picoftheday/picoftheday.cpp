@@ -17,7 +17,7 @@
 
 #include <QDomDocument>
 #include <QPointer>
-
+//https://www.mediawiki.org/wiki/API:Picture_of_the_day_viewer
 Picoftheday::Picoftheday()
 {
     KConfig _config(QStringLiteral("korganizerrc"));
@@ -74,6 +74,8 @@ void POTDElement::step1StartDownload()
     if (!mFirstStepCompleted && !mFirstStepJob) {
         QUrl url = QUrl(QStringLiteral("https://en.wikipedia.org/w/index.php?title=Template:POTD_protected/")
                         +mDate.toString(Qt::ISODate) + QStringLiteral("&action=raw"));
+
+
         // The file at that URL contains the file name for the POTD
         qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "step1StartDownload url :" << url;
 
