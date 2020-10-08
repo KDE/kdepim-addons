@@ -87,8 +87,8 @@ private:
     float mHWRatio;
     QSize mThumbSize;
     QUrl mThumbUrl;
-    bool mFirstStepCompleted;
-    bool mSecondStepCompleted;
+    bool mFirstStepCompleted = false;
+    bool mSecondStepCompleted = false;
     KIO::SimpleJob *mFirstStepJob = nullptr;
     KIO::SimpleJob *mSecondStepJob = nullptr;
     KIO::SimpleJob *mThirdStepJob = nullptr;

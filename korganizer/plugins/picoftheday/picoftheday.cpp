@@ -57,11 +57,6 @@ POTDElement::POTDElement(const QString &id, QDate date, QSize initialThumbSize)
     : StoredElement(id)
     , mDate(date)
     , mThumbSize(initialThumbSize)
-    , mFirstStepCompleted(false)
-    , mSecondStepCompleted(false)
-    , mFirstStepJob(nullptr)
-    , mSecondStepJob(nullptr)
-    , mThirdStepJob(nullptr)
 {
     setShortText(i18n("Loading..."));
     setLongText(i18n("<qt>Loading <i>Picture of the Day</i>...</qt>"));
@@ -77,9 +72,10 @@ void POTDElement::step1StartDownload()
 {
     // Start downloading the picture
     if (!mFirstStepCompleted && !mFirstStepJob) {
-        QUrl url = QUrl(QStringLiteral("https://en.wikipedia.org/w/index.php?title=Template:POTD/")
+        QUrl url = QUrl(QStringLiteral("https://en.wikipedia.org/w/index.php?title=Template:POTD_protected/")
                         +mDate.toString(Qt::ISODate) + QStringLiteral("&action=raw"));
         // The file at that URL contains the file name for the POTD
+        qCWarning(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "step1StartDownload url :" << url;
 
         mFirstStepJob = KIO::storedGet(url, KIO::NoReload, KIO::HideProgressInfo);
         KIO::Scheduler::setJobPriority(mFirstStepJob, 1);
