@@ -59,7 +59,6 @@ private:
     };
 
     void writeConfig();
-    void searchBlockableItems();
     void readConfig();
     PimCommon::CustomTreeView *mListItems = nullptr;
 };

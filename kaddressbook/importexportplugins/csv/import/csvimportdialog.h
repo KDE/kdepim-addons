@@ -68,7 +68,6 @@ private:
     void initGUI();
 
     void reloadCodecs();
-    QTextCodec *currentCodec();
     QList<QTextCodec *> mCodecs;
 
     QChar mTextQuote;

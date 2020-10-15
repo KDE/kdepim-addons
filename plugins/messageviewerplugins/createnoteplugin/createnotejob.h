@@ -32,7 +32,6 @@ private Q_SLOTS:
     void relationCreated(KJob *job);
 
 private:
-    void createNote();
     const Akonadi::Item mItem;
     const Akonadi::Collection mCollection;
     Akonadi::NoteUtils::NoteMessageWrapper mNote;

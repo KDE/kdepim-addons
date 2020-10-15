@@ -24,7 +24,6 @@ public:
     void importFile(const QUrl &url) override;
 
 private:
-    void slotFinished();
     void exportCSV();
     void slotImportCVS();
     void slotExportCVS();
