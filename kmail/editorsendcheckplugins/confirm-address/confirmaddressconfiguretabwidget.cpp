@@ -46,6 +46,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
                                                    i18n("Mod&ify..."),
                                                    i18n("Enter new domain name:"));
     mDomainNameListEditor->setObjectName(QStringLiteral("domainnamelisteditor"));
+    mDomainNameListEditor->setRemoveDialogLabel(i18n("Do you want to remove this domain?"));
     connect(mDomainNameListEditor, &ConfirmAddressSimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
@@ -64,6 +65,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
                                                    i18n("Mod&ify..."),
                                                    i18n("Enter new email address:"));
     mWhiteListEditor->setObjectName(QStringLiteral("whitelisteditor"));
+    mWhiteListEditor->setRemoveDialogLabel(i18n("Do you want to remove this email address?"));
     layoutWhiteList->addWidget(mWhiteListEditor);
     connect(mWhiteListEditor, &ConfirmAddressSimpleStringListEditor::changed,
             this, &ConfirmAddressConfigureTabWidget::configureChanged);
