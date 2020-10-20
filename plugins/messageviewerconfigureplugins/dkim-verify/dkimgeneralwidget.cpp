@@ -19,7 +19,6 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
 {
     QVBoxLayout *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins({});
 
     mEnableDkimSupport = new QCheckBox(i18n("Enable DKIM Support"));
     mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));

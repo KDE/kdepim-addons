@@ -25,7 +25,6 @@ void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
     DKIMPolicyWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QCheckBox *mVerifyIfEmailMustBeSigned = w.findChild<QCheckBox *>(QStringLiteral("mVerifyIfEmailMustBeSigned"));
     QVERIFY(mVerifyIfEmailMustBeSigned);

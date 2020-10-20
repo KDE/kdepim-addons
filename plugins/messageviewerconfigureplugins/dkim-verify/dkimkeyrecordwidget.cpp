@@ -20,7 +20,6 @@ DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
 {
     QHBoxLayout *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins({});
 
     mManagerKeyWidget->setObjectName(QStringLiteral("mManagerKeyWidget"));
     mainLayout->addWidget(mManagerKeyWidget);

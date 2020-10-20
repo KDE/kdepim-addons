@@ -21,7 +21,6 @@ void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
     DKIMGeneralWidget w;
     QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
     QCheckBox *mEnableDkimSupport = w.findChild<QCheckBox *>(QStringLiteral("enableDkimSupport"));
     QVERIFY(mEnableDkimSupport);
