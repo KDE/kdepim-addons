@@ -25,6 +25,7 @@
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
 #include <KLocalizedString>
+#include <KActionMenu>
 #include <QAction>
 
 ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
@@ -40,9 +41,10 @@ ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface()
 void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     SharetextPurposeMenuWidget *purposeMenu = new SharetextPurposeMenuWidget(parentWidget(), this);
-    QAction *shareAction = new QAction(i18n("Share Mail Text..."), this);
+    KActionMenu *shareAction = new KActionMenu(i18n("Share Mail Text..."), this);
     shareAction->setMenu(purposeMenu->menu());
     shareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
+    shareAction->setDelayed(false);
     ac->addAction(QStringLiteral("share_text_menu"), shareAction);
     purposeMenu->setEditorWidget(this);
     MessageComposer::PluginActionType type(shareAction, MessageComposer::PluginActionType::File);
