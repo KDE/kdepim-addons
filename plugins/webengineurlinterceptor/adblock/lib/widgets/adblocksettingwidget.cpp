@@ -37,7 +37,6 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 // Qt Includes
 #include <QWhatsThis>
-#include <QListWidgetItem>
 #include <QPointer>
 #include <QStandardPaths>
 #include <KIO/JobUiDelegate>

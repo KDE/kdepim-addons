@@ -9,7 +9,6 @@
 
 #include <QNetworkAccessManager>
 #include <QNetworkReply>
-#include <QNetworkRequest>
 
 LanguageToolGetListOfLanguageJob::LanguageToolGetListOfLanguageJob(QObject *parent)
     : QObject(parent)

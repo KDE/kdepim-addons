@@ -6,7 +6,6 @@
 
 #include "fancyheaderstyle.h"
 #include "messageviewer_debug.h"
-#include <MessageViewer/HeaderStyle>
 #include <MessageViewer/HeaderStyle_Util>
 
 #include <MessageViewer/HeaderStrategy>

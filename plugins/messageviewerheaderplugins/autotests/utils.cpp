@@ -10,7 +10,6 @@
 #include <QStandardPaths>
 #include <QProcess>
 #include <QRegularExpression>
-#include <KMime/Message>
 #include <MessageViewer/HeaderStyle>
 
 void testHeaderFile(const QString &data, const QString &name, const QString &dir)

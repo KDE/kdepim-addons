@@ -6,7 +6,6 @@
 
 #include "sendvcardsjob.h"
 
-#include <AkonadiCore/Item>
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
 #include <Akonadi/Contact/ContactGroupExpandJob>

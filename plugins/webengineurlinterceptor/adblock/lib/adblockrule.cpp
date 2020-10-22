@@ -12,11 +12,9 @@
 #include "adblockrule.h"
 #include "adblocksubscription.h"
 #include "adblockutil.h"
-#include "adblockregexp.h"
 
 #include <QUrl>
 #include <QString>
-#include <QStringList>
 #include <QDebug>
 #include <QWebEngineUrlRequestInfo>
 using namespace AdBlock;

@@ -11,7 +11,6 @@
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
 #include <KMessageBox>
-#include <QTreeView>
 #include <QStandardItemModel>
 #include <QHeaderView>
 #include <QLineEdit>

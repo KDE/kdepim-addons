@@ -18,7 +18,6 @@
 #include <KActionCollection>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <QPointer>
 #include <QLabel>
 #include <QMenu>
 

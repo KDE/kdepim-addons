@@ -9,7 +9,6 @@
 #include <AkonadiCore/ItemCreateJob>
 #include <AkonadiCore/ItemDeleteJob>
 #include <KContacts/Address>
-#include <KContacts/Addressee>
 
 #include "kaddressbookmergelibprivate_debug.h"
 

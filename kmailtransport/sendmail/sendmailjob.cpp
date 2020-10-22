@@ -14,7 +14,6 @@
 
 #include <KLocalizedString>
 #include <KShell>
-#include <QProcess>
 #include <QBuffer>
 
 using namespace MailTransport;

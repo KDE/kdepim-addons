@@ -6,7 +6,6 @@
 
 #include "dkimconfigurewidget.h"
 #include "dkimconfiguretab.h"
-#include <QWidget>
 #include <QVBoxLayout>
 
 DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)

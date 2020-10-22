@@ -7,7 +7,6 @@
 #include "grammalecteparser.h"
 #include "libgrammalecte_debug.h"
 #include <QJsonArray>
-#include <QJsonObject>
 #include <QJsonValue>
 
 GrammalecteParser::GrammalecteParser()

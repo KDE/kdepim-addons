@@ -19,7 +19,6 @@
 #include <KSharedConfig>
 #include <KCoreConfigSkeleton>
 
-#include <EventViews/Prefs>
 
 using namespace std::placeholders;
 

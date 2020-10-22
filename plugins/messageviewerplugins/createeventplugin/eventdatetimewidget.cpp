@@ -9,7 +9,6 @@
 #include <KTimeComboBox>
 #include <QHBoxLayout>
 
-#include <QDateTime>
 
 using namespace MessageViewer;
 

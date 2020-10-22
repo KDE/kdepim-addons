@@ -11,7 +11,6 @@
 #include "widgets/mergecontacterrorlabel.h"
 #include "widgets/mergecontactselectinformationscrollarea.h"
 
-#include <AkonadiCore/Item>
 
 #include <KConfigGroup>
 #include <KSharedConfig>

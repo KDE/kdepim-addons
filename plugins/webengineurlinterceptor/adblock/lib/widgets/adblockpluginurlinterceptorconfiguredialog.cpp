@@ -9,7 +9,6 @@
 #include "adblockpluginurlinterceptorconfigurewidget.h"
 
 #include <KLocalizedString>
-#include <QWidget>
 
 using namespace AdBlock;
 

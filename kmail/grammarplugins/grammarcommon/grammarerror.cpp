@@ -7,7 +7,6 @@
 #include "grammarerror.h"
 #include "grammarcommon_debug.h"
 
-#include <QJsonObject>
 
 GrammarError::GrammarError()
 {

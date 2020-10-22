@@ -7,7 +7,6 @@
 
 #include <Akonadi/Contact/GrantleeContactViewer>
 
-#include <AkonadiCore/Item>
 
 #include <QHBoxLayout>
 #include <QStackedWidget>

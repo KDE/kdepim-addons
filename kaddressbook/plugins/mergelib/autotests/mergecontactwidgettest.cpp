@@ -5,7 +5,6 @@
 */
 
 #include "mergecontactwidgettest.h"
-#include <AkonadiCore/Item>
 #include <AkonadiCore/EntityTreeModel>
 #include "../manualmerge/mergecontactwidget.h"
 

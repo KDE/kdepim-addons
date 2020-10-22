@@ -10,7 +10,6 @@
 
 #include "adblocksubscription.h"
 #include "adblockmanager.h"
-#include "adblocksearchtree.h"
 #include "adblockutil.h"
 #include "adblockinterceptor_debug.h"
 

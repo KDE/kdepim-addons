@@ -9,7 +9,6 @@
 
 #include "adblockmatcher.h"
 #include "adblockmanager.h"
-#include "adblockrule.h"
 #include "adblocksubscription.h"
 
 using namespace AdBlock;

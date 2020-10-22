@@ -11,7 +11,6 @@
 #include <KLocalizedString>
 #include <QToolButton>
 #include <QHBoxLayout>
-#include <QPointer>
 
 #include <KPluginFactory>
 K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")

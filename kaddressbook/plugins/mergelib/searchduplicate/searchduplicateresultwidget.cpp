@@ -7,7 +7,6 @@
 #include "searchduplicateresultwidget.h"
 #include "widgets/mergecontactloseinformationwarning.h"
 #include "job/mergecontactsjob.h"
-#include "job/mergecontacts.h"
 
 #include "resultduplicatetreewidget.h"
 #include <KLocalizedString>

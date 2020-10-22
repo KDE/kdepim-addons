@@ -9,7 +9,6 @@
 */
 
 #include "briefheaderstyle.h"
-#include <MessageViewer/HeaderStyle>
 #include <MessageViewer/HeaderStyle_Util>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/HeaderStrategy>

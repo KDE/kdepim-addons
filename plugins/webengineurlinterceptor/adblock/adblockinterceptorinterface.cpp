@@ -14,7 +14,6 @@
 #include <QAction>
 #include <QPointer>
 #include <QWebEngineView>
-#include <WebEngineViewer/WebHitTestResult>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)

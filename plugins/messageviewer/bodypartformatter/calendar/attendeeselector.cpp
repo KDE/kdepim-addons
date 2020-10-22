@@ -10,7 +10,6 @@
 #include <KEmailAddress>
 
 #include <KLocalizedString>
-#include <QPushButton>
 #include <KGuiItem>
 #include <KStandardGuiItem>
 #include <QDialogButtonBox>
