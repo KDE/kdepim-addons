@@ -1,0 +1,48 @@
+<div>
+     {% if header.subject %}
+        {% with header.subjecti18n as title %}
+        {% with header.subject|safe as value %}
+        {% include "header_row.html" %}
+        {% endwith %}
+        {% endwith %}
+     {% endif %}
+     {% if header.from.isSet %}
+        {% with header.fromi18n as title %}
+        {% with header.from.fullAddress|safe as value %}
+        {% include "header_row.html" %}
+        {% endwith %}
+        {% endwith %}
+     {% endif %}
+     {% if header.to.isSet %}
+        {% with header.toi18n as title %}
+        {% with header.to.fullAddress|safe as value %}
+        {% include "header_row.html" %}
+        {% endwith %}
+        {% endwith %}
+     {% endif %}
+     {% if header.cc.isSet %}
+        {% with header.cci18n as title %}
+        {% with header.cc.fullAddress|safe as value %}
+        {% include "header_row.html" %}
+        {% endwith %}
+        {% endwith %}
+     {% endif %}
+     {% if header.bcc.isSet %}
+        {% with header.bcci18n as title %}
+        {% with header.bcc.fullAddress|safe as value %}
+        {% include "header_row.html" %}
+        {% endwith %}
+        {% endwith %}
+     {% endif %}
+
+     {% with header.datei18n as title %}
+     {% with header.date.short as value %}
+     {% include "header_row.html" %}
+     {% endwith %}
+     {% endwith %}
+
+     {% if header.spamHTML %}
+        {{ spamHTML|safe }}
+     {% endif %}
+
+</div>
