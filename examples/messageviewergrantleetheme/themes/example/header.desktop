@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Example
 Name[ar]=مثال
+Name[ca]=Exemple
 Name[da]=Eksempel
 Name[de]=Beispiel
 Name[en_GB]=Example
@@ -22,9 +23,11 @@ Name[sl]=Primer
 Name[sv]=Exempel
 Name[tr]=Örnek
 Name[uk]=Приклад
+Name[x-test]=xxExamplexx
 Name[zh_TW]=範例
 Description=Example theme for header.
 Description[ar]=سمة مثال للتّرويسة.
+Description[ca]=Tema d'exemple per a la capçalera.
 Description[da]=Eksempeltema på header.
 Description[de]=Beispieldesign für den Vorspann.
 Description[en_GB]=Example theme for header.
@@ -46,5 +49,6 @@ Description[sl]=Primer teme za glavo.
 Description[sv]=Exempeltema för huvud.
 Description[tr]=Başlık için örnek tema.
 Description[uk]=Приклад теми для заголовка.
+Description[x-test]=xxExample theme for header.xx
 Description[zh_TW]=適用於標頭的範例主題。
 FileName=header.html
