@@ -81,6 +81,9 @@ public:
         }
 
         std::unique_ptr<KPkPass::Pass> pass(KPkPass::Pass::fromData(msgPart->content()->decodedContent()));
+        if (!pass) {
+            return false;
+        }
         const auto dir = mp->nodeHelper()->createTempDir(QStringLiteral("pkpass"));
         const auto logo = pass->logo();
         if (!logo.isNull()) {
