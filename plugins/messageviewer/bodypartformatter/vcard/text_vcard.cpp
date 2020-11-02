@@ -62,7 +62,7 @@ public:
 
         KContacts::VCardConverter vcc;
 
-        MessageViewer::VcardMemento *memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
+        auto *memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
         QStringList lst;
 
         // Pre-count the number of non-empty addressees
@@ -92,7 +92,7 @@ public:
         static QString defaultMapIconPath = QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("document-open-remote"), KIconLoader::Small)).url();
 
         if (!memento) {
-            MessageViewer::VcardMemento *memento = new MessageViewer::VcardMemento(lst);
+            auto *memento = new MessageViewer::VcardMemento(lst);
             msgPart->setMemento(memento);
 
             auto nodeHelper = msgPart->nodeHelper();
@@ -185,7 +185,7 @@ public:
         }
 
         if (path.startsWith(QLatin1String("addToAddressBook"))) {
-            Akonadi::AddContactJob *job = new Akonadi::AddContactJob(a, nullptr);
+            auto *job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
             UpdateContactJob *job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
@@ -220,7 +220,7 @@ public:
             return true;
         }
 
-        QMenu *menu = new QMenu();
+        auto *menu = new QMenu();
         QAction *open
             = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("View Business Card"));
         QAction *saveas
@@ -250,7 +250,7 @@ public:
     bool openVCard(const KContacts::Addressee &a, const QString &vCard) const
     {
         Q_UNUSED(vCard);
-        Akonadi::ContactViewer *view = new Akonadi::ContactViewer(nullptr);
+        auto *view = new Akonadi::ContactViewer(nullptr);
         view->setRawContact(a);
         view->setMinimumSize(300, 400);
         view->show();

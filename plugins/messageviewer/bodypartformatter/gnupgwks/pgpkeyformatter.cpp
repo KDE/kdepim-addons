@@ -25,7 +25,7 @@ using namespace MimeTreeParser::Interface;
 MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParser::Interface::BodyPart &part) const
 {
     auto mp = new PgpKeyMessagePart(&part);
-    PgpKeyMemento *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
+    auto *m = dynamic_cast<PgpKeyMemento *>(mp->memento());
 
     if (!m && !mp->fingerprint().isEmpty()) {
         auto memento = new PgpKeyMemento();

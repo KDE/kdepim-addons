@@ -23,14 +23,14 @@ void InsertShorturlConfigureWidgetTest::shouldHaveDefaultValues()
 {
     InsertShorturlConfigureWidget w;
 
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QLabel *lab = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto *lab = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    QComboBox *mShortUrlServer = w.findChild<QComboBox *>(QStringLiteral("shorturlserver"));
+    auto *mShortUrlServer = w.findChild<QComboBox *>(QStringLiteral("shorturlserver"));
     QVERIFY(mShortUrlServer);
 }

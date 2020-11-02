@@ -32,7 +32,7 @@ TodoEditTest::TodoEditTest()
     qRegisterMetaType<KCalendarCore::Todo::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
-    QStandardItemModel *model = new QStandardItemModel;
+    auto *model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
@@ -58,9 +58,9 @@ void TodoEditTest::shouldHaveDefaultValuesOnCreation()
     MessageViewer::TodoEdit edit;
     QVERIFY(edit.collection().isValid());
     QVERIFY(!edit.message());
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QPushButton *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    QPushButton *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    auto *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QVERIFY(openEditor);
     QVERIFY(save);
     QCOMPARE(openEditor->isEnabled(), false);
@@ -122,7 +122,7 @@ void TodoEditTest::shouldHaveASubject()
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
 
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QVERIFY(noteedit);
     QCOMPARE(noteedit->text(), QString());
 
@@ -141,7 +141,7 @@ void TodoEditTest::shouldEmptySubjectWhenMessageIsNull()
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     edit.setMessage(KMime::Message::Ptr());
     QCOMPARE(noteedit->text(), QString());
 }
@@ -153,7 +153,7 @@ void TodoEditTest::shouldEmptySubjectWhenMessageHasNotSubject()
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     KMime::Message::Ptr msgSubjectEmpty(new KMime::Message);
     edit.setMessage(msgSubjectEmpty);
     QCOMPARE(noteedit->text(), QString());
@@ -167,7 +167,7 @@ void TodoEditTest::shouldSelectLineWhenPutMessage()
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QVERIFY(noteedit->hasSelectedText());
     const QString selectedText = noteedit->selectedText();
     QCOMPARE(selectedText, QStringLiteral("Reply to \"%1\"").arg(subject));
@@ -176,7 +176,7 @@ void TodoEditTest::shouldSelectLineWhenPutMessage()
 void TodoEditTest::shouldEmitCollectionChangedWhenChangeComboboxItem()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     QVERIFY(akonadicombobox);
     QVERIFY(akonadicombobox->currentCollection().isValid());
 }
@@ -186,7 +186,7 @@ void TodoEditTest::shouldEmitNotEmitTodoWhenTextIsEmpty()
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 0);
@@ -197,7 +197,7 @@ void TodoEditTest::shouldEmitNotEmitTodoWhenTextTrimmedIsEmpty()
     MessageViewer::TodoEdit edit;
     KMime::Message::Ptr msg(new KMime::Message);
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     noteedit->setText(QStringLiteral("      "));
     QTest::keyClick(noteedit, Qt::Key_Enter);
@@ -216,7 +216,7 @@ void TodoEditTest::shouldEmitTodoWhenPressEnter()
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
@@ -230,7 +230,7 @@ void TodoEditTest::shouldTodoHasCorrectSubject()
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
@@ -251,7 +251,7 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
 
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     edit.slotCloseWidget();
     QCOMPARE(noteedit->text(), QString());
     QVERIFY(!edit.message());
@@ -260,7 +260,7 @@ void TodoEditTest::shouldClearAllWhenCloseWidget()
 void TodoEditTest::shouldEmitCollectionChangedWhenCurrentCollectionWasChanged()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(0);
     QCOMPARE(akonadicombobox->currentIndex(), 0);
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::collectionChanged);
@@ -272,7 +272,7 @@ void TodoEditTest::shouldEmitCollectionChangedWhenCurrentCollectionWasChanged()
 void TodoEditTest::shouldEmitCorrectCollection()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     KMime::Message::Ptr msg(new KMime::Message);
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
@@ -280,7 +280,7 @@ void TodoEditTest::shouldEmitCorrectCollection()
     edit.showToDoWidget();
     akonadicombobox->setCurrentIndex(3);
     Akonadi::Collection col = akonadicombobox->currentCollection();
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(spy.count(), 1);
@@ -293,7 +293,7 @@ void TodoEditTest::shouldHideWidgetWhenClickOnCloseButton()
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
     QVERIFY(edit.isVisible());
-    QPushButton *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
+    auto *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
     QTest::mouseClick(close, Qt::LeftButton);
     QCOMPARE(edit.isVisible(), false);
 }
@@ -305,7 +305,7 @@ void TodoEditTest::shouldHideWidgetWhenPressEscape()
     // make sure the window is active so we can test for focus
     qApp->setActiveWindow(&edit);
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setFocus();
     QVERIFY(noteedit->hasFocus());
     QTest::keyPress(&edit, Qt::Key_Escape);
@@ -321,7 +321,7 @@ void TodoEditTest::shouldHideWidgetWhenSaveClicked()
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test Note"), "us-ascii");
     edit.setMessage(msg);
-    QPushButton *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    auto *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QTest::mouseClick(save, Qt::LeftButton);
     QCOMPARE(edit.isVisible(), true);
 }
@@ -329,10 +329,10 @@ void TodoEditTest::shouldHideWidgetWhenSaveClicked()
 void TodoEditTest::shouldSaveCollectionSettings()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(3);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
-    QPushButton *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
+    auto *close = edit.findChild<QPushButton *>(QStringLiteral("close-button"));
     QTest::mouseClick(close, Qt::LeftButton);
     QCOMPARE(MessageViewer::MessageViewerSettingsBase::self()->lastSelectedFolder(), id);
 }
@@ -340,7 +340,7 @@ void TodoEditTest::shouldSaveCollectionSettings()
 void TodoEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(4);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
     edit.writeConfig();
@@ -349,8 +349,8 @@ void TodoEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 
 void TodoEditTest::shouldSaveCollectionSettingsWhenDeleteWidget()
 {
-    MessageViewer::TodoEdit *edit = new MessageViewer::TodoEdit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *edit = new MessageViewer::TodoEdit;
+    auto *akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(4);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();
     delete edit;
@@ -368,7 +368,7 @@ void TodoEditTest::shouldSetFocusWhenWeCallTodoEdit()
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QCOMPARE(noteedit->hasFocus(), true);
     edit.setFocus();
     QCOMPARE(noteedit->hasFocus(), false);
@@ -380,7 +380,7 @@ void TodoEditTest::shouldNotEmitTodoWhenMessageIsNull()
 {
     MessageViewer::TodoEdit edit;
     QString subject = QStringLiteral("Test Note");
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(subject);
     QSignalSpy spy(&edit, &MessageViewer::TodoEdit::createTodo);
     QTest::keyClick(noteedit, Qt::Key_Enter);
@@ -394,7 +394,7 @@ void TodoEditTest::shouldClearLineAfterEmitNewNote()
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(noteedit->text(), QString());
 }
@@ -410,7 +410,7 @@ void TodoEditTest::shouldHaveLineEditFocus()
     QString subject = QStringLiteral("Test Note");
     msg->subject(true)->fromUnicodeString(subject, "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     QCOMPARE(noteedit->hasFocus(), true);
 }
 
@@ -423,9 +423,9 @@ void TodoEditTest::shouldShowMessageWidget()
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test Note"));
-    KMessageWidget *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
+    auto *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
     QCOMPARE(msgwidget->isVisible(), false);
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(msgwidget->isVisible(), true);
@@ -436,13 +436,13 @@ void TodoEditTest::shouldHideMessageWidget()
     MessageViewer::TodoEdit edit;
     edit.show();
     QVERIFY(QTest::qWaitForWindowExposed(&edit));
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test note"));
 
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
     edit.setMessage(msg);
-    KMessageWidget *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
+    auto *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
     msgwidget->show();
     QCOMPARE(msgwidget->isVisible(), true);
     noteedit->setText(QStringLiteral("Another note"));
@@ -459,9 +459,9 @@ void TodoEditTest::shouldHideMessageWidgetWhenAddNewMessage()
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
     edit.setMessage(msg);
     edit.showToDoWidget();
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test Note"));
-    KMessageWidget *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
+    auto *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(msgwidget->isVisible(), true);
 
@@ -481,9 +481,9 @@ void TodoEditTest::shouldHideMessageWidgetWhenCloseWidget()
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
     edit.setMessage(msg);
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
     noteedit->setText(QStringLiteral("Test Note"));
-    KMessageWidget *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
+    auto *msgwidget = edit.findChild<KMessageWidget *>(QStringLiteral("msgwidget"));
     QTest::keyClick(noteedit, Qt::Key_Enter);
     QCOMPARE(msgwidget->isVisible(), true);
     edit.slotCloseWidget();
@@ -499,9 +499,9 @@ void TodoEditTest::shouldEnabledSaveOpenEditorButton()
     edit.setMessage(msg);
     edit.showToDoWidget();
 
-    QLineEdit *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
-    QPushButton *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    QPushButton *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    auto *noteedit = edit.findChild<QLineEdit *>(QStringLiteral("noteedit"));
+    auto *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    auto *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QCOMPARE(openEditor->isEnabled(), true);
     QCOMPARE(save->isEnabled(), true);
     noteedit->clear();
@@ -524,7 +524,7 @@ void TodoEditTest::shouldEnabledSaveOpenEditorButton()
 void TodoEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty()
 {
     MessageViewer::TodoEdit edit;
-    Akonadi::CollectionComboBox *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     //Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel());
 
@@ -532,8 +532,8 @@ void TodoEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmp
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");
     edit.setMessage(msg);
 
-    QPushButton *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
-    QPushButton *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
+    auto *openEditor = edit.findChild<QPushButton *>(QStringLiteral("open-editor-button"));
+    auto *save = edit.findChild<QPushButton *>(QStringLiteral("save-button"));
     QCOMPARE(openEditor->isEnabled(), false);
     QCOMPARE(save->isEnabled(), false);
 }

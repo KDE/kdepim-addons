@@ -21,7 +21,7 @@ AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Blockable Items"));
 
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     mBlockableItems = new AdBlockBlockableItemsWidget(this);
     mBlockableItems->setObjectName(QStringLiteral("blockableitemswidget"));

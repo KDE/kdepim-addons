@@ -26,7 +26,7 @@ void FolderConfigureModifyCollectionJob::setCollection(const Akonadi::Collection
 
 void FolderConfigureModifyCollectionJob::start()
 {
-    Akonadi::CollectionModifyJob *job = new Akonadi::CollectionModifyJob(mCollection, this);
+    auto *job = new Akonadi::CollectionModifyJob(mCollection, this);
     connect(job, &Akonadi::CollectionModifyJob::result, this, &FolderConfigureModifyCollectionJob::slotCollectionModified);
 }
 

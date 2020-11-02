@@ -23,7 +23,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
 {
     mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
@@ -31,7 +31,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
     mainLayout->addWidget(mUseLocalInstance);
 
-    QHBoxLayout *instanceLayout = new QHBoxLayout;
+    auto *instanceLayout = new QHBoxLayout;
     instanceLayout->setObjectName(QStringLiteral("instancelayout"));
     instanceLayout->setContentsMargins({});
     mInstancePathLabel = new QLabel(i18n("Instance Path:"), this);
@@ -48,7 +48,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 
     connect(mUseLocalInstance, &QCheckBox::clicked, this, &LanguageToolConfigWidget::updateWidgets);
 
-    QHBoxLayout *languageLayout = new QHBoxLayout;
+    auto *languageLayout = new QHBoxLayout;
     languageLayout->setObjectName(QStringLiteral("languagelayout"));
     QLabel *languageLabel = new QLabel(i18n("Language:"), this);
     languageLabel->setObjectName(QStringLiteral("languageLabel"));
@@ -60,7 +60,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolUpdateCombobox->setLanguageToolCombobox(mLanguageToolCombobox);
     mLanguageToolUpdateCombobox->setParentWidget(this);
 
-    QToolButton *refreshButton = new QToolButton(this);
+    auto *refreshButton = new QToolButton(this);
     refreshButton->setObjectName(QStringLiteral("refreshbutton"));
     refreshButton->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     refreshButton->setToolTip(i18n("Refresh"));

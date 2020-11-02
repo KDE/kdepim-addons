@@ -59,7 +59,7 @@ bool SendVcardsJob::start()
             const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
             const QString groupName(group.name());
             const QString attachmentName = (groupName.isEmpty() ? QStringLiteral("vcard") : groupName) + QStringLiteral(".vcf");
-            Akonadi::ContactGroupExpandJob *expandJob = new Akonadi::ContactGroupExpandJob(group, this);
+            auto *expandJob = new Akonadi::ContactGroupExpandJob(group, this);
             expandJob->setProperty("groupName", attachmentName);
             connect(expandJob, &KJob::result, this, &SendVcardsJob::slotExpandGroupResult);
             expandJob->start();
@@ -105,7 +105,7 @@ void SendVcardsJob::setVersion(KContacts::VCardConverter::Version version)
 
 void SendVcardsJob::slotExpandGroupResult(KJob *job)
 {
-    Akonadi::ContactGroupExpandJob *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
+    auto *expandJob = qobject_cast<Akonadi::ContactGroupExpandJob *>(job);
     Q_ASSERT(expandJob);
 
     const QString attachmentName = expandJob->property("groupName").toString();

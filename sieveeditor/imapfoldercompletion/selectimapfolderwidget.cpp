@@ -28,11 +28,11 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     bool modelIsInitialized = false;
     mModel = SelectImapFolderModel::self()->folderModel(mAccount, modelIsInitialized);
     connect(SelectImapFolderModel::self(), &SelectImapFolderModel::modelLoaded, this, &SelectImapFolderWidget::slotModelLoaded);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    QHBoxLayout *topLayout = new QHBoxLayout;
+    auto *topLayout = new QHBoxLayout;
     topLayout->setContentsMargins({});
     mainLayout->addLayout(topLayout);
     mSearchLineEdit = new QLineEdit(this);
@@ -41,7 +41,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
     topLayout->addWidget(mSearchLineEdit);
 
-    QToolButton *refreshImap = new QToolButton(this);
+    auto *refreshImap = new QToolButton(this);
     refreshImap->setObjectName(QStringLiteral("refreshimap"));
     refreshImap->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     refreshImap->setToolTip(i18n("Refresh IMAP Folder List"));

@@ -23,19 +23,19 @@ ConfirmAddressEmailEntryDialogTest::ConfirmAddressEmailEntryDialogTest(QObject *
 void ConfirmAddressEmailEntryDialogTest::shouldHaveDefaultValue()
 {
     ConfirmAddressEmailEntryDialog dlg;
-    QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    QLabel *label = dlg.findChild<QLabel *>(QStringLiteral("label"));
+    auto *label = dlg.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    QLineEdit *mLineEdit = dlg.findChild<QLineEdit *>(QStringLiteral("lineedit"));
+    auto *mLineEdit = dlg.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());
     QVERIFY(mLineEdit->validator());
     QVERIFY(qobject_cast<const PimCommon::EmailValidator *>(mLineEdit->validator()));
 
-    QDialogButtonBox *buttons = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttons"));
+    auto *buttons = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttons"));
     QVERIFY(buttons);
 }

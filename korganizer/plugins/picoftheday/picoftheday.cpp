@@ -103,7 +103,7 @@ void POTDElement::step1Result(KJob *job)
     }
 
     // First step completed: we now know the POTD's file name
-    KIO::StoredTransferJob *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
+    auto *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
     const QStringList lines
         = QString::fromUtf8(transferJob->data().data(), transferJob->data().size()).split(QLatin1Char('\n'));
 
@@ -174,7 +174,7 @@ void POTDElement::step2Result(KJob *job)
 
     // Get the image URL from the image page's source code
     // and transform it to get an appropriate thumbnail size
-    KIO::StoredTransferJob *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
+    auto *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
 
     QDomDocument imgPage;
     if (!imgPage.setContent(QString::fromUtf8(transferJob->data().data(),
@@ -288,7 +288,7 @@ void POTDElement::step3Result(KJob *job)
     }
 
     // Last step completed: we get the pixmap from the transfer job's data
-    KIO::StoredTransferJob *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
+    auto *const transferJob = static_cast<KIO::StoredTransferJob *>(job);
     if (mPixmap.loadFromData(transferJob->data())) {
         qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << "POTD:" << mDate << ": got POTD.";
         Q_EMIT gotNewPixmap(mPixmap.scaled(mThumbSize, Qt::KeepAspectRatio,

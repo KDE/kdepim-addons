@@ -17,12 +17,12 @@
 VCardExportSelectionWidget::VCardExportSelectionWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     QGroupBox *gbox = new QGroupBox(
         i18nc("@title:group", "Fields to be exported"), this);
     mainLayout->addWidget(gbox);
-    QGridLayout *layout = new QGridLayout;
+    auto *layout = new QGridLayout;
     gbox->setLayout(layout);
     gbox->setFlat(true);
     layout->addWidget(gbox, 0, 0, 1, 2);
@@ -76,7 +76,7 @@ VCardExportSelectionWidget::VCardExportSelectionWidget(QWidget *parent)
         i18nc("@title:group", "Export options"), this);
     gbox->setFlat(true);
     mainLayout->addWidget(gbox);
-    QHBoxLayout *gbLayout = new QHBoxLayout;
+    auto *gbLayout = new QHBoxLayout;
     gbox->setLayout(gbLayout);
 
     mDisplayNameBox = new QCheckBox(i18nc("@option:check", "Display name as full name"), this);

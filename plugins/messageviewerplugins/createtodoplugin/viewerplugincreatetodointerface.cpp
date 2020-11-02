@@ -81,14 +81,14 @@ void ViewerPluginCreateTodoInterface::createAction(KActionCollection *ac)
 
 void ViewerPluginCreateTodoInterface::slotCreateTodo(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection)
 {
-    CreateTodoJob *createJob = new CreateTodoJob(todoPtr, collection, mMessageItem, this);
+    auto *createJob = new CreateTodoJob(todoPtr, collection, mMessageItem, this);
     createJob->start();
 }
 
 TodoEdit *ViewerPluginCreateTodoInterface::widget()
 {
     if (!mTodoEdit) {
-        QWidget *parentWidget = static_cast<QWidget *>(parent());
+        auto *parentWidget = static_cast<QWidget *>(parent());
         mTodoEdit = new TodoEdit(parentWidget);
         connect(mTodoEdit, &TodoEdit::createTodo, this, &ViewerPluginCreateTodoInterface::slotCreateTodo);
         mTodoEdit->setObjectName(QStringLiteral("todoedit"));

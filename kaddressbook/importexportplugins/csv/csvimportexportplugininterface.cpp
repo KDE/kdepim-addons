@@ -171,8 +171,8 @@ void CSVImportExportPluginInterface::exportCSV()
 
     if (QFileInfo::exists(url.isLocalFile() ? url.toLocalFile() : url.path())) {
         if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-            PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
-            PimCommon::RenameFileDialog::RenameFileDialogResult result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+            auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
             if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                 url = dialog->newName();
             } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {

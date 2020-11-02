@@ -28,17 +28,17 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     : QWidget(parent)
     , mConflictTypes(MergeContacts::None)
 {
-    QVBoxLayout *lay = new QVBoxLayout(this);
+    auto *lay = new QVBoxLayout(this);
     lay->setContentsMargins({});
 
-    QSplitter *splitter = new QSplitter;
+    auto *splitter = new QSplitter;
     splitter->setObjectName(QStringLiteral("splitter"));
     splitter->setChildrenCollapsible(false);
     lay->addWidget(splitter);
 
     QWidget *selectContactWidget = new QWidget(this);
     selectContactWidget->setObjectName(QStringLiteral("selectcontactwidget"));
-    QVBoxLayout *vbox = new QVBoxLayout;
+    auto *vbox = new QVBoxLayout;
     selectContactWidget->setLayout(vbox);
     QLabel *lab = new QLabel(i18n("Select contacts that you really want to merge:"));
     vbox->addWidget(lab);
@@ -60,7 +60,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &MergeContactWidget::slotCustomizeMergingContacts);
     lay->addWidget(mMergeContactWarning);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto *hbox = new QHBoxLayout;
     hbox->addStretch();
 
     lab = new QLabel(i18n("Select the addressbook in which to store merged contacts:"));
@@ -131,7 +131,7 @@ void MergeContactWidget::slotMergeContacts()
 
 void MergeContactWidget::slotAutomaticMerging()
 {
-    KABMergeContacts::MergeContactsJob *job = new KABMergeContacts::MergeContactsJob(this);
+    auto *job = new KABMergeContacts::MergeContactsJob(this);
     job->setListItem(mSelectedItems);
     job->setDestination(mCollectionCombobox->currentCollection());
     connect(job, &MergeContactsJob::finished, this, &MergeContactWidget::slotMergeDone);

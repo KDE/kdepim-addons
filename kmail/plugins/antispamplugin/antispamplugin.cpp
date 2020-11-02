@@ -20,7 +20,7 @@ AntiSpamPlugin::~AntiSpamPlugin()
 
 PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(QObject *parent)
 {
-    AntiSpamPluginInterface *interface = new AntiSpamPluginInterface(parent);
+    auto *interface = new AntiSpamPluginInterface(parent);
     return interface;
 }
 

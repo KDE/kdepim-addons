@@ -13,7 +13,7 @@ using namespace KABMergeContacts;
 MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
 }
 
@@ -93,7 +93,7 @@ void MergeContactSelectInformationWidget::setContacts(MergeContacts::ConflictInf
 
 void MergeContactSelectInformationWidget::addInformationWidget(MergeContacts::ConflictInformation conflictType)
 {
-    MergeContactSelectListWidget *widget = new MergeContactSelectListWidget;
+    auto *widget = new MergeContactSelectListWidget;
     widget->setContacts(conflictType, mAddressList);
     layout()->addWidget(widget);
     mListMergeSelectInformation.append(widget);

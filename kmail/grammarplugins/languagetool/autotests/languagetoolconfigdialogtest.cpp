@@ -23,12 +23,12 @@ void LanguageToolConfigDialogTest::shouldHaveDefaultValue()
     LanguageToolConfigDialog w(nullptr);
     QVERIFY(!w.windowTitle().isEmpty());
 
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    LanguageToolConfigWidget *mConfigWidget = w.findChild<LanguageToolConfigWidget *>(QStringLiteral("configwidget"));
+    auto *mConfigWidget = w.findChild<LanguageToolConfigWidget *>(QStringLiteral("configwidget"));
     QVERIFY(mConfigWidget);
 
-    QDialogButtonBox *box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));
+    auto *box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));
     QVERIFY(box);
 }

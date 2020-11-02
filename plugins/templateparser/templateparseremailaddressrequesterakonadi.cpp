@@ -16,7 +16,7 @@ TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterA
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)
     , mEmailAddressRequester(new Akonadi::EmailAddressRequester(this))
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    auto *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
     mEmailAddressRequester->setObjectName(QStringLiteral("EmailAddressRequester"));

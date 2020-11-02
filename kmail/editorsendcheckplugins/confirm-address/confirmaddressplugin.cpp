@@ -25,7 +25,7 @@ ConfirmAddressPlugin::~ConfirmAddressPlugin()
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QObject *parent)
 {
-    ConfirmAddressInterface *interface = new ConfirmAddressInterface(parent);
+    auto *interface = new ConfirmAddressInterface(parent);
     connect(this, &ConfirmAddressPlugin::configChanged, interface, &ConfirmAddressInterface::reloadConfig);
     connect(interface, &ConfirmAddressInterface::forceReloadConfig, this, &ConfirmAddressPlugin::configChanged);
     return interface;

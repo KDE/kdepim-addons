@@ -20,7 +20,7 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
     , mFolderConfigureSettingsWidget(new FolderConfigureSettingsWidget(this))
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Folder Settings"));
 

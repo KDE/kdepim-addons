@@ -102,8 +102,8 @@ void GMXImportExportPluginInterface::exportGMX()
     if (QFileInfo::exists(url.isLocalFile()
                           ? url.toLocalFile() : url.path())) {
         if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-            PimCommon::RenameFileDialog *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
-            const PimCommon::RenameFileDialog::RenameFileDialogResult result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
+            auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            const auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
             if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                 url = dialog->newName();
             } else if (result == PimCommon::RenameFileDialog::RENAMEFILE_IGNORE) {
@@ -470,7 +470,7 @@ void GMXImportExportPluginInterface::importGMX()
     line = gmxStream.readLine();
     while ((line != QLatin1String("####")) && !gmxStream.atEnd()) {
         // an addressee entry may spread over several lines in the file
-        while (1) {
+        while (true) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
             itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
 #else
@@ -484,7 +484,7 @@ void GMXImportExportPluginInterface::importGMX()
         }
 
         // populate the addressee
-        KContacts::Addressee *addressee = new KContacts::Addressee;
+        auto *addressee = new KContacts::Addressee;
         addressee->setNickName(itemList.at(1));
         addressee->setGivenName(itemList.at(2));
         addressee->setFamilyName(itemList.at(3));
@@ -519,7 +519,7 @@ void GMXImportExportPluginInterface::importGMX()
 
     while (!line.startsWith(QLatin1String("####")) && !gmxStream.atEnd()) {
         // an address entry may spread over several lines in the file
-        while (1) {
+        while (true) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
             itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
 #else
@@ -618,7 +618,7 @@ void GMXImportExportPluginInterface::importGMX()
         while (!line.startsWith(QLatin1String("####"))
                && !gmxStream.atEnd()) {
             // a category should not spread over multiple lines, but just in case
-            while (1) {
+            while (true) {
 #if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
                 itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
 #else

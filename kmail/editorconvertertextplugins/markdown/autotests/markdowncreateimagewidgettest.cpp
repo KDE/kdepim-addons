@@ -25,52 +25,52 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownCreateImageWidget w;
 
-    QFormLayout *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);
     QVERIFY(mTitle->text().isEmpty());
     QVERIFY(mTitle->isClearButtonEnabled());
 
-    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
     QVERIFY(mLink->isClearButtonEnabled());
 
-    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    auto *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     QVERIFY(mAlternateText);
     QVERIFY(mAlternateText->text().isEmpty());
     QVERIFY(mAlternateText->isClearButtonEnabled());
 
-    QCheckBox *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
+    auto *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
     QVERIFY(mKeepOriginalSize);
     QVERIFY(mKeepOriginalSize->isChecked());
 
-    QLabel *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
+    auto *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
     QVERIFY(mLabWidth);
     QVERIFY(!mLabWidth->text().isEmpty());
 
-    QSpinBox *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
+    auto *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
     QCOMPARE(mWidth->minimum(), 1);
     QCOMPARE(mWidth->maximum(), 999);
     QVERIFY(!mWidth->isEnabled());
 
-    QLabel *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
+    auto *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
     QVERIFY(mLabHeight);
     QVERIFY(!mLabHeight->text().isEmpty());
 
-    QSpinBox *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
+    auto *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
     QCOMPARE(mHeight->minimum(), 1);
     QCOMPARE(mHeight->maximum(), 999);
     QVERIFY(!mHeight->isEnabled());
 
-    QWidget *sizeWidget = w.findChild<QWidget *>(QStringLiteral("sizeWidget"));
+    auto *sizeWidget = w.findChild<QWidget *>(QStringLiteral("sizeWidget"));
     QVERIFY(sizeWidget);
 
-    QHBoxLayout *sizeWidgetLayout = w.findChild<QHBoxLayout *>(QStringLiteral("sizeWidgetLayout"));
+    auto *sizeWidgetLayout = w.findChild<QHBoxLayout *>(QStringLiteral("sizeWidgetLayout"));
     QVERIFY(sizeWidgetLayout);
     QCOMPARE(sizeWidgetLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 }
@@ -78,9 +78,9 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()
 {
     MarkdownCreateImageWidget w;
-    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
-    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
-    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    auto *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     mLink->setText(QStringLiteral("http://www.kde.org"));
     mTitle->setText(QStringLiteral("TITLE"));
     QCOMPARE(w.linkStr(), QStringLiteral("![TITLE](http://www.kde.org)"));
@@ -92,11 +92,11 @@ void MarkdownCreateImageWidgetTest::shouldGenerateLink()
 void MarkdownCreateImageWidgetTest::shouldChangeState()
 {
     MarkdownCreateImageWidget w;
-    QCheckBox *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
-    QLabel *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
-    QSpinBox *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
-    QLabel *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
-    QSpinBox *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
+    auto *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
+    auto *mLabWidth = w.findChild<QLabel *>(QStringLiteral("labwidth"));
+    auto *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
+    auto *mLabHeight = w.findChild<QLabel *>(QStringLiteral("labheight"));
+    auto *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
 
     mKeepOriginalSize->setChecked(true);
     QVERIFY(!mLabWidth->isEnabled());
@@ -114,16 +114,16 @@ void MarkdownCreateImageWidgetTest::shouldChangeState()
 void MarkdownCreateImageWidgetTest::shouldAddSize()
 {
     MarkdownCreateImageWidget w;
-    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
-    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
-    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    auto *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     mLink->setText(QStringLiteral("http://www.kde.org"));
     mTitle->setText(QStringLiteral("TITLE"));
 
     mAlternateText->setText(QStringLiteral("alternate"));
-    QCheckBox *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
-    QSpinBox *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
-    QSpinBox *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
+    auto *mKeepOriginalSize = w.findChild<QCheckBox *>(QStringLiteral("keeporiginalsize"));
+    auto *mWidth = w.findChild<QSpinBox *>(QStringLiteral("mwidth"));
+    auto *mHeight = w.findChild<QSpinBox *>(QStringLiteral("mheight"));
     mKeepOriginalSize->setChecked(false);
     mWidth->setValue(45);
     mHeight->setValue(70);
@@ -137,9 +137,9 @@ void MarkdownCreateImageWidgetTest::shouldEmitSignal()
 {
     MarkdownCreateImageWidget w;
     QSignalSpy spy(&w, &MarkdownCreateImageWidget::enabledOkButton);
-    QLineEdit *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
-    QLineEdit *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
-    QLineEdit *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
+    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("image"));
+    auto *mAlternateText = w.findChild<QLineEdit *>(QStringLiteral("alternatetext"));
     mTitle->setText(QStringLiteral("foo"));
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<bool>(), false);

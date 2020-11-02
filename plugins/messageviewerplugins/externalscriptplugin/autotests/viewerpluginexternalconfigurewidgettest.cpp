@@ -24,25 +24,25 @@ ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTes
 void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalConfigureWidget w;
-    QLabel *label = w.findChild<QLabel *>(QStringLiteral("lab"));
+    auto *label = w.findChild<QLabel *>(QStringLiteral("lab"));
     QVERIFY(label);
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QListWidget *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
+    auto *mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);
     QCOMPARE(mListExternal->selectionMode(), QAbstractItemView::SingleSelection);
 
-    QPushButton *mAddScript = w.findChild<QPushButton *>(QStringLiteral("addscript"));
+    auto *mAddScript = w.findChild<QPushButton *>(QStringLiteral("addscript"));
     QVERIFY(mAddScript);
     QVERIFY(!mAddScript->text().isEmpty());
 
-    QPushButton *mModifyScript = w.findChild<QPushButton *>(QStringLiteral("modifyscript"));
+    auto *mModifyScript = w.findChild<QPushButton *>(QStringLiteral("modifyscript"));
     QVERIFY(mModifyScript);
     QVERIFY(!mModifyScript->text().isEmpty());
 
-    QPushButton *mRemoveScript = w.findChild<QPushButton *>(QStringLiteral("removescript"));
+    auto *mRemoveScript = w.findChild<QPushButton *>(QStringLiteral("removescript"));
     QVERIFY(mRemoveScript);
     QVERIFY(!mRemoveScript->text().isEmpty());
 }

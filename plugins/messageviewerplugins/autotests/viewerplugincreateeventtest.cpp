@@ -19,7 +19,7 @@ extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 ViewerPluginCreateeventTest::ViewerPluginCreateeventTest(QObject *parent)
     : QObject(parent)
 {
-    QStandardItemModel *model = new QStandardItemModel;
+    auto *model = new QStandardItemModel;
     MessageViewer::_k_eventEditStubModel = model;
 }
 
@@ -45,7 +45,7 @@ void ViewerPluginCreateeventTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     interface->execute();
-    QWidget *createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
+    auto *createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
     QVERIFY(createeventwidget);
     QCOMPARE(createeventwidget->isHidden(), false);
 }

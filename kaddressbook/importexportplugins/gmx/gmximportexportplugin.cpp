@@ -19,7 +19,7 @@ GMXImportExportPlugin::~GMXImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(QObject *parent)
 {
-    GMXImportExportPluginInterface *interface = new GMXImportExportPluginInterface(parent);
+    auto *interface = new GMXImportExportPluginInterface(parent);
     return interface;
 }
 

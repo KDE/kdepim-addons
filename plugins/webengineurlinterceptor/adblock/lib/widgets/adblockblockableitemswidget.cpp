@@ -29,7 +29,7 @@ using namespace AdBlock;
 AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout(this);
+    auto *lay = new QVBoxLayout(this);
     lay->setContentsMargins({});
     mListItems = new PimCommon::CustomTreeView(this);
     mListItems->setDefaultText(i18n("No blockable element found."));
@@ -42,7 +42,7 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
     const QStringList lst = {i18n("Filter"), i18n("Address"), i18n("Type")};
     mListItems->setHeaderLabels(lst);
 
-    KTreeWidgetSearchLine *searchLine = new KTreeWidgetSearchLine(this, mListItems);
+    auto *searchLine = new KTreeWidgetSearchLine(this, mListItems);
     searchLine->setPlaceholderText(i18n("Search..."));
 
     lay->addWidget(searchLine);
@@ -59,7 +59,7 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
 void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
 {
     for (const AdBlockResult &res : result) {
-        QTreeWidgetItem *item = new QTreeWidgetItem(mListItems);
+        auto *item = new QTreeWidgetItem(mListItems);
         item->setText(Url, res.src);
         switch (res.type) {
         case AdBlock::AdBlockBlockableItemsJob::UnKnown:
@@ -145,7 +145,7 @@ void AdBlockBlockableItemsWidget::slotOpenItem()
         return;
     }
     const QUrl url(item->text(Url));
-    KIO::OpenUrlJob *job = new KIO::OpenUrlJob(url);
+    auto *job = new KIO::OpenUrlJob(url);
     job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
     job->setRunExecutables(false);
     job->start();

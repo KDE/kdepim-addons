@@ -25,10 +25,10 @@ using namespace KABMergeContacts;
 SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
 
-    QSplitter *splitter = new QSplitter;
+    auto *splitter = new QSplitter;
     splitter->setObjectName(QStringLiteral("splitter"));
     splitter->setChildrenCollapsible(false);
     mainLayout->addWidget(splitter);
@@ -46,7 +46,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &SearchDuplicateResultWidget::slotCustomizeMergingContacts);
     mainLayout->addWidget(mMergeContactWarning);
 
-    QHBoxLayout *mergeLayout = new QHBoxLayout;
+    auto *mergeLayout = new QHBoxLayout;
     mainLayout->addLayout(mergeLayout);
     mergeLayout->addStretch();
 
@@ -113,7 +113,7 @@ void SearchDuplicateResultWidget::slotMergeContact()
 void SearchDuplicateResultWidget::mergeContact()
 {
     if (mIndexListContact < mListContactToMerge.count()) {
-        KABMergeContacts::MergeContactsJob *job = new KABMergeContacts::MergeContactsJob(this);
+        auto *job = new KABMergeContacts::MergeContactsJob(this);
         job->setListItem(mListContactToMerge.at(mIndexListContact));
         job->setDestination(mCollectionCombobox->currentCollection());
         connect(job, &KABMergeContacts::MergeContactsJob::finished, this, &SearchDuplicateResultWidget::slotMergeDone);

@@ -24,14 +24,14 @@ QString configGroupName()
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
     mEnabled->setObjectName(QStringLiteral("enabled"));
     connect(mEnabled, &QCheckBox::clicked, this, &AutomaticAddContactsTabWidget::configureChanged);
     mainLayout->addWidget(mEnabled);
 
-    QHBoxLayout *hlay = new QHBoxLayout;
+    auto *hlay = new QHBoxLayout;
     hlay->setContentsMargins({});
     hlay->setObjectName(QStringLiteral("folderlayout"));
     mainLayout->addLayout(hlay);

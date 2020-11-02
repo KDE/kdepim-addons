@@ -121,7 +121,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     const auto identity = KIdentityManagement::IdentityManager::self()->identityForAddress(mp.address());
     const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
     if (!nullIdentity) {
-        KMime::Headers::Generic *x_header = new KMime::Headers::Generic("X-KMail-Identity");
+        auto *x_header = new KMime::Headers::Generic("X-KMail-Identity");
         x_header->from7BitString(QByteArray::number(identity.uoid()));
         msg->setHeader(x_header);
     }

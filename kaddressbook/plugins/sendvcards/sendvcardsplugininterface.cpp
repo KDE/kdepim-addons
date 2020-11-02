@@ -58,7 +58,7 @@ PimCommon::GenericPluginInterface::RequireTypes SendVcardsPluginInterface::requi
 void SendVcardsPluginInterface::exec()
 {
     if (!mListItems.isEmpty()) {
-        KABSendVCards::SendVcardsJob *sendVcards = new KABSendVCards::SendVcardsJob(mListItems, this);
+        auto *sendVcards = new KABSendVCards::SendVcardsJob(mListItems, this);
         connect(sendVcards, &KABSendVCards::SendVcardsJob::sendVCardsError, this, &SendVcardsPluginInterface::slotSendVcardsError);
         if (!sendVcards->start()) {
             qCDebug(KADDRESSBOOK_SENDVCARDS_LOG) << "Impossible to send vcard";

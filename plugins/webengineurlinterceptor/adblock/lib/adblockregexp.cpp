@@ -47,7 +47,7 @@ void AdblockRegExp::setMinimal(bool minimal)
 
 int AdblockRegExp::indexIn(const QString &str, int offset) const
 {
-    AdblockRegExp *that = const_cast<AdblockRegExp *>(this);
+    auto *that = const_cast<AdblockRegExp *>(this);
     QRegularExpressionMatch m = match(str, offset);
 
     if (!m.hasMatch()) {

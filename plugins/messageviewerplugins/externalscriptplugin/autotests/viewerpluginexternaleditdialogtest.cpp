@@ -26,10 +26,10 @@ void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalEditDialog dlg;
 
-    ViewerPluginExternalEditWidget *mEditWidget = dlg.findChild<ViewerPluginExternalEditWidget *>(QStringLiteral("editwidget"));
+    auto *mEditWidget = dlg.findChild<ViewerPluginExternalEditWidget *>(QStringLiteral("editwidget"));
     QVERIFY(mEditWidget);
 
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 }
 

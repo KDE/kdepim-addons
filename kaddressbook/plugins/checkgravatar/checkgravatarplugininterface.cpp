@@ -101,7 +101,7 @@ void CheckGravatarPluginInterface::exec()
                         address.setPhoto(picture);
                         item.setPayload<KContacts::Addressee>(address);
 
-                        Akonadi::ItemModifyJob *modifyJob = new Akonadi::ItemModifyJob(item, this);
+                        auto *modifyJob = new Akonadi::ItemModifyJob(item, this);
                         connect(modifyJob, &Akonadi::ItemModifyJob::result, this, &CheckGravatarPluginInterface::slotModifyContactFinished);
                     }
                 }

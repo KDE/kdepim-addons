@@ -19,9 +19,9 @@ DKIMKeyRecordWidgetTest::DKIMKeyRecordWidgetTest(QObject *parent)
 void DKIMKeyRecordWidgetTest::shouldHaveDefaultValues()
 {
     DKIMKeyRecordWidget w;
-    QHBoxLayout *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    auto *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    MessageViewer::DKIMManagerKeyWidget *mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
+    auto *mManagerKeyWidget = w.findChild<MessageViewer::DKIMManagerKeyWidget *>(QStringLiteral("mManagerKeyWidget"));
     QVERIFY(mManagerKeyWidget);
 }

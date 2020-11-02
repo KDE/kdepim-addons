@@ -22,9 +22,9 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    AdBlock::AdBlockSettingWidget *w = new AdBlock::AdBlockSettingWidget;
+    auto *w = new AdBlock::AdBlockSettingWidget;
     QDialog dlg;
-    QVBoxLayout *layout = new QVBoxLayout;
+    auto *layout = new QVBoxLayout;
     dlg.setLayout(layout);
     layout->addWidget(w);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);

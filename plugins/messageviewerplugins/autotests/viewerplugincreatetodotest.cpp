@@ -19,7 +19,7 @@ extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
 ViewerPluginCreateTodoTest::ViewerPluginCreateTodoTest(QObject *parent)
     : QObject(parent)
 {
-    QStandardItemModel *model = new QStandardItemModel;
+    auto *model = new QStandardItemModel;
     MessageViewer::_k_todoEditStubModel = model;
 }
 
@@ -45,7 +45,7 @@ void ViewerPluginCreateTodoTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     interface->execute();
-    QWidget *createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
+    auto *createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
     QVERIFY(createtodowidget);
     QCOMPARE(createtodowidget->isHidden(), false);
 }

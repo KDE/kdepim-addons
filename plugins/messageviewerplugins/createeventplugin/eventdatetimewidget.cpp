@@ -15,7 +15,7 @@ using namespace MessageViewer;
 EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    auto *mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins({});
     mDateEdit = new KDateComboBox;

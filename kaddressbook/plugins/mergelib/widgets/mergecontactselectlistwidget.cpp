@@ -18,7 +18,7 @@ MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     : QWidget(parent)
     , mConflictType(MergeContacts::None)
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout(this);
     mTitle = new QLabel(this);
     mTitle->setObjectName(QStringLiteral("title"));
     vbox->addWidget(mTitle);
@@ -117,13 +117,13 @@ void MergeContactSelectListWidget::updateTitle()
 void MergeContactSelectListWidget::addItem(const QString &str, const QIcon &icon)
 {
     if (str.isEmpty()) {
-        QListWidgetItem *item = new QListWidgetItem(mSelectListWidget);
+        auto *item = new QListWidgetItem(mSelectListWidget);
         item->setFlags(Qt::NoItemFlags);
         item->setText(i18n("(Undefined)"));
         mSelectListWidget->addItem(item);
     } else {
         if (!icon.isNull()) {
-            QListWidgetItem *item = new QListWidgetItem(mSelectListWidget);
+            auto *item = new QListWidgetItem(mSelectListWidget);
             item->setText(str);
             item->setIcon(icon);
             mSelectListWidget->addItem(item);

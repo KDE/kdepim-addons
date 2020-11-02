@@ -20,7 +20,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWidget *parent)
     : MessageViewer::MessageViewerConfigureSettingsPluginWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 

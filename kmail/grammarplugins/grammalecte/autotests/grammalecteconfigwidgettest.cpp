@@ -26,43 +26,43 @@ GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
 void GrammalecteConfigWidgetTest::shouldHaveDefaultValue()
 {
     GrammalecteConfigWidget w(nullptr, true);
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QTabWidget *mTab = w.findChild<QTabWidget *>(QStringLiteral("mTab"));
+    auto *mTab = w.findChild<QTabWidget *>(QStringLiteral("mTab"));
     QVERIFY(mTab);
 
-    QWidget *generalWidget = mTab->findChild<QWidget *>(QStringLiteral("general"));
+    auto *generalWidget = mTab->findChild<QWidget *>(QStringLiteral("general"));
     QVERIFY(generalWidget);
-    QFormLayout *lay = generalWidget->findChild<QFormLayout *>(QStringLiteral("generallayout"));
+    auto *lay = generalWidget->findChild<QFormLayout *>(QStringLiteral("generallayout"));
     QVERIFY(lay);
 
-    KUrlRequester *mPythonPath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("pythonpath"));
+    auto *mPythonPath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("pythonpath"));
     QVERIFY(mPythonPath);
     QVERIFY(!mPythonPath->text().isEmpty());
 
-    KUrlRequester *mGrammalectePath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("grammalectepath"));
+    auto *mGrammalectePath = generalWidget->findChild<KUrlRequester *>(QStringLiteral("grammalectepath"));
     QVERIFY(mGrammalectePath);
     QVERIFY(mGrammalectePath->text().isEmpty());
 
-    QStackedWidget *mStackedWidget = mTab->findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    auto *mStackedWidget = mTab->findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);
-    QScrollArea *mScrollArea = mStackedWidget->findChild<QScrollArea *>(QStringLiteral("scrollarea"));
+    auto *mScrollArea = mStackedWidget->findChild<QScrollArea *>(QStringLiteral("scrollarea"));
     QVERIFY(mScrollArea);
     QVERIFY(mScrollArea->widget());
     QCOMPARE(mScrollArea->widget()->objectName(), QStringLiteral("grammar"));
 
-    QWidget *mReloadSettingsWidget = mStackedWidget->findChild<QWidget *>(QStringLiteral("reloadwidget"));
+    auto *mReloadSettingsWidget = mStackedWidget->findChild<QWidget *>(QStringLiteral("reloadwidget"));
     QVERIFY(mReloadSettingsWidget);
 
-    QVBoxLayout *reloadSettingsLayout = mReloadSettingsWidget->findChild<QVBoxLayout *>(QStringLiteral("reloadSettingsLayout"));
+    auto *reloadSettingsLayout = mReloadSettingsWidget->findChild<QVBoxLayout *>(QStringLiteral("reloadSettingsLayout"));
     QVERIFY(reloadSettingsLayout);
 
-    QLabel *label = mReloadSettingsWidget->findChild<QLabel *>(QStringLiteral("label"));
+    auto *label = mReloadSettingsWidget->findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
-    QToolButton *buttonReloadSettings = mReloadSettingsWidget->findChild<QToolButton *>(QStringLiteral("buttonReloadSettings"));
+    auto *buttonReloadSettings = mReloadSettingsWidget->findChild<QToolButton *>(QStringLiteral("buttonReloadSettings"));
     QVERIFY(buttonReloadSettings);
     QVERIFY(!buttonReloadSettings->icon().isNull());
 }

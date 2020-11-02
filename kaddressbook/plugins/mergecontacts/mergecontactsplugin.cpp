@@ -22,7 +22,7 @@ MergeContactsPlugin::~MergeContactsPlugin()
 
 PimCommon::GenericPluginInterface *MergeContactsPlugin::createInterface(QObject *parent)
 {
-    MergeContactsPluginInterface *interface = new MergeContactsPluginInterface(parent);
+    auto *interface = new MergeContactsPluginInterface(parent);
     return interface;
 }
 

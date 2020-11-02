@@ -14,7 +14,7 @@
 SelectMailWidget::SelectMailWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *layout = new QHBoxLayout(this);
+    auto *layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
     layout->setContentsMargins({});
 

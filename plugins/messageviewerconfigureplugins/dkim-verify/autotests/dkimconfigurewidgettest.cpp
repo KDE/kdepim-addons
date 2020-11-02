@@ -20,10 +20,10 @@ DKIMConfigureWidgetTest::DKIMConfigureWidgetTest(QObject *parent)
 void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
 {
     DKIMConfigureWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    DKIMConfigureTab *mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
+    auto *mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }

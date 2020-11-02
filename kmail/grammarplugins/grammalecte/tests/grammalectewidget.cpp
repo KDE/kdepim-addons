@@ -19,7 +19,7 @@
 GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
@@ -56,7 +56,7 @@ void GrammalecteWidget::slotReplaceText(const MessageComposer::PluginGrammarActi
 
 void GrammalecteWidget::slotGetSettings()
 {
-    GrammalecteGenerateConfigOptionJob *job = new GrammalecteGenerateConfigOptionJob(this);
+    auto *job = new GrammalecteGenerateConfigOptionJob(this);
     job->setPythonPath(QStringLiteral("/usr/bin/python3"));
     job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
     connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteWidget::slotGetSettingsFinished);
@@ -69,7 +69,7 @@ void GrammalecteWidget::slotGetSettingsFinished(const QVector<GrammalecteGenerat
 
 void GrammalecteWidget::slotCheckGrammar()
 {
-    GrammalecteResultJob *job = new GrammalecteResultJob(this);
+    auto *job = new GrammalecteResultJob(this);
     job->setPythonPath(QStringLiteral("/usr/bin/python3"));
     job->setGrammarlecteCliPath(QStringLiteral("/compile/kde5/framework/kde/pim/grammalecte/grammalecte-cli.py"));
     job->setText(mInput->toPlainText());

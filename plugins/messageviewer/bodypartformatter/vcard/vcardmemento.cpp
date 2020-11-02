@@ -26,14 +26,14 @@ VcardMemento::~VcardMemento()
 
 void VcardMemento::checkEmail()
 {
-    Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob();
+    auto *searchJob = new Akonadi::ContactSearchJob();
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, mVCardList.at(mIndex).email.toLower());
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, &VcardMemento::slotSearchJobFinished);
 }
 
 void VcardMemento::slotSearchJobFinished(KJob *job)
 {
-    Akonadi::ContactSearchJob *searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
+    auto *searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->error()) {
         qCWarning(VCARD_LOG) << "Unable to fetch contact:" << searchJob->errorText();
         mIndex++;

@@ -20,7 +20,7 @@ WindowsContactImportExportPlugin::~WindowsContactImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *WindowsContactImportExportPlugin::createInterface(QObject *parent)
 {
-    WindowsContactImportExportPluginInterface *interface = new WindowsContactImportExportPluginInterface(parent);
+    auto *interface = new WindowsContactImportExportPluginInterface(parent);
     return interface;
 }
 

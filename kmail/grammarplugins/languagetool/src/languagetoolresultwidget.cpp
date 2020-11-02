@@ -34,7 +34,7 @@ LanguageToolResultWidget::~LanguageToolResultWidget()
 
 void LanguageToolResultWidget::checkGrammar()
 {
-    LanguageToolResultJob *job = new LanguageToolResultJob(this);
+    auto *job = new LanguageToolResultJob(this);
     job->setUrl(LanguageToolManager::self()->languageToolCheckPath());
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     job->setText(mResult->toPlainText());
@@ -59,7 +59,7 @@ void LanguageToolResultWidget::slotError(const QString &str)
 
 void LanguageToolResultWidget::addExtraWidget()
 {
-    QHBoxLayout *extraWidgetLayout = new QHBoxLayout;
+    auto *extraWidgetLayout = new QHBoxLayout;
     extraWidgetLayout->setObjectName(QStringLiteral("extraWidgetLayout"));
     extraWidgetLayout->setContentsMargins({});
     mLanguageToolComboBox = new LanguageToolComboBox(this);

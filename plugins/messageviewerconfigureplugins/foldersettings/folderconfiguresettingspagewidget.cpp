@@ -19,11 +19,11 @@
 FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    QTabWidget *tab = new QTabWidget(this);
+    auto *tab = new QTabWidget(this);
     tab->setObjectName(QStringLiteral("tab"));
     mainLayout->addWidget(tab);
 
@@ -62,7 +62,7 @@ void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &co
             mCollectionExpiryWidget->save(col);
             mFolderConfigureSettingsViewWidget->save(col);
             mCollectionTemplateWidget->save(col);
-            FolderConfigureModifyCollectionJob *job = new FolderConfigureModifyCollectionJob();
+            auto *job = new FolderConfigureModifyCollectionJob();
             job->setCollection(col);
             job->start();
         }

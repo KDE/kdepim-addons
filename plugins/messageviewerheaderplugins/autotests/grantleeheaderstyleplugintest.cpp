@@ -74,8 +74,8 @@ void GrantleeHeaderStylePluginTest::shouldHaveDefaultValue()
 void GrantleeHeaderStylePluginTest::shouldCreateInterface()
 {
     MessageViewer::GrantleeHeaderStylePlugin plugin;
-    KActionMenu *menu = new KActionMenu(this);
-    QActionGroup *act = new QActionGroup(this);
+    auto *menu = new KActionMenu(this);
+    auto *act = new QActionGroup(this);
 
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
@@ -99,8 +99,8 @@ void GrantleeHeaderStylePluginTest::testThemeActivation()
     QFETCH(QString, themeName);
 
     MessageViewer::GrantleeHeaderStylePlugin plugin;
-    KActionMenu *menu = new KActionMenu(this);
-    QActionGroup *act = new QActionGroup(this);
+    auto *menu = new KActionMenu(this);
+    auto *act = new QActionGroup(this);
 
     MessageViewer::GrantleeHeaderStyleInterface *interface = static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
     QVERIFY(interface);
@@ -148,8 +148,8 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
     auto *style = plugin.headerStyle();
     MimeTreeParser::NodeHelper nodeHelper;
     style->setNodeHelper(&nodeHelper);
-    KActionMenu *menu = new KActionMenu(this);
-    QActionGroup *act = new QActionGroup(this);
+    auto *menu = new KActionMenu(this);
+    auto *act = new QActionGroup(this);
 
     MessageViewer::GrantleeHeaderStyleInterface *interface = static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
     QVERIFY(interface);

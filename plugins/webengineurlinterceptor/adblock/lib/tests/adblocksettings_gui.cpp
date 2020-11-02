@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addVersionOption();
     parser.addHelpOption();
     parser.process(app);
-    AdBlock::AdBlockSettingWidget *w = new AdBlock::AdBlockSettingWidget;
+    auto *w = new AdBlock::AdBlockSettingWidget;
     w->show();
     return app.exec();
 }

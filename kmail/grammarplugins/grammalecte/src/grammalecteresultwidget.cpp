@@ -22,7 +22,7 @@ GrammalecteResultWidget::~GrammalecteResultWidget()
 
 void GrammalecteResultWidget::checkGrammar()
 {
-    GrammalecteResultJob *job = new GrammalecteResultJob(this);
+    auto *job = new GrammalecteResultJob(this);
     job->setPythonPath(GrammalecteManager::self()->pythonPath());
     job->setGrammarlecteCliPath(GrammalecteManager::self()->grammalectePath());
     job->setArguments(GrammalecteManager::self()->options());

@@ -15,13 +15,13 @@
 AdBlockAutomaticRulesListWidgetTest::AdBlockAutomaticRulesListWidgetTest(const QString &fileName, QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *lay = new QVBoxLayout(this);
+    auto *lay = new QVBoxLayout(this);
     QFile localFile(fileName);
     QString adblockList;
     if (localFile.open(QIODevice::ReadOnly | QIODevice::Text)) {
         adblockList = QString::fromLatin1(localFile.readAll());
     }
-    AdBlock::AdBlockAutomaticRulesListWidget *list = new AdBlock::AdBlockAutomaticRulesListWidget(this);
+    auto *list = new AdBlock::AdBlockAutomaticRulesListWidget(this);
     list->setRules(adblockList);
     lay->addWidget(list);
 }
@@ -51,7 +51,7 @@ int main(int argc, char **argv)
         return 0;
     }
 
-    AdBlockAutomaticRulesListWidgetTest *w = new AdBlockAutomaticRulesListWidgetTest(fileName);
+    auto *w = new AdBlockAutomaticRulesListWidgetTest(fileName);
 
     w->resize(800, 600);
     w->show();

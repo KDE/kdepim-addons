@@ -19,7 +19,7 @@ ViewerPluginManagerTest::~ViewerPluginManagerTest()
 
 void ViewerPluginManagerTest::shouldHaveDefaultValue()
 {
-    MessageViewer::ViewerPluginManager *manager = new MessageViewer::ViewerPluginManager(this);
+    auto *manager = new MessageViewer::ViewerPluginManager(this);
     manager->setPluginName(QStringLiteral("messageviewer"));
     manager->setPluginDirectory(QStringLiteral("messageviewer/viewerplugin"));
     QVERIFY(manager->initializePluginList());

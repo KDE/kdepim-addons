@@ -21,7 +21,7 @@ InsertSpecialCharacterPluginEditor::~InsertSpecialCharacterPluginEditor()
 
 MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::createInterface(QObject *parent)
 {
-    InsertSpecialCharacterPluginEditorInterface *interface = new InsertSpecialCharacterPluginEditorInterface(parent);
+    auto *interface = new InsertSpecialCharacterPluginEditorInterface(parent);
     return interface;
 }
 

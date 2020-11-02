@@ -23,7 +23,7 @@ void GrammalecteResultJob::start()
     if (canStart()) {
         mProcess = new QProcess(this);
 
-        QTemporaryFile *file = new QTemporaryFile(this);
+        auto *file = new QTemporaryFile(this);
         file->open();
         file->setPermissions(QFile::ReadUser);
         file->write(mText.toUtf8());

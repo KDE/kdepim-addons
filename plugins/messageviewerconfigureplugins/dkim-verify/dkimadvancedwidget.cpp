@@ -20,7 +20,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QFormLayout *mainLayout = new QFormLayout(this);
+    auto *mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mCheckDKIMWhenOnlyTesting = new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this);

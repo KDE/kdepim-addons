@@ -18,7 +18,7 @@ K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")
 SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
-    QHBoxLayout *layout = new QHBoxLayout(this);
+    auto *layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
     layout->setContentsMargins({});
     mLineEdit = new SelectImapLineEdit(this);

@@ -29,7 +29,7 @@ void SelectImapLoadFoldersJob::start()
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
-        KIMAP::LoginJob *login = new KIMAP::LoginJob(mSession);
+        auto *login = new KIMAP::LoginJob(mSession);
         login->setUserName(mSieveImapAccount.userName());
         login->setPassword(mSieveImapAccount.password());
         login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(mSieveImapAccount.authenticationType()));
@@ -78,7 +78,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
         return;
     }
 
-    KIMAP::ListJob *list = new KIMAP::ListJob(mSession);
+    auto *list = new KIMAP::ListJob(mSession);
     list->setOption(KIMAP::ListJob::IncludeUnsubscribed);
     connect(list, &KIMAP::ListJob::mailBoxesReceived, this, &SelectImapLoadFoldersJob::slotMailBoxesReceived);
     connect(list, &KIMAP::ListJob::result, this, &SelectImapLoadFoldersJob::slotFullListingDone);
@@ -108,7 +108,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
 
                 QStandardItem *parentItem = mItemsMap[parentPath];
 
-                QStandardItem *item = new QStandardItem(pathPart);
+                auto *item = new QStandardItem(pathPart);
                 Qt::ItemFlags flags = Qt::ItemIsEnabled;
                 if (isSelectable) {
                     flags |= Qt::ItemIsSelectable;
@@ -118,7 +118,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
             } else {
-                QStandardItem *item = new QStandardItem(pathPart);
+                auto *item = new QStandardItem(pathPart);
                 Qt::ItemFlags flags = Qt::ItemIsEnabled;
                 if (isSelectable) {
                     flags |= Qt::ItemIsSelectable;

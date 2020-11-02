@@ -20,7 +20,7 @@ void ExternalComposerConfigureDialogTest::shouldHaveDefaultValues()
 {
     ExternalComposerConfigureDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    ExternalComposerConfigureWidget *w = dlg.findChild<ExternalComposerConfigureWidget *>(QStringLiteral("configurewidget"));
+    auto *w = dlg.findChild<ExternalComposerConfigureWidget *>(QStringLiteral("configurewidget"));
     QVERIFY(w);
 }
 

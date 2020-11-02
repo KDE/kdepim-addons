@@ -22,7 +22,7 @@ QuickTextPluginEditor::~QuickTextPluginEditor()
 
 MessageComposer::PluginEditorInterface *QuickTextPluginEditor::createInterface(QObject *parent)
 {
-    QuickTextPluginEditorInterface *interface = new QuickTextPluginEditorInterface(parent);
+    auto *interface = new QuickTextPluginEditorInterface(parent);
     connect(this, &QuickTextPluginEditor::configChanged, interface, &QuickTextPluginEditorInterface::reloadConfig);
     return interface;
 }

@@ -89,7 +89,7 @@ void MailSenderJob::fetchNextItem()
 
 void MailSenderJob::fetchItem(const Akonadi::Item &item)
 {
-    Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(item, this);
+    auto *job = new Akonadi::ItemFetchJob(item, this);
     job->fetchScope().fetchFullPayload();
 
     connect(job, &Akonadi::ItemFetchJob::result, this, &MailSenderJob::slotFetchJobFinished);
@@ -103,7 +103,7 @@ void MailSenderJob::slotFetchJobFinished(KJob *job)
         return;
     }
 
-    Akonadi::ItemFetchJob *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
+    auto *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
 
     if (fetchJob->items().count() != 1) {
         fetchNextItem();

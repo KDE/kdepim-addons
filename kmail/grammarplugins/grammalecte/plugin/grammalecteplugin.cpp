@@ -26,7 +26,7 @@ GrammalectePlugin::~GrammalectePlugin()
 
 PimCommon::CustomToolsViewInterface *GrammalectePlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    GrammalecteInterface *view = new GrammalecteInterface(ac, parent);
+    auto *view = new GrammalecteInterface(ac, parent);
 
     connect(view, &GrammalecteInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
     connect(view, &GrammalecteInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);

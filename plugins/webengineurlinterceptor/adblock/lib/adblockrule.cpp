@@ -579,7 +579,7 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
         const QChar c = filter.at(i);
         switch (c.toLatin1()) {
         case '^':
-            parsed.append(QLatin1String("(?:[^\\w\\d\\-.%]|$)"));
+            parsed.append(QLatin1String(R"((?:[^\w\d\-.%]|$))"));
             break;
 
         case '*':
@@ -591,7 +591,7 @@ QString AdBlockRule::createRegExpFromFilter(const QString &filter) const
         case '|':
             if (i == 0) {
                 if (filterSize > 1 && filter.at(1) == QLatin1Char('|')) {
-                    parsed.append(QLatin1String("^[\\w\\-]+:\\/+(?!\\/)(?:[^\\/]+\\.)?"));
+                    parsed.append(QLatin1String(R"(^[\w\-]+:\/+(?!\/)(?:[^\/]+\.)?)"));
                     i++;
                 } else {
                     parsed.append(QLatin1Char('^'));

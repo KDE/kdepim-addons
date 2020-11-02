@@ -34,7 +34,7 @@ void MergeContactWidgetList::fillListContact(const Akonadi::Item::List &items)
     clear();
     for (const Akonadi::Item &item : items) {
         if (item.hasPayload<KContacts::Addressee>()) {
-            MergeContactWidgetListItem *widgetItem = new MergeContactWidgetListItem(item, this);
+            auto *widgetItem = new MergeContactWidgetListItem(item, this);
             KContacts::Addressee address = item.payload<KContacts::Addressee>();
 
             widgetItem->setText(itemName(address));

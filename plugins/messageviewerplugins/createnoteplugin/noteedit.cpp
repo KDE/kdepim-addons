@@ -33,11 +33,11 @@ using namespace MessageViewer;
 NoteEdit::NoteEdit(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    auto *vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);
     vbox->setSpacing(2);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto *hbox = new QHBoxLayout;
     hbox->setContentsMargins({});
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
@@ -91,7 +91,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &NoteEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    QPushButton *btn = new QPushButton(this);
+    auto *btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
     btn->setObjectName(QStringLiteral("close-button"));
 #ifndef QT_NO_ACCESSIBILITY
@@ -215,7 +215,7 @@ bool NoteEdit::eventFilter(QObject *object, QEvent *e)
     // With a shortcut override we can catch this before it gets to kactions.
     const bool shortCutOverride = (e->type() == QEvent::ShortcutOverride);
     if (shortCutOverride) {
-        QKeyEvent *kev = static_cast<QKeyEvent * >(e);
+        auto *kev = static_cast<QKeyEvent * >(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();

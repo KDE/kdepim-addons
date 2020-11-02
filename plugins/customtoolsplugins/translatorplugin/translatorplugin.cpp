@@ -22,7 +22,7 @@ TranslatorPlugin::~TranslatorPlugin()
 
 PimCommon::CustomToolsViewInterface *TranslatorPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    TranslatorView *view = new TranslatorView(ac, parent);
+    auto *view = new TranslatorView(ac, parent);
 
     connect(view, &TranslatorView::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
     connect(view, &TranslatorView::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);

@@ -22,9 +22,9 @@ void InsertShorturlConfigureDialogTest::shouldHaveDefaultValues()
 {
     InsertShorturlConfigureDialog dlg;
 
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    InsertShorturlConfigureWidget *mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(QStringLiteral("insertshorturlwidget"));
+    auto *mInsertShortUrlWidget = dlg.findChild<InsertShorturlConfigureWidget *>(QStringLiteral("insertshorturlwidget"));
     QVERIFY(mInsertShortUrlWidget);
 }

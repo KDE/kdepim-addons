@@ -32,7 +32,7 @@ bool MergeContactSelectInformationTabWidget::tabBarVisible() const
 
 void MergeContactSelectInformationTabWidget::addNewWidget(const KABMergeContacts::MergeConflictResult &list, const Akonadi::Collection &col)
 {
-    KABMergeContacts::MergeContactSelectInformationScrollArea *area = new KABMergeContacts::MergeContactSelectInformationScrollArea;
+    auto *area = new KABMergeContacts::MergeContactSelectInformationScrollArea;
     area->setContacts(list.conflictInformation, list.list, col);
     addTab(area, i18n("Duplicate contact %1", count() + 1));
 }

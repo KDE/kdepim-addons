@@ -20,7 +20,7 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
     , mTransport(transport)
 {
     Q_ASSERT(transport);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mConfigWidget = new MailTransport::SendmailConfigWidget(transport, this);
     mConfigWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
     mainLayout->addWidget(mConfigWidget);

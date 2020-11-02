@@ -19,7 +19,7 @@ CSVImportExportPlugin::~CSVImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(QObject *parent)
 {
-    CSVImportExportPluginInterface *interface = new CSVImportExportPluginInterface(parent);
+    auto *interface = new CSVImportExportPluginInterface(parent);
     return interface;
 }
 

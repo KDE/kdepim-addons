@@ -17,7 +17,7 @@ SyncItipHandler::SyncItipHandler(const QString &receiver, const QString &iCal, c
 {
     Q_ASSERT(calendar);
     qCDebug(TEXT_CALENDAR_LOG) << "SyncItipHandler::SyncItipHandler: " << this;
-    Akonadi::ITIPHandler *handler = new Akonadi::ITIPHandler(this);
+    auto *handler = new Akonadi::ITIPHandler(this);
     QObject::connect(handler, &Akonadi::ITIPHandler::iTipMessageProcessed, this, &SyncItipHandler::onITipMessageProcessed, Qt::QueuedConnection);
 
     m_counterProposalEditorDelegate = new IncidenceEditorNG::GroupwareUiDelegate();

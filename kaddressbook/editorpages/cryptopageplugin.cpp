@@ -31,7 +31,7 @@ CryptoPagePlugin::CryptoPagePlugin()
 {
     KIconLoader::global()->addAppDir(QStringLiteral("libkleopatra"));
 
-    QGridLayout *topLayout = new QGridLayout(this);
+    auto *topLayout = new QGridLayout(this);
     topLayout->setColumnStretch(1, 1);
     topLayout->setRowStretch(4, 1);
 
@@ -41,7 +41,7 @@ CryptoPagePlugin::CryptoPagePlugin()
 
     uint msgFormat = 1;
     for (uint i = 0; i < NumberOfProtocols; ++i) {
-        Kleo::CryptoMessageFormat f = static_cast<Kleo::CryptoMessageFormat>(msgFormat);
+        auto f = static_cast<Kleo::CryptoMessageFormat>(msgFormat);
         mProtocolCB[ i ] = new QCheckBox(Kleo::cryptoMessageFormatToLabel(f), protGB);
         protGBLayout->addWidget(mProtocolCB[i]);
 
@@ -68,7 +68,7 @@ CryptoPagePlugin::CryptoPagePlugin()
 
     // Send preferences/sign (see kleo/kleo/enum.h)
     QWidget *hbox = new QWidget(box);
-    QHBoxLayout *hboxHBoxLayout = new QHBoxLayout(hbox);
+    auto *hboxHBoxLayout = new QHBoxLayout(hbox);
     hboxHBoxLayout->setContentsMargins({});
 
     l = new QLabel(i18n("Sign:"), hbox);
@@ -162,14 +162,14 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF"));
     }
 
-    const Kleo::SigningPreference signPref = static_cast<Kleo::SigningPreference>(mSignPref->currentIndex());
+    const auto signPref = static_cast<Kleo::SigningPreference>(mSignPref->currentIndex());
     if (signPref != Kleo::UnknownSigningPreference) {
         contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"), QLatin1String(Kleo::signingPreferenceToString(signPref)));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOSIGNPREF"));
     }
 
-    const Kleo::EncryptionPreference encryptPref = static_cast<Kleo::EncryptionPreference>(mCryptPref->currentIndex());
+    const auto encryptPref = static_cast<Kleo::EncryptionPreference>(mCryptPref->currentIndex());
     if (encryptPref != Kleo::UnknownPreference) {
         contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"), QLatin1String(Kleo::encryptionPreferenceToString(encryptPref)));
     } else {

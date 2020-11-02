@@ -15,7 +15,7 @@
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
@@ -55,7 +55,7 @@ void ConfirmAddressConfigureTab::initTab(KIdentityManagement::IdentityManager *i
 {
     KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
-        ConfirmAddressConfigureTabWidget *w = new ConfirmAddressConfigureTabWidget(this);
+        auto *w = new ConfirmAddressConfigureTabWidget(this);
         connect(w, &ConfirmAddressConfigureTabWidget::configureChanged, this, &ConfirmAddressConfigureTab::configureChanged);
         mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());

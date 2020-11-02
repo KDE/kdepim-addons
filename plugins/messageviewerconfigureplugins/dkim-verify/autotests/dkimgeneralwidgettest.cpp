@@ -19,23 +19,23 @@ DKIMGeneralWidgetTest::DKIMGeneralWidgetTest(QObject *parent)
 void DKIMGeneralWidgetTest::shouldHaveDefaultValues()
 {
     DKIMGeneralWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    QCheckBox *mEnableDkimSupport = w.findChild<QCheckBox *>(QStringLiteral("enableDkimSupport"));
+    auto *mEnableDkimSupport = w.findChild<QCheckBox *>(QStringLiteral("enableDkimSupport"));
     QVERIFY(mEnableDkimSupport);
     QVERIFY(!mEnableDkimSupport->text().isEmpty());
     QVERIFY(!mEnableDkimSupport->isChecked());
 
-    QCheckBox *mSaveResult = w.findChild<QCheckBox *>(QStringLiteral("mSaveResult"));
+    auto *mSaveResult = w.findChild<QCheckBox *>(QStringLiteral("mSaveResult"));
     QVERIFY(mSaveResult);
     QVERIFY(!mSaveResult->text().isEmpty());
     QVERIFY(!mSaveResult->isChecked());
 
-    QComboBox *mSaveKey = w.findChild<QComboBox *>(QStringLiteral("mSaveKey"));
+    auto *mSaveKey = w.findChild<QComboBox *>(QStringLiteral("mSaveKey"));
     QVERIFY(mSaveKey);
 
-    QCheckBox *mUseOnlyAuthenticationResult = w.findChild<QCheckBox *>(QStringLiteral("mUseOnlyAuthenticationResult"));
+    auto *mUseOnlyAuthenticationResult = w.findChild<QCheckBox *>(QStringLiteral("mUseOnlyAuthenticationResult"));
     QVERIFY(mUseOnlyAuthenticationResult);
     QVERIFY(!mUseOnlyAuthenticationResult->text().isEmpty());
     QVERIFY(!mUseOnlyAuthenticationResult->isChecked());

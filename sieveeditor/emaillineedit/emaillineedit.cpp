@@ -25,7 +25,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     , mLineEdit(new QLineEdit(this))
     , mEmailButton(new QToolButton(this))
 {
-    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    auto *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 

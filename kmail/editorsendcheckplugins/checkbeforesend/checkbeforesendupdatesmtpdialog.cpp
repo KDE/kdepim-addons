@@ -15,7 +15,7 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Check SMTP server"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     QLabel *lab = new QLabel(i18n("Do you want to send the email with a different SMTP than the one defined in the current identity?"), this);

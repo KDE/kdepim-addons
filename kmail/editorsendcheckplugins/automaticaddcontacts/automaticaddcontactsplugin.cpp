@@ -24,7 +24,7 @@ AutomaticAddContactsPlugin::~AutomaticAddContactsPlugin()
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *AutomaticAddContactsPlugin::createInterface(QObject *parent)
 {
-    AutomaticAddContactsInterface *interface = new AutomaticAddContactsInterface(parent);
+    auto *interface = new AutomaticAddContactsInterface(parent);
     connect(this, &AutomaticAddContactsPlugin::configChanged, interface, &AutomaticAddContactsInterface::reloadConfig);
     return interface;
 }

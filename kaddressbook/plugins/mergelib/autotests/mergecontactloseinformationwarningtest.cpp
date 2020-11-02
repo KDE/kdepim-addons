@@ -21,9 +21,9 @@ void MergeContactLoseInformationWarningTest::shouldHaveDefaultValue()
     KABMergeContacts::MergeContactLoseInformationWarning w;
     QVERIFY(!w.isCloseButtonVisible());
     QVERIFY(!w.isVisible());
-    QAction *customize = w.findChild<QAction *>(QStringLiteral("customize"));
+    auto *customize = w.findChild<QAction *>(QStringLiteral("customize"));
     QVERIFY(customize);
-    QAction *automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
+    auto *automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
     QVERIFY(automatic);
 }
 
@@ -33,8 +33,8 @@ void MergeContactLoseInformationWarningTest::shouldEmitSignals()
     w.show();
     QVERIFY(QTest::qWaitForWindowExposed(&w));
     QVERIFY(w.isVisible());
-    QAction *customize = w.findChild<QAction *>(QStringLiteral("customize"));
-    QAction *automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
+    auto *customize = w.findChild<QAction *>(QStringLiteral("customize"));
+    auto *automatic = w.findChild<QAction *>(QStringLiteral("automatic"));
     QSignalSpy spy1(&w, &KABMergeContacts::MergeContactLoseInformationWarning::continueMerging);
     QSignalSpy spy2(&w, &KABMergeContacts::MergeContactLoseInformationWarning::customizeMergingContacts);
     customize->trigger();

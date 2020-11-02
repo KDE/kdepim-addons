@@ -21,7 +21,7 @@ SendVcardsPlugin::~SendVcardsPlugin()
 
 PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(QObject *parent)
 {
-    SendVcardsPluginInterface *interface = new SendVcardsPluginInterface(parent);
+    auto *interface = new SendVcardsPluginInterface(parent);
     return interface;
 }
 

@@ -91,7 +91,7 @@ void ViewerPluginCreatenoteInterface::slotNoteItemFetched(KJob *job)
         qCDebug(CREATENOTEPLUGIN_LOG) << "There is not valid note:" << job->errorString();
         showCreateNewNoteWidget();
     } else {
-        Akonadi::ItemFetchJob *fetch = qobject_cast<Akonadi::ItemFetchJob *>(job);
+        auto *fetch = qobject_cast<Akonadi::ItemFetchJob *>(job);
         Q_ASSERT(fetch);
         if (fetch->items().isEmpty() || !fetch->items().constFirst().hasPayload<KMime::Message::Ptr>()) {
             showCreateNewNoteWidget();
@@ -144,14 +144,14 @@ void ViewerPluginCreatenoteInterface::createAction(KActionCollection *ac)
 
 void ViewerPluginCreatenoteInterface::slotCreateNote(const KMime::Message::Ptr &notePtr, const Akonadi::Collection &collection)
 {
-    CreateNoteJob *createJob = new CreateNoteJob(notePtr, collection, mMessageItem, this);
+    auto *createJob = new CreateNoteJob(notePtr, collection, mMessageItem, this);
     createJob->start();
 }
 
 NoteEdit *ViewerPluginCreatenoteInterface::widget()
 {
     if (!mNoteEdit) {
-        QWidget *parentWidget = static_cast<QWidget *>(parent());
+        auto *parentWidget = static_cast<QWidget *>(parent());
         mNoteEdit = new NoteEdit(parentWidget);
         connect(mNoteEdit, &NoteEdit::createNote, this, &ViewerPluginCreatenoteInterface::slotCreateNote);
         mNoteEdit->setObjectName(QStringLiteral("noteedit"));

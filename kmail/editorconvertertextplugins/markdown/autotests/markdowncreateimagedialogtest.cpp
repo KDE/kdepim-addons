@@ -23,12 +23,12 @@ void MarkdownCreateImageDialogTest::shouldHaveDefaultValue()
 {
     MarkdownCreateImageDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    QVBoxLayout *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    MarkdownCreateImageWidget *mMarkdownCreateImageWidget = dlg.findChild<MarkdownCreateImageWidget *>(QStringLiteral("markdowncreateimagewidget"));
+    auto *mMarkdownCreateImageWidget = dlg.findChild<MarkdownCreateImageWidget *>(QStringLiteral("markdowncreateimagewidget"));
     QVERIFY(mMarkdownCreateImageWidget);
-    QDialogButtonBox *box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto *box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
 

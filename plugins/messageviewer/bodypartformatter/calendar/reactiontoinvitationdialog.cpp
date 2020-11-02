@@ -18,7 +18,7 @@
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)
 {
-    QVBoxLayout *layout = new QVBoxLayout(this);
+    auto *layout = new QVBoxLayout(this);
     layout->setObjectName(QStringLiteral("layout"));
 
     QLabel *label = new QLabel(i18n("Comment:"), this);

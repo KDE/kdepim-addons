@@ -23,40 +23,40 @@ DKIMPolicyWidgetTest::~DKIMPolicyWidgetTest()
 void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
 {
     DKIMPolicyWidget w;
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
 
-    QCheckBox *mVerifyIfEmailMustBeSigned = w.findChild<QCheckBox *>(QStringLiteral("mVerifyIfEmailMustBeSigned"));
+    auto *mVerifyIfEmailMustBeSigned = w.findChild<QCheckBox *>(QStringLiteral("mVerifyIfEmailMustBeSigned"));
     QVERIFY(mVerifyIfEmailMustBeSigned);
     QVERIFY(!mVerifyIfEmailMustBeSigned->text().isEmpty());
     QVERIFY(mVerifyIfEmailMustBeSigned->isEnabled());
 
-    QCheckBox *mUseDMARC = w.findChild<QCheckBox *>(QStringLiteral("mUseDMARC"));
+    auto *mUseDMARC = w.findChild<QCheckBox *>(QStringLiteral("mUseDMARC"));
     QVERIFY(mUseDMARC);
     QVERIFY(!mUseDMARC->text().isEmpty());
     QVERIFY(!mUseDMARC->isEnabled());
 
-    QCheckBox *mUseDefaultRules = w.findChild<QCheckBox *>(QStringLiteral("mUseDefaultRules"));
+    auto *mUseDefaultRules = w.findChild<QCheckBox *>(QStringLiteral("mUseDefaultRules"));
     QVERIFY(mUseDefaultRules);
     QVERIFY(!mUseDefaultRules->text().isEmpty());
     QVERIFY(!mUseDefaultRules->isEnabled());
 
-    QPushButton *mRulesButton = w.findChild<QPushButton *>(QStringLiteral("rules"));
+    auto *mRulesButton = w.findChild<QPushButton *>(QStringLiteral("rules"));
     QVERIFY(mRulesButton);
     QVERIFY(!mRulesButton->isEnabled());
     QVERIFY(!mRulesButton->text().isEmpty());
 
-    QCheckBox *mAutoGenerateRule = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateRule"));
+    auto *mAutoGenerateRule = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateRule"));
     QVERIFY(mAutoGenerateRule);
     QVERIFY(!mAutoGenerateRule->text().isEmpty());
     QVERIFY(!mAutoGenerateRule->isEnabled());
 
-    QCheckBox *mReadAuthResultHeader = w.findChild<QCheckBox *>(QStringLiteral("mReadAuthResultHeader"));
+    auto *mReadAuthResultHeader = w.findChild<QCheckBox *>(QStringLiteral("mReadAuthResultHeader"));
     QVERIFY(mReadAuthResultHeader);
     QVERIFY(!mReadAuthResultHeader->text().isEmpty());
     QVERIFY(!mReadAuthResultHeader->isEnabled());
 
-    QCheckBox *mAutoGenerateOnlyIfSenderInSDID = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
+    auto *mAutoGenerateOnlyIfSenderInSDID = w.findChild<QCheckBox *>(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
     QVERIFY(mAutoGenerateOnlyIfSenderInSDID);
     QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->text().isEmpty());
     QVERIFY(!mAutoGenerateOnlyIfSenderInSDID->isEnabled());

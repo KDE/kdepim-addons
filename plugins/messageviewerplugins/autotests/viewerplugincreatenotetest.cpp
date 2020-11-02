@@ -19,7 +19,7 @@ extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_noteEditStubModel;
 ViewerPluginCreateNoteTest::ViewerPluginCreateNoteTest(QObject *parent)
     : QObject(parent)
 {
-    QStandardItemModel *model = new QStandardItemModel;
+    auto *model = new QStandardItemModel;
     MessageViewer::_k_noteEditStubModel = model;
 }
 
@@ -45,7 +45,7 @@ void ViewerPluginCreateNoteTest::shouldShowWidget()
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     interface->execute();
-    QWidget *createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
+    auto *createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
     QVERIFY(createnotewidget);
     QCOMPARE(createnotewidget->isHidden(), false);
 }

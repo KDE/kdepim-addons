@@ -31,7 +31,7 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
     , mUser1Button(nullptr)
 {
     setWindowTitle(i18nc("@title:window", "Show adblock list"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdBlockShowListDialog::reject);
     if (showDeleteBrokenList) {
@@ -42,7 +42,7 @@ AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget 
         mUser1Button->hide();
         connect(mUser1Button, &QPushButton::clicked, this, &AdBlockShowListDialog::slotDeleteBrokenList);
     }
-    QVBoxLayout *lay = new QVBoxLayout;
+    auto *lay = new QVBoxLayout;
     mainLayout->addLayout(lay);
 
     mTextEdit = new KPIMTextEdit::PlainTextEditorWidget;

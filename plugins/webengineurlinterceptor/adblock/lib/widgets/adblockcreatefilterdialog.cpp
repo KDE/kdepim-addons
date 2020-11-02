@@ -30,7 +30,7 @@ AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
     QWidget *w = new QWidget;
     mUi = new Ui::AdBlockCreateFilterWidget;
     mUi->setupUi(w);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->addWidget(w);
     mainLayout->addWidget(buttonBox);
     connect(mUi->filtercustom, &QLineEdit::textChanged, this, &AdBlockCreateFilterDialog::slotUpdateFilter);

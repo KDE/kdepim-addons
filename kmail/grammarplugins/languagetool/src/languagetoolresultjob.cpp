@@ -83,7 +83,7 @@ void LanguageToolResultJob::slotFinish(QNetworkReply *reply)
 
 void LanguageToolResultJob::slotCheckGrammarFinished()
 {
-    QNetworkReply *reply = qobject_cast<QNetworkReply *>(sender());
+    auto *reply = qobject_cast<QNetworkReply *>(sender());
     if (reply) {
         const QByteArray data = reply->readAll();
         Q_EMIT finished(QString::fromUtf8(data));

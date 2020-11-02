@@ -184,10 +184,10 @@ public:
 
             BodyPartMementos are documented in MessageViewer/ObjectTreeParser
         */
-        MemoryCalendarMemento *memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
+        auto *memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
 
         if (memento) {
-            KMime::Message *const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
+            auto *const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
             if (!message) {
                 qCWarning(TEXT_CALENDAR_LOG) << "The top-level content is not a message. Cannot handle the invitation then.";
                 return false;
@@ -216,7 +216,7 @@ public:
                 writer->write(html);
             }
         } else {
-            MemoryCalendarMemento *memento = new MemoryCalendarMemento();
+            auto *memento = new MemoryCalendarMemento();
             msgPart->setMemento(memento);
             QObject::connect(memento, &MemoryCalendarMemento::update,
                              nodeHelper, &MimeTreeParser::NodeHelper::update);
@@ -533,7 +533,7 @@ public:
             ct->setName(QStringLiteral("cal.ics"), "utf-8");
             ct->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
 
-            KMime::Headers::ContentDisposition *disposition = new KMime::Headers::ContentDisposition;
+            auto *disposition = new KMime::Headers::ContentDisposition;
             disposition->setDisposition(KMime::Headers::CDinline);
             msg->setHeader(disposition);
             msg->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
@@ -550,8 +550,8 @@ public:
             ct->setCategory(KMime::Headers::CCcontainer);
 
             // Set the first multipart, the body message.
-            KMime::Content *bodyMessage = new KMime::Content;
-            KMime::Headers::ContentDisposition *bodyDisposition = new KMime::Headers::ContentDisposition;
+            auto *bodyMessage = new KMime::Content;
+            auto *bodyDisposition = new KMime::Headers::ContentDisposition;
             bodyDisposition->setDisposition(KMime::Headers::CDinline);
             auto bodyMessageCt = bodyMessage->contentType();
             bodyMessageCt->setMimeType("text/plain");
@@ -563,8 +563,8 @@ public:
             msg->addContent(bodyMessage);
 
             // Set the second multipart, the attachment.
-            KMime::Content *attachMessage = new KMime::Content;
-            KMime::Headers::ContentDisposition *attachDisposition = new KMime::Headers::ContentDisposition;
+            auto *attachMessage = new KMime::Content;
+            auto *attachDisposition = new KMime::Headers::ContentDisposition;
             attachDisposition->setDisposition(KMime::Headers::CDattachment);
             auto attachCt = attachMessage->contentType();
             attachCt->setMimeType("text/calendar");
@@ -589,7 +589,7 @@ public:
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
 
         if (!nullIdentity) {
-            KMime::Headers::Generic *x_header = new KMime::Headers::Generic("X-KMail-Identity");
+            auto *x_header = new KMime::Headers::Generic("X-KMail-Identity");
             x_header->from7BitString(QByteArray::number(identity.uoid()));
             msg->setHeader(x_header);
         }
@@ -624,7 +624,7 @@ public:
         msg->assemble();
         MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(transportId);
 
-        MailTransport::MessageQueueJob *job = new MailTransport::MessageQueueJob;
+        auto *job = new MailTransport::MessageQueueJob;
 
         job->addressAttribute().setTo(QStringList() << KEmailAddress::extractEmailAddress(
                                           KEmailAddress::normalizeAddressesAndEncodeIdn(to)));
@@ -698,7 +698,7 @@ public:
 
     bool saveFile(const QString &receiver, const QString &iCal, const QString &type, MimeTreeParser::Interface::BodyPart *bodyPart) const
     {
-        MemoryCalendarMemento *memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
+        auto *memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
         // This will block. There's no way to make it async without refactoring the memento mechanism
 
         SyncItipHandler *itipHandler = new SyncItipHandler(receiver, iCal, type, memento->calendar());
@@ -1314,7 +1314,7 @@ public:
             iCal = part->content()->decodedText();
         }
 
-        QMenu *menu = new QMenu();
+        auto *menu = new QMenu();
         QAction *open
             = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
         QAction *saveas

@@ -24,27 +24,27 @@ ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest()
 void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureTabWidget w;
-    QGroupBox *groupBoxDomainName = w.findChild<QGroupBox *>(QStringLiteral("groupboxdomainname"));
+    auto *groupBoxDomainName = w.findChild<QGroupBox *>(QStringLiteral("groupboxdomainname"));
     QVERIFY(groupBoxDomainName);
-    QVBoxLayout *layoutDomainName = w.findChild<QVBoxLayout *>(QStringLiteral("layoutdomainname"));
+    auto *layoutDomainName = w.findChild<QVBoxLayout *>(QStringLiteral("layoutdomainname"));
     QVERIFY(layoutDomainName);
 
-    QRadioButton *mAcceptedDomain = w.findChild<QRadioButton *>(QStringLiteral("acceptdomainname"));
+    auto *mAcceptedDomain = w.findChild<QRadioButton *>(QStringLiteral("acceptdomainname"));
     QVERIFY(mAcceptedDomain);
     QVERIFY(!mAcceptedDomain->text().isEmpty());
 
-    QRadioButton *mRejectedDomain = w.findChild<QRadioButton *>(QStringLiteral("rejectdomainname"));
+    auto *mRejectedDomain = w.findChild<QRadioButton *>(QStringLiteral("rejectdomainname"));
     QVERIFY(mRejectedDomain);
     QVERIFY(!mRejectedDomain->text().isEmpty());
 
-    PimCommon::SimpleStringListEditor *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
+    auto *mDomainNameListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("domainnamelisteditor"));
     QVERIFY(mDomainNameListEditor);
 
-    QGroupBox *groupBoxWhiteList = w.findChild<QGroupBox *>(QStringLiteral("groupboxwhitelist"));
+    auto *groupBoxWhiteList = w.findChild<QGroupBox *>(QStringLiteral("groupboxwhitelist"));
     QVERIFY(groupBoxWhiteList);
-    QVBoxLayout *layoutWhiteList = w.findChild<QVBoxLayout *>(QStringLiteral("layoutwhitelist"));
+    auto *layoutWhiteList = w.findChild<QVBoxLayout *>(QStringLiteral("layoutwhitelist"));
     QVERIFY(layoutWhiteList);
-    PimCommon::SimpleStringListEditor *mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("whitelisteditor"));
+    auto *mWhiteListEditor = w.findChild<PimCommon::SimpleStringListEditor *>(QStringLiteral("whitelisteditor"));
     QVERIFY(mWhiteListEditor);
 }
 

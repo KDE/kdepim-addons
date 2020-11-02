@@ -16,7 +16,7 @@
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorInitConfigureWidget(parent)
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -25,7 +25,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     mExternalEditorCheck->setChecked(false);
     mainLayout->addWidget(mExternalEditorCheck);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto *hbox = new QHBoxLayout;
     QLabel *label = new QLabel(QStringLiteral("Specify editor:"), this);
     label->setObjectName(QStringLiteral("urlrequesterlabel"));
     hbox->addWidget(label);

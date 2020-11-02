@@ -50,7 +50,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
 
     const QString subjectDir = mHeaderStyleUtil.subjectDirectionString(message);
 
-    QString headerStr = QLatin1String("<div class=\"header\" dir=\"") + dir + QLatin1String("\">\n");
+    QString headerStr = QLatin1String(R"(<div class="header" dir=")") + dir + QLatin1String("\">\n");
 
     if (strategy->showHeader(QStringLiteral("subject"))) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;

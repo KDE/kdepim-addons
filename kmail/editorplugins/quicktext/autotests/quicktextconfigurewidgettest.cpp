@@ -20,10 +20,10 @@ void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
 {
     QuickTextConfigureWidget w;
 
-    QVBoxLayout *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QuickTextWidget *mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
+    auto *mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
     QVERIFY(mSnippetWidget);
 }

@@ -90,7 +90,7 @@ void AdblockManager::loadSubscriptions()
             continue;
         }
 
-        AdBlockSubscription *subscription = new AdBlockSubscription(title, this);
+        auto *subscription = new AdBlockSubscription(title, this);
         subscription->setUrl(url);
         subscription->setFilePath(absolutePath);
 
@@ -205,7 +205,7 @@ AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const
     file.write(data);
     file.commit();
 
-    AdBlockSubscription *subscription = new AdBlockSubscription(title, this);
+    auto *subscription = new AdBlockSubscription(title, this);
     subscription->setUrl(QUrl(url));
     subscription->setFilePath(filePath);
     subscription->loadSubscription(mDisabledRules);
@@ -238,7 +238,7 @@ bool AdblockManager::removeSubscription(AdBlockSubscription *subscription)
 
 void AdblockManager::addCustomRule(const QString &filter)
 {
-    AdBlockRule *rule = new AdBlockRule(filter, mCustomList);
+    auto *rule = new AdBlockRule(filter, mCustomList);
     mCustomList->addRule(rule);
     mCustomList->saveSubscription();
     updateMatcher();

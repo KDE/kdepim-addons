@@ -16,7 +16,7 @@ CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Check Attachment"));
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18n("Do you want to send some attachment?"), this);
     lab->setObjectName(QStringLiteral("lab"));

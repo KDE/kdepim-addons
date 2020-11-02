@@ -51,7 +51,7 @@ void UpdateContactJob::slotSearchDone(KJob *job)
     }
     Akonadi::Item item = searchJob->items().at(0);
     item.setPayload<KContacts::Addressee>(mContact);
-    Akonadi::ItemModifyJob *modifyJob = new Akonadi::ItemModifyJob(item);
+    auto *modifyJob = new Akonadi::ItemModifyJob(item);
     connect(modifyJob, &Akonadi::ItemModifyJob::result, this, &UpdateContactJob::slotUpdateContactDone);
 }
 
@@ -82,7 +82,7 @@ void UpdateContactJob::start()
         return;
     }
     // first check whether a contact with the same email exists already
-    Akonadi::ContactSearchJob *searchJob = new Akonadi::ContactSearchJob(this);
+    auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
     searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(),
                         Akonadi::ContactSearchJob::ExactMatch);

@@ -21,7 +21,7 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
     : QDialog(parent)
     , mExpireAccountTrashFolderConfig(new ExpireAccountTrashFolderConfigWidget(this))
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     setWindowTitle(i18nc("@title:window", "Configure Expiry Account Trash Folder"));
 
