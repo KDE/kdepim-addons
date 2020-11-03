@@ -2,6 +2,7 @@
 Name=Example fancy
 Name[ar]=مثال عن الخياليّة
 Name[ca]=Exemple elegant
+Name[ca@valencia]=Exemple elegant
 Name[da]=Eksempel på flot
 Name[de]=Dekoratives Beispiel
 Name[en_GB]=Example fancy
@@ -28,6 +29,7 @@ Name[zh_TW]=Example fancy
 Description=Create fancy theme with grantlee.
 Description[ar]=أنشئ سمة خياليّة بِ‍«غرانتلي».
 Description[ca]=Crea un tema elegant amb les Grantlee.
+Description[ca@valencia]=Crea un tema elegant amb les Grantlee.
 Description[da]=Opret flot tema med grantlee.
 Description[de]=Dekoratives mit Grantlee erstelltes Design
 Description[en_GB]=Create fancy theme with grantlee.
