@@ -40,7 +40,7 @@ public:
 QModelIndex QuicktextManager::Private::currentGroupIndex() const
 {
     if (mSelectionModel->selectedIndexes().isEmpty()) {
-        return QModelIndex();
+        return {};
     }
 
     const QModelIndex index = mSelectionModel->selectedIndexes().first();

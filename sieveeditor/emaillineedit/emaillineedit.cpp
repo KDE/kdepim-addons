@@ -83,7 +83,7 @@ void EmailLineEdit::slotSelectEmail()
     if (factory) {
         dlg.reset(factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(this));
     } else {
-        dlg.reset(new Akonadi::EmailAddressSelectionDialog(this));
+        dlg = std::make_unique<Akonadi::EmailAddressSelectionDialog>(this);
     }
     dlg->setWindowTitle(i18nc("@title:window", "Select Emails"));
     dlg->view()->view()->setSelectionMode(multiSelection() ? QAbstractItemView::MultiSelection : QAbstractItemView::SingleSelection);
