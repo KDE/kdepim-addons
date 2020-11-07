@@ -23,6 +23,9 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
                         ${CMAKE_CURRENT_BINARY_DIR}/..
     )
 endmacro()
-
-add_plasma_pimeventsplugin_test(eventdatavisitortest.cpp ../eventdatavisitor.cpp)
-add_plasma_pimeventsplugin_test(pimeventsplugintest.cpp "../eventmodel.cpp;../eventdatavisitor.cpp;../pimeventsplugin.cpp;../akonadipimdatasource.cpp;../settingschangenotifier.cpp")
+if (NOT WIN32)
+    add_plasma_pimeventsplugin_test(eventdatavisitortest.cpp ../eventdatavisitor.cpp)
+    add_plasma_pimeventsplugin_test(pimeventsplugintest.cpp "../eventmodel.cpp;../eventdatavisitor.cpp;../pimeventsplugin.cpp;../akonadipimdatasource.cpp;../settingschangenotifier.cpp")
+else()
+    MESSAGE(STATUS "Need to reactivate autotest on windows here")
+endif()
