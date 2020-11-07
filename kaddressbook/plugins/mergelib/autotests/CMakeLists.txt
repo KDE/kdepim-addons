@@ -40,7 +40,7 @@ if (KDEPIM_RUN_AKONADI_TEST)
 
 endif()
 
-set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactloseinformationwarningtest.cpp ../widgets/mergecontactloseinformationwarning.cpp ${kaddressbookmergelibprivate_common_SRCS})
+set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactloseinformationwarningtest.cpp ${kaddressbookmergelibprivate_common_SRCS})
 add_executable( mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
 add_test(NAME mergecontactloseinformationwarningtest COMMAND mergecontactloseinformationwarningtest)
 ecm_mark_as_test(mergecontactloseinformationwarningtest)
