@@ -12,5 +12,6 @@ macro(add_windowscontact_unittest _source _additional)
     ecm_mark_as_test(${_name})
     target_link_libraries( ${_name} Qt5::Widgets Qt5::Test KF5::I18n KF5::WidgetsAddons Qt5::Xml KF5::Contacts)
 endmacro ()
-
+if (NOT WIN32)
 add_windowscontact_unittest(importwindowcontacttest.cpp "../importwindowcontact.cpp")
+endif()
