@@ -1,2 +1,4 @@
 add_subdirectory(bodypartformatter)
-add_subdirectory(grantlee)
+if(TARGET KPim::Itinerary)
+    add_subdirectory(grantlee)
+endif()
