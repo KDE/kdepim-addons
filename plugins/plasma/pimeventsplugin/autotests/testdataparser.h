@@ -20,13 +20,13 @@ public:
     explicit TestDataParser(const QString &testData, bool uniqueEventData = false);
     ~TestDataParser();
 
-    QDate rangeStart() const;
-    QDate rangeEnd() const;
-    qint64 akonadiId() const;
-    KCalendarCore::Incidence::Ptr incidence() const;
-    QVector<CalendarEvents::EventData> eventData() const;
+    Q_REQUIRED_RESULT QDate rangeStart() const;
+    Q_REQUIRED_RESULT QDate rangeEnd() const;
+    Q_REQUIRED_RESULT qint64 akonadiId() const;
+    Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence() const;
+    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> eventData() const;
 
-    static QStringList allTestData();
+    static Q_REQUIRED_RESULT QStringList allTestData();
 
 private:
     void parse();

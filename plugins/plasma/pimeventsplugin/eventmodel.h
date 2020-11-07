@@ -23,7 +23,7 @@ public:
     explicit EventModel(QObject *parent = nullptr);
     ~EventModel();
 
-    QVector<Akonadi::Collection> collections() const;
+    Q_REQUIRED_RESULT QVector<Akonadi::Collection> collections() const;
 
     Akonadi::Collection collection(qint64 id) const;
 

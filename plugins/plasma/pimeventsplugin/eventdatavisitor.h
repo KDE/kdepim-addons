@@ -18,17 +18,17 @@ class BaseEventDataVisitor : public KCalendarCore::Visitor
 public:
     ~BaseEventDataVisitor();
 
-    bool act(const KCalendarCore::Incidence::Ptr &incidence);
-    bool act(const KCalendarCore::Event::List &events);
-    bool act(const KCalendarCore::Todo::List &todos);
+    Q_REQUIRED_RESULT bool act(const KCalendarCore::Incidence::Ptr &incidence);
+    Q_REQUIRED_RESULT bool act(const KCalendarCore::Event::List &events);
+    Q_REQUIRED_RESULT bool act(const KCalendarCore::Todo::List &todos);
 
 protected:
     BaseEventDataVisitor(PimDataSource *dataSource, QDate start, QDate end);
 
-    QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
-    bool isInRange(QDate start, QDate end) const;
+    Q_REQUIRED_RESULT QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
+    Q_REQUIRED_RESULT bool isInRange(QDate start, QDate end) const;
 
-    QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
+    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
 protected:
     PimDataSource *const mDataSource;
     const QDate mStart;

@@ -27,10 +27,10 @@ public:
     explicit TodoEdit(QWidget *parent = nullptr);
     ~TodoEdit() override;
 
-    Akonadi::Collection collection() const;
+    Q_REQUIRED_RESULT Akonadi::Collection collection() const;
     void setCollection(const Akonadi::Collection &value);
 
-    KMime::Message::Ptr message() const;
+    Q_REQUIRED_RESULT KMime::Message::Ptr message() const;
     void setMessage(const KMime::Message::Ptr &value);
 
     void writeConfig();
