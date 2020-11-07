@@ -2,7 +2,7 @@ set(messageviewer_adblock_test_common_SRCS)
 ecm_qt_declare_logging_category(messageviewer_adblock_test_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
 
 
-set( adblockpluginurlinterceptorconfigurewidgettest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptorconfigurewidgettest.cpp  ../widgets/adblockpluginurlinterceptorconfigurewidget.cpp)
+set( adblockpluginurlinterceptorconfigurewidgettest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptorconfigurewidgettest.cpp)
 add_executable( adblockpluginurlinterceptorconfigurewidgettest ${adblockpluginurlinterceptorconfigurewidgettest_SRCS})
 add_test(NAME adblockpluginurlinterceptorconfigurewidgettest COMMAND adblockpluginurlinterceptorconfigurewidgettest)
 ecm_mark_as_test(adblockpluginurlinterceptorconfigurewidgettest)
@@ -18,14 +18,14 @@ target_link_libraries( adblockblockableitemsdialogtest adblocklibprivate Qt5::Te
     KF5::PimCommon KF5::ItemViews Qt5::WebEngine Qt5::WebEngineWidgets KF5::ConfigCore KF5::KIOWidgets KF5::WebEngineViewer)
 
 
-set( adblockblockableitemsjobtest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockblockableitemsjobtest.cpp  ../adblockblockableitemsjob.cpp)
+set( adblockblockableitemsjobtest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockblockableitemsjobtest.cpp)
 add_executable( adblockblockableitemsjobtest ${adblockblockableitemsjobtest_SRCS})
 add_test(NAME adblockblockableitemsjobtest COMMAND adblockblockableitemsjobtest)
 ecm_mark_as_test(adblockblockableitemsjobtest)
 target_link_libraries( adblockblockableitemsjobtest adblocklibprivate Qt5::Test Qt5::WebEngine Qt5::WebEngineWidgets KF5::I18n KF5::WebEngineViewer)
 
 
-set( adblockresulttest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockresulttest.cpp  ../adblockblockableitemsjob.cpp)
+set( adblockresulttest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockresulttest.cpp )
 add_executable( adblockresulttest ${adblockresulttest_SRCS})
 add_test(NAME adblockresulttest COMMAND adblockresulttest)
 ecm_mark_as_test(adblockresulttest)
