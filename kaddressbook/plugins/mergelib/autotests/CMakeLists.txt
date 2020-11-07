@@ -35,7 +35,7 @@ if (KDEPIM_RUN_AKONADI_TEST)
 
     add_akonadi_isolated_test_advanced( mergecontactselectinformationtabwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
 
-    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactsdialog.cpp;../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n;KF5::WidgetsAddons")
+    add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n;KF5::WidgetsAddons")
     add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact")
 
 endif()
