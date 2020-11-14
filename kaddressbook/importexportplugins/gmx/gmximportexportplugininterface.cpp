@@ -163,7 +163,7 @@ static const QString dateString(const QDateTime &dt)
         return QStringLiteral("1000-01-01 00:00:00");
     }
     QString d(dt.toString(Qt::ISODate));
-    d[10] = ' '; // remove the "T" in the middle of the string
+    d[10] = QLatin1Char(' '); // remove the "T" in the middle of the string
     return d;
 }
 
