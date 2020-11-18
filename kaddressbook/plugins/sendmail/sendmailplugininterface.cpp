@@ -50,7 +50,7 @@ PimCommon::GenericPluginInterface::RequireTypes SendMailPluginInterface::require
 
 void SendMailPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {
-    Q_UNUSED(numberOfSelectedCollections);
+    Q_UNUSED(numberOfSelectedCollections)
     if (mAction) {
         mAction->setEnabled(numberOfSelectedItems > 0);
     }

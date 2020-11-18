@@ -343,8 +343,8 @@ void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KConta
 
     addr.insertKey(key);
 #else
-    Q_UNUSED(addr);
-    Q_UNUSED(type);
+    Q_UNUSED(addr)
+    Q_UNUSED(type)
 #endif
 }
 

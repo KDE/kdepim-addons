@@ -168,7 +168,7 @@ public:
 
     bool handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *bodyPart, const QString &path) const override
     {
-        Q_UNUSED(viewerInstance);
+        Q_UNUSED(viewerInstance)
         const QString vCard = bodyPart->content()->decodedText();
         if (vCard.isEmpty()) {
             return true;
@@ -249,7 +249,7 @@ public:
 
     bool openVCard(const KContacts::Addressee &a, const QString &vCard) const
     {
-        Q_UNUSED(vCard);
+        Q_UNUSED(vCard)
         auto *view = new Akonadi::ContactViewer(nullptr);
         view->setRawContact(a);
         view->setMinimumSize(300, 400);

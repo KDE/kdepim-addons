@@ -45,8 +45,8 @@ MarkdownEnginePage::~MarkdownEnginePage()
 
 bool MarkdownEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame)
 {
-    Q_UNUSED(type);
-    Q_UNUSED(isMainFrame);
+    Q_UNUSED(type)
+    Q_UNUSED(isMainFrame)
     if (url.scheme() == QLatin1String("data")) {
         return true;
     }

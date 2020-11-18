@@ -17,8 +17,8 @@
 
 QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
-    Q_UNUSED(arg);
-    Q_UNUSED(autoescape);
+    Q_UNUSED(arg)
+    Q_UNUSED(autoescape)
 
     if (!KItinerary::JsonLd::isA<KItinerary::PostalAddress>(input)) {
         return {};
@@ -43,8 +43,8 @@ bool AddressFormatter::isSafe() const
 
 QVariant DateFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
-    Q_UNUSED(arg);
-    Q_UNUSED(autoescape);
+    Q_UNUSED(arg)
+    Q_UNUSED(autoescape)
 
     const auto dt = input.value<QDateTime>();
     if (!dt.isValid()) {
@@ -56,8 +56,8 @@ QVariant DateFormatter::doFilter(const QVariant &input, const QVariant &arg, boo
 
 QVariant DateTimeFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
-    Q_UNUSED(arg);
-    Q_UNUSED(autoescape);
+    Q_UNUSED(arg)
+    Q_UNUSED(autoescape)
 
     const auto dt = input.value<QDateTime>();
     if (!dt.isValid()) {
@@ -73,8 +73,8 @@ QVariant DateTimeFormatter::doFilter(const QVariant &input, const QVariant &arg,
 
 QVariant TimeFormatter::doFilter(const QVariant &input, const QVariant &arg, bool autoescape) const
 {
-    Q_UNUSED(arg);
-    Q_UNUSED(autoescape);
+    Q_UNUSED(arg)
+    Q_UNUSED(autoescape)
 
     const auto dt = input.value<QDateTime>();
     if (!dt.isValid()) {
@@ -95,7 +95,7 @@ TagLibrary::TagLibrary(QObject *parent)
 
 QHash<QString, Grantlee::Filter *> TagLibrary::filters(const QString &name)
 {
-    Q_UNUSED(name);
+    Q_UNUSED(name)
     QHash<QString, Grantlee::Filter *> filters;
     filters.insert(QStringLiteral("formatAddress"), new AddressFormatter());
     filters.insert(QStringLiteral("formatDate"), new DateFormatter());

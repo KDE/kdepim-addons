@@ -66,7 +66,7 @@ void ItineraryUrlHandler::setKDEConnectHandler(ItineraryKDEConnectHandler *kdeCo
 
 bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
-    Q_UNUSED(viewerInstance);
+    Q_UNUSED(viewerInstance)
     const auto m = memento(part);
 
     if (path.startsWith(QLatin1String("semanticExpand?"))) {
@@ -107,7 +107,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
 
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
-    Q_UNUSED(part);
+    Q_UNUSED(part)
     if (path == QLatin1String("showCalendar") || path == QLatin1String("addToCalendar") || path == QLatin1String("import") || path.startsWith(QLatin1String("sendToDevice-"))) {
         // suppress default context menus for our buttons
         return true;
@@ -138,7 +138,7 @@ bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::Bo
 
 QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const
 {
-    Q_UNUSED(part);
+    Q_UNUSED(part)
     if (path == QLatin1String("showCalendar")) {
         return i18n("Show calendar at the time of this reservation.");
     }

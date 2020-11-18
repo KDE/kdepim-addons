@@ -46,7 +46,7 @@ QString ApplicationGnuPGWKSUrlHandler::name() const
 
 bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, BodyPart *part, const QString &path) const
 {
-    Q_UNUSED(viewerInstance);
+    Q_UNUSED(viewerInstance)
 
     if (!path.startsWith(QLatin1String("gnupgwks?"))) {
         return false;
@@ -70,7 +70,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
 
 QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QString &path) const
 {
-    Q_UNUSED(part);
+    Q_UNUSED(part)
 
     if (!path.startsWith(QLatin1String("gnupgwks?"))) {
         return QString();

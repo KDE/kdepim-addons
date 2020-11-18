@@ -53,6 +53,6 @@ void ConfirmAddressConfigureWidget::resetSettings()
 
 void ConfirmAddressConfigureWidget::slotEnableChanged(bool state)
 {
-    Q_UNUSED(state);
+    Q_UNUSED(state)
     Q_EMIT configureChanged();
 }

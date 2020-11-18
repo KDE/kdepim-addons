@@ -76,7 +76,7 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
 
 bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
-    Q_UNUSED(context);
+    Q_UNUSED(context)
     auto mp = msgPart.dynamicCast<GnuPGWKSMessagePart>();
     if (!mp) {
         return false;

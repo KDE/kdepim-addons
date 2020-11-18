@@ -65,7 +65,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
 
     //TODO
     const bool markAsSeen = (grp.readEntry(QStringLiteral("Mark Read If Seen"), 0) == 1);
-    Q_UNUSED(markAsSeen);
+    Q_UNUSED(markAsSeen)
 
     QMap<QString, QVariant> settings;
     if (incomingProtocol == QLatin1String("IMAP")) {
@@ -119,7 +119,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         }
         //TODO:
         const int delay = grp.readEntry(QStringLiteral("Initial Poll Delay"), -1);
-        Q_UNUSED(delay);
+        Q_UNUSED(delay)
 
         if (pollInterval == 0) {
             settings.insert(QStringLiteral("IntervalCheckEnabled"), false);
@@ -186,7 +186,7 @@ void OperaSettings::readTransport(const KConfigGroup &grp)
         }
 
         const int outgoingTimeOut = grp.readEntry(QStringLiteral("Outgoing Timeout"), -1); //TODO ?
-        Q_UNUSED(outgoingTimeOut);
+        Q_UNUSED(outgoingTimeOut)
 
         switch (authMethod) {
         case 0: //NONE
@@ -277,6 +277,6 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
 
 void OperaSettings::readGlobalAccount(const KConfigGroup &grp)
 {
-    Q_UNUSED(grp);
+    Q_UNUSED(grp)
     //TODO
 }

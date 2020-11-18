@@ -111,5 +111,5 @@ bool WindowsContactImportExportPluginInterface::canImportFileType(const QUrl &ur
 
 void WindowsContactImportExportPluginInterface::importFile(const QUrl &url)
 {
-    Q_UNUSED(url);
+    Q_UNUSED(url)
 }

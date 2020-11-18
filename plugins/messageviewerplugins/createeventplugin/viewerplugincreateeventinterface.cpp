@@ -33,7 +33,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateEventInterface::fe
 
 void ViewerPluginCreateEventInterface::setText(const QString &text)
 {
-    Q_UNUSED(text);
+    Q_UNUSED(text)
     //Nothing
 }
 

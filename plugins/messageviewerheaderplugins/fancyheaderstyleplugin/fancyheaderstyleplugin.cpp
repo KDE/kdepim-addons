@@ -60,7 +60,7 @@ int FancyHeaderStylePlugin::elidedTextSize() const
 
 QString FancyHeaderStylePlugin::extraScreenCss(const QString &headerFont) const
 {
-    Q_UNUSED(headerFont);
+    Q_UNUSED(headerFont)
     const QPalette &pal = QApplication::palette();
     const QString val = QStringLiteral("div.fancy.header > div {\n"
                                        "  background-color: %1 ! important;\n"
@@ -101,7 +101,7 @@ QString FancyHeaderStylePlugin::extraScreenCss(const QString &headerFont) const
 
 QString FancyHeaderStylePlugin::extraPrintCss(const QString &headerFont) const
 {
-    Q_UNUSED(headerFont);
+    Q_UNUSED(headerFont)
     const QPalette &pal = QApplication::palette();
     const QString val = QStringLiteral("div.fancy.header > div {\n"
                                        "  background-color: %1 ! important;\n"

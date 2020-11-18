@@ -64,7 +64,7 @@ void ResultDuplicateTreeWidget::changeState(QTreeWidgetItem *item, bool b)
 
 void ResultDuplicateTreeWidget::slotItemActivated(QTreeWidgetItem *item, int column)
 {
-    Q_UNUSED(column);
+    Q_UNUSED(column)
     auto *resultItem = dynamic_cast<ResultDuplicateTreeWidgetItem *>(item);
     if (resultItem) {
         Q_EMIT showContactPreview(resultItem->item());

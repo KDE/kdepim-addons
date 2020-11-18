@@ -126,7 +126,7 @@ void SelectImapFolderWidget::createFolder()
 
 void SelectImapFolderWidget::slotCurrentChanged(const QModelIndex &current, const QModelIndex &previous)
 {
-    Q_UNUSED(previous);
+    Q_UNUSED(previous)
     Q_EMIT folderIsSelected(current.isValid());
 }
 

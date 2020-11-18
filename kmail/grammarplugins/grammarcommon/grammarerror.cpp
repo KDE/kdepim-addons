@@ -86,8 +86,8 @@ bool GrammarError::isValid() const
 
 void GrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    Q_UNUSED(obj);
-    Q_UNUSED(blockindex);
+    Q_UNUSED(obj)
+    Q_UNUSED(blockindex)
 }
 
 bool GrammarError::operator ==(const GrammarError &other) const

@@ -61,7 +61,7 @@ class Formatter : public MessageViewer::MessagePartRendererBase
 public:
     bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override
     {
-        Q_UNUSED(context);
+        Q_UNUSED(context)
         auto mp = msgPart.dynamicCast<MimeTreeParser::AttachmentMessagePart>();
         if (!mp || context->isHiddenHint(msgPart) || !msgPart->content() || !isPkPassContent(msgPart->content())) {
             return false;

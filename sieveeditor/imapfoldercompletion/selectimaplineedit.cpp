@@ -29,6 +29,6 @@ void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAc
     mCompleter->setModel(model->completerModel());
     setCompleter(mCompleter);
 #else
-    Q_UNUSED(account);
+    Q_UNUSED(account)
 #endif
 }

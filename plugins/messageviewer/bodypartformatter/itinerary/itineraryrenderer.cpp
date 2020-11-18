@@ -130,7 +130,7 @@ void ItineraryRenderer::setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConn
 
 bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
 {
-    Q_UNUSED(context);
+    Q_UNUSED(context)
     const auto mpList = msgPart.dynamicCast<MimeTreeParser::MessagePartList>();
     if (!msgPart->isRoot() || !mpList->hasSubParts()) {
         return false;

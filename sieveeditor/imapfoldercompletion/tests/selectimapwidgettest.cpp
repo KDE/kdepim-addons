@@ -43,7 +43,7 @@ DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
 
 void DefaultMoveImapFolderWidget::setText(const QString &str)
 {
-    Q_UNUSED(str);
+    Q_UNUSED(str)
 }
 
 QString DefaultMoveImapFolderWidget::text() const
@@ -53,5 +53,5 @@ QString DefaultMoveImapFolderWidget::text() const
 
 void DefaultMoveImapFolderWidget::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
-    Q_UNUSED(account);
+    Q_UNUSED(account)
 }

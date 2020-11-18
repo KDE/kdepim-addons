@@ -40,7 +40,7 @@ bool ApplicationPgpKeyUrlHandler::handleContextMenuRequest(BodyPart *, const QSt
 
 QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QString &path) const
 {
-    Q_UNUSED(part);
+    Q_UNUSED(part)
     const QUrlQuery q = decodePath(path);
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("import")) {
         return i18n("Import the key");

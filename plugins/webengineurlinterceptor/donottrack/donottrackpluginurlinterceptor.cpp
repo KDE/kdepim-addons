@@ -21,7 +21,7 @@ DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor()
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {
-    Q_UNUSED(webEngine);
+    Q_UNUSED(webEngine)
     return new DoNotTrackInterceptorInterface(parent);
 }
 

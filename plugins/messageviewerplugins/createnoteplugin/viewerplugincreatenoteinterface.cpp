@@ -31,7 +31,7 @@ ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface()
 
 void ViewerPluginCreatenoteInterface::setText(const QString &text)
 {
-    Q_UNUSED(text);
+    Q_UNUSED(text)
     //Nothing
 }
 

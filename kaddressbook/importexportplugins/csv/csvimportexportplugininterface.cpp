@@ -216,5 +216,5 @@ bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 void CSVImportExportPluginInterface::importFile(const QUrl &url)
 {
     //TODO
-    Q_UNUSED(url);
+    Q_UNUSED(url)
 }
