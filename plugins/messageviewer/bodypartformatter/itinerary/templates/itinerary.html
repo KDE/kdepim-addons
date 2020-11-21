@@ -4,7 +4,7 @@ a.itineraryButton {
     margin-top: 6px;
     margin-bottom: 6px;
     padding: 0px 1px 1px 0px;
-    display:inline-block;
+    display:inline-block !important;
     cursor: default;
     user-select: none;
     vertical-align: top;
@@ -20,6 +20,7 @@ a.itineraryButton span {
 }
 a.itineraryButton span img {
     vertical-align: sub;
+    display:inline-block !important;
 }
 a.itineraryButton:hover span {
     border-color: {% colorMix style.viewScheme.hoverColor palette.buttonText 0.15 %};
