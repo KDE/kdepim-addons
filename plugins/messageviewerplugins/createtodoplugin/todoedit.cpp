@@ -303,6 +303,7 @@ void TodoEdit::slotOpenEditor()
     item.setMimeType(KCalendarCore::Todo::todoMimeType());
 
     IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeTodo, nullptr, this);
+    dlg->selectCollection(mCollectionCombobox->currentCollection());
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &TodoEdit::slotCloseWidget);
     dlg->load(item);
     dlg->open();
