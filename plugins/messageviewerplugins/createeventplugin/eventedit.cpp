@@ -356,6 +356,7 @@ void EventEdit::slotOpenEditor()
     item.setMimeType(KCalendarCore::Event::eventMimeType());
 
     IncidenceEditorNG::IncidenceDialog *dlg = IncidenceEditorNG::IncidenceDialogFactory::create(true, KCalendarCore::IncidenceBase::TypeEvent, nullptr, this);
+    dlg->selectCollection(mCollectionCombobox->currentCollection());
     connect(dlg, &IncidenceEditorNG::IncidenceDialog::finished, this, &EventEdit::slotCloseWidget);
     dlg->load(item);
     dlg->open();
