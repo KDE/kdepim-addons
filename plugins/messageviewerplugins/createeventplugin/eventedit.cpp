@@ -266,7 +266,6 @@ void EventEdit::slotReturnPressed()
     if (!mEventEdit->text().trimmed().isEmpty()) {
         KCalendarCore::Event::Ptr event = createEventItem();
         Q_EMIT createEvent(event, collection);
-        mEventEdit->clear();
         hide();
     }
 }
