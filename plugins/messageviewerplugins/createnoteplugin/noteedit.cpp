@@ -202,7 +202,6 @@ void NoteEdit::slotReturnPressed()
         Akonadi::NoteUtils::NoteMessageWrapper note;
         note.setTitle(mNoteEdit->text());
         Q_EMIT createNote(note.message(), collection);
-        mNoteEdit->clear();
         hide();
     }
 }
