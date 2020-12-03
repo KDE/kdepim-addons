@@ -18,7 +18,6 @@
 #include <KActionCollection>
 #include <KSharedConfig>
 #include <KConfigGroup>
-#include <QLabel>
 #include <QMenu>
 
 #include <MessageComposer/TextPart>

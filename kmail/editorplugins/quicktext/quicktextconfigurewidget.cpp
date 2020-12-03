@@ -7,7 +7,6 @@
 #include "quicktextconfigurewidget.h"
 #include "quicktextwidget.h"
 #include <QVBoxLayout>
-#include <KLocalizedString>
 #include <MailCommon/SnippetWidget>
 
 QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)

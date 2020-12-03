@@ -11,7 +11,6 @@
 #include <MessageViewer/DKIMManageRulesDialog>
 #include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
-#include <QPointer>
 #include <QPushButton>
 #include <QSpacerItem>
 

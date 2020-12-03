@@ -9,7 +9,6 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QPointer>
 
 AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)

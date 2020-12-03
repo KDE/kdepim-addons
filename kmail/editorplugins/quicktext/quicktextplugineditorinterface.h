@@ -10,7 +10,6 @@
 #include <MessageComposer/PluginEditorInterface>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MailCommon/SnippetsModel>
-#include <QPointer>
 #include <QTextCursor>
 class QuickTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {

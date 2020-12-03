@@ -9,7 +9,6 @@
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguredialog.h"
 
-#include <QPointer>
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(AutomaticAddContactsPlugin, "kmail_automaticaddcontactsplugin.json")

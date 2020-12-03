@@ -11,7 +11,6 @@
 #include <QDate>
 #include <QSharedData>
 
-#include <QDebug>
 
 class QCalendarSystemPrivate : public QSharedData
 {

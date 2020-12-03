@@ -15,7 +15,6 @@
 #include <QCheckBox>
 #include <QScrollArea>
 #include <QFormLayout>
-#include <QVariant>
 #include <QStackedWidget>
 #include <QLabel>
 #include <QToolButton>

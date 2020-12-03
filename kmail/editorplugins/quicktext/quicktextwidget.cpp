@@ -10,7 +10,6 @@
 #include <QHBoxLayout>
 #include <MailCommon/SnippetWidget>
 #include <MailCommon/SnippetsModel>
-#include <QDebug>
 #include <KMessageBox>
 #include <QStackedWidget>
 

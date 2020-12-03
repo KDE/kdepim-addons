@@ -19,9 +19,7 @@
 
 #include <grantlee/template.h>
 #include <QTextDocument>
-#include <QGuiApplication>
 #include <QMimeDatabase>
-#include <QDebug>
 
 namespace {
 class Formatter : public MessageViewer::MessagePartRendererBase

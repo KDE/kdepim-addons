@@ -10,17 +10,9 @@
 #include <KLocalizedString>
 #include <KActionCollection>
 #include <QAction>
-#include <QFileInfo>
-#include <QTemporaryFile>
 #include <PimCommon/RenameFileDialog>
-#include <KMessageBox>
-#include <KJobWidgets>
-#include <QTextStream>
 #include <QFileDialog>
-#include <QTextCodec>
-#include <QPointer>
 #include <QFile>
-#include <QDomElement>
 #include <KIO/Job>
 
 #include <KAddressBookImportExport/ImportExportEngine>

@@ -7,12 +7,10 @@
 #include "dkimadvancedwidget.h"
 #include <KLocalizedString>
 #include <QFormLayout>
-#include <QPointer>
 #include <QPushButton>
 #include "dkimauthenticationverifiedserverdialog.h"
 #include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
-#include <QLabel>
 #include <QComboBox>
 #include <QCheckBox>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;

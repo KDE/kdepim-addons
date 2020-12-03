@@ -12,7 +12,6 @@
 #include <KSharedConfig>
 #include <KLocalizedString>
 #include <QHBoxLayout>
-#include <QRegularExpression>
 #include <QTabWidget>
 
 DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)

@@ -7,7 +7,6 @@
 #include "quicktexttreewidget.h"
 #include "quicktextmanager.h"
 
-#include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
 

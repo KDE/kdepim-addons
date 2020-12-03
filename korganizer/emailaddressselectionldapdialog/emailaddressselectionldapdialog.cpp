@@ -10,11 +10,11 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <PimCommonAkonadi/LdapSearchDialog>
-#include <QBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QLineEdit>
 #include <QTreeView>
+#include <QVBoxLayout>
+#include <QLineEdit>
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(EmailAddressSelectionLdapDialog, "emailaddressselectionldapdialog.json")

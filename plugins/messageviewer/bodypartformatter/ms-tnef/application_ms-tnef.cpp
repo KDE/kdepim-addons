@@ -35,7 +35,6 @@
 #include <KIconLoader>
 #include <KLocalizedString>
 
-#include <QDir>
 #include <QFile>
 
 namespace {

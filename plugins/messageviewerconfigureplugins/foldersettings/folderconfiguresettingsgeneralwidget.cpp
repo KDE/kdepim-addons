@@ -6,7 +6,7 @@
 
 #include "folderconfiguresettingsgeneralwidget.h"
 #include <MailCommon/CollectionGeneralWidget>
-#include <QVBoxLayout>
+#include <QHBoxLayout>
 
 FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)

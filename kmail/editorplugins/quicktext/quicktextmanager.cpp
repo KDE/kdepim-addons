@@ -10,13 +10,8 @@
 
 #include <KLocalizedString>
 #include <QFileDialog>
-#include <QIcon>
-#include <QTextEdit>
 
-#include <QAction>
-#include <QPointer>
 #include <QItemSelectionModel>
-#include <QDebug>
 
 class QuicktextManager::Private
 {

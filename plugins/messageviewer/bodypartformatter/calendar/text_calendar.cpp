@@ -53,10 +53,8 @@ using namespace KCalendarCore;
 #include <KIO/StatJob>
 #include <KLocalizedString>
 
-#include <QEventLoop>
 #include <QDBusServiceWatcher>
 #include <QMimeDatabase>
-#include <QProcess>
 #include <QUrl>
 #include <QTemporaryFile>
 #include <QIcon>

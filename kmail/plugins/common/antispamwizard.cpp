@@ -25,7 +25,6 @@
 #include <QDialog>
 #include <KLocalizedString>
 #include <KProcess>
-#include <KToolInvocation>
 #include <KConfigGroup>
 
 #include <QLabel>

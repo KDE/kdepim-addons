@@ -17,7 +17,6 @@
 
 #include <KLocalizedString>
 
-#include <KCodecs>
 #include <KColorScheme>
 
 #include <QApplication>

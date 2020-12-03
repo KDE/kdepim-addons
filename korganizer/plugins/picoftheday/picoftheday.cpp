@@ -16,7 +16,6 @@
 #include <KConfigGroup>
 
 #include <QDomDocument>
-#include <QPointer>
 //https://www.mediawiki.org/wiki/API:Picture_of_the_day_viewer
 Picoftheday::Picoftheday()
 {

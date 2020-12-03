@@ -32,15 +32,11 @@
 
 #include <QDate>
 #include <QDBusInterface>
-#include <QDesktopServices>
 #include <QIcon>
-#include <QJsonArray>
-#include <QJsonDocument>
 #include <QMenu>
 #include <QProcess>
 #include <QStandardPaths>
 #include <QTemporaryFile>
-#include <QUrlQuery>
 
 #include <memory>
 #include <type_traits>
