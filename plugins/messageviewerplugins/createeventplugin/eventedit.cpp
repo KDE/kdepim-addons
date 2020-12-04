@@ -126,7 +126,7 @@ EventEdit::EventEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &EventEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton = new QPushButton(i18n("Open &editor..."), this);
+    mOpenEditorButton = new QPushButton(i18n("Open &Editor..."), this);
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open event editor, where more details can be changed."));
 #endif
