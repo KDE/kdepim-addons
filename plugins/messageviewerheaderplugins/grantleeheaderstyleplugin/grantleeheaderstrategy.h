@@ -14,7 +14,7 @@ class GrantleeHeaderStrategy : public HeaderStrategy
 {
 public:
     GrantleeHeaderStrategy();
-    ~GrantleeHeaderStrategy();
+    ~GrantleeHeaderStrategy() override;
 
 public:
     const char *name() const override

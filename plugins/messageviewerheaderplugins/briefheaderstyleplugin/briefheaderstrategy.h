@@ -15,7 +15,7 @@ class BriefHeaderStrategy : public HeaderStrategy
 {
 public:
     BriefHeaderStrategy();
-    ~BriefHeaderStrategy()
+    ~BriefHeaderStrategy() override
     {
     }
 

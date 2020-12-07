@@ -47,7 +47,7 @@ class POTDElement : public StoredElement
 
 public:
     POTDElement(const QString &id, QDate date, QSize initialThumbSize);
-    ~POTDElement()
+    ~POTDElement() override
     {
     }
 

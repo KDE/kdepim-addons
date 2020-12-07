@@ -20,7 +20,7 @@ class StandardHeaderStrategy : public HeaderStrategy
 {
 public:
     StandardHeaderStrategy();
-    ~StandardHeaderStrategy();
+    ~StandardHeaderStrategy() override;
 
 public:
     const char *name() const override
