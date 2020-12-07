@@ -19,7 +19,7 @@ class GravatarUpdateJob : public QObject
     Q_OBJECT
 public:
     explicit GravatarUpdateJob(QObject *parent = nullptr);
-    ~GravatarUpdateJob();
+    ~GravatarUpdateJob() override;
 
     void start();
     bool canStart() const;

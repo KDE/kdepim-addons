@@ -13,7 +13,7 @@ class OperaAddressBook : public LibImportWizard::AbstractAddressBook
 {
 public:
     explicit OperaAddressBook(const QString &filename);
-    ~OperaAddressBook();
+    ~OperaAddressBook() override;
 
     void importAddressBook();
 private:

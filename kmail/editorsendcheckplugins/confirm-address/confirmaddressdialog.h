@@ -14,7 +14,7 @@ class ConfirmAddressDialog : public QDialog
     Q_OBJECT
 public:
     explicit ConfirmAddressDialog(QWidget *parent = nullptr);
-    ~ConfirmAddressDialog();
+    ~ConfirmAddressDialog() override;
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);

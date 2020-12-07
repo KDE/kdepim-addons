@@ -14,7 +14,7 @@ class CheckBeforeSendUpdateSmtpDialog : public QDialog
     Q_OBJECT
 public:
     explicit CheckBeforeSendUpdateSmtpDialog(QWidget *parent = nullptr);
-    ~CheckBeforeSendUpdateSmtpDialog();
+    ~CheckBeforeSendUpdateSmtpDialog() override;
 
     Q_REQUIRED_RESULT bool changeSmtp() const;
 private:

@@ -19,7 +19,7 @@ class AutomaticAddContactsTabWidget : public QWidget
     Q_OBJECT
 public:
     explicit AutomaticAddContactsTabWidget(QWidget *parent = nullptr, QAbstractItemModel *model = nullptr);
-    ~AutomaticAddContactsTabWidget();
+    ~AutomaticAddContactsTabWidget() override;
 
     void resetSettings();
     void saveSettings();

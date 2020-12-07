@@ -19,7 +19,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigWidget : public QWidget
     Q_OBJECT
 public:
     explicit LanguageToolConfigWidget(QWidget *parent = nullptr);
-    ~LanguageToolConfigWidget();
+    ~LanguageToolConfigWidget() override;
     void loadSettings();
     void saveSettings();
 private:

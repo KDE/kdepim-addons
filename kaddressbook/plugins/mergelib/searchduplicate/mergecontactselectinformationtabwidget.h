@@ -18,7 +18,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationTabWidget : publi
     Q_OBJECT
 public:
     explicit MergeContactSelectInformationTabWidget(QWidget *parent = nullptr);
-    ~MergeContactSelectInformationTabWidget();
+    ~MergeContactSelectInformationTabWidget() override;
 
     void updateTabWidget();
 

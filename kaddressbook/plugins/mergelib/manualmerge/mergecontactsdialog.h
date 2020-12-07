@@ -24,7 +24,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactsDialog : public QDialog
     Q_OBJECT
 public:
     explicit MergeContactsDialog(QWidget *parent = nullptr);
-    ~MergeContactsDialog();
+    ~MergeContactsDialog() override;
 
     void setContacts(const Akonadi::Item::List &list);
 private:

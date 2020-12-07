@@ -15,7 +15,7 @@ class OperaSettings : public AbstractSettings
 {
 public:
     explicit OperaSettings(const QString &filename);
-    ~OperaSettings();
+    ~OperaSettings() override;
 
     void importSettings();
 private:

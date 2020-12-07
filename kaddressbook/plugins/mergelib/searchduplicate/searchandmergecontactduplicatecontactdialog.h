@@ -24,7 +24,7 @@ class KADDRESSBOOKMERGELIB_EXPORT SearchAndMergeContactDuplicateContactDialog : 
     Q_OBJECT
 public:
     explicit SearchAndMergeContactDuplicateContactDialog(QWidget *parent = nullptr);
-    ~SearchAndMergeContactDuplicateContactDialog();
+    ~SearchAndMergeContactDuplicateContactDialog() override;
 
     void searchPotentialDuplicateContacts(const Akonadi::Item::List &list);
 

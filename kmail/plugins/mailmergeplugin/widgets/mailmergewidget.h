@@ -26,7 +26,7 @@ public:
     };
 
     explicit MailMergeWidget(QWidget *parent = nullptr);
-    ~MailMergeWidget();
+    ~MailMergeWidget() override;
 
 Q_SIGNALS:
     void sourceModeChanged(MailMerge::MailMergeWidget::SourceType);

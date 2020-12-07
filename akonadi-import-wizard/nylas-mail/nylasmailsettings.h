@@ -13,7 +13,7 @@ class NylasMailSettings : public AbstractSettings
 {
 public:
     explicit NylasMailSettings(const QString &filename);
-    ~NylasMailSettings();
+    ~NylasMailSettings() override;
     void importSettings();
 private:
     void readImapAccount();

@@ -1,4 +1,4 @@
-/*
+ /*
    SPDX-FileCopyrightText: 2019-2020 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: GPL-2.0-or-later
@@ -21,7 +21,7 @@ class QUICKTEXT_EXPORT QuickTextWidget : public QWidget
     Q_OBJECT
 public:
     explicit QuickTextWidget(QWidget *parent = nullptr);
-    ~QuickTextWidget();
+    ~QuickTextWidget() override;
 
     void save();
     void importQuickText();

@@ -16,7 +16,7 @@ class ConfirmAddressConfigureTabWidget : public QWidget
     Q_OBJECT
 public:
     explicit ConfirmAddressConfigureTabWidget(QWidget *parent = nullptr);
-    ~ConfirmAddressConfigureTabWidget();
+    ~ConfirmAddressConfigureTabWidget() override;
 
     void resetSettings();
     void loadSettings(const KConfigGroup &grp);

@@ -19,7 +19,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationScrollArea : publ
     Q_OBJECT
 public:
     explicit MergeContactSelectInformationScrollArea(QWidget *parent = nullptr);
-    ~MergeContactSelectInformationScrollArea();
+    ~MergeContactSelectInformationScrollArea() override;
     void setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem, const Akonadi::Collection &col);
 private:
     void slotMergeContacts();

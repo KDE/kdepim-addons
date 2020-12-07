@@ -22,7 +22,7 @@ class MailSenderJob : public QObject
 
 public:
     explicit MailSenderJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
-    ~MailSenderJob();
+    ~MailSenderJob() override;
 
     void start();
 

@@ -20,7 +20,7 @@ class SendVcardsJob : public QObject
     Q_OBJECT
 public:
     explicit SendVcardsJob(const Akonadi::Item::List &listItem, QObject *parent = nullptr);
-    ~SendVcardsJob();
+    ~SendVcardsJob() override;
 
     Q_REQUIRED_RESULT bool start();
 

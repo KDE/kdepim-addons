@@ -18,7 +18,7 @@ class VCardViewerDialog : public QDialog
     Q_OBJECT
 public:
     VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent = nullptr);
-    ~VCardViewerDialog();
+    ~VCardViewerDialog() override;
 
     KContacts::Addressee::List contacts() const;
 

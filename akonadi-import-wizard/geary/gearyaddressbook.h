@@ -15,7 +15,7 @@ class GearyAddressBook : public LibImportWizard::AbstractAddressBook
     Q_OBJECT
 public:
     explicit GearyAddressBook(const QString &filename);
-    ~GearyAddressBook();
+    ~GearyAddressBook() override;
     void importAddressBook();
 };
 

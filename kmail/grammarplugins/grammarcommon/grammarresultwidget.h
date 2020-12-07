@@ -20,7 +20,7 @@ class GRAMMARCOMMON_EXPORT GrammarResultWidget : public QWidget
     Q_OBJECT
 public:
     explicit GrammarResultWidget(QWidget *parent = nullptr);
-    ~GrammarResultWidget();
+    ~GrammarResultWidget() override;
     void setText(const QString &str);
     virtual void checkGrammar() = 0;
     void applyGrammarResult(const QVector<GrammarError> &infos);

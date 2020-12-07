@@ -16,7 +16,7 @@ class MergeContactShowResultTabWidget : public QTabWidget
     Q_OBJECT
 public:
     explicit MergeContactShowResultTabWidget(QWidget *parent = nullptr);
-    ~MergeContactShowResultTabWidget();
+    ~MergeContactShowResultTabWidget() override;
 
     void updateTabWidget();
 

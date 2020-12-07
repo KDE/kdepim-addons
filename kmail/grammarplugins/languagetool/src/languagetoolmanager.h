@@ -17,7 +17,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolManager : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolManager(QObject *parent = nullptr);
-    ~LanguageToolManager();
+    ~LanguageToolManager() override;
     static LanguageToolManager *self();
 
     QNetworkAccessManager *networkAccessManager() const;

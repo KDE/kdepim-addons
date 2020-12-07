@@ -15,7 +15,7 @@ class GearySettings : public AbstractSettings
 {
 public:
     explicit GearySettings(const QString &filename);
-    ~GearySettings();
+    ~GearySettings() override;
     void importSettings();
 private:
     void readImapAccount();

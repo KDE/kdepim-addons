@@ -14,7 +14,7 @@ class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigDialog : public QDialog
     Q_OBJECT
 public:
     explicit GrammalecteConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
-    ~GrammalecteConfigDialog();
+    ~GrammalecteConfigDialog() override;
 private:
     Q_DISABLE_COPY(GrammalecteConfigDialog)
     void writeConfig();

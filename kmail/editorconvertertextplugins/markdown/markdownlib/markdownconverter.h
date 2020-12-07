@@ -14,7 +14,7 @@ class LIBKMAILMARKDOWN_EXPORT MarkdownConverter : public QObject
     Q_OBJECT
 public:
     explicit MarkdownConverter(QObject *parent = nullptr);
-    ~MarkdownConverter();
+    ~MarkdownConverter() override;
     Q_REQUIRED_RESULT QString convertTextToMarkdown(const QString &str);
 
     Q_REQUIRED_RESULT bool enableEmbeddedLabel() const;

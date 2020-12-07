@@ -15,7 +15,7 @@ class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteResultJob : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteResultJob(QObject *parent = nullptr);
-    ~GrammalecteResultJob();
+    ~GrammalecteResultJob() override;
 
     enum class ErrorType {
         NoError = 0,

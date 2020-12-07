@@ -15,7 +15,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolComboBox : public QComboBox
     Q_OBJECT
 public:
     explicit LanguageToolComboBox(QWidget *parent = nullptr);
-    ~LanguageToolComboBox();
+    ~LanguageToolComboBox() override;
 
     void setLanguage(const QString &str);
     Q_REQUIRED_RESULT QString language() const;

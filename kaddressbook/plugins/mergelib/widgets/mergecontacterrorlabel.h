@@ -20,7 +20,7 @@ public:
         NoContactSelected
     };
     explicit MergeContactErrorLabel(MergeContactErrorLabel::ErrorType type, QWidget *parent = nullptr);
-    ~MergeContactErrorLabel();
+    ~MergeContactErrorLabel() override;
 };
 }
 

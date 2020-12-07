@@ -15,7 +15,7 @@ class CheckDuplicateEmailsDialog : public QDialog
     Q_OBJECT
 public:
     explicit CheckDuplicateEmailsDialog(QWidget *parent = nullptr);
-    ~CheckDuplicateEmailsDialog();
+    ~CheckDuplicateEmailsDialog() override;
 
     void setDuplicatedEmails(const QMap<QString, int> &emails);
 private:

@@ -23,7 +23,7 @@ public:
     /**
      * Destroys the csv model.
      */
-    ~QCsvModel();
+    ~QCsvModel() override;
 
     /**
      * Loads the data from the @p device into the model.

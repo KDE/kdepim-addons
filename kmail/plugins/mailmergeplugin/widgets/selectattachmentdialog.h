@@ -16,7 +16,7 @@ class SelectAttachmentDialog : public QDialog
     Q_OBJECT
 public:
     explicit SelectAttachmentDialog(QWidget *parent = nullptr);
-    ~SelectAttachmentDialog();
+    ~SelectAttachmentDialog() override;
 
     void setAttachmentPath(const QString &path);
     QString attachmentPath() const;

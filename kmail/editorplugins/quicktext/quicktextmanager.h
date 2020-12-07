@@ -27,7 +27,7 @@ public:
     /**
      * Destroys the snippets manager.
      */
-    ~QuicktextManager();
+    ~QuicktextManager() override;
     /**
      * Returns the model that represents the snippets.
      */

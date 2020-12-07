@@ -15,7 +15,7 @@ class PMailSettings : public AbstractSettings
 {
 public:
     explicit PMailSettings(const QString &filename);
-    ~PMailSettings();
+    ~PMailSettings() override;
 
     void importSettings();
 private:

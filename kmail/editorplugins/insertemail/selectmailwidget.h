@@ -17,7 +17,7 @@ class SelectMailWidget : public QWidget
     Q_OBJECT
 public:
     explicit SelectMailWidget(QWidget *parent = nullptr);
-    ~SelectMailWidget();
+    ~SelectMailWidget() override;
 
     Q_REQUIRED_RESULT QStringList selectedEmails() const;
 

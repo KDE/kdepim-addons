@@ -25,7 +25,7 @@ public:
     };
 
     explicit GrammalecteGenerateConfigOptionJob(QObject *parent = nullptr);
-    ~GrammalecteGenerateConfigOptionJob();
+    ~GrammalecteGenerateConfigOptionJob() override;
 
     void start();
     Q_REQUIRED_RESULT bool canStart() const;

@@ -23,7 +23,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectListWidget : public QWidget
     Q_OBJECT
 public:
     explicit MergeContactSelectListWidget(QWidget *parent = nullptr);
-    ~MergeContactSelectListWidget();
+    ~MergeContactSelectListWidget() override;
 
     void setContacts(MergeContacts::ConflictInformation conflictType, const KContacts::Addressee::List &lst);
     Q_REQUIRED_RESULT int selectedContact() const;

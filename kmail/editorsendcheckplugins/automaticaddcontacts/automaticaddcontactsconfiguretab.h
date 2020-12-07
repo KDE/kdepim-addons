@@ -20,7 +20,7 @@ class AutomaticAddContactsConfigureTab : public QWidget
     Q_OBJECT
 public:
     explicit AutomaticAddContactsConfigureTab(QWidget *parent = nullptr);
-    ~AutomaticAddContactsConfigureTab();
+    ~AutomaticAddContactsConfigureTab() override;
 
     void loadSettings();
     void saveSettings();

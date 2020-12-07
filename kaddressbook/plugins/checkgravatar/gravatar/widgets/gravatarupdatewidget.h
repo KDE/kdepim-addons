@@ -21,7 +21,7 @@ class GravatarUpdateWidget : public QWidget
     Q_OBJECT
 public:
     explicit GravatarUpdateWidget(QWidget *parent = nullptr);
-    ~GravatarUpdateWidget();
+    ~GravatarUpdateWidget() override;
 
     void setEmail(const QString &email);
     QPixmap pixmap() const;

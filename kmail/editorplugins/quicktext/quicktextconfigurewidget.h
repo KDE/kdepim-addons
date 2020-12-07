@@ -15,7 +15,7 @@ class QUICKTEXT_EXPORT QuickTextConfigureWidget : public QWidget
     Q_OBJECT
 public:
     explicit QuickTextConfigureWidget(QWidget *parent = nullptr);
-    ~QuickTextConfigureWidget();
+    ~QuickTextConfigureWidget() override;
     void save();
     void importQuickText();
     void exportQuickText();

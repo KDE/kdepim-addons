@@ -16,7 +16,7 @@ class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolUpdateComboBox : public QO
     Q_OBJECT
 public:
     explicit LanguageToolUpdateComboBox(QObject *parent = nullptr);
-    ~LanguageToolUpdateComboBox();
+    ~LanguageToolUpdateComboBox() override;
 
     LanguageToolComboBox *languageToolCombobox() const;
     void setLanguageToolCombobox(LanguageToolComboBox *languageToolCombobox);

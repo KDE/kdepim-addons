@@ -22,7 +22,7 @@ class MergeContactInfoWidget : public QWidget
     Q_OBJECT
 public:
     explicit MergeContactInfoWidget(QWidget *parent = nullptr);
-    ~MergeContactInfoWidget();
+    ~MergeContactInfoWidget() override;
 
 public Q_SLOTS:
     void setContact(const Akonadi::Item &item);

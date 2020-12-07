@@ -14,7 +14,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolConfigDialog : public QDialog
     Q_OBJECT
 public:
     explicit LanguageToolConfigDialog(QWidget *parent = nullptr);
-    ~LanguageToolConfigDialog();
+    ~LanguageToolConfigDialog() override;
 private:
     Q_DISABLE_COPY(LanguageToolConfigDialog)
     void writeConfig();

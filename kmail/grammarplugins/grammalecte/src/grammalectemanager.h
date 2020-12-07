@@ -14,7 +14,7 @@ class LIBKMAILGRAMMALECTE_EXPORT GrammalecteManager : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteManager(QObject *parent = nullptr);
-    ~GrammalecteManager();
+    ~GrammalecteManager() override;
 
     static GrammalecteManager *self();
 

@@ -17,7 +17,7 @@ class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolResultJob : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolResultJob(QObject *parent = nullptr);
-    ~LanguageToolResultJob();
+    ~LanguageToolResultJob() override;
     Q_REQUIRED_RESULT bool canStart() const;
     void start();
     Q_REQUIRED_RESULT QStringList arguments() const;

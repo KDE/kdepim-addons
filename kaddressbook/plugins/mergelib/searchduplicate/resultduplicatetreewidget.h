@@ -18,7 +18,7 @@ class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidgetItem : public QTreeWi
 {
 public:
     explicit ResultDuplicateTreeWidgetItem(QTreeWidget *parent = nullptr);
-    ~ResultDuplicateTreeWidgetItem();
+    ~ResultDuplicateTreeWidgetItem() override;
 
     Q_REQUIRED_RESULT Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);

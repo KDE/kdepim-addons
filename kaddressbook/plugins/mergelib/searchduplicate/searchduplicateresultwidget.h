@@ -32,7 +32,7 @@ class KADDRESSBOOKMERGELIB_EXPORT SearchDuplicateResultWidget : public QWidget
     Q_OBJECT
 public:
     explicit SearchDuplicateResultWidget(QWidget *parent = nullptr);
-    ~SearchDuplicateResultWidget();
+    ~SearchDuplicateResultWidget() override;
     void setContacts(const QVector<Akonadi::Item::List> &lstItem);
 
 Q_SIGNALS:

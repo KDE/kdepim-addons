@@ -27,7 +27,7 @@ class MergeContactWidgetList : public QListWidget
     Q_OBJECT
 public:
     explicit MergeContactWidgetList(QWidget *parent = nullptr);
-    ~MergeContactWidgetList();
+    ~MergeContactWidgetList() override;
 
     void fillListContact(const Akonadi::Item::List &items);
     Akonadi::Item::List listSelectedContacts() const;

@@ -17,7 +17,7 @@ class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObj
     Q_OBJECT
 public:
     explicit LanguageToolGetListOfLanguageJob(QObject *parent = nullptr);
-    ~LanguageToolGetListOfLanguageJob();
+    ~LanguageToolGetListOfLanguageJob() override;
 
     Q_REQUIRED_RESULT bool canStart() const;
     void start();

@@ -16,7 +16,7 @@ class LIBKMAILMARKDOWN_EXPORT MarkdownCreateImageDialog : public QDialog
     Q_OBJECT
 public:
     explicit MarkdownCreateImageDialog(QWidget *parent = nullptr);
-    ~MarkdownCreateImageDialog();
+    ~MarkdownCreateImageDialog() override;
     Q_REQUIRED_RESULT QString linkStr() const;
 private:
     void writeConfig();

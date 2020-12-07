@@ -16,7 +16,7 @@ class SearchPotentialDuplicateContactJob : public QObject
     Q_OBJECT
 public:
     explicit SearchPotentialDuplicateContactJob(const Akonadi::Item::List &list, QObject *parent = nullptr);
-    ~SearchPotentialDuplicateContactJob();
+    ~SearchPotentialDuplicateContactJob() override;
 
     void start();
 

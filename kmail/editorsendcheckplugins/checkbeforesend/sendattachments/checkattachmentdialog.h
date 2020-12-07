@@ -14,7 +14,7 @@ class CheckAttachmentDialog : public QDialog
     Q_OBJECT
 public:
     explicit CheckAttachmentDialog(QWidget *parent = nullptr);
-    ~CheckAttachmentDialog();
+    ~CheckAttachmentDialog() override;
 
     void setEmails(const QStringList &emails);
 private:

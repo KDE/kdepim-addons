@@ -15,7 +15,7 @@ class ConfirmAddressWidget : public QWidget
     Q_OBJECT
 public:
     explicit ConfirmAddressWidget(QWidget *parent = nullptr);
-    ~ConfirmAddressWidget();
+    ~ConfirmAddressWidget() override;
 
     void setValidAddresses(const QStringList &addresses);
     void setInvalidAddresses(const QStringList &addresses);

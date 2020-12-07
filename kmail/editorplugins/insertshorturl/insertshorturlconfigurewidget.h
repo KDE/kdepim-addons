@@ -14,7 +14,7 @@ class InsertShorturlConfigureWidget : public QWidget
     Q_OBJECT
 public:
     explicit InsertShorturlConfigureWidget(QWidget *parent = nullptr);
-    ~InsertShorturlConfigureWidget();
+    ~InsertShorturlConfigureWidget() override;
 
     void writeConfig();
 private:

@@ -18,7 +18,7 @@ class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationWidget : public Q
     Q_OBJECT
 public:
     explicit MergeContactSelectInformationWidget(QWidget *parent = nullptr);
-    ~MergeContactSelectInformationWidget();
+    ~MergeContactSelectInformationWidget() override;
 
     void setContacts(KABMergeContacts::MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem);
     void createContact(KContacts::Addressee &addr);

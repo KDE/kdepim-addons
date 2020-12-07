@@ -17,7 +17,7 @@ class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownPreviewWidget : public QWidge
     Q_OBJECT
 public:
     explicit MarkdownPreviewWidget(QWidget *parent = nullptr);
-    ~MarkdownPreviewWidget();
+    ~MarkdownPreviewWidget() override;
     void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
 
 public Q_SLOTS:
