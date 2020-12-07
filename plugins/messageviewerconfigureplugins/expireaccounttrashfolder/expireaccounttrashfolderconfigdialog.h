@@ -15,7 +15,7 @@ class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_EXPORT ExpireAccountTrashFolderConfigDia
     Q_OBJECT
 public:
     explicit ExpireAccountTrashFolderConfigDialog(QWidget *parent = nullptr);
-    ~ExpireAccountTrashFolderConfigDialog();
+    ~ExpireAccountTrashFolderConfigDialog() override;
 
 private:
     void writeConfig();

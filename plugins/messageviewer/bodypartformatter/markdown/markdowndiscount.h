@@ -13,7 +13,7 @@ class MarkdownDiscount : public MarkdownAbstract
 {
 public:
     MarkdownDiscount();
-    ~MarkdownDiscount();
+    ~MarkdownDiscount() override;
 
     Q_REQUIRED_RESULT QString toHtml() const override;
 };

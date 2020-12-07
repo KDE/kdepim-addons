@@ -28,7 +28,7 @@ public:
     };
 
     explicit AdBlockBlockableItemsJob(QObject *parent = nullptr);
-    ~AdBlockBlockableItemsJob();
+    ~AdBlockBlockableItemsJob() override;
 
     void setWebEngineView(QWebEngineView *webEngineView);
 

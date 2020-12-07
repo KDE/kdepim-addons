@@ -22,9 +22,9 @@ class SelectImapFolderWidget : public QWidget
     Q_OBJECT
 public:
     explicit SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
-    ~SelectImapFolderWidget();
+    ~SelectImapFolderWidget() override;
 
-    QString selectedFolderName() const;
+    Q_REQUIRED_RESULT QString selectedFolderName() const;
     void createFolder();
 
 Q_SIGNALS:

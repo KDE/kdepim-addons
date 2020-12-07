@@ -20,7 +20,7 @@ class ADBLOCKLIB_EXPORT AdblockManager : public QObject
 public:
     static AdblockManager *self();
     explicit AdblockManager(QObject *parent = nullptr);
-    ~AdblockManager();
+    ~AdblockManager() override;
     bool isEnabled() const;
 
     bool interceptRequest(const QWebEngineUrlRequestInfo &info);

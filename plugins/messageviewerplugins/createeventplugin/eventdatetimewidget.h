@@ -18,7 +18,7 @@ class EventDateTimeWidget : public QWidget
     Q_OBJECT
 public:
     explicit EventDateTimeWidget(QWidget *parent = nullptr);
-    ~EventDateTimeWidget();
+    ~EventDateTimeWidget() override;
 
     void setMinimumDateTime(const QDateTime &dateTime);
     void setDateTime(const QDateTime &dateTime);

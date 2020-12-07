@@ -17,7 +17,7 @@ class ReactionToInvitationDialog : public QDialog
     Q_OBJECT
 public:
     explicit ReactionToInvitationDialog(QWidget *parent = nullptr);
-    ~ReactionToInvitationDialog();
+    ~ReactionToInvitationDialog() override;
 
     QString comment() const;
 

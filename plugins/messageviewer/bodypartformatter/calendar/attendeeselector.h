@@ -20,7 +20,7 @@ class AttendeeSelector : public QDialog
 public:
     explicit AttendeeSelector(QWidget *parent = nullptr);
 
-    QStringList attendees() const;
+    Q_REQUIRED_RESULT QStringList attendees() const;
 
 private:
     void addClicked();

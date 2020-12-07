@@ -16,7 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_EXPORT DKIMConfigureDialog : public QDialog
     Q_OBJECT
 public:
     explicit DKIMConfigureDialog(QWidget *parent = nullptr);
-    ~DKIMConfigureDialog();
+    ~DKIMConfigureDialog() override;
 
 private:
     void slotReset();

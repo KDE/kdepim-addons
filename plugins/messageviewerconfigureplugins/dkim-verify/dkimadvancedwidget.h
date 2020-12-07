@@ -16,7 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
     Q_OBJECT
 public:
     explicit DKIMAdvancedWidget(QWidget *parent = nullptr);
-    ~DKIMAdvancedWidget();
+    ~DKIMAdvancedWidget() override;
     void loadSettings();
     void saveSettings();
     void resetSettings();

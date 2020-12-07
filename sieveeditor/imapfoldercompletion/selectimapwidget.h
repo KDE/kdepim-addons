@@ -22,7 +22,7 @@ public:
     ~SelectImapWidget() override;
 
     void setText(const QString &str) override;
-    QString text() const override;
+    Q_REQUIRED_RESULT QString text() const override;
 
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account) override;
 

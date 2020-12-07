@@ -18,7 +18,7 @@ class SelectImapLineEditCompleterModel : public QObject
     Q_OBJECT
 public:
     explicit SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent = nullptr);
-    ~SelectImapLineEditCompleterModel();
+    ~SelectImapLineEditCompleterModel() override;
 
     Q_REQUIRED_RESULT QAbstractProxyModel *completerModel() const;
 private:

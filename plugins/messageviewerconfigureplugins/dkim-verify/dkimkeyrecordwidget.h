@@ -16,7 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMKeyRecordWidget : public QWidget
     Q_OBJECT
 public:
     explicit DKIMKeyRecordWidget(QWidget *parent = nullptr);
-    ~DKIMKeyRecordWidget();
+    ~DKIMKeyRecordWidget() override;
 
     void loadSettings();
     void saveSettings();

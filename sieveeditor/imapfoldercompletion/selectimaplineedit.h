@@ -17,7 +17,7 @@ class SelectImapLineEdit : public QLineEdit
     Q_OBJECT
 public:
     explicit SelectImapLineEdit(QWidget *parent = nullptr);
-    ~SelectImapLineEdit();
+    ~SelectImapLineEdit() override;
 
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 private:

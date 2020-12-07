@@ -16,7 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerSelect
     Q_OBJECT
 public:
     explicit DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent = nullptr);
-    ~DKIMAuthenticationVerifiedServerSelectorWidget();
+    ~DKIMAuthenticationVerifiedServerSelectorWidget() override;
 };
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerWidget : public QWidget
@@ -24,7 +24,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerWidget
     Q_OBJECT
 public:
     explicit DKIMAuthenticationVerifiedServerWidget(QWidget *parent = nullptr);
-    ~DKIMAuthenticationVerifiedServerWidget();
+    ~DKIMAuthenticationVerifiedServerWidget() override;
     void loadSettings();
     void saveSettings();
 private:

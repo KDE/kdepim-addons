@@ -17,9 +17,9 @@ class SelectImapFolderDialog : public QDialog
     Q_OBJECT
 public:
     explicit SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent = nullptr);
-    ~SelectImapFolderDialog();
+    ~SelectImapFolderDialog() override;
 
-    QString selectedFolderName() const;
+    Q_REQUIRED_RESULT QString selectedFolderName() const;
 
 private:
     void slotEnabledNewFolder(bool enabled);

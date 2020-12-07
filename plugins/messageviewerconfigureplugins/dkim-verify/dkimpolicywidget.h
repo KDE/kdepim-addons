@@ -16,7 +16,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
     Q_OBJECT
 public:
     explicit DKIMPolicyWidget(QWidget *parent = nullptr);
-    ~DKIMPolicyWidget();
+    ~DKIMPolicyWidget() override;
     void loadSettings();
     void saveSettings();
     void resetSettings();

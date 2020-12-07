@@ -20,7 +20,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureTab : public QWidget
     Q_OBJECT
 public:
     explicit DKIMConfigureTab(QWidget *parent = nullptr);
-    ~DKIMConfigureTab();
+    ~DKIMConfigureTab() override;
 
     void loadSettings();
     void saveSettings();

@@ -18,7 +18,7 @@ class SelectImapFolderModel : public QObject
     Q_OBJECT
 public:
     explicit SelectImapFolderModel(QObject *parent = nullptr);
-    ~SelectImapFolderModel();
+    ~SelectImapFolderModel() override;
 
     static SelectImapFolderModel *self();
 

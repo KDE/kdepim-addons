@@ -18,7 +18,7 @@ class SelectImapCreateFolderJob : public QObject
     Q_OBJECT
 public:
     explicit SelectImapCreateFolderJob(QObject *parent = nullptr);
-    ~SelectImapCreateFolderJob();
+    ~SelectImapCreateFolderJob() override;
     void start();
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
 

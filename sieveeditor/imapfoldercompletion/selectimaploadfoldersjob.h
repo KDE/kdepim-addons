@@ -26,7 +26,7 @@ public:
     };
 
     explicit SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent = nullptr);
-    ~SelectImapLoadFoldersJob();
+    ~SelectImapLoadFoldersJob() override;
 
     void start();
 

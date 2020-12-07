@@ -17,7 +17,7 @@ class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT ExpireAccountTrashFolderCon
     Q_OBJECT
 public:
     explicit ExpireAccountTrashFolderConfigWidget(QWidget *parent = nullptr);
-    ~ExpireAccountTrashFolderConfigWidget();
+    ~ExpireAccountTrashFolderConfigWidget() override;
     void save();
 private:
     void save(bool saveSettings, bool expireNow);

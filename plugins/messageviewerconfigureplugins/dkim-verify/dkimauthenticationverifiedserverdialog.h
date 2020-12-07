@@ -15,7 +15,7 @@ class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerDialog
     Q_OBJECT
 public:
     explicit DKIMAuthenticationVerifiedServerDialog(QWidget *parent = nullptr);
-    ~DKIMAuthenticationVerifiedServerDialog();
+    ~DKIMAuthenticationVerifiedServerDialog() override;
 
 private:
     void slotAccepted();

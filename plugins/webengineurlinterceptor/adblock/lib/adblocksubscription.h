@@ -26,7 +26,7 @@ class AdBlockSubscription : public QObject
     Q_OBJECT
 public:
     explicit AdBlockSubscription(const QString &title, QObject *parent = nullptr);
-    ~AdBlockSubscription();
+    ~AdBlockSubscription() override;
 
     Q_REQUIRED_RESULT QString title() const;
 
