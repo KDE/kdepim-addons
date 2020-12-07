@@ -11,6 +11,7 @@
 #include "folderconfiguresettings_private_export.h"
 class FolderConfigureTreeWidget;
 class FolderConfigureSettingsPageWidget;
+class QSplitter;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
@@ -19,8 +20,11 @@ public:
     ~FolderConfigureSettingsWidget() override;
     void save();
 private:
-    FolderConfigureTreeWidget *mFolderConfigureTreeWidget = nullptr;
-    FolderConfigureSettingsPageWidget *mFolderConfigureSettingsPageWidget = nullptr;
+    void readConfig();
+    void saveConfig();
+    FolderConfigureTreeWidget *const mFolderConfigureTreeWidget;
+    FolderConfigureSettingsPageWidget *const mFolderConfigureSettingsPageWidget;
+    QSplitter *const mSplitter;
 };
 
 #endif // FOLDERCONFIGURESETTINGSWIDGET_H

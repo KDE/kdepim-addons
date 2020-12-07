@@ -7,11 +7,18 @@
 #include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguresettingswidget.h"
 #include "folderconfiguretreewidget.h"
+#include <KConfigGroup>
+#include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QSplitter>
-
+namespace {
+static const char myConfigGroupName[] = "FolderConfigureSettingsWidget";
+}
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
+    , mFolderConfigureTreeWidget(new FolderConfigureTreeWidget(this))
+    , mFolderConfigureSettingsPageWidget(new FolderConfigureSettingsPageWidget(this))
+    , mSplitter(new QSplitter(this))
 {
     auto *mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -19,26 +26,40 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
 
     //TODO add label ?
 
-    auto *splitter = new QSplitter(this);
-    splitter->setObjectName(QStringLiteral("splitter"));
-    splitter->setChildrenCollapsible(false);
-    mainLayout->addWidget(splitter);
+    mSplitter->setObjectName(QStringLiteral("splitter"));
+    mSplitter->setChildrenCollapsible(false);
+    mainLayout->addWidget(mSplitter);
 
-    mFolderConfigureTreeWidget = new FolderConfigureTreeWidget(this);
     mFolderConfigureTreeWidget->setObjectName(QStringLiteral("mFolderConfigureTreeWidget"));
-    splitter->addWidget(mFolderConfigureTreeWidget);
+    mSplitter->addWidget(mFolderConfigureTreeWidget);
 
-    mFolderConfigureSettingsPageWidget = new FolderConfigureSettingsPageWidget(this);
     mFolderConfigureSettingsPageWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsPageWidget"));
-    splitter->addWidget(mFolderConfigureSettingsPageWidget);
+    mSplitter->addWidget(mFolderConfigureSettingsPageWidget);
+    readConfig();
 }
 
 FolderConfigureSettingsWidget::~FolderConfigureSettingsWidget()
 {
+    saveConfig();
 }
 
 void FolderConfigureSettingsWidget::save()
 {
     const Akonadi::Collection::List collections = mFolderConfigureTreeWidget->listCollections();
     mFolderConfigureSettingsPageWidget->save(collections);
+}
+
+void FolderConfigureSettingsWidget::readConfig()
+{
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    const QList<int> defaultSizes{200, 400};
+    const QList<int> sizes = grp.readEntry("SplitterSize", defaultSizes);
+    mSplitter->setSizes(sizes);
+}
+
+void FolderConfigureSettingsWidget::saveConfig()
+{
+    const QList<int> sizes = mSplitter->sizes();
+    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    grp.writeEntry("SplitterSize", sizes );
 }
