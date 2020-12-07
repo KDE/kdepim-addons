@@ -19,7 +19,7 @@ class FolderConfigureSettingsTemplateWidget : public FolderConfigureSettingsPage
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsTemplateWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsTemplateWidget();
+    ~FolderConfigureSettingsTemplateWidget() override;
     void save(Akonadi::Collection &col);
 private:
     MailCommon::CollectionTemplatesWidget *const mCollectionTemplateWidget;

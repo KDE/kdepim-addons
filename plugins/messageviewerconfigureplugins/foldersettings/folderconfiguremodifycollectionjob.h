@@ -15,7 +15,7 @@ class FolderConfigureModifyCollectionJob : public QObject
     Q_OBJECT
 public:
     explicit FolderConfigureModifyCollectionJob(QObject *parent = nullptr);
-    ~FolderConfigureModifyCollectionJob();
+    ~FolderConfigureModifyCollectionJob() override;
 
     void setCollection(const Akonadi::Collection &col);
 

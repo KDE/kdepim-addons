@@ -15,7 +15,7 @@ class FolderSettingFilterProxyModel : public QSortFilterProxyModel
     Q_OBJECT
 public:
     explicit FolderSettingFilterProxyModel(QObject *parent = nullptr);
-    ~FolderSettingFilterProxyModel();
+    ~FolderSettingFilterProxyModel() override;
 
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role) const override;
     bool setData(const QModelIndex &index, const QVariant &value, int role) override;

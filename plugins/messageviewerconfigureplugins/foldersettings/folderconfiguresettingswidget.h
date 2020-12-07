@@ -16,7 +16,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsWidget : pu
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsWidget();
+    ~FolderConfigureSettingsWidget() override;
     void save();
 private:
     FolderConfigureTreeWidget *mFolderConfigureTreeWidget = nullptr;

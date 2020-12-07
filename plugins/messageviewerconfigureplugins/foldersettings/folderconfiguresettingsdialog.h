@@ -15,7 +15,7 @@ class LIBFOLDERCONFIGURESETTINGS_EXPORT FolderConfigureSettingsDialog : public Q
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsDialog(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsDialog();
+    ~FolderConfigureSettingsDialog() override;
 
 private:
     void slotSave();

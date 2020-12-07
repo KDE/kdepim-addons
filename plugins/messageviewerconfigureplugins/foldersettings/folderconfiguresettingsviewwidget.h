@@ -19,7 +19,7 @@ class FolderConfigureSettingsViewWidget : public FolderConfigureSettingsPageBase
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsViewWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsViewWidget();
+    ~FolderConfigureSettingsViewWidget() override;
     void save(Akonadi::Collection &col);
 private:
     MailCommon::CollectionViewWidget *mCollectionViewWidget = nullptr;

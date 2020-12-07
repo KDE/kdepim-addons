@@ -19,7 +19,7 @@ class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsPageWidget 
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsPageWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsPageWidget();
+    ~FolderConfigureSettingsPageWidget() override;
 
     void save(const Akonadi::Collection::List &cols);
 private:

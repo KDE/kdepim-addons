@@ -15,7 +15,7 @@ class FolderConfigureSettingsPageBase : public QWidget
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsPageBase(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsPageBase();
+    ~FolderConfigureSettingsPageBase() override;
     Q_REQUIRED_RESULT bool wasModified() const;
 protected:
     void addMainWidget(QWidget *widget);

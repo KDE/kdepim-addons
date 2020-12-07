@@ -18,7 +18,7 @@ class FolderConfigureSettingsExperyWidget : public FolderConfigureSettingsPageBa
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsExperyWidget(QWidget *parent = nullptr);
-    ~FolderConfigureSettingsExperyWidget();
+    ~FolderConfigureSettingsExperyWidget() override;
     void save(Akonadi::Collection &col);
 private:
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
