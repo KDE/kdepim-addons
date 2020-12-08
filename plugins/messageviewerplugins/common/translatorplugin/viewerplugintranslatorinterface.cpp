@@ -49,7 +49,7 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
         QAction *act = new QAction(i18n("Translate..."), this);
-        ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL + Qt::ALT + Qt::Key_T));
+        ac->setDefaultShortcut(act, QKeySequence(Qt::CTRL | Qt::ALT | Qt::Key_T));
         act->setIcon(QIcon::fromTheme(QStringLiteral("preferences-desktop-locale")));
         ac->addAction(QStringLiteral("translate_text"), act);
         connect(act, &QAction::triggered, this, &ViewerPluginTranslatorInterface::slotActivatePlugin);
