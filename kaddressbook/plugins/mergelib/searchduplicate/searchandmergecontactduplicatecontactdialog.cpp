@@ -23,7 +23,7 @@
 
 using namespace KABMergeContacts;
 namespace {
-static const char myConfigGroupName[] = "SearchAndMergeContactDuplicateContactDialog";
+static const char mySearchAndMergeContactDuplicateContactDialogGroupName[] = "SearchAndMergeContactDuplicateContactDialog";
 }
 SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateContactDialog(QWidget *parent)
     : QDialog(parent)
@@ -93,7 +93,7 @@ void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContac
 
 void SearchAndMergeContactDuplicateContactDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -102,7 +102,7 @@ void SearchAndMergeContactDuplicateContactDialog::readConfig()
 
 void SearchAndMergeContactDuplicateContactDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }

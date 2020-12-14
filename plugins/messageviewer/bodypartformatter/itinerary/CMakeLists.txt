@@ -14,6 +14,10 @@ ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h I
 
 
 add_library(messageviewer_bodypartformatter_semantic MODULE ${itinerary_plugin_srcs})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(messageviewer_bodypartformatter_semantic PROPERTIES UNITY_BUILD ON)
+endif()
+
 target_compile_definitions(messageviewer_bodypartformatter_semantic PRIVATE -DTRANSLATION_DOMAIN=\"messageviewer_semantic_plugin\")
 target_link_libraries(messageviewer_bodypartformatter_semantic
     KF5::KontactInterface

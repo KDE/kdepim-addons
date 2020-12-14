@@ -14,9 +14,11 @@ ecm_qt_declare_logging_category(mailtransport_sendplugin_SRCS HEADER sendmailplu
 ki18n_wrap_ui(mailtransport_sendplugin_SRCS
     sendmailsettings.ui
     )
-
 kcoreaddons_add_plugin(mailtransport_sendplugin JSON sendmailtransport.json SOURCES
     ${mailtransport_sendplugin_SRCS} INSTALL_NAMESPACE mailtransport)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(mailtransport_sendplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(mailtransport_sendplugin
     KF5::MailTransport

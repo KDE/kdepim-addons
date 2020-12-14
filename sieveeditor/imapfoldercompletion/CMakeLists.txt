@@ -29,7 +29,9 @@ set(imapfoldercompletionplugin_SRCS
 
 kcoreaddons_add_plugin(imapfoldercompletionplugin JSON imapfoldercompletion.json SOURCES
     ${imapfoldercompletionplugin_SRCS} INSTALL_NAMESPACE libksieve)
-
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(imapfoldercompletionplugin PROPERTIES UNITY_BUILD ON)
+endif()
 target_link_libraries(imapfoldercompletionplugin
     KF5::PimCommon KF5::Completion KF5::I18n KF5::KIOWidgets KF5::KSieveUi KF5::MailTransport KF5::IMAP KF5::ItemModels
     )

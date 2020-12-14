@@ -21,6 +21,9 @@ set(regexpeditorlineeditplugin_SRCS
 
 kcoreaddons_add_plugin(regexpeditorlineeditplugin JSON regexepeditorlineedit.json SOURCES
     ${regexpeditorlineeditplugin_SRCS} INSTALL_NAMESPACE libksieve)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(regexpeditorlineeditplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(regexpeditorlineeditplugin
     KF5::I18n KF5::KSieveUi KF5::TextWidgets

@@ -6,6 +6,9 @@ set(messageviewer_gravatarconfigplugin_SRCS
 
 kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin JSON messageviewer_gravatarconfigplugin.json SOURCES
     ${messageviewer_gravatarconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(messageviewer_gravatarconfigplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(messageviewer_gravatarconfigplugin
   KF5::MessageViewer

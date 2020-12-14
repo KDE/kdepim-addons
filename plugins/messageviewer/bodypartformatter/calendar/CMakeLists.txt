@@ -19,7 +19,9 @@ qt5_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
 ki18n_wrap_ui(messageviewer_bodypartformatter_text_calendar_PART_SRCS attendeeselector.ui)
 
 add_library(messageviewer_bodypartformatter_text_calendar MODULE ${messageviewer_bodypartformatter_text_calendar_PART_SRCS})
-
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(messageviewer_bodypartformatter_text_calendar PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF5::KontactInterface

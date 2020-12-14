@@ -10,6 +10,10 @@ set(kmail_quicktextplugin_private_SRCS
 
 add_library(kmailquicktextpluginprivate ${kmail_quicktextplugin_private_SRCS})
 generate_export_header(kmailquicktextpluginprivate BASE_NAME quicktext)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmailquicktextpluginprivate PROPERTIES UNITY_BUILD ON)
+endif()
+
 
 target_link_libraries(kmailquicktextpluginprivate
     PRIVATE
@@ -39,6 +43,9 @@ ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugi
 
 kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json SOURCES
     ${kmail_quicktextplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmail_quicktextplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(kmail_quicktextplugin
     KF5::MessageComposer KF5::XmlGui KF5::I18n kmailquicktextpluginprivate KF5::MailCommon

@@ -27,6 +27,9 @@ ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddress
 
 add_library(kaddressbookmergelibprivate ${kaddressbookmergelibprivate_SRCS})
 generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergelib)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kaddressbookmergelibprivate PROPERTIES UNITY_BUILD ON)
+endif()
 
 
 target_link_libraries(kaddressbookmergelibprivate

@@ -13,6 +13,9 @@ set(kaddressbook_importexport_windowscontact_SRCS
 
 kcoreaddons_add_plugin(kaddressbook_importexportwindowscontactplugin JSON kaddressbook_importexportwindowscontactplugin.json SOURCES
     ${kaddressbook_importexport_windowscontact_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kaddressbook_importexportwindowscontactplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(kaddressbook_importexportwindowscontactplugin
     KPim::AddressbookImportExport

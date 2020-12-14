@@ -11,7 +11,7 @@
 #include <QHBoxLayout>
 
 namespace {
-static const char myConfigGroupName[] = "DKIMKeyRecordWidget";
+static const char myDKIMKeyRecordWidgetGroupName[] = "DKIMKeyRecordWidget";
 }
 
 DKIMKeyRecordWidget::DKIMKeyRecordWidget(QWidget *parent)
@@ -33,13 +33,13 @@ DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
 
 void DKIMKeyRecordWidget::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openConfig(), myDKIMKeyRecordWidgetGroupName);
     mManagerKeyWidget->restoreHeaders(group.readEntry("Header", QByteArray()));
 }
 
 void DKIMKeyRecordWidget::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openConfig(), myDKIMKeyRecordWidgetGroupName);
     group.writeEntry("Header", mManagerKeyWidget->saveHeaders());
     group.sync();
 }

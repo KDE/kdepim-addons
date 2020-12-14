@@ -10,6 +10,10 @@ ecm_qt_declare_logging_category(expireaccounttrashfolderconfig_SRCS HEADER libex
     )
 
 add_library(expireaccounttrashfolderconfig ${expireaccounttrashfolderconfig_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(expireaccounttrashfolderconfig PROPERTIES UNITY_BUILD ON)
+endif()
+
 generate_export_header(expireaccounttrashfolderconfig BASE_NAME libexpireaccounttrashfolderconfig)
 target_link_libraries(expireaccounttrashfolderconfig
     KF5::MessageViewer

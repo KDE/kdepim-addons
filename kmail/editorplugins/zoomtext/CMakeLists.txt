@@ -14,6 +14,9 @@ ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin_SRCS HEADER zoomtexte
 
 kcoreaddons_add_plugin(kmail_zoomtexteditorplugin JSON kmail_zoomtexteditorplugin.json SOURCES
     ${kmail_zoomtexteditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmail_zoomtexteditorplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 
 target_link_libraries(kmail_zoomtexteditorplugin

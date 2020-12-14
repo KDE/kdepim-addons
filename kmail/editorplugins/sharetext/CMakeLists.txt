@@ -12,6 +12,9 @@ ecm_qt_declare_logging_category(kmail_sharetexteditorplugin_SRCS HEADER sharetex
 
 kcoreaddons_add_plugin(kmail_sharetexteditorplugin JSON kmail_sharetexteditorplugin.json SOURCES
     ${kmail_sharetexteditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmail_sharetexteditorplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(kmail_sharetexteditorplugin
     KF5::MessageComposer KF5::XmlGui KF5::I18n

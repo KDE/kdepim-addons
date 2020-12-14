@@ -8,6 +8,9 @@ ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_
 
 kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURCES
     ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditorconverttext)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmail_markdownplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(kmail_markdownplugin PRIVATE
     KF5::I18n KF5::XmlGui

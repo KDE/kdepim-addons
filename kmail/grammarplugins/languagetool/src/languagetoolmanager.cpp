@@ -12,7 +12,7 @@
 #include <QColor>
 #include <QRandomGenerator>
 namespace {
-static const char myConfigGroupName[] = "LanguageTool";
+static const char myLanguageToolManagerGroupName[] = "LanguageTool";
 }
 LanguageToolManager::LanguageToolManager(QObject *parent)
     : QObject(parent)
@@ -84,7 +84,7 @@ void LanguageToolManager::setLanguageToolPath(const QString &path)
 
 void LanguageToolManager::loadSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), myLanguageToolManagerGroupName);
     mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2"));
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
     mUseLocalInstance = grp.readEntry(QStringLiteral("useLocalInstance"), false);
@@ -93,7 +93,7 @@ void LanguageToolManager::loadSettings()
 
 void LanguageToolManager::saveSettings()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), myLanguageToolManagerGroupName);
     grp.writeEntry(QStringLiteral("languagetoolpath"), mLanguageToolPath);
     grp.writeEntry(QStringLiteral("language"), mLanguage);
     grp.writeEntry(QStringLiteral("useLocalInstance"), mUseLocalInstance);

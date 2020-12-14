@@ -12,7 +12,7 @@
 #include <QHBoxLayout>
 #include <QSplitter>
 namespace {
-static const char myConfigGroupName[] = "FolderConfigureSettingsWidget";
+static const char myFolderConfigureSettingsWidgetGroupName[] = "FolderConfigureSettingsWidget";
 }
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     : QWidget(parent)
@@ -51,7 +51,7 @@ void FolderConfigureSettingsWidget::save()
 
 void FolderConfigureSettingsWidget::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), myFolderConfigureSettingsWidgetGroupName);
     const QList<int> defaultSizes{200, 400};
     const QList<int> sizes = grp.readEntry("SplitterSize", defaultSizes);
     mSplitter->setSizes(sizes);
@@ -60,6 +60,6 @@ void FolderConfigureSettingsWidget::readConfig()
 void FolderConfigureSettingsWidget::saveConfig()
 {
     const QList<int> sizes = mSplitter->sizes();
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openConfig(), myFolderConfigureSettingsWidgetGroupName);
     grp.writeEntry("SplitterSize", sizes );
 }

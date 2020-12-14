@@ -7,6 +7,9 @@ set(shorturlpluginprivate_SRCS
 
 add_library(shorturlpluginprivate ${shorturlpluginprivate_SRCS})
 generate_export_header(shorturlpluginprivate BASE_NAME shorturl)
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(shorturlpluginprivate PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(shorturlpluginprivate
     PRIVATE

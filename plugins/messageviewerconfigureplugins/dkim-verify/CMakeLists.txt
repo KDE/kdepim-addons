@@ -30,6 +30,10 @@ ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifycon
     )
 
 add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(dkimverifyconfigure PROPERTIES UNITY_BUILD ON)
+endif()
+
 generate_export_header(dkimverifyconfigure BASE_NAME libdkimverifyconfigure)
 target_link_libraries(dkimverifyconfigure
     KF5::I18n

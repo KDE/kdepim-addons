@@ -19,6 +19,9 @@ kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcard
     ${kaddressbook_sendvcardsplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 
 
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kaddressbook_sendvcardsplugin PROPERTIES UNITY_BUILD ON)
+endif()
 target_link_libraries(kaddressbook_sendvcardsplugin
     KF5::PimCommon KF5::Completion  KF5::PimCommonAkonadi KF5::XmlGui KF5::MimeTreeParser KF5::I18n
     )

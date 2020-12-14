@@ -17,6 +17,10 @@ ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debu
 
 
 add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})
+if (COMPILE_WITH_CMAKE_SUPPORT)
+    set_target_properties(kmail_confirmaddresseditorplugin PROPERTIES UNITY_BUILD ON)
+endif()
+
 generate_export_header(kmailgrammalecte BASE_NAME libkmailgrammalecte)
 target_link_libraries(kmailgrammalecte
     KF5::I18n
