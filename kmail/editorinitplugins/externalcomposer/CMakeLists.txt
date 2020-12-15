@@ -7,7 +7,7 @@ set(kmail_externalcomposereditorplugin_SRCS
 
 kcoreaddons_add_plugin(kmail_externalcomposereditorplugin JSON kmail_externalcomposereditorplugin.json SOURCES
     ${kmail_externalcomposereditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditorinit)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_externalcomposereditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

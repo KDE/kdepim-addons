@@ -19,7 +19,7 @@ kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcard
     ${kaddressbook_sendvcardsplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 
 
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_sendvcardsplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(kaddressbook_sendvcardsplugin

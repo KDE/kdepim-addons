@@ -11,7 +11,7 @@ kcoreaddons_add_plugin(kmail_antivirusplugin JSON kmail_antivirusplugin.json SOU
 target_link_libraries(kmail_antivirusplugin
   KF5::PimCommonAkonadi KF5::Completion KF5::MailCommon KF5::AkonadiWidgets KF5::XmlGui KF5::Libkdepim KF5::I18n KF5::GuiAddons
 )
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_antivirusplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

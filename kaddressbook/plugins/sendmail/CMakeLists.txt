@@ -18,7 +18,7 @@ ecm_qt_declare_logging_category(kaddressbook_sendmailplugin_SRCS HEADER kaddress
 kcoreaddons_add_plugin(kaddressbook_sendmailplugin JSON kaddressbook_sendmailplugin.json SOURCES
     ${kaddressbook_sendmailplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_sendmailplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

@@ -15,7 +15,7 @@ ecm_qt_declare_logging_category(languagetoolplugin_SRCS HEADER languagetoolplugi
 
 kcoreaddons_add_plugin(kmail_languagetoolplugin JSON kmail_languagetoolplugin.json SOURCES
     ${languagetoolplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditorgrammar)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_languagetoolplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

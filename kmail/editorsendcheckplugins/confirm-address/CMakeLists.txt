@@ -20,7 +20,7 @@ ecm_qt_declare_logging_category(kmail_confirmaddresseditorplugin_SRCS HEADER con
 
 kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin JSON kmail_confirmaddressplugin.json SOURCES
     ${kmail_confirmaddresseditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugincheckbeforesend)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_confirmaddresseditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

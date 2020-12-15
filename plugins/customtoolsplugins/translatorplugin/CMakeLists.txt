@@ -5,7 +5,7 @@ set(pimcommon_translatorplugin_SRCS
 
 kcoreaddons_add_plugin(pimcommon_translatorplugin JSON pimcommon_translatorplugin.json SOURCES
     ${pimcommon_translatorplugin_SRCS} INSTALL_NAMESPACE pimcommon/customtools)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(pimcommon_translatorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

@@ -23,7 +23,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnup
 
 
 add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE ${messageviewer_bodypartformatter_application_gnupgwks_SRCS})
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_application_gnupgwks PROPERTIES UNITY_BUILD ON)
 endif()
 

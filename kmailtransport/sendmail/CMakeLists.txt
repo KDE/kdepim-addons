@@ -16,7 +16,7 @@ ki18n_wrap_ui(mailtransport_sendplugin_SRCS
     )
 kcoreaddons_add_plugin(mailtransport_sendplugin JSON sendmailtransport.json SOURCES
     ${mailtransport_sendplugin_SRCS} INSTALL_NAMESPACE mailtransport)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(mailtransport_sendplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

@@ -11,7 +11,7 @@ set(kaddressbook_importexport_csv_SRCS
 
 kcoreaddons_add_plugin(kaddressbook_importexportcsvplugin JSON kaddressbook_importexportcsvplugin.json SOURCES
     ${kaddressbook_importexport_csv_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportcsvplugin PROPERTIES UNITY_BUILD ON)
 endif()
 target_link_libraries(kaddressbook_importexportcsvplugin

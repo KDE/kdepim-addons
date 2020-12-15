@@ -22,7 +22,7 @@ ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kad
 
 kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkgravatarplugin.json SOURCES
     ${kaddressbook_checkgravatarplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_checkgravatarplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

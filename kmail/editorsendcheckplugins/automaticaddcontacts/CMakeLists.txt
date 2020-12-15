@@ -17,7 +17,7 @@ ecm_qt_declare_logging_category(kmail_automaticaddcontactseditorplugin_SRCS HEAD
 
 kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin JSON kmail_automaticaddcontactsplugin.json SOURCES
     ${kmail_automaticaddcontactseditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugincheckbeforesend)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_automaticaddcontactseditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
 

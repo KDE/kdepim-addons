@@ -12,7 +12,7 @@ add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_markdown_plugin\")
 set(messageviewer_bodypartformatter_text_markdown_PART_SRCS textmarkdownplugin.cpp ${mardown_engine_SRCS} markdownabstract.cpp)
 
 add_library(messageviewer_bodypartformatter_text_markdown MODULE ${messageviewer_bodypartformatter_text_markdown_PART_SRCS})
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_text_markdown PROPERTIES UNITY_BUILD ON)
 endif()
 

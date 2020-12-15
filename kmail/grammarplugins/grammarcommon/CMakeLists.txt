@@ -13,7 +13,7 @@ ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h 
 
 add_library(grammarcommon ${grammarcommon_SRCS})
 generate_export_header(grammarcommon BASE_NAME grammarcommon)
-if (COMPILE_WITH_CMAKE_SUPPORT)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(grammarcommon PROPERTIES UNITY_BUILD ON)
 endif()
 
