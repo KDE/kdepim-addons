@@ -190,21 +190,13 @@ CSVImportDialog::CSVImportDialog(QWidget *parent)
     connect(mDelimiterEdit, qOverload<const QString &>(&QLineEdit::textChanged), this, [this](const QString &str) {
         customDelimiterChanged(str);
     });
-#if QT_VERSION < QT_VERSION_CHECK(5, 14, 0)
-    connect(mComboQuote, qOverload<const QString &>(&QComboBox::activated), this, [this](const QString &str) {
-        textQuoteChanged(str);
-    });
-    connect(mCodecCombo, qOverload<const QString &>(&QComboBox::activated), this, [this]() {
-        codecChanged();
-    });
-#else
     connect(mComboQuote, &QComboBox::textActivated, this, [this](const QString &str) {
         textQuoteChanged(str);
     });
     connect(mCodecCombo, &QComboBox::textActivated, this, [this]() {
         codecChanged();
     });
-#endif
+
     connect(mSkipFirstRow, &QCheckBox::toggled, this, [this](bool b) {
         skipFirstRowChanged(b);
     });
