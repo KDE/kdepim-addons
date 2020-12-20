@@ -4,6 +4,8 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  */
+#ifndef TESTDATAPARSER_H
+#define TESTDATAPARSER_H
 
 #include <KCalendarCore/Incidence>
 #include <QDate>
@@ -40,3 +42,5 @@ private:
     QVector<CalendarEvents::EventData> mEventData;
     bool mUniqueEventData;
 };
+
+#endif
