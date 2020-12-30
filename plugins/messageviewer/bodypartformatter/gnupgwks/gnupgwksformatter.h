@@ -29,7 +29,6 @@ private:
     };
 
     QString render(const GnuPGWKSMessagePart &mp, WKSStatus status) const;
-    WKSStatus runMemento(GnuPGWKSMemento *memento, const GnuPGWKSMessagePart &mp, bool async) const;
 };
 
 #endif
