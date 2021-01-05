@@ -57,7 +57,6 @@ public:
     void exportQuickText();
 
 Q_SIGNALS:
-    void insertSnippet();
     void insertPlainText(const QString &snippetText);
 
 private:

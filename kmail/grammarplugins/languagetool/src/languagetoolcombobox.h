@@ -22,9 +22,6 @@ public:
 
     void fillComboBox(const QVector<LanguageInfo> &info);
 
-Q_SIGNALS:
-    void updateListOfLanguagesRequested();
-
 private:
     void fillComboBox();
     Q_DISABLE_COPY(LanguageToolComboBox)
