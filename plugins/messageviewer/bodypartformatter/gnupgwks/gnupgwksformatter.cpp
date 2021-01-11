@@ -18,7 +18,7 @@
 #include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/NodeHelper>
 #include <MimeTreeParser/MessagePart>
-#include <MessageCore/MessageCoreUtil>
+#include <MessageCore/ColorUtil>
 #include <MessageViewer/Viewer>
 
 #include <GrantleeTheme/GrantleeThemeEngine>
