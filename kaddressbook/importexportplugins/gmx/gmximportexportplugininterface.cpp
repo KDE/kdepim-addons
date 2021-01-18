@@ -471,11 +471,7 @@ void GMXImportExportPluginInterface::importGMX()
     while ((line != QLatin1String("####")) && !gmxStream.atEnd()) {
         // an addressee entry may spread over several lines in the file
         while (true) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-            itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
-#else
             itemList = line.split(QLatin1Char('#'), Qt::KeepEmptyParts);
-#endif
             if (itemList.count() >= 11) {
                 break;
             }
@@ -520,11 +516,7 @@ void GMXImportExportPluginInterface::importGMX()
     while (!line.startsWith(QLatin1String("####")) && !gmxStream.atEnd()) {
         // an address entry may spread over several lines in the file
         while (true) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-            itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
-#else
             itemList = line.split(QLatin1Char('#'), Qt::KeepEmptyParts);
-#endif
             if (itemList.count() >= 21) {
                 break;
             }
@@ -619,11 +611,7 @@ void GMXImportExportPluginInterface::importGMX()
                && !gmxStream.atEnd()) {
             // a category should not spread over multiple lines, but just in case
             while (true) {
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-                itemList = line.split(QLatin1Char('#'), QString::KeepEmptyParts);
-#else
                 itemList = line.split(QLatin1Char('#'), Qt::KeepEmptyParts);
-#endif
                 if (itemList.count() >= 3) {
                     break;
                 }
