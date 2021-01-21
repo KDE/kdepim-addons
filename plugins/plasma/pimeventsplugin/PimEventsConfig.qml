@@ -71,6 +71,7 @@ Item {
                 }
                 Text {
                     anchors.left: icon.visible ? icon.right : checkbox.visible ? checkbox.right : parent.left
+                    renderType: Text.NativeRendering
 
                     text: styleData.value["name"]
                     horizontalAlignment: Qt.AlignLeft
@@ -88,7 +89,7 @@ Item {
                         + (styleData.selected ? "selected_" : "")
                         + (calendarTreeView.activeFocus ? "active" : "")
             // Make sure the checkbox always fits, add 4 for some small margin
-            height: Math.min(checkboxSize.implicitHeight, Math.max(16, TextSingleton.implicitHeight * 1.2)) + 4
+            height: Math.ceil( Math.min(checkboxSize.implicitHeight, Math.max(16, TextSingleton.implicitHeight * 1.2)) + 4 )
             border {
                 left: 4
                 right: 4
