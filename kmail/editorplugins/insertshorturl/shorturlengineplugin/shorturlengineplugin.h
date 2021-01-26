@@ -7,8 +7,8 @@
 #ifndef SHORTURLENGINEPLUGIN_H
 #define SHORTURLENGINEPLUGIN_H
 
-#include <QObject>
 #include "shorturl_export.h"
+#include <QObject>
 class ShortUrlEnginePluginPrivate;
 class ShortUrlEngineInterface;
 class SHORTURL_EXPORT ShortUrlEnginePlugin : public QObject

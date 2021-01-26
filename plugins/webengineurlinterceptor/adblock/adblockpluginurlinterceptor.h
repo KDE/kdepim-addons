@@ -7,10 +7,11 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTOR_H
 #define ADBLOCKPLUGINURLINTERCEPTOR_H
 
-#include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
+#include <WebEngineViewer/NetworkPluginUrlInterceptor>
 class QWebEngineView;
-namespace WebEngineViewer {
+namespace WebEngineViewer
+{
 class NetworkPluginUrlInterceptorInterface;
 }
 class AdblockPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor

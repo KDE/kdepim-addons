@@ -9,7 +9,8 @@
 
 #include <MessageViewer/MessageViewerConfigureSettingsPluginWidget>
 class QCheckBox;
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarConfigureSettingsWidget;
 }
 class GravatarConfigureSettingsPluginWidget : public MessageViewer::MessageViewerConfigureSettingsPluginWidget

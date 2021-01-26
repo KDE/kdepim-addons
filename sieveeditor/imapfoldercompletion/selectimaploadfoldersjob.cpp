@@ -5,13 +5,13 @@
 */
 
 #include "selectimaploadfoldersjob.h"
-#include "sessionuiproxy.h"
 #include "imapfoldercompletionplugin_debug.h"
+#include "sessionuiproxy.h"
 #include <KIMAP/LoginJob>
 #include <KIMAP/Session>
-#include <QStandardItemModel>
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <QStandardItemModel>
 
 SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent)
     : QObject(parent)
@@ -70,8 +70,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
     mItemsMap.clear();
     mModel->clear();
 
-    if (!mSession
-        || mSession->state() != KIMAP::Session::Authenticated) {
+    if (!mSession || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapLoadFoldersJob - got no connection";
         Q_EMIT finished(false, mModel);
         deleteLater();
@@ -85,7 +84,7 @@ void SelectImapLoadFoldersJob::slotReloadRequested()
     list->start();
 }
 
-void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList< QList<QByteArray> > &flags)
+void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray>> &flags)
 {
     const int numberOfMailBoxes(mailBoxes.size());
     for (int i = 0; i < numberOfMailBoxes; i++) {
@@ -93,7 +92,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
 
         const QStringList pathParts = mailBox.name.split(mailBox.separator);
         const QString separator = mailBox.separator;
-        Q_ASSERT(separator.size() == 1);   // that's what the spec says
+        Q_ASSERT(separator.size() == 1); // that's what the spec says
 
         QString parentPath;
         QString currentPath;
@@ -102,7 +101,7 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
             currentPath += separator + pathPart;
             const bool isSelectable = !flags[i].contains("\\noselect");
             if (mItemsMap.contains(currentPath)) {
-                //nothing
+                // nothing
             } else if (!parentPath.isEmpty()) {
                 Q_ASSERT(mItemsMap.contains(parentPath));
 

@@ -106,11 +106,11 @@ long Converter::absolute_from_gregorian(int year, int month, int day)
             day_number++;
         }
     }
-    return day_number         /* the day number within the current year */
-           + 365L * xyear     /* days in prior years */
-           + (xyear / 4)        /* Julian leap years */
-           + (-(xyear / 100))     /* deduct century years */
-           + (xyear / 400);     /* add Gregorian leap years */
+    return day_number /* the day number within the current year */
+        + 365L * xyear /* days in prior years */
+        + (xyear / 4) /* Julian leap years */
+        + (-(xyear / 100)) /* deduct century years */
+        + (xyear / 400); /* add Gregorian leap years */
 }
 
 /* Given a Hebrew date, calculate the number of days since January 0, 0001,
@@ -141,15 +141,9 @@ void Converter::gregorian_from_absolute(long date, int *yearp, int *monthp, int 
 {
     int year, month, day;
 
-    for (year = date / 366;
-         date >= absolute_from_gregorian(year + 1, 1, 1); ++year) {
-    }
+    for (year = date / 366; date >= absolute_from_gregorian(year + 1, 1, 1); ++year) { }
 
-    for (month = 1;
-         (month <= 11)
-         && (date >= absolute_from_gregorian(year, 1 + month, 1));
-         ++month) {
-    }
+    for (month = 1; (month <= 11) && (date >= absolute_from_gregorian(year, 1 + month, 1)); ++month) { }
 
     day = 1 + date - absolute_from_gregorian(year, month, 1);
     *yearp = year;
@@ -168,11 +162,7 @@ void Converter::hebrew_from_absolute(long date, int *yearp, int *monthp, int *da
         year++;
     }
     months = hebrew_months_in_year(year);
-    for (month = 7;
-         date > absolute_from_hebrew(year, month,
-                                     hebrew_month_length(year, month));
-         month = 1 + (month % months)) {
-    }
+    for (month = 7; date > absolute_from_hebrew(year, month, hebrew_month_length(year, month)); month = 1 + (month % months)) { }
     day = 1 + date - absolute_from_hebrew(year, month, 1);
     *yearp = year;
     *monthp = month;
@@ -305,7 +295,7 @@ bool Converter::hebrew_leap_year_p(int year)
 #define MEMORY 5
 long Converter::hebrew_elapsed_days(int year)
 {
-    static int saved_year[MEMORY] = { -1, -1, -1, -1, -1 };
+    static int saved_year[MEMORY] = {-1, -1, -1, -1, -1};
     static long saved_value[MEMORY];
     int i;
 
@@ -328,21 +318,18 @@ long Converter::hebrew_elapsed_days(int year)
 long Converter::hebrew_elapsed_days2(int year)
 {
     long prev_year = year - 1;
-    long months_elapsed = 235L * (prev_year / 19)
-                          +/* months in complete cycles so far */
-                          12L * (prev_year % 19)
-                          +/* regular months in this cycle */
-                          (((prev_year % 19) * 7 + 1) / 19);
+    long months_elapsed = 235L * (prev_year / 19) + /* months in complete cycles so far */
+        12L * (prev_year % 19) + /* regular months in this cycle */
+        (((prev_year % 19) * 7 + 1) / 19);
     /* leap months in this cycle */
     long parts_elapsed = 5604 + 13753 * months_elapsed;
     long day = 1 + 29 * months_elapsed + parts_elapsed / 25920;
     long parts = parts_elapsed % 25920;
     int weekday = day % 7;
-    long alt_day
-        = ((parts >= 19440)
-           || (weekday == 2 && (parts >= 9924) && !hebrew_leap_year_p(year))
-           || (weekday == 1 && (parts >= 16789) && hebrew_leap_year_p(prev_year)))
-          ? day + 1 : day;
+    long alt_day = ((parts >= 19440) || (weekday == 2 && (parts >= 9924) && !hebrew_leap_year_p(year))
+                    || (weekday == 1 && (parts >= 16789) && hebrew_leap_year_p(prev_year)))
+        ? day + 1
+        : day;
 
     switch (alt_day % 7) {
     case 0:

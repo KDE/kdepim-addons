@@ -7,25 +7,25 @@
 
 #include "cryptopageplugin.h"
 
-#include <qplugin.h>
 #include <QCheckBox>
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QLabel>
 #include <QLayout>
 #include <QPushButton>
+#include <qplugin.h>
 
-#include <kcontacts/addressee.h>
-#include <QComboBox>
-#include <QHBoxLayout>
 #include <KIconLoader>
 #include <KLocalizedString>
+#include <QComboBox>
+#include <QHBoxLayout>
+#include <kcontacts/addressee.h>
 
 #include "gpgme++/data.h"
 #include "gpgme++/key.h"
 
-#include <Libkleo/KeyRequester>
 #include <Libkleo/Enum>
+#include <Libkleo/KeyRequester>
 
 CryptoPagePlugin::CryptoPagePlugin()
 {
@@ -42,7 +42,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     uint msgFormat = 1;
     for (uint i = 0; i < NumberOfProtocols; ++i) {
         auto f = static_cast<Kleo::CryptoMessageFormat>(msgFormat);
-        mProtocolCB[ i ] = new QCheckBox(Kleo::cryptoMessageFormatToLabel(f), protGB);
+        mProtocolCB[i] = new QCheckBox(Kleo::cryptoMessageFormatToLabel(f), protGB);
         protGBLayout->addWidget(mProtocolCB[i]);
 
         // Iterating over a bitfield means *2 every time
@@ -79,8 +79,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     l->setBuddy(mSignPref);
     mSignPref->setEditable(false);
     for (unsigned int i = Kleo::UnknownSigningPreference; i < Kleo::MaxSigningPreference; ++i) {
-        mSignPref->addItem(Kleo::signingPreferenceToLabel(
-                               static_cast<Kleo::SigningPreference>(i)));
+        mSignPref->addItem(Kleo::signingPreferenceToLabel(static_cast<Kleo::SigningPreference>(i)));
     }
     boxLayout->addWidget(hbox);
 
@@ -97,8 +96,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     l->setBuddy(mCryptPref);
     mCryptPref->setEditable(false);
     for (unsigned int i = Kleo::UnknownPreference; i < Kleo::MaxEncryptionPreference; ++i) {
-        mCryptPref->addItem(Kleo::encryptionPreferenceToLabel(
-                                static_cast<Kleo::EncryptionPreference>(i)));
+        mCryptPref->addItem(Kleo::encryptionPreferenceToLabel(static_cast<Kleo::EncryptionPreference>(i)));
     }
     boxLayout->addWidget(hbox);
     box->setLayout(boxLayout);
@@ -115,7 +113,8 @@ QString CryptoPagePlugin::title() const
 
 void CryptoPagePlugin::loadContact(const KContacts::Addressee &contact)
 {
-    const QStringList protocolPrefs = contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF")).split(QLatin1Char(','), Qt::SkipEmptyParts);
+    const QStringList protocolPrefs =
+        contact.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOPROTOPREF")).split(QLatin1Char(','), Qt::SkipEmptyParts);
     const uint cryptoFormats = Kleo::stringListToCryptoMessageFormats(protocolPrefs);
 
     uint msgFormat = 1;
@@ -138,7 +137,7 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
     uint cryptoFormats = 0;
     uint msgFormat = 1;
     for (uint i = 0; i < NumberOfProtocols; ++i, msgFormat *= 2) {
-        if (mProtocolCB[ i ]->isChecked()) {
+        if (mProtocolCB[i]->isChecked()) {
             cryptoFormats |= msgFormat;
         }
     }
@@ -159,7 +158,9 @@ void CryptoPagePlugin::storeContact(KContacts::Addressee &contact) const
 
     const auto encryptPref = static_cast<Kleo::EncryptionPreference>(mCryptPref->currentIndex());
     if (encryptPref != Kleo::UnknownPreference) {
-        contact.insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"), QLatin1String(Kleo::encryptionPreferenceToString(encryptPref)));
+        contact.insertCustom(QStringLiteral("KADDRESSBOOK"),
+                             QStringLiteral("CRYPTOENCRYPTPREF"),
+                             QLatin1String(Kleo::encryptionPreferenceToString(encryptPref)));
     } else {
         contact.removeCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("CRYPTOENCRYPTPREF"));
     }
@@ -184,7 +185,7 @@ void CryptoPagePlugin::setReadOnly(bool readOnly)
 {
     mReadOnly = readOnly;
     for (uint i = 0; i < NumberOfProtocols; ++i) {
-        mProtocolCB[ i ]->setEnabled(!readOnly);
+        mProtocolCB[i]->setEnabled(!readOnly);
     }
 
     mSignPref->setEnabled(!readOnly);

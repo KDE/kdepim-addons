@@ -5,16 +5,16 @@
 */
 
 #include "briefheaderstyleplugintest.h"
-#include "utils.h"
-#include "../briefheaderstyleplugin/briefheaderstyleplugin.h"
 #include "../briefheaderstyleplugin/briefheaderstyleinterface.h"
+#include "../briefheaderstyleplugin/briefheaderstyleplugin.h"
+#include "utils.h"
 
 #include <MessageViewer/HeaderStyle>
 
-#include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+#include <QTest>
 
 BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
@@ -76,7 +76,7 @@ void BriefHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".brief"));
+    testHeaderFile(style->format(aMsg.data()), mailbox + QStringLiteral(".brief"));
 }
 
 QTEST_MAIN(BriefHeaderStylePluginTest)

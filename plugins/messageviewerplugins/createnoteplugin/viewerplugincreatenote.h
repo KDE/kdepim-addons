@@ -9,7 +9,8 @@
 
 #include <MessageViewer/ViewerPlugin>
 #include <QVariant>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class ViewerPluginCreatenote : public MessageViewer::ViewerPlugin
 {
     Q_OBJECT

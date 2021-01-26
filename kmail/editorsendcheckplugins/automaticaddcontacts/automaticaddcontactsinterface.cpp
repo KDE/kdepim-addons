@@ -7,9 +7,9 @@
 #include "automaticaddcontactsinterface.h"
 #include "automaticaddcontactsjob.h"
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
+#include <KSharedConfig>
 
 AutomaticAddContactsInterface::AutomaticAddContactsInterface(QObject *parent)
     : MessageComposer::PluginEditorCheckBeforeSendInterface(parent)
@@ -36,7 +36,7 @@ bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorChec
                 lst << params.toAddresses();
             }
             if (!lst.isEmpty()) {
-                //Don't delete it, it's autodelete
+                // Don't delete it, it's autodelete
                 auto *job = new AutomaticAddContactsJob;
                 job->setCollection(setting.mContactCollection);
                 job->setEmails(lst);

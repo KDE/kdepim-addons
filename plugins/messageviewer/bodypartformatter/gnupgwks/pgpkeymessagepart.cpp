@@ -8,8 +8,8 @@
 
 #include <QProcess>
 
-#include <MimeTreeParser/BodyPart>
 #include <KMime/Content>
+#include <MimeTreeParser/BodyPart>
 
 PgpKeyMessagePart::PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())
@@ -78,14 +78,12 @@ void PgpKeyMessagePart::parseContent(KMime::Content *node)
     // TODO if GpgME dependency is 1.9.0 this can use
     // GpgME::Data::toKeys
     //
-    //something like:
+    // something like:
     // QGpgME::QByteArrayDataProvider dp(node->decodedContent());
     // Data data(&dp);
     // std::vector <Key> keys = data.toKeys();
     QProcess p;
-    p.start(QStringLiteral("gpg"), { QStringLiteral("--with-colons"),
-                                     QStringLiteral("--fixed-list-mode"),
-                                     QStringLiteral("--with-fingerprint")});
+    p.start(QStringLiteral("gpg"), {QStringLiteral("--with-colons"), QStringLiteral("--fixed-list-mode"), QStringLiteral("--with-fingerprint")});
     p.waitForStarted();
     p.write(node->decodedContent());
     p.closeWriteChannel();

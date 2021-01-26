@@ -7,11 +7,13 @@
 #define EMAILADDRESSSELECTIONLDAPDIALOG_H
 
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
-namespace Akonadi {
+namespace Akonadi
+{
 class RecipientsPickerWidget;
 }
 
-namespace PimCommon {
+namespace PimCommon
+{
 class LdapSearchDialog;
 }
 
@@ -24,6 +26,7 @@ public:
 
     Akonadi::EmailAddressSelection::List selectedAddresses() const override;
     Akonadi::EmailAddressSelectionWidget *view() const override;
+
 private:
     void writeConfig();
     void readConfig();

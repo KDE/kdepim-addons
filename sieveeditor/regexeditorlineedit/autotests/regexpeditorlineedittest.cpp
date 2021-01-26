@@ -6,10 +6,10 @@
 
 #include "regexpeditorlineedittest.h"
 #include "../regexpeditorlineedit.h"
-#include <QLineEdit>
-#include <QToolButton>
-#include <QTest>
 #include <QHBoxLayout>
+#include <QLineEdit>
+#include <QTest>
+#include <QToolButton>
 
 RegexpEditorLineEditTest::RegexpEditorLineEditTest(QObject *parent)
     : QObject(parent)

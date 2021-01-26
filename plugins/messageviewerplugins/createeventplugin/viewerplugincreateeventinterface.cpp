@@ -5,13 +5,13 @@
 */
 
 #include "viewerplugincreateeventinterface.h"
-#include "eventedit.h"
 #include "createeventjob.h"
+#include "eventedit.h"
 #include <KLocalizedString>
 
 #include <KActionCollection>
-#include <QIcon>
 #include <QAction>
+#include <QIcon>
 #include <QLayout>
 
 using namespace MessageViewer;
@@ -34,7 +34,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateEventInterface::fe
 void ViewerPluginCreateEventInterface::setText(const QString &text)
 {
     Q_UNUSED(text)
-    //Nothing
+    // Nothing
 }
 
 QList<QAction *> ViewerPluginCreateEventInterface::actions() const

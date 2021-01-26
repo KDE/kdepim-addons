@@ -4,9 +4,9 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "markdowndemowidget.h"
 #include <QApplication>
 #include <QStandardPaths>
-#include "markdowndemowidget.h"
 
 int main(int argc, char **argv)
 {

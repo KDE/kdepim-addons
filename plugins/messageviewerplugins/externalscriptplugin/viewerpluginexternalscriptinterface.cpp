@@ -4,14 +4,14 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "viewerpluginexternalscriptinterface.h"
-#include "viewerpluginexternalscriptmanager.h"
 #include "externalscriptplugin_debug.h"
+#include "viewerpluginexternalscriptmanager.h"
 #include "viewerpluginexternalscriptparseargument.h"
 
-#include <QIcon>
 #include <QAction>
-#include <QStandardPaths>
+#include <QIcon>
 #include <QProcess>
+#include <QStandardPaths>
 
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -108,9 +108,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                     act->setIcon(QIcon::fromTheme(icon));
                 }
                 ac->addAction(QStringLiteral("externalscript_%1").arg(info.name()), act);
-                const QStringList actionInfo {
-                    info.commandLine(), info.executable()
-                };
+                const QStringList actionInfo{info.commandLine(), info.executable()};
 
                 act->setData(actionInfo);
                 mAction.append(act);

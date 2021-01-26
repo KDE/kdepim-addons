@@ -7,11 +7,11 @@
 #include "viewerplugintranslatorinterface.h"
 #include <PimCommon/TranslatorWidget>
 
-#include <QIcon>
-#include <QAction>
-#include <QLayout>
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <QAction>
+#include <QIcon>
+#include <QLayout>
 
 using namespace MessageViewer;
 

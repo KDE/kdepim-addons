@@ -7,8 +7,8 @@
 #include "externalcomposerconfiguredialogtest.h"
 #include "../externalcomposerconfiguredialog.h"
 #include "../externalcomposerconfigurewidget.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 ExternalComposerConfigureDialogTest::ExternalComposerConfigureDialogTest(QObject *parent)
     : QObject(parent)

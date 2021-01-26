@@ -7,7 +7,6 @@
 #include "grammarerror.h"
 #include "grammarcommon_debug.h"
 
-
 GrammarError::GrammarError()
 {
 }
@@ -90,17 +89,11 @@ void GrammarError::parse(const QJsonObject &obj, int blockindex)
     Q_UNUSED(blockindex)
 }
 
-bool GrammarError::operator ==(const GrammarError &other) const
+bool GrammarError::operator==(const GrammarError &other) const
 {
-    return (mBlockId == other.blockId())
-           && (mLength == other.length())
-           && (mStart == other.start())
-           && (mColor == other.color())
-           && (mSuggestions == other.suggestions())
-           && (mError == other.error())
-           && (mOption == other.option())
-           && (mRule == other.rule())
-           && (mUrl == other.url());
+    return (mBlockId == other.blockId()) && (mLength == other.length()) && (mStart == other.start()) && (mColor == other.color())
+        && (mSuggestions == other.suggestions()) && (mError == other.error()) && (mOption == other.option()) && (mRule == other.rule())
+        && (mUrl == other.url());
 }
 
 QString GrammarError::url() const
@@ -133,7 +126,7 @@ void GrammarError::setOption(const QString &option)
     mOption = option;
 }
 
-QDebug operator <<(QDebug d, const GrammarError &t)
+QDebug operator<<(QDebug d, const GrammarError &t)
 {
     d << "mError: " << t.error();
     d << "Start: " << t.start();

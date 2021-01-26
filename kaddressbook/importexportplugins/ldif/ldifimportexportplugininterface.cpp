@@ -5,22 +5,22 @@
 */
 
 #include "ldifimportexportplugininterface.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
-#include <QFileDialog>
-#include <QFile>
-#include <QTextStream>
-#include <KMessageBox>
-#include <QTemporaryFile>
-#include <KJobWidgets>
-#include <QPointer>
-#include <KIOCore/kio/filecopyjob.h>
-#include <PimCommon/RenameFileDialog>
 #include <KContacts/LDIFConverter>
+#include <KIOCore/kio/filecopyjob.h>
+#include <KJobWidgets>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <PimCommon/RenameFileDialog>
+#include <QAction>
+#include <QFile>
+#include <QFileDialog>
+#include <QPointer>
+#include <QTemporaryFile>
+#include <QTextStream>
 
-#include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ContactList>
+#include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ImportExportEngine>
 
 LDifImportExportPluginInterface::LDifImportExportPluginInterface(QObject *parent)
@@ -119,8 +119,8 @@ void doExport(QFile *file, const KAddressBookImportExport::ContactList &list)
 
 void LDifImportExportPluginInterface::exportLdif()
 {
-    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
-        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg =
+        new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -139,9 +139,12 @@ void LDifImportExportPluginInterface::exportLdif()
     contactLists.setAddressList(contacts);
 
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    const QUrl url
-        = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.ldif")),
-                                      i18n("LDif Files (*.ldif)"), nullptr, options);
+    const QUrl url = QFileDialog::getSaveFileUrl(parentWidget(),
+                                                 QString(),
+                                                 QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.ldif")),
+                                                 i18n("LDif Files (*.ldif)"),
+                                                 nullptr,
+                                                 options);
     if (url.isEmpty()) {
         return;
     }

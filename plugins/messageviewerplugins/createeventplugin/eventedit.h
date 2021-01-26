@@ -10,16 +10,18 @@
 #include <QWidget>
 
 #include <AkonadiCore/Collection>
-#include <KMime/Message>
 #include <KCalendarCore/Event>
+#include <KMime/Message>
 
 class QLineEdit;
 class QPushButton;
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class EventDateTimeWidget;
 class EventEdit : public QWidget
 {
@@ -55,6 +57,7 @@ Q_SIGNALS:
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
+
 private:
     KCalendarCore::Event::Ptr createEventItem();
     void readConfig();

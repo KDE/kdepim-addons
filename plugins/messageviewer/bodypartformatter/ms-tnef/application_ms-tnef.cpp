@@ -6,9 +6,9 @@
 
 #include "ms_tnef_debug.h"
 
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
-#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessageViewerUtil>
 #include <MessageViewer/MimeType>
 
@@ -19,16 +19,16 @@
 #include <MimeTreeParser/NodeHelper>
 
 #include <KCalendarCore/Event>
-#include <KCalendarCore/Incidence>
 #include <KCalendarCore/ICalFormat>
+#include <KCalendarCore/Incidence>
 #include <KCalendarCore/MemoryCalendar>
 
 #include <KCalUtils/IncidenceFormatter>
 
 #include <ktnef/formatter.h>
-#include <ktnef/ktnefparser.h>
-#include <ktnef/ktnefmessage.h>
 #include <ktnef/ktnefattach.h>
+#include <ktnef/ktnefmessage.h>
+#include <ktnef/ktnefparser.h>
 
 #include <grantlee/template.h>
 
@@ -37,7 +37,8 @@
 
 #include <QFile>
 
-namespace {
+namespace
+{
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -50,8 +51,7 @@ public:
         }
 
         const QByteArray mimetype = mp->content()->contentType()->mimeType();
-        if (mimetype != QByteArrayLiteral("application/vnd.ms-tnef")
-            && mimetype != QByteArrayLiteral("application/ms-tnef")) {
+        if (mimetype != QByteArrayLiteral("application/vnd.ms-tnef") && mimetype != QByteArrayLiteral("application/ms-tnef")) {
             return false;
         }
 
@@ -73,8 +73,7 @@ public:
             f.close();
         }
         if (!buf.isEmpty()) {
-            const KCalendarCore::MemoryCalendar::Ptr cl(
-                new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
+            const KCalendarCore::MemoryCalendar::Ptr cl(new KCalendarCore::MemoryCalendar(QTimeZone::systemTimeZone()));
             KCalUtils::InvitationFormatterHelper helper;
             const QString invite = KTnef::formatTNEFInvitation(buf, cl, &helper);
             KCalendarCore::ICalFormat format;
@@ -90,46 +89,45 @@ public:
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([&](Grantlee::OutputStream *stream) {
-                const auto tnefatts = parser.message()->attachmentList();
-                if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
-                    qCDebug(MS_TNEF_LOG) << "No attachments or invitation found in" << fileName;
-                    (*stream) << QStringLiteral("&nbsp;&lt;") << i18nc("TNEF attachment has no content", "empty") << QStringLiteral("&gt;");
-                    return;
-                }
+                     const auto tnefatts = parser.message()->attachmentList();
+                     if (tnefatts.isEmpty() && inviteStr.isEmpty()) {
+                         qCDebug(MS_TNEF_LOG) << "No attachments or invitation found in" << fileName;
+                         (*stream) << QStringLiteral("&nbsp;&lt;") << i18nc("TNEF attachment has no content", "empty") << QStringLiteral("&gt;");
+                         return;
+                     }
 
-                if (!inviteStr.isEmpty()) {
-                    (*stream) <<  inviteStr;
-                }
+                     if (!inviteStr.isEmpty()) {
+                         (*stream) << inviteStr;
+                     }
 
-                const int numberOfTnef(tnefatts.count());
-                for (int i = 0; i < numberOfTnef; ++i) {
-                    KTnef::KTNEFAttach *att = tnefatts.at(i);
-                    QString label = att->displayName();
-                    if (label.isEmpty()) {
-                        label = att->name();
-                    }
-                    label = MessageCore::StringUtil::quoteHtmlChars(label, true);
+                     const int numberOfTnef(tnefatts.count());
+                     for (int i = 0; i < numberOfTnef; ++i) {
+                         KTnef::KTNEFAttach *att = tnefatts.at(i);
+                         QString label = att->displayName();
+                         if (label.isEmpty()) {
+                             label = att->name();
+                         }
+                         label = MessageCore::StringUtil::quoteHtmlChars(label, true);
 
-                    const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
-                    parser.extractFileTo(att->name(), dir);
+                         const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
+                         parser.extractFileTo(att->name(), dir);
 
-                    // falling back to internal TNEF attachement name if no filename is given for the attached file
-                    // this follows the logic of KTNEFParser::extractFileTo(...)
-                    QString attFileName = att->fileName();
-                    if (attFileName.isEmpty()) {
-                        attFileName = att->name();
-                    }
-                    mp->nodeHelper()->addTempFile(dir + QLatin1Char('/') + attFileName);
-                    const QString href = QLatin1String("file:") + dir + QLatin1Char('/') + attFileName;
+                         // falling back to internal TNEF attachement name if no filename is given for the attached file
+                         // this follows the logic of KTNEFParser::extractFileTo(...)
+                         QString attFileName = att->fileName();
+                         if (attFileName.isEmpty()) {
+                             attFileName = att->name();
+                         }
+                         mp->nodeHelper()->addTempFile(dir + QLatin1Char('/') + attFileName);
+                         const QString href = QLatin1String("file:") + dir + QLatin1Char('/') + attFileName;
 
-                    const QString iconName = QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(),
-                                                                                                          KIconLoader::Desktop, attFileName)).url();
+                         const QString iconName =
+                             QUrl::fromLocalFile(MessageViewer::Util::iconPathForMimetype(att->mimeTag(), KIconLoader::Desktop, attFileName)).url();
 
-                    (*stream) << QStringLiteral("<div><a href=\"") << href << QStringLiteral("\"><img src=\"")
-                              << iconName << QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") << label
-                              << QStringLiteral("</a></div><br/>");
-                }
-            }));
+                         (*stream) << QStringLiteral("<div><a href=\"") << href << QStringLiteral("\"><img src=\"") << iconName
+                                   << QStringLiteral("\" border=\"0\" style=\"max-width: 100%\"/>") << label << QStringLiteral("</a></div><br/>");
+                     }
+                 }));
 
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());

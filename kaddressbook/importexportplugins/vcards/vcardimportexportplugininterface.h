@@ -7,8 +7,8 @@
 #ifndef VCARDIMPORTEXPORTPLUGININTERFACE_H
 #define VCARDIMPORTEXPORTPLUGININTERFACE_H
 
-#include <KAddressBookImportExport/PluginInterface>
 #include <KAddressBookImportExport/ExportSelectionWidget>
+#include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
 
 class VCardImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
@@ -21,14 +21,12 @@ public:
     void createAction(KActionCollection *ac) override;
     void exec() override;
     Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
+
 private:
-    enum ExportVCardType {
-        VCard2_1 = 0,
-        VCard3,
-        VCard4
-    };
+    enum ExportVCardType { VCard2_1 = 0, VCard3, VCard4 };
     KContacts::Addressee::List parseVCard(const QByteArray &data) const;
-    KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList, KAddressBookImportExport::ExportSelectionWidget::ExportFields exportFieldType) const;
+    KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList,
+                                              KAddressBookImportExport::ExportSelectionWidget::ExportFields exportFieldType) const;
     void addKey(KContacts::Addressee &addr, KContacts::Key::Type type) const;
 
     void exportVCard();

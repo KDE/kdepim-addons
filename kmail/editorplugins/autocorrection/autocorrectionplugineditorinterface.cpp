@@ -5,11 +5,11 @@
 */
 
 #include "autocorrectionplugineditorinterface.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
 #include <KActionMenu>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
+#include <QAction>
 
 AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

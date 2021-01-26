@@ -5,12 +5,12 @@
 */
 
 #include "languagetoolplugin.h"
-#include "languagetoolinterface.h"
 #include "languagetoolconfigdialog.h"
+#include "languagetoolinterface.h"
 #include "languagetoolmanager.h"
-#include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <PimCommon/CustomToolsWidgetng>
 
 #include <QPointer>
 

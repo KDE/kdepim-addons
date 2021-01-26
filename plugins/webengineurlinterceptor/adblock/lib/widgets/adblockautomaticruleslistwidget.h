@@ -7,9 +7,10 @@
 #ifndef ADBLOCKAUTOMATICRULESLISTWIDGET_H
 #define ADBLOCKAUTOMATICRULESLISTWIDGET_H
 
-#include <QListWidget>
 #include "adblocklib_export.h"
-namespace AdBlock {
+#include <QListWidget>
+namespace AdBlock
+{
 class ADBLOCKLIB_EXPORT AdBlockAutomaticRulesListWidget : public QListWidget
 {
     Q_OBJECT

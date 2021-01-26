@@ -11,8 +11,8 @@
 
 #include "kaddressbook_sendmailplugin_debug.h"
 #include <KEmailAddress>
-#include <KLocalizedString>
 #include <KJob>
+#include <KLocalizedString>
 
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
@@ -40,7 +40,7 @@ void MailSenderJob::start()
             const QString preferredEmail = contact.preferredEmail();
             if (!preferredEmail.isEmpty() && !mEmailAddresses.contains(preferredEmail)) {
                 if (KEmailAddress::isValidSimpleAddress(contact.preferredEmail())) {
-                    mEmailAddresses <<  KEmailAddress::normalizedAddress(contact.formattedName(), preferredEmail);
+                    mEmailAddresses << KEmailAddress::normalizedAddress(contact.formattedName(), preferredEmail);
                 }
             }
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
@@ -115,7 +115,7 @@ void MailSenderJob::slotFetchJobFinished(KJob *job)
 
     if (!contact.preferredEmail().isEmpty()) {
         if (KEmailAddress::isValidSimpleAddress(contact.preferredEmail())) {
-            mEmailAddresses <<  KEmailAddress::normalizedAddress(contact.formattedName(), contact.preferredEmail());
+            mEmailAddresses << KEmailAddress::normalizedAddress(contact.formattedName(), contact.preferredEmail());
         }
     }
     fetchNextItem();

@@ -10,7 +10,8 @@
 #include <MessageViewer/HeaderStyleInterface>
 
 class KActionCollection;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class BriefHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT

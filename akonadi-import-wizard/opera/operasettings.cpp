@@ -8,8 +8,8 @@
 #include "operaplugin_debug.h"
 #include <MailImporter/FilterOpera>
 
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
+#include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -63,7 +63,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
 
     const bool enableManualCheck = (grp.readEntry(QStringLiteral("Manual Check Enabled"), 0) == 1);
 
-    //TODO
+    // TODO
     const bool markAsSeen = (grp.readEntry(QStringLiteral("Mark Read If Seen"), 0) == 1);
     Q_UNUSED(markAsSeen)
 
@@ -89,7 +89,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
 
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, settings);
         addToManualCheck(agentIdentifyName, enableManualCheck);
-        //We have not settings for it => same than manual check
+        // We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
     } else if (incomingProtocol == QLatin1String("POP")) {
         settings.insert(QStringLiteral("Host"), serverName);
@@ -108,16 +108,16 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         if (removeMailFromSever == 1) {
             int removeDelay = grp.readEntry(QStringLiteral("Remove From Server Delay"), -1);
             if (removeDelay != -1) {
-                //Opera store delay as second !!! :)
+                // Opera store delay as second !!! :)
                 removeDelay = removeDelay / (24 * 60 * 60);
                 settings.insert(QStringLiteral("LeaveOnServerDays"), removeDelay);
             }
-        } //TODO: else
+        } // TODO: else
 
         if (port != -1) {
             settings.insert(QStringLiteral("Port"), port);
         }
-        //TODO:
+        // TODO:
         const int delay = grp.readEntry(QStringLiteral("Initial Poll Delay"), -1);
         Q_UNUSED(delay)
 
@@ -133,20 +133,20 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         }
 
         switch (authMethod) {
-        case 0: //NONE
+        case 0: // NONE
             settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::ANONYMOUS);
             break;
-        case 1: //Clear Text
-            settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CLEAR);   //Verify
+        case 1: // Clear Text
+            settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CLEAR); // Verify
             break;
-        case 6: //APOP
+        case 6: // APOP
             settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::APOP);
             break;
-        case 10: //CRAM-MD5
+        case 10: // CRAM-MD5
             settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
             break;
-        case 31: //Automatic
-            settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::APOP);   //TODO: verify
+        case 31: // Automatic
+            settings.insert(QStringLiteral("AuthenticationMethod"), MailTransport::Transport::EnumAuthenticationType::APOP); // TODO: verify
             break;
         default:
             qCDebug(OPERAPLUGIN_LOG) << " unknown authentication method :" << authMethod;
@@ -154,7 +154,7 @@ void OperaSettings::readAccount(const KConfigGroup &grp)
         }
 
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_pop3_resource"), name, settings);
-        //We have not settings for it => same than manual check
+        // We have not settings for it => same than manual check
         addCheckMailOnStartup(agentIdentifyName, enableManualCheck);
         addToManualCheck(agentIdentifyName, enableManualCheck);
     } else {
@@ -185,29 +185,29 @@ void OperaSettings::readTransport(const KConfigGroup &grp)
             mt->setUserName(userName);
         }
 
-        const int outgoingTimeOut = grp.readEntry(QStringLiteral("Outgoing Timeout"), -1); //TODO ?
+        const int outgoingTimeOut = grp.readEntry(QStringLiteral("Outgoing Timeout"), -1); // TODO ?
         Q_UNUSED(outgoingTimeOut)
 
         switch (authMethod) {
-        case 0: //NONE
+        case 0: // NONE
             break;
-        case 2: //PLAIN
+        case 2: // PLAIN
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN);
             break;
-        case 5: //LOGIN
+        case 5: // LOGIN
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::LOGIN);
             break;
-        case 10: //CRAM-MD5
+        case 10: // CRAM-MD5
             mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::CRAM_MD5);
             break;
-        case 31: //Automatic
-            mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN); //Don't know... Verify
+        case 31: // Automatic
+            mt->setAuthenticationType(MailTransport::Transport::EnumAuthenticationType::PLAIN); // Don't know... Verify
             break;
         default:
             qCDebug(OPERAPLUGIN_LOG) << " authMethod unknown :" << authMethod;
         }
 
-        //We can't specify a default smtp...
+        // We can't specify a default smtp...
         storeTransport(mt, true);
     }
 }
@@ -278,5 +278,5 @@ void OperaSettings::readIdentity(const KConfigGroup &grp)
 void OperaSettings::readGlobalAccount(const KConfigGroup &grp)
 {
     Q_UNUSED(grp)
-    //TODO
+    // TODO
 }

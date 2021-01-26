@@ -6,13 +6,14 @@
 
 #include "dkimauthenticationverifiedserverdialog.h"
 #include "dkimauthenticationverifiedserverwidget.h"
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "DKIMAuthenticationVerifiedServerDialog";
 }
 

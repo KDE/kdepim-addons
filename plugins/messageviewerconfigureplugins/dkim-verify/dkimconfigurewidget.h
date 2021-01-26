@@ -7,8 +7,8 @@
 #ifndef DKIMCONFIGUREWIDGET_H
 #define DKIMCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <QWidget>
 
 class DKIMConfigureTab;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMConfigureWidget : public QWidget
@@ -21,6 +21,7 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+
 private:
     DKIMConfigureTab *const mTabWidget;
 };

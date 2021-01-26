@@ -5,14 +5,14 @@
 */
 
 #include "todoedittest.h"
-#include "globalsettings_messageviewer.h"
 #include "../createtodoplugin/todoedit.h"
+#include "globalsettings_messageviewer.h"
 #include <AkonadiCore/Collection>
-#include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
-#include <QStandardItemModel>
-#include <QPushButton>
+#include <AkonadiWidgets/CollectionComboBox>
 #include <KMessageWidget>
+#include <QPushButton>
+#include <QStandardItemModel>
 #include <QTest>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
@@ -21,7 +21,8 @@
 #include <QShortcut>
 #include <QSignalSpy>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
 }
 
@@ -40,10 +41,8 @@ TodoEditTest::TodoEditTest()
         collection.setContentMimeTypes(QStringList() << KCalendarCore::Todo::todoMimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         model->appendRow(item);
     }
@@ -525,7 +524,7 @@ void TodoEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmp
 {
     MessageViewer::TodoEdit edit;
     auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
-    //Create an empty combobox
+    // Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel());
 
     KMime::Message::Ptr msg(new KMime::Message);

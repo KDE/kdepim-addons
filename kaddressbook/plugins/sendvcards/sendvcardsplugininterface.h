@@ -22,6 +22,7 @@ public:
     Q_REQUIRED_RESULT PimCommon::GenericPluginInterface::RequireTypes requires() const override;
 
     void updateActions(int numberOfSelectedItems, int numberOfSelectedCollections) override;
+
 private:
     void slotActivated();
     void slotSendVcardsError(const QString &error);

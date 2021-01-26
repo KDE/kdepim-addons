@@ -9,7 +9,8 @@
 
 #include <MessageViewer/HeaderStrategy>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class GrantleeHeaderStrategy : public HeaderStrategy
 {
 public:

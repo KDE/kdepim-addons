@@ -7,8 +7,8 @@
 #ifndef FOLDERCONFIGURESETTINGSDIALOG_H
 #define FOLDERCONFIGURESETTINGSDIALOG_H
 
-#include <QDialog>
 #include "libfolderconfiguresettings_export.h"
+#include <QDialog>
 class FolderConfigureSettingsWidget;
 class LIBFOLDERCONFIGURESETTINGS_EXPORT FolderConfigureSettingsDialog : public QDialog
 {

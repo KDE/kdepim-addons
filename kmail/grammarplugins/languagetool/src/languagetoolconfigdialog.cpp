@@ -6,13 +6,14 @@
 
 #include "languagetoolconfigdialog.h"
 #include "languagetoolconfigwidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "LanguageToolConfigDialog";
 }
 LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)

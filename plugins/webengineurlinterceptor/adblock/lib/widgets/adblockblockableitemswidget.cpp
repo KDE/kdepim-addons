@@ -7,22 +7,22 @@
 #include "adblockblockableitemswidget.h"
 #include "adblockcreatefilterdialog.h"
 #include "adblockinterceptor_debug.h"
-#include "adblockutil.h"
 #include "adblockmanager.h"
-#include <WebEngineViewer/WebEngineScript>
+#include "adblockutil.h"
+#include <CustomTreeView>
+#include <KConfigGroup>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
-#include <QVBoxLayout>
 #include <KLocalizedString>
-#include <CustomTreeView>
-#include <KTreeWidgetSearchLine>
-#include <KConfigGroup>
 #include <KSharedConfig>
+#include <KTreeWidgetSearchLine>
+#include <QApplication>
+#include <QClipboard>
 #include <QHeaderView>
 #include <QMenu>
-#include <QClipboard>
-#include <QApplication>
 #include <QPointer>
+#include <QVBoxLayout>
+#include <WebEngineViewer/WebEngineScript>
 #include <adblockblockableitemsjob.h>
 using namespace AdBlock;
 
@@ -64,7 +64,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         switch (res.type) {
         case AdBlock::AdBlockBlockableItemsJob::UnKnown:
             qCDebug(ADBLOCKINTERCEPTOR_LOG) << " unknown adblock type : " << res.src;
-            //TODO ?
+            // TODO ?
             break;
         case AdBlock::AdBlockBlockableItemsJob::Image:
             item->setText(Type, elementTypeToI18n(AdBlockBlockableItemsWidget::Image));
@@ -78,7 +78,7 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         item->setForeground(FilterValue, Qt::red);
     }
     mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
-    //TODO read existing list for enable/disable it.
+    // TODO read existing list for enable/disable it.
 }
 
 void AdBlockBlockableItemsWidget::saveFilters()

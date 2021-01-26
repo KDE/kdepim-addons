@@ -30,12 +30,7 @@ private:
     void zoomReset();
     void zoomIn();
     void zoomOut();
-    enum ZoomTextType {
-        Unknown = -1,
-        ZoomReset = 0,
-        ZoomIn,
-        ZoomOut
-    };
+    enum ZoomTextType { Unknown = -1, ZoomReset = 0, ZoomIn, ZoomOut };
     ZoomTextType mType = Unknown;
     ZoomLabel *mZoomLabelWidget = nullptr;
 };

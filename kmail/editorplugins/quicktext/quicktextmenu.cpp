@@ -5,8 +5,8 @@
 */
 
 #include "quicktextmenu.h"
-#include <MessageComposer/PluginComposerInterface>
 #include <MessageComposer/ConvertSnippetVariableMenu>
+#include <MessageComposer/PluginComposerInterface>
 #include <QMenu>
 
 QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)

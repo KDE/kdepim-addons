@@ -5,16 +5,15 @@
 */
 
 #include "oeimportdata.h"
-#include <MailImporter/FilterOE>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterOE>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(OEImporterFactory, "oeimporter.json", registerPlugin<OeImportData>();
-                           )
+K_PLUGIN_FACTORY_WITH_JSON(OEImporterFactory, "oeimporter.json", registerPlugin<OeImportData>();)
 
 OeImportData::OeImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
@@ -29,7 +28,7 @@ OeImportData::~OeImportData()
 bool OeImportData::foundMailer() const
 {
 #ifdef Q_OS_WIN
-    //TODO find a method to search it. Perhaps look at binary.
+    // TODO find a method to search it. Perhaps look at binary.
     QDir directory(mPath);
     if (directory.exists()) {
         return true;

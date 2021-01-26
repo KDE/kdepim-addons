@@ -1,17 +1,18 @@
- /*
-   SPDX-FileCopyrightText: 2019-2021 Laurent Montel <montel@kde.org>
+/*
+  SPDX-FileCopyrightText: 2019-2021 Laurent Montel <montel@kde.org>
 
-   SPDX-License-Identifier: GPL-2.0-or-later
+  SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #ifndef QUICKTEXTWIDGET_H
 #define QUICKTEXTWIDGET_H
 
+#include "quicktext_export.h"
 #include <QModelIndex>
 #include <QWidget>
-#include "quicktext_export.h"
 class QuicktextTreeWidget;
-namespace MailCommon {
+namespace MailCommon
+{
 class SnippetWidget;
 }
 class QuicktextManager;
@@ -28,13 +29,7 @@ public:
     void exportQuickText();
 
 private:
-    enum class EditMode {
-        AddSnippet,
-        EditSnippet,
-        AddGroup,
-        EditGroup,
-        Unknown
-    };
+    enum class EditMode { AddSnippet, EditSnippet, AddGroup, EditGroup, Unknown };
     void addSnippet();
     void editSnippet();
     void addSnippetGroup();

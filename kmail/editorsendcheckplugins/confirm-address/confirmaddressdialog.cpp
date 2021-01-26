@@ -6,13 +6,13 @@
 
 #include "confirmaddressdialog.h"
 #include "confirmaddresswidget.h"
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
-#include <QVBoxLayout>
 #include <QPushButton>
-#include <KMessageBox>
+#include <QVBoxLayout>
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)

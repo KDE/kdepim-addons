@@ -6,16 +6,16 @@
 
 #include "grammalecteconfigwidgettest.h"
 #include "grammalecteconfigwidget.h"
+#include <KUrlRequester>
+#include <QFormLayout>
+#include <QLabel>
+#include <QScrollArea>
+#include <QStackedWidget>
+#include <QStandardPaths>
 #include <QTabWidget>
 #include <QTest>
-#include <QVBoxLayout>
-#include <QStandardPaths>
-#include <QFormLayout>
-#include <KUrlRequester>
-#include <QStackedWidget>
-#include <QScrollArea>
-#include <QLabel>
 #include <QToolButton>
+#include <QVBoxLayout>
 QTEST_MAIN(GrammalecteConfigWidgetTest)
 GrammalecteConfigWidgetTest::GrammalecteConfigWidgetTest(QObject *parent)
     : QObject(parent)

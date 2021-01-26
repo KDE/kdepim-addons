@@ -16,8 +16,8 @@
 #include "mailtransport/private/transportconfigwidget_p.h"
 #include "ui_sendmailsettings.h"
 
-#include <QStandardPaths>
 #include <KLineEdit>
+#include <QStandardPaths>
 
 using namespace MailTransport;
 
@@ -44,7 +44,7 @@ void SendmailConfigWidget::init()
     Q_D(SendmailConfigWidget);
 
     d->ui.setupUi(this);
-    d->ui.kcfg_host->setMode(KFile::File|KFile::ExistingOnly|KFile::LocalOnly);
+    d->ui.kcfg_host->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     d->ui.kcfg_host->setFocus();
     d->manager->addWidget(this); // otherwise it doesn't find out about these widgets
     d->manager->updateWidgets();
@@ -55,8 +55,7 @@ void SendmailConfigWidget::init()
         // is saved in the config.
         d->ui.kcfg_host->setText(QStandardPaths::findExecutable(QStringLiteral("sendmail")));
     }
-    connect(d->ui.kcfg_host->lineEdit(), qOverload<const QString &>(&QLineEdit::textChanged),
-            this, &SendmailConfigWidget::slotTextChanged);
+    connect(d->ui.kcfg_host->lineEdit(), qOverload<const QString &>(&QLineEdit::textChanged), this, &SendmailConfigWidget::slotTextChanged);
     slotTextChanged(d->ui.kcfg_host->text());
 }
 

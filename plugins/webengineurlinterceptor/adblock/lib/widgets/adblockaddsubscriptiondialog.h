@@ -11,7 +11,8 @@
 
 class QComboBox;
 class QToolButton;
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockAddSubscriptionDialog : public QDialog
 {
     Q_OBJECT

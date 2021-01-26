@@ -5,26 +5,27 @@
 */
 
 #include "eventedittest.h"
-#include "../createeventplugin/eventedit.h"
 #include "../createeventplugin/eventdatetimewidget.h"
+#include "../createeventplugin/eventedit.h"
 #include "globalsettings_messageviewer.h"
 
 #include <AkonadiCore/Collection>
-#include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
-#include <QStandardItemModel>
+#include <AkonadiWidgets/CollectionComboBox>
 #include <KCalendarCore/Event>
 #include <QPushButton>
+#include <QStandardItemModel>
 
 #include <QTest>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
 
-#include <QSignalSpy>
 #include <QLineEdit>
 #include <QShortcut>
+#include <QSignalSpy>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 }
 
@@ -44,10 +45,8 @@ EventEditTest::EventEditTest(QObject *parent)
         collection.setContentMimeTypes(QStringList() << KCalendarCore::Event::eventMimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         model->appendRow(item);
     }
@@ -418,7 +417,7 @@ void EventEditTest::shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEm
 {
     MessageViewer::EventEdit edit;
     auto *akonadicombobox = edit.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
-    //Create an empty combobox
+    // Create an empty combobox
     akonadicombobox->setModel(new QStandardItemModel());
     KMime::Message::Ptr msg(new KMime::Message);
     msg->subject(true)->fromUnicodeString(QStringLiteral("Test note"), "us-ascii");

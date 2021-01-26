@@ -5,8 +5,8 @@
 */
 
 #include "automaticaddcontactsjobtest.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 AutomaticAddContactsJobTest::AutomaticAddContactsJobTest(QObject *parent)
     : QObject(parent)

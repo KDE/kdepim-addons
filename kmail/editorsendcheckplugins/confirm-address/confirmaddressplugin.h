@@ -7,16 +7,14 @@
 #ifndef CONFIRMADDRESSPLUGIN_H
 #define CONFIRMADDRESSPLUGIN_H
 
-#include <QVariant>
 #include <MessageComposer/PluginEditorCheckBeforeSend>
+#include <QVariant>
 
 class ConfirmAddressPlugin : public MessageComposer::PluginEditorCheckBeforeSend
 {
     Q_OBJECT
 public:
-    explicit ConfirmAddressPlugin(QObject *parent = nullptr, const QList<QVariant> & =
-    {
-    });
+    explicit ConfirmAddressPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~ConfirmAddressPlugin() override;
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;

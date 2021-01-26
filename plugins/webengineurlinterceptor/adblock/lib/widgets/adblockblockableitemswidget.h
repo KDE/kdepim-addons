@@ -7,12 +7,14 @@
 #ifndef ADBLOCKBLOCKABLEITEMSWIDGET_H
 #define ADBLOCKBLOCKABLEITEMSWIDGET_H
 
-#include <QWidget>
 #include "adblocklib_export.h"
-namespace PimCommon {
+#include <QWidget>
+namespace PimCommon
+{
 class CustomTreeView;
 }
-namespace AdBlock {
+namespace AdBlock
+{
 struct AdBlockResult;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsWidget : public QWidget
 {
@@ -49,14 +51,8 @@ private:
     void slotBlockItem();
     void slotCopyItem();
     void slotRemoveFilter();
-    enum BlockType {
-        FilterValue = 0,
-        Url,
-        Type
-    };
-    enum TypeItem {
-        Element = Qt::UserRole + 1
-    };
+    enum BlockType { FilterValue = 0, Url, Type };
+    enum TypeItem { Element = Qt::UserRole + 1 };
 
     void writeConfig();
     void readConfig();

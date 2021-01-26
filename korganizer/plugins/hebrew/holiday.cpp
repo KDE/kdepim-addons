@@ -20,23 +20,32 @@
 
 QStringList Holiday::findHoliday(const HebrewDate &hd, bool useIsraelSettings, bool showParsha, bool showChol, bool showOmer)
 {
-    return findHoliday(hd.month(), hd.day(), hd.dayOfWeek() + 1, hd.kvia(),
-                       hd.isOnHebrewLeapYear(), useIsraelSettings,
-                       hd.hebrewDayNumber(), hd.year(),
-                       showParsha, showChol, showOmer);
+    return findHoliday(hd.month(),
+                       hd.day(),
+                       hd.dayOfWeek() + 1,
+                       hd.kvia(),
+                       hd.isOnHebrewLeapYear(),
+                       useIsraelSettings,
+                       hd.hebrewDayNumber(),
+                       hd.year(),
+                       showParsha,
+                       showChol,
+                       showOmer);
 }
 
-QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool isLeapYear, bool useIsraelSettings, int dayNumber, int year, bool showParsha, bool showChol, bool showOmer)
+QStringList Holiday::findHoliday(int month,
+                                 int day,
+                                 int weekday,
+                                 int kvia,
+                                 bool isLeapYear,
+                                 bool useIsraelSettings,
+                                 int dayNumber,
+                                 int year,
+                                 bool showParsha,
+                                 bool showChol,
+                                 bool showOmer)
 {
-    enum {
-        Sunday = 1,
-        Monday,
-        Tuesday,
-        Wednesday,
-        Thursday,
-        Friday,
-        Saturday
-    };
+    enum { Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
 
     QStringList holidays;
     bool isAShabbat = (weekday == Saturday);
@@ -50,11 +59,12 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
         switch (day) {
         case 1:
             if (isAShabbat) {
-                holidays << i18nc("These are Jewish holidays and mostly do not "
-                                  "have translations. They may have different "
-                                  "spellings in your language; otherwise, just "
-                                  "translate the sound to your characters.",
-                                  "Sh. HaHodesh");
+                holidays << i18nc(
+                    "These are Jewish holidays and mostly do not "
+                    "have translations. They may have different "
+                    "spellings in your language; otherwise, just "
+                    "translate the sound to your characters.",
+                    "Sh. HaHodesh");
             }
             break;
         case 14:
@@ -139,7 +149,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
             // Yom HaAtzmaut is on the 5th, unless that's a Saturday, in which
             // case it is moved back two days to Thursday. Yom HaZikaron is the
             // day before Yom HaAtzmaut.
-            if (year >= 1948 + 3760) {   // only after Israel was established
+            if (year >= 1948 + 3760) { // only after Israel was established
                 switch (weekday) {
                 case Wednesday:
                     if (day == 5) {
@@ -201,8 +211,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
             }
             holidays << i18n("Erev Shavuot");
             break;
-        case 6:
-            ;
+        case 6:;
         case 7:
             if (!useIsraelSettings || (day == 6)) {
                 holidays << i18n("Shavuot");
@@ -213,8 +222,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
 
     case Tamuz:
         // 17th of Tamuz, except Shabbat pushes it to Sunday.
-        if ((!isAShabbat && (day == 17))
-            || ((weekday == Sunday) && (day == 18))) {
+        if ((!isAShabbat && (day == 17)) || ((weekday == Sunday) && (day == 18))) {
             holidays << i18n("Tzom Tammuz");
         }
         break;
@@ -227,8 +235,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
             } else {
                 holidays << i18n("Sh. Nahamu");
             }
-        } else if ((!isAShabbat && (day == 9))
-                   || ((weekday == Sunday) && (day == 10))) {
+        } else if ((!isAShabbat && (day == 9)) || ((weekday == Sunday) && (day == 10))) {
             // 9th of Av, except Shabbat pushes it to Sunday.
             holidays << i18n("Tisha B'Av");
         }
@@ -244,8 +251,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
 
     case Tishrei:
         switch (day) {
-        case 1:
-            ;
+        case 1:;
         case 2:
             holidays << i18n("Rosh Hashana");
             break;
@@ -323,8 +329,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
             // We need to know the length of Kislev to determine the last day of
             // Chanukah.
             holidays << i18n("Hanukah");
-        } else if (((day == 10) && !isAShabbat)
-                   || ((day == 11) && (weekday == Sunday))) {
+        } else if (((day == 10) && !isAShabbat) || ((day == 11) && (weekday == Sunday))) {
             // 10th of Tevet; Shabbat pushes it to Sunday.
             holidays << i18n("Tzom Tevet");
         }
@@ -457,8 +462,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
     }
     if (isAShabbat && showParsha) {
         // Find the Parsha on Shabbat.
-        holidays << Parsha::findParshaName(dayNumber, kvia, isLeapYear,
-                                           useIsraelSettings);
+        holidays << Parsha::findParshaName(dayNumber, kvia, isLeapYear, useIsraelSettings);
     }
     return holidays;
 }
@@ -466,7 +470,7 @@ QStringList Holiday::findHoliday(int month, int day, int weekday, int kvia, bool
 QString Holiday::sfirah(int day)
 {
     QString buffer = QString::number(day);
-    buffer + i18n(" Omer");   // TODO: Find a way to write 1st instead of 1,
+    buffer + i18n(" Omer"); // TODO: Find a way to write 1st instead of 1,
     //                           2nd instead of 2, etc.
     return buffer;
 }

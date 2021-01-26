@@ -5,13 +5,13 @@
 */
 
 #include "confirmaddressconfigurewidgettest.h"
-#include "../confirmaddressconfigurewidget.h"
 #include "../confirmaddressconfiguretab.h"
+#include "../confirmaddressconfigurewidget.h"
 
-#include <QTest>
-#include <QVBoxLayout>
 #include <QCheckBox>
 #include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 ConfirmAddressConfigureWidgetTest::ConfirmAddressConfigureWidgetTest(QObject *parent)
     : QObject(parent)

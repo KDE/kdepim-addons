@@ -71,10 +71,10 @@ bool NylasMailImportData::importAddressBook()
 LibImportWizard::AbstractImporter::TypeSupportedOptions NylasMailImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    //options |=LibImportWizard::AbstractImporter::Mails;
-    //Disable it for the moment
-    //options |= LibImportWizard::AbstractImporter::Settings;
-    //options |= LibImportWizard::AbstractImporter::AddressBooks;
+    // options |=LibImportWizard::AbstractImporter::Mails;
+    // Disable it for the moment
+    // options |= LibImportWizard::AbstractImporter::Settings;
+    // options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

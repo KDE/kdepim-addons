@@ -7,8 +7,8 @@
 
 #include "testdataparser.h"
 #include <QDir>
-#include <QJsonDocument>
 #include <QJsonArray>
+#include <QJsonDocument>
 #include <QJsonObject>
 #include <QTimeZone>
 
@@ -33,7 +33,7 @@ TestDataParser::~TestDataParser()
 QStringList TestDataParser::allTestData()
 {
     QDir testdir(QStringLiteral(PIMEVENT_DATADIR "/data"));
-    const auto data = testdir.entryInfoList({ QStringLiteral("*.json") }, QDir::Files);
+    const auto data = testdir.entryInfoList({QStringLiteral("*.json")}, QDir::Files);
     QStringList testcases;
     testcases.reserve(data.count());
     for (const auto &fi : data) {

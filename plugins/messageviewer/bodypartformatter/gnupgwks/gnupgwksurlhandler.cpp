@@ -5,16 +5,16 @@
 */
 
 #include "gnupgwksurlhandler.h"
-#include "gnupgwksmessagepart.h"
 #include "gnupgwks_debug.h"
+#include "gnupgwksmessagepart.h"
 
+#include <QProcess>
 #include <QString>
 #include <QUrlQuery>
-#include <QProcess>
 
+#include <MessageViewer/Viewer>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
-#include <MessageViewer/Viewer>
 
 #include <QGpgME/Protocol>
 #include <QGpgME/WKSPublishJob>
@@ -23,8 +23,8 @@
 #include <MailTransport/TransportManager>
 #include <MailTransportAkonadi/MessageQueueJob>
 
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
 
 #include <KMime/Util>
 
@@ -54,8 +54,7 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
-        QProcess::startDetached(QStringLiteral("kleopatra"),
-                                { QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr")) });
+        QProcess::startDetached(QStringLiteral("kleopatra"), {QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr"))});
         return true;
     } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
         GnuPGWKSMessagePart mp(part);
@@ -91,15 +90,15 @@ QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Messag
     auto job = QGpgME::openpgp()->wksPublishJob();
     QEventLoop el;
     QByteArray result;
-    QObject::connect(job, &QGpgME::WKSPublishJob::result,
-                     [&el, &result](const GpgME::Error &, const QByteArray &returnedData,
-                                    const QByteArray &returnedError) {
-        if (returnedData.isEmpty()) {
-            qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
-        }
-        result = returnedData;
-        el.quit();
-    });
+    QObject::connect(job,
+                     &QGpgME::WKSPublishJob::result,
+                     [&el, &result](const GpgME::Error &, const QByteArray &returnedData, const QByteArray &returnedError) {
+                         if (returnedData.isEmpty()) {
+                             qCWarning(GNUPGWKS_LOG) << "GPG:" << returnedError;
+                         }
+                         result = returnedData;
+                         el.quit();
+                     });
     job->startReceive(msg->encodedContent());
     el.exec();
 
@@ -152,7 +151,7 @@ bool ApplicationGnuPGWKSUrlHandler::sendConfirmation(MessageViewer::Viewer *view
     // Move to outbox
     auto transport = transportMgr->transportById(transportId);
     auto job = new MailTransport::MessageQueueJob;
-    job->addressAttribute().setTo({ msg->to(false)->asUnicodeString() });
+    job->addressAttribute().setTo({msg->to(false)->asUnicodeString()});
     job->transportAttribute().setTransportId(transport->id());
     job->addressAttribute().setFrom(msg->from(false)->asUnicodeString());
     job->sentBehaviourAttribute().setSentBehaviour(MailTransport::SentBehaviourAttribute::Delete);

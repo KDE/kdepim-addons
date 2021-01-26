@@ -5,21 +5,20 @@
 */
 
 #include "thebatimportdata.h"
-#include <MailImporter/FilterTheBat>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterTheBat>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();
-                           )
+K_PLUGIN_FACTORY_WITH_JSON(TheBatImporterFactory, "thebatimporter.json", registerPlugin<TheBatImportData>();)
 
 TheBatImportData::TheBatImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
-    //TODO fix it
+    // TODO fix it
     mPath = QDir::homePath();
 }
 

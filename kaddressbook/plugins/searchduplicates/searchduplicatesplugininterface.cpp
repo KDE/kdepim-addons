@@ -6,8 +6,8 @@
 
 #include "searchduplicatesplugininterface.h"
 
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <QAction>
 #include <QPointer>
 
@@ -38,7 +38,8 @@ void SearchDuplicatesPluginInterface::slotActivated()
 
 void SearchDuplicatesPluginInterface::exec()
 {
-    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg = new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
+    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg =
+        new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
     dlg->searchPotentialDuplicateContacts(mListItems);
     dlg->exec();
     delete dlg;

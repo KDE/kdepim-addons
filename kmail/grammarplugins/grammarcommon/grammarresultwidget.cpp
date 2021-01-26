@@ -4,8 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "grammarresulttextedit.h"
 #include "grammarresultwidget.h"
+#include "grammarresulttextedit.h"
 
 #include <KLocalizedString>
 

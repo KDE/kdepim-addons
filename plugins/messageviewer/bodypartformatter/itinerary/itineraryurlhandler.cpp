@@ -5,9 +5,9 @@
 */
 
 #include "itineraryurlhandler.h"
-#include "itinerarymemento.h"
-#include "itinerarykdeconnecthandler.h"
 #include "itinerary_debug.h"
+#include "itinerarykdeconnecthandler.h"
+#include "itinerarymemento.h"
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/NodeHelper>
@@ -15,8 +15,8 @@
 #include <CalendarSupport/CalendarSingleton>
 
 #include <KItinerary/CalendarHandler>
-#include <KItinerary/JsonLdDocument>
 #include <KItinerary/File>
+#include <KItinerary/JsonLdDocument>
 #include <KItinerary/LocationUtil>
 #include <KItinerary/Organization>
 #include <KItinerary/Place>
@@ -27,11 +27,11 @@
 
 #include <KCalendarCore/Event>
 
-#include <KontactInterface/PimUniqueApplication>
 #include <KLocalizedString>
+#include <KontactInterface/PimUniqueApplication>
 
-#include <QDate>
 #include <QDBusInterface>
+#include <QDate>
 #include <QIcon>
 #include <QMenu>
 #include <QProcess>
@@ -104,7 +104,8 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
 bool ItineraryUrlHandler::handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const
 {
     Q_UNUSED(part)
-    if (path == QLatin1String("showCalendar") || path == QLatin1String("addToCalendar") || path == QLatin1String("import") || path.startsWith(QLatin1String("sendToDevice-"))) {
+    if (path == QLatin1String("showCalendar") || path == QLatin1String("addToCalendar") || path == QLatin1String("import")
+        || path.startsWith(QLatin1String("sendToDevice-"))) {
         // suppress default context menus for our buttons
         return true;
     }
@@ -170,8 +171,10 @@ void ItineraryUrlHandler::showCalendar(QDate date) const
     // ensure KOrganizer or Kontact are running
     if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
         // select the date of the reservation
-        QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                                 QStringLiteral("org.kde.Korganizer.Calendar"), QDBusConnection::sessionBus());
+        QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"),
+                                 QStringLiteral("/Calendar"),
+                                 QStringLiteral("org.kde.Korganizer.Calendar"),
+                                 QDBusConnection::sessionBus());
         if (!korgIface.isValid()) {
             qCWarning(ITINERARY_LOG) << "Calendar interface is not valid! " << korgIface.lastError().message();
             return;

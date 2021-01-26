@@ -6,8 +6,8 @@
 
 #include "mergecontactsplugininterface.h"
 
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <QAction>
 #include <QPointer>
 

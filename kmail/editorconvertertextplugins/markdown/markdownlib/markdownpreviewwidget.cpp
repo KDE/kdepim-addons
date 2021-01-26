@@ -7,13 +7,13 @@
 #include "markdownpreviewwidget.h"
 #include "markdownconverter.h"
 #include "markdownenginepage.h"
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <QLabel>
+#include <QVBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineSettings>
 #include <QWebEngineView>
-#include <QLabel>
-#include <QVBoxLayout>
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
@@ -38,7 +38,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->settings()->setAttribute(QWebEngineSettings::LocalStorageEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::XSSAuditingEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessRemoteUrls, false);
-    //mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, false);
+    // mWebView->settings()->setAttribute(QWebEngineSettings::LocalContentCanAccessFileUrls, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::ErrorPageEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::HyperlinkAuditingEnabled, false);
     mWebView->settings()->setAttribute(QWebEngineSettings::FullScreenSupportEnabled, false);

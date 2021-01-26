@@ -6,8 +6,8 @@
 
 #ifndef GRAMMALECTECONFIGDIALOG_H
 #define GRAMMALECTECONFIGDIALOG_H
-#include <QDialog>
 #include "libkmailgrammalecte_export.h"
+#include <QDialog>
 class GrammalecteConfigWidget;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigDialog : public QDialog
 {
@@ -15,6 +15,7 @@ class LIBKMAILGRAMMALECTE_EXPORT GrammalecteConfigDialog : public QDialog
 public:
     explicit GrammalecteConfigDialog(QWidget *parent = nullptr, bool disableMessageBox = false);
     ~GrammalecteConfigDialog() override;
+
 private:
     Q_DISABLE_COPY(GrammalecteConfigDialog)
     void writeConfig();

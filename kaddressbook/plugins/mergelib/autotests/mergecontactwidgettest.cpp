@@ -5,22 +5,23 @@
 */
 
 #include "mergecontactwidgettest.h"
-#include <AkonadiCore/EntityTreeModel>
 #include "../manualmerge/mergecontactwidget.h"
+#include <AkonadiCore/EntityTreeModel>
 
-#include <QTest>
-#include <qtestmouse.h>
 #include <QListWidget>
 #include <QPushButton>
-#include <QStandardItemModel>
 #include <QSignalSpy>
 #include <QSplitter>
+#include <QStandardItemModel>
+#include <QTest>
+#include <qtestmouse.h>
 
 #include <widgets/mergecontactinfowidget.h>
 #include <widgets/mergecontactloseinformationwarning.h>
 using namespace KABMergeContacts;
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 extern KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel;
 }
 
@@ -38,10 +39,8 @@ MergeContactWidgetTest::MergeContactWidgetTest()
         collection.setContentMimeTypes(QStringList() << KContacts::Addressee::mimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         model->appendRow(item);
     }
@@ -122,7 +121,7 @@ void MergeContactWidgetTest::shouldEnableButton()
 
 void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsElementSelected()
 {
-#if 0 //FIXME
+#if 0 // FIXME
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(createItems());
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
@@ -142,7 +141,7 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsElementSelected()
 
 void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsTwoElementsSelected()
 {
-#if 0 //FIXME
+#if 0 // FIXME
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(createItems());
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
@@ -161,7 +160,7 @@ void MergeContactWidgetTest::shouldEmitSignalsWhenThereIsTwoElementsSelected()
 
 void MergeContactWidgetTest::shouldEmitSignalsWhenSelectContact()
 {
-#if 0 //FIXME
+#if 0 // FIXME
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(createItems());
     QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));

@@ -7,8 +7,8 @@
 #ifndef CONFIRMADDRESSCHECKJOB_H
 #define CONFIRMADDRESSCHECKJOB_H
 
-#include <QStringList>
 #include <QString>
+#include <QStringList>
 
 class ConfirmAddressCheckJob
 {

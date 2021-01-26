@@ -8,23 +8,18 @@
 #include "regexpeditorlineeditplugin_debug.h"
 #include <KPluginFactory>
 
-#include <QHBoxLayout>
-#include <QLineEdit>
-#include <QToolButton>
 #include <KLocalizedString>
 #include <KServiceTypeTrader>
 #include <QDialog>
+#include <QHBoxLayout>
+#include <QLineEdit>
+#include <QToolButton>
 
 #include <KTextWidgets/kregexpeditorinterface.h>
 
 K_PLUGIN_CLASS_WITH_JSON(RegexpEditorLineEdit, "regexepeditorlineedit.json")
-struct InfoRegExp
-{
-    enum RegexpEditorStatus {
-        Unknown = 0,
-        Installed,
-        NotInstalled
-    };
+struct InfoRegExp {
+    enum RegexpEditorStatus { Unknown = 0, Installed, NotInstalled };
     RegexpEditorStatus status = Unknown;
     QDialog *mEditorDialog = nullptr;
 };
@@ -48,7 +43,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     mRegExpEditorButton->setObjectName(QStringLiteral("regexpbutton"));
     mRegExpEditorButton->setToolTip(i18n("Create Regular Expression"));
     mainLayout->addWidget(mRegExpEditorButton);
-    //Disable for the moment until we fix kregexeditor
+    // Disable for the moment until we fix kregexeditor
     s_regexpeditorinstalled->status = InfoRegExp::NotInstalled;
     if (s_regexpeditorinstalled->status == InfoRegExp::Unknown) {
         if (KServiceTypeTrader::self()->query(QStringLiteral("KRegExpEditor/KRegExpEditor")).isEmpty()) {
@@ -62,7 +57,7 @@ RegexpEditorLineEdit::RegexpEditorLineEdit(QWidget *parent, const QList<QVariant
     } else {
         qCDebug(REGEXPEDITORLINEEDITPLUGIN_LOG) << "KRegExpEditor is not installed on system.";
     }
-    //Hidden by default
+    // Hidden by default
     mRegExpEditorButton->setVisible(false);
 }
 
@@ -75,7 +70,8 @@ void RegexpEditorLineEdit::slotOpenRegexpEditor()
     if (!s_regexpeditorinstalled->mEditorDialog) {
         QString error;
 
-        s_regexpeditorinstalled->mEditorDialog = KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
+        s_regexpeditorinstalled->mEditorDialog =
+            KServiceTypeTrader::createInstanceFromQuery<QDialog>(QStringLiteral("KRegExpEditor/KRegExpEditor"), this, this, {}, {}, &error);
         if (!s_regexpeditorinstalled->mEditorDialog) {
             qCWarning(REGEXPEDITORLINEEDITPLUGIN_LOG) << " Impossible to create regexpeditor " << error;
             return;

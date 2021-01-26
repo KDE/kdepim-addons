@@ -5,12 +5,12 @@
 */
 
 #include "quicktextwidgettest.h"
-#include "quicktextwidget.h"
 #include "quicktexttreewidget.h"
+#include "quicktextwidget.h"
 #include <MailCommon/SnippetWidget>
-#include <QTest>
 #include <QHBoxLayout>
 #include <QStackedWidget>
+#include <QTest>
 QTEST_MAIN(QuickTextWidgetTest)
 QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
     : QObject(parent)

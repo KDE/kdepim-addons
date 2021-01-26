@@ -10,7 +10,8 @@
 #include <QDialogButtonBox>
 #include <QTest>
 
-MailMergeDialogTest::MailMergeDialogTest(QObject *parent) : QObject(parent)
+MailMergeDialogTest::MailMergeDialogTest(QObject *parent)
+    : QObject(parent)
 {
 }
 

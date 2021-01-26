@@ -5,14 +5,14 @@
 */
 
 #include "dkimadvancedwidget.h"
-#include <KLocalizedString>
-#include <QFormLayout>
-#include <QPushButton>
 #include "dkimauthenticationverifiedserverdialog.h"
+#include <KLocalizedString>
 #include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
-#include <QComboBox>
 #include <QCheckBox>
+#include <QComboBox>
+#include <QFormLayout>
+#include <QPushButton>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)

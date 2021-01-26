@@ -7,9 +7,7 @@
 #include "standardheaderstrategy.h"
 
 using namespace MessageViewer;
-static const char *const standardHeaders[] = {
-    "subject", "from", "cc", "bcc", "to", "date"
-};
+static const char *const standardHeaders[] = {"subject", "from", "cc", "bcc", "to", "date"};
 static const int numStandardHeaders = sizeof standardHeaders / sizeof *standardHeaders;
 
 StandardHeaderStrategy::StandardHeaderStrategy()

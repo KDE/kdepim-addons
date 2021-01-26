@@ -5,9 +5,9 @@
 */
 
 #include "standardsheaderstyleinterface.h"
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 using namespace MessageViewer;
 StandardsHeaderStyleInterface::StandardsHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)

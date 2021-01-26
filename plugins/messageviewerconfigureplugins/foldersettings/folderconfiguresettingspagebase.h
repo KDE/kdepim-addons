@@ -17,10 +17,12 @@ public:
     explicit FolderConfigureSettingsPageBase(QWidget *parent = nullptr);
     ~FolderConfigureSettingsPageBase() override;
     Q_REQUIRED_RESULT bool wasModified() const;
+
 protected:
     void addMainWidget(QWidget *widget);
 
     QVBoxLayout *const mMainLayout;
+
 private:
     void slotModifyClicked(bool clicked);
     QWidget *mMainWidget = nullptr;

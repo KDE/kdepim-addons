@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCREATELINKWIDGET_H
 #define MARKDOWNCREATELINKWIDGET_H
 
-#include <QWidget>
 #include "markdownlib_private_export.h"
+#include <QWidget>
 class QLineEdit;
 class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownCreateLinkWidget : public QWidget
 {

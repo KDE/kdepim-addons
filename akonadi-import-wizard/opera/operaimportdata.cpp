@@ -7,8 +7,8 @@
 #include "operaimportdata.h"
 #include "operaaddressbook.h"
 #include "operasettings.h"
-#include <MailImporter/FilterOpera>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterOpera>
 
 #include <KLocalizedString>
 #include <KPluginFactory>

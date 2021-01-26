@@ -9,9 +9,10 @@
 
 #include "folderconfiguresettingspagebase.h"
 
-#include <QWidget>
 #include <AkonadiCore/Collection>
-namespace MailCommon {
+#include <QWidget>
+namespace MailCommon
+{
 class CollectionViewWidget;
 }
 class FolderConfigureSettingsViewWidget : public FolderConfigureSettingsPageBase
@@ -21,6 +22,7 @@ public:
     explicit FolderConfigureSettingsViewWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsViewWidget() override;
     void save(Akonadi::Collection &col);
+
 private:
     MailCommon::CollectionViewWidget *mCollectionViewWidget = nullptr;
 };

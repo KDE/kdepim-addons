@@ -7,10 +7,10 @@
 #ifndef SELECTIMAPWIDGET_H
 #define SELECTIMAPWIDGET_H
 
-#include <QWidget>
-#include <KSieveUi/SieveImapAccountSettings>
 #include <KSieveUi/AbstractMoveImapFolderWidget>
+#include <KSieveUi/SieveImapAccountSettings>
 #include <QPointer>
+#include <QWidget>
 class QToolButton;
 class SelectImapLineEdit;
 class SelectImapFolderDialog;

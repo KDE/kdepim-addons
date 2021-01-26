@@ -6,8 +6,8 @@
 #ifndef QUICKTEXT_QUICKTEXTTREEWIDGET_H
 #define QUICKTEXT_QUICKTEXTTREEWIDGET_H
 
-#include <QTreeView>
 #include "quicktext_export.h"
+#include <QTreeView>
 class QContextMenuEvent;
 
 class QuicktextManager;

@@ -7,9 +7,9 @@
 #ifndef GRAMMALECTEWIDGET_H
 #define GRAMMALECTEWIDGET_H
 
+#include "grammalectegenerateconfigoptionjob.h"
 #include <PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
-#include "grammalectegenerateconfigoptionjob.h"
 class GrammalecteResultWidget;
 class QTextEdit;
 class GrammalecteWidget : public QWidget

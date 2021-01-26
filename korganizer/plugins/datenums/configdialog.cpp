@@ -13,13 +13,13 @@
 #include <KConfig>
 #include <KLocalizedString>
 
+#include <KConfigGroup>
 #include <QButtonGroup>
+#include <QDialogButtonBox>
 #include <QGroupBox>
+#include <QPushButton>
 #include <QRadioButton>
 #include <QVBoxLayout>
-#include <KConfigGroup>
-#include <QDialogButtonBox>
-#include <QPushButton>
 
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
@@ -67,8 +67,7 @@ void ConfigDialog::load()
 {
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");
-    int datenum = config.readEntry(
-        "ShowDayNumbers", int(Datenums::DayOfYear | Datenums::DaysRemaining));
+    int datenum = config.readEntry("ShowDayNumbers", int(Datenums::DayOfYear | Datenums::DaysRemaining));
     QAbstractButton *btn = mDayNumGroup->button(datenum);
     if (!btn) {
         btn = mDayNumGroup->button(int(Datenums::DayOfYear | Datenums::DaysRemaining));

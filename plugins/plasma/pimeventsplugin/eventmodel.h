@@ -11,7 +11,8 @@
 #include <Akonadi/Calendar/CalendarBase>
 #include <QVector>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class Monitor;
 }
 
@@ -19,7 +20,6 @@ class EventModel : public Akonadi::CalendarBase
 {
     Q_OBJECT
 public:
-
     explicit EventModel(QObject *parent = nullptr);
     ~EventModel();
 

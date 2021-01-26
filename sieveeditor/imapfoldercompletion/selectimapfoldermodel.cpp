@@ -6,8 +6,8 @@
 
 #include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
-#include "selectimaploadfoldersjob.h"
 #include "selectimapcreatefolderjob.h"
+#include "selectimaploadfoldersjob.h"
 #include <QStandardItemModel>
 
 SelectImapFolderModel::SelectImapFolderModel(QObject *parent)
@@ -27,7 +27,7 @@ SelectImapFolderModel *SelectImapFolderModel::self()
 
 void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
 {
-    //qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
+    // qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
     auto *job = new SelectImapCreateFolderJob(this);
     job->setSieveImapAccountSettings(account);
     job->setNewFolderName(folderName);

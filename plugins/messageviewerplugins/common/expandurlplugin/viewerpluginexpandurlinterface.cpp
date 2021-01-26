@@ -6,15 +6,15 @@
 
 #include "viewerpluginexpandurlinterface.h"
 #include "expandurlplugin_debug.h"
-#include <MessageViewer/ScamExpandUrlJob>
-#include <MessageViewer/ScamCheckShortUrlManager>
 #include <MessageViewer/ScamCheckShortUrl>
+#include <MessageViewer/ScamCheckShortUrlManager>
+#include <MessageViewer/ScamExpandUrlJob>
 
 #include <QAction>
 
-#include <PimCommon/BroadcastStatus>
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <PimCommon/BroadcastStatus>
 
 using namespace MessageViewer;
 

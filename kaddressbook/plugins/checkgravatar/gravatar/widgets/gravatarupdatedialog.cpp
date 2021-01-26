@@ -6,15 +6,16 @@
 
 #include "gravatarupdatedialog.h"
 #include "gravatarupdatewidget.h"
-#include <QVBoxLayout>
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace KABGravatar;
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "GravatarUpdateDialog";
 }
 GravatarUpdateDialog::GravatarUpdateDialog(QWidget *parent)

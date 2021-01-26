@@ -5,24 +5,24 @@
 */
 
 #include "mergecontactsdialog.h"
-#include "manualmerge/mergecontactwidget.h"
-#include "widgets/mergecontactinfowidget.h"
 #include "job/mergecontactsjob.h"
+#include "manualmerge/mergecontactwidget.h"
 #include "widgets/mergecontacterrorlabel.h"
+#include "widgets/mergecontactinfowidget.h"
 #include "widgets/mergecontactselectinformationscrollarea.h"
 
-
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
 
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QVBoxLayout>
 #include <QStackedWidget>
+#include <QVBoxLayout>
 
 using namespace KABMergeContacts;
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "MergeContactsDialog";
 }
 MergeContactsDialog::MergeContactsDialog(QWidget *parent)
@@ -83,7 +83,9 @@ void MergeContactsDialog::setContacts(const Akonadi::Item::List &list)
     mButtonBox->button(QDialogButtonBox::Close)->setEnabled(true);
 }
 
-void MergeContactsDialog::slotCustomizeMergeContact(const Akonadi::Item::List &lst, MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col)
+void MergeContactsDialog::slotCustomizeMergeContact(const Akonadi::Item::List &lst,
+                                                    MergeContacts::ConflictInformations conflictType,
+                                                    const Akonadi::Collection &col)
 {
     mSelectInformation->setContacts(conflictType, lst, col);
     mStackedWidget->setCurrentWidget(mSelectInformation);

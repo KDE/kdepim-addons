@@ -5,9 +5,9 @@
 */
 
 #include "nonbreakingspaceplugineditorinterface.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QObject *parent)

@@ -8,8 +8,8 @@
 #include "../createeventplugin/eventdatetimewidget.h"
 #include <KDateComboBox>
 #include <KTimeComboBox>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 EventDateTimeWidgetTest::EventDateTimeWidgetTest(QObject *parent)
     : QObject(parent)
@@ -90,8 +90,8 @@ void EventDateTimeWidgetTest::shouldNotEmitSignalWhenDateTimeWasNotChanged()
     QCOMPARE(spy.count(), 1);
     edit.setDateTime(currentDateTime);
 
-    //FIX ME
-    //QCOMPARE(spy.count(), 2);
+    // FIX ME
+    // QCOMPARE(spy.count(), 2);
 }
 
 QTEST_MAIN(EventDateTimeWidgetTest)

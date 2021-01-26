@@ -8,7 +8,8 @@
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QStandardPaths>
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "Grammalecte";
 }
 GrammalecteManager::GrammalecteManager(QObject *parent)

@@ -6,19 +6,19 @@
 
 #include "csvimportexportplugininterface.h"
 #include "import/csvimportdialog.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
-#include <QFileInfo>
-#include <QTemporaryFile>
-#include <PimCommon/RenameFileDialog>
-#include <KMessageBox>
-#include <KJobWidgets>
-#include <QTextStream>
-#include <QFileDialog>
-#include <QTextCodec>
-#include <QPointer>
 #include <KIO/Job>
+#include <KJobWidgets>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <PimCommon/RenameFileDialog>
+#include <QAction>
+#include <QFileDialog>
+#include <QFileInfo>
+#include <QPointer>
+#include <QTemporaryFile>
+#include <QTextCodec>
+#include <QTextStream>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ImportExportEngine>
@@ -121,10 +121,8 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
             }
 
             QString content;
-            if (fields.at(j) == KAddressBookImportExport::ContactFields::Birthday
-                || fields.at(j) == KAddressBookImportExport::ContactFields::Anniversary) {
-                const QDateTime dateTime
-                    = QDateTime::fromString(KAddressBookImportExport::ContactFields::value(fields.at(j), contact), Qt::ISODate);
+            if (fields.at(j) == KAddressBookImportExport::ContactFields::Birthday || fields.at(j) == KAddressBookImportExport::ContactFields::Anniversary) {
+                const QDateTime dateTime = QDateTime::fromString(KAddressBookImportExport::ContactFields::value(fields.at(j), contact), Qt::ISODate);
                 if (dateTime.isValid()) {
                     content = dateTime.date().toString(Qt::ISODate);
                 }
@@ -145,8 +143,8 @@ void CSVImportExportPluginInterface::exportToFile(QFile *file, const KContacts::
 
 void CSVImportExportPluginInterface::exportCSV()
 {
-    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
-        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg =
+        new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -215,6 +213,6 @@ bool CSVImportExportPluginInterface::canImportFileType(const QUrl &url)
 
 void CSVImportExportPluginInterface::importFile(const QUrl &url)
 {
-    //TODO
+    // TODO
     Q_UNUSED(url)
 }

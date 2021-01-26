@@ -7,10 +7,11 @@
 #ifndef SELECTIMAPLOADFOLDERSJOB_H
 #define SELECTIMAPLOADFOLDERSJOB_H
 
+#include <KSieveUi/SieveImapAccountSettings>
 #include <QObject>
 #include <kimap/listjob.h>
-#include <KSieveUi/SieveImapAccountSettings>
-namespace KIMAP {
+namespace KIMAP
+{
 class Session;
 }
 
@@ -21,9 +22,7 @@ class SelectImapLoadFoldersJob : public QObject
 {
     Q_OBJECT
 public:
-    enum Roles {
-        PathRole = Qt::UserRole + 1
-    };
+    enum Roles { PathRole = Qt::UserRole + 1 };
 
     explicit SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent = nullptr);
     ~SelectImapLoadFoldersJob() override;
@@ -37,7 +36,7 @@ Q_SIGNALS:
 
 private:
     void slotLoginDone(KJob *job);
-    void slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray> > &flags);
+    void slotMailBoxesReceived(const QList<KIMAP::MailBoxDescriptor> &mailBoxes, const QList<QList<QByteArray>> &flags);
     void slotReloadRequested();
     void slotFullListingDone(KJob *job);
 

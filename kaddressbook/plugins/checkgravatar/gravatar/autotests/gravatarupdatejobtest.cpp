@@ -5,8 +5,8 @@
 */
 
 #include "gravatarupdatejobtest.h"
-#include <QTest>
 #include "../job/gravatarupdatejob.h"
+#include <QTest>
 
 GravatarUpdateJobTest::GravatarUpdateJobTest(QObject *parent)
     : QObject(parent)

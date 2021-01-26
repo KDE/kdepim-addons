@@ -7,9 +7,10 @@
 #ifndef DONOTTRACKPLUGINURLINTERCEPTOR_H
 #define DONOTTRACKPLUGINURLINTERCEPTOR_H
 
-#include <WebEngineViewer/NetworkPluginUrlInterceptor>
 #include <QVariant>
-namespace WebEngineViewer {
+#include <WebEngineViewer/NetworkPluginUrlInterceptor>
+namespace WebEngineViewer
+{
 class NetworkPluginUrlInterceptorInterface;
 }
 class DoNotTrackPluginUrlInterceptor : public WebEngineViewer::NetworkPluginUrlInterceptor

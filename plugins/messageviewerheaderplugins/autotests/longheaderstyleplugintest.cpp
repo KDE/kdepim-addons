@@ -5,12 +5,12 @@
 */
 
 #include "longheaderstyleplugintest.h"
-#include "../longheaderstyleplugin/longheaderstyleplugin.h"
 #include "../longheaderstyleplugin/longheaderstyleinterface.h"
-#include <QTest>
+#include "../longheaderstyleplugin/longheaderstyleplugin.h"
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+#include <QTest>
 
 LongHeaderStylePluginTest::LongHeaderStylePluginTest(QObject *parent)
     : QObject(parent)

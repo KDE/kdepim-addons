@@ -19,6 +19,7 @@ public:
     void generateShortUrl() override;
 
     QString engineName() const override;
+
 private:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotErrorFound(QNetworkReply::NetworkError error);

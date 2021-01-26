@@ -7,9 +7,9 @@
 #ifndef QUICKTEXTPLUGINEDITORINTERFACE_H
 #define QUICKTEXTPLUGINEDITORINTERFACE_H
 
-#include <MessageComposer/PluginEditorInterface>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MailCommon/SnippetsModel>
+#include <MessageComposer/PluginEditorInterface>
 #include <QTextCursor>
 class QuickTextPluginEditorInterface : public MessageComposer::PluginEditorInterface
 {
@@ -23,6 +23,7 @@ public:
     Q_REQUIRED_RESULT bool processProcessKeyEvent(QKeyEvent *event) override;
 
     void reloadConfig();
+
 private:
     void updateSnippetsInfo();
     void slotActivated();

@@ -7,8 +7,8 @@
 #include "selectimaplineeditcompletermodel.h"
 #include "selectimapfoldermodel.h"
 
-#include <QStandardItemModel>
 #include <KDescendantsProxyModel>
+#include <QStandardItemModel>
 
 SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveUi::SieveImapAccountSettings &account, QObject *parent)
     : QObject(parent)

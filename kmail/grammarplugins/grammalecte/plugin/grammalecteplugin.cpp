@@ -5,12 +5,12 @@
 */
 
 #include "grammalecteplugin.h"
-#include "grammalecteinterface.h"
 #include "grammalecteconfigdialog.h"
+#include "grammalecteinterface.h"
 #include "grammalectemanager.h"
-#include <PimCommon/CustomToolsWidgetng>
 #include <KLocalizedString>
 #include <KPluginFactory>
+#include <PimCommon/CustomToolsWidgetng>
 
 #include <QPointer>
 

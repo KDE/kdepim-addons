@@ -7,10 +7,10 @@
 #include "dkimauthenticationverifiedserverdialogtest.h"
 #include "dkimauthenticationverifiedserverdialog.h"
 #include "dkimauthenticationverifiedserverwidget.h"
-#include <QTest>
-#include <QStandardPaths>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(DKIMAuthenticationVerifiedServerDialogTest)
 
 DKIMAuthenticationVerifiedServerDialogTest::DKIMAuthenticationVerifiedServerDialogTest(QObject *parent)

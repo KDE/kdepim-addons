@@ -6,18 +6,22 @@
 
 #ifndef CREATEEVENTJOB_H
 #define CREATEEVENTJOB_H
-#include <KJob>
-#include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
+#include <AkonadiCore/Item>
 #include <KCalendarCore/Event>
+#include <KJob>
 
 #include <QObject>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class CreateEventJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit CreateEventJob(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
+    explicit CreateEventJob(const KCalendarCore::Event::Ptr &eventPtr,
+                            const Akonadi::Collection &collection,
+                            const Akonadi::Item &item,
+                            QObject *parent = nullptr);
     ~CreateEventJob() override;
 
     void start() override;

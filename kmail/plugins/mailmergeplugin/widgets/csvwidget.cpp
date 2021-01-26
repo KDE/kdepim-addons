@@ -6,10 +6,10 @@
 
 #include "csvwidget.h"
 
+#include <KLocalizedString>
 #include <KUrlRequester>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <KLocalizedString>
 
 using namespace MailMerge;
 

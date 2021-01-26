@@ -6,19 +6,19 @@
 
 #include "gmximportexportplugininterface.h"
 #include "kaddressbook_importexport_gmx_debug.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
-#include <QUrl>
-#include <QFileDialog>
-#include <PimCommon/RenameFileDialog>
-#include <KMessageBox>
-#include <QTemporaryFile>
-#include <KJobWidgets>
-#include <QTextStream>
-#include <QPointer>
-#include <importexportengine.h>
 #include <KIOCore/kio/filecopyjob.h>
+#include <KJobWidgets>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <PimCommon/RenameFileDialog>
+#include <QAction>
+#include <QFileDialog>
+#include <QPointer>
+#include <QTemporaryFile>
+#include <QTextStream>
+#include <QUrl>
+#include <importexportengine.h>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
 
@@ -75,8 +75,8 @@ void GMXImportExportPluginInterface::slotExportGmx()
 
 void GMXImportExportPluginInterface::exportGMX()
 {
-    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg
-        = new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
+    QPointer<KAddressBookImportExport::ContactSelectionDialog> dlg =
+        new KAddressBookImportExport::ContactSelectionDialog(itemSelectionModel(), false, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec()) {
@@ -94,13 +94,17 @@ void GMXImportExportPluginInterface::exportGMX()
     KAddressBookImportExport::ContactList contactLists;
     contactLists.setAddressList(contacts);
     QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
-    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.gmx")), GMX_FILESELECTION_STRING, nullptr, options);
+    QUrl url = QFileDialog::getSaveFileUrl(parentWidget(),
+                                           QString(),
+                                           QUrl::fromLocalFile(QDir::homePath() + QStringLiteral("/addressbook.gmx")),
+                                           GMX_FILESELECTION_STRING,
+                                           nullptr,
+                                           options);
     if (url.isEmpty()) {
         return;
     }
 
-    if (QFileInfo::exists(url.isLocalFile()
-                          ? url.toLocalFile() : url.path())) {
+    if (QFileInfo::exists(url.isLocalFile() ? url.toLocalFile() : url.path())) {
         if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
             auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
             const auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
@@ -173,8 +177,7 @@ static const QStringList assignedCategoriesSorted(const KContacts::AddresseeList
     // categories, alphabetically sorted
     QStringList categoryList;
     const KContacts::Addressee *addressee = nullptr;
-    for (KContacts::AddresseeList::ConstIterator addresseeIt = list.begin();
-         addresseeIt != list.end() && categoryList.count() < 32; ++addresseeIt) {
+    for (KContacts::AddresseeList::ConstIterator addresseeIt = list.begin(); addresseeIt != list.end() && categoryList.count() < 32; ++addresseeIt) {
         addressee = &(*addresseeIt);
         if (addressee->isEmpty()) {
             continue;
@@ -212,13 +215,12 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
     int addresseeId = 0;
     const QChar DELIM(QLatin1Char('#'));
-    for (KContacts::AddresseeList::ConstIterator it = list.begin();
-         it != list.end(); ++it) {
+    for (KContacts::AddresseeList::ConstIterator it = list.begin(); it != list.end(); ++it) {
         addressee = &(*it);
         if (addressee->isEmpty()) {
             continue;
         }
-        addresseeMap[ ++addresseeId ] = addressee;
+        addresseeMap[++addresseeId] = addressee;
 
         // Assign categories as bitfield
         const QStringList categories = addressee->categories();
@@ -239,18 +241,18 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
             nickName = addressee->formattedName();
         }
 
-        t << addresseeId << DELIM             // Address_id
-          << nickName << DELIM                // Nickname
-          << addressee->givenName() << DELIM  // Firstname
+        t << addresseeId << DELIM // Address_id
+          << nickName << DELIM // Nickname
+          << addressee->givenName() << DELIM // Firstname
           << addressee->familyName() << DELIM // Lastname
-          << addressee->prefix() << DELIM     // Title - Note: ->title()
-            // refers to the professional title
-          << dateString(addressee->birthday()) << DELIM     // Birthday
+          << addressee->prefix() << DELIM // Title - Note: ->title()
+                                          // refers to the professional title
+          << dateString(addressee->birthday()) << DELIM // Birthday
           << addressee->note() /*.replace('\n',"\r\n")*/ << DELIM // Comments
-          << dateString(addressee->revision()) << DELIM     // Change_date
-          << "1" << DELIM                     // Status
-          << DELIM                            // Address_link_id
-          << category << QLatin1Char('\n');                // Categories
+          << dateString(addressee->revision()) << DELIM // Change_date
+          << "1" << DELIM // Status
+          << DELIM // Address_link_id
+          << category << QLatin1Char('\n'); // Categories
     }
 
     t << "####\n";
@@ -260,9 +262,8 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
          "Company,Department,Change_date,Preferred,Status\n";
 
     addresseeId = 1;
-    while ((addressee = addresseeMap[ addresseeId ]) != nullptr) {
-        const KContacts::PhoneNumber::List cellPhones
-            = addressee->phoneNumbers(KContacts::PhoneNumber::Cell);
+    while ((addressee = addresseeMap[addresseeId]) != nullptr) {
+        const KContacts::PhoneNumber::List cellPhones = addressee->phoneNumbers(KContacts::PhoneNumber::Cell);
 
         const QStringList emails = addressee->emails();
 
@@ -300,8 +301,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
                 if (addressee->addresses(KContacts::Address::Home).count() > 1) {
                     address = addressee->addresses(KContacts::Address::Home).at(1);
                 }
-                if ((address.isEmpty())
-                    && (addressee->addresses(KContacts::Address::Work).count() > 1)) {
+                if ((address.isEmpty()) && (addressee->addresses(KContacts::Address::Work).count() > 1)) {
                     address = addressee->addresses(KContacts::Address::Work).at(1);
                 }
                 if (address.isEmpty()) {
@@ -320,8 +320,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
                 if (addressee->phoneNumbers(KContacts::PhoneNumber::Home).count() > 1) {
                     phone = addressee->phoneNumbers(KContacts::PhoneNumber::Home).at(1);
                 }
-                if ((phone.isEmpty()) && (addressee->phoneNumbers(
-                                              KContacts::PhoneNumber::Work).count() > 1)) {
+                if ((phone.isEmpty()) && (addressee->phoneNumbers(KContacts::PhoneNumber::Work).count() > 1)) {
                     phone = addressee->phoneNumbers(KContacts::PhoneNumber::Work).at(1);
                 }
                 if (phone.isEmpty()) {
@@ -358,58 +357,48 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
             QString email;
             if (emails.count() > recId) {
-                email = emails[ recId ];
+                email = emails[recId];
                 if (email == addressee->preferredEmail()) {
                     prefFlag |= 1;
                 }
             }
 
-            if (!address.isEmpty() || !phone.isEmpty()
-                || !cell.isEmpty() || !email.isEmpty()) {
-                t << addresseeId << DELIM             // Address_id
-                  << recId << DELIM                   // Record_id
-                  << address.street() << DELIM        // Street
-                  << address.country() << DELIM       // Country
-                  << address.postalCode() << DELIM    // Zipcode
-                  << address.locality() << DELIM      // City
-                  << phone.number() << DELIM          // Phone
-                  << fax.number() << DELIM            // Fax
-                  << cell.number() << DELIM           // Mobile
+            if (!address.isEmpty() || !phone.isEmpty() || !cell.isEmpty() || !email.isEmpty()) {
+                t << addresseeId << DELIM // Address_id
+                  << recId << DELIM // Record_id
+                  << address.street() << DELIM // Street
+                  << address.country() << DELIM // Country
+                  << address.postalCode() << DELIM // Zipcode
+                  << address.locality() << DELIM // City
+                  << phone.number() << DELIM // Phone
+                  << fax.number() << DELIM // Fax
+                  << cell.number() << DELIM // Mobile
 
-                  << ((recId == typeWork) ? 0 : 1) << DELIM     // Mobile_type
+                  << ((recId == typeWork) ? 0 : 1) << DELIM // Mobile_type
 
-                  << email << DELIM                   // Email
+                  << email << DELIM // Email
 
-                  << ((recId == typeWork)
-                    ? addressee->url().url().url()
-                    : QString()) << DELIM  // Homepage
+                  << ((recId == typeWork) ? addressee->url().url().url() : QString()) << DELIM // Homepage
 
-                  << ((recId == typeWork)
-                    ? addressee->role()
-                    : QString()) << DELIM  // Position
+                  << ((recId == typeWork) ? addressee->role() : QString()) << DELIM // Position
 
-                  << ((recId == typeHome)
-                    ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"))
-                    : QString()) << DELIM  // Comments
+                  << ((recId == typeHome) ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName")) : QString()) << DELIM // Comments
 
-                  << recId << DELIM                   // Record_type_id (0,1,2)
+                  << recId << DELIM // Record_type_id (0,1,2)
 
-                  << DELIM                            // Record_type
+                  << DELIM // Record_type
 
-                  << ((recId == typeWork)
-                    ? addressee->organization()
-                    : QString()) << DELIM  // Company
+                  << ((recId == typeWork) ? addressee->organization() : QString()) << DELIM // Company
 
-                  << ((recId == typeWork)
-                    ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department"))
-                    : QString()) << DELIM  // Department
+                  << ((recId == typeWork) ? addressee->custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department")) : QString())
+                  << DELIM // Department
 
-                  << dateString(addressee->revision()) << DELIM   // Change_date
+                  << dateString(addressee->revision()) << DELIM // Change_date
 
-                  << prefFlag << DELIM                // Preferred:
-                    // ( & 1: preferred email,
-                    //   & 4: preferred cell phone )
-                  << 1 << QLatin1Char('\n');                       // Status (should always be "1")
+                  << prefFlag << DELIM // Preferred:
+                                       // ( & 1: preferred email,
+                                       //   & 4: preferred cell phone )
+                  << 1 << QLatin1Char('\n'); // Status (should always be "1")
             }
         }
 
@@ -432,8 +421,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
 void GMXImportExportPluginInterface::importGMX()
 {
-    const QString fileName
-        = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), GMX_FILESELECTION_STRING);
+    const QString fileName = QFileDialog::getOpenFileName(parentWidget(), QString(), QDir::homePath(), GMX_FILESELECTION_STRING);
 
     if (fileName.isEmpty()) {
         return;
@@ -452,11 +440,8 @@ void GMXImportExportPluginInterface::importGMX()
     QString line, line2;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QLatin1String("AB_ADDRESSES:"))
-        || !line2.startsWith(QLatin1String("Address_id"))) {
-        KMessageBox::error(
-            parentWidget(),
-            i18n("%1 is not a GMX address book file.", fileName));
+    if (!line.startsWith(QLatin1String("AB_ADDRESSES:")) || !line2.startsWith(QLatin1String("Address_id"))) {
+        KMessageBox::error(parentWidget(), i18n("%1 is not a GMX address book file.", fileName));
         return;
     }
 
@@ -495,8 +480,8 @@ void GMXImportExportPluginInterface::importGMX()
         }
         // addressee->setStatus( itemList[8] ); Status
         // addressee->xxx( itemList[9] ); Address_link_id
-        categoriesOfAddressee[ itemList[0] ] = itemList[10];
-        addresseeMap[ itemList[0] ] = addressee;
+        categoriesOfAddressee[itemList[0]] = itemList[10];
+        addresseeMap[itemList[0]] = addressee;
 
         line = gmxStream.readLine();
     }
@@ -524,7 +509,7 @@ void GMXImportExportPluginInterface::importGMX()
             line.append(gmxStream.readLine());
         }
 
-        KContacts::Addressee *addressee = addresseeMap[ itemList[0] ];
+        KContacts::Addressee *addressee = addresseeMap[itemList[0]];
         if (addressee) {
             // itemList[1] = Record_id (numbered item, ignore here)
             int recordTypeId = itemList[14].toInt();
@@ -551,12 +536,10 @@ void GMXImportExportPluginInterface::importGMX()
             address.setPostalCode(itemList[4]);
             address.setLocality(itemList[5]);
             if (!itemList[6].isEmpty()) {
-                addressee->insertPhoneNumber(
-                    KContacts::PhoneNumber(itemList[6], phoneType));
+                addressee->insertPhoneNumber(KContacts::PhoneNumber(itemList[6], phoneType));
             }
             if (!itemList[7].isEmpty()) {
-                addressee->insertPhoneNumber(
-                    KContacts::PhoneNumber(itemList[7], KContacts::PhoneNumber::Fax));
+                addressee->insertPhoneNumber(KContacts::PhoneNumber(itemList[7], KContacts::PhoneNumber::Fax));
             }
             KContacts::PhoneNumber::Type cellType = KContacts::PhoneNumber::Cell;
             // itemList[9]=Mobile_type // always 0 or -1(default phone).
@@ -582,13 +565,13 @@ void GMXImportExportPluginInterface::importGMX()
             // itemList[14]=Record_type_id (0,1,2) - see above
             // itemList[15]=Record_type (name of this additional record entry)
             if (!itemList[16].isEmpty()) {
-                addressee->setOrganization(itemList[16]);   // Company
+                addressee->setOrganization(itemList[16]); // Company
             }
             if (!itemList[17].isEmpty()) {
-                addressee->insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department"), itemList[17]);   // Department
+                addressee->insertCustom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Department"), itemList[17]); // Department
             }
             if (checkDateTime(itemList[18], dt)) {
-                addressee->setRevision(dt);   // Change_date
+                addressee->setRevision(dt); // Change_date
             }
             // itemList[19]=Preferred (see above)
             // itemList[20]=Status (should always be "1")
@@ -603,12 +586,10 @@ void GMXImportExportPluginInterface::importGMX()
     QStringList usedCategoryList;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
-    if (!line.startsWith(QLatin1String("AB_CATEGORIES:"))
-        || !line2.startsWith(QLatin1String("Category_id"))) {
+    if (!line.startsWith(QLatin1String("AB_CATEGORIES:")) || !line2.startsWith(QLatin1String("Category_id"))) {
         qCWarning(KADDRESSBOOK_IMPORTEXPORT_GMX_LOG) << "Could not find category records!";
     } else {
-        while (!line.startsWith(QLatin1String("####"))
-               && !gmxStream.atEnd()) {
+        while (!line.startsWith(QLatin1String("####")) && !gmxStream.atEnd()) {
             // a category should not spread over multiple lines, but just in case
             while (true) {
                 itemList = line.split(QLatin1Char('#'), Qt::KeepEmptyParts);
@@ -625,12 +606,11 @@ void GMXImportExportPluginInterface::importGMX()
     KContacts::Addressee::List addresseeList;
 
     // now add the addresses to addresseeList
-    for (AddresseeMap::Iterator addresseeIt = addresseeMap.begin();
-         addresseeIt != addresseeMap.end(); ++addresseeIt) {
+    for (AddresseeMap::Iterator addresseeIt = addresseeMap.begin(); addresseeIt != addresseeMap.end(); ++addresseeIt) {
         KContacts::Addressee *addressee = addresseeIt.value();
         // Add categories
         // categories is a bitfield with max 31 defined categories
-        int categories = categoriesOfAddressee[ addresseeIt.key() ].toInt();
+        int categories = categoriesOfAddressee[addresseeIt.key()].toInt();
         for (int i = 32; i >= 0; --i) {
             // convert category index to bitfield value for comparison
             int catBit = 1 << i;

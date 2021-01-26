@@ -7,14 +7,15 @@
 #include "quicktextconfigurewidget.h"
 
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KLocalizedString>
-#include <QDialogButtonBox>
-#include <QVBoxLayout>
+#include <KSharedConfig>
 #include <QCloseEvent>
+#include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "QuickTextConfigureDialog";
 }
 QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
@@ -70,7 +71,6 @@ void QuickTextConfigureDialog::slotImport()
 
 void QuickTextConfigureDialog::slotExport()
 {
-
     mQuickTextConfigureWidget->exportQuickText();
 }
 

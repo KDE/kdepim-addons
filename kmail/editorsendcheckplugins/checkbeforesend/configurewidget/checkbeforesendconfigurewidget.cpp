@@ -5,12 +5,13 @@
 */
 
 #include "checkbeforesendconfigurewidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QCheckBox>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
-namespace {
+#include <QCheckBox>
+#include <QVBoxLayout>
+namespace
+{
 static const char myConfigGroupName[] = "Check Before Send";
 }
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)

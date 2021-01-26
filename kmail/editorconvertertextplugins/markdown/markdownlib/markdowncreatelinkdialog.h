@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCREATELINKDIALOG_H
 #define MARKDOWNCREATELINKDIALOG_H
 
-#include <QDialog>
 #include "libkmailmarkdown_export.h"
+#include <QDialog>
 class MarkdownCreateLinkWidget;
 class QPushButton;
 class LIBKMAILMARKDOWN_EXPORT MarkdownCreateLinkDialog : public QDialog
@@ -18,6 +18,7 @@ public:
     explicit MarkdownCreateLinkDialog(QWidget *parent = nullptr);
     ~MarkdownCreateLinkDialog() override;
     Q_REQUIRED_RESULT QString linkStr() const;
+
 private:
     void writeConfig();
     void readConfig();

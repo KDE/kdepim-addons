@@ -6,8 +6,8 @@
 
 #include "pgpkeymemento.h"
 
-#include <QGpgME/Protocol>
 #include <QGpgME/KeyListJob>
+#include <QGpgME/Protocol>
 #include <gpgme++/keylistresult.h>
 
 PgpKeyMemento::PgpKeyMemento()
@@ -53,11 +53,9 @@ QString PgpKeyMemento::error() const
 bool PgpKeyMemento::start(const QString &fingerprint)
 {
     auto job = QGpgME::openpgp()->keyListJob(false, false, true);
-    connect(job, &QGpgME::KeyListJob::nextKey,
-            this, &PgpKeyMemento::onKeyReceived);
-    connect(job, &QGpgME::KeyListJob::result,
-            this, &PgpKeyMemento::onListJobFinished);
-    job->start({ fingerprint });
+    connect(job, &QGpgME::KeyListJob::nextKey, this, &PgpKeyMemento::onKeyReceived);
+    connect(job, &QGpgME::KeyListJob::result, this, &PgpKeyMemento::onListJobFinished);
+    job->start({fingerprint});
 
     setRunning(true);
     return true;
@@ -67,7 +65,7 @@ void PgpKeyMemento::exec(const QString &fingerprint)
 {
     auto job = QGpgME::openpgp()->keyListJob(false, false, true);
     std::vector<GpgME::Key> outKeys;
-    auto result = job->exec({ fingerprint }, false, outKeys);
+    auto result = job->exec({fingerprint}, false, outKeys);
     if (result.error()) {
         mError = QString::fromStdString(result.error().asString());
     } else if (!outKeys.empty()) {

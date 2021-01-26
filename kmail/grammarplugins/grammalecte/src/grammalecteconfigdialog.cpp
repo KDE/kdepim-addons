@@ -6,11 +6,11 @@
 
 #include "grammalecteconfigdialog.h"
 #include "grammalecteconfigwidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)

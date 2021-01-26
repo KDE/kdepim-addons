@@ -7,10 +7,9 @@
 
 #include <Akonadi/Contact/GrantleeContactViewer>
 
-
 #include <QHBoxLayout>
-#include <QStackedWidget>
 #include <QLabel>
+#include <QStackedWidget>
 
 using namespace KABMergeContacts;
 

@@ -29,6 +29,7 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
     static bool hasItineraryApp();
+
 private:
     ItineraryMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;
     void showCalendar(QDate date) const;

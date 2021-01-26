@@ -6,10 +6,10 @@
 
 #include "dkimadvancedwidgettest.h"
 #include "dkimadvancedwidget.h"
-#include <QTest>
-#include <QFormLayout>
 #include <QCheckBox>
 #include <QComboBox>
+#include <QFormLayout>
+#include <QTest>
 QTEST_MAIN(DKIMAdvancedWidgetTest)
 
 DKIMAdvancedWidgetTest::DKIMAdvancedWidgetTest(QObject *parent)

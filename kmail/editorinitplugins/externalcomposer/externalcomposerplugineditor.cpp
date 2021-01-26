@@ -5,8 +5,8 @@
 */
 
 #include "externalcomposerplugineditor.h"
-#include "externalcomposerplugineditorinterface.h"
 #include "externalcomposerconfiguredialog.h"
+#include "externalcomposerplugineditorinterface.h"
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ExternalComposerPluginEditor, "kmail_externalcomposereditorplugin.json")

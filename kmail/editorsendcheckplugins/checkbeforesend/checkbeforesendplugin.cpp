@@ -6,11 +6,11 @@
 
 #include "checkbeforesendplugin.h"
 #include "checkbeforesendinterface.h"
-#include "configurewidget/checkbeforesendconfigurewidget.h"
 #include "configurewidget/checkbeforesendconfiguredialog.h"
+#include "configurewidget/checkbeforesendconfigurewidget.h"
 
-#include <QPointer>
 #include <KPluginFactory>
+#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(CheckBeforeSendPlugin, "kmail_checkbeforesendplugin.json")
 

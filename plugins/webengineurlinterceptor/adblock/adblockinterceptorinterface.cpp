@@ -5,15 +5,15 @@
 */
 
 #include "adblockinterceptorinterface.h"
-#include "../lib/widgets/adblockblockableitemsdialog.h"
 #include "../lib/adblockblockableitemsjob.h"
-#include <QtWebEngineCore/qwebengineurlrequestinfo.h>
+#include "../lib/widgets/adblockblockableitemsdialog.h"
 #include "lib/adblockmanager.h"
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <QAction>
 #include <QPointer>
 #include <QWebEngineView>
+#include <QtWebEngineCore/qwebengineurlrequestinfo.h>
 
 AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
     : WebEngineViewer::NetworkPluginUrlInterceptorInterface(parent)
@@ -73,15 +73,15 @@ void AdblockInterceptorInterface::setWebEngineView(QWebEngineView *webEngineView
 void AdblockInterceptorInterface::slotBlockImage()
 {
     if (mCurrentWebHitTest.imageUrl().isValid()) {
-        //qDebug() << " mCurrentWebHitTest.imageUrl()"<<mCurrentWebHitTest.imageUrl();
-        //TODO block it.
+        // qDebug() << " mCurrentWebHitTest.imageUrl()"<<mCurrentWebHitTest.imageUrl();
+        // TODO block it.
     }
-    //TODO
+    // TODO
 }
 
 void AdblockInterceptorInterface::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
 {
-    //TODO update
+    // TODO update
     QPointer<AdBlock::AdBlockBlockableItemsDialog> dlg = new AdBlock::AdBlockBlockableItemsDialog(mWebEngineView);
     dlg->setAdblockResult(result);
     dlg->exec();

@@ -9,7 +9,8 @@
 
 #include <MessageViewer/ViewerPlugin>
 #include <QVariant>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class ViewerPluginCreatetodo : public MessageViewer::ViewerPlugin
 {
     Q_OBJECT

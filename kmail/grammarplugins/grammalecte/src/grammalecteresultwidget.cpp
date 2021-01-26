@@ -4,11 +4,11 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "grammarresulttextedit.h"
 #include "grammalecteresultwidget.h"
-#include "libgrammalecte_debug.h"
 #include "grammalectemanager.h"
 #include "grammalecteparser.h"
+#include "grammarresulttextedit.h"
+#include "libgrammalecte_debug.h"
 #include <QJsonDocument>
 
 GrammalecteResultWidget::GrammalecteResultWidget(QWidget *parent)

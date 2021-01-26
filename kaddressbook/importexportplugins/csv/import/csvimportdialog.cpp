@@ -12,56 +12,49 @@
 #include "templateselectiondialog.h"
 
 #include <KConfig>
+#include <KLineEdit>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KUrlRequester>
 #include <QComboBox>
 #include <QInputDialog>
 #include <QLineEdit>
-#include <KLocalizedString>
-#include <KMessageBox>
 #include <QProgressDialog>
-#include <KUrlRequester>
-#include <KLineEdit>
 
+#include <KConfigGroup>
 #include <QApplication>
-#include <QPointer>
-#include <QTextCodec>
-#include <QThread>
-#include <QUuid>
 #include <QButtonGroup>
 #include <QCheckBox>
+#include <QDialogButtonBox>
 #include <QGridLayout>
 #include <QGroupBox>
 #include <QHBoxLayout>
+#include <QHeaderView>
 #include <QLabel>
+#include <QPointer>
 #include <QPushButton>
 #include <QRadioButton>
+#include <QStandardPaths>
 #include <QStyledItemDelegate>
 #include <QTableView>
-#include <QHeaderView>
-#include <QStandardPaths>
-#include <KConfigGroup>
-#include <QDialogButtonBox>
+#include <QTextCodec>
+#include <QThread>
+#include <QUuid>
 #include <QVBoxLayout>
 
-enum {
-    Local = 0,
-    Latin1 = 1,
-    Uni = 2,
-    MSBug = 3,
-    Codec = 4
-};
+enum { Local = 0, Latin1 = 1, Uni = 2, MSBug = 3, Codec = 4 };
 
 class ContactFieldComboBox : public QComboBox
 {
     Q_OBJECT
 public:
-
     ContactFieldComboBox(QWidget *parent = nullptr)
         : QComboBox(parent)
     {
         fillFieldMap();
 
-        addItem(KAddressBookImportExport::ContactFields::label(
-                    KAddressBookImportExport::ContactFields::Undefined), KAddressBookImportExport::ContactFields::Undefined);
+        addItem(KAddressBookImportExport::ContactFields::label(KAddressBookImportExport::ContactFields::Undefined),
+                KAddressBookImportExport::ContactFields::Undefined);
 
         QMapIterator<QString, KAddressBookImportExport::ContactFields::Field> it(mFieldMap);
         while (it.hasNext()) {
@@ -236,8 +229,8 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
             if (!value.isEmpty()) {
                 emptyRow = false;
 
-                const KAddressBookImportExport::ContactFields::Field field
-                    = (KAddressBookImportExport::ContactFields::Field)mModel->data(mModel->index(0, column)).toUInt();
+                const KAddressBookImportExport::ContactFields::Field field =
+                    (KAddressBookImportExport::ContactFields::Field)mModel->data(mModel->index(0, column)).toUInt();
 
                 // convert the custom date format to ISO format
                 if (field == KAddressBookImportExport::ContactFields::Birthday || field == KAddressBookImportExport::ContactFields::Anniversary) {
@@ -300,12 +293,10 @@ void CSVImportDialog::initGUI()
     mainLayout->addWidget(mUrlRequester);
     mUrlRequester->setMimeTypeFilters({QStringLiteral("text/csv")});
     mUrlRequester->lineEdit()->setTrapReturnKey(true);
-    mUrlRequester->setToolTip(
-        i18nc("@info:tooltip", "Select a csv file to import"));
-    mUrlRequester->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Click this button to start a file chooser that will allow you to "
-              "select a csv file to import."));
+    mUrlRequester->setToolTip(i18nc("@info:tooltip", "Select a csv file to import"));
+    mUrlRequester->setWhatsThis(i18nc("@info:whatsthis",
+                                      "Click this button to start a file chooser that will allow you to "
+                                      "select a csv file to import."));
     hbox->addWidget(mUrlRequester);
 
     layout->addLayout(hbox, 0, 0, 1, 5);
@@ -322,61 +313,44 @@ void CSVImportDialog::initGUI()
     mDelimiterGroup->setExclusive(true);
 
     QRadioButton *button = new QRadioButton(i18nc("@option:radio Field separator", "Comma"));
-    button->setToolTip(
-        i18nc("@info:tooltip", "Set the field separator to a comma"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Select this option if your csv file uses the comma as a field separator."));
+    button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a comma"));
+    button->setWhatsThis(i18nc("@info:whatsthis", "Select this option if your csv file uses the comma as a field separator."));
     button->setChecked(true);
     mDelimiterGroup->addButton(button, 0);
     delimiterLayout->addWidget(button, 0, 0);
 
     button = new QRadioButton(i18nc("@option:radio Field separator", "Semicolon"));
-    button->setToolTip(
-        i18nc("@info:tooltip", "Set the field separator to a semicolon"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Select this option if your csv file uses the semicolon as a field separator."));
+    button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a semicolon"));
+    button->setWhatsThis(i18nc("@info:whatsthis", "Select this option if your csv file uses the semicolon as a field separator."));
     mDelimiterGroup->addButton(button, 1);
     delimiterLayout->addWidget(button, 0, 1);
 
     button = new QRadioButton(i18nc("@option:radio Field separator", "Tabulator"));
-    button->setToolTip(
-        i18nc("@info:tooltip", "Set the field separator to a tab character"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Select this option if your csv file uses the tab character as a field separator."));
+    button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a tab character"));
+    button->setWhatsThis(i18nc("@info:whatsthis", "Select this option if your csv file uses the tab character as a field separator."));
     mDelimiterGroup->addButton(button, 2);
     delimiterLayout->addWidget(button, 1, 0);
 
     button = new QRadioButton(i18nc("@option:radio Field separator", "Space"));
-    button->setToolTip(
-        i18nc("@info:tooltip", "Set the field separator to a space character"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Select this option if your csv file uses the space character as a field separator."));
+    button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a space character"));
+    button->setWhatsThis(i18nc("@info:whatsthis", "Select this option if your csv file uses the space character as a field separator."));
     mDelimiterGroup->addButton(button, 3);
     delimiterLayout->addWidget(button, 1, 1);
 
     button = new QRadioButton(i18nc("@option:radio Custom field separator", "Other"));
-    button->setToolTip(
-        i18nc("@info:tooltip", "Set the field separator to a custom character"));
-    button->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Select this option if to use some other character as the field delimiter "
-              "for the data in your csv file."));
+    button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a custom character"));
+    button->setWhatsThis(i18nc("@info:whatsthis",
+                               "Select this option if to use some other character as the field delimiter "
+                               "for the data in your csv file."));
     mDelimiterGroup->addButton(button, 4);
     delimiterLayout->addWidget(button, 0, 2);
 
     mDelimiterEdit = new QLineEdit(group);
-    mDelimiterEdit->setToolTip(
-        i18nc("@info:tooltip",
-              "Set the custom delimiter character"));
-    mDelimiterEdit->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Enter a custom character to use as the delimiter character. "
-              "If you enter more than 1 character, only the first will be used and "
-              "the remaining characters will be ignored."));
+    mDelimiterEdit->setToolTip(i18nc("@info:tooltip", "Set the custom delimiter character"));
+    mDelimiterEdit->setWhatsThis(i18nc("@info:whatsthis",
+                                       "Enter a custom character to use as the delimiter character. "
+                                       "If you enter more than 1 character, only the first will be used and "
+                                       "the remaining characters will be ignored."));
     delimiterLayout->addWidget(mDelimiterEdit, 1, 2);
 
     // text quote
@@ -386,14 +360,12 @@ void CSVImportDialog::initGUI()
 
     mComboQuote = new QComboBox(page);
     mainLayout->addWidget(mComboQuote);
-    mComboQuote->setToolTip(
-        i18nc("@info:tooltip", "Select the quote character"));
-    mComboQuote->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Choose the character that your csv data uses to \"quote\" the field delimiter "
-              "if that character happens to occur within the data.  For example, if the "
-              "comma is the field delimiter, then any comma occurring with the data "
-              "will be \"quoted\" by the character specified here."));
+    mComboQuote->setToolTip(i18nc("@info:tooltip", "Select the quote character"));
+    mComboQuote->setWhatsThis(i18nc("@info:whatsthis",
+                                    "Choose the character that your csv data uses to \"quote\" the field delimiter "
+                                    "if that character happens to occur within the data.  For example, if the "
+                                    "comma is the field delimiter, then any comma occurring with the data "
+                                    "will be \"quoted\" by the character specified here."));
     mComboQuote->setEditable(false);
     mComboQuote->addItem(i18nc("@item:inlistbox Qoute character option", "\""), 0);
     mComboQuote->addItem(i18nc("@item:inlistbox Quote character option", "'"), 1);
@@ -407,34 +379,32 @@ void CSVImportDialog::initGUI()
 
     mDatePatternEdit = new QLineEdit(page);
     mainLayout->addWidget(mDatePatternEdit);
-    mDatePatternEdit->setText(QStringLiteral("Y-M-D"));   // ISO 8601 date format as default
-    mDatePatternEdit->setToolTip(
-        xi18nc("@info:tooltip",
-               "<para><list><item>y: year with 2 digits</item>"
-               "<item>Y: year with 4 digits</item>"
-               "<item>m: month with 1 or 2 digits</item>"
-               "<item>M: month with 2 digits</item>"
-               "<item>d: day with 1 or 2 digits</item>"
-               "<item>D: day with 2 digits</item>"
-               "<item>H: hours with 2 digits</item>"
-               "<item>I: minutes with 2 digits</item>"
-               "<item>S: seconds with 2 digits</item>"
-               "</list></para>"));
-    mDatePatternEdit->setWhatsThis(
-        xi18nc("@info:whatsthis",
-               "<para>Specify a format to use for dates included in your csv data. "
-               "Use the following sequences to help you define the format:</para>"
-               "<para><list><item>y: year with 2 digits</item>"
-               "<item>Y: year with 4 digits</item>"
-               "<item>m: month with 1 or 2 digits</item>"
-               "<item>M: month with 2 digits</item>"
-               "<item>d: day with 1 or 2 digits</item>"
-               "<item>D: day with 2 digits</item>"
-               "<item>H: hours with 2 digits</item>"
-               "<item>I: minutes with 2 digits</item>"
-               "<item>S: seconds with 2 digits</item>"
-               "</list></para>"
-               "<para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</para>"));
+    mDatePatternEdit->setText(QStringLiteral("Y-M-D")); // ISO 8601 date format as default
+    mDatePatternEdit->setToolTip(xi18nc("@info:tooltip",
+                                        "<para><list><item>y: year with 2 digits</item>"
+                                        "<item>Y: year with 4 digits</item>"
+                                        "<item>m: month with 1 or 2 digits</item>"
+                                        "<item>M: month with 2 digits</item>"
+                                        "<item>d: day with 1 or 2 digits</item>"
+                                        "<item>D: day with 2 digits</item>"
+                                        "<item>H: hours with 2 digits</item>"
+                                        "<item>I: minutes with 2 digits</item>"
+                                        "<item>S: seconds with 2 digits</item>"
+                                        "</list></para>"));
+    mDatePatternEdit->setWhatsThis(xi18nc("@info:whatsthis",
+                                          "<para>Specify a format to use for dates included in your csv data. "
+                                          "Use the following sequences to help you define the format:</para>"
+                                          "<para><list><item>y: year with 2 digits</item>"
+                                          "<item>Y: year with 4 digits</item>"
+                                          "<item>m: month with 1 or 2 digits</item>"
+                                          "<item>M: month with 2 digits</item>"
+                                          "<item>d: day with 1 or 2 digits</item>"
+                                          "<item>D: day with 2 digits</item>"
+                                          "<item>H: hours with 2 digits</item>"
+                                          "<item>I: minutes with 2 digits</item>"
+                                          "<item>S: seconds with 2 digits</item>"
+                                          "</list></para>"
+                                          "<para>Example: \"Y-M-D\" corresponds to a date like \"2012-01-04\"</para>"));
     layout->addWidget(mDatePatternEdit, 2, 3);
 
     // text codec
@@ -444,23 +414,18 @@ void CSVImportDialog::initGUI()
 
     mCodecCombo = new QComboBox(page);
     mainLayout->addWidget(mCodecCombo);
-    mCodecCombo->setToolTip(
-        i18nc("@info:tooltip", "Select the text codec"));
-    mCodecCombo->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Choose the character encoding of the data in your csv file."));
+    mCodecCombo->setToolTip(i18nc("@info:tooltip", "Select the text codec"));
+    mCodecCombo->setWhatsThis(i18nc("@info:whatsthis", "Choose the character encoding of the data in your csv file."));
     layout->addWidget(mCodecCombo, 3, 3);
 
     // skip first line
     mSkipFirstRow = new QCheckBox(i18nc("@option:check", "Skip first row of file"), page);
     mainLayout->addWidget(mSkipFirstRow);
-    mSkipFirstRow->setToolTip(
-        i18nc("@info:tooltip", "Skip first row of csv file when importing"));
-    mSkipFirstRow->setWhatsThis(
-        i18nc("@info:whatsthis",
-              "Check this box if you want the import to skip over the first row "
-              "of the csv data. In many cases, the first line of a csv file will be a "
-              "comment line describing the order of the data fields included in the file."));
+    mSkipFirstRow->setToolTip(i18nc("@info:tooltip", "Skip first row of csv file when importing"));
+    mSkipFirstRow->setWhatsThis(i18nc("@info:whatsthis",
+                                      "Check this box if you want the import to skip over the first row "
+                                      "of the csv data. In many cases, the first line of a csv file will be a "
+                                      "comment line describing the order of the data fields included in the file."));
     layout->addWidget(mSkipFirstRow, 4, 2, 1, 2);
 
     // csv view
@@ -496,8 +461,7 @@ void CSVImportDialog::reloadCodecs()
         mCodecs.append(QTextCodec::codecForName(name));
     }
 
-    mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Local (%1)",
-                               QLatin1String(QTextCodec::codecForLocale()->name())), Local);
+    mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Local (%1)", QLatin1String(QTextCodec::codecForLocale()->name())), Local);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Latin1"), Latin1);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Unicode"), Uni);
     mCodecCombo->addItem(i18nc("@item:inlistbox Codec setting", "Microsoft Unicode"), MSBug);
@@ -517,7 +481,7 @@ void CSVImportDialog::customDelimiterChanged()
 void CSVImportDialog::customDelimiterChanged(const QString &, bool reload)
 {
     mDelimiterGroup->button(4)->setChecked(true);
-    delimiterClicked(4, reload);   // other
+    delimiterClicked(4, reload); // other
 }
 
 void CSVImportDialog::delimiterClicked(int id, bool reload)
@@ -565,8 +529,7 @@ void CSVImportDialog::skipFirstRowChanged(bool checked, bool reload)
 {
     mFieldSelection.clear();
     for (int column = 0; column < mModel->columnCount(); ++column) {
-        mFieldSelection.append(
-            (KAddressBookImportExport::ContactFields::Field)mModel->data(mModel->index(0, column)).toInt());
+        mFieldSelection.append((KAddressBookImportExport::ContactFields::Field)mModel->data(mModel->index(0, column)).toInt());
     }
 
     if (checked) {
@@ -595,17 +558,14 @@ void CSVImportDialog::slotOk()
     bool assigned = false;
 
     for (int column = 0; column < mModel->columnCount(); ++column) {
-        if (mModel->data(mModel->index(0, column),
-                         Qt::DisplayRole).toUInt() != KAddressBookImportExport::ContactFields::Undefined) {
+        if (mModel->data(mModel->index(0, column), Qt::DisplayRole).toUInt() != KAddressBookImportExport::ContactFields::Undefined) {
             assigned = true;
             break;
         }
     }
 
     if (!assigned) {
-        KMessageBox::sorry(
-            this,
-            i18nc("@info:status", "You must assign at least one column."));
+        KMessageBox::sorry(this, i18nc("@info:status", "You must assign at least one column."));
     } else {
         accept();
     }
@@ -615,10 +575,7 @@ void CSVImportDialog::applyTemplate()
 {
     QPointer<TemplateSelectionDialog> dlg = new TemplateSelectionDialog(this);
     if (!dlg->templatesAvailable()) {
-        KMessageBox::sorry(
-            this,
-            i18nc("@label", "There are no templates available yet."),
-            i18nc("@title:window", "No templates available"));
+        KMessageBox::sorry(this, i18nc("@label", "There are no templates available yet."), i18nc("@title:window", "No templates available"));
         delete dlg;
         return;
     }
@@ -683,9 +640,7 @@ void CSVImportDialog::finalizeApplyTemplate()
 
 void CSVImportDialog::saveTemplate()
 {
-    const QString name
-        = QInputDialog::getText(this, i18nc("@title:window", "Template Name"),
-                                i18nc("@info", "Please enter a name for the template:"));
+    const QString name = QInputDialog::getText(this, i18nc("@title:window", "Template Name"), i18nc("@info", "Please enter a name for the template:"));
 
     if (name.isEmpty()) {
         return;
@@ -696,10 +651,8 @@ void CSVImportDialog::saveTemplate()
         return;
     }
 
-    const QString fileName
-        = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kaddressbook/csv-templates/")
-          +QUuid::createUuid().toString()
-          +QStringLiteral(".desktop");
+    const QString fileName = QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QStringLiteral("/kaddressbook/csv-templates/")
+        + QUuid::createUuid().toString() + QStringLiteral(".desktop");
 
     QFileInfo fileInfo(fileName);
     QDir().mkpath(fileInfo.absolutePath());
@@ -718,9 +671,7 @@ void CSVImportDialog::saveTemplate()
 
     KConfigGroup columnMapGroup(&config, "csv column map");
     for (int column = 0; column < numberOfColumn; ++column) {
-        columnMapGroup.writeEntry(QString::number(column),
-                                  mModel->data(mModel->index(0, column),
-                                               Qt::DisplayRole).toUInt());
+        columnMapGroup.writeEntry(QString::number(column), mModel->data(mModel->index(0, column), Qt::DisplayRole).toUInt());
     }
 
     config.sync();

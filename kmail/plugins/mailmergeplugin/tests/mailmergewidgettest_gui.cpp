@@ -6,9 +6,9 @@
 
 #include "../widgets/mailmergewidget.h"
 
+#include <KAboutData>
 #include <KLocalizedString>
 #include <QApplication>
-#include <KAboutData>
 #include <QCommandLineParser>
 #include <QStandardPaths>
 

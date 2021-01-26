@@ -5,23 +5,23 @@
 */
 
 #include "vcardimportexportplugininterface.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
 #include <KAddressBookImportExport/ContactSelectionDialog>
-#include <QPointer>
-#include <KMessageBox>
-#include <QUrl>
-#include <QFileDialog>
 #include <KContacts/VCardConverter>
-#include <PimCommon/RenameFileDialog>
 #include <KIOCore/kio/filecopyjob.h>
 #include <KIOCore/kio/storedtransferjob.h>
 #include <KJobWidgets>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <PimCommon/RenameFileDialog>
+#include <QAction>
+#include <QFileDialog>
+#include <QPointer>
+#include <QUrl>
 
 #ifdef QGPGME_FOUND
-#include <QTemporaryFile>
 #include <KAddressBookImportExport/ImportExportEngine>
+#include <QTemporaryFile>
 #include <gpgme++/context.h>
 #include <gpgme++/data.h>
 #include <gpgme++/key.h>
@@ -111,10 +111,7 @@ void VCardImportExportPluginInterface::importVCard()
 {
     KContacts::Addressee::List addrList;
     const QString filter = i18n("vCard (*.vcf *.vcard *.vct *.gcrd);;All files (*)");
-    const QList<QUrl> urls
-        = QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"),
-                                       QUrl(),
-                                       filter);
+    const QList<QUrl> urls = QFileDialog::getOpenFileUrls(parentWidget(), i18nc("@title:window", "Select vCard to Import"), QUrl(), filter);
 
     if (urls.isEmpty()) {
         return;
@@ -134,10 +131,7 @@ void VCardImportExportPluginInterface::importVCard()
                 addrList += parseVCard(data);
             }
         } else {
-            const QString msg = xi18nc(
-                "@info",
-                "<para>Unable to access vCard:</para><para>%1</para>",
-                job->errorString());
+            const QString msg = xi18nc("@info", "<para>Unable to access vCard:</para><para>%1</para>", job->errorString());
             KMessageBox::error(parentWidget(), msg, caption);
         }
     }
@@ -155,7 +149,8 @@ KContacts::Addressee::List VCardImportExportPluginInterface::parseVCard(const QB
     return converter.parseVCards(data);
 }
 
-KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList, ExportSelectionWidget::ExportFields exportFieldType) const
+KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(const KContacts::Addressee::List &addrList,
+                                                                            ExportSelectionWidget::ExportFields exportFieldType) const
 {
     KContacts::Addressee::List list;
 
@@ -172,7 +167,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         addr.setFormattedName((*it).formattedName());
 
         bool addrDone = false;
-        if (exportFieldType & ExportSelectionWidget::DiplayName) {                  // output display name as N field
+        if (exportFieldType & ExportSelectionWidget::DiplayName) { // output display name as N field
             QString fmtName = (*it).formattedName();
             QStringList splitNames = fmtName.split(QLatin1Char(' '), Qt::SkipEmptyParts);
             if (splitNames.count() >= 2) {
@@ -185,7 +180,7 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
             }
         }
 
-        if (!addrDone) {                                  // not wanted, or could not be split
+        if (!addrDone) { // not wanted, or could not be split
             addr.setPrefix((*it).prefix());
             addr.setGivenName((*it).givenName());
             addr.setAdditionalName((*it).additionalName());
@@ -259,9 +254,9 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         for (phoneIt = phones.begin(); phoneIt != phoneEnd; ++phoneIt) {
             int phoneType = (*phoneIt).type();
 
-            if ((phoneType &KContacts::PhoneNumber::Home) && (exportFieldType & ExportSelectionWidget::Private)) {
+            if ((phoneType & KContacts::PhoneNumber::Home) && (exportFieldType & ExportSelectionWidget::Private)) {
                 addr.insertPhoneNumber(*phoneIt);
-            } else if ((phoneType &KContacts::PhoneNumber::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
+            } else if ((phoneType & KContacts::PhoneNumber::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
                 addr.insertPhoneNumber(*phoneIt);
             } else if ((exportFieldType & ExportSelectionWidget::Other)) {
                 addr.insertPhoneNumber(*phoneIt);
@@ -274,9 +269,9 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
         for (addrIt = addresses.begin(); addrIt != addrEnd; ++addrIt) {
             int addressType = (*addrIt).type();
 
-            if ((addressType &KContacts::Address::Home) && exportFieldType & ExportSelectionWidget::Private) {
+            if ((addressType & KContacts::Address::Home) && exportFieldType & ExportSelectionWidget::Private) {
                 addr.insertAddress(*addrIt);
-            } else if ((addressType &KContacts::Address::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
+            } else if ((addressType & KContacts::Address::Work) && (exportFieldType & ExportSelectionWidget::Business)) {
                 addr.insertAddress(*addrIt);
             } else if (exportFieldType & ExportSelectionWidget::Other) {
                 addr.insertAddress(*addrIt);
@@ -308,8 +303,8 @@ KContacts::Addressee::List VCardImportExportPluginInterface::filterContacts(cons
 void VCardImportExportPluginInterface::addKey(KContacts::Addressee &addr, KContacts::Key::Type type) const
 {
 #ifdef QGPGME_FOUND
-    const QString fingerprint = addr.custom(QStringLiteral("KADDRESSBOOK"),
-                                            (type == KContacts::Key::PGP ? QStringLiteral("OPENPGPFP") : QStringLiteral("SMIMEFP")));
+    const QString fingerprint =
+        addr.custom(QStringLiteral("KADDRESSBOOK"), (type == KContacts::Key::PGP ? QStringLiteral("OPENPGPFP") : QStringLiteral("SMIMEFP")));
     if (fingerprint.isEmpty()) {
         return;
     }
@@ -371,8 +366,7 @@ bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArra
 
 void VCardImportExportPluginInterface::exportVCard()
 {
-    QPointer<ContactSelectionDialog> dlg
-        = new ContactSelectionDialog(itemSelectionModel(), true, parentWidget());
+    QPointer<ContactSelectionDialog> dlg = new ContactSelectionDialog(itemSelectionModel(), true, parentWidget());
     dlg->setMessageText(i18n("Which contact do you want to export?"));
     dlg->setDefaultAddressBook(defaultCollection());
     if (!dlg->exec() || !dlg) {
@@ -393,7 +387,7 @@ void VCardImportExportPluginInterface::exportVCard()
     QUrl url;
 
     const KContacts::Addressee::List list = filterContacts(contacts, exportFields);
-    if (list.isEmpty()) {   // no contact selected
+    if (list.isEmpty()) { // no contact selected
         return;
     }
 
@@ -420,9 +414,8 @@ void VCardImportExportPluginInterface::exportVCard()
             }
         }
         filename += QStringLiteral(".vcf");
-        url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(filename),
-                                          QString(), nullptr, options);
-        if (url.isEmpty()) {   // user canceled export
+        url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(filename), QString(), nullptr, options);
+        if (url.isEmpty()) { // user canceled export
             return;
         }
 
@@ -438,19 +431,16 @@ void VCardImportExportPluginInterface::exportVCard()
             break;
         }
     } else {
-        const int answer
-            = KMessageBox::questionYesNoCancel(
-                  parentWidget(),
-                  i18nc("@info",
-                        "You have selected a list of contacts, "
-                        "shall they be exported to several files?"),
-                  QString(),
-                  KGuiItem(i18nc("@action:button", "Export to One File")),
-                  KGuiItem(i18nc("@action:button", "Export to Several Files")));
+        const int answer = KMessageBox::questionYesNoCancel(parentWidget(),
+                                                            i18nc("@info",
+                                                                  "You have selected a list of contacts, "
+                                                                  "shall they be exported to several files?"),
+                                                            QString(),
+                                                            KGuiItem(i18nc("@action:button", "Export to One File")),
+                                                            KGuiItem(i18nc("@action:button", "Export to Several Files")));
 
         switch (answer) {
-        case KMessageBox::No:
-        {
+        case KMessageBox::No: {
             const QUrl baseUrl = QFileDialog::getExistingDirectoryUrl();
             if (baseUrl.isEmpty()) {
                 return; // user canceled export
@@ -478,8 +468,7 @@ void VCardImportExportPluginInterface::exportVCard()
             }
             break;
         }
-        case KMessageBox::Yes:
-        {
+        case KMessageBox::Yes: {
             QFileDialog::Options options = QFileDialog::DontConfirmOverwrite;
             url = QFileDialog::getSaveFileUrl(parentWidget(), QString(), QUrl::fromLocalFile(QStringLiteral("addressbook.vcf")), QString(), nullptr, options);
             if (url.isEmpty()) {

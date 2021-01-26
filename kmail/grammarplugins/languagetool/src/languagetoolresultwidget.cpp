@@ -4,16 +4,16 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "grammarresulttextedit.h"
 #include "languagetoolresultwidget.h"
-#include "languagetoolparser.h"
-#include "languagetoolmanager.h"
-#include "languagetoolresultjob.h"
+#include "grammarresulttextedit.h"
 #include "languagetoolcombobox.h"
+#include "languagetoolmanager.h"
+#include "languagetoolparser.h"
+#include "languagetoolresultjob.h"
 #include "languagetoolupdatecombobox.h"
 
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QHBoxLayout>
 #include <QJsonDocument>

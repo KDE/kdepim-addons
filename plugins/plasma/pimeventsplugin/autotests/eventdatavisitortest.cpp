@@ -6,10 +6,10 @@
  */
 
 #include "eventdatavisitortest.h"
-#include "testdataparser.h"
-#include "fakepimdatasource.h"
-#include "testutils.h"
 #include "../eventdatavisitor.h"
+#include "fakepimdatasource.h"
+#include "testdataparser.h"
+#include "testutils.h"
 
 #include <QTest>
 
@@ -21,8 +21,7 @@
 Q_DECLARE_METATYPE(CalendarEvents::EventData)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
-template<typename Visitor>
-class TestableVisitor : public Visitor
+template<typename Visitor> class TestableVisitor : public Visitor
 {
 public:
     TestableVisitor(PimDataSource *source, QDate start = QDate(), QDate end = QDate())
@@ -40,7 +39,8 @@ public:
         return Visitor::isInRange(start, end);
     }
 
-    QVector<CalendarEvents::EventData> callExplodeIncidenceOccurences(const CalendarEvents::EventData &baseEd, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
+    QVector<CalendarEvents::EventData>
+    callExplodeIncidenceOccurences(const CalendarEvents::EventData &baseEd, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
     {
         return Visitor::explodeIncidenceOccurences(baseEd, incidence, ok);
     }
@@ -64,16 +64,14 @@ void EventDataVisitorTest::testGenerateUID_data()
     QTest::addColumn<QString>("expectedUID");
 
     auto incidence = KCalendarCore::Event::Ptr::create().staticCast<KCalendarCore::Incidence>();
-    QTest::newRow("simple event") << incidence << QDateTime()
-                                  << 1ll << QStringLiteral("Akonadi-1");
-    QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), Qt::UTC)
-                                     << 1ll << QStringLiteral("Akonadi-1-20160529T154700UTC");
+    QTest::newRow("simple event") << incidence << QDateTime() << 1ll << QStringLiteral("Akonadi-1");
+    QTest::newRow("recurring event") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 47, 0), Qt::UTC) << 1ll
+                                     << QStringLiteral("Akonadi-1-20160529T154700UTC");
 
     incidence = KCalendarCore::Todo::Ptr::create().staticCast<KCalendarCore::Incidence>();
-    QTest::newRow("simple todo") << incidence << QDateTime()
-                                 << 42ll << QStringLiteral("Akonadi-42");
-    QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), Qt::UTC)
-                                    << 42ll << QStringLiteral("Akonadi-42-20160529T154905UTC");
+    QTest::newRow("simple todo") << incidence << QDateTime() << 42ll << QStringLiteral("Akonadi-42");
+    QTest::newRow("recurring todo") << incidence << QDateTime(QDate(2016, 5, 29), QTime(15, 49, 5), Qt::UTC) << 42ll
+                                    << QStringLiteral("Akonadi-42-20160529T154905UTC");
 }
 
 void EventDataVisitorTest::testGenerateUID()
@@ -99,42 +97,18 @@ void EventDataVisitorTest::testIsInRange_data()
     QTest::addColumn<QDate>("eventEnd");
     QTest::addColumn<bool>("expectedResult");
 
-    QTest::newRow("single day fully in-range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                               << QDate(2016, 5, 3) << QDate(2016, 5, 3)
-                                               << true;
-    QTest::newRow("multiday fully in-range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                             << QDate(2016, 5, 3) << QDate(2016, 5, 15)
-                                             << true;
-    QTest::newRow("multiday start overlap") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                            << QDate(2016, 4, 28) << QDate(2016, 5, 5)
-                                            << true;
-    QTest::newRow("multiday end overlap") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                          << QDate(2016, 5, 28) << QDate(2016, 6, 5)
-                                          << true;
-    QTest::newRow("single day range edge start") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                                 << QDate(2016, 5, 1) << QDate(2016, 5, 1)
-                                                 << true;
-    QTest::newRow("single day range edge end") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                               << QDate(2016, 5, 31) << QDate(2016, 5, 31)
-                                               << true;
-    QTest::newRow("multiday range edge start") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                               << QDate(2016, 5, 1) << QDate(2016, 5, 10)
-                                               << true;
-    QTest::newRow("multiday range edge end") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                             << QDate(2016, 5, 20) << QDate(2016, 5, 31)
-                                             << true;
-    QTest::newRow("single day before range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                             << QDate(2016, 4, 28) << QDate(2016, 4, 28)
-                                             << false;
-    QTest::newRow("single day after range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                            << QDate(2016, 6, 4) << QDate(2016, 6, 4)
-                                            << false;
-    QTest::newRow("multiday before range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                           << QDate(2016, 4, 12) << QDate(2016, 4, 20)
-                                           << false;
-    QTest::newRow("multiday after range") << QDate(2016, 5, 1) << QDate(2016, 5, 31)
-                                          << QDate(2016, 6, 5) << QDate(2016, 6, 10)
-                                          << false;
+    QTest::newRow("single day fully in-range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 3) << QDate(2016, 5, 3) << true;
+    QTest::newRow("multiday fully in-range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 3) << QDate(2016, 5, 15) << true;
+    QTest::newRow("multiday start overlap") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 4, 28) << QDate(2016, 5, 5) << true;
+    QTest::newRow("multiday end overlap") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 28) << QDate(2016, 6, 5) << true;
+    QTest::newRow("single day range edge start") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 1) << QDate(2016, 5, 1) << true;
+    QTest::newRow("single day range edge end") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 31) << QDate(2016, 5, 31) << true;
+    QTest::newRow("multiday range edge start") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 1) << QDate(2016, 5, 10) << true;
+    QTest::newRow("multiday range edge end") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 5, 20) << QDate(2016, 5, 31) << true;
+    QTest::newRow("single day before range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 4, 28) << QDate(2016, 4, 28) << false;
+    QTest::newRow("single day after range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 6, 4) << QDate(2016, 6, 4) << false;
+    QTest::newRow("multiday before range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 4, 12) << QDate(2016, 4, 20) << false;
+    QTest::newRow("multiday after range") << QDate(2016, 5, 1) << QDate(2016, 5, 31) << QDate(2016, 6, 5) << QDate(2016, 6, 10) << false;
 }
 
 void EventDataVisitorTest::testIsInRange()
@@ -158,7 +132,7 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
     QTest::addColumn<CalendarEvents::EventData>("baseEventData");
     QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
-    QTest::addColumn<QVector<CalendarEvents::EventData> >("expectedEventData");
+    QTest::addColumn<QVector<CalendarEvents::EventData>>("expectedEventData");
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
@@ -167,12 +141,8 @@ void EventDataVisitorTest::testExplodeIncidenceOccurences_data()
         if (!parser.incidence()->recurs()) {
             continue;
         }
-        QTest::newRow(qPrintable(testData)) << parser.rangeStart()
-                                            << parser.rangeEnd()
-                                            << parser.eventData().constFirst()
-                                            << parser.incidence()
-                                            << parser.akonadiId()
-                                            << parser.eventData();
+        QTest::newRow(qPrintable(testData)) << parser.rangeStart() << parser.rangeEnd() << parser.eventData().constFirst() << parser.incidence()
+                                            << parser.akonadiId() << parser.eventData();
     }
 }
 
@@ -204,17 +174,13 @@ void EventDataVisitorTest::testEventDataVisitor_data()
     QTest::addColumn<QDate>("rangeEnd");
     QTest::addColumn<KCalendarCore::Incidence::Ptr>("incidence");
     QTest::addColumn<qint64>("akonadiItemId");
-    QTest::addColumn<QVector<CalendarEvents::EventData> >("expectedResults");
+    QTest::addColumn<QVector<CalendarEvents::EventData>>("expectedResults");
 
     const auto allTestData = TestDataParser::allTestData();
     for (const auto &testData : allTestData) {
         TestDataParser parser(testData);
 
-        QTest::newRow(qPrintable(testData)) << parser.rangeStart()
-                                            << parser.rangeEnd()
-                                            << parser.incidence()
-                                            << parser.akonadiId()
-                                            << parser.eventData();
+        QTest::newRow(qPrintable(testData)) << parser.rangeStart() << parser.rangeEnd() << parser.incidence() << parser.akonadiId() << parser.eventData();
     }
 }
 
@@ -259,11 +225,7 @@ void EventDataVisitorTest::testEventDataIdVisitor_data()
         for (const auto &ed : parser.eventData()) {
             uids.push_back(ed.uid());
         }
-        QTest::newRow(qPrintable(testData)) << parser.rangeStart()
-                                            << parser.rangeEnd()
-                                            << parser.incidence()
-                                            << parser.akonadiId()
-                                            << uids;
+        QTest::newRow(qPrintable(testData)) << parser.rangeStart() << parser.rangeEnd() << parser.incidence() << parser.akonadiId() << uids;
     }
 }
 

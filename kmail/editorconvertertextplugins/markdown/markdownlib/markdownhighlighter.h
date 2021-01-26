@@ -21,6 +21,7 @@ public:
 
 protected:
     void applyFormat(int offset, int length, const KSyntaxHighlighting::Format &format) override;
+
 private:
     QString mCurrentLine;
     QTextStream *const mStream;

@@ -7,8 +7,8 @@
 #ifndef SELECTIMAPWIDGETTEST_H
 #define SELECTIMAPWIDGETTEST_H
 
-#include <QWidget>
 #include <KSieveUi/AbstractMoveImapFolderWidget>
+#include <QWidget>
 
 class DefaultMoveImapFolderWidget : public KSieveUi::AbstractMoveImapFolderWidget
 {

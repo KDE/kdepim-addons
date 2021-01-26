@@ -6,12 +6,12 @@
 
 #include "viewerpluginexternaleditdialog.h"
 #include "viewerpluginexternaleditwidget.h"
-#include <KLocalizedString>
-#include <QDialogButtonBox>
-#include <QVBoxLayout>
-#include <QPushButton>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 ViewerPluginExternalEditDialog::ViewerPluginExternalEditDialog(QWidget *parent)
     : QDialog(parent)

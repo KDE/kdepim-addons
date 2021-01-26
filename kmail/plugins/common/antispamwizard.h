@@ -11,20 +11,22 @@
 #include <KAssistantDialog>
 #include <KSharedConfig>
 
-#include <QList>
 #include <AkonadiCore/collection.h>
+#include <QList>
 
 class QLabel;
 class QCheckBox;
 class QBoxLayout;
 class QListWidget;
 
-namespace MailCommon {
+namespace MailCommon
+{
 class FolderTreeWidget;
 class FolderRequester;
 }
 
-namespace KMail {
+namespace KMail
+{
 class ASWizInfoPage;
 class ASWizSpamRulesPage;
 class ASWizVirusRulesPage;
@@ -87,9 +89,7 @@ public:
     /** The wizard can be used for setting up anti-spam tools and for
           setting up anti-virus tools.
       */
-    enum WizardMode {
-        AntiSpam, AntiVirus
-    };
+    enum WizardMode { AntiSpam, AntiVirus };
 
     /** Constructor that needs to initialize from the main folder tree
         of KMail.
@@ -114,13 +114,31 @@ protected:
         {
         }
 
-        SpamToolConfig(const QString &toolId, int configVersion, int prio, const QString &name, const QString &exec, const QString &url, const QString &filter, const QString &detection, const QString &spam, const QString &ham, const QString &noSpam, const QString &header, const QString &pattern,
-                       const QString &pattern2, const QString &serverPattern, bool detectionOnly, bool regExp, bool bayesFilter, bool tristateDetection, WizardMode type);
+        SpamToolConfig(const QString &toolId,
+                       int configVersion,
+                       int prio,
+                       const QString &name,
+                       const QString &exec,
+                       const QString &url,
+                       const QString &filter,
+                       const QString &detection,
+                       const QString &spam,
+                       const QString &ham,
+                       const QString &noSpam,
+                       const QString &header,
+                       const QString &pattern,
+                       const QString &pattern2,
+                       const QString &serverPattern,
+                       bool detectionOnly,
+                       bool regExp,
+                       bool bayesFilter,
+                       bool tristateDetection,
+                       WizardMode type);
 
         Q_REQUIRED_RESULT int getVersion() const;
         Q_REQUIRED_RESULT int getPrio() const;
-        Q_REQUIRED_RESULT QString getId()  const;
-        Q_REQUIRED_RESULT QString getVisibleName()  const;
+        Q_REQUIRED_RESULT QString getId() const;
+        Q_REQUIRED_RESULT QString getVisibleName() const;
         Q_REQUIRED_RESULT QString getExecutable() const;
         Q_REQUIRED_RESULT QString getWhatsThisText() const;
         Q_REQUIRED_RESULT QString getFilterName() const;

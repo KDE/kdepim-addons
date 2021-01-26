@@ -11,7 +11,8 @@
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <KCalendarCore/Calendar>
 
-namespace Akonadi {
+namespace Akonadi
+{
 class ETMCalendar;
 }
 

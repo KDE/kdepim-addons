@@ -8,7 +8,8 @@
 #define SELECTMAILWIDGET_H
 
 #include <QWidget>
-namespace Akonadi {
+namespace Akonadi
+{
 class EmailAddressSelectionWidget;
 }
 

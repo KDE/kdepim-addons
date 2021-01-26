@@ -13,17 +13,17 @@
 #include "calendarinterface.h"
 #include "delegateselector.h"
 #include "memorycalendarmemento.h"
-#include "syncitiphandler.h"
 #include "reactiontoinvitationdialog.h"
+#include "syncitiphandler.h"
 
 #include <KIdentityManagement/IdentityManager>
 
 #include <MessageViewer/BodyPartURLHandler>
-#include <MessageViewer/MessagePartRendererBase>
+#include <MessageViewer/HtmlWriter>
 #include <MessageViewer/MessagePartRenderPlugin>
+#include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessageViewerSettings>
 #include <MessageViewer/Viewer>
-#include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/MessagePart>
 using namespace MessageViewer;
@@ -39,34 +39,35 @@ using namespace KCalendarCore;
 
 #include <KEmailAddress>
 
-#include <MailTransportAkonadi/MessageQueueJob>
 #include <MailTransport/TransportManager>
+#include <MailTransportAkonadi/MessageQueueJob>
 
 #include <KontactInterface/PimUniqueApplication>
 
 #include "text_calendar_debug.h"
 
-#include <KMessageBox>
+#include <KIO/FileCopyJob>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
-#include <KIO/FileCopyJob>
 #include <KIO/StatJob>
 #include <KLocalizedString>
+#include <KMessageBox>
 
 #include <QDBusServiceWatcher>
-#include <QMimeDatabase>
-#include <QUrl>
-#include <QTemporaryFile>
-#include <QIcon>
-#include <QFileDialog>
 #include <QDesktopServices>
+#include <QFileDialog>
+#include <QIcon>
 #include <QInputDialog>
 #include <QMenu>
+#include <QMimeDatabase>
 #include <QPointer>
+#include <QTemporaryFile>
+#include <QUrl>
 
 using namespace MailTransport;
 
-namespace {
+namespace
+{
 static bool hasMyWritableEventsFolders(const QString &family)
 {
     Q_UNUSED(family)
@@ -204,9 +205,7 @@ public:
                 }
 
                 MemoryCalendar::Ptr cl(new MemoryCalendar(QTimeZone::systemTimeZone()));
-                const QString html
-                    = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(
-                          source, cl, &helper, message->sender()->asUnicodeString());
+                const QString html = KCalUtils::IncidenceFormatter::formatICalInvitationNoHtml(source, cl, &helper, message->sender()->asUnicodeString());
 
                 if (html.isEmpty()) {
                     return false;
@@ -216,8 +215,7 @@ public:
         } else {
             auto *memento = new MemoryCalendarMemento();
             msgPart->setMemento(memento);
-            QObject::connect(memento, &MemoryCalendarMemento::update,
-                             nodeHelper, &MimeTreeParser::NodeHelper::update);
+            QObject::connect(memento, &MemoryCalendarMemento::update, nodeHelper, &MimeTreeParser::NodeHelper::update);
         }
 
         return true;
@@ -255,8 +253,8 @@ static Incidence::Ptr stringToIncidence(const QString &iCal)
     ICalFormat format;
     ScheduleMessage::Ptr message = format.parseScheduleMessage(calendar, iCal);
     if (!message) {
-        //TODO: Error message?
-        qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: "  << iCal;
+        // TODO: Error message?
+        qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: " << iCal;
         return Incidence::Ptr();
     }
 
@@ -268,7 +266,7 @@ class UrlHandler : public MessageViewer::Interface::BodyPartURLHandler
 public:
     UrlHandler()
     {
-        //qCDebug(TEXT_CALENDAR_LOG) << "UrlHandler() (iCalendar)";
+        // qCDebug(TEXT_CALENDAR_LOG) << "UrlHandler() (iCalendar)";
     }
 
     QString name() const override
@@ -356,9 +354,7 @@ public:
         }
 
         if (attachment.isEmpty()) {
-            KMessageBox::error(
-                nullptr,
-                i18n("No attachment named \"%1\" found in the invitation.", name));
+            KMessageBox::error(nullptr, i18n("No attachment named \"%1\" found in the invitation.", name));
             return Attachment();
         }
 
@@ -372,13 +368,12 @@ public:
                 fileExists = job->exec();
             }
             if (!fileExists) {
-                KMessageBox::information(
-                    nullptr,
-                    i18n("The invitation attachment \"%1\" is a web link that "
-                         "is inaccessible from this computer. Please ask the event "
-                         "organizer to resend the invitation with this attachment "
-                         "stored inline instead of a link.",
-                         attachmentUrl.toDisplayString()));
+                KMessageBox::information(nullptr,
+                                         i18n("The invitation attachment \"%1\" is a web link that "
+                                              "is inaccessible from this computer. Please ask the event "
+                                              "organizer to resend the invitation with this attachment "
+                                              "stored inline instead of a link.",
+                                              attachmentUrl.toDisplayString()));
                 return Attachment();
             }
         }
@@ -399,9 +394,8 @@ public:
             addrs = header->mailboxes();
         }
         int found = 0;
-        QVector< KMime::Types::Mailbox >::const_iterator end = addrs.constEnd();
-        for (QVector< KMime::Types::Mailbox >::const_iterator it = addrs.constBegin();
-             it != end; ++it) {
+        QVector<KMime::Types::Mailbox>::const_iterator end = addrs.constEnd();
+        for (QVector<KMime::Types::Mailbox>::const_iterator it = addrs.constBegin(); it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;
@@ -414,8 +408,7 @@ public:
             ccaddrs = header->mailboxes();
         }
         end = ccaddrs.constEnd();
-        for (QVector<KMime::Types::Mailbox >::const_iterator it = ccaddrs.constBegin();
-             it != end; ++it) {
+        for (QVector<KMime::Types::Mailbox>::const_iterator it = ccaddrs.constBegin(); it != end; ++it) {
             if (im->identityForAddress(QLatin1String((*it).address())) != KIdentityManagement::Identity::null()) {
                 // Ok, this could be us
                 ++found;
@@ -427,15 +420,15 @@ public:
             bool ok;
             QString selectMessage;
             if (found == 0) {
-                selectMessage
-                    = i18n("<qt>None of your identities match the receiver of this message,<br/>"
-                           "please choose which of the following addresses is yours,<br/> if any, "
-                           "or select one of your identities to use in the reply:</qt>");
+                selectMessage = i18n(
+                    "<qt>None of your identities match the receiver of this message,<br/>"
+                    "please choose which of the following addresses is yours,<br/> if any, "
+                    "or select one of your identities to use in the reply:</qt>");
                 possibleAddrs += im->allEmails();
             } else {
-                selectMessage
-                    = i18n("<qt>Several of your identities match the receiver of this message,<br/>"
-                           "please choose which of the following addresses is yours:</qt>");
+                selectMessage = i18n(
+                    "<qt>Several of your identities match the receiver of this message,<br/>"
+                    "please choose which of the following addresses is yours:</qt>");
                 possibleAddrs.reserve(addrs.count() + ccaddrs.count());
                 for (const KMime::Types::Mailbox &mbx : qAsConst(addrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
@@ -449,8 +442,7 @@ public:
             const QString defaultAddr = im->defaultIdentity().primaryEmailAddress();
             const int defaultIndex = qMax(0, possibleAddrs.indexOf(defaultAddr));
 
-            receiver = QInputDialog::getItem(nullptr,
-                                             i18n("Select Address"), selectMessage, possibleAddrs, defaultIndex, false, &ok);
+            receiver = QInputDialog::getItem(nullptr, i18n("Select Address"), selectMessage, possibleAddrs, defaultIndex, false, &ok);
 
             if (!ok) {
                 receiver.clear();
@@ -470,9 +462,11 @@ public:
         if (email.isEmpty() && !myself.isNull()) {
             email = myself.email();
         }
-        Q_ASSERT(!email.isEmpty());   // delivery must be possible
+        Q_ASSERT(!email.isEmpty()); // delivery must be possible
 
-        Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
+        Attendee newMyself(name,
+                           email,
+                           true, // RSVP, otherwise we would not be here
                            status,
                            !myself.isNull() ? myself.role() : heuristicalRole(incidence),
                            myself.uid());
@@ -489,14 +483,15 @@ public:
         return newMyself;
     }
 
-    enum MailType {
-        Answer,
-        Delegation,
-        Forward,
-        DeclineCounter
-    };
+    enum MailType { Answer, Delegation, Forward, DeclineCounter };
 
-    bool mailICal(const QString &receiver, const QString &to, const QString &iCal, const QString &subject, const QString &status, bool delMessage, Viewer *viewerInstance) const
+    bool mailICal(const QString &receiver,
+                  const QString &to,
+                  const QString &iCal,
+                  const QString &subject,
+                  const QString &status,
+                  bool delMessage,
+                  Viewer *viewerInstance) const
     {
         qCDebug(TEXT_CALENDAR_LOG) << "Mailing message:" << iCal;
 
@@ -506,14 +501,11 @@ public:
             QString tsubject = subject;
             tsubject.remove(i18n("Answer: "));
             if (status == QLatin1String("cancel")) {
-                msg->subject()->fromUnicodeString(
-                    i18nc("Not able to attend.", "Declined: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Not able to attend.", "Declined: %1", tsubject), "utf-8");
             } else if (status == QLatin1String("tentative")) {
-                msg->subject()->fromUnicodeString(
-                    i18nc("Unsure if it is possible to attend.", "Tentative: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Unsure if it is possible to attend.", "Tentative: %1", tsubject), "utf-8");
             } else if (status == QLatin1String("accepted")) {
-                msg->subject()->fromUnicodeString(
-                    i18nc("Accepted the invitation.", "Accepted: %1", tsubject), "utf-8");
+                msg->subject()->fromUnicodeString(i18nc("Accepted the invitation.", "Accepted: %1", tsubject), "utf-8");
             } else {
                 msg->subject()->fromUnicodeString(subject, "utf-8");
             }
@@ -525,7 +517,7 @@ public:
         msg->date()->setDateTime(QDateTime::currentDateTime());
 
         if (MessageViewer::MessageViewerSettings::self()->legacyBodyInvites()) {
-            auto ct = msg->contentType(); //create
+            auto ct = msg->contentType(); // create
             ct->setMimeType("text/calendar");
             ct->setCharset("utf-8");
             ct->setName(QStringLiteral("cal.ics"), "utf-8");
@@ -568,8 +560,7 @@ public:
             attachCt->setMimeType("text/calendar");
             attachCt->setCharset("utf-8");
             attachCt->setName(QStringLiteral("cal.ics"), "utf-8");
-            attachCt->setParameter(QStringLiteral("method"),
-                                   QStringLiteral("reply"));
+            attachCt->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
             attachMessage->setHeader(attachDisposition);
             attachMessage->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
             attachMessage->setBody(KMime::CRLFtoLF(iCal.toUtf8()));
@@ -580,9 +571,7 @@ public:
         // Setting the identity here is important, as that is used to select the correct
         // transport later
         KIdentityManagement::IdentityManager *im = KIdentityManagement::IdentityManager::self();
-        const KIdentityManagement::Identity identity
-            = im->identityForAddress(
-                  findReceiver(viewerInstance->message().data()));
+        const KIdentityManagement::Identity identity = im->identityForAddress(findReceiver(viewerInstance->message().data()));
 
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
 
@@ -624,18 +613,14 @@ public:
 
         auto *job = new MailTransport::MessageQueueJob;
 
-        job->addressAttribute().setTo(QStringList() << KEmailAddress::extractEmailAddress(
-                                          KEmailAddress::normalizeAddressesAndEncodeIdn(to)));
+        job->addressAttribute().setTo(QStringList() << KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(to)));
         job->transportAttribute().setTransportId(transport->id());
 
         if (transport->specifySenderOverwriteAddress()) {
             job->addressAttribute().setFrom(
-                KEmailAddress::extractEmailAddress(
-                    KEmailAddress::normalizeAddressesAndEncodeIdn(transport->senderOverwriteAddress())));
+                KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(transport->senderOverwriteAddress())));
         } else {
-            job->addressAttribute().setFrom(
-                KEmailAddress::extractEmailAddress(
-                    KEmailAddress::normalizeAddressesAndEncodeIdn(msg->from()->asUnicodeString())));
+            job->addressAttribute().setFrom(KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(msg->from()->asUnicodeString())));
         }
 
         job->setMessage(msg);
@@ -645,16 +630,21 @@ public:
             return false;
         }
         // We are not notified when mail was sent, so assume it was sent when queued.
-        if (delMessage
-            && MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
+        if (delMessage && MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
             viewerInstance->deleteMessage();
         }
         return true;
     }
 
-    bool mail(Viewer *viewerInstance, const Incidence::Ptr &incidence, const QString &status, iTIPMethod method = iTIPReply, const QString &receiver = QString(), const QString &to = QString(), MailType type = Answer) const
+    bool mail(Viewer *viewerInstance,
+              const Incidence::Ptr &incidence,
+              const QString &status,
+              iTIPMethod method = iTIPReply,
+              const QString &receiver = QString(),
+              const QString &to = QString(),
+              MailType type = Answer) const
     {
-        //status is accepted/tentative/declined
+        // status is accepted/tentative/declined
         ICalFormat format;
         format.setTimeZone(QTimeZone::systemTimeZone());
         QString msg = format.createScheduleMessage(incidence, method);
@@ -682,8 +672,7 @@ public:
         if (incidence->organizer().isEmpty()) {
             QString tname, temail;
             KMime::Message::Ptr message = viewerInstance->message();
-            KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(),
-                                                      temail, tname);
+            KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(), temail, tname);
             incidence->setOrganizer(Person(tname, temail));
         }
 
@@ -737,8 +726,7 @@ public:
                 if (occurred) {
                     warnStr = i18n("\"%1\" occurred already.", event->summary());
                 } else if (event->dtStart().date() <= today && today <= event->dtEnd().date()) {
-                    warnStr = i18n("\"%1\", happening all day today, is currently in-progress.",
-                                   event->summary());
+                    warnStr = i18n("\"%1\", happening all day today, is currently in-progress.", event->summary());
                 }
             }
         } else if (incidence->type() == Incidence::TypeTodo) {
@@ -760,10 +748,8 @@ public:
                 if (todo->hasDueDate()) {
                     if (todo->dtDue().date() < today) {
                         warnStr = i18n("\"%1\" is past due.", todo->summary());
-                    } else if (todo->hasStartDate()
-                               && todo->dtStart().date() <= today && today <= todo->dtDue().date()) {
-                        warnStr = i18n("\"%1\", happening all-day today, is currently in-progress.",
-                                       todo->summary());
+                    } else if (todo->hasStartDate() && todo->dtStart().date() <= today && today <= todo->dtDue().date()) {
+                        warnStr = i18n("\"%1\", happening all-day today, is currently in-progress.", todo->summary());
                     }
                 } else if (todo->hasStartDate()) {
                     if (todo->dtStart().date() < today) {
@@ -783,8 +769,7 @@ public:
                 }
             } else if (path == QLatin1String("accept_conditionally")) {
                 if (type == Incidence::TypeTodo) {
-                    queryStr
-                        = i18n("Do you still want to send conditional acceptance of the invitation?");
+                    queryStr = i18n("Do you still want to send conditional acceptance of the invitation?");
                 } else {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
                 }
@@ -836,9 +821,7 @@ public:
                 queryStr = i18n("%1?", path);
             }
 
-            if (KMessageBox::warningYesNo(
-                    nullptr,
-                    i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
+            if (KMessageBox::warningYesNo(nullptr, i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
                 return true;
             }
         }
@@ -857,8 +840,7 @@ public:
         }
 
         Incidence::Ptr incidence = stringToIncidence(iCal);
-        qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid()
-                                   << "; schedulingId is:" << incidence->schedulingID()
+        qCDebug(TEXT_CALENDAR_LOG) << "Handling invitation: uid is : " << incidence->uid() << "; schedulingId is:" << incidence->schedulingID()
                                    << "; Attendee::PartStat = " << status;
 
         // get comment for tentative acceptance
@@ -875,9 +857,7 @@ public:
             }
 
             if (comment.trimmed().isEmpty()) {
-                KMessageBox::error(
-                    nullptr,
-                    i18n("You forgot to add proposal. Please add it. Thanks"));
+                KMessageBox::error(nullptr, i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
             } else {
                 incidence->addComment(comment);
@@ -926,10 +906,8 @@ public:
         if (status != Attendee::NeedsAction && !myself.isNull() && !myself.delegator().isEmpty()) {
             const Attendee::List attendees = incidence->attendees();
             Attendee::List::ConstIterator end = attendees.constEnd();
-            for (Attendee::List::ConstIterator it = attendees.constBegin();
-                 it != end; ++it) {
-                if (KEmailAddress::compareEmail((*it).fullName(), myself.delegator(), false)
-                    && (*it).status() == Attendee::Delegated) {
+            for (Attendee::List::ConstIterator it = attendees.constBegin(); it != end; ++it) {
+                if (KEmailAddress::compareEmail((*it).fullName(), myself.delegator(), false) && (*it).status() == Attendee::Delegated) {
                     delegator = (*it).fullName();
                     delegatorRSVP = (*it).RSVP();
                     break;
@@ -937,7 +915,8 @@ public:
             }
         }
 
-        if (status != Attendee::NeedsAction && ((!myself.isNull() && (myself.RSVP() || myself.status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
+        if (status != Attendee::NeedsAction
+            && ((!myself.isNull() && (myself.RSVP() || myself.status() == Attendee::NeedsAction)) || heuristicalRSVP(incidence))) {
             Attendee newMyself = setStatusOnMyself(incidence, myself, status, receiver);
             if (!newMyself.isNull() && status == Attendee::Delegated) {
                 newMyself.setDelegate(delegateString);
@@ -946,9 +925,7 @@ public:
             ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver);
 
             // check if we need to inform our delegator about this as well
-            if (!newMyself.isNull()
-                && (status == Attendee::Accepted || status == Attendee::Declined)
-                && !delegator.isEmpty()) {
+            if (!newMyself.isNull() && (status == Attendee::Accepted || status == Attendee::Declined) && !delegator.isEmpty()) {
                 if (delegatorRSVP || status == Attendee::Declined) {
                     ok = mail(viewerInstance, incidence, dir, iTIPReply, receiver, delegator);
                 }
@@ -959,7 +936,9 @@ public:
             QString email;
             KEmailAddress::extractEmailAddressAndName(receiver, email, name);
             if (!email.isEmpty()) {
-                Attendee newMyself(name, email, true,  // RSVP, otherwise we would not be here
+                Attendee newMyself(name,
+                                   email,
+                                   true, // RSVP, otherwise we would not be here
                                    status,
                                    heuristicalRole(incidence),
                                    QString());
@@ -1057,9 +1036,7 @@ public:
             stat = job->exec();
         } else {
             // put the attachment in a temporary file and save it
-            QTemporaryFile *file{
-                nullptr
-            };
+            QTemporaryFile *file{nullptr};
             QMimeDatabase db;
             QStringList patterns = db.mimeTypeForName(a.mimeType()).globPatterns();
             if (!patterns.empty()) {
@@ -1086,8 +1063,7 @@ public:
     {
         // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
         if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
-            OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"),
-                                                    QDBusConnection::sessionBus(), nullptr);
+            OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"), QDBusConnection::sessionBus(), nullptr);
             if (!iface.isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface.lastError().message();
                 return;
@@ -1124,16 +1100,13 @@ public:
             }
 
             if (comment.trimmed().isEmpty()) {
-                KMessageBox::error(
-                    nullptr,
-                    i18n("You forgot to add proposal. Please add it. Thanks"));
+                KMessageBox::error(nullptr, i18n("You forgot to add proposal. Please add it. Thanks"));
                 return true;
             } else {
                 incidence->addComment(comment);
             }
         }
-        return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalendarCore::iTIPDeclineCounter,
-                    receiver, QString(), DeclineCounter);
+        return mail(viewerInstance, incidence, QStringLiteral("declinecounter"), KCalendarCore::iTIPDeclineCounter, receiver, QString(), DeclineCounter);
     }
 
     bool counterProposal(const QString &iCal, MimeTreeParser::Interface::BodyPart *part) const
@@ -1157,11 +1130,10 @@ public:
         }
 
         if (!hasMyWritableEventsFolders(QStringLiteral("calendar"))) {
-            KMessageBox::error(
-                nullptr,
-                i18n("You have no writable calendar folders for invitations, "
-                     "so storing or saving a response will not be possible.\n"
-                     "Please create at least 1 writable events calendar and re-sync."));
+            KMessageBox::error(nullptr,
+                               i18n("You have no writable calendar folders for invitations, "
+                                    "so storing or saving a response will not be possible.\n"
+                                    "Please create at least 1 writable events calendar and re-sync."));
             return false;
         }
 
@@ -1177,10 +1149,9 @@ public:
 
         Incidence::Ptr incidence = stringToIncidence(iCal);
         if (!incidence) {
-            KMessageBox::sorry(
-                nullptr,
-                i18n("The calendar invitation stored in this email message is broken in some way. "
-                     "Unable to continue."));
+            KMessageBox::sorry(nullptr,
+                               i18n("The calendar invitation stored in this email message is broken in some way. "
+                                    "Unable to continue."));
             return false;
         }
 
@@ -1232,23 +1203,20 @@ public:
         } else if (path == QLatin1String("record")) {
             incidence = stringToIncidence(iCal);
             QString summary;
-            int response
-                = KMessageBox::questionYesNoCancel(
-                      nullptr,
-                      i18nc("@info",
-                            "The organizer is not expecting a reply to this invitation "
-                            "but you can send them an email message if you desire.\n\n"
-                            "Would you like to send the organizer a message regarding this invitation?\n"
-                            "Press the [Cancel] button to cancel the recording operation."),
-                      i18nc("@title:window", "Send Email to Organizer"),
-                      KGuiItem(i18n("Do Not Send")),
-                      KGuiItem(i18n("Send EMail")));
+            int response = KMessageBox::questionYesNoCancel(nullptr,
+                                                            i18nc("@info",
+                                                                  "The organizer is not expecting a reply to this invitation "
+                                                                  "but you can send them an email message if you desire.\n\n"
+                                                                  "Would you like to send the organizer a message regarding this invitation?\n"
+                                                                  "Press the [Cancel] button to cancel the recording operation."),
+                                                            i18nc("@title:window", "Send Email to Organizer"),
+                                                            KGuiItem(i18n("Do Not Send")),
+                                                            KGuiItem(i18n("Send EMail")));
 
             switch (response) {
             case KMessageBox::Cancel:
                 break;
-            case KMessageBox::No:
-            {                       // means "send email"
+            case KMessageBox::No: { // means "send email"
                 summary = incidence->summary();
                 if (!summary.isEmpty()) {
                     summary = i18n("Re: %1", summary);
@@ -1262,7 +1230,7 @@ public:
                 url.setQuery(query);
                 QDesktopServices::openUrl(url);
             }
-            //fall through
+            // fall through
             case KMessageBox::Yes: // means "do not send"
                 if (saveFile(QStringLiteral("Receiver Not Searched"), iCal, QStringLiteral("reply"), part)) {
                     if (MessageViewer::MessageViewerSettings::self()->deleteInvitationEmailsAfterSendingReply()) {
@@ -1301,7 +1269,7 @@ public:
         if (path.startsWith(QLatin1String("ATTACH:"))) {
             name = QString::fromUtf8(QByteArray::fromBase64(path.mid(7).toUtf8()));
         } else {
-            return false; //because it isn't an attachment invitation
+            return false; // because it isn't an attachment invitation
         }
 
         QString iCal;
@@ -1313,10 +1281,8 @@ public:
         }
 
         auto *menu = new QMenu();
-        QAction *open
-            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
-        QAction *saveas
-            = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
+        QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
+        QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
 
         QAction *a = menu->exec(point, nullptr);
         if (a == open) {
@@ -1372,11 +1338,12 @@ public:
 
     bool askForComment(Attendee::PartStat status) const
     {
-        if (status != Attendee::NeedsAction && ((status != Attendee::Accepted
-                                                 && MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
-                                                 == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AskForAllButAcceptance)
-                                                || (MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
-                                                    == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AlwaysAsk))) {
+        if (status != Attendee::NeedsAction
+            && ((status != Attendee::Accepted
+                 && MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
+                     == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AskForAllButAcceptance)
+                || (MessageViewer::MessageViewerSettings::self()->askForCommentWhenReactingToInvitation()
+                    == MessageViewer::MessageViewerSettings::EnumAskForCommentWhenReactingToInvitation::AlwaysAsk))) {
             return true;
         }
         return false;

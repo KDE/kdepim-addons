@@ -6,15 +6,14 @@
 
 #include "pmailimportdata.h"
 #include "pmailsettings.h"
-#include <MailImporter/FilterPMail>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterPMail>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();
-                           )
+K_PLUGIN_FACTORY_WITH_JSON(PMailImporterFactory, "pmailimporter.json", registerPlugin<PMailImportData>();)
 PMailImportData::PMailImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
 {
@@ -28,7 +27,7 @@ PMailImportData::~PMailImportData()
 bool PMailImportData::foundMailer() const
 {
 #ifdef Q_OS_WIN
-    //TODO find a method to search it. Perhaps look at binary.
+    // TODO find a method to search it. Perhaps look at binary.
     QDir directory(mPath);
     if (directory.exists()) {
         return true;
@@ -59,7 +58,7 @@ bool PMailImportData::importMails()
 
 bool PMailImportData::importSettings()
 {
-    //TODO verify path
+    // TODO verify path
     const QString settingFile(mPath + QLatin1String("pmail.ini"));
     PMailSettings settings(settingFile);
     settings.setAbstractDisplayInfo(mAbstractDisplayInfo);
@@ -71,7 +70,7 @@ LibImportWizard::AbstractImporter::TypeSupportedOptions PMailImportData::support
 {
     TypeSupportedOptions options;
     options |= LibImportWizard::AbstractImporter::Mails;
-    //options |=LibImportWizard::AbstractImporter::Settings;
+    // options |=LibImportWizard::AbstractImporter::Settings;
     return options;
 }
 

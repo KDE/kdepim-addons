@@ -19,6 +19,7 @@ public:
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldResetValue();
+
 private:
     AutomaticAddContactsTabWidget *createContactWidget();
     QStandardItemModel *mComboboxModel = nullptr;

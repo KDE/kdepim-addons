@@ -4,13 +4,13 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "sendvcardsjob.h"
 #include "sendvcardsplugininterface.h"
 #include "kaddressbook_sendvcardsplugin_debug.h"
+#include "sendvcardsjob.h"
 
-#include <KMessageBox>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QAction>
 
 SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)

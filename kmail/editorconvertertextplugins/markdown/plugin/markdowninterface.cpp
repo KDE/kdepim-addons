@@ -5,19 +5,19 @@
 */
 
 #include "markdowninterface.h"
-#include "markdownpreviewdialog.h"
-#include "markdownplugin_debug.h"
 #include "markdownconverter.h"
-#include "markdowncreatelinkdialog.h"
-#include "markdownutil.h"
 #include "markdowncreateimagedialog.h"
+#include "markdowncreatelinkdialog.h"
+#include "markdownplugin_debug.h"
+#include "markdownpreviewdialog.h"
+#include "markdownutil.h"
+#include <KActionCollection>
+#include <KConfigGroup>
+#include <KLocalizedString>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KPIMTextEdit/RichTextComposerControler>
-#include <KLocalizedString>
-#include <QAction>
-#include <KActionCollection>
 #include <KSharedConfig>
-#include <KConfigGroup>
+#include <QAction>
 #include <QMenu>
 
 #include <MessageComposer/TextPart>
@@ -47,8 +47,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
     connect(mStatusBarLabel, &MessageComposer::StatusBarLabelToggledState::toggleModeChanged, this, [this](bool checked) {
         mAction->setChecked(checked);
         slotActivated(checked);
-    }
-            );
+    });
     QFont f = mStatusBarLabel->font();
     f.setBold(true);
     mStatusBarLabel->setFont(f);
@@ -185,7 +184,7 @@ bool MarkdownInterface::reformatText()
 void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, QString &textVersion, QString &htmlVersion) const
 {
     QStringList listImage = MarkdownUtil::imagePaths(textVersion);
-    QVector< QSharedPointer<KPIMTextEdit::EmbeddedImage> > lstEmbeddedImages;
+    QVector<QSharedPointer<KPIMTextEdit::EmbeddedImage>> lstEmbeddedImages;
     if (!listImage.isEmpty()) {
         listImage.removeDuplicates();
         QStringList imageNameAdded;
@@ -201,10 +200,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 continue;
             }
             const QFileInfo fi(urlImage);
-            const QString imageName
-                = fi.baseName().isEmpty()
-                  ? QStringLiteral("image.png")
-                  : QString(fi.baseName() + QLatin1String(".png"));
+            const QString imageName = fi.baseName().isEmpty() ? QStringLiteral("image.png") : QString(fi.baseName() + QLatin1String(".png"));
 
             QString imageNameToAdd = imageName;
             int imageNumber = 1;
@@ -213,18 +209,17 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
                 if (firstDot == -1) {
                     imageNameToAdd = imageName + QString::number(imageNumber++);
                 } else {
-                    imageNameToAdd = imageName.left(firstDot) + QString::number(imageNumber++)
-                                     +imageName.mid(firstDot);
+                    imageNameToAdd = imageName.left(firstDot) + QString::number(imageNumber++) + imageName.mid(firstDot);
                 }
             }
 
-            QSharedPointer<KPIMTextEdit::EmbeddedImage> embeddedImage = richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
+            QSharedPointer<KPIMTextEdit::EmbeddedImage> embeddedImage =
+                richTextEditor()->composerControler()->composerImages()->createEmbeddedImage(image, imageNameToAdd);
             lstEmbeddedImages.append(embeddedImage);
 
             const QString newImageName = QLatin1String("cid:") + embeddedImage->contentID;
             const QString quote(QStringLiteral("\""));
-            htmlVersion.replace(QString(quote + urlImage + quote),
-                                QString(quote + newImageName + quote));
+            htmlVersion.replace(QString(quote + urlImage + quote), QString(quote + newImageName + quote));
             textVersion.replace(urlImage, newImageName);
             imageNameAdded << imageNameToAdd;
         }
@@ -236,7 +231,7 @@ void MarkdownInterface::addEmbeddedImages(MessageComposer::TextPart *textPart, Q
 
 MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus MarkdownInterface::convertTextToFormat(MessageComposer::TextPart *textPart)
 {
-    //It can't work on html email
+    // It can't work on html email
     if (richTextEditor()->composerControler()->isFormattingUsed()) {
         qCWarning(KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG) << "We can't convert html email";
         return MessageComposer::PluginEditorConvertTextInterface::ConvertTextStatus::NotConverted;

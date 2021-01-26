@@ -4,13 +4,13 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#include "dkimadvancedwidget.h"
 #include "dkimconfiguretab.h"
+#include "dkimadvancedwidget.h"
 #include "dkimgeneralwidget.h"
 #include "dkimkeyrecordwidget.h"
 #include "dkimpolicywidget.h"
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QTabWidget>
 

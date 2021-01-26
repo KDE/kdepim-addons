@@ -6,15 +6,15 @@
 
 #include "quicktextplugineditorinterface.h"
 #include "quicktextmenu.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <MessageComposer/PluginComposerInterface>
-#include <MessageComposer/ConvertSnippetVariablesJob>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
+#include <MessageComposer/ConvertSnippetVariablesJob>
+#include <MessageComposer/PluginComposerInterface>
 #include <QAction>
+#include <QDebug>
 #include <QPushButton>
 #include <QTextBlock>
-#include <QDebug>
 
 QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -67,7 +67,7 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
 {
     if (e->key() == Qt::Key_Tab) {
         if (!richTextEditor()->textCursor().hasSelection()) {
-            //const QTextCharFormat initialTextFormat = richTextEditor()->textCursor().charFormat();
+            // const QTextCharFormat initialTextFormat = richTextEditor()->textCursor().charFormat();
             const int position = richTextEditor()->textCursor().position();
             QTextCursor cur = richTextEditor()->textCursor();
             selectPreviousWord(cur, position);
@@ -75,9 +75,9 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
             if (selectedWord.isEmpty()) {
                 return false;
             }
-            //qDebug() << "selected " << selectedWord;
+            // qDebug() << "selected " << selectedWord;
             for (const MailCommon::SnippetsInfo &info : qAsConst(mSnippetsInfo)) {
-                //qDebug() << " info.keyword" << info.keyword;
+                // qDebug() << " info.keyword" << info.keyword;
                 QString infoKeyword = info.keyword;
                 if (!infoKeyword.startsWith(QLatin1Char('\\'))) {
                     infoKeyword = QLatin1Char('\\') + infoKeyword;
@@ -85,7 +85,7 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
                 if (infoKeyword == selectedWord) {
                     qDebug() << "found snippetsinfo " << info.keyword;
                     cur.insertText(composerInterface()->convertText(info.text));
-                    //TODO change pos cur.setPosition(position);
+                    // TODO change pos cur.setPosition(position);
                     return true;
                 }
             }
@@ -110,7 +110,7 @@ void QuickTextPluginEditorInterface::selectPreviousWord(QTextCursor &cursor, int
             if (space) {
                 // double spaces belong to the previous word
             } else if (pos < cursorPosition) {
-                cursor.setPosition(pos + block.position() + 1);    // +1 because we don't want to set it on the space itself
+                cursor.setPosition(pos + block.position() + 1); // +1 because we don't want to set it on the space itself
             } else {
                 space = true;
             }

@@ -11,14 +11,14 @@
 
 #include <KLocalizedString>
 
-#include <MimeTreeParser/NodeHelper>
-#include <MimeTreeParser/BodyPart>
 #include <MessageViewer/Viewer>
+#include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/NodeHelper>
 
-#include <QGpgME/Protocol>
 #include <QGpgME/ImportJob>
-#include <gpgme++/importresult.h>
+#include <QGpgME/Protocol>
 #include <gpgme++/error.h>
+#include <gpgme++/importresult.h>
 
 #include <KMessageBox>
 
@@ -61,14 +61,9 @@ bool ApplicationPgpKeyUrlHandler::handleClick(MessageViewer::Viewer *v, BodyPart
         auto job = QGpgME::openpgp()->importJob();
         auto res = job->exec(part->content()->decodedContent());
         if (res.error()) {
-            KMessageBox::detailedError(v,
-                                       i18n("An error occurred while importing the key."),
-                                       QString::fromUtf8(res.error().asString()),
-                                       i18n("Import error"));
+            KMessageBox::detailedError(v, i18n("An error occurred while importing the key."), QString::fromUtf8(res.error().asString()), i18n("Import error"));
         } else {
-            KMessageBox::information(v,
-                                     i18n("The key has been successfully imported."),
-                                     i18n("Import finished"));
+            KMessageBox::information(v, i18n("The key has been successfully imported."), i18n("Import finished"));
         }
 
         return true;

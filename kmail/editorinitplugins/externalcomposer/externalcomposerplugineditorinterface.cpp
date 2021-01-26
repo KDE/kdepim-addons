@@ -5,9 +5,9 @@
 */
 
 #include "externalcomposerplugineditorinterface.h"
+#include <KConfigGroup>
 #include <KPIMTextEdit/RichTextComposer>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
 ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInitInterface(parent)

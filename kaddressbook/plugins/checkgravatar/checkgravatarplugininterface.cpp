@@ -5,14 +5,14 @@
 */
 
 #include "checkgravatarplugininterface.h"
-#include "kaddressbook_checkgravatarplugin_debug.h"
 #include "gravatar/widgets/gravatarupdatedialog.h"
-#include <KMessageBox>
-#include <KLocalizedString>
+#include "kaddressbook_checkgravatarplugin_debug.h"
+#include <AkonadiCore/ItemModifyJob>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QAction>
 #include <QPointer>
-#include <AkonadiCore/ItemModifyJob>
 
 #include <KContacts/Addressee>
 

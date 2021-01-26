@@ -12,8 +12,8 @@
 #include <KLocalizedString>
 
 #include <QCheckBox>
-#include <QLabel>
 #include <QDialogButtonBox>
+#include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
 

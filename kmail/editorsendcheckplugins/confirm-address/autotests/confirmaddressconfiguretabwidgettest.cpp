@@ -6,11 +6,11 @@
 
 #include "confirmaddressconfiguretabwidgettest.h"
 #include "../confirmaddressconfiguretabwidget.h"
-#include <QTest>
-#include <QVBoxLayout>
+#include <PimCommon/SimpleStringListEditor>
 #include <QGroupBox>
 #include <QRadioButton>
-#include <PimCommon/SimpleStringListEditor>
+#include <QTest>
+#include <QVBoxLayout>
 
 ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObject *parent)
     : QObject(parent)

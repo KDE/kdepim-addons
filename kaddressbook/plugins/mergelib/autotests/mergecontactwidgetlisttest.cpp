@@ -6,8 +6,8 @@
 
 #include "mergecontactwidgetlisttest.h"
 #include "../manualmerge/mergecontactwidgetlist.h"
-#include <QTest>
 #include <AkonadiCore/Item>
+#include <QTest>
 using namespace KContacts;
 
 MergeContactWidgetListTest::MergeContactWidgetListTest(QObject *parent)
@@ -32,7 +32,7 @@ void MergeContactWidgetListTest::shouldCleanListWhenSetItems()
     lst << Akonadi::Item(42);
     lst << Akonadi::Item(42);
     w.fillListContact(lst);
-    //We don't have KABC::Address
+    // We don't have KABC::Address
     QCOMPARE(w.count(), 0);
 
     Addressee address;
@@ -43,7 +43,7 @@ void MergeContactWidgetListTest::shouldCleanListWhenSetItems()
     w.fillListContact(lst);
     QCOMPARE(w.count(), 1);
 
-    //it must clear;
+    // it must clear;
     w.fillListContact(lst);
     QCOMPARE(w.count(), 1);
 }

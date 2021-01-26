@@ -10,21 +10,21 @@
 #include <KConfig>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QDir>
+#include <QIcon>
 #include <QStandardPaths>
 #include <QVBoxLayout>
-#include <QIcon>
-#include <QDir>
 
-#include <QPushButton>
+#include <KConfigGroup>
 #include <QAbstractTableModel>
+#include <QDialogButtonBox>
 #include <QFile>
 #include <QFileInfo>
 #include <QLabel>
 #include <QListView>
 #include <QMouseEvent>
+#include <QPushButton>
 #include <QStyledItemDelegate>
-#include <KConfigGroup>
-#include <QDialogButtonBox>
 
 typedef struct {
     QString displayName;
@@ -68,14 +68,14 @@ public:
 
         if (role == Qt::DisplayRole) {
             if (index.column() == 0) {
-                return mTemplates[ index.row() ].displayName;
+                return mTemplates[index.row()].displayName;
             } else {
-                return mTemplates[ index.row() ].fileName;
+                return mTemplates[index.row()].fileName;
             }
         }
 
         if (role == Qt::UserRole) {
-            return mTemplates[ index.row() ].isDeletable;
+            return mTemplates[index.row()].isDeletable;
         }
 
         return QVariant();
@@ -89,7 +89,7 @@ public:
 
         beginRemoveRows(parent, row, row + count - 1);
         for (int i = 0; i < count; ++i) {
-            if (!QFile::remove(mTemplates[ row ].fileName)) {
+            if (!QFile::remove(mTemplates[row].fileName)) {
                 return false;
             }
             mTemplates.removeAt(row);
@@ -103,9 +103,10 @@ public:
     {
         beginResetModel();
         mTemplates.clear();
-        const QStringList dirs = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("/kaddressbook/csv-templates/"), QStandardPaths::LocateDirectory);
+        const QStringList dirs =
+            QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("/kaddressbook/csv-templates/"), QStandardPaths::LocateDirectory);
         for (const QString &dir : dirs) {
-            const QStringList fileNames = QDir(dir).entryList(QStringList() <<  QStringLiteral("*.desktop"));
+            const QStringList fileNames = QDir(dir).entryList(QStringList() << QStringLiteral("*.desktop"));
             for (const QString &file : fileNames) {
                 const QString fileName = dir + QLatin1Char('/') + file;
 
@@ -177,10 +178,7 @@ public:
 
             if (buttonRect.contains(mouseEvent->pos())) {
                 const QString templateName = index.data(Qt::DisplayRole).toString();
-                if (KMessageBox::questionYesNo(
-                        nullptr,
-                        i18nc("@label", "Do you really want to delete template '%1'?",
-                              templateName)) == KMessageBox::Yes) {
+                if (KMessageBox::questionYesNo(nullptr, i18nc("@label", "Do you really want to delete template '%1'?", templateName)) == KMessageBox::Yes) {
                     model->removeRows(index.row(), 1);
                     return true;
                 }
@@ -209,8 +207,7 @@ TemplateSelectionDialog::TemplateSelectionDialog(QWidget *parent)
     mView->setModel(new TemplatesModel(this));
     mView->setItemDelegate(new TemplateSelectionDelegate(this));
 
-    connect(mView->selectionModel(), &QItemSelectionModel::selectionChanged,
-            this, &TemplateSelectionDialog::updateButtons);
+    connect(mView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TemplateSelectionDialog::updateButtons);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);

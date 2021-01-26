@@ -5,8 +5,8 @@
 */
 
 #include "markdownplugintest.h"
-#include "../plugin/markdownplugin.h"
 #include "../plugin/markdowninterface.h"
+#include "../plugin/markdownplugin.h"
 #include <QTest>
 QTEST_MAIN(MarkdownPluginTest)
 

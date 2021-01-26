@@ -7,10 +7,10 @@
 #include "checkbeforesendupdatesmtpdialogtest.h"
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <QCheckBox>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(CheckBeforeSendUpdateSmtpDialogTest)
 
 CheckBeforeSendUpdateSmtpDialogTest::CheckBeforeSendUpdateSmtpDialogTest(QObject *parent)

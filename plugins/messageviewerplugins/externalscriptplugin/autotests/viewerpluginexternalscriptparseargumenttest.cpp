@@ -20,7 +20,7 @@ ViewerPluginExternalScriptParseArgumentTest::~ViewerPluginExternalScriptParseArg
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringListWhenMessageIsNotSetting()
 {
     ViewerPluginExternalScriptParseArgument parser;
-    const QStringList lst = { QStringLiteral("foo"), QStringLiteral("bla") };
+    const QStringList lst = {QStringLiteral("foo"), QStringLiteral("bla")};
     QCOMPARE(parser.parse(lst), lst);
 }
 
@@ -30,8 +30,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSubject()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%s") };
-    const QStringList result = { QStringLiteral("\"Akademy\"") };
+    const QStringList lst = {QStringLiteral("%s")};
+    const QStringList result = {QStringLiteral("\"Akademy\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -41,7 +41,7 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnSameListIfNotTrans
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("cc"), QStringLiteral("vv"), QStringLiteral("ff")};
+    const QStringList lst = {QStringLiteral("cc"), QStringLiteral("vv"), QStringLiteral("ff")};
     QCOMPARE(parser.parse(lst), lst);
 }
 
@@ -51,8 +51,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTwiceSubject()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%s"), QStringLiteral("vv"), QStringLiteral("%s")};
-    const QStringList result = { QStringLiteral("\"Akademy\""), QStringLiteral("vv"), QStringLiteral("\"Akademy\"") };
+    const QStringList lst = {QStringLiteral("%s"), QStringLiteral("vv"), QStringLiteral("%s")};
+    const QStringList result = {QStringLiteral("\"Akademy\""), QStringLiteral("vv"), QStringLiteral("\"Akademy\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -62,8 +62,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnTo()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%to") };
-    const QStringList result = { QStringLiteral("\"kde@example.com\"") };
+    const QStringList lst = {QStringLiteral("%to")};
+    const QStringList result = {QStringLiteral("\"kde@example.com\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -73,8 +73,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnEmptyStrWhenArgume
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%cc") };
-    const QStringList result = { QStringLiteral("\"\"") };
+    const QStringList lst = {QStringLiteral("%cc")};
+    const QStringList result = {QStringLiteral("\"\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -84,8 +84,8 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBody()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%body") };
-    const QStringList result = { QStringLiteral("\"Hello this is a test mail\n\"") };
+    const QStringList lst = {QStringLiteral("%body")};
+    const QStringList result = {QStringLiteral("\"Hello this is a test mail\n\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
@@ -95,25 +95,26 @@ void ViewerPluginExternalScriptParseArgumentTest::shouldReturnBcc()
     KMime::Message::Ptr message(new KMime::Message);
     initializeMessage(message);
     parser.setMessage(message);
-    const QStringList lst = { QStringLiteral("%bcc") };
-    const QStringList result = { QStringLiteral("\"kde1@example.com\"") };
+    const QStringList lst = {QStringLiteral("%bcc")};
+    const QStringList result = {QStringLiteral("\"kde1@example.com\"")};
     QCOMPARE(parser.parse(lst), result);
 }
 
 void ViewerPluginExternalScriptParseArgumentTest::initializeMessage(const KMime::Message::Ptr &msg)
 {
-    QByteArray mail = "From: dfaure@example.com\n"
-                      "To: kde@example.com\n"
-                      "Bcc: kde1@example.com\n"
-                      "Sender: dfaure@example.com\n"
-                      "MIME-Version: 1.0\n"
-                      "Date: 02 Jul 2010 23:58:21 -0000\n"
-                      "Subject: Akademy\n"
-                      "Content-Type: text/plain\n"
-                      "X-Length: 0\n"
-                      "X-UID: 6161\n"
-                      "\n"
-                      "Hello this is a test mail\n";
+    QByteArray mail =
+        "From: dfaure@example.com\n"
+        "To: kde@example.com\n"
+        "Bcc: kde1@example.com\n"
+        "Sender: dfaure@example.com\n"
+        "MIME-Version: 1.0\n"
+        "Date: 02 Jul 2010 23:58:21 -0000\n"
+        "Subject: Akademy\n"
+        "Content-Type: text/plain\n"
+        "X-Length: 0\n"
+        "X-UID: 6161\n"
+        "\n"
+        "Hello this is a test mail\n";
     msg->setContent(mail);
     msg->parse();
 }

@@ -7,8 +7,8 @@
 #ifndef HEADERSTYLEPLUGINTESTUTILS_H
 #define HEADERSTYLEPLUGINTESTUTILS_H
 
-#include <QString>
 #include <KMime/Message>
+#include <QString>
 
 void testHeaderFile(const QString &data, const QString &name, const QString &dir = QString());
 KMime::Message::Ptr readAndParseMail(const QString &mailFile);

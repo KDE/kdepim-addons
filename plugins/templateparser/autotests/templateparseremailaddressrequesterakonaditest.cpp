@@ -6,10 +6,10 @@
 
 #include "templateparseremailaddressrequesterakonaditest.h"
 #include "../templateparseremailaddressrequesterakonadi.h"
+#include <Akonadi/Contact/EmailAddressRequester>
 #include <QHBoxLayout>
 #include <QSignalSpy>
 #include <QTest>
-#include <Akonadi/Contact/EmailAddressRequester>
 
 TemplateParserEmailAddressRequesterAkonadiTest::TemplateParserEmailAddressRequesterAkonadiTest(QObject *parent)
     : QObject(parent)
@@ -33,9 +33,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldAssignValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
     auto *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
-    const QString str{
-        QStringLiteral("foo")
-    };
+    const QString str{QStringLiteral("foo")};
     w.setText(str);
     QCOMPARE(w.text(), str);
     QCOMPARE(mLineEdit->text(), str);
@@ -45,9 +43,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldClearValue()
 {
     TemplateParserEmailAddressRequesterAkonadi w;
     auto *mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
-    const QString str{
-        QStringLiteral("foo")
-    };
+    const QString str{QStringLiteral("foo")};
     w.setText(str);
     QCOMPARE(w.text(), str);
     w.clear();

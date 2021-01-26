@@ -5,15 +5,15 @@
 */
 
 #include "languagetoolinterface.h"
-#include "languagetoolresultwidget.h"
-#include "languagetoolplugin_debug.h"
 #include "languagetoolmanager.h"
-#include <KPIMTextEdit/RichTextComposer>
+#include "languagetoolplugin_debug.h"
+#include "languagetoolresultwidget.h"
 #include <KMessageBox>
+#include <KPIMTextEdit/RichTextComposer>
 
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 #include <QHBoxLayout>
 #include <QTextBlock>
@@ -42,7 +42,7 @@ void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammar
         QTextBlock block = richTextEditor()->document()->findBlockByNumber(act.blockId() - 1);
         if (block.isValid()) {
             QTextCursor cur(block);
-            const int position = cur.position()+ act.start();
+            const int position = cur.position() + act.start();
             cur.setPosition(position);
             cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
             cur.insertText(act.replacement());
@@ -89,11 +89,14 @@ bool LanguageToolInterface::checkAgain()
 {
     if (richTextEditor()) {
         if (!LanguageToolManager::self()->useLocalInstance()) {
-            if (KMessageBox::warningYesNo(parentWidget(), i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),
-                                          i18n("Check Grammar with LanguageTool"),
-                                          KStandardGuiItem::yes(),
-                                          KStandardGuiItem::no(),
-                                          QStringLiteral("send_data_on_languagetool")) == KMessageBox::No) {
+            if (KMessageBox::warningYesNo(
+                    parentWidget(),
+                    i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),
+                    i18n("Check Grammar with LanguageTool"),
+                    KStandardGuiItem::yes(),
+                    KStandardGuiItem::no(),
+                    QStringLiteral("send_data_on_languagetool"))
+                == KMessageBox::No) {
                 return false;
             }
         }

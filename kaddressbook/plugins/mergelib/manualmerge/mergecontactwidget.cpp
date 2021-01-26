@@ -11,15 +11,16 @@
 #include <QSplitter>
 
 #include <AkonadiWidgets/CollectionComboBox>
-#include <QVBoxLayout>
-#include <QPushButton>
 #include <QLabel>
-#include <widgets/mergecontactinfowidget.h>
-#include <widgets/mergecontactloseinformationwarning.h>
+#include <QPushButton>
+#include <QVBoxLayout>
 #include <job/mergecontacts.h>
 #include <job/mergecontactsjob.h>
+#include <widgets/mergecontactinfowidget.h>
+#include <widgets/mergecontactloseinformationwarning.h>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_mergeStubModel = nullptr;
 }
 

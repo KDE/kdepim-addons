@@ -6,11 +6,11 @@
 
 #include "selectimapfolderwidgettest.h"
 #include "../selectimapfolderwidget.h"
-#include <QTreeView>
 #include <QLineEdit>
-#include <QVBoxLayout>
 #include <QTest>
 #include <QToolButton>
+#include <QTreeView>
+#include <QVBoxLayout>
 
 SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)
     : QObject(parent)

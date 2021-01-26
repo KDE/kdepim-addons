@@ -8,14 +8,14 @@
 #include <Akonadi/Contact/RecipientsPickerWidget>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPluginFactory>
 #include <KSharedConfig>
 #include <PimCommonAkonadi/LdapSearchDialog>
 #include <QDialogButtonBox>
+#include <QLineEdit>
 #include <QPushButton>
 #include <QTreeView>
 #include <QVBoxLayout>
-#include <QLineEdit>
-#include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(EmailAddressSelectionLdapDialog, "emailaddressselectionldapdialog.json")
 

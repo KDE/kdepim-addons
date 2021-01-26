@@ -7,10 +7,10 @@
 #ifndef GRAMMALECTEPARSER_H
 #define GRAMMALECTEPARSER_H
 
-#include <QVector>
-#include <QJsonObject>
-#include "libgrammalect_private_export.h"
 #include "grammalectegrammarerror.h"
+#include "libgrammalect_private_export.h"
+#include <QJsonObject>
+#include <QVector>
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteParser
 {
 public:

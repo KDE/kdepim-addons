@@ -7,8 +7,8 @@
 #ifndef AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
 #define AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <QWidget>
 class AutomaticAddContactsConfigureTab;
 class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {
@@ -20,6 +20,7 @@ public:
     void loadSettings() override;
     void saveSettings() override;
     void resetSettings() override;
+
 private:
     AutomaticAddContactsConfigureTab *mConfigureTab = nullptr;
 };

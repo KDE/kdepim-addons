@@ -84,7 +84,7 @@ void QCsvModel::columnCountChanged(int columns)
 {
     mColumnCount = columns;
     mFieldIdentifiers.resize(columns);
-    mFieldIdentifiers[ columns - 1 ] = QStringLiteral("0");
+    mFieldIdentifiers[columns - 1] = QStringLiteral("0");
     Q_EMIT layoutChanged();
 }
 
@@ -104,12 +104,9 @@ QCsvModel::QCsvModel(QObject *parent)
 {
     mParser = new CsvParser(this);
 
-    connect(mParser, &CsvParser::columnCountChanged,
-            this, &QCsvModel::columnCountChanged, Qt::QueuedConnection);
-    connect(mParser, &CsvParser::rowCountChanged,
-            this, &QCsvModel::rowCountChanged, Qt::QueuedConnection);
-    connect(mParser, &CsvParser::dataChanged,
-            this, &QCsvModel::fieldChanged, Qt::QueuedConnection);
+    connect(mParser, &CsvParser::columnCountChanged, this, &QCsvModel::columnCountChanged, Qt::QueuedConnection);
+    connect(mParser, &CsvParser::rowCountChanged, this, &QCsvModel::rowCountChanged, Qt::QueuedConnection);
+    connect(mParser, &CsvParser::dataChanged, this, &QCsvModel::fieldChanged, Qt::QueuedConnection);
     connect(mParser, &CsvParser::ended, this, &QCsvModel::finishedLoading);
 }
 
@@ -266,9 +263,8 @@ QVariant QCsvModel::data(const QModelIndex &index, int role) const
 
 bool QCsvModel::setData(const QModelIndex &index, const QVariant &data, int role)
 {
-    if (role == Qt::EditRole && index.row() == 0
-        && index.column() <= mFieldIdentifiers.count()) {
-        mFieldIdentifiers[ index.column() ] = data.toString();
+    if (role == Qt::EditRole && index.row() == 0 && index.column() <= mFieldIdentifiers.count()) {
+        mFieldIdentifiers[index.column()] = data.toString();
 
         Q_EMIT dataChanged(index, index);
         return true;

@@ -5,14 +5,14 @@
 */
 
 #include "adblockblockableelementgui.h"
-#include "../lib/widgets/adblockblockableitemsdialog.h"
 #include "../lib/adblockblockableitemsjob.h"
-#include <QVBoxLayout>
-#include <QPushButton>
-#include <QWebEngineView>
-#include <QStandardPaths>
-#include <QCommandLineParser>
+#include "../lib/widgets/adblockblockableitemsdialog.h"
 #include <QApplication>
+#include <QCommandLineParser>
+#include <QPushButton>
+#include <QStandardPaths>
+#include <QVBoxLayout>
+#include <QWebEngineView>
 using namespace AdBlock;
 AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     : QWidget(parent)

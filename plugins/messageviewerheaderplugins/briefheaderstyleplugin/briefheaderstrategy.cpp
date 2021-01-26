@@ -7,9 +7,7 @@
 #include "briefheaderstrategy.h"
 using namespace MessageViewer;
 
-static const char *const briefHeaders[] = {
-    "subject", "from", "cc", "bcc", "date"
-};
+static const char *const briefHeaders[] = {"subject", "from", "cc", "bcc", "date"};
 static const int numBriefHeaders = sizeof briefHeaders / sizeof *briefHeaders;
 
 BriefHeaderStrategy::BriefHeaderStrategy()

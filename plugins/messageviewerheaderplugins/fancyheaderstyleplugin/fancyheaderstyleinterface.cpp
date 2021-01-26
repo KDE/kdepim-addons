@@ -5,9 +5,9 @@
 */
 
 #include "fancyheaderstyleinterface.h"
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 using namespace MessageViewer;
 FancyHeaderStyleInterface::FancyHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)

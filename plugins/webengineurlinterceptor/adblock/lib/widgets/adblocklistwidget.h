@@ -11,7 +11,8 @@
 
 class QPaintEvent;
 class QEvent;
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockListWidget : public QListWidget
 {
     Q_OBJECT
@@ -23,6 +24,7 @@ protected:
     void paintEvent(QPaintEvent *event) override;
 
     void changeEvent(QEvent *event) override;
+
 private:
     void generalPaletteChanged();
     QColor mTextColor;

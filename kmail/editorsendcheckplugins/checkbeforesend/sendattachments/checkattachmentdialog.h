@@ -17,6 +17,7 @@ public:
     ~CheckAttachmentDialog() override;
 
     void setEmails(const QStringList &emails);
+
 private:
     void writeConfig();
     void readConfig();

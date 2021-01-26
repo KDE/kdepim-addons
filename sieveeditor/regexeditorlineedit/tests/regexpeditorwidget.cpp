@@ -6,9 +6,9 @@
 
 #include "regexpeditorwidget.h"
 #include "../regexpeditorlineedit.h"
+#include <QCheckBox>
 #include <QVBoxLayout>
 #include <QVariant>
-#include <QCheckBox>
 
 RegExpEditorWidget::RegExpEditorWidget(QWidget *parent)
     : QWidget(parent)

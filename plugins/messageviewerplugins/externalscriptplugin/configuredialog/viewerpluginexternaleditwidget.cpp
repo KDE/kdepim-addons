@@ -5,10 +5,10 @@
 */
 
 #include "viewerpluginexternaleditwidget.h"
-#include <KLocalizedString>
 #include <KLineEdit>
-#include <QFormLayout>
+#include <KLocalizedString>
 #include <KUrlRequester>
+#include <QFormLayout>
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
@@ -33,9 +33,8 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mExecutable = new KUrlRequester(this);
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
 
-    mExecutable->setMimeTypeFilters({QStringLiteral("application/x-executable"),
-                                     QStringLiteral("application/x-shellscript"),
-                                     QStringLiteral("application/x-desktop")});
+    mExecutable->setMimeTypeFilters(
+        {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});
 
     mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mExecutable->lineEdit()->setClearButtonEnabled(true);

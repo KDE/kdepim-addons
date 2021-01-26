@@ -4,10 +4,10 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "../widgets/gravatarupdatedialog.h"
 #include <QApplication>
 #include <QCommandLineParser>
 #include <QStandardPaths>
-#include "../widgets/gravatarupdatedialog.h"
 
 int main(int argc, char **argv)
 {

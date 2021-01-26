@@ -9,17 +9,19 @@
 
 #include <QWidget>
 
-#include <AkonadiCore/Collection>
 #include <Akonadi/Notes/NoteUtils>
+#include <AkonadiCore/Collection>
 #include <KMime/KMimeMessage>
 
 class QLineEdit;
 class QPushButton;
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class NoteEdit : public QWidget
 {
     Q_OBJECT
@@ -46,6 +48,7 @@ Q_SIGNALS:
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
+
 private:
     void slotReturnPressed();
     void slotCollectionChanged(int);

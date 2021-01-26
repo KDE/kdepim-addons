@@ -6,23 +6,24 @@
 
 #include "searchandmergecontactduplicatecontactdialog.h"
 
+#include "job/searchpotentialduplicatecontactjob.h"
 #include "mergecontactselectinformationtabwidget.h"
 #include "searchduplicate/searchduplicateresultwidget.h"
-#include "widgets/mergecontactshowresulttabwidget.h"
 #include "widgets/mergecontacterrorlabel.h"
-#include "job/searchpotentialduplicatecontactjob.h"
+#include "widgets/mergecontactshowresulttabwidget.h"
 
+#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
-#include <KConfigGroup>
 
-#include <QStackedWidget>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QStackedWidget>
 #include <QVBoxLayout>
 
 using namespace KABMergeContacts;
-namespace {
+namespace
+{
 static const char mySearchAndMergeContactDuplicateContactDialogGroupName[] = "SearchAndMergeContactDuplicateContactDialog";
 }
 SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateContactDialog(QWidget *parent)
@@ -77,9 +78,7 @@ SearchAndMergeContactDuplicateContactDialog::~SearchAndMergeContactDuplicateCont
 
 void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContacts(const Akonadi::Item::List &list)
 {
-    const int listCount {
-        list.count()
-    };
+    const int listCount{list.count()};
     if (listCount == 0) {
         mStackedWidget->setCurrentWidget(mNoContactSelected);
     } else if (listCount < 2) {

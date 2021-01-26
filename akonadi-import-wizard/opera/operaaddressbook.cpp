@@ -6,10 +6,10 @@
 
 #include "operaaddressbook.h"
 
-#include <KContacts/Addressee>
-#include <QUrl>
 #include "operaplugin_debug.h"
+#include <KContacts/Addressee>
 #include <QFile>
+#include <QUrl>
 
 OperaAddressBook::OperaAddressBook(const QString &filename)
     : mFileName(filename)
@@ -35,14 +35,14 @@ void OperaAddressBook::importAddressBook()
         } else if (line == QLatin1String("#FOLDER")) {
             appendContact(contact);
             foundContact = false;
-            //TODO
+            // TODO
         } else if (foundContact) {
             line = line.trimmed();
             if (!contact) {
                 contact = new KContacts::Addressee;
             }
             if (line.startsWith(QLatin1String("ID"))) {
-                //Nothing
+                // Nothing
             } else if (line.startsWith(QLatin1String("NAME"))) {
                 contact->setName(line.remove(QStringLiteral("NAME=")));
             } else if (line.startsWith(QLatin1String("URL"))) {
@@ -56,11 +56,11 @@ void OperaAddressBook::importAddressBook()
             } else if (line.startsWith(QLatin1String("FAX"))) {
                 contact->insertPhoneNumber(KContacts::PhoneNumber(line.remove(QStringLiteral("FAX=")), KContacts::PhoneNumber::Fax));
             } else if (line.startsWith(QLatin1String("POSTALADDRESS"))) {
-                //TODO
+                // TODO
             } else if (line.startsWith(QLatin1String("PICTUREURL"))) {
-                //TODO
+                // TODO
             } else if (line.startsWith(QLatin1String("ICON"))) {
-                //TODO
+                // TODO
             } else if (line.startsWith(QLatin1String("SHORT NAME"))) {
                 contact->setNickName(line.remove(QStringLiteral("SHORT NAME=")));
             }

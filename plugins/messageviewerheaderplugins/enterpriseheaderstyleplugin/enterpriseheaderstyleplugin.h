@@ -11,7 +11,8 @@
 
 #include <QVariant>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class EnterpriseHeaderStylePlugin : public MessageViewer::HeaderStylePlugin
 {
     Q_OBJECT
@@ -26,6 +27,7 @@ public:
     bool hasMargin() const override;
     QString alignment() const override;
     int elidedTextSize() const override;
+
 private:
     HeaderStyle *const mHeaderStyle;
     HeaderStrategy *const mHeaderStrategy;

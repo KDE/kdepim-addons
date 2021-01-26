@@ -10,10 +10,12 @@
 #include "adblockblockableitemswidget.h"
 
 #include <QDialog>
-namespace Ui {
+namespace Ui
+{
 class AdBlockCreateFilterWidget;
 }
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockCreateFilterDialog : public QDialog
 {
     Q_OBJECT
@@ -27,9 +29,7 @@ public:
 
 private:
     void slotUpdateFilter();
-    enum ElementType {
-        ElementValue = Qt::UserRole + 1
-    };
+    enum ElementType { ElementValue = Qt::UserRole + 1 };
 
     void readConfig();
     void writeConfig();

@@ -9,11 +9,13 @@
 #include <MessageViewer/HeaderStyle>
 
 #include <headerstyle_util.h>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class EnterpriseHeaderStyle : public HeaderStyle
 {
 public:
-    EnterpriseHeaderStyle() : HeaderStyle()
+    EnterpriseHeaderStyle()
+        : HeaderStyle()
     {
     }
 

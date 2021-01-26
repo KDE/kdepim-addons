@@ -7,8 +7,8 @@
 #include "pmailsettings.h"
 #include <ImportWizard/ImportWizardUtil>
 
-#include <MailTransport/TransportManager>
 #include <MailCommon/MailUtil>
+#include <MailTransport/TransportManager>
 
 #include <KIdentityManagement/kidentitymanagement/identity.h>
 #include <KIdentityManagement/kidentitymanagement/signature.h>
@@ -48,7 +48,7 @@ void PMailSettings::readIdentity(const KConfigGroup &group)
     QString personalName;
     if (group.hasKey(personalNameStr)) {
         personalName = group.readEntry(personalNameStr);
-        personalName.remove(0, 1); //Remove first space
+        personalName.remove(0, 1); // Remove first space
     }
     KIdentityManagement::Identity *newIdentity = createIdentity(personalName);
     newIdentity->setFullName(personalName);
@@ -57,13 +57,13 @@ void PMailSettings::readIdentity(const KConfigGroup &group)
     const QString emailStr = QStringLiteral("Internet E-mail Address                   ");
     if (group.hasKey(emailStr)) {
         QString email = group.readEntry(emailStr);
-        email.remove(0, 1); //Remove first space
+        email.remove(0, 1); // Remove first space
         newIdentity->setPrimaryEmailAddress(email);
     }
     const QString replytoStr = QStringLiteral("Default reply-to address                  ");
     if (group.hasKey(replytoStr)) {
         QString reply = group.readEntry(replytoStr);
-        reply.remove(0, 1); //Remove first space
+        reply.remove(0, 1); // Remove first space
         newIdentity->setReplyToAddr(reply);
     }
     storeIdentity(newIdentity);

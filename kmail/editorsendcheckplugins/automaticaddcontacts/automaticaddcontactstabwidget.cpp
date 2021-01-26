@@ -7,15 +7,16 @@
 #include "automaticaddcontactstabwidget.h"
 #include <AkonadiCore/Collection>
 #include <AkonadiWidgets/CollectionComboBox>
+#include <KConfigGroup>
 #include <KContacts/Addressee>
 #include <KLocalizedString>
-#include <QCheckBox>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <KConfigGroup>
 #include <KSharedConfig>
+#include <QCheckBox>
+#include <QLabel>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 QString configGroupName()
 {
     return QStringLiteral("Automatic Add Contacts %1");

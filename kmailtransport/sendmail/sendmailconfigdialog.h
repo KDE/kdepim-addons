@@ -8,7 +8,8 @@
 #define MAILTRANSPORT_SENDMAILCONFIGDIALOG_H
 
 #include <QDialog>
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 class SendmailConfigWidget;
 }

@@ -6,8 +6,8 @@
  */
 
 #include "pimeventsplugin.h"
-#include "eventdatavisitor.h"
 #include "akonadipimdatasource.h"
+#include "eventdatavisitor.h"
 #include "pimeventsplugin_debug.h"
 
 PimEventsPlugin::PimEventsPlugin(QObject *parent)
@@ -56,11 +56,8 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
             Q_EMIT dataReady(visitor.results());
         }
     }
-    qCDebug(PIMEVENTSPLUGIN_LOG) << "Range:" << startDate.toString(Qt::ISODate) << "-" << endDate.toString(Qt::ISODate)
-                                 << "Events:" << eventsCount
-                                 << "EventData:" << eventDataCount
-                                 << "Todos:" << todosCount
-                                 << "TodoData:" << todoDataCount;
+    qCDebug(PIMEVENTSPLUGIN_LOG) << "Range:" << startDate.toString(Qt::ISODate) << "-" << endDate.toString(Qt::ISODate) << "Events:" << eventsCount
+                                 << "EventData:" << eventDataCount << "Todos:" << todosCount << "TodoData:" << todoDataCount;
 }
 
 void PimEventsPlugin::calendarIncidenceAdded(const KCalendarCore::Incidence::Ptr &incidence)

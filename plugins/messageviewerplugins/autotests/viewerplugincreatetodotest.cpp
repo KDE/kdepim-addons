@@ -6,13 +6,14 @@
 
 #include "viewerplugincreatetodotest.h"
 #include "../createtodoplugin/viewerplugincreatetodo.h"
-#include <QTest>
 #include <KActionCollection>
+#include <MessageViewer/ViewerPluginInterface>
 #include <QHBoxLayout>
 #include <QStandardItemModel>
-#include <MessageViewer/ViewerPluginInterface>
+#include <QTest>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_todoEditStubModel;
 }
 

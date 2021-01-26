@@ -7,10 +7,10 @@
 #ifndef SHORTURLENGINEINTERFACE_H
 #define SHORTURLENGINEINTERFACE_H
 
-#include <QObject>
-#include <QNetworkReply>
-#include <QTextCursor>
 #include "shorturl_export.h"
+#include <QNetworkReply>
+#include <QObject>
+#include <QTextCursor>
 class QNetworkAccessManager;
 class ShortUrlEnginePlugin;
 class SHORTURL_EXPORT ShortUrlEngineInterface : public QObject

@@ -8,7 +8,8 @@
 #define SELECTIMAPLINEEDIT_H
 
 #include <QLineEdit>
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveImapAccountSettings;
 }
 
@@ -20,6 +21,7 @@ public:
     ~SelectImapLineEdit() override;
 
     void setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account);
+
 private:
     QCompleter *mCompleter = nullptr;
 };

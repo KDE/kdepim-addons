@@ -6,13 +6,13 @@
 
 #include "dkimpolicywidget.h"
 #include <KLocalizedString>
-#include <QCheckBox>
-#include <QVBoxLayout>
 #include <MessageViewer/DKIMManageRulesDialog>
 #include <MessageViewer/MessageViewerSettings>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
+#include <QCheckBox>
 #include <QPushButton>
 #include <QSpacerItem>
+#include <QVBoxLayout>
 
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 

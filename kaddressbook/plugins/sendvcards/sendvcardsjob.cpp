@@ -6,15 +6,15 @@
 
 #include "sendvcardsjob.h"
 
+#include "kaddressbook_sendvcardsplugin_debug.h"
+#include <Akonadi/Contact/ContactGroupExpandJob>
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
-#include <Akonadi/Contact/ContactGroupExpandJob>
-#include <MimeTreeParser/AttachmentTemporaryFilesDirs>
-#include "kaddressbook_sendvcardsplugin_debug.h"
-#include <QTemporaryDir>
-#include <QFile>
 #include <KLocalizedString>
 #include <KToolInvocation>
+#include <MimeTreeParser/AttachmentTemporaryFilesDirs>
+#include <QFile>
+#include <QTemporaryDir>
 
 using namespace KABSendVCards;
 
@@ -22,7 +22,7 @@ SendVcardsJob::SendVcardsJob(const Akonadi::Item::List &listItem, QObject *paren
     : QObject(parent)
     , mListItem(listItem)
 {
-    //Don't delete it.
+    // Don't delete it.
     mAttachmentTemporary = new MimeTreeParser::AttachmentTemporaryFilesDirs();
 }
 
@@ -30,7 +30,7 @@ SendVcardsJob::~SendVcardsJob()
 {
     delete mTempDir;
     mTempDir = nullptr;
-    //Don't delete it.
+    // Don't delete it.
     mAttachmentTemporary = nullptr;
 }
 
@@ -48,7 +48,7 @@ bool SendVcardsJob::start()
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
             QByteArray data = item.payloadData();
-            //Workaround about broken kaddressbook fields.
+            // Workaround about broken kaddressbook fields.
             KContacts::adaptIMAttributes(data);
             createTemporaryDir();
             const QString contactRealName(contact.realName());
@@ -75,7 +75,7 @@ bool SendVcardsJob::start()
 void SendVcardsJob::createTemporaryDir()
 {
     if (!mTempDir) {
-        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') +  QStringLiteral("sendvcards"));
+        mTempDir = new QTemporaryDir(QDir::tempPath() + QLatin1Char('/') + QStringLiteral("sendvcards"));
         mTempDir->setAutoRemove(false);
         mAttachmentTemporary->addTempDir(mTempDir->path());
     }

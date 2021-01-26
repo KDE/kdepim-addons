@@ -5,18 +5,18 @@
 */
 
 #include "checkbeforesendinterface.h"
-#include "duplicateemails/checkduplicateemailsjob.h"
+#include "checkbeforesendupdatesmtpdialog.h"
 #include "duplicateemails/checkduplicateemailsdialog.h"
+#include "duplicateemails/checkduplicateemailsjob.h"
 #include "sendattachments/checkattachmentdialog.h"
 #include "sendattachments/checkattachmentjob.h"
-#include "checkbeforesendupdatesmtpdialog.h"
 
-#include <KMessageBox>
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <KLocalizedString>
 #include <KIdentityManagement/Identity>
 #include <KIdentityManagement/IdentityManager>
+#include <KLocalizedString>
+#include <KMessageBox>
+#include <KSharedConfig>
 
 #include <QPointer>
 
@@ -33,7 +33,8 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 {
     if (mSendPlainText) {
         if (params.isHtmlMail()) {
-            if (KMessageBox::No == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email as HTML?"), i18n("Send email as plain text"))) {
+            if (KMessageBox::No
+                == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email as HTML?"), i18n("Send email as plain text"))) {
                 return false;
             }
         }

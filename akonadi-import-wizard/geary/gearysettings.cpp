@@ -64,7 +64,7 @@ void GearySettings::readImapAccount()
 
     if (!name.isEmpty()) {
         const QString agentIdentifyName = LibImportWizard::AbstractBase::createResource(QStringLiteral("akonadi_imap_resource"), name, newSettings);
-        //Check by default
+        // Check by default
         addCheckMailOnStartup(agentIdentifyName, true);
     }
 }
@@ -90,11 +90,11 @@ void GearySettings::readTransport()
         }
 
         if (settings->value(QStringLiteral("smtp_use_imap_credentials"), true).toBool()) {
-            //TODO store value
+            // TODO store value
         }
 
-        //ADD more settings
-        storeTransport(mt, true);   //only one smtp for the moment
+        // ADD more settings
+        storeTransport(mt, true); // only one smtp for the moment
     }
 }
 
@@ -121,12 +121,12 @@ void GearySettings::readIdentity()
             identity->setSignature(signature);
         }
 
-        //Implement  "nickname=bli@kde.org" ?
+        // Implement  "nickname=bli@kde.org" ?
         storeIdentity(identity);
     }
 }
 
 void GearySettings::readGlobalSettings()
 {
-    //TODO
+    // TODO
 }

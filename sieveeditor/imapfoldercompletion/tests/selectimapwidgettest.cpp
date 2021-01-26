@@ -5,10 +5,10 @@
 */
 
 #include "selectimapwidgettest.h"
-#include <KPluginLoader>
-#include <QHBoxLayout>
 #include <KPluginFactory>
+#include <KPluginLoader>
 #include <QDebug>
+#include <QHBoxLayout>
 #include <QLabel>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)

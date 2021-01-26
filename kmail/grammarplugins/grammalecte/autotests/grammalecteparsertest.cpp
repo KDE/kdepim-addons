@@ -7,8 +7,8 @@
 #include "grammalecteparsertest.h"
 #include "grammalecteparser.h"
 #include <QJsonDocument>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 QTEST_MAIN(GrammalecteParserTest)
 
 GrammalecteParserTest::GrammalecteParserTest(QObject *parent)

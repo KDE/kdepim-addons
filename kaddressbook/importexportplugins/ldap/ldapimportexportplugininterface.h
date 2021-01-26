@@ -18,6 +18,7 @@ public:
 
     void createAction(KActionCollection *ac) override;
     void exec() override;
+
 private:
     void slotImportLdap();
     void importLdap();

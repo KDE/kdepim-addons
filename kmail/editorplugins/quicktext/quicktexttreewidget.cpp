@@ -10,10 +10,10 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 
+#include <MailCommon/SnippetsModel>
 #include <QContextMenuEvent>
 #include <QHeaderView>
 #include <QMenu>
-#include <MailCommon/SnippetsModel>
 
 QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *parent)
     : QTreeView(parent)
@@ -31,10 +31,8 @@ QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *par
 
     connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged, this, &QuicktextTreeWidget::selectionWasChanged);
 
-    connect(mSnippetsManager->model(), &QAbstractItemModel::rowsInserted,
-            this, &QTreeView::expandAll);
-    connect(mSnippetsManager->model(), &QAbstractItemModel::rowsRemoved,
-            this, &QTreeView::expandAll);
+    connect(mSnippetsManager->model(), &QAbstractItemModel::rowsInserted, this, &QTreeView::expandAll);
+    connect(mSnippetsManager->model(), &QAbstractItemModel::rowsRemoved, this, &QTreeView::expandAll);
 
     mAddSnippetAction = new QAction(i18n("Add Snippet..."), this);
     mAddSnippetAction->setIcon(QIcon::fromTheme(QStringLiteral("list-add")));
@@ -141,13 +139,14 @@ void QuicktextTreeWidget::deleteSnippet()
 
     const QString snippetName = index.data(MailCommon::SnippetsModel::NameRole).toString();
 
-    if (KMessageBox::warningContinueCancel(
-            this,
-            xi18nc("@info",
-                   "Do you really want to remove snippet \"%1\"?<nl/>"
-                   "<warning>There is no way to undo the removal.</warning>", snippetName),
-            QString(),
-            KStandardGuiItem::remove()) == KMessageBox::Cancel) {
+    if (KMessageBox::warningContinueCancel(this,
+                                           xi18nc("@info",
+                                                  "Do you really want to remove snippet \"%1\"?<nl/>"
+                                                  "<warning>There is no way to undo the removal.</warning>",
+                                                  snippetName),
+                                           QString(),
+                                           KStandardGuiItem::remove())
+        == KMessageBox::Cancel) {
         return;
     }
 
@@ -165,22 +164,22 @@ void QuicktextTreeWidget::deleteSnippetGroup()
     const QString groupName = groupIndex.data(MailCommon::SnippetsModel::NameRole).toString();
 
     if (mSnippetsManager->model()->rowCount(groupIndex) > 0) {
-        if (KMessageBox::warningContinueCancel(
-                this,
-                xi18nc("@info",
-                       "Do you really want to remove group \"%1\" along with all its snippets?<nl/>"
-                       "<warning>There is no way to undo the removal.</warning>", groupName),
-                QString(),
-                KStandardGuiItem::remove()) == KMessageBox::Cancel) {
+        if (KMessageBox::warningContinueCancel(this,
+                                               xi18nc("@info",
+                                                      "Do you really want to remove group \"%1\" along with all its snippets?<nl/>"
+                                                      "<warning>There is no way to undo the removal.</warning>",
+                                                      groupName),
+                                               QString(),
+                                               KStandardGuiItem::remove())
+            == KMessageBox::Cancel) {
             return;
         }
     } else {
-        if (KMessageBox::warningContinueCancel(
-                nullptr,
-                i18nc("@info",
-                      "Do you really want to remove group \"%1\"?", groupName),
-                QString(),
-                KStandardGuiItem::remove()) == KMessageBox::Cancel) {
+        if (KMessageBox::warningContinueCancel(nullptr,
+                                               i18nc("@info", "Do you really want to remove group \"%1\"?", groupName),
+                                               QString(),
+                                               KStandardGuiItem::remove())
+            == KMessageBox::Cancel) {
             return;
         }
     }

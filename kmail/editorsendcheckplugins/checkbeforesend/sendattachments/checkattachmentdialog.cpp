@@ -4,13 +4,13 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "checkattachmentdialog.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QLabel>
-#include <KConfigGroup>
-#include <KSharedConfig>
 #include <QListWidget>
+#include <QVBoxLayout>
 
 CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     : QDialog(parent)

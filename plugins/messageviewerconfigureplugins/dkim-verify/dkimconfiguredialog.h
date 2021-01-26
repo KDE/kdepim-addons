@@ -7,8 +7,8 @@
 #ifndef DKIMCONFIGUREDIALOG_H
 #define DKIMCONFIGUREDIALOG_H
 
-#include <QDialog>
 #include "libdkimverifyconfigure_export.h"
+#include <QDialog>
 
 class DKIMConfigureWidget;
 class LIBDKIMVERIFYCONFIGURE_EXPORT DKIMConfigureDialog : public QDialog

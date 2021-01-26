@@ -22,6 +22,7 @@ protected:
     void load() override;
     void reset() override;
     void help() override;
+
 private:
     CheckBeforeSendConfigureWidget *mConfigureWidget = nullptr;
 };

@@ -8,8 +8,8 @@
 #define GMXIMPORTEXPORTPLUGININTERFACE_H
 
 #include <KAddressBookImportExport/PluginInterface>
-#include <QFile>
 #include <KContacts/Addressee>
+#include <QFile>
 
 class GMXImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {
@@ -21,6 +21,7 @@ public:
     void createAction(KActionCollection *ac) override;
     void exec() override;
     Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
+
 private:
     void doExport(QFile *fp, const KContacts::AddresseeList &list) const;
     void slotImportGmx();

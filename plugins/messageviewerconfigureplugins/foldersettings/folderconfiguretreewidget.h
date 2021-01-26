@@ -7,9 +7,9 @@
 #ifndef FOLDERCONFIGURETREEWIDGET_H
 #define FOLDERCONFIGURETREEWIDGET_H
 
-#include <QWidget>
 #include "folderconfiguresettings_private_export.h"
 #include <AkonadiCore/Collection>
+#include <QWidget>
 class FolderSettingFilterProxyModel;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureTreeWidget : public QWidget
 {
@@ -18,6 +18,7 @@ public:
     explicit FolderConfigureTreeWidget(QWidget *parent = nullptr);
     ~FolderConfigureTreeWidget() override;
     Q_REQUIRED_RESULT Akonadi::Collection::List listCollections() const;
+
 private:
     FolderSettingFilterProxyModel *mFolderSettingFilterProxyModel = nullptr;
 };

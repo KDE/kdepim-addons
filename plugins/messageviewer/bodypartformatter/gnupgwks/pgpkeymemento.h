@@ -7,13 +7,14 @@
 #ifndef PGPKEYMEMENTO_H_
 #define PGPKEYMEMENTO_H_
 
-#include <QObject>
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
+#include <QObject>
 
 #include <gpgme++/key.h>
 
-namespace GpgME {
+namespace GpgME
+{
 class KeyListResult;
 }
 

@@ -6,8 +6,8 @@
 
 #include "checkduplicateemailsjobtest.h"
 #include "../duplicateemails/checkduplicateemailsjob.h"
-#include <QTest>
 #include <QStringList>
+#include <QTest>
 
 CheckDuplicateEmailsJobTest::CheckDuplicateEmailsJobTest(QObject *parent)
     : QObject(parent)
@@ -36,7 +36,7 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmptyListWhenEmailsListIsEmpty()
 void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
 {
     QTest::addColumn<QStringList>("emails");
-    QTest::addColumn<QMap<QString, int> >("result");
+    QTest::addColumn<QMap<QString, int>>("result");
     QTest::newRow("empty") << QStringList() << QMap<QString, int>();
 
     QStringList lst;

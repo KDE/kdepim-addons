@@ -6,11 +6,11 @@
 
 #include "confirmaddressemailentrydialog.h"
 #include <KLocalizedString>
-#include <QDialogButtonBox>
-#include <QLineEdit>
-#include <QLabel>
-#include <QVBoxLayout>
 #include <PimCommon/EmailValidator>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QLineEdit>
+#include <QVBoxLayout>
 
 ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     : QDialog(parent)

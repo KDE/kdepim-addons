@@ -5,14 +5,14 @@
 */
 
 #include "dkimgeneralwidget.h"
-#include <MessageViewer/MessageViewerSettings>
-#include <MessageViewer/DKIMManager>
 #include <KLocalizedString>
+#include <MessageViewer/DKIMManager>
+#include <MessageViewer/MessageViewerSettings>
+#include <PimCommon/ConfigureImmutableWidgetUtils>
 #include <QCheckBox>
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
-#include <PimCommon/ConfigureImmutableWidgetUtils>
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)

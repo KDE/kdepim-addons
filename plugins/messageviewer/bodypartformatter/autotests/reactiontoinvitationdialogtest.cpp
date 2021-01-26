@@ -6,11 +6,11 @@
 
 #include "reactiontoinvitationdialogtest.h"
 #include "../calendar/reactiontoinvitationdialog.h"
-#include <QDialogButtonBox>
-#include <QTest>
-#include <QLabel>
 #include <KPIMTextEdit/PlainTextEditorWidget>
+#include <QDialogButtonBox>
+#include <QLabel>
 #include <QStandardPaths>
+#include <QTest>
 
 ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     : QObject(parent)

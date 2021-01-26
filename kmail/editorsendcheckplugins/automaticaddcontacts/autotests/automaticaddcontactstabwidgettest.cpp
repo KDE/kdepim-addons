@@ -6,15 +6,15 @@
 
 #include "automaticaddcontactstabwidgettest.h"
 #include "../automaticaddcontactstabwidget.h"
+#include <AkonadiCore/EntityTreeModel>
+#include <AkonadiWidgets/CollectionComboBox>
+#include <KContacts/Addressee>
 #include <QCheckBox>
-#include <QTest>
-#include <QVBoxLayout>
-#include <QStandardPaths>
 #include <QLabel>
 #include <QStandardItemModel>
-#include <AkonadiWidgets/CollectionComboBox>
-#include <AkonadiCore/EntityTreeModel>
-#include <KContacts/Addressee>
+#include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *parent)
     : QObject(parent)
@@ -28,10 +28,8 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
         collection.setContentMimeTypes(QStringList() << KContacts::Addressee::mimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         mComboboxModel->appendRow(item);
     }

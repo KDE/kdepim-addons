@@ -42,10 +42,8 @@ void MergeContactsDialogTest::shouldHaveDefaultValue()
     for (int i = 0; i < stackedWidget->count(); ++i) {
         QWidget *w = stackedWidget->widget(i);
         const QString objName = w->objectName();
-        const bool hasGoodNamePage = (objName == QLatin1String("notenoughcontactselected")
-                                      || objName == QLatin1String("nocontactselected")
-                                      || objName == QLatin1String("manualmergeresultwidget")
-                                      || objName == QLatin1String("selectioninformation")
+        const bool hasGoodNamePage = (objName == QLatin1String("notenoughcontactselected") || objName == QLatin1String("nocontactselected")
+                                      || objName == QLatin1String("manualmergeresultwidget") || objName == QLatin1String("selectioninformation")
                                       || objName == QLatin1String("mergecontactinfowidget"));
         QVERIFY(hasGoodNamePage);
     }
@@ -57,15 +55,15 @@ void MergeContactsDialogTest::shouldSwithStackedWidget()
     dlg.show();
     QStackedWidget *stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     Akonadi::Item::List lst;
-    //Empty
+    // Empty
     dlg.setContacts(lst);
     QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontactselected"));
     lst << Akonadi::Item(42);
-    //1 element
+    // 1 element
     dlg.setContacts(lst);
     QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("notenoughcontactselected"));
     lst.clear();
-    //1 element
+    // 1 element
     lst << Akonadi::Item(42);
     dlg.setContacts(lst);
     QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("notenoughcontactselected"));

@@ -7,8 +7,8 @@
 #ifndef DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H
 #define DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H
 
-#include <QDialog>
 #include "dkimconfigure_private_export.h"
+#include <QDialog>
 class DKIMAuthenticationVerifiedServerWidget;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerDialog : public QDialog
 {

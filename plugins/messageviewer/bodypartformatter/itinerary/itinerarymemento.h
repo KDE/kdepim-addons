@@ -9,8 +9,8 @@
 
 #include <MimeTreeParser/BodyPart>
 
-#include <KItinerary/ExtractorPostprocessor>
 #include <KCalendarCore/Event>
+#include <KItinerary/ExtractorPostprocessor>
 
 #include <QSet>
 #include <QVariant>
@@ -18,11 +18,13 @@
 
 #include <vector>
 
-namespace KPkPass {
+namespace KPkPass
+{
 class Pass;
 }
 
-namespace KMime {
+namespace KMime
+{
 class ContentIndex;
 }
 

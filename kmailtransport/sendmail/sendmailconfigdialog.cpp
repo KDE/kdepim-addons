@@ -10,8 +10,8 @@
 #include "transport.h"
 
 #include <QDialogButtonBox>
-#include <QVBoxLayout>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 using namespace MailTransport;
 

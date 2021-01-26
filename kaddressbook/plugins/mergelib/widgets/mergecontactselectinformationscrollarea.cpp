@@ -5,16 +5,16 @@
 */
 
 #include "mergecontactselectinformationscrollarea.h"
-#include "mergecontactselectinformationwidget.h"
 #include "job/mergecontactsjob.h"
-#include "widgets/mergecontactinfowidget.h"
 #include "kaddressbookmergelibprivate_debug.h"
+#include "mergecontactselectinformationwidget.h"
+#include "widgets/mergecontactinfowidget.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KMessageBox>
+#include <QPushButton>
 #include <QScrollArea>
 #include <QStackedWidget>
-#include <QPushButton>
-#include <KMessageBox>
+#include <QVBoxLayout>
 using namespace KABMergeContacts;
 
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
@@ -58,7 +58,9 @@ MergeContactSelectInformationScrollArea::~MergeContactSelectInformationScrollAre
 {
 }
 
-void MergeContactSelectInformationScrollArea::setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem, const Akonadi::Collection &col)
+void MergeContactSelectInformationScrollArea::setContacts(MergeContacts::ConflictInformations conflictTypes,
+                                                          const Akonadi::Item::List &listItem,
+                                                          const Akonadi::Collection &col)
 {
     mCollection = col;
     mListItem = listItem;
@@ -83,8 +85,10 @@ void MergeContactSelectInformationScrollArea::slotMergeContacts()
     }
     const bool result = mSelectInformationWidget->verifySelectedInfo();
     if (!result) {
-        if (KMessageBox::No == KMessageBox::warningYesNo(this, i18n("Some information was not selected. You can lose this information. Do you want to continue merging?"),
-                                                         i18n("Missing Selected Information"))) {
+        if (KMessageBox::No
+            == KMessageBox::warningYesNo(this,
+                                         i18n("Some information was not selected. You can lose this information. Do you want to continue merging?"),
+                                         i18n("Missing Selected Information"))) {
             return;
         }
     }

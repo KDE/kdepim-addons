@@ -5,31 +5,32 @@
 */
 
 #include "todoedit.h"
-#include "globalsettings_messageviewer.h"
 #include "createtodoplugin_debug.h"
+#include "globalsettings_messageviewer.h"
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include <KLocalizedString>
-#include <QLineEdit>
 #include <QIcon>
+#include <QLineEdit>
 
 #include <KMessageWidget>
-#include <QPushButton>
-#include <QHBoxLayout>
 #include <QEvent>
+#include <QHBoxLayout>
 #include <QKeyEvent>
 #include <QLabel>
+#include <QPushButton>
 
 #include <AkonadiWidgets/CollectionComboBox>
 
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>
-#include <akonadi/kmime/specialmailcollections.h>
 #include <KGuiItem>
 #include <KStandardGuiItem>
+#include <akonadi/kmime/specialmailcollections.h>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 QAbstractItemModel *_k_todoEditStubModel = nullptr;
 }
 
@@ -147,7 +148,8 @@ void TodoEdit::showToDoWidget()
         if (mCurrentCollection.isValid()) {
             isSentFolder = (Akonadi::SpecialMailCollections::self()->defaultCollection(Akonadi::SpecialMailCollections::SentMail) == mCurrentCollection);
         }
-        mNoteEdit->setText(isSentFolder ? i18n("Check I received a reply about \"%1\"", subject->asUnicodeString()) : i18n("Reply to \"%1\"", subject->asUnicodeString()));
+        mNoteEdit->setText(isSentFolder ? i18n("Check I received a reply about \"%1\"", subject->asUnicodeString())
+                                        : i18n("Reply to \"%1\"", subject->asUnicodeString()));
         mNoteEdit->selectAll();
         mNoteEdit->setFocus();
     } else {
@@ -236,7 +238,9 @@ void TodoEdit::slotReturnPressed()
 
     if (!mNoteEdit->text().trimmed().isEmpty()) {
         mMsgWidget->setText(i18nc("%1 is summary of the todo, %2 is name of the folder in which it is stored",
-                                  "New todo '%1' was added to task list '%2'", mNoteEdit->text(), collection.displayName()));
+                                  "New todo '%1' was added to task list '%2'",
+                                  mNoteEdit->text(),
+                                  collection.displayName()));
         KCalendarCore::Todo::Ptr todo = createTodoItem();
 
         // We don't hide the widget here, so that multiple todo's can be added
@@ -272,14 +276,12 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
     // With a shortcut override we can catch this before it gets to kactions.
     const bool shortCutOverride = (e->type() == QEvent::ShortcutOverride);
     if (shortCutOverride || e->type() == QEvent::KeyPress) {
-        auto *kev = static_cast<QKeyEvent * >(e);
+        auto *kev = static_cast<QKeyEvent *>(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();
             return true;
-        } else if (kev->key() == Qt::Key_Enter
-                   || kev->key() == Qt::Key_Return
-                   || kev->key() == Qt::Key_Space) {
+        } else if (kev->key() == Qt::Key_Enter || kev->key() == Qt::Key_Return || kev->key() == Qt::Key_Space) {
             e->accept();
             if (shortCutOverride) {
                 return true;

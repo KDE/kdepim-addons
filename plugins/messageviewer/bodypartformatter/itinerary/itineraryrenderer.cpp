@@ -5,21 +5,21 @@
 */
 
 #include "itineraryrenderer.h"
+#include "itinerary_debug.h"
+#include "itinerarykdeconnecthandler.h"
 #include "itinerarymemento.h"
 #include "itineraryurlhandler.h"
-#include "itinerarykdeconnecthandler.h"
-#include "itinerary_debug.h"
 
-#include <MessageViewer/IconNameCache>
 #include <MessageViewer/HtmlWriter>
+#include <MessageViewer/IconNameCache>
 #include <MessageViewer/MessagePartRendererManager>
 
-#include <GrantleeTheme/GrantleeThemeEngine>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
+#include <GrantleeTheme/GrantleeThemeEngine>
 
 #include <KItinerary/Action>
-#include <KItinerary/BusTrip>
 #include <KItinerary/Brand>
+#include <KItinerary/BusTrip>
 #include <KItinerary/Event>
 #include <KItinerary/Flight>
 #include <KItinerary/JsonLdDocument>
@@ -27,8 +27,8 @@
 #include <KItinerary/Organization>
 #include <KItinerary/Person>
 #include <KItinerary/Place>
-#include <KItinerary/Reservation>
 #include <KItinerary/RentalCar>
+#include <KItinerary/Reservation>
 #include <KItinerary/Ticket>
 #include <KItinerary/TrainTrip>
 
@@ -47,13 +47,14 @@
 using namespace KItinerary;
 
 // Grantlee has no Q_GADGET support yet
-#define GRANTLEE_MAKE_GADGET(Class) \
-    GRANTLEE_BEGIN_LOOKUP(Class) \
-    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData()); \
-    if (idx < 0) { \
-        return {};} \
-    const auto mp = Class::staticMetaObject.property(idx); \
-    return mp.readOnGadget(&object); \
+#define GRANTLEE_MAKE_GADGET(Class)                                                                                                                            \
+    GRANTLEE_BEGIN_LOOKUP(Class)                                                                                                                               \
+    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData());                                                                   \
+    if (idx < 0) {                                                                                                                                             \
+        return {};                                                                                                                                             \
+    }                                                                                                                                                          \
+    const auto mp = Class::staticMetaObject.property(idx);                                                                                                     \
+    return mp.readOnGadget(&object);                                                                                                                           \
     GRANTLEE_END_LOOKUP
 
 GRANTLEE_MAKE_GADGET(Airport)
@@ -128,7 +129,9 @@ void ItineraryRenderer::setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConn
     m_kdeConnect = kdeConnect;
 }
 
-bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
+                               MessageViewer::HtmlWriter *htmlWriter,
+                               MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context)
     const auto mpList = msgPart.dynamicCast<MimeTreeParser::MessagePartList>();
@@ -155,8 +158,10 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
     auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
 
     QVariantMap style;
-    style.insert(QStringLiteral("expandIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
-    style.insert(QStringLiteral("collapseIcon"), QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
+    style.insert(QStringLiteral("expandIcon"),
+                 QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quoteexpand.png"))));
+    style.insert(QStringLiteral("collapseIcon"),
+                 QString(QStringLiteral("file://") + MessageViewer::IconNameCache::instance()->iconPathFromLocal(QStringLiteral("quotecollapse.png"))));
     style.insert(QStringLiteral("palette"), QGuiApplication::palette());
     style.insert(QStringLiteral("viewScheme"), QVariant::fromValue(KColorScheme(QPalette::Normal, KColorScheme::View)));
     c.insert(QStringLiteral("style"), style);
@@ -229,9 +234,13 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart, Me
 
     auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("org.kde.messageviewer/itinerary/itinerary.html"));
     const_cast<Grantlee::Engine *>(t->engine())->addDefaultLibrary(QStringLiteral("kitinerary_grantlee_extension"));
-    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));
+    dynamic_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))
+        ->localizer()
+        ->setApplicationDomain(QByteArrayLiteral("messageviewer_semantic_plugin"));
     Grantlee::OutputStream s(htmlWriter->stream());
     t->render(&s, &c);
-    qobject_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))->localizer()->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
+    qobject_cast<GrantleeTheme::Engine *>(const_cast<Grantlee::Engine *>(t->engine()))
+        ->localizer()
+        ->setApplicationDomain(QByteArrayLiteral("libmessageviewer"));
     return false; // yes, false, we want the rest of the email rendered normally after this
 }

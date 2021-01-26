@@ -4,24 +4,25 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
-#include <MessageViewer/MessagePartRenderPlugin>
 
-#include <MimeTreeParser/MessagePart>
-#include <MessageViewer/HtmlWriter>
 #include "markdownabstract.h"
+#include <MessageViewer/HtmlWriter>
+#include <MimeTreeParser/MessagePart>
 #ifdef USE_DISCOUNT_LIB
 #include "markdowndiscount.h"
 #else
 #include "markdownqtextdocument.h"
 #endif
 
-#include <grantlee/template.h>
-#include <QTextDocument>
 #include <QMimeDatabase>
+#include <QTextDocument>
+#include <grantlee/template.h>
 
-namespace {
+namespace
+{
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -46,18 +47,18 @@ public:
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-                QString result;
+                     QString result;
 #ifdef USE_DISCOUNT_LIB
-                MarkdownDiscount engine;
-                engine.setText(msgPart->text());
-                result = engine.toHtml();
+                     MarkdownDiscount engine;
+                     engine.setText(msgPart->text());
+                     result = engine.toHtml();
 #else
-                MarkdownQTextDocument engine;
-                engine.setText(msgPart->text());
-                result = engine.toHtml();
+                     MarkdownQTextDocument engine;
+                     engine.setText(msgPart->text());
+                     result = engine.toHtml();
 #endif
-                (*htmlWriter->stream()) << result;
-            }));
+                     (*htmlWriter->stream()) << result;
+                 }));
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());
         t->render(&s, &c);

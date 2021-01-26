@@ -6,10 +6,10 @@
 
 #include "expireaccounttrashfolderconfigwidget.h"
 #include "libexpireaccounttrashfolderconfig_debug.h"
-#include <MailCommon/CollectionExpiryWidget>
 #include <AkonadiCore/AgentManager>
-#include <akonadi/kmime/specialmailcollections.h>
+#include <MailCommon/CollectionExpiryWidget>
 #include <QVBoxLayout>
+#include <akonadi/kmime/specialmailcollections.h>
 
 ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
     : QWidget(parent)
@@ -20,7 +20,10 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
     mainLayout->setContentsMargins({});
 
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
-    connect(mCollectionExpiryWidget, &MailCommon::CollectionExpiryWidget::saveAndExpireRequested, this, &ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested);
+    connect(mCollectionExpiryWidget,
+            &MailCommon::CollectionExpiryWidget::saveAndExpireRequested,
+            this,
+            &ExpireAccountTrashFolderConfigWidget::slotSaveAndExpireRequested);
     mainLayout->addWidget(mCollectionExpiryWidget);
 }
 
@@ -36,7 +39,7 @@ void ExpireAccountTrashFolderConfigWidget::save(bool saveSettings, bool expireNo
     for (const Akonadi::AgentInstance &agent : agents) {
         Akonadi::Collection trashCol = Akonadi::SpecialMailCollections::self()->collection(Akonadi::SpecialMailCollections::Trash, agent);
         const auto trashColId = trashCol.id();
-        //qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection found " << trashCol;
+        // qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection found " << trashCol;
         if (trashCol.isValid()) {
             qCDebug(LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG) << "Trash collection valid found " << trashCol;
             if (mListCollection.contains(trashColId)) {

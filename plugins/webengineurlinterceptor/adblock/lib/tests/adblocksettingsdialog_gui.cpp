@@ -4,14 +4,14 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include <QDialog>
-#include <QApplication>
-#include <QVBoxLayout>
-#include <QPushButton>
-#include <QCommandLineParser>
-#include <QDialogButtonBox>
-#include <QStandardPaths>
 #include "../widgets/adblocksettingwidget.h"
+#include <QApplication>
+#include <QCommandLineParser>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QPushButton>
+#include <QStandardPaths>
+#include <QVBoxLayout>
 
 int main(int argc, char **argv)
 {

@@ -11,13 +11,13 @@
 #include <KLocalizedString>
 
 #include <QComboBox>
-#include <QLabel>
-#include <QHBoxLayout>
 #include <QDialogButtonBox>
-#include <QPushButton>
-#include <QVBoxLayout>
-#include <QToolButton>
+#include <QHBoxLayout>
+#include <QLabel>
 #include <QPointer>
+#include <QPushButton>
+#include <QToolButton>
+#include <QVBoxLayout>
 
 using namespace AdBlock;
 AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &excludeList, QWidget *parent)

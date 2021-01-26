@@ -7,18 +7,16 @@
 #ifndef GRAMMALECTEGENERATECONFIGOPTIONJOB_H
 #define GRAMMALECTEGENERATECONFIGOPTIONJOB_H
 
+#include "libgrammalect_private_export.h"
 #include <QObject>
 #include <QProcess>
 #include <QVector>
-#include "libgrammalect_private_export.h"
 
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteGenerateConfigOptionJob : public QObject
 {
     Q_OBJECT
 public:
-
-    struct Option
-    {
+    struct Option {
         QString optionName;
         QString description;
         bool defaultValue = false;

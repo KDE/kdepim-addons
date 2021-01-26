@@ -6,8 +6,8 @@
 
 #include "gnupgwksmessagepart.h"
 
-#include <MimeTreeParser/BodyPart>
 #include <KMime/Content>
+#include <MimeTreeParser/BodyPart>
 
 GnuPGWKSMessagePart::GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part)
     : MimeTreeParser::MessagePart(part->objectTreeParser(), QString())

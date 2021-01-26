@@ -76,7 +76,7 @@ void LanguageToolResultJob::start()
 void LanguageToolResultJob::slotFinish(QNetworkReply *reply)
 {
     if (reply->error() != QNetworkReply::NoError) {
-        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << " Error reply - "<<reply->errorString();
+        qCWarning(LIBLANGUAGE_PLUGIN_LOG) << " Error reply - " << reply->errorString();
         Q_EMIT error(reply->errorString());
     }
 }

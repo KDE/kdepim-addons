@@ -9,8 +9,8 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QListWidget>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
     : QObject(parent)
@@ -32,7 +32,7 @@ void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
     auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    auto *lab = dlg.findChild<QLabel * >(QStringLiteral("label"));
+    auto *lab = dlg.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 }

@@ -7,8 +7,8 @@
 #ifndef FOLDERCONFIGUREMODIFYCOLLECTIONJOB_H
 #define FOLDERCONFIGUREMODIFYCOLLECTIONJOB_H
 
-#include <QObject>
 #include <AkonadiCore/Collection>
+#include <QObject>
 class KJob;
 class FolderConfigureModifyCollectionJob : public QObject
 {
@@ -20,6 +20,7 @@ public:
     void setCollection(const Akonadi::Collection &col);
 
     void start();
+
 private:
     void slotCollectionModified(KJob *job);
     Akonadi::Collection mCollection;

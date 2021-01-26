@@ -6,8 +6,8 @@
 
 #include "grantleeextension.h"
 
-#include <KItinerary/Place>
 #include <KContacts/Address>
+#include <KItinerary/Place>
 
 #include <grantlee/exception.h>
 #include <grantlee/parser.h>

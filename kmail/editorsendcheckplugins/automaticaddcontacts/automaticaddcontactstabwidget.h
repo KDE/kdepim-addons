@@ -10,7 +10,8 @@
 #include <QWidget>
 class QCheckBox;
 
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
 class QAbstractItemModel;
@@ -27,6 +28,7 @@ public:
     void setIdentity(uint identity);
 Q_SIGNALS:
     void configureChanged();
+
 private:
     QCheckBox *mEnabled = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;

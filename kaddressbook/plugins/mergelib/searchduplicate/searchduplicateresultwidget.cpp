@@ -5,19 +5,20 @@
 */
 
 #include "searchduplicateresultwidget.h"
-#include "widgets/mergecontactloseinformationwarning.h"
 #include "job/mergecontactsjob.h"
+#include "widgets/mergecontactloseinformationwarning.h"
 
 #include "resultduplicatetreewidget.h"
-#include <KLocalizedString>
-#include <QHBoxLayout>
-#include <QSplitter>
-#include <QLabel>
-#include <QPushButton>
 #include <Akonadi/Contact/GrantleeContactViewer>
 #include <AkonadiWidgets/CollectionComboBox>
+#include <KLocalizedString>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QPushButton>
+#include <QSplitter>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubModel = nullptr;
 }
 
@@ -43,7 +44,10 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mMergeContactWarning = new MergeContactLoseInformationWarning;
     mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &SearchDuplicateResultWidget::slotAutomaticMerging);
-    connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &SearchDuplicateResultWidget::slotCustomizeMergingContacts);
+    connect(mMergeContactWarning,
+            &MergeContactLoseInformationWarning::customizeMergingContacts,
+            this,
+            &SearchDuplicateResultWidget::slotCustomizeMergingContacts);
     mainLayout->addWidget(mMergeContactWarning);
 
     auto *mergeLayout = new QHBoxLayout;
@@ -68,7 +72,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     connect(mMergeContact, &QPushButton::clicked, this, &SearchDuplicateResultWidget::slotMergeContact);
     mergeLayout->addWidget(mMergeContact);
     mMergeContact->setEnabled(false);
-    //TODO make mMergeContact enable when selected item and collection valid
+    // TODO make mMergeContact enable when selected item and collection valid
 }
 
 SearchDuplicateResultWidget::~SearchDuplicateResultWidget()
@@ -104,7 +108,7 @@ void SearchDuplicateResultWidget::slotMergeContact()
         if (conflictFound) {
             mMergeContactWarning->animatedShow();
         } else {
-            //Detect if conflict.
+            // Detect if conflict.
             mergeContact();
         }
     }

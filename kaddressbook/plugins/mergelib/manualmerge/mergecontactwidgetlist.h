@@ -7,11 +7,12 @@
 #ifndef MERGECONTACTWIDGETLIST_H
 #define MERGECONTACTWIDGETLIST_H
 
-#include <QListWidget>
 #include <AkonadiCore/Item>
 #include <KContacts/Addressee>
+#include <QListWidget>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class MergeContactWidgetListItem : public QListWidgetItem
 {
 public:
@@ -32,6 +33,7 @@ public:
     void fillListContact(const Akonadi::Item::List &items);
     Akonadi::Item::List listSelectedContacts() const;
     Akonadi::Item currentAkonadiItem() const;
+
 private:
     QString itemName(const KContacts::Addressee &address) const;
 };

@@ -6,13 +6,13 @@
 
 #include "checkduplicateemailsdialog.h"
 
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <QListWidget>
-#include <QLabel>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QListWidget>
+#include <QVBoxLayout>
 
 CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)

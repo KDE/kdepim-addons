@@ -11,8 +11,8 @@
 #ifndef ADBLOCKSUBSCRIPTION_H
 #define ADBLOCKSUBSCRIPTION_H
 
-#include <QVector>
 #include <QUrl>
+#include <QVector>
 
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
@@ -20,7 +20,8 @@
 class QNetworkAccessManager;
 class QUrl;
 class QNetworkReply;
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockSubscription : public QObject
 {
     Q_OBJECT
@@ -100,6 +101,7 @@ public:
     int addRule(AdBlockRule *rule) override;
     bool removeRule(int offset) override;
     const AdBlockRule *replaceRule(AdBlockRule *rule, int offset) override;
+
 private:
     QByteArray readAllFileByteContents(const QString &filename);
 };

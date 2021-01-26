@@ -5,12 +5,12 @@
 */
 
 #include "standardsheaderstyleplugintest.h"
-#include "../standardsheaderstyleplugin/standardsheaderstyleplugin.h"
 #include "../standardsheaderstyleplugin/standardsheaderstyleinterface.h"
-#include <QTest>
+#include "../standardsheaderstyleplugin/standardsheaderstyleplugin.h"
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+#include <QTest>
 
 StandardsHeaderStylePluginTest::StandardsHeaderStylePluginTest(QObject *parent)
     : QObject(parent)

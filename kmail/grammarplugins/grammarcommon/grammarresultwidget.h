@@ -7,10 +7,11 @@
 #ifndef GRAMMARRESULTWIDGET_H
 #define GRAMMARRESULTWIDGET_H
 
-#include <QWidget>
 #include "grammarcommon_export.h"
 #include "grammarerror.h"
-namespace MessageComposer {
+#include <QWidget>
+namespace MessageComposer
+{
 class PluginGrammarAction;
 }
 class GrammarResultTextEdit;

@@ -66,24 +66,25 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // filter out types we can't handle, but keep incomplete elements to see if we can complete them from the calendar
         ExtractorValidator validator;
-        validator.setAcceptedTypes<
-            BusReservation,
-            EventReservation,
-            FlightReservation,
-            FoodEstablishmentReservation,
-            LodgingReservation,
-            RentalCarReservation,
-            TaxiReservation,
-            TrainReservation
-            >();
+        validator.setAcceptedTypes<BusReservation,
+                                   EventReservation,
+                                   FlightReservation,
+                                   FoodEstablishmentReservation,
+                                   LodgingReservation,
+                                   RentalCarReservation,
+                                   TaxiReservation,
+                                   TrainReservation>();
         validator.setAcceptOnlyCompleteElements(false);
         auto postProcResult = m_postProc.result();
-        postProcResult.erase(std::remove_if(postProcResult.begin(), postProcResult.end(), [&validator](const auto &elem) {
-            return !validator.isValidElement(elem);
-        }), postProcResult.end());
+        postProcResult.erase(std::remove_if(postProcResult.begin(),
+                                            postProcResult.end(),
+                                            [&validator](const auto &elem) {
+                                                return !validator.isValidElement(elem);
+                                            }),
+                             postProcResult.end());
 
         // perform calendar lookup and merge results
-        std::vector<std::pair<QVariant, KCalendarCore::Event::Ptr> > resolvedEvents;
+        std::vector<std::pair<QVariant, KCalendarCore::Event::Ptr>> resolvedEvents;
         resolvedEvents.reserve(postProcResult.size());
         const auto calendar = CalendarSupport::calendarSingleton(!qEnvironmentVariableIsSet("BPF_ITINERARY_TESTMODE"));
         for (const auto &r : qAsConst(postProcResult)) {
@@ -105,9 +106,12 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
 
         // discard elemnents we couldn't complete from the calendar
         validator.setAcceptOnlyCompleteElements(true);
-        resolvedEvents.erase(std::remove_if(resolvedEvents.begin(), resolvedEvents.end(), [&validator](const auto &p) {
-            return !validator.isValidElement(p.first);
-        }), resolvedEvents.end());
+        resolvedEvents.erase(std::remove_if(resolvedEvents.begin(),
+                                            resolvedEvents.end(),
+                                            [&validator](const auto &p) {
+                                                return !validator.isValidElement(p.first);
+                                            }),
+                             resolvedEvents.end());
 
         // merge multi-traveler elements
         for (auto it = resolvedEvents.begin(); it != resolvedEvents.end();) {
@@ -131,9 +135,12 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
                 if (data.event) {
                     const auto reservationsForEvent = CalendarHandler::reservationsForEvent(data.event);
                     for (const auto &prev : reservationsForEvent) {
-                        const auto notFound = std::find_if(data.reservations.constBegin(), data.reservations.constEnd(), [prev](const QVariant &v) {
-                            return MergeUtil::isSame(v, prev);
-                        }) == data.reservations.constEnd();
+                        const auto notFound = std::find_if(data.reservations.constBegin(),
+                                                           data.reservations.constEnd(),
+                                                           [prev](const QVariant &v) {
+                                                               return MergeUtil::isSame(v, prev);
+                                                           })
+                            == data.reservations.constEnd();
                         if (notFound) {
                             data.reservations.push_back(prev);
                         }

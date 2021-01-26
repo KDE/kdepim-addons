@@ -5,11 +5,11 @@
 */
 
 #include "gravatarupdatewidgettest.h"
-#include <QTest>
+#include "../gravatar/widgets/gravatarupdatewidget.h"
+#include <QCheckBox>
 #include <QLabel>
 #include <QPushButton>
-#include <QCheckBox>
-#include "../gravatar/widgets/gravatarupdatewidget.h"
+#include <QTest>
 GravatarUpdateWidgetTest::GravatarUpdateWidgetTest(QObject *parent)
     : QObject(parent)
 {

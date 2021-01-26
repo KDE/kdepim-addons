@@ -11,7 +11,8 @@
 class QTabWidget;
 class KConfigGroup;
 class ConfirmAddressConfigureTabWidget;
-namespace KIdentityManagement {
+namespace KIdentityManagement
+{
 class IdentityManager;
 }
 

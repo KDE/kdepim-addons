@@ -8,8 +8,8 @@
 #include "enterpriseheaderstyle.h"
 #include "enterpriseheaderstyleinterface.h"
 
-#include <MessageViewer/RichHeaderStrategy>
 #include <KPluginFactory>
+#include <MessageViewer/RichHeaderStrategy>
 
 using namespace MessageViewer;
 

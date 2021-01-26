@@ -7,7 +7,6 @@
 #include "languagetoolparsertest.h"
 #include "languagetoolparser.h"
 #include <QJsonDocument>
-#include <QJsonDocument>
 #include <QStandardPaths>
 #include <QTest>
 QTEST_GUILESS_MAIN(LanguageToolParserTest)

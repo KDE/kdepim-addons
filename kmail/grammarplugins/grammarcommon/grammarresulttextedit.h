@@ -7,10 +7,11 @@
 #ifndef GRAMMARRESULTTEXTEDIT_H
 #define GRAMMARRESULTTEXTEDIT_H
 
-#include <QTextEdit>
-#include "grammarerror.h"
 #include "grammarcommon_export.h"
-namespace MessageComposer {
+#include "grammarerror.h"
+#include <QTextEdit>
+namespace MessageComposer
+{
 class PluginGrammarAction;
 }
 class GRAMMARCOMMON_EXPORT GrammarResultTextEdit : public QTextEdit
@@ -31,12 +32,11 @@ Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
     void closeChecker();
+
 private:
     Q_DISABLE_COPY(GrammarResultTextEdit)
     void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
-    enum TextInfo {
-        ReplaceFormatInfo = QTextFormat::UserProperty + 1
-    };
+    enum TextInfo { ReplaceFormatInfo = QTextFormat::UserProperty + 1 };
     void slotOpenGrammarUrlInfo(const QString &url);
     void generalPaletteChanged();
     QColor mTextColor;

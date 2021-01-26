@@ -7,8 +7,8 @@
 #ifndef AUTOMATICADDCONTACTSINTERFACE_H
 #define AUTOMATICADDCONTACTSINTERFACE_H
 
-#include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 #include <AkonadiCore/Collection>
+#include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 
 class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
 {
@@ -21,6 +21,7 @@ public:
 
 public Q_SLOTS:
     void reloadConfig() override;
+
 private:
     struct AutomaticAddContactsSettings {
         AutomaticAddContactsSettings()

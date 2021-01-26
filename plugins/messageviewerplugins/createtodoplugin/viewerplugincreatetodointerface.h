@@ -7,11 +7,12 @@
 #ifndef VIEWERPLUGINCREATETODOINTERFACE_H
 #define VIEWERPLUGINCREATETODOINTERFACE_H
 
-#include <MessageViewer/ViewerPluginInterface>
-#include <KCalendarCore/Todo>
 #include <AkonadiCore/Collection>
+#include <KCalendarCore/Todo>
+#include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class TodoEdit;
 class ViewerPluginCreateTodoInterface : public ViewerPluginInterface
 {

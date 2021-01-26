@@ -7,8 +7,8 @@
 #ifndef SELECTIMAPFOLDERWIDGET_H
 #define SELECTIMAPFOLDERWIDGET_H
 
-#include <QWidget>
 #include <QTreeView>
+#include <QWidget>
 
 #include <KSieveUi/SieveImapAccountSettings>
 

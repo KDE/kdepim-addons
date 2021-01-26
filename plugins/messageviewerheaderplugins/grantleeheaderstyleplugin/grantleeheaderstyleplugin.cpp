@@ -4,10 +4,10 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "grantleeheaderstyleinterface.h"
 #include "grantleeheaderstyleplugin.h"
-#include <MessageViewer/GrantleeHeaderStyle>
 #include "grantleeheaderstrategy.h"
+#include "grantleeheaderstyleinterface.h"
+#include <MessageViewer/GrantleeHeaderStyle>
 
 #include <KPluginFactory>
 using namespace MessageViewer;

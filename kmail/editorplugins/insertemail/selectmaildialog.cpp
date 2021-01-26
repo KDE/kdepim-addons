@@ -6,12 +6,13 @@
 
 #include "selectmaildialog.h"
 #include "selectmailwidget.h"
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "SelectMailDialog";
 }
 SelectMailDialog::SelectMailDialog(QWidget *parent)

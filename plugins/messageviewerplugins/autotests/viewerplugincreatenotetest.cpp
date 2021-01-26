@@ -7,12 +7,13 @@
 #include "viewerplugincreatenotetest.h"
 #include "../createnoteplugin/viewerplugincreatenote.h"
 #include <KActionCollection>
-#include <QHBoxLayout>
-#include <QTest>
-#include <QStandardItemModel>
 #include <MessageViewer/ViewerPluginInterface>
+#include <QHBoxLayout>
+#include <QStandardItemModel>
+#include <QTest>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_noteEditStubModel;
 }
 

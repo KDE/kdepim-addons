@@ -7,11 +7,12 @@
 #ifndef QUICKTEXTMENU_H
 #define QUICKTEXTMENU_H
 
-#include <QObject>
 #include "quicktext_export.h"
 #include <MessageComposer/ConvertSnippetVariablesUtil>
+#include <QObject>
 class QMenu;
-namespace MessageComposer {
+namespace MessageComposer
+{
 class PluginComposerInterface;
 class ConvertSnippetVariableMenu;
 }
@@ -28,6 +29,7 @@ public:
 Q_SIGNALS:
     void insertText(const QString &str);
     void insertVariable(MessageComposer::ConvertSnippetVariablesUtil::VariableType type);
+
 private:
     void initializeMenu();
     QWidget *const mParentWidget;

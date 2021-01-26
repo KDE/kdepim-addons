@@ -19,6 +19,7 @@ public:
 
 public Q_SLOTS:
     void reloadConfig() override;
+
 private:
     bool mSendPlainText = false;
     bool mCheckMailTransport = false;

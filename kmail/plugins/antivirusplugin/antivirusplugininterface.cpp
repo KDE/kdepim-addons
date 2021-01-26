@@ -6,8 +6,8 @@
 
 #include "antivirusplugininterface.h"
 #include "../common/antispamwizard.h"
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
 #include <QAction>
 
 AntiVirusPluginInterface::AntiVirusPluginInterface(QObject *parent)

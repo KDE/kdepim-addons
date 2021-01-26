@@ -5,8 +5,8 @@
 */
 
 #include "gearyimportdata.h"
-#include "gearysettings.h"
 #include "gearyaddressbook.h"
+#include "gearysettings.h"
 #include <MailImporter/FilterInfo>
 #include <MailImporter/OtherMailerUtil>
 
@@ -70,9 +70,9 @@ bool GearyImportData::importAddressBook()
 LibImportWizard::AbstractImporter::TypeSupportedOptions GearyImportData::supportedOption()
 {
     TypeSupportedOptions options;
-    //options |=LibImportWizard::AbstractImporter::Mails;
+    // options |=LibImportWizard::AbstractImporter::Mails;
     options |= LibImportWizard::AbstractImporter::Settings;
-    //options |= LibImportWizard::AbstractImporter::AddressBooks;
+    // options |= LibImportWizard::AbstractImporter::AddressBooks;
     return options;
 }
 

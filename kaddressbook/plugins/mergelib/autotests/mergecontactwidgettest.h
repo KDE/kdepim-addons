@@ -7,8 +7,8 @@
 #ifndef MERGECONTACTWIDGETTEST_H
 #define MERGECONTACTWIDGETTEST_H
 
-#include <QObject>
 #include <AkonadiCore/Item>
+#include <QObject>
 
 class MergeContactWidgetTest : public QObject
 {
@@ -23,6 +23,7 @@ private Q_SLOTS:
     void shouldEmitSignalsWhenThereIsElementSelected();
     void shouldEmitSignalsWhenThereIsTwoElementsSelected();
     void shouldEmitSignalsWhenSelectContact();
+
 private:
     Akonadi::Item::List createItems();
 };

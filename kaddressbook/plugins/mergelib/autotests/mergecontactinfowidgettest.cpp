@@ -6,10 +6,10 @@
 
 #include "mergecontactinfowidgettest.h"
 
-#include <QTest>
 #include "widgets/mergecontactinfowidget.h"
 #include <QStackedWidget>
 #include <QStandardPaths>
+#include <QTest>
 using namespace KABMergeContacts;
 
 MergeContactInfoWidgetTest::MergeContactInfoWidgetTest()

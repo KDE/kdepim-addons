@@ -12,7 +12,8 @@
 class QComboBox;
 class QStackedWidget;
 
-namespace MailMerge {
+namespace MailMerge
+{
 class CsvWidget;
 class AttachmentListWidget;
 class AddressBookWidget;
@@ -20,10 +21,7 @@ class MailMergeWidget : public QWidget
 {
     Q_OBJECT
 public:
-    enum SourceType {
-        AddressBook = 0,
-        CSV = 1
-    };
+    enum SourceType { AddressBook = 0, CSV = 1 };
 
     explicit MailMergeWidget(QWidget *parent = nullptr);
     ~MailMergeWidget() override;

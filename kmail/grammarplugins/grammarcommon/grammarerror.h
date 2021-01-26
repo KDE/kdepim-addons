@@ -7,11 +7,11 @@
 #ifndef GRAMMARERROR_H
 #define GRAMMARERROR_H
 
+#include "grammarcommon_export.h"
 #include <QColor>
-#include <QString>
 #include <QDebug>
 #include <QJsonObject>
-#include "grammarcommon_export.h"
+#include <QString>
 class GRAMMARCOMMON_EXPORT GrammarError
 {
 public:
@@ -39,7 +39,7 @@ public:
 
     virtual void parse(const QJsonObject &obj, int blockindex);
 
-    Q_REQUIRED_RESULT bool operator ==(const GrammarError &other) const;
+    Q_REQUIRED_RESULT bool operator==(const GrammarError &other) const;
 
     Q_REQUIRED_RESULT QString option() const;
     void setOption(const QString &option);
@@ -63,5 +63,5 @@ protected:
 };
 Q_DECLARE_METATYPE(GrammarError)
 Q_DECLARE_TYPEINFO(GrammarError, Q_MOVABLE_TYPE);
-GRAMMARCOMMON_EXPORT QDebug operator <<(QDebug d, const GrammarError &t);
+GRAMMARCOMMON_EXPORT QDebug operator<<(QDebug d, const GrammarError &t);
 #endif // GRAMMARERROR_H

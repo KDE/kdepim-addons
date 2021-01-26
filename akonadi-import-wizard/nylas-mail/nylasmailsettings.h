@@ -15,6 +15,7 @@ public:
     explicit NylasMailSettings(const QString &filename);
     ~NylasMailSettings() override;
     void importSettings();
+
 private:
     void readImapAccount();
     void readIdentity();

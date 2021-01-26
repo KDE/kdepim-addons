@@ -9,16 +9,13 @@
 
 #include <QLabel>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class MergeContactErrorLabel : public QLabel
 {
     Q_OBJECT
 public:
-    enum ErrorType {
-        NotEnoughContactsSelected = 0,
-        NoContactDuplicatesFound,
-        NoContactSelected
-    };
+    enum ErrorType { NotEnoughContactsSelected = 0, NoContactDuplicatesFound, NoContactSelected };
     explicit MergeContactErrorLabel(MergeContactErrorLabel::ErrorType type, QWidget *parent = nullptr);
     ~MergeContactErrorLabel() override;
 };

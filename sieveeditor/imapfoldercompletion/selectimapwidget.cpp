@@ -5,12 +5,12 @@
 */
 
 #include "selectimapwidget.h"
+#include "imapfoldercompletionplugin_debug.h"
 #include "selectimapfolderdialog.h"
 #include "selectimaplineedit.h"
-#include "imapfoldercompletionplugin_debug.h"
 #include <KLocalizedString>
-#include <QToolButton>
 #include <QHBoxLayout>
+#include <QToolButton>
 
 #include <KPluginFactory>
 K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")

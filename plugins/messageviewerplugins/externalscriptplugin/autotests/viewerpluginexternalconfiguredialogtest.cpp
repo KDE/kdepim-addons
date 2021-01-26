@@ -8,8 +8,8 @@
 #include "../configuredialog/viewerpluginexternalconfiguredialog.h"
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest(QObject *parent)
     : QObject(parent)

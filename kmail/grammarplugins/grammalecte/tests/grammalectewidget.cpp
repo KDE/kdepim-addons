@@ -8,13 +8,13 @@
 #include "grammalecteresultjob.h"
 
 #include "grammalecteparser.h"
-#include <QVBoxLayout>
-#include <QTextEdit>
-#include <QPushButton>
+#include "grammalecteresultwidget.h"
 #include <QDebug>
 #include <QJsonDocument>
+#include <QPushButton>
 #include <QTextBlock>
-#include "grammalecteresultwidget.h"
+#include <QTextEdit>
+#include <QVBoxLayout>
 
 GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     : QWidget(parent)

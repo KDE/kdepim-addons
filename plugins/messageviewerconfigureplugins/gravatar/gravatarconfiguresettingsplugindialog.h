@@ -20,6 +20,7 @@ public:
     void save() override;
     void load() override;
     void reset() override;
+
 private:
     GravatarConfigureSettingsPluginWidget *mWidget = nullptr;
 };

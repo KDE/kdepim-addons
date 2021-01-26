@@ -49,10 +49,9 @@ bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVar
 {
     if (role == Qt::CheckStateRole) {
         if (index.isValid()) {
-            const Akonadi::Collection collection
-                = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+            const Akonadi::Collection collection = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
             if (value == Qt::Checked) {
-               mListCollections.append(collection);
+                mListCollections.append(collection);
             } else {
                 mListCollections.removeAll(collection);
             }

@@ -17,6 +17,7 @@ public:
     ~InsertShorturlConfigureWidget() override;
 
     void writeConfig();
+
 private:
     void slotChanged();
     void loadConfig();

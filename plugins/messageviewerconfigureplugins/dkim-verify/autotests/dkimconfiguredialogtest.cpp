@@ -7,10 +7,10 @@
 #include "dkimconfiguredialogtest.h"
 #include "../dkimconfiguredialog.h"
 #include "../dkimconfigurewidget.h"
-#include <QTest>
-#include <QStandardPaths>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 QTEST_MAIN(DKIMConfigureDialogTest)
 

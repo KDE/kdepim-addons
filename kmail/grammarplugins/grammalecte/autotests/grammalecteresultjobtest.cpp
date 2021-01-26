@@ -6,8 +6,8 @@
 
 #include "grammalecteresultjobtest.h"
 #include "grammalecteresultjob.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 QTEST_MAIN(GrammarResultJobTest)
 GrammarResultJobTest::GrammarResultJobTest(QObject *parent)
     : QObject(parent)
@@ -28,7 +28,7 @@ void GrammarResultJobTest::shouldHaveDefaultValue()
 void GrammarResultJobTest::shouldBeAbleToStart()
 {
     GrammalecteResultJob job;
-    //Args can be empty if we use default values
+    // Args can be empty if we use default values
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));
     QVERIFY(!job.canStart());

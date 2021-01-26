@@ -7,8 +7,8 @@
 #ifndef LANGUAGETOOLRESULTJOB_H
 #define LANGUAGETOOLRESULTJOB_H
 
-#include <QObject>
 #include "liblanguagetool_private_export.h"
+#include <QObject>
 class QNetworkRequest;
 class QNetworkReply;
 class QNetworkAccessManager;
@@ -41,13 +41,7 @@ Q_SIGNALS:
 
 private:
     Q_DISABLE_COPY(LanguageToolResultJob)
-    enum class JobError {
-        NotError,
-        EmptyText,
-        UrlNotDefined,
-        NetworkManagerNotDefined,
-        LanguageNotDefined
-    };
+    enum class JobError { NotError, EmptyText, UrlNotDefined, NetworkManagerNotDefined, LanguageNotDefined };
 
     LanguageToolResultJob::JobError canStartError() const;
     void slotCheckGrammarFinished();

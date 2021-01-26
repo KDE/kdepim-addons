@@ -10,7 +10,8 @@
 #include <MessageViewer/ViewerPluginInterface>
 #include <QUrl>
 class KActionCollection;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class ViewerPluginExpandurlInterface : public ViewerPluginInterface
 {
     Q_OBJECT
@@ -23,6 +24,7 @@ public:
     Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
     void setUrl(const QUrl &url) override;
+
 private:
     void createAction(KActionCollection *ac);
     QUrl mCurrentUrl;

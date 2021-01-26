@@ -9,9 +9,9 @@
 */
 
 #include "briefheaderstyle.h"
+#include <MessageViewer/HeaderStrategy>
 #include <MessageViewer/HeaderStyle_Util>
 #include <MessageViewer/MessageViewerSettings>
-#include <MessageViewer/HeaderStrategy>
 
 #include <MessageCore/StringUtil>
 
@@ -20,8 +20,8 @@
 #include <QApplication>
 #include <QRegularExpression>
 
-#include <kmime/kmime_message.h>
 #include <kmime/kmime_dateformatter.h>
+#include <kmime/kmime_message.h>
 
 using namespace MessageCore;
 using namespace MessageViewer;
@@ -55,8 +55,7 @@ QString BriefHeaderStyle::format(KMime::Message *message) const
     if (strategy->showHeader(QStringLiteral("subject"))) {
         const KTextToHTML::Options flags = KTextToHTML::PreserveSpaces | KTextToHTML::ReplaceSmileys;
 
-        headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n")
-                     +QStringLiteral("<b style=\"font-size:130%\">");
+        headerStr += QLatin1String("<div dir=\"") + subjectDir + QLatin1String("\">\n") + QStringLiteral("<b style=\"font-size:130%\">");
 
         headerStr += mHeaderStyleUtil.subjectString(message, flags) + QStringLiteral("</b></div>\n");
     }

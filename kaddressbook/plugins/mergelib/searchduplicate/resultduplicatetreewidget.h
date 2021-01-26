@@ -7,13 +7,15 @@
 #ifndef RESULTDUPLICATETREEWIDGET_H
 #define RESULTDUPLICATETREEWIDGET_H
 
-#include <QTreeWidget>
-#include <AkonadiCore/Item>
 #include "kaddressbookmergelib_export.h"
-namespace KContacts {
+#include <AkonadiCore/Item>
+#include <QTreeWidget>
+namespace KContacts
+{
 class Addressee;
 }
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidgetItem : public QTreeWidgetItem
 {
 public:
@@ -41,6 +43,7 @@ public:
 
 Q_SIGNALS:
     void showContactPreview(const Akonadi::Item &item);
+
 private:
     void slotItemActivated(QTreeWidgetItem *item, int column);
     void slotItemChanged(QTreeWidgetItem *item, int column);

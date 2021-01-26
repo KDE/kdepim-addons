@@ -4,20 +4,19 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "shorturlengineplugin.h"
 #include "shorturlenginepluginmanager.h"
+#include "shorturlengineplugin.h"
 
-#include <QFileInfo>
-#include <QVector>
-#include <KPluginMetaData>
-#include <KPluginLoader>
 #include <KPluginFactory>
+#include <KPluginLoader>
+#include <KPluginMetaData>
+#include <QFileInfo>
 #include <QSet>
+#include <QVector>
 
 class ShortUrlEnginePluginInfo
 {
 public:
-
     QString metaDataFileNameBaseName;
     QString metaDataFileName;
     QString pluginName;

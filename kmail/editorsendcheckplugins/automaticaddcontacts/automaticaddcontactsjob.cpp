@@ -6,21 +6,21 @@
 
 #include "automaticaddcontactsjob.h"
 #include "automaticaddcontactsplugin_debug.h"
+#include <Akonadi/Contact/ContactSearchJob>
+#include <AkonadiCore/AgentFilterProxyModel>
+#include <AkonadiCore/AgentInstanceCreateJob>
 #include <AkonadiCore/CollectionFetchJob>
 #include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/AgentInstanceCreateJob>
+#include <AkonadiCore/ItemCreateJob>
+#include <AkonadiWidgets/AgentTypeDialog>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
-#include <KMessageBox>
-#include <KLocalizedString>
-#include <AkonadiWidgets/AgentTypeDialog>
-#include <Akonadi/Contact/ContactSearchJob>
-#include <AkonadiCore/ItemCreateJob>
 #include <KEmailAddress>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <PimCommon/PimUtil>
 #include <QPointer>
 #include <akonadi/contact/selectaddressbookdialog.h>
-#include <AkonadiCore/AgentFilterProxyModel>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
@@ -59,13 +59,12 @@ void AutomaticAddContactsJob::fetchCollection()
 void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
 {
     if (job->error()) {
-        //Collection not found.
-        //fetch all collection
+        // Collection not found.
+        // fetch all collection
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob
-            = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(),
-                                              Akonadi::CollectionFetchJob::Recursive);
+        Akonadi::CollectionFetchJob *const addressBookJob =
+            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotFetchAllCollections);
@@ -89,7 +88,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     Akonadi::Collection::List canCreateItemCollections;
     const Akonadi::Collection::List addressBookCollections = addressBookJob->collections();
     for (const Akonadi::Collection &collection : addressBookCollections) {
-        if (Akonadi::Collection::CanCreateItem &collection.rights()) {
+        if (Akonadi::Collection::CanCreateItem & collection.rights()) {
             canCreateItemCollections.append(collection);
         }
     }
@@ -97,11 +96,10 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
 
     const int nbItemCollection(canCreateItemCollections.size());
     if (nbItemCollection == 0) {
-        if (KMessageBox::questionYesNo(
-                nullptr,
-                i18nc("@info",
-                      "You must create an address book before adding a contact. Do you want to create an address book?"),
-                i18nc("@title:window", "No Address Book Available")) == KMessageBox::Yes) {
+        if (KMessageBox::questionYesNo(nullptr,
+                                       i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
+                                       i18nc("@title:window", "No Address Book Available"))
+            == KMessageBox::Yes) {
             QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
             dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));
             dlg->agentFilterProxyModel()->addMimeTypeFilter(KContacts::Addressee::mimeType());
@@ -118,12 +116,12 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                     job->start();
                     delete dlg;
                     return;
-                } else { //if agent is not valid => return error and finish job
+                } else { // if agent is not valid => return error and finish job
                     deleteLaterAndEmitSignal();
                     delete dlg;
                     return;
                 }
-            } else { //Canceled create agent => return error and finish job
+            } else { // Canceled create agent => return error and finish job
                 deleteLaterAndEmitSignal();
                 delete dlg;
                 return;
@@ -186,8 +184,7 @@ void AutomaticAddContactsJob::verifyContactExist()
             mProcessedEmails.append(email);
             auto *searchJob = new Akonadi::ContactSearchJob(this);
             searchJob->setLimit(1);
-            searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(),
-                                Akonadi::ContactSearchJob::ExactMatch);
+            searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
             connect(searchJob, &KJob::result, this, &AutomaticAddContactsJob::slotSearchDone);
         }
     }

@@ -7,8 +7,8 @@
 #ifndef IMPORTCONTACTEXPORT_H
 #define IMPORTCONTACTEXPORT_H
 
-#include <QString>
 #include <KContacts/Addressee>
+#include <QString>
 class QDomDocument;
 class QFile;
 class QWidget;
@@ -20,7 +20,7 @@ public:
 
     Q_REQUIRED_RESULT KContacts::Addressee::List importFile(const QString &fileName);
     void setParentWidget(QWidget *parentWidget);
-    void setAutoTests(bool b); //Only for autotest
+    void setAutoTests(bool b); // Only for autotest
 
 private:
     Q_REQUIRED_RESULT bool loadDomElement(QDomDocument &doc, QFile *file);

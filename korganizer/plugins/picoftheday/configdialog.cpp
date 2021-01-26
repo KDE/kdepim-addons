@@ -13,13 +13,13 @@
 #include <KConfig>
 #include <KLocalizedString>
 
+#include <KConfigGroup>
 #include <QButtonGroup>
+#include <QDialogButtonBox>
 #include <QGroupBox>
+#include <QPushButton>
 #include <QRadioButton>
 #include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <KConfigGroup>
-#include <QPushButton>
 
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
@@ -44,21 +44,23 @@ ConfigDialog::ConfigDialog(QWidget *parent)
 
     mAspectRatioGroup = new QButtonGroup(this);
     QRadioButton *btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
-    btn->setWhatsThis(i18n("The thumbnail will be scaled freely. "
-                           "The aspect ratio will not be preserved."));
+    btn->setWhatsThis(
+        i18n("The thumbnail will be scaled freely. "
+             "The aspect ratio will not be preserved."));
     mAspectRatioGroup->addButton(btn, int(Qt::IgnoreAspectRatio));
     groupLayout->addWidget(btn);
     btn = new QRadioButton(i18n("Keep aspect ratio"), aspectRatioBox);
-    btn->setWhatsThis(i18n("The thumbnail will be scaled to a rectangle "
-                           "as large as possible inside a given rectangle, "
-                           "preserving the aspect ratio."));
+    btn->setWhatsThis(
+        i18n("The thumbnail will be scaled to a rectangle "
+             "as large as possible inside a given rectangle, "
+             "preserving the aspect ratio."));
     mAspectRatioGroup->addButton(btn, int(Qt::KeepAspectRatio));
     groupLayout->addWidget(btn);
-    btn = new QRadioButton(i18n("Keep aspect ratio by expanding"),
-                           aspectRatioBox);
-    btn->setWhatsThis(i18n("The thumbnail will be scaled to a rectangle "
-                           "as small as possible outside a given rectangle, "
-                           "preserving the aspect ratio."));
+    btn = new QRadioButton(i18n("Keep aspect ratio by expanding"), aspectRatioBox);
+    btn->setWhatsThis(
+        i18n("The thumbnail will be scaled to a rectangle "
+             "as small as possible outside a given rectangle, "
+             "preserving the aspect ratio."));
     mAspectRatioGroup->addButton(btn, int(Qt::KeepAspectRatioByExpanding));
     groupLayout->addWidget(btn);
 

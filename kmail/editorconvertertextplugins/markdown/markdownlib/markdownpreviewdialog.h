@@ -7,8 +7,8 @@
 #ifndef MARKDOWNPREVIEWDIALOG_H
 #define MARKDOWNPREVIEWDIALOG_H
 
-#include <QDialog>
 #include "libkmailmarkdown_export.h"
+#include <QDialog>
 class MarkdownPreviewWidget;
 class LIBKMAILMARKDOWN_EXPORT MarkdownPreviewDialog : public QDialog
 {
@@ -19,6 +19,7 @@ public:
     void setText(const QString &str);
 
     void setConverterSettings(bool enableEmbeddedLabel, bool enableExtraDefinitionLists);
+
 private:
     void readConfig();
     void writeConfig();

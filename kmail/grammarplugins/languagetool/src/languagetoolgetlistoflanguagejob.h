@@ -7,9 +7,9 @@
 #ifndef LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
 #define LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
 
+#include "libkmaillanguagetool_export.h"
 #include <QNetworkRequest>
 #include <QObject>
-#include "libkmaillanguagetool_export.h"
 class QNetworkAccessManager;
 class QNetworkReply;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolGetListOfLanguageJob : public QObject

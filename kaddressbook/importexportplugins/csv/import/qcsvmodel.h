@@ -114,11 +114,11 @@ private Q_SLOTS:
     void columnCountChanged(int columns);
     void rowCountChanged(int rows);
     void fieldChanged(const QString &data, int row, int column);
-private:
 
+private:
     CsvParser *mParser = nullptr;
     QVector<QString> mFieldIdentifiers;
-    QMap< QPair<int, int>, QString> mFields;
+    QMap<QPair<int, int>, QString> mFields;
     QIODevice *mDevice = nullptr;
 
     int mRowCount = 0;

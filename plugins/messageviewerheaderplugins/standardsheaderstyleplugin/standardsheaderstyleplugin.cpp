@@ -5,10 +5,10 @@
 */
 
 #include "standardsheaderstyleplugin.h"
-#include "standardsheaderstyleinterface.h"
 #include "standardheaderstrategy.h"
-#include <MessageViewer/PlainHeaderStyle>
+#include "standardsheaderstyleinterface.h"
 #include <KPluginFactory>
+#include <MessageViewer/PlainHeaderStyle>
 
 using namespace MessageViewer;
 

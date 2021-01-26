@@ -5,18 +5,19 @@
 */
 
 #include "utils.h"
+#include <MessageViewer/HeaderStyle>
 #include <QFile>
-#include <QTest>
-#include <QStandardPaths>
 #include <QProcess>
 #include <QRegularExpression>
-#include <MessageViewer/HeaderStyle>
+#include <QStandardPaths>
+#include <QTest>
 
 void testHeaderFile(const QString &data, const QString &name, const QString &dir)
 {
-    QString header = QStringLiteral("<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
-                                    "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
-                                    "<body>\n");
+    QString header = QStringLiteral(
+        "<!DOCTYPE html PUBLIC \"-//W3C//DTD XHTML 1.0 Strict//EN\" \"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd\">\n"
+        "<html xmlns=\"http://www.w3.org/1999/xhtml\">\n"
+        "<body>\n");
     header += data;
     header += QStringLiteral("\n</body>\n</html>\n");
 
@@ -48,20 +49,14 @@ void testHeaderFile(const QString &data, const QString &name, const QString &dir
     }
     // TODO add proper cmake check for xmllint and diff
     {
-        const QStringList args = QStringList()
-                                 << QStringLiteral("--format")
-                                 << QStringLiteral("--encode") << QStringLiteral("UTF8")
-                                 << QStringLiteral("--output") << fName
-                                 << outName;
+        const QStringList args = QStringList() << QStringLiteral("--format") << QStringLiteral("--encode") << QStringLiteral("UTF8")
+                                               << QStringLiteral("--output") << fName << outName;
         QCOMPARE(QProcess::execute(QStringLiteral("xmllint"), args), 0);
     }
 
     {
         // compare to reference file
-        const QStringList args = QStringList()
-                                 << QStringLiteral("-u")
-                                 << fName
-                                 << referenceFile;
+        const QStringList args = QStringList() << QStringLiteral("-u") << fName << referenceFile;
         QProcess proc;
         proc.setProcessChannelMode(QProcess::ForwardedChannels);
         proc.start(QStringLiteral("diff"), args);

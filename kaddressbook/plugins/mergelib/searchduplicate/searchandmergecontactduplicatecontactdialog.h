@@ -7,13 +7,14 @@
 #ifndef SEARCHANDMERGECONTACTDUPLICATECONTACTDIALOG_H
 #define SEARCHANDMERGECONTACTDUPLICATECONTACTDIALOG_H
 
-#include <QDialog>
 #include <AkonadiCore/Item>
+#include <QDialog>
 
-#include "searchduplicateresultwidget.h"
 #include "kaddressbookmergelib_export.h"
+#include "searchduplicateresultwidget.h"
 class QStackedWidget;
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class SearchDuplicateResultWidget;
 class MergeContactShowResultTabWidget;
 class MergeContactSelectInformationTabWidget;

@@ -7,10 +7,11 @@
 #ifndef SEARCHPOTENTIALDUPLICATECONTACTJOB_H
 #define SEARCHPOTENTIALDUPLICATECONTACTJOB_H
 
-#include <QObject>
 #include <AkonadiCore/Item>
+#include <QObject>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class SearchPotentialDuplicateContactJob : public QObject
 {
     Q_OBJECT
@@ -29,7 +30,7 @@ private:
     Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
     bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
     Akonadi::Item::List mListItem;
-    QVector<Akonadi::Item::List > mListDuplicate;
+    QVector<Akonadi::Item::List> mListDuplicate;
 };
 }
 

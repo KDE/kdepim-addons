@@ -11,13 +11,16 @@
 
 #include <QString>
 
-namespace MimeTreeParser {
-namespace Interface {
+namespace MimeTreeParser
+{
+namespace Interface
+{
 class BodyPart;
 }
 }
 
-namespace KMime {
+namespace KMime
+{
 class Content;
 }
 
@@ -25,11 +28,7 @@ class GnuPGWKSMessagePart : public MimeTreeParser::MessagePart
 {
     Q_OBJECT
 public:
-    enum ConfirmationType {
-        UnknownType,
-        ConfirmationRequest,
-        ConfirmationResponse
-    };
+    enum ConfirmationType { UnknownType, ConfirmationRequest, ConfirmationResponse };
 
     explicit GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part);
 

@@ -21,6 +21,7 @@ public:
     void exec() override;
 
     void loadEngine();
+
 private:
     void initializePlugins();
     void slotActivated();

@@ -7,17 +7,17 @@
 #include "grammalecteconfigwidget.h"
 #include "grammalectemanager.h"
 
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 
-#include <QVBoxLayout>
-#include <QTabWidget>
 #include <QCheckBox>
-#include <QScrollArea>
 #include <QFormLayout>
-#include <QStackedWidget>
 #include <QLabel>
+#include <QScrollArea>
+#include <QStackedWidget>
+#include <QTabWidget>
 #include <QToolButton>
+#include <QVBoxLayout>
 
 #include <KUrlRequester>
 GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMessageBox)
@@ -33,7 +33,7 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMe
     mainLayout->addWidget(mTab);
     mTab->addTab(addGeneralTab(), i18n("General"));
     mTab->addTab(addGrammarTab(), i18n("Grammar Settings"));
-    loadSettings(); //First
+    loadSettings(); // First
     loadGrammarSettings();
 }
 
@@ -56,7 +56,9 @@ void GrammalecteConfigWidget::slotGetSettingsError()
 {
     mStackedWidget->setCurrentWidget(mReloadSettingsWidget);
     if (!mDisableDialogBox) {
-        KMessageBox::error(this, i18n("Impossible to get options. Please verify that you have grammalected installed."), i18n("Error during Extracting Options"));
+        KMessageBox::error(this,
+                           i18n("Impossible to get options. Please verify that you have grammalected installed."),
+                           i18n("Error during Extracting Options"));
     }
 }
 

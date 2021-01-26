@@ -7,10 +7,11 @@
 #ifndef ADBLOCKMANAGER_H
 #define ADBLOCKMANAGER_H
 
+#include "adblocklib_export.h"
 #include <QObject>
 #include <QWebEngineUrlRequestInfo>
-#include "adblocklib_export.h"
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockMatcher;
 class AdBlockSubscription;
 class AdBlockCustomList;

@@ -7,8 +7,8 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
 #define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
 
-#include <QObject>
 #include <KMime/Message>
+#include <QObject>
 class ViewerPluginExternalScriptParseArgumentTest : public QObject
 {
     Q_OBJECT

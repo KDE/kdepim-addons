@@ -63,7 +63,17 @@ private:
         AdarI = 12
     };
 
-    static QStringList findHoliday(int month, int day, int weekday, int kvia, bool leap_year_p, bool useIsraelSettings, int day_number, int year, bool showParsha, bool showChol, bool showOmer);
+    static QStringList findHoliday(int month,
+                                   int day,
+                                   int weekday,
+                                   int kvia,
+                                   bool leap_year_p,
+                                   bool useIsraelSettings,
+                                   int day_number,
+                                   int year,
+                                   bool showParsha,
+                                   bool showChol,
+                                   bool showOmer);
 };
 
 #endif

@@ -6,17 +6,17 @@
 
 #include "emaillineedit.h"
 #include "sieveeditoremaillineditplugin_debug.h"
-#include <KPluginFactory>
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <KPluginFactory>
 
+#include <KColorScheme>
+#include <KLocalizedString>
+#include <KPluginLoader>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QToolButton>
-#include <KLocalizedString>
 #include <QTreeView>
-#include <KColorScheme>
 #include <memory>
-#include <KPluginLoader>
 
 K_PLUGIN_CLASS_WITH_JSON(EmailLineEdit, "emaillineedit.json")
 

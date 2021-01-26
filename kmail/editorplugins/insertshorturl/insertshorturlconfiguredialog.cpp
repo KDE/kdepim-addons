@@ -6,8 +6,8 @@
 
 #include "insertshorturlconfiguredialog.h"
 #include "insertshorturlconfigurewidget.h"
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
     : QDialog(parent)

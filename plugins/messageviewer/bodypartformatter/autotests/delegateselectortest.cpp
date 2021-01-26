@@ -6,12 +6,12 @@
 
 #include "delegateselectortest.h"
 #include "../calendar/delegateselector.h"
-#include <QTest>
-#include <QLabel>
-#include <QCheckBox>
-#include <QPushButton>
-#include <QDialogButtonBox>
 #include <PimCommonAkonadi/AddresseeLineEdit>
+#include <QCheckBox>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QTest>
 
 DelegateSelectorTest::DelegateSelectorTest(QObject *parent)
     : QObject(parent)

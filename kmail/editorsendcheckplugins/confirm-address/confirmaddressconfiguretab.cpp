@@ -7,10 +7,10 @@
 #include "confirmaddressconfiguretab.h"
 
 #include "confirmaddressconfiguretabwidget.h"
-#include <QVBoxLayout>
-#include <QTabWidget>
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
+#include <QTabWidget>
+#include <QVBoxLayout>
 
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)

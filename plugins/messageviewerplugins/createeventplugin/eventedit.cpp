@@ -6,30 +6,31 @@
 
 #include "eventedit.h"
 #include "createeventplugin_debug.h"
-#include "globalsettings_messageviewer.h"
 #include "eventdatetimewidget.h"
+#include "globalsettings_messageviewer.h"
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
 
 #include <KLocalizedString>
-#include <QLineEdit>
-#include <QIcon>
 #include <QDateTime>
+#include <QIcon>
+#include <QLineEdit>
 
-#include <QHBoxLayout>
 #include <QEvent>
+#include <QHBoxLayout>
 #include <QKeyEvent>
 #include <QLabel>
 
 #include <AkonadiWidgets/CollectionComboBox>
 #include <QPushButton>
 
-#include <IncidenceEditor/IncidenceDialogFactory>
 #include <IncidenceEditor/IncidenceDialog>
+#include <IncidenceEditor/IncidenceDialogFactory>
 #include <KGuiItem>
 #include <KStandardGuiItem>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 QAbstractItemModel *_k_eventEditStubModel = nullptr;
 }
 
@@ -103,8 +104,7 @@ EventEdit::EventEdit(QWidget *parent)
 #ifndef QT_NO_ACCESSIBILITY
     mEndDateTimeEdit->setAccessibleDescription(i18n("Select end time for event."));
 #endif
-    connect(mEndDateTimeEdit, &EventDateTimeWidget::dateTimeChanged,
-            this, &EventEdit::slotEndDateTimeChanged);
+    connect(mEndDateTimeEdit, &EventDateTimeWidget::dateTimeChanged, this, &EventEdit::slotEndDateTimeChanged);
 
     hbox->addWidget(mEndDateTimeEdit);
 
@@ -278,14 +278,12 @@ bool EventEdit::eventFilter(QObject *object, QEvent *e)
     // With a shortcut override we can catch this before it gets to kactions.
     const bool shortCutOverride = (e->type() == QEvent::ShortcutOverride);
     if (shortCutOverride) {
-        auto *kev = static_cast<QKeyEvent * >(e);
+        auto *kev = static_cast<QKeyEvent *>(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();
             return true;
-        } else if (kev->key() == Qt::Key_Enter
-                   || kev->key() == Qt::Key_Return
-                   || kev->key() == Qt::Key_Space) {
+        } else if (kev->key() == Qt::Key_Enter || kev->key() == Qt::Key_Return || kev->key() == Qt::Key_Space) {
             e->accept();
             if (object == mCollectionCombobox) {
                 mCollectionCombobox->showPopup();

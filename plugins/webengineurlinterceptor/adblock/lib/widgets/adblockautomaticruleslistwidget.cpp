@@ -70,7 +70,7 @@ void AdBlockAutomaticRulesListWidget::createItem(const QString &rule)
     auto *subItem = new QListWidgetItem(this);
     subItem->setText(rule);
     if (rule.startsWith(QLatin1Char('!')) || rule.startsWith(QLatin1Char('['))) {
-        //Comment
+        // Comment
         subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
         subItem->setForeground(Qt::gray);
     } else {

@@ -9,16 +9,16 @@
 */
 
 #include "adblocksubscription.h"
+#include "adblockinterceptor_debug.h"
 #include "adblockmanager.h"
 #include "adblockutil.h"
-#include "adblockinterceptor_debug.h"
 
 #include <KLocalizedString>
 #include <QFile>
-#include <QTimer>
 #include <QNetworkReply>
-#include <QStandardPaths>
 #include <QSaveFile>
+#include <QStandardPaths>
+#include <QTimer>
 using namespace AdBlock;
 
 AdBlockSubscription::AdBlockSubscription(const QString &title, QObject *parent)
@@ -62,7 +62,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
         return;
     }
     QFile file(mFilePath);
-    //qCWarning(ADBLOCKINTERCEPTOR_LOG) << "loadSubscription:: loading path:" << mFilePath;
+    // qCWarning(ADBLOCKINTERCEPTOR_LOG) << "loadSubscription:: loading path:" << mFilePath;
     if (!file.exists()) {
         QTimer::singleShot(0, this, &AdBlockSubscription::updateSubscription);
         return;
@@ -127,10 +127,7 @@ void AdBlockSubscription::subscriptionDownloaded()
     bool error = false;
     const QByteArray response = QString::fromUtf8(mReply->readAll()).toUtf8();
 
-    if (mReply->error() != QNetworkReply::NoError
-        || !response.startsWith(QByteArray("[Adblock"))
-        || !saveDownloadedData(response)
-        ) {
+    if (mReply->error() != QNetworkReply::NoError || !response.startsWith(QByteArray("[Adblock")) || !saveDownloadedData(response)) {
         error = true;
     }
 

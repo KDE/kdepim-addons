@@ -9,8 +9,8 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QListWidget>
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 CheckAttachmentDialogTest::CheckAttachmentDialogTest(QObject *parent)
     : QObject(parent)

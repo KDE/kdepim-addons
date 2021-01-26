@@ -10,7 +10,8 @@
 #include <QDialog>
 class KUrlRequester;
 
-namespace MailMerge {
+namespace MailMerge
+{
 class SelectAttachmentDialog : public QDialog
 {
     Q_OBJECT

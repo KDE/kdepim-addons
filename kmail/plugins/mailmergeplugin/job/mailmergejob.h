@@ -8,7 +8,8 @@
 #define MAILMERGEJOB_H
 
 #include <QObject>
-namespace MailMerge {
+namespace MailMerge
+{
 class MailMergeJob : public QObject
 {
     Q_OBJECT

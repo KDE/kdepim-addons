@@ -7,10 +7,10 @@
 #include "selectimapwidgettest.h"
 #include "../selectimapwidget.h"
 
-#include <QTest>
 #include <QHBoxLayout>
-#include <QToolButton>
 #include <QLineEdit>
+#include <QTest>
+#include <QToolButton>
 
 SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
     : QObject(parent)

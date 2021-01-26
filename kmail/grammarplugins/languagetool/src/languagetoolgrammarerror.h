@@ -16,6 +16,7 @@ public:
     ~LanguageToolGrammarError() override;
     void parse(const QJsonObject &obj, int blockindex) override;
     void setTesting(bool b);
+
 private:
     static QStringList parseSuggestion(const QJsonObject &obj);
     bool mTesting = false;

@@ -1,22 +1,22 @@
 /* ============================================================
-*
-* This file is a part of the rekonq project
-*
-* SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
-* based on code from rekonq
-* SPDX-FileCopyrightText: 2010-2012 Andrea Diamantini <adjam7 at gmail dot com>
-*
-*
-* SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-*
-* ============================================================ */
+ *
+ * This file is a part of the rekonq project
+ *
+ * SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+ * based on code from rekonq
+ * SPDX-FileCopyrightText: 2010-2012 Andrea Diamantini <adjam7 at gmail dot com>
+ *
+ *
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ *
+ * ============================================================ */
 
 // Self Includes
 #include "adblocksettingwidget.h"
-#include "ui_settings_adblock.h"
-#include "globalsettings_webengineurlinterceptoradblock.h"
 #include "adblockaddsubscriptiondialog.h"
 #include "adblockinterceptor_debug.h"
+#include "globalsettings_webengineurlinterceptoradblock.h"
+#include "ui_settings_adblock.h"
 
 #include "adblockmanager.h"
 #include "adblockshowlistdialog.h"
@@ -31,16 +31,16 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 #include <QIcon>
 
-#include <KMessageBox>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <QWhatsThisClickedEvent>
 
 // Qt Includes
-#include <QWhatsThis>
-#include <QPointer>
-#include <QStandardPaths>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
+#include <QPointer>
+#include <QStandardPaths>
+#include <QWhatsThis>
 #include <adblocksubscription.h>
 
 using namespace AdBlock;
@@ -139,13 +139,16 @@ void AdBlockSettingWidget::slotInfoLinkActivated(const QString &url)
     Q_UNUSED(url)
 
     const QString href = QStringLiteral("https://adblockplus.org/en/filters");
-    const QString hintHelpString = i18n("<qt><p>Enter an expression to filter. Filters can be defined as either:"
-                                        "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
-                                        "the wildcards <tt>*?[]</tt> may be used</li>"
-                                        "<li>a full regular expression by surrounding the string with '<tt>/</tt>', "
-                                        "e.g. <tt>/\\/(ad|banner)\\./</tt></li></ul>"
-                                        "<p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist (allow) any matching URL, "
-                                        "which takes priority over any blacklist (blocking) filter.<br><a href=\'%1\'>%2</a></qt>", href, i18n("More information"));
+    const QString hintHelpString = i18n(
+        "<qt><p>Enter an expression to filter. Filters can be defined as either:"
+        "<ul><li>a shell-style wildcard, e.g. <tt>http://www.example.com/ads*</tt>, "
+        "the wildcards <tt>*?[]</tt> may be used</li>"
+        "<li>a full regular expression by surrounding the string with '<tt>/</tt>', "
+        "e.g. <tt>/\\/(ad|banner)\\./</tt></li></ul>"
+        "<p>Any filter string can be preceded by '<tt>@@</tt>' to whitelist (allow) any matching URL, "
+        "which takes priority over any blacklist (blocking) filter.<br><a href=\'%1\'>%2</a></qt>",
+        href,
+        i18n("More information"));
 
     QWhatsThis::showText(QCursor::pos(), hintHelpString, this);
 }
@@ -188,9 +191,8 @@ void AdBlockSettingWidget::removeRule()
     if (select.isEmpty()) {
         return;
     }
-    if (KMessageBox::No == KMessageBox::warningYesNo(this,
-                                                     i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()),
-                                                     i18n("Remove"))) {
+    if (KMessageBox::No
+        == KMessageBox::warningYesNo(this, i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()), i18n("Remove"))) {
         return;
     }
     for (QListWidgetItem *item : select) {
@@ -238,7 +240,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
 
             subItem->setData(UrlList, url);
             subItem->setText(name);
-        } else { //Custom .
+        } else { // Custom .
             mCustomSubscription = subscription;
             mBlockUpdate = true;
             for (AdBlockRule *rule : subscription->allRules()) {

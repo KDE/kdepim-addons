@@ -20,6 +20,7 @@ public:
     void exec() override;
     Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
     void importFile(const QUrl &url) override;
+
 private:
     void slotImportLdif();
     void slotExportLdif();

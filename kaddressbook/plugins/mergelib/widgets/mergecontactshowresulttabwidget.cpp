@@ -5,11 +5,11 @@
 */
 
 #include "mergecontactshowresulttabwidget.h"
-#include <KContacts/Addressee>
 #include "widgets/mergecontactinfowidget.h"
+#include <KContacts/Addressee>
 
-#include <QTabBar>
 #include "kaddressbookmergelibprivate_debug.h"
+#include <QTabBar>
 
 using namespace KABMergeContacts;
 

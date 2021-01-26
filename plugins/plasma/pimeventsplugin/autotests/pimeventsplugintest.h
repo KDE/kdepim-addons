@@ -8,12 +8,13 @@
 #ifndef PIMEVENTSPLUGINTEST_H
 #define PIMEVENTSPLUGINTEST_H
 
-#include <QObject>
-#include <QMultiHash>
 #include <KCalendarCore/Event>
+#include <QMultiHash>
+#include <QObject>
 
 class QDate;
-namespace CalendarEvents {
+namespace CalendarEvents
+{
 class EventData;
 }
 class FakePimDataSource;

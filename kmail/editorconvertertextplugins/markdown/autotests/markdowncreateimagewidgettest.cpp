@@ -10,8 +10,8 @@
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
-#include <QSpinBox>
 #include <QSignalSpy>
+#include <QSpinBox>
 
 #include <QTest>
 QTEST_MAIN(MarkdownCreateImageWidgetTest)

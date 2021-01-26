@@ -7,11 +7,12 @@
 #ifndef MARKDOWNINTERFACE_H
 #define MARKDOWNINTERFACE_H
 
+#include <MessageComposer/PluginEditorConvertTextInterface>
 #include <QObject>
 #include <QPointer>
-#include <MessageComposer/PluginEditorConvertTextInterface>
 
-namespace MessageComposer {
+namespace MessageComposer
+{
 class StatusBarLabelToggledState;
 }
 

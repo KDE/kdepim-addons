@@ -7,8 +7,8 @@
 #ifndef VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
 #define VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include "../viewerpluginexternalscriptsloadjob.h"
+#include <QWidget>
 class QListWidget;
 class QPushButton;
 class QListWidgetItem;
@@ -20,6 +20,7 @@ public:
     ~ViewerPluginExternalConfigureWidget();
     void load();
     void save();
+
 private:
     void modifyScript(QListWidgetItem *item);
     void fillScriptInfo(const QVector<ViewerPluginExternalScriptInfo> &scriptInfos);

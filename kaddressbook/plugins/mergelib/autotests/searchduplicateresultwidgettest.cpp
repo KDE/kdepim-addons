@@ -5,22 +5,23 @@
 */
 
 #include "searchduplicateresultwidgettest.h"
-#include "../searchduplicate/searchduplicateresultwidget.h"
 #include "../searchduplicate/resultduplicatetreewidget.h"
+#include "../searchduplicate/searchduplicateresultwidget.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
 #include <Akonadi/Contact/GrantleeContactViewer>
-#include <QSplitter>
-#include <QLayout>
-#include <QLabel>
-#include <QTest>
-#include <QPushButton>
-#include <QStandardItemModel>
-#include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
+#include <AkonadiWidgets/CollectionComboBox>
 #include <KContacts/Addressee>
+#include <QLabel>
+#include <QLayout>
+#include <QPushButton>
+#include <QSplitter>
+#include <QStandardItemModel>
+#include <QTest>
 
 using namespace KContacts;
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 QAbstractItemModel *_k_searchDuplicateResultStubModel = nullptr;
 }
 
@@ -35,10 +36,8 @@ SearchDuplicateResultWidgetTest::SearchDuplicateResultWidgetTest(QObject *parent
         collection.setContentMimeTypes(QStringList() << Addressee::mimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         model->appendRow(item);
     }
@@ -68,7 +67,8 @@ void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
     QVERIFY(pushButton);
     QVERIFY(!pushButton->isEnabled());
 
-    KABMergeContacts::MergeContactLoseInformationWarning *warning = w.findChild<KABMergeContacts::MergeContactLoseInformationWarning *>(QStringLiteral("mergecontactwarning"));
+    KABMergeContacts::MergeContactLoseInformationWarning *warning =
+        w.findChild<KABMergeContacts::MergeContactLoseInformationWarning *>(QStringLiteral("mergecontactwarning"));
     QVERIFY(warning);
 
     Akonadi::CollectionComboBox *combobox = w.findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
@@ -85,8 +85,8 @@ void SearchDuplicateResultWidgetTest::shouldHaveMergeButtonEnabled()
     lst << Akonadi::Item(42);
     lst << Akonadi::Item(43);
     lst << Akonadi::Item(44);
-    //QVector<Akonadi::Item::List> itemLst;
-#if 0 //FIXME
+    // QVector<Akonadi::Item::List> itemLst;
+#if 0 // FIXME
     tree->setContacts(itemLst);
     QVERIFY(tree->topLevelItemCount() > 0);
 

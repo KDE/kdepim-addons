@@ -5,15 +5,15 @@
 */
 
 #include "languagetoolconfigwidgettest.h"
-#include "languagetoolconfigwidget.h"
 #include "languagetoolcombobox.h"
+#include "languagetoolconfigwidget.h"
 #include <QCheckBox>
 #include <QLabel>
 #include <QLineEdit>
-#include <QTest>
-#include <QVBoxLayout>
 #include <QStandardPaths>
+#include <QTest>
 #include <QToolButton>
+#include <QVBoxLayout>
 #include <qtestmouse.h>
 
 QTEST_MAIN(LanguageToolConfigWidgetTest)
@@ -42,7 +42,7 @@ void LanguageToolConfigWidgetTest::shouldHaveDefaultValue()
 
     auto *mInstancePath = w.findChild<QLineEdit *>(QStringLiteral("instancepath"));
     QVERIFY(mInstancePath);
-    //We load default value
+    // We load default value
     QVERIFY(!mInstancePath->text().isEmpty());
     QVERIFY(!mInstancePath->isEnabled());
     QVERIFY(mInstancePath->isClearButtonEnabled());

@@ -6,9 +6,9 @@
 
 #include "selectattachmentdialog.h"
 #include <KLocalizedString>
-#include <kurlrequester.h>
-#include <QLabel>
 #include <QDialogButtonBox>
+#include <QLabel>
+#include <kurlrequester.h>
 using namespace MailMerge;
 
 SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)

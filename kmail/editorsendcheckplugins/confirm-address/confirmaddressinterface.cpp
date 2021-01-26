@@ -5,19 +5,20 @@
 */
 
 #include "confirmaddressinterface.h"
+#include "confirmaddresscheckjob.h"
 #include "confirmaddressconfigurewidget.h"
 #include "confirmaddressdialog.h"
-#include "confirmaddresscheckjob.h"
 
-#include <QPointer>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QPointer>
 
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
 #include <MessageComposer/AliasesExpandJob>
 #include <PimCommon/PimUtil>
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "Confirm Address";
 }
 ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)

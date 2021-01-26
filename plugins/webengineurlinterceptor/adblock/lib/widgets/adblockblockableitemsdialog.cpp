@@ -10,11 +10,11 @@
 #include <KLocalizedString>
 #include <KTreeWidgetSearchLine>
 
-#include <QVBoxLayout>
+#include <KConfigGroup>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
-#include <KConfigGroup>
 #include <QPushButton>
+#include <QVBoxLayout>
 using namespace AdBlock;
 AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     : QDialog(parent)

@@ -23,7 +23,7 @@ void CheckAttachmentJob::start()
 
     for (const QString &email : qAsConst(mOriginalEmails)) {
         QString tname, temail;
-        KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
+        KEmailAddress::extractEmailAddressAndName(email, temail, tname); // ignore return value
         if (!temail.isEmpty()) {
             if (!mResultList.contains(temail)) {
                 mResultList.append(temail);

@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCONVERTER_H
 #define MARKDOWNCONVERTER_H
 
-#include <QObject>
 #include "libkmailmarkdown_export.h"
+#include <QObject>
 class LIBKMAILMARKDOWN_EXPORT MarkdownConverter : public QObject
 {
     Q_OBJECT

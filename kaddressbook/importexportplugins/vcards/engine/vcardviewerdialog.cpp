@@ -5,15 +5,15 @@
 */
 
 #include "vcardviewerdialog.h"
-#include <KLocalizedString>
-#include <KStandardGuiItem>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include <QLabel>
-#include <QVBoxLayout>
 #include <Akonadi/Contact/GrantleeContactViewer>
-#include <QPushButton>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KSharedConfig>
+#include <KStandardGuiItem>
 #include <QDialogButtonBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent)
     : QDialog(parent)
@@ -42,9 +42,7 @@ VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWi
 
     auto *layout = new QVBoxLayout(page);
 
-    QLabel *label
-        = new QLabel(
-              i18nc("@info", "Do you want to import this contact into your address book?"), page);
+    QLabel *label = new QLabel(i18nc("@info", "Do you want to import this contact into your address book?"), page);
     QFont font = label->font();
     font.setBold(true);
     label->setFont(font);

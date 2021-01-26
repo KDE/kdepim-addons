@@ -5,8 +5,8 @@
 */
 
 #include "insertshorturlplugineditor.h"
-#include "insertshorturlplugineditorinterface.h"
 #include "insertshorturlconfiguredialog.h"
+#include "insertshorturlplugineditorinterface.h"
 #include <KPluginFactory>
 #include <QPointer>
 

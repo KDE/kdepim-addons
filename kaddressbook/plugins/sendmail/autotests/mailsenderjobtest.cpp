@@ -9,8 +9,8 @@
 
 #include <KContacts/Addressee>
 
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 MailSenderJobTest::MailSenderJobTest()
 {
@@ -89,7 +89,7 @@ void MailSenderJobTest::shouldNotAddInvalidEmail()
     Akonadi::Item item;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    //Invalid email
+    // Invalid email
     address.insertEmail(QStringLiteral("foo2"), true);
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
@@ -105,7 +105,7 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     Akonadi::Item item;
     KContacts::Addressee address;
     address.setName(QStringLiteral("foo1"));
-    //Invalid email
+    // Invalid email
     address.insertEmail(QStringLiteral("foo2"), true);
     item.setPayload<KContacts::Addressee>(address);
     lst << item;
@@ -139,6 +139,6 @@ void MailSenderJobTest::shouldEmitSignalIfThereIsAValidEmail()
     QCOMPARE(resultLst.count(), 2);
 }
 
-//TODO Create unittest for ContactGroup too
+// TODO Create unittest for ContactGroup too
 
 QTEST_MAIN(MailSenderJobTest)

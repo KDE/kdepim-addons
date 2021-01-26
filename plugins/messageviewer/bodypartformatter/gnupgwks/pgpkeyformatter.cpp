@@ -5,18 +5,18 @@
 */
 
 #include "pgpkeyformatter.h"
-#include "pgpkeymessagepart.h"
 #include "pgpkeymemento.h"
+#include "pgpkeymessagepart.h"
 
 #include <QApplication>
-#include <QPalette>
 #include <QDebug>
+#include <QPalette>
 
 #include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
-#include <GrantleeTheme/GrantleeThemeEngine>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
+#include <GrantleeTheme/GrantleeThemeEngine>
 
 #include <KLocalizedString>
 
@@ -31,8 +31,7 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
         auto memento = new PgpKeyMemento();
         auto nodeHelper = part.nodeHelper();
         if (nodeHelper) {
-            QObject::connect(memento, &PgpKeyMemento::update,
-                             nodeHelper, &MimeTreeParser::NodeHelper::update);
+            QObject::connect(memento, &PgpKeyMemento::update, nodeHelper, &MimeTreeParser::NodeHelper::update);
             memento->start(mp->fingerprint());
         } else {
             memento->exec(mp->fingerprint());
@@ -57,7 +56,9 @@ MimeTreeParser::MessagePartPtr ApplicationPGPKeyFormatter::process(MimeTreeParse
     return MimeTreeParser::MessagePartPtr(mp);
 }
 
-bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ApplicationPGPKeyFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart,
+                                        MessageViewer::HtmlWriter *htmlWriter,
+                                        MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context)
     auto mp = msgPart.dynamicCast<PgpKeyMessagePart>();

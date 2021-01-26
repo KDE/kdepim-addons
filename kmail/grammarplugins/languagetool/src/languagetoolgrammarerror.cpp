@@ -5,8 +5,8 @@
 */
 
 #include "languagetoolgrammarerror.h"
-#include "liblanguagetool_debug.h"
 #include "languagetoolmanager.h"
+#include "liblanguagetool_debug.h"
 
 #include <QJsonArray>
 
@@ -20,7 +20,7 @@ LanguageToolGrammarError::~LanguageToolGrammarError()
 
 void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {
-    //We use block id index based on 1 in API
+    // We use block id index based on 1 in API
     mBlockId = blockindex + 1;
     mError = obj[QStringLiteral("message")].toString();
     mStart = obj[QStringLiteral("offset")].toInt(-1);
@@ -35,7 +35,7 @@ void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
                 qCWarning(LIBLANGUAGE_PLUGIN_LOG) << "LanguageToolGrammarError::parse : more than 1 url found. Perhaps need to adapt api ";
             }
             mUrl = urlArray.at(0)[QLatin1String("value")].toString();
-            //qDebug() << " mUrl" << mUrl;
+            // qDebug() << " mUrl" << mUrl;
         }
     }
     if (!mRule.isEmpty() && !mTesting) {
@@ -60,6 +60,6 @@ QStringList LanguageToolGrammarError::parseSuggestion(const QJsonObject &obj)
             lst.append(suggestionObject[QLatin1String("value")].toString());
         }
     }
-    //qDebug() << " lst : " << lst;
+    // qDebug() << " lst : " << lst;
     return lst;
 }

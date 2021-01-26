@@ -7,9 +7,9 @@
 #ifndef FOLDERCONFIGURESETTINGSPAGEWIDGET_H
 #define FOLDERCONFIGURESETTINGSPAGEWIDGET_H
 
-#include <QWidget>
 #include "folderconfiguresettings_private_export.h"
 #include <AkonadiCore/Collection>
+#include <QWidget>
 class FolderConfigureSettingsGeneralWidget;
 class FolderConfigureSettingsTemplateWidget;
 class FolderConfigureSettingsViewWidget;
@@ -22,6 +22,7 @@ public:
     ~FolderConfigureSettingsPageWidget() override;
 
     void save(const Akonadi::Collection::List &cols);
+
 private:
     FolderConfigureSettingsExperyWidget *mCollectionExpiryWidget = nullptr;
     FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;

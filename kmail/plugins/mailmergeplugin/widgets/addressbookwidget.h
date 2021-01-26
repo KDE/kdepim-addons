@@ -8,7 +8,8 @@
 #define ADDRESSBOOKWIDGET_H
 
 #include <QWidget>
-namespace MailMerge {
+namespace MailMerge
+{
 class AddressBookWidget : public QWidget
 {
     Q_OBJECT

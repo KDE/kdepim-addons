@@ -7,10 +7,11 @@
 #ifndef VIEWERPLUGINCREATEEVENTINTERFACE_H
 #define VIEWERPLUGINCREATEEVENTINTERFACE_H
 
-#include <MessageViewer/ViewerPluginInterface>
 #include <KCalendarCore/Event>
+#include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class EventEdit;
 class ViewerPluginCreateEventInterface : public ViewerPluginInterface
 {

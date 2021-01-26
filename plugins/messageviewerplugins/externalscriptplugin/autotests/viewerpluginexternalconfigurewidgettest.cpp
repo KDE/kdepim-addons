@@ -6,11 +6,11 @@
 
 #include "viewerpluginexternalconfigurewidgettest.h"
 #include "../configuredialog/viewerpluginexternalconfigurewidget.h"
-#include <QTest>
 #include <QLabel>
-#include <QVBoxLayout>
 #include <QListWidget>
 #include <QPushButton>
+#include <QTest>
+#include <QVBoxLayout>
 
 ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest(QObject *parent)
     : QObject(parent)

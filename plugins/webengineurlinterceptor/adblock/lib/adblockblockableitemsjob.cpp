@@ -5,14 +5,13 @@
 */
 
 #include "adblockblockableitemsjob.h"
-#include <WebEngineViewer/WebEngineScript>
-#include <WebEngineViewer/WebEngineManageScript>
-#include <QWebEngineView>
 #include <QPointer>
+#include <QWebEngineView>
+#include <WebEngineViewer/WebEngineManageScript>
+#include <WebEngineViewer/WebEngineScript>
 
 using namespace AdBlock;
-template<typename Arg, typename R, typename C>
-struct InvokeWrapper {
+template<typename Arg, typename R, typename C> struct InvokeWrapper {
     QPointer<R> receiver;
     void (C::*memberFunction)(Arg);
     void operator()(Arg result)
@@ -97,7 +96,7 @@ void AdBlockBlockableItemsJob::start()
 void AdBlockBlockableItemsJob::adaptSource(QString &src, const QString &hostName)
 {
     if (src.startsWith(QLatin1String("http://")) || src.startsWith(QLatin1String("https://"))) {
-        //Nothing
+        // Nothing
     } else if (src.startsWith(QLatin1String("//"))) {
         src = QLatin1String("https:") + src;
     } else if (src.startsWith(QLatin1Char('/'))) {
@@ -128,7 +127,7 @@ void AdBlockBlockableItemsJob::handleSearchBlockableScriptsItems(const QVariant 
             }
         }
     }
-    //TODO more check ?
+    // TODO more check ?
     Q_EMIT searchItemsDone(mAdblockResultList);
     deleteLater();
 }

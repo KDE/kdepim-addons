@@ -6,12 +6,12 @@
 
 #include "markdowncreateimagedialog.h"
 #include "markdowncreateimagewidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <KConfigGroup>
-#include <KSharedConfig>
+#include <QVBoxLayout>
 
 MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
     : QDialog(parent)

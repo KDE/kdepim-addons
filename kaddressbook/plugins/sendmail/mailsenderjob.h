@@ -15,7 +15,8 @@
 #include <QStringList>
 
 class KJob;
-namespace KABMailSender {
+namespace KABMailSender
+{
 class MailSenderJob : public QObject
 {
     Q_OBJECT

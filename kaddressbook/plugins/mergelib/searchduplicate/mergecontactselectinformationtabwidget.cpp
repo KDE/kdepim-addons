@@ -6,8 +6,8 @@
 
 #include "mergecontactselectinformationtabwidget.h"
 #include "widgets/mergecontactselectinformationscrollarea.h"
-#include <QTabBar>
 #include <KLocalizedString>
+#include <QTabBar>
 
 using namespace KABMergeContacts;
 
@@ -37,7 +37,8 @@ void MergeContactSelectInformationTabWidget::addNewWidget(const KABMergeContacts
     addTab(area, i18n("Duplicate contact %1", count() + 1));
 }
 
-void MergeContactSelectInformationTabWidget::setRequiresSelectInformationWidgets(const QVector<KABMergeContacts::MergeConflictResult> &list, const Akonadi::Collection &col)
+void MergeContactSelectInformationTabWidget::setRequiresSelectInformationWidgets(const QVector<KABMergeContacts::MergeConflictResult> &list,
+                                                                                 const Akonadi::Collection &col)
 {
     clear();
     for (const KABMergeContacts::MergeConflictResult &lst : list) {

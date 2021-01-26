@@ -8,8 +8,8 @@
 
 #include <KLocalizedString>
 
-#include <QPainter>
 #include <QPaintEvent>
+#include <QPainter>
 
 using namespace AdBlock;
 AdBlockListWidget::AdBlockListWidget(QWidget *parent)

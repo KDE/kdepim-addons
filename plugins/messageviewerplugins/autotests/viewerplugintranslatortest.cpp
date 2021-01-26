@@ -6,10 +6,10 @@
 
 #include "viewerplugintranslatortest.h"
 #include "../common/translatorplugin/viewerplugintranslator.h"
-#include <QTest>
 #include <KActionCollection>
-#include <QHBoxLayout>
 #include <MessageViewer/ViewerPluginInterface>
+#include <QHBoxLayout>
+#include <QTest>
 
 ViewerPluginTranslatorTest::ViewerPluginTranslatorTest(QObject *parent)
     : QObject(parent)

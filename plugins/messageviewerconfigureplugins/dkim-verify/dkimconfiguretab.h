@@ -7,8 +7,8 @@
 #ifndef DKIMCONFIGURETAB_H
 #define DKIMCONFIGURETAB_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <QWidget>
 
 class QTabWidget;
 class DKIMGeneralWidget;

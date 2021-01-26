@@ -5,8 +5,8 @@
 */
 
 #include "gravatarconfiguresettingspluginwidget.h"
-#include <Gravatar/GravatarConfigureSettingsWidget>
 #include <Gravatar/GravatarCache>
+#include <Gravatar/GravatarConfigureSettingsWidget>
 #include <PimCommon/ConfigureImmutableWidgetUtils>
 
 #include <KLocalizedString>

@@ -5,8 +5,8 @@
 */
 
 #include "dkimconfigurewidgettest.h"
-#include "../dkimconfigurewidget.h"
 #include "../dkimconfiguretab.h"
+#include "../dkimconfigurewidget.h"
 #include <QTest>
 #include <QVBoxLayout>
 

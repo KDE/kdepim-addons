@@ -9,10 +9,12 @@
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
-namespace PimCommon {
+namespace PimCommon
+{
 class TranslatorWidget;
 }
-namespace MessageViewer {
+namespace MessageViewer
+{
 class ViewerPluginTranslatorInterface : public ViewerPluginInterface
 {
     Q_OBJECT

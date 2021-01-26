@@ -5,9 +5,9 @@
 */
 
 #include "insertspecialcharacterplugineditorinterface.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 InsertSpecialCharacterPluginEditorInterface::InsertSpecialCharacterPluginEditorInterface(QObject *parent)
@@ -39,7 +39,10 @@ void InsertSpecialCharacterPluginEditorInterface::exec()
         mSelectSpecialChar = new KPIMTextEdit::SelectSpecialCharDialog(parentWidget());
         mSelectSpecialChar->setWindowTitle(i18nc("@title:window", "Insert Special Character"));
         mSelectSpecialChar->setOkButtonText(i18n("Insert"));
-        connect(mSelectSpecialChar.data(), &KPIMTextEdit::SelectSpecialCharDialog::charSelected, this, &InsertSpecialCharacterPluginEditorInterface::charSelected);
+        connect(mSelectSpecialChar.data(),
+                &KPIMTextEdit::SelectSpecialCharDialog::charSelected,
+                this,
+                &InsertSpecialCharacterPluginEditorInterface::charSelected);
     }
     mSelectSpecialChar->show();
 }

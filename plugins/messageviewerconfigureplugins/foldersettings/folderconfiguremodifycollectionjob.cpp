@@ -11,12 +11,10 @@
 FolderConfigureModifyCollectionJob::FolderConfigureModifyCollectionJob(QObject *parent)
     : QObject(parent)
 {
-
 }
 
 FolderConfigureModifyCollectionJob::~FolderConfigureModifyCollectionJob()
 {
-
 }
 
 void FolderConfigureModifyCollectionJob::setCollection(const Akonadi::Collection &col)

@@ -10,7 +10,8 @@
 
 #include <ContactEditor/ContactEditorPagePlugin>
 
-namespace Kleo {
+namespace Kleo
+{
 class KeyRequester;
 }
 
@@ -31,9 +32,7 @@ public:
     void setReadOnly(bool readOnly) override;
 
 private:
-    enum {
-        NumberOfProtocols = 4
-    };
+    enum { NumberOfProtocols = 4 };
     QCheckBox *mProtocolCB[NumberOfProtocols];
     QComboBox *mSignPref = nullptr;
     QComboBox *mCryptPref = nullptr;

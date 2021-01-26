@@ -6,11 +6,11 @@
 
 #include "qcsvreader.h"
 
+#include <KLocalizedString>
 #include <QStringList>
 #include <QTextCodec>
 #include <QTextStream>
 #include <QVector>
-#include <KLocalizedString>
 
 QCsvBuilderInterface::~QCsvBuilderInterface()
 {
@@ -72,13 +72,7 @@ QCsvReader::~QCsvReader()
 
 bool QCsvReader::read(QIODevice *device)
 {
-    enum State {
-        StartLine,
-        QuotedField,
-        QuotedFieldEnd,
-        NormalField,
-        EmptyField
-    };
+    enum State { StartLine, QuotedField, QuotedFieldEnd, NormalField, EmptyField };
 
     int row, column;
 
@@ -102,35 +96,35 @@ bool QCsvReader::read(QIODevice *device)
     inputStream.setCodec(d->mCodec);
 
     /**
-    * We use the following state machine to parse CSV:
-    *
-    * digraph {
-    *   StartLine -> StartLine [label="\\r\\n"]
-    *   StartLine -> QuotedField [label="Quote"]
-    *   StartLine -> EmptyField [label="Delimiter"]
-    *   StartLine -> NormalField [label="Other Char"]
-    *
-    *   QuotedField -> QuotedField [label="\\r\\n"]
-    *   QuotedField -> QuotedFieldEnd [label="Quote"]
-    *   QuotedField -> QuotedField [label="Delimiter"]
-    *   QuotedField -> QuotedField [label="Other Char"]
-    *
-    *   QuotedFieldEnd -> StartLine [label="\\r\\n"]
-    *   QuotedFieldEnd -> QuotedField [label="Quote"]
-    *   QuotedFieldEnd -> EmptyField [label="Delimiter"]
-    *   QuotedFieldEnd -> EmptyField [label="Other Char"]
-    *
-    *   EmptyField -> StartLine [label="\\r\\n"]
-    *   EmptyField -> QuotedField [label="Quote"]
-    *   EmptyField -> EmptyField [label="Delimiter"]
-    *   EmptyField -> NormalField [label="Other Char"]
-    *
-    *   NormalField -> StartLine [label="\\r\\n"]
-    *   NormalField -> NormalField [label="Quote"]
-    *   NormalField -> EmptyField [label="Delimiter"]
-    *   NormalField -> NormalField [label="Other Char"]
-    * }
-    */
+     * We use the following state machine to parse CSV:
+     *
+     * digraph {
+     *   StartLine -> StartLine [label="\\r\\n"]
+     *   StartLine -> QuotedField [label="Quote"]
+     *   StartLine -> EmptyField [label="Delimiter"]
+     *   StartLine -> NormalField [label="Other Char"]
+     *
+     *   QuotedField -> QuotedField [label="\\r\\n"]
+     *   QuotedField -> QuotedFieldEnd [label="Quote"]
+     *   QuotedField -> QuotedField [label="Delimiter"]
+     *   QuotedField -> QuotedField [label="Other Char"]
+     *
+     *   QuotedFieldEnd -> StartLine [label="\\r\\n"]
+     *   QuotedFieldEnd -> QuotedField [label="Quote"]
+     *   QuotedFieldEnd -> EmptyField [label="Delimiter"]
+     *   QuotedFieldEnd -> EmptyField [label="Other Char"]
+     *
+     *   EmptyField -> StartLine [label="\\r\\n"]
+     *   EmptyField -> QuotedField [label="Quote"]
+     *   EmptyField -> EmptyField [label="Delimiter"]
+     *   EmptyField -> NormalField [label="Other Char"]
+     *
+     *   NormalField -> StartLine [label="\\r\\n"]
+     *   NormalField -> NormalField [label="Quote"]
+     *   NormalField -> EmptyField [label="Delimiter"]
+     *   NormalField -> NormalField [label="Other Char"]
+     * }
+     */
 
     while (!inputStream.atEnd() && d->mNotTerminated) {
         inputStream >> input;
@@ -344,11 +338,11 @@ uint QCsvStandardBuilder::columnCount() const
 
 QString QCsvStandardBuilder::data(uint row, uint column) const
 {
-    if (row > d->mRowCount || column > d->mColumnCount || column >= (uint)d->mRows[ row ].count()) {
+    if (row > d->mRowCount || column > d->mColumnCount || column >= (uint)d->mRows[row].count()) {
         return QString();
     }
 
-    return d->mRows[ row ][ column ];
+    return d->mRows[row][column];
 }
 
 void QCsvStandardBuilder::begin()
@@ -364,14 +358,14 @@ void QCsvStandardBuilder::beginLine()
 
 void QCsvStandardBuilder::field(const QString &data, uint row, uint column)
 {
-    const uint size = d->mRows[ row ].size();
+    const uint size = d->mRows[row].size();
     if (column >= size) {
         for (uint i = column; i < size + 1; ++i) {
-            d->mRows[ row ].append(QString());
+            d->mRows[row].append(QString());
         }
     }
 
-    d->mRows[ row ][ column ] = data;
+    d->mRows[row][column] = data;
 
     d->mColumnCount = qMax(d->mColumnCount, column + 1);
 }

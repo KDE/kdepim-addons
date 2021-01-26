@@ -7,9 +7,10 @@
 #ifndef MARKDOWNUTIL_H
 #define MARKDOWNUTIL_H
 
-#include <QStringList>
 #include "libkmailmarkdown_export.h"
-namespace MarkdownUtil {
+#include <QStringList>
+namespace MarkdownUtil
+{
 LIBKMAILMARKDOWN_EXPORT QStringList imagePaths(const QString &str);
 }
 

@@ -7,9 +7,10 @@
 #ifndef TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
 #define TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
 
-#include <TemplateParser/TemplateParserEmailAddressRequesterBase>
 #include <QVariant>
-namespace Akonadi {
+#include <TemplateParser/TemplateParserEmailAddressRequesterBase>
+namespace Akonadi
+{
 class EmailAddressRequester;
 }
 
@@ -17,8 +18,7 @@ class TemplateParserEmailAddressRequesterAkonadi : public TemplateParser::Templa
 {
     Q_OBJECT
 public:
-    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {
-    });
+    explicit TemplateParserEmailAddressRequesterAkonadi(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~TemplateParserEmailAddressRequesterAkonadi() override;
 
     Q_REQUIRED_RESULT QString text() const override;

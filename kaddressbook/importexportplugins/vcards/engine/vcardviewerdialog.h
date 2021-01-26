@@ -6,10 +6,11 @@
 #ifndef VCARDVIEWERDIALOG_H
 #define VCARDVIEWERDIALOG_H
 
-#include <QDialog>
 #include <KContacts/Addressee>
+#include <QDialog>
 
-namespace KAddressBookGrantlee {
+namespace KAddressBookGrantlee
+{
 class GrantleeContactViewer;
 }
 class QPushButton;

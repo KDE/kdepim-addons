@@ -5,16 +5,16 @@
 */
 
 #include "fancyheaderstyleplugintest.h"
-#include "utils.h"
-#include "../fancyheaderstyleplugin/fancyheaderstyleplugin.h"
 #include "../fancyheaderstyleplugin/fancyheaderstyleinterface.h"
+#include "../fancyheaderstyleplugin/fancyheaderstyleplugin.h"
+#include "utils.h"
 
 #include <MessageViewer/HeaderStyle>
 
-#include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+#include <QTest>
 
 FancyHeaderStylePluginTest::FancyHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
@@ -77,7 +77,7 @@ void FancyHeaderStylePluginTest::testFormat()
     style->setHeaderStrategy(strategy);
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
-    testHeaderFile(style->format(aMsg.data()), mailbox+QStringLiteral(".fancy"));
+    testHeaderFile(style->format(aMsg.data()), mailbox + QStringLiteral(".fancy"));
 }
 
 QTEST_MAIN(FancyHeaderStylePluginTest)

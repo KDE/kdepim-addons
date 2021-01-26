@@ -38,8 +38,7 @@ void GrammalecteResultJob::start()
         args << QStringLiteral("-f") << file->fileName() << QStringLiteral("-j");
         mProcess->setArguments(args);
         connect(mProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &GrammalecteResultJob::slotFinished);
-        connect(mProcess, qOverload<QProcess::ProcessError>(&QProcess::errorOccurred),
-                this, &GrammalecteResultJob::receivedError);
+        connect(mProcess, qOverload<QProcess::ProcessError>(&QProcess::errorOccurred), this, &GrammalecteResultJob::receivedError);
         connect(mProcess, &QProcess::readyReadStandardError, this, &GrammalecteResultJob::receivedStdErr);
         connect(mProcess, &QProcess::readyReadStandardOutput, this, &GrammalecteResultJob::receivedStandardOutput);
 

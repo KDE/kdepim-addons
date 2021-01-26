@@ -7,11 +7,12 @@
 #ifndef MERGECONTACTSELECTINFORMATIONWIDGET_H
 #define MERGECONTACTSELECTINFORMATIONWIDGET_H
 
-#include <QWidget>
-#include "kaddressbookmergelib_export.h"
 #include "job/mergecontacts.h"
+#include "kaddressbookmergelib_export.h"
 #include <AkonadiCore/Item>
-namespace KABMergeContacts {
+#include <QWidget>
+namespace KABMergeContacts
+{
 class MergeContactSelectListWidget;
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationWidget : public QWidget
 {
@@ -24,6 +25,7 @@ public:
     void createContact(KContacts::Addressee &addr);
 
     Q_REQUIRED_RESULT bool verifySelectedInfo() const;
+
 private:
     void addInformationWidget(MergeContacts::ConflictInformation conflictType);
     KContacts::Addressee::List mAddressList;

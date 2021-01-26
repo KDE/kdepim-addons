@@ -11,13 +11,15 @@
 #ifndef BRIEFHEADERSTYLE_H
 #define BRIEFHEADERSTYLE_H
 
-#include <MessageViewer/HeaderStyle>
 #include "headerstyle_util.h"
-namespace MessageViewer {
+#include <MessageViewer/HeaderStyle>
+namespace MessageViewer
+{
 class BriefHeaderStyle : public HeaderStyle
 {
 public:
-    BriefHeaderStyle() : HeaderStyle()
+    BriefHeaderStyle()
+        : HeaderStyle()
     {
     }
 

@@ -9,8 +9,8 @@
 #define AKONADIPIMDATASOURCE_H
 
 #include "pimdatasource.h"
-#include <QObject>
 #include <EventViews/Prefs>
+#include <QObject>
 
 class EventModel;
 

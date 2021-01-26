@@ -7,12 +7,12 @@
 #include "sharetextplugineditorinterface.h"
 #include "sharetexteditorplugin_debug.h"
 #include "sharetextpurposemenuwidget.h"
-#include <KPIMTextEdit/EditorUtil>
-#include <KPIMTextEdit/RichTextEditor>
 #include <KActionCollection>
+#include <KActionMenu>
 #include <KActionMenuChangeCase>
 #include <KLocalizedString>
-#include <KActionMenu>
+#include <KPIMTextEdit/EditorUtil>
+#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
@@ -40,5 +40,5 @@ void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 
 void ShareTextPluginEditorInterface::exec()
 {
-    //Nothing
+    // Nothing
 }

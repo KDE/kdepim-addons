@@ -7,12 +7,13 @@
 #ifndef MERGECONTACTSELECTINFORMATIONTABWIDGET_H
 #define MERGECONTACTSELECTINFORMATIONTABWIDGET_H
 
-#include <QTabWidget>
-#include <AkonadiCore/Item>
 #include "kaddressbookmergelib_export.h"
 #include "searchduplicateresultwidget.h"
+#include <AkonadiCore/Item>
+#include <QTabWidget>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectInformationTabWidget : public QTabWidget
 {
     Q_OBJECT
@@ -25,6 +26,7 @@ public:
     Q_REQUIRED_RESULT bool tabBarVisible() const;
 
     void setRequiresSelectInformationWidgets(const QVector<KABMergeContacts::MergeConflictResult> &list, const Akonadi::Collection &col);
+
 private:
     void addNewWidget(const MergeConflictResult &list, const Akonadi::Collection &col);
 };

@@ -17,6 +17,7 @@ public:
     ~CheckBeforeSendUpdateSmtpDialog() override;
 
     Q_REQUIRED_RESULT bool changeSmtp() const;
+
 private:
     QCheckBox *mChangeSmtp = nullptr;
 };

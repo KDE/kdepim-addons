@@ -7,8 +7,8 @@
 #include "mergecontactloseinformationwarningtest.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
 #include <QAction>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 #include <qtestmouse.h>
 
 MergeContactLoseInformationWarningTest::MergeContactLoseInformationWarningTest(QObject *parent)

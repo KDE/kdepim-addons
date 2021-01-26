@@ -16,5 +16,5 @@ FolderConfigureSettingsWidgetTest::FolderConfigureSettingsWidgetTest(QObject *pa
 void FolderConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     FolderConfigureSettingsWidget w;
-    //TODO
+    // TODO
 }

@@ -8,10 +8,11 @@
 
 #include <KConfigGroup>
 #include <KSharedConfig>
-#include <QNetworkAccessManager>
 #include <QColor>
+#include <QNetworkAccessManager>
 #include <QRandomGenerator>
-namespace {
+namespace
+{
 static const char myLanguageToolManagerGroupName[] = "LanguageTool";
 }
 LanguageToolManager::LanguageToolManager(QObject *parent)
@@ -67,7 +68,7 @@ QColor LanguageToolManager::grammarColorForError(const QString &error)
         return col;
     }
     col.setRgb(QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256), QRandomGenerator::global()->bounded(256));
-    //Generate color.
+    // Generate color.
     mGrammarColor.insert(error, col);
     return col;
 }
@@ -88,7 +89,7 @@ void LanguageToolManager::loadSettings()
     mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://languagetool.org/api/v2"));
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
     mUseLocalInstance = grp.readEntry(QStringLiteral("useLocalInstance"), false);
-    //TODO add options ?
+    // TODO add options ?
 }
 
 void LanguageToolManager::saveSettings()

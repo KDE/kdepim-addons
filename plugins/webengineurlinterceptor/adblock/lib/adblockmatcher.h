@@ -10,15 +10,16 @@
 #ifndef ADBLOCKMATCHER_H
 #define ADBLOCKMATCHER_H
 
-#include <QUrl>
-#include <QObject>
-#include <QVector>
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
+#include <QObject>
+#include <QUrl>
+#include <QVector>
 
 class QWebEngineUrlRequestInfo;
 
-namespace AdBlock {
+namespace AdBlock
+{
 class AdblockManager;
 class AdBlockMatcher : public QObject
 {

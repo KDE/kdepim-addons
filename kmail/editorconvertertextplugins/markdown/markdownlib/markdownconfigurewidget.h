@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCONFIGUREWIDGET_H
 #define MARKDOWNCONFIGUREWIDGET_H
 
-#include <MessageComposer/PluginEditorConvertTextConfigureWidget>
 #include "markdownlib_private_export.h"
+#include <MessageComposer/PluginEditorConvertTextConfigureWidget>
 class QCheckBox;
 class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureWidget : public MessageComposer::PluginEditorConvertTextConfigureWidget
 {
@@ -20,6 +20,7 @@ public:
     void loadSettings() override;
     void saveSettings() override;
     void resetSettings() override;
+
 private:
     QCheckBox *mLatexSupport = nullptr;
     QCheckBox *mExtraDefinitionLists = nullptr;

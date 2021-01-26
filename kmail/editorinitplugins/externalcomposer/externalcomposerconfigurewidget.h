@@ -7,8 +7,8 @@
 #ifndef EXTERNALCOMPOSERCONFIGUREWIDGET_H
 #define EXTERNALCOMPOSERCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include <MessageComposer/PluginEditorInitConfigureWidget>
+#include <QWidget>
 class QCheckBox;
 class KUrlRequester;
 class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInitConfigureWidget
@@ -21,6 +21,7 @@ public:
     void loadSettings() override;
     void saveSettings() override;
     void resetSettings() override;
+
 private:
     QCheckBox *mExternalEditorCheck = nullptr;
     KUrlRequester *mEditorRequester = nullptr;

@@ -6,8 +6,8 @@
 
 #include "confirmaddressplugintest.h"
 #include "../confirmaddressplugin.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
     : QObject(parent)

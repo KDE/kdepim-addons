@@ -8,9 +8,9 @@
 #ifndef TESTOBJECTTREESOURCE_H
 #define TESTOBJECTTREESOURCE_H
 
-#include <MessageViewer/ObjectTreeEmptySource>
-#include <MessageViewer/CSSHelperBase>
 #include <MessageViewer/AttachmentStrategy>
+#include <MessageViewer/CSSHelperBase>
+#include <MessageViewer/ObjectTreeEmptySource>
 
 class TestObjectTreeSource : public MessageViewer::EmptySource
 {

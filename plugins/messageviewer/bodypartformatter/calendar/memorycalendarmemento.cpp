@@ -4,10 +4,10 @@
    SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
 */
 #include "memorycalendarmemento.h"
-#include <CalendarSupport/CalendarSingleton>
-#include <Akonadi/Calendar/FetchJobCalendar>
-#include <Akonadi/Calendar/ETMCalendar>
 #include "text_calendar_debug.h"
+#include <Akonadi/Calendar/ETMCalendar>
+#include <Akonadi/Calendar/FetchJobCalendar>
+#include <CalendarSupport/CalendarSingleton>
 
 using namespace MessageViewer;
 using namespace Akonadi;
@@ -15,7 +15,7 @@ using namespace Akonadi;
 MemoryCalendarMemento::MemoryCalendarMemento()
     : QObject(nullptr)
 {
-    Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/ false);
+    Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
     if (etmCalendar && etmCalendar->isLoaded()) {
         // Good, either korganizer or kontact summary view are already running, so reuse ETM to save memory
         mCalendar = etmCalendar;
@@ -23,8 +23,7 @@ MemoryCalendarMemento::MemoryCalendarMemento()
     } else {
         FetchJobCalendar::Ptr calendar = FetchJobCalendar::Ptr(new FetchJobCalendar(this));
         mCalendar = calendar;
-        connect(calendar.data(), &FetchJobCalendar::loadFinished,
-                this, &MemoryCalendarMemento::slotCalendarLoaded);
+        connect(calendar.data(), &FetchJobCalendar::loadFinished, this, &MemoryCalendarMemento::slotCalendarLoaded);
     }
 }
 

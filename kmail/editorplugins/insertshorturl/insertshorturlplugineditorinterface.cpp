@@ -6,17 +6,17 @@
 
 #include "insertshorturlplugineditorinterface.h"
 #include "kmail_insertshorturl_debug.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <PimCommon/NetworkManager>
-#include <KLocalizedString>
-#include <KActionCollection>
-#include <KSharedConfig>
-#include <KConfigGroup>
-#include <QAction>
-#include <QNetworkConfigurationManager>
 #include "shorturlengineplugin/shorturlengineinterface.h"
 #include "shorturlengineplugin/shorturlengineplugin.h"
 #include "shorturlengineplugin/shorturlenginepluginmanager.h"
+#include <KActionCollection>
+#include <KConfigGroup>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
+#include <KSharedConfig>
+#include <PimCommon/NetworkManager>
+#include <QAction>
+#include <QNetworkConfigurationManager>
 
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -78,8 +78,8 @@ void InsertShorturlPluginEditorInterface::exec()
     QTextCursor textCursor = richTextEditor()->textCursor();
     const QString urlStr = textCursor.selectedText();
 
-    if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:"))
-        || urlStr.startsWith(QLatin1String("ftp:")) || urlStr.startsWith(QLatin1String("ftps:"))) {
+    if (urlStr.startsWith(QLatin1String("http:")) || urlStr.startsWith(QLatin1String("https:")) || urlStr.startsWith(QLatin1String("ftp:"))
+        || urlStr.startsWith(QLatin1String("ftps:"))) {
         if (!mCurrentEngine) {
             qCWarning(KMAIL_INSERTSHORTURL_LOG) << "Current Engine not defined";
             return;

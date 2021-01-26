@@ -6,19 +6,18 @@
  */
 
 #include "akonadipimdatasource.h"
-#include "settingschangenotifier.h"
-#include "pimeventsplugin_debug.h"
 #include "eventmodel.h"
+#include "pimeventsplugin_debug.h"
+#include "settingschangenotifier.h"
 
+#include <AkonadiCore/AttributeFactory>
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/CollectionColorAttribute>
-#include <AkonadiCore/AttributeFactory>
 
 #include <QSet>
 
-#include <KSharedConfig>
 #include <KCoreConfigSkeleton>
-
+#include <KSharedConfig>
 
 using namespace std::placeholders;
 
@@ -28,9 +27,7 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
 {
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 
-    connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged,
-            this, &AkonadiPimDataSource::onSettingsChanged);
-
+    connect(SettingsChangeNotifier::self(), &SettingsChangeNotifier::settingsChanged, this, &AkonadiPimDataSource::onSettingsChanged);
 
     onSettingsChanged();
 
@@ -102,9 +99,7 @@ void AkonadiPimDataSource::onSettingsChanged()
     }
 
     const auto toEnable = configured - monitored;
-    std::for_each(toEnable.cbegin(), toEnable.cend(),
-                  std::bind(&EventModel::addCalendar, mCalendar, _1));
+    std::for_each(toEnable.cbegin(), toEnable.cend(), std::bind(&EventModel::addCalendar, mCalendar, _1));
     const auto toDisable = monitored - configured;
-    std::for_each(toDisable.cbegin(), toDisable.cend(),
-                  std::bind(&EventModel::removeCalendar, mCalendar, _1));
+    std::for_each(toDisable.cbegin(), toDisable.cend(), std::bind(&EventModel::removeCalendar, mCalendar, _1));
 }

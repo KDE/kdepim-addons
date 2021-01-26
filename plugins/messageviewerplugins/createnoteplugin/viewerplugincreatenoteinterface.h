@@ -10,7 +10,8 @@
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class NoteEdit;
 class ViewerPluginCreatenoteInterface : public ViewerPluginInterface
 {

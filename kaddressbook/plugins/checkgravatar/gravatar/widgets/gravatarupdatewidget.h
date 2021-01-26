@@ -7,15 +7,17 @@
 #ifndef GRAVATARUPDATEWIDGET_H
 #define GRAVATARUPDATEWIDGET_H
 
-#include <QWidget>
 #include <QUrl>
+#include <QWidget>
 class QLabel;
 class QPushButton;
 
-namespace Gravatar {
+namespace Gravatar
+{
 class GravatarResolvUrlJob;
 }
-namespace KABGravatar {
+namespace KABGravatar
+{
 class GravatarUpdateWidget : public QWidget
 {
     Q_OBJECT

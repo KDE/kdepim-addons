@@ -11,13 +11,14 @@
 #ifndef ADBLOCKRULE_H
 #define ADBLOCKRULE_H
 
+#include "adblockregexp.h"
 #include <QStringList>
 #include <QStringMatcher>
-#include "adblockregexp.h"
 class QUrl;
 class QWebEngineUrlRequestInfo;
 
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockSubscription;
 
 class AdBlockRule
@@ -72,14 +73,7 @@ protected:
     QStringList parseRegExpFilter(const QString &filter) const;
 
 private:
-    enum RuleType {
-        CssRule = 0,
-        DomainMatchRule = 1,
-        RegExpMatchRule = 2,
-        StringEndsMatchRule = 3,
-        StringContainsMatchRule = 4,
-        Invalid = 5
-    };
+    enum RuleType { CssRule = 0, DomainMatchRule = 1, RegExpMatchRule = 2, StringEndsMatchRule = 3, StringContainsMatchRule = 4, Invalid = 5 };
 
     enum RuleOption {
         DomainRestrictedOption = 1,

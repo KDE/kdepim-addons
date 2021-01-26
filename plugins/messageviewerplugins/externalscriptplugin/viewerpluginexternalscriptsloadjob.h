@@ -9,8 +9,8 @@
 
 #include "viewerpluginexternalscriptinfo.h"
 
-#include <QVector>
 #include <QStringList>
+#include <QVector>
 class ViewerPluginExternalScriptsLoadJob
 {
 public:

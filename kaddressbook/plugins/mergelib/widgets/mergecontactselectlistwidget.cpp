@@ -7,9 +7,9 @@
 #include "mergecontactselectlistwidget.h"
 #include "kaddressbookmergelibprivate_debug.h"
 #include <KLocalizedString>
-#include <QLocale>
 #include <QLabel>
 #include <QListWidget>
+#include <QLocale>
 #include <QVBoxLayout>
 using namespace KABMergeContacts;
 using namespace KContacts;
@@ -46,7 +46,7 @@ void MergeContactSelectListWidget::updateTitle()
     QString title;
     switch (mConflictType) {
     case MergeContacts::None:
-        //qCWarning(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " MergeContacts::None used in updateTitle. It's a bug";
+        // qCWarning(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " MergeContacts::None used in updateTitle. It's a bug";
         // it's not possible.
         break;
     case MergeContacts::Birthday:
@@ -140,8 +140,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         switch (mConflictType) {
         case MergeContacts::None:
             break;
-        case MergeContacts::Birthday:
-        {
+        case MergeContacts::Birthday: {
             const QDate birdthDt = addr.birthday().date();
             QString birdth;
             if (birdthDt.isValid()) {
@@ -150,23 +149,21 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
             addItem(birdth);
             break;
         }
-        case MergeContacts::Geo:
-        {
+        case MergeContacts::Geo: {
             const Geo geo = addr.geo();
             const QString str = QStringLiteral("%1-%2").arg(geo.latitude()).arg(geo.longitude());
             addItem(str);
             break;
         }
         case MergeContacts::Photo:
-            //TODO fix when it's an url
+            // TODO fix when it's an url
             addItem(QString(), QIcon(QPixmap::fromImage(addr.photo().data())));
             break;
         case MergeContacts::Logo:
-            //TODO fix when it's an url
+            // TODO fix when it's an url
             addItem(QString(), QIcon(QPixmap::fromImage(addr.logo().data())));
             break;
-        case MergeContacts::Anniversary:
-        {
+        case MergeContacts::Anniversary: {
             QString anniversary;
             const QDate anniversaryDt = QDate::fromString(addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Anniversary")), Qt::ISODate);
             if (anniversaryDt.isValid()) {
@@ -181,8 +178,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::NickName:
             addItem(addr.nickName());
             break;
-        case MergeContacts::Blog:
-        {
+        case MergeContacts::Blog: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("BlogFeed"));
             addItem(newBlog);
             break;
@@ -193,8 +189,7 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::Organization:
             addItem(addr.organization());
             break;
-        case MergeContacts::Profession:
-        {
+        case MergeContacts::Profession: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Profession"));
             addItem(newBlog);
             break;
@@ -205,38 +200,34 @@ void MergeContactSelectListWidget::fillList(const KContacts::Addressee::List &ls
         case MergeContacts::Departement:
             addItem(addr.department());
             break;
-        case MergeContacts::Office:
-        {
+        case MergeContacts::Office: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-Office"));
             addItem(newBlog);
             break;
         }
-        case MergeContacts::ManagerName:
-        {
+        case MergeContacts::ManagerName: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-ManagersName"));
             addItem(newBlog);
             break;
         }
-        case MergeContacts::Assistant:
-        {
+        case MergeContacts::Assistant: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-AssistantsName"));
             addItem(newBlog);
             break;
         }
         case MergeContacts::FreeBusy:
-            //FIXME
+            // FIXME
             break;
         case MergeContacts::FamilyName:
             addItem(addr.familyName());
             break;
-        case MergeContacts::PartnerName:
-        {
+        case MergeContacts::PartnerName: {
             const QString newBlog = addr.custom(QStringLiteral("KADDRESSBOOK"), QStringLiteral("X-SpousesName"));
             addItem(newBlog);
             break;
         }
         case MergeContacts::Keys:
-            //TODO
+            // TODO
             break;
         }
     }

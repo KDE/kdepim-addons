@@ -9,7 +9,8 @@
 
 #include <MessageViewer/HeaderStyleInterface>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class LongHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT

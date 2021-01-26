@@ -9,13 +9,15 @@
 
 #include <MessageViewer/HeaderStyleInterface>
 
-namespace GrantleeTheme {
+namespace GrantleeTheme
+{
 class ThemeManager;
 }
 
 class GrantleeHeaderStylePluginTest;
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class GrantleeHeaderStyleInterface : public MessageViewer::HeaderStyleInterface
 {
     Q_OBJECT
@@ -25,6 +27,7 @@ public:
 
     void createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac) override;
     void activateAction() override;
+
 private:
     void slotGrantleeHeaders();
 

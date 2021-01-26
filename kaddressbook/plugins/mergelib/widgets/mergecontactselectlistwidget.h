@@ -7,17 +7,19 @@
 #ifndef MERGECONTACTSELECTLISTWIDGET_H
 #define MERGECONTACTSELECTLISTWIDGET_H
 
-#include <AkonadiCore/Item>
-#include "kaddressbookmergelib_export.h"
 #include "job/mergecontacts.h"
-#include <QWidget>
+#include "kaddressbookmergelib_export.h"
+#include <AkonadiCore/Item>
 #include <QIcon>
+#include <QWidget>
 class QLabel;
 class QListWidget;
-namespace KContacts {
+namespace KContacts
+{
 class Addressee;
 }
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class KADDRESSBOOKMERGELIB_EXPORT MergeContactSelectListWidget : public QWidget
 {
     Q_OBJECT
@@ -29,6 +31,7 @@ public:
     Q_REQUIRED_RESULT int selectedContact() const;
     MergeContacts::ConflictInformation conflictType() const;
     Q_REQUIRED_RESULT bool verifySelectedInfo() const;
+
 private:
     void fillList(const KContacts::Addressee::List &lst);
     void updateTitle();

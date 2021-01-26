@@ -7,9 +7,9 @@
 #ifndef GRAMMARRESULTJOB_H
 #define GRAMMARRESULTJOB_H
 
+#include "libgrammalect_private_export.h"
 #include <QObject>
 #include <QProcess>
-#include "libgrammalect_private_export.h"
 class LIBGRAMMALECTPRIVATE_TESTS_EXPORT GrammalecteResultJob : public QObject
 {
     Q_OBJECT

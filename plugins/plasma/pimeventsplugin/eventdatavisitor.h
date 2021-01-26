@@ -8,9 +8,9 @@
 #ifndef EVENTDATAVISITOR_H
 #define EVENTDATAVISITOR_H
 
+#include <CalendarEvents/CalendarEventsPlugin>
 #include <KCalendarCore/Visitor>
 #include <QMultiHash>
-#include <CalendarEvents/CalendarEventsPlugin>
 
 class PimDataSource;
 class BaseEventDataVisitor : public KCalendarCore::Visitor
@@ -28,7 +28,9 @@ protected:
     Q_REQUIRED_RESULT QString generateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId = {}) const;
     Q_REQUIRED_RESULT bool isInRange(QDate start, QDate end) const;
 
-    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
+    Q_REQUIRED_RESULT QVector<CalendarEvents::EventData>
+    explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok);
+
 protected:
     PimDataSource *const mDataSource;
     const QDate mStart;

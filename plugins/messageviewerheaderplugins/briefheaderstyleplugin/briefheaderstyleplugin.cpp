@@ -5,9 +5,9 @@
 */
 
 #include "briefheaderstyleplugin.h"
-#include "briefheaderstyleinterface.h"
-#include "briefheaderstyle.h"
 #include "briefheaderstrategy.h"
+#include "briefheaderstyle.h"
+#include "briefheaderstyleinterface.h"
 #include <KPluginFactory>
 
 using namespace MessageViewer;

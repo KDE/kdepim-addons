@@ -7,9 +7,9 @@
 #include "updatecontactjob.h"
 #include <Akonadi/Contact/ContactSearchJob>
 #include <AkonadiCore/itemmodifyjob.h>
-#include <kcontacts/addressee.h>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <kcontacts/addressee.h>
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)
@@ -64,9 +64,10 @@ void UpdateContactJob::slotUpdateContactDone(KJob *job)
         return;
     }
 
-    const QString text = i18n("The vCard was updated in your address book; "
-                              "you can add more information to this "
-                              "entry by opening the address book.");
+    const QString text = i18n(
+        "The vCard was updated in your address book; "
+        "you can add more information to this "
+        "entry by opening the address book.");
     KMessageBox::information(mParentWidget, text, QString(), QStringLiteral("updatedtokabc"));
 
     emitResult();
@@ -84,8 +85,7 @@ void UpdateContactJob::start()
     // first check whether a contact with the same email exists already
     auto *searchJob = new Akonadi::ContactSearchJob(this);
     searchJob->setLimit(1);
-    searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(),
-                        Akonadi::ContactSearchJob::ExactMatch);
+    searchJob->setQuery(Akonadi::ContactSearchJob::Email, mEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
 
     connect(searchJob, &Akonadi::ContactSearchJob::result, this, &UpdateContactJob::slotSearchDone);
 }

@@ -5,12 +5,12 @@
 */
 
 #include "ldapimportexportplugininterface.h"
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KAddressBookImportExport/ImportExportEngine>
+#include <KLocalizedString>
+#include <PimCommonAkonadi/LdapSearchDialog>
 #include <QAction>
 #include <QPointer>
-#include <PimCommonAkonadi/LdapSearchDialog>
-#include <KAddressBookImportExport/ImportExportEngine>
 
 LDapImportExportPluginInterface::LDapImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)

@@ -7,8 +7,8 @@
 #ifndef LANGUAGETOOLCONFIGWIDGET_H
 #define LANGUAGETOOLCONFIGWIDGET_H
 
-#include <QWidget>
 #include "libkmaillanguagetool_export.h"
+#include <QWidget>
 class QCheckBox;
 class QLineEdit;
 class QLabel;
@@ -22,6 +22,7 @@ public:
     ~LanguageToolConfigWidget() override;
     void loadSettings();
     void saveSettings();
+
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     void updateWidgets(bool enabled);

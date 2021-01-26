@@ -4,12 +4,12 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "mailsenderjob.h"
 #include "sendmailplugininterface.h"
+#include "mailsenderjob.h"
 
-#include <KMessageBox>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QAction>
 #include <QDesktopServices>
 

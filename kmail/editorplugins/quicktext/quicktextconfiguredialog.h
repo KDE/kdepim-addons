@@ -6,8 +6,8 @@
 
 #ifndef QUICKTEXTCONFIGUREDIALOG_H
 #define QUICKTEXTCONFIGUREDIALOG_H
-#include <QDialog>
 #include "quicktext_export.h"
+#include <QDialog>
 class QuickTextConfigureWidget;
 class QUICKTEXT_EXPORT QuickTextConfigureDialog : public QDialog
 {

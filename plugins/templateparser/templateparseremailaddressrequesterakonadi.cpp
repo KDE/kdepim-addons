@@ -5,12 +5,11 @@
 */
 
 #include "templateparseremailaddressrequesterakonadi.h"
-#include <QHBoxLayout>
 #include <Akonadi/Contact/EmailAddressRequester>
 #include <KPluginFactory>
+#include <QHBoxLayout>
 
-K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi,
-                         "templateparseremailaddressrequesterakonadi.json")
+K_PLUGIN_CLASS_WITH_JSON(TemplateParserEmailAddressRequesterAkonadi, "templateparseremailaddressrequesterakonadi.json")
 
 TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterAkonadi(QWidget *parent, const QList<QVariant> &)
     : TemplateParser::TemplateParserEmailAddressRequesterBase(parent)
@@ -26,7 +25,10 @@ TemplateParserEmailAddressRequesterAkonadi::TemplateParserEmailAddressRequesterA
 
 TemplateParserEmailAddressRequesterAkonadi::~TemplateParserEmailAddressRequesterAkonadi()
 {
-    disconnect(mEmailAddressRequester, &Akonadi::EmailAddressRequester::textChanged, this, &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
+    disconnect(mEmailAddressRequester,
+               &Akonadi::EmailAddressRequester::textChanged,
+               this,
+               &TemplateParser::TemplateParserEmailAddressRequesterBase::textChanged);
 }
 
 QString TemplateParserEmailAddressRequesterAkonadi::text() const

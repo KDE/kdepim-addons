@@ -19,7 +19,6 @@ FolderConfigureSettingsExperyWidget::FolderConfigureSettingsExperyWidget(QWidget
 
 FolderConfigureSettingsExperyWidget::~FolderConfigureSettingsExperyWidget()
 {
-
 }
 
 void FolderConfigureSettingsExperyWidget::save(Akonadi::Collection &col)

@@ -7,10 +7,11 @@
 #ifndef SELECTIMAPCREATEFOLDERJOB_H
 #define SELECTIMAPCREATEFOLDERJOB_H
 
-#include <QObject>
 #include <KSieveUi/SieveImapAccountSettings>
+#include <QObject>
 class KJob;
-namespace KIMAP {
+namespace KIMAP
+{
 class Session;
 }
 class SelectImapCreateFolderJob : public QObject

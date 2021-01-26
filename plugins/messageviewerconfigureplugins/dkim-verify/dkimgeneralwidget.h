@@ -7,8 +7,8 @@
 #ifndef DKIMGENERALWIDGET_H
 #define DKIMGENERALWIDGET_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <QWidget>
 class QCheckBox;
 class QComboBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMGeneralWidget : public QWidget
@@ -20,6 +20,7 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+
 private:
     QCheckBox *mEnableDkimSupport = nullptr;
     QCheckBox *mSaveResult = nullptr;

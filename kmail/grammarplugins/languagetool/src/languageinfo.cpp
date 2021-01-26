@@ -48,7 +48,7 @@ void LanguageInfo::setCode(const QString &code)
 
 bool LanguageInfo::isValid() const
 {
-    //We need code and name
+    // We need code and name
     return !mName.isEmpty() && !mCode.isEmpty();
 }
 

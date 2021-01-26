@@ -7,12 +7,12 @@
 #include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactstabwidget.h"
 
-#include <QHBoxLayout>
-#include <QTabWidget>
-#include <KSharedConfig>
-#include <QRegularExpression>
-#include <KIdentityManagement/IdentityManager>
 #include <KIdentityManagement/Identity>
+#include <KIdentityManagement/IdentityManager>
+#include <KSharedConfig>
+#include <QHBoxLayout>
+#include <QRegularExpression>
+#include <QTabWidget>
 
 AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *parent)
     : QWidget(parent)

@@ -21,6 +21,7 @@ protected:
     void save() override;
     void load() override;
     void help() override;
+
 private:
     ViewerPluginExternalConfigureWidget *mConfigWidget = nullptr;
 };

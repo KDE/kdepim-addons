@@ -26,7 +26,7 @@ void LanguageToolGrammarErrorTest::shouldParseJson_data()
     err.setColor(QColor(Qt::red));
     err.setSuggestions(QStringList() << QStringLiteral("ne suis pas"));
     err.setError(QStringLiteral("Voulez-vous écrire \"ne suis pas\" ?"));
-    //err.setOption(QStringLiteral("maj"));
+    // err.setOption(QStringLiteral("maj"));
     err.setRule(QStringLiteral("P_V_PAS"));
     err.setUrl(QStringLiteral("http://www.academie-francaise.fr/ne"));
     QTest::newRow("parse-error1") << QStringLiteral("parse-error1") << 1 << err;

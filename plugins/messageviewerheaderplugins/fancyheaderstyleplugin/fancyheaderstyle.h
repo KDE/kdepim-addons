@@ -10,7 +10,8 @@
 #include <MessageViewer/HeaderStyle>
 
 #include <headerstyle_util.h>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class HeaderStyleUtil;
 class FancyHeaderStyle : public HeaderStyle
 {

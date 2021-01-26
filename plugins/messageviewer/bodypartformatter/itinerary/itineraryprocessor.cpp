@@ -5,13 +5,13 @@
 */
 
 #include "itineraryprocessor.h"
-#include "itinerarymemento.h"
 #include "itinerary_debug.h"
+#include "itinerarymemento.h"
 
 #include <KItinerary/CreativeWork>
 #include <KItinerary/DocumentUtil>
-#include <KItinerary/ExtractorEngine>
 #include <KItinerary/Event>
+#include <KItinerary/ExtractorEngine>
 #include <KItinerary/JsonLdDocument>
 #include <KItinerary/Reservation>
 
@@ -102,7 +102,8 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         engine.setPass(pass.get());
     } else if (part.content()->contentType()->isHTMLText()) {
         engine.setData(part.content()->decodedContent(), ExtractorInput::Html);
-    } else if (part.content()->contentType()->mimeType() == "application/pdf" || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
+    } else if (part.content()->contentType()->mimeType() == "application/pdf"
+               || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
         engine.setData(part.content()->decodedContent(), ExtractorInput::Pdf);
     } else if (isCalendarContent(part.content())) {
@@ -115,7 +116,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
     }
 
     const auto data = engine.extract();
-    //qCDebug(ITINERARY_LOG).noquote() << QJsonDocument(data).toJson();
+    // qCDebug(ITINERARY_LOG).noquote() << QJsonDocument(data).toJson();
     auto decodedData = JsonLdDocument::fromJson(data);
 
     for (auto it = decodedData.begin(); it != decodedData.end(); ++it) {

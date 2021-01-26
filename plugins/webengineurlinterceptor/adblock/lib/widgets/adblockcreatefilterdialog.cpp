@@ -9,8 +9,8 @@
 
 #include <KLocalizedString>
 
-#include <KSharedConfig>
 #include <KConfigGroup>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 
@@ -85,7 +85,8 @@ void AdBlockCreateFilterDialog::initialize()
 {
     mUi->applyListElement->clear();
     for (int i = AdBlockBlockableItemsWidget::None + 1; i < AdBlockBlockableItemsWidget::MaxTypeElement; ++i) {
-        QListWidgetItem *item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)), mUi->applyListElement);
+        QListWidgetItem *item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)),
+                                                    mUi->applyListElement);
         item->setData(ElementValue, static_cast<AdBlockBlockableItemsWidget::TypeElement>(i));
         item->setCheckState(Qt::Unchecked);
         if (i == static_cast<int>(mCurrentType)) {
@@ -126,7 +127,8 @@ void AdBlockCreateFilterDialog::slotUpdateFilter()
     for (int i = 0; i < numberOfElement; ++i) {
         QListWidgetItem *item = mUi->applyListElement->item(i);
         if ((item->checkState() == Qt::Checked) && (item->flags() & Qt::ItemIsEnabled)) {
-            pattern += QLatin1Char(',') + AdBlockBlockableItemsWidget::elementType(static_cast<AdBlockBlockableItemsWidget::TypeElement>(item->data(ElementValue).toInt()));
+            pattern += QLatin1Char(',')
+                + AdBlockBlockableItemsWidget::elementType(static_cast<AdBlockBlockableItemsWidget::TypeElement>(item->data(ElementValue).toInt()));
         }
     }
 

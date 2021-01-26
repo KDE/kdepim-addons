@@ -14,25 +14,18 @@
 
 QDebug operator<<(QDebug dbg, const CalendarEvents::EventData &data)
 {
-    dbg.nospace() << data.title() << " (UID " << data.uid() << "), "
-                  << data.startDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss t"))
-                  << " - "
+    dbg.nospace() << data.title() << " (UID " << data.uid() << "), " << data.startDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss t")) << " - "
                   << data.endDateTime().toString(QStringLiteral("yyyy-MM-dd HH:mm:ss t"));
     return dbg;
 }
 
-namespace CalendarEvents {
+namespace CalendarEvents
+{
 bool operator==(const EventData &lhs, const EventData &rhs)
 {
-    return lhs.uid() == rhs.uid()
-           && lhs.type() == rhs.type()
-           && lhs.isAllDay() == rhs.isAllDay()
-           && lhs.isMinor() == rhs.isMinor()
-           && lhs.title() == rhs.title()
-           && lhs.startDateTime() == rhs.startDateTime()
-           && lhs.endDateTime() == rhs.endDateTime()
-           && lhs.description() == rhs.description()
-           && lhs.eventColor() == rhs.eventColor();
+    return lhs.uid() == rhs.uid() && lhs.type() == rhs.type() && lhs.isAllDay() == rhs.isAllDay() && lhs.isMinor() == rhs.isMinor()
+        && lhs.title() == rhs.title() && lhs.startDateTime() == rhs.startDateTime() && lhs.endDateTime() == rhs.endDateTime()
+        && lhs.description() == rhs.description() && lhs.eventColor() == rhs.eventColor();
 }
 
 bool operator<(const EventData &lhs, const EventData &rhs)
@@ -47,31 +40,32 @@ bool operator<(const EventData &lhs, const EventData &rhs)
 }
 }
 
-#define COMPARE(_actual, _expected) \
-    { \
-        bool ok = false; \
-        [&]() { \
-            QCOMPARE(_actual, _expected); \
-            ok = true; \
-        } (); \
-        if (!ok) { \
-            return false; \
-        } \
+#define COMPARE(_actual, _expected)                                                                                                                            \
+    {                                                                                                                                                          \
+        bool ok = false;                                                                                                                                       \
+        [&]() {                                                                                                                                                \
+            QCOMPARE(_actual, _expected);                                                                                                                      \
+            ok = true;                                                                                                                                         \
+        }();                                                                                                                                                   \
+        if (!ok) {                                                                                                                                             \
+            return false;                                                                                                                                      \
+        }                                                                                                                                                      \
     }
 
-#define VERIFY(_cond) \
-    { \
-        bool ok = false; \
-        [&]() { \
-            QVERIFY(_cond); \
-            ok = true; \
-        } (); \
-        if (!ok) { \
-            return false; \
-        } \
+#define VERIFY(_cond)                                                                                                                                          \
+    {                                                                                                                                                          \
+        bool ok = false;                                                                                                                                       \
+        [&]() {                                                                                                                                                \
+            QVERIFY(_cond);                                                                                                                                    \
+            ok = true;                                                                                                                                         \
+        }();                                                                                                                                                   \
+        if (!ok) {                                                                                                                                             \
+            return false;                                                                                                                                      \
+        }                                                                                                                                                      \
     }
 
-namespace TestUtils {
+namespace TestUtils
+{
 bool compareEventData(const CalendarEvents::EventData &actual, const CalendarEvents::EventData &expected)
 {
     COMPARE(actual.title(), expected.title());

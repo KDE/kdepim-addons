@@ -7,22 +7,22 @@
 #ifndef EMAILLINEEDIT_H
 #define EMAILLINEEDIT_H
 
-#include <KSieveUi/AbstractSelectEmailLineEdit>
 #include <AkonadiCore/ServerManager>
 #include <KContacts/Addressee>
+#include <KSieveUi/AbstractSelectEmailLineEdit>
 class QLineEdit;
 class QToolButton;
 class EmailLineEdit : public KSieveUi::AbstractSelectEmailLineEdit
 {
     Q_OBJECT
 public:
-    explicit EmailLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {
-    });
+    explicit EmailLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~EmailLineEdit() override;
 
     void setText(const QString &str) override;
     QString text() const override;
     bool isValid() const override;
+
 private:
     void insertAddresses(const KContacts::Addressee::List &list);
     void slotTextChanged();

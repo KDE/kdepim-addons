@@ -7,18 +7,18 @@
 #include "viewerpluginexternalconfigurewidget.h"
 #include "externalscriptplugin_debug.h"
 #include "viewerpluginexternaleditdialog.h"
-#include <QVBoxLayout>
-#include <QStandardPaths>
+#include <KConfigGroup>
+#include <KDesktopFile>
 #include <KLocalizedString>
-#include <QLabel>
-#include <QListWidget>
-#include <QPushButton>
 #include <KMessageBox>
-#include <QPointer>
 #include <QFile>
 #include <QFileInfo>
-#include <KDesktopFile>
-#include <KConfigGroup>
+#include <QLabel>
+#include <QListWidget>
+#include <QPointer>
+#include <QPushButton>
+#include <QStandardPaths>
+#include <QVBoxLayout>
 
 class ViewerPluginExternalScriptItem : public QListWidgetItem
 {
@@ -27,6 +27,7 @@ public:
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo);
     ViewerPluginExternalScriptInfo scriptInfo() const;
+
 private:
     ViewerPluginExternalScriptInfo mScriptInfo;
 };
@@ -99,7 +100,8 @@ void ViewerPluginExternalConfigureWidget::slotRemoveScript()
     QListWidgetItem *item = mListExternal->currentItem();
     if (item) {
         auto *scriptItem = static_cast<ViewerPluginExternalScriptItem *>(item);
-        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script \"%1\"?", item->text()), i18n("Remove External Script"))) {
+        if (KMessageBox::Yes
+            == KMessageBox::warningYesNo(this, i18n("Do you want to remove this script \"%1\"?", item->text()), i18n("Remove External Script"))) {
             mFilesToRemove.append(scriptItem->scriptInfo().fileName());
             delete mListExternal->takeItem(mListExternal->currentRow());
         }
@@ -134,7 +136,8 @@ void ViewerPluginExternalConfigureWidget::slotAddScript()
 void ViewerPluginExternalConfigureWidget::load()
 {
     ViewerPluginExternalScriptsLoadJob job;
-    const QStringList lst = QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
+    const QStringList lst =
+        QStandardPaths::locateAll(QStandardPaths::GenericDataLocation, QStringLiteral("messageviewerplugins/"), QStandardPaths::LocateDirectory);
     job.setExternalScriptsDirectories(lst);
     job.start();
     const QVector<ViewerPluginExternalScriptInfo> scriptInfos = job.scriptInfos();

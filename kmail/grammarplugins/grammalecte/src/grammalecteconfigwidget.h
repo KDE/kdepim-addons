@@ -7,9 +7,9 @@
 #ifndef GRAMMALECTECONFIGWIDGET_H
 #define GRAMMALECTECONFIGWIDGET_H
 
-#include <QWidget>
-#include "libkmailgrammalecte_export.h"
 #include "grammalectegenerateconfigoptionjob.h"
+#include "libkmailgrammalecte_export.h"
+#include <QWidget>
 class QCheckBox;
 class KUrlRequester;
 class QStackedWidget;
@@ -22,6 +22,7 @@ public:
     ~GrammalecteConfigWidget() override;
     void loadSettings();
     void saveSettings();
+
 private:
     Q_DISABLE_COPY(GrammalecteConfigWidget)
     void loadGrammarSettings();

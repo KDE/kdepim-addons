@@ -3,14 +3,14 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
+#include "quicktextwidget.h"
 #include "quicktextmanager.h"
 #include "quicktexttreewidget.h"
-#include "quicktextwidget.h"
 #include <KLocalizedString>
-#include <QHBoxLayout>
+#include <KMessageBox>
 #include <MailCommon/SnippetWidget>
 #include <MailCommon/SnippetsModel>
-#include <KMessageBox>
+#include <QHBoxLayout>
 #include <QStackedWidget>
 
 QuickTextWidget::QuickTextWidget(QWidget *parent)
@@ -41,8 +41,7 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     connect(mTreeWidget, &QuicktextTreeWidget::editSnippet, this, &QuickTextWidget::editSnippet);
     connect(mTreeWidget, &QuicktextTreeWidget::addSnippetGroup, this, &QuickTextWidget::addSnippetGroup);
     connect(mTreeWidget, &QuicktextTreeWidget::editSnippetGroup, this, &QuickTextWidget::editSnippetGroup);
-    connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged,
-            this, [this]() {
+    connect(mSnippetsManager->selectionModel(), &QItemSelectionModel::selectionChanged, this, [this]() {
         save();
         if (mSnippetsManager->selectionModel()->selectedIndexes().isEmpty()) {
             mStackedWidget->setCurrentWidget(mEmptyWidget);
@@ -141,9 +140,7 @@ void QuickTextWidget::editSnippet()
     mSnippetWidget->setText(mCurrentGroupIndex.data(MailCommon::SnippetsModel::TextRole).toString());
     mSnippetWidget->setKeyword(mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeywordRole).toString());
     mSnippetWidget->setAttachment(mCurrentGroupIndex.data(MailCommon::SnippetsModel::AttachmentRole).toString());
-    mSnippetWidget->setKeySequence(
-        QKeySequence::fromString(
-            mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeySequenceRole).toString()));
+    mSnippetWidget->setKeySequence(QKeySequence::fromString(mCurrentGroupIndex.data(MailCommon::SnippetsModel::KeySequenceRole).toString()));
     mSnippetWidget->setWasChanged(false);
 }
 

@@ -5,14 +5,14 @@
 */
 
 #include "grammalecteinterface.h"
-#include "grammalecteresultwidget.h"
 #include "grammalecteplugin_debug.h"
+#include "grammalecteresultwidget.h"
 
 #include <KPIMTextEdit/RichTextComposer>
 
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 #include <QHBoxLayout>
 #include <QTextBlock>

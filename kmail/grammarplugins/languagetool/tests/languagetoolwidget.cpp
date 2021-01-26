@@ -5,20 +5,20 @@
 */
 
 #include "languagetoolwidget.h"
-#include "languagetoolresultjob.h"
-#include "languagetoolmanager.h"
 #include "languagetoolgetlistoflanguagejob.h"
+#include "languagetoolmanager.h"
+#include "languagetoolresultjob.h"
 
 #include "languagetoolparser.h"
-#include <QVBoxLayout>
-#include <QTextEdit>
-#include <QPushButton>
-#include <QDebug>
-#include <QJsonDocument>
-#include <QTextBlock>
-#include <QNetworkAccessManager>
-#include <QJsonArray>
 #include "languagetoolresultwidget.h"
+#include <QDebug>
+#include <QJsonArray>
+#include <QJsonDocument>
+#include <QNetworkAccessManager>
+#include <QPushButton>
+#include <QTextBlock>
+#include <QTextEdit>
+#include <QVBoxLayout>
 
 LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     : QWidget(parent)

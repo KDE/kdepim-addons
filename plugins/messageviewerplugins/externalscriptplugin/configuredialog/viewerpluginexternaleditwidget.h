@@ -7,8 +7,8 @@
 #ifndef VIEWERPLUGINEXTERNALEDITWIDGET_H
 #define VIEWERPLUGINEXTERNALEDITWIDGET_H
 
-#include <QWidget>
 #include "../viewerpluginexternalscriptinfo.h"
+#include <QWidget>
 class QLineEdit;
 class KUrlRequester;
 class ViewerPluginExternalEditWidget : public QWidget

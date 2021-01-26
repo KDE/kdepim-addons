@@ -6,10 +6,10 @@
 
 #include "markdowncreateimagewidget.h"
 #include <KLocalizedString>
-#include <QFormLayout>
-#include <QLineEdit>
 #include <QCheckBox>
+#include <QFormLayout>
 #include <QLabel>
+#include <QLineEdit>
 #include <QSpinBox>
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)

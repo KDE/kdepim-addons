@@ -14,7 +14,8 @@
 #include <QComboBox>
 #include <QLabel>
 #include <QVBoxLayout>
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "ShortUrl";
 }
 InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)

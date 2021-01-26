@@ -9,7 +9,6 @@
 
 #include <QObject>
 
-
 class QAbstractItemModel;
 class QItemSelectionModel;
 class QuicktextManager : public QObject

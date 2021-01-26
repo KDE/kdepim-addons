@@ -10,7 +10,8 @@
 
 #include <QDialog>
 class QPushButton;
-namespace PimCommon {
+namespace PimCommon
+{
 class AddresseeLineEdit;
 }
 
@@ -28,6 +29,7 @@ public:
 
     Q_REQUIRED_RESULT QString delegate() const;
     Q_REQUIRED_RESULT bool rsvp() const;
+
 private:
     void slotTextChanged(const QString &text);
     PimCommon::AddresseeLineEdit *mDelegate = nullptr;

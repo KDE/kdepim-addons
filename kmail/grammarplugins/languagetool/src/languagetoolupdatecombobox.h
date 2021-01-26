@@ -7,8 +7,8 @@
 #ifndef LANGUAGETOOLUPDATECOMBOBOX_H
 #define LANGUAGETOOLUPDATECOMBOBOX_H
 
-#include <QObject>
 #include "liblanguagetool_private_export.h"
+#include <QObject>
 
 class LanguageToolComboBox;
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolUpdateComboBox : public QObject

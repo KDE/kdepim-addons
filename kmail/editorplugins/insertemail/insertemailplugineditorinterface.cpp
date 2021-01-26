@@ -6,9 +6,9 @@
 
 #include "insertemailplugineditorinterface.h"
 #include "selectmaildialog.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 InsertEmailPluginEditorInterface::InsertEmailPluginEditorInterface(QObject *parent)

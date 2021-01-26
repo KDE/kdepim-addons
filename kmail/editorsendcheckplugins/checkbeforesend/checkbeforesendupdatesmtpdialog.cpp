@@ -6,10 +6,10 @@
 
 #include "checkbeforesendupdatesmtpdialog.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <QCheckBox>
 #include <QDialogButtonBox>
 #include <QLabel>
-#include <QCheckBox>
+#include <QVBoxLayout>
 
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)

@@ -7,11 +7,12 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H
 #define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREDIALOG_H
 
+#include "adblocklib_export.h"
 #include <PimCommon/ConfigurePluginDialog>
 #include <QWidget>
-#include "adblocklib_export.h"
 
-namespace AdBlock {
+namespace AdBlock
+{
 class AdblockPluginUrlInterceptorConfigureWidget;
 class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureDialog : public PimCommon::ConfigurePluginDialog
 {
@@ -26,6 +27,7 @@ protected:
     void load() override;
     void reset() override;
     void help() override;
+
 private:
     AdblockPluginUrlInterceptorConfigureWidget *mAdblockConfigureWidget = nullptr;
 };

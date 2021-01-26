@@ -4,12 +4,12 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "longheaderstyleinterface.h"
 #include "longheaderstyleplugin.h"
+#include "longheaderstyleinterface.h"
 #include <MessageViewer/PlainHeaderStyle>
 
-#include <MessageViewer/RichHeaderStrategy>
 #include <KPluginFactory>
+#include <MessageViewer/RichHeaderStrategy>
 
 using namespace MessageViewer;
 

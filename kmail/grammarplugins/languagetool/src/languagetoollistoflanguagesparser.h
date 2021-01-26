@@ -7,8 +7,8 @@
 #ifndef LANGUAGETOOLLISTOFLANGUAGESPARSER_H
 #define LANGUAGETOOLLISTOFLANGUAGESPARSER_H
 
-#include "liblanguagetool_private_export.h"
 #include "languageinfo.h"
+#include "liblanguagetool_private_export.h"
 #include <QVector>
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolListOfLanguagesParser
 {

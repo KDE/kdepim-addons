@@ -25,7 +25,7 @@ void CheckDuplicateEmailsJob::start()
     QMap<QString, int> results;
     for (const QString &email : qAsConst(mEmails)) {
         QString tname, temail;
-        KEmailAddress::extractEmailAddressAndName(email, temail, tname);    // ignore return value
+        KEmailAddress::extractEmailAddressAndName(email, temail, tname); // ignore return value
 
         if (!temail.isEmpty()) {
             const int val = results.value(temail, 0);

@@ -9,9 +9,9 @@
 
 #include "testobjecttreesource.h"
 
-#include <MimeTreeParser/ObjectTreeParser>
 #include <MessageViewer/CSSHelperBase>
 #include <MessageViewer/FileHtmlWriter>
+#include <MimeTreeParser/ObjectTreeParser>
 
 #include <KMime/Message>
 #include <QDir>
@@ -25,8 +25,7 @@
 #ifndef Q_OS_WIN
 void initLocale()
 {
-    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QLatin1String(
-                                            "/.qttest")).constData(), 1);
+    setenv("KDEHOME", QFile::encodeName(QDir::homePath() + QLatin1String("/.qttest")).constData(), 1);
     setenv("LC_ALL", "en_US.utf-8", 1);
     setenv("TZ", "UTC", 1);
     QStandardPaths::setTestModeEnabled(true);
@@ -64,8 +63,9 @@ private Q_SLOTS:
             if (!QFile::exists(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))) {
                 continue;
             }
-            QTest::newRow(file.toLatin1().constData()) << QString(dir.path() + QLatin1Char('/') +  file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
-                                                       << QString(file + QStringLiteral(".out"));
+            QTest::newRow(file.toLatin1().constData())
+                << QString(dir.path() + QLatin1Char('/') + file) << QString(dir.path() + QLatin1Char('/') + file + QStringLiteral(".html"))
+                << QString(file + QStringLiteral(".out"));
         }
     }
 
@@ -95,9 +95,10 @@ private Q_SLOTS:
         otp.parseObjectTree(msg.data());
 
         fileWriter.begin();
-        fileWriter.write(QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
-                                        "<html>\n"
-                                        "<body>\n"));
+        fileWriter.write(
+            QStringLiteral("<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://www.w3.org/TR/html4/loose.dtd\">\n"
+                           "<html>\n"
+                           "<body>\n"));
         testSource.render(otp.parsedPart(), false);
         fileWriter.write(QStringLiteral("</body></html>"));
         fileWriter.end();

@@ -7,10 +7,11 @@
 #ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
 #define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
 
-#include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 #include "adblocklib_export.h"
+#include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
 
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockSettingWidget;
 class ADBLOCKLIB_EXPORT AdblockPluginUrlInterceptorConfigureWidget : public WebEngineViewer::NetworkPluginUrlInterceptorConfigureWidget
 {

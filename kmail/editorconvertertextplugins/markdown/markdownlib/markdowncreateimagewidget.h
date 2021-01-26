@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCREATEIMAGEWIDGET_H
 #define MARKDOWNCREATEIMAGEWIDGET_H
 
-#include <QWidget>
 #include "markdownlib_private_export.h"
+#include <QWidget>
 class QLineEdit;
 class QCheckBox;
 class QLabel;

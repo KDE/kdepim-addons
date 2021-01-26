@@ -24,7 +24,7 @@ QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
     const QVariantList list = array.toVariantList();
     lst.reserve(list.count());
     for (const QVariant &v : list) {
-        //qDebug() << " v" << v.toString();
+        // qDebug() << " v" << v.toString();
         lst.append(v.toString());
     }
     return lst;
@@ -38,10 +38,10 @@ QColor GrammalecteGrammarError::parseColor(const QJsonObject &obj)
         return col;
     }
     if (array.count() == 3) {
-        //const QVariantList list = array.toVariantList();
-//        for (const QVariant &v : list) {
-//            qDebug() << " v" << v.toInt();
-//        }
+        // const QVariantList list = array.toVariantList();
+        //        for (const QVariant &v : list) {
+        //            qDebug() << " v" << v.toInt();
+        //        }
         col = QColor(array.at(0).toInt(), array.at(1).toInt(), array.at(2).toInt());
     } else {
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "Parsing color: Array is not correct:" << array;

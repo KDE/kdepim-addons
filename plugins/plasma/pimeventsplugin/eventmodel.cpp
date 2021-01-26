@@ -10,13 +10,13 @@
 
 #include <Akonadi/Calendar/IncidenceChanger>
 
-#include <AkonadiCore/Monitor>
-#include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/AttributeFactory>
+#include <AkonadiCore/CollectionColorAttribute>
 #include <AkonadiCore/CollectionFetchScope>
 #include <AkonadiCore/EntityDisplayAttribute>
-#include <AkonadiCore/CollectionColorAttribute>
-#include <AkonadiCore/AttributeFactory>
 #include <AkonadiCore/ItemFetchJob>
+#include <AkonadiCore/ItemFetchScope>
+#include <AkonadiCore/Monitor>
 
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)
@@ -41,15 +41,13 @@ void EventModel::createMonitor()
     mMonitor->collectionFetchScope().fetchAttribute<Akonadi::CollectionColorAttribute>();
     mMonitor->fetchCollection(true);
 
-    connect(mMonitor, &Akonadi::Monitor::itemAdded,
-            this, [this](const Akonadi::Item &item) {
+    connect(mMonitor, &Akonadi::Monitor::itemAdded, this, [this](const Akonadi::Item &item) {
         // This is super-ugly, but the only way how to insert into CalendarBase
         // without having direct access to CalendarBasePrivate.
         // changeId is luckily ignored by CalendarBase.
         Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
-    connect(mMonitor, &Akonadi::Monitor::itemChanged,
-            this, [this](const Akonadi::Item &item) {
+    connect(mMonitor, &Akonadi::Monitor::itemChanged, this, [this](const Akonadi::Item &item) {
         if (!item.hasPayload<KCalendarCore::Incidence::Ptr>()) {
             qCDebug(PIMEVENTSPLUGIN_LOG) << "Item" << item.id() << "has no payload!";
             return;
@@ -57,7 +55,7 @@ void EventModel::createMonitor()
 
         auto incidence = item.payload<KCalendarCore::Incidence::Ptr>();
         if (!incidence) {
-            return;         // HUH?!
+            return; // HUH?!
         }
         const KCalendarCore::Incidence::Ptr oldIncidence = this->incidence(incidence->instanceIdentifier());
         if (!oldIncidence) {
@@ -67,21 +65,18 @@ void EventModel::createMonitor()
 
         // Unfortunately the plasma applet does not handle event moves
         // so we have to simulate via remove+add
-        if (oldIncidence->allDay() != incidence->allDay()
-            || oldIncidence->dtStart() != incidence->dtStart()
+        if (oldIncidence->allDay() != incidence->allDay() || oldIncidence->dtStart() != incidence->dtStart()
             || oldIncidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd) != incidence->dateTime(KCalendarCore::IncidenceBase::RoleEnd)) {
-            Q_EMIT incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+            Q_EMIT incidenceChanger()->deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
             Q_EMIT incidenceChanger()->createFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         } else {
             Q_EMIT incidenceChanger()->modifyFinished(0, item, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
         }
     });
-    connect(mMonitor, &Akonadi::Monitor::itemRemoved,
-            this, [this](const Akonadi::Item &item) {
-        Q_EMIT incidenceChanger()->deleteFinished(0, { item.id() }, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
+    connect(mMonitor, &Akonadi::Monitor::itemRemoved, this, [this](const Akonadi::Item &item) {
+        Q_EMIT incidenceChanger()->deleteFinished(0, {item.id()}, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
     });
-    connect(mMonitor, &Akonadi::Monitor::collectionRemoved,
-            this, &EventModel::removeCalendar);
+    connect(mMonitor, &Akonadi::Monitor::collectionRemoved, this, &EventModel::removeCalendar);
 }
 
 void EventModel::addCalendar(const Akonadi::Collection &col)
@@ -128,10 +123,8 @@ void EventModel::populateCollection(const Akonadi::Collection &col)
     job->fetchScope().setAncestorRetrieval(Akonadi::ItemFetchScope::Parent);
     job->setDeliveryOption(Akonadi::ItemFetchJob::EmitItemsInBatches);
     mFetchJobs.insert(col.id(), job);
-    connect(job, &Akonadi::ItemFetchJob::itemsReceived,
-            this, &EventModel::onItemsReceived);
-    connect(job, &Akonadi::ItemFetchJob::result,
-            job, [this, col](KJob *job) {
+    connect(job, &Akonadi::ItemFetchJob::itemsReceived, this, &EventModel::onItemsReceived);
+    connect(job, &Akonadi::ItemFetchJob::result, job, [this, col](KJob *job) {
         mFetchJobs.remove(col.id());
         auto fetch = qobject_cast<Akonadi::ItemFetchJob *>(job);
         qCDebug(PIMEVENTSPLUGIN_LOG) << "Received" << fetch->count() << "events for collection" << col.id();
@@ -165,8 +158,7 @@ void EventModel::removeCollection(const Akonadi::Collection &col)
 
     QVector<Akonadi::Item::Id> ids;
     ids.reserve(items.size());
-    std::transform(items.cbegin(), items.cend(), std::back_inserter(ids),
-                   std::mem_fn(&Akonadi::Item::id));
+    std::transform(items.cbegin(), items.cend(), std::back_inserter(ids), std::mem_fn(&Akonadi::Item::id));
 
     Q_EMIT incidenceChanger()->deleteFinished(0, ids, Akonadi::IncidenceChanger::ResultCodeSuccess, QString());
 }

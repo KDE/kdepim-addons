@@ -197,7 +197,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
     for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const KContacts::Addressee address = item.payload<KContacts::Addressee>();
-            //Test Birthday
+            // Test Birthday
             if (address.birthday().date().isValid()) {
                 if (newContact.birthday().date().isValid()) {
                     if (newContact.birthday().date() != address.birthday().date()) {
@@ -208,7 +208,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
                 }
             }
 
-            //Test Geo
+            // Test Geo
             const KContacts::Geo geo = address.geo();
             if (geo.isValid()) {
                 if (newContact.geo().isValid()) {
@@ -230,7 +230,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
                     newContact.setPhoto(address.photo());
                 }
             }
-            //Test Logo
+            // Test Logo
             const KContacts::Picture logo = address.logo();
             if (!logo.isEmpty()) {
                 if (!newContact.logo().isEmpty()) {
@@ -330,7 +330,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
             checkCustomValue(address, QStringLiteral("X-AssistantsName"), newContact, result, Assistant);
             // Test SpousesName
             checkCustomValue(address, QStringLiteral("X-SpousesName"), newContact, result, PartnerName);
-            //Test Anniversary
+            // Test Anniversary
             checkCustomValue(address, QStringLiteral("X-Anniversary"), newContact, result, Anniversary);
         }
     }
@@ -338,7 +338,11 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
     return result;
 }
 
-void MergeContacts::checkCustomValue(const KContacts::Addressee &address, const QString &variable, KContacts::Addressee &newContact, MergeContacts::ConflictInformations &result, MergeContacts::ConflictInformation conflict)
+void MergeContacts::checkCustomValue(const KContacts::Addressee &address,
+                                     const QString &variable,
+                                     KContacts::Addressee &newContact,
+                                     MergeContacts::ConflictInformations &result,
+                                     MergeContacts::ConflictInformation conflict)
 {
     const QString value = address.custom(QStringLiteral("KADDRESSBOOK"), variable);
     if (!value.isEmpty()) {

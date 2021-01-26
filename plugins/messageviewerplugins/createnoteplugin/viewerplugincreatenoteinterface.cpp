@@ -5,17 +5,17 @@
 */
 
 #include "viewerplugincreatenoteinterface.h"
-#include "noteedit.h"
 #include "createnotejob.h"
 #include "createnoteplugin_debug.h"
-#include <KLocalizedString>
+#include "noteedit.h"
 #include <KActionCollection>
+#include <KLocalizedString>
 
-#include <QLayout>
-#include <QIcon>
-#include <QAction>
 #include <ItemFetchJob>
 #include <ItemFetchScope>
+#include <QAction>
+#include <QIcon>
+#include <QLayout>
 
 using namespace MessageViewer;
 
@@ -32,7 +32,7 @@ ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface()
 void ViewerPluginCreatenoteInterface::setText(const QString &text)
 {
     Q_UNUSED(text)
-    //Nothing
+    // Nothing
 }
 
 QList<QAction *> ViewerPluginCreatenoteInterface::actions() const

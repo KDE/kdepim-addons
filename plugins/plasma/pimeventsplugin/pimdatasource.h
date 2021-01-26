@@ -10,7 +10,8 @@
 
 #include <KCalendarCore/Incidence>
 
-namespace KCalendarCore {
+namespace KCalendarCore
+{
 class Calendar;
 }
 

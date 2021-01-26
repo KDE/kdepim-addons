@@ -11,7 +11,6 @@
 #include <QDate>
 #include <QSharedData>
 
-
 class QCalendarSystemPrivate : public QSharedData
 {
 public:
@@ -46,7 +45,7 @@ public:
     QCalendarSystem::CalendarSystem m_calendarSystem;
 };
 
-static const char julianMonths[] = { 0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31 };
+static const char julianMonths[] = {0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31};
 
 QCalendarSystemPrivate::QCalendarSystemPrivate(QCalendarSystem::CalendarSystem calendar)
     : QSharedData()
@@ -67,27 +66,27 @@ qint64 QCalendarSystemPrivate::epoch() const
 {
     switch (calendarSystem()) {
     case QCalendarSystem::GregorianCalendar:
-        return 1721426;  //  0001-01-01 Gregorian
+        return 1721426; //  0001-01-01 Gregorian
     case QCalendarSystem::CopticCalendar:
-        return 1825030;  //  0001-01-01 ==  0284-08-29 Gregorian
+        return 1825030; //  0001-01-01 ==  0284-08-29 Gregorian
     case QCalendarSystem::EthiopicCalendar:
-        return 1724221;  //  0001-01-01 ==  0008-08-29 Gregorian
+        return 1724221; //  0001-01-01 ==  0008-08-29 Gregorian
     case QCalendarSystem::EthiopicAmeteAlemCalendar:
-        return -284655;  //  0001-01-01 == -5492-08-29 Gregorian
+        return -284655; //  0001-01-01 == -5492-08-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
-        return 1749994;  //  0000-01-01 == 0078-03-22 Gregorian
+        return 1749994; //  0000-01-01 == 0078-03-22 Gregorian
     case QCalendarSystem::IslamicCivilCalendar:
-        return 1948440;  //  0001-01-01 == 0622-07-19 Gregorian
+        return 1948440; //  0001-01-01 == 0622-07-19 Gregorian
     case QCalendarSystem::ISO8601Calendar:
-        return 1721060;  //  0000-01-01 Gregorian
+        return 1721060; //  0000-01-01 Gregorian
     case QCalendarSystem::JapaneseCalendar:
-        return 1721426;  //  0001-01-01 Gregorian
+        return 1721426; //  0001-01-01 Gregorian
     case QCalendarSystem::JulianCalendar:
-        return 1721424;  //  0001-01-01 ==  Gregorian
+        return 1721424; //  0001-01-01 ==  Gregorian
     case QCalendarSystem::ROCCalendar:
-        return 2419403;  //  0001-01-01 ==  1912-01-01 Gregorian
+        return 2419403; //  0001-01-01 ==  1912-01-01 Gregorian
     case QCalendarSystem::ThaiCalendar:
-        return 1522734;  //  0000-01-01 == -0544-01-01 Gregorian
+        return 1522734; //  0000-01-01 == -0544-01-01 Gregorian
     default:
         return 0;
     }
@@ -97,27 +96,27 @@ qint64 QCalendarSystemPrivate::earliestValidDate() const
 {
     switch (calendarSystem()) {
     case QCalendarSystem::GregorianCalendar:
-        return -31738;   // -4800-01-01 Gregorian
+        return -31738; // -4800-01-01 Gregorian
     case QCalendarSystem::CopticCalendar:
-        return 1825030;  //  0001-01-01 == 0284-08-29 Gregorian
+        return 1825030; //  0001-01-01 == 0284-08-29 Gregorian
     case QCalendarSystem::EthiopicCalendar:
-        return 1724221;  //  0001-01-01 == 0008-08-29 Gregorian
+        return 1724221; //  0001-01-01 == 0008-08-29 Gregorian
     case QCalendarSystem::EthiopicAmeteAlemCalendar:
-        return -284655;  //  0001-01-01 == -5492-08-29 Gregorian
+        return -284655; //  0001-01-01 == -5492-08-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
-        return 1749994;  //  0000-01-01 == 0078-03-22 Gregorian
+        return 1749994; //  0000-01-01 == 0078-03-22 Gregorian
     case QCalendarSystem::IslamicCivilCalendar:
-        return 1948440;  //  0001-01-01 == 0622-07-19 Gregorian
+        return 1948440; //  0001-01-01 == 0622-07-19 Gregorian
     case QCalendarSystem::ISO8601Calendar:
-        return 1721060;  //  0000-01-01 Gregorian
+        return 1721060; //  0000-01-01 Gregorian
     case QCalendarSystem::JapaneseCalendar:
-        return -31738;   // -4800-01-01 Gregorian
+        return -31738; // -4800-01-01 Gregorian
     case QCalendarSystem::JulianCalendar:
-        return -31776;   // -4800-01-01 Julian
+        return -31776; // -4800-01-01 Julian
     case QCalendarSystem::ROCCalendar:
-        return 2419403;  //  0001-01-01 == 1912-01-01 Gregorian
+        return 2419403; //  0001-01-01 == 1912-01-01 Gregorian
     case QCalendarSystem::ThaiCalendar:
-        return 1522734;  //  0000-01-01 == -0544-01-01 Gregorian
+        return 1522734; //  0000-01-01 == -0544-01-01 Gregorian
     default:
         return 0;
     }
@@ -143,27 +142,27 @@ qint64 QCalendarSystemPrivate::latestValidDate() const
 {
     switch (calendarSystem()) {
     case QCalendarSystem::GregorianCalendar:
-        return 5373484;  //  9999-12-31 Gregorian
+        return 5373484; //  9999-12-31 Gregorian
     case QCalendarSystem::CopticCalendar:
-        return 5477164;  //  9999-13-05 == 10283-11-12 Gregorian
+        return 5477164; //  9999-13-05 == 10283-11-12 Gregorian
     case QCalendarSystem::EthiopicCalendar:
-        return 5376721;  //  9999-13-05 == 10008-11-10 Gregorian
+        return 5376721; //  9999-13-05 == 10008-11-10 Gregorian
     case QCalendarSystem::EthiopicAmeteAlemCalendar:
-        return 3367114;  //  9999-13-05 ==  4506-09-29 Gregorian
+        return 3367114; //  9999-13-05 ==  4506-09-29 Gregorian
     case QCalendarSystem::IndianNationalCalendar:
-        return 5402054;  //  9999-12-30 == 10078-03-21 Gregorian
+        return 5402054; //  9999-12-30 == 10078-03-21 Gregorian
     case QCalendarSystem::IslamicCivilCalendar:
-        return 5491751;  //  9999-12-29 == 10323-10-21 Gregorian
+        return 5491751; //  9999-12-29 == 10323-10-21 Gregorian
     case QCalendarSystem::ISO8601Calendar:
-        return 5373484;  //  9999-12-31 Gregorian
+        return 5373484; //  9999-12-31 Gregorian
     case QCalendarSystem::JapaneseCalendar:
-        return 5373484;  //  9999-12-31 Gregorian
+        return 5373484; //  9999-12-31 Gregorian
     case QCalendarSystem::JulianCalendar:
-        return 5373557;  //  9999-12-31 == 10000-03-13 Gregorian
+        return 5373557; //  9999-12-31 == 10000-03-13 Gregorian
     case QCalendarSystem::ROCCalendar:
-        return 6071462;  //  9999-12-31 == 11910-12-31 Gregorian
+        return 6071462; //  9999-12-31 == 11910-12-31 Gregorian
     case QCalendarSystem::ThaiCalendar:
-        return 5175158;  //  9999-12-31 ==  9456-12-31 Gregorian
+        return 5175158; //  9999-12-31 ==  9456-12-31 Gregorian
     default:
         return 0;
     }
@@ -181,9 +180,9 @@ int QCalendarSystemPrivate::yearOffset() const
 {
     switch (calendarSystem()) {
     case QCalendarSystem::ROCCalendar:
-        return 1911;  // 0001-01-01 == 1912-01-01 Gregorian
+        return 1911; // 0001-01-01 == 1912-01-01 Gregorian
     case QCalendarSystem::ThaiCalendar:
-        return -543;  // 0000-01-01 == -544-01-01 Gregorian
+        return -543; // 0000-01-01 == -544-01-01 Gregorian
     default:
         return 0;
     }
@@ -203,7 +202,7 @@ int QCalendarSystemPrivate::maxMonthsInYear() const
 
 int QCalendarSystemPrivate::monthsInYear(int year) const
 {
-    //year = year + yearOffset();
+    // year = year + yearOffset();
     Q_UNUSED(year)
 
     switch (calendarSystem()) {
@@ -377,8 +376,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
     case QCalendarSystem::ISO8601Calendar:
     case QCalendarSystem::JapaneseCalendar:
     case QCalendarSystem::ROCCalendar:
-    case QCalendarSystem::ThaiCalendar:
-    {
+    case QCalendarSystem::ThaiCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
         // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
         qint64 a = jd + 32044;
@@ -395,8 +393,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
 
     case QCalendarSystem::CopticCalendar:
     case QCalendarSystem::EthiopicCalendar:
-    case QCalendarSystem::EthiopicAmeteAlemCalendar:
-    {
+    case QCalendarSystem::EthiopicAmeteAlemCalendar: {
         // Formula derived from first principles by John Layt
         qint64 s = jd - (epoch() - 365);
         qint64 l = s / 1461;
@@ -407,8 +404,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         break;
     }
 
-    case QCalendarSystem::IndianNationalCalendar:
-    {
+    case QCalendarSystem::IndianNationalCalendar: {
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section 12.94 pp 605-606, US Naval Observatory
         // Originally from the "Report of the Calendar Reform Committee" 1955, Indian Government
@@ -425,8 +421,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         break;
     }
 
-    case QCalendarSystem::IslamicCivilCalendar:
-    {
+    case QCalendarSystem::IslamicCivilCalendar: {
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section ??? pp ???, US Naval Observatory
         // Derived from Fliegel & Van Flandern 1968
@@ -441,8 +436,7 @@ void QCalendarSystemPrivate::julianDayToDate(qint64 jd, int *year, int *month, i
         break;
     }
 
-    case QCalendarSystem::JulianCalendar:
-    {
+    case QCalendarSystem::JulianCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
         // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
         qint64 b = 0;
@@ -492,20 +486,13 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
     case QCalendarSystem::ISO8601Calendar:
     case QCalendarSystem::JapaneseCalendar:
     case QCalendarSystem::ROCCalendar:
-    case QCalendarSystem::ThaiCalendar:
-    {
+    case QCalendarSystem::ThaiCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
         // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day
-             +(((153 * m) + 2) / 5)
-             +(365 * year)
-             +(year / 4)
-             -(year / 100)
-             +(year / 400)
-             -32045;
+        jd = day + (((153 * m) + 2) / 5) + (365 * year) + (year / 4) - (year / 100) + (year / 400) - 32045;
         break;
     }
 
@@ -513,52 +500,31 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
     case QCalendarSystem::EthiopicCalendar:
     case QCalendarSystem::EthiopicAmeteAlemCalendar:
         // Formula derived from first principles by John Layt
-        jd = epoch() - 1
-             +((year - 1) * 365)
-             +(year / 4)
-             +((month - 1) * 30)
-             +day;
+        jd = epoch() - 1 + ((year - 1) * 365) + (year / 4) + ((month - 1) * 30) + day;
         break;
 
     case QCalendarSystem::IndianNationalCalendar:
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section 12.94 pp 605-606, US Naval Observatory
         // Originally from the "Report of the Calendar Reform Committee" 1955, Indian Government
-        jd = 365 * year
-             +(year + 78 - 1 / month) / 4
-             +31 * month
-             -(month + 9) / 11
-             -(month / 7) * (month - 7)
-             -(3 * ((year  + 78 - 1 / month) / 100 + 1)) / 4
-             +day
-             +1749579;
+        jd = 365 * year + (year + 78 - 1 / month) / 4 + 31 * month - (month + 9) / 11 - (month / 7) * (month - 7)
+            - (3 * ((year + 78 - 1 / month) / 100 + 1)) / 4 + day + 1749579;
         break;
 
     case QCalendarSystem::IslamicCivilCalendar:
         // Formula from the "Explanatory Supplement to the Astronomical Almanac"
         // Revised Edition 2006 section ??? pp ???, US Naval Observatory
         // Derived from Fliegel & Van Flandern 1968
-        jd = (3 + (11 * year)) / 30
-             +354 * year
-             +30 * month
-             -(month - 1) / 2
-             +day
-             +epoch()
-             -385;
+        jd = (3 + (11 * year)) / 30 + 354 * year + 30 * month - (month - 1) / 2 + day + epoch() - 385;
         break;
 
-    case QCalendarSystem::JulianCalendar:
-    {
+    case QCalendarSystem::JulianCalendar: {
         // Formula from The Calendar FAQ by Claus Tondering
         // http://www.tondering.dk/claus/cal/node3.html#SECTION003161000000000000000
         int a = (14 - month) / 12;
         year = year + 4800 - a;
         int m = month + (12 * a) - 3;
-        jd = day
-             +(((153 * m) + 2) / 5)
-             +(365 * year)
-             +(year / 4)
-             -32083;
+        jd = day + (((153 * m) + 2) / 5) + (365 * year) + (year / 4) - 32083;
         break;
     }
 
@@ -573,16 +539,12 @@ qint64 QCalendarSystemPrivate::julianDayFromDate(int year, int month, int day) c
 
 bool QCalendarSystemPrivate::isValidYear(int year) const
 {
-    return year >= earliestValidYear()
-           && year <= latestValidYear()
-           && (year == 0 ? hasYearZero() : true);
+    return year >= earliestValidYear() && year <= latestValidYear() && (year == 0 ? hasYearZero() : true);
 }
 
 bool QCalendarSystemPrivate::isValidMonth(int year, int month) const
 {
-    return isValidYear(year)
-           && month >= 1
-           && month <= monthsInYear(year);
+    return isValidYear(year) && month >= 1 && month <= monthsInYear(year);
 }
 
 int QCalendarSystemPrivate::addYears(int y1, int years) const
@@ -669,23 +631,17 @@ int QCalendarSystem::maximumDaysInMonth() const
 
 bool QCalendarSystem::isValid(const QDate &date) const
 {
-    return date.isValid()
-           && date >= earliestValidDate()
-           && date <= latestValidDate();
+    return date.isValid() && date >= earliestValidDate() && date <= latestValidDate();
 }
 
 bool QCalendarSystem::isValid(int year, int month, int day) const
 {
-    return d->isValidMonth(year, month)
-           && day >= 1
-           && day <= d->daysInMonth(year, month);
+    return d->isValidMonth(year, month) && day >= 1 && day <= d->daysInMonth(year, month);
 }
 
 bool QCalendarSystem::isValid(int year, int dayOfYear) const
 {
-    return d->isValidYear(year)
-           && dayOfYear > 0
-           && dayOfYear <= d->daysInYear(year);
+    return d->isValidYear(year) && dayOfYear > 0 && dayOfYear <= d->daysInYear(year);
 }
 
 QDate QCalendarSystem::date(int year, int month, int day) const
@@ -796,7 +752,7 @@ int QCalendarSystem::dayOfYear(int year, int month, int day) const
 
 int QCalendarSystem::dayOfWeek(const QDate &date) const
 {
-    //jd 0 = Monday = weekday 1.  We've never skipped weekdays.
+    // jd 0 = Monday = weekday 1.  We've never skipped weekdays.
     if (isValid(date)) {
         if (date.toJulianDay() >= 0) {
             return (date.toJulianDay() % daysInWeek()) + 1;
@@ -813,7 +769,7 @@ int QCalendarSystem::dayOfWeek(int year, int month, int day) const
     return dayOfWeek(date(year, month, day));
 }
 
-//TODO These are ISO weeks, may need to localise
+// TODO These are ISO weeks, may need to localise
 int QCalendarSystem::weekNumber(const QDate &date, int *yearNum) const
 {
     if (isValid(date)) {
@@ -827,7 +783,7 @@ int QCalendarSystem::weekNumber(const QDate &date, int *yearNum) const
 
 /*
     \legalese
-    Copyright (c) 1989 The Regents of the University of California. 
+    Copyright (c) 1989 The Regents of the University of California.
     All rights reserved.
 
     Redistribution and use in source and binary forms are permitted
@@ -842,8 +798,8 @@ int QCalendarSystem::weekNumber(const QDate &date, int *yearNum) const
     IMPLIED WARRANTIES, INCLUDING, WITHOUT LIMITATION, THE IMPLIED
     WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.
 */
-//TODO These are ISO weeks, may need to localise
-//TODO Replace with cleanly licensed routine
+// TODO These are ISO weeks, may need to localise
+// TODO Replace with cleanly licensed routine
 int QCalendarSystem::weekNumber(int year, int month, int day, int *yearNum) const
 {
     if (!isValid(year, month, day)) {
@@ -925,7 +881,7 @@ int QCalendarSystem::weeksInYear(const QDate &date) const
     }
 }
 
-//TODO This is ISO weeks, may need to localise
+// TODO This is ISO weeks, may need to localise
 int QCalendarSystem::weeksInYear(int year) const
 {
     if (d->isValidYear(year)) {
@@ -1050,7 +1006,7 @@ QDate QCalendarSystem::addDays(const QDate &date, int days) const
     return date.addDays(days);
 }
 
-//Caters for Leap Months, but possibly not for Hebrew
+// Caters for Leap Months, but possibly not for Hebrew
 int QCalendarSystem::yearsDifference(const QDate &fromDate, const QDate &toDate) const
 {
     if (!isValid(fromDate) || !isValid(toDate) || toDate == fromDate) {
@@ -1080,15 +1036,14 @@ int QCalendarSystem::yearsDifference(const QDate &fromDate, const QDate &toDate)
     // m2 == m1
     // Allow for last day of month to last day of month and leap days
     // e.g. 2000-02-29 to 2001-02-28 is 1 year not 0 years
-    if ((d2 >= d1)
-        || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
+    if ((d2 >= d1) || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
         return d->diffYears(y1, y2);
     } else {
         return d->diffYears(y1, y2) - 1;
     }
 }
 
-//Caters for Leap Months, but possibly not for Hebrew
+// Caters for Leap Months, but possibly not for Hebrew
 int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate) const
 {
     if (!isValid(fromDate) || !isValid(toDate) || toDate == fromDate) {
@@ -1118,8 +1073,7 @@ int QCalendarSystem::monthsDifference(const QDate &fromDate, const QDate &toDate
     // Allow for last day of month to last day of month and leap days
     // e.g. 2010-03-31 to 2010-04-30 is 1 month not 0 months
     // also 2000-02-29 to 2001-02-28 is 12 months not 11 months
-    if ((d2 >= d1)
-        || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
+    if ((d2 >= d1) || (d1 == d->daysInMonth(y1, m1) && d2 == d->daysInMonth(y2, m2))) {
         return my + m2 - m1;
     } else {
         return my + m2 - m1 - 1;
@@ -1135,7 +1089,7 @@ qint64 QCalendarSystem::daysDifference(const QDate &fromDate, const QDate &toDat
     }
 }
 
-//Caters for Leap Months, but possibly not for Hebrew
+// Caters for Leap Months, but possibly not for Hebrew
 void QCalendarSystem::dateDifference(const QDate &fromDate, const QDate &toDate, int *years, int *months, int *days, int *direction) const
 {
     int dy = 0;

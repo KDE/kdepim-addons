@@ -5,9 +5,9 @@
 */
 
 #include "briefheaderstyleinterface.h"
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 using namespace MessageViewer;
 BriefHeaderStyleInterface::BriefHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)

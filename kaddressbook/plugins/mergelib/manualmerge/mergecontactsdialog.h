@@ -7,14 +7,15 @@
 #ifndef MERGECONTACTSDIALOG_H
 #define MERGECONTACTSDIALOG_H
 
-#include <QDialog>
-#include <AkonadiCore/Item>
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
+#include <AkonadiCore/Item>
+#include <QDialog>
 class QDialogButtonBox;
 class QStackedWidget;
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class MergeContactWidget;
 class MergeContactErrorLabel;
 class MergeContactSelectInformationScrollArea;
@@ -27,6 +28,7 @@ public:
     ~MergeContactsDialog() override;
 
     void setContacts(const Akonadi::Item::List &list);
+
 private:
     void slotCustomizeMergeContact(const Akonadi::Item::List &lst, MergeContacts::ConflictInformations conflictType, const Akonadi::Collection &col);
     void slotContactMerged(const Akonadi::Item &item);

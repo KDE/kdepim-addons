@@ -7,8 +7,8 @@
 #include "logactivitiesplugininterfacetest.h"
 #include "../logactivitiesplugininterface.h"
 #include <KActionCollection>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 LogActivitiesPluginInterfaceTest::LogActivitiesPluginInterfaceTest(QObject *parent)
     : QObject(parent)

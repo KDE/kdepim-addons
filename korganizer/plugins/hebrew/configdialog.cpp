@@ -13,12 +13,12 @@
 #include <KLocalizedString>
 #include <QLocale>
 
-#include <QCheckBox>
-#include <QFrame>
-#include <QVBoxLayout>
 #include <KConfigGroup>
+#include <QCheckBox>
 #include <QDialogButtonBox>
+#include <QFrame>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
@@ -67,8 +67,7 @@ void ConfigDialog::load()
     KConfig config(QStringLiteral("korganizerrc"));
 
     KConfigGroup group(&config, "Hebrew Calendar Plugin");
-    mIsraelBox->setChecked(
-        group.readEntry("UseIsraelSettings", QLocale::countryToString(QLocale().country()) == QLatin1String(".il")));
+    mIsraelBox->setChecked(group.readEntry("UseIsraelSettings", QLocale::countryToString(QLocale().country()) == QLatin1String(".il")));
     mParshaBox->setChecked(group.readEntry("ShowParsha", true));
     mCholBox->setChecked(group.readEntry("ShowChol_HaMoed", true));
     mOmerBox->setChecked(group.readEntry("ShowOmer", true));

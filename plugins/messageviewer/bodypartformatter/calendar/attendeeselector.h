@@ -7,9 +7,9 @@
 #ifndef ATTENDEESELECTOR_H_H
 #define ATTENDEESELECTOR_H_H
 
+#include "ui_attendeeselector.h"
 #include <QDialog>
 #include <QPushButton>
-#include "ui_attendeeselector.h"
 
 /**
   Dialog to select a set off attendees.

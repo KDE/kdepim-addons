@@ -6,14 +6,14 @@
 
 #include "expireaccounttrashfolderconfigdialog.h"
 #include "expireaccounttrashfolderconfigwidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "ExpireAccountTrashFolderConfigDialog";
 }
 
@@ -28,7 +28,7 @@ ExpireAccountTrashFolderConfigDialog::ExpireAccountTrashFolderConfigDialog(QWidg
     mExpireAccountTrashFolderConfig->setObjectName(QStringLiteral("mExpireAccountTrashFolderConfig"));
     mainLayout->addWidget(mExpireAccountTrashFolderConfig);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel|QDialogButtonBox::Ok, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ExpireAccountTrashFolderConfigDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ExpireAccountTrashFolderConfigDialog::accept);

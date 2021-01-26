@@ -9,8 +9,8 @@
 */
 
 #include "sendmailjob.h"
-#include "transport.h"
 #include "sendmailplugin_debug.h"
+#include "transport.h"
 
 #include <KLocalizedString>
 #include <KShell>
@@ -23,8 +23,7 @@ SendmailJob::SendmailJob(Transport *transport, QObject *parent)
     , mProcess(new QProcess(this))
 {
     connect(mProcess, qOverload<int, QProcess::ExitStatus>(&QProcess::finished), this, &SendmailJob::sendmailExited);
-    connect(mProcess, qOverload<QProcess::ProcessError>(&QProcess::errorOccurred),
-            this, &SendmailJob::receivedError);
+    connect(mProcess, qOverload<QProcess::ProcessError>(&QProcess::errorOccurred), this, &SendmailJob::receivedError);
     connect(mProcess, &QProcess::readyReadStandardError, this, &SendmailJob::receivedStdErr);
 }
 

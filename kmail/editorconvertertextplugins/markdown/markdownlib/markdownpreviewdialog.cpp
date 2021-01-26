@@ -6,11 +6,11 @@
 
 #include "markdownpreviewdialog.h"
 #include "markdownpreviewwidget.h"
-#include <QVBoxLayout>
-#include <QDialogButtonBox>
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QVBoxLayout>
 
 MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     : QDialog(parent)

@@ -5,16 +5,16 @@
 */
 
 #include "enterpriseheaderstyleplugintest.h"
-#include "utils.h"
-#include "../enterpriseheaderstyleplugin/enterpriseheaderstyleplugin.h"
 #include "../enterpriseheaderstyleplugin/enterpriseheaderstyleinterface.h"
+#include "../enterpriseheaderstyleplugin/enterpriseheaderstyleplugin.h"
+#include "utils.h"
 
 #include <MessageViewer/HeaderStyle>
 
-#include <QTest>
 #include <KActionCollection>
 #include <KActionMenu>
 #include <QActionGroup>
+#include <QTest>
 
 EnterpriseHeaderStylePluginTest::EnterpriseHeaderStylePluginTest(QObject *parent)
     : QObject(parent)
@@ -79,7 +79,7 @@ void EnterpriseHeaderStylePluginTest::testFormat()
     QCOMPARE(style->headerStrategy(), strategy);
     auto aMsg = readAndParseMail(mailbox);
     QString closedDiv = style->format(aMsg.data()) + QStringLiteral("</div>");
-    testHeaderFile(closedDiv, mailbox+QStringLiteral(".enterprise"));
+    testHeaderFile(closedDiv, mailbox + QStringLiteral(".enterprise"));
 }
 
 QTEST_MAIN(EnterpriseHeaderStylePluginTest)

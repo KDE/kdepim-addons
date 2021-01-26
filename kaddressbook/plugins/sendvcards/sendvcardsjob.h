@@ -6,15 +6,17 @@
 
 #ifndef SENDVCARDSJOB_H
 #define SENDVCARDSJOB_H
-#include <QObject>
 #include <AkonadiCore/Item>
 #include <KContacts/VCardConverter>
+#include <QObject>
 
 class QTemporaryDir;
-namespace MimeTreeParser {
+namespace MimeTreeParser
+{
 class AttachmentTemporaryFilesDirs;
 }
-namespace KABSendVCards {
+namespace KABSendVCards
+{
 class SendVcardsJob : public QObject
 {
     Q_OBJECT

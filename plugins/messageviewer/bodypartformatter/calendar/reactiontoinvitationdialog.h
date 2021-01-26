@@ -8,7 +8,8 @@
 #define REACTIONTOINVITATIONDIALOG_H
 
 #include <QDialog>
-namespace KPIMTextEdit {
+namespace KPIMTextEdit
+{
 class PlainTextEditorWidget;
 }
 

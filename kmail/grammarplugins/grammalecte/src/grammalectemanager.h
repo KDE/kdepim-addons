@@ -7,8 +7,8 @@
 #ifndef GRAMMALECTEMANAGER_H
 #define GRAMMALECTEMANAGER_H
 
-#include <QObject>
 #include "libkmailgrammalecte_export.h"
+#include <QObject>
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteManager : public QObject
 {
     Q_OBJECT

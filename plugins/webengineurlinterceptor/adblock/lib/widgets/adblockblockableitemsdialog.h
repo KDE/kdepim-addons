@@ -7,9 +7,10 @@
 #ifndef ADBLOCKBLOCKABLEITEMSDIALOG_H
 #define ADBLOCKBLOCKABLEITEMSDIALOG_H
 
-#include <QDialog>
 #include "adblocklib_export.h"
-namespace AdBlock {
+#include <QDialog>
+namespace AdBlock
+{
 struct AdBlockResult;
 class AdBlockBlockableItemsWidget;
 class ADBLOCKLIB_EXPORT AdBlockBlockableItemsDialog : public QDialog
@@ -23,6 +24,7 @@ public:
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
 
     void accept() override;
+
 private:
     void writeConfig();
     void readConfig();

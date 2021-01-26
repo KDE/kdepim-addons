@@ -7,8 +7,8 @@
 #ifndef LANGUAGETOOLCOMBOBOX_H
 #define LANGUAGETOOLCOMBOBOX_H
 
-#include <QComboBox>
 #include "libkmaillanguagetool_export.h"
+#include <QComboBox>
 class LanguageInfo;
 class LIBKMAILLANGUAGETOOL_EXPORT LanguageToolComboBox : public QComboBox
 {

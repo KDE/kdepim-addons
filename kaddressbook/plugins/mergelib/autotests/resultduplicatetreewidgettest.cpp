@@ -6,8 +6,8 @@
 
 #include "resultduplicatetreewidgettest.h"
 #include "../searchduplicate/resultduplicatetreewidget.h"
-#include <QTest>
 #include <KContacts/Addressee>
+#include <QTest>
 
 using namespace KContacts;
 

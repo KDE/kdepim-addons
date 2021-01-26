@@ -7,8 +7,8 @@
 #ifndef VIEWERPLUGINEXTERNALSCRIPTINFO_H
 #define VIEWERPLUGINEXTERNALSCRIPTINFO_H
 
-#include <QString>
 #include <QObject>
+#include <QString>
 class ViewerPluginExternalScriptInfo
 {
 public:
@@ -37,6 +37,7 @@ public:
     void setFileName(const QString &fileName);
 
     bool operator==(const ViewerPluginExternalScriptInfo &other) const;
+
 private:
     QString mCommandLine;
     QString mName;

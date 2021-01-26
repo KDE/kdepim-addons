@@ -8,7 +8,8 @@
 
 #include <QTest>
 
-SelectImapCreateJobTest::SelectImapCreateJobTest(QObject *parent) : QObject(parent)
+SelectImapCreateJobTest::SelectImapCreateJobTest(QObject *parent)
+    : QObject(parent)
 {
 }
 

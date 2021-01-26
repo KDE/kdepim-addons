@@ -33,13 +33,8 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
 
     // validate xml and pretty-print for comparison
     // TODO add proper cmake check for xmllint and diff
-    QStringList args = QStringList()
-                       << QStringLiteral("--format")
-                       << QStringLiteral("--encode")
-                       << QStringLiteral("UTF8")
-                       << QStringLiteral("--output")
-                       << htmlFile
-                       << outFile;
+    QStringList args = QStringList() << QStringLiteral("--format") << QStringLiteral("--encode") << QStringLiteral("UTF8") << QStringLiteral("--output")
+                                     << htmlFile << outFile;
     QCOMPARE(QProcess::execute(QStringLiteral("xmllint"), args), 0);
 
     // get rid of system dependent or random paths
@@ -48,9 +43,7 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
         QVERIFY(f.open(QIODevice::ReadOnly));
         QString content = QString::fromUtf8(f.readAll());
         f.close();
-        content.replace(QRegExp(QStringLiteral(
-                                    "\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")),
-                        QStringLiteral("\"file:\\1\""));
+        content.replace(QRegExp(QStringLiteral("\"file:[^\"]*[/(?:%2F)]([^\"/(?:%2F)]*)\"")), QStringLiteral("\"file:\\1\""));
         content.replace(QLatin1String("NBSP_ENTITY_PLACEHOLDER"), QLatin1String("&nbsp;")); // undo above transformation for xmllint
         content.replace(QRegExp(QStringLiteral("/bodypart/\\d+/")), QStringLiteral("/bodypart/0/"));
         QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
@@ -59,10 +52,7 @@ static void compareFile(const QString &outFile, const QString &referenceFile)
     }
 
     // compare to reference file
-    args = QStringList()
-           << QStringLiteral("-u")
-           << referenceFile
-           << htmlFile;
+    args = QStringList() << QStringLiteral("-u") << referenceFile << htmlFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);

@@ -7,19 +7,21 @@
 #ifndef TODOEDIT_H
 #define TODOEDIT_H
 
-#include <QWidget>
 #include <AkonadiCore/Collection>
-#include <KMime/Message>
 #include <KCalendarCore/Todo>
+#include <KMime/Message>
+#include <QWidget>
 
 class KMessageWidget;
 class QLineEdit;
 class QPushButton;
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class TodoEdit : public QWidget
 {
     Q_OBJECT
@@ -47,6 +49,7 @@ Q_SIGNALS:
 
 protected:
     bool eventFilter(QObject *object, QEvent *e) override;
+
 private:
     KCalendarCore::Todo::Ptr createTodoItem();
     void comboboxRowInserted();

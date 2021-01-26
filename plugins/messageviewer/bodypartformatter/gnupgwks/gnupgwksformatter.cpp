@@ -5,34 +5,35 @@
 */
 
 #include "gnupgwksformatter.h"
-#include "gnupgwksmessagepart.h"
 #include "gnupgwks_debug.h"
+#include "gnupgwksmessagepart.h"
 
 #include <QObject>
-#include <QVariant>
 #include <QPalette>
 #include <QUrl>
 #include <QUrlQuery>
+#include <QVariant>
 
-#include <MimeTreeParser/BodyPart>
-#include <MessageViewer/HtmlWriter>
-#include <MimeTreeParser/NodeHelper>
-#include <MimeTreeParser/MessagePart>
 #include <MessageCore/ColorUtil>
+#include <MessageViewer/HtmlWriter>
 #include <MessageViewer/Viewer>
+#include <MimeTreeParser/BodyPart>
+#include <MimeTreeParser/MessagePart>
+#include <MimeTreeParser/NodeHelper>
 
-#include <GrantleeTheme/GrantleeThemeEngine>
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
+#include <GrantleeTheme/GrantleeThemeEngine>
 #include <grantlee/context.h>
 #include <grantlee/template.h>
 
-#include <QGpgME/Protocol>
 #include <QGpgME/DecryptJob>
+#include <QGpgME/Protocol>
 
 using namespace MimeTreeParser;
 using namespace MimeTreeParser::Interface;
 
-namespace {
+namespace
+{
 bool partHasMimeType(KMime::Content *part, const char *mt)
 {
     const auto ct = part->contentType(false);
@@ -46,9 +47,7 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
     if (ct) {
         if (ct->isMimeType("multipart/mixed")) {
             const auto subParts = part.content()->contents();
-            if (subParts.size() == 2
-                    && partHasMimeType(subParts[0], "text/plain")
-                    && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
+            if (subParts.size() == 2 && partHasMimeType(subParts[0], "text/plain") && partHasMimeType(subParts[1], "application/vnd.gnupg.wks")) {
                 return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(1), false));
             } else {
                 return MimeMessagePart::Ptr(new MimeMessagePart(part.objectTreeParser(), subParts.at(0), false));
@@ -74,7 +73,9 @@ MessagePart::Ptr ApplicationGnuPGWKSFormatter::process(BodyPart &part) const
     return {};
 }
 
-bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const
+bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &msgPart,
+                                          MessageViewer::HtmlWriter *htmlWriter,
+                                          MessageViewer::RenderContext *context) const
 {
     Q_UNUSED(context)
     auto mp = msgPart.dynamicCast<GnuPGWKSMessagePart>();

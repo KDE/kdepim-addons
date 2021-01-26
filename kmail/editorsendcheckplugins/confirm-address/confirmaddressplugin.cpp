@@ -5,12 +5,12 @@
 */
 
 #include "confirmaddressplugin.h"
-#include "confirmaddressinterface.h"
-#include "confirmaddressconfigurewidget.h"
 #include "confirmaddressconfiguredialog.h"
+#include "confirmaddressconfigurewidget.h"
+#include "confirmaddressinterface.h"
 
-#include <QPointer>
 #include <KPluginFactory>
+#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(ConfirmAddressPlugin, "kmail_confirmaddressplugin.json")
 

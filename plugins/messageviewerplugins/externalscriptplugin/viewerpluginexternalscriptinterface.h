@@ -10,7 +10,8 @@
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
 class QActionGroup;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class ViewerPluginExternalscriptInterface : public ViewerPluginInterface
 {
     Q_OBJECT

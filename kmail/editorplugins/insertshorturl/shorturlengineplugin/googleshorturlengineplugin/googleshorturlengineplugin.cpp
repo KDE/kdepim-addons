@@ -8,8 +8,7 @@
 #include "googleshorturlengineinterface.h"
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY_WITH_JSON(GoogleShortUrlEnginePluginFactory, "pimcommon_googleshorturlengineplugin.json", registerPlugin<GoogleShortUrlEnginePlugin>();
-                           )
+K_PLUGIN_FACTORY_WITH_JSON(GoogleShortUrlEnginePluginFactory, "pimcommon_googleshorturlengineplugin.json", registerPlugin<GoogleShortUrlEnginePlugin>();)
 
 GoogleShortUrlEnginePlugin::GoogleShortUrlEnginePlugin(QObject *parent, const QList<QVariant> &)
     : ShortUrlEnginePlugin(parent)

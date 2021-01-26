@@ -6,10 +6,10 @@
 
 #include "changecaseplugineditorinterface.h"
 #include "changecaseeditorplugin_debug.h"
-#include <KPIMTextEdit/EditorUtil>
-#include <KPIMTextEdit/RichTextEditor>
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
+#include <KPIMTextEdit/EditorUtil>
+#include <KPIMTextEdit/RichTextEditor>
 #include <QAction>
 
 ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent)

@@ -7,8 +7,8 @@
 #ifndef DKIMADVANCEDWIDGET_H
 #define DKIMADVANCEDWIDGET_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <QWidget>
 class QComboBox;
 class QCheckBox;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAdvancedWidget : public QWidget
@@ -20,6 +20,7 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+
 private:
     void slotConfigureAuthenticationServer();
     QComboBox *mSha1Policy = nullptr;

@@ -18,6 +18,7 @@ public:
 
     Q_REQUIRED_RESULT QByteArray text() override;
     void setEditorWidget(ShareTextPluginEditorInterface *interface);
+
 private:
     ShareTextPluginEditorInterface *mInterface = nullptr;
 };

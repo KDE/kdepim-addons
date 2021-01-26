@@ -5,11 +5,11 @@
 */
 
 #include "viewerpluginexternalscript.h"
-#include "viewerpluginexternalscriptinterface.h"
 #include "configuredialog/viewerpluginexternalconfiguredialog.h"
+#include "viewerpluginexternalscriptinterface.h"
 #include <KActionCollection>
-#include <QPointer>
 #include <KPluginFactory>
+#include <QPointer>
 
 using namespace MessageViewer;
 K_PLUGIN_CLASS_WITH_JSON(ViewerPluginExternalscript, "messageviewer_externalscriptplugin.json")

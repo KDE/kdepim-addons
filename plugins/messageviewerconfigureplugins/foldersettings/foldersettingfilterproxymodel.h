@@ -7,8 +7,8 @@
 #ifndef FOLDERSETTINGFILTERPROXYMODEL_H
 #define FOLDERSETTINGFILTERPROXYMODEL_H
 
-#include <QSortFilterProxyModel>
 #include <AkonadiCore/Collection>
+#include <QSortFilterProxyModel>
 
 class FolderSettingFilterProxyModel : public QSortFilterProxyModel
 {

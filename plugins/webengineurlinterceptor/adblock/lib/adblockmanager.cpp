@@ -5,18 +5,16 @@
 */
 
 #include "adblockmanager.h"
+#include "adblockinterceptor_debug.h"
 #include "adblockmatcher.h"
 #include "adblocksubscription.h"
-#include "adblockinterceptor_debug.h"
 #include "adblockutil.h"
-#include "adblockinterceptor_debug.h"
 #include "globalsettings_webengineurlinterceptoradblock.h"
 #include <KConfig>
 #include <KConfigGroup>
 #include <QDateTime>
 #include <QDir>
 #include <QSaveFile>
-#include <QStandardPaths>
 #include <QStandardPaths>
 #include <QTextStream>
 #include <QTimer>
@@ -61,7 +59,7 @@ void AdblockManager::loadSubscriptions()
     KConfigGroup general = config.group(QStringLiteral("General"));
 
     mDisabledRules = general.readEntry(QStringLiteral("disabledRules"), QStringList());
-    //Clear subscription
+    // Clear subscription
     QDir adblockDir(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock"));
     // Create if necessary
     if (!adblockDir.exists()) {
@@ -160,7 +158,7 @@ bool AdblockManager::interceptRequest(const QWebEngineUrlRequestInfo &info)
     if (blockedRule) {
         result = true;
         qCDebug(ADBLOCKINTERCEPTOR_LOG) << " blocked !!!!!!!!!!!!" << blockedRule->filter();
-        //TODO
+        // TODO
     }
     return result;
 }
@@ -193,7 +191,8 @@ AdBlockSubscription *AdblockManager::addSubscription(const QString &title, const
     }
 
     QString fileName = AdBlock::AdblockUtil::filterCharsFromFilename(title.toLower()) + QStringLiteral(".txt");
-    QString filePath = AdBlock::AdblockUtil::ensureUniqueFilename(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation) + QLatin1String("/adblock/") + fileName);
+    QString filePath = AdBlock::AdblockUtil::ensureUniqueFilename(QStandardPaths::writableLocation(QStandardPaths::GenericDataLocation)
+                                                                  + QLatin1String("/adblock/") + fileName);
 
     QByteArray data = QStringLiteral("Title: %1\nUrl: %2\n[Adblock Plus 1.1.1]").arg(title, url).toUtf8();
 

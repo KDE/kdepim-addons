@@ -7,18 +7,21 @@
 #ifndef SEARCHDUPLICATERESULTWIDGET_H
 #define SEARCHDUPLICATERESULTWIDGET_H
 
-#include <QWidget>
-#include <AkonadiCore/Item>
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
+#include <AkonadiCore/Item>
+#include <QWidget>
 class QPushButton;
-namespace KAddressBookGrantlee {
+namespace KAddressBookGrantlee
+{
 class GrantleeContactViewer;
 }
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class ResultDuplicateTreeWidget;
 class MergeContactLoseInformationWarning;
 

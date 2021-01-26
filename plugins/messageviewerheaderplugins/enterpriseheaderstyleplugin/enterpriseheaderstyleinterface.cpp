@@ -5,9 +5,9 @@
 */
 
 #include "enterpriseheaderstyleinterface.h"
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 using namespace MessageViewer;
 EnterpriseHeaderStyleInterface::EnterpriseHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
     : MessageViewer::HeaderStyleInterface(plugin, parent)

@@ -32,7 +32,6 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
 
 FolderConfigureSettingsPageBase::~FolderConfigureSettingsPageBase()
 {
-
 }
 
 void FolderConfigureSettingsPageBase::slotModifyClicked(bool clicked)
@@ -49,5 +48,5 @@ void FolderConfigureSettingsPageBase::addMainWidget(QWidget *widget)
 {
     mMainWidget = widget;
     mMainLayout->addWidget(mMainWidget);
-    mMainWidget->setEnabled(false); //Disable it directly
+    mMainWidget->setEnabled(false); // Disable it directly
 }

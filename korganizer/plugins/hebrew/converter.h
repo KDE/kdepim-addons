@@ -74,37 +74,9 @@ class Converter
     friend class HebrewDate;
 
 public:
-    enum HebrewMonths {
-        Nissan = 1,
-        Iyar,
-        Sivan,
-        Tamuz,
-        Ab,
-        Elul,
-        Tishrei,
-        Cheshvan,
-        Kislev,
-        Tevet,
-        Shvat,
-        Adar,
-        AdarII,
-        AdarI = 12
-    };
+    enum HebrewMonths { Nissan = 1, Iyar, Sivan, Tamuz, Ab, Elul, Tishrei, Cheshvan, Kislev, Tevet, Shvat, Adar, AdarII, AdarI = 12 };
 
-    enum SecularMonths {
-        January = 1,
-        February,
-        March,
-        April,
-        May,
-        June,
-        July,
-        August,
-        September,
-        October,
-        November,
-        December
-    };
+    enum SecularMonths { January = 1, February, March, April, May, June, July, August, September, October, November, December };
 
 private:
     static bool hebrew_leap_year_p(int year);

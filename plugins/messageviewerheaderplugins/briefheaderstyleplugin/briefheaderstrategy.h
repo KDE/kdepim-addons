@@ -10,7 +10,8 @@
 #include <MessageViewer/HeaderStrategy>
 #include <QStringList>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class BriefHeaderStrategy : public HeaderStrategy
 {
 public:

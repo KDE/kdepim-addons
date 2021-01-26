@@ -7,8 +7,8 @@
 #include "antivirusplugininterfacetest.h"
 #include "../antivirusplugininterface.h"
 #include <KActionCollection>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 AntiVirusPluginInterfaceTest::AntiVirusPluginInterfaceTest(QObject *parent)
     : QObject(parent)

@@ -47,7 +47,7 @@ void DiffHighlighterTest::shouldGenerateDiff()
     const QString generatedFile = QStringLiteral(DIFF_DATA_DIR) + QLatin1Char('/') + input + QStringLiteral("-generated.diff");
     QString diff = readDiffFile(originalFile);
 
-    //Create generated file
+    // Create generated file
     QFile f(generatedFile);
     QVERIFY(f.open(QIODevice::WriteOnly | QIODevice::Truncate));
     QTextStream s(&f);
@@ -62,10 +62,7 @@ void DiffHighlighterTest::shouldGenerateDiff()
     f.close();
 
     // compare to reference file
-    QStringList args = QStringList()
-                       << QStringLiteral("-u")
-                       << refFile
-                       << generatedFile;
+    QStringList args = QStringList() << QStringLiteral("-u") << refFile << generatedFile;
     QProcess proc;
     proc.setProcessChannelMode(QProcess::ForwardedChannels);
     proc.start(QStringLiteral("diff"), args);

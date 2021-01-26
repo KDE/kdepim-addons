@@ -18,6 +18,7 @@ public:
     Q_REQUIRED_RESULT bool exec() override;
 
     void reloadConfig() override;
+
 private:
     QString mExternalComposerPath;
     bool mEnabled = false;

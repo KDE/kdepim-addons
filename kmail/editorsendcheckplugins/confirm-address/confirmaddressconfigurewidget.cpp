@@ -4,13 +4,13 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "confirmaddressconfiguretab.h"
 #include "confirmaddressconfigurewidget.h"
-#include <QCheckBox>
-#include <QVBoxLayout>
+#include "confirmaddressconfiguretab.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <QCheckBox>
 #include <QRegularExpression>
+#include <QVBoxLayout>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)

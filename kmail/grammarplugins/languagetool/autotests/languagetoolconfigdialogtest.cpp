@@ -7,10 +7,10 @@
 #include "languagetoolconfigdialogtest.h"
 #include "languagetoolconfigdialog.h"
 #include "languagetoolconfigwidget.h"
-#include <QVBoxLayout>
+#include <QDialogButtonBox>
 #include <QStandardPaths>
 #include <QTest>
-#include <QDialogButtonBox>
+#include <QVBoxLayout>
 QTEST_MAIN(LanguageToolConfigDialogTest)
 LanguageToolConfigDialogTest::LanguageToolConfigDialogTest(QObject *parent)
     : QObject(parent)

@@ -7,13 +7,13 @@
 #include "selectimapfolderdialog.h"
 #include "selectimapfolderwidget.h"
 
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
+#include <QVBoxLayout>
 
 SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
     : QDialog(parent)

@@ -5,8 +5,8 @@
 */
 
 #include "markdownplugin.h"
-#include "markdowninterface.h"
 #include "markdownconfiguredialog.h"
+#include "markdowninterface.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
 

@@ -5,10 +5,10 @@
 */
 
 #include "logactivitiesplugininterface.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
+#include <KLocalizedString>
 #include <PimCommon/LogActivitiesManager>
+#include <QAction>
 
 LogActivitiesPluginInterface::LogActivitiesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)

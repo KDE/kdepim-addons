@@ -8,8 +8,8 @@
 #include "imapfoldercompletionplugin_debug.h"
 #include "sessionuiproxy.h"
 #include <KIMAP/CreateJob>
-#include <KIMAP/Session>
 #include <KIMAP/LoginJob>
+#include <KIMAP/Session>
 #include <KLocalizedString>
 #include <KMessageBox>
 
@@ -57,8 +57,7 @@ void SelectImapCreateFolderJob::slotLoginDone(KJob *job)
 
 void SelectImapCreateFolderJob::createFolderRequested()
 {
-    if (!mSession
-        || mSession->state() != KIMAP::Session::Authenticated) {
+    if (!mSession || mSession->state() != KIMAP::Session::Authenticated) {
         qCWarning(IMAPFOLDERCOMPLETIONPLUGIN_LOG) << "SelectImapCreateFolderJob - got no connection";
         failed();
         return;

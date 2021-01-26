@@ -6,18 +6,22 @@
 
 #ifndef CREATETODOJOB_H
 #define CREATETODOJOB_H
-#include <KJob>
-#include <AkonadiCore/Item>
 #include <AkonadiCore/Collection>
+#include <AkonadiCore/Item>
 #include <KCalendarCore/Todo>
+#include <KJob>
 
 #include <QObject>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class CreateTodoJob : public KJob
 {
     Q_OBJECT
 public:
-    explicit CreateTodoJob(const KCalendarCore::Todo::Ptr &todoPtr, const Akonadi::Collection &collection, const Akonadi::Item &item, QObject *parent = nullptr);
+    explicit CreateTodoJob(const KCalendarCore::Todo::Ptr &todoPtr,
+                           const Akonadi::Collection &collection,
+                           const Akonadi::Item &item,
+                           QObject *parent = nullptr);
     ~CreateTodoJob() override;
 
     void start() override;

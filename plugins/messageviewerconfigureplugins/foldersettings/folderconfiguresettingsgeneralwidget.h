@@ -7,11 +7,12 @@
 #ifndef FOLDERCONFIGURESETTINGSGENERALWIDGET_H
 #define FOLDERCONFIGURESETTINGSGENERALWIDGET_H
 
-#include <QWidget>
 #include "folderconfiguresettings_private_export.h"
 #include "folderconfiguresettingspagebase.h"
 #include <AkonadiCore/Collection>
-namespace MailCommon {
+#include <QWidget>
+namespace MailCommon
+{
 class CollectionGeneralWidget;
 }
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureSettingsGeneralWidget : public FolderConfigureSettingsPageBase
@@ -21,6 +22,7 @@ public:
     explicit FolderConfigureSettingsGeneralWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsGeneralWidget() override;
     void save(Akonadi::Collection &col);
+
 private:
     MailCommon::CollectionGeneralWidget *const mCollectionGeneralWidget;
 };

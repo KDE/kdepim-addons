@@ -10,12 +10,13 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
 
-#include <QObject>
 #include <KContacts/Addressee>
+#include <QObject>
 
 class KJob;
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 struct VCard {
     VCard()
     {

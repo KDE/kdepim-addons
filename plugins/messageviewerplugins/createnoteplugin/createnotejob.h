@@ -7,16 +7,17 @@
 #ifndef CREATENOTEJOB_H
 #define CREATENOTEJOB_H
 
-#include <KJob>
-#include <AkonadiCore/Item>
-#include <AkonadiCore/Collection>
 #include <Akonadi/Notes/NoteUtils>
+#include <AkonadiCore/Collection>
+#include <AkonadiCore/Item>
+#include <KJob>
 
 #include <kmime/kmime_message.h>
 
 #include <QObject>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class CreateNoteJob : public KJob
 {
     Q_OBJECT

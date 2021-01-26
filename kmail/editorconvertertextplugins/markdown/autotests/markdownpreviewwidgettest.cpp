@@ -6,9 +6,9 @@
 
 #include "markdownpreviewwidgettest.h"
 #include "markdownpreviewwidget.h"
-#include <QVBoxLayout>
-#include <QTest>
 #include <QLabel>
+#include <QTest>
+#include <QVBoxLayout>
 #include <QWebChannel>
 #include <QWebEngineView>
 QTEST_MAIN(MarkdownPreviewWidgetTest)

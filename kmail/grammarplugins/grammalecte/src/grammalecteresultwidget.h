@@ -7,11 +7,12 @@
 #ifndef GRAMMALECTERESULTWIDGET_H
 #define GRAMMALECTERESULTWIDGET_H
 
-#include "grammarresultwidget.h"
-#include "libkmailgrammalecte_export.h"
 #include "grammalectegrammarerror.h"
 #include "grammalecteresultjob.h"
-namespace MessageComposer {
+#include "grammarresultwidget.h"
+#include "libkmailgrammalecte_export.h"
+namespace MessageComposer
+{
 }
 class GrammalecteResultJob;
 class LIBKMAILGRAMMALECTE_EXPORT GrammalecteResultWidget : public GrammarResultWidget
@@ -21,6 +22,7 @@ public:
     explicit GrammalecteResultWidget(QWidget *parent = nullptr);
     ~GrammalecteResultWidget() override;
     void checkGrammar() override;
+
 private:
     void slotCheckGrammarFinished(const QString &result);
     void slotError(GrammalecteResultJob::ErrorType error);

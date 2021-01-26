@@ -7,10 +7,11 @@
 #ifndef SELECTIMAPFOLDERMODEL_H
 #define SELECTIMAPFOLDERMODEL_H
 
-#include <QObject>
 #include <QHash>
+#include <QObject>
 class QStandardItemModel;
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveImapAccountSettings;
 }
 class SelectImapFolderModel : public QObject

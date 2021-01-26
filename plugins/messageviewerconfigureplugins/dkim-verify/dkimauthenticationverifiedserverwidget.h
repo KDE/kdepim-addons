@@ -7,9 +7,9 @@
 #ifndef DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H
 #define DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
 #include <PimCommon/SimpleStringListEditor>
+#include <QWidget>
 
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMAuthenticationVerifiedServerSelectorWidget : public PimCommon::SimpleStringListEditor
 {
@@ -27,6 +27,7 @@ public:
     ~DKIMAuthenticationVerifiedServerWidget() override;
     void loadSettings();
     void saveSettings();
+
 private:
     DKIMAuthenticationVerifiedServerSelectorWidget *const mSelector;
 };

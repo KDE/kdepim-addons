@@ -4,15 +4,16 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include "itinerarykdeconnecthandler.h"
 #include "itineraryprocessor.h"
 #include "itineraryrenderer.h"
 #include "itineraryurlhandler.h"
-#include "itinerarykdeconnecthandler.h"
 
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
 
-namespace {
+namespace
+{
 class ItineraryPlugin : public QObject, public MimeTreeParser::Interface::BodyPartFormatterPlugin, public MessageViewer::MessagePartRenderPlugin
 {
     Q_OBJECT

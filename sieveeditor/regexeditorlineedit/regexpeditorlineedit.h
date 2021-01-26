@@ -7,16 +7,15 @@
 #ifndef REGEXPEDITORLINEEDIT_H
 #define REGEXPEDITORLINEEDIT_H
 
-#include <QWidget>
 #include <KSieveUi/AbstractRegexpEditorLineEdit>
+#include <QWidget>
 class QLineEdit;
 class QToolButton;
 class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit
 {
     Q_OBJECT
 public:
-    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {
-    });
+    explicit RegexpEditorLineEdit(QWidget *parent = nullptr, const QList<QVariant> & = {});
     ~RegexpEditorLineEdit() override;
 
     void switchToRegexpEditorLineEdit(bool regexpEditor) override;

@@ -7,9 +7,10 @@
 #ifndef EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
 #define EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
 
-#include <QWidget>
 #include "expireaccounttrashfolderconfig_private_export.h"
-namespace MailCommon {
+#include <QWidget>
+namespace MailCommon
+{
 class CollectionExpiryWidget;
 }
 class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT ExpireAccountTrashFolderConfigWidget : public QWidget
@@ -19,6 +20,7 @@ public:
     explicit ExpireAccountTrashFolderConfigWidget(QWidget *parent = nullptr);
     ~ExpireAccountTrashFolderConfigWidget() override;
     void save();
+
 private:
     void save(bool saveSettings, bool expireNow);
     void slotSaveAndExpireRequested();

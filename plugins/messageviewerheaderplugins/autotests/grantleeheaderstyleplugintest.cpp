@@ -5,16 +5,16 @@
 */
 
 #include "grantleeheaderstyleplugintest.h"
-#include "utils.h"
-#include "../grantleeheaderstyleplugin/grantleeheaderstyleplugin.h"
 #include "../grantleeheaderstyleplugin/grantleeheaderstyleinterface.h"
+#include "../grantleeheaderstyleplugin/grantleeheaderstyleplugin.h"
+#include "utils.h"
 
 #include <GrantleeTheme/GrantleeThemeManager>
 #include <MessageViewer/HeaderStyle>
 #include <MimeTreeParser/NodeHelper>
 
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 #include <KActionCollection>
 #include <KActionMenu>
@@ -79,7 +79,7 @@ void GrantleeHeaderStylePluginTest::shouldCreateInterface()
 
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);
-    //QVERIFY(!interface->action().isEmpty());
+    // QVERIFY(!interface->action().isEmpty());
 }
 
 void GrantleeHeaderStylePluginTest::testThemeActivation_data()
@@ -102,7 +102,8 @@ void GrantleeHeaderStylePluginTest::testThemeActivation()
     auto *menu = new KActionMenu(this);
     auto *act = new QActionGroup(this);
 
-    MessageViewer::GrantleeHeaderStyleInterface *interface = static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
+    MessageViewer::GrantleeHeaderStyleInterface *interface =
+        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
     QVERIFY(interface);
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));
@@ -133,7 +134,7 @@ void GrantleeHeaderStylePluginTest::testThemeRender_data()
             if (!themeDir.exists(file + QStringLiteral(".html"))) {
                 continue;
             }
-            QTest::newRow(QString(themeDir.dirName() + QStringLiteral("-") + file).toLatin1().constData()) << themeDir.dirName() <<  file;
+            QTest::newRow(QString(themeDir.dirName() + QStringLiteral("-") + file).toLatin1().constData()) << themeDir.dirName() << file;
         }
     }
 }
@@ -151,7 +152,8 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
     auto *menu = new KActionMenu(this);
     auto *act = new QActionGroup(this);
 
-    MessageViewer::GrantleeHeaderStyleInterface *interface = static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
+    MessageViewer::GrantleeHeaderStyleInterface *interface =
+        static_cast<MessageViewer::GrantleeHeaderStyleInterface *>(plugin.createView(menu, act, new KActionCollection(this)));
     QVERIFY(interface);
 
     QVERIFY(interface->mThemeManager->themes().contains(themeName));

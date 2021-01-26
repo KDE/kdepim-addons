@@ -20,7 +20,7 @@ SelectImapLineEdit::~SelectImapLineEdit()
 
 void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {
-    //TODO FIXME
+    // TODO FIXME
 #ifdef COMPLETION_LINE_EDIT
     delete mCompleter;
     mCompleter = new QCompleter(this);

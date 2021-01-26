@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCREATEIMAGEDIALOG_H
 #define MARKDOWNCREATEIMAGEDIALOG_H
 
-#include <QDialog>
 #include "libkmailmarkdown_export.h"
+#include <QDialog>
 class MarkdownCreateImageWidget;
 class QPushButton;
 class LIBKMAILMARKDOWN_EXPORT MarkdownCreateImageDialog : public QDialog
@@ -18,6 +18,7 @@ public:
     explicit MarkdownCreateImageDialog(QWidget *parent = nullptr);
     ~MarkdownCreateImageDialog() override;
     Q_REQUIRED_RESULT QString linkStr() const;
+
 private:
     void writeConfig();
     void readConfig();

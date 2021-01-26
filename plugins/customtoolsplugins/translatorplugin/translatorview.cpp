@@ -7,10 +7,10 @@
 #include "translatorview.h"
 #include "translatorwidget.h"
 
-#include <QHBoxLayout>
+#include <KActionCollection>
 #include <KLocalizedString>
 #include <KToggleAction>
-#include <KActionCollection>
+#include <QHBoxLayout>
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent)

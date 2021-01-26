@@ -5,15 +5,15 @@
 */
 
 #include "reactiontoinvitationdialog.h"
-#include <QDialogButtonBox>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <KLocalizedString>
 #include <KConfigGroup>
-#include <KSharedConfig>
-#include <QPushButton>
+#include <KLocalizedString>
 #include <KPIMTextEdit/PlainTextEditor>
 #include <KPIMTextEdit/PlainTextEditorWidget>
+#include <KSharedConfig>
+#include <QDialogButtonBox>
+#include <QLabel>
+#include <QPushButton>
+#include <QVBoxLayout>
 
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)

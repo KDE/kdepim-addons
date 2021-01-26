@@ -7,8 +7,8 @@
 #ifndef MARKDOWNPREVIEWWIDGET_H
 #define MARKDOWNPREVIEWWIDGET_H
 
-#include <QWidget>
 #include "markdownlib_private_export.h"
+#include <QWidget>
 class QWebEngineView;
 class MarkdownConverter;
 class QLabel;

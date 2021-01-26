@@ -5,15 +5,14 @@
 */
 
 #include "mailappimportdata.h"
-#include <MailImporter/FilterMailApp>
 #include <MailImporter/FilterInfo>
+#include <MailImporter/FilterMailApp>
 
 #include <KLocalizedString>
 #include <KPluginFactory>
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();
-                           )
+K_PLUGIN_FACTORY_WITH_JSON(MailAppImporterFactory, "mailappimporter.json", registerPlugin<MailAppImportData>();)
 
 MailAppImportData::MailAppImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
@@ -28,7 +27,7 @@ MailAppImportData::~MailAppImportData()
 bool MailAppImportData::foundMailer() const
 {
 #ifdef Q_OS_MAC
-    //TODO find a method to search it. Perhaps look at binary.
+    // TODO find a method to search it. Perhaps look at binary.
     QDir directory(mPath);
     if (directory.exists()) {
         return true;

@@ -7,8 +7,8 @@
 #include "antispamplugininterfacetest.h"
 #include "../antispamplugininterface.h"
 #include <KActionCollection>
-#include <QTest>
 #include <QSignalSpy>
+#include <QTest>
 
 AntiSpamPluginInterfaceTest::AntiSpamPluginInterfaceTest(QObject *parent)
     : QObject(parent)

@@ -9,12 +9,12 @@
 #ifndef SYNCITIPHANDLER_H
 #define SYNCITIPHANDLER_H
 
-#include <IncidenceEditor/GroupwareUiDelegate>
-#include <Akonadi/Calendar/ITIPHandler>
 #include <Akonadi/Calendar/CalendarBase>
+#include <Akonadi/Calendar/ITIPHandler>
+#include <IncidenceEditor/GroupwareUiDelegate>
 
-#include <QObject>
 #include <QEventLoop>
+#include <QObject>
 
 class SyncItipHandler : public QObject
 {

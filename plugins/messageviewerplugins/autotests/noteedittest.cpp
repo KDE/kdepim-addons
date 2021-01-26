@@ -5,21 +5,22 @@
 */
 
 #include "noteedittest.h"
-#include "globalsettings_messageviewer.h"
 #include "../createnoteplugin/noteedit.h"
+#include "globalsettings_messageviewer.h"
 #include <AkonadiCore/Collection>
-#include <AkonadiWidgets/CollectionComboBox>
 #include <AkonadiCore/EntityTreeModel>
+#include <AkonadiWidgets/CollectionComboBox>
 #include <KMime/KMimeMessage>
 
 #include <QLineEdit>
 #include <QPushButton>
 #include <QShortcut>
-#include <QStandardItemModel>
 #include <QSignalSpy>
+#include <QStandardItemModel>
 #include <QTest>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_noteEditStubModel;
 }
 
@@ -37,10 +38,8 @@ NoteEditTest::NoteEditTest()
         collection.setContentMimeTypes(QStringList() << Akonadi::NoteUtils::noteMimeType());
 
         QStandardItem *item = new QStandardItem(collection.name());
-        item->setData(QVariant::fromValue(collection),
-                      Akonadi::EntityTreeModel::CollectionRole);
-        item->setData(QVariant::fromValue(collection.id()),
-                      Akonadi::EntityTreeModel::CollectionIdRole);
+        item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
+        item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
         model->appendRow(item);
     }

@@ -7,16 +7,18 @@
 #ifndef MERGECONTACTWIDGET_H
 #define MERGECONTACTWIDGET_H
 
-#include <QWidget>
-#include <AkonadiCore/Item>
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
+#include <AkonadiCore/Item>
+#include <QWidget>
 
 class QPushButton;
-namespace Akonadi {
+namespace Akonadi
+{
 class CollectionComboBox;
 }
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class MergeContactWidgetList;
 class MergeContactLoseInformationWarning;
 class MergeContactInfoWidget;

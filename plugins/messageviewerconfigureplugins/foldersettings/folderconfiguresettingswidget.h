@@ -7,8 +7,8 @@
 #ifndef FOLDERCONFIGURESETTINGSWIDGET_H
 #define FOLDERCONFIGURESETTINGSWIDGET_H
 
-#include <QWidget>
 #include "folderconfiguresettings_private_export.h"
+#include <QWidget>
 class FolderConfigureTreeWidget;
 class FolderConfigureSettingsPageWidget;
 class QSplitter;
@@ -19,6 +19,7 @@ public:
     explicit FolderConfigureSettingsWidget(QWidget *parent = nullptr);
     ~FolderConfigureSettingsWidget() override;
     void save();
+
 private:
     void readConfig();
     void saveConfig();

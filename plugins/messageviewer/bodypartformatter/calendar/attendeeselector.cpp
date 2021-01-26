@@ -6,11 +6,11 @@
 
 #include "attendeeselector.h"
 
-#include <PimCommonAkonadi/AddresseeLineEdit>
 #include <KEmailAddress>
+#include <PimCommonAkonadi/AddresseeLineEdit>
 
-#include <KLocalizedString>
 #include <KGuiItem>
+#include <KLocalizedString>
 #include <KStandardGuiItem>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -55,7 +55,7 @@ QStringList AttendeeSelector::attendees() const
 
         // Build a nice address for this attendee including the CN.
         QString tname, temail;
-        KEmailAddress::extractEmailAddressAndName(addr, temail, tname);    // ignore return value
+        KEmailAddress::extractEmailAddressAndName(addr, temail, tname); // ignore return value
         // which is always false
         rv << temail;
     }

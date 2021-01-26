@@ -72,14 +72,14 @@ QString BaseEventDataVisitor::generateUid(const KCalendarCore::Incidence::Ptr &i
     }
 
     if (recurrenceId.isValid()) {
-        return QStringLiteral("Akonadi-%1-%2").arg(itemId)
-               .arg(recurrenceId.toString(QStringLiteral("yyyyMMddThhmmsst")));
+        return QStringLiteral("Akonadi-%1-%2").arg(itemId).arg(recurrenceId.toString(QStringLiteral("yyyyMMddThhmmsst")));
     } else {
         return QStringLiteral("Akonadi-%1").arg(itemId);
     }
 }
 
-QVector<CalendarEvents::EventData> BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
+QVector<CalendarEvents::EventData>
+BaseEventDataVisitor::explodeIncidenceOccurences(const CalendarEvents::EventData &ed, const KCalendarCore::Incidence::Ptr &incidence, bool &ok)
 {
     Q_ASSERT(incidence->recurs());
 

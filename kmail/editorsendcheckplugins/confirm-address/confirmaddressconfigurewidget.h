@@ -7,8 +7,8 @@
 #ifndef CONFIRMADDRESSCONFIGUREWIDGET_H
 #define CONFIRMADDRESSCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <QWidget>
 class ConfirmAddressConfigureTab;
 class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {

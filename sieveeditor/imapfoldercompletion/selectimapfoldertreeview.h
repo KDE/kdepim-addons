@@ -7,8 +7,8 @@
 #ifndef SELECTIMAPFOLDERTREEVIEW_H
 #define SELECTIMAPFOLDERTREEVIEW_H
 
-#include <QTreeView>
 #include <QColor>
+#include <QTreeView>
 
 class SelectImapFolderTreeView : public QTreeView
 {
@@ -16,16 +16,13 @@ class SelectImapFolderTreeView : public QTreeView
 public:
     explicit SelectImapFolderTreeView(QWidget *parent);
     ~SelectImapFolderTreeView() override;
-    enum LoadingStatus {
-        InProgress = 0,
-        Success,
-        Failed
-    };
+    enum LoadingStatus { InProgress = 0, Success, Failed };
 
     void setStatus(LoadingStatus status);
 
 protected:
     void paintEvent(QPaintEvent *event) override;
+
 private:
     void generalPaletteChanged();
     QColor mTextColor;

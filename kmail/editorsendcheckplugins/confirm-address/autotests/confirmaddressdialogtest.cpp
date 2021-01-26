@@ -7,11 +7,11 @@
 #include "confirmaddressdialogtest.h"
 #include "../confirmaddressdialog.h"
 #include "../confirmaddresswidget.h"
-#include <QTest>
-#include <QVBoxLayout>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     : QObject(parent)

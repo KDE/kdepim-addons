@@ -7,8 +7,8 @@
 #ifndef MARKDOWNCONFIGUREDIALOG_H
 #define MARKDOWNCONFIGUREDIALOG_H
 
-#include <PimCommon/ConfigurePluginDialog>
 #include "libkmailmarkdown_export.h"
+#include <PimCommon/ConfigurePluginDialog>
 class MarkdownConfigureWidget;
 class LIBKMAILMARKDOWN_EXPORT MarkdownConfigureDialog : public PimCommon::ConfigurePluginDialog
 {

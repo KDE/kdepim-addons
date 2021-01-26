@@ -7,8 +7,8 @@
 #ifndef EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H
 #define EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H
 
-#include <QDialog>
 #include "libexpireaccounttrashfolderconfig_export.h"
+#include <QDialog>
 class ExpireAccountTrashFolderConfigWidget;
 class LIBEXPIREACCOUNTTRASHFOLDERCONFIG_EXPORT ExpireAccountTrashFolderConfigDialog : public QDialog
 {

@@ -15,11 +15,11 @@
 #include <QVBoxLayout>
 
 #include <KActionCollection>
-#include <QTextEdit>
 #include <KActionMenu>
 #include <MessageViewer/HeaderStrategy>
 #include <MessageViewer/HeaderStyle>
 #include <MessageViewer/HeaderStylePlugin>
+#include <QTextEdit>
 
 HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
     : QWidget(parent)
@@ -42,8 +42,8 @@ HeaderStyleMenuTest::~HeaderStyleMenuTest()
 
 void HeaderStyleMenuTest::styleChanged(MessageViewer::HeaderStylePlugin *plugin)
 {
-    mTextEdit->append(QStringLiteral("strategy: %1, headerstyle: %2").arg(QLatin1String(plugin->headerStrategy()->name()))
-                      .arg(QLatin1String(plugin->headerStyle()->name())));
+    mTextEdit->append(
+        QStringLiteral("strategy: %1, headerstyle: %2").arg(QLatin1String(plugin->headerStrategy()->name())).arg(QLatin1String(plugin->headerStyle()->name())));
 }
 
 int main(int argc, char **argv)

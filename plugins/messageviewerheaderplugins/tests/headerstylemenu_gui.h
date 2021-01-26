@@ -9,7 +9,8 @@
 
 #include <QWidget>
 class QTextEdit;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class HeaderStylePlugin;
 }
 
@@ -21,6 +22,7 @@ public:
     ~HeaderStyleMenuTest();
 private Q_SLOTS:
     void styleChanged(MessageViewer::HeaderStylePlugin *plugin);
+
 private:
     QTextEdit *mTextEdit = nullptr;
 };

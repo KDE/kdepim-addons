@@ -5,8 +5,8 @@
 */
 
 #include "vcardmemento.h"
-#include <Akonadi/Contact/ContactSearchJob>
 #include "vcard_debug.h"
+#include <Akonadi/Contact/ContactSearchJob>
 using namespace MessageViewer;
 
 VcardMemento::VcardMemento(const QStringList &emails)
@@ -78,7 +78,7 @@ void VcardMemento::detach()
 
 bool VcardMemento::vcardExist(int index) const
 {
-    //We can have more vcard as we have emails. For example a vcard without email will not created here => necessary to make this check see #405791
+    // We can have more vcard as we have emails. For example a vcard without email will not created here => necessary to make this check see #405791
     if (index >= mVCardList.count()) {
         return false;
     }
@@ -87,7 +87,7 @@ bool VcardMemento::vcardExist(int index) const
 
 KContacts::Addressee VcardMemento::address(int index) const
 {
-    //We can have more vcard as we have emails. For example a vcard without email will not created here => necessary to make this check see #405791
+    // We can have more vcard as we have emails. For example a vcard without email will not created here => necessary to make this check see #405791
     if (index >= mVCardList.count()) {
         return {};
     }

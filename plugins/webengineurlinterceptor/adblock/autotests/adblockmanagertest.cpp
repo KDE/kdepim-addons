@@ -6,8 +6,8 @@
 
 #include "adblockmanagertest.h"
 #include "../lib/adblockmanager.h"
-#include <QTest>
 #include <QStandardPaths>
+#include <QTest>
 
 AdblockManagerTest::AdblockManagerTest(QObject *parent)
     : QObject(parent)

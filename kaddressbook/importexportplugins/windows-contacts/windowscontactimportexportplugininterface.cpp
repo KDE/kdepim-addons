@@ -7,16 +7,16 @@
 #include "windowscontactimportexportplugininterface.h"
 #include "importexportwindowscontactplugin_debug.h"
 #include "importwindowcontact.h"
-#include <KLocalizedString>
 #include <KActionCollection>
-#include <QAction>
-#include <PimCommon/RenameFileDialog>
-#include <QFileDialog>
-#include <QFile>
 #include <KIO/Job>
+#include <KLocalizedString>
+#include <PimCommon/RenameFileDialog>
+#include <QAction>
+#include <QFile>
+#include <QFileDialog>
 
-#include <KAddressBookImportExport/ImportExportEngine>
 #include <KAddressBookImportExport/ContactSelectionDialog>
+#include <KAddressBookImportExport/ImportExportEngine>
 
 WindowsContactImportExportPluginInterface::WindowsContactImportExportPluginInterface(QObject *parent)
     : KAddressBookImportExport::PluginInterface(parent)
@@ -33,12 +33,12 @@ void WindowsContactImportExportPluginInterface::createAction(KActionCollection *
     setImportActions(QList<QAction *>() << action);
     connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotImportWindowsContact);
 
-    //If a day we implement it
-//    action = ac->addAction(QStringLiteral("file_export_windows_contact"));
-//    action->setText(i18n("Export Windows Contact file..."));
-//    action->setWhatsThis(i18n("Export contacts to windows contact file."));
-//    setExportActions(QList<QAction *>() << action);
-//    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotExportWindowsContact);
+    // If a day we implement it
+    //    action = ac->addAction(QStringLiteral("file_export_windows_contact"));
+    //    action->setText(i18n("Export Windows Contact file..."));
+    //    action->setWhatsThis(i18n("Export contacts to windows contact file."));
+    //    setExportActions(QList<QAction *>() << action);
+    //    connect(action, &QAction::triggered, this, &WindowsContactImportExportPluginInterface::slotExportWindowsContact);
 }
 
 void WindowsContactImportExportPluginInterface::slotExportWindowsContact()
@@ -67,8 +67,7 @@ void WindowsContactImportExportPluginInterface::exec()
 
 void WindowsContactImportExportPluginInterface::importWindowsContact()
 {
-    const QStringList fileNames
-        = QFileDialog::getOpenFileNames(parentWidget(), QString(), QDir::homePath(), i18n("Windows Contact file (*.contact)"));
+    const QStringList fileNames = QFileDialog::getOpenFileNames(parentWidget(), QString(), QDir::homePath(), i18n("Windows Contact file (*.contact)"));
 
     if (fileNames.isEmpty()) {
         return;
@@ -93,7 +92,7 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
 void WindowsContactImportExportPluginInterface::exportWindowsContact()
 {
     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Export windows contact not implement yet";
-    //TODO
+    // TODO
 }
 
 bool WindowsContactImportExportPluginInterface::canImportFileType(const QUrl &url)

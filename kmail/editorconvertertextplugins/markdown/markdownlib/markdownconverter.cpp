@@ -23,17 +23,15 @@ extern "C" {
 }
 
 #ifdef DISCOUNT_HAS_HIGHLIGHTING_SUPPORT
-char *
-external_codefmt(const char *src, int, void *)
+char *external_codefmt(const char *src, int, void *)
 {
     KSyntaxHighlighting::Repository repo;
     QString result;
     QTextStream stream(&result);
     MarkdownHighlighter highLighter(&stream);
     highLighter.setDefinition(repo.definitionForName(QStringLiteral("SystemC")));
-    highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
-                         ? repo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-                         : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+    highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128 ? repo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                                                                                            : repo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
     highLighter.highlight(QString::fromLatin1(src));
     QByteArray ba = result.toLatin1();
     return qstrdup(ba.data());
@@ -78,7 +76,7 @@ QString MarkdownConverter::convertTextToMarkdown(const QString &str)
     const int size = mkd_document(markdownHandle, &htmlDocument);
 
     const QString html = QString::fromUtf8(htmlDocument, size);
-#if 0 //CSS ?
+#if 0 // CSS ?
     char *cssDocument;
     const int cssSize = mkd_css(markdownHandle, &cssDocument);
 

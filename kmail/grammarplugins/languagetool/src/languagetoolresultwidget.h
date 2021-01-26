@@ -8,9 +8,10 @@
 #define LANGUAGETOOLRESULTWIDGET_H
 
 #include "grammarresultwidget.h"
-#include "libkmaillanguagetool_export.h"
 #include "languagetoolgrammarerror.h"
-namespace MessageComposer {
+#include "libkmaillanguagetool_export.h"
+namespace MessageComposer
+{
 }
 class LanguageToolComboBox;
 class LanguageToolUpdateComboBox;

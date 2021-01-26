@@ -5,13 +5,13 @@
 */
 
 #include "zoomtextplugineditorinterface.h"
-#include "zoomtexteditorplugin_debug.h"
 #include "zoomlabel.h"
-#include <KPIMTextEdit/RichTextEditor>
-#include <KLocalizedString>
+#include "zoomtexteditorplugin_debug.h"
 #include <KActionCollection>
-#include <QAction>
 #include <KActionMenu>
+#include <KLocalizedString>
+#include <KPIMTextEdit/RichTextEditor>
+#include <QAction>
 
 ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)

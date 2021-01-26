@@ -5,12 +5,12 @@
 */
 
 #include "adblockpluginurlinterceptor.h"
-#include "adblockinterceptorinterface.h"
-#include "../lib/widgets/adblockpluginurlinterceptorconfigurewidget.h"
-#include "lib/adblockmanager.h"
 #include "../lib/widgets/adblockpluginurlinterceptorconfiguredialog.h"
-#include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
+#include "../lib/widgets/adblockpluginurlinterceptorconfigurewidget.h"
+#include "adblockinterceptorinterface.h"
+#include "lib/adblockmanager.h"
 #include <KPluginFactory>
+#include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 
 K_PLUGIN_CLASS_WITH_JSON(AdblockPluginUrlInterceptor, "messageviewer_adblockurlinterceptor.json")
 AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const QList<QVariant> &)

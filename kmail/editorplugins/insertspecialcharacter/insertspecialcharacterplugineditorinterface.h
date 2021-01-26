@@ -7,8 +7,8 @@
 #ifndef INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
 #define INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
 
-#include <MessageComposer/PluginEditorInterface>
 #include <KPIMTextEdit/SelectSpecialCharDialog>
+#include <MessageComposer/PluginEditorInterface>
 #include <QPointer>
 
 class InsertSpecialCharacterPluginEditorInterface : public MessageComposer::PluginEditorInterface

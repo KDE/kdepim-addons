@@ -7,8 +7,8 @@
 #ifndef CHECKBEFORESENDCONFIGUREWIDGET_H
 #define CHECKBEFORESENDCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <QWidget>
 
 class QCheckBox;
 class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget

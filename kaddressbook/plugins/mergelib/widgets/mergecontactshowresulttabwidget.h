@@ -7,10 +7,11 @@
 #ifndef MERGECONTACTSHOWRESULTTABWIDGET_H
 #define MERGECONTACTSHOWRESULTTABWIDGET_H
 
-#include <QTabWidget>
 #include <AkonadiCore/item.h>
+#include <QTabWidget>
 
-namespace KABMergeContacts {
+namespace KABMergeContacts
+{
 class MergeContactShowResultTabWidget : public QTabWidget
 {
     Q_OBJECT

@@ -5,11 +5,11 @@
 */
 
 #include "languagetoolupdatecombobox.h"
+#include "languagetoolcombobox.h"
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
 #include "languagetoolmanager.h"
 #include "liblanguagetool_debug.h"
-#include "languagetoolcombobox.h"
 
 #include <KLocalizedString>
 #include <KMessageBox>

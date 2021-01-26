@@ -15,7 +15,8 @@
 
 #include <QProcess>
 
-namespace MailTransport {
+namespace MailTransport
+{
 /**
   Mail transport job for sendmail.
 

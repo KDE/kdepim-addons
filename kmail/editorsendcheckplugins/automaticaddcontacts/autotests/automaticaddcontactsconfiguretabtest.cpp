@@ -6,10 +6,10 @@
 
 #include "automaticaddcontactsconfiguretabtest.h"
 #include "../automaticaddcontactsconfiguretab.h"
-#include <QTest>
-#include <QStandardPaths>
 #include <QHBoxLayout>
+#include <QStandardPaths>
 #include <QTabWidget>
+#include <QTest>
 
 AutomaticAddContactsConfigureTabTest::AutomaticAddContactsConfigureTabTest(QObject *parent)
     : QObject(parent)

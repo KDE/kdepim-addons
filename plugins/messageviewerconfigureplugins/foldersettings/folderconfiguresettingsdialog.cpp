@@ -7,12 +7,13 @@
 #include "folderconfiguresettingsdialog.h"
 #include "folderconfiguresettingswidget.h"
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "FolderConfigureSettingsDialog";
 }
 
@@ -27,7 +28,7 @@ FolderConfigureSettingsDialog::FolderConfigureSettingsDialog(QWidget *parent)
     mFolderConfigureSettingsWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsWidget"));
     mainLayout->addWidget(mFolderConfigureSettingsWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel|QDialogButtonBox::Ok, this);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Cancel | QDialogButtonBox::Ok, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::rejected, this, &FolderConfigureSettingsDialog::reject);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &FolderConfigureSettingsDialog::slotSave);

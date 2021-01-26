@@ -9,7 +9,6 @@
 #include <KTimeComboBox>
 #include <QHBoxLayout>
 
-
 using namespace MessageViewer;
 
 EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)

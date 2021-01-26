@@ -18,6 +18,7 @@ public:
     ~PMailSettings() override;
 
     void importSettings();
+
 private:
     void readIdentity(const KConfigGroup &group);
     QString mFileName;

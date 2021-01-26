@@ -6,10 +6,10 @@
 
 #include "checkbeforesendconfigurewidgettest.h"
 #include "../configurewidget/checkbeforesendconfigurewidget.h"
-#include <QTest>
-#include <QVBoxLayout>
 #include <QCheckBox>
 #include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *parent)
     : QObject(parent)

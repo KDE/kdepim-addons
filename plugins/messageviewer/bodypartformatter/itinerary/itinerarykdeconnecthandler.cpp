@@ -23,7 +23,10 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
 {
     // TODO we might want to do all this asynchronously by watching change signals and cache the device list
 
-    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect"), QStringLiteral("org.kde.kdeconnect.daemon"), QStringLiteral("devices"));
+    auto msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
+                                              QStringLiteral("/modules/kdeconnect"),
+                                              QStringLiteral("org.kde.kdeconnect.daemon"),
+                                              QStringLiteral("devices"));
     msg.setArguments({true, true});
     QDBusPendingReply<QStringList> reply = QDBusConnection::sessionBus().asyncCall(msg);
     reply.waitForFinished();
@@ -35,7 +38,9 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
     QVector<Device> devices;
     const auto values = reply.value();
     for (const QString &deviceId : values) {
-        QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/modules/kdeconnect/devices/") + deviceId, QStringLiteral("org.kde.kdeconnect.device"));
+        QDBusInterface deviceIface(QStringLiteral("org.kde.kdeconnect"),
+                                   QStringLiteral("/modules/kdeconnect/devices/") + deviceId,
+                                   QStringLiteral("org.kde.kdeconnect.device"));
         QDBusReply<bool> pluginReply = deviceIface.call(QStringLiteral("hasPlugin"), QLatin1String("kdeconnect_share"));
 
         if (pluginReply.value()) {
@@ -48,7 +53,9 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
 
 void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QString &deviceId)
 {
-    const QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"), QStringLiteral("/MainApplication"), QStringLiteral("org.qtproject.Qt.QCoreApplication"));
+    const QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"),
+                                   QStringLiteral("/MainApplication"),
+                                   QStringLiteral("org.qtproject.Qt.QCoreApplication"));
     QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
 
     QString method;
@@ -60,7 +67,8 @@ void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QSt
 
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
                                                       QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
-                                                      QStringLiteral("org.kde.kdeconnect.device.share"), method);
+                                                      QStringLiteral("org.kde.kdeconnect.device.share"),
+                                                      method);
     msg.setArguments({QUrl::fromLocalFile(fileName).toString()});
 
     QDBusConnection::sessionBus().send(msg);

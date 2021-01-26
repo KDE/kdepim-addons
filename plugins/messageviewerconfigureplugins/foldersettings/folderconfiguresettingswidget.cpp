@@ -4,14 +4,15 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguresettingswidget.h"
+#include "folderconfiguresettingspagewidget.h"
 #include "folderconfiguretreewidget.h"
 #include <KConfigGroup>
 #include <KSharedConfig>
 #include <QHBoxLayout>
 #include <QSplitter>
-namespace {
+namespace
+{
 static const char myFolderConfigureSettingsWidgetGroupName[] = "FolderConfigureSettingsWidget";
 }
 FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
@@ -24,7 +25,7 @@ FolderConfigureSettingsWidget::FolderConfigureSettingsWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    //TODO add label ?
+    // TODO add label ?
 
     mSplitter->setObjectName(QStringLiteral("splitter"));
     mSplitter->setChildrenCollapsible(false);
@@ -61,5 +62,5 @@ void FolderConfigureSettingsWidget::saveConfig()
 {
     const QList<int> sizes = mSplitter->sizes();
     KConfigGroup grp(KSharedConfig::openConfig(), myFolderConfigureSettingsWidgetGroupName);
-    grp.writeEntry("SplitterSize", sizes );
+    grp.writeEntry("SplitterSize", sizes);
 }

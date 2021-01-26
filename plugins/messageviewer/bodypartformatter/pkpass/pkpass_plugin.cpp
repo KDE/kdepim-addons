@@ -4,15 +4,15 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
-#include <MessageViewer/MessagePartRenderPlugin>
 
 #include <MessageViewer/HtmlWriter>
 #include <MimeTreeParser/MessagePart>
 
-#include <KPkPass/BoardingPass>
 #include <KPkPass/Barcode>
+#include <KPkPass/BoardingPass>
 
 #include <grantlee/metatype.h>
 #include <grantlee/template.h>
@@ -20,9 +20,9 @@
 #include <prison/Prison>
 
 #include <QGuiApplication>
-#include <QUrl>
 #include <QImage>
 #include <QMetaProperty>
+#include <QUrl>
 
 static bool isPkPassContent(KMime::Content *content)
 {
@@ -42,20 +42,21 @@ static bool isPkPassContent(KMime::Content *content)
 }
 
 // Grantlee has no Q_GADGET support yet
-#define GRANTLEE_MAKE_GADGET(Class) \
-    GRANTLEE_BEGIN_LOOKUP(Class) \
-    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData()); \
-    if (idx < 0) { \
-        return {}; \
-    } \
-    const auto mp = Class::staticMetaObject.property(idx); \
-    return mp.readOnGadget(&object); \
+#define GRANTLEE_MAKE_GADGET(Class)                                                                                                                            \
+    GRANTLEE_BEGIN_LOOKUP(Class)                                                                                                                               \
+    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData());                                                                   \
+    if (idx < 0) {                                                                                                                                             \
+        return {};                                                                                                                                             \
+    }                                                                                                                                                          \
+    const auto mp = Class::staticMetaObject.property(idx);                                                                                                     \
+    return mp.readOnGadget(&object);                                                                                                                           \
     GRANTLEE_END_LOOKUP
 
 GRANTLEE_MAKE_GADGET(KPkPass::Barcode)
 GRANTLEE_MAKE_GADGET(KPkPass::Field)
 
-namespace {
+namespace
+{
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:

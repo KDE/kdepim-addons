@@ -6,16 +6,16 @@
 */
 
 #include "selectimapfolderwidget.h"
-#include "selectimaploadfoldersjob.h"
-#include "selectimapfoldertreeview.h"
-#include "selectimapfoldermodel.h"
 #include "imapfoldercompletionplugin_debug.h"
+#include "selectimapfoldermodel.h"
+#include "selectimapfoldertreeview.h"
+#include "selectimaploadfoldersjob.h"
 #include <KMessageBox>
-#include <QStandardItemModel>
 #include <QHeaderView>
-#include <QLineEdit>
 #include <QInputDialog>
+#include <QLineEdit>
 #include <QSortFilterProxyModel>
+#include <QStandardItemModel>
 #include <QVBoxLayout>
 
 #include <KLocalizedString>
@@ -116,7 +116,7 @@ void SelectImapFolderWidget::createFolder()
                 KMessageBox::error(this, i18n("Slashes are not allowed in folder names."), i18n("Create Folder"));
                 return;
             }
-            //TODO more check for folder name ?
+            // TODO more check for folder name ?
             SelectImapFolderModel::self()->createNewFolder(mAccount, currentPath + QLatin1Char('/') + name);
         } else {
             KMessageBox::error(this, i18n("Empty folder name is not supported."), i18n("Create Folder"));

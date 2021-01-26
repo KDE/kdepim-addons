@@ -7,10 +7,10 @@
 #include "selectimapfolderdialogtest.h"
 #include "../selectimapfolderdialog.h"
 #include "../selectimapfolderwidget.h"
-#include <QTest>
+#include <QAbstractButton>
 #include <QDialogButtonBox>
 #include <QStandardPaths>
-#include <QAbstractButton>
+#include <QTest>
 
 SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     : QObject(parent)

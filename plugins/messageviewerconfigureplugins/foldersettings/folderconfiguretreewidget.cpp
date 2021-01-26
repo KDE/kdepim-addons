@@ -6,10 +6,10 @@
 
 #include "folderconfiguretreewidget.h"
 #include "foldersettingfilterproxymodel.h"
-#include <QVBoxLayout>
 #include <KCheckableProxyModel>
-#include <MailCommon/FolderTreeWidget>
 #include <MailCommon/FolderTreeView>
+#include <MailCommon/FolderTreeWidget>
+#include <QVBoxLayout>
 
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     : QWidget(parent)
@@ -17,10 +17,11 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     auto *mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
-    auto ftw = new MailCommon::FolderTreeWidget(this, nullptr,
+    auto ftw = new MailCommon::FolderTreeWidget(this,
+                                                nullptr,
                                                 MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
-                                                                                              |MailCommon::FolderTreeWidget::HideStatistics
-                                                                                              |MailCommon::FolderTreeWidget::HideHeaderViewMenu));
+                                                                                              | MailCommon::FolderTreeWidget::HideStatistics
+                                                                                              | MailCommon::FolderTreeWidget::HideHeaderViewMenu));
     ftw->setObjectName(QStringLiteral("foldertreewidget"));
     ftw->folderTreeView()->setDragEnabled(false);
     auto ftv = ftw->folderTreeView();

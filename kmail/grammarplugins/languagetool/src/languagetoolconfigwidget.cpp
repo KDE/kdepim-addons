@@ -5,19 +5,19 @@
 */
 
 #include "languagetoolconfigwidget.h"
-#include "languagetoolmanager.h"
 #include "languagetoolcombobox.h"
-#include "languagetoolupdatecombobox.h"
-#include "liblanguagetool_debug.h"
 #include "languagetoolgetlistoflanguagejob.h"
 #include "languagetoollistoflanguagesparser.h"
+#include "languagetoolmanager.h"
+#include "languagetoolupdatecombobox.h"
+#include "liblanguagetool_debug.h"
 #include <KLocalizedString>
 
-#include <QVBoxLayout>
 #include <QCheckBox>
-#include <QLineEdit>
 #include <QLabel>
+#include <QLineEdit>
 #include <QToolButton>
+#include <QVBoxLayout>
 
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)

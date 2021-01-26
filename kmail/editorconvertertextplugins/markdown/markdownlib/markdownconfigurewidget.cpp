@@ -5,12 +5,13 @@
 */
 
 #include "markdownconfigurewidget.h"
-#include <KLocalizedString>
 #include <KConfigGroup>
+#include <KLocalizedString>
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
-namespace {
+namespace
+{
 static const char myConfigGroupName[] = "Markdown";
 }
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)

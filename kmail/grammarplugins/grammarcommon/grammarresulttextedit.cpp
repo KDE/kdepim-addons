@@ -5,19 +5,19 @@
 */
 
 #include "grammarresulttextedit.h"
-#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include "grammarcommon_debug.h"
+#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 
 #include <KLocalizedString>
 #include <KStandardAction>
 #include <QDesktopServices>
 
-#include <QMenu>
+#include <KColorScheme>
 #include <QAction>
+#include <QMenu>
+#include <QPainter>
 #include <QTextBlock>
 #include <QTextDocument>
-#include <QPainter>
-#include <KColorScheme>
 
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)
@@ -66,15 +66,15 @@ void GrammarResultTextEdit::generalPaletteChanged()
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &infos)
 {
     for (const GrammarError &info : infos) {
-        //Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
+        // Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
         QTextBlock block = document()->findBlockByNumber(info.blockId() - 1);
         if (block.isValid()) {
             QTextCursor cur(block);
             QTextCharFormat format;
-            //Verify color
+            // Verify color
             format.setBackground(info.color().isValid() ? info.color() : mNegativeTextColor);
             QString toolTip = info.error();
-            //TODO generate new tooltip!
+            // TODO generate new tooltip!
             if (!info.url().isEmpty()) {
                 toolTip += QLatin1Char('\n') + i18n("See on: %1", info.url());
             }
@@ -93,7 +93,7 @@ void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &info
             cur.setPosition(position + info.length(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
         } else {
-            qCWarning(LIBGRAMMARCOMMON_LOG) << "Unable to find block Id" << (info.blockId() -1);
+            qCWarning(LIBGRAMMARCOMMON_LOG) << "Unable to find block Id" << (info.blockId() - 1);
         }
     }
 }

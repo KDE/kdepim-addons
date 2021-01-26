@@ -7,8 +7,8 @@
 #include "mergecontactselectlistwidgettest.h"
 #include "job/mergecontacts.h"
 #include "widgets/mergecontactselectlistwidget.h"
-#include <QListWidget>
 #include <QLabel>
+#include <QListWidget>
 #include <QTest>
 
 MergeContactSelectListWidgetTest::MergeContactSelectListWidgetTest(QObject *parent)

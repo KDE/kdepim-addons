@@ -7,12 +7,13 @@
 #include "viewerplugincreateeventtest.h"
 #include "../createeventplugin/viewerplugincreateevent.h"
 #include <KActionCollection>
-#include <QTest>
-#include <QStandardItemModel>
 #include <MessageViewer/ViewerPluginInterface>
 #include <QHBoxLayout>
+#include <QStandardItemModel>
+#include <QTest>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 }
 

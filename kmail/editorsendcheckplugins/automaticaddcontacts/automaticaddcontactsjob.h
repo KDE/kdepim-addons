@@ -7,8 +7,8 @@
 #ifndef AUTOMATICADDCONTACTSJOB_H
 #define AUTOMATICADDCONTACTSJOB_H
 
-#include <QObject>
 #include <AkonadiCore/Collection>
+#include <QObject>
 class KJob;
 class AutomaticAddContactsJob : public QObject
 {

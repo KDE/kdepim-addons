@@ -1,14 +1,14 @@
 /* ============================================================
-*
-* This file is a part of the rekonq project
-* SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
-* based on code from rekonq
-* SPDX-FileCopyrightText: 2010-2012 Andrea Diamantini <adjam7 at gmail dot com>
-*
-*
-* SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
-*
-* ============================================================ */
+ *
+ * This file is a part of the rekonq project
+ * SPDX-FileCopyrightText: 2013-2021 Laurent Montel <montel@kde.org>
+ * based on code from rekonq
+ * SPDX-FileCopyrightText: 2010-2012 Andrea Diamantini <adjam7 at gmail dot com>
+ *
+ *
+ * SPDX-License-Identifier: GPL-2.0-only OR GPL-3.0-only OR LicenseRef-KDE-Accepted-GPL
+ *
+ * ============================================================ */
 
 #ifndef AD_BLOCK_SETTING_WIDGET_H
 #define AD_BLOCK_SETTING_WIDGET_H
@@ -21,11 +21,13 @@
 
 class QListWidgetItem;
 
-namespace Ui {
+namespace Ui
+{
 class adblock;
 }
 
-namespace AdBlock {
+namespace AdBlock
+{
 class AdBlockSubscription;
 class AdBlockListwidgetItem : public QListWidgetItem
 {
@@ -58,6 +60,7 @@ Q_SIGNALS:
 
 protected:
     bool event(QEvent *event) override;
+
 private:
     void hasChanged();
     void slotInfoLinkActivated(const QString &);

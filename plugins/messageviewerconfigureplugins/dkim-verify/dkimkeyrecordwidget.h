@@ -8,7 +8,8 @@
 #define DKIMKEYRECORDWIDGET_H
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
-namespace MessageViewer {
+namespace MessageViewer
+{
 class DKIMManagerKeyWidget;
 }
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMKeyRecordWidget : public QWidget
@@ -21,6 +22,7 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+
 private:
     void readConfig();
     void writeConfig();

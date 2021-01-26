@@ -15,7 +15,8 @@
 
 #include "transportconfigwidget.h"
 
-namespace MailTransport {
+namespace MailTransport
+{
 class Transport;
 
 /**

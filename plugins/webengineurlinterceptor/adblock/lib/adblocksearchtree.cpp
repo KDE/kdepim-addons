@@ -8,8 +8,8 @@
 */
 
 #include "adblocksearchtree.h"
-#include "adblockrule.h"
 #include "adblockinterceptor_debug.h"
+#include "adblockrule.h"
 #include <QWebEngineUrlRequestInfo>
 using namespace AdBlock;
 
@@ -84,7 +84,8 @@ const AdBlockRule *AdBlockSearchTree::find(const QWebEngineUrlRequestInfo &reque
     return nullptr;
 }
 
-const AdBlockRule *AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar *string, int len) const
+const AdBlockRule *
+AdBlockSearchTree::prefixSearch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &urlString, const QChar *string, int len) const
 {
     if (len <= 0) {
         return nullptr;

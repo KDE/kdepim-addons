@@ -9,7 +9,8 @@
 
 #include <QWidget>
 class QWebEngineView;
-namespace AdBlock {
+namespace AdBlock
+{
 struct AdBlockResult;
 }
 

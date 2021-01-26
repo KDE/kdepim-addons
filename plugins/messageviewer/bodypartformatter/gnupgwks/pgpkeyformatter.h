@@ -7,8 +7,8 @@
 #ifndef PGPKEYFORMATTER_H_
 #define PGPKEYFORMATTER_H_
 
-#include <MimeTreeParser/BodyPartFormatter>
 #include <MessageViewer/MessagePartRendererBase>
+#include <MimeTreeParser/BodyPartFormatter>
 
 class PgpKeyMessagePart;
 

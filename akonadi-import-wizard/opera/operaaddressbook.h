@@ -16,6 +16,7 @@ public:
     ~OperaAddressBook() override;
 
     void importAddressBook();
+
 private:
     void appendContact(KContacts::Addressee *contact);
     QString mFileName;

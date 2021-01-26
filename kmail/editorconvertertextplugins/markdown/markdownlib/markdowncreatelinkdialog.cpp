@@ -6,12 +6,12 @@
 
 #include "markdowncreatelinkdialog.h"
 #include "markdowncreatelinkwidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
-#include <KConfigGroup>
-#include <KSharedConfig>
+#include <QVBoxLayout>
 
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)

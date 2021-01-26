@@ -7,9 +7,9 @@
 #include "createeventjob.h"
 #include "createeventplugin_debug.h"
 #include <Akonadi/KMime/MessageParts>
+#include <AkonadiCore/ItemCreateJob>
 #include <AkonadiCore/ItemFetchJob>
 #include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/ItemCreateJob>
 #include <AkonadiCore/RelationCreateJob>
 
 #include <KMime/Message>

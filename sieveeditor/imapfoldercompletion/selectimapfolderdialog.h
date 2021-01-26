@@ -8,7 +8,8 @@
 #define SELECTIMAPFOLDERDIALOG_H
 
 #include <QDialog>
-namespace KSieveUi {
+namespace KSieveUi
+{
 class SieveImapAccountSettings;
 }
 class SelectImapFolderWidget;

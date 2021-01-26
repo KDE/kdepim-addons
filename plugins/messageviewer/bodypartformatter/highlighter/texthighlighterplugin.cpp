@@ -8,12 +8,12 @@
 
 #include "highlighter.h"
 
+#include <MessageViewer/MessagePartRenderPlugin>
 #include <MessageViewer/MessagePartRendererBase>
 #include <MessageViewer/MessagePartRendererManager>
-#include <MessageViewer/MessagePartRenderPlugin>
 
-#include <MimeTreeParser/MessagePart>
 #include <MessageViewer/HtmlWriter>
+#include <MimeTreeParser/MessagePart>
 
 #include <KSyntaxHighlighting/Definition>
 #include <KSyntaxHighlighting/Repository>
@@ -25,7 +25,8 @@
 #include <QMimeDatabase>
 #include <QPalette>
 
-namespace {
+namespace
+{
 class Formatter : public MessageViewer::MessagePartRendererBase
 {
 public:
@@ -55,13 +56,13 @@ public:
         c.insert(QStringLiteral("block"), msgPart.data());
         c.insert(QStringLiteral("showOnlyOneMimePart"), context->showOnlyOneMimePart());
         c.insert(QStringLiteral("content"), QVariant::fromValue<MessageViewer::GrantleeCallback>([=](Grantlee::OutputStream *) {
-                Highlighter highLighter(htmlWriter->stream());
-                highLighter.setDefinition(def);
-                highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
-                                     ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
-                                     : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
-                highLighter.highlight(msgPart->text());
-            }));
+                     Highlighter highLighter(htmlWriter->stream());
+                     highLighter.setDefinition(def);
+                     highLighter.setTheme(QGuiApplication::palette().color(QPalette::Base).lightness() < 128
+                                              ? mRepo.defaultTheme(KSyntaxHighlighting::Repository::DarkTheme)
+                                              : mRepo.defaultTheme(KSyntaxHighlighting::Repository::LightTheme));
+                     highLighter.highlight(msgPart->text());
+                 }));
 
         auto t = MessageViewer::MessagePartRendererManager::self()->loadByName(QStringLiteral("textmessagepart.html"));
         Grantlee::OutputStream s(htmlWriter->stream());

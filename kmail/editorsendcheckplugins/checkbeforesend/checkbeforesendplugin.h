@@ -13,9 +13,7 @@ class CheckBeforeSendPlugin : public MessageComposer::PluginEditorCheckBeforeSen
 {
     Q_OBJECT
 public:
-    explicit CheckBeforeSendPlugin(QObject *parent = nullptr, const QList<QVariant> & =
-    {
-    });
+    explicit CheckBeforeSendPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~CheckBeforeSendPlugin() override;
 
     MessageComposer::PluginEditorCheckBeforeSendInterface *createInterface(QObject *parent) override;

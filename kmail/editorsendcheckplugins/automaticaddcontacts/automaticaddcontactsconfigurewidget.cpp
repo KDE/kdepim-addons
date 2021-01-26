@@ -4,13 +4,13 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#include "automaticaddcontactsconfiguretab.h"
 #include "automaticaddcontactsconfigurewidget.h"
+#include "automaticaddcontactsconfiguretab.h"
 #include <AkonadiCore/Collection>
 #include <AkonadiWidgets/CollectionComboBox>
+#include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>
-#include <KSharedConfig>
 
 AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)

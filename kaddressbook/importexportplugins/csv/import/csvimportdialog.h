@@ -51,6 +51,7 @@ private:
     void slotSaveTemplate();
     void slotApplyTemplate();
     void slotOk();
+
 private:
     void applyTemplate();
     void saveTemplate();

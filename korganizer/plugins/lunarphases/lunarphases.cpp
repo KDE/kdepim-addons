@@ -20,9 +20,10 @@ Lunarphases::Lunarphases()
 
 QString Lunarphases::info() const
 {
-    return i18n("This plugin displays the day's lunar phase (New, First, Last, Full). "
-                "Currently, the phase is computed for noon at UTC; therefore, you should "
-                "expect variations by 1 day in either direction.");
+    return i18n(
+        "This plugin displays the day's lunar phase (New, First, Last, Full). "
+        "Currently, the phase is computed for noon at UTC; therefore, you should "
+        "expect variations by 1 day in either direction.");
 }
 
 Element::List Lunarphases::createDayElements(const QDate &date)

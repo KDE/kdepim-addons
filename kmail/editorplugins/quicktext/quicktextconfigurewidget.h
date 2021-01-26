@@ -7,8 +7,8 @@
 #ifndef QUICKTEXTCONFIGUREWIDGET_H
 #define QUICKTEXTCONFIGUREWIDGET_H
 
-#include <QWidget>
 #include "quicktext_export.h"
+#include <QWidget>
 class QuickTextWidget;
 class QUICKTEXT_EXPORT QuickTextConfigureWidget : public QWidget
 {
@@ -19,6 +19,7 @@ public:
     void save();
     void importQuickText();
     void exportQuickText();
+
 private:
     QuickTextWidget *mSnippetWidget = nullptr;
 };

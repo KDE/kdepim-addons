@@ -42,5 +42,5 @@ void NylasMailSettings::readIdentity()
 
 void NylasMailSettings::readGlobalSettings()
 {
-    //TODO
+    // TODO
 }

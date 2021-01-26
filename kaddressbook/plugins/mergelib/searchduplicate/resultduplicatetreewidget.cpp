@@ -28,10 +28,10 @@ void ResultDuplicateTreeWidget::slotItemChanged(QTreeWidgetItem *item, int colum
     if (column != 0) {
         return;
     }
-    //Parent
+    // Parent
     if (item->childCount() != 0) {
         changeState(item, item->checkState(0) == Qt::Checked);
-    } else { //child
+    } else { // child
         QTreeWidgetItem *parent = item->parent();
         if (parent) {
             blockSignals(true);

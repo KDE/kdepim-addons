@@ -13,9 +13,9 @@
 #include "adblocksubscription.h"
 #include "adblockutil.h"
 
-#include <QUrl>
-#include <QString>
 #include <QDebug>
+#include <QString>
+#include <QUrl>
 #include <QWebEngineUrlRequestInfo>
 using namespace AdBlock;
 
@@ -177,11 +177,11 @@ bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QS
     if (m_type == CssRule || !m_isEnabled || m_isInternalDisabled) {
         return false;
     }
-    //qDebug() << " bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl)";
+    // qDebug() << " bool AdBlockRule::networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl)";
     bool matched = stringMatch(domain, encodedUrl);
 
     if (matched) {
-        //qDebug() << " matched !!!!!" << domain << " encoded " << encodedUrl;
+        // qDebug() << " matched !!!!!" << domain << " encoded " << encodedUrl;
         // Check domain restrictions
         if (hasOption(DomainRestrictedOption) && !matchDomain(request.firstPartyUrl().host())) {
             return false;
@@ -478,10 +478,7 @@ void AdBlockRule::parseFilter()
 
     // If we still find a wildcard (*) or separator (^) or (|)
     // we must modify parsedLine to comply with QzRegExp
-    if (parsedLine.contains(QLatin1Char('*'))
-        || parsedLine.contains(QLatin1Char('^'))
-        || parsedLine.contains(QLatin1Char('|'))
-        ) {
+    if (parsedLine.contains(QLatin1Char('*')) || parsedLine.contains(QLatin1Char('^')) || parsedLine.contains(QLatin1Char('|'))) {
         m_type = RegExpMatchRule;
         m_regExp = new RegExp;
         m_regExp->regExp = AdblockRegExp(createRegExpFromFilter(parsedLine), m_caseSensitivity);

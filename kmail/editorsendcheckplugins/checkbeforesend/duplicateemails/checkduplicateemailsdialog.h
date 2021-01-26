@@ -18,6 +18,7 @@ public:
     ~CheckDuplicateEmailsDialog() override;
 
     void setDuplicatedEmails(const QMap<QString, int> &emails);
+
 private:
     void readConfig();
     void writeConfig();

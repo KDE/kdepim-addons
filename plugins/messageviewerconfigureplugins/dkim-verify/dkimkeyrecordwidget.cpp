@@ -5,12 +5,13 @@
 */
 
 #include "dkimkeyrecordwidget.h"
-#include <MessageViewer/DKIMManagerKeyWidget>
 #include <KConfigGroup>
 #include <KSharedConfig>
+#include <MessageViewer/DKIMManagerKeyWidget>
 #include <QHBoxLayout>
 
-namespace {
+namespace
+{
 static const char myDKIMKeyRecordWidgetGroupName[] = "DKIMKeyRecordWidget";
 }
 

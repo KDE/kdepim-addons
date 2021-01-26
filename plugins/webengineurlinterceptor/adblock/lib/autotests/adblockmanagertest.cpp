@@ -6,7 +6,8 @@
 
 #include "adblockmanagertest.h"
 
-AdblockManagerTest::AdblockManagerTest(QObject *parent) : QObject(parent)
+AdblockManagerTest::AdblockManagerTest(QObject *parent)
+    : QObject(parent)
 {
 }
 

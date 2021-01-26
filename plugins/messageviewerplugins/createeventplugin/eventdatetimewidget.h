@@ -7,11 +7,12 @@
 #ifndef EVENTDATETIMEWIDGET_H
 #define EVENTDATETIMEWIDGET_H
 
-#include <QWidget>
 #include <QDateTime>
+#include <QWidget>
 class KTimeComboBox;
 class KDateComboBox;
-namespace MessageViewer {
+namespace MessageViewer
+{
 class EventDateTimeWidgetPrivate;
 class EventDateTimeWidget : public QWidget
 {

@@ -5,12 +5,12 @@
 */
 
 #include "automaticaddcontactsconfigurewidgettest.h"
-#include "../automaticaddcontactsconfigurewidget.h"
 #include "../automaticaddcontactsconfiguretab.h"
+#include "../automaticaddcontactsconfigurewidget.h"
 
+#include <QStandardPaths>
 #include <QTest>
 #include <QVBoxLayout>
-#include <QStandardPaths>
 
 AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest(QObject *parent)
     : QObject(parent)

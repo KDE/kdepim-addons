@@ -21,7 +21,7 @@ QVector<LanguageInfo> LanguageToolListOfLanguagesParser::parseResult(const QJson
 {
     QVector<LanguageInfo> lstLanguageInfo;
     for (const QJsonValue &current : array) {
-        //qDebug() << " current " << current;
+        // qDebug() << " current " << current;
         if (current.type() == QJsonValue::Object) {
             const QJsonObject languageToolObject = current.toObject();
             LanguageInfo lang;

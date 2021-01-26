@@ -5,10 +5,10 @@
 */
 
 #include "grantleeheaderstyleinterface.h"
-#include <MessageViewer/HeaderStylePlugin>
-#include <MessageViewer/HeaderStyle>
 #include <GrantleeTheme/GrantleeThemeManager>
 #include <KToggleAction>
+#include <MessageViewer/HeaderStyle>
+#include <MessageViewer/HeaderStylePlugin>
 
 using namespace MessageViewer;
 GrantleeHeaderStyleInterface::GrantleeHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)
@@ -26,9 +26,8 @@ GrantleeHeaderStyleInterface::~GrantleeHeaderStyleInterface()
 
 void GrantleeHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
-    mThemeManager = new GrantleeTheme::ThemeManager(QStringLiteral("mail"),
-                                                    QStringLiteral("header.desktop"), ac,
-                                                    QStringLiteral("messageviewer/themes/"), this);
+    mThemeManager =
+        new GrantleeTheme::ThemeManager(QStringLiteral("mail"), QStringLiteral("header.desktop"), ac, QStringLiteral("messageviewer/themes/"), this);
     mThemeManager->setDownloadNewStuffConfigFile(QStringLiteral("messageviewer_header_themes.knsrc"));
     connect(mThemeManager, &GrantleeTheme::ThemeManager::grantleeThemeSelected, this, &GrantleeHeaderStyleInterface::slotGrantleeHeaders);
     connect(mThemeManager, &GrantleeTheme::ThemeManager::updateThemes, this, &HeaderStyleInterface::styleUpdated);

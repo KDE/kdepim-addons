@@ -7,8 +7,8 @@
 #ifndef SHORTURLENGINEPLUGINMANAGER_H
 #define SHORTURLENGINEPLUGINMANAGER_H
 
-#include <QObject>
 #include "shorturl_export.h"
+#include <QObject>
 class ShortUrlEnginePlugin;
 class ShortUrlEnginePluginManagerPrivate;
 class SHORTURL_EXPORT ShortUrlEnginePluginManager : public QObject
@@ -21,6 +21,7 @@ public:
     QVector<ShortUrlEnginePlugin *> pluginsList() const;
 
     static ShortUrlEnginePluginManager *self();
+
 private:
     ShortUrlEnginePluginManagerPrivate *const d;
 };

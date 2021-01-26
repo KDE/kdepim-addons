@@ -17,6 +17,7 @@ public:
     explicit GearySettings(const QString &filename);
     ~GearySettings() override;
     void importSettings();
+
 private:
     void readImapAccount();
     void readIdentity();

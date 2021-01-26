@@ -26,10 +26,7 @@ public:
     Element::List createDayElements(const QDate &) override;
     Element::List createWeekElements(const QDate &) override;
 
-    enum DayNumber {
-        DayOfYear = 1,
-        DaysRemaining = 2
-    };
+    enum DayNumber { DayOfYear = 1, DaysRemaining = 2 };
     Q_DECLARE_FLAGS(DayNumbers, DayNumber)
 
     Q_REQUIRED_RESULT QString info() const override;

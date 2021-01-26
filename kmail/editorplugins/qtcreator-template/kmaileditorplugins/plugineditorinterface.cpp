@@ -1,26 +1,29 @@
-%{Cpp:LicenseTemplate}\
-		
-#include "%{ProjectNameLower}plugineditorinterface.h"
+%
+{
+Cpp:
+    LicenseTemplate
+}
+
 #include "%{ProjectNameLower}editorplugin_debug.h"
-#include <KPIMTextEdit/EditorUtil>
-#include <KPIMTextEdit/RichTextEditor>
+#include "%{ProjectNameLower}plugineditorinterface.h"
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
+#include <KPIMTextEdit/EditorUtil>
+#include <KPIMTextEdit/RichTextEditor>
 
-%{CN}PluginEditorInterface::%{CN}PluginEditorInterface(QObject *parent)
-    : MessageComposer::PluginEditorInterface(parent)
+% {CN} PluginEditorInterface::
+        % {CN} PluginEditorInterface(QObject *parent)
+    : MessageComposer::PluginEditorInterface(parent){}
+
+    % {CN} PluginEditorInterface::~ % {CN} PluginEditorInterface()
 {
 }
 
-%{CN}PluginEditorInterface::~%{CN}PluginEditorInterface()
+void % {CN} PluginEditorInterface::createAction(KActionCollection *ac)
 {
 }
 
-void %{CN}PluginEditorInterface::createAction(KActionCollection *ac)
+void % {CN} PluginEditorInterface::exec()
 {
-}
-
-void %{CN}PluginEditorInterface::exec()
-{
-    //TODO
+    // TODO
 }

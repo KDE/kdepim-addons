@@ -11,7 +11,7 @@
 #include <QDomDocument>
 #include <QFile>
 
-//https://docs.microsoft.com/en-us/previous-versions//ms735869(v=vs.85)
+// https://docs.microsoft.com/en-us/previous-versions//ms735869(v=vs.85)
 
 ImportWindowContact::ImportWindowContact()
 {
@@ -90,7 +90,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                                 } else if (nameInfoTag == QLatin1String("c:Suffix")) {
                                     contact.setSuffix(nameInfo.text());
                                 } else {
-                                    //TODO middlename/generation
+                                    // TODO middlename/generation
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " name tag not supported yet " << nameInfoTag;
                                 }
                             }
@@ -197,7 +197,8 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     for (QDomElement position = e.firstChildElement(); !position.isNull(); position = position.nextSiblingElement()) {
                         const QString positionTag = position.tagName();
                         if (positionTag == QLatin1String("c:Position")) {
-                            for (QDomElement positionInfo = position.firstChildElement(); !positionInfo.isNull(); positionInfo = positionInfo.nextSiblingElement()) {
+                            for (QDomElement positionInfo = position.firstChildElement(); !positionInfo.isNull();
+                                 positionInfo = positionInfo.nextSiblingElement()) {
                                 const QString positionInfoTag = positionInfo.tagName();
                                 if (positionInfoTag == QLatin1String("c:Organization")) {
                                     contact.setOrganization(positionInfo.text());
@@ -217,7 +218,7 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " position tag unknown:" << positionTag;
                         }
                     }
-                } else if (tag == QLatin1String("c:Gender")) { //TODO verify it
+                } else if (tag == QLatin1String("c:Gender")) { // TODO verify it
                     KContacts::Gender gender;
                     const QString genderStr = e.text();
                     if (genderStr == QLatin1String("Male")) {
@@ -225,13 +226,13 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                     } else if (genderStr == QLatin1String("Female")) {
                         gender.setGender(QStringLiteral("F"));
                     } else {
-                        //Don't provide gender
+                        // Don't provide gender
                         continue;
                     }
                     contact.setGender(gender);
-                } else if (tag == QLatin1String("c:Notes")) { //TODO verify it
+                } else if (tag == QLatin1String("c:Notes")) { // TODO verify it
                     contact.setNote(e.text());
-                } else if (tag == QLatin1String("c:UrlCollection")) { //TODO verify it
+                } else if (tag == QLatin1String("c:UrlCollection")) { // TODO verify it
                     for (QDomElement url = e.firstChildElement(); !url.isNull(); url = url.nextSiblingElement()) {
                         const QString urlTag = url.tagName();
                         if (urlTag == QLatin1String("c:Url")) {
@@ -265,8 +266,8 @@ bool ImportWindowContact::loadDomElement(QDomDocument &doc, QFile *file)
     int errorRow;
     int errorCol;
     if (!doc.setContent(file, &errorMsg, &errorRow, &errorCol)) {
-        qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << "Unable to load document.Parse error in line " << errorRow
-                                                        << ", col " << errorCol << ": " << errorMsg;
+        qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG)
+            << "Unable to load document.Parse error in line " << errorRow << ", col " << errorCol << ": " << errorMsg;
         return false;
     }
     return true;

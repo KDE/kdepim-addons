@@ -24,7 +24,7 @@ public:
     Element::List createDayElements(const QDate &) override;
     Element::List createMonthElements(const QDate &) override;
 
-//    void configure( QWidget *parent );
+    //    void configure( QWidget *parent );
 
     QString info() const override;
 };

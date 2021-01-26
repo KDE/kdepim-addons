@@ -7,8 +7,8 @@
 #ifndef DKIMPOLICYWIDGET_H
 #define DKIMPOLICYWIDGET_H
 
-#include <QWidget>
 #include "dkimconfigure_private_export.h"
+#include <QWidget>
 class QCheckBox;
 class QPushButton;
 class LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT DKIMPolicyWidget : public QWidget
@@ -20,6 +20,7 @@ public:
     void loadSettings();
     void saveSettings();
     void resetSettings();
+
 private:
     QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
     QCheckBox *mUseDMARC = nullptr;

@@ -4,9 +4,9 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
+#include "languagetoolwidget.h"
 #include <QApplication>
 #include <QStandardPaths>
-#include "languagetoolwidget.h"
 
 int main(int argc, char **argv)
 {

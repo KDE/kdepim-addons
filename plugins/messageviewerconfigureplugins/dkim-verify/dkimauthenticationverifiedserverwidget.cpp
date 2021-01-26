@@ -5,9 +5,9 @@
 */
 
 #include "dkimauthenticationverifiedserverwidget.h"
-#include <QVBoxLayout>
 #include <KLocalizedString>
 #include <MessageViewer/DKIMManagerAuthenticationServer>
+#include <QVBoxLayout>
 
 DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(QWidget *parent)
     : QWidget(parent)

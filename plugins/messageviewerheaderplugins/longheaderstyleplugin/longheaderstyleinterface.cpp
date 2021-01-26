@@ -5,9 +5,9 @@
 */
 
 #include "longheaderstyleinterface.h"
-#include <KToggleAction>
-#include <KLocalizedString>
 #include <KActionCollection>
+#include <KLocalizedString>
+#include <KToggleAction>
 
 using namespace MessageViewer;
 LongHeaderStyleInterface::LongHeaderStyleInterface(MessageViewer::HeaderStylePlugin *plugin, QObject *parent)

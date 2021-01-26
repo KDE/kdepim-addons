@@ -9,8 +9,8 @@
 
 #include <Gravatar/GravatarResolvUrlJob>
 
-#include <KContacts/Addressee>
 #include <AkonadiCore/ItemModifyJob>
+#include <KContacts/Addressee>
 using namespace KABGravatar;
 
 GravatarUpdateJob::GravatarUpdateJob(QObject *parent)

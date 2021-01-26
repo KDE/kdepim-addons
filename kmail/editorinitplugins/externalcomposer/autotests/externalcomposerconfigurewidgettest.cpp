@@ -6,12 +6,12 @@
 
 #include "externalcomposerconfigurewidgettest.h"
 #include "../externalcomposerconfigurewidget.h"
-#include <QCheckBox>
-#include <QVBoxLayout>
-#include <QLabel>
-#include <QTest>
 #include <KUrlRequester>
+#include <QCheckBox>
+#include <QLabel>
 #include <QStandardPaths>
+#include <QTest>
+#include <QVBoxLayout>
 
 ExternalComposerConfigureWidgetTest::ExternalComposerConfigureWidgetTest(QObject *parent)
     : QObject(parent)

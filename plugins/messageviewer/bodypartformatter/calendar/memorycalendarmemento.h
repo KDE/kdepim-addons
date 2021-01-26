@@ -12,7 +12,8 @@
 #include <Akonadi/Calendar/CalendarBase>
 #include <QObject>
 
-namespace MessageViewer {
+namespace MessageViewer
+{
 class MemoryCalendarMemento : public QObject, public MimeTreeParser::Interface::BodyPartMemento
 {
     Q_OBJECT

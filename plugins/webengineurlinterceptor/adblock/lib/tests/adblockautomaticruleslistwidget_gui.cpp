@@ -7,11 +7,11 @@
 #include "adblockautomaticruleslistwidget_gui.h"
 #include "../widgets/adblockautomaticruleslistwidget.h"
 
-#include <QCommandLineParser>
 #include <QApplication>
+#include <QCommandLineParser>
+#include <QFileDialog>
 #include <QStandardPaths>
 #include <QVBoxLayout>
-#include <QFileDialog>
 AdBlockAutomaticRulesListWidgetTest::AdBlockAutomaticRulesListWidgetTest(const QString &fileName, QWidget *parent)
     : QWidget(parent)
 {
