@@ -81,7 +81,7 @@ private:
     void showAutomaticFilterList(QListWidgetItem *item);
     void slotManualFiltersChanged(QListWidgetItem *item);
     void slotSelectionChanged();
-    enum List{
+    enum List {
         UrlList = Qt::UserRole + 1,
         PathList = Qt::UserRole + 2,
     };
