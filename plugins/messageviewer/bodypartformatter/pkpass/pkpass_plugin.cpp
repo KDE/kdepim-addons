@@ -41,20 +41,6 @@ static bool isPkPassContent(KMime::Content *content)
     return cd && cd->filename().endsWith(QLatin1String("pkpass"));
 }
 
-// Grantlee has no Q_GADGET support yet
-#define GRANTLEE_MAKE_GADGET(Class)                                                                                                                            \
-    GRANTLEE_BEGIN_LOOKUP(Class)                                                                                                                               \
-    const auto idx = Class::staticMetaObject.indexOfProperty(property.toUtf8().constData());                                                                   \
-    if (idx < 0) {                                                                                                                                             \
-        return {};                                                                                                                                             \
-    }                                                                                                                                                          \
-    const auto mp = Class::staticMetaObject.property(idx);                                                                                                     \
-    return mp.readOnGadget(&object);                                                                                                                           \
-    GRANTLEE_END_LOOKUP
-
-GRANTLEE_MAKE_GADGET(KPkPass::Barcode)
-GRANTLEE_MAKE_GADGET(KPkPass::Field)
-
 namespace
 {
 class Formatter : public MessageViewer::MessagePartRendererBase
@@ -171,8 +157,6 @@ public:
     explicit Plugin(QObject *parent = nullptr)
         : QObject(parent)
     {
-        Grantlee::registerMetaType<KPkPass::Barcode>();
-        Grantlee::registerMetaType<KPkPass::Field>();
     }
 
     MessageViewer::MessagePartRendererBase *renderer(int index) override
