@@ -89,7 +89,10 @@ public:
     /** The wizard can be used for setting up anti-spam tools and for
           setting up anti-virus tools.
       */
-    enum WizardMode { AntiSpam, AntiVirus };
+    enum WizardMode {
+        AntiSpam,
+        AntiVirus,
+    };
 
     /** Constructor that needs to initialize from the main folder tree
         of KMail.

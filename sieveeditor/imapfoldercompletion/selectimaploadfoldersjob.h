@@ -22,7 +22,9 @@ class SelectImapLoadFoldersJob : public QObject
 {
     Q_OBJECT
 public:
-    enum Roles { PathRole = Qt::UserRole + 1 };
+    enum Roles {
+        PathRole = Qt::UserRole + 1,
+    };
 
     explicit SelectImapLoadFoldersJob(QStandardItemModel *model, QObject *parent = nullptr);
     ~SelectImapLoadFoldersJob() override;

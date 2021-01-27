@@ -20,7 +20,9 @@ class PimCalendarsModel : public QSortFilterProxyModel
 {
     Q_OBJECT
 public:
-    enum Roles { DataRole = Qt::UserRole + 1 };
+    enum Roles {
+        DataRole = Qt::UserRole + 1,
+    };
 
     explicit PimCalendarsModel(QObject *parent = nullptr);
     ~PimCalendarsModel() override;

@@ -28,7 +28,11 @@ class GnuPGWKSMessagePart : public MimeTreeParser::MessagePart
 {
     Q_OBJECT
 public:
-    enum ConfirmationType { UnknownType, ConfirmationRequest, ConfirmationResponse };
+    enum ConfirmationType {
+        UnknownType,
+        ConfirmationRequest,
+        ConfirmationResponse,
+    };
 
     explicit GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part);
 

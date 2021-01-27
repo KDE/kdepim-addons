@@ -29,7 +29,13 @@ public:
     void exportQuickText();
 
 private:
-    enum class EditMode { AddSnippet, EditSnippet, AddGroup, EditGroup, Unknown };
+    enum class EditMode {
+        AddSnippet,
+        EditSnippet,
+        AddGroup,
+        EditGroup,
+        Unknown,
+    };
     void addSnippet();
     void editSnippet();
     void addSnippetGroup();

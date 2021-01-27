@@ -13,7 +13,11 @@
 
 namespace
 {
-enum Index { application_pgp_keys, application_vnd_gnupg_keys, multipart_mixed };
+enum Index {
+    application_pgp_keys,
+    application_vnd_gnupg_keys,
+    multipart_mixed,
+};
 }
 
 const MimeTreeParser::Interface::BodyPartFormatter *ApplicationGnuPGWKSPlugin::bodyPartFormatter(int idx) const

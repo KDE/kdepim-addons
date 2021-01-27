@@ -22,7 +22,11 @@ public:
     bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:
-    enum WKSStatus { CheckingPublishing, NotPublished, Published };
+    enum WKSStatus {
+        CheckingPublishing,
+        NotPublished,
+        Published,
+    };
 
     QString render(const GnuPGWKSMessagePart &mp, WKSStatus status) const;
 };

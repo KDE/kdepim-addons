@@ -73,7 +73,14 @@ protected:
     QStringList parseRegExpFilter(const QString &filter) const;
 
 private:
-    enum RuleType { CssRule = 0, DomainMatchRule = 1, RegExpMatchRule = 2, StringEndsMatchRule = 3, StringContainsMatchRule = 4, Invalid = 5 };
+    enum RuleType {
+        CssRule = 0,
+        DomainMatchRule = 1,
+        RegExpMatchRule = 2,
+        StringEndsMatchRule = 3,
+        StringContainsMatchRule = 4,
+        Invalid = 5,
+    };
 
     enum RuleOption {
         DomainRestrictedOption = 1,
@@ -88,7 +95,7 @@ private:
 
         // Exception only options
         DocumentOption = 1024,
-        ElementHideOption = 2048
+        ElementHideOption = 2048,
     };
 
     Q_DECLARE_FLAGS(RuleOptions, RuleOption)

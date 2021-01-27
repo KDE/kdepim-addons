@@ -29,7 +29,9 @@ public:
 
 private:
     void slotUpdateFilter();
-    enum ElementType { ElementValue = Qt::UserRole + 1 };
+    enum ElementType {
+        ElementValue = Qt::UserRole + 1,
+    };
 
     void readConfig();
     void writeConfig();

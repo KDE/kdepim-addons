@@ -32,7 +32,7 @@ public:
         Media,
         Popup,
 
-        MaxTypeElement
+        MaxTypeElement,
     };
 
     explicit AdBlockBlockableItemsWidget(QWidget *parent = nullptr);
@@ -51,8 +51,14 @@ private:
     void slotBlockItem();
     void slotCopyItem();
     void slotRemoveFilter();
-    enum BlockType { FilterValue = 0, Url, Type };
-    enum TypeItem { Element = Qt::UserRole + 1 };
+    enum BlockType {
+        FilterValue = 0,
+        Url,
+        Type,
+    };
+    enum TypeItem {
+        Element = Qt::UserRole + 1,
+    };
 
     void writeConfig();
     void readConfig();

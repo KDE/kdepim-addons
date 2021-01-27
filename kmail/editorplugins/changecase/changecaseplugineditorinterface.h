@@ -29,7 +29,13 @@ private:
     void upperCase();
     void lowerCase();
     void reverseCase();
-    enum ChangeCaseType { Unknown = -1, UpperCase = 0, LowerCase, SentenseCase, ReverseCase };
+    enum ChangeCaseType {
+        Unknown = -1,
+        UpperCase = 0,
+        LowerCase,
+        SentenseCase,
+        ReverseCase,
+    };
     ChangeCaseType mType = Unknown;
 };
 

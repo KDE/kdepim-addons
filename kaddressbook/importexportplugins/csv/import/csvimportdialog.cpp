@@ -42,7 +42,13 @@
 #include <QUuid>
 #include <QVBoxLayout>
 
-enum { Local = 0, Latin1 = 1, Uni = 2, MSBug = 3, Codec = 4 };
+enum {
+    Local = 0,
+    Latin1 = 1,
+    Uni = 2,
+    MSBug = 3,
+    Codec = 4,
+};
 
 class ContactFieldComboBox : public QComboBox
 {

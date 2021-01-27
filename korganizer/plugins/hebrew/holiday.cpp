@@ -45,7 +45,15 @@ QStringList Holiday::findHoliday(int month,
                                  bool showChol,
                                  bool showOmer)
 {
-    enum { Sunday = 1, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday };
+    enum {
+        Sunday = 1,
+        Monday,
+        Tuesday,
+        Wednesday,
+        Thursday,
+        Friday,
+        Saturday,
+    };
 
     QStringList holidays;
     bool isAShabbat = (weekday == Saturday);

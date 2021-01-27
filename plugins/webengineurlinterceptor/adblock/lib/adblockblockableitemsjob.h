@@ -21,7 +21,11 @@ class ADBLOCKLIB_EXPORT AdBlockBlockableItemsJob : public QObject
 {
     Q_OBJECT
 public:
-    enum TypeElement { UnKnown = 0, Image, Script };
+    enum TypeElement {
+        UnKnown = 0,
+        Image,
+        Script,
+    };
 
     explicit AdBlockBlockableItemsJob(QObject *parent = nullptr);
     ~AdBlockBlockableItemsJob() override;

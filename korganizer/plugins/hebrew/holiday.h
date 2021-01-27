@@ -60,7 +60,7 @@ private:
         Shvat = 11,
         Adar = 12,
         AdarII = 13,
-        AdarI = 12
+        AdarI = 12,
     };
 
     static QStringList findHoliday(int month,

@@ -23,7 +23,11 @@ public:
     Q_REQUIRED_RESULT bool canImportFileType(const QUrl &url) override;
 
 private:
-    enum ExportVCardType { VCard2_1 = 0, VCard3, VCard4 };
+    enum ExportVCardType {
+        VCard2_1 = 0,
+        VCard3,
+        VCard4,
+    };
     KContacts::Addressee::List parseVCard(const QByteArray &data) const;
     KContacts::Addressee::List filterContacts(const KContacts::Addressee::List &addrList,
                                               KAddressBookImportExport::ExportSelectionWidget::ExportFields exportFieldType) const;

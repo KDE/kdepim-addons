@@ -72,7 +72,13 @@ QCsvReader::~QCsvReader()
 
 bool QCsvReader::read(QIODevice *device)
 {
-    enum State { StartLine, QuotedField, QuotedFieldEnd, NormalField, EmptyField };
+    enum State {
+        StartLine,
+        QuotedField,
+        QuotedFieldEnd,
+        NormalField,
+        EmptyField,
+    };
 
     int row, column;
 

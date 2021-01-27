@@ -483,7 +483,12 @@ public:
         return newMyself;
     }
 
-    enum MailType { Answer, Delegation, Forward, DeclineCounter };
+    enum MailType {
+        Answer,
+        Delegation,
+        Forward,
+        DeclineCounter,
+    };
 
     bool mailICal(const QString &receiver,
                   const QString &to,
