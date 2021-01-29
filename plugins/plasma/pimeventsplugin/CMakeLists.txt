@@ -61,5 +61,5 @@ install(FILES qmldir
     DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
     )
 install(FILES PimEventsConfig.qml
-    DESTINATION ${PLUGIN_INSTALL_DIR}/plasmacalendarplugins/pimevents
+    DESTINATION ${KDE_INSTALL_PLUGINDIR}/plasmacalendarplugins/pimevents
     )
