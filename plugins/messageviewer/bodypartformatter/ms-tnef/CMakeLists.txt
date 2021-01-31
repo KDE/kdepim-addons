@@ -13,7 +13,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_mstn
 add_library(messageviewer_bodypartformatter_application_mstnef MODULE ${messageviewer_bodypartformatter_application_mstnef_SRCS})
 
 target_link_libraries(messageviewer_bodypartformatter_application_mstnef
-    Qt5::Core
+    Qt::Core
     KF5::CalendarCore
     KF5::CalendarUtils
     KF5::Tnef

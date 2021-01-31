@@ -13,7 +13,7 @@ macro( kaddressbook_merge _source _additional _additionallib)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(kaddressbookmerge-${_name})
-    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt5::Test  KF5::AkonadiCore KF5::Contacts ${_additionallib})
+    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KF5::AkonadiCore KF5::Contacts ${_additionallib})
 endmacro()
 
 kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
@@ -44,5 +44,5 @@ set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactlo
 add_executable( mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
 add_test(NAME mergecontactloseinformationwarningtest COMMAND mergecontactloseinformationwarningtest)
 ecm_mark_as_test(mergecontactloseinformationwarningtest)
-target_link_libraries( mergecontactloseinformationwarningtest Qt5::Test  Qt5::Gui kaddressbookmergelibprivate KF5::WidgetsAddons KF5::I18n)
+target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF5::WidgetsAddons KF5::I18n)
 
