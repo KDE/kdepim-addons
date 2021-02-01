@@ -7,7 +7,7 @@ macro(add_kmail_unittest _source _additionalsource)
   ecm_mark_as_test(kmail-${_name})
   target_link_libraries( ${_name}
     KF5::PimCommon
-    Qt::Test
+    Qt5::Test
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::I18n

@@ -17,8 +17,8 @@ kcoreaddons_add_plugin(webengineviewer_adblockplugin JSON messageviewer_adblocku
 
 target_link_libraries(webengineviewer_adblockplugin
     KF5::MessageViewer
-    Qt::WebEngine
-    Qt::WebEngineWidgets
+    Qt5::WebEngine
+    Qt5::WebEngineWidgets
     KF5::ItemViews
     adblocklibprivate
     KF5::KIOWidgets

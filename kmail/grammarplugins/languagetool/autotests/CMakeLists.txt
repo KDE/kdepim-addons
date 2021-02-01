@@ -6,7 +6,7 @@ macro(add_kmail_languagetool_unittest _source)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_grammalecte-${_name})
-    target_link_libraries( ${_name} Qt::Test KF5::XmlGui KF5::I18n kmaillanguagetool)
+    target_link_libraries( ${_name} Qt5::Test KF5::XmlGui KF5::I18n kmaillanguagetool)
 endmacro ()
 
 add_kmail_languagetool_unittest(languagetoolconfigdialogtest.cpp)

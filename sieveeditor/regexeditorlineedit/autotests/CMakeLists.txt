@@ -5,6 +5,6 @@ macro(add_regexpeditorplugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(sieveeditorplugin-${_name})
-    target_link_libraries( ${_name} Qt::Widgets Qt::Test KF5::I18n KF5::KSieveUi KF5::TextWidgets)
+    target_link_libraries( ${_name} Qt5::Widgets Qt5::Test KF5::I18n KF5::KSieveUi KF5::TextWidgets)
 endmacro ()
 add_regexpeditorplugin_unittest(regexpeditorlineedittest.cpp "../regexpeditorlineedit.cpp;${sieveeditorregexp_plugin_categories_SRCS}")

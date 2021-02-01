@@ -34,7 +34,7 @@ endif()
 
 target_link_libraries(kaddressbookmergelibprivate
     PRIVATE
-    Qt::Network
+    Qt5::Network
     KF5::I18n
     KF5::Contacts
     KF5::AkonadiContact

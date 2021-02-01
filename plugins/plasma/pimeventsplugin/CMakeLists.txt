@@ -25,7 +25,7 @@ kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json SOURCES
     ${pimeventsplugins_full_SRCS} INSTALL_NAMESPACE plasmacalendarplugins)
 
 target_link_libraries(pimevents
-    Qt::Core
+    Qt5::Core
     KF5::AkonadiCore
     KF5::AkonadiCalendar
     KF5::CalendarCore
@@ -47,8 +47,8 @@ set(plasmapimcalendarsplugin_SRCS
 
 add_library(pimcalendarsplugin SHARED ${plasmapimcalendarsplugin_SRCS} ${loggingcategory_SRCS})
 target_link_libraries(pimcalendarsplugin
-    Qt::Core
-    Qt::Qml
+    Qt5::Core
+    Qt5::Qml
     KF5::AkonadiCore
     KF5::CalendarCore
     KF5::ConfigCore

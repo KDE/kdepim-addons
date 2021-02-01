@@ -19,8 +19,8 @@ kcoreaddons_add_plugin(webengineviewer_donottrackplugin JSON messageviewer_donot
     ${webengineviewer_webengineurlinterceptor_donottrack_SRCS} INSTALL_NAMESPACE webengineviewer/urlinterceptor)
 
 target_link_libraries(webengineviewer_donottrackplugin
-    Qt::WebEngine
-    Qt::WebEngineWidgets
+    Qt5::WebEngine
+    Qt5::WebEngineWidgets
     KF5::WebEngineViewer
     KF5::ConfigGui
     KF5::CoreAddons
