@@ -113,7 +113,9 @@ void doExport(QFile *file, const KAddressBookImportExport::ContactList &list)
     KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(list.addressList(), list.contactGroupList(), data);
 
     QTextStream stream(file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     stream.setCodec("UTF-8");
+#endif
     stream << data;
 }
 
@@ -190,7 +192,9 @@ void LDifImportExportPluginInterface::exportLdif()
         KContacts::LDIFConverter::addresseeAndContactGroupToLDIF(contactLists.addressList(), contactLists.contactGroupList(), data);
 
         QTextStream stream(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         stream.setCodec("UTF-8");
+#endif
         stream << data;
         file.close();
     }
