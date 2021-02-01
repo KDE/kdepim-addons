@@ -2,8 +2,8 @@ add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_bodypartformatter_pkpass\")
 
 set(pkpass_srcs
     pkpass_plugin.cpp
+    templates.qrc
     )
-qt5_add_resources(pkpass_srcs templates.qrc)
 ecm_qt_declare_logging_category(pkpass_srcs HEADER pkpass_debug.h IDENTIFIER PKPASS_LOG CATEGORY_NAME org.kde.pim.pkpass
     DESCRIPTION "kdepim-addons (pkpass formater)"
     EXPORT KDEPIMADDONS

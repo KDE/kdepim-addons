@@ -9,9 +9,8 @@ set(messageviewer_bodypartformatter_application_gnupgwks_SRCS
     pgpkeymemento.cpp
     pgpkeymessagepart.cpp
     pgpkeyurlhandler.cpp
+    templates.qrc
     )
-
-qt5_add_resources(messageviewer_bodypartformatter_application_gnupgwks_SRCS templates.qrc)
 
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks_SRCS
     HEADER gnupgwks_debug.h
