@@ -21,7 +21,7 @@ DKIMAuthenticationVerifiedServerDialog::DKIMAuthenticationVerifiedServerDialog(Q
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Authentication Verified Server"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mAuthenticationVerifiedWidget = new DKIMAuthenticationVerifiedServerWidget(this);

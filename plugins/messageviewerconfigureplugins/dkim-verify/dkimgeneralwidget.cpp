@@ -17,7 +17,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mEnableDkimSupport = new QCheckBox(i18n("Enable DKIM Support"));
@@ -30,7 +30,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
 
-    auto *saveKeyLayout = new QHBoxLayout;
+    auto saveKeyLayout = new QHBoxLayout;
     saveKeyLayout->setContentsMargins({});
     mainLayout->addLayout(saveKeyLayout);
     QLabel *saveKeyLabel = new QLabel(i18n("Save Record Key:"), this);

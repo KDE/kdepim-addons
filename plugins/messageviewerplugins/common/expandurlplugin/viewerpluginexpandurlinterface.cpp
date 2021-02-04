@@ -37,7 +37,7 @@ void ViewerPluginExpandurlInterface::execute()
 {
     if (mCurrentUrl.isValid()) {
         if (MessageViewer::ScamCheckShortUrlManager::self()->scamCheckShortUrl()->isShortUrl(mCurrentUrl)) {
-            auto *job = new MessageViewer::ScamExpandUrlJob(this);
+            auto job = new MessageViewer::ScamExpandUrlJob(this);
             job->expandedUrl(mCurrentUrl);
         } else {
             PimCommon::BroadcastStatus::instance()->setStatusMsg(i18n("Current URL is not a shortened URL."));

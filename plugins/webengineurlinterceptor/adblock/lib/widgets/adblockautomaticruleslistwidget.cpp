@@ -67,7 +67,7 @@ void AdBlockAutomaticRulesListWidget::setRules(const QString &rules)
 
 void AdBlockAutomaticRulesListWidget::createItem(const QString &rule)
 {
-    auto *subItem = new QListWidgetItem(this);
+    auto subItem = new QListWidgetItem(this);
     subItem->setText(rule);
     if (rule.startsWith(QLatin1Char('!')) || rule.startsWith(QLatin1Char('['))) {
         // Comment

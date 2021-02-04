@@ -28,7 +28,7 @@ void SelectImapCreateFolderJob::start()
         mSession = new KIMAP::Session(mSieveImapAccount.serverName(), mSieveImapAccount.port(), this);
         mSession->setUiProxy(SessionUiProxy::Ptr(new SessionUiProxy));
 
-        auto *login = new KIMAP::LoginJob(mSession);
+        auto login = new KIMAP::LoginJob(mSession);
         login->setUserName(mSieveImapAccount.userName());
         login->setPassword(mSieveImapAccount.password());
         login->setAuthenticationMode(static_cast<KIMAP::LoginJob::AuthenticationMode>(mSieveImapAccount.authenticationType()));
@@ -63,7 +63,7 @@ void SelectImapCreateFolderJob::createFolderRequested()
         return;
     }
 
-    auto *job = new KIMAP::CreateJob(mSession);
+    auto job = new KIMAP::CreateJob(mSession);
     job->setMailBox(mNewFolderName);
     connect(job, &KIMAP::CreateJob::result, this, &SelectImapCreateFolderJob::slotCreateFolderDone);
     job->start();

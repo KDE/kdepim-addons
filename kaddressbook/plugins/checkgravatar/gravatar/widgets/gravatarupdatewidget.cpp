@@ -20,10 +20,10 @@ using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QGridLayout(this);
+    auto mainLayout = new QGridLayout(this);
     mainLayout->setContentsMargins({});
 
-    auto *hboxEmail = new QHBoxLayout;
+    auto hboxEmail = new QHBoxLayout;
 
     QLabel *lab = new QLabel(i18n("Email:"));
     lab->setObjectName(QStringLiteral("emaillabel"));
@@ -96,7 +96,7 @@ void GravatarUpdateWidget::slotSearchGravatar()
 {
     mCurrentUrl.clear();
     if (!mEmail.isEmpty()) {
-        auto *job = new Gravatar::GravatarResolvUrlJob(this);
+        auto job = new Gravatar::GravatarResolvUrlJob(this);
         job->setEmail(mEmail);
         if (job->canStart()) {
             job->setUseDefaultPixmap(false);

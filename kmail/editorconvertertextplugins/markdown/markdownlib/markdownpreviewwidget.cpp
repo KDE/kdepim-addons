@@ -22,11 +22,11 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mConverter->setObjectName(QStringLiteral("converter"));
     connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
 
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
-    auto *page = new MarkdownEnginePage(this);
+    auto page = new MarkdownEnginePage(this);
     mWebView = new QWebEngineView(this);
     mWebView->setPage(page);
     mWebView->resize(600, 800);

@@ -37,7 +37,7 @@ EventEditTest::EventEditTest(QObject *parent)
     qRegisterMetaType<KCalendarCore::Event::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
-    auto *model = new QStandardItemModel;
+    auto model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
@@ -216,7 +216,7 @@ void EventEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 
 void EventEditTest::shouldSaveCollectionSettingsWhenDeleteWidget()
 {
-    auto *edit = new MessageViewer::EventEdit;
+    auto edit = new MessageViewer::EventEdit;
     auto *akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(5);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();

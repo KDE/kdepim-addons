@@ -18,7 +18,7 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
     , mTabWidget(new QTabWidget(this))
 {
-    auto *mainLayout = new QHBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 

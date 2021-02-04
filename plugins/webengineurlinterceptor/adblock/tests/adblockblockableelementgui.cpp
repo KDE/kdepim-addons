@@ -17,7 +17,7 @@ using namespace AdBlock;
 AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     : QWidget(parent)
 {
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
 
     mWebEngineView = new QWebEngineView(this);
     mWebEngineView->load(QUrl(QStringLiteral("http://www.kde.org")));
@@ -40,7 +40,7 @@ void AdblockBlockableElementGui::slotSearchItemsDone(const QVector<AdBlock::AdBl
 
 void AdblockBlockableElementGui::slotSearchAdblock()
 {
-    auto *job = new AdBlockBlockableItemsJob(this);
+    auto job = new AdBlockBlockableItemsJob(this);
     job->setWebEngineView(mWebEngineView);
     connect(job, &AdBlockBlockableItemsJob::searchItemsDone, this, &AdblockBlockableElementGui::slotSearchItemsDone);
     job->start();
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto *dialog = new AdblockBlockableElementGui;
+    auto dialog = new AdblockBlockableElementGui;
     dialog->resize(800, 600);
     dialog->show();
     app.exec();

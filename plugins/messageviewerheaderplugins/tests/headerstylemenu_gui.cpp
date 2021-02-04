@@ -24,8 +24,8 @@
 HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
     : QWidget(parent)
 {
-    auto *menu = new QMenuBar(this);
-    auto *hbox = new QVBoxLayout(this);
+    auto menu = new QMenuBar(this);
+    auto hbox = new QVBoxLayout(this);
     hbox->addWidget(menu);
     MessageViewer::HeaderStyleMenuManager *manager = new MessageViewer::HeaderStyleMenuManager(new KActionCollection(this), this);
     menu->addAction(manager->menu());
@@ -55,7 +55,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto *w = new HeaderStyleMenuTest();
+    auto w = new HeaderStyleMenuTest();
     w->resize(800, 200);
     w->show();
     app.exec();

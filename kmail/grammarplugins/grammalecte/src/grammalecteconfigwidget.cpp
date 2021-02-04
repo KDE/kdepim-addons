@@ -24,11 +24,11 @@ GrammalecteConfigWidget::GrammalecteConfigWidget(QWidget *parent, bool disableMe
     : QWidget(parent)
     , mDisableDialogBox(disableMessageBox)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    auto *mTab = new QTabWidget(this);
+    auto mTab = new QTabWidget(this);
     mTab->setObjectName(QStringLiteral("mTab"));
     mainLayout->addWidget(mTab);
     mTab->addTab(addGeneralTab(), i18n("General"));
@@ -44,7 +44,7 @@ GrammalecteConfigWidget::~GrammalecteConfigWidget()
 
 void GrammalecteConfigWidget::loadGrammarSettings()
 {
-    auto *job = new GrammalecteGenerateConfigOptionJob(this);
+    auto job = new GrammalecteGenerateConfigOptionJob(this);
     job->setPythonPath(mPythonPath->text());
     job->setGrammarlecteCliPath(mGrammalectePath->text());
     connect(job, &GrammalecteGenerateConfigOptionJob::finished, this, &GrammalecteConfigWidget::slotGetSettingsFinished);
@@ -68,11 +68,11 @@ void GrammalecteConfigWidget::slotGetSettingsFinished(const QVector<GrammalecteG
     mListOptions.clear();
     mListOptions.reserve(result.count());
     delete mGrammarTabWidget->layout();
-    auto *layout = new QVBoxLayout(mGrammarTabWidget);
+    auto layout = new QVBoxLayout(mGrammarTabWidget);
     layout->setObjectName(QStringLiteral("grammartablayout"));
 
     for (const GrammalecteGenerateConfigOptionJob::Option &opt : result) {
-        auto *box = new QCheckBox(opt.description, this);
+        auto box = new QCheckBox(opt.description, this);
         box->setProperty("optionname", opt.optionName);
         if (mSaveOptions.isEmpty()) {
             box->setChecked(opt.defaultValue);
@@ -94,7 +94,7 @@ QWidget *GrammalecteConfigWidget::addGrammarTab()
     mScrollArea->setWidgetResizable(true);
     mGrammarTabWidget = new QWidget;
     mGrammarTabWidget->setObjectName(QStringLiteral("grammar"));
-    auto *layout = new QVBoxLayout(mGrammarTabWidget);
+    auto layout = new QVBoxLayout(mGrammarTabWidget);
     layout->setObjectName(QStringLiteral("grammartablayout"));
     mScrollArea->setWidget(mGrammarTabWidget);
 
@@ -103,15 +103,15 @@ QWidget *GrammalecteConfigWidget::addGrammarTab()
     mReloadSettingsWidget = new QWidget;
     mReloadSettingsWidget->setObjectName(QStringLiteral("reloadwidget"));
     mStackedWidget->addWidget(mReloadSettingsWidget);
-    auto *reloadSettingsLayout = new QVBoxLayout(mReloadSettingsWidget);
+    auto reloadSettingsLayout = new QVBoxLayout(mReloadSettingsWidget);
     reloadSettingsLayout->setObjectName(QStringLiteral("reloadSettingsLayout"));
-    auto *horizontallayout = new QHBoxLayout;
+    auto horizontallayout = new QHBoxLayout;
     reloadSettingsLayout->addLayout(horizontallayout);
     QLabel *label = new QLabel(i18n("Press Button for Reloading Settings"), this);
     label->setObjectName(QStringLiteral("label"));
     horizontallayout->addWidget(label);
 
-    auto *buttonReloadSettings = new QToolButton(this);
+    auto buttonReloadSettings = new QToolButton(this);
     buttonReloadSettings->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
     buttonReloadSettings->setObjectName(QStringLiteral("buttonReloadSettings"));
     buttonReloadSettings->setToolTip(i18n("Reload Settings"));
@@ -126,7 +126,7 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
 {
     QWidget *w = new QWidget(this);
     w->setObjectName(QStringLiteral("general"));
-    auto *lay = new QFormLayout(w);
+    auto lay = new QFormLayout(w);
     lay->setObjectName(QStringLiteral("generallayout"));
 
     mPythonPath = new KUrlRequester(this);

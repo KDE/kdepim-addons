@@ -22,7 +22,7 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure quick text"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mQuickTextConfigureWidget = new QuickTextConfigureWidget(this);
     mQuickTextConfigureWidget->setObjectName(QStringLiteral("quicktextconfigurewidget"));

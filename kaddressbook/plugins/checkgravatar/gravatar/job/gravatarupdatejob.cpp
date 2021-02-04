@@ -25,7 +25,7 @@ GravatarUpdateJob::~GravatarUpdateJob()
 void GravatarUpdateJob::start()
 {
     if (canStart()) {
-        auto *job = new Gravatar::GravatarResolvUrlJob(this);
+        auto job = new Gravatar::GravatarResolvUrlJob(this);
         job->setEmail(mEmail);
         if (job->canStart()) {
             connect(job, &Gravatar::GravatarResolvUrlJob::finished, this, &GravatarUpdateJob::slotGravatarResolvUrlFinished);
@@ -87,7 +87,7 @@ void GravatarUpdateJob::updatePixmap(const QPixmap &pix)
         mItem.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage
-        auto *modifyJob = new Akonadi::ItemModifyJob(mItem);
+        auto modifyJob = new Akonadi::ItemModifyJob(mItem);
         connect(modifyJob, &KJob::result, this, &GravatarUpdateJob::slotUpdateGravatarDone);
     } else {
         deleteLater();

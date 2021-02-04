@@ -27,7 +27,7 @@ LanguageToolUpdateComboBox::~LanguageToolUpdateComboBox()
 
 void LanguageToolUpdateComboBox::checkListOfLanguagesFromSpecificPath(const QString &url)
 {
-    auto *job = new LanguageToolGetListOfLanguageJob(this);
+    auto job = new LanguageToolGetListOfLanguageJob(this);
     job->setUrl(LanguageToolManager::convertToLanguagePath(url));
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolUpdateComboBox::slotGetLanguagesFinished);
@@ -37,7 +37,7 @@ void LanguageToolUpdateComboBox::checkListOfLanguagesFromSpecificPath(const QStr
 
 void LanguageToolUpdateComboBox::refreshListOfLanguages()
 {
-    auto *job = new LanguageToolGetListOfLanguageJob(this);
+    auto job = new LanguageToolGetListOfLanguageJob(this);
     job->setUrl(LanguageToolManager::self()->languageToolLanguagesPath());
     job->setNetworkAccessManager(LanguageToolManager::self()->networkAccessManager());
     connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolUpdateComboBox::slotGetLanguagesFinished);

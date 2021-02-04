@@ -30,7 +30,7 @@ NoteEditTest::NoteEditTest()
     qRegisterMetaType<KMime::Message::Ptr>();
     QStandardPaths::setTestModeEnabled(true);
 
-    auto *model = new QStandardItemModel;
+    auto model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
@@ -334,7 +334,7 @@ void NoteEditTest::shouldSaveCollectionSettingsWhenCloseWidget()
 
 void NoteEditTest::shouldSaveCollectionSettingsWhenDeleteWidget()
 {
-    auto *edit = new MessageViewer::NoteEdit;
+    auto edit = new MessageViewer::NoteEdit;
     auto *akonadicombobox = edit->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     akonadicombobox->setCurrentIndex(4);
     const Akonadi::Collection::Id id = akonadicombobox->currentCollection().id();

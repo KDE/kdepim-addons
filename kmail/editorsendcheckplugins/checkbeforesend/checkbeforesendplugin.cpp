@@ -25,7 +25,7 @@ CheckBeforeSendPlugin::~CheckBeforeSendPlugin()
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *CheckBeforeSendPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new CheckBeforeSendInterface(parent);
+    auto interface = new CheckBeforeSendInterface(parent);
     connect(this, &CheckBeforeSendPlugin::configChanged, interface, &CheckBeforeSendInterface::reloadConfig);
     return interface;
 }

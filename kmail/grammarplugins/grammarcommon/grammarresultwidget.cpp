@@ -15,7 +15,7 @@
 GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
     mainLayout->setSpacing(0);
@@ -24,7 +24,7 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mExtraWidgetLayout->setContentsMargins({});
     mainLayout->addLayout(mExtraWidgetLayout);
 
-    auto *closeBtn = new QToolButton(this);
+    auto closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
     closeBtn->setIconSize(QSize(12, 12));

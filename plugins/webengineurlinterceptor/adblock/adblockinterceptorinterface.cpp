@@ -91,7 +91,7 @@ void AdblockInterceptorInterface::slotSearchItemsDone(const QVector<AdBlock::AdB
 void AdblockInterceptorInterface::slotShowBlockableElement()
 {
     if (mWebEngineView) {
-        auto *job = new AdBlock::AdBlockBlockableItemsJob(this);
+        auto job = new AdBlock::AdBlockBlockableItemsJob(this);
         job->setWebEngineView(mWebEngineView);
         connect(job, &AdBlock::AdBlockBlockableItemsJob::searchItemsDone, this, &AdblockInterceptorInterface::slotSearchItemsDone);
         job->start();

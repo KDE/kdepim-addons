@@ -76,10 +76,10 @@ void ResultDuplicateTreeWidget::setContacts(const QVector<Akonadi::Item::List> &
     clear();
     int i = 1;
     for (const Akonadi::Item::List &lst : lstItem) {
-        auto *topLevelItem = new ResultDuplicateTreeWidgetItem(this);
+        auto topLevelItem = new ResultDuplicateTreeWidgetItem(this);
         topLevelItem->setText(0, i18n("Duplicate contact %1", i));
         for (const Akonadi::Item &item : lst) {
-            auto *childItem = new ResultDuplicateTreeWidgetItem;
+            auto childItem = new ResultDuplicateTreeWidgetItem;
             topLevelItem->addChild(childItem);
             childItem->setItem(item);
         }
@@ -97,7 +97,7 @@ QVector<Akonadi::Item::List> ResultDuplicateTreeWidget::selectedContactsToMerge(
         if (childCount > 0) {
             Akonadi::Item::List items;
             for (int child = 0; child < childCount; ++child) {
-                auto *childItem = static_cast<ResultDuplicateTreeWidgetItem *>(item->child(child));
+                auto childItem = static_cast<ResultDuplicateTreeWidgetItem *>(item->child(child));
                 if (childItem->checkState(0) == Qt::Checked) {
                     items << childItem->item();
                 }

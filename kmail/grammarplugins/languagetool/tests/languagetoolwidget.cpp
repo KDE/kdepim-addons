@@ -27,7 +27,7 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     mNetworkAccessManager->setRedirectPolicy(QNetworkRequest::NoLessSafeRedirectPolicy);
     mNetworkAccessManager->setStrictTransportSecurityEnabled(true);
     mNetworkAccessManager->enableStrictTransportSecurityStore(true);
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
@@ -64,7 +64,7 @@ void LanguageToolWidget::slotReplaceText(const MessageComposer::PluginGrammarAct
 
 void LanguageToolWidget::slotCheckGrammar()
 {
-    auto *job = new LanguageToolResultJob(this);
+    auto job = new LanguageToolResultJob(this);
     job->setUrl(QStringLiteral("https://languagetool.org/api/v2/check"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     job->setText(mInput->toPlainText());
@@ -76,7 +76,7 @@ void LanguageToolWidget::slotCheckGrammar()
 
 void LanguageToolWidget::slotGetListOfLanguages()
 {
-    auto *job = new LanguageToolGetListOfLanguageJob(this);
+    auto job = new LanguageToolGetListOfLanguageJob(this);
     job->setUrl(QStringLiteral("https://languagetool.org/api/v2/languages"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolWidget::slotGetLanguagesFinished);

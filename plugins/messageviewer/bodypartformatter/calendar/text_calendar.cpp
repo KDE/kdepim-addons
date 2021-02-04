@@ -213,7 +213,7 @@ public:
                 writer->write(html);
             }
         } else {
-            auto *memento = new MemoryCalendarMemento();
+            auto memento = new MemoryCalendarMemento();
             msgPart->setMemento(memento);
             QObject::connect(memento, &MemoryCalendarMemento::update, nodeHelper, &MimeTreeParser::NodeHelper::update);
         }
@@ -528,7 +528,7 @@ public:
             ct->setName(QStringLiteral("cal.ics"), "utf-8");
             ct->setParameter(QStringLiteral("method"), QStringLiteral("reply"));
 
-            auto *disposition = new KMime::Headers::ContentDisposition;
+            auto disposition = new KMime::Headers::ContentDisposition;
             disposition->setDisposition(KMime::Headers::CDinline);
             msg->setHeader(disposition);
             msg->contentTransferEncoding()->setEncoding(KMime::Headers::CEquPr);
@@ -545,8 +545,8 @@ public:
             ct->setCategory(KMime::Headers::CCcontainer);
 
             // Set the first multipart, the body message.
-            auto *bodyMessage = new KMime::Content;
-            auto *bodyDisposition = new KMime::Headers::ContentDisposition;
+            auto bodyMessage = new KMime::Content;
+            auto bodyDisposition = new KMime::Headers::ContentDisposition;
             bodyDisposition->setDisposition(KMime::Headers::CDinline);
             auto bodyMessageCt = bodyMessage->contentType();
             bodyMessageCt->setMimeType("text/plain");
@@ -558,8 +558,8 @@ public:
             msg->addContent(bodyMessage);
 
             // Set the second multipart, the attachment.
-            auto *attachMessage = new KMime::Content;
-            auto *attachDisposition = new KMime::Headers::ContentDisposition;
+            auto attachMessage = new KMime::Content;
+            auto attachDisposition = new KMime::Headers::ContentDisposition;
             attachDisposition->setDisposition(KMime::Headers::CDattachment);
             auto attachCt = attachMessage->contentType();
             attachCt->setMimeType("text/calendar");
@@ -581,7 +581,7 @@ public:
         const bool nullIdentity = (identity == KIdentityManagement::Identity::null());
 
         if (!nullIdentity) {
-            auto *x_header = new KMime::Headers::Generic("X-KMail-Identity");
+            auto x_header = new KMime::Headers::Generic("X-KMail-Identity");
             x_header->from7BitString(QByteArray::number(identity.uoid()));
             msg->setHeader(x_header);
         }
@@ -616,7 +616,7 @@ public:
         msg->assemble();
         MailTransport::Transport *transport = MailTransport::TransportManager::self()->transportById(transportId);
 
-        auto *job = new MailTransport::MessageQueueJob;
+        auto job = new MailTransport::MessageQueueJob;
 
         job->addressAttribute().setTo(QStringList() << KEmailAddress::extractEmailAddress(KEmailAddress::normalizeAddressesAndEncodeIdn(to)));
         job->transportAttribute().setTransportId(transport->id());
@@ -1285,7 +1285,7 @@ public:
             iCal = part->content()->decodedText();
         }
 
-        auto *menu = new QMenu();
+        auto menu = new QMenu();
         QAction *open = menu->addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open Attachment"));
         QAction *saveas = menu->addAction(QIcon::fromTheme(QStringLiteral("document-save-as")), i18n("Save Attachment As..."));
 

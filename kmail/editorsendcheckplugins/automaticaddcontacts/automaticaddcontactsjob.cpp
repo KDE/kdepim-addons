@@ -49,7 +49,7 @@ void AutomaticAddContactsJob::start()
 
 void AutomaticAddContactsJob::fetchCollection()
 {
-    auto *const addressBookJob = new Akonadi::CollectionFetchJob(mCollection, Akonadi::CollectionFetchJob::Base);
+    auto const addressBookJob = new Akonadi::CollectionFetchJob(mCollection, Akonadi::CollectionFetchJob::Base);
 
     const QStringList mimeTypes(KContacts::Addressee::mimeType());
     addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
@@ -110,7 +110,7 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
                 const Akonadi::AgentType agentType = dlg->agentType();
 
                 if (agentType.isValid()) {
-                    auto *job = new Akonadi::AgentInstanceCreateJob(agentType, this);
+                    auto job = new Akonadi::AgentInstanceCreateJob(agentType, this);
                     connect(job, &KJob::result, this, &AutomaticAddContactsJob::slotResourceCreationDone);
                     job->configure();
                     job->start();
@@ -182,7 +182,7 @@ void AutomaticAddContactsJob::verifyContactExist()
             mProcessEmail = email;
             mName = tname;
             mProcessedEmails.append(email);
-            auto *searchJob = new Akonadi::ContactSearchJob(this);
+            auto searchJob = new Akonadi::ContactSearchJob(this);
             searchJob->setLimit(1);
             searchJob->setQuery(Akonadi::ContactSearchJob::Email, mProcessEmail.toLower(), Akonadi::ContactSearchJob::ExactMatch);
             connect(searchJob, &KJob::result, this, &AutomaticAddContactsJob::slotSearchDone);
@@ -192,7 +192,7 @@ void AutomaticAddContactsJob::verifyContactExist()
 
 void AutomaticAddContactsJob::slotSearchDone(KJob *job)
 {
-    auto *searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
+    auto searchJob = static_cast<Akonadi::ContactSearchJob *>(job);
     if (searchJob->error()) {
         qCWarning(KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG) << "Unable to fetch contact:" << searchJob->errorText();
     } else if (searchJob->contacts().isEmpty()) {
@@ -206,7 +206,7 @@ void AutomaticAddContactsJob::slotSearchDone(KJob *job)
         item.setPayload<KContacts::Addressee>(contact);
 
         // save the new item in akonadi storage
-        auto *createJob = new Akonadi::ItemCreateJob(item, mCollection, this);
+        auto createJob = new Akonadi::ItemCreateJob(item, mCollection, this);
         connect(createJob, &KJob::result, this, &AutomaticAddContactsJob::slotAddContactDone);
         return;
     }

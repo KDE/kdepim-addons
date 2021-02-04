@@ -14,7 +14,7 @@
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QFormLayout(this);
+    auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
@@ -43,7 +43,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
 
     QWidget *sizeWidget = new QWidget;
     sizeWidget->setObjectName(QStringLiteral("sizeWidget"));
-    auto *sizeWidgetLayout = new QHBoxLayout(sizeWidget);
+    auto sizeWidgetLayout = new QHBoxLayout(sizeWidget);
     sizeWidgetLayout->setObjectName(QStringLiteral("sizeWidgetLayout"));
     sizeWidgetLayout->setContentsMargins({});
     mainLayout->addRow(sizeWidget);

@@ -48,7 +48,7 @@ void CreateNoteJob::start()
             Akonadi::Item item = relation.right();
             item.setMimeType(Akonadi::NoteUtils::noteMimeType());
             item.setPayload(mNote.message());
-            auto *modifyJob = new Akonadi::ItemModifyJob(item);
+            auto modifyJob = new Akonadi::ItemModifyJob(item);
             connect(modifyJob, &Akonadi::ItemModifyJob::result, this, &CreateNoteJob::noteUpdated);
             return;
         }
@@ -57,7 +57,7 @@ void CreateNoteJob::start()
     Akonadi::Item newNoteItem;
     newNoteItem.setMimeType(Akonadi::NoteUtils::noteMimeType());
     newNoteItem.setPayload(mNote.message());
-    auto *createJob = new Akonadi::ItemCreateJob(newNoteItem, mCollection);
+    auto createJob = new Akonadi::ItemCreateJob(newNoteItem, mCollection);
     connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateNoteJob::noteCreated);
 }
 
@@ -69,9 +69,9 @@ void CreateNoteJob::noteCreated(KJob *job)
         setErrorText(job->errorText());
         emitResult();
     } else {
-        auto *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
+        auto createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
-        auto *rJob = new Akonadi::RelationCreateJob(relation);
+        auto rJob = new Akonadi::RelationCreateJob(relation);
         connect(rJob, &Akonadi::RelationCreateJob::result, this, &CreateNoteJob::relationCreated);
     }
 }

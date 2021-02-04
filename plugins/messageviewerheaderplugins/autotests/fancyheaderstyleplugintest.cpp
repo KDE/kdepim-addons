@@ -35,8 +35,8 @@ void FancyHeaderStylePluginTest::shouldHaveDefaultValue()
 void FancyHeaderStylePluginTest::shouldCreateInterface()
 {
     MessageViewer::FancyHeaderStylePlugin plugin;
-    auto *menu = new KActionMenu(this);
-    auto *act = new QActionGroup(this);
+    auto menu = new KActionMenu(this);
+    auto act = new QActionGroup(this);
 
     MessageViewer::HeaderStyleInterface *interface = plugin.createView(menu, act, new KActionCollection(this));
     QVERIFY(interface);

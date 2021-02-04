@@ -12,7 +12,7 @@
 MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QFormLayout(this);
+    auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 

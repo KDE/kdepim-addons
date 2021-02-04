@@ -66,7 +66,7 @@ void CSVImportExportPluginInterface::importCSV()
     }
 
     delete dlg;
-    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
+    auto engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -169,7 +169,7 @@ void CSVImportExportPluginInterface::exportCSV()
 
     if (QFileInfo::exists(url.isLocalFile() ? url.toLocalFile() : url.path())) {
         if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-            auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            auto dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
             auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
             if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                 url = dialog->newName();

@@ -31,7 +31,7 @@ CryptoPagePlugin::CryptoPagePlugin()
 {
     KIconLoader::global()->addAppDir(QStringLiteral("libkleopatra"));
 
-    auto *topLayout = new QGridLayout(this);
+    auto topLayout = new QGridLayout(this);
     topLayout->setColumnStretch(1, 1);
     topLayout->setRowStretch(4, 1);
 
@@ -68,7 +68,7 @@ CryptoPagePlugin::CryptoPagePlugin()
 
     // Send preferences/sign (see kleo/kleo/enum.h)
     QWidget *hbox = new QWidget(box);
-    auto *hboxHBoxLayout = new QHBoxLayout(hbox);
+    auto hboxHBoxLayout = new QHBoxLayout(hbox);
     hboxHBoxLayout->setContentsMargins({});
 
     l = new QLabel(i18n("Sign:"), hbox);

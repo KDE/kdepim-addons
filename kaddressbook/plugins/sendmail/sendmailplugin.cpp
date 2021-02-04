@@ -21,7 +21,7 @@ SendMailPlugin::~SendMailPlugin()
 
 PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new SendMailPluginInterface(parent);
+    auto interface = new SendMailPluginInterface(parent);
     return interface;
 }
 

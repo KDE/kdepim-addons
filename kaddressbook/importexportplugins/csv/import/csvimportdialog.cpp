@@ -124,7 +124,7 @@ public:
 
     QWidget *createEditor(QWidget *parent, const QStyleOptionViewItem &, const QModelIndex &) const override
     {
-        auto *editor = new ContactFieldComboBox(parent);
+        auto editor = new ContactFieldComboBox(parent);
 
         return editor;
     }
@@ -133,13 +133,13 @@ public:
     {
         const unsigned int value = index.model()->data(index, Qt::EditRole).toUInt();
 
-        auto *fieldCombo = static_cast<ContactFieldComboBox *>(editor);
+        auto fieldCombo = static_cast<ContactFieldComboBox *>(editor);
         fieldCombo->setCurrentField((KAddressBookImportExport::ContactFields::Field)value);
     }
 
     void setModelData(QWidget *editor, QAbstractItemModel *model, const QModelIndex &index) const override
     {
-        auto *fieldCombo = static_cast<ContactFieldComboBox *>(editor);
+        auto fieldCombo = static_cast<ContactFieldComboBox *>(editor);
 
         model->setData(index, fieldCombo->currentField(), Qt::EditRole);
     }
@@ -269,7 +269,7 @@ void CSVImportDialog::initGUI()
 {
     QWidget *page = new QWidget(this);
 
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(page);
 
@@ -285,11 +285,11 @@ void CSVImportDialog::initGUI()
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CSVImportDialog::slotOk);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    auto *layout = new QGridLayout;
+    auto layout = new QGridLayout;
     mainLayout->addLayout(layout);
     layout->setContentsMargins({});
 
-    auto *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
 
     QLabel *label = new QLabel(i18nc("@label", "File to import:"), page);
     mainLayout->addWidget(label);
@@ -310,7 +310,7 @@ void CSVImportDialog::initGUI()
     // Delimiter: comma, semicolon, tab, space, other
     QGroupBox *group = new QGroupBox(i18nc("@title:group", "Delimiter"), page);
     mainLayout->addWidget(group);
-    auto *delimiterLayout = new QGridLayout;
+    auto delimiterLayout = new QGridLayout;
     group->setLayout(delimiterLayout);
     delimiterLayout->setAlignment(Qt::AlignTop);
     layout->addWidget(group, 1, 0, 4, 1);
@@ -694,7 +694,7 @@ void CSVImportDialog::setFile(const QString &fileName)
         return;
     }
 
-    auto *file = new QFile(fileName);
+    auto file = new QFile(fileName);
     if (!file->open(QIODevice::ReadOnly)) {
         KMessageBox::sorry(this, i18nc("@info:status", "Cannot open input file."));
         delete file;
@@ -742,7 +742,7 @@ void CSVImportDialog::codecChanged(bool reload)
 
 void CSVImportDialog::modelFinishedLoading()
 {
-    auto *box = new ContactFieldComboBox();
+    auto box = new ContactFieldComboBox();
     int preferredWidth = box->sizeHint().width();
     delete box;
 

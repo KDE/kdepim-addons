@@ -38,7 +38,7 @@ SettingsChangeNotifier *SettingsChangeNotifier::self()
         return reinterpret_cast<SettingsChangeNotifier *>(v.value<quintptr>());
     }
 
-    auto *notifier = new SettingsChangeNotifier();
+    auto notifier = new SettingsChangeNotifier();
     qApp->setProperty(APP_PROPERTY_NAME, reinterpret_cast<quintptr>(notifier));
     return notifier;
 }

@@ -46,7 +46,7 @@ void MergeContactShowResultTabWidget::addMergedContact(const Akonadi::Item &item
 {
     if (item.hasPayload<KContacts::Addressee>()) {
         const KContacts::Addressee address = item.payload<KContacts::Addressee>();
-        auto *infoWidget = new MergeContactInfoWidget;
+        auto infoWidget = new MergeContactInfoWidget;
         infoWidget->setContact(item);
         addTab(infoWidget, address.name());
         if (updateTab) {

@@ -21,7 +21,7 @@ AntiVirusPlugin::~AntiVirusPlugin()
 
 PimCommon::GenericPluginInterface *AntiVirusPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new AntiVirusPluginInterface(parent);
+    auto interface = new AntiVirusPluginInterface(parent);
     return interface;
 }
 

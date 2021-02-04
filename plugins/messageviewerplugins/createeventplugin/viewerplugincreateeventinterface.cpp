@@ -80,7 +80,7 @@ void ViewerPluginCreateEventInterface::createAction(KActionCollection *ac)
 EventEdit *ViewerPluginCreateEventInterface::widget()
 {
     if (!mEventEdit) {
-        auto *parentWidget = static_cast<QWidget *>(parent());
+        auto parentWidget = static_cast<QWidget *>(parent());
         mEventEdit = new EventEdit(parentWidget);
         connect(mEventEdit, &EventEdit::createEvent, this, &ViewerPluginCreateEventInterface::slotCreateEvent);
         mEventEdit->setObjectName(QStringLiteral("eventedit"));
@@ -92,6 +92,6 @@ EventEdit *ViewerPluginCreateEventInterface::widget()
 
 void ViewerPluginCreateEventInterface::slotCreateEvent(const KCalendarCore::Event::Ptr &eventPtr, const Akonadi::Collection &collection)
 {
-    auto *createJob = new CreateEventJob(eventPtr, collection, mMessageItem, this);
+    auto createJob = new CreateEventJob(eventPtr, collection, mMessageItem, this);
     createJob->start();
 }

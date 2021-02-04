@@ -56,7 +56,7 @@ void MarkdownInterface::createAction(KActionCollection *ac)
 
     mPopupMenuAction = new QAction(i18n("Markdown Action"), this);
 
-    auto *mardownMenu = new QMenu(parentWidget());
+    auto mardownMenu = new QMenu(parentWidget());
     mPopupMenuAction->setMenu(mardownMenu);
     mPopupMenuAction->setEnabled(false);
     QMenu *titleMenu = new QMenu(i18n("Add Title"), mardownMenu);

@@ -21,7 +21,7 @@ SearchDuplicatesPlugin::~SearchDuplicatesPlugin()
 
 PimCommon::GenericPluginInterface *SearchDuplicatesPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new SearchDuplicatesPluginInterface(parent);
+    auto interface = new SearchDuplicatesPluginInterface(parent);
     return interface;
 }
 

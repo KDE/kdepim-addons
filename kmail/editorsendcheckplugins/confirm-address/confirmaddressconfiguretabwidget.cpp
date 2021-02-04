@@ -15,17 +15,17 @@
 ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    auto *groupBoxDomainName = new QGroupBox(this);
+    auto groupBoxDomainName = new QGroupBox(this);
     groupBoxDomainName->setObjectName(QStringLiteral("groupboxdomainname"));
     mainLayout->addWidget(groupBoxDomainName);
-    auto *layoutDomainName = new QVBoxLayout(groupBoxDomainName);
+    auto layoutDomainName = new QVBoxLayout(groupBoxDomainName);
     layoutDomainName->setObjectName(QStringLiteral("layoutdomainname"));
 
-    auto *radioButtonLayout = new QHBoxLayout;
+    auto radioButtonLayout = new QHBoxLayout;
     layoutDomainName->addLayout(radioButtonLayout);
     radioButtonLayout->setAlignment(Qt::AlignHCenter);
 
@@ -54,7 +54,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("Whitelist of Addresses"), this);
     groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
     mainLayout->addWidget(groupBoxWhiteList);
-    auto *layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
+    auto layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);
     layoutWhiteList->setObjectName(QStringLiteral("layoutwhitelist"));
 
     buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove

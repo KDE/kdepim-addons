@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto *w = new SelectImapWidgetTest;
+    auto w = new SelectImapWidgetTest;
     w->resize(800, 600);
     w->show();
     app.exec();

@@ -60,7 +60,7 @@ void ViewerPluginTranslatorInterface::createAction(KActionCollection *ac)
 PimCommon::TranslatorWidget *ViewerPluginTranslatorInterface::widget()
 {
     if (!mTranslatorWidget) {
-        auto *parentWidget = static_cast<QWidget *>(parent());
+        auto parentWidget = static_cast<QWidget *>(parent());
         mTranslatorWidget = new PimCommon::TranslatorWidget(parentWidget);
         mTranslatorWidget->setObjectName(QStringLiteral("translatorwidget"));
         parentWidget->layout()->addWidget(mTranslatorWidget);

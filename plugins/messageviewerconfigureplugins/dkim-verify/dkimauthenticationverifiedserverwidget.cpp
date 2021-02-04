@@ -13,7 +13,7 @@ DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(Q
     : QWidget(parent)
     , mSelector(new DKIMAuthenticationVerifiedServerSelectorWidget(this))
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 

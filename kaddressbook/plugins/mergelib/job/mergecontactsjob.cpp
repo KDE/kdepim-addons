@@ -85,7 +85,7 @@ void MergeContactsJob::createMergedContact(const KContacts::Addressee &addressee
     item.setMimeType(KContacts::Addressee::mimeType());
     item.setPayload<KContacts::Addressee>(addressee);
 
-    auto *job = new Akonadi::ItemCreateJob(item, mCollection, this);
+    auto job = new Akonadi::ItemCreateJob(item, mCollection, this);
     connect(job, &Akonadi::ItemCreateJob::result, this, &MergeContactsJob::slotCreateMergedContactFinished);
 }
 
@@ -97,11 +97,11 @@ void MergeContactsJob::slotCreateMergedContactFinished(KJob *job)
         deleteLater();
         return;
     }
-    auto *createdJob = qobject_cast<Akonadi::ItemCreateJob *>(job);
+    auto createdJob = qobject_cast<Akonadi::ItemCreateJob *>(job);
     mCreatedContact = createdJob->item();
 
     if (!mListItem.isEmpty()) {
-        auto *deleteJob = new Akonadi::ItemDeleteJob(mListItem, this);
+        auto deleteJob = new Akonadi::ItemDeleteJob(mListItem, this);
         connect(deleteJob, &Akonadi::ItemDeleteJob::result, this, &MergeContactsJob::slotDeleteContactsFinished);
     } else {
         qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " mListITem is empty. We can't delete it";

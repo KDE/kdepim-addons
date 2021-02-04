@@ -21,7 +21,7 @@ LogActivitiesPlugin::~LogActivitiesPlugin()
 
 PimCommon::GenericPluginInterface *LogActivitiesPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new LogActivitiesPluginInterface(parent);
+    auto interface = new LogActivitiesPluginInterface(parent);
     return interface;
 }
 

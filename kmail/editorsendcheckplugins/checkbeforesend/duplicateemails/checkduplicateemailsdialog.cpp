@@ -18,7 +18,7 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Duplicated emails"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QLabel *lab = new QLabel(i18n("These emails are duplicated. Do you want to send email?"), this);
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);

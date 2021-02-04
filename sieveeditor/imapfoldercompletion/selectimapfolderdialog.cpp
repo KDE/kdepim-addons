@@ -19,7 +19,7 @@ SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountS
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Select IMAP folder"));
-    auto *layout = new QVBoxLayout(this);
+    auto layout = new QVBoxLayout(this);
 
     mSelectImapFolderWidget = new SelectImapFolderWidget(account, this);
     mSelectImapFolderWidget->setObjectName(QStringLiteral("selectimapfolderwidget"));

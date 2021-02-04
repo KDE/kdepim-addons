@@ -22,7 +22,7 @@ ExternalComposerPluginEditor::~ExternalComposerPluginEditor()
 
 MessageComposer::PluginEditorInitInterface *ExternalComposerPluginEditor::createInterface(QObject *parent)
 {
-    auto *interface = new ExternalComposerPluginEditorInterface(parent);
+    auto interface = new ExternalComposerPluginEditorInterface(parent);
     return interface;
 }
 

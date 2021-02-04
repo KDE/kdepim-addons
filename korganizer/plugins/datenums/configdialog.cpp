@@ -25,7 +25,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Configure Day Numbers"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -36,12 +36,12 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     mainLayout->addWidget(topFrame);
     mainLayout->addStretch(1);
     mainLayout->addWidget(buttonBox);
-    auto *topLayout = new QVBoxLayout(topFrame);
+    auto topLayout = new QVBoxLayout(topFrame);
     topLayout->setContentsMargins({});
 
     QGroupBox *dayNumBox = new QGroupBox(i18n("Show Date Number"), topFrame);
     topLayout->addWidget(dayNumBox);
-    auto *groupLayout = new QVBoxLayout(dayNumBox);
+    auto groupLayout = new QVBoxLayout(dayNumBox);
 
     mDayNumGroup = new QButtonGroup(this);
     QRadioButton *btn = new QRadioButton(i18n("Show day number"), dayNumBox);

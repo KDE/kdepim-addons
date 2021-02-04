@@ -17,7 +17,7 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Add Image"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
     mMarkdownCreateImageWidget = new MarkdownCreateImageWidget(this);

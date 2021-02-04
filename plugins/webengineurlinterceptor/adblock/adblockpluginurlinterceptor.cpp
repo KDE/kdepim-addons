@@ -24,7 +24,7 @@ AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {
-    auto *adblockInterface = new AdblockInterceptorInterface(parent);
+    auto adblockInterface = new AdblockInterceptorInterface(parent);
     adblockInterface->setWebEngineView(webEngine);
     return adblockInterface;
 }

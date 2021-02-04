@@ -156,7 +156,7 @@ void AdBlockSettingWidget::slotInfoLinkActivated(const QString &url)
 bool AdBlockSettingWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::WhatsThisClicked) {
-        auto *clicked = static_cast<QWhatsThisClickedEvent *>(event);
+        auto clicked = static_cast<QWhatsThisClickedEvent *>(event);
         KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl(clicked->href()));
         job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
         job->start();
@@ -229,7 +229,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
         const QString url = subscription->url().toString();
         const QString name = subscription->title();
         if (!url.isEmpty()) {
-            auto *subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
+            auto subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
             subItem->setSubscription(subscription);
             if (subscription->enabled()) {
@@ -244,7 +244,7 @@ void AdBlockSettingWidget::doLoadFromGlobalSettings()
             mCustomSubscription = subscription;
             mBlockUpdate = true;
             for (AdBlockRule *rule : subscription->allRules()) {
-                auto *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
+                auto subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
                 subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
                 subItem->setCheckState(rule->isEnabled() ? Qt::Checked : Qt::Unchecked);
                 subItem->setText(rule->filter());
@@ -312,7 +312,7 @@ void AdBlockSettingWidget::slotAddFilter()
         QString url;
         dlg->selectedList(name, url);
         if (AdBlockSubscription *subscription = AdblockManager::self()->addSubscription(name, url)) {
-            auto *subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
+            auto subItem = new AdBlockListwidgetItem(mUi->automaticFiltersListWidget);
             subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled);
             subItem->setCheckState(Qt::Checked);
             subItem->setText(name);
@@ -398,13 +398,13 @@ void AdBlockSettingWidget::slotImportFilters()
 
 void AdBlockSettingWidget::addManualFilter(const QString &text, const QStringList &excludeRules)
 {
-    auto *rule = new AdBlockRule(text, mCustomSubscription);
+    auto rule = new AdBlockRule(text, mCustomSubscription);
     if (excludeRules.contains(text)) {
         rule->setEnabled(false);
     }
     const int offset = mCustomSubscription->addRule(rule);
     if (offset >= 0) {
-        auto *subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
+        auto subItem = new QListWidgetItem(mUi->manualFiltersListWidget);
         subItem->setFlags(Qt::ItemIsEnabled | Qt::ItemIsUserCheckable | Qt::ItemIsSelectable | Qt::ItemIsDragEnabled | Qt::ItemIsEditable);
         subItem->setCheckState(excludeRules.contains(text) ? Qt::Unchecked : Qt::Checked);
         subItem->setText(text);

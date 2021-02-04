@@ -21,7 +21,7 @@ ZoomTextPluginEditor::~ZoomTextPluginEditor()
 
 MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(QObject *parent)
 {
-    auto *interface = new ZoomTextPluginEditorInterface(parent);
+    auto interface = new ZoomTextPluginEditorInterface(parent);
     return interface;
 }
 

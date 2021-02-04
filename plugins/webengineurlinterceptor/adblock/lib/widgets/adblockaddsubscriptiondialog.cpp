@@ -24,10 +24,10 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Add subscription"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     QWidget *w = new QWidget;
-    auto *lay = new QHBoxLayout;
+    auto lay = new QHBoxLayout;
     lay->setContentsMargins({});
     QLabel *lab = new QLabel(i18n("Select List:"), this);
     lab->setObjectName(QStringLiteral("listsubscriptionlabel"));

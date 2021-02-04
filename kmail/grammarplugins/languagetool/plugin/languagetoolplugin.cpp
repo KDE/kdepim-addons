@@ -26,7 +26,7 @@ LanguageToolPlugin::~LanguageToolPlugin()
 
 PimCommon::CustomToolsViewInterface *LanguageToolPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {
-    auto *view = new LanguageToolInterface(ac, parent);
+    auto view = new LanguageToolInterface(ac, parent);
 
     connect(view, &LanguageToolInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
     connect(view, &LanguageToolInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);

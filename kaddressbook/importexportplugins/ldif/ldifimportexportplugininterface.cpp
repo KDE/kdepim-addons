@@ -95,7 +95,7 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
     contactList.setAddressList(lstAddresses);
     contactList.setContactGroupList(lstGroup);
 
-    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
+    auto engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -169,7 +169,7 @@ void LDifImportExportPluginInterface::exportLdif()
 
         if (QFileInfo::exists(fileName)) {
             if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-                auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+                auto dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
                 auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
                 if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                     fileName = dialog->newName().toLocalFile();

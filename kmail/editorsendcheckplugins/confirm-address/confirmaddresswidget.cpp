@@ -14,7 +14,7 @@
 ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -45,7 +45,7 @@ void ConfirmAddressWidget::setInvalidAddresses(const QStringList &addresses)
 void ConfirmAddressWidget::createAddressItems(const QStringList &address, bool valid)
 {
     for (const QString &email : address) {
-        auto *item = new QListWidgetItem(email, mListEmails);
+        auto item = new QListWidgetItem(email, mListEmails);
         item->setFlags(item->flags() | Qt::ItemIsUserCheckable);
         if (valid) {
             item->setFlags(item->flags() & ~Qt::ItemIsUserCheckable);

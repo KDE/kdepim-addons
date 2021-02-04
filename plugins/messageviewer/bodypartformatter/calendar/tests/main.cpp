@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto *dialog = new AttendeeSelector;
+    auto dialog = new AttendeeSelector;
     dialog->resize(800, 600);
     dialog->show();
     app.exec();

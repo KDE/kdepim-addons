@@ -15,7 +15,7 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     : QWidget(parent)
     , mMainLayout(new QVBoxLayout)
 {
-    auto *topLayout = new QVBoxLayout(this);
+    auto topLayout = new QVBoxLayout(this);
     topLayout->setObjectName(QStringLiteral("topLayout"));
 
     mMainLayout->setObjectName(QStringLiteral("mMainLayout"));

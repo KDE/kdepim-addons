@@ -33,7 +33,7 @@ void CreateTodoJob::start()
 {
     // We need the full payload to attach the mail to the incidence
     if (!mItem.loadedPayloadParts().contains(Akonadi::MessagePart::Body)) {
-        auto *job = new Akonadi::ItemFetchJob(mItem);
+        auto job = new Akonadi::ItemFetchJob(mItem);
         job->fetchScope().fetchFullPayload();
         connect(job, &Akonadi::ItemFetchJob::result, this, &CreateTodoJob::slotFetchDone);
     } else {
@@ -43,7 +43,7 @@ void CreateTodoJob::start()
 
 void CreateTodoJob::slotFetchDone(KJob *job)
 {
-    auto *fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
+    auto fetchJob = qobject_cast<Akonadi::ItemFetchJob *>(job);
     if (fetchJob->items().count() == 1) {
         mItem = fetchJob->items().at(0);
     } else {
@@ -66,7 +66,7 @@ void CreateTodoJob::createTodo()
     newTodoItem.setMimeType(KCalendarCore::Todo::todoMimeType());
     newTodoItem.setPayload<KCalendarCore::Todo::Ptr>(mTodoPtr);
 
-    auto *createJob = new Akonadi::ItemCreateJob(newTodoItem, mCollection);
+    auto createJob = new Akonadi::ItemCreateJob(newTodoItem, mCollection);
     connect(createJob, &Akonadi::ItemCreateJob::result, this, &CreateTodoJob::todoCreated);
 }
 
@@ -78,9 +78,9 @@ void CreateTodoJob::todoCreated(KJob *job)
         setErrorText(job->errorText());
         emitResult();
     } else {
-        auto *createJob = static_cast<Akonadi::ItemCreateJob *>(job);
+        auto createJob = static_cast<Akonadi::ItemCreateJob *>(job);
         Akonadi::Relation relation(Akonadi::Relation::GENERIC, mItem, createJob->item());
-        auto *rJob = new Akonadi::RelationCreateJob(relation);
+        auto rJob = new Akonadi::RelationCreateJob(relation);
         connect(rJob, &Akonadi::RelationCreateJob::result, this, &CreateTodoJob::relationCreated);
     }
 }

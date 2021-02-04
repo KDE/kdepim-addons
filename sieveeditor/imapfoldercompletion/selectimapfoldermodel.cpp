@@ -28,7 +28,7 @@ SelectImapFolderModel *SelectImapFolderModel::self()
 void SelectImapFolderModel::createNewFolder(const KSieveUi::SieveImapAccountSettings &account, const QString &folderName)
 {
     // qCDebug(IMAPFOLDERCOMPLETIONPLUGIN_LOG)  << " folderName " << folderName;
-    auto *job = new SelectImapCreateFolderJob(this);
+    auto job = new SelectImapCreateFolderJob(this);
     job->setSieveImapAccountSettings(account);
     job->setNewFolderName(folderName);
     connect(job, &SelectImapCreateFolderJob::finished, this, &SelectImapFolderModel::slotCreateFolderDone);
@@ -46,7 +46,7 @@ void SelectImapFolderModel::slotCreateFolderDone(const KSieveUi::SieveImapAccoun
 
 void SelectImapFolderModel::fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model)
 {
-    auto *job = new SelectImapLoadFoldersJob(model, this);
+    auto job = new SelectImapLoadFoldersJob(model, this);
     job->setSieveImapAccountSettings(account);
     connect(job, &SelectImapLoadFoldersJob::finished, this, &SelectImapFolderModel::slotLoaded);
     job->start();

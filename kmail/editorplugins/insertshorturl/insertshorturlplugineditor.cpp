@@ -23,7 +23,7 @@ InsertShorturlPluginEditor::~InsertShorturlPluginEditor()
 
 MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterface(QObject *parent)
 {
-    auto *interface = new InsertShorturlPluginEditorInterface(parent);
+    auto interface = new InsertShorturlPluginEditorInterface(parent);
     connect(this, &InsertShorturlPluginEditor::configChanged, interface, &InsertShorturlPluginEditorInterface::loadEngine);
     return interface;
 }

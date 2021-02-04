@@ -37,7 +37,7 @@ bool AutomaticAddContactsInterface::exec(const MessageComposer::PluginEditorChec
             }
             if (!lst.isEmpty()) {
                 // Don't delete it, it's autodelete
-                auto *job = new AutomaticAddContactsJob;
+                auto job = new AutomaticAddContactsJob;
                 job->setCollection(setting.mContactCollection);
                 job->setEmails(lst);
                 job->start();

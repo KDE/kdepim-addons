@@ -21,7 +21,7 @@ ExpertPlugin::~ExpertPlugin()
 
 PimCommon::GenericPluginInterface *ExpertPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new ExpertPluginInterface(parent);
+    auto interface = new ExpertPluginInterface(parent);
     return interface;
 }
 

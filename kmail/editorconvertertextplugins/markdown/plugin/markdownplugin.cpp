@@ -25,7 +25,7 @@ MarkdownPlugin::~MarkdownPlugin()
 
 MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new MarkdownInterface(parent);
+    auto interface = new MarkdownInterface(parent);
     connect(this, &MarkdownPlugin::configChanged, interface, &MarkdownInterface::reloadConfig);
     return interface;
 }

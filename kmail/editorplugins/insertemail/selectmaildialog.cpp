@@ -18,7 +18,7 @@ static const char myConfigGroupName[] = "SelectMailDialog";
 SelectMailDialog::SelectMailDialog(QWidget *parent)
     : QDialog(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     mSelectMailWidget = new SelectMailWidget(this);
     mSelectMailWidget->setObjectName(QStringLiteral("selectmailwidget"));

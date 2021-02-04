@@ -20,7 +20,7 @@ extern MESSAGEVIEWER_EXPORT QAbstractItemModel *_k_eventEditStubModel;
 ViewerPluginCreateeventTest::ViewerPluginCreateeventTest(QObject *parent)
     : QObject(parent)
 {
-    auto *model = new QStandardItemModel;
+    auto model = new QStandardItemModel;
     MessageViewer::_k_eventEditStubModel = model;
 }
 

@@ -39,7 +39,7 @@ using namespace MessageViewer;
 TodoEdit::TodoEdit(QWidget *parent)
     : QWidget(parent)
 {
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);
     vbox->setSpacing(2);
 
@@ -51,7 +51,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     mMsgWidget->setVisible(false);
     vbox->addWidget(mMsgWidget);
 
-    auto *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
     hbox->setContentsMargins({});
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
@@ -107,7 +107,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mOpenEditorButton, &QPushButton::clicked, this, &TodoEdit::slotOpenEditor);
     hbox->addWidget(mOpenEditorButton);
 
-    auto *btn = new QPushButton(this);
+    auto btn = new QPushButton(this);
     KGuiItem::assign(btn, KStandardGuiItem::cancel());
     btn->setObjectName(QStringLiteral("close-button"));
 #ifndef QT_NO_ACCESSIBILITY
@@ -276,7 +276,7 @@ bool TodoEdit::eventFilter(QObject *object, QEvent *e)
     // With a shortcut override we can catch this before it gets to kactions.
     const bool shortCutOverride = (e->type() == QEvent::ShortcutOverride);
     if (shortCutOverride || e->type() == QEvent::KeyPress) {
-        auto *kev = static_cast<QKeyEvent *>(e);
+        auto kev = static_cast<QKeyEvent *>(e);
         if (kev->key() == Qt::Key_Escape) {
             e->accept();
             slotCloseWidget();

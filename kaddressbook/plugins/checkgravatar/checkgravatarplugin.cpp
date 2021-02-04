@@ -21,7 +21,7 @@ CheckGravatarPlugin::~CheckGravatarPlugin()
 
 PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new CheckGravatarPluginInterface(parent);
+    auto interface = new CheckGravatarPluginInterface(parent);
     return interface;
 }
 

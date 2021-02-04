@@ -17,7 +17,7 @@
 AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QHBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
     mTabWidget = new QTabWidget(this);
@@ -34,7 +34,7 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityMana
 {
     KIdentityManagement::IdentityManager::ConstIterator end = identityManager->end();
     for (KIdentityManagement::IdentityManager::ConstIterator it = identityManager->begin(); it != end; ++it) {
-        auto *w = new AutomaticAddContactsTabWidget(this);
+        auto w = new AutomaticAddContactsTabWidget(this);
         connect(w, &AutomaticAddContactsTabWidget::configureChanged, this, &AutomaticAddContactsConfigureTab::configureChanged);
         mTabWidget->addTab(w, QStringLiteral("%1 (%2)").arg((*it).identityName(), (*it).primaryEmailAddress()));
         w->setIdentity((*it).uoid());

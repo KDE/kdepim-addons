@@ -137,7 +137,7 @@ void VCardImportExportPluginInterface::importVCard()
     }
     ContactList contactList;
     contactList.setAddressList(addrList);
-    auto *engine = new ImportExportEngine(this);
+    auto engine = new ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();
@@ -343,7 +343,7 @@ bool VCardImportExportPluginInterface::doExport(const QUrl &url, const QByteArra
 {
     QUrl newUrl(url);
     if (newUrl.isLocalFile() && QFileInfo::exists(newUrl.toLocalFile())) {
-        auto *dialog = new PimCommon::RenameFileDialog(newUrl, false, parentWidget());
+        auto dialog = new PimCommon::RenameFileDialog(newUrl, false, parentWidget());
         auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
         if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
             newUrl = dialog->newName();

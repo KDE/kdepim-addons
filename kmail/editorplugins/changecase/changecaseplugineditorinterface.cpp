@@ -24,7 +24,7 @@ ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
 
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {
-    auto *ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
+    auto ChangeCaseMenu = new PimCommon::KActionMenuChangeCase(this);
     ChangeCaseMenu->appendInActionCollection(ac);
     ac->addAction(QStringLiteral("change_case_menu"), ChangeCaseMenu);
     connect(ChangeCaseMenu, &PimCommon::KActionMenuChangeCase::upperCase, this, &ChangeCasePluginEditorInterface::slotUpperCase);

@@ -19,7 +19,7 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mVerifyIfEmailMustBeSigned = new QCheckBox(i18n("Check if e-mail should be signed"), this);
@@ -54,11 +54,11 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
 
-    auto *autogenerateOnlyLayout = new QHBoxLayout;
+    auto autogenerateOnlyLayout = new QHBoxLayout;
     autogenerateOnlyLayout->setContentsMargins({});
     mainLayout->addLayout(autogenerateOnlyLayout);
 
-    auto *item = new QSpacerItem(30, 0);
+    auto item = new QSpacerItem(30, 0);
     autogenerateOnlyLayout->addItem(item);
 
     mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(i18n("Autogenerate when Sender in SDID"), this);
@@ -66,7 +66,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
     autogenerateOnlyLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
 
-    auto *ruleLayout = new QHBoxLayout;
+    auto ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
     mRulesButton = new QPushButton(i18n("Show Rules"), this);
     mRulesButton->setObjectName(QStringLiteral("rules"));

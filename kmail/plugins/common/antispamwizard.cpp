@@ -136,7 +136,7 @@ void AntiSpamWizard::accept()
                 // pipe messages through the anti-virus tools,
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
-                auto *pipeFilter = new MailFilter();
+                auto pipeFilter = new MailFilter();
                 QVector<FilterAction *> *pipeFilterActions = pipeFilter->actions();
                 FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
@@ -156,7 +156,7 @@ void AntiSpamWizard::accept()
 
         if (mVirusRulesPage->moveRulesSelected()) {
             // Sort out viruses depending on header fields set by the tools
-            auto *virusFilter = new MailFilter();
+            auto virusFilter = new MailFilter();
             QVector<FilterAction *> *virusFilterActions = virusFilter->actions();
             FilterAction *virusFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
             virusFilterAction1->argsFromString(mVirusRulesPage->selectedFolderName());
@@ -206,7 +206,7 @@ void AntiSpamWizard::accept()
                 // pipe messages through the anti-spam tools,
                 // one single filter for each tool
                 // (could get combined but so it's easier to understand for the user)
-                auto *pipeFilter = new MailFilter();
+                auto pipeFilter = new MailFilter();
                 QVector<FilterAction *> *pipeFilterActions = pipeFilter->actions();
                 FilterAction *pipeFilterAction = dict.value(QStringLiteral("filter app"))->create();
                 pipeFilterAction->argsFromString((*it).getDetectCmd());
@@ -229,7 +229,7 @@ void AntiSpamWizard::accept()
         }
 
         // Sort out spam depending on header fields set by the tools
-        auto *spamFilter = new MailFilter();
+        auto spamFilter = new MailFilter();
         QVector<FilterAction *> *spamFilterActions = spamFilter->actions();
         if (mSpamRulesPage->moveSpamSelected()) {
             FilterAction *spamFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
@@ -275,7 +275,7 @@ void AntiSpamWizard::accept()
         if (mSpamRulesPage->moveUnsureSelected()) {
             // Sort out messages classified as unsure
             bool atLeastOneUnsurePattern = false;
-            auto *unsureFilter = new MailFilter();
+            auto unsureFilter = new MailFilter();
             QVector<FilterAction *> *unsureFilterActions = unsureFilter->actions();
             FilterAction *unsureFilterAction1 = dict.value(QStringLiteral("transfer"))->create();
             unsureFilterAction1->argsFromString(mSpamRulesPage->selectedUnsureCollectionId());
@@ -316,7 +316,7 @@ void AntiSpamWizard::accept()
         }
 
         // Classify messages manually as Spam
-        auto *classSpamFilter = new MailFilter();
+        auto classSpamFilter = new MailFilter();
         classSpamFilter->setIcon(QStringLiteral("mail-mark-junk"));
         QVector<FilterAction *> *classSpamFilterActions = classSpamFilter->actions();
         FilterAction *classSpamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
@@ -353,7 +353,7 @@ void AntiSpamWizard::accept()
         filterList.append(classSpamFilter);
 
         // Classify messages manually as not Spam / as Ham
-        auto *classHamFilter = new MailFilter();
+        auto classHamFilter = new MailFilter();
         classHamFilter->setIcon(QStringLiteral("mail-mark-notjunk"));
         QVector<FilterAction *> *classHamFilterActions = classHamFilter->actions();
         FilterAction *classHamFilterActionFirst = dict.value(QStringLiteral("set status"))->create();
@@ -955,7 +955,7 @@ ASWizPage::ASWizPage(QWidget *parent, const QString &name)
     setObjectName(name);
     mLayout = new QHBoxLayout(this);
 
-    auto *sideLayout = new QVBoxLayout();
+    auto sideLayout = new QVBoxLayout();
     mLayout->addItem(sideLayout);
     mLayout->addItem(new QSpacerItem(5, 5, QSizePolicy::Minimum, QSizePolicy::Expanding));
 
@@ -979,7 +979,7 @@ ASWizInfoPage::ASWizInfoPage(AntiSpamWizard::WizardMode mode, QWidget *parent, c
     QBoxLayout *layout = new QVBoxLayout();
     mLayout->addItem(layout);
 
-    auto *introText = new QTextEdit(this);
+    auto introText = new QTextEdit(this);
     introText->setText((mode == AntiSpamWizard::AntiSpam) ? i18n("The wizard will search for any tools to do spam detection\n"
                                                                  "and setup KMail to work with them.")
                                                           : i18n("<p>Here you can get some assistance in setting up KMail's filter "
@@ -1053,7 +1053,7 @@ void ASWizInfoPage::processSelectionChange()
 ASWizSpamRulesPage::ASWizSpamRulesPage(QWidget *parent, const QString &name)
     : ASWizPage(parent, name)
 {
-    auto *layout = new QVBoxLayout();
+    auto layout = new QVBoxLayout();
     mLayout->addItem(layout);
 
     mMarkRules = new QCheckBox(i18n("&Mark detected spam messages as read"), this);
@@ -1071,7 +1071,7 @@ ASWizSpamRulesPage::ASWizSpamRulesPage(QWidget *parent, const QString &name)
     mFolderReqForSpamFolder->setMustBeReadWrite(true);
     mFolderReqForSpamFolder->setShowOutbox(false);
 
-    auto *hLayout1 = new QHBoxLayout();
+    auto hLayout1 = new QHBoxLayout();
     layout->addItem(hLayout1);
     hLayout1->addWidget(mFolderReqForSpamFolder);
 
@@ -1088,7 +1088,7 @@ ASWizSpamRulesPage::ASWizSpamRulesPage(QWidget *parent, const QString &name)
     mFolderReqForUnsureFolder->setMustBeReadWrite(true);
     mFolderReqForUnsureFolder->setShowOutbox(false);
 
-    auto *hLayout2 = new QHBoxLayout();
+    auto hLayout2 = new QHBoxLayout();
     layout->addItem(hLayout2);
     hLayout2->addWidget(mFolderReqForUnsureFolder);
 
@@ -1184,7 +1184,7 @@ void ASWizSpamRulesPage::allowMoveSpam(bool enabled)
 ASWizVirusRulesPage::ASWizVirusRulesPage(QWidget *parent, const QString &name)
     : ASWizPage(parent, name)
 {
-    auto *grid = new QGridLayout();
+    auto grid = new QGridLayout();
     mLayout->addItem(grid);
 
     mPipeRules = new QCheckBox(i18n("Check messages using the anti-virus tools"), this);

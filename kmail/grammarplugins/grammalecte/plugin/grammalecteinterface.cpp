@@ -20,7 +20,7 @@
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
 {
-    auto *layout = new QHBoxLayout(this);
+    auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
     mGrammarResultWidget = new GrammalecteResultWidget(this);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);

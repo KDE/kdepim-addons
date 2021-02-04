@@ -13,7 +13,7 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
     : QDialog(parent)
     , mInsertShortUrlWidget(new InsertShorturlConfigureWidget(this))
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     mInsertShortUrlWidget->setObjectName(QStringLiteral("insertshorturlwidget"));
     mainLayout->addWidget(mInsertShortUrlWidget);

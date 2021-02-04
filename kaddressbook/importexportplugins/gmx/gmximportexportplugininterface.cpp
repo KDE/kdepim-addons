@@ -106,7 +106,7 @@ void GMXImportExportPluginInterface::exportGMX()
 
     if (QFileInfo::exists(url.isLocalFile() ? url.toLocalFile() : url.path())) {
         if (url.isLocalFile() && QFileInfo::exists(url.toLocalFile())) {
-            auto *dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
+            auto dialog = new PimCommon::RenameFileDialog(url, false, parentWidget());
             const auto result = static_cast<PimCommon::RenameFileDialog::RenameFileDialogResult>(dialog->exec());
             if (result == PimCommon::RenameFileDialog::RENAMEFILE_RENAME) {
                 url = dialog->newName();
@@ -465,7 +465,7 @@ void GMXImportExportPluginInterface::importGMX()
         }
 
         // populate the addressee
-        auto *addressee = new KContacts::Addressee;
+        auto addressee = new KContacts::Addressee;
         addressee->setNickName(itemList.at(1));
         addressee->setGivenName(itemList.at(2));
         addressee->setFamilyName(itemList.at(3));
@@ -629,7 +629,7 @@ void GMXImportExportPluginInterface::importGMX()
     KAddressBookImportExport::ContactList contactList;
     contactList.setAddressList(addresseeList);
 
-    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
+    auto engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();

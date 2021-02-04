@@ -14,8 +14,8 @@
 MarkdownDemoWidget::MarkdownDemoWidget(QWidget *parent)
     : QWidget(parent)
 {
-    auto *vboxLayout = new QVBoxLayout(this);
-    auto *mainLayout = new QHBoxLayout;
+    auto vboxLayout = new QVBoxLayout(this);
+    auto mainLayout = new QHBoxLayout;
     vboxLayout->addLayout(mainLayout);
     mEdit = new QTextEdit(this);
     mEdit->setAcceptRichText(false);

@@ -18,7 +18,7 @@ int main(int argc, char **argv)
     parser.addHelpOption();
     parser.process(app);
 
-    auto *w = new EmailLineEditWidget;
+    auto w = new EmailLineEditWidget;
     w->resize(800, 600);
     w->show();
     app.exec();

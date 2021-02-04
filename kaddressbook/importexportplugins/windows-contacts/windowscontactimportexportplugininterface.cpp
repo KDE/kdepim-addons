@@ -83,7 +83,7 @@ void WindowsContactImportExportPluginInterface::importWindowsContact()
     KAddressBookImportExport::ContactList contactList;
     contactList.setAddressList(addresseeList);
 
-    auto *engine = new KAddressBookImportExport::ImportExportEngine(this);
+    auto engine = new KAddressBookImportExport::ImportExportEngine(this);
     engine->setContactList(contactList);
     engine->setDefaultAddressBook(defaultCollection());
     engine->importContacts();

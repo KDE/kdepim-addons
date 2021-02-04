@@ -196,7 +196,7 @@ TemplateSelectionDialog::TemplateSelectionDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Template Selection"));
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
     QLabel *lab = new QLabel(i18nc("@info", "Please select a template, that matches the CSV file:"), this);
     mainLayout->addWidget(lab);

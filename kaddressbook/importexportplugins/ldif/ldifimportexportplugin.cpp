@@ -19,7 +19,7 @@ LDifImportExportPlugin::~LDifImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *LDifImportExportPlugin::createInterface(QObject *parent)
 {
-    auto *interface = new LDifImportExportPluginInterface(parent);
+    auto interface = new LDifImportExportPluginInterface(parent);
     return interface;
 }
 

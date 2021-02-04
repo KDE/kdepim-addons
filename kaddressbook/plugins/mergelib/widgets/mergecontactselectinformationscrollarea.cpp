@@ -20,7 +20,7 @@ using namespace KABMergeContacts;
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
     : QWidget(parent)
 {
-    auto *vbox = new QVBoxLayout(this);
+    auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins({});
     mStackWidget = new QStackedWidget;
     mStackWidget->setObjectName(QStringLiteral("stackwidget"));
@@ -28,9 +28,9 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
 
     QWidget *selectMergeWidget = new QWidget;
     selectMergeWidget->setObjectName(QStringLiteral("selectwidget"));
-    auto *layout = new QVBoxLayout;
+    auto layout = new QVBoxLayout;
     selectMergeWidget->setLayout(layout);
-    auto *area = new QScrollArea;
+    auto area = new QScrollArea;
     area->setWidgetResizable(true);
     area->setObjectName(QStringLiteral("scrollarea"));
     layout->addWidget(area);
@@ -38,7 +38,7 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
     mSelectInformationWidget->setObjectName(QStringLiteral("selectinformationwidget"));
     area->setWidget(mSelectInformationWidget);
 
-    auto *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
     hbox->addStretch();
     QPushButton *mergeButton = new QPushButton(i18n("Merge"));
     mergeButton->setObjectName(QStringLiteral("merge"));
@@ -101,7 +101,7 @@ void MergeContactSelectInformationScrollArea::slotMergeContacts()
 void MergeContactSelectInformationScrollArea::mergeContact(const KContacts::Addressee &addr)
 {
     if (!addr.isEmpty()) {
-        auto *job = new KABMergeContacts::MergeContactsJob(this);
+        auto job = new KABMergeContacts::MergeContactsJob(this);
         job->setNewContact(addr);
         job->setDestination(mCollection);
         job->setListItem(mListItem);

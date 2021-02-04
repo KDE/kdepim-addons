@@ -17,7 +17,7 @@ static const char myConfigGroupName[] = "Check Before Send";
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
 {
-    auto *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
