@@ -48,7 +48,7 @@ void MergeContactsPluginInterface::setCurrentItems(const Akonadi::Item::List &it
     mListItems = onlyContactList;
 }
 
-PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::requiresFeatures() const
 {
     return PimCommon::GenericPluginInterface::CurrentItems;
 }

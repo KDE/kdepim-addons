@@ -50,7 +50,7 @@ void SendVcardsPluginInterface::setCurrentItems(const Akonadi::Item::List &items
     mListItems = items;
 }
 
-PimCommon::GenericPluginInterface::RequireTypes SendVcardsPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes SendVcardsPluginInterface::requiresFeatures() const
 {
     return PimCommon::GenericPluginInterface::CurrentItems;
 }

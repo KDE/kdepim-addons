@@ -57,7 +57,7 @@ void SearchDuplicatesPluginInterface::setItems(const Akonadi::Item::List &items)
     mListItems = onlyContactList;
 }
 
-PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes SearchDuplicatesPluginInterface::requiresFeatures() const
 {
     return PimCommon::GenericPluginInterface::Items;
 }

@@ -18,7 +18,7 @@ public:
     void exec() override;
     void createAction(KActionCollection *ac) override;
     void setCurrentItems(const Akonadi::Item::List &items) override;
-    Q_REQUIRED_RESULT PimCommon::GenericPluginInterface::RequireTypes requires() const override;
+    Q_REQUIRED_RESULT PimCommon::GenericPluginInterface::RequireTypes requiresFeatures() const override;
 
 private:
     void slotActivated();

@@ -43,7 +43,7 @@ void SendMailPluginInterface::setCurrentItems(const Akonadi::Item::List &items)
     mListItems = items;
 }
 
-PimCommon::GenericPluginInterface::RequireTypes SendMailPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes SendMailPluginInterface::requiresFeatures() const
 {
     return PimCommon::GenericPluginInterface::CurrentItems;
 }

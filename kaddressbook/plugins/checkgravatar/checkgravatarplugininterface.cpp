@@ -52,7 +52,7 @@ void CheckGravatarPluginInterface::setCurrentItems(const Akonadi::Item::List &it
     mListItems = items;
 }
 
-PimCommon::GenericPluginInterface::RequireTypes CheckGravatarPluginInterface::requires() const
+PimCommon::GenericPluginInterface::RequireTypes CheckGravatarPluginInterface::requiresFeatures() const
 {
     return PimCommon::GenericPluginInterface::CurrentItems;
 }
