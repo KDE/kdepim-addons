@@ -47,6 +47,7 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
     button->setFocusPolicy(Qt::NoFocus);
     button->setMenu(quickTextMenu->menu());
     setStatusBarWidget(button);
+    setApplyOnFieldTypes(MessageComposer::PluginEditorInterface::ApplyOnFieldType::Composer);
 }
 
 void QuickTextPluginEditorInterface::slotActivated()
