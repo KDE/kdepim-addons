@@ -14,7 +14,7 @@ class MarkdownConfigureDialogTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownConfigureDialogTest(QObject *parent = nullptr);
-    ~MarkdownConfigureDialogTest() = default;
+    ~MarkdownConfigureDialogTest() override = default;
 };
 
 #endif // MARKDOWNCONFIGUREDIALOGTEST_H

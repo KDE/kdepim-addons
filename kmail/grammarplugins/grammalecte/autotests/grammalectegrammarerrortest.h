@@ -13,7 +13,7 @@ class GrammalecteGrammarErrorTest : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteGrammarErrorTest(QObject *parent = nullptr);
-    ~GrammalecteGrammarErrorTest() = default;
+    ~GrammalecteGrammarErrorTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldParseJson_data();

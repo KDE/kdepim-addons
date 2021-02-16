@@ -13,7 +13,7 @@ class EmailLineEditWidget : public QWidget
     Q_OBJECT
 public:
     explicit EmailLineEditWidget(QWidget *parent = nullptr);
-    ~EmailLineEditWidget() = default;
+    ~EmailLineEditWidget() override = default;
 };
 
 #endif // EMAILLINEEDITWIDGET_H

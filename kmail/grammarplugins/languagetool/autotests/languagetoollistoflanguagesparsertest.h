@@ -14,7 +14,7 @@ class LanguageToolListOfLanguagesParserTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolListOfLanguagesParserTest(QObject *parent = nullptr);
-    ~LanguageToolListOfLanguagesParserTest() = default;
+    ~LanguageToolListOfLanguagesParserTest() override = default;
 };
 
 #endif // LANGUAGETOOLLISTOFLANGUAGESPARSERTEST_H

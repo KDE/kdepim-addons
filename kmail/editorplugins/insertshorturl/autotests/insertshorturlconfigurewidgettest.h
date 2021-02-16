@@ -14,7 +14,7 @@ class InsertShorturlConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit InsertShorturlConfigureWidgetTest(QObject *parent = nullptr);
-    ~InsertShorturlConfigureWidgetTest() = default;
+    ~InsertShorturlConfigureWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

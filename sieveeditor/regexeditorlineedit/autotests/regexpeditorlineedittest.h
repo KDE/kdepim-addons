@@ -14,7 +14,7 @@ class RegexpEditorLineEditTest : public QObject
     Q_OBJECT
 public:
     explicit RegexpEditorLineEditTest(QObject *parent = nullptr);
-    ~RegexpEditorLineEditTest() = default;
+    ~RegexpEditorLineEditTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

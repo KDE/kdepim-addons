@@ -14,7 +14,7 @@ class GrammalecteGenerateConfigOptionJobTest : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteGenerateConfigOptionJobTest(QObject *parent = nullptr);
-    ~GrammalecteGenerateConfigOptionJobTest() = default;
+    ~GrammalecteGenerateConfigOptionJobTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();

@@ -14,7 +14,7 @@ class LanguageToolResultJobTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolResultJobTest(QObject *parent = nullptr);
-    ~LanguageToolResultJobTest() = default;
+    ~LanguageToolResultJobTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();

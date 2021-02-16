@@ -14,7 +14,7 @@ class FolderConfigureSettingsWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit FolderConfigureSettingsWidgetTest(QObject *parent = nullptr);
-    ~FolderConfigureSettingsWidgetTest() = default;
+    ~FolderConfigureSettingsWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

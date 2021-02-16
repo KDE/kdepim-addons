@@ -14,7 +14,7 @@ class MarkdownPluginTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownPluginTest(QObject *parent = nullptr);
-    ~MarkdownPluginTest() = default;
+    ~MarkdownPluginTest() override = default;
 private Q_SLOTS:
     void shouldCreateInterface();
 };

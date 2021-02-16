@@ -14,7 +14,7 @@ class GrammalecteConfigDialogTest : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteConfigDialogTest(QObject *parent = nullptr);
-    ~GrammalecteConfigDialogTest() = default;
+    ~GrammalecteConfigDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

@@ -14,7 +14,7 @@ class GravatarConfigureSettingsPluginDialogTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarConfigureSettingsPluginDialogTest(QObject *parent = nullptr);
-    ~GravatarConfigureSettingsPluginDialogTest() = default;
+    ~GravatarConfigureSettingsPluginDialogTest() override = default;
 };
 
 #endif // GRAVATARCONFIGURESETTINGSPLUGINDIALOGTEST_H

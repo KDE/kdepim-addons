@@ -14,7 +14,7 @@ class ExternalComposerConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ExternalComposerConfigureWidgetTest(QObject *parent = nullptr);
-    ~ExternalComposerConfigureWidgetTest() = default;
+    ~ExternalComposerConfigureWidgetTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();

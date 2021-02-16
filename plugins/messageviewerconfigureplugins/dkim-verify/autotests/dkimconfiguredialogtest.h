@@ -14,7 +14,7 @@ class DKIMConfigureDialogTest : public QObject
     Q_OBJECT
 public:
     explicit DKIMConfigureDialogTest(QObject *parent = nullptr);
-    ~DKIMConfigureDialogTest() = default;
+    ~DKIMConfigureDialogTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

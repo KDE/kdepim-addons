@@ -14,7 +14,7 @@ class QuickTextMenuTest : public QObject
     Q_OBJECT
 public:
     explicit QuickTextMenuTest(QObject *parent = nullptr);
-    ~QuickTextMenuTest() = default;
+    ~QuickTextMenuTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

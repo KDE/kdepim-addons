@@ -14,7 +14,7 @@ class LanguageToolGrammarErrorTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolGrammarErrorTest(QObject *parent = nullptr);
-    ~LanguageToolGrammarErrorTest() = default;
+    ~LanguageToolGrammarErrorTest() override = default;
 private Q_SLOTS:
     void shouldParseJson_data();
     void shouldParseJson();

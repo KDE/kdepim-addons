@@ -13,7 +13,7 @@ class ConfirmAddressEmailEntryDialogTest : public QObject
     Q_OBJECT
 public:
     explicit ConfirmAddressEmailEntryDialogTest(QObject *parent = nullptr);
-    ~ConfirmAddressEmailEntryDialogTest() = default;
+    ~ConfirmAddressEmailEntryDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

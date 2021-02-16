@@ -14,7 +14,7 @@ class ExpertPluginInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit ExpertPluginInterfaceTest(QObject *parent = nullptr);
-    ~ExpertPluginInterfaceTest() = default;
+    ~ExpertPluginInterfaceTest() override = default;
 };
 
 #endif // EXPERTPLUGININTERFACETEST_H

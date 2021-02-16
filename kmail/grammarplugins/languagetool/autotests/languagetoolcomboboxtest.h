@@ -14,7 +14,7 @@ class LanguageToolComboBoxTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolComboBoxTest(QObject *parent = nullptr);
-    ~LanguageToolComboBoxTest() = default;
+    ~LanguageToolComboBoxTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

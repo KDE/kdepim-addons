@@ -14,7 +14,7 @@ class ExpireAccountTrashFolderConfigDialogTest : public QObject
     Q_OBJECT
 public:
     explicit ExpireAccountTrashFolderConfigDialogTest(QObject *parent = nullptr);
-    ~ExpireAccountTrashFolderConfigDialogTest() = default;
+    ~ExpireAccountTrashFolderConfigDialogTest() override = default;
 };
 
 #endif // EXPIREACCOUNTTRASHFOLDERCONFIGDIALOGTEST_H

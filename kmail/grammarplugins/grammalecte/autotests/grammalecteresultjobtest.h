@@ -14,7 +14,7 @@ class GrammarResultJobTest : public QObject
     Q_OBJECT
 public:
     explicit GrammarResultJobTest(QObject *parent = nullptr);
-    ~GrammarResultJobTest() = default;
+    ~GrammarResultJobTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldBeAbleToStart();

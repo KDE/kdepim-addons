@@ -15,7 +15,7 @@ class MarkdownDemoWidget : public QWidget
     Q_OBJECT
 public:
     explicit MarkdownDemoWidget(QWidget *parent = nullptr);
-    ~MarkdownDemoWidget() = default;
+    ~MarkdownDemoWidget() override = default;
 
 private:
     QTextEdit *mEdit = nullptr;

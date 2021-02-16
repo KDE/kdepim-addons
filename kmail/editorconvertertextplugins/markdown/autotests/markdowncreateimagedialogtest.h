@@ -14,7 +14,7 @@ class MarkdownCreateImageDialogTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownCreateImageDialogTest(QObject *parent = nullptr);
-    ~MarkdownCreateImageDialogTest() = default;
+    ~MarkdownCreateImageDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

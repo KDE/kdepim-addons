@@ -14,7 +14,7 @@ class GrammalecteParserTest : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteParserTest(QObject *parent = nullptr);
-    ~GrammalecteParserTest() = default;
+    ~GrammalecteParserTest() override = default;
 private Q_SLOTS:
     void shouldParseJson_data();
     void shouldParseJson();

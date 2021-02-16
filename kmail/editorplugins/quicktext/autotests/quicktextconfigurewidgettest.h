@@ -14,7 +14,7 @@ class QuickTextConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit QuickTextConfigureWidgetTest(QObject *parent = nullptr);
-    ~QuickTextConfigureWidgetTest() = default;
+    ~QuickTextConfigureWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

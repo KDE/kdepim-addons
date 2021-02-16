@@ -14,7 +14,7 @@ class DKIMAdvancedWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit DKIMAdvancedWidgetTest(QObject *parent = nullptr);
-    ~DKIMAdvancedWidgetTest() = default;
+    ~DKIMAdvancedWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

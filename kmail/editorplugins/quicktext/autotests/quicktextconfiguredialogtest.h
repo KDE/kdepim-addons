@@ -14,7 +14,7 @@ class QuickTextConfigureDialogTest : public QObject
     Q_OBJECT
 public:
     explicit QuickTextConfigureDialogTest(QObject *parent = nullptr);
-    ~QuickTextConfigureDialogTest() = default;
+    ~QuickTextConfigureDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

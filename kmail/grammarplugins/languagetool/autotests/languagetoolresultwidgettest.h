@@ -13,7 +13,7 @@ class LanguageToolResultWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolResultWidgetTest(QObject *parent = nullptr);
-    ~LanguageToolResultWidgetTest() = default;
+    ~LanguageToolResultWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

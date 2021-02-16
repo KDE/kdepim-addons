@@ -14,7 +14,7 @@ class DKIMAuthenticationVerifiedServerWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit DKIMAuthenticationVerifiedServerWidgetTest(QObject *parent = nullptr);
-    ~DKIMAuthenticationVerifiedServerWidgetTest() = default;
+    ~DKIMAuthenticationVerifiedServerWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

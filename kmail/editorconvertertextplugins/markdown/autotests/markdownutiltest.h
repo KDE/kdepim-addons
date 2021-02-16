@@ -13,7 +13,7 @@ class MarkdownUtilTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownUtilTest(QObject *parent = nullptr);
-    ~MarkdownUtilTest() = default;
+    ~MarkdownUtilTest() override = default;
 private Q_SLOTS:
     void shouldConvert();
     void shouldConvert_data();

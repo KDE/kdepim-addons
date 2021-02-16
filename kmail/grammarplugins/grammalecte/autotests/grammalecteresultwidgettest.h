@@ -13,7 +13,7 @@ class GrammarResultWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit GrammarResultWidgetTest(QObject *parent = nullptr);
-    ~GrammarResultWidgetTest() = default;
+    ~GrammarResultWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

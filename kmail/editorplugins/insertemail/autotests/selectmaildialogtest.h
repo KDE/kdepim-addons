@@ -14,7 +14,7 @@ class SelectMailDialogTest : public QObject
     Q_OBJECT
 public:
     explicit SelectMailDialogTest(QObject *parent = nullptr);
-    ~SelectMailDialogTest() = default;
+    ~SelectMailDialogTest() override = default;
 };
 
 #endif // SELECTMAILDIALOGTEST_H

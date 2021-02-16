@@ -16,7 +16,7 @@ class ConfirmAddressEmailEntryDialog : public QDialog
     Q_OBJECT
 public:
     explicit ConfirmAddressEmailEntryDialog(QWidget *parent = nullptr);
-    ~ConfirmAddressEmailEntryDialog() = default;
+    ~ConfirmAddressEmailEntryDialog() override = default;
 
     Q_REQUIRED_RESULT QString emails() const;
     void setValue(const QString &val);

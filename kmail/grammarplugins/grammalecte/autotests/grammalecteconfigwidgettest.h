@@ -14,7 +14,7 @@ class GrammalecteConfigWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit GrammalecteConfigWidgetTest(QObject *parent = nullptr);
-    ~GrammalecteConfigWidgetTest() = default;
+    ~GrammalecteConfigWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

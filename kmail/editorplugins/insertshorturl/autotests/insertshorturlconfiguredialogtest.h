@@ -14,7 +14,7 @@ class InsertShorturlConfigureDialogTest : public QObject
     Q_OBJECT
 public:
     explicit InsertShorturlConfigureDialogTest(QObject *parent = nullptr);
-    ~InsertShorturlConfigureDialogTest() = default;
+    ~InsertShorturlConfigureDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

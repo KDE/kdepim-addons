@@ -14,7 +14,7 @@ class MarkdownCreateLinkWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownCreateLinkWidgetTest(QObject *parent = nullptr);
-    ~MarkdownCreateLinkWidgetTest() = default;
+    ~MarkdownCreateLinkWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGenerateLink();

@@ -13,7 +13,7 @@ class RegExpEditorWidget : public QWidget
     Q_OBJECT
 public:
     explicit RegExpEditorWidget(QWidget *parent = nullptr);
-    ~RegExpEditorWidget() = default;
+    ~RegExpEditorWidget() override = default;
 };
 
 #endif // REGEXPEDITORWIDGET_H

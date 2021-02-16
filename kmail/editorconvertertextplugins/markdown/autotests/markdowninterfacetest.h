@@ -14,7 +14,7 @@ class MarkdownInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownInterfaceTest(QObject *parent = nullptr);
-    ~MarkdownInterfaceTest() = default;
+    ~MarkdownInterfaceTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

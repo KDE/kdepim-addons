@@ -14,7 +14,7 @@ class LanguageToolConfigWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolConfigWidgetTest(QObject *parent = nullptr);
-    ~LanguageToolConfigWidgetTest() = default;
+    ~LanguageToolConfigWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldUpdateWidgets();

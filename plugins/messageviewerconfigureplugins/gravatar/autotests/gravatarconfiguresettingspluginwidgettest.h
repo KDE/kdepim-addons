@@ -14,7 +14,7 @@ class GravatarConfigureSettingsPluginWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarConfigureSettingsPluginWidgetTest(QObject *parent = nullptr);
-    ~GravatarConfigureSettingsPluginWidgetTest() = default;
+    ~GravatarConfigureSettingsPluginWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

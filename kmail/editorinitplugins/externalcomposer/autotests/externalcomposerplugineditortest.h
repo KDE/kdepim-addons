@@ -14,7 +14,7 @@ class ExternalComposerPluginEditorTest : public QObject
     Q_OBJECT
 public:
     explicit ExternalComposerPluginEditorTest(QObject *parent = nullptr);
-    ~ExternalComposerPluginEditorTest() = default;
+    ~ExternalComposerPluginEditorTest() override = default;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

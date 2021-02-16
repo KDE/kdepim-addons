@@ -14,7 +14,7 @@ class MarkdownPreviewWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownPreviewWidgetTest(QObject *parent = nullptr);
-    ~MarkdownPreviewWidgetTest() = default;
+    ~MarkdownPreviewWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

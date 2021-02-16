@@ -14,7 +14,7 @@ class CheckGravatarPluginTest : public QObject
     Q_OBJECT
 public:
     explicit CheckGravatarPluginTest(QObject *parent = nullptr);
-    ~CheckGravatarPluginTest() = default;
+    ~CheckGravatarPluginTest() override = default;
 };
 
 #endif // CHECKGRAVATARPLUGINTEST_H

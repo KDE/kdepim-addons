@@ -14,7 +14,7 @@ class DKIMGeneralWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit DKIMGeneralWidgetTest(QObject *parent = nullptr);
-    ~DKIMGeneralWidgetTest() = default;
+    ~DKIMGeneralWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

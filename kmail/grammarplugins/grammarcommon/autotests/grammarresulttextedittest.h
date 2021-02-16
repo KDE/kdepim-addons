@@ -14,7 +14,7 @@ class GrammarResultTextEditTest : public QObject
     Q_OBJECT
 public:
     explicit GrammarResultTextEditTest(QObject *parent = nullptr);
-    ~GrammarResultTextEditTest() = default;
+    ~GrammarResultTextEditTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

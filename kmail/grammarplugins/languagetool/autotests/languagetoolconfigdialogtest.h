@@ -14,7 +14,7 @@ class LanguageToolConfigDialogTest : public QObject
     Q_OBJECT
 public:
     explicit LanguageToolConfigDialogTest(QObject *parent = nullptr);
-    ~LanguageToolConfigDialogTest() = default;
+    ~LanguageToolConfigDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

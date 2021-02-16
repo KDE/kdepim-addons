@@ -14,7 +14,7 @@ class MarkdownCreateImageWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit MarkdownCreateImageWidgetTest(QObject *parent = nullptr);
-    ~MarkdownCreateImageWidgetTest() = default;
+    ~MarkdownCreateImageWidgetTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGenerateLink();
