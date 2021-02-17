@@ -23,6 +23,9 @@ ecm_qt_declare_logging_category(loggingcategory_SRCS
 set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
 kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json SOURCES
     ${pimeventsplugins_full_SRCS} INSTALL_NAMESPACE plasmacalendarplugins)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(pimevents PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(pimevents
     Qt5::Core
@@ -53,7 +56,9 @@ target_link_libraries(pimcalendarsplugin
     KF5::CalendarCore
     KF5::ConfigCore
     )
-
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(pimcalendarsplugin PROPERTIES UNITY_BUILD ON)
+endif()
 install(TARGETS pimcalendarsplugin
     DESTINATION ${KDE_INSTALL_QMLDIR}/org/kde/plasma/PimCalendars
     )

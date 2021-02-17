@@ -20,6 +20,9 @@ ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER e
 
 kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json
     SOURCES ${messageviewer_externalscriptplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(messageviewer_externalscriptplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(messageviewer_externalscriptplugin
     KF5::MessageViewer KF5::XmlGui KF5::I18n KF5::PimCommon KF5::KIOWidgets

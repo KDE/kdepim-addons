@@ -16,6 +16,9 @@ ecm_qt_declare_logging_category(messageviewer_createeventplugin_SRCS HEADER crea
 kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_createeventplugin.json SOURCES
     ${messageviewer_createeventplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
 
+if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
+    set_target_properties(messageviewer_createeventplugin PROPERTIES UNITY_BUILD ON)
+endif()
 
 target_link_libraries(messageviewer_createeventplugin
     KF5::MessageViewer KF5::XmlGui KF5::CalendarCore KF5::IncidenceEditor KF5::AkonadiWidgets KF5::CalendarSupport
