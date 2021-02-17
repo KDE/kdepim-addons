@@ -31,7 +31,7 @@ class PgpKeyMessagePart : public MimeTreeParser::MessagePart
     Q_OBJECT
 public:
     explicit PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part);
-    ~PgpKeyMessagePart() = default;
+    ~PgpKeyMessagePart() override = default;
 
     QDateTime keyDate() const;
     QString userID() const;

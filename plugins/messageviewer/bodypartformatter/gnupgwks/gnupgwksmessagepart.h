@@ -36,7 +36,7 @@ public:
 
     explicit GnuPGWKSMessagePart(MimeTreeParser::Interface::BodyPart *part);
 
-    virtual ~GnuPGWKSMessagePart() = default;
+    ~GnuPGWKSMessagePart() override = default;
 
     ConfirmationType confirmationType() const;
     QString sender() const;
