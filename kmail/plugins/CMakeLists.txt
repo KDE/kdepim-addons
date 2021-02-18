@@ -4,6 +4,5 @@ add_subdirectory(antivirusplugin)
 add_subdirectory(common/avscripts)
 add_subdirectory(logactivitiesplugin)
 add_subdirectory(expertplugin)
-#Laurent disable for the moment
-#add_subdirectory(mailmergeplugin)
+add_subdirectory(mailmergeplugin)
 install(FILES common/kmail.antispamrc common/kmail.antivirusrc   DESTINATION ${KDE_INSTALL_CONFDIR})
