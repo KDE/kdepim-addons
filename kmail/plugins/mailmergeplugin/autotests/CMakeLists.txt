@@ -1,5 +1,5 @@
 # convenience macro to add qtest unit tests
-macro(add_kmail_unittest _source _additionalsource)
+macro(add_kmail_mailmergeunittest _source )
   set(_test ${_source} ${_additionalsource})
   get_filename_component(_name ${_source} NAME_WE)
   add_executable( ${_name} ${_test} )
@@ -11,11 +11,12 @@ macro(add_kmail_unittest _source _additionalsource)
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::I18n
+    mailmerge
   )
 endmacro ()
 
-add_kmail_unittest( mailmergewidgettest.cpp "../widgets/csvwidget.cpp;../widgets/addressbookwidget.cpp;../widgets/mailmergewidget.cpp;../widgets/attachmentlistwidget.cpp;../widgets/selectattachmentdialog.cpp")
-add_kmail_unittest(addressbookwidgettest.cpp "../widgets/csvwidget.cpp")
-add_kmail_unittest(csvwidgettest.cpp "../widgets/csvwidget.cpp")
-add_kmail_unittest(mailmergedialogtest.cpp "../mailmergedialog.cpp;../widgets/attachmentlistwidget.cpp;../widgets/selectattachmentdialog.cpp;../widgets/mailmergewidget.cpp;../widgets/csvwidget.cpp;../widgets/addressbookwidget.cpp;../widgets/selectattachmentdialog.cpp" "KF5::PimCommon")
-add_kmail_unittest(mailmergejobtest.cpp "../job/mailmergejob.cpp" "")
+add_kmail_mailmergeunittest( mailmergewidgettest.cpp)
+add_kmail_mailmergeunittest(addressbookwidgettest.cpp)
+add_kmail_mailmergeunittest(csvwidgettest.cpp)
+add_kmail_mailmergeunittest(mailmergedialogtest.cpp)
+add_kmail_mailmergeunittest(mailmergejobtest.cpp)

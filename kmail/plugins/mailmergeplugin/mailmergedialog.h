@@ -6,11 +6,12 @@
 
 #ifndef MAILMERGEDIALOG_H
 #define MAILMERGEDIALOG_H
+#include "mailmerge_export.h"
 #include <QDialog>
 namespace MailMerge
 {
 class MailMergeWidget;
-class MailMergeDialog : public QDialog
+class MAILMERGE_EXPORT MailMergeDialog : public QDialog
 {
     Q_OBJECT
 public:
@@ -18,7 +19,7 @@ public:
     ~MailMergeDialog() override;
 
 private:
-    MailMergeWidget *mMailMergeWidget = nullptr;
+    MailMergeWidget *const mMailMergeWidget;
 };
 }
 
