@@ -27,10 +27,10 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     , mCsvWidget(new MailMerge::CsvWidget(this))
     , mAddressbookWidget(new MailMerge::AddressBookWidget(this))
 {
-    QVBoxLayout *vbox = new QVBoxLayout(this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
 
     QHBoxLayout *hbox = new QHBoxLayout;
-    vbox->addLayout(hbox);
+    mainLayout->addLayout(hbox);
 
     QLabel *lab = new QLabel(i18n("Source:"), this);
     hbox->addWidget(lab);
@@ -44,7 +44,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     hbox->addWidget(mSource);
 
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
-    vbox->addWidget(mStackedWidget);
+    mainLayout->addWidget(mStackedWidget);
 
     mAddressbookWidget->setObjectName(QStringLiteral("addressbookwidget"));
     mStackedWidget->addWidget(mAddressbookWidget);
@@ -54,15 +54,15 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     mStackedWidget->addWidget(mCsvWidget);
 
     lab = new QLabel(i18n("Attachment:"), this);
-    vbox->addWidget(lab);
+    mainLayout->addWidget(lab);
 
     PimCommon::SimpleStringListEditor::ButtonCode buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(
         PimCommon::SimpleStringListEditor::Add | PimCommon::SimpleStringListEditor::Remove | PimCommon::SimpleStringListEditor::Modify);
     mAttachment = new AttachmentListWidget(this, buttonCode, i18n("A&dd..."), i18n("Re&move"), i18n("Mod&ify..."));
     mAttachment->setObjectName(QStringLiteral("attachment-list"));
 
-    vbox->addWidget(mAttachment);
-    vbox->addStretch();
+    mainLayout->addWidget(mAttachment);
+    mainLayout->addStretch();
 }
 
 MailMergeWidget::~MailMergeWidget()

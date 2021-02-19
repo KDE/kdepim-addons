@@ -32,8 +32,16 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &MailMergeDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &MailMergeDialog::reject);
     mainLayout->addWidget(buttonBox);
+    mPreview = new QPushButton(i18n("Preview"), this);
+    buttonBox->addButton(mPreview, QDialogButtonBox::ActionRole);
+    connect(mPreview, &QPushButton::clicked, this, &MailMergeDialog::slotPreview);
 }
 
 MailMergeDialog::~MailMergeDialog()
 {
+}
+
+void MailMergeDialog::slotPreview()
+{
+    // TODO show generated email
 }

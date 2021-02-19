@@ -8,6 +8,7 @@
 #define MAILMERGEDIALOG_H
 #include "mailmerge_export.h"
 #include <QDialog>
+class QPushButton;
 namespace MailMerge
 {
 class MailMergeWidget;
@@ -19,7 +20,9 @@ public:
     ~MailMergeDialog() override;
 
 private:
+    void slotPreview();
     MailMergeWidget *const mMailMergeWidget;
+    QPushButton *mPreview = nullptr;
 };
 }
 
