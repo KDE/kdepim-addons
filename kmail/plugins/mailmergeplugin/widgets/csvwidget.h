@@ -7,13 +7,13 @@
 #ifndef CSVWIDGET_H
 #define CSVWIDGET_H
 
+#include "mailmergeplugin_private_export.h"
 #include <QWidget>
-
 class KUrlRequester;
 class QUrl;
 namespace MailMerge
 {
-class CsvWidget : public QWidget
+class MAILMERGEPRIVATE_TESTS_EXPORT CsvWidget : public QWidget
 {
     Q_OBJECT
 public:

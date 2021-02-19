@@ -7,10 +7,11 @@
 #ifndef ADDRESSBOOKWIDGET_H
 #define ADDRESSBOOKWIDGET_H
 
+#include "mailmergeplugin_private_export.h"
 #include <QWidget>
 namespace MailMerge
 {
-class AddressBookWidget : public QWidget
+class MAILMERGEPRIVATE_TESTS_EXPORT AddressBookWidget : public QWidget
 {
     Q_OBJECT
 public:

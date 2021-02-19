@@ -7,8 +7,8 @@
 #ifndef MAILMERGEWIDGET_H
 #define MAILMERGEWIDGET_H
 
+#include "mailmergeplugin_private_export.h"
 #include <QWidget>
-
 class QComboBox;
 class QStackedWidget;
 
@@ -17,7 +17,7 @@ namespace MailMerge
 class CsvWidget;
 class AttachmentListWidget;
 class AddressBookWidget;
-class MailMergeWidget : public QWidget
+class MAILMERGEPRIVATE_TESTS_EXPORT MailMergeWidget : public QWidget
 {
     Q_OBJECT
 public:
