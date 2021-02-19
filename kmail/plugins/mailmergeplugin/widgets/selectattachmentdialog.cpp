@@ -8,6 +8,7 @@
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QLabel>
+#include <QVBoxLayout>
 #include <kurlrequester.h>
 using namespace MailMerge;
 
@@ -15,9 +16,8 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     : QDialog(parent)
 {
     setWindowTitle(i18nc("@title:window", "Attachment"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
-    QVBoxLayout *mainLayout = new QVBoxLayout;
-    setLayout(mainLayout);
+    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    QVBoxLayout *mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
@@ -30,7 +30,7 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Select attachment:"));
     lab->setObjectName(QStringLiteral("selectattachment_label"));
     vbox->addWidget(lab);
-    mUrlRequester = new KUrlRequester;
+    mUrlRequester = new KUrlRequester(this);
     mUrlRequester->setMode(KFile::LocalOnly | KFile::ExistingOnly);
     mUrlRequester->setObjectName(QStringLiteral("urlrequester"));
     vbox->addWidget(mUrlRequester);
@@ -42,7 +42,7 @@ SelectAttachmentDialog::~SelectAttachmentDialog()
 {
 }
 
-void SelectAttachmentDialog::setAttachmentPath(const QString &path)
+void SelectAttachmentDialog::setAttachmentPath(const QUrl &path)
 {
     mUrlRequester->setUrl(path);
 }

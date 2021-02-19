@@ -23,7 +23,7 @@ public:
     ~AttachmentListWidget() override;
 
     void addNewEntry() override;
-    QString modifyEntry(const QString &text) override;
+    Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
 };
 }
 #endif // ATTACHMENTLISTWIDGET_H

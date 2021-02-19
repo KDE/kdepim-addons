@@ -16,14 +16,14 @@ using namespace MailMerge;
 CsvWidget::CsvWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *csvWidgetLayout = new QVBoxLayout;
-    csvWidgetLayout->setContentsMargins(0, 0, 0, 0);
-    setLayout(csvWidgetLayout);
+    QVBoxLayout *csvWidgetLayout = new QVBoxLayout(this);
+    csvWidgetLayout->setObjectName(QStringLiteral("csvWidgetLayout"));
+    csvWidgetLayout->setContentsMargins({});
 
-    QLabel *lab = new QLabel(i18n("Path:"));
+    QLabel *lab = new QLabel(i18n("Path:"), this);
     lab->setObjectName(QStringLiteral("label"));
     csvWidgetLayout->addWidget(lab);
-    mCvsUrlRequester = new KUrlRequester;
+    mCvsUrlRequester = new KUrlRequester(this);
     mCvsUrlRequester->setObjectName(QStringLiteral("cvsurlrequester"));
     csvWidgetLayout->addWidget(mCvsUrlRequester);
 }

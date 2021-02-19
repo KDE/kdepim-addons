@@ -23,16 +23,15 @@ using namespace MailMerge;
 MailMergeWidget::MailMergeWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QVBoxLayout *vbox = new QVBoxLayout;
-    setLayout(vbox);
+    QVBoxLayout *vbox = new QVBoxLayout(this);
 
     QHBoxLayout *hbox = new QHBoxLayout;
     vbox->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Source:"));
+    QLabel *lab = new QLabel(i18n("Source:"), this);
     hbox->addWidget(lab);
 
-    mSource = new QComboBox;
+    mSource = new QComboBox(this);
     mSource->setObjectName(QStringLiteral("source"));
     mSource->addItem(i18n("Address Book"), AddressBook);
     mSource->addItem(i18n("CSV"), CSV);
@@ -41,20 +40,20 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
     hbox->addWidget(mSource);
 
-    mStackedWidget = new QStackedWidget;
+    mStackedWidget = new QStackedWidget(this);
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
     vbox->addWidget(mStackedWidget);
 
-    mAddressbookWidget = new MailMerge::AddressBookWidget;
+    mAddressbookWidget = new MailMerge::AddressBookWidget(this);
     mAddressbookWidget->setObjectName(QStringLiteral("addressbookwidget"));
     mStackedWidget->addWidget(mAddressbookWidget);
 
-    mCsvWidget = new MailMerge::CsvWidget;
+    mCsvWidget = new MailMerge::CsvWidget(this);
     mCsvWidget->setObjectName(QStringLiteral("csvwidget"));
 
     mStackedWidget->addWidget(mCsvWidget);
 
-    lab = new QLabel(i18n("Attachment:"));
+    lab = new QLabel(i18n("Attachment:"), this);
     vbox->addWidget(lab);
 
     PimCommon::SimpleStringListEditor::ButtonCode buttonCode = static_cast<PimCommon::SimpleStringListEditor::ButtonCode>(

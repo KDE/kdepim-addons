@@ -9,6 +9,7 @@
 
 #include <QPointer>
 #include <QPushButton>
+#include <QUrl>
 
 using namespace MailMerge;
 AttachmentListWidget::AttachmentListWidget(QWidget *parent, ButtonCode buttons, const QString &addLabel, const QString &removeLabel, const QString &modifyLabel)
@@ -33,7 +34,7 @@ QString AttachmentListWidget::modifyEntry(const QString &text)
 {
     QString attachmentPath;
     QPointer<SelectAttachmentDialog> dlg = new SelectAttachmentDialog(this);
-    dlg->setAttachmentPath(text);
+    dlg->setAttachmentPath(QUrl::fromLocalFile(text));
     if (dlg->exec()) {
         attachmentPath = dlg->attachmentPath();
     }

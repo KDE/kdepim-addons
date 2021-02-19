@@ -11,8 +11,8 @@ using namespace MailMerge;
 AddressBookWidget::AddressBookWidget(QWidget *parent)
     : QWidget(parent)
 {
-    QHBoxLayout *hbox = new QHBoxLayout;
-    setLayout(hbox);
+    QHBoxLayout *mainLayout = new QHBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
 AddressBookWidget::~AddressBookWidget()

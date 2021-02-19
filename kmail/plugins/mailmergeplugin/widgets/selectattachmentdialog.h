@@ -19,8 +19,8 @@ public:
     explicit SelectAttachmentDialog(QWidget *parent = nullptr);
     ~SelectAttachmentDialog() override;
 
-    void setAttachmentPath(const QString &path);
-    QString attachmentPath() const;
+    void setAttachmentPath(const QUrl &path);
+    Q_REQUIRED_RESULT QString attachmentPath() const;
 
 private:
     KUrlRequester *mUrlRequester = nullptr;
