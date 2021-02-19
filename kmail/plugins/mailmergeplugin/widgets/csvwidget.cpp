@@ -15,6 +15,7 @@ using namespace MailMerge;
 
 CsvWidget::CsvWidget(QWidget *parent)
     : QWidget(parent)
+    , mCvsUrlRequester(new KUrlRequester(this))
 {
     QVBoxLayout *csvWidgetLayout = new QVBoxLayout(this);
     csvWidgetLayout->setObjectName(QStringLiteral("csvWidgetLayout"));
@@ -23,7 +24,6 @@ CsvWidget::CsvWidget(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Path:"), this);
     lab->setObjectName(QStringLiteral("label"));
     csvWidgetLayout->addWidget(lab);
-    mCvsUrlRequester = new KUrlRequester(this);
     mCvsUrlRequester->setObjectName(QStringLiteral("cvsurlrequester"));
     csvWidgetLayout->addWidget(mCvsUrlRequester);
 }

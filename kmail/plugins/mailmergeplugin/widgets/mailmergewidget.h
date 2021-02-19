@@ -36,11 +36,11 @@ private Q_SLOTS:
     void slotSourceChanged(int index);
 
 private:
-    QComboBox *mSource = nullptr;
-    QStackedWidget *mStackedWidget = nullptr;
+    QComboBox *const mSource;
+    QStackedWidget *const mStackedWidget;
     AttachmentListWidget *mAttachment = nullptr;
-    MailMerge::CsvWidget *mCsvWidget = nullptr;
-    MailMerge::AddressBookWidget *mAddressbookWidget = nullptr;
+    MailMerge::CsvWidget *const mCsvWidget;
+    MailMerge::AddressBookWidget *const mAddressbookWidget;
 };
 }
 #endif // MAILMERGEWIDGET_H

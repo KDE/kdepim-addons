@@ -22,6 +22,10 @@ using namespace MailMerge;
 
 MailMergeWidget::MailMergeWidget(QWidget *parent)
     : QWidget(parent)
+    , mSource(new QComboBox(this))
+    , mStackedWidget(new QStackedWidget(this))
+    , mCsvWidget(new MailMerge::CsvWidget(this))
+    , mAddressbookWidget(new MailMerge::AddressBookWidget(this))
 {
     QVBoxLayout *vbox = new QVBoxLayout(this);
 
@@ -31,7 +35,6 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Source:"), this);
     hbox->addWidget(lab);
 
-    mSource = new QComboBox(this);
     mSource->setObjectName(QStringLiteral("source"));
     mSource->addItem(i18n("Address Book"), AddressBook);
     mSource->addItem(i18n("CSV"), CSV);
@@ -40,15 +43,12 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
 
     hbox->addWidget(mSource);
 
-    mStackedWidget = new QStackedWidget(this);
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
     vbox->addWidget(mStackedWidget);
 
-    mAddressbookWidget = new MailMerge::AddressBookWidget(this);
     mAddressbookWidget->setObjectName(QStringLiteral("addressbookwidget"));
     mStackedWidget->addWidget(mAddressbookWidget);
 
-    mCsvWidget = new MailMerge::CsvWidget(this);
     mCsvWidget->setObjectName(QStringLiteral("csvwidget"));
 
     mStackedWidget->addWidget(mCsvWidget);

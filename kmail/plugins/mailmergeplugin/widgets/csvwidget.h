@@ -21,10 +21,10 @@ public:
     ~CsvWidget() override;
 
     void setPath(const QUrl &path);
-    QUrl path() const;
+    Q_REQUIRED_RESULT QUrl path() const;
 
 private:
-    KUrlRequester *mCvsUrlRequester = nullptr;
+    KUrlRequester *const mCvsUrlRequester;
 };
 }
 
