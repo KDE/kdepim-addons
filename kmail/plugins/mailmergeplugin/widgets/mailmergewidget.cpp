@@ -27,12 +27,12 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     , mCsvWidget(new MailMerge::CsvWidget(this))
     , mAddressbookWidget(new MailMerge::AddressBookWidget(this))
 {
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
 
-    QHBoxLayout *hbox = new QHBoxLayout;
+    auto hbox = new QHBoxLayout;
     mainLayout->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Source:"), this);
+    auto lab = new QLabel(i18n("Source:"), this);
     hbox->addWidget(lab);
 
     mSource->setObjectName(QStringLiteral("source"));

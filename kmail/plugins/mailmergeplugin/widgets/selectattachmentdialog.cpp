@@ -17,17 +17,17 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Attachment"));
     QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    QVBoxLayout *mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QVBoxLayout(this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
-    QWidget *w = new QWidget;
-    QVBoxLayout *vbox = new QVBoxLayout;
+    auto w = new QWidget;
+    auto vbox = new QVBoxLayout;
     w->setLayout(vbox);
-    QLabel *lab = new QLabel(i18n("Select attachment:"));
+    auto lab = new QLabel(i18n("Select attachment:"), this);
     lab->setObjectName(QStringLiteral("selectattachment_label"));
     vbox->addWidget(lab);
     mUrlRequester = new KUrlRequester(this);
