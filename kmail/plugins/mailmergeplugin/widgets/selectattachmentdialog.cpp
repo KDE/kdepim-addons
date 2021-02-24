@@ -25,8 +25,8 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 
     auto w = new QWidget;
-    auto vbox = new QVBoxLayout;
-    w->setLayout(vbox);
+    auto vbox = new QVBoxLayout(w);
+    vbox->setContentsMargins({});
     auto lab = new QLabel(i18n("Select attachment:"), this);
     lab->setObjectName(QStringLiteral("selectattachment_label"));
     vbox->addWidget(lab);
