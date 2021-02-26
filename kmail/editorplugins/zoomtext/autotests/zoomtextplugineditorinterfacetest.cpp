@@ -25,7 +25,7 @@ void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
     interface.createAction(ac);
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::PluginActionType::Edit);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::View);
     QVERIFY(ac->action(QStringLiteral("zoom_menu")));
     QVERIFY(ac->action(QStringLiteral("zoom_in")));
     QVERIFY(ac->action(QStringLiteral("zoom_out")));

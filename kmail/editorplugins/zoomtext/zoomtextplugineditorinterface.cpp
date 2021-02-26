@@ -40,7 +40,7 @@ void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
     ac->addAction(QStringLiteral("zoom_reset"), zoomResetAction);
     zoomMenu->addAction(zoomResetAction);
 
-    MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::Edit);
+    MessageComposer::PluginActionType type(zoomMenu, MessageComposer::PluginActionType::View);
     setActionType(type);
     mZoomLabelWidget = new ZoomLabel;
     connect(this, &ZoomTextPluginEditorInterface::zoomFactorChanged, mZoomLabelWidget, &ZoomLabel::setZoomLabel);

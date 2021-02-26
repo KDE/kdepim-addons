@@ -41,7 +41,7 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
     action->setMenu(quickTextMenu->menu());
     ac->addAction(QStringLiteral("insert_variables"), action);
     connect(action, &QAction::triggered, this, &QuickTextPluginEditorInterface::slotActivated);
-    MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Edit);
+    MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);
     setActionType(type);
     QPushButton *button = new QPushButton(i18n("Variables"));
     button->setFocusPolicy(Qt::NoFocus);

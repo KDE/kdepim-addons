@@ -24,7 +24,7 @@ void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()
     interface.createAction(new KActionCollection(this));
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());
-    QCOMPARE(type.type(), MessageComposer::PluginActionType::Edit);
+    QCOMPARE(type.type(), MessageComposer::PluginActionType::Insert);
 }
 
 QTEST_MAIN(InsertSpecialCharacterPluginEditorInterfaceTest)
