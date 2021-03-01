@@ -34,6 +34,7 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     mPreview = new QPushButton(i18n("Preview"), this);
     buttonBox->addButton(mPreview, QDialogButtonBox::ActionRole);
     connect(mPreview, &QPushButton::clicked, this, &MailMergeDialog::slotPreview);
+    mainLayout->addStretch();
 }
 
 MailMergeDialog::~MailMergeDialog()
