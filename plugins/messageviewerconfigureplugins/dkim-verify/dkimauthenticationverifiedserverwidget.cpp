@@ -39,7 +39,10 @@ void DKIMAuthenticationVerifiedServerWidget::saveSettings()
 DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServerSelectorWidget(QWidget *parent)
     : PimCommon::SimpleStringListEditor(parent)
 {
-    setAddDialogLabel(i18n("New Server"));
+    setAddDialogLabel(i18n("New Server:"));
+    setAddDialogTitle(i18n("New Server"));
+    setModifyDialogTitle(i18n("Modify Server"));
+    setModifyDialogLabel(i18n("Server:"));
     setRemoveDialogLabel(i18n("Do you want to delete selected server name?"));
 }
 
