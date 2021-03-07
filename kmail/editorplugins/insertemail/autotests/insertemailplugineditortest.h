@@ -14,7 +14,7 @@ class InsertEmailPluginEditorTest : public QObject
     Q_OBJECT
 public:
     explicit InsertEmailPluginEditorTest(QObject *parent = nullptr);
-    ~InsertEmailPluginEditorTest();
+    ~InsertEmailPluginEditorTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

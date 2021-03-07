@@ -25,7 +25,7 @@ class SelectImapWidgetTest : public QWidget
     Q_OBJECT
 public:
     explicit SelectImapWidgetTest(QWidget *parent = nullptr);
-    ~SelectImapWidgetTest();
+    ~SelectImapWidgetTest() override;
 };
 
 #endif // SELECTIMAPWIDGETTEST_H

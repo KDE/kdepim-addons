@@ -14,7 +14,7 @@ class ViewerPluginCreateTodoTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginCreateTodoTest(QObject *parent = nullptr);
-    ~ViewerPluginCreateTodoTest();
+    ~ViewerPluginCreateTodoTest() override;
 
 private Q_SLOTS:
     void shouldCreateAction();

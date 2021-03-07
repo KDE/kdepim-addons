@@ -14,7 +14,7 @@ class AdblockPluginUrlInterceptorTest : public QObject
     Q_OBJECT
 public:
     explicit AdblockPluginUrlInterceptorTest(QObject *parent = nullptr);
-    ~AdblockPluginUrlInterceptorTest();
+    ~AdblockPluginUrlInterceptorTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

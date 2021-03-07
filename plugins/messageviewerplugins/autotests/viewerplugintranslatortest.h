@@ -14,7 +14,7 @@ class ViewerPluginTranslatorTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginTranslatorTest(QObject *parent = nullptr);
-    ~ViewerPluginTranslatorTest();
+    ~ViewerPluginTranslatorTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

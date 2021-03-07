@@ -21,7 +21,7 @@ class EventModel : public Akonadi::CalendarBase
     Q_OBJECT
 public:
     explicit EventModel(QObject *parent = nullptr);
-    ~EventModel();
+    ~EventModel() override;
 
     Q_REQUIRED_RESULT QVector<Akonadi::Collection> collections() const;
 

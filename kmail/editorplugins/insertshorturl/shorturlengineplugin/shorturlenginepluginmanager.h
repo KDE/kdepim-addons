@@ -16,7 +16,7 @@ class SHORTURL_EXPORT ShortUrlEnginePluginManager : public QObject
     Q_OBJECT
 public:
     explicit ShortUrlEnginePluginManager(QObject *parent = nullptr);
-    ~ShortUrlEnginePluginManager();
+    ~ShortUrlEnginePluginManager() override;
 
     QVector<ShortUrlEnginePlugin *> pluginsList() const;
 

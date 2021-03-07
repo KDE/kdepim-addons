@@ -14,7 +14,7 @@ class ConfirmAddressDialogTest : public QObject
     Q_OBJECT
 public:
     explicit ConfirmAddressDialogTest(QObject *parent = nullptr);
-    ~ConfirmAddressDialogTest();
+    ~ConfirmAddressDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

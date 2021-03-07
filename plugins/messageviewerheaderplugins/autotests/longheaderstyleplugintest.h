@@ -14,7 +14,7 @@ class LongHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit LongHeaderStylePluginTest(QObject *parent = nullptr);
-    ~LongHeaderStylePluginTest();
+    ~LongHeaderStylePluginTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

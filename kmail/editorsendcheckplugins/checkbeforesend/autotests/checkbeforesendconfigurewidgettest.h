@@ -14,7 +14,7 @@ class CheckBeforeSendConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CheckBeforeSendConfigureWidgetTest(QObject *parent = nullptr);
-    ~CheckBeforeSendConfigureWidgetTest();
+    ~CheckBeforeSendConfigureWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

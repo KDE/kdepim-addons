@@ -14,7 +14,7 @@ class ViewerPluginExternalEditDialogTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalEditDialogTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalEditDialogTest();
+    ~ViewerPluginExternalEditDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

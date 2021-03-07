@@ -14,7 +14,7 @@ class AdBlockBlockableItemsJobTest : public QObject
     Q_OBJECT
 public:
     explicit AdBlockBlockableItemsJobTest(QObject *parent = nullptr);
-    ~AdBlockBlockableItemsJobTest();
+    ~AdBlockBlockableItemsJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

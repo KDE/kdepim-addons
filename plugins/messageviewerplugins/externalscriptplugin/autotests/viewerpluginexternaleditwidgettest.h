@@ -14,7 +14,7 @@ class ViewerPluginExternalEditWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalEditWidgetTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalEditWidgetTest();
+    ~ViewerPluginExternalEditWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldGetSaveInfo();

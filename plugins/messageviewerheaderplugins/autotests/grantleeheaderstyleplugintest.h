@@ -14,7 +14,7 @@ class GrantleeHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit GrantleeHeaderStylePluginTest(QObject *parent = nullptr);
-    ~GrantleeHeaderStylePluginTest();
+    ~GrantleeHeaderStylePluginTest() override;
 
 public Q_SLOTS:
     void initTestCase();

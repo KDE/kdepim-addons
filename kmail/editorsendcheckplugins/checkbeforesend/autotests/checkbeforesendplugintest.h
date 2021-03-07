@@ -14,7 +14,7 @@ class CheckBeforeSendPluginTest : public QObject
     Q_OBJECT
 public:
     explicit CheckBeforeSendPluginTest(QObject *parent = nullptr);
-    ~CheckBeforeSendPluginTest();
+    ~CheckBeforeSendPluginTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

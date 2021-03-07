@@ -21,7 +21,7 @@ class AdBlockCreateFilterDialog : public QDialog
     Q_OBJECT
 public:
     explicit AdBlockCreateFilterDialog(QWidget *parent = nullptr);
-    ~AdBlockCreateFilterDialog();
+    ~AdBlockCreateFilterDialog() override;
 
     void setPattern(AdBlockBlockableItemsWidget::TypeElement type, const QString &pattern);
 

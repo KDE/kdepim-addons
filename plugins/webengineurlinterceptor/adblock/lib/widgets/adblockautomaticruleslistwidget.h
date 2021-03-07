@@ -16,7 +16,7 @@ class ADBLOCKLIB_EXPORT AdBlockAutomaticRulesListWidget : public QListWidget
     Q_OBJECT
 public:
     explicit AdBlockAutomaticRulesListWidget(QWidget *parent = nullptr);
-    ~AdBlockAutomaticRulesListWidget();
+    ~AdBlockAutomaticRulesListWidget() override;
     void setRules(const QString &rules);
 
     void setDisabledRules(const QStringList &disabledRules);

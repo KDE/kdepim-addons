@@ -14,7 +14,7 @@ class ViewerPluginExternalScriptParseArgumentTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalScriptParseArgumentTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalScriptParseArgumentTest();
+    ~ViewerPluginExternalScriptParseArgumentTest() override;
 
 private:
     void initializeMessage(const KMime::Message::Ptr &msg);

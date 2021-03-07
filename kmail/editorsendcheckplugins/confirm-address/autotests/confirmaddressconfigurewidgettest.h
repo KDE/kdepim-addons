@@ -14,7 +14,7 @@ class ConfirmAddressConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ConfirmAddressConfigureWidgetTest(QObject *parent = nullptr);
-    ~ConfirmAddressConfigureWidgetTest();
+    ~ConfirmAddressConfigureWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldLoadSaveResetValue();

@@ -14,7 +14,7 @@ class InsertShorturlPluginEditorInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit InsertShorturlPluginEditorInterfaceTest(QObject *parent = nullptr);
-    ~InsertShorturlPluginEditorInterfaceTest();
+    ~InsertShorturlPluginEditorInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

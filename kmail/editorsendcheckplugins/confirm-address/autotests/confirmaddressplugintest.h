@@ -14,7 +14,7 @@ class ConfirmAddressPluginTest : public QObject
     Q_OBJECT
 public:
     explicit ConfirmAddressPluginTest(QObject *parent = nullptr);
-    ~ConfirmAddressPluginTest();
+    ~ConfirmAddressPluginTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

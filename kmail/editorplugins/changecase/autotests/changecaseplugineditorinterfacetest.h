@@ -13,7 +13,7 @@ class ChangeCasePluginEditorInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit ChangeCasePluginEditorInterfaceTest(QObject *parent = nullptr);
-    ~ChangeCasePluginEditorInterfaceTest();
+    ~ChangeCasePluginEditorInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

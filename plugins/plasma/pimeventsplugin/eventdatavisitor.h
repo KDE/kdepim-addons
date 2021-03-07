@@ -16,7 +16,7 @@ class PimDataSource;
 class BaseEventDataVisitor : public KCalendarCore::Visitor
 {
 public:
-    ~BaseEventDataVisitor();
+    ~BaseEventDataVisitor() override;
 
     Q_REQUIRED_RESULT bool act(const KCalendarCore::Incidence::Ptr &incidence);
     Q_REQUIRED_RESULT bool act(const KCalendarCore::Event::List &events);

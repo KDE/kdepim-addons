@@ -16,7 +16,7 @@ class SendVcardsJobTest : public QObject
     Q_OBJECT
 public:
     explicit SendVcardsJobTest(QObject *parent = nullptr);
-    ~SendVcardsJobTest();
+    ~SendVcardsJobTest() override;
 private Q_SLOTS:
     void shouldNotStartWhenListAddressIsEmpty();
     void shouldHasDefaultValue();

@@ -14,7 +14,7 @@ class CsvWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit CsvWidgetTest(QObject *parent = nullptr);
-    ~CsvWidgetTest();
+    ~CsvWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

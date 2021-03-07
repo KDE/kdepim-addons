@@ -14,7 +14,7 @@ class ViewerPluginExternalScriptInfoTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalScriptInfoTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalScriptInfoTest();
+    ~ViewerPluginExternalScriptInfoTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

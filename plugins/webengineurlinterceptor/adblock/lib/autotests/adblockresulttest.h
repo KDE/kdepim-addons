@@ -13,7 +13,7 @@ class AdBlockResultTest : public QObject
     Q_OBJECT
 public:
     explicit AdBlockResultTest(QObject *parent = nullptr);
-    ~AdBlockResultTest();
+    ~AdBlockResultTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

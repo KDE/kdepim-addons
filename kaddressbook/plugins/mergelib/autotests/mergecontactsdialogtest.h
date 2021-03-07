@@ -14,7 +14,7 @@ class MergeContactsDialogTest : public QObject
     Q_OBJECT
 public:
     explicit MergeContactsDialogTest(QObject *parent = nullptr);
-    ~MergeContactsDialogTest();
+    ~MergeContactsDialogTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldSwithStackedWidget();

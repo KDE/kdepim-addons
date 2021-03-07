@@ -14,7 +14,7 @@ class AutoCorrectionPluginEditorInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit AutoCorrectionPluginEditorInterfaceTest(QObject *parent = nullptr);
-    ~AutoCorrectionPluginEditorInterfaceTest();
+    ~AutoCorrectionPluginEditorInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

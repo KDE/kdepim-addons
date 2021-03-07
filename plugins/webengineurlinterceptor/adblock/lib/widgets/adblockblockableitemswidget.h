@@ -36,7 +36,7 @@ public:
     };
 
     explicit AdBlockBlockableItemsWidget(QWidget *parent = nullptr);
-    ~AdBlockBlockableItemsWidget();
+    ~AdBlockBlockableItemsWidget() override;
 
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
     void saveFilters();

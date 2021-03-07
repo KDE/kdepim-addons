@@ -14,7 +14,7 @@ class SelectImapCreateJobTest : public QObject
     Q_OBJECT
 public:
     explicit SelectImapCreateJobTest(QObject *parent = nullptr);
-    ~SelectImapCreateJobTest();
+    ~SelectImapCreateJobTest() override;
 };
 
 #endif // SELECTIMAPCREATEJOBTEST_H

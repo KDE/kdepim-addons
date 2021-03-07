@@ -19,7 +19,7 @@ class AdblockBlockableElementGui : public QWidget
     Q_OBJECT
 public:
     explicit AdblockBlockableElementGui(QWidget *parent = nullptr);
-    ~AdblockBlockableElementGui();
+    ~AdblockBlockableElementGui() override;
 
 public Q_SLOTS:
     void slotSearchAdblock();

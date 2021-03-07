@@ -14,7 +14,7 @@ class ViewerPluginCreateeventTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginCreateeventTest(QObject *parent = nullptr);
-    ~ViewerPluginCreateeventTest();
+    ~ViewerPluginCreateeventTest() override;
 
 private Q_SLOTS:
     void shouldCreateAction();

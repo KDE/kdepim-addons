@@ -14,7 +14,7 @@ class AutomaticAddContactsPluginTest : public QObject
     Q_OBJECT
 public:
     explicit AutomaticAddContactsPluginTest(QObject *parent = nullptr);
-    ~AutomaticAddContactsPluginTest();
+    ~AutomaticAddContactsPluginTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

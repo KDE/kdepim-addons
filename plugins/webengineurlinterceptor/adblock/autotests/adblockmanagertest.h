@@ -14,7 +14,7 @@ class AdblockManagerTest : public QObject
     Q_OBJECT
 public:
     explicit AdblockManagerTest(QObject *parent = nullptr);
-    ~AdblockManagerTest();
+    ~AdblockManagerTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

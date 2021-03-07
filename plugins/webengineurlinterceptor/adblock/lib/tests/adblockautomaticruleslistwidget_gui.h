@@ -14,7 +14,7 @@ class AdBlockAutomaticRulesListWidgetTest : public QWidget
     Q_OBJECT
 public:
     explicit AdBlockAutomaticRulesListWidgetTest(const QString &fileName, QWidget *parent = nullptr);
-    ~AdBlockAutomaticRulesListWidgetTest();
+    ~AdBlockAutomaticRulesListWidgetTest() override;
 };
 
 #endif

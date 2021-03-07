@@ -19,7 +19,7 @@ class HeaderStyleMenuTest : public QWidget
     Q_OBJECT
 public:
     explicit HeaderStyleMenuTest(QWidget *parent = nullptr);
-    ~HeaderStyleMenuTest();
+    ~HeaderStyleMenuTest() override;
 private Q_SLOTS:
     void styleChanged(MessageViewer::HeaderStylePlugin *plugin);
 

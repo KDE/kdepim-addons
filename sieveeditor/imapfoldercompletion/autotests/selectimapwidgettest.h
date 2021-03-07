@@ -14,7 +14,7 @@ class SelectImapWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit SelectImapWidgetTest(QObject *parent = nullptr);
-    ~SelectImapWidgetTest();
+    ~SelectImapWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldAssignText();

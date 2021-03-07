@@ -14,7 +14,7 @@ class ViewerPluginManagerTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginManagerTest(QObject *parent = nullptr);
-    ~ViewerPluginManagerTest();
+    ~ViewerPluginManagerTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

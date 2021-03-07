@@ -18,7 +18,7 @@ class ViewerPluginExternalEditDialog : public QDialog
     Q_OBJECT
 public:
     explicit ViewerPluginExternalEditDialog(QWidget *parent = nullptr);
-    ~ViewerPluginExternalEditDialog();
+    ~ViewerPluginExternalEditDialog() override;
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
     ViewerPluginExternalScriptInfo scriptInfo() const;

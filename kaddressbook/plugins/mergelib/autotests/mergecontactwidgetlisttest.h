@@ -14,7 +14,7 @@ class MergeContactWidgetListTest : public QObject
     Q_OBJECT
 public:
     explicit MergeContactWidgetListTest(QObject *parent = nullptr);
-    ~MergeContactWidgetListTest();
+    ~MergeContactWidgetListTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCleanListWhenSetItems();

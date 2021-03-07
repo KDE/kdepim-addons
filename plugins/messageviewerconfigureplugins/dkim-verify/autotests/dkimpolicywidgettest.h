@@ -14,7 +14,7 @@ class DKIMPolicyWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit DKIMPolicyWidgetTest(QObject *parent = nullptr);
-    ~DKIMPolicyWidgetTest();
+    ~DKIMPolicyWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

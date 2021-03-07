@@ -18,7 +18,7 @@ class AdBlockAddSubscriptionDialog : public QDialog
     Q_OBJECT
 public:
     explicit AdBlockAddSubscriptionDialog(const QStringList &excludeList, QWidget *parent = nullptr);
-    ~AdBlockAddSubscriptionDialog();
+    ~AdBlockAddSubscriptionDialog() override;
 
     void selectedList(QString &name, QString &url);
 

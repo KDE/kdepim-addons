@@ -14,7 +14,7 @@ class EnterpriseHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit EnterpriseHeaderStylePluginTest(QObject *parent = nullptr);
-    ~EnterpriseHeaderStylePluginTest();
+    ~EnterpriseHeaderStylePluginTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

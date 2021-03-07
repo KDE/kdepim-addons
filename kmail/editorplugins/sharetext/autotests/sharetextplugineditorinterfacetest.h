@@ -13,7 +13,7 @@ class ShareTextPluginEditorInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit ShareTextPluginEditorInterfaceTest(QObject *parent = nullptr);
-    ~ShareTextPluginEditorInterfaceTest();
+    ~ShareTextPluginEditorInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };

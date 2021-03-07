@@ -14,7 +14,7 @@ class MailMergeDialogTest : public QObject
     Q_OBJECT
 public:
     explicit MailMergeDialogTest(QObject *parent = nullptr);
-    ~MailMergeDialogTest();
+    ~MailMergeDialogTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

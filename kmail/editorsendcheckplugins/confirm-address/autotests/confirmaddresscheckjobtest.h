@@ -14,7 +14,7 @@ class ConfirmAddressCheckJobTest : public QObject
     Q_OBJECT
 public:
     explicit ConfirmAddressCheckJobTest(QObject *parent = nullptr);
-    ~ConfirmAddressCheckJobTest();
+    ~ConfirmAddressCheckJobTest() override;
 private Q_SLOTS:
     void shouldHaveEmptyResultByDefault();
     void shouldReturnEmptyResultWhenNoAddress();

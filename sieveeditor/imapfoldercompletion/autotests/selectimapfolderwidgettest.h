@@ -14,7 +14,7 @@ class SelectImapFolderWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit SelectImapFolderWidgetTest(QObject *parent = nullptr);
-    ~SelectImapFolderWidgetTest();
+    ~SelectImapFolderWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

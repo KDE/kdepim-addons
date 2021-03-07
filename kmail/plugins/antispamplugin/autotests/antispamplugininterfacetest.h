@@ -14,7 +14,7 @@ class AntiSpamPluginInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit AntiSpamPluginInterfaceTest(QObject *parent = nullptr);
-    ~AntiSpamPluginInterfaceTest();
+    ~AntiSpamPluginInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCreateAction();

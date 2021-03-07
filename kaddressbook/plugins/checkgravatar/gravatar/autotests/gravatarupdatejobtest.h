@@ -14,7 +14,7 @@ class GravatarUpdateJobTest : public QObject
     Q_OBJECT
 public:
     explicit GravatarUpdateJobTest(QObject *parent = nullptr);
-    ~GravatarUpdateJobTest();
+    ~GravatarUpdateJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

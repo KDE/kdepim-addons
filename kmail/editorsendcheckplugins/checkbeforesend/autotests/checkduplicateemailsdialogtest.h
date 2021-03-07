@@ -14,7 +14,7 @@ class CheckDuplicateEmailsDialogTest : public QObject
     Q_OBJECT
 public:
     explicit CheckDuplicateEmailsDialogTest(QObject *parent = nullptr);
-    ~CheckDuplicateEmailsDialogTest();
+    ~CheckDuplicateEmailsDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

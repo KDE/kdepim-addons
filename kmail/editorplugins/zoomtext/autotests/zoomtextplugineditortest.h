@@ -14,7 +14,7 @@ class ZoomTextPluginEditorTest : public QObject
     Q_OBJECT
 public:
     explicit ZoomTextPluginEditorTest(QObject *parent = nullptr);
-    ~ZoomTextPluginEditorTest();
+    ~ZoomTextPluginEditorTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

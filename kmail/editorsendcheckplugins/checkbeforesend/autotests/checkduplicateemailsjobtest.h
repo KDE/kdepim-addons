@@ -14,7 +14,7 @@ class CheckDuplicateEmailsJobTest : public QObject
     Q_OBJECT
 public:
     explicit CheckDuplicateEmailsJobTest(QObject *parent = nullptr);
-    ~CheckDuplicateEmailsJobTest();
+    ~CheckDuplicateEmailsJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

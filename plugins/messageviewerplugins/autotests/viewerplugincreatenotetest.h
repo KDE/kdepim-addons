@@ -14,7 +14,7 @@ class ViewerPluginCreateNoteTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginCreateNoteTest(QObject *parent = nullptr);
-    ~ViewerPluginCreateNoteTest();
+    ~ViewerPluginCreateNoteTest() override;
 
 private Q_SLOTS:
     void shouldCreateAction();

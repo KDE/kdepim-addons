@@ -14,7 +14,7 @@ class SearchDuplicateResultWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit SearchDuplicateResultWidgetTest(QObject *parent = nullptr);
-    ~SearchDuplicateResultWidgetTest();
+    ~SearchDuplicateResultWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldHaveMergeButtonEnabled();

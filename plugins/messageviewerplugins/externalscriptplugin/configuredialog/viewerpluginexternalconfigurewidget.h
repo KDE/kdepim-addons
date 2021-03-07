@@ -17,7 +17,7 @@ class ViewerPluginExternalConfigureWidget : public QWidget
     Q_OBJECT
 public:
     explicit ViewerPluginExternalConfigureWidget(QWidget *parent = nullptr);
-    ~ViewerPluginExternalConfigureWidget();
+    ~ViewerPluginExternalConfigureWidget() override;
     void load();
     void save();
 

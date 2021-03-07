@@ -14,7 +14,7 @@ class ResultDuplicateTreeWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit ResultDuplicateTreeWidgetTest(QObject *parent = nullptr);
-    ~ResultDuplicateTreeWidgetTest();
+    ~ResultDuplicateTreeWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldFillList();

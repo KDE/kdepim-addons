@@ -14,7 +14,7 @@ class BriefHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit BriefHeaderStylePluginTest(QObject *parent = nullptr);
-    ~BriefHeaderStylePluginTest();
+    ~BriefHeaderStylePluginTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -17,7 +17,7 @@ class LanguageToolWidget : public QWidget
     Q_OBJECT
 public:
     explicit LanguageToolWidget(QWidget *parent = nullptr);
-    ~LanguageToolWidget();
+    ~LanguageToolWidget() override;
 
 private:
     void slotReplaceText(const MessageComposer::PluginGrammarAction &act);

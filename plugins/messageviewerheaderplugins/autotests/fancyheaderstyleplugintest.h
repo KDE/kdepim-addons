@@ -14,7 +14,7 @@ class FancyHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit FancyHeaderStylePluginTest(QObject *parent = nullptr);
-    ~FancyHeaderStylePluginTest();
+    ~FancyHeaderStylePluginTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

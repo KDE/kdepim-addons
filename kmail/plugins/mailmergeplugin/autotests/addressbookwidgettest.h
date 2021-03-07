@@ -14,7 +14,7 @@ class AddressBookWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit AddressBookWidgetTest(QObject *parent = nullptr);
-    ~AddressBookWidgetTest();
+    ~AddressBookWidgetTest() override;
 };
 
 #endif // ADDRESSBOOKWIDGETTEST_H

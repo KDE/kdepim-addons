@@ -14,7 +14,7 @@ class CheckAttachmentDialogTest : public QObject
     Q_OBJECT
 public:
     explicit CheckAttachmentDialogTest(QObject *parent = nullptr);
-    ~CheckAttachmentDialogTest();
+    ~CheckAttachmentDialogTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

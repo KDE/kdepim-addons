@@ -14,7 +14,7 @@ class StandardsHeaderStylePluginTest : public QObject
     Q_OBJECT
 public:
     explicit StandardsHeaderStylePluginTest(QObject *parent = nullptr);
-    ~StandardsHeaderStylePluginTest();
+    ~StandardsHeaderStylePluginTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

@@ -14,7 +14,7 @@ class MailMergeJobTest : public QObject
     Q_OBJECT
 public:
     explicit MailMergeJobTest(QObject *parent = nullptr);
-    ~MailMergeJobTest();
+    ~MailMergeJobTest() override;
 };
 
 #endif // MAILMERGEJOBTEST_H

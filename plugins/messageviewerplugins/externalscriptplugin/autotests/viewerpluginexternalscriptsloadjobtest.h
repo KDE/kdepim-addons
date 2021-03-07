@@ -14,7 +14,7 @@ class ViewerPluginExternalScriptsLoadJobTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalScriptsLoadJobTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalScriptsLoadJobTest();
+    ~ViewerPluginExternalScriptsLoadJobTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValues();

@@ -94,7 +94,7 @@ public:
     /**
      * Destroys the csv reader.
      */
-    ~QCsvReader();
+    ~QCsvReader() override;
 
     /**
      * Parses the csv data from @p device.

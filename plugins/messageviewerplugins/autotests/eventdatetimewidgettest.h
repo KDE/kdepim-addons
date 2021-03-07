@@ -13,7 +13,7 @@ class EventDateTimeWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit EventDateTimeWidgetTest(QObject *parent = nullptr);
-    ~EventDateTimeWidgetTest();
+    ~EventDateTimeWidgetTest() override;
 
 private Q_SLOTS:
     void shouldHaveDefaultValue();

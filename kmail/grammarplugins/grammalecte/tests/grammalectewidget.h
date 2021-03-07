@@ -17,7 +17,7 @@ class GrammalecteWidget : public QWidget
     Q_OBJECT
 public:
     explicit GrammalecteWidget(QWidget *parent = nullptr);
-    ~GrammalecteWidget();
+    ~GrammalecteWidget() override;
 
 private:
     void slotReplaceText(const MessageComposer::PluginGrammarAction &act);

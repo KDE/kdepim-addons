@@ -36,7 +36,7 @@ class KADDRESSBOOKMERGELIB_EXPORT ResultDuplicateTreeWidget : public QTreeWidget
     Q_OBJECT
 public:
     explicit ResultDuplicateTreeWidget(QWidget *parent = nullptr);
-    ~ResultDuplicateTreeWidget();
+    ~ResultDuplicateTreeWidget() override;
     void setContacts(const QVector<Akonadi::Item::List> &lstItem);
 
     Q_REQUIRED_RESULT QVector<Akonadi::Item::List> selectedContactsToMerge() const;

@@ -14,7 +14,7 @@ class SelectImapFolderModelTest : public QObject
     Q_OBJECT
 public:
     explicit SelectImapFolderModelTest(QObject *parent = nullptr);
-    ~SelectImapFolderModelTest();
+    ~SelectImapFolderModelTest() override;
 
 private Q_SLOTS:
     void shouldNotCreateModelIfAccountIsNotValid();

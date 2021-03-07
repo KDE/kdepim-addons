@@ -14,7 +14,7 @@ class ViewerPluginExternalscriptTest : public QObject
     Q_OBJECT
 public:
     explicit ViewerPluginExternalscriptTest(QObject *parent = nullptr);
-    ~ViewerPluginExternalscriptTest();
+    ~ViewerPluginExternalscriptTest() override;
 };
 
 #endif // VIEWERPLUGINEXTERNALSCRIPTTEST_H
