@@ -14,13 +14,13 @@
 FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent)
     : QWidget(parent)
     , mMainLayout(new QVBoxLayout)
+    , mGroupBox(new QGroupBox(i18n("Modify"), this))
 {
     auto topLayout = new QVBoxLayout(this);
     topLayout->setObjectName(QStringLiteral("topLayout"));
 
     mMainLayout->setObjectName(QStringLiteral("mMainLayout"));
 
-    mGroupBox = new QGroupBox(i18n("Modify"), this);
     mGroupBox->setObjectName(QStringLiteral("mGroupBox"));
     mGroupBox->setCheckable(true);
     mGroupBox->setChecked(false);

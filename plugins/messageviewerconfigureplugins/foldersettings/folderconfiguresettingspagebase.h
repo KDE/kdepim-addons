@@ -26,7 +26,7 @@ protected:
 private:
     void slotModifyClicked(bool clicked);
     QWidget *mMainWidget = nullptr;
-    QGroupBox *mGroupBox = nullptr;
+    QGroupBox *const mGroupBox;
 };
 
 #endif // FOLDERCONFIGURESETTINGSPAGEBASE_H

@@ -20,7 +20,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Collection::List listCollections() const;
 
 private:
-    FolderSettingFilterProxyModel *mFolderSettingFilterProxyModel = nullptr;
+    FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
 };
 
 #endif // FOLDERCONFIGURETREEWIDGET_H

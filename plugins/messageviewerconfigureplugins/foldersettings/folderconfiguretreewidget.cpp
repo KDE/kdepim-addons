@@ -13,6 +13,7 @@
 
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     : QWidget(parent)
+    , mFolderSettingFilterProxyModel(new FolderSettingFilterProxyModel(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -33,7 +34,6 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     checkable->setSourceModel(sourceModel);
     checkable->setSelectionModel(selectionModel);
 
-    mFolderSettingFilterProxyModel = new FolderSettingFilterProxyModel(this);
     mFolderSettingFilterProxyModel->setObjectName(QStringLiteral("folderSettingFilterProxyModel"));
     mFolderSettingFilterProxyModel->setSourceModel(checkable);
 
