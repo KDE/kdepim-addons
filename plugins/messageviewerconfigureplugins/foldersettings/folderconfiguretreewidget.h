@@ -11,6 +11,10 @@
 #include <AkonadiCore/Collection>
 #include <QWidget>
 class FolderSettingFilterProxyModel;
+namespace MailCommon
+{
+class FolderTreeWidget;
+}
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureTreeWidget : public QWidget
 {
     Q_OBJECT
@@ -21,7 +25,9 @@ public:
 
 private:
     void slotCustomContextMenuRequested(const QPoint &);
+    void changeFolderSelection(bool select);
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
+    MailCommon::FolderTreeWidget *mFolderTreeWidget = nullptr;
 };
 
 #endif // FOLDERCONFIGURETREEWIDGET_H

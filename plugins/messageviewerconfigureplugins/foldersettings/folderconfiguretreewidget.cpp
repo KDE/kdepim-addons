@@ -7,9 +7,11 @@
 #include "folderconfiguretreewidget.h"
 #include "foldersettingfilterproxymodel.h"
 #include <KCheckableProxyModel>
+#include <KLocalizedString>
 #include <MailCommon/FolderTreeView>
 #include <MailCommon/FolderTreeWidget>
 #include <QMenu>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
@@ -19,20 +21,23 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
-    auto ftw = new MailCommon::FolderTreeWidget(this,
-                                                nullptr,
-                                                MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
-                                                                                              | MailCommon::FolderTreeWidget::HideStatistics
-                                                                                              | MailCommon::FolderTreeWidget::HideHeaderViewMenu));
-    ftw->setObjectName(QStringLiteral("foldertreewidget"));
-    ftw->folderTreeView()->setDragEnabled(false);
-    ftw->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    ftw->folderTreeView()->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(ftw->folderTreeView(), &MailCommon::FolderTreeView::customContextMenuRequested, this, &FolderConfigureTreeWidget::slotCustomContextMenuRequested);
+    mFolderTreeWidget = new MailCommon::FolderTreeWidget(this,
+                                                         nullptr,
+                                                         MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
+                                                                                                       | MailCommon::FolderTreeWidget::HideStatistics
+                                                                                                       | MailCommon::FolderTreeWidget::HideHeaderViewMenu));
+    mFolderTreeWidget->setObjectName(QStringLiteral("foldertreewidget"));
+    mFolderTreeWidget->folderTreeView()->setDragEnabled(false);
+    mFolderTreeWidget->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    mFolderTreeWidget->folderTreeView()->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(mFolderTreeWidget->folderTreeView(),
+            &MailCommon::FolderTreeView::customContextMenuRequested,
+            this,
+            &FolderConfigureTreeWidget::slotCustomContextMenuRequested);
 
-    auto ftv = ftw->folderTreeView();
+    auto ftv = mFolderTreeWidget->folderTreeView();
     auto sourceModel = ftv->model();
-    auto selectionModel = ftw->selectionModel();
+    auto selectionModel = mFolderTreeWidget->selectionModel();
 
     auto checkable = new KCheckableProxyModel(this);
     checkable->setObjectName(QStringLiteral("checkable"));
@@ -44,12 +49,37 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
 
     ftv->setModel(mFolderSettingFilterProxyModel);
     ftv->expandAll();
+    mainLayout->addWidget(mFolderTreeWidget);
 
-    mainLayout->addWidget(ftw);
+    auto buttonLayout = new QHBoxLayout;
+    buttonLayout->setObjectName(QStringLiteral("buttonLayout"));
+    mainLayout->addLayout(buttonLayout);
+
+    auto selectFolder = new QPushButton(i18n("Select"), this);
+    selectFolder->setObjectName(QStringLiteral("selectFolder"));
+    buttonLayout->addWidget(selectFolder);
+    connect(selectFolder, &QPushButton::clicked, this, [this]() {
+        changeFolderSelection(true);
+    });
+
+    auto unSelectFolder = new QPushButton(i18n("Unselect"), this);
+    unSelectFolder->setObjectName(QStringLiteral("unSelectFolder"));
+    buttonLayout->addWidget(unSelectFolder);
+    connect(unSelectFolder, &QPushButton::clicked, this, [this]() {
+        changeFolderSelection(false);
+    });
 }
 
 FolderConfigureTreeWidget::~FolderConfigureTreeWidget()
 {
+}
+
+void FolderConfigureTreeWidget::changeFolderSelection(bool select)
+{
+    const QModelIndexList indexes = mFolderTreeWidget->folderTreeView()->selectionModel()->selectedIndexes();
+    for (const QModelIndex &selectedIndex : indexes) {
+        mFolderSettingFilterProxyModel->setData(selectedIndex, select ? Qt::Checked : Qt::Unchecked, Qt::CheckStateRole);
+    }
 }
 
 void FolderConfigureTreeWidget::slotCustomContextMenuRequested(const QPoint &)
