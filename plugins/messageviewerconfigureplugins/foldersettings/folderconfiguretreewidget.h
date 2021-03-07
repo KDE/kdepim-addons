@@ -20,6 +20,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Collection::List listCollections() const;
 
 private:
+    void slotCustomContextMenuRequested(const QPoint &);
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
 };
 

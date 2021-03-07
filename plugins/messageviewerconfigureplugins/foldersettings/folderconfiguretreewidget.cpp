@@ -9,6 +9,7 @@
 #include <KCheckableProxyModel>
 #include <MailCommon/FolderTreeView>
 #include <MailCommon/FolderTreeWidget>
+#include <QMenu>
 #include <QVBoxLayout>
 
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
@@ -25,6 +26,10 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
                                                                                               | MailCommon::FolderTreeWidget::HideHeaderViewMenu));
     ftw->setObjectName(QStringLiteral("foldertreewidget"));
     ftw->folderTreeView()->setDragEnabled(false);
+    ftw->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    ftw->folderTreeView()->setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(ftw->folderTreeView(), &MailCommon::FolderTreeView::customContextMenuRequested, this, &FolderConfigureTreeWidget::slotCustomContextMenuRequested);
+
     auto ftv = ftw->folderTreeView();
     auto sourceModel = ftv->model();
     auto selectionModel = ftw->selectionModel();
@@ -45,6 +50,14 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
 
 FolderConfigureTreeWidget::~FolderConfigureTreeWidget()
 {
+}
+
+void FolderConfigureTreeWidget::slotCustomContextMenuRequested(const QPoint &)
+{
+    QMenu menu(this);
+    // if (!menu.isEmpty()) {
+    menu.exec(QCursor::pos());
+    //}
 }
 
 Akonadi::Collection::List FolderConfigureTreeWidget::listCollections() const
