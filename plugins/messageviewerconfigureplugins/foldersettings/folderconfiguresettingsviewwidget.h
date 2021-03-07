@@ -24,7 +24,7 @@ public:
     void save(Akonadi::Collection &col);
 
 private:
-    MailCommon::CollectionViewWidget *mCollectionViewWidget = nullptr;
+    MailCommon::CollectionViewWidget *const mCollectionViewWidget;
 };
 
 #endif // FOLDERCONFIGURESETTINGSVIEWWIDGET_H

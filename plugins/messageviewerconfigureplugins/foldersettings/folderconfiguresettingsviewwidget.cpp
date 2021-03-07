@@ -9,10 +9,10 @@
 #include <QHBoxLayout>
 FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *parent)
     : FolderConfigureSettingsPageBase(parent)
+    , mCollectionViewWidget(new MailCommon::CollectionViewWidget(this))
 {
     QWidget *mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
-    mCollectionViewWidget = new MailCommon::CollectionViewWidget(this);
     mCollectionViewWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
     mainLayout->addWidget(mCollectionViewWidget);
     addMainWidget(mainWidget);
