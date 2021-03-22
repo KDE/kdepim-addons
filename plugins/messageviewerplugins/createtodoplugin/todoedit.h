@@ -64,9 +64,9 @@ private:
     KMime::Message::Ptr mMessage;
     QLineEdit *mNoteEdit = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
-    KMessageWidget *mMsgWidget = nullptr;
-    QPushButton *mSaveButton = nullptr;
-    QPushButton *mOpenEditorButton = nullptr;
+    KMessageWidget *const mMsgWidget;
+    QPushButton *const mSaveButton;
+    QPushButton *const mOpenEditorButton;
 };
 }
 #endif // TODOEDIT_H

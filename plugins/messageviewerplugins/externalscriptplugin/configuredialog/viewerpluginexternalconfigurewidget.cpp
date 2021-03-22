@@ -51,6 +51,10 @@ ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() cons
 
 ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget *parent)
     : QWidget(parent)
+    , mListExternal(new QListWidget(this))
+    , mAddScript(new QPushButton(i18n("Add Script..."), this))
+    , mRemoveScript(new QPushButton(i18n("Remove Script"), this))
+    , mModifyScript(new QPushButton(i18n("Modify Script..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("layout"));
@@ -63,7 +67,6 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     auto listLayout = new QHBoxLayout;
     mainLayout->addLayout(listLayout);
 
-    mListExternal = new QListWidget(this);
     mListExternal->setObjectName(QStringLiteral("listexternal"));
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
     listLayout->addWidget(mListExternal);
@@ -73,17 +76,14 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     auto buttonLayout = new QVBoxLayout;
     listLayout->addLayout(buttonLayout);
 
-    mAddScript = new QPushButton(i18n("Add Script..."), this);
     connect(mAddScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotAddScript);
     mAddScript->setObjectName(QStringLiteral("addscript"));
     buttonLayout->addWidget(mAddScript);
 
-    mModifyScript = new QPushButton(i18n("Modify Script..."), this);
     connect(mModifyScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotModifyScript);
     mModifyScript->setObjectName(QStringLiteral("modifyscript"));
     buttonLayout->addWidget(mModifyScript);
 
-    mRemoveScript = new QPushButton(i18n("Remove Script"), this);
     connect(mRemoveScript, &QPushButton::clicked, this, &ViewerPluginExternalConfigureWidget::slotRemoveScript);
     mRemoveScript->setObjectName(QStringLiteral("removescript"));
     buttonLayout->addWidget(mRemoveScript);

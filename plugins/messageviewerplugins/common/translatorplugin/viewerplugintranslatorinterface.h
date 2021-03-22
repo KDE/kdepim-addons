@@ -23,12 +23,12 @@ public:
     ~ViewerPluginTranslatorInterface() override;
 
     void setText(const QString &text) override;
-    QList<QAction *> actions() const override;
+    Q_REQUIRED_RESULT QList<QAction *> actions() const override;
     void showWidget() override;
-    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
 
 private:
-    PimCommon::TranslatorWidget *widget();
+    Q_REQUIRED_RESULT PimCommon::TranslatorWidget *widget();
     void createAction(KActionCollection *ac);
     QList<QAction *> mAction;
     PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;

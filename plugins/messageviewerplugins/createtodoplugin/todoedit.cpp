@@ -38,12 +38,15 @@ using namespace MessageViewer;
 
 TodoEdit::TodoEdit(QWidget *parent)
     : QWidget(parent)
+    , mNoteEdit(new QLineEdit(this))
+    , mMsgWidget(new KMessageWidget(this))
+    , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"), this))
+    , mOpenEditorButton(new QPushButton(i18n("Open &Editor..."), this))
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);
     vbox->setSpacing(2);
 
-    mMsgWidget = new KMessageWidget(this);
     mMsgWidget->setCloseButtonVisible(true);
     mMsgWidget->setMessageType(KMessageWidget::Positive);
     mMsgWidget->setObjectName(QStringLiteral("msgwidget"));
@@ -59,7 +62,6 @@ TodoEdit::TodoEdit(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Todo:"), this);
     hbox->addWidget(lab);
 
-    mNoteEdit = new QLineEdit(this);
     mNoteEdit->setClearButtonEnabled(true);
     mNoteEdit->setObjectName(QStringLiteral("noteedit"));
     mNoteEdit->setFocus();
@@ -89,7 +91,6 @@ TodoEdit::TodoEdit(QWidget *parent)
     vbox->addLayout(hbox);
 
     hbox->addStretch(1);
-    mSaveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("task-new")), i18n("&Save"), this);
     mSaveButton->setObjectName(QStringLiteral("save-button"));
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
@@ -98,7 +99,6 @@ TodoEdit::TodoEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &TodoEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton = new QPushButton(i18n("Open &Editor..."), this);
     mOpenEditorButton->setObjectName(QStringLiteral("open-editor-button"));
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open todo editor, where more details can be changed."));

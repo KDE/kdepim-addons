@@ -33,6 +33,9 @@ using namespace MessageViewer;
 
 NoteEdit::NoteEdit(QWidget *parent)
     : QWidget(parent)
+    , mNoteEdit(new QLineEdit(this))
+    , mCollectionCombobox(new Akonadi::CollectionComboBox(_k_noteEditStubModel, this))
+    , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18n("&Save"), this))
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);
@@ -46,7 +49,6 @@ NoteEdit::NoteEdit(QWidget *parent)
     QLabel *lab = new QLabel(i18n("Note:"), this);
     hbox->addWidget(lab);
 
-    mNoteEdit = new QLineEdit(this);
     mNoteEdit->setClearButtonEnabled(true);
     mNoteEdit->setObjectName(QStringLiteral("noteedit"));
     mNoteEdit->setFocus();
@@ -56,7 +58,6 @@ NoteEdit::NoteEdit(QWidget *parent)
 
     hbox->addSpacing(5);
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox(_k_noteEditStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << Akonadi::NoteUtils::noteMimeType());
@@ -83,7 +84,6 @@ NoteEdit::NoteEdit(QWidget *parent)
 
     hbox->addStretch(1);
 
-    mSaveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18n("&Save"), this);
     mSaveButton->setObjectName(QStringLiteral("save-button"));
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY

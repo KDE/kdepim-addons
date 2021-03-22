@@ -23,10 +23,10 @@ public:
 
     void setMinimumDateTime(const QDateTime &dateTime);
     void setDateTime(const QDateTime &dateTime);
-    QDateTime dateTime() const;
+    Q_REQUIRED_RESULT QDateTime dateTime() const;
 
-    QDate date() const;
-    QTime time() const;
+    Q_REQUIRED_RESULT QDate date() const;
+    Q_REQUIRED_RESULT QTime time() const;
     void setTime(QTime time);
     void setDate(QDate date);
 
@@ -35,8 +35,8 @@ Q_SIGNALS:
 
 private:
     void slotDateTimeChanged();
-    KDateComboBox *mDateEdit = nullptr;
-    KTimeComboBox *mTimeEdit = nullptr;
+    KDateComboBox *const mDateEdit;
+    KTimeComboBox *const mTimeEdit;
 };
 }
 

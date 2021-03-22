@@ -56,9 +56,9 @@ private:
     void readConfig();
     Akonadi::Collection mCollection;
     KMime::Message::Ptr mMessage;
-    QLineEdit *mNoteEdit = nullptr;
-    Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
-    QPushButton *mSaveButton = nullptr;
+    QLineEdit *const mNoteEdit;
+    Akonadi::CollectionComboBox *const mCollectionCombobox;
+    QPushButton *const mSaveButton;
 };
 }
 

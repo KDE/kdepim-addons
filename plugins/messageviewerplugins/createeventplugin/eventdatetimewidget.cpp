@@ -13,14 +13,14 @@ using namespace MessageViewer;
 
 EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     : QWidget(parent)
+    , mDateEdit(new KDateComboBox(this))
+    , mTimeEdit(new KTimeComboBox(this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setSpacing(0);
     mainLayout->setContentsMargins({});
-    mDateEdit = new KDateComboBox;
     mDateEdit->setObjectName(QStringLiteral("eventdatecombobox"));
     mainLayout->addWidget(mDateEdit);
-    mTimeEdit = new KTimeComboBox;
     mTimeEdit->setObjectName(QStringLiteral("eventtimecombobox"));
     mainLayout->addWidget(mTimeEdit);
     const QDateTime currentDateTime = QDateTime::currentDateTime();
