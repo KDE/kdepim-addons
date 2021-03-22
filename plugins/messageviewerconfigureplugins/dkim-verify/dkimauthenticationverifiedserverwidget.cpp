@@ -43,7 +43,7 @@ DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServer
     setAddDialogTitle(i18n("New Server"));
     setModifyDialogTitle(i18n("Modify Server"));
     setModifyDialogLabel(i18n("Server:"));
-    setRemoveDialogLabel(i18n("Do you want to delete selected server name?"));
+    setRemoveDialogLabel(i18n("Do you want to delete selected server(s) name?"));
 }
 
 DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
