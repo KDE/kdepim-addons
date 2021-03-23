@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNPLUGIN_H
-#define MARKDOWNPLUGIN_H
+#pragma once
 
 #include <MessageComposer/PluginEditorConvertText>
 
@@ -28,4 +27,3 @@ public:
     Q_REQUIRED_RESULT bool hasToolBarSupport() const override;
 };
 
-#endif // MARKDOWNPLUGIN_H

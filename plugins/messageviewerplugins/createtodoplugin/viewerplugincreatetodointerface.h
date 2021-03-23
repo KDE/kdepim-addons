@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINCREATETODOINTERFACE_H
-#define VIEWERPLUGINCREATETODOINTERFACE_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <KCalendarCore/Todo>
@@ -40,4 +39,3 @@ private:
     Akonadi::Item mMessageItem;
 };
 }
-#endif // VIEWERPLUGINCREATETODOINTERFACE_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXTERNALCOMPOSERPLUGINEDITOR_H
-#define EXTERNALCOMPOSERPLUGINEDITOR_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInit>
 
@@ -25,4 +24,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 };
 
-#endif

@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef Evolutionv2ImportData_H
-#define Evolutionv2ImportData_H
+#pragma once
 
 #include <ImportWizard/AbstractImporter>
 class Evolutionv2ImportData : public LibImportWizard::AbstractImporter
@@ -20,4 +19,3 @@ public:
     QString name() const override;
 };
 
-#endif /* Evolutionv2ImportData_H */

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FANCYHEADERSTYLE_H
-#define FANCYHEADERSTYLE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyle>
 
@@ -28,4 +27,3 @@ private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 }
-#endif // FANCYHEADERSTYLE_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMARRESULTWIDGET_H
-#define GRAMMARRESULTWIDGET_H
+#pragma once
 
 #include "grammarcommon_export.h"
 #include "grammarerror.h"
@@ -39,4 +38,3 @@ private:
     Q_DISABLE_COPY(GrammarResultWidget)
 };
 
-#endif // GRAMMARRESULTWIDGET_H

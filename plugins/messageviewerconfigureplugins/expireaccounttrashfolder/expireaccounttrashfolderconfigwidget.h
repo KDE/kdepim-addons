@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
-#define EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H
+#pragma once
 
 #include "expireaccounttrashfolderconfig_private_export.h"
 #include <QWidget>
@@ -27,4 +26,3 @@ private:
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
 
-#endif // EXPIREACCOUNTTRASHFOLDERCONFIGWIDGET_H

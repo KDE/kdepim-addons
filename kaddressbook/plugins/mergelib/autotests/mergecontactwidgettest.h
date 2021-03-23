@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTWIDGETTEST_H
-#define MERGECONTACTWIDGETTEST_H
+#pragma once
 
 #include <AkonadiCore/Item>
 #include <QObject>
@@ -28,4 +27,3 @@ private:
     Akonadi::Item::List createItems();
 };
 
-#endif // MERGECONTACTWIDGETTEST_H

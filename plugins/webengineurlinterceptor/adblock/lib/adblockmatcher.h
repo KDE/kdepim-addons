@@ -7,8 +7,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKMATCHER_H
-#define ADBLOCKMATCHER_H
+#pragma once
 
 #include "adblockrule.h"
 #include "adblocksearchtree.h"
@@ -60,4 +59,3 @@ private:
 };
 }
 
-#endif // ADBLOCKMATCHER_H

@@ -7,8 +7,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKSEARCHTREE_H
-#define ADBLOCKSEARCHTREE_H
+#pragma once
 
 #include <QChar>
 #include <QHash>
@@ -48,4 +47,3 @@ private:
     Node *m_root = nullptr;
 };
 }
-#endif // ADBLOCKSEARCHTREE_H

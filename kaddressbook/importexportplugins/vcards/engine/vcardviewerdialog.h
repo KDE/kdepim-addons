@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef VCARDVIEWERDIALOG_H
-#define VCARDVIEWERDIALOG_H
+#pragma once
 
 #include <KContacts/Addressee>
 #include <QDialog>
@@ -40,4 +39,3 @@ private:
     KAddressBookGrantlee::GrantleeContactViewer *mView = nullptr;
 };
 
-#endif // VCARDVIEWERDIALOG_H

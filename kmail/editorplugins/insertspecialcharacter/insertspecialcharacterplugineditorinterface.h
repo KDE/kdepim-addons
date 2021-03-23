@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
-#define INSERTSPECIALCHARACTERPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MessageComposer/PluginEditorInterface>
@@ -27,4 +26,3 @@ private:
     QPointer<KPIMTextEdit::SelectSpecialCharDialog> mSelectSpecialChar;
 };
 
-#endif

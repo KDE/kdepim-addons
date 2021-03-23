@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSELECTINFORMATIONTABWIDGET_H
-#define MERGECONTACTSELECTINFORMATIONTABWIDGET_H
+#pragma once
 
 #include "kaddressbookmergelib_export.h"
 #include "searchduplicateresultwidget.h"
@@ -31,4 +30,3 @@ private:
     void addNewWidget(const MergeConflictResult &list, const Akonadi::Collection &col);
 };
 }
-#endif // MERGECONTACTSELECTINFORMATIONTABWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMARERROR_H
-#define GRAMMARERROR_H
+#pragma once
 
 #include "grammarcommon_export.h"
 #include <QColor>
@@ -64,4 +63,3 @@ protected:
 Q_DECLARE_METATYPE(GrammarError)
 Q_DECLARE_TYPEINFO(GrammarError, Q_MOVABLE_TYPE);
 GRAMMARCOMMON_EXPORT QDebug operator<<(QDebug d, const GrammarError &t);
-#endif // GRAMMARERROR_H

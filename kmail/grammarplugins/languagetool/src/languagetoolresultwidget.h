@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLRESULTWIDGET_H
-#define LANGUAGETOOLRESULTWIDGET_H
+#pragma once
 
 #include "grammarresultwidget.h"
 #include "languagetoolgrammarerror.h"
@@ -34,4 +33,3 @@ private:
     LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
 };
 
-#endif // LANGUAGETOOLRESULTWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADITEST_H
-#define TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADITEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldAssignValue();
 };
 
-#endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADITEST_H

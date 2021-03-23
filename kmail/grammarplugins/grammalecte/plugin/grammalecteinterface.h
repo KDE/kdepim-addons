@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef GRAMMALECTEINTERFACE_H
-#define GRAMMALECTEINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 class KActionCollection;
@@ -29,4 +28,3 @@ private:
     KToggleAction *mAction = nullptr;
 };
 
-#endif // GRAMMALECTEINTERFACE_H

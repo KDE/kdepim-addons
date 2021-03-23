@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GearySettings_H
-#define GearySettings_H
+#pragma once
 
 #include <ImportWizard/AbstractSettings>
 
@@ -26,4 +25,3 @@ private:
     QSettings *settings = nullptr;
 };
 
-#endif // ClawsMailSettings_H

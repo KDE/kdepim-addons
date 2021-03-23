@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSCONFIGUREDIALOG_H
-#define CONFIRMADDRESSCONFIGUREDIALOG_H
+#pragma once
 
 #include <PimCommon/ConfigurePluginDialog>
 class ConfirmAddressConfigureWidget;
@@ -27,4 +26,3 @@ private:
     ConfirmAddressConfigureWidget *mConfigureWidget = nullptr;
 };
 
-#endif // CONFIRMADDRESSCONFIGUREDIALOG_H

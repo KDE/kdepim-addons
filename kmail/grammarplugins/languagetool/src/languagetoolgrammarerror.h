@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLGRAMMARERROR_H
-#define LANGUAGETOOLGRAMMARERROR_H
+#pragma once
 
 #include "grammarerror.h"
 #include "liblanguagetool_private_export.h"
@@ -24,4 +23,3 @@ private:
 Q_DECLARE_METATYPE(LanguageToolGrammarError)
 Q_DECLARE_TYPEINFO(LanguageToolGrammarError, Q_MOVABLE_TYPE);
 
-#endif // LANGUAGETOOLGRAMMARERROR_H

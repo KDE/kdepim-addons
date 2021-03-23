@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EMAILLINEEDITWIDGET_H
-#define EMAILLINEEDITWIDGET_H
+#pragma once
 
 #include <QWidget>
 class EmailLineEditWidget : public QWidget
@@ -16,4 +15,3 @@ public:
     ~EmailLineEditWidget() override = default;
 };
 
-#endif // EMAILLINEEDITWIDGET_H

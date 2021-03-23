@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef SELECTATTACHMENTDIALOG_H
-#define SELECTATTACHMENTDIALOG_H
+#pragma once
 
 #include <QDialog>
 class KUrlRequester;
@@ -27,4 +26,3 @@ private:
 };
 }
 
-#endif // SELECTATTACHMENTDIALOG_H

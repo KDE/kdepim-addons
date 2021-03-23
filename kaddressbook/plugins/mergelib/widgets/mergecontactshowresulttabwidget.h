@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSHOWRESULTTABWIDGET_H
-#define MERGECONTACTSHOWRESULTTABWIDGET_H
+#pragma once
 
 #include <AkonadiCore/item.h>
 #include <QTabWidget>
@@ -27,4 +26,3 @@ public:
     void addMergedContact(const Akonadi::Item &item, bool updateTab = false);
 };
 }
-#endif // MERGECONTACTSHOWRESULTTABWIDGET_H

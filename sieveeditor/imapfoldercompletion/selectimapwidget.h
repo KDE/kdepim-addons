@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPWIDGET_H
-#define SELECTIMAPWIDGET_H
+#pragma once
 
 #include <KSieveUi/AbstractMoveImapFolderWidget>
 #include <KSieveUi/SieveImapAccountSettings>
@@ -35,4 +34,3 @@ private:
     SelectImapLineEdit *mLineEdit = nullptr;
 };
 
-#endif // SELECTIMAPWIDGET_H

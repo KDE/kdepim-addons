@@ -7,8 +7,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKUTILS_H
-#define ADBLOCKUTILS_H
+#pragma once
 
 #include <QString>
 
@@ -30,4 +29,3 @@ public:
     static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QStringLiteral("(%1)"));
 };
 }
-#endif

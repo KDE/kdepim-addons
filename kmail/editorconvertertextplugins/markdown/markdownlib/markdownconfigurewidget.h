@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCONFIGUREWIDGET_H
-#define MARKDOWNCONFIGUREWIDGET_H
+#pragma once
 
 #include "markdownlib_private_export.h"
 #include <MessageComposer/PluginEditorConvertTextConfigureWidget>
@@ -26,4 +25,3 @@ private:
     QCheckBox *mExtraDefinitionLists = nullptr;
 };
 
-#endif // MARKDOWNCONFIGUREWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTINFOWIDGET_H
-#define MERGECONTACTINFOWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -36,4 +35,3 @@ private:
 };
 }
 
-#endif // MERGECONTACTINFOWIDGET_H

@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef MailAppImportData_H
-#define MailAppImportData_H
+#pragma once
 
 #include <ImportWizard/AbstractImporter>
 
@@ -21,4 +20,3 @@ public:
     QString name() const override;
 };
 
-#endif /* MailApp ImportData_H */

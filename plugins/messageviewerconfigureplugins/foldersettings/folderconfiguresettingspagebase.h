@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSPAGEBASE_H
-#define FOLDERCONFIGURESETTINGSPAGEBASE_H
+#pragma once
 
 #include <QWidget>
 class QVBoxLayout;
@@ -29,4 +28,3 @@ private:
     QGroupBox *const mGroupBox;
 };
 
-#endif // FOLDERCONFIGURESETTINGSPAGEBASE_H

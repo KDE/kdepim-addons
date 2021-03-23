@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTPLUGINEDITORINTERFACE_H
-#define QUICKTEXTPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <KPIMTextEdit/SelectSpecialCharDialog>
 #include <MailCommon/SnippetsModel>
@@ -32,4 +31,3 @@ private:
     MailCommon::SnippetsModel *const mModel;
 };
 
-#endif

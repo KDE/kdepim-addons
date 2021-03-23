@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PGPKEYURLHANDLER_H
-#define PGPKEYURLHANDLER_H
+#pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
 
@@ -24,4 +23,3 @@ private:
     QUrlQuery decodePath(const QString &path) const;
 };
 
-#endif

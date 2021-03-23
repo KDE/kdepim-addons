@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMARRESULTTEXTEDIT_H
-#define GRAMMARRESULTTEXTEDIT_H
+#pragma once
 
 #include "grammarcommon_export.h"
 #include "grammarerror.h"
@@ -45,4 +44,3 @@ private:
     QColor mNegativeTextColor;
 };
 
-#endif // GRAMMARRESULTTEXTEDIT_H

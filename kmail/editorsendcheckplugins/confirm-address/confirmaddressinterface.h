@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSINTERFACE_H
-#define CONFIRMADDRESSINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 #include <QHash>
@@ -35,4 +34,3 @@ private:
     QHash<uint, ConfirmAddressSettings> mHashSettings;
 };
 
-#endif // CONFIRMADDRESSINTERFACE_H

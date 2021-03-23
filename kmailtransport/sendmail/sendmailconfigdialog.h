@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MAILTRANSPORT_SENDMAILCONFIGDIALOG_H
-#define MAILTRANSPORT_SENDMAILCONFIGDIALOG_H
+#pragma once
 
 #include <QDialog>
 namespace MailTransport
@@ -30,4 +29,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif

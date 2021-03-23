@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H
-#define FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H
+#pragma once
 
 #include "folderconfiguresettingspagebase.h"
 
@@ -27,4 +26,3 @@ private:
     MailCommon::CollectionTemplatesWidget *const mCollectionTemplateWidget;
 };
 
-#endif // FOLDERCONFIGURESETTINGSTEMPLATEWIDGET_H

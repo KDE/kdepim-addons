@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINCREATEEVENT_H
-#define VIEWERPLUGINCREATEEVENT_H
+#pragma once
 #include <MessageViewer/ViewerPlugin>
 #include <QVariant>
 namespace MessageViewer
@@ -20,4 +19,3 @@ public:
     QString viewerPluginName() const override;
 };
 }
-#endif // VIEWERPLUGINCREATEEVENT_H

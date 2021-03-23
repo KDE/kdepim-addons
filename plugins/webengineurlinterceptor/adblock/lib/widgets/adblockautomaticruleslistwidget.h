@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKAUTOMATICRULESLISTWIDGET_H
-#define ADBLOCKAUTOMATICRULESLISTWIDGET_H
+#pragma once
 
 #include "adblocklib_export.h"
 #include <QListWidget>
@@ -31,4 +30,3 @@ private:
 };
 }
 
-#endif // ADBLOCKAUTOMATICRULESLISTWIDGET_H

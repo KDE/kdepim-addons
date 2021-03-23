@@ -7,8 +7,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKREGEXP_H
-#define ADBLOCKREGEXP_H
+#pragma once
 
 #include <QRegularExpression>
 #include <QStringList>
@@ -32,4 +31,3 @@ private:
     int m_matchedLength;
 };
 }
-#endif

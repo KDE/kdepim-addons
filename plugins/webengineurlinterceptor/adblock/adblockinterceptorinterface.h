@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKINTERCEPTORINTERFACE_H
-#define ADBLOCKINTERCEPTORINTERFACE_H
+#pragma once
 
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 #include <WebEngineViewer/WebHitTestResult>
@@ -40,4 +39,3 @@ private:
     QWebEngineView *mWebEngineView = nullptr;
 };
 
-#endif // ADBLOCKINTERCEPTORINTERFACE_H

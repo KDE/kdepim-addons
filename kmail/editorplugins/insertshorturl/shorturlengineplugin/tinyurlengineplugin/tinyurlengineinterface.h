@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TINYURLENGINEINTERFACE_H
-#define TINYURLENGINEINTERFACE_H
+#pragma once
 
 #include <../shorturlengineinterface.h>
 #include <QNetworkReply>
@@ -25,4 +24,3 @@ private:
     void slotErrorFound(QNetworkReply::NetworkError error);
 };
 
-#endif // TINYURLENGINEINTERFACE_H

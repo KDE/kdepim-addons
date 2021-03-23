@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef CREATENOTEJOB_H
-#define CREATENOTEJOB_H
+#pragma once
 
 #include <Akonadi/Notes/NoteUtils>
 #include <AkonadiCore/Collection>
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif

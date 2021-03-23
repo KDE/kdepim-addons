@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKGRAVATARPLUGINTEST_H
-#define CHECKGRAVATARPLUGINTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~CheckGravatarPluginTest() override = default;
 };
 
-#endif // CHECKGRAVATARPLUGINTEST_H

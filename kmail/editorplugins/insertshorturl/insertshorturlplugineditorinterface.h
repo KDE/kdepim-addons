@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTSHORTURLPLUGINEDITORINTERFACE_H
-#define INSERTSHORTURLPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInterface>
 #include <QHash>
@@ -30,4 +29,3 @@ private:
     ShortUrlEngineInterface *mCurrentEngine = nullptr;
 };
 
-#endif

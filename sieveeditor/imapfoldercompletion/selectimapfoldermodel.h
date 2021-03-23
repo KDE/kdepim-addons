@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPFOLDERMODEL_H
-#define SELECTIMAPFOLDERMODEL_H
+#pragma once
 
 #include <QHash>
 #include <QObject>
@@ -39,4 +38,3 @@ private:
     QHash<QString, QStandardItemModel *> mHashFolderModel;
 };
 
-#endif // SELECTIMAPFOLDERMODEL_H

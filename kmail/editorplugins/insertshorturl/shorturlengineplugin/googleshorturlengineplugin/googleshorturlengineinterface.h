@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GOOGLESHORTURLENGINEINTERFACE_H
-#define GOOGLESHORTURLENGINEINTERFACE_H
+#pragma once
 
 #include <pimcommon/shorturlengineinterface.h>
 
@@ -19,4 +18,3 @@ public:
     QString engineName() const override;
 };
 
-#endif

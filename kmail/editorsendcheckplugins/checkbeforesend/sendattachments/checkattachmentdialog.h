@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKATTACHMENTDIALOG_H
-#define CHECKATTACHMENTDIALOG_H
+#pragma once
 
 #include <QDialog>
 class QListWidget;
@@ -24,4 +23,3 @@ private:
     QListWidget *mListWidget = nullptr;
 };
 
-#endif // CHECKATTACHMENTDIALOG_H

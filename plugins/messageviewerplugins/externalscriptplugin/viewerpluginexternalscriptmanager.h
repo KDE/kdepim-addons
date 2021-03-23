@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTMANAGER_H
-#define VIEWERPLUGINEXTERNALSCRIPTMANAGER_H
+#pragma once
 
 #include "viewerpluginexternalscriptinfo.h"
 
@@ -27,4 +26,3 @@ private:
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTMANAGER_H

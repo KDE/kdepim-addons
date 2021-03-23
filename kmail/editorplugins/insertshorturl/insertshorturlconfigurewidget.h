@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTSHORTURLCONFIGUREWIDGET_H
-#define INSERTSHORTURLCONFIGUREWIDGET_H
+#pragma once
 
 #include <QWidget>
 class QComboBox;
@@ -25,4 +24,3 @@ private:
     QComboBox *mShortUrlServer = nullptr;
 };
 
-#endif // INSERTSHORTURLCONFIGUREWIDGET_H

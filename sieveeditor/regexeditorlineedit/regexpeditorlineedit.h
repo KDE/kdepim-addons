@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef REGEXPEDITORLINEEDIT_H
-#define REGEXPEDITORLINEEDIT_H
+#pragma once
 
 #include <KSieveUi/AbstractRegexpEditorLineEdit>
 #include <QWidget>
@@ -30,4 +29,3 @@ private:
     QToolButton *mRegExpEditorButton = nullptr;
 };
 
-#endif // REGEXPEDITORLINEEDIT_H

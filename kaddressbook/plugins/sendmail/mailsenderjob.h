@@ -7,8 +7,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MAILSENDERJOB_H
-#define MAILSENDERJOB_H
+#pragma once
 
 #include <AkonadiCore/Item>
 #include <QObject>
@@ -43,4 +42,3 @@ private:
 };
 }
 
-#endif

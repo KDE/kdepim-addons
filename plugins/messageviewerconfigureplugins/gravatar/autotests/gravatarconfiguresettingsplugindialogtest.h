@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAVATARCONFIGURESETTINGSPLUGINDIALOGTEST_H
-#define GRAVATARCONFIGURESETTINGSPLUGINDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~GravatarConfigureSettingsPluginDialogTest() override = default;
 };
 
-#endif // GRAVATARCONFIGURESETTINGSPLUGINDIALOGTEST_H

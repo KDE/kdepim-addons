@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHORTURLENGINEINTERFACE_H
-#define SHORTURLENGINEINTERFACE_H
+#pragma once
 
 #include "shorturl_export.h"
 #include <QNetworkReply>
@@ -39,4 +38,3 @@ protected:
     QNetworkAccessManager *const mNetworkAccessManager;
     ShortUrlEnginePlugin *const mEnginePlugin;
 };
-#endif // SHORTURLENGINEINTERFACE_H

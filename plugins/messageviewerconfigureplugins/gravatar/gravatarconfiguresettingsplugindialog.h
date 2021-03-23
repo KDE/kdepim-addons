@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef GRAVATARCONFIGURESETTINGSPLUGINDIALOG_H
-#define GRAVATARCONFIGURESETTINGSPLUGINDIALOG_H
+#pragma once
 
 #include <PimCommon/ConfigurePluginDialog>
 
@@ -25,4 +24,3 @@ private:
     GravatarConfigureSettingsPluginWidget *mWidget = nullptr;
 };
 
-#endif // GRAVATARCONFIGURESETTINGSPLUGINDIALOG_H

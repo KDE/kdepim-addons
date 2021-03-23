@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOCORRECTIONPLUGINEDITOR_H
-#define AUTOCORRECTIONPLUGINEDITOR_H
+#pragma once
 
 #include <MessageComposer/PluginEditor>
 
@@ -22,4 +21,3 @@ public:
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };
 
-#endif

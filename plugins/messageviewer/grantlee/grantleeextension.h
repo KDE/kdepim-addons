@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef KITINERARY_GRANTLEEEXTENSION_H
-#define KITINERARY_GRANTLEEEXTENSION_H
+#pragma once
 
 #include <grantlee/filter.h>
 #include <grantlee/taglibraryinterface.h>
@@ -47,4 +46,3 @@ public:
     QHash<QString, Grantlee::Filter *> filters(const QString &name) override;
 };
 
-#endif

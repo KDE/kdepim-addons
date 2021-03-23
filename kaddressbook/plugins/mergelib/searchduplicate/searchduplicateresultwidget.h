@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SEARCHDUPLICATERESULTWIDGET_H
-#define SEARCHDUPLICATERESULTWIDGET_H
+#pragma once
 
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
@@ -63,4 +62,3 @@ private:
 }
 Q_DECLARE_TYPEINFO(KABMergeContacts::MergeConflictResult, Q_MOVABLE_TYPE);
 
-#endif // SEARCHDUPLICATERESULTWIDGET_H

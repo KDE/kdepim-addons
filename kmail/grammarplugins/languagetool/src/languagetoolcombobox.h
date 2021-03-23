@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLCOMBOBOX_H
-#define LANGUAGETOOLCOMBOBOX_H
+#pragma once
 
 #include "libkmaillanguagetool_export.h"
 #include <QComboBox>
@@ -27,4 +26,3 @@ private:
     Q_DISABLE_COPY(LanguageToolComboBox)
 };
 
-#endif // LANGUAGETOOLCOMBOBOX_H

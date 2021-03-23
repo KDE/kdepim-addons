@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTECONFIGWIDGET_H
-#define GRAMMALECTECONFIGWIDGET_H
+#pragma once
 
 #include "grammalectegenerateconfigoptionjob.h"
 #include "libkmailgrammalecte_export.h"
@@ -42,4 +41,3 @@ private:
     const bool mDisableDialogBox = false;
 };
 
-#endif // GRAMMALECTECONFIGWIDGET_H

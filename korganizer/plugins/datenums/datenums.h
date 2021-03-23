@@ -6,8 +6,7 @@
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef KORG_PLUGINS_DATENUMS_DATENUMS_H
-#define KORG_PLUGINS_DATENUMS_DATENUMS_H
+#pragma once
 
 #include <EventViews/CalendarDecoration>
 
@@ -51,4 +50,3 @@ public:
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(Datenums::DayNumbers)
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef OPERASETTINGS_H
-#define OPERASETTINGS_H
+#pragma once
 
 #include <ImportWizard/AbstractSettings>
 
@@ -27,4 +26,3 @@ private:
     QString mFileName;
 };
 
-#endif // OPERASETTINGS_H

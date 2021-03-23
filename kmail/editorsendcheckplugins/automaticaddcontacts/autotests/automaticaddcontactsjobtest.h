@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSJOBTEST_H
-#define AUTOMATICADDCONTACTSJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~AutomaticAddContactsJobTest() override;
 };
 
-#endif // AUTOMATICADDCONTACTSJOBTEST_H

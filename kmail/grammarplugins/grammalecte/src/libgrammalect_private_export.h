@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LIBGRAMMALECTPRIVATE_EXPORT_H
-#define LIBGRAMMALECTPRIVATE_EXPORT_H
+#pragma once
 
 #include "libkmailgrammalecte_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBGRAMMALECTPRIVATE_TESTS_EXPORT
 #endif
 
-#endif

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCREATELINKDIALOG_H
-#define MARKDOWNCREATELINKDIALOG_H
+#pragma once
 
 #include "libkmailmarkdown_export.h"
 #include <QDialog>
@@ -27,4 +26,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif // MARKDOWNCREATELINKDIALOG_H

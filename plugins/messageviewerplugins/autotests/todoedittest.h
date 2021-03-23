@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TODOEDITTEST_H
-#define TODOEDITTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -52,4 +51,3 @@ private Q_SLOTS:
     void shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty();
 };
 
-#endif // TODOEDITTEST_H

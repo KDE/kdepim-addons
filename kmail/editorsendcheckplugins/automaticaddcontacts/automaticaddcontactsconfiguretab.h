@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSCONFIGURETAB_H
-#define AUTOMATICADDCONTACTSCONFIGURETAB_H
+#pragma once
 
 #include <QWidget>
 class QTabWidget;
@@ -36,4 +35,3 @@ private:
     QList<AutomaticAddContactsTabWidget *> mListTabWidget;
 };
 
-#endif // AUTOMATICADDCONTACTSCONFIGURETAB_H

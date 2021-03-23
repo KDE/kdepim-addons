@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSCONFIGURETAB_H
-#define CONFIRMADDRESSCONFIGURETAB_H
+#pragma once
 
 #include <QWidget>
 class QTabWidget;
@@ -36,4 +35,3 @@ private:
     QList<ConfirmAddressConfigureTabWidget *> mListTabWidget;
 };
 
-#endif // CONFIRMADDRESSCONFIGURETAB_H

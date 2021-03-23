@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKGRAVATARPLUGIN_H
-#define CHECKGRAVATARPLUGIN_H
+#pragma once
 
 #include <PimCommon/GenericPlugin>
 
@@ -25,4 +24,3 @@ public:
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
-#endif // CHECKGRAVATARPLUGIN_H

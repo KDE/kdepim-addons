@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H
-#define DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <QDialog>
@@ -24,4 +23,3 @@ private:
     DKIMAuthenticationVerifiedServerWidget *mAuthenticationVerifiedWidget = nullptr;
 };
 
-#endif // DKIMAUTHENTICATIONVERIFIEDSERVERDIALOG_H

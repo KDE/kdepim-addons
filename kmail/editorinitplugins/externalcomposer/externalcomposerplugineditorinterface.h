@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
-#define EXTERNALCOMPOSERPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInitInterface>
 
@@ -24,4 +23,3 @@ private:
     bool mEnabled = false;
 };
 
-#endif

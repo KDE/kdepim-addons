@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LIBLANGUAGETOOLPRIVATE_EXPORT_H
-#define LIBLANGUAGETOOLPRIVATE_EXPORT_H
+#pragma once
 
 #include "libkmaillanguagetool_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT
 #endif
 
-#endif

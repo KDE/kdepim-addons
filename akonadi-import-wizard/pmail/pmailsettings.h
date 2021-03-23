@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef PMailSettings_H
-#define PMailSettings_H
+#pragma once
 
 #include <ImportWizard/AbstractSettings>
 
@@ -24,4 +23,3 @@ private:
     QString mFileName;
 };
 
-#endif // ClawsMailSettings_H

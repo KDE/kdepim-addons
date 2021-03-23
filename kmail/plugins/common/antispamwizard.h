@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef KMAIL_ANTISPAMWIZARD_H
-#define KMAIL_ANTISPAMWIZARD_H
+#pragma once
 
 #include <KAssistantDialog>
 #include <KSharedConfig>
@@ -393,4 +392,3 @@ private:
     QLabel *mSummaryText = nullptr;
 };
 } // namespace KMail
-#endif // KMAIL_ANTISPAMWIZARD_H

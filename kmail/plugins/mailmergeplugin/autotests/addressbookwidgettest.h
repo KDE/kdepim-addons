@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef ADDRESSBOOKWIDGETTEST_H
-#define ADDRESSBOOKWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~AddressBookWidgetTest() override;
 };
 
-#endif // ADDRESSBOOKWIDGETTEST_H

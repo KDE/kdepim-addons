@@ -10,8 +10,7 @@
  *
  * ============================================================ */
 
-#ifndef AD_BLOCK_SETTING_WIDGET_H
-#define AD_BLOCK_SETTING_WIDGET_H
+#pragma once
 
 #include "adblocklib_export.h"
 
@@ -92,4 +91,3 @@ private:
 };
 }
 
-#endif // AD_BLOCK_SETTING_WIDGET_H

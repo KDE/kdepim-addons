@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VCARDEXPORTSELECTIONWIDGET_H
-#define VCARDEXPORTSELECTIONWIDGET_H
+#pragma once
 
 #include <QWidget>
 
@@ -41,4 +40,3 @@ private:
     QCheckBox *mDisplayNameBox = nullptr;
 };
 
-#endif // VCARDEXPORTSELECTIONWIDGET_H

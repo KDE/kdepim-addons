@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef IMPORTCONTACTEXPORT_H
-#define IMPORTCONTACTEXPORT_H
+#pragma once
 
 #include <KContacts/Addressee>
 #include <QString>
@@ -28,4 +27,3 @@ private:
     QWidget *mParentWidget = nullptr;
 };
 
-#endif // IMPORTCONTACTEXPORT_H

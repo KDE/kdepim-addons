@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef WINDOWSCONTACTIMPORTEXPORTPLUGININTERFACE_H
-#define WINDOWSCONTACTIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
@@ -30,4 +29,3 @@ private:
     void exportWindowsContact();
 };
 
-#endif

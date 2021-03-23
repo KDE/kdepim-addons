@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QCSVMODEL_P_H
-#define QCSVMODEL_P_H
+#pragma once
 
 #include "qcsvreader.h"
 
@@ -50,4 +49,3 @@ private:
     int mCacheCounter = 0;
 };
 
-#endif

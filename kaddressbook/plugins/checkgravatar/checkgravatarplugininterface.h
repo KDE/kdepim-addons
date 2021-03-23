@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKGRAVATARPLUGININTERFACE_H
-#define CHECKGRAVATARPLUGININTERFACE_H
+#pragma once
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
@@ -28,4 +27,3 @@ private:
     QAction *mAction = nullptr;
 };
 
-#endif // CHECKGRAVATARPLUGININTERFACE_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKATTACHMENTJOB_H
-#define CHECKATTACHMENTJOB_H
+#pragma once
 
 #include <QStringList>
 
@@ -28,4 +27,3 @@ private:
     QStringList mResultList;
 };
 
-#endif // CHECKATTACHMENTJOB_H

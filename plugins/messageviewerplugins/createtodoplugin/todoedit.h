@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TODOEDIT_H
-#define TODOEDIT_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <KCalendarCore/Todo>
@@ -69,4 +68,3 @@ private:
     QPushButton *const mOpenEditorButton;
 };
 }
-#endif // TODOEDIT_H

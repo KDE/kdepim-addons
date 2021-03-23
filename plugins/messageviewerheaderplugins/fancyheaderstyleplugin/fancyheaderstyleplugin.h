@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FANCYHEADERSTYLEPLUGIN_H
-#define FANCYHEADERSTYLEPLUGIN_H
+#pragma once
 
 #include <MessageViewer/HeaderStylePlugin>
 
@@ -35,4 +34,3 @@ private:
     HeaderStrategy *const mHeaderStrategy;
 };
 }
-#endif // FANCYHEADERSTYLEPLUGIN_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLUPDATECOMBOBOX_H
-#define LANGUAGETOOLUPDATECOMBOBOX_H
+#pragma once
 
 #include "liblanguagetool_private_export.h"
 #include <QObject>
@@ -34,4 +33,3 @@ private:
     QWidget *mParentWidget = nullptr;
 };
 
-#endif // LANGUAGETOOLUPDATECOMBOBOX_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSPAGEWIDGET_H
-#define FOLDERCONFIGURESETTINGSPAGEWIDGET_H
+#pragma once
 
 #include "folderconfiguresettings_private_export.h"
 #include <AkonadiCore/Collection>
@@ -30,4 +29,3 @@ private:
     FolderConfigureSettingsViewWidget *mFolderConfigureSettingsViewWidget = nullptr;
 };
 
-#endif // FOLDERCONFIGURESETTINGSPAGEWIDGET_H

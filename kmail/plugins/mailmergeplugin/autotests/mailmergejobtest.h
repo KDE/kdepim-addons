@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef MAILMERGEJOBTEST_H
-#define MAILMERGEJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~MailMergeJobTest() override;
 };
 
-#endif // MAILMERGEJOBTEST_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNDEMOWIDGET_H
-#define MARKDOWNDEMOWIDGET_H
+#pragma once
 
 #include <QWidget>
 class QTextEdit;
@@ -22,4 +21,3 @@ private:
     MarkdownPreviewWidget *mPreview = nullptr;
 };
 
-#endif // MARKDOWNDEMOWIDGET_H

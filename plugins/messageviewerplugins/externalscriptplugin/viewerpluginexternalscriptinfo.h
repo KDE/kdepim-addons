@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTINFO_H
-#define VIEWERPLUGINEXTERNALSCRIPTINFO_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -50,4 +49,3 @@ private:
 Q_DECLARE_TYPEINFO(ViewerPluginExternalScriptInfo, Q_MOVABLE_TYPE);
 Q_DECLARE_METATYPE(ViewerPluginExternalScriptInfo)
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTINFO_H

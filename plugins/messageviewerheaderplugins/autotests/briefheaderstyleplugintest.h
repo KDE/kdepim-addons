@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BRIEFHEADERSTYLEPLUGINTEST_H
-#define BRIEFHEADERSTYLEPLUGINTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -24,4 +23,3 @@ private Q_SLOTS:
     void testFormat();
 };
 
-#endif // BRIEFHEADERSTYLEPLUGINTEST_H

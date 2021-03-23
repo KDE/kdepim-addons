@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CREATEEVENTJOB_H
-#define CREATEEVENTJOB_H
+#pragma once
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/Item>
 #include <KCalendarCore/Event>
@@ -37,4 +36,3 @@ private:
 };
 }
 
-#endif

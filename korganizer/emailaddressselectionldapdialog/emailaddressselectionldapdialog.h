@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef EMAILADDRESSSELECTIONLDAPDIALOG_H
-#define EMAILADDRESSSELECTIONLDAPDIALOG_H
+#pragma once
 
 #include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
 namespace Akonadi
@@ -36,4 +35,3 @@ private:
     PimCommon::LdapSearchDialog *mLdapSearchDialog = nullptr;
 };
 
-#endif // EMAILADDRESSSELECTIONLDAPDIALOG_H

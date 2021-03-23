@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_THISDAYINHISTORY_THISDAYINHISTORY_H
-#define KORG_PLUGINS_THISDAYINHISTORY_THISDAYINHISTORY_H
+#pragma once
 
 #include <EventViews/CalendarDecoration>
 
@@ -40,4 +39,3 @@ public:
     }
 };
 
-#endif

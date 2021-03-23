@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKPLUGINURLINTERCEPTOR_H
-#define ADBLOCKPLUGINURLINTERCEPTOR_H
+#pragma once
 
 #include <QVariant>
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
@@ -27,4 +26,3 @@ public:
     bool hasConfigureDialog() const override;
 };
 
-#endif // ADBLOCKPLUGINURLINTERCEPTOR_H

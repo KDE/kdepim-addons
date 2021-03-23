@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPFOLDERTREEVIEW_H
-#define SELECTIMAPFOLDERTREEVIEW_H
+#pragma once
 
 #include <QColor>
 #include <QTreeView>
@@ -29,4 +28,3 @@ private:
     LoadingStatus mStatus = InProgress;
 };
 
-#endif // SELECTIMAPFOLDERTREEVIEW_H

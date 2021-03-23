@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLPARSER_H
-#define LANGUAGETOOLPARSER_H
+#pragma once
 
 #include "liblanguagetool_private_export.h"
 
@@ -19,4 +18,3 @@ public:
     QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
 
-#endif // LANGUAGETOOLPARSER_H

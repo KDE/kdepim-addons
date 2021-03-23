@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLRESULTJOB_H
-#define LANGUAGETOOLRESULTJOB_H
+#pragma once
 
 #include "liblanguagetool_private_export.h"
 #include <QObject>
@@ -60,4 +59,3 @@ private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
-#endif // LANGUAGETOOLRESULTJOB_H

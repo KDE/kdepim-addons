@@ -4,8 +4,7 @@
  * SPDX-License-Identifier: GPL-2.0-or-later
  *
  */
-#ifndef TESTDATAPARSER_H
-#define TESTDATAPARSER_H
+#pragma once
 
 #include <KCalendarCore/Incidence>
 #include <QDate>
@@ -44,4 +43,3 @@ private:
     bool mUniqueEventData;
 };
 
-#endif

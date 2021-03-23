@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNPREVIEWWIDGET_H
-#define MARKDOWNPREVIEWWIDGET_H
+#pragma once
 
 #include "markdownlib_private_export.h"
 #include <QWidget>
@@ -31,4 +30,3 @@ private:
     QLabel *mHoverUrlLabel = nullptr;
 };
 
-#endif // MARKDOWNPREVIEWWIDGET_H

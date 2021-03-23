@@ -5,8 +5,7 @@
     SPDX-License-Identifier: GPL-2.0-or-later WITH Qt-Commercial-exception-1.0
 */
 
-#ifndef CRYPTOPAGEPLUGIN_H
-#define CRYPTOPAGEPLUGIN_H
+#pragma once
 
 #include <ContactEditor/ContactEditorPagePlugin>
 
@@ -41,4 +40,3 @@ private:
     bool mReadOnly = false;
 };
 
-#endif

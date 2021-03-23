@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMARRESULTJOB_H
-#define GRAMMARRESULTJOB_H
+#pragma once
 
 #include "libgrammalect_private_export.h"
 #include <QObject>
@@ -61,4 +60,3 @@ private:
     QProcess *mProcess = nullptr;
 };
 
-#endif // GRAMMARRESULTJOB_H

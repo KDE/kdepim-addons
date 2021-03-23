@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXPERTPLUGIN_H
-#define EXPERTPLUGIN_H
+#pragma once
 
 #include <PimCommon/GenericPlugin>
 
@@ -23,4 +22,3 @@ public:
     PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };
 
-#endif // EXPERTPLUGIN_H

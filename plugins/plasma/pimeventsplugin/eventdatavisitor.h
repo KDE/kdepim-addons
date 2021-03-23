@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef EVENTDATAVISITOR_H
-#define EVENTDATAVISITOR_H
+#pragma once
 
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <KCalendarCore/Visitor>
@@ -93,4 +92,3 @@ private:
     QStringList mResults;
 };
 
-#endif

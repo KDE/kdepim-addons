@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef RESULTDUPLICATETREEWIDGET_H
-#define RESULTDUPLICATETREEWIDGET_H
+#pragma once
 
 #include "kaddressbookmergelib_export.h"
 #include <AkonadiCore/Item>
@@ -51,4 +50,3 @@ private:
 };
 }
 
-#endif // RESULTDUPLICATETREEWIDGET_H

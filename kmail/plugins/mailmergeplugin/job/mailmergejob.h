@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef MAILMERGEJOB_H
-#define MAILMERGEJOB_H
+#pragma once
 
 #include <QObject>
 namespace MailMerge
@@ -20,4 +19,3 @@ public:
 };
 }
 
-#endif // MAILMERGEJOB_H

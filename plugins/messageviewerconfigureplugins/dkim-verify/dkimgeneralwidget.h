@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMGENERALWIDGET_H
-#define DKIMGENERALWIDGET_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
@@ -28,4 +27,3 @@ private:
     QCheckBox *mUseOnlyAuthenticationResult = nullptr;
 };
 
-#endif // DKIMGENERALWIDGET_H

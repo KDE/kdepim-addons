@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H
-#define EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H
+#pragma once
 
 #include "libexpireaccounttrashfolderconfig_export.h"
 #include <QDialog>
@@ -23,4 +22,3 @@ private:
     ExpireAccountTrashFolderConfigWidget *const mExpireAccountTrashFolderConfig;
 };
 
-#endif // EXPIREACCOUNTTRASHFOLDERCONFIGDIALOG_H

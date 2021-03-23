@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPLINEEDITCOMPLETERMODEL_H
-#define SELECTIMAPLINEEDITCOMPLETERMODEL_H
+#pragma once
 
 #include <QObject>
 class KDescendantsProxyModel;
@@ -27,4 +26,3 @@ private:
     KDescendantsProxyModel *const mFlatProxy;
 };
 
-#endif // SELECTIMAPLINEEDITCOMPLETERMODEL_H

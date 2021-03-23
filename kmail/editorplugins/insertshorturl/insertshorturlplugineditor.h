@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTSHORTURLPLUGINEDITOR_H
-#define INSERTSHORTURLPLUGINEDITOR_H
+#pragma once
 
 #include <MessageComposer/PluginEditor>
 
@@ -28,4 +27,3 @@ Q_SIGNALS:
     void configChanged();
 };
 
-#endif

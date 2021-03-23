@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHORTURLENGINEPLUGIN_H
-#define SHORTURLENGINEPLUGIN_H
+#pragma once
 
 #include "shorturl_export.h"
 #include <QObject>
@@ -25,4 +24,3 @@ public:
 private:
     QString mName;
 };
-#endif // SHORTURLENGINEPLUGIN_H

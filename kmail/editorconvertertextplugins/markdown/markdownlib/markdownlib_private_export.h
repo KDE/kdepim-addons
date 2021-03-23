@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef LIBKMAILMARKDOWNPRIVATE_EXPORT_H
-#define LIBKMAILMARKDOWNPRIVATE_EXPORT_H
+#pragma once
 
 #include "libkmailmarkdown_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT
 #endif
 
-#endif

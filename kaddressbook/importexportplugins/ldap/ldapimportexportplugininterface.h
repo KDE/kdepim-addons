@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LDAPIMPORTEXPORTPLUGININTERFACE_H
-#define LDAPIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
 
@@ -24,4 +23,3 @@ private:
     void importLdap();
 };
 
-#endif // LDAPIMPORTEXPORTPLUGININTERFACE_H

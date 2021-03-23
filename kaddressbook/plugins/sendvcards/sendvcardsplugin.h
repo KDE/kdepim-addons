@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SENDVCARDSPLUGIN_H
-#define SENDVCARDSPLUGIN_H
+#pragma once
 
 #include <PimCommon/GenericPlugin>
 
@@ -24,4 +23,3 @@ public:
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
-#endif // SENDVCARDSPLUGIN_H

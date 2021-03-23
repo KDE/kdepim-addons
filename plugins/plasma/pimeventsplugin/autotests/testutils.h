@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef TESTUTILS_H
-#define TESTUTILS_H
+#pragma once
 
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <QDebug>
@@ -82,4 +81,3 @@ bool compareEventData(const CalendarEvents::EventData &actual, const CalendarEve
 }
 }
 
-#endif

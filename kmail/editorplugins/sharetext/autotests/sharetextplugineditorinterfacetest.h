@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef ShareTextPLUGINEDITORINTERFACETEST_H
-#define ShareTextPLUGINEDITORINTERFACETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -18,4 +17,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
 
-#endif

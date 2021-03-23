@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTECONFIGDIALOG_H
-#define GRAMMALECTECONFIGDIALOG_H
+#pragma once
 #include "libkmailgrammalecte_export.h"
 #include <QDialog>
 class GrammalecteConfigWidget;
@@ -23,4 +22,3 @@ private:
     GrammalecteConfigWidget *mConfigWidget = nullptr;
 };
 
-#endif // GRAMMALECTECONFIGDIALOG_H

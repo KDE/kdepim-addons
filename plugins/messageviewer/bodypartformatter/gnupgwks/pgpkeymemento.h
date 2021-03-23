@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PGPKEYMEMENTO_H_
-#define PGPKEYMEMENTO_H_
+#pragma once
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
@@ -51,4 +50,3 @@ private:
     bool mIsRunning = false;
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTEGRAMMARERROR_H
-#define GRAMMALECTEGRAMMARERROR_H
+#pragma once
 
 #include "grammarerror.h"
 #include "libgrammalect_private_export.h"
@@ -23,4 +22,3 @@ private:
 Q_DECLARE_METATYPE(GrammalecteGrammarError)
 Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
 
-#endif // GRAMMALECTEGRAMMARERROR_H

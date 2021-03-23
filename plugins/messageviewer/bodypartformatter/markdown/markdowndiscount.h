@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNDISCOUNT_H
-#define MARKDOWNDISCOUNT_H
+#pragma once
 
 #include "markdownabstract.h"
 
@@ -18,4 +17,3 @@ public:
     Q_REQUIRED_RESULT QString toHtml() const override;
 };
 
-#endif // MARKDOWNDISCOUNT_H

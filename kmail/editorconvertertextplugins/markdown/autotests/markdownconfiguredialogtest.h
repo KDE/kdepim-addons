@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCONFIGUREDIALOGTEST_H
-#define MARKDOWNCONFIGUREDIALOGTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~MarkdownConfigureDialogTest() override = default;
 };
 
-#endif // MARKDOWNCONFIGUREDIALOGTEST_H

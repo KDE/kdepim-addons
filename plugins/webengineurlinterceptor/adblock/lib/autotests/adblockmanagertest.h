@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKMANAGERTEST_H
-#define ADBLOCKMANAGERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~AdblockManagerTest() override;
 };
 
-#endif // ADBLOCKMANAGERTEST_H

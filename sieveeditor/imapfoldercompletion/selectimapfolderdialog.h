@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPFOLDERDIALOG_H
-#define SELECTIMAPFOLDERDIALOG_H
+#pragma once
 
 #include <QDialog>
 namespace KSieveUi
@@ -32,4 +31,3 @@ private:
     QPushButton *mNewFolder = nullptr;
 };
 
-#endif // SELECTIMAPFOLDERDIALOG_H

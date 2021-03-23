@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GNUPGWKSURLHANDLER_H_
-#define GNUPGWKSURLHANDLER_H_
+#pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
 
@@ -29,4 +28,3 @@ private:
     QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
 };
 
-#endif

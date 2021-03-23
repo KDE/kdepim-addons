@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPLOADFOLDERSJOB_H
-#define SELECTIMAPLOADFOLDERSJOB_H
+#pragma once
 
 #include <KSieveUi/SieveImapAccountSettings>
 #include <QObject>
@@ -48,4 +47,3 @@ private:
     QStandardItemModel *const mModel;
 };
 
-#endif // SELECTIMAPLOADFOLDERSJOB_H

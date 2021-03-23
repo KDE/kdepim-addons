@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SENDVCARDSJOB_H
-#define SENDVCARDSJOB_H
+#pragma once
 #include <AkonadiCore/Item>
 #include <KContacts/VCardConverter>
 #include <QObject>
@@ -45,4 +44,3 @@ private:
 };
 }
 
-#endif // SENDVCARDSJOB_H

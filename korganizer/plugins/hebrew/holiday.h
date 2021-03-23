@@ -13,8 +13,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_HEBREW_HOLIDAY_H
-#define KORG_PLUGINS_HEBREW_HOLIDAY_H
+#pragma once
 
 #include "converter.h"
 
@@ -76,4 +75,3 @@ private:
                                    bool showOmer);
 };
 
-#endif

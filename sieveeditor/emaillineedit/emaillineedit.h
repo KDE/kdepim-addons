@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EMAILLINEEDIT_H
-#define EMAILLINEEDIT_H
+#pragma once
 
 #include <AkonadiCore/ServerManager>
 #include <KContacts/Addressee>
@@ -36,4 +35,3 @@ private:
     bool mEmailIsValid = false;
 };
 
-#endif // EMAILLINEEDIT_H

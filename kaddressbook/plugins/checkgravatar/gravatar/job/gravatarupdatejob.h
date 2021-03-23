@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAVATARUPDATEJOB_H
-#define GRAVATARUPDATEJOB_H
+#pragma once
 
 #include <AkonadiCore/Item>
 #include <QObject>
@@ -45,4 +44,3 @@ private:
 };
 }
 
-#endif // GRAVATARUPDATEJOB_H

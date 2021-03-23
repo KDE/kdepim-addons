@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNQTEXTDOCUMENT_H
-#define MARKDOWNQTEXTDOCUMENT_H
+#pragma once
 
 #include "markdownabstract.h"
 
@@ -17,4 +16,3 @@ public:
     Q_REQUIRED_RESULT QString toHtml() const override;
 };
 
-#endif // MARKDOWNQTEXTDOCUMENT_H

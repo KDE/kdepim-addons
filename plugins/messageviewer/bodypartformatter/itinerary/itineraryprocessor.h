@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITINERARYPROCESSOR_H
-#define ITINERARYPROCESSOR_H
+#pragma once
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -23,4 +22,3 @@ public:
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 };
 
-#endif // ITINERARYPROCESSOR_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLLISTOFLANGUAGESPARSERTEST_H
-#define LANGUAGETOOLLISTOFLANGUAGESPARSERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~LanguageToolListOfLanguagesParserTest() override = default;
 };
 
-#endif // LANGUAGETOOLLISTOFLANGUAGESPARSERTEST_H

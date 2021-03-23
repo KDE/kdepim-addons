@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGEINFO_H
-#define LANGUAGEINFO_H
+#pragma once
 #include "liblanguagetool_private_export.h"
 
 #include <QObject>
@@ -36,4 +35,3 @@ private:
 Q_DECLARE_METATYPE(LanguageInfo)
 Q_DECLARE_TYPEINFO(LanguageInfo, Q_MOVABLE_TYPE);
 
-#endif // LANGUAGEINFO_H

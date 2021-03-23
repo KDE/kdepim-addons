@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef EVENTDATAVISITORTEST_H
-#define EVENTDATAVISITORTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -38,4 +37,3 @@ private Q_SLOTS:
     void testEventDataIdVisitor();
 };
 
-#endif

@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef MARKDOWNUTILTEST_H
-#define MARKDOWNUTILTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -19,4 +18,3 @@ private Q_SLOTS:
     void shouldConvert_data();
 };
 
-#endif // MARKDOWNUTILTEST_H

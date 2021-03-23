@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CREATETODOJOB_H
-#define CREATETODOJOB_H
+#pragma once
 #include <AkonadiCore/Collection>
 #include <AkonadiCore/Item>
 #include <KCalendarCore/Todo>
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif // CREATETODOJOB_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLLISTOFLANGUAGESPARSER_H
-#define LANGUAGETOOLLISTOFLANGUAGESPARSER_H
+#pragma once
 
 #include "languageinfo.h"
 #include "liblanguagetool_private_export.h"
@@ -18,4 +17,3 @@ public:
     QVector<LanguageInfo> parseResult(const QJsonArray &obj) const;
 };
 
-#endif // LANGUAGETOOLLISTOFLANGUAGESPARSER_H

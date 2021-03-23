@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SENDMAILTRANSPORTPLUGIN_H
-#define SENDMAILTRANSPORTPLUGIN_H
+#pragma once
 
 #include <MailTransport/TransportAbstractPlugin>
 #include <QVariant>
@@ -22,4 +21,3 @@ public:
     MailTransport::TransportJob *createTransportJob(MailTransport::Transport *t, const QString &identifier) override;
 };
 
-#endif

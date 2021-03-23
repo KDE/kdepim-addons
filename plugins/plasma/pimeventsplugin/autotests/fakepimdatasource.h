@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef FAKEPIMDATASOURCE_H
-#define FAKEPIMDATASOURCE_H
+#pragma once
 
 #include "pimdatasource.h"
 
@@ -28,4 +27,3 @@ private:
     KCalendarCore::Calendar *mCalendar = nullptr;
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCONVERTER_H
-#define MARKDOWNCONVERTER_H
+#pragma once
 
 #include "libkmailmarkdown_export.h"
 #include <QObject>
@@ -32,4 +31,3 @@ private:
     bool mEnableExtraDefinitionLists = false;
 };
 
-#endif // MARKDOWNCONVERTER_H

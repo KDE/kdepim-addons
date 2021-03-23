@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
-#define VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H
+#pragma once
 
 #include "viewerpluginexternalscriptinfo.h"
 
@@ -27,4 +26,3 @@ private:
     QStringList mDirectories;
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOB_H

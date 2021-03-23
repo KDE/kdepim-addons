@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSELECTINFORMATIONSCROLLAREA_H
-#define MERGECONTACTSELECTINFORMATIONSCROLLAREA_H
+#pragma once
 
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
@@ -35,4 +34,3 @@ private:
 };
 }
 
-#endif // MERGECONTACTSELECTINFORMATIONSCROLLAREA_H

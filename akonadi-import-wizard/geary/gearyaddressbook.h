@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GearyAddressBook_H
-#define GearyAddressBook_H
+#pragma once
 
 #include <ImportWizard/AbstractAddressBook>
 #include <QHash>
@@ -19,4 +18,3 @@ public:
     void importAddressBook();
 };
 
-#endif /* GearyAddressBook_H */

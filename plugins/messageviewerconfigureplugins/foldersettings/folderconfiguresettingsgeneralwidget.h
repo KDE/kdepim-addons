@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSGENERALWIDGET_H
-#define FOLDERCONFIGURESETTINGSGENERALWIDGET_H
+#pragma once
 
 #include "folderconfiguresettings_private_export.h"
 #include "folderconfiguresettingspagebase.h"
@@ -27,4 +26,3 @@ private:
     MailCommon::CollectionGeneralWidget *const mCollectionGeneralWidget;
 };
 
-#endif // FOLDERCONFIGURESETTINGSGENERALWIDGET_H

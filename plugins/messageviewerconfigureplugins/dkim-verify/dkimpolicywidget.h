@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMPOLICYWIDGET_H
-#define DKIMPOLICYWIDGET_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
@@ -31,4 +30,3 @@ private:
     QPushButton *mRulesButton = nullptr;
 };
 
-#endif // DKIMPOLICYWIDGET_H

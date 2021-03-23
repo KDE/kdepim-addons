@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VCARDMEMENTO_H
-#define VCARDMEMENTO_H
+#pragma once
 
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
@@ -62,4 +61,3 @@ private:
 };
 }
 
-#endif // VCARDMEMENTO_H

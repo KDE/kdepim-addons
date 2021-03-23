@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef REACTIONTOINVITATIONDIALOG_H
-#define REACTIONTOINVITATIONDIALOG_H
+#pragma once
 
 #include <QDialog>
 namespace KPIMTextEdit
@@ -30,4 +29,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif // REACTIONTOINVITATIONDIALOG_H

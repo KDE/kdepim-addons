@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef ADDRESSBOOKWIDGET_H
-#define ADDRESSBOOKWIDGET_H
+#pragma once
 
 #include "mailmergeplugin_private_export.h"
 #include <QWidget>
@@ -20,4 +19,3 @@ public:
 };
 }
 
-#endif // ADDRESSBOOKWIDGET_H

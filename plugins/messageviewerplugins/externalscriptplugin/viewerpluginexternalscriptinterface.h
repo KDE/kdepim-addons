@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
-#define VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H
+#pragma once
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
@@ -40,4 +39,3 @@ private:
     QActionGroup *mActionGroup = nullptr;
 };
 }
-#endif // VIEWERPLUGINEXTERNALSCRIPTINTERFACE_H

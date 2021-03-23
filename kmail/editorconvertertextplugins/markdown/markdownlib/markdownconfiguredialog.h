@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCONFIGUREDIALOG_H
-#define MARKDOWNCONFIGUREDIALOG_H
+#pragma once
 
 #include "libkmailmarkdown_export.h"
 #include <PimCommon/ConfigurePluginDialog>
@@ -28,4 +27,3 @@ private:
     MarkdownConfigureWidget *mConfigureWidget = nullptr;
 };
 
-#endif // MARKDOWNCONFIGUREDIALOG_H

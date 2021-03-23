@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LOGACTIVITIESPLUGININTERFACETEST_H
-#define LOGACTIVITIESPLUGININTERFACETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -21,4 +20,3 @@ private Q_SLOTS:
     void shouldEmitActivatedSignal();
 };
 
-#endif // LogActivitiesPLUGININTERFACETEST_H

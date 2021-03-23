@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef PIMEVENTSPLUGIN_H
-#define PIMEVENTSPLUGIN_H
+#pragma once
 
 #include <CalendarEvents/CalendarEventsPlugin>
 #include <KCalendarCore/Calendar>
@@ -44,4 +43,3 @@ private:
     QDate mEnd;
 };
 
-#endif

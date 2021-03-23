@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef AKONADIPIMDATASOURCE_H
-#define AKONADIPIMDATASOURCE_H
+#pragma once
 
 #include "pimdatasource.h"
 #include <EventViews/Prefs>
@@ -35,4 +34,3 @@ private:
     mutable QHash<qint64, QString> mColorCache;
 };
 
-#endif

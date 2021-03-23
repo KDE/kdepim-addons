@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSTABWIDGET_H
-#define AUTOMATICADDCONTACTSTABWIDGET_H
+#pragma once
 
 #include <QWidget>
 class QCheckBox;
@@ -35,4 +34,3 @@ private:
     uint mIdentity = 0;
 };
 
-#endif // AUTOMATICADDCONTACTSTABWIDGET_H

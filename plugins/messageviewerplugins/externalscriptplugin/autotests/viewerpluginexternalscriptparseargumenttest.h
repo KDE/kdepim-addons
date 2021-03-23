@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
-#define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H
+#pragma once
 
 #include <KMime/Message>
 #include <QObject>
@@ -30,4 +29,3 @@ private Q_SLOTS:
     void shouldReturnBcc();
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENTTEST_H

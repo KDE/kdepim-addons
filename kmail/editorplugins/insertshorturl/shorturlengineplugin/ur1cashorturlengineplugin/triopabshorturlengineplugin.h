@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRIOPABSHORTURLENGINEPLUGIN_H
-#define TRIOPABSHORTURLENGINEPLUGIN_H
+#pragma once
 
 #include "../shorturlengineplugin.h"
 
@@ -22,4 +21,3 @@ public:
     QString engineName() const override;
 };
 
-#endif // TRIOPABSHORTURLENGINEPLUGIN_H

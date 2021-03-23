@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef NylasMailSettings_H
-#define NylasMailSettings_H
+#pragma once
 
 #include <ImportWizard/AbstractSettings>
 
@@ -23,4 +22,3 @@ private:
     void readTransport();
 };
 
-#endif // ClawsMailSettings_H

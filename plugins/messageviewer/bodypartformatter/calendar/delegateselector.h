@@ -5,8 +5,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DELEGATESELECTOR_H
-#define DELEGATESELECTOR_H
+#pragma once
 
 #include <QDialog>
 class QPushButton;
@@ -37,4 +36,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif

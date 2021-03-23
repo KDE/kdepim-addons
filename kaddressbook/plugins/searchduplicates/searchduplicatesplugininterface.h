@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SEARCHDUPLICATESPLUGININTERFACE_H
-#define SEARCHDUPLICATESPLUGININTERFACE_H
+#pragma once
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
@@ -25,4 +24,3 @@ private:
     Akonadi::Item::List mListItems;
 };
 
-#endif // SEARCHDUPLICATESPLUGININTERFACE_H

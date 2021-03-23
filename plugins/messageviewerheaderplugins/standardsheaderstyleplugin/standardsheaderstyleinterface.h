@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef STANDARDSHEADERSTYLEINTERFACE_H
-#define STANDARDSHEADERSTYLEINTERFACE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyleInterface>
 
@@ -23,4 +22,3 @@ public:
 };
 }
 
-#endif // STANDARDSHEADERSTYLEINTERFACE_H

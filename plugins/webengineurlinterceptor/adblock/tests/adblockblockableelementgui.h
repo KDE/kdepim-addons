@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKBLOCKABLEELEMENTGUI_H
-#define ADBLOCKBLOCKABLEELEMENTGUI_H
+#pragma once
 
 #include <QWidget>
 class QWebEngineView;
@@ -29,4 +28,3 @@ private:
     QWebEngineView *mWebEngineView = nullptr;
 };
 
-#endif // ADBLOCKBLOCKABLEELEMENTGUI_H

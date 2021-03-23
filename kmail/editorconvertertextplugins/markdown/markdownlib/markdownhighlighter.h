@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNHighlighter_H
-#define MARKDOWNHighlighter_H
+#pragma once
 
 #include <KSyntaxHighlighting/AbstractHighlighter>
 
@@ -27,4 +26,3 @@ private:
     QTextStream *const mStream;
 };
 
-#endif // MARKDOWNHighlighter_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCREATEIMAGEWIDGETTEST_H
-#define MARKDOWNCREATEIMAGEWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldEmitSignal();
 };
 
-#endif // MARKDOWNCREATEIMAGEWIDGETTEST_H

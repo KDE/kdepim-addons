@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLCONFIGWIDGET_H
-#define LANGUAGETOOLCONFIGWIDGET_H
+#pragma once
 
 #include "libkmaillanguagetool_export.h"
 #include <QWidget>
@@ -33,4 +32,3 @@ private:
     LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
 };
 
-#endif // LANGUAGETOOLCONFIGWIDGET_H

@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef LANGUAGETOOLPARSERTEST_H
-#define LANGUAGETOOLPARSERTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -19,4 +18,3 @@ private Q_SLOTS:
     void shouldParseJson_data();
 };
 
-#endif // LANGUAGETOOLPARSERTEST_H

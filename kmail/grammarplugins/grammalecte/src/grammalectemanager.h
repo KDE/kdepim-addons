@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTEMANAGER_H
-#define GRAMMALECTEMANAGER_H
+#pragma once
 
 #include "libkmailgrammalecte_export.h"
 #include <QObject>
@@ -36,4 +35,3 @@ private:
     QString mGrammalectePath;
 };
 
-#endif // GRAMMALECTEMANAGER_H

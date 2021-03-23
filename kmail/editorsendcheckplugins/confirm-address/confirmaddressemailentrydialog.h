@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSEMAILENTRYDIALOG_H
-#define CONFIRMADDRESSEMAILENTRYDIALOG_H
+#pragma once
 
 #include <QDialog>
 class QDialogButtonBox;
@@ -26,4 +25,3 @@ private:
     QLineEdit *mLineEdit = nullptr;
 };
 
-#endif // CONFIRMADDRESSEMAILENTRYDIALOG_H

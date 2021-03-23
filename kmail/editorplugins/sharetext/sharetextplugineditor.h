@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHARETEXTPLUGINEDITOR_H
-#define SHARETEXTPLUGINEDITOR_H
+#pragma once
 
 #include <MessageComposer/PluginEditor>
 
@@ -23,4 +22,3 @@ public:
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
 
-#endif

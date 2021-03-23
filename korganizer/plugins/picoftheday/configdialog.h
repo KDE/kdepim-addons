@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_PICOFTHEDAY_CONFIGDIALOG_H
-#define KORG_PLUGINS_PICOFTHEDAY_CONFIGDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -31,4 +30,3 @@ private:
     QButtonGroup *mAspectRatioGroup = nullptr;
 };
 
-#endif

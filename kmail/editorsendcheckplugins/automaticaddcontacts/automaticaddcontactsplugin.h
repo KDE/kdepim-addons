@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSPLUGIN_H
-#define AUTOMATICADDCONTACTSPLUGIN_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSend>
 
@@ -21,4 +20,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 };
 
-#endif // AUTOMATICADDCONTACTSPLUGIN_H

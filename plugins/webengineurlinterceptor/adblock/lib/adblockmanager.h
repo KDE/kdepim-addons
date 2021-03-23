@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKMANAGER_H
-#define ADBLOCKMANAGER_H
+#pragma once
 
 #include "adblocklib_export.h"
 #include <QObject>
@@ -58,4 +57,3 @@ private:
     AdBlockCustomList *mCustomList = nullptr;
 };
 }
-#endif // ADBLOCKMANAGER_H

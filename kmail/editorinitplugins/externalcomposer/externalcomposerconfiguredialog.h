@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXTERNALCOMPOSERCONFIGUREDIALOG_H
-#define EXTERNALCOMPOSERCONFIGUREDIALOG_H
+#pragma once
 
 #include <PimCommon/ConfigurePluginDialog>
 
@@ -28,4 +27,3 @@ private:
     ExternalComposerConfigureWidget *mConfigureWidget = nullptr;
 };
 
-#endif // EXTERNALCOMPOSERCONFIGUREDIALOG_H

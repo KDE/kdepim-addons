@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H
-#define VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H
+#pragma once
 
 #include <KMime/Message>
 
@@ -22,4 +21,3 @@ private:
     KMime::Message::Ptr mMessage;
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTPARSEARGUMENT_H

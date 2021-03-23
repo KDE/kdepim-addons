@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H
-#define DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <PimCommon/SimpleStringListEditor>
@@ -32,4 +31,3 @@ private:
     DKIMAuthenticationVerifiedServerSelectorWidget *const mSelector;
 };
 
-#endif // DKIMAUTHENTICATIONVERIFIEDSERVERWIDGET_H

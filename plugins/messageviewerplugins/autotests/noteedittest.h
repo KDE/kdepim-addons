@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef NOTEEDITTEST_H
-#define NOTEEDITTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -47,4 +46,3 @@ private Q_SLOTS:
     void shouldShouldEnabledSaveEditorButton();
 };
 
-#endif // NOTEEDITTEST_H

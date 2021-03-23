@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef ENTERPRISEHEADERSTYLE_H
-#define ENTERPRISEHEADERSTYLE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyle>
 
@@ -32,4 +31,3 @@ private:
 };
 }
 
-#endif // ENTERPRISEHEADERSTYLE_H

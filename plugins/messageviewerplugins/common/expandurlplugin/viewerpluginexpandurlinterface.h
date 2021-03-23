@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXPANDURLINTERFACE_H
-#define VIEWERPLUGINEXPANDURLINTERFACE_H
+#pragma once
 
 #include <MessageViewer/ViewerPluginInterface>
 #include <QUrl>
@@ -31,4 +30,3 @@ private:
     QList<QAction *> mAction;
 };
 }
-#endif // VIEWERPLUGINEXPANDURLINTERFACE_H

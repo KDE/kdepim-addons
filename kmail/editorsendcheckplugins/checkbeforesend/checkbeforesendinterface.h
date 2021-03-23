@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKBEFORESENDINTERFACE_H
-#define CHECKBEFORESENDINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 class CheckBeforeSendInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface
@@ -27,4 +26,3 @@ private:
     bool mCheckSendAttachments = false;
 };
 
-#endif // CHECKBEFORESENDINTERFACE_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMCONFIGUREPRIVATE_EXPORT_H
-#define DKIMCONFIGUREPRIVATE_EXPORT_H
+#pragma once
 
 #include "libdkimverifyconfigure_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT
 #endif
 
-#endif

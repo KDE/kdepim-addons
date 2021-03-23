@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ZOOMLABEL_H
-#define ZOOMLABEL_H
+#pragma once
 
 #include <QLabel>
 
@@ -19,4 +18,3 @@ public:
     void setZoomLabel(int value);
 };
 
-#endif // ZOOMLABEL_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTMAILWIDGET_H
-#define SELECTMAILWIDGET_H
+#pragma once
 
 #include <QWidget>
 namespace Akonadi
@@ -26,4 +25,3 @@ private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };
 
-#endif // SELECTMAILWIDGET_H

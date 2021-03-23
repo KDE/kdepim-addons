@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXTERNALCOMPOSERCONFIGUREWIDGET_H
-#define EXTERNALCOMPOSERCONFIGUREWIDGET_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInitConfigureWidget>
 #include <QWidget>
@@ -27,4 +26,3 @@ private:
     KUrlRequester *mEditorRequester = nullptr;
 };
 
-#endif // EXTERNALCOMPOSERCONFIGUREWIDGET_H

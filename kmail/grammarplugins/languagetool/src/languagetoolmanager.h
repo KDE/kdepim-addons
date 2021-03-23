@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLMANAGER_H
-#define LANGUAGETOOLMANAGER_H
+#pragma once
 
 #include "libkmaillanguagetool_export.h"
 #include <QHash>
@@ -51,4 +50,3 @@ private:
     bool mUseLocalInstance = false;
 };
 
-#endif // LANGUAGETOOLMANAGER_H

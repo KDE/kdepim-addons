@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGUREMODIFYCOLLECTIONJOB_H
-#define FOLDERCONFIGUREMODIFYCOLLECTIONJOB_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <QObject>
@@ -26,4 +25,3 @@ private:
     Akonadi::Collection mCollection;
 };
 
-#endif // FOLDERCONFIGUREMODIFYCOLLECTIONJOB_H

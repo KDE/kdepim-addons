@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRANSLATORVIEW_H
-#define TRANSLATORVIEW_H
+#pragma once
 
 #include <PimCommon/CustomToolsViewInterface>
 class KActionCollection;
@@ -29,4 +28,3 @@ private:
     KToggleAction *mAction = nullptr;
     PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
 };
-#endif // TRANSLATORVIEW_H

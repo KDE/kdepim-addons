@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEST_HEADERSTYLEMENU_GUI_H
-#define TEST_HEADERSTYLEMENU_GUI_H
+#pragma once
 
 #include <QWidget>
 class QTextEdit;
@@ -27,4 +26,3 @@ private:
     QTextEdit *mTextEdit = nullptr;
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSINTERFACE_H
-#define AUTOMATICADDCONTACTSINTERFACE_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
@@ -35,4 +34,3 @@ private:
     QHash<uint, AutomaticAddContactsSettings> mHashSettings;
 };
 
-#endif // AUTOMATICADDCONTACTSINTERFACE_H

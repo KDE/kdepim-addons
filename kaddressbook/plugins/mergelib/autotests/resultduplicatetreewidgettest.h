@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef RESULTDUPLICATETREEWIDGETTEST_H
-#define RESULTDUPLICATETREEWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -26,4 +25,3 @@ private Q_SLOTS:
     void shouldReturnJustOnList();
 };
 
-#endif // RESULTDUPLICATETREEWIDGETTEST_H

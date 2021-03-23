@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GMXIMPORTEXPORTPLUGININTERFACE_H
-#define GMXIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
@@ -30,4 +29,3 @@ private:
     void exportGMX();
 };
 
-#endif // GMXIMPORTEXPORTPLUGININTERFACE_H

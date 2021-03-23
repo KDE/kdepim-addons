@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GNUPGWKSFORMATTER_H_
-#define GNUPGWKSFORMATTER_H_
+#pragma once
 
 #include <MessageViewer/MessagePartRendererBase>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -31,4 +30,3 @@ private:
     QString render(const GnuPGWKSMessagePart &mp, WKSStatus status) const;
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTPLUGINEDITOR_H
-#define QUICKTEXTPLUGINEDITOR_H
+#pragma once
 
 #include <MessageComposer/PluginEditor>
 
@@ -28,4 +27,3 @@ public:
     Q_REQUIRED_RESULT bool canProcessKeyEvent() const override;
 };
 
-#endif

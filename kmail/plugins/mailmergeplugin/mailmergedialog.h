@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MAILMERGEDIALOG_H
-#define MAILMERGEDIALOG_H
+#pragma once
 #include "mailmerge_export.h"
 #include <QDialog>
 class QPushButton;
@@ -26,4 +25,3 @@ private:
 };
 }
 
-#endif // MAILMERGEDIALOG_H

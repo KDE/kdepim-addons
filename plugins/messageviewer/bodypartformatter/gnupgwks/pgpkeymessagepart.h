@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PGPKEYMESSAGEPART_H_
-#define PGPKEYMESSAGEPART_H_
+#pragma once
 
 #include <MimeTreeParser/MessagePart>
 
@@ -61,4 +60,3 @@ protected:
     bool mSearchRunning = false;
 };
 
-#endif

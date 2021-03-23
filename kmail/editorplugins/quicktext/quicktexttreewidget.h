@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef QUICKTEXT_QUICKTEXTTREEWIDGET_H
-#define QUICKTEXT_QUICKTEXTTREEWIDGET_H
+#pragma once
 
 #include "quicktext_export.h"
 #include <QTreeView>
@@ -45,4 +44,3 @@ private:
     QAction *mDeleteSnippetGroupAction = nullptr;
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMCONFIGURETAB_H
-#define DKIMCONFIGURETAB_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
@@ -35,4 +34,3 @@ private:
     QTabWidget *const mTabWidget;
 };
 
-#endif // DKIMCONFIGURETAB_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef ATTACHMENTLISTWIDGET_H
-#define ATTACHMENTLISTWIDGET_H
+#pragma once
 
 #include <PimCommon/SimpleStringListEditor>
 
@@ -26,4 +25,3 @@ public:
     Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
 };
 }
-#endif // ATTACHMENTLISTWIDGET_H

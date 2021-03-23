@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef UPDATECONTACTJOB_H
-#define UPDATECONTACTJOB_H
+#pragma once
 
 #include <KJob>
 
@@ -29,4 +28,3 @@ private:
     QWidget *const mParentWidget;
 };
 
-#endif // UPDATECONTACTJOB_H

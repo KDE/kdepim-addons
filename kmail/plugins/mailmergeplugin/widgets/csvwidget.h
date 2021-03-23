@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef CSVWIDGET_H
-#define CSVWIDGET_H
+#pragma once
 
 #include "mailmergeplugin_private_export.h"
 #include <QWidget>
@@ -28,4 +27,3 @@ private:
 };
 }
 
-#endif // CSVWIDGET_H

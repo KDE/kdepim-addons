@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTCONFIGUREWIDGET_H
-#define QUICKTEXTCONFIGUREWIDGET_H
+#pragma once
 
 #include "quicktext_export.h"
 #include <QWidget>
@@ -24,4 +23,3 @@ private:
     QuickTextWidget *mSnippetWidget = nullptr;
 };
 
-#endif // QUICKTEXTCONFIGUREWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXT_MANAGER_H
-#define QUICKTEXT_MANAGER_H
+#pragma once
 
 #include <QObject>
 
@@ -65,4 +64,3 @@ private:
     //@endcond
 };
 
-#endif

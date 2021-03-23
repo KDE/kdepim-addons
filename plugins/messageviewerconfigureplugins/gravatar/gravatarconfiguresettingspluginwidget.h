@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
-#define GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H
+#pragma once
 
 #include <MessageViewer/MessageViewerConfigureSettingsPluginWidget>
 class QCheckBox;
@@ -29,4 +28,3 @@ private:
     QCheckBox *mEnableGravatarSupport = nullptr;
 };
 
-#endif // GRAVATARCONFIGURESETTINGSPLUGINWIDGET_H

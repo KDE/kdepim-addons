@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRANTLEEHEADERSTYLEPLUGINTEST_H
-#define GRANTLEEHEADERSTYLEPLUGINTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -32,4 +31,3 @@ private:
     QString expectedDataLocation;
 };
 
-#endif // GRANTLEEHEADERSTYLEPLUGINTEST_H

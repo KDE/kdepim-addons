@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKBLOCKABLEITEMSJOB_H
-#define ADBLOCKBLOCKABLEITEMSJOB_H
+#pragma once
 
 #include "adblocklib_export.h"
 
@@ -71,4 +70,3 @@ struct ADBLOCKLIB_EXPORT AdBlockResult {
 }
 Q_DECLARE_TYPEINFO(AdBlock::AdBlockResult, Q_MOVABLE_TYPE);
 
-#endif // ADBLOCKBLOCKABLEITEMSJOB_H

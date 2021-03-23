@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTEWIDGET_H
-#define GRAMMALECTEWIDGET_H
+#pragma once
 
 #include "grammalectegenerateconfigoptionjob.h"
 #include <PluginEditorGrammarCustomToolsViewInterface>
@@ -29,4 +28,3 @@ private:
     GrammalecteResultWidget *mResultWidget = nullptr;
 };
 
-#endif // GRAMMALECTEWIDGET_H

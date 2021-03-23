@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CSVIMPORTEXPORTPLUGININTERFACE_H
-#define CSVIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
@@ -31,4 +30,3 @@ private:
     void importCSV();
 };
 
-#endif // CSVIMPORTEXPORTPLUGININTERFACE_H

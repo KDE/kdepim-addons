@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SENDVCARDSJOBTEST_H
-#define SENDVCARDSJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldChangeExportVersion();
 };
 
-#endif // SENDVCARDSJOBTEST_H

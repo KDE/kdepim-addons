@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKBEFORESENDUPDATESMTPDIALOG_H
-#define CHECKBEFORESENDUPDATESMTPDIALOG_H
+#pragma once
 
 #include <QDialog>
 class QCheckBox;
@@ -22,4 +21,3 @@ private:
     QCheckBox *mChangeSmtp = nullptr;
 };
 
-#endif // CHECKBEFORESENDUPDATESMTPDIALOG_H

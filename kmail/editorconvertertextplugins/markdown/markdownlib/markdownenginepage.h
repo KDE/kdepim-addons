@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MARKDOWNENGINEPAGE_H
-#define MARKDOWNENGINEPAGE_H
+#pragma once
 
 #include <QWebEnginePage>
 
@@ -20,4 +19,3 @@ protected:
     bool acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame) override;
 };
 
-#endif // MARKDOWNENGINEPAGE_H

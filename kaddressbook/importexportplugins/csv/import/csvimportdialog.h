@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CSVIMPORTDIALOG_H
-#define CSVIMPORTDIALOG_H
+#pragma once
 
 #include <KAddressBookImportExport/ContactFields>
 
@@ -81,4 +80,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif

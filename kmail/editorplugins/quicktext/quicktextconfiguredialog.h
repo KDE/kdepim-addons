@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTCONFIGUREDIALOG_H
-#define QUICKTEXTCONFIGUREDIALOG_H
+#pragma once
 #include "quicktext_export.h"
 #include <QDialog>
 class QuickTextConfigureWidget;
@@ -28,4 +27,3 @@ private:
     QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
 };
 
-#endif // QUICKTEXTCONFIGUREDIALOG_H

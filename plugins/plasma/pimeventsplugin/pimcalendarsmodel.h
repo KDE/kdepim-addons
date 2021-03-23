@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef PIMCALENDARSMODEL_H
-#define PIMCALENDARSMODEL_H
+#pragma once
 
 #include <QSet>
 #include <QSortFilterProxyModel>
@@ -39,4 +38,3 @@ private:
     QSet<qint64> mEnabledCalendars;
 };
 
-#endif

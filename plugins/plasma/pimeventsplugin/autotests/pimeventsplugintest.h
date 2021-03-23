@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef PIMEVENTSPLUGINTEST_H
-#define PIMEVENTSPLUGINTEST_H
+#pragma once
 
 #include <KCalendarCore/Event>
 #include <QMultiHash>
@@ -38,4 +37,3 @@ private:
     Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
 };
 
-#endif

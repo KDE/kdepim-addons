@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKCREATEFILTERDIALOG_H
-#define ADBLOCKCREATEFILTERDIALOG_H
+#pragma once
 
 #include "adblockblockableitemswidget.h"
 
@@ -42,4 +41,3 @@ private:
 };
 }
 
-#endif // ADBLOCKCREATEFILTERDIALOG_H

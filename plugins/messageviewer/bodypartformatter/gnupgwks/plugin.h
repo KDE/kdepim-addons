@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GNUPGWKSPLUGIN_H
-#define GNUPGWKSPLUGIN_H
+#pragma once
 
 #include <MessageViewer/MessagePartRenderPlugin>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -24,4 +23,3 @@ public:
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override;
 };
 
-#endif

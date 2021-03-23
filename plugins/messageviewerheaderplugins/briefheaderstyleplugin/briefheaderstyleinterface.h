@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BRIEFHEADERSTYLEINTERFACE_H
-#define BRIEFHEADERSTYLEINTERFACE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyleInterface>
 
@@ -24,4 +23,3 @@ public:
 };
 }
 
-#endif // BRIEFHEADERSTYLEINTERFACE_H

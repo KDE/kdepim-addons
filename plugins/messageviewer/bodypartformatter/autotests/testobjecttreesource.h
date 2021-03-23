@@ -5,8 +5,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef TESTOBJECTTREESOURCE_H
-#define TESTOBJECTTREESOURCE_H
+#pragma once
 
 #include <MessageViewer/AttachmentStrategy>
 #include <MessageViewer/CSSHelperBase>
@@ -112,4 +111,3 @@ private:
     bool mShowSignatureDetails;
 };
 
-#endif

@@ -13,8 +13,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_HEBREW_PARSHA_H
-#define KORG_PLUGINS_HEBREW_PARSHA_H
+#pragma once
 
 #include <QString>
 
@@ -32,4 +31,3 @@ public:
     static QString findParshaName(int dayNumber, int kvia, bool isLeapYear, bool useIsraelSettings);
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef STANDARDHEADERSTRATEGY_H
-#define STANDARDHEADERSTRATEGY_H
+#pragma once
 
 #include <MessageViewer/HeaderStrategy>
 #include <QStringList>
@@ -43,4 +42,3 @@ private:
     const QStringList mHeadersToDisplay;
 };
 }
-#endif // STANDARDHEADERSTRATEGY_H

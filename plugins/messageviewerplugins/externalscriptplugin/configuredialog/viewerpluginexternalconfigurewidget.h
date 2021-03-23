@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
-#define VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H
+#pragma once
 
 #include "../viewerpluginexternalscriptsloadjob.h"
 #include <QWidget>
@@ -37,4 +36,3 @@ private:
     QPushButton *const mModifyScript;
 };
 
-#endif // VIEWERPLUGINEXTERNALCONFIGUREWIDGET_H

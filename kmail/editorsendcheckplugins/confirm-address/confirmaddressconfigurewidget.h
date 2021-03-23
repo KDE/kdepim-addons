@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSCONFIGUREWIDGET_H
-#define CONFIRMADDRESSCONFIGUREWIDGET_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 #include <QWidget>
@@ -26,4 +25,3 @@ private:
     ConfirmAddressConfigureTab *mConfirmAddressConfigureTab = nullptr;
 };
 
-#endif // CONFIRMADDRESSCONFIGUREWIDGET_H

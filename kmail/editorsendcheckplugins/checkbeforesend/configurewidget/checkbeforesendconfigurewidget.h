@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKBEFORESENDCONFIGUREWIDGET_H
-#define CHECKBEFORESENDCONFIGUREWIDGET_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 #include <QWidget>
@@ -29,4 +28,3 @@ private:
     QCheckBox *mCheckSendAttachments = nullptr;
 };
 
-#endif // CHECKBEFORESENDCONFIGUREWIDGET_H

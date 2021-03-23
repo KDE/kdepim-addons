@@ -8,8 +8,7 @@
     SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef BRIEFHEADERSTYLE_H
-#define BRIEFHEADERSTYLE_H
+#pragma once
 
 #include "headerstyle_util.h"
 #include <MessageViewer/HeaderStyle>
@@ -39,4 +38,3 @@ private:
 };
 }
 
-#endif // BRIEFHEADERSTYLE_H

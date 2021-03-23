@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTLOSEINFORMATIONWARNING_H
-#define MERGECONTACTLOSEINFORMATIONWARNING_H
+#pragma once
 
 #include "kaddressbookmergelib_export.h"
 #include <KMessageWidget>
@@ -28,4 +27,3 @@ private:
 };
 }
 
-#endif // MERGECONTACTLOSEINFORMATIONWARNING_H

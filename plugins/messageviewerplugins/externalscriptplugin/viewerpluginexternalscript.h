@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPT_H
-#define VIEWERPLUGINEXTERNALSCRIPT_H
+#pragma once
 
 #include <MessageViewer/ViewerPlugin>
 #include <QVariant>
@@ -24,4 +23,3 @@ public:
     bool hasConfigureDialog() const override;
 };
 }
-#endif // VIEWERPLUGINEXTERNALSCRIPT_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTSHORTURLCONFIGUREDIALOG_H
-#define INSERTSHORTURLCONFIGUREDIALOG_H
+#pragma once
 
 #include <QDialog>
 class InsertShorturlConfigureWidget;
@@ -22,4 +21,3 @@ private:
     InsertShorturlConfigureWidget *const mInsertShortUrlWidget;
 };
 
-#endif // INSERTSHORTURLCONFIGUREDIALOG_H

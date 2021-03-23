@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ATTENDEESELECTOR_H_H
-#define ATTENDEESELECTOR_H_H
+#pragma once
 
 #include "ui_attendeeselector.h"
 #include <QDialog>
@@ -31,4 +30,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif

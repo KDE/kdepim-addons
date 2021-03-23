@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAVATARUPDATEWIDGET_H
-#define GRAVATARUPDATEWIDGET_H
+#pragma once
 
 #include <QUrl>
 #include <QWidget>
@@ -49,4 +48,3 @@ private:
 };
 }
 
-#endif // GRAVATARUPDATEWIDGET_H

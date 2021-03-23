@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTEDITTEST_H
-#define EVENTEDITTEST_H
+#pragma once
 #include <QObject>
 
 class EventEditTest : public QObject
@@ -38,4 +37,3 @@ private Q_SLOTS:
     void shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty();
 };
 
-#endif // EVENTEDITTEST_H

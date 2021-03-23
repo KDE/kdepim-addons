@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSPLUGIN_H
-#define CONFIRMADDRESSPLUGIN_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSend>
 #include <QVariant>
@@ -23,4 +22,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 };
 
-#endif // CONFIRMADDRESSPLUGIN_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINCREATENOTEINTERFACE_H
-#define VIEWERPLUGINCREATENOTEINTERFACE_H
+#pragma once
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
@@ -43,4 +42,3 @@ private:
     QList<QAction *> mAction;
 };
 }
-#endif // VIEWERPLUGINCREATENOTEINTERFACE_H

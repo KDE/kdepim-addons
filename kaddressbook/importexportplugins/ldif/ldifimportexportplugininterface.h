@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LDIFIMPORTEXPORTPLUGININTERFACE_H
-#define LDIFIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
 
@@ -29,4 +28,3 @@ private:
     void importLdifFile(const QString &fileName);
 };
 
-#endif // LDIFIMPORTEXPORTPLUGININTERFACE_H

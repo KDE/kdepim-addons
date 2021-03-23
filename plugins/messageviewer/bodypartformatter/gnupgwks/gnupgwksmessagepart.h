@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef GNUPGWKSMESSAGEPART_H_
-#define GNUPGWKSMESSAGEPART_H_
+#pragma once
 
 #include <MimeTreeParser/MessagePart>
 
@@ -55,4 +54,3 @@ protected:
     ConfirmationType mType = UnknownType;
 };
 
-#endif

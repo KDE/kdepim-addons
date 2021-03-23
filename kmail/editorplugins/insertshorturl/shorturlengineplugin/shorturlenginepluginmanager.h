@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHORTURLENGINEPLUGINMANAGER_H
-#define SHORTURLENGINEPLUGINMANAGER_H
+#pragma once
 
 #include "shorturl_export.h"
 #include <QObject>
@@ -26,4 +25,3 @@ private:
     ShortUrlEnginePluginManagerPrivate *const d;
 };
 
-#endif // SHORTURLENGINEPLUGINMANAGER_H

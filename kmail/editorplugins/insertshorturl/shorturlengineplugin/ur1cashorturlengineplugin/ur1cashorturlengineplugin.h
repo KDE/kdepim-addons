@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef UR1CASHORTURLENGINEPLUGIN_H
-#define UR1CASHORTURLENGINEPLUGIN_H
+#pragma once
 
 #include "../shorturlengineplugin.h"
 
@@ -22,4 +21,3 @@ public:
     QString engineName() const override;
 };
 
-#endif // UR1CASHORTURLENGINEPLUGIN_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSCHECKJOB_H
-#define CONFIRMADDRESSCHECKJOB_H
+#pragma once
 
 #include <QString>
 #include <QStringList>
@@ -35,4 +34,3 @@ private:
     bool mRejectedDomain = false;
 };
 
-#endif // CONFIRMADDRESSCHECKJOB_H

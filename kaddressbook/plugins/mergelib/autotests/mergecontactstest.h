@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSTEST_H
-#define MERGECONTACTSTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -85,4 +84,3 @@ private Q_SLOTS:
     void checkNeedManualSelectionWithBirthday();
 };
 
-#endif // MERGECONTACTSTEST_H

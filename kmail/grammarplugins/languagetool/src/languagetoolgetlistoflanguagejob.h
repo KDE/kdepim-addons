@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
-#define LANGUAGETOOLGETLISTOFLANGUAGEJOB_H
+#pragma once
 
 #include "libkmaillanguagetool_export.h"
 #include <QNetworkRequest>
@@ -46,4 +45,3 @@ private:
     QString mUrl;
 };
 
-#endif // LANGUAGETOOLGETLISTOFLANGUAGEJOB_H

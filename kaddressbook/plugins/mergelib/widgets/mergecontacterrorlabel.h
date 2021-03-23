@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTERRORLABEL_H
-#define MERGECONTACTERRORLABEL_H
+#pragma once
 
 #include <QLabel>
 
@@ -25,4 +24,3 @@ public:
 };
 }
 
-#endif // MERGECONTACTERRORLABEL_H

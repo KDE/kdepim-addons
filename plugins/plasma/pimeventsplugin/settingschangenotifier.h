@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef SETTINGSCHANGENOTIFIER_H
-#define SETTINGSCHANGENOTIFIER_H
+#pragma once
 
 #include <QObject>
 
@@ -28,4 +27,3 @@ private:
     explicit SettingsChangeNotifier(QObject *parent = nullptr);
 };
 
-#endif

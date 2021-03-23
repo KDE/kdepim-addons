@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKDUPLICATEEMAILSJOB_H
-#define CHECKDUPLICATEEMAILSJOB_H
+#pragma once
 
 #include <QMap>
 #include <QStringList>
@@ -26,4 +25,3 @@ private:
     QMap<QString, int> mResult;
 };
 
-#endif // CHECKDUPLICATEEMAILSJOB_H

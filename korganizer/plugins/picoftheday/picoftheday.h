@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_PICOFTHEDAY_PICOFTHEDAY_H
-#define KORG_PLUGINS_PICOFTHEDAY_PICOFTHEDAY_H
+#pragma once
 
 #include <EventViews/CalendarDecoration>
 using namespace EventViews::CalendarDecoration;
@@ -94,4 +93,3 @@ private:
     QTimer *mTimer = nullptr;
 };
 
-#endif

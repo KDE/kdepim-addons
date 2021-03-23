@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef ADBLOCKRESULTTEST_H
-#define ADBLOCKRESULTTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -20,4 +19,3 @@ private Q_SLOTS:
     void shouldBeValid();
 };
 
-#endif // ADBLOCKRESULTTEST_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKLISTWIDGET_H
-#define ADBLOCKLISTWIDGET_H
+#pragma once
 
 #include <QListWidget>
 
@@ -31,4 +30,3 @@ private:
 };
 }
 
-#endif // ADBLOCKLISTWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
-#define AUTOMATICADDCONTACTSConfigureWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 class AutomaticAddContactsConfigureWidget;
@@ -19,4 +18,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // AUTOMATICADDCONTACTSConfigureWIDGETTEST_H

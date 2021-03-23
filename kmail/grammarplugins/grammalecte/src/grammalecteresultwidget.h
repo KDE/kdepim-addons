@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTERESULTWIDGET_H
-#define GRAMMALECTERESULTWIDGET_H
+#pragma once
 
 #include "grammalectegrammarerror.h"
 #include "grammalecteresultjob.h"
@@ -28,4 +27,3 @@ private:
     void slotError(GrammalecteResultJob::ErrorType error);
 };
 
-#endif // GRAMMALECTERESULTWIDGET_H

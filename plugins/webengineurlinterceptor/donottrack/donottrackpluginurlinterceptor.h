@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DONOTTRACKPLUGINURLINTERCEPTOR_H
-#define DONOTTRACKPLUGINURLINTERCEPTOR_H
+#pragma once
 
 #include <QVariant>
 #include <WebEngineViewer/NetworkPluginUrlInterceptor>
@@ -23,4 +22,3 @@ public:
     WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 };
 
-#endif // DONOTTRACKPLUGINURLINTERCEPTOR_H

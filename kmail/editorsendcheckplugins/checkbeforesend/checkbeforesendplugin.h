@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKBEFORESENDPLUGIN_H
-#define CHECKBEFORESENDPLUGIN_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSend>
 
@@ -22,4 +21,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 };
 
-#endif // CHECKBEFORESENDPLUGIN_H

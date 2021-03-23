@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERSETTINGFILTERPROXYMODEL_H
-#define FOLDERSETTINGFILTERPROXYMODEL_H
+#pragma once
 
 #include <AkonadiCore/Collection>
 #include <QSortFilterProxyModel>
@@ -28,4 +27,3 @@ private:
     Akonadi::Collection::List mListCollections;
 };
 
-#endif // FOLDERSETTINGFILTERPROXYMODEL_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKADDSUBSCRIPTIONDIALOG_H
-#define ADBLOCKADDSUBSCRIPTIONDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -30,4 +29,3 @@ private:
 };
 }
 
-#endif // ADBLOCKADDSUBSCRIPTIONDIALOG_H

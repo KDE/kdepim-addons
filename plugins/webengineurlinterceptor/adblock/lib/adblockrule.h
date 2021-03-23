@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later OR BSD-3-Clause
 */
 
-#ifndef ADBLOCKRULE_H
-#define ADBLOCKRULE_H
+#pragma once
 
 #include "adblockregexp.h"
 #include <QStringList>
@@ -146,4 +145,3 @@ private:
     friend class AdBlockSubscription;
 };
 }
-#endif // ADBLOCKRULE_H

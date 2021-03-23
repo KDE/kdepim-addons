@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINCREATETODO_H
-#define VIEWERPLUGINCREATETODO_H
+#pragma once
 
 #include <MessageViewer/ViewerPlugin>
 #include <QVariant>
@@ -21,4 +20,3 @@ public:
     QString viewerPluginName() const override;
 };
 }
-#endif // VIEWERPLUGINCREATETODO_H

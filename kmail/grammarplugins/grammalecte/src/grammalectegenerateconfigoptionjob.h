@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTEGENERATECONFIGOPTIONJOB_H
-#define GRAMMALECTEGENERATECONFIGOPTIONJOB_H
+#pragma once
 
 #include "libgrammalect_private_export.h"
 #include <QObject>
@@ -52,4 +51,3 @@ private:
     QProcess *mProcess = nullptr;
 };
 Q_DECLARE_TYPEINFO(GrammalecteGenerateConfigOptionJob::Option, Q_MOVABLE_TYPE);
-#endif // GRAMMALECTEGENERATECONFIGOPTIONJOB_H

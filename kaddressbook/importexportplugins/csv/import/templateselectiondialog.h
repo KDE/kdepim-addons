@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEMPLATESELECTIONDIALOG_H
-#define TEMPLATESELECTIONDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -29,4 +28,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif

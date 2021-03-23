@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TRIOPABSHORTURLENGINEINTERFACE_H
-#define TRIOPABSHORTURLENGINEINTERFACE_H
+#pragma once
 
 #include "../../shorturlengineplugin/shorturlengineinterface.h"
 
@@ -24,4 +23,3 @@ private:
     void slotShortUrlFinished(QNetworkReply *reply);
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTDATETIMEWIDGET_H
-#define EVENTDATETIMEWIDGET_H
+#pragma once
 
 #include <QDateTime>
 #include <QWidget>
@@ -40,4 +39,3 @@ private:
 };
 }
 
-#endif // EVENTDATETIMEWIDGET_H

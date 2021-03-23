@@ -8,8 +8,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later OR BSD-3-Clause
 */
 
-#ifndef ADBLOCKSUBSCRIPTION_H
-#define ADBLOCKSUBSCRIPTION_H
+#pragma once
 
 #include <QUrl>
 #include <QVector>
@@ -107,4 +106,3 @@ private:
 };
 }
 
-#endif // ADBLOCKSUBSCRIPTION_H

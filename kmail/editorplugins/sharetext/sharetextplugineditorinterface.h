@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SHARETEXTPLUGINEDITORINTERFACE_H
-#define SHARETEXTPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInterface>
 
@@ -20,4 +19,3 @@ public:
     void exec() override;
 };
 
-#endif

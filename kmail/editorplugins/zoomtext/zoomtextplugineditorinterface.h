@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ZOOMTEXTPLUGINEDITORINTERFACE_H
-#define ZOOMTEXTPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInterface>
 class ZoomLabel;
@@ -40,4 +39,3 @@ private:
     ZoomLabel *mZoomLabelWidget = nullptr;
 };
 
-#endif

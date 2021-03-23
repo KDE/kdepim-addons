@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
-#define TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H
+#pragma once
 
 #include <QVariant>
 #include <TemplateParser/TemplateParserEmailAddressRequesterBase>
@@ -29,4 +28,3 @@ private:
     Akonadi::EmailAddressRequester *const mEmailAddressRequester;
 };
 
-#endif // TEMPLATEPARSEREMAILADDRESSREQUESTERAKONADI_H

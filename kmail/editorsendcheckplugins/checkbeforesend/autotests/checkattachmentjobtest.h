@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKATTACHMENTJOBTEST_H
-#define CHECKATTACHMENTJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void shouldRemoveDuplicatedEmails_data();
 };
 
-#endif // CHECKATTACHMENTJOBTEST_H

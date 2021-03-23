@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef BRIEFHEADERSTRATEGY_H
-#define BRIEFHEADERSTRATEGY_H
+#pragma once
 
 #include <MessageViewer/HeaderStrategy>
 #include <QStringList>
@@ -40,4 +39,3 @@ private:
     const QStringList mHeadersToDisplay;
 };
 }
-#endif // BRIEFHEADERSTRATEGY_H

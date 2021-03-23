@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSDIALOG_H
-#define CONFIRMADDRESSDIALOG_H
+#pragma once
 
 #include <QDialog>
 class ConfirmAddressWidget;
@@ -32,4 +31,3 @@ private:
     QPushButton *mWhiteListEmailsButton = nullptr;
 };
 
-#endif // CONFIRMADDRESSDIALOG_H

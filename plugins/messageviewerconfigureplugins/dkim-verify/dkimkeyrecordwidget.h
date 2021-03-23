@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMKEYRECORDWIDGET_H
-#define DKIMKEYRECORDWIDGET_H
+#pragma once
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
 namespace MessageViewer
@@ -29,4 +28,3 @@ private:
     MessageViewer::DKIMManagerKeyWidget *const mManagerKeyWidget;
 };
 
-#endif // DKIMKEYRECORDWIDGET_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSJOB_H
-#define MERGECONTACTSJOB_H
+#pragma once
 #include <QObject>
 
 #include <AkonadiCore/Collection>
@@ -45,4 +44,3 @@ private:
     KContacts::Addressee mNewContact;
 };
 }
-#endif // MERGECONTACTSJOB_H

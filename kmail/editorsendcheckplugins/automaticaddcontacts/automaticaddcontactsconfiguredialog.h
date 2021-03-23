@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
-#define AUTOMATICADDCONTACTSCONFIGUREDIALOG_H
+#pragma once
 
 #include <PimCommon/ConfigurePluginDialog>
 
@@ -28,4 +27,3 @@ private:
     AutomaticAddContactsConfigureWidget *mConfigureWidget = nullptr;
 };
 
-#endif // AUTOMATICADDCONTACTSCONFIGUREDIALOG_H

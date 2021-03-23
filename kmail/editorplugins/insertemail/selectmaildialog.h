@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTMAILDIALOG_H
-#define SELECTMAILDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -29,4 +28,3 @@ private:
     SelectMailWidget *mSelectMailWidget = nullptr;
 };
 
-#endif // SELECTMAILDIALOG_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
-#define ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H
+#pragma once
 
 #include "adblocklib_export.h"
 #include <WebEngineViewer/NetworkPluginUrlInterceptorConfigureWidget>
@@ -28,4 +27,3 @@ private:
     AdBlock::AdBlockSettingWidget *mConfigureWidget = nullptr;
 };
 }
-#endif // ADBLOCKPLUGINURLINTERCEPTORCONFIGUREWIDGET_H

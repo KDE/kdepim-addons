@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef EVENTMODEL_H
-#define EVENTMODEL_H
+#pragma once
 
 #include <Akonadi/Calendar/CalendarBase>
 #include <QVector>
@@ -44,4 +43,3 @@ private:
     QMap<Akonadi::Collection::Id, KJob *> mFetchJobs;
 };
 
-#endif

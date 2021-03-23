@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef GRAVATARUPDATEWIDGETTEST_H
-#define GRAVATARUPDATEWIDGETTEST_H
+#pragma once
 #include <QObject>
 
 class GravatarUpdateWidgetTest : public QObject
@@ -19,4 +18,3 @@ private Q_SLOTS:
     void shouldAffectEmail();
 };
 
-#endif // GRAVATARUPDATEWIDGETTEST_H

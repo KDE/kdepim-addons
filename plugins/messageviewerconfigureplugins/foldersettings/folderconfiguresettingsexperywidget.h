@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSEXPERYWIDGET_H
-#define FOLDERCONFIGURESETTINGSEXPERYWIDGET_H
+#pragma once
 
 #include "folderconfiguresettingspagebase.h"
 #include <AkonadiCore/Collection>
@@ -25,4 +24,3 @@ private:
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
 
-#endif // FOLDERCONFIGURESETTINGSEXPERYWIDGET_H

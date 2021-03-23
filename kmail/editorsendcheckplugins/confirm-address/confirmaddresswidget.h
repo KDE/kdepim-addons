@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSWIDGET_H
-#define CONFIRMADDRESSWIDGET_H
+#pragma once
 
 #include <QWidget>
 class QListWidget;
@@ -30,4 +29,3 @@ private:
     QListWidget *mListEmails = nullptr;
 };
 
-#endif // CONFIRMADDRESSWIDGET_H

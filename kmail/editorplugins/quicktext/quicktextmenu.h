@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTMENU_H
-#define QUICKTEXTMENU_H
+#pragma once
 
 #include "quicktext_export.h"
 #include <MessageComposer/ConvertSnippetVariablesUtil>
@@ -37,4 +36,3 @@ private:
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
 };
 
-#endif // QUICKTEXTMENU_H

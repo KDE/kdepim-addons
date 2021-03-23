@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSPRIVATE_EXPORT_H
-#define FOLDERCONFIGURESETTINGSPRIVATE_EXPORT_H
+#pragma once
 
 #include "libexpireaccounttrashfolderconfig_export.h"
 
@@ -18,4 +17,3 @@
 #define LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT
 #endif
 
-#endif

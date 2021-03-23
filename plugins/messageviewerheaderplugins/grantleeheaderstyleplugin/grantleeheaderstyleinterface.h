@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRANTLEEHEADERSTYLEINTERFACE_H
-#define GRANTLEEHEADERSTYLEINTERFACE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyleInterface>
 
@@ -36,4 +35,3 @@ private:
 };
 }
 
-#endif // GRANTLEEHEADERSTYLEINTERFACE_H

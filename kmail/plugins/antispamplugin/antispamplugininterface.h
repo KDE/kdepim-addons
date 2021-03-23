@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ANTISPAMPLUGININTERFACE_H
-#define ANTISPAMPLUGININTERFACE_H
+#pragma once
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
@@ -22,4 +21,3 @@ private:
     void slotActivated();
 };
 
-#endif // ANTISPAMPLUGININTERFACE_H

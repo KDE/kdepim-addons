@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSWIDGETTEST_H
-#define CONFIRMADDRESSWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -24,4 +23,3 @@ private Q_SLOTS:
     void shouldGetWhileListEmails();
 };
 
-#endif // CONFIRMADDRESSWIDGETTEST_H

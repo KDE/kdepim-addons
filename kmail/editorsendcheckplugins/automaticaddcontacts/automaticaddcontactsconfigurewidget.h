@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
-#define AUTOMATICADDCONTACTSCONFIGUREWIDGET_H
+#pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
 #include <QWidget>
@@ -25,4 +24,3 @@ private:
     AutomaticAddContactsConfigureTab *mConfigureTab = nullptr;
 };
 
-#endif // AUTOMATICADDCONTACTSCONFIGUREWIDGET_H

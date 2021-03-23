@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef FOLDERCONFIGURESETTINGSPLUGIN_H
-#define FOLDERCONFIGURESETTINGSPLUGIN_H
+#pragma once
 
 #include <MessageViewer/MessageViewerConfigureSettingsPlugin>
 
@@ -20,4 +19,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
 };
 
-#endif // FOLDERCONFIGURESETTINGSPLUGIN_H

@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef MAILMERGEWIDGETTEST_H
-#define MAILMERGEWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -22,4 +21,3 @@ private Q_SLOTS:
     void shouldChangeStackedWidgetIndexWhenChangeComboboxIndex();
 };
 
-#endif // MAILMERGEWIDGETTEST_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITINERARYMEMENTO_H
-#define ITINERARYMEMENTO_H
+#pragma once
 
 #include <MimeTreeParser/BodyPart>
 
@@ -96,4 +95,3 @@ private:
     std::vector<DocumentData> m_docs;
 };
 
-#endif // ITINERARYMEMENTO_H

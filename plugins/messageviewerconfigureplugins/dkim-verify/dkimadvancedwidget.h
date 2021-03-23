@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DKIMADVANCEDWIDGET_H
-#define DKIMADVANCEDWIDGET_H
+#pragma once
 
 #include "dkimconfigure_private_export.h"
 #include <QWidget>
@@ -29,4 +28,3 @@ private:
     QComboBox *mSmallKeyPolicy = nullptr;
 };
 
-#endif // DKIMADVANCEDWIDGET_H

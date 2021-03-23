@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPWIDGETTEST_H
-#define SELECTIMAPWIDGETTEST_H
+#pragma once
 
 #include <KSieveUi/AbstractMoveImapFolderWidget>
 #include <QWidget>
@@ -28,4 +27,3 @@ public:
     ~SelectImapWidgetTest() override;
 };
 
-#endif // SELECTIMAPWIDGETTEST_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EVENTEDIT_H
-#define EVENTEDIT_H
+#pragma once
 
 #include <QWidget>
 
@@ -73,4 +72,3 @@ private:
 };
 }
 
-#endif // EVENTEDIT_H

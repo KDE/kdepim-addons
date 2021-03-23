@@ -5,8 +5,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef DATEPARSER_H
-#define DATEPARSER_H
+#pragma once
 
 #include <QDateTime>
 #include <QString>
@@ -38,4 +37,3 @@ private:
     QString mPattern;
 };
 
-#endif

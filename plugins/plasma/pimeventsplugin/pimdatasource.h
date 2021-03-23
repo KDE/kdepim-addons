@@ -5,8 +5,7 @@
  *
  */
 
-#ifndef PIMDATASOURCE_H
-#define PIMDATASOURCE_H
+#pragma once
 
 #include <KCalendarCore/Incidence>
 
@@ -27,4 +26,3 @@ public:
     virtual QString calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const = 0;
 };
 
-#endif

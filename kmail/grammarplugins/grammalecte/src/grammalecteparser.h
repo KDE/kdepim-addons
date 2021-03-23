@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAMMALECTEPARSER_H
-#define GRAMMALECTEPARSER_H
+#pragma once
 
 #include "grammalectegrammarerror.h"
 #include "libgrammalect_private_export.h"
@@ -19,4 +18,3 @@ public:
     Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
 
-#endif // GRAMMALECTEPARSER_H

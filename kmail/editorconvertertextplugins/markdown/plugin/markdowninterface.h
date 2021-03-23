@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNINTERFACE_H
-#define MARKDOWNINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorConvertTextInterface>
 #include <QObject>
@@ -57,4 +56,3 @@ private:
     MessageComposer::StatusBarLabelToggledState *mStatusBarLabel = nullptr;
 };
 
-#endif // MARKDOWNINTERFACE_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef DONOTTRACKINTERCEPTORINTERFACE_H
-#define DONOTTRACKINTERCEPTORINTERFACE_H
+#pragma once
 
 #include <WebEngineViewer/NetworkPluginUrlInterceptorInterface>
 class DoNotTrackInterceptorInterface : public WebEngineViewer::NetworkPluginUrlInterceptorInterface
@@ -18,4 +17,3 @@ public:
     bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
 };
 
-#endif // DONOTTRACKINTERCEPTORINTERFACE_H

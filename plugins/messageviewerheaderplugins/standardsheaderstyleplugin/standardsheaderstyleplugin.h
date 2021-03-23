@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef STANDARDSHEADERSTYLEPLUGIN_H
-#define STANDARDSHEADERSTYLEPLUGIN_H
+#pragma once
 
 #include <MessageViewer/HeaderStylePlugin>
 
@@ -30,4 +29,3 @@ private:
     HeaderStrategy *const mHeaderStrategy;
 };
 }
-#endif // STANDARDSHEADERSTYLEPLUGIN_H

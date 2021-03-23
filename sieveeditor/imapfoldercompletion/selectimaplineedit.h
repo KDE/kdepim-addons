@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPLINEEDIT_H
-#define SELECTIMAPLINEEDIT_H
+#pragma once
 
 #include <QLineEdit>
 namespace KSieveUi
@@ -26,4 +25,3 @@ private:
     QCompleter *mCompleter = nullptr;
 };
 
-#endif // SELECTIMAPLINEEDIT_H

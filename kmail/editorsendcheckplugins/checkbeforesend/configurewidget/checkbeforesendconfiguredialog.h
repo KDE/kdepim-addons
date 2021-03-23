@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CHECKBEFORESENDCONFIGUREDIALOG_H
-#define CHECKBEFORESENDCONFIGUREDIALOG_H
+#pragma once
 
 #include <PimCommon/ConfigurePluginDialog>
 class CheckBeforeSendConfigureWidget;
@@ -27,4 +26,3 @@ private:
     CheckBeforeSendConfigureWidget *mConfigureWidget = nullptr;
 };
 
-#endif // CHECKBEFORESENDCONFIGUREDIALOG_H

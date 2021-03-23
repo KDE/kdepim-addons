@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H
-#define VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -26,4 +25,3 @@ private Q_SLOTS:
     void shouldNotLoadTwoSameNameDesktopFile();
 };
 
-#endif // VIEWERPLUGINEXTERNALSCRIPTSLOADJOBTEST_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef PGPKEYFORMATTER_H_
-#define PGPKEYFORMATTER_H_
+#pragma once
 
 #include <MessageViewer/MessagePartRendererBase>
 #include <MimeTreeParser/BodyPartFormatter>
@@ -24,4 +23,3 @@ private:
     QString render(const PgpKeyMessagePart &mp) const;
 };
 
-#endif

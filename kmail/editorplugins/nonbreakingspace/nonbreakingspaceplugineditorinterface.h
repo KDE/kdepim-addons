@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef NONBREAKINGSPACEPLUGINEDITORINTERFACE_H
-#define NONBREAKINGSPACEPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInterface>
 
@@ -23,4 +22,3 @@ private Q_SLOTS:
     void slotActivated();
 };
 
-#endif

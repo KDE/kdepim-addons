@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FANCYHEADERSTYLEINTERFACE_H
-#define FANCYHEADERSTYLEINTERFACE_H
+#pragma once
 
 #include <MessageViewer/HeaderStyleInterface>
 
@@ -23,4 +22,3 @@ public:
 };
 }
 
-#endif // FANCYHEADERSTYLEINTERFACE_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINTRANSLATORINTERFACE_H
-#define VIEWERPLUGINTRANSLATORINTERFACE_H
+#pragma once
 
 #include <MessageViewer/ViewerPluginInterface>
 class KActionCollection;
@@ -34,4 +33,3 @@ private:
     PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
 };
 }
-#endif // VIEWERPLUGINTRANSLATORINTERFACE_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSWIDGET_H
-#define FOLDERCONFIGURESETTINGSWIDGET_H
+#pragma once
 
 #include "folderconfiguresettings_private_export.h"
 #include <QWidget>
@@ -28,4 +27,3 @@ private:
     QSplitter *const mSplitter;
 };
 
-#endif // FOLDERCONFIGURESETTINGSWIDGET_H

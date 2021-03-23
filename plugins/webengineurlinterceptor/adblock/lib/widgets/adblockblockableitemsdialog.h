@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKBLOCKABLEITEMSDIALOG_H
-#define ADBLOCKBLOCKABLEITEMSDIALOG_H
+#pragma once
 
 #include "adblocklib_export.h"
 #include <QDialog>
@@ -31,4 +30,3 @@ private:
     AdBlockBlockableItemsWidget *mBlockableItems = nullptr;
 };
 }
-#endif // ADBLOCKBLOCKABLEITEMSDIALOG_H

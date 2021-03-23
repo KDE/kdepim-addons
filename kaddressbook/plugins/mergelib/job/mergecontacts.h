@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTS_H
-#define MERGECONTACTS_H
+#pragma once
 
 #include <AkonadiCore/Item>
 #include <KContacts/Addressee>
@@ -62,4 +61,3 @@ private:
 };
 }
 
-#endif // MERGECONTACTS_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCREATEIMAGEWIDGET_H
-#define MARKDOWNCREATEIMAGEWIDGET_H
+#pragma once
 
 #include "markdownlib_private_export.h"
 #include <QWidget>
@@ -37,4 +36,3 @@ private:
     QSpinBox *mHeight = nullptr;
 };
 
-#endif // MARKDOWNCREATEIMAGEWIDGET_H

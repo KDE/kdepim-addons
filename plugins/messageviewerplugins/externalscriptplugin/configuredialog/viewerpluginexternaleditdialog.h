@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALEDITDIALOG_H
-#define VIEWERPLUGINEXTERNALEDITDIALOG_H
+#pragma once
 
 #include <QDialog>
 
@@ -34,4 +33,3 @@ private:
     QPushButton *mOkButton = nullptr;
 };
 
-#endif // VIEWERPLUGINEXTERNALEDITDIALOG_H

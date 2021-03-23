@@ -7,8 +7,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef KORG_PLUGINS_HEBREW_HEBREW_H
-#define KORG_PLUGINS_HEBREW_HEBREW_H
+#pragma once
 
 #include <EventViews/CalendarDecoration>
 
@@ -42,4 +41,3 @@ public:
     }
 };
 
-#endif

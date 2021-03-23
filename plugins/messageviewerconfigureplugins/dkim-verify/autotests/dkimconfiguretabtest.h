@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
-#ifndef DKIMCONFIGURETABTEST_H
-#define DKIMCONFIGURETABTEST_H
+#pragma once
 
 #include <QObject>
 
@@ -18,4 +17,3 @@ private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
 
-#endif // DKIMCONFIGURETABTEST_H

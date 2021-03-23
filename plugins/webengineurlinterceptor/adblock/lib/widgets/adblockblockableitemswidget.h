@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKBLOCKABLEITEMSWIDGET_H
-#define ADBLOCKBLOCKABLEITEMSWIDGET_H
+#pragma once
 
 #include "adblocklib_export.h"
 #include <QWidget>
@@ -65,4 +64,3 @@ private:
     PimCommon::CustomTreeView *mListItems = nullptr;
 };
 }
-#endif // ADBLOCKBLOCKABLEITEMSWIDGET_H

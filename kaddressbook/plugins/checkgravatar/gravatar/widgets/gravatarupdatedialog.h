@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GRAVATARUPDATEDIALOG_H
-#define GRAVATARUPDATEDIALOG_H
+#pragma once
 
 #include <QDialog>
 namespace KABGravatar
@@ -42,4 +41,3 @@ private:
     bool mSaveUrl = false;
 };
 }
-#endif // GRAVATARUPDATEDIALOG_H

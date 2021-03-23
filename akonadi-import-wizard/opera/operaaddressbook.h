@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef OPERAADDRESSBOOK_H
-#define OPERAADDRESSBOOK_H
+#pragma once
 
 #include <ImportWizard/AbstractAddressBook>
 
@@ -22,4 +21,3 @@ private:
     QString mFileName;
 };
 
-#endif // OPERAADDRESSBOOK_H

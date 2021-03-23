@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef INSERTEMAILPLUGINEDITORINTERFACE_H
-#define INSERTEMAILPLUGINEDITORINTERFACE_H
+#pragma once
 
 #include <MessageComposer/PluginEditorInterface>
 #include <QPointer>
@@ -26,4 +25,3 @@ private:
     QPointer<SelectMailDialog> mSelectMailDialog;
 };
 
-#endif

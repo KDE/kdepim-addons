@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPCREATEFOLDERJOB_H
-#define SELECTIMAPCREATEFOLDERJOB_H
+#pragma once
 
 #include <KSieveUi/SieveImapAccountSettings>
 #include <QObject>
@@ -38,4 +37,3 @@ private:
     KIMAP::Session *mSession = nullptr;
 };
 
-#endif // SELECTIMAPCREATEJOB_H

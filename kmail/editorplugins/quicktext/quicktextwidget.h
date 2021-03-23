@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef QUICKTEXTWIDGET_H
-#define QUICKTEXTWIDGET_H
+#pragma once
 
 #include "quicktext_export.h"
 #include <QModelIndex>
@@ -57,4 +56,3 @@ private:
     QWidget *mEmptyWidget = nullptr;
 };
 
-#endif // QUICKTEXTWIDGET_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ISGDSHORTURLENGINEINTERFACE_H
-#define ISGDSHORTURLENGINEINTERFACE_H
+#pragma once
 
 #include <../shorturlengineinterface.h>
 
@@ -27,4 +26,3 @@ private:
     void slotShortUrlFinished(QNetworkReply *reply);
 };
 
-#endif

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLWIDGET_H
-#define LANGUAGETOOLWIDGET_H
+#pragma once
 
 #include <PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
@@ -32,4 +31,3 @@ private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
 
-#endif // LANGUAGETOOLWIDGET_H

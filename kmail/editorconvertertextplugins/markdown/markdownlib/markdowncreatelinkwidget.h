@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MARKDOWNCREATELINKWIDGET_H
-#define MARKDOWNCREATELINKWIDGET_H
+#pragma once
 
 #include "markdownlib_private_export.h"
 #include <QWidget>
@@ -27,4 +26,3 @@ private:
     QLineEdit *mLink = nullptr;
 };
 
-#endif // MARKDOWNCREATELINKWIDGET_H

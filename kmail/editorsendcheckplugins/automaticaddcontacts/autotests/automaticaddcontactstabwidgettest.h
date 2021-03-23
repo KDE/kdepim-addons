@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef AUTOMATICADDCONTACTSTabWIDGETTEST_H
-#define AUTOMATICADDCONTACTSTabWIDGETTEST_H
+#pragma once
 
 #include <QObject>
 class QStandardItemModel;
@@ -25,4 +24,3 @@ private:
     QStandardItemModel *mComboboxModel = nullptr;
 };
 
-#endif // AUTOMATICADDCONTACTSTabWIDGETTEST_H

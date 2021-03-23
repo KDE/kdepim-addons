@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef NOTEEDIT_H
-#define NOTEEDIT_H
+#pragma once
 
 #include <QWidget>
 
@@ -62,4 +61,3 @@ private:
 };
 }
 
-#endif // NOTEEDIT_H

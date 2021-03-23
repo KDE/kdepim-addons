@@ -6,8 +6,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QCALENDARSYSTEM_H
-#define QCALENDARSYSTEM_H
+#pragma once
 
 #include <QDate>
 #include <QSharedPointer>
@@ -117,4 +116,3 @@ private:
     QSharedDataPointer<QCalendarSystemPrivate> d;
 };
 
-#endif // QCALENDARSYSTEM_H

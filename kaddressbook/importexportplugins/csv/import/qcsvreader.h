@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QCSVREADER_H
-#define QCSVREADER_H
+#pragma once
 
 #include <QObject>
 
@@ -221,4 +220,3 @@ private:
     Q_DISABLE_COPY(QCsvStandardBuilder)
 };
 
-#endif

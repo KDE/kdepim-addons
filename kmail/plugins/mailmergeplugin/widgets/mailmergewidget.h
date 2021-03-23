@@ -4,8 +4,7 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 
-#ifndef MAILMERGEWIDGET_H
-#define MAILMERGEWIDGET_H
+#pragma once
 
 #include "mailmergeplugin_private_export.h"
 #include <QWidget>
@@ -43,4 +42,3 @@ private:
     MailMerge::AddressBookWidget *const mAddressbookWidget;
 };
 }
-#endif // MAILMERGEWIDGET_H

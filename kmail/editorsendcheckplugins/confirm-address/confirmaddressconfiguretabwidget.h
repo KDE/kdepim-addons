@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSCONFIGURETABWIDGET_H
-#define CONFIRMADDRESSCONFIGURETABWIDGET_H
+#pragma once
 
 #include <QWidget>
 class ConfirmAddressSimpleStringListEditor;
@@ -35,4 +34,3 @@ private:
     QRadioButton *mRejectedDomain = nullptr;
 };
 
-#endif // CONFIRMADDRESSCONFIGURETABWIDGET_H

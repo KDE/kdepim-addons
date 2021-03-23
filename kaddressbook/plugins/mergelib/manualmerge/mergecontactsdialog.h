@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef MERGECONTACTSDIALOG_H
-#define MERGECONTACTSDIALOG_H
+#pragma once
 
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
@@ -43,4 +42,3 @@ private:
     KABMergeContacts::MergeContactInfoWidget *mMergeContactInfo = nullptr;
 };
 }
-#endif // MERGECONTACTSDIALOG_H

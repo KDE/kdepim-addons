@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITINERARYURLHANDLER_H
-#define ITINERARYURLHANDLER_H
+#pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
 
@@ -43,4 +42,3 @@ private:
     static QString m_appPath;
 };
 
-#endif // ITINERARYURLHANDLER_H

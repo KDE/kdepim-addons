@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ADBLOCKSHOWLISTDIALOG_H
-#define ADBLOCKSHOWLISTDIALOG_H
+#pragma once
 
 #include <KSyntaxHighlighting/Repository>
 #include <QDialog>
@@ -54,4 +53,3 @@ private:
 };
 }
 
-#endif // ADBLOCKSHOWLISTDIALOG_H

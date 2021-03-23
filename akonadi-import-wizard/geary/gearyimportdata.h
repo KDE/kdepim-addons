@@ -3,8 +3,7 @@
 
    SPDX-License-Identifier: GPL-2.0-or-later
 */
-#ifndef GearyImportData_H
-#define GearyImportData_H
+#pragma once
 
 #include <ImportWizard/AbstractImporter>
 
@@ -24,4 +23,3 @@ public:
     QString name() const override;
 };
 
-#endif /* TrojiraImportData_H */

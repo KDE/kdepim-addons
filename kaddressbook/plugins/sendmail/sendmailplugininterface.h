@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SENDMAILPLUGININTERFACE_H
-#define SENDMAILPLUGININTERFACE_H
+#pragma once
 
 #include <PimCommonAkonadi/GenericPluginInterface>
 
@@ -30,4 +29,3 @@ private:
     QAction *mAction = nullptr;
 };
 
-#endif // SENDMAILPLUGININTERFACE_H

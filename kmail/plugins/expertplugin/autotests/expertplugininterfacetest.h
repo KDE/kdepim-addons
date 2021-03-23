@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef EXPERTPLUGININTERFACETEST_H
-#define EXPERTPLUGININTERFACETEST_H
+#pragma once
 
 #include <QObject>
 
@@ -17,4 +16,3 @@ public:
     ~ExpertPluginInterfaceTest() override = default;
 };
 
-#endif // EXPERTPLUGININTERFACETEST_H

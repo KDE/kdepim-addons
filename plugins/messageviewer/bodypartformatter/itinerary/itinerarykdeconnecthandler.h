@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITINERARYKDECONNECTHANDLER_H
-#define ITINERARYKDECONNECTHANDLER_H
+#pragma once
 
 #include <QObject>
 #include <QString>
@@ -26,4 +25,3 @@ public:
     void sendToDevice(const QString &fileName, const QString &deviceId);
 };
 
-#endif // ITINERARYKDECONNECTHANDLER_H

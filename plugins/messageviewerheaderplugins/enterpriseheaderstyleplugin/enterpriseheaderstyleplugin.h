@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef ENTERPRISEHEADERSTYLEPLUGIN_H
-#define ENTERPRISEHEADERSTYLEPLUGIN_H
+#pragma once
 
 #include <MessageViewer/HeaderStylePlugin>
 
@@ -33,4 +32,3 @@ private:
     HeaderStrategy *const mHeaderStrategy;
 };
 }
-#endif // ENTERPRISEHEADERSTYLEPLUGIN_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
-#define CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H
+#pragma once
 #include <PimCommon/SimpleStringListEditor>
 
 class ConfirmAddressSimpleStringListEditor : public PimCommon::SimpleStringListEditor
@@ -23,4 +22,3 @@ public:
     Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
 };
 
-#endif // CONFIRMADDRESSSIMPLESTRINGLISTEDITOR_H

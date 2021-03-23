@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SELECTIMAPFOLDERWIDGET_H
-#define SELECTIMAPFOLDERWIDGET_H
+#pragma once
 
 #include <QTreeView>
 #include <QWidget>
@@ -45,4 +44,3 @@ private:
     QSortFilterProxyModel *mFilter = nullptr;
 };
 
-#endif // SELECTIMAPFOLDERWIDGET_H

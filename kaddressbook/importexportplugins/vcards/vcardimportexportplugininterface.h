@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VCARDIMPORTEXPORTPLUGININTERFACE_H
-#define VCARDIMPORTEXPORTPLUGININTERFACE_H
+#pragma once
 
 #include <KAddressBookImportExport/ExportSelectionWidget>
 #include <KAddressBookImportExport/PluginInterface>
@@ -45,4 +44,3 @@ private:
     ExportVCardType mExportVCardType;
 };
 
-#endif // VCARDIMPORTEXPORTPLUGININTERFACE_H

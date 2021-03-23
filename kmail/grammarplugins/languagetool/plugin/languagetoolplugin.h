@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLPLUGIN_H
-#define LANGUAGETOOLPLUGIN_H
+#pragma once
 
 #include <PimCommon/CustomToolsPlugin>
 #include <QVariant>
@@ -25,4 +24,3 @@ private:
     Q_DISABLE_COPY(LanguageToolPlugin)
 };
 
-#endif // LANGUAGETOOLPLUGIN_H

@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SHARETEXTPURPOSEMENUWIDGET_H
-#define SHARETEXTPURPOSEMENUWIDGET_H
+#pragma once
 
 #include <PimCommon/PurposeMenuWidget>
 class ShareTextPluginEditorInterface;
@@ -23,4 +22,3 @@ private:
     ShareTextPluginEditorInterface *mInterface = nullptr;
 };
 
-#endif // SHARETEXTPURPOSEMENUWIDGET_H

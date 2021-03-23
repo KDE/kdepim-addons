@@ -6,8 +6,7 @@
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef SYNCITIPHANDLER_H
-#define SYNCITIPHANDLER_H
+#pragma once
 
 #include <Akonadi/Calendar/CalendarBase>
 #include <Akonadi/Calendar/ITIPHandler>
@@ -37,4 +36,3 @@ private:
     IncidenceEditorNG::GroupwareUiDelegate *m_counterProposalEditorDelegate = nullptr;
 };
 
-#endif // SYNCITIPHANDLER_H

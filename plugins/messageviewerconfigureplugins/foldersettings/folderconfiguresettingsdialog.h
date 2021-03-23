@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef FOLDERCONFIGURESETTINGSDIALOG_H
-#define FOLDERCONFIGURESETTINGSDIALOG_H
+#pragma once
 
 #include "libfolderconfiguresettings_export.h"
 #include <QDialog>
@@ -24,4 +23,3 @@ private:
     FolderConfigureSettingsWidget *const mFolderConfigureSettingsWidget;
 };
 
-#endif // FOLDERCONFIGURESETTINGSDIALOG_H

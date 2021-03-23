@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef LANGUAGETOOLCONFIGDIALOG_H
-#define LANGUAGETOOLCONFIGDIALOG_H
+#pragma once
 #include "libkmaillanguagetool_export.h"
 #include <QDialog>
 class LanguageToolConfigWidget;
@@ -23,4 +22,3 @@ private:
     LanguageToolConfigWidget *mConfigWidget = nullptr;
 };
 
-#endif // LANGUAGETOOLCONFIGDIALOG_H

@@ -4,8 +4,7 @@
     SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef SEARCHANDMERGECONTACTDUPLICATECONTACTDIALOG_H
-#define SEARCHANDMERGECONTACTDUPLICATECONTACTDIALOG_H
+#pragma once
 
 #include <AkonadiCore/Item>
 #include <QDialog>
@@ -46,4 +45,3 @@ private:
 };
 }
 
-#endif // SEARCHANDMERGECONTACTDUPLICATECONTACTDIALOG_H

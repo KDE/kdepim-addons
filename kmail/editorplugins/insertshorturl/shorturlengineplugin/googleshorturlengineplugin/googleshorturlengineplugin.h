@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef GOOGLeSHORTURLENGINEPLUGIN_H
-#define GOOGLeSHORTURLENGINEPLUGIN_H
+#pragma once
 
 #include "../shorturlengineplugin.h"
 
@@ -21,4 +20,3 @@ public:
     ShortUrlEngineInterface *createInterface(QObject *parent) override;
 };
 
-#endif // GOOGLeSHORTURLENGINEPLUGIN_H

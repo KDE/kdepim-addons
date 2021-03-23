@@ -4,8 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef ITINERARYRENDERER_H
-#define ITINERARYRENDERER_H
+#pragma once
 
 #include <MessageViewer/MessagePartRendererBase>
 
@@ -24,4 +23,3 @@ private:
     ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
 };
 
-#endif // ITINERARYRENDERER_H

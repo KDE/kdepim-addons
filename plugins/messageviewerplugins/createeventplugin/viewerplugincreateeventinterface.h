@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINCREATEEVENTINTERFACE_H
-#define VIEWERPLUGINCREATEEVENTINTERFACE_H
+#pragma once
 
 #include <KCalendarCore/Event>
 #include <MessageViewer/ViewerPluginInterface>
@@ -38,4 +37,3 @@ private:
     QList<QAction *> mAction;
 };
 }
-#endif // VIEWERPLUGINCREATEEVENTINTERFACE_H

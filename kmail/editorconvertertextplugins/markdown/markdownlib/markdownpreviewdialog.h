@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef MARKDOWNPREVIEWDIALOG_H
-#define MARKDOWNPREVIEWDIALOG_H
+#pragma once
 
 #include "libkmailmarkdown_export.h"
 #include <QDialog>
@@ -26,4 +25,3 @@ private:
     MarkdownPreviewWidget *mPreviewWidget = nullptr;
 };
 
-#endif // MARKDOWNPREVIEWDIALOG_H

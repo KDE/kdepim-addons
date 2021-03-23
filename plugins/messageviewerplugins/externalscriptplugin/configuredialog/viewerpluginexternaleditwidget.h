@@ -4,8 +4,7 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 
-#ifndef VIEWERPLUGINEXTERNALEDITWIDGET_H
-#define VIEWERPLUGINEXTERNALEDITWIDGET_H
+#pragma once
 
 #include "../viewerpluginexternalscriptinfo.h"
 #include <QWidget>
@@ -37,4 +36,3 @@ private:
     KUrlRequester *mExecutable = nullptr;
 };
 
-#endif // VIEWERPLUGINEXTERNALEDITWIDGET_H

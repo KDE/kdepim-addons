@@ -4,8 +4,7 @@
   SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
-#ifndef QCSVMODEL_H
-#define QCSVMODEL_H
+#pragma once
 
 #include <QAbstractTableModel>
 #include <QIODevice>
@@ -125,4 +124,3 @@ private:
     int mColumnCount = 0;
 };
 
-#endif
