@@ -21,7 +21,9 @@ public:
         TextIsEmpty = 1,
         PythonPathMissing = 2,
         GrammalecteMissing = 3,
-        Unknown = 4,
+        PythonPathNotExist = 4,
+        GrammarlectCliNotExist = 5,
+        Unknown = 6,
     };
 
     void start();

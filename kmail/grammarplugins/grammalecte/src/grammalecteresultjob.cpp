@@ -7,6 +7,7 @@
 #include "grammalecteresultjob.h"
 #include "libgrammalecte_debug.h"
 
+#include <QFileInfo>
 #include <QTemporaryFile>
 
 GrammalecteResultJob::GrammalecteResultJob(QObject *parent)
@@ -133,6 +134,14 @@ bool GrammalecteResultJob::canStart()
     }
     if (mPythonPath.isEmpty()) {
         mErrorType = ErrorType::PythonPathMissing;
+        return false;
+    }
+    if (!QFileInfo::exists(mPythonPath)) {
+        mErrorType = ErrorType::PythonPathNotExist;
+        return false;
+    }
+    if (!QFileInfo::exists(mGrammarlecteCliPath)) {
+        mErrorType = ErrorType::GrammarlectCliNotExist;
         return false;
     }
     return true;

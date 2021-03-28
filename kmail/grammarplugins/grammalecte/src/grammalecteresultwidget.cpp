@@ -9,6 +9,8 @@
 #include "grammalecteparser.h"
 #include "grammarresulttextedit.h"
 #include "libgrammalecte_debug.h"
+#include <KLocalizedString>
+#include <KMessageBox>
 #include <QJsonDocument>
 
 GrammalecteResultWidget::GrammalecteResultWidget(QWidget *parent)
@@ -42,6 +44,7 @@ void GrammalecteResultWidget::slotCheckGrammarFinished(const QString &result)
 
 void GrammalecteResultWidget::slotError(GrammalecteResultJob::ErrorType error)
 {
+    QString str;
     switch (error) {
     case GrammalecteResultJob::ErrorType::NoError:
         break;
@@ -50,12 +53,25 @@ void GrammalecteResultWidget::slotError(GrammalecteResultJob::ErrorType error)
         break;
     case GrammalecteResultJob::ErrorType::PythonPathMissing:
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing python path";
+        str = i18n("Python path is missing.");
         break;
     case GrammalecteResultJob::ErrorType::GrammalecteMissing:
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: missing grammalectepath";
+        str = i18n("Grammalecte path not found.");
         break;
     case GrammalecteResultJob::ErrorType::Unknown:
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: unknow error";
         break;
+    case GrammalecteResultJob::ErrorType::PythonPathNotExist:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: python exec doesn't exist";
+        str = i18n("Grammalecte program file not found.");
+        break;
+    case GrammalecteResultJob::ErrorType::GrammarlectCliNotExist:
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: grammalecte cli not found.";
+        str = i18n("Grammalecte cli file not found.");
+        break;
+    }
+    if (!str.isEmpty()) {
+        KMessageBox::error(this, str, i18n("Grammalecte error"));
     }
 }
