@@ -32,6 +32,7 @@ void GrammalecteResultJob::start()
 
         mProcess->setProgram(mPythonPath);
         QStringList args;
+        args.reserve(6);
         args << mGrammarlecteCliPath;
         if (!mArguments.isEmpty()) {
             args << QStringLiteral("-on") << mArguments;
@@ -114,7 +115,7 @@ void GrammalecteResultJob::setPythonPath(const QString &pythonPath)
 
 static bool hasNotEmptyText(const QString &text)
 {
-    for (int i = 0; i < text.length(); ++i) {
+    for (int i = 0, total = text.length(); i < total; ++i) {
         if (!text.at(i).isSpace()) {
             return true;
         }
