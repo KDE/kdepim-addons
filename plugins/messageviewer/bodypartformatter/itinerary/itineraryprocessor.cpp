@@ -96,22 +96,21 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
 
     ExtractorEngine engine;
     engine.setUseSeparateProcess(true);
-    engine.setContext(part.content());
+    engine.setContext(QVariant::fromValue<KMime::Content *>(part.content()), u"message/rfc822");
     if (isPkPassContent(part.content())) {
         pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
-        engine.setPass(pass.get());
+        engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
     } else if (part.content()->contentType()->isHTMLText()) {
-        engine.setData(part.content()->decodedContent(), ExtractorInput::Html);
+        engine.setData(part.content()->decodedContent());
     } else if (part.content()->contentType()->mimeType() == "application/pdf"
                || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
-        engine.setData(part.content()->decodedContent(), ExtractorInput::Pdf);
+        engine.setData(part.content()->decodedContent());
     } else if (isCalendarContent(part.content())) {
-        engine.setData(part.content()->decodedContent(), ExtractorInput::ICal);
+        engine.setData(part.content()->decodedContent());
     } else if (part.content()->contentType()->isPlainText()) {
-        engine.setText(part.content()->decodedText());
+        engine.setContent(part.content()->decodedText(), u"text/plain");
     } else {
-        // we have extractors but this isn't a mimetype we understand
         return {};
     }
 
