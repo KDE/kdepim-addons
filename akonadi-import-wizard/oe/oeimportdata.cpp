@@ -13,7 +13,7 @@
 
 #include <QDir>
 
-K_PLUGIN_FACTORY_WITH_JSON(OEImporterFactory, "oeimporter.json", registerPlugin<OeImportData>();)
+K_PLUGIN_CLASS_WITH_JSON(OEImporterFactory, "oeimporter.json")
 
 OeImportData::OeImportData(QObject *parent, const QList<QVariant> &)
     : LibImportWizard::AbstractImporter(parent)
