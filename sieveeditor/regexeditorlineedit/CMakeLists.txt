@@ -26,5 +26,5 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(regexpeditorlineeditplugin
-    KF5::I18n KF5::KSieveUi KF5::TextWidgets
+    KF5::I18n KF5::KSieveUi KF5::TextWidgets KF5::Service
     )
