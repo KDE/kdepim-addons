@@ -58,7 +58,7 @@ void DKIMConfigureDialog::slotReset()
 
 void DKIMConfigureDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -67,7 +67,7 @@ void DKIMConfigureDialog::readConfig()
 
 void DKIMConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     group.writeEntry("Size", size());
     group.sync();
 }

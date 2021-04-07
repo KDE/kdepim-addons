@@ -51,13 +51,13 @@ QuickTextConfigureDialog::~QuickTextConfigureDialog()
 
 void QuickTextConfigureDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     group.writeEntry("Size", size());
 }
 
 void QuickTextConfigureDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(300, 350));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

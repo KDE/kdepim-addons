@@ -54,13 +54,13 @@ QString SelectImapFolderDialog::selectedFolderName() const
 
 void SelectImapFolderDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectImapFolderDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectImapFolderDialog");
     group.writeEntry("Size", size());
 }
 
 void SelectImapFolderDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "SelectImapFolderDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectImapFolderDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

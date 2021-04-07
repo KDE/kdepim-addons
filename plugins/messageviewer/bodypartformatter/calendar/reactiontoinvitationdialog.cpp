@@ -57,7 +57,7 @@ QString ReactionToInvitationDialog::comment() const
 
 void ReactionToInvitationDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ReactionToInvitationDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ReactionToInvitationDialog");
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -66,7 +66,7 @@ void ReactionToInvitationDialog::readConfig()
 
 void ReactionToInvitationDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ReactionToInvitationDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ReactionToInvitationDialog");
     group.writeEntry("Size", size());
     group.sync();
 }

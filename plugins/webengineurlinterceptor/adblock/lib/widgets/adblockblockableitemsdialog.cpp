@@ -62,13 +62,13 @@ void AdBlockBlockableItemsDialog::setAdblockResult(const QVector<AdBlock::AdBloc
 
 void AdBlockBlockableItemsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockBlockableItemsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockBlockableItemsDialog");
     group.writeEntry("Size", size());
 }
 
 void AdBlockBlockableItemsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockBlockableItemsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockBlockableItemsDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

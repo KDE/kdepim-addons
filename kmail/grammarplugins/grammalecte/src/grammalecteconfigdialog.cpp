@@ -38,13 +38,13 @@ GrammalecteConfigDialog::~GrammalecteConfigDialog()
 
 void GrammalecteConfigDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "GrammalecteConfigDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "GrammalecteConfigDialog");
     group.writeEntry("Size", size());
 }
 
 void GrammalecteConfigDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "GrammalecteConfigDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "GrammalecteConfigDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

@@ -48,13 +48,13 @@ ConfirmAddressDialog::~ConfirmAddressDialog()
 
 void ConfirmAddressDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ConfirmAddressDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfirmAddressDialog");
     group.writeEntry("Size", size());
 }
 
 void ConfirmAddressDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ConfirmAddressDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfirmAddressDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

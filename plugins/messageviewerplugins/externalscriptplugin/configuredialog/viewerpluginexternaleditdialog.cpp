@@ -46,7 +46,7 @@ void ViewerPluginExternalEditDialog::slotScriptIsValid(bool valid)
 
 void ViewerPluginExternalEditDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ViewerPluginExternalEditDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ViewerPluginExternalEditDialog");
     const QSize size = group.readEntry("Size", QSize(350, 200));
     if (size.isValid()) {
         resize(size);
@@ -55,7 +55,7 @@ void ViewerPluginExternalEditDialog::readConfig()
 
 void ViewerPluginExternalEditDialog::saveConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "ViewerPluginExternalEditDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "ViewerPluginExternalEditDialog");
     group.writeEntry("Size", size());
     group.sync();
 }

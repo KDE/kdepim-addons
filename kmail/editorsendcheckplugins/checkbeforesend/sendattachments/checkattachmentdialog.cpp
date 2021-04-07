@@ -47,13 +47,13 @@ void CheckAttachmentDialog::setEmails(const QStringList &emails)
 
 void CheckAttachmentDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CheckAttachmentDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckAttachmentDialog");
     group.writeEntry("Size", size());
 }
 
 void CheckAttachmentDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CheckAttachmentDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckAttachmentDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

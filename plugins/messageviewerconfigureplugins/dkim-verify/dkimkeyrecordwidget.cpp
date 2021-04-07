@@ -34,13 +34,13 @@ DKIMKeyRecordWidget::~DKIMKeyRecordWidget()
 
 void DKIMKeyRecordWidget::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myDKIMKeyRecordWidgetGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myDKIMKeyRecordWidgetGroupName);
     mManagerKeyWidget->restoreHeaders(group.readEntry("Header", QByteArray()));
 }
 
 void DKIMKeyRecordWidget::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myDKIMKeyRecordWidgetGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myDKIMKeyRecordWidgetGroupName);
     group.writeEntry("Header", mManagerKeyWidget->saveHeaders());
     group.sync();
 }

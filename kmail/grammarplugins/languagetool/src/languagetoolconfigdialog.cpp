@@ -42,13 +42,13 @@ LanguageToolConfigDialog::~LanguageToolConfigDialog()
 
 void LanguageToolConfigDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     group.writeEntry("Size", size());
 }
 
 void LanguageToolConfigDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

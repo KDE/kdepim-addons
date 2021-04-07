@@ -69,13 +69,13 @@ AdBlockShowListDialog::~AdBlockShowListDialog()
 
 void AdBlockShowListDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockShowListDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockShowListDialog");
     group.writeEntry("Size", size());
 }
 
 void AdBlockShowListDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockShowListDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockShowListDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

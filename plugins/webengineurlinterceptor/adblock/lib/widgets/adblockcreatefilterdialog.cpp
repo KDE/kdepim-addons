@@ -59,13 +59,13 @@ AdBlockCreateFilterDialog::~AdBlockCreateFilterDialog()
 
 void AdBlockCreateFilterDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockCreateFilterDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockCreateFilterDialog");
     group.writeEntry("Size", size());
 }
 
 void AdBlockCreateFilterDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "AdBlockCreateFilterDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockCreateFilterDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

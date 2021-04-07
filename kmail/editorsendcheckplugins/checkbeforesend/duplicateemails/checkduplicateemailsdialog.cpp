@@ -51,13 +51,13 @@ void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &e
 
 void CheckDuplicateEmailsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CheckDuplicateEmailsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckDuplicateEmailsDialog");
     group.writeEntry("Size", size());
 }
 
 void CheckDuplicateEmailsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "CheckDuplicateEmailsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckDuplicateEmailsDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

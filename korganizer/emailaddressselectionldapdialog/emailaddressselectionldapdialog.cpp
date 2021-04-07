@@ -51,7 +51,7 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
 
 void EmailAddressSelectionLdapDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("EmailAddressSelectionLdapDialog"));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("EmailAddressSelectionLdapDialog"));
     const QSize size = group.readEntry("Size", QSize());
     if (size.isValid()) {
         resize(size);
@@ -62,7 +62,7 @@ void EmailAddressSelectionLdapDialog::readConfig()
 
 void EmailAddressSelectionLdapDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), QStringLiteral("EmailAddressSelectionLdapDialog"));
+    KConfigGroup group(KSharedConfig::openStateConfig(), QStringLiteral("EmailAddressSelectionLdapDialog"));
     group.writeEntry("Size", size());
 }
 
