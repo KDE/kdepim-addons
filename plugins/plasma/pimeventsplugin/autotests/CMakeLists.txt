@@ -10,8 +10,8 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
     add_test(NAME ${_name} COMMAND ${_name})
     ecm_mark_as_test(plasma-pimeventsplugin-${_name})
     add_definitions(-DPIMEVENT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
-    target_link_libraries(${_name} Qt5::Core
-                                   Qt5::Test
+    target_link_libraries(${_name} Qt::Core
+                                   Qt::Test
                                    KF5::AkonadiCore
                                    KF5::AkonadiCalendar
                                    KF5::CalendarCore

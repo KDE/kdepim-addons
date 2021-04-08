@@ -29,11 +29,7 @@ void TripAbShortUrlEngineInterface::generateShortUrl()
 {
     const QString requestUrl = QStringLiteral("https://to.ly/api.php?longurl=%1").arg(mOriginalUrl);
     QNetworkReply *reply = mNetworkAccessManager->get(QNetworkRequest(QUrl(requestUrl)));
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::error), this, &TripAbShortUrlEngineInterface::slotErrorFound);
-#else
     connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::errorOccurred), this, &TripAbShortUrlEngineInterface::slotErrorFound);
-#endif
 }
 
 void TripAbShortUrlEngineInterface::slotShortUrlFinished(QNetworkReply *reply)

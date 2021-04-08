@@ -19,7 +19,7 @@ target_link_libraries(korg_picoftheday
     PRIVATE
     KF5::EventViews
     KF5::KIOCore
-    Qt5::Xml
+    Qt::Xml
     )
 
 install(TARGETS

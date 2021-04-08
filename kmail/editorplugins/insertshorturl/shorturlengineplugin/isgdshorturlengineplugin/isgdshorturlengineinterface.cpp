@@ -35,11 +35,7 @@ void IsgdShortUrlEngineInterface::generateShortUrl()
 
     request.setHeader(QNetworkRequest::ContentTypeHeader, QStringLiteral("application/json"));
     QNetworkReply *reply = mNetworkAccessManager->get(request);
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::error), this, &IsgdShortUrlEngineInterface::slotErrorFound);
-#else
     connect(reply, qOverload<QNetworkReply::NetworkError>(&QNetworkReply::errorOccurred), this, &IsgdShortUrlEngineInterface::slotErrorFound);
-#endif
 }
 
 void IsgdShortUrlEngineInterface::slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error)

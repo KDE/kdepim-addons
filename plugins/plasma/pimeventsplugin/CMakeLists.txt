@@ -28,7 +28,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(pimevents
-    Qt5::Core
+    Qt::Core
     KF5::AkonadiCore
     KF5::AkonadiCalendar
     KF5::CalendarCore
@@ -50,8 +50,8 @@ set(plasmapimcalendarsplugin_SRCS
 
 add_library(pimcalendarsplugin SHARED ${plasmapimcalendarsplugin_SRCS} ${loggingcategory_SRCS})
 target_link_libraries(pimcalendarsplugin
-    Qt5::Core
-    Qt5::Qml
+    Qt::Core
+    Qt::Qml
     KF5::AkonadiCore
     KF5::CalendarCore
     KF5::ConfigCore

@@ -5,7 +5,7 @@ macro(add_sieveeditorplugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(sieveeditorplugin-${_name})
-    target_link_libraries( ${_name} Qt5::Widgets Qt5::Test KF5::IMAP KF5::CoreAddons KF5::KIOCore KF5::I18n KF5::Completion KF5::KIOWidgets KF5::KSieveUi KF5::MailTransport KF5::ItemModels)
+    target_link_libraries( ${_name} Qt::Widgets Qt5::Test KF5::IMAP KF5::CoreAddons KF5::KIOCore KF5::I18n KF5::Completion KF5::KIOWidgets KF5::KSieveUi KF5::MailTransport KF5::ItemModels)
 endmacro ()
 
 add_sieveeditorplugin_unittest(selectimapfolderdialogtest.cpp "../selectimapfoldertreeview.cpp;../selectimaplineedit.cpp;../selectimapcreatefolderjob.cpp;../selectimaplineeditcompletermodel.cpp;../selectimapfolderdialog.cpp;../selectimapfolderwidget.cpp;../selectimaploadfoldersjob.cpp;../selectimapfoldermodel.cpp")

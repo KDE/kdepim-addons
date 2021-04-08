@@ -22,8 +22,8 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(webengineviewer_donottrackplugin
-    Qt5::WebEngine
-    Qt5::WebEngineWidgets
+    Qt::WebEngine
+    Qt::WebEngineWidgets
     KF5::WebEngineViewer
     KF5::ConfigGui
     KF5::CoreAddons

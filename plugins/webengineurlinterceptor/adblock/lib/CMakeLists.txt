@@ -43,9 +43,9 @@ generate_export_header(adblocklibprivate BASE_NAME adblocklib)
 
 target_link_libraries(adblocklibprivate
     PRIVATE
-    Qt5::Core
-    Qt5::WebEngine
-    Qt5::WebEngineWidgets
+    Qt::Core
+    Qt::WebEngine
+    Qt::WebEngineWidgets
     KF5::I18n
     KF5::ItemViews
     KF5::ConfigCore

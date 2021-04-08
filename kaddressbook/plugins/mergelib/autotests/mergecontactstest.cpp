@@ -1135,11 +1135,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
     Addressee addressA;
     Akonadi::Item itemA;
     QDate date = QDate::fromString(nameItemA, QStringLiteral("yyyyMMdd"));
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    QDateTime dt(date);
-#else
     QDateTime dt(date.startOfDay());
-#endif
     addressA.setBirthday(dt);
     itemA.setPayload<Addressee>(addressA);
     lst << itemA;
@@ -1147,11 +1143,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
     Addressee addressB;
     Akonadi::Item itemB;
     date = QDate::fromString(nameItemB, QStringLiteral("yyyyMMdd"));
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    dt = QDateTime(date);
-#else
     dt = QDateTime(date.startOfDay());
-#endif
 
     addressB.setBirthday(dt);
     itemB.setPayload<Addressee>(addressB);
@@ -1160,11 +1152,7 @@ void MergeContactsTest::checkNeedManualSelectionWithBirthday()
     Addressee addressC;
     Akonadi::Item itemC;
     date = QDate::fromString(nameItemC, QStringLiteral("yyyyMMdd"));
-#if QT_VERSION < QT_VERSION_CHECK(5, 15, 0)
-    dt = QDateTime(date);
-#else
     dt = QDateTime(date.startOfDay());
-#endif
     addressC.setBirthday(dt);
     itemC.setPayload<Addressee>(addressC);
     lst << itemC;

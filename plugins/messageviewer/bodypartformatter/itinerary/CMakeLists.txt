@@ -26,7 +26,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KF5::I18n
     KF5::GrantleeTheme
     Grantlee5::Templates
-    Qt5::DBus
+    Qt::DBus
     KF5::Prison
     KPim::Itinerary
     KPim::PkPass
