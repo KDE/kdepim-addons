@@ -18,7 +18,6 @@
 #include <QListWidgetItem>
 #include <QWidget>
 
-class QListWidgetItem;
 
 namespace Ui
 {

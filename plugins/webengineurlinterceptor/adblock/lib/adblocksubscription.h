@@ -17,7 +17,6 @@
 #include "adblocksearchtree.h"
 
 class QNetworkAccessManager;
-class QUrl;
 class QNetworkReply;
 namespace AdBlock
 {
