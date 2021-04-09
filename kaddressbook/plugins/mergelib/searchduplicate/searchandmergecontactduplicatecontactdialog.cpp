@@ -92,7 +92,7 @@ void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContac
 
 void SearchAndMergeContactDuplicateContactDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -101,7 +101,7 @@ void SearchAndMergeContactDuplicateContactDialog::readConfig()
 
 void SearchAndMergeContactDuplicateContactDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }

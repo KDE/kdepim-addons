@@ -52,7 +52,7 @@ void FolderConfigureSettingsWidget::save()
 
 void FolderConfigureSettingsWidget::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myFolderConfigureSettingsWidgetGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myFolderConfigureSettingsWidgetGroupName);
     const QList<int> defaultSizes{200, 400};
     const QList<int> sizes = grp.readEntry("SplitterSize", defaultSizes);
     mSplitter->setSizes(sizes);
@@ -61,6 +61,6 @@ void FolderConfigureSettingsWidget::readConfig()
 void FolderConfigureSettingsWidget::saveConfig()
 {
     const QList<int> sizes = mSplitter->sizes();
-    KConfigGroup grp(KSharedConfig::openConfig(), myFolderConfigureSettingsWidgetGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myFolderConfigureSettingsWidgetGroupName);
     grp.writeEntry("SplitterSize", sizes);
 }

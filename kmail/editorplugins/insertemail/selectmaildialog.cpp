@@ -50,7 +50,7 @@ void SelectMailDialog::accept()
 
 void SelectMailDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
     const QSize size = grp.readEntry("Size", QSize(300, 200));
     if (size.isValid()) {
         resize(size);
@@ -59,7 +59,7 @@ void SelectMailDialog::readConfig()
 
 void SelectMailDialog::writeConfig()
 {
-    KConfigGroup grp(KSharedConfig::openConfig(), myConfigGroupName);
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
     grp.writeEntry("Size", size());
     grp.sync();
 }
