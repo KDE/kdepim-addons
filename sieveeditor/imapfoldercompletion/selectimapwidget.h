@@ -30,7 +30,7 @@ private:
     SelectImapFolderDialog *selectFolderDialog();
     KSieveUi::SieveImapAccountSettings mAccount;
     QPointer<SelectImapFolderDialog> mSelectImapFolderDialog;
-    QToolButton *mToolButton = nullptr;
-    SelectImapLineEdit *mLineEdit = nullptr;
+    QToolButton *const mToolButton;
+    SelectImapLineEdit *const mLineEdit;
 };
 

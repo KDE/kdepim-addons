@@ -38,7 +38,7 @@ public:
     void calendarIncidenceAboutToBeDeleted(const KCalendarCore::Incidence::Ptr &incidence) override;
 
 private:
-    PimDataSource *mDataSource = nullptr;
+    PimDataSource *const mDataSource;
     QDate mStart;
     QDate mEnd;
 };

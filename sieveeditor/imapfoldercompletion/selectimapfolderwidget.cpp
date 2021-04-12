@@ -24,6 +24,8 @@
 SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
     : QWidget(parent)
     , mAccount(account)
+    , mSearchLineEdit(new QLineEdit(this))
+    , mTreeView(new SelectImapFolderTreeView(this))
 {
     bool modelIsInitialized = false;
     mModel = SelectImapFolderModel::self()->folderModel(mAccount, modelIsInitialized);
@@ -35,7 +37,6 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     auto topLayout = new QHBoxLayout;
     topLayout->setContentsMargins({});
     mainLayout->addLayout(topLayout);
-    mSearchLineEdit = new QLineEdit(this);
     mSearchLineEdit->setObjectName(QStringLiteral("searchline"));
     mSearchLineEdit->setClearButtonEnabled(true);
     mSearchLineEdit->setPlaceholderText(i18n("Search..."));
@@ -48,7 +49,6 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     connect(refreshImap, &QToolButton::clicked, this, &SelectImapFolderWidget::slotRefreshImap);
     topLayout->addWidget(refreshImap);
 
-    mTreeView = new SelectImapFolderTreeView(this);
     mTreeView->setObjectName(QStringLiteral("treeview"));
     mTreeView->header()->hide();
     mFilter = new QSortFilterProxyModel(this);

@@ -38,8 +38,8 @@ private:
     void slotRefreshImap();
 
     const KSieveUi::SieveImapAccountSettings mAccount;
-    QLineEdit *mSearchLineEdit = nullptr;
-    SelectImapFolderTreeView *mTreeView = nullptr;
+    QLineEdit *const mSearchLineEdit;
+    SelectImapFolderTreeView *const mTreeView;
     QStandardItemModel *mModel = nullptr;
     QSortFilterProxyModel *mFilter = nullptr;
 };

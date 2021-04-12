@@ -17,15 +17,15 @@ K_PLUGIN_CLASS_WITH_JSON(SelectImapWidget, "imapfoldercompletion.json")
 
 SelectImapWidget::SelectImapWidget(QWidget *parent, const QList<QVariant> &)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
+    , mToolButton(new QToolButton(this))
+    , mLineEdit(new SelectImapLineEdit(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
     layout->setContentsMargins({});
-    mLineEdit = new SelectImapLineEdit(this);
     mLineEdit->setObjectName(QStringLiteral("lineedit"));
     layout->addWidget(mLineEdit);
 
-    mToolButton = new QToolButton(this);
     mToolButton->setText(QStringLiteral("..."));
     mToolButton->setObjectName(QStringLiteral("toolbutton"));
     mToolButton->setToolTip(i18n("Select IMAP folder"));
