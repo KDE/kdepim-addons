@@ -20,6 +20,6 @@ private:
     void slotAccepted();
     void readConfig();
     void writeConfig();
-    DKIMAuthenticationVerifiedServerWidget *mAuthenticationVerifiedWidget = nullptr;
+    DKIMAuthenticationVerifiedServerWidget *const mAuthenticationVerifiedWidget;
 };
 

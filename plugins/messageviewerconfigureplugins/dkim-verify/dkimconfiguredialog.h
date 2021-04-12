@@ -22,5 +22,5 @@ private:
     void readConfig();
     void slotAccepted();
     void writeConfig();
-    DKIMConfigureWidget *mConfigureWidget = nullptr;
+    DKIMConfigureWidget *const mConfigureWidget;
 };

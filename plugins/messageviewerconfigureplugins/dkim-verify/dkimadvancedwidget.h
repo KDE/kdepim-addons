@@ -22,9 +22,9 @@ public:
 
 private:
     void slotConfigureAuthenticationServer();
-    QComboBox *mSha1Policy = nullptr;
-    QCheckBox *mCheckDKIMWhenOnlyTesting = nullptr;
-    QCheckBox *mUseAuthenticationResultRelaxedParser = nullptr;
-    QComboBox *mSmallKeyPolicy = nullptr;
+    QComboBox *const mSha1Policy;
+    QCheckBox *const mCheckDKIMWhenOnlyTesting;
+    QCheckBox *const mUseAuthenticationResultRelaxedParser;
+    QComboBox *const mSmallKeyPolicy;
 };
 

@@ -31,7 +31,7 @@ private:
     void readConfig();
     void slotSearchLDAP();
     void ldapSearchResult();
-    Akonadi::RecipientsPickerWidget *mView = nullptr;
+    Akonadi::RecipientsPickerWidget *const mView;
     PimCommon::LdapSearchDialog *mLdapSearchDialog = nullptr;
 };
 

@@ -21,12 +21,12 @@ public:
     void resetSettings();
 
 private:
-    QCheckBox *mVerifyIfEmailMustBeSigned = nullptr;
-    QCheckBox *mUseDMARC = nullptr;
-    QCheckBox *mUseDefaultRules = nullptr;
-    QCheckBox *mAutoGenerateRule = nullptr;
-    QCheckBox *mReadAuthResultHeader = nullptr;
-    QCheckBox *mAutoGenerateOnlyIfSenderInSDID = nullptr;
-    QPushButton *mRulesButton = nullptr;
+    QCheckBox *const mVerifyIfEmailMustBeSigned;
+    QCheckBox *const mUseDMARC;
+    QCheckBox *const mUseDefaultRules;
+    QCheckBox *const mAutoGenerateRule;
+    QCheckBox *const mReadAuthResultHeader;
+    QCheckBox *const mAutoGenerateOnlyIfSenderInSDID;
+    QPushButton *const mRulesButton;
 };
 

@@ -21,9 +21,9 @@ public:
     void resetSettings();
 
 private:
-    QCheckBox *mEnableDkimSupport = nullptr;
-    QCheckBox *mSaveResult = nullptr;
-    QComboBox *mSaveKey = nullptr;
-    QCheckBox *mUseOnlyAuthenticationResult = nullptr;
+    QCheckBox *const mEnableDkimSupport;
+    QCheckBox *const mSaveResult;
+    QComboBox *const mSaveKey;
+    QCheckBox *const mUseOnlyAuthenticationResult;
 };
 

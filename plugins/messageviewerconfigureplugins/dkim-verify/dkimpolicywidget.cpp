@@ -18,11 +18,17 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     : QWidget(parent)
+    , mVerifyIfEmailMustBeSigned(new QCheckBox(i18n("Check if e-mail should be signed"), this))
+    , mUseDMARC(new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this))
+    , mUseDefaultRules(new QCheckBox(i18n("Use default rule"), this))
+    , mAutoGenerateRule(new QCheckBox(i18n("Autogenerate rule"), this))
+    , mReadAuthResultHeader(new QCheckBox(i18n("Read Authentication-Results header"), this))
+    , mAutoGenerateOnlyIfSenderInSDID(new QCheckBox(i18n("Autogenerate when Sender in SDID"), this))
+    , mRulesButton(new QPushButton(i18n("Show Rules"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mVerifyIfEmailMustBeSigned = new QCheckBox(i18n("Check if e-mail should be signed"), this);
     mVerifyIfEmailMustBeSigned->setObjectName(QStringLiteral("mVerifyIfEmailMustBeSigned"));
     mainLayout->addWidget(mVerifyIfEmailMustBeSigned);
     connect(mVerifyIfEmailMustBeSigned, &QCheckBox::toggled, this, [this](bool state) {
@@ -34,22 +40,18 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
         mReadAuthResultHeader->setEnabled(state);
     });
 
-    mUseDMARC = new QCheckBox(i18n("Use DMARC to heuristically determine if an e-mail should be signed"), this);
     mUseDMARC->setObjectName(QStringLiteral("mUseDMARC"));
     mUseDMARC->setEnabled(false);
     mainLayout->addWidget(mUseDMARC);
 
-    mReadAuthResultHeader = new QCheckBox(i18n("Read Authentication-Results header"), this);
     mReadAuthResultHeader->setObjectName(QStringLiteral("mReadAuthResultHeader"));
     mReadAuthResultHeader->setEnabled(false);
     mainLayout->addWidget(mReadAuthResultHeader);
 
-    mUseDefaultRules = new QCheckBox(i18n("Use default rule"), this);
     mUseDefaultRules->setObjectName(QStringLiteral("mUseDefaultRules"));
     mUseDefaultRules->setEnabled(false);
     mainLayout->addWidget(mUseDefaultRules);
 
-    mAutoGenerateRule = new QCheckBox(i18n("Autogenerate rule"), this);
     mAutoGenerateRule->setObjectName(QStringLiteral("mAutoGenerateRule"));
     mAutoGenerateRule->setEnabled(false);
     mainLayout->addWidget(mAutoGenerateRule);
@@ -61,14 +63,12 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     auto item = new QSpacerItem(30, 0);
     autogenerateOnlyLayout->addItem(item);
 
-    mAutoGenerateOnlyIfSenderInSDID = new QCheckBox(i18n("Autogenerate when Sender in SDID"), this);
     mAutoGenerateOnlyIfSenderInSDID->setObjectName(QStringLiteral("mAutoGenerateOnlyIfSenderInSDID"));
     mAutoGenerateOnlyIfSenderInSDID->setEnabled(false);
     autogenerateOnlyLayout->addWidget(mAutoGenerateOnlyIfSenderInSDID);
 
     auto ruleLayout = new QHBoxLayout;
     mainLayout->addLayout(ruleLayout);
-    mRulesButton = new QPushButton(i18n("Show Rules"), this);
     mRulesButton->setObjectName(QStringLiteral("rules"));
     mRulesButton->setEnabled(false);
     ruleLayout->addWidget(mRulesButton);

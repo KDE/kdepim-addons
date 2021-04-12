@@ -14,10 +14,10 @@
 
 TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     : PimCommon::CustomToolsViewInterface(parent)
+    , mTranslatorWidget(new PimCommon::TranslatorWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    mTranslatorWidget = new PimCommon::TranslatorWidget(this);
     connect(mTranslatorWidget, &PimCommon::TranslatorWidget::toolsWasClosed, this, &TranslatorView::toolsWasClosed);
 
     layout->addWidget(mTranslatorWidget);

@@ -16,16 +16,18 @@
 using namespace PimCommon::ConfigureImmutableWidgetUtils;
 DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     : QWidget(parent)
+    , mEnableDkimSupport(new QCheckBox(i18n("Enable DKIM Support"), this))
+    , mSaveResult(new QCheckBox(i18n("Save DKIM Result"), this))
+    , mSaveKey(new QComboBox(this))
+    , mUseOnlyAuthenticationResult(new QCheckBox(i18n("Replace DKIM result by Authentication-Result header value"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mEnableDkimSupport = new QCheckBox(i18n("Enable DKIM Support"));
     mEnableDkimSupport->setObjectName(QStringLiteral("enableDkimSupport"));
     mEnableDkimSupport->setChecked(false);
     mainLayout->addWidget(mEnableDkimSupport);
 
-    mSaveResult = new QCheckBox(i18n("Save DKIM Result"));
     mSaveResult->setObjectName(QStringLiteral("mSaveResult"));
     mSaveResult->setChecked(false);
     mainLayout->addWidget(mSaveResult);
@@ -37,13 +39,11 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     saveKeyLabel->setObjectName(QStringLiteral("saveKeyLabel"));
     saveKeyLayout->addWidget(saveKeyLabel);
 
-    mSaveKey = new QComboBox(this);
     mSaveKey->setObjectName(QStringLiteral("mSaveKey"));
     mSaveKey->addItems({i18n("Nothing"), i18n("Save"), i18n("Save and Compare")});
     saveKeyLayout->addWidget(mSaveKey);
     saveKeyLayout->addStretch(1);
 
-    mUseOnlyAuthenticationResult = new QCheckBox(i18n("Replace DKIM result by Authentication-Result header value"));
     mUseOnlyAuthenticationResult->setObjectName(QStringLiteral("mUseOnlyAuthenticationResult"));
     mUseOnlyAuthenticationResult->setChecked(false);
     mainLayout->addWidget(mUseOnlyAuthenticationResult);

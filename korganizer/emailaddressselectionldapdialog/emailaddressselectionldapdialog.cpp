@@ -21,9 +21,9 @@ K_PLUGIN_CLASS_WITH_JSON(EmailAddressSelectionLdapDialog, "emailaddressselection
 
 EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent, const QList<QVariant> &)
     : Akonadi::AbstractEmailAddressSelectionDialog(parent)
+    , mView(new Akonadi::RecipientsPickerWidget(true, nullptr, this))
 {
     auto mainLayout = new QVBoxLayout(this);
-    mView = new Akonadi::RecipientsPickerWidget(true, nullptr, this);
     mainLayout->addWidget(mView);
     connect(mView->emailAddressSelectionWidget()->view(), &QTreeView::doubleClicked, this, &QDialog::accept);
 

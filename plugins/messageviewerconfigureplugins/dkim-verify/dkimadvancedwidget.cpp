@@ -17,24 +17,24 @@ using namespace PimCommon::ConfigureImmutableWidgetUtils;
 
 DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     : QWidget(parent)
+    , mSha1Policy(new QComboBox(this))
+    , mCheckDKIMWhenOnlyTesting(new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this))
+    , mUseAuthenticationResultRelaxedParser(new QCheckBox(i18n("Use relaxed parsing when reading \"Authentication-Result\" header"), this))
+    , mSmallKeyPolicy(new QComboBox(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
-    mCheckDKIMWhenOnlyTesting = new QCheckBox(i18n("Still verify the signature, if a domain is only testing DKIM"), this);
     mCheckDKIMWhenOnlyTesting->setObjectName(QStringLiteral("mCheckDKIMWhenOnlyTesting"));
     mainLayout->addRow(mCheckDKIMWhenOnlyTesting);
 
-    mUseAuthenticationResultRelaxedParser = new QCheckBox(i18n("Use relaxed parsing when reading \"Authentication-Result\" header"), this);
     mUseAuthenticationResultRelaxedParser->setObjectName(QStringLiteral("mUseAuthenticationResultRelaxedParser"));
     mainLayout->addRow(mUseAuthenticationResultRelaxedParser);
 
-    mSha1Policy = new QComboBox(this);
     mSha1Policy->setObjectName(QStringLiteral("rsa1-policy"));
     mSha1Policy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat RSA-SHA1 sign algorithm as:"), mSha1Policy);
 
-    mSmallKeyPolicy = new QComboBox(this);
     mSmallKeyPolicy->setObjectName(QStringLiteral("mSmallKeyPolicy"));
     mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
