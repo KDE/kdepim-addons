@@ -13,12 +13,12 @@
 
 SelectMailWidget::SelectMailWidget(QWidget *parent)
     : QWidget(parent)
+    , mView(new Akonadi::EmailAddressSelectionWidget(true, nullptr, this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setObjectName(QStringLiteral("mainlayout"));
     layout->setContentsMargins({});
 
-    mView = new Akonadi::EmailAddressSelectionWidget(true, nullptr, this);
     mView->setObjectName(QStringLiteral("emailaddressselectionwidget"));
     layout->addWidget(mView);
     mView->view()->setSelectionMode(QAbstractItemView::ExtendedSelection);

@@ -11,12 +11,12 @@
 
 QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
     : QWidget(parent)
+    , mSnippetWidget(new QuickTextWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mSnippetWidget = new QuickTextWidget(this);
     mSnippetWidget->setObjectName(QStringLiteral("snippetwidget"));
 
     mainLayout->addWidget(mSnippetWidget);

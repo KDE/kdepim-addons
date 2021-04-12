@@ -29,8 +29,8 @@ Q_SIGNALS:
     void configureChanged();
 
 private:
-    QCheckBox *mEnabled = nullptr;
-    Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
+    QCheckBox *const mEnabled;
+    Akonadi::CollectionComboBox *const mCollectionCombobox;
     uint mIdentity = 0;
 };
 

@@ -14,12 +14,12 @@
 
 AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+    , mConfigureTab(new AutomaticAddContactsConfigureTab(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfigureTab = new AutomaticAddContactsConfigureTab(this);
     mConfigureTab->setObjectName(QStringLiteral("configuretab"));
     mainLayout->addWidget(mConfigureTab);
     connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);

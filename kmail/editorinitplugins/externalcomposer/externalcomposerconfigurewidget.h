@@ -22,7 +22,7 @@ public:
     void resetSettings() override;
 
 private:
-    QCheckBox *mExternalEditorCheck = nullptr;
-    KUrlRequester *mEditorRequester = nullptr;
+    QCheckBox *const mExternalEditorCheck;
+    KUrlRequester *const mEditorRequester;
 };
 

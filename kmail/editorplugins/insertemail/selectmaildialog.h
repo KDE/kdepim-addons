@@ -25,6 +25,6 @@ Q_SIGNALS:
 private:
     void writeConfig();
     void readConfig();
-    SelectMailWidget *mSelectMailWidget = nullptr;
+    SelectMailWidget *const mSelectMailWidget;
 };
 

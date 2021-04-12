@@ -21,6 +21,6 @@ private:
     void slotChanged();
     void loadConfig();
     bool mChanged = false;
-    QComboBox *mShortUrlServer = nullptr;
+    QComboBox *const mShortUrlServer;
 };
 

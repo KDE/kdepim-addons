@@ -22,9 +22,9 @@ public:
     void resetSettings() override;
 
 private:
-    QCheckBox *mCheckPlainTextMail = nullptr;
-    QCheckBox *mCheckMailTransport = nullptr;
-    QCheckBox *mCheckDuplicateEmailsAddresses = nullptr;
-    QCheckBox *mCheckSendAttachments = nullptr;
+    QCheckBox *const mCheckPlainTextMail;
+    QCheckBox *const mCheckMailTransport;
+    QCheckBox *const mCheckDuplicateEmailsAddresses;
+    QCheckBox *const mCheckSendAttachments;
 };
 

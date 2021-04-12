@@ -15,12 +15,13 @@
 
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorInitConfigureWidget(parent)
+    , mExternalEditorCheck(new QCheckBox(i18n("Use external editor instead of composer"), this))
+    , mEditorRequester(new KUrlRequester(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mExternalEditorCheck = new QCheckBox(i18n("Use external editor instead of composer"), this);
     mExternalEditorCheck->setObjectName(QStringLiteral("enabled"));
     mExternalEditorCheck->setChecked(false);
     mainLayout->addWidget(mExternalEditorCheck);
@@ -30,7 +31,6 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     label->setObjectName(QStringLiteral("urlrequesterlabel"));
     hbox->addWidget(label);
 
-    mEditorRequester = new KUrlRequester(this);
     mEditorRequester->setObjectName(QStringLiteral("mEditorRequester"));
     hbox->addWidget(mEditorRequester);
 

@@ -20,6 +20,7 @@ static const char myConfigGroupName[] = "ShortUrl";
 }
 InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     : QWidget(parent)
+    , mShortUrlServer(new QComboBox(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -29,7 +30,6 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 
-    mShortUrlServer = new QComboBox(this);
     mShortUrlServer->setObjectName(QStringLiteral("shorturlserver"));
     mainLayout->addWidget(mShortUrlServer);
     const QVector<ShortUrlEnginePlugin *> lstPlugin = ShortUrlEnginePluginManager::self()->pluginsList();

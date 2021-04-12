@@ -16,27 +16,27 @@ static const char myConfigGroupName[] = "Check Before Send";
 }
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+    , mCheckPlainTextMail(new QCheckBox(i18n("Send as plain text"), this))
+    , mCheckMailTransport(new QCheckBox(i18n("Use SMTP server defined in identity"), this))
+    , mCheckDuplicateEmailsAddresses(new QCheckBox(i18n("Check duplicated emails addresses"), this))
+    , mCheckSendAttachments(new QCheckBox(i18n("Check send attachment"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mCheckPlainTextMail = new QCheckBox(i18n("Send as plain text"), this);
     mCheckPlainTextMail->setObjectName(QStringLiteral("checkplaintext"));
     connect(mCheckPlainTextMail, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckPlainTextMail);
 
-    mCheckMailTransport = new QCheckBox(i18n("Use SMTP server defined in identity"), this);
     mCheckMailTransport->setObjectName(QStringLiteral("smtpdefinedinidentity"));
     connect(mCheckMailTransport, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckMailTransport);
 
-    mCheckDuplicateEmailsAddresses = new QCheckBox(i18n("Check duplicated emails addresses"), this);
     mCheckDuplicateEmailsAddresses->setObjectName(QStringLiteral("checkduplicatedemailsaddresses"));
     connect(mCheckDuplicateEmailsAddresses, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckDuplicateEmailsAddresses);
 
-    mCheckSendAttachments = new QCheckBox(i18n("Check send attachment"), this);
     mCheckSendAttachments->setObjectName(QStringLiteral("checksendattachment"));
     connect(mCheckSendAttachments, &QCheckBox::clicked, this, &CheckBeforeSendConfigureWidget::configureChanged);
     mainLayout->addWidget(mCheckSendAttachments);

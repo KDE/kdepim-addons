@@ -24,6 +24,6 @@ private:
     void slotAccepted();
     void slotExport();
     void slotImport();
-    QuickTextConfigureWidget *mQuickTextConfigureWidget = nullptr;
+    QuickTextConfigureWidget *const mQuickTextConfigureWidget;
 };
 

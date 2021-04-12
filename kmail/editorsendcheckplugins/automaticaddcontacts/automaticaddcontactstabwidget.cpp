@@ -24,10 +24,11 @@ QString configGroupName()
 }
 AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QAbstractItemModel *model)
     : QWidget(parent)
+    , mEnabled(new QCheckBox(i18n("Automatic Add Contacts"), this))
+    , mCollectionCombobox(new Akonadi::CollectionComboBox(model, this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    mEnabled = new QCheckBox(i18n("Automatic Add Contacts"), this);
     mEnabled->setObjectName(QStringLiteral("enabled"));
     connect(mEnabled, &QCheckBox::clicked, this, &AutomaticAddContactsTabWidget::configureChanged);
     mainLayout->addWidget(mEnabled);
@@ -41,7 +42,6 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     lab->setObjectName(QStringLiteral("labelfolder"));
     hlay->addWidget(lab);
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox(model, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());
