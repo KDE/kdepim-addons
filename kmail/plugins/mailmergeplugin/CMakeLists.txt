@@ -6,6 +6,7 @@ set(kmail_mailmergeplugin_SRCS
     widgets/mailmergewidget.cpp
     widgets/selectattachmentdialog.cpp
     widgets/mailmergemenu.cpp
+    widgets/mailmergeutil.cpp
 )
 
 add_library(mailmerge ${kmail_mailmergeplugin_SRCS})
