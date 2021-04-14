@@ -21,7 +21,7 @@ class QUICKTEXT_EXPORT QuickTextMenu : public QObject
 public:
     explicit QuickTextMenu(QWidget *parentWidget, QObject *parent = nullptr);
     ~QuickTextMenu() override;
-    QMenu *menu() const;
+    Q_REQUIRED_RESULT QMenu *menu() const;
 
     void setPluginComposerInterface(MessageComposer::PluginComposerInterface *composerInterface);
 
