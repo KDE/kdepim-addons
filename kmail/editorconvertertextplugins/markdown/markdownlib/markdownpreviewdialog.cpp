@@ -39,13 +39,13 @@ MarkdownPreviewDialog::~MarkdownPreviewDialog()
 
 void MarkdownPreviewDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownPreviewDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownPreviewDialog");
     group.writeEntry("Size", size());
 }
 
 void MarkdownPreviewDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownPreviewDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownPreviewDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

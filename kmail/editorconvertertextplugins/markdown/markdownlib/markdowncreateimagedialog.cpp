@@ -54,13 +54,13 @@ QString MarkdownCreateImageDialog::linkStr() const
 
 void MarkdownCreateImageDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateImageDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateImageDialog");
     group.writeEntry("Size", size());
 }
 
 void MarkdownCreateImageDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openConfig(), "MarkdownCreateImageDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateImageDialog");
     const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

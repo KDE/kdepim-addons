@@ -117,14 +117,14 @@ void AdBlockBlockableItemsWidget::slotCustomContextMenuRequested(const QPoint &)
 
 void AdBlockBlockableItemsWidget::writeConfig()
 {
-    KConfigGroup groupHeader(KSharedConfig::openConfig(), "AdBlockHeaders");
+    KConfigGroup groupHeader(KSharedConfig::openStateConfig(), "AdBlockHeaders");
     groupHeader.writeEntry("HeaderState", mListItems->header()->saveState());
     groupHeader.sync();
 }
 
 void AdBlockBlockableItemsWidget::readConfig()
 {
-    KConfigGroup config(KSharedConfig::openConfig(), "AdBlockHeaders");
+    KConfigGroup config(KSharedConfig::openStateConfig(), "AdBlockHeaders");
     mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
 }
 
