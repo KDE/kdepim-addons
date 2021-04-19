@@ -44,7 +44,7 @@ void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *a
 
 void ViewerPluginExternalscriptInterface::setMessageItem(const Akonadi::Item &item)
 {
-    mAkonadiUrl = item.url().toString();
+    mAkonadiUrl = item.url(Akonadi::Item::UrlWithMimeType).toString();
 }
 
 void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
