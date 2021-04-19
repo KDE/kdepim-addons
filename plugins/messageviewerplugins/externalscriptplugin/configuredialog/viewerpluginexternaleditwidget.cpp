@@ -9,6 +9,8 @@
 #include <KLocalizedString>
 #include <KUrlRequester>
 #include <QFormLayout>
+#include <QLabel>
+#include <QWhatsThis>
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
@@ -30,6 +32,27 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     mCommandLine->setObjectName(QStringLiteral("commandline"));
     mainLayout->addRow(i18n("Command Line:"), mCommandLine);
 
+    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
+    formatHelp->setObjectName(QStringLiteral("formatHelp"));
+    formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
+    connect(formatHelp, &QLabel::linkActivated, this, &ViewerPluginExternalEditWidget::slotLinkClicked);
+
+    mCommandWhatsThis = i18n(
+        "<qt><p><strong>These expressions may be used for the date:"
+        "</strong></p>"
+        "<ul>"
+        "<li>%s - the subject of message</li>"
+        "<li>%from - the from email address</li>"
+        "<li>%cc - the list of cc email address</li>"
+        "<li>%bcc - the list of bcc email address</li>"
+        "<li>%body - the body of message</li>"
+        "<li>%inreplyto - the reply email address</li>"
+        "</ul>"
+        "</strong></p></qt>");
+    formatHelp->setWhatsThis(mCommandWhatsThis);
+
+    mainLayout->addWidget(formatHelp);
+
     mExecutable = new KUrlRequester(this);
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
 
@@ -45,6 +68,13 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
 ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
 {
+}
+
+void ViewerPluginExternalEditWidget::slotLinkClicked(const QString &link)
+{
+    if (link == QLatin1String("whatsthis1")) {
+        QWhatsThis::showText(QCursor::pos(), mCommandWhatsThis);
+    }
 }
 
 void ViewerPluginExternalEditWidget::slotInfoChanged()

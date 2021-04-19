@@ -8,6 +8,7 @@
 #include "../configuredialog/viewerpluginexternaleditwidget.h"
 #include <KUrlRequester>
 #include <QFormLayout>
+#include <QLabel>
 #include <QLineEdit>
 #include <QTest>
 
@@ -38,6 +39,9 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
 
     auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
     QVERIFY(mExecutable);
+
+    auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
+    QVERIFY(formatHelp);
 }
 
 void ViewerPluginExternalEditWidgetTest::shouldGetSaveInfo_data()

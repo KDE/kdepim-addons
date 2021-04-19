@@ -27,9 +27,11 @@ Q_SIGNALS:
     void scriptIsValid(bool valid);
 
 private:
+    void slotLinkClicked(const QString &link);
     void slotInfoChanged();
     ViewerPluginExternalScriptInfo mScriptInfo;
     QStringList mExistingsNames;
+    QString mCommandWhatsThis;
     QLineEdit *mName = nullptr;
     QLineEdit *mDescription = nullptr;
     QLineEdit *mCommandLine = nullptr;
