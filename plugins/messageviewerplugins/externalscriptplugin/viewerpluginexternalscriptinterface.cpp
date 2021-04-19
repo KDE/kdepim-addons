@@ -42,6 +42,11 @@ void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *a
     createAction(ac);
 }
 
+void ViewerPluginExternalscriptInterface::setMessageItem(const Akonadi::Item &item)
+{
+    mAkonadiUrl = item.url().toString();
+}
+
 void ViewerPluginExternalscriptInterface::setMessage(const KMime::Message::Ptr &msg)
 {
     mMessage = msg;
@@ -128,5 +133,6 @@ QStringList ViewerPluginExternalscriptInterface::adaptArguments(const QStringLis
 {
     ViewerPluginExternalScriptParseArgument parser;
     parser.setMessage(mMessage);
+    parser.setAkonadiUrl(mAkonadiUrl);
     return parser.parse(scriptArguments);
 }

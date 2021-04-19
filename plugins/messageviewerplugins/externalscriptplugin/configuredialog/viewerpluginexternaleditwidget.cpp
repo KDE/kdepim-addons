@@ -47,6 +47,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
         "<li>%bcc - the list of bcc email address</li>"
         "<li>%body - the body of message</li>"
         "<li>%inreplyto - the reply email address</li>"
+        "<li>%akonadiUrl - the akonadi url (as akonadi:?item=187020)</li>"
         "</ul>"
         "</strong></p></qt>");
     formatHelp->setWhatsThis(mCommandWhatsThis);

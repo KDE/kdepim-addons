@@ -25,6 +25,7 @@ public:
     void setText(const QString &text) override;
     void setMessage(const KMime::Message::Ptr &msg) override;
     void refreshActionList(KActionCollection *ac) override;
+    void setMessageItem(const Akonadi::Item &item) override;
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 
@@ -35,6 +36,7 @@ private:
     QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
     QString mText;
+    QString mAkonadiUrl;
     KMime::Message::Ptr mMessage;
     QActionGroup *mActionGroup = nullptr;
 };

@@ -5,7 +5,7 @@
 */
 
 #include "viewerpluginexternalscriptparseargument.h"
-
+#include <QDebug>
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument()
 {
 }
@@ -13,6 +13,11 @@ ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument
 void ViewerPluginExternalScriptParseArgument::setMessage(const KMime::Message::Ptr &msg)
 {
     mMessage = msg;
+}
+
+void ViewerPluginExternalScriptParseArgument::setAkonadiUrl(const QString &akonadiUrl)
+{
+    mAkonadiUrl = akonadiUrl;
 }
 
 QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &scriptArguments)
@@ -45,6 +50,8 @@ QStringList ViewerPluginExternalScriptParseArgument::parse(const QStringList &sc
         } else if (arg == QLatin1String("%inreplyto")) {
             KMime::Headers::InReplyTo *inReplyTo = mMessage ? mMessage->inReplyTo(false) : nullptr;
             newArguments << QStringLiteral("\"%1\"").arg(inReplyTo ? inReplyTo->asUnicodeString() : QString());
+        } else if (arg == QLatin1String("%akonadiUrl")) {
+            newArguments << mAkonadiUrl;
         } else {
             newArguments << arg;
         }
