@@ -16,6 +16,7 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QMenu>
 
 using namespace MessageViewer;
 
@@ -98,11 +99,13 @@ void ViewerPluginExternalscriptInterface::clear()
 void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
+        QAction *mainMenu = new QAction(i18n("External Script"), this);
         const QVector<ViewerPluginExternalScriptInfo> infos = ViewerPluginExternalScriptManager::self()->scriptInfos();
+        QMenu *menu = new QMenu;
         if (!infos.isEmpty()) {
             connect(mActionGroup, &QActionGroup::triggered, this, &ViewerPluginExternalscriptInterface::slotScriptActivated);
             for (const ViewerPluginExternalScriptInfo &info : infos) {
-                QAction *act = new QAction(info.name(), this);
+                QAction *act = new QAction(info.name(), menu);
                 act->setIconText(info.name());
                 const QString &description = info.description();
                 if (!description.isEmpty()) {
@@ -116,11 +119,23 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 const QStringList actionInfo{info.commandLine(), info.executable()};
 
                 act->setData(actionInfo);
-                mAction.append(act);
+                menu->addAction(act);
                 mActionGroup->addAction(act);
             }
         }
+        if (!infos.isEmpty()) {
+            menu->addSeparator();
+        }
+        QAction *act = new QAction(i18n("Configure"), menu);
+        connect(act, &QAction::triggered, this, &ViewerPluginExternalscriptInterface::slotConfigure);
+        menu->addAction(act);
+        mainMenu->setMenu(menu);
+        mAction << mainMenu;
     }
+}
+
+void ViewerPluginExternalscriptInterface::slotConfigure()
+{
 }
 
 void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)

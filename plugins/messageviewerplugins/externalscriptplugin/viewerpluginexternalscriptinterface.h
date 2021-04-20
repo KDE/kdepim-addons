@@ -32,8 +32,9 @@ private Q_SLOTS:
 private:
     void createAction(KActionCollection *ac);
     void clear();
+    void slotConfigure();
     QList<QAction *> mAction;
-    QStringList adaptArguments(const QStringList &scriptArguments);
+    Q_REQUIRED_RESULT QStringList adaptArguments(const QStringList &scriptArguments);
     QStringList mCurrentInfo;
     QString mText;
     QString mAkonadiUrl;
