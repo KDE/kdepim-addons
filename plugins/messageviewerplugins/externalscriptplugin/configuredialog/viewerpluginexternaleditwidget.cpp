@@ -38,7 +38,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     connect(formatHelp, &QLabel::linkActivated, this, &ViewerPluginExternalEditWidget::slotLinkClicked);
 
     mCommandWhatsThis = i18n(
-        "<qt><p><strong>These expressions may be used for the date:"
+        "<qt><p><strong>These expressions may be used for the arguments:"
         "</strong></p>"
         "<ul>"
         "<li>%s - the subject of message</li>"
