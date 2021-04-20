@@ -41,13 +41,10 @@ QMap<QString, QString> AdBlock::AdblockUtil::listSubscriptions()
     lst.insert(QStringLiteral("EasyList Germany"), QStringLiteral("https://easylist-downloads.adblockplus.org/easylistgermany.txt"));
     lst.insert(QStringLiteral("Liste FR+EasyList"), QStringLiteral("https://easylist-downloads.adblockplus.org/liste_fr+easylist.txt"));
     lst.insert(QStringLiteral("ROList+EasyList"), QStringLiteral("https://easylist-downloads.adblockplus.org/rolist+easylist.txt"));
-    lst.insert(QStringLiteral("AdblockList.org"), QStringLiteral("http://adblocklist.org/adblock-pxf-polish.txt"));
     lst.insert(QStringLiteral("Bulgarian list"), QStringLiteral("https://stanev.org/abp/adblock_bg.txt"));
     lst.insert(QStringLiteral("EasyPrivacy+EasyList"), QStringLiteral("https://easylist-downloads.adblockplus.org/easyprivacy+easylist.txt"));
     lst.insert(QStringLiteral("EasyPrivacy"), QStringLiteral("https://easylist-downloads.adblockplus.org/easyprivacy.txt"));
     lst.insert(QStringLiteral("void.gr"), QStringLiteral("https://www.void.gr/kargig/void-gr-filters.txt"));
-    lst.insert(QStringLiteral("Czech List"), QStringLiteral("https://dajbych.net/adblock.txt"));
-    lst.insert(QStringLiteral("Cédrics Liste"), QStringLiteral("https://chewey.de/mozilla/data/adblock.txt"));
     lst.insert(QStringLiteral("Fanboy's List"), QStringLiteral("https://www.fanboy.co.nz/adblock/fanboy-adblocklist-current-expanded.txt"));
     lst.insert(QStringLiteral("PLgeneral"), QStringLiteral("https://www.niecko.pl/adblock/adblock.txt"));
     lst.insert(QStringLiteral("Schacks Adblock Plus liste"), QStringLiteral("https://adblock.schack.dk/block.txt"));
