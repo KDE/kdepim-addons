@@ -129,7 +129,7 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
         if (!infos.isEmpty()) {
             menu->addSeparator();
         }
-        QAction *act = new QAction(i18n("Configure"), menu);
+        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ViewerPluginExternalscriptInterface::slotConfigure);
         menu->addAction(act);
         mainMenu->setMenu(menu);
