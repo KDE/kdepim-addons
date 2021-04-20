@@ -29,6 +29,9 @@ public:
 private Q_SLOTS:
     void slotScriptActivated(QAction *act);
 
+Q_SIGNALS:
+    void configChanged();
+
 private:
     void createAction(KActionCollection *ac);
     void clear();

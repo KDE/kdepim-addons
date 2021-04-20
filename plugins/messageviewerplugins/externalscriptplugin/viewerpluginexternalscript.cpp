@@ -21,7 +21,8 @@ ViewerPluginExternalscript::ViewerPluginExternalscript(QObject *parent, const QL
 
 ViewerPluginInterface *ViewerPluginExternalscript::createView(QWidget *parent, KActionCollection *ac)
 {
-    MessageViewer::ViewerPluginInterface *view = new MessageViewer::ViewerPluginExternalscriptInterface(ac, parent);
+    MessageViewer::ViewerPluginExternalscriptInterface *view = new MessageViewer::ViewerPluginExternalscriptInterface(ac, parent);
+    connect(view, &MessageViewer::ViewerPluginExternalscriptInterface::configChanged, this, &ViewerPluginExternalscript::configChanged);
     return view;
 }
 
@@ -30,7 +31,7 @@ QString ViewerPluginExternalscript::viewerPluginName() const
     return QStringLiteral("external script");
 }
 
-void MessageViewer::ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)
+void ViewerPluginExternalscript::showConfigureDialog(QWidget *parent)
 {
     QPointer<ViewerPluginExternalConfigureDialog> dlg = new ViewerPluginExternalConfigureDialog(parent);
     if (dlg->exec()) {
@@ -39,7 +40,7 @@ void MessageViewer::ViewerPluginExternalscript::showConfigureDialog(QWidget *par
     delete dlg;
 }
 
-bool MessageViewer::ViewerPluginExternalscript::hasConfigureDialog() const
+bool ViewerPluginExternalscript::hasConfigureDialog() const
 {
     return true;
 }

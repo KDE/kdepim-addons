@@ -10,6 +10,7 @@
 
 #include <QAction>
 #include <QIcon>
+#include <QPointer>
 #include <QProcess>
 #include <QStandardPaths>
 
@@ -17,6 +18,8 @@
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QMenu>
+
+#include <configuredialog/viewerpluginexternalconfiguredialog.h>
 
 using namespace MessageViewer;
 
@@ -136,6 +139,11 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
 
 void ViewerPluginExternalscriptInterface::slotConfigure()
 {
+    QPointer<ViewerPluginExternalConfigureDialog> dlg = new ViewerPluginExternalConfigureDialog;
+    if (dlg->exec()) {
+        Q_EMIT configChanged();
+    }
+    delete dlg;
 }
 
 void ViewerPluginExternalscriptInterface::slotScriptActivated(QAction *act)
