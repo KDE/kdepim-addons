@@ -133,7 +133,9 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
         connect(act, &QAction::triggered, this, &ViewerPluginExternalscriptInterface::slotConfigure);
         menu->addAction(act);
         mainMenu->setMenu(menu);
-        mAction << mainMenu;
+        act = new QAction(menu);
+        act->setSeparator(true);
+        mAction << mainMenu << act;
     }
 }
 
