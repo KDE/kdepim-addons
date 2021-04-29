@@ -10,7 +10,7 @@
 #include <KCalendarCore/Todo>
 #include <KJob>
 
-#include <QObject>
+class QObject;
 namespace MessageViewer
 {
 class CreateTodoJob : public KJob

@@ -7,7 +7,7 @@
 #pragma once
 
 #include <../shorturlengineinterface.h>
-#include <QNetworkReply>
+class QNetworkReply;
 class TinyUrlEngineInterface : public ShortUrlEngineInterface
 {
     Q_OBJECT

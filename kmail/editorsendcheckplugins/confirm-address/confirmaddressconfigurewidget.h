@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
-#include <QWidget>
+class QWidget;
 class ConfirmAddressConfigureTab;
 class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
 {

@@ -8,7 +8,7 @@
 
 #include "adblocklib_export.h"
 #include <PimCommon/ConfigurePluginDialog>
-#include <QWidget>
+class QWidget;
 
 namespace AdBlock
 {

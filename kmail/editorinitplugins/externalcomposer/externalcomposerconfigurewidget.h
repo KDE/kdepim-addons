@@ -7,7 +7,7 @@
 #pragma once
 
 #include <MessageComposer/PluginEditorInitConfigureWidget>
-#include <QWidget>
+class QWidget;
 class QCheckBox;
 class KUrlRequester;
 class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInitConfigureWidget

@@ -7,7 +7,7 @@
 #pragma once
 
 #include <KSieveUi/AbstractRegexpEditorLineEdit>
-#include <QWidget>
+class QWidget;
 class QLineEdit;
 class QToolButton;
 class RegexpEditorLineEdit : public KSieveUi::AbstractRegexpEditorLineEdit

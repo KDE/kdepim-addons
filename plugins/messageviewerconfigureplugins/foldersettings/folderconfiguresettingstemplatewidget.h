@@ -9,7 +9,7 @@
 #include "folderconfiguresettingspagebase.h"
 
 #include <AkonadiCore/Collection>
-#include <QWidget>
+class QWidget;
 namespace MailCommon
 {
 class CollectionTemplatesWidget;

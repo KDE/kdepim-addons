@@ -7,7 +7,7 @@
 #include "qcsvmodel.h"
 #include "qcsvmodel_p.h"
 #include "qcsvreader.h"
-
+#include <QIODevice>
 #include <QPair>
 
 CsvParser::CsvParser(QObject *parent)

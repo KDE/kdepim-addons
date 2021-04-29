@@ -8,7 +8,7 @@
 
 #include <KAddressBookImportExport/PluginInterface>
 #include <KContacts/Addressee>
-#include <QFile>
+class QFile;
 
 class GMXImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {

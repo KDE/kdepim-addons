@@ -13,7 +13,7 @@
 
 #include <kmime/kmime_message.h>
 
-#include <QObject>
+class QObject;
 
 namespace MessageViewer
 {

@@ -9,7 +9,7 @@
 #include <KSieveUi/AbstractMoveImapFolderWidget>
 #include <KSieveUi/SieveImapAccountSettings>
 #include <QPointer>
-#include <QWidget>
+class QWidget;
 class QToolButton;
 class SelectImapLineEdit;
 class SelectImapFolderDialog;

@@ -7,7 +7,7 @@
 #pragma once
 
 #include <QAbstractTableModel>
-#include <QIODevice>
+class QIODevice;
 class CsvParser;
 class QCsvModel : public QAbstractTableModel
 {
