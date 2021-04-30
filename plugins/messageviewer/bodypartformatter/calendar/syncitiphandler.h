@@ -26,8 +26,8 @@ public Q_SLOTS:
     void onITipMessageProcessed(Akonadi::ITIPHandler::Result, const QString &errorMessage);
 
 public:
-    QString errorMessage() const;
-    Akonadi::ITIPHandler::Result result() const;
+    Q_REQUIRED_RESULT QString errorMessage() const;
+    Q_REQUIRED_RESULT Akonadi::ITIPHandler::Result result() const;
 
 private:
     QString m_errorMessage;

@@ -39,19 +39,19 @@ public:
 
     static const char *identifier();
 
-    bool isParsed(const KMime::ContentIndex &index) const;
+    Q_REQUIRED_RESULT bool isParsed(const KMime::ContentIndex &index) const;
     void setParsed(const KMime::ContentIndex &index);
 
     void setMessageDate(const QDateTime &contextDt);
     void appendData(const QVector<QVariant> &data);
 
-    bool hasData() const;
+    Q_REQUIRED_RESULT bool hasData() const;
     struct TripData {
         QVector<QVariant> reservations;
         KCalendarCore::Event::Ptr event;
         bool expanded;
     };
-    QVector<TripData> data();
+    Q_REQUIRED_RESULT QVector<TripData> data();
     void toggleExpanded(int index);
 
     void addPass(KPkPass::Pass *pass, const QByteArray &rawData);

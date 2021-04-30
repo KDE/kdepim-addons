@@ -31,8 +31,8 @@ public:
 
 private:
     void slotTextChanged(const QString &text);
-    PimCommon::AddresseeLineEdit *mDelegate = nullptr;
-    QCheckBox *mRsvp = nullptr;
+    PimCommon::AddresseeLineEdit *const mDelegate;
+    QCheckBox *const mRsvp;
     QPushButton *mOkButton = nullptr;
 };
 

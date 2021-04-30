@@ -32,21 +32,21 @@ public:
     explicit PgpKeyMessagePart(MimeTreeParser::Interface::BodyPart *part);
     ~PgpKeyMessagePart() override = default;
 
-    QDateTime keyDate() const;
-    QString userID() const;
-    QString keyID() const;
-    QString fingerprint() const;
+    Q_REQUIRED_RESULT QDateTime keyDate() const;
+    Q_REQUIRED_RESULT QString userID() const;
+    Q_REQUIRED_RESULT QString keyID() const;
+    Q_REQUIRED_RESULT QString fingerprint() const;
 
-    QString error() const;
+    Q_REQUIRED_RESULT QString error() const;
     void setError(const QString &error);
 
     void setKey(const GpgME::Key &key);
-    GpgME::Key key() const;
+    Q_REQUIRED_RESULT GpgME::Key key() const;
 
-    QByteArray rawKey() const;
+    Q_REQUIRED_RESULT QByteArray rawKey() const;
 
     void setSearchRunning(bool searchRunning);
-    bool searchRunning() const;
+    Q_REQUIRED_RESULT bool searchRunning() const;
 
 protected:
     void parseContent(KMime::Content *node);

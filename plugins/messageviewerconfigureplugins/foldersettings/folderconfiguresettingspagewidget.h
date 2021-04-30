@@ -23,9 +23,9 @@ public:
     void save(const Akonadi::Collection::List &cols);
 
 private:
-    FolderConfigureSettingsExperyWidget *mCollectionExpiryWidget = nullptr;
-    FolderConfigureSettingsGeneralWidget *mFolderConfigureSettingsGeneralWidget = nullptr;
-    FolderConfigureSettingsTemplateWidget *mCollectionTemplateWidget = nullptr;
-    FolderConfigureSettingsViewWidget *mFolderConfigureSettingsViewWidget = nullptr;
+    FolderConfigureSettingsExperyWidget *const mCollectionExpiryWidget;
+    FolderConfigureSettingsGeneralWidget *const mFolderConfigureSettingsGeneralWidget;
+    FolderConfigureSettingsTemplateWidget *const mCollectionTemplateWidget;
+    FolderConfigureSettingsViewWidget *const mFolderConfigureSettingsViewWidget;
 };
 

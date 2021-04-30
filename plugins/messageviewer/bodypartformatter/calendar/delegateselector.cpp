@@ -19,26 +19,26 @@
 
 DelegateSelector::DelegateSelector(QWidget *parent)
     : QDialog(parent)
+    , mDelegate(new PimCommon::AddresseeLineEdit(this))
+    , mRsvp(new QCheckBox(i18n("Keep me informed about status changes of this incidence."), this))
 {
     setWindowTitle(i18nc("@title:window", "Select delegate"));
     auto mainLayout = new QVBoxLayout(this);
 
-    QLabel *label = new QLabel(i18n("Delegate:"), this);
+    auto label = new QLabel(i18n("Delegate:"), this);
     label->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(label);
 
-    mDelegate = new PimCommon::AddresseeLineEdit(this);
     mDelegate->setObjectName(QStringLiteral("delegate"));
     mainLayout->addWidget(mDelegate);
 
     connect(mDelegate, &PimCommon::AddresseeLineEdit::textChanged, this, &DelegateSelector::slotTextChanged);
-    mRsvp = new QCheckBox(i18n("Keep me informed about status changes of this incidence."), this);
     mRsvp->setObjectName(QStringLiteral("informcheckbox"));
 
     mRsvp->setChecked(true);
     mainLayout->addWidget(mRsvp);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setObjectName(QStringLiteral("okbutton"));

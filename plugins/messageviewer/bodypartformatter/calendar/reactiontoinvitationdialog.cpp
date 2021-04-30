@@ -17,6 +17,7 @@
 
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)
+    , mPlainTextEditor(new KPIMTextEdit::PlainTextEditorWidget(this))
 {
     auto layout = new QVBoxLayout(this);
     layout->setObjectName(QStringLiteral("layout"));
@@ -25,7 +26,6 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     label->setObjectName(QStringLiteral("label"));
     layout->addWidget(label);
 
-    mPlainTextEditor = new KPIMTextEdit::PlainTextEditorWidget(this);
     mPlainTextEditor->setObjectName(QStringLiteral("plaintexteditor"));
     layout->addWidget(mPlainTextEditor);
     connect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);

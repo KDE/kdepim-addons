@@ -24,7 +24,7 @@ public:
     void resetSettings() override;
 
 private:
-    Gravatar::GravatarConfigureSettingsWidget *mGravatarConfigWidget = nullptr;
-    QCheckBox *mEnableGravatarSupport = nullptr;
+    Gravatar::GravatarConfigureSettingsWidget *const mGravatarConfigWidget;
+    QCheckBox *const mEnableGravatarSupport;
 };
 

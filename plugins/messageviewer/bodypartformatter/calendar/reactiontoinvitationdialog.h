@@ -19,13 +19,13 @@ public:
     explicit ReactionToInvitationDialog(QWidget *parent = nullptr);
     ~ReactionToInvitationDialog() override;
 
-    QString comment() const;
+    Q_REQUIRED_RESULT QString comment() const;
 
 private:
     void slotTextChanged();
     void writeConfig();
     void readConfig();
-    KPIMTextEdit::PlainTextEditorWidget *mPlainTextEditor = nullptr;
+    KPIMTextEdit::PlainTextEditorWidget *const mPlainTextEditor;
     QPushButton *mOkButton = nullptr;
 };
 

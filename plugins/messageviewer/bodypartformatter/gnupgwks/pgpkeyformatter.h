@@ -20,6 +20,6 @@ public:
     bool render(const MimeTreeParser::MessagePartPtr &msgPart, MessageViewer::HtmlWriter *htmlWriter, MessageViewer::RenderContext *context) const override;
 
 private:
-    QString render(const PgpKeyMessagePart &mp) const;
+    Q_REQUIRED_RESULT QString render(const PgpKeyMessagePart &mp) const;
 };
 

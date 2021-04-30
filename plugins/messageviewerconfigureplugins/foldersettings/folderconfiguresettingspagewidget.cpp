@@ -18,6 +18,10 @@
 
 FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *parent)
     : QWidget(parent)
+    , mCollectionExpiryWidget(new FolderConfigureSettingsExperyWidget(this))
+    , mFolderConfigureSettingsGeneralWidget(new FolderConfigureSettingsGeneralWidget(this))
+    , mCollectionTemplateWidget(new FolderConfigureSettingsTemplateWidget(this))
+    , mFolderConfigureSettingsViewWidget(new FolderConfigureSettingsViewWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
@@ -28,22 +32,18 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     mainLayout->addWidget(tab);
 
     // General
-    mFolderConfigureSettingsGeneralWidget = new FolderConfigureSettingsGeneralWidget(this);
     mFolderConfigureSettingsGeneralWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsGeneralWidget"));
     tab->addTab(mFolderConfigureSettingsGeneralWidget, i18n("General"));
 
     // View
-    mFolderConfigureSettingsViewWidget = new FolderConfigureSettingsViewWidget(this);
     mFolderConfigureSettingsViewWidget->setObjectName(QStringLiteral("mFolderConfigureSettingsViewWidget"));
     tab->addTab(mFolderConfigureSettingsViewWidget, i18n("View"));
 
     // Expiry => add Tab
-    mCollectionExpiryWidget = new FolderConfigureSettingsExperyWidget(this);
     mCollectionExpiryWidget->setObjectName(QStringLiteral("mCollectionExpiryWidget"));
     tab->addTab(mCollectionExpiryWidget, i18n("Expiry"));
 
     // Template
-    mCollectionTemplateWidget = new FolderConfigureSettingsTemplateWidget(this);
     mCollectionTemplateWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
     tab->addTab(mCollectionTemplateWidget, i18n("Template"));
 }

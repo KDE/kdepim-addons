@@ -37,15 +37,15 @@ public:
 
     ~GnuPGWKSMessagePart() override = default;
 
-    ConfirmationType confirmationType() const;
-    QString sender() const;
-    QString address() const;
-    QString fingerprint() const;
-    QString nonce() const;
+    Q_REQUIRED_RESULT ConfirmationType confirmationType() const;
+    Q_REQUIRED_RESULT QString sender() const;
+    Q_REQUIRED_RESULT QString address() const;
+    Q_REQUIRED_RESULT QString fingerprint() const;
+    Q_REQUIRED_RESULT QString nonce() const;
 
 protected:
     void parseContent(KMime::Content *node);
-    ConfirmationType stringToType(const QStringRef &str);
+    Q_REQUIRED_RESULT ConfirmationType stringToType(const QStringRef &str);
 
     QString mSender;
     QString mAddress;

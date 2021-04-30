@@ -20,8 +20,8 @@ AttendeeSelector::AttendeeSelector(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Select Attendees"));
     auto mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
-    QWidget *mainWidget = new QWidget(this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto mainWidget = new QWidget(this);
     mainLayout->addWidget(mainWidget);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
