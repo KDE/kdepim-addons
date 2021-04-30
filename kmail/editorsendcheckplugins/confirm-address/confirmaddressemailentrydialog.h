@@ -7,7 +7,6 @@
 #pragma once
 
 #include <QDialog>
-class QDialogButtonBox;
 class QLineEdit;
 
 class ConfirmAddressEmailEntryDialog : public QDialog
@@ -21,7 +20,6 @@ public:
     void setValue(const QString &val);
 
 private:
-    QDialogButtonBox *mButtons = nullptr;
-    QLineEdit *mLineEdit = nullptr;
+    QLineEdit *const mLineEdit;
 };
 

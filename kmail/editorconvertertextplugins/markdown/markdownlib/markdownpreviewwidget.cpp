@@ -17,8 +17,8 @@
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
+    , mConverter(new MarkdownConverter(this))
 {
-    mConverter = new MarkdownConverter(this);
     mConverter->setObjectName(QStringLiteral("converter"));
     connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
 

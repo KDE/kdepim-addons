@@ -11,15 +11,15 @@
 
 MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     : QWidget(parent)
+    , mTitle(new QLineEdit(this))
+    , mLink(new QLineEdit(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));
     mTitle->setClearButtonEnabled(true);
-    mLink = new QLineEdit(this);
     mLink->setObjectName(QStringLiteral("link"));
     mLink->setClearButtonEnabled(true);
 

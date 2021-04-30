@@ -13,6 +13,7 @@
 
 CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent)
     : QDialog(parent)
+    , mChangeSmtp(new QCheckBox(i18n("Update SMTP server"), this))
 {
     setWindowTitle(i18nc("@title:window", "Check SMTP server"));
     auto mainLayout = new QVBoxLayout(this);
@@ -23,7 +24,6 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     lab->setWordWrap(true);
     mainLayout->addWidget(lab);
 
-    mChangeSmtp = new QCheckBox(i18n("Update SMTP server"), this);
     mChangeSmtp->setObjectName(QStringLiteral("changesmtp"));
     mChangeSmtp->setChecked(false);
     mainLayout->addWidget(mChangeSmtp);

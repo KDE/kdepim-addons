@@ -21,7 +21,7 @@ public:
     void resetSettings() override;
 
 private:
-    QCheckBox *mLatexSupport = nullptr;
-    QCheckBox *mExtraDefinitionLists = nullptr;
+    QCheckBox *const mLatexSupport;
+    QCheckBox *const mExtraDefinitionLists;
 };
 

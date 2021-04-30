@@ -22,6 +22,6 @@ public:
 
 private:
     void slotEnableChanged(bool state);
-    ConfirmAddressConfigureTab *mConfirmAddressConfigureTab = nullptr;
+    ConfirmAddressConfigureTab *const mConfirmAddressConfigureTab;
 };
 

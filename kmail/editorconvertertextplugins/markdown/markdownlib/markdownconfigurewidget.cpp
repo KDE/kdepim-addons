@@ -16,16 +16,16 @@ static const char myConfigGroupName[] = "Markdown";
 }
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
+    , mLatexSupport(new QCheckBox(i18n("Enable embedded LaTeX"), this))
+    , mExtraDefinitionLists(new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mLatexSupport = new QCheckBox(i18n("Enable embedded LaTeX"), this);
     mLatexSupport->setObjectName(QStringLiteral("latex"));
     mainLayout->addWidget(mLatexSupport);
 
-    mExtraDefinitionLists = new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this);
     mExtraDefinitionLists->setObjectName(QStringLiteral("extradefinitionlists"));
     mainLayout->addWidget(mExtraDefinitionLists);
     mainLayout->addStretch(1);

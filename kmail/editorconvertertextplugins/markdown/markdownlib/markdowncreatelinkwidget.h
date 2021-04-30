@@ -22,7 +22,7 @@ Q_SIGNALS:
 
 private:
     void slotEnableButton();
-    QLineEdit *mTitle = nullptr;
-    QLineEdit *mLink = nullptr;
+    QLineEdit *const mTitle;
+    QLineEdit *const mLink;
 };
 

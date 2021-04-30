@@ -27,7 +27,7 @@ private:
     void writeConfig();
     void readConfig();
     uint mCurrentIdentity = 0;
-    ConfirmAddressWidget *mConfirmWidget = nullptr;
-    QPushButton *mWhiteListEmailsButton = nullptr;
+    ConfirmAddressWidget *const mConfirmWidget;
+    QPushButton *const mWhiteListEmailsButton;
 };
 

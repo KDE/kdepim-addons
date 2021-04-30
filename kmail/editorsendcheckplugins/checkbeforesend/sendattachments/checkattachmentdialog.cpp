@@ -14,6 +14,7 @@
 
 CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     : QDialog(parent)
+    , mListWidget(new QListWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Check Attachment"));
     auto mainLayout = new QVBoxLayout(this);
@@ -22,7 +23,6 @@ CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     lab->setObjectName(QStringLiteral("lab"));
     mainLayout->addWidget(lab);
 
-    mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mainLayout->addWidget(mListWidget);
 

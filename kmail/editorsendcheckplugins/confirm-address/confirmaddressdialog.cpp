@@ -16,12 +16,13 @@
 
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)
+    , mConfirmWidget(new ConfirmAddressWidget(this))
+    , mWhiteListEmailsButton(new QPushButton(i18n("Add Selected Emails to WhiteList"), this))
 {
     setWindowTitle(i18nc("@title:window", "Confirm Addresses"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfirmWidget = new ConfirmAddressWidget(this);
     mConfirmWidget->setObjectName(QStringLiteral("confirmwidget"));
     mainLayout->addWidget(mConfirmWidget);
 
@@ -30,7 +31,6 @@ ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmAddressDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmAddressDialog::reject);
 
-    mWhiteListEmailsButton = new QPushButton(i18n("Add Selected Emails to WhiteList"));
     mWhiteListEmailsButton->setObjectName(QStringLiteral("whiteListEmailsButton"));
     mWhiteListEmailsButton->setEnabled(false);
     buttonBox->addButton(mWhiteListEmailsButton, QDialogButtonBox::ActionRole);

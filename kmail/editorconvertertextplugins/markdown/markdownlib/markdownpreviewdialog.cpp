@@ -14,6 +14,7 @@
 
 MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     : QDialog(parent)
+    , mPreviewWidget(new MarkdownPreviewWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Markdown Rendering Preview"));
     setAttribute(Qt::WA_DeleteOnClose);
@@ -21,7 +22,6 @@ MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mPreviewWidget = new MarkdownPreviewWidget(this);
     mPreviewWidget->setObjectName(QStringLiteral("previewwidget"));
     mainLayout->addWidget(mPreviewWidget);
 

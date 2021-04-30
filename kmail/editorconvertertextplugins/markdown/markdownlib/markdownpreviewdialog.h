@@ -22,6 +22,6 @@ public:
 private:
     void readConfig();
     void writeConfig();
-    MarkdownPreviewWidget *mPreviewWidget = nullptr;
+    MarkdownPreviewWidget *const mPreviewWidget;
 };
 

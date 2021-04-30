@@ -18,6 +18,6 @@ public:
     Q_REQUIRED_RESULT bool changeSmtp() const;
 
 private:
-    QCheckBox *mChangeSmtp = nullptr;
+    QCheckBox *const mChangeSmtp;
 };
 

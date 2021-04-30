@@ -16,6 +16,7 @@
 
 CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)
+    , mListWidget(new QListWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Duplicated emails"));
     auto mainLayout = new QVBoxLayout(this);
@@ -23,7 +24,6 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 
-    mListWidget = new QListWidget(this);
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mainLayout->addWidget(mListWidget);
 

@@ -21,6 +21,6 @@ public:
 private:
     void readConfig();
     void writeConfig();
-    QListWidget *mListWidget = nullptr;
+    QListWidget *const mListWidget;
 };
 

@@ -14,12 +14,12 @@
 
 ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     : QWidget(parent)
+    , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mTabWidget = new QTabWidget(this);
     mTabWidget->setObjectName(QStringLiteral("tabwidget"));
     mainLayout->addWidget(mTabWidget);
 
