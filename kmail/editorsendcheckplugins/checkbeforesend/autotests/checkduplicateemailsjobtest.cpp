@@ -98,7 +98,7 @@ void CheckDuplicateEmailsJobTest::shouldReturnEmails_data()
 void CheckDuplicateEmailsJobTest::shouldReturnEmails()
 {
     QFETCH(QStringList, emails);
-    typedef QMap<QString, int> mapEmails;
+    using mapEmails = QMap<QString, int>;
     QFETCH(mapEmails, result);
     CheckDuplicateEmailsJob job;
     job.setEmails(emails);

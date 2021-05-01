@@ -26,11 +26,11 @@
 #include <QPushButton>
 #include <QStyledItemDelegate>
 
-typedef struct {
+using TemplateInfo = struct {
     QString displayName;
     QString fileName;
     bool isDeletable = false;
-} TemplateInfo;
+};
 
 class TemplatesModel : public QAbstractTableModel
 {

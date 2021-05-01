@@ -202,7 +202,7 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
     QTextStream t(fp);
     t.setCodec("ISO 8859-1");
 
-    typedef QMap<int, const KContacts::Addressee *> AddresseeMap;
+    using AddresseeMap = QMap<int, const KContacts::Addressee *>;
     AddresseeMap addresseeMap;
     const KContacts::Addressee *addressee = nullptr;
 
@@ -447,7 +447,7 @@ void GMXImportExportPluginInterface::importGMX()
 
     QStringList itemList;
     QMap<QString, QString> categoriesOfAddressee;
-    typedef QMap<QString, KContacts::Addressee *> AddresseeMap;
+    using AddresseeMap = QMap<QString, KContacts::Addressee *>;
     AddresseeMap addresseeMap;
 
     // "Address_id,Nickname,Firstname,Lastname,Title,Birthday,Comments,
