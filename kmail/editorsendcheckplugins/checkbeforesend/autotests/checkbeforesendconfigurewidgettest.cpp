@@ -24,25 +24,25 @@ CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
 void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
 {
     CheckBeforeSendConfigureWidget w(nullptr);
-    auto *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
 
-    auto *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
+    auto mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
     QVERIFY(mCheckPlainTextMail);
     QVERIFY(!mCheckPlainTextMail->text().isEmpty());
     QVERIFY(!mCheckPlainTextMail->isChecked());
 
-    auto *mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
+    auto mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
     QVERIFY(mCheckMailTransport);
     QVERIFY(!mCheckMailTransport->text().isEmpty());
     QVERIFY(!mCheckMailTransport->isChecked());
 
-    auto *mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemailsaddresses"));
+    auto mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemailsaddresses"));
     QVERIFY(mCheckDuplicateEmails);
     QVERIFY(!mCheckDuplicateEmails->text().isEmpty());
     QVERIFY(!mCheckDuplicateEmails->isChecked());
 
-    auto *mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
+    auto mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
     QVERIFY(mCheckSendAttachments);
     QVERIFY(!mCheckSendAttachments->text().isEmpty());
     QVERIFY(!mCheckSendAttachments->isChecked());
@@ -52,10 +52,10 @@ void CheckBeforeSendConfigureWidgetTest::shouldResetValue()
 {
     CheckBeforeSendConfigureWidget w(nullptr);
 
-    auto *mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
-    auto *mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
-    auto *mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemailsaddresses"));
-    auto *mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
+    auto mCheckPlainTextMail = w.findChild<QCheckBox *>(QStringLiteral("checkplaintext"));
+    auto mCheckMailTransport = w.findChild<QCheckBox *>(QStringLiteral("smtpdefinedinidentity"));
+    auto mCheckDuplicateEmails = w.findChild<QCheckBox *>(QStringLiteral("checkduplicatedemailsaddresses"));
+    auto mCheckSendAttachments = w.findChild<QCheckBox *>(QStringLiteral("checksendattachment"));
 
     mCheckMailTransport->setChecked(true);
     mCheckDuplicateEmails->setChecked(true);

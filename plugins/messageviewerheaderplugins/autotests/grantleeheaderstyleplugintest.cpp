@@ -146,7 +146,7 @@ void GrantleeHeaderStylePluginTest::testThemeRender()
 
     auto aMsg = readAndParseMail(mailFileName);
     MessageViewer::GrantleeHeaderStylePlugin plugin;
-    auto *style = plugin.headerStyle();
+    auto style = plugin.headerStyle();
     MimeTreeParser::NodeHelper nodeHelper;
     style->setNodeHelper(&nodeHelper);
     auto menu = new KActionMenu(this);

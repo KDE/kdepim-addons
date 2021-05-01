@@ -37,11 +37,11 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     splitter->setChildrenCollapsible(false);
     lay->addWidget(splitter);
 
-    QWidget *selectContactWidget = new QWidget(this);
+    auto selectContactWidget = new QWidget(this);
     selectContactWidget->setObjectName(QStringLiteral("selectcontactwidget"));
     auto vbox = new QVBoxLayout;
     selectContactWidget->setLayout(vbox);
-    QLabel *lab = new QLabel(i18n("Select contacts that you really want to merge:"));
+    auto lab = new QLabel(i18n("Select contacts that you really want to merge:"));
     vbox->addWidget(lab);
     mListWidget = new MergeContactWidgetList;
     mListWidget->setObjectName(QStringLiteral("listcontact"));

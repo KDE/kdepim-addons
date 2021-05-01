@@ -35,8 +35,8 @@ CryptoPagePlugin::CryptoPagePlugin()
     topLayout->setColumnStretch(1, 1);
     topLayout->setRowStretch(4, 1);
 
-    QGroupBox *protGB = new QGroupBox(i18n("Allowed Protocols"), this);
-    QLayout *protGBLayout = new QVBoxLayout;
+    auto protGB = new QGroupBox(i18n("Allowed Protocols"), this);
+    auto protGBLayout = new QVBoxLayout;
     topLayout->addWidget(protGB, 0, 0, 1, 2);
 
     uint msgFormat = 1;
@@ -50,7 +50,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     }
     protGB->setLayout(protGBLayout);
 
-    QLabel *l = new QLabel(i18n("Preferred OpenPGP encryption key:"), this);
+    auto l = new QLabel(i18n("Preferred OpenPGP encryption key:"), this);
     topLayout->addWidget(l, 1, 0);
 
     mPgpKey = new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::OpenPGP, this);
@@ -62,12 +62,12 @@ CryptoPagePlugin::CryptoPagePlugin()
     mSmimeCert = new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::SMIME, this);
     topLayout->addWidget(mSmimeCert, 2, 1);
 
-    QGroupBox *box = new QGroupBox(i18n("Message Preference"), this);
+    auto box = new QGroupBox(i18n("Message Preference"), this);
     QLayout *boxLayout = new QVBoxLayout;
     topLayout->addWidget(box, 3, 0, 1, 2);
 
     // Send preferences/sign (see kleo/kleo/enum.h)
-    QWidget *hbox = new QWidget(box);
+    auto hbox = new QWidget(box);
     auto hboxHBoxLayout = new QHBoxLayout(hbox);
     hboxHBoxLayout->setContentsMargins({});
 

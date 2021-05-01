@@ -21,7 +21,7 @@ ZoomTextPluginEditorInterfaceTest::~ZoomTextPluginEditorInterfaceTest()
 void ZoomTextPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {
     ZoomTextPluginEditorInterface interface(nullptr);
-    KActionCollection *ac = new KActionCollection(this);
+    auto ac = new KActionCollection(this);
     interface.createAction(ac);
     MessageComposer::PluginActionType type = interface.actionType();
     QVERIFY(type.action());

@@ -33,7 +33,7 @@ void AdBlockBlockableItemsJobTest::shouldReturnEmptyListWhenWebEngineIsNotSet()
     QSignalSpy blockableItemsSpy(&job, &AdBlock::AdBlockBlockableItemsJob::searchItemsDone);
     job.start();
     QCOMPARE(blockableItemsSpy.count(), 1);
-    const QVector<AdBlock::AdBlockResult> resultLst = blockableItemsSpy.at(0).at(0).value<QVector<AdBlock::AdBlockResult>>();
+    const auto resultLst = blockableItemsSpy.at(0).at(0).value<QVector<AdBlock::AdBlockResult>>();
     QCOMPARE(resultLst.count(), 0);
 }
 

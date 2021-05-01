@@ -21,7 +21,7 @@ InsertSpecialCharacterPluginEditorInterface::~InsertSpecialCharacterPluginEditor
 
 void InsertSpecialCharacterPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    QAction *action = new QAction(i18n("Insert Special Character..."), this);
+    auto action = new QAction(i18n("Insert Special Character..."), this);
     ac->addAction(QStringLiteral("insert_special_character"), action);
     connect(action, &QAction::triggered, this, &InsertSpecialCharacterPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);

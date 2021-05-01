@@ -20,7 +20,7 @@ QVariant FolderSettingFilterProxyModel::data(const QModelIndex &index, int role)
 {
     if (role == Qt::CheckStateRole) {
         // Make top-level collections uncheckable
-        const Akonadi::Collection col = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+        const auto col = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
         if (col.parentCollection() == Akonadi::Collection::root()) {
             return {};
         }
@@ -32,7 +32,7 @@ QVariant FolderSettingFilterProxyModel::data(const QModelIndex &index, int role)
 Qt::ItemFlags FolderSettingFilterProxyModel::flags(const QModelIndex &index) const
 {
     // Make top-level collections uncheckable
-    const Akonadi::Collection col = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+    const auto col = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (col.parentCollection() == Akonadi::Collection::root()) {
         return QSortFilterProxyModel::flags(index) & ~Qt::ItemIsUserCheckable;
     } else {
@@ -49,7 +49,7 @@ bool FolderSettingFilterProxyModel::setData(const QModelIndex &index, const QVar
 {
     if (role == Qt::CheckStateRole) {
         if (index.isValid()) {
-            const Akonadi::Collection collection = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
+            const auto collection = data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
             if (value == Qt::Checked) {
                 mListCollections.append(collection);
             } else {

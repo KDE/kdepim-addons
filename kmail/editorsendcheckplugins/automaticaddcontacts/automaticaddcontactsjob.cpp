@@ -63,8 +63,7 @@ void AutomaticAddContactsJob::slotSelectedCollectionFetched(KJob *job)
         // fetch all collection
         const QStringList mimeTypes(KContacts::Addressee::mimeType());
 
-        Akonadi::CollectionFetchJob *const addressBookJob =
-            new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
+        auto const addressBookJob = new Akonadi::CollectionFetchJob(Akonadi::Collection::root(), Akonadi::CollectionFetchJob::Recursive);
 
         addressBookJob->fetchScope().setContentMimeTypes(mimeTypes);
         connect(addressBookJob, &KJob::result, this, &AutomaticAddContactsJob::slotFetchAllCollections);

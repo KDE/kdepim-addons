@@ -26,7 +26,7 @@ AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     mBlockableItems = new AdBlockBlockableItemsWidget(this);
     mBlockableItems->setObjectName(QStringLiteral("blockableitemswidget"));
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);

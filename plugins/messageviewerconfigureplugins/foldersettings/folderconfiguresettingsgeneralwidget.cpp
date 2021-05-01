@@ -12,7 +12,7 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionGeneralWidget(new MailCommon::CollectionGeneralWidget(this))
 {
-    QWidget *mainWidget = new QWidget(this);
+    auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
     mCollectionGeneralWidget->setObjectName(QStringLiteral("mCollectionGeneralWidget"));
     mainLayout->addWidget(mCollectionGeneralWidget);

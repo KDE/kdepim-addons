@@ -20,12 +20,12 @@ MarkdownPreviewDialogTest::MarkdownPreviewDialogTest(QObject *parent)
 void MarkdownPreviewDialogTest::shouldHaveDefaultValue()
 {
     MarkdownPreviewDialog dlg;
-    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto *mPreviewWidget = dlg.findChild<MarkdownPreviewWidget *>(QStringLiteral("previewwidget"));
+    auto mPreviewWidget = dlg.findChild<MarkdownPreviewWidget *>(QStringLiteral("previewwidget"));
     QVERIFY(mPreviewWidget);
 
-    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 }

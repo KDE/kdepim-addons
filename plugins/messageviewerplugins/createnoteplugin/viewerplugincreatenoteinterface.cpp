@@ -71,7 +71,7 @@ void ViewerPluginCreatenoteInterface::showWidget()
     if (!mMessageItem.relations().isEmpty()) {
         Akonadi::Relation relation = relatedNoteRelation();
         if (relation.isValid()) {
-            Akonadi::ItemFetchJob *job = new Akonadi::ItemFetchJob(relation.right());
+            auto job = new Akonadi::ItemFetchJob(relation.right());
             job->fetchScope().fetchFullPayload(true);
             connect(job, &Akonadi::ItemFetchJob::result, this, &ViewerPluginCreatenoteInterface::slotNoteItemFetched);
             return;
@@ -132,7 +132,7 @@ void ViewerPluginCreatenoteInterface::updateAction(const Akonadi::Item &item)
 void ViewerPluginCreatenoteInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18nc("create a new note out of this message", "Create Note"), this);
+        auto act = new QAction(QIcon::fromTheme(QStringLiteral("view-pim-notes")), i18nc("create a new note out of this message", "Create Note"), this);
         act->setIconText(i18nc("create a new note out of this message", "Create Note"));
         addHelpTextAction(act, i18n("Allows you to create a note from this message"));
         act->setWhatsThis(i18n("This option starts an editor to create a note. Then you can edit the note to your liking before saving it."));

@@ -24,10 +24,10 @@ AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest()
 void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
 {
     AutomaticAddContactsConfigureTab w(nullptr);
-    QHBoxLayout *vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
-    QTabWidget *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
 

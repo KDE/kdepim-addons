@@ -20,14 +20,14 @@ GrammarResultWidgetTest::GrammarResultWidgetTest(QObject *parent)
 void GrammarResultWidgetTest::shouldHaveDefaultValue()
 {
     GrammalecteResultWidget w;
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    auto mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 
-    auto *closeBtn = w.findChild<QToolButton *>(QStringLiteral("close-button"));
+    auto closeBtn = w.findChild<QToolButton *>(QStringLiteral("close-button"));
     QVERIFY(closeBtn);
     QVERIFY(!closeBtn->icon().isNull());
     QVERIFY(!closeBtn->toolTip().isEmpty());

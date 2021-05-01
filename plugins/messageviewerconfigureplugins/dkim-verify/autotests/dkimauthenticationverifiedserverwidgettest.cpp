@@ -18,10 +18,10 @@ DKIMAuthenticationVerifiedServerWidgetTest::DKIMAuthenticationVerifiedServerWidg
 void DKIMAuthenticationVerifiedServerWidgetTest::shouldHaveDefaultValues()
 {
     DKIMAuthenticationVerifiedServerWidget w;
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(QStringLiteral("mSelector"));
+    auto mSelector = w.findChild<DKIMAuthenticationVerifiedServerSelectorWidget *>(QStringLiteral("mSelector"));
     QVERIFY(mSelector);
 }

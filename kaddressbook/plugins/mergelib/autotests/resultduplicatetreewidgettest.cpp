@@ -111,7 +111,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnNotEmptyContactList()
         const int childCount = item->childCount();
         if (childCount > 0) {
             for (int child = 0; child < childCount; ++child) {
-                KABMergeContacts::ResultDuplicateTreeWidgetItem *childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
+                auto childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
                 childItem->setCheckState(0, Qt::Checked);
             }
         }
@@ -139,7 +139,7 @@ void ResultDuplicateTreeWidgetTest::shouldNotReturnListWhenJustOneChildSelected(
         const int childCount = item->childCount();
         if (childCount > 0) {
             for (int child = 0; child < childCount; ++child) {
-                KABMergeContacts::ResultDuplicateTreeWidgetItem *childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
+                auto childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
                 childItem->setCheckState(0, child == 0 ? Qt::Checked : Qt::Unchecked);
             }
         }
@@ -168,7 +168,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnTwoLists()
         const int childCount = item->childCount();
         if (childCount > 0) {
             for (int child = 0; child < childCount; ++child) {
-                KABMergeContacts::ResultDuplicateTreeWidgetItem *childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
+                auto childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
                 childItem->setCheckState(0, Qt::Checked);
                 QVERIFY(childItem->item().isValid());
             }
@@ -199,7 +199,7 @@ void ResultDuplicateTreeWidgetTest::shouldReturnJustOnList()
         const int childCount = item->childCount();
         if (childCount > 0) {
             for (int child = 0; child < childCount; ++child) {
-                KABMergeContacts::ResultDuplicateTreeWidgetItem *childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
+                auto childItem = static_cast<KABMergeContacts::ResultDuplicateTreeWidgetItem *>(item->child(child));
                 childItem->setCheckState(0, firstList ? Qt::Checked : Qt::Unchecked);
             }
         }

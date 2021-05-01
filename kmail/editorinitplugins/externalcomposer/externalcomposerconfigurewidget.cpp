@@ -27,7 +27,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     mainLayout->addWidget(mExternalEditorCheck);
 
     auto hbox = new QHBoxLayout;
-    QLabel *label = new QLabel(QStringLiteral("Specify editor:"), this);
+    auto label = new QLabel(QStringLiteral("Specify editor:"), this);
     label->setObjectName(QStringLiteral("urlrequesterlabel"));
     hbox->addWidget(label);
 

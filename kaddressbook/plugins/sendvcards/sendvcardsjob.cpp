@@ -46,7 +46,7 @@ bool SendVcardsJob::start()
 
     for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             QByteArray data = item.payloadData();
             // Workaround about broken kaddressbook fields.
             KContacts::adaptIMAttributes(data);
@@ -56,7 +56,7 @@ bool SendVcardsJob::start()
             createTemporaryFile(data, attachmentName);
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
             ++mExpandGroupJobCount;
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             const QString groupName(group.name());
             const QString attachmentName = (groupName.isEmpty() ? QStringLiteral("vcard") : groupName) + QStringLiteral(".vcf");
             auto expandJob = new Akonadi::ContactGroupExpandJob(group, this);

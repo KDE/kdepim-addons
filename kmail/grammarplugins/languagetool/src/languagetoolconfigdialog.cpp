@@ -27,7 +27,7 @@ LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     box->setObjectName(QStringLiteral("box"));
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &LanguageToolConfigDialog::accept);

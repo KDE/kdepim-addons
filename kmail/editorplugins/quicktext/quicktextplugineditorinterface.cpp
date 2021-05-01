@@ -37,13 +37,13 @@ void QuickTextPluginEditorInterface::createAction(KActionCollection *ac)
     auto quickTextMenu = new QuickTextMenu(parentWidget(), this);
     quickTextMenu->setPluginComposerInterface(composerInterface());
     connect(quickTextMenu, &QuickTextMenu::insertText, this, &QuickTextPluginEditorInterface::insertText);
-    QAction *action = new QAction(i18n("Variables"), this);
+    auto action = new QAction(i18n("Variables"), this);
     action->setMenu(quickTextMenu->menu());
     ac->addAction(QStringLiteral("insert_variables"), action);
     connect(action, &QAction::triggered, this, &QuickTextPluginEditorInterface::slotActivated);
     MessageComposer::PluginActionType type(action, MessageComposer::PluginActionType::Insert);
     setActionType(type);
-    QPushButton *button = new QPushButton(i18n("Variables"));
+    auto button = new QPushButton(i18n("Variables"));
     button->setFocusPolicy(Qt::NoFocus);
     button->setMenu(quickTextMenu->menu());
     setStatusBarWidget(button);

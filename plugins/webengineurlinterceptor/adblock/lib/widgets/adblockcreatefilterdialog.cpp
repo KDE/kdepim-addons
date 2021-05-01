@@ -20,14 +20,14 @@ AdBlockCreateFilterDialog::AdBlockCreateFilterDialog(QWidget *parent)
     , mCurrentType(AdBlockBlockableItemsWidget::None)
 {
     setWindowTitle(i18nc("@title:window", "Create Filter"));
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &AdBlockCreateFilterDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &AdBlockCreateFilterDialog::reject);
 
-    QWidget *w = new QWidget;
+    auto w = new QWidget;
     mUi = new Ui::AdBlockCreateFilterWidget;
     mUi->setupUi(w);
     auto mainLayout = new QVBoxLayout(this);
@@ -85,8 +85,8 @@ void AdBlockCreateFilterDialog::initialize()
 {
     mUi->applyListElement->clear();
     for (int i = AdBlockBlockableItemsWidget::None + 1; i < AdBlockBlockableItemsWidget::MaxTypeElement; ++i) {
-        QListWidgetItem *item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)),
-                                                    mUi->applyListElement);
+        auto item = new QListWidgetItem(AdBlockBlockableItemsWidget::elementTypeToI18n(static_cast<AdBlockBlockableItemsWidget::TypeElement>(i)),
+                                        mUi->applyListElement);
         item->setData(ElementValue, static_cast<AdBlockBlockableItemsWidget::TypeElement>(i));
         item->setCheckState(Qt::Unchecked);
         if (i == static_cast<int>(mCurrentType)) {

@@ -27,7 +27,7 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
     mainLayout->addWidget(mView);
     connect(mView->emailAddressSelectionWidget()->view(), &QTreeView::doubleClicked, this, &QDialog::accept);
 
-    QPushButton *searchLDAPButton = new QPushButton(i18n("Search &Directory Service"), this);
+    auto searchLDAPButton = new QPushButton(i18n("Search &Directory Service"), this);
     connect(searchLDAPButton, &QPushButton::clicked, this, &EmailAddressSelectionLdapDialog::slotSearchLDAP);
     mainLayout->addWidget(searchLDAPButton);
 
@@ -38,7 +38,7 @@ EmailAddressSelectionLdapDialog::EmailAddressSelectionLdapDialog(QWidget *parent
         searchLDAPButton->setVisible(false);
     }
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);

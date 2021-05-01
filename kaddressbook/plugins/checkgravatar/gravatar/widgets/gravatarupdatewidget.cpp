@@ -25,7 +25,7 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
 
     auto hboxEmail = new QHBoxLayout;
 
-    QLabel *lab = new QLabel(i18n("Email:"));
+    auto lab = new QLabel(i18n("Email:"));
     lab->setObjectName(QStringLiteral("emaillabel"));
     hboxEmail->addWidget(lab);
 

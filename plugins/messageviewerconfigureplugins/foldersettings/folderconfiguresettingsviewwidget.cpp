@@ -11,7 +11,7 @@ FolderConfigureSettingsViewWidget::FolderConfigureSettingsViewWidget(QWidget *pa
     : FolderConfigureSettingsPageBase(parent)
     , mCollectionViewWidget(new MailCommon::CollectionViewWidget(this))
 {
-    QWidget *mainWidget = new QWidget(this);
+    auto mainWidget = new QWidget(this);
     auto mainLayout = new QHBoxLayout(mainWidget);
     mCollectionViewWidget->setObjectName(QStringLiteral("mCollectionTemplateWidget"));
     mainLayout->addWidget(mCollectionViewWidget);

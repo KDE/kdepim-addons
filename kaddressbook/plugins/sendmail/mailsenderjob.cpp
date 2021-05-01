@@ -36,7 +36,7 @@ void MailSenderJob::start()
 {
     for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+            const auto contact = item.payload<KContacts::Addressee>();
             const QString preferredEmail = contact.preferredEmail();
             if (!preferredEmail.isEmpty() && !mEmailAddresses.contains(preferredEmail)) {
                 if (KEmailAddress::isValidSimpleAddress(contact.preferredEmail())) {
@@ -44,7 +44,7 @@ void MailSenderJob::start()
                 }
             }
         } else if (item.hasPayload<KContacts::ContactGroup>()) {
-            const KContacts::ContactGroup group = item.payload<KContacts::ContactGroup>();
+            const auto group = item.payload<KContacts::ContactGroup>();
             unsigned int nbDataCount(group.dataCount());
             for (unsigned int i = 0; i < nbDataCount; ++i) {
                 const QString currentEmail(group.data(i).email());
@@ -111,7 +111,7 @@ void MailSenderJob::slotFetchJobFinished(KJob *job)
     }
 
     const Akonadi::Item item = fetchJob->items().at(0);
-    const KContacts::Addressee contact = item.payload<KContacts::Addressee>();
+    const auto contact = item.payload<KContacts::Addressee>();
 
     if (!contact.preferredEmail().isEmpty()) {
         if (KEmailAddress::isValidSimpleAddress(contact.preferredEmail())) {

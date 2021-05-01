@@ -23,10 +23,10 @@ AdBlockBlockableItemsDialogTest::~AdBlockBlockableItemsDialogTest()
 void AdBlockBlockableItemsDialogTest::shouldHaveDefaultValue()
 {
     AdBlockBlockableItemsDialog w;
-    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    auto *mBlockableItems = w.findChild<AdBlockBlockableItemsWidget *>(QStringLiteral("blockableitemswidget"));
+    auto mBlockableItems = w.findChild<AdBlockBlockableItemsWidget *>(QStringLiteral("blockableitemswidget"));
     QVERIFY(mBlockableItems);
 }
 

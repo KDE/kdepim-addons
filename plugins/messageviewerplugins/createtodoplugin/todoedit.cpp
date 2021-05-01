@@ -59,7 +59,7 @@ TodoEdit::TodoEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Todo:"), this);
+    auto lab = new QLabel(i18n("Todo:"), this);
     hbox->addWidget(lab);
 
     mNoteEdit->setClearButtonEnabled(true);

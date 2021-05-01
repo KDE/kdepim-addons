@@ -35,7 +35,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     auto saveKeyLayout = new QHBoxLayout;
     saveKeyLayout->setContentsMargins({});
     mainLayout->addLayout(saveKeyLayout);
-    QLabel *saveKeyLabel = new QLabel(i18n("Save Record Key:"), this);
+    auto saveKeyLabel = new QLabel(i18n("Save Record Key:"), this);
     saveKeyLabel->setObjectName(QStringLiteral("saveKeyLabel"));
     saveKeyLayout->addWidget(saveKeyLabel);
 

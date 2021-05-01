@@ -93,7 +93,7 @@ void AdBlockSubscription::loadSubscription(const QStringList &disabledRules)
     mRules.clear();
 
     while (!textStream.atEnd()) {
-        AdBlockRule *rule = new AdBlockRule(textStream.readLine(), this);
+        auto rule = new AdBlockRule(textStream.readLine(), this);
         if (disabledRules.contains(rule->filter())) {
             rule->setEnabled(false);
         }

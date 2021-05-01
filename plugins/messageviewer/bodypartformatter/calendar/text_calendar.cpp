@@ -183,10 +183,10 @@ public:
 
             BodyPartMementos are documented in MessageViewer/ObjectTreeParser
         */
-        auto *memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
+        auto memento = dynamic_cast<MemoryCalendarMemento *>(msgPart->memento());
 
         if (memento) {
-            auto *const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
+            auto const message = dynamic_cast<KMime::Message *>(msgPart->content()->topLevel());
             if (!message) {
                 qCWarning(TEXT_CALENDAR_LOG) << "The top-level content is not a message. Cannot handle the invitation then.";
                 return false;
@@ -690,10 +690,10 @@ public:
 
     bool saveFile(const QString &receiver, const QString &iCal, const QString &type, MimeTreeParser::Interface::BodyPart *bodyPart) const
     {
-        auto *memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
+        auto memento = dynamic_cast<MemoryCalendarMemento *>(bodyPart->memento());
         // This will block. There's no way to make it async without refactoring the memento mechanism
 
-        SyncItipHandler *itipHandler = new SyncItipHandler(receiver, iCal, type, memento->calendar());
+        auto itipHandler = new SyncItipHandler(receiver, iCal, type, memento->calendar());
 
         // If result is ResultCancelled, then we don't show the message box and return false so kmail
         // doesn't delete the e-mail.
@@ -1013,7 +1013,7 @@ public:
             file->write(QByteArray::fromBase64(attachment.data()));
             file->close();
 
-            KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl::fromLocalFile(file->fileName()), attachment.mimeType());
+            auto job = new KIO::OpenUrlJob(QUrl::fromLocalFile(file->fileName()), attachment.mimeType());
             job->setDeleteTemporaryFile(true);
             job->start();
             delete file;

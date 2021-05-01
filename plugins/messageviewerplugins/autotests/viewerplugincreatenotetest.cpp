@@ -30,9 +30,9 @@ ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest()
 
 void ViewerPluginCreateNoteTest::shouldCreateAction()
 {
-    MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
+    auto note = new MessageViewer::ViewerPluginCreatenote(this);
     QVERIFY(!note->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(nullptr);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -41,12 +41,12 @@ void ViewerPluginCreateNoteTest::shouldCreateAction()
 
 void ViewerPluginCreateNoteTest::shouldShowWidget()
 {
-    MessageViewer::ViewerPluginCreatenote *note = new MessageViewer::ViewerPluginCreatenote(this);
-    QWidget *parent = new QWidget(nullptr);
+    auto note = new MessageViewer::ViewerPluginCreatenote(this);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = note->createView(parent, new KActionCollection(this));
     interface->execute();
-    auto *createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
+    auto createnotewidget = parent->findChild<QWidget *>(QStringLiteral("noteedit"));
     QVERIFY(createnotewidget);
     QCOMPARE(createnotewidget->isHidden(), false);
 }

@@ -23,27 +23,27 @@ void GravatarUpdateWidgetTest::shouldHaveDefaultValue()
 {
     KABGravatar::GravatarUpdateWidget widget;
     widget.show();
-    QLabel *lab = widget.findChild<QLabel *>(QStringLiteral("emaillabel"));
+    auto lab = widget.findChild<QLabel *>(QStringLiteral("emaillabel"));
     QVERIFY(lab);
 
-    QLabel *emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
+    auto emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
     QVERIFY(emaillabel);
 
-    QCheckBox *useLibravatar = widget.findChild<QCheckBox *>(QStringLiteral("uselibravatar"));
+    auto useLibravatar = widget.findChild<QCheckBox *>(QStringLiteral("uselibravatar"));
     QVERIFY(useLibravatar);
     QVERIFY(!useLibravatar->isChecked());
     QVERIFY(useLibravatar->isEnabled());
 
-    QCheckBox *useFallbackGravatar = widget.findChild<QCheckBox *>(QStringLiteral("fallbackgravatar"));
+    auto useFallbackGravatar = widget.findChild<QCheckBox *>(QStringLiteral("fallbackgravatar"));
     QVERIFY(useFallbackGravatar);
     QVERIFY(!useFallbackGravatar->isChecked());
     QVERIFY(!useFallbackGravatar->isEnabled());
 
-    QPushButton *searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
+    auto searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
     QVERIFY(searchGravatar);
     QVERIFY(!searchGravatar->isEnabled());
 
-    QLabel *resultGravatar = widget.findChild<QLabel *>(QStringLiteral("result"));
+    auto resultGravatar = widget.findChild<QLabel *>(QStringLiteral("result"));
     QVERIFY(resultGravatar);
 
     QVERIFY(widget.pixmap().isNull());
@@ -54,9 +54,9 @@ void GravatarUpdateWidgetTest::shouldAffectEmail()
 {
     KABGravatar::GravatarUpdateWidget widget;
 
-    QLabel *emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
+    auto emaillabel = widget.findChild<QLabel *>(QStringLiteral("email"));
 
-    QPushButton *searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
+    auto searchGravatar = widget.findChild<QPushButton *>(QStringLiteral("search"));
 
     const QString newEmail(QStringLiteral("foo@kde.org"));
     widget.setEmail(newEmail);

@@ -32,7 +32,7 @@ KContacts::Addressee MergeContacts::mergedContact(bool excludeConflictPart)
     bool firstAddress = true;
     for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
-            KContacts::Addressee address = item.payload<KContacts::Addressee>();
+            auto address = item.payload<KContacts::Addressee>();
             if (firstAddress) {
                 firstAddress = false;
                 newContact = address;
@@ -196,7 +196,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
     KContacts::Addressee newContact;
     for (const Akonadi::Item &item : qAsConst(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
-            const KContacts::Addressee address = item.payload<KContacts::Addressee>();
+            const auto address = item.payload<KContacts::Addressee>();
             // Test Birthday
             if (address.birthday().date().isValid()) {
                 if (newContact.birthday().date().isValid()) {

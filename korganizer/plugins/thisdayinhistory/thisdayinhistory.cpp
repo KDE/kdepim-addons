@@ -30,7 +30,7 @@ Element::List ThisDayInHistory::createDayElements(const QDate &date)
 {
     Element::List elements;
 
-    StoredElement *element = new StoredElement(QStringLiteral("Wikipedia link"), i18n("This day in history"));
+    auto element = new StoredElement(QStringLiteral("Wikipedia link"), i18n("This day in history"));
 
     element->setUrl(QUrl(i18nc("Localized Wikipedia website", "https://en.wikipedia.org/wiki/")
                          + date.toString(i18nc("Qt date format used by the localized Wikipedia", "MMMM_d"))));
@@ -44,7 +44,7 @@ Element::List ThisDayInHistory::createMonthElements(const QDate &date)
 {
     Element::List elements;
 
-    StoredElement *element = new StoredElement(QStringLiteral("Wikipedia link"), i18n("This month in history"));
+    auto element = new StoredElement(QStringLiteral("Wikipedia link"), i18n("This month in history"));
 
     element->setUrl(QUrl(i18nc("Localized Wikipedia website", "https://en.wikipedia.org/wiki/")
                          + date.toString(i18nc("Qt date format used by the localized Wikipedia", "MMMM_yyyy"))));

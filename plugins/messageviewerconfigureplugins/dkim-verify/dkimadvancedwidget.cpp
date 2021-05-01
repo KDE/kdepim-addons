@@ -39,7 +39,7 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     mSmallKeyPolicy->addItems({i18n("Nothing"), i18n("Warning"), i18n("Error")});
     mainLayout->addRow(i18n("Treat small Key as:"), mSmallKeyPolicy);
 
-    QPushButton *configureServer = new QPushButton(i18n("Configure"), this);
+    auto configureServer = new QPushButton(i18n("Configure"), this);
     configureServer->setObjectName(QStringLiteral("configure_button"));
     connect(configureServer, &QPushButton::clicked, this, &DKIMAdvancedWidget::slotConfigureAuthenticationServer);
     mainLayout->addRow(i18n("Authentication Server verified:"), configureServer);

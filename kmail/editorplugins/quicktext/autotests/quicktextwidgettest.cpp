@@ -20,13 +20,13 @@ QuickTextWidgetTest::QuickTextWidgetTest(QObject *parent)
 void QuickTextWidgetTest::shouldHaveDefaultValues()
 {
     QuickTextWidget w;
-    auto *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
+    auto mTreeWidget = w.findChild<QuicktextTreeWidget *>(QStringLiteral("treewidget"));
     QVERIFY(mTreeWidget);
 
-    auto *mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    auto mStackedWidget = w.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(mStackedWidget);
 }

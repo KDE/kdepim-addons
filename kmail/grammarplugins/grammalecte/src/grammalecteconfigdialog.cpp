@@ -23,7 +23,7 @@ GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMe
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     box->setObjectName(QStringLiteral("box"));
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &GrammalecteConfigDialog::accept);

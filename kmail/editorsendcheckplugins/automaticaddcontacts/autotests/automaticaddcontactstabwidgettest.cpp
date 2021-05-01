@@ -27,7 +27,7 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
         collection.setName(QString::number(id));
         collection.setContentMimeTypes(QStringList() << KContacts::Addressee::mimeType());
 
-        QStandardItem *item = new QStandardItem(collection.name());
+        auto item = new QStandardItem(collection.name());
         item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
         item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
@@ -41,38 +41,38 @@ AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest()
 
 AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactWidget()
 {
-    AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(nullptr, mComboboxModel);
+    auto w = new AutomaticAddContactsTabWidget(nullptr, mComboboxModel);
     return w;
 }
 
 void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 {
-    AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(createContactWidget());
-    QVBoxLayout *vboxlayout = w->findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto w = new AutomaticAddContactsTabWidget(createContactWidget());
+    auto vboxlayout = w->findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
 
-    QCheckBox *mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
+    auto mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
     QVERIFY(mEnabled);
     QVERIFY(!mEnabled->text().isEmpty());
     QVERIFY(!mEnabled->isChecked());
 
-    QHBoxLayout *hlay = w->findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
+    auto hlay = w->findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
     QVERIFY(hlay);
     QCOMPARE(hlay->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    QLabel *lab = w->findChild<QLabel *>(QStringLiteral("labelfolder"));
+    auto lab = w->findChild<QLabel *>(QStringLiteral("labelfolder"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 
-    Akonadi::CollectionComboBox *mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
+    auto mCollectionCombobox = w->findChild<Akonadi::CollectionComboBox *>(QStringLiteral("akonadicombobox"));
     QVERIFY(mCollectionCombobox);
     delete w;
 }
 
 void AutomaticAddContactsTabWidgetTest::shouldResetValue()
 {
-    AutomaticAddContactsTabWidget *w = new AutomaticAddContactsTabWidget(createContactWidget());
-    QCheckBox *mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
+    auto w = new AutomaticAddContactsTabWidget(createContactWidget());
+    auto mEnabled = w->findChild<QCheckBox *>(QStringLiteral("enabled"));
     QVERIFY(!mEnabled->isChecked());
     mEnabled->setChecked(true);
     QVERIFY(mEnabled->isChecked());

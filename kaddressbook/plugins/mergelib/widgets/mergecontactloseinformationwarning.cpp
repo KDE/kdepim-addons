@@ -19,7 +19,7 @@ MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *
 
     setText(i18n("Some information can be lost. Do you want to continue, or customize what you want to merge?"));
 
-    QAction *action = new QAction(i18n("Customize"), this);
+    auto action = new QAction(i18n("Customize"), this);
     action->setObjectName(QStringLiteral("customize"));
     connect(action, &QAction::triggered, this, &MergeContactLoseInformationWarning::slotCustomizeMerge);
     addAction(action);

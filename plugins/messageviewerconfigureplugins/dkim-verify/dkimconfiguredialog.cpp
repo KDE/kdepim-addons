@@ -29,7 +29,7 @@ DKIMConfigureDialog::DKIMConfigureDialog(QWidget *parent)
     mConfigureWidget->setObjectName(QStringLiteral("mConfigureWidget"));
     mainLayout->addWidget(mConfigureWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
 

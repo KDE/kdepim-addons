@@ -21,7 +21,7 @@ BriefHeaderStyleInterface::~BriefHeaderStyleInterface()
 
 void BriefHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {
-    KToggleAction *act = new KToggleAction(i18nc("View->headers->", "&Brief Headers"), this);
+    auto act = new KToggleAction(i18nc("View->headers->", "&Brief Headers"), this);
     ac->addAction(QStringLiteral("view_headers_brief"), act);
     connect(act, &KToggleAction::triggered, this, &BriefHeaderStyleInterface::slotStyleChanged);
     addHelpTextAction(act, i18n("Show brief list of message headers"));

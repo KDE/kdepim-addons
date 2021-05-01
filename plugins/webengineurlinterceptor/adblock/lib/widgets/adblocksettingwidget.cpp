@@ -106,7 +106,7 @@ void AdBlockSettingWidget::slotManualFiltersChanged(QListWidgetItem *item)
             } else if (item->checkState() == Qt::Unchecked && oldRule->isEnabled()) {
                 const AdBlockRule *rule = mCustomSubscription->disableRule(offset);
             } else if (mCustomSubscription->canEditRules()) {
-                AdBlockRule *newRule = new AdBlockRule(item->text(), mCustomSubscription);
+                auto newRule = new AdBlockRule(item->text(), mCustomSubscription);
                 const AdBlockRule *rule = mCustomSubscription->replaceRule(newRule, offset);
             }
             hasChanged();
@@ -157,7 +157,7 @@ bool AdBlockSettingWidget::event(QEvent *event)
 {
     if (event->type() == QEvent::WhatsThisClicked) {
         auto clicked = static_cast<QWhatsThisClickedEvent *>(event);
-        KIO::OpenUrlJob *job = new KIO::OpenUrlJob(QUrl(clicked->href()));
+        auto job = new KIO::OpenUrlJob(QUrl(clicked->href()));
         job->setUiDelegate(new KIO::JobUiDelegate(KJobUiDelegate::AutoHandlingEnabled, this));
         job->start();
         return true;
@@ -330,7 +330,7 @@ void AdBlockSettingWidget::slotRemoveSubscription()
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
         if (KMessageBox::questionYesNo(this, i18n("Do you want to delete list \"%1\"?", item->text()), i18n("Delete current list")) == KMessageBox::Yes) {
-            auto *subItem = dynamic_cast<AdBlockListwidgetItem *>(item);
+            auto subItem = dynamic_cast<AdBlockListwidgetItem *>(item);
             if (subItem) {
                 if (AdblockManager::self()->removeSubscription(subItem->subscription())) {
                     hasChanged();
@@ -360,7 +360,7 @@ void AdBlockSettingWidget::showAutomaticFilterList(QListWidgetItem *item)
 
 void AdBlockSettingWidget::slotDeleteList(const QString &listName)
 {
-    auto *item = dynamic_cast<AdBlockListwidgetItem *>(mUi->automaticFiltersListWidget->currentItem());
+    auto item = dynamic_cast<AdBlockListwidgetItem *>(mUi->automaticFiltersListWidget->currentItem());
     if (item && item->text() == listName) {
         if (AdblockManager::self()->removeSubscription(item->subscription())) {
             delete item;

@@ -27,10 +27,10 @@ void SelectImapFolderDialogTest::shouldHaveDefaultValue()
     KSieveUi::SieveImapAccountSettings account;
     SelectImapFolderDialog w(account);
 
-    auto *mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));
+    auto mSelectImapFolderWidget = w.findChild<SelectImapFolderWidget *>(QStringLiteral("selectimapfolderwidget"));
     QVERIFY(mSelectImapFolderWidget);
 
-    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
     const QList<QAbstractButton *> lst = buttonBox->buttons();

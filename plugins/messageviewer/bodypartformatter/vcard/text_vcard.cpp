@@ -63,7 +63,7 @@ public:
 
         KContacts::VCardConverter vcc;
 
-        auto *memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
+        auto memento = dynamic_cast<MessageViewer::VcardMemento *>(msgPart->memento());
         QStringList lst;
 
         // Pre-count the number of non-empty addressees
@@ -178,7 +178,7 @@ public:
             auto job = new Akonadi::AddContactJob(a, nullptr);
             job->start();
         } else if (path.startsWith(QLatin1String("updateToAddressBook"))) {
-            UpdateContactJob *job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
+            auto job = new UpdateContactJob(a.emails().constFirst(), a, nullptr);
             job->start();
         }
 

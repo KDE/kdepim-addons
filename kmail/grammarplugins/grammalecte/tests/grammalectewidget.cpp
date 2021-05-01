@@ -21,10 +21,10 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
 
-    QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
+    auto button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
 
-    QPushButton *checkSettingsButton = new QPushButton(QStringLiteral("Get Settings"), this);
+    auto checkSettingsButton = new QPushButton(QStringLiteral("Get Settings"), this);
     mainLayout->addWidget(checkSettingsButton);
 
     mInput = new QTextEdit(this);

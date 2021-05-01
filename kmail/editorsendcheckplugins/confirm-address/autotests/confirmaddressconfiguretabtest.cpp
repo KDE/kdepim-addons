@@ -22,11 +22,11 @@ ConfirmAddressConfigureTabTest::~ConfirmAddressConfigureTabTest()
 void ConfirmAddressConfigureTabTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureTab w(nullptr);
-    auto *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
     QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
+    auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }
 

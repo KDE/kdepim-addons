@@ -80,7 +80,7 @@ void GravatarUpdateJob::slotGravatarResolvUrlFinished(Gravatar::GravatarResolvUr
 void GravatarUpdateJob::updatePixmap(const QPixmap &pix)
 {
     if (mItem.hasPayload<KContacts::Addressee>()) {
-        KContacts::Addressee contact = mItem.payload<KContacts::Addressee>();
+        auto contact = mItem.payload<KContacts::Addressee>();
         KContacts::Picture pic = contact.photo();
         pic.setData(pix.toImage());
         contact.setPhoto(pic);

@@ -20,15 +20,15 @@ void RegexpEditorLineEditTest::shouldHaveDefaultValue()
 {
     RegexpEditorLineEdit w;
 
-    auto *mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
+    auto mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);
     QVERIFY(mLineEdit->text().isEmpty());
 
-    auto *mRegExpEditorButton = w.findChild<QToolButton *>(QStringLiteral("regexpbutton"));
+    auto mRegExpEditorButton = w.findChild<QToolButton *>(QStringLiteral("regexpbutton"));
     QVERIFY(mRegExpEditorButton);
     QVERIFY(!mRegExpEditorButton->text().isEmpty());
     QVERIFY(!mRegExpEditorButton->toolTip().isEmpty());

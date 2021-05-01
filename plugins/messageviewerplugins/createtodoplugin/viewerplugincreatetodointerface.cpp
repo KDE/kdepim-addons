@@ -67,7 +67,7 @@ ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateTodoInterface::fea
 void ViewerPluginCreateTodoInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create Todo"), this);
+        auto act = new QAction(QIcon::fromTheme(QStringLiteral("task-new")), i18n("Create Todo"), this);
         act->setIconText(i18n("Create To-do"));
         addHelpTextAction(act, i18n("Allows you to create a calendar to-do or reminder from this message"));
         act->setWhatsThis(

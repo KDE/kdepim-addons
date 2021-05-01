@@ -22,7 +22,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     auto layout = new QVBoxLayout(this);
     layout->setObjectName(QStringLiteral("layout"));
 
-    QLabel *label = new QLabel(i18n("Comment:"), this);
+    auto label = new QLabel(i18n("Comment:"), this);
     label->setObjectName(QStringLiteral("label"));
     layout->addWidget(label);
 
@@ -30,7 +30,7 @@ ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     layout->addWidget(mPlainTextEditor);
     connect(mPlainTextEditor->editor(), &KPIMTextEdit::PlainTextEditor::textChanged, this, &ReactionToInvitationDialog::slotTextChanged);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     layout->addWidget(buttonBox);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);

@@ -30,9 +30,9 @@ ViewerPluginCreateeventTest::~ViewerPluginCreateeventTest()
 
 void ViewerPluginCreateeventTest::shouldCreateAction()
 {
-    MessageViewer::ViewerPluginCreateevent *event = new MessageViewer::ViewerPluginCreateevent(this);
+    auto event = new MessageViewer::ViewerPluginCreateevent(this);
     QVERIFY(!event->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(nullptr);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -41,12 +41,12 @@ void ViewerPluginCreateeventTest::shouldCreateAction()
 
 void ViewerPluginCreateeventTest::shouldShowWidget()
 {
-    MessageViewer::ViewerPluginCreateevent *event = new MessageViewer::ViewerPluginCreateevent(this);
-    QWidget *parent = new QWidget(nullptr);
+    auto event = new MessageViewer::ViewerPluginCreateevent(this);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = event->createView(parent, new KActionCollection(this));
     interface->execute();
-    auto *createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
+    auto createeventwidget = parent->findChild<QWidget *>(QStringLiteral("eventedit"));
     QVERIFY(createeventwidget);
     QCOMPARE(createeventwidget->isHidden(), false);
 }

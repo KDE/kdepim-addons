@@ -45,7 +45,7 @@ Element::List Picoftheday::createDayElements(const QDate &date)
 {
     Element::List elements;
 
-    POTDElement *element = new POTDElement(QStringLiteral("main element"), date, mThumbSize);
+    auto element = new POTDElement(QStringLiteral("main element"), date, mThumbSize);
     elements.append(element);
 
     return elements;

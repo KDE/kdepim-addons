@@ -26,7 +26,7 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
     mStackWidget->setObjectName(QStringLiteral("stackwidget"));
     vbox->addWidget(mStackWidget);
 
-    QWidget *selectMergeWidget = new QWidget;
+    auto selectMergeWidget = new QWidget;
     selectMergeWidget->setObjectName(QStringLiteral("selectwidget"));
     auto layout = new QVBoxLayout;
     selectMergeWidget->setLayout(layout);
@@ -40,7 +40,7 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
 
     auto hbox = new QHBoxLayout;
     hbox->addStretch();
-    QPushButton *mergeButton = new QPushButton(i18n("Merge"));
+    auto mergeButton = new QPushButton(i18n("Merge"));
     mergeButton->setObjectName(QStringLiteral("merge"));
     hbox->addWidget(mergeButton);
     layout->addLayout(hbox);

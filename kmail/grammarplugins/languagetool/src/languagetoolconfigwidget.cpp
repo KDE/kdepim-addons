@@ -50,7 +50,7 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
 
     auto languageLayout = new QHBoxLayout;
     languageLayout->setObjectName(QStringLiteral("languagelayout"));
-    QLabel *languageLabel = new QLabel(i18n("Language:"), this);
+    auto languageLabel = new QLabel(i18n("Language:"), this);
     languageLabel->setObjectName(QStringLiteral("languageLabel"));
     languageLayout->addWidget(languageLabel);
 

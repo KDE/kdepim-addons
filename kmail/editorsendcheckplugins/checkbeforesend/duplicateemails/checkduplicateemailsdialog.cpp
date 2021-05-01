@@ -20,14 +20,14 @@ CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
 {
     setWindowTitle(i18nc("@title:window", "Duplicated emails"));
     auto mainLayout = new QVBoxLayout(this);
-    QLabel *lab = new QLabel(i18n("These emails are duplicated. Do you want to send email?"), this);
+    auto lab = new QLabel(i18n("These emails are duplicated. Do you want to send email?"), this);
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 
     mListWidget->setObjectName(QStringLiteral("listwidget"));
     mainLayout->addWidget(mListWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &CheckDuplicateEmailsDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckDuplicateEmailsDialog::reject);

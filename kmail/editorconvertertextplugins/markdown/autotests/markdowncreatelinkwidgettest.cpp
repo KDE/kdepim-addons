@@ -21,16 +21,16 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 {
     MarkdownCreateLinkWidget w;
 
-    auto *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);
     QVERIFY(mTitle->text().isEmpty());
     QVERIFY(mTitle->isClearButtonEnabled());
 
-    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    auto mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
     QVERIFY(mLink);
     QVERIFY(mLink->text().isEmpty());
     QVERIFY(mLink->isClearButtonEnabled());
@@ -39,8 +39,8 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 void MarkdownCreateLinkWidgetTest::shouldGenerateLink()
 {
     MarkdownCreateLinkWidget w;
-    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
-    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    auto mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
     mLink->setText(QStringLiteral("http://www.kde.org"));
     mTitle->setText(QStringLiteral("TITLE"));
     QCOMPARE(w.linkStr(), QStringLiteral("[TITLE](http://www.kde.org)"));
@@ -50,8 +50,8 @@ void MarkdownCreateLinkWidgetTest::shouldEmitSignal()
 {
     MarkdownCreateLinkWidget w;
     QSignalSpy spy(&w, &MarkdownCreateLinkWidget::enabledOkButton);
-    auto *mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
-    auto *mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
+    auto mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
+    auto mLink = w.findChild<QLineEdit *>(QStringLiteral("link"));
     mTitle->setText(QStringLiteral("foo"));
     QCOMPARE(spy.count(), 1);
     QCOMPARE(spy.at(0).at(0).value<bool>(), false);

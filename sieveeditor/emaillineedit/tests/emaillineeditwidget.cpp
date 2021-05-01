@@ -14,7 +14,7 @@ EmailLineEditWidget::EmailLineEditWidget(QWidget *parent)
     : QWidget(parent)
 {
     auto layout = new QVBoxLayout(this);
-    EmailLineEdit *mail = new EmailLineEdit(this);
+    auto mail = new EmailLineEdit(this);
     layout->addWidget(mail);
     layout->addStretch(1);
 }

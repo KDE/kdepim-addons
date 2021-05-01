@@ -22,15 +22,15 @@ void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
 {
     GravatarConfigureSettingsPluginWidget w;
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mEnableGravatarSupport = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
+    auto mEnableGravatarSupport = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
     QVERIFY(mEnableGravatarSupport);
     QVERIFY(!mEnableGravatarSupport->isChecked());
     QVERIFY(!mEnableGravatarSupport->text().isEmpty());
 
-    auto *mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfigwidget"));
+    auto mGravatarConfigWidget = w.findChild<Gravatar::GravatarConfigureSettingsWidget *>(QStringLiteral("gravatarconfigwidget"));
     QVERIFY(mGravatarConfigWidget);
 }

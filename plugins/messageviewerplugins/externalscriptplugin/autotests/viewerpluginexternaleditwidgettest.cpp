@@ -24,17 +24,17 @@ ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest()
 void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
 {
     ViewerPluginExternalEditWidget w;
-    auto *mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
+    auto mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
     QVERIFY(mName);
 
-    auto *mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
+    auto mDescription = w.findChild<QLineEdit *>(QStringLiteral("description"));
     QVERIFY(mDescription);
 
-    auto *mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
+    auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("commandline"));
     QVERIFY(mCommandLine);
 
     auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));

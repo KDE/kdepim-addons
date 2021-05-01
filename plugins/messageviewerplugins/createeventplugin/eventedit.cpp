@@ -48,7 +48,7 @@ EventEdit::EventEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Event:"), this);
+    auto lab = new QLabel(i18n("Event:"), this);
     hbox->addWidget(lab);
 
     mEventEdit = new QLineEdit(this);

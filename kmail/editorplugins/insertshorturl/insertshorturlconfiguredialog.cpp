@@ -18,7 +18,7 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
     mInsertShortUrlWidget->setObjectName(QStringLiteral("insertshorturlwidget"));
     mainLayout->addWidget(mInsertShortUrlWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &InsertShorturlConfigureDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &InsertShorturlConfigureDialog::reject);

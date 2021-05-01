@@ -46,7 +46,7 @@ NoteEdit::NoteEdit(QWidget *parent)
     hbox->setSpacing(2);
     vbox->addLayout(hbox);
 
-    QLabel *lab = new QLabel(i18n("Note:"), this);
+    auto lab = new QLabel(i18n("Note:"), this);
     hbox->addWidget(lab);
 
     mNoteEdit->setClearButtonEnabled(true);

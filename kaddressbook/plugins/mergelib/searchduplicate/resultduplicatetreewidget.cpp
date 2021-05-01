@@ -65,7 +65,7 @@ void ResultDuplicateTreeWidget::changeState(QTreeWidgetItem *item, bool b)
 void ResultDuplicateTreeWidget::slotItemActivated(QTreeWidgetItem *item, int column)
 {
     Q_UNUSED(column)
-    auto *resultItem = dynamic_cast<ResultDuplicateTreeWidgetItem *>(item);
+    auto resultItem = dynamic_cast<ResultDuplicateTreeWidgetItem *>(item);
     if (resultItem) {
         Q_EMIT showContactPreview(resultItem->item());
     }
@@ -148,7 +148,7 @@ QString ResultDuplicateTreeWidgetItem::contactName(const KContacts::Addressee &a
 void ResultDuplicateTreeWidgetItem::setDisplayName()
 {
     if (mItem.isValid()) {
-        const KContacts::Addressee address = mItem.payload<KContacts::Addressee>();
+        const auto address = mItem.payload<KContacts::Addressee>();
         setText(0, contactName(address));
     }
 }

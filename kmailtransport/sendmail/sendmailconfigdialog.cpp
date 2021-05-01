@@ -24,7 +24,7 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
     mConfigWidget = new MailTransport::SendmailConfigWidget(transport, this);
     mConfigWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
     mainLayout->addWidget(mConfigWidget);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setEnabled(false);

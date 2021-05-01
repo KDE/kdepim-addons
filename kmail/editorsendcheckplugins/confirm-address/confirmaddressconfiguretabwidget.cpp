@@ -51,7 +51,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     connect(mDomainNameListEditor, &ConfirmAddressSimpleStringListEditor::changed, this, &ConfirmAddressConfigureTabWidget::configureChanged);
     layoutDomainName->addWidget(mDomainNameListEditor);
 
-    QGroupBox *groupBoxWhiteList = new QGroupBox(i18n("Whitelist of Addresses"), this);
+    auto groupBoxWhiteList = new QGroupBox(i18n("Whitelist of Addresses"), this);
     groupBoxWhiteList->setObjectName(QStringLiteral("groupboxwhitelist"));
     mainLayout->addWidget(groupBoxWhiteList);
     auto layoutWhiteList = new QVBoxLayout(groupBoxWhiteList);

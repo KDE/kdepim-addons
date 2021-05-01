@@ -67,8 +67,8 @@ bool SearchPotentialDuplicateContactJob::isDuplicate(const Akonadi::Item &itemA,
         return false;
     }
 
-    const KContacts::Addressee addressA = itemA.payload<KContacts::Addressee>();
-    const KContacts::Addressee addressB = itemB.payload<KContacts::Addressee>();
+    const auto addressA = itemA.payload<KContacts::Addressee>();
+    const auto addressB = itemB.payload<KContacts::Addressee>();
     //
     if (!addressA.name().isEmpty() && !addressB.name().isEmpty()) {
         qCDebug(KADDRESSBOOKMERGELIBPRIVATE_LOG) << " addressB" << addressB.name() << " addressA.name()" << addressA.name();

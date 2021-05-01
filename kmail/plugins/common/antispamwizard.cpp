@@ -961,7 +961,7 @@ ASWizPage::ASWizPage(QWidget *parent, const QString &name)
 
     QPixmap banner;
     banner.load(QStringLiteral(":/org/kde/kmail/pics/kmwizard.png"));
-    QLabel *bannerLabel = new QLabel(this);
+    auto bannerLabel = new QLabel(this);
     bannerLabel->setPixmap(banner);
     bannerLabel->setScaledContents(false);
     bannerLabel->setFrameShape(QFrame::StyledPanel);

@@ -27,7 +27,7 @@ HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
     auto menu = new QMenuBar(this);
     auto hbox = new QVBoxLayout(this);
     hbox->addWidget(menu);
-    MessageViewer::HeaderStyleMenuManager *manager = new MessageViewer::HeaderStyleMenuManager(new KActionCollection(this), this);
+    auto manager = new MessageViewer::HeaderStyleMenuManager(new KActionCollection(this), this);
     menu->addAction(manager->menu());
     mTextEdit = new QTextEdit(this);
     mTextEdit->setReadOnly(true);

@@ -37,7 +37,7 @@ DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)
 {
     auto mainLayout = new QHBoxLayout(this);
-    QLabel *label = new QLabel(QStringLiteral("Problem during loading plugin! Please verify your installation."));
+    auto label = new QLabel(QStringLiteral("Problem during loading plugin! Please verify your installation."));
     mainLayout->addWidget(label);
 }
 

@@ -26,7 +26,7 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    QLabel *lab = new QLabel(i18n("Select Short URL server:"), this);
+    auto lab = new QLabel(i18n("Select Short URL server:"), this);
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 

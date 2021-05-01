@@ -26,16 +26,16 @@ ConfirmAddressDialogTest::~ConfirmAddressDialogTest()
 void ConfirmAddressDialogTest::shouldHaveDefaultValue()
 {
     ConfirmAddressDialog dlg;
-    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    auto *confirmAddressWidget = dlg.findChild<ConfirmAddressWidget *>(QStringLiteral("confirmwidget"));
+    auto confirmAddressWidget = dlg.findChild<ConfirmAddressWidget *>(QStringLiteral("confirmwidget"));
     QVERIFY(confirmAddressWidget);
 
-    auto *whiteListEmailsButton = dlg.findChild<QPushButton *>(QStringLiteral("whiteListEmailsButton"));
+    auto whiteListEmailsButton = dlg.findChild<QPushButton *>(QStringLiteral("whiteListEmailsButton"));
     QVERIFY(whiteListEmailsButton);
     QVERIFY(!whiteListEmailsButton->isEnabled());
 }

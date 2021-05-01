@@ -27,7 +27,7 @@ SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountS
     layout->addWidget(mSelectImapFolderWidget);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderSelected, this, &SelectImapFolderDialog::accept);
     connect(mSelectImapFolderWidget, &SelectImapFolderWidget::folderIsSelected, this, &SelectImapFolderDialog::slotEnabledNewFolder);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     layout->addWidget(buttonBox);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
 

@@ -60,7 +60,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     mainLayout->setObjectName(QStringLiteral("layout"));
     mainLayout->setContentsMargins({});
 
-    QLabel *lab = new QLabel(i18n("External Script:"), this);
+    auto lab = new QLabel(i18n("External Script:"), this);
     lab->setObjectName(QStringLiteral("lab"));
     mainLayout->addWidget(lab);
 

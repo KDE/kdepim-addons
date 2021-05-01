@@ -267,10 +267,10 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
 
 void CSVImportDialog::initGUI()
 {
-    QWidget *page = new QWidget(this);
+    auto page = new QWidget(this);
 
     auto mainLayout = new QVBoxLayout(this);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mainLayout->addWidget(page);
 
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -291,7 +291,7 @@ void CSVImportDialog::initGUI()
 
     auto hbox = new QHBoxLayout;
 
-    QLabel *label = new QLabel(i18nc("@label", "File to import:"), page);
+    auto label = new QLabel(i18nc("@label", "File to import:"), page);
     mainLayout->addWidget(label);
     hbox->addWidget(label);
 
@@ -308,7 +308,7 @@ void CSVImportDialog::initGUI()
     layout->addLayout(hbox, 0, 0, 1, 5);
 
     // Delimiter: comma, semicolon, tab, space, other
-    QGroupBox *group = new QGroupBox(i18nc("@title:group", "Delimiter"), page);
+    auto group = new QGroupBox(i18nc("@title:group", "Delimiter"), page);
     mainLayout->addWidget(group);
     auto delimiterLayout = new QGridLayout;
     group->setLayout(delimiterLayout);
@@ -318,7 +318,7 @@ void CSVImportDialog::initGUI()
     mDelimiterGroup = new QButtonGroup(this);
     mDelimiterGroup->setExclusive(true);
 
-    QRadioButton *button = new QRadioButton(i18nc("@option:radio Field separator", "Comma"));
+    auto button = new QRadioButton(i18nc("@option:radio Field separator", "Comma"));
     button->setToolTip(i18nc("@info:tooltip", "Set the field separator to a comma"));
     button->setWhatsThis(i18nc("@info:whatsthis", "Select this option if your csv file uses the comma as a field separator."));
     button->setChecked(true);

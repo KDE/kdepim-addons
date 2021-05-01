@@ -23,12 +23,12 @@ void GrammalecteConfigDialogTest::shouldHaveDefaultValue()
     GrammalecteConfigDialog w(nullptr, true);
     QVERIFY(!w.windowTitle().isEmpty());
 
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto *mConfigWidget = w.findChild<GrammalecteConfigWidget *>(QStringLiteral("configwidget"));
+    auto mConfigWidget = w.findChild<GrammalecteConfigWidget *>(QStringLiteral("configwidget"));
     QVERIFY(mConfigWidget);
 
-    auto *box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));
+    auto box = w.findChild<QDialogButtonBox *>(QStringLiteral("box"));
     QVERIFY(box);
 }

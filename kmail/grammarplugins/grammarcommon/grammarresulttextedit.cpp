@@ -104,7 +104,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
     if (popup) {
         QTextCursor cursor = cursorForPosition(event->pos());
         if (cursor.charFormat().hasProperty(ReplaceFormatInfo)) {
-            const MessageComposer::PluginGrammarAction act = cursor.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
+            const auto act = cursor.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
             const QStringList sugg = act.suggestions();
             if (!sugg.isEmpty()) {
                 popup->addSeparator();
@@ -166,7 +166,7 @@ void GrammarResultTextEdit::slotReplaceWord(const MessageComposer::PluginGrammar
                 cur.setPosition(i);
                 QTextCharFormat currentCharFormat = cur.charFormat();
                 if (currentCharFormat.hasProperty(ReplaceFormatInfo)) {
-                    MessageComposer::PluginGrammarAction act = cur.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
+                    auto act = cur.charFormat().property(ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
                     act.setStart(act.start() - diff);
                     currentCharFormat.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
 

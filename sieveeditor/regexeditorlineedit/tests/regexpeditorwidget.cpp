@@ -15,9 +15,9 @@ RegExpEditorWidget::RegExpEditorWidget(QWidget *parent)
 {
     auto layout = new QVBoxLayout(this);
     for (int i = 0; i < 4; ++i) {
-        QCheckBox *switchToRegexp = new QCheckBox(QStringLiteral("Switch to regexp line edit"), this);
+        auto switchToRegexp = new QCheckBox(QStringLiteral("Switch to regexp line edit"), this);
         layout->addWidget(switchToRegexp);
-        RegexpEditorLineEdit *lineEdit = new RegexpEditorLineEdit(this);
+        auto lineEdit = new RegexpEditorLineEdit(this);
         layout->addWidget(lineEdit);
         connect(switchToRegexp, &QCheckBox::toggled, lineEdit, &RegexpEditorLineEdit::switchToRegexpEditorLineEdit);
     }

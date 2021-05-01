@@ -18,10 +18,10 @@ LanguageToolResultWidgetTest::LanguageToolResultWidgetTest(QObject *parent)
 void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
 {
     LanguageToolResultWidget w;
-    auto *mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
 
-    auto *mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
+    auto mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);
 }

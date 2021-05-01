@@ -41,7 +41,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mainLayout->addRow(mKeepOriginalSize);
     connect(mKeepOriginalSize, &QCheckBox::stateChanged, this, &MarkdownCreateImageWidget::slotKeepOriginalSizeChanged);
 
-    QWidget *sizeWidget = new QWidget;
+    auto sizeWidget = new QWidget;
     sizeWidget->setObjectName(QStringLiteral("sizeWidget"));
     auto sizeWidgetLayout = new QHBoxLayout(sizeWidget);
     sizeWidgetLayout->setObjectName(QStringLiteral("sizeWidgetLayout"));

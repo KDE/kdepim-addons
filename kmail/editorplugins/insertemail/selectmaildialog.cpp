@@ -24,7 +24,7 @@ SelectMailDialog::SelectMailDialog(QWidget *parent)
     mSelectMailWidget->setObjectName(QStringLiteral("selectmailwidget"));
     mainLayout->addWidget(mSelectMailWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &SelectMailDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &SelectMailDialog::reject);

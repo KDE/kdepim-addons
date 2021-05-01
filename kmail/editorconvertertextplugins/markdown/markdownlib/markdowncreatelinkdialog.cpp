@@ -25,7 +25,7 @@ MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
 
     mainLayout->addWidget(mMarkdownCreateLinkWidget);
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     box->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &MarkdownCreateLinkDialog::accept);

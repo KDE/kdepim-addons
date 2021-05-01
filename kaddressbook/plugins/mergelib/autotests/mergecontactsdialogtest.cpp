@@ -32,10 +32,10 @@ void MergeContactsDialogTest::shouldHaveDefaultValue()
     KABMergeContacts::MergeContactsDialog dlg;
     dlg.show();
 
-    QDialogButtonBox *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    QStackedWidget *stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    auto stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     QVERIFY(stackedWidget);
     QCOMPARE(stackedWidget->currentWidget()->objectName(), QStringLiteral("nocontactselected"));
 
@@ -53,7 +53,7 @@ void MergeContactsDialogTest::shouldSwithStackedWidget()
 {
     KABMergeContacts::MergeContactsDialog dlg;
     dlg.show();
-    QStackedWidget *stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
+    auto stackedWidget = dlg.findChild<QStackedWidget *>(QStringLiteral("stackedwidget"));
     Akonadi::Item::List lst;
     // Empty
     dlg.setContacts(lst);

@@ -25,14 +25,14 @@ CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest()
 void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 {
     CheckDuplicateEmailsDialog dlg;
-    auto *mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
     QVERIFY(mListWidget);
     QCOMPARE(mListWidget->count(), 0);
 
-    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
-    auto *lab = dlg.findChild<QLabel *>(QStringLiteral("label"));
+    auto lab = dlg.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(lab);
     QVERIFY(!lab->text().isEmpty());
 }
@@ -40,7 +40,7 @@ void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 void CheckDuplicateEmailsDialogTest::shouldAddEmails()
 {
     CheckDuplicateEmailsDialog dlg;
-    auto *mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
+    auto mListWidget = dlg.findChild<QListWidget *>(QStringLiteral("listwidget"));
 
     QMap<QString, int> map;
     map.insert(QStringLiteral("foo"), 5);

@@ -24,7 +24,7 @@ int main(int argc, char **argv)
     parser.process(app);
     aboutData.processCommandLine(&parser);
 
-    MailMerge::MailMergeWidget *w = new MailMerge::MailMergeWidget();
+    auto w = new MailMerge::MailMergeWidget();
     w->resize(800, 600);
     w->show();
     app.exec();

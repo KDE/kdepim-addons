@@ -107,7 +107,7 @@ QWidget *GrammalecteConfigWidget::addGrammarTab()
     reloadSettingsLayout->setObjectName(QStringLiteral("reloadSettingsLayout"));
     auto horizontallayout = new QHBoxLayout;
     reloadSettingsLayout->addLayout(horizontallayout);
-    QLabel *label = new QLabel(i18n("Press Button for Reloading Settings"), this);
+    auto label = new QLabel(i18n("Press Button for Reloading Settings"), this);
     label->setObjectName(QStringLiteral("label"));
     horizontallayout->addWidget(label);
 
@@ -124,7 +124,7 @@ QWidget *GrammalecteConfigWidget::addGrammarTab()
 
 QWidget *GrammalecteConfigWidget::addGeneralTab()
 {
-    QWidget *w = new QWidget(this);
+    auto w = new QWidget(this);
     w->setObjectName(QStringLiteral("general"));
     auto lay = new QFormLayout(w);
     lay->setObjectName(QStringLiteral("generallayout"));

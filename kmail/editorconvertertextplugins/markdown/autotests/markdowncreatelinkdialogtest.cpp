@@ -22,12 +22,12 @@ void MarkdownCreateLinkDialogTest::shouldHaveDefaultValue()
 {
     MarkdownCreateLinkDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
-    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto *mMarkdownCreateLinkWidget = dlg.findChild<MarkdownCreateLinkWidget *>(QStringLiteral("markdowncreatelinkwidget"));
+    auto mMarkdownCreateLinkWidget = dlg.findChild<MarkdownCreateLinkWidget *>(QStringLiteral("markdowncreatelinkwidget"));
     QVERIFY(mMarkdownCreateLinkWidget);
-    auto *box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto box = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(box);
     QVERIFY(dlg.linkStr().isEmpty());
 }

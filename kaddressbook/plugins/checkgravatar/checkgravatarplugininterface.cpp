@@ -65,7 +65,7 @@ void CheckGravatarPluginInterface::exec()
         if (mListItems.count() == 1) {
             Akonadi::Item item = mListItems.constFirst();
             if (item.hasPayload<KContacts::Addressee>()) {
-                KContacts::Addressee address = item.payload<KContacts::Addressee>();
+                auto address = item.payload<KContacts::Addressee>();
                 const QString email = address.preferredEmail();
                 if (email.isEmpty()) {
                     KMessageBox::error(parentWidget(), i18n("No email found for this contact."));

@@ -21,7 +21,7 @@ ViewerPluginExternalscript::ViewerPluginExternalscript(QObject *parent, const QL
 
 ViewerPluginInterface *ViewerPluginExternalscript::createView(QWidget *parent, KActionCollection *ac)
 {
-    MessageViewer::ViewerPluginExternalscriptInterface *view = new MessageViewer::ViewerPluginExternalscriptInterface(ac, parent);
+    auto view = new MessageViewer::ViewerPluginExternalscriptInterface(ac, parent);
     connect(view, &MessageViewer::ViewerPluginExternalscriptInterface::configChanged, this, &ViewerPluginExternalscript::configChanged);
     return view;
 }

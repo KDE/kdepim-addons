@@ -22,7 +22,7 @@ AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     mWebEngineView = new QWebEngineView(this);
     mWebEngineView->load(QUrl(QStringLiteral("http://www.kde.org")));
     vbox->addWidget(mWebEngineView);
-    QPushButton *button = new QPushButton(QStringLiteral("search adblock"), this);
+    auto button = new QPushButton(QStringLiteral("search adblock"), this);
     connect(button, &QPushButton::clicked, this, &AdblockBlockableElementGui::slotSearchAdblock);
     vbox->addWidget(button);
 }

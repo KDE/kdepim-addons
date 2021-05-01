@@ -26,14 +26,14 @@ void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
 {
     ReactionToInvitationDialog w;
 
-    auto *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
 
-    auto *mPlainTextEditor = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("plaintexteditor"));
+    auto mPlainTextEditor = w.findChild<KPIMTextEdit::PlainTextEditorWidget *>(QStringLiteral("plaintexteditor"));
     QVERIFY(mPlainTextEditor);
     QVERIFY(mPlainTextEditor->toPlainText().isEmpty());
 
-    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
     QVERIFY(w.comment().isEmpty());

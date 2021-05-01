@@ -25,7 +25,7 @@ MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     mPreviewWidget->setObjectName(QStringLiteral("previewwidget"));
     mainLayout->addWidget(mPreviewWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &MarkdownPreviewDialog::reject);

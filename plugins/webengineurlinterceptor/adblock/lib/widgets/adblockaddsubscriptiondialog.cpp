@@ -26,10 +26,10 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     setWindowTitle(i18nc("@title:window", "Add subscription"));
     auto mainLayout = new QVBoxLayout(this);
 
-    QWidget *w = new QWidget;
+    auto w = new QWidget;
     auto lay = new QHBoxLayout;
     lay->setContentsMargins({});
-    QLabel *lab = new QLabel(i18n("Select List:"), this);
+    auto lab = new QLabel(i18n("Select List:"), this);
     lab->setObjectName(QStringLiteral("listsubscriptionlabel"));
     lay->addWidget(lab);
 
@@ -44,7 +44,7 @@ AdBlockAddSubscriptionDialog::AdBlockAddSubscriptionDialog(const QStringList &ex
     lay->addWidget(mShowList);
     connect(mShowList, &QToolButton::clicked, this, &AdBlockAddSubscriptionDialog::slotShowList);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("listsubscriptionbuttonBox"));
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setDefault(true);

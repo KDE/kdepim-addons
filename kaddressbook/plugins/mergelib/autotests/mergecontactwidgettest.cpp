@@ -31,14 +31,14 @@ MergeContactWidgetTest::MergeContactWidgetTest()
     qRegisterMetaType<Akonadi::Item>();
     qRegisterMetaType<Akonadi::Collection>();
 
-    QStandardItemModel *model = new QStandardItemModel;
+    auto model = new QStandardItemModel;
     for (int id = 42; id < 51; ++id) {
         Akonadi::Collection collection(id);
         collection.setRights(Akonadi::Collection::AllRights);
         collection.setName(QString::number(id));
         collection.setContentMimeTypes(QStringList() << KContacts::Addressee::mimeType());
 
-        QStandardItem *item = new QStandardItem(collection.name());
+        auto item = new QStandardItem(collection.name());
         item->setData(QVariant::fromValue(collection), Akonadi::EntityTreeModel::CollectionRole);
         item->setData(QVariant::fromValue(collection.id()), Akonadi::EntityTreeModel::CollectionIdRole);
 
@@ -63,17 +63,17 @@ Akonadi::Item::List MergeContactWidgetTest::createItems()
 void MergeContactWidgetTest::shouldHaveDefaultValueOnCreation()
 {
     MergeContactWidget mergeWidget;
-    QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
+    auto listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QVERIFY(listWidget);
     QCOMPARE(listWidget->count(), 0);
-    QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
+    auto button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     QVERIFY(button);
     QCOMPARE(button->isEnabled(), false);
-    MergeContactLoseInformationWarning *warningWidget = mergeWidget.findChild<MergeContactLoseInformationWarning *>(QStringLiteral("mergecontactwarning"));
+    auto warningWidget = mergeWidget.findChild<MergeContactLoseInformationWarning *>(QStringLiteral("mergecontactwarning"));
     QVERIFY(warningWidget);
     QVERIFY(warningWidget->isHidden());
 
-    QSplitter *splitter = mergeWidget.findChild<QSplitter *>(QStringLiteral("splitter"));
+    auto splitter = mergeWidget.findChild<QSplitter *>(QStringLiteral("splitter"));
     QVERIFY(splitter);
     QVERIFY(!splitter->childrenCollapsible());
     for (int i = 0; i < splitter->count(); ++i) {
@@ -88,10 +88,10 @@ void MergeContactWidgetTest::shouldFillList()
 {
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(createItems());
-    QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
+    auto listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QCOMPARE(listWidget->count(), 10);
     QCOMPARE(listWidget->selectedItems().count(), 0);
-    QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
+    auto button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     QCOMPARE(button->isEnabled(), false);
 }
 
@@ -102,7 +102,7 @@ void MergeContactWidgetTest::shouldFillListWithValidItem()
     lst.append(Akonadi::Item(25));
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(lst);
-    QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
+    auto listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
     QCOMPARE(listWidget->count(), 10);
 }
 
@@ -110,8 +110,8 @@ void MergeContactWidgetTest::shouldEnableButton()
 {
     MergeContactWidget mergeWidget;
     mergeWidget.setContacts(createItems());
-    QListWidget *listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
-    QPushButton *button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
+    auto listWidget = mergeWidget.findChild<QListWidget *>(QStringLiteral("listcontact"));
+    auto button = mergeWidget.findChild<QPushButton *>(QStringLiteral("mergebutton"));
     mergeWidget.show();
     QVERIFY(QTest::qWaitForWindowExposed(&mergeWidget));
     listWidget->item(0)->setCheckState(Qt::Checked);

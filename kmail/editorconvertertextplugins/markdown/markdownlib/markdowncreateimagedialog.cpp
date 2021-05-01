@@ -25,7 +25,7 @@ MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
 
     mainLayout->addWidget(mMarkdownCreateImageWidget);
 
-    QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     box->setObjectName(QStringLiteral("buttonbox"));
     mOkButton = box->button(QDialogButtonBox::Ok);
     mOkButton->setObjectName(QStringLiteral("okbutton"));

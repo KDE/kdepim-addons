@@ -198,7 +198,7 @@ TemplateSelectionDialog::TemplateSelectionDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Template Selection"));
     auto mainLayout = new QVBoxLayout(this);
 
-    QLabel *lab = new QLabel(i18nc("@info", "Please select a template, that matches the CSV file:"), this);
+    auto lab = new QLabel(i18nc("@info", "Please select a template, that matches the CSV file:"), this);
     mainLayout->addWidget(lab);
 
     mView = new QListView(this);
@@ -208,7 +208,7 @@ TemplateSelectionDialog::TemplateSelectionDialog(QWidget *parent)
     mView->setItemDelegate(new TemplateSelectionDelegate(this));
 
     connect(mView->selectionModel(), &QItemSelectionModel::selectionChanged, this, &TemplateSelectionDialog::updateButtons);
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     mOkButton->setDefault(true);
     mOkButton->setShortcut(Qt::CTRL | Qt::Key_Return);

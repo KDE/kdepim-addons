@@ -67,7 +67,7 @@ void ViewerPluginCreateEventInterface::setMessageItem(const Akonadi::Item &item)
 void ViewerPluginCreateEventInterface::createAction(KActionCollection *ac)
 {
     if (ac) {
-        QAction *act = new QAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Create Event..."), this);
+        auto act = new QAction(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("Create Event..."), this);
         act->setIconText(i18n("Create Event"));
         addHelpTextAction(act, i18n("Allows you to create a calendar Event"));
         ac->addAction(QStringLiteral("create_event"), act);

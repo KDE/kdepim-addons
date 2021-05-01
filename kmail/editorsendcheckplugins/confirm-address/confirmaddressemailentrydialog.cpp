@@ -18,7 +18,7 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    QLabel *label = new QLabel(i18n("Enter new domain name:"), this);
+    auto label = new QLabel(i18n("Enter new domain name:"), this);
     label->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(label);
 
@@ -28,7 +28,7 @@ ConfirmAddressEmailEntryDialog::ConfirmAddressEmailEntryDialog(QWidget *parent)
     auto emailValidator = new PimCommon::EmailValidator(this);
     mLineEdit->setValidator(emailValidator);
 
-    QDialogButtonBox *buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttons = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttons->setObjectName(QStringLiteral("buttons"));
     mainLayout->addWidget(buttons);
     connect(buttons, &QDialogButtonBox::accepted, this, &ConfirmAddressEmailEntryDialog::accept);

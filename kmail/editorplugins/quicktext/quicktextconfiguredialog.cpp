@@ -28,15 +28,15 @@ QuickTextConfigureDialog::QuickTextConfigureDialog(QWidget *parent)
     mQuickTextConfigureWidget->setObjectName(QStringLiteral("quicktextconfigurewidget"));
     mainLayout->addWidget(mQuickTextConfigureWidget);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonbox"));
     connect(buttonBox, &QDialogButtonBox::accepted, this, &QuickTextConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QuickTextConfigureDialog::reject);
 
-    QPushButton *importButton = new QPushButton(i18n("Import..."), this);
+    auto importButton = new QPushButton(i18n("Import..."), this);
     buttonBox->addButton(importButton, QDialogButtonBox::ActionRole);
     connect(importButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotImport);
-    QPushButton *exportButton = new QPushButton(i18n("Export..."), this);
+    auto exportButton = new QPushButton(i18n("Export..."), this);
     buttonBox->addButton(exportButton, QDialogButtonBox::ActionRole);
     connect(exportButton, &QPushButton::clicked, this, &QuickTextConfigureDialog::slotExport);
 

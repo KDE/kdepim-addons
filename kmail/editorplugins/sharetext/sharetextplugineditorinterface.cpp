@@ -28,7 +28,7 @@ ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface()
 void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 {
     auto purposeMenu = new SharetextPurposeMenuWidget(parentWidget(), this);
-    KActionMenu *shareAction = new KActionMenu(i18n("Share Mail Text..."), this);
+    auto shareAction = new KActionMenu(i18n("Share Mail Text..."), this);
     shareAction->setMenu(purposeMenu->menu());
     shareAction->setIcon(QIcon::fromTheme(QStringLiteral("document-share")));
     shareAction->setPopupMode(QToolButton::InstantPopup);

@@ -30,9 +30,9 @@ ViewerPluginCreateTodoTest::~ViewerPluginCreateTodoTest()
 
 void ViewerPluginCreateTodoTest::shouldCreateAction()
 {
-    MessageViewer::ViewerPluginCreatetodo *todo = new MessageViewer::ViewerPluginCreatetodo(this);
+    auto todo = new MessageViewer::ViewerPluginCreatetodo(this);
     QVERIFY(!todo->viewerPluginName().isEmpty());
-    QWidget *parent = new QWidget(nullptr);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     QVERIFY(interface);
@@ -41,12 +41,12 @@ void ViewerPluginCreateTodoTest::shouldCreateAction()
 
 void ViewerPluginCreateTodoTest::shouldShowWidget()
 {
-    MessageViewer::ViewerPluginCreatetodo *todo = new MessageViewer::ViewerPluginCreatetodo(this);
-    QWidget *parent = new QWidget(nullptr);
+    auto todo = new MessageViewer::ViewerPluginCreatetodo(this);
+    auto parent = new QWidget(nullptr);
     parent->setLayout(new QHBoxLayout);
     MessageViewer::ViewerPluginInterface *interface = todo->createView(parent, new KActionCollection(this));
     interface->execute();
-    auto *createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
+    auto createtodowidget = parent->findChild<QWidget *>(QStringLiteral("todoedit"));
     QVERIFY(createtodowidget);
     QCOMPARE(createtodowidget->isHidden(), false);
 }

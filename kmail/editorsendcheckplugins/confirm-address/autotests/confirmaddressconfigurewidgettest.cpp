@@ -27,10 +27,10 @@ void ConfirmAddressConfigureWidgetTest::shouldHaveDefaultValue()
 {
     ConfirmAddressConfigureWidget w;
 
-    auto *vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
 
-    auto *mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(QStringLiteral("confirmaddresstab"));
+    auto mConfirmAddressConfigureTab = w.findChild<ConfirmAddressConfigureTab *>(QStringLiteral("confirmaddresstab"));
     QVERIFY(mConfirmAddressConfigureTab);
 }
 

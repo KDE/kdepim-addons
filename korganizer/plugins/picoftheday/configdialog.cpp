@@ -27,23 +27,23 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     setWindowTitle(i18nc("@title:window", "Configure Picture of the Day"));
     auto mainLayout = new QVBoxLayout(this);
 
-    QDialogButtonBox *buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
     okButton->setShortcut(Qt::CTRL | Qt::Key_Return);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfigDialog::reject);
     okButton->setDefault(true);
     setModal(true);
-    QFrame *topFrame = new QFrame(this);
+    auto topFrame = new QFrame(this);
     mainLayout->addWidget(topFrame);
     auto topLayout = new QVBoxLayout(topFrame);
     topLayout->setContentsMargins({});
 
-    QGroupBox *aspectRatioBox = new QGroupBox(i18n("Thumbnail Aspect Ratio Mode"), topFrame);
+    auto aspectRatioBox = new QGroupBox(i18n("Thumbnail Aspect Ratio Mode"), topFrame);
     topLayout->addWidget(aspectRatioBox);
     auto groupLayout = new QVBoxLayout(aspectRatioBox);
 
     mAspectRatioGroup = new QButtonGroup(this);
-    QRadioButton *btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
+    auto btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
     btn->setWhatsThis(
         i18n("The thumbnail will be scaled freely. "
              "The aspect ratio will not be preserved."));

@@ -22,12 +22,12 @@ AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface()
 
 void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
 {
-    KActionMenu *menu = new KActionMenu(i18n("Autocorrect Text"), this);
+    auto menu = new KActionMenu(i18n("Autocorrect Text"), this);
     ac->addAction(QStringLiteral("autocorrect_tool"), menu);
     MessageComposer::PluginActionType type(menu, MessageComposer::PluginActionType::Tools);
     setActionType(type);
 
-    QAction *action = new QAction(i18n("Autocorrect Full Text"), this);
+    auto action = new QAction(i18n("Autocorrect Full Text"), this);
     menu->addAction(action);
     connect(action, &QAction::triggered, this, &AutoCorrectionPluginEditorInterface::slotAutoCorrectAllText);
 

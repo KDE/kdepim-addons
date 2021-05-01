@@ -22,7 +22,7 @@ void AdblockPluginUrlInterceptorConfigureWidgetTest::shouldHaveDefaultValue()
 {
     AdBlock::AdblockPluginUrlInterceptorConfigureWidget w;
 
-    auto *configurewidget = w.findChild<AdBlock::AdBlockSettingWidget *>(QStringLiteral("configurewidget"));
+    auto configurewidget = w.findChild<AdBlock::AdBlockSettingWidget *>(QStringLiteral("configurewidget"));
     QVERIFY(configurewidget);
 }
 

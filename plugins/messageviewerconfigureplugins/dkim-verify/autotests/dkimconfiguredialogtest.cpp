@@ -25,13 +25,13 @@ void DKIMConfigureDialogTest::shouldHaveDefaultValue()
     DKIMConfigureDialog dlg;
     QVERIFY(!dlg.windowTitle().isEmpty());
 
-    auto *mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    auto *mConfigureWidget = dlg.findChild<DKIMConfigureWidget *>(QStringLiteral("mConfigureWidget"));
+    auto mConfigureWidget = dlg.findChild<DKIMConfigureWidget *>(QStringLiteral("mConfigureWidget"));
     QVERIFY(mConfigureWidget);
 
-    auto *buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
     QCOMPARE(buttonBox->standardButtons(), {QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::RestoreDefaults});
 }

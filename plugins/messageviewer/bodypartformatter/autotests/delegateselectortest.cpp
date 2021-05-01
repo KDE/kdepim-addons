@@ -25,20 +25,20 @@ DelegateSelectorTest::~DelegateSelectorTest()
 void DelegateSelectorTest::shouldHaveDefaultValue()
 {
     DelegateSelector w;
-    auto *label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("label"));
     QVERIFY(label);
     QVERIFY(!label->text().isEmpty());
 
-    auto *mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
+    auto mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
     QVERIFY(mDelegate);
     QVERIFY(mDelegate->text().isEmpty());
 
-    auto *mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
+    auto mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
     QVERIFY(mRsvp);
     QVERIFY(mRsvp->isChecked());
     QVERIFY(!mRsvp->text().isEmpty());
 
-    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QVERIFY(buttonBox);
 
     QPushButton *mOkButton = buttonBox->button(QDialogButtonBox::Ok);
@@ -49,11 +49,11 @@ void DelegateSelectorTest::shouldHaveDefaultValue()
 void DelegateSelectorTest::shouldChangeOkButtonState()
 {
     DelegateSelector w;
-    auto *mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
+    auto mDelegate = w.findChild<PimCommon::AddresseeLineEdit *>(QStringLiteral("delegate"));
     mDelegate->setEnableAkonadiSearch(false);
     mDelegate->setEnableBalooSearch(false);
 
-    auto *buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
+    auto buttonBox = w.findChild<QDialogButtonBox *>(QStringLiteral("buttonbox"));
     QPushButton *mOkButton = buttonBox->button(QDialogButtonBox::Ok);
     QVERIFY(!mOkButton->isEnabled());
 
@@ -69,7 +69,7 @@ void DelegateSelectorTest::shouldChangeOkButtonState()
 void DelegateSelectorTest::shouldReturnCheckBoxState()
 {
     DelegateSelector w;
-    auto *mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
+    auto mRsvp = w.findChild<QCheckBox *>(QStringLiteral("informcheckbox"));
     QVERIFY(mRsvp->isChecked());
     mRsvp->setChecked(true);
     QVERIFY(w.rsvp());

@@ -29,10 +29,10 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     mNetworkAccessManager->enableStrictTransportSecurityStore(true);
     auto mainLayout = new QVBoxLayout(this);
 
-    QPushButton *button = new QPushButton(QStringLiteral("Check Grammar"), this);
+    auto button = new QPushButton(QStringLiteral("Check Grammar"), this);
     mainLayout->addWidget(button);
 
-    QPushButton *languageButton = new QPushButton(QStringLiteral("Get List Of Languages"), this);
+    auto languageButton = new QPushButton(QStringLiteral("Get List Of Languages"), this);
     mainLayout->addWidget(languageButton);
 
     mInput = new QTextEdit(this);
