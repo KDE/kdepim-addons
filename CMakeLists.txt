@@ -161,10 +161,10 @@ set_package_properties("discount" PROPERTIES
         PURPOSE "Generate Markdown file.")
 
 if(discount_FOUND)
-   if (${PC_LIBMARKDOWN_VERSION_STRING})
-      if (${PC_LIBMARKDOWN_VERSION_STRING} VERSION_GREATER "2.2.5")
+   if (${PC_LIBMARKDOWN_VERSION})
+      if (${PC_LIBMARKDOWN_VERSION} VERSION_GREATER "2.2.5")
            set(DISCOUNT_HAS_HIGHLIGHTING_SUPPORT TRUE)
-           MESSAGE(STATUS "Discount ${PC_LIBMARKDOWN_VERSION_STRING}: has hightlighting support")
+           MESSAGE(STATUS "Discount ${PC_LIBMARKDOWN_VERSION}: has hightlighting support")
       endif()
    endif()
 endif()
