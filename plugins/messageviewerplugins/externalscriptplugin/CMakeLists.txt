@@ -25,7 +25,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_externalscriptplugin
-    KF5::MessageViewer KF5::XmlGui KF5::I18n KF5::PimCommon KF5::KIOWidgets
+    KF5::MessageViewer KF5::XmlGui KF5::I18n KF5::PimCommon KF5::KIOWidgets KF5::Libkdepim
     )
 
 if (KDEPIMADDONS_BUILD_EXAMPLES)
