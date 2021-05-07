@@ -12,7 +12,7 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar_PA
     )
 
 
-qt5_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
+qt_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
     korganizer/org.kde.Korganizer.Calendar.xml
     )
 
