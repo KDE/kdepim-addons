@@ -45,7 +45,7 @@ void MailMergeWidgetTest::shouldEmitSourceModeChanged()
     MailMergeWidget mailmerge;
     auto source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QCOMPARE(source->currentIndex(), 0);
-    QSignalSpy spy(&mailmerge, SIGNAL(sourceModeChanged(MailMerge::MailMergeWidget::SourceType)));
+    QSignalSpy spy(&mailmerge, &MailMergeWidget::sourceModeChanged);
     source->setCurrentIndex(1);
     QCOMPARE(spy.count(), 1);
 }
@@ -55,7 +55,7 @@ void MailMergeWidgetTest::shouldDontEmitSourceModeChangedWhenIndexIsInvalid()
     MailMergeWidget mailmerge;
     auto source = mailmerge.findChild<QComboBox *>(QStringLiteral("source"));
     QCOMPARE(source->currentIndex(), 0);
-    QSignalSpy spy(&mailmerge, SIGNAL(sourceModeChanged(MailMerge::MailMergeWidget::SourceType)));
+    QSignalSpy spy(&mailmerge, &MailMergeWidget::sourceModeChanged);
     source->setCurrentIndex(-1);
     QCOMPARE(spy.count(), 0);
 }
