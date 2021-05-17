@@ -44,5 +44,5 @@ set( kaddressbook_merge_mergecontactloseinformationwarning_source mergecontactlo
 add_executable( mergecontactloseinformationwarningtest ${kaddressbook_merge_mergecontactloseinformationwarning_source})
 add_test(NAME mergecontactloseinformationwarningtest COMMAND mergecontactloseinformationwarningtest)
 ecm_mark_as_test(mergecontactloseinformationwarningtest)
-target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt5::Gui kaddressbookmergelibprivate KF5::WidgetsAddons KF5::I18n)
+target_link_libraries( mergecontactloseinformationwarningtest Qt::Test  Qt::Gui kaddressbookmergelibprivate KF5::WidgetsAddons KF5::I18n)
 
