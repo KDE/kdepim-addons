@@ -1,9 +1,6 @@
 {
     "KPlugin": {
         "Id": "imapcompletionfolder",
-        "ServiceTypes": [
-            "LibKSieve/ImapFolderCompletion"
-        ],
         "Version": "1.0"
     }
 }

@@ -42,9 +42,6 @@
         "Name[sv]": "Importera och exportera Windows-kontakter",
         "Name[uk]": "Імпортування та експортування записів контактів Windows",
         "Name[x-test]": "xxImport/Export Windows Contactxx",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }

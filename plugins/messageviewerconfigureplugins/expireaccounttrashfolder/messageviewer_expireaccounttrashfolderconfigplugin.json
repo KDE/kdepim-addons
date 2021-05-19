@@ -37,9 +37,6 @@
         "Name[sv]": "Papperskorgen utgår",
         "Name[uk]": "Вилучення застарілих повідомлення з теки смітника",
         "Name[x-test]": "xxExpire Trash Folderxx",
-        "ServiceTypes": [
-            "MessageViewerConfigureSettingsPlugin/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

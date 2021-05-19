@@ -50,9 +50,6 @@
         "Name[uk]": "Засіб перевірки DKIM",
         "Name[x-test]": "xxDKIM Checkerxx",
         "Name[zh_CN]": "DKIM 检查器",
-        "ServiceTypes": [
-            "MessageViewerConfigureSettingsPlugin/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

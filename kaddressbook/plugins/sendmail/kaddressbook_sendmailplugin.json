@@ -65,9 +65,6 @@
         "Name[uk]": "Надіслати пошту",
         "Name[x-test]": "xxSend Mailxx",
         "Name[zh_CN]": "发送邮件",
-        "ServiceTypes": [
-            "KAddressBook/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

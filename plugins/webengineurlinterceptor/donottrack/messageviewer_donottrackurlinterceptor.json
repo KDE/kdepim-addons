@@ -62,9 +62,6 @@
         "Name[uk]": "Вимикання стеження",
         "Name[x-test]": "xxDo Not Trackxx",
         "Name[zh_CN]": "请勿追踪",
-        "ServiceTypes": [
-            "WebEngineViewer/UrlInterceptor"
-        ],
         "Version": "1.0"
     }
 }

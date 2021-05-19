@@ -65,9 +65,6 @@
         "Name[uk]": "Перевірити gravatar",
         "Name[x-test]": "xxCheck Gravatarxx",
         "Name[zh_CN]": "检查 Gravatar 头像",
-        "ServiceTypes": [
-            "KAddressBook/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

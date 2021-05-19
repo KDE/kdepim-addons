@@ -64,9 +64,6 @@
         "Name[uk]": "Імпортування та експортування записів контактів LDAP",
         "Name[x-test]": "xxImport/Export LDAP Contactsxx",
         "Name[zh_CN]": "导入/导出 LDAP 联系人",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }

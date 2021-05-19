@@ -61,9 +61,6 @@
         "Name[uk]": "Стиль заголовків Grantlee",
         "Name[x-test]": "xxGrantlee Header Stylexx",
         "Name[zh_CN]": "Grantlee 信头风格",
-        "ServiceTypes": [
-            "MessageViewerHeaderStyle/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "100"

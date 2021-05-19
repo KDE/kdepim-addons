@@ -64,9 +64,6 @@
         "Name[uk]": "Перекладач",
         "Name[x-test]": "xxTranslatorxx",
         "Name[zh_CN]": "翻译服务",
-        "ServiceTypes": [
-            "MessageViewer/ViewerCommonPlugin"
-        ],
         "Version": "2.0"
     }
 }

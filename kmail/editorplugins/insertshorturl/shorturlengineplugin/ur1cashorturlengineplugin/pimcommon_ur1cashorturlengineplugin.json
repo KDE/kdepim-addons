@@ -32,9 +32,6 @@
         "Name[uk]": "Ur1Ca",
         "Name[x-test]": "xxUr1Caxx",
         "Name[zh_CN]": "Ur1Ca",
-        "ServiceTypes": [
-            "PimCommonShortUrlEngine/Plugin"
-        ],
         "Version": "1.0"
     }
 }

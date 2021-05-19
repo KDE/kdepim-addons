@@ -61,9 +61,6 @@
         "Name[uk]": "Довгий стиль заголовків",
         "Name[x-test]": "xxLong Header Stylexx",
         "Name[zh_CN]": "长信头风格",
-        "ServiceTypes": [
-            "MessageViewerHeaderStyle/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "7"

@@ -32,9 +32,6 @@
         "Name[uk]": "TinyUrl",
         "Name[x-test]": "xxTinyUrlxx",
         "Name[zh_CN]": "TinyUrl",
-        "ServiceTypes": [
-            "PimCommonShortUrlEngine/Plugin"
-        ],
         "Version": "1.0"
     }
 }

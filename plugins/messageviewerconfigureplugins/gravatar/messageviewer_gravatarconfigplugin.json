@@ -51,9 +51,6 @@
         "Name[uk]": "Gravatar",
         "Name[x-test]": "xxGravatarxx",
         "Name[zh_CN]": "Gravatar",
-        "ServiceTypes": [
-            "MessageViewerConfigureSettingsPlugin/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

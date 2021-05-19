@@ -61,9 +61,6 @@
         "Name[uk]": "Вставлення адреси ел. пошти",
         "Name[x-test]": "xxInsert Emailxx",
         "Name[zh_CN]": "插入电子邮件",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

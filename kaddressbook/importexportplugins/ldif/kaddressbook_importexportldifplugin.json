@@ -64,9 +64,6 @@
         "Name[uk]": "Імпортування та експортування LDIF",
         "Name[x-test]": "xxImport/Export LDIFxx",
         "Name[zh_CN]": "导入/导出 LDIF",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }

@@ -61,9 +61,6 @@
         "Name[uk]": "Вставлення скороченої адреси",
         "Name[x-test]": "xxInsert Short URLxx",
         "Name[zh_CN]": "插入短链接",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

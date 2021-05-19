@@ -64,9 +64,6 @@
         "Name[uk]": "Запис журналу дій",
         "Name[x-test]": "xxLog Activitiesxx",
         "Name[zh_CN]": "记录活动日志",
-        "ServiceTypes": [
-            "KMail/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

@@ -52,9 +52,6 @@
         "Name[uk]": "Перевірка граматики (LanguageTool)",
         "Name[x-test]": "xxGrammar Checker (LanguageTool)xx",
         "Name[zh_CN]": "语法检查器 (语言工具)",
-        "ServiceTypes": [
-            "KMailEditor/PluginEditorGrammar"
-        ],
         "Version": "1.0"
     }
 }

@@ -63,9 +63,6 @@
         "Name[uk]": "Підтвердження адреси",
         "Name[x-test]": "xxConfirm Addressxx",
         "Name[zh_CN]": "确认地址",
-        "ServiceTypes": [
-            "KMailEditor/PluginCheckBeforeSend"
-        ],
         "Version": "1.0"
     }
 }

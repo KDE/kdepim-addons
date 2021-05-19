@@ -64,9 +64,6 @@
         "Name[uk]": "Імпортування та експортування GMX",
         "Name[x-test]": "xxImport Export GMXxx",
         "Name[zh_CN]": "导入导出 GMX",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }

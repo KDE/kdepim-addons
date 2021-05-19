@@ -51,9 +51,6 @@
         "Name[uk]": "Швидкий текст",
         "Name[x-test]": "xxQuick Textxx",
         "Name[zh_CN]": "快速文本",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

@@ -32,9 +32,6 @@
         "Name[uk]": "Засіб імпортування з Nylas",
         "Name[x-test]": "xxNylas Mail Importerxx",
         "Name[zh_CN]": "Nylas 邮件导入器",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

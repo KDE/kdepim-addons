@@ -40,9 +40,6 @@
         "Name[sv]": "Kataloginställningar",
         "Name[uk]": "Параметри тек",
         "Name[x-test]": "xxFolder Settingsxx",
-        "ServiceTypes": [
-            "MessageViewerConfigureSettingsPlugin/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

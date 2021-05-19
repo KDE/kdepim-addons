@@ -63,9 +63,6 @@
         "Name[uk]": "Перевірка перед надсиланням",
         "Name[x-test]": "xxCheck Before Sendxx",
         "Name[zh_CN]": "发送前检查",
-        "ServiceTypes": [
-            "KMailEditor/PluginCheckBeforeSend"
-        ],
         "Version": "1.0"
     }
 }

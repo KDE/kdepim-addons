@@ -64,9 +64,6 @@
         "Name[uk]": "Автовиправлення",
         "Name[x-test]": "xxAutocorrectionxx",
         "Name[zh_CN]": "自动更正",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

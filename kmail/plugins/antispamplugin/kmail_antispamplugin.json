@@ -64,9 +64,6 @@
         "Name[uk]": "Антиспам",
         "Name[x-test]": "xxAntispamxx",
         "Name[zh_CN]": "垃圾防御",
-        "ServiceTypes": [
-            "KMail/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

@@ -63,9 +63,6 @@
         "Name[uk]": "Надсилання візитівок",
         "Name[x-test]": "xxSend vCardsxx",
         "Name[zh_CN]": "发送 vCard 名片",
-        "ServiceTypes": [
-            "KAddressBook/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

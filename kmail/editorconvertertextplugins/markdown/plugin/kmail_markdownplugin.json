@@ -54,9 +54,6 @@
         "Name[uk]": "Markdown",
         "Name[x-test]": "xxMarkdownxx",
         "Name[zh_CN]": "Markdown",
-        "ServiceTypes": [
-            "KMailEditor/PluginEditorConvertText"
-        ],
         "Version": "1.0"
     }
 }

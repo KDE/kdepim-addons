@@ -32,9 +32,6 @@
         "Name[uk]": "Is.gd",
         "Name[x-test]": "xxIs.gdxx",
         "Name[zh_CN]": "Is.gd",
-        "ServiceTypes": [
-            "PimCommonShortUrlEngine/Plugin"
-        ],
         "Version": "1.0"
     }
 }

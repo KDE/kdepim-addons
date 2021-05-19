@@ -64,9 +64,6 @@
         "Name[uk]": "Антивірус",
         "Name[x-test]": "xxAntivirusxx",
         "Name[zh_CN]": "病毒防御",
-        "ServiceTypes": [
-            "KMail/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

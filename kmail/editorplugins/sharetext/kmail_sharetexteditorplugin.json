@@ -53,9 +53,6 @@
         "Name[uk]": "Оприлюднення тексту",
         "Name[x-test]": "xxShare Textxx",
         "Name[zh_CN]": "分享文本",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "1"

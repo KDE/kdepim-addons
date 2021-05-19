@@ -63,9 +63,6 @@
         "Name[uk]": "Зовнішній скрипт",
         "Name[x-test]": "xxExternal Scriptxx",
         "Name[zh_CN]": "外部脚本",
-        "ServiceTypes": [
-            "MessageViewer/ViewerPlugin"
-        ],
         "Version": "2.0"
     }
 }

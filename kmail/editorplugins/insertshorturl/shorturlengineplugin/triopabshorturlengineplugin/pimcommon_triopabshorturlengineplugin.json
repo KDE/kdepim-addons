@@ -32,9 +32,6 @@
         "Name[uk]": "to.ly",
         "Name[x-test]": "xxto.lyxx",
         "Name[zh_CN]": "to.ly",
-        "ServiceTypes": [
-            "PimCommonShortUrlEngine/Plugin"
-        ],
         "Version": "1.0"
     }
 }

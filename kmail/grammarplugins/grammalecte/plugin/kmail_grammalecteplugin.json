@@ -52,9 +52,6 @@
         "Name[uk]": "Перевірка граматики французькою",
         "Name[x-test]": "xxFrench Grammar Checkerxx",
         "Name[zh_CN]": "法语语法检查器",
-        "ServiceTypes": [
-            "KMailEditor/PluginEditorGrammar"
-        ],
         "Version": "1.0"
     }
 }

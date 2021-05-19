@@ -61,9 +61,6 @@
         "Name[uk]": "Додаток експерта",
         "Name[x-test]": "xxExpert Pluginxx",
         "Name[zh_CN]": "专家插件",
-        "ServiceTypes": [
-            "KMail/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

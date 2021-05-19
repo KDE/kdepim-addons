@@ -60,9 +60,6 @@
         "Name[uk]": "Корпоративний стиль заголовків",
         "Name[x-test]": "xxEnterprise Header Stylexx",
         "Name[zh_CN]": "企业信头风格",
-        "ServiceTypes": [
-            "MessageViewerHeaderStyle/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "1"

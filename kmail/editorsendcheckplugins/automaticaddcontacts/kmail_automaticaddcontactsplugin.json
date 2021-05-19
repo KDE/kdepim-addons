@@ -63,9 +63,6 @@
         "Name[uk]": "Автоматичне додавання контактів",
         "Name[x-test]": "xxAutomatic Add Contactsxx",
         "Name[zh_CN]": "自动添加联系人",
-        "ServiceTypes": [
-            "KMailEditor/PluginCheckBeforeSend"
-        ],
         "Version": "1.0"
     }
 }

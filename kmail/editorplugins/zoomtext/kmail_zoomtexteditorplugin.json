@@ -64,9 +64,6 @@
         "Name[uk]": "Масштабування тексту",
         "Name[x-test]": "xxZoom Textxx",
         "Name[zh_CN]": "缩放文本",
-        "ServiceTypes": [
-            "KMailEditor/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"

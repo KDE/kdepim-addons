@@ -65,9 +65,6 @@
         "Name[uk]": "Об’єднання записів контактів",
         "Name[x-test]": "xxMerge Contactsxx",
         "Name[zh_CN]": "合并联系人",
-        "ServiceTypes": [
-            "KAddressBook/MainViewPlugin"
-        ],
         "Version": "1.0"
     }
 }

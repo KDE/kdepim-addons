@@ -64,9 +64,6 @@
         "Name[uk]": "Імпортування та експортування vCard",
         "Name[x-test]": "xxImport/Export vCardxx",
         "Name[zh_CN]": "导入/导出 vCard 名片",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }

@@ -63,9 +63,6 @@
         "Name[uk]": "Стандартний стиль заголовків",
         "Name[x-test]": "xxStandards Header Stylexx",
         "Name[zh_CN]": "标准信头风格",
-        "ServiceTypes": [
-            "MessageViewerHeaderStyle/Plugin"
-        ],
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Header-Order": "4"

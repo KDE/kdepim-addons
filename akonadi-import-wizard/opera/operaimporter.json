@@ -33,9 +33,6 @@
         "Name[uk]": "Засіб імпортування з Opera",
         "Name[x-test]": "xxOpera Importerxx",
         "Name[zh_CN]": "Opera 导入器",
-        "ServiceTypes": [
-            "ImportWizard/PluginMailImporter"
-        ],
         "Version": "1.0"
     }
 }

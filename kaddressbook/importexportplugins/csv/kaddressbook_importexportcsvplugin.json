@@ -64,9 +64,6 @@
         "Name[uk]": "Імпортування та експортування CSV",
         "Name[x-test]": "xxImport/Export CSVxx",
         "Name[zh_CN]": "导入/导出 CSV 表格",
-        "ServiceTypes": [
-            "KAddressBook/ImportExportPlugin"
-        ],
         "Version": "1.0"
     }
 }
