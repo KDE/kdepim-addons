@@ -13,7 +13,7 @@
 #include <QVBoxLayout>
 
 ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+    : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mConfirmAddressConfigureTab(new ConfirmAddressConfigureTab(this))
 {
     auto vboxlayout = new QVBoxLayout(this);

@@ -14,7 +14,7 @@
 #include <QVBoxLayout>
 
 ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorInitConfigureWidget(parent)
+    : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mExternalEditorCheck(new QCheckBox(i18n("Use external editor instead of composer"), this))
     , mEditorRequester(new KUrlRequester(this))
 {

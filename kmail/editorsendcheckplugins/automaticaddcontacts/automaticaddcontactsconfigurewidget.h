@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <MessageComposer/PluginEditorConfigureBaseWidget>
 class QWidget;
 class AutomaticAddContactsConfigureTab;
-class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
+class AutomaticAddContactsConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {
     Q_OBJECT
 public:

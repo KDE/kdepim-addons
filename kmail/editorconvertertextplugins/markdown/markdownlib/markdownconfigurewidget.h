@@ -7,9 +7,9 @@
 #pragma once
 
 #include "markdownlib_private_export.h"
-#include <MessageComposer/PluginEditorConvertTextConfigureWidget>
+#include <MessageComposer/PluginEditorConfigureBaseWidget>
 class QCheckBox;
-class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureWidget : public MessageComposer::PluginEditorConvertTextConfigureWidget
+class LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT MarkdownConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {
     Q_OBJECT
 public:

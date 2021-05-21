@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <MessageComposer/PluginEditorInitConfigureWidget>
+#include <MessageComposer/PluginEditorConfigureBaseWidget>
 class QWidget;
 class QCheckBox;
 class KUrlRequester;
-class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorInitConfigureWidget
+class ExternalComposerConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {
     Q_OBJECT
 public:

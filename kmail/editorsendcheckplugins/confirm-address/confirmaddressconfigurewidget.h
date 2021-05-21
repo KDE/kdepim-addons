@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <MessageComposer/PluginEditorConfigureBaseWidget>
 class QWidget;
 class ConfirmAddressConfigureTab;
-class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
+class ConfirmAddressConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {
     Q_OBJECT
 public:

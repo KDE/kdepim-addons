@@ -15,7 +15,7 @@ namespace
 static const char myConfigGroupName[] = "Check Before Send";
 }
 CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+    : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mCheckPlainTextMail(new QCheckBox(i18n("Send as plain text"), this))
     , mCheckMailTransport(new QCheckBox(i18n("Use SMTP server defined in identity"), this))
     , mCheckDuplicateEmailsAddresses(new QCheckBox(i18n("Check duplicated emails addresses"), this))

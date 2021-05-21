@@ -13,7 +13,7 @@
 #include <QVBoxLayout>
 
 AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorCheckBeforeSendConfigureWidget(parent)
+    : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mConfigureTab(new AutomaticAddContactsConfigureTab(this))
 {
     auto mainLayout = new QVBoxLayout(this);

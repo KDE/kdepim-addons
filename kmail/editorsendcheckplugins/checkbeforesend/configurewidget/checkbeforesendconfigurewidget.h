@@ -6,11 +6,11 @@
 
 #pragma once
 
-#include <MessageComposer/PluginEditorCheckBeforeSendConfigureWidget>
+#include <MessageComposer/PluginEditorConfigureBaseWidget>
 class QWidget;
 
 class QCheckBox;
-class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorCheckBeforeSendConfigureWidget
+class CheckBeforeSendConfigureWidget : public MessageComposer::PluginEditorConfigureBaseWidget
 {
     Q_OBJECT
 public:

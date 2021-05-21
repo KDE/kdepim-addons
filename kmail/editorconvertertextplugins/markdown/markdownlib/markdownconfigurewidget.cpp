@@ -15,7 +15,7 @@ namespace
 static const char myConfigGroupName[] = "Markdown";
 }
 MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
-    : MessageComposer::PluginEditorConvertTextConfigureWidget(parent)
+    : MessageComposer::PluginEditorConfigureBaseWidget(parent)
     , mLatexSupport(new QCheckBox(i18n("Enable embedded LaTeX"), this))
     , mExtraDefinitionLists(new QCheckBox(i18n("Enable PHP Markdown Extra definition lists"), this))
 {
