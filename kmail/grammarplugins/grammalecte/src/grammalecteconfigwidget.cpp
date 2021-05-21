@@ -135,6 +135,7 @@ QWidget *GrammalecteConfigWidget::addGeneralTab()
 
     mGrammalectePath = new KUrlRequester(this);
     mGrammalectePath->setObjectName(QStringLiteral("grammalectepath"));
+    mGrammalectePath->setPlaceholderText(i18n("Add full 'grammalecte-cli.py' path"));
     lay->addRow(i18n("Grammalecte Path:"), mGrammalectePath);
 
     return w;
