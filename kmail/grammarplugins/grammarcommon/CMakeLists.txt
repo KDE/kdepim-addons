@@ -1,17 +1,17 @@
-set(grammarcommon_SRCS
+add_library(grammarcommon)
+
+target_sources(grammarcommon PRIVATE
     grammarerror.cpp
     grammarresulttextedit.cpp
     grammarresultwidget.cpp
     )
 
-ecm_qt_declare_logging_category(grammarcommon_SRCS HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon
+ecm_qt_declare_logging_category(grammarcommon HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon
     DESCRIPTION "kdepim-addons (libgramalecte common)"
     EXPORT KDEPIMADDONS
     )
 
 
-
-add_library(grammarcommon ${grammarcommon_SRCS})
 generate_export_header(grammarcommon BASE_NAME grammarcommon)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(grammarcommon PROPERTIES UNITY_BUILD ON)

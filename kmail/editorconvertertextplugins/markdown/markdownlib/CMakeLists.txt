@@ -1,4 +1,6 @@
-set(kmailmarkdownlib_SRCS
+add_library(kmailmarkdown)
+
+target_sources(kmailmarkdown PRIVATE
     markdownpreviewwidget.cpp
     markdownconfigurewidget.cpp
     markdownconfiguredialog.cpp
@@ -15,7 +17,6 @@ set(kmailmarkdownlib_SRCS
 
 
 
-add_library(kmailmarkdown ${kmailmarkdownlib_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmailmarkdown PROPERTIES UNITY_BUILD ON)
 endif()
