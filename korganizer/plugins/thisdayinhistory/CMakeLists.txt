@@ -1,11 +1,11 @@
 
 ########### next target ###############
 
-set(korg_thisdayinhistory_PART_SRCS
+add_library(korg_thisdayinhistory MODULE)
+target_sources(korg_thisdayinhistory PRIVATE
   thisdayinhistory.cpp
 )
 
-add_library(korg_thisdayinhistory MODULE ${korg_thisdayinhistory_PART_SRCS})
 
 target_link_libraries(korg_thisdayinhistory
   KF5::EventViews
