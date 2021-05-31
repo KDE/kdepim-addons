@@ -97,7 +97,7 @@
         "Name[sv]": "Händelseinsticksprogram för personlig informationshantering",
         "Name[uk]": "Додаток подій PIM",
         "Name[x-test]": "xxPIM Events Pluginxx",
-        "Name[zh_CN]": "PIM 事件插件",
+        "Name[zh_CN]": "PIM 事件插件"
     },
     "X-KDE-PlasmaCalendar-ConfigUi": "pimevents/PimEventsConfig.qml"
 }
