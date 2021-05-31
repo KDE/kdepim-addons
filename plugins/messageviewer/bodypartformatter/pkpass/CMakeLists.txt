@@ -1,16 +1,16 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_bodypartformatter_pkpass\")
+add_library(messageviewer_bodypartformatter_pkpass MODULE)
 
-set(pkpass_srcs
+target_sources(messageviewer_bodypartformatter_pkpass PRIVATE
     pkpass_plugin.cpp
     templates.qrc
     )
-ecm_qt_declare_logging_category(pkpass_srcs HEADER pkpass_debug.h IDENTIFIER PKPASS_LOG CATEGORY_NAME org.kde.pim.pkpass
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_pkpass HEADER pkpass_debug.h IDENTIFIER PKPASS_LOG CATEGORY_NAME org.kde.pim.pkpass
     DESCRIPTION "kdepim-addons (pkpass formater)"
     EXPORT KDEPIMADDONS
     )
 
 
-add_library(messageviewer_bodypartformatter_pkpass MODULE ${pkpass_srcs})
 target_link_libraries(messageviewer_bodypartformatter_pkpass
     KF5::Archive
     KF5::Prison

@@ -1,11 +1,11 @@
 ########### next target ###############
+add_library(korg_datenums MODULE)
 
-set(korg_datenums_PART_SRCS
+target_sources(korg_datenums PRIVATE
   configdialog.cpp
   datenums.cpp
 )
 
-add_library(korg_datenums MODULE ${korg_datenums_PART_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(korg_datenums PROPERTIES UNITY_BUILD ON)
 endif()

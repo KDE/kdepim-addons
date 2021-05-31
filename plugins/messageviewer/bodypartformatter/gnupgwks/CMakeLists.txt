@@ -1,6 +1,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_application_gnupgwks_plugin\")
 
-set(messageviewer_bodypartformatter_application_gnupgwks_SRCS
+add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE)
+target_sources(messageviewer_bodypartformatter_application_gnupgwks PRIVATE
     plugin.cpp
     gnupgwksformatter.cpp
     gnupgwksurlhandler.cpp
@@ -12,7 +13,7 @@ set(messageviewer_bodypartformatter_application_gnupgwks_SRCS
     templates.qrc
     )
 
-ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks_SRCS
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnupgwks
     HEADER gnupgwks_debug.h
     IDENTIFIER GNUPGWKS_LOG
     CATEGORY_NAME org.kde.pim.gnupgwks
@@ -21,7 +22,6 @@ ecm_qt_declare_logging_category(messageviewer_bodypartformatter_application_gnup
     )
 
 
-add_library(messageviewer_bodypartformatter_application_gnupgwks MODULE ${messageviewer_bodypartformatter_application_gnupgwks_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_application_gnupgwks PROPERTIES UNITY_BUILD ON)
 endif()

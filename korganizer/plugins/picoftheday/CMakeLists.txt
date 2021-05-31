@@ -1,17 +1,17 @@
 ########### next target ###############
+add_library(korg_picoftheday MODULE)
 
-set(korg_picoftheday_PART_SRCS
+target_sources(korg_picoftheday PRIVATE
     configdialog.cpp
     picoftheday.cpp
     )
-ecm_qt_declare_logging_category(korg_picoftheday_PART_SRCS HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins
+ecm_qt_declare_logging_category(korg_picoftheday HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins
     DESCRIPTION "kdepim-addons (korganizer picoftheday plugins)"
     OLD_CATEGORY_NAMES log_korganizer_picoftheday_plugins
     EXPORT KDEPIMADDONS
     )
 
 
-add_library(korg_picoftheday MODULE ${korg_picoftheday_PART_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(korg_picoftheday PROPERTIES UNITY_BUILD ON)
 endif()

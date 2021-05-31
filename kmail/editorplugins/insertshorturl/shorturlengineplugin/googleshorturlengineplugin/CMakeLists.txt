@@ -1,9 +1,9 @@
-set(pimcommon_googleshorturlengineplugin_SRCS
+add_library(pimcommon_googleshorturlengineplugin MODULE)
+target_sources(pimcommon_googleshorturlengineplugin PRIVATE
     googleshorturlengineplugin.cpp
     googleshorturlengineinterface.cpp
 )
 
-add_library(pimcommon_googleshorturlengineplugin MODULE ${pimcommon_googleshorturlengineplugin_SRCS})
 
 target_link_libraries(pimcommon_googleshorturlengineplugin
   KF5::PimCommon

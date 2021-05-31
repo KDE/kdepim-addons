@@ -1,10 +1,6 @@
 ########### next target ###############
 
-set(korg_lunarphases_PART_SRCS
-  lunarphases.cpp
-)
-
-add_library(korg_lunarphases MODULE ${korg_lunarphases_PART_SRCS})
+add_library(korg_lunarphases MODULE lunarphases.cpp)
 
 target_link_libraries(korg_lunarphases
   KF5::Holidays

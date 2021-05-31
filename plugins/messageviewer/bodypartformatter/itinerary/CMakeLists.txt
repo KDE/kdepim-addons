@@ -1,4 +1,6 @@
-set(itinerary_plugin_srcs
+add_library(messageviewer_bodypartformatter_semantic MODULE)
+
+target_sources(messageviewer_bodypartformatter_semantic PRIVATE
     itinerary_plugin.cpp
     itinerarymemento.cpp
     itineraryprocessor.cpp
@@ -7,13 +9,12 @@ set(itinerary_plugin_srcs
     itinerarykdeconnecthandler.cpp
     templates/templates.qrc
     )
-ecm_qt_declare_logging_category(itinerary_plugin_srcs HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary
+ecm_qt_declare_logging_category(messageviewer_bodypartformatter_semantic HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary
     DESCRIPTION "kdepim-addons (Itinerary plugin)"
     EXPORT KDEPIMADDONS
     )
 
 
-add_library(messageviewer_bodypartformatter_semantic MODULE ${itinerary_plugin_srcs})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_semantic PROPERTIES UNITY_BUILD ON)
 endif()

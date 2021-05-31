@@ -1,7 +1,8 @@
 
 ########### next target ###############
 find_package(KF5KDELibs4Support ${KF5_MIN_VERSION} CONFIG REQUIRED) #for the korganizer hebrew plugin
-set(korg_hebrew_PART_SRCS
+add_library(korg_hebrew MODULE)
+target_sources(korg_hebrew PRIVATE
   qcalendarsystem.cpp
   configdialog.cpp
   converter.cpp
@@ -10,9 +11,8 @@ set(korg_hebrew_PART_SRCS
   parsha.cpp
 )
 
-ecm_qt_declare_logging_category(korg_hebrew_PART_SRCS HEADER korganizer_hebrew_debug.h IDENTIFIER KORGANIZER_HEBREWPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_hebrew_plugin)
+ecm_qt_declare_logging_category(korg_hebrew HEADER korganizer_hebrew_debug.h IDENTIFIER KORGANIZER_HEBREWPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_hebrew_plugin)
 
-add_library(korg_hebrew MODULE ${korg_hebrew_PART_SRCS})
 
 target_link_libraries(korg_hebrew
   KF5::EventViews
