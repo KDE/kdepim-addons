@@ -6,7 +6,7 @@ if(USE_DISCOUNT_LIB)
     target_sources(messageviewer_bodypartformatter_text_markdown PRIVATE markdowndiscount.cpp)
     target_link_libraries(messageviewer_bodypartformatter_text_markdown discount::Lib)
 else()
-    set(messageviewer_bodypartformatter_text_markdown PRIVATE markdownqtextdocument.cpp)
+    target_sources(messageviewer_bodypartformatter_text_markdown PRIVATE markdownqtextdocument.cpp)
 endif()
 
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_markdown_plugin\")
