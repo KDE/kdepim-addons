@@ -1,4 +1,6 @@
-set(kmailgrammalecte_SRCS
+add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})
+
+target_sources(kmailgrammalecte PRIVATE
     grammalecteparser.cpp
     grammalecteresultjob.cpp
     grammalecteconfigwidget.cpp
@@ -9,14 +11,13 @@ set(kmailgrammalecte_SRCS
     grammalectegrammarerror.cpp
     )
 
-ecm_qt_declare_logging_category(kmailgrammalecte_SRCS HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin
+ecm_qt_declare_logging_category(kmailgrammalecte HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin
     DESCRIPTION "kdepim-addons (libgramalecte)"
     EXPORT KDEPIMADDONS
     )
 
 
 
-add_library(kmailgrammalecte ${kmailgrammalecte_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_confirmaddresseditorplugin PROPERTIES UNITY_BUILD ON)
 endif()

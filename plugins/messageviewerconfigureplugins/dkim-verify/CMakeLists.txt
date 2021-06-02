@@ -12,7 +12,8 @@ target_link_libraries(messageviewer_dkimconfigplugin
     )
 
 
-set(dkimverifyconfigure_SRCS
+add_library(dkimverifyconfigure)
+target_sources(dkimverifyconfigure PRIVATE
     dkimconfiguredialog.cpp
     dkimconfiguretab.cpp
     dkimconfigurewidget.cpp
@@ -24,12 +25,11 @@ set(dkimverifyconfigure_SRCS
     dkimauthenticationverifiedserverdialog.cpp
     )
 
-ecm_qt_declare_logging_category(dkimverifyconfigure_SRCS HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin
+ecm_qt_declare_logging_category(dkimverifyconfigure HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin
     DESCRIPTION "kdepim-addons (dkim-verify-configure)"
     EXPORT KDEPIMADDONS
     )
 
-add_library(dkimverifyconfigure ${dkimverifyconfigure_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(dkimverifyconfigure PROPERTIES UNITY_BUILD ON)
 endif()

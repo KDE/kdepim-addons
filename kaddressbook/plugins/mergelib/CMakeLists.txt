@@ -1,4 +1,6 @@
-set(kaddressbookmergelibprivate_SRCS
+add_library(kaddressbookmergelibprivate)
+
+target_sources(kaddressbookmergelibprivate PRIVATE
     job/searchpotentialduplicatecontactjob.cpp
     job/mergecontactsjob.cpp
     job/mergecontacts.cpp
@@ -20,12 +22,11 @@ set(kaddressbookmergelibprivate_SRCS
     widgets/mergecontactselectinformationscrollarea.cpp
     widgets/mergecontacterrorlabel.cpp
     )
-ecm_qt_declare_logging_category(kaddressbookmergelibprivate_SRCS HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate
+ecm_qt_declare_logging_category(kaddressbookmergelibprivate HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate
     DESCRIPTION "kdepim-addons (kaddressbook merge contact plugin)"
     EXPORT KDEPIMADDONS
     )
 
-add_library(kaddressbookmergelibprivate ${kaddressbookmergelibprivate_SRCS})
 generate_export_header(kaddressbookmergelibprivate BASE_NAME kaddressbookmergelib)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbookmergelibprivate PROPERTIES UNITY_BUILD ON)

@@ -1,15 +1,15 @@
-set(expireaccounttrashfolderconfig_SRCS
+add_library(expireaccounttrashfolderconfig)
+target_sources(expireaccounttrashfolderconfig PRIVATE
     expireaccounttrashfolderconfigdialog.cpp
     expireaccounttrashfolderconfigwidget.cpp
 
     )
 
-ecm_qt_declare_logging_category(expireaccounttrashfolderconfig_SRCS HEADER libexpireaccounttrashfolderconfig_debug.h IDENTIFIER LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libexpireaccounttrashfolderconfig
+ecm_qt_declare_logging_category(expireaccounttrashfolderconfig HEADER libexpireaccounttrashfolderconfig_debug.h IDENTIFIER LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libexpireaccounttrashfolderconfig
     DESCRIPTION "kdepim-addons (expire account trash folder config)"
     EXPORT KDEPIMADDONS
     )
 
-add_library(expireaccounttrashfolderconfig ${expireaccounttrashfolderconfig_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(expireaccounttrashfolderconfig PROPERTIES UNITY_BUILD ON)
 endif()

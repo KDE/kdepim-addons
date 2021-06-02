@@ -1,7 +1,7 @@
 
 
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_calendar_plugin\")
-add_library(messageviewer_bodypartformatter_text_calendar MODULE ${messageviewer_bodypartformatter_text_calendar_PART_SRCS})
+add_library(messageviewer_bodypartformatter_text_calendar MODULE)
 
 qt_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
     korganizer/org.kde.Korganizer.Calendar.xml

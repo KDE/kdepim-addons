@@ -1,5 +1,6 @@
+add_library(folderconfiguresettings)
 
-set(folderconfiguresettings_SRCS
+target_sources(folderconfiguresettings PRIVATE
     folderconfiguresettingsdialog.cpp
     folderconfiguresettingswidget.cpp
     foldersettingfilterproxymodel.cpp
@@ -13,12 +14,11 @@ set(folderconfiguresettings_SRCS
     folderconfiguresettingsexperywidget.cpp
     )
 
-ecm_qt_declare_logging_category(folderconfiguresettings_SRCS HEADER libfolderconfiguresettings_debug.h IDENTIFIER LIBFOLDERCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
+ecm_qt_declare_logging_category(folderconfiguresettings HEADER libfolderconfiguresettings_debug.h IDENTIFIER LIBFOLDERCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
     DESCRIPTION "kdepim-addons (foldersettings-configure)"
     EXPORT KDEPIMADDONS
     )
 
-add_library(folderconfiguresettings ${folderconfiguresettings_SRCS})
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(folderconfiguresettings PROPERTIES UNITY_BUILD ON)
 endif()
