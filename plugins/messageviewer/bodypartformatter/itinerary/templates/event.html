@@ -12,7 +12,7 @@
     <br/>
     {{ trip.location.name }}
     {% with trip.location as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
-    {% if not trip.location.address.isEmpty %}
+    {% if trip.location.address.streetAddress or trip.location.address.addressLocality %}
         <br/>{{ trip.location.address|formatAddress|safe }}
     {% endif %}
 </div>
