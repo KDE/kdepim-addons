@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.5 FATAL_ERROR)
-set(PIM_VERSION "5.17.2")
+set(PIM_VERSION "5.17.3")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 if(POLICY CMP0063)
