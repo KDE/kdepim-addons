@@ -1,21 +1,21 @@
-set(mailtransport_sendplugin_SRCS
+kcoreaddons_add_plugin(mailtransport_sendplugin JSON sendmailtransport.json INSTALL_NAMESPACE mailtransport)
+
+target_sources(mailtransport_sendplugin PRIVATE
     sendmailtransportplugin.cpp
     sendmailjob.cpp
     sendmailconfigwidget.cpp
     sendmailconfigdialog.cpp
     )
 
-ecm_qt_declare_logging_category(mailtransport_sendplugin_SRCS HEADER sendmailplugin_debug.h IDENTIFIER MAILTRANSPORT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.mailtransport_sendmail
+ecm_qt_declare_logging_category(mailtransport_sendplugin HEADER sendmailplugin_debug.h IDENTIFIER MAILTRANSPORT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.mailtransport_sendmail
     DESCRIPTION "kdepim-addons (kmailtransport sendmail plugin)"
     EXPORT KDEPIMADDONS
     )
 
 
-ki18n_wrap_ui(mailtransport_sendplugin_SRCS
+ki18n_wrap_ui(mailtransport_sendplugin
     sendmailsettings.ui
     )
-kcoreaddons_add_plugin(mailtransport_sendplugin JSON sendmailtransport.json SOURCES
-    ${mailtransport_sendplugin_SRCS} INSTALL_NAMESPACE mailtransport)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(mailtransport_sendplugin PROPERTIES UNITY_BUILD ON)
 endif()

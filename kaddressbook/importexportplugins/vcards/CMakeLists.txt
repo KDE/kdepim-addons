@@ -1,4 +1,6 @@
-set(kaddressbook_importexport_vcard_SRCS
+kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_importexportvcardplugin.json INSTALL_NAMESPACE kaddressbook/importexportplugin)
+
+target_sources(kaddressbook_importexportvcardplugin PRIVATE
     vcardimportexportplugin.cpp
     vcardimportexportplugininterface.cpp
     engine/vcardviewerdialog.cpp
@@ -6,8 +8,6 @@ set(kaddressbook_importexport_vcard_SRCS
     )
 
 
-kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_importexportvcardplugin.json SOURCES
-    ${kaddressbook_importexport_vcard_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportvcardplugin PROPERTIES UNITY_BUILD ON)
 endif()

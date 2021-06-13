@@ -1,11 +1,10 @@
-set(kaddressbook_importexport_ldif_SRCS
+kcoreaddons_add_plugin(kaddressbook_importexportldifplugin JSON kaddressbook_importexportldifplugin.json INSTALL_NAMESPACE kaddressbook/importexportplugin)
+target_sources(kaddressbook_importexportldifplugin PRIVATE
     ldifimportexportplugin.cpp
     ldifimportexportplugininterface.cpp
     )
 
 
-kcoreaddons_add_plugin(kaddressbook_importexportldifplugin JSON kaddressbook_importexportldifplugin.json SOURCES
-    ${kaddressbook_importexport_ldif_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportldifplugin PROPERTIES UNITY_BUILD ON)
 endif()

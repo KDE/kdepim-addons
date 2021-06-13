@@ -1,4 +1,5 @@
-set(kaddressbook_importexport_csv_SRCS
+kcoreaddons_add_plugin(kaddressbook_importexportcsvplugin JSON kaddressbook_importexportcsvplugin.json INSTALL_NAMESPACE kaddressbook/importexportplugin)
+target_sources(kaddressbook_importexportcsvplugin PRIVATE
     csvimportexportplugin.cpp
     csvimportexportplugininterface.cpp
     import/csvimportdialog.cpp
@@ -9,8 +10,6 @@ set(kaddressbook_importexport_csv_SRCS
     )
 
 
-kcoreaddons_add_plugin(kaddressbook_importexportcsvplugin JSON kaddressbook_importexportcsvplugin.json SOURCES
-    ${kaddressbook_importexport_csv_SRCS} INSTALL_NAMESPACE kaddressbook/importexportplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_importexportcsvplugin PROPERTIES UNITY_BUILD ON)
 endif()
