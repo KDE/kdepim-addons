@@ -1,8 +1,9 @@
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     )
+kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkgravatarplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
 
-set(kaddressbook_checkgravatarplugin_SRCS
+target_sources(kaddressbook_checkgravatarplugin PRIVATE
     gravatar/job/gravatarupdatejob.cpp
     gravatar/widgets/gravatarupdatedialog.cpp
     gravatar/widgets/gravatarupdatewidget.cpp
@@ -11,14 +12,12 @@ set(kaddressbook_checkgravatarplugin_SRCS
     checkgravatarplugin.cpp
     )
 
-ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin_SRCS HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar
+ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar
     DESCRIPTION "kdepim-addons (kaddressbook gravatar plugin)"
     EXPORT KDEPIMADDONS
     )
 
 
-kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkgravatarplugin.json SOURCES
-    ${kaddressbook_checkgravatarplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_checkgravatarplugin PROPERTIES UNITY_BUILD ON)
 endif()

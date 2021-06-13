@@ -1,11 +1,10 @@
-set(kaddressbook_mergecontactsplugin_SRCS
+kcoreaddons_add_plugin(kaddressbook_mergecontactsplugin JSON kaddressbook_mergecontactsplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
+target_sources(kaddressbook_mergecontactsplugin PRIVATE
     mergecontactsplugininterface.cpp
     mergecontactsplugin.cpp
 )
 
 
-kcoreaddons_add_plugin(kaddressbook_mergecontactsplugin JSON kaddressbook_mergecontactsplugin.json SOURCES
-    ${kaddressbook_mergecontactsplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_mergecontactsplugin PROPERTIES UNITY_BUILD ON)
 endif()

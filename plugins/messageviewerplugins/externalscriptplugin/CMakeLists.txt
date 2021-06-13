@@ -1,4 +1,6 @@
-set(messageviewer_externalscriptplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json
+    INSTALL_NAMESPACE messageviewer/viewerplugin)
+target_sources(messageviewer_externalscriptplugin PRIVATE
     viewerpluginexternalscript.cpp
     viewerpluginexternalscriptinterface.cpp
     viewerpluginexternalscriptmanager.cpp
@@ -12,14 +14,12 @@ set(messageviewer_externalscriptplugin_SRCS
     )
 
 
-ecm_qt_declare_logging_category(messageviewer_externalscriptplugin_SRCS HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin
+ecm_qt_declare_logging_category(messageviewer_externalscriptplugin HEADER externalscriptplugin_debug.h IDENTIFIER EXTERNALSCRIPTPLUGIN_LOG CATEGORY_NAME org.kde.pim.externalscriptplugin
     DESCRIPTION "kdepim-addons (External Script Plugin)"
     OLD_CATEGORY_NAMES log_externalscriptplugin
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json
-    SOURCES ${messageviewer_externalscriptplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_externalscriptplugin PROPERTIES UNITY_BUILD ON)
 endif()

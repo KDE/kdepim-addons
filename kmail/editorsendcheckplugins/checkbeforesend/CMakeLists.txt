@@ -1,8 +1,9 @@
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/
     )
+kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin JSON kmail_checkbeforesendplugin.json INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 
-set(kmail_checkbeforesendeditorplugin_SRCS
+target_sources(kmail_checkbeforesendeditorplugin PRIVATE
     checkbeforesendplugin.cpp
     checkbeforesendinterface.cpp
     checkbeforesendupdatesmtpdialog.cpp
@@ -14,13 +15,11 @@ set(kmail_checkbeforesendeditorplugin_SRCS
     sendattachments/checkattachmentjob.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin
+ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin
     DESCRIPTION "kdepim-addons (check before send editor plugin)"
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_add_plugin(kmail_checkbeforesendeditorplugin JSON kmail_checkbeforesendplugin.json SOURCES
-    ${kmail_checkbeforesendeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_checkbeforesendeditorplugin PROPERTIES UNITY_BUILD ON)
 endif()

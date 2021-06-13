@@ -1,18 +1,17 @@
-set(messageviewer_createtodoplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_createtodoplugin JSON messageviewer_createtodoplugin.json INSTALL_NAMESPACE messageviewer/viewerplugin)
+target_sources(messageviewer_createtodoplugin PRIVATE
     viewerplugincreatetodo.cpp
     viewerplugincreatetodointerface.cpp
     todoedit.cpp
     createtodojob.cpp
     )
-ecm_qt_declare_logging_category(messageviewer_createtodoplugin_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin
+ecm_qt_declare_logging_category(messageviewer_createtodoplugin HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin
     DESCRIPTION "kdepim-addons (create todo plugin)"
     OLD_CATEGORY_NAMES log_createtodoplugin
     EXPORT KDEPIMADDONS
     )
 
 
-kcoreaddons_add_plugin(messageviewer_createtodoplugin JSON messageviewer_createtodoplugin.json SOURCES
-    ${messageviewer_createtodoplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_createtodoplugin PROPERTIES UNITY_BUILD ON)
 endif()
