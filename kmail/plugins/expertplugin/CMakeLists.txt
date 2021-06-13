@@ -1,9 +1,10 @@
-set(kmail_expertplugin_SRCS
+kcoreaddons_add_plugin(kmail_expertplugin JSON kmail_expertplugin.json INSTALL_NAMESPACE kmail/mainview)
+target_sources(kmail_expertplugin PRIVATE
     expertplugin.cpp
     expertplugininterface.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_expertplugin_SRCS
+ecm_qt_declare_logging_category(kmail_expertplugin
     HEADER expertplugin_debug.h
     IDENTIFIER KMAIL_EXPERT_PLUGIN_LOG
     CATEGORY_NAME org.kde.pim.kmail_expertplugin
@@ -11,8 +12,6 @@ ecm_qt_declare_logging_category(kmail_expertplugin_SRCS
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_add_plugin(kmail_expertplugin JSON kmail_expertplugin.json SOURCES
-    ${kmail_expertplugin_SRCS} INSTALL_NAMESPACE kmail/mainview)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_expertplugin PROPERTIES UNITY_BUILD ON)
 endif()

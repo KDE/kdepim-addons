@@ -1,11 +1,16 @@
-set(sieveeditor_emailline_widget_SRCS
+add_executable(sieveeditoremailinedit_gui)
+ecm_qt_declare_logging_category(sieveeditoremailinedit_gui HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
+    EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit
+    DESCRIPTION "kdepim-addons (SieveEditor email line plugin)"
+    EXPORT KDEPIMADDONS
+    )
+
+target_sources(sieveeditoremailinedit_gui PRIVATE
    main.cpp
    emaillineeditwidget.cpp
    ../emaillineedit.cpp
-   ${sieveeditoremaillinedit_plugin_categories_SRCS}
 )
 
-add_executable(sieveeditoremailinedit_gui ${sieveeditor_emailline_widget_SRCS})
 target_link_libraries(sieveeditoremailinedit_gui
      KF5::I18n KF5::KSieveUi KF5::AkonadiContact
 )

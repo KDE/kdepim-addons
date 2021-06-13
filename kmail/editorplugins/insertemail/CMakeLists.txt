@@ -1,12 +1,11 @@
-set(kmail_insertemaileditorplugin_SRCS
+kcoreaddons_add_plugin(kmail_insertemaileditorplugin JSON kmail_insertemaileditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_insertemaileditorplugin PRIVATE
     insertemailplugineditor.cpp
     insertemailplugineditorinterface.cpp
     selectmailwidget.cpp
     selectmaildialog.cpp
 )
 
-kcoreaddons_add_plugin(kmail_insertemaileditorplugin JSON kmail_insertemaileditorplugin.json SOURCES
-    ${kmail_insertemaileditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_insertemaileditorplugin
   KF5::MessageComposer KF5::XmlGui KF5::I18n KF5::AkonadiContact

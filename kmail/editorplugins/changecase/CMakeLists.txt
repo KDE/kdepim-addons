@@ -1,16 +1,15 @@
-set(kmail_changecaseeditorplugin_SRCS
+kcoreaddons_add_plugin(kmail_changecaseeditorplugin JSON kmail_changecaseeditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_changecaseeditorplugin PRIVATE
     changecaseplugineditor.cpp
     changecaseplugineditorinterface.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_changecaseeditorplugin_SRCS HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin
+ecm_qt_declare_logging_category(kmail_changecaseeditorplugin HEADER changecaseeditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_changecaseeditorplugin
     DESCRIPTION "kdepim-addons (kmail changecase editor plugins)"
     OLD_CATEGORY_NAMES log_kmail_changecaseeditorplugin
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_add_plugin(kmail_changecaseeditorplugin JSON kmail_changecaseeditorplugin.json SOURCES
-    ${kmail_changecaseeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_changecaseeditorplugin PROPERTIES UNITY_BUILD ON)
 endif()

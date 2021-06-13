@@ -1,12 +1,11 @@
-set(messageviewer_briefheaderstyleplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin JSON messageviewer_briefheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+target_sources(messageviewer_briefheaderstyleplugin PRIVATE
    briefheaderstyleplugin.cpp
    briefheaderstyleinterface.cpp 
    briefheaderstyle.cpp
    briefheaderstrategy.cpp
 )
 
-kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin JSON messageviewer_briefheaderstyleplugin.json SOURCES
-    ${messageviewer_briefheaderstyleplugin_SRCS} INSTALL_NAMESPACE messageviewer/headerstyle)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_briefheaderstyleplugin PROPERTIES UNITY_BUILD ON)

@@ -1,10 +1,9 @@
-set(kaddressbook_searchduplicatesplugin_SRCS
+
+kcoreaddons_add_plugin(kaddressbook_searchduplicatesplugin JSON kaddressbook_searchduplicatesplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
+target_sources(kaddressbook_searchduplicatesplugin PRIVATE
     searchduplicatesplugininterface.cpp
     searchduplicatesplugin.cpp
 )
-
-kcoreaddons_add_plugin(kaddressbook_searchduplicatesplugin JSON kaddressbook_searchduplicatesplugin.json SOURCES
-    ${kaddressbook_searchduplicatesplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_searchduplicatesplugin PROPERTIES UNITY_BUILD ON)
 endif()

@@ -2,18 +2,17 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-set(grammalecteplugin_SRCS
+kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json INSTALL_NAMESPACE kmail/plugineditorgrammar)
+target_sources(kmail_grammalecteplugin PRIVATE
     grammalecteplugin.cpp
     grammalecteinterface.cpp
     )
 
-ecm_qt_declare_logging_category(grammalecteplugin_SRCS HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin
+ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin
     DESCRIPTION "kdepim-addons (grammalecte plugin)"
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json SOURCES
-    ${grammalecteplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditorgrammar)
 
 target_link_libraries(kmail_grammalecteplugin
     KF5::MessageComposer KF5::I18n KF5::PimCommon KF5::XmlGui kmailgrammalecte  grammarcommon

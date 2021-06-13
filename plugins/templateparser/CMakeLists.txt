@@ -5,13 +5,12 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
+kcoreaddons_add_plugin(templateparseraddressrequesterplugin JSON templateparseremailaddressrequesterakonadi.json INSTALL_NAMESPACE templateparser)
 
-set(templateparserplugin_SRCS
+target_sources(templateparseraddressrequesterplugin PRIVATE
     templateparseremailaddressrequesterakonadi.cpp
     )
 
-kcoreaddons_add_plugin(templateparseraddressrequesterplugin JSON templateparseremailaddressrequesterakonadi.json SOURCES
-    ${templateparserplugin_SRCS} INSTALL_NAMESPACE templateparser)
 
 target_link_libraries(templateparseraddressrequesterplugin
     KF5::TemplateParser KF5::AkonadiContact

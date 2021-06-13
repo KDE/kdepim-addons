@@ -1,10 +1,10 @@
-set(kmail_autocorrectioneditorplugin_SRCS
+kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin JSON kmail_autocorrectioneditorplugin.json
+     INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_autocorrectioneditorplugin PRIVATE
     autocorrectionplugineditor.cpp
     autocorrectionplugineditorinterface.cpp
     )
 
-kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin JSON kmail_autocorrectioneditorplugin.json
-    SOURCES ${kmail_autocorrectioneditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 
 target_link_libraries(kmail_autocorrectioneditorplugin
     KF5::MessageComposer KF5::XmlGui KF5::I18n

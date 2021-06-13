@@ -36,13 +36,13 @@ set_target_properties(folderconfiguresettings
 
 install(TARGETS folderconfiguresettings ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
+#####
+kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin JSON messageviewer_folderconfiguresettingsplugin.json INSTALL_NAMESPACE messageviewer/configuresettings)
 
-set(messageviewer_folderconfiguresettingsplugin_SRCS
+target_sources(messageviewer_folderconfiguresettingsplugin PRIVATE
    folderconfiguresettingsplugin.cpp
 )
 
-kcoreaddons_add_plugin(messageviewer_folderconfiguresettingsplugin JSON messageviewer_folderconfiguresettingsplugin.json SOURCES
-    ${messageviewer_folderconfiguresettingsplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
 
 target_link_libraries(messageviewer_folderconfiguresettingsplugin
   KF5::MessageViewer

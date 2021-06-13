@@ -1,13 +1,12 @@
 
-set(kmail_markdownplugin_SRCS
+kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json  INSTALL_NAMESPACE kmail/plugineditorconverttext)
+target_sources(kmail_markdownplugin PRIVATE
     markdowninterface.cpp
     markdownplugin.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_markdownplugin_SRCS HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
+ecm_qt_declare_logging_category(kmail_markdownplugin HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)
 
-kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json SOURCES
-    ${kmail_markdownplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditorconverttext)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_markdownplugin PROPERTIES UNITY_BUILD ON)
 endif()

@@ -1,11 +1,10 @@
-set(messageviewer_gravatarconfigplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin JSON messageviewer_gravatarconfigplugin.json INSTALL_NAMESPACE messageviewer/configuresettings)
+target_sources(messageviewer_gravatarconfigplugin PRIVATE
    gravatarconfiguresettingspluginwidget.cpp
    gravatarconfiguresettingsplugin.cpp
    gravatarconfiguresettingsplugindialog.cpp
 )
 
-kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin JSON messageviewer_gravatarconfigplugin.json SOURCES
-    ${messageviewer_gravatarconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_gravatarconfigplugin PROPERTIES UNITY_BUILD ON)
 endif()
