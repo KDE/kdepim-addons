@@ -1,13 +1,14 @@
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     )
+kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcardsplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
 
-set(kaddressbook_sendvcardsplugin_SRCS
+target_sources(kaddressbook_sendvcardsplugin PRIVATE
     sendvcardsplugininterface.cpp
     sendvcardsplugin.cpp
     sendvcardsjob.cpp
     )
-ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddressbook_sendvcardsplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDVCARDS_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendvcards
+ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin HEADER kaddressbook_sendvcardsplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDVCARDS_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendvcards
     DESCRIPTION "kdepim-addons (kaddressbook send vcard plugin)"
     OLD_CATEGORY_NAMES log_kaddressbook_sendvcards
     EXPORT KDEPIMADDONS
@@ -15,8 +16,6 @@ ecm_qt_declare_logging_category(kaddressbook_sendvcardsplugin_SRCS HEADER kaddre
 
 
 
-kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcardsplugin.json SOURCES
-    ${kaddressbook_sendvcardsplugin_SRCS} INSTALL_NAMESPACE kaddressbook/mainview)
 
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

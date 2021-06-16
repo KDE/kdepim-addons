@@ -29,20 +29,19 @@ install(TARGETS kmailquicktextpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} 
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-set(kmail_quicktextplugin_SRCS
+kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_quicktextplugin PRIVATE
     quicktextplugineditor.cpp
     quicktextplugineditorinterface.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_quicktextplugin_SRCS HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin
+ecm_qt_declare_logging_category(kmail_quicktextplugin HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin
     DESCRIPTION "kdepim-addons (kmail quicktext editor plugin)"
     EXPORT KDEPIMADDONS
     )
 
 
 
-kcoreaddons_add_plugin(kmail_quicktextplugin JSON kmail_quicktextplugin.json SOURCES
-    ${kmail_quicktextplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_quicktextplugin PROPERTIES UNITY_BUILD ON)
 endif()

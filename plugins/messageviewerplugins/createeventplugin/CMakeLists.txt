@@ -1,4 +1,5 @@
-set(messageviewer_createeventplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_createeventplugin.json INSTALL_NAMESPACE messageviewer/viewerplugin)
+target_sources(messageviewer_createeventplugin PRIVATE
     viewerplugincreateevent.cpp
     viewerplugincreateeventinterface.cpp
     eventedit.cpp
@@ -6,15 +7,13 @@ set(messageviewer_createeventplugin_SRCS
     createeventjob.cpp
     )
 
-ecm_qt_declare_logging_category(messageviewer_createeventplugin_SRCS HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin
+ecm_qt_declare_logging_category(messageviewer_createeventplugin HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin
     DESCRIPTION "kdepim-addons (create event plugin)"
     OLD_CATEGORY_NAMES log_createeventplugin
     EXPORT KDEPIMADDONS
     )
 
 
-kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_createeventplugin.json SOURCES
-    ${messageviewer_createeventplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewerplugin)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_createeventplugin PROPERTIES UNITY_BUILD ON)

@@ -28,12 +28,11 @@ set_target_properties(expireaccounttrashfolderconfig
 install(TARGETS expireaccounttrashfolderconfig ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 
-set(messageviewer_expireaccounttrashfolderconfigplugin_SRCS
-   expireaccounttrashfolderconfigplugin.cpp 
-)
 
-kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin JSON messageviewer_expireaccounttrashfolderconfigplugin.json SOURCES
-    ${messageviewer_expireaccounttrashfolderconfigplugin_SRCS} INSTALL_NAMESPACE messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin JSON messageviewer_expireaccounttrashfolderconfigplugin.json INSTALL_NAMESPACE messageviewer/configuresettings)
+target_sources(messageviewer_expireaccounttrashfolderconfigplugin PRIVATE
+   expireaccounttrashfolderconfigplugin.cpp
+)
 
 target_link_libraries(messageviewer_expireaccounttrashfolderconfigplugin
   KF5::MessageViewer

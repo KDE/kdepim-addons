@@ -1,17 +1,16 @@
-set(kmail_sharetexteditorplugin_SRCS
+kcoreaddons_add_plugin(kmail_sharetexteditorplugin JSON kmail_sharetexteditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_sharetexteditorplugin PRIVATE
     sharetextplugineditor.cpp
     sharetextplugineditorinterface.cpp
     sharetextpurposemenuwidget.cpp
     )
 
-ecm_qt_declare_logging_category(kmail_sharetexteditorplugin_SRCS HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin
+ecm_qt_declare_logging_category(kmail_sharetexteditorplugin HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin
     DESCRIPTION "kdepim-addons (share text editor plugin)"
     EXPORT KDEPIMADDONS
     )
 
 
-kcoreaddons_add_plugin(kmail_sharetexteditorplugin JSON kmail_sharetexteditorplugin.json SOURCES
-    ${kmail_sharetexteditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_sharetexteditorplugin PROPERTIES UNITY_BUILD ON)
 endif()

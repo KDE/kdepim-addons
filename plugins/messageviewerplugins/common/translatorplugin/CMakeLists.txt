@@ -1,10 +1,9 @@
-set(messageviewer_translatorplugin_SRCS
+kcoreaddons_add_plugin(messageviewer_translatorplugin JSON messageviewer_translatorplugin.json INSTALL_NAMESPACE messageviewer/viewercommonplugin)
+target_sources(messageviewer_translatorplugin PRIVATE
     viewerplugintranslator.cpp
     viewerplugintranslatorinterface.cpp
 )
 
-kcoreaddons_add_plugin(messageviewer_translatorplugin JSON messageviewer_translatorplugin.json SOURCES
-    ${messageviewer_translatorplugin_SRCS} INSTALL_NAMESPACE messageviewer/viewercommonplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_translatorplugin PROPERTIES UNITY_BUILD ON)
 endif()

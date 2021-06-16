@@ -1,10 +1,9 @@
-set(kmail_nonbreakingspaceeditorplugin_SRCS
+kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin JSON kmail_nonbreakingspaceeditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+target_sources(kmail_nonbreakingspaceeditorplugin PRIVATE
     nonbreakingspaceplugineditor.cpp
     nonbreakingspaceplugineditorinterface.cpp
 )
 
-kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin JSON kmail_nonbreakingspaceeditorplugin.json SOURCES
-    ${kmail_nonbreakingspaceeditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_nonbreakingspaceeditorplugin PROPERTIES UNITY_BUILD ON)
 endif()
