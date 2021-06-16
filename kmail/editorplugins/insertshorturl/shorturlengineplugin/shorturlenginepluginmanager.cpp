@@ -44,7 +44,6 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
-    QSet<QString> unique;
     while (i.hasPrevious()) {
         ShortUrlEnginePluginInfo info;
         const KPluginMetaData data = i.previous();
@@ -52,13 +51,8 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         info.metaDataFileName = data.fileName();
         info.pluginName = data.name();
 
-        // only load plugins once, even if found multiple times!
-        if (unique.contains(info.metaDataFileNameBaseName)) {
-            continue;
-        }
         info.plugin = nullptr;
         mPluginList.push_back(info);
-        unique.insert(info.metaDataFileNameBaseName);
     }
     const QVector<ShortUrlEnginePluginInfo>::iterator end(mPluginList.end());
     for (QVector<ShortUrlEnginePluginInfo>::iterator it = mPluginList.begin(); it != end; ++it) {
