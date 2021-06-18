@@ -75,7 +75,7 @@ public:
         }
 
         setMinimumContentsLength(maxLength);
-        setSizeAdjustPolicy(AdjustToMinimumContentsLength);
+        setSizeAdjustPolicy(AdjustToContents);
         setFixedSize(sizeHint());
     }
 
