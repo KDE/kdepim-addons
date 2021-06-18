@@ -1,4 +1,5 @@
-set(kmail_quicktextplugin_private_SRCS
+add_library(kmailquicktextpluginprivate)
+target_sources(kmailquicktextpluginprivate PRIVATE
     quicktextmenu.cpp
     quicktextconfigurewidget.cpp
     quicktextconfiguredialog.cpp
@@ -8,7 +9,6 @@ set(kmail_quicktextplugin_private_SRCS
     )
 
 
-add_library(kmailquicktextpluginprivate ${kmail_quicktextplugin_private_SRCS})
 generate_export_header(kmailquicktextpluginprivate BASE_NAME quicktext)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmailquicktextpluginprivate PROPERTIES UNITY_BUILD ON)

@@ -1,12 +1,11 @@
-set(operaimporter_SRCS
+kcoreaddons_add_plugin(operaimporterplugin JSON operaimporter.json INSTALL_NAMESPACE importwizard)
+target_sources(operaimporterplugin PRIVATE
    operaaddressbook.cpp  
    operaimportdata.cpp  
    operasettings.cpp
 )
 
-ecm_qt_declare_logging_category(operaimporter_SRCS HEADER operaplugin_debug.h IDENTIFIER OPERAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.operaplugin)
-kcoreaddons_add_plugin(operaimporterplugin JSON operaimporter.json SOURCES
-    ${operaimporter_SRCS} INSTALL_NAMESPACE importwizard)
+ecm_qt_declare_logging_category(operaimporterplugin HEADER operaplugin_debug.h IDENTIFIER OPERAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.operaplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(operaimporterplugin PROPERTIES UNITY_BUILD ON)
 endif()

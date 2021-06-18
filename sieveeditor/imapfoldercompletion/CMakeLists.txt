@@ -1,4 +1,5 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+kcoreaddons_add_plugin(imapfoldercompletionplugin JSON imapfoldercompletion.json INSTALL_NAMESPACE libksieve)
 
 set(sieveeditor_plugin_categories_SRCS)
 ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER
@@ -14,7 +15,7 @@ if(BUILD_TESTING)
 endif()
 
 
-set(imapfoldercompletionplugin_SRCS
+target_sources(imapfoldercompletionplugin PRIVATE
     selectimapfolderdialog.cpp
     selectimapfolderwidget.cpp
     selectimapwidget.cpp
@@ -27,8 +28,6 @@ set(imapfoldercompletionplugin_SRCS
     ${sieveeditor_plugin_categories_SRCS}
     )
 
-kcoreaddons_add_plugin(imapfoldercompletionplugin JSON imapfoldercompletion.json SOURCES
-    ${imapfoldercompletionplugin_SRCS} INSTALL_NAMESPACE libksieve)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(imapfoldercompletionplugin PROPERTIES UNITY_BUILD ON)
 endif()

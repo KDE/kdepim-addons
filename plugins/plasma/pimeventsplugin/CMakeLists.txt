@@ -2,14 +2,7 @@ add_definitions (-DTRANSLATION_DOMAIN=\"pimeventsplugin\")
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-
-set(pimeventsplugin_SRCS
-    pimeventsplugin.cpp
-    akonadipimdatasource.cpp
-    eventdatavisitor.cpp
-    settingschangenotifier.cpp
-    eventmodel.cpp
-    )
+kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json INSTALL_NAMESPACE plasmacalendarplugins)
 ecm_qt_declare_logging_category(loggingcategory_SRCS
     HEADER pimeventsplugin_debug.h
     IDENTIFIER PIMEVENTSPLUGIN_LOG
@@ -19,10 +12,15 @@ ecm_qt_declare_logging_category(loggingcategory_SRCS
     EXPORT KDEPIMADDONS
     )
 
+target_sources(pimevents PRIVATE
+    pimeventsplugin.cpp
+    akonadipimdatasource.cpp
+    eventdatavisitor.cpp
+    settingschangenotifier.cpp
+    eventmodel.cpp
+    ${loggingcategory_SRCS}
+    )
 
-set(pimeventsplugins_full_SRCS ${pimeventsplugin_SRCS} ${loggingcategory_SRCS})
-kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json SOURCES
-    ${pimeventsplugins_full_SRCS} INSTALL_NAMESPACE plasmacalendarplugins)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(pimevents PROPERTIES UNITY_BUILD ON)
 endif()
@@ -42,13 +40,14 @@ target_link_libraries(pimevents
 
 ######################### NEXT TARGET #######################33
 
-set(plasmapimcalendarsplugin_SRCS
+add_library(pimcalendarsplugin SHARED)
+
+target_sources(pimcalendarsplugin PRIVATE
     pimcalendarsplugin.cpp
     pimcalendarsmodel.cpp
     settingschangenotifier.cpp
+    ${loggingcategory_SRCS}
     )
-
-add_library(pimcalendarsplugin SHARED ${plasmapimcalendarsplugin_SRCS} ${loggingcategory_SRCS})
 target_link_libraries(pimcalendarsplugin
     Qt::Core
     Qt::Qml

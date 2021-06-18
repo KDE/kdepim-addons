@@ -1,11 +1,10 @@
-set(nylasmailimporter_SRCS
+kcoreaddons_add_plugin(nylasmailimporterplugin JSON nylasmailimporter.json INSTALL_NAMESPACE importwizard)
+target_sources(nylasmailimporterplugin PRIVATE
    nylasmailsettings.cpp
    nylasmaildata.cpp
 )
 
-ecm_qt_declare_logging_category(nylasmailimporter_SRCS HEADER nylasmailplugin_debug.h IDENTIFIER NYLASMAILPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.nylasmailplugin)
-kcoreaddons_add_plugin(nylasmailimporterplugin JSON nylasmailimporter.json SOURCES
-    ${nylasmailimporter_SRCS} INSTALL_NAMESPACE importwizard)
+ecm_qt_declare_logging_category(nylasmailimporterplugin HEADER nylasmailplugin_debug.h IDENTIFIER NYLASMAILPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.nylasmailplugin)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(nylasmailimporterplugin PROPERTIES UNITY_BUILD ON)
 endif()

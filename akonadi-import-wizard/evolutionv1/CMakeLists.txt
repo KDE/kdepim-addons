@@ -1,9 +1,5 @@
-set(evolutionv1importer_SRCS
-   evolutionv1importdata.cpp  
-)
-
 kcoreaddons_add_plugin(evolutionv1importerplugin JSON evolutionv1importer.json SOURCES
-    ${evolutionv1importer_SRCS} INSTALL_NAMESPACE importwizard)
+    evolutionv1importdata.cpp INSTALL_NAMESPACE importwizard)
 
 
 target_link_libraries(evolutionv1importerplugin

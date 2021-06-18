@@ -1,4 +1,5 @@
-set(kmail_mailmergeplugin_SRCS
+add_library(mailmerge)
+target_sources(mailmerge PRIVATE
     mailmergedialog.cpp
     widgets/addressbookwidget.cpp
     widgets/attachmentlistwidget.cpp
@@ -11,7 +12,6 @@ set(kmail_mailmergeplugin_SRCS
     widgets/mailmergepreviewwidget.cpp
 )
 
-add_library(mailmerge ${kmail_mailmergeplugin_SRCS})
 generate_export_header(mailmerge BASE_NAME mailmerge)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(mailmerge PROPERTIES UNITY_BUILD ON)
