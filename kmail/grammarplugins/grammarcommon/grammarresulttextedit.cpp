@@ -60,7 +60,7 @@ void GrammarResultTextEdit::generalPaletteChanged()
     color.setAlpha(128);
     mTextColor = color;
     const KStatefulBrush bgBrush = KStatefulBrush(KColorScheme::View, KColorScheme::NegativeText);
-    mNegativeTextColor = bgBrush.brush(this).color();
+    mNegativeTextColor = bgBrush.brush(palette).color();
 }
 
 void GrammarResultTextEdit::applyGrammarResult(const QVector<GrammarError> &infos)
