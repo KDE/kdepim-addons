@@ -6,9 +6,10 @@
 
 #pragma once
 
+#include <MessageViewer/MessageViewerCheckBeforeDeletingInterface>
 #include <QObject>
 
-class ConfirmBeforeDeletingInterface : public QObject
+class ConfirmBeforeDeletingInterface : public MessageViewer::MessageViewerCheckBeforeDeletingInterface
 {
     Q_OBJECT
 public:

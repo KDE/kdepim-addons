@@ -6,7 +6,7 @@
 #include "confirmbeforedeletinginterface.h"
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
-    : QObject(parent)
+    : MessageViewer::MessageViewerCheckBeforeDeletingInterface(parent)
 {
 }
 
