@@ -10,7 +10,7 @@
 
 /* Classes which are exported only for unit tests */
 #ifdef BUILD_TESTING
-#ifndef MESSAGEVIEWER_TESTS_EXPORT
+#ifndef LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT
 #define LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT LIBDKIMVERIFYCONFIGURE_EXPORT
 #endif
 #else /* not compiling tests */
