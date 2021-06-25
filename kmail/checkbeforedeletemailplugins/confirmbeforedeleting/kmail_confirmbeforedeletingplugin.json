@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to check if we want to delete specific email",
+        "EnabledByDefault": "false",
+        "Id": "kmailconfirmbeforedeleting",
+        "Name": "Confirm Before Deleting Emails",
+        "Version": "1.0"
+    }
+}
