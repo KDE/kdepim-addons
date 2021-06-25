@@ -12,11 +12,8 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 generate_export_header(kmailconfirmbeforedeleting BASE_NAME kmailconfirmbeforedeleting)
 target_link_libraries(kmailconfirmbeforedeleting
-    KF5::MessageComposer
+    KF5::MessageViewer
     KF5::I18n
-    Qt::WebEngineWidgets
-    discount::Lib
-    KF5::SyntaxHighlighting
 )
 
 set_target_properties(kmailconfirmbeforedeleting
