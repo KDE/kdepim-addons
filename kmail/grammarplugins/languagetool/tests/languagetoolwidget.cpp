@@ -65,7 +65,7 @@ void LanguageToolWidget::slotReplaceText(const MessageComposer::PluginGrammarAct
 void LanguageToolWidget::slotCheckGrammar()
 {
     auto job = new LanguageToolResultJob(this);
-    job->setUrl(QStringLiteral("https://languagetool.org/api/v2/check"));
+    job->setUrl(QStringLiteral("https://api.languagetoolplus.com/v2/check"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     job->setText(mInput->toPlainText());
     job->setLanguage(QStringLiteral("fr"));
@@ -77,7 +77,7 @@ void LanguageToolWidget::slotCheckGrammar()
 void LanguageToolWidget::slotGetListOfLanguages()
 {
     auto job = new LanguageToolGetListOfLanguageJob(this);
-    job->setUrl(QStringLiteral("https://languagetool.org/api/v2/languages"));
+    job->setUrl(QStringLiteral("https://api.languagetoolplus.com/v2/languages"));
     job->setNetworkAccessManager(mNetworkAccessManager);
     connect(job, &LanguageToolGetListOfLanguageJob::finished, this, &LanguageToolWidget::slotGetLanguagesFinished);
     connect(job, &LanguageToolGetListOfLanguageJob::error, this, &LanguageToolWidget::slotGetLanguagesError);
