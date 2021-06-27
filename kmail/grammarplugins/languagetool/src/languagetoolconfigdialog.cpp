@@ -10,6 +10,7 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 namespace
@@ -27,11 +28,12 @@ LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 
-    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    auto box = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel | QDialogButtonBox::Reset, this);
     box->setObjectName(QStringLiteral("box"));
     mainLayout->addWidget(box);
     connect(box, &QDialogButtonBox::accepted, this, &LanguageToolConfigDialog::accept);
     connect(box, &QDialogButtonBox::rejected, this, &LanguageToolConfigDialog::reject);
+    connect(box->button(QDialogButtonBox::Reset), &QPushButton::clicked, mConfigWidget, &LanguageToolConfigWidget::resetValue);
     readConfig();
 }
 

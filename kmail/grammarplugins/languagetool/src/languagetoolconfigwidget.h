@@ -22,9 +22,13 @@ public:
     void loadSettings();
     void saveSettings();
 
+Q_SIGNALS:
+    void resetValue();
+
 private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     void updateWidgets(bool enabled);
+    void slotResetValue();
     QCheckBox *mUseLocalInstance = nullptr;
     QLineEdit *mInstancePath = nullptr;
     QLabel *mInstancePathLabel = nullptr;

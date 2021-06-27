@@ -75,11 +75,19 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     mLanguageToolUpdateCombobox->refreshListOfLanguages();
     loadSettings();
     updateWidgets(mUseLocalInstance->isChecked());
+    connect(this, &LanguageToolConfigWidget::resetValue, this, &LanguageToolConfigWidget::slotResetValue);
 }
 
 LanguageToolConfigWidget::~LanguageToolConfigWidget()
 {
     saveSettings();
+}
+
+void LanguageToolConfigWidget::slotResetValue()
+{
+    mUseLocalInstance->setChecked(false);
+    mInstancePath->setText(QStringLiteral("https://api.languagetoolplus.com/v2"));
+    updateWidgets(false);
 }
 
 void LanguageToolConfigWidget::updateWidgets(bool enabled)
