@@ -27,7 +27,7 @@
         {% endfor %}
         </tr><tr>
         {% for field in pass.headerFields %}
-            <td style="font-size: 150%; padding-top:0px;">{{ field.value }}</td>
+            <td style="font-size: 150%; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -41,7 +41,7 @@
             <td></td>
             <td style="width:50%; white-space: nowrap; text-align:right; color: {{ pass.labelColorName }}; padding-bottom:0px;">{{ pass.primaryFields.1.label }}</td>
         </tr><tr style="font-size: 200%;">
-            <td style="vertical-align:top; padding-top:0px;">{{ pass.primaryFields.0.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ pass.primaryFields.0.valueDisplayString }}</td>
             <td style="color: {{ pass.labelColorName }}; padding-top:0px;">
                 {% if pass.transitType == pass.Air %}
                     &#9992;
@@ -55,7 +55,7 @@
                     &rarr;
                 {% endif %}
             </td>
-            <td style="text-align:right; vertical-align:top; padding-top:0px;">{{ pass.primaryFields.1.value }}</td>
+            <td style="text-align:right; vertical-align:top; padding-top:0px;">{{ pass.primaryFields.1.valueDisplayString }}</td>
         </tr>
     </table>
 </div>
@@ -68,7 +68,7 @@
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.auxiliaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -82,7 +82,7 @@
         {% endfor %}
         </tr><tr style="font-size: 150%;">
         {% for field in pass.secondaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -99,7 +99,7 @@
 <hr/>
 {% for field in pass.backFields %}
     <div style="color: {{ pass.labelColorName }};">{{ field.label }}</div>
-    <div>{{ field.value|safe|linebreaksbr }}</div>
+    <div>{{ field.valueDisplayString|safe|linebreaksbr }}</div>
 {% endfor %}
 </div> <!-- boarding pass -->
 

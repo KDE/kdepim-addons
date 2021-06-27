@@ -31,7 +31,7 @@
         {% endfor %}
         </tr><tr>
         {% for field in pass.headerFields %}
-            <td style="font-size: 120%; padding-top:0px;">{{ field.value }}</td>
+            <td style="font-size: 120%; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -51,7 +51,7 @@
         {% endfor %}
         </tr><tr style="font-size: 120%;">
         {% for field in pass.primaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -65,7 +65,7 @@
         {% endfor %}
         </tr><tr style="font-size: 120%;">
         {% for field in pass.secondaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -79,7 +79,7 @@
         {% endfor %}
         </tr><tr style="font-size: 120%;">
         {% for field in pass.auxiliaryFields %}
-            <td style="vertical-align:top; padding-top:0px;">{{ field.value }}</td>
+            <td style="vertical-align:top; padding-top:0px;">{{ field.valueDisplayString }}</td>
         {% endfor %}
         </tr>
     </table>
@@ -96,7 +96,7 @@
 <hr/>
 {% for field in pass.backFields %}
     <div style="color: {{ pass.labelColorName }};">{{ field.label }}</div>
-    <div>{{ field.value|safe|linebreaksbr }}</div>
+    <div>{{ field.valueDisplayString|safe|linebreaksbr }}</div>
 {% endfor %}
 </div> <!-- boarding pass -->
 
