@@ -41,6 +41,8 @@ public:
 
     Q_REQUIRED_RESULT QColor grammarColorForError(const QString &error);
 
+    Q_REQUIRED_RESULT bool allowToGetListOfLanguages() const;
+
 private:
     Q_DISABLE_COPY(LanguageToolManager)
     QHash<QString, QColor> mGrammarColor;
