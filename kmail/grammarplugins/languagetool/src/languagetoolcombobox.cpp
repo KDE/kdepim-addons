@@ -30,7 +30,6 @@ void LanguageToolComboBox::fillComboBox(const QVector<LanguageInfo> &info)
 void LanguageToolComboBox::fillComboBox()
 {
     // TODO add more
-    addItem(i18n("French"), QStringLiteral("fr"));
     addItem(i18n("English"), QStringLiteral("en"));
     addItem(i18n("Asturian"), QStringLiteral("ast"));
     addItem(i18n("Belarusian"), QStringLiteral("be"));
@@ -42,6 +41,7 @@ void LanguageToolComboBox::fillComboBox()
     addItem(i18n("English (Australian)"), QStringLiteral("en-AU"));
     addItem(i18n("English (Canadian)"), QStringLiteral("en-CA"));
     addItem(i18n("Esperanto"), QStringLiteral("eo"));
+    addItem(i18n("French"), QStringLiteral("fr"));
     addItem(i18n("Galician"), QStringLiteral("gl"));
     addItem(i18n("German"), QStringLiteral("de"));
     addItem(i18n("Greek"), QStringLiteral("el"));
