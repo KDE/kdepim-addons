@@ -87,6 +87,9 @@ void LanguageToolManager::loadSettings()
 {
     KConfigGroup grp(KSharedConfig::openConfig(), myLanguageToolManagerGroupName);
     mLanguageToolPath = grp.readEntry(QStringLiteral("languagetoolpath"), QStringLiteral("https://api.languagetoolplus.com/v2"));
+    if (mLanguageToolPath == QLatin1String("https://languagetool.org/api/v2")) {
+        mLanguageToolPath = QStringLiteral("https://api.languagetoolplus.com/v2");
+    }
     mLanguage = grp.readEntry(QStringLiteral("language"), QStringLiteral("en"));
     mUseLocalInstance = grp.readEntry(QStringLiteral("useLocalInstance"), false);
     // TODO add options ?
