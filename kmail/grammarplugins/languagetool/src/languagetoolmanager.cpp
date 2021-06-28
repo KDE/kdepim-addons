@@ -122,3 +122,8 @@ void LanguageToolManager::setUseLocalInstance(bool useLocalInstance)
 {
     mUseLocalInstance = useLocalInstance;
 }
+
+bool LanguageToolManager::allowToGetListOfLanguages() const
+{
+    return mUseLocalInstance;
+}

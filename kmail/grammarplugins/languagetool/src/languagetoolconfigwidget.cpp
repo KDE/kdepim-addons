@@ -66,7 +66,9 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     refreshButton->setToolTip(i18n("Refresh"));
     languageLayout->addWidget(refreshButton);
     connect(refreshButton, &QToolButton::clicked, this, [this]() {
-        mLanguageToolUpdateCombobox->checkListOfLanguagesFromSpecificPath(mInstancePath->text());
+        if (LanguageToolManager::self()->allowToGetListOfLanguages()) {
+            mLanguageToolUpdateCombobox->checkListOfLanguagesFromSpecificPath(mInstancePath->text());
+        }
     });
 
     mainLayout->addLayout(languageLayout);
