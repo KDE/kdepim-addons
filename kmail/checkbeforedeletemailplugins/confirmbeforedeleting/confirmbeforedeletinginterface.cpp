@@ -14,7 +14,7 @@ ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
 {
 }
 
-bool ConfirmBeforeDeletingInterface::exec()
+bool ConfirmBeforeDeletingInterface::exec(Akonadi::Item::List &list)
 {
     // TODO
     return false;
