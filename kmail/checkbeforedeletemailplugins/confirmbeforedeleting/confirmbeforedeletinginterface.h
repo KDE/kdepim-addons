@@ -15,4 +15,6 @@ class ConfirmBeforeDeletingInterface : public MessageViewer::MessageViewerCheckB
 public:
     explicit ConfirmBeforeDeletingInterface(QObject *parent = nullptr);
     ~ConfirmBeforeDeletingInterface() override;
+
+    Q_REQUIRED_RESULT bool exec() override;
 };

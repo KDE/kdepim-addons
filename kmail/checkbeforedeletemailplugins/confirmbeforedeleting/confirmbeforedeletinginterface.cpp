@@ -13,3 +13,9 @@ ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
 ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
 {
 }
+
+bool ConfirmBeforeDeletingInterface::exec()
+{
+    // TODO
+    return false;
+}
