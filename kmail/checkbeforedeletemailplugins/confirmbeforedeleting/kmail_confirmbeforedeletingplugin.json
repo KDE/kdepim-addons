@@ -1,9 +1,23 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check if we want to delete specific email",
+        "Description[ca]": "Aquest connector permet comprovar si es vol suprimir un correu electrònic específic",
+        "Description[es]": "Este complemento le permite comprobar si desea borrar el correo indicado",
+        "Description[nl]": "Deze plugin biedt u te controleren of we specifieke e-mail willen verwijderen",
+        "Description[pl]": "Ta wtyczka umożliwia potwierdzenie usunięcia danej wiadomości",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera om vi vill ta bort specifika brev",
+        "Description[uk]": "За допомогою цього додатка можна наказати програмі просити підтвердження щодо вилучення певних повідомлень",
+        "Description[x-test]": "xxThis plugin allows you to check if we want to delete specific emailxx",
         "EnabledByDefault": "false",
         "Id": "kmailconfirmbeforedeleting",
         "Name": "Confirm Before Deleting Emails",
+        "Name[ca]": "Confirma abans de suprimir els correus electrònics",
+        "Name[es]": "Confirmar antes de borrar correos",
+        "Name[nl]": "Alvorens e-mails verwijderen bevestigen",
+        "Name[pl]": "Potwierdź przed usunięciem wiadomości",
+        "Name[sv]": "Bekräfta innan brev tas bort",
+        "Name[uk]": "Підтвердження перед вилученням повідомлень",
+        "Name[x-test]": "xxConfirm Before Deleting Emailsxx",
         "Version": "1.0"
     }
 }
