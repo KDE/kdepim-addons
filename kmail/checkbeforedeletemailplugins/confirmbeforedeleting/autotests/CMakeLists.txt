@@ -10,3 +10,4 @@ endmacro ()
 
 add_kmail_checkbeforedeleting_unittest(confirmbeforedeletingdialogtest.cpp)
 add_kmail_checkbeforedeleting_unittest(confirmbeforedeletingwidgettest.cpp)
+add_kmail_checkbeforedeleting_unittest(confirmbeforedeletingruletest.cpp)

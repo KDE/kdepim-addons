@@ -5,9 +5,9 @@
 */
 
 #pragma once
+#include "kmailconfirmbeforedeleting_export.h"
 #include <QString>
-
-class ConfirmBeforeDeletingRule
+class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingRule
 {
 public:
     ConfirmBeforeDeletingRule();
