@@ -14,3 +14,9 @@ ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
 ConfirmBeforeDeletingManager::~ConfirmBeforeDeletingManager()
 {
 }
+
+ConfirmBeforeDeletingManager *ConfirmBeforeDeletingManager::self()
+{
+    static ConfirmBeforeDeletingManager s_self;
+    return &s_self;
+}

@@ -15,4 +15,6 @@ class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingManager : public QO
 public:
     explicit ConfirmBeforeDeletingManager(QObject *parent = nullptr);
     ~ConfirmBeforeDeletingManager() override;
+
+    static ConfirmBeforeDeletingManager *self();
 };
