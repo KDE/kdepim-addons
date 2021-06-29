@@ -20,3 +20,13 @@ ConfirmBeforeDeletingManager *ConfirmBeforeDeletingManager::self()
     static ConfirmBeforeDeletingManager s_self;
     return &s_self;
 }
+
+void ConfirmBeforeDeletingManager::loadRules()
+{
+    // TODO
+}
+
+void ConfirmBeforeDeletingManager::saveRules()
+{
+    // TODO
+}

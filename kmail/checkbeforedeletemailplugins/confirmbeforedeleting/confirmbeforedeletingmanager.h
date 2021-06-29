@@ -20,6 +20,9 @@ public:
 
     static ConfirmBeforeDeletingManager *self();
 
+    void loadRules();
+    void saveRules();
+
 private:
     QVector<ConfirmBeforeDeletingRule> mRules;
 };

@@ -17,5 +17,6 @@ ConfirmBeforeDeletingRuleTest::ConfirmBeforeDeletingRuleTest(QObject *parent)
 void ConfirmBeforeDeletingRuleTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingRule r;
+    QVERIFY(r.pattern().isEmpty());
     // TODO
 }

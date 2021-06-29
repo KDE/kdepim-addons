@@ -23,3 +23,9 @@ void ConfirmBeforeDeletingRule::setPattern(const QString &newPattern)
 {
     mPattern = newPattern;
 }
+
+QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
+{
+    d << "Pattern " << t.pattern();
+    return d;
+}
