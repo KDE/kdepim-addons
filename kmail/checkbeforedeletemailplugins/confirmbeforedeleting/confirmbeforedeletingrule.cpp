@@ -5,6 +5,7 @@
 */
 
 #include "confirmbeforedeletingrule.h"
+#include "confirmbeforedeletingplugin_debug.h"
 
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule()
 {
@@ -46,7 +47,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm() const
     case Cc:
         break;
     case Unknown:
-        // Add qCWarning() << "Invalid rules!";
+        qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << "Invalid rules!";
         break;
     }
     return false;
