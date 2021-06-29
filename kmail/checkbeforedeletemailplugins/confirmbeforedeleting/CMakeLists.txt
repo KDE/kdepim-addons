@@ -3,6 +3,7 @@ add_library(kmailconfirmbeforedeleting)
 target_sources(kmailconfirmbeforedeleting PRIVATE
     confirmbeforedeletingdialog.cpp
     confirmbeforedeletingwidget.cpp
+    confirmbeforedeletingmanager.cpp
     )
 
 
