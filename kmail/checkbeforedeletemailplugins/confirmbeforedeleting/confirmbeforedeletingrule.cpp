@@ -13,3 +13,13 @@ ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule()
 ConfirmBeforeDeletingRule::~ConfirmBeforeDeletingRule()
 {
 }
+
+const QString &ConfirmBeforeDeletingRule::pattern() const
+{
+    return mPattern;
+}
+
+void ConfirmBeforeDeletingRule::setPattern(const QString &newPattern)
+{
+    mPattern = newPattern;
+}

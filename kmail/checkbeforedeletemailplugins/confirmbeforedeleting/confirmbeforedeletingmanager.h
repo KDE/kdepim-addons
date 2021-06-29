@@ -6,8 +6,10 @@
 
 #pragma once
 
+#include "confirmbeforedeletingrule.h"
 #include "kmailconfirmbeforedeleting_export.h"
 #include <QObject>
+#include <QVector>
 
 class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingManager : public QObject
 {
@@ -17,4 +19,7 @@ public:
     ~ConfirmBeforeDeletingManager() override;
 
     static ConfirmBeforeDeletingManager *self();
+
+private:
+    QVector<ConfirmBeforeDeletingRule> mRules;
 };
