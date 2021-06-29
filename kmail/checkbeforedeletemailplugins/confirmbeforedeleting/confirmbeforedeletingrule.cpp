@@ -24,8 +24,25 @@ void ConfirmBeforeDeletingRule::setPattern(const QString &newPattern)
     mPattern = newPattern;
 }
 
+ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::ruleType() const
+{
+    return mRuleType;
+}
+
+void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
+{
+    mRuleType = newRuleType;
+}
+
+bool ConfirmBeforeDeletingRule::deletingNeedToConfirm() const
+{
+    // TODO
+    return false;
+}
+
 QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
 {
     d << "Pattern " << t.pattern();
+    d << "mRuleType " << t.ruleType();
     return d;
 }

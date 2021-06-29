@@ -30,3 +30,13 @@ void ConfirmBeforeDeletingManager::saveRules()
 {
     // TODO
 }
+
+bool ConfirmBeforeDeletingManager::deletingNeedToConfirm() const
+{
+    for (const auto &r : qAsConst(mRules)) {
+        if (r.deletingNeedToConfirm()) {
+            return true;
+        }
+    }
+    return false;
+}

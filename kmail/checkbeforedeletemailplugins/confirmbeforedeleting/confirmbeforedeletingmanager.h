@@ -23,6 +23,8 @@ public:
     void loadRules();
     void saveRules();
 
+    Q_REQUIRED_RESULT bool deletingNeedToConfirm() const;
+
 private:
     QVector<ConfirmBeforeDeletingRule> mRules;
 };
