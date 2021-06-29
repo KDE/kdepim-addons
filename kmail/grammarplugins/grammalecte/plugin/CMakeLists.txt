@@ -2,7 +2,7 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-kcoreaddons_add_plugin(kmail_grammalecteplugin JSON kmail_grammalecteplugin.json INSTALL_NAMESPACE kmail/plugineditorgrammar)
+kcoreaddons_add_plugin(kmail_grammalecteplugin INSTALL_NAMESPACE kmail/plugineditorgrammar)
 target_sources(kmail_grammalecteplugin PRIVATE
     grammalecteplugin.cpp
     grammalecteinterface.cpp

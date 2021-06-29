@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_zoomtexteditorplugin JSON kmail_zoomtexteditorplugin.json SOURCES
+kcoreaddons_add_plugin(kmail_zoomtexteditorplugin SOURCES
     ${kmail_zoomtexteditorplugin_SRCS} INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_zoomtexteditorplugin PRIVATE
     zoomtextplugineditor.cpp

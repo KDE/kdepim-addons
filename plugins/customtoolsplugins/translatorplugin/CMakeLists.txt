@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(pimcommon_translatorplugin JSON pimcommon_translatorplugin.json INSTALL_NAMESPACE pimcommon/customtools)
+kcoreaddons_add_plugin(pimcommon_translatorplugin INSTALL_NAMESPACE pimcommon/customtools)
 target_sources(pimcommon_translatorplugin PRIVATE
    translatorplugin.cpp
    translatorview.cpp

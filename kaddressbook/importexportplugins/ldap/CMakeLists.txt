@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kaddressbook_importexportldapplugin JSON kaddressbook_importexportldapplugin.json INSTALL_NAMESPACE kaddressbook/importexportplugin)
+kcoreaddons_add_plugin(kaddressbook_importexportldapplugin INSTALL_NAMESPACE kaddressbook/importexportplugin)
 target_sources(kaddressbook_importexportldapplugin PRIVATE
     ldapimportexportplugin.cpp
     ldapimportexportplugininterface.cpp

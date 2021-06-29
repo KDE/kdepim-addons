@@ -3,7 +3,7 @@ set(pimcommon_tinyplugin_SRCS
     tinyurlengineinterface.cpp
 )
 
-kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin JSON pimcommon_tinyurlengineplugin.json SOURCES
+kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin SOURCES
     ${pimcommon_tinyplugin_SRCS} INSTALL_NAMESPACE pimcommon/shorturlengine)
 
 

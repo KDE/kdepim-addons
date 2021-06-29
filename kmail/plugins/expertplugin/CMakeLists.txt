@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_expertplugin JSON kmail_expertplugin.json INSTALL_NAMESPACE kmail/mainview)
+kcoreaddons_add_plugin(kmail_expertplugin INSTALL_NAMESPACE kmail/mainview)
 target_sources(kmail_expertplugin PRIVATE
     expertplugin.cpp
     expertplugininterface.cpp

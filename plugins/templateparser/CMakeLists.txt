@@ -5,7 +5,7 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-kcoreaddons_add_plugin(templateparseraddressrequesterplugin JSON templateparseremailaddressrequesterakonadi.json INSTALL_NAMESPACE templateparser)
+kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE templateparser)
 
 target_sources(templateparseraddressrequesterplugin PRIVATE
     templateparseremailaddressrequesterakonadi.cpp

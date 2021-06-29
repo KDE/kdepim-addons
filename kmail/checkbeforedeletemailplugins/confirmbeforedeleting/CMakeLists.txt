@@ -28,7 +28,7 @@ install(TARGETS kmailconfirmbeforedeleting ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} L
 if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-kcoreaddons_add_plugin(kmail_confirmbeforedeletingplugin JSON kmail_confirmbeforedeletingplugin.json INSTALL_NAMESPACE messageviewer/checkbeforedeleting)
+kcoreaddons_add_plugin(kmail_confirmbeforedeletingplugin INSTALL_NAMESPACE messageviewer/checkbeforedeleting)
 target_sources(kmail_confirmbeforedeletingplugin PRIVATE
     confirmbeforedeletinginterface.cpp
     confirmbeforedeletingplugin.cpp

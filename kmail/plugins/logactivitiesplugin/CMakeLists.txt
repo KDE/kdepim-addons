@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_logactivitiesplugin JSON kmail_logactivitiesplugin.json INSTALL_NAMESPACE kmail/mainview)
+kcoreaddons_add_plugin(kmail_logactivitiesplugin INSTALL_NAMESPACE kmail/mainview)
 target_sources(kmail_logactivitiesplugin PRIVATE
     logactivitiesplugin.cpp
     logactivitiesplugininterface.cpp

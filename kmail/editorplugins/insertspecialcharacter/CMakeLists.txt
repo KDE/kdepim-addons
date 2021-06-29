@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin JSON kmail_insertspecialcharactereditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_insertspecialcharactereditorplugin PRIVATE
     insertspecialcharacterplugineditor.cpp
     insertspecialcharacterplugineditorinterface.cpp

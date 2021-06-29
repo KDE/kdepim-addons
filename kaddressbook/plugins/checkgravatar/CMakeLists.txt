@@ -1,7 +1,7 @@
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     )
-kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin JSON kaddressbook_checkgravatarplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
+kcoreaddons_add_plugin(kaddressbook_checkgravatarplugin INSTALL_NAMESPACE kaddressbook/mainview)
 
 target_sources(kaddressbook_checkgravatarplugin PRIVATE
     gravatar/job/gravatarupdatejob.cpp

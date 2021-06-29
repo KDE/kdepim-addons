@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_grantleeheaderstyleplugin JSON messageviewer_grantleeheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+kcoreaddons_add_plugin(messageviewer_grantleeheaderstyleplugin INSTALL_NAMESPACE messageviewer/headerstyle)
 target_sources(messageviewer_grantleeheaderstyleplugin PRIVATE
    grantleeheaderstyleplugin.cpp
    grantleeheaderstyleinterface.cpp

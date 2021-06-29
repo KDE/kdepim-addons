@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_sharetexteditorplugin JSON kmail_sharetexteditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_sharetexteditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_sharetexteditorplugin PRIVATE
     sharetextplugineditor.cpp
     sharetextplugineditorinterface.cpp

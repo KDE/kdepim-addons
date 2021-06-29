@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_antivirusplugin JSON kmail_antivirusplugin.json SOURCES
+kcoreaddons_add_plugin(kmail_antivirusplugin SOURCES
     ${kmail_antivirusplugin_SRCS} INSTALL_NAMESPACE kmail/mainview)
 
 target_sources(kmail_antivirusplugin PRIVATE

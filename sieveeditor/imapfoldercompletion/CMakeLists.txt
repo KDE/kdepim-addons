@@ -1,5 +1,5 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-kcoreaddons_add_plugin(imapfoldercompletionplugin JSON imapfoldercompletion.json INSTALL_NAMESPACE libksieve)
+kcoreaddons_add_plugin(imapfoldercompletionplugin INSTALL_NAMESPACE libksieve)
 
 set(sieveeditor_plugin_categories_SRCS)
 ecm_qt_declare_logging_category(sieveeditor_plugin_categories_SRCS HEADER imapfoldercompletionplugin_debug.h IDENTIFIER

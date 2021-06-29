@@ -3,7 +3,7 @@ set(pmailimporter_SRCS
    pmailsettings.cpp
 )
 
-kcoreaddons_add_plugin(pmailimporterplugin JSON pmailimporter.json SOURCES
+kcoreaddons_add_plugin(pmailimporterplugin SOURCES
     ${pmailimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
 

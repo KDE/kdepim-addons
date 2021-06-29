@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(gearyimporterplugin JSON gearyimporter.json INSTALL_NAMESPACE importwizard)
+kcoreaddons_add_plugin(gearyimporterplugin INSTALL_NAMESPACE importwizard)
 target_sources(gearyimporterplugin PRIVATE
    gearyaddressbook.cpp  
    gearyimportdata.cpp  

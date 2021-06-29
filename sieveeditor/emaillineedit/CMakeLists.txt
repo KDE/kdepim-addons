@@ -1,5 +1,5 @@
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
-kcoreaddons_add_plugin(emaillineeditplugin JSON emaillineedit.json INSTALL_NAMESPACE libksieve)
+kcoreaddons_add_plugin(emaillineeditplugin INSTALL_NAMESPACE libksieve)
 
 ecm_qt_declare_logging_category(emaillineeditplugin HEADER sieveeditoremaillineditplugin_debug.h IDENTIFIER
     EMAILLINEEDITPLUGIN_LOG CATEGORY_NAME org.kde.pim.sieveeditoremaillinedit

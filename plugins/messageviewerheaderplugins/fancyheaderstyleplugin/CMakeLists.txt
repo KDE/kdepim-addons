@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_fancyheaderstyleplugin JSON messageviewer_fancyheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+kcoreaddons_add_plugin(messageviewer_fancyheaderstyleplugin INSTALL_NAMESPACE messageviewer/headerstyle)
 target_sources(messageviewer_fancyheaderstyleplugin PRIVATE
    fancyheaderstyleplugin.cpp
    fancyheaderstyleinterface.cpp

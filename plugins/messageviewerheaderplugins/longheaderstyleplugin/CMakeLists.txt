@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_longheaderstyleplugin JSON messageviewer_longheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+kcoreaddons_add_plugin(messageviewer_longheaderstyleplugin INSTALL_NAMESPACE messageviewer/headerstyle)
 target_sources(messageviewer_longheaderstyleplugin PRIVATE
    longheaderstyleplugin.cpp
    longheaderstyleinterface.cpp

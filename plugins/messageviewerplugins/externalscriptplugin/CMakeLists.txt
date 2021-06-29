@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_externalscriptplugin JSON messageviewer_externalscriptplugin.json
+kcoreaddons_add_plugin(messageviewer_externalscriptplugin
     INSTALL_NAMESPACE messageviewer/viewerplugin)
 target_sources(messageviewer_externalscriptplugin PRIVATE
     viewerpluginexternalscript.cpp

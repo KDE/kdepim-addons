@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_expandurlplugin JSON messageviewer_expandurlplugin.json INSTALL_NAMESPACE messageviewer/viewercommonplugin)
+kcoreaddons_add_plugin(messageviewer_expandurlplugin INSTALL_NAMESPACE messageviewer/viewercommonplugin)
 target_sources(messageviewer_expandurlplugin PRIVATE
     viewerpluginexpandurl.cpp
     viewerpluginexpandurlinterface.cpp

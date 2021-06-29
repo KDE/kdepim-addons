@@ -2,7 +2,7 @@ set(oeimporter_SRCS
    oeimportdata.cpp  
 )
 
-kcoreaddons_add_plugin(oeimporterplugin JSON oeimporter.json SOURCES
+kcoreaddons_add_plugin(oeimporterplugin SOURCES
     ${oeimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
 

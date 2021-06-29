@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_insertemaileditorplugin JSON kmail_insertemaileditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_insertemaileditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_insertemaileditorplugin PRIVATE
     insertemailplugineditor.cpp
     insertemailplugineditorinterface.cpp

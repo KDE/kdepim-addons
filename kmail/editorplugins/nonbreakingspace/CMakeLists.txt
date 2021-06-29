@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin JSON kmail_nonbreakingspaceeditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_nonbreakingspaceeditorplugin PRIVATE
     nonbreakingspaceplugineditor.cpp
     nonbreakingspaceplugineditorinterface.cpp

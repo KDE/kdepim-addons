@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(operaimporterplugin JSON operaimporter.json INSTALL_NAMESPACE importwizard)
+kcoreaddons_add_plugin(operaimporterplugin INSTALL_NAMESPACE importwizard)
 target_sources(operaimporterplugin PRIVATE
    operaaddressbook.cpp  
    operaimportdata.cpp  

@@ -1,7 +1,7 @@
 include_directories(
     ${CMAKE_CURRENT_BINARY_DIR}
     )
-kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin JSON kaddressbook_sendvcardsplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
+kcoreaddons_add_plugin(kaddressbook_sendvcardsplugin INSTALL_NAMESPACE kaddressbook/mainview)
 
 target_sources(kaddressbook_sendvcardsplugin PRIVATE
     sendvcardsplugininterface.cpp

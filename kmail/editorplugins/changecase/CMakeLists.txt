@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_changecaseeditorplugin JSON kmail_changecaseeditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_changecaseeditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_changecaseeditorplugin PRIVATE
     changecaseplugineditor.cpp
     changecaseplugineditorinterface.cpp

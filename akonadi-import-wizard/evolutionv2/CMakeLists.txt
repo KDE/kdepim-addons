@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(evolutionv2importerplugin JSON evolutionv2importer.json SOURCES
+kcoreaddons_add_plugin(evolutionv2importerplugin SOURCES
     evolutionv2importdata.cpp   INSTALL_NAMESPACE importwizard)
 
 

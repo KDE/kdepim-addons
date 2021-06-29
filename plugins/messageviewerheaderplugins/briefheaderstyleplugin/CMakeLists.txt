@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin JSON messageviewer_briefheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+kcoreaddons_add_plugin(messageviewer_briefheaderstyleplugin INSTALL_NAMESPACE messageviewer/headerstyle)
 target_sources(messageviewer_briefheaderstyleplugin PRIVATE
    briefheaderstyleplugin.cpp
    briefheaderstyleinterface.cpp 

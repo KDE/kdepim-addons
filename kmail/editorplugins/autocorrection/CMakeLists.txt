@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin JSON kmail_autocorrectioneditorplugin.json
+kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin
      INSTALL_NAMESPACE kmail/plugineditor)
 target_sources(kmail_autocorrectioneditorplugin PRIVATE
     autocorrectionplugineditor.cpp

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(pimcommon_isgdshorturlengineplugin JSON pimcommon_isgdshorturlengineplugin.json INSTALL_NAMESPACE pimcommon/shorturlengine)
+kcoreaddons_add_plugin(pimcommon_isgdshorturlengineplugin INSTALL_NAMESPACE pimcommon/shorturlengine)
 target_sources(pimcommon_isgdshorturlengineplugin PRIVATE
     isgdshorturlengineplugin.cpp
     isgdshorturlengineinterface.cpp

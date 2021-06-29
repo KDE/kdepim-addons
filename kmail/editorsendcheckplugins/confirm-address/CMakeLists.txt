@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin JSON kmail_confirmaddressplugin.json INSTALL_NAMESPACE kmail/plugincheckbeforesend)
+kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 target_sources(kmail_confirmaddresseditorplugin PRIVATE
     confirmaddressinterface.cpp
     confirmaddressplugin.cpp

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_standardsheaderstyleplugin JSON messageviewer_standardsheaderstyleplugin.json INSTALL_NAMESPACE messageviewer/headerstyle)
+kcoreaddons_add_plugin(messageviewer_standardsheaderstyleplugin INSTALL_NAMESPACE messageviewer/headerstyle)
 target_sources(messageviewer_standardsheaderstyleplugin PRIVATE
    standardsheaderstyleplugin.cpp
    standardsheaderstyleinterface.cpp

@@ -2,7 +2,7 @@ if(BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
 
-kcoreaddons_add_plugin(kmail_languagetoolplugin JSON kmail_languagetoolplugin.json INSTALL_NAMESPACE kmail/plugineditorgrammar)
+kcoreaddons_add_plugin(kmail_languagetoolplugin INSTALL_NAMESPACE kmail/plugineditorgrammar)
 target_sources(kmail_languagetoolplugin PRIVATE
     languagetoolplugin.cpp
     languagetoolinterface.cpp

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(webengineviewer_adblockplugin JSON messageviewer_adblockurlinterceptor.json INSTALL_NAMESPACE webengineviewer/urlinterceptor)
+kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE webengineviewer/urlinterceptor)
 target_sources(webengineviewer_adblockplugin PRIVATE
     adblockinterceptorinterface.cpp
     adblockpluginurlinterceptor.cpp

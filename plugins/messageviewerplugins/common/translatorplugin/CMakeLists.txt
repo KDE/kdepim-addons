@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_translatorplugin JSON messageviewer_translatorplugin.json INSTALL_NAMESPACE messageviewer/viewercommonplugin)
+kcoreaddons_add_plugin(messageviewer_translatorplugin INSTALL_NAMESPACE messageviewer/viewercommonplugin)
 target_sources(messageviewer_translatorplugin PRIVATE
     viewerplugintranslator.cpp
     viewerplugintranslatorinterface.cpp

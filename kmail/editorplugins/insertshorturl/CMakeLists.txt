@@ -25,7 +25,7 @@ install(TARGETS shorturlpluginprivate ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRAR
 
 
 add_subdirectory(shorturlengineplugin)
-kcoreaddons_add_plugin(kmail_insertshorturleditorplugin JSON kmail_insertshorturleditorplugin.json INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_insertshorturleditorplugin INSTALL_NAMESPACE kmail/plugineditor)
 
 target_sources(kmail_insertshorturleditorplugin PRIVATE
     insertshorturlplugineditor.cpp

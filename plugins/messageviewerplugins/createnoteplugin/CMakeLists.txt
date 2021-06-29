@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_createnoteplugin JSON messageviewer_createnoteplugin.json INSTALL_NAMESPACE messageviewer/viewerplugin)
+kcoreaddons_add_plugin(messageviewer_createnoteplugin INSTALL_NAMESPACE messageviewer/viewerplugin)
 target_sources(messageviewer_createnoteplugin PRIVATE
     viewerplugincreatenote.cpp
     viewerplugincreatenoteinterface.cpp

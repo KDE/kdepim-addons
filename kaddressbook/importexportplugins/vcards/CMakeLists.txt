@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin JSON kaddressbook_importexportvcardplugin.json INSTALL_NAMESPACE kaddressbook/importexportplugin)
+kcoreaddons_add_plugin(kaddressbook_importexportvcardplugin INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
 target_sources(kaddressbook_importexportvcardplugin PRIVATE
     vcardimportexportplugin.cpp

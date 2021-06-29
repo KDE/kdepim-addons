@@ -1,5 +1,5 @@
 
-kcoreaddons_add_plugin(kmail_markdownplugin JSON kmail_markdownplugin.json  INSTALL_NAMESPACE kmail/plugineditorconverttext)
+kcoreaddons_add_plugin(kmail_markdownplugin INSTALL_NAMESPACE kmail/plugineditorconverttext)
 target_sources(kmail_markdownplugin PRIVATE
     markdowninterface.cpp
     markdownplugin.cpp

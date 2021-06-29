@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_dkimconfigplugin JSON messageviewer_dkimconfigplugin.json INSTALL_NAMESPACE messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_dkimconfigplugin INSTALL_NAMESPACE messageviewer/configuresettings)
 target_sources(messageviewer_dkimconfigplugin PRIVATE
     dkimconfiguresettingsplugin.cpp
     )

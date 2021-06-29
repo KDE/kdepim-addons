@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_externalcomposereditorplugin JSON kmail_externalcomposereditorplugin.json INSTALL_NAMESPACE kmail/plugineditorinit)
+kcoreaddons_add_plugin(kmail_externalcomposereditorplugin  INSTALL_NAMESPACE kmail/plugineditorinit)
 target_sources(kmail_externalcomposereditorplugin PRIVATE
     externalcomposerplugineditor.cpp
     externalcomposerplugineditorinterface.cpp

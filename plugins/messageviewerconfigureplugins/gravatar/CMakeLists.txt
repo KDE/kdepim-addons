@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin JSON messageviewer_gravatarconfigplugin.json INSTALL_NAMESPACE messageviewer/configuresettings)
+kcoreaddons_add_plugin(messageviewer_gravatarconfigplugin INSTALL_NAMESPACE messageviewer/configuresettings)
 target_sources(messageviewer_gravatarconfigplugin PRIVATE
    gravatarconfiguresettingspluginwidget.cpp
    gravatarconfiguresettingsplugin.cpp

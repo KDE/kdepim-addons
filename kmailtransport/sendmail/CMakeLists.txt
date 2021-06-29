@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(mailtransport_sendplugin JSON sendmailtransport.json INSTALL_NAMESPACE mailtransport)
+kcoreaddons_add_plugin(mailtransport_sendplugin INSTALL_NAMESPACE mailtransport)
 
 target_sources(mailtransport_sendplugin PRIVATE
     sendmailtransportplugin.cpp

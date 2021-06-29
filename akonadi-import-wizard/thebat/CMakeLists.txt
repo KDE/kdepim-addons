@@ -2,7 +2,7 @@ set(thebatimporter_SRCS
    thebatimportdata.cpp  
 )
 
-kcoreaddons_add_plugin(thebatimporterplugin JSON thebatimporter.json SOURCES
+kcoreaddons_add_plugin(thebatimporterplugin SOURCES
     ${thebatimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
 

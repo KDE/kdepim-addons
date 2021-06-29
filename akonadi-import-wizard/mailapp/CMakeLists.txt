@@ -2,7 +2,7 @@ set(mailappimporter_SRCS
    mailappimportdata.cpp  
 )
 
-kcoreaddons_add_plugin(mailappimporterplugin JSON mailappimporter.json SOURCES
+kcoreaddons_add_plugin(mailappimporterplugin SOURCES
     ${mailappimporter_SRCS} INSTALL_NAMESPACE importwizard)
 
 

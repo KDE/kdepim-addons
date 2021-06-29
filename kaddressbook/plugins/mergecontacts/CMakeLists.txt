@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kaddressbook_mergecontactsplugin JSON kaddressbook_mergecontactsplugin.json INSTALL_NAMESPACE kaddressbook/mainview)
+kcoreaddons_add_plugin(kaddressbook_mergecontactsplugin INSTALL_NAMESPACE kaddressbook/mainview)
 target_sources(kaddressbook_mergecontactsplugin PRIVATE
     mergecontactsplugininterface.cpp
     mergecontactsplugin.cpp

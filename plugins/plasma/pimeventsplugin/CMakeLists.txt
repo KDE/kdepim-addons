@@ -2,7 +2,7 @@ add_definitions (-DTRANSLATION_DOMAIN=\"pimeventsplugin\")
 if (BUILD_TESTING)
     add_subdirectory(autotests)
 endif()
-kcoreaddons_add_plugin(pimevents JSON pimeventsplugin.json INSTALL_NAMESPACE plasmacalendarplugins)
+kcoreaddons_add_plugin(pimevents INSTALL_NAMESPACE plasmacalendarplugins)
 ecm_qt_declare_logging_category(loggingcategory_SRCS
     HEADER pimeventsplugin_debug.h
     IDENTIFIER PIMEVENTSPLUGIN_LOG

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_createeventplugin JSON messageviewer_createeventplugin.json INSTALL_NAMESPACE messageviewer/viewerplugin)
+kcoreaddons_add_plugin(messageviewer_createeventplugin INSTALL_NAMESPACE messageviewer/viewerplugin)
 target_sources(messageviewer_createeventplugin PRIVATE
     viewerplugincreateevent.cpp
     viewerplugincreateeventinterface.cpp

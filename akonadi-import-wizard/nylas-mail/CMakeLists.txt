@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(nylasmailimporterplugin JSON nylasmailimporter.json INSTALL_NAMESPACE importwizard)
+kcoreaddons_add_plugin(nylasmailimporterplugin INSTALL_NAMESPACE importwizard)
 target_sources(nylasmailimporterplugin PRIVATE
    nylasmailsettings.cpp
    nylasmaildata.cpp

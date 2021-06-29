@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin JSON kmail_automaticaddcontactsplugin.json INSTALL_NAMESPACE kmail/plugincheckbeforesend)
+kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 target_sources(kmail_automaticaddcontactseditorplugin PRIVATE
     automaticaddcontactsinterface.cpp
     automaticaddcontactsplugin.cpp

@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(messageviewer_createtodoplugin JSON messageviewer_createtodoplugin.json INSTALL_NAMESPACE messageviewer/viewerplugin)
+kcoreaddons_add_plugin(messageviewer_createtodoplugin INSTALL_NAMESPACE messageviewer/viewerplugin)
 target_sources(messageviewer_createtodoplugin PRIVATE
     viewerplugincreatetodo.cpp
     viewerplugincreatetodointerface.cpp

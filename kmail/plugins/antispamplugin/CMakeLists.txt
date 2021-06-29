@@ -1,4 +1,4 @@
-kcoreaddons_add_plugin(kmail_antispamplugin JSON kmail_antispamplugin.json INSTALL_NAMESPACE kmail/mainview)
+kcoreaddons_add_plugin(kmail_antispamplugin INSTALL_NAMESPACE kmail/mainview)
 target_sources(kmail_antispamplugin PRIVATE
     antispamplugin.cpp
     antispamplugininterface.cpp
