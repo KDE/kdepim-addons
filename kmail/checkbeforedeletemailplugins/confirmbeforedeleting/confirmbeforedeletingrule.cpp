@@ -36,7 +36,19 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
 
 bool ConfirmBeforeDeletingRule::deletingNeedToConfirm() const
 {
-    // TODO
+    switch (mRuleType) {
+    case Body:
+        break;
+    case Subject:
+        break;
+    case To:
+        break;
+    case Cc:
+        break;
+    case Unknown:
+        // Add qCWarning() << "Invalid rules!";
+        break;
+    }
     return false;
 }
 
