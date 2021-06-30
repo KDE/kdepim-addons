@@ -8,11 +8,14 @@
 
 #include "confirmbeforedeleting_private_export.h"
 #include <QDialog>
-
+class ConfirmBeforeDeletingCreateRuleWidget;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleDialog() override;
+
+private:
+    ConfirmBeforeDeletingCreateRuleWidget *const mConfirmBeforeDeletingCreateRuleWidget;
 };

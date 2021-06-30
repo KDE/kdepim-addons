@@ -5,10 +5,14 @@
 */
 
 #include "confirmbeforedeletingcreaterulewidget.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent)
     : QWidget(parent)
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
 ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()

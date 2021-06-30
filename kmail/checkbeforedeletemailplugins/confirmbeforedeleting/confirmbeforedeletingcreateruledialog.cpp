@@ -5,19 +5,21 @@
 */
 
 #include "confirmbeforedeletingcreateruledialog.h"
+#include "confirmbeforedeletingcreaterulewidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
 ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent)
     : QDialog(parent)
+    , mConfirmBeforeDeletingCreateRuleWidget(new ConfirmBeforeDeletingCreateRuleWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Rule"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    //    mConfirmBeforeDeletingWidget->setObjectName(QStringLiteral("mConfirmBeforeDeletingWidget"));
-    //    mainLayout->addWidget(mConfirmBeforeDeletingWidget);
+    mConfirmBeforeDeletingCreateRuleWidget->setObjectName(QStringLiteral("mConfirmBeforeDeletingCreateRuleWidget"));
+    mainLayout->addWidget(mConfirmBeforeDeletingCreateRuleWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
