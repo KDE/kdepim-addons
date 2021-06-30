@@ -35,7 +35,7 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
     mRuleType = newRuleType;
 }
 
-bool ConfirmBeforeDeletingRule::deletingNeedToConfirm() const
+bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item) const
 {
     switch (mRuleType) {
     case Body:

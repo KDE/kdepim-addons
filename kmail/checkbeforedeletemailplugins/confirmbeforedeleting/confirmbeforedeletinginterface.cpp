@@ -4,6 +4,7 @@
    SPDX-License-Identifier: LGPL-2.0-or-later
 */
 #include "confirmbeforedeletinginterface.h"
+#include "confirmbeforedeletingmanager.h"
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
     : MessageViewer::MessageViewerCheckBeforeDeletingInterface(parent)
@@ -16,6 +17,5 @@ ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
 
 bool ConfirmBeforeDeletingInterface::exec(Akonadi::Item::List &list)
 {
-    // TODO
-    return false;
+    return ConfirmBeforeDeletingManager::self()->deletingNeedToConfirm(list);
 }

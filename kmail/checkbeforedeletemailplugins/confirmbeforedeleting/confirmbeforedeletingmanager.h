@@ -8,6 +8,7 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "kmailconfirmbeforedeleting_export.h"
+#include <AkonadiCore/Item>
 #include <QObject>
 #include <QVector>
 
@@ -23,7 +24,7 @@ public:
     void loadRules();
     void saveRules();
 
-    Q_REQUIRED_RESULT bool deletingNeedToConfirm() const;
+    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item::List &list) const;
 
 private:
     QVector<ConfirmBeforeDeletingRule> mRules;
