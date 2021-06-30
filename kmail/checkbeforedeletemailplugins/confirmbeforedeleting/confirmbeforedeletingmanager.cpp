@@ -31,18 +31,12 @@ void ConfirmBeforeDeletingManager::saveRules()
     // TODO
 }
 
-Akonadi::Item::List ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item::List &list) const
+bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &item) const
 {
-    Akonadi::Item::List lst;
-    for (const auto &item : list) {
-        for (const auto &r : qAsConst(mRules)) {
-            if (r.deletingNeedToConfirm(item)) {
-                // TODO show confirm dialog box
-
-            } else {
-                lst << item;
-            }
+    for (const auto &r : qAsConst(mRules)) {
+        if (r.deletingNeedToConfirm(item)) {
+            return true;
         }
     }
-    return lst;
+    return false;
 }
