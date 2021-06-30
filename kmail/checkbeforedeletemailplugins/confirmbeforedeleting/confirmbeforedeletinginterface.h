@@ -16,5 +16,5 @@ public:
     explicit ConfirmBeforeDeletingInterface(QObject *parent = nullptr);
     ~ConfirmBeforeDeletingInterface() override;
 
-    Q_REQUIRED_RESULT bool exec(Akonadi::Item::List &list) override;
+    Q_REQUIRED_RESULT Akonadi::Item::List exec(const Akonadi::Item::List &list) override;
 };

@@ -15,7 +15,7 @@ ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
 {
 }
 
-bool ConfirmBeforeDeletingInterface::exec(Akonadi::Item::List &list)
+Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::List &list)
 {
     return ConfirmBeforeDeletingManager::self()->deletingNeedToConfirm(list);
 }
