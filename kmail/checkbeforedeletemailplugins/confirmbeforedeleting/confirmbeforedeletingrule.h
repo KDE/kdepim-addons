@@ -28,6 +28,9 @@ public:
     Q_REQUIRED_RESULT const QString &pattern() const;
     void setPattern(const QString &newPattern);
 
+    void save();
+    void load();
+
     // TODO save/Load
     Q_REQUIRED_RESULT RuleType ruleType() const;
     void setRuleType(RuleType newRuleType);

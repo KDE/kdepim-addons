@@ -5,7 +5,7 @@
 */
 
 #include "confirmbeforedeletingmanager.h"
-
+#include "confirmbeforedeletingrule.h"
 ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
     : QObject(parent)
 {
@@ -28,7 +28,10 @@ void ConfirmBeforeDeletingManager::loadRules()
 
 void ConfirmBeforeDeletingManager::saveRules()
 {
-    // TODO
+    for (const auto &r : qAsConst(mRules)) {
+        // TODO
+        // r.save();
+    }
 }
 
 bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &item) const

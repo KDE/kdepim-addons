@@ -5,6 +5,8 @@ target_sources(kmailconfirmbeforedeleting PRIVATE
     confirmbeforedeletingwidget.cpp
     confirmbeforedeletingmanager.cpp
     confirmbeforedeletingrule.cpp
+    confirmbeforedeletingcreateruledialog.cpp
+    confirmbeforedeletingcreateruledialog.h
     )
 ecm_qt_declare_logging_category(kmailconfirmbeforedeleting HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin
     DESCRIPTION "kdepim-addons (Confirm Before Deleting email)"
