@@ -7,14 +7,16 @@
 #pragma once
 
 #include "confirmbeforedeleting_private_export.h"
+#include "confirmbeforedeletingcreaterulewidget.h"
 #include <QDialog>
-class ConfirmBeforeDeletingCreateRuleWidget;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleDialog() override;
+
+    Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 
 private:
     ConfirmBeforeDeletingCreateRuleWidget *const mConfirmBeforeDeletingCreateRuleWidget;

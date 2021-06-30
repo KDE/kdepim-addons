@@ -14,6 +14,10 @@ class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleWid
 {
     Q_OBJECT
 public:
+    struct ConfirmBeforeDeletingInfo {
+        QString pattern;
+    };
     explicit ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleWidget() override;
+    Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 };

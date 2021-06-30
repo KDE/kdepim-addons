@@ -5,7 +5,6 @@
 */
 
 #include "confirmbeforedeletingcreateruledialog.h"
-#include "confirmbeforedeletingcreaterulewidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -30,4 +29,9 @@ ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWi
 
 ConfirmBeforeDeletingCreateRuleDialog::~ConfirmBeforeDeletingCreateRuleDialog()
 {
+}
+
+ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDeletingCreateRuleDialog::info() const
+{
+    return mConfirmBeforeDeletingCreateRuleWidget->info();
 }
