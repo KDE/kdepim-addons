@@ -6,7 +6,7 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "confirmbeforedeletingplugin_debug.h"
-
+#include <KMime/Message>
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule()
 {
 }
@@ -37,20 +37,51 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
 
 bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item) const
 {
-    switch (mRuleType) {
-    case Body:
-        break;
-    case Subject:
-        break;
-    case To:
-        break;
-    case Cc:
-        break;
-    case Unknown:
-        qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << "Invalid rules!";
-        break;
+    bool needToConfirm = false;
+    if (item.hasPayload<KMime::Message::Ptr>()) {
+        auto msg = item.payload<KMime::Message::Ptr>();
+        switch (mRuleType) {
+        case Body: {
+            const auto ba = msg->body();
+            if (QString::fromUtf8(ba).contains(pattern())) {
+                needToConfirm = true;
+            }
+            break;
+        }
+        case Subject: {
+            if (auto subject = msg->subject(false)) {
+                const QString subjectStr = subject->asUnicodeString();
+                if (subjectStr.contains(pattern())) {
+                    needToConfirm = true;
+                }
+            }
+            break;
+        }
+        case To: {
+            if (auto to = msg->to(false)) {
+                const QString toStr = to->asUnicodeString();
+                if (toStr.contains(pattern())) {
+                    needToConfirm = true;
+                }
+            }
+            break;
+        }
+        case Cc: {
+            if (auto cc = msg->cc(false)) {
+                const QString ccStr = cc->asUnicodeString();
+                if (ccStr.contains(pattern())) {
+                    needToConfirm = true;
+                }
+            }
+            break;
+        }
+        case Unknown:
+            qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << "Invalid rules!";
+            break;
+        }
     }
-    return false;
+
+    return needToConfirm;
 }
 
 QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)

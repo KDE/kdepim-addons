@@ -6,13 +6,23 @@
 
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <KLocalizedString>
-#include <QVBoxLayout>
+#include <QHBoxLayout>
+#include <QLabel>
+#include <QLineEdit>
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent)
     : QWidget(parent)
+    , mPatternLineEdit(new QLineEdit(this))
 {
-    auto mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
+
+    auto label = new QLabel(i18n("Pattern"), this);
+    label->setObjectName(QStringLiteral("label"));
+    mainLayout->addWidget(label);
+
+    mPatternLineEdit->setObjectName(QStringLiteral("mPatternLineEdit"));
+    mainLayout->addWidget(mPatternLineEdit);
 }
 
 ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()

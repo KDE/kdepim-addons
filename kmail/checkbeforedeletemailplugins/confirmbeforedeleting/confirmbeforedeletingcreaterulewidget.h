@@ -9,7 +9,7 @@
 #include <QWidget>
 
 #include "confirmbeforedeleting_private_export.h"
-
+class QLineEdit;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleWidget : public QWidget
 {
     Q_OBJECT
@@ -20,4 +20,7 @@ public:
     explicit ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleWidget() override;
     Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
+
+private:
+    QLineEdit *const mPatternLineEdit;
 };
