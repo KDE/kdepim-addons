@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 add_definitions( -DGRAMMALECTE_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 
 macro(add_kmail_grammalecte_unittest _source)

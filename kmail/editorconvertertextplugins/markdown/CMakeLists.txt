@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2018-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 include_directories(
     ${CMAKE_CURRENT_SOURCE_DIR}/
     ${CMAKE_CURRENT_BINARY_DIR}/

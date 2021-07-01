@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 
 kcoreaddons_add_plugin(kaddressbook_searchduplicatesplugin INSTALL_NAMESPACE kaddressbook/mainview)
 target_sources(kaddressbook_searchduplicatesplugin PRIVATE

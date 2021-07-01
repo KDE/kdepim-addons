@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2018-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 add_library(kmailmarkdown)
 
 target_sources(kmailmarkdown PRIVATE

@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 macro(add_sieveeditorplugin_unittest _source _additional)
     set( _test ${_source} ${_additional} ${sieveeditor_plugin_categories_SRCS})
     get_filename_component(_name ${_source} NAME_WE)

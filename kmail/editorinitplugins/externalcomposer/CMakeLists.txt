@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 kcoreaddons_add_plugin(kmail_externalcomposereditorplugin  INSTALL_NAMESPACE kmail/plugineditorinit)
 target_sources(kmail_externalcomposereditorplugin PRIVATE
     externalcomposerplugineditor.cpp

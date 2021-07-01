@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 # convenience macro to add qtest unit tests
 macro(add_kmail_mailmergeunittest _source )
   set(_test ${_source} ${_additionalsource})

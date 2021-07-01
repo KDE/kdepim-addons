@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 set(checkbeforesend_common_SRCS)
 ecm_qt_declare_logging_category(checkbeforesend_common_SRCS HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin)
 

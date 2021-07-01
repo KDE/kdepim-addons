@@ -1,11 +1,14 @@
-set(shorturlpluginprivate_SRCS
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
+add_library(shorturlpluginprivate)
+target_sources(shorturlpluginprivate PRIVATE
     shorturlengineplugin/shorturlengineinterface.cpp
     shorturlengineplugin/shorturlengineplugin.cpp
     shorturlengineplugin/shorturlenginepluginmanager.cpp
     )
 
 
-add_library(shorturlpluginprivate ${shorturlpluginprivate_SRCS})
 generate_export_header(shorturlpluginprivate BASE_NAME shorturl)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(shorturlpluginprivate PROPERTIES UNITY_BUILD ON)

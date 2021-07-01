@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2019-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 macro(add_kmail_grammarcommon_unittest _source)
     set( _test ${_source} ${_additional})
     get_filename_component(_name ${_source} NAME_WE)

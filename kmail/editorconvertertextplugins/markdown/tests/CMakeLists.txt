@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2018-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 set(markdown_gui_SRCS main.cpp markdowndemowidget.cpp markdown_gui.qrc)
 add_executable(markdown_gui ${markdown_gui_SRCS})
 target_link_libraries(markdown_gui

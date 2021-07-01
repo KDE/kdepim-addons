@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2018-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 
 kcoreaddons_add_plugin(kmail_markdownplugin INSTALL_NAMESPACE kmail/plugineditorconverttext)
 target_sources(kmail_markdownplugin PRIVATE

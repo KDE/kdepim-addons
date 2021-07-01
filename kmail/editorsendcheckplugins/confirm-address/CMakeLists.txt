@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
+
 kcoreaddons_add_plugin(kmail_confirmaddresseditorplugin INSTALL_NAMESPACE kmail/plugincheckbeforesend)
 target_sources(kmail_confirmaddresseditorplugin PRIVATE
     confirmaddressinterface.cpp
