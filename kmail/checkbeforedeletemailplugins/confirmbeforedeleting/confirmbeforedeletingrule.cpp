@@ -35,6 +35,19 @@ void ConfirmBeforeDeletingRule::setRuleType(RuleType newRuleType)
     mRuleType = newRuleType;
 }
 
+void ConfirmBeforeDeletingRule::load(const KConfigGroup &group)
+{
+    const QString pattern = group.readEntry(QStringLiteral("Pattern"), QString());
+    const QString checkType = group.readEntry(QStringLiteral("Type"), QString());
+    setPattern(pattern);
+    // TODO setRuleType();
+}
+
+void ConfirmBeforeDeletingRule::save() const
+{
+    // TODO
+}
+
 bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item) const
 {
     bool needToConfirm = false;

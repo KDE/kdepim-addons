@@ -9,6 +9,7 @@
 #include "confirmbeforedeletingrule.h"
 #include "kmailconfirmbeforedeleting_export.h"
 #include <AkonadiCore/Item>
+#include <KSharedConfig>
 #include <QObject>
 #include <QVector>
 
@@ -27,5 +28,7 @@ public:
     Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list) const;
 
 private:
+    Q_REQUIRED_RESULT QString defaultConfigFileName() const;
+    Q_REQUIRED_RESULT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;
     QVector<ConfirmBeforeDeletingRule> mRules;
 };

@@ -7,6 +7,7 @@
 #pragma once
 #include "kmailconfirmbeforedeleting_export.h"
 #include <AkonadiCore/Item>
+#include <KConfigGroup>
 #include <QDebug>
 #include <QString>
 class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingRule
@@ -28,14 +29,13 @@ public:
     Q_REQUIRED_RESULT const QString &pattern() const;
     void setPattern(const QString &newPattern);
 
-    void save();
-    void load();
-
-    // TODO save/Load
     Q_REQUIRED_RESULT RuleType ruleType() const;
     void setRuleType(RuleType newRuleType);
 
     Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &item) const;
+
+    void save() const;
+    void load(const KConfigGroup &group);
 
 private:
     QString mPattern;
