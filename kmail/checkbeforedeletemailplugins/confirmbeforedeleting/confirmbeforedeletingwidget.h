@@ -8,11 +8,14 @@
 
 #include "confirmbeforedeleting_private_export.h"
 #include <QWidget>
-
+class QTreeWidget;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ConfirmBeforeDeletingWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingWidget() override;
+
+private:
+    QTreeWidget *const mTreeWidget;
 };

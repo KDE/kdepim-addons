@@ -17,12 +17,14 @@ class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleWid
 public:
     struct ConfirmBeforeDeletingInfo {
         QString pattern;
+        QString ruleType;
     };
     explicit ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleWidget() override;
     Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 
 private:
+    void fillComboBox();
     QLineEdit *const mPatternLineEdit;
     QComboBox *const mRuleTypeComboBox;
 };

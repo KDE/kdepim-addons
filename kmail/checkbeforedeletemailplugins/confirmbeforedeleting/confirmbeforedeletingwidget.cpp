@@ -5,15 +5,20 @@
 */
 
 #include "confirmbeforedeletingwidget.h"
+#include "confirmbeforedeletingcreateruledialog.h"
+#include <QPointer>
+#include <QTreeWidget>
 #include <QVBoxLayout>
 
 ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     : QWidget(parent)
+    , mTreeWidget(new QTreeWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     // TODO
+    mainLayout->addWidget(mTreeWidget);
 }
 
 ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()

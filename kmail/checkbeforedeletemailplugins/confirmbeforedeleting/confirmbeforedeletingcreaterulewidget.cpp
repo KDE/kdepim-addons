@@ -28,6 +28,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
 
     mPatternLineEdit->setObjectName(QStringLiteral("mPatternLineEdit"));
     mainLayout->addWidget(mPatternLineEdit);
+    fillComboBox();
 }
 
 ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()
@@ -37,5 +38,15 @@ ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDeletingCreateRuleWidget::info() const
 {
     ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info;
+    info.pattern = mPatternLineEdit->text();
+    info.ruleType = mRuleTypeComboBox->currentData().toString();
     return info;
+}
+
+void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
+{
+    mRuleTypeComboBox->addItem(i18n("Body"), QStringLiteral("body"));
+    mRuleTypeComboBox->addItem(i18n("Subject"), QStringLiteral("subject"));
+    mRuleTypeComboBox->addItem(i18n("To"), QStringLiteral("to"));
+    mRuleTypeComboBox->addItem(i18n("Cc"), QStringLiteral("cc"));
 }
