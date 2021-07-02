@@ -48,9 +48,10 @@ bool ConfirmBeforeDeletingRule::isValid() const
     return !mPattern.isEmpty() && (mRuleType != Unknown);
 }
 
-void ConfirmBeforeDeletingRule::save() const
+void ConfirmBeforeDeletingRule::save(KConfigGroup &group) const
 {
-    // TODO
+    group.writeEntry(QStringLiteral("Pattern"), mPattern);
+    group.writeEntry(QStringLiteral("Type"), ruleTypeToString());
 }
 
 ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str) const

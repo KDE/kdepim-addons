@@ -34,7 +34,7 @@ public:
 
     Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &item) const;
 
-    void save() const;
+    void save(KConfigGroup &group) const;
     void load(const KConfigGroup &group);
 
     Q_REQUIRED_RESULT bool isValid() const;

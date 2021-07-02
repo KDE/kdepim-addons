@@ -46,9 +46,14 @@ void ConfirmBeforeDeletingManager::loadRules()
     }
 }
 
+QString defaultGroupName()
+{
+    return QStringLiteral("Confirm Deleting Rule");
+}
+
 QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &config) const
 {
-    return config->groupList().filter(QRegularExpression(QStringLiteral("Confirm Deleting Rule #\\d+")));
+    return config->groupList().filter(QRegularExpression(defaultGroupName() + QStringLiteral(" #\\d+")));
 }
 
 void ConfirmBeforeDeletingManager::saveRules()
@@ -60,10 +65,10 @@ void ConfirmBeforeDeletingManager::saveRules()
         config->deleteGroup(group);
     }
     for (int i = 0, total = mRules.count(); i < total; ++i) {
-        const QString groupName = QStringLiteral("DKIM Rule #%1").arg(i);
+        const QString groupName = defaultGroupName() + QStringLiteral(" #%1").arg(i);
         KConfigGroup group = config->group(groupName);
         const ConfirmBeforeDeletingRule &rule = mRules.at(i);
-        rule.save(); // TODO
+        rule.save(group); // TODO
     }
 }
 
