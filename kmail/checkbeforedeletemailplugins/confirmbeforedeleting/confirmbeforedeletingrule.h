@@ -1,4 +1,4 @@
-/*
+﻿/*
    SPDX-FileCopyrightText: 2021 Laurent Montel <montel@kde.org>
 
    SPDX-License-Identifier: LGPL-2.0-or-later
@@ -37,7 +37,11 @@ public:
     void save() const;
     void load(const KConfigGroup &group);
 
+    Q_REQUIRED_RESULT bool isValid() const;
+
 private:
+    Q_REQUIRED_RESULT QString ruleTypeToString() const;
+    Q_REQUIRED_RESULT ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str) const;
     QString mPattern;
     RuleType mRuleType = RuleType::Unknown;
 };

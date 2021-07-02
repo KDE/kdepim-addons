@@ -40,7 +40,9 @@ void ConfirmBeforeDeletingManager::loadRules()
         ConfirmBeforeDeletingRule r;
         KConfigGroup group = config->group(groupName);
         r.load(group);
-        mRules.append(r);
+        if (r.isValid()) {
+            mRules.append(r);
+        }
     }
 }
 
@@ -62,10 +64,6 @@ void ConfirmBeforeDeletingManager::saveRules()
         KConfigGroup group = config->group(groupName);
         const ConfirmBeforeDeletingRule &rule = mRules.at(i);
         rule.save(); // TODO
-    }
-    for (const auto &r : qAsConst(mRules)) {
-        // TODO
-        // r.save();
     }
 }
 

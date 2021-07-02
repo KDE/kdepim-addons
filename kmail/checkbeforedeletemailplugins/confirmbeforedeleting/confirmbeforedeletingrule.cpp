@@ -40,12 +40,53 @@ void ConfirmBeforeDeletingRule::load(const KConfigGroup &group)
     const QString pattern = group.readEntry(QStringLiteral("Pattern"), QString());
     const QString checkType = group.readEntry(QStringLiteral("Type"), QString());
     setPattern(pattern);
-    // TODO setRuleType();
+    setRuleType(stringToRuleType(checkType));
+}
+
+bool ConfirmBeforeDeletingRule::isValid() const
+{
+    return !mPattern.isEmpty() && (mRuleType != Unknown);
 }
 
 void ConfirmBeforeDeletingRule::save() const
 {
     // TODO
+}
+
+ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str) const
+{
+    if (str == QLatin1String("body")) {
+        return Body;
+    } else if (str == QLatin1String("subject")) {
+        return Subject;
+    } else if (str == QLatin1String("to")) {
+        return To;
+    } else if (str == QLatin1String("cc")) {
+        return Cc;
+    }
+    return Unknown;
+}
+
+QString ConfirmBeforeDeletingRule::ruleTypeToString() const
+{
+    QString tmp;
+    switch (mRuleType) {
+    case Unknown:
+        break;
+    case Body:
+        tmp = QStringLiteral("body");
+        break;
+    case Subject:
+        tmp = QStringLiteral("subject");
+        break;
+    case To:
+        tmp = QStringLiteral("to");
+        break;
+    case Cc:
+        tmp = QStringLiteral("cc");
+        break;
+    }
+    return tmp;
 }
 
 bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item) const
