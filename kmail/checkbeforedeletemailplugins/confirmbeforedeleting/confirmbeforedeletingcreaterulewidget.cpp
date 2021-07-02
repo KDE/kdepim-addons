@@ -31,5 +31,6 @@ ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDeletingCreateRuleWidget::info() const
 {
-    return {};
+    ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info;
+    return info;
 }
