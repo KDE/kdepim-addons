@@ -6,6 +6,7 @@
 
 #include "confirmbeforedeletingcreaterulewidget.h"
 #include <KLocalizedString>
+#include <QComboBox>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -13,9 +14,13 @@
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent)
     : QWidget(parent)
     , mPatternLineEdit(new QLineEdit(this))
+    , mRuleTypeComboBox(new QComboBox(this))
 {
     auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
+
+    mRuleTypeComboBox->setObjectName(QStringLiteral("mRuleTypeComboBox"));
+    mainLayout->addWidget(mRuleTypeComboBox);
 
     auto label = new QLabel(i18n("Pattern"), this);
     label->setObjectName(QStringLiteral("label"));

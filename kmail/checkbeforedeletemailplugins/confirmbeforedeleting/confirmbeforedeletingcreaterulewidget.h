@@ -10,6 +10,7 @@
 
 #include "confirmbeforedeleting_private_export.h"
 class QLineEdit;
+class QComboBox;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleWidget : public QWidget
 {
     Q_OBJECT
@@ -23,4 +24,5 @@ public:
 
 private:
     QLineEdit *const mPatternLineEdit;
+    QComboBox *const mRuleTypeComboBox;
 };
