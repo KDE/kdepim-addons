@@ -10,7 +10,6 @@
 #include <MimeTreeParser/BodyPartFormatter>
 
 class GnuPGWKSMessagePart;
-class GnuPGWKSMemento;
 
 class ApplicationGnuPGWKSFormatter : public MimeTreeParser::Interface::BodyPartFormatter, public MessageViewer::MessagePartRendererBase
 {

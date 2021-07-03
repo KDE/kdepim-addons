@@ -6,7 +6,6 @@
 
 #include "confirmbeforedeletingwidget.h"
 #include "confirmbeforedeletingcreateruledialog.h"
-#include <QPointer>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
