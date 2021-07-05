@@ -154,7 +154,7 @@ void ViewerPluginExternalConfigureWidget::fillScriptInfo(const QVector<ViewerPlu
 
 void ViewerPluginExternalConfigureWidget::save()
 {
-    for (const QString &path : qAsConst(mFilesToRemove)) {
+    for (const QString &path : std::as_const(mFilesToRemove)) {
         QFile f(path);
         if (!f.remove()) {
             qCWarning(EXTERNALSCRIPTPLUGIN_LOG) << " Impossible to delete " << path;

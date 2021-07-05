@@ -32,21 +32,21 @@ ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
 
 void ConfirmAddressConfigureTab::loadSettings(const KConfigGroup &grp)
 {
-    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
+    for (ConfirmAddressConfigureTabWidget *w : std::as_const(mListTabWidget)) {
         w->loadSettings(grp);
     }
 }
 
 void ConfirmAddressConfigureTab::saveSettings(KConfigGroup &grp)
 {
-    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
+    for (ConfirmAddressConfigureTabWidget *w : std::as_const(mListTabWidget)) {
         w->saveSettings(grp);
     }
 }
 
 void ConfirmAddressConfigureTab::resetSettings()
 {
-    for (ConfirmAddressConfigureTabWidget *w : qAsConst(mListTabWidget)) {
+    for (ConfirmAddressConfigureTabWidget *w : std::as_const(mListTabWidget)) {
         w->resetSettings();
     }
 }

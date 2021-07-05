@@ -44,7 +44,7 @@ bool SendVcardsJob::start()
         return false;
     }
 
-    for (const Akonadi::Item &item : qAsConst(mListItem)) {
+    for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const auto contact = item.payload<KContacts::Addressee>();
             QByteArray data = item.payloadData();

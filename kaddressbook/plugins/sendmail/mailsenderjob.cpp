@@ -34,7 +34,7 @@ MailSenderJob::~MailSenderJob()
 
 void MailSenderJob::start()
 {
-    for (const Akonadi::Item &item : qAsConst(mListItem)) {
+    for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const auto contact = item.payload<KContacts::Addressee>();
             const QString preferredEmail = contact.preferredEmail();

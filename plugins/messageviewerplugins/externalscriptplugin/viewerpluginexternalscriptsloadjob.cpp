@@ -25,7 +25,7 @@ void ViewerPluginExternalScriptsLoadJob::start()
     if (mDirectories.isEmpty()) {
         qCDebug(EXTERNALSCRIPTPLUGIN_LOG) << "External script directory not defined";
     } else {
-        for (const QString &directory : qAsConst(mDirectories)) {
+        for (const QString &directory : std::as_const(mDirectories)) {
             QDir dir(directory);
             if (dir.exists()) {
                 const QDir::Filters filters = QDir::Files | QDir::Hidden | QDir::NoSymLinks;

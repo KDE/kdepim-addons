@@ -44,7 +44,7 @@ void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityMana
 
 void AutomaticAddContactsConfigureTab::loadSettings()
 {
-    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
+    for (AutomaticAddContactsTabWidget *w : std::as_const(mListTabWidget)) {
         w->loadSettings();
     }
 }
@@ -57,14 +57,14 @@ void AutomaticAddContactsConfigureTab::saveSettings()
     for (const QString &group : filterGroups) {
         config->deleteGroup(group);
     }
-    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
+    for (AutomaticAddContactsTabWidget *w : std::as_const(mListTabWidget)) {
         w->saveSettings();
     }
 }
 
 void AutomaticAddContactsConfigureTab::resetSettings()
 {
-    for (AutomaticAddContactsTabWidget *w : qAsConst(mListTabWidget)) {
+    for (AutomaticAddContactsTabWidget *w : std::as_const(mListTabWidget)) {
         w->resetSettings();
     }
 }

@@ -98,7 +98,7 @@ void AdblockManager::loadSubscriptions()
     mCustomList = new AdBlockCustomList(this);
     mSubscriptions.append(mCustomList);
     // Load all subscriptions
-    for (AdBlockSubscription *subscription : qAsConst(mSubscriptions)) {
+    for (AdBlockSubscription *subscription : std::as_const(mSubscriptions)) {
         subscription->loadSubscription(mDisabledRules);
         connect(subscription, &AdBlockSubscription::subscriptionChanged, this, &AdblockManager::updateMatcher);
     }
@@ -116,7 +116,7 @@ void AdblockManager::save()
     KConfigGroup general = config.group(QStringLiteral("General"));
     general.writeEntry(QStringLiteral("disabledRules"), mDisabledRules);
 
-    for (AdBlockSubscription *subscription : qAsConst(mSubscriptions)) {
+    for (AdBlockSubscription *subscription : std::as_const(mSubscriptions)) {
         subscription->saveSubscription();
     }
 }
@@ -175,7 +175,7 @@ QList<AdBlockSubscription *> AdblockManager::subscriptions() const
 
 void AdblockManager::updateAllSubscriptions()
 {
-    for (AdBlockSubscription *subscription : qAsConst(mSubscriptions)) {
+    for (AdBlockSubscription *subscription : std::as_const(mSubscriptions)) {
         subscription->updateSubscription();
     }
 

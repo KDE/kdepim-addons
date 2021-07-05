@@ -30,7 +30,7 @@ KContacts::Addressee MergeContacts::mergedContact(bool excludeConflictPart)
         return newContact;
     }
     bool firstAddress = true;
-    for (const Akonadi::Item &item : qAsConst(mListItem)) {
+    for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             auto address = item.payload<KContacts::Addressee>();
             if (firstAddress) {
@@ -194,7 +194,7 @@ MergeContacts::ConflictInformations MergeContacts::requiresManualSelectionOfInfo
         return result;
     }
     KContacts::Addressee newContact;
-    for (const Akonadi::Item &item : qAsConst(mListItem)) {
+    for (const Akonadi::Item &item : std::as_const(mListItem)) {
         if (item.hasPayload<KContacts::Addressee>()) {
             const auto address = item.payload<KContacts::Addressee>();
             // Test Birthday

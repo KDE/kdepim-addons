@@ -151,7 +151,7 @@ void GrammalecteConfigWidget::loadSettings()
 void GrammalecteConfigWidget::saveSettings()
 {
     QStringList result;
-    for (QCheckBox *checkBox : qAsConst(mListOptions)) {
+    for (QCheckBox *checkBox : std::as_const(mListOptions)) {
         if (checkBox->isChecked()) {
             result += checkBox->property("optionname").toString();
         }

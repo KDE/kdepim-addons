@@ -19,13 +19,13 @@ void ConfirmAddressCheckJob::start()
     mValidEmails.clear();
     mInvalidEmails.clear();
     bool foundValidEmail = false;
-    for (const QString &email : qAsConst(mAddressList)) {
+    for (const QString &email : std::as_const(mAddressList)) {
         if (email.isEmpty()) {
             continue;
         }
         foundValidEmail = false;
         if (mRejectedDomain) {
-            for (const QString &whiteEmail : qAsConst(mWhiteEmails)) {
+            for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
                 if (email.contains(whiteEmail)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
@@ -36,7 +36,7 @@ void ConfirmAddressCheckJob::start()
             }
             if (!foundValidEmail) {
                 bool foundRejectedDomain = false;
-                for (const QString &domain : qAsConst(mDomains)) {
+                for (const QString &domain : std::as_const(mDomains)) {
                     if (email.contains(domain)) {
                         if (!mInvalidEmails.contains(email)) {
                             mInvalidEmails.append(email);
@@ -52,7 +52,7 @@ void ConfirmAddressCheckJob::start()
                 }
             }
         } else {
-            for (const QString &domain : qAsConst(mDomains)) {
+            for (const QString &domain : std::as_const(mDomains)) {
                 if (email.contains(domain)) {
                     if (!mValidEmails.contains(email)) {
                         mValidEmails.append(email);
@@ -62,7 +62,7 @@ void ConfirmAddressCheckJob::start()
                 }
             }
             if (!foundValidEmail) {
-                for (const QString &whiteEmail : qAsConst(mWhiteEmails)) {
+                for (const QString &whiteEmail : std::as_const(mWhiteEmails)) {
                     if (email.contains(whiteEmail)) {
                         if (!mValidEmails.contains(email)) {
                             mValidEmails.append(email);

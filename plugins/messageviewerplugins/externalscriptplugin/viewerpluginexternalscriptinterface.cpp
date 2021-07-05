@@ -38,7 +38,7 @@ void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *a
 {
     ViewerPluginExternalScriptManager::self()->readExternalScriptInfo();
     delete mActionGroup;
-    for (QAction *act : qAsConst(mAction)) {
+    for (QAction *act : std::as_const(mAction)) {
         ac->removeAction(act);
     }
     mAction.clear();

@@ -92,7 +92,7 @@ void SearchDuplicateResultWidget::slotMergeContact()
         KABMergeContacts::MergeContacts mergeContacts;
         bool conflictFound = false;
         mResultConflictList.clear();
-        for (const Akonadi::Item::List &lst : qAsConst(mListContactToMerge)) {
+        for (const Akonadi::Item::List &lst : std::as_const(mListContactToMerge)) {
             mergeContacts.setItems(lst);
             const MergeContacts::ConflictInformations conflicts = mergeContacts.requiresManualSelectionOfInformation();
             if (conflicts != MergeContacts::None) {

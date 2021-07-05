@@ -102,7 +102,7 @@ void MergeContactSelectInformationWidget::addInformationWidget(MergeContacts::Co
 bool MergeContactSelectInformationWidget::verifySelectedInfo() const
 {
     bool result = true;
-    for (MergeContactSelectListWidget *listWidget : qAsConst(mListMergeSelectInformation)) {
+    for (MergeContactSelectListWidget *listWidget : std::as_const(mListMergeSelectInformation)) {
         result = listWidget->verifySelectedInfo();
         if (!result) {
             break;
@@ -113,7 +113,7 @@ bool MergeContactSelectInformationWidget::verifySelectedInfo() const
 
 void MergeContactSelectInformationWidget::createContact(KContacts::Addressee &addr)
 {
-    for (MergeContactSelectListWidget *listWidget : qAsConst(mListMergeSelectInformation)) {
+    for (MergeContactSelectListWidget *listWidget : std::as_const(mListMergeSelectInformation)) {
         const int selectedContactIndex = listWidget->selectedContact();
         const MergeContacts::ConflictInformation conflictType = listWidget->conflictType();
         if (selectedContactIndex != -1) {

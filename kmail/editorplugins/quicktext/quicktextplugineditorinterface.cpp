@@ -78,7 +78,7 @@ bool QuickTextPluginEditorInterface::processProcessKeyEvent(QKeyEvent *e)
                 return false;
             }
             // qDebug() << "selected " << selectedWord;
-            for (const MailCommon::SnippetsInfo &info : qAsConst(mSnippetsInfo)) {
+            for (const MailCommon::SnippetsInfo &info : std::as_const(mSnippetsInfo)) {
                 // qDebug() << " info.keyword" << info.keyword;
                 QString infoKeyword = info.keyword;
                 if (!infoKeyword.startsWith(QLatin1Char('\\'))) {

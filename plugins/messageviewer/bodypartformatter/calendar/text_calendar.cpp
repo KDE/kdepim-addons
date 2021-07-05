@@ -430,10 +430,10 @@ public:
                     "<qt>Several of your identities match the receiver of this message,<br/>"
                     "please choose which of the following addresses is yours:</qt>");
                 possibleAddrs.reserve(addrs.count() + ccaddrs.count());
-                for (const KMime::Types::Mailbox &mbx : qAsConst(addrs)) {
+                for (const KMime::Types::Mailbox &mbx : std::as_const(addrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }
-                for (const KMime::Types::Mailbox &mbx : qAsConst(ccaddrs)) {
+                for (const KMime::Types::Mailbox &mbx : std::as_const(ccaddrs)) {
                     possibleAddrs.append(QLatin1String(mbx.address()));
                 }
             }
