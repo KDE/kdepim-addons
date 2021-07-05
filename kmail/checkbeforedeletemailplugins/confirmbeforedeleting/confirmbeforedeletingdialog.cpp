@@ -30,7 +30,7 @@ ConfirmBeforeDeletingDialog::ConfirmBeforeDeletingDialog(QWidget *parent)
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingDialog::accept);
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingDialog::slotSave);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingDialog::reject);
     readConfig();
 }
@@ -38,6 +38,12 @@ ConfirmBeforeDeletingDialog::ConfirmBeforeDeletingDialog(QWidget *parent)
 ConfirmBeforeDeletingDialog::~ConfirmBeforeDeletingDialog()
 {
     writeConfig();
+}
+
+void ConfirmBeforeDeletingDialog::slotSave()
+{
+    // TODO
+    accept();
 }
 
 void ConfirmBeforeDeletingDialog::writeConfig()

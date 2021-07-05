@@ -16,6 +16,7 @@ public:
     ~ConfirmBeforeDeletingDialog() override;
 
 private:
+    void slotSave();
     void writeConfig();
     void readConfig();
     ConfirmBeforeDeletingWidget *const mConfirmBeforeDeletingWidget;

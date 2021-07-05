@@ -68,7 +68,7 @@ void ConfirmBeforeDeletingManager::saveRules()
         const QString groupName = defaultGroupName() + QStringLiteral(" #%1").arg(i);
         KConfigGroup group = config->group(groupName);
         const ConfirmBeforeDeletingRule &rule = mRules.at(i);
-        rule.save(group); // TODO
+        rule.save(group);
     }
 }
 
