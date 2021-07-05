@@ -17,5 +17,6 @@ public:
     ~ConfirmBeforeDeletingWidget() override;
 
 private:
+    void slotCustomContextMenuRequested(const QPoint &p);
     QTreeWidget *const mTreeWidget;
 };

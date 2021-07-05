@@ -6,6 +6,7 @@
 
 #include "confirmbeforedeletingwidget.h"
 #include "confirmbeforedeletingcreateruledialog.h"
+#include <KLocalizedString>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -18,8 +19,18 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     // TODO
     mainLayout->addWidget(mTreeWidget);
+    mTreeWidget->setAlternatingRowColors(true);
+    mTreeWidget->setRootIsDecorated(false);
+    mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    const QStringList lst = {i18n("Name"), i18n("Type")};
+    mTreeWidget->setHeaderLabels(lst);
+    connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
 }
 
 ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()
+{
+}
+
+void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
 }
