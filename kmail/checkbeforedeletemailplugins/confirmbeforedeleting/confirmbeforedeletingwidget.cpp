@@ -7,6 +7,7 @@
 #include "confirmbeforedeletingwidget.h"
 #include "confirmbeforedeletingcreateruledialog.h"
 #include <KLocalizedString>
+#include <QMenu>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -33,4 +34,23 @@ ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()
 
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
+    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    if (!item) {
+        return;
+    }
+
+    QMenu menu(this);
+#if 0
+    menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, &ConfirmBeforeDeletingWidget::slotOpenItem);
+    if (filterValueIsNotEmpty) {
+        menu.addSeparator();
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove filter"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
+    }
+#endif
+    menu.exec(QCursor::pos());
+}
+
+void ConfirmBeforeDeletingWidget::slotRemoveRule()
+{
+    // TODO
 }

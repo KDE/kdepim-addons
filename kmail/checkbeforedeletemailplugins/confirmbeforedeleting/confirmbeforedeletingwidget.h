@@ -18,5 +18,6 @@ public:
 
 private:
     void slotCustomContextMenuRequested(const QPoint &p);
+    void slotRemoveRule();
     QTreeWidget *const mTreeWidget;
 };
