@@ -61,6 +61,6 @@ private:
 
     void writeConfig();
     void readConfig();
-    PimCommon::CustomTreeView *mListItems = nullptr;
+    PimCommon::CustomTreeView *mCustomTreeView = nullptr;
 };
 }

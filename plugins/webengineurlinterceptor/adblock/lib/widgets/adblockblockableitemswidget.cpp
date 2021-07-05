@@ -31,22 +31,22 @@ AdBlockBlockableItemsWidget::AdBlockBlockableItemsWidget(QWidget *parent)
 {
     auto lay = new QVBoxLayout(this);
     lay->setContentsMargins({});
-    mListItems = new PimCommon::CustomTreeView(this);
-    mListItems->setDefaultText(i18n("No blockable element found."));
+    mCustomTreeView = new PimCommon::CustomTreeView(this);
+    mCustomTreeView->setDefaultText(i18n("No blockable element found."));
 
-    mListItems->setContextMenuPolicy(Qt::CustomContextMenu);
-    mListItems->setAlternatingRowColors(true);
-    mListItems->setRootIsDecorated(false);
-    connect(mListItems, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::slotCustomContextMenuRequested);
+    mCustomTreeView->setContextMenuPolicy(Qt::CustomContextMenu);
+    mCustomTreeView->setAlternatingRowColors(true);
+    mCustomTreeView->setRootIsDecorated(false);
+    connect(mCustomTreeView, &PimCommon::CustomTreeView::customContextMenuRequested, this, &AdBlockBlockableItemsWidget::slotCustomContextMenuRequested);
 
     const QStringList lst = {i18n("Filter"), i18n("Address"), i18n("Type")};
-    mListItems->setHeaderLabels(lst);
+    mCustomTreeView->setHeaderLabels(lst);
 
-    auto searchLine = new KTreeWidgetSearchLine(this, mListItems);
+    auto searchLine = new KTreeWidgetSearchLine(this, mCustomTreeView);
     searchLine->setPlaceholderText(i18n("Search..."));
 
     lay->addWidget(searchLine);
-    lay->addWidget(mListItems);
+    lay->addWidget(mCustomTreeView);
 
     readConfig();
 }
@@ -59,7 +59,7 @@ AdBlockBlockableItemsWidget::~AdBlockBlockableItemsWidget()
 void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> &result)
 {
     for (const AdBlockResult &res : result) {
-        auto item = new QTreeWidgetItem(mListItems);
+        auto item = new QTreeWidgetItem(mCustomTreeView);
         item->setText(Url, res.src);
         switch (res.type) {
         case AdBlock::AdBlockBlockableItemsJob::UnKnown:
@@ -77,14 +77,14 @@ void AdBlockBlockableItemsWidget::setAdblockResult(const QVector<AdBlockResult> 
         }
         item->setForeground(FilterValue, Qt::red);
     }
-    mListItems->setShowDefaultText(mListItems->model()->rowCount() == 0);
+    mCustomTreeView->setShowDefaultText(mCustomTreeView->model()->rowCount() == 0);
     // TODO read existing list for enable/disable it.
 }
 
 void AdBlockBlockableItemsWidget::saveFilters()
 {
-    for (int i = 0; i < mListItems->topLevelItemCount(); ++i) {
-        QTreeWidgetItem *item = mListItems->topLevelItem(i);
+    for (int i = 0; i < mCustomTreeView->topLevelItemCount(); ++i) {
+        QTreeWidgetItem *item = mCustomTreeView->topLevelItem(i);
         const QString itemStr = item->text(FilterValue);
         if (!itemStr.isEmpty()) {
             AdblockManager::self()->addCustomRule(itemStr);
@@ -94,7 +94,7 @@ void AdBlockBlockableItemsWidget::saveFilters()
 
 void AdBlockBlockableItemsWidget::slotCustomContextMenuRequested(const QPoint &)
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
@@ -118,19 +118,19 @@ void AdBlockBlockableItemsWidget::slotCustomContextMenuRequested(const QPoint &)
 void AdBlockBlockableItemsWidget::writeConfig()
 {
     KConfigGroup groupHeader(KSharedConfig::openStateConfig(), "AdBlockHeaders");
-    groupHeader.writeEntry("HeaderState", mListItems->header()->saveState());
+    groupHeader.writeEntry("HeaderState", mCustomTreeView->header()->saveState());
     groupHeader.sync();
 }
 
 void AdBlockBlockableItemsWidget::readConfig()
 {
     KConfigGroup config(KSharedConfig::openStateConfig(), "AdBlockHeaders");
-    mListItems->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
+    mCustomTreeView->header()->restoreState(config.readEntry("HeaderState", QByteArray()));
 }
 
 void AdBlockBlockableItemsWidget::slotCopyFilterItem()
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
@@ -140,7 +140,7 @@ void AdBlockBlockableItemsWidget::slotCopyFilterItem()
 
 void AdBlockBlockableItemsWidget::slotOpenItem()
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
@@ -153,7 +153,7 @@ void AdBlockBlockableItemsWidget::slotOpenItem()
 
 void AdBlockBlockableItemsWidget::slotBlockItem()
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
@@ -169,7 +169,7 @@ void AdBlockBlockableItemsWidget::slotBlockItem()
 
 void AdBlockBlockableItemsWidget::slotCopyItem()
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
@@ -255,7 +255,7 @@ QString AdBlockBlockableItemsWidget::elementType(AdBlockBlockableItemsWidget::Ty
 
 void AdBlockBlockableItemsWidget::slotRemoveFilter()
 {
-    QTreeWidgetItem *item = mListItems->currentItem();
+    QTreeWidgetItem *item = mCustomTreeView->currentItem();
     if (!item) {
         return;
     }
