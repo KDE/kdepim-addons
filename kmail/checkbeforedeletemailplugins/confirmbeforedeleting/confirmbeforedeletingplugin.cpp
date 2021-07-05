@@ -21,7 +21,7 @@ void ConfirmBeforeDeletingPlugin::showConfigureDialog(QWidget *parent)
 {
     QPointer<ConfirmBeforeDeletingDialog> dlg = new ConfirmBeforeDeletingDialog(parent);
     if (dlg->exec()) {
-        // TODO
+        // TODO save element
     }
     delete dlg;
 }
