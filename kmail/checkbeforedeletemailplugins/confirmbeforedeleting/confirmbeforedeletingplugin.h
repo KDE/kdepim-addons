@@ -11,7 +11,7 @@ class ConfirmBeforeDeletingPlugin : public MessageViewer::MessageViewerCheckBefo
 {
     Q_OBJECT
 public:
-    explicit ConfirmBeforeDeletingPlugin(QObject *parent = nullptr);
+    explicit ConfirmBeforeDeletingPlugin(QObject *parent = nullptr, const QList<QVariant> & = {});
     ~ConfirmBeforeDeletingPlugin() override;
 
     void showConfigureDialog(QWidget *parent) override;

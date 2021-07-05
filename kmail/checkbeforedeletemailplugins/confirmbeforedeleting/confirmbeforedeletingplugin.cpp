@@ -6,9 +6,12 @@
 
 #include "confirmbeforedeletingplugin.h"
 #include "confirmbeforedeletingdialog.h"
+#include <KPluginFactory>
 #include <QPointer>
 
-ConfirmBeforeDeletingPlugin::ConfirmBeforeDeletingPlugin(QObject *parent)
+K_PLUGIN_CLASS_WITH_JSON(ConfirmBeforeDeletingPlugin, "kmail_confirmbeforedeletingplugin.json")
+
+ConfirmBeforeDeletingPlugin::ConfirmBeforeDeletingPlugin(QObject *parent, const QList<QVariant> &)
     : MessageViewer::MessageViewerCheckBeforeDeletingPlugin(parent)
 {
 }
@@ -25,3 +28,5 @@ void ConfirmBeforeDeletingPlugin::showConfigureDialog(QWidget *parent)
     }
     delete dlg;
 }
+
+#include "confirmbeforedeletingplugin.moc"
