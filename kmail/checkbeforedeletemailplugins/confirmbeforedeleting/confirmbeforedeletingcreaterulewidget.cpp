@@ -22,7 +22,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     mRuleTypeComboBox->setObjectName(QStringLiteral("mRuleTypeComboBox"));
     mainLayout->addWidget(mRuleTypeComboBox);
 
-    auto label = new QLabel(i18n("Pattern"), this);
+    auto label = new QLabel(i18n("Pattern:"), this);
     label->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(label);
 

@@ -7,7 +7,10 @@
 #include "confirmbeforedeletingwidget.h"
 #include "confirmbeforedeletingcreateruledialog.h"
 #include <KLocalizedString>
+#include <KMessageBox>
+#include <QIcon>
 #include <QMenu>
+#include <QPointer>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -26,20 +29,26 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     const QStringList lst = {i18n("Name"), i18n("Type")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
+    fillRules();
 }
 
 ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()
 {
 }
 
+void ConfirmBeforeDeletingWidget::fillRules()
+{
+    // TODO
+}
+
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
+    QMenu menu(this);
+    menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     if (!item) {
-        return;
+        // TODO
     }
-
-    QMenu menu(this);
 #if 0
     menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, &ConfirmBeforeDeletingWidget::slotOpenItem);
     if (filterValueIsNotEmpty) {
@@ -52,5 +61,19 @@ void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p
 
 void ConfirmBeforeDeletingWidget::slotRemoveRule()
 {
-    // TODO
+    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    if (item) {
+        if (KMessageBox::questionYesNo(this, i18n("Do you want to remove this rule?"), i18n("Remove Rule")) == KMessageBox::Yes) {
+            delete item;
+        }
+    }
+}
+
+void ConfirmBeforeDeletingWidget::slotAddRule()
+{
+    QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
+    if (dlg->exec()) {
+        // TODO
+    }
+    delete dlg;
 }
