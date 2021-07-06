@@ -15,4 +15,5 @@ public:
     ~ConfirmBeforeDeletingPlugin() override;
 
     void showConfigureDialog(QWidget *parent) override;
+    Q_REQUIRED_RESULT MessageViewer::MessageViewerCheckBeforeDeletingInterface *createInterface(QObject *parent) override;
 };

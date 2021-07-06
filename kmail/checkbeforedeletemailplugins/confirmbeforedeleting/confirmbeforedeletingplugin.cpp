@@ -6,6 +6,7 @@
 
 #include "confirmbeforedeletingplugin.h"
 #include "confirmbeforedeletingdialog.h"
+#include "confirmbeforedeletinginterface.h"
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ConfirmBeforeDeletingPlugin, "kmail_confirmbeforedeletingplugin.json")
@@ -23,6 +24,11 @@ void ConfirmBeforeDeletingPlugin::showConfigureDialog(QWidget *parent)
 {
     ConfirmBeforeDeletingDialog dlg(parent);
     dlg.exec();
+}
+
+MessageViewer::MessageViewerCheckBeforeDeletingInterface *ConfirmBeforeDeletingPlugin::createInterface(QObject *parent)
+{
+    return new ConfirmBeforeDeletingInterface(parent);
 }
 
 #include "confirmbeforedeletingplugin.moc"
