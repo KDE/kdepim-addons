@@ -29,6 +29,8 @@ public:
 
     Q_REQUIRED_RESULT const QVector<ConfirmBeforeDeletingRule> &rules() const;
 
+    void setRules(const QVector<ConfirmBeforeDeletingRule> &newRules);
+
 private:
     Q_REQUIRED_RESULT QString defaultConfigFileName() const;
     Q_REQUIRED_RESULT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;

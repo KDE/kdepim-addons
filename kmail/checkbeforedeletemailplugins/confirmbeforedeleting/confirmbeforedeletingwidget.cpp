@@ -50,7 +50,10 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
 {
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
-    // TODO dlg->setInfo();
+    ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo currentInfo;
+    currentInfo.pattern = item->text(0);
+    currentInfo.ruleType = item->text(1);
+    dlg->setInfo(currentInfo);
     if (dlg->exec()) {
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
         item->setText(0, info.pattern);
@@ -96,4 +99,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
 
 void ConfirmBeforeDeletingWidget::save()
 {
+    QVector<ConfirmBeforeDeletingRule> rules;
+    // TODO
+    ConfirmBeforeDeletingManager::self()->saveRules();
 }

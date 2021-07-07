@@ -56,6 +56,11 @@ QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &c
     return config->groupList().filter(QRegularExpression(defaultGroupName() + QStringLiteral(" #\\d+")));
 }
 
+void ConfirmBeforeDeletingManager::setRules(const QVector<ConfirmBeforeDeletingRule> &newRules)
+{
+    mRules = newRules;
+}
+
 const QVector<ConfirmBeforeDeletingRule> &ConfirmBeforeDeletingManager::rules() const
 {
     return mRules;
