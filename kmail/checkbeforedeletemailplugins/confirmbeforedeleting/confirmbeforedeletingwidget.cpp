@@ -26,7 +26,7 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    const QStringList lst = {i18n("Name"), i18n("Type")};
+    const QStringList lst = {i18n("Pattern"), i18n("Type")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
     fillRules();
@@ -40,7 +40,9 @@ void ConfirmBeforeDeletingWidget::fillRules()
 {
     const QVector<ConfirmBeforeDeletingRule> rules = ConfirmBeforeDeletingManager::self()->rules();
     for (const ConfirmBeforeDeletingRule &r : rules) {
-        new QTreeWidgetItem({ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()), r.pattern()});
+        auto item = new QTreeWidgetItem(mTreeWidget, {ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()), r.pattern()});
+        item->setText(0, r.pattern());
+        item->setText(1, ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()));
     }
 }
 
@@ -51,8 +53,8 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
     // TODO dlg->setInfo();
     if (dlg->exec()) {
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
-        item->setText(0, info.ruleType);
-        item->setText(1, info.pattern);
+        item->setText(0, info.pattern);
+        item->setText(1, info.ruleType);
     }
     delete dlg;
 }
@@ -85,7 +87,9 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
     QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
     if (dlg->exec()) {
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
-        new QTreeWidgetItem({info.ruleType, info.pattern});
+        auto item = new QTreeWidgetItem(mTreeWidget);
+        item->setText(0, info.pattern);
+        item->setText(1, info.ruleType);
     }
     delete dlg;
 }
