@@ -16,6 +16,8 @@ public:
     explicit ConfirmBeforeDeletingWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingWidget() override;
 
+    void save();
+
 private:
     void slotCustomContextMenuRequested(const QPoint &p);
     void slotRemoveRule();

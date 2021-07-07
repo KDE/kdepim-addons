@@ -79,3 +79,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
     }
     delete dlg;
 }
+
+void ConfirmBeforeDeletingWidget::save()
+{
+}

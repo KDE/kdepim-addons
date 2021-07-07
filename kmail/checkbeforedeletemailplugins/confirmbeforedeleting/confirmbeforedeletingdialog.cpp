@@ -42,7 +42,7 @@ ConfirmBeforeDeletingDialog::~ConfirmBeforeDeletingDialog()
 
 void ConfirmBeforeDeletingDialog::slotSave()
 {
-    // TODO
+    mConfirmBeforeDeletingWidget->save();
     accept();
 }
 
