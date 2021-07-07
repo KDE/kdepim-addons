@@ -68,9 +68,9 @@ void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p
     menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     if (item) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, &ConfirmBeforeDeletingWidget::slotEditRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove filter"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
     }
     menu.exec(QCursor::pos());
 }
@@ -100,6 +100,13 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
 void ConfirmBeforeDeletingWidget::save()
 {
     QVector<ConfirmBeforeDeletingRule> rules;
-    // TODO
+    for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
+        QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
+        ConfirmBeforeDeletingRule r;
+        r.setPattern(item->text(0));
+        r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(1)));
+        rules.append(r);
+    }
+    ConfirmBeforeDeletingManager::self()->setRules(rules);
     ConfirmBeforeDeletingManager::self()->saveRules();
 }
