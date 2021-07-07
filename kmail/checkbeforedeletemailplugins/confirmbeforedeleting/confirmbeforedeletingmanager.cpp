@@ -13,6 +13,7 @@
 ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
     : QObject(parent)
 {
+    loadRules();
 }
 
 ConfirmBeforeDeletingManager::~ConfirmBeforeDeletingManager()
