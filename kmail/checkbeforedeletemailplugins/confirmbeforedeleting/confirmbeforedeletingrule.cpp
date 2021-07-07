@@ -51,10 +51,10 @@ bool ConfirmBeforeDeletingRule::isValid() const
 void ConfirmBeforeDeletingRule::save(KConfigGroup &group) const
 {
     group.writeEntry(QStringLiteral("Pattern"), mPattern);
-    group.writeEntry(QStringLiteral("Type"), ruleTypeToString());
+    group.writeEntry(QStringLiteral("Type"), ruleTypeToString(mRuleType));
 }
 
-ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str) const
+ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(const QString &str)
 {
     if (str == QLatin1String("body")) {
         return Body;
@@ -68,10 +68,10 @@ ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(
     return Unknown;
 }
 
-QString ConfirmBeforeDeletingRule::ruleTypeToString() const
+QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r)
 {
     QString tmp;
-    switch (mRuleType) {
+    switch (r) {
     case Unknown:
         break;
     case Body:

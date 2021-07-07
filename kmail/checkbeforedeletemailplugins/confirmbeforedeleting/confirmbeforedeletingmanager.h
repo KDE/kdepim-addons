@@ -27,6 +27,8 @@ public:
 
     Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list) const;
 
+    Q_REQUIRED_RESULT const QVector<ConfirmBeforeDeletingRule> &rules() const;
+
 private:
     Q_REQUIRED_RESULT QString defaultConfigFileName() const;
     Q_REQUIRED_RESULT QStringList ruleGroups(const KSharedConfig::Ptr &config) const;

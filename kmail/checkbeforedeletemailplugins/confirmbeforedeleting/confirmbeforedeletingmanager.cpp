@@ -1,7 +1,7 @@
 /*
-   SPDX-FileCopyrightText: 2021 Laurent Montel <montel@kde.org>
+  SPDX-FileCopyrightText: 2021 Laurent Montel <montel@kde.org>
 
-   SPDX-License-Identifier: LGPL-2.0-or-later
+  SPDX-License-Identifier: LGPL-2.0-or-later
 */
 
 #include "confirmbeforedeletingmanager.h"
@@ -54,6 +54,11 @@ QString defaultGroupName()
 QStringList ConfirmBeforeDeletingManager::ruleGroups(const KSharedConfig::Ptr &config) const
 {
     return config->groupList().filter(QRegularExpression(defaultGroupName() + QStringLiteral(" #\\d+")));
+}
+
+const QVector<ConfirmBeforeDeletingRule> &ConfirmBeforeDeletingManager::rules() const
+{
+    return mRules;
 }
 
 void ConfirmBeforeDeletingManager::saveRules()

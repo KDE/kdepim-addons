@@ -38,10 +38,10 @@ public:
     void load(const KConfigGroup &group);
 
     Q_REQUIRED_RESULT bool isValid() const;
+    static Q_REQUIRED_RESULT QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
+    static Q_REQUIRED_RESULT ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
 
 private:
-    Q_REQUIRED_RESULT QString ruleTypeToString() const;
-    Q_REQUIRED_RESULT ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str) const;
     QString mPattern;
     RuleType mRuleType = RuleType::Unknown;
 };

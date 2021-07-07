@@ -6,6 +6,7 @@
 
 #include "confirmbeforedeletingwidget.h"
 #include "confirmbeforedeletingcreateruledialog.h"
+#include "confirmbeforedeletingmanager.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QIcon>
@@ -21,7 +22,6 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
-    // TODO
     mainLayout->addWidget(mTreeWidget);
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
@@ -38,7 +38,10 @@ ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()
 
 void ConfirmBeforeDeletingWidget::fillRules()
 {
-    // TODO
+    const QVector<ConfirmBeforeDeletingRule> rules = ConfirmBeforeDeletingManager::self()->rules();
+    for (const ConfirmBeforeDeletingRule &r : rules) {
+        new QTreeWidgetItem({ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()), r.pattern()});
+    }
 }
 
 void ConfirmBeforeDeletingWidget::slotEditRule()
