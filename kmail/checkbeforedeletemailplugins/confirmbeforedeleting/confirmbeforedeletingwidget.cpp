@@ -41,21 +41,21 @@ void ConfirmBeforeDeletingWidget::fillRules()
     // TODO
 }
 
+void ConfirmBeforeDeletingWidget::slotEditRule()
+{
+    // TODO
+}
+
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
     QMenu menu(this);
     menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     QTreeWidgetItem *item = mTreeWidget->currentItem();
-    if (!item) {
-        // TODO
-    }
-#if 0
-    menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, &ConfirmBeforeDeletingWidget::slotOpenItem);
-    if (filterValueIsNotEmpty) {
+    if (item) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Open"), this, &ConfirmBeforeDeletingWidget::slotEditRule);
         menu.addSeparator();
         menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove filter"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
     }
-#endif
     menu.exec(QCursor::pos());
 }
 

@@ -21,5 +21,6 @@ private:
     void slotRemoveRule();
     void slotAddRule();
     void fillRules();
+    void slotEditRule();
     QTreeWidget *const mTreeWidget;
 };
