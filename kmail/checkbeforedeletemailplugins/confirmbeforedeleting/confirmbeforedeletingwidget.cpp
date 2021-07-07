@@ -43,7 +43,14 @@ void ConfirmBeforeDeletingWidget::fillRules()
 
 void ConfirmBeforeDeletingWidget::slotEditRule()
 {
-    // TODO
+    QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
+    // TODO dlg->setInfo();
+    if (dlg->exec()) {
+        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
+
+        // TODO save it.
+    }
+    delete dlg;
 }
 
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
