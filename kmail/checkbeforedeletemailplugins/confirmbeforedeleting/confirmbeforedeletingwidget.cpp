@@ -73,7 +73,9 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
 {
     QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
     if (dlg->exec()) {
-        // TODO
+        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
+
+        // TODO save it.
     }
     delete dlg;
 }

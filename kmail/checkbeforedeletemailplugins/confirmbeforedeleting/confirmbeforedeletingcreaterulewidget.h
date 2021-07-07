@@ -23,6 +23,8 @@ public:
     ~ConfirmBeforeDeletingCreateRuleWidget() override;
     Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 
+    void setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
+
 private:
     void fillComboBox();
     QLineEdit *const mPatternLineEdit;

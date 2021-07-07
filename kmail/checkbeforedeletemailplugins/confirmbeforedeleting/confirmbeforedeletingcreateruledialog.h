@@ -18,6 +18,8 @@ public:
 
     Q_REQUIRED_RESULT ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info() const;
 
+    void setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
+
 private:
     ConfirmBeforeDeletingCreateRuleWidget *const mConfirmBeforeDeletingCreateRuleWidget;
 };

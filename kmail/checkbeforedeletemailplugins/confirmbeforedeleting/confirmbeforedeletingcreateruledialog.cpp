@@ -35,3 +35,8 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDe
 {
     return mConfirmBeforeDeletingCreateRuleWidget->info();
 }
+
+void ConfirmBeforeDeletingCreateRuleDialog::setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)
+{
+    mConfirmBeforeDeletingCreateRuleWidget->setInfo(info);
+}

@@ -43,6 +43,12 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDe
     return info;
 }
 
+void ConfirmBeforeDeletingCreateRuleWidget::setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)
+{
+    mPatternLineEdit->setText(info.pattern);
+    mRuleTypeComboBox->setCurrentIndex(mRuleTypeComboBox->findData(info.ruleType));
+}
+
 void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
 {
     mRuleTypeComboBox->addItem(i18n("Body"), QStringLiteral("body"));
