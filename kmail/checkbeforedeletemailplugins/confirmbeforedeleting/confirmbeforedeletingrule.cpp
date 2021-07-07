@@ -90,7 +90,7 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
     return tmp;
 }
 
-bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item) const
+bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound) const
 {
     bool needToConfirm = false;
     if (item.hasPayload<KMime::Message::Ptr>()) {

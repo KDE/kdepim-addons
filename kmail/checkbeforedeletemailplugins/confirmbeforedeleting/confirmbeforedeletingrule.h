@@ -32,7 +32,7 @@ public:
     Q_REQUIRED_RESULT RuleType ruleType() const;
     void setRuleType(RuleType newRuleType);
 
-    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &item) const;
+    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound) const;
 
     void save(KConfigGroup &group) const;
     void load(const KConfigGroup &group);

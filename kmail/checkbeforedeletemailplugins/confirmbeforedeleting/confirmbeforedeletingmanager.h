@@ -25,7 +25,7 @@ public:
     void loadRules();
     void saveRules();
 
-    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list) const;
+    Q_REQUIRED_RESULT bool deletingNeedToConfirm(const Akonadi::Item &list, QString &checkFound) const;
 
     Q_REQUIRED_RESULT const QVector<ConfirmBeforeDeletingRule> &rules() const;
 
