@@ -17,6 +17,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     , mRuleTypeComboBox(new QComboBox(this))
 {
     auto mainLayout = new QHBoxLayout(this);
+    mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
     mRuleTypeComboBox->setObjectName(QStringLiteral("mRuleTypeComboBox"));
