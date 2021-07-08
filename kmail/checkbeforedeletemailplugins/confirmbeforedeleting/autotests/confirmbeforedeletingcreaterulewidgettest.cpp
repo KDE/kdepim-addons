@@ -22,6 +22,7 @@ void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()
     ConfirmBeforeDeletingCreateRuleWidget w;
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), {});
 
     auto mPatternLineEdit = w.findChild<QLineEdit *>(QStringLiteral("mPatternLineEdit"));
     QVERIFY(mPatternLineEdit);
