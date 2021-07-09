@@ -6,7 +6,9 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "confirmbeforedeletingplugin_debug.h"
-#include <KMime/Message>
+
+#include <KLocalizedString>
+
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule()
 {
 }
@@ -90,7 +92,7 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
     return tmp;
 }
 
-bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound) const
+bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFoundInfo) const
 {
     bool needToConfirm = false;
     if (item.hasPayload<KMime::Message::Ptr>()) {
@@ -100,6 +102,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             const auto ba = msg->body();
             if (QString::fromUtf8(ba).contains(pattern())) {
                 needToConfirm = true;
+                generateConfirmMessageInfo(msg, checkFoundInfo);
             }
             break;
         }
@@ -108,6 +111,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
                 const QString subjectStr = subject->asUnicodeString();
                 if (subjectStr.contains(pattern())) {
                     needToConfirm = true;
+                    generateConfirmMessageInfo(msg, checkFoundInfo);
                 }
             }
             break;
@@ -117,6 +121,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
                 const QString toStr = to->asUnicodeString();
                 if (toStr.contains(pattern())) {
                     needToConfirm = true;
+                    generateConfirmMessageInfo(msg, checkFoundInfo);
                 }
             }
             break;
@@ -126,6 +131,7 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
                 const QString ccStr = cc->asUnicodeString();
                 if (ccStr.contains(pattern())) {
                     needToConfirm = true;
+                    generateConfirmMessageInfo(msg, checkFoundInfo);
                 }
             }
             break;
@@ -137,6 +143,15 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
     }
 
     return needToConfirm;
+}
+
+void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const KMime::Message::Ptr &msg, QString &checkFoundInfo) const
+{
+    QString subjectStr;
+    if (auto subject = msg->subject(false)) {
+        subjectStr = subject->asUnicodeString();
+    }
+    checkFoundInfo = i18n("The message with subject \'%2\' contains \'%1\'", pattern(), subjectStr);
 }
 
 QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
