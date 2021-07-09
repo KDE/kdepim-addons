@@ -20,11 +20,15 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 
+    auto label = new QLabel(i18n("Type:"), this);
+    label->setObjectName(QStringLiteral("typeLabel"));
+    mainLayout->addWidget(label);
+
     mRuleTypeComboBox->setObjectName(QStringLiteral("mRuleTypeComboBox"));
     mainLayout->addWidget(mRuleTypeComboBox);
 
-    auto label = new QLabel(i18n("Contains:"), this);
-    label->setObjectName(QStringLiteral("label"));
+    label = new QLabel(i18n("Contains:"), this);
+    label->setObjectName(QStringLiteral("containsLabel"));
     mainLayout->addWidget(label);
 
     mPatternLineEdit->setObjectName(QStringLiteral("mPatternLineEdit"));

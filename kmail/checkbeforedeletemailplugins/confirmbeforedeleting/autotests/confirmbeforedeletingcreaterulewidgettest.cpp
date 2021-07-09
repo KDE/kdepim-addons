@@ -32,6 +32,9 @@ void ConfirmBeforeDeletingCreateRuleWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mRuleTypeComboBox);
     QVERIFY(mRuleTypeComboBox->count() > 0);
 
-    auto label = w.findChild<QLabel *>(QStringLiteral("label"));
+    auto label = w.findChild<QLabel *>(QStringLiteral("typeLabel"));
+    QVERIFY(!label->text().isEmpty());
+
+    label = w.findChild<QLabel *>(QStringLiteral("containsLabel"));
     QVERIFY(!label->text().isEmpty());
 }
