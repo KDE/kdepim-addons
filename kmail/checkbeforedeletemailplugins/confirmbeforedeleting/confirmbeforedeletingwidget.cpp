@@ -27,7 +27,7 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    const QStringList lst = {i18n("Pattern"), i18n("Type")};
+    const QStringList lst = {i18n("Type"), i18n("Pattern")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
     connect(mTreeWidget, &QTreeWidget::itemDoubleClicked, this, &ConfirmBeforeDeletingWidget::slotEditRule);
@@ -42,9 +42,11 @@ void ConfirmBeforeDeletingWidget::fillRules()
 {
     const QVector<ConfirmBeforeDeletingRule> rules = ConfirmBeforeDeletingManager::self()->rules();
     for (const ConfirmBeforeDeletingRule &r : rules) {
-        auto item = new QTreeWidgetItem(mTreeWidget, {ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()), r.pattern()});
-        item->setText(0, r.pattern());
-        item->setText(1, ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()));
+        auto item = new QTreeWidgetItem(mTreeWidget);
+        ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info;
+        info.pattern = r.pattern();
+        info.ruleType = ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType());
+        initializeItem(item, info);
     }
 }
 
@@ -54,16 +56,20 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
     if (item) {
         QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
         ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo currentInfo;
-        currentInfo.pattern = item->text(0);
-        currentInfo.ruleType = item->text(1);
+        currentInfo.pattern = item->text(1);
+        currentInfo.ruleType = item->text(0);
         dlg->setInfo(currentInfo);
         if (dlg->exec()) {
-            const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
-            item->setText(0, info.pattern);
-            item->setText(1, info.ruleType);
+            initializeItem(item, dlg->info());
         }
         delete dlg;
     }
+}
+
+void ConfirmBeforeDeletingWidget::initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)
+{
+    item->setText(1, info.pattern);
+    item->setText(0, info.ruleType);
 }
 
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
@@ -95,8 +101,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
     if (dlg->exec()) {
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
         auto item = new QTreeWidgetItem(mTreeWidget);
-        item->setText(0, info.pattern);
-        item->setText(1, info.ruleType);
+        initializeItem(item, dlg->info());
     }
     delete dlg;
 }
@@ -107,8 +112,8 @@ void ConfirmBeforeDeletingWidget::save()
     for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
         QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
         ConfirmBeforeDeletingRule r;
-        r.setPattern(item->text(0));
-        r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(1)));
+        r.setPattern(item->text(1));
+        r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
         rules.append(r);
     }
     ConfirmBeforeDeletingManager::self()->setRules(rules);

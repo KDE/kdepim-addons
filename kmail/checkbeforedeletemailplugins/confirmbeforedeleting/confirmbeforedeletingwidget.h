@@ -7,8 +7,10 @@
 #pragma once
 
 #include "confirmbeforedeleting_private_export.h"
+#include "confirmbeforedeletingcreaterulewidget.h"
 #include <QWidget>
 class QTreeWidget;
+class QTreeWidgetItem;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingWidget : public QWidget
 {
     Q_OBJECT
@@ -24,5 +26,6 @@ private:
     void slotAddRule();
     void fillRules();
     void slotEditRule();
+    void initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
     QTreeWidget *const mTreeWidget;
 };
