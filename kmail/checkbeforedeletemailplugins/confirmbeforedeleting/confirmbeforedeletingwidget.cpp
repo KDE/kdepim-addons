@@ -75,12 +75,12 @@ void ConfirmBeforeDeletingWidget::initializeItem(QTreeWidgetItem *item, const Co
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
     QMenu menu(this);
-    menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
-    QTreeWidgetItem *item = mTreeWidget->currentItem();
-    if (item) {
-        menu.addAction(QIcon::fromTheme(QStringLiteral("document-open")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
+    const int selectedItemCount{mTreeWidget->selectedItems().count()};
+    menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
+    if (selectedItemCount > 0) {
+        menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("edit-delete")), i18n("Remove Rule"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
     }
     menu.exec(QCursor::pos());
 }
