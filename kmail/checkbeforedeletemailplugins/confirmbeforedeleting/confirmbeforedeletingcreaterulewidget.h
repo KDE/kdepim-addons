@@ -25,6 +25,9 @@ public:
 
     void setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
 
+Q_SIGNALS:
+    void updateOkButton(bool enabled);
+
 private:
     void fillComboBox();
     QLineEdit *const mPatternLineEdit;
