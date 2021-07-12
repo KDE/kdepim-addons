@@ -7,6 +7,7 @@
 #include "confirmbeforedeletingcreateruledialog.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWidget *parent)
@@ -25,6 +26,9 @@ ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWi
     mainLayout->addWidget(buttonBox);
     connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingCreateRuleDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingCreateRuleDialog::reject);
+    auto okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setEnabled(false);
+    connect(mConfirmBeforeDeletingCreateRuleWidget, &ConfirmBeforeDeletingCreateRuleWidget::updateOkButton, okButton, &QPushButton::setEnabled);
 }
 
 ConfirmBeforeDeletingCreateRuleDialog::~ConfirmBeforeDeletingCreateRuleDialog()
