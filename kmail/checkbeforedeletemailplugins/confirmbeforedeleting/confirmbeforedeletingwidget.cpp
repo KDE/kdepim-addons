@@ -27,6 +27,7 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    mTreeWidget->setSelectionMode(QAbstractItemView::MultiSelection);
     const QStringList lst = {i18n("Type"), i18n("Pattern")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
@@ -77,20 +78,30 @@ void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p
     QMenu menu(this);
     const int selectedItemCount{mTreeWidget->selectedItems().count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
-    if (selectedItemCount > 0) {
+    if (selectedItemCount == 1) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
+    }
+    if (selectedItemCount > 0) {
         menu.addSeparator();
-        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")), i18n("Remove Rule"), this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
+        menu.addAction(QIcon::fromTheme(QStringLiteral("list-remove")),
+                       i18np("Remove Rule", "Remove Rules", selectedItemCount),
+                       this,
+                       &ConfirmBeforeDeletingWidget::slotRemoveRule);
     }
     menu.exec(QCursor::pos());
 }
 
 void ConfirmBeforeDeletingWidget::slotRemoveRule()
 {
-    QTreeWidgetItem *item = mTreeWidget->currentItem();
-    if (item) {
-        if (KMessageBox::questionYesNo(this, i18n("Do you want to remove this rule?"), i18n("Remove Rule")) == KMessageBox::Yes) {
-            delete item;
+    auto items = mTreeWidget->selectedItems();
+    if (!items.isEmpty()) {
+        if (KMessageBox::questionYesNo(this,
+                                       i18np("Do you want to remove this rule?", "Do you want to remove these rules?", items.count()),
+                                       i18n("Remove Rule"))
+            == KMessageBox::Yes) {
+            while (!items.isEmpty()) {
+                delete items.takeFirst();
+            }
         }
     }
 }
