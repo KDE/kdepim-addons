@@ -97,7 +97,7 @@ void ConfirmBeforeDeletingWidget::slotRemoveRule()
     if (!items.isEmpty()) {
         if (KMessageBox::questionYesNo(this,
                                        i18np("Do you want to remove this rule?", "Do you want to remove these rules?", items.count()),
-                                       i18n("Remove Rule"))
+                                       i18nc("@title", "Remove Rule"))
             == KMessageBox::Yes) {
             while (!items.isEmpty()) {
                 delete items.takeFirst();
