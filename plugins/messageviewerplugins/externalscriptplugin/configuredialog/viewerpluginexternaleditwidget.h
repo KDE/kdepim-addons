@@ -32,9 +32,9 @@ private:
     ViewerPluginExternalScriptInfo mScriptInfo;
     QStringList mExistingsNames;
     QString mCommandWhatsThis;
-    QLineEdit *mName = nullptr;
-    QLineEdit *mDescription = nullptr;
-    QLineEdit *mCommandLine = nullptr;
-    KUrlRequester *mExecutable = nullptr;
+    QLineEdit *const mName;
+    QLineEdit *const mDescription;
+    QLineEdit *const mCommandLine;
+    KUrlRequester *const mExecutable;
 };
 

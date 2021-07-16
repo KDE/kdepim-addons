@@ -29,7 +29,7 @@ private:
     void saveConfig();
     void slotScriptIsValid(bool valid);
     void slotAccepted();
-    ViewerPluginExternalEditWidget *mEditWidget = nullptr;
+    ViewerPluginExternalEditWidget *const mEditWidget;
     QPushButton *mOkButton = nullptr;
 };
 

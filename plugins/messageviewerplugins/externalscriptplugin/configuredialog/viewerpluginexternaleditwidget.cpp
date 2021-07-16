@@ -15,22 +15,23 @@
 
 ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     : QWidget(parent)
+    , mName(new QLineEdit(this))
+    , mDescription(new QLineEdit(this))
+    , mCommandLine(new QLineEdit(this))
+    , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mName = new QLineEdit(this);
     mName->setObjectName(QStringLiteral("name"));
     mainLayout->addRow(i18n("Name:"), mName);
     new KPIM::LineEditCatchReturnKey(mName, this);
 
-    mDescription = new QLineEdit(this);
     mDescription->setObjectName(QStringLiteral("description"));
     mainLayout->addRow(i18n("Description:"), mDescription);
     new KPIM::LineEditCatchReturnKey(mDescription, this);
 
-    mCommandLine = new QLineEdit(this);
     mCommandLine->setClearButtonEnabled(true);
     mCommandLine->setObjectName(QStringLiteral("commandline"));
     mCommandLine->setPlaceholderText(i18n("Add command arguments..."));
@@ -59,7 +60,6 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
 
     mainLayout->addWidget(formatHelp);
 
-    mExecutable = new KUrlRequester(this);
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
 
     mExecutable->setMimeTypeFilters(
