@@ -18,6 +18,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att kontrollera om vi vill ta bort specifika brev",
         "Description[uk]": "За допомогою цього додатка можна наказати програмі просити підтвердження щодо вилучення певних повідомлень",
         "Description[x-test]": "xxThis plugin allows you to check if we want to delete specific emailxx",
+        "Description[zh_CN]": "此插件能让您确认删除特定邮件。",
         "EnabledByDefault": "false",
         "Id": "kmailconfirmbeforedeleting",
         "Name": "Confirm Before Deleting Emails",
@@ -38,6 +39,7 @@
         "Name[sv]": "Bekräfta innan brev tas bort",
         "Name[uk]": "Підтвердження перед вилученням повідомлень",
         "Name[x-test]": "xxConfirm Before Deleting Emailsxx",
+        "Name[zh_CN]": "删除邮件前需确认",
         "Version": "1.0"
     }
 }
