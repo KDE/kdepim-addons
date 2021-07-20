@@ -20,6 +20,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa kataloginställningar.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати параметри тек.",
         "Description[x-test]": "xxThis plugin allows you to configure folder settings.xx",
+        "Description[zh_CN]": "此插件能让您调整文件夹设置。",
         "Name": "Folder Settings",
         "Name[ca@valencia]": "Paràmetres de les carpetes",
         "Name[ca]": "Paràmetres de les carpetes",
@@ -40,6 +41,7 @@
         "Name[sv]": "Kataloginställningar",
         "Name[uk]": "Параметри тек",
         "Name[x-test]": "xxFolder Settingsxx",
+        "Name[zh_CN]": "文件夹设置",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"
