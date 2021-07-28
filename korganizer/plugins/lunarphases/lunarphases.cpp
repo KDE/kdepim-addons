@@ -1,12 +1,11 @@
 /*
   SPDX-FileCopyrightText: 2018 Allen Winter <winter@kde.org>
+  SPDX-FileCopyrightText: 2021 Friedrich W. H. Kossebau <kossebau@kde.org>
 
   SPDX-License-Identifier: GPL-2.0-or-later
 */
 
 #include "lunarphases.h"
-
-#include <KHolidays/LunarPhase>
 
 #include <KConfig>
 #include <KConfigGroup>
@@ -15,11 +14,45 @@
 
 K_PLUGIN_FACTORY(LunarphasesFactory, registerPlugin<Lunarphases>();)
 
+static QIcon phaseIcon(KHolidays::LunarPhase::Phase phase)
+{
+    const QString iconName =
+        (phase == KHolidays::LunarPhase::NewMoon) ?      QStringLiteral("moon-phase-new") :
+        (phase == KHolidays::LunarPhase::FullMoon) ?     QStringLiteral("moon-phase-full") :
+        (phase == KHolidays::LunarPhase::FirstQuarter) ? QStringLiteral("moon-phase-first-quarter") :
+        (phase == KHolidays::LunarPhase::LastQuarter) ?  QStringLiteral("moon-phase-last-quarter") :
+        /* else */                                       QString();
+    return iconName.isEmpty() ? QIcon() : QIcon::fromTheme(iconName);
+}
+
+LunarphasesElement::LunarphasesElement(KHolidays::LunarPhase::Phase phase)
+    : Element(QStringLiteral("main element"))
+    , mName(KHolidays::LunarPhase::phaseName(phase))
+    , mIcon(phaseIcon(phase))
+{
+}
+
+QString LunarphasesElement::shortText() const
+{
+    return mName;
+}
+
+QString LunarphasesElement::longText() const
+{
+    return mName;
+}
+
+QPixmap LunarphasesElement::newPixmap(const QSize &size)
+{
+    // TODO: support south hemisphere & equator by rotating by 90 and 180 degrees
+    return mIcon.pixmap(size);
+}
+
 Lunarphases::Lunarphases(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
-    KConfigGroup config(&_config, "Lunar Phases Plugin");
+    KConfigGroup config(&_config, "Calendar/Lunar Phases Plugin");
 }
 
 QString Lunarphases::info() const
@@ -34,20 +67,11 @@ Element::List Lunarphases::createDayElements(const QDate &date)
 {
     Element::List result;
 
-    const QString name = KHolidays::LunarPhase::phaseNameAtDate(date);
-    StoredElement *e = new StoredElement(QStringLiteral("main element"), name, name);
-
-    result.append(e);
-    return result;
-}
-
-Element::List Lunarphases::createWeekElements(const QDate &date)
-{
-    Element::List result;
-
-    const QString name = KHolidays::LunarPhase::phaseNameAtDate(date);
-    StoredElement *e = new StoredElement(QStringLiteral("main element"), name, name);
-    result.append(e);
+    KHolidays::LunarPhase::Phase phase = KHolidays::LunarPhase::phaseAtDate(date);
+    if (phase != KHolidays::LunarPhase::None) {
+        auto e = new LunarphasesElement(phase);
+        result.append(e);
+    }
 
     return result;
 }

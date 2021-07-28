@@ -18,3 +18,14 @@ install(FILES
   lunarphases.desktop
   DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/korganizer
 )
+
+include(ECMInstallIcons)
+ecm_install_icons(
+    ICONS
+        pics/sc-status-moon-phase-first-quarter.svg
+        pics/sc-status-moon-phase-full.svg
+        pics/sc-status-moon-phase-last-quarter.svg
+        pics/sc-status-moon-phase-new.svg
+    DESTINATION ${KDE_INSTALL_ICONDIR}
+    THEME hicolor
+)
