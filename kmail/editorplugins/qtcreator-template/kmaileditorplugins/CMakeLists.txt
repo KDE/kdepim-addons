@@ -44,8 +44,7 @@ set(%{ProjectNameUpper}_SRCS
 
 ecm_qt_declare_logging_category(%{ProjectNameUpper}_SRCS HEADER %{ProjectNameLower}editorplugin_debug.h IDENTIFIER %{DebugIdentifierName} CATEGORY_NAME %{DebugCategoryName})
 
-kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin JSON %{ProjectNameLower}editorplugin.json SOURCES
-    ${%{ProjectNameUpper}_SRCS} INSTALL_NAMESPACE kmail)
+kcoreaddons_add_plugin(%{ProjectNameLower}editorplugin INSTALL_NAMESPACE kmail)
 
 target_link_libraries(%{ProjectNameLower}editorplugin
    KF5::MessageComposer KF5::XmlGui KF5::I18n
