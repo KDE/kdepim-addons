@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 macro(add_kmail_checkbeforedeleting_unittest _source)
     set( _test ${_source} ${kmail_markdownplugin_debug_SRCS})
     get_filename_component(_name ${_source} NAME_WE)

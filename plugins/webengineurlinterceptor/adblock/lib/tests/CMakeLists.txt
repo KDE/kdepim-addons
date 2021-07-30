@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 set(adblocksettings_gui_SRCS adblocksettings_gui.cpp)
 add_executable(adblocksettings_gui ${adblocksettings_gui_SRCS})
 target_link_libraries(adblocksettings_gui

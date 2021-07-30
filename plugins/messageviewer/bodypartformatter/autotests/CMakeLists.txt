@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 set(EXECUTABLE_OUTPUT_PATH ${CMAKE_CURRENT_BINARY_DIR})
 add_definitions( -DMAIL_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data" )
 add_definitions( -DDIFF_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/diffdata" )

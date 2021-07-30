@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 macro(add_messageviewer_expireaccounttrash_unittest _source)
     get_filename_component(_name ${_source} NAME_WE)
     ecm_add_test(${_source}

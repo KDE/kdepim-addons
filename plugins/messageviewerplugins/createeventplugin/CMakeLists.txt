@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(messageviewer_createeventplugin INSTALL_NAMESPACE messageviewer/viewerplugin)
 target_sources(messageviewer_createeventplugin PRIVATE
     viewerplugincreateevent.cpp

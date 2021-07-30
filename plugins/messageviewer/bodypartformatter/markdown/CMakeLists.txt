@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 set(mardown_engine_SRCS)
 set(discount_LIB)
 add_library(messageviewer_bodypartformatter_text_markdown MODULE)

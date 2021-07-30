@@ -1,3 +1,5 @@
+# SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
+# SPDX-License-Identifier: BSD-3-Clause
 kcoreaddons_add_plugin(messageviewer_translatorplugin INSTALL_NAMESPACE messageviewer/viewercommonplugin)
 target_sources(messageviewer_translatorplugin PRIVATE
     viewerplugintranslator.cpp
