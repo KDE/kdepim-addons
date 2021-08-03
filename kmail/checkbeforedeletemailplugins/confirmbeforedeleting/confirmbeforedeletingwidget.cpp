@@ -44,9 +44,7 @@ void ConfirmBeforeDeletingWidget::fillRules()
     const QVector<ConfirmBeforeDeletingRule> rules = ConfirmBeforeDeletingManager::self()->rules();
     for (const ConfirmBeforeDeletingRule &r : rules) {
         auto item = new QTreeWidgetItem(mTreeWidget);
-        ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info;
-        info.pattern = r.pattern();
-        info.ruleType = ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType());
+        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(r.pattern(), ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()));
         initializeItem(item, info);
     }
 }
@@ -56,9 +54,7 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     if (item) {
         QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
-        ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo currentInfo;
-        currentInfo.pattern = item->text(1);
-        currentInfo.ruleType = item->text(0);
+        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo currentInfo(item->text(1), item->text(0));
         dlg->setInfo(currentInfo);
         if (dlg->exec()) {
             initializeItem(item, dlg->info());

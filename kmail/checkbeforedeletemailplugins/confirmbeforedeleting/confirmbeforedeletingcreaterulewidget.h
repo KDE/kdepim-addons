@@ -16,6 +16,11 @@ class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingCreateRuleWid
     Q_OBJECT
 public:
     struct ConfirmBeforeDeletingInfo {
+        ConfirmBeforeDeletingInfo(const QString &p, const QString &type)
+            : pattern(p)
+            , ruleType(type)
+        {
+        }
         QString pattern;
         QString ruleType;
     };

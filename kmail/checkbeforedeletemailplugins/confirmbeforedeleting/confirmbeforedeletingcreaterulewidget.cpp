@@ -45,9 +45,7 @@ ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget()
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDeletingCreateRuleWidget::info() const
 {
-    ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info;
-    info.pattern = mPatternLineEdit->text();
-    info.ruleType = mRuleTypeComboBox->currentData().toString();
+    const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(mPatternLineEdit->text(), mRuleTypeComboBox->currentData().toString());
     return info;
 }
 
