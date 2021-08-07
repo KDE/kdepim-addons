@@ -23,9 +23,13 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
     QString checkFoundStr;
     for (const auto &item : list) {
         if (ConfirmBeforeDeletingManager::self()->deletingNeedToConfirm(item, checkFoundStr)) {
-            if (KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to delete this email?\n%1", checkFoundStr), i18n("Confirm Delete Mail"))
-                == KMessageBox::Yes) {
+            auto result =
+                KMessageBox::questionYesNoCancel(parentWidget(), i18n("Do you want to delete this email?\n%1", checkFoundStr), i18n("Confirm Delete Mail"));
+            if (result == KMessageBox::Yes) {
                 lst << item;
+            } else if (result == KMessageBox::Cancel) {
+                lst.clear();
+                break;
             }
         } else {
             lst << item;
