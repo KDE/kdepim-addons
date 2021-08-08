@@ -38,9 +38,8 @@ bool ConfirmAddressPlugin::hasConfigureDialog() const
 
 void ConfirmAddressPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<ConfirmAddressConfigureDialog> dlg = new ConfirmAddressConfigureDialog(parent);
-    dlg->exec();
-    delete dlg;
+    ConfirmAddressConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "confirmaddressplugin.moc"

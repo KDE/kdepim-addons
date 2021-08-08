@@ -21,9 +21,8 @@ GravatarConfigureSettingsPlugin::~GravatarConfigureSettingsPlugin()
 
 void GravatarConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<GravatarConfigureSettingsPluginDialog> dlg = new GravatarConfigureSettingsPluginDialog(parent);
-    dlg->exec();
-    delete dlg;
+    GravatarConfigureSettingsPluginDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "gravatarconfiguresettingsplugin.moc"

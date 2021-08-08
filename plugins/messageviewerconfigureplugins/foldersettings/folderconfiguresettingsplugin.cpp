@@ -22,9 +22,8 @@ FolderConfigureSettingsPlugin::~FolderConfigureSettingsPlugin()
 
 void FolderConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<FolderConfigureSettingsDialog> dlg = new FolderConfigureSettingsDialog(parent);
-    dlg->exec();
-    delete dlg;
+    FolderConfigureSettingsDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "folderconfiguresettingsplugin.moc"

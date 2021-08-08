@@ -22,9 +22,8 @@ ExpireAccountTrashFolderConfigPlugin::~ExpireAccountTrashFolderConfigPlugin()
 
 void ExpireAccountTrashFolderConfigPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<ExpireAccountTrashFolderConfigDialog> dlg = new ExpireAccountTrashFolderConfigDialog(parent);
-    dlg->exec();
-    delete dlg;
+    ExpireAccountTrashFolderConfigDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "expireaccounttrashfolderconfigplugin.moc"

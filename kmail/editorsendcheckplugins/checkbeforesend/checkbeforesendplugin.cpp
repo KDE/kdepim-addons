@@ -37,9 +37,8 @@ bool CheckBeforeSendPlugin::hasConfigureDialog() const
 
 void CheckBeforeSendPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<CheckBeforeSendConfigureDialog> dlg = new CheckBeforeSendConfigureDialog(parent);
-    dlg->exec();
-    delete dlg;
+    CheckBeforeSendConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "checkbeforesendplugin.moc"
