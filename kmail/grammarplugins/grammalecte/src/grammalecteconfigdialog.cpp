@@ -14,12 +14,12 @@
 
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)
+    , mConfigWidget(new GrammalecteConfigWidget(this, disableMessageBox))
 {
     setWindowTitle(i18nc("@title:window", "Configure Grammalecte"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfigWidget = new GrammalecteConfigWidget(this, disableMessageBox);
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 

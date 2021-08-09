@@ -20,10 +20,10 @@
 
 LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
+    , mGrammarResultWidget(new LanguageToolResultWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    mGrammarResultWidget = new LanguageToolResultWidget(this);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);

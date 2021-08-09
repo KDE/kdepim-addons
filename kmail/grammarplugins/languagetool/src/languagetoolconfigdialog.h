@@ -19,6 +19,6 @@ private:
     Q_DISABLE_COPY(LanguageToolConfigDialog)
     void writeConfig();
     void readConfig();
-    LanguageToolConfigWidget *mConfigWidget = nullptr;
+    LanguageToolConfigWidget *const mConfigWidget;
 };
 

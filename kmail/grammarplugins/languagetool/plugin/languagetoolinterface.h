@@ -24,7 +24,7 @@ private:
     void createAction(KActionCollection *ac);
     void closeChecker();
     bool checkAgain();
-    LanguageToolResultWidget *mGrammarResultWidget = nullptr;
+    LanguageToolResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;
 };
 

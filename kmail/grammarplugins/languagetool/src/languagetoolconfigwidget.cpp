@@ -21,25 +21,26 @@
 
 LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     : QWidget(parent)
+    , mUseLocalInstance(new QCheckBox(i18n("Use Local Instance"), this))
+    , mInstancePath(new QLineEdit(this))
+    , mInstancePathLabel(new QLabel(i18n("Instance Path:"), this))
+    , mLanguageToolCombobox(new LanguageToolComboBox(this))
+    , mLanguageToolUpdateCombobox(new LanguageToolUpdateComboBox(this))
 {
-    mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mUseLocalInstance = new QCheckBox(i18n("Use Local Instance"), this);
     mUseLocalInstance->setObjectName(QStringLiteral("uselocalinstance"));
     mainLayout->addWidget(mUseLocalInstance);
 
     auto instanceLayout = new QHBoxLayout;
     instanceLayout->setObjectName(QStringLiteral("instancelayout"));
     instanceLayout->setContentsMargins({});
-    mInstancePathLabel = new QLabel(i18n("Instance Path:"), this);
     mInstancePathLabel->setObjectName(QStringLiteral("instancepath"));
     mInstancePathLabel->setEnabled(false);
     instanceLayout->addWidget(mInstancePathLabel);
 
-    mInstancePath = new QLineEdit(this);
     mInstancePath->setObjectName(QStringLiteral("instancepath"));
     mInstancePath->setEnabled(false);
     mInstancePath->setClearButtonEnabled(true);
@@ -54,7 +55,6 @@ LanguageToolConfigWidget::LanguageToolConfigWidget(QWidget *parent)
     languageLabel->setObjectName(QStringLiteral("languageLabel"));
     languageLayout->addWidget(languageLabel);
 
-    mLanguageToolCombobox = new LanguageToolComboBox(this);
     mLanguageToolCombobox->setObjectName(QStringLiteral("languagecombobox"));
     languageLayout->addWidget(mLanguageToolCombobox);
     mLanguageToolUpdateCombobox->setLanguageToolCombobox(mLanguageToolCombobox);

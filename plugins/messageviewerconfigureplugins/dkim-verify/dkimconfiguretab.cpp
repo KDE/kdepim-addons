@@ -16,6 +16,10 @@
 
 DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     : QWidget(parent)
+    , mGeneralWidget(new DKIMGeneralWidget(this))
+    , mRecordWidget(new DKIMKeyRecordWidget(this))
+    , mAdvancedWidget(new DKIMAdvancedWidget(this))
+    , mPolicyWidget(new DKIMPolicyWidget(this))
     , mTabWidget(new QTabWidget(this))
 {
     auto mainLayout = new QHBoxLayout(this);
@@ -33,16 +37,12 @@ DKIMConfigureTab::~DKIMConfigureTab()
 
 void DKIMConfigureTab::initTab()
 {
-    mGeneralWidget = new DKIMGeneralWidget(this);
     mTabWidget->addTab(mGeneralWidget, i18n("General"));
 
-    mRecordWidget = new DKIMKeyRecordWidget(this);
     mTabWidget->addTab(mRecordWidget, i18n("Record Keys"));
 
-    mPolicyWidget = new DKIMPolicyWidget(this);
     mTabWidget->addTab(mPolicyWidget, i18n("Policy"));
 
-    mAdvancedWidget = new DKIMAdvancedWidget(this);
     mTabWidget->addTab(mAdvancedWidget, i18n("Advanced"));
 }
 

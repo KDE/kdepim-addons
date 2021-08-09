@@ -27,10 +27,10 @@ public:
 
 private:
     void initTab();
-    DKIMGeneralWidget *mGeneralWidget = nullptr;
-    DKIMKeyRecordWidget *mRecordWidget = nullptr;
-    DKIMAdvancedWidget *mAdvancedWidget = nullptr;
-    DKIMPolicyWidget *mPolicyWidget = nullptr;
+    DKIMGeneralWidget *const mGeneralWidget;
+    DKIMKeyRecordWidget *const mRecordWidget;
+    DKIMAdvancedWidget *const mAdvancedWidget;
+    DKIMPolicyWidget *const mPolicyWidget;
     QTabWidget *const mTabWidget;
 };
 

@@ -14,6 +14,7 @@
 
 GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     : QWidget(parent)
+    , mResult(new GrammarResultTextEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -34,7 +35,6 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mExtraWidgetLayout->addStretch(1);
     connect(closeBtn, &QToolButton::clicked, this, &GrammarResultWidget::closeChecker);
 
-    mResult = new GrammarResultTextEdit(this);
     mResult->setObjectName(QStringLiteral("grammarResult"));
     connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
     connect(mResult, &GrammarResultTextEdit::checkAgain, this, &GrammarResultWidget::checkAgain);

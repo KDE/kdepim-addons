@@ -19,10 +19,10 @@
 
 GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *parent)
     : MessageComposer::PluginEditorGrammarCustomToolsViewInterface(parent)
+    , mGrammarResultWidget(new GrammalecteResultWidget(this))
 {
     auto layout = new QHBoxLayout(this);
     layout->setContentsMargins({});
-    mGrammarResultWidget = new GrammalecteResultWidget(this);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);

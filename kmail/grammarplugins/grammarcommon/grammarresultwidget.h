@@ -31,7 +31,7 @@ Q_SIGNALS:
 
 protected:
     virtual void addExtraWidget();
-    GrammarResultTextEdit *mResult = nullptr;
+    GrammarResultTextEdit *const mResult;
     QHBoxLayout *mExtraWidgetLayout = nullptr;
 
 private:

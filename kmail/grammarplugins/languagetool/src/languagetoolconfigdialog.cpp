@@ -19,12 +19,12 @@ static const char myConfigGroupName[] = "LanguageToolConfigDialog";
 }
 LanguageToolConfigDialog::LanguageToolConfigDialog(QWidget *parent)
     : QDialog(parent)
+    , mConfigWidget(new LanguageToolConfigWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure LanguageTool"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mConfigWidget = new LanguageToolConfigWidget(this);
     mConfigWidget->setObjectName(QStringLiteral("configwidget"));
     mainLayout->addWidget(mConfigWidget);
 

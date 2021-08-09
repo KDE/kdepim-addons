@@ -15,7 +15,7 @@ public:
     explicit GrammalecteInterface(KActionCollection *ac, QWidget *parent = nullptr);
     ~GrammalecteInterface() override;
 
-    KToggleAction *action() const override;
+    Q_REQUIRED_RESULT KToggleAction *action() const override;
 
 private:
     Q_DISABLE_COPY(GrammalecteInterface)
@@ -24,7 +24,7 @@ private:
     void createAction(KActionCollection *ac);
     void checkAgain();
     void closeChecker();
-    GrammalecteResultWidget *mGrammarResultWidget = nullptr;
+    GrammalecteResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;
 };
 

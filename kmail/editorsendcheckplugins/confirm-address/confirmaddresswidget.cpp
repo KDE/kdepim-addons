@@ -13,6 +13,7 @@
 
 ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     : QWidget(parent)
+    , mListEmails(new QListWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
@@ -22,7 +23,6 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("label"));
     mainLayout->addWidget(lab);
 
-    mListEmails = new QListWidget(this);
     mListEmails->setObjectName(QStringLiteral("listemails"));
     connect(mListEmails, &QListWidget::itemChanged, this, &ConfirmAddressWidget::slotItemChanged);
     mainLayout->addWidget(mListEmails);

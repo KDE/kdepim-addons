@@ -29,10 +29,10 @@ private:
     Q_DISABLE_COPY(LanguageToolConfigWidget)
     void updateWidgets(bool enabled);
     void slotResetValue();
-    QCheckBox *mUseLocalInstance = nullptr;
-    QLineEdit *mInstancePath = nullptr;
-    QLabel *mInstancePathLabel = nullptr;
-    LanguageToolComboBox *mLanguageToolCombobox = nullptr;
-    LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
+    QCheckBox *const mUseLocalInstance;
+    QLineEdit *const mInstancePath;
+    QLabel *const mInstancePathLabel;
+    LanguageToolComboBox *const mLanguageToolCombobox;
+    LanguageToolUpdateComboBox *const mLanguageToolUpdateCombobox;
 };
 

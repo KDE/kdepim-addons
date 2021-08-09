@@ -21,6 +21,6 @@ public:
     void resetSettings() override;
 
 private:
-    AutomaticAddContactsConfigureTab *mConfigureTab = nullptr;
+    AutomaticAddContactsConfigureTab *const mConfigureTab;
 };
 

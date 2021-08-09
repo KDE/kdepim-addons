@@ -19,6 +19,6 @@ private:
     Q_DISABLE_COPY(GrammalecteConfigDialog)
     void writeConfig();
     void readConfig();
-    GrammalecteConfigWidget *mConfigWidget = nullptr;
+    GrammalecteConfigWidget *const mConfigWidget;
 };
 
