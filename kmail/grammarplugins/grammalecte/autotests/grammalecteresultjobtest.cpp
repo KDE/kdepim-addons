@@ -32,11 +32,10 @@ void GrammarResultJobTest::shouldBeAbleToStart()
     QVERIFY(!job.canStart());
     job.setText(QStringLiteral("ff"));
     QVERIFY(!job.canStart());
-    job.setPythonPath(QStringLiteral("ff"));
+    job.setPythonPath(QStringLiteral("/usr/bin/"));
     QVERIFY(!job.canStart());
-    job.setGrammarlecteCliPath(QStringLiteral("ff"));
+    job.setGrammarlecteCliPath(QStringLiteral("/usr/bin/ls"));
     QVERIFY(job.canStart());
-
     job.setArguments(QStringList() << QStringLiteral("ff"));
     QVERIFY(job.canStart());
 }
