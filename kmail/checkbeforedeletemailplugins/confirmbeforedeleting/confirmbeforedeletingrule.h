@@ -42,6 +42,8 @@ public:
     static Q_REQUIRED_RESULT QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
     static Q_REQUIRED_RESULT ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
 
+    Q_REQUIRED_RESULT bool operator==(const ConfirmBeforeDeletingRule &other) const;
+
 private:
     void generateConfirmMessageInfo(const KMime::Message::Ptr &msg, QString &checkFoundInfo) const;
     QString mPattern;
