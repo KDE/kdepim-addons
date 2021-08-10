@@ -18,5 +18,7 @@ void ConfirmBeforeDeletingRuleTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingRule r;
     QVERIFY(r.pattern().isEmpty());
+    QVERIFY(!r.isValid());
+    QCOMPARE(r.ruleType(), ConfirmBeforeDeletingRule::RuleType::Unknown);
     // TODO
 }
