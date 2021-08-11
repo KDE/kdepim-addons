@@ -13,4 +13,6 @@ class ConfirmBeforeDeletingMessageBoxWidgetTest : public QObject
 public:
     explicit ConfirmBeforeDeletingMessageBoxWidgetTest(QObject *parent = nullptr);
     ~ConfirmBeforeDeletingMessageBoxWidgetTest() override = default;
+private Q_SLOTS:
+    void shouldHaveDefaultValues();
 };

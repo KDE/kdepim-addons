@@ -34,5 +34,10 @@ ConfirmBeforeDeletingMessageBoxDialog::~ConfirmBeforeDeletingMessageBoxDialog()
 
 void ConfirmBeforeDeletingMessageBoxDialog::setInfo(const QString &str)
 {
-    // TODO
+    mConfirmBeforeDeletingWidget->setInfo(str);
+}
+
+bool ConfirmBeforeDeletingMessageBoxDialog::useSameResult() const
+{
+    return mConfirmBeforeDeletingWidget->useSameResult();
 }

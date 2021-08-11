@@ -8,11 +8,19 @@
 #include <QWidget>
 
 #include "confirmbeforedeleting_private_export.h"
-
+class QLabel;
+class QCheckBox;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingMessageBoxWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ConfirmBeforeDeletingMessageBoxWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingMessageBoxWidget() override;
+
+    void setInfo(const QString &str);
+    Q_REQUIRED_RESULT bool useSameResult() const;
+
+private:
+    QLabel *const mLabelInfo;
+    QCheckBox *const mUseSameResultForOtherCheck;
 };

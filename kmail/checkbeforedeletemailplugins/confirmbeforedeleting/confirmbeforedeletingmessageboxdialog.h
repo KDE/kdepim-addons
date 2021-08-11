@@ -16,6 +16,8 @@ public:
     ~ConfirmBeforeDeletingMessageBoxDialog() override;
     void setInfo(const QString &str);
 
+    Q_REQUIRED_RESULT bool useSameResult() const;
+
 private:
     ConfirmBeforeDeletingMessageBoxWidget *const mConfirmBeforeDeletingWidget;
 };
