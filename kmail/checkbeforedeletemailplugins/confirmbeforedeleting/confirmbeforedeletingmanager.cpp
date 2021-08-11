@@ -83,10 +83,11 @@ void ConfirmBeforeDeletingManager::saveRules()
     }
 }
 
-bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound) const
+bool ConfirmBeforeDeletingManager::deletingNeedToConfirm(const Akonadi::Item &item, QString &checkFound, ConfirmBeforeDeletingRule &rule) const
 {
     for (const auto &r : std::as_const(mRules)) {
         if (r.deletingNeedToConfirm(item, checkFound)) {
+            rule = r;
             return true;
         }
     }
