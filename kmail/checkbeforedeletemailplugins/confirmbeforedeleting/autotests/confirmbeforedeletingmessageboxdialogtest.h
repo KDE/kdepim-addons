@@ -8,12 +8,12 @@
 
 #include <QObject>
 
-class ConfirmBeforeDeletingMessageBoxTest : public QObject
+class ConfirmBeforeDeletingMessageBoxDialogTest : public QObject
 {
     Q_OBJECT
 public:
-    explicit ConfirmBeforeDeletingMessageBoxTest(QObject *parent = nullptr);
-    ~ConfirmBeforeDeletingMessageBoxTest() override = default;
+    explicit ConfirmBeforeDeletingMessageBoxDialogTest(QObject *parent = nullptr);
+    ~ConfirmBeforeDeletingMessageBoxDialogTest() override = default;
 private Q_SLOTS:
     void shouldHaveDefaultValues();
 };
