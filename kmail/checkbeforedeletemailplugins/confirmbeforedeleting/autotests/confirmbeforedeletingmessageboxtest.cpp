@@ -7,6 +7,7 @@
 #include "confirmbeforedeletingmessageboxtest.h"
 #include "confirmbeforedeletingmessagebox.h"
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(ConfirmBeforeDeletingMessageBoxTest)
 ConfirmBeforeDeletingMessageBoxTest::ConfirmBeforeDeletingMessageBoxTest(QObject *parent)
     : QObject(parent)

@@ -6,9 +6,13 @@
 
 #include "confirmbeforedeletingmessagebox.h"
 
+#include <QVBoxLayout>
+
 ConfirmBeforeDeletingMessageBox::ConfirmBeforeDeletingMessageBox(QWidget *parent)
     : QDialog(parent)
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
 ConfirmBeforeDeletingMessageBox::~ConfirmBeforeDeletingMessageBox()
