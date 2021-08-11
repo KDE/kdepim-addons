@@ -39,7 +39,7 @@
         "Name[sv]": "Bekräfta innan brev tas bort",
         "Name[uk]": "Підтвердження перед вилученням повідомлень",
         "Name[x-test]": "xxConfirm Before Deleting Emailsxx",
-        "Name[zh_CN]": "删前确认",
+        "Name[zh_CN]": "删除邮件前需确认",
         "Version": "1.0"
     }
 }

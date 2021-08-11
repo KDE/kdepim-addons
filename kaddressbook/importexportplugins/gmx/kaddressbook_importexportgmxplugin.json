@@ -30,7 +30,7 @@
         "Description[tr]": "Bu eklenti, GMX içe/dışa aktarmanıza imkan verir.",
         "Description[uk]": "За допомогою цього додатка можна імпортувати та експортувати дані у форматі GMX.",
         "Description[x-test]": "xxThis plugin allows you to import/export GMX.xx",
-        "Description[zh_CN]": "此插件能让您导入或导出 GMX。",
+        "Description[zh_CN]": "此插件允许您导入/导出 GMX。",
         "EnabledByDefault": "false",
         "Id": "kaddressbookimportexportgmx",
         "Name": "Import Export GMX",
