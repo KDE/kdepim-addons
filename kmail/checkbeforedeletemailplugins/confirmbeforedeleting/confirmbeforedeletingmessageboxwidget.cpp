@@ -26,6 +26,8 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
 
     mUseSameResultForOtherCheck->setObjectName(QStringLiteral("mUseSameResultForOtherCheck"));
     mainLayout->addWidget(mUseSameResultForOtherCheck);
+
+    mUseSameResultForOtherCheck->setChecked(false);
 }
 
 ConfirmBeforeDeletingMessageBoxWidget::~ConfirmBeforeDeletingMessageBoxWidget()

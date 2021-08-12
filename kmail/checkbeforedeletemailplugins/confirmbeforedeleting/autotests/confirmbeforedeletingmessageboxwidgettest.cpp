@@ -19,21 +19,17 @@ ConfirmBeforeDeletingMessageBoxWidgetTest::ConfirmBeforeDeletingMessageBoxWidget
 void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
 {
     ConfirmBeforeDeletingMessageBoxWidget w;
-    // TODO
+    auto mUseSameResultForOtherCheck = w.findChild<QCheckBox *>(QStringLiteral("mUseSameResultForOtherCheck"));
+    QVERIFY(mUseSameResultForOtherCheck);
+    QVERIFY(!mUseSameResultForOtherCheck->text().isEmpty());
+    QVERIFY(!mUseSameResultForOtherCheck->isChecked());
 
-#if 0
-    , mLabelInfo(new QLabel(this))
-    , mUseSameResultForOtherCheck(new QCheckBox(i18n("Reuse..."), this)) //TODO fix i18n
-{
-    auto mainLayout = new QVBoxLayout(this);
-    mainLayout->setObjectName(QStringLiteral("mainLayout"));
-    mainLayout->setContentsMargins({});
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), {});
 
-    mLabelInfo->setObjectName(QStringLiteral("mLabelInfo"));
-    mLabelInfo->setWordWrap(true);
-    mainLayout->addWidget(mLabelInfo);
-
-    mUseSameResultForOtherCheck->setObjectName(QStringLiteral("mUseSameResultForOtherCheck"));
-    mainLayout->addWidget(mUseSameResultForOtherCheck);
-#endif
+    auto mLabelInfo = w.findChild<QLabel *>(QStringLiteral("mLabelInfo"));
+    QVERIFY(mLabelInfo);
+    QVERIFY(mLabelInfo->text().isEmpty());
+    QVERIFY(mLabelInfo->wordWrap());
 }
