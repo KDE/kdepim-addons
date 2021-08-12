@@ -5,8 +5,10 @@
 */
 #include "confirmbeforedeletinginterface.h"
 #include "confirmbeforedeletingmanager.h"
+#include "confirmbeforedeletingmessageboxdialog.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QPointer>
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
     : MessageViewer::MessageViewerCheckBeforeDeletingInterface(parent)
@@ -27,7 +29,6 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
     for (const auto &item : list) {
         ConfirmBeforeDeletingRule r;
         if (ConfirmBeforeDeletingManager::self()->deletingNeedToConfirm(item, checkFoundStr, r)) {
-            // TODO add checkbox for use same result for a specific check
             if (ruleDelete.contains(r)) {
                 lst << item;
                 continue;
@@ -36,15 +37,24 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 continue;
             }
 
-            auto result =
-                KMessageBox::questionYesNoCancel(parentWidget(), i18n("Do you want to delete this email?\n%1", checkFoundStr), i18n("Confirm Delete Mail"));
-            if (result == KMessageBox::Yes) {
+            QPointer<ConfirmBeforeDeletingMessageBoxDialog> dlg = new ConfirmBeforeDeletingMessageBoxDialog(parentWidget());
+            dlg->setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
+            const int result = dlg->exec();
+            auto button = static_cast<QDialogButtonBox::StandardButton>(result);
+            if (button == QDialogButtonBox::StandardButton::Yes) {
                 lst << item;
-                ruleDelete.append(r);
-            } else if (result == KMessageBox::No) {
-                ruleNotDelete.append(r);
-            } else if (result == KMessageBox::Cancel) {
+                if (dlg->useSameResult()) {
+                    ruleDelete.append(r);
+                }
+                delete dlg;
+            } else if (button == QDialogButtonBox::StandardButton::No) {
+                if (dlg->useSameResult()) {
+                    ruleNotDelete.append(r);
+                }
+                delete dlg;
+            } else if (button == QDialogButtonBox::StandardButton::Cancel) {
                 lst.clear();
+                delete dlg;
                 break;
             }
         } else {

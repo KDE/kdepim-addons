@@ -9,6 +9,7 @@
 
 #include <KLocalizedString>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 ConfirmBeforeDeletingMessageBoxDialog::ConfirmBeforeDeletingMessageBoxDialog(QWidget *parent)
     : QDialog(parent)
@@ -24,8 +25,15 @@ ConfirmBeforeDeletingMessageBoxDialog::ConfirmBeforeDeletingMessageBoxDialog(QWi
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::Cancel | QDialogButtonBox::No, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
-    connect(buttonBox, &QDialogButtonBox::accepted, this, &ConfirmBeforeDeletingMessageBoxDialog::accept);
-    connect(buttonBox, &QDialogButtonBox::rejected, this, &ConfirmBeforeDeletingMessageBoxDialog::reject);
+    connect(buttonBox->button(QDialogButtonBox::Yes), &QPushButton::clicked, this, [this]() {
+        done(QDialogButtonBox::Yes);
+    });
+    connect(buttonBox->button(QDialogButtonBox::No), &QPushButton::clicked, this, [this]() {
+        done(QDialogButtonBox::No);
+    });
+    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, [this]() {
+        done(QDialogButtonBox::Cancel);
+    });
 }
 
 ConfirmBeforeDeletingMessageBoxDialog::~ConfirmBeforeDeletingMessageBoxDialog()
