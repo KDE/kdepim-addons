@@ -21,6 +21,7 @@ void ConfirmBeforeDeletingMessageBoxDialogTest::shouldHaveDefaultValues()
     ConfirmBeforeDeletingMessageBoxDialog d;
 
     QVERIFY(!d.windowTitle().isEmpty());
+    QVERIFY(!d.useSameResult());
 
     auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
