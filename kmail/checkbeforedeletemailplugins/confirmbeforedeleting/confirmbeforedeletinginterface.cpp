@@ -37,6 +37,7 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 continue;
             }
 
+            // TODO add warning icon ?
             QPointer<ConfirmBeforeDeletingMessageBoxDialog> dlg = new ConfirmBeforeDeletingMessageBoxDialog(parentWidget());
             dlg->setInfo(i18n("Do you want to delete this email?\n%1", checkFoundStr));
             const int result = dlg->exec();
