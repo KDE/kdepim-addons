@@ -10,22 +10,40 @@
 #include <QVBoxLayout>
 
 #include <KLocalizedString>
+#include <QStyle>
+#include <QStyleOption>
 
 ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWidget *parent)
     : QWidget(parent)
     , mLabelInfo(new QLabel(this))
     , mUseSameResultForOtherCheck(new QCheckBox(i18n("Reuse..."), this)) // TODO fix i18n
 {
-    auto mainLayout = new QVBoxLayout(this);
+    auto mainLayout = new QHBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
 
+    const QIcon tmpIcon = style()->standardIcon(QStyle::SP_MessageBoxQuestion, nullptr, this);
+    auto iconLabel = new QLabel(this);
+    iconLabel->setObjectName(QStringLiteral("iconLabel"));
+    if (!tmpIcon.isNull()) {
+        QStyleOption option;
+        option.initFrom(this);
+        iconLabel->setPixmap(tmpIcon.pixmap(style()->pixelMetric(QStyle::PM_MessageBoxIconSize, &option, this)));
+    }
+    mainLayout->addWidget(iconLabel);
+
+    auto textLayout = new QVBoxLayout;
+    textLayout->setObjectName(QStringLiteral("textLayout"));
+    textLayout->setContentsMargins({});
+
+    mainLayout->addLayout(textLayout);
+
     mLabelInfo->setObjectName(QStringLiteral("mLabelInfo"));
     mLabelInfo->setWordWrap(true);
-    mainLayout->addWidget(mLabelInfo);
+    textLayout->addWidget(mLabelInfo);
 
     mUseSameResultForOtherCheck->setObjectName(QStringLiteral("mUseSameResultForOtherCheck"));
-    mainLayout->addWidget(mUseSameResultForOtherCheck);
+    textLayout->addWidget(mUseSameResultForOtherCheck);
 
     mUseSameResultForOtherCheck->setChecked(false);
 }

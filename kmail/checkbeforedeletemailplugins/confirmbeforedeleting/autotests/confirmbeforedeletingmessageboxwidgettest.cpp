@@ -24,9 +24,17 @@ void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
     QVERIFY(!mUseSameResultForOtherCheck->text().isEmpty());
     QVERIFY(!mUseSameResultForOtherCheck->isChecked());
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), {});
+
+    auto textLayout = w.findChild<QVBoxLayout *>(QStringLiteral("textLayout"));
+    QVERIFY(textLayout);
+    QCOMPARE(textLayout->contentsMargins(), {});
+
+    auto iconLabel = w.findChild<QLabel *>(QStringLiteral("iconLabel"));
+    QVERIFY(iconLabel);
+    QVERIFY(iconLabel->text().isEmpty());
 
     auto mLabelInfo = w.findChild<QLabel *>(QStringLiteral("mLabelInfo"));
     QVERIFY(mLabelInfo);
