@@ -106,6 +106,7 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
 {
     QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
     if (dlg->exec()) {
+        // TODO avoid duplicate rule
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
         auto item = new QTreeWidgetItem(mTreeWidget);
         initializeItem(item, dlg->info());
