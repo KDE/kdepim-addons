@@ -23,6 +23,8 @@ public:
         }
         QString pattern;
         QString ruleType;
+        Q_REQUIRED_RESULT bool operator==(const ConfirmBeforeDeletingInfo &other) const;
+        Q_REQUIRED_RESULT bool operator!=(const ConfirmBeforeDeletingInfo &other) const;
     };
     explicit ConfirmBeforeDeletingCreateRuleWidget(QWidget *parent = nullptr);
     ~ConfirmBeforeDeletingCreateRuleWidget() override;

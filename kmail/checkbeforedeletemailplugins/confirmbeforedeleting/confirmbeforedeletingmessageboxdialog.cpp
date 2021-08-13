@@ -25,14 +25,11 @@ ConfirmBeforeDeletingMessageBoxDialog::ConfirmBeforeDeletingMessageBoxDialog(QWi
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Yes | QDialogButtonBox::Cancel | QDialogButtonBox::No, this);
     buttonBox->setObjectName(QStringLiteral("buttonBox"));
     mainLayout->addWidget(buttonBox);
-    connect(buttonBox->button(QDialogButtonBox::Yes), &QPushButton::clicked, this, [this]() {
-        done(QDialogButtonBox::Yes);
-    });
-    connect(buttonBox->button(QDialogButtonBox::No), &QPushButton::clicked, this, [this]() {
-        done(QDialogButtonBox::No);
-    });
-    connect(buttonBox->button(QDialogButtonBox::Cancel), &QPushButton::clicked, this, [this]() {
-        done(QDialogButtonBox::Cancel);
+    connect(buttonBox, &QDialogButtonBox::clicked, this, [this, buttonBox](QAbstractButton *button) {
+        QDialogButtonBox::StandardButton code = buttonBox->standardButton(button);
+        if (code != QDialogButtonBox::NoButton) {
+            done(code);
+        }
     });
 }
 

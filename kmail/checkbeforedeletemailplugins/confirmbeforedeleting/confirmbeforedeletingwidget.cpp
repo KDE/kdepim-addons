@@ -57,7 +57,9 @@ void ConfirmBeforeDeletingWidget::slotEditRule()
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo currentInfo(item->text(1), item->text(0));
         dlg->setInfo(currentInfo);
         if (dlg->exec()) {
-            initializeItem(item, dlg->info());
+            if (currentInfo != currentInfo) {
+                initializeItem(item, currentInfo);
+            }
         }
         delete dlg;
     }

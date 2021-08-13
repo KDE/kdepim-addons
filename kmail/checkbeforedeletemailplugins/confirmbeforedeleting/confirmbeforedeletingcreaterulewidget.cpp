@@ -62,3 +62,13 @@ void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
     mRuleTypeComboBox->addItem(i18n("To"), QStringLiteral("to"));
     mRuleTypeComboBox->addItem(i18n("Cc"), QStringLiteral("cc"));
 }
+
+bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator==(const ConfirmBeforeDeletingInfo &other) const
+{
+    return other.pattern != pattern && other.ruleType != ruleType;
+}
+
+bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator!=(const ConfirmBeforeDeletingInfo &other) const
+{
+    return !operator==(other);
+}
