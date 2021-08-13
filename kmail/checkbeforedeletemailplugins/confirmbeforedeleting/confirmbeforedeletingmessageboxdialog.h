@@ -5,7 +5,7 @@
 */
 #pragma once
 
-#include "confirmbeforedeleting_export.h"
+#include "kmailconfirmbeforedeleting_export.h"
 #include <QDialog>
 class ConfirmBeforeDeletingMessageBoxWidget;
 class KMAILCONFIRMBEFOREDELETING_EXPORT ConfirmBeforeDeletingMessageBoxDialog : public QDialog
