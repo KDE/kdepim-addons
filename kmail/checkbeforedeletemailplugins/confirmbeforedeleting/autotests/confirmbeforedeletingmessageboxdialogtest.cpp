@@ -31,4 +31,5 @@ void ConfirmBeforeDeletingMessageBoxDialogTest::shouldHaveDefaultValues()
 
     auto buttonBox = d.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
     QVERIFY(buttonBox);
+    QCOMPARE(buttonBox->standardButtons(), QDialogButtonBox::Yes | QDialogButtonBox::Cancel | QDialogButtonBox::No);
 }
