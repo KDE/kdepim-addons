@@ -35,7 +35,8 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
     mStart = startDate;
     mEnd = endDate;
 
-    int eventsCount = 0, eventDataCount = 0;
+    int eventsCount = 0;
+    int eventDataCount = 0;
     {
         EventDataVisitor visitor(mDataSource, startDate, endDate);
         const KCalendarCore::Event::List events = mDataSource->calendar()->events(startDate, endDate);
@@ -46,7 +47,8 @@ void PimEventsPlugin::loadEventsForDateRange(const QDate &startDate, const QDate
         }
     }
 
-    int todosCount = 0, todoDataCount = 0;
+    int todosCount = 0;
+    int todoDataCount = 0;
     {
         EventDataVisitor visitor(mDataSource, startDate, endDate);
         const KCalendarCore::Todo::List todos = mDataSource->calendar()->todos(startDate, endDate);

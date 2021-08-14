@@ -170,7 +170,8 @@ void AutomaticAddContactsJob::slotResourceCreationDone(KJob *job)
 void AutomaticAddContactsJob::verifyContactExist()
 {
     const QString email = mEmails.at(mCurrentIndex);
-    QString tname, temail;
+    QString tname;
+    QString temail;
     KEmailAddress::extractEmailAddressAndName(email, temail, tname);
     if (temail.isEmpty()) {
         addNextContact();

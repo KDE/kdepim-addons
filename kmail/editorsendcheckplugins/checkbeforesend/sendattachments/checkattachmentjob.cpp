@@ -22,7 +22,8 @@ void CheckAttachmentJob::start()
     mResultList.clear();
 
     for (const QString &email : std::as_const(mOriginalEmails)) {
-        QString tname, temail;
+        QString tname;
+        QString temail;
         KEmailAddress::extractEmailAddressAndName(email, temail, tname); // ignore return value
         if (!temail.isEmpty()) {
             if (!mResultList.contains(temail)) {

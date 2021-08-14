@@ -80,7 +80,8 @@ bool QCsvReader::read(QIODevice *device)
         EmptyField,
     };
 
-    int row, column;
+    int row;
+    int column;
 
     QString field;
     QChar input;

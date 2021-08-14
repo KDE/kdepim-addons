@@ -54,7 +54,8 @@ QStringList AttendeeSelector::attendees() const
         const QString addr = ui.attendeeList->item(i)->text();
 
         // Build a nice address for this attendee including the CN.
-        QString tname, temail;
+        QString tname;
+        QString temail;
         KEmailAddress::extractEmailAddressAndName(addr, temail, tname); // ignore return value
         // which is always false
         rv << temail;

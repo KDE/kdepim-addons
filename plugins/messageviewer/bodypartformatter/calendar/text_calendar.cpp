@@ -675,7 +675,8 @@ public:
 
         // Set the organizer to the sender, if the ORGANIZER hasn't been set.
         if (incidence->organizer().isEmpty()) {
-            QString tname, temail;
+            QString tname;
+            QString temail;
             KMime::Message::Ptr message = viewerInstance->message();
             KEmailAddress::extractEmailAddressAndName(message->sender()->asUnicodeString(), temail, tname);
             incidence->setOrganizer(Person(tname, temail));
@@ -969,7 +970,8 @@ public:
                 attendees[myselfIdx].setDelegate(delegateString);
                 incidence->setAttendees(attendees);
             }
-            QString name, email;
+            QString name;
+            QString email;
             KEmailAddress::extractEmailAddressAndName(delegateString, email, name);
             Attendee delegate(name, email, true);
             delegate.setDelegator(receiver);

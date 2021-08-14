@@ -269,7 +269,9 @@ void GMXImportExportPluginInterface::doExport(QFile *fp, const KContacts::Addres
 
         for (int recId = 0; recId < 3; ++recId) {
             KContacts::Address address;
-            KContacts::PhoneNumber phone, fax, cell;
+            KContacts::PhoneNumber phone;
+            KContacts::PhoneNumber fax;
+            KContacts::PhoneNumber cell;
 
             // address preference flag:
             // & 1: preferred email address
@@ -437,7 +439,8 @@ void GMXImportExportPluginInterface::importGMX()
     QDateTime dt;
     QTextStream gmxStream(&file);
     gmxStream.setCodec("ISO 8859-1");
-    QString line, line2;
+    QString line;
+    QString line2;
     line = gmxStream.readLine();
     line2 = gmxStream.readLine();
     if (!line.startsWith(QLatin1String("AB_ADDRESSES:")) || !line2.startsWith(QLatin1String("Address_id"))) {
