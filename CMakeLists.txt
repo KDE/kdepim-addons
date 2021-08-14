@@ -40,7 +40,6 @@ include(ECMGeneratePriFile)
 
 include(KDEInstallDirs)
 include(KDECMakeSettings)
-set(KDE_COMPILERSETTINGS_LEVEL 5.85.0)
 include(KDEFrameworkCompilerSettings NO_POLICY_SCOPE)
 include(ECMAddAppIcon)
 include(ECMQtDeclareLoggingCategory)
@@ -127,8 +126,6 @@ find_package(KF5KontactInterface ${KONTACTINTERFACE_LIB_VERSION} CONFIG REQUIRED
 set(GRANTLEE_LIB_VERSION "5.2.0")
 find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
 
-set(CMAKE_CXX_STANDARD 17)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
