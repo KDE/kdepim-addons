@@ -16,6 +16,9 @@
 #include <KLocalizedString>
 
 #include <QDomDocument>
+#include <chrono>
+
+using namespace std::chrono_literals;
 // https://www.mediawiki.org/wiki/API:Picture_of_the_day_viewer
 Picoftheday::Picoftheday()
 {
@@ -312,7 +315,7 @@ QPixmap POTDElement::newPixmap(const QSize &size)
                 disconnect(mTimer, &QTimer::timeout, this, &POTDElement::step3GetThumbnail);
                 connect(mTimer, &QTimer::timeout, this, &POTDElement::step3GetThumbnail);
                 mTimer->setSingleShot(true);
-                mTimer->start(1000);
+                mTimer->start(1s);
             }
         }
     }

@@ -28,6 +28,6 @@ protected Q_SLOTS:
     void slotOk();
 
 private:
-    QButtonGroup *mDayNumGroup = nullptr;
+    QButtonGroup *const mDayNumGroup;
 };
 

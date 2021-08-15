@@ -23,6 +23,7 @@
 
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
+    , mDayNumGroup(new QButtonGroup(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Day Numbers"));
     auto mainLayout = new QVBoxLayout(this);
@@ -43,7 +44,6 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     topLayout->addWidget(dayNumBox);
     auto groupLayout = new QVBoxLayout(dayNumBox);
 
-    mDayNumGroup = new QButtonGroup(this);
     auto btn = new QRadioButton(i18n("Show day number"), dayNumBox);
     mDayNumGroup->addButton(btn, int(Datenums::DayOfYear));
     groupLayout->addWidget(btn);

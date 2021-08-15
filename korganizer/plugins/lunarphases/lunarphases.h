@@ -17,10 +17,10 @@ public:
     {
     }
 
-    Element::List createDayElements(const QDate &) override;
-    Element::List createWeekElements(const QDate &) override;
+    Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
+    Q_REQUIRED_RESULT Element::List createWeekElements(const QDate &) override;
 
-    QString info() const override;
+    Q_REQUIRED_RESULT QString info() const override;
 };
 
 class LunarphasesFactory : public DecorationFactory
