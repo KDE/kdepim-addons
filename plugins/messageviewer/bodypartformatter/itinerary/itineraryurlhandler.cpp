@@ -66,12 +66,7 @@ bool ItineraryUrlHandler::handleClick(MessageViewer::Viewer *viewerInstance, Mim
     const auto m = memento(part);
 
     if (path.startsWith(QLatin1String("semanticExpand?"))) {
-#if QT_VERSION >= QT_VERSION_CHECK(5, 15, 2)
         auto idx = QStringView(path).mid(15).toInt();
-#else
-        auto idx = path.midRef(15).toInt();
-#endif
-
         m->toggleExpanded(idx);
         const auto nodeHelper = part->nodeHelper();
         Q_EMIT nodeHelper->update(MimeTreeParser::Delayed);
