@@ -56,6 +56,8 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 lst.clear();
                 delete dlg;
                 break;
+            } else {
+                qWarning() << " StandardButton is invalid " << button << " .It's a bug!";
             }
         } else {
             lst << item;
