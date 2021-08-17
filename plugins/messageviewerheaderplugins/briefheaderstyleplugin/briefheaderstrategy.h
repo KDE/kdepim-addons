@@ -25,12 +25,12 @@ public:
         return "brief";
     }
 
-    QStringList headersToDisplay() const override
+    Q_REQUIRED_RESULT QStringList headersToDisplay() const override
     {
         return mHeadersToDisplay;
     }
 
-    DefaultPolicy defaultPolicy() const override
+    Q_REQUIRED_RESULT DefaultPolicy defaultPolicy() const override
     {
         return Hide;
     }

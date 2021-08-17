@@ -24,8 +24,8 @@ public:
 
     static QMap<QString, QString> listSubscriptions();
 
-    static QString localFilterPath();
-    static QString filterCharsFromFilename(const QString &name);
-    static QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QStringLiteral("(%1)"));
+    static Q_REQUIRED_RESULT QString localFilterPath();
+    static Q_REQUIRED_RESULT QString filterCharsFromFilename(const QString &name);
+    static Q_REQUIRED_RESULT QString ensureUniqueFilename(const QString &name, const QString &appendFormat = QStringLiteral("(%1)"));
 };
 }

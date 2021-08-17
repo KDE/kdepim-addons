@@ -24,7 +24,7 @@ public:
 
     Q_REQUIRED_RESULT QVector<Akonadi::Collection> collections() const;
 
-    Akonadi::Collection collection(qint64 id) const;
+    Q_REQUIRED_RESULT Akonadi::Collection collection(qint64 id) const;
 
 public Q_SLOTS:
     void addCalendar(const Akonadi::Collection &col);

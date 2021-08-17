@@ -24,7 +24,7 @@ public:
 
     void setPattern(AdBlockBlockableItemsWidget::TypeElement type, const QString &pattern);
 
-    QString filter() const;
+    Q_REQUIRED_RESULT QString filter() const;
 
 private:
     void slotUpdateFilter();

@@ -33,24 +33,24 @@ public:
     AdBlockSubscription *subscription() const;
     void setSubscription(AdBlockSubscription *subscription);
 
-    QString filter() const;
+    Q_REQUIRED_RESULT QString filter() const;
     void setFilter(const QString &filter);
 
-    bool isCssRule() const;
-    QString cssSelector() const;
+    Q_REQUIRED_RESULT bool isCssRule() const;
+    Q_REQUIRED_RESULT QString cssSelector() const;
 
-    bool isDocument() const;
-    bool isElemhide() const;
+    Q_REQUIRED_RESULT bool isDocument() const;
+    Q_REQUIRED_RESULT bool isElemhide() const;
 
-    bool isDomainRestricted() const;
-    bool isException() const;
+    Q_REQUIRED_RESULT bool isDomainRestricted() const;
+    Q_REQUIRED_RESULT bool isException() const;
 
-    bool isComment() const;
-    bool isEnabled() const;
+    Q_REQUIRED_RESULT bool isComment() const;
+    Q_REQUIRED_RESULT bool isEnabled() const;
     void setEnabled(bool enabled);
 
-    bool isSlow() const;
-    bool isInternalDisabled() const;
+    Q_REQUIRED_RESULT bool isSlow() const;
+    Q_REQUIRED_RESULT bool isInternalDisabled() const;
 
     bool urlMatch(const QUrl &url) const;
     bool networkMatch(const QWebEngineUrlRequestInfo &request, const QString &domain, const QString &encodedUrl) const;
@@ -69,7 +69,7 @@ protected:
     bool stringMatch(const QString &domain, const QString &encodedUrl) const;
     bool isMatchingDomain(const QString &domain, const QString &filter) const;
     bool isMatchingRegExpStrings(const QString &url) const;
-    QStringList parseRegExpFilter(const QString &filter) const;
+    Q_REQUIRED_RESULT QStringList parseRegExpFilter(const QString &filter) const;
 
 private:
     enum RuleType {

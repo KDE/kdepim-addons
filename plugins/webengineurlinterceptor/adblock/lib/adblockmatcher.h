@@ -29,8 +29,8 @@ public:
 
     const AdBlockRule *match(const QWebEngineUrlRequestInfo &request, const QString &urlDomain, const QString &urlString) const;
 
-    bool adBlockDisabledForUrl(const QUrl &url) const;
-    bool elemHideDisabledForUrl(const QUrl &url) const;
+    Q_REQUIRED_RESULT bool adBlockDisabledForUrl(const QUrl &url) const;
+    Q_REQUIRED_RESULT bool elemHideDisabledForUrl(const QUrl &url) const;
 
     QString elementHidingRules() const;
     QString elementHidingRulesForDomain(const QString &domain) const;

@@ -19,8 +19,8 @@ public:
     ~EmailLineEdit() override;
 
     void setText(const QString &str) override;
-    QString text() const override;
-    bool isValid() const override;
+    Q_REQUIRED_RESULT QString text() const override;
+    Q_REQUIRED_RESULT bool isValid() const override;
 
 private:
     void insertAddresses(const KContacts::Addressee::List &list);

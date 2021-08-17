@@ -40,8 +40,8 @@ public:
     void setAdblockResult(const QVector<AdBlock::AdBlockResult> &result);
     void saveFilters();
 
-    static QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
-    static QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
+    static Q_REQUIRED_RESULT QString elementType(AdBlockBlockableItemsWidget::TypeElement type);
+    static Q_REQUIRED_RESULT QString elementTypeToI18n(AdBlockBlockableItemsWidget::TypeElement type);
 
 private:
     void slotCustomContextMenuRequested(const QPoint &);

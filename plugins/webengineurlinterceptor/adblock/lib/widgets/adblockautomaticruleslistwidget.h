@@ -19,7 +19,7 @@ public:
     void setRules(const QString &rules);
 
     void setDisabledRules(const QStringList &disabledRules);
-    QStringList disabledRules() const;
+    Q_REQUIRED_RESULT QStringList disabledRules() const;
 
 private:
     void slotItemChanged(QListWidgetItem *item);

@@ -33,7 +33,7 @@ public:
     }
 
 private:
-    QString format(KMime::Message *message) const override;
+    Q_REQUIRED_RESULT QString format(KMime::Message *message) const override;
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 }
