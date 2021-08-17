@@ -16,8 +16,7 @@ using namespace EventViews::CalendarDecoration;
 class Picoftheday : public Decoration
 {
 public:
-    Picoftheday();
-    ~Picoftheday() override;
+    Picoftheday(QObject *parent = nullptr, const QVariantList &args = {});
 
     Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
 
@@ -27,17 +26,6 @@ public:
 
 private:
     QSize mThumbSize;
-};
-
-class PicofthedayFactory : public DecorationFactory
-{
-    Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.korganizer.Picoftheday")
-public:
-    Decoration *createPluginFactory() override
-    {
-        return new Picoftheday;
-    }
 };
 
 class POTDElement : public StoredElement

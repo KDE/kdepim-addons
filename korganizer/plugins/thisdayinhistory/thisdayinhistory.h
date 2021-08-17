@@ -15,10 +15,7 @@ using namespace EventViews::CalendarDecoration;
 class ThisDayInHistory : public Decoration
 {
 public:
-    ThisDayInHistory();
-    ~ThisDayInHistory() override
-    {
-    }
+    ThisDayInHistory(QObject *parent = nullptr, const QVariantList &args = {});
 
     Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
     Q_REQUIRED_RESULT Element::List createMonthElements(const QDate &) override;
@@ -27,15 +24,3 @@ public:
 
     Q_REQUIRED_RESULT QString info() const override;
 };
-
-class ThisDayInHistoryFactory : public DecorationFactory
-{
-    Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.korganizer.ThisDayInHistory")
-public:
-    Decoration *createPluginFactory() override
-    {
-        return new ThisDayInHistory;
-    }
-};
-

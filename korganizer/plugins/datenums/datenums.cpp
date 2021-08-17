@@ -13,8 +13,12 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-Datenums::Datenums()
+K_PLUGIN_FACTORY(DatenumsFactory, registerPlugin<Datenums>();)
+
+Datenums::Datenums(QObject *parent, const QVariantList &args)
+    : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
     KConfigGroup config(&_config, "Calendar/Datenums Plugin");
@@ -144,3 +148,5 @@ Element::List Datenums::createWeekElements(const QDate &date)
 
     return result;
 }
+
+#include "datenums.moc"

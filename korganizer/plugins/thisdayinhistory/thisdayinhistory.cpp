@@ -12,8 +12,12 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-ThisDayInHistory::ThisDayInHistory()
+K_PLUGIN_FACTORY(ThisDayInHistoryFactory, registerPlugin<ThisDayInHistory>();)
+
+ThisDayInHistory::ThisDayInHistory(QObject *parent, const QVariantList &args)
+    : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
     KConfigGroup config(&_config, "This Day in History Plugin");
@@ -53,3 +57,5 @@ Element::List ThisDayInHistory::createMonthElements(const QDate &date)
 
     return elements;
 }
+
+#include "thisdayinhistory.moc"

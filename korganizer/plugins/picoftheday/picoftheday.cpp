@@ -14,21 +14,21 @@
 #include <KConfigGroup>
 #include <KIO/Scheduler>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
 #include <QDomDocument>
 #include <chrono>
 
+K_PLUGIN_FACTORY(PicofthedayFactory, registerPlugin<Picoftheday>();)
+
 using namespace std::chrono_literals;
 // https://www.mediawiki.org/wiki/API:Picture_of_the_day_viewer
-Picoftheday::Picoftheday()
+Picoftheday::Picoftheday(QObject *parent, const QVariantList &args)
+    : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
     KConfigGroup config(&_config, "Picture of the Day Plugin");
     mThumbSize = config.readEntry("InitialThumbnailSize", QSize(120, 60));
-}
-
-Picoftheday::~Picoftheday()
-{
 }
 
 void Picoftheday::configure(QWidget *parent)
@@ -333,3 +333,5 @@ void POTDElement::setThumbnailSize(QSize size)
 {
     mThumbSize = size;
 }
+
+#include "picoftheday.moc"

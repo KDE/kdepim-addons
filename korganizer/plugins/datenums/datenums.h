@@ -15,10 +15,7 @@ using namespace EventViews::CalendarDecoration;
 class Datenums : public Decoration
 {
 public:
-    Datenums();
-    ~Datenums() override
-    {
-    }
+    Datenums(QObject *parent = nullptr, const QVariantList &args = {});
 
     void configure(QWidget *parent) override;
 
@@ -35,17 +32,6 @@ public:
 
 private:
     DayNumbers mDisplayedInfo;
-};
-
-class DatenumsFactory : public DecorationFactory
-{
-    Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.korganizer.Datenums")
-public:
-    Decoration *createPluginFactory() override
-    {
-        return new Datenums;
-    }
 };
 
 Q_DECLARE_OPERATORS_FOR_FLAGS(Datenums::DayNumbers)
