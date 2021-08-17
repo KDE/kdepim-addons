@@ -108,10 +108,27 @@ void ConfirmBeforeDeletingWidget::slotAddRule()
 {
     QPointer<ConfirmBeforeDeletingCreateRuleDialog> dlg = new ConfirmBeforeDeletingCreateRuleDialog(this);
     if (dlg->exec()) {
-        // TODO avoid duplicate rule
         const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info = dlg->info();
-        auto item = new QTreeWidgetItem(mTreeWidget);
-        initializeItem(item, dlg->info());
+        ConfirmBeforeDeletingRule r;
+        r.setPattern(info.pattern);
+        r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(info.ruleType));
+
+        bool ruleFound = false;
+        for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
+            QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
+            ConfirmBeforeDeletingRule currentRule;
+            currentRule.setPattern(item->text(1));
+            currentRule.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
+            if (currentRule == r) {
+                KMessageBox::information(this, i18n("Same rule already exists."), i18n("Create Rule"));
+                ruleFound = true;
+                break;
+            }
+        }
+        if (!ruleFound) {
+            auto item = new QTreeWidgetItem(mTreeWidget);
+            initializeItem(item, dlg->info());
+        }
     }
     delete dlg;
 }
