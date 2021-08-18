@@ -39,7 +39,7 @@ void ChangeCasePluginEditorInterface::exec()
 {
     switch (mType) {
     case Unknown:
-        qCDebug(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
+        qCWarning(KMAIL_EDITOR_CHANGECASE_PLUGIN_LOG) << " There is an error here. We can't call this plugin with unknown type";
         break;
     case UpperCase:
         upperCase();
