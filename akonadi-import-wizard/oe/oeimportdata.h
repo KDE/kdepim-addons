@@ -13,10 +13,10 @@ public:
     explicit OeImportData(QObject *parent, const QList<QVariant> & = QList<QVariant>());
     ~OeImportData() override;
 
-    TypeSupportedOptions supportedOption() override;
-    bool foundMailer() const override;
+    Q_REQUIRED_RESULT TypeSupportedOptions supportedOption() override;
+    Q_REQUIRED_RESULT bool foundMailer() const override;
 
-    bool importMails() override;
-    QString name() const override;
+    Q_REQUIRED_RESULT bool importMails() override;
+    Q_REQUIRED_RESULT QString name() const override;
 };
 

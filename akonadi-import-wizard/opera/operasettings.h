@@ -23,6 +23,6 @@ private:
     void readTransport(const KConfigGroup &grp);
     void readGlobalAccount(const KConfigGroup &grp);
     void readIdentity(const KConfigGroup &grp);
-    QString mFileName;
+    const QString mFileName;
 };
 

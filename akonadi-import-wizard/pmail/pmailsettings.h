@@ -20,6 +20,6 @@ public:
 
 private:
     void readIdentity(const KConfigGroup &group);
-    QString mFileName;
+    const QString mFileName;
 };
 

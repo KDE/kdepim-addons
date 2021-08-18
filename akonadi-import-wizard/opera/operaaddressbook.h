@@ -18,6 +18,6 @@ public:
 
 private:
     void appendContact(KContacts::Addressee *contact);
-    QString mFileName;
+    const QString mFileName;
 };
 

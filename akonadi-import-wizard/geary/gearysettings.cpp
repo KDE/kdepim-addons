@@ -15,8 +15,8 @@
 #include <QSettings>
 
 GearySettings::GearySettings(const QString &filename)
+    : settings(new QSettings(filename, QSettings::IniFormat, this))
 {
-    settings = new QSettings(filename, QSettings::IniFormat, this);
 }
 
 GearySettings::~GearySettings()

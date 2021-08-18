@@ -22,6 +22,6 @@ private:
     void readIdentity();
     void readGlobalSettings();
     void readTransport();
-    QSettings *settings = nullptr;
+    QSettings *const settings;
 };
 
