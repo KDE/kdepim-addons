@@ -39,6 +39,7 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     connect(mResult, &GrammarResultTextEdit::replaceText, this, &GrammarResultWidget::replaceText);
     connect(mResult, &GrammarResultTextEdit::checkAgain, this, &GrammarResultWidget::checkAgain);
     connect(mResult, &GrammarResultTextEdit::closeChecker, this, &GrammarResultWidget::closeChecker);
+    connect(mResult, &GrammarResultTextEdit::configure, this, &GrammarResultWidget::configure);
     mainLayout->addWidget(mResult);
 }
 

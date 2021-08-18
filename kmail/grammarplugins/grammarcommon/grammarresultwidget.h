@@ -28,6 +28,7 @@ Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
     void closeChecker();
+    void configure();
 
 protected:
     virtual void addExtraWidget();

@@ -27,6 +27,9 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
     connect(mGrammarResultWidget, &LanguageToolResultWidget::replaceText, this, &LanguageToolInterface::slotReplaceText);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::checkAgain, this, &LanguageToolInterface::checkAgain);
     connect(mGrammarResultWidget, &LanguageToolResultWidget::closeChecker, this, &LanguageToolInterface::closeChecker);
+    connect(mGrammarResultWidget, &LanguageToolResultWidget::configure, this, [this]() {
+        Q_EMIT configure(parentWidget());
+    });
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);

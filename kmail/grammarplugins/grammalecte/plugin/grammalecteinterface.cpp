@@ -26,6 +26,9 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     connect(mGrammarResultWidget, &GrammalecteResultWidget::replaceText, this, &GrammalecteInterface::slotReplaceText);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::checkAgain, this, &GrammalecteInterface::checkAgain);
     connect(mGrammarResultWidget, &GrammalecteResultWidget::closeChecker, this, &GrammalecteInterface::closeChecker);
+    connect(mGrammarResultWidget, &GrammalecteResultWidget::configure, this, [this]() {
+        Q_EMIT configure(parentWidget());
+    });
 
     layout->addWidget(mGrammarResultWidget);
     createAction(ac);

@@ -31,6 +31,7 @@ PimCommon::CustomToolsViewInterface *LanguageToolPlugin::createView(KActionColle
     connect(view, &LanguageToolInterface::toolsWasClosed, parent, &PimCommon::CustomToolsWidgetNg::slotToolsWasClosed);
     connect(view, &LanguageToolInterface::insertText, parent, &PimCommon::CustomToolsWidgetNg::insertText);
     connect(view, &LanguageToolInterface::activateView, parent, &PimCommon::CustomToolsWidgetNg::slotActivateView);
+    connect(view, &LanguageToolInterface::configure, this, &LanguageToolPlugin::showConfigureDialog);
     return view;
 }
 
