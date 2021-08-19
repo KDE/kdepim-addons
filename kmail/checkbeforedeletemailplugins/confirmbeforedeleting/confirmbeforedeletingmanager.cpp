@@ -5,9 +5,7 @@
 */
 
 #include "confirmbeforedeletingmanager.h"
-#include "confirmbeforedeletingrule.h"
 #include <KConfigGroup>
-#include <KSharedConfig>
 #include <QRegularExpression>
 
 ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
