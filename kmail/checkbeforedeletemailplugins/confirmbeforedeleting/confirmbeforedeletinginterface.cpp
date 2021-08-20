@@ -8,6 +8,9 @@
 #include "confirmbeforedeletingmessageboxdialog.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QAction>
+#include <QIcon>
+#include <QMenu>
 #include <QPointer>
 
 ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
@@ -17,6 +20,25 @@ ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
 
 ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
 {
+}
+
+QList<QAction *> ConfirmBeforeDeletingInterface::actions() const
+{
+    return mAction;
+}
+
+void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
+{
+    // TODO
+    if (ac) {
+        auto mainMenu = new QAction(i18n("External Script"), this);
+        auto menu = new QMenu;
+        auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
+        // TODO connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
+        menu->addAction(act);
+        mainMenu->setMenu(menu);
+        mAction << mainMenu;
+    }
 }
 
 Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::List &list)

@@ -8,7 +8,8 @@
 
 #include <MessageViewer/MessageViewerCheckBeforeDeletingInterface>
 #include <QObject>
-
+class QAction;
+class KActionCollection;
 class ConfirmBeforeDeletingInterface : public MessageViewer::MessageViewerCheckBeforeDeletingInterface
 {
     Q_OBJECT
@@ -17,4 +18,9 @@ public:
     ~ConfirmBeforeDeletingInterface() override;
 
     Q_REQUIRED_RESULT Akonadi::Item::List exec(const Akonadi::Item::List &list) override;
+    Q_REQUIRED_RESULT QList<QAction *> actions() const override;
+
+private:
+    void createActions(KActionCollection *ac);
+    QList<QAction *> mAction;
 };
