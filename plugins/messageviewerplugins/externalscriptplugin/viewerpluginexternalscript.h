@@ -17,9 +17,9 @@ public:
     explicit ViewerPluginExternalscript(QObject *parent = nullptr, const QList<QVariant> & = QList<QVariant>());
 
     ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
-    QString viewerPluginName() const override;
+    Q_REQUIRED_RESULT QString viewerPluginName() const override;
 
     void showConfigureDialog(QWidget *parent) override;
-    bool hasConfigureDialog() const override;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
 };
 }

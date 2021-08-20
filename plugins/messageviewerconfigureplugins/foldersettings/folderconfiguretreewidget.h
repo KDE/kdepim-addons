@@ -26,6 +26,6 @@ private:
     void slotCustomContextMenuRequested(const QPoint &);
     void changeFolderSelection(bool select);
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
-    MailCommon::FolderTreeWidget *mFolderTreeWidget = nullptr;
+    MailCommon::FolderTreeWidget *const mFolderTreeWidget;
 };
 

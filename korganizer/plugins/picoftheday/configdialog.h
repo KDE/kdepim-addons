@@ -27,6 +27,6 @@ protected Q_SLOTS:
     void slotOk();
 
 private:
-    QButtonGroup *mAspectRatioGroup = nullptr;
+    QButtonGroup *const mAspectRatioGroup;
 };
 

@@ -56,7 +56,7 @@ public:
 
     /**
       Returns the thumbnail URL for a given width corresponding to a full-size image URL. */
-    QUrl thumbnailUrl(const QUrl &fullSizeUrl, const int width = 0) const;
+    Q_REQUIRED_RESULT QUrl thumbnailUrl(const QUrl &fullSizeUrl, const int width = 0) const;
 
 Q_SIGNALS:
     void gotNewPixmap(const QPixmap &) const;

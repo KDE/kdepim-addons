@@ -23,6 +23,7 @@
 
 ConfigDialog::ConfigDialog(QWidget *parent)
     : QDialog(parent)
+    , mAspectRatioGroup(new QButtonGroup(this))
 {
     setWindowTitle(i18nc("@title:window", "Configure Picture of the Day"));
     auto mainLayout = new QVBoxLayout(this);
@@ -42,7 +43,6 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     topLayout->addWidget(aspectRatioBox);
     auto groupLayout = new QVBoxLayout(aspectRatioBox);
 
-    mAspectRatioGroup = new QButtonGroup(this);
     auto btn = new QRadioButton(i18n("Ignore aspect ratio"), aspectRatioBox);
     btn->setWhatsThis(
         i18n("The thumbnail will be scaled freely. "

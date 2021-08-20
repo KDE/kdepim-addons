@@ -16,6 +16,7 @@ using namespace MailMerge;
 MailMergeDialog::MailMergeDialog(QWidget *parent)
     : QDialog(parent)
     , mMailMergeWidget(new MailMergeWidget(this))
+    , mPreview(new QPushButton(i18n("Preview"), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Mail Merge"));
@@ -31,7 +32,7 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &MailMergeDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &MailMergeDialog::reject);
     mainLayout->addWidget(buttonBox);
-    mPreview = new QPushButton(i18n("Preview"), this);
+
     buttonBox->addButton(mPreview, QDialogButtonBox::ActionRole);
     connect(mPreview, &QPushButton::clicked, this, &MailMergeDialog::slotPreview);
     mainLayout->addStretch();

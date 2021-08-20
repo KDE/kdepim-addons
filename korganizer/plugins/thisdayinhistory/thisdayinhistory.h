@@ -20,12 +20,12 @@ public:
     {
     }
 
-    Element::List createDayElements(const QDate &) override;
-    Element::List createMonthElements(const QDate &) override;
+    Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
+    Q_REQUIRED_RESULT Element::List createMonthElements(const QDate &) override;
 
     //    void configure( QWidget *parent );
 
-    QString info() const override;
+    Q_REQUIRED_RESULT QString info() const override;
 };
 
 class ThisDayInHistoryFactory : public DecorationFactory

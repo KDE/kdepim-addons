@@ -37,17 +37,17 @@ public:
     static HebrewDate fromSecular(int year, int month, int day);
     static HebrewDate fromHebrew(int year, int month, int day);
 
-    int year() const;
-    int month() const;
-    int day() const;
-    int dayOfWeek() const;
+    Q_REQUIRED_RESULT int year() const;
+    Q_REQUIRED_RESULT int month() const;
+    Q_REQUIRED_RESULT int day() const;
+    Q_REQUIRED_RESULT int dayOfWeek() const;
 
-    int hebrewMonthLength() const;
-    int secularMonthLength() const;
-    bool isOnHebrewLeapYear() const;
-    bool isOnSecularLeapYear() const;
-    int kvia() const;
-    int hebrewDayNumber() const;
+    Q_REQUIRED_RESULT int hebrewMonthLength() const;
+    Q_REQUIRED_RESULT int secularMonthLength() const;
+    Q_REQUIRED_RESULT bool isOnHebrewLeapYear() const;
+    Q_REQUIRED_RESULT bool isOnSecularLeapYear() const;
+    Q_REQUIRED_RESULT int kvia() const;
+    Q_REQUIRED_RESULT int hebrewDayNumber() const;
 
 private:
     int mYear, mMonth, mDay, mDayOfWeek;

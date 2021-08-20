@@ -14,6 +14,7 @@ using namespace MailMerge;
 
 SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     : QDialog(parent)
+    , mUrlRequester(new KUrlRequester(this))
 {
     setWindowTitle(i18nc("@title:window", "Attachment"));
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
@@ -30,7 +31,6 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     auto lab = new QLabel(i18n("Select attachment:"), this);
     lab->setObjectName(QStringLiteral("selectattachment_label"));
     vbox->addWidget(lab);
-    mUrlRequester = new KUrlRequester(this);
     mUrlRequester->setMode(KFile::LocalOnly | KFile::ExistingOnly);
     mUrlRequester->setObjectName(QStringLiteral("urlrequester"));
     vbox->addWidget(mUrlRequester);

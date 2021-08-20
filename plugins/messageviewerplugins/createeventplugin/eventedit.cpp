@@ -38,6 +38,11 @@ using namespace MessageViewer;
 
 EventEdit::EventEdit(QWidget *parent)
     : QWidget(parent)
+    , mEventEdit(new QLineEdit(this))
+    , mStartDateTimeEdit(new EventDateTimeWidget(this))
+    , mEndDateTimeEdit(new EventDateTimeWidget(this))
+    , mSaveButton(new QPushButton(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("&Save"), this))
+    , mOpenEditorButton(new QPushButton(i18n("Open &Editor..."), this))
 {
     auto vbox = new QVBoxLayout(this);
     vbox->setContentsMargins(5, 5, 5, 5);
@@ -51,7 +56,6 @@ EventEdit::EventEdit(QWidget *parent)
     auto lab = new QLabel(i18n("Event:"), this);
     hbox->addWidget(lab);
 
-    mEventEdit = new QLineEdit(this);
     mEventEdit->setClearButtonEnabled(true);
     mEventEdit->setObjectName(QStringLiteral("eventedit"));
     mEventEdit->setFocus();
@@ -85,7 +89,6 @@ EventEdit::EventEdit(QWidget *parent)
     lab = new QLabel(i18n("Start:"), this);
     hbox->addWidget(lab);
     QDateTime currentDateTime = QDateTime::currentDateTime();
-    mStartDateTimeEdit = new EventDateTimeWidget(this);
     mStartDateTimeEdit->setObjectName(QStringLiteral("startdatetimeedit"));
     mStartDateTimeEdit->setDateTime(currentDateTime);
 #ifndef QT_NO_ACCESSIBILITY
@@ -98,7 +101,6 @@ EventEdit::EventEdit(QWidget *parent)
 
     lab = new QLabel(i18n("End:"), this);
     hbox->addWidget(lab);
-    mEndDateTimeEdit = new EventDateTimeWidget(this);
     mEndDateTimeEdit->setObjectName(QStringLiteral("enddatetimeedit"));
     mEndDateTimeEdit->setDateTime(currentDateTime.addSecs(3600));
 #ifndef QT_NO_ACCESSIBILITY
@@ -117,7 +119,6 @@ EventEdit::EventEdit(QWidget *parent)
 
     hbox->addStretch(1);
 
-    mSaveButton = new QPushButton(QIcon::fromTheme(QStringLiteral("appointment-new")), i18n("&Save"), this);
     mSaveButton->setObjectName(QStringLiteral("save-button"));
     mSaveButton->setEnabled(false);
 #ifndef QT_NO_ACCESSIBILITY
@@ -126,7 +127,6 @@ EventEdit::EventEdit(QWidget *parent)
     connect(mSaveButton, &QPushButton::clicked, this, &EventEdit::slotReturnPressed);
     hbox->addWidget(mSaveButton);
 
-    mOpenEditorButton = new QPushButton(i18n("Open &Editor..."), this);
 #ifndef QT_NO_ACCESSIBILITY
     mOpenEditorButton->setAccessibleDescription(i18n("Open event editor, where more details can be changed."));
 #endif

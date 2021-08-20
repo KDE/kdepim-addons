@@ -60,7 +60,7 @@ protected:
 private:
     void insertResult(const CalendarEvents::EventData &result);
 
-    bool visit(const KCalendarCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
+    Q_REQUIRED_RESULT bool visit(const KCalendarCore::Incidence::Ptr &incidence, CalendarEvents::EventData::EventType eventType);
     CalendarEvents::EventData incidenceData(const KCalendarCore::Incidence::Ptr &incidence) const;
 
     QMultiHash<QDate, CalendarEvents::EventData> mResults;

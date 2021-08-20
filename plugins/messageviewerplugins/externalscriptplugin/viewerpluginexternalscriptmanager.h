@@ -20,7 +20,7 @@ public:
     static ViewerPluginExternalScriptManager *self();
 
     void readExternalScriptInfo();
-    QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
+    Q_REQUIRED_RESULT QVector<ViewerPluginExternalScriptInfo> scriptInfos() const;
 
 private:
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;

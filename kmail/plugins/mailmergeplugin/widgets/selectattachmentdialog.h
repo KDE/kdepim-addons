@@ -22,7 +22,7 @@ public:
     Q_REQUIRED_RESULT QString attachmentPath() const;
 
 private:
-    KUrlRequester *mUrlRequester = nullptr;
+    KUrlRequester *const mUrlRequester;
 };
 }
 

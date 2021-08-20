@@ -21,7 +21,7 @@ public:
 private:
     void slotPreview();
     MailMergeWidget *const mMailMergeWidget;
-    QPushButton *mPreview = nullptr;
+    QPushButton *const mPreview;
 };
 }
 

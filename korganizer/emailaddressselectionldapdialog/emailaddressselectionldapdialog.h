@@ -24,7 +24,7 @@ public:
     ~EmailAddressSelectionLdapDialog() override;
 
     Q_REQUIRED_RESULT Akonadi::EmailAddressSelection::List selectedAddresses() const override;
-    Akonadi::EmailAddressSelectionWidget *view() const override;
+    Q_REQUIRED_RESULT Akonadi::EmailAddressSelectionWidget *view() const override;
 
 private:
     void writeConfig();

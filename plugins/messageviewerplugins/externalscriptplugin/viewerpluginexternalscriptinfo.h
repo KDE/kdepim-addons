@@ -12,30 +12,30 @@ class ViewerPluginExternalScriptInfo
 {
 public:
     ViewerPluginExternalScriptInfo();
-    QString name() const;
+    Q_REQUIRED_RESULT QString name() const;
     void setName(const QString &name);
 
-    QString commandLine() const;
+    Q_REQUIRED_RESULT QString commandLine() const;
     void setCommandLine(const QString &commandLine);
 
-    QString executable() const;
+    Q_REQUIRED_RESULT QString executable() const;
     void setExecutable(const QString &executable);
 
-    QString description() const;
+    Q_REQUIRED_RESULT QString description() const;
     void setDescription(const QString &description);
 
-    QString icon() const;
+    Q_REQUIRED_RESULT QString icon() const;
     void setIcon(const QString &icon);
 
-    bool isValid() const;
+    Q_REQUIRED_RESULT bool isValid() const;
 
-    bool isReadOnly() const;
+    Q_REQUIRED_RESULT bool isReadOnly() const;
     void setIsReadOnly(bool isReadOnly);
 
-    QString fileName() const;
+    Q_REQUIRED_RESULT QString fileName() const;
     void setFileName(const QString &fileName);
 
-    bool operator==(const ViewerPluginExternalScriptInfo &other) const;
+    Q_REQUIRED_RESULT bool operator==(const ViewerPluginExternalScriptInfo &other) const;
 
 private:
     QString mCommandLine;

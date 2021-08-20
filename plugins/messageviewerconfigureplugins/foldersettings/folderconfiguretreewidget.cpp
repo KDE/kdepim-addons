@@ -17,15 +17,15 @@
 FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     : QWidget(parent)
     , mFolderSettingFilterProxyModel(new FolderSettingFilterProxyModel(this))
+    , mFolderTreeWidget(new MailCommon::FolderTreeWidget(this,
+                                                         nullptr,
+                                                         MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
+                                                                                                       | MailCommon::FolderTreeWidget::HideStatistics
+                                                                                                       | MailCommon::FolderTreeWidget::HideHeaderViewMenu)))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins({});
-    mFolderTreeWidget = new MailCommon::FolderTreeWidget(this,
-                                                         nullptr,
-                                                         MailCommon::FolderTreeWidget::TreeViewOptions(MailCommon::FolderTreeWidget::UseDistinctSelectionModel
-                                                                                                       | MailCommon::FolderTreeWidget::HideStatistics
-                                                                                                       | MailCommon::FolderTreeWidget::HideHeaderViewMenu));
     mFolderTreeWidget->setObjectName(QStringLiteral("foldertreewidget"));
     mFolderTreeWidget->folderTreeView()->setDragEnabled(false);
     mFolderTreeWidget->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);

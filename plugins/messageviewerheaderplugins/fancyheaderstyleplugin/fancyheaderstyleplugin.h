@@ -22,12 +22,12 @@ public:
     HeaderStyle *headerStyle() const override;
     HeaderStrategy *headerStrategy() const override;
     HeaderStyleInterface *createView(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac, QObject *parent = nullptr) override;
-    QString name() const override;
-    int elidedTextSize() const override;
-    QString extraScreenCss(const QString &headerFont) const override;
-    QString extraPrintCss(const QString &headerFont) const override;
-    QString extraCommonCss(const QString &headerFont) const override;
-    QString attachmentHtml() const override;
+    Q_REQUIRED_RESULT QString name() const override;
+    Q_REQUIRED_RESULT int elidedTextSize() const override;
+    Q_REQUIRED_RESULT QString extraScreenCss(const QString &headerFont) const override;
+    Q_REQUIRED_RESULT QString extraPrintCss(const QString &headerFont) const override;
+    Q_REQUIRED_RESULT QString extraCommonCss(const QString &headerFont) const override;
+    Q_REQUIRED_RESULT QString attachmentHtml() const override;
 
 private:
     HeaderStyle *const mHeaderStyle;
