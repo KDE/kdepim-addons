@@ -11,4 +11,4 @@ macro(add_foldersettings_plugin_unittest _source )
 endmacro ()
 
 
-add_foldersettings_plugin_unittest(folderconfiguresettingswidgettest.cpp)
+#add_foldersettings_plugin_unittest(folderconfiguresettingswidgettest.cpp)
