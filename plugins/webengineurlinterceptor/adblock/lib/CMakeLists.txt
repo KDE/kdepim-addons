@@ -1,9 +1,12 @@
 # SPDX-FileCopyrightText: 2015-2021 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-set(messageviewer_adblock_lib_common_SRCS)
-ecm_qt_declare_logging_category(messageviewer_adblock_lib_common_SRCS HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
+add_library(adblocklibprivate ${adblocklibprivate_SRCS})
+ecm_qt_declare_logging_category(adblocklibprivate HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor)
 
-set(adblocklibprivate_widget_SRCS
+kconfig_add_kcfg_files(adblocklibprivate_kcfg_SOURCES
+    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
+    )
+target_sources(adblocklibprivate PRIVATE
     widgets/adblockblockableitemsdialog.cpp
     widgets/adblockblockableitemswidget.cpp
     widgets/adblockcreatefilterdialog.cpp
@@ -14,13 +17,7 @@ set(adblocklibprivate_widget_SRCS
     widgets/adblocklistwidget.cpp
     widgets/adblocksettingwidget.cpp
     widgets/adblockshowlistdialog.cpp
-    )
-
-set(adblocklibprivate_job_SRCS
     adblockblockableitemsjob.cpp
-    )
-
-set(adblocklibprivate_SRCS
     adblockmanager.cpp
     adblocksearchtree.cpp
     adblockrule.cpp
@@ -28,19 +25,13 @@ set(adblocklibprivate_SRCS
     adblockutil.cpp
     adblockmatcher.cpp
     adblocksubscription.cpp
-    ${adblocklibprivate_widget_SRCS}
-    ${messageviewer_adblock_lib_common_SRCS}
-    ${adblocklibprivate_job_SRCS}
-    )
-
-kconfig_add_kcfg_files(adblocklibprivate_SRCS
-    settings/globalsettings_webengineurlinterceptoradblock.kcfgc
+    ${adblocklibprivate_kcfg_SOURCES}
     )
 
 
-ki18n_wrap_ui(adblocklibprivate_SRCS widgets/ui/adblockcreatefilterwidget.ui widgets/ui/settings_adblock.ui)
 
-add_library(adblocklibprivate ${adblocklibprivate_SRCS})
+ki18n_wrap_ui(adblocklibprivate widgets/ui/adblockcreatefilterwidget.ui widgets/ui/settings_adblock.ui)
+
 generate_export_header(adblocklibprivate BASE_NAME adblocklib)
 
 target_link_libraries(adblocklibprivate
