@@ -31,7 +31,7 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
 {
     // TODO
     if (ac) {
-        auto mainMenu = new QAction(i18n("External Script"), this);
+        auto mainMenu = new QAction(i18n("Confirm Before Deleting"), this);
         auto menu = new QMenu;
         auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
         connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
