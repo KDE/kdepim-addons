@@ -77,6 +77,7 @@ void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *it
 #else
     if (auto plugin = KPluginFactory::instantiatePlugin<ShortUrlEnginePlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
         item->plugin = plugin;
+        item->plugin->setPluginName(item->pluginName);
     }
 #endif
 }
