@@ -591,7 +591,7 @@ void MergeContactsTest::shouldMergeTitle_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
-    QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
+    QTest::newRow("empty") << QString() << QString() << QString() << false << QString();
     QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
@@ -641,7 +641,7 @@ void MergeContactsTest::shouldMergeDepartement_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
-    QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
+    QTest::newRow("empty") << QString() << QString() << QString() << false << QString();
     QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
@@ -949,7 +949,7 @@ void MergeContactsTest::shouldMergeFamilyname_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
-    QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
+    QTest::newRow("empty") << QString() << QString() << QString() << false << QString();
     QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
@@ -999,7 +999,7 @@ void MergeContactsTest::shouldMergeBlogFeed_data()
     QTest::addColumn<QString>("nameItemC");
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QString>("result");
-    QTest::newRow("empty") << QString() << QString() << QString() << true << QString();
+    QTest::newRow("empty") << QString() << QString() << QString() << false << QString();
     QTest::newRow("noWithOneNameConflict") << QString() << QString() << QStringLiteral("foo") << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict1") << QString() << QStringLiteral("foo") << QString() << false << QStringLiteral("foo");
     QTest::newRow("noWithOneNameConflict2") << QStringLiteral("foo") << QString() << QString() << false << QStringLiteral("foo");
@@ -1051,7 +1051,7 @@ void MergeContactsTest::shouldMergeHomePage_data()
     QTest::addColumn<QUrl>("nameItemC");
     QTest::addColumn<bool>("isEmpty");
     QTest::addColumn<QUrl>("result");
-    QTest::newRow("noConflict") << QUrl() << QUrl() << QUrl() << true << QUrl();
+    QTest::newRow("noConflict") << QUrl() << QUrl() << QUrl() << false << QUrl();
     QTest::newRow("noWithOneNameConflict") << QUrl() << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << false
                                            << QUrl(QStringLiteral("http://www.kde.org"));
     QTest::newRow("noWithOneNameConflict1") << QUrl() << QUrl(QStringLiteral("http://www.kde.org")) << QUrl() << false
