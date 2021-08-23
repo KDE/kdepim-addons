@@ -28,6 +28,8 @@ void ConfirmBeforeDeletingPlugin::showConfigureDialog(QWidget *parent)
 
 MessageViewer::MessageViewerCheckBeforeDeletingInterface *ConfirmBeforeDeletingPlugin::createInterface(QObject *parent)
 {
+    auto interface = new ConfirmBeforeDeletingInterface(parent);
+    connect(interface, &ConfirmBeforeDeletingInterface::configure, this, &ConfirmBeforeDeletingPlugin::showConfigureDialog);
     return new ConfirmBeforeDeletingInterface(parent);
 }
 

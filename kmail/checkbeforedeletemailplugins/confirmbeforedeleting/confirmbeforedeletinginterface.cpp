@@ -34,11 +34,16 @@ void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
         auto mainMenu = new QAction(i18n("External Script"), this);
         auto menu = new QMenu;
         auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);
-        // TODO connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
+        connect(act, &QAction::triggered, this, &ConfirmBeforeDeletingInterface::slotConfigure);
         menu->addAction(act);
         mainMenu->setMenu(menu);
         mAction << mainMenu;
     }
+}
+
+void ConfirmBeforeDeletingInterface::slotConfigure()
+{
+    Q_EMIT configure(parentWidget());
 }
 
 Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::List &list)

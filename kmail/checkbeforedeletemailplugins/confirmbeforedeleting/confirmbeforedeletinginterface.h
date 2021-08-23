@@ -21,6 +21,7 @@ public:
     Q_REQUIRED_RESULT QList<QAction *> actions() const override;
 
 private:
+    void slotConfigure();
     void createActions(KActionCollection *ac);
     QList<QAction *> mAction;
 };
