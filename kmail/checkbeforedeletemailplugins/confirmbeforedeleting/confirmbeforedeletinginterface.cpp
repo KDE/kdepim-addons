@@ -29,7 +29,6 @@ QList<QAction *> ConfirmBeforeDeletingInterface::actions() const
 
 void ConfirmBeforeDeletingInterface::createActions(KActionCollection *ac)
 {
-    // TODO
     if (ac) {
         auto mainMenu = new QAction(i18n("Confirm Before Deleting"), this);
         auto menu = new QMenu;
