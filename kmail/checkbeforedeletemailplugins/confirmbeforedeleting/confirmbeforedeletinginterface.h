@@ -19,9 +19,9 @@ public:
 
     Q_REQUIRED_RESULT Akonadi::Item::List exec(const Akonadi::Item::List &list) override;
     Q_REQUIRED_RESULT QList<QAction *> actions() const override;
+    void createActions(KActionCollection *ac) override;
 
 private:
     void slotConfigure();
-    void createActions(KActionCollection *ac);
     QList<QAction *> mAction;
 };
