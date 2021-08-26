@@ -129,19 +129,31 @@ bool ItineraryRenderer::render(const MimeTreeParser::MessagePartPtr &msgPart,
             switch (ticket.ticketTokenType()) {
             case Ticket::AztecCode:
                 barcode.reset(Prison::createBarcode(Prison::Aztec));
-                barcode->setData(ticket.ticketTokenData());
                 break;
             case Ticket::QRCode:
                 barcode.reset(Prison::createBarcode(Prison::QRCode));
-                barcode->setData(ticket.ticketTokenData());
                 break;
             case Ticket::DataMatrix:
                 barcode.reset(Prison::createBarcode(Prison::DataMatrix));
-                barcode->setData(ticket.ticketTokenData());
+                break;
+            case Ticket::Code128:
+                barcode.reset(Prison::createBarcode(Prison::Code128));
+                break;
+            case Ticket::PDF417:
+                // waiting for https://invent.kde.org/frameworks/prison/-/merge_requests/6
+                // barcode.reset(Prison::createBarcode(Prison::PDF417));
+                break;
             default:
                 break;
             }
             if (barcode) {
+                const QVariant barcodeContent = ticket.ticketTokenData();
+                if (barcodeContent.type() == QVariant::String) {
+                    barcode->setData(barcodeContent.toString());
+                } else {
+                    barcode->setData(barcodeContent.toByteArray());
+                }
+
                 const auto img = barcode->toImage(barcode->preferredSize(qGuiApp->devicePixelRatio()));
                 const QString fileName = dir + QLatin1String("/ticketToken") + QString::number(ticketTokenId++) + QLatin1String(".png");
                 img.save(fileName);
