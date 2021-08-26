@@ -6,6 +6,7 @@
 #include "confirmbeforedeletinginterface.h"
 #include "confirmbeforedeletingmanager.h"
 #include "confirmbeforedeletingmessageboxdialog.h"
+#include "confirmbeforedeletingplugin_debug.h"
 #include <KLocalizedString>
 #include <KMessageBox>
 #include <QAction>
@@ -83,7 +84,7 @@ Akonadi::Item::List ConfirmBeforeDeletingInterface::exec(const Akonadi::Item::Li
                 delete dlg;
                 break;
             } else {
-                qWarning() << " StandardButton is invalid " << button << " .It's a bug!";
+                qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << " StandardButton is invalid " << button << " .It's a bug!";
             }
         } else {
             lst << item;

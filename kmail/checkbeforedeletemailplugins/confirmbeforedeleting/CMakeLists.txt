@@ -19,8 +19,6 @@ ecm_qt_declare_logging_category(kmailconfirmbeforedeleting HEADER confirmbefored
     EXPORT KDEPIMADDONS
     )
 
-
-
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmailconfirmbeforedeleting PROPERTIES UNITY_BUILD ON)
 endif()
@@ -48,6 +46,11 @@ target_sources(kmail_confirmbeforedeletingplugin PRIVATE
     confirmbeforedeletingplugin.cpp
     )
 
+ecm_qt_declare_logging_category(kmail_confirmbeforedeletingplugin HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin
+    DESCRIPTION "kdepim-addons (Confirm Before Deleting email)"
+    OLD_CATEGORY_NAMES log_kmail_confirmbeforedeletingplugin
+    EXPORT KDEPIMADDONS
+    )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kmail_confirmbeforedeletingplugin PROPERTIES UNITY_BUILD ON)
