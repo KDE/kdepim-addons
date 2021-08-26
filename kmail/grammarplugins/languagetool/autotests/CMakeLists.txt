@@ -3,7 +3,7 @@
 
 add_definitions( -DLANGUAGETOOL_DATA_DIR="${CMAKE_CURRENT_SOURCE_DIR}/data")
 macro(add_kmail_languagetool_unittest _source)
-    set( _test ${_source} ${_additional})
+    set( _test ${_source})
     get_filename_component(_name ${_source} NAME_WE)
     add_executable( ${_name} ${_test} )
     add_test(NAME ${_name} COMMAND ${_name} )
