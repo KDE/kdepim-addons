@@ -30,7 +30,7 @@ MessageViewer::MessageViewerCheckBeforeDeletingInterface *ConfirmBeforeDeletingP
 {
     auto interface = new ConfirmBeforeDeletingInterface(parent);
     connect(interface, &ConfirmBeforeDeletingInterface::configure, this, &ConfirmBeforeDeletingPlugin::showConfigureDialog);
-    return new ConfirmBeforeDeletingInterface(parent);
+    return interface;
 }
 
 #include "confirmbeforedeletingplugin.moc"
