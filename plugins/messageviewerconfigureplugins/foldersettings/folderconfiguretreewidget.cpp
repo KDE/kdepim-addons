@@ -29,11 +29,6 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     mFolderTreeWidget->setObjectName(QStringLiteral("foldertreewidget"));
     mFolderTreeWidget->folderTreeView()->setDragEnabled(false);
     mFolderTreeWidget->folderTreeView()->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    mFolderTreeWidget->folderTreeView()->setContextMenuPolicy(Qt::CustomContextMenu);
-    connect(mFolderTreeWidget->folderTreeView(),
-            &MailCommon::FolderTreeView::customContextMenuRequested,
-            this,
-            &FolderConfigureTreeWidget::slotCustomContextMenuRequested);
 
     auto ftv = mFolderTreeWidget->folderTreeView();
     auto sourceModel = ftv->model();
@@ -80,14 +75,6 @@ void FolderConfigureTreeWidget::changeFolderSelection(bool select)
     for (const QModelIndex &selectedIndex : indexes) {
         mFolderSettingFilterProxyModel->setData(selectedIndex, select ? Qt::Checked : Qt::Unchecked, Qt::CheckStateRole);
     }
-}
-
-void FolderConfigureTreeWidget::slotCustomContextMenuRequested(const QPoint &)
-{
-    QMenu menu(this);
-    // if (!menu.isEmpty()) {
-    menu.exec(QCursor::pos());
-    //}
 }
 
 Akonadi::Collection::List FolderConfigureTreeWidget::listCollections() const

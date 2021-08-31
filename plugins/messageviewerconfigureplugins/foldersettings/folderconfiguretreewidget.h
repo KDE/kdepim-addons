@@ -23,7 +23,6 @@ public:
     Q_REQUIRED_RESULT Akonadi::Collection::List listCollections() const;
 
 private:
-    void slotCustomContextMenuRequested(const QPoint &);
     void changeFolderSelection(bool select);
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
     MailCommon::FolderTreeWidget *const mFolderTreeWidget;
