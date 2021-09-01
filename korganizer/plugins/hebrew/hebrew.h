@@ -16,8 +16,7 @@ using namespace EventViews::CalendarDecoration;
 class Hebrew : public Decoration
 {
 public:
-    Hebrew();
-    ~Hebrew() override;
+    Hebrew(QObject *parent = nullptr, const QVariantList &args = {});
 
     void configure(QWidget *parent) override;
 
@@ -29,15 +28,3 @@ private:
     bool showParsha, showChol, showOmer;
     bool areWeInIsrael;
 };
-
-class HebrewFactory : public DecorationFactory
-{
-    Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.korganizer.Hebrew")
-public:
-    Decoration *createPluginFactory() override
-    {
-        return new Hebrew;
-    }
-};
-

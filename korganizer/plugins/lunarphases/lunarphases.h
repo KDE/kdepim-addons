@@ -12,25 +12,10 @@ using namespace EventViews::CalendarDecoration;
 class Lunarphases : public Decoration
 {
 public:
-    Lunarphases();
-    ~Lunarphases() override
-    {
-    }
+    Lunarphases(QObject *parent = nullptr, const QVariantList &args = {});
 
     Q_REQUIRED_RESULT Element::List createDayElements(const QDate &) override;
     Q_REQUIRED_RESULT Element::List createWeekElements(const QDate &) override;
 
     Q_REQUIRED_RESULT QString info() const override;
 };
-
-class LunarphasesFactory : public DecorationFactory
-{
-    Q_OBJECT
-    Q_PLUGIN_METADATA(IID "org.kde.korganizer.Lunarphases")
-public:
-    Decoration *createPluginFactory() override
-    {
-        return new Lunarphases;
-    }
-};
-

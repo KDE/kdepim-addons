@@ -17,10 +17,14 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <QLocale>
+#include <KPluginFactory>
+
+K_PLUGIN_FACTORY(HebrewFactory, registerPlugin<Hebrew>();)
 
 using namespace EventViews::CalendarDecoration;
 
-Hebrew::Hebrew()
+Hebrew::Hebrew(QObject *parent, const QVariantList &args)
+    : Decoration(parent, args)
 {
     KConfig config(QStringLiteral("korganizerrc"), KConfig::NoGlobals);
 
@@ -29,10 +33,6 @@ Hebrew::Hebrew()
     showParsha = group.readEntry("ShowParsha", true);
     showChol = group.readEntry("ShowChol_HaMoed", true);
     showOmer = group.readEntry("ShowOmer", true);
-}
-
-Hebrew::~Hebrew()
-{
 }
 
 void Hebrew::configure(QWidget *parent)
@@ -66,3 +66,5 @@ QString Hebrew::info() const
 {
     return i18n("This plugin provides the date in the Jewish calendar.");
 }
+
+#include "hebrew.moc"

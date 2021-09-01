@@ -11,8 +11,12 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
+#include <KPluginFactory>
 
-Lunarphases::Lunarphases()
+K_PLUGIN_FACTORY(LunarphasesFactory, registerPlugin<Lunarphases>();)
+
+Lunarphases::Lunarphases(QObject *parent, const QVariantList &args)
+    : Decoration(parent, args)
 {
     KConfig _config(QStringLiteral("korganizerrc"));
     KConfigGroup config(&_config, "Lunar Phases Plugin");
@@ -47,3 +51,5 @@ Element::List Lunarphases::createWeekElements(const QDate &date)
 
     return result;
 }
+
+#include "lunarphases.moc"
