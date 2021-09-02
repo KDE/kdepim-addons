@@ -110,7 +110,9 @@ public:
                          label = MessageCore::StringUtil::quoteHtmlChars(label, true);
 
                          const QString dir = mp->nodeHelper()->createTempDir(QLatin1String("ktnef-") + QString::number(i));
-                         parser.extractFileTo(att->name(), dir);
+                         if (!parser.extractFileTo(att->name(), dir)) {
+                             qCDebug(MS_TNEF_LOG) << "No possible to extract file:" << att->name();
+                         }
 
                          // falling back to internal TNEF attachement name if no filename is given for the attached file
                          // this follows the logic of KTNEFParser::extractFileTo(...)
