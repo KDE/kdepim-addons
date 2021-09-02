@@ -20,7 +20,7 @@ public:
     MemoryCalendarMemento();
 
     Q_REQUIRED_RESULT bool finished() const;
-    Akonadi::CalendarBase::Ptr calendar() const;
+    Q_REQUIRED_RESULT Akonadi::CalendarBase::Ptr calendar() const;
 
     void detach() override;
 

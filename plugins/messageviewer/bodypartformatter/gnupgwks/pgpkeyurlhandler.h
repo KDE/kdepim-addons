@@ -7,7 +7,8 @@
 #pragma once
 
 #include <MessageViewer/BodyPartURLHandler>
-
+// needed for Q_REQUIRED_RESULT
+#include <QtGlobal>
 class QUrlQuery;
 
 class ApplicationPgpKeyUrlHandler : public MessageViewer::Interface::BodyPartURLHandler
@@ -20,6 +21,6 @@ public:
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
 private:
-    QUrlQuery decodePath(const QString &path) const;
+    Q_REQUIRED_RESULT QUrlQuery decodePath(const QString &path) const;
 };
 
