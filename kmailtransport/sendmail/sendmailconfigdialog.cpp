@@ -18,10 +18,10 @@ using namespace MailTransport;
 SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, QWidget *parent)
     : QDialog(parent)
     , mTransport(transport)
+    , mConfigWidget(new MailTransport::SendmailConfigWidget(transport, this))
 {
     Q_ASSERT(transport);
     auto mainLayout = new QVBoxLayout(this);
-    mConfigWidget = new MailTransport::SendmailConfigWidget(transport, this);
     mConfigWidget->setObjectName(QStringLiteral("sendmailconfigwidget"));
     mainLayout->addWidget(mConfigWidget);
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);

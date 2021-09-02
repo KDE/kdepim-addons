@@ -25,7 +25,7 @@ private:
     void slotEnabledOkButton(bool);
 
     MailTransport::Transport *const mTransport;
-    MailTransport::SendmailConfigWidget *mConfigWidget = nullptr;
+    MailTransport::SendmailConfigWidget *const mConfigWidget;
     QPushButton *mOkButton = nullptr;
 };
 
