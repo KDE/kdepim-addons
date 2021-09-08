@@ -6,8 +6,8 @@
 
 #include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsconfiguretab.h"
-#include <AkonadiCore/Collection>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionComboBox>
 #include <KSharedConfig>
 #include <QCheckBox>
 #include <QVBoxLayout>

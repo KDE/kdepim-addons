@@ -6,7 +6,7 @@
 
 #include "mergecontactwidgetlisttest.h"
 #include "../manualmerge/mergecontactwidgetlist.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <QTest>
 using namespace KContacts;
 

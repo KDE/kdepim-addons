@@ -14,8 +14,8 @@
 #include <KJob>
 #include <KLocalizedString>
 
-#include <AkonadiCore/ItemFetchJob>
-#include <AkonadiCore/ItemFetchScope>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>

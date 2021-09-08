@@ -6,8 +6,8 @@
 
 #include "automaticaddcontactstabwidgettest.h"
 #include "../automaticaddcontactstabwidget.h"
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/EntityTreeModel>
 #include <KContacts/Addressee>
 #include <QCheckBox>
 #include <QLabel>

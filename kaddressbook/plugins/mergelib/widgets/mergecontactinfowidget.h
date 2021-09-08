@@ -8,7 +8,7 @@
 
 #include <QWidget>
 
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 class QLabel;
 namespace KAddressBookGrantlee
 {

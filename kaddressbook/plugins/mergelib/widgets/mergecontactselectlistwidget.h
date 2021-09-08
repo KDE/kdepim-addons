@@ -8,7 +8,7 @@
 
 #include "job/mergecontacts.h"
 #include "kaddressbookmergelib_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <QIcon>
 #include <QWidget>
 class QLabel;

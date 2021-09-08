@@ -10,7 +10,7 @@
 #include <KLocalizedString>
 #include <QSplitter>
 
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/CollectionComboBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>

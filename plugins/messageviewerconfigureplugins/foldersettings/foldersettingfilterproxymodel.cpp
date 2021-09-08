@@ -5,7 +5,7 @@
 */
 
 #include "foldersettingfilterproxymodel.h"
-#include <AkonadiCore/EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
 
 FolderSettingFilterProxyModel::FolderSettingFilterProxyModel(QObject *parent)
     : QSortFilterProxyModel(parent)

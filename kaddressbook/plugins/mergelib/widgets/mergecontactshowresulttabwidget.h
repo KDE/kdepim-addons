@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <AkonadiCore/item.h>
+#include <Akonadi/Item>
 #include <QTabWidget>
 
 namespace KABMergeContacts

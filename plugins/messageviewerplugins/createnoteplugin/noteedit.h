@@ -8,8 +8,8 @@
 
 #include <QWidget>
 
+#include <Akonadi/Collection>
 #include <Akonadi/Notes/NoteUtils>
-#include <AkonadiCore/Collection>
 #include <KMime/KMimeMessage>
 
 class QLineEdit;

@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <MessageComposer/PluginEditorCheckBeforeSendInterface>
 
 class AutomaticAddContactsInterface : public MessageComposer::PluginEditorCheckBeforeSendInterface

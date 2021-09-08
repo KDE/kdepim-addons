@@ -6,13 +6,13 @@
 
 #include "automaticaddcontactsjob.h"
 #include "automaticaddcontactsplugin_debug.h"
+#include <Akonadi/AgentFilterProxyModel>
+#include <Akonadi/AgentInstanceCreateJob>
+#include <Akonadi/AgentTypeDialog>
+#include <Akonadi/CollectionFetchJob>
+#include <Akonadi/CollectionFetchScope>
 #include <Akonadi/Contact/ContactSearchJob>
-#include <AkonadiCore/AgentFilterProxyModel>
-#include <AkonadiCore/AgentInstanceCreateJob>
-#include <AkonadiCore/CollectionFetchJob>
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/ItemCreateJob>
-#include <AkonadiWidgets/AgentTypeDialog>
+#include <Akonadi/ItemCreateJob>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 #include <KEmailAddress>

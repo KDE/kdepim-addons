@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <Akonadi/Notes/NoteUtils>
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/Item>
 #include <KJob>
 
 #include <kmime/kmime_message.h>

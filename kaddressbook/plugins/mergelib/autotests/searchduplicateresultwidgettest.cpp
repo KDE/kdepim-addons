@@ -8,9 +8,9 @@
 #include "../searchduplicate/resultduplicatetreewidget.h"
 #include "../searchduplicate/searchduplicateresultwidget.h"
 #include "../widgets/mergecontactloseinformationwarning.h"
+#include <Akonadi/CollectionComboBox>
 #include <Akonadi/Contact/GrantleeContactViewer>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/EntityTreeModel>
 #include <KContacts/Addressee>
 #include <QLabel>
 #include <QLayout>

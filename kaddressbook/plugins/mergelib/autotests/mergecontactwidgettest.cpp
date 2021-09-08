@@ -6,7 +6,7 @@
 
 #include "mergecontactwidgettest.h"
 #include "../manualmerge/mergecontactwidget.h"
-#include <AkonadiCore/EntityTreeModel>
+#include <Akonadi/EntityTreeModel>
 
 #include <QListWidget>
 #include <QPushButton>

@@ -6,7 +6,7 @@
 
 #include "folderconfiguremodifycollectionjob.h"
 #include "libfolderconfiguresettings_debug.h"
-#include <AkonadiCore/CollectionModifyJob>
+#include <Akonadi/CollectionModifyJob>
 
 FolderConfigureModifyCollectionJob::FolderConfigureModifyCollectionJob(QObject *parent)
     : QObject(parent)

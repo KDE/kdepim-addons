@@ -6,8 +6,8 @@
 
 #include "mergecontactsjob.h"
 #include "mergecontacts.h"
-#include <AkonadiCore/ItemCreateJob>
-#include <AkonadiCore/ItemDeleteJob>
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemDeleteJob>
 #include <KContacts/Address>
 
 #include "kaddressbookmergelibprivate_debug.h"

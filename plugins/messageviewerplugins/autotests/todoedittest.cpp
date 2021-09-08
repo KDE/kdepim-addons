@@ -7,9 +7,9 @@
 #include "todoedittest.h"
 #include "../createtodoplugin/todoedit.h"
 #include "globalsettings_messageviewer.h"
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/EntityTreeModel>
 #include <KMessageWidget>
 #include <QPushButton>
 #include <QStandardItemModel>

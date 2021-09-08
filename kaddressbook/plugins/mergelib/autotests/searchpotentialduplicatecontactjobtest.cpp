@@ -7,7 +7,7 @@
 #include "searchpotentialduplicatecontactjobtest.h"
 #include "../job/searchpotentialduplicatecontactjob.h"
 
-#include <AkonadiCore/item.h>
+#include <Akonadi/Item>
 #include <QSignalSpy>
 #include <QTest>
 #include <kcontacts/addressee.h>

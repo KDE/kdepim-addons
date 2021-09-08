@@ -7,7 +7,7 @@
 #pragma once
 
 #include "folderconfiguresettings_private_export.h"
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <QWidget>
 class FolderConfigureSettingsGeneralWidget;
 class FolderConfigureSettingsTemplateWidget;

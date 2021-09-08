@@ -8,7 +8,7 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "kmailconfirmbeforedeleting_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KSharedConfig>
 #include <QObject>
 #include <QVector>

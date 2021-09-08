@@ -7,7 +7,7 @@
 #include "checkgravatarplugininterface.h"
 #include "gravatar/widgets/gravatarupdatedialog.h"
 #include "kaddressbook_checkgravatarplugin_debug.h"
-#include <AkonadiCore/ItemModifyJob>
+#include <Akonadi/ItemModifyJob>
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <KMessageBox>

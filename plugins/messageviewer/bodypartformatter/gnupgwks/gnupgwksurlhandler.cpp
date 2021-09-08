@@ -28,7 +28,7 @@
 
 #include <KMime/Util>
 
-#include <AkonadiCore/ItemDeleteJob>
+#include <Akonadi/ItemDeleteJob>
 
 #include <KLocalizedString>
 

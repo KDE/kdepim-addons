@@ -7,7 +7,7 @@
 #pragma once
 
 #include "kaddressbookmergelib_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <QTreeWidget>
 namespace KContacts
 {

@@ -6,7 +6,7 @@
 
 #pragma once
 #include "kmailconfirmbeforedeleting_export.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <KConfigGroup>
 #include <KMime/Message>
 #include <QDebug>

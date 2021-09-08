@@ -11,8 +11,8 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 
-#include <ItemFetchJob>
-#include <ItemFetchScope>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <QAction>
 #include <QIcon>
 #include <QLayout>

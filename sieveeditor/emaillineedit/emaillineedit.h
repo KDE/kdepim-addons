@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <AkonadiCore/ServerManager>
+#include <Akonadi/ServerManager>
 #include <KContacts/Addressee>
 #include <KSieveUi/AbstractSelectEmailLineEdit>
 class QLineEdit;

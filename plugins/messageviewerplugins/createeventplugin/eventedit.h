@@ -8,7 +8,7 @@
 
 #include <QWidget>
 
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 #include <KCalendarCore/Event>
 #include <KMime/Message>
 

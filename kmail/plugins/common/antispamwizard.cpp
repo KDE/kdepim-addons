@@ -20,7 +20,7 @@
 
 #include <PimCommon/PimUtil>
 
-#include <AkonadiCore/AgentInstance>
+#include <Akonadi/AgentInstance>
 
 #include <KConfigGroup>
 #include <KLocalizedString>

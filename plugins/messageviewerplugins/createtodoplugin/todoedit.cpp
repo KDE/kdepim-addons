@@ -21,7 +21,7 @@
 #include <QLabel>
 #include <QPushButton>
 
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/CollectionComboBox>
 
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>

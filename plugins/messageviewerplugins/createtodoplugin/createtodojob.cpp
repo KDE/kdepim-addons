@@ -6,11 +6,11 @@
 
 #include "createtodojob.h"
 #include "createtodoplugin_debug.h"
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <Akonadi/KMime/MessageParts>
-#include <AkonadiCore/ItemCreateJob>
-#include <AkonadiCore/ItemFetchJob>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/RelationCreateJob>
+#include <Akonadi/RelationCreateJob>
 
 #include <KMime/Message>
 

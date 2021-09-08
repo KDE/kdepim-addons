@@ -8,8 +8,8 @@
 
 #include "kaddressbook_sendvcardsplugin_debug.h"
 #include <Akonadi/Contact/ContactGroupExpandJob>
-#include <AkonadiCore/ItemFetchJob>
-#include <AkonadiCore/ItemFetchScope>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
 #include <KLocalizedString>
 #include <KToolInvocation>
 #include <MimeTreeParser/AttachmentTemporaryFilesDirs>

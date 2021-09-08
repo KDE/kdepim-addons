@@ -10,13 +10,13 @@
 
 #include <Akonadi/Calendar/IncidenceChanger>
 
-#include <AkonadiCore/AttributeFactory>
-#include <AkonadiCore/CollectionColorAttribute>
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/EntityDisplayAttribute>
-#include <AkonadiCore/ItemFetchJob>
-#include <AkonadiCore/ItemFetchScope>
-#include <AkonadiCore/Monitor>
+#include <Akonadi/AttributeFactory>
+#include <Akonadi/CollectionColorAttribute>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/ItemFetchJob>
+#include <Akonadi/ItemFetchScope>
+#include <Akonadi/Monitor>
 
 EventModel::EventModel(QObject *parent)
     : Akonadi::CalendarBase(parent)

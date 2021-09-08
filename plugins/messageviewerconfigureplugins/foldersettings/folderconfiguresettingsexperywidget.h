@@ -7,7 +7,7 @@
 #pragma once
 
 #include "folderconfiguresettingspagebase.h"
-#include <AkonadiCore/Collection>
+#include <Akonadi/Collection>
 namespace MailCommon
 {
 class CollectionExpiryWidget;

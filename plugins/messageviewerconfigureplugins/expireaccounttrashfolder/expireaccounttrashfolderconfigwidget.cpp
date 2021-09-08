@@ -6,7 +6,7 @@
 
 #include "expireaccounttrashfolderconfigwidget.h"
 #include "libexpireaccounttrashfolderconfig_debug.h"
-#include <AkonadiCore/AgentManager>
+#include <Akonadi/AgentManager>
 #include <MailCommon/CollectionExpiryWidget>
 #include <QVBoxLayout>
 #include <akonadi/kmime/specialmailcollections.h>

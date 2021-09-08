@@ -7,8 +7,8 @@
 #pragma once
 #include <QObject>
 
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/Item>
+#include <Akonadi/Collection>
+#include <Akonadi/Item>
 #include <KContacts/Addressee>
 namespace KABMergeContacts
 {

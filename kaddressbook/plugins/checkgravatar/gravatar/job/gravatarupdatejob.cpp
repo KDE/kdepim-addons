@@ -9,7 +9,7 @@
 
 #include <Gravatar/GravatarResolvUrlJob>
 
-#include <AkonadiCore/ItemModifyJob>
+#include <Akonadi/ItemModifyJob>
 #include <KContacts/Addressee>
 using namespace KABGravatar;
 

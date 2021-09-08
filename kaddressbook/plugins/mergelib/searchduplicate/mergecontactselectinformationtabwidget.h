@@ -8,7 +8,7 @@
 
 #include "kaddressbookmergelib_export.h"
 #include "searchduplicateresultwidget.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <QTabWidget>
 
 namespace KABMergeContacts

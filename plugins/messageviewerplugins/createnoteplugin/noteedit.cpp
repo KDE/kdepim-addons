@@ -10,7 +10,7 @@
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>
 
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/CollectionComboBox>
 
 #include <KGuiItem>
 #include <KLocalizedString>

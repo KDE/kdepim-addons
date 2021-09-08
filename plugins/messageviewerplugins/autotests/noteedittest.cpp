@@ -7,9 +7,9 @@
 #include "noteedittest.h"
 #include "../createnoteplugin/noteedit.h"
 #include "globalsettings_messageviewer.h"
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/EntityTreeModel>
 #include <KMime/KMimeMessage>
 
 #include <QLineEdit>

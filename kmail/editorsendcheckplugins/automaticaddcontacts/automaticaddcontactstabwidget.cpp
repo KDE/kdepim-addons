@@ -5,8 +5,8 @@
 */
 
 #include "automaticaddcontactstabwidget.h"
-#include <AkonadiCore/Collection>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionComboBox>
 #include <KConfigGroup>
 #include <KContacts/Addressee>
 #include <KLocalizedString>

@@ -6,11 +6,11 @@
 
 #include "createnotejob.h"
 #include "createnoteplugin_debug.h"
+#include <Akonadi/ItemCreateJob>
+#include <Akonadi/ItemModifyJob>
 #include <Akonadi/KMime/MessageParts>
-#include <AkonadiCore/ItemCreateJob>
-#include <AkonadiCore/ItemModifyJob>
-#include <AkonadiCore/Relation>
-#include <AkonadiCore/RelationCreateJob>
+#include <Akonadi/Relation>
+#include <Akonadi/RelationCreateJob>
 
 #include <KMime/Message>
 #include <QCoreApplication>

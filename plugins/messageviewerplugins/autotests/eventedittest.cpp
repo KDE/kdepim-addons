@@ -9,9 +9,9 @@
 #include "../createeventplugin/eventedit.h"
 #include "globalsettings_messageviewer.h"
 
-#include <AkonadiCore/Collection>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiWidgets/CollectionComboBox>
+#include <Akonadi/Collection>
+#include <Akonadi/CollectionComboBox>
+#include <Akonadi/EntityTreeModel>
 #include <KCalendarCore/Event>
 #include <QPushButton>
 #include <QStandardItemModel>

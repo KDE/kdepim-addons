@@ -9,8 +9,8 @@
 #include "widgets/mergecontactloseinformationwarning.h"
 
 #include "resultduplicatetreewidget.h"
+#include <Akonadi/CollectionComboBox>
 #include <Akonadi/Contact/GrantleeContactViewer>
-#include <AkonadiWidgets/CollectionComboBox>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QLabel>

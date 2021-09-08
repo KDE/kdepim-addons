@@ -10,7 +10,7 @@
 #include <KAssistantDialog>
 #include <KSharedConfig>
 
-#include <AkonadiCore/collection.h>
+#include <Akonadi/Collection>
 #include <QList>
 
 class QLabel;

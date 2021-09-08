@@ -8,10 +8,10 @@
 #include "pimcalendarsmodel.h"
 #include "settingschangenotifier.h"
 
-#include <AkonadiCore/CollectionFetchScope>
-#include <AkonadiCore/EntityDisplayAttribute>
-#include <AkonadiCore/EntityTreeModel>
-#include <AkonadiCore/Monitor>
+#include <Akonadi/CollectionFetchScope>
+#include <Akonadi/EntityDisplayAttribute>
+#include <Akonadi/EntityTreeModel>
+#include <Akonadi/Monitor>
 
 #include <KCalendarCore/Event>
 #include <KCalendarCore/Todo>

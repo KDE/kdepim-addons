@@ -8,7 +8,7 @@
 
 #include "sendvcardsjobtest.h"
 #include "sendvcards/sendvcardsjob.h"
-#include <AkonadiCore/Item>
+#include <Akonadi/Item>
 #include <QTest>
 SendVcardsJobTest::SendVcardsJobTest(QObject *parent)
     : QObject(parent)
