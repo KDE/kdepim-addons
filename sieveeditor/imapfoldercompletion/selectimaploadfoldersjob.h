@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include <KIMAP/ListJob>
 #include <KSieveUi/SieveImapAccountSettings>
 #include <QObject>
-#include <kimap/listjob.h>
 namespace KIMAP
 {
 class Session;
