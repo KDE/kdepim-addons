@@ -5,10 +5,8 @@
 */
 
 #include "shorturlenginepluginmanager.h"
-#include "kcoreaddons_version.h"
 #include "shorturlengineplugin.h"
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <KPluginMetaData>
 #include <QFileInfo>
 #include <QSet>
@@ -19,7 +17,6 @@ class ShortUrlEnginePluginInfo
 public:
     KPluginMetaData data;
     QString metaDataFileNameBaseName;
-    QString metaDataFileName;
     QString pluginName;
     ShortUrlEnginePlugin *plugin = nullptr;
 };
@@ -41,11 +38,7 @@ public:
 
 void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    const QVector<KPluginMetaData> plugins = KPluginLoader::findPlugins(QStringLiteral("pimcommon/shorturlengine"));
-#else
     const QVector<KPluginMetaData> plugins = KPluginMetaData::findPlugins(QStringLiteral("pimcommon/shorturlengine"));
-#endif
 
     QVectorIterator<KPluginMetaData> i(plugins);
     i.toBack();
@@ -53,7 +46,6 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
         ShortUrlEnginePluginInfo info;
         const KPluginMetaData data = i.previous();
         info.metaDataFileNameBaseName = QFileInfo(data.fileName()).baseName();
-        info.metaDataFileName = data.fileName();
         info.pluginName = data.name();
         info.data = data;
 
@@ -68,18 +60,10 @@ void ShortUrlEnginePluginManagerPrivate::initializePlugins()
 
 void ShortUrlEnginePluginManagerPrivate::loadPlugin(ShortUrlEnginePluginInfo *item)
 {
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 85, 0)
-    KPluginLoader pluginLoader(item->metaDataFileName);
-    if (pluginLoader.factory()) {
-        item->plugin = pluginLoader.factory()->create<ShortUrlEnginePlugin>(q, QVariantList() << item->metaDataFileNameBaseName);
-        item->plugin->setPluginName(item->pluginName);
-    }
-#else
     if (auto plugin = KPluginFactory::instantiatePlugin<ShortUrlEnginePlugin>(item->data, q, QVariantList() << item->metaDataFileNameBaseName).plugin) {
         item->plugin = plugin;
         item->plugin->setPluginName(item->pluginName);
     }
-#endif
 }
 
 QVector<ShortUrlEnginePlugin *> ShortUrlEnginePluginManagerPrivate::pluginsList() const

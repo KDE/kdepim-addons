@@ -5,7 +5,6 @@
 */
 
 #include "emaillineedit.h"
-#include "kcoreaddons_version.h"
 #include "sieveeditoremaillineditplugin_debug.h"
 #include <Akonadi/Contact/EmailAddressSelectionDialog>
 #include <KPluginFactory>
@@ -79,18 +78,11 @@ void EmailLineEdit::insertAddresses(const KContacts::Addressee::List &list)
 void EmailLineEdit::slotSelectEmail()
 {
     std::unique_ptr<Akonadi::AbstractEmailAddressSelectionDialog> dlg;
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    KPluginLoader loader(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        dlg.reset(factory->create<Akonadi::AbstractEmailAddressSelectionDialog>(this));
-#else
     const KPluginMetaData editWidgetPlugin(QStringLiteral("akonadi/emailaddressselectionldapdialogplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<Akonadi::AbstractEmailAddressSelectionDialog>(editWidgetPlugin);
     if (result) {
         dlg.reset(result.plugin);
-#endif
     } else {
         dlg = std::make_unique<Akonadi::EmailAddressSelectionDialog>(this);
     }

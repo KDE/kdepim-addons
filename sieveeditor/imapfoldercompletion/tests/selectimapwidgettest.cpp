@@ -5,9 +5,7 @@
 */
 
 #include "selectimapwidgettest.h"
-#include "kcoreaddons_version.h"
 #include <KPluginFactory>
-#include <KPluginLoader>
 #include <QDebug>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -19,18 +17,11 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     auto mainLayout = new QHBoxLayout(this);
 
     KSieveUi::AbstractMoveImapFolderWidget *lineEdit = nullptr;
-#if KCOREADDONS_VERSION < QT_VERSION_CHECK(5, 86, 0)
-    KPluginLoader loader(QStringLiteral("libksieve/imapfoldercompletionplugin"));
-    KPluginFactory *factory = loader.factory();
-    if (factory) {
-        lineEdit = factory->create<KSieveUi::AbstractMoveImapFolderWidget>();
-#else
     const KPluginMetaData editWidgetPlugin(QStringLiteral("libksieve/imapfoldercompletionplugin"));
 
     const auto result = KPluginFactory::instantiatePlugin<KSieveUi::AbstractMoveImapFolderWidget>(editWidgetPlugin);
     if (result) {
         lineEdit = result.plugin;
-#endif
     } else {
         lineEdit = new DefaultMoveImapFolderWidget(this);
         // qDebug() << " error during load : " << loader.errorString();

@@ -3,7 +3,7 @@ set(PIM_VERSION "5.18.40")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.85.0")
+set(KF5_MIN_VERSION "5.86.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
@@ -141,7 +141,7 @@ endif()
 find_package(Gpgmepp 1.13.1 CONFIG)
 set_package_properties(Gpgmepp PROPERTIES DESCRIPTION "GpgME library" URL "https://www.gnupg.org" TYPE REQUIRED)
 add_definitions(-DQT_DISABLE_DEPRECATED_BEFORE=0x050e00)
-add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055600)
+add_definitions(-DKF_DISABLE_DEPRECATED_BEFORE_AND_AT=0x055700)
 
 option(KDEPIM_RUN_AKONADI_TEST "Enable autotest based on Akonadi." TRUE)
 include_directories(${CMAKE_CURRENT_SOURCE_DIR})
