@@ -32,6 +32,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     mainLayout->addWidget(label);
 
     mPatternLineEdit->setObjectName(QStringLiteral("mPatternLineEdit"));
+    mPatternLineEdit->setClearButtonEnabled(true);
     mainLayout->addWidget(mPatternLineEdit);
     fillComboBox();
     connect(mPatternLineEdit, &QLineEdit::textChanged, this, [this](const QString &str) {
