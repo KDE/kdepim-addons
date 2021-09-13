@@ -11,7 +11,6 @@
 
 #include <KColorScheme>
 #include <KLocalizedString>
-#include <KPluginLoader>
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QToolButton>
