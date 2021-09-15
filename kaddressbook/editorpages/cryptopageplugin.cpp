@@ -15,11 +15,11 @@
 #include <QPushButton>
 #include <qplugin.h>
 
+#include <KContacts/Addressee>
 #include <KIconLoader>
 #include <KLocalizedString>
 #include <QComboBox>
 #include <QHBoxLayout>
-#include <kcontacts/addressee.h>
 
 #include "gpgme++/data.h"
 #include "gpgme++/key.h"

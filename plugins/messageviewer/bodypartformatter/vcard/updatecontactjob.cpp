@@ -7,9 +7,9 @@
 #include "updatecontactjob.h"
 #include <Akonadi/Contact/ContactSearchJob>
 #include <Akonadi/ItemModifyJob>
+#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
-#include <kcontacts/addressee.h>
 
 UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addressee &contact, QWidget *parentWidget, QObject *parent)
     : KJob(parent)

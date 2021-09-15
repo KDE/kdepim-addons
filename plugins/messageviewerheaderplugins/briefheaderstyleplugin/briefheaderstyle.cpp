@@ -20,8 +20,8 @@
 #include <QApplication>
 #include <QRegularExpression>
 
-#include <kmime/kmime_dateformatter.h>
-#include <kmime/kmime_message.h>
+#include <KMime/DateFormatter>
+#include <KMime/KMimeMessage>
 
 using namespace MessageCore;
 using namespace MessageViewer;

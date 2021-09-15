@@ -15,9 +15,9 @@
 #include <KColorScheme>
 #include <KLocalizedString>
 
+#include <KMime/DateFormatter>
+#include <KMime/KMimeMessage>
 #include <QStandardPaths>
-#include <kmime/kmime_dateformatter.h>
-#include <kmime/kmime_message.h>
 
 using namespace MessageCore;
 using namespace MessageViewer;

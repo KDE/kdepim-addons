@@ -8,9 +8,9 @@
 #include "../job/searchpotentialduplicatecontactjob.h"
 
 #include <Akonadi/Item>
+#include <KContacts/Addressee>
 #include <QSignalSpy>
 #include <QTest>
-#include <kcontacts/addressee.h>
 
 using namespace KABMergeContacts;
 SearchPotentialDuplicateContactJobTest::SearchPotentialDuplicateContactJobTest()

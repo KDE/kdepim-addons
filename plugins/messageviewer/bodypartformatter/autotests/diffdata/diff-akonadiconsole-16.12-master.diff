@@ -187,7 +187,7 @@ index c12a9b3..1180c3e 100644
 +#include <AkonadiXml/XmlWriteJob>
  #include <kviewstatemaintainer.h>
  
- #include <kcontacts/addressee.h>
+ #include <KContacts/Addressee>
 @@ -86,10 +87,10 @@ Q_DECLARE_METATYPE(QSet<QByteArray>)
  
  BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :

@@ -21,8 +21,8 @@
 
 #include <QApplication>
 
-#include <kmime/kmime_dateformatter.h>
-#include <kmime/kmime_message.h>
+#include <KMime/DateFormatter>
+#include <KMime/KMimeMessage>
 
 using namespace MessageCore;
 

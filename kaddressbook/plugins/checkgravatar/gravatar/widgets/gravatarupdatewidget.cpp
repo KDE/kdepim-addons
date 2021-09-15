@@ -14,7 +14,7 @@
 
 #include <Gravatar/GravatarResolvUrlJob>
 
-#include <kio/transferjob.h>
+#include <KIO/TransferJob>
 
 using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
