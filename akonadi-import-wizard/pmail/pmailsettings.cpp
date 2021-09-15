@@ -10,8 +10,8 @@
 #include <MailCommon/MailUtil>
 #include <MailTransport/TransportManager>
 
-#include <KIdentityManagement/kidentitymanagement/identity.h>
-#include <KIdentityManagement/kidentitymanagement/signature.h>
+#include <KIdentityManagement/Identity>
+#include <KIdentityManagement/Signature>
 
 #include <KConfig>
 #include <KConfigGroup>
