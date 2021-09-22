@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to generate a shorter URL.",
         "Description[ar]": "تتيح لك هذه الملحقة توليد مسار أقصر.",
+        "Description[az]": "Bu əlavə, sizə qısa URL yaratmağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet generar un URL més curt.",
         "Description[ca]": "Aquest connector permet generar un URL més curt.",
         "Description[de]": "Mit diesem Modul können Sie eine abgekürzte Adresse (URL) erzeugen.",
@@ -33,6 +34,7 @@
         "Id": "kmailinsertshorturl",
         "Name": "Insert Short URL",
         "Name[ar]": "إدراج مسار مختصر",
+        "Name[az]": "Qısa URL daxil edin",
         "Name[ca@valencia]": "Inserció d'un URL curt",
         "Name[ca]": "Inserció d'un URL curt",
         "Name[cs]": "Vložit krátkou URL",

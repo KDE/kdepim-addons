@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to configure Anti Virus in KMail.",
         "Description[ar]": "تتيح لك هذه الملحقة ضبط مضادّ الڤيروسات في «بريدك».",
+        "Description[az]": "Bu əlavə, sizə KMail-də antivirusu tənzimləməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar l'antivirus en el KMail.",
         "Description[ca]": "Aquest connector permet configurar l'antivirus en el KMail.",
         "Description[de]": "Mit diesem Modul können Sie die Anti-Virus-Funktion in KMail einrichten.",
@@ -34,6 +35,7 @@
         "Id": "kmailantivirus",
         "Name": "Antivirus",
         "Name[ar]": "مضادّ الڤيروسات",
+        "Name[az]": "Antivirus",
         "Name[ca@valencia]": "Contra els virus",
         "Name[ca]": "Contra els virus",
         "Name[cs]": "Antivirus",

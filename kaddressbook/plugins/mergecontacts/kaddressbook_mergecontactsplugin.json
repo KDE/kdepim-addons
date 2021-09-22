@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to merge contacts.",
         "Description[ar]": "تتيح لك هذه الملحقة دمج المتراسلين.",
+        "Description[az]": "Bu əlavə, sizə əlaqələri birləşdirməyə icazə verir.",
         "Description[ca@valencia]": "Aquest connector permet fusionar contactes.",
         "Description[ca]": "Aquest connector permet fusionar contactes.",
         "Description[cs]": "Tento modul umožňuje sloučit kontakty.",
@@ -35,6 +36,7 @@
         "Id": "kaddressbookmergecontact",
         "Name": "Merge Contacts",
         "Name[ar]": "دمج المتراسلين",
+        "Name[az]": "Əlaqələri birləşdirin",
         "Name[ca@valencia]": "Fusiona els contactes",
         "Name[ca]": "Fusiona els contactes",
         "Name[cs]": "Sloučit kontakty",

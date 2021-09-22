@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin defines a mail header style for enterprise.",
         "Description[ar]": "تحدّد هذه الملحقة نمط ترويسات بريد للشّركات.",
+        "Description[az]": "Bu əlavə, korporativ başlıq tərzini müəyyən edir.",
         "Description[ca@valencia]": "Aquest connector defineix un estil empresarial de capçalera del correu.",
         "Description[ca]": "Aquest connector defineix un estil empresarial de capçalera del correu.",
         "Description[de]": "Dieses Modul definiert ein grafisches Vorspann-Design.",
@@ -33,6 +34,7 @@
         "EnabledByDefault": "@KDEPIM_ENTERPRISE_BUILD@",
         "Name": "Enterprise Header Style",
         "Name[ar]": "نمط التّرويسات ”شركة“",
+        "Name[az]": "Korparativ başlıq tərzi",
         "Name[ca@valencia]": "Estil de capçalera corporativa",
         "Name[ca]": "Estil de capçalera corporativa",
         "Name[de]": "Vorspann-Design „Grafisch“",

@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to use an external composer.",
         "Description[ar]": "تتيح لك هذه الملحقة استخدام المؤلّف الخارجيّ.",
+        "Description[az]": "Bu əlavə, sizə xarici redaktordan istifadə etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet usar un editor extern.",
         "Description[ca]": "Aquest connector permet usar un editor extern.",
         "Description[cs]": "Tento modul umožňuje použít externí editor.",
@@ -35,6 +36,7 @@
         "Id": "kmailexternalcomposer",
         "Name": "Open external composer",
         "Name[ar]": "فتح المؤلّف الخارجيّ",
+        "Name[az]": "Xarici redaktoru açın",
         "Name[ca@valencia]": "Obri un editor extern",
         "Name[ca]": "Obre un editor extern",
         "Name[cs]": "Otevřít externí editor",

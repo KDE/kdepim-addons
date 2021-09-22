@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin defines the standard mail header style.",
         "Description[ar]": "تحدّد هذه الملحقة نمط ترويسات بريد معياريّ.",
+        "Description[az]": "Bu əlavə, standart başlığı müəyyən edir.",
         "Description[ca@valencia]": "Aquest connector defineix l'estil de capçalera de correu estàndard.",
         "Description[ca]": "Aquest connector defineix l'estil de capçalera de correu estàndard.",
         "Description[de]": "Dieses Modul definiert das Standarddesign des E-Mail-Vorspanns.",
@@ -33,6 +34,7 @@
         "EnabledByDefault": "false",
         "Name": "Standards Header Style",
         "Name[ar]": "نمط التّرويسات ”معايير“",
+        "Name[az]": "Standart başlıqlı",
         "Name[ca@valencia]": "Estil de capçalera estàndard",
         "Name[ca]": "Estil de capçalera estàndard",
         "Name[cs]": "Standardní styl hlavičky",

@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to insert special character in composer.",
         "Description[ar]": "تتيح لك هذه الملحقة إدراج محرفّ خاصّ في المؤلّف.",
+        "Description[az]": "Bu əlavə, sizə redaktora xüsusi simvol əlavə etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet inserir caràcters especials a l'editor.",
         "Description[ca]": "Aquest connector permet inserir caràcters especials a l'editor.",
         "Description[de]": "Dieses Modul ermöglicht das Einfügen von Sonderzeichen in E-Mails.",
@@ -34,6 +35,7 @@
         "Id": "kmailinsertspecialcharacter",
         "Name": "Insert Special Character",
         "Name[ar]": "إدراج محرف خاصّ",
+        "Name[az]": "Xüsusi simvol daxil edin",
         "Name[ca@valencia]": "Inserció d'un caràcter especial",
         "Name[ca]": "Inserció d'un caràcter especial",
         "Name[cs]": "Vložit speciální znak",

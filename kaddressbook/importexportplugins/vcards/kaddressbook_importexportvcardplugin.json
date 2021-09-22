@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to import/export vCards.",
         "Description[ar]": "تتيح لك هذه الملحقة استيراد وتصدير بطاقات vCard.",
+        "Description[az]": "Bu əlavə, sizə vCard-ları idxal/ixrac etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet importar o exportar les vCard.",
         "Description[ca]": "Aquest connector permet importar o exportar les vCard.",
         "Description[cs]": "Tento modul umožňuje import/export vizitek.",
@@ -35,6 +36,7 @@
         "Id": "kaddressbookimportexportvcard",
         "Name": "Import/Export vCard",
         "Name[ar]": "استيراد/تصدير vCard",
+        "Name[az]": "vCard idxal/ixrac",
         "Name[ca@valencia]": "Importa/exporta la vCard",
         "Name[ca]": "Importa/exporta la vCard",
         "Name[cs]": "Importovat/Exportovat vCard",

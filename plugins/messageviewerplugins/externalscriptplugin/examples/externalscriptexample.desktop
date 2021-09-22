@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Search Subject on Web
 Name[ar]=ابحث عن موضوع في الوبّ
+Name[az]=İnternetdən mövzu axtarışı
 Name[ca]=Cerca l'assumpte al web
 Name[ca@valencia]=Cerca l'assumpte al web
 Name[cs]=Hledat předmět na webu
@@ -37,6 +38,7 @@ CommandLine=--search %s
 Icon=firefox
 Description=Search subject on web
 Description[ar]=ابحث عن موضوع في الوبّ
+Description[az]=İnternetdən istədiyiniz mövzunu axtarın
 Description[ca]=Cerca l'assumpte al web
 Description[ca@valencia]=Cerca l'assumpte al web
 Description[cs]=Hledat předmět na webu

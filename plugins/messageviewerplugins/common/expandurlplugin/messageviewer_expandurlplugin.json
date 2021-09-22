@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin expands URL.",
         "Description[ar]": "توسّع هذه الملحقة المسارات.",
+        "Description[az]": "Bu əlavə, URL-u tam göstərir.",
         "Description[ca@valencia]": "Aquest connector expandeix els URL.",
         "Description[ca]": "Aquest connector expandeix els URL.",
         "Description[de]": "Mit diesem Modul können Sie URLs/Adressen erweitern.",
@@ -34,6 +35,7 @@
         "Id": "messageviewerexpandurl",
         "Name": "Expand URL",
         "Name[ar]": "توسيع المسارات",
+        "Name[az]": "Geniş URL",
         "Name[ca@valencia]": "Expandeix l'URL",
         "Name[ca]": "Expandeix l'URL",
         "Name[cs]": "Rozbalit URL",

@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check if we want to delete specific email",
+        "Description[az]": "Bu əlavə, sizə xüsusi e-poçtları silmək isəyib-istəmədiyimizi yoxlamağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet comprovar si es vol suprimir un correu electrònic específic",
         "Description[ca]": "Aquest connector permet comprovar si es vol suprimir un correu electrònic específic",
         "Description[cs]": "Tento modul umožňuje rozhodnout zda smazat vybraný e-mail",
@@ -22,6 +23,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailconfirmbeforedeleting",
         "Name": "Confirm Before Deleting Emails",
+        "Name[az]": "E-poçtların silinməsini təsdiqləyin",
         "Name[ca@valencia]": "Confirma abans de suprimir els correus electrònics",
         "Name[ca]": "Confirma abans de suprimir els correus electrònics",
         "Name[cs]": "Potvrzovat před smazáním e-mailů",

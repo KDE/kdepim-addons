@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure gravatar support.",
+        "Description[az]": "Bu əlavə, sizə Gravatar xidmətini tənzimləməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar el funcionament del «Gravatar».",
         "Description[ca]": "Aquest connector permet configurar el funcionament del «Gravatar».",
         "Description[cs]": "Tento modul umožňuje nastavit podporu pro Gravatar.",
@@ -26,6 +27,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure gravatar support.xx",
         "Description[zh_CN]": "此插件允许您配置 Gravatar 支持。",
         "Name": "Gravatar",
+        "Name[az]": "Gravatar",
         "Name[ca@valencia]": "Gravatar",
         "Name[ca]": "Gravatar",
         "Name[cs]": "Gravatar",

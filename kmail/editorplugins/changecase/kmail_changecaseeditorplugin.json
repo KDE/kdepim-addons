@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to change the case of the selected text.",
         "Description[ar]": "تتيح لك هذه الملحقة تغيير حالة أحرف النّصّ المحدّد.",
+        "Description[az]": "Bu əlavə, sizə mətnin seçilmiş hissəsində hərfləri böyük kiçik dəyişməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet canviar majúscules/minúscules en el text seleccionat.",
         "Description[ca]": "Aquest connector permet canviar majúscules/minúscules en el text seleccionat.",
         "Description[de]": "Mit diesem Modul können Sie Groß-/Kleinschreibung von ausgewähltem Text ändern.",
@@ -34,6 +35,7 @@
         "Id": "kmailchangecase",
         "Name": "Change Case",
         "Name[ar]": "تغيير حالة الأحرف",
+        "Name[az]": "Böyük/kiçik hərfləri dəyişin",
         "Name[ca@valencia]": "Canvia la caixa",
         "Name[ca]": "Canvia la caixa",
         "Name[cs]": "Změnit velikost písmen",

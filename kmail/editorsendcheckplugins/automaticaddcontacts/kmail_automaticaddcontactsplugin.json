@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to add automatically email address to addressbook.",
         "Description[ar]": "تتيح لك هذه الملحقة إضافة عنوان البريد إلى دفتر العناوين آليًّا.",
+        "Description[az]": "Bu əlavə, sizə e-poçt ünvanlarını avtomatik ünvan kitabçasına əlavə etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet afegir automàticament adreces de correu a la llibreta d'adreces.",
         "Description[ca]": "Aquest connector permet afegir automàticament adreces de correu a la llibreta d'adreces.",
         "Description[de]": "Mit diesem Modul können Sie E-Mail-Adressen automatisch zum Adressbuch hinzufügen.",
@@ -34,6 +35,7 @@
         "Id": "kmailautomaticaddcontacts",
         "Name": "Automatic Add Contacts",
         "Name[ar]": "إضافة المتراسلين آليًّا",
+        "Name[az]": "Avtomatik Əlaqə əlavə edilməsi",
         "Name[ca@valencia]": "Afig automàticament als contactes",
         "Name[ca]": "Afegeix automàticament als contactes",
         "Name[cs]": "Automaticky přidat kontakty",

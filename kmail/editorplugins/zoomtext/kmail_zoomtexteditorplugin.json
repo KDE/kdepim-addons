@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to change zoom factor in composer.",
         "Description[ar]": "تتيح لك هذه الملحقة تغيير معامل التّكبير في المؤلّف.",
+        "Description[az]": "Bu əlavə, sizə redaktordakı mətni böyüdüb kiçiltməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet canviar el factor de zoom a l'editor.",
         "Description[ca]": "Aquest connector permet canviar el factor de zoom a l'editor.",
         "Description[de]": "Mit diesem Modul können Sie die Vergrößerung im Editorfenster ändern.",
@@ -34,6 +35,7 @@
         "Id": "kmailzoomtexteditor",
         "Name": "Zoom Text",
         "Name[ar]": "تغيير مستوى تكبير النّصّ",
+        "Name[az]": "Mətni böyüdün",
         "Name[ca@valencia]": "Amplia el text",
         "Name[ca]": "Amplia el text",
         "Name[cs]": "Přibližovat text",

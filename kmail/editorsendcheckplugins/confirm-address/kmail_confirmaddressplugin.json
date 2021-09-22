@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to check mail before to send it",
         "Description[ar]": "تتيح لك هذه الملحقة فحص البريد قبل إرساله",
+        "Description[az]": "Bu əlavə, sizə poçtu göndərmədən öncə onu yoxlamağa imkan verir",
         "Description[ca@valencia]": "Aquest connector permet comprovar el correu abans d'enviar-lo",
         "Description[ca]": "Aquest connector permet comprovar el correu abans d'enviar-lo",
         "Description[de]": "Mit diesem Modul können Sie E-Mails vor dem Senden überprüfen",
@@ -34,6 +35,7 @@
         "Id": "kmailconfirmaddress",
         "Name": "Confirm Address",
         "Name[ar]": "تأكيد العنوان",
+        "Name[az]": "Ünvanı təsdiqləyin",
         "Name[ca@valencia]": "Confirma l'adreça",
         "Name[ca]": "Confirma l'adreça",
         "Name[cs]": "Potvrdit adresu",

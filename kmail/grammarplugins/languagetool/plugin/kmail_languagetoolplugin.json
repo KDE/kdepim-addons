@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check grammar using LanguageTool.",
+        "Description[az]": "Bu əlavə, sizə LanguageTool istifadə edərək qrammatikanı yoxlamağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
         "Description[ca]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
         "Description[cs]": "Tento modul umožňuje kontrolovat gramatiku pomocí nástroje LanguageTool.",
@@ -28,6 +29,7 @@
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",
+        "Name[az]": "Qrammatika yoxlaması (LanguageTool)",
         "Name[ca@valencia]": "Comprova la gramàtica (LanguageTool)",
         "Name[ca]": "Comprova la gramàtica (LanguageTool)",
         "Name[da]": "Grammatikkontrol (LanguageTool)",

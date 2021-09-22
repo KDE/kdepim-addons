@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to generate html from markdown language",
         "Description[ar]": "تتيح لك هذه الملحقة HTML من لغة مارك‌داون",
+        "Description[az]": "Bu əlavə, sizə markdown dilindən html yaratmağa imkan verir",
         "Description[ca@valencia]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
         "Description[ca]": "Aquest connector permet generar HTML a partir del llenguatge Markdown",
         "Description[de]": "Mit diesem Modul können Sie HTML aus der Sprache Markdown erstellen.",
@@ -29,6 +30,7 @@
         "Id": "kmailmarkdown",
         "Name": "Markdown",
         "Name[ar]": "مارك‌داون",
+        "Name[az]": "Markdown",
         "Name[ca@valencia]": "Markdown",
         "Name[ca]": "Markdown",
         "Name[cs]": "Markdown",

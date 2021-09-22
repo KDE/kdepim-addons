@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to translate text.",
         "Description[ar]": "تتيح لك هذه الملحقة ترجمة النّصوص.",
+        "Description[az]": "Bu əlavə, sizə mətni tərcümə etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet traduir el text.",
         "Description[ca]": "Aquest connector permet traduir el text.",
         "Description[de]": "Mit diesem Modul können Sie Text übersetzen.",
@@ -34,6 +35,7 @@
         "Id": "customtoolstranslator",
         "Name": "Translator",
         "Name[ar]": "المترجم",
+        "Name[az]": "Tərcüməçi",
         "Name[ca@valencia]": "Traductor",
         "Name[ca]": "Traductor",
         "Name[cs]": "Překladatel",

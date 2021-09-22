@@ -4,6 +4,7 @@ ServiceTypes=PimCommonShortUrlEngine/Plugin
 X-KDE-Library=pimcommon_googleshorturlengineplugin
 Name=Google
 Name[ar]=غوغل
+Name[az]=Google
 Name[ca]=Google
 Name[ca@valencia]=Google
 Name[cs]=Google

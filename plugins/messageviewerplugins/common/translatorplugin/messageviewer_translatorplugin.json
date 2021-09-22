@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to translate selected text.",
         "Description[ar]": "تتيح لك هذه الملحقة ترجمة النّصّ المحدّد.",
+        "Description[az]": "Bu əlavə, seçilmiş mətni tərcümə etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet traduir el text seleccionat.",
         "Description[ca]": "Aquest connector permet traduir el text seleccionat.",
         "Description[de]": "Mit diesem Modul können Sie ausgewählten Text übersetzen.",
@@ -34,6 +35,7 @@
         "Id": "messageviewertranslatorplugin",
         "Name": "Translator",
         "Name[ar]": "المترجم",
+        "Name[az]": "Tərcüməçi",
         "Name[ca@valencia]": "Traductor",
         "Name[ca]": "Traductor",
         "Name[cs]": "Překladatel",

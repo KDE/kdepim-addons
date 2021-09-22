@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin activates some expert actions.",
         "Description[ar]": "تفعّل هذه الملحقة بعض الإجراءات المتقدّمة.",
+        "Description[az]": "Bu əlavə, təcrübəli istifadəçilər üçün bəzi əməlləri aktiv edir.",
         "Description[ca@valencia]": "Aquest connector activa diverses accions expertes.",
         "Description[ca]": "Aquest connector activa diverses accions expertes.",
         "Description[de]": "Mit diesem Modul können Sie Aktionen für Experten aktivieren.",
@@ -33,6 +34,7 @@
         "Id": "kmailexpert",
         "Name": "Expert Plugin",
         "Name[ar]": "ملحقة الخبراء",
+        "Name[az]": "Təcrübəli istifadəçilər üçün",
         "Name[ca@valencia]": "Connector expert",
         "Name[ca]": "Connector expert",
         "Name[da]": "Ekspert-plugin",

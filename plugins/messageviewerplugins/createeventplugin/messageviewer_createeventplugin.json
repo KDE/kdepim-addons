@@ -2,6 +2,7 @@
     "KPlugin": {
         "Description": "This plugin allows you to create an event from a message.",
         "Description[ar]": "تتيح لك هذه الملحقة إنشاء حدث من رسالة ما.",
+        "Description[az]": "Bu əlavə, məktuba əsasən bir tədbir yaratmağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.",
         "Description[ca]": "Aquest connector permet crear un esdeveniment a partir d'un missatge.",
         "Description[de]": "Mit diesem Modul können Sie einen Termin aus einer Nachricht erstellen.",
@@ -34,6 +35,7 @@
         "Id": "messageviewercreateeventplugin",
         "Name": "Create Event",
         "Name[ar]": "إنشاء الأحداث",
+        "Name[az]": "Tədbir yaradın",
         "Name[ca@valencia]": "Crea un esdeveniment",
         "Name[ca]": "Crea un esdeveniment",
         "Name[cs]": "Vytvořit událost",

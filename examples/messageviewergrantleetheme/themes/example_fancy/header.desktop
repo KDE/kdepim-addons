@@ -1,6 +1,7 @@
 [Desktop Entry]
 Name=Example fancy
 Name[ar]=مثال عن الخياليّة
+Name[az]=Gözəl görüntü nümunəsi
 Name[ca]=Exemple elegant
 Name[ca@valencia]=Exemple elegant
 Name[da]=Eksempel på flot
@@ -30,6 +31,7 @@ Name[zh_CN]=华丽主题示例
 Name[zh_TW]=Example fancy
 Description=Create fancy theme with grantlee.
 Description[ar]=أنشئ سمة خياليّة بِ‍«غرانتلي».
+Description[az]=Grantlee ilə gözəl görünən mövzu yaradın
 Description[ca]=Crea un tema elegant amb les Grantlee.
 Description[ca@valencia]=Crea un tema elegant amb les Grantlee.
 Description[da]=Opret flot tema med grantlee.

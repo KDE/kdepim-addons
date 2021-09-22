@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to insert special text as attachment name, emails etc.",
+        "Description[az]": "Bu əlavə, sizə qoşma faylın adı, e-poçt və ya s. xüsusi mətnləri daxil etməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet inserir text especials com a nom d'adjunt, correu electrònic, etc.",
         "Description[ca]": "Aquest connector permet inserir text especials com a nom d'adjunt, correu electrònic, etc.",
         "Description[cs]": "Tento modul umožňuje vložit speciální text jako název přípony, e-maily apod.",
@@ -27,6 +28,7 @@
         "EnabledByDefault": "true",
         "Id": "kmailquicktext",
         "Name": "Quick Text",
+        "Name[az]": "Sürətli mətn",
         "Name[ca@valencia]": "Text ràpid",
         "Name[ca]": "Text ràpid",
         "Name[cs]": "Rychlý text",
