@@ -5,6 +5,7 @@
 */
 
 #include "confirmbeforedeletingcreaterulewidget.h"
+#include "confirmbeforedeletingrule.h"
 #include <KLocalizedString>
 #include <QComboBox>
 #include <QHBoxLayout>
@@ -58,10 +59,10 @@ void ConfirmBeforeDeletingCreateRuleWidget::setInfo(const ConfirmBeforeDeletingC
 
 void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
 {
-    mRuleTypeComboBox->addItem(i18n("Body"), QStringLiteral("body"));
-    mRuleTypeComboBox->addItem(i18n("Subject"), QStringLiteral("subject"));
-    mRuleTypeComboBox->addItem(i18n("To"), QStringLiteral("to"));
-    mRuleTypeComboBox->addItem(i18n("Cc"), QStringLiteral("cc"));
+    mRuleTypeComboBox->addItem(i18n("Body"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Body));
+    mRuleTypeComboBox->addItem(i18n("Subject"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Subject));
+    mRuleTypeComboBox->addItem(i18n("To"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::To));
+    mRuleTypeComboBox->addItem(i18n("Cc"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Cc));
 }
 
 bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator==(const ConfirmBeforeDeletingInfo &other) const
