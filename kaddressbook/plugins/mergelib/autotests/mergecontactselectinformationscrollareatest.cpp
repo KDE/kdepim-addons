@@ -37,8 +37,8 @@ void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
     QVERIFY(widget);
 
     for (int i = 0; i < stackedwidget->count(); ++i) {
-        QWidget *w = stackedwidget->widget(i);
-        const QString objName = w->objectName();
+        QWidget *widget = stackedwidget->widget(i);
+        const QString objName = widget->objectName();
         bool hasCorrectName = (objName == QLatin1String("mergedcontactwidget")) || (objName == QLatin1String("selectwidget"));
         QVERIFY(hasCorrectName);
     }

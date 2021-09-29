@@ -93,7 +93,7 @@ public:
             QUrl::fromLocalFile(KIconLoader::global()->iconPath(QStringLiteral("document-open-remote"), KIconLoader::Small)).url();
 
         if (!memento) {
-            auto memento = new MessageViewer::VcardMemento(lst);
+            memento = new MessageViewer::VcardMemento(lst);
             msgPart->setMemento(memento);
 
             auto nodeHelper = msgPart->nodeHelper();

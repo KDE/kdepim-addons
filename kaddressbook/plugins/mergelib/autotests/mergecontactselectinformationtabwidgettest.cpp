@@ -43,7 +43,6 @@ void MergeContactSelectInformationTabWidgetTest::shouldAddTab()
 
     listItem << item1;
     listItem << item2;
-    conflict.list = listItem;
 
     KABMergeContacts::MergeContacts::ConflictInformations conflictInformation = KABMergeContacts::MergeContacts::Birthday;
     conflict.list = listItem;

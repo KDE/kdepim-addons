@@ -125,8 +125,6 @@ void ViewerPluginExternalscriptInterface::createAction(KActionCollection *ac)
                 menu->addAction(act);
                 mActionGroup->addAction(act);
             }
-        }
-        if (!infos.isEmpty()) {
             menu->addSeparator();
         }
         auto act = new QAction(QIcon::fromTheme(QStringLiteral("settings-configure")), i18n("Configure"), menu);

@@ -118,7 +118,7 @@ void MergeContactWidget::slotUpdateMergeButton()
 void MergeContactWidget::slotMergeContacts()
 {
     mSelectedItems = listSelectedContacts();
-    const Akonadi::Collection col = mCollectionCombobox->currentCollection();
+    // const Akonadi::Collection col = mCollectionCombobox->currentCollection();
 
     KABMergeContacts::MergeContacts mergeContacts;
     mergeContacts.setItems(mSelectedItems);

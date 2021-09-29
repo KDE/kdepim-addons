@@ -239,9 +239,9 @@ KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileNa
                             for (QDomElement urlInfo = url.firstChildElement(); !urlInfo.isNull(); urlInfo = urlInfo.nextSiblingElement()) {
                                 const QString urlInfoTag = urlInfo.tagName();
                                 if (urlInfoTag == QLatin1String("c:Value")) {
-                                    KContacts::ResourceLocatorUrl url;
-                                    url.setUrl(QUrl::fromUserInput(urlInfo.text()));
-                                    contact.insertExtraUrl(url);
+                                    KContacts::ResourceLocatorUrl resourceLocalUrl;
+                                    resourceLocalUrl.setUrl(QUrl::fromUserInput(urlInfo.text()));
+                                    contact.insertExtraUrl(resourceLocalUrl);
                                 } else {
                                     qCWarning(IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG) << " url info tag not supported yet " << urlInfoTag;
                                 }
