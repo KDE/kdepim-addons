@@ -21,6 +21,9 @@ public:
 
     Q_REQUIRED_RESULT QStringList selectedEmails() const;
 
+Q_SIGNALS:
+    void doubleClicked();
+
 private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };

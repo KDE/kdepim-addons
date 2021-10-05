@@ -25,6 +25,7 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
     mView->view()->setAlternatingRowColors(true);
     mView->view()->setSortingEnabled(true);
     mView->view()->sortByColumn(0, Qt::AscendingOrder);
+    connect(mView, &Akonadi::EmailAddressSelectionWidget::doubleClicked, this, &SelectMailWidget::doubleClicked);
 }
 
 SelectMailWidget::~SelectMailWidget()
