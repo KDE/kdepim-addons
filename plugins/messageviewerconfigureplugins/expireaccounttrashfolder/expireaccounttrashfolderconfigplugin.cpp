@@ -7,7 +7,6 @@
 #include "expireaccounttrashfolderconfigplugin.h"
 #include "expireaccounttrashfolderconfigdialog.h"
 #include <KPluginFactory>
-#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(ExpireAccountTrashFolderConfigPlugin, "messageviewer_expireaccounttrashfolderconfigplugin.json")
 

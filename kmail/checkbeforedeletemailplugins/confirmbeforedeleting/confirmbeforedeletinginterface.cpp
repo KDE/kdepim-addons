@@ -8,8 +8,8 @@
 #include "confirmbeforedeletingmessageboxdialog.h"
 #include "confirmbeforedeletingplugin_debug.h"
 #include <KLocalizedString>
-#include <KMessageBox>
 #include <QAction>
+#include <QDialogButtonBox>
 #include <QIcon>
 #include <QMenu>
 #include <QPointer>

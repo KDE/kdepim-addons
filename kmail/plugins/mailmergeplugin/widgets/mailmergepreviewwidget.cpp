@@ -5,8 +5,6 @@
 */
 
 #include "mailmergepreviewwidget.h"
-#include <KLocalizedString>
-#include <QVBoxLayout>
 
 MailMergePreviewWidget::MailMergePreviewWidget(QWidget *parent)
     : QWidget(parent)

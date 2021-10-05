@@ -5,8 +5,6 @@
 */
 
 #include "mailmergemenu.h"
-#include <KLocalizedString>
-#include <QAction>
 
 MailMergeMenu::MailMergeMenu(QWidget *parent)
     : QMenu(parent)

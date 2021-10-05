@@ -41,7 +41,6 @@
 #include <prison/Prison>
 
 #include <QGuiApplication>
-#include <QMetaProperty>
 #include <QPalette>
 
 using namespace KItinerary;

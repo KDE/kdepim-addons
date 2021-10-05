@@ -20,8 +20,6 @@
 #include <prison/Prison>
 
 #include <QGuiApplication>
-#include <QImage>
-#include <QMetaProperty>
 #include <QUrl>
 
 static bool isPkPassContent(KMime::Content *content)

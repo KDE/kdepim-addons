@@ -5,7 +5,6 @@
 */
 
 #include "viewerpluginexternalscriptparseargument.h"
-#include <QDebug>
 ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument()
 {
 }

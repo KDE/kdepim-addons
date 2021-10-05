@@ -4,7 +4,6 @@
   SPDX-License-Identifier: GPL-2.0-only
 */
 #include "addressbookwidget.h"
-#include <KLocalizedString>
 #include <QHBoxLayout>
 
 using namespace MailMerge;

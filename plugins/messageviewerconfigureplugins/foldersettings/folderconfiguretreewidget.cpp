@@ -10,7 +10,6 @@
 #include <KLocalizedString>
 #include <MailCommon/FolderTreeView>
 #include <MailCommon/FolderTreeWidget>
-#include <QMenu>
 #include <QPushButton>
 #include <QVBoxLayout>
 

@@ -9,7 +9,6 @@
 #include <KPluginFactory>
 #include <KPluginMetaData>
 #include <QFileInfo>
-#include <QSet>
 #include <QVector>
 
 class ShortUrlEnginePluginInfo
