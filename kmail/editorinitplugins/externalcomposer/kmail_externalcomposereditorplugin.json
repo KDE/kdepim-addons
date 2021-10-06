@@ -34,7 +34,7 @@
         "Description[zh_CN]": "此插件允许您使用外部编辑器。",
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
-        "Name": "Open external composer",
+        "Name": "Open External Composer",
         "Name[ar]": "فتح المؤلّف الخارجيّ",
         "Name[az]": "Xarici redaktoru açın",
         "Name[ca@valencia]": "Obri un editor extern",
