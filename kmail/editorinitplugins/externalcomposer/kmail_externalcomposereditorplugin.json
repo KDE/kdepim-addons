@@ -35,6 +35,13 @@
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
         "Name": "Open External Composer",
+        "Name[ca]": "Obre un editor extern",
+        "Name[es]": "Abrir editor externo",
+        "Name[ia]": "Aperi compositor externe",
+        "Name[nl]": "Extern opsteller openen",
+        "Name[sv]": "Öppna externt brevfönster",
+        "Name[uk]": "Відкрити зовнішній редактор",
+        "Name[x-test]": "xxOpen External Composerxx",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"
