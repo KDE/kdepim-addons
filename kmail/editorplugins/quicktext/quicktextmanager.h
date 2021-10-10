@@ -8,6 +8,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 class QAbstractItemModel;
 class QItemSelectionModel;
 class QuicktextManager : public QObject
@@ -60,7 +62,7 @@ Q_SIGNALS:
 private:
     //@cond PRIVATE
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
     //@endcond
 };
 

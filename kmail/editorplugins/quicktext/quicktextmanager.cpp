@@ -62,7 +62,6 @@ QuicktextManager::QuicktextManager(QObject *parent, QWidget *parentWidget)
 QuicktextManager::~QuicktextManager()
 {
     d->save();
-    delete d;
 }
 
 QAbstractItemModel *QuicktextManager::model() const

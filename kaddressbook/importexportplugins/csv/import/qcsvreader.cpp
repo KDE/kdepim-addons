@@ -65,10 +65,7 @@ QCsvReader::QCsvReader(QCsvBuilderInterface *builder)
     Q_ASSERT(builder);
 }
 
-QCsvReader::~QCsvReader()
-{
-    delete d;
-}
+QCsvReader::~QCsvReader() = default;
 
 bool QCsvReader::read(QIODevice *device)
 {
@@ -323,10 +320,7 @@ QCsvStandardBuilder::QCsvStandardBuilder()
 {
 }
 
-QCsvStandardBuilder::~QCsvStandardBuilder()
-{
-    delete d;
-}
+QCsvStandardBuilder::~QCsvStandardBuilder() = default;
 
 QString QCsvStandardBuilder::lastErrorString() const
 {

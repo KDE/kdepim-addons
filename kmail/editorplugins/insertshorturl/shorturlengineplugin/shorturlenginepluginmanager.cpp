@@ -84,10 +84,7 @@ ShortUrlEnginePluginManager::ShortUrlEnginePluginManager(QObject *parent)
     d->initializePlugins();
 }
 
-ShortUrlEnginePluginManager::~ShortUrlEnginePluginManager()
-{
-    delete d;
-}
+ShortUrlEnginePluginManager::~ShortUrlEnginePluginManager() = default;
 
 ShortUrlEnginePluginManager *ShortUrlEnginePluginManager::self()
 {

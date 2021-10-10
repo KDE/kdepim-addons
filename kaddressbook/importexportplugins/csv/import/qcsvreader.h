@@ -8,6 +8,8 @@
 
 #include <QObject>
 
+#include <memory>
+
 class QIODevice;
 
 /**
@@ -158,7 +160,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 };
 
 /**
@@ -215,7 +217,7 @@ public:
 
 private:
     class Private;
-    Private *const d;
+    std::unique_ptr<Private> const d;
 
     Q_DISABLE_COPY(QCsvStandardBuilder)
 };

@@ -8,6 +8,9 @@
 
 #include "shorturl_export.h"
 #include <QObject>
+
+#include <memory>
+
 class ShortUrlEnginePlugin;
 class ShortUrlEnginePluginManagerPrivate;
 class SHORTURL_EXPORT ShortUrlEnginePluginManager : public QObject
@@ -22,6 +25,6 @@ public:
     static ShortUrlEnginePluginManager *self();
 
 private:
-    ShortUrlEnginePluginManagerPrivate *const d;
+    std::unique_ptr<ShortUrlEnginePluginManagerPrivate> const d;
 };
 
