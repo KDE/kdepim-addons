@@ -12,6 +12,8 @@
 
 class QAbstractItemModel;
 class QItemSelectionModel;
+class QuicktextManagerPrivate;
+
 class QuicktextManager : public QObject
 {
     Q_OBJECT
@@ -61,8 +63,7 @@ Q_SIGNALS:
 
 private:
     //@cond PRIVATE
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<QuicktextManagerPrivate> const d;
     //@endcond
 };
 

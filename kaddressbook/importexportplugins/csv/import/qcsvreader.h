@@ -66,6 +66,8 @@ public:
     virtual void error(const QString &errorMsg) = 0;
 };
 
+class QCsvReaderPrivate;
+
 /**
  * @short A parser for comma separated value data.
  *
@@ -159,9 +161,10 @@ public:
     void terminate();
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<QCsvReaderPrivate> const d;
 };
+
+class QCsvStandardBuilderPrivate;
 
 /**
  * @short A convenience class that implements QCsvBuilderInterface.
@@ -216,8 +219,7 @@ public:
     void error(const QString &errorMsg) override;
 
 private:
-    class Private;
-    std::unique_ptr<Private> const d;
+    std::unique_ptr<QCsvStandardBuilderPrivate> const d;
 
     Q_DISABLE_COPY(QCsvStandardBuilder)
 };

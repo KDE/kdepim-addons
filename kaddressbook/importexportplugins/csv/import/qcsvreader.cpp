@@ -16,10 +16,10 @@ QCsvBuilderInterface::~QCsvBuilderInterface()
 {
 }
 
-class QCsvReader::Private
+class QCsvReaderPrivate
 {
 public:
-    Private(QCsvBuilderInterface *builder)
+    explicit QCsvReaderPrivate(QCsvBuilderInterface *builder)
         : mBuilder(builder)
         , mCodec(QTextCodec::codecForLocale())
     {
@@ -38,21 +38,21 @@ public:
     bool mNotTerminated = true;
 };
 
-void QCsvReader::Private::emitBeginLine(uint row)
+void QCsvReaderPrivate::emitBeginLine(uint row)
 {
     if ((row - mStartRow) > 0) {
         mBuilder->beginLine();
     }
 }
 
-void QCsvReader::Private::emitEndLine(uint row)
+void QCsvReaderPrivate::emitEndLine(uint row)
 {
     if ((row - mStartRow) > 0) {
         mBuilder->endLine();
     }
 }
 
-void QCsvReader::Private::emitField(const QString &data, int row, int column)
+void QCsvReaderPrivate::emitField(const QString &data, int row, int column)
 {
     if ((row - mStartRow) > 0) {
         mBuilder->field(data, row - mStartRow - 1, column - 1);
@@ -60,7 +60,7 @@ void QCsvReader::Private::emitField(const QString &data, int row, int column)
 }
 
 QCsvReader::QCsvReader(QCsvBuilderInterface *builder)
-    : d(new Private(builder))
+    : d(new QCsvReaderPrivate(builder))
 {
     Q_ASSERT(builder);
 }
@@ -291,10 +291,10 @@ void QCsvReader::terminate()
     d->mNotTerminated = false;
 }
 
-class QCsvStandardBuilder::Private
+class QCsvStandardBuilderPrivate
 {
 public:
-    Private()
+    QCsvStandardBuilderPrivate()
     {
         init();
     }
@@ -307,7 +307,7 @@ public:
     QVector<QStringList> mRows;
 };
 
-void QCsvStandardBuilder::Private::init()
+void QCsvStandardBuilderPrivate::init()
 {
     mRows.clear();
     mRowCount = 0;
@@ -316,7 +316,7 @@ void QCsvStandardBuilder::Private::init()
 }
 
 QCsvStandardBuilder::QCsvStandardBuilder()
-    : d(new Private)
+    : d(new QCsvStandardBuilderPrivate)
 {
 }
 

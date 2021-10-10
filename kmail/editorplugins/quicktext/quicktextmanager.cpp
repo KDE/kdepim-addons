@@ -13,10 +13,10 @@
 
 #include <QItemSelectionModel>
 
-class QuicktextManager::Private
+class QuicktextManagerPrivate
 {
 public:
-    Private(QuicktextManager *qq, QWidget *parentWidget)
+    QuicktextManagerPrivate(QuicktextManager *qq, QWidget *parentWidget)
         : q(qq)
         , mParent(parentWidget)
     {
@@ -32,7 +32,7 @@ public:
     QWidget *const mParent;
 };
 
-QModelIndex QuicktextManager::Private::currentGroupIndex() const
+QModelIndex QuicktextManagerPrivate::currentGroupIndex() const
 {
     if (mSelectionModel->selectedIndexes().isEmpty()) {
         return {};
@@ -46,14 +46,14 @@ QModelIndex QuicktextManager::Private::currentGroupIndex() const
     }
 }
 
-void QuicktextManager::Private::save()
+void QuicktextManagerPrivate::save()
 {
     MailCommon::SnippetsModel::instance()->save();
 }
 
 QuicktextManager::QuicktextManager(QObject *parent, QWidget *parentWidget)
     : QObject(parent)
-    , d(new Private(this, parentWidget))
+    , d(new QuicktextManagerPrivate(this, parentWidget))
 {
     d->mModel = MailCommon::SnippetsModel::instance();
     d->mSelectionModel = new QItemSelectionModel(d->mModel);
