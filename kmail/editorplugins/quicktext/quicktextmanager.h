@@ -13,7 +13,10 @@
 class QAbstractItemModel;
 class QItemSelectionModel;
 class QuicktextManagerPrivate;
-
+namespace MailCommon
+{
+class SnippetsModel;
+}
 class QuicktextManager : public QObject
 {
     Q_OBJECT
@@ -62,8 +65,8 @@ Q_SIGNALS:
     void insertPlainText(const QString &snippetText);
 
 private:
-    //@cond PRIVATE
-    std::unique_ptr<QuicktextManagerPrivate> const d;
-    //@endcond
+    MailCommon::SnippetsModel *mModel = nullptr;
+    QItemSelectionModel *mSelectionModel = nullptr;
+    QWidget *const mParent;
 };
 
