@@ -4,6 +4,7 @@ add_library(korg_picoftheday MODULE)
 target_sources(korg_picoftheday PRIVATE
     configdialog.cpp
     picoftheday.cpp
+    element.cpp
     )
 ecm_qt_declare_logging_category(korg_picoftheday HEADER korganizer_picoftheday_plugin_debug.h IDENTIFIER KORGANIZERPICOFTHEDAYPLUGIN_LOG CATEGORY_NAME org.kde.pim.korganizer_picoftheday_plugins
     DESCRIPTION "kdepim-addons (korganizer picoftheday plugins)"
