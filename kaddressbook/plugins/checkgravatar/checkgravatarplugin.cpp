@@ -21,8 +21,7 @@ CheckGravatarPlugin::~CheckGravatarPlugin()
 
 PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(QObject *parent)
 {
-    auto interface = new CheckGravatarPluginInterface(parent);
-    return interface;
+    return new CheckGravatarPluginInterface(parent);
 }
 
 bool CheckGravatarPlugin::hasPopupMenuSupport() const

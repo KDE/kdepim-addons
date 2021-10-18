@@ -21,8 +21,7 @@ SendVcardsPlugin::~SendVcardsPlugin()
 
 PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(QObject *parent)
 {
-    auto interface = new SendVcardsPluginInterface(parent);
-    return interface;
+    return new SendVcardsPluginInterface(parent);
 }
 
 bool SendVcardsPlugin::hasPopupMenuSupport() const

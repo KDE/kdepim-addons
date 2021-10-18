@@ -18,8 +18,7 @@ VCardImportExportPlugin::~VCardImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *VCardImportExportPlugin::createInterface(QObject *parent)
 {
-    auto interface = new VCardImportExportPluginInterface(parent);
-    return interface;
+    return new VCardImportExportPluginInterface(parent);
 }
 
 bool VCardImportExportPlugin::hasPopupMenuSupport() const

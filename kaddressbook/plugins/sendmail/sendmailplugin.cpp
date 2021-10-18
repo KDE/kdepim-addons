@@ -21,8 +21,7 @@ SendMailPlugin::~SendMailPlugin()
 
 PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(QObject *parent)
 {
-    auto interface = new SendMailPluginInterface(parent);
-    return interface;
+    return new SendMailPluginInterface(parent);
 }
 
 bool SendMailPlugin::hasPopupMenuSupport() const

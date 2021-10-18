@@ -19,8 +19,7 @@ CSVImportExportPlugin::~CSVImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *CSVImportExportPlugin::createInterface(QObject *parent)
 {
-    auto interface = new CSVImportExportPluginInterface(parent);
-    return interface;
+    return new CSVImportExportPluginInterface(parent);
 }
 
 bool CSVImportExportPlugin::hasPopupMenuSupport() const

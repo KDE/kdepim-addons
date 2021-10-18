@@ -21,8 +21,7 @@ InsertEmailPluginEditor::~InsertEmailPluginEditor()
 
 MessageComposer::PluginEditorInterface *InsertEmailPluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new InsertEmailPluginEditorInterface(parent);
-    return interface;
+    return new InsertEmailPluginEditorInterface(parent);
 }
 
 #include "insertemailplugineditor.moc"

@@ -22,8 +22,7 @@ ExternalComposerPluginEditor::~ExternalComposerPluginEditor()
 
 MessageComposer::PluginEditorInitInterface *ExternalComposerPluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new ExternalComposerPluginEditorInterface(parent);
-    return interface;
+    return new ExternalComposerPluginEditorInterface(parent);
 }
 
 bool ExternalComposerPluginEditor::hasConfigureDialog() const

@@ -19,8 +19,7 @@ GMXImportExportPlugin::~GMXImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *GMXImportExportPlugin::createInterface(QObject *parent)
 {
-    auto interface = new GMXImportExportPluginInterface(parent);
-    return interface;
+    return new GMXImportExportPluginInterface(parent);
 }
 
 bool GMXImportExportPlugin::hasPopupMenuSupport() const

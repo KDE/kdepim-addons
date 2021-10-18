@@ -19,8 +19,7 @@ LDapImportExportPlugin::~LDapImportExportPlugin() = default;
 
 PimCommon::AbstractGenericPluginInterface *LDapImportExportPlugin::createInterface(QObject *parent)
 {
-    auto interface = new LDapImportExportPluginInterface(parent);
-    return interface;
+    return new LDapImportExportPluginInterface(parent);
 }
 
 bool LDapImportExportPlugin::hasPopupMenuSupport() const

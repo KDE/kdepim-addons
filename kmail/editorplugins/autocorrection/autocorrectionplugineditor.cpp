@@ -21,8 +21,7 @@ AutoCorrectionPluginEditor::~AutoCorrectionPluginEditor()
 
 MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new AutoCorrectionPluginEditorInterface(parent);
-    return interface;
+    return new AutoCorrectionPluginEditorInterface(parent);
 }
 
 #include "autocorrectionplugineditor.moc"

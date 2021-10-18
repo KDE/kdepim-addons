@@ -26,8 +26,7 @@ bool ChangeCasePluginEditor::hasPopupMenuSupport() const
 
 MessageComposer::PluginEditorInterface *ChangeCasePluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new ChangeCasePluginEditorInterface(parent);
-    return interface;
+    return new ChangeCasePluginEditorInterface(parent);
 }
 
 #include "changecaseplugineditor.moc"
