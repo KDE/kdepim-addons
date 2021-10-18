@@ -25,8 +25,8 @@ public Q_SLOTS:
 private:
     void slotLinkHovered(const QString &url);
     void converterFailed(const QString &msg);
-    QWebEngineView *mWebView = nullptr;
+    QWebEngineView *const mWebView;
     MarkdownConverter *const mConverter;
-    QLabel *mHoverUrlLabel = nullptr;
+    QLabel *const mHoverUrlLabel;
 };
 

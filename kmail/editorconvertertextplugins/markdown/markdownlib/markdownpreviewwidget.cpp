@@ -17,7 +17,9 @@
 
 MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     : QWidget(parent)
+    , mWebView(new QWebEngineView(this))
     , mConverter(new MarkdownConverter(this))
+    , mHoverUrlLabel(new QLabel(this))
 {
     mConverter->setObjectName(QStringLiteral("converter"));
     connect(mConverter, &MarkdownConverter::failed, this, &MarkdownPreviewWidget::converterFailed);
@@ -27,7 +29,6 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mainLayout->setContentsMargins({});
 
     auto page = new MarkdownEnginePage(this);
-    mWebView = new QWebEngineView(this);
     mWebView->setPage(page);
     mWebView->resize(600, 800);
 
@@ -50,7 +51,6 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     mWebView->setObjectName(QStringLiteral("webengine"));
     mainLayout->addWidget(mWebView);
 
-    mHoverUrlLabel = new QLabel(this);
     mHoverUrlLabel->setObjectName(QStringLiteral("mHoverUrlLabel"));
     mainLayout->addWidget(mHoverUrlLabel);
 
