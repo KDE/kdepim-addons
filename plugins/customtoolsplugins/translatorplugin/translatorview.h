@@ -26,5 +26,5 @@ private:
     void slotActivateTranslator(bool state);
     void createAction(KActionCollection *ac);
     KToggleAction *mAction = nullptr;
-    PimCommon::TranslatorWidget *mTranslatorWidget = nullptr;
+    PimCommon::TranslatorWidget *const mTranslatorWidget;
 };

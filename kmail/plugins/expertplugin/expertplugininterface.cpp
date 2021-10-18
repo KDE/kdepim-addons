@@ -22,7 +22,7 @@ void ExpertPluginInterface::createAction(KActionCollection *ac)
 {
     QAction *action = ac->action(QStringLiteral("toggle_mimeparttree"));
     if (action) {
-        PimCommon::ActionType type(action, PimCommon::ActionType::Message);
+        const PimCommon::ActionType type(action, PimCommon::ActionType::Message);
         addActionType(type);
     } else {
         qCWarning(KMAIL_EXPERT_PLUGIN_LOG) << "toggle_mimeparttree is not defined ";
