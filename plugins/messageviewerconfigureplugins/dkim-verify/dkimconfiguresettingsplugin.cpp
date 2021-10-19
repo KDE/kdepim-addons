@@ -21,9 +21,8 @@ DkimConfigureSettingsPlugin::~DkimConfigureSettingsPlugin()
 
 void DkimConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<DKIMConfigureDialog> dlg = new DKIMConfigureDialog(parent);
-    dlg->exec();
-    delete dlg;
+    DKIMConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "dkimconfiguresettingsplugin.moc"
