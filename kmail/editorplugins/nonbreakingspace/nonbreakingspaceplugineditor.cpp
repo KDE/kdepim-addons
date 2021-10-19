@@ -21,8 +21,7 @@ NonBreakingSpacePluginEditor::~NonBreakingSpacePluginEditor()
 
 MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new NonBreakingSpacePluginEditorInterface(parent);
-    return interface;
+    return new NonBreakingSpacePluginEditorInterface(parent);
 }
 
 #include "nonbreakingspaceplugineditor.moc"

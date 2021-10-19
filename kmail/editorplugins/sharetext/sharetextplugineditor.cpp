@@ -26,8 +26,7 @@ bool ShareTextPluginEditor::hasPopupMenuSupport() const
 
 MessageComposer::PluginEditorInterface *ShareTextPluginEditor::createInterface(QObject *parent)
 {
-    auto interface = new ShareTextPluginEditorInterface(parent);
-    return interface;
+    return new ShareTextPluginEditorInterface(parent);
 }
 
 #include "sharetextplugineditor.moc"
