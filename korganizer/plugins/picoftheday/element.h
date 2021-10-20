@@ -87,9 +87,9 @@ private:
     const QDate mDate;
     QSize mRequestedThumbSize;
 
-    ElementData *mData;
+    ElementData *const mData;
 
-    QTimer *mThumbImageGetDelayTimer = nullptr;
+    QTimer *const mThumbImageGetDelayTimer;
     KIO::SimpleJob *mQueryThumbImageInfoJob = nullptr;
     KIO::SimpleJob *mGetThumbImageJob = nullptr;
 };
