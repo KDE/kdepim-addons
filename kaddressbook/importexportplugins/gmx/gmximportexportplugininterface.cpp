@@ -19,6 +19,7 @@
 #include <QTextStream>
 #include <QUrl>
 #include <importexportengine.h>
+#include <kcontacts_version.h>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
 
@@ -551,11 +552,19 @@ void GMXImportExportPluginInterface::importGMX()
             if (!itemList[8].isEmpty()) {
                 addressee->insertPhoneNumber(KContacts::PhoneNumber(itemList[8], cellType));
             }
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
             bool preferred = false;
             if (itemList[19].toInt() & 1) {
                 preferred = true;
             }
             addressee->insertEmail(itemList[10], preferred);
+#else
+            KContacts::Email email(itemList[10]);
+            if (itemList[19].toInt() & 1) {
+                email.setPreferred(true);
+            }
+            addressee->addEmail(email);
+#endif
             if (!itemList[11].isEmpty()) {
                 KContacts::ResourceLocatorUrl url;
                 url.setUrl(QUrl(itemList[11]));

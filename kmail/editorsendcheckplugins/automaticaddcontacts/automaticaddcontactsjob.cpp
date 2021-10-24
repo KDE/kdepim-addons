@@ -21,6 +21,7 @@
 #include <PimCommon/PimUtil>
 #include <QPointer>
 #include <akonadi/contact/selectaddressbookdialog.h>
+#include <kcontacts_version.h>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)
@@ -198,7 +199,13 @@ void AutomaticAddContactsJob::slotSearchDone(KJob *job)
     } else if (searchJob->contacts().isEmpty()) {
         KContacts::Addressee contact;
         contact.setNameFromString(mName);
+#if KContacts_VERSION < QT_VERSION_CHECK(5, 88, 0)
         contact.insertEmail(mProcessEmail, true);
+#else
+        KContacts::Email email(mProcessEmail);
+        email.setPreferred(true);
+        contact.addEmail(email);
+#endif
 
         // create the new item
         Akonadi::Item item;
