@@ -16,7 +16,7 @@ class SettingsChangeNotifier : public QObject
 public:
     static SettingsChangeNotifier *self();
 
-    ~SettingsChangeNotifier();
+    ~SettingsChangeNotifier() override;
 
     void notifySettingsChanged();
 

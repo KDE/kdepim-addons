@@ -13,7 +13,7 @@ class AutomaticAddContactsConfigureTabTest : public QObject
     Q_OBJECT
 public:
     explicit AutomaticAddContactsConfigureTabTest(QObject *parent = nullptr);
-    ~AutomaticAddContactsConfigureTabTest();
+    ~AutomaticAddContactsConfigureTabTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

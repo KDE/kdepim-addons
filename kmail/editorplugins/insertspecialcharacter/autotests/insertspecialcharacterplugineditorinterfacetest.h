@@ -13,7 +13,7 @@ class InsertSpecialCharacterPluginEditorInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit InsertSpecialCharacterPluginEditorInterfaceTest(QObject *parent = nullptr);
-    ~InsertSpecialCharacterPluginEditorInterfaceTest();
+    ~InsertSpecialCharacterPluginEditorInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

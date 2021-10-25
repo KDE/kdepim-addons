@@ -13,7 +13,7 @@ class LogActivitiesPluginInterfaceTest : public QObject
     Q_OBJECT
 public:
     explicit LogActivitiesPluginInterfaceTest(QObject *parent = nullptr);
-    ~LogActivitiesPluginInterfaceTest();
+    ~LogActivitiesPluginInterfaceTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
     void shouldCreateAction();

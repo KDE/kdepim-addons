@@ -13,7 +13,7 @@ class AutomaticAddContactsConfigureWidgetTest : public QObject
     Q_OBJECT
 public:
     explicit AutomaticAddContactsConfigureWidgetTest(QObject *parent = nullptr);
-    ~AutomaticAddContactsConfigureWidgetTest();
+    ~AutomaticAddContactsConfigureWidgetTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

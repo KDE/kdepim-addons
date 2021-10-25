@@ -13,7 +13,7 @@ class DoNotTrackPluginUrlInterceptorTest : public QObject
     Q_OBJECT
 public:
     explicit DoNotTrackPluginUrlInterceptorTest(QObject *parent = nullptr);
-    ~DoNotTrackPluginUrlInterceptorTest();
+    ~DoNotTrackPluginUrlInterceptorTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };

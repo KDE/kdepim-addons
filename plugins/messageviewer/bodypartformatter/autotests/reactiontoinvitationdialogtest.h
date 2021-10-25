@@ -13,7 +13,7 @@ class ReactionToInvitationDialogTest : public QObject
     Q_OBJECT
 public:
     explicit ReactionToInvitationDialogTest(QObject *parent = nullptr);
-    ~ReactionToInvitationDialogTest();
+    ~ReactionToInvitationDialogTest() override;
 private Q_SLOTS:
     void shouldHaveDefaultValue();
 };
