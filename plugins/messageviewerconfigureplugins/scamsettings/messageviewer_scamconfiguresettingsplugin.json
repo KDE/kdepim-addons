@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to configure scam settings.",
+        "Name": "Scam Settings",
+        "Version": "1.0"
+    },
+    "X-KDE-MessageViewer-Configure-Order": "100"
+}
