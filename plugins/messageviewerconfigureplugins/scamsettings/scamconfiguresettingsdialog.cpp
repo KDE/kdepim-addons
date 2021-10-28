@@ -12,6 +12,9 @@
 ScamConfigureSettingsDialog::ScamConfigureSettingsDialog(QWidget *parent)
     : QDialog(parent)
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    setWindowTitle(i18nc("@title:window", "Configure Scam Settings"));
 }
 
 ScamConfigureSettingsDialog::~ScamConfigureSettingsDialog()
