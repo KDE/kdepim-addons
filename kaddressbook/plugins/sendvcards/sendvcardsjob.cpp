@@ -10,8 +10,8 @@
 #include <Akonadi/Contact/ContactGroupExpandJob>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
+#include <KEMailClientLauncherJob>
 #include <KLocalizedString>
-#include <KToolInvocation>
 #include <MimeTreeParser/AttachmentTemporaryFilesDirs>
 #include <QFile>
 #include <QTemporaryDir>
@@ -83,9 +83,15 @@ void SendVcardsJob::createTemporaryDir()
 
 void SendVcardsJob::jobFinished()
 {
-    const QStringList lstAttachment = mAttachmentTemporary->temporaryFiles();
+    const QStringList tempFilePaths{mAttachmentTemporary->temporaryFiles()};
+    QList<QUrl> lstAttachment;
+    for (const QString &path : tempFilePaths) {
+        lstAttachment.append(QUrl::fromLocalFile(path));
+    }
     if (!lstAttachment.isEmpty()) {
-        KToolInvocation::invokeMailer(QString(), QString(), QString(), QString(), QString(), QString(), lstAttachment);
+        KEMailClientLauncherJob *job = new KEMailClientLauncherJob(this);
+        job->setAttachments(lstAttachment);
+        job->start();
     } else {
         Q_EMIT sendVCardsError(i18n("No vCard created."));
     }
