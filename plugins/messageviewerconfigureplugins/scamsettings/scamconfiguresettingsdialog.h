@@ -6,12 +6,16 @@
 
 #pragma once
 
+#include "scamconfiguresettings_private_export.h"
 #include <QDialog>
-
-class ScamConfigureSettingsDialog : public QDialog
+class ScamConfigureSettingsWidget;
+class LIBSCAMCONFIGURESETTINGS_TESTS_EXPORT ScamConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:
     explicit ScamConfigureSettingsDialog(QWidget *parent = nullptr);
     ~ScamConfigureSettingsDialog() override;
+
+private:
+    ScamConfigureSettingsWidget *const mScamConfigureSettingsWidget;
 };

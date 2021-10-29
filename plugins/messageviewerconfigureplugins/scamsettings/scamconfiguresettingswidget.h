@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include "scamconfiguresettings_private_export.h"
 #include <QWidget>
-
-class ScamConfigureSettingsWidget : public QWidget
+class LIBSCAMCONFIGURESETTINGS_TESTS_EXPORT ScamConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
 public:

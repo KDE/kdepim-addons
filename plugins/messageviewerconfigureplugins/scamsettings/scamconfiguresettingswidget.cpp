@@ -5,6 +5,8 @@
 */
 
 #include "scamconfiguresettingswidget.h"
+#include <KLocalizedString>
+#include <QVBoxLayout>
 
 ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
     : QWidget{parent}
