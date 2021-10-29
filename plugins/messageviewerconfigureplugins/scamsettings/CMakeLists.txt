@@ -41,6 +41,7 @@ target_sources(messageviewer_scamconfiguresettingsplugin PRIVATE
 
 target_link_libraries(messageviewer_scamconfiguresettingsplugin
   KF5::MessageViewer
+  scamconfiguresettings
 )
 
 

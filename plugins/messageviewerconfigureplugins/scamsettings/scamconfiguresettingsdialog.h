@@ -5,11 +5,10 @@
 */
 
 #pragma once
-
-#include "scamconfiguresettings_private_export.h"
+#include "libscamconfiguresettings_export.h"
 #include <QDialog>
 class ScamConfigureSettingsWidget;
-class LIBSCAMCONFIGURESETTINGS_TESTS_EXPORT ScamConfigureSettingsDialog : public QDialog
+class LIBSCAMCONFIGURESETTINGS_EXPORT ScamConfigureSettingsDialog : public QDialog
 {
     Q_OBJECT
 public:

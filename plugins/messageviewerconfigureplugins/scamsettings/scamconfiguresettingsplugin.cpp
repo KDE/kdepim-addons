@@ -5,6 +5,7 @@
 */
 
 #include "scamconfiguresettingsplugin.h"
+#include "scamconfiguresettingsdialog.h"
 #include <KPluginFactory>
 
 K_PLUGIN_CLASS_WITH_JSON(ScamConfigureSettingsPlugin, "messageviewer_scamconfiguresettingsplugin.json")
@@ -20,8 +21,8 @@ ScamConfigureSettingsPlugin::~ScamConfigureSettingsPlugin()
 
 void ScamConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {
-    //    FolderConfigureSettingsDialog dlg(parent);
-    //    dlg.exec();
+    ScamConfigureSettingsDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "scamconfiguresettingsplugin.moc"
