@@ -17,5 +17,7 @@ public:
     ~ScamConfigureSettingsDialog() override;
 
 private:
+    void readConfig();
+    void writeConfig();
     ScamConfigureSettingsWidget *const mScamConfigureSettingsWidget;
 };

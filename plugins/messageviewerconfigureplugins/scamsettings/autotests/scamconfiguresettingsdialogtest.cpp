@@ -6,15 +6,24 @@
 
 #include "scamconfiguresettingsdialogtest.h"
 #include "../scamconfiguresettingsdialog.h"
+#include "../scamconfiguresettingswidget.h"
+#include <QStandardPaths>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(ScamConfigureSettingsDialogTest)
 ScamConfigureSettingsDialogTest::ScamConfigureSettingsDialogTest(QObject *parent)
     : QObject{parent}
 {
+    QStandardPaths::setTestModeEnabled(true);
 }
 
 void ScamConfigureSettingsDialogTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsDialog d;
-    // TODO
+    auto mScamConfigureSettingsWidget = d.findChild<ScamConfigureSettingsWidget *>(QStringLiteral("mScamConfigureSettingsWidget"));
+    QVERIFY(mScamConfigureSettingsWidget);
+
+    auto mainLayout = d.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QVERIFY(!d.windowTitle().isEmpty());
 }
