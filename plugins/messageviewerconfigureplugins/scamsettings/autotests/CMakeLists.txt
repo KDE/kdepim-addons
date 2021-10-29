@@ -11,3 +11,4 @@ macro(add_scamconfigure_plugin_unittest _source)
 endmacro ()
 
 add_scamconfigure_plugin_unittest(scamconfiguresettingswidgettest.cpp)
+add_scamconfigure_plugin_unittest(scamconfiguresettingsdialogtest.cpp)
