@@ -1,7 +1,17 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure scam settings.",
+        "Description[ca]": "Aquest connector permet configurar les opcions configuració de la suplantació.",
+        "Description[es]": "Este complemento le permite configurar las preferencias contra las estafas.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa bedrägeri-inställningar.",
+        "Description[uk]": "За допомогою цього додатка можна налаштувати параметри скаму.",
+        "Description[x-test]": "xxThis plugin allows you to configure scam settings.xx",
         "Name": "Scam Settings",
+        "Name[ca]": "Configuració de la suplantació",
+        "Name[es]": "Preferencias contra estafas",
+        "Name[sv]": "Bedrägeri-inställningar",
+        "Name[uk]": "Параметри скаму",
+        "Name[x-test]": "xxScam Settingsxx",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"
