@@ -6,6 +6,7 @@
 #include "scamconfiguresettingswidgettest.h"
 #include "../scamconfiguresettingswidget.h"
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(ScamConfigureSettingsWidgetTest)
 ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent)
     : QObject{parent}
@@ -15,5 +16,7 @@ ScamConfigureSettingsWidgetTest::ScamConfigureSettingsWidgetTest(QObject *parent
 void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 {
     ScamConfigureSettingsWidget w;
-    // TODO
+    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
+    QVERIFY(mainLayout);
+    QCOMPARE(mainLayout->contentsMargins(), {});
 }
