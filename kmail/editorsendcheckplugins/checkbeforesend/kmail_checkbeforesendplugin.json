@@ -4,7 +4,7 @@
         "Description[ar]": "تتيح لك هذه الملحقة فحص إعدادات الرّسالة قبل الإرسال.",
         "Description[az]": "Bu əlavə, sizə göndərmədən öncə məktub ayarlarını yoxlamağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet comprovar els paràmetres del missatge abans d'enviar-lo.",
-        "Description[ca]": "Aquest connector permet comprovar les opcions configuració del missatge abans d'enviar-lo.",
+        "Description[ca]": "Aquest connector permet comprovar les opcions de configuració del missatge abans d'enviar-lo.",
         "Description[de]": "Mit diesem Modul können Sie E-Mail-Einstellungen vor dem Senden überprüfen.",
         "Description[en_GB]": "This plugin allows you to check message settings before sending.",
         "Description[es]": "Este complemento le permite comprobar las preferencias del mensaje antes de enviarlo.",
