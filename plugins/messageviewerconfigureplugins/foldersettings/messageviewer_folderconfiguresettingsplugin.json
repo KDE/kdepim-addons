@@ -1,7 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure folder settings.",
-        "Description[ca@valencia]": "Aquest connector permet configurar els paràmetres de les carpetes.",
+        "Description[ca@valencia]": "Aquest connector permet configurar les opcions de configuració de les carpetes.",
         "Description[ca]": "Aquest connector permet configurar les opcions de configuració de les carpetes.",
         "Description[cs]": "Tento modul umožňuje nastavit volby složek.",
         "Description[de]": "Mit diesem Modul können Sie Ordner-Einstellungen einrichten.",
@@ -22,7 +22,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure folder settings.xx",
         "Description[zh_CN]": "此插件能让您调整文件夹设置。",
         "Name": "Folder Settings",
-        "Name[ca@valencia]": "Paràmetres de les carpetes",
+        "Name[ca@valencia]": "Configuració de les carpetes",
         "Name[ca]": "Configuració de les carpetes",
         "Name[cs]": "Nastavení složky",
         "Name[de]": "Ordner-Einstellungen",
