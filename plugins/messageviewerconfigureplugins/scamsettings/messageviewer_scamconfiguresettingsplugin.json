@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure scam settings.",
+        "Description[ca@valencia]": "Aquest connector permet configurar les opcions de configuració de la suplantació.",
         "Description[ca]": "Aquest connector permet configurar les opcions de configuració de la suplantació.",
         "Description[es]": "Este complemento le permite configurar las preferencias contra las estafas.",
         "Description[fr]": "Ce module externe vous permet de configurer les paramètres de fraude.",
@@ -11,6 +12,7 @@
         "Description[uk]": "За допомогою цього додатка можна налаштувати параметри скаму.",
         "Description[x-test]": "xxThis plugin allows you to configure scam settings.xx",
         "Name": "Scam Settings",
+        "Name[ca@valencia]": "Configuració de la suplantació",
         "Name[ca]": "Configuració de la suplantació",
         "Name[es]": "Preferencias contra estafas",
         "Name[fr]": "Configuration de fraude",
