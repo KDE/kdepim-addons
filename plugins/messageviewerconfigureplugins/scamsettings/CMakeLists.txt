@@ -6,6 +6,7 @@ add_library(scamconfiguresettings)
 target_sources(scamconfiguresettings PRIVATE
     scamconfiguresettingsdialog.cpp
     scamconfiguresettingswidget.cpp
+    scamconfigureutils.cpp
     )
 
 ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfiguresettings_debug.h IDENTIFIER LIBSCAMCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
