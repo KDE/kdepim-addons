@@ -8,10 +8,14 @@
 
 #include "scamconfiguresettings_private_export.h"
 #include <QWidget>
+class QTreeWidget;
 class LIBSCAMCONFIGURESETTINGS_TESTS_EXPORT ScamConfigureSettingsWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit ScamConfigureSettingsWidget(QWidget *parent = nullptr);
     ~ScamConfigureSettingsWidget() override;
+
+private:
+    QTreeWidget *const mTreeWidget;
 };

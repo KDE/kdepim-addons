@@ -5,8 +5,7 @@
 */
 
 #include "scamconfigureutils.h"
-
-QString ScamConfigureUtils::convertEnumToString()
+QString ScamConfigureUtils::convertEnumToString(MessageViewer::ScamDetectionInfo::ScamDetectionField flag)
 {
     // TODO
     return {};

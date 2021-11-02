@@ -6,9 +6,10 @@
 #pragma once
 
 #include "scamconfiguresettings_private_export.h"
+#include <MessageViewer/ScamDetectionInfo>
 #include <QString>
 
 namespace ScamConfigureUtils
 {
-Q_REQUIRED_RESULT QString convertEnumToString();
+Q_REQUIRED_RESULT QString convertEnumToString(MessageViewer::ScamDetectionInfo::ScamDetectionField flag);
 };
