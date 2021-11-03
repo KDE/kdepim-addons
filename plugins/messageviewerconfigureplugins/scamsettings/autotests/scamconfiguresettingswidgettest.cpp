@@ -5,6 +5,7 @@
 */
 #include "scamconfiguresettingswidgettest.h"
 #include "../scamconfiguresettingswidget.h"
+#include <QHeaderView>
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -23,4 +24,6 @@ void ScamConfigureSettingsWidgetTest::shouldHaveDefaultValues()
 
     auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
     QVERIFY(mTreeWidget);
+    QVERIFY(!mTreeWidget->rootIsDecorated());
+    QVERIFY(!mTreeWidget->header()->sectionsMovable());
 }

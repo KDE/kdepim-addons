@@ -8,6 +8,7 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <QHeaderView>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -21,6 +22,8 @@ ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
 
     mTreeWidget->setObjectName(QStringLiteral("mTreeWidget"));
     mainLayout->addWidget(mTreeWidget);
+    mTreeWidget->setRootIsDecorated(false);
+    mTreeWidget->header()->setSectionsMovable(false);
 }
 
 ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget()
