@@ -5,7 +5,9 @@
 */
 
 #include "scamconfiguresettingswidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -23,4 +25,14 @@ ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
 
 ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget()
 {
+}
+
+void ScamConfigureSettingsWidget::loadSettings()
+{
+    // TODO
+}
+
+void ScamConfigureSettingsWidget::saveSettings()
+{
+    // TODO
 }

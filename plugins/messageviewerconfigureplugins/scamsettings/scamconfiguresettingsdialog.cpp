@@ -26,12 +26,27 @@ ScamConfigureSettingsDialog::ScamConfigureSettingsDialog(QWidget *parent)
 
     mScamConfigureSettingsWidget->setObjectName(QStringLiteral("mScamConfigureSettingsWidget"));
     mainLayout->addWidget(mScamConfigureSettingsWidget);
+
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
+    buttonBox->setObjectName(QStringLiteral("buttonBox"));
+    mainLayout->addWidget(buttonBox);
+
+    connect(buttonBox, &QDialogButtonBox::accepted, this, &ScamConfigureSettingsDialog::slotAccepted);
+    connect(buttonBox, &QDialogButtonBox::rejected, this, &ScamConfigureSettingsDialog::reject);
+    mScamConfigureSettingsWidget->loadSettings();
+
     readConfig();
 }
 
 ScamConfigureSettingsDialog::~ScamConfigureSettingsDialog()
 {
     writeConfig();
+}
+
+void ScamConfigureSettingsDialog::slotAccepted()
+{
+    mScamConfigureSettingsWidget->saveSettings();
+    accept();
 }
 
 void ScamConfigureSettingsDialog::readConfig()

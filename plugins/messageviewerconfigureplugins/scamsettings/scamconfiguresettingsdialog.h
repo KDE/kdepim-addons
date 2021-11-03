@@ -18,5 +18,6 @@ public:
 private:
     void readConfig();
     void writeConfig();
+    void slotAccepted();
     ScamConfigureSettingsWidget *const mScamConfigureSettingsWidget;
 };

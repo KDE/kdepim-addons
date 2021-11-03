@@ -16,6 +16,9 @@ public:
     explicit ScamConfigureSettingsWidget(QWidget *parent = nullptr);
     ~ScamConfigureSettingsWidget() override;
 
+    void loadSettings();
+    void saveSettings();
+
 private:
     QTreeWidget *const mTreeWidget;
 };
