@@ -7,7 +7,6 @@
 #include "updatecontactjob.h"
 #include <Akonadi/Contact/ContactSearchJob>
 #include <Akonadi/ItemModifyJob>
-#include <KContacts/Addressee>
 #include <KLocalizedString>
 #include <KMessageBox>
 
