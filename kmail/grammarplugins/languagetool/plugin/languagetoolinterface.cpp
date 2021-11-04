@@ -96,8 +96,8 @@ bool LanguageToolInterface::checkAgain()
                     parentWidget(),
                     i18n("You do not use local instance.\nYour text will send on a external web site (https://languagetool.org/).\nDo you want to continue?"),
                     i18n("Check Grammar with LanguageTool"),
-                    KStandardGuiItem::yes(),
-                    KStandardGuiItem::no(),
+                    KStandardGuiItem::cont(),
+                    KStandardGuiItem::cancel(),
                     QStringLiteral("send_data_on_languagetool"))
                 == KMessageBox::No) {
                 return false;

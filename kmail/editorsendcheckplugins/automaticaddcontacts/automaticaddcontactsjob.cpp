@@ -98,7 +98,9 @@ void AutomaticAddContactsJob::slotFetchAllCollections(KJob *job)
     if (nbItemCollection == 0) {
         if (KMessageBox::questionYesNo(nullptr,
                                        i18nc("@info", "You must create an address book before adding a contact. Do you want to create an address book?"),
-                                       i18nc("@title:window", "No Address Book Available"))
+                                       i18nc("@title:window", "No Address Book Available"),
+                                       KGuiItem(i18nc("@action:button", "Create Address Book"), QStringLiteral("address-book-new")),
+                                       KStandardGuiItem::cancel())
             == KMessageBox::Yes) {
             QPointer<Akonadi::AgentTypeDialog> dlg = new Akonadi::AgentTypeDialog(nullptr);
             dlg->setWindowTitle(i18nc("@title:window", "Add Address Book"));

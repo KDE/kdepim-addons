@@ -178,7 +178,12 @@ public:
 
             if (buttonRect.contains(mouseEvent->pos())) {
                 const QString templateName = index.data(Qt::DisplayRole).toString();
-                if (KMessageBox::questionYesNo(nullptr, i18nc("@label", "Do you really want to delete template '%1'?", templateName)) == KMessageBox::Yes) {
+                const int answer = KMessageBox::questionYesNo(nullptr,
+                                                              i18nc("@label", "Do you really want to delete template '%1'?", templateName),
+                                                              QString(),
+                                                              KStandardGuiItem::del(),
+                                                              KStandardGuiItem::cancel());
+                if (answer == KMessageBox::Yes) {
                     model->removeRows(index.row(), 1);
                     return true;
                 }

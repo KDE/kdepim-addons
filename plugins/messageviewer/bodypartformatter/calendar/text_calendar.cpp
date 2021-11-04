@@ -767,67 +767,101 @@ public:
 
         if (!warnStr.isEmpty()) {
             QString queryStr;
+            KGuiItem yesItem;
+            KGuiItem noItem;
             if (path == QLatin1String("accept")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to accept the task?");
                 } else {
                     queryStr = i18n("Do you still want to accept the invitation?");
                 }
+                yesItem.setText(i18nc("@action:button", "Accept"));
+                yesItem.setIconName(QStringLiteral("dialog-ok"));
             } else if (path == QLatin1String("accept_conditionally")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to send conditional acceptance of the invitation?");
                 } else {
                     queryStr = i18n("Do you still want to send conditional acceptance of the task?");
                 }
+                yesItem.setText(i18nc("@action:button", "Send"));
+                yesItem.setIconName(QStringLiteral("mail-send"));
             } else if (path == QLatin1String("accept_counter")) {
                 queryStr = i18n("Do you still want to accept the counter proposal?");
+                yesItem.setText(i18nc("@action:button", "Accept"));
+                yesItem.setIconName(QStringLiteral("dialog-ok"));
             } else if (path == QLatin1String("counter")) {
                 queryStr = i18n("Do you still want to send a counter proposal?");
+                yesItem.setText(i18nc("@action:button", "Send"));
+                yesItem.setIconName(QStringLiteral("mail-send"));
             } else if (path == QLatin1String("decline")) {
                 queryStr = i18n("Do you still want to send a decline response?");
+                yesItem.setText(i18nc("@action:button", "Send"));
+                yesItem.setIconName(QStringLiteral("mail-send"));
             } else if (path == QLatin1String("decline_counter")) {
                 queryStr = i18n("Do you still want to decline the counter proposal?");
+                yesItem.setText(i18nc("@action:button", "Decline"));
             } else if (path == QLatin1String("reply")) {
                 queryStr = i18n("Do you still want to record this response in your calendar?");
+                yesItem.setText(i18nc("@action:button", "Record"));
             } else if (path == QLatin1String("delegate")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to delegate this task?");
                 } else {
                     queryStr = i18n("Do you still want to delegate this invitation?");
                 }
+                yesItem.setText(i18nc("@action:button", "Delegate"));
             } else if (path == QLatin1String("forward")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to forward this task?");
                 } else {
                     queryStr = i18n("Do you still want to forward this invitation?");
                 }
+                yesItem.setText(i18nc("@action:button", "Forward"));
+                yesItem.setIconName(QStringLiteral("mail-forward"));
             } else if (path == QLatin1String("cancel")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to cancel this task?");
+                    yesItem.setText(i18nc("@action:button", "Cancel Task"));
                 } else {
                     queryStr = i18n("Do you still want to cancel this invitation?");
+                    yesItem.setText(i18nc("@action:button", "Cancel Invitation"));
                 }
+                yesItem.setIconName(QStringLiteral("dialog-ok"));
+                noItem.setText(i18nc("@action:button", "Do Not Cancel"));
+                noItem.setIconName(QStringLiteral("dialog-cancel"));
             } else if (path == QLatin1String("check_calendar")) {
                 queryStr = i18n("Do you still want to check your calendar?");
+                yesItem.setText(i18nc("@action:button", "Check"));
             } else if (path == QLatin1String("record")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you still want to record this task in your calendar?");
                 } else {
                     queryStr = i18n("Do you still want to record this invitation in your calendar?");
                 }
+                yesItem.setText(i18nc("@action:button", "Record"));
             } else if (path == QLatin1String("cancel")) {
                 if (type == Incidence::TypeTodo) {
                     queryStr = i18n("Do you really want to cancel this task?");
+                    yesItem.setText(i18nc("@action:button", "Cancel Task"));
                 } else {
                     queryStr = i18n("Do you really want to cancel this invitation?");
+                    yesItem.setText(i18nc("@action:button", "Cancel Invitation"));
                 }
+                yesItem.setIconName(QStringLiteral("dialog-ok"));
+                noItem.setText(i18nc("@action:button", "Do Not Cancel"));
+                noItem.setIconName(QStringLiteral("dialog-cancel"));
             } else if (path.startsWith(QLatin1String("ATTACH:"))) {
                 return false;
             } else {
                 queryStr = i18n("%1?", path);
+                yesItem = KStandardGuiItem::yes();
             }
 
-            if (KMessageBox::warningYesNo(nullptr, i18n("%1\n%2", warnStr, queryStr)) == KMessageBox::No) {
+            if (noItem.text().isEmpty()) {
+                noItem = KStandardGuiItem::cancel();
+            }
+            const int answer = KMessageBox::warningYesNo(nullptr, i18n("%1\n%2", warnStr, queryStr), QString(), yesItem, noItem);
+            if (answer == KMessageBox::No) {
                 return true;
             }
         }

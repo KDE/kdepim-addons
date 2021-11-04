@@ -33,8 +33,12 @@ bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBefo
 {
     if (mSendPlainText) {
         if (params.isHtmlMail()) {
-            if (KMessageBox::No
-                == KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to send the email as HTML?"), i18n("Send email as plain text"))) {
+            const int answer = KMessageBox::questionYesNo(parentWidget(),
+                                                          i18n("Do you want to send the email as HTML?"),
+                                                          i18n("Send email as plain text"),
+                                                          KGuiItem(i18nc("@action:button", "Send As HTML")),
+                                                          KStandardGuiItem::cancel());
+            if (answer == KMessageBox::No) {
                 return false;
             }
         }

@@ -66,7 +66,12 @@ QuickTextWidget::~QuickTextWidget()
 void QuickTextWidget::save()
 {
     if (mSnippetWidget->wasChanged()) {
-        if (KMessageBox::Yes == KMessageBox::warningYesNo(this, i18n("QuickText was changed. Do you want to save it?"), i18n("Save"))) {
+        const int answer = KMessageBox::warningYesNo(this,
+                                                     i18n("QuickText was changed. Do you want to save it?"),
+                                                     i18n("Save"),
+                                                     KStandardGuiItem::save(),
+                                                     KStandardGuiItem::discard());
+        if (answer == KMessageBox::Yes) {
             switch (mMode) {
             case EditMode::AddSnippet:
                 saveAddSnippet();

@@ -191,8 +191,12 @@ void AdBlockSettingWidget::removeRule()
     if (select.isEmpty()) {
         return;
     }
-    if (KMessageBox::No
-        == KMessageBox::warningYesNo(this, i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()), i18n("Remove"))) {
+    const int answer = KMessageBox::warningYesNo(this,
+                                                 i18np("Do you want to remove this rule?", "Do you want to remove these rules?", select.count()),
+                                                 i18n("Remove"),
+                                                 KStandardGuiItem::remove(),
+                                                 KStandardGuiItem::cancel());
+    if (answer == KMessageBox::No) {
         return;
     }
     for (QListWidgetItem *item : select) {
@@ -329,7 +333,12 @@ void AdBlockSettingWidget::slotRemoveSubscription()
 {
     QListWidgetItem *item = mUi->automaticFiltersListWidget->currentItem();
     if (item) {
-        if (KMessageBox::questionYesNo(this, i18n("Do you want to delete list \"%1\"?", item->text()), i18n("Delete current list")) == KMessageBox::Yes) {
+        const int answer = KMessageBox::questionYesNo(this,
+                                                      i18n("Do you want to delete list \"%1\"?", item->text()),
+                                                      i18n("Delete current list"),
+                                                      KStandardGuiItem::del(),
+                                                      KStandardGuiItem::cancel());
+        if (answer == KMessageBox::Yes) {
             auto subItem = dynamic_cast<AdBlockListwidgetItem *>(item);
             if (subItem) {
                 if (AdblockManager::self()->removeSubscription(subItem->subscription())) {
