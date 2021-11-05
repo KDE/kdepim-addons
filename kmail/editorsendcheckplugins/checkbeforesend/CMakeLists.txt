@@ -16,6 +16,15 @@ target_sources(kmail_checkbeforesendeditorplugin PRIVATE
     duplicateemails/checkduplicateemailsjob.cpp
     sendattachments/checkattachmentdialog.cpp
     sendattachments/checkattachmentjob.cpp
+    checkbeforesendplugin.h
+    checkbeforesendinterface.h
+    checkbeforesendupdatesmtpdialog.h
+    configurewidget/checkbeforesendconfigurewidget.h
+    configurewidget/checkbeforesendconfiguredialog.h
+    duplicateemails/checkduplicateemailsdialog.h
+    duplicateemails/checkduplicateemailsjob.h
+    sendattachments/checkattachmentdialog.h
+    sendattachments/checkattachmentjob.h
     )
 
 ecm_qt_declare_logging_category(kmail_checkbeforesendeditorplugin HEADER checkbeforesendplugin_debug.h IDENTIFIER KMAIL_EDITOR_checkbeforesend_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_checkbeforesendplugin

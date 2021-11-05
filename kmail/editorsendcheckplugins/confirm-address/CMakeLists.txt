@@ -14,6 +14,17 @@ target_sources(kmail_confirmaddresseditorplugin PRIVATE
     confirmaddressconfiguredialog.cpp
     confirmaddresssimplestringlisteditor.cpp
     confirmaddressemailentrydialog.cpp
+    confirmaddressinterface.h
+    confirmaddressplugin.h
+    confirmaddressconfigurewidget.h
+    confirmaddressdialog.h
+    confirmaddresswidget.h
+    confirmaddressconfiguretabwidget.h
+    confirmaddressconfiguretab.h
+    confirmaddresscheckjob.h
+    confirmaddressconfiguredialog.h
+    confirmaddresssimplestringlisteditor.h
+    confirmaddressemailentrydialog.h
     )
 
 ecm_qt_declare_logging_category(kmail_confirmaddresseditorplugin HEADER confirmaddressplugin_debug.h IDENTIFIER KMAIL_EDITOR_CONFIRMADDRESS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmaddressplugin

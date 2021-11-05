@@ -5,6 +5,8 @@ kcoreaddons_add_plugin(kmail_insertspecialcharactereditorplugin INSTALL_NAMESPAC
 target_sources(kmail_insertspecialcharactereditorplugin PRIVATE
     insertspecialcharacterplugineditor.cpp
     insertspecialcharacterplugineditorinterface.cpp
+    insertspecialcharacterplugineditor.h
+    insertspecialcharacterplugineditorinterface.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

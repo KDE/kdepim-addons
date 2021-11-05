@@ -6,6 +6,10 @@ target_sources(messageviewer_createnoteplugin PRIVATE
     viewerplugincreatenoteinterface.cpp
     noteedit.cpp
     createnotejob.cpp
+    viewerplugincreatenote.h
+    viewerplugincreatenoteinterface.h
+    noteedit.h
+    createnotejob.h
     )
 ecm_qt_declare_logging_category(messageviewer_createnoteplugin HEADER createnoteplugin_debug.h IDENTIFIER CREATENOTEPLUGIN_LOG CATEGORY_NAME org.kde.pim.createnoteplugin
     DESCRIPTION "kdepim-addons (create note plugin)"

@@ -24,6 +24,27 @@ target_sources(kaddressbookmergelibprivate PRIVATE
     widgets/mergecontactloseinformationwarning.cpp
     widgets/mergecontactselectinformationscrollarea.cpp
     widgets/mergecontacterrorlabel.cpp
+
+    job/searchpotentialduplicatecontactjob.h
+    job/mergecontactsjob.h
+    job/mergecontacts.h
+
+    manualmerge/mergecontactsdialog.h
+    manualmerge/mergecontactwidget.h
+    manualmerge/mergecontactwidgetlist.h
+
+    searchduplicate/searchandmergecontactduplicatecontactdialog.h
+    searchduplicate/searchduplicateresultwidget.h
+    searchduplicate/resultduplicatetreewidget.h
+    searchduplicate/mergecontactselectinformationtabwidget.h
+
+    widgets/mergecontactinfowidget.h
+    widgets/mergecontactshowresulttabwidget.h
+    widgets/mergecontactselectinformationwidget.h
+    widgets/mergecontactselectlistwidget.h
+    widgets/mergecontactloseinformationwarning.h
+    widgets/mergecontactselectinformationscrollarea.h
+    widgets/mergecontacterrorlabel.h
     )
 ecm_qt_declare_logging_category(kaddressbookmergelibprivate HEADER kaddressbookmergelibprivate_debug.h IDENTIFIER KADDRESSBOOKMERGELIBPRIVATE_LOG CATEGORY_NAME org.kde.pim.kaddressbookmergelibprivate
     DESCRIPTION "kdepim-addons (kaddressbook merge contact plugin)"

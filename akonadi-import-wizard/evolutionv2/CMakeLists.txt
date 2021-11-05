@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 kcoreaddons_add_plugin(evolutionv2importerplugin SOURCES
-    evolutionv2importdata.cpp   INSTALL_NAMESPACE importwizard)
+    evolutionv2importdata.cpp  evolutionv2importdata.h INSTALL_NAMESPACE importwizard)
 
 
 target_link_libraries(evolutionv2importerplugin

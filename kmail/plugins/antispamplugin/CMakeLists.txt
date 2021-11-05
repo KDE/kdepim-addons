@@ -6,6 +6,9 @@ target_sources(kmail_antispamplugin PRIVATE
     antispamplugininterface.cpp
     ../common/antispamwizard.cpp
     ../common/antispam.qrc
+    antispamplugin.h
+    antispamplugininterface.h
+    ../common/antispamwizard.h
 )
 
 target_link_libraries(kmail_antispamplugin

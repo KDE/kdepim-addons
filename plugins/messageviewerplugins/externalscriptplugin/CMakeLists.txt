@@ -13,6 +13,17 @@ target_sources(messageviewer_externalscriptplugin PRIVATE
     configuredialog/viewerpluginexternalconfigurewidget.cpp
     configuredialog/viewerpluginexternaleditdialog.cpp
     configuredialog/viewerpluginexternaleditwidget.cpp
+
+    viewerpluginexternalscript.h
+    viewerpluginexternalscriptinterface.h
+    viewerpluginexternalscriptmanager.h
+    viewerpluginexternalscriptinfo.h
+    viewerpluginexternalscriptsloadjob.h
+    viewerpluginexternalscriptparseargument.h
+    configuredialog/viewerpluginexternalconfiguredialog.h
+    configuredialog/viewerpluginexternalconfigurewidget.h
+    configuredialog/viewerpluginexternaleditdialog.h
+    configuredialog/viewerpluginexternaleditwidget.h
     )
 
 

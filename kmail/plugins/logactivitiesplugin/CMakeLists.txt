@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(kmail_logactivitiesplugin INSTALL_NAMESPACE kmail/mainvie
 target_sources(kmail_logactivitiesplugin PRIVATE
     logactivitiesplugin.cpp
     logactivitiesplugininterface.cpp
+    logactivitiesplugin.h
+    logactivitiesplugininterface.h
 )
 
 

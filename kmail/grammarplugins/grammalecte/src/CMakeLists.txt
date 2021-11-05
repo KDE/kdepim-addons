@@ -12,6 +12,14 @@ target_sources(kmailgrammalecte PRIVATE
     grammalectemanager.cpp
     grammalecteresultwidget.cpp
     grammalectegrammarerror.cpp
+    grammalecteparser.h
+    grammalecteresultjob.h
+    grammalecteconfigwidget.h
+    grammalectegenerateconfigoptionjob.h
+    grammalecteconfigdialog.h
+    grammalectemanager.h
+    grammalecteresultwidget.h
+    grammalectegrammarerror.h
     )
 
 ecm_qt_declare_logging_category(kmailgrammalecte HEADER libgrammalecte_debug.h IDENTIFIER LIBGRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libgrammalecteplugin

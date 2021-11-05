@@ -6,6 +6,10 @@ target_sources(messageviewer_createtodoplugin PRIVATE
     viewerplugincreatetodointerface.cpp
     todoedit.cpp
     createtodojob.cpp
+    viewerplugincreatetodo.h
+    viewerplugincreatetodointerface.h
+    todoedit.h
+    createtodojob.h
     )
 ecm_qt_declare_logging_category(messageviewer_createtodoplugin HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin
     DESCRIPTION "kdepim-addons (create todo plugin)"

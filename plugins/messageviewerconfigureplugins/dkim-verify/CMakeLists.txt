@@ -3,6 +3,7 @@
 kcoreaddons_add_plugin(messageviewer_dkimconfigplugin INSTALL_NAMESPACE messageviewer/configuresettings)
 target_sources(messageviewer_dkimconfigplugin PRIVATE
     dkimconfiguresettingsplugin.cpp
+    dkimconfiguresettingsplugin.h
     )
 
 
@@ -24,6 +25,15 @@ target_sources(dkimverifyconfigure PRIVATE
     dkimpolicywidget.cpp
     dkimauthenticationverifiedserverwidget.cpp
     dkimauthenticationverifiedserverdialog.cpp
+    dkimconfiguredialog.h
+    dkimconfiguretab.h
+    dkimconfigurewidget.h
+    dkimgeneralwidget.h
+    dkimkeyrecordwidget.h
+    dkimadvancedwidget.h
+    dkimpolicywidget.h
+    dkimauthenticationverifiedserverwidget.h
+    dkimauthenticationverifiedserverdialog.h
     )
 
 ecm_qt_declare_logging_category(dkimverifyconfigure HEADER libdkimverifyconfigure_debug.h IDENTIFIER LIBDKIMVERIFYCONFIGURE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libdkimconfigureplugin

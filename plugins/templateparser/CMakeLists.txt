@@ -11,6 +11,7 @@ kcoreaddons_add_plugin(templateparseraddressrequesterplugin INSTALL_NAMESPACE te
 
 target_sources(templateparseraddressrequesterplugin PRIVATE
     templateparseremailaddressrequesterakonadi.cpp
+    templateparseremailaddressrequesterakonadi.h
     )
 
 

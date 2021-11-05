@@ -10,6 +10,13 @@ target_sources(kmail_automaticaddcontactseditorplugin PRIVATE
     automaticaddcontactstabwidget.cpp
     automaticaddcontactsconfiguretab.cpp
     automaticaddcontactsconfiguredialog.cpp
+    automaticaddcontactsinterface.h
+    automaticaddcontactsplugin.h
+    automaticaddcontactsconfigurewidget.h
+    automaticaddcontactsjob.h
+    automaticaddcontactstabwidget.h
+    automaticaddcontactsconfiguretab.h
+    automaticaddcontactsconfiguredialog.h
     )
 
 ecm_qt_declare_logging_category(kmail_automaticaddcontactseditorplugin HEADER automaticaddcontactsplugin_debug.h IDENTIFIER KMAIL_EDITOR_AUTOMATICADDCONTACTS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_automaticaddcontactsplugin

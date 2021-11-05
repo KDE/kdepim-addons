@@ -7,6 +7,10 @@ target_sources(kmail_insertemaileditorplugin PRIVATE
     insertemailplugineditorinterface.cpp
     selectmailwidget.cpp
     selectmaildialog.cpp
+    insertemailplugineditor.h
+    insertemailplugineditorinterface.h
+    selectmailwidget.h
+    selectmaildialog.h
 )
 
 

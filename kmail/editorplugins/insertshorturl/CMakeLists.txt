@@ -6,6 +6,9 @@ target_sources(shorturlpluginprivate PRIVATE
     shorturlengineplugin/shorturlengineinterface.cpp
     shorturlengineplugin/shorturlengineplugin.cpp
     shorturlengineplugin/shorturlenginepluginmanager.cpp
+    shorturlengineplugin/shorturlengineinterface.h
+    shorturlengineplugin/shorturlengineplugin.h
+    shorturlengineplugin/shorturlenginepluginmanager.h
     )
 
 
@@ -35,6 +38,10 @@ target_sources(kmail_insertshorturleditorplugin PRIVATE
     insertshorturlplugineditorinterface.cpp
     insertshorturlconfiguredialog.cpp
     insertshorturlconfigurewidget.cpp
+    insertshorturlplugineditor.h
+    insertshorturlplugineditorinterface.h
+    insertshorturlconfiguredialog.h
+    insertshorturlconfigurewidget.h
     ${pimcommon_shorturlplugin_shorturllib_SRCS}
     )
 ecm_qt_declare_logging_category(kmail_insertshorturleditorplugin HEADER kmail_insertshorturl_debug.h IDENTIFIER KMAIL_INSERTSHORTURL_LOG CATEGORY_NAME org.kde.pim.kmail_insertshorturl

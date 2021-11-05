@@ -16,6 +16,19 @@ target_sources(kmailmarkdown PRIVATE
     markdowncreateimagedialog.cpp
     markdownhighlighter.cpp
     markdownutil.cpp
+
+    markdownpreviewwidget.h
+    markdownconfigurewidget.h
+    markdownconfiguredialog.h
+    markdownconverter.h
+    markdownpreviewdialog.h
+    markdownenginepage.h
+    markdowncreatelinkwidget.h
+    markdowncreatelinkdialog.h
+    markdowncreateimagewidget.h
+    markdowncreateimagedialog.h
+    markdownhighlighter.h
+    markdownutil.h
     )
 
 

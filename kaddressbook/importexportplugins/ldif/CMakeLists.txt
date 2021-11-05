@@ -2,6 +2,8 @@ kcoreaddons_add_plugin(kaddressbook_importexportldifplugin INSTALL_NAMESPACE kad
 target_sources(kaddressbook_importexportldifplugin PRIVATE
     ldifimportexportplugin.cpp
     ldifimportexportplugininterface.cpp
+    ldifimportexportplugin.h
+    ldifimportexportplugininterface.h
     )
 
 

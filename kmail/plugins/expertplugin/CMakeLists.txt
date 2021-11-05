@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(kmail_expertplugin INSTALL_NAMESPACE kmail/mainview)
 target_sources(kmail_expertplugin PRIVATE
     expertplugin.cpp
     expertplugininterface.cpp
+    expertplugin.h
+    expertplugininterface.h
     )
 
 ecm_qt_declare_logging_category(kmail_expertplugin

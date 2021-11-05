@@ -14,6 +14,17 @@ target_sources(folderconfiguresettings PRIVATE
     folderconfiguremodifycollectionjob.cpp
     folderconfiguresettingspagebase.cpp
     folderconfiguresettingsexperywidget.cpp
+    folderconfiguresettingsdialog.h
+    folderconfiguresettingswidget.h
+    foldersettingfilterproxymodel.h
+    folderconfiguretreewidget.h
+    folderconfiguresettingspagewidget.h
+    folderconfiguresettingsgeneralwidget.h
+    folderconfiguresettingstemplatewidget.h
+    folderconfiguresettingsviewwidget.h
+    folderconfiguremodifycollectionjob.h
+    folderconfiguresettingspagebase.h
+    folderconfiguresettingsexperywidget.h
     )
 
 ecm_qt_declare_logging_category(folderconfiguresettings HEADER libfolderconfiguresettings_debug.h IDENTIFIER LIBFOLDERCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin

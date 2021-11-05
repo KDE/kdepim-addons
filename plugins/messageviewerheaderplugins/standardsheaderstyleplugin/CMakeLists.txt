@@ -5,6 +5,9 @@ target_sources(messageviewer_standardsheaderstyleplugin PRIVATE
    standardsheaderstyleplugin.cpp
    standardsheaderstyleinterface.cpp
    standardheaderstrategy.cpp
+   standardsheaderstyleplugin.h
+   standardsheaderstyleinterface.h
+   standardheaderstrategy.h
 )
 
 

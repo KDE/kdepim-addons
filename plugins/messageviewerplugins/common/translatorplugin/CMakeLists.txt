@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(messageviewer_translatorplugin INSTALL_NAMESPACE messagev
 target_sources(messageviewer_translatorplugin PRIVATE
     viewerplugintranslator.cpp
     viewerplugintranslatorinterface.cpp
+    viewerplugintranslator.h
+    viewerplugintranslatorinterface.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

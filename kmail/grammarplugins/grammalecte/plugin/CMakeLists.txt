@@ -9,6 +9,8 @@ kcoreaddons_add_plugin(kmail_grammalecteplugin INSTALL_NAMESPACE kmail/pluginedi
 target_sources(kmail_grammalecteplugin PRIVATE
     grammalecteplugin.cpp
     grammalecteinterface.cpp
+    grammalecteplugin.h
+    grammalecteinterface.h
     )
 
 ecm_qt_declare_logging_category(kmail_grammalecteplugin HEADER grammalecteplugin_debug.h IDENTIFIER KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_grammalecteplugin

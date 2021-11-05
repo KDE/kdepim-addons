@@ -6,6 +6,9 @@ target_sources(operaimporterplugin PRIVATE
    operaaddressbook.cpp  
    operaimportdata.cpp  
    operasettings.cpp
+   operaaddressbook.h
+   operaimportdata.h
+   operasettings.h
 )
 
 ecm_qt_declare_logging_category(operaimporterplugin HEADER operaplugin_debug.h IDENTIFIER OPERAPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.operaplugin)

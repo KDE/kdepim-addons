@@ -7,6 +7,13 @@ target_sources(kaddressbook_importexportcsvplugin PRIVATE
     import/qcsvmodel.cpp
     import/qcsvreader.cpp
     import/templateselectiondialog.cpp
+    csvimportexportplugin.h
+    csvimportexportplugininterface.h
+    import/csvimportdialog.h
+    import/dateparser.h
+    import/qcsvmodel.h
+    import/qcsvreader.h
+    import/templateselectiondialog.h
     )
 
 

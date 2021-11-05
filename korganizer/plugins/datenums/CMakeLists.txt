@@ -4,6 +4,8 @@ add_library(korg_datenums MODULE)
 target_sources(korg_datenums PRIVATE
   configdialog.cpp
   datenums.cpp
+  configdialog.h
+  datenums.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

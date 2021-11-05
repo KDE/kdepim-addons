@@ -11,6 +11,9 @@ target_sources(kaddressbook_sendmailplugin PRIVATE
     sendmailplugininterface.cpp
     sendmailplugin.cpp
     mailsenderjob.cpp
+    sendmailplugininterface.h
+    sendmailplugin.h
+    mailsenderjob.h
     )
 
 ecm_qt_declare_logging_category(kaddressbook_sendmailplugin HEADER kaddressbook_sendmailplugin_debug.h IDENTIFIER KADDRESSBOOK_SENDMAIL_LOG CATEGORY_NAME org.kde.pim.kaddressbook_sendmail

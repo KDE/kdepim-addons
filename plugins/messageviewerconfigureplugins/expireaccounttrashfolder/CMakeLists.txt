@@ -5,6 +5,8 @@ target_sources(expireaccounttrashfolderconfig PRIVATE
     expireaccounttrashfolderconfigdialog.cpp
     expireaccounttrashfolderconfigwidget.cpp
 
+    expireaccounttrashfolderconfigdialog.h
+    expireaccounttrashfolderconfigwidget.h
     )
 
 ecm_qt_declare_logging_category(expireaccounttrashfolderconfig HEADER libexpireaccounttrashfolderconfig_debug.h IDENTIFIER LIBEXPIREACCOUNTTRASHFOLDERCONFIG_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libexpireaccounttrashfolderconfig
@@ -34,6 +36,7 @@ install(TARGETS expireaccounttrashfolderconfig ${KDE_INSTALL_TARGETS_DEFAULT_ARG
 kcoreaddons_add_plugin(messageviewer_expireaccounttrashfolderconfigplugin INSTALL_NAMESPACE messageviewer/configuresettings)
 target_sources(messageviewer_expireaccounttrashfolderconfigplugin PRIVATE
    expireaccounttrashfolderconfigplugin.cpp
+   expireaccounttrashfolderconfigplugin.h
 )
 
 target_link_libraries(messageviewer_expireaccounttrashfolderconfigplugin

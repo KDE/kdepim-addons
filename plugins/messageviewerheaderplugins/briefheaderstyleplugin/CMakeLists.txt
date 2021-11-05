@@ -6,6 +6,10 @@ target_sources(messageviewer_briefheaderstyleplugin PRIVATE
    briefheaderstyleinterface.cpp 
    briefheaderstyle.cpp
    briefheaderstrategy.cpp
+   briefheaderstyleplugin.h
+   briefheaderstyleinterface.h
+   briefheaderstyle.h
+   briefheaderstrategy.h
 )
 
 

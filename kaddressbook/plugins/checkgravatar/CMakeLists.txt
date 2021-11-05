@@ -13,6 +13,12 @@ target_sources(kaddressbook_checkgravatarplugin PRIVATE
 
     checkgravatarplugininterface.cpp
     checkgravatarplugin.cpp
+    gravatar/job/gravatarupdatejob.h
+    gravatar/widgets/gravatarupdatedialog.h
+    gravatar/widgets/gravatarupdatewidget.h
+
+    checkgravatarplugininterface.h
+    checkgravatarplugin.h
     )
 
 ecm_qt_declare_logging_category(kaddressbook_checkgravatarplugin HEADER kaddressbook_checkgravatarplugin_debug.h IDENTIFIER KADDRESSBOOK_CHECKGRAVATAR_LOG CATEGORY_NAME org.kde.pim.kaddressbook_checkgravatar

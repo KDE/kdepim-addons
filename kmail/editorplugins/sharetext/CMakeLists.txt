@@ -6,6 +6,9 @@ target_sources(kmail_sharetexteditorplugin PRIVATE
     sharetextplugineditor.cpp
     sharetextplugineditorinterface.cpp
     sharetextpurposemenuwidget.cpp
+    sharetextplugineditor.h
+    sharetextplugineditorinterface.h
+    sharetextpurposemenuwidget.h
     )
 
 ecm_qt_declare_logging_category(kmail_sharetexteditorplugin HEADER sharetexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_SHARETEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_sharetexteditorplugin

@@ -5,6 +5,10 @@ target_sources(kaddressbook_importexportvcardplugin PRIVATE
     vcardimportexportplugininterface.cpp
     engine/vcardviewerdialog.cpp
     engine/vcardexportselectionwidget.cpp
+    vcardimportexportplugin.h
+    vcardimportexportplugininterface.h
+    engine/vcardviewerdialog.h
+    engine/vcardexportselectionwidget.h
     )
 
 

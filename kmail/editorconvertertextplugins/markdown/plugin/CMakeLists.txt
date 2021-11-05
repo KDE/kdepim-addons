@@ -5,6 +5,8 @@ kcoreaddons_add_plugin(kmail_markdownplugin INSTALL_NAMESPACE kmail/plugineditor
 target_sources(kmail_markdownplugin PRIVATE
     markdowninterface.cpp
     markdownplugin.cpp
+    markdowninterface.h
+    markdownplugin.h
     )
 
 ecm_qt_declare_logging_category(kmail_markdownplugin HEADER markdownplugin_debug.h IDENTIFIER KMAIL_EDITOR_MARKDOWN_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_markdownplugin)

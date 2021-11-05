@@ -7,6 +7,9 @@ target_sources(kmail_zoomtexteditorplugin PRIVATE
     zoomtextplugineditor.cpp
     zoomtextplugineditorinterface.cpp
     zoomlabel.cpp
+    zoomtextplugineditor.h
+    zoomtextplugineditorinterface.h
+    zoomlabel.h
     )
 
 ecm_qt_declare_logging_category(kmail_zoomtexteditorplugin HEADER zoomtexteditorplugin_debug.h IDENTIFIER KMAIL_EDITOR_ZOOMTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_zoomtexteditorplugin

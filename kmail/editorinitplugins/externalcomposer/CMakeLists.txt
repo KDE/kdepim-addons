@@ -7,6 +7,10 @@ target_sources(kmail_externalcomposereditorplugin PRIVATE
     externalcomposerplugineditorinterface.cpp
     externalcomposerconfiguredialog.cpp
     externalcomposerconfigurewidget.cpp
+    externalcomposerplugineditor.h
+    externalcomposerplugineditorinterface.h
+    externalcomposerconfiguredialog.h
+    externalcomposerconfigurewidget.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

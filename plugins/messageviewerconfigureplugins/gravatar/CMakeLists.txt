@@ -5,6 +5,9 @@ target_sources(messageviewer_gravatarconfigplugin PRIVATE
    gravatarconfiguresettingspluginwidget.cpp
    gravatarconfiguresettingsplugin.cpp
    gravatarconfiguresettingsplugindialog.cpp
+   gravatarconfiguresettingspluginwidget.h
+   gravatarconfiguresettingsplugin.h
+   gravatarconfiguresettingsplugindialog.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

@@ -15,6 +15,18 @@ target_sources(kmaillanguagetool PRIVATE
     languagetoollistoflanguagesparser.cpp
     languageinfo.cpp
     languagetoolupdatecombobox.cpp
+    languagetoolparser.h
+    languagetoolgrammarerror.h
+    languagetoolresultwidget.h
+    languagetoolconfigdialog.h
+    languagetoolconfigwidget.h
+    languagetoolmanager.h
+    languagetoolresultjob.h
+    languagetoolcombobox.h
+    languagetoolgetlistoflanguagejob.h
+    languagetoollistoflanguagesparser.h
+    languageinfo.h
+    languagetoolupdatecombobox.h
     )
 
 ecm_qt_declare_logging_category(kmaillanguagetool HEADER liblanguagetool_debug.h IDENTIFIER LIBLANGUAGE_PLUGIN_LOG CATEGORY_NAME org.kde.pim.liblanguagetoolplugin

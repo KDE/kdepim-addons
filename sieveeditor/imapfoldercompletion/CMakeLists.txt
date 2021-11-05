@@ -28,6 +28,15 @@ target_sources(imapfoldercompletionplugin PRIVATE
     selectimapcreatefolderjob.cpp
     selectimapfoldertreeview.cpp
     ${sieveeditor_plugin_categories_SRCS}
+    selectimapfolderdialog.h
+    selectimapfolderwidget.h
+    selectimapwidget.h
+    selectimaploadfoldersjob.h
+    selectimapfoldermodel.h
+    selectimaplineedit.h
+    selectimaplineeditcompletermodel.h
+    selectimapcreatefolderjob.h
+    selectimapfoldertreeview.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

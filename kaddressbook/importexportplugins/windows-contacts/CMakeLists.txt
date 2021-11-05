@@ -9,6 +9,9 @@ target_sources(kaddressbook_importexportwindowscontactplugin PRIVATE
     windowscontactimportexportplugin.cpp
     windowscontactimportexportplugininterface.cpp
     importwindowcontact.cpp
+    windowscontactimportexportplugin.h
+    windowscontactimportexportplugininterface.h
+    importwindowcontact.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

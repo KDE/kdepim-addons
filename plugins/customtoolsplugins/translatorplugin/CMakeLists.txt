@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(pimcommon_translatorplugin INSTALL_NAMESPACE pimcommon/cu
 target_sources(pimcommon_translatorplugin PRIVATE
    translatorplugin.cpp
    translatorview.cpp
+   translatorplugin.h
+   translatorview.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

@@ -17,6 +17,7 @@ endif()
 
 target_sources(emaillineeditplugin PRIVATE
     emaillineedit.cpp
+    emaillineedit.h
     )
 
 

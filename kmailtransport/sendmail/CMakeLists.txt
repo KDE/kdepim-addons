@@ -7,6 +7,10 @@ target_sources(mailtransport_sendplugin PRIVATE
     sendmailjob.cpp
     sendmailconfigwidget.cpp
     sendmailconfigdialog.cpp
+    sendmailtransportplugin.h
+    sendmailjob.h
+    sendmailconfigwidget.h
+    sendmailconfigdialog.h
     )
 
 ecm_qt_declare_logging_category(mailtransport_sendplugin HEADER sendmailplugin_debug.h IDENTIFIER MAILTRANSPORT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.mailtransport_sendmail

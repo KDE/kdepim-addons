@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(messageviewer_expandurlplugin INSTALL_NAMESPACE messagevi
 target_sources(messageviewer_expandurlplugin PRIVATE
     viewerpluginexpandurl.cpp
     viewerpluginexpandurlinterface.cpp
+    viewerpluginexpandurl.h
+    viewerpluginexpandurlinterface.h
     )
 
 ecm_qt_declare_logging_category(messageviewer_expandurlplugin HEADER expandurlplugin_debug.h IDENTIFIER EXPANDURLPLUGIN_LOG CATEGORY_NAME org.kde.pim.expandurlplugin

@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(messageviewer_longheaderstyleplugin INSTALL_NAMESPACE mes
 target_sources(messageviewer_longheaderstyleplugin PRIVATE
    longheaderstyleplugin.cpp
    longheaderstyleinterface.cpp
+   longheaderstyleplugin.h
+   longheaderstyleinterface.h
 )
 
 

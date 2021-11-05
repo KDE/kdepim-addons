@@ -4,6 +4,7 @@
 add_library(korg_thisdayinhistory MODULE)
 target_sources(korg_thisdayinhistory PRIVATE
   thisdayinhistory.cpp
+  thisdayinhistory.h
 )
 
 

@@ -2,6 +2,8 @@ kcoreaddons_add_plugin(kaddressbook_importexportgmxplugin INSTALL_NAMESPACE kadd
 target_sources(kaddressbook_importexportgmxplugin PRIVATE
     gmximportexportplugin.cpp
     gmximportexportplugininterface.cpp
+    gmximportexportplugin.h
+    gmximportexportplugininterface.h
     )
 
 ecm_qt_declare_logging_category(kaddressbook_importexportgmxplugin HEADER kaddressbook_importexport_gmx_debug.h IDENTIFIER KADDRESSBOOK_IMPORTEXPORT_GMX_LOG CATEGORY_NAME org.kde.pim.kaddressbook_importexportgmx

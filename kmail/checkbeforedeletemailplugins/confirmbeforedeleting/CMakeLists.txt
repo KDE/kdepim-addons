@@ -12,6 +12,15 @@ target_sources(kmailconfirmbeforedeleting PRIVATE
     confirmbeforedeletingcreaterulewidget.cpp
     confirmbeforedeletingmessageboxdialog.cpp
     confirmbeforedeletingmessageboxwidget.cpp
+
+    confirmbeforedeletingdialog.h
+    confirmbeforedeletingwidget.h
+    confirmbeforedeletingmanager.h
+    confirmbeforedeletingrule.h
+    confirmbeforedeletingcreateruledialog.h
+    confirmbeforedeletingcreaterulewidget.h
+    confirmbeforedeletingmessageboxdialog.h
+    confirmbeforedeletingmessageboxwidget.h
     )
 ecm_qt_declare_logging_category(kmailconfirmbeforedeleting HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin
     DESCRIPTION "kdepim-addons (Confirm Before Deleting email)"
@@ -44,6 +53,8 @@ kcoreaddons_add_plugin(kmail_confirmbeforedeletingplugin INSTALL_NAMESPACE messa
 target_sources(kmail_confirmbeforedeletingplugin PRIVATE
     confirmbeforedeletinginterface.cpp
     confirmbeforedeletingplugin.cpp
+    confirmbeforedeletinginterface.h
+    confirmbeforedeletingplugin.h
     )
 
 ecm_qt_declare_logging_category(kmail_confirmbeforedeletingplugin HEADER confirmbeforedeletingplugin_debug.h IDENTIFIER KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_confirmbeforedeletingplugin

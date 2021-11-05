@@ -6,6 +6,8 @@ kcoreaddons_add_plugin(kmail_autocorrectioneditorplugin
 target_sources(kmail_autocorrectioneditorplugin PRIVATE
     autocorrectionplugineditor.cpp
     autocorrectionplugineditorinterface.cpp
+    autocorrectionplugineditor.h
+    autocorrectionplugineditorinterface.h
     )
 
 

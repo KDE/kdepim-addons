@@ -5,6 +5,9 @@ target_sources(messageviewer_grantleeheaderstyleplugin PRIVATE
    grantleeheaderstyleplugin.cpp
    grantleeheaderstyleinterface.cpp
    grantleeheaderstrategy.cpp
+   grantleeheaderstyleplugin.h
+   grantleeheaderstyleinterface.h
+   grantleeheaderstrategy.h
 )
 
 target_link_libraries(messageviewer_grantleeheaderstyleplugin

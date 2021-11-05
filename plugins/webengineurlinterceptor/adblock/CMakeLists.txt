@@ -4,6 +4,8 @@ kcoreaddons_add_plugin(webengineviewer_adblockplugin INSTALL_NAMESPACE webengine
 target_sources(webengineviewer_adblockplugin PRIVATE
     adblockinterceptorinterface.cpp
     adblockpluginurlinterceptor.cpp
+    adblockinterceptorinterface.h
+    adblockpluginurlinterceptor.h
     )
 
 ecm_qt_declare_logging_category(webengineviewer_adblockplugin HEADER adblockinterceptor_debug.h IDENTIFIER ADBLOCKINTERCEPTOR_LOG CATEGORY_NAME org.kde.pim.adblockinterceptor

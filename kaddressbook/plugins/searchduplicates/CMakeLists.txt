@@ -5,6 +5,8 @@ kcoreaddons_add_plugin(kaddressbook_searchduplicatesplugin INSTALL_NAMESPACE kad
 target_sources(kaddressbook_searchduplicatesplugin PRIVATE
     searchduplicatesplugininterface.cpp
     searchduplicatesplugin.cpp
+    searchduplicatesplugininterface.h
+    searchduplicatesplugin.h
 )
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(kaddressbook_searchduplicatesplugin PROPERTIES UNITY_BUILD ON)

@@ -9,6 +9,12 @@ target_sources(kmailquicktextpluginprivate PRIVATE
     quicktextmanager.cpp
     quicktexttreewidget.cpp
     quicktextwidget.cpp
+    quicktextmenu.h
+    quicktextconfigurewidget.h
+    quicktextconfiguredialog.h
+    quicktextmanager.h
+    quicktexttreewidget.h
+    quicktextwidget.h
     )
 
 

@@ -5,6 +5,8 @@ kcoreaddons_add_plugin(nylasmailimporterplugin INSTALL_NAMESPACE importwizard)
 target_sources(nylasmailimporterplugin PRIVATE
    nylasmailsettings.cpp
    nylasmaildata.cpp
+   nylasmailsettings.h
+   nylasmaildata.h
 )
 
 ecm_qt_declare_logging_category(nylasmailimporterplugin HEADER nylasmailplugin_debug.h IDENTIFIER NYLASMAILPLUGIN_LOG CATEGORY_NAME org.kde.pim.importwizard.nylasmailplugin)

@@ -5,6 +5,9 @@ target_sources(messageviewer_fancyheaderstyleplugin PRIVATE
    fancyheaderstyleplugin.cpp
    fancyheaderstyleinterface.cpp
    fancyheaderstyle.cpp
+   fancyheaderstyleplugin.h
+   fancyheaderstyleinterface.h
+   fancyheaderstyle.h
 )
 
 

@@ -26,6 +26,25 @@ target_sources(adblocklibprivate PRIVATE
     adblockmatcher.cpp
     adblocksubscription.cpp
     ${adblocklibprivate_kcfg_SOURCES}
+
+    widgets/adblockblockableitemsdialog.h
+    widgets/adblockblockableitemswidget.h
+    widgets/adblockcreatefilterdialog.h
+    widgets/adblockpluginurlinterceptorconfigurewidget.h
+    widgets/adblockpluginurlinterceptorconfiguredialog.h
+    widgets/adblockaddsubscriptiondialog.h
+    widgets/adblockautomaticruleslistwidget.h
+    widgets/adblocklistwidget.h
+    widgets/adblocksettingwidget.h
+    widgets/adblockshowlistdialog.h
+    adblockblockableitemsjob.h
+    adblockmanager.h
+    adblocksearchtree.h
+    adblockrule.h
+    adblockregexp.h
+    adblockutil.h
+    adblockmatcher.h
+    adblocksubscription.h
     )
 
 

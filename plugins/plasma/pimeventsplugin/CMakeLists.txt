@@ -19,6 +19,11 @@ target_sources(pimevents PRIVATE
     settingschangenotifier.cpp
     eventmodel.cpp
     ${loggingcategory_SRCS}
+    pimeventsplugin.h
+    akonadipimdatasource.h
+    eventdatavisitor.h
+    settingschangenotifier.h
+    eventmodel.h
     )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
@@ -47,6 +52,8 @@ target_sources(pimcalendarsplugin PRIVATE
     pimcalendarsmodel.cpp
     settingschangenotifier.cpp
     ${loggingcategory_SRCS}
+    pimcalendarsmodel.h
+    settingschangenotifier.h
     )
 target_link_libraries(pimcalendarsplugin
     Qt::Core

@@ -7,6 +7,9 @@ target_sources(grammarcommon PRIVATE
     grammarerror.cpp
     grammarresulttextedit.cpp
     grammarresultwidget.cpp
+    grammarerror.h
+    grammarresulttextedit.h
+    grammarresultwidget.h
     )
 
 ecm_qt_declare_logging_category(grammarcommon HEADER grammarcommon_debug.h IDENTIFIER LIBGRAMMARCOMMON_LOG CATEGORY_NAME org.kde.pim.libgrammarcommon

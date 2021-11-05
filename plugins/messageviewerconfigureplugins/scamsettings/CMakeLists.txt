@@ -7,6 +7,9 @@ target_sources(scamconfiguresettings PRIVATE
     scamconfiguresettingsdialog.cpp
     scamconfiguresettingswidget.cpp
     scamconfigureutils.cpp
+    scamconfiguresettingsdialog.h
+    scamconfiguresettingswidget.h
+    scamconfigureutils.h
     )
 
 ecm_qt_declare_logging_category(scamconfiguresettings HEADER libscamconfiguresettings_debug.h IDENTIFIER LIBSCAMCONFIGURESETTINGS_PLUGIN_LOG CATEGORY_NAME org.kde.pim.libfolderconfiguresettingsplugin
@@ -37,6 +40,7 @@ kcoreaddons_add_plugin(messageviewer_scamconfiguresettingsplugin INSTALL_NAMESPA
 
 target_sources(messageviewer_scamconfiguresettingsplugin PRIVATE
    scamconfiguresettingsplugin.cpp
+   scamconfiguresettingsplugin.h
 )
 
 

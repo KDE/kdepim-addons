@@ -5,6 +5,8 @@ kcoreaddons_add_plugin(kmail_nonbreakingspaceeditorplugin INSTALL_NAMESPACE kmai
 target_sources(kmail_nonbreakingspaceeditorplugin PRIVATE
     nonbreakingspaceplugineditor.cpp
     nonbreakingspaceplugineditorinterface.cpp
+    nonbreakingspaceplugineditor.h
+    nonbreakingspaceplugineditorinterface.h
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)

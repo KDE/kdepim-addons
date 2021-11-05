@@ -8,6 +8,9 @@ target_sources(kmail_antivirusplugin PRIVATE
     antivirusplugininterface.cpp
     ../common/antispamwizard.cpp
     ../common/antispam.qrc
+    antivirusplugin.h
+    antivirusplugininterface.h
+    ../common/antispamwizard.h
 )
 
 

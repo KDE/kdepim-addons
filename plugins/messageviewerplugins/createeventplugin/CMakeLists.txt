@@ -7,6 +7,11 @@ target_sources(messageviewer_createeventplugin PRIVATE
     eventedit.cpp
     eventdatetimewidget.cpp
     createeventjob.cpp
+    viewerplugincreateevent.h
+    viewerplugincreateeventinterface.h
+    eventedit.h
+    eventdatetimewidget.h
+    createeventjob.h
     )
 
 ecm_qt_declare_logging_category(messageviewer_createeventplugin HEADER createeventplugin_debug.h IDENTIFIER CREATEEVENTPLUGIN_LOG CATEGORY_NAME org.kde.pim.createeventplugin
