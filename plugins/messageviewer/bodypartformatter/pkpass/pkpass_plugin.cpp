@@ -120,9 +120,15 @@ public:
         }
 
         // Grantlee can't handle QColor...
-        pass->setProperty("foregroundColorName", pass->foregroundColor().name());
-        pass->setProperty("backgroundColorName", pass->backgroundColor().name());
-        pass->setProperty("labelColorName", pass->labelColor().name());
+        if (pass->foregroundColor().isValid()) {
+            pass->setProperty("foregroundColorName", pass->foregroundColor().name());
+        }
+        if (pass->backgroundColor().isValid()) {
+            pass->setProperty("backgroundColorName", pass->backgroundColor().name());
+        }
+        if (pass->labelColor().isValid()) {
+            pass->setProperty("labelColorName", pass->labelColor().name());
+        }
 
         auto c = MessageViewer::MessagePartRendererManager::self()->createContext();
         c.insert(QStringLiteral("block"), mp.data());

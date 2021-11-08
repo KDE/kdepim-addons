@@ -2,13 +2,17 @@
 <div id="attachmentDiv{{block.attachmentIndex}}">
 
 <div style="
-    background-color: {{ pass.backgroundColorName }};
+    {% if pass.backgroundColorName %}
+        background-color: {{ pass.backgroundColorName }};
+    {% endif %}
     {% if pass.backgroundUrl %}
         background-image: url('{{ pass.backgroundUrl }}');
         background-repeat: no-repeat;
         background-position: center top;
     {% endif %}
-    color: {{ pass.foregroundColorName }};
+    {% if pass.foregroundColorName %}
+        color: {{ pass.foregroundColorName }};
+    {% endif %}
     padding:12px;
     margin-left: auto;
     margin-right: auto;
