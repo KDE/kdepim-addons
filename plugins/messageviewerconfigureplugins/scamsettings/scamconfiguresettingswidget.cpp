@@ -24,6 +24,7 @@ ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
     mainLayout->addWidget(mTreeWidget);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->header()->setSectionsMovable(false);
+    mTreeWidget->setHeaderLabels({i18n("Domain"), i18n("Check")});
 }
 
 ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget()
