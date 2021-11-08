@@ -200,7 +200,8 @@ static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVa
         event->deleteAttachments(QStringLiteral("application/vnd.apple.pkpass"));
         using namespace KCalendarCore;
         Attachment att(data.toBase64(), QStringLiteral("application/vnd.apple.pkpass"));
-        att.setLabel(i18n("Boarding Pass")); // TODO add passenger name after string freeze is lifted
+        att.setLabel(JsonLd::canConvert<FlightReservation>(reservation) ? i18n("Boarding Pass")
+                                                                        : i18n("Ticket")); // TODO add passenger name after string freeze is lifted
         event->addAttachment(att);
     }
 }
