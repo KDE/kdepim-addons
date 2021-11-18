@@ -187,7 +187,7 @@ index c12a9b3..1180c3e 100644
 +#include <AkonadiXml/XmlWriteJob>
  #include <kviewstatemaintainer.h>
  
- #include <KContacts/Addressee>
+ #include <kcontacts/addressee.h>
 @@ -86,10 +87,10 @@ Q_DECLARE_METATYPE(QSet<QByteArray>)
  
  BrowserWidget::BrowserWidget(KXmlGuiWindow *xmlGuiWindow, QWidget *parent) :
@@ -1019,7 +1019,7 @@ index 9b6c8af..a45304b 100644
 --- a/src/notificationmodel.h
 +++ b/src/notificationmodel.h
 @@ -27,8 +27,10 @@
- #include <Akonadi/Monitor>
+ #include <AkonadiCore/Monitor>
  #include <AkonadiCore/ChangeNotification>
  
 -namespace Akonadi {
