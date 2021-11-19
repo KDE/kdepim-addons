@@ -21,6 +21,7 @@ public:
         Subject,
         To,
         Cc,
+        Bcc,
     };
     Q_ENUM(RuleType)
 

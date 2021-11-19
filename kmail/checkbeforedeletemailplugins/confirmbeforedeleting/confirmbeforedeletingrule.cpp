@@ -66,6 +66,8 @@ ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(
         return To;
     } else if (str == QLatin1String("cc")) {
         return Cc;
+    } else if (str == QLatin1String("bcc")) {
+        return Bcc;
     }
     return Unknown;
 }
@@ -92,6 +94,9 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
         break;
     case Cc:
         tmp = QStringLiteral("cc");
+        break;
+    case Bcc:
+        tmp = QStringLiteral("bcc");
         break;
     }
     return tmp;
@@ -135,6 +140,16 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             if (auto cc = msg->cc(false)) {
                 const QString ccStr = cc->asUnicodeString();
                 if (ccStr.contains(pattern())) {
+                    needToConfirm = true;
+                    generateConfirmMessageInfo(msg, checkFoundInfo);
+                }
+            }
+            break;
+        }
+        case Bcc: {
+            if (auto bcc = msg->bcc(false)) {
+                const QString bccStr = bcc->asUnicodeString();
+                if (bccStr.contains(pattern())) {
                     needToConfirm = true;
                     generateConfirmMessageInfo(msg, checkFoundInfo);
                 }
