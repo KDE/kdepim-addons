@@ -53,17 +53,7 @@ QVector<ItineraryKDEConnectHandler::Device> ItineraryKDEConnectHandler::devices(
 
 void ItineraryKDEConnectHandler::sendToDevice(const QString &fileName, const QString &deviceId)
 {
-    const QDBusInterface remoteApp(QStringLiteral("org.kde.kdeconnect"),
-                                   QStringLiteral("/MainApplication"),
-                                   QStringLiteral("org.qtproject.Qt.QCoreApplication"));
-    QVersionNumber kdeconnectVersion = QVersionNumber::fromString(remoteApp.property("applicationVersion").toString());
-
-    QString method;
-    if (kdeconnectVersion >= QVersionNumber(1, 4, 0)) {
-        method = QStringLiteral("openFile");
-    } else {
-        method = QStringLiteral("shareUrl");
-    }
+    const QString method = QStringLiteral("openFile");
 
     QDBusMessage msg = QDBusMessage::createMethodCall(QStringLiteral("org.kde.kdeconnect"),
                                                       QStringLiteral("/modules/kdeconnect/devices/") + deviceId + QStringLiteral("/share"),
