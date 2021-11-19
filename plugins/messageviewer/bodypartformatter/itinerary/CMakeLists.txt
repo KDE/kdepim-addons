@@ -9,6 +9,11 @@ target_sources(messageviewer_bodypartformatter_semantic PRIVATE
     itineraryrenderer.cpp
     itineraryurlhandler.cpp
     itinerarykdeconnecthandler.cpp
+    itinerarymemento.h
+    itineraryprocessor.h
+    itineraryrenderer.h
+    itineraryurlhandler.h
+    itinerarykdeconnecthandler.h
     templates/templates.qrc
     )
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_semantic HEADER itinerary_debug.h IDENTIFIER ITINERARY_LOG CATEGORY_NAME org.kde.pim.messageviewer.itinerary

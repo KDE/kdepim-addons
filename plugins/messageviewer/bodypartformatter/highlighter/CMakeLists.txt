@@ -2,7 +2,7 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_xdiff_plugin\")
 add_library(messageviewer_bodypartformatter_text_highlighter MODULE )
-target_sources(messageviewer_bodypartformatter_text_highlighter PRIVATE texthighlighterplugin.cpp highlighter.cpp)
+target_sources(messageviewer_bodypartformatter_text_highlighter PRIVATE texthighlighterplugin.cpp highlighter.cpp highlighter.h)
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(messageviewer_bodypartformatter_text_highlighter PROPERTIES UNITY_BUILD ON)

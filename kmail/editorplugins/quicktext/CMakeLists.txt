@@ -42,6 +42,8 @@ kcoreaddons_add_plugin(kmail_quicktextplugin INSTALL_NAMESPACE kmail/pluginedito
 target_sources(kmail_quicktextplugin PRIVATE
     quicktextplugineditor.cpp
     quicktextplugineditorinterface.cpp
+    quicktextplugineditor.h
+    quicktextplugineditorinterface.h
     )
 
 ecm_qt_declare_logging_category(kmail_quicktextplugin HEADER quicktextplugin_debug.h IDENTIFIER KMAIL_EDITOR_QUICKTEXT_PLUGIN_LOG CATEGORY_NAME org.kde.pim.kmail_quicktextplugin

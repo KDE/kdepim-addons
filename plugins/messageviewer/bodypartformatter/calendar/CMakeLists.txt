@@ -10,7 +10,10 @@ qt_add_dbus_interfaces(messageviewer_bodypartformatter_text_calendar_PART_SRCS
 
 target_sources(messageviewer_bodypartformatter_text_calendar PRIVATE
     text_calendar.cpp delegateselector.cpp attendeeselector.cpp memorycalendarmemento.cpp syncitiphandler.cpp
-    reactiontoinvitationdialog.cpp ${messageviewer_bodypartformatter_text_calendar_PART_SRCS})
+    reactiontoinvitationdialog.cpp
+    delegateselector.h attendeeselector.h memorycalendarmemento.h syncitiphandler.h
+    reactiontoinvitationdialog.h
+    ${messageviewer_bodypartformatter_text_calendar_PART_SRCS})
 
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_calendar HEADER text_calendar_debug.h IDENTIFIER TEXT_CALENDAR_LOG CATEGORY_NAME org.kde.pim.text_calendar
     DESCRIPTION "kdepim-addons (messageviewer calendar plugins)"
