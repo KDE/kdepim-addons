@@ -29,12 +29,12 @@ public:
     {
     }
 
-    QString callGenerateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
+    Q_REQUIRED_RESULT QString callGenerateUid(const KCalendarCore::Incidence::Ptr &incidence, const QDateTime &recurrenceId) const
     {
         return Visitor::generateUid(incidence, recurrenceId);
     }
 
-    bool callIsInRange(QDate start, QDate end) const
+    Q_REQUIRED_RESULT bool callIsInRange(QDate start, QDate end) const
     {
         return Visitor::isInRange(start, end);
     }

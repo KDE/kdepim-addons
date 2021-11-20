@@ -30,7 +30,7 @@ public:
 
     void initializePlugins();
     void loadPlugin(ShortUrlEnginePluginInfo *item);
-    QVector<ShortUrlEnginePlugin *> pluginsList() const;
+    Q_REQUIRED_RESULT QVector<ShortUrlEnginePlugin *> pluginsList() const;
     QVector<ShortUrlEnginePluginInfo> mPluginList;
     ShortUrlEnginePluginManager *const q;
 };

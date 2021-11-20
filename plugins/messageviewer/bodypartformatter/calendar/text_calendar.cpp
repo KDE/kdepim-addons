@@ -149,7 +149,7 @@ public:
         return mBodyPart->makeLink(id);
     }
 
-    KCalendarCore::Calendar::Ptr calendar() const override
+    Q_REQUIRED_RESULT KCalendarCore::Calendar::Ptr calendar() const override
     {
         return mCalendar;
     }
@@ -269,12 +269,12 @@ public:
         // qCDebug(TEXT_CALENDAR_LOG) << "UrlHandler() (iCalendar)";
     }
 
-    QString name() const override
+    Q_REQUIRED_RESULT QString name() const override
     {
         return QStringLiteral("calendar handler");
     }
 
-    Attendee findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
+    Q_REQUIRED_RESULT Attendee findMyself(const Incidence::Ptr &incidence, const QString &receiver) const
     {
         const Attendee::List attendees = incidence->attendees();
         const auto idx = findMyself(attendees, receiver);
@@ -284,7 +284,7 @@ public:
         return {};
     }
 
-    int findMyself(const Attendee::List &attendees, const QString &receiver) const
+    Q_REQUIRED_RESULT int findMyself(const Attendee::List &attendees, const QString &receiver) const
     {
         // Find myself. There will always be all attendees listed, even if
         // only I need to answer it.
@@ -451,7 +451,10 @@ public:
         return receiver;
     }
 
-    Attendee setStatusOnMyself(const Incidence::Ptr &incidence, const Attendee &myself, Attendee::PartStat status, const QString &receiver) const
+    Q_REQUIRED_RESULT Attendee setStatusOnMyself(const Incidence::Ptr &incidence,
+                                                 const Attendee &myself,
+                                                 Attendee::PartStat status,
+                                                 const QString &receiver) const
     {
         QString name;
         QString email;
@@ -712,7 +715,7 @@ public:
         return res;
     }
 
-    bool cancelPastInvites(const Incidence::Ptr incidence, const QString &path) const
+    Q_REQUIRED_RESULT bool cancelPastInvites(const Incidence::Ptr incidence, const QString &path) const
     {
         QString warnStr;
         QDateTime now = QDateTime::currentDateTime();
@@ -1056,7 +1059,7 @@ public:
         }
     }
 
-    bool saveAsAttachment(const QString &name, const QString &iCal) const
+    Q_REQUIRED_RESULT bool saveAsAttachment(const QString &name, const QString &iCal) const
     {
         Attachment a(findAttachment(name, iCal));
         if (a.isEmpty()) {
@@ -1377,7 +1380,7 @@ public:
         return QString();
     }
 
-    bool askForComment(Attendee::PartStat status) const
+    Q_REQUIRED_RESULT bool askForComment(Attendee::PartStat status) const
     {
         if (status != Attendee::NeedsAction
             && ((status != Attendee::Accepted
@@ -1406,7 +1409,7 @@ public:
         }
     }
 
-    const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
+    Q_REQUIRED_RESULT const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override
     {
         if (idx == 0) {
             return new UrlHandler();

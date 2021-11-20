@@ -26,7 +26,7 @@ public:
     ViewerPluginExternalScriptItem(QListWidget *parent);
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &scriptInfo);
-    ViewerPluginExternalScriptInfo scriptInfo() const;
+    Q_REQUIRED_RESULT ViewerPluginExternalScriptInfo scriptInfo() const;
 
 private:
     ViewerPluginExternalScriptInfo mScriptInfo;
