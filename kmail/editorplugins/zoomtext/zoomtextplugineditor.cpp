@@ -15,9 +15,7 @@ ZoomTextPluginEditor::ZoomTextPluginEditor(QObject *parent, const QList<QVariant
 {
 }
 
-ZoomTextPluginEditor::~ZoomTextPluginEditor()
-{
-}
+ZoomTextPluginEditor::~ZoomTextPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(QObject *parent)
 {

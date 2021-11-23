@@ -27,9 +27,7 @@ AdblockBlockableElementGui::AdblockBlockableElementGui(QWidget *parent)
     vbox->addWidget(button);
 }
 
-AdblockBlockableElementGui::~AdblockBlockableElementGui()
-{
-}
+AdblockBlockableElementGui::~AdblockBlockableElementGui() = default;
 
 void AdblockBlockableElementGui::slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result)
 {

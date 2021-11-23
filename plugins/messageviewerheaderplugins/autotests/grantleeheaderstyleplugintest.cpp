@@ -24,9 +24,7 @@ GrantleeHeaderStylePluginTest::GrantleeHeaderStylePluginTest(QObject *parent)
 {
 }
 
-GrantleeHeaderStylePluginTest::~GrantleeHeaderStylePluginTest()
-{
-}
+GrantleeHeaderStylePluginTest::~GrantleeHeaderStylePluginTest() = default;
 
 void GrantleeHeaderStylePluginTest::initTestCase()
 {

@@ -21,9 +21,7 @@ EnterpriseHeaderStylePluginTest::EnterpriseHeaderStylePluginTest(QObject *parent
 {
 }
 
-EnterpriseHeaderStylePluginTest::~EnterpriseHeaderStylePluginTest()
-{
-}
+EnterpriseHeaderStylePluginTest::~EnterpriseHeaderStylePluginTest() = default;
 
 void EnterpriseHeaderStylePluginTest::shouldHaveDefaultValue()
 {

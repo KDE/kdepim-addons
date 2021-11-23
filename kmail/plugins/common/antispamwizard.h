@@ -112,9 +112,7 @@ protected:
     class SpamToolConfig
     {
     public:
-        SpamToolConfig()
-        {
-        }
+        SpamToolConfig() = default;
 
         SpamToolConfig(const QString &toolId,
                        int configVersion,

@@ -16,9 +16,7 @@ EventDateTimeWidgetTest::EventDateTimeWidgetTest(QObject *parent)
 {
 }
 
-EventDateTimeWidgetTest::~EventDateTimeWidgetTest()
-{
-}
+EventDateTimeWidgetTest::~EventDateTimeWidgetTest() = default;
 
 void EventDateTimeWidgetTest::shouldHaveDefaultValue()
 {

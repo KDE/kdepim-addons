@@ -18,9 +18,7 @@ ViewerPluginExternalEditDialogTest::ViewerPluginExternalEditDialogTest(QObject *
 {
 }
 
-ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest()
-{
-}
+ViewerPluginExternalEditDialogTest::~ViewerPluginExternalEditDialogTest() = default;
 
 void ViewerPluginExternalEditDialogTest::shouldHaveDefaultValue()
 {

@@ -18,9 +18,7 @@ MergeContactsDialogTest::MergeContactsDialogTest(QObject *parent)
 {
 }
 
-MergeContactsDialogTest::~MergeContactsDialogTest()
-{
-}
+MergeContactsDialogTest::~MergeContactsDialogTest() = default;
 
 void MergeContactsDialogTest::initTestCase()
 {

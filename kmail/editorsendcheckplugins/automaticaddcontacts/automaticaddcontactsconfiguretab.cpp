@@ -26,9 +26,7 @@ AutomaticAddContactsConfigureTab::AutomaticAddContactsConfigureTab(QWidget *pare
     initTab(KIdentityManagement::IdentityManager::self());
 }
 
-AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab()
-{
-}
+AutomaticAddContactsConfigureTab::~AutomaticAddContactsConfigureTab() = default;
 
 void AutomaticAddContactsConfigureTab::initTab(KIdentityManagement::IdentityManager *identityManager)
 {

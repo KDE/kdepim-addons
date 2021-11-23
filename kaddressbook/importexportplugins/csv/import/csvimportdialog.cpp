@@ -252,7 +252,7 @@ KContacts::AddresseeList CSVImportDialog::contacts() const
         qApp->processEvents();
 
         if (progressDialog.wasCanceled()) {
-            return KContacts::AddresseeList();
+            return {};
         }
 
         progressDialog.setValue(progressDialog.value() + 1);

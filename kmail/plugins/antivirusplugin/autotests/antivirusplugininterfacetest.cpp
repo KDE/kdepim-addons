@@ -15,9 +15,7 @@ AntiVirusPluginInterfaceTest::AntiVirusPluginInterfaceTest(QObject *parent)
 {
 }
 
-AntiVirusPluginInterfaceTest::~AntiVirusPluginInterfaceTest()
-{
-}
+AntiVirusPluginInterfaceTest::~AntiVirusPluginInterfaceTest() = default;
 
 void AntiVirusPluginInterfaceTest::shouldHaveDefaultValue()
 {

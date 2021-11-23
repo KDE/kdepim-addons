@@ -24,9 +24,7 @@ ConfirmAddressConfigureWidget::ConfirmAddressConfigureWidget(QWidget *parent)
     vboxlayout->addWidget(mConfirmAddressConfigureTab);
 }
 
-ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget()
-{
-}
+ConfirmAddressConfigureWidget::~ConfirmAddressConfigureWidget() = default;
 
 void ConfirmAddressConfigureWidget::loadSettings()
 {

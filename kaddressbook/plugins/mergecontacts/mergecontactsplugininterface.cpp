@@ -18,9 +18,7 @@ MergeContactsPluginInterface::MergeContactsPluginInterface(QObject *parent)
 {
 }
 
-MergeContactsPluginInterface::~MergeContactsPluginInterface()
-{
-}
+MergeContactsPluginInterface::~MergeContactsPluginInterface() = default;
 
 void MergeContactsPluginInterface::createAction(KActionCollection *ac)
 {

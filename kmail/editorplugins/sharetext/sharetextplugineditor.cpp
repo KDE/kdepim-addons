@@ -15,9 +15,7 @@ ShareTextPluginEditor::ShareTextPluginEditor(QObject *parent, const QList<QVaria
 {
 }
 
-ShareTextPluginEditor::~ShareTextPluginEditor()
-{
-}
+ShareTextPluginEditor::~ShareTextPluginEditor() = default;
 
 bool ShareTextPluginEditor::hasPopupMenuSupport() const
 {

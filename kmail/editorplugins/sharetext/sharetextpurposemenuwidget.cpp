@@ -11,9 +11,7 @@ SharetextPurposeMenuWidget::SharetextPurposeMenuWidget(QWidget *parentWidget, QO
 {
 }
 
-SharetextPurposeMenuWidget::~SharetextPurposeMenuWidget()
-{
-}
+SharetextPurposeMenuWidget::~SharetextPurposeMenuWidget() = default;
 
 QByteArray SharetextPurposeMenuWidget::text()
 {

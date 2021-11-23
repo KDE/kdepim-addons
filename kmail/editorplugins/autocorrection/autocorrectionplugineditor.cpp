@@ -15,9 +15,7 @@ AutoCorrectionPluginEditor::AutoCorrectionPluginEditor(QObject *parent, const QL
 {
 }
 
-AutoCorrectionPluginEditor::~AutoCorrectionPluginEditor()
-{
-}
+AutoCorrectionPluginEditor::~AutoCorrectionPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *AutoCorrectionPluginEditor::createInterface(QObject *parent)
 {

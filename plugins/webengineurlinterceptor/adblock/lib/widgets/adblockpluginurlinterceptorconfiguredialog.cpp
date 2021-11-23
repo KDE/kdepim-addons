@@ -19,9 +19,7 @@ AdblockPluginUrlInterceptorConfigureDialog::AdblockPluginUrlInterceptorConfigure
     initLayout();
 }
 
-AdblockPluginUrlInterceptorConfigureDialog::~AdblockPluginUrlInterceptorConfigureDialog()
-{
-}
+AdblockPluginUrlInterceptorConfigureDialog::~AdblockPluginUrlInterceptorConfigureDialog() = default;
 
 QWidget *AdblockPluginUrlInterceptorConfigureDialog::createLayout()
 {

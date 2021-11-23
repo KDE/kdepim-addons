@@ -13,9 +13,7 @@
 #include <QSignalSpy>
 #include <QTest>
 
-MailSenderJobTest::MailSenderJobTest()
-{
-}
+MailSenderJobTest::MailSenderJobTest() = default;
 
 void MailSenderJobTest::shouldNotSendSignalWhenWeDontSelectItem()
 {

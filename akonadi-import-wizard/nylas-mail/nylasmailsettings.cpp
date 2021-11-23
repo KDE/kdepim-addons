@@ -16,9 +16,7 @@ NylasMailSettings::NylasMailSettings(const QString &filename)
 {
 }
 
-NylasMailSettings::~NylasMailSettings()
-{
-}
+NylasMailSettings::~NylasMailSettings() = default;
 
 void NylasMailSettings::importSettings()
 {

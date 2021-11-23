@@ -15,9 +15,7 @@ ExternalComposerConfigureDialog::ExternalComposerConfigureDialog(QWidget *parent
     initLayout();
 }
 
-ExternalComposerConfigureDialog::~ExternalComposerConfigureDialog()
-{
-}
+ExternalComposerConfigureDialog::~ExternalComposerConfigureDialog() = default;
 
 QWidget *ExternalComposerConfigureDialog::createLayout()
 {

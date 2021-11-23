@@ -18,9 +18,7 @@ GrammalecteManager::GrammalecteManager(QObject *parent)
     loadSettings();
 }
 
-GrammalecteManager::~GrammalecteManager()
-{
-}
+GrammalecteManager::~GrammalecteManager() = default;
 
 GrammalecteManager *GrammalecteManager::self()
 {

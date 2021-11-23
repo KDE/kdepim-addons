@@ -27,7 +27,7 @@ using namespace MimeTreeParser::Interface;
 QUrlQuery ApplicationPgpKeyUrlHandler::decodePath(const QString &path) const
 {
     if (!path.startsWith(QLatin1String("pgpkey?"))) {
-        return QUrlQuery();
+        return {};
     }
 
     return QUrlQuery(path.mid(sizeof("pgpkey?") - 1));
@@ -46,7 +46,7 @@ QString ApplicationPgpKeyUrlHandler::statusBarMessage(BodyPart *part, const QStr
         return i18n("Import the key");
     }
 
-    return QString();
+    return {};
 }
 
 QString ApplicationPgpKeyUrlHandler::name() const

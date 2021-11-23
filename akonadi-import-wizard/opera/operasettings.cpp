@@ -41,9 +41,7 @@ void OperaSettings::importSettings()
     }
 }
 
-OperaSettings::~OperaSettings()
-{
-}
+OperaSettings::~OperaSettings() = default;
 
 void OperaSettings::readAccount(const KConfigGroup &grp)
 {

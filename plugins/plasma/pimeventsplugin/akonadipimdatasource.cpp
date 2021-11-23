@@ -38,9 +38,7 @@ AkonadiPimDataSource::AkonadiPimDataSource(QObject *parent)
     mEventViewsPrefs->readConfig();
 }
 
-AkonadiPimDataSource::~AkonadiPimDataSource()
-{
-}
+AkonadiPimDataSource::~AkonadiPimDataSource() = default;
 
 qint64 AkonadiPimDataSource::akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const
 {
@@ -56,12 +54,12 @@ QString AkonadiPimDataSource::calendarColorForIncidence(const KCalendarCore::Inc
 {
     const auto &item = mCalendar->item(incidence);
     if (!item.isValid()) {
-        return QString();
+        return {};
     }
 
     const auto &col = mCalendar->collection(item.parentCollection().id());
     if (!col.isValid()) {
-        return QString();
+        return {};
     }
 
     auto it = mColorCache.find(col.id());

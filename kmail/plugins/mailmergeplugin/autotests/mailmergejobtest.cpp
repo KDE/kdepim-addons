@@ -11,8 +11,6 @@ MailMergeJobTest::MailMergeJobTest(QObject *parent)
 {
 }
 
-MailMergeJobTest::~MailMergeJobTest()
-{
-}
+MailMergeJobTest::~MailMergeJobTest() = default;
 
 QTEST_MAIN(MailMergeJobTest)

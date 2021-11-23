@@ -15,9 +15,7 @@ ViewerPluginExternalScriptManager::ViewerPluginExternalScriptManager(QObject *pa
     readExternalScriptInfo();
 }
 
-ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager()
-{
-}
+ViewerPluginExternalScriptManager::~ViewerPluginExternalScriptManager() = default;
 
 ViewerPluginExternalScriptManager *ViewerPluginExternalScriptManager::self()
 {

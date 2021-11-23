@@ -18,9 +18,7 @@ SendMailTransportPlugin::SendMailTransportPlugin(QObject *parent, const QList<QV
 {
 }
 
-SendMailTransportPlugin::~SendMailTransportPlugin()
-{
-}
+SendMailTransportPlugin::~SendMailTransportPlugin() = default;
 
 QVector<MailTransport::TransportAbstractPluginInfo> SendMailTransportPlugin::names() const
 {

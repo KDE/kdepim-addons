@@ -15,9 +15,7 @@ SendVcardsJobTest::SendVcardsJobTest(QObject *parent)
 {
 }
 
-SendVcardsJobTest::~SendVcardsJobTest()
-{
-}
+SendVcardsJobTest::~SendVcardsJobTest() = default;
 
 void SendVcardsJobTest::shouldNotStartWhenListAddressIsEmpty()
 {

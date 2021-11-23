@@ -28,6 +28,4 @@ MailMergePreviewDialog::MailMergePreviewDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::rejected, this, &QDialog::reject);
 }
 
-MailMergePreviewDialog::~MailMergePreviewDialog()
-{
-}
+MailMergePreviewDialog::~MailMergePreviewDialog() = default;

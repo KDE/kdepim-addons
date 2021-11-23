@@ -15,9 +15,7 @@ ScamConfigureSettingsPlugin::ScamConfigureSettingsPlugin(QObject *parent, const 
 {
 }
 
-ScamConfigureSettingsPlugin::~ScamConfigureSettingsPlugin()
-{
-}
+ScamConfigureSettingsPlugin::~ScamConfigureSettingsPlugin() = default;
 
 void ScamConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {

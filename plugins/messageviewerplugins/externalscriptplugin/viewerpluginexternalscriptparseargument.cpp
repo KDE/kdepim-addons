@@ -5,9 +5,7 @@
 */
 
 #include "viewerpluginexternalscriptparseargument.h"
-ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument()
-{
-}
+ViewerPluginExternalScriptParseArgument::ViewerPluginExternalScriptParseArgument() = default;
 
 void ViewerPluginExternalScriptParseArgument::setMessage(const KMime::Message::Ptr &msg)
 {

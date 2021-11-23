@@ -34,9 +34,7 @@ GrammalecteInterface::GrammalecteInterface(KActionCollection *ac, QWidget *paren
     createAction(ac);
 }
 
-GrammalecteInterface::~GrammalecteInterface()
-{
-}
+GrammalecteInterface::~GrammalecteInterface() = default;
 
 void GrammalecteInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {

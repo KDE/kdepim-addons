@@ -15,9 +15,7 @@ LongHeaderStyleInterface::LongHeaderStyleInterface(MessageViewer::HeaderStylePlu
 {
 }
 
-LongHeaderStyleInterface::~LongHeaderStyleInterface()
-{
-}
+LongHeaderStyleInterface::~LongHeaderStyleInterface() = default;
 
 void LongHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {

@@ -69,7 +69,7 @@ int AdblockRegExp::matchedLength() const
 QString AdblockRegExp::cap(int nth) const
 {
     if (!AdblockUtil::containsIndex(m_capturedTexts, nth)) {
-        return QString();
+        return {};
     }
 
     return m_capturedTexts.at(nth);

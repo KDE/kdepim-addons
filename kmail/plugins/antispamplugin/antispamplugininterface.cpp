@@ -15,9 +15,7 @@ AntiSpamPluginInterface::AntiSpamPluginInterface(QObject *parent)
 {
 }
 
-AntiSpamPluginInterface::~AntiSpamPluginInterface()
-{
-}
+AntiSpamPluginInterface::~AntiSpamPluginInterface() = default;
 
 void AntiSpamPluginInterface::createAction(KActionCollection *ac)
 {

@@ -14,9 +14,7 @@ CheckDuplicateEmailsJobTest::CheckDuplicateEmailsJobTest(QObject *parent)
 {
 }
 
-CheckDuplicateEmailsJobTest::~CheckDuplicateEmailsJobTest()
-{
-}
+CheckDuplicateEmailsJobTest::~CheckDuplicateEmailsJobTest() = default;
 
 void CheckDuplicateEmailsJobTest::shouldHaveDefaultValue()
 {

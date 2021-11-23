@@ -13,9 +13,7 @@ CheckBeforeSendPluginTest::CheckBeforeSendPluginTest(QObject *parent)
 {
 }
 
-CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest()
-{
-}
+CheckBeforeSendPluginTest::~CheckBeforeSendPluginTest() = default;
 
 void CheckBeforeSendPluginTest::shouldHaveDefaultValue()
 {

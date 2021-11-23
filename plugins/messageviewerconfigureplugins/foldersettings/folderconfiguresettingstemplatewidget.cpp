@@ -15,9 +15,7 @@ FolderConfigureSettingsTemplateWidget::FolderConfigureSettingsTemplateWidget(QWi
     addMainWidget(mCollectionTemplateWidget);
 }
 
-FolderConfigureSettingsTemplateWidget::~FolderConfigureSettingsTemplateWidget()
-{
-}
+FolderConfigureSettingsTemplateWidget::~FolderConfigureSettingsTemplateWidget() = default;
 
 void FolderConfigureSettingsTemplateWidget::save(Akonadi::Collection &col)
 {

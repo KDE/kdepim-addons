@@ -25,9 +25,7 @@ LanguageToolManager::LanguageToolManager(QObject *parent)
     loadSettings();
 }
 
-LanguageToolManager::~LanguageToolManager()
-{
-}
+LanguageToolManager::~LanguageToolManager() = default;
 
 LanguageToolManager *LanguageToolManager::self()
 {

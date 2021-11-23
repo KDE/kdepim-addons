@@ -19,9 +19,7 @@ MarkdownPlugin::MarkdownPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-MarkdownPlugin::~MarkdownPlugin()
-{
-}
+MarkdownPlugin::~MarkdownPlugin() = default;
 
 MessageComposer::PluginEditorConvertTextInterface *MarkdownPlugin::createInterface(QObject *parent)
 {

@@ -72,9 +72,7 @@ ViewerPluginExternalEditWidget::ViewerPluginExternalEditWidget(QWidget *parent)
     connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
 }
 
-ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget()
-{
-}
+ViewerPluginExternalEditWidget::~ViewerPluginExternalEditWidget() = default;
 
 void ViewerPluginExternalEditWidget::slotLinkClicked(const QString &link)
 {

@@ -20,9 +20,7 @@ LanguageToolPlugin::LanguageToolPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-LanguageToolPlugin::~LanguageToolPlugin()
-{
-}
+LanguageToolPlugin::~LanguageToolPlugin() = default;
 
 PimCommon::CustomToolsViewInterface *LanguageToolPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {

@@ -8,13 +8,9 @@
 
 #include <QJsonObject>
 
-LanguageInfo::LanguageInfo()
-{
-}
+LanguageInfo::LanguageInfo() = default;
 
-LanguageInfo::~LanguageInfo()
-{
-}
+LanguageInfo::~LanguageInfo() = default;
 
 QString LanguageInfo::name() const
 {

@@ -17,9 +17,7 @@ AdBlockListWidget::AdBlockListWidget(QWidget *parent)
 {
 }
 
-AdBlockListWidget::~AdBlockListWidget()
-{
-}
+AdBlockListWidget::~AdBlockListWidget() = default;
 
 void AdBlockListWidget::changeEvent(QEvent *event)
 {

@@ -17,9 +17,7 @@ FolderConfigureSettingsExperyWidget::FolderConfigureSettingsExperyWidget(QWidget
     addMainWidget(mCollectionExpiryWidget);
 }
 
-FolderConfigureSettingsExperyWidget::~FolderConfigureSettingsExperyWidget()
-{
-}
+FolderConfigureSettingsExperyWidget::~FolderConfigureSettingsExperyWidget() = default;
 
 void FolderConfigureSettingsExperyWidget::save(Akonadi::Collection &col)
 {

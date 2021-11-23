@@ -18,9 +18,7 @@ ReactionToInvitationDialogTest::ReactionToInvitationDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ReactionToInvitationDialogTest::~ReactionToInvitationDialogTest()
-{
-}
+ReactionToInvitationDialogTest::~ReactionToInvitationDialogTest() = default;
 
 void ReactionToInvitationDialogTest::shouldHaveDefaultValue()
 {

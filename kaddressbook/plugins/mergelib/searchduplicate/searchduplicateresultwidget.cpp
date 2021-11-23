@@ -75,9 +75,7 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     // TODO make mMergeContact enable when selected item and collection valid
 }
 
-SearchDuplicateResultWidget::~SearchDuplicateResultWidget()
-{
-}
+SearchDuplicateResultWidget::~SearchDuplicateResultWidget() = default;
 
 void SearchDuplicateResultWidget::setContacts(const QVector<Akonadi::Item::List> &lstItem)
 {

@@ -8,13 +8,9 @@
 #include <KEmailAddress>
 #include <PimCommon/PimUtil>
 
-CheckDuplicateEmailsJob::CheckDuplicateEmailsJob()
-{
-}
+CheckDuplicateEmailsJob::CheckDuplicateEmailsJob() = default;
 
-CheckDuplicateEmailsJob::~CheckDuplicateEmailsJob()
-{
-}
+CheckDuplicateEmailsJob::~CheckDuplicateEmailsJob() = default;
 
 void CheckDuplicateEmailsJob::start()
 {

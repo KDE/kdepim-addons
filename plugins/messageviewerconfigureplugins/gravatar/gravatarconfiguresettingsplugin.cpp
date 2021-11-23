@@ -15,9 +15,7 @@ GravatarConfigureSettingsPlugin::GravatarConfigureSettingsPlugin(QObject *parent
 {
 }
 
-GravatarConfigureSettingsPlugin::~GravatarConfigureSettingsPlugin()
-{
-}
+GravatarConfigureSettingsPlugin::~GravatarConfigureSettingsPlugin() = default;
 
 void GravatarConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {

@@ -28,9 +28,7 @@ SelectMailWidget::SelectMailWidget(QWidget *parent)
     connect(mView, &Akonadi::EmailAddressSelectionWidget::doubleClicked, this, &SelectMailWidget::doubleClicked);
 }
 
-SelectMailWidget::~SelectMailWidget()
-{
-}
+SelectMailWidget::~SelectMailWidget() = default;
 
 QStringList SelectMailWidget::selectedEmails() const
 {

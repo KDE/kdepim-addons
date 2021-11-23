@@ -76,7 +76,7 @@ public:
     QString createMessageHeader(KMime::Message *message) override
     {
         Q_UNUSED(message)
-        return QString();
+        return {};
     }
 
     const MessageViewer::AttachmentStrategy *attachmentStrategy() const override

@@ -17,9 +17,7 @@ ViewerPluginExternalConfigureWidgetTest::ViewerPluginExternalConfigureWidgetTest
 {
 }
 
-ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTest()
-{
-}
+ViewerPluginExternalConfigureWidgetTest::~ViewerPluginExternalConfigureWidgetTest() = default;
 
 void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
 {

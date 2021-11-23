@@ -13,9 +13,7 @@ ConfirmAddressCheckJobTest::ConfirmAddressCheckJobTest(QObject *parent)
 {
 }
 
-ConfirmAddressCheckJobTest::~ConfirmAddressCheckJobTest()
-{
-}
+ConfirmAddressCheckJobTest::~ConfirmAddressCheckJobTest() = default;
 
 void ConfirmAddressCheckJobTest::shouldHaveEmptyResultByDefault()
 {

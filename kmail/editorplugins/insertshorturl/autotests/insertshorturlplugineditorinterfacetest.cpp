@@ -14,9 +14,7 @@ InsertShorturlPluginEditorInterfaceTest::InsertShorturlPluginEditorInterfaceTest
 {
 }
 
-InsertShorturlPluginEditorInterfaceTest::~InsertShorturlPluginEditorInterfaceTest()
-{
-}
+InsertShorturlPluginEditorInterfaceTest::~InsertShorturlPluginEditorInterfaceTest() = default;
 
 void InsertShorturlPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {

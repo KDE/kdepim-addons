@@ -17,9 +17,7 @@ AdBlockBlockableItemsJobTest::AdBlockBlockableItemsJobTest(QObject *parent)
     qRegisterMetaType<QVector<AdBlock::AdBlockResult>>();
 }
 
-AdBlockBlockableItemsJobTest::~AdBlockBlockableItemsJobTest()
-{
-}
+AdBlockBlockableItemsJobTest::~AdBlockBlockableItemsJobTest() = default;
 
 void AdBlockBlockableItemsJobTest::shouldHaveDefaultValue()
 {

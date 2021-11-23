@@ -18,9 +18,7 @@ CheckDuplicateEmailsDialogTest::CheckDuplicateEmailsDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest()
-{
-}
+CheckDuplicateEmailsDialogTest::~CheckDuplicateEmailsDialogTest() = default;
 
 void CheckDuplicateEmailsDialogTest::shouldHaveDefaultValue()
 {

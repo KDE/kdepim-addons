@@ -45,9 +45,7 @@ DKIMAdvancedWidget::DKIMAdvancedWidget(QWidget *parent)
     mainLayout->addRow(i18n("Authentication Server verified:"), configureServer);
 }
 
-DKIMAdvancedWidget::~DKIMAdvancedWidget()
-{
-}
+DKIMAdvancedWidget::~DKIMAdvancedWidget() = default;
 
 void DKIMAdvancedWidget::slotConfigureAuthenticationServer()
 {

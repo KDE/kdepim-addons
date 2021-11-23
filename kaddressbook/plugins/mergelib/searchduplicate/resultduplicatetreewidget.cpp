@@ -19,9 +19,7 @@ ResultDuplicateTreeWidget::ResultDuplicateTreeWidget(QWidget *parent)
     connect(this, &ResultDuplicateTreeWidget::itemChanged, this, &ResultDuplicateTreeWidget::slotItemChanged);
 }
 
-ResultDuplicateTreeWidget::~ResultDuplicateTreeWidget()
-{
-}
+ResultDuplicateTreeWidget::~ResultDuplicateTreeWidget() = default;
 
 void ResultDuplicateTreeWidget::slotItemChanged(QTreeWidgetItem *item, int column)
 {
@@ -117,9 +115,7 @@ ResultDuplicateTreeWidgetItem::ResultDuplicateTreeWidgetItem(QTreeWidget *parent
     setCheckState(0, Qt::Unchecked);
 }
 
-ResultDuplicateTreeWidgetItem::~ResultDuplicateTreeWidgetItem()
-{
-}
+ResultDuplicateTreeWidgetItem::~ResultDuplicateTreeWidgetItem() = default;
 
 Akonadi::Item ResultDuplicateTreeWidgetItem::item() const
 {

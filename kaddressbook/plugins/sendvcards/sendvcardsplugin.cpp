@@ -15,9 +15,7 @@ SendVcardsPlugin::SendVcardsPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-SendVcardsPlugin::~SendVcardsPlugin()
-{
-}
+SendVcardsPlugin::~SendVcardsPlugin() = default;
 
 PimCommon::GenericPluginInterface *SendVcardsPlugin::createInterface(QObject *parent)
 {

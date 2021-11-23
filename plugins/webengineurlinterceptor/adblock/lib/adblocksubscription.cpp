@@ -304,7 +304,7 @@ QByteArray AdBlockCustomList::readAllFileByteContents(const QString &filename)
         return a;
     }
 
-    return QByteArray();
+    return {};
 }
 
 void AdBlockCustomList::saveSubscription()

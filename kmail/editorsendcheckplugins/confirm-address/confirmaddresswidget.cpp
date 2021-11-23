@@ -28,9 +28,7 @@ ConfirmAddressWidget::ConfirmAddressWidget(QWidget *parent)
     mainLayout->addWidget(mListEmails);
 }
 
-ConfirmAddressWidget::~ConfirmAddressWidget()
-{
-}
+ConfirmAddressWidget::~ConfirmAddressWidget() = default;
 
 void ConfirmAddressWidget::setValidAddresses(const QStringList &addresses)
 {

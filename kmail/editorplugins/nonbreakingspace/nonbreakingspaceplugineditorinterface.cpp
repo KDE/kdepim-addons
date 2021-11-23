@@ -15,9 +15,7 @@ NonBreakingSpacePluginEditorInterface::NonBreakingSpacePluginEditorInterface(QOb
 {
 }
 
-NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface()
-{
-}
+NonBreakingSpacePluginEditorInterface::~NonBreakingSpacePluginEditorInterface() = default;
 
 void NonBreakingSpacePluginEditorInterface::createAction(KActionCollection *ac)
 {

@@ -16,9 +16,7 @@ ViewerPluginTranslatorTest::ViewerPluginTranslatorTest(QObject *parent)
 {
 }
 
-ViewerPluginTranslatorTest::~ViewerPluginTranslatorTest()
-{
-}
+ViewerPluginTranslatorTest::~ViewerPluginTranslatorTest() = default;
 
 void ViewerPluginTranslatorTest::shouldHaveDefaultValue()
 {

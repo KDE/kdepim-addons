@@ -13,9 +13,7 @@ ViewerPluginExternalScriptParseArgumentTest::ViewerPluginExternalScriptParseArgu
 {
 }
 
-ViewerPluginExternalScriptParseArgumentTest::~ViewerPluginExternalScriptParseArgumentTest()
-{
-}
+ViewerPluginExternalScriptParseArgumentTest::~ViewerPluginExternalScriptParseArgumentTest() = default;
 
 void ViewerPluginExternalScriptParseArgumentTest::shouldReturnOriginalStringListWhenMessageIsNotSetting()
 {

@@ -12,9 +12,7 @@
 #include <QTest>
 using namespace KABMergeContacts;
 
-MergeContactInfoWidgetTest::MergeContactInfoWidgetTest()
-{
-}
+MergeContactInfoWidgetTest::MergeContactInfoWidgetTest() = default;
 
 void MergeContactInfoWidgetTest::initTestCase()
 {

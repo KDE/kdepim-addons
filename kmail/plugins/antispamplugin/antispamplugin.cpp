@@ -14,9 +14,7 @@ AntiSpamPlugin::AntiSpamPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-AntiSpamPlugin::~AntiSpamPlugin()
-{
-}
+AntiSpamPlugin::~AntiSpamPlugin() = default;
 
 PimCommon::GenericPluginInterface *AntiSpamPlugin::createInterface(QObject *parent)
 {

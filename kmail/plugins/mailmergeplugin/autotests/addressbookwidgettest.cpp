@@ -11,8 +11,6 @@ AddressBookWidgetTest::AddressBookWidgetTest(QObject *parent)
 {
 }
 
-AddressBookWidgetTest::~AddressBookWidgetTest()
-{
-}
+AddressBookWidgetTest::~AddressBookWidgetTest() = default;
 
 QTEST_MAIN(AddressBookWidgetTest)

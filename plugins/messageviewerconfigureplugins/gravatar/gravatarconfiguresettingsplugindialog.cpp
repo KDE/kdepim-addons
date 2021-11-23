@@ -15,9 +15,7 @@ GravatarConfigureSettingsPluginDialog::GravatarConfigureSettingsPluginDialog(QWi
     initLayout(true);
 }
 
-GravatarConfigureSettingsPluginDialog::~GravatarConfigureSettingsPluginDialog()
-{
-}
+GravatarConfigureSettingsPluginDialog::~GravatarConfigureSettingsPluginDialog() = default;
 
 QWidget *GravatarConfigureSettingsPluginDialog::createLayout()
 {

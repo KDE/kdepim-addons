@@ -44,9 +44,7 @@ CheckBeforeSendConfigureWidget::CheckBeforeSendConfigureWidget(QWidget *parent)
     mainLayout->addStretch(1);
 }
 
-CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget()
-{
-}
+CheckBeforeSendConfigureWidget::~CheckBeforeSendConfigureWidget() = default;
 
 void CheckBeforeSendConfigureWidget::loadSettings()
 {

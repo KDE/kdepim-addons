@@ -12,9 +12,7 @@
 #include <QTextStream>
 #include <QVector>
 
-QCsvBuilderInterface::~QCsvBuilderInterface()
-{
-}
+QCsvBuilderInterface::~QCsvBuilderInterface() = default;
 
 class QCsvReaderPrivate
 {
@@ -340,7 +338,7 @@ uint QCsvStandardBuilder::columnCount() const
 QString QCsvStandardBuilder::data(uint row, uint column) const
 {
     if (row > d->mRowCount || column > d->mColumnCount || column >= (uint)d->mRows[row].count()) {
-        return QString();
+        return {};
     }
 
     return d->mRows[row][column];

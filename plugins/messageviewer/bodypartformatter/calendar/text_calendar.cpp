@@ -255,7 +255,7 @@ static Incidence::Ptr stringToIncidence(const QString &iCal)
     if (!message) {
         // TODO: Error message?
         qCWarning(TEXT_CALENDAR_LOG) << "Can't parse this ical string: " << iCal;
-        return Incidence::Ptr();
+        return {};
     }
 
     return message->event().dynamicCast<Incidence>();
@@ -383,7 +383,7 @@ public:
     static QString findReceiver(KMime::Content *node)
     {
         if (!node || !node->topLevel()) {
-            return QString();
+            return {};
         }
 
         QString receiver;
@@ -1377,7 +1377,7 @@ public:
             }
         }
 
-        return QString();
+        return {};
     }
 
     Q_REQUIRED_RESULT bool askForComment(Attendee::PartStat status) const

@@ -38,9 +38,7 @@ SendMailConfigDialog::SendMailConfigDialog(MailTransport::Transport *transport, 
     slotEnabledOkButton(!mConfigWidget->pathIsEmpty());
 }
 
-SendMailConfigDialog::~SendMailConfigDialog()
-{
-}
+SendMailConfigDialog::~SendMailConfigDialog() = default;
 
 void SendMailConfigDialog::slotEnabledOkButton(bool b)
 {

@@ -30,9 +30,7 @@ LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     }
 }
 
-LanguageToolResultWidget::~LanguageToolResultWidget()
-{
-}
+LanguageToolResultWidget::~LanguageToolResultWidget() = default;
 
 void LanguageToolResultWidget::checkGrammar()
 {

@@ -15,9 +15,7 @@ MergeContactsPlugin::MergeContactsPlugin(QObject *parent, const QList<QVariant> 
 {
 }
 
-MergeContactsPlugin::~MergeContactsPlugin()
-{
-}
+MergeContactsPlugin::~MergeContactsPlugin() = default;
 
 PimCommon::GenericPluginInterface *MergeContactsPlugin::createInterface(QObject *parent)
 {

@@ -11,9 +11,7 @@ ShortUrlEnginePlugin::ShortUrlEnginePlugin(QObject *parent)
 {
 }
 
-ShortUrlEnginePlugin::~ShortUrlEnginePlugin()
-{
-}
+ShortUrlEnginePlugin::~ShortUrlEnginePlugin() = default;
 
 QString ShortUrlEnginePlugin::pluginName() const
 {

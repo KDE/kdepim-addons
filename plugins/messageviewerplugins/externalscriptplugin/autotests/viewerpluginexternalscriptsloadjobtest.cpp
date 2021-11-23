@@ -14,9 +14,7 @@ ViewerPluginExternalScriptsLoadJobTest::ViewerPluginExternalScriptsLoadJobTest(Q
 {
 }
 
-ViewerPluginExternalScriptsLoadJobTest::~ViewerPluginExternalScriptsLoadJobTest()
-{
-}
+ViewerPluginExternalScriptsLoadJobTest::~ViewerPluginExternalScriptsLoadJobTest() = default;
 
 void ViewerPluginExternalScriptsLoadJobTest::shouldHaveDefaultValues()
 {

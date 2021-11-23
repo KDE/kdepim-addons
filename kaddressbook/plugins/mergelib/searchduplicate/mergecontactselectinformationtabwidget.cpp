@@ -16,9 +16,7 @@ MergeContactSelectInformationTabWidget::MergeContactSelectInformationTabWidget(Q
 {
 }
 
-MergeContactSelectInformationTabWidget::~MergeContactSelectInformationTabWidget()
-{
-}
+MergeContactSelectInformationTabWidget::~MergeContactSelectInformationTabWidget() = default;
 
 void MergeContactSelectInformationTabWidget::updateTabWidget()
 {

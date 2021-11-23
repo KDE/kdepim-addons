@@ -14,9 +14,7 @@ ChangeCasePluginEditorInterfaceTest::ChangeCasePluginEditorInterfaceTest(QObject
 {
 }
 
-ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest()
-{
-}
+ChangeCasePluginEditorInterfaceTest::~ChangeCasePluginEditorInterfaceTest() = default;
 
 void ChangeCasePluginEditorInterfaceTest::shouldHaveDefaultValues()
 {

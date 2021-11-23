@@ -13,9 +13,7 @@ ZoomLabel::ZoomLabel(QWidget *parent)
     setZoomLabel(100);
 }
 
-ZoomLabel::~ZoomLabel()
-{
-}
+ZoomLabel::~ZoomLabel() = default;
 
 void ZoomLabel::setZoomLabel(int value)
 {

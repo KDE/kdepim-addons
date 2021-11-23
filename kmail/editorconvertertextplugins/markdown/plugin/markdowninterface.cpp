@@ -29,9 +29,7 @@ MarkdownInterface::MarkdownInterface(QObject *parent)
 {
 }
 
-MarkdownInterface::~MarkdownInterface()
-{
-}
+MarkdownInterface::~MarkdownInterface() = default;
 
 void MarkdownInterface::createAction(KActionCollection *ac)
 {

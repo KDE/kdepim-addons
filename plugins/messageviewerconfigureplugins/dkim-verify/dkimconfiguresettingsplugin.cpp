@@ -15,9 +15,7 @@ DkimConfigureSettingsPlugin::DkimConfigureSettingsPlugin(QObject *parent, const 
 {
 }
 
-DkimConfigureSettingsPlugin::~DkimConfigureSettingsPlugin()
-{
-}
+DkimConfigureSettingsPlugin::~DkimConfigureSettingsPlugin() = default;
 
 void DkimConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {

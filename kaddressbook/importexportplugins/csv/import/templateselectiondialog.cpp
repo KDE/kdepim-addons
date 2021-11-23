@@ -63,7 +63,7 @@ public:
     Q_REQUIRED_RESULT QVariant data(const QModelIndex &index, int role = Qt::DisplayRole) const override
     {
         if (!index.isValid() || index.row() >= mTemplates.count() || index.column() >= 2) {
-            return QVariant();
+            return {};
         }
 
         if (role == Qt::DisplayRole) {
@@ -78,7 +78,7 @@ public:
             return mTemplates[index.row()].isDeletable;
         }
 
-        return QVariant();
+        return {};
     }
 
     bool removeRows(int row, int count, const QModelIndex &parent = QModelIndex()) override

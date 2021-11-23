@@ -7,13 +7,9 @@
 #include "grammarerror.h"
 #include "grammarcommon_debug.h"
 
-GrammarError::GrammarError()
-{
-}
+GrammarError::GrammarError() = default;
 
-GrammarError::~GrammarError()
-{
-}
+GrammarError::~GrammarError() = default;
 
 QColor GrammarError::color() const
 {

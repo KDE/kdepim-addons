@@ -16,9 +16,7 @@ ExternalComposerPluginEditor::ExternalComposerPluginEditor(QObject *parent, cons
 {
 }
 
-ExternalComposerPluginEditor::~ExternalComposerPluginEditor()
-{
-}
+ExternalComposerPluginEditor::~ExternalComposerPluginEditor() = default;
 
 MessageComposer::PluginEditorInitInterface *ExternalComposerPluginEditor::createInterface(QObject *parent)
 {

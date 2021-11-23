@@ -35,9 +35,7 @@ AdBlockBlockableItemsJob::AdBlockBlockableItemsJob(QObject *parent)
 {
 }
 
-AdBlockBlockableItemsJob::~AdBlockBlockableItemsJob()
-{
-}
+AdBlockBlockableItemsJob::~AdBlockBlockableItemsJob() = default;
 
 void AdBlockBlockableItemsJob::setWebEngineView(QWebEngineView *webEngineView)
 {

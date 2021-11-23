@@ -43,9 +43,7 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     mainLayout->addWidget(mResult);
 }
 
-GrammarResultWidget::~GrammarResultWidget()
-{
-}
+GrammarResultWidget::~GrammarResultWidget() = default;
 
 void GrammarResultWidget::addExtraWidget()
 {

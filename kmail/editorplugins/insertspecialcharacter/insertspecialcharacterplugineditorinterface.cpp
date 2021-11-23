@@ -15,9 +15,7 @@ InsertSpecialCharacterPluginEditorInterface::InsertSpecialCharacterPluginEditorI
 {
 }
 
-InsertSpecialCharacterPluginEditorInterface::~InsertSpecialCharacterPluginEditorInterface()
-{
-}
+InsertSpecialCharacterPluginEditorInterface::~InsertSpecialCharacterPluginEditorInterface() = default;
 
 void InsertSpecialCharacterPluginEditorInterface::createAction(KActionCollection *ac)
 {

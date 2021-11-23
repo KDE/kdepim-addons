@@ -16,9 +16,7 @@ AdBlockBlockableItemsDialogTest::AdBlockBlockableItemsDialogTest(QObject *parent
 {
 }
 
-AdBlockBlockableItemsDialogTest::~AdBlockBlockableItemsDialogTest()
-{
-}
+AdBlockBlockableItemsDialogTest::~AdBlockBlockableItemsDialogTest() = default;
 
 void AdBlockBlockableItemsDialogTest::shouldHaveDefaultValue()
 {

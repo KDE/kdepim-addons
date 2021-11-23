@@ -29,9 +29,7 @@ SelectImapWidgetTest::SelectImapWidgetTest(QWidget *parent)
     mainLayout->addWidget(lineEdit);
 }
 
-SelectImapWidgetTest::~SelectImapWidgetTest()
-{
-}
+SelectImapWidgetTest::~SelectImapWidgetTest() = default;
 
 DefaultMoveImapFolderWidget::DefaultMoveImapFolderWidget(QWidget *parent)
     : KSieveUi::AbstractMoveImapFolderWidget(parent)

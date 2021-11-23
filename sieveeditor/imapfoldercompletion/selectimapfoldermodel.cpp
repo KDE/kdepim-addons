@@ -15,9 +15,7 @@ SelectImapFolderModel::SelectImapFolderModel(QObject *parent)
 {
 }
 
-SelectImapFolderModel::~SelectImapFolderModel()
-{
-}
+SelectImapFolderModel::~SelectImapFolderModel() = default;
 
 SelectImapFolderModel *SelectImapFolderModel::self()
 {

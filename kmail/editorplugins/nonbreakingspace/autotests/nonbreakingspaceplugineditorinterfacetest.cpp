@@ -14,9 +14,7 @@ NonBreakingSpacePluginEditorInterfaceTest::NonBreakingSpacePluginEditorInterface
 {
 }
 
-NonBreakingSpacePluginEditorInterfaceTest::~NonBreakingSpacePluginEditorInterfaceTest()
-{
-}
+NonBreakingSpacePluginEditorInterfaceTest::~NonBreakingSpacePluginEditorInterfaceTest() = default;
 
 void NonBreakingSpacePluginEditorInterfaceTest::shouldHaveDefaultValue()
 {

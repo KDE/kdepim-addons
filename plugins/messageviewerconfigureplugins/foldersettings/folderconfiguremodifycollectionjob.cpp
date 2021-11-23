@@ -13,9 +13,7 @@ FolderConfigureModifyCollectionJob::FolderConfigureModifyCollectionJob(QObject *
 {
 }
 
-FolderConfigureModifyCollectionJob::~FolderConfigureModifyCollectionJob()
-{
-}
+FolderConfigureModifyCollectionJob::~FolderConfigureModifyCollectionJob() = default;
 
 void FolderConfigureModifyCollectionJob::setCollection(const Akonadi::Collection &col)
 {

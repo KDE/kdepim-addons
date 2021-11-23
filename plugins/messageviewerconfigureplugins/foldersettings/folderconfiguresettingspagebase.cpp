@@ -30,9 +30,7 @@ FolderConfigureSettingsPageBase::FolderConfigureSettingsPageBase(QWidget *parent
     connect(mGroupBox, &QGroupBox::clicked, this, &FolderConfigureSettingsPageBase::slotModifyClicked);
 }
 
-FolderConfigureSettingsPageBase::~FolderConfigureSettingsPageBase()
-{
-}
+FolderConfigureSettingsPageBase::~FolderConfigureSettingsPageBase() = default;
 
 void FolderConfigureSettingsPageBase::slotModifyClicked(bool clicked)
 {

@@ -18,9 +18,7 @@ DelegateSelectorTest::DelegateSelectorTest(QObject *parent)
 {
 }
 
-DelegateSelectorTest::~DelegateSelectorTest()
-{
-}
+DelegateSelectorTest::~DelegateSelectorTest() = default;
 
 void DelegateSelectorTest::shouldHaveDefaultValue()
 {

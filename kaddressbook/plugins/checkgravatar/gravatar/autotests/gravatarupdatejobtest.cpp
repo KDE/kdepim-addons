@@ -13,9 +13,7 @@ GravatarUpdateJobTest::GravatarUpdateJobTest(QObject *parent)
 {
 }
 
-GravatarUpdateJobTest::~GravatarUpdateJobTest()
-{
-}
+GravatarUpdateJobTest::~GravatarUpdateJobTest() = default;
 
 void GravatarUpdateJobTest::shouldHaveDefaultValue()
 {

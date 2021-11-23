@@ -25,9 +25,7 @@ InsertShorturlConfigureDialog::InsertShorturlConfigureDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 }
 
-InsertShorturlConfigureDialog::~InsertShorturlConfigureDialog()
-{
-}
+InsertShorturlConfigureDialog::~InsertShorturlConfigureDialog() = default;
 
 void InsertShorturlConfigureDialog::accept()
 {

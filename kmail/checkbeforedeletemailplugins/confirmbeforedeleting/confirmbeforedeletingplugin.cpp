@@ -16,9 +16,7 @@ ConfirmBeforeDeletingPlugin::ConfirmBeforeDeletingPlugin(QObject *parent, const 
 {
 }
 
-ConfirmBeforeDeletingPlugin::~ConfirmBeforeDeletingPlugin()
-{
-}
+ConfirmBeforeDeletingPlugin::~ConfirmBeforeDeletingPlugin() = default;
 
 void ConfirmBeforeDeletingPlugin::showConfigureDialog(QWidget *parent)
 {

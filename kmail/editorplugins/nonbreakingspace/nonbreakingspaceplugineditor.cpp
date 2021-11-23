@@ -15,9 +15,7 @@ NonBreakingSpacePluginEditor::NonBreakingSpacePluginEditor(QObject *parent, cons
 {
 }
 
-NonBreakingSpacePluginEditor::~NonBreakingSpacePluginEditor()
-{
-}
+NonBreakingSpacePluginEditor::~NonBreakingSpacePluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *NonBreakingSpacePluginEditor::createInterface(QObject *parent)
 {

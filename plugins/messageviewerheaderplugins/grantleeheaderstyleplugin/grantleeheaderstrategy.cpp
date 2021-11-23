@@ -8,10 +8,6 @@
 
 using namespace MessageViewer;
 
-GrantleeHeaderStrategy::GrantleeHeaderStrategy()
-{
-}
+GrantleeHeaderStrategy::GrantleeHeaderStrategy() = default;
 
-GrantleeHeaderStrategy::~GrantleeHeaderStrategy()
-{
-}
+GrantleeHeaderStrategy::~GrantleeHeaderStrategy() = default;

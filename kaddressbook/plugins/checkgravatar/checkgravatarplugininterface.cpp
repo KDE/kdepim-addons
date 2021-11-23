@@ -21,9 +21,7 @@ CheckGravatarPluginInterface::CheckGravatarPluginInterface(QObject *parent)
 {
 }
 
-CheckGravatarPluginInterface::~CheckGravatarPluginInterface()
-{
-}
+CheckGravatarPluginInterface::~CheckGravatarPluginInterface() = default;
 
 void CheckGravatarPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {

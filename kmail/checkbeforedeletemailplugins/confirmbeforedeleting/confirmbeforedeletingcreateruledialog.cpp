@@ -31,9 +31,7 @@ ConfirmBeforeDeletingCreateRuleDialog::ConfirmBeforeDeletingCreateRuleDialog(QWi
     connect(mConfirmBeforeDeletingCreateRuleWidget, &ConfirmBeforeDeletingCreateRuleWidget::updateOkButton, okButton, &QPushButton::setEnabled);
 }
 
-ConfirmBeforeDeletingCreateRuleDialog::~ConfirmBeforeDeletingCreateRuleDialog()
-{
-}
+ConfirmBeforeDeletingCreateRuleDialog::~ConfirmBeforeDeletingCreateRuleDialog() = default;
 
 ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDeletingCreateRuleDialog::info() const
 {

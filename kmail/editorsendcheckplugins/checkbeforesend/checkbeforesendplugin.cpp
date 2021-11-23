@@ -18,9 +18,7 @@ CheckBeforeSendPlugin::CheckBeforeSendPlugin(QObject *parent, const QList<QVaria
 {
 }
 
-CheckBeforeSendPlugin::~CheckBeforeSendPlugin()
-{
-}
+CheckBeforeSendPlugin::~CheckBeforeSendPlugin() = default;
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *CheckBeforeSendPlugin::createInterface(QObject *parent)
 {

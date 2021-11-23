@@ -25,9 +25,7 @@ CreateNoteJob::CreateNoteJob(const KMime::Message::Ptr &notePtr, const Akonadi::
 {
 }
 
-CreateNoteJob::~CreateNoteJob()
-{
-}
+CreateNoteJob::~CreateNoteJob() = default;
 
 void CreateNoteJob::start()
 {

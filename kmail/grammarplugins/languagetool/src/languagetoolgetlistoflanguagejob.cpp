@@ -15,9 +15,7 @@ LanguageToolGetListOfLanguageJob::LanguageToolGetListOfLanguageJob(QObject *pare
 {
 }
 
-LanguageToolGetListOfLanguageJob::~LanguageToolGetListOfLanguageJob()
-{
-}
+LanguageToolGetListOfLanguageJob::~LanguageToolGetListOfLanguageJob() = default;
 
 bool LanguageToolGetListOfLanguageJob::canStart() const
 {

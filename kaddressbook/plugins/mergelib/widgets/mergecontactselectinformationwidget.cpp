@@ -17,9 +17,7 @@ MergeContactSelectInformationWidget::MergeContactSelectInformationWidget(QWidget
     mainLayout->setContentsMargins({});
 }
 
-MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget()
-{
-}
+MergeContactSelectInformationWidget::~MergeContactSelectInformationWidget() = default;
 
 void MergeContactSelectInformationWidget::setContacts(MergeContacts::ConflictInformations conflictTypes, const Akonadi::Item::List &listItem)
 {

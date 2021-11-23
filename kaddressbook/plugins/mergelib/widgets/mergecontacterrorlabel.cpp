@@ -29,6 +29,4 @@ MergeContactErrorLabel::MergeContactErrorLabel(ErrorType type, QWidget *parent)
     setFont(font);
 }
 
-MergeContactErrorLabel::~MergeContactErrorLabel()
-{
-}
+MergeContactErrorLabel::~MergeContactErrorLabel() = default;

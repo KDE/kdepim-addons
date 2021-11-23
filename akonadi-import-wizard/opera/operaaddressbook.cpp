@@ -69,9 +69,7 @@ void OperaAddressBook::importAddressBook()
     appendContact(contact);
 }
 
-OperaAddressBook::~OperaAddressBook()
-{
-}
+OperaAddressBook::~OperaAddressBook() = default;
 
 void OperaAddressBook::appendContact(KContacts::Addressee *contact)
 {

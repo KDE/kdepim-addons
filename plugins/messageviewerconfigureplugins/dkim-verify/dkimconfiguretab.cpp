@@ -31,9 +31,7 @@ DKIMConfigureTab::DKIMConfigureTab(QWidget *parent)
     initTab();
 }
 
-DKIMConfigureTab::~DKIMConfigureTab()
-{
-}
+DKIMConfigureTab::~DKIMConfigureTab() = default;
 
 void DKIMConfigureTab::initTab()
 {

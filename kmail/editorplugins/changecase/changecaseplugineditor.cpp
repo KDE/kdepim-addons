@@ -15,9 +15,7 @@ ChangeCasePluginEditor::ChangeCasePluginEditor(QObject *parent, const QList<QVar
 {
 }
 
-ChangeCasePluginEditor::~ChangeCasePluginEditor()
-{
-}
+ChangeCasePluginEditor::~ChangeCasePluginEditor() = default;
 
 bool ChangeCasePluginEditor::hasPopupMenuSupport() const
 {

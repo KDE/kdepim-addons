@@ -14,9 +14,7 @@ InsertShorturlPluginEditorTest::InsertShorturlPluginEditorTest(QObject *parent)
 {
 }
 
-InsertShorturlPluginEditorTest::~InsertShorturlPluginEditorTest()
-{
-}
+InsertShorturlPluginEditorTest::~InsertShorturlPluginEditorTest() = default;
 
 void InsertShorturlPluginEditorTest::shouldHaveDefaultValue()
 {

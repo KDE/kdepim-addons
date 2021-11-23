@@ -15,9 +15,7 @@ GrammalecteResultJob::GrammalecteResultJob(QObject *parent)
 {
 }
 
-GrammalecteResultJob::~GrammalecteResultJob()
-{
-}
+GrammalecteResultJob::~GrammalecteResultJob() = default;
 
 void GrammalecteResultJob::start()
 {

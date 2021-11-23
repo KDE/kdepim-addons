@@ -54,9 +54,7 @@ AutomaticAddContactsTabWidget::AutomaticAddContactsTabWidget(QWidget *parent, QA
     mainLayout->addStretch(1);
 }
 
-AutomaticAddContactsTabWidget::~AutomaticAddContactsTabWidget()
-{
-}
+AutomaticAddContactsTabWidget::~AutomaticAddContactsTabWidget() = default;
 
 void AutomaticAddContactsTabWidget::resetSettings()
 {

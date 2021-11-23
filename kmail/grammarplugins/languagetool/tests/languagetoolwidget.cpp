@@ -46,9 +46,7 @@ LanguageToolWidget::LanguageToolWidget(QWidget *parent)
     connect(languageButton, &QPushButton::clicked, this, &LanguageToolWidget::slotGetListOfLanguages);
 }
 
-LanguageToolWidget::~LanguageToolWidget()
-{
-}
+LanguageToolWidget::~LanguageToolWidget() = default;
 
 void LanguageToolWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {

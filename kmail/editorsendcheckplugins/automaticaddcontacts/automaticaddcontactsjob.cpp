@@ -28,9 +28,7 @@ AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
 {
 }
 
-AutomaticAddContactsJob::~AutomaticAddContactsJob()
-{
-}
+AutomaticAddContactsJob::~AutomaticAddContactsJob() = default;
 
 void AutomaticAddContactsJob::start()
 {

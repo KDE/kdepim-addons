@@ -18,9 +18,7 @@ ConfirmAddressPlugin::ConfirmAddressPlugin(QObject *parent, const QList<QVariant
 {
 }
 
-ConfirmAddressPlugin::~ConfirmAddressPlugin()
-{
-}
+ConfirmAddressPlugin::~ConfirmAddressPlugin() = default;
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *ConfirmAddressPlugin::createInterface(QObject *parent)
 {

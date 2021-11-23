@@ -27,9 +27,7 @@ SendmailJob::SendmailJob(Transport *transport, QObject *parent)
     connect(mProcess, &QProcess::readyReadStandardError, this, &SendmailJob::receivedStdErr);
 }
 
-SendmailJob::~SendmailJob()
-{
-}
+SendmailJob::~SendmailJob() = default;
 
 void SendmailJob::doStart()
 {

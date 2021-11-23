@@ -15,9 +15,7 @@ IsgdShortUrlEnginePlugin::IsgdShortUrlEnginePlugin(QObject *parent, const QList<
 {
 }
 
-IsgdShortUrlEnginePlugin::~IsgdShortUrlEnginePlugin()
-{
-}
+IsgdShortUrlEnginePlugin::~IsgdShortUrlEnginePlugin() = default;
 
 ShortUrlEngineInterface *IsgdShortUrlEnginePlugin::createInterface(QObject *parent)
 {

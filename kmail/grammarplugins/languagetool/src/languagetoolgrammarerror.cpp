@@ -10,13 +10,9 @@
 
 #include <QJsonArray>
 
-LanguageToolGrammarError::LanguageToolGrammarError()
-{
-}
+LanguageToolGrammarError::LanguageToolGrammarError() = default;
 
-LanguageToolGrammarError::~LanguageToolGrammarError()
-{
-}
+LanguageToolGrammarError::~LanguageToolGrammarError() = default;
 
 void LanguageToolGrammarError::parse(const QJsonObject &obj, int blockindex)
 {

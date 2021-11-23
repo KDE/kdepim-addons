@@ -33,9 +33,7 @@ ConfirmBeforeDeletingMessageBoxDialog::ConfirmBeforeDeletingMessageBoxDialog(QWi
     });
 }
 
-ConfirmBeforeDeletingMessageBoxDialog::~ConfirmBeforeDeletingMessageBoxDialog()
-{
-}
+ConfirmBeforeDeletingMessageBoxDialog::~ConfirmBeforeDeletingMessageBoxDialog() = default;
 
 void ConfirmBeforeDeletingMessageBoxDialog::setInfo(const QString &str)
 {

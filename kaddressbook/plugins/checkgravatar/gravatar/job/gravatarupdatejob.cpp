@@ -18,9 +18,7 @@ GravatarUpdateJob::GravatarUpdateJob(QObject *parent)
 {
 }
 
-GravatarUpdateJob::~GravatarUpdateJob()
-{
-}
+GravatarUpdateJob::~GravatarUpdateJob() = default;
 
 void GravatarUpdateJob::start()
 {

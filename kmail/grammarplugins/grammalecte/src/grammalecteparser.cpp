@@ -9,13 +9,9 @@
 #include <QJsonArray>
 #include <QJsonValue>
 
-GrammalecteParser::GrammalecteParser()
-{
-}
+GrammalecteParser::GrammalecteParser() = default;
 
-GrammalecteParser::~GrammalecteParser()
-{
-}
+GrammalecteParser::~GrammalecteParser() = default;
 
 QVector<GrammarError> GrammalecteParser::parseResult(const QJsonObject &obj) const
 {

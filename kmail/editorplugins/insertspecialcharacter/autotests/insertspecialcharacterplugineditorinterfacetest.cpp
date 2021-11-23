@@ -14,9 +14,7 @@ InsertSpecialCharacterPluginEditorInterfaceTest::InsertSpecialCharacterPluginEdi
 {
 }
 
-InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEditorInterfaceTest()
-{
-}
+InsertSpecialCharacterPluginEditorInterfaceTest::~InsertSpecialCharacterPluginEditorInterfaceTest() = default;
 
 void InsertSpecialCharacterPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {

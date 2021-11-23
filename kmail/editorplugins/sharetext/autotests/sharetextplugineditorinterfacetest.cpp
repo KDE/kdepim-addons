@@ -14,9 +14,7 @@ ShareTextPluginEditorInterfaceTest::ShareTextPluginEditorInterfaceTest(QObject *
 {
 }
 
-ShareTextPluginEditorInterfaceTest::~ShareTextPluginEditorInterfaceTest()
-{
-}
+ShareTextPluginEditorInterfaceTest::~ShareTextPluginEditorInterfaceTest() = default;
 
 void ShareTextPluginEditorInterfaceTest::shouldHaveDefaultValues()
 {

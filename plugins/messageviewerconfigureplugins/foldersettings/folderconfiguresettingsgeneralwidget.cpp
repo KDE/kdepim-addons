@@ -20,9 +20,7 @@ FolderConfigureSettingsGeneralWidget::FolderConfigureSettingsGeneralWidget(QWidg
     mMainLayout->addStretch();
 }
 
-FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget()
-{
-}
+FolderConfigureSettingsGeneralWidget::~FolderConfigureSettingsGeneralWidget() = default;
 
 void FolderConfigureSettingsGeneralWidget::save(Akonadi::Collection &col)
 {

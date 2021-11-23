@@ -22,9 +22,7 @@ public:
     {
     }
 
-    ~BriefHeaderStyle() override
-    {
-    }
+    ~BriefHeaderStyle() override = default;
 
 public:
     const char *name() const override

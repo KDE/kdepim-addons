@@ -22,9 +22,7 @@ ViewerPluginCreateTodoInterface::ViewerPluginCreateTodoInterface(KActionCollecti
     createAction(ac);
 }
 
-ViewerPluginCreateTodoInterface::~ViewerPluginCreateTodoInterface()
-{
-}
+ViewerPluginCreateTodoInterface::~ViewerPluginCreateTodoInterface() = default;
 
 void ViewerPluginCreateTodoInterface::setText(const QString &text)
 {

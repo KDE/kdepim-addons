@@ -18,9 +18,7 @@ ConfirmAddressWidgetTest::ConfirmAddressWidgetTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ConfirmAddressWidgetTest::~ConfirmAddressWidgetTest()
-{
-}
+ConfirmAddressWidgetTest::~ConfirmAddressWidgetTest() = default;
 
 void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
 {

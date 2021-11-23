@@ -24,9 +24,7 @@ ViewerPluginCreateeventTest::ViewerPluginCreateeventTest(QObject *parent)
     MessageViewer::_k_eventEditStubModel = model;
 }
 
-ViewerPluginCreateeventTest::~ViewerPluginCreateeventTest()
-{
-}
+ViewerPluginCreateeventTest::~ViewerPluginCreateeventTest() = default;
 
 void ViewerPluginCreateeventTest::shouldCreateAction()
 {

@@ -31,9 +31,7 @@ EventDateTimeWidget::EventDateTimeWidget(QWidget *parent)
     connect(mTimeEdit, &KTimeComboBox::timeEdited, this, &EventDateTimeWidget::slotDateTimeChanged);
 }
 
-EventDateTimeWidget::~EventDateTimeWidget()
-{
-}
+EventDateTimeWidget::~EventDateTimeWidget() = default;
 
 void EventDateTimeWidget::slotDateTimeChanged()
 {

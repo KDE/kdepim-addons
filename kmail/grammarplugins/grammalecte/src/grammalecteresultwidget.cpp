@@ -18,9 +18,7 @@ GrammalecteResultWidget::GrammalecteResultWidget(QWidget *parent)
 {
 }
 
-GrammalecteResultWidget::~GrammalecteResultWidget()
-{
-}
+GrammalecteResultWidget::~GrammalecteResultWidget() = default;
 
 void GrammalecteResultWidget::checkGrammar()
 {

@@ -26,9 +26,7 @@ ConfirmAddressInterface::ConfirmAddressInterface(QObject *parent)
 {
 }
 
-ConfirmAddressInterface::~ConfirmAddressInterface()
-{
-}
+ConfirmAddressInterface::~ConfirmAddressInterface() = default;
 
 bool ConfirmAddressInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {

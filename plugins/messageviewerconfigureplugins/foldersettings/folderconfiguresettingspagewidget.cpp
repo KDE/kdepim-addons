@@ -48,9 +48,7 @@ FolderConfigureSettingsPageWidget::FolderConfigureSettingsPageWidget(QWidget *pa
     tab->addTab(mCollectionTemplateWidget, i18n("Template"));
 }
 
-FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget()
-{
-}
+FolderConfigureSettingsPageWidget::~FolderConfigureSettingsPageWidget() = default;
 
 void FolderConfigureSettingsPageWidget::save(const Akonadi::Collection::List &cols)
 {

@@ -15,9 +15,7 @@ ConfirmAddressConfigureDialog::ConfirmAddressConfigureDialog(QWidget *parent)
     initLayout();
 }
 
-ConfirmAddressConfigureDialog::~ConfirmAddressConfigureDialog()
-{
-}
+ConfirmAddressConfigureDialog::~ConfirmAddressConfigureDialog() = default;
 
 QWidget *ConfirmAddressConfigureDialog::createLayout()
 {

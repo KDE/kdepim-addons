@@ -13,13 +13,9 @@
 
 // https://docs.microsoft.com/en-us/previous-versions//ms735869(v=vs.85)
 
-ImportWindowContact::ImportWindowContact()
-{
-}
+ImportWindowContact::ImportWindowContact() = default;
 
-ImportWindowContact::~ImportWindowContact()
-{
-}
+ImportWindowContact::~ImportWindowContact() = default;
 
 KContacts::Addressee::List ImportWindowContact::importFile(const QString &fileName)
 {

@@ -14,9 +14,7 @@ InsertEmailPluginEditorTest::InsertEmailPluginEditorTest(QObject *parent)
 {
 }
 
-InsertEmailPluginEditorTest::~InsertEmailPluginEditorTest()
-{
-}
+InsertEmailPluginEditorTest::~InsertEmailPluginEditorTest() = default;
 
 void InsertEmailPluginEditorTest::shouldHaveDefaultValue()
 {

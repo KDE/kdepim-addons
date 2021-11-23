@@ -48,9 +48,7 @@ PimCalendarsModel::PimCalendarsModel(QObject *parent)
     mEnabledCalendars = QSet<qint64>(enabledCalendarIds.begin(), enabledCalendarIds.end());
 }
 
-PimCalendarsModel::~PimCalendarsModel()
-{
-}
+PimCalendarsModel::~PimCalendarsModel() = default;
 
 QHash<int, QByteArray> PimCalendarsModel::roleNames() const
 {
@@ -64,12 +62,12 @@ QVariant PimCalendarsModel::data(const QModelIndex &index, int role) const
     }
 
     if (role != DataRole) {
-        return QVariant();
+        return {};
     }
 
     const auto &col = QSortFilterProxyModel::data(index, Akonadi::EntityTreeModel::CollectionRole).value<Akonadi::Collection>();
     if (!col.isValid()) {
-        return QVariant();
+        return {};
     }
     const auto mts = col.contentMimeTypes();
     const bool enabled = mts.contains(KCalendarCore::Event::eventMimeType()) || mts.contains(KCalendarCore::Todo::todoMimeType());

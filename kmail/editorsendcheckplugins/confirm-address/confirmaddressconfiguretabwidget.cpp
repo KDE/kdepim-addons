@@ -71,9 +71,7 @@ ConfirmAddressConfigureTabWidget::ConfirmAddressConfigureTabWidget(QWidget *pare
     connect(mWhiteListEditor, &ConfirmAddressSimpleStringListEditor::changed, this, &ConfirmAddressConfigureTabWidget::configureChanged);
 }
 
-ConfirmAddressConfigureTabWidget::~ConfirmAddressConfigureTabWidget()
-{
-}
+ConfirmAddressConfigureTabWidget::~ConfirmAddressConfigureTabWidget() = default;
 
 void ConfirmAddressConfigureTabWidget::resetSettings()
 {

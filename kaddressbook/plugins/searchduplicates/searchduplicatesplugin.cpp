@@ -15,9 +15,7 @@ SearchDuplicatesPlugin::SearchDuplicatesPlugin(QObject *parent, const QList<QVar
 {
 }
 
-SearchDuplicatesPlugin::~SearchDuplicatesPlugin()
-{
-}
+SearchDuplicatesPlugin::~SearchDuplicatesPlugin() = default;
 
 PimCommon::GenericPluginInterface *SearchDuplicatesPlugin::createInterface(QObject *parent)
 {

@@ -14,9 +14,7 @@ SelectImapLineEdit::SelectImapLineEdit(QWidget *parent)
     setClearButtonEnabled(true);
 }
 
-SelectImapLineEdit::~SelectImapLineEdit()
-{
-}
+SelectImapLineEdit::~SelectImapLineEdit() = default;
 
 void SelectImapLineEdit::setSieveImapAccountSettings(const KSieveUi::SieveImapAccountSettings &account)
 {

@@ -25,9 +25,7 @@ ViewerPluginCreatenoteInterface::ViewerPluginCreatenoteInterface(KActionCollecti
     createAction(ac);
 }
 
-ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface()
-{
-}
+ViewerPluginCreatenoteInterface::~ViewerPluginCreatenoteInterface() = default;
 
 void ViewerPluginCreatenoteInterface::setText(const QString &text)
 {

@@ -70,9 +70,7 @@ ConfigDialog::ConfigDialog(QWidget *parent)
     load();
 }
 
-ConfigDialog::~ConfigDialog()
-{
-}
+ConfigDialog::~ConfigDialog() = default;
 
 void ConfigDialog::load()
 {

@@ -15,9 +15,7 @@ FancyHeaderStyleInterface::FancyHeaderStyleInterface(MessageViewer::HeaderStyleP
 {
 }
 
-FancyHeaderStyleInterface::~FancyHeaderStyleInterface()
-{
-}
+FancyHeaderStyleInterface::~FancyHeaderStyleInterface() = default;
 
 void FancyHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {

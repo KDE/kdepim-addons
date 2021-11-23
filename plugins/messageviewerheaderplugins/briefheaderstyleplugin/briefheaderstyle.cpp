@@ -33,7 +33,7 @@ using namespace MessageViewer;
 QString BriefHeaderStyle::format(KMime::Message *message) const
 {
     if (!message) {
-        return QString();
+        return {};
     }
 
     const HeaderStrategy *strategy = headerStrategy();

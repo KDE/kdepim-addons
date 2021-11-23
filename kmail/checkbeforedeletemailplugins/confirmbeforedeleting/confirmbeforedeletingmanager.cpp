@@ -14,9 +14,7 @@ ConfirmBeforeDeletingManager::ConfirmBeforeDeletingManager(QObject *parent)
     loadRules();
 }
 
-ConfirmBeforeDeletingManager::~ConfirmBeforeDeletingManager()
-{
-}
+ConfirmBeforeDeletingManager::~ConfirmBeforeDeletingManager() = default;
 
 ConfirmBeforeDeletingManager *ConfirmBeforeDeletingManager::self()
 {

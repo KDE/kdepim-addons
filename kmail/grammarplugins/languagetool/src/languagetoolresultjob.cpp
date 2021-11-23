@@ -15,9 +15,7 @@ LanguageToolResultJob::LanguageToolResultJob(QObject *parent)
 {
 }
 
-LanguageToolResultJob::~LanguageToolResultJob()
-{
-}
+LanguageToolResultJob::~LanguageToolResultJob() = default;
 
 static bool hasNotEmptyText(const QString &text)
 {

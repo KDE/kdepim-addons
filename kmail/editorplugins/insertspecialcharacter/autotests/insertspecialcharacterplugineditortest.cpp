@@ -13,9 +13,7 @@ InsertSpecialCharacterPluginEditorTest::InsertSpecialCharacterPluginEditorTest(Q
 {
 }
 
-InsertSpecialCharacterPluginEditorTest::~InsertSpecialCharacterPluginEditorTest()
-{
-}
+InsertSpecialCharacterPluginEditorTest::~InsertSpecialCharacterPluginEditorTest() = default;
 
 void InsertSpecialCharacterPluginEditorTest::shouldHaveDefaultValue()
 {

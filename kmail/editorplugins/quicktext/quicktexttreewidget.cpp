@@ -60,9 +60,7 @@ QuicktextTreeWidget::QuicktextTreeWidget(QuicktextManager *manager, QWidget *par
     selectionWasChanged();
 }
 
-QuicktextTreeWidget::~QuicktextTreeWidget()
-{
-}
+QuicktextTreeWidget::~QuicktextTreeWidget() = default;
 
 void QuicktextTreeWidget::contextMenuEvent(QContextMenuEvent *event)
 {

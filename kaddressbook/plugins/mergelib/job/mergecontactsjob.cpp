@@ -19,9 +19,7 @@ MergeContactsJob::MergeContactsJob(QObject *parent)
 {
 }
 
-MergeContactsJob::~MergeContactsJob()
-{
-}
+MergeContactsJob::~MergeContactsJob() = default;
 
 bool MergeContactsJob::canStart() const
 {

@@ -21,9 +21,7 @@ BriefHeaderStylePluginTest::BriefHeaderStylePluginTest(QObject *parent)
 {
 }
 
-BriefHeaderStylePluginTest::~BriefHeaderStylePluginTest()
-{
-}
+BriefHeaderStylePluginTest::~BriefHeaderStylePluginTest() = default;
 
 void BriefHeaderStylePluginTest::shouldHaveDefaultValue()
 {

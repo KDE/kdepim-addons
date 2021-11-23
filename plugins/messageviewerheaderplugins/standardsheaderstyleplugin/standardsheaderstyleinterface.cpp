@@ -15,9 +15,7 @@ StandardsHeaderStyleInterface::StandardsHeaderStyleInterface(MessageViewer::Head
 {
 }
 
-StandardsHeaderStyleInterface::~StandardsHeaderStyleInterface()
-{
-}
+StandardsHeaderStyleInterface::~StandardsHeaderStyleInterface() = default;
 
 void StandardsHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {

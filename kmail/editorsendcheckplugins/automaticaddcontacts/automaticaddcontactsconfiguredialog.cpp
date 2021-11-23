@@ -15,9 +15,7 @@ AutomaticAddContactsConfigureDialog::AutomaticAddContactsConfigureDialog(QWidget
     initLayout();
 }
 
-AutomaticAddContactsConfigureDialog::~AutomaticAddContactsConfigureDialog()
-{
-}
+AutomaticAddContactsConfigureDialog::~AutomaticAddContactsConfigureDialog() = default;
 
 QWidget *AutomaticAddContactsConfigureDialog::createLayout()
 {

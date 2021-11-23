@@ -16,9 +16,7 @@ TranslatorPlugin::TranslatorPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-TranslatorPlugin::~TranslatorPlugin()
-{
-}
+TranslatorPlugin::~TranslatorPlugin() = default;
 
 PimCommon::CustomToolsViewInterface *TranslatorPlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {

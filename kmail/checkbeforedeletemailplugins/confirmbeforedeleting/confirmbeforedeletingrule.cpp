@@ -9,13 +9,9 @@
 
 #include <KLocalizedString>
 
-ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule()
-{
-}
+ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule() = default;
 
-ConfirmBeforeDeletingRule::~ConfirmBeforeDeletingRule()
-{
-}
+ConfirmBeforeDeletingRule::~ConfirmBeforeDeletingRule() = default;
 
 const QString &ConfirmBeforeDeletingRule::pattern() const
 {

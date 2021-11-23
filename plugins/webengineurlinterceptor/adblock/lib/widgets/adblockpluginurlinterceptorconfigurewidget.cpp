@@ -21,9 +21,7 @@ AdblockPluginUrlInterceptorConfigureWidget::AdblockPluginUrlInterceptorConfigure
     connect(mConfigureWidget, &AdBlockSettingWidget::settingsChanged, this, &AdblockPluginUrlInterceptorConfigureWidget::configureChanged);
 }
 
-AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget()
-{
-}
+AdblockPluginUrlInterceptorConfigureWidget::~AdblockPluginUrlInterceptorConfigureWidget() = default;
 
 void AdblockPluginUrlInterceptorConfigureWidget::loadSettings()
 {

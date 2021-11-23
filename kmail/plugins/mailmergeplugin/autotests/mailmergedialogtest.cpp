@@ -15,9 +15,7 @@ MailMergeDialogTest::MailMergeDialogTest(QObject *parent)
 {
 }
 
-MailMergeDialogTest::~MailMergeDialogTest()
-{
-}
+MailMergeDialogTest::~MailMergeDialogTest() = default;
 
 void MailMergeDialogTest::shouldHaveDefaultValue()
 {

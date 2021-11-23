@@ -18,9 +18,7 @@ ViewerPluginExternalConfigureDialog::ViewerPluginExternalConfigureDialog(QWidget
     buttonBox()->button(QDialogButtonBox::RestoreDefaults)->hide();
 }
 
-ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog()
-{
-}
+ViewerPluginExternalConfigureDialog::~ViewerPluginExternalConfigureDialog() = default;
 
 QWidget *ViewerPluginExternalConfigureDialog::createLayout()
 {

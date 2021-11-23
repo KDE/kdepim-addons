@@ -10,13 +10,9 @@
 
 #include <QJsonArray>
 
-LanguageToolParser::LanguageToolParser()
-{
-}
+LanguageToolParser::LanguageToolParser() = default;
 
-LanguageToolParser::~LanguageToolParser()
-{
-}
+LanguageToolParser::~LanguageToolParser() = default;
 
 QVector<GrammarError> LanguageToolParser::parseResult(const QJsonObject &obj) const
 {

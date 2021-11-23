@@ -35,9 +35,7 @@ AutomaticAddContactsTabWidgetTest::AutomaticAddContactsTabWidgetTest(QObject *pa
     }
 }
 
-AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest()
-{
-}
+AutomaticAddContactsTabWidgetTest::~AutomaticAddContactsTabWidgetTest() = default;
 
 AutomaticAddContactsTabWidget *AutomaticAddContactsTabWidgetTest::createContactWidget()
 {

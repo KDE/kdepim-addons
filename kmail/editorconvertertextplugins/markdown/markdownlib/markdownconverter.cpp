@@ -44,9 +44,7 @@ MarkdownConverter::MarkdownConverter(QObject *parent)
 {
 }
 
-MarkdownConverter::~MarkdownConverter()
-{
-}
+MarkdownConverter::~MarkdownConverter() = default;
 
 QString MarkdownConverter::convertTextToMarkdown(const QString &str)
 {

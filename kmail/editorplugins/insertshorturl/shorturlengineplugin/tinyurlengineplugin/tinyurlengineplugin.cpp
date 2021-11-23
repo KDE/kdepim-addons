@@ -15,9 +15,7 @@ TinyUrlEnginePlugin::TinyUrlEnginePlugin(QObject *parent, const QList<QVariant> 
 {
 }
 
-TinyUrlEnginePlugin::~TinyUrlEnginePlugin()
-{
-}
+TinyUrlEnginePlugin::~TinyUrlEnginePlugin() = default;
 
 ShortUrlEngineInterface *TinyUrlEnginePlugin::createInterface(QObject *parent)
 {

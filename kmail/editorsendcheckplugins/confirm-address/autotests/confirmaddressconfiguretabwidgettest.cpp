@@ -17,9 +17,7 @@ ConfirmAddressConfigureTabWidgetTest::ConfirmAddressConfigureTabWidgetTest(QObje
 {
 }
 
-ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest()
-{
-}
+ConfirmAddressConfigureTabWidgetTest::~ConfirmAddressConfigureTabWidgetTest() = default;
 
 void ConfirmAddressConfigureTabWidgetTest::shouldHaveDefaultValue()
 {

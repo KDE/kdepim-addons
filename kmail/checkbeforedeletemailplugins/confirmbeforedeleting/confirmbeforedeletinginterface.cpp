@@ -19,9 +19,7 @@ ConfirmBeforeDeletingInterface::ConfirmBeforeDeletingInterface(QObject *parent)
 {
 }
 
-ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface()
-{
-}
+ConfirmBeforeDeletingInterface::~ConfirmBeforeDeletingInterface() = default;
 
 QList<QAction *> ConfirmBeforeDeletingInterface::actions() const
 {

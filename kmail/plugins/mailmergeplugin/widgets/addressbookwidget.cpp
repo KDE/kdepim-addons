@@ -15,6 +15,4 @@ AddressBookWidget::AddressBookWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
 }
 
-AddressBookWidget::~AddressBookWidget()
-{
-}
+AddressBookWidget::~AddressBookWidget() = default;

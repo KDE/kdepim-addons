@@ -13,9 +13,7 @@ AutomaticAddContactsPluginTest::AutomaticAddContactsPluginTest(QObject *parent)
 {
 }
 
-AutomaticAddContactsPluginTest::~AutomaticAddContactsPluginTest()
-{
-}
+AutomaticAddContactsPluginTest::~AutomaticAddContactsPluginTest() = default;
 
 void AutomaticAddContactsPluginTest::shouldHaveDefaultValue()
 {

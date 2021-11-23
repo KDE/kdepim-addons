@@ -15,9 +15,7 @@ ExpireAccountTrashFolderConfigPlugin::ExpireAccountTrashFolderConfigPlugin(QObje
 {
 }
 
-ExpireAccountTrashFolderConfigPlugin::~ExpireAccountTrashFolderConfigPlugin()
-{
-}
+ExpireAccountTrashFolderConfigPlugin::~ExpireAccountTrashFolderConfigPlugin() = default;
 
 void ExpireAccountTrashFolderConfigPlugin::showConfigureDialog(QWidget *parent)
 {

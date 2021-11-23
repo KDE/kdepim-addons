@@ -18,9 +18,7 @@ AutomaticAddContactsConfigureWidgetTest::AutomaticAddContactsConfigureWidgetTest
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTest()
-{
-}
+AutomaticAddContactsConfigureWidgetTest::~AutomaticAddContactsConfigureWidgetTest() = default;
 
 void AutomaticAddContactsConfigureWidgetTest::shouldHaveDefaultValue()
 {

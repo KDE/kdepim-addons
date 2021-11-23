@@ -379,7 +379,7 @@ QPixmap POTDElement::newPixmap(const QSize &size)
        or we will get one anytime soon (we are downloading it already) and we will
        actualize what we return here later via gotNewPixmap */
     if (mData->mThumbnail.isNull()) {
-        return QPixmap();
+        return {};
     }
     return mData->mThumbnail.scaled(mRequestedThumbSize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
 }

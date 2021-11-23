@@ -30,9 +30,7 @@ ViewerPluginExternalscriptInterface::ViewerPluginExternalscriptInterface(KAction
     createAction(ac);
 }
 
-ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface()
-{
-}
+ViewerPluginExternalscriptInterface::~ViewerPluginExternalscriptInterface() = default;
 
 void ViewerPluginExternalscriptInterface::refreshActionList(KActionCollection *ac)
 {

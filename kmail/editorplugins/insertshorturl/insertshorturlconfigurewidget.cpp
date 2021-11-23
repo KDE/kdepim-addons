@@ -41,9 +41,7 @@ InsertShorturlConfigureWidget::InsertShorturlConfigureWidget(QWidget *parent)
     loadConfig();
 }
 
-InsertShorturlConfigureWidget::~InsertShorturlConfigureWidget()
-{
-}
+InsertShorturlConfigureWidget::~InsertShorturlConfigureWidget() = default;
 
 void InsertShorturlConfigureWidget::slotChanged()
 {

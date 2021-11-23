@@ -15,9 +15,7 @@ CheckBeforeSendConfigureDialog::CheckBeforeSendConfigureDialog(QWidget *parent)
     initLayout();
 }
 
-CheckBeforeSendConfigureDialog::~CheckBeforeSendConfigureDialog()
-{
-}
+CheckBeforeSendConfigureDialog::~CheckBeforeSendConfigureDialog() = default;
 
 QWidget *CheckBeforeSendConfigureDialog::createLayout()
 {

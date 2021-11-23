@@ -14,9 +14,7 @@ ZoomTextPluginEditorTest::ZoomTextPluginEditorTest(QObject *parent)
 {
 }
 
-ZoomTextPluginEditorTest::~ZoomTextPluginEditorTest()
-{
-}
+ZoomTextPluginEditorTest::~ZoomTextPluginEditorTest() = default;
 
 void ZoomTextPluginEditorTest::shouldHaveDefaultValue()
 {

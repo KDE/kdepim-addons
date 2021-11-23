@@ -15,9 +15,7 @@ AdblockManagerTest::AdblockManagerTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AdblockManagerTest::~AdblockManagerTest()
-{
-}
+AdblockManagerTest::~AdblockManagerTest() = default;
 
 void AdblockManagerTest::shouldHaveDefaultValue()
 {

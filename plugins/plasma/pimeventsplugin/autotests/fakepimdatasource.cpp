@@ -38,5 +38,5 @@ KCalendarCore::Calendar *FakePimDataSource::calendar() const
 
 QString FakePimDataSource::calendarColorForIncidence(const KCalendarCore::Incidence::Ptr &) const
 {
-    return QString();
+    return {};
 }

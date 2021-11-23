@@ -59,9 +59,7 @@ QuickTextWidget::QuickTextWidget(QWidget *parent)
     mStackedWidget->setCurrentWidget(mEmptyWidget);
 }
 
-QuickTextWidget::~QuickTextWidget()
-{
-}
+QuickTextWidget::~QuickTextWidget() = default;
 
 void QuickTextWidget::save()
 {

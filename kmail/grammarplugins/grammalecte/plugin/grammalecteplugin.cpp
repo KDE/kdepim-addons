@@ -20,9 +20,7 @@ GrammalectePlugin::GrammalectePlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-GrammalectePlugin::~GrammalectePlugin()
-{
-}
+GrammalectePlugin::~GrammalectePlugin() = default;
 
 PimCommon::CustomToolsViewInterface *GrammalectePlugin::createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent)
 {

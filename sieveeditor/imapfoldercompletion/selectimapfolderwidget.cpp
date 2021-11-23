@@ -67,9 +67,7 @@ SelectImapFolderWidget::SelectImapFolderWidget(const KSieveUi::SieveImapAccountS
     }
 }
 
-SelectImapFolderWidget::~SelectImapFolderWidget()
-{
-}
+SelectImapFolderWidget::~SelectImapFolderWidget() = default;
 
 void SelectImapFolderWidget::slotModelLoaded(QStandardItemModel *model, bool success)
 {

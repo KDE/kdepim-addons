@@ -18,9 +18,7 @@ AdblockPluginUrlInterceptor::AdblockPluginUrlInterceptor(QObject *parent, const 
 {
 }
 
-AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor()
-{
-}
+AdblockPluginUrlInterceptor::~AdblockPluginUrlInterceptor() = default;
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *AdblockPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {

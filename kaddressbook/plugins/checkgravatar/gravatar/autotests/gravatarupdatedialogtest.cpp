@@ -15,9 +15,7 @@ GravatarUpdateDialogTest::GravatarUpdateDialogTest(QObject *parent)
 {
 }
 
-GravatarUpdateDialogTest::~GravatarUpdateDialogTest()
-{
-}
+GravatarUpdateDialogTest::~GravatarUpdateDialogTest() = default;
 
 void GravatarUpdateDialogTest::shouldHaveDefaultValue()
 {

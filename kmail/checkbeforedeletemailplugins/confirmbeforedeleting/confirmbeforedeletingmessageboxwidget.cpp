@@ -48,9 +48,7 @@ ConfirmBeforeDeletingMessageBoxWidget::ConfirmBeforeDeletingMessageBoxWidget(QWi
     mUseSameResultForOtherCheck->setChecked(false);
 }
 
-ConfirmBeforeDeletingMessageBoxWidget::~ConfirmBeforeDeletingMessageBoxWidget()
-{
-}
+ConfirmBeforeDeletingMessageBoxWidget::~ConfirmBeforeDeletingMessageBoxWidget() = default;
 
 void ConfirmBeforeDeletingMessageBoxWidget::setInfo(const QString &str)
 {

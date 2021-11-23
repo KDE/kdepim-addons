@@ -21,9 +21,7 @@ ShortUrlEngineInterface::ShortUrlEngineInterface(ShortUrlEnginePlugin *plugin, Q
     mNetworkAccessManager->enableStrictTransportSecurityStore(true);
 }
 
-ShortUrlEngineInterface::~ShortUrlEngineInterface()
-{
-}
+ShortUrlEngineInterface::~ShortUrlEngineInterface() = default;
 
 void ShortUrlEngineInterface::slotErrorFound(QNetworkReply::NetworkError error)
 {

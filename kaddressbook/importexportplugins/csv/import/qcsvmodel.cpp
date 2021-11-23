@@ -110,9 +110,7 @@ QCsvModel::QCsvModel(QObject *parent)
     connect(mParser, &CsvParser::ended, this, &QCsvModel::finishedLoading);
 }
 
-QCsvModel::~QCsvModel()
-{
-}
+QCsvModel::~QCsvModel() = default;
 
 bool QCsvModel::load(QIODevice *device)
 {
@@ -232,24 +230,24 @@ int QCsvModel::rowCount(const QModelIndex &parent) const
 QVariant QCsvModel::data(const QModelIndex &index, int role) const
 {
     if (!index.isValid()) {
-        return QVariant();
+        return {};
     }
 
     if (index.row() == 0) {
         if (index.column() >= mFieldIdentifiers.count()) {
-            return QVariant();
+            return {};
         }
 
         if (role == Qt::DisplayRole || role == Qt::EditRole) {
             return mFieldIdentifiers.at(index.column());
         }
 
-        return QVariant();
+        return {};
     }
 
     const QPair<int, int> pair(index.row() - 1, index.column());
     if (!mFields.contains(pair)) {
-        return QVariant();
+        return {};
     }
 
     const QString data = mFields.value(pair);
@@ -257,7 +255,7 @@ QVariant QCsvModel::data(const QModelIndex &index, int role) const
     if (role == Qt::DisplayRole) {
         return data;
     } else {
-        return QVariant();
+        return {};
     }
 }
 

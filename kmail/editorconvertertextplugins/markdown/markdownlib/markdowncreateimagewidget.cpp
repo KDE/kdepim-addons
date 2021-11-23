@@ -76,9 +76,7 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     sizeWidgetLayout->addStretch(1);
 }
 
-MarkdownCreateImageWidget::~MarkdownCreateImageWidget()
-{
-}
+MarkdownCreateImageWidget::~MarkdownCreateImageWidget() = default;
 
 void MarkdownCreateImageWidget::slotKeepOriginalSizeChanged()
 {

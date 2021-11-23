@@ -18,9 +18,7 @@ MergeContactSelectInformationScrollAreaTest::MergeContactSelectInformationScroll
 {
 }
 
-MergeContactSelectInformationScrollAreaTest::~MergeContactSelectInformationScrollAreaTest()
-{
-}
+MergeContactSelectInformationScrollAreaTest::~MergeContactSelectInformationScrollAreaTest() = default;
 
 void MergeContactSelectInformationScrollAreaTest::shouldHaveDefaultValue()
 {

@@ -19,9 +19,7 @@ ConfirmAddressDialogTest::ConfirmAddressDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ConfirmAddressDialogTest::~ConfirmAddressDialogTest()
-{
-}
+ConfirmAddressDialogTest::~ConfirmAddressDialogTest() = default;
 
 void ConfirmAddressDialogTest::shouldHaveDefaultValue()
 {

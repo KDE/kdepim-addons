@@ -16,6 +16,4 @@ StandardHeaderStrategy::StandardHeaderStrategy()
 {
 }
 
-StandardHeaderStrategy::~StandardHeaderStrategy()
-{
-}
+StandardHeaderStrategy::~StandardHeaderStrategy() = default;

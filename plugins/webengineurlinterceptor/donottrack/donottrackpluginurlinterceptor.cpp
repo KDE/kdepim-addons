@@ -15,9 +15,7 @@ DoNotTrackPluginUrlInterceptor::DoNotTrackPluginUrlInterceptor(QObject *parent, 
 {
 }
 
-DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor()
-{
-}
+DoNotTrackPluginUrlInterceptor::~DoNotTrackPluginUrlInterceptor() = default;
 
 WebEngineViewer::NetworkPluginUrlInterceptorInterface *DoNotTrackPluginUrlInterceptor::createInterface(QWebEngineView *webEngine, QObject *parent)
 {

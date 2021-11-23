@@ -72,7 +72,7 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QS
     Q_UNUSED(part)
 
     if (!path.startsWith(QLatin1String("gnupgwks?"))) {
-        return QString();
+        return {};
     }
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
@@ -82,7 +82,7 @@ QString ApplicationGnuPGWKSUrlHandler::statusBarMessage(BodyPart *part, const QS
     } else if (actionStr == QLatin1String("confirm")) {
         return i18n("Publish the key");
     }
-    return QString();
+    return {};
 }
 
 QByteArray ApplicationGnuPGWKSUrlHandler::createConfirmation(const KMime::Message::Ptr &msg) const

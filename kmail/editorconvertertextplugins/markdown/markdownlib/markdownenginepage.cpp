@@ -39,9 +39,7 @@ MarkdownEnginePage::MarkdownEnginePage(QObject *parent)
     profile()->setPersistentCookiesPolicy(QWebEngineProfile::NoPersistentCookies);
 }
 
-MarkdownEnginePage::~MarkdownEnginePage()
-{
-}
+MarkdownEnginePage::~MarkdownEnginePage() = default;
 
 bool MarkdownEnginePage::acceptNavigationRequest(const QUrl &url, NavigationType type, bool isMainFrame)
 {

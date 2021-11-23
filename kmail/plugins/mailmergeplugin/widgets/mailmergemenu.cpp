@@ -11,6 +11,4 @@ MailMergeMenu::MailMergeMenu(QWidget *parent)
 {
 }
 
-MailMergeMenu::~MailMergeMenu()
-{
-}
+MailMergeMenu::~MailMergeMenu() = default;

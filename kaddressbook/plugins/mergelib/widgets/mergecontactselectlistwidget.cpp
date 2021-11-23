@@ -27,9 +27,7 @@ MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     vbox->addWidget(mSelectListWidget);
 }
 
-MergeContactSelectListWidget::~MergeContactSelectListWidget()
-{
-}
+MergeContactSelectListWidget::~MergeContactSelectListWidget() = default;
 
 void MergeContactSelectListWidget::setContacts(MergeContacts::ConflictInformation conflictType, const KContacts::Addressee::List &lst)
 {

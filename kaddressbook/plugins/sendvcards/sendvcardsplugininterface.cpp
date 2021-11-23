@@ -18,9 +18,7 @@ SendVcardsPluginInterface::SendVcardsPluginInterface(QObject *parent)
 {
 }
 
-SendVcardsPluginInterface::~SendVcardsPluginInterface()
-{
-}
+SendVcardsPluginInterface::~SendVcardsPluginInterface() = default;
 
 void SendVcardsPluginInterface::updateActions(int numberOfSelectedItems, int numberOfSelectedCollections)
 {

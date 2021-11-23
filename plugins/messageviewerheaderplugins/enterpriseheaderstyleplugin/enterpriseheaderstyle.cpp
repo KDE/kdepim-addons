@@ -25,7 +25,7 @@ using namespace MessageViewer;
 QString EnterpriseHeaderStyle::format(KMime::Message *message) const
 {
     if (!message) {
-        return QString();
+        return {};
     }
     const HeaderStrategy *strategy = headerStrategy();
     // The direction of the header is determined according to the direction

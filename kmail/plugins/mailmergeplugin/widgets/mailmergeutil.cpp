@@ -5,6 +5,4 @@
 */
 #include "mailmergeutil.h"
 
-MailMergeUtil::MailMergeUtil()
-{
-}
+MailMergeUtil::MailMergeUtil() = default;

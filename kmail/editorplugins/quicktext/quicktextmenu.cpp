@@ -16,9 +16,7 @@ QuickTextMenu::QuickTextMenu(QWidget *parentWidget, QObject *parent)
     initializeMenu();
 }
 
-QuickTextMenu::~QuickTextMenu()
-{
-}
+QuickTextMenu::~QuickTextMenu() = default;
 
 void QuickTextMenu::initializeMenu()
 {

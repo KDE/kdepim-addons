@@ -19,9 +19,7 @@ IsgdShortUrlEngineInterface::IsgdShortUrlEngineInterface(ShortUrlEnginePlugin *p
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &IsgdShortUrlEngineInterface::slotShortUrlFinished);
 }
 
-IsgdShortUrlEngineInterface::~IsgdShortUrlEngineInterface()
-{
-}
+IsgdShortUrlEngineInterface::~IsgdShortUrlEngineInterface() = default;
 
 QString IsgdShortUrlEngineInterface::engineName() const
 {

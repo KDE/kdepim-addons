@@ -14,9 +14,7 @@ EnterpriseHeaderStyleInterface::EnterpriseHeaderStyleInterface(MessageViewer::He
 {
 }
 
-EnterpriseHeaderStyleInterface::~EnterpriseHeaderStyleInterface()
-{
-}
+EnterpriseHeaderStyleInterface::~EnterpriseHeaderStyleInterface() = default;
 
 void EnterpriseHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {

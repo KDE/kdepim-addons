@@ -15,9 +15,7 @@ BriefHeaderStyleInterface::BriefHeaderStyleInterface(MessageViewer::HeaderStyleP
 {
 }
 
-BriefHeaderStyleInterface::~BriefHeaderStyleInterface()
-{
-}
+BriefHeaderStyleInterface::~BriefHeaderStyleInterface() = default;
 
 void BriefHeaderStyleInterface::createAction(KActionMenu *menu, QActionGroup *actionGroup, KActionCollection *ac)
 {

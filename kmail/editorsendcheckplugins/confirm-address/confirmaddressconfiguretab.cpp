@@ -26,9 +26,7 @@ ConfirmAddressConfigureTab::ConfirmAddressConfigureTab(QWidget *parent)
     initTab(KIdentityManagement::IdentityManager::self());
 }
 
-ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab()
-{
-}
+ConfirmAddressConfigureTab::~ConfirmAddressConfigureTab() = default;
 
 void ConfirmAddressConfigureTab::loadSettings(const KConfigGroup &grp)
 {

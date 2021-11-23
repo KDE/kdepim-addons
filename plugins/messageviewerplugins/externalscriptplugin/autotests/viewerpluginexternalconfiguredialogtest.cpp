@@ -17,9 +17,7 @@ ViewerPluginExternalConfigureDialogTest::ViewerPluginExternalConfigureDialogTest
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ViewerPluginExternalConfigureDialogTest::~ViewerPluginExternalConfigureDialogTest()
-{
-}
+ViewerPluginExternalConfigureDialogTest::~ViewerPluginExternalConfigureDialogTest() = default;
 
 void ViewerPluginExternalConfigureDialogTest::shouldHaveDefaultValue()
 {

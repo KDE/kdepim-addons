@@ -18,9 +18,7 @@ public:
     {
     }
 
-    ~EnterpriseHeaderStyle() override
-    {
-    }
+    ~EnterpriseHeaderStyle() override = default;
 
     const char *name() const override;
 

@@ -44,9 +44,7 @@ SearchDuplicateResultWidgetTest::SearchDuplicateResultWidgetTest(QObject *parent
     KABMergeContacts::_k_searchDuplicateResultStubModel = model;
 }
 
-SearchDuplicateResultWidgetTest::~SearchDuplicateResultWidgetTest()
-{
-}
+SearchDuplicateResultWidgetTest::~SearchDuplicateResultWidgetTest() = default;
 
 void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
 {

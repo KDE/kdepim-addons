@@ -19,9 +19,7 @@ SendMailPluginInterface::SendMailPluginInterface(QObject *parent)
 {
 }
 
-SendMailPluginInterface::~SendMailPluginInterface()
-{
-}
+SendMailPluginInterface::~SendMailPluginInterface() = default;
 
 void SendMailPluginInterface::createAction(KActionCollection *ac)
 {

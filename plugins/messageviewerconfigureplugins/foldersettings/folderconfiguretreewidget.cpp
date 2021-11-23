@@ -64,9 +64,7 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     });
 }
 
-FolderConfigureTreeWidget::~FolderConfigureTreeWidget()
-{
-}
+FolderConfigureTreeWidget::~FolderConfigureTreeWidget() = default;
 
 void FolderConfigureTreeWidget::changeFolderSelection(bool select)
 {

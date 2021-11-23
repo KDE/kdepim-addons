@@ -22,9 +22,7 @@ ViewerPluginCreateEventInterface::ViewerPluginCreateEventInterface(KActionCollec
     createAction(ac);
 }
 
-ViewerPluginCreateEventInterface::~ViewerPluginCreateEventInterface()
-{
-}
+ViewerPluginCreateEventInterface::~ViewerPluginCreateEventInterface() = default;
 
 ViewerPluginInterface::SpecificFeatureTypes ViewerPluginCreateEventInterface::featureTypes() const
 {

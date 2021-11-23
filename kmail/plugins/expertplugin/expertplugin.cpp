@@ -15,9 +15,7 @@ ExpertPlugin::ExpertPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-ExpertPlugin::~ExpertPlugin()
-{
-}
+ExpertPlugin::~ExpertPlugin() = default;
 
 PimCommon::GenericPluginInterface *ExpertPlugin::createInterface(QObject *parent)
 {

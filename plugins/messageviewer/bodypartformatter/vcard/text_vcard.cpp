@@ -196,7 +196,7 @@ public:
                 return al.at(index);
             }
         }
-        return KContacts::Addressee();
+        return {};
     }
 
     bool handleContextMenuRequest(BodyPart *part, const QString &path, const QPoint &point) const override

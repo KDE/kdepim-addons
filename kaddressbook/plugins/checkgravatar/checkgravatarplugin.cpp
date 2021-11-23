@@ -15,9 +15,7 @@ CheckGravatarPlugin::CheckGravatarPlugin(QObject *parent, const QList<QVariant> 
 {
 }
 
-CheckGravatarPlugin::~CheckGravatarPlugin()
-{
-}
+CheckGravatarPlugin::~CheckGravatarPlugin() = default;
 
 PimCommon::GenericPluginInterface *CheckGravatarPlugin::createInterface(QObject *parent)
 {

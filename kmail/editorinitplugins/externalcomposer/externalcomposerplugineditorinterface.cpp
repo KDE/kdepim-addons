@@ -14,9 +14,7 @@ ExternalComposerPluginEditorInterface::ExternalComposerPluginEditorInterface(QOb
 {
 }
 
-ExternalComposerPluginEditorInterface::~ExternalComposerPluginEditorInterface()
-{
-}
+ExternalComposerPluginEditorInterface::~ExternalComposerPluginEditorInterface() = default;
 
 bool ExternalComposerPluginEditorInterface::exec()
 {

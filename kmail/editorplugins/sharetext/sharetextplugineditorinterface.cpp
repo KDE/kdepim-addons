@@ -21,9 +21,7 @@ ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
     setNeedSelectedText(false);
 }
 
-ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface()
-{
-}
+ShareTextPluginEditorInterface::~ShareTextPluginEditorInterface() = default;
 
 void ShareTextPluginEditorInterface::createAction(KActionCollection *ac)
 {

@@ -30,9 +30,7 @@ MergeContactLoseInformationWarning::MergeContactLoseInformationWarning(QWidget *
     addAction(action);
 }
 
-MergeContactLoseInformationWarning::~MergeContactLoseInformationWarning()
-{
-}
+MergeContactLoseInformationWarning::~MergeContactLoseInformationWarning() = default;
 
 void MergeContactLoseInformationWarning::slotCustomizeMerge()
 {

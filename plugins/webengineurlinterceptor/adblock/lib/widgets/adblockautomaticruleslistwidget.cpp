@@ -14,9 +14,7 @@ AdBlockAutomaticRulesListWidget::AdBlockAutomaticRulesListWidget(QWidget *parent
     connect(this, &AdBlockAutomaticRulesListWidget::itemChanged, this, &AdBlockAutomaticRulesListWidget::slotItemChanged);
 }
 
-AdBlockAutomaticRulesListWidget::~AdBlockAutomaticRulesListWidget()
-{
-}
+AdBlockAutomaticRulesListWidget::~AdBlockAutomaticRulesListWidget() = default;
 
 void AdBlockAutomaticRulesListWidget::slotItemChanged(QListWidgetItem *item)
 {

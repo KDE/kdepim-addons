@@ -21,9 +21,7 @@ DKIMAuthenticationVerifiedServerWidget::DKIMAuthenticationVerifiedServerWidget(Q
     mainLayout->addWidget(mSelector);
 }
 
-DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget()
-{
-}
+DKIMAuthenticationVerifiedServerWidget::~DKIMAuthenticationVerifiedServerWidget() = default;
 
 void DKIMAuthenticationVerifiedServerWidget::loadSettings()
 {
@@ -46,6 +44,4 @@ DKIMAuthenticationVerifiedServerSelectorWidget::DKIMAuthenticationVerifiedServer
     setRemoveDialogLabel(i18n("Do you want to delete selected server(s) name?"));
 }
 
-DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget()
-{
-}
+DKIMAuthenticationVerifiedServerSelectorWidget::~DKIMAuthenticationVerifiedServerSelectorWidget() = default;

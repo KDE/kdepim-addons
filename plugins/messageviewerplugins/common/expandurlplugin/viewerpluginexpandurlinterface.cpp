@@ -24,9 +24,7 @@ ViewerPluginExpandurlInterface::ViewerPluginExpandurlInterface(KActionCollection
     createAction(ac);
 }
 
-ViewerPluginExpandurlInterface::~ViewerPluginExpandurlInterface()
-{
-}
+ViewerPluginExpandurlInterface::~ViewerPluginExpandurlInterface() = default;
 
 QList<QAction *> ViewerPluginExpandurlInterface::actions() const
 {

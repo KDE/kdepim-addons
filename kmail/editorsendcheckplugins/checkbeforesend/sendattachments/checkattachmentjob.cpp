@@ -9,13 +9,9 @@
 #include <KEmailAddress>
 #include <PimCommon/PimUtil>
 
-CheckAttachmentJob::CheckAttachmentJob()
-{
-}
+CheckAttachmentJob::CheckAttachmentJob() = default;
 
-CheckAttachmentJob::~CheckAttachmentJob()
-{
-}
+CheckAttachmentJob::~CheckAttachmentJob() = default;
 
 void CheckAttachmentJob::start()
 {

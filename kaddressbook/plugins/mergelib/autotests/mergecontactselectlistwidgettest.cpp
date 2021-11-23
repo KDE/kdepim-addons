@@ -16,9 +16,7 @@ MergeContactSelectListWidgetTest::MergeContactSelectListWidgetTest(QObject *pare
 {
 }
 
-MergeContactSelectListWidgetTest::~MergeContactSelectListWidgetTest()
-{
-}
+MergeContactSelectListWidgetTest::~MergeContactSelectListWidgetTest() = default;
 
 void MergeContactSelectListWidgetTest::shouldHaveDefaultValue()
 {

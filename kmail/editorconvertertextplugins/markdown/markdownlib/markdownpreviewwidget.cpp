@@ -58,9 +58,7 @@ MarkdownPreviewWidget::MarkdownPreviewWidget(QWidget *parent)
     connect(page, &MarkdownEnginePage::linkHovered, this, &MarkdownPreviewWidget::slotLinkHovered);
 }
 
-MarkdownPreviewWidget::~MarkdownPreviewWidget()
-{
-}
+MarkdownPreviewWidget::~MarkdownPreviewWidget() = default;
 
 void MarkdownPreviewWidget::slotLinkHovered(const QString &url)
 {

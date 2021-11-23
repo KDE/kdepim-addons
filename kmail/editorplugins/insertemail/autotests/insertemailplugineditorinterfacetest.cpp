@@ -14,9 +14,7 @@ InsertEmailPluginEditorInterfaceTest::InsertEmailPluginEditorInterfaceTest(QObje
 {
 }
 
-InsertEmailPluginEditorInterfaceTest::~InsertEmailPluginEditorInterfaceTest()
-{
-}
+InsertEmailPluginEditorInterfaceTest::~InsertEmailPluginEditorInterfaceTest() = default;
 
 void InsertEmailPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {

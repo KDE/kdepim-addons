@@ -19,9 +19,7 @@ MergeContactShowResultTabWidget::MergeContactShowResultTabWidget(QWidget *parent
     updateTabWidget();
 }
 
-MergeContactShowResultTabWidget::~MergeContactShowResultTabWidget()
-{
-}
+MergeContactShowResultTabWidget::~MergeContactShowResultTabWidget() = default;
 
 void MergeContactShowResultTabWidget::updateTabWidget()
 {

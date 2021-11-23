@@ -21,9 +21,7 @@ ViewerPluginTranslatorInterface::ViewerPluginTranslatorInterface(KActionCollecti
     createAction(ac);
 }
 
-ViewerPluginTranslatorInterface::~ViewerPluginTranslatorInterface()
-{
-}
+ViewerPluginTranslatorInterface::~ViewerPluginTranslatorInterface() = default;
 
 void ViewerPluginTranslatorInterface::setText(const QString &text)
 {

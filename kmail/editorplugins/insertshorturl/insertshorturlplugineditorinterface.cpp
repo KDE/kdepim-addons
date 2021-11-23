@@ -26,9 +26,7 @@ InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject
     loadEngine();
 }
 
-InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface()
-{
-}
+InsertShorturlPluginEditorInterface::~InsertShorturlPluginEditorInterface() = default;
 
 void InsertShorturlPluginEditorInterface::initializePlugins()
 {

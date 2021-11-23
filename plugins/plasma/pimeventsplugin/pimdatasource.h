@@ -17,9 +17,7 @@ class Calendar;
 class PimDataSource
 {
 public:
-    virtual ~PimDataSource()
-    {
-    }
+    virtual ~PimDataSource() = default;
 
     virtual KCalendarCore::Calendar *calendar() const = 0;
     virtual qint64 akonadiIdForIncidence(const KCalendarCore::Incidence::Ptr &incidence) const = 0;

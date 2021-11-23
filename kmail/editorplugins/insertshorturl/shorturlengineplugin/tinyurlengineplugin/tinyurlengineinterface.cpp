@@ -16,9 +16,7 @@ TinyUrlEngineInterface::TinyUrlEngineInterface(ShortUrlEnginePlugin *plugin, QOb
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &TinyUrlEngineInterface::slotShortUrlFinished);
 }
 
-TinyUrlEngineInterface::~TinyUrlEngineInterface()
-{
-}
+TinyUrlEngineInterface::~TinyUrlEngineInterface() = default;
 
 QString TinyUrlEngineInterface::engineName() const
 {

@@ -14,9 +14,7 @@ MergeContacts::MergeContacts(const Akonadi::Item::List &items)
 {
 }
 
-MergeContacts::~MergeContacts()
-{
-}
+MergeContacts::~MergeContacts() = default;
 
 void MergeContacts::setItems(const Akonadi::Item::List &items)
 {

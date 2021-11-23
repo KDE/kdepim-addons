@@ -15,9 +15,7 @@ AntiVirusPlugin::AntiVirusPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-AntiVirusPlugin::~AntiVirusPlugin()
-{
-}
+AntiVirusPlugin::~AntiVirusPlugin() = default;
 
 PimCommon::GenericPluginInterface *AntiVirusPlugin::createInterface(QObject *parent)
 {

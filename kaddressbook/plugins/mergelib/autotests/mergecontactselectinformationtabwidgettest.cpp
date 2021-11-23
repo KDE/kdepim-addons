@@ -13,9 +13,7 @@ MergeContactSelectInformationTabWidgetTest::MergeContactSelectInformationTabWidg
 {
 }
 
-MergeContactSelectInformationTabWidgetTest::~MergeContactSelectInformationTabWidgetTest()
-{
-}
+MergeContactSelectInformationTabWidgetTest::~MergeContactSelectInformationTabWidgetTest() = default;
 
 void MergeContactSelectInformationTabWidgetTest::shouldHaveDefaultValue()
 {

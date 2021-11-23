@@ -24,9 +24,7 @@ TranslatorView::TranslatorView(KActionCollection *ac, QWidget *parent)
     createAction(ac);
 }
 
-TranslatorView::~TranslatorView()
-{
-}
+TranslatorView::~TranslatorView() = default;
 
 void TranslatorView::setText(const QString &text)
 {

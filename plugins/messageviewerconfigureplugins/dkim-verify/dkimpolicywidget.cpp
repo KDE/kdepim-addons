@@ -81,9 +81,7 @@ DKIMPolicyWidget::DKIMPolicyWidget(QWidget *parent)
     mainLayout->addStretch(1);
 }
 
-DKIMPolicyWidget::~DKIMPolicyWidget()
-{
-}
+DKIMPolicyWidget::~DKIMPolicyWidget() = default;
 
 void DKIMPolicyWidget::loadSettings()
 {

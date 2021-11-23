@@ -31,9 +31,7 @@ MarkdownConfigureWidget::MarkdownConfigureWidget(QWidget *parent)
     mainLayout->addStretch(1);
 }
 
-MarkdownConfigureWidget::~MarkdownConfigureWidget()
-{
-}
+MarkdownConfigureWidget::~MarkdownConfigureWidget() = default;
 
 void MarkdownConfigureWidget::loadSettings()
 {

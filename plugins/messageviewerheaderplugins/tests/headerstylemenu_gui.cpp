@@ -36,9 +36,7 @@ HeaderStyleMenuTest::HeaderStyleMenuTest(QWidget *parent)
     manager->readConfig();
 }
 
-HeaderStyleMenuTest::~HeaderStyleMenuTest()
-{
-}
+HeaderStyleMenuTest::~HeaderStyleMenuTest() = default;
 
 void HeaderStyleMenuTest::styleChanged(MessageViewer::HeaderStylePlugin *plugin)
 {

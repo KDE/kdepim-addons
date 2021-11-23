@@ -15,9 +15,7 @@ SendMailPlugin::SendMailPlugin(QObject *parent, const QList<QVariant> &)
 {
 }
 
-SendMailPlugin::~SendMailPlugin()
-{
-}
+SendMailPlugin::~SendMailPlugin() = default;
 
 PimCommon::GenericPluginInterface *SendMailPlugin::createInterface(QObject *parent)
 {

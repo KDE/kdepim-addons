@@ -24,9 +24,7 @@ CreateEventJob::CreateEventJob(const KCalendarCore::Event::Ptr &eventPtr, const 
 {
 }
 
-CreateEventJob::~CreateEventJob()
-{
-}
+CreateEventJob::~CreateEventJob() = default;
 
 void CreateEventJob::start()
 {

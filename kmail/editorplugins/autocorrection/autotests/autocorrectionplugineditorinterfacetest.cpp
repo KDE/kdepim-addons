@@ -14,9 +14,7 @@ AutoCorrectionPluginEditorInterfaceTest::AutoCorrectionPluginEditorInterfaceTest
 {
 }
 
-AutoCorrectionPluginEditorInterfaceTest::~AutoCorrectionPluginEditorInterfaceTest()
-{
-}
+AutoCorrectionPluginEditorInterfaceTest::~AutoCorrectionPluginEditorInterfaceTest() = default;
 
 void AutoCorrectionPluginEditorInterfaceTest::shouldHaveDefaultValue()
 {

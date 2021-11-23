@@ -14,9 +14,7 @@ NonBreakingSpacePluginEditorTest::NonBreakingSpacePluginEditorTest(QObject *pare
 {
 }
 
-NonBreakingSpacePluginEditorTest::~NonBreakingSpacePluginEditorTest()
-{
-}
+NonBreakingSpacePluginEditorTest::~NonBreakingSpacePluginEditorTest() = default;
 
 void NonBreakingSpacePluginEditorTest::shouldHaveDefaultValue()
 {

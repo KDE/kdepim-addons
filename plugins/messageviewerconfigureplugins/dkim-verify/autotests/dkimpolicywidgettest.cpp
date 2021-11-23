@@ -16,9 +16,7 @@ DKIMPolicyWidgetTest::DKIMPolicyWidgetTest(QObject *parent)
 {
 }
 
-DKIMPolicyWidgetTest::~DKIMPolicyWidgetTest()
-{
-}
+DKIMPolicyWidgetTest::~DKIMPolicyWidgetTest() = default;
 
 void DKIMPolicyWidgetTest::shouldHaveDefaultValues()
 {

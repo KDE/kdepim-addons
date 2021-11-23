@@ -14,9 +14,7 @@ ViewerPluginExternalScriptInfoTest::ViewerPluginExternalScriptInfoTest(QObject *
 {
 }
 
-ViewerPluginExternalScriptInfoTest::~ViewerPluginExternalScriptInfoTest()
-{
-}
+ViewerPluginExternalScriptInfoTest::~ViewerPluginExternalScriptInfoTest() = default;
 
 void ViewerPluginExternalScriptInfoTest::shouldHaveDefaultValue()
 {

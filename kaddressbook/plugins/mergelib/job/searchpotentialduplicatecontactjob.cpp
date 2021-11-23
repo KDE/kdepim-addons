@@ -17,9 +17,7 @@ SearchPotentialDuplicateContactJob::SearchPotentialDuplicateContactJob(const Ako
 {
 }
 
-SearchPotentialDuplicateContactJob::~SearchPotentialDuplicateContactJob()
-{
-}
+SearchPotentialDuplicateContactJob::~SearchPotentialDuplicateContactJob() = default;
 
 void SearchPotentialDuplicateContactJob::start()
 {

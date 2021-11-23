@@ -15,9 +15,7 @@ AntiSpamPluginInterfaceTest::AntiSpamPluginInterfaceTest(QObject *parent)
 {
 }
 
-AntiSpamPluginInterfaceTest::~AntiSpamPluginInterfaceTest()
-{
-}
+AntiSpamPluginInterfaceTest::~AntiSpamPluginInterfaceTest() = default;
 
 void AntiSpamPluginInterfaceTest::shouldHaveDefaultValue()
 {

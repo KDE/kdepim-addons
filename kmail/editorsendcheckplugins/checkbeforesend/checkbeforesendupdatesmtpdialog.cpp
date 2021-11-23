@@ -35,9 +35,7 @@ CheckBeforeSendUpdateSmtpDialog::CheckBeforeSendUpdateSmtpDialog(QWidget *parent
     connect(buttonBox, &QDialogButtonBox::rejected, this, &CheckBeforeSendUpdateSmtpDialog::reject);
 }
 
-CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog()
-{
-}
+CheckBeforeSendUpdateSmtpDialog::~CheckBeforeSendUpdateSmtpDialog() = default;
 
 bool CheckBeforeSendUpdateSmtpDialog::changeSmtp() const
 {

@@ -16,9 +16,7 @@ InsertEmailPluginEditorInterface::InsertEmailPluginEditorInterface(QObject *pare
 {
 }
 
-InsertEmailPluginEditorInterface::~InsertEmailPluginEditorInterface()
-{
-}
+InsertEmailPluginEditorInterface::~InsertEmailPluginEditorInterface() = default;
 
 void InsertEmailPluginEditorInterface::createAction(KActionCollection *ac)
 {

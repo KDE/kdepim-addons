@@ -90,7 +90,7 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
         for (const auto &r : std::as_const(postProcResult)) {
             const auto events = CalendarHandler::findEvents(calendar, r);
             if (events.empty()) {
-                resolvedEvents.push_back(std::make_pair(r, KCalendarCore::Event::Ptr()));
+                resolvedEvents.emplace_back(r, KCalendarCore::Event::Ptr());
                 continue;
             }
 
@@ -98,7 +98,7 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
                 const auto existingRes = CalendarHandler::reservationsForEvent(event);
                 for (const auto &ev : existingRes) {
                     if (MergeUtil::isSame(ev, r)) {
-                        resolvedEvents.push_back(std::make_pair(MergeUtil::merge(ev, r), event));
+                        resolvedEvents.emplace_back(MergeUtil::merge(ev, r), event);
                     }
                 }
             }

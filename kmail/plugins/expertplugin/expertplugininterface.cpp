@@ -14,9 +14,7 @@ ExpertPluginInterface::ExpertPluginInterface(QObject *parent)
 {
 }
 
-ExpertPluginInterface::~ExpertPluginInterface()
-{
-}
+ExpertPluginInterface::~ExpertPluginInterface() = default;
 
 void ExpertPluginInterface::createAction(KActionCollection *ac)
 {

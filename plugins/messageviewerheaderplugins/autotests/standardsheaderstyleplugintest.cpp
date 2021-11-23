@@ -17,9 +17,7 @@ StandardsHeaderStylePluginTest::StandardsHeaderStylePluginTest(QObject *parent)
 {
 }
 
-StandardsHeaderStylePluginTest::~StandardsHeaderStylePluginTest()
-{
-}
+StandardsHeaderStylePluginTest::~StandardsHeaderStylePluginTest() = default;
 
 void StandardsHeaderStylePluginTest::shouldHaveDefaultValue()
 {

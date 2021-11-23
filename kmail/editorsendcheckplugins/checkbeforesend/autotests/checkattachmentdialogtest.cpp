@@ -18,9 +18,7 @@ CheckAttachmentDialogTest::CheckAttachmentDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-CheckAttachmentDialogTest::~CheckAttachmentDialogTest()
-{
-}
+CheckAttachmentDialogTest::~CheckAttachmentDialogTest() = default;
 
 void CheckAttachmentDialogTest::shouldHaveDefaultValue()
 {

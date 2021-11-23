@@ -786,9 +786,7 @@ AntiSpamWizard::ConfigReader::ConfigReader(WizardMode mode, QVector<SpamToolConf
     }
 }
 
-AntiSpamWizard::ConfigReader::~ConfigReader()
-{
-}
+AntiSpamWizard::ConfigReader::~ConfigReader() = default;
 
 void AntiSpamWizard::ConfigReader::readAndMergeConfig()
 {

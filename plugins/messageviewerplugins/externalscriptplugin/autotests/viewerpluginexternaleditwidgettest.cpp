@@ -17,9 +17,7 @@ ViewerPluginExternalEditWidgetTest::ViewerPluginExternalEditWidgetTest(QObject *
 {
 }
 
-ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest()
-{
-}
+ViewerPluginExternalEditWidgetTest::~ViewerPluginExternalEditWidgetTest() = default;
 
 void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
 {

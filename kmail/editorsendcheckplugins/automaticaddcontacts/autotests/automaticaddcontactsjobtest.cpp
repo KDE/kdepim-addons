@@ -14,8 +14,6 @@ AutomaticAddContactsJobTest::AutomaticAddContactsJobTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest()
-{
-}
+AutomaticAddContactsJobTest::~AutomaticAddContactsJobTest() = default;
 
 QTEST_MAIN(AutomaticAddContactsJobTest)

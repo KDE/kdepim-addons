@@ -17,9 +17,7 @@ SelectImapWidgetTest::SelectImapWidgetTest(QObject *parent)
 {
 }
 
-SelectImapWidgetTest::~SelectImapWidgetTest()
-{
-}
+SelectImapWidgetTest::~SelectImapWidgetTest() = default;
 
 void SelectImapWidgetTest::shouldHaveDefaultValue()
 {

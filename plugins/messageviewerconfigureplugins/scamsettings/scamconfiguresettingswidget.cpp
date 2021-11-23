@@ -27,9 +27,7 @@ ScamConfigureSettingsWidget::ScamConfigureSettingsWidget(QWidget *parent)
     mTreeWidget->setHeaderLabels({i18n("Domain"), i18n("Check")});
 }
 
-ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget()
-{
-}
+ScamConfigureSettingsWidget::~ScamConfigureSettingsWidget() = default;
 
 void ScamConfigureSettingsWidget::loadSettings()
 {

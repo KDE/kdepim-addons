@@ -14,9 +14,7 @@ SelectImapFolderModelTest::SelectImapFolderModelTest(QObject *parent)
 {
 }
 
-SelectImapFolderModelTest::~SelectImapFolderModelTest()
-{
-}
+SelectImapFolderModelTest::~SelectImapFolderModelTest() = default;
 
 void SelectImapFolderModelTest::shouldNotCreateModelIfAccountIsNotValid()
 {

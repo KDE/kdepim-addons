@@ -26,9 +26,7 @@ AdBlockAutomaticRulesListWidgetTest::AdBlockAutomaticRulesListWidgetTest(const Q
     lay->addWidget(list);
 }
 
-AdBlockAutomaticRulesListWidgetTest::~AdBlockAutomaticRulesListWidgetTest()
-{
-}
+AdBlockAutomaticRulesListWidgetTest::~AdBlockAutomaticRulesListWidgetTest() = default;
 
 int main(int argc, char **argv)
 {

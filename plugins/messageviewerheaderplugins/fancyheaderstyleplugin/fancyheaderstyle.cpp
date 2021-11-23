@@ -37,9 +37,7 @@ FancyHeaderStyle::FancyHeaderStyle()
 {
 }
 
-FancyHeaderStyle::~FancyHeaderStyle()
-{
-}
+FancyHeaderStyle::~FancyHeaderStyle() = default;
 
 const char *FancyHeaderStyle::name() const
 {
@@ -49,7 +47,7 @@ const char *FancyHeaderStyle::name() const
 QString FancyHeaderStyle::format(KMime::Message *message) const
 {
     if (!message) {
-        return QString();
+        return {};
     }
     const HeaderStrategy *strategy = headerStrategy();
     // ### from kmreaderwin begin

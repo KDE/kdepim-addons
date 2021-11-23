@@ -16,9 +16,7 @@ TripAbShortUrlEngineInterface::TripAbShortUrlEngineInterface(ShortUrlEnginePlugi
     connect(mNetworkAccessManager, &QNetworkAccessManager::finished, this, &TripAbShortUrlEngineInterface::slotShortUrlFinished);
 }
 
-TripAbShortUrlEngineInterface::~TripAbShortUrlEngineInterface()
-{
-}
+TripAbShortUrlEngineInterface::~TripAbShortUrlEngineInterface() = default;
 
 QString TripAbShortUrlEngineInterface::engineName() const
 {

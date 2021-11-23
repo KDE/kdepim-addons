@@ -12,9 +12,7 @@ FolderSettingFilterProxyModel::FolderSettingFilterProxyModel(QObject *parent)
 {
 }
 
-FolderSettingFilterProxyModel::~FolderSettingFilterProxyModel()
-{
-}
+FolderSettingFilterProxyModel::~FolderSettingFilterProxyModel() = default;
 
 QVariant FolderSettingFilterProxyModel::data(const QModelIndex &index, int role) const
 {

@@ -14,9 +14,7 @@ CheckAttachmentJobTest::CheckAttachmentJobTest(QObject *parent)
 {
 }
 
-CheckAttachmentJobTest::~CheckAttachmentJobTest()
-{
-}
+CheckAttachmentJobTest::~CheckAttachmentJobTest() = default;
 
 void CheckAttachmentJobTest::shouldHaveDefaultValue()
 {

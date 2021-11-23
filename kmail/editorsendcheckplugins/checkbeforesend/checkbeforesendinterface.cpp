@@ -25,9 +25,7 @@ CheckBeforeSendInterface::CheckBeforeSendInterface(QObject *parent)
 {
 }
 
-CheckBeforeSendInterface::~CheckBeforeSendInterface()
-{
-}
+CheckBeforeSendInterface::~CheckBeforeSendInterface() = default;
 
 bool CheckBeforeSendInterface::exec(const MessageComposer::PluginEditorCheckBeforeSendParams &params)
 {

@@ -17,9 +17,7 @@ AttachmentListWidget::AttachmentListWidget(QWidget *parent, ButtonCode buttons, 
 {
 }
 
-AttachmentListWidget::~AttachmentListWidget()
-{
-}
+AttachmentListWidget::~AttachmentListWidget() = default;
 
 void AttachmentListWidget::addNewEntry()
 {

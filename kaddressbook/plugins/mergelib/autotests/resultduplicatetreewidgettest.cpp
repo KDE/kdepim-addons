@@ -16,9 +16,7 @@ ResultDuplicateTreeWidgetTest::ResultDuplicateTreeWidgetTest(QObject *parent)
 {
 }
 
-ResultDuplicateTreeWidgetTest::~ResultDuplicateTreeWidgetTest()
-{
-}
+ResultDuplicateTreeWidgetTest::~ResultDuplicateTreeWidgetTest() = default;
 
 void ResultDuplicateTreeWidgetTest::shouldHaveDefaultValue()
 {

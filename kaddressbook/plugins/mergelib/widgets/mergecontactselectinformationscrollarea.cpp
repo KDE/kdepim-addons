@@ -54,9 +54,7 @@ MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea
     mStackWidget->setCurrentWidget(selectMergeWidget);
 }
 
-MergeContactSelectInformationScrollArea::~MergeContactSelectInformationScrollArea()
-{
-}
+MergeContactSelectInformationScrollArea::~MergeContactSelectInformationScrollArea() = default;
 
 void MergeContactSelectInformationScrollArea::setContacts(MergeContacts::ConflictInformations conflictTypes,
                                                           const Akonadi::Item::List &listItem,

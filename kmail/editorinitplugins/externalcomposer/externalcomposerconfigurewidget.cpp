@@ -57,9 +57,7 @@ ExternalComposerConfigureWidget::ExternalComposerConfigureWidget(QWidget *parent
     connect(mExternalEditorCheck, &QAbstractButton::toggled, mEditorRequester, &QWidget::setEnabled);
 }
 
-ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget()
-{
-}
+ExternalComposerConfigureWidget::~ExternalComposerConfigureWidget() = default;
 
 void ExternalComposerConfigureWidget::loadSettings()
 {

@@ -19,9 +19,7 @@ SelectImapLoadFoldersJob::SelectImapLoadFoldersJob(QStandardItemModel *model, QO
 {
 }
 
-SelectImapLoadFoldersJob::~SelectImapLoadFoldersJob()
-{
-}
+SelectImapLoadFoldersJob::~SelectImapLoadFoldersJob() = default;
 
 void SelectImapLoadFoldersJob::start()
 {

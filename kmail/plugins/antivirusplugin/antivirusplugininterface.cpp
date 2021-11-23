@@ -15,9 +15,7 @@ AntiVirusPluginInterface::AntiVirusPluginInterface(QObject *parent)
 {
 }
 
-AntiVirusPluginInterface::~AntiVirusPluginInterface()
-{
-}
+AntiVirusPluginInterface::~AntiVirusPluginInterface() = default;
 
 void AntiVirusPluginInterface::createAction(KActionCollection *ac)
 {

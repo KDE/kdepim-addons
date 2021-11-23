@@ -30,9 +30,7 @@ MarkdownCreateLinkWidget::MarkdownCreateLinkWidget(QWidget *parent)
     mainLayout->addRow(i18n("Link:"), mLink);
 }
 
-MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget()
-{
-}
+MarkdownCreateLinkWidget::~MarkdownCreateLinkWidget() = default;
 
 void MarkdownCreateLinkWidget::slotEnableButton()
 {

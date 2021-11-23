@@ -14,9 +14,7 @@ HeaderStylePluginManagerTest::HeaderStylePluginManagerTest(QObject *parent)
 {
 }
 
-HeaderStylePluginManagerTest::~HeaderStylePluginManagerTest()
-{
-}
+HeaderStylePluginManagerTest::~HeaderStylePluginManagerTest() = default;
 
 void HeaderStylePluginManagerTest::shouldHaveDefaultValue()
 {

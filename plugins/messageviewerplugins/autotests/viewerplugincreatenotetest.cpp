@@ -24,9 +24,7 @@ ViewerPluginCreateNoteTest::ViewerPluginCreateNoteTest(QObject *parent)
     MessageViewer::_k_noteEditStubModel = model;
 }
 
-ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest()
-{
-}
+ViewerPluginCreateNoteTest::~ViewerPluginCreateNoteTest() = default;
 
 void ViewerPluginCreateNoteTest::shouldCreateAction()
 {

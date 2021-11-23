@@ -15,9 +15,7 @@ TriopAbShortUrlEnginePlugin::TriopAbShortUrlEnginePlugin(QObject *parent, const 
 {
 }
 
-TriopAbShortUrlEnginePlugin::~TriopAbShortUrlEnginePlugin()
-{
-}
+TriopAbShortUrlEnginePlugin::~TriopAbShortUrlEnginePlugin() = default;
 
 ShortUrlEngineInterface *TriopAbShortUrlEnginePlugin::createInterface(QObject *parent)
 {

@@ -48,9 +48,7 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     mainLayout->addWidget(mResultGravatar, 0, 2, 4, 1, Qt::AlignCenter);
 }
 
-GravatarUpdateWidget::~GravatarUpdateWidget()
-{
-}
+GravatarUpdateWidget::~GravatarUpdateWidget() = default;
 
 void GravatarUpdateWidget::setEmail(const QString &email)
 {

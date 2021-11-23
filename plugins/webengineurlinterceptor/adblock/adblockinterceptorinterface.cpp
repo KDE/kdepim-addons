@@ -21,9 +21,7 @@ AdblockInterceptorInterface::AdblockInterceptorInterface(QObject *parent)
 {
 }
 
-AdblockInterceptorInterface::~AdblockInterceptorInterface()
-{
-}
+AdblockInterceptorInterface::~AdblockInterceptorInterface() = default;
 
 bool AdblockInterceptorInterface::interceptRequest(QWebEngineUrlRequestInfo &info)
 {

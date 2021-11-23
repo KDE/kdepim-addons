@@ -51,9 +51,7 @@ DKIMGeneralWidget::DKIMGeneralWidget(QWidget *parent)
     mainLayout->addStretch(1);
 }
 
-DKIMGeneralWidget::~DKIMGeneralWidget()
-{
-}
+DKIMGeneralWidget::~DKIMGeneralWidget() = default;
 
 void DKIMGeneralWidget::loadSettings()
 {

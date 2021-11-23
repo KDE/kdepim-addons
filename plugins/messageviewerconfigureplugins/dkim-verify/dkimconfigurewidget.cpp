@@ -20,9 +20,7 @@ DKIMConfigureWidget::DKIMConfigureWidget(QWidget *parent)
     mainLayout->addWidget(mTabWidget);
 }
 
-DKIMConfigureWidget::~DKIMConfigureWidget()
-{
-}
+DKIMConfigureWidget::~DKIMConfigureWidget() = default;
 
 void DKIMConfigureWidget::loadSettings()
 {

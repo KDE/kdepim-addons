@@ -26,9 +26,7 @@ TestDataParser::TestDataParser(const QString &testData, bool uniqueEventData)
     parse();
 }
 
-TestDataParser::~TestDataParser()
-{
-}
+TestDataParser::~TestDataParser() = default;
 
 QStringList TestDataParser::allTestData()
 {

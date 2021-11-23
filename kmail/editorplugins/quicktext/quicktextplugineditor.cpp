@@ -16,9 +16,7 @@ QuickTextPluginEditor::QuickTextPluginEditor(QObject *parent, const QList<QVaria
 {
 }
 
-QuickTextPluginEditor::~QuickTextPluginEditor()
-{
-}
+QuickTextPluginEditor::~QuickTextPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *QuickTextPluginEditor::createInterface(QObject *parent)
 {

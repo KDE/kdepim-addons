@@ -38,9 +38,7 @@ GrammalecteWidget::GrammalecteWidget(QWidget *parent)
     connect(checkSettingsButton, &QPushButton::clicked, this, &GrammalecteWidget::slotGetSettings);
 }
 
-GrammalecteWidget::~GrammalecteWidget()
-{
-}
+GrammalecteWidget::~GrammalecteWidget() = default;
 
 void GrammalecteWidget::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {

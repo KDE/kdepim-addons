@@ -28,9 +28,7 @@ CsvWidget::CsvWidget(QWidget *parent)
     csvWidgetLayout->addWidget(mCvsUrlRequester);
 }
 
-CsvWidget::~CsvWidget()
-{
-}
+CsvWidget::~CsvWidget() = default;
 
 void CsvWidget::setPath(const QUrl &path)
 {

@@ -6,9 +6,7 @@
 
 #include "viewerpluginexternalscriptinfo.h"
 
-ViewerPluginExternalScriptInfo::ViewerPluginExternalScriptInfo()
-{
-}
+ViewerPluginExternalScriptInfo::ViewerPluginExternalScriptInfo() = default;
 
 QString ViewerPluginExternalScriptInfo::name() const
 {

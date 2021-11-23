@@ -91,9 +91,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
     updateButtons();
 }
 
-ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget()
-{
-}
+ViewerPluginExternalConfigureWidget::~ViewerPluginExternalConfigureWidget() = default;
 
 void ViewerPluginExternalConfigureWidget::slotRemoveScript()
 {

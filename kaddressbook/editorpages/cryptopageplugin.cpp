@@ -102,9 +102,7 @@ CryptoPagePlugin::CryptoPagePlugin()
     box->setLayout(boxLayout);
 }
 
-CryptoPagePlugin::~CryptoPagePlugin()
-{
-}
+CryptoPagePlugin::~CryptoPagePlugin() = default;
 
 QString CryptoPagePlugin::title() const
 {

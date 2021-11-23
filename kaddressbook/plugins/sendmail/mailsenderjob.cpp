@@ -28,9 +28,7 @@ MailSenderJob::MailSenderJob(const Akonadi::Item::List &listItem, QObject *paren
 {
 }
 
-MailSenderJob::~MailSenderJob()
-{
-}
+MailSenderJob::~MailSenderJob() = default;
 
 void MailSenderJob::start()
 {

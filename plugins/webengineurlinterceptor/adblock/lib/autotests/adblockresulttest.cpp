@@ -13,9 +13,7 @@ AdBlockResultTest::AdBlockResultTest(QObject *parent)
 {
 }
 
-AdBlockResultTest::~AdBlockResultTest()
-{
-}
+AdBlockResultTest::~AdBlockResultTest() = default;
 
 void AdBlockResultTest::shouldHaveDefaultValue()
 {

@@ -21,9 +21,7 @@ Evolutionv2ImportData::Evolutionv2ImportData(QObject *parent, const QList<QVaria
     mPath = MailImporter::FilterEvolution_v2::defaultSettingsPath();
 }
 
-Evolutionv2ImportData::~Evolutionv2ImportData()
-{
-}
+Evolutionv2ImportData::~Evolutionv2ImportData() = default;
 
 bool Evolutionv2ImportData::foundMailer() const
 {

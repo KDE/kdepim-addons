@@ -18,9 +18,7 @@ SelectImapCreateFolderJob::SelectImapCreateFolderJob(QObject *parent)
 {
 }
 
-SelectImapCreateFolderJob::~SelectImapCreateFolderJob()
-{
-}
+SelectImapCreateFolderJob::~SelectImapCreateFolderJob() = default;
 
 void SelectImapCreateFolderJob::start()
 {

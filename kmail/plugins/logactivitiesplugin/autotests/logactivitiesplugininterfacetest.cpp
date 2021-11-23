@@ -15,9 +15,7 @@ LogActivitiesPluginInterfaceTest::LogActivitiesPluginInterfaceTest(QObject *pare
 {
 }
 
-LogActivitiesPluginInterfaceTest::~LogActivitiesPluginInterfaceTest()
-{
-}
+LogActivitiesPluginInterfaceTest::~LogActivitiesPluginInterfaceTest() = default;
 
 void LogActivitiesPluginInterfaceTest::shouldHaveDefaultValue()
 {

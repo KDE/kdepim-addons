@@ -14,9 +14,7 @@ MergeContactSelectInformationWidgetTest::MergeContactSelectInformationWidgetTest
 {
 }
 
-MergeContactSelectInformationWidgetTest::~MergeContactSelectInformationWidgetTest()
-{
-}
+MergeContactSelectInformationWidgetTest::~MergeContactSelectInformationWidgetTest() = default;
 
 void MergeContactSelectInformationWidgetTest::shouldHaveDefaultValue()
 {

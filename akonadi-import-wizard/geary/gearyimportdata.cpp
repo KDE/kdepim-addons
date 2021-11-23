@@ -22,9 +22,7 @@ GearyImportData::GearyImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::OtherMailerUtil::gearyDefaultPath();
 }
 
-GearyImportData::~GearyImportData()
-{
-}
+GearyImportData::~GearyImportData() = default;
 
 bool GearyImportData::foundMailer() const
 {

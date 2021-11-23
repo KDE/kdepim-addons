@@ -17,9 +17,7 @@ AutomaticAddContactsConfigureTabTest::AutomaticAddContactsConfigureTabTest(QObje
     QStandardPaths::setTestModeEnabled(true);
 }
 
-AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest()
-{
-}
+AutomaticAddContactsConfigureTabTest::~AutomaticAddContactsConfigureTabTest() = default;
 
 void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
 {

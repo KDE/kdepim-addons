@@ -13,9 +13,7 @@ ViewerPluginManagerTest::ViewerPluginManagerTest(QObject *parent)
 {
 }
 
-ViewerPluginManagerTest::~ViewerPluginManagerTest()
-{
-}
+ViewerPluginManagerTest::~ViewerPluginManagerTest() = default;
 
 void ViewerPluginManagerTest::shouldHaveDefaultValue()
 {

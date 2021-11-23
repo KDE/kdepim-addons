@@ -18,9 +18,7 @@ UpdateContactJob::UpdateContactJob(const QString &email, const KContacts::Addres
 {
 }
 
-UpdateContactJob::~UpdateContactJob()
-{
-}
+UpdateContactJob::~UpdateContactJob() = default;
 
 void UpdateContactJob::slotSearchDone(KJob *job)
 {

@@ -22,9 +22,7 @@ OperaImportData::OperaImportData(QObject *parent, const QList<QVariant> &)
     mPath = MailImporter::FilterOpera::defaultSettingsPath();
 }
 
-OperaImportData::~OperaImportData()
-{
-}
+OperaImportData::~OperaImportData() = default;
 
 bool OperaImportData::foundMailer() const
 {

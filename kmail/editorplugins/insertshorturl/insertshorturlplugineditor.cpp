@@ -17,9 +17,7 @@ InsertShorturlPluginEditor::InsertShorturlPluginEditor(QObject *parent, const QL
 {
 }
 
-InsertShorturlPluginEditor::~InsertShorturlPluginEditor()
-{
-}
+InsertShorturlPluginEditor::~InsertShorturlPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *InsertShorturlPluginEditor::createInterface(QObject *parent)
 {

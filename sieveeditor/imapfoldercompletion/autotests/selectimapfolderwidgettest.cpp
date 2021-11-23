@@ -17,9 +17,7 @@ SelectImapFolderWidgetTest::SelectImapFolderWidgetTest(QObject *parent)
 {
 }
 
-SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest()
-{
-}
+SelectImapFolderWidgetTest::~SelectImapFolderWidgetTest() = default;
 
 void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
 {

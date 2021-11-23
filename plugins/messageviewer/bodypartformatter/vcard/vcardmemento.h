@@ -17,9 +17,7 @@ class KJob;
 namespace MessageViewer
 {
 struct VCard {
-    VCard()
-    {
-    }
+    VCard() = default;
 
     VCard(const QString &str, bool b)
         : email(str)

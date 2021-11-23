@@ -14,9 +14,7 @@ AutoCorrectionPluginEditorTest::AutoCorrectionPluginEditorTest(QObject *parent)
 {
 }
 
-AutoCorrectionPluginEditorTest::~AutoCorrectionPluginEditorTest()
-{
-}
+AutoCorrectionPluginEditorTest::~AutoCorrectionPluginEditorTest() = default;
 
 void AutoCorrectionPluginEditorTest::shouldHaveDefaultValue()
 {

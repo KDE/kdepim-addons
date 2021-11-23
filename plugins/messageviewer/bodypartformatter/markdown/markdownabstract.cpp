@@ -6,13 +6,9 @@
 
 #include "markdownabstract.h"
 
-MarkdownAbstract::MarkdownAbstract()
-{
-}
+MarkdownAbstract::MarkdownAbstract() = default;
 
-MarkdownAbstract::~MarkdownAbstract()
-{
-}
+MarkdownAbstract::~MarkdownAbstract() = default;
 
 void MarkdownAbstract::setText(const QString &str)
 {

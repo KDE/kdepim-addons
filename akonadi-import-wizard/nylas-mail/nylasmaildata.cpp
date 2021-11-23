@@ -21,9 +21,7 @@ NylasMailImportData::NylasMailImportData(QObject *parent, const QList<QVariant> 
     mPath = MailImporter::OtherMailerUtil::nylasMailDefaultPath();
 }
 
-NylasMailImportData::~NylasMailImportData()
-{
-}
+NylasMailImportData::~NylasMailImportData() = default;
 
 bool NylasMailImportData::foundMailer() const
 {

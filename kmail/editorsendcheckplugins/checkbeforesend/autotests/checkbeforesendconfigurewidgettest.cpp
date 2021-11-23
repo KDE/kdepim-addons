@@ -17,9 +17,7 @@ CheckBeforeSendConfigureWidgetTest::CheckBeforeSendConfigureWidgetTest(QObject *
     QStandardPaths::setTestModeEnabled(true);
 }
 
-CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest()
-{
-}
+CheckBeforeSendConfigureWidgetTest::~CheckBeforeSendConfigureWidgetTest() = default;
 
 void CheckBeforeSendConfigureWidgetTest::shouldHaveDefaultValue()
 {

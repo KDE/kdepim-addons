@@ -14,9 +14,7 @@ AdblockPluginUrlInterceptorConfigureWidgetTest::AdblockPluginUrlInterceptorConfi
 {
 }
 
-AdblockPluginUrlInterceptorConfigureWidgetTest::~AdblockPluginUrlInterceptorConfigureWidgetTest()
-{
-}
+AdblockPluginUrlInterceptorConfigureWidgetTest::~AdblockPluginUrlInterceptorConfigureWidgetTest() = default;
 
 void AdblockPluginUrlInterceptorConfigureWidgetTest::shouldHaveDefaultValue()
 {

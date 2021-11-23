@@ -9,13 +9,9 @@
 
 #include <QJsonArray>
 
-GrammalecteGrammarError::GrammalecteGrammarError()
-{
-}
+GrammalecteGrammarError::GrammalecteGrammarError() = default;
 
-GrammalecteGrammarError::~GrammalecteGrammarError()
-{
-}
+GrammalecteGrammarError::~GrammalecteGrammarError() = default;
 
 QStringList GrammalecteGrammarError::parseSuggestion(const QJsonObject &obj)
 {

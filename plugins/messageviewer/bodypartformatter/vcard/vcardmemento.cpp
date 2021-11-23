@@ -20,9 +20,7 @@ VcardMemento::VcardMemento(const QStringList &emails)
     checkEmail();
 }
 
-VcardMemento::~VcardMemento()
-{
-}
+VcardMemento::~VcardMemento() = default;
 
 void VcardMemento::checkEmail()
 {

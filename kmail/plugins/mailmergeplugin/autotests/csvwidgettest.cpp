@@ -14,9 +14,7 @@ CsvWidgetTest::CsvWidgetTest(QObject *parent)
 {
 }
 
-CsvWidgetTest::~CsvWidgetTest()
-{
-}
+CsvWidgetTest::~CsvWidgetTest() = default;
 
 void CsvWidgetTest::shouldHaveDefaultValue()
 {

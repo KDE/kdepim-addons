@@ -38,9 +38,7 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
     mainLayout->addStretch();
 }
 
-MailMergeDialog::~MailMergeDialog()
-{
-}
+MailMergeDialog::~MailMergeDialog() = default;
 
 void MailMergeDialog::slotPreview()
 {

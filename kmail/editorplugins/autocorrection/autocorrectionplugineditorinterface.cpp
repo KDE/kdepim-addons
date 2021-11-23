@@ -16,9 +16,7 @@ AutoCorrectionPluginEditorInterface::AutoCorrectionPluginEditorInterface(QObject
 {
 }
 
-AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface()
-{
-}
+AutoCorrectionPluginEditorInterface::~AutoCorrectionPluginEditorInterface() = default;
 
 void AutoCorrectionPluginEditorInterface::createAction(KActionCollection *ac)
 {

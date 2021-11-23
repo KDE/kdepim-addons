@@ -18,9 +18,7 @@ ZoomTextPluginEditorInterface::ZoomTextPluginEditorInterface(QObject *parent)
 {
 }
 
-ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface()
-{
-}
+ZoomTextPluginEditorInterface::~ZoomTextPluginEditorInterface() = default;
 
 void ZoomTextPluginEditorInterface::createAction(KActionCollection *ac)
 {

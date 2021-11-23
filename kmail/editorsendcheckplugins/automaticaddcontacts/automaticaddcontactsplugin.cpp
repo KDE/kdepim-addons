@@ -17,9 +17,7 @@ AutomaticAddContactsPlugin::AutomaticAddContactsPlugin(QObject *parent, const QL
 {
 }
 
-AutomaticAddContactsPlugin::~AutomaticAddContactsPlugin()
-{
-}
+AutomaticAddContactsPlugin::~AutomaticAddContactsPlugin() = default;
 
 MessageComposer::PluginEditorCheckBeforeSendInterface *AutomaticAddContactsPlugin::createInterface(QObject *parent)
 {

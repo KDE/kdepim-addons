@@ -87,9 +87,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     connect(mMergeButton, &QPushButton::clicked, this, &MergeContactWidget::slotMergeContacts);
 }
 
-MergeContactWidget::~MergeContactWidget()
-{
-}
+MergeContactWidget::~MergeContactWidget() = default;
 
 void MergeContactWidget::setContacts(const Akonadi::Item::List &items)
 {

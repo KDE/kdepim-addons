@@ -15,9 +15,7 @@ InsertSpecialCharacterPluginEditor::InsertSpecialCharacterPluginEditor(QObject *
 {
 }
 
-InsertSpecialCharacterPluginEditor::~InsertSpecialCharacterPluginEditor()
-{
-}
+InsertSpecialCharacterPluginEditor::~InsertSpecialCharacterPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *InsertSpecialCharacterPluginEditor::createInterface(QObject *parent)
 {

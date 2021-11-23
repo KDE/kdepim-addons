@@ -18,9 +18,7 @@ SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent
 {
 }
 
-SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface()
-{
-}
+SearchDuplicatesPluginInterface::~SearchDuplicatesPluginInterface() = default;
 
 void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
 {

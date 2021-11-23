@@ -38,9 +38,7 @@ SelectAttachmentDialog::SelectAttachmentDialog(QWidget *parent)
     mainLayout->addWidget(buttonBox);
 }
 
-SelectAttachmentDialog::~SelectAttachmentDialog()
-{
-}
+SelectAttachmentDialog::~SelectAttachmentDialog() = default;
 
 void SelectAttachmentDialog::setAttachmentPath(const QUrl &path)
 {

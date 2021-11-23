@@ -21,9 +21,7 @@ LanguageToolUpdateComboBox::LanguageToolUpdateComboBox(QObject *parent)
 {
 }
 
-LanguageToolUpdateComboBox::~LanguageToolUpdateComboBox()
-{
-}
+LanguageToolUpdateComboBox::~LanguageToolUpdateComboBox() = default;
 
 void LanguageToolUpdateComboBox::checkListOfLanguagesFromSpecificPath(const QString &url)
 {

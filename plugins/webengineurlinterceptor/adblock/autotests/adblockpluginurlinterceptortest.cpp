@@ -14,9 +14,7 @@ AdblockPluginUrlInterceptorTest::AdblockPluginUrlInterceptorTest(QObject *parent
 {
 }
 
-AdblockPluginUrlInterceptorTest::~AdblockPluginUrlInterceptorTest()
-{
-}
+AdblockPluginUrlInterceptorTest::~AdblockPluginUrlInterceptorTest() = default;
 
 void AdblockPluginUrlInterceptorTest::shouldHaveDefaultValue()
 {

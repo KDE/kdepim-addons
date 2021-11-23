@@ -11,13 +11,9 @@
 #include <KConfigGroup>
 #include <QDir>
 
-ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob()
-{
-}
+ViewerPluginExternalScriptsLoadJob::ViewerPluginExternalScriptsLoadJob() = default;
 
-ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob()
-{
-}
+ViewerPluginExternalScriptsLoadJob::~ViewerPluginExternalScriptsLoadJob() = default;
 
 void ViewerPluginExternalScriptsLoadJob::start()
 {

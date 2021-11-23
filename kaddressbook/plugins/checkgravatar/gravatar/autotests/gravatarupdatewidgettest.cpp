@@ -15,9 +15,7 @@ GravatarUpdateWidgetTest::GravatarUpdateWidgetTest(QObject *parent)
 {
 }
 
-GravatarUpdateWidgetTest::~GravatarUpdateWidgetTest()
-{
-}
+GravatarUpdateWidgetTest::~GravatarUpdateWidgetTest() = default;
 
 void GravatarUpdateWidgetTest::shouldHaveDefaultValue()
 {

@@ -35,9 +35,7 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     fillRules();
 }
 
-ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget()
-{
-}
+ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget() = default;
 
 void ConfirmBeforeDeletingWidget::fillRules()
 {

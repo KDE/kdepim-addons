@@ -24,9 +24,7 @@ EventModel::EventModel(QObject *parent)
     Akonadi::AttributeFactory::registerAttribute<Akonadi::CollectionColorAttribute>();
 }
 
-EventModel::~EventModel()
-{
-}
+EventModel::~EventModel() = default;
 
 void EventModel::createMonitor()
 {

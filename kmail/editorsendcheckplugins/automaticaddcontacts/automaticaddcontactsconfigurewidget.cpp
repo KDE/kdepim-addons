@@ -25,9 +25,7 @@ AutomaticAddContactsConfigureWidget::AutomaticAddContactsConfigureWidget(QWidget
     connect(mConfigureTab, &AutomaticAddContactsConfigureTab::configureChanged, this, &AutomaticAddContactsConfigureWidget::configureChanged);
 }
 
-AutomaticAddContactsConfigureWidget::~AutomaticAddContactsConfigureWidget()
-{
-}
+AutomaticAddContactsConfigureWidget::~AutomaticAddContactsConfigureWidget() = default;
 
 void AutomaticAddContactsConfigureWidget::loadSettings()
 {

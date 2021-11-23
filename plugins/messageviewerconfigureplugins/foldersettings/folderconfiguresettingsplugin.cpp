@@ -15,9 +15,7 @@ FolderConfigureSettingsPlugin::FolderConfigureSettingsPlugin(QObject *parent, co
 {
 }
 
-FolderConfigureSettingsPlugin::~FolderConfigureSettingsPlugin()
-{
-}
+FolderConfigureSettingsPlugin::~FolderConfigureSettingsPlugin() = default;
 
 void FolderConfigureSettingsPlugin::showConfigureDialog(QWidget *parent)
 {

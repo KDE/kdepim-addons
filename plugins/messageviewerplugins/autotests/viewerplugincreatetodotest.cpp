@@ -24,9 +24,7 @@ ViewerPluginCreateTodoTest::ViewerPluginCreateTodoTest(QObject *parent)
     MessageViewer::_k_todoEditStubModel = model;
 }
 
-ViewerPluginCreateTodoTest::~ViewerPluginCreateTodoTest()
-{
-}
+ViewerPluginCreateTodoTest::~ViewerPluginCreateTodoTest() = default;
 
 void ViewerPluginCreateTodoTest::shouldCreateAction()
 {

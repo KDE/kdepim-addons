@@ -27,9 +27,7 @@ GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     generalPaletteChanged();
 }
 
-GrammarResultTextEdit::~GrammarResultTextEdit()
-{
-}
+GrammarResultTextEdit::~GrammarResultTextEdit() = default;
 
 void GrammarResultTextEdit::paintEvent(QPaintEvent *event)
 {

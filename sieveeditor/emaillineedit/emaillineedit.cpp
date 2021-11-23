@@ -44,9 +44,7 @@ EmailLineEdit::EmailLineEdit(QWidget *parent, const QList<QVariant> &)
     verifyAddress();
 }
 
-EmailLineEdit::~EmailLineEdit()
-{
-}
+EmailLineEdit::~EmailLineEdit() = default;
 
 void EmailLineEdit::akonadiStateChanged(Akonadi::ServerManager::State state)
 {

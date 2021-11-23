@@ -67,9 +67,7 @@ MailMergeWidget::MailMergeWidget(QWidget *parent)
     mainLayout->addStretch();
 }
 
-MailMergeWidget::~MailMergeWidget()
-{
-}
+MailMergeWidget::~MailMergeWidget() = default;
 
 void MailMergeWidget::slotSourceChanged(int index)
 {

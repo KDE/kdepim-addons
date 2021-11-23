@@ -12,9 +12,7 @@ MergeContactWidgetList::MergeContactWidgetList(QWidget *parent)
 {
 }
 
-MergeContactWidgetList::~MergeContactWidgetList()
-{
-}
+MergeContactWidgetList::~MergeContactWidgetList() = default;
 
 QString MergeContactWidgetList::itemName(const KContacts::Addressee &address) const
 {
@@ -60,7 +58,7 @@ Akonadi::Item MergeContactWidgetList::currentAkonadiItem() const
     if (curr) {
         return (static_cast<MergeContactWidgetListItem *>(curr))->item();
     }
-    return Akonadi::Item();
+    return {};
 }
 
 MergeContactWidgetListItem::MergeContactWidgetListItem(const Akonadi::Item &item, QListWidget *parent)

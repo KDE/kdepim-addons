@@ -22,9 +22,7 @@ QuickTextConfigureWidget::QuickTextConfigureWidget(QWidget *parent)
     mainLayout->addWidget(mSnippetWidget);
 }
 
-QuickTextConfigureWidget::~QuickTextConfigureWidget()
-{
-}
+QuickTextConfigureWidget::~QuickTextConfigureWidget() = default;
 
 void QuickTextConfigureWidget::save()
 {

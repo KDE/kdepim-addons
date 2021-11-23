@@ -6,13 +6,9 @@
 
 #include "confirmaddresscheckjob.h"
 
-ConfirmAddressCheckJob::ConfirmAddressCheckJob()
-{
-}
+ConfirmAddressCheckJob::ConfirmAddressCheckJob() = default;
 
-ConfirmAddressCheckJob::~ConfirmAddressCheckJob()
-{
-}
+ConfirmAddressCheckJob::~ConfirmAddressCheckJob() = default;
 
 void ConfirmAddressCheckJob::start()
 {

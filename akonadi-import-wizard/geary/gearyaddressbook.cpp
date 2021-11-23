@@ -10,9 +10,7 @@ GearyAddressBook::GearyAddressBook(const QString &filename)
 {
 }
 
-GearyAddressBook::~GearyAddressBook()
-{
-}
+GearyAddressBook::~GearyAddressBook() = default;
 
 void GearyAddressBook::importAddressBook()
 {

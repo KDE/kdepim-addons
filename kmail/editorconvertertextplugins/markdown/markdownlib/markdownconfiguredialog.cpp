@@ -17,9 +17,7 @@ MarkdownConfigureDialog::MarkdownConfigureDialog(QWidget *parent)
     initLayout();
 }
 
-MarkdownConfigureDialog::~MarkdownConfigureDialog()
-{
-}
+MarkdownConfigureDialog::~MarkdownConfigureDialog() = default;
 
 QWidget *MarkdownConfigureDialog::createLayout()
 {

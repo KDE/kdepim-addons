@@ -21,9 +21,7 @@ FancyHeaderStylePluginTest::FancyHeaderStylePluginTest(QObject *parent)
 {
 }
 
-FancyHeaderStylePluginTest::~FancyHeaderStylePluginTest()
-{
-}
+FancyHeaderStylePluginTest::~FancyHeaderStylePluginTest() = default;
 
 void FancyHeaderStylePluginTest::shouldHaveDefaultValue()
 {

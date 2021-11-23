@@ -16,9 +16,7 @@ PgpKeyMemento::PgpKeyMemento()
 {
 }
 
-PgpKeyMemento::~PgpKeyMemento()
-{
-}
+PgpKeyMemento::~PgpKeyMemento() = default;
 
 void PgpKeyMemento::detach()
 {

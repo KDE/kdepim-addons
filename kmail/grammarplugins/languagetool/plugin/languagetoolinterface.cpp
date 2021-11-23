@@ -35,9 +35,7 @@ LanguageToolInterface::LanguageToolInterface(KActionCollection *ac, QWidget *par
     createAction(ac);
 }
 
-LanguageToolInterface::~LanguageToolInterface()
-{
-}
+LanguageToolInterface::~LanguageToolInterface() = default;
 
 void LanguageToolInterface::slotReplaceText(const MessageComposer::PluginGrammarAction &act)
 {

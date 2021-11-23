@@ -17,9 +17,7 @@ LongHeaderStylePluginTest::LongHeaderStylePluginTest(QObject *parent)
 {
 }
 
-LongHeaderStylePluginTest::~LongHeaderStylePluginTest()
-{
-}
+LongHeaderStylePluginTest::~LongHeaderStylePluginTest() = default;
 
 void LongHeaderStylePluginTest::shouldHaveDefaultValue()
 {

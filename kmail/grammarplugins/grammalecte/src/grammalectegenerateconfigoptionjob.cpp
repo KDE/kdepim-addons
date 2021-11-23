@@ -14,9 +14,7 @@ GrammalecteGenerateConfigOptionJob::GrammalecteGenerateConfigOptionJob(QObject *
 {
 }
 
-GrammalecteGenerateConfigOptionJob::~GrammalecteGenerateConfigOptionJob()
-{
-}
+GrammalecteGenerateConfigOptionJob::~GrammalecteGenerateConfigOptionJob() = default;
 
 //^([a-zA-Z0-9]+):\s*(True|False)\s*(.*)$
 void GrammalecteGenerateConfigOptionJob::start()

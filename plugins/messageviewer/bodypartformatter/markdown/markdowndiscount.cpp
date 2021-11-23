@@ -10,13 +10,9 @@ extern "C" {
 #include <mkdio.h>
 }
 
-MarkdownDiscount::MarkdownDiscount()
-{
-}
+MarkdownDiscount::MarkdownDiscount() = default;
 
-MarkdownDiscount::~MarkdownDiscount()
-{
-}
+MarkdownDiscount::~MarkdownDiscount() = default;
 
 QString MarkdownDiscount::toHtml() const
 {

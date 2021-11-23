@@ -15,9 +15,7 @@ LogActivitiesPluginInterface::LogActivitiesPluginInterface(QObject *parent)
 {
 }
 
-LogActivitiesPluginInterface::~LogActivitiesPluginInterface()
-{
-}
+LogActivitiesPluginInterface::~LogActivitiesPluginInterface() = default;
 
 void LogActivitiesPluginInterface::createAction(KActionCollection *ac)
 {

@@ -27,9 +27,7 @@ ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidg
     mainLayout->addWidget(mCollectionExpiryWidget);
 }
 
-ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget()
-{
-}
+ExpireAccountTrashFolderConfigWidget::~ExpireAccountTrashFolderConfigWidget() = default;
 
 void ExpireAccountTrashFolderConfigWidget::save(bool saveSettings, bool expireNow)
 {

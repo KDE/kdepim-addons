@@ -16,9 +16,7 @@ BaseEventDataVisitor::BaseEventDataVisitor(PimDataSource *dataSource, QDate star
 {
 }
 
-BaseEventDataVisitor::~BaseEventDataVisitor()
-{
-}
+BaseEventDataVisitor::~BaseEventDataVisitor() = default;
 
 bool BaseEventDataVisitor::act(const KCalendarCore::Incidence::Ptr &incidence)
 {
@@ -68,7 +66,7 @@ QString BaseEventDataVisitor::generateUid(const KCalendarCore::Incidence::Ptr &i
     const qint64 itemId = mDataSource->akonadiIdForIncidence(incidence);
     if (itemId <= 0) {
         // Can this happen? What do we do now?!
-        return QString();
+        return {};
     }
 
     if (recurrenceId.isValid()) {
@@ -114,9 +112,7 @@ EventDataVisitor::EventDataVisitor(PimDataSource *dataSource, const QDate &start
 {
 }
 
-EventDataVisitor::~EventDataVisitor()
-{
-}
+EventDataVisitor::~EventDataVisitor() = default;
 
 const QMultiHash<QDate, CalendarEvents::EventData> &EventDataVisitor::results() const
 {

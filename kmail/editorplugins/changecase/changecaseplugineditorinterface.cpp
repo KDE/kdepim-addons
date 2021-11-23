@@ -18,9 +18,7 @@ ChangeCasePluginEditorInterface::ChangeCasePluginEditorInterface(QObject *parent
     setNeedSelectedText(true);
 }
 
-ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface()
-{
-}
+ChangeCasePluginEditorInterface::~ChangeCasePluginEditorInterface() = default;
 
 void ChangeCasePluginEditorInterface::createAction(KActionCollection *ac)
 {

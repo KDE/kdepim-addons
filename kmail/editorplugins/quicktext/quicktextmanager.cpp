@@ -67,7 +67,7 @@ bool QuicktextManager::snippetGroupSelected() const
 QString QuicktextManager::selectedName() const
 {
     if (mSelectionModel->selectedIndexes().isEmpty()) {
-        return QString();
+        return {};
     }
 
     return mSelectionModel->selectedIndexes().first().data(MailCommon::SnippetsModel::NameRole).toString();

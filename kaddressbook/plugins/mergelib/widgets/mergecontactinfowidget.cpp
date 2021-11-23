@@ -34,9 +34,7 @@ MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     mStackWidget->setCurrentWidget(mNoContactSelected);
 }
 
-MergeContactInfoWidget::~MergeContactInfoWidget()
-{
-}
+MergeContactInfoWidget::~MergeContactInfoWidget() = default;
 
 void MergeContactInfoWidget::setContact(const Akonadi::Item &item)
 {

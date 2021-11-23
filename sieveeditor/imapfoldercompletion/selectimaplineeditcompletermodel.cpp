@@ -20,9 +20,7 @@ SelectImapLineEditCompleterModel::SelectImapLineEditCompleterModel(const KSieveU
     mFlatProxy->setSourceModel(SelectImapFolderModel::self()->folderModel(account, modelIsInitalized));
 }
 
-SelectImapLineEditCompleterModel::~SelectImapLineEditCompleterModel()
-{
-}
+SelectImapLineEditCompleterModel::~SelectImapLineEditCompleterModel() = default;
 
 QAbstractProxyModel *SelectImapLineEditCompleterModel::completerModel() const
 {

@@ -15,9 +15,7 @@ class BriefHeaderStrategy : public HeaderStrategy
 {
 public:
     BriefHeaderStrategy();
-    ~BriefHeaderStrategy() override
-    {
-    }
+    ~BriefHeaderStrategy() override = default;
 
 public:
     const char *name() const override

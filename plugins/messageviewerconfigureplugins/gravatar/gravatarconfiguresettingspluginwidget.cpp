@@ -35,9 +35,7 @@ GravatarConfigureSettingsPluginWidget::GravatarConfigureSettingsPluginWidget(QWi
     connect(mEnableGravatarSupport, &QCheckBox::clicked, mGravatarConfigWidget, &Gravatar::GravatarConfigureSettingsWidget::setEnabled);
 }
 
-GravatarConfigureSettingsPluginWidget::~GravatarConfigureSettingsPluginWidget()
-{
-}
+GravatarConfigureSettingsPluginWidget::~GravatarConfigureSettingsPluginWidget() = default;
 
 void GravatarConfigureSettingsPluginWidget::loadSettings()
 {

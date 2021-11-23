@@ -13,9 +13,7 @@ DoNotTrackPluginUrlInterceptorTest::DoNotTrackPluginUrlInterceptorTest(QObject *
 {
 }
 
-DoNotTrackPluginUrlInterceptorTest::~DoNotTrackPluginUrlInterceptorTest()
-{
-}
+DoNotTrackPluginUrlInterceptorTest::~DoNotTrackPluginUrlInterceptorTest() = default;
 
 void DoNotTrackPluginUrlInterceptorTest::shouldHaveDefaultValue()
 {

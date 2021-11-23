@@ -14,9 +14,7 @@ SelectImapFolderTreeView::SelectImapFolderTreeView(QWidget *parent)
 {
 }
 
-SelectImapFolderTreeView::~SelectImapFolderTreeView()
-{
-}
+SelectImapFolderTreeView::~SelectImapFolderTreeView() = default;
 
 void SelectImapFolderTreeView::generalPaletteChanged()
 {

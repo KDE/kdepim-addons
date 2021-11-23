@@ -15,9 +15,7 @@ InsertEmailPluginEditor::InsertEmailPluginEditor(QObject *parent, const QList<QV
 {
 }
 
-InsertEmailPluginEditor::~InsertEmailPluginEditor()
-{
-}
+InsertEmailPluginEditor::~InsertEmailPluginEditor() = default;
 
 MessageComposer::PluginEditorInterface *InsertEmailPluginEditor::createInterface(QObject *parent)
 {

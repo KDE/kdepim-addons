@@ -18,9 +18,7 @@ SelectImapFolderDialogTest::SelectImapFolderDialogTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-SelectImapFolderDialogTest::~SelectImapFolderDialogTest()
-{
-}
+SelectImapFolderDialogTest::~SelectImapFolderDialogTest() = default;
 
 void SelectImapFolderDialogTest::shouldHaveDefaultValue()
 {

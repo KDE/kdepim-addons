@@ -15,9 +15,7 @@ ConfirmAddressPluginTest::ConfirmAddressPluginTest(QObject *parent)
     QStandardPaths::setTestModeEnabled(true);
 }
 
-ConfirmAddressPluginTest::~ConfirmAddressPluginTest()
-{
-}
+ConfirmAddressPluginTest::~ConfirmAddressPluginTest() = default;
 
 void ConfirmAddressPluginTest::shouldHaveDefaultValue()
 {

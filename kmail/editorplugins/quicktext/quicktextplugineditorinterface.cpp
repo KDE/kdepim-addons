@@ -23,9 +23,7 @@ QuickTextPluginEditorInterface::QuickTextPluginEditorInterface(QObject *parent)
     updateSnippetsInfo();
 }
 
-QuickTextPluginEditorInterface::~QuickTextPluginEditorInterface()
-{
-}
+QuickTextPluginEditorInterface::~QuickTextPluginEditorInterface() = default;
 
 void QuickTextPluginEditorInterface::updateSnippetsInfo()
 {

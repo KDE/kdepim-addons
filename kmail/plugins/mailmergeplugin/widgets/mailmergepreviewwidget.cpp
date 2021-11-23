@@ -11,6 +11,4 @@ MailMergePreviewWidget::MailMergePreviewWidget(QWidget *parent)
 {
 }
 
-MailMergePreviewWidget::~MailMergePreviewWidget()
-{
-}
+MailMergePreviewWidget::~MailMergePreviewWidget() = default;

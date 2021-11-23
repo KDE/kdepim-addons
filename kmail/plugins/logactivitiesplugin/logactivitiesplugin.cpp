@@ -15,9 +15,7 @@ LogActivitiesPlugin::LogActivitiesPlugin(QObject *parent, const QList<QVariant> 
 {
 }
 
-LogActivitiesPlugin::~LogActivitiesPlugin()
-{
-}
+LogActivitiesPlugin::~LogActivitiesPlugin() = default;
 
 PimCommon::GenericPluginInterface *LogActivitiesPlugin::createInterface(QObject *parent)
 {

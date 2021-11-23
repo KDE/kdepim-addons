@@ -9,13 +9,9 @@
 #include <QJsonArray>
 #include <QJsonObject>
 
-LanguageToolListOfLanguagesParser::LanguageToolListOfLanguagesParser()
-{
-}
+LanguageToolListOfLanguagesParser::LanguageToolListOfLanguagesParser() = default;
 
-LanguageToolListOfLanguagesParser::~LanguageToolListOfLanguagesParser()
-{
-}
+LanguageToolListOfLanguagesParser::~LanguageToolListOfLanguagesParser() = default;
 
 QVector<LanguageInfo> LanguageToolListOfLanguagesParser::parseResult(const QJsonArray &array) const
 {

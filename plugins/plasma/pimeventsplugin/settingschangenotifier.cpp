@@ -49,9 +49,7 @@ SettingsChangeNotifier::SettingsChangeNotifier(QObject *parent)
     qCDebug(PIMEVENTSPLUGIN_LOG) << this << "created";
 }
 
-SettingsChangeNotifier::~SettingsChangeNotifier()
-{
-}
+SettingsChangeNotifier::~SettingsChangeNotifier() = default;
 
 void SettingsChangeNotifier::notifySettingsChanged()
 {
