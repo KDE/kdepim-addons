@@ -106,21 +106,21 @@ void SelectImapLoadFoldersJob::slotMailBoxesReceived(const QList<KIMAP::MailBoxD
                 QStandardItem *parentItem = mItemsMap[parentPath];
 
                 auto item = new QStandardItem(pathPart);
-                Qt::ItemFlags flags = Qt::ItemIsEnabled;
+                Qt::ItemFlags itemflags = Qt::ItemIsEnabled;
                 if (isSelectable) {
-                    flags |= Qt::ItemIsSelectable;
+                    itemflags |= Qt::ItemIsSelectable;
                 }
-                item->setFlags(flags);
+                item->setFlags(itemflags);
                 item->setData(currentPath.mid(1), PathRole);
                 parentItem->appendRow(item);
                 mItemsMap[currentPath] = item;
             } else {
                 auto item = new QStandardItem(pathPart);
-                Qt::ItemFlags flags = Qt::ItemIsEnabled;
+                Qt::ItemFlags itemflags = Qt::ItemIsEnabled;
                 if (isSelectable) {
-                    flags |= Qt::ItemIsSelectable;
+                    itemflags |= Qt::ItemIsSelectable;
                 }
-                item->setFlags(flags);
+                item->setFlags(itemflags);
                 item->setData(currentPath.mid(1), PathRole);
                 mModel->appendRow(item);
                 mItemsMap[currentPath] = item;
