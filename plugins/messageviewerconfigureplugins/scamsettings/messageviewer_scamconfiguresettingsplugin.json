@@ -16,6 +16,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att anpassa bedrägeri-inställningar.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати параметри скаму.",
         "Description[x-test]": "xxThis plugin allows you to configure scam settings.xx",
+        "Description[zh_CN]": "此插件能让您调整垃圾邮件设置。",
         "Name": "Scam Settings",
         "Name[ca@valencia]": "Configuració de la suplantació",
         "Name[ca]": "Configuració de la suplantació",
@@ -32,6 +33,7 @@
         "Name[sv]": "Bedrägeri-inställningar",
         "Name[uk]": "Параметри скаму",
         "Name[x-test]": "xxScam Settingsxx",
+        "Name[zh_CN]": "垃圾邮件设置",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"

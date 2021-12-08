@@ -54,6 +54,7 @@
         "Name[sv]": "Öppna externt brevfönster",
         "Name[uk]": "Відкрити зовнішній редактор",
         "Name[x-test]": "xxOpen External Composerxx",
+        "Name[zh_CN]": "打开外部编辑器",
         "Version": "1.0"
     },
     "X-KDE-KMailEditor-Order": "2"
