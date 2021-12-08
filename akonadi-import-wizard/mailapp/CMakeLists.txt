@@ -1,10 +1,10 @@
-set(mailappimporter_SRCS
-   mailappimportdata.cpp  
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
+kcoreaddons_add_plugin(mailappimporterplugin INSTALL_NAMESPACE importwizard)
+target_sources(mailappimporterplugin PRIVATE
+   mailappimportdata.cpp
 )
-
-kcoreaddons_add_plugin(mailappimporterplugin SOURCES
-    ${mailappimporter_SRCS} INSTALL_NAMESPACE importwizard)
-
 
 target_link_libraries(mailappimporterplugin
   KPim::ImportWizard

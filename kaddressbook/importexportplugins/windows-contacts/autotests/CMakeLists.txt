@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
 ecm_qt_declare_logging_category(kaddressbook_importexport_windowscontact_debugfile_autotest_SRCS HEADER importexportwindowscontactplugin_debug.h IDENTIFIER IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG CATEGORY_NAME org.kde.pim.importexportwindowscontactplugin
     DESCRIPTION "kdepim-addons (Import/Export Windows Contact plugin)"
     EXPORT KDEPIMADDONS

@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
 macro(add_plasma_pimeventsplugin_test _source _additional)
     set(_test ${_source}
               ${_additional}

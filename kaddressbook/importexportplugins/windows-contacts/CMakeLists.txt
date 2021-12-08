@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
 kcoreaddons_add_plugin(kaddressbook_importexportwindowscontactplugin INSTALL_NAMESPACE kaddressbook/importexportplugin)
 
 ecm_qt_declare_logging_category(kaddressbook_importexportwindowscontactplugin HEADER importexportwindowscontactplugin_debug.h IDENTIFIER IMPORTEXPORTWINDOWSCONTACTPLUGIN_LOG CATEGORY_NAME org.kde.pim.importexportwindowscontactplugin

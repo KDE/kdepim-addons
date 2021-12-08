@@ -1,3 +1,6 @@
+# SPDX-FileCopyrightText: none
+# SPDX-License-Identifier: BSD-3-Clause
+
 kcoreaddons_add_plugin(kaddressbook_importexportcsvplugin INSTALL_NAMESPACE kaddressbook/importexportplugin)
 target_sources(kaddressbook_importexportcsvplugin PRIVATE
     csvimportexportplugin.cpp
