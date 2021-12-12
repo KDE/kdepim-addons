@@ -39,6 +39,7 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingCreateRuleWidget(QWi
     connect(mPatternLineEdit, &QLineEdit::textChanged, this, [this](const QString &str) {
         Q_EMIT updateOkButton(!str.trimmed().isEmpty());
     });
+    connect(mRuleTypeComboBox, qOverload<int>(&QComboBox::currentIndexChanged), this, &ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged);
 }
 
 ConfirmBeforeDeletingCreateRuleWidget::~ConfirmBeforeDeletingCreateRuleWidget() = default;
@@ -47,6 +48,13 @@ ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo ConfirmBeforeDe
 {
     const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(mPatternLineEdit->text(), mRuleTypeComboBox->currentData().toString());
     return info;
+}
+
+void ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged(int index)
+{
+    const QString str = mRuleTypeComboBox->itemData(index).toString();
+    const bool isAStatus = (str == QStringLiteral("unread") || str == QStringLiteral("important"));
+    mPatternLineEdit->setEnabled(!isAStatus);
 }
 
 void ConfirmBeforeDeletingCreateRuleWidget::setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)

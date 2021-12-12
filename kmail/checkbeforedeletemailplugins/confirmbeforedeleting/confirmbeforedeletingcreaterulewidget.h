@@ -36,6 +36,7 @@ Q_SIGNALS:
     void updateOkButton(bool enabled);
 
 private:
+    void slotRuleTypeChanged(int index);
     void fillComboBox();
     QLineEdit *const mPatternLineEdit;
     QComboBox *const mRuleTypeComboBox;
