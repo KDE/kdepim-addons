@@ -62,6 +62,8 @@ void ConfirmBeforeDeletingCreateRuleWidget::fillComboBox()
     mRuleTypeComboBox->addItem(i18n("To"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::To));
     mRuleTypeComboBox->addItem(i18n("Cc"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Cc));
     mRuleTypeComboBox->addItem(i18n("Bcc"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Bcc));
+    mRuleTypeComboBox->addItem(i18n("Unread"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Unread));
+    mRuleTypeComboBox->addItem(i18n("Important"), ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::Important));
 }
 
 bool ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo::operator==(const ConfirmBeforeDeletingInfo &other) const

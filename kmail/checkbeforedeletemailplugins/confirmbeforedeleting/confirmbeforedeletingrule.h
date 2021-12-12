@@ -22,10 +22,8 @@ public:
         To,
         Cc,
         Bcc,
-#if 0
         Unread,
         Important,
-#endif
     };
     Q_ENUM(RuleType)
 

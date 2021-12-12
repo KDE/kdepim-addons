@@ -64,6 +64,10 @@ ConfirmBeforeDeletingRule::RuleType ConfirmBeforeDeletingRule::stringToRuleType(
         return Cc;
     } else if (str == QLatin1String("bcc")) {
         return Bcc;
+    } else if (str == QLatin1String("unread")) {
+        return Unread;
+    } else if (str == QLatin1String("important")) {
+        return Important;
     }
     return Unknown;
 }
@@ -93,6 +97,12 @@ QString ConfirmBeforeDeletingRule::ruleTypeToString(ConfirmBeforeDeletingRule::R
         break;
     case Bcc:
         tmp = QStringLiteral("bcc");
+        break;
+    case Unread:
+        tmp = QStringLiteral("unread");
+        break;
+    case Important:
+        tmp = QStringLiteral("important");
         break;
     }
     return tmp;
