@@ -162,6 +162,15 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             }
             break;
         }
+        case Unread: {
+            // TODO
+            break;
+        }
+        case Important: {
+            // TODO
+            break;
+        }
+
         case Unknown:
             qCWarning(KMAIL_CONFIRMBEFOREDELETING_PLUGIN_LOG) << "Invalid rules!";
             break;
