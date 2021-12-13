@@ -6,7 +6,7 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "confirmbeforedeletingplugin_debug.h"
-
+#include <Akonadi/KMime/MessageStatus>
 #include <KLocalizedString>
 
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule() = default;
@@ -163,11 +163,21 @@ bool ConfirmBeforeDeletingRule::deletingNeedToConfirm(const Akonadi::Item &item,
             break;
         }
         case Unread: {
-            // TODO
+            Akonadi::MessageStatus status;
+            status.setStatusFromFlags(item.flags());
+            if (!status.isRead()) {
+                needToConfirm = true;
+                generateConfirmMessageInfoFromStatus(msg, checkFoundInfo, i18n("Unread"));
+            }
             break;
         }
         case Important: {
-            // TODO
+            Akonadi::MessageStatus status;
+            status.setStatusFromFlags(item.flags());
+            if (status.isImportant()) {
+                needToConfirm = true;
+                generateConfirmMessageInfoFromStatus(msg, checkFoundInfo, i18n("Important"));
+            }
             break;
         }
 
@@ -187,6 +197,15 @@ void ConfirmBeforeDeletingRule::generateConfirmMessageInfo(const KMime::Message:
         subjectStr = subject->asUnicodeString();
     }
     checkFoundInfo = i18n("The message with subject \'%2\' contains \'%1\'", pattern(), subjectStr);
+}
+
+void ConfirmBeforeDeletingRule::generateConfirmMessageInfoFromStatus(const KMime::Message::Ptr &msg, QString &checkFoundInfo, const QString &statusStr) const
+{
+    QString subjectStr;
+    if (auto subject = msg->subject(false)) {
+        subjectStr = subject->asUnicodeString();
+    }
+    checkFoundInfo = i18n("The message with subject \'%1\' is ", subjectStr, statusStr);
 }
 
 QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
