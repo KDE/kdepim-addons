@@ -64,19 +64,20 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     connect(mUnSelectFolder, &QPushButton::clicked, this, [this]() {
         changeFolderSelection(false);
     });
-    connect(checkable->selectionModel(), &QItemSelectionModel::selectionChanged, this, &FolderConfigureTreeWidget::slotSelectionChanged);
+    connect(mFolderTreeWidget->folderTreeView()->selectionModel(),
+            &QItemSelectionModel::currentChanged,
+            this,
+            &FolderConfigureTreeWidget::slotSelectionChanged);
 }
 
 FolderConfigureTreeWidget::~FolderConfigureTreeWidget() = default;
 
-void FolderConfigureTreeWidget::slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+void FolderConfigureTreeWidget::slotSelectionChanged()
 {
-    qDebug() << "ssssssssssss";
-    Q_UNUSED(deselected);
-    const auto selectedModelItems{selected.indexes()};
+    const QModelIndexList indexes = mFolderTreeWidget->folderTreeView()->selectionModel()->selection().indexes();
     bool checkedFolder = false;
     bool uncheckedFolder = false;
-    for (const QModelIndex &selectedIndex : selectedModelItems) {
+    for (const QModelIndex &selectedIndex : indexes) {
         bool b = mFolderSettingFilterProxyModel->data(selectedIndex, Qt::CheckStateRole).toBool();
         if (b) {
             checkedFolder = true;
@@ -84,8 +85,8 @@ void FolderConfigureTreeWidget::slotSelectionChanged(const QItemSelection &selec
             uncheckedFolder = true;
         }
     }
-    mSelectFolder->setEnabled(checkedFolder);
-    mUnSelectFolder->setEnabled(uncheckedFolder);
+    mSelectFolder->setEnabled(uncheckedFolder);
+    mUnSelectFolder->setEnabled(checkedFolder);
 }
 
 void FolderConfigureTreeWidget::changeFolderSelection(bool select)
@@ -94,6 +95,7 @@ void FolderConfigureTreeWidget::changeFolderSelection(bool select)
     for (const QModelIndex &selectedIndex : indexes) {
         mFolderSettingFilterProxyModel->setData(selectedIndex, select ? Qt::Checked : Qt::Unchecked, Qt::CheckStateRole);
     }
+    slotSelectionChanged();
 }
 
 Akonadi::Collection::List FolderConfigureTreeWidget::listCollections() const

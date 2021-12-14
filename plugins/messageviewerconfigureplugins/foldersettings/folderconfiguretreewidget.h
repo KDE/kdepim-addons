@@ -26,7 +26,7 @@ public:
 
 private:
     void changeFolderSelection(bool select);
-    void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
+    void slotSelectionChanged();
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
     MailCommon::FolderTreeWidget *const mFolderTreeWidget;
     QPushButton *mSelectFolder = nullptr;
