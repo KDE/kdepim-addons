@@ -14,6 +14,8 @@ namespace MailCommon
 {
 class FolderTreeWidget;
 }
+class QItemSelection;
+class QPushButton;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureTreeWidget : public QWidget
 {
     Q_OBJECT
@@ -24,7 +26,10 @@ public:
 
 private:
     void changeFolderSelection(bool select);
+    void slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected);
     FolderSettingFilterProxyModel *const mFolderSettingFilterProxyModel;
     MailCommon::FolderTreeWidget *const mFolderTreeWidget;
+    QPushButton *mSelectFolder = nullptr;
+    QPushButton *mUnSelectFolder = nullptr;
 };
 

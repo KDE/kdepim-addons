@@ -49,22 +49,44 @@ FolderConfigureTreeWidget::FolderConfigureTreeWidget(QWidget *parent)
     buttonLayout->setObjectName(QStringLiteral("buttonLayout"));
     mainLayout->addLayout(buttonLayout);
 
-    auto selectFolder = new QPushButton(i18n("Select"), this);
-    selectFolder->setObjectName(QStringLiteral("selectFolder"));
-    buttonLayout->addWidget(selectFolder);
-    connect(selectFolder, &QPushButton::clicked, this, [this]() {
+    mSelectFolder = new QPushButton(i18n("Select"), this);
+    mSelectFolder->setObjectName(QStringLiteral("selectFolder"));
+    buttonLayout->addWidget(mSelectFolder);
+    mSelectFolder->setEnabled(false);
+    connect(mSelectFolder, &QPushButton::clicked, this, [this]() {
         changeFolderSelection(true);
     });
 
-    auto unSelectFolder = new QPushButton(i18n("Unselect"), this);
-    unSelectFolder->setObjectName(QStringLiteral("unSelectFolder"));
-    buttonLayout->addWidget(unSelectFolder);
-    connect(unSelectFolder, &QPushButton::clicked, this, [this]() {
+    mUnSelectFolder = new QPushButton(i18n("Unselect"), this);
+    mUnSelectFolder->setObjectName(QStringLiteral("unSelectFolder"));
+    mUnSelectFolder->setEnabled(false);
+    buttonLayout->addWidget(mUnSelectFolder);
+    connect(mUnSelectFolder, &QPushButton::clicked, this, [this]() {
         changeFolderSelection(false);
     });
+    connect(checkable->selectionModel(), &QItemSelectionModel::selectionChanged, this, &FolderConfigureTreeWidget::slotSelectionChanged);
 }
 
 FolderConfigureTreeWidget::~FolderConfigureTreeWidget() = default;
+
+void FolderConfigureTreeWidget::slotSelectionChanged(const QItemSelection &selected, const QItemSelection &deselected)
+{
+    qDebug() << "ssssssssssss";
+    Q_UNUSED(deselected);
+    const auto selectedModelItems{selected.indexes()};
+    bool checkedFolder = false;
+    bool uncheckedFolder = false;
+    for (const QModelIndex &selectedIndex : selectedModelItems) {
+        bool b = mFolderSettingFilterProxyModel->data(selectedIndex, Qt::CheckStateRole).toBool();
+        if (b) {
+            checkedFolder = true;
+        } else {
+            uncheckedFolder = true;
+        }
+    }
+    mSelectFolder->setEnabled(checkedFolder);
+    mUnSelectFolder->setEnabled(uncheckedFolder);
+}
 
 void FolderConfigureTreeWidget::changeFolderSelection(bool select)
 {
