@@ -9,6 +9,7 @@
 #include "confirmbeforedeletingmanager.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <QHeaderView>
 #include <QIcon>
 #include <QMenu>
 #include <QPointer>
@@ -28,6 +29,8 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    mTreeWidget->header()->setSortIndicatorShown(true);
+    mTreeWidget->setSortingEnabled(true);
     const QStringList lst = {i18n("Type"), i18n("Pattern")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
