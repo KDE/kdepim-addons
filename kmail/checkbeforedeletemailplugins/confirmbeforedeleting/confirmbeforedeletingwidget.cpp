@@ -27,7 +27,7 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    mTreeWidget->setSelectionMode(QAbstractItemView::MultiSelection);
+    mTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     const QStringList lst = {i18n("Type"), i18n("Pattern")};
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
