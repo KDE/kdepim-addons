@@ -43,7 +43,7 @@ void ConfirmBeforeDeletingRule::load(const KConfigGroup &group)
 
 bool ConfirmBeforeDeletingRule::isValid() const
 {
-    return !mPattern.isEmpty() && (mRuleType != Unknown);
+    return (!mPattern.isEmpty() && (mRuleType != Unknown)) || (mRuleType == Unread) || (mRuleType == Important);
 }
 
 void ConfirmBeforeDeletingRule::save(KConfigGroup &group) const
