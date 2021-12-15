@@ -55,6 +55,12 @@ void ConfirmBeforeDeletingCreateRuleWidget::slotRuleTypeChanged(int index)
     const QString str = mRuleTypeComboBox->itemData(index).toString();
     const bool isAStatus = (str == QStringLiteral("unread") || str == QStringLiteral("important"));
     mPatternLineEdit->setEnabled(!isAStatus);
+    if (isAStatus) {
+        mPatternLineEdit->clear();
+        Q_EMIT updateOkButton(true);
+    } else {
+        Q_EMIT updateOkButton(!mPatternLineEdit->text().trimmed().isEmpty());
+    }
 }
 
 void ConfirmBeforeDeletingCreateRuleWidget::setInfo(const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info)
