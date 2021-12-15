@@ -205,7 +205,7 @@ void ConfirmBeforeDeletingRule::generateConfirmMessageInfoFromStatus(const KMime
     if (auto subject = msg->subject(false)) {
         subjectStr = subject->asUnicodeString();
     }
-    checkFoundInfo = i18n("The message with subject \'%1\' is ", subjectStr, statusStr);
+    checkFoundInfo = i18n("The message with subject \'%1\' is %2", subjectStr, statusStr);
 }
 
 QDebug operator<<(QDebug d, const ConfirmBeforeDeletingRule &t)
