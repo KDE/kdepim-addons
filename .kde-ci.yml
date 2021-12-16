@@ -43,4 +43,5 @@ Dependencies:
     'pim/pimcommon' : '@same'
     'pim/kpkpass' : '@same'
     'pim/kitinerary' : '@same'
+    'pim/kaddressbook' : '@same'
     'third-party/grantlee' : '@stable'
