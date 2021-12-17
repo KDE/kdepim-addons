@@ -76,6 +76,7 @@ void SelectImapWidget::slotOpenSelectImapFolder()
     if (dlg->exec()) {
         mLineEdit->setText(dlg->selectedFolderName());
     }
+    // Don't delete it.
 }
 
 #include "selectimapwidget.moc"

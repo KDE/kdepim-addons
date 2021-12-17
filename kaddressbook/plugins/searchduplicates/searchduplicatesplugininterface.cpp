@@ -36,11 +36,9 @@ void SearchDuplicatesPluginInterface::slotActivated()
 
 void SearchDuplicatesPluginInterface::exec()
 {
-    QPointer<KABMergeContacts::SearchAndMergeContactDuplicateContactDialog> dlg =
-        new KABMergeContacts::SearchAndMergeContactDuplicateContactDialog(parentWidget());
-    dlg->searchPotentialDuplicateContacts(mListItems);
-    dlg->exec();
-    delete dlg;
+    KABMergeContacts::SearchAndMergeContactDuplicateContactDialog dlg(parentWidget());
+    dlg.searchPotentialDuplicateContacts(mListItems);
+    dlg.exec();
 }
 
 void SearchDuplicatesPluginInterface::setItems(const Akonadi::Item::List &items)
