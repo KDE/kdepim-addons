@@ -21,7 +21,7 @@ public:
     ~AdblockPluginUrlInterceptorConfigureDialog() override;
 
 protected:
-    QWidget *createLayout() override;
+    Q_REQUIRED_RESULT QWidget *createLayout() override;
     void save() override;
     void load() override;
     void reset() override;
