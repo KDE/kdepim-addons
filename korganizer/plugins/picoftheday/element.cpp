@@ -90,10 +90,7 @@ KIO::SimpleJob *POTDElement::createJsonQueryJob(const QString &property, const Q
     }
     url.setQuery(urlQuery);
 
-    auto job = KIO::storedGet(url, KIO::NoReload, KIO::HideProgressInfo);
-    KIO::Scheduler::setJobPriority(job, 1);
-
-    return job;
+    return KIO::storedGet(url, KIO::NoReload, KIO::HideProgressInfo);
 }
 
 KIO::SimpleJob *POTDElement::createImagesJsonQueryJob(PageProtectionState state)
@@ -273,7 +270,6 @@ void POTDElement::getThumbImage(const QUrl &thumbUrl)
     qCDebug(KORGANIZERPICOFTHEDAYPLUGIN_LOG) << mDate << ": fetching POTD thumbnail:" << thumbUrl;
 
     mGetThumbImageJob = KIO::storedGet(thumbUrl, KIO::NoReload, KIO::HideProgressInfo);
-    KIO::Scheduler::setJobPriority(mGetThumbImageJob, 1);
 
     connect(mGetThumbImageJob, &KIO::SimpleJob::result, this, &POTDElement::handleGetThumbImageResponse);
 }
