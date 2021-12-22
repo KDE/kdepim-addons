@@ -28,7 +28,7 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
     auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
 
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);
@@ -72,7 +72,7 @@ void MarkdownCreateImageWidgetTest::shouldHaveDefaultValue()
 
     auto sizeWidgetLayout = w.findChild<QHBoxLayout *>(QStringLiteral("sizeWidgetLayout"));
     QVERIFY(sizeWidgetLayout);
-    QCOMPARE(sizeWidgetLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(sizeWidgetLayout->contentsMargins(), QMargins());
 }
 
 void MarkdownCreateImageWidgetTest::shouldGenerateLink()

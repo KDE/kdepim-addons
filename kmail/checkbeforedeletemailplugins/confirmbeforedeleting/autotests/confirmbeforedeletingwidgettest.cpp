@@ -22,7 +22,7 @@ void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()
 
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), {});
+    QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
     auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
     QVERIFY(mTreeWidget->alternatingRowColors());

@@ -22,7 +22,7 @@ void QuickTextConfigureWidgetTest::shouldHaveDefaultValues()
 
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(w.contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(w.contentsMargins(), QMargins());
 
     auto mSnippetWidget = w.findChild<QuickTextWidget *>(QStringLiteral("snippetwidget"));
     QVERIFY(mSnippetWidget);

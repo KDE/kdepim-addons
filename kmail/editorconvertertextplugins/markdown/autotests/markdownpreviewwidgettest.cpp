@@ -23,7 +23,7 @@ void MarkdownPreviewWidgetTest::shouldHaveDefaultValue()
     MarkdownPreviewWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mWebView = w.findChild<QWebEngineView *>(QStringLiteral("webengine"));
     QVERIFY(mWebView);

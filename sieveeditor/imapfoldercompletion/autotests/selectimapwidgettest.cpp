@@ -24,7 +24,7 @@ void SelectImapWidgetTest::shouldHaveDefaultValue()
     SelectImapWidget w;
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mLineEdit = w.findChild<QLineEdit *>(QStringLiteral("lineedit"));
     QVERIFY(mLineEdit);

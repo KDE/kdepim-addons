@@ -25,7 +25,7 @@ void ConfirmAddressWidgetTest::shouldHaveDefaultValue()
     ConfirmAddressWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto listEmails = w.findChild<QListWidget *>(QStringLiteral("listemails"));
     QVERIFY(listEmails);

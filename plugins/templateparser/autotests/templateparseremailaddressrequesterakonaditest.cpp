@@ -22,7 +22,7 @@ void TemplateParserEmailAddressRequesterAkonadiTest::shouldHaveDefaultValues()
 
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mLineEdit = w.findChild<Akonadi::EmailAddressRequester *>(QStringLiteral("EmailAddressRequester"));
     QVERIFY(mLineEdit);

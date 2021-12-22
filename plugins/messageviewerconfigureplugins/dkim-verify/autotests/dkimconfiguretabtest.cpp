@@ -22,7 +22,7 @@ void DKIMConfigureTabTest::shouldHaveDefaultValue()
 
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);

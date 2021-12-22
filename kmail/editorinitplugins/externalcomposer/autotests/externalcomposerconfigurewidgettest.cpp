@@ -24,7 +24,7 @@ void ExternalComposerConfigureWidgetTest::shouldHaveDefaultValues()
     ExternalComposerConfigureWidget w(nullptr);
     auto vboxlayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
-    QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(vboxlayout->contentsMargins(), QMargins());
 
     auto mExternalEditorCheck = w.findChild<QCheckBox *>(QStringLiteral("enabled"));
     QVERIFY(mExternalEditorCheck);

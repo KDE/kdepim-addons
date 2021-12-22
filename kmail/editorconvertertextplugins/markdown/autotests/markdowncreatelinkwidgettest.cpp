@@ -23,7 +23,7 @@ void MarkdownCreateLinkWidgetTest::shouldHaveDefaultValue()
 
     auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mTitle = w.findChild<QLineEdit *>(QStringLiteral("title"));
     QVERIFY(mTitle);

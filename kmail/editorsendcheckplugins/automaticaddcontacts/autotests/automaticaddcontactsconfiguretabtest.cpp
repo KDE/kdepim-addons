@@ -24,7 +24,7 @@ void AutomaticAddContactsConfigureTabTest::shouldHaveDefaultValue()
     AutomaticAddContactsConfigureTab w(nullptr);
     auto vboxlayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(vboxlayout);
-    QCOMPARE(vboxlayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(vboxlayout->contentsMargins(), QMargins());
     auto mTabWidget = w.findChild<QTabWidget *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);
 }

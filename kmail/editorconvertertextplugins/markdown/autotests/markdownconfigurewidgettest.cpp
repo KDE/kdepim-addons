@@ -21,7 +21,7 @@ void MarkdownConfigureWidgetTest::shouldHaveDefaultValue()
     MarkdownConfigureWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mLatexSupport = w.findChild<QCheckBox *>(QStringLiteral("latex"));
     QVERIFY(mLatexSupport);

@@ -26,7 +26,7 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     QVERIFY(label);
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("layout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);

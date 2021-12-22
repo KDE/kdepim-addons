@@ -25,7 +25,7 @@ void SelectImapFolderWidgetTest::shouldHaveDefaultValue()
     SelectImapFolderWidget w(account);
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mTreeView = w.findChild<QTreeView *>(QStringLiteral("treeview"));
     QVERIFY(mTreeView);

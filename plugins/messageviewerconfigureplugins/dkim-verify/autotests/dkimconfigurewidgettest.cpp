@@ -22,7 +22,7 @@ void DKIMConfigureWidgetTest::shouldHaveDefaultValue()
     DKIMConfigureWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mTabWidget = w.findChild<DKIMConfigureTab *>(QStringLiteral("tabwidget"));
     QVERIFY(mTabWidget);

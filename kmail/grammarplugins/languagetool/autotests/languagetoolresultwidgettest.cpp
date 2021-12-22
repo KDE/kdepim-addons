@@ -20,7 +20,7 @@ void LanguageToolResultWidgetTest::shouldHaveDefaultValue()
     LanguageToolResultWidget w;
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mResult = w.findChild<GrammarResultTextEdit *>(QStringLiteral("grammarResult"));
     QVERIFY(mResult);

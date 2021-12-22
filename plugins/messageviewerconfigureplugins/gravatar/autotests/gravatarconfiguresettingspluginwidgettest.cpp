@@ -24,7 +24,7 @@ void GravatarConfigureSettingsPluginWidgetTest::shouldHaveDefaultValue()
 
     auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mEnableGravatarSupport = w.findChild<QCheckBox *>(QStringLiteral("gravatarcheckbox"));
     QVERIFY(mEnableGravatarSupport);

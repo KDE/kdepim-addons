@@ -26,11 +26,11 @@ void ConfirmBeforeDeletingMessageBoxWidgetTest::shouldHaveDefaultValues()
 
     auto mainLayout = w.findChild<QHBoxLayout *>(QStringLiteral("mainLayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), {});
+    QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 
     auto textLayout = w.findChild<QVBoxLayout *>(QStringLiteral("textLayout"));
     QVERIFY(textLayout);
-    QCOMPARE(textLayout->contentsMargins(), {});
+    QCOMPARE(textLayout->contentsMargins(), QMargins{});
 
     auto iconLabel = w.findChild<QLabel *>(QStringLiteral("iconLabel"));
     QVERIFY(iconLabel);

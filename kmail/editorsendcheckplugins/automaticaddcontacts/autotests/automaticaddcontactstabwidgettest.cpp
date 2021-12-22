@@ -56,7 +56,7 @@ void AutomaticAddContactsTabWidgetTest::shouldHaveDefaultValue()
 
     auto hlay = w->findChild<QHBoxLayout *>(QStringLiteral("folderlayout"));
     QVERIFY(hlay);
-    QCOMPARE(hlay->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(hlay->contentsMargins(), QMargins());
 
     auto lab = w->findChild<QLabel *>(QStringLiteral("labelfolder"));
     QVERIFY(lab);

@@ -49,7 +49,7 @@ SearchDuplicateResultWidgetTest::~SearchDuplicateResultWidgetTest() = default;
 void SearchDuplicateResultWidgetTest::shouldHaveDefaultValue()
 {
     KABMergeContacts::SearchDuplicateResultWidget w;
-    QCOMPARE(w.layout()->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(w.layout()->contentsMargins(), QMargins());
 
     auto tree = w.findChild<KABMergeContacts::ResultDuplicateTreeWidget *>(QStringLiteral("result_treewidget"));
     QVERIFY(tree);

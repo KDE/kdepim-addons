@@ -24,7 +24,7 @@ void ViewerPluginExternalEditWidgetTest::shouldHaveDefaultValue()
     ViewerPluginExternalEditWidget w;
     auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
-    QCOMPARE(mainLayout->contentsMargins(), QMargins(0, 0, 0, 0));
+    QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
     auto mName = w.findChild<QLineEdit *>(QStringLiteral("name"));
     QVERIFY(mName);
