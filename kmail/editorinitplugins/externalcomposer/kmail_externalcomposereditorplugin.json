@@ -35,6 +35,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailexternalcomposer",
         "Name": "Open External Composer",
+        "Name[ar]": "افتح المؤلّف الخارجيّ",
         "Name[az]": "Xarici redaktoru açın",
         "Name[ca@valencia]": "Obri un editor extern",
         "Name[ca]": "Obre un editor extern",
