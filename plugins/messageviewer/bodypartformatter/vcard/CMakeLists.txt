@@ -3,7 +3,7 @@
 add_definitions(-DTRANSLATION_DOMAIN=\"messageviewer_text_vcard_plugin\")
 add_library(messageviewer_bodypartformatter_text_vcard MODULE)
 
-target_sources(messageviewer_bodypartformatter_text_vcard PRIVATE text_vcard.cpp vcardmemento.cpp updatecontactjob.cpp)
+target_sources(messageviewer_bodypartformatter_text_vcard PRIVATE text_vcard.cpp vcardmemento.cpp updatecontactjob.cpp vcardmemento.h updatecontactjob.h)
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_text_vcard HEADER vcard_debug.h IDENTIFIER VCARD_LOG CATEGORY_NAME org.kde.pim.vcard
     DESCRIPTION "kdepim-addons (vcard)"
     OLD_CATEGORY_NAMES log_vcard

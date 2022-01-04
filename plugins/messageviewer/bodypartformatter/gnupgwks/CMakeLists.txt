@@ -12,6 +12,16 @@ target_sources(messageviewer_bodypartformatter_application_gnupgwks PRIVATE
     pgpkeymemento.cpp
     pgpkeymessagepart.cpp
     pgpkeyurlhandler.cpp
+
+    plugin.h
+    gnupgwksformatter.h
+    gnupgwksurlhandler.h
+    gnupgwksmessagepart.h
+    pgpkeyformatter.h
+    pgpkeymemento.h
+    pgpkeymessagepart.h
+    pgpkeyurlhandler.h
+
     templates.qrc
     )
 
