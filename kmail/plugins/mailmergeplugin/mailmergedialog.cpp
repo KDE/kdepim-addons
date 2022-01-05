@@ -20,7 +20,7 @@ MailMergeDialog::MailMergeDialog(QWidget *parent)
 {
     auto mainLayout = new QVBoxLayout(this);
     setWindowTitle(i18nc("@title:window", "Mail Merge"));
-    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel);
+    auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);
     QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
 
     mMailMergeWidget->setObjectName(QStringLiteral("mailmergewidget"));
