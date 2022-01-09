@@ -154,6 +154,7 @@ QString FancyHeaderStylePlugin::extraCommonCss(const QString &headerFont) const
 
                             "div.fancy.header table th {\n"
                             "  %3\n"
+                            "  width: 0% ! important;\n"
                             "  padding: 0px ! important;\n"
                             "  white-space: nowrap ! important;\n"
                             "  border-spacing: 0px ! important;\n"
