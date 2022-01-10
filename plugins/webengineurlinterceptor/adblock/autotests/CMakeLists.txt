@@ -6,13 +6,13 @@ ecm_qt_declare_logging_category(messageviewer_adblock_test_common_SRCS HEADER ad
 ecm_add_test(adblockmanagertest.cpp ${messageviewer_adblock_test_common_SRCS}
     TEST_NAME adblockmanagertest
     NAME_PREFIX "messageviewer-urlinterceptor-"
-    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets adblocklibprivate KF5::ItemViews Qt${QT_MAJOR_VERSION}::WebEngine Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer
+    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets adblocklibprivate KF5::ItemViews  Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer
 )
 
 ecm_add_test(adblockinterceptorinterfacetest.cpp ${messageviewer_adblock_test_common_SRCS} ../adblockinterceptorinterface.cpp
     TEST_NAME adblockinterceptorinterface
     NAME_PREFIX "messageviewer-urlinterceptor-"
-    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets adblocklibprivate KF5::ItemViews Qt${QT_MAJOR_VERSION}::WebEngine Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer KF5::XmlGui
+    LINK_LIBRARIES Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets adblocklibprivate KF5::ItemViews  Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::KIOWidgets KF5::I18n KF5::WebEngineViewer KF5::XmlGui
 )
 
 set( adblockpluginurlinterceptortest_SRCS ${messageviewer_adblock_test_common_SRCS} adblockpluginurlinterceptortest.cpp ../adblockpluginurlinterceptor.cpp ../adblockinterceptorinterface.cpp )
@@ -20,4 +20,4 @@ add_executable( adblockpluginurlinterceptortest ${adblockpluginurlinterceptortes
 add_test(NAME adblockpluginurlinterceptortest COMMAND adblockpluginurlinterceptortest)
 ecm_mark_as_test(adblockpluginurlinterceptortest)
 target_link_libraries( adblockpluginurlinterceptortest Qt${QT_MAJOR_VERSION}::Test Qt${QT_MAJOR_VERSION}::Widgets adblocklibprivate KF5::MessageViewer
-    Qt${QT_MAJOR_VERSION}::WebEngine Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::ItemViews KF5::KIOWidgets KF5::XmlGui KF5::I18n KF5::WebEngineViewer)
+     Qt${QT_MAJOR_VERSION}::WebEngineWidgets KF5::ItemViews KF5::KIOWidgets KF5::XmlGui KF5::I18n KF5::WebEngineViewer)
