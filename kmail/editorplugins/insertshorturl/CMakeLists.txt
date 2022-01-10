@@ -19,7 +19,7 @@ endif()
 
 target_link_libraries(shorturlpluginprivate
     PRIVATE
-    Qt::Network KF5::I18n KF5::CoreAddons Qt::Gui
+    Qt${QT_MAJOR_VERSION}::Network KF5::I18n KF5::CoreAddons Qt${QT_MAJOR_VERSION}::Gui
     )
 
 set_target_properties(shorturlpluginprivate

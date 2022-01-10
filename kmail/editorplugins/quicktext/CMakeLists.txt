@@ -26,7 +26,7 @@ endif()
 
 target_link_libraries(kmailquicktextpluginprivate
     PRIVATE
-    KF5::I18n KF5::CoreAddons Qt::Gui Qt::Widgets KF5::MessageComposer KF5::MailCommon KF5::XmlGui
+    KF5::I18n KF5::CoreAddons Qt${QT_MAJOR_VERSION}::Gui Qt${QT_MAJOR_VERSION}::Widgets KF5::MessageComposer KF5::MailCommon KF5::XmlGui
     )
 
 set_target_properties(kmailquicktextpluginprivate

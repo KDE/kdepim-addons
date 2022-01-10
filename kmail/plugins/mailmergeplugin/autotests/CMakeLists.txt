@@ -9,7 +9,7 @@ macro(add_kmail_mailmergeunittest _source )
   ecm_mark_as_test(kmail-${_name})
   target_link_libraries( ${_name}
     KF5::PimCommon
-    Qt::Test
+    Qt${QT_MAJOR_VERSION}::Test
     KF5::KIOCore
     KF5::KIOWidgets
     KF5::I18n

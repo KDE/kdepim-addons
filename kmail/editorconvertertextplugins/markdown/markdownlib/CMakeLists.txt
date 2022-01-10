@@ -40,7 +40,7 @@ generate_export_header(kmailmarkdown BASE_NAME libkmailmarkdown)
 target_link_libraries(kmailmarkdown
     KF5::MessageComposer
     KF5::I18n
-    Qt::WebEngineWidgets
+    Qt${QT_MAJOR_VERSION}::WebEngineWidgets
     discount::Lib
     KF5::SyntaxHighlighting
 )

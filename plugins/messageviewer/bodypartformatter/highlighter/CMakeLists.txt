@@ -9,7 +9,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_highlighter
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::MessageViewer
     KF5::SyntaxHighlighting
     Grantlee5::Templates

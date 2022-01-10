@@ -34,7 +34,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(pimevents
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::AkonadiCore
     KF5::AkonadiCalendar
     KF5::CalendarCore
@@ -59,8 +59,8 @@ target_sources(pimcalendarsplugin PRIVATE
     settingschangenotifier.h
     )
 target_link_libraries(pimcalendarsplugin
-    Qt::Core
-    Qt::Qml
+    Qt${QT_MAJOR_VERSION}::Core
+    Qt${QT_MAJOR_VERSION}::Qml
     KF5::AkonadiCore
     KF5::CalendarCore
     KF5::ConfigCore

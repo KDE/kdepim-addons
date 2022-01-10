@@ -32,7 +32,7 @@ endif()
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF5::KontactInterface
     KF5::Codecs
-    Qt::Core
+    Qt${QT_MAJOR_VERSION}::Core
     KF5::CalendarCore
     KF5::CalendarUtils
     KF5::Mime
@@ -45,7 +45,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_calendar
     KF5::IncidenceEditor
     KF5::PimTextEdit
     KF5::KIOWidgets
-    Qt::DBus
+    Qt${QT_MAJOR_VERSION}::DBus
     )
 
 install(TARGETS messageviewer_bodypartformatter_text_calendar  DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

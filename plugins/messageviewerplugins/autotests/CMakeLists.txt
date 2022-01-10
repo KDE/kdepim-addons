@@ -14,7 +14,7 @@ macro(add_messageviewer_viewerplugin_unittest _source _additional _jsonfile)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets KF5::XmlGui KF5::CalendarSupport
+		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt${QT_MAJOR_VERSION}::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets KF5::XmlGui KF5::CalendarSupport
                 )
 endmacro ()
 
@@ -27,7 +27,7 @@ macro(add_messageviewer_viewerplugin_class_unittest _source )
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::AkonadiWidgets KF5::CalendarSupport
+		 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt${QT_MAJOR_VERSION}::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::AkonadiWidgets KF5::CalendarSupport
                 )
 endmacro ()
 
@@ -38,7 +38,7 @@ macro(add_messageviewer_viewerplugin_widget_unittest _source _additional )
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets KF5::CalendarSupport)
+                 LINK_LIBRARIES KF5::MessageViewer KF5::Libkleo Qt${QT_MAJOR_VERSION}::Test KF5::KIOCore KF5::Mime KF5::AkonadiCore KF5::AkonadiNotes KF5::CalendarCore KF5::GrantleeTheme KF5::IncidenceEditor KF5::AkonadiWidgets KF5::CalendarSupport)
 endmacro ()
 
 

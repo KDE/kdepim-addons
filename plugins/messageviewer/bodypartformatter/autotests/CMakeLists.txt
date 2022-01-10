@@ -13,7 +13,7 @@ macro(add_kdepimaddons_crypto_unittest _source)
     add_executable( ${_name} ${_source})
     target_link_libraries( ${_name}
         KF5::MessageViewer
-        Qt::Test
+        Qt${QT_MAJOR_VERSION}::Test
         
     )
     add_gpg_crypto_test(${_name} messageviewerplugins-${_name})
@@ -33,7 +33,7 @@ macro(add_messageviewer_bodyformatter_class_unittest _source _additional)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-		 LINK_LIBRARIES KF5::MessageViewer Qt::Test KF5::PimTextEdit KF5::I18n KF5::Completion KF5::PimCommonAkonadi
+		 LINK_LIBRARIES KF5::MessageViewer Qt${QT_MAJOR_VERSION}::Test KF5::PimTextEdit KF5::I18n KF5::Completion KF5::PimCommonAkonadi
                 )
 endmacro ()
 add_messageviewer_bodyformatter_class_unittest(reactiontoinvitationdialogtest.cpp "../calendar/reactiontoinvitationdialog.cpp")
@@ -46,7 +46,7 @@ macro(add_diff_bodyformatter_class_unittest _source _additional)
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "messageviewerplugins-"
-                 LINK_LIBRARIES KF5::MessageViewer Qt::Test KF5::PimTextEdit KF5::I18n KF5::SyntaxHighlighting
+                 LINK_LIBRARIES KF5::MessageViewer Qt${QT_MAJOR_VERSION}::Test KF5::PimTextEdit KF5::I18n KF5::SyntaxHighlighting
                 )
 endmacro ()
 
