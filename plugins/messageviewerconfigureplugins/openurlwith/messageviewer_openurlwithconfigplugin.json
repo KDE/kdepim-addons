@@ -1,0 +1,8 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to configure which apps used for specific url.",
+        "Name": "Open Url With",
+        "Version": "1.0"
+    },
+    "X-KDE-MessageViewer-Configure-Order": "100"
+}
