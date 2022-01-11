@@ -15,6 +15,10 @@ target_link_libraries(messageviewer_openurlwithconfigplugin
 
 add_library(openurlwithconfigure)
 target_sources(openurlwithconfigure PRIVATE
+    openurlwithconfiguredialog.h
+    openurlwithconfiguredialog.cpp
+    openurlwithconfigurewidget.h
+    openurlwithconfigurewidget.cpp
     )
 
 ecm_qt_declare_logging_category(openurlwithconfigure HEADER libopenurlwithconfigure_debug.h IDENTIFIER LIBOPENURLWITHCONFIGURE_PLUGIN_LOG
