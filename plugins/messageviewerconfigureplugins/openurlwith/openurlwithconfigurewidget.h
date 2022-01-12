@@ -6,9 +6,10 @@
 
 #pragma once
 
+#include "openurlwith_private_export.h"
 #include <QWidget>
 
-class OpenUrlWithConfigureWidget : public QWidget
+class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
