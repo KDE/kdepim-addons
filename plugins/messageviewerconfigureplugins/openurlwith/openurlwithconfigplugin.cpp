@@ -5,6 +5,7 @@
 */
 
 #include "openurlwithconfigplugin.h"
+#include "openurlwithconfiguredialog.h"
 
 #include <KPluginFactory>
 
@@ -19,8 +20,8 @@ OpenUrlWithConfigPlugin::~OpenUrlWithConfigPlugin() = default;
 
 void OpenUrlWithConfigPlugin::showConfigureDialog(QWidget *parent)
 {
-//    DKIMConfigureDialog dlg(parent);
-//    dlg.exec();
+    OpenUrlWithConfigureDialog dlg(parent);
+    dlg.exec();
 }
 
 #include "openurlwithconfigplugin.moc"

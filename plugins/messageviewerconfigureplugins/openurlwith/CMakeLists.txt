@@ -10,6 +10,7 @@ target_sources(messageviewer_openurlwithconfigplugin PRIVATE
 target_link_libraries(messageviewer_openurlwithconfigplugin
     KF5::MessageViewer
     KF5::I18n
+    openurlwithconfigure
     )
 
 

@@ -6,9 +6,10 @@
 
 #pragma once
 
+#include "libopenurlwithconfigure_export.h"
 #include <QDialog>
 
-class OpenUrlWithConfigureDialog : public QDialog
+class LIBOPENURLWITHCONFIGURE_EXPORT OpenUrlWithConfigureDialog : public QDialog
 {
     Q_OBJECT
 public:
