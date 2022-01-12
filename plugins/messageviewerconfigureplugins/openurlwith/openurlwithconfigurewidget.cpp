@@ -5,10 +5,14 @@
 */
 
 #include "openurlwithconfigurewidget.h"
-
+#include <KLocalizedString>
+#include <QVBoxLayout>
 OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     : QWidget{parent}
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins(QMargins());
 }
 
 OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
