@@ -6,9 +6,16 @@
 
 #include "openurlwithconfiguredialog.h"
 #include "openurlwithconfigurewidget.h"
+#include <KConfigGroup>
 #include <KLocalizedString>
+#include <KSharedConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+
+namespace
+{
+static const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialogbonjour ";
+}
 
 OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
     : QDialog(parent)
@@ -28,12 +35,31 @@ OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &OpenUrlWithConfigureDialog::reject);
     //    mConfigureWidget->loadSettings();
-    //    readConfig();
+    readConfig();
 }
 
-OpenUrlWithConfigureDialog::~OpenUrlWithConfigureDialog() = default;
+OpenUrlWithConfigureDialog::~OpenUrlWithConfigureDialog()
+{
+    writeConfig();
+}
 
 void OpenUrlWithConfigureDialog::slotAccepted()
 {
     accept();
+}
+
+void OpenUrlWithConfigureDialog::readConfig()
+{
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
+    const QSize size = grp.readEntry("Size", QSize(300, 200));
+    if (size.isValid()) {
+        resize(size);
+    }
+}
+
+void OpenUrlWithConfigureDialog::writeConfig()
+{
+    KConfigGroup grp(KSharedConfig::openStateConfig(), myOpenUrlWithConfigureConfigGroupName);
+    grp.writeEntry("Size", size());
+    grp.sync();
 }

@@ -18,5 +18,7 @@ public:
 
 private:
     void slotAccepted();
+    void readConfig();
+    void writeConfig();
     OpenUrlWithConfigureWidget *const mOpenUrlWithWidget;
 };
