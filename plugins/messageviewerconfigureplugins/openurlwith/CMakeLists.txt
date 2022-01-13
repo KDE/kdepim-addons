@@ -21,6 +21,10 @@ target_sources(openurlwithconfigure PRIVATE
     openurlwithconfigurewidget.h
     openurlwithconfigurewidget.cpp
     openurlwith_private_export.h
+    openurlwithconfigurecreatedialog.h
+    openurlwithconfigurecreatedialog.cpp
+    openurlwithconfigurecreatewidget.h
+    openurlwithconfigurecreatewidget.cpp
     )
 
 ecm_qt_declare_logging_category(openurlwithconfigure HEADER libopenurlwithconfigure_debug.h IDENTIFIER LIBOPENURLWITHCONFIGURE_PLUGIN_LOG
