@@ -1,7 +1,15 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure which apps used for specific url.",
+        "Description[ca]": "Aquest connector permet configurar quines aplicacions s'usen per a un URL específic.",
+        "Description[nl]": "Deze plug-in biedt u het configureren van welke toepassingen gebruikt worden voor welke url.",
+        "Description[uk]": "За допомогою цього додатка можна налаштувати те, які програми буде використано для певної адреси.",
+        "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
         "Name": "Open Url With",
+        "Name[ca]": "Obre l'URL amb",
+        "Name[nl]": "Url openen met",
+        "Name[uk]": "Відкриття адрес за допомогою програм",
+        "Name[x-test]": "xxOpen Url Withxx",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"
