@@ -7,11 +7,14 @@
 
 #include "openurlwith_private_export.h"
 #include <QWidget>
-
+class QLineEdit;
 class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureCreateWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit OpenUrlWithConfigureCreateWidget(QWidget *parent = nullptr);
     ~OpenUrlWithConfigureCreateWidget() override;
+
+private:
+    QLineEdit *const mServerName;
 };

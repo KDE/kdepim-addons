@@ -5,14 +5,23 @@
 */
 
 #include "openurlwithconfigurecreatewidget.h"
+#include <KLocalizedString>
+#include <QLabel>
+#include <QLineEdit>
 #include <QVBoxLayout>
-
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
+    , mServerName(new QLineEdit(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(QMargins());
+
+    auto label = new QLabel(i18n("Server Name:"), this);
+    mainLayout->addWidget(label);
+
+    mServerName->setObjectName(QStringLiteral("mServerName"));
+    mainLayout->addWidget(mServerName);
 }
 
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
