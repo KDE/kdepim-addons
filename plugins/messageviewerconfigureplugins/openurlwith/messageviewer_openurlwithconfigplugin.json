@@ -5,6 +5,8 @@
         "Description[fr]": "Ce module externe vous permet de configurer l'application à utiliser pour ouvrir une URL spécifique.",
         "Description[ia]": "Iste plugin te permitte configurar qual apps usate per url specific.",
         "Description[nl]": "Deze plug-in biedt u het configureren van welke toepassingen gebruikt worden voor welke url.",
+        "Description[sl]": "Ta vstavek omogoča, da nastavite aplikacije za uporabo pri določenem url.",
+        "Description[sv]": "Insticksprogrammet gör det möjligt att ställa in vilka program som används för specifika webbadresser.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати те, які програми буде використано для певної адреси.",
         "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
         "Name": "Open Url With",
@@ -12,6 +14,8 @@
         "Name[fr]": "Ouvrir une URL avec",
         "Name[ia]": "Aperi Url con",
         "Name[nl]": "Url openen met",
+        "Name[sl]": "Odpri Url z",
+        "Name[sv]": "Öppna webbadress med",
         "Name[uk]": "Відкриття адрес за допомогою програм",
         "Name[x-test]": "xxOpen Url Withxx",
         "Version": "1.0"
