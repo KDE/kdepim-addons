@@ -16,7 +16,6 @@
 #include <KSharedConfig>
 #include <PimCommon/NetworkManager>
 #include <QAction>
-#include <QNetworkConfigurationManager>
 
 InsertShorturlPluginEditorInterface::InsertShorturlPluginEditorInterface(QObject *parent)
     : MessageComposer::PluginEditorInterface(parent)
@@ -82,7 +81,7 @@ void InsertShorturlPluginEditorInterface::exec()
             qCWarning(KMAIL_INSERTSHORTURL_LOG) << "Current Engine not defined";
             return;
         }
-        if (!PimCommon::NetworkManager::self()->networkConfigureManager()->isOnline()) {
+        if (!PimCommon::NetworkManager::self()->isOnline()) {
             Q_EMIT message(i18n("No network connection detected, we cannot shorten URL."));
             return;
         }
