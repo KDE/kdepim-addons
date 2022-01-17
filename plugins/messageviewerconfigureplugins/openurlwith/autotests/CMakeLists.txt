@@ -11,3 +11,4 @@ endmacro ()
 
 add_messageviewer_openwithurl_unittest(openurlwithconfigurewidgettest.cpp)
 add_messageviewer_openwithurl_unittest(openurlwithconfiguredialogtest.cpp)
+add_messageviewer_openwithurl_unittest(openurlwithconfigurecreatedialogtest.cpp)
