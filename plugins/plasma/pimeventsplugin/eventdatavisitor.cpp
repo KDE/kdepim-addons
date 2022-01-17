@@ -127,8 +127,8 @@ bool EventDataVisitor::visit(const KCalendarCore::Incidence::Ptr &incidence, Cal
         bool ok = false;
         const auto list = explodeIncidenceOccurences(data, incidence, ok);
         if (ok) {
-            for (const auto &data : list) {
-                insertResult(data);
+            for (const auto &dataCalendar : list) {
+                insertResult(dataCalendar);
             }
         }
         return ok;
