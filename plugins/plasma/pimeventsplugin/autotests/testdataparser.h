@@ -28,7 +28,7 @@ public:
     Q_REQUIRED_RESULT KCalendarCore::Incidence::Ptr incidence() const;
     Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> eventData() const;
 
-    static Q_REQUIRED_RESULT QStringList allTestData();
+    Q_REQUIRED_RESULT static QStringList allTestData();
 
 private:
     void parse();
