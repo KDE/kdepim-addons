@@ -27,7 +27,7 @@ public:
     bool handleContextMenuRequest(MimeTreeParser::Interface::BodyPart *part, const QString &path, const QPoint &p) const override;
     QString statusBarMessage(MimeTreeParser::Interface::BodyPart *part, const QString &path) const override;
 
-    static Q_REQUIRED_RESULT bool hasItineraryApp();
+    Q_REQUIRED_RESULT static bool hasItineraryApp();
 
 private:
     ItineraryMemento *memento(MimeTreeParser::Interface::BodyPart *part) const;

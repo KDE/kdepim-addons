@@ -39,8 +39,8 @@ public:
     void load(const KConfigGroup &group);
 
     Q_REQUIRED_RESULT bool isValid() const;
-    static Q_REQUIRED_RESULT QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
-    static Q_REQUIRED_RESULT ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
+    Q_REQUIRED_RESULT static QString ruleTypeToString(ConfirmBeforeDeletingRule::RuleType r);
+    Q_REQUIRED_RESULT static ConfirmBeforeDeletingRule::RuleType stringToRuleType(const QString &str);
 
     Q_REQUIRED_RESULT bool operator==(const ConfirmBeforeDeletingRule &other) const;
 
