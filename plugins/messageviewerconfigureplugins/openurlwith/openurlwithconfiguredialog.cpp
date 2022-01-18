@@ -14,7 +14,7 @@
 
 namespace
 {
-static const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialogbonjour ";
+static const char myOpenUrlWithConfigureConfigGroupName[] = "OpenUrlWithConfigureDialog";
 }
 
 OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
