@@ -34,7 +34,7 @@ OpenUrlWithConfigureDialog::OpenUrlWithConfigureDialog(QWidget *parent)
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureDialog::slotAccepted);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &OpenUrlWithConfigureDialog::reject);
-    //    mConfigureWidget->loadSettings();
+    mOpenUrlWithWidget->loadSettings();
     readConfig();
 }
 
@@ -45,6 +45,7 @@ OpenUrlWithConfigureDialog::~OpenUrlWithConfigureDialog()
 
 void OpenUrlWithConfigureDialog::slotAccepted()
 {
+    mOpenUrlWithWidget->writeSettings();
     accept();
 }
 
