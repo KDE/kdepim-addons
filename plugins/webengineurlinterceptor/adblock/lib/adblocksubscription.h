@@ -44,11 +44,11 @@ public:
     const AdBlockRule *enableRule(int offset);
     const AdBlockRule *disableRule(int offset);
 
-    virtual Q_REQUIRED_RESULT bool canEditRules() const;
-    virtual Q_REQUIRED_RESULT bool canBeRemoved() const;
+    Q_REQUIRED_RESULT virtual bool canEditRules() const;
+    Q_REQUIRED_RESULT virtual bool canBeRemoved() const;
 
-    virtual Q_REQUIRED_RESULT int addRule(AdBlockRule *rule);
-    virtual Q_REQUIRED_RESULT bool removeRule(int offset);
+    Q_REQUIRED_RESULT virtual int addRule(AdBlockRule *rule);
+    Q_REQUIRED_RESULT virtual bool removeRule(int offset);
     virtual const AdBlockRule *replaceRule(AdBlockRule *rule, int offset);
 
     Q_REQUIRED_RESULT bool enabled() const;
