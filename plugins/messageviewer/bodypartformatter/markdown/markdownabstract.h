@@ -16,7 +16,7 @@ public:
 
     void setText(const QString &str);
 
-    virtual Q_REQUIRED_RESULT QString toHtml() const = 0;
+    Q_REQUIRED_RESULT virtual QString toHtml() const = 0;
 
 protected:
     QString mText;
