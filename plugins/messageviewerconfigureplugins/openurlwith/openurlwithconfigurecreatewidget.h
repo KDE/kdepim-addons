@@ -12,8 +12,16 @@ class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureCreateWidget : pu
 {
     Q_OBJECT
 public:
+    struct OpenUrlWithInfo {
+        QString command;
+        QString url;
+    };
+
     explicit OpenUrlWithConfigureCreateWidget(QWidget *parent = nullptr);
     ~OpenUrlWithConfigureCreateWidget() override;
+
+    Q_REQUIRED_RESULT OpenUrlWithInfo info() const;
+    void setInfo(const OpenUrlWithInfo &i);
 
 private:
     QLineEdit *const mServerName;

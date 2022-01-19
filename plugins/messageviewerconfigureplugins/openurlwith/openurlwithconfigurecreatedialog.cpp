@@ -4,7 +4,6 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "openurlwithconfigurecreatedialog.h"
-#include "openurlwithconfigurecreatewidget.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
@@ -30,4 +29,14 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
 
 OpenUrlWithConfigureCreateDialog::~OpenUrlWithConfigureCreateDialog()
 {
+}
+
+OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateDialog::info() const
+{
+    return mOpenUrlWithCreateWidget->info();
+}
+
+void OpenUrlWithConfigureCreateDialog::setInfo(const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo &i)
+{
+    mOpenUrlWithCreateWidget->setInfo(i);
 }

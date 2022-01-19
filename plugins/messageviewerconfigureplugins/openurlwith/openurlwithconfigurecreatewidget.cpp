@@ -27,3 +27,13 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
 {
 }
+
+OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateWidget::info() const
+{
+    return {};
+}
+
+void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
+{
+    // TODO
+}
