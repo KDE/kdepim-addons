@@ -30,10 +30,13 @@ OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
 
 OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateWidget::info() const
 {
-    return {};
+    OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info;
+
+    return info;
 }
 
 void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
 {
     // TODO
+    mServerName->setText(i.url);
 }
