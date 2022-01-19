@@ -10,6 +10,7 @@
 #include <KMessageBox>
 #include <QHeaderView>
 #include <QMenu>
+#include <QPointer>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -50,12 +51,20 @@ void OpenUrlWithConfigureWidget::writeSettings()
 
 void OpenUrlWithConfigureWidget::slotAddRule()
 {
-    // TODO
+    QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
+    if (dlg->exec()) {
+        // TODO
+    }
+    delete dlg;
 }
 
 void OpenUrlWithConfigureWidget::slotEditRule()
 {
-    // TODO
+    QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
+    if (dlg->exec()) {
+        // TODO
+    }
+    delete dlg;
 }
 
 void OpenUrlWithConfigureWidget::slotRemoveRule()
