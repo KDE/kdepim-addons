@@ -16,7 +16,7 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mOpenUrlWithCreateWidget->setObjectName(QStringLiteral("mOpenUrlWithWidget"));
+    mOpenUrlWithCreateWidget->setObjectName(QStringLiteral("mOpenUrlWithCreateWidget"));
     mainLayout->addWidget(mOpenUrlWithCreateWidget);
 
     auto buttonBox = new QDialogButtonBox(QDialogButtonBox::Ok | QDialogButtonBox::Cancel, this);

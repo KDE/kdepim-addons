@@ -6,7 +6,9 @@
 
 #include "openurlwithconfigurecreatedialogtest.h"
 #include "openurlwithconfigurecreatedialog.h"
+#include <QDialogButtonBox>
 #include <QTest>
+#include <QVBoxLayout>
 QTEST_MAIN(OpenUrlWithConfigureCreateDialogTest)
 OpenUrlWithConfigureCreateDialogTest::OpenUrlWithConfigureCreateDialogTest(QObject *parent)
     : QObject{parent}
@@ -15,6 +17,16 @@ OpenUrlWithConfigureCreateDialogTest::OpenUrlWithConfigureCreateDialogTest(QObje
 
 void OpenUrlWithConfigureCreateDialogTest::shouldHaveDefaultValues()
 {
-    OpenUrlWithConfigureCreateDialog d;
-    // TODO
+    OpenUrlWithConfigureCreateDialog dlg;
+    QVERIFY(!dlg.windowTitle().isEmpty());
+
+    auto mainLayout = dlg.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    QVERIFY(mainLayout);
+
+    auto mOpenUrlWithCreateWidget = dlg.findChild<OpenUrlWithConfigureCreateWidget *>(QStringLiteral("mOpenUrlWithCreateWidget"));
+    QVERIFY(mOpenUrlWithCreateWidget);
+
+    auto buttonBox = dlg.findChild<QDialogButtonBox *>(QStringLiteral("buttonBox"));
+    QVERIFY(buttonBox);
+    QCOMPARE(buttonBox->standardButtons(), {QDialogButtonBox::Ok | QDialogButtonBox::Cancel});
 }
