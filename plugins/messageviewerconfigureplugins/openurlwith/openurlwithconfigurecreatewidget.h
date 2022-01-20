@@ -25,4 +25,5 @@ public:
 
 private:
     QLineEdit *const mServerName;
+    QLineEdit *const mCommand;
 };
