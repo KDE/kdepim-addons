@@ -61,14 +61,17 @@ void OpenUrlWithConfigureWidget::slotAddRule()
 
 void OpenUrlWithConfigureWidget::slotEditRule()
 {
-    QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
-    OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info; // TODO
-    dlg->setInfo(info);
-    if (dlg->exec()) {
-        const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-        // TODO
+    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    if (item) {
+        QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
+        OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info; // TODO
+        dlg->setInfo(info);
+        if (dlg->exec()) {
+            const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
+            // TODO
+        }
+        delete dlg;
     }
-    delete dlg;
 }
 
 void OpenUrlWithConfigureWidget::slotRemoveRule()
