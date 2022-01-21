@@ -53,6 +53,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
 {
     QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
     if (dlg->exec()) {
+        const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
         // TODO
     }
     delete dlg;
@@ -61,7 +62,10 @@ void OpenUrlWithConfigureWidget::slotAddRule()
 void OpenUrlWithConfigureWidget::slotEditRule()
 {
     QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
+    OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info; // TODO
+    dlg->setInfo(info);
     if (dlg->exec()) {
+        const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
         // TODO
     }
     delete dlg;
