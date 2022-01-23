@@ -9,13 +9,13 @@
 #include "adblockinterceptor_debug.h"
 #include "adblockmanager.h"
 #include "adblockutil.h"
-#include <CustomTreeView>
 #include <KConfigGroup>
 #include <KIO/JobUiDelegate>
 #include <KIO/OpenUrlJob>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KTreeWidgetSearchLine>
+#include <PimCommon/CustomTreeView>
 #include <QApplication>
 #include <QClipboard>
 #include <QHeaderView>

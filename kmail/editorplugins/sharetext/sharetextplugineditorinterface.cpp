@@ -9,10 +9,10 @@
 #include "sharetextpurposemenuwidget.h"
 #include <KActionCollection>
 #include <KActionMenu>
-#include <KActionMenuChangeCase>
 #include <KLocalizedString>
 #include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
+#include <PimCommon/KActionMenuChangeCase>
 #include <QAction>
 
 ShareTextPluginEditorInterface::ShareTextPluginEditorInterface(QObject *parent)
