@@ -12,7 +12,7 @@
 
 #pragma once
 
-#include "transportconfigwidget.h"
+#include "mailtransport/transportconfigwidget.h"
 
 namespace MailTransport
 {

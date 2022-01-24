@@ -7,7 +7,7 @@
 #include "sendmailconfigdialog.h"
 #include "sendmailconfigwidget.h"
 
-#include "transport.h"
+#include "mailtransport/transport.h"
 
 #include <QDialogButtonBox>
 #include <QPushButton>
