@@ -10,7 +10,7 @@
 
 #include "sendmailjob.h"
 #include "sendmailplugin_debug.h"
-#include <mailtransport/transport.h>
+#include <MailTransport/Transport>
 
 #include <KLocalizedString>
 #include <KShell>

@@ -8,7 +8,7 @@
 
 #include <MessageViewer/HeaderStyle>
 
-#include <messageviewer/headerstyle_util.h>
+#include <MessageViewer/HeaderStyle_Util>
 namespace MessageViewer
 {
 class HeaderStyleUtil;

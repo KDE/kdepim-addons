@@ -5,7 +5,7 @@
 */
 
 #include "translatorview.h"
-#include <pimcommon/translatorwidget.h>
+#include <PimCommon/TranslatorWidget>
 
 #include <KActionCollection>
 #include <KLocalizedString>
