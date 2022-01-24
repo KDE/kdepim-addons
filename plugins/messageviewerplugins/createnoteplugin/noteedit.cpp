@@ -6,9 +6,9 @@
 
 #include "noteedit.h"
 #include "createnoteplugin_debug.h"
-#include "globalsettings_messageviewer.h"
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>
+#include <messageviewer/globalsettings_messageviewer.h>
 
 #include <Akonadi/CollectionComboBox>
 

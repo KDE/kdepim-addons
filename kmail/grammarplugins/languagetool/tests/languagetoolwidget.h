@@ -6,7 +6,7 @@
 
 #pragma once
 
-#include <PluginEditorGrammarCustomToolsViewInterface>
+#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
 class QNetworkAccessManager;
 class LanguageToolResultWidget;

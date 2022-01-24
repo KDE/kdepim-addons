@@ -6,11 +6,11 @@
 
 #include "noteedittest.h"
 #include "../createnoteplugin/noteedit.h"
-#include "globalsettings_messageviewer.h"
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/EntityTreeModel>
 #include <KMime/KMimeMessage>
+#include <messageviewer/globalsettings_messageviewer.h>
 
 #include <QLineEdit>
 #include <QPushButton>

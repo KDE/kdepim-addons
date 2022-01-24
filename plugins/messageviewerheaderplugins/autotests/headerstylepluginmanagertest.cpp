@@ -5,9 +5,9 @@
 */
 
 #include "headerstylepluginmanagertest.h"
-#include "headerstylemenumanager.h"
 #include <KActionCollection>
 #include <QTest>
+#include <messageviewer/headerstylemenumanager.h>
 
 HeaderStylePluginManagerTest::HeaderStylePluginManagerTest(QObject *parent)
     : QObject(parent)

@@ -10,8 +10,8 @@
 
 #pragma once
 
-#include "headerstyle_util.h"
 #include <MessageViewer/HeaderStyle>
+#include <messageviewer/headerstyle_util.h>
 namespace MessageViewer
 {
 class BriefHeaderStyle : public HeaderStyle

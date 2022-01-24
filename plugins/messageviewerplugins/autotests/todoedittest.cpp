@@ -6,7 +6,6 @@
 
 #include "todoedittest.h"
 #include "../createtodoplugin/todoedit.h"
-#include "globalsettings_messageviewer.h"
 #include <Akonadi/Collection>
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/EntityTreeModel>
@@ -14,6 +13,7 @@
 #include <QPushButton>
 #include <QStandardItemModel>
 #include <QTest>
+#include <messageviewer/globalsettings_messageviewer.h>
 #include <qtestkeyboard.h>
 #include <qtestmouse.h>
 

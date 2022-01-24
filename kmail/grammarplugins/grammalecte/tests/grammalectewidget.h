@@ -7,7 +7,7 @@
 #pragma once
 
 #include "grammalectegenerateconfigoptionjob.h"
-#include <PluginEditorGrammarCustomToolsViewInterface>
+#include <MessageComposer/PluginEditorGrammarCustomToolsViewInterface>
 #include <QWidget>
 class GrammalecteResultWidget;
 class QTextEdit;

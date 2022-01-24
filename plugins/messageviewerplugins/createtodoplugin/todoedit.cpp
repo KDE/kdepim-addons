@@ -6,9 +6,9 @@
 
 #include "todoedit.h"
 #include "createtodoplugin_debug.h"
-#include "globalsettings_messageviewer.h"
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
+#include <messageviewer/globalsettings_messageviewer.h>
 
 #include <KLocalizedString>
 #include <QIcon>

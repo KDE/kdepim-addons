@@ -7,9 +7,9 @@
 #include "eventedit.h"
 #include "createeventplugin_debug.h"
 #include "eventdatetimewidget.h"
-#include "globalsettings_messageviewer.h"
 #include <CalendarSupport/KCalPrefs>
 #include <CalendarSupport/Utils>
+#include <messageviewer/globalsettings_messageviewer.h>
 
 #include <KLocalizedString>
 #include <QDateTime>

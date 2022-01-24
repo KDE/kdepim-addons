@@ -5,7 +5,6 @@
 */
 
 #include "fancyheaderstyle.h"
-#include "messageviewer_debug.h"
 #include <MessageViewer/HeaderStyle_Util>
 
 #include <KTextToHTML>

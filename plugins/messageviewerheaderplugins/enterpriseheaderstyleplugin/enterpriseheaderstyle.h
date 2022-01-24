@@ -7,7 +7,7 @@
 
 #include <MessageViewer/HeaderStyle>
 
-#include <headerstyle_util.h>
+#include <messageviewer/headerstyle_util.h>
 namespace MessageViewer
 {
 class EnterpriseHeaderStyle : public HeaderStyle
