@@ -16,8 +16,6 @@
 
 #include <KLocalizedString>
 
-#include <KColorScheme>
-
 #include <QApplication>
 
 #include <KMime/DateFormatter>
