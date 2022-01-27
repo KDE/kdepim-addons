@@ -39,11 +39,13 @@ QString EnterpriseHeaderStyle::format(KMime::Message *message) const
     // colors depend on if it is encapsulated or not
     QColor fontColor(Qt::white);
     QString linkColor = QStringLiteral("class =\"white\"");
-    const QColor activeColor = KColorScheme(QPalette::Active, KColorScheme::Selection).background().color();
-    QColor activeColorDark = activeColor.darker(130);
+    if (!mActiveColor.isValid()) {
+        mActiveColor = KColorScheme(QPalette::Active, KColorScheme::Selection).background().color();
+    }
+    QColor activeColorDark = mActiveColor.darker(130);
     // reverse colors for encapsulated
     if (!isTopLevel()) {
-        activeColorDark = activeColor.darker(50);
+        activeColorDark = mActiveColor.darker(50);
         fontColor = QColor(Qt::black);
         linkColor = QStringLiteral("class =\"black\"");
     }
