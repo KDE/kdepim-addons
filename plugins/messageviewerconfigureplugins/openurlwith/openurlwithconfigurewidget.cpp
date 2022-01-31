@@ -8,6 +8,8 @@
 #include "openurlwithconfigurecreatedialog.h"
 #include <KLocalizedString>
 #include <KMessageBox>
+#include <MessageViewer/OpenUrlWithManager>
+#include <MessageViewer/OpenWithUrlInfo>
 #include <QHeaderView>
 #include <QMenu>
 #include <QPointer>
@@ -41,32 +43,29 @@ OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
 
 void OpenUrlWithConfigureWidget::loadSettings()
 {
-#if 0
-    const QVector<ConfirmBeforeDeletingRule> rules = ConfirmBeforeDeletingManager::self()->rules();
-    for (const ConfirmBeforeDeletingRule &r : rules) {
+    const QVector<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
+    for (const MessageViewer::OpenWithUrlInfo &r : rules) {
         auto item = new QTreeWidgetItem(mTreeWidget);
-        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(r.pattern(), ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType()));
-        initializeItem(item, info);
+        //        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(r.pattern(),
+        //        ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType())); initializeItem(item, info);
     }
-#endif
     // TODO
 }
 
 void OpenUrlWithConfigureWidget::writeSettings()
 {
-#if 0
-    // TODO
-    QVector<ConfirmBeforeDeletingRule> rules;
+    QVector<MessageViewer::OpenWithUrlInfo> rules;
     for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
+#if 0
         QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
         ConfirmBeforeDeletingRule r;
         r.setPattern(item->text(1));
         r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
         rules.append(r);
-    }
-    ConfirmBeforeDeletingManager::self()->setRules(rules);
-    ConfirmBeforeDeletingManager::self()->saveRules();
 #endif
+    }
+    MessageViewer::OpenUrlWithManager::self()->setOpenWithUrlInfo(rules);
+    // TODO MessageViewer::OpenUrlWithManager::self()->saveRules();
 }
 
 void OpenUrlWithConfigureWidget::slotAddRule()
