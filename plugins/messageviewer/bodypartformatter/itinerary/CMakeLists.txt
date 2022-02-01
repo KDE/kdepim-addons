@@ -33,7 +33,7 @@ target_link_libraries(messageviewer_bodypartformatter_semantic
     KF5::CalendarSupport
     KF5::I18n
     KF5::GrantleeTheme
-    Grantlee5::Templates
+    ${TEMPLATES_LIB}
     Qt${QT_MAJOR_VERSION}::DBus
     KF5::Prison
     KPim::Itinerary

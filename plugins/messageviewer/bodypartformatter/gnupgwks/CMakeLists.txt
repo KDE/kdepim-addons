@@ -47,7 +47,7 @@ target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
     KF5::I18n
     KF5::Mime
     KF5::IdentityManagement
-    Grantlee5::Templates
+    ${TEMPLATES_LIB}
     Gpgmepp
     )
 install(TARGETS messageviewer_bodypartformatter_application_gnupgwks DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

@@ -12,7 +12,7 @@ target_link_libraries(messageviewer_bodypartformatter_text_highlighter
     Qt${QT_MAJOR_VERSION}::Core
     KF5::MessageViewer
     KF5::SyntaxHighlighting
-    Grantlee5::Templates
+    ${TEMPLATES_LIB}
 )
 
 install(TARGETS messageviewer_bodypartformatter_text_highlighter DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)

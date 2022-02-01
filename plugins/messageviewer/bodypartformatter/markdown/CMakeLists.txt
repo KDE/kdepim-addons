@@ -21,7 +21,7 @@ endif()
 target_link_libraries(messageviewer_bodypartformatter_text_markdown
     Qt${QT_MAJOR_VERSION}::Core
     KF5::MessageViewer
-    Grantlee5::Templates
+    ${TEMPLATES_LIB}
 )
 
 install(TARGETS messageviewer_bodypartformatter_text_markdown DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
