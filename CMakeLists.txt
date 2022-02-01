@@ -128,9 +128,13 @@ find_package(KPimPkPass ${KPIMPKPASS_LIB_VERSION} CONFIG REQUIRED)
 find_package(KPimItinerary ${KPIMITINERARY_LIB_VERSION} CONFIG REQUIRED)
 find_package(KF5KontactInterface ${KONTACTINTERFACE_LIB_VERSION} CONFIG REQUIRED)
 
-set(GRANTLEE_LIB_VERSION "5.2.0")
-find_package(Grantlee5 ${GRANTLEE_LIB_VERSION} CONFIG REQUIRED)
-
+if (QT_MAJOR_VERSION STREQUAL "5")
+    find_package(Grantlee5 "5.2" CONFIG REQUIRED)
+    set(TEMPLATES_LIB Grantlee5::Templates)
+else()
+    find_package(KF6TextTemplate ${KF5_MIN_VERSION} CONFIG REQUIRED)
+    set(TEMPLATES_LIB KF6TextTemplate::Templates)
+endif()
 
 if(BUILD_TESTING)
    add_definitions(-DBUILD_TESTING)
