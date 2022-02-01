@@ -65,7 +65,7 @@ void OpenUrlWithConfigureWidget::writeSettings()
 #endif
     }
     MessageViewer::OpenUrlWithManager::self()->setOpenWithUrlInfo(rules);
-    // TODO MessageViewer::OpenUrlWithManager::self()->saveRules();
+    MessageViewer::OpenUrlWithManager::self()->saveRules();
 }
 
 void OpenUrlWithConfigureWidget::slotAddRule()
