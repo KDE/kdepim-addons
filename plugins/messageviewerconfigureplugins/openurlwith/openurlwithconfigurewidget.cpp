@@ -46,23 +46,20 @@ void OpenUrlWithConfigureWidget::loadSettings()
     const QVector<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
     for (const MessageViewer::OpenWithUrlInfo &r : rules) {
         auto item = new QTreeWidgetItem(mTreeWidget);
-        //        const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo info(r.pattern(),
-        //        ConfirmBeforeDeletingRule::ruleTypeToString(r.ruleType())); initializeItem(item, info);
+        item->setText(0, r.url());
+        item->setText(1, r.command());
     }
-    // TODO
 }
 
 void OpenUrlWithConfigureWidget::writeSettings()
 {
     QVector<MessageViewer::OpenWithUrlInfo> rules;
     for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
-#if 0
         QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
-        ConfirmBeforeDeletingRule r;
-        r.setPattern(item->text(1));
-        r.setRuleType(ConfirmBeforeDeletingRule::stringToRuleType(item->text(0)));
+        MessageViewer::OpenWithUrlInfo r;
+        r.setCommand(item->text(1));
+        r.setUrl(item->text(0));
         rules.append(r);
-#endif
     }
     MessageViewer::OpenUrlWithManager::self()->setOpenWithUrlInfo(rules);
     MessageViewer::OpenUrlWithManager::self()->saveRules();
@@ -73,7 +70,9 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-        // TODO
+        auto item = new QTreeWidgetItem(mTreeWidget);
+        item->setText(0, info.url);
+        item->setText(1, info.command);
     }
     delete dlg;
 }
@@ -83,11 +82,14 @@ void OpenUrlWithConfigureWidget::slotEditRule()
     QTreeWidgetItem *item = mTreeWidget->currentItem();
     if (item) {
         QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
-        OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info; // TODO
+        OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info;
+        info.command = item->text(1);
+        info.url = item->text(0);
         dlg->setInfo(info);
         if (dlg->exec()) {
             const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-            // TODO
+            item->setText(0, info.url);
+            item->setText(1, info.command);
         }
         delete dlg;
     }

@@ -26,6 +26,6 @@ void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()
 
     auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
     QVERIFY(mTreeWidget);
-    QVERIFY(mTreeWidget->rootIsDecorated());
+    QVERIFY(!mTreeWidget->rootIsDecorated());
     QVERIFY(!mTreeWidget->header()->sectionsMovable());
 }
