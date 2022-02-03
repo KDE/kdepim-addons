@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.16 FATAL_ERROR)
-set(PIM_VERSION "5.19.2")
+set(PIM_VERSION "5.19.3")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 
