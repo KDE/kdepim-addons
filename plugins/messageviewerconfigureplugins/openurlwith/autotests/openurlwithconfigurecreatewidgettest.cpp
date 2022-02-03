@@ -6,9 +6,9 @@
 
 #include "openurlwithconfigurecreatewidgettest.h"
 #include "openurlwithconfigurecreatewidget.h"
+#include <QFormLayout>
 #include <QLineEdit>
 #include <QTest>
-#include <QVBoxLayout>
 QTEST_MAIN(OpenUrlWithConfigureCreateWidgetTest)
 OpenUrlWithConfigureCreateWidgetTest::OpenUrlWithConfigureCreateWidgetTest(QObject *parent)
     : QObject{parent}
@@ -19,7 +19,7 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
 {
     OpenUrlWithConfigureCreateWidget w;
 
-    auto mainLayout = w.findChild<QVBoxLayout *>(QStringLiteral("mainlayout"));
+    auto mainLayout = w.findChild<QFormLayout *>(QStringLiteral("mainlayout"));
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins{});
 

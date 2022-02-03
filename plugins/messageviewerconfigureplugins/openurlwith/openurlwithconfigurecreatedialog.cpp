@@ -12,7 +12,7 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
     : QDialog(parent)
     , mOpenUrlWithCreateWidget(new OpenUrlWithConfigureCreateWidget(this))
 {
-    setWindowTitle(i18nc("@title:window", "Configure Open Url With Plugin"));
+    setWindowTitle(i18nc("@title:window", "Create"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
@@ -38,5 +38,6 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateDial
 
 void OpenUrlWithConfigureCreateDialog::setInfo(const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo &i)
 {
+    setWindowTitle(i18nc("@title:window", "Edit"));
     mOpenUrlWithCreateWidget->setInfo(i);
 }
