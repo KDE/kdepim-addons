@@ -235,7 +235,9 @@ void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
 void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto fileName = createItineraryFile(part);
-    QProcess::startDetached(m_appPath, {fileName});
+    if (m_appPath.isEmpty() || !QProcess::startDetached(m_appPath, {fileName})) {
+        qCWarning(ITINERARY_LOG) << "Could not find application in PATH." << m_appPath;
+    }
 }
 
 void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const

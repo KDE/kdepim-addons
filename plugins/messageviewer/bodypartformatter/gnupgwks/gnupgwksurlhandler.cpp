@@ -54,7 +54,11 @@ bool ApplicationGnuPGWKSUrlHandler::handleClick(MessageViewer::Viewer *viewerIns
 
     const QUrlQuery q(path.mid(sizeof("gnupgwks?") - 1));
     if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("show")) {
-        QProcess::startDetached(QStringLiteral("kleopatra"), {QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr"))});
+        const QString progFullPath = QStandardPaths::findExecutable(QStringLiteral("kleopatra"));
+        if (progFullPath.isEmpty()
+            || !QProcess::startDetached(QStringLiteral("kleopatra"), {QStringLiteral("--query"), q.queryItemValue(QStringLiteral("fpr"))})) {
+            return false;
+        }
         return true;
     } else if (q.queryItemValue(QStringLiteral("action")) == QLatin1String("confirm")) {
         GnuPGWKSMessagePart mp(part);
