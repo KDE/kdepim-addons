@@ -15,6 +15,7 @@ public:
     struct OpenUrlWithInfo {
         QString command;
         QString url;
+        Q_REQUIRED_RESULT bool isValid() const;
     };
 
     explicit OpenUrlWithConfigureCreateWidget(QWidget *parent = nullptr);
@@ -22,7 +23,6 @@ public:
 
     Q_REQUIRED_RESULT OpenUrlWithInfo info() const;
     void setInfo(const OpenUrlWithInfo &i);
-
 private:
     QLineEdit *const mServerName;
     QLineEdit *const mCommand;

@@ -70,9 +70,11 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-        auto item = new QTreeWidgetItem(mTreeWidget);
-        item->setText(0, info.url);
-        item->setText(1, info.command);
+        if (info.isValid()) {
+            auto item = new QTreeWidgetItem(mTreeWidget);
+            item->setText(0, info.url);
+            item->setText(1, info.command);
+        }
     }
     delete dlg;
 }
@@ -88,8 +90,10 @@ void OpenUrlWithConfigureWidget::slotEditRule()
         dlg->setInfo(info);
         if (dlg->exec()) {
             const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
-            item->setText(0, info.url);
-            item->setText(1, info.command);
+            if (info.isValid()) {
+                item->setText(0, info.url);
+                item->setText(1, info.command);
+            }
         }
         delete dlg;
     }

@@ -43,3 +43,8 @@ void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
     mServerName->setText(i.url);
     mCommand->setText(i.command);
 }
+
+bool OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo::isValid() const
+{
+    return !url.trimmed().isEmpty() && !command.trimmed().isEmpty();
+}
