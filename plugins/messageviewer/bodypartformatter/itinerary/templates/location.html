@@ -1,12 +1,12 @@
 {% if location.geo.isValid %}
     <div style="display:inline-block;vertical-align:middle;">
-    <a href="https://www.openstreetmap.org/#map={% if location.className == "Airport" %}13{% else %}17{% endif %}/{{ location.geo.latitude }}/{{ location.geo.longitude }}">
+    <a href="geo:{{ location.geo.latitude }},{{ location.geo.longitude }}?z={% if location.className == "Airport" %}13{% else %}17{% endif %}">
         {% icon "map-symbolic" small _("Show location on map") %}
     </a>
     </div>
 {% elif location.address.addressLocality or location.address.streetAddress %}
     <div style="display:inline-block;vertical-align:middle;">
-    <a href="https://www.openstreetmap.org/search?query={{ location.address.streetAddress }},{{ location.address.postalCode }} {{ location.address.addressLocality }},{{ location.address.addressCountry }}">
+    <a href="{{ location.geoUri }}">
         {% icon "map-symbolic" small _("Search address on map") %}
     </a>
     </div>
