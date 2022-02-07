@@ -36,6 +36,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
         "</ul>"
         "</strong></p></qt>");
     formatHelp->setWhatsThis(mCommandWhatsThis);
+    mainLayout->addWidget(formatHelp);
 
     mCommand->setObjectName(QStringLiteral("mCommand"));
     mainLayout->addRow(i18n("Command:"), mCommand);

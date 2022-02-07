@@ -7,6 +7,7 @@
 #include "openurlwithconfigurecreatewidgettest.h"
 #include "openurlwithconfigurecreatewidget.h"
 #include <QFormLayout>
+#include <QLabel>
 #include <QLineEdit>
 #include <QTest>
 QTEST_MAIN(OpenUrlWithConfigureCreateWidgetTest)
@@ -30,4 +31,8 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
     auto mCommand = w.findChild<QLineEdit *>(QStringLiteral("mCommand"));
     QVERIFY(mCommand);
     QVERIFY(mCommand->text().isEmpty());
+
+    auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
+    QVERIFY(formatHelp);
+    QCOMPARE(formatHelp->contextMenuPolicy(), Qt::NoContextMenu);
 }
