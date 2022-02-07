@@ -9,6 +9,7 @@
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
+#include <QWhatsThis>
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
     , mServerName(new QLineEdit(this))
@@ -22,12 +23,33 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mServerName->setObjectName(QStringLiteral("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
 
+    auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
+    formatHelp->setObjectName(QStringLiteral("formatHelp"));
+    formatHelp->setContextMenuPolicy(Qt::NoContextMenu);
+    connect(formatHelp, &QLabel::linkActivated, this, &OpenUrlWithConfigureCreateWidget::slotLinkClicked);
+
+    mCommandWhatsThis = i18n(
+        "<qt><p><strong>These expressions may be used for the arguments:"
+        "</strong></p>"
+        "<ul>"
+        "<li>%u - url used by command</li>"
+        "</ul>"
+        "</strong></p></qt>");
+    formatHelp->setWhatsThis(mCommandWhatsThis);
+
     mCommand->setObjectName(QStringLiteral("mCommand"));
     mainLayout->addRow(i18n("Command:"), mCommand);
 }
 
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
 {
+}
+
+void OpenUrlWithConfigureCreateWidget::slotLinkClicked(const QString &link)
+{
+    if (link == QLatin1String("whatsthis1")) {
+        QWhatsThis::showText(QCursor::pos(), mCommandWhatsThis);
+    }
 }
 
 OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateWidget::info() const

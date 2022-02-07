@@ -24,6 +24,8 @@ public:
     Q_REQUIRED_RESULT OpenUrlWithInfo info() const;
     void setInfo(const OpenUrlWithInfo &i);
 private:
+    void slotLinkClicked(const QString &link);
+    QString mCommandWhatsThis;
     QLineEdit *const mServerName;
     QLineEdit *const mCommand;
 };
