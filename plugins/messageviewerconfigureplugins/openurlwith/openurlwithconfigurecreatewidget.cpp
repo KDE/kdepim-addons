@@ -6,6 +6,7 @@
 
 #include "openurlwithconfigurecreatewidget.h"
 #include <KLocalizedString>
+#include <Libkdepim/LineEditCatchReturnKey>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -22,6 +23,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
 
     mServerName->setObjectName(QStringLiteral("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
+    KPIM::LineEditCatchReturnKey(mServerName, this);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
     formatHelp->setObjectName(QStringLiteral("formatHelp"));
@@ -40,6 +42,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
 
     mCommand->setObjectName(QStringLiteral("mCommand"));
     mainLayout->addRow(i18n("Command:"), mCommand);
+    KPIM::LineEditCatchReturnKey(mCommand, this);
 }
 
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()

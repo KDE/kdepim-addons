@@ -42,6 +42,7 @@ target_link_libraries(openurlwithconfigure
     KF5::I18n
     KF5::MessageViewer
     KF5::ItemViews
+    KF5::Libkdepim
     )
 
 set_target_properties(openurlwithconfigure
