@@ -25,7 +25,7 @@ MessageComposer::PluginEditorInterface *ZoomTextPluginEditor::createInterface(QO
 
 bool ZoomTextPluginEditor::hasPopupMenuSupport() const
 {
-    return false;
+    return true;
 }
 
 bool ZoomTextPluginEditor::hasStatusBarSupport() const
