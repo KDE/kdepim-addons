@@ -15,6 +15,7 @@
         "Description[sv]": "Insticksprogrammet gör det möjligt att ställa in vilka program som används för specifika webbadresser.",
         "Description[uk]": "За допомогою цього додатка можна налаштувати те, які програми буде використано для певної адреси.",
         "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
+        "Description[zh_CN]": "此插件用于指定特定 URL 用何种应用程序打开。",
         "Name": "Open Url With",
         "Name[ca@valencia]": "Obri l'URL amb",
         "Name[ca]": "Obre l'URL amb",
@@ -30,6 +31,7 @@
         "Name[sv]": "Öppna webbadress med",
         "Name[uk]": "Відкриття адрес за допомогою програм",
         "Name[x-test]": "xxOpen Url Withxx",
+        "Name[zh_CN]": "打开 URL 方式",
         "Version": "1.0"
     },
     "X-KDE-MessageViewer-Configure-Order": "100"
