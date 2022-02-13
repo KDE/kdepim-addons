@@ -55,8 +55,8 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
     mExecutable->lineEdit()->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Executable:"), mExecutable);
-    //    connect(mName, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
-    //    connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
+    connect(mServerName, &QLineEdit::textChanged, this, &OpenUrlWithConfigureCreateWidget::slotInfoChanged);
+    connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &OpenUrlWithConfigureCreateWidget::slotInfoChanged);
 }
 
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
@@ -89,4 +89,9 @@ void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
 bool OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo::isValid() const
 {
     return !url.trimmed().isEmpty() && !command.trimmed().isEmpty();
+}
+
+void OpenUrlWithConfigureCreateWidget::slotInfoChanged()
+{
+    Q_EMIT updateOkButton(!mServerName->text().trimmed().isEmpty() && !mExecutable->text().trimmed().isEmpty());
 }

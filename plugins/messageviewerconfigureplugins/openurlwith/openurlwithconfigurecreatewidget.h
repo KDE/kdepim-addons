@@ -25,8 +25,12 @@ public:
 
     Q_REQUIRED_RESULT OpenUrlWithInfo info() const;
     void setInfo(const OpenUrlWithInfo &i);
+Q_SIGNALS:
+    void updateOkButton(bool enabled);
+
 private:
     void slotLinkClicked(const QString &link);
+    void slotInfoChanged();
     QString mCommandWhatsThis;
     QLineEdit *const mServerName;
     QLineEdit *const mCommandLine;

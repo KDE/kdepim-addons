@@ -6,6 +6,7 @@
 #include "openurlwithconfigurecreatedialog.h"
 #include <KLocalizedString>
 #include <QDialogButtonBox>
+#include <QPushButton>
 #include <QVBoxLayout>
 
 OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *parent)
@@ -25,6 +26,11 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
 
     connect(buttonBox, &QDialogButtonBox::accepted, this, &OpenUrlWithConfigureCreateDialog::accept);
     connect(buttonBox, &QDialogButtonBox::rejected, this, &OpenUrlWithConfigureCreateDialog::reject);
+    QPushButton *okButton = buttonBox->button(QDialogButtonBox::Ok);
+    okButton->setEnabled(false);
+    connect(mOpenUrlWithCreateWidget, &OpenUrlWithConfigureCreateWidget::updateOkButton, this, [okButton](bool enabled) {
+        okButton->setEnabled(enabled);
+    });
 }
 
 OpenUrlWithConfigureCreateDialog::~OpenUrlWithConfigureCreateDialog()
