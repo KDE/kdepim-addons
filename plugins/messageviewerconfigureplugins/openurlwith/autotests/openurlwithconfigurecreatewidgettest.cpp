@@ -6,6 +6,7 @@
 
 #include "openurlwithconfigurecreatewidgettest.h"
 #include "openurlwithconfigurecreatewidget.h"
+#include <KUrlRequester>
 #include <QFormLayout>
 #include <QLabel>
 #include <QLineEdit>
@@ -28,11 +29,14 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mServerName);
     QVERIFY(mServerName->text().isEmpty());
 
-    auto mCommand = w.findChild<QLineEdit *>(QStringLiteral("mCommand"));
-    QVERIFY(mCommand);
-    QVERIFY(mCommand->text().isEmpty());
+    auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("mCommandLine"));
+    QVERIFY(mCommandLine);
+    QVERIFY(mCommandLine->text().isEmpty());
 
     auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
     QVERIFY(formatHelp);
     QCOMPARE(formatHelp->contextMenuPolicy(), Qt::NoContextMenu);
+
+    auto mExecutable = w.findChild<KUrlRequester *>(QStringLiteral("mEditorRequester"));
+    QVERIFY(mExecutable);
 }

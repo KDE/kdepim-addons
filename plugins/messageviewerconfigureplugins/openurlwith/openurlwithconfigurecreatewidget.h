@@ -8,12 +8,14 @@
 #include "openurlwith_private_export.h"
 #include <QWidget>
 class QLineEdit;
+class KUrlRequester;
 class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureCreateWidget : public QWidget
 {
     Q_OBJECT
 public:
     struct OpenUrlWithInfo {
         QString command;
+        QString commandLines;
         QString url;
         Q_REQUIRED_RESULT bool isValid() const;
     };
@@ -27,5 +29,6 @@ private:
     void slotLinkClicked(const QString &link);
     QString mCommandWhatsThis;
     QLineEdit *const mServerName;
-    QLineEdit *const mCommand;
+    QLineEdit *const mCommandLine;
+    KUrlRequester *const mExecutable;
 };

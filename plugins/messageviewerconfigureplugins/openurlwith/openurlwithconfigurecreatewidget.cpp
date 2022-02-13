@@ -5,7 +5,9 @@
 */
 
 #include "openurlwithconfigurecreatewidget.h"
+#include <KLineEdit>
 #include <KLocalizedString>
+#include <KUrlRequester>
 #include <Libkdepim/LineEditCatchReturnKey>
 #include <QFormLayout>
 #include <QLabel>
@@ -14,7 +16,8 @@
 OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *parent)
     : QWidget{parent}
     , mServerName(new QLineEdit(this))
-    , mCommand(new QLineEdit(this))
+    , mCommandLine(new QLineEdit(this))
+    , mExecutable(new KUrlRequester(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
@@ -40,9 +43,20 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     formatHelp->setWhatsThis(mCommandWhatsThis);
     mainLayout->addWidget(formatHelp);
 
-    mCommand->setObjectName(QStringLiteral("mCommand"));
-    mainLayout->addRow(i18n("Command:"), mCommand);
-    KPIM::LineEditCatchReturnKey(mCommand, this);
+    mCommandLine->setObjectName(QStringLiteral("mCommandLine"));
+    mainLayout->addRow(i18n("Command:"), mCommandLine);
+    KPIM::LineEditCatchReturnKey(mCommandLine, this);
+
+    mExecutable->setObjectName(QStringLiteral("mEditorRequester"));
+
+    mExecutable->setMimeTypeFilters(
+        {QStringLiteral("application/x-executable"), QStringLiteral("application/x-shellscript"), QStringLiteral("application/x-desktop")});
+
+    mExecutable->setMode(KFile::File | KFile::ExistingOnly | KFile::LocalOnly);
+    mExecutable->lineEdit()->setClearButtonEnabled(true);
+    mainLayout->addRow(i18n("Executable:"), mExecutable);
+    //    connect(mName, &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
+    //    connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &ViewerPluginExternalEditWidget::slotInfoChanged);
 }
 
 OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
@@ -60,14 +74,16 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateWidg
 {
     OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info;
     info.url = mServerName->text().trimmed();
-    info.command = mCommand->text().trimmed();
+    info.command = mExecutable->text().trimmed();
+    info.commandLines = mCommandLine->text().trimmed();
     return info;
 }
 
 void OpenUrlWithConfigureCreateWidget::setInfo(const OpenUrlWithInfo &i)
 {
     mServerName->setText(i.url);
-    mCommand->setText(i.command);
+    mExecutable->setText(i.command);
+    mCommandLine->setText(i.commandLines);
 }
 
 bool OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo::isValid() const
