@@ -41,7 +41,11 @@ void ViewerPluginExternalScriptItem::setScriptInfo(const ViewerPluginExternalScr
 {
     mScriptInfo = scriptInfo;
     setText(mScriptInfo.name());
-    setToolTip(mScriptInfo.description());
+    QString commandLine = mScriptInfo.executable();
+    if (!mScriptInfo.commandLine().isEmpty()) {
+        commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
+    }
+    setToolTip(mScriptInfo.description() + QStringLiteral(" (%1)").arg(commandLine));
 }
 
 ViewerPluginExternalScriptInfo ViewerPluginExternalScriptItem::scriptInfo() const
