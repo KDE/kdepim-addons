@@ -74,6 +74,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
             auto item = new QTreeWidgetItem(mTreeWidget);
             item->setText(0, info.url);
             item->setText(1, info.command);
+            // TODO verify if info is duplicate or not.
         }
     }
     delete dlg;
@@ -93,6 +94,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
             if (info.isValid()) {
                 item->setText(0, info.url);
                 item->setText(1, info.command);
+                // TODO verify if info is duplicate or not.
             }
         }
         delete dlg;
