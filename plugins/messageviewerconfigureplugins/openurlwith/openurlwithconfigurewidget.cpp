@@ -59,6 +59,7 @@ void OpenUrlWithConfigureWidget::writeSettings()
         MessageViewer::OpenWithUrlInfo r;
         r.setCommand(item->text(1));
         r.setUrl(item->text(0));
+        // TODO add command lines
         rules.append(r);
     }
     MessageViewer::OpenUrlWithManager::self()->setOpenWithUrlInfo(rules);
@@ -74,6 +75,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
             auto item = new QTreeWidgetItem(mTreeWidget);
             item->setText(0, info.url);
             item->setText(1, info.command);
+            // TODO add command lines
             // TODO verify if info is duplicate or not.
         }
     }
@@ -95,6 +97,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
                 item->setText(0, info.url);
                 item->setText(1, info.command);
                 // TODO verify if info is duplicate or not.
+                // TODO add command lines
             }
         }
         delete dlg;
