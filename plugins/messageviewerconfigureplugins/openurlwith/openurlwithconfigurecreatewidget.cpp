@@ -44,7 +44,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mainLayout->addWidget(formatHelp);
 
     mCommandLine->setObjectName(QStringLiteral("mCommandLine"));
-    mainLayout->addRow(i18n("Command:"), mCommandLine);
+    mainLayout->addRow(i18n("Command line:"), mCommandLine);
     KPIM::LineEditCatchReturnKey(mCommandLine, this);
 
     mExecutable->setObjectName(QStringLiteral("mEditorRequester"));

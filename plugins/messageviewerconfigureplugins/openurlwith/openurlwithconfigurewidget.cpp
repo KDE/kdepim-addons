@@ -11,30 +11,60 @@
 #include <MessageViewer/OpenUrlWithManager>
 #include <MessageViewer/OpenWithUrlInfo>
 #include <QHeaderView>
+#include <QListWidget>
 #include <QMenu>
 #include <QPointer>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
+class OpenUrlWithConfigureItem : public QListWidgetItem
+{
+public:
+    OpenUrlWithConfigureItem(QListWidget *parent);
+
+    void setInfo(const MessageViewer::OpenWithUrlInfo &info);
+    Q_REQUIRED_RESULT MessageViewer::OpenWithUrlInfo info() const;
+
+private:
+    MessageViewer::OpenWithUrlInfo mScriptInfo;
+};
+
+OpenUrlWithConfigureItem::OpenUrlWithConfigureItem(QListWidget *parent)
+    : QListWidgetItem(parent)
+{
+}
+
+void OpenUrlWithConfigureItem::setInfo(const MessageViewer::OpenWithUrlInfo &scriptInfo)
+{
+    mScriptInfo = scriptInfo;
+    setText(mScriptInfo.command());
+    QString commandLine = mScriptInfo.command();
+    if (!mScriptInfo.commandLine().isEmpty()) {
+        commandLine += QLatin1Char(' ') + mScriptInfo.commandLine();
+    }
+    setToolTip(commandLine);
+}
+
+MessageViewer::OpenWithUrlInfo OpenUrlWithConfigureItem::info() const
+{
+    return mScriptInfo;
+}
+
 OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     : QWidget{parent}
-    , mTreeWidget(new QTreeWidget(this))
+    , mListWidget(new QListWidget(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(QMargins());
 
-    mTreeWidget->setObjectName(QStringLiteral("mTreeWidget"));
-    mainLayout->addWidget(mTreeWidget);
-    mTreeWidget->setRootIsDecorated(false);
-    mTreeWidget->header()->setSectionsMovable(false);
-    mTreeWidget->setHeaderLabels({i18n("Domain"), i18n("Command Line")});
-    mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
-    mTreeWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
-    mTreeWidget->header()->setSortIndicatorShown(true);
-    mTreeWidget->setSortingEnabled(true);
-    connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &OpenUrlWithConfigureWidget::slotCustomContextMenuRequested);
-    connect(mTreeWidget, &QTreeWidget::itemDoubleClicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
+    mListWidget->setObjectName(QStringLiteral("mListWidget"));
+    mainLayout->addWidget(mListWidget);
+    mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
+    mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    mListWidget->setSortingEnabled(true);
+    connect(mListWidget, &QListWidget::customContextMenuRequested, this, &OpenUrlWithConfigureWidget::slotCustomContextMenuRequested);
+    connect(mListWidget, &QListWidget::itemDoubleClicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
 }
 
 OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
@@ -45,21 +75,18 @@ void OpenUrlWithConfigureWidget::loadSettings()
 {
     const QVector<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
     for (const MessageViewer::OpenWithUrlInfo &r : rules) {
-        auto item = new QTreeWidgetItem(mTreeWidget);
-        item->setText(0, r.url());
-        item->setText(1, r.command());
+        auto item = new OpenUrlWithConfigureItem(mListWidget);
+        item->setInfo(r);
+        item->setText(r.command());
     }
 }
 
 void OpenUrlWithConfigureWidget::writeSettings()
 {
     QVector<MessageViewer::OpenWithUrlInfo> rules;
-    for (int i = 0, total = mTreeWidget->topLevelItemCount(); i < total; ++i) {
-        QTreeWidgetItem *item = mTreeWidget->topLevelItem(i);
-        MessageViewer::OpenWithUrlInfo r;
-        r.setCommand(item->text(1));
-        r.setUrl(item->text(0));
-        // TODO add command lines
+    for (int i = 0, total = mListWidget->count(); i < total; ++i) {
+        OpenUrlWithConfigureItem *item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
+        const MessageViewer::OpenWithUrlInfo r = item->info();
         rules.append(r);
     }
     MessageViewer::OpenUrlWithManager::self()->setOpenWithUrlInfo(rules);
@@ -72,11 +99,12 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
         if (info.isValid()) {
-            auto item = new QTreeWidgetItem(mTreeWidget);
-            item->setText(0, info.url);
-            item->setText(1, info.command);
-            // TODO add command lines
-            // TODO verify if info is duplicate or not.
+            auto item = new OpenUrlWithConfigureItem(mListWidget);
+            MessageViewer::OpenWithUrlInfo r;
+            r.setCommand(info.command);
+            r.setCommandLine(info.commandLines);
+            r.setUrl(info.url);
+            item->setInfo(r);
         }
     }
     delete dlg;
@@ -84,20 +112,23 @@ void OpenUrlWithConfigureWidget::slotAddRule()
 
 void OpenUrlWithConfigureWidget::slotEditRule()
 {
-    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    OpenUrlWithConfigureItem *item = dynamic_cast<OpenUrlWithConfigureItem *>(mListWidget->currentItem());
     if (item) {
         QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
         OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info;
-        info.command = item->text(1);
-        info.url = item->text(0);
+        MessageViewer::OpenWithUrlInfo r = item->info();
+        info.command = r.command();
+        info.url = r.url();
+        info.commandLines = r.commandLine();
         dlg->setInfo(info);
         if (dlg->exec()) {
             const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
             if (info.isValid()) {
-                item->setText(0, info.url);
-                item->setText(1, info.command);
-                // TODO verify if info is duplicate or not.
-                // TODO add command lines
+                r.setCommand(info.command);
+                r.setCommandLine(info.commandLines);
+                r.setUrl(info.url);
+                item->setInfo(r);
+                item->setText(info.command);
             }
         }
         delete dlg;
@@ -106,7 +137,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
 
 void OpenUrlWithConfigureWidget::slotRemoveRule()
 {
-    auto items = mTreeWidget->selectedItems();
+    auto items = mListWidget->selectedItems();
     if (!items.isEmpty()) {
         const int answer = KMessageBox::questionYesNo(this,
                                                       i18np("Do you want to remove this rule?", "Do you want to remove these rules?", items.count()),
@@ -125,7 +156,7 @@ void OpenUrlWithConfigureWidget::slotRemoveRule()
 void OpenUrlWithConfigureWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
     QMenu menu(this);
-    const int selectedItemCount{mTreeWidget->selectedItems().count()};
+    const int selectedItemCount{mListWidget->selectedItems().count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &OpenUrlWithConfigureWidget::slotAddRule);
     if (selectedItemCount == 1) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &OpenUrlWithConfigureWidget::slotEditRule);

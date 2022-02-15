@@ -8,7 +8,7 @@
 
 #include "openurlwith_private_export.h"
 #include <QWidget>
-class QTreeWidget;
+class QListWidget;
 class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -23,5 +23,5 @@ private:
     void slotAddRule();
     void slotEditRule();
     void slotRemoveRule();
-    QTreeWidget *const mTreeWidget;
+    QListWidget *const mListWidget;
 };

@@ -6,9 +6,8 @@
 
 #include "openurlwithconfigurewidgettest.h"
 #include "openurlwithconfigurewidget.h"
-#include <QHeaderView>
+#include <QListWidget>
 #include <QTest>
-#include <QTreeWidget>
 #include <QVBoxLayout>
 QTEST_MAIN(OpenUrlWithConfigureWidgetTest)
 OpenUrlWithConfigureWidgetTest::OpenUrlWithConfigureWidgetTest(QObject *parent)
@@ -24,8 +23,6 @@ void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mainLayout);
     QCOMPARE(mainLayout->contentsMargins(), QMargins());
 
-    auto mTreeWidget = w.findChild<QTreeWidget *>(QStringLiteral("mTreeWidget"));
-    QVERIFY(mTreeWidget);
-    QVERIFY(!mTreeWidget->rootIsDecorated());
-    QVERIFY(!mTreeWidget->header()->sectionsMovable());
+    auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
+    QVERIFY(mListWidget);
 }
