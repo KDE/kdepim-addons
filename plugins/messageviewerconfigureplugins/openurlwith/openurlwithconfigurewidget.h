@@ -9,6 +9,11 @@
 #include "openurlwith_private_export.h"
 #include <QWidget>
 class QListWidget;
+class OpenUrlWithConfigureItem;
+namespace MessageViewer
+{
+class OpenWithUrlInfo;
+}
 class LIBOPENURLWITHCONFIGURE_TESTS_EXPORT OpenUrlWithConfigureWidget : public QWidget
 {
     Q_OBJECT
@@ -23,5 +28,6 @@ private:
     void slotAddRule();
     void slotEditRule();
     void slotRemoveRule();
+    void displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item);
     QListWidget *const mListWidget;
 };

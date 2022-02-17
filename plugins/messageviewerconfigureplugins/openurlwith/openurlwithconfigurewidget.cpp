@@ -71,13 +71,18 @@ OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
 {
 }
 
+void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item)
+{
+    item->setInfo(r);
+    item->setText(QStringLiteral("%1 (%2)").arg(r.command() + r.commandLine(), r.url()));
+}
+
 void OpenUrlWithConfigureWidget::loadSettings()
 {
     const QVector<MessageViewer::OpenWithUrlInfo> rules = MessageViewer::OpenUrlWithManager::self()->openWithUrlInfo();
     for (const MessageViewer::OpenWithUrlInfo &r : rules) {
         auto item = new OpenUrlWithConfigureItem(mListWidget);
-        item->setInfo(r);
-        item->setText(r.command());
+        displayText(r, item);
     }
 }
 
@@ -114,7 +119,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
                 }
             }
             auto item = new OpenUrlWithConfigureItem(mListWidget);
-            item->setInfo(r);
+            displayText(r, item);
         }
     }
     delete dlg;
@@ -137,8 +142,7 @@ void OpenUrlWithConfigureWidget::slotEditRule()
                 r.setCommand(info.command);
                 r.setCommandLine(info.commandLines);
                 r.setUrl(info.url);
-                item->setInfo(r);
-                item->setText(info.command);
+                displayText(r, item);
             }
         }
         delete dlg;
