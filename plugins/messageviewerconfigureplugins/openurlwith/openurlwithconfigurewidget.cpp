@@ -99,11 +99,21 @@ void OpenUrlWithConfigureWidget::slotAddRule()
     if (dlg->exec()) {
         const OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info = dlg->info();
         if (info.isValid()) {
-            auto item = new OpenUrlWithConfigureItem(mListWidget);
             MessageViewer::OpenWithUrlInfo r;
             r.setCommand(info.command);
             r.setCommandLine(info.commandLines);
             r.setUrl(info.url);
+
+            for (int i = 0, total = mListWidget->count(); i < total; ++i) {
+                OpenUrlWithConfigureItem *item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
+                const MessageViewer::OpenWithUrlInfo openInfo = item->info();
+                if (openInfo == r) {
+                    KMessageBox::information(this, i18n("Rule already exists."), i18n("Duplicate Rule"));
+                    delete dlg;
+                    return;
+                }
+            }
+            auto item = new OpenUrlWithConfigureItem(mListWidget);
             item->setInfo(r);
         }
     }
