@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <Akonadi/Calendar/CalendarBase>
+#include <Akonadi/CalendarBase>
 #include <QVector>
 
 namespace Akonadi

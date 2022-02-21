@@ -8,7 +8,7 @@
 #include "eventmodel.h"
 #include "pimeventsplugin_debug.h"
 
-#include <Akonadi/Calendar/IncidenceChanger>
+#include <Akonadi/IncidenceChanger>
 
 #include <Akonadi/AttributeFactory>
 #include <Akonadi/CollectionColorAttribute>

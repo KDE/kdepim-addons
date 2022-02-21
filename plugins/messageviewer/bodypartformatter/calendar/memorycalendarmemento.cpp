@@ -5,8 +5,8 @@
 */
 #include "memorycalendarmemento.h"
 #include "text_calendar_debug.h"
-#include <Akonadi/Calendar/ETMCalendar>
-#include <Akonadi/Calendar/FetchJobCalendar>
+#include <Akonadi/ETMCalendar>
+#include <Akonadi/FetchJobCalendar>
 #include <CalendarSupport/CalendarSingleton>
 
 using namespace MessageViewer;

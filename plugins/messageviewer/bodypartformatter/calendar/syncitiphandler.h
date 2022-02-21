@@ -8,8 +8,8 @@
 
 #pragma once
 
-#include <Akonadi/Calendar/CalendarBase>
-#include <Akonadi/Calendar/ITIPHandler>
+#include <Akonadi/CalendarBase>
+#include <Akonadi/ITIPHandler>
 #include <IncidenceEditor/GroupwareUiDelegate>
 
 #include <QEventLoop>

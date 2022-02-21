@@ -8,7 +8,7 @@
 #include <MimeTreeParser/BodyPart>
 #include <MimeTreeParser/Enums>
 
-#include <Akonadi/Calendar/CalendarBase>
+#include <Akonadi/CalendarBase>
 #include <QObject>
 
 namespace MessageViewer
