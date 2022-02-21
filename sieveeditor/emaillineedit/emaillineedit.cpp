@@ -6,7 +6,7 @@
 
 #include "emaillineedit.h"
 #include "sieveeditoremaillineditplugin_debug.h"
-#include <Akonadi/Contact/EmailAddressSelectionDialog>
+#include <Akonadi/EmailAddressSelectionDialog>
 #include <KPluginFactory>
 
 #include <KColorScheme>

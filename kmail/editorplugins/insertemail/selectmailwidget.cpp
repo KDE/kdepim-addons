@@ -9,7 +9,7 @@
 #include <QHBoxLayout>
 #include <QTreeView>
 
-#include <Akonadi/Contact/EmailAddressSelectionWidget>
+#include <Akonadi/EmailAddressSelectionWidget>
 
 SelectMailWidget::SelectMailWidget(QWidget *parent)
     : QWidget(parent)

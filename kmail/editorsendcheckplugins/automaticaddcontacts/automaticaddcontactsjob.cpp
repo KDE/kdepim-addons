@@ -11,8 +11,9 @@
 #include <Akonadi/AgentTypeDialog>
 #include <Akonadi/CollectionFetchJob>
 #include <Akonadi/CollectionFetchScope>
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactSearchJob>
 #include <Akonadi/ItemCreateJob>
+#include <Akonadi/SelectAddressBookDialog>
 #include <KContacts/Addressee>
 #include <KContacts/ContactGroup>
 #include <KEmailAddress>
@@ -20,7 +21,6 @@
 #include <KMessageBox>
 #include <PimCommon/PimUtil>
 #include <QPointer>
-#include <akonadi/contact/selectaddressbookdialog.h>
 
 AutomaticAddContactsJob::AutomaticAddContactsJob(QObject *parent)
     : QObject(parent)

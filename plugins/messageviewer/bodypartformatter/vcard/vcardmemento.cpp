@@ -6,7 +6,7 @@
 
 #include "vcardmemento.h"
 #include "vcard_debug.h"
-#include <Akonadi/Contact/ContactSearchJob>
+#include <Akonadi/ContactSearchJob>
 using namespace MessageViewer;
 
 VcardMemento::VcardMemento(const QStringList &emails)

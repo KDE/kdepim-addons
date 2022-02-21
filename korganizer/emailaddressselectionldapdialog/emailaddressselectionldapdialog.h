@@ -5,7 +5,7 @@
 */
 #pragma once
 
-#include <Akonadi/Contact/AbstractEmailAddressSelectionDialog>
+#include <Akonadi/AbstractEmailAddressSelectionDialog>
 namespace Akonadi
 {
 class RecipientsPickerWidget;

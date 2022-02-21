@@ -5,7 +5,7 @@
 */
 
 #include "emailaddressselectionldapdialog.h"
-#include <Akonadi/Contact/RecipientsPickerWidget>
+#include <Akonadi/RecipientsPickerWidget>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KPluginFactory>

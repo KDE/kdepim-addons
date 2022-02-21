@@ -5,7 +5,7 @@
 */
 
 #include "vcardviewerdialog.h"
-#include <Akonadi/Contact/GrantleeContactViewer>
+#include <Akonadi/GrantleeContactViewer>
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>

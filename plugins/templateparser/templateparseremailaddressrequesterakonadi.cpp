@@ -5,7 +5,7 @@
 */
 
 #include "templateparseremailaddressrequesterakonadi.h"
-#include <Akonadi/Contact/EmailAddressRequester>
+#include <Akonadi/EmailAddressRequester>
 #include <KPluginFactory>
 #include <QHBoxLayout>
 

@@ -6,7 +6,7 @@
 
 #include "templateparseremailaddressrequesterakonaditest.h"
 #include "../templateparseremailaddressrequesterakonadi.h"
-#include <Akonadi/Contact/EmailAddressRequester>
+#include <Akonadi/EmailAddressRequester>
 #include <QHBoxLayout>
 #include <QSignalSpy>
 #include <QTest>

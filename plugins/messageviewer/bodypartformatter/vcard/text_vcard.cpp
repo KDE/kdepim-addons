@@ -25,10 +25,10 @@
 #include <MimeTreeParser/NodeHelper>
 using MimeTreeParser::Interface::BodyPart;
 
-#include <Akonadi/Contact/AddContactJob>
+#include <Akonadi/AddContactJob>
 
-#include <Akonadi/Contact/ContactViewer>
-#include <Akonadi/Contact/StandardContactFormatter>
+#include <Akonadi/ContactViewer>
+#include <Akonadi/StandardContactFormatter>
 
 #include <KIO/FileCopyJob>
 #include <KIO/StatJob>

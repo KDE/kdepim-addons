@@ -7,7 +7,7 @@
 #include "sendvcardsjob.h"
 
 #include "kaddressbook_sendvcardsplugin_debug.h"
-#include <Akonadi/Contact/ContactGroupExpandJob>
+#include <Akonadi/ContactGroupExpandJob>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
 #include <KEMailClientLauncherJob>

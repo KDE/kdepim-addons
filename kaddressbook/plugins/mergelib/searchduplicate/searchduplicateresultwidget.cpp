@@ -10,7 +10,7 @@
 
 #include "resultduplicatetreewidget.h"
 #include <Akonadi/CollectionComboBox>
-#include <Akonadi/Contact/GrantleeContactViewer>
+#include <Akonadi/GrantleeContactViewer>
 #include <KLocalizedString>
 #include <QHBoxLayout>
 #include <QLabel>

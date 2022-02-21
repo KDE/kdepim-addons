@@ -5,7 +5,7 @@
 */
 #include "mergecontactinfowidget.h"
 
-#include <Akonadi/Contact/GrantleeContactViewer>
+#include <Akonadi/GrantleeContactViewer>
 
 #include <QHBoxLayout>
 #include <QLabel>

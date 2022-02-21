@@ -7,7 +7,7 @@
 
 #pragma once
 
-#include <ContactEditor/ContactEditorPagePlugin>
+#include <Akonadi/ContactEditorPagePlugin>
 
 namespace Kleo
 {
