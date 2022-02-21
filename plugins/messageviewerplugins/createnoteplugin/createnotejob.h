@@ -8,7 +8,7 @@
 
 #include <Akonadi/Collection>
 #include <Akonadi/Item>
-#include <Akonadi/Notes/NoteUtils>
+#include <Akonadi/NoteUtils>
 #include <KJob>
 
 #include <KMime/KMimeMessage>

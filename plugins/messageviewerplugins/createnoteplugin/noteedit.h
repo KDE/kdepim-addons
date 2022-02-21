@@ -9,7 +9,7 @@
 #include <QWidget>
 
 #include <Akonadi/Collection>
-#include <Akonadi/Notes/NoteUtils>
+#include <Akonadi/NoteUtils>
 #include <KMime/KMimeMessage>
 
 class QLineEdit;
