@@ -9,7 +9,7 @@
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemFetchJob>
 #include <Akonadi/ItemFetchScope>
-#include <Akonadi/KMime/MessageParts>
+#include <Akonadi/MessageParts>
 #include <Akonadi/RelationCreateJob>
 
 #include <KMime/Message>

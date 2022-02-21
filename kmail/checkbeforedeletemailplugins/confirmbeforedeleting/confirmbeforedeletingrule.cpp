@@ -6,7 +6,7 @@
 
 #include "confirmbeforedeletingrule.h"
 #include "confirmbeforedeletingplugin_debug.h"
-#include <Akonadi/KMime/MessageStatus>
+#include <Akonadi/MessageStatus>
 #include <KLocalizedString>
 
 ConfirmBeforeDeletingRule::ConfirmBeforeDeletingRule() = default;

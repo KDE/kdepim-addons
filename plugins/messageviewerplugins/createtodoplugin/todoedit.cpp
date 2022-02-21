@@ -22,12 +22,11 @@
 #include <QPushButton>
 
 #include <Akonadi/CollectionComboBox>
-
+#include <Akonadi/SpecialMailCollections>
 #include <IncidenceEditor/IncidenceDialog>
 #include <IncidenceEditor/IncidenceDialogFactory>
 #include <KGuiItem>
 #include <KStandardGuiItem>
-#include <akonadi/kmime/specialmailcollections.h>
 
 namespace MessageViewer
 {

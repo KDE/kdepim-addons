@@ -7,9 +7,9 @@
 #include "expireaccounttrashfolderconfigwidget.h"
 #include "libexpireaccounttrashfolderconfig_debug.h"
 #include <Akonadi/AgentManager>
+#include <Akonadi/SpecialMailCollections>
 #include <MailCommon/CollectionExpiryWidget>
 #include <QVBoxLayout>
-#include <akonadi/kmime/specialmailcollections.h>
 
 ExpireAccountTrashFolderConfigWidget::ExpireAccountTrashFolderConfigWidget(QWidget *parent)
     : QWidget(parent)

@@ -8,7 +8,7 @@
 #include "createnoteplugin_debug.h"
 #include <Akonadi/ItemCreateJob>
 #include <Akonadi/ItemModifyJob>
-#include <Akonadi/KMime/MessageParts>
+#include <Akonadi/MessageParts>
 #include <Akonadi/Relation>
 #include <Akonadi/RelationCreateJob>
 
