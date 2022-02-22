@@ -74,7 +74,7 @@ OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
 void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item)
 {
     item->setInfo(r);
-    item->setText(QStringLiteral("%1 (%2)").arg(r.command() + r.commandLine(), r.url()));
+    item->setText(QStringLiteral("%1 (%2)").arg(r.command() + QLatin1Char(' ') + r.commandLine(), r.url()));
 }
 
 void OpenUrlWithConfigureWidget::loadSettings()
