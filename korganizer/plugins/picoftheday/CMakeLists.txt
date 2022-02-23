@@ -35,6 +35,6 @@ install(TARGETS
 
 install(FILES
     picoftheday.desktop
-    DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/korganizer
+    DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
     )
 

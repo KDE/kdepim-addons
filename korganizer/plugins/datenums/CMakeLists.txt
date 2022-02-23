@@ -27,5 +27,5 @@ install(TARGETS
 
 install(FILES
   datenums.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/korganizer
+  DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
 )

@@ -29,5 +29,5 @@ install(TARGETS
 
 install(FILES
   hebrew.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICES5DIR}/korganizer
+  DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
 )
