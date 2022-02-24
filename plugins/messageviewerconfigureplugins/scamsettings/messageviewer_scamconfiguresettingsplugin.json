@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure scam settings.",
+        "Description[az]": "Bu əlavə, sizə fırıldaqçılıqdan qorunma ayarlarını tənzimləməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar les opcions de configuració de la suplantació.",
         "Description[ca]": "Aquest connector permet configurar les opcions de configuració de la suplantació.",
         "Description[en_GB]": "This plugin allows you to configure scam settings.",
@@ -20,6 +21,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure scam settings.xx",
         "Description[zh_CN]": "此插件能让您调整垃圾邮件设置。",
         "Name": "Scam Settings",
+        "Name[az]": "Fırıldaqçılıqdan qorunma ayarları",
         "Name[ca@valencia]": "Configuració de la suplantació",
         "Name[ca]": "Configuració de la suplantació",
         "Name[en_GB]": "Scam Settings",

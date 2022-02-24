@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure which apps used for specific url.",
+        "Description[az]": "Bu əlavə, URL üçün istifadə olunacaq tətbiqləri tənzimləməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar quines aplicacions s'usen per a un URL específic.",
         "Description[ca]": "Aquest connector permet configurar quines aplicacions s'usen per a un URL específic.",
         "Description[en_GB]": "This plugin allows you to configure which apps used for specific URL.",
@@ -19,6 +20,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure which apps used for specific url.xx",
         "Description[zh_CN]": "此插件用于指定特定 URL 用何种应用程序打开。",
         "Name": "Open Url With",
+        "Name[az]": "URL-u bununla açın:",
         "Name[ca@valencia]": "Obri l'URL amb",
         "Name[ca]": "Obre l'URL amb",
         "Name[en_GB]": "Open URL With",
