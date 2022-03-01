@@ -73,6 +73,7 @@ ViewerPluginExternalConfigureWidget::ViewerPluginExternalConfigureWidget(QWidget
 
     mListExternal->setObjectName(QStringLiteral("listexternal"));
     mListExternal->setSelectionMode(QAbstractItemView::SingleSelection);
+    mListExternal->setAlternatingRowColors(true);
     listLayout->addWidget(mListExternal);
     connect(mListExternal, &QListWidget::itemSelectionChanged, this, &ViewerPluginExternalConfigureWidget::updateButtons);
     connect(mListExternal, &QListWidget::itemDoubleClicked, this, &ViewerPluginExternalConfigureWidget::slotDoubleClicked);

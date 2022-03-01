@@ -31,6 +31,7 @@ void ViewerPluginExternalConfigureWidgetTest::shouldHaveDefaultValue()
     auto mListExternal = w.findChild<QListWidget *>(QStringLiteral("listexternal"));
     QVERIFY(mListExternal);
     QCOMPARE(mListExternal->selectionMode(), QAbstractItemView::SingleSelection);
+    QVERIFY(mListExternal->alternatingRowColors());
 
     auto mAddScript = w.findChild<QPushButton *>(QStringLiteral("addscript"));
     QVERIFY(mAddScript);

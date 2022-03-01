@@ -25,4 +25,8 @@ void OpenUrlWithConfigureWidgetTest::shouldHaveDefaultValues()
 
     auto mListWidget = w.findChild<QListWidget *>(QStringLiteral("mListWidget"));
     QVERIFY(mListWidget);
+    QVERIFY(mListWidget->alternatingRowColors());
+    QVERIFY(mListWidget->isSortingEnabled());
+    QCOMPARE(mListWidget->contextMenuPolicy(), Qt::CustomContextMenu);
+    QCOMPARE(mListWidget->selectionMode(), QAbstractItemView::ExtendedSelection);
 }

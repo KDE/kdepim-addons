@@ -62,6 +62,7 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     mainLayout->addWidget(mListWidget);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
+    mListWidget->setAlternatingRowColors(true);
     mListWidget->setSortingEnabled(true);
     connect(mListWidget, &QListWidget::customContextMenuRequested, this, &OpenUrlWithConfigureWidget::slotCustomContextMenuRequested);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
