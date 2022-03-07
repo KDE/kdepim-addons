@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to check grammar using LanguageTool.",
+        "Description[ar]": "تتيح لك هذه الملحقة تدقيق النحو باستعمال \"LanguageTool\"",
         "Description[az]": "Bu əlavə, sizə LanguageTool istifadə edərək qrammatikanı yoxlamağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
         "Description[ca]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
@@ -29,6 +30,7 @@
         "EnabledByDefault": "false",
         "Id": "kmaillanguagetool",
         "Name": "Grammar Checker (LanguageTool)",
+        "Name[ar]": "مدقق النحو (LanguageTool)",
         "Name[az]": "Qrammatika yoxlaması (LanguageTool)",
         "Name[ca@valencia]": "Comprova la gramàtica (LanguageTool)",
         "Name[ca]": "Comprova la gramàtica (LanguageTool)",

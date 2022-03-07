@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure expire trash folder for each accounts.",
+        "Description[ar]": "تتيح لك هذه الملحقة تهيئة انتهاء صلاحية مجلد المهملات لكل حساب.",
         "Description[az]": "Bu əlavə, hər hesab üçün Səbət qovluğundakıların silinmə vaxtını ayarlamağa imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar la caducitat de la carpeta paperera per cada compte.",
         "Description[ca]": "Aquest connector permet configurar la caducitat de la carpeta paperera per cada compte.",
@@ -22,6 +23,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure expire trash folder for each accounts.xx",
         "Description[zh_CN]": "此插件能让您定时清空每个账号的已删除邮件文件夹。",
         "Name": "Expire Trash Folder",
+        "Name[ar]": "انتهاء صلاحية مجلد المهملات",
         "Name[az]": "Səbət qovluğundan silinmə vaxtı",
         "Name[ca@valencia]": "Caducitat de la carpeta paperera",
         "Name[ca]": "Caducitat de la carpeta paperera",

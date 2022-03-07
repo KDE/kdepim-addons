@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to configure folder settings.",
+        "Description[ar]": "تتيح لك هذه الملحقة تعديل إعدادات المجلد.",
         "Description[az]": "Bu əlavə, sizə qovluq ayarlarını tənzimləməyə imkan verir.",
         "Description[ca@valencia]": "Aquest connector permet configurar les opcions de configuració de les carpetes.",
         "Description[ca]": "Aquest connector permet configurar les opcions de configuració de les carpetes.",
@@ -23,6 +24,7 @@
         "Description[x-test]": "xxThis plugin allows you to configure folder settings.xx",
         "Description[zh_CN]": "此插件能让您调整文件夹设置。",
         "Name": "Folder Settings",
+        "Name[ar]": "إعدادات المجلد",
         "Name[az]": "Qoluq ayarları",
         "Name[ca@valencia]": "Configuració de les carpetes",
         "Name[ca]": "Configuració de les carpetes",
