@@ -37,7 +37,7 @@ QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, 
     address.setRegion(a.addressRegion());
     address.setCountry(a.addressCountry());
 
-    auto s = escape(address.formattedAddress().trimmed().replace(QLatin1String("\n\n"), QLatin1String("\n")));
+    auto s = escape(address.formatted(KContacts::AddressFormatStyle::Postal).trimmed().replace(QLatin1String("\n\n"), QLatin1String("\n")));
     return s.get().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
 }
 
