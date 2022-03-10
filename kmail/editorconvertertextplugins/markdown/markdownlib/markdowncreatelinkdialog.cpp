@@ -15,12 +15,12 @@
 
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)
+    , mMarkdownCreateLinkWidget(new MarkdownCreateLinkWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Add Link"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
 
-    mMarkdownCreateLinkWidget = new MarkdownCreateLinkWidget(this);
     mMarkdownCreateLinkWidget->setObjectName(QStringLiteral("markdowncreatelinkwidget"));
 
     mainLayout->addWidget(mMarkdownCreateLinkWidget);

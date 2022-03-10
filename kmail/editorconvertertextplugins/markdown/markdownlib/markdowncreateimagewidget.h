@@ -26,13 +26,13 @@ Q_SIGNALS:
 private:
     void slotKeepOriginalSizeChanged();
     void slotEnableButton();
-    QLineEdit *mTitle = nullptr;
-    QLineEdit *mImageUrl = nullptr;
-    QLineEdit *mAlternateText = nullptr;
-    QCheckBox *mKeepOriginalSize = nullptr;
-    QLabel *mLabWidth = nullptr;
-    QSpinBox *mWidth = nullptr;
-    QLabel *mLabHeight = nullptr;
-    QSpinBox *mHeight = nullptr;
+    QLineEdit *const mTitle;
+    QLineEdit *const mImageUrl;
+    QLineEdit *const mAlternateText;
+    QCheckBox *const mKeepOriginalSize;
+    QLabel *const mLabWidth;
+    QSpinBox *const mWidth;
+    QLabel *const mLabHeight;
+    QSpinBox *const mHeight;
 };
 

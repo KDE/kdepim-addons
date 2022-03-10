@@ -13,21 +13,26 @@
 #include <QSpinBox>
 MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     : QWidget(parent)
+    , mTitle(new QLineEdit(this))
+    , mImageUrl(new QLineEdit(this))
+    , mAlternateText(new QLineEdit(this))
+    , mKeepOriginalSize(new QCheckBox(i18n("Keep original size"), this))
+    , mLabWidth(new QLabel(i18n("Width:"), this))
+    , mWidth(new QSpinBox(this))
+    , mLabHeight(new QLabel(i18n("Height:"), this))
+    , mHeight(new QSpinBox(this))
 {
     auto mainLayout = new QFormLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins({});
 
-    mTitle = new QLineEdit(this);
     mTitle->setObjectName(QStringLiteral("title"));
     mTitle->setClearButtonEnabled(true);
     connect(mTitle, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
-    mImageUrl = new QLineEdit(this);
     mImageUrl->setObjectName(QStringLiteral("image"));
     mImageUrl->setClearButtonEnabled(true);
     connect(mImageUrl, &QLineEdit::textChanged, this, &MarkdownCreateImageWidget::slotEnableButton);
 
-    mAlternateText = new QLineEdit(this);
     mAlternateText->setObjectName(QStringLiteral("alternatetext"));
     mAlternateText->setClearButtonEnabled(true);
 
@@ -35,7 +40,6 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     mainLayout->addRow(i18n("Image Link:"), mImageUrl);
     mainLayout->addRow(i18n("Alternate text:"), mAlternateText);
 
-    mKeepOriginalSize = new QCheckBox(i18n("Keep original size"), this);
     mKeepOriginalSize->setObjectName(QStringLiteral("keeporiginalsize"));
     mKeepOriginalSize->setChecked(true);
     mainLayout->addRow(mKeepOriginalSize);
@@ -48,10 +52,8 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     sizeWidgetLayout->setContentsMargins({});
     mainLayout->addRow(sizeWidget);
 
-    mLabWidth = new QLabel(i18n("Width:"), this);
     mLabWidth->setObjectName(QStringLiteral("labwidth"));
     mLabWidth->setEnabled(false);
-    mWidth = new QSpinBox(this);
     mWidth->setObjectName(QStringLiteral("mwidth"));
     mWidth->setMinimum(1);
     mWidth->setMaximum(999);
@@ -61,10 +63,8 @@ MarkdownCreateImageWidget::MarkdownCreateImageWidget(QWidget *parent)
     sizeWidgetLayout->addWidget(mLabWidth);
     sizeWidgetLayout->addWidget(mWidth);
 
-    mLabHeight = new QLabel(i18n("Height:"), this);
     mLabHeight->setObjectName(QStringLiteral("labheight"));
     mLabHeight->setEnabled(false);
-    mHeight = new QSpinBox(this);
     mHeight->setObjectName(QStringLiteral("mheight"));
     mHeight->setMinimum(1);
     mHeight->setMaximum(999);

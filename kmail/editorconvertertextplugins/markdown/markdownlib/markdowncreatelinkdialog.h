@@ -22,7 +22,7 @@ private:
     void writeConfig();
     void readConfig();
     void slotEnabledOkButton(bool enabled);
-    MarkdownCreateLinkWidget *mMarkdownCreateLinkWidget = nullptr;
+    MarkdownCreateLinkWidget *const mMarkdownCreateLinkWidget;
     QPushButton *mOkButton = nullptr;
 };
 
