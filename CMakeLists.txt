@@ -5,7 +5,7 @@ set(PIM_VERSION "5.19.80")
 
 project(kdepim-addons VERSION ${PIM_VERSION})
 
-set(KF5_MIN_VERSION "5.91.0")
+set(KF5_MIN_VERSION "5.92.0")
 
 find_package(ECM ${KF5_MIN_VERSION} CONFIG REQUIRED)
 set(CMAKE_MODULE_PATH  ${CMAKE_CURRENT_SOURCE_DIR}/cmake/modules/ ${ECM_MODULE_PATH})
