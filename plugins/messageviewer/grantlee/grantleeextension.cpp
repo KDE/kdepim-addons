@@ -8,7 +8,6 @@
 
 #include <KContacts/Address>
 #include <KItinerary/Place>
-#include <kcontacts_version.h>
 
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 #include <grantlee/exception.h>
@@ -38,11 +37,7 @@ QVariant AddressFormatter::doFilter(const QVariant &input, const QVariant &arg, 
     address.setRegion(a.addressRegion());
     address.setCountry(a.addressCountry());
 
-#if KContacts_VERSION < QT_VERSION_CHECK(5, 92, 0)
-    auto s = escape(address.formattedAddress().trimmed().replace(QLatin1String("\n\n"), QLatin1String("\n")));
-#else
     auto s = escape(address.formatted(KContacts::AddressFormatStyle::MultiLineInternational));
-#endif
     return s.get().replace(QLatin1Char('\n'), QLatin1String("<br/>"));
 }
 
