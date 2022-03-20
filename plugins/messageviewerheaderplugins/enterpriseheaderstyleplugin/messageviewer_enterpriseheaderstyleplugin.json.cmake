@@ -3,7 +3,7 @@
         "Description": "This plugin defines a mail header style for enterprise.",
         "Description[ar]": "تحدّد هذه الملحقة نمط ترويسات بريد للشّركات.",
         "Description[az]": "Bu əlavə, korporativ başlıq tərzini müəyyən edir.",
-        "Description[ca@valencia]": "Aquest connector defineix un estil empresarial de capçalera del correu.",
+        "Description[ca@valencia]": "Este connector defineix un estil empresarial de capçalera del correu.",
         "Description[ca]": "Aquest connector defineix un estil empresarial de capçalera del correu.",
         "Description[de]": "Dieses Modul definiert ein grafisches Vorspann-Design.",
         "Description[en_GB]": "This plugin defines a mail header style for enterprise.",
