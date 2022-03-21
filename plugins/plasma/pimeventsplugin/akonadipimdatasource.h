@@ -33,4 +33,3 @@ private:
     EventViews::PrefsPtr mEventViewsPrefs;
     mutable QHash<qint64, QString> mColorCache;
 };
-

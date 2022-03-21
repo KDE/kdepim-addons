@@ -22,4 +22,3 @@ public:
 
     Q_REQUIRED_RESULT QString name() const override;
 };
-

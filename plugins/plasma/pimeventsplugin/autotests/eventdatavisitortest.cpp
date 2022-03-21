@@ -21,7 +21,8 @@
 Q_DECLARE_METATYPE(CalendarEvents::EventData)
 Q_DECLARE_METATYPE(KCalendarCore::Incidence::Ptr)
 
-template<typename Visitor> class TestableVisitor : public Visitor
+template<typename Visitor>
+class TestableVisitor : public Visitor
 {
 public:
     TestableVisitor(PimDataSource *source, QDate start = QDate(), QDate end = QDate())

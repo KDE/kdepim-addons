@@ -25,4 +25,3 @@ private:
     bool mCheckDuplicateEmails = false;
     bool mCheckSendAttachments = false;
 };
-

@@ -15,4 +15,3 @@ public:
     explicit AdblockManagerTest(QObject *parent = nullptr);
     ~AdblockManagerTest() override;
 };
-

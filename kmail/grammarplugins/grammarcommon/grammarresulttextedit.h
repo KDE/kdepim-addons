@@ -44,4 +44,3 @@ private:
     QColor mTextColor;
     QColor mNegativeTextColor;
 };
-

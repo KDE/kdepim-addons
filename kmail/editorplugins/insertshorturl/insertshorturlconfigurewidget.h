@@ -23,4 +23,3 @@ private:
     bool mChanged = false;
     QComboBox *const mShortUrlServer;
 };
-

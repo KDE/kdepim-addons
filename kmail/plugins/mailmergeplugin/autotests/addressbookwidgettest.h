@@ -15,4 +15,3 @@ public:
     explicit AddressBookWidgetTest(QObject *parent = nullptr);
     ~AddressBookWidgetTest() override;
 };
-

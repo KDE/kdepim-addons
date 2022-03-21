@@ -19,4 +19,3 @@ public:
 
     ShortUrlEngineInterface *createInterface(QObject *parent) override;
 };
-

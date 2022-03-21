@@ -22,4 +22,3 @@ private:
     void slotImportLdap();
     void importLdap();
 };
-

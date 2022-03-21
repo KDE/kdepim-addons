@@ -28,4 +28,3 @@ private:
     FolderConfigureSettingsTemplateWidget *const mCollectionTemplateWidget;
     FolderConfigureSettingsViewWidget *const mFolderConfigureSettingsViewWidget;
 };
-

@@ -25,4 +25,3 @@ private:
     MarkdownCreateImageWidget *const mMarkdownCreateImageWidget;
     QPushButton *mOkButton = nullptr;
 };
-

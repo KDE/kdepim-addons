@@ -15,4 +15,3 @@ public:
     explicit ExpireAccountTrashFolderConfigDialogTest(QObject *parent = nullptr);
     ~ExpireAccountTrashFolderConfigDialogTest() override = default;
 };
-

@@ -28,4 +28,3 @@ private:
     void slotInsertEmails();
     SelectMailWidget *const mSelectMailWidget;
 };
-

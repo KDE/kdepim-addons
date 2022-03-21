@@ -29,4 +29,3 @@ private:
     Ui::AttendeeSelectorWidget ui;
     QPushButton *mOkButton = nullptr;
 };
-

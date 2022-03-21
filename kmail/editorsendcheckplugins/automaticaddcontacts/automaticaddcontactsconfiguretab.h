@@ -34,4 +34,3 @@ private:
     QTabWidget *const mTabWidget;
     QList<AutomaticAddContactsTabWidget *> mListTabWidget;
 };
-

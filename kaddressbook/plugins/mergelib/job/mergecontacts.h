@@ -60,4 +60,3 @@ private:
     Akonadi::Item::List mListItem;
 };
 }
-

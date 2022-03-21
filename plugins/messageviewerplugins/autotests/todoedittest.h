@@ -50,4 +50,3 @@ private Q_SLOTS:
     void shouldEnabledSaveOpenEditorButton();
     void shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty();
 };
-

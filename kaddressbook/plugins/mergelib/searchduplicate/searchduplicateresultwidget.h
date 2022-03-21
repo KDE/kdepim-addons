@@ -61,4 +61,3 @@ private:
 };
 }
 Q_DECLARE_TYPEINFO(KABMergeContacts::MergeConflictResult, Q_MOVABLE_TYPE);
-

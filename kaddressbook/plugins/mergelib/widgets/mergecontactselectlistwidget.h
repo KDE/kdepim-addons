@@ -40,4 +40,3 @@ private:
     MergeContacts::ConflictInformation mConflictType;
 };
 }
-

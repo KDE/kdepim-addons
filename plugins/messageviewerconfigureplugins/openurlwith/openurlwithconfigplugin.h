@@ -5,7 +5,6 @@
 */
 #pragma once
 
-
 #include <MessageViewer/MessageViewerConfigureSettingsPlugin>
 
 #include <QVariant>
@@ -19,4 +18,3 @@ public:
 
     void showConfigureDialog(QWidget *parent) override;
 };
-

@@ -21,4 +21,3 @@ private Q_SLOTS:
     void shouldBeEqual_data();
     void shouldBeEqual();
 };
-

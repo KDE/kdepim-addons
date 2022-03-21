@@ -46,4 +46,3 @@ private:
     KIMAP::Session *mSession = nullptr;
     QStandardItemModel *const mModel;
 };
-

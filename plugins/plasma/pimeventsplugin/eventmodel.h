@@ -42,4 +42,3 @@ private:
     Akonadi::Monitor *mMonitor = nullptr;
     QMap<Akonadi::Collection::Id, KJob *> mFetchJobs;
 };
-

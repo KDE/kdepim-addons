@@ -27,4 +27,3 @@ private:
     QListView *mView = nullptr;
     QPushButton *mOkButton = nullptr;
 };
-

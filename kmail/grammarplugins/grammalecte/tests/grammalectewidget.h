@@ -27,4 +27,3 @@ private:
     QTextEdit *mInput = nullptr;
     GrammalecteResultWidget *mResultWidget = nullptr;
 };
-

@@ -22,4 +22,3 @@ private Q_SLOTS:
     void testFormat_data();
     void testFormat();
 };
-

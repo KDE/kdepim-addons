@@ -21,4 +21,3 @@ public:
 private Q_SLOTS:
     void slotActivated();
 };
-

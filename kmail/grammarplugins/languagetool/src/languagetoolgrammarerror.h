@@ -22,4 +22,3 @@ private:
 };
 Q_DECLARE_METATYPE(LanguageToolGrammarError)
 Q_DECLARE_TYPEINFO(LanguageToolGrammarError, Q_MOVABLE_TYPE);
-

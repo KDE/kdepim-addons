@@ -69,4 +69,3 @@ private:
     QItemSelectionModel *mSelectionModel = nullptr;
     QWidget *const mParent;
 };
-

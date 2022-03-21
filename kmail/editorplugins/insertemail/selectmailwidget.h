@@ -27,4 +27,3 @@ Q_SIGNALS:
 private:
     Akonadi::EmailAddressSelectionWidget *mView = nullptr;
 };
-

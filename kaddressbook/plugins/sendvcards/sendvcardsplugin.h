@@ -22,4 +22,3 @@ public:
     Q_REQUIRED_RESULT PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
-

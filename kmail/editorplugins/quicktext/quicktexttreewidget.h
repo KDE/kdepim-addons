@@ -43,4 +43,3 @@ private:
     QAction *mEditSnippetGroupAction = nullptr;
     QAction *mDeleteSnippetGroupAction = nullptr;
 };
-

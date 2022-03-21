@@ -25,4 +25,3 @@ private:
     MarkdownCreateLinkWidget *const mMarkdownCreateLinkWidget;
     QPushButton *mOkButton = nullptr;
 };
-

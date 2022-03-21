@@ -27,4 +27,3 @@ private:
 
     Q_REQUIRED_RESULT QByteArray createConfirmation(const KMime::Message::Ptr &msg) const;
 };
-

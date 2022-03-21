@@ -23,4 +23,3 @@ private:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotErrorFound(QNetworkReply::NetworkError error);
 };
-

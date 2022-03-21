@@ -23,4 +23,3 @@ public:
 private:
     ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
 };
-

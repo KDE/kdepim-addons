@@ -61,4 +61,3 @@ private:
     GrammalecteResultJob::ErrorType mErrorType = ErrorType::NoError;
     QProcess *mProcess = nullptr;
 };
-

@@ -38,4 +38,3 @@ private:
     ZoomTextType mType = Unknown;
     ZoomLabel *mZoomLabelWidget = nullptr;
 };
-

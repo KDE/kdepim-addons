@@ -25,4 +25,3 @@ public:
 private:
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
 };
-

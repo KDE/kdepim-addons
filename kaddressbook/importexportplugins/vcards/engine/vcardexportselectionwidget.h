@@ -39,4 +39,3 @@ private:
     QCheckBox *mPictureBox = nullptr;
     QCheckBox *mDisplayNameBox = nullptr;
 };
-

@@ -27,4 +27,3 @@ private:
     void exportLdif();
     void importLdifFile(const QString &fileName);
 };
-

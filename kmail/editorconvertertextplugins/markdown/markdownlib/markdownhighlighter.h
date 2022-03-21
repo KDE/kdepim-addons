@@ -25,4 +25,3 @@ private:
     QString mCurrentLine;
     QTextStream *const mStream;
 };
-

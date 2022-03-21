@@ -41,4 +41,3 @@ private:
 
     static QString m_appPath;
 };
-

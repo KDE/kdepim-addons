@@ -15,4 +15,3 @@ public:
     explicit SelectImapCreateJobTest(QObject *parent = nullptr);
     ~SelectImapCreateJobTest() override;
 };
-

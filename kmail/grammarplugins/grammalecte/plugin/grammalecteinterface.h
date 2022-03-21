@@ -27,4 +27,3 @@ private:
     GrammalecteResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;
 };
-

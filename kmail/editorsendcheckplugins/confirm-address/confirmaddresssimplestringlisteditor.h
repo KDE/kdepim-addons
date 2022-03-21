@@ -21,4 +21,3 @@ public:
     void addNewEntry() override;
     Q_REQUIRED_RESULT QString modifyEntry(const QString &text) override;
 };
-

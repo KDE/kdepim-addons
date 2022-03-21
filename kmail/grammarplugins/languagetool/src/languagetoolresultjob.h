@@ -58,4 +58,3 @@ private:
     QString mLanguage;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
-

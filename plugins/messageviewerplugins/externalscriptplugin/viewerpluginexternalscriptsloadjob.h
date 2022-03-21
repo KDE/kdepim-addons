@@ -25,4 +25,3 @@ private:
     QVector<ViewerPluginExternalScriptInfo> mScriptInfos;
     QStringList mDirectories;
 };
-

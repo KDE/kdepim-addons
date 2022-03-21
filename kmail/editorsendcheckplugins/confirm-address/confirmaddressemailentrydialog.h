@@ -22,4 +22,3 @@ public:
 private:
     QLineEdit *const mLineEdit;
 };
-

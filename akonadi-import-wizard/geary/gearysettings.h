@@ -24,4 +24,3 @@ private:
     void readTransport();
     QSettings *const settings;
 };
-

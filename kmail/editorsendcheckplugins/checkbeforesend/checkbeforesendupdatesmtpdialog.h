@@ -20,4 +20,3 @@ public:
 private:
     QCheckBox *const mChangeSmtp;
 };
-

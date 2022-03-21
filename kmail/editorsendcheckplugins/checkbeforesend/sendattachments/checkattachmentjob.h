@@ -26,4 +26,3 @@ private:
     QStringList mOriginalEmails;
     QStringList mResultList;
 };
-

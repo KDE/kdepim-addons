@@ -26,4 +26,3 @@ protected:
 private:
     MarkdownConfigureWidget *mConfigureWidget = nullptr;
 };
-

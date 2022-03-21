@@ -33,4 +33,3 @@ private:
     Akonadi::CollectionComboBox *const mCollectionCombobox;
     uint mIdentity = 0;
 };
-

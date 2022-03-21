@@ -32,4 +32,3 @@ private:
     ViewerPluginExternalEditWidget *const mEditWidget;
     QPushButton *mOkButton = nullptr;
 };
-

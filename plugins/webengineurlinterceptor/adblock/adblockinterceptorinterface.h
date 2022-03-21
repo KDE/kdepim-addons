@@ -38,4 +38,3 @@ private:
     AdBlock::AdblockManager *const mAdblockManager;
     QWebEngineView *mWebEngineView = nullptr;
 };
-

@@ -25,4 +25,3 @@ public:
 private:
     KDescendantsProxyModel *const mFlatProxy;
 };
-

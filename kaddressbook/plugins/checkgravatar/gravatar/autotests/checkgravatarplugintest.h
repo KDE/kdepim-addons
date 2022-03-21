@@ -15,4 +15,3 @@ public:
     explicit CheckGravatarPluginTest(QObject *parent = nullptr);
     ~CheckGravatarPluginTest() override = default;
 };
-

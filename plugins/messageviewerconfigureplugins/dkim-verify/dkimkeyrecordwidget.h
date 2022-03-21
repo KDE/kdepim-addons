@@ -27,4 +27,3 @@ private:
     void writeConfig();
     MessageViewer::DKIMManagerKeyWidget *const mManagerKeyWidget;
 };
-

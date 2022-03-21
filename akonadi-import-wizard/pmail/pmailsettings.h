@@ -22,4 +22,3 @@ private:
     void readIdentity(const KConfigGroup &group);
     const QString mFileName;
 };
-

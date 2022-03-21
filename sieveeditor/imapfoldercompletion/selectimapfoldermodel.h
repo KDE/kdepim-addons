@@ -37,4 +37,3 @@ private:
     void fillModel(const KSieveUi::SieveImapAccountSettings &account, QStandardItemModel *model);
     QHash<QString, QStandardItemModel *> mHashFolderModel;
 };
-

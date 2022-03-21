@@ -29,4 +29,3 @@ protected Q_SLOTS:
 private:
     QButtonGroup *const mAspectRatioGroup;
 };
-

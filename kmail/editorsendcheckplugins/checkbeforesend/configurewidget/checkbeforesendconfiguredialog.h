@@ -25,4 +25,3 @@ protected:
 private:
     CheckBeforeSendConfigureWidget *mConfigureWidget = nullptr;
 };
-

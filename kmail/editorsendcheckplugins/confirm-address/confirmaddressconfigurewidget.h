@@ -24,4 +24,3 @@ private:
     void slotEnableChanged(bool state);
     ConfirmAddressConfigureTab *const mConfirmAddressConfigureTab;
 };
-

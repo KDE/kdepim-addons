@@ -29,4 +29,3 @@ private:
     void exportToFile(QFile *file, const KContacts::Addressee::List &contacts) const;
     void importCSV();
 };
-

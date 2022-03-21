@@ -15,4 +15,3 @@ public:
     explicit AdBlockAutomaticRulesListWidgetTest(const QString &fileName, QWidget *parent = nullptr);
     ~AdBlockAutomaticRulesListWidgetTest() override;
 };
-

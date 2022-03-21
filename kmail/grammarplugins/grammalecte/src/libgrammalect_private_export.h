@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBGRAMMALECTPRIVATE_TESTS_EXPORT
 #endif
-

@@ -15,4 +15,3 @@ public:
     explicit ExpertPluginInterfaceTest(QObject *parent = nullptr);
     ~ExpertPluginInterfaceTest() override = default;
 };
-

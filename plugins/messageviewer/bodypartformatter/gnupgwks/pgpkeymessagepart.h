@@ -59,4 +59,3 @@ protected:
     GpgME::Key mKey;
     bool mSearchRunning = false;
 };
-

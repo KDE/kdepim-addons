@@ -23,4 +23,3 @@ private:
     AutomaticAddContactsTabWidget *createContactWidget();
     QStandardItemModel *mComboboxModel = nullptr;
 };
-

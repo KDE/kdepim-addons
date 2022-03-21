@@ -30,4 +30,3 @@ private:
     LanguageToolResultWidget *mResultWidget = nullptr;
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
 };
-

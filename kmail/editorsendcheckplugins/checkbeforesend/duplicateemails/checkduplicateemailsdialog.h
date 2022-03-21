@@ -23,4 +23,3 @@ private:
     void writeConfig();
     QListWidget *const mListWidget;
 };
-

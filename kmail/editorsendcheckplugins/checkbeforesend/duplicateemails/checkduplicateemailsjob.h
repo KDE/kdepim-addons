@@ -24,4 +24,3 @@ private:
     QStringList mEmails;
     QMap<QString, int> mResult;
 };
-

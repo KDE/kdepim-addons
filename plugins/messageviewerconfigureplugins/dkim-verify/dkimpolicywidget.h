@@ -29,4 +29,3 @@ private:
     QCheckBox *const mAutoGenerateOnlyIfSenderInSDID;
     QPushButton *const mRulesButton;
 };
-

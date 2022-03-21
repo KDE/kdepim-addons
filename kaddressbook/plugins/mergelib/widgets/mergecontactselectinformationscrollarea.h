@@ -33,4 +33,3 @@ private:
     MergeContactInfoWidget *mMergedContactWidget = nullptr;
 };
 }
-

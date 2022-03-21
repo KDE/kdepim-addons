@@ -27,4 +27,3 @@ private:
     QWidget *mMainWidget = nullptr;
     QGroupBox *const mGroupBox;
 };
-

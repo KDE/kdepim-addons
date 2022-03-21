@@ -24,4 +24,3 @@ public:
 
     void sendToDevice(const QString &fileName, const QString &deviceId);
 };
-

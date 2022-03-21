@@ -26,4 +26,3 @@ protected:
 private:
     AutomaticAddContactsConfigureWidget *mConfigureWidget = nullptr;
 };
-

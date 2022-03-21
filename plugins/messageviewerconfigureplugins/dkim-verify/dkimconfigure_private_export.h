@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBDKIMVERIFYCONFIGURE_TESTS_EXPORT
 #endif
-

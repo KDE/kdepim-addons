@@ -51,4 +51,3 @@ private:
     QProcess *const mProcess;
 };
 } // namespace MailTransport
-

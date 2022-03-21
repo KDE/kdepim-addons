@@ -29,4 +29,3 @@ private:
     MessageViewer::HeaderStyleUtil mHeaderStyleUtil;
 };
 }
-

@@ -35,4 +35,3 @@ private:
     const KCalendarCore::Event::Ptr mEventPtr;
 };
 }
-

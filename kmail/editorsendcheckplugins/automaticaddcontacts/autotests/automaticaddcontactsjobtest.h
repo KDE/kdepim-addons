@@ -15,4 +15,3 @@ public:
     explicit AutomaticAddContactsJobTest(QObject *parent = nullptr);
     ~AutomaticAddContactsJobTest() override;
 };
-

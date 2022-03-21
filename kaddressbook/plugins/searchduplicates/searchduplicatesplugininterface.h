@@ -23,4 +23,3 @@ private:
     void slotActivated();
     Akonadi::Item::List mListItems;
 };
-

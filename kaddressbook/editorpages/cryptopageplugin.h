@@ -39,4 +39,3 @@ private:
     Kleo::KeyRequester *mSmimeCert = nullptr;
     bool mReadOnly = false;
 };
-

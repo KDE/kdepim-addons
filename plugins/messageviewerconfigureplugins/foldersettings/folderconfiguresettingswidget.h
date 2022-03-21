@@ -26,4 +26,3 @@ private:
     FolderConfigureSettingsPageWidget *const mFolderConfigureSettingsPageWidget;
     QSplitter *const mSplitter;
 };
-

@@ -19,4 +19,3 @@ public:
     Q_REQUIRED_RESULT bool importMails() override;
     Q_REQUIRED_RESULT QString name() const override;
 };
-

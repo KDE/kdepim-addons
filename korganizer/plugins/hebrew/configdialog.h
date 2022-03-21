@@ -37,4 +37,3 @@ private:
     QCheckBox *mIsraelBox = nullptr;
     QCheckBox *mCholBox = nullptr;
 };
-

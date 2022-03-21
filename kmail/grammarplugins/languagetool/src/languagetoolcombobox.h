@@ -25,4 +25,3 @@ private:
     void fillComboBox();
     Q_DISABLE_COPY(LanguageToolComboBox)
 };
-

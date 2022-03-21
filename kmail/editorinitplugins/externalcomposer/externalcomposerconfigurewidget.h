@@ -25,4 +25,3 @@ private:
     QCheckBox *const mExternalEditorCheck;
     KUrlRequester *const mEditorRequester;
 };
-

@@ -36,4 +36,3 @@ private Q_SLOTS:
     void shouldUpdateStartEndDateWhenReopenIt();
     void shouldDisabledSaveOpenEditorButtonWhenCollectionComboBoxIsEmpty();
 };
-

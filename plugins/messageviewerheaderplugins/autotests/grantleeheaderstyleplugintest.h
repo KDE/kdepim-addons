@@ -30,4 +30,3 @@ private Q_SLOTS:
 private:
     QString expectedDataLocation;
 };
-

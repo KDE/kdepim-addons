@@ -35,4 +35,3 @@ private:
     QLabel *const mLabHeight;
     QSpinBox *const mHeight;
 };
-

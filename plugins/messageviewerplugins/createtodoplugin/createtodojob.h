@@ -37,4 +37,3 @@ private:
     KCalendarCore::Todo::Ptr mTodoPtr;
 };
 }
-

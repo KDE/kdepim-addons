@@ -33,4 +33,3 @@ private:
 
     QHash<uint, ConfirmAddressSettings> mHashSettings;
 };
-

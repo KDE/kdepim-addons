@@ -16,12 +16,12 @@ K_PLUGIN_FACTORY(LunarphasesFactory, registerPlugin<Lunarphases>();)
 
 static QIcon phaseIcon(KHolidays::LunarPhase::Phase phase)
 {
-    const QString iconName =
-        (phase == KHolidays::LunarPhase::NewMoon) ?      QStringLiteral("moon-phase-new") :
-        (phase == KHolidays::LunarPhase::FullMoon) ?     QStringLiteral("moon-phase-full") :
-        (phase == KHolidays::LunarPhase::FirstQuarter) ? QStringLiteral("moon-phase-first-quarter") :
-        (phase == KHolidays::LunarPhase::LastQuarter) ?  QStringLiteral("moon-phase-last-quarter") :
-        /* else */                                       QString();
+    const QString iconName = (phase == KHolidays::LunarPhase::NewMoon) ? QStringLiteral("moon-phase-new")
+        : (phase == KHolidays::LunarPhase::FullMoon)                   ? QStringLiteral("moon-phase-full")
+        : (phase == KHolidays::LunarPhase::FirstQuarter)               ? QStringLiteral("moon-phase-first-quarter")
+        : (phase == KHolidays::LunarPhase::LastQuarter)                ? QStringLiteral("moon-phase-last-quarter")
+                                                                       :
+                                                        /* else */ QString();
     return iconName.isEmpty() ? QIcon() : QIcon::fromTheme(iconName);
 }
 

@@ -44,4 +44,3 @@ private:
     QNetworkAccessManager *mNetworkAccessManager = nullptr;
     QString mUrl;
 };
-

@@ -28,4 +28,3 @@ private:
     void importWindowsContact();
     void exportWindowsContact();
 };
-

@@ -27,4 +27,3 @@ private:
     QCheckBox *const mUseAuthenticationResultRelaxedParser;
     QComboBox *const mSmallKeyPolicy;
 };
-

@@ -22,4 +22,3 @@ public:
     MessageViewer::MessagePartRendererBase *renderer(int index) override;
     const MessageViewer::Interface::BodyPartURLHandler *urlHandler(int idx) const override;
 };
-

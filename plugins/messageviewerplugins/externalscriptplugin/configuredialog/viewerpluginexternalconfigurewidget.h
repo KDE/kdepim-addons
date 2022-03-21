@@ -35,4 +35,3 @@ private:
     QPushButton *const mRemoveScript;
     QPushButton *const mModifyScript;
 };
-

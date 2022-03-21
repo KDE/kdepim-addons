@@ -28,4 +28,3 @@ private:
     MailTransport::SendmailConfigWidget *const mConfigWidget;
     QPushButton *mOkButton = nullptr;
 };
-

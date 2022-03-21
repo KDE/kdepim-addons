@@ -15,4 +15,3 @@ public:
     explicit MarkdownConfigureDialogTest(QObject *parent = nullptr);
     ~MarkdownConfigureDialogTest() override = default;
 };
-

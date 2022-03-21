@@ -30,4 +30,3 @@ public:
     */
     static QString findParshaName(int dayNumber, int kvia, bool isLeapYear, bool useIsraelSettings);
 };
-

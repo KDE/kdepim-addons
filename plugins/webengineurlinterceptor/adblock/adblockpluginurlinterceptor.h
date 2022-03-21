@@ -25,4 +25,3 @@ public:
     void showConfigureDialog(QWidget *parent) override;
     bool hasConfigureDialog() const override;
 };
-

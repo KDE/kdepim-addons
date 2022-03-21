@@ -53,4 +53,3 @@ protected:
     QString mNonce;
     ConfirmationType mType = UnknownType;
 };
-

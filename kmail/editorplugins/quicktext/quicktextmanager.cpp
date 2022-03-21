@@ -73,7 +73,6 @@ QString QuicktextManager::selectedName() const
     return mSelectionModel->selectedIndexes().first().data(MailCommon::SnippetsModel::NameRole).toString();
 }
 
-
 void QuicktextManager::importQuickText()
 {
     const QString filename = QFileDialog::getOpenFileName(mParent, i18n("Import QuickText"));

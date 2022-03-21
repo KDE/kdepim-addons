@@ -43,4 +43,3 @@ private:
     int mExpandGroupJobCount = 0;
 };
 }
-

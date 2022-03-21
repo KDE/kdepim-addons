@@ -26,4 +26,3 @@ public:
     explicit SelectImapWidgetTest(QWidget *parent = nullptr);
     ~SelectImapWidgetTest() override;
 };
-

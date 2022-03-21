@@ -33,4 +33,3 @@ private:
     QRadioButton *mAcceptedDomain = nullptr;
     QRadioButton *mRejectedDomain = nullptr;
 };
-

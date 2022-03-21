@@ -223,4 +223,3 @@ private:
 
     Q_DISABLE_COPY(QCsvStandardBuilder)
 };
-

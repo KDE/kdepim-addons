@@ -47,4 +47,3 @@ private:
     QLabel *mResultGravatar = nullptr;
 };
 }
-

@@ -27,4 +27,3 @@ public:
 private:
     std::unique_ptr<ShortUrlEnginePluginManagerPrivate> const d;
 };
-

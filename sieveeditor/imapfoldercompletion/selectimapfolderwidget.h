@@ -43,4 +43,3 @@ private:
     QStandardItemModel *mModel = nullptr;
     QSortFilterProxyModel *mFilter = nullptr;
 };
-

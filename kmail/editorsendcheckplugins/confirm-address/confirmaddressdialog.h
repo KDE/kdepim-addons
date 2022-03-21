@@ -30,4 +30,3 @@ private:
     ConfirmAddressWidget *const mConfirmWidget;
     QPushButton *const mWhiteListEmailsButton;
 };
-

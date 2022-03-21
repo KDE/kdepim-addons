@@ -26,4 +26,3 @@ private:
     void slotCheckGrammarFinished(const QString &result);
     void slotError(GrammalecteResultJob::ErrorType error);
 };
-

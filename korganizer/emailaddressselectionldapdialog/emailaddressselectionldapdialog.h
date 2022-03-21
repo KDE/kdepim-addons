@@ -34,4 +34,3 @@ private:
     Akonadi::RecipientsPickerWidget *const mView;
     PimCommon::LdapSearchDialog *mLdapSearchDialog = nullptr;
 };
-

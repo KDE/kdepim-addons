@@ -15,4 +15,3 @@ public:
     explicit LanguageToolListOfLanguagesParserTest(QObject *parent = nullptr);
     ~LanguageToolListOfLanguagesParserTest() override = default;
 };
-

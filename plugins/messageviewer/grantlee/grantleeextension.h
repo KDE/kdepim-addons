@@ -76,4 +76,3 @@ public:
     QHash<QString, KTextTemplate::Filter *> filters(const QString &name) override;
 #endif
 };
-

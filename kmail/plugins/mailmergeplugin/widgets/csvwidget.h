@@ -26,4 +26,3 @@ private:
     KUrlRequester *const mCvsUrlRequester;
 };
 }
-

@@ -26,4 +26,3 @@ private Q_SLOTS:
 private:
     Akonadi::Item::List createItems();
 };
-

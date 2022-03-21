@@ -14,4 +14,3 @@ public:
     explicit EmailLineEditWidget(QWidget *parent = nullptr);
     ~EmailLineEditWidget() override = default;
 };
-

@@ -79,4 +79,3 @@ private:
     QPushButton *mUser2Button = nullptr;
     QPushButton *mOkButton = nullptr;
 };
-

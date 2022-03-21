@@ -49,4 +49,3 @@ private:
     QString mError;
     bool mIsRunning = false;
 };
-

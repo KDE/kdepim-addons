@@ -28,4 +28,3 @@ private:
     void importGMX();
     void exportGMX();
 };
-

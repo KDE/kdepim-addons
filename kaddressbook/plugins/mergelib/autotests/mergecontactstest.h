@@ -83,4 +83,3 @@ private Q_SLOTS:
     void checkNeedManualSelectionWithBirthday_data();
     void checkNeedManualSelectionWithBirthday();
 };
-

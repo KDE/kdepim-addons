@@ -26,4 +26,3 @@ Q_SIGNALS:
 private:
     explicit SettingsChangeNotifier(QObject *parent = nullptr);
 };
-

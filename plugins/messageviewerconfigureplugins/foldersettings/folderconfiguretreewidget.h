@@ -32,4 +32,3 @@ private:
     QPushButton *mSelectFolder = nullptr;
     QPushButton *mUnSelectFolder = nullptr;
 };
-

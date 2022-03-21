@@ -40,4 +40,3 @@ private:
     KUrlRequester *mGrammalectePath = nullptr;
     const bool mDisableDialogBox = false;
 };
-

@@ -23,4 +23,3 @@ public:
 private:
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
-

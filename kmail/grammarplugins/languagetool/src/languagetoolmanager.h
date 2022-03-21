@@ -51,4 +51,3 @@ private:
     QNetworkAccessManager *const mNetworkAccessManager;
     bool mUseLocalInstance = false;
 };
-

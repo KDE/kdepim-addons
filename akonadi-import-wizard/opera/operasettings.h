@@ -25,4 +25,3 @@ private:
     void readIdentity(const KConfigGroup &grp);
     const QString mFileName;
 };
-

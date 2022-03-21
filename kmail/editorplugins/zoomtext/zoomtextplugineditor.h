@@ -24,4 +24,3 @@ public:
 Q_SIGNALS:
     void zoomFactorChanged(int val);
 };
-

@@ -23,4 +23,3 @@ public:
 private:
     GravatarConfigureSettingsPluginWidget *mWidget = nullptr;
 };
-

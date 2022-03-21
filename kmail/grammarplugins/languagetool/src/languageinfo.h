@@ -34,4 +34,3 @@ private:
 };
 Q_DECLARE_METATYPE(LanguageInfo)
 Q_DECLARE_TYPEINFO(LanguageInfo, Q_MOVABLE_TYPE);
-

@@ -23,4 +23,3 @@ public:
 private:
     Q_DISABLE_COPY(GrammalectePlugin)
 };
-

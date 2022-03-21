@@ -28,4 +28,3 @@ private Q_SLOTS:
     void shouldReturnBody();
     void shouldReturnBcc();
 };
-

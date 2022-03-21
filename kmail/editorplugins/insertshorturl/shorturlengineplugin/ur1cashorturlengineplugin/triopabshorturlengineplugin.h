@@ -20,4 +20,3 @@ public:
     ShortUrlEngineInterface *createInterface(QObject *parent) override;
     QString engineName() const override;
 };
-

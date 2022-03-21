@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT
 #endif
-

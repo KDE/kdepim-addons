@@ -49,4 +49,3 @@ private:
     void changeState(QTreeWidgetItem *item, bool b);
 };
 }
-

@@ -36,4 +36,3 @@ private:
     Q_REQUIRED_RESULT DateEventDataHash populateCalendar(FakePimDataSource *source, bool uniqueEventData);
     Q_REQUIRED_RESULT QVector<CalendarEvents::EventData> findEventData(const KCalendarCore::Event::Ptr &event, const DateEventDataHash &allData);
 };
-

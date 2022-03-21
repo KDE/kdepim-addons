@@ -52,4 +52,3 @@ private:
     void init();
 };
 } // namespace MailTransport
-

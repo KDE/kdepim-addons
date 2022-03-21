@@ -26,4 +26,3 @@ public:
 private:
     Akonadi::Collection::List mListCollections;
 };
-

@@ -20,4 +20,3 @@ private:
     void appendContact(KContacts::Addressee *contact);
     const QString mFileName;
 };
-

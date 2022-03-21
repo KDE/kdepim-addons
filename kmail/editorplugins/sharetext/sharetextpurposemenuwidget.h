@@ -21,4 +21,3 @@ public:
 private:
     ShareTextPluginEditorInterface *mInterface = nullptr;
 };
-

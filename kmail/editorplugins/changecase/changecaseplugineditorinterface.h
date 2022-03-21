@@ -37,4 +37,3 @@ private:
     };
     ChangeCaseType mType = Unknown;
 };
-

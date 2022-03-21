@@ -74,4 +74,3 @@ private:
                                    bool showChol,
                                    bool showOmer);
 };
-

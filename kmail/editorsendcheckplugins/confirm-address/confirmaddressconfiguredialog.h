@@ -25,4 +25,3 @@ protected:
 private:
     ConfirmAddressConfigureWidget *mConfigureWidget = nullptr;
 };
-

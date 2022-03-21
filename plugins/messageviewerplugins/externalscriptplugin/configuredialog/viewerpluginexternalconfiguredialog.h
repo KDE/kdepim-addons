@@ -24,4 +24,3 @@ protected:
 private:
     ViewerPluginExternalConfigureWidget *mConfigWidget = nullptr;
 };
-

@@ -21,4 +21,3 @@ private Q_SLOTS:
     void testRenderKeyDetails_data();
     void testRenderKeyDetails();
 };
-

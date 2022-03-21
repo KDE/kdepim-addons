@@ -23,4 +23,3 @@ public:
 private:
     Q_REQUIRED_RESULT QUrlQuery decodePath(const QString &path) const;
 };
-

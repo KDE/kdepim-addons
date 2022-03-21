@@ -25,4 +25,3 @@ private:
     void slotActivated();
     QPointer<KPIMTextEdit::SelectSpecialCharDialog> mSelectSpecialChar;
 };
-

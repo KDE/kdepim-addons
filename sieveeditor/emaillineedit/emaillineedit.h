@@ -34,4 +34,3 @@ private:
     QToolButton *const mEmailButton;
     bool mEmailIsValid = false;
 };
-

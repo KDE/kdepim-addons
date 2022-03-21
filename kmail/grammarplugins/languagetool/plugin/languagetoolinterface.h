@@ -27,4 +27,3 @@ private:
     LanguageToolResultWidget *const mGrammarResultWidget;
     KToggleAction *mAction = nullptr;
 };
-

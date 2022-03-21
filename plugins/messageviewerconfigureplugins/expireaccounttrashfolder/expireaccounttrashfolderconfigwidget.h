@@ -25,4 +25,3 @@ private:
     void slotSaveAndExpireRequested();
     MailCommon::CollectionExpiryWidget *const mCollectionExpiryWidget;
 };
-

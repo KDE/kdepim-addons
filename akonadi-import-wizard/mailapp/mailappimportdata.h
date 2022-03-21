@@ -19,4 +19,3 @@ public:
     bool importMails() override;
     QString name() const override;
 };
-

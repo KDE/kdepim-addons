@@ -25,4 +25,3 @@ private Q_SLOTS:
 private:
     QTextEdit *mTextEdit = nullptr;
 };
-

@@ -17,4 +17,3 @@ public:
     ~GrammalecteParser();
     Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
-

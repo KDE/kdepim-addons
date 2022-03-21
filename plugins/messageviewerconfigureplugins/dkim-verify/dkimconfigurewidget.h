@@ -24,4 +24,3 @@ public:
 private:
     DKIMConfigureTab *const mTabWidget;
 };
-

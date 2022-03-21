@@ -30,4 +30,3 @@ private:
     bool mEnableEmbeddedLabel = false;
     bool mEnableExtraDefinitionLists = false;
 };
-

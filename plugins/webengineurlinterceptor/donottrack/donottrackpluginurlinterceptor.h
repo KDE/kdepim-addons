@@ -21,4 +21,3 @@ public:
 
     Q_REQUIRED_RESULT WebEngineViewer::NetworkPluginUrlInterceptorInterface *createInterface(QWebEngineView *webEngine, QObject *parent) override;
 };
-

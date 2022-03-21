@@ -58,4 +58,3 @@ private:
     bool mEnabled = false;
 };
 }
-

@@ -34,4 +34,3 @@ private:
     QString mPythonPath;
     QString mGrammalectePath;
 };
-

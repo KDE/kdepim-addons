@@ -25,4 +25,3 @@ private:
     void slotShortUrlFinished(QNetworkReply *reply);
     void slotSslErrors(QNetworkReply *reply, const QList<QSslError> &error);
 };
-

@@ -23,4 +23,3 @@ private:
     QString mAkonadiUrl;
     KMime::Message::Ptr mMessage;
 };
-

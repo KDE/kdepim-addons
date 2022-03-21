@@ -17,4 +17,3 @@ private Q_SLOTS:
     void shouldConvert();
     void shouldConvert_data();
 };
-

@@ -22,4 +22,3 @@ public:
 private:
     void slotShortUrlFinished(QNetworkReply *reply);
 };
-

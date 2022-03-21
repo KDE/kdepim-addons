@@ -40,4 +40,3 @@ private:
     Ui::AdBlockCreateFilterWidget *mUi = nullptr;
 };
 }
-

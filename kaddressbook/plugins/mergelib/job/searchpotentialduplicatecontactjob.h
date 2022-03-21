@@ -32,4 +32,3 @@ private:
     QVector<Akonadi::Item::List> mListDuplicate;
 };
 }
-

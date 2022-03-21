@@ -37,4 +37,3 @@ private:
     QString itemName(const KContacts::Addressee &address) const;
 };
 }
-

@@ -34,4 +34,3 @@ private:
     GrantleeTheme::ThemeManager *mThemeManager = nullptr;
 };
 }
-

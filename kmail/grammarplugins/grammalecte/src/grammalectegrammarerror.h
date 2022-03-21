@@ -21,4 +21,3 @@ private:
 };
 Q_DECLARE_METATYPE(GrammalecteGrammarError)
 Q_DECLARE_TYPEINFO(GrammalecteGrammarError, Q_MOVABLE_TYPE);
-

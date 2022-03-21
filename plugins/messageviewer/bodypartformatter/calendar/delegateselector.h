@@ -35,4 +35,3 @@ private:
     QCheckBox *const mRsvp;
     QPushButton *mOkButton = nullptr;
 };
-

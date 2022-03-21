@@ -110,4 +110,3 @@ private:
     bool mHtmlLoadExternal;
     bool mShowSignatureDetails;
 };
-

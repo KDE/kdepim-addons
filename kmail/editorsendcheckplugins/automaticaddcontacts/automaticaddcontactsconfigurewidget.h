@@ -23,4 +23,3 @@ public:
 private:
     AutomaticAddContactsConfigureTab *const mConfigureTab;
 };
-

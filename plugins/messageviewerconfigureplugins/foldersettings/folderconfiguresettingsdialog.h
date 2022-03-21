@@ -22,4 +22,3 @@ private:
     void writeConfig();
     FolderConfigureSettingsWidget *const mFolderConfigureSettingsWidget;
 };
-

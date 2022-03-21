@@ -33,4 +33,3 @@ private:
     DKIMPolicyWidget *const mPolicyWidget;
     QTabWidget *const mTabWidget;
 };
-

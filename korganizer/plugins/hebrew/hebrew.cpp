@@ -16,8 +16,8 @@
 #include <KConfig>
 #include <KConfigGroup>
 #include <KLocalizedString>
-#include <QLocale>
 #include <KPluginFactory>
+#include <QLocale>
 
 K_PLUGIN_FACTORY(HebrewFactory, registerPlugin<Hebrew>();)
 

@@ -16,4 +16,3 @@ public:
 
     Q_REQUIRED_RESULT bool interceptRequest(QWebEngineUrlRequestInfo &info) override;
 };
-

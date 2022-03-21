@@ -20,4 +20,3 @@ public:
 private:
     InsertShorturlConfigureWidget *const mInsertShortUrlWidget;
 };
-

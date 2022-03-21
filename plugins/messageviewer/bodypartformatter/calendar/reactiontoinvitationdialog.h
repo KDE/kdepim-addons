@@ -28,4 +28,3 @@ private:
     KPIMTextEdit::PlainTextEditorWidget *const mPlainTextEditor;
     QPushButton *mOkButton = nullptr;
 };
-

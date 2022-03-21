@@ -32,4 +32,3 @@ private:
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
     QWidget *mParentWidget = nullptr;
 };
-

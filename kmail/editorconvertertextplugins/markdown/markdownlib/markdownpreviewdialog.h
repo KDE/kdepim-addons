@@ -24,4 +24,3 @@ private:
     void writeConfig();
     MarkdownPreviewWidget *const mPreviewWidget;
 };
-

@@ -27,4 +27,3 @@ public:
 private:
     Akonadi::EmailAddressRequester *const mEmailAddressRequester;
 };
-

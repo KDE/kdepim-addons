@@ -41,4 +41,3 @@ private:
     int mFetchJobCount = 0;
 };
 }
-

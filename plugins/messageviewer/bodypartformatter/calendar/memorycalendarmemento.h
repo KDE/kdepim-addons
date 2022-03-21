@@ -37,4 +37,3 @@ private:
     Akonadi::CalendarBase::Ptr mCalendar;
 };
 }
-

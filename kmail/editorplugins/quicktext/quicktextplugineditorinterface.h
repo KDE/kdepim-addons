@@ -30,4 +30,3 @@ private:
     QVector<MailCommon::SnippetsInfo> mSnippetsInfo;
     MailCommon::SnippetsModel *const mModel;
 };
-

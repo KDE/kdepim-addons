@@ -17,4 +17,3 @@ public:
     void generateShortUrl() override;
     QString engineName() const override;
 };
-

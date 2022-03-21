@@ -27,4 +27,3 @@ private:
     QColor mTextColor;
     LoadingStatus mStatus = InProgress;
 };
-

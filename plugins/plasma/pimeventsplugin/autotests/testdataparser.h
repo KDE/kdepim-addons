@@ -42,4 +42,3 @@ private:
     QVector<CalendarEvents::EventData> mEventData;
     bool mUniqueEventData;
 };
-

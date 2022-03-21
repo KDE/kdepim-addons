@@ -29,4 +29,3 @@ private:
     MarkdownConverter *const mConverter;
     QLabel *const mHoverUrlLabel;
 };
-

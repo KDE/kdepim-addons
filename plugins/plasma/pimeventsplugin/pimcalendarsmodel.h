@@ -37,4 +37,3 @@ private:
     Akonadi::EntityTreeModel *mEtm = nullptr;
     QSet<qint64> mEnabledCalendars;
 };
-

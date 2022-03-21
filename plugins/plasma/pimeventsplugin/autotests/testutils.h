@@ -80,4 +80,3 @@ bool compareEventData(const CalendarEvents::EventData &actual, const CalendarEve
     return true;
 }
 }
-

@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBEXPIREACCOUNTTRASHFOLDERCONFIG_TESTS_EXPORT
 #endif
-

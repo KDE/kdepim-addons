@@ -24,4 +24,3 @@ private:
     QCheckBox *const mLatexSupport;
     QCheckBox *const mExtraDefinitionLists;
 };
-

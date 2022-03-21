@@ -25,4 +25,3 @@ public:
 private:
     MailCommon::CollectionTemplatesWidget *const mCollectionTemplateWidget;
 };
-

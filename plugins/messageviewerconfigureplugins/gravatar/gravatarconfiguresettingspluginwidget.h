@@ -27,4 +27,3 @@ private:
     Gravatar::GravatarConfigureSettingsWidget *const mGravatarConfigWidget;
     QCheckBox *const mEnableGravatarSupport;
 };
-

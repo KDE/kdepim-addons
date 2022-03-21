@@ -42,4 +42,3 @@ private:
     QDate mStart;
     QDate mEnd;
 };
-

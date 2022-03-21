@@ -26,4 +26,3 @@ private:
     bool mAutoTest = false;
     QWidget *mParentWidget = nullptr;
 };
-

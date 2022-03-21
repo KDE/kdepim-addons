@@ -18,7 +18,6 @@
 #include <QListWidgetItem>
 #include <QWidget>
 
-
 namespace Ui
 {
 class adblock;
@@ -89,4 +88,3 @@ private:
     bool mBlockUpdate = true;
 };
 }
-

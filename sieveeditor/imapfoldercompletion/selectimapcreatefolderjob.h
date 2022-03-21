@@ -36,4 +36,3 @@ private:
     QString mNewFolderName;
     KIMAP::Session *mSession = nullptr;
 };
-

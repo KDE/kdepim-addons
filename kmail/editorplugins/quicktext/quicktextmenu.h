@@ -35,4 +35,3 @@ private:
     MessageComposer::ConvertSnippetVariableMenu *mMenu = nullptr;
     MessageComposer::PluginComposerInterface *mComposerInterface = nullptr;
 };
-

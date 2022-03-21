@@ -21,4 +21,3 @@ private Q_SLOTS:
     void shouldRemoveDuplicatedEmails();
     void shouldRemoveDuplicatedEmails_data();
 };
-

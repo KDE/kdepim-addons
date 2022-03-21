@@ -16,4 +16,3 @@
 #else /* not compiling tests */
 #define LIBKMAILMARKDOWNPRIVATE_TESTS_EXPORT
 #endif
-

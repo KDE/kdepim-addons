@@ -16,4 +16,3 @@ public:
     ~LanguageToolListOfLanguagesParser();
     QVector<LanguageInfo> parseResult(const QJsonArray &obj) const;
 };
-

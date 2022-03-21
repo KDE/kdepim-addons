@@ -21,4 +21,3 @@ public:
 
     void showConfigureDialog(QWidget *parent) override;
 };
-

@@ -25,4 +25,3 @@ private:
     QLineEdit *const mTitle;
     QLineEdit *const mLink;
 };
-

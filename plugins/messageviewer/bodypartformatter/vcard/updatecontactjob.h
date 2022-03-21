@@ -27,4 +27,3 @@ private:
     const KContacts::Addressee mContact;
     QWidget *const mParentWidget;
 };
-

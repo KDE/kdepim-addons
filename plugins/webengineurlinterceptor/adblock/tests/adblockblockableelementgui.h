@@ -27,4 +27,3 @@ private:
     void slotSearchItemsDone(const QVector<AdBlock::AdBlockResult> &result);
     QWebEngineView *mWebEngineView = nullptr;
 };
-

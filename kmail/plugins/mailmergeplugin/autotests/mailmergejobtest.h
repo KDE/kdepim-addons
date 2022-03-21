@@ -15,4 +15,3 @@ public:
     explicit MailMergeJobTest(QObject *parent = nullptr);
     ~MailMergeJobTest() override;
 };
-

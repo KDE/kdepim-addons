@@ -24,4 +24,3 @@ private:
     void slotCollectionModified(KJob *job);
     Akonadi::Collection mCollection;
 };
-

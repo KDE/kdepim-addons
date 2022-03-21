@@ -37,4 +37,3 @@ private:
     Akonadi::NoteUtils::NoteMessageWrapper mNote;
 };
 }
-

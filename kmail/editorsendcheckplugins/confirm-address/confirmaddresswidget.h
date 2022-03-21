@@ -28,4 +28,3 @@ private:
     void slotItemChanged(QListWidgetItem *item);
     QListWidget *const mListEmails;
 };
-

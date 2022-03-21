@@ -33,4 +33,3 @@ private:
     QToolButton *const mToolButton;
     SelectImapLineEdit *const mLineEdit;
 };
-

@@ -20,4 +20,3 @@ public:
 
     MessageComposer::PluginEditorInterface *createInterface(QObject *parent = nullptr) override;
 };
-

@@ -27,4 +27,3 @@ private:
     QCheckBox *const mCheckDuplicateEmailsAddresses;
     QCheckBox *const mCheckSendAttachments;
 };
-

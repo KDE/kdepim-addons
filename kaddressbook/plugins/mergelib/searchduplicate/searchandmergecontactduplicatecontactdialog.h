@@ -44,4 +44,3 @@ private:
     QStackedWidget *mStackedWidget = nullptr;
 };
 }
-

@@ -38,4 +38,3 @@ private:
     QPushButton *mApplyButton = nullptr;
     KAddressBookGrantlee::GrantleeContactViewer *mView = nullptr;
 };
-

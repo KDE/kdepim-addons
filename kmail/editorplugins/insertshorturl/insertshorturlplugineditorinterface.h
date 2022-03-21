@@ -28,4 +28,3 @@ private:
     QHash<QString, ShortUrlEngineInterface *> mLstInterface;
     ShortUrlEngineInterface *mCurrentEngine = nullptr;
 };
-

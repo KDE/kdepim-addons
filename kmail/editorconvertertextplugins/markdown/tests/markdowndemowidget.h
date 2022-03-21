@@ -20,4 +20,3 @@ private:
     QTextEdit *mEdit = nullptr;
     MarkdownPreviewWidget *mPreview = nullptr;
 };
-

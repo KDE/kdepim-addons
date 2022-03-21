@@ -26,4 +26,3 @@ public:
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
     Q_REQUIRED_RESULT bool hasToolBarSupport() const override;
 };
-

@@ -17,7 +17,8 @@ class AdblockUtil
 {
 public:
     static bool matchDomain(const QString &pattern, const QString &domain);
-    template<typename T> static bool containsIndex(const T &container, int index)
+    template<typename T>
+    static bool containsIndex(const T &container, int index)
     {
         return index >= 0 && container.count() > index;
     }

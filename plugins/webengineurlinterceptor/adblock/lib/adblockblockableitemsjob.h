@@ -69,4 +69,3 @@ struct ADBLOCKLIB_EXPORT AdBlockResult {
 };
 }
 Q_DECLARE_TYPEINFO(AdBlock::AdBlockResult, Q_MOVABLE_TYPE);
-

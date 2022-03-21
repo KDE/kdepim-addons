@@ -21,4 +21,3 @@ private Q_SLOTS:
     void shouldReturnEmails_data();
     void shouldReturnEmails();
 };
-

@@ -21,4 +21,3 @@ public:
 
     PimCommon::GenericPluginInterface *createInterface(QObject *parent = nullptr) override;
 };
-

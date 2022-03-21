@@ -26,4 +26,3 @@ public:
 Q_SIGNALS:
     void configChanged();
 };
-

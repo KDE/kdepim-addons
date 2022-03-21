@@ -34,4 +34,3 @@ private:
     KAddressBookGrantlee::GrantleeContactViewer *mContactViewer = nullptr;
 };
 }
-

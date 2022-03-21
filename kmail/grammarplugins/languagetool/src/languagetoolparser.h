@@ -17,4 +17,3 @@ public:
     ~LanguageToolParser();
     QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
-

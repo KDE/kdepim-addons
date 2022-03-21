@@ -15,4 +15,3 @@ public:
     ~MarkdownQTextDocument() override;
     Q_REQUIRED_RESULT QString toHtml() const override;
 };
-

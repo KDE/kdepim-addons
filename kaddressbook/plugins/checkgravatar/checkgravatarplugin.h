@@ -23,4 +23,3 @@ public:
 
     Q_REQUIRED_RESULT bool hasPopupMenuSupport() const override;
 };
-

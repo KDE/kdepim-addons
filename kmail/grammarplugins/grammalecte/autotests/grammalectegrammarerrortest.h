@@ -18,4 +18,3 @@ private Q_SLOTS:
     void shouldParseJson_data();
     void shouldParseJson();
 };
-

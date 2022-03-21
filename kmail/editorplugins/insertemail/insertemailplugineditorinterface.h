@@ -24,4 +24,3 @@ private:
     void slotActivated();
     QPointer<SelectMailDialog> mSelectMailDialog;
 };
-

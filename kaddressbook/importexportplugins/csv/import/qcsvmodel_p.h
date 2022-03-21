@@ -48,4 +48,3 @@ private:
     int mColumnCount = 0;
     int mCacheCounter = 0;
 };
-

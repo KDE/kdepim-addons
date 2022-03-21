@@ -32,4 +32,3 @@ private:
     LanguageToolComboBox *mLanguageToolComboBox = nullptr;
     LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
 };
-

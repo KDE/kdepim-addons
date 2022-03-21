@@ -25,4 +25,3 @@ private:
     KUrlRequester *const mUrlRequester;
 };
 }
-

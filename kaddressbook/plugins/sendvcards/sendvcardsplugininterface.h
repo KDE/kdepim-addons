@@ -28,4 +28,3 @@ private:
     Akonadi::Item::List mListItems;
     QAction *mAction = nullptr;
 };
-

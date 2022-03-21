@@ -22,4 +22,3 @@ private:
     QString mExternalComposerPath;
     bool mEnabled = false;
 };
-

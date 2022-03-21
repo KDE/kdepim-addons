@@ -55,4 +55,3 @@ private:
     bool mEnableExtraDefinitionLists = false;
     MessageComposer::StatusBarLabelToggledState *mStatusBarLabel = nullptr;
 };
-

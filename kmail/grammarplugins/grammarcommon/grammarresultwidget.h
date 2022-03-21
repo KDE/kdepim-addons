@@ -38,4 +38,3 @@ protected:
 private:
     Q_DISABLE_COPY(GrammarResultWidget)
 };
-

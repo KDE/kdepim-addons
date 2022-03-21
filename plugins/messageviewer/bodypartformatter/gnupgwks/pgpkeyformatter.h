@@ -22,4 +22,3 @@ public:
 private:
     Q_REQUIRED_RESULT QString render(const PgpKeyMessagePart &mp) const;
 };
-

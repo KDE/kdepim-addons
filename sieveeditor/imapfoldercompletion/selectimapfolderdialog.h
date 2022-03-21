@@ -30,4 +30,3 @@ private:
     SelectImapFolderWidget *const mSelectImapFolderWidget;
     QPushButton *const mNewFolder;
 };
-

@@ -55,4 +55,3 @@ private:
     QStackedWidget *mStackedWidget = nullptr;
     QWidget *mEmptyWidget = nullptr;
 };
-

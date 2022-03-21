@@ -15,4 +15,3 @@ public:
     explicit SelectMailDialogTest(QObject *parent = nullptr);
     ~SelectMailDialogTest() override = default;
 };
-

@@ -21,4 +21,3 @@ public:
 
     MimeTreeParser::MessagePart::Ptr process(MimeTreeParser::Interface::BodyPart &part) const override;
 };
-

@@ -15,4 +15,3 @@ public:
     explicit ViewerPluginExternalscriptTest(QObject *parent = nullptr);
     ~ViewerPluginExternalscriptTest() override;
 };
-

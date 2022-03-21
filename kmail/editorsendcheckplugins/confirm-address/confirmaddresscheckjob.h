@@ -33,4 +33,3 @@ private:
     QStringList mWhiteEmails;
     bool mRejectedDomain = false;
 };
-

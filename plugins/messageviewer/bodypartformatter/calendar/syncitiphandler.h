@@ -35,4 +35,3 @@ private:
     QEventLoop m_eventLoop;
     IncidenceEditorNG::GroupwareUiDelegate *const m_counterProposalEditorDelegate;
 };
-

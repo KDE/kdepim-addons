@@ -123,4 +123,3 @@ private:
     int mRowCount = 0;
     int mColumnCount = 0;
 };
-

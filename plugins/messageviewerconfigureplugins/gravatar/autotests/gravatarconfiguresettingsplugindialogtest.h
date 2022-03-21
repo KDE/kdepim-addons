@@ -15,4 +15,3 @@ public:
     explicit GravatarConfigureSettingsPluginDialogTest(QObject *parent = nullptr);
     ~GravatarConfigureSettingsPluginDialogTest() override = default;
 };
-

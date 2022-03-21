@@ -23,7 +23,6 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
     mainLayout->setContentsMargins(QMargins());
 
-
     mServerName->setObjectName(QStringLiteral("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
     KPIM::LineEditCatchReturnKey(mServerName, this);

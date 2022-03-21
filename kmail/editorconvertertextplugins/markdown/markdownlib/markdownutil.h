@@ -12,4 +12,3 @@ namespace MarkdownUtil
 {
 LIBKMAILMARKDOWN_EXPORT QStringList imagePaths(const QString &str);
 }
-

@@ -94,4 +94,3 @@ private:
     std::vector<PassData> m_passes;
     std::vector<DocumentData> m_docs;
 };
-

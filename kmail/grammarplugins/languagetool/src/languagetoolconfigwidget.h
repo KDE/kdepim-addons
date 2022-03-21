@@ -35,4 +35,3 @@ private:
     LanguageToolComboBox *const mLanguageToolCombobox;
     LanguageToolUpdateComboBox *const mLanguageToolUpdateCombobox;
 };
-

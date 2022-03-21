@@ -26,4 +26,3 @@ private:
     QComboBox *const mSaveKey;
     QCheckBox *const mUseOnlyAuthenticationResult;
 };
-

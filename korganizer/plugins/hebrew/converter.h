@@ -131,4 +131,3 @@ private:
     static void secularToHebrewConversion(int year, int month, int day, struct DateResult *result);
     static void hebrewToSecularConversion(int year, int month, int day, struct DateResult *result);
 };
-
