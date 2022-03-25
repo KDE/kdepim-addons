@@ -28,10 +28,12 @@ void OpenUrlWithConfigureCreateWidgetTest::shouldHaveDefaultValues()
     auto mServerName = w.findChild<QLineEdit *>(QStringLiteral("mServerName"));
     QVERIFY(mServerName);
     QVERIFY(mServerName->text().isEmpty());
+    QVERIFY(mServerName->isClearButtonEnabled());
 
     auto mCommandLine = w.findChild<QLineEdit *>(QStringLiteral("mCommandLine"));
     QVERIFY(mCommandLine);
     QVERIFY(mCommandLine->text().isEmpty());
+    QVERIFY(mCommandLine->isClearButtonEnabled());
 
     auto formatHelp = w.findChild<QLabel *>(QStringLiteral("formatHelp"));
     QVERIFY(formatHelp);
