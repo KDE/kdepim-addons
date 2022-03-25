@@ -53,7 +53,7 @@ void EmailLineEdit::akonadiStateChanged(Akonadi::ServerManager::State state)
 
 void EmailLineEdit::verifyAkonadiStatus()
 {
-    Akonadi::ServerManager::State state = Akonadi::ServerManager::self()->state();
+    const Akonadi::ServerManager::State state = Akonadi::ServerManager::self()->state();
     mEmailButton->setVisible(state == Akonadi::ServerManager::Running);
 }
 
