@@ -26,6 +26,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
 
     mServerName->setObjectName(QStringLiteral("mServerName"));
     mainLayout->addRow(i18n("Server Name:"), mServerName);
+    mServerName->setClearButtonEnabled(true);
     KPIM::LineEditCatchReturnKey(mServerName, this);
 
     auto formatHelp = new QLabel(i18n("<qt><a href=\"whatsthis1\">Argument format information...</a></qt>"), this);
@@ -44,6 +45,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     mainLayout->addWidget(formatHelp);
 
     mCommandLine->setObjectName(QStringLiteral("mCommandLine"));
+    mCommandLine->setClearButtonEnabled(true);
     mainLayout->addRow(i18n("Command line:"), mCommandLine);
     KPIM::LineEditCatchReturnKey(mCommandLine, this);
 
