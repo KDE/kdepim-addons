@@ -101,7 +101,7 @@ MimeTreeParser::MessagePart::Ptr ItineraryProcessor::process(MimeTreeParser::Int
         pass.reset(KPkPass::Pass::fromData(part.content()->decodedContent()));
         engine.setContent(QVariant::fromValue<KPkPass::Pass *>(pass.get()), u"application/vnd.apple.pkpass");
     } else if (part.content()->contentType()->isHTMLText()) {
-        engine.setData(part.content()->decodedContent());
+        engine.setContent(part.content()->decodedText(), u"text/html");
     } else if (part.content()->contentType()->mimeType() == "application/pdf"
                || part.content()->contentType()->name().endsWith(QLatin1String(".pdf"), Qt::CaseInsensitive)) {
         isPdf = true;
