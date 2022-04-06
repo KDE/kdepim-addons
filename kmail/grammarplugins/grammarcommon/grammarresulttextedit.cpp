@@ -18,6 +18,7 @@
 
 #include <KColorScheme>
 #include <QAction>
+#include <QApplication>
 #include <QMenu>
 #include <QPainter>
 #include <QTextBlock>
@@ -28,6 +29,9 @@ GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
 {
     setReadOnly(true);
     setAcceptRichText(false);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
+    connect(qApp, &QApplication::paletteChanged, this, &GrammarResultTextEdit::generalPaletteChanged);
+#endif
     generalPaletteChanged();
 }
 
@@ -53,6 +57,16 @@ void GrammarResultTextEdit::paintEvent(QPaintEvent *event)
     } else {
         QTextEdit::paintEvent(event);
     }
+}
+
+bool GrammarResultTextEdit::event(QEvent *ev)
+{
+#if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
+    if (ev->type() == QEvent::ApplicationPaletteChange) {
+        regenerateColorScheme();
+    }
+#endif
+    return QTextEdit::event(ev);
 }
 
 void GrammarResultTextEdit::generalPaletteChanged()
