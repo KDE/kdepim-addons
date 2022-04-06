@@ -32,6 +32,7 @@
                 "Name[sr@latin]": "Danijel Vratil",
                 "Name[sr]": "Данијел Вратил",
                 "Name[sv]": "Daniel Vrátil",
+                "Name[tr]": "Daniel Vrátil",
                 "Name[uk]": "Daniel Vrátil",
                 "Name[x-test]": "xxDaniel Vrátilxx",
                 "Name[zh_CN]": "Daniel Vrátil"
@@ -65,6 +66,7 @@
         "Description[sr@latin]": "Priključak za prikaz događaja iz kalendara KDE‑PIM‑a",
         "Description[sr]": "Прикључак за приказ догађаја из календара КДЕ‑ПИМ‑а",
         "Description[sv]": "Kalenderinsticksprogram för att visa händelser från kalendrar i KDE:s personliga informationshantering",
+        "Description[tr]": "KDE PIM takvimlerinden etkinlikleri görüntülemek için takvim eklentisi",
         "Description[uk]": "Додаток календаря для показу подій з календарів PIM KDE",
         "Description[x-test]": "xxCalendar plugin for displaying events from KDE PIM calendarsxx",
         "Description[zh_CN]": "用于显示 KDE PIM 日历中事件的日历插件",
@@ -98,6 +100,7 @@
         "Name[sr@latin]": "Priključak PIM događaja",
         "Name[sr]": "Прикључак ПИМ догађаја",
         "Name[sv]": "Händelseinsticksprogram för personlig informationshantering",
+        "Name[tr]": "PIM Etkinlikleri Eklentisi",
         "Name[uk]": "Додаток подій PIM",
         "Name[x-test]": "xxPIM Events Pluginxx",
         "Name[zh_CN]": "PIM 事件插件",
