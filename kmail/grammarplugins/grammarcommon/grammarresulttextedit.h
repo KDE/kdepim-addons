@@ -27,6 +27,7 @@ protected:
 
     void paintEvent(QPaintEvent *event) override;
 
+    bool event(QEvent *ev) override;
 Q_SIGNALS:
     void replaceText(const MessageComposer::PluginGrammarAction &act);
     void checkAgain();
