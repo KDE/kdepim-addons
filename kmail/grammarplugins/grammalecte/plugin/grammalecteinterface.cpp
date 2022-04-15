@@ -88,6 +88,6 @@ void GrammalecteInterface::checkAgain()
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());
         mGrammarResultWidget->checkGrammar();
     } else {
-        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
+        qCWarning(KMAIL_EDITOR_GRAMMALECTE_PLUGIN_LOG) << "richtexteditor not set, it's a bug";
     }
 }

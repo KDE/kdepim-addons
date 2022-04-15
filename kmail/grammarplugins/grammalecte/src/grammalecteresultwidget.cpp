@@ -58,7 +58,7 @@ void GrammalecteResultWidget::slotError(GrammalecteResultJob::ErrorType error)
         str = i18n("Grammalecte path not found.");
         break;
     case GrammalecteResultJob::ErrorType::Unknown:
-        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: unknow error";
+        qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: unknown error";
         break;
     case GrammalecteResultJob::ErrorType::PythonPathNotExist:
         qCWarning(LIBGRAMMALECTE_PLUGIN_LOG) << "An error found during executing GrammalecteResultJob: python exec doesn't exist";

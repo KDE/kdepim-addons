@@ -119,7 +119,7 @@ public:
                              qCDebug(MS_TNEF_LOG) << "No possible to extract file:" << att->name();
                          }
 
-                         // falling back to internal TNEF attachement name if no filename is given for the attached file
+                         // falling back to internal TNEF attachment name if no filename is given for the attached file
                          // this follows the logic of KTNEFParser::extractFileTo(...)
                          QString attFileName = att->fileName();
                          if (attFileName.isEmpty()) {
@@ -162,7 +162,7 @@ public:
                              qCDebug(MS_TNEF_LOG) << "No possible to extract file:" << att->name();
                          }
 
-                         // falling back to internal TNEF attachement name if no filename is given for the attached file
+                         // falling back to internal TNEF attachment name if no filename is given for the attached file
                          // this follows the logic of KTNEFParser::extractFileTo(...)
                          QString attFileName = att->fileName();
                          if (attFileName.isEmpty()) {

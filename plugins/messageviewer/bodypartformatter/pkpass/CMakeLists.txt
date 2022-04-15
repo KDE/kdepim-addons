@@ -8,7 +8,7 @@ target_sources(messageviewer_bodypartformatter_pkpass PRIVATE
     templates.qrc
     )
 ecm_qt_declare_logging_category(messageviewer_bodypartformatter_pkpass HEADER pkpass_debug.h IDENTIFIER PKPASS_LOG CATEGORY_NAME org.kde.pim.pkpass
-    DESCRIPTION "kdepim-addons (pkpass formater)"
+    DESCRIPTION "kdepim-addons (pkpass formatter)"
     EXPORT KDEPIMADDONS
     )
 

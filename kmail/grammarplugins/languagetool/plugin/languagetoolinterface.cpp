@@ -104,7 +104,7 @@ bool LanguageToolInterface::checkAgain()
         mGrammarResultWidget->setText(richTextEditor()->toPlainText());
         mGrammarResultWidget->checkGrammar();
     } else {
-        qCWarning(KMAIL_EDITOR_LANGUAGETOOL_PLUGIN_LOG) << "richtexteditor not setted, it's a bug";
+        qCWarning(KMAIL_EDITOR_LANGUAGETOOL_PLUGIN_LOG) << "richtexteditor not set, it's a bug";
     }
     return true;
 }

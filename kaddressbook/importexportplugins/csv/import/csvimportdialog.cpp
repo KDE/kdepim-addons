@@ -373,7 +373,7 @@ void CSVImportDialog::initGUI()
                                     "comma is the field delimiter, then any comma occurring with the data "
                                     "will be \"quoted\" by the character specified here."));
     mComboQuote->setEditable(false);
-    mComboQuote->addItem(i18nc("@item:inlistbox Qoute character option", "\""), 0);
+    mComboQuote->addItem(i18nc("@item:inlistbox Quote character option", "\""), 0);
     mComboQuote->addItem(i18nc("@item:inlistbox Quote character option", "'"), 1);
     mComboQuote->addItem(i18nc("@item:inlistbox Quote character option", "None"), 2);
     layout->addWidget(mComboQuote, 1, 3);
