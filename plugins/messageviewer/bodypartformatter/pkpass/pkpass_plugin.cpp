@@ -109,6 +109,12 @@ public:
             case KPkPass::Barcode::Aztec:
                 code.reset(Prison::createBarcode(Prison::Aztec));
                 break;
+            case KPkPass::Barcode::PDF417:
+                code.reset(Prison::createBarcode(Prison::PDF417));
+                break;
+            case KPkPass::Barcode::Code128:
+                code.reset(Prison::createBarcode(Prison::Code128));
+                break;
             default:
                 break;
             }
