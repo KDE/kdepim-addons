@@ -15,7 +15,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(DatenumsFactory, registerPlugin<Datenums>();)
+K_PLUGIN_CLASS_WITH_JSON(Datenums, "datenums.json")
 
 Datenums::Datenums(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)

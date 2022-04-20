@@ -12,7 +12,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(LunarphasesFactory, registerPlugin<Lunarphases>();)
+K_PLUGIN_CLASS_WITH_JSON(Lunarphases, "lunarphases.json")
 
 static QIcon phaseIcon(KHolidays::LunarPhase::Phase phase)
 {

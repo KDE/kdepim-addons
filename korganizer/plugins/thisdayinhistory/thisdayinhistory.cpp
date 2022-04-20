@@ -14,7 +14,7 @@
 #include <KLocalizedString>
 #include <KPluginFactory>
 
-K_PLUGIN_FACTORY(ThisDayInHistoryFactory, registerPlugin<ThisDayInHistory>();)
+K_PLUGIN_CLASS_WITH_JSON(ThisDayInHistory, "thisdayinhistory.json")
 
 ThisDayInHistory::ThisDayInHistory(QObject *parent, const QVariantList &args)
     : Decoration(parent, args)

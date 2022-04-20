@@ -3,24 +3,21 @@
 
 ########### next target ###############
 
-add_library(korg_lunarphases MODULE lunarphases.cpp)
+add_library(lunarphases MODULE lunarphases.cpp)
 
-target_link_libraries(korg_lunarphases
+kcoreaddons_desktop_to_json(lunarphases lunarphases.desktop)
+
+target_link_libraries(lunarphases
   KF5::Holidays
   KF5::EventViews
 )
 
 install(TARGETS
-  korg_lunarphases
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}
+  lunarphases
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
 )
 
 ########### install files ###############
-
-install(FILES
-  lunarphases.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
-)
 
 include(ECMInstallIcons)
 ecm_install_icons(

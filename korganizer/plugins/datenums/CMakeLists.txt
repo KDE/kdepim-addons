@@ -2,9 +2,11 @@
 # SPDX-License-Identifier: BSD-3-Clause
 
 ########### next target ###############
-add_library(korg_datenums MODULE)
+add_library(datenums MODULE)
 
-target_sources(korg_datenums PRIVATE
+kcoreaddons_desktop_to_json(datenums datenums.desktop)
+
+target_sources(datenums PRIVATE
   configdialog.cpp
   datenums.cpp
   configdialog.h
@@ -12,20 +14,13 @@ target_sources(korg_datenums PRIVATE
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
-    set_target_properties(korg_datenums PROPERTIES UNITY_BUILD ON)
+    set_target_properties(datenums PROPERTIES UNITY_BUILD ON)
 endif()
 
-target_link_libraries(korg_datenums
+target_link_libraries(datenums
   KF5::EventViews
 )
 install(TARGETS
-  korg_datenums
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}
-)
-
-########### install files ###############
-
-install(FILES
-  datenums.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
+  datenums
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
 )

@@ -19,7 +19,7 @@
 #include <KPluginFactory>
 #include <QLocale>
 
-K_PLUGIN_FACTORY(HebrewFactory, registerPlugin<Hebrew>();)
+K_PLUGIN_CLASS_WITH_JSON(Hebrew, "hebrew.json")
 
 using namespace EventViews::CalendarDecoration;
 

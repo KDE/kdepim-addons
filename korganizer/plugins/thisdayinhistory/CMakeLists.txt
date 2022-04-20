@@ -3,25 +3,19 @@
 
 ########### next target ###############
 
-add_library(korg_thisdayinhistory MODULE)
-target_sources(korg_thisdayinhistory PRIVATE
+add_library(thisdayinhistory MODULE)
+target_sources(thisdayinhistory PRIVATE
   thisdayinhistory.cpp
   thisdayinhistory.h
 )
 
+kcoreaddons_desktop_to_json(thisdayinhistory thisdayinhistory.desktop)
 
-target_link_libraries(korg_thisdayinhistory
+target_link_libraries(thisdayinhistory
   KF5::EventViews
 )
 
 install(TARGETS
-  korg_thisdayinhistory
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}
-)
-
-########### install files ###############
-
-install(FILES
-  thisdayinhistory.desktop
-  DESTINATION ${KDE_INSTALL_KSERVICESDIR}/korganizer
+  thisdayinhistory
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
 )

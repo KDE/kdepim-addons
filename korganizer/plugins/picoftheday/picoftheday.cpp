@@ -21,7 +21,7 @@
 #include <QCache>
 #include <QGlobalStatic>
 
-K_PLUGIN_FACTORY(PicofthedayFactory, registerPlugin<Picoftheday>();)
+K_PLUGIN_CLASS_WITH_JSON(Picoftheday, "picoftheday.json")
 
 // TODO: add also disc cache to avoid even more network traffic
 using Cache = QCache<QDate, ElementData>;
