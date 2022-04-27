@@ -89,3 +89,6 @@ Dependencies:
     'pim/kaddressbook' : '@same'
     'libraries/ktextaddons': '@stable'
     'third-party/grantlee' : '@stable'
+
+Options:
+  require-passing-tests-on: [ 'Linux', 'FreeBSD' ]      
