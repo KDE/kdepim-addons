@@ -18,6 +18,7 @@
 
 #include <QJsonArray>
 #include <QJsonDocument>
+#include <QJsonObject>
 #include <QUrlQuery>
 
 #include <chrono>
