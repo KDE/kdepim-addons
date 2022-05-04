@@ -10,7 +10,6 @@
 
 #include "briefheaderstyle.h"
 #include <MessageViewer/HeaderStrategy>
-#include <MessageViewer/HeaderStyle_Util>
 #include <MessageViewer/MessageViewerSettings>
 
 #include <MessageCore/StringUtil>

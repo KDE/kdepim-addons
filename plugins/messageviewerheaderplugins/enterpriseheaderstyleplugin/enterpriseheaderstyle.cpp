@@ -5,7 +5,6 @@
 */
 
 #include "enterpriseheaderstyle.h"
-#include <MessageViewer/HeaderStyle_Util>
 #include <MessageViewer/MessageViewerSettings>
 
 #include <MessageViewer/HeaderStrategy>
