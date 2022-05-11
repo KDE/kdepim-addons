@@ -89,7 +89,7 @@ void SendVcardsJob::jobFinished()
         lstAttachment.append(QUrl::fromLocalFile(path));
     }
     if (!lstAttachment.isEmpty()) {
-        auto *job = new KEMailClientLauncherJob(this);
+        auto job = new KEMailClientLauncherJob(this);
         job->setAttachments(lstAttachment);
         job->start();
     } else {
