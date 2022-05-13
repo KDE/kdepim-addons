@@ -14,6 +14,7 @@
 #include <QListWidget>
 #include <QMenu>
 #include <QPointer>
+#include <QPushButton>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
@@ -53,23 +54,57 @@ MessageViewer::OpenWithUrlInfo OpenUrlWithConfigureItem::info() const
 OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     : QWidget{parent}
     , mListWidget(new QListWidget(this))
+    , mAddRule(new QPushButton(i18n("Add Rule..."), this))
+    , mRemoveRule(new QPushButton(i18n("Remove Rule"), this))
+    , mModifyRule(new QPushButton(i18n("Modify Rule..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(QMargins());
 
+    auto listLayout = new QHBoxLayout;
+    mainLayout->addLayout(listLayout);
+
     mListWidget->setObjectName(QStringLiteral("mListWidget"));
-    mainLayout->addWidget(mListWidget);
+    listLayout->addWidget(mListWidget);
     mListWidget->setContextMenuPolicy(Qt::CustomContextMenu);
     mListWidget->setSelectionMode(QAbstractItemView::ExtendedSelection);
     mListWidget->setAlternatingRowColors(true);
     mListWidget->setSortingEnabled(true);
     connect(mListWidget, &QListWidget::customContextMenuRequested, this, &OpenUrlWithConfigureWidget::slotCustomContextMenuRequested);
     connect(mListWidget, &QListWidget::itemDoubleClicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
+    connect(mListWidget, &QListWidget::itemSelectionChanged, this, &OpenUrlWithConfigureWidget::updateButtons);
+
+    auto buttonLayout = new QVBoxLayout;
+    listLayout->addLayout(buttonLayout);
+
+    connect(mAddRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotAddRule);
+    mAddRule->setObjectName(QStringLiteral("mAddRule"));
+    buttonLayout->addWidget(mAddRule);
+
+    connect(mModifyRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotEditRule);
+    mModifyRule->setObjectName(QStringLiteral("mModifyRule"));
+    buttonLayout->addWidget(mModifyRule);
+
+    connect(mRemoveRule, &QPushButton::clicked, this, &OpenUrlWithConfigureWidget::slotRemoveRule);
+    mRemoveRule->setObjectName(QStringLiteral("mRemoveRule"));
+    buttonLayout->addWidget(mRemoveRule);
+    buttonLayout->addStretch(1);
+    updateButtons();
 }
 
-OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget()
+OpenUrlWithConfigureWidget::~OpenUrlWithConfigureWidget() = default;
+
+void OpenUrlWithConfigureWidget::updateButtons()
 {
+    QListWidgetItem *item = mListWidget->currentItem();
+    if (item) {
+        mRemoveRule->setEnabled(true);
+        mModifyRule->setEnabled(true);
+    } else {
+        mRemoveRule->setEnabled(false);
+        mModifyRule->setEnabled(false);
+    }
 }
 
 void OpenUrlWithConfigureWidget::displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item)

@@ -9,6 +9,7 @@
 #include "openurlwith_private_export.h"
 #include <QWidget>
 class QListWidget;
+class QPushButton;
 class OpenUrlWithConfigureItem;
 namespace MessageViewer
 {
@@ -29,5 +30,9 @@ private:
     void slotEditRule();
     void slotRemoveRule();
     void displayText(const MessageViewer::OpenWithUrlInfo &r, OpenUrlWithConfigureItem *item);
+    void updateButtons();
     QListWidget *const mListWidget;
+    QPushButton *const mAddRule;
+    QPushButton *const mRemoveRule;
+    QPushButton *const mModifyRule;
 };
