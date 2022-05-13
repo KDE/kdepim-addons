@@ -13,18 +13,26 @@
 #include <QIcon>
 #include <QMenu>
 #include <QPointer>
+#include <QPushButton>
 #include <QTreeWidget>
 #include <QVBoxLayout>
 
 ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     : QWidget(parent)
     , mTreeWidget(new QTreeWidget(this))
+    , mAddRule(new QPushButton(i18n("Add Rule..."), this))
+    , mRemoveRule(new QPushButton(i18n("Remove Rule"), this))
+    , mModifyRule(new QPushButton(i18n("Modify Rule..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
     mainLayout->setObjectName(QStringLiteral("mainlayout"));
+
+    auto listLayout = new QHBoxLayout;
+    mainLayout->addLayout(listLayout);
+
     mTreeWidget->setObjectName(QStringLiteral("mTreeWidget"));
-    mainLayout->addWidget(mTreeWidget);
+    listLayout->addWidget(mTreeWidget);
     mTreeWidget->setAlternatingRowColors(true);
     mTreeWidget->setRootIsDecorated(false);
     mTreeWidget->setContextMenuPolicy(Qt::CustomContextMenu);
@@ -35,10 +43,41 @@ ConfirmBeforeDeletingWidget::ConfirmBeforeDeletingWidget(QWidget *parent)
     mTreeWidget->setHeaderLabels(lst);
     connect(mTreeWidget, &QTreeWidget::customContextMenuRequested, this, &ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested);
     connect(mTreeWidget, &QTreeWidget::itemDoubleClicked, this, &ConfirmBeforeDeletingWidget::slotEditRule);
+    connect(mTreeWidget, &QTreeWidget::itemSelectionChanged, this, &ConfirmBeforeDeletingWidget::updateButtons);
+
+    auto buttonLayout = new QVBoxLayout;
+    listLayout->addLayout(buttonLayout);
+
+    connect(mAddRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotAddRule);
+    mAddRule->setObjectName(QStringLiteral("mAddRule"));
+    buttonLayout->addWidget(mAddRule);
+
+    connect(mModifyRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotEditRule);
+    mModifyRule->setObjectName(QStringLiteral("mModifyRule"));
+    buttonLayout->addWidget(mModifyRule);
+
+    connect(mRemoveRule, &QPushButton::clicked, this, &ConfirmBeforeDeletingWidget::slotRemoveRule);
+    mRemoveRule->setObjectName(QStringLiteral("mRemoveRule"));
+    buttonLayout->addWidget(mRemoveRule);
+    buttonLayout->addStretch(1);
+    updateButtons();
+
     fillRules();
 }
 
 ConfirmBeforeDeletingWidget::~ConfirmBeforeDeletingWidget() = default;
+
+void ConfirmBeforeDeletingWidget::updateButtons()
+{
+    QTreeWidgetItem *item = mTreeWidget->currentItem();
+    if (item) {
+        mRemoveRule->setEnabled(true);
+        mModifyRule->setEnabled(true);
+    } else {
+        mRemoveRule->setEnabled(false);
+        mModifyRule->setEnabled(false);
+    }
+}
 
 void ConfirmBeforeDeletingWidget::fillRules()
 {

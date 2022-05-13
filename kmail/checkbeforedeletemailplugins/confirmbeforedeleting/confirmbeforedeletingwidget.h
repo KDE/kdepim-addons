@@ -11,6 +11,7 @@
 #include <QWidget>
 class QTreeWidget;
 class QTreeWidgetItem;
+class QPushButton;
 class KMAILCONFIRMBEFOREDELETING_TESTS_EXPORT ConfirmBeforeDeletingWidget : public QWidget
 {
     Q_OBJECT
@@ -27,5 +28,9 @@ private:
     void fillRules();
     void slotEditRule();
     void initializeItem(QTreeWidgetItem *item, const ConfirmBeforeDeletingCreateRuleWidget::ConfirmBeforeDeletingInfo &info);
+    void updateButtons();
     QTreeWidget *const mTreeWidget;
+    QPushButton *const mAddRule;
+    QPushButton *const mRemoveRule;
+    QPushButton *const mModifyRule;
 };

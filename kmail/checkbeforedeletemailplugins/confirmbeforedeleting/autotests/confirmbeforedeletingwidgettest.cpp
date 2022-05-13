@@ -6,6 +6,7 @@
 
 #include "confirmbeforedeletingwidgettest.h"
 #include "confirmbeforedeletingwidget.h"
+#include <QPushButton>
 #include <QTest>
 #include <QTreeWidget>
 #include <QVBoxLayout>
@@ -28,4 +29,16 @@ void ConfirmBeforeDeletingWidgetTest::shouldHaveDefaultValues()
     QVERIFY(mTreeWidget->alternatingRowColors());
     QVERIFY(!mTreeWidget->rootIsDecorated());
     QCOMPARE(mTreeWidget->contextMenuPolicy(), Qt::CustomContextMenu);
+
+    auto mAddRule = w.findChild<QPushButton *>(QStringLiteral("mAddRule"));
+    QVERIFY(mAddRule);
+    QVERIFY(!mAddRule->text().isEmpty());
+
+    auto mRemoveRule = w.findChild<QPushButton *>(QStringLiteral("mRemoveRule"));
+    QVERIFY(mRemoveRule);
+    QVERIFY(!mRemoveRule->text().isEmpty());
+
+    auto mModifyRule = w.findChild<QPushButton *>(QStringLiteral("mModifyRule"));
+    QVERIFY(mModifyRule);
+    QVERIFY(!mModifyRule->text().isEmpty());
 }
