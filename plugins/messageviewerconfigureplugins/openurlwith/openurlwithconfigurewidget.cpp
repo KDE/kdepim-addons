@@ -55,7 +55,7 @@ OpenUrlWithConfigureWidget::OpenUrlWithConfigureWidget(QWidget *parent)
     : QWidget{parent}
     , mListWidget(new QListWidget(this))
     , mAddRule(new QPushButton(i18n("Add Rule..."), this))
-    , mRemoveRule(new QPushButton(i18n("Remove Rule"), this))
+    , mRemoveRule(new QPushButton(i18nc("@action:button", "Remove Rule"), this))
     , mModifyRule(new QPushButton(i18n("Modify Rule..."), this))
 {
     auto mainLayout = new QVBoxLayout(this);
