@@ -54,6 +54,10 @@ option(KDEPIM_ENTERPRISE_BUILD "Enable features specific to the enterprise branc
 
 find_package(Qt${QT_MAJOR_VERSION} ${QT_REQUIRED_VERSION} CONFIG REQUIRED WebEngineWidgets Widgets Test)
 
+if (QT_MAJOR_VERSION STREQUAL "6")
+    find_package(Qt6Core5Compat)
+endif()
+
 find_package(KF5I18n ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5Config ${KF5_MIN_VERSION} CONFIG REQUIRED)
 find_package(KF5DBusAddons ${KF5_MIN_VERSION} CONFIG REQUIRED)
