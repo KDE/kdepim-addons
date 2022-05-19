@@ -33,9 +33,7 @@ OpenUrlWithConfigureCreateDialog::OpenUrlWithConfigureCreateDialog(QWidget *pare
     });
 }
 
-OpenUrlWithConfigureCreateDialog::~OpenUrlWithConfigureCreateDialog()
-{
-}
+OpenUrlWithConfigureCreateDialog::~OpenUrlWithConfigureCreateDialog() = default;
 
 OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo OpenUrlWithConfigureCreateDialog::info() const
 {

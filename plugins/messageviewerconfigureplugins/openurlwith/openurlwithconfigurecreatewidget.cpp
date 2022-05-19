@@ -60,9 +60,7 @@ OpenUrlWithConfigureCreateWidget::OpenUrlWithConfigureCreateWidget(QWidget *pare
     connect(mExecutable->lineEdit(), &QLineEdit::textChanged, this, &OpenUrlWithConfigureCreateWidget::slotInfoChanged);
 }
 
-OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget()
-{
-}
+OpenUrlWithConfigureCreateWidget::~OpenUrlWithConfigureCreateWidget() = default;
 
 void OpenUrlWithConfigureCreateWidget::slotLinkClicked(const QString &link)
 {

@@ -126,7 +126,7 @@ void OpenUrlWithConfigureWidget::writeSettings()
 {
     QVector<MessageViewer::OpenWithUrlInfo> rules;
     for (int i = 0, total = mListWidget->count(); i < total; ++i) {
-        OpenUrlWithConfigureItem *item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
+        auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
         const MessageViewer::OpenWithUrlInfo r = item->info();
         rules.append(r);
     }
@@ -146,7 +146,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
             r.setUrl(info.url);
 
             for (int i = 0, total = mListWidget->count(); i < total; ++i) {
-                OpenUrlWithConfigureItem *item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
+                auto item = static_cast<OpenUrlWithConfigureItem *>(mListWidget->item(i));
                 const MessageViewer::OpenWithUrlInfo openInfo = item->info();
                 if (openInfo == r) {
                     KMessageBox::information(this, i18n("Rule already exists."), i18n("Duplicate Rule"));
@@ -163,7 +163,7 @@ void OpenUrlWithConfigureWidget::slotAddRule()
 
 void OpenUrlWithConfigureWidget::slotEditRule()
 {
-    OpenUrlWithConfigureItem *item = dynamic_cast<OpenUrlWithConfigureItem *>(mListWidget->currentItem());
+    auto item = dynamic_cast<OpenUrlWithConfigureItem *>(mListWidget->currentItem());
     if (item) {
         QPointer<OpenUrlWithConfigureCreateDialog> dlg = new OpenUrlWithConfigureCreateDialog(this);
         OpenUrlWithConfigureCreateWidget::OpenUrlWithInfo info;
