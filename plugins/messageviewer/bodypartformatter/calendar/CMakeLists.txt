@@ -30,7 +30,6 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_calendar
-    KF5::KontactInterface
     KF5::Codecs
     Qt${QT_MAJOR_VERSION}::Core
     KF5::CalendarCore

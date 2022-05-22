@@ -30,7 +30,6 @@ Dependencies:
     'pim/kidentitymanagement' : '@same'
     'pim/kimap' : '@same'
     'pim/kmailtransport' : '@same'
-    'pim/kontactinterface' : '@same'
     'pim/kpimtextedit' : '@same'
     'pim/ktnef' : '@same'
     'pim/libgravatar' : '@same'

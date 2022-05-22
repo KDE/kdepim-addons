@@ -30,7 +30,6 @@
 #include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
 #include <KService>
-#include <KontactInterface/PimUniqueApplication>
 
 #include <QDBusInterface>
 #include <QDate>
@@ -163,8 +162,23 @@ ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPa
 
 void ItineraryUrlHandler::showCalendar(QDate date) const
 {
-    // ensure KOrganizer or Kontact are running
-    if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
+    // Start or activate KOrganizer. When Kontact is running it will switch to KOrganizer view
+    const auto korgaService = KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer"));
+
+    if (!korgaService) {
+        qCWarning(ITINERARY_LOG) << "Could not find KOrganizer";
+        return;
+    }
+
+    // Open or activate KOrganizer. This will also activate Kontact if running
+    auto *job = new KIO::ApplicationLauncherJob(korgaService);
+
+    connect(job, &KJob::finished, this, [date](KJob *job) {
+        if (job->error()) {
+            qCWarning(ITINERARY_LOG) << "failed to run korganizer" << job->errorString();
+            return;
+        }
+
         // select the date of the reservation
         QDBusInterface korgIface(QStringLiteral("org.kde.korganizer"),
                                  QStringLiteral("/Calendar"),
@@ -176,7 +190,9 @@ void ItineraryUrlHandler::showCalendar(QDate date) const
         }
         korgIface.call(QStringLiteral("showEventView"));
         korgIface.call(QStringLiteral("showDate"), date);
-    }
+    });
+
+    job->start();
 }
 
 static void attachPass(const KCalendarCore::Event::Ptr &event, const QVector<QVariant> &reservations, ItineraryMemento *memento)

@@ -42,8 +42,6 @@ using namespace KCalendarCore;
 #include <MailTransport/TransportManager>
 #include <MailTransportAkonadi/MessageQueueJob>
 
-#include <KontactInterface/PimUniqueApplication>
-
 #include "text_calendar_debug.h"
 
 #include <KIO/FileCopyJob>
@@ -1105,8 +1103,21 @@ public:
 
     void showCalendar(QDate date) const
     {
-        // If korganizer or kontact is running, bring it to the front. Otherwise start korganizer.
-        if (KontactInterface::PimUniqueApplication::activateApplication(QStringLiteral("korganizer"))) {
+        // Start or activate KOrganizer. When Kontact is running it will switch to KOrganizer view
+        const auto korgaService = KService::serviceByDesktopName(QStringLiteral("org.kde.korganizer"));
+
+        if (!korgaService) {
+            qCWarning(TEXT_CALENDAR_LOG) << "Could not find KOrganizer";
+            return;
+        }
+
+        auto *job = new KIO::ApplicationLauncherJob(korgaService);
+        QObject::connect(job, &KJob::finished, job, [date](KJob *job) {
+            if (job->error()) {
+                qCWarning(TEXT_CALENDAR_LOG) << "failed to run korganizer" << job->errorString();
+                return;
+            }
+
             OrgKdeKorganizerCalendarInterface iface(QStringLiteral("org.kde.korganizer"), QStringLiteral("/Calendar"), QDBusConnection::sessionBus(), nullptr);
             if (!iface.isValid()) {
                 qCDebug(TEXT_CALENDAR_LOG) << "Calendar interface is not valid! " << iface.lastError().message();
@@ -1114,7 +1125,9 @@ public:
             }
             iface.showEventView();
             iface.showDate(date);
-        }
+        });
+
+        job->start();
     }
 
     bool handleIgnore(Viewer *viewerInstance) const
