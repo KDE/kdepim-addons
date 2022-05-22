@@ -27,7 +27,9 @@
 
 #include <KCalendarCore/Event>
 
+#include <KIO/ApplicationLauncherJob>
 #include <KLocalizedString>
+#include <KService>
 #include <KontactInterface/PimUniqueApplication>
 
 #include <QDBusInterface>
@@ -42,13 +44,6 @@
 #include <type_traits>
 
 using namespace KItinerary;
-
-QString ItineraryUrlHandler::m_appPath;
-
-ItineraryUrlHandler::ItineraryUrlHandler()
-{
-    m_appPath = QStandardPaths::findExecutable(QStringLiteral("itinerary"));
-}
 
 QString ItineraryUrlHandler::name() const
 {
@@ -153,7 +148,7 @@ QString ItineraryUrlHandler::statusBarMessage(MimeTreeParser::Interface::BodyPar
 
 bool ItineraryUrlHandler::hasItineraryApp()
 {
-    return !m_appPath.isEmpty();
+    return KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary"));
 }
 
 ItineraryMemento *ItineraryUrlHandler::memento(MimeTreeParser::Interface::BodyPart *part) const
@@ -235,9 +230,9 @@ void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
 void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto fileName = createItineraryFile(part);
-    if (m_appPath.isEmpty() || !QProcess::startDetached(m_appPath, {fileName})) {
-        qCWarning(ITINERARY_LOG) << "Could not find application in PATH." << m_appPath;
-    }
+    auto *job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary")));
+    job->setUrls({QUrl::fromLocalFile(fileName)});
+    job->start();
 }
 
 void ItineraryUrlHandler::openWithKDEConnect(MimeTreeParser::Interface::BodyPart *part, const QString &deviceId) const

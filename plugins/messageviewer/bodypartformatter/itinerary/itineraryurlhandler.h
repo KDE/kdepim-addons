@@ -18,7 +18,6 @@ class ItineraryUrlHandler : public QObject, public MessageViewer::Interface::Bod
 {
     Q_OBJECT
 public:
-    ItineraryUrlHandler();
     ~ItineraryUrlHandler() override = default;
     void setKDEConnectHandler(ItineraryKDEConnectHandler *kdeConnect);
 
@@ -38,6 +37,4 @@ private:
     Q_REQUIRED_RESULT QString createItineraryFile(MimeTreeParser::Interface::BodyPart *part) const;
 
     ItineraryKDEConnectHandler *m_kdeConnect = nullptr;
-
-    static QString m_appPath;
 };
