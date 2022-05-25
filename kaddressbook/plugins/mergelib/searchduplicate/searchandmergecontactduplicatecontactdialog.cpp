@@ -78,7 +78,7 @@ SearchAndMergeContactDuplicateContactDialog::~SearchAndMergeContactDuplicateCont
 
 void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContacts(const Akonadi::Item::List &list)
 {
-    const int listCount{list.count()};
+    const auto listCount{list.count()};
     if (listCount == 0) {
         mStackedWidget->setCurrentWidget(mNoContactSelected);
     } else if (listCount < 2) {

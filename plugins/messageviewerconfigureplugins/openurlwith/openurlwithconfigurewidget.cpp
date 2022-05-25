@@ -206,7 +206,7 @@ void OpenUrlWithConfigureWidget::slotRemoveRule()
 void OpenUrlWithConfigureWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
     QMenu menu(this);
-    const int selectedItemCount{mListWidget->selectedItems().count()};
+    const auto selectedItemCount{mListWidget->selectedItems().count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &OpenUrlWithConfigureWidget::slotAddRule);
     if (selectedItemCount == 1) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &OpenUrlWithConfigureWidget::slotEditRule);

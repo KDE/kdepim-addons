@@ -115,7 +115,7 @@ void ConfirmBeforeDeletingWidget::initializeItem(QTreeWidgetItem *item, const Co
 void ConfirmBeforeDeletingWidget::slotCustomContextMenuRequested(const QPoint &p)
 {
     QMenu menu(this);
-    const int selectedItemCount{mTreeWidget->selectedItems().count()};
+    const auto selectedItemCount{mTreeWidget->selectedItems().count()};
     menu.addAction(QIcon::fromTheme(QStringLiteral("list-add")), i18n("Add Rule..."), this, &ConfirmBeforeDeletingWidget::slotAddRule);
     if (selectedItemCount == 1) {
         menu.addAction(QIcon::fromTheme(QStringLiteral("document-edit")), i18n("Edit Rule..."), this, &ConfirmBeforeDeletingWidget::slotEditRule);
