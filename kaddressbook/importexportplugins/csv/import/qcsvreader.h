@@ -9,6 +9,7 @@
 #include <QObject>
 
 #include <memory>
+class QTextCodec;
 
 class QIODevice;
 

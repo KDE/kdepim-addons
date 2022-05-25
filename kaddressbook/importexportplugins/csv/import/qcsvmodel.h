@@ -9,6 +9,7 @@
 #include <QAbstractTableModel>
 class QIODevice;
 class CsvParser;
+class QTextCodec;
 class QCsvModel : public QAbstractTableModel
 {
     Q_OBJECT

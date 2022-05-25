@@ -83,7 +83,11 @@ void LDifImportExportPluginInterface::importLdifFile(const QString &fileName)
     }
 
     QTextStream stream(&file);
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     stream.setCodec("ISO 8859-1");
+#else
+    stream.setEncoding(QStringConverter::Latin1);
+#endif
 
     const QString wholeFile = stream.readAll();
     const QDateTime dtDefault = QFileInfo(file).lastModified();

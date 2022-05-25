@@ -21,6 +21,7 @@ class QButtonGroup;
 class QCheckBox;
 class QCsvModel;
 class QTableView;
+class QTextCodec;
 
 class CSVImportDialog : public QDialog
 {

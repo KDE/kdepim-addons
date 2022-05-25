@@ -7,6 +7,7 @@
 #include "qcsvreader.h"
 
 #include <KLocalizedString>
+#include <QIODevice>
 #include <QStringList>
 #include <QTextCodec>
 #include <QTextStream>
