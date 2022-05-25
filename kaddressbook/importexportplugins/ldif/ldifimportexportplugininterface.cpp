@@ -7,7 +7,6 @@
 #include "ldifimportexportplugininterface.h"
 #include <KActionCollection>
 #include <KContacts/LDIFConverter>
-#include <KIOCore/kio/filecopyjob.h>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -18,6 +17,7 @@
 #include <QPointer>
 #include <QTemporaryFile>
 #include <QTextStream>
+#include <kio/filecopyjob.h>
 
 #include <KAddressBookImportExport/ContactList>
 #include <KAddressBookImportExport/ContactSelectionDialog>

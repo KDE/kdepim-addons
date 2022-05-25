@@ -7,7 +7,6 @@
 #include "gmximportexportplugininterface.h"
 #include "kaddressbook_importexport_gmx_debug.h"
 #include <KActionCollection>
-#include <KIOCore/kio/filecopyjob.h>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -19,6 +18,7 @@
 #include <QTextStream>
 #include <QUrl>
 #include <importexportengine.h>
+#include <kio/filecopyjob.h>
 
 #include <KAddressBookImportExport/ContactSelectionDialog>
 

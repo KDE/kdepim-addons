@@ -8,8 +8,6 @@
 #include <KActionCollection>
 #include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KContacts/VCardConverter>
-#include <KIOCore/kio/filecopyjob.h>
-#include <KIOCore/kio/storedtransferjob.h>
 #include <KJobWidgets>
 #include <KLocalizedString>
 #include <KMessageBox>
@@ -18,6 +16,8 @@
 #include <QFileDialog>
 #include <QPointer>
 #include <QUrl>
+#include <kio/filecopyjob.h>
+#include <kio/storedtransferjob.h>
 
 #ifdef QGPGME_FOUND
 #include <KAddressBookImportExport/ImportExportEngine>
