@@ -41,7 +41,11 @@ QString GnuPGWKSMessagePart::nonce() const
     return mNonce;
 }
 
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
 GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QStringRef &str)
+#else
+GnuPGWKSMessagePart::ConfirmationType GnuPGWKSMessagePart::stringToType(const QStringView &str)
+#endif
 {
     if (str == QLatin1String("confirmation-request")) {
         return ConfirmationRequest;

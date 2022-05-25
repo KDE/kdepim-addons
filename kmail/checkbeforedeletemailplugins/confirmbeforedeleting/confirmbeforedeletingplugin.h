@@ -6,6 +6,7 @@
 
 #pragma once
 #include <MessageViewer/MessageViewerCheckBeforeDeletingPlugin>
+#include <QVariant>
 
 class ConfirmBeforeDeletingPlugin : public MessageViewer::MessageViewerCheckBeforeDeletingPlugin
 {

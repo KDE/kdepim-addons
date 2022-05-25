@@ -9,6 +9,7 @@
 #include "viewerpluginexternalscriptparseargument.h"
 
 #include <QAction>
+#include <QActionGroup>
 #include <QIcon>
 #include <QPointer>
 #include <QProcess>

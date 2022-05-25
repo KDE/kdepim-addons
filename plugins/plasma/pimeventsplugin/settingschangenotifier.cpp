@@ -9,6 +9,7 @@
 #include "pimeventsplugin_debug.h"
 
 #include <QCoreApplication>
+#include <QVariant>
 
 #define APP_PROPERTY_NAME "PIMEventsPluginSettingsChangeNotifier"
 

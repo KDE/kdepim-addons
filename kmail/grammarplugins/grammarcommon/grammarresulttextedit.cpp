@@ -60,7 +60,7 @@ bool GrammarResultTextEdit::event(QEvent *ev)
 {
 #if QT_VERSION >= QT_VERSION_CHECK(6, 0, 0)
     if (ev->type() == QEvent::ApplicationPaletteChange) {
-        regenerateColorScheme();
+        generalPaletteChanged();
     }
 #endif
     return QTextEdit::event(ev);

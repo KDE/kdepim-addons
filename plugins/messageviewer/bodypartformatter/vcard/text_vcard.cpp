@@ -165,7 +165,11 @@ public:
         }
         KContacts::VCardConverter vcc;
         const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
         const int index = path.rightRef(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+#else
+        const int index = QStringView(path).right(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+#endif
         if (index == -1 || index >= al.count()) {
             return true;
         }
@@ -191,7 +195,11 @@ public:
         if (!vCard.isEmpty()) {
             KContacts::VCardConverter vcc;
             const KContacts::Addressee::List al = vcc.parseVCards(vCard.toUtf8());
+#if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
             const int index = path.rightRef(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+#else
+            const int index = QStringView(path).right(path.length() - path.lastIndexOf(QLatin1Char(':')) - 1).toInt();
+#endif
             if (index >= 0 && index < al.count()) {
                 return al.at(index);
             }
