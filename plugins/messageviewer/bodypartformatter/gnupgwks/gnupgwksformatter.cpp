@@ -95,10 +95,11 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     }
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     GrantleeTheme::Engine engine;
+    engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
 #else
     KTextTemplate::Engine engine;
+    // TODO look at how to port it engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
 #endif
-    engine.localizer()->setApplicationDomain(QByteArrayLiteral("messageviewer_application_gnupgwks_plugin"));
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     auto loader = QSharedPointer<Grantlee::FileSystemTemplateLoader>::create();
 #else
@@ -116,10 +117,11 @@ bool ApplicationGnuPGWKSFormatter::render(const MimeTreeParser::MessagePartPtr &
     }
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)
     Grantlee::Context ctx;
+    ctx.setLocalizer(engine.localizer());
 #else
     KTextTemplate::Context ctx;
+    // TODO how to port it ? ctx.setLocalizer(engine.localizer());
 #endif
-    ctx.setLocalizer(engine.localizer());
 
     QObject block;
 
