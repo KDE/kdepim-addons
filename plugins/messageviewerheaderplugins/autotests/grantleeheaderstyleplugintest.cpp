@@ -13,6 +13,7 @@
 #include <MessageViewer/HeaderStyle>
 #include <MimeTreeParser/NodeHelper>
 
+#include <QActionGroup>
 #include <QStandardPaths>
 #include <QTest>
 
