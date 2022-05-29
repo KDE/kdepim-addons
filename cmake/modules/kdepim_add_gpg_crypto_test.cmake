@@ -20,7 +20,7 @@ macro (ADD_GPG_CRYPTO_TEST _target _testname)
          # DYLD_LIBRARY_PATH actually breaks things
          set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/")
       else (APPLE)
-         set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${LIB_INSTALL_DIR}:${QT_LIBRARY_DIR}")
+         set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}/:${KDE_INSTALL_LIBDIR}:${QT_LIBRARY_DIR}")
       endif (APPLE)
       set(_executable "$<TARGET_FILE:${_target}>")
 
@@ -39,7 +39,7 @@ macro (ADD_GPG_CRYPTO_TEST _target _testname)
    else (UNIX)
       # under windows, set the property WRAPPER_SCRIPT just to the name of the executable
       # maybe later this will change to a generated batch file (for setting the PATH so that the Qt libs are found)
-      set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${LIB_INSTALL_DIR}\;${QT_LIBRARY_DIR}")
+      set(_ld_library_path "${LIBRARY_OUTPUT_PATH}/${CMAKE_CFG_INTDIR}\;${KDE_INSTALL_LIBDIR}\;${QT_LIBRARY_DIR}")
       set(_executable "$<TARGET_FILE:${_target}>")
 
       # use add_custom_target() to have the batch-file-wrapper generated during build time instead of cmake time
