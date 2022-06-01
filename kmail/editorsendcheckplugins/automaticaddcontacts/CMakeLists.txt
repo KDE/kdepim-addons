@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin INSTALL_NAMESPACE kmail/plugincheckbeforesend)
+kcoreaddons_add_plugin(kmail_automaticaddcontactseditorplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugincheckbeforesend)
 target_sources(kmail_automaticaddcontactseditorplugin PRIVATE
     automaticaddcontactsinterface.cpp
     automaticaddcontactsplugin.cpp

@@ -17,5 +17,5 @@ target_link_libraries(thisdayinhistory
 
 install(TARGETS
   thisdayinhistory
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/korganizer
 )

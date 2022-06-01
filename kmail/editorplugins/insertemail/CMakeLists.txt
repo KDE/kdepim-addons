@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(kmail_insertemaileditorplugin INSTALL_NAMESPACE kmail/plugineditor)
+kcoreaddons_add_plugin(kmail_insertemaileditorplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/plugineditor)
 target_sources(kmail_insertemaileditorplugin PRIVATE
     insertemailplugineditor.cpp
     insertemailplugineditorinterface.cpp

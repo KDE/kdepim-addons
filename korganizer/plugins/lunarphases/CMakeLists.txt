@@ -14,7 +14,7 @@ target_link_libraries(lunarphases
 
 install(TARGETS
   lunarphases
-  DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
+  DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/korganizer
 )
 
 ########### install files ###############

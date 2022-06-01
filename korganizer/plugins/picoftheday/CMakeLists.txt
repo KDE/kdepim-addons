@@ -29,5 +29,5 @@ target_link_libraries(picoftheday
 
 install(TARGETS
     picoftheday
-    DESTINATION ${KDE_INSTALL_PLUGINDIR}/korganizer
+    DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/korganizer
     )

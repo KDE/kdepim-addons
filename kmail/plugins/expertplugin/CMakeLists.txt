@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(kmail_expertplugin INSTALL_NAMESPACE kmail/mainview)
+kcoreaddons_add_plugin(kmail_expertplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/mainview)
 target_sources(kmail_expertplugin PRIVATE
     expertplugin.cpp
     expertplugininterface.cpp

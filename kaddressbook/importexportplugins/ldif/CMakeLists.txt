@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: none
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(kaddressbook_importexportldifplugin INSTALL_NAMESPACE kaddressbook/importexportplugin)
+kcoreaddons_add_plugin(kaddressbook_importexportldifplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kaddressbook/importexportplugin)
 target_sources(kaddressbook_importexportldifplugin PRIVATE
     ldifimportexportplugin.cpp
     ldifimportexportplugininterface.cpp
