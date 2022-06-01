@@ -1,6 +1,6 @@
 # SPDX-FileCopyrightText: 2015-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
-kcoreaddons_add_plugin(messageviewer_expandurlplugin INSTALL_NAMESPACE messageviewer/viewercommonplugin)
+kcoreaddons_add_plugin(messageviewer_expandurlplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/messageviewer/viewercommonplugin)
 target_sources(messageviewer_expandurlplugin PRIVATE
     viewerpluginexpandurl.cpp
     viewerpluginexpandurlinterface.cpp
