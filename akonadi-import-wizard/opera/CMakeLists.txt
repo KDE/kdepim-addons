@@ -1,7 +1,7 @@
 # SPDX-FileCopyrightText: 2019-2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 
-kcoreaddons_add_plugin(operaimporterplugin INSTALL_NAMESPACE importwizard)
+kcoreaddons_add_plugin(operaimporterplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/importwizard)
 target_sources(operaimporterplugin PRIVATE
    operaaddressbook.cpp  
    operaimportdata.cpp  
