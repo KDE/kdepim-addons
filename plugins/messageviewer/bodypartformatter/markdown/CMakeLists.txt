@@ -24,4 +24,4 @@ target_link_libraries(messageviewer_bodypartformatter_text_markdown
     ${TEMPLATES_LIB}
 )
 
-install(TARGETS messageviewer_bodypartformatter_text_markdown DESTINATION ${KDE_INSTALL_PLUGINDIR}/messageviewer/bodypartformatter)
+install(TARGETS messageviewer_bodypartformatter_text_markdown DESTINATION ${KDE_INSTALL_PLUGINDIR}/pim${QT_MAJOR_VERSION}/messageviewer/bodypartformatter)
