@@ -3,7 +3,7 @@
         "Description": "This plugin allows you to autocorrect all text in composer or selected text.",
         "Description[ar]": "تتيح لك هذه الملحقة تصحيح كامل النّصّ (أو جزء منه) في المؤلّف آليًّا.",
         "Description[az]": "Bu əlavə, sizə redaktordakı bütün mətnləriəvə ya seçilmiş mətnə avtomatik düzəliş etməyə imkan verir.",
-        "Description[ca@valencia]": "Este connector permet corregir automàticament tot el text a l'editor o el text seleccionat.",
+        "Description[ca@valencia]": "Este conector permet corregir automàticament tot el text a l'editor o el text seleccionat.",
         "Description[ca]": "Aquest connector permet corregir automàticament tot el text a l'editor o el text seleccionat.",
         "Description[de]": "Mit diesem Modul können Sie den gesamten oder ausgewählten Text im E-Mail-Editor automatisch korrigieren.",
         "Description[en_GB]": "This plugin allows you to autocorrect all text in composer or selected text.",

@@ -3,7 +3,7 @@
         "Description": "This plugin allows you to check if we want to delete specific email",
         "Description[ar]": "تتيح لك هذه الملحقة التأكد قبل حذف رسالة بريدية",
         "Description[az]": "Bu əlavə, sizə xüsusi e-poçtları silmək isəyib-istəmədiyimizi yoxlamağa imkan verir.",
-        "Description[ca@valencia]": "Este connector permet comprovar si es vol suprimir un correu electrònic específic",
+        "Description[ca@valencia]": "Este conector permet comprovar si es vol suprimir un correu electrònic específic",
         "Description[ca]": "Aquest connector permet comprovar si es vol suprimir un correu electrònic específic",
         "Description[cs]": "Tento modul umožňuje rozhodnout zda smazat vybraný e-mail",
         "Description[en_GB]": "This plugin allows you to check if we want to delete specific email",
