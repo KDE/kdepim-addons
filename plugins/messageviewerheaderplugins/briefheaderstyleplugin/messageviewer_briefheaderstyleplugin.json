@@ -3,7 +3,7 @@
         "Description": "This plugin reduces mail header to strict minimum.",
         "Description[ar]": "تقلّل هذه الملحقة ترويسة البريد لتكون بأقلّ قدر ممكن.",
         "Description[az]": "Bu əlavə, qısa başlıq tərzini müəyyən edir.",
-        "Description[ca@valencia]": "Este connector reduïx la capçalera del correu al mínim estricte.",
+        "Description[ca@valencia]": "Este conector reduïx la capçalera del correu al mínim estricte.",
         "Description[ca]": "Aquest connector redueix la capçalera del correu al mínim estricte.",
         "Description[de]": "Dieses Modul reduziert Mail-Vorspann auf das absolute Minimum.",
         "Description[en_GB]": "This plugin reduces mail header to strict minimum.",

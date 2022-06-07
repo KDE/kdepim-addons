@@ -3,7 +3,7 @@
         "Description": "This plugin allows you to check grammar using LanguageTool.",
         "Description[ar]": "تتيح لك هذه الملحقة تدقيق النحو باستعمال \"LanguageTool\"",
         "Description[az]": "Bu əlavə, sizə LanguageTool istifadə edərək qrammatikanı yoxlamağa imkan verir.",
-        "Description[ca@valencia]": "Este connector permet comprovar la gramàtica emprant el LanguageTool.",
+        "Description[ca@valencia]": "Este conector permet comprovar la gramàtica emprant el LanguageTool.",
         "Description[ca]": "Aquest connector permet comprovar la gramàtica emprant el LanguageTool.",
         "Description[cs]": "Tento modul umožňuje kontrolovat gramatiku pomocí nástroje LanguageTool.",
         "Description[de]": "Mit diesem Modul können Sie die Grammatik mit LanguageTool vor dem Senden überprüfen.",

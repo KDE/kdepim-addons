@@ -3,7 +3,7 @@
         "Description": "This plugin allows you to import/export LDAP contacts.",
         "Description[ar]": "تتيح لك هذه الملحقة استيراد وتصدير متراسلي LDAP.",
         "Description[az]": "Bu əlavə, sizə LDAP-ları idxal/ixrac etməyə imkan verir.",
-        "Description[ca@valencia]": "Este connector permet importar o exportar els contactes LDAP.",
+        "Description[ca@valencia]": "Este conector permet importar o exportar els contactes LDAP.",
         "Description[ca]": "Aquest connector permet importar o exportar els contactes LDAP.",
         "Description[cs]": "Tento modul umožňuje import/export kontaktů LDAP.",
         "Description[de]": "Mit diesem Modul können Sie LDAP-Kontakte importieren oder exportieren.",
