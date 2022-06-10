@@ -9,8 +9,6 @@ target_sources(thisdayinhistory PRIVATE
   thisdayinhistory.h
 )
 
-kcoreaddons_desktop_to_json(thisdayinhistory thisdayinhistory.desktop)
-
 target_link_libraries(thisdayinhistory
   KF5::EventViews
 )

@@ -5,7 +5,6 @@
 
 add_library(lunarphases MODULE lunarphases.cpp)
 
-kcoreaddons_desktop_to_json(lunarphases lunarphases.desktop)
 
 target_link_libraries(lunarphases
   KF5::Holidays

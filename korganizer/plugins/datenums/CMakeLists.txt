@@ -4,8 +4,6 @@
 ########### next target ###############
 add_library(datenums MODULE)
 
-kcoreaddons_desktop_to_json(datenums datenums.desktop)
-
 target_sources(datenums PRIVATE
   configdialog.cpp
   datenums.cpp

@@ -15,8 +15,6 @@ ecm_qt_declare_logging_category(picoftheday HEADER korganizer_picoftheday_plugin
     EXPORT KDEPIMADDONS
     )
 
-kcoreaddons_desktop_to_json(picoftheday picoftheday.desktop)
-
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(picoftheday PROPERTIES UNITY_BUILD ON)
 endif()
