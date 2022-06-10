@@ -5,12 +5,9 @@ ecm_qt_declare_logging_category(common_SRCS HEADER createeventplugin_debug.h IDE
 ecm_qt_declare_logging_category(common_SRCS HEADER createnoteplugin_debug.h IDENTIFIER CREATENOTEPLUGIN_LOG CATEGORY_NAME org.kde.pim.createnoteplugin)
 ecm_qt_declare_logging_category(common_SRCS HEADER createtodoplugin_debug.h IDENTIFIER CREATETODOPLUGIN_LOG CATEGORY_NAME org.kde.pim.createtodoplugin)
 
-macro(add_kdepim_addons_viewerplugin_unittest _source _additional _jsonfile)
+macro(add_kdepim_addons_viewerplugin_unittest _source _additional)
     set( _test ${_source}  ${_additional} ${common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    if (${_jsonfile})
-       kcoreaddons_desktop_to_json(${_name} ${_jsonfile})
-    endif()
     ecm_add_test(${_test}
                  TEST_NAME ${_name}
                  NAME_PREFIX "kdepim-addons-"
@@ -49,7 +46,7 @@ set_tests_properties(kdepim-addons-todoedittest PROPERTIES ENVIRONMENT "LC_ALL=C
 
 add_kdepim_addons_viewerplugin_widget_unittest(eventedittest.cpp "../createeventplugin/eventedit.cpp;../createeventplugin/eventdatetimewidget.cpp")
 add_kdepim_addons_viewerplugin_widget_unittest(eventdatetimewidgettest.cpp "../createeventplugin/eventdatetimewidget.cpp")
-add_kdepim_addons_viewerplugin_unittest(viewerplugincreateeventtest.cpp "../createeventplugin/createeventjob.cpp;../createeventplugin/eventdatetimewidget.cpp;../createeventplugin/eventedit.cpp;../createeventplugin/viewerplugincreateevent.cpp;../createeventplugin/viewerplugincreateeventinterface.cpp" "")
-add_kdepim_addons_viewerplugin_unittest(viewerplugincreatetodotest.cpp "../createtodoplugin/viewerplugincreatetodo.cpp;../createtodoplugin/viewerplugincreatetodointerface.cpp;../createtodoplugin/todoedit.cpp;../createtodoplugin/createtodojob.cpp" "")
-add_kdepim_addons_viewerplugin_unittest(viewerplugincreatenotetest.cpp "../createnoteplugin/noteedit.cpp;../createnoteplugin/viewerplugincreatenote.cpp;../createnoteplugin/viewerplugincreatenoteinterface.cpp;../createnoteplugin/createnotejob.cpp" "")
-add_kdepim_addons_viewerplugin_unittest(viewerplugintranslatortest.cpp "../common/translatorplugin/viewerplugintranslator.cpp;../common/translatorplugin/viewerplugintranslatorinterface.cpp" "")
+add_kdepim_addons_viewerplugin_unittest(viewerplugincreateeventtest.cpp "../createeventplugin/createeventjob.cpp;../createeventplugin/eventdatetimewidget.cpp;../createeventplugin/eventedit.cpp;../createeventplugin/viewerplugincreateevent.cpp;../createeventplugin/viewerplugincreateeventinterface.cpp")
+add_kdepim_addons_viewerplugin_unittest(viewerplugincreatetodotest.cpp "../createtodoplugin/viewerplugincreatetodo.cpp;../createtodoplugin/viewerplugincreatetodointerface.cpp;../createtodoplugin/todoedit.cpp;../createtodoplugin/createtodojob.cpp")
+add_kdepim_addons_viewerplugin_unittest(viewerplugincreatenotetest.cpp "../createnoteplugin/noteedit.cpp;../createnoteplugin/viewerplugincreatenote.cpp;../createnoteplugin/viewerplugincreatenoteinterface.cpp;../createnoteplugin/createnotejob.cpp")
+add_kdepim_addons_viewerplugin_unittest(viewerplugintranslatortest.cpp "../common/translatorplugin/viewerplugintranslator.cpp;../common/translatorplugin/viewerplugintranslatorinterface.cpp")
