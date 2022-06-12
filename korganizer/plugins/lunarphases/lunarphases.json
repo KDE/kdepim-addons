@@ -1,7 +1,21 @@
 {
     "KPlugin": {
         "Description": "This plugin shows the day's lunar phase (New, First, Last, Full)",
+        "Description[ca]": "Aquest connector mostra la fase lunar del dia (nova, creixent, plena, minvant)",
+        "Description[it]": "Questa estensione mostra la fase lunare del giorno (nuova, primo quarto, ultimo quarto, piena)",
+        "Description[nl]": "Deze plug-in toont de maanfase van de dag (Nieuwe, Eerste, Laatste, Volle)",
+        "Description[sv]": "Insticksprogrammet visar dagens månfas (ny, första, sista, full)",
+        "Description[tr]": "Bu eklenti, ayın evrelerini gösterir (Yeni, İlkdördür, Sondördün, Dolunay)",
+        "Description[uk]": "Цей додаток показує фазу місяця (новий, перша чверть, остання чверть, повня)",
+        "Description[x-test]": "xxThis plugin shows the day's lunar phase (New, First, Last, Full)xx",
         "Name": "Lunar Phases Plugin for Calendars",
+        "Name[ca]": "Connector de fases lunars per als calendaris",
+        "Name[it]": "Estensione Fasi lunari per i calendari",
+        "Name[nl]": "Plug-in voor maanfasen voor kalenders",
+        "Name[sv]": "Månfasinsticksprogram för kalendrar",
+        "Name[tr]": "Takvimler için Ay Evreleri Eklentisi",
+        "Name[uk]": "Додаток фаз місяця для календарів",
+        "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx",
         "ServiceTypes": [
             "Calendar/Plugin",
             "Calendar/Decoration"

@@ -1,7 +1,21 @@
 {
     "KPlugin": {
         "Description": "For each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.",
+        "Description[ca]": "Per a cada dia, aquest connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de febrer serà el dia 32 de l'any.",
+        "Description[it]": "Per ciascun giorno, questa estensione mostra il numero del giorno dell'anno nella parte alta della vista agenda). Ad esempio, il primo di febbraio è il giorno 32 dell'anno.",
+        "Description[nl]": "Deze plug-in zorgt ervoor dat het dagnummer boven de agendaweergave wordt geplaatst. Bijvoorbeeld, bij 1 februari hoort dagnummer 32.",
+        "Description[sv]": "Insticksprogrammet visar dagens nummer under året för varje dag längst upp i agendavyn. Till exempel är 1:a februari den 32:e dagen under året.",
+        "Description[tr]": "Her gün için, bu eklenti, ajanda görünümünün tepesinde yılın gün numarasını gösterir. Örneğin, 1 Şubat, yılın 32. günüdür.",
+        "Description[uk]": "Цей додаток показує зверху перегляду щоденника номер для кожного дня року. Наприклад, 1-го лютого — це 32 день року.",
+        "Description[x-test]": "xxFor each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.xx",
         "Name": "Date Numbers Plugin for Calendars",
+        "Name[ca]": "Connector de números de data per als calendaris",
+        "Name[it]": "Estensione dei numeri di data per calendari",
+        "Name[nl]": "Datumgetallenplug-in voor agenda's",
+        "Name[sv]": "Datuminsticksprogram för kalendrar",
+        "Name[tr]": "Takvimler için Tarih Numarası Eklentisi",
+        "Name[uk]": "Додаток дат для календарів",
+        "Name[x-test]": "xxDate Numbers Plugin for Calendarsxx",
         "ServiceTypes": [
             "Calendar/Plugin",
             "Calendar/Decoration"
