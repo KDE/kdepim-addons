@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "For each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.",
+        "Description[az]": "Bu əlavə hər tarix üçün ilin günlərinin sayını göstərir. Məsələn, 1 fevral, 32 sayı kimi göstəriləcəkdir.",
         "Description[ca@valencia]": "Per a cada dia, este connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de febrer serà el dia 32 de l'any.",
         "Description[ca]": "Per a cada dia, aquest connector mostrarà el número de dia de l'any al capdamunt de la vista d'agenda. Per exemple, l'1 de febrer serà el dia 32 de l'any.",
         "Description[es]": "Este complemento muestra el número del día del año para cada día en la parte superior de la vista de la agenda. Por ejemplo, el 1 de febrero es el día 32 del año.",
@@ -14,6 +15,7 @@
         "Description[uk]": "Цей додаток показує зверху перегляду щоденника номер для кожного дня року. Наприклад, 1-го лютого — це 32 день року.",
         "Description[x-test]": "xxFor each day this plugin shows its daynumber of the year at the top of the agenda view. For example, February 1 is day 32 of the year.xx",
         "Name": "Date Numbers Plugin for Calendars",
+        "Name[az]": "Təqvimlər üçün tarix qoşması",
         "Name[ca@valencia]": "Connector de números de data per als calendaris",
         "Name[ca]": "Connector de números de data per als calendaris",
         "Name[es]": "Complemento de números de fechas para calendarios",

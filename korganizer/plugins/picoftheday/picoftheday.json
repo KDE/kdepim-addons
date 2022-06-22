@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin provides the Wikipedia Picture of the Day",
+        "Description[az]": "Bu əlavə Vikipediyadan günün şəklini göstərir",
         "Description[ca@valencia]": "Este connector proporciona la imatge del dia de la Viquipèdia",
         "Description[ca]": "Aquest connector proporciona la imatge del dia de la Viquipèdia",
         "Description[es]": "Este complemento proporciona la imagen del día de la Wikipedia",
@@ -14,6 +15,7 @@
         "Description[uk]": "За допомогою цього додатка можна отримувати «Зображення дня» з Вікіпедії.",
         "Description[x-test]": "xxThis plugin provides the Wikipedia Picture of the Dayxx",
         "Name": "Wikipedia Picture Of the Day Plugin for Calendars",
+        "Name[az]": "Təqvimlər üçün \"Günün Vikipediya şəkli\" qoşması",
         "Name[ca@valencia]": "Connector d'imatge del dia de la Viquipèdia per als calendaris",
         "Name[ca]": "Connector d'imatge del dia de la Viquipèdia per als calendaris",
         "Name[es]": "Complemento «Imagen del día» de la Wikipedia para calendarios",
