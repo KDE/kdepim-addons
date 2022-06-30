@@ -28,6 +28,9 @@ target_link_libraries(kaddressbook_importexportvcardplugin
     KF5::JobWidgets
     KF5::AkonadiContact
     Gpgmepp
-    QGpgme
     )
-
+if (QT_MAJOR_VERSION STREQUAL "6")
+    target_link_libraries(kaddressbook_importexportvcardplugin QGpgmeQt6)
+else()
+    target_link_libraries(kaddressbook_importexportvcardplugin QGpgme)
+endif()
