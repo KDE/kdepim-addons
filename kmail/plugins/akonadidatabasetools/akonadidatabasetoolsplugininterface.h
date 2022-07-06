@@ -11,6 +11,11 @@
 class AkonadiDatabaseToolsPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
+    enum AkonadiDatabaseTool {
+        Unknown = 0,
+        Vaccum = 1,
+        Fsck = 2,
+    };
     explicit AkonadiDatabaseToolsPluginInterface(QObject *parent = nullptr);
     ~AkonadiDatabaseToolsPluginInterface() override;
 
@@ -19,4 +24,5 @@ public:
 
 private:
     void slotActivated();
+    AkonadiDatabaseTool mTool = AkonadiDatabaseTool::Unknown;
 };

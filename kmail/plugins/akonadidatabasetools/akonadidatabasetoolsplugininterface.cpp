@@ -5,6 +5,7 @@
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
+// #include "akonadidatasetools_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
@@ -32,5 +33,12 @@ void AkonadiDatabaseToolsPluginInterface::slotActivated()
 
 void AkonadiDatabaseToolsPluginInterface::exec()
 {
-    // TODO
+    switch (mTool) {
+    case Unknown:
+        break;
+    case Vaccum:
+        break;
+    case Fsck:
+        break;
+    }
 }
