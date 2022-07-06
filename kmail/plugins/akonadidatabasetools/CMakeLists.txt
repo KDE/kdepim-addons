@@ -11,6 +11,8 @@ ecm_qt_declare_logging_category(akonadidatasetools HEADER akonadidatasetools_deb
 target_sources(akonadidatasetools PRIVATE
     akonadidatabasetoolsplugininterface.cpp
     akonadidatabasetoolsplugininterface.h
+    akonadidatabasetoolsjob.h
+    akonadidatabasetoolsjob.cpp
 )
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
