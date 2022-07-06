@@ -1,0 +1,36 @@
+/*
+   SPDX-FileCopyrightText: 2022 Laurent Montel <montel@kde.org>
+
+   SPDX-License-Identifier: GPL-2.0-or-later
+*/
+
+#include "akonadidatabasetoolsplugininterface.h"
+#include <KActionCollection>
+#include <KLocalizedString>
+#include <QAction>
+
+AkonadiDatabaseToolsPluginInterface::AkonadiDatabaseToolsPluginInterface(QObject *parent)
+    : PimCommon::GenericPluginInterface(parent)
+{
+}
+
+AkonadiDatabaseToolsPluginInterface::~AkonadiDatabaseToolsPluginInterface() = default;
+
+void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
+{
+    auto action = new QAction(i18n("&Anti-Spam Wizard..."), this);
+    ac->addAction(QStringLiteral("antiSpamWizard"), action);
+    connect(action, &QAction::triggered, this, &AkonadiDatabaseToolsPluginInterface::slotActivated);
+    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    addActionType(type);
+}
+
+void AkonadiDatabaseToolsPluginInterface::slotActivated()
+{
+    Q_EMIT emitPluginActivated(this);
+}
+
+void AkonadiDatabaseToolsPluginInterface::exec()
+{
+    // TODO
+}

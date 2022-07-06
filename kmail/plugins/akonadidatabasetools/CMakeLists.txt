@@ -2,6 +2,10 @@
 # SPDX-License-Identifier: BSD-3-Clause
 add_library(akonadidatasetools)
 target_sources(akonadidatasetools PRIVATE
+    akonadidatabasetoolsplugin.cpp
+    akonadidatabasetoolsplugin.h
+    akonadidatabasetoolsplugininterface.cpp
+    akonadidatabasetoolsplugininterface.h
 )
 
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
@@ -13,6 +17,7 @@ target_link_libraries(akonadidatasetools
     KF5::I18n
     KF5::MessageComposer
     KF5::KIOWidgets
+    KF5::XmlGui
     )
 
 set_target_properties(akonadidatasetools

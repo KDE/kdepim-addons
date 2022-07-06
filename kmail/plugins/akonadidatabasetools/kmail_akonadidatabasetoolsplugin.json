@@ -1,0 +1,9 @@
+{
+    "KPlugin": {
+        "Description": "This plugin allows you to manage Akonadi database.",
+        "EnabledByDefault": "false",
+        "Id": "kmailakonadidatabasetool",
+        "Name": "Antispam",
+        "Version": "1.0"
+    }
+}
