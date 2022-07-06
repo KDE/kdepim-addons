@@ -8,6 +8,12 @@ target_sources(akonadidatasetools PRIVATE
     akonadidatabasetoolsplugininterface.h
 )
 
+
+ecm_qt_declare_logging_category(akonadidatasetools HEADER akonadidatasetools_debug.h IDENTIFIER AKONADIDATABASETOOLS_LOG CATEGORY_NAME org.kde.pim.akonadidatabasetools
+    DESCRIPTION "kdepim-addons (akonadidatabasetools)"
+    EXPORT KDEPIMADDONS
+    )
+
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadidatasetools PROPERTIES UNITY_BUILD ON)
