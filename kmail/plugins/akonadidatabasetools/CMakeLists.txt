@@ -1,19 +1,19 @@
 # SPDX-FileCopyrightText: 2022 Laurent Montel <montel@kde.org>
 # SPDX-License-Identifier: BSD-3-Clause
 add_library(akonadidatasetools)
+
+
+ecm_qt_declare_logging_category(akonadidatasetools HEADER akonadidatasetools_debug.h IDENTIFIER AKONADIDATABASETOOLS_LOG CATEGORY_NAME org.kde.pim.akonadidatabasetools
+    DESCRIPTION "kdepim-addons (akonadidatabasetools)"
+    EXPORT KDEPIMADDONS
+)
+
 target_sources(akonadidatasetools PRIVATE
     akonadidatabasetoolsplugin.cpp
     akonadidatabasetoolsplugin.h
     akonadidatabasetoolsplugininterface.cpp
     akonadidatabasetoolsplugininterface.h
 )
-
-
-ecm_qt_declare_logging_category(akonadidatasetools HEADER akonadidatasetools_debug.h IDENTIFIER AKONADIDATABASETOOLS_LOG CATEGORY_NAME org.kde.pim.akonadidatabasetools
-    DESCRIPTION "kdepim-addons (akonadidatabasetools)"
-    EXPORT KDEPIMADDONS
-    )
-
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
     set_target_properties(akonadidatasetools PROPERTIES UNITY_BUILD ON)
