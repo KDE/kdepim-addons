@@ -9,8 +9,6 @@ ecm_qt_declare_logging_category(akonadidatasetools HEADER akonadidatasetools_deb
 )
 
 target_sources(akonadidatasetools PRIVATE
-    akonadidatabasetoolsplugin.cpp
-    akonadidatabasetoolsplugin.h
     akonadidatabasetoolsplugininterface.cpp
     akonadidatabasetoolsplugininterface.h
 )
@@ -29,6 +27,18 @@ target_link_libraries(akonadidatasetools
 set_target_properties(akonadidatasetools
     PROPERTIES OUTPUT_NAME akonadidatasetools VERSION ${KDEPIMADDONS_LIB_VERSION} SOVERSION ${KDEPIMADDONS_LIB_SOVERSION}
     )
+
+kcoreaddons_add_plugin(kmail_akonadidatabasetoolplugin INSTALL_NAMESPACE pim${QT_MAJOR_VERSION}/kmail/mainview)
+target_sources(kmail_akonadidatabasetoolplugin PRIVATE
+    akonadidatabasetoolsplugin.cpp
+    akonadidatabasetoolsplugin.h
+)
+
+target_link_libraries(kmail_akonadidatabasetoolplugin
+    KF5::PimCommon KF5::PimCommonAkonadi KF5::XmlGui KF5::Libkdepim KF5::I18n akonadidatasetools
+    )
+
+install(TARGETS akonadidatasetools ${KDE_INSTALL_TARGETS_DEFAULT_ARGS} LIBRARY NAMELINK_SKIP)
 
 if(BUILD_TESTING)
    add_subdirectory(autotests)
