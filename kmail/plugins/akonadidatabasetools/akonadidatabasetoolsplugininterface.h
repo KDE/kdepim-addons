@@ -6,9 +6,9 @@
 
 #pragma once
 
+#include "akonadidatasetools_export.h"
 #include <PimCommonAkonadi/GenericPluginInterface>
-
-class AkonadiDatabaseToolsPluginInterface : public PimCommon::GenericPluginInterface
+class AKONADIDATASETOOLS_EXPORT AkonadiDatabaseToolsPluginInterface : public PimCommon::GenericPluginInterface
 {
 public:
     enum AkonadiDatabaseTool {

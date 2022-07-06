@@ -7,7 +7,8 @@ macro(add_kmail_akonadidatabasetoolsplugin_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_antivirusplugin-${_name})
-    target_link_libraries( ${_name} KF5::PimCommon Qt${QT_MAJOR_VERSION}::Test KF5::XmlGui KF5::Completion KF5::AkonadiWidgets KF5::MailCommon KF5::Libkdepim KF5::I18n KF5::GuiAddons)
+    target_link_libraries( ${_name} KF5::PimCommon Qt${QT_MAJOR_VERSION}::Test KF5::XmlGui KF5::Completion KF5::AkonadiWidgets
+        KF5::MailCommon KF5::Libkdepim KF5::I18n KF5::GuiAddons akonadidatasetools)
 endmacro ()
 
-add_kmail_akonadidatabasetoolsplugin_unittest(akonadidatabasetoolsplugininterfacetest.cpp "../akonadidatabasetoolsplugininterface.cpp")
+add_kmail_akonadidatabasetoolsplugin_unittest(akonadidatabasetoolsplugininterfacetest.cpp "")

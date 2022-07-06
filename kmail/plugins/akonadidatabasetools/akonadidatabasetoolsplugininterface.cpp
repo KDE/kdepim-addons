@@ -5,7 +5,7 @@
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
-// #include "akonadidatasetools_debug.h"
+#include "akonadidatasetools_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
