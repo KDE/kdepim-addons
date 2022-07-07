@@ -5,6 +5,7 @@
 */
 #include "akonadidatabasetoolsjob.h"
 #include "akonadidatasetools_debug.h"
+#include <QProcess>
 #include <QStandardPaths>
 
 AkonadiDatabaseToolsJob::AkonadiDatabaseToolsJob(QObject *parent)
@@ -39,10 +40,14 @@ void AkonadiDatabaseToolsJob::start()
     case AkonadiDatabaseToolsUtils::Unknown:
         qCWarning(AKONADIDATABASETOOLS_LOG) << "mTool is unknown it's a bug! ";
         break;
-    case AkonadiDatabaseToolsUtils::Vaccum:
+    case AkonadiDatabaseToolsUtils::Vaccum: {
+        QProcess::execute(QStandardPaths::findExecutable(QStringLiteral("akonadictl")), QStringList({QStringLiteral("vacuum")}));
         break;
-    case AkonadiDatabaseToolsUtils::Fsck:
+    }
+    case AkonadiDatabaseToolsUtils::Fsck: {
+        QProcess::execute(QStandardPaths::findExecutable(QStringLiteral("akonadictl")), QStringList({QStringLiteral("fsck")}));
         break;
+    }
     }
 
     deleteLater();
