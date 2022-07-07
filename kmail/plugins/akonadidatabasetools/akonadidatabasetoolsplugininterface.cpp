@@ -5,6 +5,7 @@
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
+#include "akonadidatabasetoolsjob.h"
 #include "akonadidatasetools_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
@@ -23,7 +24,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Vaccum..."), this);
         ac->addAction(QStringLiteral("akonadivaccum"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            mTool = AkonadiDatabaseTool::Vaccum;
+            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vaccum;
             slotActivated();
         });
 
@@ -34,7 +35,7 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Fsck..."), this);
         ac->addAction(QStringLiteral("akonadifsck"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            mTool = AkonadiDatabaseTool::Fsck;
+            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck;
             slotActivated();
         });
 
@@ -50,13 +51,7 @@ void AkonadiDatabaseToolsPluginInterface::slotActivated()
 
 void AkonadiDatabaseToolsPluginInterface::exec()
 {
-    switch (mTool) {
-    case Unknown:
-        qCWarning(AKONADIDATABASETOOLS_LOG) << "mTool is unknown it's a bug! ";
-        break;
-    case Vaccum:
-        break;
-    case Fsck:
-        break;
-    }
+    AkonadiDatabaseToolsJob *job = new AkonadiDatabaseToolsJob(this);
+    job->setTool(mTool);
+    job->start();
 }

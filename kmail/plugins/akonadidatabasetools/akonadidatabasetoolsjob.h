@@ -6,6 +6,7 @@
 
 #pragma once
 
+#include "akonadidatabasetoolsutils.h"
 #include "akonadidatasetools_export.h"
 #include <QObject>
 
@@ -19,4 +20,9 @@ public:
     Q_REQUIRED_RESULT bool canStart() const;
 
     void start();
+    void setTool(AkonadiDatabaseToolsUtils::AkonadiDatabaseTool newTool);
+
+private:
+    Q_REQUIRED_RESULT QString processExist() const;
+    AkonadiDatabaseToolsUtils::AkonadiDatabaseTool mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown;
 };

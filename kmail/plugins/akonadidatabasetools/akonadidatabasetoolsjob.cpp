@@ -4,6 +4,8 @@
    SPDX-License-Identifier: GPL-2.0-or-later
 */
 #include "akonadidatabasetoolsjob.h"
+#include "akonadidatasetools_debug.h"
+#include <QStandardPaths>
 
 AkonadiDatabaseToolsJob::AkonadiDatabaseToolsJob(QObject *parent)
     : QObject{parent}
@@ -14,8 +16,17 @@ AkonadiDatabaseToolsJob::~AkonadiDatabaseToolsJob() = default;
 
 bool AkonadiDatabaseToolsJob::canStart() const
 {
-    // TODO
-    return false;
+    return processExist().isEmpty() && (mTool != AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown);
+}
+
+QString AkonadiDatabaseToolsJob::processExist() const
+{
+    return QStandardPaths::findExecutable(QStringLiteral("akonadictl"));
+}
+
+void AkonadiDatabaseToolsJob::setTool(AkonadiDatabaseToolsUtils::AkonadiDatabaseTool newTool)
+{
+    mTool = newTool;
 }
 
 void AkonadiDatabaseToolsJob::start()
@@ -24,5 +35,15 @@ void AkonadiDatabaseToolsJob::start()
         deleteLater();
         return;
     }
-    // TODO
+    switch (mTool) {
+    case AkonadiDatabaseToolsUtils::Unknown:
+        qCWarning(AKONADIDATABASETOOLS_LOG) << "mTool is unknown it's a bug! ";
+        break;
+    case AkonadiDatabaseToolsUtils::Vaccum:
+        break;
+    case AkonadiDatabaseToolsUtils::Fsck:
+        break;
+    }
+
+    deleteLater();
 }

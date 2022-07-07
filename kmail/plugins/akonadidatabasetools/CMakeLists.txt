@@ -13,6 +13,8 @@ target_sources(akonadidatasetools PRIVATE
     akonadidatabasetoolsplugininterface.h
     akonadidatabasetoolsjob.h
     akonadidatabasetoolsjob.cpp
+    akonadidatabasetoolsutils.cpp
+    akonadidatabasetoolsutils.h
 )
 generate_export_header(akonadidatasetools BASE_NAME akonadidatasetools)
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
