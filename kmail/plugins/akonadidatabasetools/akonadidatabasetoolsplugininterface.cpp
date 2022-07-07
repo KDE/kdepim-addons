@@ -21,10 +21,10 @@ AkonadiDatabaseToolsPluginInterface::~AkonadiDatabaseToolsPluginInterface() = de
 void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
 {
     {
-        auto action = new QAction(i18n("&Akonadi Vaccum..."), this);
-        ac->addAction(QStringLiteral("akonadivaccum"), action);
+        auto action = new QAction(i18n("&Akonadi Vacuum..."), this);
+        ac->addAction(QStringLiteral("akonadivacuum"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vaccum;
+            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum;
             slotActivated();
         });
 

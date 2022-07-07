@@ -10,7 +10,7 @@ namespace AkonadiDatabaseToolsUtils
 {
 enum AkonadiDatabaseTool {
     Unknown = 0,
-    Vaccum = 1,
+    Vacuum = 1,
     Fsck = 2,
 };
 }

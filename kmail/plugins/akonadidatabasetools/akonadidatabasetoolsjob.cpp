@@ -40,7 +40,7 @@ void AkonadiDatabaseToolsJob::start()
     case AkonadiDatabaseToolsUtils::Unknown:
         qCWarning(AKONADIDATABASETOOLS_LOG) << "mTool is unknown it's a bug! ";
         break;
-    case AkonadiDatabaseToolsUtils::Vaccum: {
+    case AkonadiDatabaseToolsUtils::Vacuum: {
         QProcess::execute(QStandardPaths::findExecutable(QStringLiteral("akonadictl")), QStringList({QStringLiteral("vacuum")}));
         break;
     }
