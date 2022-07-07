@@ -3,7 +3,7 @@
         "Description": "This plugin allows you to manage Akonadi database.",
         "EnabledByDefault": "false",
         "Id": "kmailakonadidatabasetool",
-        "Name": "Akonadi Database Mananger",
+        "Name": "Akonadi Database Manager",
         "Version": "1.0"
     }
 }
