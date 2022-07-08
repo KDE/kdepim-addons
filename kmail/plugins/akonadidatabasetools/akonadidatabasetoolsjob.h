@@ -7,10 +7,10 @@
 #pragma once
 
 #include "akonadidatabasetoolsutils.h"
-#include "akonadidatasetools_export.h"
+#include "akonadidatasetools_private_export.h"
 #include <QObject>
 
-class AKONADIDATASETOOLS_EXPORT AkonadiDatabaseToolsJob : public QObject
+class AKONADIDATASETOOLS_TESTS_EXPORT AkonadiDatabaseToolsJob : public QObject
 {
     Q_OBJECT
 public:

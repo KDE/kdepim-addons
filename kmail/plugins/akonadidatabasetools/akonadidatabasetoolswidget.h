@@ -6,9 +6,10 @@
 
 #pragma once
 
+#include "akonadidatasetools_private_export.h"
 #include <QWidget>
-
-class AkonadiDatabaseToolsWidget : public QWidget
+class QPlainTextEdit;
+class AKONADIDATASETOOLS_TESTS_EXPORT AkonadiDatabaseToolsWidget : public QWidget
 {
     Q_OBJECT
 public:
@@ -16,4 +17,7 @@ public:
     ~AkonadiDatabaseToolsWidget() override;
 
     void appendText(const QString &text);
+
+private:
+    QPlainTextEdit *const mPlainTextEdit;
 };

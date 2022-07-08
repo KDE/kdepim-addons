@@ -6,10 +6,10 @@
 
 #pragma once
 
-#include "akonadidatasetools_export.h"
+#include "akonadidatasetools_private_export.h"
 #include <QDialog>
 class AkonadiDatabaseToolsWidget;
-class AKONADIDATASETOOLS_EXPORT AkonadiDatabaseToolsDialog : public QDialog
+class AKONADIDATASETOOLS_TESTS_EXPORT AkonadiDatabaseToolsDialog : public QDialog
 {
     Q_OBJECT
 public:
