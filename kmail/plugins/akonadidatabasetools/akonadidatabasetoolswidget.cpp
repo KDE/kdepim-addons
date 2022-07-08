@@ -16,6 +16,7 @@ AkonadiDatabaseToolsWidget::AkonadiDatabaseToolsWidget(QWidget *parent)
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
     mainLayout->setContentsMargins(QMargins{});
     mPlainTextEdit->setObjectName(QStringLiteral("mPlainTextEdit"));
+    mPlainTextEdit->setReadOnly(true);
     mainLayout->addWidget(mPlainTextEdit);
 }
 
