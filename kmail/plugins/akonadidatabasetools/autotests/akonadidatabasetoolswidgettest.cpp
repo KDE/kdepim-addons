@@ -24,4 +24,5 @@ void AkonadiDatabaseToolsWidgetTest::shouldHaveDefaultValues()
     auto mPlainTextEdit = w.findChild<QPlainTextEdit *>(QStringLiteral("mPlainTextEdit"));
     QVERIFY(mPlainTextEdit);
     QVERIFY(mPlainTextEdit->toPlainText().isEmpty());
+    QVERIFY(mPlainTextEdit->isReadOnly());
 }
