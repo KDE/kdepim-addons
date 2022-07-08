@@ -5,6 +5,7 @@
 */
 
 #include "akonadidatabasetoolsplugininterface.h"
+#include "akonadidatabasetoolsdialog.h"
 #include "akonadidatabasetoolsjob.h"
 #include "akonadidatasetools_debug.h"
 #include <KActionCollection>

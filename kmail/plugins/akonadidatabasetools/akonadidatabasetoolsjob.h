@@ -9,7 +9,7 @@
 #include "akonadidatabasetoolsutils.h"
 #include "akonadidatasetools_private_export.h"
 #include <QObject>
-
+class QProcess;
 class AKONADIDATASETOOLS_TESTS_EXPORT AkonadiDatabaseToolsJob : public QObject
 {
     Q_OBJECT
@@ -22,7 +22,12 @@ public:
     void start();
     void setTool(AkonadiDatabaseToolsUtils::AkonadiDatabaseTool newTool);
 
+Q_SIGNALS:
+    void receivedStandardError(const QString &str);
+    void receivedStandardOutput(const QString &str);
+
 private:
     Q_REQUIRED_RESULT QString processExist() const;
     AkonadiDatabaseToolsUtils::AkonadiDatabaseTool mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown;
+    QProcess *mProcess = nullptr;
 };

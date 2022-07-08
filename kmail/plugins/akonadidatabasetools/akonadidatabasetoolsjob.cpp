@@ -41,11 +41,36 @@ void AkonadiDatabaseToolsJob::start()
         qCWarning(AKONADIDATABASETOOLS_LOG) << "mTool is unknown it's a bug! ";
         break;
     case AkonadiDatabaseToolsUtils::Vacuum: {
-        QProcess::execute(QStandardPaths::findExecutable(QStringLiteral("akonadictl")), QStringList({QStringLiteral("vacuum")}));
+        mProcess = new QProcess(this);
+        mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
+        mProcess->setArguments(QStringList() << QStringLiteral("vacuum"));
+        connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
+            Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
+        });
+        connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
+            Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
+        });
+        mProcess->start();
+        if (!mProcess->waitForFinished()) {
+            qCWarning(AKONADIDATABASETOOLS_LOG) << "Impossible to start akonadi vacuum";
+        }
+
         break;
     }
     case AkonadiDatabaseToolsUtils::Fsck: {
-        QProcess::execute(QStandardPaths::findExecutable(QStringLiteral("akonadictl")), QStringList({QStringLiteral("fsck")}));
+        mProcess = new QProcess(this);
+        mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
+        mProcess->setArguments(QStringList() << QStringLiteral("fsck"));
+        connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
+            Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
+        });
+        connect(mProcess, &QProcess::readyReadStandardOutput, this, [this]() {
+            Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
+        });
+        mProcess->start();
+        if (!mProcess->waitForFinished()) {
+            qCWarning(AKONADIDATABASETOOLS_LOG) << "Impossible to start akonadi fsck";
+        }
         break;
     }
     }
