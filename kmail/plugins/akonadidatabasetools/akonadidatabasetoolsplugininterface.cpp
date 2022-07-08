@@ -59,7 +59,10 @@ void AkonadiDatabaseToolsPluginInterface::exec()
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardError, dlg, &AkonadiDatabaseToolsDialog::appendText);
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardOutput, dlg, &AkonadiDatabaseToolsDialog::appendText);
     connect(job, &AkonadiDatabaseToolsJob::finished, dlg, [this, dlg]() {
+        dlg->appendText(QStringLiteral("---------"));
         dlg->appendText(i18n("Finished."));
     });
+    dlg->appendText(i18n("Start..."));
+    dlg->appendText(QStringLiteral("---------"));
     job->start();
 }
