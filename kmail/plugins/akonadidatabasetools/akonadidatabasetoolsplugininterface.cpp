@@ -52,7 +52,11 @@ void AkonadiDatabaseToolsPluginInterface::slotActivated()
 
 void AkonadiDatabaseToolsPluginInterface::exec()
 {
-    AkonadiDatabaseToolsJob *job = new AkonadiDatabaseToolsJob(this);
+    auto dlg = new AkonadiDatabaseToolsDialog;
+    dlg->show();
+    auto job = new AkonadiDatabaseToolsJob(this);
     job->setTool(mTool);
+    connect(job, &AkonadiDatabaseToolsJob::receivedStandardError, dlg, &AkonadiDatabaseToolsDialog::appendText);
+    connect(job, &AkonadiDatabaseToolsJob::receivedStandardOutput, dlg, &AkonadiDatabaseToolsDialog::appendText);
     job->start();
 }

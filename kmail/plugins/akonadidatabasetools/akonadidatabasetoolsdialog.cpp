@@ -21,6 +21,7 @@ AkonadiDatabaseToolsDialog::AkonadiDatabaseToolsDialog(QWidget *parent)
     : QDialog(parent)
     , mAkonadiDatabaseToolsWidget(new AkonadiDatabaseToolsWidget(this))
 {
+    setAttribute(Qt::WA_DeleteOnClose);
     setWindowTitle(i18nc("@title:window", "Akonadi Database Tool"));
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setObjectName(QStringLiteral("mainLayout"));
