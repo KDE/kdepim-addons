@@ -44,7 +44,10 @@ void AkonadiDatabaseToolsJob::start()
         mProcess = new QProcess(this);
         mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
         mProcess->setArguments(QStringList() << QStringLiteral("vacuum"));
-        connect(mProcess, &QProcess::finished, this, &AkonadiDatabaseToolsJob::deleteLater);
+        connect(mProcess, &QProcess::finished, this, [this]() {
+            Q_EMIT finished();
+            deleteLater();
+        });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
             Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
         });
@@ -60,7 +63,10 @@ void AkonadiDatabaseToolsJob::start()
         mProcess = new QProcess(this);
         mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
         mProcess->setArguments(QStringList() << QStringLiteral("fsck"));
-        connect(mProcess, &QProcess::finished, this, &AkonadiDatabaseToolsJob::deleteLater);
+        connect(mProcess, &QProcess::finished, this, [this]() {
+            Q_EMIT finished();
+            deleteLater();
+        });
         connect(mProcess, &QProcess::readyReadStandardError, this, [this]() {
             Q_EMIT receivedStandardError(QLatin1String(mProcess->readAllStandardError()));
         });

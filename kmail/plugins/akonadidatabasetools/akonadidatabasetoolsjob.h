@@ -25,6 +25,7 @@ public:
 Q_SIGNALS:
     void receivedStandardError(const QString &str);
     void receivedStandardOutput(const QString &str);
+    void finished();
 
 private:
     Q_REQUIRED_RESULT QString processExist() const;

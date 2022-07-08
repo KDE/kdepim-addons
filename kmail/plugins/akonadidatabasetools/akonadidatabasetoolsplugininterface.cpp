@@ -58,5 +58,8 @@ void AkonadiDatabaseToolsPluginInterface::exec()
     job->setTool(mTool);
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardError, dlg, &AkonadiDatabaseToolsDialog::appendText);
     connect(job, &AkonadiDatabaseToolsJob::receivedStandardOutput, dlg, &AkonadiDatabaseToolsDialog::appendText);
+    connect(job, &AkonadiDatabaseToolsJob::finished, dlg, [this, dlg]() {
+        dlg->appendText(i18n("Finished."));
+    });
     job->start();
 }
