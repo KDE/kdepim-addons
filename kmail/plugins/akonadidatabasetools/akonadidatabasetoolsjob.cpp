@@ -55,8 +55,6 @@ void AkonadiDatabaseToolsJob::start()
             Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
         });
         mProcess->start();
-        // TODO use thread
-
         break;
     }
     case AkonadiDatabaseToolsUtils::Fsck: {
@@ -74,7 +72,6 @@ void AkonadiDatabaseToolsJob::start()
             Q_EMIT receivedStandardOutput(QLatin1String(mProcess->readAllStandardOutput()));
         });
         mProcess->start();
-        // TODO use thread
         break;
     }
     }
