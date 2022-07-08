@@ -171,7 +171,7 @@ void ItineraryUrlHandler::showCalendar(QDate date) const
     }
 
     // Open or activate KOrganizer. This will also activate Kontact if running
-    auto *job = new KIO::ApplicationLauncherJob(korgaService);
+    auto job = new KIO::ApplicationLauncherJob(korgaService);
 
     connect(job, &KJob::finished, this, [date](KJob *job) {
         if (job->error()) {
@@ -246,7 +246,7 @@ void ItineraryUrlHandler::addToCalendar(ItineraryMemento *memento) const
 void ItineraryUrlHandler::openInApp(MimeTreeParser::Interface::BodyPart *part) const
 {
     const auto fileName = createItineraryFile(part);
-    auto *job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary")));
+    auto job = new KIO::ApplicationLauncherJob(KService::serviceByDesktopName(QStringLiteral("org.kde.itinerary")));
     job->setUrls({QUrl::fromLocalFile(fileName)});
     job->start();
 }

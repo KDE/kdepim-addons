@@ -1111,7 +1111,7 @@ public:
             return;
         }
 
-        auto *job = new KIO::ApplicationLauncherJob(korgaService);
+        auto job = new KIO::ApplicationLauncherJob(korgaService);
         QObject::connect(job, &KJob::finished, job, [date](KJob *job) {
             if (job->error()) {
                 qCWarning(TEXT_CALENDAR_LOG) << "failed to run korganizer" << job->errorString();
