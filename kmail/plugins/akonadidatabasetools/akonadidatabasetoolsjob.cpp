@@ -17,7 +17,7 @@ AkonadiDatabaseToolsJob::~AkonadiDatabaseToolsJob() = default;
 
 bool AkonadiDatabaseToolsJob::canStart() const
 {
-    return processExist().isEmpty() && (mTool != AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown);
+    return !processExist().isEmpty() && (mTool != AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown);
 }
 
 QString AkonadiDatabaseToolsJob::processExist() const
@@ -54,6 +54,7 @@ void AkonadiDatabaseToolsJob::start()
         if (!mProcess->waitForFinished()) {
             qCWarning(AKONADIDATABASETOOLS_LOG) << "Impossible to start akonadi vacuum";
         }
+        // TODO use thread
 
         break;
     }
@@ -71,6 +72,7 @@ void AkonadiDatabaseToolsJob::start()
         if (!mProcess->waitForFinished()) {
             qCWarning(AKONADIDATABASETOOLS_LOG) << "Impossible to start akonadi fsck";
         }
+        // TODO use thread
         break;
     }
     }
