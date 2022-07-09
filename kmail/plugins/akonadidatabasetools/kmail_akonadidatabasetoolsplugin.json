@@ -3,14 +3,23 @@
         "Description": "This plugin allows you to manage Akonadi database.",
         "Description[ca]": "Aquest connector permet gestionar la base de dades de l'Akonadi.",
         "Description[es]": "Este complemento le permite gestionar la base de datos de Akonadi.",
+        "Description[fr]": "Ce module externe permet de gérer la base de données de Akonadi.",
         "Description[nl]": "Deze plug-in stelt u in staat de database van Akonadi te beheren.",
         "Description[pt]": "Este 'plugin' permite-lhe gerir a base de dados do Akonadi.",
+        "Description[sl]": "Ta vstavek omogoča upravljanje podatkovne baze Akonadi.",
         "Description[tr]": "Bu eklenti, Akonadi veritabanını yönetmenize izin verir.",
         "Description[uk]": "За допомогою цього додатка можна керувати базою даних Akonadi.",
         "Description[x-test]": "xxThis plugin allows you to manage Akonadi database.xx",
         "EnabledByDefault": "false",
         "Id": "kmailakonadidatabasetool",
         "Name": "Akonadi Database Manager",
+        "Name[ca]": "Gestor de base de dades de l'Akonadi",
+        "Name[nl]": "Database-beheerder van Akonadi",
+        "Name[pt]": "Gestor da Base de Dados do Akonadi",
+        "Name[sl]": "Akonadi Database Manager",
+        "Name[tr]": "Akonadi Veritabanı Yöneticisi",
+        "Name[uk]": "Керування базою даних Akonadi",
+        "Name[x-test]": "xxAkonadi Database Managerxx",
         "Version": "1.0"
     }
 }
