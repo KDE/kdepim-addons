@@ -17,6 +17,7 @@ public:
     ~AkonadiDatabaseToolsDialog() override;
 
     void appendText(const QString &text);
+    void appendErrorText(const QString &text);
 
 private:
     void writeConfig();

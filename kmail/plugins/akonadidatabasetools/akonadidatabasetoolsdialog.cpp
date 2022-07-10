@@ -47,6 +47,11 @@ void AkonadiDatabaseToolsDialog::appendText(const QString &text)
     mAkonadiDatabaseToolsWidget->appendText(text);
 }
 
+void AkonadiDatabaseToolsDialog::appendErrorText(const QString &text)
+{
+    mAkonadiDatabaseToolsWidget->appendText(QStringLiteral("<font color=#FF0000>%1</font>").arg(text));
+}
+
 void AkonadiDatabaseToolsDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);

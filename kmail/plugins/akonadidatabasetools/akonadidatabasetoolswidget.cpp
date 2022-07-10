@@ -24,5 +24,5 @@ AkonadiDatabaseToolsWidget::~AkonadiDatabaseToolsWidget() = default;
 
 void AkonadiDatabaseToolsWidget::appendText(const QString &text)
 {
-    mPlainTextEdit->insertPlainText(text);
+    mPlainTextEdit->appendHtml(text);
 }
