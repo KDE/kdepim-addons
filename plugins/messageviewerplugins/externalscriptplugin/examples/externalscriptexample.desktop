@@ -2,6 +2,7 @@
 Name=Search Subject on Web
 Name[ar]=ابحث عن موضوع في الوبّ
 Name[az]=İnternetdən mövzu axtarışı
+Name[bg]=Търсене в интернет
 Name[ca]=Cerca l'assumpte al web
 Name[ca@valencia]=Busca l'assumpte al web
 Name[cs]=Hledat předmět na webu
@@ -39,6 +40,7 @@ Icon=firefox
 Description=Search subject on web
 Description[ar]=ابحث عن موضوع في الوبّ
 Description[az]=İnternetdən istədiyiniz mövzunu axtarın
+Description[bg]=Търсене в интернет
 Description[ca]=Cerca l'assumpte al web
 Description[ca@valencia]=Busca l'assumpte al web
 Description[cs]=Hledat předmět na webu

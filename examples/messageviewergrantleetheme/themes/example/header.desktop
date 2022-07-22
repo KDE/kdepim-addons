@@ -2,6 +2,7 @@
 Name=Example
 Name[ar]=مثال
 Name[az]=Nümunə
+Name[bg]=Пример
 Name[ca]=Exemple
 Name[ca@valencia]=Exemple
 Name[cs]=Příklad
@@ -33,6 +34,7 @@ Name[zh_TW]=範例
 Description=Example theme for header.
 Description[ar]=سمة مثال للتّرويسة.
 Description[az]=Başlıq üçün mövzu nümunəsi.
+Description[bg]=Примерна тема за заглавна част.
 Description[ca]=Tema d'exemple per a la capçalera.
 Description[ca@valencia]=Tema d'exemple per a la capçalera.
 Description[da]=Eksempeltema på header.
