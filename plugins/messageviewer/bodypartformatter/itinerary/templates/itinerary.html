@@ -45,6 +45,8 @@ a.itineraryButton:active {
         {% include "org.kde.messageviewer/itinerary/trainreservation.html" %}
     {% elif res.className == "BusReservation" %}
         {% include "org.kde.messageviewer/itinerary/busreservation.html" %}
+    {% elif res.className == "BoatReservation" %}
+        {% include "org.kde.messageviewer/itinerary/boatreservation.html" %}
     {% elif res.className == "EventReservation" %}
         {% include "org.kde.messageviewer/itinerary/event.html" %}
     {% elif res.className == "FoodEstablishmentReservation" %}

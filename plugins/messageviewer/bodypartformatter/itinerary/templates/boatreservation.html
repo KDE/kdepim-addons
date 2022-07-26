@@ -1,0 +1,65 @@
+<table style="width:100%;">
+    <tr>
+        <td style="font-size:120%; width:33;">
+            {{ trip.departureBoatTerminal.name }}
+            {% with trip.departureBoatTerminal as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
+        </td>
+        <td style="font-size:120%; width:33%; text-align:center;">
+        {% if elem.reservations.0.reservation.reservationStatus == 1 %}
+            {% icon "dialog-cancel" sizesmallmedium _("Reservation canceled.") %}
+        {% else %}
+            &rarr;
+        {% endif %}
+        </td>
+        <td style="font-size:120%; width:33%;">
+            {{ trip.arrivalBoatTerminal.name }}
+            {% with trip.arrivalBoatTerminal as location %}{% include "org.kde.messageviewer/itinerary/location.html" %}{% endwith %}
+        </td>
+    </tr>
+    <tr>
+        <td>{{ trip.departureTime|formatDateTime }}</td>
+        <td style="white-space: nowrap; text-align:center;">
+        <!-- TODO boat name not yet available -->
+        </td>
+        <td>{{ trip.arrivalTime|formatDateTime }}</td>
+    </tr>
+    <tr><td colspan="3">
+        <div style="float:left">
+        {% if elem.reservations.0.ticketToken or elem.reservations.size > 1 %}
+            <a href="x-kmail:/bodypart/0//semanticExpand?{{ forloop.counter0 }}">
+            {% if elem.state.expanded %}
+                <img src="{{ style.collapseIcon }}" style="margin-right: 4px;"/>
+            {% else %}
+                <img src="{{ style.expandIcon }}" style="margin-right: 4px;"/>
+            {% endif %}
+            </a>
+        {% endif %}
+        </div>
+        {% include "org.kde.messageviewer/itinerary/actions.html" %}
+    </td></tr>
+</table>
+
+{% if elem.state.expanded %}
+    {% for d in elem.reservations %}
+        {% with d.reservation as res %}
+        <div>
+        {% if res.underName.name %}
+            {{ res.underName.name }}
+        {% endif %}
+        {% if res.reservedTicket.name %}
+            ({{ res.reservedTicket.name }})
+        {% endif %}
+        </div>
+        {% if d.ticketToken %}
+            <div style="text-align:center;">
+                <div style="background-color: #ffffff; display: inline-block; padding: 4px;">
+                <img src="{{ d.ticketToken }}"/>
+                </div>
+            </div>
+        {% endif %}
+        {% if elem.reservations.size > 1 %}
+            {% include "org.kde.messageviewer/itinerary/actions.html" %}
+        {% endif %}
+        {% endwith %}
+    {% endfor %}
+{% endif %}

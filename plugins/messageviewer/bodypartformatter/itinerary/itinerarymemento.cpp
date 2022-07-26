@@ -66,7 +66,8 @@ QVector<ItineraryMemento::TripData> ItineraryMemento::data()
     if (m_data.isEmpty() && !m_postProc.result().isEmpty()) {
         // filter out types we can't handle, but keep incomplete elements to see if we can complete them from the calendar
         ExtractorValidator validator;
-        validator.setAcceptedTypes<BusReservation,
+        validator.setAcceptedTypes<BoatReservation,
+                                   BusReservation,
                                    EventReservation,
                                    FlightReservation,
                                    FoodEstablishmentReservation,

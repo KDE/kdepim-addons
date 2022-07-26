@@ -11,5 +11,6 @@
         <file>foodestablishmentreservation.html</file>
         <file>rentalcarreservation.html</file>
         <file>taxireservation.html</file>
+        <file>boatreservation.html</file>
     </qresource>
 </RCC>
