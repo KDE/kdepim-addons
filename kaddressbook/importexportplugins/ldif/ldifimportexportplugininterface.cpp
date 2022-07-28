@@ -137,7 +137,7 @@ void LDifImportExportPluginInterface::exportLdif()
     delete dlg;
 
     if (contacts.isEmpty()) {
-        KMessageBox::sorry(nullptr, i18n("You have not selected any contacts to export."));
+        KMessageBox::error(nullptr, i18n("You have not selected any contacts to export."));
         return;
     }
 

@@ -571,7 +571,7 @@ void CSVImportDialog::slotOk()
     }
 
     if (!assigned) {
-        KMessageBox::sorry(this, i18nc("@info:status", "You must assign at least one column."));
+        KMessageBox::error(this, i18nc("@info:status", "You must assign at least one column."));
     } else {
         accept();
     }
@@ -581,7 +581,7 @@ void CSVImportDialog::applyTemplate()
 {
     QPointer<TemplateSelectionDialog> dlg = new TemplateSelectionDialog(this);
     if (!dlg->templatesAvailable()) {
-        KMessageBox::sorry(this, i18nc("@label", "There are no templates available yet."), i18nc("@title:window", "No templates available"));
+        KMessageBox::error(this, i18nc("@label", "There are no templates available yet."), i18nc("@title:window", "No templates available"));
         delete dlg;
         return;
     }
@@ -696,7 +696,7 @@ void CSVImportDialog::setFile(const QString &fileName)
 
     auto file = new QFile(fileName);
     if (!file->open(QIODevice::ReadOnly)) {
-        KMessageBox::sorry(this, i18nc("@info:status", "Cannot open input file."));
+        KMessageBox::error(this, i18nc("@info:status", "Cannot open input file."));
         delete file;
         return;
     }

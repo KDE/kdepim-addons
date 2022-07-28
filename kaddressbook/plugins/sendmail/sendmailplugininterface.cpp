@@ -57,7 +57,7 @@ void SendMailPluginInterface::updateActions(int numberOfSelectedItems, int numbe
 void SendMailPluginInterface::exec()
 {
     if (mListItems.isEmpty()) {
-        KMessageBox::sorry(parentWidget(), i18n("You have not selected any contacts."));
+        KMessageBox::error(parentWidget(), i18n("You have not selected any contacts."));
     } else {
         auto mailSender = new KABMailSender::MailSenderJob(mListItems, this);
         connect(mailSender, &KABMailSender::MailSenderJob::sendMails, this, &SendMailPluginInterface::slotSendMails);

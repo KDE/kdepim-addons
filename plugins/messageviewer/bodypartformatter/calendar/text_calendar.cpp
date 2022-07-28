@@ -931,7 +931,7 @@ public:
                 return true;
             }
             if (KEmailAddress::compareEmail(delegateString, incidence->organizer().email(), false)) {
-                KMessageBox::sorry(nullptr, i18n("Delegation to organizer is not possible."));
+                KMessageBox::error(nullptr, i18n("Delegation to organizer is not possible."));
                 return true;
             }
         }
@@ -1206,7 +1206,7 @@ public:
 
         Incidence::Ptr incidence = stringToIncidence(iCal);
         if (!incidence) {
-            KMessageBox::sorry(nullptr,
+            KMessageBox::error(nullptr,
                                i18n("The calendar invitation stored in this email message is broken in some way. "
                                     "Unable to continue."));
             return false;

@@ -58,7 +58,7 @@ PimCommon::GenericPluginInterface::RequireTypes CheckGravatarPluginInterface::re
 void CheckGravatarPluginInterface::exec()
 {
     if (mListItems.isEmpty()) {
-        KMessageBox::sorry(parentWidget(), i18n("You have not selected any contacts."));
+        KMessageBox::error(parentWidget(), i18n("You have not selected any contacts."));
     } else {
         if (mListItems.count() == 1) {
             Akonadi::Item item = mListItems.constFirst();
