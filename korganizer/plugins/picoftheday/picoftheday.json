@@ -42,11 +42,7 @@
         "Name[sv]": "Insticksprogram för kalendrar med 'Dagens bild' från Wikipedia",
         "Name[tr]": "Takvimler için Vikipedi Günün Resmi Eklentisi",
         "Name[uk]": "Додаток дат для календарів (зображення дня з Wikipedia)",
-        "Name[x-test]": "xxWikipedia Picture Of the Day Plugin for Calendarsxx",
-        "ServiceTypes": [
-            "Calendar/Plugin",
-            "Calendar/Decoration"
-        ]
+        "Name[x-test]": "xxWikipedia Picture Of the Day Plugin for Calendarsxx"
     },
     "X-KDE-KOrganizer-HasSettings": true,
     "X-KDE-PluginInterfaceVersion": 2

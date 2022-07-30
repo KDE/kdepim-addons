@@ -42,11 +42,7 @@
         "Name[sv]": "Insticksprogram för judisk kalender",
         "Name[tr]": "Yahudi Takvimi Eklentisi",
         "Name[uk]": "Додаток єврейського календаря",
-        "Name[x-test]": "xxJewish Calendar Pluginxx",
-        "ServiceTypes": [
-            "Calendar/Plugin",
-            "Calendar/Decoration"
-        ]
+        "Name[x-test]": "xxJewish Calendar Pluginxx"
     },
     "X-KDE-KOrganizer-HasSettings": true,
     "X-KDE-PluginInterfaceVersion": 2

@@ -42,11 +42,7 @@
         "Name[sv]": "Insticksprogram med 'Den här dagen i historien' från Wikipedia",
         "Name[tr]": "Vikipedi 'Tarihte Bugün' Eklentisi",
         "Name[uk]": "Додаток сторінки Вікіпедії «Цей день в історії»",
-        "Name[x-test]": "xxWikipedia 'This Day in History' Pluginxx",
-        "ServiceTypes": [
-            "Calendar/Plugin",
-            "Calendar/Decoration"
-        ]
+        "Name[x-test]": "xxWikipedia 'This Day in History' Pluginxx"
     },
     "X-KDE-KOrganizer-HasSettings": false,
     "X-KDE-PluginInterfaceVersion": 2

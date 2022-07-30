@@ -42,11 +42,7 @@
         "Name[sv]": "Månfasinsticksprogram för kalendrar",
         "Name[tr]": "Takvimler için Ay Evreleri Eklentisi",
         "Name[uk]": "Додаток фаз місяця для календарів",
-        "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx",
-        "ServiceTypes": [
-            "Calendar/Plugin",
-            "Calendar/Decoration"
-        ]
+        "Name[x-test]": "xxLunar Phases Plugin for Calendarsxx"
     },
     "X-KDE-KOrganizer-HasSettings": false,
     "X-KDE-PluginInterfaceVersion": 2
