@@ -16,7 +16,7 @@ MemoryCalendarMemento::MemoryCalendarMemento()
     : QObject(nullptr)
 {
     Akonadi::ETMCalendar::Ptr etmCalendar = CalendarSupport::calendarSingleton(/*createIfNull=*/false);
-    if (etmCalendar && etmCalendar->isLoaded()) {
+    if (etmCalendar && !etmCalendar->isLoading()) {
         // Good, either korganizer or kontact summary view are already running, so reuse ETM to save memory
         mCalendar = etmCalendar;
         QMetaObject::invokeMethod(this, "finalize", Qt::QueuedConnection);
