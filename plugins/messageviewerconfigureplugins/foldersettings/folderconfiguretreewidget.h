@@ -14,7 +14,6 @@ namespace MailCommon
 {
 class FolderTreeWidget;
 }
-class QItemSelection;
 class QPushButton;
 class LIBFOLDERCONFIGURESETTINGS_TESTS_EXPORT FolderConfigureTreeWidget : public QWidget
 {
