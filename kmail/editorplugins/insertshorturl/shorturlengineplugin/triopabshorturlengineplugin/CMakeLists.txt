@@ -1,6 +1,8 @@
 set(pimcommon_triopabshorturlengineplugin_SRCS
     triopabshorturlengineplugin.cpp
     triopabshorturlengineinterface.cpp
+    triopabshorturlengineplugin.h
+    triopabshorturlengineinterface.h
 )
 
 kcoreaddons_add_plugin(pimcommon_triopabshorturlengineplugin SOURCES

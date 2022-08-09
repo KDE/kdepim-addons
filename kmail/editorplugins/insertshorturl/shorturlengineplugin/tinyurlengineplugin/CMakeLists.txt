@@ -1,6 +1,8 @@
 set(pimcommon_tinyplugin_SRCS
     tinyurlengineplugin.cpp
     tinyurlengineinterface.cpp
+    tinyurlengineplugin.h
+    tinyurlengineinterface.h
 )
 
 kcoreaddons_add_plugin(pimcommon_tinyurlengineplugin SOURCES

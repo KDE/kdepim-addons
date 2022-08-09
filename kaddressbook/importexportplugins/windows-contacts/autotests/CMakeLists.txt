@@ -9,7 +9,7 @@ add_definitions(-DWINDOWSCONTACT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")
 macro(add_windowscontact_unittest _source _additional)
     set( _test ${_source} ${_additional} ${kaddressbook_importexport_windowscontact_debugfile_autotest_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test})
+    add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(${_name})

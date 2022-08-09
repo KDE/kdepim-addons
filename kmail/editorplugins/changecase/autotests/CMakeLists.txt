@@ -7,7 +7,7 @@ ecm_qt_declare_logging_category(changecaseplugineditor_common_SRCS HEADER change
 macro(add_kmail_editorplugin_unittest _source _additional)
     set( _test ${_source} ${_additional} ${changecaseplugineditor_common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
+    add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})

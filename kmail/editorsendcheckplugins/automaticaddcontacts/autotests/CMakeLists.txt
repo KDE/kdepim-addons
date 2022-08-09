@@ -10,7 +10,7 @@ ecm_qt_declare_logging_category(automaticaddcontacts_common_SRCS HEADER automati
 macro(add_kmail_automaticaddscontacts_unittest _source _additional)
     set( _test ${_source} ${_additional} ${automaticaddcontacts_common_SRCS})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
+    add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(kmail_editorplugin-${_name})
