@@ -17,10 +17,10 @@ AkonadiDatabaseToolsJob::~AkonadiDatabaseToolsJob() = default;
 
 bool AkonadiDatabaseToolsJob::canStart() const
 {
-    return !processExist().isEmpty() && (mTool != AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown);
+    return !akonadiProcessPath().isEmpty() && (mTool != AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown);
 }
 
-QString AkonadiDatabaseToolsJob::processExist() const
+QString AkonadiDatabaseToolsJob::akonadiProcessPath() const
 {
     return QStandardPaths::findExecutable(QStringLiteral("akonadictl"));
 }
@@ -42,7 +42,7 @@ void AkonadiDatabaseToolsJob::start()
         break;
     case AkonadiDatabaseToolsUtils::Vacuum: {
         mProcess = new QProcess(this);
-        mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
+        mProcess->setProgram(akonadiProcessPath());
         mProcess->setArguments(QStringList() << QStringLiteral("vacuum"));
         connect(mProcess, &QProcess::finished, this, [this]() {
             Q_EMIT finished();
@@ -59,7 +59,7 @@ void AkonadiDatabaseToolsJob::start()
     }
     case AkonadiDatabaseToolsUtils::Fsck: {
         mProcess = new QProcess(this);
-        mProcess->setProgram(QStandardPaths::findExecutable(QStringLiteral("akonadictl")));
+        mProcess->setProgram(akonadiProcessPath());
         mProcess->setArguments(QStringList() << QStringLiteral("fsck"));
         connect(mProcess, &QProcess::finished, this, [this]() {
             Q_EMIT finished();
