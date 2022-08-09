@@ -9,7 +9,7 @@ macro(add_plasma_pimeventsplugin_test _source _additional)
               ${CMAKE_CURRENT_BINARY_DIR}/../pimeventsplugin_debug.cpp
     )
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable(${_name} ${_test})
+    add_executable(${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name})
     ecm_mark_as_test(plasma-pimeventsplugin-${_name})
     add_definitions(-DPIMEVENT_DATADIR=\"${CMAKE_CURRENT_SOURCE_DIR}\")

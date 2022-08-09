@@ -7,7 +7,7 @@ add_definitions( -DGRANTLEETHEME_DATA_DIR="${CMAKE_SOURCE_DIR}/examples/messagev
 macro(add_messageviewer_header_unittest _source _additional)
     set( _test ${_source} utils.cpp  ${_additional})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
+    add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
     
     ecm_mark_as_test(messageviewer-header-${_name})
@@ -19,7 +19,7 @@ endmacro ()
 macro(add_messageviewer_header_class_unittest _source )
     set( _test ${_source})
     get_filename_component(_name ${_source} NAME_WE)
-    add_executable( ${_name} ${_test} )
+    add_executable( ${_name} ${_test} ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(messageviewer-header-${_name})

@@ -12,6 +12,17 @@ target_sources(mailmerge PRIVATE
     widgets/mailmergeutil.cpp
     widgets/mailmergepreviewdialog.cpp
     widgets/mailmergepreviewwidget.cpp
+
+    mailmergedialog.h
+    widgets/addressbookwidget.h
+    widgets/attachmentlistwidget.h
+    widgets/csvwidget.h
+    widgets/mailmergewidget.h
+    widgets/selectattachmentdialog.h
+    widgets/mailmergemenu.h
+    widgets/mailmergeutil.h
+    widgets/mailmergepreviewdialog.h
+    widgets/mailmergepreviewwidget.h
 )
 
 generate_export_header(mailmerge BASE_NAME mailmerge)
