@@ -26,8 +26,10 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Vacuum..."), this);
         ac->addAction(QStringLiteral("akonadivacuum"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum;
-            slotActivated();
+            if (KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to vacuum akonadi database?"), i18n("Akonadi Vacuum")) == KMessageBox::Yes) {
+                mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum;
+                slotActivated();
+            }
         });
 
         PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
@@ -37,8 +39,10 @@ void AkonadiDatabaseToolsPluginInterface::createAction(KActionCollection *ac)
         auto action = new QAction(i18n("&Akonadi Fsck..."), this);
         ac->addAction(QStringLiteral("akonadifsck"), action);
         connect(action, &QAction::triggered, this, [this]() {
-            mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck;
-            slotActivated();
+            if (KMessageBox::questionYesNo(parentWidget(), i18n("Do you want to fsck akonadi database?"), i18n("Akonadi Fsck")) == KMessageBox::Yes) {
+                mTool = AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck;
+                slotActivated();
+            }
         });
 
         PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
