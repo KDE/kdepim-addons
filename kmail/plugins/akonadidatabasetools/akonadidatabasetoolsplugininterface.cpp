@@ -10,6 +10,7 @@
 #include "akonadidatasetools_debug.h"
 #include <KActionCollection>
 #include <KLocalizedString>
+#include <KMessageBox>
 #include <QAction>
 
 AkonadiDatabaseToolsPluginInterface::AkonadiDatabaseToolsPluginInterface(QObject *parent)
@@ -52,7 +53,19 @@ void AkonadiDatabaseToolsPluginInterface::slotActivated()
 
 void AkonadiDatabaseToolsPluginInterface::exec()
 {
-    auto dlg = new AkonadiDatabaseToolsDialog;
+    auto dlg = new AkonadiDatabaseToolsDialog(parentWidget());
+    switch (mTool) {
+    case AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Fsck:
+        dlg->setWindowTitle(i18nc("@title:window", "Akonadi Fsck"));
+        break;
+    case AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Vacuum:
+        dlg->setWindowTitle(i18nc("@title:window", "Akonadi Vacuum"));
+        break;
+    case AkonadiDatabaseToolsUtils::AkonadiDatabaseTool::Unknown:
+        qCWarning(AKONADIDATABASETOOLS_LOG) << "Tool is unknown it's a bug";
+        break;
+    }
+
     dlg->show();
     auto job = new AkonadiDatabaseToolsJob(this);
     job->setTool(mTool);
