@@ -41,9 +41,9 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     selectContactWidget->setObjectName(QStringLiteral("selectcontactwidget"));
     auto vbox = new QVBoxLayout;
     selectContactWidget->setLayout(vbox);
-    auto lab = new QLabel(i18n("Select contacts that you really want to merge:"));
+    auto lab = new QLabel(i18n("Select contacts that you really want to merge:"), this);
     vbox->addWidget(lab);
-    mListWidget = new MergeContactWidgetList;
+    mListWidget = new MergeContactWidgetList(this);
     mListWidget->setObjectName(QStringLiteral("listcontact"));
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     vbox->addWidget(mListWidget);
@@ -79,7 +79,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
 
     lay->addLayout(hbox);
 
-    mMergeButton = new QPushButton(i18n("merge"));
+    mMergeButton = new QPushButton(i18n("merge"), this);
     mMergeButton->setObjectName(QStringLiteral("mergebutton"));
     hbox->addWidget(mMergeButton);
     mMergeButton->setEnabled(false);

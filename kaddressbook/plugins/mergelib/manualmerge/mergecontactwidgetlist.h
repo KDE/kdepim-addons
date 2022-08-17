@@ -19,7 +19,7 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item item() const;
 
 private:
-    Akonadi::Item mItem;
+    const Akonadi::Item mItem;
 };
 
 class MergeContactWidgetList : public QListWidget
@@ -30,10 +30,10 @@ public:
     ~MergeContactWidgetList() override;
 
     void fillListContact(const Akonadi::Item::List &items);
-    Akonadi::Item::List listSelectedContacts() const;
-    Akonadi::Item currentAkonadiItem() const;
+    Q_REQUIRED_RESULT Akonadi::Item::List listSelectedContacts() const;
+    Q_REQUIRED_RESULT Akonadi::Item currentAkonadiItem() const;
 
 private:
-    QString itemName(const KContacts::Addressee &address) const;
+    Q_REQUIRED_RESULT QString itemName(const KContacts::Addressee &address) const;
 };
 }

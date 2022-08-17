@@ -25,7 +25,7 @@ public:
 
     Q_REQUIRED_RESULT bool start();
 
-    KContacts::VCardConverter::Version version() const;
+    Q_REQUIRED_RESULT KContacts::VCardConverter::Version version() const;
     void setVersion(KContacts::VCardConverter::Version version);
 
 Q_SIGNALS:

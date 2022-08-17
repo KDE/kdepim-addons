@@ -26,9 +26,9 @@ Q_SIGNALS:
     void finished(const QVector<Akonadi::Item::List> &);
 
 private:
-    Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
-    bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
-    Akonadi::Item::List mListItem;
+    Q_REQUIRED_RESULT Akonadi::Item::List checkList(const Akonadi::Item::List &lstItem);
+    Q_REQUIRED_RESULT bool isDuplicate(const Akonadi::Item &itemA, const Akonadi::Item &itemB);
+    const Akonadi::Item::List mListItem;
     QVector<Akonadi::Item::List> mListDuplicate;
 };
 }

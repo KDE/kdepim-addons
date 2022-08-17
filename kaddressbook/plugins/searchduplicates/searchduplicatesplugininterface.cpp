@@ -5,13 +5,12 @@
 */
 
 #include "searchduplicatesplugininterface.h"
+#include "searchduplicate/searchandmergecontactduplicatecontactdialog.h"
 
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
 #include <QPointer>
-
-#include "../mergelib/searchduplicate/searchandmergecontactduplicatecontactdialog.h"
 
 SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)
@@ -25,7 +24,7 @@ void SearchDuplicatesPluginInterface::createAction(KActionCollection *ac)
     QAction *action = ac->addAction(QStringLiteral("search_duplicate_contacts"));
     action->setText(i18n("Search Duplicate Contacts..."));
     connect(action, &QAction::triggered, this, &SearchDuplicatesPluginInterface::slotActivated);
-    PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
+    const PimCommon::ActionType type(action, PimCommon::ActionType::Tools);
     addActionType(type);
 }
 

@@ -37,7 +37,7 @@ SearchAndMergeContactDuplicateContactDialog::SearchAndMergeContactDuplicateConta
     mStackedWidget = new QStackedWidget(this);
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
 
-    mSearchResult = new SearchDuplicateResultWidget;
+    mSearchResult = new SearchDuplicateResultWidget(this);
     mSearchResult->setObjectName(QStringLiteral("mergecontact"));
     mStackedWidget->addWidget(mSearchResult);
     connect(mSearchResult, &SearchDuplicateResultWidget::contactMerged, this, &SearchAndMergeContactDuplicateContactDialog::slotContactMerged);
