@@ -44,7 +44,7 @@ Q_SIGNALS:
     void showContactPreview(const Akonadi::Item &item);
 
 private:
-    void slotItemActivated(QTreeWidgetItem *item, int column);
+    void slotItemSelectionChanged();
     void slotItemChanged(QTreeWidgetItem *item, int column);
     void changeState(QTreeWidgetItem *item, bool b);
 };

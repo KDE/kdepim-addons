@@ -15,7 +15,7 @@ ResultDuplicateTreeWidget::ResultDuplicateTreeWidget(QWidget *parent)
     : QTreeWidget(parent)
 {
     setHeaderLabel(i18n("Contacts"));
-    connect(this, &QTreeWidget::itemActivated, this, &ResultDuplicateTreeWidget::slotItemActivated);
+    connect(this, &QTreeWidget::itemSelectionChanged, this, &ResultDuplicateTreeWidget::slotItemSelectionChanged);
     connect(this, &ResultDuplicateTreeWidget::itemChanged, this, &ResultDuplicateTreeWidget::slotItemChanged);
 }
 
@@ -60,10 +60,9 @@ void ResultDuplicateTreeWidget::changeState(QTreeWidgetItem *item, bool b)
     blockSignals(false);
 }
 
-void ResultDuplicateTreeWidget::slotItemActivated(QTreeWidgetItem *item, int column)
+void ResultDuplicateTreeWidget::slotItemSelectionChanged()
 {
-    Q_UNUSED(column)
-    auto resultItem = dynamic_cast<ResultDuplicateTreeWidgetItem *>(item);
+    auto resultItem = dynamic_cast<ResultDuplicateTreeWidgetItem *>(currentItem());
     if (resultItem) {
         Q_EMIT showContactPreview(resultItem->item());
     }
