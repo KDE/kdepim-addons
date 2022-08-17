@@ -31,6 +31,6 @@ public Q_SLOTS:
 private:
     QStackedWidget *mStackWidget = nullptr;
     QLabel *mNoContactSelected = nullptr;
-    KAddressBookGrantlee::GrantleeContactViewer *mContactViewer = nullptr;
+    KAddressBookGrantlee::GrantleeContactViewer *const mContactViewer;
 };
 }

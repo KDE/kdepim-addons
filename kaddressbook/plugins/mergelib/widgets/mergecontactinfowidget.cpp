@@ -15,18 +15,18 @@ using namespace KABMergeContacts;
 
 MergeContactInfoWidget::MergeContactInfoWidget(QWidget *parent)
     : QWidget(parent)
+    , mStackWidget(new QStackedWidget(this))
+    , mNoContactSelected(new QLabel(this))
+    , mContactViewer(new KAddressBookGrantlee::GrantleeContactViewer(this))
 {
     auto lay = new QHBoxLayout(this);
-    mStackWidget = new QStackedWidget;
     mStackWidget->setObjectName(QStringLiteral("stackedwidget"));
 
-    mContactViewer = new KAddressBookGrantlee::GrantleeContactViewer;
     mContactViewer->setObjectName(QStringLiteral("contactwidget"));
     mContactViewer->setForceDisableQRCode(true);
 
     mStackWidget->addWidget(mContactViewer);
 
-    mNoContactSelected = new QLabel;
     mNoContactSelected->setObjectName(QStringLiteral("nocontact"));
     mStackWidget->addWidget(mNoContactSelected);
 

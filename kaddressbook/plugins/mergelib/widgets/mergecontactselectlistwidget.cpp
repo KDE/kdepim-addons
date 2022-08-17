@@ -17,12 +17,12 @@ using namespace KContacts;
 MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     : QWidget(parent)
     , mConflictType(MergeContacts::None)
+    , mTitle(new QLabel(this))
+    , mSelectListWidget(new QListWidget(this))
 {
     auto vbox = new QVBoxLayout(this);
-    mTitle = new QLabel(this);
     mTitle->setObjectName(QStringLiteral("title"));
     vbox->addWidget(mTitle);
-    mSelectListWidget = new QListWidget(this);
     mSelectListWidget->setObjectName(QStringLiteral("listwidget"));
     vbox->addWidget(mSelectListWidget);
 }

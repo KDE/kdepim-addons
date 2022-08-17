@@ -36,7 +36,7 @@ private:
     void updateTitle();
     void addItem(const QString &str, const QIcon &icon = QIcon());
     QLabel *mTitle = nullptr;
-    QListWidget *mSelectListWidget = nullptr;
+    QListWidget *const mSelectListWidget;
     MergeContacts::ConflictInformation mConflictType;
 };
 }
