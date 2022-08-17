@@ -22,7 +22,7 @@ target_link_libraries(picoftheday
     PRIVATE
     KF5::EventViews
     KF5::KIOCore
-    Qt${QT_MAJOR_VERSION}::Xml
+    Qt::Xml
     )
 
 install(TARGETS

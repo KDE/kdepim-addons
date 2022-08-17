@@ -39,7 +39,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_application_gnupgwks
-    Qt${QT_MAJOR_VERSION}::Core
+    Qt::Core
     KF5::MessageCore
     KF5::MessageViewer
     KF5::MailTransportAkonadi

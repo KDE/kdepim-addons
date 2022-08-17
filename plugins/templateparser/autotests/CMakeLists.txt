@@ -9,7 +9,7 @@ macro(add_templateparserplugin_unittest _source _extrasources)
   target_link_libraries(${_name}
     KF5::TemplateParser
     KF5::AkonadiContact
-    Qt${QT_MAJOR_VERSION}::Test
+    Qt::Test
     KF5::Service
   )
 endmacro()

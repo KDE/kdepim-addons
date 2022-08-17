@@ -13,7 +13,7 @@ macro(add_windowscontact_unittest _source _additional)
     add_test(NAME ${_name} COMMAND ${_name} )
 
     ecm_mark_as_test(${_name})
-    target_link_libraries( ${_name} Qt${QT_MAJOR_VERSION}::Widgets Qt${QT_MAJOR_VERSION}::Test KF5::I18n KF5::WidgetsAddons Qt${QT_MAJOR_VERSION}::Xml KF5::Contacts)
+    target_link_libraries( ${_name} Qt::Widgets Qt::Test KF5::I18n KF5::WidgetsAddons Qt::Xml KF5::Contacts)
 endmacro ()
 if (NOT WIN32)
 add_windowscontact_unittest(importwindowcontacttest.cpp "../importwindowcontact.cpp")

@@ -59,7 +59,7 @@ endif()
 
 target_link_libraries(kaddressbookmergelibprivate
     PRIVATE
-    Qt${QT_MAJOR_VERSION}::Network
+    Qt::Network
     KF5::I18n
     KF5::Contacts
     KF5::AkonadiContact

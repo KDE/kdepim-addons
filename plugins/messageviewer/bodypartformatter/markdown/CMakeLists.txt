@@ -19,7 +19,7 @@ if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
 endif()
 
 target_link_libraries(messageviewer_bodypartformatter_text_markdown
-    Qt${QT_MAJOR_VERSION}::Core
+    Qt::Core
     KF5::MessageViewer
     ${TEMPLATES_LIB}
 )
