@@ -27,38 +27,38 @@ static const char myConfigGroupName[] = "MergeContactsDialog";
 }
 MergeContactsDialog::MergeContactsDialog(QWidget *parent)
     : QDialog(parent)
+    , mButtonBox(new QDialogButtonBox(QDialogButtonBox::Close, this))
+    , mStackedWidget(new QStackedWidget(this))
+    , mNoEnoughContactSelected(new KABMergeContacts::MergeContactErrorLabel(KABMergeContacts::MergeContactErrorLabel::NotEnoughContactsSelected, this))
+    , mNoContactSelected(new KABMergeContacts::MergeContactErrorLabel(MergeContactErrorLabel::NoContactSelected, this))
+    , mManualMergeResultWidget(new KABMergeContacts::MergeContactWidget(this))
+    , mSelectInformation(new KABMergeContacts::MergeContactSelectInformationScrollArea(this))
+    , mMergeContactInfo(new KABMergeContacts::MergeContactInfoWidget(this))
 {
     setWindowTitle(i18nc("@title:window", "Select Contacts to merge"));
-    mButtonBox = new QDialogButtonBox(QDialogButtonBox::Close, this);
     mButtonBox->setObjectName(QStringLiteral("buttonbox"));
     auto mainLayout = new QVBoxLayout(this);
     connect(mButtonBox, &QDialogButtonBox::rejected, this, &MergeContactsDialog::reject);
     readConfig();
 
-    mStackedWidget = new QStackedWidget(this);
     mStackedWidget->setObjectName(QStringLiteral("stackedwidget"));
     mainLayout->addWidget(mStackedWidget);
     mainLayout->addWidget(mButtonBox);
 
-    mNoEnoughContactSelected = new KABMergeContacts::MergeContactErrorLabel(KABMergeContacts::MergeContactErrorLabel::NotEnoughContactsSelected);
     mNoEnoughContactSelected->setObjectName(QStringLiteral("notenoughcontactselected"));
     mStackedWidget->addWidget(mNoEnoughContactSelected);
 
-    mNoContactSelected = new KABMergeContacts::MergeContactErrorLabel(MergeContactErrorLabel::NoContactSelected, this);
     mNoContactSelected->setObjectName(QStringLiteral("nocontactselected"));
     mStackedWidget->addWidget(mNoContactSelected);
 
-    mManualMergeResultWidget = new KABMergeContacts::MergeContactWidget(this);
     mManualMergeResultWidget->setObjectName(QStringLiteral("manualmergeresultwidget"));
     mStackedWidget->addWidget(mManualMergeResultWidget);
     connect(mManualMergeResultWidget, &MergeContactWidget::customizeMergeContact, this, &MergeContactsDialog::slotCustomizeMergeContact);
     connect(mManualMergeResultWidget, &MergeContactWidget::contactMerged, this, &MergeContactsDialog::slotContactMerged);
 
-    mSelectInformation = new KABMergeContacts::MergeContactSelectInformationScrollArea(this);
     mSelectInformation->setObjectName(QStringLiteral("selectioninformation"));
     mStackedWidget->addWidget(mSelectInformation);
 
-    mMergeContactInfo = new KABMergeContacts::MergeContactInfoWidget;
     mMergeContactInfo->setObjectName(QStringLiteral("mergecontactinfowidget"));
     mStackedWidget->addWidget(mMergeContactInfo);
 

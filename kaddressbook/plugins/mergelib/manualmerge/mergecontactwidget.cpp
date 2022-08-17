@@ -51,11 +51,11 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     connect(mListWidget, &MergeContactWidgetList::itemChanged, this, &MergeContactWidget::slotUpdateMergeButton);
     splitter->addWidget(selectContactWidget);
 
-    mMergeContactInfoWidget = new MergeContactInfoWidget;
+    mMergeContactInfoWidget = new MergeContactInfoWidget(this);
     mMergeContactInfoWidget->setObjectName(QStringLiteral("mergecontactinfowidget"));
     splitter->addWidget(mMergeContactInfoWidget);
 
-    mMergeContactWarning = new MergeContactLoseInformationWarning;
+    mMergeContactWarning = new MergeContactLoseInformationWarning(this);
     mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &MergeContactWidget::slotAutomaticMerging);
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &MergeContactWidget::slotCustomizeMergingContacts);
@@ -67,7 +67,7 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     lab = new QLabel(i18n("Select the addressbook in which to store merged contacts:"));
     hbox->addWidget(lab);
 
-    mCollectionCombobox = new Akonadi::CollectionComboBox(_k_mergeStubModel);
+    mCollectionCombobox = new Akonadi::CollectionComboBox(_k_mergeStubModel, this);
     mCollectionCombobox->setAccessRightsFilter(Akonadi::Collection::CanCreateItem);
     mCollectionCombobox->setMinimumWidth(250);
     mCollectionCombobox->setMimeTypeFilter(QStringList() << KContacts::Addressee::mimeType());

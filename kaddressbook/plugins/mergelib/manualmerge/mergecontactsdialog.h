@@ -33,12 +33,12 @@ private:
     void slotContactMerged(const Akonadi::Item &item);
     void readConfig();
     void writeConfig();
-    QDialogButtonBox *mButtonBox = nullptr;
-    QStackedWidget *mStackedWidget = nullptr;
-    KABMergeContacts::MergeContactErrorLabel *mNoEnoughContactSelected = nullptr;
-    KABMergeContacts::MergeContactErrorLabel *mNoContactSelected = nullptr;
-    KABMergeContacts::MergeContactWidget *mManualMergeResultWidget = nullptr;
-    KABMergeContacts::MergeContactSelectInformationScrollArea *mSelectInformation = nullptr;
-    KABMergeContacts::MergeContactInfoWidget *mMergeContactInfo = nullptr;
+    QDialogButtonBox *const mButtonBox;
+    QStackedWidget *const mStackedWidget;
+    KABMergeContacts::MergeContactErrorLabel *const mNoEnoughContactSelected;
+    KABMergeContacts::MergeContactErrorLabel *const mNoContactSelected;
+    KABMergeContacts::MergeContactWidget *const mManualMergeResultWidget;
+    KABMergeContacts::MergeContactSelectInformationScrollArea *const mSelectInformation;
+    KABMergeContacts::MergeContactInfoWidget *const mMergeContactInfo;
 };
 }
