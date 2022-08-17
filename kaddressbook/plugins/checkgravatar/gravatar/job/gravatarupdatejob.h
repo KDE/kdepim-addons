@@ -25,10 +25,10 @@ public:
     void start();
     bool canStart() const;
 
-    QString email() const;
+    Q_REQUIRED_RESULT QString email() const;
     void setEmail(const QString &email);
 
-    Akonadi::Item item() const;
+    Q_REQUIRED_RESULT Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);
 
 Q_SIGNALS:
