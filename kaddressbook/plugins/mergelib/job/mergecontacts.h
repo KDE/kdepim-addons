@@ -14,7 +14,7 @@ namespace KABMergeContacts
 class MergeContacts
 {
 public:
-    MergeContacts(const Akonadi::Item::List &items = Akonadi::Item::List());
+    explicit MergeContacts(const Akonadi::Item::List &items = Akonadi::Item::List());
     ~MergeContacts();
 
     enum ConflictInformation {
