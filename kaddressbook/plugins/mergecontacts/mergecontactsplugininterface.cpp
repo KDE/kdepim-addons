@@ -53,8 +53,7 @@ PimCommon::GenericPluginInterface::RequireTypes MergeContactsPluginInterface::re
 
 void MergeContactsPluginInterface::exec()
 {
-    QPointer<KABMergeContacts::MergeContactsDialog> dlg = new KABMergeContacts::MergeContactsDialog(parentWidget());
-    dlg->setContacts(mListItems);
-    dlg->exec();
-    delete dlg;
+    KABMergeContacts::MergeContactsDialog dlg(parentWidget());
+    dlg.setContacts(mListItems);
+    dlg.exec();
 }
