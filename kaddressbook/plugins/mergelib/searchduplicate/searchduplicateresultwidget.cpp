@@ -25,6 +25,9 @@ KADDRESSBOOKMERGELIB_EXPORT QAbstractItemModel *_k_searchDuplicateResultStubMode
 using namespace KABMergeContacts;
 SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     : QWidget(parent)
+    , mResult(new ResultDuplicateTreeWidget(this))
+    , mContactViewer(new KAddressBookGrantlee::GrantleeContactViewer(this))
+    , mMergeContactWarning(new MergeContactLoseInformationWarning(this))
 {
     auto mainLayout = new QVBoxLayout(this);
     mainLayout->setContentsMargins({});
@@ -33,15 +36,12 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     splitter->setObjectName(QStringLiteral("splitter"));
     splitter->setChildrenCollapsible(false);
     mainLayout->addWidget(splitter);
-    mResult = new ResultDuplicateTreeWidget(this);
     mResult->setObjectName(QStringLiteral("result_treewidget"));
-    mContactViewer = new KAddressBookGrantlee::GrantleeContactViewer(this);
     mContactViewer->setObjectName(QStringLiteral("contact_viewer"));
     splitter->addWidget(mResult);
     splitter->addWidget(mContactViewer);
     connect(mResult, &ResultDuplicateTreeWidget::showContactPreview, mContactViewer, &KAddressBookGrantlee::GrantleeContactViewer::setContact);
 
-    mMergeContactWarning = new MergeContactLoseInformationWarning(this);
     mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &SearchDuplicateResultWidget::slotAutomaticMerging);
     connect(mMergeContactWarning,

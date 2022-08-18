@@ -52,11 +52,11 @@ private:
     void mergeContact();
     QVector<MergeConflictResult> mResultConflictList;
     QVector<Akonadi::Item::List> mListContactToMerge;
-    ResultDuplicateTreeWidget *mResult = nullptr;
-    KAddressBookGrantlee::GrantleeContactViewer *mContactViewer = nullptr;
+    ResultDuplicateTreeWidget *const mResult;
+    KAddressBookGrantlee::GrantleeContactViewer *const mContactViewer;
     QPushButton *mMergeContact = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
-    MergeContactLoseInformationWarning *mMergeContactWarning = nullptr;
+    MergeContactLoseInformationWarning *const mMergeContactWarning;
     int mIndexListContact = 0;
 };
 }

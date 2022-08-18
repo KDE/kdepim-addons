@@ -37,10 +37,10 @@ private:
     void writeConfig();
     SearchDuplicateResultWidget *const mSearchResult;
     MergeContactShowResultTabWidget *const mMergeContactResult;
-    KABMergeContacts::MergeContactErrorLabel *mNoContactSelected = nullptr;
-    KABMergeContacts::MergeContactErrorLabel *mNoDuplicateContactFound = nullptr;
-    KABMergeContacts::MergeContactErrorLabel *mNoEnoughContactSelected = nullptr;
-    KABMergeContacts::MergeContactSelectInformationTabWidget *mSelectInformation = nullptr;
-    QStackedWidget *mStackedWidget = nullptr;
+    KABMergeContacts::MergeContactErrorLabel *const mNoContactSelected;
+    KABMergeContacts::MergeContactErrorLabel *const mNoDuplicateContactFound;
+    KABMergeContacts::MergeContactErrorLabel *const mNoEnoughContactSelected;
+    KABMergeContacts::MergeContactSelectInformationTabWidget *const mSelectInformation;
+    QStackedWidget *const mStackedWidget;
 };
 }
