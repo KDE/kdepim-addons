@@ -28,6 +28,10 @@ using namespace KABMergeContacts;
 MergeContactWidget::MergeContactWidget(QWidget *parent)
     : QWidget(parent)
     , mConflictTypes(MergeContacts::None)
+    , mListWidget(new MergeContactWidgetList(this))
+    , mMergeButton(new QPushButton(i18n("merge"), this))
+    , mMergeContactWarning(new MergeContactLoseInformationWarning(this))
+    , mMergeContactInfoWidget(new MergeContactInfoWidget(this))
 {
     auto lay = new QVBoxLayout(this);
     lay->setContentsMargins({});
@@ -43,7 +47,6 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     selectContactWidget->setLayout(vbox);
     auto lab = new QLabel(i18n("Select contacts that you really want to merge:"), this);
     vbox->addWidget(lab);
-    mListWidget = new MergeContactWidgetList(this);
     mListWidget->setObjectName(QStringLiteral("listcontact"));
     mListWidget->setSelectionMode(QAbstractItemView::SingleSelection);
     vbox->addWidget(mListWidget);
@@ -51,11 +54,9 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
     connect(mListWidget, &MergeContactWidgetList::itemChanged, this, &MergeContactWidget::slotUpdateMergeButton);
     splitter->addWidget(selectContactWidget);
 
-    mMergeContactInfoWidget = new MergeContactInfoWidget(this);
     mMergeContactInfoWidget->setObjectName(QStringLiteral("mergecontactinfowidget"));
     splitter->addWidget(mMergeContactInfoWidget);
 
-    mMergeContactWarning = new MergeContactLoseInformationWarning(this);
     mMergeContactWarning->setObjectName(QStringLiteral("mergecontactwarning"));
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::continueMerging, this, &MergeContactWidget::slotAutomaticMerging);
     connect(mMergeContactWarning, &MergeContactLoseInformationWarning::customizeMergingContacts, this, &MergeContactWidget::slotCustomizeMergingContacts);
@@ -79,7 +80,6 @@ MergeContactWidget::MergeContactWidget(QWidget *parent)
 
     lay->addLayout(hbox);
 
-    mMergeButton = new QPushButton(i18n("merge"), this);
     mMergeButton->setObjectName(QStringLiteral("mergebutton"));
     hbox->addWidget(mMergeButton);
     mMergeButton->setEnabled(false);

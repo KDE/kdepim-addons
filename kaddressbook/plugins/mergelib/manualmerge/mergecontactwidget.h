@@ -45,10 +45,10 @@ private:
     MergeContacts::ConflictInformations mConflictTypes;
     Akonadi::Item::List mSelectedItems;
     Akonadi::Item::List mItems;
-    MergeContactWidgetList *mListWidget = nullptr;
-    QPushButton *mMergeButton = nullptr;
+    MergeContactWidgetList *const mListWidget;
+    QPushButton *const mMergeButton;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
-    MergeContactLoseInformationWarning *mMergeContactWarning = nullptr;
-    MergeContactInfoWidget *mMergeContactInfoWidget = nullptr;
+    MergeContactLoseInformationWarning *const mMergeContactWarning;
+    MergeContactInfoWidget *const mMergeContactInfoWidget;
 };
 }
