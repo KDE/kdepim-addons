@@ -74,7 +74,7 @@ void ResultDuplicateTreeWidget::setContacts(const QVector<Akonadi::Item::List> &
     int i = 1;
     for (const Akonadi::Item::List &lst : lstItem) {
         auto topLevelItem = new ResultDuplicateTreeWidgetItem(this);
-        topLevelItem->setText(0, i18n("Duplicate contact %1", i));
+        topLevelItem->setText(0, i18n("Duplicate contact \"%1\"", ResultDuplicateTreeWidgetItem::displayName(lst.first())));
         for (const Akonadi::Item &item : lst) {
             auto childItem = new ResultDuplicateTreeWidgetItem;
             topLevelItem->addChild(childItem);
@@ -143,7 +143,15 @@ QString ResultDuplicateTreeWidgetItem::contactName(const KContacts::Addressee &a
 void ResultDuplicateTreeWidgetItem::setDisplayName()
 {
     if (mItem.isValid()) {
-        const auto address = mItem.payload<KContacts::Addressee>();
-        setText(0, contactName(address));
+        setText(0, displayName(mItem));
     }
+}
+
+QString ResultDuplicateTreeWidgetItem::displayName(const Akonadi::Item &item)
+{
+    if (item.isValid()) {
+        const auto address = item.payload<KContacts::Addressee>();
+        return contactName(address);
+    }
+    return {};
 }

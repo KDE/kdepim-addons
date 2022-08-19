@@ -24,9 +24,11 @@ public:
     Q_REQUIRED_RESULT Akonadi::Item item() const;
     void setItem(const Akonadi::Item &item);
 
+    Q_REQUIRED_RESULT static QString displayName(const Akonadi::Item &item);
+
 private:
     void setDisplayName();
-    Q_REQUIRED_RESULT QString contactName(const KContacts::Addressee &address);
+    Q_REQUIRED_RESULT static QString contactName(const KContacts::Addressee &address);
     Akonadi::Item mItem;
 };
 
