@@ -35,9 +35,9 @@ private:
     void slotActivateButton(bool state);
     void readConfig();
     void writeConfig();
-    GravatarUpdateWidget *mGravatarUpdateWidget = nullptr;
-    QPushButton *mSaveImageButton = nullptr;
-    QPushButton *mSaveUrlButton = nullptr;
+    GravatarUpdateWidget *const mGravatarUpdateWidget;
+    QPushButton *const mSaveImageButton;
+    QPushButton *const mSaveUrlButton;
     bool mSaveUrl = false;
 };
 }
