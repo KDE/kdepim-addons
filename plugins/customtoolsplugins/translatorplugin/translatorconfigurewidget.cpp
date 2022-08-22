@@ -6,11 +6,16 @@
 
 #include "translatorconfigurewidget.h"
 #include <KLocalizedString>
+#include <QComboBox>
+#include <QLabel>
 #include <QVBoxLayout>
 
 TranslatorConfigureWidget::TranslatorConfigureWidget(QWidget *parent)
     : QWidget{parent}
 {
+    auto mainLayout = new QVBoxLayout(this);
+    mainLayout->setObjectName(QStringLiteral("mainLayout"));
+    mainLayout->setContentsMargins({});
 }
 
 TranslatorConfigureWidget::~TranslatorConfigureWidget()

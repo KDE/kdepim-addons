@@ -6,10 +6,13 @@
 #pragma once
 
 #include <QDialog>
-
+class TranslatorConfigureWidget;
 class TranslatorConfigureDialog : public QDialog
 {
 public:
     explicit TranslatorConfigureDialog(QWidget *parent = nullptr);
     ~TranslatorConfigureDialog() override;
+
+private:
+    TranslatorConfigureWidget *const mTranslatorConfigureWidget;
 };
