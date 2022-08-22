@@ -19,8 +19,8 @@ using namespace KABMergeContacts;
 
 MergeContactSelectInformationScrollArea::MergeContactSelectInformationScrollArea(QWidget *parent)
     : QWidget(parent)
-    , mStackWidget(new QStackedWidget(this))
     , mSelectInformationWidget(new MergeContactSelectInformationWidget(this))
+    , mStackWidget(new QStackedWidget(this))
     , mMergedContactWidget(new MergeContactInfoWidget(this))
 {
     auto vbox = new QVBoxLayout(this);

@@ -16,9 +16,9 @@ using namespace KContacts;
 
 MergeContactSelectListWidget::MergeContactSelectListWidget(QWidget *parent)
     : QWidget(parent)
-    , mConflictType(MergeContacts::None)
     , mTitle(new QLabel(this))
     , mSelectListWidget(new QListWidget(this))
+    , mConflictType(MergeContacts::None)
 {
     auto vbox = new QVBoxLayout(this);
     mTitle->setObjectName(QStringLiteral("title"));
