@@ -6,6 +6,10 @@ target_sources(pimcommon_translatorplugin PRIVATE
    translatorview.cpp
    translatorplugin.h
    translatorview.h
+   translatorconfiguredialog.h
+   translatorconfiguredialog.cpp
+   translatorconfigurewidget.h
+   translatorconfigurewidget.cpp
 )
 
 if (COMPILE_WITH_UNITY_CMAKE_SUPPORT)
