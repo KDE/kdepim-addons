@@ -17,6 +17,6 @@ public:
 
     PimCommon::CustomToolsViewInterface *createView(KActionCollection *ac, PimCommon::CustomToolsWidgetNg *parent) override;
     Q_REQUIRED_RESULT QString customToolName() const override;
-    Q_REQUIRED_RESULT bool hasConfigureDialog() const;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
     void showConfigureDialog(QWidget *parent) override;
 };
