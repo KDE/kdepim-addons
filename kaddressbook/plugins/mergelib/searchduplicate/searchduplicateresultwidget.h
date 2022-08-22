@@ -11,6 +11,7 @@
 #include <Akonadi/Item>
 #include <QWidget>
 class QPushButton;
+class KTreeWidgetSearchLineWidget;
 namespace KAddressBookGrantlee
 {
 class GrantleeContactViewer;
@@ -57,6 +58,7 @@ private:
     QPushButton *mMergeContact = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
     MergeContactLoseInformationWarning *const mMergeContactWarning;
+    KTreeWidgetSearchLineWidget *mSearchInResultLineEdit = nullptr;
     int mIndexListContact = 0;
 };
 }

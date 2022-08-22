@@ -66,6 +66,7 @@ target_link_libraries(kaddressbookmergelibprivate
     KF5::ConfigCore
     KF5::WidgetsAddons
     KF5::AkonadiWidgets
+    KF5::ItemViews
     )
 
 set_target_properties(kaddressbookmergelibprivate

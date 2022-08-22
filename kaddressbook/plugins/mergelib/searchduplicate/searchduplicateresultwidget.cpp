@@ -12,6 +12,8 @@
 #include <Akonadi/CollectionComboBox>
 #include <Akonadi/GrantleeContactViewer>
 #include <KLocalizedString>
+#include <KTreeWidgetSearchLine>
+#include <KTreeWidgetSearchLineWidget>
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
@@ -38,7 +40,18 @@ SearchDuplicateResultWidget::SearchDuplicateResultWidget(QWidget *parent)
     mainLayout->addWidget(splitter);
     mResult->setObjectName(QStringLiteral("result_treewidget"));
     mContactViewer->setObjectName(QStringLiteral("contact_viewer"));
-    splitter->addWidget(mResult);
+
+    mSearchInResultLineEdit = new KTreeWidgetSearchLineWidget(this, mResult);
+    mSearchInResultLineEdit->setObjectName(QStringLiteral("searchinresultlineedit"));
+    mSearchInResultLineEdit->searchLine()->setClearButtonEnabled(true);
+    mSearchInResultLineEdit->searchLine()->setPlaceholderText(i18n("Search in result..."));
+
+    auto resultWidget = new QWidget(this);
+    auto resultWidgetLayout = new QVBoxLayout(resultWidget);
+    resultWidgetLayout->setContentsMargins({});
+    resultWidgetLayout->addWidget(mSearchInResultLineEdit);
+    resultWidgetLayout->addWidget(mResult);
+    splitter->addWidget(resultWidget);
     splitter->addWidget(mContactViewer);
     connect(mResult, &ResultDuplicateTreeWidget::showContactPreview, mContactViewer, &KAddressBookGrantlee::GrantleeContactViewer::setContact);
 
