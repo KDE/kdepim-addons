@@ -33,4 +33,14 @@ QString TranslatorPlugin::customToolName() const
     return i18n("Translator");
 }
 
+bool TranslatorPlugin::hasConfigureDialog() const
+{
+    return true;
+}
+
+void TranslatorPlugin::showConfigureDialog(QWidget *parent)
+{
+    // TODO
+}
+
 #include "translatorplugin.moc"
