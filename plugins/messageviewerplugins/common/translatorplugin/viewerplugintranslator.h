@@ -18,5 +18,8 @@ public:
 
     ViewerPluginInterface *createView(QWidget *parent, KActionCollection *ac) override;
     Q_REQUIRED_RESULT QString viewerPluginName() const override;
+
+    void showConfigureDialog(QWidget *parent) override;
+    Q_REQUIRED_RESULT bool hasConfigureDialog() const override;
 };
 }

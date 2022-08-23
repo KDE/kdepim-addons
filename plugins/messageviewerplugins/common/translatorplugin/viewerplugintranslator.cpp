@@ -28,4 +28,14 @@ QString ViewerPluginTranslator::viewerPluginName() const
     return QStringLiteral("translator");
 }
 
+void MessageViewer::ViewerPluginTranslator::showConfigureDialog(QWidget *parent)
+{
+    // TODO
+}
+
+bool MessageViewer::ViewerPluginTranslator::hasConfigureDialog() const
+{
+    return true;
+}
+
 #include "viewerplugintranslator.moc"
