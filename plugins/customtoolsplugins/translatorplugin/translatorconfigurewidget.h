@@ -7,11 +7,14 @@
 #pragma once
 
 #include <QWidget>
-
+class QComboBox;
 class TranslatorConfigureWidget : public QWidget
 {
     Q_OBJECT
 public:
     explicit TranslatorConfigureWidget(QWidget *parent = nullptr);
     ~TranslatorConfigureWidget() override;
+
+private:
+    QComboBox *const mEngine;
 };
