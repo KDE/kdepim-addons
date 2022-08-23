@@ -5,7 +5,6 @@
 */
 
 #include "translatorplugin.h"
-#include "translatorconfiguredialog.h"
 #include "translatorview.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
@@ -41,8 +40,7 @@ bool TranslatorPlugin::hasConfigureDialog() const
 
 void TranslatorPlugin::showConfigureDialog(QWidget *parent)
 {
-    TranslatorConfigureDialog dlg(parent);
-    dlg.exec();
+    // TODO
 }
 
 #include "translatorplugin.moc"
