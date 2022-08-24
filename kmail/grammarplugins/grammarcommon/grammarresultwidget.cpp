@@ -28,7 +28,7 @@ GrammarResultWidget::GrammarResultWidget(QWidget *parent)
     auto closeBtn = new QToolButton(this);
     closeBtn->setObjectName(QStringLiteral("close-button"));
     closeBtn->setIcon(QIcon::fromTheme(QStringLiteral("dialog-close")));
-    closeBtn->setIconSize(QSize(12, 12));
+    closeBtn->setIconSize(QSize(16, 16));
     closeBtn->setToolTip(i18n("Close"));
     closeBtn->setAutoRaise(true);
     mExtraWidgetLayout->addWidget(closeBtn);
