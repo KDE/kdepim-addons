@@ -74,7 +74,9 @@ void ResultDuplicateTreeWidget::setContacts(const QVector<Akonadi::Item::List> &
     int i = 1;
     for (const Akonadi::Item::List &lst : lstItem) {
         auto topLevelItem = new ResultDuplicateTreeWidgetItem(this);
-        topLevelItem->setText(0, i18n("Duplicate contact \"%1\"", ResultDuplicateTreeWidgetItem::displayName(lst.first())));
+        topLevelItem->setText(
+            0,
+            i18n("Duplicate contact \"%1\" (%2 times)", ResultDuplicateTreeWidgetItem::displayName(lst.first()), QString::number(lst.count())));
         for (const Akonadi::Item &item : lst) {
             auto childItem = new ResultDuplicateTreeWidgetItem;
             topLevelItem->addChild(childItem);
