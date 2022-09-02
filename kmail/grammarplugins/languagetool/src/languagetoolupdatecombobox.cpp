@@ -73,4 +73,5 @@ void LanguageToolUpdateComboBox::slotGetLanguagesFinished(const QString &result)
     LanguageToolListOfLanguagesParser parser;
     mLanguageToolCombobox->fillComboBox(parser.parseResult(fields));
     mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
+    // TODO store as static value ?
 }
