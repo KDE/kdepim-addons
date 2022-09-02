@@ -27,6 +27,8 @@ LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     mLanguageToolUpdateCombobox->setParentWidget(this);
     if (LanguageToolManager::self()->allowToGetListOfLanguages()) {
         mLanguageToolUpdateCombobox->refreshListOfLanguages();
+    } else {
+        mLanguageToolComboBox->setLanguage(LanguageToolManager::self()->language());
     }
 }
 
