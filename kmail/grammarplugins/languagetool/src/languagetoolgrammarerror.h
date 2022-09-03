@@ -8,6 +8,8 @@
 
 #include "grammarerror.h"
 #include "liblanguagetool_private_export.h"
+#include <QStringList>
+
 class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolGrammarError : public GrammarError
 {
 public:
@@ -17,7 +19,7 @@ public:
     void setTesting(bool b);
 
 private:
-    static QStringList parseSuggestion(const QJsonObject &obj);
+    Q_REQUIRED_RESULT static QStringList parseSuggestion(const QJsonObject &obj);
     bool mTesting = false;
 };
 Q_DECLARE_METATYPE(LanguageToolGrammarError)

@@ -48,7 +48,7 @@ private:
         LanguageNotDefined,
     };
 
-    LanguageToolResultJob::JobError canStartError() const;
+    Q_REQUIRED_RESULT LanguageToolResultJob::JobError canStartError() const;
     void slotCheckGrammarFinished();
     void addRequestAttribute(QNetworkRequest &request) const;
     void slotFinish(QNetworkReply *reply);

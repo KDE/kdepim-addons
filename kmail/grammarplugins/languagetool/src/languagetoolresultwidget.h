@@ -30,5 +30,5 @@ private:
     void slotCheckGrammarFinished(const QString &result);
     void slotError(const QString &str);
     LanguageToolComboBox *mLanguageToolComboBox = nullptr;
-    LanguageToolUpdateComboBox *mLanguageToolUpdateCombobox = nullptr;
+    LanguageToolUpdateComboBox *const mLanguageToolUpdateCombobox;
 };

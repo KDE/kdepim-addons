@@ -37,7 +37,7 @@ public:
 
     Q_REQUIRED_RESULT QString languageToolLanguagesPath() const;
 
-    static QString convertToLanguagePath(const QString &path);
+    Q_REQUIRED_RESULT static QString convertToLanguagePath(const QString &path);
 
     Q_REQUIRED_RESULT QColor grammarColorForError(const QString &error);
 

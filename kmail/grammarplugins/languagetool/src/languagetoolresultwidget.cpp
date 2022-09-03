@@ -20,8 +20,8 @@
 
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
+    , mLanguageToolUpdateCombobox(new LanguageToolUpdateComboBox(this))
 {
-    mLanguageToolUpdateCombobox = new LanguageToolUpdateComboBox(this);
     addExtraWidget();
     mLanguageToolUpdateCombobox->setLanguageToolCombobox(mLanguageToolComboBox);
     mLanguageToolUpdateCombobox->setParentWidget(this);

@@ -15,5 +15,5 @@ class LIBLANGUAGETOOLPRIVATE_TESTS_EXPORT LanguageToolParser
 public:
     LanguageToolParser();
     ~LanguageToolParser();
-    QVector<GrammarError> parseResult(const QJsonObject &obj) const;
+    Q_REQUIRED_RESULT QVector<GrammarError> parseResult(const QJsonObject &obj) const;
 };
