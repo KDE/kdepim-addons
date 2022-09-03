@@ -21,6 +21,7 @@ public:
     void setLanguageToolCombobox(LanguageToolComboBox *languageToolCombobox);
 
     void checkListOfLanguagesFromSpecificPath(const QString &url);
+    void firstRefreshListOfLanguages();
     void refreshListOfLanguages();
 
     QWidget *parentWidget() const;
@@ -29,6 +30,7 @@ public:
 private:
     void slotGetLanguagesFinished(const QString &result);
     void slotGetLanguagesError(const QString &error);
+    static inline bool mBListWasLoaded = false;
     LanguageToolComboBox *mLanguageToolCombobox = nullptr;
     QWidget *mParentWidget = nullptr;
 };
