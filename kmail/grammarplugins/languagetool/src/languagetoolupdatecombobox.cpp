@@ -33,6 +33,13 @@ void LanguageToolUpdateComboBox::checkListOfLanguagesFromSpecificPath(const QStr
     job->start();
 }
 
+void LanguageToolUpdateComboBox::firstRefreshListOfLanguages()
+{
+    if (!mBListWasLoaded) {
+        checkListOfLanguagesFromSpecificPath(LanguageToolManager::self()->languageToolLanguagesPath());
+    }
+}
+
 void LanguageToolUpdateComboBox::refreshListOfLanguages()
 {
     if (LanguageToolManager::self()->allowToGetListOfLanguages()) {
@@ -73,5 +80,5 @@ void LanguageToolUpdateComboBox::slotGetLanguagesFinished(const QString &result)
     LanguageToolListOfLanguagesParser parser;
     mLanguageToolCombobox->fillComboBox(parser.parseResult(fields));
     mLanguageToolCombobox->setLanguage(LanguageToolManager::self()->language());
-    // TODO store as static value ?
+    mBListWasLoaded = true;
 }
