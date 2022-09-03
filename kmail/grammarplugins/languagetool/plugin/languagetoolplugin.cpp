@@ -45,11 +45,10 @@ bool LanguageToolPlugin::hasConfigureDialog() const
 
 void LanguageToolPlugin::showConfigureDialog(QWidget *parent)
 {
-    QPointer<LanguageToolConfigDialog> dlg = new LanguageToolConfigDialog(parent);
-    if (dlg->exec()) {
+    LanguageToolConfigDialog dlg(parent);
+    if (dlg.exec()) {
         LanguageToolManager::self()->loadSettings();
     }
-    delete dlg;
 }
 
 #include "languagetoolplugin.moc"
