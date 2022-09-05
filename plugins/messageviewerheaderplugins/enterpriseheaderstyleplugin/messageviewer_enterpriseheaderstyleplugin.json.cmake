@@ -43,6 +43,7 @@
         "Name[en_GB]": "Enterprise Header Style",
         "Name[es]": "Estilo de encabezado empresarial",
         "Name[et]": "Ettevõtte päisestiil",
+        "Name[eu]": "Enpresako goiburu estiloa",
         "Name[fi]": "Yritysotsakkeiden tyyli",
         "Name[fr]": "Style d'en-tête entreprise",
         "Name[gl]": "Estilo de cabeceira de empresa",
