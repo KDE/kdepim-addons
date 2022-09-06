@@ -17,6 +17,7 @@ ResultDuplicateTreeWidget::ResultDuplicateTreeWidget(QWidget *parent)
     setHeaderLabel(i18n("Contacts"));
     connect(this, &QTreeWidget::itemSelectionChanged, this, &ResultDuplicateTreeWidget::slotItemSelectionChanged);
     connect(this, &ResultDuplicateTreeWidget::itemChanged, this, &ResultDuplicateTreeWidget::slotItemChanged);
+    setContextMenuPolicy(Qt::CustomContextMenu);
 }
 
 ResultDuplicateTreeWidget::~ResultDuplicateTreeWidget() = default;

@@ -51,9 +51,10 @@ private:
     void slotAutomaticMerging();
     void slotCustomizeMergingContacts();
     void mergeContact();
+    void slotCustomContextMenuRequested(const QPoint &);
     QVector<MergeConflictResult> mResultConflictList;
     QVector<Akonadi::Item::List> mListContactToMerge;
-    ResultDuplicateTreeWidget *const mResult;
+    ResultDuplicateTreeWidget *const mResultTreeWidget;
     KAddressBookGrantlee::GrantleeContactViewer *const mContactViewer;
     QPushButton *mMergeContact = nullptr;
     Akonadi::CollectionComboBox *mCollectionCombobox = nullptr;
