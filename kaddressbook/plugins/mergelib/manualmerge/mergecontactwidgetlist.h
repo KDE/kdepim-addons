@@ -35,5 +35,8 @@ public:
 
 private:
     Q_REQUIRED_RESULT QString itemName(const KContacts::Addressee &address) const;
+    void slotCustomContextMenuRequested(const QPoint &);
+    void slotSelectAll();
+    void slotDeselectAll();
 };
 }

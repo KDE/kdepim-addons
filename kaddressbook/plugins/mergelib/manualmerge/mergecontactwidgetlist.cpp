@@ -6,10 +6,15 @@
 
 #include "mergecontactwidgetlist.h"
 
+#include <KLocalizedString>
+#include <QMenu>
+
 using namespace KABMergeContacts;
 MergeContactWidgetList::MergeContactWidgetList(QWidget *parent)
     : QListWidget(parent)
 {
+    setContextMenuPolicy(Qt::CustomContextMenu);
+    connect(this, &MergeContactWidgetList::customContextMenuRequested, this, &MergeContactWidgetList::slotCustomContextMenuRequested);
 }
 
 MergeContactWidgetList::~MergeContactWidgetList() = default;
@@ -25,6 +30,30 @@ QString MergeContactWidgetList::itemName(const KContacts::Addressee &address) co
         return name;
     }
     return address.fullEmail();
+}
+
+void MergeContactWidgetList::slotCustomContextMenuRequested(const QPoint &)
+{
+    QMenu menu(this);
+    menu.addAction(i18n("Select All"), this, &MergeContactWidgetList::slotSelectAll);
+    menu.addAction(i18n("Deselect All"), this, &MergeContactWidgetList::slotDeselectAll);
+    menu.exec(QCursor::pos());
+}
+
+void MergeContactWidgetList::slotSelectAll()
+{
+    for (int i = 0; i < count(); ++i) {
+        QListWidgetItem *itemWidget = item(i);
+        itemWidget->setCheckState(Qt::Checked);
+    }
+}
+
+void MergeContactWidgetList::slotDeselectAll()
+{
+    for (int i = 0; i < count(); ++i) {
+        QListWidgetItem *itemWidget = item(i);
+        itemWidget->setCheckState(Qt::Unchecked);
+    }
 }
 
 void MergeContactWidgetList::fillListContact(const Akonadi::Item::List &items)

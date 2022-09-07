@@ -16,7 +16,7 @@ macro( kaddressbook_merge _source _additional _additionallib)
     add_executable( ${_name} ${_test}  ${_name}.h)
     add_test(NAME ${_name} COMMAND ${_name} )
     ecm_mark_as_test(kaddressbookmerge-${_name})
-    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KF5::AkonadiCore KF5::Contacts ${_additionallib})
+    target_link_libraries( ${_name} kaddressbookmergelibprivate Qt::Test  KF5::AkonadiCore KF5::Contacts KF5::I18n ${_additionallib})
 endmacro()
 
 kaddressbook_merge(mergecontactstest.cpp "../job/mergecontacts.cpp;../kaddressbookmergelibprivate_debug.cpp" "")
@@ -39,7 +39,7 @@ if (KDEPIM_RUN_AKONADI_TEST)
     add_akonadi_isolated_test_advanced( mergecontactselectinformationtabwidgettest.cpp "${kaddressbookmergelibprivate_common_SRCS}" "kaddressbookmergelibprivate;KF5::Contacts")
 
     add_akonadi_isolated_test_advanced(mergecontactsdialogtest.cpp "${kaddressbookmergelibprivate_common_SRCS};../widgets/mergecontacterrorlabel.cpp;../widgets/mergecontactinfowidget.cpp" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n;KF5::WidgetsAddons")
-    add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact")
+    add_akonadi_isolated_test_advanced(mergecontactwidgetlisttest.cpp "${kaddressbookmergelibprivate_common_SRCS};../manualmerge/mergecontactwidgetlist.cpp;" "kaddressbookmergelibprivate;KF5::Contacts;KF5::AkonadiContact;KF5::I18n")
 
 endif()
 
