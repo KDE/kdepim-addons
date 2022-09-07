@@ -23,7 +23,7 @@ public:
     ~GravatarUpdateJob() override;
 
     void start();
-    bool canStart() const;
+    Q_REQUIRED_RESULT bool canStart() const;
 
     Q_REQUIRED_RESULT QString email() const;
     void setEmail(const QString &email);
