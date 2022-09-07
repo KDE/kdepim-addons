@@ -18,7 +18,7 @@ public:
     ~ViewerPluginExternalEditWidget() override;
 
     void setScriptInfo(const ViewerPluginExternalScriptInfo &info);
-    ViewerPluginExternalScriptInfo scriptInfo() const;
+    Q_REQUIRED_RESULT ViewerPluginExternalScriptInfo scriptInfo() const;
 
     void save();
     void setExistingsNames(const QStringList &existingsNames);

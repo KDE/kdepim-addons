@@ -19,7 +19,7 @@ public:
     ~ViewerPluginExternalscriptInterface() override;
 
     Q_REQUIRED_RESULT QList<QAction *> actions() const override;
-    ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
+    Q_REQUIRED_RESULT ViewerPluginInterface::SpecificFeatureTypes featureTypes() const override;
     void execute() override;
 
     void setText(const QString &text) override;
