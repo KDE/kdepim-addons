@@ -19,6 +19,9 @@
 using namespace KABGravatar;
 GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     : QWidget(parent)
+    , mEmailLab(new QLabel(this))
+    , mSearchGravatar(new QPushButton(i18n("Search"), this))
+    , mResultGravatar(new QLabel(this))
 {
     auto mainLayout = new QGridLayout(this);
     mainLayout->setContentsMargins({});
@@ -29,17 +32,14 @@ GravatarUpdateWidget::GravatarUpdateWidget(QWidget *parent)
     lab->setObjectName(QStringLiteral("emaillabel"));
     hboxEmail->addWidget(lab);
 
-    mEmailLab = new QLabel(this);
     mEmailLab->setObjectName(QStringLiteral("email"));
     hboxEmail->addWidget(mEmailLab);
     mainLayout->addLayout(hboxEmail, 0, 0);
 
-    mSearchGravatar = new QPushButton(i18n("Search"), this);
     mSearchGravatar->setEnabled(false);
     mSearchGravatar->setObjectName(QStringLiteral("search"));
     mainLayout->addWidget(mSearchGravatar, 4, 0);
     connect(mSearchGravatar, &QAbstractButton::clicked, this, &GravatarUpdateWidget::slotSearchGravatar);
-    mResultGravatar = new QLabel(this);
     QFont font = mResultGravatar->font();
     font.setBold(true);
     mResultGravatar->setFont(font);

@@ -42,8 +42,8 @@ private:
     QString mEmail;
     QPixmap mPixmap;
     QUrl mCurrentUrl;
-    QLabel *mEmailLab = nullptr;
-    QPushButton *mSearchGravatar = nullptr;
-    QLabel *mResultGravatar = nullptr;
+    QLabel *const mEmailLab;
+    QPushButton *const mSearchGravatar;
+    QLabel *const mResultGravatar;
 };
 }
