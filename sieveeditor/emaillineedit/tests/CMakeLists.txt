@@ -10,6 +10,7 @@ ecm_qt_declare_logging_category(sieveeditoremailinedit_gui HEADER sieveeditorema
 target_sources(sieveeditoremailinedit_gui PRIVATE
    main.cpp
    emaillineeditwidget.cpp
+   emaillineeditwidget.h
    ../emaillineedit.cpp
 )
 
