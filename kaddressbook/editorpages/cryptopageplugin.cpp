@@ -28,6 +28,8 @@
 #include <Libkleo/KeyRequester>
 
 CryptoPagePlugin::CryptoPagePlugin()
+    : mPgpKey(new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::OpenPGP, this))
+    , mSmimeCert(new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::SMIME, this))
 {
     KIconLoader::global()->addAppDir(QStringLiteral("libkleopatra"));
 
@@ -53,13 +55,11 @@ CryptoPagePlugin::CryptoPagePlugin()
     auto l = new QLabel(i18n("Preferred OpenPGP encryption key:"), this);
     topLayout->addWidget(l, 1, 0);
 
-    mPgpKey = new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::OpenPGP, this);
     topLayout->addWidget(mPgpKey, 1, 1);
 
     l = new QLabel(i18n("Preferred S/MIME encryption certificate:"), this);
     topLayout->addWidget(l, 2, 0);
 
-    mSmimeCert = new Kleo::EncryptionKeyRequester(true, Kleo::EncryptionKeyRequester::SMIME, this);
     topLayout->addWidget(mSmimeCert, 2, 1);
 
     auto box = new QGroupBox(i18n("Message Preference"), this);

@@ -35,7 +35,7 @@ private:
     QCheckBox *mProtocolCB[NumberOfProtocols];
     QComboBox *mSignPref = nullptr;
     QComboBox *mCryptPref = nullptr;
-    Kleo::KeyRequester *mPgpKey = nullptr;
-    Kleo::KeyRequester *mSmimeCert = nullptr;
+    Kleo::KeyRequester *const mPgpKey;
+    Kleo::KeyRequester *const mSmimeCert;
     bool mReadOnly = false;
 };
