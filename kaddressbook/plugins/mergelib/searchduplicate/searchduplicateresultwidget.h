@@ -52,6 +52,10 @@ private:
     void slotCustomizeMergingContacts();
     void mergeContact();
     void slotCustomContextMenuRequested(const QPoint &);
+    void slotExpandAll();
+    void slotCollapseAll();
+    void slotSelectAll();
+    void slotDeselectAll();
     QVector<MergeConflictResult> mResultConflictList;
     QVector<Akonadi::Item::List> mListContactToMerge;
     ResultDuplicateTreeWidget *const mResultTreeWidget;

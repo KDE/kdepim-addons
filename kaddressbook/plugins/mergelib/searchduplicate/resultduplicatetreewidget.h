@@ -42,6 +42,8 @@ public:
 
     Q_REQUIRED_RESULT QVector<Akonadi::Item::List> selectedContactsToMerge() const;
 
+    void checkAllItems();
+    void uncheckAllItems();
 Q_SIGNALS:
     void showContactPreview(const Akonadi::Item &item);
 

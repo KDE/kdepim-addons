@@ -94,10 +94,33 @@ SearchDuplicateResultWidget::~SearchDuplicateResultWidget() = default;
 
 void SearchDuplicateResultWidget::slotCustomContextMenuRequested(const QPoint &)
 {
-#if 0
     QMenu menu(this);
+    menu.addAction(i18n("Expand All"), this, &SearchDuplicateResultWidget::slotExpandAll);
+    menu.addAction(i18n("Collapse All"), this, &SearchDuplicateResultWidget::slotCollapseAll);
+    menu.addSeparator();
+    menu.addAction(i18n("Select All"), this, &SearchDuplicateResultWidget::slotSelectAll);
+    menu.addAction(i18n("Deselect All"), this, &SearchDuplicateResultWidget::slotDeselectAll);
     menu.exec(QCursor::pos());
-#endif
+}
+
+void SearchDuplicateResultWidget::slotExpandAll()
+{
+    mResultTreeWidget->expandAll();
+}
+
+void SearchDuplicateResultWidget::slotCollapseAll()
+{
+    mResultTreeWidget->collapseAll();
+}
+
+void SearchDuplicateResultWidget::slotSelectAll()
+{
+    mResultTreeWidget->checkAllItems();
+}
+
+void SearchDuplicateResultWidget::slotDeselectAll()
+{
+    mResultTreeWidget->uncheckAllItems();
 }
 
 void SearchDuplicateResultWidget::setContacts(const QVector<Akonadi::Item::List> &lstItem)
