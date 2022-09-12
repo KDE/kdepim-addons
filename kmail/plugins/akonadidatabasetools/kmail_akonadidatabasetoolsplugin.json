@@ -1,6 +1,7 @@
 {
     "KPlugin": {
         "Description": "This plugin allows you to manage Akonadi database.",
+        "Description[ar]": "هذا المحلق تسمح لك بإدارة قاعدة بيانات أكونادي.",
         "Description[bg]": "Тази приставка ви позволява да управлявате базата данни на Akonadi.",
         "Description[ca@valencia]": "Este connector permet gestionar la base de dades d'Akonadi.",
         "Description[ca]": "Aquest connector permet gestionar la base de dades de l'Akonadi.",
@@ -23,6 +24,7 @@
         "EnabledByDefault": "false",
         "Id": "kmailakonadidatabasetool",
         "Name": "Akonadi Database Manager",
+        "Name[ar]": "مدير قاعدة بيانات أكونادي",
         "Name[bg]": "Управление на база данни на Akonadi",
         "Name[ca@valencia]": "Gestor de base de dades d'Akonadi",
         "Name[ca]": "Gestor de base de dades de l'Akonadi",
