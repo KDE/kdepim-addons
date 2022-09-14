@@ -7,6 +7,7 @@
 #include "grammarresultutiltest.h"
 #include "grammarresultutil.h"
 #include <QTest>
+#include <QTextDocument>
 QTEST_MAIN(GrammarResultUtilTest)
 GrammarResultUtilTest::GrammarResultUtilTest(QObject *parent)
     : QObject{parent}
@@ -23,9 +24,13 @@ void GrammarResultUtilTest::shouldReplaceWord()
     QFETCH(ListGrammarActions, listGrammarActions);
     QFETCH(QString, resultText);
 
-    // GrammarResultUtil::replaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord, QTextDocument *document);
-    //  TODO
-    //  GrammarResultUtil::replaceWord
+    QTextDocument doc;
+    doc.setPlainText(initialText);
+    GrammarResultUtil::applyGrammarResult(grammarErrors, &doc, Qt::red);
+    for (const auto &action : listGrammarActions) {
+        GrammarResultUtil::replaceWord(action, replacementWord, &doc);
+    }
+    QCOMPARE(doc.toPlainText(), resultText);
 }
 
 void GrammarResultUtilTest::shouldReplaceWord_data()
