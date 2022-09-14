@@ -16,4 +16,5 @@ public:
     ~GrammarResultUtilTest() override = default;
 private Q_SLOTS:
     void shouldReplaceWord();
+    void shouldReplaceWord_data();
 };
