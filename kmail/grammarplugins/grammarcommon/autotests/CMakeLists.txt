@@ -12,3 +12,4 @@ macro(add_kmail_grammarcommon_unittest _source)
 endmacro ()
 
 add_kmail_grammarcommon_unittest(grammarresulttextedittest.cpp)
+add_kmail_grammarcommon_unittest(grammarresultutiltest.cpp)
