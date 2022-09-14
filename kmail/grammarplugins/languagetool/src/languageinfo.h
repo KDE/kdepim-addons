@@ -27,6 +27,8 @@ public:
 
     void parse(const QJsonObject &obj);
 
+    Q_REQUIRED_RESULT bool operator==(const LanguageInfo &other) const;
+
 private:
     QString mName;
     QString mLongCode;
