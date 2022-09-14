@@ -43,7 +43,7 @@
 <!-- strip image, if present -->
 {% if pass.stripUrl %}
 <div style="margin-top: 10px;">
-    <center><img src="{{ pass.stripUrl }}"/></center>
+    <center><img src="{{ pass.stripUrl }}" style="max-width: 100%;"/></center>
 </div>
 {% endif %}
 <!-- primary fields TODO: in theory this should be on top of the strip image? -->

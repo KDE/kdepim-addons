@@ -37,9 +37,6 @@ Q_SIGNALS:
 private:
     Q_DISABLE_COPY(GrammarResultTextEdit)
     void slotReplaceWord(const MessageComposer::PluginGrammarAction &act, const QString &replacementWord);
-    enum TextInfo {
-        ReplaceFormatInfo = QTextFormat::UserProperty + 1,
-    };
     void slotOpenGrammarUrlInfo(const QString &url);
     void generalPaletteChanged();
     QColor mTextColor;
