@@ -54,3 +54,8 @@ void LanguageInfo::parse(const QJsonObject &obj)
     mCode = obj[QStringLiteral("code")].toString();
     mLongCode = obj[QStringLiteral("longCode")].toString();
 }
+
+bool LanguageInfo::operator==(const LanguageInfo &other) const
+{
+    return mName == other.name() && mCode == other.code() && mLongCode == other.longCode();
+}

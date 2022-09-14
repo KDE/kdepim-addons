@@ -27,5 +27,6 @@ QVector<LanguageInfo> LanguageToolListOfLanguagesParser::parseResult(const QJson
             }
         }
     }
+    lstLanguageInfo.erase(std::unique(lstLanguageInfo.begin(), lstLanguageInfo.end()), lstLanguageInfo.end());
     return lstLanguageInfo;
 }
