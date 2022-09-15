@@ -96,6 +96,7 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
                 for (const QString &str : sugg) {
                     QAction *actReplacement = popupReplacement->addAction(str);
                     connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
+                        qDebug() << " act " << act;
                         slotReplaceWord(act, str);
                     });
                 }
