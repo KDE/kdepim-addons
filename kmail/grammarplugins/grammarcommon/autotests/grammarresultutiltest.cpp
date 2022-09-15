@@ -194,4 +194,128 @@ void GrammarResultUtilTest::shouldReplaceWord_data()
         const QString result = QStringLiteral("jooAA AAA, ah car");
         QTest::newRow("error1-with-two-errors-bigger") << text << replacement << grammarErrorLists << lstGrammarActions << result;
     }
+    {
+        const QString text = QStringLiteral("Boo\n foo, ah car");
+        QVector<GrammarError> grammarErrorLists;
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(0);
+            err.setLength(3);
+            grammarErrorLists.append(err);
+        }
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(5);
+            err.setLength(3);
+            grammarErrorLists.append(err);
+        }
+        QVector<MessageComposer::PluginGrammarAction> lstGrammarActions;
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(1);
+            act.setStart(0);
+            act.setLength(3);
+            lstGrammarActions.append(act);
+        }
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(2);
+            act.setStart(1);
+            act.setLength(3);
+            lstGrammarActions.append(act);
+        }
+        const QStringList replacement = {QStringLiteral("jooAA"), QStringLiteral("AAA")};
+        const QString result = QStringLiteral("jooAA\n AAA, ah car");
+        QTest::newRow("error1-with-two-errors-bigger-1") << text << replacement << grammarErrorLists << lstGrammarActions << result;
+    }
+
+    {
+        const QString text = QStringLiteral("Boo\n foo, ah car");
+        QVector<GrammarError> grammarErrorLists;
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(0);
+            err.setLength(3);
+            grammarErrorLists.append(err);
+        }
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(5);
+            err.setLength(3);
+            grammarErrorLists.append(err);
+        }
+        QVector<MessageComposer::PluginGrammarAction> lstGrammarActions;
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(1);
+            act.setStart(0);
+            act.setLength(3);
+            lstGrammarActions.append(act);
+        }
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(2);
+            act.setStart(1);
+            act.setLength(3);
+            lstGrammarActions.append(act);
+        }
+        const QStringList replacement = {QStringLiteral("b"), QStringLiteral("AAA")};
+        const QString result = QStringLiteral("b\n AAA, ah car");
+        QTest::newRow("error1-with-two-errors-smaller-1") << text << replacement << grammarErrorLists << lstGrammarActions << result;
+    }
+
+    {
+        const QString text = QStringLiteral("Je suis  la qui empeche\nil est la.\n tout passage dans l'herbe");
+        QVector<GrammarError> grammarErrorLists;
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(7);
+            err.setLength(2);
+            grammarErrorLists.append(err);
+        }
+        {
+            GrammarError err;
+            err.setBlockId(1);
+            err.setStart(14);
+            err.setLength(7);
+            grammarErrorLists.append(err);
+        }
+        {
+            GrammarError err;
+            err.setBlockId(2);
+            err.setStart(3);
+            err.setLength(3);
+            grammarErrorLists.append(err);
+        }
+        QVector<MessageComposer::PluginGrammarAction> lstGrammarActions;
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(1);
+            act.setStart(7);
+            act.setLength(2);
+            lstGrammarActions.append(act);
+        }
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(1);
+            act.setStart(15);
+            act.setLength(7);
+            lstGrammarActions.append(act);
+        }
+        {
+            MessageComposer::PluginGrammarAction act;
+            act.setBlockId(2);
+            act.setStart(3);
+            act.setLength(3);
+            lstGrammarActions.append(act);
+        }
+        const QStringList replacement = {QStringLiteral(" "), QStringLiteral("EMPECHE"), QStringLiteral("A")};
+        const QString result = QStringLiteral("Je suis la qui EMPECHE\nil A la.\n tout passage dans l'herbe");
+        QTest::newRow("error3") << text << replacement << grammarErrorLists << lstGrammarActions << result;
+    }
 }
