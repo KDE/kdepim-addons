@@ -23,7 +23,7 @@ QVector<GrammarError> LanguageToolParser::parseResult(const QJsonObject &obj) co
         if (current.type() == QJsonValue::Object) {
             const QJsonObject languageToolObject = current.toObject();
             LanguageToolGrammarError error;
-            error.parse(languageToolObject, 0);
+            error.parse(languageToolObject, -1);
             if (error.isValid()) {
                 infos.append(error);
             }

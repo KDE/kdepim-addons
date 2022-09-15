@@ -14,8 +14,29 @@
 void GrammarResultUtil::applyGrammarResult(const QVector<GrammarError> &infos, QTextDocument *document, const QColor &negativeTextColor)
 {
     for (const GrammarError &info : infos) {
+        int blockNumberId = info.blockId();
+        int startSelectionIndex = info.start();
         // Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
-        QTextBlock block = document->findBlockByNumber(info.blockId() - 1);
+        if (blockNumberId == -1) { // Languagetool adapt grammar error
+            QTextBlock block = document->findBlockByNumber(0);
+            if (block.isValid()) {
+                QTextCursor cur(document);
+
+                cur.setPosition(info.start());
+                blockNumberId = cur.blockNumber();
+                for (int i = 0; i < blockNumberId; ++i) {
+                    QTextBlock block = document->findBlockByNumber(i);
+                    if (block.isValid()) {
+                        if (block.text() != QLatin1Char('\n')) {
+                            startSelectionIndex -= block.length();
+                        }
+                    }
+                }
+            }
+        } else {
+            blockNumberId = info.blockId() - 1;
+        }
+        QTextBlock block = document->findBlockByNumber(blockNumberId);
         if (block.isValid()) {
             QTextCursor cur(block);
             QTextCharFormat format;
@@ -29,14 +50,14 @@ void GrammarResultUtil::applyGrammarResult(const QVector<GrammarError> &infos, Q
             format.setToolTip(toolTip);
             MessageComposer::PluginGrammarAction act;
             act.setLength(info.length());
-            act.setStart(info.start());
+            act.setStart(startSelectionIndex);
             act.setSuggestions(info.suggestions());
-            act.setBlockId(info.blockId());
+            act.setBlockId(blockNumberId + 1);
             if (!info.url().isEmpty()) {
                 act.setInfoUrls({info.url()});
             }
             format.setProperty(ReplaceFormatInfo, QVariant::fromValue(act));
-            const int position = cur.position() + info.start();
+            const int position = cur.position() + startSelectionIndex;
             cur.setPosition(position);
             cur.setPosition(position + info.length(), QTextCursor::KeepAnchor);
             cur.mergeCharFormat(format);
@@ -60,6 +81,7 @@ void GrammarResultUtil::replaceWord(const MessageComposer::PluginGrammarAction &
         // qDebug() << " diff " << diff;
         if (diff != 0) {
             const int blockLength = block.length();
+            // qDebug() << " blockLength " << blockLength;
             for (int i = position + replacementWord.length() + 1; i < blockLength; ++i) {
                 cur.setPosition(i);
                 // qDebug() << " XCWCWXCWCWXCWXCCX  " << i;
@@ -79,34 +101,6 @@ void GrammarResultUtil::replaceWord(const MessageComposer::PluginGrammarAction &
                     cur.setCharFormat(currentCharFormat);
 
                     i += act.length();
-                }
-            }
-            // qDebug() << " block.blockNumber() " << block.blockNumber() << " document->blockCount() " << document->blockCount();
-            for (int b = block.blockNumber() + 1; b < document->blockCount(); ++b) {
-                QTextBlock block = document->findBlockByNumber(b);
-                if (block.isValid()) {
-                    QTextCursor cur(block);
-                    const int blockLength = block.length();
-                    for (int i = 0; i < blockLength; ++i) {
-                        cur.setPosition(block.length() + i);
-                        QTextCharFormat currentCharFormat = cur.charFormat();
-                        if (currentCharFormat.hasProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo)) {
-                            auto act = cur.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
-                            // qDebug() << "BEFORE DDDDDDDDDDDDDDDD" << act.start();
-                            act.setStart(act.start() + diff);
-                            // qDebug() << "AFTER DDDDDDDDDDDDDDDD" << act.start();
-                            currentCharFormat.setProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo, QVariant::fromValue(act));
-
-                            const int newPosition = act.start() - 1;
-                            // qDebug() << " newPosition " << newPosition;
-                            cur.setPosition(newPosition);
-                            cur.setPosition(newPosition + act.length(), QTextCursor::KeepAnchor);
-                            // qDebug() << "2222 newPosition " << newPosition + act.length();
-                            cur.setCharFormat(currentCharFormat);
-
-                            i += act.length();
-                        }
-                    }
                 }
             }
         }
