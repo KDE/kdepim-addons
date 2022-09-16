@@ -17,6 +17,7 @@
 
 #include <QHBoxLayout>
 #include <QJsonDocument>
+#include <QToolButton>
 
 LanguageToolResultWidget::LanguageToolResultWidget(QWidget *parent)
     : GrammarResultWidget(parent)
@@ -67,5 +68,15 @@ void LanguageToolResultWidget::addExtraWidget()
     mLanguageToolComboBox = new LanguageToolComboBox(this);
     mLanguageToolComboBox->setObjectName(QStringLiteral("languagetoolcombobox"));
     extraWidgetLayout->addWidget(mLanguageToolComboBox);
+
+    auto recheckBtn = new QToolButton(this);
+    recheckBtn->setObjectName(QStringLiteral("recheck-button"));
+    recheckBtn->setIcon(QIcon::fromTheme(QStringLiteral("view-refresh")));
+    recheckBtn->setIconSize(QSize(16, 16));
+    recheckBtn->setToolTip(i18n("Check"));
+    recheckBtn->setAutoRaise(true);
+    extraWidgetLayout->addWidget(recheckBtn);
+
     mExtraWidgetLayout->addLayout(extraWidgetLayout);
+    connect(recheckBtn, &QToolButton::clicked, this, &LanguageToolResultWidget::checkAgain);
 }
