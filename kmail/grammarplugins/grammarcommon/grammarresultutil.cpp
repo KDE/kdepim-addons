@@ -72,6 +72,8 @@ void GrammarResultUtil::replaceWord(const MessageComposer::PluginGrammarAction &
     QTextBlock block = document->findBlockByNumber(act.blockId() - 1);
     if (block.isValid()) {
         QTextCursor cur(block);
+        const int initialCurrentPosition = cur.position();
+        // qDebug() << " cur.position()" << cur.position();
         const int position = cur.position() + act.start();
         cur.setPosition(position);
         cur.setPosition(position + act.length(), QTextCursor::KeepAnchor);
@@ -81,23 +83,24 @@ void GrammarResultUtil::replaceWord(const MessageComposer::PluginGrammarAction &
         // qDebug() << " diff " << diff;
         if (diff != 0) {
             const int blockLength = block.length();
-            // qDebug() << " blockLength " << blockLength;
-            for (int i = position + replacementWord.length() + 1; i < blockLength; ++i) {
+            // qDebug() << "current blockLength " << blockLength << " position " << position << "";
+            for (int i = position + replacementWord.length() + 1; i < blockLength + initialCurrentPosition; ++i) {
                 cur.setPosition(i);
                 // qDebug() << " XCWCWXCWCWXCWXCCX  " << i;
                 QTextCharFormat currentCharFormat = cur.charFormat();
                 if (currentCharFormat.hasProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo)) {
                     auto act = cur.charFormat().property(GrammarResultUtil::TextInfo::ReplaceFormatInfo).value<MessageComposer::PluginGrammarAction>();
-                    // qDebug() << "BEFORE DDDDDDDDDDDDDDDD" << act.start();
+                    // qDebug() << "BEFORE Update GrammarResultUtil::TextInfo::ReplaceFormatInfo " << act;
                     act.setStart(act.start() + diff);
-                    // qDebug() << "AFTER DDDDDDDDDDDDDDDD" << act.start();
+                    // qDebug() << "AFTER Update GrammarResultUtil::TextInfo::ReplaceFormatInfo " << act.start();
                     currentCharFormat.setProperty(GrammarResultUtil::TextInfo::ReplaceFormatInfo, QVariant::fromValue(act));
 
                     const int newPosition = i - 1;
                     // qDebug() << " newPosition " << newPosition;
+                    // qDebug() << "BEFORE Update GrammarResultUtil::TextInfo::ReplaceFormatInfo newPosition " << newPosition;
                     cur.setPosition(newPosition);
                     cur.setPosition(newPosition + act.length(), QTextCursor::KeepAnchor);
-                    // qDebug() << "2222 newPosition " << newPosition + act.length();
+                    // qDebug() << "AFTER Update GrammarResultUtil::TextInfo::ReplaceFormatInfo newPosition " << newPosition + act.length();
                     cur.setCharFormat(currentCharFormat);
 
                     i += act.length();
