@@ -18,14 +18,14 @@ void GrammarResultUtil::applyGrammarResult(const QVector<GrammarError> &infos, Q
         int startSelectionIndex = info.start();
         // Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
         if (blockNumberId == -1) { // Languagetool adapt grammar error
-            QTextBlock block = document->findBlockByNumber(0);
-            if (block.isValid()) {
+            const QTextBlock firstBlock = document->findBlockByNumber(0);
+            if (firstBlock.isValid()) {
                 QTextCursor cur(document);
 
                 cur.setPosition(info.start());
                 blockNumberId = cur.blockNumber();
                 for (int i = 0; i < blockNumberId; ++i) {
-                    QTextBlock block = document->findBlockByNumber(i);
+                    const QTextBlock block = document->findBlockByNumber(i);
                     if (block.isValid()) {
                         if (block.text() != QLatin1Char('\n')) {
                             startSelectionIndex -= block.length();
