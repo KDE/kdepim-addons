@@ -17,7 +17,7 @@ void GrammarResultUtil::applyGrammarResult(const QVector<GrammarError> &infos, Q
         int blockNumberId = info.blockId();
         int startSelectionIndex = info.start();
         // Block id based on 1 not 0 as QTextDocument (perhaps remove -1 when loading ?)
-        if (blockNumberId == -1) { // Languagetool adapt grammar error
+        if (blockNumberId == -1) { // Languagetool adapt grammar error We need to generate info. By default languagetool uses 1 paragraph info.
             const QTextBlock firstBlock = document->findBlockByNumber(0);
             if (firstBlock.isValid()) {
                 QTextCursor cur(document);
