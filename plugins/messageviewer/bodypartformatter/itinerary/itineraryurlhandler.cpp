@@ -16,14 +16,7 @@
 
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/File>
-#include <KItinerary/JsonLdDocument>
-#include <KItinerary/LocationUtil>
-#include <KItinerary/Organization>
-#include <KItinerary/Place>
 #include <KItinerary/Reservation>
-#include <KItinerary/SortUtil>
-
-#include <KMime/Content>
 
 #include <KCalendarCore/Event>
 
@@ -35,7 +28,6 @@
 #include <QDate>
 #include <QIcon>
 #include <QMenu>
-#include <QProcess>
 #include <QStandardPaths>
 #include <QTemporaryFile>
 

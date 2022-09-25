@@ -17,20 +17,9 @@
 #include <GrantleeTheme/GrantleeKi18nLocalizer>
 #include <GrantleeTheme/GrantleeThemeEngine>
 
-#include <KItinerary/Action>
-#include <KItinerary/Brand>
-#include <KItinerary/BusTrip>
-#include <KItinerary/Event>
 #include <KItinerary/Flight>
-#include <KItinerary/JsonLdDocument>
-#include <KItinerary/MergeUtil>
-#include <KItinerary/Organization>
-#include <KItinerary/Person>
-#include <KItinerary/Place>
-#include <KItinerary/RentalCar>
 #include <KItinerary/Reservation>
 #include <KItinerary/Ticket>
-#include <KItinerary/TrainTrip>
 
 #include <KColorScheme>
 #if QT_VERSION < QT_VERSION_CHECK(6, 0, 0)

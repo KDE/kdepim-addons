@@ -12,8 +12,6 @@
 #include <KPluginFactory>
 #include <PimCommon/CustomToolsWidgetng>
 
-#include <QPointer>
-
 K_PLUGIN_CLASS_WITH_JSON(LanguageToolPlugin, "kmail_languagetoolplugin.json")
 LanguageToolPlugin::LanguageToolPlugin(QObject *parent, const QList<QVariant> &)
     : PimCommon::CustomToolsPlugin(parent)

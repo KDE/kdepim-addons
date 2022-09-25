@@ -7,7 +7,6 @@
 #pragma once
 
 #include <KAddressBookImportExport/PluginInterface>
-#include <KContacts/Addressee>
 
 class WindowsContactImportExportPluginInterface : public KAddressBookImportExport::PluginInterface
 {

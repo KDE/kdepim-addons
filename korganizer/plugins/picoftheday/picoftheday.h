@@ -12,9 +12,6 @@
 #include <EventViews/CalendarDecoration>
 using namespace EventViews::CalendarDecoration;
 
-#include <KIO/Job>
-#include <QUrl>
-
 struct ElementData;
 
 class Picoftheday : public Decoration

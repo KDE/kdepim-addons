@@ -17,10 +17,9 @@
 #include <KColorScheme>
 #include <QAction>
 #include <QApplication>
+#include <QContextMenuEvent>
 #include <QMenu>
 #include <QPainter>
-#include <QTextBlock>
-#include <QTextDocument>
 
 GrammarResultTextEdit::GrammarResultTextEdit(QWidget *parent)
     : QTextEdit(parent)

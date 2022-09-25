@@ -17,9 +17,6 @@
 
 #include <QApplication>
 
-#include <KMime/DateFormatter>
-#include <KMime/KMimeMessage>
-
 using namespace MessageCore;
 
 using namespace MessageViewer;

@@ -7,7 +7,6 @@
 #pragma once
 
 #include <ImportWizard/AbstractAddressBook>
-#include <QHash>
 
 class GearyAddressBook : public LibImportWizard::AbstractAddressBook
 {

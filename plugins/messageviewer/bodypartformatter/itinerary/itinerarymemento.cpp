@@ -11,7 +11,6 @@
 #include <KItinerary/CalendarHandler>
 #include <KItinerary/ExtractorValidator>
 #include <KItinerary/Flight>
-#include <KItinerary/JsonLdDocument>
 #include <KItinerary/MergeUtil>
 #include <KItinerary/Reservation>
 #include <KItinerary/SortUtil>

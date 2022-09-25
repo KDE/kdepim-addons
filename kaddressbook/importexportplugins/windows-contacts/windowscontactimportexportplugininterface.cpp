@@ -8,14 +8,12 @@
 #include "importexportwindowscontactplugin_debug.h"
 #include "importwindowcontact.h"
 #include <KActionCollection>
-#include <KIO/Job>
 #include <KLocalizedString>
 #include <PimCommon/RenameFileDialog>
 #include <QAction>
 #include <QFile>
 #include <QFileDialog>
 
-#include <KAddressBookImportExport/ContactSelectionDialog>
 #include <KAddressBookImportExport/ImportExportEngine>
 
 WindowsContactImportExportPluginInterface::WindowsContactImportExportPluginInterface(QObject *parent)

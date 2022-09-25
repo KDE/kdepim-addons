@@ -5,7 +5,6 @@
 */
 
 #include "scamconfiguresettingswidget.h"
-#include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <QHeaderView>

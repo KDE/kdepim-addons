@@ -14,8 +14,6 @@
 #include <KColorScheme>
 #include <KLocalizedString>
 
-#include <KMime/DateFormatter>
-#include <KMime/KMimeMessage>
 #include <QStandardPaths>
 
 using namespace MessageCore;

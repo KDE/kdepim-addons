@@ -19,7 +19,6 @@
 #include <KPluginFactory>
 
 #include <QCache>
-#include <QGlobalStatic>
 
 K_PLUGIN_CLASS_WITH_JSON(Picoftheday, "picoftheday.json")
 

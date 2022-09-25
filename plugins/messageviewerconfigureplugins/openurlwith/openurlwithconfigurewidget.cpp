@@ -10,12 +10,10 @@
 #include <KMessageBox>
 #include <MessageViewer/OpenUrlWithManager>
 #include <MessageViewer/OpenWithUrlInfo>
-#include <QHeaderView>
 #include <QListWidget>
 #include <QMenu>
 #include <QPointer>
 #include <QPushButton>
-#include <QTreeWidget>
 #include <QVBoxLayout>
 
 class OpenUrlWithConfigureItem : public QListWidgetItem

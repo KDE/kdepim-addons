@@ -9,7 +9,6 @@
 #include "sendmailjob.h"
 #include <KLocalizedString>
 #include <KPluginFactory>
-#include <QPointer>
 
 K_PLUGIN_CLASS_WITH_JSON(SendMailTransportPlugin, "sendmailtransport.json")
 

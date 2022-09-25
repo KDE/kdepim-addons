@@ -9,7 +9,6 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
-#include <QPointer>
 
 #include "manualmerge/mergecontactsdialog.h"
 

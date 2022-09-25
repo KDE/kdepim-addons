@@ -8,7 +8,6 @@ Cpp:
 #include "%{ProjectNameLower}plugineditorinterface.h"
 #include <KActionCollection>
 #include <KActionMenuChangeCase>
-#include <KPIMTextEdit/EditorUtil>
 #include <KPIMTextEdit/RichTextEditor>
 
 % {CN} PluginEditorInterface::

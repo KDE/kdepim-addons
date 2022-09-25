@@ -10,7 +10,6 @@
 #include <KActionCollection>
 #include <KLocalizedString>
 #include <QAction>
-#include <QPointer>
 
 SearchDuplicatesPluginInterface::SearchDuplicatesPluginInterface(QObject *parent)
     : PimCommon::GenericPluginInterface(parent)

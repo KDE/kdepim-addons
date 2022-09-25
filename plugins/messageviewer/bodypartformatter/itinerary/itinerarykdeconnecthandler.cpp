@@ -12,7 +12,6 @@
 #include <QDBusReply>
 #include <QUrl>
 #include <QVector>
-#include <QVersionNumber>
 
 ItineraryKDEConnectHandler::ItineraryKDEConnectHandler(QObject *parent)
     : QObject(parent)

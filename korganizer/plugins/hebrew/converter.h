@@ -11,7 +11,6 @@
 #pragma once
 
 // needed for Q_REQUIRED_RESULT
-#include <QtGlobal>
 
 struct DateResult {
     int year;

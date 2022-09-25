@@ -13,7 +13,6 @@
 #include <MessageComposer/PluginComposerInterface>
 #include <QAction>
 #include <QDebug>
-#include <QMenu>
 #include <QPushButton>
 #include <QTextBlock>
 
