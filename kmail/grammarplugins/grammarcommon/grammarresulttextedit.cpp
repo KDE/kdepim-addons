@@ -92,7 +92,6 @@ void GrammarResultTextEdit::contextMenuEvent(QContextMenuEvent *event)
             if (!sugg.isEmpty()) {
                 popup->addSeparator();
                 QMenu *popupReplacement = popup->addMenu(i18n("Replacement"));
-                qDebug() << " act " << act;
                 for (const QString &str : sugg) {
                     QAction *actReplacement = popupReplacement->addAction(str);
                     connect(actReplacement, &QAction::triggered, this, [this, act, str]() {
