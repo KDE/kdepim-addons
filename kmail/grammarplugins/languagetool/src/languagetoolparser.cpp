@@ -6,7 +6,6 @@
 
 #include "languagetoolparser.h"
 #include "languagetoolgrammarerror.h"
-#include "liblanguagetool_debug.h"
 
 #include <QJsonArray>
 
