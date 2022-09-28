@@ -12,6 +12,10 @@
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigGrammalecteConfigDialog[] = "GrammalecteConfigDialog";
+}
 GrammalecteConfigDialog::GrammalecteConfigDialog(QWidget *parent, bool disableMessageBox)
     : QDialog(parent)
     , mConfigWidget(new GrammalecteConfigWidget(this, disableMessageBox))
@@ -38,13 +42,13 @@ GrammalecteConfigDialog::~GrammalecteConfigDialog()
 
 void GrammalecteConfigDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "GrammalecteConfigDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGrammalecteConfigDialog);
     group.writeEntry("Size", size());
 }
 
 void GrammalecteConfigDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "GrammalecteConfigDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGrammalecteConfigDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

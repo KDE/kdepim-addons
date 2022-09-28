@@ -14,6 +14,10 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigConfirmAddressDialog[] = "ConfirmAddressDialog";
+}
 ConfirmAddressDialog::ConfirmAddressDialog(QWidget *parent)
     : QDialog(parent)
     , mConfirmWidget(new ConfirmAddressWidget(this))
@@ -48,13 +52,13 @@ ConfirmAddressDialog::~ConfirmAddressDialog()
 
 void ConfirmAddressDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfirmAddressDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
     group.writeEntry("Size", size());
 }
 
 void ConfirmAddressDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ConfirmAddressDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigConfirmAddressDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

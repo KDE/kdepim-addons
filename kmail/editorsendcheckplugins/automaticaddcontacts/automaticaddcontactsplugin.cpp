@@ -6,7 +6,6 @@
 
 #include "automaticaddcontactsplugin.h"
 #include "automaticaddcontactsconfiguredialog.h"
-#include "automaticaddcontactsconfigurewidget.h"
 #include "automaticaddcontactsinterface.h"
 
 #include <KPluginFactory>

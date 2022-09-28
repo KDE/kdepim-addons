@@ -14,6 +14,10 @@
 #include <QListWidget>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigCheckDuplicateEmailsDialog[] = "CheckDuplicateEmailsDialog";
+}
 CheckDuplicateEmailsDialog::CheckDuplicateEmailsDialog(QWidget *parent)
     : QDialog(parent)
     , mListWidget(new QListWidget(this))
@@ -51,13 +55,13 @@ void CheckDuplicateEmailsDialog::setDuplicatedEmails(const QMap<QString, int> &e
 
 void CheckDuplicateEmailsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckDuplicateEmailsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
     group.writeEntry("Size", size());
 }
 
 void CheckDuplicateEmailsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckDuplicateEmailsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckDuplicateEmailsDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

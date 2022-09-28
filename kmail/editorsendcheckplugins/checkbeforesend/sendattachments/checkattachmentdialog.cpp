@@ -12,6 +12,10 @@
 #include <QListWidget>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigCheckAttachmentDialog[] = "CheckAttachmentDialog";
+}
 CheckAttachmentDialog::CheckAttachmentDialog(QWidget *parent)
     : QDialog(parent)
     , mListWidget(new QListWidget(this))
@@ -47,13 +51,13 @@ void CheckAttachmentDialog::setEmails(const QStringList &emails)
 
 void CheckAttachmentDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckAttachmentDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckAttachmentDialog);
     group.writeEntry("Size", size());
 }
 
 void CheckAttachmentDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "CheckAttachmentDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigCheckAttachmentDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

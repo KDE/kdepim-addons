@@ -24,6 +24,11 @@
 #include <QUrl>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigAdBlockShowListDialog[] = "AdBlockShowListDialog";
+}
+
 using namespace AdBlock;
 AdBlockShowListDialog::AdBlockShowListDialog(bool showDeleteBrokenList, QWidget *parent)
     : QDialog(parent)
@@ -69,13 +74,13 @@ AdBlockShowListDialog::~AdBlockShowListDialog()
 
 void AdBlockShowListDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockShowListDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAdBlockShowListDialog);
     group.writeEntry("Size", size());
 }
 
 void AdBlockShowListDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockShowListDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAdBlockShowListDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(800, 600));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

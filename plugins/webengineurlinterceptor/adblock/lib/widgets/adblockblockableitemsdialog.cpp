@@ -15,6 +15,10 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+namespace
+{
+static const char myConfigAdBlockBlockableItemsDialog[] = "AdBlockBlockableItemsDialog";
+}
 using namespace AdBlock;
 AdBlockBlockableItemsDialog::AdBlockBlockableItemsDialog(QWidget *parent)
     : QDialog(parent)
@@ -62,13 +66,13 @@ void AdBlockBlockableItemsDialog::setAdblockResult(const QVector<AdBlock::AdBloc
 
 void AdBlockBlockableItemsDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockBlockableItemsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAdBlockBlockableItemsDialog);
     group.writeEntry("Size", size());
 }
 
 void AdBlockBlockableItemsDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "AdBlockBlockableItemsDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigAdBlockBlockableItemsDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);

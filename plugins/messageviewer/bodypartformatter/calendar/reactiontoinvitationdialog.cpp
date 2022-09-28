@@ -15,6 +15,10 @@
 #include <QPushButton>
 #include <QVBoxLayout>
 
+namespace
+{
+static const char myConfigReactionToInvitationDialog[] = "ReactionToInvitationDialog";
+}
 ReactionToInvitationDialog::ReactionToInvitationDialog(QWidget *parent)
     : QDialog(parent)
     , mPlainTextEditor(new KPIMTextEdit::PlainTextEditorWidget(this))
@@ -57,7 +61,7 @@ QString ReactionToInvitationDialog::comment() const
 
 void ReactionToInvitationDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ReactionToInvitationDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
     const QSize size = group.readEntry("Size", QSize(600, 400));
     if (size.isValid()) {
         resize(size);
@@ -66,7 +70,7 @@ void ReactionToInvitationDialog::readConfig()
 
 void ReactionToInvitationDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "ReactionToInvitationDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigReactionToInvitationDialog);
     group.writeEntry("Size", size());
     group.sync();
 }

@@ -14,6 +14,10 @@
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+namespace
+{
+static const char myConfigSelectImapFolderDialog[] = "SelectImapFolderDialog";
+}
 
 SelectImapFolderDialog::SelectImapFolderDialog(const KSieveUi::SieveImapAccountSettings &account, QWidget *parent)
     : QDialog(parent)
@@ -54,13 +58,13 @@ QString SelectImapFolderDialog::selectedFolderName() const
 
 void SelectImapFolderDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectImapFolderDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectImapFolderDialog);
     group.writeEntry("Size", size());
 }
 
 void SelectImapFolderDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "SelectImapFolderDialog");
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigSelectImapFolderDialog);
     const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
     if (sizeDialog.isValid()) {
         resize(sizeDialog);
