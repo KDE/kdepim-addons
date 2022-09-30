@@ -9,10 +9,16 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
+namespace
+{
+static const char myMarkdownCreateLinkDialogGroupName[] = "MarkdownCreateLinkDialog";
+}
 MarkdownCreateLinkDialog::MarkdownCreateLinkDialog(QWidget *parent)
     : QDialog(parent)
     , mMarkdownCreateLinkWidget(new MarkdownCreateLinkWidget(this))
@@ -55,15 +61,15 @@ QString MarkdownCreateLinkDialog::linkStr() const
 
 void MarkdownCreateLinkDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateLinkDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateLinkDialogGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void MarkdownCreateLinkDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateLinkDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateLinkDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

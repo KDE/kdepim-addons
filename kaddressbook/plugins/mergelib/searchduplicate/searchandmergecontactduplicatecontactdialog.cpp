@@ -16,10 +16,12 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace KABMergeContacts;
 namespace
@@ -92,17 +94,17 @@ void SearchAndMergeContactDuplicateContactDialog::searchPotentialDuplicateContac
 
 void SearchAndMergeContactDuplicateContactDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
-    const QSize size = grp.readEntry("Size", QSize(300, 200));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void SearchAndMergeContactDuplicateContactDialog::writeConfig()
 {
     KConfigGroup grp(KSharedConfig::openStateConfig(), mySearchAndMergeContactDuplicateContactDialogGroupName);
-    grp.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
 

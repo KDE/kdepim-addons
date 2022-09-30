@@ -5,7 +5,6 @@
 */
 
 #include "mergecontactsdialog.h"
-#include "job/mergecontactsjob.h"
 #include "manualmerge/mergecontactwidget.h"
 #include "widgets/mergecontacterrorlabel.h"
 #include "widgets/mergecontactinfowidget.h"
@@ -15,10 +14,12 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QStackedWidget>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace KABMergeContacts;
 namespace
@@ -93,17 +94,17 @@ void MergeContactsDialog::slotCustomizeMergeContact(const Akonadi::Item::List &l
 
 void MergeContactsDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
-    const QSize size = grp.readEntry("Size", QSize(300, 200));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void MergeContactsDialog::writeConfig()
 {
     KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
-    grp.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }
 

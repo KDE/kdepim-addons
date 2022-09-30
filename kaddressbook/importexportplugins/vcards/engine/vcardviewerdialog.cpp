@@ -10,11 +10,17 @@
 #include <KLocalizedString>
 #include <KSharedConfig>
 #include <KStandardGuiItem>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
+namespace
+{
+static const char myConfigVCardViewerDialog[] = "VCardViewerDialog";
+}
 VCardViewerDialog::VCardViewerDialog(const KContacts::Addressee::List &list, QWidget *parent)
     : QDialog(parent)
     , mContacts(list)
@@ -72,17 +78,17 @@ VCardViewerDialog::~VCardViewerDialog()
 
 void VCardViewerDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "VCardViewerDialog");
-    const QSize size = group.readEntry("Size", QSize(600, 400));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(600, 400));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigVCardViewerDialog);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void VCardViewerDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "VCardViewerDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigVCardViewerDialog);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
     group.sync();
 }
 

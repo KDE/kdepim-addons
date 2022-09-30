@@ -9,9 +9,11 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 using namespace KABGravatar;
 namespace
@@ -99,16 +101,16 @@ void GravatarUpdateDialog::setOriginalPixmap(const QPixmap &pix)
 
 void GravatarUpdateDialog::readConfig()
 {
-    KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
-    const QSize size = grp.readEntry("Size", QSize(300, 200));
-    if (size.isValid()) {
-        resize(size);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void GravatarUpdateDialog::writeConfig()
 {
     KConfigGroup grp(KSharedConfig::openStateConfig(), myConfigGroupName);
-    grp.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), grp);
     grp.sync();
 }

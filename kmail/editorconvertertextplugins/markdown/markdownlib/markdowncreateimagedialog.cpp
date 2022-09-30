@@ -9,9 +9,16 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
+
+namespace
+{
+static const char myMarkdownCreateImageDialogGroupName[] = "MarkdownCreateImageDialog";
+}
 
 MarkdownCreateImageDialog::MarkdownCreateImageDialog(QWidget *parent)
     : QDialog(parent)
@@ -54,15 +61,15 @@ QString MarkdownCreateImageDialog::linkStr() const
 
 void MarkdownCreateImageDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateImageDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateImageDialogGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void MarkdownCreateImageDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownCreateImageDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(300, 200));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 200));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownCreateImageDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }

@@ -9,10 +9,12 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QCloseEvent>
 #include <QDialogButtonBox>
 #include <QPushButton>
 #include <QVBoxLayout>
+#include <QWindow>
 
 namespace
 {
@@ -52,16 +54,16 @@ QuickTextConfigureDialog::~QuickTextConfigureDialog()
 void QuickTextConfigureDialog::writeConfig()
 {
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
-    group.writeEntry("Size", size());
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void QuickTextConfigureDialog::readConfig()
 {
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(300, 350));
     KConfigGroup group(KSharedConfig::openStateConfig(), myConfigGroupName);
-    const QSize sizeDialog = group.readEntry("Size", QSize(300, 350));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void QuickTextConfigureDialog::slotImport()

@@ -9,9 +9,15 @@
 #include <KConfigGroup>
 #include <KLocalizedString>
 #include <KSharedConfig>
+#include <KWindowConfig>
 #include <QDialogButtonBox>
 #include <QVBoxLayout>
+#include <QWindow>
 
+namespace
+{
+static const char myMarkdownPreviewDialogGroupName[] = "MarkdownPreviewDialog";
+}
 MarkdownPreviewDialog::MarkdownPreviewDialog(QWidget *parent)
     : QDialog(parent)
     , mPreviewWidget(new MarkdownPreviewWidget(this))
@@ -39,17 +45,17 @@ MarkdownPreviewDialog::~MarkdownPreviewDialog()
 
 void MarkdownPreviewDialog::writeConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownPreviewDialog");
-    group.writeEntry("Size", size());
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownPreviewDialogGroupName);
+    KWindowConfig::saveWindowSize(windowHandle(), group);
 }
 
 void MarkdownPreviewDialog::readConfig()
 {
-    KConfigGroup group(KSharedConfig::openStateConfig(), "MarkdownPreviewDialog");
-    const QSize sizeDialog = group.readEntry("Size", QSize(500, 300));
-    if (sizeDialog.isValid()) {
-        resize(sizeDialog);
-    }
+    create(); // ensure a window is created
+    windowHandle()->resize(QSize(500, 300));
+    KConfigGroup group(KSharedConfig::openStateConfig(), myMarkdownPreviewDialogGroupName);
+    KWindowConfig::restoreWindowSize(windowHandle(), group);
+    resize(windowHandle()->size()); // workaround for QTBUG-40584
 }
 
 void MarkdownPreviewDialog::setText(const QString &str)
